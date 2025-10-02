@@ -7,8 +7,10 @@ import SEOOptimizer from './components/SEOOptimizer';
 import AdvancedAnalytics from './components/AdvancedAnalytics';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import NotificationSystem from './components/NotificationSystem';
-import { PerformanceMonitor } from './components/PerformanceMonitor';
+import PerformanceMonitor from './components/PerformanceMonitor';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
+import EnhancedSEOHead from './components/EnhancedSEOHead';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import HomePage from './pages/HomePage';
 
 // Types and interfaces
@@ -28,16 +30,16 @@ interface WindowWithEnhancements extends Window {
   advancedUXOptimizer?: { initialize?: () => void };
   advancedTestingFramework?: { initialize?: () => void };
   advancedI18n?: { initialize?: () => void };
-  enhancements?: any;
-  performanceOptimizer?: any;
-  seoOptimizer?: any;
-  securityManager?: any;
-  analytics?: any;
-  errorHandler?: any;
-  cachingSystem?: any;
-  uxOptimizer?: any;
-  testingFramework?: any;
-  i18n?: any;
+  enhancements?: Record<string, unknown>;
+  performanceOptimizer?: Record<string, unknown>;
+  seoOptimizer?: Record<string, unknown>;
+  securityManager?: Record<string, unknown>;
+  analytics?: Record<string, unknown>;
+  errorHandler?: Record<string, unknown>;
+  cachingSystem?: Record<string, unknown>;
+  uxOptimizer?: Record<string, unknown>;
+  testingFramework?: Record<string, unknown>;
+  i18n?: Record<string, unknown>;
 }
 
 // Initialize performance enhancements function
@@ -223,9 +225,18 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <EnhancedErrorBoundary>
+    <AccessibilityEnhancer>
+      <EnhancedErrorBoundary>
+        <EnhancedSEOHead 
+          title={seoDataForOptimizer.title} 
+          description={seoDataForOptimizer.description} 
+          canonical={seoDataForOptimizer.canonical}
+          keywords={['AI', 'IT Solutions', 'Enterprise Automation', 'Technology Services', 'Artificial Intelligence']}
+          author="Zion Tech Group"
+        />
         <SEOOptimizer title={seoDataForOptimizer.title} description={seoDataForOptimizer.description} canonicalUrl={seoDataForOptimizer.canonical} />
         <AdvancedAnalytics enableConversionTracking enablePerformanceTracking enableErrorTracking />
+        <PerformanceMonitor enabled={true} showMetrics={process.env.NODE_ENV === 'development'} />
         <div className="min-h-screen bg-white">
           <Header />
           <main>
@@ -259,7 +270,8 @@ const App: React.FC = () => {
         )}
 
         <NotificationSystem notifications={notifications} onRemove={handleRemoveNotification} />
-    </EnhancedErrorBoundary>
+      </EnhancedErrorBoundary>
+    </AccessibilityEnhancer>
   );
 };
 export default App;
