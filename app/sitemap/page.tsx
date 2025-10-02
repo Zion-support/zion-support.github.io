@@ -1,311 +1,267 @@
 import React from 'react';
-import Head from 'next/head';
 import Link from 'next/link';
-import { 
-  ArrowRight, 
-  Phone, 
-  Mail, 
-  MapPin,
-  Brain,
-  Code,
-  Cloud,
-  Shield,
-  Network,
-  Server,
-  BarChart3,
-  Settings,
-  Zap,
-  Monitor,
-  Search,
-  MessageSquare,
-  CheckCircle,
-  DollarSign,
-  Users,
-  Database,
-  Globe,
-  Smartphone,
-  Lock,
-  TrendingUp,
-  Target,
-  Clock,
-  Star,
-  Rocket,
-  Cpu,
-  FileText,
-  Camera,
-  Mic,
-  Eye,
-  Heart,
-  ShoppingCart,
-  CreditCard,
-  Building,
-  Wrench,
-  Layers,
-  GitBranch,
-  Container,
-  Key,
-  AlertTriangle,
-  CheckSquare,
-  PieChart,
-  Activity,
-  Coins,
-  Thermometer,
-  Gauge,
-  Truck,
-  Bug,
-  UserCheck,
-  FileShield,
-  LineChart,
-  Scatter
-} from 'lucide-react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Sitemap | Zion Tech Group - All Pages & Services',
+  description: 'Complete sitemap of Zion Tech Group website. Find all our AI services, micro SaaS solutions, IT services, and resources.',
+  keywords: 'sitemap, AI services, micro SaaS, IT services, Zion Tech Group, website navigation',
+};
 
 export default function SitemapPage() {
-  const title = 'Sitemap — Zion Tech Group';
-  const description = 'Complete sitemap of Zion Tech Group services, solutions, and resources. Find all our AI, blockchain, IoT, cybersecurity, and data analytics services.';
+  const mainPages = [
+    { title: 'Home', href: '/', description: 'Main homepage with service overview' },
+    { title: 'About Us', href: '/about', description: 'Company information and team' },
+    { title: 'Contact', href: '/contact', description: 'Contact information and inquiry form' },
+    { title: 'Privacy Policy', href: '/privacy', description: 'Privacy policy and data protection' },
+    { title: 'Terms of Service', href: '/terms', description: 'Terms and conditions' },
+    { title: 'Security', href: '/security', description: 'Security information and practices' }
+  ];
 
   const serviceCategories = [
     {
-      name: 'Core Services',
-      icon: Settings,
-      color: 'blue',
+      title: 'Comprehensive AI Services',
+      href: '/services/ai-services-comprehensive',
+      description: 'Full-spectrum AI solutions including ML, NLP, computer vision',
       services: [
-        { name: 'AI & Machine Learning', link: '/services/ai-services', icon: Brain },
-        { name: 'Micro SaaS Solutions', link: '/services/micro-saas', icon: Rocket },
-        { name: 'IT Services & Infrastructure', link: '/services/it-services', icon: Server }
+        { name: 'Machine Learning Model Development', href: '/services/machine-learning-development' },
+        { name: 'Natural Language Processing Suite', href: '/services/nlp-suite' },
+        { name: 'Computer Vision & Image Recognition', href: '/services/computer-vision' },
+        { name: 'Autonomous Systems Development', href: '/services/autonomous-systems' },
+        { name: 'AI-Powered Business Intelligence', href: '/services/ai-business-intelligence' },
+        { name: 'AI Consulting & Strategy', href: '/services/ai-consulting' }
       ]
     },
     {
-      name: 'Emerging Technologies',
-      icon: Zap,
-      color: 'purple',
+      title: 'Advanced Micro SaaS Solutions',
+      href: '/services/advanced-micro-saas-solutions',
+      description: 'Cutting-edge micro SaaS platforms for specific business challenges',
       services: [
-        { name: 'Blockchain Solutions', link: '/services/blockchain-solutions', icon: Coins },
-        { name: 'IoT Solutions', link: '/services/iot-solutions', icon: Cpu },
-        { name: 'Cybersecurity Solutions', link: '/services/cybersecurity-solutions', icon: Shield },
-        { name: 'Data Analytics & BI', link: '/services/data-analytics', icon: BarChart3 }
+        { name: 'AI-Powered Content Creation Suite', href: '/services/ai-content-creation-suite' },
+        { name: 'Smart Inventory Management Platform', href: '/services/smart-inventory-management' },
+        { name: 'Automated Customer Support AI', href: '/services/automated-customer-support' },
+        { name: 'Financial Analytics Dashboard', href: '/services/financial-analytics-dashboard' },
+        { name: 'HR Automation Suite', href: '/services/hr-automation-suite' },
+        { name: 'Project Management Intelligence', href: '/services/project-management-intelligence' }
       ]
     },
     {
-      name: 'Industry Solutions',
-      icon: Building,
-      color: 'green',
+      title: 'Complete IT Services',
+      href: '/services/it-services-comprehensive',
+      description: 'Comprehensive IT services including cloud, DevOps, and cybersecurity',
       services: [
-        { name: 'Manufacturing AI Platform', link: '/services/manufacturing-ai-platform', icon: Settings },
-        { name: 'Supply Chain Intelligence', link: '/services/supply-chain-intelligence', icon: Network },
-        { name: 'Autonomous Operations', link: '/services/ai-autonomous-operations', icon: Zap }
+        { name: 'Cloud Migration & Management', href: '/services/cloud-migration' },
+        { name: 'DevOps & CI/CD Implementation', href: '/services/devops-implementation' },
+        { name: 'Cybersecurity Solutions', href: '/services/cybersecurity-solutions' },
+        { name: 'Infrastructure Management', href: '/services/infrastructure-management' },
+        { name: 'Digital Transformation Consulting', href: '/services/digital-transformation' },
+        { name: 'Database Management & Optimization', href: '/services/database-management' }
       ]
     }
   ];
 
-  const mainPages = [
-    { name: 'Home', link: '/', icon: Home },
-    { name: 'About Us', link: '/about', icon: Users },
-    { name: 'Services Overview', link: '/services', icon: Settings },
-    { name: 'Contact', link: '/contact', icon: Phone },
-    { name: 'Enterprise Solutions', link: '/enterprise', icon: Building },
-    { name: 'Case Studies', link: '/case-studies', icon: FileText },
-    { name: 'Blog', link: '/blog', icon: FileText },
-    { name: 'Guides', link: '/guides', icon: Book },
-    { name: 'Privacy Policy', link: '/privacy', icon: Lock },
-    { name: 'Terms of Service', link: '/terms', icon: FileText },
-    { name: 'Security', link: '/security', icon: Shield }
+  const additionalServices = [
+    { name: 'AI-Powered Email Marketing Suite', href: '/services/ai-email-marketing' },
+    { name: 'Healthcare Appointment AI Scheduler', href: '/services/healthcare-scheduler' },
+    { name: 'Autonomous Business Process Orchestrator', href: '/services/autonomous-orchestrator' },
+    { name: 'Smart Inventory Management System', href: '/services/smart-inventory' },
+    { name: 'AI Content Moderation Platform', href: '/services/content-moderation' },
+    { name: 'Quantum-Enhanced Business Intelligence', href: '/services/quantum-bi' },
+    { name: 'Blockchain Solutions', href: '/services/blockchain-solutions' },
+    { name: 'IoT Solutions', href: '/services/iot-solutions' },
+    { name: 'Data Analytics', href: '/services/data-analytics' },
+    { name: 'Manufacturing AI Platform', href: '/services/manufacturing-ai-platform' },
+    { name: 'Supply Chain Intelligence', href: '/services/supply-chain-intelligence' }
   ];
 
-  const blogCategories = [
-    'AI 2026 Breakthroughs',
-    'AI 2027 Quantum Solutions',
-    'Autonomous Business Systems',
-    'Manufacturing Transformation',
-    'Cybersecurity Trends',
-    'Data Analytics Insights',
-    'Blockchain Innovations',
-    'IoT Solutions',
-    'Case Studies',
-    'Implementation Guides'
+  const resources = [
+    { title: 'Services Advertising & Pricing', href: '/services-advertising', description: 'Comprehensive pricing and service information' },
+    { title: 'Case Studies', href: '/case-studies', description: 'Client success stories and implementations' },
+    { title: 'Blog', href: '/blog', description: 'Latest insights and technology trends' },
+    { title: 'Content Hub', href: '/content-hub', description: 'Educational resources and guides' },
+    { title: 'Enterprise Solutions', href: '/enterprise', description: 'Enterprise-grade solutions and consulting' },
+    { title: 'AI 2026 Implementation Roadmap', href: '/guides/ai-2026-implementation-roadmap', description: 'Strategic AI implementation guide' },
+    { title: 'AI 2027 Implementation Roadmap', href: '/guides/ai-2027-implementation-roadmap', description: 'Advanced AI implementation guide' },
+    { title: 'Autonomous Business Processes Guide', href: '/guides/autonomous-business-processes-implementation-guide-2026', description: 'Business process automation guide' }
   ];
-
-  const getColorClasses = (color: string) => {
-    const colorMap = {
-      blue: 'bg-blue-100 text-blue-600 border-blue-200',
-      purple: 'bg-purple-100 text-purple-600 border-purple-200',
-      green: 'bg-green-100 text-green-600 border-green-200'
-    };
-    return colorMap[color] || colorMap.blue;
-  };
 
   return (
-    <>
-      <Head>
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        <meta name="keywords" content="sitemap, services, AI, blockchain, IoT, cybersecurity, data analytics, Zion Tech Group" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="canonical" href="https://ziontechgroup.com/sitemap" />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:url" content="https://ziontechgroup.com/sitemap" />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
-      </Head>
-
-      <div className="min-h-screen bg-gray-50">
-        {/* Hero Section */}
-        <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-5xl font-bold mb-4">
-                Sitemap
-              </h1>
-              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-                Navigate through all our services, solutions, and resources. Find exactly what you're looking for with our comprehensive site structure.
-              </p>
-            </div>
+    <div className="min-h-screen bg-gray-50">
+      {/* Header */}
+      <div className="bg-white shadow-sm border-b">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">
+              Website Sitemap
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Complete navigation guide to all pages and services on the Zion Tech Group website. 
+              Find exactly what you're looking for with our organized sitemap.
+            </p>
           </div>
-        </section>
+        </div>
+      </div>
 
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Main Pages */}
-        <section className="py-12 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Main Pages</h2>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-              {mainPages.map((page, index) => (
-                <Link key={index} href={page.link} className="bg-gray-50 hover:bg-blue-50 rounded-lg p-4 transition-colors group">
-                  <div className="flex items-center">
-                    <page.icon className="w-5 h-5 text-gray-600 group-hover:text-blue-600 mr-3" />
-                    <span className="text-gray-900 group-hover:text-blue-600 font-medium">{page.name}</span>
-                  </div>
-                </Link>
-              ))}
-            </div>
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">Main Pages</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {mainPages.map((page, index) => (
+              <Link 
+                key={index}
+                href={page.href}
+                className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow"
+              >
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">{page.title}</h3>
+                <p className="text-gray-600 text-sm">{page.description}</p>
+              </Link>
+            ))}
           </div>
         </section>
 
         {/* Service Categories */}
-        <section className="py-12 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Service Categories</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {serviceCategories.map((category, categoryIndex) => {
-                const colors = getColorClasses(category.color);
-                return (
-                  <div key={categoryIndex} className="bg-white rounded-xl shadow-lg p-6">
-                    <div className="flex items-center mb-6">
-                      <div className={`${colors} rounded-lg p-3 mr-4`}>
-                        <category.icon className="w-8 h-8" />
-                      </div>
-                      <h3 className="text-xl font-bold text-gray-900">{category.name}</h3>
-                    </div>
-                    <div className="space-y-3">
-                      {category.services.map((service, serviceIndex) => (
-                        <Link key={serviceIndex} href={service.link} className="flex items-center p-3 rounded-lg hover:bg-gray-50 transition-colors group">
-                          <service.icon className="w-5 h-5 text-gray-600 group-hover:text-blue-600 mr-3" />
-                          <span className="text-gray-900 group-hover:text-blue-600">{service.name}</span>
-                          <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-blue-600 ml-auto" />
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">Service Categories</h2>
+          <div className="space-y-8">
+            {serviceCategories.map((category, categoryIndex) => (
+              <div key={categoryIndex} className="bg-white rounded-lg shadow-md p-6">
+                <div className="mb-4">
+                  <Link 
+                    href={category.href}
+                    className="text-2xl font-bold text-blue-600 hover:text-blue-700 transition-colors"
+                  >
+                    {category.title}
+                  </Link>
+                  <p className="text-gray-600 mt-2">{category.description}</p>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+                  {category.services.map((service, serviceIndex) => (
+                    <Link 
+                      key={serviceIndex}
+                      href={service.href}
+                      className="text-gray-700 hover:text-blue-600 transition-colors text-sm py-1"
+                    >
+                      • {service.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
         </section>
 
-        {/* Blog Categories */}
-        <section className="py-12 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Blog Categories</h2>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-              {blogCategories.map((category, index) => (
-                <Link key={index} href="/blog" className="bg-gray-50 hover:bg-purple-50 rounded-lg p-4 transition-colors group text-center">
-                  <span className="text-gray-900 group-hover:text-purple-600 font-medium">{category}</span>
+        {/* Additional Services */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">Additional Services</h2>
+          <div className="bg-white rounded-lg shadow-md p-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+              {additionalServices.map((service, index) => (
+                <Link 
+                  key={index}
+                  href={service.href}
+                  className="text-gray-700 hover:text-blue-600 transition-colors text-sm py-1"
+                >
+                  • {service.name}
                 </Link>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Quick Links */}
-        <section className="py-12 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Quick Links</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="bg-white rounded-xl shadow-lg p-6">
-                <h3 className="text-lg font-bold text-gray-900 mb-4">Get Started</h3>
-                <div className="space-y-2">
-                  <Link href="/contact" className="block text-blue-600 hover:text-blue-800">Schedule Consultation</Link>
-                  <Link href="/services" className="block text-blue-600 hover:text-blue-800">Browse Services</Link>
-                  <Link href="/case-studies" className="block text-blue-600 hover:text-blue-800">View Case Studies</Link>
-                  <Link href="/about" className="block text-blue-600 hover:text-blue-800">About Our Team</Link>
-                </div>
-              </div>
-              
-              <div className="bg-white rounded-xl shadow-lg p-6">
-                <h3 className="text-lg font-bold text-gray-900 mb-4">Resources</h3>
-                <div className="space-y-2">
-                  <Link href="/guides" className="block text-blue-600 hover:text-blue-800">Implementation Guides</Link>
-                  <Link href="/blog" className="block text-blue-600 hover:text-blue-800">Latest Blog Posts</Link>
-                  <Link href="/case-studies" className="block text-blue-600 hover:text-blue-800">Success Stories</Link>
-                  <Link href="/enterprise" className="block text-blue-600 hover:text-blue-800">Enterprise Solutions</Link>
-                </div>
-              </div>
-              
-              <div className="bg-white rounded-xl shadow-lg p-6">
-                <h3 className="text-lg font-bold text-gray-900 mb-4">Support</h3>
-                <div className="space-y-2">
-                  <Link href="/contact" className="block text-blue-600 hover:text-blue-800">Contact Support</Link>
-                  <Link href="/security" className="block text-blue-600 hover:text-blue-800">Security Information</Link>
-                  <Link href="/privacy" className="block text-blue-600 hover:text-blue-800">Privacy Policy</Link>
-                  <Link href="/terms" className="block text-blue-600 hover:text-blue-800">Terms of Service</Link>
-                </div>
-              </div>
-              
-              <div className="bg-white rounded-xl shadow-lg p-6">
-                <h3 className="text-lg font-bold text-gray-900 mb-4">Contact Info</h3>
-                <div className="space-y-2 text-sm">
-                  <div className="flex items-center">
-                    <Phone className="w-4 h-4 text-gray-600 mr-2" />
-                    <a href="tel:+13024640950" className="text-blue-600 hover:text-blue-800">+1 302 464 0950</a>
-                  </div>
-                  <div className="flex items-center">
-                    <Mail className="w-4 h-4 text-gray-600 mr-2" />
-                    <a href="mailto:kleber@ziontechgroup.com" className="text-blue-600 hover:text-blue-800">kleber@ziontechgroup.com</a>
-                  </div>
-                  <div className="flex items-start">
-                    <MapPin className="w-4 h-4 text-gray-600 mr-2 mt-0.5" />
-                    <div className="text-blue-600 hover:text-blue-800">
-                      <div>364 E Main St STE 1008</div>
-                      <div>Middletown, DE 19709</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+        {/* Resources */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">Resources & Guides</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {resources.map((resource, index) => (
+              <Link 
+                key={index}
+                href={resource.href}
+                className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow"
+              >
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">{resource.title}</h3>
+                <p className="text-gray-600 text-sm">{resource.description}</p>
+              </Link>
+            ))}
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Can't Find What You're Looking For?
-            </h2>
-            <p className="text-xl mb-8 max-w-3xl mx-auto">
-              Our team is here to help you find the right solution for your business needs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors">
-                Contact Us
-              </Link>
-              <a href="tel:+13024640950" className="border border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3 rounded-lg font-semibold transition-colors">
-                Call +1 302 464 0950
+        {/* Contact Information */}
+        <section className="bg-blue-600 text-white rounded-lg p-8">
+          <h2 className="text-3xl font-bold mb-6">Can't Find What You're Looking For?</h2>
+          <p className="text-xl text-blue-100 mb-6">
+            Contact us directly for personalized assistance and custom solutions.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="text-center">
+              <div className="text-3xl mb-3">📞</div>
+              <h3 className="text-lg font-semibold mb-2">Call Us</h3>
+              <a href="tel:+13024640950" className="text-blue-100 hover:text-white transition-colors">
+                +1 302 464 0950
               </a>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl mb-3">✉️</div>
+              <h3 className="text-lg font-semibold mb-2">Email Us</h3>
+              <a href="mailto:kleber@ziontechgroup.com" className="text-blue-100 hover:text-white transition-colors">
+                kleber@ziontechgroup.com
+              </a>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl mb-3">📍</div>
+              <h3 className="text-lg font-semibold mb-2">Visit Us</h3>
+              <div className="text-blue-100">
+                364 E Main St STE 1008<br />
+                Middletown, DE 19709
+              </div>
             </div>
           </div>
         </section>
       </div>
-    </>
+
+      {/* Footer */}
+      <footer className="bg-gray-800 text-white mt-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+              <h3 className="text-lg font-semibold mb-4">Zion Tech Group</h3>
+              <p className="text-gray-300">
+                Leading provider of AI services, micro SaaS solutions, and IT consulting.
+              </p>
+            </div>
+            <div>
+              <h4 className="text-lg font-semibold mb-4">Services</h4>
+              <div className="space-y-2">
+                <Link href="/services/ai-services-comprehensive" className="block text-gray-300 hover:text-blue-400">AI Services</Link>
+                <Link href="/services/advanced-micro-saas-solutions" className="block text-gray-300 hover:text-green-400">Micro SaaS</Link>
+                <Link href="/services/it-services-comprehensive" className="block text-gray-300 hover:text-purple-400">IT Services</Link>
+                <Link href="/services" className="block text-gray-300 hover:text-blue-400">All Services</Link>
+              </div>
+            </div>
+            <div>
+              <h4 className="text-lg font-semibold mb-4">Company</h4>
+              <div className="space-y-2">
+                <Link href="/about" className="block text-gray-300 hover:text-blue-400">About Us</Link>
+                <Link href="/contact" className="block text-gray-300 hover:text-blue-400">Contact</Link>
+                <Link href="/case-studies" className="block text-gray-300 hover:text-blue-400">Case Studies</Link>
+                <Link href="/blog" className="block text-gray-300 hover:text-blue-400">Blog</Link>
+              </div>
+            </div>
+            <div>
+              <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
+              <div className="space-y-2 text-gray-300">
+                <p>📞 +1 302 464 0950</p>
+                <p>✉️ kleber@ziontechgroup.com</p>
+                <p>📍 364 E Main St STE 1008<br />Middletown, DE 19709</p>
+              </div>
+            </div>
+          </div>
+          <div className="border-t border-gray-700 mt-8 pt-4 text-center text-gray-400">
+            © {new Date().getFullYear()} Zion Tech Group. All rights reserved. | 
+            <Link href="https://ziontechgroup.com" className="hover:text-white ml-1">ziontechgroup.com</Link>
+          </div>
+        </div>
+      </footer>
+    </div>
   );
 }
