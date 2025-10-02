@@ -92,115 +92,66 @@ const Support: React.FC = () => {
       answer: 'Yes, we provide comprehensive training programs including documentation, video tutorials, and live training sessions.'
     },
     {
-      category: 'general',
-      question: 'What is your response time for support requests?',
-      answer: 'We guarantee response times based on your support plan: Premium (30 minutes), Standard (2 hours), Basic (24 hours).'
+      question: 'Is there a community where I can get help from other users?',
+      answer: "Yes! We have an active community forum where users can ask questions, share best practices, and get help from both our team and other experienced users. It's a great place to learn and network."
     }
   ];
 
-  const filteredFaqs = faqs.filter(faq => 
-    selectedCategory === 'all' || faq.category === selectedCategory
-  ).filter(faq =>
-    faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    faq.answer.toLowerCase().includes(searchQuery.toLowerCase())
-  );
+  const filteredFaqs = faqs.filter((faq) => {
+    const matchesCategory = selectedCategory === 'all' || faq.category === selectedCategory;
+    const query = searchQuery.trim().toLowerCase();
+    const matchesQuery =
+      query.length === 0 ||
+      (faq.question?.toLowerCase().includes(query) || faq.answer?.toLowerCase().includes(query));
+    return matchesCategory && matchesQuery;
+  });
+
+  const quickActions = [
+    { title: 'Report a Bug', description: 'Found an issue? Let us know', link: '/contact', icon: '🐛' },
+    { title: 'Request a Feature', description: "Have an idea? We'd love to hear it", link: '/contact', icon: '💡' },
+    { title: 'Schedule Training', description: 'Book a training session for your team', link: '/training', icon: '🎓' },
+    { title: 'View Status Page', description: 'Check system status and uptime', link: '/status', icon: '📊' }
+  ];
+
+  const filteredFaqs = faqs.filter((faq) => {
+    if (selectedCategory === 'all') return true;
+    return faq.category === selectedCategory;
+  });
 
   return (
-    <>
-      <Helmet>
-        <title>Support - Zion Tech Group</title>
-        <meta name="description" content="Get help and support for all Zion Tech Group services. 24/7 technical support, documentation, and expert assistance." />
-        <meta name="keywords" content="support, help, technical assistance, customer service, documentation" />
-        <link rel="canonical" href="https://ziontechgroup.com/support" />
-      </Helmet>
-
-      <div className="min-h-screen bg-gray-50">
-        {/* Hero Section */}
-        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                Support Center
-              </h1>
-              <p className="text-xl mb-8 max-w-3xl mx-auto">
-                Get help when you need it. Our expert support team is here 24/7 to assist you with any questions or issues.
-              </p>
-              
-              {/* Search Bar */}
-              <div className="max-w-2xl mx-auto">
-                <div className="relative">
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
-                  <input
-                    type="text"
-                    placeholder="Search for help articles, FAQs, or topics..."
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    className="w-full pl-10 pr-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-white"
-                  />
-                </div>
+    <div className="min-h-screen bg-gray-50">
+      {/* Hero Section */}
+      <section className="bg-gradient-to-br from-blue-600 via-purple-600 to-teal-600 text-white py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              We're Here to Help
+            </h1>
+            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+              Get the support you need to succeed with our AI solutions. 
+              Our expert team is ready to help you every step of the way.
+            </p>
+            
+            {/* Search Bar */}
+            <div className="max-w-2xl mx-auto">
+              <div className="relative">
+                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <input
+                  type="text"
+                  placeholder="Search our knowledge base..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full pl-12 pr-4 py-4 rounded-lg text-gray-900 text-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                />
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Support Channels */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Get Support
-              </h2>
-              <p className="text-xl text-gray-600">
-                Choose the support channel that works best for you
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {supportChannels.map((channel, index) => (
-                <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <channel.icon className="h-8 w-8 text-blue-600" />
-                    </div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                      {channel.title}
-                    </h3>
-                    <p className="text-gray-600 mb-4">
-                      {channel.description}
-                    </p>
-                    <div className="space-y-2 text-sm text-gray-500 mb-4">
-                      <div className="flex justify-between">
-                        <span>Availability:</span>
-                        <span className="font-semibold">{channel.availability}</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span>Response Time:</span>
-                        <span className="font-semibold">{channel.responseTime}</span>
-                      </div>
-                    </div>
-                    <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors">
-                      {channel.contact}
-                    </button>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* FAQ Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Frequently Asked Questions
-              </h2>
-              <p className="text-xl text-gray-600">
-                Find quick answers to common questions
-              </p>
-            </div>
-
-            {/* Category Filter */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto">
+          {/* Category Filter */}
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               <button
                 onClick={() => setSelectedCategory('all')}
@@ -249,11 +200,11 @@ const Support: React.FC = () => {
                 </p>
               </div>
             )}
-          </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Contact CTA */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-600">
+      {/* Contact CTA */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-600">
           <div className="max-w-7xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Still Need Help?
@@ -278,9 +229,8 @@ const Support: React.FC = () => {
               </Link>
             </div>
           </div>
-        </section>
-      </div>
-    </>
+      </section>
+    </div>
   );
 };
 

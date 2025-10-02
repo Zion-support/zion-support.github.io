@@ -143,7 +143,7 @@ const Solutions: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+      </>
   );
 };
 

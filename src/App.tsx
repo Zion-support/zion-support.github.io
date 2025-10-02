@@ -1,122 +1,152 @@
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
-import { AppRouter } from './router';
-import './index.css';
-import ModernHeader from './components/Header';
-import ModernFooter from './components/Footer';
-import SEOOptimizer from './components/SEOOptimizer';
-import AdvancedAnalytics from './components/AdvancedAnalytics';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
+import SEO from './components/SEO';
+import PerformanceOptimizer from './components/PerformanceOptimizer';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import BannerManager from './components/BannerManager';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
+import SEOHead from './components/EnhancedSEOHead';
+import PerformanceOptimizer from './components/PerformanceOptimizer';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import NotificationSystem from './components/NotificationSystem';
 import PerformanceMonitor from './components/PerformanceMonitor';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
-import EnhancedSEOHead from './components/EnhancedSEOHead';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-// Types and interfaces
-interface Notification {
-  id: string;
-  message: string;
-  type: 'success' | 'error' | 'warning' | 'info';
+
+// Lazy loaded components for better performance
+const HomePage = React.lazy(() => import('./pages/HomePage'));
+const AboutPage = React.lazy(() => import('./pages/AboutPage'));
+const ContactPage = React.lazy(() => import('./pages/ContactPage'));
+const ServicesPage = React.lazy(() => import('./pages/ServicesPage'));
+const SolutionsPage = React.lazy(() => import('./pages/SolutionsPage'));
+const BlogPage = React.lazy(() => import('./pages/BlogPage'));
+const CaseStudiesPage = React.lazy(() => import('./pages/CaseStudiesPage'));
+
+// Loading component
+const LoadingSpinner = () => (
+  <div className="flex items-center justify-center min-h-screen">
+    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+  </div>
+);
+
+// Error boundary component
+class ErrorBoundary extends React.Component<
+  { children: React.ReactNode },
+  { hasError: boolean; error?: Error }
+> {
+  constructor(props: { children: React.ReactNode }) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError(error: Error) {
+    return { hasError: true, error };
+  }
+
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+    console.error('App Error:', error, errorInfo);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div className="min-h-screen flex items-center justify-center bg-gray-50">
+          <div className="text-center p-8">
+            <h1 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong</h1>
+            <p className="text-gray-600 mb-6">We're sorry, but something unexpected happened.</p>
+            <button
+              onClick={() => window.location.reload()}
+              className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              Reload Page
+            </button>
+          </div>
+        </div>
+      );
+    }
+
+    return this.props.children;
+  }
 }
 
-interface WindowWithEnhancements extends Window {
-  advancedPerformanceOptimizer?: { initialize?: () => void };
-  advancedSEOOptimizer?: { initialize?: () => void };
-  advancedSecurityManager?: { initialize?: () => void };
-  advancedAnalytics?: { initialize?: () => void };
-  advancedErrorHandler?: { initialize?: () => void };
-  advancedCachingSystem?: { initialize?: () => void };
-  advancedUXOptimizer?: { initialize?: () => void };
-  advancedTestingFramework?: { initialize?: () => void };
-  advancedI18n?: { initialize?: () => void };
-  enhancements?: Record<string, unknown>;
-  performanceOptimizer?: Record<string, unknown>;
-  seoOptimizer?: Record<string, unknown>;
-  securityManager?: Record<string, unknown>;
-  analytics?: Record<string, unknown>;
-  errorHandler?: Record<string, unknown>;
-  cachingSystem?: Record<string, unknown>;
-  uxOptimizer?: Record<string, unknown>;
-  testingFramework?: Record<string, unknown>;
-  i18n?: Record<string, unknown>;
-}
-
-// Initialize performance enhancements function
-const initializePerformanceEnhancements = () => {
-  // Performance enhancement initialization logic
-  // Performance enhancements initialized
-};
-
-// Main App Component
 const App: React.FC = () => {
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
-  const [notifications, setNotifications] = useState<Notification[]>([]);
+  const [notifications, setNotifications] = useState([]);
 
-  interface SEOData {
-    title: string;
-    description: string;
-    canonical: string;
-  }
-
-  const seoDataForOptimizer: SEOData = useMemo(() => ({
-    title: 'Zion Tech Group - Leading AI & Technology Solutions',
-    description: 'Cutting-edge AI, cloud, and digital transformation solutions for modern enterprises.',
-    canonical: typeof window !== 'undefined' ? window.location.href : 'https://zion.app/',
-  }), []);
-
-  // Simple hotkeys for demo toggles and initialization
-  useEffect(() => {
-    const onKeyDown = (e: KeyboardEvent) => {
-      if (!e.ctrlKey || !e.shiftKey) return;
-      switch (e.key.toLowerCase()) {
-        case 'p':
-          e.preventDefault();
-          setShowPerformanceOptimizer((v) => !v);
-          break;
-        case 'm':
-          e.preventDefault();
-          setShowPerformanceMonitor((v) => !v);
-          break;
-        default:
-          break;
-      }
-    };
-
-    window.addEventListener('keydown', onKeyDown);
-    
-    // Initialize performance enhancements
-    try {
-      initializePerformanceEnhancements();
-    } catch (error) {
-      console.error('Error initializing enhancements:', error);
-    }
-
-    return () => window.removeEventListener('keydown', onKeyDown);
-  }, []);
-
-  const handleRemoveNotification = useCallback((id: string) => {
-    setNotifications((prev) => prev.filter((n) => n.id !== id));
-  }, []);
+  const handleRemoveNotification = (id: string) => {
+    setNotifications(prev => prev.filter(notification => notification.id !== id));
+  };
 
   return (
-    <AccessibilityEnhancer>
-      <EnhancedErrorBoundary>
-        <EnhancedSEOHead 
-          title={seoDataForOptimizer.title} 
-          description={seoDataForOptimizer.description} 
-          canonical={seoDataForOptimizer.canonical}
-          keywords={['AI', 'IT Solutions', 'Enterprise Automation', 'Technology Services', 'Artificial Intelligence']}
-          author="Zion Tech Group"
-        />
-        <SEOOptimizer title={seoDataForOptimizer.title} description={seoDataForOptimizer.description} canonicalUrl={seoDataForOptimizer.canonical} />
-        <AdvancedAnalytics enableConversionTracking enablePerformanceTracking enableErrorTracking />
-        <PerformanceMonitor enabled={true} showMetrics={process.env.NODE_ENV === 'development'} />
-        <div className="min-h-screen bg-white">
-          <ModernHeader />
-          <main>
-            <AppRouter />
-          </main>
-          <ModernFooter />
+    <HelmetProvider>
+      <AccessibilityEnhancer>
+        <Router>
+        <div className="min-h-screen bg-gray-50">
+          <SEOHead />
+          <EnhancedErrorBoundary>
+            <Header />
+
+            {/* Dynamic Banner System */}
+            <motion.div
+              initial="initial"
+              animate="in"
+              exit="out"
+              variants={pageVariants}
+              transition={pageTransition}
+              className="relative"
+            >
+              <BannerManager
+                banners={bannerData}
+                rotationInterval={8000}
+                maxVisibleBanners={3}
+              />
+            </motion.div>
+
+            {/* Main Content */}
+            <motion.main
+              initial="initial"
+              animate="in"
+              exit="out"
+              variants={pageVariants}
+              transition={pageTransition}
+              className="relative z-10"
+            >
+              <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/about" element={<AboutPage />} />
+                <Route path="/contact" element={<ContactPage />} />
+                <Route path="/services/*" element={<ServicesPage />} />
+                <Route path="/solutions/*" element={<SolutionsPage />} />
+                <Route path="/blog/*" element={<BlogPage />} />
+                <Route path="/case-studies" element={<CaseStudiesPage />} />
+
+                {/* Blog Routes */}
+                <Route path="/blog/:slug" element={<BlogPage />} />
+
+                {/* 404 Fallback */}
+                <Route
+                  path="*"
+                  element={
+                    <div className="min-h-screen flex items-center justify-center">
+                      <div className="text-center">
+                        <h1 className="text-6xl font-bold text-gray-300 mb-4">404</h1>
+                        <p className="text-xl text-gray-600 mb-8">Page not found</p>
+                        <a
+                          href="/"
+                          className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+                        >
+                          Return Home
+                        </a>
+                      </div>
+                    </div>
+                  }
+                />
+              </Routes>
+            </React.Suspense>
+
+            <Footer />
+          </EnhancedErrorBoundary>
         </div>
 
         {showPerformanceOptimizer && (
@@ -144,8 +174,9 @@ const App: React.FC = () => {
         )}
 
         <NotificationSystem notifications={notifications} onRemove={handleRemoveNotification} />
-      </EnhancedErrorBoundary>
-    </AccessibilityEnhancer>
+        </Router>
+      </AccessibilityEnhancer>
+    </HelmetProvider>
   );
 };
 
