@@ -8,21 +8,17 @@ const Footer: React.FC = () => {
   const footerLinks = {
     services: [
       { name: 'All Services', href: '/services' },
-      { name: 'AI Services', href: '/ai-services' },
+      { name: 'AI Services', href: '/services/ai-services' },
       { name: 'Micro SaaS', href: '/services/micro-saas' },
-      { name: 'IT Services', href: '/services/it-services-comprehensive' },
-      { name: 'Blockchain Solutions', href: '/services/blockchain-solutions' },
-      { name: 'Quantum Computing', href: '/services/ai-quantum-computing-2026' },
-      { name: 'Cloud Migration', href: '/services/cloud-migration-service' },
-      { name: 'Cybersecurity', href: '/services/cybersecurity-solutions' },
-      { name: 'Data Analytics', href: '/services/data-analytics-business-intelligence' },
-      { name: 'Additional Services', href: '/additional-services' },
-      { name: 'Comprehensive Services', href: '/comprehensive-services' },
-      { name: 'AI Content Tools', href: '/services/ai-powered-content-tools' },
-      { name: 'Telemedicine Platform', href: '/services/telemedicine-platform' },
-      { name: 'Remote Collaboration', href: '/services/remote-collaboration-suite' },
-      { name: 'API Integration', href: '/services/api-integration-platform' },
-      { name: 'Customer Insights', href: '/services/ai-customer-insights-platform' },
+      { name: 'IT Services', href: '/services/it-services' },
+      { name: 'AI Social Media Scheduler', href: '/services/micro-saas/ai-social-media-scheduler' },
+      { name: 'AI Email Marketing Automation', href: '/services/micro-saas/ai-email-marketing-automation' },
+      { name: 'AI Project Management Platform', href: '/services/micro-saas/ai-project-management-platform' },
+      { name: 'AIOps Platform', href: '/services/it-services/aiops-platform' },
+      { name: 'Cloud-Native DevOps Platform', href: '/services/it-services/cloud-native-devops-platform' },
+      { name: 'AI Content Optimization', href: '/services/ai-content-optimization-platform' },
+      { name: 'AI Lead Scoring API', href: '/services/micro-saas/ai-lead-scoring-api' },
+      { name: 'AI Cybersecurity Automation', href: '/services/ai-cybersecurity-automation-suite' },
     ],
     solutions: [
       { name: 'All Solutions', href: '/solutions' },
@@ -79,6 +75,26 @@ const Footer: React.FC = () => {
               Revolutionary AI breakthroughs delivering 1000x performance gains, 95% automation, 
               and $150M+ ROI for Fortune 500 companies worldwide.
             </p>
+            
+            {/* Contact Information */}
+            <div className="space-y-3 mb-6">
+              <div className="flex items-center text-gray-400">
+                <Phone className="w-5 h-5 mr-3 text-blue-400" />
+                <a href="tel:+13024640950" className="hover:text-white transition-colors">
+                  +1 302 464 0950
+                </a>
+              </div>
+              <div className="flex items-center text-gray-400">
+                <Mail className="w-5 h-5 mr-3 text-blue-400" />
+                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-white transition-colors">
+                  kleber@ziontechgroup.com
+                </a>
+              </div>
+              <div className="flex items-center text-gray-400">
+                <MapPin className="w-5 h-5 mr-3 text-blue-400" />
+                <span>364 E Main St STE 1008<br />Middletown DE 19709</span>
+              </div>
+            </div>
             
             <div className="flex space-x-4">
               {socialLinks.map((social) => (
