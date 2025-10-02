@@ -8,6 +8,11 @@ import NewsPage from './app/news/page';
 import PressPage from './app/press/page';
 import CareersPage from './app/careers/page';
 import MarketplacePage from './app/marketplace/page';
+import ServicesPage from './app/services/page';
+import AIInvoiceProcessingPage from './app/services/ai-invoice-processing-saas/page';
+import ComprehensiveITServicesPage from './app/services/comprehensive-it-services/page';
+import ContactPage from './app/contact/page';
+import AboutPage from './app/about/page';
 import { Header, Footer } from './app/components/Navigation';
 import './app/globals.css';
 import ConsensusIntelligenceBreakthroughBanner from "./components/ConsensusIntelligenceBreakthroughBanner";
@@ -41,15 +46,18 @@ export default function App(): JSX.Element {
             <Route path="/press" element={<PressPage />} />
             <Route path="/careers" element={<CareersPage />} />
             <Route path="/marketplace" element={<MarketplacePage />} />
-            <Route path="/services" element={<div className="py-20 px-4"><h1 className="text-4xl font-bold text-center text-white">Services</h1></div>} />
+            <Route path="/services" element={<ServicesPage />} />
+            <Route path="/services/ai-invoice-processing-saas" element={<AIInvoiceProcessingPage />} />
+            <Route path="/services/comprehensive-it-services" element={<ComprehensiveITServicesPage />} />
             <Route path="/services/comprehensive-micro-saas-solutions" element={<div className="py-20 px-4"><h1 className="text-4xl font-bold text-center text-white">Comprehensive Micro SaaS Solutions</h1></div>} />
-            <Route path="/services/comprehensive-it-services" element={<div className="py-20 px-4"><h1 className="text-4xl font-bold text-center text-white">Comprehensive IT Services</h1></div>} />
             <Route path="/services/ai-voice-assistant-platform" element={<div className="py-20 px-4"><h1 className="text-4xl font-bold text-center text-white">AI Voice Assistant Platform</h1></div>} />
             <Route path="/services/ai-document-automation-platform" element={<div className="py-20 px-4"><h1 className="text-4xl font-bold text-center text-white">AI Document Automation Platform</h1></div>} />
             <Route path="/services/ai-business-intelligence-platform" element={<div className="py-20 px-4"><h1 className="text-4xl font-bold text-center text-white">AI Business Intelligence Platform</h1></div>} />
+            <Route path="/comprehensive-micro-saas-services" element={<ServicesPage />} />
+            <Route path="/comprehensive-it-services" element={<ComprehensiveITServicesPage />} />
             <Route path="/case-studies" element={<div className="py-20 px-4"><h1 className="text-4xl font-bold text-center text-white">Case Studies</h1></div>} />
-            <Route path="/contact" element={<div className="py-20 px-4"><h1 className="text-4xl font-bold text-center text-white">Contact</h1></div>} />
-            <Route path="/about" element={<div className="py-20 px-4"><h1 className="text-4xl font-bold text-center text-white">About</h1></div>} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/about" element={<AboutPage />} />
             <Route path="*" element={<div className="py-20 px-4"><h1 className="text-4xl font-bold text-center text-white">404 - Page Not Found</h1></div>} />
           </Routes>
         </main>

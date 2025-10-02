@@ -1,38 +1,15 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
 import { 
+  CheckCircle, 
   Users, 
-  Target, 
-  Award, 
-  Globe, 
   Zap, 
   Shield, 
-  Brain, 
-  TrendingUp,
-  ArrowRight,
-  CheckCircle,
-  Star
+  BarChart3,
+  Brain,
+  Cloud,
+  Database,
+  Award,
+  Target
 } from 'lucide-react';
-
-export const metadata = {
-  title: 'About Zion Tech Group — Revolutionary AI & IT Solutions Leader',
-  description: 'Learn about Zion Tech Group\'s mission to deliver revolutionary AI breakthroughs, enterprise automation, and cutting-edge technology solutions with proven ROI.',
-  keywords: 'about zion tech group, AI company, enterprise technology solutions, AI transformation, technology leadership',
-  openGraph: {
-    title: 'About Zion Tech Group — Revolutionary AI & IT Solutions Leader',
-    description: 'Learn about Zion Tech Group\'s mission to deliver revolutionary AI breakthroughs, enterprise automation, and cutting-edge technology solutions.',
-    type: 'website',
-    url: 'https://ziontechgroup.com/about',
-    images: [
-      {
-        url: '/og-about.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'About Zion Tech Group - AI Technology Leadership',
-      },
-    ],
-  },
-};
 
 export default function AboutPage() {
   return (
@@ -40,74 +17,64 @@ export default function AboutPage() {
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10"></div>
-        <div className="relative max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-6">
-              About Zion Tech Group
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-4xl mx-auto">
-              Pioneering the future of AI and enterprise technology with revolutionary breakthroughs 
-              that deliver unprecedented performance gains and transformative business results.
-            </p>
-          </div>
+        <div className="relative max-w-7xl mx-auto text-center">
+          <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-6">
+            About Zion Tech Group
+          </h1>
+          <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-4xl mx-auto">
+            Leading the AI revolution with cutting-edge solutions and transformative technologies for enterprise organizations worldwide.
+          </p>
         </div>
       </section>
 
-      {/* Mission & Vision */}
+      {/* Company Overview */}
       <section className="py-20 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Mission</h2>
               <p className="text-lg text-gray-600 mb-6">
-                To accelerate human potential through revolutionary AI technologies that deliver 
-                1000x performance improvements, 95% automation rates, and proven ROI of $150M+ 
-                for enterprise clients worldwide.
+                Zion Tech Group is dedicated to revolutionizing businesses through innovative AI and IT solutions. 
+                We believe that artificial intelligence should be accessible, powerful, and transformative for organizations 
+                of all sizes.
               </p>
               <p className="text-lg text-gray-600 mb-8">
-                We believe in the transformative power of AI to solve complex business challenges 
-                and create unprecedented value for organizations across all industries.
+                Founded with the vision of democratizing advanced technology, we've helped hundreds of companies 
+                achieve unprecedented growth through strategic AI implementation and cutting-edge IT infrastructure.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link 
-                  to="/contact" 
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300"
+                <a 
+                  href="tel:+13024640950" 
+                  className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
                 >
-                  Partner With Us
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </Link>
-                <Link 
-                  to="/case-studies" 
-                  className="inline-flex items-center px-8 py-4 border-2 border-gray-300 text-gray-700 font-semibold rounded-lg hover:border-blue-500 hover:text-blue-600 transition-all duration-300"
+                  Contact Us
+                </a>
+                <a 
+                  href="/services" 
+                  className="inline-flex items-center px-6 py-3 border-2 border-blue-600 text-blue-600 font-semibold rounded-lg hover:bg-blue-600 hover:text-white transition-colors"
                 >
-                  View Success Stories
-                </Link>
+                  Our Services
+                </a>
               </div>
             </div>
-            
             <div className="bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-xl">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Our Vision</h3>
-              <div className="space-y-4">
-                <div className="flex items-start">
-                  <CheckCircle className="w-6 h-6 text-green-600 mr-3 mt-1" />
-                  <div>
-                    <h4 className="font-semibold text-gray-900">Universal AI Integration</h4>
-                    <p className="text-gray-600">Every enterprise empowered with autonomous AI systems</p>
-                  </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Company Stats</h3>
+              <div className="grid grid-cols-2 gap-6">
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-blue-600 mb-2">500+</div>
+                  <div className="text-sm text-gray-600">Projects Completed</div>
                 </div>
-                <div className="flex items-start">
-                  <CheckCircle className="w-6 h-6 text-green-600 mr-3 mt-1" />
-                  <div>
-                    <h4 className="font-semibold text-gray-900">Quantum-Enhanced Computing</h4>
-                    <p className="text-gray-600">Next-generation computational capabilities for all</p>
-                  </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-purple-600 mb-2">95%</div>
+                  <div className="text-sm text-gray-600">Client Satisfaction</div>
                 </div>
-                <div className="flex items-start">
-                  <CheckCircle className="w-6 h-6 text-green-600 mr-3 mt-1" />
-                  <div>
-                    <h4 className="font-semibold text-gray-900">Sustainable Innovation</h4>
-                    <p className="text-gray-600">Technology that benefits humanity and the planet</p>
-                  </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-green-600 mb-2">$5.2B</div>
+                  <div className="text-sm text-gray-600">Client Savings</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-orange-600 mb-2">24/7</div>
+                  <div className="text-sm text-gray-600">Support Available</div>
                 </div>
               </div>
             </div>
@@ -115,164 +82,246 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Values */}
+      {/* Our Expertise */}
       <section className="py-20 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Core Values</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Expertise</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              The principles that guide our innovation and drive our commitment to excellence
+              Cutting-edge technologies and proven methodologies to drive your digital transformation
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
               <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
                 <Brain className="w-6 h-6 text-blue-600" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">Innovation First</h3>
-              <p className="text-gray-600">
-                Pushing the boundaries of what's possible with cutting-edge AI and technology solutions.
+              <h3 className="text-xl font-semibold mb-3">AI & Machine Learning</h3>
+              <p className="text-gray-600 mb-4">
+                Advanced AI solutions including predictive analytics, natural language processing, 
+                and computer vision applications.
               </p>
-            </div>
-
-            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-              <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
-                <Shield className="w-6 h-6 text-purple-600" />
-              </div>
-              <h3 className="text-xl font-semibold mb-3">Trust & Security</h3>
-              <p className="text-gray-600">
-                Enterprise-grade security and governance frameworks that ensure reliable, safe AI deployment.
-              </p>
+              <ul className="space-y-2">
+                <li className="flex items-center text-sm text-gray-600">
+                  <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                  Quantum AI Computing
+                </li>
+                <li className="flex items-center text-sm text-gray-600">
+                  <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                  Autonomous Operations
+                </li>
+                <li className="flex items-center text-sm text-gray-600">
+                  <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                  Predictive Analytics
+                </li>
+              </ul>
             </div>
 
             <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
               <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
-                <TrendingUp className="w-6 h-6 text-green-600" />
+                <Cloud className="w-6 h-6 text-green-600" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">Proven Results</h3>
-              <p className="text-gray-600">
-                Measurable outcomes with documented ROI and performance improvements for every client.
+              <h3 className="text-xl font-semibold mb-3">Cloud Infrastructure</h3>
+              <p className="text-gray-600 mb-4">
+                Comprehensive cloud solutions including migration, optimization, and management 
+                across all major cloud platforms.
               </p>
+              <ul className="space-y-2">
+                <li className="flex items-center text-sm text-gray-600">
+                  <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                  AWS, Azure, GCP
+                </li>
+                <li className="flex items-center text-sm text-gray-600">
+                  <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                  DevOps Automation
+                </li>
+                <li className="flex items-center text-sm text-gray-600">
+                  <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                  Cost Optimization
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+              <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
+                <Shield className="w-6 h-6 text-red-600" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Cybersecurity</h3>
+              <p className="text-gray-600 mb-4">
+                Enterprise-grade security solutions including threat detection, compliance, 
+                and incident response capabilities.
+              </p>
+              <ul className="space-y-2">
+                <li className="flex items-center text-sm text-gray-600">
+                  <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                  AI-Powered Security
+                </li>
+                <li className="flex items-center text-sm text-gray-600">
+                  <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                  Compliance Consulting
+                </li>
+                <li className="flex items-center text-sm text-gray-600">
+                  <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                  Threat Intelligence
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+              <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                <BarChart3 className="w-6 h-6 text-purple-600" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Data Analytics</h3>
+              <p className="text-gray-600 mb-4">
+                Transform raw data into actionable insights with advanced analytics platforms 
+                and business intelligence solutions.
+              </p>
+              <ul className="space-y-2">
+                <li className="flex items-center text-sm text-gray-600">
+                  <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                  Real-time Analytics
+                </li>
+                <li className="flex items-center text-sm text-gray-600">
+                  <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                  Data Visualization
+                </li>
+                <li className="flex items-center text-sm text-gray-600">
+                  <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                  Predictive Modeling
+                </li>
+              </ul>
             </div>
 
             <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
               <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
-                <Users className="w-6 h-6 text-orange-600" />
+                <Zap className="w-6 h-6 text-orange-600" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">Client Success</h3>
-              <p className="text-gray-600">
-                Dedicated partnership approach focused on achieving your business objectives and growth.
+              <h3 className="text-xl font-semibold mb-3">Automation</h3>
+              <p className="text-gray-600 mb-4">
+                Streamline operations with intelligent automation solutions that reduce costs 
+                and improve efficiency across your organization.
               </p>
+              <ul className="space-y-2">
+                <li className="flex items-center text-sm text-gray-600">
+                  <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                  Process Automation
+                </li>
+                <li className="flex items-center text-sm text-gray-600">
+                  <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                  Workflow Optimization
+                </li>
+                <li className="flex items-center text-sm text-gray-600">
+                  <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                  RPA Implementation
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+              <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
+                <Database className="w-6 h-6 text-indigo-600" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Database Solutions</h3>
+              <p className="text-gray-600 mb-4">
+                Optimize database performance with advanced tuning, backup strategies, 
+                and scalable architecture designs.
+              </p>
+              <ul className="space-y-2">
+                <li className="flex items-center text-sm text-gray-600">
+                  <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                  Performance Tuning
+                </li>
+                <li className="flex items-center text-sm text-gray-600">
+                  <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                  Backup & Recovery
+                </li>
+                <li className="flex items-center text-sm text-gray-600">
+                  <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                  Scalable Architecture
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Leadership Team */}
+      {/* Our Values */}
       <section className="py-20 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Leadership Team</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Values</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Industry veterans and AI pioneers driving the future of enterprise technology
+              The principles that guide everything we do
             </p>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-xl text-center">
-              <div className="w-24 h-24 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-white font-bold text-2xl">K</span>
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Kleber</h3>
-              <p className="text-blue-600 font-medium mb-4">CEO & Founder</p>
-              <p className="text-gray-600">
-                Visionary leader with 15+ years in AI and enterprise technology, 
-                driving revolutionary breakthroughs in quantum computing and autonomous systems.
-              </p>
-            </div>
-
-            <div className="bg-gradient-to-br from-green-50 to-blue-50 p-8 rounded-xl text-center">
-              <div className="w-24 h-24 bg-gradient-to-r from-green-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-white font-bold text-2xl">A</span>
-              </div>
-              <h3 className="text-xl font-semibold mb-2">AI Research Team</h3>
-              <p className="text-green-600 font-medium mb-4">Chief Technology Officers</p>
-              <p className="text-gray-600">
-                World-class AI researchers and engineers developing next-generation 
-                neural architectures and quantum-enhanced computing solutions.
-              </p>
-            </div>
-
-            <div className="bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-xl text-center">
-              <div className="w-24 h-24 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-white font-bold text-2xl">E</span>
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Enterprise Solutions</h3>
-              <p className="text-purple-600 font-medium mb-4">VP of Solutions</p>
-              <p className="text-gray-600">
-                Expert team delivering enterprise-grade AI implementations with 
-                proven ROI and comprehensive transformation strategies.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Company Stats */}
-      <section className="py-20 px-4 bg-gradient-to-r from-blue-600 to-purple-600">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">By the Numbers</h2>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-              Proven results that speak to our commitment to excellence and innovation
-            </p>
-          </div>
-
+          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-5xl font-bold text-white mb-2">500+</div>
-              <div className="text-blue-100">Enterprise Clients</div>
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Target className="w-8 h-8 text-blue-600" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Innovation</h3>
+              <p className="text-gray-600">
+                Continuously pushing the boundaries of what's possible with cutting-edge technology and creative solutions.
+              </p>
             </div>
+
             <div className="text-center">
-              <div className="text-5xl font-bold text-white mb-2">$150M+</div>
-              <div className="text-blue-100">Average ROI</div>
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Users className="w-8 h-8 text-green-600" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Collaboration</h3>
+              <p className="text-gray-600">
+                Working closely with our clients as partners to understand their unique challenges and deliver tailored solutions.
+              </p>
             </div>
+
             <div className="text-center">
-              <div className="text-5xl font-bold text-white mb-2">95%</div>
-              <div className="text-blue-100">Automation Rate</div>
+              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Award className="w-8 h-8 text-purple-600" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Excellence</h3>
+              <p className="text-gray-600">
+                Committed to delivering the highest quality solutions with attention to detail and exceptional service.
+              </p>
             </div>
+
             <div className="text-center">
-              <div className="text-5xl font-bold text-white mb-2">1000x</div>
-              <div className="text-blue-100">Performance Gains</div>
+              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Shield className="w-8 h-8 text-orange-600" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Trust</h3>
+              <p className="text-gray-600">
+                Building long-term relationships based on transparency, reliability, and consistent delivery of results.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 px-4 bg-white">
+      {/* Contact CTA */}
+      <section className="py-16 px-4 bg-gradient-to-r from-blue-600 to-purple-600">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">
-            Ready to Transform Your Organization?
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Work With Us?
           </h2>
-          <p className="text-xl text-gray-600 mb-8">
-            Join the AI revolution and unlock unprecedented growth with Zion Tech Group
+          <p className="text-xl text-blue-100 mb-8">
+            Let's discuss how Zion Tech Group can help transform your business with innovative AI and IT solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact" 
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300"
+            <a 
+              href="tel:+13024640950" 
+              className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 shadow-lg"
             >
-              Get Started Today
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Link>
-            <Link 
-              to="/services" 
-              className="inline-flex items-center px-8 py-4 border-2 border-gray-300 text-gray-700 font-semibold rounded-lg hover:border-blue-500 hover:text-blue-600 transition-all duration-300"
+              Call: +1 302 464 0950
+            </a>
+            <a 
+              href="mailto:kleber@ziontechgroup.com" 
+              className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300"
             >
-              Explore Solutions
-            </Link>
+              Email Us
+            </a>
           </div>
         </div>
       </section>
