@@ -85,7 +85,7 @@ const App: React.FC = () => {
   const seoDataForOptimizer: SEOData = useMemo(() => ({
     title: 'Zion Tech Group - Leading AI & Technology Solutions',
     description: 'Cutting-edge AI, cloud, and digital transformation solutions for modern enterprises.',
-    canonical: typeof window !== 'undefined' ? window.location.href : 'https://zion.app/',
+    canonical: typeof window !== 'undefined' ? window.location.href : 'https://ziontechgroup.com/',
   }), []);
 
   // Simple hotkeys for demo toggles and initialization
