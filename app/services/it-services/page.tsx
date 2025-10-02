@@ -2,593 +2,342 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { 
+  Server, 
   Cloud, 
-  GitBranch, 
-  Lock, 
+  Shield, 
+  Network, 
   Database, 
-  Layers, 
-  Activity, 
+  Settings, 
+  Monitor, 
+  Code, 
   CheckCircle, 
   ArrowRight, 
   DollarSign,
   Clock,
   Star,
-  Target,
   Phone,
   Mail,
   MapPin,
-  Zap,
-  Server,
-  Shield,
-  Network,
-  Settings,
-  Monitor,
-  Code,
-  Building,
   Users,
   Globe,
-  Award,
-  Rocket,
-  TrendingUp,
-  AlertTriangle,
-  CheckSquare,
-  PieChart,
-  Cpu,
+  Zap,
   HardDrive,
-  Wifi,
-  Key,
-  Eye,
+  Router,
+  Cpu,
+  Smartphone,
+  Laptop,
+  Building,
+  Lock,
   BarChart3,
   FileText,
-  Smartphone,
-  Laptop
+  MessageSquare,
+  Search,
+  TrendingUp,
+  Target,
+  Eye,
+  Key,
+  Wifi,
+  Battery,
+  Headphones,
+  Printer,
+  Scanner,
+  Camera,
+  Video,
+  Mic,
+  Calendar,
+  ShoppingCart,
+  CreditCard,
+  Heart,
+  Car,
+  Plane,
+  Gamepad2,
+  Music,
+  BookOpen,
+  GraduationCap,
+  Briefcase,
+  Home
 } from 'lucide-react';
 
 export default function ITServicesPage() {
-  const title = 'IT Services & Solutions — Zion Tech Group';
-  const description = 'Enterprise-grade IT services including cloud migration, DevOps, cybersecurity, data engineering, platform engineering, and observability. Modern architecture with proven results.';
+  const title = 'Comprehensive IT Services & Solutions — Zion Tech Group';
+  const description = 'Complete IT services including cloud migration, cybersecurity, infrastructure management, DevOps, data analytics, and digital transformation. Expert IT solutions for modern businesses.';
 
   const itServices = [
     {
-      name: 'Cloud Migration & Architecture',
-      description: 'Complete cloud transformation with modern architecture, best practices, and cost optimization',
+      name: 'Cloud Migration & Infrastructure Services',
+      description: 'Complete cloud migration services with multi-cloud strategy, security, and optimization',
       icon: Cloud,
       features: [
         'Multi-cloud strategy and architecture design',
-        'Legacy system modernization and migration',
-        'Container orchestration (Kubernetes, Docker)',
-        'Microservices architecture implementation',
-        'Performance optimization and scaling',
-        'Cost optimization and monitoring',
+        'Automated migration tools and processes',
+        'Legacy system modernization and integration',
+        'Cloud security and compliance implementation',
+        'Performance optimization and cost management',
         'Disaster recovery and backup solutions',
-        'Security and compliance implementation'
+        '24/7 cloud monitoring and support',
+        'Training and knowledge transfer'
       ],
-      pricing: '$8,000 - $75,000/project',
-      delivery: '8-20 weeks',
+      pricing: '$5,000 - $50,000/project',
+      delivery: '4-12 weeks',
       category: 'Cloud Services',
-      benefits: 'Reduce infrastructure costs by 40%, improve scalability and reliability',
-      marketPrice: '$15,000 - $150,000/project',
+      benefits: 'Reduce infrastructure costs by 40% and improve scalability by 300%',
+      marketPrice: '$10,000 - $100,000/project',
       link: '/services/it-services/cloud-migration',
-      useCases: ['Legacy Modernization', 'Multi-Cloud Strategy', 'Cost Optimization', 'Disaster Recovery'],
-      technologies: ['AWS', 'Azure', 'GCP', 'Kubernetes', 'Terraform', 'Docker']
+      useCases: ['Enterprise Migration', 'Startup Infrastructure', 'Hybrid Cloud', 'Disaster Recovery'],
+      technologies: ['AWS', 'Azure', 'GCP', 'Kubernetes', 'Docker', 'Terraform']
     },
     {
-      name: 'Enterprise Platform Engineering',
-      description: 'Internal Developer Platform (IDP) creation with golden paths and self-service capabilities',
+      name: 'Advanced Cybersecurity Solutions',
+      description: 'Comprehensive cybersecurity services including threat detection, incident response, and compliance',
+      icon: Shield,
+      features: [
+        'Zero-trust security architecture implementation',
+        'Advanced threat detection and response',
+        'Security awareness training and testing',
+        'Compliance management (SOC2, ISO27001, GDPR)',
+        'Penetration testing and vulnerability assessments',
+        'Security operations center (SOC) services',
+        'Identity and access management (IAM)',
+        'Incident response and forensic analysis'
+      ],
+      pricing: '$3,000 - $25,000/month',
+      delivery: '2-8 weeks',
+      category: 'Cybersecurity',
+      benefits: 'Reduce security incidents by 95% and ensure compliance',
+      marketPrice: '$6,000 - $50,000/month',
+      link: '/services/it-services/cybersecurity',
+      useCases: ['Enterprise Security', 'Compliance', 'Risk Management', 'Incident Response'],
+      technologies: ['SIEM', 'EDR', 'Firewall', 'VPN', 'Encryption', 'Identity Management']
+    },
+    {
+      name: 'DevOps & CI/CD Implementation',
+      description: 'Complete DevOps transformation with automated pipelines, monitoring, and deployment',
       icon: Settings,
       features: [
-        'Developer portal with self-service capabilities',
-        'Golden path templates and best practices',
-        'Multi-tenant Kubernetes clusters',
-        'GitOps workflows and CI/CD automation',
-        'Observability and monitoring integration'
+        'CI/CD pipeline design and implementation',
+        'Infrastructure as Code (IaC) automation',
+        'Container orchestration and management',
+        'Automated testing and quality gates',
+        'Monitoring and observability setup',
+        'Release management and deployment strategies',
+        'Team training and best practices',
+        'Performance optimization and scaling'
       ],
       pricing: '$8,000 - $60,000/project',
-      delivery: '6-12 weeks',
-      category: 'Platform Engineering',
-      marketPrice: '$15,000-120,000/project',
-      benefits: 'Accelerate developer productivity by 300% and reduce time-to-market by 50%'
-    },
-    {
-      name: 'Zero Trust Security Architecture',
-      description: 'Comprehensive zero trust implementation with identity-centric security',
-      icon: Shield,
-      features: [
-        'Identity and access management (IAM) design',
-        'Network segmentation and micro-segmentation',
-        'Device trust and endpoint security',
-        'Data protection and encryption',
-        'Continuous verification and monitoring'
-      ],
-      pricing: '$10,000 - $75,000/project',
-      delivery: '8-16 weeks',
-      category: 'Security Architecture',
-      marketPrice: '$20,000-150,000/project',
-      benefits: 'Reduce security incidents by 85% and improve compliance posture'
-    },
-    {
-      name: 'Observability & Monitoring Stack',
-      description: 'Comprehensive observability platform with logs, metrics, traces, and SLOs',
-      icon: Monitor,
-      features: [
-        'OpenTelemetry instrumentation and data collection',
-        'Centralized logging with ELK/EFK stack',
-        'Metrics collection and alerting with Prometheus',
-        'Distributed tracing and performance analysis',
-        'SLO/SLA monitoring and error budget tracking'
-      ],
-      pricing: '$3,000 - $25,000/project',
-      delivery: '3-8 weeks',
-      category: 'Observability',
-      marketPrice: '$6,000-50,000/project',
-      benefits: 'Reduce MTTR by 70% and improve system reliability by 95%'
-    },
-    {
-      name: 'Data Engineering & Analytics Platform',
-      description: 'Modern data platform with real-time processing and analytics capabilities',
-      icon: Database,
-      features: [
-        'Data lake and data warehouse architecture',
-        'Real-time streaming with Apache Kafka',
-        'ETL/ELT pipeline automation',
-        'Data quality and governance frameworks',
-        'Business intelligence and analytics dashboards'
-      ],
-      pricing: '$12,000 - $80,000/project',
-      delivery: '8-16 weeks',
-      category: 'Data Engineering',
-      marketPrice: '$25,000-160,000/project',
-      benefits: 'Enable data-driven decisions and reduce data processing time by 80%'
-    },
-    {
-      name: 'API Gateway & Microservices Architecture',
-      description: 'Scalable microservices architecture with API management and service mesh',
-      icon: Network,
-      features: [
-        'API gateway design and implementation',
-        'Microservices decomposition and design',
-        'Service mesh with Istio or Linkerd',
-        'API versioning and lifecycle management',
-        'Rate limiting and security policies'
-      ],
-      pricing: '$6,000 - $45,000/project',
-      delivery: '6-12 weeks',
-      category: 'Microservices',
-      marketPrice: '$12,000-90,000/project',
-      benefits: 'Improve scalability by 500% and reduce coupling between services'
-    },
-    {
-      name: 'Disaster Recovery & Business Continuity',
-      description: 'Comprehensive disaster recovery planning and implementation',
-      icon: Shield,
-      features: [
-        'Business impact analysis and risk assessment',
-        'Multi-region backup and replication strategies',
-        'Automated failover and recovery procedures',
-        'RTO/RPO optimization and testing',
-        'Compliance and audit documentation'
-      ],
-      pricing: '$5,000 - $40,000/project',
-      delivery: '4-10 weeks',
-      category: 'Business Continuity',
-      marketPrice: '$10,000-80,000/project',
-      benefits: 'Achieve 99.99% uptime and reduce recovery time by 90%'
-    },
-    {
-      name: 'IT Service Management (ITSM) Implementation',
-      description: 'Complete ITSM transformation with ServiceNow or similar platforms',
-      icon: Users,
-      features: [
-        'ITIL framework implementation and customization',
-        'Service catalog design and automation',
-        'Incident and problem management workflows',
-        'Change management and approval processes',
-        'Knowledge management and self-service portals'
-      ],
-      pricing: '$8,000 - $50,000/project',
-      delivery: '6-14 weeks',
-      category: 'ITSM',
-      marketPrice: '$15,000-100,000/project',
-      benefits: 'Improve service delivery efficiency by 60% and customer satisfaction by 40%'
-    },
-    {
-      name: 'DevOps & CI/CD Pipeline',
-      description: 'Automated deployment pipelines with monitoring, security integration, and best practices',
-      icon: GitBranch,
-      features: [
-        'Automated CI/CD pipeline setup and optimization',
-        'Infrastructure as Code (IaC) implementation',
-        'Container orchestration and management',
-        'Monitoring and alerting systems',
-        'Security scanning and compliance automation',
-        'Performance optimization and testing',
-        'Blue-green and canary deployments',
-        'GitOps workflow implementation'
-      ],
-      pricing: '$5,000 - $35,000/project',
-      delivery: '4-12 weeks',
+      delivery: '6-16 weeks',
       category: 'DevOps',
-      benefits: 'Deploy 5x faster, reduce deployment failures by 90%',
-      marketPrice: '$10,000 - $70,000/project',
-      link: '/services/it-services/devops-pipeline',
-      useCases: ['Automated Deployments', 'Infrastructure Automation', 'Quality Assurance', 'Security Integration'],
-      technologies: ['Jenkins', 'GitLab CI', 'GitHub Actions', 'Terraform', 'Ansible', 'Prometheus']
+      benefits: 'Reduce deployment time by 80% and improve reliability by 90%',
+      marketPrice: '$15,000 - $120,000/project',
+      link: '/services/it-services/devops',
+      useCases: ['Software Development', 'Application Deployment', 'Infrastructure Automation', 'Team Collaboration'],
+      technologies: ['Jenkins', 'GitLab CI', 'Kubernetes', 'Docker', 'Terraform', 'Prometheus']
     },
     {
-      name: 'Cybersecurity & Compliance',
-      description: 'Comprehensive security assessment, implementation, and compliance management',
-      icon: Lock,
-      features: [
-        'Security assessment and penetration testing',
-        'Compliance framework implementation (SOC 2, HIPAA, GDPR)',
-        'Security monitoring and incident response',
-        'Identity and access management (IAM)',
-        'Data protection and encryption',
-        'Security training and awareness programs',
-        'Vulnerability management and patching',
-        'Security architecture design'
-      ],
-      pricing: '$3,000 - $50,000/project',
-      delivery: '4-16 weeks',
-      category: 'Security',
-      benefits: 'Achieve compliance faster, reduce security risks by 85%',
-      marketPrice: '$6,000 - $100,000/project',
-      link: '/services/it-services/cybersecurity',
-      useCases: ['Compliance Management', 'Security Assessment', 'Incident Response', 'Risk Management'],
-      technologies: ['SIEM', 'WAF', 'VPN', 'MFA', 'DLP', 'Security Frameworks']
-    },
-    {
-      name: 'Data Engineering & Analytics',
-      description: 'Modern data platform with real-time processing, analytics, and business intelligence',
-      icon: Database,
-      features: [
-        'Data lake and warehouse design and implementation',
-        'Real-time data processing and streaming',
-        'ETL/ELT pipeline development and optimization',
-        'Business intelligence dashboards and reporting',
-        'Machine learning data preparation',
-        'Data governance and quality management',
-        'Data visualization and analytics',
-        'Cloud data platform migration'
-      ],
-      pricing: '$6,000 - $45,000/project',
-      delivery: '6-18 weeks',
-      category: 'Data Services',
-      benefits: 'Unlock data insights, improve decision-making by 60%',
-      marketPrice: '$12,000 - $90,000/project',
-      link: '/services/it-services/data-engineering',
-      useCases: ['Data Warehousing', 'Real-time Analytics', 'Business Intelligence', 'Data Migration'],
-      technologies: ['Snowflake', 'BigQuery', 'Apache Spark', 'Kafka', 'Tableau', 'Power BI']
-    },
-    {
-      name: 'Platform Engineering',
-      description: 'Internal developer platform with golden paths, self-service capabilities, and automation',
-      icon: Layers,
-      features: [
-        'Developer portal and self-service tools',
-        'Golden path templates and standards',
-        'Multi-tenant infrastructure management',
-        'GitOps and automated deployments',
-        'Monitoring and observability platform',
-        'Security and compliance automation',
-        'API management and gateway',
-        'Developer experience optimization'
-      ],
-      pricing: '$10,000 - $60,000/project',
-      delivery: '8-20 weeks',
-      category: 'Platform Engineering',
-      benefits: 'Accelerate development by 3x, improve consistency and reliability',
-      marketPrice: '$20,000 - $120,000/project',
-      link: '/services/it-services/platform-engineering',
-      useCases: ['Developer Productivity', 'Self-Service Infrastructure', 'Standardization', 'Automation'],
-      technologies: ['Kubernetes', 'Helm', 'ArgoCD', 'Backstage', 'API Gateway', 'Service Mesh']
-    },
-    {
-      name: 'Observability & Monitoring',
-      description: 'Comprehensive monitoring solution with logs, metrics, traces, and intelligent alerting',
-      icon: Activity,
-      features: [
-        'Unified observability platform setup',
-        'Application performance monitoring (APM)',
-        'Infrastructure monitoring and alerting',
-        'Log aggregation and analysis',
-        'Distributed tracing and debugging',
-        'Intelligent alerting and incident management',
-        'SLA/SLO monitoring and reporting',
-        'Cost optimization and capacity planning'
-      ],
-      pricing: '$2,000 - $25,000/project',
-      delivery: '2-8 weeks',
-      category: 'Monitoring',
-      benefits: 'Reduce MTTR by 70%, improve system reliability and performance',
-      marketPrice: '$4,000 - $50,000/project',
-      link: '/services/it-services/observability',
-      useCases: ['Performance Monitoring', 'Incident Management', 'Capacity Planning', 'Cost Optimization'],
-      technologies: ['Prometheus', 'Grafana', 'ELK Stack', 'Jaeger', 'New Relic', 'DataDog']
-    },
-    {
-      name: 'Network Security & Management',
-      description: 'Comprehensive network security, monitoring, and optimization solutions',
-      icon: Network,
-      features: [
-        'Network architecture design and implementation',
-        'Firewall configuration and management',
-        'VPN and remote access solutions',
-        'Network monitoring and performance optimization',
-        'Intrusion detection and prevention',
-        'Network segmentation and micro-segmentation',
-        'Load balancing and traffic management',
-        'Network automation and orchestration'
-      ],
-      pricing: '$4,000 - $30,000/project',
-      delivery: '3-10 weeks',
-      category: 'Network Services',
-      benefits: 'Improve network performance by 50%, enhance security posture',
-      marketPrice: '$8,000 - $60,000/project',
-      link: '/services/it-services/network-security',
-      useCases: ['Network Design', 'Security Implementation', 'Performance Optimization', 'Remote Access'],
-      technologies: ['Cisco', 'Fortinet', 'Palo Alto', 'F5', 'SD-WAN', 'Zero Trust']
-    },
-    {
-      name: 'Database Management & Optimization',
-      description: 'Database design, optimization, migration, and performance tuning services',
-      icon: Database,
-      features: [
-        'Database architecture design and optimization',
-        'Performance tuning and query optimization',
-        'Database migration and modernization',
-        'Backup and disaster recovery solutions',
-        'Database security and compliance',
-        'High availability and clustering',
-        'Database monitoring and alerting',
-        'Cloud database migration'
-      ],
-      pricing: '$3,000 - $25,000/project',
-      delivery: '2-8 weeks',
-      category: 'Database Services',
-      benefits: 'Improve database performance by 80%, reduce costs by 30%',
-      marketPrice: '$6,000 - $50,000/project',
-      link: '/services/it-services/database-management',
-      useCases: ['Performance Optimization', 'Migration', 'High Availability', 'Security'],
-      technologies: ['PostgreSQL', 'MySQL', 'MongoDB', 'Redis', 'Oracle', 'SQL Server']
-    },
-    {
-      name: 'IT Support & Helpdesk',
-      description: 'Comprehensive IT support and helpdesk services',
-      icon: Users,
-      features: [
-        '24/7 technical support and helpdesk',
-        'Remote desktop and troubleshooting',
-        'Software installation and updates',
-        'User training and documentation',
-        'IT asset management and inventory'
-      ],
-      pricing: '$500 - $5,000/month',
-      delivery: '1 week',
-      category: 'Support',
-      marketPrice: '$1,000-10,000/month',
-      benefits: 'Reduce IT support tickets by 60%'
-    },
-    {
-      name: 'Mobile & Web Development',
-      description: 'Custom web and mobile application development',
-      icon: Smartphone,
-      features: [
-        'Responsive web application development',
-        'Native and cross-platform mobile apps',
-        'API development and integration',
-        'Performance optimization',
-        'Maintenance and support'
-      ],
-      pricing: '$5,000 - $100,000/project',
-      delivery: '4-16 weeks',
-      category: 'Development',
-      marketPrice: '$15,000-200,000/project',
-      benefits: 'Modern, scalable applications with great UX'
-    },
-    {
-      name: 'Business Intelligence & Analytics',
-      description: 'Data analytics and business intelligence solutions',
+      name: 'Data Analytics & Business Intelligence',
+      description: 'Advanced data analytics solutions with real-time insights and predictive modeling',
       icon: BarChart3,
       features: [
         'Data warehouse design and implementation',
         'ETL/ELT pipeline development',
-        'Dashboard and reporting solutions',
-        'Predictive analytics and machine learning',
-        'Data governance and quality management'
+        'Real-time analytics and dashboards',
+        'Machine learning model deployment',
+        'Data visualization and reporting',
+        'Data governance and quality management',
+        'Business intelligence platform setup',
+        'Advanced analytics and forecasting'
       ],
-      pricing: '$8,000 - $75,000/project',
-      delivery: '6-20 weeks',
-      category: 'Analytics',
-      marketPrice: '$20,000-150,000/project',
-      benefits: 'Make data-driven decisions with real-time insights'
+      pricing: '$10,000 - $75,000/project',
+      delivery: '8-20 weeks',
+      category: 'Data Analytics',
+      benefits: 'Improve decision-making speed by 70% and data accuracy by 95%',
+      marketPrice: '$20,000 - $150,000/project',
+      link: '/services/it-services/data-analytics',
+      useCases: ['Business Intelligence', 'Predictive Analytics', 'Data Warehousing', 'Reporting'],
+      technologies: ['Python', 'R', 'SQL', 'Power BI', 'Tableau', 'Apache Spark']
     },
     {
-      name: 'Edge Computing Infrastructure',
-      description: 'Distributed computing infrastructure for low-latency applications',
-      icon: Server,
-      features: [
-        'Edge node deployment and management',
-        'Content delivery network optimization',
-        'Real-time data processing at the edge',
-        'IoT device connectivity and management',
-        'Edge security and access control'
-      ],
-      pricing: '$10,000 - $80,000/project',
-      delivery: '8-16 weeks',
-      category: 'Edge Computing',
-      marketPrice: '$20,000-150,000/project',
-      benefits: 'Reduce latency by 70% and improve user experience'
-    },
-    {
-      name: 'Quantum Computing Integration',
-      description: 'Quantum computing infrastructure and algorithm development',
-      icon: Cpu,
-      features: [
-        'Quantum algorithm development and optimization',
-        'Quantum hardware integration and management',
-        'Hybrid classical-quantum system design',
-        'Quantum cryptography implementation',
-        'Performance benchmarking and optimization'
-      ],
-      pricing: '$50,000 - $500,000/project',
-      delivery: '12-36 weeks',
-      category: 'Quantum Computing',
-      marketPrice: '$100,000-1,000,000/project',
-      benefits: 'Achieve exponential speedup for complex computational problems'
-    },
-    {
-      name: 'Blockchain Infrastructure Services',
-      description: 'Enterprise blockchain development and infrastructure management',
-      icon: Shield,
-      features: [
-        'Private blockchain network setup',
-        'Smart contract development and deployment',
-        'Consensus mechanism implementation',
-        'Blockchain security and monitoring',
-        'Integration with existing systems'
-      ],
-      pricing: '$15,000 - $120,000/project',
-      delivery: '10-24 weeks',
-      category: 'Blockchain',
-      marketPrice: '$30,000-200,000/project',
-      benefits: 'Increase transparency and reduce transaction costs by 60%'
-    },
-    {
-      name: '5G Network Implementation',
-      description: '5G network infrastructure design and implementation services',
+      name: 'Network Infrastructure & Security',
+      description: 'Complete network design, implementation, and security solutions',
       icon: Network,
       features: [
-        '5G network architecture design',
-        'Small cell deployment and optimization',
-        'Network slicing and virtualization',
-        'Performance monitoring and optimization',
-        'Integration with existing infrastructure'
+        'Network architecture design and implementation',
+        'SD-WAN and hybrid network solutions',
+        'Network security and firewall management',
+        'Wireless network design and optimization',
+        'Network monitoring and performance management',
+        'VoIP and unified communications setup',
+        'Network documentation and training',
+        '24/7 network support and maintenance'
       ],
-      pricing: '$25,000 - $200,000/project',
-      delivery: '12-32 weeks',
-      category: '5G Networks',
-      marketPrice: '$50,000-400,000/project',
-      benefits: 'Enable ultra-fast connectivity with 10x speed improvement'
+      pricing: '$5,000 - $40,000/project',
+      delivery: '3-10 weeks',
+      category: 'Networking',
+      benefits: 'Improve network performance by 60% and reduce downtime by 85%',
+      marketPrice: '$10,000 - $80,000/project',
+      link: '/services/it-services/network-infrastructure',
+      useCases: ['Enterprise Networks', 'Remote Work', 'Branch Connectivity', 'Network Security'],
+      technologies: ['Cisco', 'Juniper', 'SD-WAN', 'Firewall', 'WiFi', 'VoIP']
     },
     {
-      name: 'Zero Trust Security Architecture',
-      description: 'Comprehensive zero trust security implementation and management',
-      icon: Shield,
+      name: 'Database Management & Optimization',
+      description: 'Comprehensive database services including design, optimization, and migration',
+      icon: Database,
       features: [
-        'Identity and access management (IAM)',
-        'Micro-segmentation implementation',
-        'Continuous security monitoring',
-        'Privileged access management',
-        'Security orchestration and automation'
+        'Database architecture design and implementation',
+        'Performance tuning and optimization',
+        'Database migration and consolidation',
+        'Backup and disaster recovery solutions',
+        'Database security and access control',
+        'Monitoring and alerting setup',
+        'Data archiving and lifecycle management',
+        'Database administration and support'
       ],
-      pricing: '$20,000 - $150,000/project',
-      delivery: '12-24 weeks',
-      category: 'Zero Trust Security',
-      marketPrice: '$40,000-300,000/project',
-      benefits: 'Reduce security breaches by 90% with comprehensive protection'
+      pricing: '$3,000 - $30,000/project',
+      delivery: '2-8 weeks',
+      category: 'Database Services',
+      benefits: 'Improve database performance by 50% and reduce maintenance costs by 40%',
+      marketPrice: '$6,000 - $60,000/project',
+      link: '/services/it-services/database-management',
+      useCases: ['Database Migration', 'Performance Optimization', 'Data Management', 'Backup Solutions'],
+      technologies: ['MySQL', 'PostgreSQL', 'MongoDB', 'Oracle', 'SQL Server', 'Redis']
     },
     {
-      name: 'Hybrid Cloud Management',
-      description: 'Seamless hybrid cloud infrastructure management and optimization',
-      icon: Cloud,
+      name: 'IT Infrastructure Management',
+      description: 'Complete IT infrastructure management including servers, storage, and virtualization',
+      icon: Server,
       features: [
-        'Multi-cloud orchestration and management',
-        'Workload placement optimization',
-        'Cost optimization across cloud providers',
-        'Disaster recovery and backup strategies',
-        'Compliance and governance management'
+        'Server infrastructure design and deployment',
+        'Virtualization and containerization',
+        'Storage solutions and data management',
+        'Server monitoring and maintenance',
+        'Capacity planning and scaling',
+        'Hardware lifecycle management',
+        'Infrastructure automation and orchestration',
+        'Proactive support and maintenance'
       ],
-      pricing: '$12,000 - $100,000/project',
-      delivery: '8-20 weeks',
-      category: 'Hybrid Cloud',
-      marketPrice: '$25,000-180,000/project',
-      benefits: 'Optimize costs by 40% while improving flexibility and performance'
-    },
-    {
-      name: 'IoT Platform Development',
-      description: 'Comprehensive IoT platform development and device management',
-      icon: Zap,
-      features: [
-        'IoT device connectivity and management',
-        'Data ingestion and processing pipelines',
-        'Real-time analytics and monitoring',
-        'Device security and firmware management',
-        'Integration with business applications'
-      ],
-      pricing: '$18,000 - $140,000/project',
-      delivery: '10-24 weeks',
-      category: 'IoT Platform',
-      marketPrice: '$35,000-250,000/project',
-      benefits: 'Connect and manage thousands of devices with 99.9% reliability'
-    },
-    {
-      name: 'API Gateway & Management',
-      description: 'Enterprise API gateway setup and comprehensive API management',
-      icon: Globe,
-      features: [
-        'API gateway configuration and optimization',
-        'API security and authentication',
-        'Rate limiting and traffic management',
-        'API analytics and monitoring',
-        'Developer portal and documentation'
-      ],
-      pricing: '$8,000 - $60,000/project',
-      delivery: '6-12 weeks',
-      category: 'API Management',
-      marketPrice: '$15,000-100,000/project',
-      benefits: 'Improve API performance by 50% and reduce security risks'
-    },
-    {
-      name: 'Disaster Recovery & Business Continuity',
-      description: 'Comprehensive disaster recovery planning and implementation',
-      icon: Shield,
-      features: [
-        'Business continuity planning and testing',
-        'Backup and recovery system implementation',
-        'Failover and redundancy setup',
-        'Recovery time objective (RTO) optimization',
-        'Disaster recovery testing and validation'
-      ],
-      pricing: '$15,000 - $120,000/project',
-      delivery: '8-16 weeks',
-      category: 'Disaster Recovery',
-      marketPrice: '$30,000-200,000/project',
-      benefits: 'Minimize downtime to less than 4 hours with 99.9% recovery success'
-    },
-    {
-      name: 'IT Governance & Compliance',
-      description: 'Comprehensive IT governance framework and compliance management',
-      icon: Shield,
-      features: [
-        'IT governance framework implementation',
-        'Compliance monitoring and reporting',
-        'Risk assessment and management',
-        'Policy development and enforcement',
-        'Audit preparation and support'
-      ],
-      pricing: '$10,000 - $80,000/project',
-      delivery: '6-16 weeks',
-      category: 'IT Governance',
-      marketPrice: '$20,000-140,000/project',
-      benefits: 'Ensure 100% compliance with industry standards and regulations'
+      pricing: '$2,000 - $20,000/month',
+      delivery: '1-4 weeks',
+      category: 'Infrastructure',
+      benefits: 'Reduce infrastructure costs by 35% and improve uptime by 99.9%',
+      marketPrice: '$4,000 - $40,000/month',
+      link: '/services/it-services/infrastructure-management',
+      useCases: ['Server Management', 'Virtualization', 'Storage Solutions', 'Infrastructure Monitoring'],
+      technologies: ['VMware', 'Hyper-V', 'Docker', 'Kubernetes', 'SAN', 'NAS']
     },
     {
       name: 'Digital Transformation Consulting',
-      description: 'End-to-end digital transformation strategy and implementation',
-      icon: Zap,
+      description: 'Strategic digital transformation services to modernize business processes and technology',
+      icon: TrendingUp,
       features: [
-        'Digital strategy development and planning',
-        'Technology assessment and roadmap creation',
-        'Change management and training',
+        'Digital strategy and roadmap development',
         'Process automation and optimization',
-        'Performance measurement and optimization'
+        'Legacy system modernization',
+        'Change management and training',
+        'Technology stack evaluation and selection',
+        'Digital workplace solutions',
+        'Customer experience optimization',
+        'ROI measurement and optimization'
       ],
-      pricing: '$25,000 - $200,000/project',
-      delivery: '16-40 weeks',
+      pricing: '$15,000 - $100,000/project',
+      delivery: '12-24 weeks',
       category: 'Digital Transformation',
-      marketPrice: '$50,000-400,000/project',
-      benefits: 'Achieve 300% improvement in operational efficiency and customer satisfaction'
+      benefits: 'Increase operational efficiency by 60% and customer satisfaction by 45%',
+      marketPrice: '$30,000 - $200,000/project',
+      link: '/services/it-services/digital-transformation',
+      useCases: ['Business Modernization', 'Process Automation', 'Customer Experience', 'Operational Excellence'],
+      technologies: ['Workflow Automation', 'Low-Code Platforms', 'RPA', 'Integration Platforms']
+    },
+    {
+      name: 'Managed IT Services',
+      description: 'Comprehensive managed IT services including helpdesk, monitoring, and support',
+      icon: Monitor,
+      features: [
+        '24/7 helpdesk and technical support',
+        'Proactive monitoring and maintenance',
+        'Software and hardware management',
+        'Security updates and patch management',
+        'Backup and disaster recovery',
+        'IT asset management and tracking',
+        'User training and support',
+        'IT consulting and strategic planning'
+      ],
+      pricing: '$50 - $200/user/month',
+      delivery: '1-2 weeks',
+      category: 'Managed Services',
+      benefits: 'Reduce IT costs by 30% and improve system reliability by 95%',
+      marketPrice: '$100 - $400/user/month',
+      link: '/services/it-services/managed-services',
+      useCases: ['Small Business IT', 'Enterprise Support', 'Remote Work', 'IT Outsourcing'],
+      technologies: ['RMM Tools', 'PSA Platforms', 'Monitoring Solutions', 'Backup Systems']
+    },
+    {
+      name: 'Application Development & Integration',
+      description: 'Custom application development and system integration services',
+      icon: Code,
+      features: [
+        'Custom web and mobile application development',
+        'API development and integration',
+        'Legacy system integration',
+        'Microservices architecture implementation',
+        'Cloud-native application development',
+        'Third-party system integration',
+        'Application testing and quality assurance',
+        'Maintenance and ongoing support'
+      ],
+      pricing: '$10,000 - $100,000/project',
+      delivery: '8-24 weeks',
+      category: 'Application Development',
+      benefits: 'Reduce development time by 40% and improve system integration by 80%',
+      marketPrice: '$20,000 - $200,000/project',
+      link: '/services/it-services/application-development',
+      useCases: ['Custom Applications', 'System Integration', 'API Development', 'Mobile Apps'],
+      technologies: ['React', 'Node.js', 'Python', 'Java', 'API Gateway', 'Microservices']
+    },
+    {
+      name: 'IT Compliance & Governance',
+      description: 'Comprehensive IT compliance services for regulatory requirements and best practices',
+      icon: FileText,
+      features: [
+        'Compliance framework implementation (SOX, GDPR, HIPAA)',
+        'IT governance and policy development',
+        'Risk assessment and management',
+        'Audit preparation and support',
+        'Documentation and process mapping',
+        'Training and awareness programs',
+        'Compliance monitoring and reporting',
+        'Remediation and improvement planning'
+      ],
+      pricing: '$5,000 - $40,000/project',
+      delivery: '4-16 weeks',
+      category: 'Compliance',
+      benefits: 'Ensure 100% compliance and reduce audit preparation time by 70%',
+      marketPrice: '$10,000 - $80,000/project',
+      link: '/services/it-services/compliance',
+      useCases: ['Regulatory Compliance', 'Audit Preparation', 'Risk Management', 'Governance'],
+      technologies: ['GRC Platforms', 'Documentation Tools', 'Risk Assessment Tools', 'Compliance Monitoring']
+    },
+    {
+      name: 'IT Disaster Recovery & Business Continuity',
+      description: 'Comprehensive disaster recovery and business continuity planning and implementation',
+      icon: Shield,
+      features: [
+        'Business continuity planning and documentation',
+        'Disaster recovery strategy development',
+        'Backup and replication solutions',
+        'Failover and recovery testing',
+        'Emergency response procedures',
+        'Communication and notification systems',
+        'Recovery time and point objectives',
+        'Ongoing testing and maintenance'
+      ],
+      pricing: '$8,000 - $60,000/project',
+      delivery: '6-16 weeks',
+      category: 'Disaster Recovery',
+      benefits: 'Reduce recovery time by 80% and minimize business impact during outages',
+      marketPrice: '$15,000 - $120,000/project',
+      link: '/services/it-services/disaster-recovery',
+      useCases: ['Business Continuity', 'Data Protection', 'System Recovery', 'Risk Mitigation'],
+      technologies: ['Backup Solutions', 'Replication Tools', 'Cloud DR', 'Monitoring Systems']
     }
   ];
 
@@ -600,36 +349,45 @@ export default function ITServicesPage() {
   };
 
   const stats = [
-    { label: 'Infrastructure Projects', value: '300+', icon: Server },
-    { label: 'Uptime Achieved', value: '99.9%', icon: Target },
-    { label: 'Cost Savings', value: '45%', icon: DollarSign },
-    { label: 'Implementation Time', value: '6 weeks', icon: Clock }
+    { label: 'IT Projects Completed', value: '500+', icon: Server },
+    { label: 'Average ROI', value: '250%', icon: DollarSign },
+    { label: 'Client Satisfaction', value: '97%', icon: Star },
+    { label: 'Project Delivery', value: 'On Time', icon: Clock }
   ];
 
-  const methodologies = [
-    { 
-      name: 'Agile DevOps', 
-      icon: GitBranch, 
-      description: 'Iterative development with continuous integration and deployment',
-      benefits: ['Faster delivery', 'Better quality', 'Reduced risk', 'Improved collaboration']
+  const industries = [
+    { name: 'Healthcare', icon: Heart, description: 'HIPAA compliance, telemedicine, patient data management' },
+    { name: 'Finance', icon: CreditCard, description: 'Security, compliance, trading systems, risk management' },
+    { name: 'Manufacturing', icon: Settings, description: 'IoT integration, supply chain, automation' },
+    { name: 'Education', icon: BookOpen, description: 'Learning management, remote education, student systems' },
+    { name: 'Retail', icon: ShoppingCart, description: 'E-commerce, inventory, customer analytics' },
+    { name: 'Government', icon: Building, description: 'Security, compliance, citizen services, data management' }
+  ];
+
+  const benefits = [
+    {
+      title: 'Expert Team',
+      description: 'Certified IT professionals with deep industry expertise',
+      icon: Users,
+      details: ['Certified Engineers', 'Industry Experience', 'Continuous Training', 'Best Practices']
     },
-    { 
-      name: 'Infrastructure as Code', 
-      icon: Code, 
-      description: 'Automated infrastructure provisioning and management',
-      benefits: ['Consistency', 'Version control', 'Reproducibility', 'Scalability']
+    {
+      title: 'Proven Methodologies',
+      description: 'Established processes and frameworks for successful project delivery',
+      icon: Target,
+      details: ['Agile Development', 'ITIL Framework', 'Quality Assurance', 'Risk Management']
     },
-    { 
-      name: 'Zero Trust Security', 
-      icon: Shield, 
-      description: 'Security model based on never trust, always verify',
-      benefits: ['Enhanced security', 'Reduced attack surface', 'Better compliance', 'Improved visibility']
+    {
+      title: '24/7 Support',
+      description: 'Round-the-clock support and monitoring for your IT infrastructure',
+      icon: Clock,
+      details: ['24/7 Monitoring', 'Rapid Response', 'Proactive Maintenance', 'Expert Support']
     },
-    { 
-      name: 'Cloud-Native Architecture', 
-      icon: Cloud, 
-      description: 'Modern architecture designed for cloud environments',
-      benefits: ['Scalability', 'Resilience', 'Cost efficiency', 'Innovation']
+    {
+      title: 'Cost Optimization',
+      description: 'Optimize IT costs while improving performance and reliability',
+      icon: TrendingUp,
+      details: ['Cost Analysis', 'Resource Optimization', 'Efficiency Improvements', 'ROI Tracking']
     }
   ];
 
@@ -648,11 +406,11 @@ export default function ITServicesPage() {
         <section className="bg-gradient-to-r from-green-600 to-blue-600 text-white py-16">
           <div className="container mx-auto px-6 text-center">
             <div className="flex items-center justify-center mb-4">
-              <Cloud className="h-8 w-8 mr-3" />
+              <Server className="h-8 w-8 mr-3" />
               <span className="text-lg font-semibold">IT Services & Solutions</span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Enterprise IT Solutions
+              Comprehensive IT Solutions
             </h1>
             <p className="text-xl md:text-2xl text-green-100 mb-8 max-w-4xl mx-auto">
               {description}
@@ -699,7 +457,7 @@ export default function ITServicesPage() {
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Our IT Services</h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Comprehensive IT solutions with modern architecture, best practices, and proven results.
+                Complete IT solutions that modernize your infrastructure, enhance security, and drive business growth.
               </p>
             </div>
             
@@ -707,7 +465,7 @@ export default function ITServicesPage() {
               {itServices.map((service, index) => (
                 <div key={index} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow p-8 border border-gray-100">
                   <div className="flex items-center mb-6">
-                    <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-teal-500 rounded-xl flex items-center justify-center mr-4">
+                    <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-500 rounded-xl flex items-center justify-center mr-4">
                       <service.icon className="w-8 h-8 text-white" />
                     </div>
                     <div>
@@ -769,34 +527,60 @@ export default function ITServicesPage() {
           </div>
         </section>
 
-        {/* Methodologies Section */}
+        {/* Industries Section */}
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-6">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Methodologies</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Industries We Serve</h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                We follow industry best practices and modern methodologies to deliver exceptional results.
+                Our IT solutions are tailored for specific industry requirements and compliance needs.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {industries.map((industry, index) => (
+                <div key={index} className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+                  <div className="flex items-center mb-4">
+                    <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4">
+                      <industry.icon className="w-6 h-6 text-green-600" />
+                    </div>
+                    <h3 className="text-lg font-semibold text-gray-900">{industry.name}</h3>
+                  </div>
+                  <p className="text-gray-600">{industry.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-6">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose Our IT Services?</h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                We deliver comprehensive IT solutions with proven methodologies and ongoing support.
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {methodologies.map((methodology, index) => (
-                <div key={index} className="bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="bg-gray-50 rounded-xl p-8">
                   <div className="flex items-center mb-6">
                     <div className="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mr-4">
-                      <methodology.icon className="w-8 h-8 text-green-600" />
+                      <benefit.icon className="w-8 h-8 text-green-600" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-semibold text-gray-900">{methodology.name}</h3>
-                      <p className="text-gray-600">{methodology.description}</p>
+                      <h3 className="text-xl font-semibold text-gray-900">{benefit.title}</h3>
+                      <p className="text-gray-600">{benefit.description}</p>
                     </div>
                   </div>
                   
                   <div className="grid grid-cols-2 gap-3">
-                    {methodology.benefits.map((benefit, idx) => (
+                    {benefit.details.map((detail, idx) => (
                       <div key={idx} className="flex items-center">
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                        <span className="text-sm text-gray-700">{benefit}</span>
+                        <span className="text-sm text-gray-700">{detail}</span>
                       </div>
                     ))}
                   </div>
@@ -806,48 +590,12 @@ export default function ITServicesPage() {
           </div>
         </section>
 
-        {/* Why Choose Our IT Services */}
-        <section className="py-16 bg-white">
-          <div className="container mx-auto px-6">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose Our IT Services?</h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                We deliver enterprise-grade IT solutions with proven methodologies and ongoing support.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Award className="w-8 h-8 text-green-600" />
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Enterprise-Grade</h3>
-                <p className="text-gray-600">All solutions are designed for enterprise scale with high availability and security.</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Rocket className="w-8 h-8 text-blue-600" />
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Fast Implementation</h3>
-                <p className="text-gray-600">Most IT projects completed in 6-12 weeks with agile methodology and regular updates.</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <TrendingUp className="w-8 h-8 text-purple-600" />
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Proven Results</h3>
-                <p className="text-gray-600">Average 45% cost reduction with 99.9% uptime and documented ROI improvements.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* Contact Section */}
         <section className="py-16 bg-gradient-to-r from-green-600 to-blue-600 text-white">
           <div className="container mx-auto px-6 text-center">
-            <h2 className="text-3xl font-bold mb-6">Ready to Transform Your IT Infrastructure?</h2>
+            <h2 className="text-3xl font-bold mb-6">Ready to Transform Your IT?</h2>
             <p className="text-xl text-green-100 mb-8 max-w-3xl mx-auto">
-              Contact us today for a free IT consultation and custom solution proposal tailored to your business needs.
+              Contact us today for a free IT consultation and discover how our comprehensive services can modernize your technology infrastructure.
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
@@ -877,19 +625,19 @@ export default function ITServicesPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
                 <div className="flex items-center">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  <span>Infrastructure assessment</span>
+                  <span>IT infrastructure assessment and analysis</span>
                 </div>
                 <div className="flex items-center">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  <span>Architecture recommendations</span>
+                  <span>Technology roadmap and strategy development</span>
                 </div>
                 <div className="flex items-center">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  <span>Cost optimization analysis</span>
+                  <span>Cost optimization and efficiency recommendations</span>
                 </div>
                 <div className="flex items-center">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  <span>Implementation roadmap</span>
+                  <span>Security and compliance evaluation</span>
                 </div>
               </div>
             </div>
