@@ -38,9 +38,7 @@ export default function AIDataAnalyticsPage() {
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Features Section */}
-=======
       {/* Key Benefits */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-6">
@@ -70,12 +68,10 @@ export default function AIDataAnalyticsPage() {
       </section>
 
       {/* Services Overview */}
->>>>>>> 0987aa25a0c077eb72ddd7a8b3d56a96a9143fb4
       <section className="py-20 px-6">
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-<<<<<<< HEAD
               Powerful AI Analytics Features
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -106,7 +102,6 @@ export default function AIDataAnalyticsPage() {
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                   Customer Behavior Prediction
-=======
               Our AI Data Analytics Solutions
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -140,12 +135,10 @@ export default function AIDataAnalyticsPage() {
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                   Risk assessment models
->>>>>>> 0987aa25a0c077eb72ddd7a8b3d56a96a9143fb4
                 </li>
               </ul>
             </div>
 
-<<<<<<< HEAD
             <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-200">
               <div className="text-4xl mb-4">⚡</div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Real-time Dashboards</h3>
@@ -168,7 +161,6 @@ export default function AIDataAnalyticsPage() {
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                   Mobile Responsive
-=======
             <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-200">
               <div className="text-4xl mb-4">📈</div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Real-time Dashboards</h3>
@@ -194,12 +186,10 @@ export default function AIDataAnalyticsPage() {
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                   Mobile-responsive design
->>>>>>> 0987aa25a0c077eb72ddd7a8b3d56a96a9143fb4
                 </li>
               </ul>
             </div>
 
-<<<<<<< HEAD
             <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-200">
               <div className="text-4xl mb-4">🤖</div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Machine Learning Models</h3>
@@ -222,7 +212,6 @@ export default function AIDataAnalyticsPage() {
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                   Continuous Learning
-=======
             <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-200">
               <div className="text-4xl mb-4">🔗</div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Data Integration</h3>
@@ -335,7 +324,6 @@ export default function AIDataAnalyticsPage() {
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                   Proactive issue resolution
->>>>>>> 0987aa25a0c077eb72ddd7a8b3d56a96a9143fb4
                 </li>
               </ul>
             </div>
@@ -343,16 +331,12 @@ export default function AIDataAnalyticsPage() {
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Pricing Section */}
-=======
       {/* Process Section */}
->>>>>>> 0987aa25a0c077eb72ddd7a8b3d56a96a9143fb4
       <section className="py-20 bg-white">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-<<<<<<< HEAD
               Transparent Pricing
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -458,7 +442,6 @@ export default function AIDataAnalyticsPage() {
               <a href="tel:+13024640950" className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold text-center block hover:bg-blue-700 transition-colors">
                 Contact Sales
               </a>
-=======
               Our Implementation Process
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -486,7 +469,6 @@ export default function AIDataAnalyticsPage() {
               <div className="w-16 h-16 bg-orange-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">4</div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Deployment & Support</h3>
               <p className="text-gray-600">Seamless deployment with ongoing support, monitoring, and optimization.</p>
->>>>>>> 0987aa25a0c077eb72ddd7a8b3d56a96a9143fb4
             </div>
           </div>
         </div>
@@ -499,11 +481,8 @@ export default function AIDataAnalyticsPage() {
             Ready to Transform Your Data?
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-<<<<<<< HEAD
             Let's discuss how our AI analytics platform can unlock insights from your data and drive better business decisions
-=======
             Let's discuss how AI data analytics can unlock insights and drive growth for your business
->>>>>>> 0987aa25a0c077eb72ddd7a8b3d56a96a9143fb4
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
