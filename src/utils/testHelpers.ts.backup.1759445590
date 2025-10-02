@@ -40,16 +40,29 @@ export const wait = (ms: number): Promise<void> => {
  * Wait for condition to be true
  */
 export const waitFor = async (
+<<<<<<< HEAD
+  condition: () => boolean | Promise<boolean>,
+=======
   condition: () => boolean,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b59c
   timeout = 5000,
   interval = 50,
 ): Promise<void> => {
+<<<<<<< HEAD
+  const startTime = Date.now();
+  while (!(await Promise.resolve(condition()))) {
+    if (Date.now() - startTime > timeout) {
+      throw new Error(`Timeout waiting for condition after ${timeout}ms`);
+    }
+    await wait(interval);
+=======
   const start = Date.now();
   while (!condition() && Date.now() - start < timeout) {
     await new Promise(resolve => setTimeout(resolve, 100));
   }
   if (!condition()) {
     throw new Error(`Timeout waiting for condition after ${timeout}ms`);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b59c
   }
 };
 
@@ -368,6 +381,19 @@ export const mockIntersectionObserver = () => {
 /**
  * Mock ResizeObserver
  */
+<<<<<<< HEAD
+export const mockResizeObserver = () => {
+  const mockObserver = {
+    observe: jest.fn(),
+    unobserve: jest.fn(),
+    disconnect: jest.fn(),
+  };
+  
+  Object.defineProperty(window, 'ResizeObserver', {
+    writable: true,
+    configurable: true,
+    value: jest.fn().mockImplementation(() => mockObserver),
+=======
 export const mockResizeObserver = (): void => {
   global.ResizeObserver = jest.fn().mockImplementation(() => ({
     observe: jest.fn(),,
@@ -553,6 +579,7 @@ export const mockScrollTo = (): void => {
   Object.defineProperty(window, 'scrollTo', {
     writable: true,
     value: jest.fn(),
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b59c
   });
   
   return mockObserver;
@@ -561,6 +588,15 @@ export const mockScrollTo = (): void => {
 /**
  * Create test wrapper with providers
  */
+<<<<<<< HEAD
+export const createTestWrapper = (providers: React.ComponentType<any>[] = []) => {
+  return ({ children }: { children: React.ReactNode }) => {
+    return providers.reduceRight(
+      (acc, Provider) => React.createElement(Provider, {}, acc),
+      children
+    );
+  };
+=======
 export const mockGetComputedStyle = (styles: Record<string, string> = {}): void => {
   Object.defineProperty(window, 'getComputedStyle', {
     writable: true,
@@ -569,11 +605,38 @@ export const mockGetComputedStyle = (styles: Record<string, string> = {}): void 
       ...styles,
     })),
   });
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b59c
 };
 
 /**
  * Simulate user interaction
  */
+<<<<<<< HEAD
+export const simulateUserInteraction = {
+  click: (element: Element) => {
+    const event = new MouseEvent('click', {
+      bubbles: true,
+      cancelable: true,
+    });
+    element.dispatchEvent(event);
+  },
+  
+  type: (element: HTMLInputElement, text: string) => {
+    element.value = text;
+    const event = new Event('input', { bubbles: true });
+    element.dispatchEvent(event);
+  },
+  
+  focus: (element: Element) => {
+    const event = new FocusEvent('focus', { bubbles: true });
+    element.dispatchEvent(event);
+  },
+  
+  blur: (element: Element) => {
+    const event = new FocusEvent('blur', { bubbles: true });
+    element.dispatchEvent(event);
+  },
+=======
 export const createMockEvent = (type: string, options: any = {}): Event => {
   const event = new Event(type, {
     bubbles: true,
@@ -581,11 +644,35 @@ export const createMockEvent = (type: string, options: any = {}): Event => {
     ...options,
   });
   return event;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b59c
 };
 
 /**
  * Assertion helpers
  */
+<<<<<<< HEAD
+export const assertions = {
+  toBeInDocument: (element: Element | null) => {
+    if (!element) {
+      throw new Error('Element is null');
+    }
+    if (!document.contains(element)) {
+      throw new Error('Element is not in document');
+    }
+  },
+  
+  toHaveTextContent: (element: Element, text: string) => {
+    if (!element.textContent?.includes(text)) {
+      throw new Error(`Element does not contain text: ${text}`);
+    }
+  },
+  
+  toHaveClass: (element: Element, className: string) => {
+    if (!element.classList.contains(className)) {
+      throw new Error(`Element does not have class: ${className}`);
+    }
+  },
+=======
 export const mockTimers = (): void => {
   jest.useFakeTimers();
 };
@@ -623,4 +710,5 @@ export const runOnlyPendingTimers = (): void => {
  */
 export const clearAllTimers = (): void => {
   jest.clearAllTimers();
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b59c
 };

@@ -289,6 +289,9 @@ export const optimizeSEOMetadata = (metadata: SEOMetadata): SEOMetadata => {
     twitterTitle: metadata.twitterTitle?.trim().substring(0, 60) || metadata.title?.trim().substring(0, 60),
     twitterDescription: metadata.twitterDescription?.trim().substring(0, 160) || metadata.description?.trim().substring(0, 160)
   };
+<<<<<<< HEAD
+};
+=======
 };
 
 /**
@@ -395,3 +398,4 @@ export default {
   checkContentQuality
 };
 ;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b59c
