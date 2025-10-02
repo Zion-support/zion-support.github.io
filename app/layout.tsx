@@ -5,6 +5,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import './globals.css';
 import { Header, Footer } from './components/Navigation';
+import Sidebar from '../components/Sidebar';
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
