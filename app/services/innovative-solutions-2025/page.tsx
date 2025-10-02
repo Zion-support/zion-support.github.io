@@ -17,10 +17,9 @@ export const metadata = {
 };
 
 export default function InnovativeSolutions2025() {
-  const phoneHref = "tel:+13024640950";
-  const emailHref = "mailto:kleber@ziontechgroup.com";
-  const websiteHref = "https://ziontechgroup.com";
-
+  const phoneHref = "tel:+13024640950"
+  const emailHref = "mailto:kleber@ziontechgroup.com"
+  const websiteHref = "https://ziontechgroup.com"
   const microSaasServices = [
     {
       name: 'AI-Powered Meeting Intelligence Platform',

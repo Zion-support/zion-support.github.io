@@ -1,4 +1,4 @@
-"use client";
+"use client"
 import React from 'react';
 import { Metadata } from 'next';
 import { Globe, CheckCircle, Languages, FileText, BarChart3, Phone, Mail, MapPin } from 'lucide-react';

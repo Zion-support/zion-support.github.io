@@ -19,10 +19,9 @@ export const metadata = {
 };
 
 export default function EnhancedServicesCatalog() {
-  const phoneHref = "tel:+13024640950";
-  const emailHref = "mailto:kleber@ziontechgroup.com";
-  const websiteHref = "https://ziontechgroup.com";
-
+  const phoneHref = "tel:+13024640950"
+  const emailHref = "mailto:kleber@ziontechgroup.com"
+  const websiteHref = "https://ziontechgroup.com"
   const microSaaSServices = [
     {
       name: 'AI-Powered Customer Sentiment Analytics',

@@ -1,9 +1,7 @@
-import React from "react";
-import { createRoot } from "react-dom/client";
-import App from "./App";
-
-// Performance optimizations
-const reportWebVitals = async () => {
+import React from "react"
+import { createRoot } from "react-dom/client"
+import App from "./AppSafe"
+async function reportWebVitals() {
   try {
     const { onCLS, onLCP, onFCP, onTTFB } = await import("web-vitals");
     const log = (metric: { name: string; value: number }) => {

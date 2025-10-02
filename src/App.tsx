@@ -1,14 +1,13 @@
-import React, { JSX, Suspense } from "react";
+import React, { JSX, Suspense } from "react"
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Header, Footer } from './app/components/Navigation';
 import ErrorBoundary from './src/components/ErrorBoundary';
 import { PageLoader } from './src/components/LoadingSpinner';
 import './app/globals.css';
-import ConsensusIntelligenceBreakthroughBanner from "./components/ConsensusIntelligenceBreakthroughBanner";
-import AutonomousEnterpriseBreakthroughBanner from "./components/AutonomousEnterpriseBreakthroughBanner";
-import June2026MegaBreakthroughBanner from "./components/June2026MegaBreakthroughBanner";
-import QuantumConsciousnessRevolutionBanner from "./components/QuantumConsciousnessRevolutionBanner";
-
+import ConsensusIntelligenceBreakthroughBanner from "./components/ConsensusIntelligenceBreakthroughBanner"
+import AutonomousEnterpriseBreakthroughBanner from "./components/AutonomousEnterpriseBreakthroughBanner"
+import June2026MegaBreakthroughBanner from "./components/June2026MegaBreakthroughBanner"
+import QuantumConsciousnessRevolutionBanner from "./components/QuantumConsciousnessRevolutionBanner"
 // Lazy load pages for better performance
 const LazyHomePage = React.lazy(() => import('./app/page'));
 const LazySolutionsPage = React.lazy(() => import('./app/solutions/page'));
