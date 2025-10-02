@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
+import { motion } from 'framer-motion';
 import SEO from './components/SEO';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import Header from './components/Header';
@@ -12,6 +13,30 @@ import SEOHead from './components/EnhancedSEOHead';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import NotificationSystem from './components/NotificationSystem';
 import PerformanceMonitor from './components/PerformanceMonitor';
+
+// Animation variants
+const pageVariants = {
+  initial: { opacity: 0, y: 20 },
+  in: { opacity: 1, y: 0 },
+  out: { opacity: 0, y: -20 }
+};
+
+const pageTransition = {
+  type: 'tween',
+  ease: 'anticipate',
+  duration: 0.4
+};
+
+// Banner data
+const bannerData = [
+  {
+    id: '1',
+    title: 'Welcome to Zion Tech Group',
+    subtitle: 'Advanced AI and IT Solutions',
+    image: '/images/hero-banner.jpg',
+    link: '/services'
+  }
+];
 
 // Lazy loaded components for better performance
 const HomePage = React.lazy(() => import('./pages/HomePage'));
@@ -143,7 +168,6 @@ const App: React.FC = () => {
                         </a>
                       </div>
                     </div>
-                  </div>
                 } />
               </Routes>
             </React.Suspense>
