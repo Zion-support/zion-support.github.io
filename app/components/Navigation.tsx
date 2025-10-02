@@ -52,36 +52,46 @@ export function Header() {
               openDropdown === 'services' ? 'opacity-100 visible' : 'opacity-0 invisible'
             }`}>
               <div className="py-3">
-                <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide">Featured Services</div>
-                <Link to="/services/ai-content-optimization-platform" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                  AI Content Optimization Platform
+                <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide">Featured AI Micro SaaS</div>
+                <Link to="/services/ai-content-optimization-suite" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  AI Content Optimization Suite - $199/mo
                 </Link>
-                <Link to="/services/micro-saas/ai-lead-scoring-api" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                  AI Lead Scoring API
+                <Link to="/services/ai-lead-scoring-api" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  AI Lead Scoring API - $299/mo
                 </Link>
                 <Link to="/services/ai-financial-forecasting-suite" className="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-600">
-                  AI Financial Forecasting Suite
+                  AI Financial Forecasting Suite - $499/mo
                 </Link>
                 <Link to="/services/smart-inventory-management-saas" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600">
-                  Smart Inventory Management SaaS
+                  Smart Inventory Management SaaS - $199/mo
                 </Link>
-                <Link to="/services/ai-powered-crm-automation" className="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600">
-                  AI-Powered CRM Automation
+                <Link to="/services/ai-meeting-assistant-platform" className="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600">
+                  AI Meeting Assistant Platform - $99/mo
                 </Link>
+                <Link to="/services/smart-invoice-processing" className="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600">
+                  Smart Invoice Processing System - $299/mo
+                </Link>
+                <div className="border-t border-gray-100 my-2"></div>
+                <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide">Advanced AI Solutions</div>
+                <Link to="/services/ai-customer-insights-platform" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  AI Customer Insights Platform - $799/mo
+                </Link>
+                <Link to="/services/ai-workflow-automation-platform" className="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-600">
+                  AI Workflow Automation Platform - $599/mo
+                </Link>
+                <Link to="/services/ai-business-intelligence-platform" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600">
+                  AI Business Intelligence Platform - $899/mo
+                </Link>
+                <div className="border-t border-gray-100 my-2"></div>
+                <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide">IT Services & Solutions</div>
                 <Link to="/services/cloud-native-devops-platform" className="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600">
-                  Cloud-Native DevOps Platform
+                  Cloud-Native DevOps Platform - $1,499/mo
                 </Link>
                 <Link to="/services/ai-cybersecurity-automation-suite" className="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600">
-                  AI Cybersecurity Automation Suite
+                  AI Cybersecurity Automation Suite - $1,999/mo
                 </Link>
-                <Link to="/services/ai-sales-copilot" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                  AI Sales Copilot
-                </Link>
-                <Link to="/services/data-quality-observability" className="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-600">
-                  Data Quality & Observability
-                </Link>
-                <Link to="/services/finops-cost-optimizer" className="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600">
-                  FinOps Cost Optimizer
+                <Link to="/services/healthcare-telemedicine-platform" className="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-600">
+                  Healthcare Telemedicine Platform - $499/mo
                 </Link>
                 <div className="border-t border-gray-100 my-2"></div>
                 <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide">Industry Solutions</div>
@@ -511,9 +521,10 @@ export function Footer() {
             <h3 className="font-semibold text-gray-900 mb-3">Featured Services</h3>
             <div className="space-y-2">
               <Link to="/services" className="block text-gray-600 hover:text-blue-600 transition-colors">All Services</Link>
-              <Link to="/services/ai-services" className="block text-gray-600 hover:text-blue-600 transition-colors">AI Services</Link>
-              <Link to="/services/micro-saas" className="block text-gray-600 hover:text-blue-600 transition-colors">Micro SaaS</Link>
-              <Link to="/services/it-services" className="block text-gray-600 hover:text-blue-600 transition-colors">IT Services</Link>
+              <Link to="/services/ai-content-optimization-suite" className="block text-gray-600 hover:text-blue-600 transition-colors">AI Content Suite - $199/mo</Link>
+              <Link to="/services/ai-lead-scoring-api" className="block text-gray-600 hover:text-blue-600 transition-colors">AI Lead Scoring API - $299/mo</Link>
+              <Link to="/services/ai-financial-forecasting-suite" className="block text-gray-600 hover:text-blue-600 transition-colors">AI Financial Forecasting - $499/mo</Link>
+              <Link to="/services/smart-inventory-management-saas" className="block text-gray-600 hover:text-blue-600 transition-colors">Smart Inventory SaaS - $199/mo</Link>
               <div className="border-t border-gray-200 my-2"></div>
               <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-1">New Micro SaaS</div>
               <Link to="/services/ai-invoice-processing-saas" className="block text-gray-600 hover:text-blue-600 transition-colors">AI Invoice Processing</Link>
@@ -526,6 +537,12 @@ export function Footer() {
               <Link to="/services/ai-natural-language-processing-service" className="block text-gray-600 hover:text-blue-600 transition-colors">AI Natural Language Processing</Link>
               <Link to="/services/ai-computer-vision-platform" className="block text-gray-600 hover:text-blue-600 transition-colors">AI Computer Vision</Link>
               <Link to="/services/ai-recommendation-engine" className="block text-gray-600 hover:text-blue-600 transition-colors">AI Recommendation Engine</Link>
+              <div className="border-t border-gray-200 my-2"></div>
+              <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-1">Advanced Solutions</div>
+              <Link to="/services/ai-customer-insights-platform" className="block text-gray-600 hover:text-blue-600 transition-colors">Customer Insights - $799/mo</Link>
+              <Link to="/services/ai-workflow-automation-platform" className="block text-gray-600 hover:text-blue-600 transition-colors">Workflow Automation - $599/mo</Link>
+              <Link to="/services/cloud-native-devops-platform" className="block text-gray-600 hover:text-blue-600 transition-colors">DevOps Platform - $1,499/mo</Link>
+              <Link to="/services/ai-cybersecurity-automation-suite" className="block text-gray-600 hover:text-blue-600 transition-colors">Cybersecurity Suite - $1,999/mo</Link>
             </div>
           </div>
           
