@@ -7,7 +7,7 @@ import SEOOptimizer from './components/SEOOptimizer';
 import AdvancedAnalytics from './components/AdvancedAnalytics';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import NotificationSystem from './components/NotificationSystem';
-import { PerformanceMonitor } from './components/PerformanceMonitor';
+import PerformanceMonitor from './components/PerformanceMonitor';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import EnhancedSEOHead from './components/EnhancedSEOHead';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
@@ -144,8 +144,8 @@ const App: React.FC = () => {
         )}
 
         <NotificationSystem notifications={notifications} onRemove={handleRemoveNotification} />
-      </AccessibilityEnhancer>
-    </EnhancedErrorBoundary>
+      </EnhancedErrorBoundary>
+    </AccessibilityEnhancer>
   );
 };
 

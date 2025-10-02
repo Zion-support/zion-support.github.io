@@ -1571,7 +1571,7 @@ posts.push(
 ]);
 
 // Sept 30, 2025 – Fresh articles to add and advertise on homepage
-posts.push([
+posts.push(
   {
     slug: "edge-governed-flags-2026",
     title: "Edge‑Governed Flags 2026: Policies at <100ms",
