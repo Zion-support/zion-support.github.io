@@ -5,9 +5,9 @@ import React from 'react';';
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 interface LatestContentBannerProps {
-variant?: 'info' | 'success' | 'warning';';
-autoRotate?: boolean;
-rotationInterval?: number;
+variant?: 'info' | 'success' | 'warning';,
+autoRotate?: boolean;,
+rotationInterval?: number;,
 className?: string;
 }
 

@@ -4,35 +4,17 @@ import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 interface BannerType {
-id: string,
-title: string,
-description: string,
-variant: 'success' | 'warning' | 'info' | 'error';',
-icon?: string;
-ctaText: string,
-=======
-import React from 'react';';
-import {
-Link
-} from 'react-router-dom';';
-import {
-ArrowRight
-} from 'lucide-react';';
-
-interface BannerType {
 id: string;,
 title: string;,
 description: string;,
-variant: 'success' | 'warning' | 'info' | 'error';';,
-icon?: string;
+variant: 'success' | 'warning' | 'info' | 'error';,
+icon?: string;,
 ctaText: string;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 ctaLink: string;
 }
 
 interface EnhancedPromotionalBannerProps {
-<<<<<<< HEAD
-banner: BannerType,
+banner: BannerType;,
 className?: string;
 }
 

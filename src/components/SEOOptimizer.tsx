@@ -3,24 +3,13 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOOptimizerProps {
-title: string,
-description: string,
-canonicalUrl: string,
-=======
-import React from 'react';';
-import {
-Helmet
-} from 'react-helmet-async';';
-
-interface SEOOptimizerProps {
 title: string;,
 description: string;,
 canonicalUrl: string;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
-keywords?: string[];
-ogImage?: string;
-ogType?: string;
-twitterCard?: string;
+keywords?: string[];,
+ogImage?: string;,
+ogType?: string;,
+twitterCard?: string;,
 structuredData?: object;
 }
 

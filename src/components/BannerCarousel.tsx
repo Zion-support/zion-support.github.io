@@ -1,16 +1,9 @@
 <<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 interface BannerProps {
-title: string,
-description: string,
-=======
-import React, { useState, useEffect } from 'react';';
-
-interface BannerProps {
 title: string;,
 description: string;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
-image?: string;
+image?: string;,
 link?: string;
 }
 

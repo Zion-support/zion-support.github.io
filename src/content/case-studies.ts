@@ -1,15 +1,4 @@
 export type CaseStudy = {
-<<<<<<< HEAD
-id: string,
-title: string,
-company: string,
-industry: string,
-challenge: string,
-solution: string,
-results: string[],
-technologies: string[],
-duration: string,
-=======
 id: string;,
 title: string;,
 company: string;,
@@ -19,7 +8,6 @@ solution: string;,
 results: string[];,
 technologies: string[];,
 duration: string;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 imageUrl?: string;
 };
 

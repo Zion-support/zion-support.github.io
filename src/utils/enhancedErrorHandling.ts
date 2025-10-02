@@ -4,47 +4,25 @@
  */
 
 export interface ErrorInfo {
-<<<<<<< HEAD
-message: string,
-stack?: string;
-componentStack?: string;
-errorBoundary?: string;
-timestamp: number,
-userAgent: string,
-url: string,
-userId?: string;
-sessionId?: string;
-severity: 'low' | 'medium' | 'high' | 'critical';',
-category: 'javascript' | 'network' | 'resource' | 'promise' | 'react' | 'unknown';
-}
-
-export interface ErrorReport {
-errors: ErrorInfo[],
-totalErrors: number,
-criticalErrors: number,
-lastError?: ErrorInfo;
-errorRate: number,
-=======
 message: string;,
-stack?: string;
-componentStack?: string;
-errorBoundary?: string;
+stack?: string;,
+componentStack?: string;,
+errorBoundary?: string;,
 timestamp: number;,
 userAgent: string;,
 url: string;,
-userId?: string;
-sessionId?: string;
-severity: 'low' | 'medium' | 'high' | 'critical';';,
-category: 'javascript' | 'network' | 'resource' | 'promise' | 'react' | 'unknown';';
+userId?: string;,
+sessionId?: string;,
+severity: 'low' | 'medium' | 'high' | 'critical';,
+category: 'javascript' | 'network' | 'resource' | 'promise' | 'react' | 'unknown';
 }
 
 export interface ErrorReport {
 errors: ErrorInfo[];,
 totalErrors: number;,
 criticalErrors: number;,
-lastError?: ErrorInfo;
+lastError?: ErrorInfo;,
 errorRate: number;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 timestamp: number;
 }
 

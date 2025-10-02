@@ -1,14 +1,7 @@
 import React from 'react';
-<<<<<<< HEAD
 import {
-motion
-} from 'framer-motion';
-import {
-
-} from 'lucide-react';
-=======
-import { Helmet } from 'react-helmet-async';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-ea70
+Helmet
+} from 'react-helmet-async';
 
 const AboutPage: React.FC = () => {
 const values = [

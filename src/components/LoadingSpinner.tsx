@@ -10,9 +10,9 @@ motion
 } from 'framer-motion';
 
 interface LoadingSpinnerProps {
-size?: 'small' | 'medium' | 'large';
-color?: 'blue' | 'white' | 'gray';
-text?: string;
+size?: 'small' | 'medium' | 'large';,
+color?: 'blue' | 'white' | 'gray';,
+text?: string;,
 fullScreen?: boolean;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-a267
 }

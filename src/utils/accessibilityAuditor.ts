@@ -4,17 +4,10 @@
  */
 
 interface AccessibilityIssue {
-<<<<<<< HEAD
-severity: 'critical' | 'serious' | 'moderate' | 'minor';',
-element: string,
-issue: string,
-recommendation: string,
-=======
-severity: 'critical' | 'serious' | 'moderate' | 'minor';';,
+severity: 'critical' | 'serious' | 'moderate' | 'minor';,
 element: string;,
 issue: string;,
 recommendation: string;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 wcagCriterion: string;
 }
 

@@ -1,47 +1,72 @@
-import React, { Suspense, lazy } from 'react';
-import { Routes, Route } from 'react-router-dom';
-<<<<<<< HEAD
-import AIDataAnalytics from './pages/services/AIDataAnalytics';
-import AIIntelligentDocumentProcessing from './pages/services/AIIntelligentDocumentProcessing';
-import AIVirtualAssistant from './pages/services/AIVirtualAssistant';
-import AIWorkflowAutomation from './pages/services/AIWorkflowAutomation';
-import AIContentGenerator from './pages/services/AIContentGenerator';
-import SmartAppointmentScheduler from './pages/services/SmartAppointmentScheduler';
-import About from './pages/About';
-import AdaptiveLearningPlatforms from './pages/blog/ai-2025-oct-adaptive-learning-platforms';
-import AdvancedCybersecurityAI from './pages/services/AdvancedCybersecurityAI';
-import Blog from './pages/Blog';
-import CaseStudies from './pages/CaseStudies';
-import CognitiveAutomationEnterpriseRevolution from './pages/blog/ai-2025-oct-cognitive-automation-enterprise-revolution';
-import CognitiveComputingTransformation from './pages/blog/ai-2025-cognitive-computing-enterprise-transformation';
-import Contact from './pages/Contact';
-import EnterpriseAITransformationSuccessStrategies from './pages/blog/ai-2025-oct-enterprise-ai-transformation-success-strategies';
-import GlobalFinTechAITransformation from './pages/case-studies/global-fintech-ai-transformation-2025';
-import GlobalRetailAITransformation from './pages/case-studies/global-retail-ai-transformation-2025';
-import GlobalTelecomCognitiveTransformation from './pages/case-studies/global-telecom-cognitive-transformation-4-7-billion';
-import HealthcareAITransformation from './pages/case-studies/healthcare-ai-transformation-2025';
-import Home from './pages/Home';
-import MultiAgentEnterpriseOrchestration from './pages/blog/ai-2025-multiagent-enterprise-orchestration-revolution';
-import MultimodalEnterpriseIntelligence from './pages/blog/ai-2025-oct-multimodal-enterprise-intelligence';
-import NextGenIntelligentAutomationBreakthrough from './pages/blog/ai-2025-oct-next-gen-intelligent-automation-breakthrough';
-import PostBySlug from './pages/blog/PostBySlug';
-import RealTimeCognitiveAutomation from './pages/services/RealTimeCognitiveAutomation';
-import AIPredictiveAnalytics from './pages/services/AIPredictiveAnalytics';
-import SmartContractAudit from './pages/services/SmartContractAudit';
-import EdgeComputingAI from './pages/services/EdgeComputingAI';
-import ConversationalAI from './pages/services/ConversationalAI';
-import AIEmailMarketing from './pages/services/AIEmailMarketing';
-import Services from './pages/Services';
-import Solutions from './pages/Solutions';
-import Resources from './pages/Resources';
-import AISolutions from './pages/AISolutions';
-import Pricing from './pages/Pricing';
-import Demo from './pages/Demo';
-import Support from './pages/Support';
-import Privacy from './pages/Privacy';
-import Terms from './pages/Terms';
-=======
-import Loading from './components/Loading';
+import React from 'react';
+import {
+
+} from 'react-router-dom';
+import {
+HelmetProvider
+} from 'react-helmet-async';
+
+// Pages
+import HomePage from './pages/HomePage';
+import ServicesPage from './pages/ServicesPage';
+import AboutPage from './pages/AboutPage';
+import ContactPage from './pages/ContactPage';
+import BlogPage from './pages/BlogPage';
+import CaseStudiesPage from './pages/CaseStudiesPage';
+// Layout Components
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Sidebar from './components/Sidebar';
+import BannerManager from './components/BannerManager';
+import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
+import NotificationSystem from './components/NotificationSystem';
+import PerformanceMonitor from './components/PerformanceMonitor';
+import EnhancedSEOHead from './components/EnhancedSEOHead';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import PerformanceOptimizer from './components/PerformanceOptimizer';
+const AppRouter: React.FC = () => {,
+  return (
+    <HelmetProvider>
+      <Router>
+        <EnhancedErrorBoundary>
+          <AccessibilityEnhancer>
+            <EnhancedSEOHead />
+            <PerformanceOptimizer />
+            
+            <div className="min-h-screen bg-white">
+              <Header />
+              
+              <div className="flex">
+                <Sidebar />
+                
+                <main className="flex-1 ml-64">
+                  <BannerManager />
+                  
+                  <Routes>
+                    <Route path="/" element={<HomePage />} />
+                    <Route path="/services" element={<ServicesPage />} />
+                    <Route path="/about" element={<AboutPage />} />
+                    <Route path="/contact" element={<ContactPage />} />
+                    <Route path="/blog" element={<BlogPage />} />
+                    <Route path="/case-studies" element={<CaseStudiesPage />} />
+                  </Routes>
+                </main>
+              </div>
+              
+              <Footer />
+            </div>
+            
+            <NotificationSystem 
+              notifications={[]} 
+              onRemove={() => {}} 
+            />
+            <PerformanceMonitor />
+          </AccessibilityEnhancer>
+        </EnhancedErrorBoundary>
+      </Router>
+    </HelmetProvider>
+  );
+};
 
 // Lazy load components for better performance
 const Home = lazy(() => import('./pages/Home'));

@@ -4,19 +4,11 @@
  */
 
 interface AccessibilityConfig {
-<<<<<<< HEAD
-enableKeyboardNavigation: boolean,
-enableScreenReaderSupport: boolean,
-enableHighContrast: boolean,
-enableReducedMotion: boolean,
-enableFocusIndicators: boolean,
-=======
 enableKeyboardNavigation: boolean;,
 enableScreenReaderSupport: boolean;,
 enableHighContrast: boolean;,
 enableReducedMotion: boolean;,
 enableFocusIndicators: boolean;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 enableAriaLabels: boolean;
 }
 

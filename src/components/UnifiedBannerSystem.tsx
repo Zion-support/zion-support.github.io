@@ -4,46 +4,27 @@ import {
 <<<<<<< HEAD
 } from 'framer-motion';
 export interface BannerConfig {
-id: string,
-title: string,
-subtitle?: string;
-description: string,
-ctaText: string,
-ctaLink: string,
-imageUrl?: string;
-priority: number,
-category: string,
-tags: string[],
-=======
-} from 'framer-motion';';
-
-export interface BannerConfig {
 id: string;,
 title: string;,
-subtitle?: string;
+subtitle?: string;,
 description: string;,
 ctaText: string;,
 ctaLink: string;,
-imageUrl?: string;
+imageUrl?: string;,
 priority: number;,
 category: string;,
 tags: string[];,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
-backgroundColor?: string;
-textColor?: string;
-animation?: 'slide' | 'fade' | 'scale' | 'none';';
+backgroundColor?: string;,
+textColor?: string;,
+animation?: 'slide' | 'fade' | 'scale' | 'none';,
 duration?: number; // Auto-rotate duration in ms
 }
 
 interface UnifiedBannerSystemProps {
-<<<<<<< HEAD
-banners: BannerConfig[],
-=======
 banners: BannerConfig[];,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
-autoRotate?: boolean;
-rotationInterval?: number;
-showNavigation?: boolean;
+autoRotate?: boolean;,
+rotationInterval?: number;,
+showNavigation?: boolean;,
 maxVisible?: number;
 }
 

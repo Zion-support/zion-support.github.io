@@ -16,15 +16,9 @@ interface Props {
 }
 
 interface State {
-<<<<<<< HEAD
-hasError: boolean,
-error: Error | null,
-errorInfo: ErrorInfo | null,
-=======
 hasError: boolean;,
 error: Error | null;,
 errorInfo: ErrorInfo | null;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 errorId: string;
 }
 

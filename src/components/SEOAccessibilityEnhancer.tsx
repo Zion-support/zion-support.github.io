@@ -9,11 +9,11 @@ Helmet
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 
 interface SEOAccessibilityEnhancerProps {
-title?: string;
-description?: string;
-keywords?: string[];
-canonicalUrl?: string;
-ogImage?: string;
+title?: string;,
+description?: string;,
+keywords?: string[];,
+canonicalUrl?: string;,
+ogImage?: string;,
 structuredData?: any;
 }
 

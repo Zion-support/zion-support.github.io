@@ -1,31 +1,23 @@
 import React from "react";
-import { Helmet } from "react-helmet-async";
-<<<<<<< HEAD
-// Icon imports removed for compatibility
-=======
-import { 
-  Brain,
-  Zap,
-  Shield,
-  BarChart3,
-  MessageSquare,
-  FileText,
-  Users,
-  CheckCircle,
-  ArrowRight,
-  DollarSign,
-  Clock,
-  Star,
-  TrendingUp,
-  Lock,
-  Smartphone,
-  Cloud,
-  Database,
-  Cpu,
-  Target,
-  Rocket
+import {
+Helmet
+} from "react-helmet-async";
+import {
+Users,
+CheckCircle,
+ArrowRight,
+DollarSign,
+Clock,
+Star,
+TrendingUp,
+Lock,
+Smartphone,
+Cloud,
+Database,
+Cpu,
+Target,
+Rocket
 } from "lucide-react";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-73c1
 
 export default function AIMicroSAAS(): React.JSX.Element {
   const microSaaSServices = [

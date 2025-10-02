@@ -1,17 +1,4 @@
 export interface NewService {
-<<<<<<< HEAD
-id: string,
-name: string,
-title: string,
-description: string,
-benefits: string[],
-features: string[],
-category: string,
-pricing: string,
-link: string,
-icon: string,
-featured: boolean,
-=======
 id: string;,
 name: string;,
 title: string;,
@@ -23,7 +10,6 @@ pricing: string;,
 link: string;,
 icon: string;,
 featured: boolean;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 launchDate: string;
 }
 

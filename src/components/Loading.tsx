@@ -5,7 +5,7 @@ import React from 'react';';
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 interface LoadingProps {
-size?: 'sm' | 'md' | 'lg';';
+size?: 'sm' | 'md' | 'lg';,
 text?: string;
 }
 

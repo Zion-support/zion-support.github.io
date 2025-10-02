@@ -4,63 +4,35 @@
  */
 
 interface ContentItem {
-<<<<<<< HEAD
-id: string,
-title: string,
-category: string,
-tags: string[],
-url: string,
-type: 'blog' | 'case-study' | 'service' | 'guide';',
-readTime?: number;
-publishDate: string,
-=======
 id: string;,
 title: string;,
 category: string;,
 tags: string[];,
 url: string;,
-type: 'blog' | 'case-study' | 'service' | 'guide';';,
-readTime?: number;
+type: 'blog' | 'case-study' | 'service' | 'guide';,
+readTime?: number;,
 publishDate: string;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
-views?: number;
+views?: number;,
 conversions?: number;
 }
 
 interface UserProfile {
-<<<<<<< HEAD
-interests: string[],
-viewedContent: string[],
-preferredCategories: string[],
-readingLevel: 'beginner' | 'intermediate' | 'advanced';',
-=======
 interests: string[];,
 viewedContent: string[];,
 preferredCategories: string[];,
-readingLevel: 'beginner' | 'intermediate' | 'advanced';';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
+readingLevel: 'beginner' | 'intermediate' | 'advanced';,
 engagement: number; // 0-1 score
 }
 
 interface RecommendationScore {
-<<<<<<< HEAD
-contentId: string,
-score: number,
-=======
 contentId: string;,
 score: number;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 reasons: string[];
 }
 
 interface RecommendationResult {
-<<<<<<< HEAD
-content: ContentItem,
-score: number,
-=======
 content: ContentItem;,
 score: number;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 reasons: string[];
 }
 

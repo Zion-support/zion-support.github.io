@@ -1,42 +1,25 @@
 <<<<<<< HEAD
 import React from 'react';
 export interface FeaturedItem {
-title: string,
-category: string,
-link: string,
-=======
-import React from 'react';';
-
-export interface FeaturedItem {
 title: string;,
 category: string;,
 link: string;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 metrics?: string;
 }
 
 export interface UnifiedPromotionalBannerProps {
-<<<<<<< HEAD
-variant?: 'default' | 'premium' | 'hero' | 'compact' | 'mega';
-title: string,
-description: string,
-ctaText: string,
-ctaLink: string,
-theme?: 'blue' | 'purple' | 'green' | 'orange' | 'red' | 'gradient' | 'cyan';
-=======
-variant?: 'default' | 'premium' | 'hero' | 'compact' | 'mega';';
+variant?: 'default' | 'premium' | 'hero' | 'compact' | 'mega';,
 title: string;,
 description: string;,
 ctaText: string;,
 ctaLink: string;,
-theme?: 'blue' | 'purple' | 'green' | 'orange' | 'red' | 'gradient' | 'cyan';';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
-featuredItems?: FeaturedItem[];
-showCount?: number;
-className?: string;
-icon?: 'sparkles' | 'zap' | 'rocket' | 'star' | 'none';';
-animated?: boolean;
-badge?: string;
+theme?: 'blue' | 'purple' | 'green' | 'orange' | 'red' | 'gradient' | 'cyan';,
+featuredItems?: FeaturedItem[];,
+showCount?: number;,
+className?: string;,
+icon?: 'sparkles' | 'zap' | 'rocket' | 'star' | 'none';,
+animated?: boolean;,
+badge?: string;,
 date?: string;
 }
 

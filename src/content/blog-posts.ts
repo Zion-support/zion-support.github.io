@@ -1,16 +1,4 @@
 export interface BlogPost {
-<<<<<<< HEAD
-slug: string,
-title: string,
-description: string,
-content: string,
-author: string,
-date: string,
-category: string,
-tags: string[],
-featured: boolean,
-readTime: string,
-=======
 slug: string;,
 title: string;,
 description: string;,
@@ -21,7 +9,6 @@ category: string;,
 tags: string[];,
 featured: boolean;,
 readTime: string;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 image?: string;
 }
 

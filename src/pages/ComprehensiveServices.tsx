@@ -1,16 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-// Icon imports removed for compatibility
-=======
-import { 
-  Zap, Bot, BarChart3, Shield, Cloud, Database,
-  Smartphone, Globe, Cpu, Lock, Users, FileText,
-  TrendingUp, Settings, Headphones, Code,
-  Brain, Target, CheckCircle, Star,
-  Mail, MessageCircle
+import {
+Link
+} from 'react-router-dom';
+import {
+
 } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-73c1
 
 const ComprehensiveServices: React.FC = () => {
   const microSaasServices = [

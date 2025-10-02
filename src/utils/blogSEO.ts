@@ -4,15 +4,6 @@
  */
 
 export interface BlogPostSEO {
-<<<<<<< HEAD
-title: string,
-description: string,
-keywords: string,
-date: string,
-author: string,
-category: string,
-slug: string,
-=======
 title: string;,
 description: string;,
 keywords: string;,
@@ -20,8 +11,7 @@ date: string;,
 author: string;,
 category: string;,
 slug: string;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
-readTime?: string;
+readTime?: string;,
 image?: string;
 }
 

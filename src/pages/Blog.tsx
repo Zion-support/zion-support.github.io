@@ -6,27 +6,6 @@ import BlogPromotionBanner from "../components/BlogPromotionBanner";
 // import Header from "../components/Header";
 
 interface BlogPost {
-id: number,
-title: string,
-excerpt: string,
-content: string,
-author: string,
-date: string,
-readTime: string,
-category: string,
-tags: string[],
-image: string,
-featured: boolean,
-=======
-import {
-Zap
-} from "lucide-react";";
-import React, { useMemo, useState } from "react";";
-import BlogPromotionBanner from "../components/BlogPromotionBanner";";
-// const Footer: React.FC = () => null;,
-// import Header from "../components/Header";";
-
-interface BlogPost {
 id: number;,
 title: string;,
 excerpt: string;,
@@ -38,7 +17,6 @@ category: string;,
 tags: string[];,
 image: string;,
 featured: boolean;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 views: number;
 }
 

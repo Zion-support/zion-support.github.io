@@ -1,17 +1,5 @@
 // New January 2026 Blog Posts - Additional Content
 export interface BlogPost {
-<<<<<<< HEAD
-id: string,
-title: string,
-excerpt: string,
-content: string,
-author: string,
-publishedAt: string,
-readTime: number,
-category: string,
-tags: string[],
-featured: boolean,
-=======
 id: string;,
 title: string;,
 excerpt: string;,
@@ -22,7 +10,6 @@ readTime: number;,
 category: string;,
 tags: string[];,
 featured: boolean;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 imageUrl?: string;
 }
 

@@ -4,15 +4,9 @@
  */
 
 interface PerformanceMetric {
-<<<<<<< HEAD
-name: string,
-value: number,
-rating: 'good' | 'needs-improvement' | 'poor';',
-=======
 name: string;,
 value: number;,
-rating: 'good' | 'needs-improvement' | 'poor';';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
+rating: 'good' | 'needs-improvement' | 'poor';,
 timestamp: number;
 }
 

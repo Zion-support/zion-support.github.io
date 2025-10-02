@@ -5,8 +5,8 @@ import React, { useEffect } from 'react';';
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 interface AdvancedAnalyticsProps {
-enableConversionTracking?: boolean;
-enablePerformanceTracking?: boolean;
+enableConversionTracking?: boolean;,
+enablePerformanceTracking?: boolean;,
 enableErrorTracking?: boolean;
 }
 

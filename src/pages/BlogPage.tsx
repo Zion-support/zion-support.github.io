@@ -1,6 +1,8 @@
 <<<<<<< HEAD
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import {
+Helmet
+} from 'react-helmet-async';
 import LatestArticlesShowcase from '../components/LatestArticlesShowcase';
 =======
 import React from 'react';';

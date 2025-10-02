@@ -9,13 +9,13 @@ Helmet
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 
 interface SEOHeadProps {
-title?: string;
-description?: string;
-keywords?: string;
-canonicalUrl?: string;
-ogImage?: string;
-ogType?: string;
-twitterCard?: string;
+title?: string;,
+description?: string;,
+keywords?: string;,
+canonicalUrl?: string;,
+ogImage?: string;,
+ogType?: string;,
+twitterCard?: string;,
 structuredData?: object;
 }
 

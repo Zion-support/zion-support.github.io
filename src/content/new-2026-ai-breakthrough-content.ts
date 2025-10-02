@@ -1,18 +1,6 @@
 // New 2026 AI Breakthrough Content - Latest Revolutionary Technologies
 
 export interface BlogPost {
-<<<<<<< HEAD
-id: string,
-title: string,
-description: string,
-content: string,
-publishDate: string,
-author: string,
-category: string,
-tags: string[],
-featured: boolean,
-readTime: string,
-=======
 id: string;,
 title: string;,
 description: string;,
@@ -23,7 +11,6 @@ category: string;,
 tags: string[];,
 featured: boolean;,
 readTime: string;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 imageUrl?: string;
 }
 

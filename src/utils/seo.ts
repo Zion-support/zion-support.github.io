@@ -4,17 +4,12 @@
  */
 
 export interface SEOData {
-<<<<<<< HEAD
-title: string,
-description: string,
-=======
 title: string;,
 description: string;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
-keywords?: string[];
-canonical?: string;
-ogImage?: string;
-ogType?: string;
+keywords?: string[];,
+canonical?: string;,
+ogImage?: string;,
+ogType?: string;,
 twitterCard?: string;
 }
 

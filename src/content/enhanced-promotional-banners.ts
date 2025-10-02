@@ -1,27 +1,14 @@
 export interface EnhancedPromotionalBanner {
-<<<<<<< HEAD
-id: string,
-title: string,
-description: string,
-ctaText: string,
-ctaLink: string,
-variant: 'success' | 'warning' | 'info' | 'error';',
-icon?: string;
-featured: boolean,
-priority: number,
-startDate: string,
-=======
 id: string;,
 title: string;,
 description: string;,
 ctaText: string;,
 ctaLink: string;,
-variant: 'success' | 'warning' | 'info' | 'error';';,
-icon?: string;
+variant: 'success' | 'warning' | 'info' | 'error';,
+icon?: string;,
 featured: boolean;,
 priority: number;,
 startDate: string;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 endDate?: string;
 }
 

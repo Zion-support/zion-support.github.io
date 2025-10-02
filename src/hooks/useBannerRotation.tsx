@@ -9,30 +9,17 @@ import {
 <<<<<<< HEAD
 } from '../utils/bannerRotation';
 interface UseBannerRotationOptions {
-banners: BannerConfig[],
-=======
-} from '../utils/bannerRotation';';
-
-interface UseBannerRotationOptions {
 banners: BannerConfig[];,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
-strategy?: Partial<RotationStrategy>;
-autoRotate?: boolean;
+strategy?: Partial<RotationStrategy>;,
+autoRotate?: boolean;,
 balancedSelection?: boolean;
 }
 
 interface UseBannerRotationReturn {
-<<<<<<< HEAD
-displayedBanners: BannerConfig[],
-handleBannerImpression: (bannerId: string) => void,
-handleBannerClick: (bannerId: string) => void,
-refreshBanners: () => void,
-=======
 displayedBanners: BannerConfig[];,
 handleBannerImpression: (bannerId: string) => void;,
 handleBannerClick: (bannerId: string) => void;,
 refreshBanners: () => void;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 isLoading: boolean;
 }
 

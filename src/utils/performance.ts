@@ -1,11 +1,12 @@
 import { onCLS, onFCP, onLCP, onTTFB, Metric } from 'web-vitals';
 
 interface PerformanceMetrics {
-  cls: number | null;
-  fid: number | null;
-  fcp: number | null;
-  lcp: number | null;
-  ttfb: number | null;
+cls: number | null;,
+inp: number | null;,
+fcp: number | null;,
+lcp: number | null;,
+ttfb: number | null;,
+timestamp: string;
 }
 
 class PerformanceMonitor {

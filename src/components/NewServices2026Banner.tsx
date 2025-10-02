@@ -1,7 +1,7 @@
 
 type NewServices2026BannerProps = {
-variant?: "showcase" | "hero" | "info";";
-showCount?: number;
+variant?: "showcase" | "hero" | "info";,
+showCount?: number;,
 className?: string;
 };
 

@@ -5,8 +5,8 @@ import React, { useState } from 'react';';
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 interface Props {
-title?: string;
-subtitle?: string;
+title?: string;,
+subtitle?: string;,
 className?: string;
 }
 

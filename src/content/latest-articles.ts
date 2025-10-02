@@ -1,17 +1,4 @@
 export interface LatestArticle {
-<<<<<<< HEAD
-id: string,
-slug: string,
-title: string,
-description: string,
-excerpt: string,
-author: string,
-date: string,
-category: string,
-tags: string[],
-featured: boolean,
-readTime: string,
-=======
 id: string;,
 slug: string;,
 title: string;,
@@ -23,9 +10,8 @@ category: string;,
 tags: string[];,
 featured: boolean;,
 readTime: string;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
-image?: string;
-newBadge?: boolean;
+image?: string;,
+newBadge?: boolean;,
 trending?: boolean;
 }
 

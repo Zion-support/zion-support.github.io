@@ -1,15 +1,4 @@
 export interface BlogPost {
-<<<<<<< HEAD
-id: string,
-title: string,
-excerpt: string,
-date: string,
-category: string,
-readTime: string,
-image: string,
-featured?: boolean;
-slug: string,
-=======
 id: string;,
 title: string;,
 excerpt: string;,
@@ -17,26 +6,12 @@ date: string;,
 category: string;,
 readTime: string;,
 image: string;,
-featured?: boolean;
+featured?: boolean;,
 slug: string;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 tags: string[];
 }
 
 export interface CaseStudy {
-<<<<<<< HEAD
-id: string,
-title: string,
-excerpt: string,
-company: string,
-industry: string,
-challenge: string,
-solution: string,
-result: string,
-metric: string,
-featured?: boolean;
-slug: string,
-=======
 id: string;,
 title: string;,
 excerpt: string;,
@@ -46,9 +21,8 @@ challenge: string;,
 solution: string;,
 result: string;,
 metric: string;,
-featured?: boolean;
+featured?: boolean;,
 slug: string;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 tags: string[];
 }
 
@@ -103,18 +77,6 @@ secondary: string;
 }
 
 export interface PromotionalBanner {
-<<<<<<< HEAD
-id: string,
-message: string,
-ctaText: string,
-ctaLink: string,
-backgroundColor: string,
-textColor: string,
-showClose: boolean,
-autoHide: boolean,
-hideAfter: number,
-active: boolean,
-=======
 id: string;,
 message: string;,
 ctaText: string;,
@@ -125,7 +87,6 @@ showClose: boolean;,
 autoHide: boolean;,
 hideAfter: number;,
 active: boolean;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 priority: number;
 }
 
