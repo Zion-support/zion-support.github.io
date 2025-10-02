@@ -1,154 +1,124 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-interface BannerData {
+interface Banner {
   id: string;
   title: string;
-  subtitle?: string;
   description: string;
-  ctaText: string;
-  ctaLink: string;
-  imageUrl?: string;
-  category: string;
-  priority: number;
-  isActive: boolean;
-  startDate?: string;
-  endDate?: string;
+  type: 'info' | 'success' | 'warning' | 'promotion';
+  ctaText?: string;
+  ctaLink?: string;
+  icon?: string;
 }
 
-interface BannerManagerProps {
-  banners: BannerData[];
-  rotationInterval?: number;
-  maxVisibleBanners?: number;
-}
+const BannerManager: React.FC = () => {
+  const [currentBannerIndex, setCurrentBannerIndex] = useState(0);
+  const [isVisible, setIsVisible] = useState(true);
 
-const BannerManager: React.FC<BannerManagerProps> = ({
-  banners,
-  rotationInterval = 10000,
-  maxVisibleBanners = 3
-}) => {
-  const [, setCurrentBanners] = useState<BannerData[]>([]);
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  // Filter active banners and sort by priority
-  const activeBanners = banners
-    .filter(banner => {
-      if (!banner.isActive) return false;
-      
-      const now = new Date();
-      if (banner.startDate && new Date(banner.startDate) > now) return false;
-      if (banner.endDate && new Date(banner.endDate) < now) return false;
-      
-      return true;
-    })
-    .sort((a, b) => b.priority - a.priority)
-    .slice(0, maxVisibleBanners);
+  const banners: Banner[] = [
+    {
+      id: 'ai-solutions',
+      title: '🚀 Revolutionary AI Solutions',
+      description: 'Transform your business with cutting-edge artificial intelligence and machine learning technologies.',
+      type: 'promotion',
+      ctaText: 'Learn More',
+      ctaLink: '/services',
+      icon: '🤖'
+    },
+    {
+      id: 'cloud-migration',
+      title: '☁️ Cloud Migration Services',
+      description: 'Seamlessly migrate to the cloud with our expert guidance and proven methodologies.',
+      type: 'info',
+      ctaText: 'Get Started',
+      ctaLink: '/contact',
+      icon: '☁️'
+    },
+    {
+      id: 'digital-transformation',
+      title: '🚀 Digital Transformation',
+      description: 'Accelerate your digital journey with our comprehensive transformation strategies.',
+      type: 'success',
+      ctaText: 'Explore Solutions',
+      ctaLink: '/services',
+      icon: '🚀'
+    }
+  ];
 
   useEffect(() => {
-    if (activeBanners.length === 0) return;
-    
-    setCurrentBanners(activeBanners);
-    
     const interval = setInterval(() => {
-      setCurrentIndex(prev => (prev + 1) % activeBanners.length);
-    }, rotationInterval);
+      setCurrentBannerIndex((prev) => (prev + 1) % banners.length);
+    }, 8000); // Change banner every 8 seconds
 
     return () => clearInterval(interval);
-  }, [activeBanners, rotationInterval]);
+  }, [banners.length]);
 
-  if (activeBanners.length === 0) {
-    return null;
-  }
+  const getBannerStyles = (type: Banner['type']) => {
+    switch (type) {
+      case 'promotion':
+        return 'bg-gradient-to-r from-blue-500 to-purple-600 text-white';
+      case 'success':
+        return 'bg-gradient-to-r from-green-500 to-blue-600 text-white';
+      case 'warning':
+        return 'bg-gradient-to-r from-yellow-500 to-orange-600 text-white';
+      case 'info':
+      default:
+        return 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white';
+    }
+  };
+
+  const currentBanner = banners[currentBannerIndex];
 
   return (
-    <div className="relative w-full">
+    <div className="relative overflow-hidden">
       <AnimatePresence mode="wait">
         <motion.div
-          key={currentIndex}
-          initial={{ opacity: 0, y: 20 }}
+          key={currentBanner.id}
+          initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -20 }}
+          exit={{ opacity: 0, y: 50 }}
           transition={{ duration: 0.5 }}
-          className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white p-8 rounded-lg shadow-lg"
+          className={`${getBannerStyles(currentBanner.type)} py-4 px-6`}
         >
-          <div className="max-w-7xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-8 items-center">
+          <div className="container mx-auto flex items-center justify-between">
+            <div className="flex items-center space-x-4">
+              <div className="text-2xl">{currentBanner.icon}</div>
               <div>
-                <motion.h2 
-                  className="text-3xl md:text-4xl font-bold mb-4"
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.2 }}
-                >
-                  {activeBanners[currentIndex].title}
-                </motion.h2>
-                
-                {activeBanners[currentIndex].subtitle && (
-                  <motion.h3 
-                    className="text-xl md:text-2xl mb-4 text-blue-100"
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 0.3 }}
-                  >
-                    {activeBanners[currentIndex].subtitle}
-                  </motion.h3>
-                )}
-                
-                <motion.p 
-                  className="text-lg mb-6 text-blue-50"
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.4 }}
-                >
-                  {activeBanners[currentIndex].description}
-                </motion.p>
-                
-                <motion.a
-                  href={activeBanners[currentIndex].ctaLink}
-                  className="inline-block bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-300"
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: 0.5 }}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  {activeBanners[currentIndex].ctaText}
-                </motion.a>
+                <h3 className="text-lg font-bold">{currentBanner.title}</h3>
+                <p className="text-sm opacity-90">{currentBanner.description}</p>
               </div>
-              
-              {activeBanners[currentIndex].imageUrl && (
-                <motion.div 
-                  className="relative"
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: 0.3 }}
-                >
-                  <img 
-                    src={activeBanners[currentIndex].imageUrl} 
-                    alt={activeBanners[currentIndex].title}
-                    className="w-full h-64 object-cover rounded-lg shadow-xl"
-                  />
-                </motion.div>
+            </div>
+            
+            <div className="flex items-center space-x-4">
+              {currentBanner.ctaText && (
+                <button className="bg-white bg-opacity-20 hover:bg-opacity-30 px-4 py-2 rounded-lg transition-all duration-200">
+                  {currentBanner.ctaText}
+                </button>
               )}
+              
+              <button
+                onClick={() => setIsVisible(false)}
+                className="text-white hover:text-gray-200 transition-colors"
+              >
+                ✕
+              </button>
             </div>
           </div>
         </motion.div>
       </AnimatePresence>
-      
-      {/* Banner indicators */}
-      {activeBanners.length > 1 && (
-        <div className="flex justify-center mt-4 space-x-2">
-          {activeBanners.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentIndex(index)}
-              className={`w-3 h-3 rounded-full transition-colors duration-300 ${
-                index === currentIndex ? 'bg-white' : 'bg-white/50'
-              }`}
-            />
-          ))}
-        </div>
-      )}
+
+      {/* Banner Indicators */}
+      <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-2">
+        {banners.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentBannerIndex(index)}
+            className={`w-2 h-2 rounded-full transition-colors ${
+              index === currentBannerIndex ? 'bg-white' : 'bg-white bg-opacity-50'
+            }`}
+          />
+        ))}
+      </div>
     </div>
   );
 };

@@ -1,58 +1,109 @@
 import React from 'react';
-import SEO from '../components/SEO';
+import { Helmet } from 'react-helmet-async';
 
 const AboutPage: React.FC = () => {
   return (
     <>
-      <SEO 
-        title="About Us - Zion Tech Group"
-        description="Learn about Zion Tech Group's mission to deliver cutting-edge AI, micro SaaS, and IT solutions that transform businesses."
-        keywords="about zion tech group, AI company, IT services company, technology consulting"
-      />
+      <Helmet>
+        <title>About Us - Zion Tech Group</title>
+        <meta name="description" content="Learn about Zion Tech Group's mission, values, and commitment to delivering innovative AI and IT solutions." />
+      </Helmet>
       
-      <main className="py-20">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
-            <h1 className="text-4xl font-bold mb-8">About Zion Tech Group</h1>
-            
-            <div className="prose prose-lg max-w-none">
-              <p className="text-xl text-gray-600 mb-6">
-                Zion Tech Group is a leading provider of enterprise-grade AI, micro SaaS, and IT solutions. 
-                We help businesses transform their operations through cutting-edge technology and automation.
+      <div className="container mx-auto px-4 py-8">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              About Zion Tech Group
+            </h1>
+            <p className="text-xl text-gray-600">
+              Pioneering the future of technology with innovative AI solutions and digital transformation.
+            </p>
+          </div>
+
+          <div className="prose prose-lg max-w-none">
+            <section className="mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Mission</h2>
+              <p className="text-gray-700 leading-relaxed mb-6">
+                At Zion Tech Group, we are dedicated to empowering businesses through cutting-edge 
+                artificial intelligence and information technology solutions. Our mission is to 
+                accelerate digital transformation and drive innovation across industries.
               </p>
-              
-              <h2 className="text-3xl font-bold mt-12 mb-6">Our Mission</h2>
+              <p className="text-gray-700 leading-relaxed">
+                We believe that technology should be accessible, scalable, and transformative. 
+                Our team of experts works tirelessly to deliver solutions that not only meet 
+                current needs but anticipate future challenges.
+              </p>
+            </section>
+
+            <section className="mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Values</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="bg-white p-6 rounded-lg shadow-md">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">Innovation</h3>
+                  <p className="text-gray-700">
+                    We continuously push the boundaries of what's possible with technology, 
+                    always seeking new ways to solve complex problems.
+                  </p>
+                </div>
+                <div className="bg-white p-6 rounded-lg shadow-md">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">Excellence</h3>
+                  <p className="text-gray-700">
+                    We maintain the highest standards in everything we do, from code quality 
+                    to customer service.
+                  </p>
+                </div>
+                <div className="bg-white p-6 rounded-lg shadow-md">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">Integrity</h3>
+                  <p className="text-gray-700">
+                    We conduct business with honesty, transparency, and ethical practices 
+                    in all our interactions.
+                  </p>
+                </div>
+                <div className="bg-white p-6 rounded-lg shadow-md">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">Collaboration</h3>
+                  <p className="text-gray-700">
+                    We work closely with our clients as partners, ensuring their success 
+                    is our success.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <section className="mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Expertise</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="text-center">
+                  <div className="text-4xl mb-4">🤖</div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">AI & Machine Learning</h3>
+                  <p className="text-gray-600">Advanced algorithms and intelligent automation</p>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl mb-4">☁️</div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">Cloud Computing</h3>
+                  <p className="text-gray-600">Scalable infrastructure and migration services</p>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl mb-4">🔒</div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">Cybersecurity</h3>
+                  <p className="text-gray-600">Protecting digital assets and ensuring compliance</p>
+                </div>
+              </div>
+            </section>
+
+            <section className="text-center bg-gray-50 rounded-lg p-8">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                Ready to Work With Us?
+              </h2>
               <p className="text-gray-600 mb-6">
-                To empower businesses with innovative AI and IT solutions that drive growth, efficiency, and competitive advantage. 
-                We believe in the transformative power of technology and are committed to delivering solutions that make a real impact.
+                Let's discuss how we can help transform your business with innovative technology solutions.
               </p>
-              
-              <h2 className="text-3xl font-bold mt-12 mb-6">Our Values</h2>
-              <ul className="list-disc list-inside text-gray-600 space-y-2">
-                <li><strong>Innovation:</strong> We stay at the forefront of technology trends and continuously explore new possibilities.</li>
-                <li><strong>Excellence:</strong> We deliver high-quality solutions that exceed expectations.</li>
-                <li><strong>Collaboration:</strong> We work closely with our clients to understand their unique needs and challenges.</li>
-                <li><strong>Integrity:</strong> We conduct business with honesty, transparency, and ethical practices.</li>
-              </ul>
-              
-              <h2 className="text-3xl font-bold mt-12 mb-6">Our Team</h2>
-              <p className="text-gray-600 mb-6">
-                Our team consists of experienced AI engineers, software developers, IT specialists, and business consultants 
-                who are passionate about leveraging technology to solve complex business challenges.
-              </p>
-              
-              <h2 className="text-3xl font-bold mt-12 mb-6">Why Choose Us</h2>
-              <ul className="list-disc list-inside text-gray-600 space-y-2">
-                <li>Proven track record of successful project delivery</li>
-                <li>Deep expertise in AI, machine learning, and cloud technologies</li>
-                <li>24/7 support and maintenance services</li>
-                <li>Scalable solutions that grow with your business</li>
-                <li>Competitive pricing and flexible engagement models</li>
-              </ul>
-            </div>
+              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                Contact Us Today
+              </button>
+            </section>
           </div>
         </div>
-      </main>
+      </div>
     </>
   );
 };
