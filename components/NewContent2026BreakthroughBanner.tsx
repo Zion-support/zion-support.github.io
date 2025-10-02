@@ -1,185 +1,143 @@
 import React from 'react';
 import Link from 'next/link';
+import { ArrowRight, Sparkles, Brain, Zap } from 'lucide-react';
 
 export default function NewContent2026BreakthroughBanner() {
   return (
-    <section className="py-16 bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 text-white relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 bg-black/10">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 via-transparent to-blue-500/20"></div>
-      </div>
-      
-      <div className="max-w-6xl mx-auto px-4 relative z-10">
+    <div className="w-full bg-gradient-to-r from-purple-600 via-blue-600 to-teal-600 text-white py-16">
+      <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full px-6 py-3 mb-6">
-            <span className="text-2xl animate-bounce">🚀</span>
-            <span className="font-bold text-lg">NEW BREAKTHROUGH CONTENT — JANUARY 30, 2026</span>
+          <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
+            <Sparkles className="w-4 h-4" />
+            <span className="text-sm font-semibold">NEW 2026 BREAKTHROUGH CONTENT</span>
           </div>
-          
-          <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
             Revolutionary AI Breakthroughs
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-orange-300">
-              Now Live!
+              Now Available
             </span>
           </h2>
-          
-          <p className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto mb-8">
-            Discover the most advanced AI technologies and enterprise solutions that are transforming 
-            businesses worldwide with unprecedented performance gains and breakthrough capabilities.
+          <p className="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
+            Discover the latest AI breakthroughs that are transforming industries. 
+            From autonomous enterprise systems to cognitive computing revolutions.
           </p>
         </div>
 
-        {/* Featured Content Grid */}
         <div className="grid md:grid-cols-3 gap-8 mb-12">
-          {/* Autonomous Business Intelligence */}
-          <Link href="/blog/ai-2026-autonomous-business-intelligence-breakthrough" className="group">
-            <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:bg-white/15 transition-all hover:scale-105 shadow-2xl">
-              <div className="text-center mb-6">
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-indigo-400 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-3xl">🧠</span>
+          {/* Autonomous Systems */}
+          <Link href="/blog/ai-autonomous-enterprise-systems-2026" className="group">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 hover:scale-105">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl flex items-center justify-center">
+                  <Brain className="w-6 h-6 text-white" />
                 </div>
-                <div className="inline-flex items-center gap-2 bg-yellow-400 text-purple-900 px-3 py-1 rounded-full text-sm font-bold mb-3">
-                  BREAKTHROUGH 2026
+                <div>
+                  <span className="bg-green-500 text-white px-2 py-1 rounded-full text-xs font-semibold">NEW</span>
                 </div>
               </div>
-              
-              <h3 className="text-2xl font-bold mb-4 group-hover:text-yellow-300 transition-colors">
-                Autonomous Business Intelligence
+              <h3 className="text-xl font-bold mb-3 group-hover:text-yellow-300 transition-colors">
+                AI Autonomous Enterprise Systems 2026
               </h3>
-              
-              <p className="text-white/80 mb-6 leading-relaxed">
-                Revolutionary autonomous BI systems delivering 300% ROI improvements with self-optimizing 
-                analytics and automated decision-making.
+              <p className="text-blue-100 text-sm mb-4">
+                Self-improving intelligence that evolves without human intervention. 
+                Achieve 95% efficiency and $15M+ savings.
               </p>
-              
-              <div className="grid grid-cols-3 gap-3 mb-6 text-center">
-                <div>
-                  <div className="text-2xl font-bold text-purple-300">300%</div>
-                  <div className="text-xs text-white/70">ROI ↑</div>
+              <div className="flex items-center gap-4 mb-4">
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-yellow-300">95%</div>
+                  <div className="text-xs text-blue-200">Efficiency</div>
                 </div>
-                <div>
-                  <div className="text-2xl font-bold text-indigo-300">95%</div>
-                  <div className="text-xs text-white/70">Automation</div>
-                </div>
-                <div>
-                  <div className="text-2xl font-bold text-blue-300">$50M+</div>
-                  <div className="text-xs text-white/70">Savings</div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-yellow-300">$15M+</div>
+                  <div className="text-xs text-blue-200">Savings</div>
                 </div>
               </div>
-              
-              <div className="block w-full bg-white text-purple-600 text-center py-3 rounded-xl font-bold hover:bg-gray-100 transition-colors">
-                Read Complete Guide →
+              <div className="flex items-center text-yellow-300 font-semibold group-hover:text-white transition-colors">
+                Read Article <ArrowRight className="w-4 h-4 ml-1" />
               </div>
             </div>
           </Link>
 
-          {/* Quantum Enhanced Analytics */}
-          <Link href="/blog/ai-2026-quantum-enhanced-analytics" className="group">
-            <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:bg-white/15 transition-all hover:scale-105 shadow-2xl">
-              <div className="text-center mb-6">
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-400 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-3xl">⚛️</span>
+          {/* Cognitive Computing */}
+          <Link href="/blog/ai-cognitive-computing-breakthrough-2026" className="group">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 hover:scale-105">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center">
+                  <Zap className="w-6 h-6 text-white" />
                 </div>
-                <div className="inline-flex items-center gap-2 bg-yellow-400 text-cyan-900 px-3 py-1 rounded-full text-sm font-bold mb-3">
-                  QUANTUM BREAKTHROUGH
+                <div>
+                  <span className="bg-green-500 text-white px-2 py-1 rounded-full text-xs font-semibold">BREAKTHROUGH</span>
                 </div>
               </div>
-              
-              <h3 className="text-2xl font-bold mb-4 group-hover:text-yellow-300 transition-colors">
-                Quantum-Enhanced Analytics
+              <h3 className="text-xl font-bold mb-3 group-hover:text-yellow-300 transition-colors">
+                AI Cognitive Computing Breakthrough 2026
               </h3>
-              
-              <p className="text-white/80 mb-6 leading-relaxed">
-                Revolutionary quantum-enhanced analytics delivering 1000x performance improvements 
-                with quantum machine learning and real-time optimization.
+              <p className="text-blue-100 text-sm mb-4">
+                Human-level reasoning and decision-making capabilities. 
+                Achieve 98% accuracy and $25M+ value creation.
               </p>
-              
-              <div className="grid grid-cols-3 gap-3 mb-6 text-center">
-                <div>
-                  <div className="text-2xl font-bold text-cyan-300">1000x</div>
-                  <div className="text-xs text-white/70">Speed ↑</div>
+              <div className="flex items-center gap-4 mb-4">
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-yellow-300">98%</div>
+                  <div className="text-xs text-blue-200">Accuracy</div>
                 </div>
-                <div>
-                  <div className="text-2xl font-bold text-blue-300">99.99%</div>
-                  <div className="text-xs text-white/70">Accuracy</div>
-                </div>
-                <div>
-                  <div className="text-2xl font-bold text-purple-300">$100M+</div>
-                  <div className="text-xs text-white/70">ROI</div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-yellow-300">$25M+</div>
+                  <div className="text-xs text-blue-200">Value</div>
                 </div>
               </div>
-              
-              <div className="block w-full bg-white text-cyan-600 text-center py-3 rounded-xl font-bold hover:bg-gray-100 transition-colors">
-                Explore Quantum Solutions →
+              <div className="flex items-center text-yellow-300 font-semibold group-hover:text-white transition-colors">
+                Read Article <ArrowRight className="w-4 h-4 ml-1" />
               </div>
             </div>
           </Link>
 
-          {/* Fortune 500 Success Story */}
-          <Link href="/case-studies/autonomous-bi-fortune-500-success" className="group">
-            <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:bg-white/15 transition-all hover:scale-105 shadow-2xl">
-              <div className="text-center mb-6">
-                <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-emerald-400 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-3xl">🏆</span>
+          {/* Success Case Study */}
+          <Link href="/case-studies/ai-cognitive-computing-success-2026" className="group">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 hover:scale-105">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-12 h-12 bg-gradient-to-r from-teal-500 to-green-500 rounded-xl flex items-center justify-center">
+                  <Sparkles className="w-6 h-6 text-white" />
                 </div>
-                <div className="inline-flex items-center gap-2 bg-yellow-400 text-green-900 px-3 py-1 rounded-full text-sm font-bold mb-3">
-                  SUCCESS STORY
+                <div>
+                  <span className="bg-yellow-500 text-black px-2 py-1 rounded-full text-xs font-semibold">FEATURED</span>
                 </div>
               </div>
-              
-              <h3 className="text-2xl font-bold mb-4 group-hover:text-yellow-300 transition-colors">
-                Fortune 500 $50M ROI
+              <h3 className="text-xl font-bold mb-3 group-hover:text-yellow-300 transition-colors">
+                AI Cognitive Computing Success Case Study
               </h3>
-              
-              <p className="text-white/80 mb-6 leading-relaxed">
-                See how a Fortune 500 global enterprise achieved $50M ROI with autonomous business 
-                intelligence systems and 95% automation.
+              <p className="text-blue-100 text-sm mb-4">
+                Fortune 500 company achieves $25M value creation with 
+                AI cognitive computing systems.
               </p>
-              
-              <div className="grid grid-cols-3 gap-3 mb-6 text-center">
-                <div>
-                  <div className="text-2xl font-bold text-green-300">$50M</div>
-                  <div className="text-xs text-white/70">ROI</div>
+              <div className="flex items-center gap-4 mb-4">
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-yellow-300">$25M</div>
+                  <div className="text-xs text-blue-200">Value</div>
                 </div>
-                <div>
-                  <div className="text-2xl font-bold text-emerald-300">95%</div>
-                  <div className="text-xs text-white/70">Automation</div>
-                </div>
-                <div>
-                  <div className="text-2xl font-bold text-blue-300">12mo</div>
-                  <div className="text-xs text-white/70">Timeline</div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-yellow-300">98%</div>
+                  <div className="text-xs text-blue-200">Accuracy</div>
                 </div>
               </div>
-              
-              <div className="block w-full bg-white text-green-600 text-center py-3 rounded-xl font-bold hover:bg-gray-100 transition-colors">
-                View Success Story →
+              <div className="flex items-center text-yellow-300 font-semibold group-hover:text-white transition-colors">
+                View Case Study <ArrowRight className="w-4 h-4 ml-1" />
               </div>
             </div>
           </Link>
         </div>
 
-        {/* Call to Action */}
         <div className="text-center">
-          <div className="inline-flex flex-col sm:flex-row gap-4">
-            <Link
-              href="/services"
-              className="bg-white text-purple-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-colors shadow-xl hover:shadow-2xl"
-            >
-              Explore All Services →
-            </Link>
-            <Link
-              href="/blog"
-              className="border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-purple-600 transition-colors"
-            >
-              Read All Breakthroughs →
-            </Link>
-          </div>
-          
-          <p className="text-white/70 text-sm mt-4">
-            Join 500+ Fortune 500 companies already achieving breakthrough results with our AI solutions
-          </p>
+          <Link
+            href="/blog"
+            className="inline-flex items-center bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg"
+          >
+            <Sparkles className="w-5 h-5 mr-2" />
+            Explore All 2026 Breakthroughs
+            <ArrowRight className="w-5 h-5 ml-2" />
+          </Link>
         </div>
       </div>
-    </section>
+    </div>
   );
 }

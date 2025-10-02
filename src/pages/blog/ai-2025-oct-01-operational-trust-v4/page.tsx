@@ -1,26 +1,31 @@
-import React from "react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import React from "react";";
 
 export default function OperationalTrustV4(): React.JSX.Element {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">";
       <Helmet>
         <title>Operational Trust Scorecards v4 — SLIs → KPIs with Budgets</title>
         <meta
           name="description"
-          content="Live canaries, budgeted actions, and attested rollback wired to product KPIs."
-        />
-        <link
+          content="Live canaries, budgeted actions, and attested rollback wired to product KPIs." /><link
           rel="canonical"
           href="https://ziontechgroup.com/blog/ai-2025-oct-01-operational-trust-v4"
         />
       </Helmet>
 
       <div className="container mx-auto px-6 py-16">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">Operational Trust Scorecards v4</h1>
+        <h1 className="text-4xl md: text-5xl font-bold mb-4">Operational Trust Scorecards v4</h1>"
         <p className="text-zion-slate-light mb-8">SLIs → KPIs with Budgets</p>
         <div className="prose prose-invert max-w-3xl">
+=======
+          href="https: //ziontechgroup.com/blog/ai-2025-oct-01-operational-trust-v4"
+        />
+      </Helmet>
+
+      <div className="container mx-auto px-6 py-16">";
+        <h1 className="text-4xl md: text-5xl font-bold mb-4">Operational Trust Scorecards v4</h1>";
+        <p className="text-zion-slate-light mb-8">SLIs → KPIs with Budgets</p>";
+        <div className="prose prose-invert max-w-3xl">";
           <p>
             Upgrade operational scorecards with KPI alignment, budgeted actions, and
             rollback hooks that prevent regressions without slowing delivery.
@@ -32,10 +37,14 @@ export default function OperationalTrustV4(): React.JSX.Element {
           </p>
         </div>
         <div className="mt-8">
-          <Link to="/blog" className="text-cyan-300 hover:underline">← Back to Blog</Link>
+          <Link to="/blog" className="text-cyan-300 hover: underline">← Back to Blog</Link>"
+=======
+        <div className="mt-8">";
+          <Link to="/blog" className="text-cyan-300 hover: underline">← Back to Blog</Link>";
         </div>
       </div>
     </div>
   );
 }
 
+;

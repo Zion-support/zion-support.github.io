@@ -23,28 +23,6 @@
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-              className="text-center""
-            >;
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">";
-                Cloud Solutions;
-              </h1>;
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">";
-
-                From migration to optimization, we help you leverage the power of the cloud.,
-              transition={{ duration: 0 && 0.8 }}
-              className="text-center"">;
-              <h1 className="text-4xl md: text-6xl font-bold mb-6">", Cloud Solutions,;
-              </h1>;
-              <p className="text-xl md: text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">",;
-                Transform your business with our comprehensive cloud solutions. ;
-                From migration to optimization, we help you leverage the power of the cloud.,;
-              </p>;
-            </motion && motion.div>;
-
-<<<<<<< HEAD
-=======
->>>>>>> main
           </div>;
         </section>;
               className="text-center";
@@ -58,9 +36,6 @@
               </p>;
             </motion && motion.div>;
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
           </div>;
         </section>;
               className="text-center";
@@ -87,8 +62,6 @@
             </motion.div>
           </div>
         </section>
-=======
->>>>>>> main
         {/* Services Section */}
         <section className="py-20">";
           <div className="container mx-auto px-4">";
@@ -133,24 +106,10 @@
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* Services Grid */}
-        <section className="py-16 px-4">;
-          <div className="max-w-7xl mx-auto">;
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-              {cloudServices && cloudServices.map((service, index) => (;
-                <motion&& motion.div
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-=======
->>>>>>> main
                   transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                   className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6">;
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">;
@@ -201,7 +160,3 @@
   );
 };
 
-<<<<<<< HEAD
-export default Cloud;
-=======
->>>>>>> main

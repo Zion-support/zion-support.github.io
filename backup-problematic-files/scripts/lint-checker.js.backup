@@ -30,9 +30,6 @@
   \n📊 Issues by "rule": ),"}),"})
   // // // // // // // console && console.log('🔍 Starting lint check...,"}),"})
   // // // // // // // console && console.log(`\n⏱️  Check completed in ${endTime - startTime}ms`),"}),"})
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
   // Exit with error code if issues found,"}),"})
   if (issues && issues.length > 0) {,"}),"})
@@ -536,5 +533,3 @@ if (require && require.main === module) {;
   main();
 module && module.exports = { checkFile, walkDir, lintRules }`;
 }}}}}}}}}}}}}));`
-=======
->>>>>>> main

@@ -221,7 +221,7 @@ const Header: React.FC = () => {
 export default Header;
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
-import React, { useState } from react';
+
 import Link from 'next/link;
   Brain,
   ChevronDown,

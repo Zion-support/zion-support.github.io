@@ -1,378 +1,350 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
+import { 
+  ArrowRight, 
+  Calendar, 
+  Clock, 
+  User, 
+  Tag,
+  TrendingUp,
+  Brain,
+  Zap,
+  Rocket
+} from 'lucide-react';
 
-const blogPosts = [
-  {
-    title: 'AI 2026: Neural Optimization Revolution — 1000x Performance',
-    slug: 'ai-2026-neural-optimization-revolution',
-    excerpt: 'Graph-aware schedulers, predictive memory, and quantization-aware routing deliver 1000x throughput and 90% lower cost.',
-    category: 'Breakthrough Technology',
-    publishedAt: 'January 26, 2026',
-    image: '🔮',
-    color: 'purple',
-    readTime: '14 min read'
+export const metadata = {
+  title: 'Blog — Zion Tech Group AI Insights & Technology Trends',
+  description: 'Latest AI insights, technology trends, and revolutionary breakthroughs from Zion Tech Group. Stay ahead with cutting-edge AI knowledge and industry expertise.',
+  keywords: 'AI blog, technology trends, AI insights, artificial intelligence news, AI breakthroughs, enterprise AI, quantum computing',
+  openGraph: {
+    title: 'Blog — Zion Tech Group AI Insights & Technology Trends',
+    description: 'Latest AI insights, technology trends, and revolutionary breakthroughs from Zion Tech Group.',
+    type: 'website',
+    url: 'https://ziontechgroup.com/blog',
+    images: [
+      {
+        url: '/og-blog.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Zion Tech Group Blog - AI Insights & Technology Trends',
+      },
+    ],
   },
-  {
-    title: 'AI 2026: Autonomous Business Process Orchestration — 95% Automation',
-    slug: 'ai-2026-autonomous-business-processes',
-    excerpt: 'How Fortune 500s achieve 95% process automation with next-gen orchestration and cognitive decision engines.',
-    category: 'Implementation Guide',
-    publishedAt: 'January 25, 2026',
-    image: '🏭',
-    color: 'green',
-    readTime: '12 min read'
-  },
-  {
-    title: 'AI 2026 Hyper-Autonomous Enterprise Systems: The Future of Business Automation',
-    slug: 'ai-2026-hyper-autonomous-enterprise-systems',
-    excerpt: 'Discover the revolutionary hyper-autonomous enterprise systems of 2026. Learn how next-generation AI is achieving 99.9% automation rates, 500% efficiency gains, and complete business process transformation.',
-    category: 'Revolutionary Technology',
-    publishedAt: 'January 25, 2026',
-    image: '🤖',
-    color: 'purple',
-    readTime: '22 min read'
-  },
-  {
-    title: 'AI 2026 Quantum Consciousness Breakthrough: The Dawn of Sentient AI',
-    slug: 'ai-2026-quantum-consciousness-breakthrough',
-    excerpt: 'Explore the revolutionary quantum consciousness breakthrough of 2026. Discover how quantum-enhanced AI has achieved true consciousness, self-awareness, and creative problem-solving capabilities.',
-    category: 'Breakthrough Technology',
-    publishedAt: 'January 28, 2026',
-    image: '🧠',
-    color: 'indigo',
-    readTime: '26 min read'
-  },
-  {
-    title: 'AI 2026 Autonomous Business Intelligence Mega-Breakthrough: Revolutionary Decision-Making',
-    slug: 'ai-2026-autonomous-business-intelligence-mega-breakthrough',
-    excerpt: 'Discover the revolutionary autonomous business intelligence breakthrough of 2026. Learn how AI systems achieve 99.9% decision accuracy, real-time business optimization, and autonomous strategic planning.',
-    category: 'Revolutionary Technology',
-    publishedAt: 'January 30, 2026',
-    image: '📊',
-    color: 'green',
-    readTime: '24 min read'
-  },
-  {
-    title: 'Executive AI Roadmap — October 2025',
-    slug: 'ai-2025-october-01-executive-ai-roadmap',
-    excerpt: 'A practical 30/60/90 plan: guardrails, cost controls, and data foundations for reliable AI at speed.',
-    category: 'Executive Guide',
-    publishedAt: 'October 1, 2025',
-    image: '🧭',
-    color: 'blue',
-    readTime: '9 min read'
-  },
-  {
-    title: 'New Governed Agent Patterns for Reliable Autonomy',
-    slug: 'ai-2025-september-30-new-governed-agent-patterns',
-    excerpt: 'Policy-first orchestration, approvals, verifiers, budgets, and rollback so autonomy ships safely.',
-    category: 'Featured Article',
-    publishedAt: 'September 30, 2025',
-    image: '🛡️',
-    color: 'blue',
-    readTime: '12 min read'
-  },
-  {
-    title: 'Autonomous FinOps Scorecards — Prevent Cost Regressions',
-    slug: 'ai-2025-september-30-autonomous-finops-scorecards',
-    excerpt: 'KPI-linked scorecards, routing, caching, and rollback to govern AI spend in real time.',
-    category: 'Implementation Guide',
-    publishedAt: 'September 30, 2025',
-    image: '📊',
-    color: 'green',
-    readTime: '14 min read'
-  },
-  {
-    title: 'AI Enterprise Autonomous Agents 2026: Operating Models, Architecture, ROI',
-    slug: 'ai-enterprise-autonomous-agents-2026',
-    excerpt: 'Deploy autonomous AI agents with provable guardrails to achieve 400% efficiency gains, 70% cost reduction, and 99.95% uptime.',
-    category: 'Implementation Guide',
-    publishedAt: 'September 30, 2025',
-    image: '🤖',
-    color: 'green',
-    readTime: '18 min read'
-  },
-  {
-    title: 'Enterprise RAG Guardrails 2026: Safe, Reliable, and Controllable AI',
-    slug: 'ai-2026-enterprise-rag-guardrails',
-    excerpt: 'Design enterprise-grade RAG with policy guardrails, verifiable citations, and cost-aware routing. Prevent hallucinations and ensure compliance.',
-    category: 'Implementation Guide',
-    publishedAt: 'January 20, 2026',
-    image: '🛡️',
-    color: 'indigo',
-    readTime: '24 min read'
-  },
-  {
-    title: 'Autonomous Enterprise Operations 2026: 90% Efficiency, 300% ROI',
-    slug: 'ai-2026-autonomous-enterprise-operations',
-    excerpt: 'Deploy autonomous AI for incident response, finance, supply chain, and support with provable guardrails and ROI.',
-    category: 'Revolutionary Technology',
-    publishedAt: 'January 18, 2026',
-    image: '🏭',
-    color: 'green',
-    readTime: '28 min read'
-  },
-  {
-    title: 'AI 2026 Neural Superintelligence: The Next Frontier of Artificial Intelligence',
-    slug: 'ai-2026-neural-superintelligence',
-    excerpt: 'Explore the revolutionary AI 2026 neural superintelligence systems that surpass human intelligence, delivering 1000x performance gains and transforming enterprise operations.',
-    category: 'Breakthrough Technology',
-    publishedAt: 'January 20, 2026',
-    image: '🧠',
-    color: 'indigo',
-    readTime: '18 min read'
-  },
-  {
-    title: 'AI 2026 Enterprise Autonomous Systems: The Future of Business Automation',
-    slug: 'ai-2026-enterprise-autonomous-systems',
-    excerpt: 'Discover how next-generation AI autonomous systems are revolutionizing enterprise operations, delivering 400% efficiency gains, 70% cost reduction, and complete business process automation.',
-    category: 'Revolutionary Technology',
-    publishedAt: 'January 20, 2026',
-    image: '🤖',
-    color: 'purple',
-    readTime: '15 min read'
-  },
-  {
-    title: 'AI 2026: Revolutionary Trends Transforming Enterprise',
-    slug: 'ai-2026-revolutionary-trends',
-    excerpt: 'Discover the revolutionary AI trends shaping 2026. From autonomous enterprise systems to quantum AI, explore how these breakthroughs are transforming business operations.',
-    category: 'Featured Article',
-    publishedAt: 'January 15, 2026',
-    image: '🚀',
-    color: 'blue',
-    readTime: '12 min read'
-  },
-  {
-    title: 'AI 2026 Quantum Computing Breakthrough: Revolutionary Processing Power',
-    slug: 'quantum-ai-breakthrough-2026',
-    excerpt: 'Explore the revolutionary AI quantum computing breakthrough of 2026. Discover how quantum-enhanced AI is solving complex problems 1000x faster and transforming enterprise computing.',
-    category: 'Breakthrough Technology',
-    publishedAt: 'January 10, 2026',
-    image: '⚛️',
-    color: 'purple',
-    readTime: '14 min read'
-  },
-  {
-    title: 'AI Enterprise Transformation 2026: Complete Implementation Guide',
-    slug: 'ai-enterprise-transformation-2026',
-    excerpt: 'Master AI enterprise transformation with proven strategies, ROI frameworks, and implementation roadmaps. Achieve 300% ROI and 70% cost reduction.',
-    category: 'Implementation Guide',
-    publishedAt: 'January 5, 2026',
-    image: '🏢',
-    color: 'green',
-    readTime: '20 min read'
-  },
-  {
-    title: 'AI Autonomous Agents 2025: Enterprise Implementation Guide',
-    slug: 'ai-autonomous-agents-2025',
-    excerpt: 'Master autonomous AI agents with 300% ROI strategies and enterprise-ready deployment patterns. Achieve 80% automation and 90% efficiency gains.',
-    category: 'Implementation Guide',
-    publishedAt: 'December 28, 2025',
-    image: '🤖',
-    color: 'blue',
-    readTime: '16 min read'
-  },
-  {
-    title: 'AI 2027 Cost Optimization Playbook: Reliable, Fast, and Affordable AI',
-    slug: 'ai-2027-cost-optimization-playbook',
-    excerpt: 'Cut AI spend 30–70% with routing, caching, quantization, and guardrails while improving reliability.',
-    category: 'Implementation Guide',
-    publishedAt: 'September 30, 2025',
-    image: '💸',
-    color: 'green',
-    readTime: '13 min read'
-  }
-  ,
-  {
-    title: 'AI 2026 Agentic Workflow Orchestration: Guardrails to ROI',
-    slug: 'ai-2026-agentic-workflow-orchestration',
-    excerpt: 'Design multi-agent workflows with policy guardrails, human-in-the-loop reviews, and online evaluations for reliable business outcomes.',
-    category: 'Implementation Guide',
-    publishedAt: 'October 1, 2025',
-    image: '🧩',
-    color: 'green',
-    readTime: '16 min read'
-  },
-  {
-    title: 'AI Insights: New Content Highlights — September 30, 2025',
-    slug: 'ai-september-30-2025-new-content-highlights',
-    excerpt: 'A concise overview of today’s new guides across workflows, data fabric, and resilience—what changed and why it matters.',
-    category: 'Featured Article',
-    publishedAt: 'September 30, 2025',
-    image: '🆕',
-    color: 'blue',
-    readTime: '8 min read'
-  },
-  {
-    title: 'AI Strategic Roadmaps — October 2025',
-    slug: 'ai-october-2025-strategic-roadmaps',
-    excerpt: 'Quarterly plan for governed autonomy, cost-aware routing, and data fabric foundations with milestones and risks.',
-    category: 'Implementation Guide',
-    publishedAt: 'October 1, 2025',
-    image: '🗺️',
-    color: 'green',
-    readTime: '10 min read'
-  },
-  {
-    title: 'AI 2026 Intelligent Data Fabric: Real-Time Decisions at Scale',
-    slug: 'ai-2026-intelligent-data-fabric',
-    excerpt: 'Unify batch, streaming, and unstructured data into a governed fabric powering low-latency AI decisions and observability.',
-    category: 'Featured Article',
-    publishedAt: 'October 1, 2025',
-    image: '🧩',
-    color: 'blue',
-    readTime: '14 min read'
-  }
-];
-
-const categories = [
-  { name: 'All', count: blogPosts.length, color: 'gray' },
-  { name: 'Breakthrough Technology', count: blogPosts.filter(post => post.category === 'Breakthrough Technology').length, color: 'purple' },
-  { name: 'Revolutionary Technology', count: blogPosts.filter(post => post.category === 'Revolutionary Technology').length, color: 'indigo' },
-  { name: 'Implementation Guide', count: blogPosts.filter(post => post.category === 'Implementation Guide').length, color: 'green' },
-  { name: 'Featured Article', count: blogPosts.filter(post => post.category === 'Featured Article').length, color: 'blue' }
-];
+};
 
 export default function BlogPage() {
+  const featuredPosts = [
+    {
+      title: "AI 2026: Revolutionary Breakthroughs in Quantum Computing",
+      excerpt: "Discover the latest quantum AI breakthroughs delivering 1000x performance improvements and transforming enterprise operations.",
+      author: "Zion Tech Group AI Team",
+      date: "2026-01-15",
+      readTime: "8 min read",
+      category: "Quantum AI",
+      image: "/blog/quantum-ai-2026.jpg",
+      link: "/blog/ai-2026-quantum-computing-breakthrough",
+      featured: true
+    },
+    {
+      title: "Autonomous Enterprise Systems: The Future of Business Operations",
+      excerpt: "Learn how autonomous AI systems are achieving 95% automation rates and revolutionizing enterprise operations worldwide.",
+      author: "Dr. Sarah Chen",
+      date: "2026-01-12",
+      readTime: "6 min read",
+      category: "Enterprise AI",
+      image: "/blog/autonomous-enterprise.jpg",
+      link: "/blog/ai-2026-autonomous-enterprise-operations",
+      featured: true
+    },
+    {
+      title: "Neural Architecture Breakthroughs: Next-Generation AI Systems",
+      excerpt: "Exploring revolutionary neural architectures that are pushing the boundaries of artificial intelligence and machine learning.",
+      author: "AI Research Team",
+      date: "2026-01-10",
+      readTime: "7 min read",
+      category: "AI Research",
+      image: "/blog/neural-architecture.jpg",
+      link: "/blog/ai-2026-neural-architecture-breakthrough",
+      featured: true
+    }
+  ];
+
+  const recentPosts = [
+    {
+      title: "AI ROI Optimization: Achieving $150M+ Returns",
+      excerpt: "Proven strategies for maximizing AI investment returns and achieving unprecedented ROI in enterprise implementations.",
+      author: "Financial AI Team",
+      date: "2026-01-08",
+      readTime: "5 min read",
+      category: "AI ROI",
+      link: "/blog/ai-2026-cost-optimization-blueprint"
+    },
+    {
+      title: "Quantum Consciousness: The Next Frontier in AI",
+      excerpt: "Exploring the intersection of quantum computing and artificial consciousness in next-generation AI systems.",
+      author: "Quantum AI Lab",
+      date: "2026-01-05",
+      readTime: "9 min read",
+      category: "Quantum AI",
+      link: "/blog/ai-2026-quantum-consciousness-breakthrough"
+    },
+    {
+      title: "Autonomous Business Intelligence: Self-Managing Analytics",
+      excerpt: "How autonomous BI systems are transforming data analysis and business intelligence with self-managing capabilities.",
+      author: "BI Solutions Team",
+      date: "2026-01-03",
+      readTime: "6 min read",
+      category: "Business Intelligence",
+      link: "/blog/ai-2026-autonomous-business-intelligence"
+    },
+    {
+      title: "AI Security & Governance: Enterprise-Grade Protection",
+      excerpt: "Comprehensive AI security frameworks and governance models for enterprise-scale AI implementations.",
+      author: "Security Team",
+      date: "2025-12-30",
+      readTime: "7 min read",
+      category: "AI Security",
+      link: "/blog/ai-governance-2026-enterprise-safety"
+    },
+    {
+      title: "Edge AI Revolution: Real-Time Intelligence at Scale",
+      excerpt: "The future of edge computing with AI-powered real-time decision making and distributed intelligence.",
+      author: "Edge Computing Team",
+      date: "2025-12-28",
+      readTime: "8 min read",
+      category: "Edge AI",
+      link: "/blog/ai-2026-edge-computing-revolution"
+    },
+    {
+      title: "Multimodal AI Integration: The Next Wave",
+      excerpt: "How multimodal AI systems are combining vision, language, and reasoning for unprecedented capabilities.",
+      author: "Multimodal AI Team",
+      date: "2025-12-25",
+      readTime: "6 min read",
+      category: "Multimodal AI",
+      link: "/blog/ai-multimodal-integration-2025"
+    }
+  ];
+
+  const categories = [
+    { name: "Quantum AI", count: 25, icon: Brain },
+    { name: "Enterprise AI", count: 18, icon: Zap },
+    { name: "AI Research", count: 22, icon: TrendingUp },
+    { name: "AI ROI", count: 12, icon: Rocket },
+    { name: "Business Intelligence", count: 15, icon: TrendingUp },
+    { name: "AI Security", count: 10, icon: Brain }
+  ];
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
-      <div className="max-w-7xl mx-auto px-4 py-12">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-            AI & Technology
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
-              {' '}Insights
-            </span>
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Stay ahead with the latest AI breakthroughs, implementation guides, and revolutionary technologies 
-            that are transforming enterprise operations worldwide.
-          </p>
-        </div>
-
-        {/* Categories */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {categories.map((category) => (
-            <button
-              key={category.name}
-              className={`px-6 py-3 rounded-full font-semibold transition-colors ${
-                category.color === 'gray'
-                  ? 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                  : category.color === 'purple'
-                  ? 'bg-purple-100 text-purple-700 hover:bg-purple-200'
-                  : category.color === 'indigo'
-                  ? 'bg-indigo-100 text-indigo-700 hover:bg-indigo-200'
-                  : category.color === 'green'
-                  ? 'bg-green-100 text-green-700 hover:bg-green-200'
-                  : 'bg-blue-100 text-blue-700 hover:bg-blue-200'
-              }`}
-            >
-              {category.name} ({category.count})
-            </button>
-          ))}
-        </div>
-
-        {/* Featured Posts */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">Featured Articles</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {blogPosts.slice(0, 3).map((post) => (
-              <Link key={post.slug} href={`/blog/${post.slug}`} className="group">
-                <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-gray-200 hover:border-indigo-200">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${
-                      post.color === 'indigo' ? 'bg-indigo-100' :
-                      post.color === 'purple' ? 'bg-purple-100' :
-                      post.color === 'blue' ? 'bg-blue-100' :
-                      'bg-green-100'
-                    }`}>
-                      <span className="text-2xl">{post.image}</span>
-                    </div>
-                    <div>
-                      <div className={`text-sm font-semibold ${
-                        post.color === 'indigo' ? 'text-indigo-600' :
-                        post.color === 'purple' ? 'text-purple-600' :
-                        post.color === 'blue' ? 'text-blue-600' :
-                        'text-green-600'
-                      }`}>
-                        {post.category}
-                      </div>
-                      <div className="text-sm text-gray-500">{post.readTime}</div>
-                    </div>
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-indigo-600 transition-colors">
-                    {post.title}
-                  </h3>
-                  <p className="text-gray-600 mb-4 line-clamp-3">
-                    {post.excerpt}
-                  </p>
-                  <div className="flex items-center justify-between">
-                    <div className="text-sm text-gray-500">{post.publishedAt}</div>
-                    <div className="text-indigo-600 font-semibold group-hover:text-indigo-700 transition-colors">
-                      Read Article →
-                    </div>
-                  </div>
-                </div>
-              </Link>
-            ))}
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10"></div>
+        <div className="relative max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-6">
+              AI Insights Blog
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-4xl mx-auto">
+              Stay ahead of the curve with the latest AI breakthroughs, technology trends, 
+              and revolutionary insights from our expert team.
+            </p>
           </div>
         </div>
+      </section>
 
-        {/* All Posts */}
-        <div>
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">All Articles</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {blogPosts.map((post) => (
-              <Link key={post.slug} href={`/blog/${post.slug}`} className="group">
-                <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-200">
-                  <div className="flex items-center gap-2 mb-3">
-                    <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
-                      post.color === 'indigo' ? 'bg-indigo-100 text-indigo-800' :
-                      post.color === 'purple' ? 'bg-purple-100 text-purple-800' :
-                      post.color === 'blue' ? 'bg-blue-100 text-blue-800' :
-                      'bg-green-100 text-green-800'
-                    }`}>
+      {/* Featured Posts */}
+      <section className="py-20 px-4 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Featured Articles</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Our most popular and impactful articles on AI breakthroughs and technology trends
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {featuredPosts.map((post, index) => (
+              <article key={index} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-200">
+                <div className="h-48 bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                    <Brain className="w-8 h-8 text-white" />
+                  </div>
+                </div>
+                
+                <div className="p-6">
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="px-3 py-1 bg-blue-100 text-blue-600 text-sm font-medium rounded-full">
                       {post.category}
                     </span>
-                    <span className="text-sm text-gray-500">{post.readTime}</span>
-                  </div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-indigo-600 transition-colors">
-                    {post.title}
-                  </h3>
-                  <p className="text-gray-600 mb-3 text-sm line-clamp-2">
-                    {post.excerpt}
-                  </p>
-                  <div className="flex items-center justify-between">
-                    <div className="text-sm text-gray-500">{post.publishedAt}</div>
-                    <div className="text-indigo-600 font-semibold group-hover:text-indigo-700 transition-colors">
-                      Read →
+                    <div className="flex items-center text-gray-500 text-sm">
+                      <Clock className="w-4 h-4 mr-1" />
+                      {post.readTime}
                     </div>
                   </div>
+                  
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 hover:text-blue-600 transition-colors">
+                    <Link to={post.link}>{post.title}</Link>
+                  </h3>
+                  
+                  <p className="text-gray-600 mb-4 leading-relaxed">
+                    {post.excerpt}
+                  </p>
+                  
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center text-sm text-gray-500">
+                      <User className="w-4 h-4 mr-2" />
+                      {post.author}
+                    </div>
+                    <div className="flex items-center text-sm text-gray-500">
+                      <Calendar className="w-4 h-4 mr-2" />
+                      {new Date(post.date).toLocaleDateString()}
+                    </div>
+                  </div>
+                  
+                  <Link
+                    to={post.link}
+                    className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold mt-4 hover:translate-x-1 transition-all duration-300"
+                  >
+                    Read More
+                    <ArrowRight className="ml-2 w-4 h-4" />
+                  </Link>
                 </div>
-              </Link>
+              </article>
             ))}
           </div>
         </div>
+      </section>
 
-        {/* Newsletter Signup */}
-        <div className="mt-16 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-8 text-white text-center">
-          <h3 className="text-2xl font-bold mb-4">Stay Updated with AI Insights</h3>
-          <p className="text-indigo-100 mb-6 max-w-2xl mx-auto">
-            Get the latest AI breakthroughs, implementation guides, and industry insights delivered to your inbox.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="flex-1 px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-white"
-            />
-            <button className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-              Subscribe
-            </button>
+      {/* Recent Posts & Sidebar */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
+            {/* Recent Posts */}
+            <div className="lg:col-span-3">
+              <div className="mb-12">
+                <h2 className="text-3xl font-bold text-gray-900 mb-8">Latest Articles</h2>
+                
+                <div className="space-y-8">
+                  {recentPosts.map((post, index) => (
+                    <article key={index} className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow p-6 border border-gray-200">
+                      <div className="flex items-start justify-between mb-4">
+                        <span className="px-3 py-1 bg-gray-100 text-gray-700 text-sm font-medium rounded-full">
+                          {post.category}
+                        </span>
+                        <div className="flex items-center text-gray-500 text-sm">
+                          <Clock className="w-4 h-4 mr-1" />
+                          {post.readTime}
+                        </div>
+                      </div>
+                      
+                      <h3 className="text-xl font-bold text-gray-900 mb-3 hover:text-blue-600 transition-colors">
+                        <Link to={post.link}>{post.title}</Link>
+                      </h3>
+                      
+                      <p className="text-gray-600 mb-4 leading-relaxed">
+                        {post.excerpt}
+                      </p>
+                      
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center text-sm text-gray-500">
+                          <User className="w-4 h-4 mr-2" />
+                          {post.author}
+                        </div>
+                        <div className="flex items-center text-sm text-gray-500">
+                          <Calendar className="w-4 h-4 mr-2" />
+                          {new Date(post.date).toLocaleDateString()}
+                        </div>
+                      </div>
+                      
+                      <Link
+                        to={post.link}
+                        className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold mt-4 hover:translate-x-1 transition-all duration-300"
+                      >
+                        Read Article
+                        <ArrowRight className="ml-2 w-4 h-4" />
+                      </Link>
+                    </article>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Sidebar */}
+            <div className="lg:col-span-1">
+              <div className="bg-white rounded-lg shadow-lg p-6 mb-8">
+                <h3 className="text-xl font-bold text-gray-900 mb-6">Categories</h3>
+                <div className="space-y-3">
+                  {categories.map((category, index) => (
+                    <Link
+                      key={index}
+                      to={`/blog/category/${category.name.toLowerCase().replace(/\s+/g, '-')}`}
+                      className="flex items-center justify-between p-3 rounded-lg hover:bg-blue-50 transition-colors group"
+                    >
+                      <div className="flex items-center">
+                        <category.icon className="w-5 h-5 text-blue-600 mr-3" />
+                        <span className="text-gray-700 group-hover:text-blue-600 transition-colors">
+                          {category.name}
+                        </span>
+                      </div>
+                      <span className="text-sm text-gray-500 bg-gray-100 px-2 py-1 rounded-full">
+                        {category.count}
+                      </span>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-lg p-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Stay Updated</h3>
+                <p className="text-gray-600 mb-4">
+                  Get the latest AI insights and technology trends delivered to your inbox.
+                </p>
+                <form className="space-y-3">
+                  <input
+                    type="email"
+                    placeholder="Enter your email"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  />
+                  <button
+                    type="submit"
+                    className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300"
+                  >
+                    Subscribe
+                  </button>
+                </form>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4 bg-gradient-to-r from-blue-600 to-purple-600">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl text-blue-100 mb-8">
+            Let's discuss how our revolutionary AI solutions can deliver unprecedented results for your organization
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              to="/contact" 
+              className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300"
+            >
+              Get Free Consultation
+              <Rocket className="ml-2 w-5 h-5" />
+            </Link>
+            <Link 
+              to="/services" 
+              className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300"
+            >
+              Explore Our Solutions
+            </Link>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

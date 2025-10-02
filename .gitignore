@@ -5,9 +5,27 @@ node_modules
 .env.local
 .env.*.local
 
+# Build outputs
+dist/
+build/
+out/
+
 tsconfig.tsbuildinfo
 core
 
 # TypeScript build info
 *.tsbuildinfo
 /.pnpm-home
+
+# Test coverage
+coverage/
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# IDE
+.vscode/
+.idea/
+dist/

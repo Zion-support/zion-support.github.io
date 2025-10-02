@@ -124,7 +124,7 @@ const AIObservabilityEnterprise2025 = () => {
           <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Data Collection Layer</h3>
           <p className="text-gray-700 mb-6 leading-relaxed">
             Instrument your ML pipelines to capture predictions, features, model metadata, and performance metrics. 
-            Use lightweight agents that add <5ms latency to inference calls.
+            Use lightweight agents that add &lt;5ms latency to inference calls.
           </p>
 
           <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Analysis & Detection Engine</h3>

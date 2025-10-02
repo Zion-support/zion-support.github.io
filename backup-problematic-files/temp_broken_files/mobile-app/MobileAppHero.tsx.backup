@@ -50,8 +50,3 @@ export const MobileAppHero:React.FC = () => {;
   20 ;
 }/> </Button> </Link> </div> </div> </div> </div> </div> </section>) ;
 
-<<<<<<< HEAD
-
-=======
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/mobile-app/MobileAppHero.tsx
->>>>>>> origin/cursor/delete-old-data-records-6bba

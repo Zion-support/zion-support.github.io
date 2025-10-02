@@ -101,7 +101,7 @@ export default function AutonomousCybersecurityAIAgents2025() {
                       <span className="bg-emerald-500/20 text-emerald-300 px-3 py-1 rounded-full text-xs">Detection: 0.3s</span>
                       <span className="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-xs">Analysis: 12s</span>
                       <span className="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-xs">Response: 17s</span>
-                      <span className="bg-cyan-500/20 text-cyan-300 px-3 py-1 rounded-full text-xs">Total: <30s</span>
+                      <span className="bg-cyan-500/20 text-cyan-300 px-3 py-1 rounded-full text-xs">Total: &lt;30s</span>
                     </div>
                   </div>
                   

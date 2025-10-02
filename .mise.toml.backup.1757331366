@@ -1,9 +1,0 @@
-[tools]
-<<<<<<< HEAD
-python = "3.12.6"
-=======
-python = "3.11"
->>>>>>> origin/cursor/build-and-install-project-dependencies-d34f
-
-[settings]
-python.compile = false

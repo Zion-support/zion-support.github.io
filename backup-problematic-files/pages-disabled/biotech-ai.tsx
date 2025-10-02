@@ -11,7 +11,7 @@
     return this.props.children;
   }
 }
-import React from 'react';
+
 import Head from 'next / head';
 import {Activity, Phone, Mail, MapPin, Check, ArrowRight} from 'lucide-react';
 import UltraFuturisticBackground from '../components / ui / UltraFuturisticBackground';

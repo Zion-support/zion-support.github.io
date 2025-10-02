@@ -161,8 +161,3 @@ const path = require('path')
         this.log("Fixed ${fixesApplied} issues in ${path.basename(filePath)}"
       this.log("Error fixing ${filePath}: ${error.message}")
     this.log(" Total Fixes "Applied": ${report.totalFixes}")
-<<<<<<< HEAD
-    this.log(" Total "Errors": ${report.totalErrors}")
-=======
-    this.log(" Total "Errors": ${report.totalErrors}")
-      this.log("Critical Errors Fix "failed")      this.log("Critical Errors Fix "failed")

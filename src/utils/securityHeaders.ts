@@ -4,36 +4,56 @@
  */
 
 export interface SecurityConfig {
-  csp: {
-    'default-src': string[];
-    'script-src': string[];
-    'style-src': string[];
-    'img-src': string[];
-    'connect-src': string[];
-    'font-src': string[];
-    'object-src': string[];
-    'media-src': string[];
-    'frame-src': string[];
-    'worker-src': string[];
-    'child-src': string[];
-    'form-action': string[];
-    'frame-ancestors': string[];
-    'base-uri': string[];
-    'manifest-src': string[];
-    'upgrade-insecure-requests': boolean;
-    'block-all-mixed-content': boolean;
-  };
-  headers: {
+csp: {,
+'default-src': string[];
+'script-src': string[];
+'style-src': string[];
+'img-src': string[];
+'connect-src': string[];
+'font-src': string[];
+'object-src': string[];
+'media-src': string[];
+'frame-src': string[];
+'worker-src': string[];
+'child-src': string[];
+'form-action': string[];
+'frame-ancestors': string[];
+'base-uri': string[];
+'manifest-src': string[];
+'upgrade-insecure-requests': boolean;
+'block-all-mixed-content': boolean;
+};
+  headers: {,
+    [key: string]: string;
+=======
+'default-src': string[];';
+'script-src': string[];';
+'style-src': string[];';
+'img-src': string[];';
+'connect-src': string[];';
+'font-src': string[];';
+'object-src': string[];';
+'media-src': string[];';
+'frame-src': string[];';
+'worker-src': string[];';
+'child-src': string[];';
+'form-action': string[];';
+'frame-ancestors': string[];';
+'base-uri': string[];';
+'manifest-src': string[];';
+'upgrade-insecure-requests': boolean;';
+'block-all-mixed-content': boolean;';
+};
+  headers: {,
     [key: string]: string;
   };
 }
 
 export class SecurityManager {
-  private config: SecurityConfig;
-
-  constructor() {
-    this.config = this.getDefaultConfig();
-  }
+private config: SecurityConfig;
+constructor() {
+this.config = this.getDefaultConfig();
+}
 
   // Added for compatibility with callers that expect an initialize() method
   public initialize(): void {
@@ -42,7 +62,7 @@ export class SecurityManager {
 
   private getDefaultConfig(): SecurityConfig {
     return {
-      csp: {
+      csp: {,
         'default-src': ["'self'"],
         'script-src': ["'self'", "'unsafe-inline'", "'unsafe-eval'", 'https://www.googletagmanager.com', 'https://www.google-analytics.com'],
         'style-src': ["'self'", "'unsafe-inline'", 'https://fonts.googleapis.com'],
@@ -60,8 +80,8 @@ export class SecurityManager {
         'manifest-src': ["'self'"],
         'upgrade-insecure-requests': true,
         'block-all-mixed-content': true
-      },
-      headers: {
+      }
+      headers: {,
         'X-Frame-Options': 'DENY',
         'X-Content-Type-Options': 'nosniff',
         'X-XSS-Protection': '1; mode=block',
@@ -72,6 +92,36 @@ export class SecurityManager {
         'X-Permitted-Cross-Domain-Policies': 'none',
         'Cross-Origin-Embedder-Policy': 'require-corp',
         'Cross-Origin-Opener-Policy': 'same-origin',
+=======
+        'default-src': ["'self'"],";
+        'script-src': ["'self'", "'unsafe-inline'", "'unsafe-eval'", 'https: //www.googletagmanager.com', 'https://www.google-analytics.com'],';
+        'style-src': ["'self'", "'unsafe-inline'", 'https: //fonts.googleapis.com'],';
+        'img-src': ["'self'", 'data: ', 'https:', 'blob:'],';
+        'connect-src': ["'self'", 'https: //www.google-analytics.com', 'https://analytics.google.com'],';
+        'font-src': ["'self'", 'https: //fonts.gstatic.com', 'data:'],';
+        'object-src': ["'none'"],";
+        'media-src': ["'self'"],";
+        'frame-src': ["'none'"],";
+        'worker-src': ["'self'", 'blob: '],';
+        'child-src': ["'self'"],";
+        'form-action': ["'self'"],";
+        'frame-ancestors': ["'none'"],";
+        'base-uri': ["'self'"],";
+        'manifest-src': ["'self'"],";
+        'upgrade-insecure-requests': true,';
+        'block-all-mixed-content': true';
+      }
+      headers: {,
+        'X-Frame-Options': 'DENY',';
+        'X-Content-Type-Options': 'nosniff',';
+        'X-XSS-Protection': '1; mode=block',';
+        'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload',';
+        'Referrer-Policy': 'strict-origin-when-cross-origin',';
+        'Permissions-Policy': 'geolocation=(), microphone=(), camera=(), payment=(), usb=(), magnetometer=(), gyroscope=(), accelerometer=()',';
+        'X-Download-Options': 'noopen',';
+        'X-Permitted-Cross-Domain-Policies': 'none',';
+        'Cross-Origin-Embedder-Policy': 'require-corp',';
+        'Cross-Origin-Opener-Policy': 'same-origin',';
         'Cross-Origin-Resource-Policy': 'same-origin'
       }
     };
@@ -79,25 +129,31 @@ export class SecurityManager {
 
   public getCSPDirective(): string {
     const { csp } = this.config;
-    const directives: string[] = [];
-
+    const directives: string[] = []
     Object.entries(csp).forEach(([directive, values]) => {
-      if (typeof values === 'boolean') {
+      if (typeof values === 'boolean') {;
+=======
+    const directives: string[] = [];
+    Object.entries(csp).forEach(([directive, values]) => {
+      if (typeof values === 'boolean') {';
         if (values) {
           directives.push(directive);
         }
       } else if (Array.isArray(values) && values.length > 0) {
-        directives.push(`${directive} ${values.join(' ')}`);
+        directives.push(`${directive} ${values.join(' ')}`);`;
       }
     });
 
-    return directives.join('; ');
+    return directives.join('; ');';
   }
 
   public getSecurityHeaders(): { [key: string]: string } {
     return {
-      ...this.config.headers,
-      'Content-Security-Policy': this.getCSPDirective()
+      ...this.config.headers
+      'Content-Security-Policy': this.getCSPDirective(),
+=======
+      ...this.config.headers
+      'Content-Security-Policy': this.getCSPDirective()';
     };
   }
 
@@ -107,7 +163,9 @@ export class SecurityManager {
     }
   }
 
-  public addTrustedDomain(domain: string, directive: string = 'script-src'): void {
+  public addTrustedDomain(domain: string, directive: string = 'script-src'): void {'
+=======
+  public addTrustedDomain(domain: string, directive: string = 'script-src'): void {';
     if (directive in this.config.csp) {
       const currentValues = (this.config.csp as any)[directive] as string[];
       if (!currentValues.includes(domain)) {
@@ -116,7 +174,9 @@ export class SecurityManager {
     }
   }
 
-  public removeTrustedDomain(domain: string, directive: string = 'script-src'): void {
+  public removeTrustedDomain(domain: string, directive: string = 'script-src'): void {'
+=======
+  public removeTrustedDomain(domain: string, directive: string = 'script-src'): void {';
     if (directive in this.config.csp) {
       const currentValues = (this.config.csp as any)[directive] as string[];
       const index = currentValues.indexOf(domain);
@@ -126,11 +186,17 @@ export class SecurityManager {
     }
   }
 
-  public validateInput(input: string, type: 'html' | 'url' | 'script' = 'html'): boolean {
+  public validateInput(input: string, type: 'html' | 'url' | 'script' = 'html'): boolean {'
     const patterns = {
-      html: /^[^<>]*$/,
-      url: /^https?:\/\/[^\s<>]+$/,
-      script: /^[^<>'"]*$/
+      html: /^[^<>]*$/,,
+      url: /^https?:\/\/[^\s<>]+$/,,
+      script: /^[^<>'"]*$/",
+=======
+  public validateInput(input: string, type: 'html' | 'url' | 'script' = 'html'): boolean {';
+    const patterns = {
+      html: /^[^<>]*$/,,
+      url: /^https?:\/\/[^\s<>]+$/,,
+      script: /^[^<>'"]*$/";
     };
 
     return patterns[type].test(input);
@@ -138,25 +204,34 @@ export class SecurityManager {
 
   public sanitizeInput(input: string): string {
     return input
-      .replace(/[<>]/g, '')
-      .replace(/javascript:/gi, '')
-      .replace(/on\w+=/gi, '')
+      .replace(/[<>]/g, '');
+      .replace(/javascript: /gi, '')'
+      .replace(/on\w+=/gi, '');
+=======
+      .replace(/[<>]/g, '')';
+      .replace(/javascript: /gi, '')';
+      .replace(/on\w+=/gi, '')';
       .trim();
   }
 
   public generateNonce(): string {
-    if (typeof window !== 'undefined' && window.crypto) {
+    if (typeof window !== 'undefined' && window.crypto) {;
+=======
+    if (typeof window !== 'undefined' && window.crypto) {';
       const array = new Uint8Array(16);
       window.crypto.getRandomValues(array);
-      return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
+      return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');';
     }
     // Fallback for environments without crypto
     return Math.random().toString(36).substr(2, 16);
   }
 
   public getSecurityReport(): {
-    csp: string;
-    headers: { [key: string]: string };
+csp: string;
+headers: { [key: string]: string
+};
+    score: number,
+=======
     score: number;
   } {
     const headers = this.getSecurityHeaders();
@@ -164,10 +239,10 @@ export class SecurityManager {
 
     // Check for essential security headers
     const essentialHeaders = [
-      'X-Frame-Options',
-      'X-Content-Type-Options',
-      'X-XSS-Protection',
-      'Strict-Transport-Security',
+      'X-Frame-Options',';
+      'X-Content-Type-Options',';
+      'X-XSS-Protection',';
+      'Strict-Transport-Security',';
       'Content-Security-Policy'
     ];
 
@@ -179,7 +254,9 @@ export class SecurityManager {
 
     // Check CSP strictness
     const csp = headers['Content-Security-Policy'];
-    if (!csp.includes("'unsafe-inline'") && !csp.includes("'unsafe-eval'")) {
+=======
+    const csp = headers['Content-Security-Policy'];';
+    if (!csp.includes("'unsafe-inline'") && !csp.includes("'unsafe-eval'")) {";
       score += 10; // Bonus for strict CSP
     } else {
       score -= 5; // Penalty for unsafe directives
@@ -203,6 +280,8 @@ export const sanitizeHTML = (html: string): string => {
 
 export const validateURL = (url: string): boolean => {
   return securityManager.validateInput(url, 'url');
+=======
+  return securityManager.validateInput(url, 'url');';
 };
 
 export const generateSecureToken = (): string => {

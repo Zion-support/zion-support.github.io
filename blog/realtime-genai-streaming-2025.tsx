@@ -15,7 +15,7 @@ const RealtimeGenAIStreaming2025: React.FC = () => {
           <span className="text-blue-600 dark:text-blue-400">GenAI</span>
         </div>
         <p className="text-xl text-gray-700 dark:text-gray-300 leading-relaxed">
-          Stream LLM responses with <200ms time-to-first-byte while maintaining safety filters, cost controls, and quality evals.
+          Stream LLM responses with &lt;200ms time-to-first-byte while maintaining safety filters, cost controls, and quality evals.
         </p>
       </header>
 
@@ -34,7 +34,7 @@ const RealtimeGenAIStreaming2025: React.FC = () => {
             </ul>
           </div>
           <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-4">
-            <p className="mb-2"><strong>✓ Streaming:</strong> First tokens appear in <200ms</p>
+            <p className="mb-2"><strong>✓ Streaming:</strong> First tokens appear in &lt;200ms</p>
             <ul className="list-disc pl-6 text-sm space-y-1">
               <li>Immediate visual feedback</li>
               <li>Perceived performance boost of 2-3x</li>
@@ -179,7 +179,7 @@ onToken((token) => {
               </li>
               <li className="flex items-start">
                 <span className="text-green-600 dark:text-green-400 mr-2">✓</span>
-                <span><strong>Warm Pools:</strong> Keep model instances ready to serve (<200ms TTFB)</span>
+                <span><strong>Warm Pools:</strong> Keep model instances ready to serve (&lt;200ms TTFB)</span>
               </li>
               <li className="flex items-start">
                 <span className="text-green-600 dark:text-green-400 mr-2">✓</span>

@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-#!/usr/bin/env node
-const fs = require('fs');
-const path = require('path');
-
-// Create advanced monitoring system
-function createAdvancedMonitoring() {
-  console.log('\n📊 Creating advanced monitoring system...');
-  
-  const monitoringFiles = {
-    'monitoring/health-check.js': `// Advanced health check system
-<<<<<<< HEAD
-=======
->>>>>>> main
 
 
 class HealthChecker {
@@ -20,27 +6,10 @@ class HealthChecker {
     this.results = new Map();
   }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export class HealthChecker {
   constructor() {;
     this.checks = new Map();
     this.results = new Map();  }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> main
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/cursor/delete-old-data-records-6bba
   addCheck(name, checkFunction) {
     this.checks.set(name, checkFunction);
   }
@@ -70,7 +39,6 @@ export class HealthChecker {
         results[name] = { error: error.message };
       }
     }
-=======
 
 
 
@@ -84,7 +52,6 @@ export class HealthChecker {
         const result = await checkFunction();
 
 
->>>>>>> main
     return results;
   }
 
@@ -404,131 +371,10 @@ export class ResponseCache {
   });
 }
 
-<<<<<<< HEAD
-=======
-// Create database optimization utilities
-function createDatabaseOptimization() {
-  console.log('\n🗄️ Creating database optimization utilities...');
-  
-  const dbFiles = {
-    'database/query-optimizer.js': `// Database query optimization
-class QueryOptimizer {
-  constructor() {
-    this.queryCache = new Map();
-    this.slowQueries = [];
-  }
-
-  optimizeQuery(query, params = []) {
-    // Add query analysis
-    const analysis = this.analyzeQuery(query);
-    
-    return {
-      query,
-      params,
-      analysis,
-      recommendations: this.getRecommendations(analysis)
-    };
-  }
-
-  analyzeQuery(query) {
-    const analysis = {
-      hasIndex: this.checkForIndexes(query),
-      hasJoins: query.toLowerCase().includes('join'),
-      hasSubqueries: query.toLowerCase().includes('select') && query.toLowerCase().split('select').length > 2,
-      hasOrderBy: query.toLowerCase().includes('order by'),
-      hasGroupBy: query.toLowerCase().includes('group by'),
-      estimatedComplexity: this.estimateComplexity(query)
-    };
-    
-    return analysis;
-  }
-
-  checkForIndexes(query) {
-    // Simple index detection (would be more sophisticated in real implementation)
-    const indexKeywords = ['primary key', 'unique', 'index'];
-    return indexKeywords.some(keyword => 
-      query.toLowerCase().includes(keyword)
-    );
-  }
-
-  estimateComplexity(query) {
-    let complexity = 1;
-    if (query.toLowerCase().includes('join')) complexity += 2;
-    if (query.toLowerCase().includes('group by')) complexity += 1;
-    if (query.toLowerCase().includes('order by')) complexity += 1;
-    if (query.toLowerCase().includes('having')) complexity += 1;
-    return complexity;
-  }
-
-  getRecommendations(analysis) {
-    const recommendations = [];
-    
-    if (!analysis.hasIndex && analysis.estimatedComplexity > 2) {
-      recommendations.push('Consider adding indexes for better performance');
-    }
-    
-    if (analysis.hasJoins && analysis.estimatedComplexity > 3) {
-      recommendations.push('Consider query optimization for complex joins');
-    }
-    
-    return recommendations;
-  }
-
-const queryOptimizer = new QueryOptimizer();
-module.exports = { QueryOptimizer, queryOptimizer };`,
-    
-    'database/connection-pool.js': `// Database connection pooling
-class ConnectionPool {
-
-
-
-  async getConnection() {
-async getConnection() {
-async getConnection() {
-
-
-  releaseConnection(connection) {
-    this.usedConnections.delete(connection);
-    this.availableConnections.push(connection);
-  }
-
-  async createConnection() {
-    // This would create an actual database connection
-    return {
-      id: Math.random().toString(36).substr(2, 9),
-      createdAt: new Date(),
-      isHealthy: true
-    };
-  }
-
-  getPoolStatus() {
-    return {
-      total: this.connections.length,
-      available: this.availableConnections.length,
-      used: this.usedConnections.size,
-      max: this.maxConnections
-    };
-  }
-
-const connectionPool = new ConnectionPool();
-module.exports = { ConnectionPool, connectionPool };
-  };
-}
-
->>>>>>> main
 
 
     createAdvancedMonitoring();
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-    createAdvancedMonitoring();
-=======
-=======
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 // Main execution
 async function main() {
   console.log('🚀 Starting advanced app improvements...');
@@ -541,22 +387,12 @@ async function main() {
     console.log('🚀 Starting advanced app improvements...');
     
     // Create all improvement systems
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> main
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/cursor/delete-old-data-records-6bba
     createAdvancedCaching();
     createAPIOptimization();
     
     console.log('✅ Advanced app improvements completed successfully!');
   } catch (error) {
     console.error('❌ Error during app improvements:', error);
-=======
     // Create PM2 ecosystem configuration
     const pm2Config = {
       apps: [{
@@ -606,25 +442,7 @@ async function main() {
 main();
 
 
->>>>>>> main
     process.exit(1);
   }
 }
 
-<<<<<<< HEAD
-if (require.main === module) {
-  main();
-}
-
-module.exports = {
-  createAdvancedMonitoring,
-  createAdvancedCaching,
-  createAPIOptimization
-};
-=======
-main();
-
-
-main();
-
->>>>>>> main

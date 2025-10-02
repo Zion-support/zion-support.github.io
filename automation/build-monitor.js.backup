@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-#!/usr/bin/env node
-
-
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-/**
- * Build Monitor - Continuously monitors build health and reports issues
- */
-class BuildMonitor {
-  constructor() {
-
-
-    this.isRunning = false;
->>>>>>> origin/main
     this.checkInterval = parseInt(process.env.BUILD_CHECK_INTERVAL) || 300000; // 5 minutes
     this.logLevel = process.env.LOG_LEVEL || 'info';
     this.lastBuildTime = null;
@@ -230,7 +214,6 @@ if (require.main === module) {
 
 
   const command = process.argv[2];
->>>>>>> origin/main
   switch (command) {
     case 'start':
       monitor.start().catch(console.error)
@@ -294,7 +277,6 @@ class BuildMonitor {
     };
     try {
       // Check build
->>>>>>> origin/cursor/delete-old-data-records-6bba
       this.log('Checking build status...');
       const buildStart = Date.now(),
   try {
@@ -328,38 +310,11 @@ class BuildMonitor {
         results.typeCheck.status = 'failed;
         results.typeCheck.errors = this.parseTypeErrors(error.stdout || error.message),
   this.log('TypeScript check: ERRORS FOUNDWARN')}
-<<<<<<< HEAD
-=======
-
-
-
-
-
-
-
-
-
-
-
-
-      dependencies: { status: 'unknown, outdated: [] }
-    };
-
-    try {
-      // Check build
-
->>>>>>> main
 
       // Check dependencies
       try {
         const outdated = execSync(yarn outdated --json', { 
 
-<<<<<<< HEAD
-=======
-      // Check dependencies
-      try {
-        const outdated = execSync(yarn outdated --json', { 
->>>>>>> origin/cursor/delete-old-data-records-6bba
           stdio: 'pipe, 
           cwd: process.cwd() 
         });
@@ -368,17 +323,12 @@ class BuildMonitor {
   this.log(Dependencies check: SUCCESS')} catch (error) {
         results.dependencies.status = 'warning,
   this.log('Dependencies check: Some packages may be outdatedWARN')}
-=======
->>>>>>> main
 
     } catch (error) {
       this.log(`Error during health check: ${error.message}`, ERROR')}
     return results}
 
   parseErrors(output) {
-<<<<<<< HEAD
-    const errors = [];
->>>>>>> origin/cursor/delete-old-data-records-6bba
     const lines = output.split('\n),
   lines.forEach(line => {
       if (line.includes('Error:') || line.includes(SyntaxError:')) {
@@ -406,7 +356,6 @@ class BuildMonitor {
     });
     
     return errors}
-=======
 
 
     return errors}
@@ -414,29 +363,17 @@ class BuildMonitor {
 
     return issues}
 
->>>>>>> main
 
     return errors}
   async sendAlert(results) {
     if (this.consecutiveFailures >= this.alertThreshold) {
       this.log(`ALERT: ${this.consecutiveFailures} consecutive build failures!`, CRITICAL');
-<<<<<<< HEAD
-      
-      // Create alert file for other processes to pick up
-      const alertData = {
->>>>>>> origin/cursor/delete-old-data-records-6bba
         type: 'build_failure,
         consecutiveFailures: this.consecutiveFailures,
         timestamp: new Date().toISOString(),
         lastError: results.build.errors[0] || 'Unknown error',
         results: results
       };
-<<<<<<< HEAD
-=======
-
-      // Create alert file for other processes to pick up
-
->>>>>>> main
 
       fs.writeFileSync(
 
@@ -454,18 +391,6 @@ class BuildMonitor {
     const report = {}
 
 
-<<<<<<< HEAD
-=======
-  async generateReport(results) {
-    // Read previous report for trends
-    let previousReport = null,
-  if (fs.existsSync(this.reportFile)) {
-      try {
-        previousReport = JSON.parse(fs.readFileSync(this.reportFile, 'utf8))} catch (error) {
-        this.log('Could not read previous reportWARN')}
-    }
-    const report = {
->>>>>>> origin/cursor/delete-old-data-records-6bba
       ...results,
       trends: {
         consecutiveFailures: this.consecutiveFailures,
@@ -525,20 +450,14 @@ class BuildMonitor {
     this.log(Starting build health check...');
     
     try {
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
       const results = await this.checkBuildHealth();
       await this.sendAlert(results);
       const report = await this.generateReport(results),
   this.log(`Build health check completed. Health score: ${report.healthScore}/100`);
       
-=======
 
 
 
->>>>>>> main
       if (report.healthScore < 70) {
         this.log('Build health is below threshold. Consider immediate action.WARN')}
     } catch (error) {
@@ -547,22 +466,9 @@ class BuildMonitor {
 }
 // Main execution
 if (require.main === module) {
-<<<<<<< HEAD
-  const monitor = new BuildMonitor(),
-  monitor.run().catch(console.error)}
-=======
-
->>>>>>> main
 
 
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 module.exports = BuildMonitor;
-<<<<<<< HEAD
-// Main execution
-if (require.main === module) {
-  const monitor = new BuildMonitor(),
-=======
-
->>>>>>> main

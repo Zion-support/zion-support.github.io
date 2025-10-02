@@ -35,56 +35,6 @@ export: interface SpaceMetaverseService2029 {
    contact: { mobile: string;
    email: string;
 
-<<<<<<< HEAD
-=======
-export interface SpaceMetaverseService2029 {
-  "id": string;
-  name: string,
-  // TODO: Implement
-}
-  "id": string;"
-  name: string;,
-pr-12325
-  description: string;
-  category: string[];,
-  price: string;
-  features: string[];,
-  benefits: string[];
-  useCases: string[];,
-  marketSize: string;
-  competitors: string[];,
-  technology: string[];
-  integration: string[];,
-  support: string[];
-  compliance: string[];,
-  scalability: string;
-  roi: string;,
-  deployment: string;
-  maintenance: string;,
-  training: string;
-  documentation: string;,
-  api: string;
-  mobile: string;,
-  security: string;
-  backup: string;,
-  monitoring: string;
-  analytics: string;,
-  customization: string;
-  whiteLabel: string;,
-  affiliate: string;
-  referral: string;,
-  partnership: string;
-  funding: string;,
-  exit: string;
-  contact: {,
-  mobile: string;
-    email: string;,
-  website: string;"
-address: string};export const "spaceMetaverseServices2029": SpaceMetaverseService2029[] = [{"
-    id:,"
-  space-mining-automation-platform',
-    "name": 'Space Mining Automation Platform,
->>>>>>> main
     description:,
   Revolutionary: space mining automation platform that uses AI and robotics to autonomously extract valuable resources from asteroids, moons, and other celestial bodies with minimal human intervention.'',;
     category[
@@ -465,18 +415,3 @@ address: string};export const "spaceMetaverseServices2029": SpaceMetaverseServic
     contact: {
 
       website:,
-<<<<<<< HEAD
-  https: //ziontechgroup.co,m,
-      address: ;
-  '364: E Main St STE 1008 Middletown DE 19709';']}}}}}}
-=======
-  "https": //ziontechgroup.com,
-      "address": '364 E Main St STE 1008 Middletown DE 19709'
-]}}}}}}
-
-
-
-
-
-
->>>>>>> main
