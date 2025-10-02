@@ -1,6 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Sparkles, Zap, Shield } from 'lucide-react';
 
 const AdvertisingBanner: React.FC = () => {
   return (

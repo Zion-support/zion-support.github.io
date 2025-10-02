@@ -136,7 +136,30 @@ export const allBlogPosts: BlogPost[] = [
     featured: true,
     valueProposition: 'Faster deploys, safer rollbacks'
   },
-  // October 2, 2025 additions
+  // October 1, 2025 additions (this branch)
+  {
+    slug: 'edge-2025-oct-01-zero-pii-telemetry-v2',
+    title: 'Zero‑PII Telemetry v2: Decision‑Grade Signals Without Centralized IDs',
+    description: 'Scoped identifiers, on‑device redaction, and DP noise for rich insights with zero PII risk.',
+    category: 'Observability',
+    date: '2025-10-01',
+    readTime: '9 min',
+    tags: ['Privacy', 'Telemetry', 'Edge', 'DP'],
+    featured: true,
+    valueProposition: '$8M+ savings via safe analytics'
+  },
+  {
+    slug: 'genai-2025-oct-01-eval-scorecards-live-canaries',
+    title: 'Live Evals & Scorecards: Ship GenAI Fast Without Regressions',
+    description: 'Online evals tied to KPIs with canary gates and auto‑rollback when quality dips.',
+    category: 'GenAI',
+    date: '2025-10-01',
+    readTime: '10 min',
+    tags: ['Evals', 'Scorecards', 'Canaries', 'Guardrails'],
+    featured: true,
+    valueProposition: 'Protect velocity, prevent regressions'
+  },
+  // October 2, 2025 additions (from main)
   {
     slug: 'ai-2025-oct-02-private-experiments-blueprint',
     title: 'Private Experiments Blueprint: Zero‑PII Testing at the Edge',

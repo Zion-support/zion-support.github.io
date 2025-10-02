@@ -3,7 +3,7 @@
  * Manages banner display, tracking, and rotation logic
  */
 
-import { useState, useEffect, useCallback, useMemo } from 'react';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import {
   BannerConfig,
   RotationStrategy,
@@ -14,7 +14,6 @@ import {
   loadBannerStats,
   getRefreshInterval,
 } from '../utils/bannerRotation';
-import { trackBannerInteraction } from '../utils/analyticsTracker';
 
 interface UseBannerRotationOptions {
   banners: BannerConfig[];
@@ -42,7 +41,7 @@ export const useBannerRotation = ({
 }: UseBannerRotationOptions): UseBannerRotationReturn => {
   const [displayedBanners, setDisplayedBanners] = useState<BannerConfig[]>([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [lastRotation, setLastRotation] = useState(Date.now());
+  const [, setLastRotation] = useState(Date.now());
   
   // Load banner statistics from storage
   const bannersWithStats = useMemo(() => {
@@ -120,8 +119,8 @@ export const useBannerRotation = ({
 export const useBannerVisibility = (
   bannerId: string,
   onVisible?: () => void
-): { ref: React.RefObject<HTMLDivElement> } => {
-  const ref = React.useRef<HTMLDivElement>(null);
+): { ref: React.RefObject<HTMLDivElement | null> } => {
+  const ref = React.useRef<HTMLDivElement | null>(null);
   
   useEffect(() => {
     const element = ref.current;
@@ -182,7 +181,7 @@ export const useBannerABTest = (
   // Track variation performance
   const trackVariationPerformance = useCallback(
     (metric: string, value: number) => {
-      trackBannerInteraction(selectedVariation.id, 'performance', {
+      trackBannerInteraction(selectedVariation.id, 'click', {
         testName,
         variation: selectedVariation.id,
         metric,

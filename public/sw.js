@@ -1,26 +1,35 @@
-// Service Worker for Performance Optimization
-const CACHE_NAME = 'zion-website-v1';
-const STATIC_CACHE = 'static-v1';
-const DYNAMIC_CACHE = 'dynamic-v1';
+// Service Worker for Zion Tech Group Website
+const CACHE_NAME = 'zion-tech-group-v1';
+const STATIC_CACHE_NAME = 'zion-static-v1';
+const DYNAMIC_CACHE_NAME = 'zion-dynamic-v1';
 
-// Assets to cache immediately
-const STATIC_ASSETS = [
+// Files to cache immediately
+const STATIC_FILES = [
   '/',
   '/index.html',
   '/manifest.json',
-  '/offline.html'
+  '/assets/css/main-BltRtwWF.css',
+  '/assets/js/main-CyGst8ov.js',
+  '/assets/js/vendor-react-Bhjid7yq.js',
+  '/assets/js/components-xFNA8Lw3.js',
 ];
 
-// Install event - cache static assets
+// Install event - cache static files
 self.addEventListener('install', (event) => {
   console.log('Service Worker installing...');
   event.waitUntil(
-    caches.open(STATIC_CACHE)
+    caches.open(STATIC_CACHE_NAME)
       .then((cache) => {
-        console.log('Caching static assets');
-        return cache.addAll(STATIC_ASSETS);
+        console.log('Caching static files');
+        return cache.addAll(STATIC_FILES);
       })
-      .then(() => self.skipWaiting())
+      .then(() => {
+        console.log('Service Worker installed');
+        return self.skipWaiting();
+      })
+      .catch((error) => {
+        console.error('Service Worker installation failed:', error);
+      })
   );
 });
 
@@ -31,67 +40,132 @@ self.addEventListener('activate', (event) => {
     caches.keys()
       .then((cacheNames) => {
         return Promise.all(
-          cacheNames
-            .filter((cacheName) => cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE)
-            .map((cacheName) => caches.delete(cacheName))
+          cacheNames.map((cacheName) => {
+            if (cacheName !== STATIC_CACHE_NAME && cacheName !== DYNAMIC_CACHE_NAME) {
+              console.log('Deleting old cache:', cacheName);
+              return caches.delete(cacheName);
+            }
+          })
         );
       })
-      .then(() => self.clients.claim())
+      .then(() => {
+        console.log('Service Worker activated');
+        return self.clients.claim();
+      })
   );
 });
 
-// Fetch event - serve from cache or network
+// Fetch event - serve from cache, fallback to network
 self.addEventListener('fetch', (event) => {
   const { request } = event;
   const url = new URL(request.url);
 
   // Skip non-GET requests
-  if (request.method !== 'GET') return;
+  if (request.method !== 'GET') {
+    return;
+  }
 
   // Skip cross-origin requests
-  if (url.origin !== location.origin) return;
+  if (url.origin !== location.origin) {
+    return;
+  }
 
-  event.respondWith(
-    caches.match(request)
-      .then((cachedResponse) => {
-        // Return cached version if available
-        if (cachedResponse) {
-          return cachedResponse;
-        }
-
-        // Otherwise fetch from network
-        return fetch(request)
-          .then((response) => {
-            // Don't cache non-successful responses
-            if (!response || response.status !== 200 || response.type !== 'basic') {
-              return response;
-            }
-
-            // Clone the response
-            const responseToCache = response.clone();
-
-            // Cache the response
-            caches.open(DYNAMIC_CACHE)
+  // Handle different types of requests
+  if (request.destination === 'document') {
+    // HTML pages - network first, cache fallback
+    event.respondWith(
+      fetch(request)
+        .then((response) => {
+          if (response.status === 200) {
+            const responseClone = response.clone();
+            caches.open(DYNAMIC_CACHE_NAME)
               .then((cache) => {
-                cache.put(request, responseToCache);
+                cache.put(request, responseClone);
               });
-
+          }
+          return response;
+        })
+        .catch(() => {
+          return caches.match(request)
+            .then((response) => {
+              if (response) {
+                return response;
+              }
+              // Fallback to index.html for SPA routing
+              return caches.match('/index.html');
+            });
+        })
+    );
+  } else if (request.destination === 'script' || request.destination === 'style') {
+    // JS/CSS files - cache first, network fallback
+    event.respondWith(
+      caches.match(request)
+        .then((response) => {
+          if (response) {
             return response;
-          })
-          .catch(() => {
-            // Return offline page for navigation requests
-            if (request.mode === 'navigate') {
-              return caches.match('/offline.html');
-            }
-          });
-      })
-  );
+          }
+          return fetch(request)
+            .then((response) => {
+              if (response.status === 200) {
+                const responseClone = response.clone();
+                caches.open(DYNAMIC_CACHE_NAME)
+                  .then((cache) => {
+                    cache.put(request, responseClone);
+                  });
+              }
+              return response;
+            });
+        })
+    );
+  } else if (request.destination === 'image') {
+    // Images - cache first, network fallback
+    event.respondWith(
+      caches.match(request)
+        .then((response) => {
+          if (response) {
+            return response;
+          }
+          return fetch(request)
+            .then((response) => {
+              if (response.status === 200) {
+                const responseClone = response.clone();
+                caches.open(DYNAMIC_CACHE_NAME)
+                  .then((cache) => {
+                    cache.put(request, responseClone);
+                  });
+              }
+              return response;
+            });
+        })
+    );
+  } else {
+    // Other requests - network first, cache fallback
+    event.respondWith(
+      fetch(request)
+        .then((response) => {
+          if (response.status === 200) {
+            const responseClone = response.clone();
+            caches.open(DYNAMIC_CACHE_NAME)
+              .then((cache) => {
+                cache.put(request, responseClone);
+              });
+          }
+          return response;
+        })
+        .catch(() => {
+          return caches.match(request);
+        })
+    );
+  }
 });
 
-// Background sync for offline actions
+// Background sync for offline form submissions
 self.addEventListener('sync', (event) => {
-  if (event.tag === 'background-sync') {
-    event.waitUntil(doBackgroundSync());
+  if (event.tag === 'contact-form') {
+    event.waitUntil(
+      // Handle offline form submissions
+      handleOfflineFormSubmissions()
+    );
   }
 });
 
@@ -106,12 +180,12 @@ self.addEventListener('push', (event) => {
       vibrate: [100, 50, 100],
       data: {
         dateOfArrival: Date.now(),
-        primaryKey: 1
+        primaryKey: data.primaryKey
       },
       actions: [
         {
           action: 'explore',
-          title: 'Explore',
+          title: 'View Details',
           icon: '/icon-192x192.png'
         },
         {
@@ -128,15 +202,61 @@ self.addEventListener('push', (event) => {
   }
 });
 
-// Background sync function
-async function doBackgroundSync() {
-  // Implement background sync logic here
-  console.log('Performing background sync...');
+// Notification click handler
+self.addEventListener('notificationclick', (event) => {
+  event.notification.close();
+
+  if (event.action === 'explore') {
+    event.waitUntil(
+      clients.openWindow('/')
+    );
+  }
+});
+
+// Helper function for offline form submissions
+async function handleOfflineFormSubmissions() {
+  try {
+    // Get stored form data from IndexedDB
+    const formData = await getStoredFormData();
+    
+    if (formData && formData.length > 0) {
+      for (const data of formData) {
+        try {
+          await fetch('/api/contact', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data)
+          });
+          
+          // Remove successfully submitted data
+          await removeStoredFormData(data.id);
+        } catch (error) {
+          console.error('Failed to submit form data:', error);
+        }
+      }
+    }
+  } catch (error) {
+    console.error('Error handling offline form submissions:', error);
+  }
 }
 
-// Message handling
+// Helper functions for IndexedDB operations
+async function getStoredFormData() {
+  // Implementation would use IndexedDB to retrieve stored form data
+  return [];
+}
+
+async function removeStoredFormData(id) {
+  // Implementation would use IndexedDB to remove stored form data
+  return true;
+}
+
+// Performance monitoring
 self.addEventListener('message', (event) => {
-  if (event.data && event.data.type === 'SKIP_WAITING') {
-    self.skipWaiting();
+  if (event.data && event.data.type === 'PERFORMANCE_METRIC') {
+    // Send performance metrics to analytics
+    console.log('Performance metric received:', event.data.metric);
   }
 });

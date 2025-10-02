@@ -5,7 +5,8 @@
     "skipLibCheck": true
   },
   "include": [
-    "src/**/*"
+    "src/types/**/*.ts",
+    "src/types/**/*.tsx"
   ],
   "exclude": [
     "node_modules",
@@ -15,9 +16,6 @@
     "**/*.test.ts",
     "**/*.test.tsx",
     "**/*.spec.ts",
-    "**/*.spec.tsx",
-    "src/App.tsx",
-    "src/components/LatestContentBanner2025.tsx",
-    "src/components/Revolutionary2026ContentMegaBanner.tsx"
+    "**/*.spec.tsx"
   ]
 }

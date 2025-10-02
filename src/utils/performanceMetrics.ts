@@ -256,7 +256,7 @@ class PerformanceMetricsTracker {
    * Track resource timing
    */
   private trackResourceTiming(entry: PerformanceResourceTiming): void {
-    const resourceType = this.getResourceType(entry.name);
+    // const resourceType = this.getResourceType(entry.name); // Available for future use
     const size = entry.transferSize || 0;
     
     // Track large resources

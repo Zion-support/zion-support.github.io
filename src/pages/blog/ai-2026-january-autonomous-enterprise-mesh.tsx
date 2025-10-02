@@ -1,7 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { motion } from 'framer-motion';
-import { Brain, Network, Zap, Shield, ArrowRight, Clock, User, Tag } from 'lucide-react';
 
 const AutonomousEnterpriseMesh2026: React.FC = () => {
   const features = [
@@ -84,7 +81,7 @@ const AutonomousEnterpriseMesh2026: React.FC = () => {
                 </div>
               </div>
 
-              <a
+              <a title="Internal link"
                 href="#content"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
               >
@@ -199,14 +196,14 @@ const AutonomousEnterpriseMesh2026: React.FC = () => {
               Discover how Autonomous Enterprise Mesh can revolutionize your business operations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
+              <a title="Internal link"
                 href="/services"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
               >
                 Explore Our Services
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
-              <a
+              <a title="Internal link"
                 href="/contact"
                 className="inline-flex items-center px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 hover:border-white/30 text-white font-semibold rounded-xl transition-all duration-300"
               >

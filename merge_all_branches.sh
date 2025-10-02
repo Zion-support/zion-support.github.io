@@ -1,108 +1,65 @@
 #!/bin/bash
 
-# Comprehensive merge strategy for all open PRs
-# This script will merge all relevant branches into main
-
+# Script to merge all cursor branches into main
 set -e
 
-echo "🚀 Starting comprehensive branch merge process..."
+echo "Starting branch merge process..."
 
-# Function to merge a branch with conflict resolution
-merge_branch() {
-    local branch=$1
-    echo "📦 Attempting to merge branch: $branch"
-    
-    if git merge "origin/$branch" --no-ff -m "merge: Integrate $branch into main" 2>/dev/null; then
-        echo "✅ Successfully merged $branch"
-        return 0
-    else
-        echo "⚠️  Merge conflict in $branch, resolving..."
-        
-        # Check what files have conflicts
-        local conflicts=$(git diff --name-only --diff-filter=U)
-        
-        if [ -z "$conflicts" ]; then
-            echo "✅ No conflicts found, continuing..."
-            git commit --no-edit
-            return 0
-        fi
-        
-        echo "🔧 Resolving conflicts in: $conflicts"
-        
-        # For App.tsx conflicts, use a strategy that combines both versions
-        if echo "$conflicts" | grep -q "App.tsx"; then
-            echo "🔧 Resolving App.tsx conflicts by combining imports..."
-            # Keep both sets of imports and content
-            git checkout --ours App.tsx
-            # Add any new imports from the incoming branch
-            git show "origin/$branch:App.tsx" | grep "^import" >> App.tsx.tmp || true
-            if [ -f App.tsx.tmp ]; then
-                # Remove duplicates and merge
-                sort App.tsx.tmp | uniq > App.tsx.imports
-                rm App.tsx.tmp
-            fi
-        fi
-        
-        # For other conflicts, use incoming version
-        for conflict in $conflicts; do
-            if [ "$conflict" != "App.tsx" ]; then
-                echo "🔧 Using incoming version for $conflict"
-                git checkout --theirs "$conflict"
-            fi
-        done
-        
-        # Add resolved files and commit
-        git add .
-        git commit --no-edit -m "merge: Resolve conflicts and integrate $branch"
-        echo "✅ Successfully resolved conflicts for $branch"
-        return 0
-    fi
-}
+# Get all cursor branches that haven't been merged
+UNMERGED_BRANCHES=$(git branch -r | grep -E "cursor/fix-errors-and-merge-to-main" | grep -v "origin/cursor/fix-errors-and-merge-to-main-cab2\|origin/cursor/fix-errors-and-merge-to-main-bdd2\|origin/cursor/fix-errors-and-merge-to-main-9385\|origin/cursor/fix-errors-and-merge-to-main-83da" | sed 's/origin\///')
 
-# Get list of branches to merge (prioritized by recency and importance)
-branches=(
-    "feature/new-content-and-advertising-final"
-    "feature/performance-and-recommendation-improvements" 
-    "january-2026-content-final"
-    "january-2026-content-merge"
-)
+echo "Found $(echo "$UNMERGED_BRANCHES" | wc -l) branches to merge"
 
-# Add recent cursor branches
-recent_branches=$(git for-each-ref --sort=-committerdate refs/remotes/origin --format='%(refname:short)' | grep "cursor/create-and-deploy-new-content" | head -20)
+# Ensure we're on main and up to date
+git checkout main
+git pull origin main
 
-for branch in $recent_branches; do
-    branches+=("${branch#origin/}")
-done
-
-echo "📋 Found ${#branches[@]} branches to merge"
+# Counter for tracking progress
+count=0
+total=$(echo "$UNMERGED_BRANCHES" | wc -l)
 
 # Merge each branch
-for branch in "${branches[@]}"; do
-    echo ""
-    echo "🔄 Processing branch: $branch"
+for branch in $UNMERGED_BRANCHES; do
+    count=$((count + 1))
+    echo "[$count/$total] Attempting to merge $branch..."
     
-    # Check if branch exists
-    if ! git show-ref --verify --quiet "refs/remotes/origin/$branch"; then
-        echo "⚠️  Branch $branch does not exist, skipping..."
-        continue
+    # Try to merge the branch
+    if git merge --no-ff --no-edit "origin/$branch" 2>/dev/null; then
+        echo "✅ Successfully merged $branch"
+    else
+        echo "❌ Merge conflict in $branch, attempting to resolve..."
+        
+        # Check if there are actual conflicts or just already up to date
+        if git status --porcelain | grep -q "^UU"; then
+            echo "🔧 Resolving conflicts in $branch..."
+            
+            # Try to resolve conflicts automatically
+            git status --porcelain | grep "^UU" | while read status file; do
+                echo "  Resolving conflict in $file"
+                # Use git checkout to take the incoming version (from the branch)
+                git checkout --theirs "$file"
+                git add "$file"
+            done
+            
+            # Complete the merge
+            if git commit --no-edit; then
+                echo "✅ Resolved conflicts and merged $branch"
+            else
+                echo "❌ Failed to resolve conflicts in $branch, skipping..."
+                git merge --abort
+            fi
+        else
+            echo "ℹ️  Branch $branch is already up to date or has no conflicts"
+            git merge --abort 2>/dev/null || true
+        fi
     fi
     
-    # Check if branch is already merged
-    if git merge-base --is-ancestor "origin/$branch" HEAD; then
-        echo "✅ Branch $branch is already merged, skipping..."
-        continue
-    fi
-    
-    merge_branch "$branch"
+    # Push the updated main branch
+    git push origin main
+    echo "📤 Pushed updated main branch"
+    echo "---"
 done
 
-echo ""
-echo "🎉 All branches merged successfully!"
-echo "📊 Final status:"
-git status --short
-
-echo ""
-echo "🚀 Pushing merged changes to remote..."
-git push origin main --force-with-lease
-
-echo "✅ Merge process completed successfully!"
+echo "🎉 Completed merging all branches!"
+echo "Final main branch status:"
+git log --oneline -3

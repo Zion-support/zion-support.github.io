@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 
 const QuantumConsciousnessAIConsulting: React.FC = () => {
   return (
@@ -41,13 +40,13 @@ const QuantumConsciousnessAIConsulting: React.FC = () => {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-                <a 
+                <a title="Internal link" 
                   href="#consultation" 
                   className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1"
                 >
                   Get Free Consultation
                 </a>
-                <a 
+                <a title="Internal link" 
                   href="#services" 
                   className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
                 >
@@ -139,7 +138,7 @@ const QuantumConsciousnessAIConsulting: React.FC = () => {
                   <li>• Custom transformation roadmap</li>
                   <li>• ROI projections</li>
                 </ul>
-                <a href="#consultation" className="block w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center">
+                <a title="Internal link" href="#consultation" className="block w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center">
                   Get Started
                 </a>
               </div>
@@ -154,7 +153,7 @@ const QuantumConsciousnessAIConsulting: React.FC = () => {
                   <li>• Performance monitoring</li>
                   <li>• Optimization protocols</li>
                 </ul>
-                <a href="#consultation" className="block w-full bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center">
+                <a title="Internal link" href="#consultation" className="block w-full bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center">
                   Get Started
                 </a>
               </div>
@@ -169,7 +168,7 @@ const QuantumConsciousnessAIConsulting: React.FC = () => {
                   <li>• Advanced operations</li>
                   <li>• Self-improving ecosystem</li>
                 </ul>
-                <a href="#consultation" className="block w-full bg-gradient-to-r from-pink-500 to-rose-600 hover:from-pink-400 hover:to-rose-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center">
+                <a title="Internal link" href="#consultation" className="block w-full bg-gradient-to-r from-pink-500 to-rose-600 hover:from-pink-400 hover:to-rose-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center">
                   Get Started
                 </a>
               </div>
@@ -184,7 +183,7 @@ const QuantumConsciousnessAIConsulting: React.FC = () => {
                   <li>• Capability enhancements</li>
                   <li>• 24/7 expert support</li>
                 </ul>
-                <a href="#consultation" className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center">
+                <a title="Internal link" href="#consultation" className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center">
                   Get Started
                 </a>
               </div>
@@ -277,10 +276,10 @@ const QuantumConsciousnessAIConsulting: React.FC = () => {
           <div className="container mx-auto px-6 text-center">
             <h2 className="text-3xl font-bold text-white mb-8">Ready to Transform Your Enterprise?</h2>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <a href="tel:1-800-QUANTUM-AI" className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300">
+              <a title="Internal link" href="tel:1-800-QUANTUM-AI" className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300">
                 📞 1-800-QUANTUM-AI
               </a>
-              <a href="mailto:consciousness@ziontechgroup.com" className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300">
+              <a title="Internal link" href="mailto:consciousness@ziontechgroup.com" className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300">
                 ✉️ consciousness@ziontechgroup.com
               </a>
             </div>

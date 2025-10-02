@@ -84,7 +84,7 @@ export class FocusTrap {
 export function announceToScreenReader(
   message: string,
   priority: 'polite' | 'assertive' = 'polite'
-) {
+): void {
   if (typeof document === 'undefined') return;
 
   const announcement = document.createElement('div');
@@ -132,7 +132,7 @@ export function generateAriaId(prefix = 'aria'): string {
 /**
  * Skip link helper for keyboard navigation
  */
-export function setupSkipLinks() {
+export function setupSkipLinks(): void {
   if (typeof document === 'undefined') return;
 
   const skipLink = document.querySelector<HTMLAnchorElement>('a.skip-link');
@@ -226,7 +226,7 @@ function hexToRgb(hex: string): { r: number; g: number; b: number } | null {
 /**
  * Create accessible loading state
  */
-export function createLoadingAnnouncement(message = 'Loading...') {
+export function createLoadingAnnouncement(message = 'Loading...'): void {
   if (typeof document === 'undefined') return null;
 
   const loader = document.createElement('div');
@@ -340,7 +340,7 @@ export function makeKeyboardAccessible(
 /**
  * Initialize accessibility features
  */
-export function initializeAccessibility() {
+export function initializeAccessibility(): void {
   if (typeof document === 'undefined') return;
 
   // Setup skip links

@@ -1,7 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-import type { EnhancedPromotionalBanner as BannerType } from '../content/enhanced-promotional-banners';
+
+interface BannerType {
+  id: string;
+  title: string;
+  description: string;
+  variant: 'success' | 'warning' | 'info' | 'error';
+  icon?: string;
+  ctaText: string;
+  ctaLink: string;
+}
 
 interface EnhancedPromotionalBannerProps {
   banner: BannerType;
