@@ -1,4 +1,4 @@
-import { getCLS, getFID, getFCP, getLCP, getTTFB, Metric } from 'web-vitals';
+import { onCLS, onFID, onFCP, onLCP, onTTFB, Metric } from 'web-vitals';
 
 interface PerformanceMetrics {
   cls: number | null;
@@ -34,12 +34,12 @@ class PerformanceMonitor {
   }
 
   private initializeMetrics(): void {
-    // Measure Core Web Vitals
-    getCLS((metric) => this.updateMetric('cls', metric));
-    getFID((metric) => this.updateMetric('fid', metric));
-    getFCP((metric) => this.updateMetric('fcp', metric));
-    getLCP((metric) => this.updateMetric('lcp', metric));
-    getTTFB((metric) => this.updateMetric('ttfb', metric));
+    // Measure Core Web Vitals using updated API
+    onCLS((metric) => this.updateMetric('cls', metric));
+    onFID((metric) => this.updateMetric('fid', metric));
+    onFCP((metric) => this.updateMetric('fcp', metric));
+    onLCP((metric) => this.updateMetric('lcp', metric));
+    onTTFB((metric) => this.updateMetric('ttfb', metric));
   }
 
   private updateMetric(key: keyof PerformanceMetrics, metric: Metric): void {
