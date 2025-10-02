@@ -74,20 +74,20 @@ publishedAt: '2025-01-10'
           name="keywords"
           content="AI solutions, IT consulting, cybersecurity, machine learning, cloud infrastructure, digital transformation, AI workflow automation, quantum computing, edge AI, zero trust security, micro SAAS platforms, AI virtual assistant, data analytics"
         />
-        <meta property="og: title" content="Zion Tech Group - Leading AI & IT Solutions" />";,
+        <meta property="og:title" content="Zion Tech Group - Leading AI & IT Solutions" />
         <meta
           property="og: description",
           content="Transform your business with cutting-edge AI and IT solutions. NEW 2025: AI Workflow Automation, Quantum Computing, Edge AI, Zero Trust Security. Expert consulting with proven results.",
         />
-        <meta property="og: type" content="website" />";,
-        <meta property="og: url" content="https://ziontechgroup.com" />";,
-        <meta name="twitter: card" content="summary_large_image" />";,
-        <meta name="twitter: title" content="Zion Tech Group - Leading AI & IT Solutions" />";,
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ziontechgroup.com" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Zion Tech Group - Leading AI & IT Solutions" />
         <meta
           name="twitter: description",
           content="Transform your business with cutting-edge AI and IT solutions. NEW 2025: AI Workflow Automation, Quantum Computing, Edge AI, Zero Trust Security.",
         />
-        <link rel="canonical" href="https: //ziontechgroup.com" />";,
+        <link rel="canonical" href="https://ziontechgroup.com" />
         
         {/* Enhanced Structured Data */}
             <script type="application/ld+json">";
@@ -116,16 +116,16 @@ publishedAt: '2025-01-10'
         <meta name="ICBM" content="39.4496, -75.7163" />";
         
         {/* Open Graph Enhanced */}
-        <meta property="og: site_name" content="Zion Tech Group" />";,
-        <meta property="og: locale" content="en_US" />";,
-        <meta property="og: image:width" content="1200" />";,
-        <meta property="og: image:height" content="630" />";,
-        <meta property="og: image:alt" content="Zion Tech Group - Leading AI & IT Solutions" />";,
+        <meta property="og:site_name" content="Zion Tech Group" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Zion Tech Group - Leading AI & IT Solutions" />
         
         {/* Twitter Enhanced */}
-        <meta name="twitter: site" content="@ziontechgroup" />";,
-        <meta name="twitter: creator" content="@ziontechgroup" />";,
-        <meta name="twitter: image:alt" content="Zion Tech Group - Leading AI & IT Solutions" />";,
+        <meta name="twitter:site" content="@ziontechgroup" />
+        <meta name="twitter:creator" content="@ziontechgroup" />
+        <meta name="twitter:image:alt" content="Zion Tech Group - Leading AI & IT Solutions" />
         
         {/* Additional Performance Meta */}
         <meta name="theme-color" content="#2563eb" />";
@@ -135,11 +135,11 @@ publishedAt: '2025-01-10'
         <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />";
         
         {/* Preconnect to external domains */}
-        <link rel="preconnect" href="https: //fonts.googleapis.com" />";,
-        <link rel="preconnect" href="https: //fonts.gstatic.com" crossOrigin="anonymous" />";,
-        <link rel="preconnect" href="https: //linkedin.com" />";,
-        <link rel="preconnect" href="https: //twitter.com" />";,
-        <link rel="preconnect" href="https: //github.com" />";,
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://linkedin.com" />
+        <link rel="preconnect" href="https://twitter.com" />
+        <link rel="preconnect" href="https://github.com" />
         
         {/* DNS Prefetch */}
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />";

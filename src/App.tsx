@@ -11,6 +11,8 @@ import ContactPage from "./pages/ContactPage";
 import BlogPage from "./pages/BlogPage";
 import CaseStudiesPage from "./pages/CaseStudiesPage";
 import Resources from "./pages/Resources";
+import Partners from "./pages/Partners";
+import Pricing from "./pages/Pricing";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 import CookiesPage from "./pages/Cookies";
@@ -33,6 +35,8 @@ const App: React.FC = () => {
 							<Route path="/blog/*" element={<BlogPage />} />
 							<Route path="/case-studies" element={<CaseStudiesPage />} />
 							<Route path="/resources" element={<Resources />} />
+						<Route path="/partners" element={<Partners />} />
+						<Route path="/pricing" element={<Pricing />} />
 							<Route path="/privacy" element={<Privacy />} />
 							<Route path="/terms" element={<Terms />} />
 							<Route path="/cookies" element={<CookiesPage />} />
