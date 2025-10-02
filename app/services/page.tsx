@@ -25,6 +25,45 @@ export default function ServicesPage() {
       ]
     },
     {
+      title: 'AI Lead Scoring API',
+      description: 'Real-time lead scoring API using behavioral, firmographic, and engagement signals with explainability.',
+      icon: '📈',
+      href: '/services/micro-saas/ai-lead-scoring-api',
+      pricing: 'Starting from $99/month',
+      features: [
+        'HubSpot/Salesforce integrations',
+        'Explainable scores',
+        'Batch & streaming ingestion',
+        'SLA-backed responses'
+      ]
+    },
+    {
+      title: 'AI Observability Platform',
+      description: 'Unified logs, metrics, traces and AI anomaly detection with SLOs and guided RCA.',
+      icon: '📊',
+      href: '/services/it-services/ai-observability-platform',
+      pricing: 'Team $1,499/month',
+      features: [
+        'OpenTelemetry-native',
+        'SLOs & burn-rate alerts',
+        'Service topology map',
+        'RCA graph & log mining'
+      ]
+    },
+    {
+      title: 'AI Governance, Risk & Compliance',
+      description: 'Operationalize responsible AI with policies, evals, model cards, and evidence automation.',
+      icon: '⚖️',
+      href: '/services/ai-governance-risk-compliance',
+      pricing: 'Starting from $799/month',
+      features: [
+        'NIST AI RMF, EU AI Act mapping',
+        'Model inventory & cards',
+        'Bias & safety evaluations',
+        'Evidence automation'
+      ]
+    },
+    {
       title: 'AI Compliance GPT',
       description: 'Policy drafting, control mapping, evidence automation for SOC 2/ISO/HIPAA/GDPR',
       icon: '⚖️',
