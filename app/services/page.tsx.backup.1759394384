@@ -163,6 +163,11 @@ export default function ServicesPage() {
 
   const services = [
     {
+<<<<<<< HEAD
+      title: 'AI Content Optimization Platform',
+      description: 'Transform your content strategy with AI-powered optimization. Boost SEO rankings, engagement rates, and conversions.',
+      icon: '📝',
+=======
       title: 'AI Content Generation Tool',
       description: 'Revolutionary AI-powered content creation platform for blogs, social media, and marketing materials',
       icon: '✍️',
@@ -241,6 +246,7 @@ export default function ServicesPage() {
       title: 'AI-Powered Email Marketing Suite',
       description: 'Revolutionary email marketing platform with AI-driven optimization and automated personalization',
       icon: '📧',
+>>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f99d
       features: [
         '40% SEO Improvement',
         '60% Higher Engagement',
