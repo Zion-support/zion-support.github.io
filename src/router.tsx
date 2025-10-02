@@ -4,6 +4,8 @@ import AIDataAnalytics from './pages/services/AIDataAnalytics';
 import AIIntelligentDocumentProcessing from './pages/services/AIIntelligentDocumentProcessing';
 import AIVirtualAssistant from './pages/services/AIVirtualAssistant';
 import AIWorkflowAutomation from './pages/services/AIWorkflowAutomation';
+import AIContentGenerator from './pages/services/AIContentGenerator';
+import SmartAppointmentScheduler from './pages/services/SmartAppointmentScheduler';
 import About from './pages/About';
 import AdaptiveLearningPlatforms from './pages/blog/ai-2025-oct-adaptive-learning-platforms';
 import AdvancedCybersecurityAI from './pages/services/AdvancedCybersecurityAI';
@@ -49,6 +51,8 @@ export const AppRouter: React.FC = () => {
       <Route path="/services/ai-intelligent-document-processing" element={<AIIntelligentDocumentProcessing />} />
       <Route path="/services/real-time-cognitive-automation" element={<RealTimeCognitiveAutomation />} />
       <Route path="/services/advanced-cybersecurity-ai" element={<AdvancedCybersecurityAI />} />
+      <Route path="/services/ai-content-generator" element={<AIContentGenerator />} />
+      <Route path="/services/smart-appointment-scheduler" element={<SmartAppointmentScheduler />} />
       <Route path="/case-studies" element={<CaseStudies />} />
       <Route path="/case-studies/global-retail-ai-transformation-2025" element={<GlobalRetailAITransformation />} />
       <Route path="/case-studies/healthcare-ai-transformation-2025" element={<HealthcareAITransformation />} />
