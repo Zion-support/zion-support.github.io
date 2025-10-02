@@ -1,5 +1,46 @@
 import React, { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
+<<<<<<< HEAD
+import AIDataAnalytics from './pages/services/AIDataAnalytics';
+import AIIntelligentDocumentProcessing from './pages/services/AIIntelligentDocumentProcessing';
+import AIVirtualAssistant from './pages/services/AIVirtualAssistant';
+import AIWorkflowAutomation from './pages/services/AIWorkflowAutomation';
+import AIContentGenerator from './pages/services/AIContentGenerator';
+import SmartAppointmentScheduler from './pages/services/SmartAppointmentScheduler';
+import About from './pages/About';
+import AdaptiveLearningPlatforms from './pages/blog/ai-2025-oct-adaptive-learning-platforms';
+import AdvancedCybersecurityAI from './pages/services/AdvancedCybersecurityAI';
+import Blog from './pages/Blog';
+import CaseStudies from './pages/CaseStudies';
+import CognitiveAutomationEnterpriseRevolution from './pages/blog/ai-2025-oct-cognitive-automation-enterprise-revolution';
+import CognitiveComputingTransformation from './pages/blog/ai-2025-cognitive-computing-enterprise-transformation';
+import Contact from './pages/Contact';
+import EnterpriseAITransformationSuccessStrategies from './pages/blog/ai-2025-oct-enterprise-ai-transformation-success-strategies';
+import GlobalFinTechAITransformation from './pages/case-studies/global-fintech-ai-transformation-2025';
+import GlobalRetailAITransformation from './pages/case-studies/global-retail-ai-transformation-2025';
+import GlobalTelecomCognitiveTransformation from './pages/case-studies/global-telecom-cognitive-transformation-4-7-billion';
+import HealthcareAITransformation from './pages/case-studies/healthcare-ai-transformation-2025';
+import Home from './pages/Home';
+import MultiAgentEnterpriseOrchestration from './pages/blog/ai-2025-multiagent-enterprise-orchestration-revolution';
+import MultimodalEnterpriseIntelligence from './pages/blog/ai-2025-oct-multimodal-enterprise-intelligence';
+import NextGenIntelligentAutomationBreakthrough from './pages/blog/ai-2025-oct-next-gen-intelligent-automation-breakthrough';
+import PostBySlug from './pages/blog/PostBySlug';
+import RealTimeCognitiveAutomation from './pages/services/RealTimeCognitiveAutomation';
+import AIPredictiveAnalytics from './pages/services/AIPredictiveAnalytics';
+import SmartContractAudit from './pages/services/SmartContractAudit';
+import EdgeComputingAI from './pages/services/EdgeComputingAI';
+import ConversationalAI from './pages/services/ConversationalAI';
+import AIEmailMarketing from './pages/services/AIEmailMarketing';
+import Services from './pages/Services';
+import Solutions from './pages/Solutions';
+import Resources from './pages/Resources';
+import AISolutions from './pages/AISolutions';
+import Pricing from './pages/Pricing';
+import Demo from './pages/Demo';
+import Support from './pages/Support';
+import Privacy from './pages/Privacy';
+import Terms from './pages/Terms';
+=======
 import Loading from './components/Loading';
 
 // Lazy load components for better performance
@@ -41,6 +82,7 @@ const EnterpriseAITransformationSuccessStrategies = lazy(() => import('./pages/b
 const MultiAgentEnterpriseOrchestration = lazy(() => import('./pages/blog/ai-2025-multiagent-enterprise-orchestration-revolution'));
 const MultimodalEnterpriseIntelligence = lazy(() => import('./pages/blog/ai-2025-oct-multimodal-enterprise-intelligence'));
 const NextGenIntelligentAutomationBreakthrough = lazy(() => import('./pages/blog/ai-2025-oct-next-gen-intelligent-automation-breakthrough'));
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-035f
 
 export const AppRouter: React.FC = () => {
   return (
