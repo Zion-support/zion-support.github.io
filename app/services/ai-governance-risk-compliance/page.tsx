@@ -1,4 +1,79 @@
 import React from 'react';
+
+export const metadata = {
+  title: 'AI Governance, Risk & Compliance | Zion Tech Group',
+  description: 'Operationalize responsible AI with policies, model inventory, evaluations, evidence automation, and compliance mapping.',
+};
+
+export default function AIGRCPage() {
+  const contact = {
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+  };
+
+  return (
+    <main className="min-h-screen bg-white">
+      <section className="py-20 bg-indigo-700 text-white">
+        <div className="max-w-5xl mx-auto px-6">
+          <h1 className="text-4xl font-bold mb-4">AI Governance, Risk & Compliance</h1>
+          <p className="text-indigo-200 max-w-3xl">
+            Meet the EU AI Act, NIST AI RMF, and sectoral standards with evidence automation, model cards, and continuous controls.
+          </p>
+        </div>
+      </section>
+
+      <section className="py-16 px-6">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
+          <div>
+            <h2 className="text-2xl font-bold mb-4">Capabilities</h2>
+            <ul className="list-disc pl-6 text-gray-700 space-y-2">
+              <li>Model registry and inventory with lineage</li>
+              <li>Policy packs mapped to NIST AI RMF and EU AI Act</li>
+              <li>Bias, robustness, safety and privacy evaluations</li>
+              <li>Evidence collection, approvals, and audit trails</li>
+              <li>Vendor/third-party AI risk assessments</li>
+              <li>Human-in-the-loop and override controls</li>
+            </ul>
+          </div>
+          <div>
+            <h2 className="text-2xl font-bold mb-4">Pricing</h2>
+            <div className="space-y-4">
+              <div className="border rounded-lg p-4">
+                <div className="font-bold">Starter</div>
+                <div className="text-blue-600 font-extrabold text-xl">$799/month</div>
+                <div className="text-gray-600 text-sm">Single org, core policies, model cards</div>
+              </div>
+              <div className="border rounded-lg p-4">
+                <div className="font-bold">Business</div>
+                <div className="text-blue-600 font-extrabold text-xl">$2,499/month</div>
+                <div className="text-gray-600 text-sm">Multi-tenant, approvals, vendor risk</div>
+              </div>
+              <div className="border rounded-lg p-4">
+                <div className="font-bold">Enterprise</div>
+                <div className="text-blue-600 font-extrabold text-xl">Custom</div>
+                <div className="text-gray-600 text-sm">SSO/SCIM, custom evals, on-call SLA</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 px-6 bg-gray-50">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-2xl font-bold mb-4">Contact</h2>
+          <div className="text-gray-700 space-y-1">
+            <div>Phone: {contact.phone}</div>
+            <div>Email: {contact.email}</div>
+            <div>Address: {contact.address}</div>
+          </div>
+        </div>
+      </section>
+    </main>
+  );
+}
+
+import React from 'react';
 import Link from 'next/link';
 
 export default function AIGovernanceRiskCompliancePage() {

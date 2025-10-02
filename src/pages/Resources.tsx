@@ -1,82 +1,56 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// Icon imports removed for compatibility
 
 const Resources: React.FC = () => {
   const resourceCategories = [
     {
-      icon: BookOpen,
+      icon: () => null,
       title: 'Case Studies',
       description: 'Real-world success stories and implementation results from our clients',
       link: '/case-studies',
       color: 'blue',
-<<<<<<< HEAD
-      count: '25+',
-=======
       count: '25+'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-22df
     },
     {
-      icon: FileText,
+      icon: () => null,
       title: 'White Papers',
       description: 'In-depth research and analysis on AI trends and best practices',
       link: '/white-papers',
       color: 'green',
-<<<<<<< HEAD
-      count: '15+',
-=======
       count: '15+'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-22df
     },
     {
-      icon: Video,
+      icon: () => null,
       title: 'Webinars',
       description: 'Expert-led sessions covering the latest in AI and automation',
       link: '/webinars',
       color: 'purple',
-<<<<<<< HEAD
-      count: '40+',
-=======
       count: '40+'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-22df
     },
     {
-      icon: Code,
+      icon: () => null,
       title: 'Documentation',
       description: 'Comprehensive guides and technical documentation for developers',
       link: '/docs',
       color: 'orange',
-<<<<<<< HEAD
-      count: '100+',
-=======
       count: '100+'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-22df
     },
     {
-      icon: Users,
+      icon: () => null,
       title: 'Training & Certification',
       description: 'Professional training programs and certification courses',
       link: '/training',
       color: 'teal',
-<<<<<<< HEAD
-      count: '10+',
-=======
       count: '10+'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-22df
     },
     {
-      icon: MessageSquare,
+      icon: () => null,
       title: 'Community Forum',
       description: 'Connect with peers and get support from our expert community',
       link: '/community',
       color: 'red',
-<<<<<<< HEAD
-      count: '5000+',
-    },
-=======
       count: '5000+'
     }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-22df
   ];
 
   const featuredResources = [
@@ -85,46 +59,29 @@ const Resources: React.FC = () => {
       type: 'White Paper',
       description: 'Comprehensive guide to implementing AI solutions in your organization',
       downloadLink: '/downloads/ai-implementation-roadmap-2025.pdf',
-<<<<<<< HEAD
-      icon: Download,
-=======
-      icon: Download
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-22df
+      icon: () => null
     },
     {
       title: 'Enterprise AI Transformation Case Study',
       type: 'Case Study',
       description: 'How a Fortune 500 company achieved 300% ROI with our AI solutions',
       link: '/case-studies/enterprise-ai-transformation',
-<<<<<<< HEAD
-      icon: FileText,
-=======
-      icon: FileText
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-22df
+      icon: () => null
     },
     {
       title: 'Building Scalable AI Systems',
       type: 'Webinar',
       description: 'Expert insights on architecting AI systems that scale with your business',
       link: '/webinars/building-scalable-ai-systems',
-<<<<<<< HEAD
-      icon: Video,
-=======
-      icon: Video
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-22df
+      icon: () => null
     },
     {
       title: 'API Documentation v2.1',
       type: 'Documentation',
       description: 'Complete API reference for integrating with our AI services',
       link: '/docs/api',
-<<<<<<< HEAD
-      icon: Code,
-    },
-=======
-      icon: Code
+      icon: () => null
     }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-22df
   ];
 
   const latestBlogPosts = [
@@ -223,12 +180,12 @@ const Resources: React.FC = () => {
                   to={category.link}
                   className="bg-white rounded-lg shadow-lg border border-gray-200 p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
                 >
-              <div className={`w-16 h-16 rounded-lg bg-${category.color}-100 flex items-center justify-center mb-6`}>
-                    <span className={`w-8 h-8 text-${category.color}-600`}>📘</span>
+                  <div className={`w-16 h-16 rounded-lg flex items-center justify-center mb-6`}>
+                    <span className={`w-8 h-8`}>📘</span>
                   </div>
                   <div className="flex justify-between items-start mb-4">
                     <h3 className="text-2xl font-bold text-gray-900">{category.title}</h3>
-                    <span className={`bg-${category.color}-100 text-${category.color}-800 px-3 py-1 rounded-full text-sm font-semibold`}>
+                    <span className={`px-3 py-1 rounded-full text-sm font-semibold bg-gray-100 text-gray-800`}>
                       {category.count}
                     </span>
                   </div>
@@ -260,7 +217,7 @@ const Resources: React.FC = () => {
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center space-x-3">
                       <div className="w-12 h-12 rounded-lg bg-blue-100 flex items-center justify-center">
-                        <IconComponent className="w-6 h-6 text-blue-600" />
+                        <span className="w-6 h-6 text-blue-600">📄</span>
                       </div>
                       <div>
                         <span className="text-sm font-semibold text-blue-600 bg-blue-100 px-3 py-1 rounded-full">
@@ -277,7 +234,7 @@ const Resources: React.FC = () => {
                       className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold transition-colors"
                       download
                     >
-                      <Download className="w-4 h-4 mr-2" />
+                      <span className="w-4 h-4 mr-2">⬇</span>
                       Download Now
                     </a>
                   ) : (
@@ -286,7 +243,7 @@ const Resources: React.FC = () => {
                       className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold transition-colors"
                     >
                       Read More
-                    <span className="w-4 h-4 ml-2">›</span>
+                      <span className="w-4 h-4 ml-2">›</span>
                     </Link>
                   )}
                 </div>
