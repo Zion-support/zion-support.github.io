@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 // Normalized, single-source content exports
 
-=======
->>>>>>> b19accb4ff3b (🚀 Add Revolutionary AI Breakthroughs 2025 Content & Frontend Updates)
 export const revolutionaryBreakthroughs2025 = [
   {
     id: 'meta-cognitive-ai',
@@ -287,4 +284,3 @@ export const promotionalBanners2025 = [
       { label: '300% ROI', value: 'First Year Returns' }
     ]
   }
-];
