@@ -21,7 +21,7 @@ const January2025ContentShowcaseBanner: React.FC = () => {,
           </h2>
           
           <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-12">
-            Access the most comprehensive collection of AI insights, breakthrough technologies, 
+            Access the most comprehensive collection of AI insights, breakthrough technologies
             and proven enterprise strategies. Everything you need to master AI transformation in one place.
           </p>
         </div>
@@ -43,7 +43,7 @@ const January2025ContentShowcaseBanner: React.FC = () => {,
               </div>
               
               <p className="text-gray-300 mb-6 leading-relaxed">
-                Explore the latest AI breakthroughs including quantum-neural fusion, synthetic consciousness, 
+                Explore the latest AI breakthroughs including quantum-neural fusion, synthetic consciousness
                 and neuromorphic computing.
               </p>
               

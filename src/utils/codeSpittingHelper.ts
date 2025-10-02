@@ -11,12 +11,12 @@
  */
 export const lazyWithRetry = <T extends ComponentType<any>>(
   importFunc: () => Promise<{ default: T }>,
-  retries = 3,
+  retries = 3
   interval = 1000
 ): React.LazyExoticComponent<T> => {
   return lazy(() =>
     new Promise<{ default: T }>((resolve, reject) => {
-const attemptImport = async (retriesLeft: number) => {,,
+const attemptImport = async (retriesLeft: number) => {
 try {
 const module = await importFunc();
 resolve(module);
@@ -60,8 +60,8 @@ export const createLazyRoute = <T extends ComponentType<any>>(
   const LazyComponent = lazyWithRetry(importFunc);
   
   return {
-    Component: LazyComponent,,
-    preload: () => preloadComponent(importFunc),,
+    Component: LazyComponent,
+    preload: () => preloadComponent(importFunc)
   };
 };
 
@@ -84,9 +84,9 @@ export const useLazyLoadOnVisible = (
       });
     },
     {
-      rootMargin: '50px',',
-      threshold: 0.01,,
-      ...options,
+      rootMargin: '50px',
+      threshold: 0.01,
+      ...options
     }
   );
 
@@ -120,9 +120,9 @@ export const logBundleSize = (componentName: string): void => {,
  * Preloads components based on user behavior and connection speed
  */
 export const createSmartPreloader = () => {
-const preloadQueue: Array<() => Promise<any>> = [],,
+const preloadQueue: Array<() => Promise<any>> = [];
 let isPreloading = false;
-const getConnectionSpeed = (): 'slow' | 'fast' | 'unknown' => {,
+const getConnectionSpeed = (): 'slow' | 'fast' | 'unknown' => {
 if (typeof navigator === 'undefined') return 'unknown';
 const connection = (navigator as any).connection;
 if (!connection) return 'unknown';
@@ -166,10 +166,10 @@ requestIdleCallback(() => processQueue());
 } else {
         setTimeout(() => processQueue(), 0);
       }
-    },
+    }
     clear: () => {,
       preloadQueue.length = 0;
-    },
+    }
   };
 };
 

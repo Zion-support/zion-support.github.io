@@ -14,7 +14,7 @@ export default function AIOperationalTrustScorecards2026(): React.JSX.Element {
         <p className="text-zion-slate-light mb-8">SLIs → KPIs • Budgets • Canaries • Rollback</p>
         <div className="prose prose-invert max-w-3xl">
           <p>
-            Design operational scorecards that teams adopt: wire service level indicators (SLIs) to product KPIs,,
+            Design operational scorecards that teams adopt: wire service level indicators (SLIs) to product KPIs
             attach budgeted actions, and use live canaries to prevent regressions before they ship.
           </p>
           <p>

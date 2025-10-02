@@ -11,12 +11,12 @@ timestamp: number;
 }
 
 class EnhancedPerformanceMonitor {
-private metrics: PerformanceMetric[] = [],,
-private observers: PerformanceObserver[] = [],,
+private metrics: PerformanceMetric[] = [];
+private observers: PerformanceObserver[] = [];
 /**
 * Initialize performance monitoring
 */
-initialize(): void {,
+initialize(): void {
 if (typeof window === 'undefined') return;
 this.observeWebVitals();
 this.observeLongTasks();
@@ -225,7 +225,7 @@ this.observeLayoutShifts();
 
 // Type definitions for Performance API
 interface LayoutShift extends PerformanceEntry {
-value: number,,
+value: number;
 hadRecentInput: boolean;
 }
 

@@ -37,16 +37,16 @@ popular?: boolean;
 };
   features: string[],
   metrics?: Array<{
-value: string,,
+value: string;
 label: string;
 }>;
   testimonial?: {
-quote: string,,
-author: string,,
+quote: string;
+author: string;
 company: string;
 };
   cta: {,
-primary: string,,
+primary: string;
 secondary: string;
 };
   icon: string,
@@ -206,14 +206,14 @@ export const caseStudies: CaseStudy[] = [,
 // Services Configuration
 export const services: Service[] = [,
   {
-    id: 'ai-analytics-platform',',
-    title: 'AI Analytics Platform',',
-    description: 'Transform data into actionable insights with predictive modeling and real-time dashboards',',
-    category: 'AI & Analytics',',
+    id: 'ai-analytics-platform',
+    title: 'AI Analytics Platform',
+    description: 'Transform data into actionable insights with predictive modeling and real-time dashboards',
+    category: 'AI & Analytics',
     pricing: {,
-      starting: '$199/month',',
-      popular: true,
-    },
+      starting: '$199/month',
+      popular: true
+    }
     features: [,
       'Predictive Analytics',
       'Real-time Dashboards',
@@ -221,31 +221,34 @@ export const services: Service[] = [,
       'Automated Reporting',
       'Machine Learning Models',
       'Custom Visualizations'
-    ],
+    ]
     metrics: [,
-      { value: '85%', label: 'Faster Decision Making' },
-      { value: '98%', label: 'Prediction Accuracy' },
-      { value: '300%', label: 'ROI Improvement' };
-    ],
+      { value: '85%', label: 'Faster Decision Making' }
+      { value: '98%', label: 'Prediction Accuracy' }
+      { value: '300%', label: 'ROI Improvement' }
+    ]
     testimonial: {,
-      quote: 'The AI Analytics Platform transformed how we make decisions. We can now predict trends and optimize operations like never before.',',
-      author: 'Sarah Chen',',
-      company: 'TechCorp Inc.},
+      quote: 'The AI Analytics Platform transformed how we make decisions. We can now predict trends and optimize operations like never before.',
+      author: 'Sarah Chen',
+      company: 'TechCorp Inc.'
+    }
     cta: {,
-      primary: 'Start Free Trial',',
-      secondary: 'View Case Studies},
-    icon: '📊',',
-    featured: true,,
-    slug: '/services/ai-analytics-platform',',
-    tags: ['Analytics', 'AI', 'Data Visualization', 'Predictive Modeling']',
+      primary: 'Start Free Trial',
+      secondary: 'View Case Studies'
+    }
+    icon: '📊',
+    featured: true,
+    slug: '/services/ai-analytics-platform',
+    tags: ['Analytics', 'AI', 'Data Visualization', 'Predictive Modeling']
   },
   {
-    id: 'ai-workflow-automation',',
-    title: 'AI Workflow Automation',',
-    description: 'Automate business processes with intelligent workflow design and smart triggers',',
-    category: 'AI & Automation',',
+    id: 'ai-workflow-automation',
+    title: 'AI Workflow Automation',
+    description: 'Automate business processes with intelligent workflow design and smart triggers',
+    category: 'AI & Automation',
     pricing: {,
-      starting: '$149/month},
+      starting: '$149/month'
+    }
     features: [,
       'Process Automation',
       'Smart Triggers',
@@ -253,27 +256,29 @@ export const services: Service[] = [,
       'Exception Handling',
       'Integration APIs',
       'Custom Workflows'
-    ],
+    ]
     metrics: [,
-      { value: '75%', label: 'Process Efficiency' },
-      { value: '60%', label: 'Time Savings' },
-      { value: '90%', label: 'Error Reduction' };
-    ],
+      { value: '75%', label: 'Process Efficiency' }
+      { value: '60%', label: 'Time Savings' }
+      { value: '90%', label: 'Error Reduction' }
+    ]
     cta: {,
-      primary: 'Get Started',',
-      secondary: 'View Demo},
-    icon: '⚙️',',
-    featured: true,,
-    slug: '/services/ai-workflow-automation',',
-    tags: ['Automation', 'Workflow', 'AI', 'Process Optimization']',
+      primary: 'Get Started',
+      secondary: 'View Demo'
+    }
+    icon: '⚙️',
+    featured: true,
+    slug: '/services/ai-workflow-automation',
+    tags: ['Automation', 'Workflow', 'AI', 'Process Optimization']
   },
   {
-    id: 'ai-virtual-assistant',',
-    title: 'AI Virtual Assistant',',
-    description: '24/7 intelligent customer support with natural language processing',',
-    category: 'AI & Customer Service',',
+    id: 'ai-virtual-assistant',
+    title: 'AI Virtual Assistant',
+    description: '24/7 intelligent customer support with natural language processing',
+    category: 'AI & Customer Service',
     pricing: {,
-      starting: '$99/month},
+      starting: '$99/month'
+    }
     features: [,
       '24/7 Support',
       'Multi-channel',
@@ -281,27 +286,29 @@ export const services: Service[] = [,
       'Natural Language Processing',
       'Sentiment Analysis',
       'Escalation Management'
-    ],
+    ]
     metrics: [,
-      { value: '95%', label: 'Customer Satisfaction' },
-      { value: '80%', label: 'Faster Response' },
-      { value: '50%', label: 'Cost Reduction' };
-    ],
+      { value: '95%', label: 'Customer Satisfaction' }
+      { value: '80%', label: 'Faster Response' }
+      { value: '50%', label: 'Cost Reduction' }
+    ]
     cta: {,
-      primary: 'Try Demo',',
-      secondary: 'Learn More},
-    icon: '💬',',
-    featured: true,,
-    slug: '/services/ai-virtual-assistant',',
-    tags: ['AI Assistant', 'Customer Service', 'NLP', 'Automation']',
+      primary: 'Try Demo',
+      secondary: 'Learn More'
+    }
+    icon: '💬',
+    featured: true,
+    slug: '/services/ai-virtual-assistant',
+    tags: ['AI Assistant', 'Customer Service', 'NLP', 'Automation']
   },
   {
-    id: 'cloud-migration',',
-    title: 'Cloud Migration',',
-    description: 'Seamless migration to cloud infrastructure with zero downtime',',
-    category: 'Cloud Services',',
+    id: 'cloud-migration',
+    title: 'Cloud Migration',
+    description: 'Seamless migration to cloud infrastructure with zero downtime',
+    category: 'Cloud Services',
     pricing: {,
-      starting: '$2,999},
+      starting: '$2,999'
+    }
     features: [,
       'Zero Downtime',
       'Security Compliance',
@@ -309,22 +316,24 @@ export const services: Service[] = [,
       'Performance Monitoring',
       'Disaster Recovery',
       'Scalability Planning'
-    ],
+    ]
     cta: {,
-      primary: 'Get Quote',',
-      secondary: 'View Process},
-    icon: '☁️',',
-    featured: false,,
-    slug: '/services/cloud-migration',',
-    tags: ['Cloud', 'Migration', 'Infrastructure', 'DevOps']',
+      primary: 'Get Quote',
+      secondary: 'View Process'
+    }
+    icon: '☁️',
+    featured: false,
+    slug: '/services/cloud-migration',
+    tags: ['Cloud', 'Migration', 'Infrastructure', 'DevOps']
   },
   {
-    id: 'devops-automation',',
-    title: 'DevOps Automation',',
-    description: 'Automate CI/CD pipelines and infrastructure management',',
-    category: 'DevOps & Infrastructure',',
+    id: 'devops-automation',
+    title: 'DevOps Automation',
+    description: 'Automate CI/CD pipelines and infrastructure management',
+    category: 'DevOps & Infrastructure',
     pricing: {,
-      starting: '$399/month},
+      starting: '$399/month'
+    }
     features: [,
       'CI/CD Pipelines',
       'Infrastructure as Code',
@@ -332,22 +341,24 @@ export const services: Service[] = [,
       'Monitoring & Alerting',
       'Security Scanning',
       'Performance Optimization'
-    ],
+    ]
     cta: {,
-      primary: 'Start Setup',',
-      secondary: 'View Benefits},
-    icon: '🔧',',
-    featured: false,,
-    slug: '/services/devops-automation',',
-    tags: ['DevOps', 'CI/CD', 'Infrastructure', 'Automation']',
+      primary: 'Start Setup',
+      secondary: 'View Benefits'
+    }
+    icon: '🔧',
+    featured: false,
+    slug: '/services/devops-automation',
+    tags: ['DevOps', 'CI/CD', 'Infrastructure', 'Automation']
   },
   {
-    id: 'cybersecurity-consulting',',
-    title: 'Cybersecurity Consulting',',
-    description: 'Advanced threat detection and zero-trust security architecture',',
-    category: 'Security & Compliance',',
+    id: 'cybersecurity-consulting',
+    title: 'Cybersecurity Consulting',
+    description: 'Advanced threat detection and zero-trust security architecture',
+    category: 'Security & Compliance',
     pricing: {,
-      starting: '$599/month},
+      starting: '$599/month'
+    }
     features: [,
       'Threat Detection',
       'Zero-trust Architecture',
@@ -355,14 +366,15 @@ export const services: Service[] = [,
       'Security Audits',
       'Incident Response',
       'Security Training'
-    ],
+    ]
     cta: {,
-      primary: 'Security Audit',',
-      secondary: 'View Services},
-    icon: '🛡️',',
-    featured: false,,
-    slug: '/services/cybersecurity-consulting',',
-    tags: ['Cybersecurity', 'Zero Trust', 'Compliance', 'Threat Detection']',
+      primary: 'Security Audit',
+      secondary: 'View Services'
+    }
+    icon: '🛡️',
+    featured: false,
+    slug: '/services/cybersecurity-consulting',
+    tags: ['Cybersecurity', 'Zero Trust', 'Compliance', 'Threat Detection']
   }
 ];
 
@@ -564,9 +576,9 @@ export const getContentByTag = (tag: string) => {,
 
 export const getRecentContent = (limit: number = 3) => {,
   const allContent = [
-    ...blogPosts.map(post => ({ ...post, type: 'blog' as const })),
-    ...caseStudies.map(study => ({ ...study, type: 'case-study' as const })),
-    ...services.map(service => ({ ...service, type: 'service' as const }));
+    ...blogPosts.map(post => ({ ...post, type: 'blog' as const }))
+    ...caseStudies.map(study => ({ ...study, type: 'case-study' as const }))
+    ...services.map(service => ({ ...service, type: 'service' as const }))
   ];
   
   return allContent

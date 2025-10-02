@@ -94,7 +94,7 @@ const RealTimeAIInferenceOptimization2025 = () => {
                 <div className="bg-slate-800/50 p-6 rounded-lg border border-slate-700">
                   <h3 className="text-xl font-semibold text-white mb-3">1. Model Loading Overhead</h3>
                   <p className="text-gray-300 mb-4">
-                    Cold-start latency from loading large models (7B+ parameters) can exceed 10 seconds,
+                    Cold-start latency from loading large models (7B+ parameters) can exceed 10 seconds
                     making serverless deployments impractical for real-time use cases.
                   </p>
                   <div className="bg-slate-900/50 p-4 rounded border border-slate-600">

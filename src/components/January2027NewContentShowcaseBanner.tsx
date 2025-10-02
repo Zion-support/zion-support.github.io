@@ -15,7 +15,7 @@ export default function January2027NewContentShowcaseBanner(): void {
           </h2>
           
           <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
-            Discover the most advanced AI technologies reshaping the future: Neuromorphic Edge Computing with 1000x efficiency, ,
+            Discover the most advanced AI technologies reshaping the future: Neuromorphic Edge Computing with 1000x efficiency
             Quantum AI Security protecting $847B assets, and Fortune 500 success stories with $2.3B+ savings.
           </p>
         </div>

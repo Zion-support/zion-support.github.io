@@ -21,7 +21,7 @@ export default function PrivacyFirstObservabilityV2(): React.JSX.Element {
         </p>
         <div className="prose prose-invert max-w-3xl">
           <p>
-            Build user‑centric observability without collecting PII. This guide covers identity scoping,
+            Build user‑centric observability without collecting PII. This guide covers identity scoping
             field‑level redaction, sampling tied to KPIs, and retention policies enforced by automation.
           </p>
           <p>

@@ -27,7 +27,7 @@ export default function AIAutonomousControlPlanes2025(): React.JSX.Element {
             budget-aware routing, and ship with rollback that completes in seconds.
           </p>
           <p>
-            Core ingredients include budgeted actions, CI policy tests, KPI-linked canaries,
+            Core ingredients include budgeted actions, CI policy tests, KPI-linked canaries
             semantic caches, and attested supply chains. Together they form measurable
             guardrails that accelerate delivery while reducing operational risk.
           </p>

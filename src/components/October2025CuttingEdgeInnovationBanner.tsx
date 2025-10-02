@@ -4,10 +4,11 @@ export default function October2025CuttingEdgeInnovationBanner(): void {
     <section className="relative overflow-hidden bg-gradient-to-r from-slate-950 via-purple-950 to-slate-950 py-20">
       {/* Animated Grid Background */}
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute inset-0" style={{";
-          backgroundImage: `linear-gradient(rgba(139, 92, 246, 0.1) 1px, transparent 1px), ,`;
-                           linear-gradient(90deg, rgba(139, 92, 246, 0.1) 1px, transparent 1px)`,`;
-          backgroundSize: '50px 50px}}></div>
+        <div className="absolute inset-0" style={{
+          backgroundImage: `linear-gradient(rgba(139, 92, 246, 0.1) 1px, transparent 1px),
+                           linear-gradient(90deg, rgba(139, 92, 246, 0.1) 1px, transparent 1px)`,
+          backgroundSize: '50px 50px'
+        }}></div>
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
@@ -25,7 +26,7 @@ export default function October2025CuttingEdgeInnovationBanner(): void {
             </h2>
             
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Explore breakthrough technologies that are redefining enterprise AI: intelligent orchestration, ,
+              Explore breakthrough technologies that are redefining enterprise AI: intelligent orchestration
               advanced reasoning, and unified platforms
             </p>
           </div>

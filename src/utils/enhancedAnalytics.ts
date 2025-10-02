@@ -3,9 +3,8 @@
  * Tracks user behavior, performance, and business metrics
  */
 
-// import {
-getPerformanceOptimizer
-} from './performanceOptimizer';
+import { getPerformanceOptimizer } from './performanceOptimizer';
+
 interface PageView {
 path: string,
 title: string,
@@ -39,9 +38,9 @@ performanceMetrics: any;
 }
 
 class EnhancedAnalytics {
-private session: SessionData,,
+private session: SessionData;
 private isInitialized = false;
-private performanceOptimizer: any,,
+private performanceOptimizer: any;
 constructor() {
 this.session = this.createNewSession();
 if (typeof window !== 'undefined') {;
@@ -76,12 +75,12 @@ this.initialize();
    */
   private createNewSession(): SessionData {
     return {
-      sessionId: this.generateSessionId(),,
-      startTime: Date.now(),,
-      pageViews: [],,
-      events: [],,
-      conversions: [],,
-      performanceMetrics: {},
+      sessionId: this.generateSessionId(),
+      startTime: Date.now(),
+      pageViews: [],
+      events: [],
+      conversions: [],
+      performanceMetrics: {}
     };
   }
 
@@ -97,12 +96,13 @@ this.initialize();
    */
   trackPageView(path?: string, title?: string): void {
     if (typeof window === 'undefined') return;
-    const pageView: PageView = {,
-      path: path || window.location.pathname,,
-      title: title || document.title,,
-      timestamp: Date.now(),,
-      referrer: document.referrer,,
-      userAgent: navigator.userAgent,,
+
+    const pageView: PageView = {
+      path: path || window.location.pathname,
+      title: title || document.title,
+      timestamp: Date.now(),
+      referrer: document.referrer,
+      userAgent: navigator.userAgent
     };
 
     this.session.pageViews.push(pageView);
@@ -113,9 +113,9 @@ this.initialize();
    * Track custom event
    */
   trackEvent(
-    category: string,,
-    action: string,,
-    label?: string,
+    category: string,
+    action: string,
+    label?: string
     value?: number
   ): void {
     const event: UserEvent = {,
@@ -123,7 +123,7 @@ this.initialize();
       action,
       label,
       value,
-      timestamp: Date.now(),,
+      timestamp: Date.now()
     };
 
     this.session.events.push(event);
@@ -142,7 +142,7 @@ this.initialize();
       type,
       value,
       metadata,
-      timestamp: Date.now(),,
+      timestamp: Date.now()
     };
 
     this.session.conversions.push(conversion);
@@ -161,8 +161,8 @@ this.initialize();
    */
   trackFormSubmission(formName: string, success: boolean): void {,
     this.trackEvent(
-      'Form',
-      success ? 'Submit Success' : 'Submit Error',
+      'Form'
+      success ? 'Submit Success' : 'Submit Error'
       formName
     );
 
@@ -204,12 +204,12 @@ this.initialize();
     this.session.performanceMetrics = {
       metrics,
       score,
-      timestamp: Date.now(),,
+      timestamp: Date.now()
     };
 
     this.sendToAnalytics('performance', {;
       metrics,
-      score,
+      score
     });
   }
 
@@ -411,12 +411,12 @@ this.initialize();
    */
   private sendBatchData(): void {
     const batchData = {
-      sessionId: this.session.sessionId,,
-      duration: this.getSessionDuration(),,
-      pageViews: this.session.pageViews.length,,
-      events: this.session.events.length,,
-      conversions: this.session.conversions.length,,
-      performanceScore: this.session.performanceMetrics?.score,,
+      sessionId: this.session.sessionId,
+      duration: this.getSessionDuration(),
+      pageViews: this.session.pageViews.length,
+      events: this.session.events.length,
+      conversions: this.session.conversions.length,
+      performanceScore: this.session.performanceMetrics?.score
     };
 
     this.sendToAnalytics('batch', batchData);
@@ -426,30 +426,30 @@ this.initialize();
    * Get analytics report
    */
   getReport(): {
-summary: any,,
-engagement: any,,
-performance: any,,
+summary: any;
+engagement: any;
+performance: any;
 conversions: any;
 } {
     return {
       summary: {,
-        sessionId: this.session.sessionId,,
-        duration: this.getSessionDuration(),,
-        startTime: new Date(this.session.startTime).toISOString(),,
-      },
+        sessionId: this.session.sessionId,
+        duration: this.getSessionDuration(),
+        startTime: new Date(this.session.startTime).toISOString()
+      }
       engagement: {,
-        pageViews: this.getPageViewsCount(),,
-        events: this.getEventsCount(),,
-        averageTimePerPage: this.calculateAverageTimePerPage(),,
-      },
+        pageViews: this.getPageViewsCount(),
+        events: this.getEventsCount(),
+        averageTimePerPage: this.calculateAverageTimePerPage()
+      }
       performance: {,
-        score: this.session.performanceMetrics?.score,,
-        metrics: this.session.performanceMetrics?.metrics,,
-      },
+        score: this.session.performanceMetrics?.score,
+        metrics: this.session.performanceMetrics?.metrics
+      }
       conversions: {,
-        total: this.getConversionsCount(),,
-        breakdown: this.getConversionsBreakdown(),,
-      },
+        total: this.getConversionsCount(),
+        breakdown: this.getConversionsBreakdown()
+      }
     };
   }
 

@@ -76,17 +76,17 @@ const RevolutionaryBreakthrough2026Banner: React.FC = () => {,
           </h2>
           
           <p className="text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
-            Discover the most significant AI innovations of 2026: 10x performance gains, ,
+            Discover the most significant AI innovations of 2026: 10x performance gains
             $300M+ ROI success stories, and revolutionary technologies transforming Fortune 500 operations.
           </p>
 
           {/* Key Stats */}
           <div className="grid md: grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">",
             {[
-              { value: '10x', label: 'Performance Gains', icon: '⚡' },
-              { value: '$300M+', label: 'ROI Achieved', icon: '💰' },
-              { value: '95%', label: 'Automation Rate', icon: '🤖' },
-              { value: '99.9%', label: 'Efficiency Gains', icon: '🎯' };
+              { value: '10x', label: 'Performance Gains', icon: '⚡' }
+              { value: '$300M+', label: 'ROI Achieved', icon: '💰' }
+              { value: '95%', label: 'Automation Rate', icon: '🤖' }
+              { value: '99.9%', label: 'Efficiency Gains', icon: '🎯' }
             ].map((stat, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover: border-purple-500/50 transition-all duration-300">",
                 <div className="text-4xl mb-3">{stat.icon}</div>
@@ -218,10 +218,10 @@ const RevolutionaryBreakthrough2026Banner: React.FC = () => {,
         {/* Success Indicators */}
         <div className="grid md: grid-cols-4 gap-8 mt-20">",
           {[
-            { value: '500+', label: 'Enterprise Clients Transformed' },
-            { value: '$2B+', label: 'Total ROI Generated' },
-            { value: '99.9%', label: 'Success Rate' },
-            { value: '24/7', label: 'Expert Support' };
+            { value: '500+', label: 'Enterprise Clients Transformed' }
+            { value: '$2B+', label: 'Total ROI Generated' }
+            { value: '99.9%', label: 'Success Rate' }
+            { value: '24/7', label: 'Expert Support' }
           ].map((stat, index) => (
             <div key={index} className="text-center">
               <div className="text-4xl font-extrabold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-2">

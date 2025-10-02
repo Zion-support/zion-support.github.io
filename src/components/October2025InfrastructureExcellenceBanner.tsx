@@ -2,32 +2,32 @@
 const October2025InfrastructureExcellenceBanner = () => {
   const newArticles = [
     {
-      id: 1,,
-      title: "Distributed Tracing for Microservices",",
-      description: "99.99% observability, 87% faster MTTR, $8.2M savings",",
-      icon: Activity,,
-      link: "/blog/ai-2025-oct-distributed-tracing-microservices",",
-      gradient: "from-blue-500 to-cyan-500",",
-      metrics: ["10M+ events/sec", "Sub-ms overhead", "OpenTelemetry"],",
+      id: 1,
+      title: "Distributed Tracing for Microservices",
+      description: "99.99% observability, 87% faster MTTR, $8.2M savings",
+      icon: Activity,
+      link: "/blog/ai-2025-oct-distributed-tracing-microservices",
+      gradient: "from-blue-500 to-cyan-500",
+      metrics: ["10M+ events/sec", "Sub-ms overhead", "OpenTelemetry"]
     },
     {
-      id: 2,,
-      title: "Kubernetes Security Best Practices",",
-      description: "Zero-trust architecture, 99.97% threat prevention",",
-      icon: Shield,,
-      link: "/blog/ai-2025-oct-kubernetes-security-best-practices",",
-      gradient: "from-purple-500 to-pink-500",",
-      metrics: ["89% fewer incidents", "Defense-in-depth", "mTLS"],",
+      id: 2,
+      title: "Kubernetes Security Best Practices",
+      description: "Zero-trust architecture, 99.97% threat prevention",
+      icon: Shield,
+      link: "/blog/ai-2025-oct-kubernetes-security-best-practices",
+      gradient: "from-purple-500 to-pink-500",
+      metrics: ["89% fewer incidents", "Defense-in-depth", "mTLS"]
     },
     {
-      id: 3,,
-      title: "Real-Time Data Streaming",",
-      description: "Process 10M+ events/sec with sub-100ms latency",",
-      icon: Zap,,
-      link: "/blog/ai-2025-oct-real-time-data-streaming-architectures",",
-      gradient: "from-orange-500 to-red-500",",
-      metrics: ["Kafka + Flink", "Exactly-once", "42% cost cut"],",
-    },
+      id: 3,
+      title: "Real-Time Data Streaming",
+      description: "Process 10M+ events/sec with sub-100ms latency",
+      icon: Zap,
+      link: "/blog/ai-2025-oct-real-time-data-streaming-architectures",
+      gradient: "from-orange-500 to-red-500",
+      metrics: ["Kafka + Flink", "Exactly-once", "42% cost cut"]
+    }
   ];
 
   return (

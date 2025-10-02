@@ -40,10 +40,10 @@ export class BannerPriorityManager {
     
     if (!this.metrics.has(config.id)) {
       this.metrics.set(config.id, {
-        impressions: 0,,
-        clicks: 0,,
-        conversions: 0,,
-        lastShown: new Date(),,
+        impressions: 0,
+        clicks: 0,
+        conversions: 0,
+        lastShown: new Date()
       });
     }
   }
@@ -149,11 +149,11 @@ export class BannerPriorityManager {
       if (data) {
         const entries = JSON.parse(data);
         this.metrics = new Map(entries.map(([id, metrics]: [string, any]) => [
-          id,
+          id
           {
-            ...metrics,
-            lastShown: new Date(metrics.lastShown),,
-          },
+            ...metrics
+            lastShown: new Date(metrics.lastShown)
+          }
         ]));
       }
     } catch (error) {
@@ -187,8 +187,8 @@ export function useBannerOptimization(bannerId: string) {,
     recordImpression,
     recordClick,
     recordConversion,
-    ctr: bannerManager.getCTR(bannerId),,
-    conversionRate: bannerManager.getConversionRate(bannerId),,
+    ctr: bannerManager.getCTR(bannerId),
+    conversionRate: bannerManager.getConversionRate(bannerId)
   };
 }
 ;

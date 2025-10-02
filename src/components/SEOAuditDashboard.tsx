@@ -42,105 +42,105 @@ const SEOAuditDashboard: React.FC = () => {,
   const [selectedImpact, setSelectedImpact] = useState<string>('all');
   const commonSEOIssues: SEOIssue[] = [,
     {
-      id: 'title-length',',
-      type: 'warning',',
-      title: 'Title Tag Length',',
-      description: 'Page title should be between 30-60 characters',',
-      impact: 'medium',',
-      category: 'content',',
-      fix: 'Optimize title length for better search engine visibility',',
-      score: 75,,
+      id: 'title-length',
+      type: 'warning',
+      title: 'Title Tag Length',
+      description: 'Page title should be between 30-60 characters',
+      impact: 'medium',
+      category: 'content',
+      fix: 'Optimize title length for better search engine visibility',
+      score: 75
     },
     {
-      id: 'meta-description',',
-      type: 'warning',',
-      title: 'Meta Description',',
-      description: 'Meta description should be between 120-160 characters',',
-      impact: 'medium',',
-      category: 'content',',
-      fix: 'Write compelling meta descriptions that encourage clicks',',
-      score: 80,,
+      id: 'meta-description',
+      type: 'warning',
+      title: 'Meta Description',
+      description: 'Meta description should be between 120-160 characters',
+      impact: 'medium',
+      category: 'content',
+      fix: 'Write compelling meta descriptions that encourage clicks',
+      score: 80
     },
     {
-      id: 'heading-structure',',
-      type: 'info',',
-      title: 'Heading Structure',',
-      description: 'Ensure proper H1-H6 hierarchy',',
-      impact: 'medium',',
-      category: 'content',',
-      fix: 'Use only one H1 tag and maintain logical heading order',',
-      score: 85,,
+      id: 'heading-structure',
+      type: 'info',
+      title: 'Heading Structure',
+      description: 'Ensure proper H1-H6 hierarchy',
+      impact: 'medium',
+      category: 'content',
+      fix: 'Use only one H1 tag and maintain logical heading order',
+      score: 85
     },
     {
-      id: 'image-alt-text',',
-      type: 'warning',',
-      title: 'Missing Alt Text',',
-      description: 'Some images are missing alt text attributes',',
-      impact: 'high',',
-      category: 'accessibility',',
-      fix: 'Add descriptive alt text to all images',',
-      score: 60,,
+      id: 'image-alt-text',
+      type: 'warning',
+      title: 'Missing Alt Text',
+      description: 'Some images are missing alt text attributes',
+      impact: 'high',
+      category: 'accessibility',
+      fix: 'Add descriptive alt text to all images',
+      score: 60
     },
     {
-      id: 'mobile-friendly',',
-      type: 'info',',
-      title: 'Mobile Optimization',',
-      description: 'Check mobile responsiveness and usability',',
-      impact: 'high',',
-      category: 'mobile',',
-      fix: 'Ensure all content is accessible on mobile devices',',
-      score: 90,,
+      id: 'mobile-friendly',
+      type: 'info',
+      title: 'Mobile Optimization',
+      description: 'Check mobile responsiveness and usability',
+      impact: 'high',
+      category: 'mobile',
+      fix: 'Ensure all content is accessible on mobile devices',
+      score: 90
     },
     {
-      id: 'page-speed',',
-      type: 'warning',',
-      title: 'Page Load Speed',',
-      description: 'Page loading time affects SEO rankings',',
-      impact: 'high',',
-      category: 'performance',',
-      fix: 'Optimize images, minimize CSS/JS, and use CDN',',
-      score: 70,,
+      id: 'page-speed',
+      type: 'warning',
+      title: 'Page Load Speed',
+      description: 'Page loading time affects SEO rankings',
+      impact: 'high',
+      category: 'performance',
+      fix: 'Optimize images, minimize CSS/JS, and use CDN',
+      score: 70
     },
     {
-      id: 'internal-linking',',
-      type: 'info',',
-      title: 'Internal Linking',',
-      description: 'Improve internal link structure',',
-      impact: 'medium',',
-      category: 'technical',',
-      fix: 'Create a logical internal linking structure',',
-      score: 65,,
+      id: 'internal-linking',
+      type: 'info',
+      title: 'Internal Linking',
+      description: 'Improve internal link structure',
+      impact: 'medium',
+      category: 'technical',
+      fix: 'Create a logical internal linking structure',
+      score: 65
     },
     {
-      id: 'schema-markup',',
-      type: 'info',',
-      title: 'Schema Markup',',
-      description: 'Implement structured data markup',',
-      impact: 'medium',',
-      category: 'technical',',
-      fix: 'Add JSON-LD schema markup for better search results',',
-      score: 50,,
+      id: 'schema-markup',
+      type: 'info',
+      title: 'Schema Markup',
+      description: 'Implement structured data markup',
+      impact: 'medium',
+      category: 'technical',
+      fix: 'Add JSON-LD schema markup for better search results',
+      score: 50
     },
     {
-      id: 'ssl-certificate',',
-      type: 'info',',
-      title: 'SSL Certificate',',
-      description: 'Ensure HTTPS is properly configured',',
-      impact: 'high',',
-      category: 'technical',',
-      fix: 'Maintain valid SSL certificate and redirect HTTP to HTTPS',',
-      score: 95,,
+      id: 'ssl-certificate',
+      type: 'info',
+      title: 'SSL Certificate',
+      description: 'Ensure HTTPS is properly configured',
+      impact: 'high',
+      category: 'technical',
+      fix: 'Maintain valid SSL certificate and redirect HTTP to HTTPS',
+      score: 95
     },
     {
-      id: 'broken-links',',
-      type: 'error',',
-      title: 'Broken Links',',
-      description: 'Check for broken internal and external links',',
-      impact: 'medium',',
-      category: 'technical',',
-      fix: 'Fix or remove broken links to improve user experience',',
-      score: 40,,
-    },
+      id: 'broken-links',
+      type: 'error',
+      title: 'Broken Links',
+      description: 'Check for broken internal and external links',
+      impact: 'medium',
+      category: 'technical',
+      fix: 'Fix or remove broken links to improve user experience',
+      score: 40
+    }
   ];
 
   const runSEOAudit = async () => {
@@ -183,15 +183,15 @@ const SEOAuditDashboard: React.FC = () => {,
       warnings,
       issues,
       metrics: {,
-        pageTitle: 'Zion Tech Group - Leading AI & Technology Solutions',',
-        metaDescription: 'Cutting-edge AI, cloud, and digital transformation solutions for modern enterprises. Expert IT consulting and innovative technology implementations.',',
+        pageTitle: 'Zion Tech Group - Leading AI & Technology Solutions',
+        metaDescription: 'Cutting-edge AI, cloud, and digital transformation solutions for modern enterprises. Expert IT consulting and innovative technology implementations.',
         headings: { h1: 1, h2: 8, h3: 15, h4: 12, h5: 6, h6: 2 },
         images: { total: 24, withAlt: 18, withoutAlt: 6 },
         links: { total: 45, internal: 32, external: 13 },
-        wordCount: 2847,,
-        readabilityScore: 72,,
-      },
-      lastUpdated: Date.now(),,
+        wordCount: 2847,
+        readabilityScore: 72
+      }
+      lastUpdated: Date.now()
     });
     
     setIsRunning(false);
@@ -199,37 +199,37 @@ const SEOAuditDashboard: React.FC = () => {,
 
   const getIssueIcon = (type: string) => {,
 switch (type) {
-case 'error':,
-return <XCircle className="w-5 h-5 text-red-600/>;";
-case 'warning':,
-return <AlertTriangle className="w-5 h-5 text-yellow-600/>;";
-default: ,,
-return <CheckCircle className="w-5 h-5 text-blue-600/>;";
-};
+case 'error':
+return <XCircle className="w-5 h-5 text-red-600" />;
+case 'warning':
+return <AlertTriangle className="w-5 h-5 text-yellow-600" />;
+default:
+return <CheckCircle className="w-5 h-5 text-blue-600" />;
+}
   };
 
   const getImpactColor = (impact: string) => {,
 switch (impact) {
-case 'high':,
+case 'high':
 return 'bg-red-100 text-red-800 border-red-200';
-case 'medium':,
+case 'medium':
 return 'bg-yellow-100 text-yellow-800 border-yellow-200';
-default: ,,
+default:
 return 'bg-blue-100 text-blue-800 border-blue-200';
 };
   };
 
   const getCategoryIcon = (category: string) => {,
 switch (category) {
-case 'content':,
-return <Search className="w-4 h-4/>;";
-case 'mobile':,
-return <Smartphone className="w-4 h-4/>;";
-case 'performance':,
-return <Zap className="w-4 h-4/>;";
-default: ,,
-return <Globe className="w-4 h-4/>;";
-};
+case 'content':
+return <Search className="w-4 h-4" />;
+case 'mobile':
+return <Smartphone className="w-4 h-4" />;
+case 'performance':
+return <Zap className="w-4 h-4" />;
+default:
+return <Globe className="w-4 h-4" />;
+}
   };
 
   const getScoreColor = (score: number) => {,

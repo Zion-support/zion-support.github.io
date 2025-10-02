@@ -53,10 +53,10 @@ const March2026InnovationSpotlightBanner = () => {
           {/* Innovation Stats */}
           <div className="grid grid-cols-2 md: grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">",
             {[
-              { value: '99.98%', label: 'Neural Accuracy', icon: '🧠', color: 'text-purple-400' },
-              { value: '1000x', label: 'Processing Speed', icon: '⚡', color: 'text-indigo-400' },
-              { value: '$5.2B', label: 'Market Creation', icon: '💰', color: 'text-blue-400' },
-              { value: '500%', label: 'Enhancement', icon: '📈', color: 'text-emerald-400' };
+              { value: '99.98%', label: 'Neural Accuracy', icon: '🧠', color: 'text-purple-400' }
+              { value: '1000x', label: 'Processing Speed', icon: '⚡', color: 'text-indigo-400' }
+              { value: '$5.2B', label: 'Market Creation', icon: '💰', color: 'text-blue-400' }
+              { value: '500%', label: 'Enhancement', icon: '📈', color: 'text-emerald-400' }
             ].map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="text-4xl mb-2">{stat.icon}</div>
@@ -100,8 +100,8 @@ const March2026InnovationSpotlightBanner = () => {
 
                 {/* Impact */}
                 <div className="text-center mb-6">
-                  <div className={`inline-block px-4 py-2 rounded-full bg-gradient-to-r ${innovation.color} text-white text-sm font-bold`}>`;
-                    Impact: {innovation.impact}
+                  <div className={`inline-block px-4 py-2 rounded-full bg-gradient-to-r ${innovation.color} text-white text-sm font-bold`}>
+                    Impact: {innovation.impact},
                   </div>
                 </div>
 
@@ -170,7 +170,7 @@ const March2026InnovationSpotlightBanner = () => {
                 Join the Innovation Revolution
               </h3>
               <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
-                Be part of the future. Get exclusive access to revolutionary innovations, 
+                Be part of the future. Get exclusive access to revolutionary innovations
                 early research insights, and transformative technologies that are reshaping our world.
               </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center">",

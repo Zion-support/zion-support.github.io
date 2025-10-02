@@ -1,7 +1,6 @@
 import React from 'react';
-import {
-Helmet
-} from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';
+
 interface SEOOptimizerProps {
 title: string,
 description: string,
@@ -15,7 +14,7 @@ structuredData?: object;
 
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ title,
   description,
-  canonicalUrl,
+  canonicalUrl
   keywords = [
     'AI solutions',
     'artificial intelligence',
@@ -27,37 +26,37 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ title,
     'technology consulting',
     'cloud solutions',
     'cybersecurity'
-  ],
-  ogImage = '/images/zion-tech-group-og-image.jpg',
-  ogType = 'website',
-  twitterCard = 'summary_large_image',
+  ]
+  ogImage = '/images/zion-tech-group-og-image.jpg'
+  ogType = 'website'
+  twitterCard = 'summary_large_image'
   structuredData
 }) => {
   const defaultStructuredData = {
-    "@context": "https://schema.org",",
-    "@type": "Organization",";
-    "name": "Zion Tech Group",";
-    "description": "Leading provider of cutting-edge AI and IT solutions",";
-    "url": "https://ziontechgroup.com",",
-    "logo": "https://ziontechgroup.com/images/logo.png",",
-    "contactPoint": {";
-      "@type": "ContactPoint",";
-      "telephone": "+1-302-464-0950",";
-      "contactType": "customer service",";
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Zion Tech Group",
+    "description": "Leading provider of cutting-edge AI and IT solutions",
+    "url": "https://ziontechgroup.com",
+    "logo": "https://ziontechgroup.com/images/logo.png",
+    "contactPoint": {,
+      "@type": "ContactPoint",
+      "telephone": "+1-302-464-0950",
+      "contactType": "customer service",
       "email": "kleber@ziontechgroup.com"
-    },
-    "address": {";
-      "@type": "PostalAddress",";
-      "streetAddress": "364 E Main St STE 1008",";
-      "addressLocality": "Middletown",";
-      "addressRegion": "DE",";
-      "postalCode": "19709",";
+    }
+    "address": {,
+      "@type": "PostalAddress",
+      "streetAddress": "364 E Main St STE 1008",
+      "addressLocality": "Middletown",
+      "addressRegion": "DE",
+      "postalCode": "19709",
       "addressCountry": "US"
-    },
-    "sameAs": [";
-      "https://twitter.com/ziontechgroup",",
-      "https://linkedin.com/company/ziontechgroup",",
-      "https://github.com/ziontechgroup",
+    }
+    "sameAs": [,
+      "https://twitter.com/ziontechgroup",
+      "https://linkedin.com/company/ziontechgroup",
+      "https://github.com/ziontechgroup"
     ]
   };
 

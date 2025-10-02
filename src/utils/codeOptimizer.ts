@@ -6,12 +6,12 @@
 /**
  * Debounce function to limit execution rate
  */
-export function debounce<T extends (...args: unknown[]) => unknown>(,
-  func: T,,
-  wait: number,
-): (...args: Parameters<T>) => void {,
-let timeout: NodeJS.Timeout | null = null,,
-return function executedFunction(...args: Parameters<T>) {,,
+export function debounce<T extends (...args: unknown[]) => unknown>(
+  func: T,
+  wait: number
+): (...args: Parameters<T>) => void {
+let timeout: NodeJS.Timeout | null = null;
+return function executedFunction(...args: Parameters<T>) {
 const later = () => {
 timeout = null;
 func(...args);
@@ -66,10 +66,10 @@ export function memoize<T extends (...args: unknown[]) => unknown>(,
  * Async operation queue to prevent overwhelming the browser
  */
 export class AsyncQueue {
-private queue: Array<() => Promise<any>> = [],,
-private running: boolean = false,,
-private concurrency: number,,
-constructor(concurrency: number = 3) {,,
+private queue: Array<() => Promise<any>> = [];
+private running: boolean = false;
+private concurrency: number;
+constructor(concurrency: number = 3) {
 this.concurrency = concurrency;
 }
 
@@ -123,11 +123,11 @@ this.concurrency = concurrency;
 /**
  * Request animation frame helper
  */
-export function rafThrottle<T extends (...args: any[]) => any>(,
-  func: T,
-): (...args: Parameters<T>) => void {,
-let rafId: number | null = null,,
-return function executedFunction(...args: Parameters<T>) {,,
+export function rafThrottle<T extends (...args: any[]) => any>(
+  func: T
+): (...args: Parameters<T>) => void {
+let rafId: number | null = null;
+return function executedFunction(...args: Parameters<T>) {
 if (rafId) {
 cancelAnimationFrame(rafId);
 }
@@ -182,10 +182,9 @@ export const arrayUtils = {
 /**
 * Remove duplicates from array
 */
-unique<T>(array: T[]): T[] {,,
+unique<T>(array: T[]): T[] {
 return Array.from(new Set(array));
-},
-
+}
   /**
    * Chunk array into smaller arrays
    */
@@ -195,17 +194,16 @@ return Array.from(new Set(array));
       chunks.push(array.slice(i, i + size));
     }
     return chunks;
-  },
-
+  }
   /**
    * Flatten nested arrays
    */
   flatten<T>(array: any[]): T[] {,
     return array.reduce(
-      (acc, val) => acc.concat(Array.isArray(val) ? arrayUtils.flatten(val) : val),
+      (acc, val) => acc.concat(Array.isArray(val) ? arrayUtils.flatten(val) : val)
       []
     );
-  },
+  }
 };
 
 /**
@@ -215,17 +213,15 @@ export const objectUtils = {
 /**
 * Deep clone an object
 */
-deepClone<T>(obj: T): T {,,
+deepClone<T>(obj: T): T {
 return JSON.parse(JSON.stringify(obj));
-},
-
+}
   /**
    * Check if two objects are equal
    */
   isEqual(obj1: any, obj2: any): boolean {,
     return JSON.stringify(obj1) === JSON.stringify(obj2);
-  },
-
+  }
   /**
    * Pick specific properties from object
    */
@@ -237,7 +233,7 @@ return JSON.parse(JSON.stringify(obj));
       }
     });
     return result;
-  },
+  }
 };
 
 /**

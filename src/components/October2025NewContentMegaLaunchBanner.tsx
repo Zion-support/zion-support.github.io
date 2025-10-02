@@ -26,8 +26,8 @@ const October2025NewContentMegaLaunchBanner: React.FC = () => {,
         </h2>
 
         {/* Subheading */}
-        <p className="text-xl md: text-2xl text-center mb-12 text-white/90 max-w-4xl mx-auto leading-relaxed">",
-          Discover the latest enterprise AI innovations: Governance frameworks achieving 99.8% compliance, ,
+        <p className="text-xl md:text-2xl text-center mb-12 text-white/90 max-w-4xl mx-auto leading-relaxed">
+          Discover the latest enterprise AI innovations: Governance frameworks achieving 99.8% compliance
           multimodal AI with $89M ROI, and edge deployment revolutionizing real-time intelligence.
         </p>
 

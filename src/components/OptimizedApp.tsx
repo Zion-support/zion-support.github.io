@@ -18,9 +18,9 @@ const LoadingSpinner: React.FC = () => (
 );
 
 // Error fallback component
-const ErrorFallback: React.FC<{ error: Error; resetErrorBoundary: () => void }> = ({
+const ErrorFallback: React.FC<{ error: Error; resetErrorBoundary: () => void }> = ({ 
   error,
-  resetErrorBoundary,
+  resetErrorBoundary 
 }) => (
   <div className="min-h-screen flex items-center justify-center bg-gray-50">
     <div className="max-w-md mx-auto text-center p-6">
@@ -73,7 +73,7 @@ const MainContent: React.FC = () => {
             <h1 className="text-4xl md:text-6xl font-bold mb-6">Zion Tech Group</h1>
             <p className="text-xl md:text-2xl mb-8 opacity-90">Advanced AI and IT Solutions for the Future</p>
             <p className="text-lg mb-12 opacity-80">
-              Transform your business with cutting-edge AI, quantum computing,
+              Transform your business with cutting-edge AI, quantum computing
               and autonomous systems. Experience the next generation of enterprise technology.
             </p>
             {/* CTA Buttons */}

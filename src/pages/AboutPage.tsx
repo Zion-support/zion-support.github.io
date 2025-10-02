@@ -6,15 +6,16 @@ const values = [
 icon: Brain,,
 title: 'Innovation',',
 description: 'Pushing the boundaries of AI technology to create revolutionary solutions'
-}
+},
     {
       icon: Brain,,
       title: 'Innovation',',
       description: 'Pushing the boundaries of AI technology to create revolutionary solutions},
     {
-      icon: Shield,,
+      icon: Shield,
       title: 'Security',
-      description: 'Ensuring enterprise-grade security and compliance in all our solutions}
+      description: 'Ensuring enterprise-grade security and compliance in all our solutions'
+    },
     {
 icon: Award,,
 title: 'Excellence',',
@@ -23,12 +24,12 @@ description: 'Delivering exceptional results with proven ROI and measurable impa
   ];
 
   const milestones = [
-    { year: '2020', event: 'Founded Zion Tech Group' },
-    { year: '2021', event: 'First Fortune 500 client' },
-    { year: '2022', event: 'AI breakthrough platform launch' },
-    { year: '2023', event: '100+ enterprise clients' },
-    { year: '2024', event: 'Quantum computing integration' },
-    { year: '2025', event: '240+ Fortune 500 clients' },
+    { year: '2020', event: 'Founded Zion Tech Group' }
+    { year: '2021', event: 'First Fortune 500 client' }
+    { year: '2022', event: 'AI breakthrough platform launch' }
+    { year: '2023', event: '100+ enterprise clients' }
+    { year: '2024', event: 'Quantum computing integration' }
+    { year: '2025', event: '240+ Fortune 500 clients' }
   ];
 
   return (
@@ -69,7 +70,7 @@ description: 'Delivering exceptional results with proven ROI and measurable impa
                 <div className="bg-white p-6 rounded-lg shadow-md">
                   <h3 className="text-xl font-bold text-gray-900 mb-3">Innovation</h3>
                   <p className="text-gray-700">
-                    We continuously push the boundaries of what's possible with technology,
+                    We continuously push the boundaries of what's possible with technology
                     always seeking new ways to solve complex problems.
                   </p>
                 </div>

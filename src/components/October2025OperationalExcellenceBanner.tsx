@@ -25,8 +25,9 @@ const October2025OperationalExcellenceBanner = () => {
           </h2>
           
           <p className="text-2xl text-teal-200 max-w-4xl mx-auto leading-relaxed">
-            Discover breakthrough AI innovations delivering unprecedented efficiency: <span className="text-emerald-300 font-semibold"> Predictive Maintenance (99.6% Accuracy)</span>, ",
-            <span className="text-teal-300 font-semibold"> Autonomous API Orchestration (99.8% Uptime)</span>, and ";
+            Discover breakthrough AI innovations delivering unprecedented efficiency: 
+            <span className="text-emerald-300 font-semibold"> Predictive Maintenance (99.6% Accuracy)</span>
+            <span className="text-teal-300 font-semibold"> Autonomous API Orchestration (99.8% Uptime)</span>, and 
             <span className="text-cyan-300 font-semibold"> Customer Intent Prediction (98.2% Accuracy)</span>
           </p>
         </div>
@@ -217,8 +218,8 @@ const October2025OperationalExcellenceBanner = () => {
             Achieve Operational Excellence with AI
           </h3>
           <p className="text-xl text-teal-200 mb-8 max-w-3xl mx-auto">
-            Join enterprise leaders who have implemented these AI systems across <span className="text-emerald-300 font-semibold">1,200+ global deployments</span>, ";
-            creating <span className="text-teal-300 font-semibold">$24.4B in measurable value</span> with an average <span className="text-cyan-300 font-semibold">560% ROI</span>.";
+            Join enterprise leaders who have implemented these AI systems across <span className="text-emerald-300 font-semibold">1,200+ global deployments</span>
+            creating <span className="text-teal-300 font-semibold">$24.4B in measurable value</span> with an average <span className="text-cyan-300 font-semibold">560% ROI</span>.
           </p>
           
           <div className="flex flex-wrap gap-4 justify-center">

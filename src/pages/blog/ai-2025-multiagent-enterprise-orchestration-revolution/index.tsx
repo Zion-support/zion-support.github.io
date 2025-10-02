@@ -47,9 +47,9 @@ const MultiAgentEnterpriseOrchestration: React.FC = () => {,
               </h1>
               
               <p className="text-xl text-purple-100 leading-relaxed mb-8">
-                Organizations deploying coordinated AI agent teams are achieving <span className="font-bold text-green-300">97.8% automation rates</span>, ";
-                <span className="font-bold text-green-300"> $847M+ in annual value creation</span>, and ";
-                <span className="font-bold text-green-300"> 89% operational cost reduction</span>. ";
+                Organizations deploying coordinated AI agent teams are achieving <span className="font-bold text-green-300">97.8% automation rates</span>
+                <span className="font-bold text-green-300"> $847M+ in annual value creation</span>, and 
+                <span className="font-bold text-green-300"> 89% operational cost reduction</span>. 
                 Discover how multi-agent orchestration is revolutionizing business operations.
               </p>
               
@@ -98,9 +98,9 @@ const MultiAgentEnterpriseOrchestration: React.FC = () => {,
               </h2>
               <p className="text-purple-100 leading-relaxed">
                 The enterprise landscape is witnessing an unprecedented transformation with the emergence of multi-agent AI orchestration systems. 
-                Organizations deploying coordinated AI agent teams are achieving <strong className="text-green-300">97.8% automation rates</strong>, ";
-                <strong className="text-green-300"> $847M+ in annual value creation</strong>, and ";
-                <strong className="text-green-300"> 89% operational cost reduction</strong>. ";
+                Organizations deploying coordinated AI agent teams are achieving <strong className="text-green-300">97.8% automation rates</strong>
+                <strong className="text-green-300"> $847M+ in annual value creation</strong>, and 
+                <strong className="text-green-300"> 89% operational cost reduction</strong>. 
                 This comprehensive guide reveals how forward-thinking enterprises are leveraging autonomous agent swarms to revolutionize business operations.
               </p>
             </div>

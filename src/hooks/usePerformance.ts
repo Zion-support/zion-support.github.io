@@ -40,8 +40,8 @@ export const useIntersectionObserver = (
         setIsIntersecting(entry.isIntersecting);
         if (entry.isIntersecting && !hasIntersected) {
           setHasIntersected(true);
-        };
-      },
+        }
+      }
       options
     );
 
@@ -75,7 +75,7 @@ export const useRenderTime = (componentName: string) => {,
 export const useLazyLoad = (threshold: number = 0.1) => {,
   const [shouldLoad, setShouldLoad] = useState(false);
   const [ref, isIntersecting] = useIntersectionObserver({
-    threshold,
+    threshold
   });
 
   useEffect(() => {

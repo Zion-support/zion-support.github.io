@@ -22,9 +22,9 @@ export const lazyLoadBanner = (importFn: () => Promise<BannerComponent>) => {,
 export const preloadCriticalBanners = () => {
   // Preload top 3 most important banners
   const criticalBanners = [
-    () => import('../components/January2026RevolutionaryAutonomousIntelligenceBanner'),
-    () => import('../components/January2026QuantumAIConsciousnessRevolutionBanner'),
-    () => import('../components/October2025NeuralQuantumOrchestrationBanner'),
+    () => import('../components/January2026RevolutionaryAutonomousIntelligenceBanner')
+    () => import('../components/January2026QuantumAIConsciousnessRevolutionBanner')
+    () => import('../components/October2025NeuralQuantumOrchestrationBanner')
   ];
 
   criticalBanners.forEach(banner => {

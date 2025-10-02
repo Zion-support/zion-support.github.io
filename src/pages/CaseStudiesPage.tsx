@@ -4,82 +4,82 @@ import SuccessStoriesShowcase from '../components/SuccessStoriesShowcase';
 const CaseStudiesPage: React.FC = () => {,
   const caseStudies = [
     {
-      id: 1,,
-      title: "Fortune 500 Manufacturing Company",",
-      industry: "Manufacturing",",
-      challenge: "Legacy system modernization and process automation",",
-      solution: "Implemented AI-powered predictive maintenance and automated workflows",",
+      id: 1,
+      title: "Fortune 500 Manufacturing Company",
+      industry: "Manufacturing",
+      challenge: "Legacy system modernization and process automation",
+      solution: "Implemented AI-powered predictive maintenance and automated workflows",
       results: [,
-        "40% reduction in downtime",";
-        "60% improvement in operational efficiency",";
+        "40% reduction in downtime",
+        "60% improvement in operational efficiency",
         "$2.5M annual cost savings"
-      ],
-      image: "🏭",
+      ]
+      image: "🏭"
     },
     {
-      id: 2,,
-      title: "Global Financial Services Firm",",
-      industry: "Financial Services",",
-      challenge: "Digital transformation and cloud migration",",
-      solution: "Complete cloud infrastructure migration with enhanced security",",
+      id: 2,
+      title: "Global Financial Services Firm",
+      industry: "Financial Services",
+      challenge: "Digital transformation and cloud migration",
+      solution: "Complete cloud infrastructure migration with enhanced security",
       results: [,
-        "99.9% uptime achieved",";
-        "50% faster transaction processing",";
+        "99.9% uptime achieved",
+        "50% faster transaction processing",
         "Enhanced security compliance"
-      ],
-      image: "🏦",
+      ]
+      image: "🏦"
     },
     {
-      id: 3,,
-      title: "Healthcare Technology Provider",",
-      industry: "Healthcare",",
-      challenge: "AI implementation for patient care optimization",",
-      solution: "Machine learning models for predictive healthcare analytics",",
+      id: 3,
+      title: "Healthcare Technology Provider",
+      industry: "Healthcare",
+      challenge: "AI implementation for patient care optimization",
+      solution: "Machine learning models for predictive healthcare analytics",
       results: [,
-        "35% improvement in patient outcomes",";
-        "25% reduction in readmission rates",";
+        "35% improvement in patient outcomes",
+        "25% reduction in readmission rates",
         "Streamlined care coordination"
-      ],
-      image: "🏥",
+      ]
+      image: "🏥"
     },
     {
-      id: 4,,
-      title: "E-commerce Retail Giant",",
-      industry: "Retail",",
-      challenge: "Scalable infrastructure and personalization",",
-      solution: "Cloud-native architecture with AI-driven personalization",",
+      id: 4,
+      title: "E-commerce Retail Giant",
+      industry: "Retail",
+      challenge: "Scalable infrastructure and personalization",
+      solution: "Cloud-native architecture with AI-driven personalization",
       results: [,
-        "300% increase in website performance",";
-        "45% boost in conversion rates",";
+        "300% increase in website performance",
+        "45% boost in conversion rates",
         "Seamless scalability during peak seasons"
-      ],
-      image: "🛒",
+      ]
+      image: "🛒"
     },
     {
-      id: 5,,
-      title: "Technology Startup",",
-      industry: "Technology",",
-      challenge: "Rapid growth and infrastructure scaling",",
-      solution: "DevOps automation and microservices architecture",",
+      id: 5,
+      title: "Technology Startup",
+      industry: "Technology",
+      challenge: "Rapid growth and infrastructure scaling",
+      solution: "DevOps automation and microservices architecture",
       results: [,
-        "90% reduction in deployment time",";
-        "99.95% system reliability",";
+        "90% reduction in deployment time",
+        "99.95% system reliability",
         "10x faster feature delivery"
-      ],
-      image: "🚀",
+      ]
+      image: "🚀"
     },
     {
-      id: 6,,
-      title: "Energy Sector Leader",",
-      industry: "Energy",",
-      challenge: "IoT integration and data analytics",",
-      solution: "Comprehensive IoT platform with real-time analytics",",
+      id: 6,
+      title: "Energy Sector Leader",
+      industry: "Energy",
+      challenge: "IoT integration and data analytics",
+      solution: "Comprehensive IoT platform with real-time analytics",
       results: [,
-        "20% improvement in energy efficiency",";
-        "Real-time monitoring capabilities",";
+        "20% improvement in energy efficiency",
+        "Real-time monitoring capabilities",
         "Predictive maintenance implementation"
-      ],
-      image: "⚡",
+      ]
+      image: "⚡"
     }
   ];
 

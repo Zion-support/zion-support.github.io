@@ -1,9 +1,9 @@
 export const measurePerformance = () => {
 if (typeof window === 'undefined') return;
 // Web Vitals monitoring
-const logMetric = (metric: any) => {,,
-console.log(`[Performance] ${metric.name`;
-}:`, metric.value);`;
+const logMetric = (metric: any) => {
+console.log(`[Performance] ${metric.name
+}:`, metric.value);
   };
 
   // First Contentful Paint
@@ -13,8 +13,8 @@ console.log(`[Performance] ${metric.name`;
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'paint') {;
             logMetric({
-              name: entry.name,,
-              value: entry.startTime,,
+              name: entry.name,
+              value: entry.startTime
             });
           }
         }
@@ -32,8 +32,8 @@ console.log(`[Performance] ${metric.name`;
         const timing = window.performance.timing;
         const pageLoadTime = timing.loadEventEnd - timing.navigationStart;
         logMetric({
-          name: 'Page Load Time',',
-          value: pageLoadTime,,
+          name: 'Page Load Time',
+          value: pageLoadTime
         });
       }, 0);
     });

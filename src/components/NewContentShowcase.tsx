@@ -1,7 +1,5 @@
 import React from 'react';
-import {
-Link
-} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import {
 
 } from 'lucide-react';
@@ -40,21 +38,23 @@ const newServices2026 = [
     link: '/services/ai-autonomous-infrastructure-platform',',
     pricing: 'Starting at $5,000/month},
   {
-    id: '2',',
-    name: 'Quantum-AI Hybrid Computing',',
-    description: 'Revolutionary quantum computing applications for enterprise',',
-    category: 'Quantum Computing',',
-    icon: '⚛️',',
+    id: '2',
+    name: 'Quantum-AI Hybrid Computing',
+    description: 'Revolutionary quantum computing applications for enterprise',
+    category: 'Quantum Computing',
+    icon: '⚛️',
     link: '/services/quantum-ai-hybrid-computing',
-    pricing: 'Starting at $10,000/month},
+    pricing: 'Starting at $10,000/month'
+  },
   {
-    id: '3',',
+    id: '3',
     name: 'Zero Trust Security Framework',
     description: 'Advanced security with 99.9% threat detection accuracy',
     category: 'Cybersecurity',
     icon: '🔒',
     link: '/services/zero-trust-security',
-    pricing: 'Starting at $3,000/month}
+    pricing: 'Starting at $3,000/month'
+  }
 ];
 
 const NewContentShowcase: React.FC = () => {,

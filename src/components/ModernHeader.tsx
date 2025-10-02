@@ -1,63 +1,62 @@
 import React, { useState } from 'react';
-import {
-Link
-} from 'react-router-dom';
-const ModernHeader: React.FC = () => {,
+import { Link } from 'react-router-dom';
+
+const ModernHeader: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   const navigationItems = [
-    { name: 'Home', href: '/' },
+    { name: 'Home', href: '/' }
     { 
-      name: 'Solutions', ',
-      href: '/solutions',',
+      name: 'Solutions',
+      href: '/solutions',
       dropdown: [,
-        { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
-        { name: 'SMB Solutions', href: '/solutions/smb' },
-        { name: 'Startup Solutions', href: '/solutions/startup' },
-        { name: 'Government Solutions', href: '/solutions/government' },
-        { name: 'Healthcare Solutions', href: '/solutions/healthcare' },
-        { name: 'Financial Solutions', href: '/solutions/financial' },
+        { name: 'Enterprise Solutions', href: '/solutions/enterprise' }
+        { name: 'SMB Solutions', href: '/solutions/smb' }
+        { name: 'Startup Solutions', href: '/solutions/startup' }
+        { name: 'Government Solutions', href: '/solutions/government' }
+        { name: 'Healthcare Solutions', href: '/solutions/healthcare' }
+        { name: 'Financial Solutions', href: '/solutions/financial' }
       ]
     },
     { 
-      name: 'Services', ',
-      href: '/services',',
+      name: 'Services',
+      href: '/services',
       dropdown: [,
-        { name: 'AI Solutions', href: '/services/ai-solutions' },
-        { name: 'Cloud & DevOps', href: '/services/cloud-devops' },
-        { name: 'Cybersecurity', href: '/services/cybersecurity' },
-        { name: 'Quantum Computing', href: '/services/quantum-computing' },
-        { name: 'IoT & Edge Computing', href: '/services/iot-edge' },
-        { name: 'Blockchain & Web3', href: '/services/blockchain' },
+        { name: 'AI Solutions', href: '/services/ai-solutions' }
+        { name: 'Cloud & DevOps', href: '/services/cloud-devops' }
+        { name: 'Cybersecurity', href: '/services/cybersecurity' }
+        { name: 'Quantum Computing', href: '/services/quantum-computing' }
+        { name: 'IoT & Edge Computing', href: '/services/iot-edge' }
+        { name: 'Blockchain & Web3', href: '/services/blockchain' }
       ]
     },
     { 
-      name: 'Resources', ',
-      href: '/resources',',
+      name: 'Resources',
+      href: '/resources',
       dropdown: [,
-        { name: 'Case Studies', href: '/case-studies' },
-        { name: 'Documentation', href: '/docs' },
-        { name: 'Developer Tools', href: '/developer-tools' },
-        { name: 'Training', href: '/training' },
-        { name: 'Community', href: '/community' },
-        { name: 'White Papers', href: '/white-papers' },
+        { name: 'Case Studies', href: '/case-studies' }
+        { name: 'Documentation', href: '/docs' }
+        { name: 'Developer Tools', href: '/developer-tools' }
+        { name: 'Training', href: '/training' }
+        { name: 'Community', href: '/community' }
+        { name: 'White Papers', href: '/white-papers' }
       ]
     },
-    { name: 'Blog', href: '/blog' },
+    { name: 'Blog', href: '/blog' }
     { 
-      name: 'Company', ',
-      href: '/about',',
+      name: 'Company',
+      href: '/about',
       dropdown: [,
-        { name: 'About Us', href: '/about' },
-        { name: 'Our Team', href: '/team' },
-        { name: 'Partners', href: '/partners' },
-        { name: 'Careers', href: '/careers' },
-        { name: 'News', href: '/news' },
-        { name: 'Press', href: '/press' },
+        { name: 'About Us', href: '/about' }
+        { name: 'Our Team', href: '/team' }
+        { name: 'Partners', href: '/partners' }
+        { name: 'Careers', href: '/careers' }
+        { name: 'News', href: '/news' }
+        { name: 'Press', href: '/press' }
       ]
     },
-    { name: 'Contact', href: '/contact' },
+    { name: 'Contact', href: '/contact' }
   ];
 
   return (
@@ -159,7 +158,7 @@ const ModernHeader: React.FC = () => {,
         {/* Mobile Navigation */}
         {
 isMenuOpen && (
-<div className="md: hidden py-4 border-t border-gray-200">,",
+<div className="md:hidden py-4 border-t border-gray-200">
 <nav className="flex flex-col space-y-1">
 {navigationItems.map((item) => (
 <div key={item.name

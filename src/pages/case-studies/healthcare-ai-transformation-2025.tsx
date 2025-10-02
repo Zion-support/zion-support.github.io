@@ -1,7 +1,5 @@
-import {
-Link
-} from "react-router-dom";";
-import Header from "../../components/Header";";
+import { Link } from "react-router-dom";
+import Header from "../../components/Header";
 
 const HealthcareAITransformation = () => {
   return (
@@ -47,7 +45,7 @@ const HealthcareAITransformation = () => {
 
             <p className="text-xl text-zion-slate-light leading-relaxed mb-8">
               How a major healthcare network with 450 facilities transformed patient care, operational 
-              efficiency, and clinical outcomes through enterprise AI—achieving 87% faster processing, 
+              efficiency, and clinical outcomes through enterprise AI—achieving 87% faster processing
               $124M cost savings, and 96% patient satisfaction while serving 3.8M patients annually.
             </p>
 
@@ -138,7 +136,7 @@ const HealthcareAITransformation = () => {
                     AI-Powered Patient Intake
                   </h3>
                   <p className="mb-4">
-                    Intelligent intake system using NLP to automatically process patient information, 
+                    Intelligent intake system using NLP to automatically process patient information
                     insurance verification, and medical history—reducing registration time from 24 
                     minutes to 3 minutes.
                   </p>

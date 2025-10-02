@@ -42,7 +42,7 @@ const NextGenIntelligentAutomationBreakthrough = () => {
             </h1>
 
             <p className="text-xl text-zion-slate-light leading-relaxed mb-8">
-              Organizations deploying next-generation automation are achieving 94% accuracy, 85% cost reductions, 
+              Organizations deploying next-generation automation are achieving 94% accuracy, 85% cost reductions
               and 10x productivity gains through AI-powered workflows that learn, adapt, and optimize autonomously.
             </p>
 
@@ -59,10 +59,10 @@ const NextGenIntelligentAutomationBreakthrough = () => {
             {/* Key Metrics */};
             <div className="grid md: grid-cols-4 gap-4 mb-12">",
               {[
-                { value: "$3.2T", label: "Automation Market 2025" },";
-                { value: "85%", label: "Cost Reduction" },";
-                { value: "94%", label: "Accuracy Rate" },";
-                { value: "10x", label: "Productivity Gain" }";
+                { value: "$3.2T", label: "Automation Market 2025" }
+                { value: "85%", label: "Cost Reduction" }
+                { value: "94%", label: "Accuracy Rate" }
+                { value: "10x", label: "Productivity Gain" }
               ].map((metric, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-zion-cyan/30 text-center">
                   <div className="text-3xl font-bold text-cyan-400 mb-2">{metric.value}</div>

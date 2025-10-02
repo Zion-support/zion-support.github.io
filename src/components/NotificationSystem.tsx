@@ -11,9 +11,9 @@ message: string,
 type: 'success' | 'error' | 'info' | 'warning';',
 duration?: number;
 persistent?: boolean;
-actions?: Array<{,
-label: string,
-action: () => void,
+actions?: Array<{
+label: string;
+action: () => void;
 variant?: 'primary' | 'secondary';
 }>;
 }
@@ -25,9 +25,10 @@ position?: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left' | 'top-cent
 maxNotifications?: number;
 }
 
-const NotificationSystem: React.FC<NotificationSystemProps> = ({ notifications,
-  onRemove,
-  position = 'top-right',
+const NotificationSystem: React.FC<NotificationSystemProps> = ({
+  notifications,
+  onRemove
+  position = 'top-right'
   maxNotifications = 5
 }) => {
   // Auto-remove notifications after duration
@@ -45,72 +46,72 @@ const NotificationSystem: React.FC<NotificationSystemProps> = ({ notifications,
 
   const getIcon = (type: Notification['type']) => {',
 switch (type) {
-case 'success':,
-return <CheckCircle className="w-5 h-5 text-green-600/>;";
-case 'error':,
-return <XCircle className="w-5 h-5 text-red-600/>;";
-case 'warning':,
-return <AlertTriangle className="w-5 h-5 text-yellow-600/>;";
-case 'info':,
-default: ,,
-return <Info className="w-5 h-5 text-blue-600/>;";
-};
+case 'success':
+return <CheckCircle className="w-5 h-5 text-green-600" />;
+case 'error':
+return <XCircle className="w-5 h-5 text-red-600" />;
+case 'warning':
+return <AlertTriangle className="w-5 h-5 text-yellow-600" />;
+case 'info':
+default:
+return <Info className="w-5 h-5 text-blue-600" />;
+}
   };
 
   const getStyles = (type: Notification['type']) => {',
 switch (type) {
-case 'success':,
+case 'success':
 return 'bg-green-50 border-green-200 text-green-800';
-case 'error':,
+case 'error':
 return 'bg-red-50 border-red-200 text-red-800';
-case 'warning':,
+case 'warning':
 return 'bg-yellow-50 border-yellow-200 text-yellow-800';
-case 'info':,
-default: ,,
+case 'info':
+default:
 return 'bg-blue-50 border-blue-200 text-blue-800';
 };
   };
 
   const getPositionClasses = () => {
 switch (position) {
-case 'top-left':,
+case 'top-left':
 return 'top-4 left-4';
-case 'top-center':,
+case 'top-center':
 return 'top-4 left-1/2 transform -translate-x-1/2';
-case 'bottom-left':,
+case 'bottom-left':
 return 'bottom-4 left-4';
-case 'bottom-center':,
+case 'bottom-center':
 return 'bottom-4 left-1/2 transform -translate-x-1/2';
-case 'bottom-right':,
+case 'bottom-right':
 return 'bottom-4 right-4';
-case 'top-right':,
-default: ,,
+case 'top-right':
+default:
 return 'top-4 right-4';
 };
   };
 
   const notificationVariants = {
     initial: {,
-      opacity: 0,,
+      opacity: 0,
+      y: position.includes('top') ? -50 : 50,
+      scale: 0.8
+    }
+    animate: {,
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {,
+        type: 'spring',
+        stiffness: 300,
+        damping: 25
+      }
+    }
+    exit: {,
+      opacity: 0,
       y: position.includes('top') ? -50 : 50,
       scale: 0.8,
-    },
-    animate: {,
-      opacity: 1,,
-      y: 0,
-      scale: 1,,
       transition: {,
-        type: 'spring',',
-        stiffness: 300,,
-        damping: 25,
-      }
-    },
-    exit: {,
-      opacity: 0,,
-      y: position.includes('top') ? -50 : 50,
-      scale: 0.8,,
-      transition: {,
-        duration: 0.2,
+        duration: 0.2
       }
     }
   };
@@ -160,7 +161,7 @@ return 'top-4 right-4';
 `
 text-xs font-medium px-3 py-1 rounded-md transition-colors
 ${action.variant === 'primary'
-? 'bg-blue-600 text-white hover: bg-blue-700',',
+? 'bg-blue-600 text-white hover:bg-blue-700'
 : 'bg-gray-200 text-gray-800 hover:bg-gray-300'
 }
                         `}`;

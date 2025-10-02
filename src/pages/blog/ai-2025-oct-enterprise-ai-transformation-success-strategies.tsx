@@ -59,10 +59,10 @@ const EnterpriseAITransformationSuccessStrategies = () => {
             {/* Key Metrics */};
             <div className="grid md: grid-cols-4 gap-4 mb-12">",
               {[
-                { value: "$2.9T", label: "AI Business Value 2025" },";
-                { value: "10x", label: "Average ROI" },";
-                { value: "40%", label: "Cost Reduction" },";
-                { value: "73%", label: "Initiatives That Fail" }";
+                { value: "$2.9T", label: "AI Business Value 2025" }
+                { value: "10x", label: "Average ROI" }
+                { value: "40%", label: "Cost Reduction" }
+                { value: "73%", label: "Initiatives That Fail" }
               ].map((metric, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-zion-cyan/30 text-center">
                   <div className="text-3xl font-bold text-cyan-400 mb-2">{metric.value}</div>
@@ -80,10 +80,10 @@ const EnterpriseAITransformationSuccessStrategies = () => {
                 </h2>
                 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-zion-cyan/30">
                   <p className="mb-4">
-                    Enterprise AI transformation is no longer optional—it's a <strong className="text-white">competitive imperative</strong>. ";
-                    In 2025, companies that successfully implement AI are achieving <strong className="text-green-400">10x ROI</strong>, ";
-                    <strong className="text-green-400"> 40% cost reductions</strong>, and <strong className="text-green-400">transformative business growth</strong>. ";
-                    However, <strong className="text-red-400">73% of AI initiatives still fail</strong> to deliver expected value.";
+                    Enterprise AI transformation is no longer optional—it's a <strong className="text-white">competitive imperative</strong>. 
+                    In 2025, companies that successfully implement AI are achieving <strong className="text-green-400">10x ROI</strong>
+                    <strong className="text-green-400"> 40% cost reductions</strong>, and <strong className="text-green-400">transformative business growth</strong>. 
+                    However, <strong className="text-red-400">73% of AI initiatives still fail</strong> to deliver expected value.
                   </p>
                   <p>
                     This comprehensive playbook reveals the proven strategies that separate AI winners from the rest.
@@ -152,38 +152,38 @@ const EnterpriseAITransformationSuccessStrategies = () => {
                 <div className="space-y-6">
                   {[
                     {
-                      phase: "Phase 1: Foundation",",
-                      duration: "Months 1-6",",
-                      investment: "$2-5M",",
-                      roi: "1-2x",",
+                      phase: "Phase 1: Foundation",
+                      duration: "Months 1-6",
+                      investment: "$2-5M",
+                      roi: "1-2x",
                       milestones: [,
-                        "AI strategy approved",";
-                        "Core team hired",";
-                        "Infrastructure deployed",";
-                        "Data platform operational",";
+                        "AI strategy approved",
+                        "Core team hired",
+                        "Infrastructure deployed",
+                        "Data platform operational",
                         "First models in production"
                       ]
                     },
                     {
-                      phase: "Phase 2: Scaling",",
-                      duration: "Months 7-18",",
-                      investment: "$5-15M",",
-                      roi: "3-5x",",
+                      phase: "Phase 2: Scaling",
+                      duration: "Months 7-18",
+                      investment: "$5-15M",
+                      roi: "3-5x",
                       milestones: [,
-                        "10+ models in production",";
-                        "All business units engaged",";
-                        "MLOps fully operational",";
+                        "10+ models in production",
+                        "All business units engaged",
+                        "MLOps fully operational",
                         "Governance framework implemented"
                       ]
                     },
                     {
-                      phase: "Phase 3: Transformation",",
-                      duration: "Months 19-36",",
-                      investment: "$15-30M",",
-                      roi: "8-10x+",",
+                      phase: "Phase 3: Transformation",
+                      duration: "Months 19-36",
+                      investment: "$15-30M",
+                      roi: "8-10x+",
                       milestones: [,
-                        "50+ models in production",";
-                        "AI-first operating model",";
+                        "50+ models in production",
+                        "AI-first operating model",
                         "Measurable business transformation"
                       ]
                     }
@@ -225,38 +225,38 @@ const EnterpriseAITransformationSuccessStrategies = () => {
                 <div className="grid gap-6">
                   {[
                     {
-                      company: "Global Retail Chain",",
-                      industry: "Fortune 100 Retailer",",
-                      investment: "$45M",",
-                      value: "$680M annual value",",
-                      roi: "15x ROI",",
+                      company: "Global Retail Chain",
+                      industry: "Fortune 100 Retailer",
+                      investment: "$45M",
+                      value: "$680M annual value",
+                      roi: "15x ROI",
                       highlights: [,
-                        "40% reduction in inventory costs",";
-                        "28% increase in customer lifetime value",";
+                        "40% reduction in inventory costs",
+                        "28% increase in customer lifetime value",
                         "18% revenue growth attributed to AI"
                       ]
                     },
                     {
-                      company: "Healthcare Provider",",
-                      industry: "Multi-hospital system",",
-                      investment: "$28M",",
-                      value: "$420M annual savings",",
-                      roi: "15x ROI",",
+                      company: "Healthcare Provider",
+                      industry: "Multi-hospital system",
+                      investment: "$28M",
+                      value: "$420M annual savings",
+                      roi: "15x ROI",
                       highlights: [,
-                        "23% reduction in readmissions",";
-                        "19% improvement in patient outcomes",";
+                        "23% reduction in readmissions",
+                        "19% improvement in patient outcomes",
                         "$127M in operational efficiencies"
                       ]
                     },
                     {
-                      company: "Manufacturing Enterprise",",
-                      industry: "Global manufacturer",",
-                      investment: "$38M",",
-                      value: "$580M annual value",",
-                      roi: "15.3x ROI",",
+                      company: "Manufacturing Enterprise",
+                      industry: "Global manufacturer",
+                      investment: "$38M",
+                      value: "$580M annual value",
+                      roi: "15.3x ROI",
                       highlights: [,
-                        "47% reduction in unplanned downtime",";
-                        "34% improvement in first-pass quality",";
+                        "47% reduction in unplanned downtime",
+                        "34% improvement in first-pass quality",
                         "$180M in inventory optimization"
                       ]
                     }

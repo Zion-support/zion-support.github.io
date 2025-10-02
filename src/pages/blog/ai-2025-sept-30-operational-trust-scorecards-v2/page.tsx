@@ -10,7 +10,7 @@ export default function Page(): void {
       </p>
       <div className="prose max-w-none">
         <p>
-          This is a short placeholder article. Expand with detailed guidance on wiring SLIs to KPIs,
+          This is a short placeholder article. Expand with detailed guidance on wiring SLIs to KPIs
           defining budgets, and implementing instant rollback with policy-tested fallbacks.
         </p>
       </div>

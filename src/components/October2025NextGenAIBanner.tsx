@@ -25,8 +25,9 @@ const October2025NextGenAIBanner = () => {
           </h2>
           
           <p className="text-2xl text-blue-200 max-w-4xl mx-auto leading-relaxed">
-            Discover the cutting-edge AI innovations powering Fortune 500 success: <span className="text-cyan-300 font-semibold"> Collaborative Agent Teams</span>, ",
-            <span className="text-blue-300 font-semibold"> Real-Time Adaptive AI</span>, and ";
+            Discover the cutting-edge AI innovations powering Fortune 500 success: 
+            <span className="text-cyan-300 font-semibold"> Collaborative Agent Teams</span>
+            <span className="text-blue-300 font-semibold"> Real-Time Adaptive AI</span>, and 
             <span className="text-purple-300 font-semibold"> Hybrid Human-AI Intelligence</span>
           </p>
         </div>
@@ -214,8 +215,8 @@ const October2025NextGenAIBanner = () => {
             Transform Your Enterprise with Next-Gen AI
           </h3>
           <p className="text-xl text-blue-200 mb-8 max-w-3xl mx-auto">
-            Zion Tech Group has deployed these revolutionary AI systems across <span className="text-cyan-300 font-semibold">47 Fortune 500 companies</span>, ";
-            creating <span className="text-blue-300 font-semibold">$18.7B in measurable value</span> with an average <span className="text-purple-300 font-semibold">11.7x ROI</span>.";
+            Zion Tech Group has deployed these revolutionary AI systems across <span className="text-cyan-300 font-semibold">47 Fortune 500 companies</span>
+            creating <span className="text-blue-300 font-semibold">$18.7B in measurable value</span> with an average <span className="text-purple-300 font-semibold">11.7x ROI</span>.
           </p>
           
           <div className="flex flex-wrap gap-4 justify-center">

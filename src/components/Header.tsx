@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import {
-Link
-} from 'react-router-dom';
-const Header: React.FC = () => {,
+import { Link } from 'react-router-dom';
+
+const Header: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
@@ -55,11 +54,11 @@ const Header: React.FC = () => {,
         {/* Mobile Navigation */}
         {
 isMobileMenuOpen && (
-<div className="md: hidden py-4 border-t border-gray-200">,",
+<div className="md:hidden py-4 border-t border-gray-200">
 <nav className="flex flex-col space-y-4">
 <Link
 to="/services"
-className="text-gray-600 hover: text-blue-600 transition-colors",",
+className="text-gray-600 hover:text-blue-600 transition-colors"
 onClick={() => setIsMobileMenuOpen(false)
 }
               >

@@ -30,7 +30,7 @@ const EnterpriseAutomation2025 = () => {
             </h1>
             
             <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
-              Transform your enterprise with cutting-edge AI automation. Learn proven strategies for 400%+ efficiency gains, 
+              Transform your enterprise with cutting-edge AI automation. Learn proven strategies for 400%+ efficiency gains
               implementation frameworks, and real-world case studies from Fortune 500 companies.
             </p>
             
@@ -48,8 +48,8 @@ const EnterpriseAutomation2025 = () => {
                 <h2 className="text-3xl font-bold text-white mb-6">Executive Summary</h2>
                 <div className="bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 border border-emerald-400/30 rounded-xl p-6 mb-6">
                   <p className="text-white text-lg leading-relaxed">
-                    Enterprise AI automation is no longer a future aspiration—it's a present necessity. Companies implementing ;
-                    comprehensive AI automation strategies are seeing <strong>400-600% efficiency gains</strong>, 
+                    Enterprise AI automation is no longer a future aspiration—it's a present necessity. Companies implementing 
+                    comprehensive AI automation strategies are seeing <strong>400-600% efficiency gains</strong>
                     <strong>70% cost reduction</strong>, and <strong>95% faster decision-making</strong>.
                   </p>
                 </div>
@@ -75,7 +75,7 @@ const EnterpriseAutomation2025 = () => {
                 <p className="text-zion-slate-light mb-6 leading-relaxed">
                   The convergence of advanced AI models, edge computing, and enterprise-grade platforms has created 
                   an unprecedented opportunity for automation transformation. Unlike previous waves of automation that 
-                  focused on repetitive tasks, today's AI can handle complex decision-making, creative problem-solving,
+                  focused on repetitive tasks, today's AI can handle complex decision-making, creative problem-solving
                   and adaptive learning.
                 </p>
                 

@@ -6,7 +6,8 @@ rotationInterval?: number;
 className?: string;
 }
 
-const LatestContentBanner: React.FC<LatestContentBannerProps> = ({ variant = 'info',
+const LatestContentBanner: React.FC<LatestContentBannerProps> = ({
+  variant = 'info'
   className = ''
 }) => {
   const variantStyles = {

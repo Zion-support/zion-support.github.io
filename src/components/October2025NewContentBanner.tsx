@@ -22,7 +22,7 @@ const October2025NewContentBanner = () => {
           </h2>
           
           <p className="text-xl text-blue-200 max-w-3xl mx-auto">
-            Discover cutting-edge insights on multimodal AI agents, zero-trust security architectures, 
+            Discover cutting-edge insights on multimodal AI agents, zero-trust security architectures
             and production-scale RAG pipelines from industry leaders
           </p>
         </div>

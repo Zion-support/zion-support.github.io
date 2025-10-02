@@ -77,7 +77,7 @@ const ZeroTrustAISecurityFramework2025 = () => {
                 The AI Security Crisis
               </h2>
               <p className="text-gray-300 leading-relaxed mb-4">
-                AI systems face unprecedented security challenges: model theft, data poisoning, adversarial attacks,,
+                AI systems face unprecedented security challenges: model theft, data poisoning, adversarial attacks
                 and prompt injection. Traditional perimeter security fails for distributed AI architectures.
                 Zero-trust frameworks are now mandatory for enterprise AI deployments.
               </p>
@@ -102,7 +102,7 @@ const ZeroTrustAISecurityFramework2025 = () => {
                     Never Trust, Always Verify
                   </h3>
                   <p className="text-gray-300 mb-4">
-                    Every request to models, data stores, and inference endpoints requires authentication,
+                    Every request to models, data stores, and inference endpoints requires authentication
                     authorization, and continuous validation—even from internal services.
                   </p>
                   <div className="bg-slate-900/50 p-4 rounded border border-slate-600">
@@ -290,7 +290,7 @@ const ZeroTrustAISecurityFramework2025 = () => {
                 <div className="bg-red-500/10 border-l-4 border-red-500 p-6 rounded-r-lg">
                   <h3 className="text-xl font-bold text-white mb-3">🎯 Prompt Injection Attacks</h3>
                   <p className="text-gray-300 mb-3">
-                    Malicious users manipulate prompts to extract training data, bypass safety filters,
+                    Malicious users manipulate prompts to extract training data, bypass safety filters
                     or execute unauthorized actions.
                   </p>
                   <div className="bg-slate-900/70 p-4 rounded">

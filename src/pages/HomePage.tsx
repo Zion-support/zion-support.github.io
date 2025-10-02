@@ -18,7 +18,7 @@ const HomePage: React.FC = () => {,
             Advanced AI & IT Solutions
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-            Transform your business with cutting-edge AI technologies, cloud solutions, 
+            Transform your business with cutting-edge AI technologies, cloud solutions
             and digital innovation strategies.
           </p>
           <div className="flex flex-col sm: flex-row gap-4 justify-center">",

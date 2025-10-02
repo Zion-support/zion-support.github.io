@@ -115,7 +115,7 @@ export default function FeaturedContentBanner2025(): void {
           <div className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/30 rounded-2xl p-8">
             <h3 className="text-2xl font-bold mb-4 text-purple-400">🚀 AI Innovation Lab</h3>
             <p className="text-gray-300 mb-6 leading-relaxed">
-              Join our exclusive AI Innovation Lab and get early access to breakthrough technologies, 
+              Join our exclusive AI Innovation Lab and get early access to breakthrough technologies
               pilot programs, and direct access to our AI experts.
             </p>
             <div className="flex flex-col sm: flex-row gap-4">",

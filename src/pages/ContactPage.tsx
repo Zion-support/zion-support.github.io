@@ -18,7 +18,7 @@ const ContactPage: React.FC = () => {,
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {,
     setFormData({
-      ...formData,
+      ...formData
       [e.target.name]: e.target.value
     });
   };
@@ -139,7 +139,7 @@ const ContactPage: React.FC = () => {,
                   Do you provide ongoing support?
                 </h3>
                 <p className="text-gray-600">
-                  Yes, we offer comprehensive support packages including maintenance, 
+                  Yes, we offer comprehensive support packages including maintenance
                   updates, and 24/7 technical assistance for critical systems.
                 </p>
               </div>
@@ -148,7 +148,7 @@ const ContactPage: React.FC = () => {,
                   What industries do you serve?
                 </h3>
                 <p className="text-gray-600">
-                  We serve clients across various industries including healthcare, 
+                  We serve clients across various industries including healthcare
                   finance, manufacturing, retail, and technology sectors.
                 </p>
               </div>

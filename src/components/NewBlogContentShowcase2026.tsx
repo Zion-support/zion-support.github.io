@@ -112,10 +112,10 @@ const NewBlogContentShowcase2026: React.FC = () => {,
   ];
 
   const blogStats = [
-    { value: '500+', label: 'Published Articles', icon: <Award className="w-6 h-6/> },";
-    { value: '2M+', label: 'Monthly Readers', icon: <Users className="w-6 h-6/> },";
-    { value: '4.8', label: 'Average Rating', icon: <Star className="w-6 h-6/> },";
-    { value: '150+', label: 'Expert Authors', icon: <Brain className="w-6 h-6/> }";
+    { value: '500+', label: 'Published Articles', icon: <Award className="w-6 h-6" /> }
+    { value: '2M+', label: 'Monthly Readers', icon: <Users className="w-6 h-6" /> }
+    { value: '4.8', label: 'Average Rating', icon: <Star className="w-6 h-6" /> }
+    { value: '150+', label: 'Expert Authors', icon: <Brain className="w-6 h-6" /> }
   ];
 
   return (
@@ -273,7 +273,7 @@ const NewBlogContentShowcase2026: React.FC = () => {,
               Get Exclusive Blog Updates
             </h3>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Subscribe to our newsletter and get early access to new articles, exclusive insights, 
+              Subscribe to our newsletter and get early access to new articles, exclusive insights
               and premium content from industry experts. Join 100K+ subscribers.
             </p>
             

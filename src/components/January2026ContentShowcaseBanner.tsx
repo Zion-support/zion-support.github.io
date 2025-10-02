@@ -64,7 +64,7 @@ const January2026ContentShowcaseBanner: React.FC = () => {,
           </h2>
           
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
-            Discover the three most revolutionary AI breakthroughs of 2026: Autonomous Agent Factories, Quantum Neural Optimization, ,
+            Discover the three most revolutionary AI breakthroughs of 2026: Autonomous Agent Factories, Quantum Neural Optimization
             and Meta-Cognitive Reasoning. These cutting-edge technologies are already transforming Fortune 500 companies worldwide.
           </p>
 

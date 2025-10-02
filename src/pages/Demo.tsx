@@ -1,28 +1,27 @@
 import React, { useState } from 'react';
-import {
-Link
-} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import {
 
 } from 'lucide-react';
 const Demo: React.FC = () => {,
   const [formData, setFormData] = useState({
-    firstName: '',',
-    lastName: '',',
-    email: '',',
-    company: '',',
-    phone: '',',
-    jobTitle: '',',
-    companySize: '',',
+    firstName: '',
+    lastName: '',
+    email: '',
+    company: '',
+    phone: '',
+    jobTitle: '',
+    companySize: '',
     useCase: '',
     preferredDate: '',
     preferredTime: '',
     timeZone: '',
-    message: '});
+    message: ''
+  });
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {,
     setFormData({
-      ...formData,
+      ...formData
       [e.target.name]: e.target.value
     });
   };
@@ -37,17 +36,17 @@ const Demo: React.FC = () => {,
 title: 'AI-Powered Automation',',
 description: 'See how our AI can automate your repetitive tasks and workflows',',
 icon: '🤖'
-}
+},
     {
 title: 'Real-time Analytics',',
 description: 'Experience our advanced analytics and reporting capabilities',',
 icon: '📊'
-}
+},
     {
 title: 'Custom Integrations',',
 description: 'Learn how we can integrate with your existing systems',',
 icon: '🔗'
-}
+},
     {
 title: 'Security & Compliance',',
 description: 'Understand our enterprise-grade security and compliance features',',
@@ -62,14 +61,14 @@ company: 'TechCorp',',
 role: 'CTO',',
 content: 'The demo showed us exactly how AI could transform our operations. The ROI was clear from day one.',',
 rating: 5
-}
+},
     {
 name: 'Michael Chen',',
 company: 'FinanceFlow',',
 role: 'VP of Operations',',
 content: "Zion Tech Group's demo was eye-opening. We saw immediate value and signed up the same week.",",
 rating: 5
-}
+},
     {
 name: 'Emily Rodriguez',',
 company: 'HealthTech Solutions',',

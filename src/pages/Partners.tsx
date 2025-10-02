@@ -1,8 +1,7 @@
 import React from 'react';
-import {
-Helmet
-} from 'react-helmet-async';
-const Partners: React.FC = () => {,
+import { Helmet } from 'react-helmet-async';
+
+const Partners: React.FC = () => {
   const partners = [
     {
       name: 'Microsoft',',
@@ -44,9 +43,9 @@ const Partners: React.FC = () => {,
 
   const partnershipTypes = [
     {
-      title: 'Technology Partners',',
-      description: 'Leading technology providers and platform partners',',
-      icon: '🔧',',
+      title: 'Technology Partners',
+      description: 'Leading technology providers and platform partners',
+      icon: '🔧',
       benefits: [,
         'Access to cutting-edge technology',
         'Joint go-to-market strategies',
@@ -54,9 +53,9 @@ const Partners: React.FC = () => {,
       ]
     },
     {
-      title: 'Solution Partners',',
-      description: 'Specialized solution providers and integrators',',
-      icon: '🤝',',
+      title: 'Solution Partners',
+      description: 'Specialized solution providers and integrators',
+      icon: '🤝',
       benefits: [,
         'Complementary solution offerings',
         'Joint customer implementations',
@@ -64,9 +63,9 @@ const Partners: React.FC = () => {,
       ]
     },
     {
-      title: 'Channel Partners',',
-      description: 'Resellers and distribution partners',',
-      icon: '📈',',
+      title: 'Channel Partners',
+      description: 'Resellers and distribution partners',
+      icon: '📈',
       benefits: [,
         'Extended market reach',
         'Local customer support',

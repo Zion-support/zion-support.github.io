@@ -11,38 +11,39 @@ score: number;
 
 const PerformanceOptimizer: React.FC<{ isVisible?: boolean; onClose?: () => void }> = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    cls: null,,
-    fid: null,,
-    fcp: null,,
-    lcp: null,,
-    ttfb: null,,
-    score: 0,,
+    cls: null,
+    fid: null,
+    fcp: null,
+    lcp: null,
+    ttfb: null,
+    score: 0
   });
 
   useEffect(() => {
-    const sendToAnalytics = (metric: any) => {,
-      // Send to your analytics service
-      console.log(`Performance metric ${metric.name}:`, metric.value);`;
+const sendToAnalytics = (metric: any) => {
+// Send to your analytics service
+console.log(`Performance metric ${metric.name
+}:`, metric.value);
       
       setMetrics(prev => {
         const newMetrics = { ...prev };
         switch (metric.name) {
-          case 'CLS':;
-            newMetrics.cls = metric.value;
-            break;
-          case 'FID':;
-            newMetrics.fid = metric.value;
-            break;
-          case 'FCP':;
-            newMetrics.fcp = metric.value;
-            break;
-          case 'LCP':;
-            newMetrics.lcp = metric.value;
-            break;
-          case 'TTFB':;
-            newMetrics.ttfb = metric.value;
-            break;
-        }
+case 'CLS':
+newMetrics.cls = metric.value;
+break;
+case 'FID':
+newMetrics.fid = metric.value;
+break;
+case 'FCP':
+newMetrics.fcp = metric.value;
+break;
+case 'LCP':
+newMetrics.lcp = metric.value;
+break;
+case 'TTFB':
+newMetrics.ttfb = metric.value;
+break;
+}
         
         // Calculate performance score
         let score = 100;
@@ -109,10 +110,10 @@ const PerformanceOptimizer: React.FC<{ isVisible?: boolean; onClose?: () => void
           justify-content: center,
         };
         .hero-title {
-font-size: 3rem,,
-font-weight: 700,,
-color: white,,
-text-align: center,,
+font-size: 3rem;
+font-weight: 700;
+color: white;
+text-align: center;
 margin-bottom: 1rem;
 }
         @media (max-width: 768px) {,

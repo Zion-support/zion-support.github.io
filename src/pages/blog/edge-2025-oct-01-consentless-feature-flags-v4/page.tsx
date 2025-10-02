@@ -14,7 +14,7 @@ export default function ConsentlessFeatureFlagsV4(): React.JSX.Element {
         <p className="text-zion-slate-light mb-8">Private rollouts at &lt;100ms with scoped IDs, signed configs, and on‑device metrics.</p>
         <div className="prose prose-invert max-w-3xl">
           <p>
-            Deliver global, privacy‑preserving rollouts by segment, geo, and SLA. Use attestations,
+            Deliver global, privacy‑preserving rollouts by segment, geo, and SLA. Use attestations
             DP‑hardened telemetry, and budgeted actions to keep velocity high without PII.
           </p>
         </div>

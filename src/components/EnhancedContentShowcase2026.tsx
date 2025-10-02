@@ -8,108 +8,108 @@ readTime: string,
 publishDate: string,
 category: string,
 featured?: boolean;
-href: string,
-metrics?: {,
-label: string,
+href: string;
+metrics?: {
+label: string;
 value: string;
 }[];
 }
 
 const contentItems: ContentItem[] = [,
   {
-    id: 'ai-autonomous-cloud-ops-2026',',
-    title: 'AI Autonomous Cloud Operations 2026: Self-Healing Infrastructure Guide',',
-    description: 'Transform your cloud infrastructure with AI-powered self-healing systems, predictive maintenance, and zero-touch operations for 99.9% uptime.',',
-    type: 'blog',',
-    readTime: '18 min read',',
-    publishDate: 'January 20, 2026',',
-    category: 'Cloud Operations',',
-    featured: true,,
-    href: '/blog/ai-autonomous-cloud-operations-2026',',
+    id: 'ai-autonomous-cloud-ops-2026',
+    title: 'AI Autonomous Cloud Operations 2026: Self-Healing Infrastructure Guide',
+    description: 'Transform your cloud infrastructure with AI-powered self-healing systems, predictive maintenance, and zero-touch operations for 99.9% uptime.',
+    type: 'blog',
+    readTime: '18 min read',
+    publishDate: 'January 20, 2026',
+    category: 'Cloud Operations',
+    featured: true,
+    href: '/blog/ai-autonomous-cloud-operations-2026',
     metrics: [,
-      { label: 'Uptime', value: '99.9%' },
-      { label: 'Cost Reduction', value: '90%' },
-      { label: 'Operations', value: 'Zero-touch' };
+      { label: 'Uptime', value: '99.9%' }
+      { label: 'Cost Reduction', value: '90%' }
+      { label: 'Operations', value: 'Zero-touch' }
     ]
   },
   {
-    id: 'ai-fintech-transformation-2026',',
-    title: 'AI FinTech Transformation 2026: Complete Digital Banking Revolution',',
-    description: 'Revolutionize your financial services with AI-powered automation, achieving 95% process efficiency and $5M+ annual savings.',',
-    type: 'blog',',
-    readTime: '22 min read',',
-    publishDate: 'January 20, 2026',',
-    category: 'FinTech',',
-    featured: true,,
-    href: '/blog/ai-fintech-transformation-2026',',
+    id: 'ai-fintech-transformation-2026',
+    title: 'AI FinTech Transformation 2026: Complete Digital Banking Revolution',
+    description: 'Revolutionize your financial services with AI-powered automation, achieving 95% process efficiency and $5M+ annual savings.',
+    type: 'blog',
+    readTime: '22 min read',
+    publishDate: 'January 20, 2026',
+    category: 'FinTech',
+    featured: true,
+    href: '/blog/ai-fintech-transformation-2026',
     metrics: [,
-      { label: 'Automation', value: '95%' },
-      { label: 'Annual Savings', value: '$5M+' },
-      { label: 'Accuracy', value: '99.9%' };
+      { label: 'Automation', value: '95%' }
+      { label: 'Annual Savings', value: '$5M+' }
+      { label: 'Accuracy', value: '99.9%' }
     ]
   },
   {
-    id: 'ai-retail-automation-2026',',
-    title: 'AI Retail Automation 2026: $8M ROI Case Study',',
-    description: 'See how a Fortune 500 retailer achieved 98% automation, 300% productivity gains, and $8M annual ROI with AI retail automation.',',
-    type: 'case-study',',
-    readTime: '15 min read',',
-    publishDate: 'January 20, 2026',',
-    category: 'Retail',',
-    featured: true,,
-    href: '/case-studies/ai-retail-automation-2026',',
+    id: 'ai-retail-automation-2026',
+    title: 'AI Retail Automation 2026: $8M ROI Case Study',
+    description: 'See how a Fortune 500 retailer achieved 98% automation, 300% productivity gains, and $8M annual ROI with AI retail automation.',
+    type: 'case-study',
+    readTime: '15 min read',
+    publishDate: 'January 20, 2026',
+    category: 'Retail',
+    featured: true,
+    href: '/case-studies/ai-retail-automation-2026',
     metrics: [,
-      { label: 'Automation Rate', value: '98%' },
-      { label: 'Productivity', value: '300%' },
-      { label: 'Annual ROI', value: '$8M' };
+      { label: 'Automation Rate', value: '98%' }
+      { label: 'Productivity', value: '300%' }
+      { label: 'Annual ROI', value: '$8M' }
     ]
   },
   {
-    id: 'ai-sustainability-green-tech-2026',',
-    title: 'AI Sustainability & Green Tech 2026: Carbon-Neutral Operations',',
-    description: 'Achieve carbon-neutral AI operations with 80% energy reduction and $2M+ savings through sustainable technology.',',
-    type: 'blog',',
-    readTime: '18 min read',',
-    publishDate: 'January 20, 2026',',
-    category: 'Sustainability',',
-    featured: false,,
-    href: '/blog/ai-sustainability-green-tech-2026',',
+    id: 'ai-sustainability-green-tech-2026',
+    title: 'AI Sustainability & Green Tech 2026: Carbon-Neutral Operations',
+    description: 'Achieve carbon-neutral AI operations with 80% energy reduction and $2M+ savings through sustainable technology.',
+    type: 'blog',
+    readTime: '18 min read',
+    publishDate: 'January 20, 2026',
+    category: 'Sustainability',
+    featured: false,
+    href: '/blog/ai-sustainability-green-tech-2026',
     metrics: [,
-      { label: 'Energy Reduction', value: '80%' },
-      { label: 'Annual Savings', value: '$2M+' },
-      { label: 'Carbon Footprint', value: 'Neutral' };
+      { label: 'Energy Reduction', value: '80%' }
+      { label: 'Annual Savings', value: '$2M+' }
+      { label: 'Carbon Footprint', value: 'Neutral' }
     ]
   },
   {
-    id: 'ai-platform-architecture-2026',',
-    title: 'AI Platform Architecture 2026: Enterprise-Scale Infrastructure',',
-    description: 'Design and implement enterprise-scale AI platforms with microservices, edge computing, and autonomous scaling.',',
-    type: 'guide',',
-    readTime: '30 min read',',
-    publishDate: 'January 20, 2026',',
-    category: 'Architecture',',
-    featured: false,,
-    href: '/blog/ai-platform-architecture-2026',',
+    id: 'ai-platform-architecture-2026',
+    title: 'AI Platform Architecture 2026: Enterprise-Scale Infrastructure',
+    description: 'Design and implement enterprise-scale AI platforms with microservices, edge computing, and autonomous scaling.',
+    type: 'guide',
+    readTime: '30 min read',
+    publishDate: 'January 20, 2026',
+    category: 'Architecture',
+    featured: false,
+    href: '/blog/ai-platform-architecture-2026',
     metrics: [,
-      { label: 'Scalability', value: 'Enterprise' },
-      { label: 'Performance', value: '99.9%' },
-      { label: 'Integration', value: 'Seamless' };
+      { label: 'Scalability', value: 'Enterprise' }
+      { label: 'Performance', value: '99.9%' }
+      { label: 'Integration', value: 'Seamless' }
     ]
   },
   {
-    id: 'ai-finops-advanced-2026',',
-    title: 'AI FinOps Advanced 2026: Complete Financial Operations Automation',',
-    description: 'Master advanced AI FinOps with predictive cost optimization, automated financial reporting, and intelligent resource allocation.',',
-    type: 'guide',',
-    readTime: '20 min read',',
-    publishDate: 'January 20, 2026',',
-    category: 'FinOps',',
-    featured: false,,
-    href: '/blog/ai-finops-advanced-2026',',
+    id: 'ai-finops-advanced-2026',
+    title: 'AI FinOps Advanced 2026: Complete Financial Operations Automation',
+    description: 'Master advanced AI FinOps with predictive cost optimization, automated financial reporting, and intelligent resource allocation.',
+    type: 'guide',
+    readTime: '20 min read',
+    publishDate: 'January 20, 2026',
+    category: 'FinOps',
+    featured: false,
+    href: '/blog/ai-finops-advanced-2026',
     metrics: [,
-      { label: 'Cost Optimization', value: '70%' },
-      { label: 'Automation', value: '95%' },
-      { label: 'Accuracy', value: '99%' };
+      { label: 'Cost Optimization', value: '70%' }
+      { label: 'Automation', value: '95%' }
+      { label: 'Accuracy', value: '99%' }
     ]
   }
 ];
@@ -136,21 +136,21 @@ export default function EnhancedContentShowcase2026(): void {
 
   const getTypeColor = (type: string) => {,
 switch (type) {
-case 'blog': return 'bg-blue-100 text-blue-800',
-case 'case-study': return 'bg-green-100 text-green-800',
-case 'guide': return 'bg-purple-100 text-purple-800',
+case 'blog': return 'bg-blue-100 text-blue-800';
+case 'case-study': return 'bg-green-100 text-green-800';
+case 'guide': return 'bg-purple-100 text-purple-800';
 default: return 'bg-gray-100 text-gray-800';
 };
   };
 
   const getCategoryColor = (category: string) => {,
 switch (category) {
-case 'Cloud Operations': return 'bg-cyan-100 text-cyan-800',
-case 'FinTech': return 'bg-emerald-100 text-emerald-800',
-case 'Retail': return 'bg-orange-100 text-orange-800',
-case 'Sustainability': return 'bg-green-100 text-green-800',
-case 'Architecture': return 'bg-indigo-100 text-indigo-800',
-case 'FinOps': return 'bg-violet-100 text-violet-800',
+case 'Cloud Operations': return 'bg-cyan-100 text-cyan-800';
+case 'FinTech': return 'bg-emerald-100 text-emerald-800';
+case 'Retail': return 'bg-orange-100 text-orange-800';
+case 'Sustainability': return 'bg-green-100 text-green-800';
+case 'Architecture': return 'bg-indigo-100 text-indigo-800';
+case 'FinOps': return 'bg-violet-100 text-violet-800';
 default: return 'bg-gray-100 text-gray-800';
 };
   };

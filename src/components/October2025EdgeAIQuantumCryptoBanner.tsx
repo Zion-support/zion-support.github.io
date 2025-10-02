@@ -39,7 +39,7 @@ export default function October2025EdgeAIQuantumCryptoBanner(): void {
                 </div>
               </div>
               <p className="text-gray-300 mb-4">
-                Deploy intelligent edge computing systems with 5G networks achieving sub-10ms latency, 
+                Deploy intelligent edge computing systems with 5G networks achieving sub-10ms latency
                 80% bandwidth reduction, and 99.999% availability for mission-critical operations.
               </p>
               <div className="flex flex-wrap gap-2 mb-4">

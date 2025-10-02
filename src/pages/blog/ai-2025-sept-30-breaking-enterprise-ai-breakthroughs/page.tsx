@@ -15,7 +15,7 @@ export default function BreakingEnterpriseAIBreakthroughs2025(): React.JSX.Eleme
         <p className="text-zion-slate-light mb-8">8 production‑ready patterns: rollback, scorecards, consentless analytics, and more.</p>",
         <div className="prose prose-invert max-w-3xl">
           <p>
-            Explore eight enterprise‑ready patterns you can deploy now: runtime rollback, KPI‑linked scorecards,,
+            Explore eight enterprise‑ready patterns you can deploy now: runtime rollback, KPI‑linked scorecards
             consentless analytics, budget‑aware routing, on‑device aggregation, and more. Each pattern includes
             reference architecture notes and rollout guardrails.
           </p>

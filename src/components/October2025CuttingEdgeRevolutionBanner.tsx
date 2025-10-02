@@ -47,7 +47,7 @@ export default function October2025CuttingEdgeRevolutionBanner(): void {
                 Cognitive Security Mesh
               </h3>
               <p className="text-gray-400 text-lg mb-6">
-                Revolutionary zero-trust AI defense with 99.99% threat detection, &lt;50ms autonomous response, 
+                Revolutionary zero-trust AI defense with 99.99% threat detection, &lt;50ms autonomous response
                 and $2.8B in security savings through AI automation.
               </p>
             </div>
@@ -71,7 +71,7 @@ export default function October2025CuttingEdgeRevolutionBanner(): void {
                 Hyper-Personalization Engines
               </h3>
               <p className="text-gray-400 text-lg mb-6">
-                Real-time AI-driven personalization delivering 284% conversion lift, &lt;10ms latency, 
+                Real-time AI-driven personalization delivering 284% conversion lift, &lt;10ms latency
                 and $3.6B revenue growth through intelligent customer experiences.
               </p>
             </div>
@@ -95,7 +95,7 @@ export default function October2025CuttingEdgeRevolutionBanner(): void {
                 Autonomous FinOps Platform
               </h3>
               <p className="text-gray-400 text-lg mb-6">
-                AI-powered cloud cost optimization achieving 78% cost reduction, 96% automation, 
+                AI-powered cloud cost optimization achieving 78% cost reduction, 96% automation
                 and $1.9B in cloud savings with 99.9% uptime maintained.
               </p>
             </div>

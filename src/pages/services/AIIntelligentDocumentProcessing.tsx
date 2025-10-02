@@ -1,7 +1,5 @@
-import {
-Link
-} from "react-router-dom";";
-import Header from "../../components/Header";";
+import { Link } from "react-router-dom";
+import Header from "../../components/Header";
 
 const AIIntelligentDocumentProcessing = () => {
   return (
@@ -42,7 +40,7 @@ const AIIntelligentDocumentProcessing = () => {
             </h1>
 
             <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto leading-relaxed">
-              Transform manual document processing with AI achieving 98.5% accuracy, 95% automation, 
+              Transform manual document processing with AI achieving 98.5% accuracy, 95% automation
               and $2.8M+ annual savings. Extract, classify, and process any document type at scale 
               with GPT-4 Vision and Claude AI.
             </p>
@@ -151,7 +149,7 @@ const AIIntelligentDocumentProcessing = () => {
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4">Intelligent Extraction</h3>
                 <p className="text-zion-slate-light mb-4">
-                  Extract structured data from any document format—invoices, contracts, forms, receipts, 
+                  Extract structured data from any document format—invoices, contracts, forms, receipts
                   emails, and more. Handles handwriting, poor scans, and complex layouts.
                 </p>
                 <ul className="space-y-2 text-sm text-zion-slate-light">
@@ -210,7 +208,7 @@ const AIIntelligentDocumentProcessing = () => {
                   <div className="flex-1">
                     <h3 className="text-2xl font-bold text-white mb-3">Accounts Payable Automation</h3>
                     <p className="text-zion-slate-light mb-4">
-                      Process invoices 10x faster with 98% accuracy. Extract vendor, line items, PO matching, 
+                      Process invoices 10x faster with 98% accuracy. Extract vendor, line items, PO matching
                       GL coding, and approval routing automatically. Reduce processing costs from $15-20 per 
                       invoice to under $1.
                     </p>
