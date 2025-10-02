@@ -122,11 +122,12 @@ export default function HomePage() {
             </div>
             
             <h1 className="text-5xl md:text-7xl font-extrabold mb-8 bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent leading-tight">
-              Revolutionary AI Solutions for Enterprise
+              AI-Powered Solutions for Modern Business
             </h1>
             
             <p className="text-2xl md:text-3xl text-gray-300 mb-8 font-semibold max-w-3xl mx-auto">
-              Transform Your Business with 50,000x Performance, Universal Consciousness, and $200B+ Value Generation
+              Transform your business with cutting-edge AI services, micro SaaS solutions, and enterprise IT solutions. 
+              Drive growth, efficiency, and innovation with our proven technology stack.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -137,16 +138,16 @@ export default function HomePage() {
                 Get Started Today
               </a>
               <a 
-                href="/blog/ai-2026-april-mega-breakthrough-revolution" 
+                href="/services" 
                 className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
               >
-                Read Latest Breakthroughs →
+                View Our Services →
               </a>
               <a 
-                href="/case-studies/ai-2026-april-mega-breakthrough-10-billion-success" 
+                href="tel:+13024640950" 
                 className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
-                View $10B Success Story
+                Call +1 302 464 0950
               </a>
             </div>
             
@@ -172,6 +173,134 @@ export default function HomePage() {
           </div>
         </div>
       </header>
+
+      {/* Featured Services Section */}
+      <section className="py-20 px-6 bg-white">
+        <div className="container mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Featured Services</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Discover our most popular AI-powered solutions that are transforming businesses worldwide
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* AI Social Media Automation */}
+            <div className="bg-gradient-to-br from-purple-50 to-blue-50 p-8 rounded-xl border border-purple-200 hover:shadow-lg transition-shadow">
+              <div className="text-4xl mb-4">📱</div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">AI Social Media Automation</h3>
+              <p className="text-gray-600 mb-4">Automate your social media presence with AI-powered content creation, scheduling, and engagement.</p>
+              <div className="space-y-2 mb-6">
+                <div className="text-sm text-purple-600">✓ 300% increase in engagement</div>
+                <div className="text-sm text-purple-600">✓ 50% time savings</div>
+                <div className="text-sm text-purple-600">✓ Multi-platform management</div>
+              </div>
+              <div className="flex items-center justify-between">
+                <div className="text-2xl font-bold text-purple-600">$49/month</div>
+                <a href="/services/ai-social-media-automation" className="text-purple-600 hover:text-purple-800 font-medium">
+                  Learn More →
+                </a>
+              </div>
+            </div>
+
+            {/* AI Email Marketing Automation */}
+            <div className="bg-gradient-to-br from-green-50 to-teal-50 p-8 rounded-xl border border-green-200 hover:shadow-lg transition-shadow">
+              <div className="text-4xl mb-4">📧</div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">AI Email Marketing Automation</h3>
+              <p className="text-gray-600 mb-4">Revolutionize email marketing with AI-powered personalization, automation, and optimization.</p>
+              <div className="space-y-2 mb-6">
+                <div className="text-sm text-green-600">✓ 45% higher open rates</div>
+                <div className="text-sm text-green-600">✓ 60% more clicks</div>
+                <div className="text-sm text-green-600">✓ Automated campaigns</div>
+              </div>
+              <div className="flex items-center justify-between">
+                <div className="text-2xl font-bold text-green-600">$79/month</div>
+                <a href="/services/ai-email-marketing-automation" className="text-green-600 hover:text-green-800 font-medium">
+                  Learn More →
+                </a>
+              </div>
+            </div>
+
+            {/* AI Inventory Management */}
+            <div className="bg-gradient-to-br from-orange-50 to-red-50 p-8 rounded-xl border border-orange-200 hover:shadow-lg transition-shadow">
+              <div className="text-4xl mb-4">📦</div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">AI Inventory Management</h3>
+              <p className="text-gray-600 mb-4">Optimize inventory with AI-powered demand forecasting, automated reordering, and stock optimization.</p>
+              <div className="space-y-2 mb-6">
+                <div className="text-sm text-orange-600">✓ 95% forecast accuracy</div>
+                <div className="text-sm text-orange-600">✓ 40% cost reduction</div>
+                <div className="text-sm text-orange-600">✓ 80% fewer stockouts</div>
+              </div>
+              <div className="flex items-center justify-between">
+                <div className="text-2xl font-bold text-orange-600">$99/month</div>
+                <a href="/services/ai-inventory-management" className="text-orange-600 hover:text-orange-800 font-medium">
+                  Learn More →
+                </a>
+              </div>
+            </div>
+
+            {/* AI DevOps Automation */}
+            <div className="bg-gradient-to-br from-indigo-50 to-purple-50 p-8 rounded-xl border border-indigo-200 hover:shadow-lg transition-shadow">
+              <div className="text-4xl mb-4">🚀</div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">AI DevOps Automation</h3>
+              <p className="text-gray-600 mb-4">Revolutionize DevOps with AI-powered automation, intelligent monitoring, and predictive maintenance.</p>
+              <div className="space-y-2 mb-6">
+                <div className="text-sm text-indigo-600">✓ 50% faster deployments</div>
+                <div className="text-sm text-indigo-600">✓ 99.9% uptime</div>
+                <div className="text-sm text-indigo-600">✓ Automated rollbacks</div>
+              </div>
+              <div className="flex items-center justify-between">
+                <div className="text-2xl font-bold text-indigo-600">$199/month</div>
+                <a href="/services/ai-devops-automation" className="text-indigo-600 hover:text-indigo-800 font-medium">
+                  Learn More →
+                </a>
+              </div>
+            </div>
+
+            {/* AI Business Intelligence Platform */}
+            <div className="bg-gradient-to-br from-teal-50 to-cyan-50 p-8 rounded-xl border border-teal-200 hover:shadow-lg transition-shadow">
+              <div className="text-4xl mb-4">🧠</div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">AI Business Intelligence Platform</h3>
+              <p className="text-gray-600 mb-4">Transform data into actionable insights with AI-powered analytics, predictive modeling, and automated reporting.</p>
+              <div className="space-y-2 mb-6">
+                <div className="text-sm text-teal-600">✓ 85% faster decisions</div>
+                <div className="text-sm text-teal-600">✓ 90% prediction accuracy</div>
+                <div className="text-sm text-teal-600">✓ Natural language queries</div>
+              </div>
+              <div className="flex items-center justify-between">
+                <div className="text-2xl font-bold text-teal-600">$299/month</div>
+                <a href="/services/ai-business-intelligence-platform" className="text-teal-600 hover:text-teal-800 font-medium">
+                  Learn More →
+                </a>
+              </div>
+            </div>
+
+            {/* AI Customer Service Automation */}
+            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-xl border border-blue-200 hover:shadow-lg transition-shadow">
+              <div className="text-4xl mb-4">🎧</div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">AI Customer Service Automation</h3>
+              <p className="text-gray-600 mb-4">Transform customer support with intelligent automation and 24/7 AI-powered assistance.</p>
+              <div className="space-y-2 mb-6">
+                <div className="text-sm text-blue-600">✓ 300% ROI</div>
+                <div className="text-sm text-blue-600">✓ 60% cost reduction</div>
+                <div className="text-sm text-blue-600">✓ 24/7 support</div>
+              </div>
+              <div className="flex items-center justify-between">
+                <div className="text-2xl font-bold text-blue-600">$299/month</div>
+                <a href="/services/ai-customer-service-automation" className="text-blue-600 hover:text-blue-800 font-medium">
+                  Learn More →
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <div className="text-center mt-12">
+            <a href="/services" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-500 hover:to-purple-500 transition-colors">
+              View All Services
+            </a>
+          </div>
+        </div>
+      </section>
 
       {/* NEW DECEMBER 2026 ULTIMATE AUTONOMOUS REVOLUTION - MOST PROMINENT */}
       <December2026UltimateAutonomousBanner />

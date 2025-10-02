@@ -1559,7 +1559,7 @@ export const posts: BlogPost[] = [
   }
 
 // Sept 30, 2025 – Fresh articles to add and advertise on homepage
-posts.push([
+posts.push(
   {
     slug: "ai-safety-scorecards-2026",
     title: "AI Safety Scorecards 2026: KPIs, Budgets, Rollbacks",

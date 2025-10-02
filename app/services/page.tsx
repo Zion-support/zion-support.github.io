@@ -58,6 +58,76 @@ export default function ServicesPage() {
 
   const services = [
     {
+      title: 'AI Social Media Automation',
+      description: 'Automate your social media presence with AI-powered content creation, scheduling, and engagement',
+      icon: '📱',
+      features: [
+        '300% increase in engagement',
+        '50% time savings',
+        '24/7 automated posting',
+        'Multi-platform management'
+      ],
+      href: '/services/ai-social-media-automation',
+      pricing: '$49/month',
+      category: 'Micro SaaS'
+    },
+    {
+      title: 'AI Email Marketing Automation',
+      description: 'Revolutionize email marketing with AI-powered personalization, automation, and optimization',
+      icon: '📧',
+      features: [
+        '45% higher open rates',
+        '60% more clicks',
+        'Automated campaigns',
+        'Predictive analytics'
+      ],
+      href: '/services/ai-email-marketing-automation',
+      pricing: '$79/month',
+      category: 'Micro SaaS'
+    },
+    {
+      title: 'AI Inventory Management',
+      description: 'Optimize inventory with AI-powered demand forecasting, automated reordering, and stock optimization',
+      icon: '📦',
+      features: [
+        '95% forecast accuracy',
+        '40% cost reduction',
+        '80% fewer stockouts',
+        'Automated reordering'
+      ],
+      href: '/services/ai-inventory-management',
+      pricing: '$99/month',
+      category: 'Micro SaaS'
+    },
+    {
+      title: 'AI DevOps Automation',
+      description: 'Revolutionize DevOps with AI-powered automation, intelligent monitoring, and predictive maintenance',
+      icon: '🚀',
+      features: [
+        '50% faster deployments',
+        '99.9% uptime',
+        'Automated rollbacks',
+        'Predictive monitoring'
+      ],
+      href: '/services/ai-devops-automation',
+      pricing: '$199/month',
+      category: 'IT Services'
+    },
+    {
+      title: 'AI Business Intelligence Platform',
+      description: 'Transform data into actionable insights with AI-powered analytics, predictive modeling, and automated reporting',
+      icon: '🧠',
+      features: [
+        '85% faster decisions',
+        '90% prediction accuracy',
+        'Natural language queries',
+        'Real-time dashboards'
+      ],
+      href: '/services/ai-business-intelligence-platform',
+      pricing: '$299/month',
+      category: 'Advanced AI'
+    },
+    {
       title: 'AI Customer Service Automation',
       description: 'Transform customer support with intelligent automation and 24/7 AI-powered assistance',
       icon: '🎧',
@@ -98,20 +168,6 @@ export default function ServicesPage() {
       href: '/services/cloud-migration-service',
       pricing: 'Custom Pricing',
       category: 'IT Services'
-    },
-    {
-      title: 'AI Business Intelligence',
-      description: 'Transform data into actionable insights with AI-powered analytics and reporting',
-      icon: '📊',
-      features: [
-        '400% ROI',
-        '70% Time Savings',
-        'Real-time Analytics',
-        '21 Day Trial'
-      ],
-      href: '/services/ai-business-intelligence',
-      pricing: '$199/month',
-      category: 'Advanced AI'
     },
     {
       title: 'AI Cybersecurity Platform',
