@@ -98,5 +98,9 @@ export default function GenAIReliabilityScorecards2027Page() {
   );
 }
 
+<<<<<<< HEAD
+// duplicate removed: legacy block deleted to avoid multiple defaults
+=======
 // Duplicate block removed
 
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b7d4

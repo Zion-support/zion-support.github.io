@@ -10,6 +10,8 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+<<<<<<< HEAD
+=======
     slug: "ai-executive-playbook-2027",
     title: "AI Executive Playbook 2027: Fund, Govern, and Scale with KPIs",
     description: "Executive‑ready roadmap: KPI‑linked scorecards, budgeted actions, and governance that accelerates delivery.",
@@ -307,6 +309,7 @@ export const posts: BlogPost[] = [
     readTime: "9 min read"
   },
   {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b7d4
     slug: "ai-2026-reliable-genai-platform",
     title: "Reliable GenAI Platform 2026: SLAs, Budgets, and Rollback",
     description: "Blueprint for a dependable GenAI platform with quality tiers, budgets, evals, and instant rollback tied to KPIs.",

@@ -36,7 +36,7 @@
     "performance:check": "pnpm build && pnpm serve & sleep 5 && pnpm performance:audit",
     "optimize": "node scripts/optimize-build.js",
     "build:netlify": "pnpm run build:optimized",
-    "build:ci": "pnpm run lint && pnpm run build:no-check && pnpm run test:ci",
+    "build:ci": "pnpm run lint && pnpm run build && pnpm run test:ci",
     "health-check": "pnpm run type-check && pnpm run lint && pnpm run build:no-check",
     "preview:optimized": "vite preview --port 3000 --host",
     "audit:performance": "lighthouse http://localhost:3000 --output=html --output-path=./lighthouse-report.html",

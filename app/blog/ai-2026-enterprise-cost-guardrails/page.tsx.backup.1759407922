@@ -25,4 +25,8 @@ export default function Page() {
       </p>
     </main>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b7d4
