@@ -1,16 +1,23 @@
 User-agent: *
 Allow: /
+Allow: /blog/
+Allow: /services/
+Allow: /case-studies/
+Allow: /contact/
 
-Sitemap: https://bolt.new.zion.app/sitemap.xml
-
-# Block access to admin areas
-Disallow: /admin/
 Disallow: /api/
-Disallow: /_next/
-Disallow: /private/
+Disallow: /admin/
+Disallow: /*.json$
+Disallow: /*?*
 
-# Allow access to important pages
+Sitemap: https://ziontechgroup.com/sitemap.xml
+
+# Specific bot rules
+User-agent: Googlebot
 Allow: /
-Allow: /about
-Allow: /services
-Allow: /contact
+
+User-agent: Bingbot
+Allow: /
+
+# Crawl rate
+Crawl-delay: 1
