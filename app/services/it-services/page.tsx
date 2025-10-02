@@ -232,6 +232,244 @@ export default function ITServicesPage() {
       link: '/services/it-services/database-management',
       useCases: ['Performance Optimization', 'Migration', 'High Availability', 'Security'],
       technologies: ['PostgreSQL', 'MySQL', 'MongoDB', 'Redis', 'Oracle', 'SQL Server']
+    },
+    {
+      name: 'IT Support & Helpdesk',
+      description: 'Comprehensive IT support and helpdesk services',
+      icon: Users,
+      features: [
+        '24/7 technical support and helpdesk',
+        'Remote desktop and troubleshooting',
+        'Software installation and updates',
+        'User training and documentation',
+        'IT asset management and inventory'
+      ],
+      pricing: '$500 - $5,000/month',
+      delivery: '1 week',
+      category: 'Support',
+      marketPrice: '$1,000-10,000/month',
+      benefits: 'Reduce IT support tickets by 60%'
+    },
+    {
+      name: 'Mobile & Web Development',
+      description: 'Custom web and mobile application development',
+      icon: Smartphone,
+      features: [
+        'Responsive web application development',
+        'Native and cross-platform mobile apps',
+        'API development and integration',
+        'Performance optimization',
+        'Maintenance and support'
+      ],
+      pricing: '$5,000 - $100,000/project',
+      delivery: '4-16 weeks',
+      category: 'Development',
+      marketPrice: '$15,000-200,000/project',
+      benefits: 'Modern, scalable applications with great UX'
+    },
+    {
+      name: 'Business Intelligence & Analytics',
+      description: 'Data analytics and business intelligence solutions',
+      icon: BarChart3,
+      features: [
+        'Data warehouse design and implementation',
+        'ETL/ELT pipeline development',
+        'Dashboard and reporting solutions',
+        'Predictive analytics and machine learning',
+        'Data governance and quality management'
+      ],
+      pricing: '$8,000 - $75,000/project',
+      delivery: '6-20 weeks',
+      category: 'Analytics',
+      marketPrice: '$20,000-150,000/project',
+      benefits: 'Make data-driven decisions with real-time insights'
+    },
+    {
+      name: 'Edge Computing Infrastructure',
+      description: 'Distributed computing infrastructure for low-latency applications',
+      icon: Server,
+      features: [
+        'Edge node deployment and management',
+        'Content delivery network optimization',
+        'Real-time data processing at the edge',
+        'IoT device connectivity and management',
+        'Edge security and access control'
+      ],
+      pricing: '$10,000 - $80,000/project',
+      delivery: '8-16 weeks',
+      category: 'Edge Computing',
+      marketPrice: '$20,000-150,000/project',
+      benefits: 'Reduce latency by 70% and improve user experience'
+    },
+    {
+      name: 'Quantum Computing Integration',
+      description: 'Quantum computing infrastructure and algorithm development',
+      icon: Cpu,
+      features: [
+        'Quantum algorithm development and optimization',
+        'Quantum hardware integration and management',
+        'Hybrid classical-quantum system design',
+        'Quantum cryptography implementation',
+        'Performance benchmarking and optimization'
+      ],
+      pricing: '$50,000 - $500,000/project',
+      delivery: '12-36 weeks',
+      category: 'Quantum Computing',
+      marketPrice: '$100,000-1,000,000/project',
+      benefits: 'Achieve exponential speedup for complex computational problems'
+    },
+    {
+      name: 'Blockchain Infrastructure Services',
+      description: 'Enterprise blockchain development and infrastructure management',
+      icon: Shield,
+      features: [
+        'Private blockchain network setup',
+        'Smart contract development and deployment',
+        'Consensus mechanism implementation',
+        'Blockchain security and monitoring',
+        'Integration with existing systems'
+      ],
+      pricing: '$15,000 - $120,000/project',
+      delivery: '10-24 weeks',
+      category: 'Blockchain',
+      marketPrice: '$30,000-200,000/project',
+      benefits: 'Increase transparency and reduce transaction costs by 60%'
+    },
+    {
+      name: '5G Network Implementation',
+      description: '5G network infrastructure design and implementation services',
+      icon: Network,
+      features: [
+        '5G network architecture design',
+        'Small cell deployment and optimization',
+        'Network slicing and virtualization',
+        'Performance monitoring and optimization',
+        'Integration with existing infrastructure'
+      ],
+      pricing: '$25,000 - $200,000/project',
+      delivery: '12-32 weeks',
+      category: '5G Networks',
+      marketPrice: '$50,000-400,000/project',
+      benefits: 'Enable ultra-fast connectivity with 10x speed improvement'
+    },
+    {
+      name: 'Zero Trust Security Architecture',
+      description: 'Comprehensive zero trust security implementation and management',
+      icon: Shield,
+      features: [
+        'Identity and access management (IAM)',
+        'Micro-segmentation implementation',
+        'Continuous security monitoring',
+        'Privileged access management',
+        'Security orchestration and automation'
+      ],
+      pricing: '$20,000 - $150,000/project',
+      delivery: '12-24 weeks',
+      category: 'Zero Trust Security',
+      marketPrice: '$40,000-300,000/project',
+      benefits: 'Reduce security breaches by 90% with comprehensive protection'
+    },
+    {
+      name: 'Hybrid Cloud Management',
+      description: 'Seamless hybrid cloud infrastructure management and optimization',
+      icon: Cloud,
+      features: [
+        'Multi-cloud orchestration and management',
+        'Workload placement optimization',
+        'Cost optimization across cloud providers',
+        'Disaster recovery and backup strategies',
+        'Compliance and governance management'
+      ],
+      pricing: '$12,000 - $100,000/project',
+      delivery: '8-20 weeks',
+      category: 'Hybrid Cloud',
+      marketPrice: '$25,000-180,000/project',
+      benefits: 'Optimize costs by 40% while improving flexibility and performance'
+    },
+    {
+      name: 'IoT Platform Development',
+      description: 'Comprehensive IoT platform development and device management',
+      icon: Zap,
+      features: [
+        'IoT device connectivity and management',
+        'Data ingestion and processing pipelines',
+        'Real-time analytics and monitoring',
+        'Device security and firmware management',
+        'Integration with business applications'
+      ],
+      pricing: '$18,000 - $140,000/project',
+      delivery: '10-24 weeks',
+      category: 'IoT Platform',
+      marketPrice: '$35,000-250,000/project',
+      benefits: 'Connect and manage thousands of devices with 99.9% reliability'
+    },
+    {
+      name: 'API Gateway & Management',
+      description: 'Enterprise API gateway setup and comprehensive API management',
+      icon: Globe,
+      features: [
+        'API gateway configuration and optimization',
+        'API security and authentication',
+        'Rate limiting and traffic management',
+        'API analytics and monitoring',
+        'Developer portal and documentation'
+      ],
+      pricing: '$8,000 - $60,000/project',
+      delivery: '6-12 weeks',
+      category: 'API Management',
+      marketPrice: '$15,000-100,000/project',
+      benefits: 'Improve API performance by 50% and reduce security risks'
+    },
+    {
+      name: 'Disaster Recovery & Business Continuity',
+      description: 'Comprehensive disaster recovery planning and implementation',
+      icon: Shield,
+      features: [
+        'Business continuity planning and testing',
+        'Backup and recovery system implementation',
+        'Failover and redundancy setup',
+        'Recovery time objective (RTO) optimization',
+        'Disaster recovery testing and validation'
+      ],
+      pricing: '$15,000 - $120,000/project',
+      delivery: '8-16 weeks',
+      category: 'Disaster Recovery',
+      marketPrice: '$30,000-200,000/project',
+      benefits: 'Minimize downtime to less than 4 hours with 99.9% recovery success'
+    },
+    {
+      name: 'IT Governance & Compliance',
+      description: 'Comprehensive IT governance framework and compliance management',
+      icon: Shield,
+      features: [
+        'IT governance framework implementation',
+        'Compliance monitoring and reporting',
+        'Risk assessment and management',
+        'Policy development and enforcement',
+        'Audit preparation and support'
+      ],
+      pricing: '$10,000 - $80,000/project',
+      delivery: '6-16 weeks',
+      category: 'IT Governance',
+      marketPrice: '$20,000-140,000/project',
+      benefits: 'Ensure 100% compliance with industry standards and regulations'
+    },
+    {
+      name: 'Digital Transformation Consulting',
+      description: 'End-to-end digital transformation strategy and implementation',
+      icon: Zap,
+      features: [
+        'Digital strategy development and planning',
+        'Technology assessment and roadmap creation',
+        'Change management and training',
+        'Process automation and optimization',
+        'Performance measurement and optimization'
+      ],
+      pricing: '$25,000 - $200,000/project',
+      delivery: '16-40 weeks',
+      category: 'Digital Transformation',
+      marketPrice: '$50,000-400,000/project',
+      benefits: 'Achieve 300% improvement in operational efficiency and customer satisfaction'
     }
   ];
 

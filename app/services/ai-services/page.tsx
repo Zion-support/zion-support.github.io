@@ -225,6 +225,195 @@ export default function AIServicesPage() {
       link: '/services/ai-services/customer-service',
       useCases: ['Customer Support', 'Sales Assistance', 'Technical Support', 'FAQ Automation'],
       technologies: ['GPT', 'BERT', 'Dialogflow', 'Rasa']
+      marketPrice: '$6,000-40,000/month',
+      benefits: 'Automate 70% of repetitive tasks, saving 20+ hours weekly'
+    },
+    {
+      name: 'AI-Powered Supply Chain Optimizer',
+      description: 'Intelligent supply chain management with predictive analytics and optimization',
+      icon: Database,
+      features: [
+        'Demand forecasting with 95% accuracy',
+        'Supplier risk assessment and monitoring',
+        'Route optimization and logistics planning',
+        'Inventory optimization across multiple locations',
+        'Real-time supply chain visibility and alerts'
+      ],
+      pricing: '$5,000 - $35,000/month',
+      delivery: '6-12 weeks',
+      category: 'Supply Chain AI',
+      marketPrice: '$10,000-60,000/month',
+      benefits: 'Reduce supply chain costs by 25% and improve delivery times by 40%'
+    },
+    {
+      name: 'AI Financial Risk Assessment',
+      description: 'Advanced machine learning models for financial risk analysis and compliance',
+      icon: Shield,
+      features: [
+        'Credit risk scoring and assessment',
+        'Market risk analysis and portfolio optimization',
+        'Fraud detection and prevention',
+        'Regulatory compliance monitoring',
+        'Real-time risk alerts and reporting'
+      ],
+      pricing: '$8,000 - $50,000/month',
+      delivery: '8-16 weeks',
+      category: 'FinTech AI',
+      marketPrice: '$15,000-100,000/month',
+      benefits: 'Reduce financial risks by 60% and ensure regulatory compliance'
+    },
+    {
+      name: 'AI-Powered Healthcare Diagnostics',
+      description: 'Medical image analysis and diagnostic assistance using advanced AI models',
+      icon: Eye,
+      features: [
+        'Medical image analysis (X-ray, MRI, CT scans)',
+        'Disease detection and classification',
+        'Treatment recommendation systems',
+        'Patient risk stratification',
+        'Integration with EMR systems'
+      ],
+      pricing: '$15,000 - $100,000/month',
+      delivery: '12-24 weeks',
+      category: 'Healthcare AI',
+      marketPrice: '$30,000-200,000/month',
+      benefits: 'Improve diagnostic accuracy by 40% and reduce misdiagnosis by 80%'
+    },
+    {
+      name: 'AI Energy Management System',
+      description: 'Smart energy optimization for buildings and industrial facilities',
+      icon: Zap,
+      features: [
+        'Energy consumption prediction and optimization',
+        'Renewable energy integration management',
+        'Demand response and load balancing',
+        'Equipment maintenance prediction',
+        'Carbon footprint tracking and optimization'
+      ],
+      pricing: '$4,000 - $25,000/month',
+      delivery: '6-10 weeks',
+      category: 'Energy AI',
+      marketPrice: '$8,000-45,000/month',
+      benefits: 'Reduce energy costs by 35% and carbon footprint by 50%'
+    },
+    {
+      name: 'AI-Powered Talent Acquisition',
+      description: 'Intelligent recruitment and candidate matching system',
+      icon: Users,
+      features: [
+        'Resume parsing and candidate screening',
+        'Skills matching and job fit analysis',
+        'Interview scheduling and coordination',
+        'Candidate ranking and recommendation',
+        'Diversity and inclusion analytics'
+      ],
+      pricing: '$2,500 - $15,000/month',
+      delivery: '4-8 weeks',
+      category: 'HR AI',
+      marketPrice: '$5,000-30,000/month',
+      benefits: 'Reduce hiring time by 50% and improve candidate quality by 60%'
+    },
+    {
+      name: 'AI Quality Control System',
+      description: 'Automated quality inspection and defect detection for manufacturing',
+      icon: Eye,
+      features: [
+        'Real-time visual inspection and defect detection',
+        'Quality metrics tracking and analysis',
+        'Predictive quality maintenance',
+        'Root cause analysis and reporting',
+        'Integration with manufacturing systems'
+      ],
+      pricing: '$6,000 - $40,000/month',
+      delivery: '8-12 weeks',
+      category: 'Manufacturing AI',
+      marketPrice: '$12,000-75,000/month',
+      benefits: 'Improve product quality by 45% and reduce defect rates by 70%'
+    },
+    {
+      name: 'AI-Powered Market Research',
+      description: 'Intelligent market analysis and competitive intelligence platform',
+      icon: BarChart3,
+      features: [
+        'Market trend analysis and forecasting',
+        'Competitor analysis and monitoring',
+        'Customer sentiment analysis',
+        'Price optimization recommendations',
+        'Market opportunity identification'
+      ],
+      pricing: '$3,500 - $20,000/month',
+      delivery: '4-8 weeks',
+      category: 'Market Research AI',
+      marketPrice: '$7,000-35,000/month',
+      benefits: 'Make data-driven market decisions with 90% accuracy'
+    },
+    {
+      name: 'AI Autonomous Vehicle Fleet Management',
+      description: 'Intelligent fleet management and route optimization for autonomous vehicles',
+      icon: Globe,
+      features: [
+        'Route optimization and traffic prediction',
+        'Vehicle maintenance scheduling',
+        'Fuel efficiency optimization',
+        'Real-time fleet monitoring',
+        'Safety compliance and reporting'
+      ],
+      pricing: '$10,000 - $75,000/month',
+      delivery: '10-20 weeks',
+      category: 'Autonomous Vehicles',
+      marketPrice: '$20,000-150,000/month',
+      benefits: 'Reduce operational costs by 40% and improve safety by 80%'
+    },
+    {
+      name: 'AI-Powered Cybersecurity Platform',
+      description: 'Advanced threat detection and response using machine learning',
+      icon: Shield,
+      features: [
+        'Real-time threat detection and analysis',
+        'Behavioral anomaly detection',
+        'Automated incident response',
+        'Vulnerability assessment and prioritization',
+        'Security posture monitoring'
+      ],
+      pricing: '$7,000 - $45,000/month',
+      delivery: '8-16 weeks',
+      category: 'Cybersecurity AI',
+      marketPrice: '$15,000-90,000/month',
+      benefits: 'Reduce security incidents by 85% and response time by 90%'
+    },
+    {
+      name: 'AI Personalization Engine',
+      description: 'Real-time personalization for websites, apps, and digital experiences',
+      icon: Users,
+      features: [
+        'Behavioral analysis and user profiling',
+        'Real-time content personalization',
+        'Product recommendation optimization',
+        'A/B testing and experimentation',
+        'Cross-platform personalization sync'
+      ],
+      pricing: '$4,000 - $25,000/month',
+      delivery: '6-10 weeks',
+      category: 'Personalization AI',
+      marketPrice: '$8,000-45,000/month',
+      benefits: 'Increase conversion rates by 35% and user engagement by 60%'
+    },
+    {
+      name: 'AI-Powered Climate Analytics',
+      description: 'Climate risk assessment and environmental impact analysis platform',
+      icon: Globe,
+      features: [
+        'Climate risk modeling and assessment',
+        'Environmental impact tracking',
+        'Carbon credit optimization',
+        'Weather prediction and planning',
+        'Sustainability reporting automation'
+      ],
+      pricing: '$5,000 - $30,000/month',
+      delivery: '8-14 weeks',
+      category: 'Climate AI',
+      marketPrice: '$10,000-55,000/month',
+      benefits: 'Optimize environmental strategies and reduce climate risks by 50%'
     }
   ];
 
