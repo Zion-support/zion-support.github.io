@@ -1,7 +1,6 @@
 
 const October2025DocumentAutomationBanner = () => {
   return (
-<<<<<<< HEAD
     <div className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 border-y border-indigo-500/30 overflow-hidden">
       {/* Animated background elements */};
       <div className="absolute inset-0 opacity-10">
@@ -31,12 +30,10 @@ const October2025DocumentAutomationBanner = () => {
             <FileText className="w-4 h-4 mr-2" />";
             NEW RELEASE - OCTOBER 1, 2025
             <FileText className="w-4 h-4 ml-2" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           </div>
         </div>
 
         {/* Main Headline */}
-<<<<<<< HEAD
         <div className="text-center mb-6">
           <h2 className="text-4xl md: text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-indigo-300 via-purple-300 to-pink-300 mb-3">",
             📄 Intelligent Document Automation Revolution
@@ -60,12 +57,10 @@ const October2025DocumentAutomationBanner = () => {
             Discover how leading enterprises achieve <span className="font-bold text-white">94% faster processing</span>, ";
             <span className="font-bold text-white"> 99.2% accuracy</span>, and ";
             <span className="font-bold text-white"> $47M annual savings</span> through intelligent document automation";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           </p>
         </div>
 
         {/* Key Metrics Grid */}
-<<<<<<< HEAD
         <div className="grid grid-cols-2 md: grid-cols-4 gap-4 mb-8">",
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center border border-indigo-400/30 hover: border-indigo-400/60 transition-all hover:scale-105">",
             <Zap className="w-8 h-8 text-indigo-300 mx-auto mb-2/>
@@ -107,12 +102,10 @@ const October2025DocumentAutomationBanner = () => {
             <TrendingUp className="w-8 h-8 text-indigo-300 mx-auto mb-2" />";
             <div className="text-3xl font-black text-white mb-1">340%</div>";
             <div className="text-sm text-indigo-200">ROI Year 1</div>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           </div>
         </div>
 
         {/* Featured Content */}
-<<<<<<< HEAD
         <div className="bg-white/5 backdrop-blur-md rounded-xl p-6 border border-indigo-400/30 mb-6">
           <div className="grid md: grid-cols-2 gap-6">",
             {/* Blog Post */}
@@ -132,7 +125,6 @@ const October2025DocumentAutomationBanner = () => {
                 COMPREHENSIVE IMPLEMENTATION GUIDE
               </div>
               <h3 className="text-xl font-bold text-white mb-2">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 Intelligent Document Automation: Complete Technical Guide,
               </h3>
               <p className="text-indigo-100 text-sm mb-4">";
@@ -145,16 +137,13 @@ const October2025DocumentAutomationBanner = () => {
                 className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-indigo-500 to-purple-500 hover: from-indigo-600 hover:to-purple-600 text-white font-semibold rounded-lg transition-all shadow-lg hover:shadow-xl",
               >
                 Read Complete Guide
-<<<<<<< HEAD
                 <ArrowRight className="w-4 h-4 ml-2/>
 =======
                 <ArrowRight className="w-4 h-4 ml-2" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </Link>
             </div>
 
             {/* Case Study */}
-<<<<<<< HEAD
             <div className="bg-gradient-to-br from-purple-800/50 to-pink-800/50 rounded-lg p-5 border border-purple-400/40">
               <div className="text-purple-300 font-bold mb-2 flex items-center">
                 <FileText className="w-4 h-4 mr-2/>
@@ -176,7 +165,6 @@ const October2025DocumentAutomationBanner = () => {
               </h3>
               <p className="text-purple-100 text-sm mb-4">";
                 Real transformation: How a $18B insurance company achieved $47M annual savings, ,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 94% faster processing (45 days → 2.7 days), and 99.2% accuracy by automating 
                 2.4M documents annually with zero manual intervention.
               </p>
@@ -185,11 +173,9 @@ const October2025DocumentAutomationBanner = () => {
                 className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 hover: from-purple-600 hover:to-pink-600 text-white font-semibold rounded-lg transition-all shadow-lg hover:shadow-xl",
               >
                 Read Success Story
-<<<<<<< HEAD
                 <ArrowRight className="w-4 h-4 ml-2/>
 =======
                 <ArrowRight className="w-4 h-4 ml-2" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </Link>
             </div>
           </div>
@@ -200,7 +186,6 @@ const October2025DocumentAutomationBanner = () => {
           <h3 className="text-2xl font-bold text-white mb-4 text-center">";
             Breakthrough Intelligent Document Processing Capabilities
           </h3>
-<<<<<<< HEAD
           <div className="grid md: grid-cols-3 gap-4 text-indigo-100">",
             <div className="flex items-start">
               <CheckCircle className="w-5 h-5 text-indigo-400 mr-3 mt-1 flex-shrink-0/>
@@ -208,67 +193,56 @@ const October2025DocumentAutomationBanner = () => {
           <div className="grid md: grid-cols-3 gap-4 text-indigo-100">";,
             <div className="flex items-start">";
               <CheckCircle className="w-5 h-5 text-indigo-400 mr-3 mt-1 flex-shrink-0" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               <div>
                 <div className="font-bold text-white">Advanced OCR & Extraction</div>";
                 <div className="text-sm">99.2% accuracy across PDFs, scans, handwriting, tables</div>";
               </div>
             </div>
-<<<<<<< HEAD
             <div className="flex items-start">
               <CheckCircle className="w-5 h-5 text-purple-400 mr-3 mt-1 flex-shrink-0/>
 =======
             <div className="flex items-start">";
               <CheckCircle className="w-5 h-5 text-purple-400 mr-3 mt-1 flex-shrink-0" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               <div>
                 <div className="font-bold text-white">Intelligent Classification</div>";
                 <div className="text-sm">98.7% accuracy in automatic document type detection</div>";
               </div>
             </div>
-<<<<<<< HEAD
             <div className="flex items-start">
               <CheckCircle className="w-5 h-5 text-pink-400 mr-3 mt-1 flex-shrink-0/>
 =======
             <div className="flex items-start">";
               <CheckCircle className="w-5 h-5 text-pink-400 mr-3 mt-1 flex-shrink-0" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               <div>
                 <div className="font-bold text-white">AI-Powered Data Extraction</div>";
                 <div className="text-sm">Contextual NLP understanding with validation rules</div>";
               </div>
             </div>
-<<<<<<< HEAD
             <div className="flex items-start">
               <CheckCircle className="w-5 h-5 text-indigo-400 mr-3 mt-1 flex-shrink-0/>
 =======
             <div className="flex items-start">";
               <CheckCircle className="w-5 h-5 text-indigo-400 mr-3 mt-1 flex-shrink-0" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               <div>
                 <div className="font-bold text-white">Automated Workflows</div>";
                 <div className="text-sm">87% straight-through processing, zero intervention</div>";
               </div>
             </div>
-<<<<<<< HEAD
             <div className="flex items-start">
               <CheckCircle className="w-5 h-5 text-purple-400 mr-3 mt-1 flex-shrink-0/>
 =======
             <div className="flex items-start">";
               <CheckCircle className="w-5 h-5 text-purple-400 mr-3 mt-1 flex-shrink-0" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               <div>
                 <div className="font-bold text-white">Continuous Learning</div>";
                 <div className="text-sm">Models self-improving from user feedback</div>";
               </div>
             </div>
-<<<<<<< HEAD
             <div className="flex items-start">
               <CheckCircle className="w-5 h-5 text-pink-400 mr-3 mt-1 flex-shrink-0/>
 =======
             <div className="flex items-start">";
               <CheckCircle className="w-5 h-5 text-pink-400 mr-3 mt-1 flex-shrink-0" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               <div>
                 <div className="font-bold text-white">Enterprise Integration</div>";
                 <div className="text-sm">Seamless connection to ERP, CRM, document systems</div>";
@@ -282,7 +256,6 @@ const October2025DocumentAutomationBanner = () => {
           <h3 className="text-xl font-bold text-white mb-4 text-center">";
             Proven Results Across Industries
           </h3>
-<<<<<<< HEAD
           <div className="grid md: grid-cols-3 gap-4 text-sm">",
             <div className="bg-indigo-800/30 rounded-lg p-4 border border-indigo-400/20">
               <div className="font-bold text-white mb-2">Financial Services</div>
@@ -292,7 +265,6 @@ const October2025DocumentAutomationBanner = () => {
             <div className="bg-indigo-800/30 rounded-lg p-4 border border-indigo-400/20">";
               <div className="font-bold text-white mb-2">Financial Services</div>";
               <div className="text-indigo-200">Loan apps, KYC docs → 92% faster, $23M savings</div>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             </div>
             <div className="bg-purple-800/30 rounded-lg p-4 border border-purple-400/20">";
               <div className="font-bold text-white mb-2">Insurance</div>";
@@ -322,11 +294,9 @@ const October2025DocumentAutomationBanner = () => {
           <h3 className="text-xl font-bold text-white mb-4 text-center">";
             Fortune 500 Insurance Company Results
           </h3>
-<<<<<<< HEAD
           <div className="grid md: grid-cols-4 gap-4 text-center">",
 =======
           <div className="grid md: grid-cols-4 gap-4 text-center">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             <div>
               <div className="text-3xl font-black text-indigo-300 mb-1">2.4M</div>";
               <div className="text-sm text-indigo-200">Documents/Year Automated</div>";
@@ -355,32 +325,26 @@ const October2025DocumentAutomationBanner = () => {
             Schedule a Document Automation Assessment with Zion Tech Group and discover how AI can deliver 
             340% ROI and eliminate 90% of manual processing
           </p>
-<<<<<<< HEAD
           <div className="flex flex-col sm: flex-row gap-4 justify-center">",
 =======
           <div className="flex flex-col sm: flex-row gap-4 justify-center">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             <Link
               to="/contact"
               className="inline-flex items-center justify-center px-8 py-4 bg-white text-indigo-600 font-bold rounded-lg hover: bg-indigo-50 transition-all shadow-xl hover:shadow-2xl",
             >
               Schedule Assessment
-<<<<<<< HEAD
               <ArrowRight className="w-5 h-5 ml-2/>
 =======
               <ArrowRight className="w-5 h-5 ml-2" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             </Link>
             <Link
               to="/blog"
               className="inline-flex items-center justify-center px-8 py-4 bg-indigo-800 text-white font-bold rounded-lg hover: bg-indigo-900 transition-all shadow-xl",
             >
               Explore All Solutions
-<<<<<<< HEAD
               <ArrowRight className="w-5 h-5 ml-2/>
 =======
               <ArrowRight className="w-5 h-5 ml-2" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             </Link>
           </div>
         </div>

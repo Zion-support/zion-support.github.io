@@ -1,269 +1,227 @@
 import React from 'react';
-import { Metadata } from 'next';
 import Link from 'next/link';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Sitemap - Zion Tech Group',
-  description: 'Complete sitemap of Zion Tech Group website. Find all our AI services, micro SaaS solutions, IT services, and resources.',
-  robots: {
-    index: true,
-    follow: true,
-  },
+  description: 'Navigate Zion Tech Group\'s website with our comprehensive sitemap. Find all pages, services, and resources easily.',
+  keywords: 'sitemap, website navigation, pages, services, resources',
 };
 
 export default function SitemapPage() {
-  const currentYear = new Date().getFullYear();
-  
-  const mainPages = [
-    { url: '/', title: 'Home' },
-    { url: '/about', title: 'About Us' },
-    { url: '/contact', title: 'Contact' },
-    { url: '/services', title: 'All Services' },
-    { url: '/solutions', title: 'Solutions' },
-    { url: '/enterprise', title: 'Enterprise Solutions' },
-    { url: '/pricing', title: 'Pricing' },
-    { url: '/support', title: 'Support' },
-    { url: '/privacy', title: 'Privacy Policy' },
-    { url: '/terms', title: 'Terms of Service' },
-    { url: '/security', title: 'Security' },
-  ];
-
-  const serviceCategories = [
-    {
-      category: 'AI Services',
-      url: '/services/ai-services',
-      services: [
-        { url: '/services/ai-content-optimization-platform', title: 'AI Content Optimization Platform' },
-        { url: '/services/ai-financial-forecasting-suite', title: 'AI Financial Forecasting Suite' },
-        { url: '/services/ai-customer-insights-platform', title: 'AI Customer Insights Platform' },
-        { url: '/services/ai-financial-analysis-platform', title: 'AI Financial Analysis Platform' },
-        { url: '/services/ai-marketing-studio', title: 'AI Marketing Studio' },
-        { url: '/services/ai-workflow-automation-platform', title: 'AI Workflow Automation Platform' },
-        { url: '/services/ai-cybersecurity-automation-suite', title: 'AI Cybersecurity Automation Suite' },
-        { url: '/services/ai-sales-copilot', title: 'AI Sales Copilot' },
-      ]
-    },
-    {
-      category: 'Micro SaaS',
-      url: '/services/micro-saas',
-      services: [
-        { url: '/services/micro-saas/ai-lead-scoring-api', title: 'AI Lead Scoring API' },
-        { url: '/services/micro-saas/ai-predictive-maintenance', title: 'AI Predictive Maintenance' },
-        { url: '/services/micro-saas/ai-sales-copilot', title: 'AI Sales Copilot' },
-        { url: '/services/micro-saas/ai-customer-support', title: 'AI Customer Support' },
-        { url: '/services/micro-saas/ai-fraud-detection', title: 'AI Fraud Detection' },
-        { url: '/services/micro-saas/ai-appointment-scheduler', title: 'AI Appointment Scheduler' },
-        { url: '/services/micro-saas/ai-code-reviewer', title: 'AI Code Reviewer' },
-        { url: '/services/micro-saas/ai-contract-summarizer', title: 'AI Contract Summarizer' },
-      ]
-    },
-    {
-      category: 'IT Services',
-      url: '/services/it-services',
-      services: [
-        { url: '/services/it-services/ai-observability-platform', title: 'AI Observability Platform' },
-        { url: '/services/it-services/finops-managed-service', title: 'FinOps Managed Service' },
-        { url: '/services/it-services/observability-platform', title: 'Observability Platform' },
-        { url: '/services/it-services/soc2-readiness', title: 'SOC2 Readiness' },
-        { url: '/services/it-services/data-platform-modernization', title: 'Data Platform Modernization' },
-        { url: '/services/it-services/managed-kubernetes', title: 'Managed Kubernetes' },
-        { url: '/services/it-services/cloud-migration', title: 'Cloud Migration' },
-      ]
-    },
-    {
-      category: 'Specialized Solutions',
-      url: '/services',
-      services: [
-        { url: '/services/manufacturing-ai-platform', title: 'Manufacturing AI Platform' },
-        { url: '/services/supply-chain-intelligence', title: 'Supply Chain Intelligence' },
-        { url: '/services/blockchain-solutions', title: 'Blockchain Solutions' },
-        { url: '/services/quantum-computing-solutions', title: 'Quantum Computing Solutions' },
-        { url: '/services/ai-quantum-computing-2026', title: 'AI Quantum Computing 2026' },
-        { url: '/services/ai-autonomous-operations-2026', title: 'AI Autonomous Operations 2026' },
-        { url: '/services/cybersecurity-risk-assessment', title: 'Cybersecurity Risk Assessment' },
-        { url: '/services/ai-cybersecurity-2025', title: 'AI Cybersecurity Solutions 2025' },
-      ]
-    }
-  ];
-
-  const resources = [
-    { url: '/blog', title: 'Blog & Insights' },
-    { url: '/case-studies', title: 'Case Studies' },
-    { url: '/guides', title: 'Implementation Guides' },
-    { url: '/content-hub', title: 'Content Hub' },
-  ];
-
-  const recentBlogPosts = [
-    { url: '/blog/ai-2026-november-quantum-superintelligence-breakthrough', title: 'November 2026 Quantum AI Breakthrough' },
-    { url: '/blog/ai-2026-august-quantum-consciousness-revolution', title: 'August 2026 Quantum Consciousness Revolution' },
-    { url: '/blog/ai-2026-july-mega-breakthrough-revolution', title: 'July 2026 Mega Breakthrough Revolution' },
-    { url: '/blog/ai-2026-february-quantum-consciousness-enterprise-breakthrough', title: 'February 2026 Quantum Consciousness Enterprise Breakthrough' },
-    { url: '/blog/ai-2026-march-autonomous-enterprise-singularity', title: 'March 2026 Autonomous Enterprise Singularity' },
-    { url: '/blog/ai-2026-april-quantum-neural-superintelligence', title: 'April 2026 Quantum Neural Superintelligence' },
-  ];
-
-  const caseStudies = [
-    { url: '/case-studies/fortune-500-quantum-ai-transformation-success-story', title: 'Fortune 500 Quantum AI Transformation Success Story' },
-    { url: '/case-studies/fortune-500-ai-2026-transformation', title: 'Fortune 500 AI 2026 Transformation' },
-    { url: '/case-studies/fortune-500-ai-2026-breakthrough-mega-success', title: 'Fortune 500 AI 2026 Breakthrough Mega Success' },
-    { url: '/case-studies/ai-supply-chain-optimization-2025', title: 'AI Supply Chain Optimization 2025' },
-    { url: '/case-studies/ai-2026-mega-transformation-success-story', title: 'AI 2026 Mega Transformation Success Story' },
-  ];
+  const sitemapData = {
+    main: [
+      { name: 'Home', href: '/' },
+      { name: 'About Us', href: '/about' },
+      { name: 'Contact', href: '/contact' },
+      { name: 'Portfolio', href: '/portfolio' },
+      { name: 'Blog', href: '/blog' },
+    ],
+    services: [
+      { name: 'All Services', href: '/services' },
+      { name: 'AI Services', href: '/services/ai-services' },
+      { name: 'Micro SaaS', href: '/services/micro-saas' },
+      { name: 'IT Services', href: '/services/it-services' },
+      { name: 'Cloud Migration', href: '/services/cloud-migration-service' },
+      { name: 'Cybersecurity', href: '/services/cybersecurity-solutions' },
+      { name: 'Data Analytics', href: '/services/data-analytics-business-intelligence' },
+      { name: 'AI Content Optimization', href: '/services/ai-content-optimization-platform' },
+      { name: 'AI Lead Scoring API', href: '/services/micro-saas/ai-lead-scoring-api' },
+      { name: 'AI Financial Forecasting', href: '/services/ai-financial-forecasting-suite' },
+      { name: 'Smart Inventory Management', href: '/services/smart-inventory-management-saas' },
+      { name: 'AI-Powered CRM Automation', href: '/services/ai-powered-crm-automation' },
+      { name: 'Cloud-Native DevOps Platform', href: '/services/cloud-native-devops-platform' },
+      { name: 'AI Cybersecurity Automation', href: '/services/ai-cybersecurity-automation-suite' },
+      { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot' },
+      { name: 'Data Quality & Observability', href: '/services/data-quality-observability' },
+      { name: 'FinOps Cost Optimizer', href: '/services/finops-cost-optimizer' },
+      { name: 'Manufacturing AI Platform', href: '/services/manufacturing-ai-platform' },
+      { name: 'Supply Chain Intelligence', href: '/services/supply-chain-intelligence' },
+      { name: 'Autonomous Operations', href: '/services/ai-autonomous-operations' },
+      { name: 'AI Content Optimization Suite', href: '/services/ai-content-optimization-suite' },
+      { name: 'AI Workflow Automation Platform', href: '/services/ai-workflow-automation-platform' },
+      { name: 'AI Observability Platform', href: '/services/it-services/ai-observability-platform' },
+      { name: 'AI Governance, Risk & Compliance', href: '/services/ai-governance-risk-compliance' },
+      { name: 'AI Customer Insights Platform', href: '/services/ai-customer-insights-platform' },
+      { name: 'AI Financial Analysis Platform', href: '/services/ai-financial-analysis-platform' },
+      { name: 'Enterprise RAG & GenAI Platform', href: '/services/genai-rag-platform' },
+      { name: 'AI Marketing Studio', href: '/services/ai-marketing-studio' },
+      { name: 'Business Intelligence', href: '/services/ai-business-intelligence-2025' },
+      { name: 'Cybersecurity Risk Assessment', href: '/services/cybersecurity-risk-assessment' },
+      { name: 'AI Cybersecurity Solutions', href: '/services/ai-cybersecurity-2025' },
+      { name: 'Quantum Computing', href: '/services/ai-quantum-computing-2026' },
+      { name: 'AI Operations 2026', href: '/services/ai-autonomous-operations-2026' },
+    ],
+    solutions: [
+      { name: 'All Solutions', href: '/solutions' },
+      { name: 'Enterprise Solutions', href: '/enterprise' },
+      { name: 'Innovative IT Solutions', href: '/innovative-it-solutions' },
+      { name: 'Advanced AI Solutions', href: '/advanced-ai-solutions' },
+      { name: 'Comprehensive Services', href: '/comprehensive-services' },
+      { name: 'Enhanced Services Catalog', href: '/enhanced-services-catalog' },
+      { name: 'Additional Services', href: '/additional-services' },
+    ],
+    resources: [
+      { name: 'All Resources', href: '/resources' },
+      { name: 'Implementation Guides', href: '/guides' },
+      { name: 'Content Hub', href: '/content-hub' },
+      { name: 'Case Studies', href: '/case-studies' },
+      { name: 'API Documentation', href: '/api-documentation' },
+      { name: 'Training', href: '/training' },
+      { name: 'Webinars', href: '/webinars' },
+      { name: 'Support', href: '/support' },
+    ],
+    company: [
+      { name: 'Pricing', href: '/pricing' },
+      { name: 'Partners', href: '/partners' },
+      { name: 'Community', href: '/community' },
+      { name: 'Security', href: '/security' },
+      { name: 'Docs', href: '/docs' },
+    ],
+    legal: [
+      { name: 'Privacy Policy', href: '/privacy' },
+      { name: 'Terms of Service', href: '/terms' },
+      { name: 'Sitemap', href: '/sitemap' },
+    ],
+  };
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">
       <div className="text-center mb-12">
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-          Site Map
-        </h1>
+        <h1 className="text-4xl font-bold text-gray-900 mb-4">Sitemap</h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Navigate through all our AI services, micro SaaS solutions, IT services, 
-          and resources. Find exactly what you're looking for.
+          Navigate our website easily with this comprehensive sitemap. 
+          Find all pages, services, and resources in one place.
         </p>
       </div>
-
-      <div className="grid lg:grid-cols-3 gap-8">
+      
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {/* Main Pages */}
-        <div className="bg-white rounded-xl shadow-lg p-6">
+        <div className="bg-white rounded-lg shadow-lg p-6">
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Main Pages</h2>
-          <div className="space-y-3">
-            {mainPages.map((page) => (
-              <Link
-                key={page.url}
-                href={page.url}
-                className="block text-blue-600 hover:text-blue-700 hover:underline transition-colors"
-              >
-                {page.title}
-              </Link>
+          <ul className="space-y-3">
+            {sitemapData.main.map((page, index) => (
+              <li key={index}>
+                <Link 
+                  href={page.href}
+                  className="text-blue-600 hover:text-blue-700 transition-colors"
+                >
+                  {page.name}
+                </Link>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
-
+        
         {/* Services */}
-        <div className="bg-white rounded-xl shadow-lg p-6">
+        <div className="bg-white rounded-lg shadow-lg p-6">
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Services</h2>
-          <div className="space-y-6">
-            {serviceCategories.map((category) => (
-              <div key={category.category}>
-                <Link
-                  href={category.url}
-                  className="block font-semibold text-gray-900 mb-3 hover:text-blue-600 transition-colors"
+          <ul className="space-y-2 max-h-96 overflow-y-auto">
+            {sitemapData.services.map((service, index) => (
+              <li key={index}>
+                <Link 
+                  href={service.href}
+                  className="text-blue-600 hover:text-blue-700 transition-colors text-sm"
                 >
-                  {category.category}
+                  {service.name}
                 </Link>
-                <div className="ml-4 space-y-2">
-                  {category.services.slice(0, 4).map((service) => (
-                    <Link
-                      key={service.url}
-                      href={service.url}
-                      className="block text-sm text-gray-600 hover:text-blue-600 hover:underline transition-colors"
-                    >
-                      {service.title}
-                    </Link>
-                  ))}
-                  {category.services.length > 4 && (
-                    <Link
-                      href={category.url}
-                      className="block text-sm text-blue-600 hover:text-blue-700 font-medium"
-                    >
-                      View all {category.category.toLowerCase()} →
-                    </Link>
-                  )}
-                </div>
-              </div>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
-
+        
+        {/* Solutions */}
+        <div className="bg-white rounded-lg shadow-lg p-6">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">Solutions</h2>
+          <ul className="space-y-3">
+            {sitemapData.solutions.map((solution, index) => (
+              <li key={index}>
+                <Link 
+                  href={solution.href}
+                  className="text-blue-600 hover:text-blue-700 transition-colors"
+                >
+                  {solution.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+        
         {/* Resources */}
-        <div className="bg-white rounded-xl shadow-lg p-6">
+        <div className="bg-white rounded-lg shadow-lg p-6">
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Resources</h2>
-          <div className="space-y-6">
-            <div>
-              <h3 className="font-semibold text-gray-900 mb-3">Resource Categories</h3>
-              <div className="space-y-2">
-                {resources.map((resource) => (
-                  <Link
-                    key={resource.url}
-                    href={resource.url}
-                    className="block text-blue-600 hover:text-blue-700 hover:underline transition-colors"
-                  >
-                    {resource.title}
-                  </Link>
-                ))}
-              </div>
-            </div>
-
-            <div>
-              <h3 className="font-semibold text-gray-900 mb-3">Recent Blog Posts</h3>
-              <div className="space-y-2">
-                {recentBlogPosts.slice(0, 4).map((post) => (
-                  <Link
-                    key={post.url}
-                    href={post.url}
-                    className="block text-sm text-gray-600 hover:text-blue-600 hover:underline transition-colors"
-                  >
-                    {post.title}
-                  </Link>
-                ))}
-                <Link
-                  href="/blog"
-                  className="block text-sm text-blue-600 hover:text-blue-700 font-medium"
+          <ul className="space-y-3">
+            {sitemapData.resources.map((resource, index) => (
+              <li key={index}>
+                <Link 
+                  href={resource.href}
+                  className="text-blue-600 hover:text-blue-700 transition-colors"
                 >
-                  View all blog posts →
+                  {resource.name}
                 </Link>
-              </div>
-            </div>
-
-            <div>
-              <h3 className="font-semibold text-gray-900 mb-3">Case Studies</h3>
-              <div className="space-y-2">
-                {caseStudies.slice(0, 3).map((study) => (
-                  <Link
-                    key={study.url}
-                    href={study.url}
-                    className="block text-sm text-gray-600 hover:text-blue-600 hover:underline transition-colors"
-                  >
-                    {study.title}
-                  </Link>
-                ))}
-                <Link
-                  href="/case-studies"
-                  className="block text-sm text-blue-600 hover:text-blue-700 font-medium"
+              </li>
+            ))}
+          </ul>
+        </div>
+        
+        {/* Company */}
+        <div className="bg-white rounded-lg shadow-lg p-6">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">Company</h2>
+          <ul className="space-y-3">
+            {sitemapData.company.map((page, index) => (
+              <li key={index}>
+                <Link 
+                  href={page.href}
+                  className="text-blue-600 hover:text-blue-700 transition-colors"
                 >
-                  View all case studies →
+                  {page.name}
                 </Link>
-              </div>
-            </div>
-          </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+        
+        {/* Legal */}
+        <div className="bg-white rounded-lg shadow-lg p-6">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">Legal</h2>
+          <ul className="space-y-3">
+            {sitemapData.legal.map((page, index) => (
+              <li key={index}>
+                <Link 
+                  href={page.href}
+                  className="text-blue-600 hover:text-blue-700 transition-colors"
+                >
+                  {page.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
-
-      {/* XML Sitemap Link */}
-      <div className="mt-12 text-center">
-        <div className="bg-gray-50 rounded-xl p-6">
-          <h3 className="text-lg font-semibold text-gray-900 mb-3">XML Sitemap</h3>
-          <p className="text-gray-600 mb-4">
-            For search engines and developers, access our complete XML sitemap:
-          </p>
-          <Link
-            href="/sitemap.xml"
-            className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
+      
+      {/* Quick Search */}
+      <div className="mt-12 bg-blue-50 rounded-lg p-8">
+        <h2 className="text-2xl font-bold text-gray-900 mb-4 text-center">Can't Find What You're Looking For?</h2>
+        <p className="text-gray-600 mb-6 text-center">
+          Use our search or contact us directly for assistance.
+        </p>
+        <div className="max-w-md mx-auto flex gap-4">
+          <input
+            type="text"
+            placeholder="Search our website..."
+            className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          />
+          <button className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+            Search
+          </button>
+        </div>
+        <div className="text-center mt-4">
+          <Link 
+            href="/contact" 
+            className="text-blue-600 hover:text-blue-700 font-medium"
           >
-            <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-            </svg>
-            View XML Sitemap
+            Or contact us for help →
           </Link>
         </div>
-      </div>
-
-      {/* Footer */}
-      <div className="mt-12 text-center text-gray-500 text-sm">
-        <p>
-          Last updated: {new Date().toLocaleDateString()} | 
-          Total pages: {mainPages.length + serviceCategories.reduce((acc, cat) => acc + cat.services.length, 0) + resources.length + recentBlogPosts.length + caseStudies.length}
-        </p>
       </div>
     </div>
   );

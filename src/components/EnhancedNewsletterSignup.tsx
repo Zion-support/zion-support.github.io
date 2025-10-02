@@ -1,22 +1,18 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 =======
 import React, { useState } from 'react';';
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 interface Props {
 title?: string;,
 subtitle?: string;,
 className?: string;
 }
 
-<<<<<<< HEAD
 export default function EnhancedNewsletterSignup({ title = 'Stay Updated', subtitle = 'Get the latest insights on AI and technology trends.', className = '' }: Props): React.JSX.Element {;
   const [email, setEmail] = useState('');
 =======
 export default function EnhancedNewsletterSignup({ title = 'Stay Updated', subtitle = 'Get the latest insights on AI and technology trends.', className = '' }: Props): React.JSX.Element {';
   const [email, setEmail] = useState('');';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   const [isSubscribed, setIsSubscribed] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {,
@@ -35,7 +31,6 @@ export default function EnhancedNewsletterSignup({ title = 'Stay Updated', subti
 
   return (
     <form onSubmit={handleSubmit} className={`bg-gray-100 p-6 rounded-lg ${className}`} aria-label="Newsletter signup">";`;
-<<<<<<< HEAD
       <h3 className="text-lg font-semibold mb-2">{title}</h3>
       <p className="text-gray-600 mb-4">{subtitle}</p>
       <div className="flex gap-2">
@@ -43,7 +38,6 @@ export default function EnhancedNewsletterSignup({ title = 'Stay Updated', subti
       <h3 className="text-lg font-semibold mb-2">{title}</h3>";
       <p className="text-gray-600 mb-4">{subtitle}</p>";
       <div className="flex gap-2">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
         <input
           type="email"
           value={email}

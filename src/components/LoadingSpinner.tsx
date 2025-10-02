@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';
@@ -14,7 +13,6 @@ size?: 'small' | 'medium' | 'large';,
 color?: 'blue' | 'white' | 'gray';,
 text?: string;,
 fullScreen?: boolean;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a267
 }
 
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 

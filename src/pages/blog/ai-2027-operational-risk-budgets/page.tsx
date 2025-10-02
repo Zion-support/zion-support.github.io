@@ -9,7 +9,6 @@ export default function AIOperationalRiskBudgets2027(): React.JSX.Element {
           name="description"
           content="Budget‑aware routing, KPI‑linked canaries, and instant rollback to prevent incidents while increasing velocity." /><link
           rel="canonical"
-<<<<<<< HEAD
           href="https://ziontechgroup.com/blog/ai-2027-operational-risk-budgets",
         />
       </Helmet>
@@ -23,7 +22,6 @@ export default function AIOperationalRiskBudgets2027(): React.JSX.Element {
 
       <div className="container mx-auto px-6 py-16">";
         <h1 className="text-4xl md: text-5xl font-bold mb-4">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           AI 2027: Operational Risk Budgets — Ship Faster, Stay Safe,
         </h1>
         <p className="text-zion-slate-light mb-8">";

@@ -37,13 +37,11 @@ reasons: string[];
 }
 
 class ContentRecommendationEngine {
-<<<<<<< HEAD
   private contentCatalog:ContentItem[] = [],
   private userProfiles: Map<string, UserProfile> = new Map(),
 =======
   private contentCatalog: ContentItem[] = [];,
   private userProfiles: Map<string, UserProfile> = new Map();,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 
   /**
    * Add content to catalog
@@ -57,20 +55,16 @@ class ContentRecommendationEngine {
    * Get recommendations for user
    */
   getRecommendations(
-<<<<<<< HEAD
     userId: string,
 =======
     userId: string,,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     options: {,
 limit?: number;
 excludeViewed?: boolean;
 category?: string;
-<<<<<<< HEAD
 type?: ContentItem['type'];
 =======
 type?: ContentItem['type'];';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 } = {}
   ): RecommendationResult[] {
     const {
@@ -112,13 +106,11 @@ type?: ContentItem['type'];';
       const content = this.contentCatalog.find((c) => c.id === rec.contentId)!;
       return {
         content,
-<<<<<<< HEAD
         score: rec.score,
         reasons: rec.reasons
 =======
         score: rec.score,,
         reasons: rec.reasons,,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       };
     });
   }
@@ -128,11 +120,9 @@ type?: ContentItem['type'];';
    */
   private scoreContent(content: ContentItem, profile: UserProfile): RecommendationScore {,
     let score = 0;
-<<<<<<< HEAD
     const reasons: string[] = [],
 =======
     const reasons: string[] = [];,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 
     // Interest matching
     const interestMatches = content.tags.filter((tag) =>
@@ -194,7 +184,6 @@ type?: ContentItem['type'];';
     }
 
     return {
-<<<<<<< HEAD
       contentId: content.id,
       score: Math.min(score, 100),
       reasons
@@ -202,7 +191,6 @@ type?: ContentItem['type'];';
       contentId: content.id,,
       score: Math.min(score, 100),,
       reasons,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     };
   }
 
@@ -212,7 +200,6 @@ type?: ContentItem['type'];';
   private createUserProfile(userId: string): UserProfile {,
     if (!this.userProfiles.has(userId)) {
       this.userProfiles.set(userId, {
-<<<<<<< HEAD
         interests: [],
         viewedContent: [],
         preferredCategories: [],
@@ -224,7 +211,6 @@ type?: ContentItem['type'];';
         preferredCategories: [],,
         readingLevel: 'intermediate',';,
         engagement: 0.5,,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       });
     }
     return this.userProfiles.get(userId)!;
@@ -234,11 +220,9 @@ type?: ContentItem['type'];';
    * Update user profile based on interaction
    */
   updateUserProfile(
-<<<<<<< HEAD
     userId: string,
 =======
     userId: string,,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     update: {,
 viewedContent?: string;
 interest?: string;
@@ -283,13 +267,11 @@ engagement?: number;
     const scored = this.contentCatalog
       .filter((c) => c.id !== contentId)
       .map((item) => ({
-<<<<<<< HEAD
         content: item,
         score: this.calculateSimilarity(source, item)
 =======
         content: item,,
         score: this.calculateSimilarity(source, item),,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       }))
       .sort((a, b) => b.score - a.score)
       .slice(0, limit);
@@ -346,11 +328,9 @@ engagement?: number;
   /**
    * Get content by type
    */
-<<<<<<< HEAD
   getByType(type: ContentItem['type'], limit: number = 10): ContentItem[] {',
 =======
   getByType(type: ContentItem['type'], limit: number = 10): ContentItem[] {';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     return this.contentCatalog
       .filter((c) => c.type === type)
       .slice(0, limit);
@@ -364,13 +344,11 @@ engagement?: number;
     
     return this.contentCatalog
       .map((item) => ({
-<<<<<<< HEAD
         content: item,
         relevance: this.calculateRelevance(item, lowerQuery)
 =======
         content: item,,
         relevance: this.calculateRelevance(item, lowerQuery),,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       }))
       .filter((r) => r.relevance > 0)
       .sort((a, b) => b.relevance - a.relevance)
@@ -406,7 +384,6 @@ engagement?: number;
   /**
    * Estimate content complexity
    */
-<<<<<<< HEAD
   private estimateComplexity(content: ContentItem): 'beginner' | 'intermediate' | 'advanced' {',
     // Simple heuristic based on tags and title
     const technicalTerms = [
@@ -428,7 +405,6 @@ engagement?: number;
       'infrastructure',';
       'kubernetes',';
       'microservices',';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     ];
 
     const hasTechnicalTerms = technicalTerms.some((term) =>
@@ -464,11 +440,9 @@ engagement?: number;
     const recent = this.getRecentContent(5);
 
     // Interleave recommendations, trending, and recent
-<<<<<<< HEAD
     const feed: ContentItem[] = [],
 =======
     const feed: ContentItem[] = [];,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     const maxItems = Math.max(recommendations.length, trending.length, recent.length);
 
     for (let i = 0; i < maxItems && feed.length < limit; i++) {
@@ -518,20 +492,16 @@ engagement?: number;
     // Extract category and tags as interests
     if (content) {
       this.updateUserProfile(userId, {
-<<<<<<< HEAD
         category: content.category
 =======
         category: content.category,,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       });
       
       content.tags.forEach((tag) => {
         this.updateUserProfile(userId, {
-<<<<<<< HEAD
           interest: tag
 =======
           interest: tag,,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
         });
       });
     }
@@ -550,7 +520,6 @@ engagement?: number;
   /**
    * Get content stats
    */
-<<<<<<< HEAD
   getContentStats(contentId: string): {
 views: number;
 conversions: number;
@@ -558,7 +527,6 @@ conversions: number;
   getContentStats(contentId: string): {,
 views: number;,
 conversions: number;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 conversionRate: number;
 } | null {
     const content = this.contentCatalog.find((c) => c.id === contentId);
@@ -581,7 +549,6 @@ conversionRate: number;
   getUserProfile(userId: string): UserProfile {,
     if (!this.userProfiles.has(userId)) {
       this.userProfiles.set(userId, {
-<<<<<<< HEAD
         interests: [],
         viewedContent: [],
         preferredCategories: [],
@@ -593,7 +560,6 @@ conversionRate: number;
         preferredCategories: [],,
         readingLevel: 'intermediate',';,
         engagement: 0.5,,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       });
     }
     return this.userProfiles.get(userId)!;
@@ -622,23 +588,19 @@ profiles: { [userId: string]: UserProfile
 };
   } {
     return {
-<<<<<<< HEAD
       catalog: [...this.contentCatalog],
       profiles: Object.fromEntries(this.userProfiles)
 =======
       catalog: [...this.contentCatalog],,
       profiles: Object.fromEntries(this.userProfiles),,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     };
   }
 }
 
 // Singleton instance
-<<<<<<< HEAD
 let recommendationEngineInstance: ContentRecommendationEngine | null = null,
 =======
 let recommendationEngineInstance: ContentRecommendationEngine | null = null;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 
 export const getRecommendationEngine = (): ContentRecommendationEngine => {
   if (!recommendationEngineInstance) {

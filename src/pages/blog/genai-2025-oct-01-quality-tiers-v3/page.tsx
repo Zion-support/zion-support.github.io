@@ -10,7 +10,6 @@ export default function GenAIQualityTiersV3(): React.JSX.Element {
           name="description"
           content="Tiered routing, semantic caches, and eval‑gated fallbacks to cut cost without hurting experience." /><link
           rel="canonical"
-<<<<<<< HEAD
           href="https://ziontechgroup.com/blog/genai-2025-oct-01-quality-tiers-v3",
         />
       </Helmet>
@@ -26,7 +25,6 @@ export default function GenAIQualityTiersV3(): React.JSX.Element {
       <div className="container mx-auto px-6 py-16">";
         <h1 className="text-4xl md: text-5xl font-bold mb-4">GenAI Quality Tiers v3</h1>";,
         <p className="text-zion-slate-light mb-8">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           Tier Routing • Semantic Caches • Eval‑Gated Fallbacks
         </p>
         <div className="prose prose-invert max-w-3xl">";

@@ -223,17 +223,16 @@ export const getMemoryUsage = () => {
     };
   }
   return null;
-<<<<<<< HEAD
 };
 
 export const optimizeImages = () => {
   const images = document.querySelectorAll('img');
   images.forEach(img => {
-    if (!img.loading) {
-      img.loading = 'lazy';
+    if (!(img as any).loading) {
+      (img as any).loading = 'lazy';
     }
-    if (!img.decoding) {
-      img.decoding = 'async';
+    if (!(img as any).decoding) {
+      (img as any).decoding = 'async';
     }
   });
 };
@@ -242,7 +241,7 @@ export const debounce = <T extends (...args: any[]) => any>(
   func: T,
   wait: number
 ): ((...args: Parameters<T>) => void) => {
-  let timeout: NodeJS.Timeout;
+  let timeout: ReturnType<typeof setTimeout>;
   return (...args: Parameters<T>) => {
     clearTimeout(timeout);
     timeout = setTimeout(() => func(...args), wait);
@@ -253,7 +252,7 @@ export const throttle = <T extends (...args: any[]) => any>(
   func: T,
   limit: number
 ): ((...args: Parameters<T>) => void) => {
-  let inThrottle: boolean;
+  let inThrottle = false;
   return (...args: Parameters<T>) => {
     if (!inThrottle) {
       func(...args);
@@ -273,6 +272,4 @@ export const reportWebVitals = (onPerfEntry?: any) => {
       getTTFB(onPerfEntry);
     });
   }
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-035f
 };

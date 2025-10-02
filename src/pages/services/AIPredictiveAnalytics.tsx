@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Zap } from 'lucide-react';
@@ -15,80 +14,66 @@ Zap
 import Header from '../../components/Header';';
 import Footer from '../../components/Footer';';
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 const AIPredictiveAnalytics: React.FC = () => {,
   const features = [
     {
       icon: Brain,,
-<<<<<<< HEAD
       title: "Machine Learning Models",",
       description: "Advanced ML algorithms that predict future trends, customer behavior, and business outcomes with 94% accuracy.",",
 =======
       title: "Machine Learning Models",";,
       description: "Advanced ML algorithms that predict future trends, customer behavior, and business outcomes with 94% accuracy.",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       benefit: "94% prediction accuracy rate",
     },
     {
       icon: TrendingUp,,
-<<<<<<< HEAD
       title: "Real-Time Forecasting",",
       description: "Live predictive analytics that update continuously as new data flows in, providing instant insights.",",
 =======
       title: "Real-Time Forecasting",";,
       description: "Live predictive analytics that update continuously as new data flows in, providing instant insights.",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       benefit: "Real-time decision making",
     },
     {
       icon: Target,,
-<<<<<<< HEAD
       title: "Customer Lifetime Value",",
       description: "Predict customer behavior, churn risk, and lifetime value to optimize marketing spend and retention.",",
 =======
       title: "Customer Lifetime Value",";,
       description: "Predict customer behavior, churn risk, and lifetime value to optimize marketing spend and retention.",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       benefit: "35% increase in customer retention",
     },
     {
       icon: BarChart3,,
-<<<<<<< HEAD
       title: "Revenue Forecasting",",
       description: "Accurate revenue predictions based on historical data, market trends, and external factors.",",
 =======
       title: "Revenue Forecasting",";,
       description: "Accurate revenue predictions based on historical data, market trends, and external factors.",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       benefit: "98% forecast accuracy",
     },
     {
       icon: Shield,,
-<<<<<<< HEAD
       title: "Risk Assessment",",
       description: "Identify potential risks and opportunities before they impact your business operations.",",
 =======
       title: "Risk Assessment",";,
       description: "Identify potential risks and opportunities before they impact your business operations.",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       benefit: "60% risk reduction",
     },
     {
       icon: Clock,,
-<<<<<<< HEAD
       title: "Automated Insights",",
       description: "AI-generated insights and recommendations delivered directly to decision-makers.",",
 =======
       title: "Automated Insights",";,
       description: "AI-generated insights and recommendations delivered directly to decision-makers.",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       benefit: "50% faster decision making",
     }
   ];
 
   const pricing = [
     {
-<<<<<<< HEAD
       name: "Starter",
       price: "$299",
       period: "/month",
@@ -200,13 +185,11 @@ const AIPredictiveAnalytics: React.FC = () => {,
         "Training & consultation"
       ],
       popular: false,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     }
   ];
 
   const testimonials = [
     {
-<<<<<<< HEAD
       name: "Jennifer Martinez",",
       role: "VP Marketing, RetailTech Solutions",",
       content: "The predictive analytics platform helped us increase our customer retention by 40% and optimize our marketing spend by $2M annually. The ROI was evident within the first quarter.",",
@@ -214,12 +197,10 @@ const AIPredictiveAnalytics: React.FC = () => {,
       name: "Jennifer Martinez",";,
       role: "VP Marketing, RetailTech Solutions",";,
       content: "The predictive analytics platform helped us increase our customer retention by 40% and optimize our marketing spend by $2M annually. The ROI was evident within the first quarter.",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       rating: 5,,
       company: "RetailTech Solutions",
     },
     {
-<<<<<<< HEAD
       name: "David Kim",",
       role: "CFO, FinTech Innovations",",
       content: "Revenue forecasting accuracy improved from 78% to 98%. This gave us the confidence to make strategic investments and secure additional funding rounds.",",
@@ -227,12 +208,10 @@ const AIPredictiveAnalytics: React.FC = () => {,
       name: "David Kim",";,
       role: "CFO, FinTech Innovations",";,
       content: "Revenue forecasting accuracy improved from 78% to 98%. This gave us the confidence to make strategic investments and secure additional funding rounds.",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       rating: 5,,
       company: "FinTech Innovations",
     },
     {
-<<<<<<< HEAD
       name: "Dr. Sarah Thompson",",
       role: "Head of Analytics, Healthcare Network",",
       content: "The risk assessment models identified potential issues 3 months before they occurred, saving us $5M in potential losses and improving patient outcomes.",",
@@ -240,7 +219,6 @@ const AIPredictiveAnalytics: React.FC = () => {,
       name: "Dr. Sarah Thompson",";,
       role: "Head of Analytics, Healthcare Network",";,
       content: "The risk assessment models identified potential issues 3 months before they occurred, saving us $5M in potential losses and improving patient outcomes.",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       rating: 5,,
       company: "Healthcare Network",
     }
@@ -248,7 +226,6 @@ const AIPredictiveAnalytics: React.FC = () => {,
 
   const useCases = [
     {
-<<<<<<< HEAD
       title: "E-Commerce Optimization",",
       icon: Globe,,
       description: "Predict customer purchase behavior, optimize inventory, and personalize shopping experiences.",",
@@ -294,7 +271,6 @@ const AIPredictiveAnalytics: React.FC = () => {,
       icon: Zap,,
       description: "Demand forecasting, supplier risk assessment, and logistics optimization.",";,
       benefits: ["45% reduction in stockouts", "30% improvement in delivery times", "25% cost reduction"]";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     }
   ];
 
@@ -304,21 +280,18 @@ const AIPredictiveAnalytics: React.FC = () => {,
         <title>AI Predictive Analytics - Zion Tech Group | Advanced Forecasting & Insights</title>
         <meta
           name="description"
-<<<<<<< HEAD
           content="Transform your business with AI predictive analytics that deliver 94% accuracy in forecasting, customer behavior prediction, and risk assessment. Real-time insights for better decisions." /><meta name="keywords" content="predictive analytics, machine learning, forecasting, business intelligence, data analytics, AI insights, predictive modeling" /><link rel="canonical" href="https://ziontechgroup.com/services/ai-predictive-analytics/>",
 =======
           content="Transform your business with AI predictive analytics that deliver 94% accuracy in forecasting, customer behavior prediction, and risk assessment. Real-time insights for better decisions."
         />
         <meta name="keywords" content="predictive analytics, machine learning, forecasting, business intelligence, data analytics, AI insights, predictive modeling" />";
         <link rel="canonical" href="https: //ziontechgroup.com/services/ai-predictive-analytics" />";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       </Helmet>
 
       <Header />
       
       <main className="min-h-screen bg-white">";
         {/* Hero Section */}
-<<<<<<< HEAD
         <section className="bg-gradient-to-br from-indigo-900 via-blue-800 to-purple-900 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
             <div className="text-center">
@@ -342,16 +315,13 @@ const AIPredictiveAnalytics: React.FC = () => {,
                 customer behavior prediction, and risk assessment for data-driven decision making.
               </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 <a
                   href="/contact"
                   className="inline-flex items-center px-8 py-4 bg-indigo-600 hover: bg-indigo-700 text-white font-semibold rounded-lg transition-colors",
                 >
-<<<<<<< HEAD
                   <Phone className="w-5 h-5 mr-2/>
 =======
                   <Phone className="w-5 h-5 mr-2" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   Schedule Demo
                 </a>
                 <a
@@ -359,11 +329,9 @@ const AIPredictiveAnalytics: React.FC = () => {,
                   className="inline-flex items-center px-8 py-4 border-2 border-white text-white hover: bg-white hover:text-indigo-900 font-semibold rounded-lg transition-colors",
                 >
                   View Pricing
-<<<<<<< HEAD
                   <ArrowRight className="w-5 h-5 ml-2/>
 =======
                   <ArrowRight className="w-5 h-5 ml-2" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 </a>
               </div>
             </div>
@@ -371,7 +339,6 @@ const AIPredictiveAnalytics: React.FC = () => {,
         </section>
 
         {/* Key Benefits */}
-<<<<<<< HEAD
         <section className="py-16 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
             <div className="text-center mb-12">
@@ -381,7 +348,6 @@ const AIPredictiveAnalytics: React.FC = () => {,
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";,
             <div className="text-center mb-12">";
               <h2 className="text-4xl font-bold text-gray-900 mb-4">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 Why Choose Our AI Predictive Analytics?
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
@@ -389,7 +355,6 @@ const AIPredictiveAnalytics: React.FC = () => {,
               </p>
             </div>
 
-<<<<<<< HEAD
             <div className="grid md: grid-cols-4 gap-8">",
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-indigo-100 rounded-full mb-4">
@@ -399,12 +364,10 @@ const AIPredictiveAnalytics: React.FC = () => {,
               <div className="text-center">";
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-indigo-100 rounded-full mb-4">";
                   <TrendingUp className="w-8 h-8 text-indigo-600" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">94% Accuracy</h3>";
                 <p className="text-gray-600">Industry-leading prediction accuracy</p>";
               </div>
-<<<<<<< HEAD
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">
                   <Clock className="w-8 h-8 text-blue-600/>
@@ -412,12 +375,10 @@ const AIPredictiveAnalytics: React.FC = () => {,
               <div className="text-center">";
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">";
                   <Clock className="w-8 h-8 text-blue-600" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Real-Time Insights</h3>";
                 <p className="text-gray-600">Instant predictions and recommendations</p>";
               </div>
-<<<<<<< HEAD
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">
                   <Target className="w-8 h-8 text-green-600/>
@@ -425,12 +386,10 @@ const AIPredictiveAnalytics: React.FC = () => {,
               <div className="text-center">";
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">";
                   <Target className="w-8 h-8 text-green-600" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">35% Retention Boost</h3>";
                 <p className="text-gray-600">Improved customer retention rates</p>";
               </div>
-<<<<<<< HEAD
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4">
                   <Shield className="w-8 h-8 text-purple-600/>
@@ -438,7 +397,6 @@ const AIPredictiveAnalytics: React.FC = () => {,
               <div className="text-center">";
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4">";
                   <Shield className="w-8 h-8 text-purple-600" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">60% Risk Reduction</h3>";
                 <p className="text-gray-600">Proactive risk identification</p>";
@@ -448,7 +406,6 @@ const AIPredictiveAnalytics: React.FC = () => {,
         </section>
 
         {/* Use Cases */}
-<<<<<<< HEAD
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
             <div className="text-center mb-16">
@@ -458,7 +415,6 @@ const AIPredictiveAnalytics: React.FC = () => {,
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";,
             <div className="text-center mb-16">";
               <h2 className="text-4xl font-bold text-gray-900 mb-4">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 Industry Applications
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
@@ -466,7 +422,6 @@ const AIPredictiveAnalytics: React.FC = () => {,
               </p>
             </div>
 
-<<<<<<< HEAD
             <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">",
               {useCases.map((useCase, index) => {
                 const Icon = useCase.icon;
@@ -482,13 +437,11 @@ const AIPredictiveAnalytics: React.FC = () => {,
                   <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">";,
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-indigo-100 rounded-full mb-6">";
                       <Icon className="w-8 h-8 text-indigo-600" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                     </div>
                     <h3 className="text-xl font-bold text-gray-900 mb-4">{useCase.title}</h3>";
                     <p className="text-gray-600 mb-6">{useCase.description}</p>";
                     <ul className="space-y-2">";
                       {useCase.benefits.map((benefit, benefitIndex) => (
-<<<<<<< HEAD
                         <li key={benefitIndex} className="flex items-center text-sm">
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0/>
                           <span className="text-gray-700">{benefit}</span>
@@ -496,7 +449,6 @@ const AIPredictiveAnalytics: React.FC = () => {,
                         <li key={benefitIndex} className="flex items-center text-sm">";
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />";
                           <span className="text-gray-700">{benefit}</span>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                         </li>
                       ))}
                     </ul>
@@ -508,7 +460,6 @@ const AIPredictiveAnalytics: React.FC = () => {,
         </section>
 
         {/* Features */}
-<<<<<<< HEAD
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
             <div className="text-center mb-16">
@@ -518,7 +469,6 @@ const AIPredictiveAnalytics: React.FC = () => {,
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";,
             <div className="text-center mb-16">";
               <h2 className="text-4xl font-bold text-gray-900 mb-4">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 Advanced AI Capabilities
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
@@ -526,7 +476,6 @@ const AIPredictiveAnalytics: React.FC = () => {,
               </p>
             </div>
 
-<<<<<<< HEAD
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
               {features.map((feature, index) => {
                 const Icon = feature.icon;
@@ -552,7 +501,6 @@ const AIPredictiveAnalytics: React.FC = () => {,
                     <p className="text-gray-600 mb-4">{feature.description}</p>";
                     <div className="inline-flex items-center text-green-600 font-semibold text-sm">";
                       <CheckCircle className="w-4 h-4 mr-1" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                       {feature.benefit}
                     </div>
                   </div>
@@ -563,7 +511,6 @@ const AIPredictiveAnalytics: React.FC = () => {,
         </section>
 
         {/* Pricing */}
-<<<<<<< HEAD
         <section id="pricing" className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
             <div className="text-center mb-16">
@@ -573,7 +520,6 @@ const AIPredictiveAnalytics: React.FC = () => {,
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";,
             <div className="text-center mb-16">";
               <h2 className="text-4xl font-bold text-gray-900 mb-4">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 Transparent Pricing for Every Business Size
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
@@ -581,11 +527,9 @@ const AIPredictiveAnalytics: React.FC = () => {,
               </p>
             </div>
 
-<<<<<<< HEAD
             <div className="grid md: grid-cols-3 gap-8">",
 =======
             <div className="grid md: grid-cols-3 gap-8">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               {pricing.map((plan, index) => (
                 <div key={index} className={`bg-white rounded-2xl shadow-lg p-8 ${plan.popular ? 'ring-2 ring-indigo-500 relative' : ''}`}>`;
                   {plan.popular && (
@@ -605,7 +549,6 @@ const AIPredictiveAnalytics: React.FC = () => {,
                   </div>
                   <ul className="space-y-4 mb-8">";
                     {plan.features.map((feature, featureIndex) => (
-<<<<<<< HEAD
                       <li key={featureIndex} className="flex items-center">
                         <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0/>
                         <span className="text-gray-700">{feature}</span>
@@ -613,7 +556,6 @@ const AIPredictiveAnalytics: React.FC = () => {,
                       <li key={featureIndex} className="flex items-center">";
                         <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />";
                         <span className="text-gray-700">{feature}</span>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                       </li>
                     ))}
                   </ul>
@@ -622,11 +564,9 @@ const AIPredictiveAnalytics: React.FC = () => {,
                     className={
 `w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${`;
 plan.popular
-<<<<<<< HEAD
 ? 'bg-indigo-600 text-white hover:bg-indigo-700'
 =======
 ? 'bg-indigo-600 text-white hover: bg-indigo-700',';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
 }`}`;
                   >
@@ -643,18 +583,15 @@ plan.popular
                 className="inline-flex items-center text-indigo-600 hover: text-indigo-700 font-semibold",
               >
                 Contact our Data Science Team
-<<<<<<< HEAD
                 <ArrowRight className="w-4 h-4 ml-1/>
 =======
                 <ArrowRight className="w-4 h-4 ml-1" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </a>
             </div>
           </div>
         </section>
 
         {/* Testimonials */}
-<<<<<<< HEAD
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
             <div className="text-center mb-16">
@@ -664,7 +601,6 @@ plan.popular
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";,
             <div className="text-center mb-16">";
               <h2 className="text-4xl font-bold text-gray-900 mb-4">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 What Our Clients Say
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
@@ -672,20 +608,16 @@ plan.popular
               </p>
             </div>
 
-<<<<<<< HEAD
             <div className="grid md: grid-cols-3 gap-8">",
 =======
             <div className="grid md: grid-cols-3 gap-8">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200">";
                   <div className="flex items-center mb-4">";
                     {[...Array(testimonial.rating)].map((_, i) => (
-<<<<<<< HEAD
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current/>
 =======
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                     ))}
                   </div>
                   <blockquote className="text-gray-700 mb-6 italic">";
@@ -703,7 +635,6 @@ plan.popular
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
         <section className="py-20 bg-gradient-to-br from-indigo-900 via-blue-800 to-purple-900 text-white">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">",
             <h2 className="text-4xl font-bold mb-6">
@@ -711,26 +642,21 @@ plan.popular
         <section className="py-20 bg-gradient-to-br from-indigo-900 via-blue-800 to-purple-900 text-white">";
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">";,
             <h2 className="text-4xl font-bold mb-6">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               Ready to Predict the Future of Your Business?
             </h2>
             <p className="text-xl text-indigo-100 max-w-3xl mx-auto mb-8">";
               Transform your decision-making with AI predictive analytics that deliver accurate forecasts and actionable insights.
             </p>
-<<<<<<< HEAD
             <div className="flex flex-col sm: flex-row gap-4 justify-center">",
 =======
             <div className="flex flex-col sm: flex-row gap-4 justify-center">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               <a
                 href="/contact"
                 className="inline-flex items-center px-8 py-4 bg-indigo-600 hover: bg-indigo-700 text-white font-semibold rounded-lg transition-colors",
               >
-<<<<<<< HEAD
                 <Phone className="w-5 h-5 mr-2/>
 =======
                 <Phone className="w-5 h-5 mr-2" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 Schedule Free Demo
               </a>
               <a
@@ -738,11 +664,9 @@ plan.popular
                 className="inline-flex items-center px-8 py-4 border-2 border-white text-white hover: bg-white hover:text-indigo-900 font-semibold rounded-lg transition-colors",
               >
                 View Success Stories
-<<<<<<< HEAD
                 <ArrowRight className="w-5 h-5 ml-2/>
 =======
                 <ArrowRight className="w-5 h-5 ml-2" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </a>
             </div>
           </div>

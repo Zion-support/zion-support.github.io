@@ -1,5 +1,4 @@
 // Shims to relax CI type-check by treating page modules as any
-<<<<<<< HEAD
 declare module "../pages/*" {
 const Component: React.ComponentType;
 export default Component;
@@ -25,7 +24,6 @@ export = Content;
 
 declare module "../components/*" {";
 const Component: React.ComponentType;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 export default Component;
 }
 
@@ -37,7 +35,6 @@ declare module "lucide-react" {";
 	export const AlertTriangle: React.ComponentType<{ className?: string }>;
 	export const RefreshCw: React.ComponentType<{ className?: string }>;
 	export const Home: React.ComponentType<{ className?: string }>;
-<<<<<<< HEAD
 	const all: Record<string, React.ComponentType>,
 	export default all;
 }
@@ -67,7 +64,6 @@ name: string;,
 value: number;,
 delta: number;,
 id: string;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 entries: PerformanceEntry[];
 }
 }

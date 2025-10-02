@@ -1,7 +1,6 @@
 // Enterprise case studies showcasing real-world AI implementations and results
 
 export interface EnterpriseCaseStudy {
-<<<<<<< HEAD
 id: string,
 slug?: string;
 title: string,
@@ -47,7 +46,6 @@ roi: string;
   featured: boolean;,
   date: string;,
   author: string;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   image?: string;
   newBadge?: boolean;
   trending?: boolean;
@@ -55,7 +53,6 @@ roi: string;
 
 export const enterpriseCaseStudies2025: EnterpriseCaseStudy[] = [,
   {
-<<<<<<< HEAD
     id: "fortune-500-ai-transformation",
     slug: "fortune-500-ai-transformation",
     title: "Fortune 500 Global Manufacturing: Complete AI Transformation",
@@ -377,7 +374,6 @@ export const enterpriseCaseStudies2025: EnterpriseCaseStudy[] = [,
     image: "/images/logistics-autonomous-fleet.jpg",";,
     newBadge: true,,
     trending: true,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   }
 ];
 

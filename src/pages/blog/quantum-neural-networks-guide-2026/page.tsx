@@ -12,7 +12,6 @@ export default function QuantumNeuralNetworksGuide2026(): React.JSX.Element {
         />
         <link
           rel="canonical"
-<<<<<<< HEAD
           href="https://ziontechgroup.com/blog/quantum-neural-networks-guide-2026",
         />
       </Helmet>
@@ -34,7 +33,6 @@ export default function QuantumNeuralNetworksGuide2026(): React.JSX.Element {
         <div className="prose prose-invert max-w-3xl">";
           <p>
             Learn the production blueprint for quantum‑neural hybrids: circuit co‑design, batching,,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             warm pools, and policy‑tested fallbacks to keep latency and accuracy stable.
           </p>
           <p>

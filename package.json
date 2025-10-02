@@ -177,6 +177,11 @@
       "@tailwindcss/oxide",
       "esbuild",
       "unrs-resolver"
+    ],
+    "ignoredBuiltDependencies": [
+      "@tailwindcss/oxide",
+      "esbuild",
+      "unrs-resolver"
     ]
   }
 }

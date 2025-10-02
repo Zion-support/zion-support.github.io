@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Link } from "react-router-dom";
 import Header from "../../../components/Header";
 =======
@@ -6,7 +5,6 @@ import {
 Link
 } from "react-router-dom";";
 import Header from "../../../components/Header";";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 
 const MultimodalEnterpriseIntelligence = () => {
   return (
@@ -22,21 +20,17 @@ const MultimodalEnterpriseIntelligence = () => {
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">";
         <Header />
 
-<<<<<<< HEAD
         <article className="container mx-auto px-6 py-20">
 =======
         <article className="container mx-auto px-6 py-20">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           {/* Back Link */};
           <Link
             to="/blog"
             className="inline-flex items-center text-zion-cyan hover: text-zion-blue-light mb-8 transition-colors",
           >
-<<<<<<< HEAD
             <ArrowLeft className="w-4 h-4 mr-2/>
 =======
             <ArrowLeft className="w-4 h-4 mr-2" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             Back to Blog
           </Link>
 
@@ -49,29 +43,24 @@ const MultimodalEnterpriseIntelligence = () => {
               <span className="text-zion-slate-light">15 min read</span>";
             </div>
 
-<<<<<<< HEAD
             <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 leading-tight">",
               Multimodal Enterprise Intelligence 2025: <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">",
 =======
             <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 leading-tight">";,
               Multimodal Enterprise Intelligence 2025: <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 Vision, Language & Audio AI Convergence
               </span>
             </h1>
 
-<<<<<<< HEAD
             <p className="text-xl text-zion-slate-light leading-relaxed">
               Discover how unified multimodal AI systems are transforming enterprise operations
 =======
             <p className="text-xl text-zion-slate-light leading-relaxed">";
               Discover how unified multimodal AI systems are transforming enterprise operations, 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               achieving 97% accuracy across vision, language, and audio processing with $2.3B+ 
               in proven ROI.
             </p>
 
-<<<<<<< HEAD
             <div className="flex items-center gap-6 mt-8 text-zion-slate-light">
               <div className="flex items-center gap-2">
                 <Brain className="w-5 h-5 text-zion-cyan/>
@@ -79,7 +68,6 @@ const MultimodalEnterpriseIntelligence = () => {
             <div className="flex items-center gap-6 mt-8 text-zion-slate-light">";
               <div className="flex items-center gap-2">";
                 <Brain className="w-5 h-5 text-zion-cyan" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 <span>Dr. Sarah Chen, AI Research Director</span>
               </div>
               <span>•</span>
@@ -90,7 +78,6 @@ const MultimodalEnterpriseIntelligence = () => {
           {/* Content */}
           <div className="max-w-4xl mx-auto space-y-8 text-zion-slate-light">";
             {/* Key Metrics */}
-<<<<<<< HEAD
             <div className="bg-gradient-to-r from-purple-900/40 to-pink-900/40 rounded-2xl p-8 border border-purple-500/30">
               <h2 className="text-2xl font-bold text-white mb-6">📊 Multimodal AI Impact Metrics</h2>
               <div className="grid md: grid-cols-3 gap-6">",
@@ -104,7 +91,6 @@ const MultimodalEnterpriseIntelligence = () => {
                 <div className="text-center">";
                   <div className="text-4xl font-bold text-purple-400 mb-2">97%</div>";
                   <div className="text-sm">Cross-Modal Accuracy</div>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 </div>
                 <div className="text-center">";
                   <div className="text-4xl font-bold text-pink-400 mb-2">$2.3B+</div>";
@@ -135,7 +121,6 @@ const MultimodalEnterpriseIntelligence = () => {
 
             {/* Core Capabilities */}
             <section>
-<<<<<<< HEAD
               <h2 className="text-3xl font-bold text-white mb-6">🎯 Core Multimodal Capabilities</h2>
               <div className="space-y-6">
                 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-zion-cyan/30">
@@ -163,12 +148,10 @@ const MultimodalEnterpriseIntelligence = () => {
                   </p>
                   <div className="bg-zion-blue/10 rounded-lg p-4 border border-zion-blue/30">";
                     <strong className="text-zion-cyan">Real Impact: </strong> Fortune 500 manufacturer reduced ";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                     defect detection time by 92% and saved $45M annually.
                   </div>
                 </div>
 
-<<<<<<< HEAD
                 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30">
                   <h3 className="text-xl font-bold text-white mb-3 flex items-center gap-2">
                     <CheckCircle className="w-5 h-5 text-green-400/>
@@ -176,25 +159,21 @@ const MultimodalEnterpriseIntelligence = () => {
                 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30">";
                   <h3 className="text-xl font-bold text-white mb-3 flex items-center gap-2">";
                     <CheckCircle className="w-5 h-5 text-green-400" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                     Audio-Visual Intelligence
                   </h3>
                   <p className="mb-3">";
                     Unified models process video content with synchronized audio analysis, enabling 
                     sentiment detection, speaker identification, and context-aware transcription with 94% accuracy.
                   </p>
-<<<<<<< HEAD
                   <div className="bg-purple-900/20 rounded-lg p-4 border border-purple-500/30">
                     <strong className="text-purple-400">Use Case: </strong> Global retailer improved customer ",
 =======
                   <div className="bg-purple-900/20 rounded-lg p-4 border border-purple-500/30">";
                     <strong className="text-purple-400">Use Case: </strong> Global retailer improved customer ";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                     service quality by 78% using multimodal meeting analysis.
                   </div>
                 </div>
 
-<<<<<<< HEAD
                 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-pink-400/30">
                   <h3 className="text-xl font-bold text-white mb-3 flex items-center gap-2">
                     <CheckCircle className="w-5 h-5 text-green-400/>
@@ -202,20 +181,17 @@ const MultimodalEnterpriseIntelligence = () => {
                 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-pink-400/30">";
                   <h3 className="text-xl font-bold text-white mb-3 flex items-center gap-2">";
                     <CheckCircle className="w-5 h-5 text-green-400" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                     Cross-Modal Generation
                   </h3>
                   <p className="mb-3">";
                     Generate images from text (DALL-E 3), create narrated videos from documents, or produce 
                     marketing content across all formats from a single brief—all with enterprise-grade quality.
                   </p>
-<<<<<<< HEAD
                   <div className="bg-pink-900/20 rounded-lg p-4 border border-pink-500/30">
                     <strong className="text-pink-400">Results: </strong> Marketing teams reduced content ",
 =======
                   <div className="bg-pink-900/20 rounded-lg p-4 border border-pink-500/30">";
                     <strong className="text-pink-400">Results: </strong> Marketing teams reduced content ";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                     production time by 87% and increased campaign ROI by 340%.
                   </div>
                 </div>
@@ -224,7 +200,6 @@ const MultimodalEnterpriseIntelligence = () => {
 
             {/* Architecture */}
             <section>
-<<<<<<< HEAD
               <h2 className="text-3xl font-bold text-white mb-4">🏗️ Enterprise Multimodal Architecture</h2>
               <div className="bg-gradient-to-r from-zion-blue/10 to-purple-900/10 rounded-xl p-6 border border-zion-cyan/30">
                 <h3 className="text-xl font-bold text-white mb-4">Production-Ready Stack (Oct 2025)</h3>
@@ -284,7 +259,6 @@ const MultimodalEnterpriseIntelligence = () => {
                     <Zap className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />";
                     <div>
                       <strong className="text-white">Orchestration: </strong> LangChain, LlamaIndex, custom ";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                       pipelines for unified multimodal workflows
                     </div>
                   </li>
@@ -294,7 +268,6 @@ const MultimodalEnterpriseIntelligence = () => {
 
             {/* ROI Calculator */}
             <section>
-<<<<<<< HEAD
               <h2 className="text-3xl font-bold text-white mb-6">💰 Enterprise ROI: Multimodal AI</h2>",
               <div className="bg-gradient-to-r from-green-900/40 to-blue-900/40 rounded-xl p-8 border border-green-500/30">
                 <div className="grid md: grid-cols-2 gap-6">",
@@ -338,12 +311,10 @@ const MultimodalEnterpriseIntelligence = () => {
                       <li className="flex justify-between border-t border-white/20 pt-2 mt-2">";
                         <strong>First Year Total: </strong>,
                         <strong className="text-white">$550K</strong>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                       </li>
                     </ul>
                   </div>
                   <div>
-<<<<<<< HEAD
                     <h3 className="text-xl font-bold text-white mb-4">Returns (Year 1)</h3>
                     <ul className="space-y-2 text-sm">
                       <li className="flex justify-between">
@@ -379,12 +350,10 @@ const MultimodalEnterpriseIntelligence = () => {
                       <li className="flex justify-between border-t border-white/20 pt-2 mt-2">";
                         <strong>Total Value: </strong>,
                         <strong className="text-green-400">$3.92M</strong>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                       </li>
                     </ul>
                   </div>
                 </div>
-<<<<<<< HEAD
                 <div className="mt-6 text-center">
                   <div className="text-3xl font-bold text-green-400">613% ROI in Year 1</div>
                   <div className="text-sm mt-2">Payback period: 2.1 months</div>",
@@ -392,14 +361,12 @@ const MultimodalEnterpriseIntelligence = () => {
                 <div className="mt-6 text-center">";
                   <div className="text-3xl font-bold text-green-400">613% ROI in Year 1</div>";
                   <div className="text-sm mt-2">Payback period: 2.1 months</div>";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 </div>
               </div>
             </section>
 
             {/* Implementation Guide */}
             <section>
-<<<<<<< HEAD
               <h2 className="text-3xl font-bold text-white mb-6">🚀 Implementation Roadmap</h2>
               <div className="space-y-4">
                 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border-l-4 border-zion-cyan">
@@ -415,7 +382,6 @@ const MultimodalEnterpriseIntelligence = () => {
                   <ul className="space-y-2 ml-4">";
                     <li className="flex items-start gap-2">";
                       <span className="text-zion-cyan mt-1">▸</span>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                       <span>Assess current systems and identify high-impact use cases</span>
                     </li>
                     <li className="flex items-start gap-2">";
@@ -429,7 +395,6 @@ const MultimodalEnterpriseIntelligence = () => {
                   </ul>
                 </div>
 
-<<<<<<< HEAD
                 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border-l-4 border-purple-400">
                   <h3 className="text-xl font-bold text-white mb-2">Phase 2: Pilot Deployment (Weeks 5-8)</h3>",
                   <ul className="space-y-2 ml-4">
@@ -441,7 +406,6 @@ const MultimodalEnterpriseIntelligence = () => {
                   <ul className="space-y-2 ml-4">";
                     <li className="flex items-start gap-2">";
                       <span className="text-purple-400 mt-1">▸</span>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                       <span>Deploy pilot in controlled environment (1-2 use cases)</span>
                     </li>
                     <li className="flex items-start gap-2">";
@@ -455,7 +419,6 @@ const MultimodalEnterpriseIntelligence = () => {
                   </ul>
                 </div>
 
-<<<<<<< HEAD
                 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border-l-4 border-green-400">
                   <h3 className="text-xl font-bold text-white mb-2">Phase 3: Scale & Optimize (Weeks 9-12)</h3>",
                   <ul className="space-y-2 ml-4">
@@ -467,7 +430,6 @@ const MultimodalEnterpriseIntelligence = () => {
                   <ul className="space-y-2 ml-4">";
                     <li className="flex items-start gap-2">";
                       <span className="text-green-400 mt-1">▸</span>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                       <span>Roll out to production across all identified use cases</span>
                     </li>
                     <li className="flex items-start gap-2">";
@@ -492,20 +454,16 @@ const MultimodalEnterpriseIntelligence = () => {
                 Join the Fortune 500 companies achieving 97% accuracy and $2.3B+ in value creation. 
                 Schedule your free consultation today.
               </p>
-<<<<<<< HEAD
               <div className="flex flex-col sm: flex-row gap-4 justify-center">",
 =======
               <div className="flex flex-col sm: flex-row gap-4 justify-center">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 <Link
                   to="/contact"
                   className="bg-white text-purple-600 hover: bg-zion-slate-light px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105 inline-flex items-center justify-center gap-2",
                 >
-<<<<<<< HEAD
                   <TrendingUp className="w-5 h-5/>
 =======
                   <TrendingUp className="w-5 h-5" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   Schedule Free Consultation
                 </Link>
                 <Link

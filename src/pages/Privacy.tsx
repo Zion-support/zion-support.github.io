@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 =======
@@ -6,14 +5,12 @@ import React from 'react';';
 import {
 Helmet
 } from 'react-helmet-async';';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 
 const Privacy: React.FC = () => {,
   return (
     <>
       <Helmet>
         <title>Privacy Policy - Zion Tech Group</title>
-<<<<<<< HEAD
         <meta name="description" content="Privacy Policy for Zion Tech Group - How we collect, use, and protect your personal information." /><meta name="robots" content="index, follow" /></Helmet>
       
       <div className="min-h-screen bg-white">
@@ -32,13 +29,11 @@ const Privacy: React.FC = () => {,
             <h1 className="text-4xl font-bold text-gray-900 mb-8">Privacy Policy</h1>";
             
             <p className="text-lg text-gray-600 mb-8">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               Last updated: January 2, 2025,
             </p>
 
             <div className="space-y-8">";
               <section>
-<<<<<<< HEAD
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">Information We Collect</h2>
                 <p className="text-gray-600 mb-4">
                   We collect information you provide directly to us, such as when you create an account
@@ -46,7 +41,6 @@ const Privacy: React.FC = () => {,
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">Information We Collect</h2>";
                 <p className="text-gray-600 mb-4">";
                   We collect information you provide directly to us, such as when you create an account, 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   subscribe to our newsletter, or contact us for support.
                 </p>
                 <ul className="list-disc list-inside text-gray-600 space-y-2">";
@@ -58,7 +52,6 @@ const Privacy: React.FC = () => {,
               </section>
 
               <section>
-<<<<<<< HEAD
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">How We Use Your Information</h2>
                 <p className="text-gray-600 mb-4">
                   We use the information we collect to: </p>,
@@ -68,7 +61,6 @@ const Privacy: React.FC = () => {,
                 <p className="text-gray-600 mb-4">";
                   We use the information we collect to: </p>,
                 <ul className="list-disc list-inside text-gray-600 space-y-2">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   <li>Provide, maintain, and improve our services</li>
                   <li>Process transactions and send related information</li>
                   <li>Send technical notices and support messages</li>
@@ -102,7 +94,6 @@ const Privacy: React.FC = () => {,
               </section>
 
               <section>
-<<<<<<< HEAD
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">Contact Us</h2>
                 <p className="text-gray-600 mb-4">
                   If you have any questions about this Privacy Policy, please contact us at: </p>,
@@ -114,7 +105,6 @@ const Privacy: React.FC = () => {,
                   If you have any questions about this Privacy Policy, please contact us at: </p>,
                 <div className="bg-gray-50 p-4 rounded-lg">";
                   <p className="text-gray-600">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                     Email: privacy@ziontechgroup.com<br />,
                     Phone: +1 (555) 123-4567<br />,
                     Address: 123 Tech Street, Innovation City, IC 12345,

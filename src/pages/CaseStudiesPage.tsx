@@ -16,7 +16,6 @@ const CaseStudiesPage: React.FC = () => {,
         costReduction: '73%',
         productivityIncrease: '520%',
         roi: '1,840%',
-<<<<<<< HEAD
         valueCreated: '$8.2B'
       },
       image: '/api/placeholder/600/400',
@@ -26,7 +25,6 @@ const CaseStudiesPage: React.FC = () => {,
       },
       image: '/api/placeholder/600/400',
       color: 'from-blue-500 to-purple-600',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
     },
     {
       id: 'fortune-50-logistics',
@@ -39,7 +37,6 @@ const CaseStudiesPage: React.FC = () => {,
         latencyReduction: '<2ms',
         efficiencyGain: '2,400%',
         roi: '26,667%',
-<<<<<<< HEAD
         valueCreated: '$12B'
       },
       image: '/api/placeholder/600/400',
@@ -49,7 +46,6 @@ const CaseStudiesPage: React.FC = () => {,
       },
       image: '/api/placeholder/600/400',
       color: 'from-green-500 to-teal-600',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
     },
     {
       id: 'fortune-100-financial',
@@ -62,7 +58,6 @@ const CaseStudiesPage: React.FC = () => {,
         threatPrevention: '99.97%',
         costReduction: '68%',
         roi: '18,400%',
-<<<<<<< HEAD
         valueCreated: '$18.4B'
       },
       image: '/api/placeholder/600/400',
@@ -72,7 +67,6 @@ const CaseStudiesPage: React.FC = () => {,
       },
       image: '/api/placeholder/600/400',
       color: 'from-purple-500 to-pink-600',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
     },
     {
       id: 'fortune-500-healthcare',
@@ -85,7 +79,6 @@ const CaseStudiesPage: React.FC = () => {,
         accuracyImprovement: '98.9%',
         processingSpeed: '85%',
         roi: '2,400%',
-<<<<<<< HEAD
         valueCreated: '$4.7B'
       },
       image: '/api/placeholder/600/400',
@@ -95,7 +88,6 @@ const CaseStudiesPage: React.FC = () => {,
       },
       image: '/api/placeholder/600/400',
       color: 'from-indigo-500 to-blue-600',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
     },
     {
       id: 'fortune-100-retail',
@@ -108,7 +100,6 @@ const CaseStudiesPage: React.FC = () => {,
         automationRate: '98.7%',
         customerSatisfaction: '99.7%',
         roi: '3,847%',
-<<<<<<< HEAD
         valueCreated: '$6.2B'
       },
       image: '/api/placeholder/600/400',
@@ -118,7 +109,6 @@ const CaseStudiesPage: React.FC = () => {,
       },
       image: '/api/placeholder/600/400',
       color: 'from-yellow-500 to-orange-600',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
     },
     {
       id: 'fortune-50-technology',
@@ -131,7 +121,6 @@ const CaseStudiesPage: React.FC = () => {,
         developmentSpeed: '10.2x',
         productivityGain: '85%',
         roi: '2,400%',
-<<<<<<< HEAD
         valueCreated: '$47.3M'
       },
       image: '/api/placeholder/600/400',
@@ -141,7 +130,6 @@ const CaseStudiesPage: React.FC = () => {,
       },
       image: '/api/placeholder/600/400',
       color: 'from-red-500 to-pink-600',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
     },
   ];
 
@@ -149,11 +137,9 @@ const CaseStudiesPage: React.FC = () => {,
     { value: '240+', label: 'Fortune 500 Clients' },
     { value: '$211.7B', label: 'Total Value Created' },
     { value: '99.97%', label: 'Average Success Rate' },
-<<<<<<< HEAD
     { value: '1,840%', label: 'Average ROI' }
 =======
     { value: '1,840%', label: 'Average ROI' },
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
   ];
 
   return (

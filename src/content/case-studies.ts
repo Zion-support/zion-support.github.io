@@ -13,7 +13,6 @@ imageUrl?: string;
 
 export const caseStudies: CaseStudy[] = [,
   {
-<<<<<<< HEAD
     id: "global-energy-digital-twin-850m",
     title: "Global Energy Corporation: $850M Digital Twin Transformation Success",
     company: "Global Energy Corporation (Fortune 100)",
@@ -323,7 +322,6 @@ export const caseStudies: CaseStudy[] = [,
     technologies: ["RAG", "Vector DB", "TypeScript", "OpenAI", "ClickHouse"],";,
     duration: "10 weeks",";,
     imageUrl: "/images/case-studies/enterprise-rag.jpg",
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   }
 ];
 ;

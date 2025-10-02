@@ -9,7 +9,6 @@ export default function AIAutonomousControlPlanes2025(): React.JSX.Element {
           name="description"
           content="Design budget-aware, policy-gated AI platforms with instant rollback and KPI-linked guardrails." /><link
           rel="canonical"
-<<<<<<< HEAD
           href="https://ziontechgroup.com/blog/ai-2025-sept-30-autonomous-control-planes",
         />
       </Helmet>
@@ -23,7 +22,6 @@ export default function AIAutonomousControlPlanes2025(): React.JSX.Element {
 
       <div className="container mx-auto px-6 py-16">";
         <h1 className="text-4xl md: text-5xl font-bold mb-4">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           AI 2025: Autonomous Control Planes,
         </h1>
         <p className="text-zion-slate-light mb-8">";

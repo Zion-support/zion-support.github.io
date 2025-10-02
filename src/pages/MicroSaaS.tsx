@@ -28,7 +28,7 @@ const MicroSaaS: React.FC = () => {
       <Helmet>
         <title>Micro SaaS Solutions - Zion Tech Group</title>
         <meta name="description" content="Innovative micro SaaS products to solve focused business workflows." />
-        <link rel="canonical" href="https://ziontechgroup.com/services/micro-saas" />
+        <link rel="canonical" href="https://ziontechgroup.com/micro-saas" />
       </Helmet>
       <section className="py-16">
         <div className="container mx-auto px-6 max-w-6xl">
@@ -43,7 +43,7 @@ const MicroSaaS: React.FC = () => {
                     <li key={f}>• {f}</li>
                   ))}
                 </ul>
-                <a className="text-blue-600 hover:underline" href={p.link}>Learn more →</a>
+                <a className="text-blue-600 hover:underline" href="/micro-saas">Learn more →</a>
               </div>
             ))}
           </div>

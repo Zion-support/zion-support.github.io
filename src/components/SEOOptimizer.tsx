@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -13,12 +12,10 @@ twitterCard?: string;,
 structuredData?: object;
 }
 
-<<<<<<< HEAD
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ title,
 =======
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({,
   title,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   description,
   canonicalUrl
   keywords = [
@@ -32,7 +29,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({,
     'technology consulting',';
     'cloud solutions',';
     'cybersecurity'
-<<<<<<< HEAD
   ]
   ogImage = '/images/zion-tech-group-og-image.jpg'
   ogType = 'website'
@@ -96,7 +92,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({,
       "https: //twitter.com/ziontechgroup",";,
       "https: //linkedin.com/company/ziontechgroup",";,
       "https: //github.com/ziontechgroup",
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     ]
   };
 
@@ -106,7 +101,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({,
     <Helmet>
       {/* Basic Meta Tags */}
       <title>{title}</title>
-<<<<<<< HEAD
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords.join(', ')} />;
       <link rel="canonical" href={canonicalUrl} />
@@ -154,7 +148,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({,
       {/* Performance Hints */}
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />";
       <link rel="preconnect" href="https: //fonts.gstatic.com" crossOrigin="anonymous" />";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       
       {/* Structured Data */}
       <script type="application/ld+json">";

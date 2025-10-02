@@ -1,9 +1,7 @@
-<<<<<<< HEAD
 import React from 'react';
 =======
 import React from 'react';';
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 const October2025NewContentMegaLaunchBanner: React.FC = () => {,
   return (
     <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white py-16 px-4 relative overflow-hidden">";
@@ -22,11 +20,9 @@ const October2025NewContentMegaLaunchBanner: React.FC = () => {,
         </div>
 
         {/* Main heading */}
-<<<<<<< HEAD
         <h2 className="text-5xl md: text-6xl font-bold text-center mb-6 leading-tight">",
 =======
         <h2 className="text-5xl md: text-6xl font-bold text-center mb-6 leading-tight">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           🌟 Breakthrough AI Content
           <br />
           <span className="bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">";
@@ -35,22 +31,18 @@ const October2025NewContentMegaLaunchBanner: React.FC = () => {,
         </h2>
 
         {/* Subheading */}
-<<<<<<< HEAD
         <p className="text-xl md:text-2xl text-center mb-12 text-white/90 max-w-4xl mx-auto leading-relaxed">
           Discover the latest enterprise AI innovations: Governance frameworks achieving 99.8% compliance
 =======
         <p className="text-xl md: text-2xl text-center mb-12 text-white/90 max-w-4xl mx-auto leading-relaxed">";,
           Discover the latest enterprise AI innovations: Governance frameworks achieving 99.8% compliance, ,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           multimodal AI with $89M ROI, and edge deployment revolutionizing real-time intelligence.
         </p>
 
         {/* Content cards */}
-<<<<<<< HEAD
         <div className="grid md: grid-cols-3 gap-6 mb-12">",
 =======
         <div className="grid md: grid-cols-3 gap-6 mb-12">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           <Link 
             to="/blog/ai-2025-october-enterprise-ai-governance-framework"
             className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover: bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl",
@@ -98,7 +90,6 @@ const October2025NewContentMegaLaunchBanner: React.FC = () => {,
         </div>
 
         {/* Stats row */}
-<<<<<<< HEAD
         <div className="grid grid-cols-2 md: grid-cols-4 gap-6 mb-12">",
           <div className="text-center">
             <div className="text-4xl font-bold mb-2">99.8%</div>
@@ -108,7 +99,6 @@ const October2025NewContentMegaLaunchBanner: React.FC = () => {,
           <div className="text-center">";
             <div className="text-4xl font-bold mb-2">99.8%</div>";
             <div className="text-white/70">Compliance Rate</div>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           </div>
           <div className="text-center">";
             <div className="text-4xl font-bold mb-2">$292M</div>";

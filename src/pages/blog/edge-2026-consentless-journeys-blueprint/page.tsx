@@ -6,7 +6,6 @@ export default function EdgeConsentlessJourneysBlueprint2026(): React.JSX.Elemen
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">";
       <Helmet>
         <title>Edge 2026: Consentless Journeys Blueprint — Zero‑PII, &lt;100ms</title>,
-<<<<<<< HEAD
         <meta name="description" content="Scoped IDs, on‑device cohorts, and DP noise for compliant, personalized journeys worldwide." /><link rel="canonical" href="https://ziontechgroup.com/blog/edge-2026-consentless-journeys-blueprint/>",
       </Helmet>
 
@@ -23,7 +22,6 @@ export default function EdgeConsentlessJourneysBlueprint2026(): React.JSX.Elemen
         <h1 className="text-4xl md: text-5xl font-bold mb-4">Edge 2026: Consentless Journeys Blueprint</h1>";,
         <p className="text-zion-slate-light mb-8">Scoped IDs • On‑device cohorts • DP noise • &lt;100ms</p>";
         <div className="prose prose-invert max-w-3xl">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           <p>
             This blueprint outlines how to deliver personalized, privacy‑preserving journeys without collecting PII.
             It uses scoped identifiers, on‑device cohorting, and differential privacy to unlock actionable insights
