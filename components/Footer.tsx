@@ -7,14 +7,14 @@ const Footer: React.FC = () => {
   const footerLinks = {
     services: [
       { name: 'AI Services', href: '/services/ai-services' },
-      { name: 'Micro SaaS', href: '/services/micro-saas' },
+      { name: 'AI Customer Insights', href: '/services/ai-powered-customer-insights-platform' },
+      { name: 'AI Financial Intelligence', href: '/services/ai-powered-financial-intelligence-platform' },
+      { name: 'AI Autonomous DevOps', href: '/services/ai-autonomous-devops-platform' },
+      { name: 'Quantum Computing', href: '/services/quantum-computing-solutions' },
+      { name: 'Micro SaaS Solutions', href: '/services/micro-saas' },
+      { name: 'Healthcare Scheduling', href: '/services/healthcare-scheduling-platform' },
       { name: 'IT Services', href: '/services/it-services' },
-      { name: 'Cloud Solutions', href: '/services/cloud-solutions' },
-      { name: 'Cybersecurity', href: '/services/cybersecurity' },
-      { name: 'Blockchain', href: '/services/blockchain' },
-      { name: 'IoT Solutions', href: '/services/iot-solutions' },
-      { name: 'Mobile Development', href: '/services/mobile-development' },
-      { name: 'Web Development', href: '/services/web-development' },
+      { name: 'Cybersecurity', href: '/services/ai-cybersecurity-automation' },
     ],
     company: [
       { name: 'About Us', href: '/about' },
@@ -49,7 +49,7 @@ const Footer: React.FC = () => {
               <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-lg">Z</span>
               </div>
-              <span className="text-xl font-bold">Zion Tech Solutions</span>
+              <span className="text-xl font-bold">Zion Tech Group</span>
             </Link>
             
             <p className="text-gray-400 mb-6 leading-relaxed">

@@ -175,24 +175,69 @@ export default function ServicesPage() {
       ]
     },
     {
-      title: 'AI Customer Insights Platform',
-      description: 'Transform customer data into actionable insights with AI-powered analytics and predictive modeling',
+      title: 'AI-Powered Customer Insights Platform',
+      description: 'Transform customer data into actionable insights with advanced AI analytics, sentiment analysis, and predictive behavior modeling',
       icon: '🔍',
-      href: '/services/ai-customer-insights-platform',
-      pricing: 'Starting from $399/month',
+      href: '/services/ai-powered-customer-insights-platform',
+      pricing: 'Starting from $299/month',
       features: [
-        'Behavioral Analytics',
-        'Predictive Analytics',
-        'Customer Segmentation',
-        'Sentiment Analysis',
-        'Real-time Alerts',
-        'Data Integration'
+        'Real-time sentiment analysis with 95% accuracy',
+        'Predictive behavior modeling and churn prediction',
+        'Customer journey mapping and optimization',
+        'Automated insights generation and reporting',
+        'Multi-channel data integration',
+        'Advanced analytics dashboard'
+      ]
+    },
+    {
+      title: 'AI-Powered Financial Intelligence Platform',
+      description: 'Revolutionary AI platform for financial analysis, risk assessment, fraud detection, and automated trading with unprecedented accuracy',
+      icon: '💰',
+      href: '/services/ai-powered-financial-intelligence-platform',
+      pricing: 'Starting from $1,999/month',
+      features: [
+        'AI risk assessment engine with 95% accuracy',
+        'Intelligent fraud detection and prevention',
+        'Automated trading intelligence and optimization',
+        'Real-time financial analytics dashboard',
+        'Predictive cash flow forecasting',
+        'Regulatory compliance automation'
+      ]
+    },
+    {
+      title: 'Quantum Computing Solutions',
+      description: 'Revolutionary quantum computing solutions for optimization, cryptography, drug discovery, and financial modeling with exponential speedups',
+      icon: '⚛️',
+      href: '/services/quantum-computing-solutions',
+      pricing: 'Starting from $2,500/project',
+      features: [
+        'Quantum optimization for complex problems',
+        'Quantum cryptography and security',
+        'Quantum machine learning algorithms',
+        'Financial modeling acceleration',
+        'Drug discovery simulation',
+        'Quantum cloud computing access'
+      ]
+    },
+    {
+      title: 'AI Autonomous DevOps Platform',
+      description: 'Revolutionary self-healing infrastructure with autonomous incident response, predictive scaling, and AI-driven optimization',
+      icon: '🤖',
+      href: '/services/ai-autonomous-devops-platform',
+      pricing: 'Starting from $499/month',
+      features: [
+        'Autonomous incident response and resolution',
+        'Predictive scaling and resource optimization',
+        'Self-healing infrastructure automation',
+        'Intelligent code deployment and rollback',
+        'Multi-cloud orchestration',
+        'Advanced security automation'
       ]
     },
     {
       title: 'AI Financial Analysis Platform',
       description: 'Advanced AI-powered financial analysis, forecasting, and risk assessment for informed decision making',
-      icon: '💰',
+      icon: '📊',
       href: '/services/ai-financial-analysis-platform',
       pricing: 'Starting from $599/month',
       features: [
