@@ -1,13 +1,13 @@
 export type InsightArticle = {
-id: string;
-title: string;
-summary: string;
-category: string;
-date: string; // ISO date string,
+id: string,
+title: string,
+summary: string,
+category: string,
+date: string; // ISO date string,,
 readMinutes: number;
 };
 
-export const latestInsights: InsightArticle[] = [
+export const latestInsights: InsightArticle[] = [,
   {
     id: "ai-2025-oct-enterprise-rag-architecture-blueprint",
     title: "Enterprise RAG Architecture Blueprint: 99.9% Precision at Scale",
@@ -145,3 +145,4 @@ export const latestInsights: InsightArticle[] = [
   }
 ];
 
+;

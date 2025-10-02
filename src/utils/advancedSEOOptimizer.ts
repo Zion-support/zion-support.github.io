@@ -4,29 +4,29 @@
  */
 
 interface SEOMetrics {
-titleScore: number;
-descriptionScore: number;
-headingScore: number;
-keywordDensity: number;
-readabilityScore: number;
-imageOptimization: number;
-linkScore: number;
+titleScore: number,
+descriptionScore: number,
+headingScore: number,
+keywordDensity: number,
+readabilityScore: number,
+imageOptimization: number,
+linkScore: number,
 overallScore: number;
 }
 
 interface SEORecommendation {
-category: 'critical' | 'important' | 'minor';
-message: string;
-action: string;
+category: 'critical' | 'important' | 'minor';',
+message: string,
+action: string,
 impact: 'high' | 'medium' | 'low';
 }
 
 interface SEOAnalysis {
-metrics: SEOMetrics;
-recommendations: SEORecommendation[];
+metrics: SEOMetrics,
+recommendations: SEORecommendation[],
 keywords: { word: string; count: number; density: number
 }[];
-  issues: string[];
+  issues: string[],
   strengths: string[];
 }
 
@@ -59,15 +59,15 @@ images?: { src: string; alt: string
     } = options;
 
     // Calculate metrics
-    const metrics: SEOMetrics = {
-      titleScore: this.scoreTitleTag(title, keywords),
-      descriptionScore: this.scoreMetaDescription(description, keywords),
-      headingScore: this.scoreHeadings(headings, keywords),
-      keywordDensity: this.calculateKeywordDensity(content, keywords),
-      readabilityScore: this.calculateReadability(content),
-      imageOptimization: this.scoreImageOptimization(images),
-      linkScore: this.scoreLinkStructure(links),
-      overallScore: 0, // Will be calculated
+    const metrics: SEOMetrics = {,
+      titleScore: this.scoreTitleTag(title, keywords),,
+      descriptionScore: this.scoreMetaDescription(description, keywords),,
+      headingScore: this.scoreHeadings(headings, keywords),,
+      keywordDensity: this.calculateKeywordDensity(content, keywords),,
+      readabilityScore: this.calculateReadability(content),,
+      imageOptimization: this.scoreImageOptimization(images),,
+      linkScore: this.scoreLinkStructure(links),,
+      overallScore: 0, // Will be calculated,
     };
 
     // Calculate overall score
@@ -86,7 +86,7 @@ images?: { src: string; alt: string
     return {
       metrics,
       recommendations,
-      keywords: extractedKeywords,
+      keywords: extractedKeywords,,
       issues,
       strengths
     };
@@ -95,7 +95,7 @@ images?: { src: string; alt: string
   /**
    * Score title tag
    */
-  private scoreTitleTag(title: string, keywords: string[]): number {
+  private scoreTitleTag(title: string, keywords: string[]): number {,
     let score = 0;
 
     // Check length
@@ -124,7 +124,7 @@ images?: { src: string; alt: string
   /**
    * Score meta description
    */
-  private scoreMetaDescription(description: string, keywords: string[]): number {
+  private scoreMetaDescription(description: string, keywords: string[]): number {,
     let score = 0;
 
     // Check length
@@ -153,7 +153,7 @@ images?: { src: string; alt: string
   /**
    * Score headings structure
    */
-  private scoreHeadings(headings: string[], keywords: string[]): number {
+  private scoreHeadings(headings: string[], keywords: string[]): number {,
     let score = 0;
 
     // Check if headings exist
@@ -174,7 +174,7 @@ images?: { src: string; alt: string
   /**
    * Calculate keyword density
    */
-  private calculateKeywordDensity(content: string, keywords: string[]): number {
+  private calculateKeywordDensity(content: string, keywords: string[]): number {,
     if (keywords.length === 0) return 0;
 
     const words = content.toLowerCase().split(/\s+/).filter((w) => w.length > 0);
@@ -202,7 +202,7 @@ images?: { src: string; alt: string
   /**
    * Calculate readability score (Flesch Reading Ease)
    */
-  private calculateReadability(content: string): number {
+  private calculateReadability(content: string): number {,
     const sentences = content.split(/[.!?]+/).filter((s) => s.trim().length > 0);
     const words = content.split(/\s+/).filter((w) => w.length > 0);
     const syllables = words.reduce((count, word) => count + this.countSyllables(word), 0);
@@ -222,13 +222,12 @@ images?: { src: string; alt: string
   /**
    * Count syllables in a word
    */
-  private countSyllables(word: string): number {
+  private countSyllables(word: string): number {,
     word = word.toLowerCase();
     if (word.length <= 3) return 1;
 
     word = word.replace(/(?:[^laeiouy]es|ed|[^laeiouy]e)$/, '');
     word = word.replace(/^y/, '');
-
     const matches = word.match(/[aeiouy]{1,2}/g);
     return matches ? matches.length : 1;
   }
@@ -280,7 +279,7 @@ images?: { src: string; alt: string
   /**
    * Calculate overall SEO score
    */
-  private calculateOverallScore(metrics: SEOMetrics): number {
+  private calculateOverallScore(metrics: SEOMetrics): number {,
     const weights = {
       title: 0.20,
       description: 0.15,
@@ -306,9 +305,9 @@ images?: { src: string; alt: string
    * Generate recommendations
    */
   private generateRecommendations(
-    metrics: SEOMetrics
+    metrics: SEOMetrics,
   ): SEORecommendation[] {
-    const recommendations: SEORecommendation[] = [];
+    const recommendations: SEORecommendation[] = [],
 
     // Title recommendations
     if (metrics.titleScore < 70) {
@@ -399,7 +398,7 @@ images?: { src: string; alt: string
   private extractKeywords(content: string, limit: number = 10): { word: string; count: number; density: number }[] {
     const words = content
       .toLowerCase()
-      .replace(/[^\w\s]/g, ' ')
+      .replace(/[^\w\s]/g, ' ');
       .split(/\s+/)
       .filter((w) => w.length > 3);
 
@@ -454,7 +453,7 @@ return strengths;
   /**
    * Generate structured data (JSON-LD)
    */
-  generateStructuredData(type: 'Article' | 'Product' | 'Service', data: any): string {
+  generateStructuredData(type: 'Article' | 'Product' | 'Service', data: any): string {',
     const baseSchema = {
       '@context': 'https://schema.org',
       '@type': type
@@ -494,9 +493,8 @@ url?: string;
   /**
    * Optimize title
    */
-  private optimizeTitle(title: string): string {
+  private optimizeTitle(title: string): string {,
     if (!title) return '';
-    
     // Truncate if too long
     if (title.length > 60) {
       title = title.substring(0, 57) + '...';
@@ -508,9 +506,8 @@ url?: string;
   /**
    * Optimize description
    */
-  private optimizeDescription(description: string): string {
+  private optimizeDescription(description: string): string {,
     if (!description) return '';
-
     // Truncate if too long
     if (description.length > 160) {
       description = description.substring(0, 157) + '...';
@@ -521,7 +518,7 @@ url?: string;
 }
 
 // Singleton instance
-let seoOptimizerInstance: AdvancedSEOOptimizer | null = null;
+let seoOptimizerInstance: AdvancedSEOOptimizer | null = null,
 
 export const getSEOOptimizer = (): AdvancedSEOOptimizer => {
   if (!seoOptimizerInstance) {
@@ -532,3 +529,4 @@ export const getSEOOptimizer = (): AdvancedSEOOptimizer => {
 
 export default AdvancedSEOOptimizer;
 export type { SEOMetrics, SEORecommendation, SEOAnalysis };
+;

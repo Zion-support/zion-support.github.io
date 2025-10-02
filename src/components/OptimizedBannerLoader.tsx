@@ -5,9 +5,8 @@
  */
 
 import React, { Suspense, useEffect, useState } from 'react';
-
 interface OptimizedBannerLoaderProps {
-  bannerId: string;
+  bannerId: string,
   importFn: () => Promise<{ default: React.ComponentType<Record<string, unknown>> }>;
   priority?: number;
   fallback?: React.ReactNode;
@@ -55,10 +54,10 @@ export default function OptimizedBannerLoader({
           }
         });
       },
-      { rootMargin: '200px' } // Load 200px before entering viewport
+      { rootMargin: '200px' } // Load 200px before entering viewport;
     );
 
-    const placeholder = document.getElementById(`banner-${bannerId}`);
+    const placeholder = document.getElementById(`banner-${bannerId}`);`;
     if (placeholder) {
       observer.observe(placeholder);
     }
@@ -76,12 +75,12 @@ export default function OptimizedBannerLoader({
   }, [isVisible, bannerId]);
 
   if (!Component) {
-    return <div id={`banner-${bannerId}`}>{fallback}</div>;
+    return <div id={`banner-${bannerId}`}>{fallback}</div>;`;
   }
 
   return (
     <div
-      id={`banner-${bannerId}`}
+      id={`banner-${bannerId}`}`;
       onClick={() => bannerManager.recordClick(bannerId)}
     >
       <Suspense fallback={fallback}>
@@ -109,3 +108,4 @@ return (
 </div>
 );
 }
+;

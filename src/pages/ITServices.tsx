@@ -228,10 +228,7 @@ export default function ITServices(): React.JSX.Element {
         <title>IT Services & Solutions - Zion Tech Group | Enterprise Technology Services</title>
         <meta 
           name="description" 
-          content="Comprehensive IT services including cloud migration, cybersecurity, DevOps automation, and data engineering. Enterprise-grade solutions with proven results." 
-        />
-        <meta name="keywords" content="IT services, cloud migration, cybersecurity, DevOps, data engineering, network infrastructure, compliance" />
-        <link rel="canonical" href="https://ziontechgroup.com/it-services" />
+          content="Comprehensive IT services including cloud migration, cybersecurity, DevOps automation, and data engineering. Enterprise-grade solutions with proven results." /><meta name="keywords" content="IT services, cloud migration, cybersecurity, DevOps, data engineering, network infrastructure, compliance" /><link rel="canonical" href="https://ziontechgroup.com/it-services/>",
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
@@ -239,7 +236,7 @@ export default function ITServices(): React.JSX.Element {
         <section className="container mx-auto px-6 py-16">
           <div className="text-center mb-16">
             <div className="flex items-center justify-center mb-4">
-              <Server className="h-8 w-8 text-cyan-400 mr-3" />
+              <Server className="h-8 w-8 text-cyan-400 mr-3/>
               <span className="text-lg font-semibold text-cyan-400">Enterprise IT Solutions</span>
             </div>
             <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
@@ -251,15 +248,15 @@ export default function ITServices(): React.JSX.Element {
             </p>
             <div className="flex items-center justify-center gap-6 text-sm text-blue-200">
               <div className="flex items-center">
-                <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+                <CheckCircle className="h-4 w-4 text-green-400 mr-2/>
                 <span>Enterprise-Grade</span>
               </div>
               <div className="flex items-center">
-                <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+                <CheckCircle className="h-4 w-4 text-green-400 mr-2/>
                 <span>24/7 Support</span>
               </div>
               <div className="flex items-center">
-                <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+                <CheckCircle className="h-4 w-4 text-green-400 mr-2/>
                 <span>Proven Results</span>
               </div>
             </div>
@@ -268,14 +265,14 @@ export default function ITServices(): React.JSX.Element {
 
         {/* Main Services Grid */}
         <section className="container mx-auto px-6 py-12">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">",
             {itServices.map((service) => {
               const Icon = service.icon;
               return (
-                <div key={service.id} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300">
+                <div key={service.id} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover: border-cyan-500/50 transition-all duration-300">",
                   <div className="flex items-start gap-4 mb-6">
                     <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center flex-shrink-0">
-                      <Icon className="w-8 h-8 text-white" />
+                      <Icon className="w-8 h-8 text-white/>
                     </div>
                     <div className="flex-1">
                       <div className="flex items-center gap-2 mb-2">
@@ -292,11 +289,11 @@ export default function ITServices(): React.JSX.Element {
 
                   <div className="space-y-4 mb-6">
                     <div>
-                      <h4 className="text-sm font-semibold text-cyan-400 mb-2">Comprehensive Features:</h4>
+                      <h4 className="text-sm font-semibold text-cyan-400 mb-2">Comprehensive Features: </h4>",
                       <ul className="space-y-1">
                         {service.features.slice(0, 4).map((feature, idx) => (
                           <li key={idx} className="flex items-center text-sm text-slate-300">
-                            <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                            <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0/>
                             <span>{feature}</span>
                           </li>
                         ))}
@@ -309,11 +306,11 @@ export default function ITServices(): React.JSX.Element {
                     </div>
 
                     <div>
-                      <h4 className="text-sm font-semibold text-fuchsia-400 mb-2">Measurable Benefits:</h4>
+                      <h4 className="text-sm font-semibold text-fuchsia-400 mb-2">Measurable Benefits: </h4>",
                       <ul className="space-y-1">
                         {service.benefits.map((benefit, idx) => (
                           <li key={idx} className="flex items-center text-sm text-slate-300">
-                            <TrendingUp className="w-3 h-3 text-fuchsia-400 mr-2 flex-shrink-0" />
+                            <TrendingUp className="w-3 h-3 text-fuchsia-400 mr-2 flex-shrink-0/>
                             <span>{benefit}</span>
                           </li>
                         ))}
@@ -328,10 +325,10 @@ export default function ITServices(): React.JSX.Element {
                     </div>
                     <a 
                       href={service.link}
-                      className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
+                      className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover: from-cyan-600 hover:to-blue-600 transition-all duration-300",
                     >
                       Get Started
-                      <ArrowRight className="w-4 h-4" />
+                      <ArrowRight className="w-4 h-4/>
                     </a>
                   </div>
 
@@ -359,19 +356,19 @@ export default function ITServices(): React.JSX.Element {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">",
             {industrySolutions.map((solution, idx) => {
               const Icon = solution.icon;
               return (
-                <div key={idx} className="bg-slate-800/30 backdrop-blur-sm rounded-xl p-6 border border-slate-700/30 hover:border-cyan-500/30 transition-all duration-300">
-                  <div className={`w-12 h-12 bg-gradient-to-br ${solution.color} rounded-lg flex items-center justify-center mx-auto mb-4`}>
-                    <Icon className="w-6 h-6 text-white" />
+                <div key={idx} className="bg-slate-800/30 backdrop-blur-sm rounded-xl p-6 border border-slate-700/30 hover: border-cyan-500/30 transition-all duration-300">",
+                  <div className={`w-12 h-12 bg-gradient-to-br ${solution.color} rounded-lg flex items-center justify-center mx-auto mb-4`}>`;
+                    <Icon className="w-6 h-6 text-white/>
                   </div>
                   <h3 className="text-lg font-semibold text-white mb-3 text-center">{solution.industry}</h3>
                   <ul className="space-y-2">
                     {solution.solutions.map((item, sIdx) => (
                       <li key={sIdx} className="flex items-center text-sm text-slate-300">
-                        <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                        <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0/>
                         <span>{item}</span>
                       </li>
                     ))}
@@ -391,15 +388,15 @@ export default function ITServices(): React.JSX.Element {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">",
             {additionalITServices.map((service, idx) => (
-              <div key={idx} className="bg-slate-800/30 backdrop-blur-sm rounded-xl p-6 border border-slate-700/30 hover:border-cyan-500/30 transition-all duration-300">
+              <div key={idx} className="bg-slate-800/30 backdrop-blur-sm rounded-xl p-6 border border-slate-700/30 hover: border-cyan-500/30 transition-all duration-300">",
                 <h3 className="text-lg font-semibold text-white mb-2">{service.name}</h3>
                 <p className="text-sm text-slate-300 mb-4">{service.description}</p>
                 <div className="space-y-2 mb-4">
                   {service.features.map((feature, fIdx) => (
                     <div key={fIdx} className="flex items-center text-xs text-slate-400">
-                      <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                      <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0/>
                       <span>{feature}</span>
                     </div>
                   ))}
@@ -420,24 +417,24 @@ export default function ITServices(): React.JSX.Element {
               </p>
             </div>
             
-            <div className="grid md:grid-cols-3 gap-6 text-center">
+            <div className="grid md: grid-cols-3 gap-6 text-center">",
               <div>
                 <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Clock className="w-6 h-6 text-cyan-400" />
+                  <Clock className="w-6 h-6 text-cyan-400/>
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Rapid Deployment</h3>
                 <p className="text-sm text-slate-300">Implementation in 2-12 weeks with minimal disruption</p>
               </div>
               <div>
                 <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <DollarSign className="w-6 h-6 text-blue-400" />
+                  <DollarSign className="w-6 h-6 text-blue-400/>
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Cost Optimization</h3>
                 <p className="text-sm text-slate-300">Average 40% reduction in IT operational costs</p>
               </div>
               <div>
                 <div className="w-12 h-12 bg-fuchsia-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Star className="w-6 h-6 text-fuchsia-400" />
+                  <Star className="w-6 h-6 text-fuchsia-400/>
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Expert Support</h3>
                 <p className="text-sm text-slate-300">24/7 support from certified IT professionals</p>
@@ -445,19 +442,19 @@ export default function ITServices(): React.JSX.Element {
             </div>
 
             <div className="mt-8 text-center">
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
+              <div className="flex flex-col sm: flex-row items-center justify-center gap-4 mb-6">",
                 <a 
-                  href="tel:+13024640950" 
-                  className="inline-flex items-center gap-2 bg-white text-slate-900 px-6 py-3 rounded-lg font-semibold hover:bg-slate-100 transition-colors"
+                  href="tel: +13024640950" ,
+                  className="inline-flex items-center gap-2 bg-white text-slate-900 px-6 py-3 rounded-lg font-semibold hover: bg-slate-100 transition-colors",
                 >
-                  <Smartphone className="w-4 h-4" />
+                  <Smartphone className="w-4 h-4/>
                   +1 302 464 0950
                 </a>
                 <a 
-                  href="mailto:kleber@ziontechgroup.com" 
-                  className="inline-flex items-center gap-2 bg-slate-700 text-white px-6 py-3 rounded-lg font-semibold hover:bg-slate-600 transition-colors"
+                  href="mailto: kleber@ziontechgroup.com" ,
+                  className="inline-flex items-center gap-2 bg-slate-700 text-white px-6 py-3 rounded-lg font-semibold hover: bg-slate-600 transition-colors",
                 >
-                  <MessageSquare className="w-4 h-4" />
+                  <MessageSquare className="w-4 h-4/>
                   kleber@ziontechgroup.com
                 </a>
               </div>
@@ -470,4 +467,4 @@ export default function ITServices(): React.JSX.Element {
       </div>
     </>
   );
-}
+};

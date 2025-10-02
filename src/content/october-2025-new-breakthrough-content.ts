@@ -1,5 +1,5 @@
 // October 2025 New Breakthrough Content - Latest Releases
-// Published: October 1, 2025
+// Published: October 1, 2025,
 
 export const octoberNewBreakthroughContent = [
   {
@@ -108,11 +108,11 @@ export const getAllOctoberNewContent = () => {
 
 // Quick stats for homepage banner
 export const octoberContentStats = {
-  totalMarketValue: "$1.47B",
-  avgCostReduction: "79%",
-  avgSpeedImprovement: "26x",
-  enterpriseAdoption: "89%",
-  customerSatisfaction: "96%",
+  totalMarketValue: "$1.47B",",
+  avgCostReduction: "79%",",
+  avgSpeedImprovement: "26x",",
+  enterpriseAdoption: "89%",",
+  customerSatisfaction: "96%",",
   paybackPeriod: "4.2mo"
 };
 
@@ -123,9 +123,10 @@ export const getOctober2025BreakthroughStats = () => {
   }, 0);
 
   return {
-    totalArticles: octoberNewBreakthroughContent.length,
-    totalValue: `$${totalValue}M`,
-    averageValue: `$${(totalValue / octoberNewBreakthroughContent.length).toFixed(1)}M`,
-    categories: [...new Set(octoberNewBreakthroughContent.map(c => c.category))].length
+    totalArticles: octoberNewBreakthroughContent.length,,
+    totalValue: `$${totalValue}M`,`;
+    averageValue: `$${(totalValue / octoberNewBreakthroughContent.length).toFixed(1)}M`,`;
+    categories: [...new Set(octoberNewBreakthroughContent.map(c => c.category))].length,
   };
 };
+;

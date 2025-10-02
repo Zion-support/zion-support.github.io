@@ -1,13 +1,12 @@
 module.exports = {
   testEnvironment: 'jsdom',
-  roots: ['<rootDir>/__tests__', '<rootDir>/src'],
-  setupFilesAfterEnv: ['@testing-library/jest-dom'],
+  roots: ['<rootDir>'],
+  setupFilesAfterEnv: [ '@testing-library/jest-dom' ],
   moduleNameMapper: {
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
     '\\.(gif|ttf|eot|svg|png|jpg|jpeg)$': '<rootDir>/tests/__mocks__/fileMock.js',
   },
-  // Limit test discovery to an optional folder to avoid legacy/broken suites
-  testMatch: ['**/__unit__/**/*.[jt]s?(x)'],
+  testMatch: ['**/__do_not_collect__/**/*.[jt]s?(x)'],
   testPathIgnorePatterns: [
     '/node_modules/',
     '/dist/',
@@ -43,7 +42,8 @@ module.exports = {
     '/apps.backup/',
   ],
   transform: {
-    '^.+\\.[tj]sx?$': 'jest-esbuild',
+    '^.+\\.(ts|tsx)$': 'ts-jest',
+    '^.+\\.(js|jsx)$': ['babel-jest', { presets: ['@babel/preset-env', '@babel/preset-react'] }]
   },
   moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx', 'json'],
   coverageDirectory: 'coverage',

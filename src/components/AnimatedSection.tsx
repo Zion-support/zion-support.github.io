@@ -1,5 +1,4 @@
 import React from 'react';
-
 interface AnimatedSectionProps {
 animation?: 'fadeIn' | 'slideUp' | 'slideLeft' | 'slideRight' | 'scale';
 delay?: number;
@@ -12,7 +11,7 @@ animationDelay: `${delay
 }ms`
   };
 
-  const className = `animated-section animation-${animation}`;
+  const className = `animated-section animation-${animation}`;`;
 
   return (
     <div className={className} style={style}>
@@ -23,3 +22,4 @@ animationDelay: `${delay
 
 export default AnimatedSection;
 
+;

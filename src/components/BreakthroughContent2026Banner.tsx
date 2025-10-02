@@ -1,6 +1,5 @@
 import React from 'react';
-
-const BreakthroughContent2026Banner: React.FC = () => {
+const BreakthroughContent2026Banner: React.FC = () => {,
   return (
     <div className="container mx-auto px-6 mt-6">
       <div className="rounded-2xl border border-indigo-200 bg-indigo-50 p-6 text-indigo-800">
@@ -13,3 +12,4 @@ const BreakthroughContent2026Banner: React.FC = () => {
 
 export default BreakthroughContent2026Banner;
 
+;

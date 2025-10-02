@@ -8,16 +8,16 @@ export default function October2025NewestAIInnovationsBanner(): void {
             🚀 JUST PUBLISHED - OCTOBER 2, 2025 🚀
           </div>
           <h2 className="text-5xl font-bold mb-4">
-            Revolutionary AI Innovations: 3 Game-Changing Technologies
+            Revolutionary AI Innovations: 3 Game-Changing Technologies,
           </h2>
           <p className="text-2xl text-blue-200 mb-6">
             $11.9B Combined Value Creation • 99.999% Uptime • 94% Faster Operations
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 mt-12">
+        <div className="grid md: grid-cols-3 gap-8 mt-12">",
           {/* Self-Healing Infrastructure */}
-          <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:bg-white/20 transition-all">
+          <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover: bg-white/20 transition-all">",
             <div className="text-4xl mb-4">🔧</div>
             <h3 className="text-2xl font-bold mb-3">Agentic Self-Healing Infrastructure</h3>
             <ul className="text-blue-100 space-y-2 mb-4">
@@ -29,14 +29,14 @@ export default function October2025NewestAIInnovationsBanner(): void {
             </ul>
             <Link
               to="/blog/ai-2025-october-2-agentic-self-healing-infrastructure-revolution"
-              className="inline-block bg-yellow-400 text-black px-6 py-3 rounded-lg font-bold hover:bg-yellow-300 transition-colors"
+              className="inline-block bg-yellow-400 text-black px-6 py-3 rounded-lg font-bold hover: bg-yellow-300 transition-colors",
             >
               Read Full Guide →
             </Link>
           </div>
 
           {/* AI Observability */}
-          <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:bg-white/20 transition-all">
+          <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover: bg-white/20 transition-all">",
             <div className="text-4xl mb-4">👁️</div>
             <h3 className="text-2xl font-bold mb-3">Next-Gen AI Observability</h3>
             <ul className="text-blue-100 space-y-2 mb-4">
@@ -48,14 +48,14 @@ export default function October2025NewestAIInnovationsBanner(): void {
             </ul>
             <Link
               to="/blog/ai-2025-october-2-next-gen-ai-observability-platform"
-              className="inline-block bg-yellow-400 text-black px-6 py-3 rounded-lg font-bold hover:bg-yellow-300 transition-colors"
+              className="inline-block bg-yellow-400 text-black px-6 py-3 rounded-lg font-bold hover: bg-yellow-300 transition-colors",
             >
               Explore Platform →
             </Link>
           </div>
 
           {/* ML Pipeline Optimization */}
-          <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:bg-white/20 transition-all">
+          <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover: bg-white/20 transition-all">",
             <div className="text-4xl mb-4">🤖</div>
             <h3 className="text-2xl font-bold mb-3">Autonomous ML Pipelines</h3>
             <ul className="text-blue-100 space-y-2 mb-4">
@@ -67,7 +67,7 @@ export default function October2025NewestAIInnovationsBanner(): void {
             </ul>
             <Link
               to="/blog/ai-2025-october-2-autonomous-ml-pipeline-optimization"
-              className="inline-block bg-yellow-400 text-black px-6 py-3 rounded-lg font-bold hover:bg-yellow-300 transition-colors"
+              className="inline-block bg-yellow-400 text-black px-6 py-3 rounded-lg font-bold hover: bg-yellow-300 transition-colors",
             >
               Discover More →
             </Link>
@@ -77,7 +77,7 @@ export default function October2025NewestAIInnovationsBanner(): void {
         <div className="mt-12 text-center">
           <div className="bg-gradient-to-r from-yellow-400 to-orange-400 text-black px-8 py-4 rounded-xl inline-block">
             <p className="text-2xl font-bold mb-2">
-              💎 Total Value: $11.9B+ in Proven Enterprise Results 💎
+              💎 Total Value: $11.9B+ in Proven Enterprise Results 💎,
             </p>
             <p className="text-lg">
               Transform your operations with these revolutionary AI technologies
@@ -88,3 +88,4 @@ export default function October2025NewestAIInnovationsBanner(): void {
     </div>
   );
 }
+;

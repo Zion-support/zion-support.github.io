@@ -1,26 +1,24 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
-const AboutPage: React.FC = () => {
+const AboutPage: React.FC = () => {,
 const values = [
 {
-icon: Brain,
-title: 'Innovation',
+icon: Brain,,
+title: 'Innovation',',
 description: 'Pushing the boundaries of AI technology to create revolutionary solutions'
 },
     {
-      icon: Brain,
-      title: 'Innovation',
-      description: 'Pushing the boundaries of AI technology to create revolutionary solutions'
-    },
+      icon: Brain,,
+      title: 'Innovation',',
+      description: 'Pushing the boundaries of AI technology to create revolutionary solutions},
     {
       icon: Shield,
       title: 'Security',
       description: 'Ensuring enterprise-grade security and compliance in all our solutions'
     },
     {
-icon: Award,
-title: 'Excellence',
+icon: Award,,
+title: 'Excellence',',
 description: 'Delivering exceptional results with proven ROI and measurable impact'
 }
   ];
@@ -38,13 +36,12 @@ description: 'Delivering exceptional results with proven ROI and measurable impa
     <>
       <Helmet>
         <title>About Us - Zion Tech Group</title>
-        <meta name="description" content="Learn about Zion Tech Group's mission, values, and commitment to delivering innovative AI and IT solutions." />
-      </Helmet>
+        <meta name="description" content="Learn about Zion Tech Group's mission, values, and commitment to delivering innovative AI and IT solutions." /></Helmet>
       
       <div className="container mx-auto px-4 py-8">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            <h1 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">",
               About Zion Tech Group
             </h1>
             <p className="text-xl text-gray-600">
@@ -69,7 +66,7 @@ description: 'Delivering exceptional results with proven ROI and measurable impa
 
             <section className="mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Values</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 md: grid-cols-2 gap-8">",
                 <div className="bg-white p-6 rounded-lg shadow-md">
                   <h3 className="text-xl font-bold text-gray-900 mb-3">Innovation</h3>
                   <p className="text-gray-700">
@@ -103,7 +100,7 @@ description: 'Delivering exceptional results with proven ROI and measurable impa
 
             <section className="mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Expertise</h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 md: grid-cols-3 gap-6">",
                 <div className="text-center">
                   <div className="text-4xl mb-4">🤖</div>
                   <h3 className="text-xl font-bold text-gray-900 mb-2">AI & Machine Learning</h3>
@@ -127,9 +124,9 @@ description: 'Delivering exceptional results with proven ROI and measurable impa
                 Ready to Work With Us?
               </h2>
               <p className="text-gray-600 mb-6">
-                Let's discuss how we can help transform your business with innovative technology solutions.
+                Let's discuss how we can help transform your business with innovative technology solutions.;
               </p>
-              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover: bg-blue-700 transition-colors">",
                 Contact Us Today
               </button>
             </section>

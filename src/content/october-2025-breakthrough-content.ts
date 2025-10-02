@@ -176,7 +176,7 @@ export const getFeaturedOctoberContent = () => {
   return octoberBreakthroughContent.filter(content => content.featured);
 };
 
-export const getOctoberContentByCategory = (category: string) => {
+export const getOctoberContentByCategory = (category: string) => {,
   return octoberBreakthroughContent.filter(content => content.category === category);
 };
 

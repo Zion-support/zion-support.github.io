@@ -3,10 +3,10 @@ import { motion } from 'framer-motion';
 import { Activity } from 'lucide-react';
 
 interface AnalyticsData {
-visitors: {,
-total: number;
-unique: number;
-returning: number;
+visitors: {,,
+total: number,
+unique: number,
+returning: number,
 new: number;
 };
   pageViews: {,
@@ -38,14 +38,13 @@ currentPages: Array<{ page: string; users: number
   };
 }
 
-const AnalyticsDashboard: React.FC = () => {
+const AnalyticsDashboard: React.FC = () => {,
   const [data, setData] = useState<AnalyticsData | null>(null);
   const [timeRange, setTimeRange] = useState<'24h' | '7d' | '30d' | '90d'>('7d');
   const [isLoading, setIsLoading] = useState(false);
 
-  const generateMockData = (range: string): AnalyticsData => {
+  const generateMockData = (range: string): AnalyticsData => {,
     const baseMultiplier = range === '24h' ? 1 : range === '7d' ? 7 : range === '30d' ? 30 : 90;
-    
     return {
       visitors: {,
         total: Math.floor(Math.random() * 10000 * baseMultiplier) + 5000 * baseMultiplier,
@@ -130,16 +129,16 @@ const AnalyticsDashboard: React.FC = () => {
     loadAnalyticsData();
   }, [timeRange]);
 
-  const formatNumber = (num: number) => {
+  const formatNumber = (num: number) => {,
     if (num >= 1000000) return (num / 1000000).toFixed(1) + 'M';
     if (num >= 1000) return (num / 1000).toFixed(1) + 'K';
     return num.toString();
   };
 
-  const getTrendIcon = (current: number, previous: number) => {
-    if (current > previous) return <TrendingUp className="w-4 h-4 text-green-600" />;
-    if (current < previous) return <TrendingDown className="w-4 h-4 text-red-600" />;
-    return <Activity className="w-4 h-4 text-gray-600" />;
+  const getTrendIcon = (current: number, previous: number) => {,
+    if (current > previous) return <TrendingUp className="w-4 h-4 text-green-600/>;";
+    if (current < previous) return <TrendingDown className="w-4 h-4 text-red-600/>;";
+    return <Activity className="w-4 h-4 text-gray-600/>;";
   };
 
   const getPerformanceColor = (value: number, thresholds: { good: number; poor: number }) => {
@@ -165,7 +164,7 @@ const AnalyticsDashboard: React.FC = () => {
       <div className="flex justify-between items-center mb-6">
         <div>
           <h2 className="text-2xl font-bold text-gray-900 flex items-center gap-2">
-            <BarChart3 className="w-6 h-6" />
+            <BarChart3 className="w-6 h-6/>
             Analytics Dashboard
           </h2>
           <p className="text-gray-600 mt-1">Website performance and user behavior insights</p>
@@ -183,14 +182,14 @@ const AnalyticsDashboard: React.FC = () => {
       </div>
 
       {/* Key Metrics */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+      <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-4 mb-6">",
         <div className="bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg p-4 text-white">
           <div className="flex justify-between items-center">
             <div>
               <p className="text-blue-100 text-sm">Total Visitors</p>
               <p className="text-2xl font-bold">{formatNumber(data.visitors.total)}</p>
             </div>
-            <Users className="w-8 h-8 text-blue-200" />
+            <Users className="w-8 h-8 text-blue-200/>
           </div>
         </div>
         
@@ -200,7 +199,7 @@ const AnalyticsDashboard: React.FC = () => {
               <p className="text-green-600 text-sm">Page Views</p>
               <p className="text-2xl font-bold text-green-700">{formatNumber(data.pageViews.total)}</p>
             </div>
-            <Eye className="w-6 h-6 text-green-500" />
+            <Eye className="w-6 h-6 text-green-500/>
           </div>
         </div>
         
@@ -210,7 +209,7 @@ const AnalyticsDashboard: React.FC = () => {
               <p className="text-purple-600 text-sm">Bounce Rate</p>
               <p className="text-2xl font-bold text-purple-700">{(data.performance.bounceRate * 100).toFixed(1)}%</p>
             </div>
-            <MousePointer className="w-6 h-6 text-purple-500" />
+            <MousePointer className="w-6 h-6 text-purple-500/>
           </div>
         </div>
         
@@ -218,11 +217,11 @@ const AnalyticsDashboard: React.FC = () => {
           <div className="flex justify-between items-center">
             <div>
               <p className="text-orange-600 text-sm">Avg. Load Time</p>
-              <p className={`text-2xl font-bold ${getPerformanceColor(data.performance.averageLoadTime, { good: 2, poor: 4 })}`}>
+              <p className={`text-2xl font-bold ${getPerformanceColor(data.performance.averageLoadTime, { good: 2, poor: 4 })}`}>`;
                 {data.performance.averageLoadTime.toFixed(1)}s
               </p>
             </div>
-            <Clock className="w-6 h-6 text-orange-500" />
+            <Clock className="w-6 h-6 text-orange-500/>
           </div>
         </div>
       </div>
@@ -240,7 +239,7 @@ const AnalyticsDashboard: React.FC = () => {
           </div>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+        <div className="grid grid-cols-1 md: grid-cols-2 gap-4 mt-4">",
           <div>
             <h4 className="font-medium mb-2">Current Pages</h4>
             <div className="space-y-1">
@@ -268,7 +267,7 @@ const AnalyticsDashboard: React.FC = () => {
       </div>
 
       {/* Traffic Sources */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+      <div className="grid grid-cols-1 lg: grid-cols-2 gap-6 mb-6">",
         <div className="bg-gray-50 rounded-lg p-4">
           <h3 className="text-lg font-semibold text-gray-900 mb-4">Traffic Sources</h3>
           <div className="space-y-3">
@@ -293,9 +292,9 @@ const AnalyticsDashboard: React.FC = () => {
             {data.traffic.devices.map((device, index) => (
               <div key={index} className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                  {device.device === 'Desktop' && <Monitor className="w-4 h-4 text-gray-600" />}
-                  {device.device === 'Mobile' && <Smartphone className="w-4 h-4 text-gray-600" />}
-                  {device.device === 'Tablet' && <Monitor className="w-4 h-4 text-gray-600" />}
+                  {device.device === 'Desktop' && <Monitor className="w-4 h-4 text-gray-600/>}";
+                  {device.device === 'Mobile' && <Smartphone className="w-4 h-4 text-gray-600/>}";
+                  {device.device === 'Tablet' && <Monitor className="w-4 h-4 text-gray-600/>}";
                   <span className="font-medium">{device.device}</span>
                 </div>
                 <div className="text-right">
@@ -323,7 +322,7 @@ const AnalyticsDashboard: React.FC = () => {
                 <div className="w-24 bg-gray-200 rounded-full h-2 mt-1">
                   <div
                     className="bg-blue-500 h-2 rounded-full"
-                    style={{ width: `${(page.views / Math.max(...data.pageViews.topPages.map(p => p.views))) * 100}%` }}
+                    style={{ width: `${(page.views / Math.max(...data.pageViews.topPages.map(p => p.views))) * 100}%` }}`;
                   />
                 </div>
               </div>
@@ -333,10 +332,10 @@ const AnalyticsDashboard: React.FC = () => {
       </div>
 
       {/* Performance Metrics */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 md: grid-cols-3 gap-4">",
         <div className="bg-blue-50 rounded-lg p-4">
           <div className="flex items-center gap-2 mb-2">
-            <Target className="w-5 h-5 text-blue-600" />
+            <Target className="w-5 h-5 text-blue-600/>
             <h4 className="font-semibold text-blue-900">Conversion Rate</h4>
           </div>
           <p className="text-2xl font-bold text-blue-700">{(data.performance.conversionRate * 100).toFixed(2)}%</p>
@@ -344,7 +343,7 @@ const AnalyticsDashboard: React.FC = () => {
         
         <div className="bg-green-50 rounded-lg p-4">
           <div className="flex items-center gap-2 mb-2">
-            <Activity className="w-5 h-5 text-green-600" />
+            <Activity className="w-5 h-5 text-green-600/>
             <h4 className="font-semibold text-green-900">Engagement Score</h4>
           </div>
           <p className="text-2xl font-bold text-green-700">{data.performance.engagementScore.toFixed(0)}/100</p>
@@ -352,7 +351,7 @@ const AnalyticsDashboard: React.FC = () => {
         
         <div className="bg-purple-50 rounded-lg p-4">
           <div className="flex items-center gap-2 mb-2">
-            <BarChart3 className="w-5 h-5 text-purple-600" />
+            <BarChart3 className="w-5 h-5 text-purple-600/>
             <h4 className="font-semibold text-purple-900">Pages per Session</h4>
           </div>
           <p className="text-2xl font-bold text-purple-700">{data.pageViews.average.toFixed(1)}</p>

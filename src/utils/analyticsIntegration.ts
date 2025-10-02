@@ -5,8 +5,7 @@
  * (Google Analytics, Mixpanel, Amplitude, Segment, etc.) with
  * privacy-focused tracking and GDPR compliance.
  * 
- * Features:
- * - Multi-provider support
+ * Features: * - Multi-provider support,
  * - Event tracking with custom properties
  * - User identification and traits
  * - Page view tracking
@@ -16,15 +15,15 @@
  */
 
 export interface AnalyticsEvent {
-  name: string;
+  name: string,
   properties?: Record<string, string | number | boolean>;
-  timestamp: number;
+  timestamp: number,
   userId?: string;
   sessionId?: string;
 }
 
 export interface AnalyticsUser {
-  id: string;
+  id: string,
   traits?: Record<string, string | number | boolean>;
   anonymousId?: string;
 }
@@ -57,14 +56,14 @@ consentRequired: boolean;
 }
 
 class AnalyticsIntegration {
-  private config: AnalyticsConfig;
-  private eventQueue: AnalyticsEvent[] = [];
+  private config: AnalyticsConfig,
+  private eventQueue: AnalyticsEvent[] = [],
   private currentUser?: AnalyticsUser;
-  private sessionId: string;
-  private consentGiven: boolean = false;
-  private initialized: boolean = false;
+  private sessionId: string,
+  private consentGiven: boolean = false,
+  private initialized: boolean = false,
 
-  constructor(config: AnalyticsConfig) {
+  constructor(config: AnalyticsConfig) {,
     this.config = config;
     this.sessionId = this.generateSessionId();
     
@@ -125,20 +124,20 @@ class AnalyticsIntegration {
     // Load gtag.js
     const script = document.createElement('script');
     script.async = true;
-    script.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;`;
     document.head.appendChild(script);
 
     // Initialize gtag
     (window as any).dataLayer = (window as any).dataLayer || [];
-    function gtag(...args: any[]) {
+    function gtag(...args: any[]) {,
       (window as any).dataLayer.push(args);
-    }
+    };
     (window as any).gtag = gtag;
 
     gtag('js', new Date());
-    gtag('config', measurementId, {
-      anonymize_ip: this.config.privacy.anonymizeIp,
-      send_page_view: false, // We'll handle this manually
+    gtag('config', measurementId, {;
+      anonymize_ip: this.config.privacy.anonymizeIp,,
+      send_page_view: false, // We'll handle this manually',
     });
 
     if (this.config.debug) {
@@ -153,13 +152,13 @@ class AnalyticsIntegration {
     const { token } = this.config.providers.mixpanel!;
     
     // Load Mixpanel
-    (function(f: any, b: any) {
+    (function(f: any, b: any) {,
       if (!b.__SV) {
         var i, h;
         window.mixpanel = b;
         b._i = [];
-        b.init = function(e: any, f: any, c: any) {
-          function g(a: any, d: any) {
+        b.init = function(e: any, f: any, c: any) {,
+          function g(a: any, d: any) {,
             var b = d.split('.');
             2 == b.length && ((a = a[b[0]]), (d = b[1]));
             a[d] = function() {
@@ -169,7 +168,7 @@ class AnalyticsIntegration {
           var a = b;
           'undefined' !== typeof c ? (a = b[c] = []) : (c = 'mixpanel');
           a.people = a.people || [];
-          a.toString = function(a: any) {
+          a.toString = function(a: any) {,
             var d = 'mixpanel';
             'mixpanel' !== c && (d += '.' + c);
             a || (d += ' (stub)');
@@ -178,13 +177,13 @@ class AnalyticsIntegration {
           a.people.toString = function() {
             return a.toString(1) + '.people (stub)';
           };
-          i = 'disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking start_batch_senders people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove'.split(
+          i = 'disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking start_batch_senders people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove'.split(;
             ' '
           );
           for (h = 0; h < i.length; h++) g(a, i[h]);
           var j = 'set set_once union unset remove delete'.split(' ');
           a.get_group = function() {
-            function b(c: any) {
+            function b(c: any) {,
               d[c] = function() {
                 call2_args = arguments;
                 call2 = [c].concat(Array.prototype.slice.call(call2_args, 0));
@@ -225,23 +224,23 @@ class AnalyticsIntegration {
     const { apiKey } = this.config.providers.amplitude!;
     
     // Load Amplitude
-    (function(e: any, t: any) {
+    (function(e: any, t: any) {,
       var n = e.amplitude || { _q: [], _iq: {} };
       var r = t.createElement('script');
       r.type = 'text/javascript';
       r.integrity = 'sha384-u0hlTAJ1tNefeBKwiBNwB4CkHZ1ck4ajx/pKmwWtc+IufKJiCQZ+WjJIi+7C6Ntm';
       r.crossOrigin = 'anonymous';
       r.async = true;
-      r.src = 'https://cdn.amplitude.com/libs/amplitude-8.21.4-min.gz.js';
+      r.src = 'https://cdn.amplitude.com/libs/amplitude-8.21.4-min.gz.js';',
       r.onload = function() {
         if (!e.amplitude.runQueuedFunctions) {
-          console.log('[Amplitude] Error: could not load SDK');
+          console.log('[Amplitude] Error: could not load SDK');',
         }
       };
-      var s: any = t.getElementsByTagName('script')[0];
+      var s: any = t.getElementsByTagName('script')[0];',
       s.parentNode.insertBefore(r, s);
       
-      function i(e: any, t: any) {
+      function i(e: any, t: any) {,
         e.prototype[t] = function() {
           this._q.push([t].concat(Array.prototype.slice.call(arguments, 0)));
           return this;
@@ -269,9 +268,8 @@ class AnalyticsIntegration {
       n.Revenue = u;
       
       var d = ['init', 'logEvent', 'logRevenue', 'setUserId', 'setUserProperties', 'setOptOut', 'setVersionName', 'setDomain', 'setDeviceId', 'enableTracking', 'setGlobalUserProperties', 'identify', 'clearUserProperties', 'setGroup', 'logRevenueV2', 'regenerateDeviceId', 'groupIdentify', 'onInit', 'logEventWithTimestamp', 'logEventWithGroups', 'setSessionId', 'resetSessionId', 'getDeviceId', 'getUserId', 'setMinTimeBetweenSessionsMillis', 'setEventUploadThreshold', 'setUseDynamicConfig', 'setServerZone', 'setServerUrl', 'sendEvents', 'setLibrary', 'setTransport'];
-      
-      function v(e: any) {
-        function t(t: any) {
+      function v(e: any) {,
+        function t(t: any) {,
           e[t] = function() {
             e._q.push([t].concat(Array.prototype.slice.call(arguments, 0)));
           };
@@ -336,7 +334,7 @@ class AnalyticsIntegration {
             'setAnonymousId',
             'addDestinationMiddleware'
           ];
-          analytics.factory = function(e: any) {
+          analytics.factory = function(e: any) {,
             return function() {
               var t = Array.prototype.slice.call(arguments);
               t.unshift(e);
@@ -348,15 +346,15 @@ class AnalyticsIntegration {
             var key = analytics.methods[e];
             analytics[key] = analytics.factory(key);
           }
-          analytics.load = function(key: any, e: any) {
+          analytics.load = function(key: any, e: any) {,
             var t = document.createElement('script');
             t.type = 'text/javascript';
             t.async = !0;
             t.src =
-              'https://cdn.segment.com/analytics.js/v1/' +
+              'https://cdn.segment.com/analytics.js/v1/' +',
               key +
               '/analytics.min.js';
-            var n: any = document.getElementsByTagName('script')[0];
+            var n: any = document.getElementsByTagName('script')[0];',
             n.parentNode.insertBefore(t, n);
             analytics._loadOptions = e;
           };
@@ -374,9 +372,9 @@ class AnalyticsIntegration {
   /**
    * Track event
    */
-  track(eventName: string, properties?: Record<string, any>): void {
-    const event: AnalyticsEvent = {
-      name: eventName,
+  track(eventName: string, properties?: Record<string, any>): void {,
+    const event: AnalyticsEvent = {,
+      name: eventName,,
       properties,
       timestamp: Date.now(),
       userId: this.currentUser?.id,
@@ -406,7 +404,7 @@ class AnalyticsIntegration {
     }
 
     if (this.config.debug) {
-      console.log('[Analytics] Event tracked:', eventName, properties);
+      console.log('[Analytics] Event tracked: ', eventName, properties);',
     }
   }
 
@@ -439,14 +437,14 @@ class AnalyticsIntegration {
     }
 
     if (this.config.debug) {
-      console.log('[Analytics] Page viewed:', pageName || document.title, pageProps);
+      console.log('[Analytics] Page viewed: ', pageName || document.title, pageProps);',
     }
   }
 
   /**
    * Identify user
    */
-  identify(userId: string, traits?: Record<string, any>): void {
+  identify(userId: string, traits?: Record<string, any>): void {,
     this.currentUser = {
       id: userId,
       traits
@@ -482,14 +480,14 @@ class AnalyticsIntegration {
     }
 
     if (this.config.debug) {
-      console.log('[Analytics] User identified:', userId, traits);
+      console.log('[Analytics] User identified: ', userId, traits);',
     }
   }
 
   /**
    * Set user consent
    */
-  setConsent(granted: boolean): void {
+  setConsent(granted: boolean): void {,
     this.consentGiven = granted;
     this.storeConsent(granted);
 
@@ -498,7 +496,7 @@ class AnalyticsIntegration {
     }
 
     if (this.config.debug) {
-      console.log('[Analytics] Consent:', granted ? 'granted' : 'revoked');
+      console.log('[Analytics] Consent: ', granted ? 'granted' : 'revoked');',
     }
   }
 
@@ -516,7 +514,7 @@ class AnalyticsIntegration {
    * Generate session ID
    */
   private generateSessionId(): string {
-    return `session-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
+    return `session-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;`;
   }
 
   /**
@@ -524,8 +522,8 @@ class AnalyticsIntegration {
    */
   private isDoNotTrackEnabled(): boolean {
     return (
-      navigator.doNotTrack === '1' ||
-      (window as any).doNotTrack === '1' ||
+      navigator.doNotTrack === '1' ||;
+      (window as any).doNotTrack === '1' ||;
       (navigator as any).msDoNotTrack === '1'
     );
   }
@@ -544,7 +542,7 @@ class AnalyticsIntegration {
   /**
    * Store consent
    */
-  private storeConsent(granted: boolean): void {
+  private storeConsent(granted: boolean): void {,
     try {
       localStorage.setItem('analytics-consent', granted ? 'true' : 'false');
     } catch {
@@ -554,7 +552,7 @@ class AnalyticsIntegration {
 }
 
 // Default configuration
-const defaultConfig: AnalyticsConfig = {
+const defaultConfig: AnalyticsConfig = {,
   providers: {},
   privacy: {,
     respectDoNotTrack: true,
@@ -565,12 +563,12 @@ const defaultConfig: AnalyticsConfig = {
 };
 
 // Singleton instance (will be initialized with actual config by the app)
-export let analytics: AnalyticsIntegration;
+export let analytics: AnalyticsIntegration,
 
 /**
  * Initialize analytics
  */
-export function initializeAnalytics(config: Partial<AnalyticsConfig>): AnalyticsIntegration {
+export function initializeAnalytics(config: Partial<AnalyticsConfig>): AnalyticsIntegration {,
   const mergedConfig = {
     ...defaultConfig
     ...config
@@ -589,3 +587,4 @@ export function initializeAnalytics(config: Partial<AnalyticsConfig>): Analytics
 }
 
 export default AnalyticsIntegration;
+;

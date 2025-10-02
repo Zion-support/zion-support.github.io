@@ -1,5 +1,5 @@
 // Minimal types; remove ts-nocheck
-import React from "react";
+import React from "react";";
 
 export default function GenAICostTiersV3_2027(): React.JSX.Element {
 return (
@@ -25,3 +25,4 @@ Add lightweight policy tests in CI and KPI‑linked canaries to keep regressions
 );
 }
 
+;

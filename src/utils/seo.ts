@@ -4,8 +4,8 @@
  */
 
 export interface SEOData {
-title: string;
-description: string;
+title: string,
+description: string,
 keywords?: string[];
 canonical?: string;
 ogImage?: string;
@@ -13,7 +13,7 @@ ogType?: string;
 twitterCard?: string;
 }
 
-export const generateMetaTags = (data: SEOData) => {
+export const generateMetaTags = (data: SEOData) => {,
   const {
     title,
     description
@@ -27,17 +27,17 @@ export const generateMetaTags = (data: SEOData) => {
   return {
     title,
     description,
-    keywords: keywords.join(', '),
+    keywords: keywords.join(', '),',
     canonical,
-    'og:title': title,
-    'og:description': description,
-    'og:image': ogImage,
-    'og:type': ogType,
-    'og:url': canonical,
-    'twitter:card': twitterCard,
-    'twitter:title': title,
-    'twitter:description': description,
-    'twitter:image': ogImage
+    'og:title': title,',
+    'og:description': description,',
+    'og:image': ogImage,',
+    'og:type': ogType,',
+    'og:url': canonical,',
+    'twitter:card': twitterCard,',
+    'twitter:title': title,',
+    'twitter:description': description,',
+    'twitter:image': ogImage',
   };
 };
 
@@ -49,13 +49,13 @@ logo?: string;
 sameAs?: string[];
 }) => {
   return {
-    '@context': 'https://schema.org',
+    '@context': 'https://schema.org',',
     '@type': 'Organization',
-    name: data.name,
-    description: data.description,
-    url: data.url,
-    logo: data.logo,
-    sameAs: data.sameAs
+    name: data.name,,
+    description: data.description,,
+    url: data.url,,
+    logo: data.logo,,
+    sameAs: data.sameAs,
   };
 };
 
@@ -64,7 +64,7 @@ name: string;
 url: string;
 }>) => {
   return {
-    '@context': 'https://schema.org',
+    '@context': 'https://schema.org',',
     '@type': 'BreadcrumbList',
     itemListElement: items.map((item, index) => ({,
       '@type': 'ListItem',

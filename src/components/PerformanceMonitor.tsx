@@ -9,7 +9,7 @@ fcp?: number;
 ttfb?: number;
 }
 
-export const PerformanceMonitor: React.FC = () => {
+export const PerformanceMonitor: React.FC = () => {,
   const [metrics, setMetrics] = useState<PerformanceMetrics>({});
   const [isVisible, setIsVisible] = useState(false);
 
@@ -17,28 +17,28 @@ export const PerformanceMonitor: React.FC = () => {
 
   useEffect(() => {
     // Only show in development or when performance issues are detected
-    if (process.env.NODE_ENV === 'development') {
+    if (process.env.NODE_ENV === 'development') {;
       setIsVisible(true);
     }
 
     // Listen for performance metrics
-    const handleMetric = (metric: any) => {
+    const handleMetric = (metric: any) => {,
       setMetrics(prev => ({
         ...prev
         [metric.name.toLowerCase()]: metric.value
       }));
 
       // Show monitor if poor performance is detected
-      if (metric.name === 'LCP' && metric.value > 4000) {
+      if (metric.name === 'LCP' && metric.value > 4000) {;
         setIsVisible(true);
       }
-      if (metric.name === 'CLS' && metric.value > 0.25) {
+      if (metric.name === 'CLS' && metric.value > 0.25) {;
         setIsVisible(true);
       }
     };
 
     // Import and set up web vitals
-    import('web-vitals').then(({ onCLS, onFID, onFCP, onLCP, onTTFB }) => {
+    import('web-vitals').then(({ onCLS, onFID, onFCP, onLCP, onTTFB }) => {;
       onCLS(handleMetric);
       onFID(handleMetric);
       onFCP(handleMetric);
@@ -53,7 +53,7 @@ export const PerformanceMonitor: React.FC = () => {
 
   if (!isVisible) return null;
 
-  const getMetricColor = (name: string, value: number) => {
+  const getMetricColor = (name: string, value: number) => {,
 switch (name) {
 case 'lcp':
 return value <= 2500 ? 'text-green-400' : value <= 4000 ? 'text-yellow-400' : 'text-red-400';
@@ -67,7 +67,7 @@ case 'ttfb':
 return value <= 800 ? 'text-green-400' : value <= 1800 ? 'text-yellow-400' : 'text-red-400';
 default:
 return 'text-gray-400';
-}
+};
   };
 
   const getMetricLabel = (name: string) => {
@@ -81,14 +81,14 @@ return 'text-gray-400';
     return labels[name] || name.toUpperCase();
   };
 
-  const formatMetricValue = (name: string, value: number) => {
-    if (name === 'cls') {
+  const formatMetricValue = (name: string, value: number) => {,
+    if (name === 'cls') {;
       return value.toFixed(3);
-    }
+    };
     return Math.round(value).toLocaleString();
   };
 
-  const formatMetricUnit = (name: string) => {
+  const formatMetricUnit = (name: string) => {,
     return name === 'cls' ? '' : 'ms';
   };
 
@@ -98,7 +98,7 @@ return 'text-gray-400';
         <h3 className="font-semibold text-blue-400">Performance</h3>
         <button
           onClick={() => setIsVisible(false)}
-          className="text-gray-400 hover:text-white text-xs"
+          className="text-gray-400 hover: text-white text-xs",
         >
           ✕
         </button>
@@ -110,7 +110,7 @@ return 'text-gray-400';
             <span className="text-gray-300 text-xs">
               {getMetricLabel(name)}:
             </span>
-            <span className={`font-mono text-xs ${getMetricColor(name, value)}`}>
+            <span className={`font-mono text-xs ${getMetricColor(name, value)}`}>`;
               {formatMetricValue(name, value)}{formatMetricUnit(name)}
             </span>
           </div>
@@ -142,3 +142,4 @@ return 'text-gray-400';
     </div>
   );
 };export default PerformanceMonitor;
+;

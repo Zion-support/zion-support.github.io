@@ -1,34 +1,34 @@
 // Enterprise case studies showcasing real-world AI implementations and results
 
 export interface EnterpriseCaseStudy {
-id: string;
+id: string,
 slug?: string;
-title: string;
-company: string;
-industry: string;
-description: string;
-challenge: string;
-solution: string;
-results: {,
-metrics: {,
-performance: string;
-savings: string;
-accuracy: string;
+title: string,
+company: string,
+industry: string,
+description: string,
+challenge: string,
+solution: string,
+results: {,,
+metrics: {,,
+performance: string,
+savings: string,
+accuracy: string,
 roi: string;
 };
-    timeframe: string;
-    scale: string;
+    timeframe: string,
+    scale: string,
   };
-  technologies: string[];
-  featured: boolean;
-  date: string;
-  author: string;
+  technologies: string[],
+  featured: boolean,
+  date: string,
+  author: string,
   image?: string;
   newBadge?: boolean;
   trending?: boolean;
 }
 
-export const enterpriseCaseStudies2025: EnterpriseCaseStudy[] = [
+export const enterpriseCaseStudies2025: EnterpriseCaseStudy[] = [,
   {
     id: "fortune-500-ai-transformation",
     slug: "fortune-500-ai-transformation",

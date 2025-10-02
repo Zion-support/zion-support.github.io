@@ -20,18 +20,17 @@ featuredItems?: Array<{ title: string; category: string; link: string
   variant?: string;
 }): UnifiedPromotionalBannerProps {
   return {
-    variant: legacyProps.variant === 'premium' ? 'premium' : 'default',
-    title: legacyProps.title,
-    description: legacyProps.description,
-    ctaText: legacyProps.ctaText,
-    ctaLink: legacyProps.ctaLink,
-    theme: 'gradient',
-    featuredItems: legacyProps.featuredItems || [],
-    className: legacyProps.className,
-    icon: 'rocket',
-    animated: true,
-    badge: 'NEW'
-  };
+    variant: legacyProps.variant === 'premium' ? 'premium' : 'default',',
+    title: legacyProps.title,,
+    description: legacyProps.description,,
+    ctaText: legacyProps.ctaText,,
+    ctaLink: legacyProps.ctaLink,,
+    theme: 'gradient',',
+    featuredItems: legacyProps.featuredItems || [],,
+    className: legacyProps.className,,
+    icon: 'rocket',',
+    animated: true,,
+    badge: 'NEW};
 }
 
 /**
@@ -78,8 +77,8 @@ export const bannerPresets = {
  * Creates a banner configuration from a preset and custom overrides
  */
 export function createBannerConfig(
-  preset: keyof typeof bannerPresets,
-  overrides: Partial<UnifiedPromotionalBannerProps>
+  preset: keyof typeof bannerPresets,,
+  overrides: Partial<UnifiedPromotionalBannerProps>,
 ): UnifiedPromotionalBannerProps {
   return {
     ...bannerPresets[preset]
@@ -122,10 +121,10 @@ link: string;
 metrics?: string;
 }>): FeaturedItem[] {
   return items.map(item => ({
-    title: item.title,
-    category: item.category.toUpperCase(),
-    link: item.link,
-    metrics: item.metrics
+    title: item.title,,
+    category: item.category.toUpperCase(),,
+    link: item.link,,
+    metrics: item.metrics,
   }));
 }
 
@@ -150,21 +149,20 @@ export const usageExamples = {
       title="Your Title Here"
       description="Your description"
       ctaText="Learn More"
-      ctaLink="/blog"
-    />
-  `,
+      ctaLink="/blog/>
+  `,`;
   
   withPreset: `,
     <UnifiedPromotionalBanner
-      {...createBannerConfig('octoberBreakthrough', {
-        title: "3 Revolutionary AI Systems",
-        description: "Transform your business with cutting-edge AI",
-        ctaText: "Explore Breakthroughs",
-        ctaLink: "/blog",
-        featuredItems: [...]
+      {...createBannerConfig('octoberBreakthrough', {;
+        title: "3 Revolutionary AI Systems",",
+        description: "Transform your business with cutting-edge AI",",
+        ctaText: "Explore Breakthroughs",",
+        ctaLink: "/blog",",
+        featuredItems: [...],
       })}
     />
-  `,
+  `,`;
   
   withFeaturedItems: `,
     <UnifiedPromotionalBanner
@@ -175,12 +173,13 @@ export const usageExamples = {
       ctaLink="/blog"
       featuredItems={createFeaturedItems([
         {
-          title: "AI System 1",
-          category: "Machine Learning",
-          link: "/blog/ai-system-1",
-          metrics: "99% accuracy"
+          title: "AI System 1",",
+          category: "Machine Learning",",
+          link: "/blog/ai-system-1",",
+          metrics: "99% accuracy",
         }
       ])}
     />
   `
 };
+;

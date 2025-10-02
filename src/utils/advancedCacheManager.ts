@@ -4,8 +4,8 @@
  */
 
 interface CacheConfig {
-maxAge: number; // milliseconds,
-maxSize: number; // maximum number of entries,
+maxAge: number; // milliseconds,,
+maxSize: number; // maximum number of entries,,
 strategy: 'LRU' | 'LFU' | 'FIFO';
 }
 
@@ -17,10 +17,10 @@ size: number;
 }
 
 interface CacheStats {
-hits: number;
-misses: number;
-evictions: number;
-currentSize: number;
+hits: number,
+misses: number,
+evictions: number,
+currentSize: number,
 hitRate: number;
 }
 
@@ -46,7 +46,7 @@ class AdvancedCacheManager<T = any> {
   /**
    * Get value from cache
    */
-  get(key: string): T | null {
+  get(key: string): T | null {,
     const entry = this.cache.get(key);
 
     if (!entry) {
@@ -68,7 +68,7 @@ class AdvancedCacheManager<T = any> {
     entry.accessCount++;
     
     // Update timestamp for LRU strategy
-    if (this.config.strategy === 'LRU') {
+    if (this.config.strategy === 'LRU') {;
       entry.timestamp = Date.now();
     }
 
@@ -80,7 +80,7 @@ class AdvancedCacheManager<T = any> {
   /**
    * Set value in cache
    */
-  set(key: string, value: T, customMaxAge?: number): void {
+  set(key: string, value: T, customMaxAge?: number): void {,
     // If cache is full, evict based on strategy
     if (this.cache.size >= this.config.maxSize) {
       this.evict();
@@ -101,7 +101,7 @@ class AdvancedCacheManager<T = any> {
   /**
    * Check if key exists and is valid
    */
-  has(key: string): boolean {
+  has(key: string): boolean {,
     const entry = this.cache.get(key);
     if (!entry) return false;
 
@@ -118,7 +118,7 @@ class AdvancedCacheManager<T = any> {
   /**
    * Delete key from cache
    */
-  delete(key: string): boolean {
+  delete(key: string): boolean {,
     const deleted = this.cache.delete(key);
     if (deleted) {
       this.stats.currentSize = this.cache.size;
@@ -138,8 +138,8 @@ class AdvancedCacheManager<T = any> {
    * Get or set with callback (memoization pattern)
    */
   async getOrSet(
-    key: string,
-    fetchFn: () => Promise<T>,
+    key: string,,
+    fetchFn: () => Promise<T>,,
     customMaxAge?: number
   ): Promise<T> {
     const cached = this.get(key);
@@ -181,7 +181,7 @@ break;
    * Find Least Recently Used key
    */
   private findLRUKey(): string | null {
-    let oldestKey: string | null = null;
+    let oldestKey: string | null = null,
     let oldestTime = Infinity;
 
     for (const [key, entry] of this.cache.entries()) {
@@ -198,7 +198,7 @@ break;
    * Find Least Frequently Used key
    */
   private findLFUKey(): string | null {
-    let lfuKey: string | null = null;
+    let lfuKey: string | null = null,
     let minCount = Infinity;
 
     for (const [key, entry] of this.cache.entries()) {
@@ -214,7 +214,7 @@ break;
   /**
    * Estimate size of value
    */
-  private estimateSize(value: T): number {
+  private estimateSize(value: T): number {,
     try {
       return JSON.stringify(value).length;
     } catch {
@@ -283,7 +283,7 @@ break;
   /**
    * Update config
    */
-  updateConfig(newConfig: Partial<CacheConfig>): void {
+  updateConfig(newConfig: Partial<CacheConfig>): void {,
     this.config = {
       ...this.config
       ...newConfig
@@ -293,7 +293,7 @@ break;
   /**
    * Batch get
    */
-  batchGet(keys: string[]): Map<string, T | null> {
+  batchGet(keys: string[]): Map<string, T | null> {,
     const result = new Map<string, T | null>();
     for (const key of keys) {
       result.set(key, this.get(key));
@@ -304,7 +304,7 @@ break;
   /**
    * Batch set
    */
-  batchSet(entries: Map<string, T>): void {
+  batchSet(entries: Map<string, T>): void {,
     for (const [key, value] of entries.entries()) {
       this.set(key, value);
     }
@@ -351,7 +351,7 @@ const imageCache = new AdvancedCacheManager<string>({
 });
 
 // Start periodic cleanup
-if (typeof window !== 'undefined') {
+if (typeof window !== 'undefined') {;
   setInterval(() => {
     apiCache.cleanExpired();
     contentCache.cleanExpired();
@@ -361,3 +361,4 @@ if (typeof window !== 'undefined') {
 
 export { AdvancedCacheManager, apiCache, contentCache, imageCache };
 export type { CacheConfig, CacheStats };
+;

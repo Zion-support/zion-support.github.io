@@ -4,18 +4,18 @@
  */
 
 interface AccessibilityConfig {
-enableKeyboardNavigation: boolean;
-enableScreenReaderSupport: boolean;
-enableHighContrast: boolean;
-enableReducedMotion: boolean;
-enableFocusIndicators: boolean;
+enableKeyboardNavigation: boolean,
+enableScreenReaderSupport: boolean,
+enableHighContrast: boolean,
+enableReducedMotion: boolean,
+enableFocusIndicators: boolean,
 enableAriaLabels: boolean;
 }
 
 class AccessibilityEnhancer {
-  private config: AccessibilityConfig;
-  private observers: MutationObserver[] = [];
-  private keyboardListeners: Map<string, (event: KeyboardEvent) => void> = new Map();
+  private config: AccessibilityConfig,
+  private observers: MutationObserver[] = [],
+  private keyboardListeners: Map<string, (event: KeyboardEvent) => void> = new Map(),
 
   constructor(config: AccessibilityConfig = {
     enableKeyboardNavigation: true,
@@ -68,14 +68,14 @@ class AccessibilityEnhancer {
     const skipLink = document.createElement('a');
     skipLink.href = '#main-content';
     skipLink.textContent = 'Skip to main content';
-    skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
+    skipLink.className = 'sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';',
     document.body.insertBefore(skipLink, document.body.firstChild);
 
     // Tab navigation improvements
-    const handleTabNavigation = (event: KeyboardEvent) => {
-      if (event.key === 'Tab') {
+    const handleTabNavigation = (event: KeyboardEvent) => {,
+      if (event.key === 'Tab') {;
         document.body.classList.add('keyboard-navigation');
-      }
+      };
     };
 
     const handleMouseNavigation = () => {
@@ -84,7 +84,6 @@ class AccessibilityEnhancer {
 
     document.addEventListener('keydown', handleTabNavigation);
     document.addEventListener('mousedown', handleMouseNavigation);
-
     this.keyboardListeners.set('tab-navigation', handleTabNavigation);
     this.keyboardListeners.set('mouse-navigation', handleMouseNavigation);
   }
@@ -97,7 +96,6 @@ class AccessibilityEnhancer {
     this.addScreenReaderText('banner-section', 'Main content banners and announcements');
     this.addScreenReaderText('navigation', 'Main navigation menu');
     this.addScreenReaderText('footer', 'Footer with contact information and links');
-
     // Setup ARIA landmarks
     this.setupAriaLandmarks();
 
@@ -120,7 +118,6 @@ document.documentElement.classList.add('high-contrast');
     };
 
     mediaQuery.addEventListener('change', handleContrastChange);
-    
     // Apply initial state
     if (mediaQuery.matches) {
       document.documentElement.classList.add('high-contrast');
@@ -141,7 +138,6 @@ document.documentElement.classList.add('reduce-motion');
     };
 
     mediaQuery.addEventListener('change', handleMotionChange);
-    
     // Apply initial state
     if (mediaQuery.matches) {
       document.documentElement.classList.add('reduce-motion');
@@ -169,7 +165,7 @@ animation-duration: 0.01ms !important;
 animation-iteration-count: 1 !important;
 transition-duration: 0.01ms !important;
 }
-    `;
+    `;`;
     document.head.appendChild(style);
   }
 
@@ -201,9 +197,9 @@ transition-duration: 0.01ms !important;
   /**
    * Add ARIA labels to elements
    */
-  private addAriaLabels(element: Element): void {
+  private addAriaLabels(element: Element): void {,
     // Add ARIA labels to buttons without text
-    const buttons = element.querySelectorAll('button:not([aria-label]):not([aria-labelledby])');
+    const buttons = element.querySelectorAll('button: not([aria-label]):not([aria-labelledby])');',
     buttons.forEach((button) => {
       const icon = button.querySelector('svg, i, [class*="icon"]');
       if (icon && !button.textContent?.trim()) {
@@ -212,7 +208,7 @@ transition-duration: 0.01ms !important;
     });
 
     // Add ARIA labels to links without descriptive text
-    const links = element.querySelectorAll('a:not([aria-label]):not([aria-labelledby])');
+    const links = element.querySelectorAll('a: not([aria-label]):not([aria-labelledby])');',
     links.forEach((link) => {
       if (!link.textContent?.trim() || link.textContent.trim().length < 3) {
         link.setAttribute('aria-label', this.generateLinkLabel(link));
@@ -220,7 +216,7 @@ transition-duration: 0.01ms !important;
     });
 
     // Add ARIA labels to images without alt text
-    const images = element.querySelectorAll('img:not([alt])');
+    const images = element.querySelectorAll('img: not([alt])');',
     images.forEach((img) => {
       img.setAttribute('alt', this.generateImageAlt(img));
     });
@@ -231,17 +227,17 @@ transition-duration: 0.01ms !important;
    */
   private setupAriaLandmarks(): void {
     const main = document.querySelector('main');
-    if (main && !main.getAttribute('role')) {
+    if (main && !main.getAttribute('role')) {;
       main.setAttribute('role', 'main');
     }
 
     const nav = document.querySelector('nav');
-    if (nav && !nav.getAttribute('role')) {
+    if (nav && !nav.getAttribute('role')) {;
       nav.setAttribute('role', 'navigation');
     }
 
     const footer = document.querySelector('footer');
-    if (footer && !footer.getAttribute('role')) {
+    if (footer && !footer.getAttribute('role')) {;
       footer.setAttribute('role', 'contentinfo');
     }
   }
@@ -271,7 +267,7 @@ transition-duration: 0.01ms !important;
   /**
    * Announce message to screen readers
    */
-  announce(message: string): void {
+  announce(message: string): void {,
     const liveRegion = document.getElementById('live-region');
     if (liveRegion) {
       liveRegion.textContent = message;
@@ -286,8 +282,8 @@ transition-duration: 0.01ms !important;
   /**
    * Add screen reader only text
    */
-  private addScreenReaderText(elementSelector: string, text: string): void {
-    const element = document.querySelector(`[class*="${elementSelector}"], #${elementSelector}`);
+  private addScreenReaderText(elementSelector: string, text: string): void {,
+    const element = document.querySelector(`[class*="${elementSelector}"], #${elementSelector}`);`;
     if (element) {
       const srText = document.createElement('span');
       srText.className = 'sr-only';
@@ -299,34 +295,31 @@ transition-duration: 0.01ms !important;
   /**
    * Generate button label
    */
-  private generateButtonLabel(button: Element): string {
+  private generateButtonLabel(button: Element): string {,
     const className = button.className;
     const context = button.closest('[class*="banner"], [class*="card"], [class*="section"]');
-    
     if (className.includes('close')) return 'Close';
     if (className.includes('menu')) return 'Menu';
     if (className.includes('search')) return 'Search';
     if (className.includes('next')) return 'Next';
     if (className.includes('prev')) return 'Previous';
-    
     return 'Button';
   }
 
   /**
    * Generate link label
    */
-  private generateLinkLabel(link: Element): string {
+  private generateLinkLabel(link: Element): string {,
     const href = link.getAttribute('href');
-    if (href?.startsWith('#')) return `Go to ${href.substring(1)}`;
+    if (href?.startsWith('#')) return `Go to ${href.substring(1)}`;`;
     if (href?.startsWith('http')) return 'External link';
-    
     return 'Link';
   }
 
   /**
    * Generate image alt text
    */
-  private generateImageAlt(img: Element): string {
+  private generateImageAlt(img: Element): string {,
     const src = img.getAttribute('src') || '';
     const className = img.className;
     
@@ -334,7 +327,6 @@ transition-duration: 0.01ms !important;
     if (src.includes('banner')) return 'Promotional banner';
     if (src.includes('icon')) return 'Icon';
     if (className.includes('decoration')) return 'Decorative image';
-    
     return 'Image';
   }
 
@@ -346,9 +338,9 @@ transition-duration: 0.01ms !important;
     this.observers = [];
     
     this.keyboardListeners.forEach((listener, type) => {
-      if (type === 'tab-navigation') {
+      if (type === 'tab-navigation') {;
         document.removeEventListener('keydown', listener);
-      } else if (type === 'mouse-navigation') {
+      } else if (type === 'mouse-navigation') {;
         document.removeEventListener('mousedown', listener);
       }
     });

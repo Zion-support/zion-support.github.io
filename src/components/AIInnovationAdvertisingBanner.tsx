@@ -1,6 +1,5 @@
 import React from 'react';
-
-const AIInnovationAdvertisingBanner: React.FC = () => {
+const AIInnovationAdvertisingBanner: React.FC = () => {,
 return (
 <section className="py-16 bg-gradient-to-r from-blue-900/40 via-purple-900/40 to-pink-900/40 border-y border-blue-500/20">
 <div className="container mx-auto px-6">
@@ -21,36 +20,31 @@ Get early access to our breakthrough AI technologies and transform your enterpri
 {/* Left Side - Features */
 }
           <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
-            <h3 className="text-3xl font-bold text-white mb-6">What You'll Get:</h3>
+            <h3 className="text-3xl font-bold text-white mb-6">What You'll Get: </h3>',
             <div className="space-y-4">
               {[
                 {
-                  icon: '⚡',
-                  title: 'Quantum-Neural AI Access',
-                  description: '1000x faster processing with quantum-classical hybrid systems'
-                },
+                  icon: '⚡',',
+                  title: 'Quantum-Neural AI Access',',
+                  description: '1000x faster processing with quantum-classical hybrid systems},
                 {
-                  icon: '🧠',
-                  title: 'Meta-Cognitive AI Framework',
-                  description: 'Self-aware AI that thinks about its own thinking processes'
-                },
+                  icon: '🧠',',
+                  title: 'Meta-Cognitive AI Framework',',
+                  description: 'Self-aware AI that thinks about its own thinking processes},
                 {
-                  icon: '🤖',
-                  title: 'Autonomous Operations Suite',
-                  description: '98% automation rate with self-healing and self-optimizing systems'
-                },
+                  icon: '🤖',',
+                  title: 'Autonomous Operations Suite',',
+                  description: '98% automation rate with self-healing and self-optimizing systems},
                 {
-                  icon: '🛡️',
-                  title: 'Enterprise Security Package',
-                  description: 'Military-grade security for AI systems and data protection'
-                },
+                  icon: '🛡️',',
+                  title: 'Enterprise Security Package',',
+                  description: 'Military-grade security for AI systems and data protection},
                 {
-                  icon: '📊',
-                  title: 'Real-time Analytics Dashboard',
-                  description: 'Live monitoring and optimization of all AI operations'
-                }
+                  icon: '📊',',
+                  title: 'Real-time Analytics Dashboard',',
+                  description: 'Live monitoring and optimization of all AI operations}
               ].map((feature, index) => (
-                <div key={index} className="flex items-start gap-4 p-4 bg-white/5 rounded-xl border border-white/10 hover:border-blue-500/50 transition-all duration-300">
+                <div key={index} className="flex items-start gap-4 p-4 bg-white/5 rounded-xl border border-white/10 hover: border-blue-500/50 transition-all duration-300">",
                   <div className="text-3xl">{feature.icon}</div>
                   <div>
                     <h4 className="text-lg font-bold text-white mb-2">{feature.title}</h4>
@@ -95,20 +89,20 @@ Get early access to our breakthrough AI technologies and transform your enterpri
               </div>
               <div className="flex items-center gap-3">
                 <span className="text-green-400">✓</span>
-                <span className="text-gray-300">ROI Guarantee: 300%+ in 6 months</span>
+                <span className="text-gray-300">ROI Guarantee: 300%+ in 6 months</span>",
               </div>
             </div>
 
             <div className="space-y-4">
               <a title="Internal link" 
                 href="/contact?offer=ai-innovation-50" 
-                className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1 text-center block"
+                className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover: from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1 text-center block",
               >
                 Claim Your 50% Discount Now
               </a>
               <a title="Internal link" 
                 href="/schedule-demo" 
-                className="w-full border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 text-center block"
+                className="w-full border-2 border-blue-500 text-blue-400 hover: bg-blue-500 hover:text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 text-center block",
               >
                 Schedule Free Demo
               </a>
@@ -129,23 +123,20 @@ Get early access to our breakthrough AI technologies and transform your enterpri
             <p className="text-gray-400">Join 500+ enterprises already transforming with our AI solutions</p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md: grid-cols-3 gap-6">",
             {[
               {
-                company: 'Fortune 500 Tech Giant',
-                result: '300% ROI increase',
-                testimonial: 'Zion Tech Group\'s AI solutions revolutionized our operations'
-              },
+                company: 'Fortune 500 Tech Giant',',
+                result: '300% ROI increase',',
+                testimonial: 'Zion Tech Group\'s AI solutions revolutionized our operations},
               {
-                company: 'Global Financial Institution',
-                result: '$50M cost savings',
-                testimonial: 'The autonomous systems reduced our operational costs dramatically'
-              },
+                company: 'Global Financial Institution',',
+                result: '$50M cost savings',',
+                testimonial: 'The autonomous systems reduced our operational costs dramatically},
               {
-                company: 'Leading Healthcare System',
-                result: '99.9% uptime achieved',
-                testimonial: 'Meta-cognitive AI improved our decision-making accuracy by 95%'
-              }
+                company: 'Leading Healthcare System',',
+                result: '99.9% uptime achieved',',
+                testimonial: 'Meta-cognitive AI improved our decision-making accuracy by 95%}
             ].map((testimonial, index) => (
               <div key={index} className="text-center p-6 bg-white/5 rounded-xl border border-white/10">
                 <div className="text-yellow-400 text-2xl mb-2">★★★★★</div>

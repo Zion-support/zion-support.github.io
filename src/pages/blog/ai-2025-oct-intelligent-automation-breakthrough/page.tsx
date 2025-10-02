@@ -4,12 +4,10 @@ const Page = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
       <Helmet>
-        <title>Intelligent Automation Breakthrough 2025: From Tickets to Outcomes</title>
+        <title>Intelligent Automation Breakthrough 2025: From Tickets to Outcomes</title>,
         <meta
           name="description"
-          content="Shift from manual tickets to outcome‑driven automation with safe agent runbooks, budgets, and instant rollback."
-        />
-        <link rel="canonical" href="https://ziontechgroup.com/blog/ai-2025-oct-intelligent-automation-breakthrough" />
+          content="Shift from manual tickets to outcome‑driven automation with safe agent runbooks, budgets, and instant rollback." /><link rel="canonical" href="https://ziontechgroup.com/blog/ai-2025-oct-intelligent-automation-breakthrough/>",
       </Helmet>
 
       <div className="container mx-auto px-6 py-12">
@@ -35,7 +33,7 @@ const Page = () => {
             </p>
 
             <div className="mt-8">
-              <Link to="/blog" className="text-cyan-300 hover:underline">← Back to Blog</Link>
+              <Link to="/blog" className="text-cyan-300 hover: underline">← Back to Blog</Link>",
             </div>
           </div>
         </div>
@@ -46,3 +44,4 @@ const Page = () => {
 
 export default Page;
 
+;

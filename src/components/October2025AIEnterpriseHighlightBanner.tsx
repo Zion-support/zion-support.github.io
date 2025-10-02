@@ -1,6 +1,5 @@
 import React from 'react';
-
-const October2025AIEnterpriseHighlightBanner: React.FC = () => {
+const October2025AIEnterpriseHighlightBanner: React.FC = () => {,
   return (
     <div className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-12 px-4">
       <div className="max-w-6xl mx-auto">
@@ -13,7 +12,7 @@ const October2025AIEnterpriseHighlightBanner: React.FC = () => {
           </span>
         </div>
 
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 leading-tight">
+        <h2 className="text-4xl md: text-5xl font-bold text-center mb-4 leading-tight">",
           Enterprise AI Transformation
           <br />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">
@@ -26,8 +25,8 @@ const October2025AIEnterpriseHighlightBanner: React.FC = () => {
           with proven frameworks and measurable results
         </p>
 
-        <div className="grid md:grid-cols-3 gap-6">
-          <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-white/30 transition-all">
+        <div className="grid md: grid-cols-3 gap-6">",
+          <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover: border-white/30 transition-all">",
             <div className="flex items-center justify-between mb-4">
               <span className="text-3xl">🛡️</span>
               <span className="px-3 py-1 bg-blue-500/30 rounded-lg text-xs font-bold">GOVERNANCE</span>
@@ -51,13 +50,13 @@ const October2025AIEnterpriseHighlightBanner: React.FC = () => {
             </ul>
             <Link
               to="/blog/ai-2025-october-enterprise-ai-governance-framework"
-              className="block w-full text-center bg-gradient-to-r from-blue-500 to-cyan-500 px-6 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all"
+              className="block w-full text-center bg-gradient-to-r from-blue-500 to-cyan-500 px-6 py-3 rounded-lg font-semibold hover: from-blue-600 hover:to-cyan-600 transition-all",
             >
               Read Framework →
             </Link>
           </div>
 
-          <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-white/30 transition-all">
+          <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover: border-white/30 transition-all">",
             <div className="flex items-center justify-between mb-4">
               <span className="text-3xl">🧠</span>
               <span className="px-3 py-1 bg-purple-500/30 rounded-lg text-xs font-bold">MULTIMODAL</span>
@@ -81,13 +80,13 @@ const October2025AIEnterpriseHighlightBanner: React.FC = () => {
             </ul>
             <Link
               to="/blog/ai-2025-october-multimodal-ai-enterprise-deployment"
-              className="block w-full text-center bg-gradient-to-r from-purple-500 to-pink-500 px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all"
+              className="block w-full text-center bg-gradient-to-r from-purple-500 to-pink-500 px-6 py-3 rounded-lg font-semibold hover: from-purple-600 hover:to-pink-600 transition-all",
             >
               Explore Guide →
             </Link>
           </div>
 
-          <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-white/30 transition-all">
+          <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover: border-white/30 transition-all">",
             <div className="flex items-center justify-between mb-4">
               <span className="text-3xl">⚡</span>
               <span className="px-3 py-1 bg-green-500/30 rounded-lg text-xs font-bold">EDGE AI</span>
@@ -111,7 +110,7 @@ const October2025AIEnterpriseHighlightBanner: React.FC = () => {
             </ul>
             <Link
               to="/blog/ai-2025-october-edge-ai-deployment-revolution"
-              className="block w-full text-center bg-gradient-to-r from-green-500 to-teal-500 px-6 py-3 rounded-lg font-semibold hover:from-green-600 hover:to-teal-600 transition-all"
+              className="block w-full text-center bg-gradient-to-r from-green-500 to-teal-500 px-6 py-3 rounded-lg font-semibold hover: from-green-600 hover:to-teal-600 transition-all",
             >
               Discover More →
             </Link>
@@ -142,3 +141,4 @@ const October2025AIEnterpriseHighlightBanner: React.FC = () => {
 };
 
 export default October2025AIEnterpriseHighlightBanner;
+;

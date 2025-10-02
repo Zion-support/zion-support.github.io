@@ -84,13 +84,13 @@ export function AIMultimodalEnterprise2026Banner(): void {
             </span>
             <span className="text-sm opacity-90">Multimodal AI</span>
           </div>
-          <h2 className="text-2xl md:text-3xl font-bold mb-3">
+          <h2 className="text-2xl md: text-3xl font-bold mb-3">",
             AI Multimodal Enterprise Solutions 2026
           </h2>
           <p className="text-lg opacity-90 mb-6 max-w-3xl mx-auto">
             Harness the power of text, image, audio, and video processing with unified AI models that deliver 95% accuracy across all modalities.
           </p>
-          <div className="grid md:grid-cols-3 gap-4 mb-6">
+          <div className="grid md: grid-cols-3 gap-4 mb-6">",
             <div className="bg-white/10 rounded-lg p-4">
               <div className="text-2xl mb-2">📝</div>
               <div className="font-semibold">Text Processing</div>
@@ -109,7 +109,7 @@ export function AIMultimodalEnterprise2026Banner(): void {
           </div>
           <Link
             to="/services/ai-multimodal-enterprise"
-            className="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+            className="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover: bg-gray-100 transition-colors",
           >
             Explore Multimodal AI →
           </Link>
@@ -178,29 +178,29 @@ export function NewLatest2026ContentBanner(): void {
             </span>
             <span className="text-sm opacity-90">Latest Content</span>
           </div>
-          <h2 className="text-2xl md:text-3xl font-bold mb-3">
+          <h2 className="text-2xl md: text-3xl font-bold mb-3">",
             Revolutionary AI Content 2026
           </h2>
           <p className="text-lg opacity-90 mb-6 max-w-3xl mx-auto">
             Discover cutting-edge AI insights, case studies, and implementation guides that are transforming industries worldwide.
           </p>
-          <div className="grid md:grid-cols-2 gap-6 mb-6">
+          <div className="grid md: grid-cols-2 gap-6 mb-6">",
             <Link to="/blog/ai-autonomous-cloud-operations-2026" className="group">
-              <div className="bg-white/10 rounded-lg p-4 hover:bg-white/20 transition-colors">
-                <h3 className="font-semibold mb-2 group-hover:text-yellow-200">AI Autonomous Cloud Operations</h3>
+              <div className="bg-white/10 rounded-lg p-4 hover: bg-white/20 transition-colors">",
+                <h3 className="font-semibold mb-2 group-hover: text-yellow-200">AI Autonomous Cloud Operations</h3>",
                 <p className="text-sm opacity-90">Self-healing infrastructure with 99.9% uptime</p>
               </div>
             </Link>
             <Link to="/case-studies/ai-retail-automation-2026" className="group">
-              <div className="bg-white/10 rounded-lg p-4 hover:bg-white/20 transition-colors">
-                <h3 className="font-semibold mb-2 group-hover:text-yellow-200">AI Retail Automation Case Study</h3>
+              <div className="bg-white/10 rounded-lg p-4 hover: bg-white/20 transition-colors">",
+                <h3 className="font-semibold mb-2 group-hover: text-yellow-200">AI Retail Automation Case Study</h3>",
                 <p className="text-sm opacity-90">$8M ROI with 98% automation</p>
               </div>
             </Link>
           </div>
           <Link
             to="/blog"
-            className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+            className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover: bg-gray-100 transition-colors",
           >
             View All Latest Content →
           </Link>
@@ -222,13 +222,13 @@ export function AIAutonomousCloudOpsBanner(): void {
             </span>
             <span className="text-sm opacity-90">Cloud Operations</span>
           </div>
-          <h2 className="text-2xl md:text-3xl font-bold mb-3">
+          <h2 className="text-2xl md: text-3xl font-bold mb-3">",
             AI Autonomous Cloud Operations 2026
           </h2>
           <p className="text-lg opacity-90 mb-6 max-w-3xl mx-auto">
             Transform your cloud infrastructure with AI-powered self-healing systems, predictive maintenance, and zero-touch operations.
           </p>
-          <div className="grid md:grid-cols-3 gap-4 mb-6">
+          <div className="grid md: grid-cols-3 gap-4 mb-6">",
             <div className="bg-white/10 rounded-lg p-4">
               <div className="text-3xl font-bold text-cyan-300">99.9%</div>
               <div className="font-semibold">Uptime</div>
@@ -247,7 +247,7 @@ export function AIAutonomousCloudOpsBanner(): void {
           </div>
           <Link
             to="/blog/ai-autonomous-cloud-operations-2026"
-            className="bg-white text-cyan-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+            className="bg-white text-cyan-600 px-6 py-3 rounded-lg font-semibold hover: bg-gray-100 transition-colors",
           >
             Read Complete Guide →
           </Link>
@@ -269,13 +269,13 @@ export function AIFinTechTransformationBanner(): void {
             </span>
             <span className="text-sm opacity-90">FinTech Revolution</span>
           </div>
-          <h2 className="text-2xl md:text-3xl font-bold mb-3">
+          <h2 className="text-2xl md: text-3xl font-bold mb-3">",
             AI FinTech Transformation 2026
           </h2>
           <p className="text-lg opacity-90 mb-6 max-w-3xl mx-auto">
             Revolutionize your financial services with AI-powered automation, achieving 95% process efficiency and $5M+ annual savings.
           </p>
-          <div className="grid md:grid-cols-3 gap-4 mb-6">
+          <div className="grid md: grid-cols-3 gap-4 mb-6">",
             <div className="bg-white/10 rounded-lg p-4">
               <div className="text-3xl font-bold text-green-300">95%</div>
               <div className="font-semibold">Automation</div>
@@ -294,7 +294,7 @@ export function AIFinTechTransformationBanner(): void {
           </div>
           <Link
             to="/blog/ai-fintech-transformation-2026"
-            className="bg-white text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+            className="bg-white text-green-600 px-6 py-3 rounded-lg font-semibold hover: bg-gray-100 transition-colors",
           >
             Read FinTech Guide →
           </Link>
@@ -316,13 +316,13 @@ export function AIRetailAutomationBanner(): void {
             </span>
             <span className="text-sm opacity-90">Fortune 500</span>
           </div>
-          <h2 className="text-2xl md:text-3xl font-bold mb-3">
+          <h2 className="text-2xl md: text-3xl font-bold mb-3">",
             AI Retail Automation Success Story
           </h2>
           <p className="text-lg opacity-90 mb-6 max-w-3xl mx-auto">
             See how a Fortune 500 retailer achieved 98% automation, 300% productivity gains, and $8M annual ROI with AI retail automation.
           </p>
-          <div className="grid md:grid-cols-3 gap-4 mb-6">
+          <div className="grid md: grid-cols-3 gap-4 mb-6">",
             <div className="bg-white/10 rounded-lg p-4">
               <div className="text-3xl font-bold text-orange-300">98%</div>
               <div className="font-semibold">Automation Rate</div>
@@ -341,7 +341,7 @@ export function AIRetailAutomationBanner(): void {
           </div>
           <Link
             to="/case-studies/ai-retail-automation-2026"
-            className="bg-white text-orange-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+            className="bg-white text-orange-600 px-6 py-3 rounded-lg font-semibold hover: bg-gray-100 transition-colors",
           >
             View Case Study →
           </Link>
@@ -363,29 +363,29 @@ export function Latest2026ContentBanner(): void {
             </span>
             <span className="text-sm opacity-90">Latest Content</span>
           </div>
-          <h2 className="text-2xl md:text-3xl font-bold mb-3">
+          <h2 className="text-2xl md: text-3xl font-bold mb-3">",
             Cutting-Edge AI Content 2026
           </h2>
           <p className="text-lg opacity-90 mb-6 max-w-3xl mx-auto">
             Explore the latest AI innovations, case studies, and implementation guides that are revolutionizing industries.
           </p>
           <div className="flex flex-wrap justify-center gap-4 mb-6">
-            <Link to="/blog/ai-autonomous-cloud-operations-2026" className="bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg text-sm font-semibold transition-colors">
+            <Link to="/blog/ai-autonomous-cloud-operations-2026" className="bg-white/10 hover: bg-white/20 px-4 py-2 rounded-lg text-sm font-semibold transition-colors">",
               Cloud Operations
             </Link>
-            <Link to="/blog/ai-fintech-transformation-2026" className="bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg text-sm font-semibold transition-colors">
+            <Link to="/blog/ai-fintech-transformation-2026" className="bg-white/10 hover: bg-white/20 px-4 py-2 rounded-lg text-sm font-semibold transition-colors">",
               FinTech Revolution
             </Link>
-            <Link to="/case-studies/ai-retail-automation-2026" className="bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg text-sm font-semibold transition-colors">
+            <Link to="/case-studies/ai-retail-automation-2026" className="bg-white/10 hover: bg-white/20 px-4 py-2 rounded-lg text-sm font-semibold transition-colors">",
               Retail Automation
             </Link>
-            <Link to="/blog/ai-sustainability-green-tech-2026" className="bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg text-sm font-semibold transition-colors">
+            <Link to="/blog/ai-sustainability-green-tech-2026" className="bg-white/10 hover: bg-white/20 px-4 py-2 rounded-lg text-sm font-semibold transition-colors">",
               Sustainability
             </Link>
           </div>
           <Link
             to="/blog"
-            className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+            className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover: bg-gray-100 transition-colors",
           >
             Explore All Content →
           </Link>
@@ -393,4 +393,4 @@ export function Latest2026ContentBanner(): void {
       </div>
     </div>
   );
-}
+};

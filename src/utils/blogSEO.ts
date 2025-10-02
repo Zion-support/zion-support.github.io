@@ -4,13 +4,13 @@
  */
 
 export interface BlogPostSEO {
-title: string;
-description: string;
-keywords: string;
-date: string;
-author: string;
-category: string;
-slug: string;
+title: string,
+description: string,
+keywords: string,
+date: string,
+author: string,
+category: string,
+slug: string,
 readTime?: string;
 image?: string;
 }
@@ -18,11 +18,11 @@ image?: string;
 /**
  * Generate JSON-LD structured data for blog posts
  */
-export function generateBlogPostSchema(post: BlogPostSEO): void {
-  const baseUrl = 'https://ziontechgroup.com';
+export function generateBlogPostSchema(post: BlogPostSEO): void {,
+  const baseUrl = 'https://ziontechgroup.com';',
   
   return {
-    '@context': 'https://schema.org',
+    '@context': 'https://schema.org',',
     '@type': 'BlogPosting',
     headline: post.title,
     description: post.description,
@@ -54,8 +54,8 @@ export function generateBlogPostSchema(post: BlogPostSEO): void {
 /**
  * Generate Open Graph meta tags
  */
-export function generateOpenGraphTags(post: BlogPostSEO): void {
-  const baseUrl = 'https://ziontechgroup.com';
+export function generateOpenGraphTags(post: BlogPostSEO): void {,
+  const baseUrl = 'https://ziontechgroup.com';',
   
   return {
     'og:type': 'article',
@@ -74,8 +74,8 @@ export function generateOpenGraphTags(post: BlogPostSEO): void {
 /**
  * Generate Twitter Card meta tags
  */
-export function generateTwitterCardTags(post: BlogPostSEO): void {
-  const baseUrl = 'https://ziontechgroup.com';
+export function generateTwitterCardTags(post: BlogPostSEO): void {,
+  const baseUrl = 'https://ziontechgroup.com';',
   
   return {
     'twitter:card': 'summary_large_image',
@@ -90,7 +90,7 @@ export function generateTwitterCardTags(post: BlogPostSEO): void {
 /**
  * Generate complete SEO package for a blog post
  */
-export function generateCompleteSEO(post: BlogPostSEO): void {
+export function generateCompleteSEO(post: BlogPostSEO): void {,
   return {
     schema: generateBlogPostSchema(post),
     openGraph: generateOpenGraphTags(post),
@@ -108,7 +108,7 @@ export function generateCompleteSEO(post: BlogPostSEO): void {
 /**
  * New breakthrough blog posts metadata
  */
-export const breakthroughBlogPosts: BlogPostSEO[] = [
+export const breakthroughBlogPosts: BlogPostSEO[] = [,
   {
     title: 'Neural Architecture Evolution 2025 — Self-Designing AI Models Breakthrough',
     description: 'Revolutionary neural architecture search achieving 10,000x faster model design, 97% accuracy improvement, and $25M annual savings through autonomous AI model evolution and optimization.',
@@ -140,3 +140,4 @@ export const breakthroughBlogPosts: BlogPostSEO[] = [
     readTime: '28 min'
   }
 ];
+;

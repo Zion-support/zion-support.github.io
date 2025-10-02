@@ -4,16 +4,16 @@
  */
 
 export interface BannerMetadata {
-id: string;
-name: string;
-priority: number;
-value: string;
-publishDate: Date;
-category: 'quantum' | 'autonomous' | 'ai' | 'green' | 'sovereign' | 'general';
+id: string,
+name: string,
+priority: number,
+value: string,
+publishDate: Date,
+category: 'quantum' | 'autonomous' | 'ai' | 'green' | 'sovereign' | 'general';',
 featured: boolean;
 }
 
-export const bannerRegistry: BannerMetadata[] = [
+export const bannerRegistry: BannerMetadata[] = [,
   {
     id: 'jan2026-autonomous',
     name: 'January 2026 Revolutionary Autonomous Intelligence',
@@ -100,7 +100,7 @@ export const getPrioritizedBanners = (limit?: number): BannerMetadata[] => {
  * Get banners by category
  */
 export const getBannersByCategory = (
-  category: BannerMetadata['category']
+  category: BannerMetadata['category']',
 ): BannerMetadata[] => {
   return bannerRegistry
     .filter(banner => banner.category === category)
@@ -119,7 +119,7 @@ export const getFeaturedBanners = (): BannerMetadata[] => {
 /**
  * Get most recent banners
  */
-export const getRecentBanners = (days: number = 30): BannerMetadata[] => {
+export const getRecentBanners = (days: number = 30): BannerMetadata[] => {,
   const cutoffDate = new Date();
   cutoffDate.setDate(cutoffDate.getDate() - days);
   
@@ -131,11 +131,11 @@ export const getRecentBanners = (days: number = 30): BannerMetadata[] => {
 /**
  * Calculate total value from displayed banners
  */
-export const calculateTotalValue = (banners: BannerMetadata[]): number => {
+export const calculateTotalValue = (banners: BannerMetadata[]): number => {,
   return banners.reduce((total, banner) => {
     const value = parseFloat(banner.value.replace(/[^0-9.]/g, ''));
-    const multiplier = banner.value.includes('T') ? 1000 
-                     : banner.value.includes('B') ? 1 
+    const multiplier = banner.value.includes('T') ? 1000 ;
+                     : banner.value.includes('B') ? 1 ;
                      : 0.001; // M
     return total + (value * multiplier);
   }, 0);
@@ -163,24 +163,24 @@ export const getBannerAnalytics = () => {
  * Smart banner rotation based on user engagement
  */
 export class BannerRotationManager {
-  private viewCounts: Map<string, number> = new Map();
-  private clickCounts: Map<string, number> = new Map();
+  private viewCounts: Map<string, number> = new Map(),
+  private clickCounts: Map<string, number> = new Map(),
 
-  recordView(bannerId: string) {
+  recordView(bannerId: string) {,
     this.viewCounts.set(bannerId, (this.viewCounts.get(bannerId) || 0) + 1);
   }
 
-  recordClick(bannerId: string) {
+  recordClick(bannerId: string) {,
     this.clickCounts.set(bannerId, (this.clickCounts.get(bannerId) || 0) + 1);
   }
 
-  getEngagementScore(bannerId: string): number {
+  getEngagementScore(bannerId: string): number {,
     const views = this.viewCounts.get(bannerId) || 0;
     const clicks = this.clickCounts.get(bannerId) || 0;
     return views > 0 ? (clicks / views) * 100 : 0;
   }
 
-  getTopPerformingBanners(limit: number = 5): string[] {
+  getTopPerformingBanners(limit: number = 5): string[] {,
     return Array.from(this.viewCounts.keys())
       .sort((a, b) => this.getEngagementScore(b) - this.getEngagementScore(a))
       .slice(0, limit);
@@ -188,3 +188,4 @@ export class BannerRotationManager {
 }
 
 export const rotationManager = new BannerRotationManager();
+;

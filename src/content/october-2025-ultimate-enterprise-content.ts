@@ -1,5 +1,5 @@
 // October 2025 Ultimate Enterprise AI Content
-// BRAND NEW: Multi-Cloud Intelligence & Conversational AI Revolution
+// BRAND NEW: Multi-Cloud Intelligence & Conversational AI Revolution,
 
 export const octoberUltimateEnterpriseContent = [
   {
@@ -93,3 +93,4 @@ export const getNewUltimateContent = () => {
 export const getAllUltimateEnterpriseContent = () => {
   return octoberUltimateEnterpriseContent;
 };
+;

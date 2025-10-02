@@ -4,13 +4,13 @@
  */
 
 export interface BlogPost {
-slug: string;
-title: string;
-description: string;
-category: string;
-date: string;
-readTime: string;
-tags: string[];
+slug: string,
+title: string,
+description: string,
+category: string,
+date: string,
+readTime: string,
+tags: string[],
 featured?: boolean;
 valueProposition: string;
 }
@@ -18,7 +18,7 @@ valueProposition: string;
 /**
  * October 2025 Breakthrough Content
  */
-export const october2025Breakthroughs: BlogPost[] = [
+export const october2025Breakthroughs: BlogPost[] = [,
   {
     slug: 'ai-2025-oct-01-neural-architecture-evolution-breakthrough',
     title: 'Neural Architecture Evolution 2025',
@@ -74,27 +74,25 @@ export const october2025Breakthroughs: BlogPost[] = [
     valueProposition: '$67M annual savings'
   },
   {
-    slug: 'ai-2025-oct-03-continuous-intelligence-platforms',
-    title: 'Continuous Intelligence 2025',
-    description: '100M+ events/sec with sub-50ms decisions, KPI scorecards, and safe rollback.',
-    category: 'Real-Time AI',
-    date: '2025-10-03',
-    readTime: '10 min',
-    tags: ['streaming', 'decisioning', 'feature store', 'KPIs'],
-    featured: true,
-    valueProposition: '$215M annual value'
-  },
+    slug: 'ai-2025-oct-03-continuous-intelligence-platforms',',
+    title: 'Continuous Intelligence 2025',',
+    description: '100M+ events/sec with sub-50ms decisions, KPI scorecards, and safe rollback.',',
+    category: 'Real-Time AI',',
+    date: '2025-10-03',',
+    readTime: '10 min',',
+    tags: ['streaming', 'decisioning', 'feature store', 'KPIs'],',
+    featured: true,,
+    valueProposition: '$215M annual value},
   {
-    slug: 'ai-2025-oct-03-autonomous-cloud-security',
-    title: 'Autonomous Cloud Security 2025',
-    description: '99.98% threat neutralization under 5 seconds with policy-backed automations.',
-    category: 'Security',
-    date: '2025-10-03',
-    readTime: '9 min',
-    tags: ['security', 'zero trust', 'automation', 'rollback'],
-    featured: true,
-    valueProposition: '$42M annual savings'
-  },
+    slug: 'ai-2025-oct-03-autonomous-cloud-security',',
+    title: 'Autonomous Cloud Security 2025',',
+    description: '99.98% threat neutralization under 5 seconds with policy-backed automations.',',
+    category: 'Security',',
+    date: '2025-10-03',',
+    readTime: '9 min',',
+    tags: ['security', 'zero trust', 'automation', 'rollback'],',
+    featured: true,,
+    valueProposition: '$42M annual savings},
   {
     slug: 'ai-2025-oct-03-quantum-supply-chain-optimization',
     title: 'Quantum Supply Chain 2025',
@@ -115,16 +113,15 @@ export const allBlogPosts: BlogPost[] = [
   ...october2025Breakthroughs
   // Newly added October 2025 posts
   {
-    slug: 'ai-2025-oct-01-private-feature-flags-zero-pii',
-    title: 'Private Feature Flags: Zero‑PII Experiments Under 100ms',
-    description: 'Run high‑velocity A/B tests without centralizing PII using signed configs, scoped IDs, and edge analytics.',
-    category: 'Experimentation',
-    date: '2025-10-01',
-    readTime: '8 min',
-    tags: ['Feature Flags', 'Privacy', 'Edge', 'A/B', 'DP'],
-    featured: true,
-    valueProposition: 'Zero PII, <100ms at edge'
-  },
+    slug: 'ai-2025-oct-01-private-feature-flags-zero-pii',',
+    title: 'Private Feature Flags: Zero‑PII Experiments Under 100ms',',
+    description: 'Run high‑velocity A/B tests without centralizing PII using signed configs, scoped IDs, and edge analytics.',',
+    category: 'Experimentation',',
+    date: '2025-10-01',',
+    readTime: '8 min',',
+    tags: ['Feature Flags', 'Privacy', 'Edge', 'A/B', 'DP'],',
+    featured: true,,
+    valueProposition: 'Zero PII, <100ms at edge},
   {
     slug: 'ai-2025-oct-01-runtime-rollback-guardrails',
     title: 'Runtime Rollback Guardrails: Ship Faster With Reversible Changes',
@@ -138,16 +135,15 @@ export const allBlogPosts: BlogPost[] = [
   }
   // October 1, 2025 additions (this branch)
   {
-    slug: 'edge-2025-oct-01-zero-pii-telemetry-v2',
-    title: 'Zero‑PII Telemetry v2: Decision‑Grade Signals Without Centralized IDs',
-    description: 'Scoped identifiers, on‑device redaction, and DP noise for rich insights with zero PII risk.',
-    category: 'Observability',
-    date: '2025-10-01',
-    readTime: '9 min',
-    tags: ['Privacy', 'Telemetry', 'Edge', 'DP'],
-    featured: true,
-    valueProposition: '$8M+ savings via safe analytics'
-  },
+    slug: 'edge-2025-oct-01-zero-pii-telemetry-v2',',
+    title: 'Zero‑PII Telemetry v2: Decision‑Grade Signals Without Centralized IDs',',
+    description: 'Scoped identifiers, on‑device redaction, and DP noise for rich insights with zero PII risk.',',
+    category: 'Observability',',
+    date: '2025-10-01',',
+    readTime: '9 min',',
+    tags: ['Privacy', 'Telemetry', 'Edge', 'DP'],',
+    featured: true,,
+    valueProposition: '$8M+ savings via safe analytics},
   {
     slug: 'genai-2025-oct-01-eval-scorecards-live-canaries',
     title: 'Live Evals & Scorecards: Ship GenAI Fast Without Regressions',
@@ -161,16 +157,15 @@ export const allBlogPosts: BlogPost[] = [
   }
   // October 2, 2025 additions (from main)
   {
-    slug: 'ai-2025-oct-02-private-experiments-blueprint',
-    title: 'Private Experiments Blueprint: Zero‑PII Testing at the Edge',
-    description: 'Run A/B tests without PII using signed configs, scoped IDs, and edge analytics under 100ms.',
-    category: 'Experimentation',
-    date: '2025-10-02',
-    readTime: '10 min',
-    tags: ['Privacy', 'Edge', 'Experiments', 'Feature Flags'],
-    featured: true,
-    valueProposition: 'Zero‑PII experiments at the edge'
-  },
+    slug: 'ai-2025-oct-02-private-experiments-blueprint',',
+    title: 'Private Experiments Blueprint: Zero‑PII Testing at the Edge',',
+    description: 'Run A/B tests without PII using signed configs, scoped IDs, and edge analytics under 100ms.',',
+    category: 'Experimentation',',
+    date: '2025-10-02',',
+    readTime: '10 min',',
+    tags: ['Privacy', 'Edge', 'Experiments', 'Feature Flags'],',
+    featured: true,,
+    valueProposition: 'Zero‑PII experiments at the edge},
   {
     slug: 'ai-2025-oct-02-rollback-guardrails-blueprint',
     title: 'Runtime Rollback Guardrails Blueprint',
@@ -194,21 +189,21 @@ export function getFeaturedPosts(): BlogPost[] {
 /**
  * Get posts by category
  */
-export function getPostsByCategory(category: string): BlogPost[] {
+export function getPostsByCategory(category: string): BlogPost[] {,
   return allBlogPosts.filter((post) => post.category === category);
 }
 
 /**
  * Get posts by tag
  */
-export function getPostsByTag(tag: string): BlogPost[] {
+export function getPostsByTag(tag: string): BlogPost[] {,
   return allBlogPosts.filter((post) => post.tags.includes(tag));
 }
 
 /**
  * Search posts by query
  */
-export function searchPosts(query: string): BlogPost[] {
+export function searchPosts(query: string): BlogPost[] {,
   const lowerQuery = query.toLowerCase();
   return allBlogPosts.filter(
     (post) =>
@@ -246,7 +241,7 @@ export function getTotalValueProposition(): string {
     return sum;
   }, 0);
   
-  return `$${total}M+`;
+  return `$${total}M+`;`;
 }
 
 /**
@@ -259,3 +254,4 @@ export const blogStats = {
   tags: getAllTags().length,
   totalValue: getTotalValueProposition()
 };
+;

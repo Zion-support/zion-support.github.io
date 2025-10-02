@@ -2,9 +2,9 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOOptimizerProps {
-title: string;
-description: string;
-canonicalUrl: string;
+title: string,
+description: string,
+canonicalUrl: string,
 keywords?: string[];
 ogImage?: string;
 ogType?: string;
@@ -12,8 +12,7 @@ twitterCard?: string;
 structuredData?: object;
 }
 
-const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
-  title,
+const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ title,
   description,
   canonicalUrl
   keywords = [
@@ -68,31 +67,25 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       {/* Basic Meta Tags */}
       <title>{title}</title>
       <meta name="description" content={description} />
-      <meta name="keywords" content={keywords.join(', ')} />
+      <meta name="keywords" content={keywords.join(', ')} />;
       <link rel="canonical" href={canonicalUrl} />
-      
       {/* Open Graph Tags */}
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:url" content={canonicalUrl} />
       <meta property="og:type" content={ogType} />
       <meta property="og:image" content={ogImage} />
-      <meta property="og:site_name" content="Zion Tech Group" />
+      <meta property="og:site_name" content="Zion Tech Group" />,
       
       {/* Twitter Card Tags */}
       <meta name="twitter:card" content={twitterCard} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />
-      
       {/* Additional SEO Tags */}
-      <meta name="robots" content="index, follow" />
-      <meta name="author" content="Zion Tech Group" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      
-      {/* Performance Hints */}
-      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      <meta name="robots" content="index, follow" /><meta name="author" content="Zion Tech Group" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />{/* Performance Hints */}
+      <link rel="dns-prefetch" href="//fonts.googleapis.com/>
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous/>",
       
       {/* Structured Data */}
       <script type="application/ld+json">

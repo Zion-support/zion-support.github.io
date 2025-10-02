@@ -4,8 +4,8 @@
  */
 
 export interface SEOMetadata {
-  title: string;
-  description: string;
+  title: string,
+  description: string,
   keywords?: string[];
   author?: string;
   canonicalUrl?: string;
@@ -26,43 +26,43 @@ export interface SEOMetadata {
 export const generateMetaTags = (metadata: SEOMetadata): string => {
 const tags: string[] = [];
 // Basic meta tags
-tags.push(`<title>${escapeHtml(metadata.title)
-}</title>`);
-  tags.push(`<meta name="description" content="${escapeHtml(metadata.description)}" />`);
+tags.push(`<title>${escapeHtml(metadata.title)`;
+}</title>`);`;
+  tags.push(`<meta name="description" content="${escapeHtml(metadata.description)}" />`);`;
 
   if (metadata.keywords && metadata.keywords.length > 0) {
-    tags.push(`<meta name="keywords" content="${metadata.keywords.join(', ')}" />`);
+    tags.push(`<meta name="keywords" content="${metadata.keywords.join(', ')}" />`);`;
   }
 
   if (metadata.author) {
-    tags.push(`<meta name="author" content="${escapeHtml(metadata.author)}" />`);
+    tags.push(`<meta name="author" content="${escapeHtml(metadata.author)}" />`);`;
   }
 
   // Canonical URL
   if (metadata.canonicalUrl) {
-    tags.push(`<link rel="canonical" href="${escapeHtml(metadata.canonicalUrl)}" />`);
+    tags.push(`<link rel="canonical" href="${escapeHtml(metadata.canonicalUrl)}/>`);`;
   }
 
   // Open Graph tags
-  tags.push(`<meta property="og:title" content="${escapeHtml(metadata.ogTitle || metadata.title)}" />`);
-  tags.push(`<meta property="og:description" content="${escapeHtml(metadata.ogDescription || metadata.description)}" />`);
-  tags.push(`<meta property="og:type" content="${metadata.ogType || 'website'}" />`);
+  tags.push(`<meta property="og:title" content="${escapeHtml(metadata.ogTitle || metadata.title)}" />`);`;
+  tags.push(`<meta property="og:description" content="${escapeHtml(metadata.ogDescription || metadata.description)}" />`);`;
+  tags.push(`<meta property="og:type" content="${metadata.ogType || 'website'}" />`);`;
 
   if (metadata.ogImage) {
-    tags.push(`<meta property="og:image" content="${escapeHtml(metadata.ogImage)}" />`);
+    tags.push(`<meta property="og:image" content="${escapeHtml(metadata.ogImage)}" />`);`;
   }
 
   if (metadata.canonicalUrl) {
-    tags.push(`<meta property="og:url" content="${escapeHtml(metadata.canonicalUrl)}" />`);
+    tags.push(`<meta property="og:url" content="${escapeHtml(metadata.canonicalUrl)}" />`);`;
   }
 
   // Twitter Card tags
-  tags.push(`<meta name="twitter:card" content="${metadata.twitterCard || 'summary_large_image'}" />`);
-  tags.push(`<meta name="twitter:title" content="${escapeHtml(metadata.twitterTitle || metadata.title)}" />`);
-  tags.push(`<meta name="twitter:description" content="${escapeHtml(metadata.twitterDescription || metadata.description)}" />`);
+  tags.push(`<meta name="twitter:card" content="${metadata.twitterCard || 'summary_large_image'}" />`);`;
+  tags.push(`<meta name="twitter:title" content="${escapeHtml(metadata.twitterTitle || metadata.title)}" />`);`;
+  tags.push(`<meta name="twitter:description" content="${escapeHtml(metadata.twitterDescription || metadata.description)}" />`);`;
 
   if (metadata.twitterImage || metadata.ogImage) {
-    tags.push(`<meta name="twitter:image" content="${escapeHtml(metadata.twitterImage || metadata.ogImage || '')}" />`);
+    tags.push(`<meta name="twitter:image" content="${escapeHtml(metadata.twitterImage || metadata.ogImage || '')}" />`);`;
   }
 
   return tags.join('\n');
@@ -71,14 +71,14 @@ tags.push(`<title>${escapeHtml(metadata.title)
 /**
  * Generate structured data (JSON-LD)
  */
-export const generateStructuredData = (type: string, data: Record<string, any>): string => {
+export const generateStructuredData = (type: string, data: Record<string, any>): string => {,
   const structuredData = {
-    '@context': 'https://schema.org',
+    '@context': 'https://schema.org',',
     '@type': type,
     ...data
   };
 
-  return `<script type="application/ld+json">${JSON.stringify(structuredData, null, 2)}</script>`;
+  return `<script type="application/ld+json">${JSON.stringify(structuredData, null, 2)}</script>`;`;
 };
 
 /**
@@ -109,8 +109,7 @@ url: string;
       name: 'Zion Tech Group',
       logo: {,
         '@type': 'ImageObject',
-        url: 'https://ziontechgroup.com/logo.png'
-      }
+        url: 'https://ziontechgroup.com/logo.png}
     }
   });
 };
@@ -145,10 +144,9 @@ export const generateOrganizationStructuredData = (): string => {
     ]
     contactPoint: {,
       '@type': 'ContactPoint',
-      telephone: '+1-800-ZION-TECH',
-      contactType: 'Customer Service',
-      email: 'contact@ziontechgroup.com'
-    }
+      telephone: '+1-800-ZION-TECH',',
+      contactType: 'Customer Service',',
+      email: 'contact@ziontechgroup.com}
   });
 };
 
@@ -162,7 +160,7 @@ export const generateFAQStructuredData = (faqs: Array<{ question: string; answer
       name: faq.question,
       acceptedAnswer: {,
         '@type': 'Answer',
-        text: faq.answer
+        text: faq.answer,
       }
     }))
   });
@@ -175,15 +173,15 @@ export const generateSitemapXML = (urls: Array<{ loc: string; lastmod?: string; 
   const urlsXml = urls.map(url => `
   <url>
     <loc>${escapeHtml(url.loc)}</loc>
-    ${url.lastmod ? `<lastmod>${url.lastmod}</lastmod>` : ''}
-    ${url.changefreq ? `<changefreq>${url.changefreq}</changefreq>` : ''}
-    ${url.priority !== undefined ? `<priority>${url.priority}</priority>` : ''}
-  </url>`).join('');
+    ${url.lastmod ? `<lastmod>${url.lastmod}</lastmod>` : ''}';`;
+    ${url.changefreq ? `<changefreq>${url.changefreq}</changefreq>` : ''}';`;
+    ${url.priority !== undefined ? `<priority>${url.priority}</priority>` : ''}';`;
+  </url>`).join('');';`;
 
-  return `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  return `<?xml version="1.0" encoding="UTF-8"?>";`;
+<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">",
 ${urlsXml}
-</urlset>`;
+</urlset>`;`;
 };
 
 /**
@@ -200,16 +198,16 @@ lines.push(`User-agent: ${config.userAgent || '*'
 }`);
 
   if (config.disallow && config.disallow.length > 0) {
-    config.disallow.forEach(path => lines.push(`Disallow: ${path}`));
+    config.disallow.forEach(path => lines.push(`Disallow: ${path}`));`;
   }
 
   if (config.allow && config.allow.length > 0) {
-    config.allow.forEach(path => lines.push(`Allow: ${path}`));
+    config.allow.forEach(path => lines.push(`Allow: ${path}`));`;
   }
 
   if (config.sitemap) {
     lines.push('');
-    lines.push(`Sitemap: ${config.sitemap}`);
+    lines.push(`Sitemap: ${config.sitemap}`);`;
   }
 
   return lines.join('\n');
@@ -218,36 +216,33 @@ lines.push(`User-agent: ${config.userAgent || '*'
 /**
  * Optimize title for SEO
  */
-export const optimizeTitle = (title: string, maxLength: number = 60): string => {
+export const optimizeTitle = (title: string, maxLength: number = 60): string => {,
   if (title.length <= maxLength) return title;
   
   // Truncate at word boundary
   const truncated = title.substring(0, maxLength);
   const lastSpace = truncated.lastIndexOf(' ');
-  
   return lastSpace > 0 ? truncated.substring(0, lastSpace) + '...' : truncated + '...';
 };
 
 /**
  * Optimize description for SEO
  */
-export const optimizeDescription = (description: string, maxLength: number = 160): string => {
+export const optimizeDescription = (description: string, maxLength: number = 160): string => {,
   if (description.length <= maxLength) return description;
   
   // Truncate at word boundary
   const truncated = description.substring(0, maxLength);
   const lastSpace = truncated.lastIndexOf(' ');
-  
   return lastSpace > 0 ? truncated.substring(0, lastSpace) + '...' : truncated + '...';
 };
 
 /**
  * Extract keywords from content
  */
-export const extractKeywords = (content: string, maxKeywords: number = 10): string[] => {
+export const extractKeywords = (content: string, maxKeywords: number = 10): string[] => {,
   // Remove special characters and convert to lowercase
   const cleaned = content.toLowerCase().replace(/[^a-z0-9\s]/g, '');
-  
   // Split into words
   const words = cleaned.split(/\s+/);
   
@@ -269,10 +264,10 @@ export const extractKeywords = (content: string, maxKeywords: number = 10): stri
 /**
  * Generate URL slug from title
  */
-export const generateSlug = (title: string): string => {
+export const generateSlug = (title: string): string => {,
   return title
     .toLowerCase()
-    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/[^a-z0-9]+/g, '-');
     .replace(/^-+|-+$/g, '');
 };
 
@@ -285,7 +280,7 @@ if (url.length > 100) {
 issues.push('URL is too long (>100 characters)');
 }
   
-  if (url.includes('_')) {
+  if (url.includes('_')) {;
     issues.push('URL contains underscores (use hyphens instead)');
   }
   
@@ -297,12 +292,12 @@ issues.push('URL is too long (>100 characters)');
     issues.push('URL contains spaces');
   }
   
-  if (url.split('/').filter(Boolean).length > 5) {
+  if (url.split('/').filter(Boolean).length > 5) {;
     issues.push('URL has too many path segments (>5)');
   }
   
   return {
-    valid: issues.length === 0,
+    valid: issues.length === 0,,
     issues
   };
 };
@@ -310,13 +305,13 @@ issues.push('URL is too long (>100 characters)');
 /**
  * Escape HTML for safe meta tag generation
  */
-function escapeHtml(text: string): string {
-  const map: Record<string, string> = {
+function escapeHtml(text: string): string {,
+  const map: Record<string, string> = {,
     '&': '&amp;',
     '<': '&lt;',
     '>': '&gt;',
     '"': '&quot;',
-    "'": '&#039;'
+    "'": '&#039;
   };
   return text.replace(/[&<>"']/g, m => map[m]);
 }
@@ -324,7 +319,7 @@ function escapeHtml(text: string): string {
 /**
  * Calculate reading time
  */
-export const calculateReadingTime = (content: string, wordsPerMinute: number = 200): number => {
+export const calculateReadingTime = (content: string, wordsPerMinute: number = 200): number => {,
   const words = content.trim().split(/\s+/).length;
   return Math.ceil(words / wordsPerMinute);
 };
@@ -358,13 +353,13 @@ score -= 20;
   }
   
   // Heading check
-  if (!content.includes('#') && !content.includes('<h')) {
+  if (!content.includes('#') && !content.includes('<h')) {;
     recommendations.push('Add headings to improve content structure');
     score -= 10;
   }
   
   // Link check
-  if (!content.includes('http') && !content.includes('[') && !content.includes('<a')) {
+  if (!content.includes('http') && !content.includes('[') && !content.includes('<a')) {;
     recommendations.push('Add internal/external links');
     score -= 5;
   }
@@ -389,3 +384,4 @@ export default {
   calculateReadingTime,
   checkContentQuality
 };
+;

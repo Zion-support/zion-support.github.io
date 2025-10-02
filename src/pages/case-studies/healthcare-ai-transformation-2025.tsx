@@ -5,27 +5,23 @@ const HealthcareAITransformation = () => {
   return (
     <>
       <Helmet>
-        <title>Healthcare AI Transformation: $124M Saved, 3.8M Patients Served | Zion Tech Group</title>
+        <title>Healthcare AI Transformation: $124M Saved, 3.8M Patients Served | Zion Tech Group</title>,
         <meta
           name="description"
-          content="Major healthcare network achieves $124M cost savings and 87% faster patient processing through comprehensive AI transformation. 3.8M patients, 450 facilities, 96% satisfaction."
-        />
-        <meta
+          content="Major healthcare network achieves $124M cost savings and 87% faster patient processing through comprehensive AI transformation. 3.8M patients, 450 facilities, 96% satisfaction." /><meta
           name="keywords"
-          content="healthcare AI, medical AI transformation, patient care automation, healthcare cost reduction, clinical decision support"
-        />
-      </Helmet>
+          content="healthcare AI, medical AI transformation, patient care automation, healthcare cost reduction, clinical decision support" /></Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
         <Header />
 
         <article className="container mx-auto px-6 py-20">
-          {/* Back Link */}
+          {/* Back Link */};
           <Link
             to="/case-studies"
-            className="inline-flex items-center text-zion-cyan hover:text-zion-blue-light mb-8 transition-colors"
+            className="inline-flex items-center text-zion-cyan hover: text-zion-blue-light mb-8 transition-colors",
           >
-            <ArrowLeft className="w-4 h-4 mr-2" />
+            <ArrowLeft className="w-4 h-4 mr-2/>
             Back to Case Studies
           </Link>
 
@@ -41,9 +37,8 @@ const HealthcareAITransformation = () => {
               <span className="text-zion-slate-light">24-month transformation</span>
             </div>
 
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
-              Healthcare AI Transformation:
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-pink-400 to-blue-400 mt-2">
+            <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 leading-tight">",
+              Healthcare AI Transformation: <span className="block text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-pink-400 to-blue-400 mt-2">",
                 $124M Saved, 3.8M Patients Served Better
               </span>
             </h1>
@@ -55,7 +50,7 @@ const HealthcareAITransformation = () => {
             </p>
 
             {/* Key Metrics Banner */}
-            <div className="grid md:grid-cols-4 gap-6">
+            <div className="grid md: grid-cols-4 gap-6">",
               <div className="bg-green-900/40 rounded-xl p-6 border border-green-500/30 text-center">
                 <div className="text-4xl font-bold text-green-400 mb-2">$124M</div>
                 <div className="text-sm text-zion-slate-light">Annual Cost Savings</div>
@@ -81,16 +76,16 @@ const HealthcareAITransformation = () => {
             <section>
               <h2 className="text-3xl font-bold text-white mb-6">🏥 Client Profile</h2>
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-zion-cyan/30">
-                <div className="grid md:grid-cols-2 gap-8">
+                <div className="grid md: grid-cols-2 gap-8">",
                   <div>
                     <h3 className="text-xl font-bold text-white mb-4">Healthcare Network Overview</h3>
                     <ul className="space-y-2">
-                      <li><strong className="text-zion-cyan">Type:</strong> Integrated Healthcare Network</li>
-                      <li><strong className="text-zion-cyan">Facilities:</strong> 450+ (hospitals, clinics, urgent care)</li>
-                      <li><strong className="text-zion-cyan">Annual Revenue:</strong> $8.7B</li>
-                      <li><strong className="text-zion-cyan">Employees:</strong> 62,000+ healthcare professionals</li>
-                      <li><strong className="text-zion-cyan">Patients:</strong> 3.8M served annually</li>
-                      <li><strong className="text-zion-cyan">Coverage:</strong> 14 states, urban & rural</li>
+                      <li><strong className="text-zion-cyan">Type: </strong> Integrated Healthcare Network</li>",
+                      <li><strong className="text-zion-cyan">Facilities: </strong> 450+ (hospitals, clinics, urgent care)</li>",
+                      <li><strong className="text-zion-cyan">Annual Revenue: </strong> $8.7B</li>",
+                      <li><strong className="text-zion-cyan">Employees: </strong> 62,000+ healthcare professionals</li>",
+                      <li><strong className="text-zion-cyan">Patients: </strong> 3.8M served annually</li>",
+                      <li><strong className="text-zion-cyan">Coverage: </strong> 14 states, urban & rural</li>",
                     </ul>
                   </div>
                   <div>
@@ -98,27 +93,27 @@ const HealthcareAITransformation = () => {
                     <ul className="space-y-2">
                       <li className="flex items-start gap-2">
                         <span className="text-red-400 mt-1">•</span>
-                        <span>Average wait times: 4.5 hours in ER</span>
+                        <span>Average wait times: 4.5 hours in ER</span>,
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="text-red-400 mt-1">•</span>
-                        <span>Claims processing: 28-day average turnaround</span>
+                        <span>Claims processing: 28-day average turnaround</span>,
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="text-red-400 mt-1">•</span>
-                        <span>Administrative costs: $287M annually (32%)</span>
+                        <span>Administrative costs: $287M annually (32%)</span>,
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="text-red-400 mt-1">•</span>
-                        <span>Readmission rate: 18.7% (above national avg)</span>
+                        <span>Readmission rate: 18.7% (above national avg)</span>,
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="text-red-400 mt-1">•</span>
-                        <span>Patient satisfaction: 67% (industry: 78%)</span>
+                        <span>Patient satisfaction: 67% (industry: 78%)</span>,
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="text-red-400 mt-1">•</span>
-                        <span>Staff burnout: 43% of nurses reporting severe stress</span>
+                        <span>Staff burnout: 43% of nurses reporting severe stress</span>,
                       </li>
                     </ul>
                   </div>
@@ -134,10 +129,10 @@ const HealthcareAITransformation = () => {
                 decision support, administrative automation, and predictive care across all 450 facilities.
               </p>
               
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid md: grid-cols-2 gap-6">",
                 <div className="bg-gradient-to-br from-blue-900/40 to-cyan-900/40 rounded-xl p-6 border border-blue-500/30">
                   <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-                    <Heart className="w-6 h-6 text-blue-400" />
+                    <Heart className="w-6 h-6 text-blue-400/>
                     AI-Powered Patient Intake
                   </h3>
                   <p className="mb-4">
@@ -147,15 +142,15 @@ const HealthcareAITransformation = () => {
                   </p>
                   <ul className="space-y-2 text-sm">
                     <li className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-400" />
+                      <CheckCircle className="w-4 h-4 text-green-400/>
                       <span>87% faster patient registration</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-400" />
+                      <CheckCircle className="w-4 h-4 text-green-400/>
                       <span>98.4% insurance verification accuracy</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-400" />
+                      <CheckCircle className="w-4 h-4 text-green-400/>
                       <span>Zero paperwork—fully digital process</span>
                     </li>
                   </ul>
@@ -163,7 +158,7 @@ const HealthcareAITransformation = () => {
 
                 <div className="bg-gradient-to-br from-purple-900/40 to-pink-900/40 rounded-xl p-6 border border-purple-500/30">
                   <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-                    <Zap className="w-6 h-6 text-purple-400" />
+                    <Zap className="w-6 h-6 text-purple-400/>
                     Clinical Decision Support
                   </h3>
                   <p className="mb-4">
@@ -172,15 +167,15 @@ const HealthcareAITransformation = () => {
                   </p>
                   <ul className="space-y-2 text-sm">
                     <li className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-400" />
+                      <CheckCircle className="w-4 h-4 text-green-400/>
                       <span>94% diagnostic accuracy improvement</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-400" />
+                      <CheckCircle className="w-4 h-4 text-green-400/>
                       <span>63% reduction in unnecessary tests</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-400" />
+                      <CheckCircle className="w-4 h-4 text-green-400/>
                       <span>Early detection of 12,000+ critical conditions</span>
                     </li>
                   </ul>
@@ -188,7 +183,7 @@ const HealthcareAITransformation = () => {
 
                 <div className="bg-gradient-to-br from-green-900/40 to-teal-900/40 rounded-xl p-6 border border-green-500/30">
                   <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-                    <Target className="w-6 h-6 text-green-400" />
+                    <Target className="w-6 h-6 text-green-400/>
                     Administrative Automation
                   </h3>
                   <p className="mb-4">
@@ -197,15 +192,15 @@ const HealthcareAITransformation = () => {
                   </p>
                   <ul className="space-y-2 text-sm">
                     <li className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-400" />
-                      <span>Claims processing: 28 days → 3.2 days</span>
+                      <CheckCircle className="w-4 h-4 text-green-400/>
+                      <span>Claims processing: 28 days → 3.2 days</span>,
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-400" />
+                      <CheckCircle className="w-4 h-4 text-green-400/>
                       <span>$89M reduction in admin costs (72%)</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-400" />
+                      <CheckCircle className="w-4 h-4 text-green-400/>
                       <span>99.2% claims first-pass approval rate</span>
                     </li>
                   </ul>
@@ -213,7 +208,7 @@ const HealthcareAITransformation = () => {
 
                 <div className="bg-gradient-to-br from-red-900/40 to-orange-900/40 rounded-xl p-6 border border-red-500/30">
                   <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-                    <Users className="w-6 h-6 text-red-400" />
+                    <Users className="w-6 h-6 text-red-400/>
                     Predictive Care Management
                   </h3>
                   <p className="mb-4">
@@ -222,15 +217,15 @@ const HealthcareAITransformation = () => {
                   </p>
                   <ul className="space-y-2 text-sm">
                     <li className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-400" />
+                      <CheckCircle className="w-4 h-4 text-green-400/>
                       <span>58% reduction in readmissions (18.7% → 7.8%)</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-400" />
+                      <CheckCircle className="w-4 h-4 text-green-400/>
                       <span>Early intervention for 34,000+ high-risk patients</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-400" />
+                      <CheckCircle className="w-4 h-4 text-green-400/>
                       <span>$35M avoided through preventive care</span>
                     </li>
                   </ul>
@@ -241,10 +236,9 @@ const HealthcareAITransformation = () => {
             {/* Results */}
             <section>
               <h2 className="text-3xl font-bold text-white mb-6">📊 Transformational Results</h2>
-              
               <div className="bg-gradient-to-r from-green-900/40 to-blue-900/40 rounded-xl p-8 border-2 border-green-500/40 mb-8">
                 <h3 className="text-2xl font-bold text-white mb-6 text-center">💰 Financial Impact (Annual)</h3>
-                <div className="grid md:grid-cols-3 gap-6">
+                <div className="grid md: grid-cols-3 gap-6">",
                   <div className="text-center">
                     <div className="text-5xl font-bold text-green-400 mb-2">$124M</div>
                     <div className="text-lg text-white font-semibold mb-1">Total Savings</div>
@@ -263,7 +257,7 @@ const HealthcareAITransformation = () => {
                 </div>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid md: grid-cols-2 gap-6">",
                 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-blue-500/30">
                   <h3 className="text-xl font-bold text-white mb-4">⚡ Operational Efficiency</h3>
                   <ul className="space-y-3">
@@ -323,8 +317,8 @@ const HealthcareAITransformation = () => {
               <div className="text-center mb-6">
                 <div className="text-6xl mb-4">💬</div>
                 <p className="text-2xl text-white font-semibold italic mb-6">
-                  "This AI transformation has been nothing short of revolutionary for our network. 
-                  We're providing better care, faster service, and spending $124M less per year. 
+                  "This AI transformation has been nothing short of revolutionary for our network. ";
+                  We're providing better care, faster service, and spending $124M less per year. ;
                   Our staff are happier, our patients are healthier, and our organization is thriving. 
                   Zion Tech Group didn't just deliver technology—they transformed our entire operation."
                 </p>
@@ -336,7 +330,7 @@ const HealthcareAITransformation = () => {
 
             {/* Call to Action */}
             <section className="bg-gradient-to-r from-red-900/60 to-pink-900/60 rounded-2xl p-12 border-2 border-red-500/40 text-center">
-              <Heart className="w-16 h-16 text-red-400 mx-auto mb-6" />
+              <Heart className="w-16 h-16 text-red-400 mx-auto mb-6/>
               <h2 className="text-4xl font-bold text-white mb-6">
                 Transform Your Healthcare Organization
               </h2>
@@ -345,19 +339,19 @@ const HealthcareAITransformation = () => {
                 professionals with AI? Schedule a consultation to explore how we can transform 
                 your organization.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">",
                 <Link
                   to="/contact"
-                  className="inline-flex items-center justify-center gap-2 bg-red-500 hover:bg-red-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg"
+                  className="inline-flex items-center justify-center gap-2 bg-red-500 hover: bg-red-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg",
                 >
-                  <Heart className="w-5 h-5" />
+                  <Heart className="w-5 h-5/>
                   Schedule Healthcare AI Consultation
                 </Link>
                 <Link
                   to="/case-studies"
-                  className="inline-flex items-center justify-center gap-2 border-2 border-red-400 text-red-300 hover:bg-red-500/20 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105"
+                  className="inline-flex items-center justify-center gap-2 border-2 border-red-400 text-red-300 hover: bg-red-500/20 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105",
                 >
-                  <TrendingUp className="w-5 h-5" />
+                  <TrendingUp className="w-5 h-5/>
                   View More Success Stories
                 </Link>
               </div>
@@ -370,3 +364,4 @@ const HealthcareAITransformation = () => {
 };
 
 export default HealthcareAITransformation;
+;

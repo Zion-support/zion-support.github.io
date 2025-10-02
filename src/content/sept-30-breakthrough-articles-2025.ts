@@ -1,24 +1,24 @@
 export interface BreakthroughArticle {
-id: string;
-slug: string;
-title: string;
-description: string;
-excerpt: string;
-author: string;
-date: string;
-category: string;
-tags: string[];
-featured: boolean;
-readTime: string;
-impact: string;
-metrics: {,
-improvement: string;
-roi: string;
+id: string,
+slug: string,
+title: string,
+description: string,
+excerpt: string,
+author: string,
+date: string,
+category: string,
+tags: string[],
+featured: boolean,
+readTime: string,
+impact: string,
+metrics: {,,
+improvement: string,
+roi: string,
 timeframe: string;
 };
 }
 
-export const sept30BreakthroughArticles: BreakthroughArticle[] = [
+export const sept30BreakthroughArticles: BreakthroughArticle[] = [,
   {
     id: "real-time-ai-decision-engines-2025",
     slug: "real-time-ai-decision-engines-2025",
@@ -177,6 +177,6 @@ export const getLatestBreakthroughs = () => {
   return sept30BreakthroughArticles.filter(article => article.featured);
 };
 
-export const getBreakthroughBySlug = (slug: string) => {
+export const getBreakthroughBySlug = (slug: string) => {,
   return sept30BreakthroughArticles.find(article => article.slug === slug);
 };

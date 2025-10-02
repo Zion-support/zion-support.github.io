@@ -4,8 +4,7 @@
  * Comprehensive SEO auditing and optimization tools for automated
  * site analysis, meta tag validation, and SEO best practices enforcement.
  * 
- * Features:
- * - Meta tags validation
+ * Features: * - Meta tags validation,
  * - Open Graph and Twitter Card checks
  * - Heading hierarchy analysis
  * - Image alt text validation
@@ -16,18 +15,18 @@
  */
 
 export interface SEOIssue {
-type: 'error' | 'warning' | 'info';
-category: string;
-message: string;
+type: 'error' | 'warning' | 'info';',
+category: string,
+message: string,
 element?: string;
-recommendation: string;
+recommendation: string,
 impact: 'high' | 'medium' | 'low';
 }
 
 export interface SEOMetrics {
-score: number; // 0-100,
-issues: SEOIssue[];
-metadata: {,
+score: number; // 0-100,,
+issues: SEOIssue[],
+metadata: {,,
 title?: string;
 description?: string;
 keywords?: string;
@@ -54,12 +53,12 @@ internal: number;
 external: number;
 nofollow: number;
 };
-  structuredData: any[];
+  structuredData: any[],
   mobileOptimized: boolean;
 }
 
 class SEOAuditor {
-  private issues: SEOIssue[] = [];
+  private issues: SEOIssue[] = [],
 
   /**
    * Run full SEO audit
@@ -80,7 +79,7 @@ class SEOAuditor {
 
     return {
       score,
-      issues: this.issues,
+      issues: this.issues,,
       metadata,
       openGraph,
       twitterCard,
@@ -97,12 +96,10 @@ class SEOAuditor {
    */
   private auditMetadata() {
     const metadata: SEOMetrics['metadata'] = {};
-
     // Title
     const titleElement = document.querySelector('title');
     if (titleElement) {
       metadata.title = titleElement.textContent || '';
-      
       if (metadata.title.length === 0) {
         this.addIssue('error', 'metadata', 'Title tag is empty', 'title', 'Add a descriptive title (50-60 characters)', 'high');
       } else if (metadata.title.length < 30) {
@@ -118,7 +115,6 @@ class SEOAuditor {
     const descriptionElement = document.querySelector('meta[name="description"]');
     if (descriptionElement) {
       metadata.description = descriptionElement.getAttribute('content') || '';
-      
       if (metadata.description.length === 0) {
         this.addIssue('error', 'metadata', 'Meta description is empty', 'meta[name="description"]', 'Add a compelling description (150-160 characters)', 'high');
       } else if (metadata.description.length < 120) {
@@ -158,9 +154,9 @@ class SEOAuditor {
    */
   private auditOpenGraph(): Record<string, string> {
     const ogTags: Record<string, string> = {};
-    const requiredOgTags = ['og:title', 'og:description', 'og:image', 'og:url', 'og:type'];
+    const requiredOgTags = ['og:title', 'og:description', 'og:image', 'og:url', 'og:type'];',
 
-    document.querySelectorAll('meta[property^="og:"]').forEach(element => {
+    document.querySelectorAll('meta[property^="og: "]').forEach(element => {',
       const property = element.getAttribute('property');
       const content = element.getAttribute('content');
       if (property && content) {
@@ -170,13 +166,13 @@ class SEOAuditor {
 
     requiredOgTags.forEach(tag => {
       if (!ogTags[tag]) {
-        this.addIssue('warning', 'open-graph', `Missing ${tag} tag`, 'head', `Add <meta property="${tag}" content="...">`, 'medium');
+        this.addIssue('warning', 'open-graph', `Missing ${tag} tag`, 'head', `Add <meta property="${tag}" content="...">`, 'medium');';`;
       }
     });
 
-    if (ogTags['og:image']) {
+    if (ogTags['og:image']) {',
       // Check image dimensions (recommended 1200x630)
-      this.addIssue('info', 'open-graph', 'Verify og:image dimensions', 'meta[property="og:image"]', 'Recommended: 1200x630 pixels', 'low');
+      this.addIssue('info', 'open-graph', 'Verify og:image dimensions', 'meta[property="og:image"]', 'Recommended: 1200x630 pixels', 'low');',
     }
 
     return ogTags;
@@ -187,9 +183,9 @@ class SEOAuditor {
    */
   private auditTwitterCard(): Record<string, string> {
     const twitterTags: Record<string, string> = {};
-    const requiredTwitterTags = ['twitter:card', 'twitter:title', 'twitter:description', 'twitter:image'];
+    const requiredTwitterTags = ['twitter:card', 'twitter:title', 'twitter:description', 'twitter:image'];',
 
-    document.querySelectorAll('meta[name^="twitter:"]').forEach(element => {
+    document.querySelectorAll('meta[name^="twitter: "]').forEach(element => {',
       const name = element.getAttribute('name');
       const content = element.getAttribute('content');
       if (name && content) {
@@ -199,7 +195,7 @@ class SEOAuditor {
 
     requiredTwitterTags.forEach(tag => {
       if (!twitterTags[tag]) {
-        this.addIssue('warning', 'twitter-card', `Missing ${tag} tag`, 'head', `Add <meta name="${tag}" content="...">`, 'medium');
+        this.addIssue('warning', 'twitter-card', `Missing ${tag} tag`, 'head', `Add <meta name="${tag}" content="...">`, 'medium');';`;
       }
     });
 
@@ -247,14 +243,14 @@ class SEOAuditor {
     };
 
     if (metrics.withoutAlt > 0) {
-      this.addIssue('warning', 'images', `${metrics.withoutAlt} images missing alt text`, 'img', 'Add descriptive alt text to all images for accessibility and SEO', 'medium');
+      this.addIssue('warning', 'images', `${metrics.withoutAlt} images missing alt text`, 'img', 'Add descriptive alt text to all images for accessibility and SEO', 'medium');';`;
     }
 
     // Check for large images
     images.forEach((img, index) => {
-      if (!img.loading || img.loading !== 'lazy') {
+      if (!img.loading || img.loading !== 'lazy') {;
         if (index > 2) { // First few images should load immediately
-          this.addIssue('info', 'images', 'Consider lazy loading images', `img:nth-of-type(${index + 1})`, 'Add loading="lazy" to improve page load performance', 'low');
+          this.addIssue('info', 'images', 'Consider lazy loading images', `img:nth-of-type(${index + 1})`, 'Add loading="lazy" to improve page load performance', 'low');';`;
         }
       }
     });
@@ -274,13 +270,12 @@ class SEOAuditor {
     links.forEach(link => {
       const href = link.getAttribute('href') || '';
       const rel = link.getAttribute('rel') || '';
-
-      if (href.startsWith('http')) {
+      if (href.startsWith('http')) {;
         if (href.includes(window.location.hostname)) {
           internal++;
         } else {
           external++;
-          if (!rel.includes('noopener') || !rel.includes('noreferrer')) {
+          if (!rel.includes('noopener') || !rel.includes('noreferrer')) {;
             this.addIssue('warning', 'links', 'External link missing security attributes', 'a[href]', 'Add rel="noopener noreferrer" to external links', 'low');
           }
         }
@@ -288,13 +283,13 @@ class SEOAuditor {
         internal++;
       }
 
-      if (rel.includes('nofollow')) {
+      if (rel.includes('nofollow')) {;
         nofollow++;
       }
 
       // Check for empty or generic link text
       const linkText = link.textContent?.trim() || '';
-      if (linkText.length === 0 || ['click here', 'here', 'read more', 'more'].includes(linkText.toLowerCase())) {
+      if (linkText.length === 0 || ['click here', 'here', 'read more', 'more'].includes(linkText.toLowerCase())) {;
         this.addIssue('info', 'links', 'Generic or empty link text', 'a[href]', 'Use descriptive link text for better SEO and accessibility', 'low');
       }
     });
@@ -333,14 +328,13 @@ structuredData.push(data);
    */
   private checkMobileOptimization(): boolean {
     const viewport = document.querySelector('meta[name="viewport"]');
-    
     if (!viewport) {
       this.addIssue('error', 'mobile', 'Viewport meta tag is missing', 'head', 'Add <meta name="viewport" content="width=device-width, initial-scale=1">', 'high');
       return false;
     }
 
     const content = viewport.getAttribute('content') || '';
-    if (!content.includes('width=device-width')) {
+    if (!content.includes('width=device-width')) {;
       this.addIssue('warning', 'mobile', 'Viewport not set to device width', 'meta[name="viewport"]', 'Set viewport to width=device-width for mobile optimization', 'medium');
       return false;
     }
@@ -355,9 +349,9 @@ structuredData.push(data);
     let score = 100;
     
     this.issues.forEach(issue => {
-      if (issue.type === 'error') {
+      if (issue.type === 'error') {;
         score -= issue.impact === 'high' ? 10 : issue.impact === 'medium' ? 5 : 2;
-      } else if (issue.type === 'warning') {
+      } else if (issue.type === 'warning') {;
         score -= issue.impact === 'high' ? 5 : issue.impact === 'medium' ? 3 : 1;
       }
     });
@@ -369,13 +363,12 @@ structuredData.push(data);
    * Add an issue
    */
   private addIssue(
-    type: 'error' | 'warning' | 'info',
-    category: string,
-    message: string,
-    element: string,
-    recommendation: string,
-    impact: 'high' | 'medium' | 'low'
-  ): void {
+    type: 'error' | 'warning' | 'info',',
+    category: string,,
+    message: string,,
+    element: string,,
+    recommendation: string,,
+    impact: 'high' | 'medium' | 'low): void {
     this.issues.push({
       type,
       category,
@@ -393,26 +386,26 @@ structuredData.push(data);
     const metrics = this.audit();
     
     let report = '=== SEO Audit Report ===\n\n';
-    report += `Overall Score: ${metrics.score}/100\n\n`;
+    report += `Overall Score: ${metrics.score}/100\n\n`;`;
     
     report += '--- Metadata ---\n';
-    report += `Title: ${metrics.metadata.title || 'Missing'}\n`;
-    report += `Description: ${metrics.metadata.description || 'Missing'}\n`;
-    report += `Canonical: ${metrics.metadata.canonical || 'Missing'}\n\n`;
+    report += `Title: ${metrics.metadata.title || 'Missing'}\n`;`;
+    report += `Description: ${metrics.metadata.description || 'Missing'}\n`;`;
+    report += `Canonical: ${metrics.metadata.canonical || 'Missing'}\n\n`;`;
     
     report += '--- Headings ---\n';
-    report += `H1: ${metrics.headings.h1} | H2: ${metrics.headings.h2} | H3: ${metrics.headings.h3}\n\n`;
+    report += `H1: ${metrics.headings.h1} | H2: ${metrics.headings.h2} | H3: ${metrics.headings.h3}\n\n`;`;
     
     report += '--- Images ---\n';
-    report += `Total: ${metrics.images.total} | With Alt: ${metrics.images.withAlt} | Without Alt: ${metrics.images.withoutAlt}\n\n`;
+    report += `Total: ${metrics.images.total} | With Alt: ${metrics.images.withAlt} | Without Alt: ${metrics.images.withoutAlt}\n\n`;`;
     
     report += '--- Links ---\n';
-    report += `Internal: ${metrics.links.internal} | External: ${metrics.links.external} | NoFollow: ${metrics.links.nofollow}\n\n`;
+    report += `Internal: ${metrics.links.internal} | External: ${metrics.links.external} | NoFollow: ${metrics.links.nofollow}\n\n`;`;
     
     report += '--- Issues ---\n';
     metrics.issues.forEach(issue => {
-      report += `[${issue.type.toUpperCase()}] ${issue.message}\n`;
-      report += `  → ${issue.recommendation}\n\n`;
+      report += `[${issue.type.toUpperCase()}] ${issue.message}\n`;`;
+      report += `  → ${issue.recommendation}\n\n`;`;
     });
 
     return report;
@@ -437,3 +430,4 @@ export function logSEOReport(): void {
 }
 
 export default seoAuditor;
+;

@@ -2,24 +2,24 @@
 // Premium content showcasing cutting-edge AI innovations
 
 export interface RevolutionaryContent {
-id: string;
-title: string;
-slug: string;
-description: string;
-category: string;
-date: string;
-readTime: string;
-icon: string;
-gradient: string;
-featured: boolean;
-tags: string[];
-highlights: string[];
-metrics: {,
+id: string,
+title: string,
+slug: string,
+description: string,
+category: string,
+date: string,
+readTime: string,
+icon: string,
+gradient: string,
+featured: boolean,
+tags: string[],
+highlights: string[],
+metrics: {,,
 [key: string]: string;
 };
 }
 
-export const october2025RevolutionaryContent: RevolutionaryContent[] = [
+export const october2025RevolutionaryContent: RevolutionaryContent[] = [,
   {
     id: "ai-consciousness-integration-2025",
     title: "AI Consciousness Integration: The Next Frontier of Enterprise Intelligence",
@@ -273,3 +273,4 @@ export const october2025CaseStudies = [
 ];
 
 export default october2025RevolutionaryContent;
+;

@@ -1,17 +1,17 @@
 export type CaseStudy = {
-id: string;
-title: string;
-company: string;
-industry: string;
-challenge: string;
-solution: string;
-results: string[];
-technologies: string[];
-duration: string;
+id: string,
+title: string,
+company: string,
+industry: string,
+challenge: string,
+solution: string,
+results: string[],
+technologies: string[],
+duration: string,
 imageUrl?: string;
 };
 
-export const caseStudies: CaseStudy[] = [
+export const caseStudies: CaseStudy[] = [,
   {
     id: "global-energy-digital-twin-850m",
     title: "Global Energy Corporation: $850M Digital Twin Transformation Success",
@@ -168,3 +168,4 @@ export const caseStudies: CaseStudy[] = [
     imageUrl: "/images/case-studies/enterprise-rag.jpg"
   }
 ];
+;

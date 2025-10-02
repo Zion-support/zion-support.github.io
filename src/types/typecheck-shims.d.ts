@@ -14,7 +14,7 @@ const Component: React.ComponentType;
 export default Component;
 }
 
-declare module "lucide-react" {
+declare module "lucide-react" {";
 	export const TrendingUp: React.ComponentType<{ className?: string }>;
 	export const Shield: React.ComponentType<{ className?: string }>;
 	export const Zap: React.ComponentType<{ className?: string }>;
@@ -22,7 +22,7 @@ declare module "lucide-react" {
 	export const AlertTriangle: React.ComponentType<{ className?: string }>;
 	export const RefreshCw: React.ComponentType<{ className?: string }>;
 	export const Home: React.ComponentType<{ className?: string }>;
-	const all: Record<string, React.ComponentType>;
+	const all: Record<string, React.ComponentType>,
 	export default all;
 }
 
@@ -32,10 +32,11 @@ export const onFCP: (callback: (metric: Metric) => void) => void;
 export const onLCP: (callback: (metric: Metric) => void) => void;
 export const onTTFB: (callback: (metric: Metric) => void) => void;
 export interface Metric {
-name: string;
-value: number;
-delta: number;
-id: string;
+name: string,
+value: number,
+delta: number,
+id: string,
 entries: PerformanceEntry[];
 }
 }
+;

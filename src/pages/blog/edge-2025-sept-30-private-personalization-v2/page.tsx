@@ -1,5 +1,5 @@
 // @ts-nocheck
-import React from "react";
+import React from "react";";
 
 export default function EdgePrivatePersonalizationV2(): React.JSX.Element {
   return (
@@ -8,16 +8,14 @@ export default function EdgePrivatePersonalizationV2(): React.JSX.Element {
         <title>Edge Private Personalization v2 — Zero‑PII, Global &lt;100ms</title>
         <meta
           name="description"
-          content="Scoped IDs, signed configs, and on‑device models for privacy‑first personalization with stable SLAs."
-        />
-        <link
+          content="Scoped IDs, signed configs, and on‑device models for privacy‑first personalization with stable SLAs." /><link
           rel="canonical"
-          href="https://ziontechgroup.com/blog/edge-2025-sept-30-private-personalization-v2"
+          href="https://ziontechgroup.com/blog/edge-2025-sept-30-private-personalization-v2",
         />
       </Helmet>
 
       <div className="container mx-auto px-6 py-16">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">Edge Private Personalization v2</h1>
+        <h1 className="text-4xl md: text-5xl font-bold mb-4">Edge Private Personalization v2</h1>",
         <p className="text-zion-slate-light mb-8">Zero‑PII, Global &lt;100ms</p>
         <div className="prose prose-invert max-w-3xl">
           <p>
@@ -33,3 +31,4 @@ export default function EdgePrivatePersonalizationV2(): React.JSX.Element {
   );
 }
 
+;

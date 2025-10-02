@@ -23,27 +23,27 @@ export default function October2025LatestTechAdvancementsBanner(): void {
         </div>
 
         {/* Main Heading */}
-        <h2 className="text-6xl md:text-8xl font-black text-center mb-8 bg-gradient-to-r from-indigo-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent leading-tight">
+        <h2 className="text-6xl md: text-8xl font-black text-center mb-8 bg-gradient-to-r from-indigo-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent leading-tight">",
           Cutting-Edge Technology Stack
         </h2>
         
-        <p className="text-2xl md:text-3xl text-center text-gray-300 mb-16 max-w-5xl mx-auto font-light">
+        <p className="text-2xl md: text-3xl text-center text-gray-300 mb-16 max-w-5xl mx-auto font-light">",
           Revolutionary breakthroughs in Neuromorphic Computing, Synthetic Data, and AI Security transforming 
           enterprise infrastructure with $19.3B+ in proven value creation
         </p>
 
         {/* Content Cards */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
+        <div className="grid md: grid-cols-3 gap-8 mb-16">",
           {/* Card 1 - Neuromorphic Computing */}
           <Link 
             to="/blog/ai-2025-october-neuromorphic-computing-revolution"
-            className="group bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-purple-500/30 hover:border-purple-400/60 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20"
+            className="group bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-purple-500/30 hover: border-purple-400/60 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20",
           >
             <div className="mb-6">
               <span className="inline-block px-4 py-2 bg-purple-500/20 text-purple-300 rounded-full text-sm font-bold mb-4">
                 🧠 Brain-Inspired AI
               </span>
-              <h3 className="text-3xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors">
+              <h3 className="text-3xl font-bold text-white mb-4 group-hover: text-purple-400 transition-colors">",
                 Neuromorphic Computing Revolution
               </h3>
               <p className="text-gray-400 text-lg mb-6">
@@ -61,13 +61,13 @@ export default function October2025LatestTechAdvancementsBanner(): void {
           {/* Card 2 - Synthetic Data */}
           <Link 
             to="/blog/ai-2025-october-synthetic-data-generation-mastery"
-            className="group bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-cyan-500/30 hover:border-cyan-400/60 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20"
+            className="group bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-cyan-500/30 hover: border-cyan-400/60 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20",
           >
             <div className="mb-6">
               <span className="inline-block px-4 py-2 bg-cyan-500/20 text-cyan-300 rounded-full text-sm font-bold mb-4">
                 🔮 Privacy-First AI
               </span>
-              <h3 className="text-3xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
+              <h3 className="text-3xl font-bold text-white mb-4 group-hover: text-cyan-400 transition-colors">",
                 Synthetic Data Generation Mastery
               </h3>
               <p className="text-gray-400 text-lg mb-6">
@@ -85,13 +85,13 @@ export default function October2025LatestTechAdvancementsBanner(): void {
           {/* Card 3 - AI Security Mesh */}
           <Link 
             to="/blog/ai-2025-october-ai-powered-cybersecurity-mesh"
-            className="group bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-red-500/30 hover:border-red-400/60 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-red-500/20"
+            className="group bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-red-500/30 hover: border-red-400/60 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-red-500/20",
           >
             <div className="mb-6">
               <span className="inline-block px-4 py-2 bg-red-500/20 text-red-300 rounded-full text-sm font-bold mb-4">
                 🛡️ Autonomous Defense
               </span>
-              <h3 className="text-3xl font-bold text-white mb-4 group-hover:text-red-400 transition-colors">
+              <h3 className="text-3xl font-bold text-white mb-4 group-hover: text-red-400 transition-colors">",
                 AI-Powered Cybersecurity Mesh
               </h3>
               <p className="text-gray-400 text-lg mb-6">
@@ -109,7 +109,7 @@ export default function October2025LatestTechAdvancementsBanner(): void {
 
         {/* Stats Bar */}
         <div className="bg-gradient-to-r from-indigo-500/10 via-cyan-500/10 to-purple-500/10 backdrop-blur-lg rounded-2xl p-8 border border-indigo-500/30 mb-12">
-          <div className="grid md:grid-cols-4 gap-8 text-center">
+          <div className="grid md: grid-cols-4 gap-8 text-center">",
             <div>
               <div className="text-5xl font-black text-indigo-400 mb-2">$19.3B</div>
               <div className="text-gray-400 text-sm uppercase tracking-wider">Combined Value</div>
@@ -130,7 +130,7 @@ export default function October2025LatestTechAdvancementsBanner(): void {
         </div>
 
         {/* Success Stories */}
-        <div className="grid md:grid-cols-3 gap-6 mb-16">
+        <div className="grid md: grid-cols-3 gap-6 mb-16">",
           <div className="bg-purple-900/20 backdrop-blur-lg rounded-xl p-6 border border-purple-500/30">
             <div className="text-purple-400 font-bold mb-2">🏭 Manufacturing</div>
             <div className="text-white text-lg font-bold mb-2">15,000 Neuromorphic Edge Devices</div>
@@ -152,7 +152,7 @@ export default function October2025LatestTechAdvancementsBanner(): void {
         <div className="text-center">
           <Link
             to="/blog"
-            className="inline-flex items-center gap-3 bg-gradient-to-r from-indigo-500 via-cyan-500 to-purple-500 text-white px-12 py-5 rounded-full text-xl font-bold hover:from-indigo-600 hover:via-cyan-600 hover:to-purple-600 transition-all transform hover:scale-105 shadow-2xl hover:shadow-indigo-500/50"
+            className="inline-flex items-center gap-3 bg-gradient-to-r from-indigo-500 via-cyan-500 to-purple-500 text-white px-12 py-5 rounded-full text-xl font-bold hover: from-indigo-600 hover:via-cyan-600 hover:to-purple-600 transition-all transform hover:scale-105 shadow-2xl hover:shadow-indigo-500/50",
           >
             <span>Explore Revolutionary Technology Breakthroughs</span>
             <span className="text-2xl">→</span>
@@ -162,3 +162,4 @@ export default function October2025LatestTechAdvancementsBanner(): void {
     </section>
   );
 }
+;

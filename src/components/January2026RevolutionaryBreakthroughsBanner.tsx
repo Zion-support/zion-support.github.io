@@ -1,38 +1,37 @@
 import React from 'react';
-
-const January2026RevolutionaryBreakthroughsBanner: React.FC = () => {
+const January2026RevolutionaryBreakthroughsBanner: React.FC = () => {,
   const breakthroughs = [
     {
-      icon: Brain,
-      title: "Synthetic Consciousness AI",
-      description: "Revolutionary AI achieving genuine consciousness and emotional intelligence",
-      stats: "$500B Enterprise Value",
-      color: "from-purple-500 to-pink-500",
-      bgColor: "bg-purple-500/10"
+      icon: Brain,,
+      title: "Synthetic Consciousness AI",",
+      description: "Revolutionary AI achieving genuine consciousness and emotional intelligence",",
+      stats: "$500B Enterprise Value",",
+      color: "from-purple-500 to-pink-500",",
+      bgColor: "bg-purple-500/10",
     },
     {
-      icon: Zap,
-      title: "Quantum Edge Computing",
-      description: "Sub-millisecond processing with 200-250x speed improvements",
-      stats: "200x Faster",
-      color: "from-blue-500 to-cyan-500",
-      bgColor: "bg-blue-500/10"
+      icon: Zap,,
+      title: "Quantum Edge Computing",",
+      description: "Sub-millisecond processing with 200-250x speed improvements",",
+      stats: "200x Faster",",
+      color: "from-blue-500 to-cyan-500",",
+      bgColor: "bg-blue-500/10",
     },
     {
-      icon: Network,
-      title: "Autonomous Enterprise Mesh",
-      description: "Self-organizing AI networks achieving 99.7% operational efficiency",
-      stats: "99.7% Efficiency",
-      color: "from-green-500 to-emerald-500",
-      bgColor: "bg-green-500/10"
+      icon: Network,,
+      title: "Autonomous Enterprise Mesh",",
+      description: "Self-organizing AI networks achieving 99.7% operational efficiency",",
+      stats: "99.7% Efficiency",",
+      color: "from-green-500 to-emerald-500",",
+      bgColor: "bg-green-500/10",
     },
     {
-      icon: Shield,
-      title: "Quantum-Safe Security",
-      description: "Unbreakable protection systems with 99.99% threat prevention",
-      stats: "$2.8B Protected",
-      color: "from-orange-500 to-red-500",
-      bgColor: "bg-orange-500/10"
+      icon: Shield,,
+      title: "Quantum-Safe Security",",
+      description: "Unbreakable protection systems with 99.99% threat prevention",",
+      stats: "$2.8B Protected",",
+      color: "from-orange-500 to-red-500",",
+      bgColor: "bg-orange-500/10",
     }
   ];
 
@@ -57,7 +56,7 @@ const January2026RevolutionaryBreakthroughsBanner: React.FC = () => {
             transition={{ delay: 0.2, duration: 0.6 }}
             className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500/20 to-blue-500/20 backdrop-blur-sm border border-purple-500/30 rounded-full text-sm font-semibold mb-6"
           >
-            <Sparkles className="w-4 h-4 mr-2 text-yellow-400" />
+            <Sparkles className="w-4 h-4 mr-2 text-yellow-400/>
             January 15, 2026 - Revolutionary Breakthroughs
           </motion.div>
           
@@ -65,7 +64,7 @@ const January2026RevolutionaryBreakthroughsBanner: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.6 }}
-            className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-purple-200 to-blue-200 bg-clip-text text-transparent mb-6"
+            className="text-5xl md: text-6xl font-bold bg-gradient-to-r from-white via-purple-200 to-blue-200 bg-clip-text text-transparent mb-6",
           >
             AI Revolution 2026
           </motion.h2>
@@ -83,21 +82,21 @@ const January2026RevolutionaryBreakthroughsBanner: React.FC = () => {
         </div>
 
         {/* Breakthroughs Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+        <div className="grid grid-cols-1 md: grid-cols-2 gap-8 mb-12">",
           {breakthroughs.map((breakthrough, index) => (
             <motion.div
               key={breakthrough.title}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 + index * 0.1, duration: 0.6 }}
-              className={`${breakthrough.bgColor} backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300 group hover:transform hover:scale-105`}
+              className={`${breakthrough.bgColor} backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300 group hover:transform hover:scale-105`}`;
             >
               <div className="flex items-start space-x-4">
-                <div className={`p-3 rounded-xl bg-gradient-to-r ${breakthrough.color}`}>
-                  <breakthrough.icon className="w-6 h-6 text-white" />
+                <div className={`p-3 rounded-xl bg-gradient-to-r ${breakthrough.color}`}>`;
+                  <breakthrough.icon className="w-6 h-6 text-white/>
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">
+                  <h3 className="text-xl font-bold text-white mb-2 group-hover: text-purple-300 transition-colors">",
                     {breakthrough.title}
                   </h3>
                   <p className="text-gray-300 mb-4 leading-relaxed">
@@ -119,7 +118,7 @@ const January2026RevolutionaryBreakthroughsBanner: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.9, duration: 0.6 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12"
+          className="grid grid-cols-2 md: grid-cols-4 gap-6 mb-12",
         >
           <div className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10">
             <div className="text-4xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">
@@ -158,17 +157,17 @@ const January2026RevolutionaryBreakthroughsBanner: React.FC = () => {
             <p className="text-lg text-gray-300 mb-6">
               Ready to transform your enterprise with revolutionary AI?
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">",
               <a title="Internal link"
                 href="/blog"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 hover: from-purple-600 hover:to-blue-600 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl",
               >
                 Explore All Content
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <ArrowRight className="ml-2 w-5 h-5/>
               </a>
               <a title="Internal link"
                 href="/services"
-                className="inline-flex items-center px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 hover:border-white/30 text-white font-semibold rounded-xl transition-all duration-300"
+                className="inline-flex items-center px-8 py-4 bg-white/10 hover: bg-white/20 backdrop-blur-sm border border-white/20 hover:border-white/30 text-white font-semibold rounded-xl transition-all duration-300",
               >
                 View Services
               </a>

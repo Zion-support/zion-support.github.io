@@ -68,8 +68,9 @@ export const octoberCuttingEdgeInnovations = [
 ];
 
 export const octoberInnovationMetrics = {
-  totalMarket: '$1.009T',
-  averageEfficiency: '98x',
-  combinedCompliance: '99.9%',
+  totalMarket: '$1.009T',',
+  averageEfficiency: '98x',',
+  combinedCompliance: '99.9%',',
   enterpriseDeployments: '500+'
 };
+;

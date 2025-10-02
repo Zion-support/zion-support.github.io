@@ -3,8 +3,7 @@ import { Link } from 'react-router-dom';
 import {
 
 } from 'lucide-react';
-
-const Demo: React.FC = () => {
+const Demo: React.FC = () => {,
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -20,69 +19,68 @@ const Demo: React.FC = () => {
     message: ''
   });
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {,
     setFormData({
       ...formData
       [e.target.name]: e.target.value
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {,
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    console.log('Form submitted: ', formData);',
   };
 
   const demoFeatures = [
     {
-title: 'AI-Powered Automation',
-description: 'See how our AI can automate your repetitive tasks and workflows',
+title: 'AI-Powered Automation',',
+description: 'See how our AI can automate your repetitive tasks and workflows',',
 icon: '🤖'
 },
     {
-title: 'Real-time Analytics',
-description: 'Experience our advanced analytics and reporting capabilities',
+title: 'Real-time Analytics',',
+description: 'Experience our advanced analytics and reporting capabilities',',
 icon: '📊'
 },
     {
-title: 'Custom Integrations',
-description: 'Learn how we can integrate with your existing systems',
+title: 'Custom Integrations',',
+description: 'Learn how we can integrate with your existing systems',',
 icon: '🔗'
 },
     {
-title: 'Security & Compliance',
-description: 'Understand our enterprise-grade security and compliance features',
+title: 'Security & Compliance',',
+description: 'Understand our enterprise-grade security and compliance features',',
 icon: '🔒'
 }
   ];
 
   const testimonials = [
     {
-name: 'Sarah Johnson',
-company: 'TechCorp',
-role: 'CTO',
-content: 'The demo showed us exactly how AI could transform our operations. The ROI was clear from day one.',
+name: 'Sarah Johnson',',
+company: 'TechCorp',',
+role: 'CTO',',
+content: 'The demo showed us exactly how AI could transform our operations. The ROI was clear from day one.',',
 rating: 5
 },
     {
-name: 'Michael Chen',
-company: 'FinanceFlow',
-role: 'VP of Operations',
-content: "Zion Tech Group's demo was eye-opening. We saw immediate value and signed up the same week.",
+name: 'Michael Chen',',
+company: 'FinanceFlow',',
+role: 'VP of Operations',',
+content: "Zion Tech Group's demo was eye-opening. We saw immediate value and signed up the same week.",",
 rating: 5
 },
     {
-name: 'Emily Rodriguez',
-company: 'HealthTech Solutions',
-role: 'CEO',
-content: 'The personalized demo addressed all our specific needs. Highly recommend scheduling one.',
+name: 'Emily Rodriguez',',
+company: 'HealthTech Solutions',',
+role: 'CEO',',
+content: 'The personalized demo addressed all our specific needs. Highly recommend scheduling one.',',
 rating: 5
 }
   ];
 
   const timeSlots = [
-    '9:00 AM', '10:00 AM', '11:00 AM', '12:00 PM',
-    '1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM'
-  ];
+    '9: 00 AM', '10:00 AM', '11:00 AM', '12:00 PM',',
+    '1: 00 PM', '2:00 PM', '3:00 PM', '4:00 PM];
 
   const companySizes = [
     '1-10 employees',
@@ -106,9 +104,9 @@ rating: 5
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-600 via-purple-600 to-teal-600 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            <h1 className="text-4xl md: text-6xl font-bold mb-6">",
               Schedule Your Demo
             </h1>
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
@@ -117,15 +115,15 @@ rating: 5
             </p>
             <div className="flex items-center justify-center space-x-8 text-blue-100">
               <div className="flex items-center">
-                <Calendar className="w-5 h-5 mr-2" />
+                <Calendar className="w-5 h-5 mr-2/>
                 <span>30 minutes</span>
               </div>
               <div className="flex items-center">
-                <User className="w-5 h-5 mr-2" />
+                <User className="w-5 h-5 mr-2/>
                 <span>1-on-1 with expert</span>
               </div>
               <div className="flex items-center">
-                <Play className="w-5 h-5 mr-2" />
+                <Play className="w-5 h-5 mr-2/>
                 <span>Live demonstration</span>
               </div>
             </div>
@@ -135,17 +133,17 @@ rating: 5
 
       {/* Demo Features */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              What You'll See in the Demo
+            <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">",
+              What You'll See in the Demo;
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Get a comprehensive overview of our AI solutions tailored to your business
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">",
             {demoFeatures.map((feature, index) => (
               <div key={index} className="text-center">
                 <div className="text-4xl mb-4">{feature.icon}</div>
@@ -159,20 +157,20 @@ rating: 5
 
       {/* Demo Form */}
       <section className="py-20 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8">",
           <div className="bg-white rounded-lg shadow-lg p-8">
             <div className="text-center mb-8">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
                 Book Your Demo
               </h2>
               <p className="text-gray-600">
-                Fill out the form below and we'll contact you to schedule your personalized demo
+                Fill out the form below and we'll contact you to schedule your personalized demo;
               </p>
             </div>
 
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Personal Information */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md: grid-cols-2 gap-6">",
                 <div>
                   <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-2">
                     First Name *
@@ -184,7 +182,7 @@ rating: 5
                     required
                     value={formData.firstName}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent",
                   />
                 </div>
                 <div>
@@ -198,12 +196,12 @@ rating: 5
                     required
                     value={formData.lastName}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent",
                   />
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md: grid-cols-2 gap-6">",
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                     Email Address *
@@ -215,7 +213,7 @@ rating: 5
                     required
                     value={formData.email}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent",
                   />
                 </div>
                 <div>
@@ -228,13 +226,13 @@ rating: 5
                     name="phone"
                     value={formData.phone}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent",
                   />
                 </div>
               </div>
 
               {/* Company Information */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md: grid-cols-2 gap-6">",
                 <div>
                   <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
                     Company Name *
@@ -246,7 +244,7 @@ rating: 5
                     required
                     value={formData.company}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent",
                   />
                 </div>
                 <div>
@@ -260,12 +258,12 @@ rating: 5
                     required
                     value={formData.jobTitle}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent",
                   />
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md: grid-cols-2 gap-6">",
                 <div>
                   <label htmlFor="companySize" className="block text-sm font-medium text-gray-700 mb-2">
                     Company Size *
@@ -276,7 +274,7 @@ rating: 5
                     required
                     value={formData.companySize}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent",
                   >
                     <option value="">Select company size</option>
                     {companySizes.map((size) => (
@@ -294,7 +292,7 @@ rating: 5
                     required
                     value={formData.useCase}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent",
                   >
                     <option value="">Select use case</option>
                     {useCases.map((useCase) => (
@@ -305,7 +303,7 @@ rating: 5
               </div>
 
               {/* Scheduling */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 md: grid-cols-3 gap-6">",
                 <div>
                   <label htmlFor="preferredDate" className="block text-sm font-medium text-gray-700 mb-2">
                     Preferred Date
@@ -316,7 +314,7 @@ rating: 5
                     name="preferredDate"
                     value={formData.preferredDate}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent",
                   />
                 </div>
                 <div>
@@ -328,7 +326,7 @@ rating: 5
                     name="preferredTime"
                     value={formData.preferredTime}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent",
                   >
                     <option value="">Select time</option>
                     {timeSlots.map((time) => (
@@ -345,7 +343,7 @@ rating: 5
                     name="timeZone"
                     value={formData.timeZone}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent",
                   >
                     <option value="">Select timezone</option>
                     <option value="EST">Eastern Time (EST)</option>
@@ -368,19 +366,19 @@ rating: 5
                   value={formData.message}
                   onChange={handleInputChange}
                   placeholder="Tell us about your specific needs, challenges, or questions..."
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent",
                 />
               </div>
 
               <div className="text-center">
                 <button
                   type="submit"
-                  className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-lg"
+                  className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover: bg-blue-700 transition-colors text-lg",
                 >
                   Schedule My Demo
                 </button>
                 <p className="text-sm text-gray-500 mt-4">
-                  * Required fields. We'll contact you within 24 hours to confirm your demo time.
+                  * Required fields. We'll contact you within 24 hours to confirm your demo time.;
                 </p>
               </div>
             </form>
@@ -390,9 +388,9 @@ rating: 5
 
       {/* Testimonials */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">",
               What Our Clients Say
             </h2>
             <p className="text-xl text-gray-600">
@@ -400,12 +398,12 @@ rating: 5
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">",
             {testimonials.map((testimonial, index) => (
               <div key={index} className="bg-gray-50 rounded-lg p-8">
                 <div className="flex items-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current/>
                   ))}
                 </div>
                 <p className="text-gray-700 mb-6 italic">"{testimonial.content}"</p>
@@ -421,23 +419,23 @@ rating: 5
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">",
+          <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">",
             Ready to See AI in Action?
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
             Join thousands of businesses that have transformed their operations with our AI solutions.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">",
             <Link
               to="/contact"
-              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover: bg-gray-100 transition-colors",
             >
               Contact Us Now
             </Link>
             <Link
               to="/case-studies"
-              className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors"
+              className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white/10 transition-colors",
             >
               View Success Stories
             </Link>
@@ -449,3 +447,4 @@ rating: 5
 };
 
 export default Demo;
+;

@@ -92,14 +92,13 @@ export const newInsights = [
     tags: ["AI", "Automation", "Enterprise", "2025"],
     content: `,
       <h2>Revolutionizing Enterprise Operations</h2>
-      <p>Artificial Intelligence automation is no longer a future concept—it's the present reality for forward-thinking enterprises. In 2025, we're seeing unprecedented adoption rates and ROI from AI automation initiatives.</p>
-      
+      <p>Artificial Intelligence automation is no longer a future concept—it's the present reality for forward-thinking enterprises. In 2025, we're seeing unprecedented adoption rates and ROI from AI automation initiatives.</p>;
       <h3>Key Trends Driving Adoption</h3>
       <ul>
-        <li><strong>Process Mining Integration:</strong> AI now automatically identifies optimization opportunities</li>
-        <li><strong>Intelligent Document Processing:</strong> 90% accuracy in data extraction and classification</li>
-        <li><strong>Predictive Maintenance:</strong> Reducing downtime by up to 40% in manufacturing</li>
-        <li><strong>Customer Service Automation:</strong> 24/7 intelligent support with human-like interactions</li>
+        <li><strong>Process Mining Integration: </strong> AI now automatically identifies optimization opportunities</li>,
+        <li><strong>Intelligent Document Processing: </strong> 90% accuracy in data extraction and classification</li>,
+        <li><strong>Predictive Maintenance: </strong> Reducing downtime by up to 40% in manufacturing</li>,
+        <li><strong>Customer Service Automation: </strong> 24/7 intelligent support with human-like interactions</li>,
       </ul>
       
       <h3>Implementation Best Practices</h3>
@@ -107,10 +106,10 @@ export const newInsights = [
       
       <h3>ROI Metrics to Track</h3>
       <ul>
-        <li>Time savings: Average 60% reduction in manual processing time</li>
-        <li>Cost reduction: 35% decrease in operational costs</li>
-        <li>Error reduction: 95% improvement in accuracy</li>
-        <li>Employee satisfaction: 40% increase in job satisfaction scores</li>
+        <li>Time savings: Average 60% reduction in manual processing time</li>,
+        <li>Cost reduction: 35% decrease in operational costs</li>,
+        <li>Error reduction: 95% improvement in accuracy</li>,
+        <li>Employee satisfaction: 40% increase in job satisfaction scores</li>,
       </ul>
     `
   },
@@ -129,10 +128,10 @@ export const newInsights = [
       
       <h3>AI Security Capabilities</h3>
       <ul>
-        <li><strong>Behavioral Analysis:</strong> Detecting anomalies in user and system behavior</li>
-        <li><strong>Threat Intelligence:</strong> Real-time analysis of global threat landscapes</li>
-        <li><strong>Automated Response:</strong> Instant containment of security incidents</li>
-        <li><strong>Predictive Analytics:</strong> Forecasting potential attack vectors</li>
+        <li><strong>Behavioral Analysis: </strong> Detecting anomalies in user and system behavior</li>,
+        <li><strong>Threat Intelligence: </strong> Real-time analysis of global threat landscapes</li>,
+        <li><strong>Automated Response: </strong> Instant containment of security incidents</li>,
+        <li><strong>Predictive Analytics: </strong> Forecasting potential attack vectors</li>,
       </ul>
       
       <h3>Zero-Trust Architecture</h3>
@@ -157,10 +156,10 @@ export const newInsights = [
       
       <h3>Key Principles</h3>
       <ul>
-        <li><strong>Containerization:</strong> Consistent deployment across environments</li>
-        <li><strong>Microservices Architecture:</strong> Independent, scalable service components</li>
-        <li><strong>API-First Design:</strong> Seamless integration and interoperability</li>
-        <li><strong>Infrastructure as Code:</strong> Automated, version-controlled infrastructure</li>
+        <li><strong>Containerization: </strong> Consistent deployment across environments</li>,
+        <li><strong>Microservices Architecture: </strong> Independent, scalable service components</li>,
+        <li><strong>API-First Design: </strong> Seamless integration and interoperability</li>,
+        <li><strong>Infrastructure as Code: </strong> Automated, version-controlled infrastructure</li>,
       </ul>
       
       <h3>Best Practices for 2025</h3>
@@ -182,10 +181,10 @@ export const newInsights = [
       
       <h3>AI Analytics Capabilities</h3>
       <ul>
-        <li><strong>Automated Insights:</strong> AI identifies patterns and anomalies automatically</li>
-        <li><strong>Predictive Modeling:</strong> Forecast future trends and behaviors</li>
-        <li><strong>Natural Language Queries:</strong> Ask questions in plain English</li>
-        <li><strong>Real-time Processing:</strong> Instant analysis of streaming data</li>
+        <li><strong>Automated Insights: </strong> AI identifies patterns and anomalies automatically</li>,
+        <li><strong>Predictive Modeling: </strong> Forecast future trends and behaviors</li>,
+        <li><strong>Natural Language Queries: </strong> Ask questions in plain English</li>,
+        <li><strong>Real-time Processing: </strong> Instant analysis of streaming data</li>,
       </ul>
       
       <h3>Implementation Strategy</h3>
@@ -207,10 +206,10 @@ export const newInsights = [
       
       <h3>Automation Pillars</h3>
       <ul>
-        <li><strong>Continuous Integration:</strong> Automated testing and validation</li>
-        <li><strong>Continuous Deployment:</strong> Automated release pipelines</li>
-        <li><strong>Infrastructure as Code:</strong> Programmable infrastructure management</li>
-        <li><strong>Monitoring & Observability:</strong> Automated performance tracking</li>
+        <li><strong>Continuous Integration: </strong> Automated testing and validation</li>,
+        <li><strong>Continuous Deployment: </strong> Automated release pipelines</li>,
+        <li><strong>Infrastructure as Code: </strong> Programmable infrastructure management</li>,
+        <li><strong>Monitoring & Observability: </strong> Automated performance tracking</li>,
       </ul>
       
       <h3>Tools and Technologies</h3>
@@ -228,14 +227,13 @@ export const newInsights = [
     tags: ["Micro-SaaS", "Entrepreneurship", "Software", "Business"],
     content: `,
       <h2>The Micro-SaaS Revolution</h2>
-      <p>Micro-SaaS businesses are proving that you don't need massive scale to build profitable software companies. Focus and specialization are the keys to success.</p>
-      
+      <p>Micro-SaaS businesses are proving that you don't need massive scale to build profitable software companies. Focus and specialization are the keys to success.</p>;
       <h3>Characteristics of Successful Micro-SaaS</h3>
       <ul>
-        <li><strong>Niche Focus:</strong> Solving specific problems for specific audiences</li>
-        <li><strong>Low Overhead:</strong> Minimal team size and infrastructure costs</li>
-        <li><strong>High Margins:</strong> Premium pricing for specialized solutions</li>
-        <li><strong>Customer Intimacy:</strong> Deep understanding of user needs</li>
+        <li><strong>Niche Focus: </strong> Solving specific problems for specific audiences</li>,
+        <li><strong>Low Overhead: </strong> Minimal team size and infrastructure costs</li>,
+        <li><strong>High Margins: </strong> Premium pricing for specialized solutions</li>,
+        <li><strong>Customer Intimacy: </strong> Deep understanding of user needs</li>,
       </ul>
       
       <h3>Building Your Micro-SaaS</h3>
@@ -284,7 +282,7 @@ export const newInsights = [
   }
 ];
 
-// Added: October 7, 2025
+// Added: October 7, 2025,
 newInsights.unshift({
   id: "ai-governance-scorecards-2026",
   title: "AI Governance 2026: Scorecards Engineers Actually Use",

@@ -25,6 +25,111 @@ export default function ServicesPage() {
       ]
     },
     {
+      title: 'AI Compliance GPT',
+      description: 'Policy drafting, control mapping, evidence automation for SOC 2/ISO/HIPAA/GDPR',
+      icon: '⚖️',
+      features: [
+        'Continuous Control Monitoring',
+        'Risk & Vendor Management',
+        'Audit-Ready Reports',
+        'Okta/Cloud Integrations',
+        'Change Tracking'
+      ],
+      href: '/services/ai-compliance-gpt',
+      pricing: '$799 - $1,999+/month',
+      category: 'AI Services'
+    },
+    {
+      title: 'Autonomous Agents for Ops',
+      description: 'Production-safe agents for SRE/SecOps/DevOps with approvals and guardrails',
+      icon: '🧩',
+      features: [
+        'Alert Triage',
+        'Runbooks & Safe Remediations',
+        'Incident Comms',
+        'Postmortems',
+        'Cost Anomaly Investigations'
+      ],
+      href: '/services/agents-for-ops',
+      pricing: '$999 - $2,499+/month',
+      category: 'Process Automation'
+    },
+    {
+      title: 'Enterprise RAG & GenAI Platform',
+      description: 'RAG best practices, evals, guardrails, and observability for GenAI apps',
+      icon: '🧠',
+      features: [
+        'Hybrid Search & Re-ranking',
+        'Citations & Source Attribution',
+        'Offline/Online Evals',
+        'Prompt & Safety Management',
+        'Multi-tenant & SSO'
+      ],
+      href: '/services/genai-rag-platform',
+      pricing: '$299 - $999+/month',
+      category: 'Advanced AI'
+    },
+    {
+      title: 'AI Marketing Studio',
+      description: 'Audience insights, creative generation, multivariate tests, attribution & MMM',
+      icon: '📣',
+      features: [
+        'ICP Builder',
+        'Creative Generation',
+        'Auto-Allocation Experiments',
+        'Attribution & MMM',
+        'Brand Guardrails'
+      ],
+      href: '/services/ai-marketing-studio',
+      pricing: '$199 - $499+/month',
+      category: 'Micro SaaS'
+    },
+    {
+      title: 'AI Sales Copilot',
+      description: 'SDR/AE copilot: research, outreach, objection handling, call notes, CRM updates',
+      icon: '💼',
+      href: '/services/ai-sales-copilot',
+      pricing: 'Starting from $59/user/month',
+      features: [
+        'Lead Research & Personalization',
+        'Objection Playbooks',
+        'Live Call Assistance',
+        'Automatic CRM Updates',
+        'Deal Risk Insights',
+        'Gong/Zoom Integrations'
+      ]
+    },
+    {
+      title: 'Data Quality & Observability',
+      description: 'Lineage, tests, anomalies, SLAs across pipelines, warehouses, and BI',
+      icon: '📈',
+      href: '/services/data-quality-observability',
+      pricing: 'Starting from $799/month',
+      features: [
+        'Column-Level Lineage',
+        'Anomaly Detection',
+        'SLA Monitoring',
+        'dbt/Airflow Integration',
+        'PagerDuty/Jira Alerts',
+        'Executive Trust Dashboards'
+      ]
+    },
+    {
+      title: 'FinOps Cost Optimizer',
+      description: 'Rightsizing, commitments, anomaly alerts, Kubernetes cost allocation',
+      icon: '💸',
+      href: '/services/finops-cost-optimizer',
+      pricing: 'Starting from $499/month',
+      features: [
+        'Rightsizing & Cleanup',
+        'RI/Savings Plans Recs',
+        'K8s Cost Allocation',
+        'Budgets & Alerts',
+        'Anomaly RCA',
+        'Chargeback/Showback'
+      ]
+    },
+    {
       title: 'Remote Work Productivity Suite',
       description: 'Comprehensive remote work solutions including meeting optimization, team onboarding, and productivity analytics',
       icon: '🏠',

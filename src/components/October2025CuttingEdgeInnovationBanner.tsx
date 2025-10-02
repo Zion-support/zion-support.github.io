@@ -21,7 +21,7 @@ export default function October2025CuttingEdgeInnovationBanner(): void {
               <span className="animate-pulse">⚡</span>
             </div>
             
-            <h2 className="text-5xl md:text-7xl font-black mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-rose-400 bg-clip-text text-transparent">
+            <h2 className="text-5xl md: text-7xl font-black mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-rose-400 bg-clip-text text-transparent">",
               Cutting-Edge AI Innovations
             </h2>
             
@@ -32,7 +32,7 @@ export default function October2025CuttingEdgeInnovationBanner(): void {
           </div>
 
           {/* Feature Grid */}
-          <div className="grid md:grid-cols-2 gap-6 mb-12">
+          <div className="grid md: grid-cols-2 gap-6 mb-12">",
             <div className="bg-gradient-to-br from-cyan-500/10 to-blue-500/10 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30">
               <div className="flex items-start gap-4">
                 <div className="text-5xl">🎯</div>
@@ -43,7 +43,7 @@ export default function October2025CuttingEdgeInnovationBanner(): void {
                   </p>
                   <Link 
                     to="/blog/ai-2025-october-agentic-orchestration-platform" 
-                    className="inline-flex items-center text-cyan-400 font-semibold hover:text-cyan-300 transition-colors"
+                    className="inline-flex items-center text-cyan-400 font-semibold hover: text-cyan-300 transition-colors",
                   >
                     Learn More <span className="ml-2">→</span>
                   </Link>
@@ -61,7 +61,7 @@ export default function October2025CuttingEdgeInnovationBanner(): void {
                   </p>
                   <Link 
                     to="/blog/ai-2025-october-neural-reasoning-engines" 
-                    className="inline-flex items-center text-purple-400 font-semibold hover:text-purple-300 transition-colors"
+                    className="inline-flex items-center text-purple-400 font-semibold hover: text-purple-300 transition-colors",
                   >
                     Discover More <span className="ml-2">→</span>
                   </Link>
@@ -69,7 +69,7 @@ export default function October2025CuttingEdgeInnovationBanner(): void {
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-emerald-500/10 to-teal-500/10 backdrop-blur-sm rounded-2xl p-8 border border-emerald-500/30 md:col-span-2">
+            <div className="bg-gradient-to-br from-emerald-500/10 to-teal-500/10 backdrop-blur-sm rounded-2xl p-8 border border-emerald-500/30 md: col-span-2">",
               <div className="flex items-start gap-4">
                 <div className="text-5xl">🏗️</div>
                 <div className="flex-1">
@@ -93,7 +93,7 @@ export default function October2025CuttingEdgeInnovationBanner(): void {
                   </div>
                   <Link 
                     to="/blog/ai-2025-october-enterprise-ai-fabric" 
-                    className="inline-flex items-center text-emerald-400 font-semibold hover:text-emerald-300 transition-colors"
+                    className="inline-flex items-center text-emerald-400 font-semibold hover: text-emerald-300 transition-colors",
                   >
                     Explore Platform <span className="ml-2">→</span>
                   </Link>
@@ -110,13 +110,13 @@ export default function October2025CuttingEdgeInnovationBanner(): void {
             <div className="flex flex-wrap justify-center gap-4">
               <Link
                 to="/blog"
-                className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-full font-bold hover:from-purple-600 hover:to-pink-600 transition-all transform hover:scale-105"
+                className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-full font-bold hover: from-purple-600 hover:to-pink-600 transition-all transform hover:scale-105",
               >
                 View All Articles
               </Link>
               <Link
                 to="/contact"
-                className="bg-white/10 text-white px-8 py-3 rounded-full font-bold hover:bg-white/20 transition-all border border-white/30"
+                className="bg-white/10 text-white px-8 py-3 rounded-full font-bold hover: bg-white/20 transition-all border border-white/30",
               >
                 Schedule Consultation
               </Link>
@@ -127,3 +127,4 @@ export default function October2025CuttingEdgeInnovationBanner(): void {
     </section>
   );
 }
+;

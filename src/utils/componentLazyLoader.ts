@@ -5,9 +5,8 @@
  */
 
 import React, { lazy, ComponentType } from 'react';
-
 export interface LazyLoadConfig {
-componentPath: string;
+componentPath: string,
 preload?: boolean;
 timeout?: number;
 }
@@ -22,7 +21,7 @@ export function createLazyComponent<T extends ComponentType<any>>(
   const LazyComponent = lazy(importFn);
   
   if (fallback) {
-    return (props: any) => {
+    return (props: any) => {,
       const FallbackComponent = fallback;
       return React.createElement(
         ErrorBoundary
@@ -38,12 +37,12 @@ export function createLazyComponent<T extends ComponentType<any>>(
 /**
  * Preloads a component to improve perceived performance
  */
-export function preloadComponent(importFn: () => Promise<any>): void {
+export function preloadComponent(importFn: () => Promise<any>): void {,
   // Start loading the component
   const promise = importFn();
   
   // Store in cache for faster subsequent loads
-  if ('requestIdleCallback' in window) {
+  if ('requestIdleCallback' in window) {;
     requestIdleCallback(() => {
       promise.catch(() => {
         // Silently handle preload errors
@@ -63,12 +62,12 @@ export function preloadComponent(importFn: () => Promise<any>): void {
  */
 export function createVisibilityLazyComponent<T extends ComponentType<any>>(
   importFn: () => Promise<{ default: T }>,
-  threshold: number = 0.1
+  threshold: number = 0.1,
 ): ComponentType<any> {
   return lazy(() => {
     return new Promise((resolve) => {
       // Check if IntersectionObserver is supported
-      if ('IntersectionObserver' in window) {
+      if ('IntersectionObserver' in window) {;
         const observer = new IntersectionObserver(
           (entries) => {
             entries.forEach((entry) => {
@@ -96,8 +95,8 @@ importFn().then(resolve);
  * Batch preload multiple components
  */
 export function batchPreload(
-  components: Array<() => Promise<any>>,
-  delayMs: number = 100
+  components: Array<() => Promise<any>>,,
+  delayMs: number = 100,
 ): void {
   components.forEach((importFn, index) => {
     setTimeout(() => {
@@ -123,8 +122,8 @@ this.state = { hasError: false
     return { hasError: true };
   }
 
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    console.error('Lazy loading error:', error, errorInfo);
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {,
+    console.error('Lazy loading error: ', error, errorInfo);',
   }
 
   render() {
@@ -137,3 +136,4 @@ this.state = { hasError: false
   }
 }
 
+;

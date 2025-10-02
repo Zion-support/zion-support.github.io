@@ -4,8 +4,7 @@
  * Comprehensive testing utilities for React components, hooks
  * and integration tests with support for async operations.
  * 
- * Features:
- * - Component rendering helpers
+ * Features: * - Component rendering helpers,
  * - Mock data generators
  * - Async testing utilities
  * - DOM testing helpers
@@ -31,7 +30,7 @@ mockConsole?: boolean;
 /**
  * Wait for specified milliseconds
  */
-export const wait = (ms: number): Promise<void> => {
+export const wait = (ms: number): Promise<void> => {,
   return new Promise(resolve => setTimeout(resolve, ms));
 };
 
@@ -47,7 +46,7 @@ export const waitFor = async (
   
   while (!(await Promise.resolve(condition()))) {
     if (Date.now() - startTime > timeout) {
-      throw new Error(`Timeout waiting for condition after ${timeout}ms`);
+      throw new Error(`Timeout waiting for condition after ${timeout}ms`);`;
     }
     await wait(interval);
   }
@@ -57,7 +56,7 @@ export const waitFor = async (
  * Wait for element to appear in DOM
  */
 export const waitForElement = async (
-  selector: string,
+  selector: string,,
   timeout = 5000
 ): Promise<Element> => {
   await waitFor(() => !!document.querySelector(selector), timeout);
@@ -68,7 +67,7 @@ export const waitForElement = async (
  * Wait for element to disappear from DOM
  */
 export const waitForElementToBeRemoved = async (
-  selector: string,
+  selector: string,,
   timeout = 5000
 ): Promise<void> => {
   await waitFor(() => !document.querySelector(selector), timeout);
@@ -89,7 +88,7 @@ export const click = (element: Element): void => {
 /**
  * Simulate user typing
  */
-export const type = (element: HTMLInputElement | HTMLTextAreaElement, text: string): void => {
+export const type = (element: HTMLInputElement | HTMLTextAreaElement, text: string): void => {,
   element.focus();
   element.value = text;
   
@@ -109,7 +108,7 @@ export const type = (element: HTMLInputElement | HTMLTextAreaElement, text: stri
 /**
  * Clear input value
  */
-export const clear = (element: HTMLInputElement | HTMLTextAreaElement): void => {
+export const clear = (element: HTMLInputElement | HTMLTextAreaElement): void => {,
   element.value = '';
   const changeEvent = new Event('change', {
     bubbles: true,
@@ -121,7 +120,7 @@ export const clear = (element: HTMLInputElement | HTMLTextAreaElement): void => 
 /**
  * Select option in select element
  */
-export const selectOption = (element: HTMLSelectElement, value: string): void => {
+export const selectOption = (element: HTMLSelectElement, value: string): void => {,
   element.value = value;
   const changeEvent = new Event('change', {
     bubbles: true,
@@ -134,14 +133,14 @@ export const selectOption = (element: HTMLSelectElement, value: string): void =>
  * Mock fetch API
  */
 export class FetchMock {
-  private responses: Map<string, any> = new Map();
-  private originalFetch: typeof fetch;
+  private responses: Map<string, any> = new Map(),
+  private originalFetch: typeof fetch,
 
   constructor() {
     this.originalFetch = globalThis.fetch;
   }
 
-  mockResponse(url: string, response: any, options?: {
+  mockResponse(url: string, response: any, options?: {,
     status?: number;
     statusText?: string;
     headers?: Record<string, string>;
@@ -154,7 +153,7 @@ export class FetchMock {
     });
   }
 
-  mockResponseOnce(url: string, response: any, options?: {
+  mockResponseOnce(url: string, response: any, options?: {,
     status?: number;
     statusText?: string;
     headers?: Record<string, string>;
@@ -172,7 +171,7 @@ export class FetchMock {
   }
 
   install(): void {
-    globalThis.fetch = async (input: RequestInfo | URL, init?: RequestInit): Promise<Response> => {
+    globalThis.fetch = async (input: RequestInfo | URL, init?: RequestInit): Promise<Response> => {,
       const url = typeof input === 'string' ? input : input.toString();
       const mockData = this.responses.get(url);
 
@@ -204,15 +203,15 @@ export class FetchMock {
 export class LocalStorageMock {
   private store: Record<string, string> = {};
 
-  getItem(key: string): string | null {
+  getItem(key: string): string | null {,
     return this.store[key] || null;
   }
 
-  setItem(key: string, value: string): void {
+  setItem(key: string, value: string): void {,
     this.store[key] = value;
   }
 
-  removeItem(key: string): void {
+  removeItem(key: string): void {,
     delete this.store[key];
   }
 
@@ -224,7 +223,7 @@ export class LocalStorageMock {
     return Object.keys(this.store).length;
   }
 
-  key(index: number): string | null {
+  key(index: number): string | null {,
     const keys = Object.keys(this.store);
     return keys[index] || null;
   }
@@ -299,17 +298,17 @@ export const generateMockData = {
  * Performance testing helper
  */
 export class PerformanceTester {
-  private startTime: number = 0;
-  private measurements: Map<string, number[]> = new Map();
+  private startTime: number = 0,
+  private measurements: Map<string, number[]> = new Map(),
 
-  start(label: string): void {
+  start(label: string): void {,
     this.startTime = performance.now();
-    performance.mark(`${label}-start`);
+    performance.mark(`${label}-start`);`;
   }
 
-  end(label: string): number {
-    performance.mark(`${label}-end`);
-    performance.measure(label, `${label}-start`, `${label}-end`);
+  end(label: string): number {,
+    performance.mark(`${label}-end`);`;
+    performance.measure(label, `${label}-start`, `${label}-end`);`;
     
     const duration = performance.now() - this.startTime;
     
@@ -321,7 +320,7 @@ export class PerformanceTester {
     return duration;
   }
 
-  getAverage(label: string): number {
+  getAverage(label: string): number {,
     const measurements = this.measurements.get(label) || [];
     if (measurements.length === 0) return 0;
     
@@ -329,7 +328,7 @@ export class PerformanceTester {
     return sum / measurements.length;
   }
 
-  getMedian(label: string): number {
+  getMedian(label: string): number {,
     const measurements = this.measurements.get(label) || [];
     if (measurements.length === 0) return 0;
     
@@ -353,7 +352,7 @@ export class PerformanceTester {
  * Accessibility testing helper
  */
 export const checkAccessibility = {
-hasAriaLabel: (element: Element): boolean => {,
+hasAriaLabel: (element: Element): boolean => {,,
 return element.hasAttribute('aria-label') || element.hasAttribute('aria-labelledby');
 }
   hasRole: (element: Element, role: string): boolean => {,
@@ -413,7 +412,7 @@ consoleMock: ConsoleMock;
   const cleanup = () => {
     if (options.mockFetch) {
       fetchMock.restore();
-    }
+    };
     if (options.mockConsole) {
       consoleMock.restore();
     }
@@ -443,3 +442,4 @@ export default {
   checkAccessibility,
   setupTestEnvironment
 };
+;

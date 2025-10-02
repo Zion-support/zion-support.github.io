@@ -3,28 +3,28 @@ import { Link } from "react-router-dom";
 const October2025TechBannerNew = () => {
   const newArticles = [
     {
-      title: "Next-Gen Autonomous Systems",
-      description: "The 2025 Enterprise Revolution",
-      slug: "ai-2025-oct-17-next-gen-autonomous-systems",
-      icon: Brain,
-      color: "from-purple-500 to-pink-500",
-      highlight: "NEW"
+      title: "Next-Gen Autonomous Systems",",
+      description: "The 2025 Enterprise Revolution",",
+      slug: "ai-2025-oct-17-next-gen-autonomous-systems",",
+      icon: Brain,,
+      color: "from-purple-500 to-pink-500",",
+      highlight: "NEW",
     },
     {
-      title: "Generative AI Code Generation",
-      description: "Transforming Software Development",
-      slug: "ai-2025-oct-17-generative-ai-code-generation",
-      icon: Code2,
-      color: "from-blue-500 to-cyan-500",
-      highlight: "HOT"
+      title: "Generative AI Code Generation",",
+      description: "Transforming Software Development",",
+      slug: "ai-2025-oct-17-generative-ai-code-generation",",
+      icon: Code2,,
+      color: "from-blue-500 to-cyan-500",",
+      highlight: "HOT",
     },
     {
-      title: "Real-Time Personalization Engines",
-      description: "Revolutionizing Customer Experience",
-      slug: "ai-2025-oct-17-real-time-personalization-engines",
-      icon: Zap,
-      color: "from-orange-500 to-red-500",
-      highlight: "TRENDING"
+      title: "Real-Time Personalization Engines",",
+      description: "Revolutionizing Customer Experience",",
+      slug: "ai-2025-oct-17-real-time-personalization-engines",",
+      icon: Zap,,
+      color: "from-orange-500 to-red-500",",
+      highlight: "TRENDING",
     }
   ];
 
@@ -33,42 +33,40 @@ const October2025TechBannerNew = () => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 p-8 md:p-12 shadow-2xl my-12"
+      className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 p-8 md: p-12 shadow-2xl my-12",
     >
       {/* Animated background effect */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-pink-500/10 to-blue-500/10 animate-pulse"></div>
-      
       {/* Decorative elements */}
       <div className="absolute top-0 right-0 w-64 h-64 bg-purple-500/20 rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-500/20 rounded-full blur-3xl"></div>
-
       <div className="relative z-10">
         {/* Header */}
         <div className="flex items-center justify-center gap-3 mb-6">
           <motion.div
             animate={{ rotate: 360 }}
-            transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+            transition={{ duration: 20, repeat: Infinity, ease: "linear" }}";
           >
-            <Sparkles className="w-8 h-8 text-yellow-400" />
+            <Sparkles className="w-8 h-8 text-yellow-400/>
           </motion.div>
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center">
+          <h2 className="text-3xl md: text-4xl font-bold text-white text-center">",
             Fresh AI Insights for October 2025
           </h2>
           <motion.div
             animate={{ rotate: -360 }}
-            transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+            transition={{ duration: 20, repeat: Infinity, ease: "linear" }}";
           >
-            <Sparkles className="w-8 h-8 text-yellow-400" />
+            <Sparkles className="w-8 h-8 text-yellow-400/>
           </motion.div>
         </div>
 
-        <p className="text-lg md:text-xl text-purple-200 text-center mb-10 max-w-3xl mx-auto">
+        <p className="text-lg md: text-xl text-purple-200 text-center mb-10 max-w-3xl mx-auto">",
           Explore the latest breakthrough technologies transforming industries worldwide. 
           Our expert team shares cutting-edge insights you can implement today.
         </p>
 
         {/* Articles Grid */}
-        <div className="grid md:grid-cols-3 gap-6 mb-8">
+        <div className="grid md: grid-cols-3 gap-6 mb-8">",
           {newArticles.map((article, index) => (
             <motion.div
               key={article.slug}
@@ -78,20 +76,20 @@ const October2025TechBannerNew = () => {
               whileHover={{ scale: 1.05 }}
               className="relative group"
             >
-              <Link to={`/blog/${article.slug}`}>
-                <div className="relative bg-white/10 backdrop-blur-lg rounded-xl p-6 h-full border border-white/20 hover:border-white/40 transition-all duration-300">
+              <Link to={`/blog/${article.slug}`}>`;
+                <div className="relative bg-white/10 backdrop-blur-lg rounded-xl p-6 h-full border border-white/20 hover: border-white/40 transition-all duration-300">",
                   {/* Highlight Badge */}
-                  <div className={`absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-bold text-white bg-gradient-to-r ${article.color}`}>
+                  <div className={`absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-bold text-white bg-gradient-to-r ${article.color}`}>`;
                     {article.highlight}
                   </div>
 
                   {/* Icon */}
-                  <div className={`w-14 h-14 rounded-lg bg-gradient-to-br ${article.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                    <article.icon className="w-7 h-7 text-white" />
+                  <div className={`w-14 h-14 rounded-lg bg-gradient-to-br ${article.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>`;
+                    <article.icon className="w-7 h-7 text-white/>
                   </div>
 
                   {/* Content */}
-                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">
+                  <h3 className="text-xl font-bold text-white mb-2 group-hover: text-purple-300 transition-colors">",
                     {article.title}
                   </h3>
                   <p className="text-purple-200 text-sm mb-4">
@@ -99,9 +97,9 @@ const October2025TechBannerNew = () => {
                   </p>
 
                   {/* Read More Link */}
-                  <div className="flex items-center text-purple-300 group-hover:text-purple-100 transition-colors">
+                  <div className="flex items-center text-purple-300 group-hover: text-purple-100 transition-colors">",
                     <span className="text-sm font-semibold">Read Article</span>
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-2 transition-transform" />
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover: translate-x-2 transition-transform/>",
                   </div>
                 </div>
               </Link>
@@ -111,17 +109,17 @@ const October2025TechBannerNew = () => {
 
         {/* CTA Section */}
         <div className="text-center">
-          <div className="inline-flex flex-col sm:flex-row gap-4 items-center justify-center">
+          <div className="inline-flex flex-col sm: flex-row gap-4 items-center justify-center">",
             <Link
               to="/blog"
-              className="group px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-2"
+              className="group px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover: from-purple-700 hover:to-pink-700 text-white font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-2",
             >
               <span>Explore All Articles</span>
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-5 h-5 group-hover: translate-x-1 transition-transform/>",
             </Link>
             <Link
               to="/contact"
-              className="px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-lg text-white font-bold rounded-xl border-2 border-white/30 hover:border-white/50 transition-all duration-300"
+              className="px-8 py-4 bg-white/10 hover: bg-white/20 backdrop-blur-lg text-white font-bold rounded-xl border-2 border-white/30 hover:border-white/50 transition-all duration-300",
             >
               Get Expert Consultation
             </Link>
@@ -159,3 +157,4 @@ const October2025TechBannerNew = () => {
 };
 
 export default October2025TechBannerNew;
+;

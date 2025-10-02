@@ -2,76 +2,76 @@
 const September30MegaBanner2025 = () => {
   const breakthroughArticles = [
     {
-      title: "Real-Time AI Decision Engines",
-      description: "10M decisions/sec with <1ms latency - Stream processing meets neural inference",
-      slug: "real-time-ai-decision-engines-2025",
-      category: "Real-Time AI",
-      icon: "⚡",
-      gradient: "from-yellow-500 to-orange-500",
-      metric: "10,000x Faster"
+      title: "Real-Time AI Decision Engines",",
+      description: "10M decisions/sec with <1ms latency - Stream processing meets neural inference",",
+      slug: "real-time-ai-decision-engines-2025",",
+      category: "Real-Time AI",",
+      icon: "⚡",",
+      gradient: "from-yellow-500 to-orange-500",",
+      metric: "10,000x Faster",
     },
     {
-      title: "Neural Code Synthesis",
-      description: "AI generates production apps from plain English with 95% accuracy & built-in security",
-      slug: "neural-code-synthesis-2025",
-      category: "AI Development",
-      icon: "💻",
-      gradient: "from-blue-500 to-cyan-500",
-      metric: "90% Dev Time Cut"
+      title: "Neural Code Synthesis",",
+      description: "AI generates production apps from plain English with 95% accuracy & built-in security",",
+      slug: "neural-code-synthesis-2025",",
+      category: "AI Development",",
+      icon: "💻",",
+      gradient: "from-blue-500 to-cyan-500",",
+      metric: "90% Dev Time Cut",
     },
     {
-      title: "Multimodal AI Fusion",
-      description: "Unified understanding of text, images, audio & video - 98% cross-modal accuracy",
-      slug: "multimodal-ai-fusion-2025",
-      category: "Multimodal AI",
-      icon: "🎭",
-      gradient: "from-purple-500 to-pink-500",
-      metric: "98% Accuracy"
+      title: "Multimodal AI Fusion",",
+      description: "Unified understanding of text, images, audio & video - 98% cross-modal accuracy",",
+      slug: "multimodal-ai-fusion-2025",",
+      category: "Multimodal AI",",
+      icon: "🎭",",
+      gradient: "from-purple-500 to-pink-500",",
+      metric: "98% Accuracy",
     },
     {
-      title: "AI Supply Chain Revolution",
-      description: "99.5% forecast accuracy + 85% inventory reduction through neural optimization",
-      slug: "ai-powered-supply-chain-2025",
-      category: "Supply Chain AI",
-      icon: "📦",
-      gradient: "from-green-500 to-teal-500",
-      metric: "85% Less Inventory"
+      title: "AI Supply Chain Revolution",",
+      description: "99.5% forecast accuracy + 85% inventory reduction through neural optimization",",
+      slug: "ai-powered-supply-chain-2025",",
+      category: "Supply Chain AI",",
+      icon: "📦",",
+      gradient: "from-green-500 to-teal-500",",
+      metric: "85% Less Inventory",
     },
     {
-      title: "Cognitive AI Assistants",
-      description: "Human-level understanding & reasoning - 92% satisfaction with emotional intelligence",
-      slug: "cognitive-ai-assistants-2025",
-      category: "Conversational AI",
-      icon: "🤖",
-      gradient: "from-indigo-500 to-purple-500",
-      metric: "92% Satisfaction"
+      title: "Cognitive AI Assistants",",
+      description: "Human-level understanding & reasoning - 92% satisfaction with emotional intelligence",",
+      slug: "cognitive-ai-assistants-2025",",
+      category: "Conversational AI",",
+      icon: "🤖",",
+      gradient: "from-indigo-500 to-purple-500",",
+      metric: "92% Satisfaction",
     },
     {
-      title: "AI Cybersecurity Mesh",
-      description: "Zero-trust distributed defense - 99.99% threat detection with sub-second response",
-      slug: "ai-cybersecurity-mesh-2025",
-      category: "Cybersecurity AI",
-      icon: "🛡️",
-      gradient: "from-red-500 to-orange-500",
-      metric: "99.99% Detection"
+      title: "AI Cybersecurity Mesh",",
+      description: "Zero-trust distributed defense - 99.99% threat detection with sub-second response",",
+      slug: "ai-cybersecurity-mesh-2025",",
+      category: "Cybersecurity AI",",
+      icon: "🛡️",",
+      gradient: "from-red-500 to-orange-500",",
+      metric: "99.99% Detection",
     },
     {
-      title: "Federated Learning Enterprise",
-      description: "Train powerful AI with zero data sharing - 100% GDPR/HIPAA compliance",
-      slug: "federated-learning-enterprise-2025",
-      category: "Privacy AI",
-      icon: "🔒",
-      gradient: "from-slate-600 to-slate-800",
-      metric: "100% Privacy"
+      title: "Federated Learning Enterprise",",
+      description: "Train powerful AI with zero data sharing - 100% GDPR/HIPAA compliance",",
+      slug: "federated-learning-enterprise-2025",",
+      category: "Privacy AI",",
+      icon: "🔒",",
+      gradient: "from-slate-600 to-slate-800",",
+      metric: "100% Privacy",
     },
     {
-      title: "AI Financial Modeling",
-      description: "95% market prediction accuracy - Real-time analysis of millions of signals",
-      slug: "ai-financial-modeling-2025",
-      category: "FinTech AI",
-      icon: "💰",
-      gradient: "from-emerald-500 to-green-600",
-      metric: "95% Accuracy"
+      title: "AI Financial Modeling",",
+      description: "95% market prediction accuracy - Real-time analysis of millions of signals",",
+      slug: "ai-financial-modeling-2025",",
+      category: "FinTech AI",",
+      icon: "💰",",
+      gradient: "from-emerald-500 to-green-600",",
+      metric: "95% Accuracy",
     }
   ];
 
@@ -89,7 +89,7 @@ const September30MegaBanner2025 = () => {
         <div className="absolute top-1/4 left-1/3 w-[600px] h-[600px] bg-pink-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "2s" }}></div>
       </div>
 
-      <div className="relative z-10 p-10 md:p-16">
+      <div className="relative z-10 p-10 md: p-16">",
         {/* Header Section */}
         <div className="text-center mb-12">
           <motion.div
@@ -101,17 +101,17 @@ const September30MegaBanner2025 = () => {
             <div className="flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 rounded-full shadow-2xl animate-pulse">
               <Sparkles className="w-6 h-6 text-white animate-spin" style={{ animationDuration: "3s" }} />
               <span className="text-white font-black text-base tracking-wide">SEPTEMBER 30, 2025 — 8 REVOLUTIONARY BREAKTHROUGHS</span>
-              <Rocket className="w-6 h-6 text-white animate-bounce" />
+              <Rocket className="w-6 h-6 text-white animate-bounce/>
             </div>
           </motion.div>
 
-          <h2 className="text-5xl md:text-7xl font-black text-white mb-6 leading-tight">
+          <h2 className="text-5xl md: text-7xl font-black text-white mb-6 leading-tight">",
             🚀 <span className="bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 bg-clip-text text-transparent animate-gradient bg-300%">
               The AI Revolution Accelerates
             </span> 🚀
           </h2>
           
-          <p className="text-2xl md:text-3xl text-cyan-100 mb-4 max-w-5xl mx-auto leading-relaxed font-semibold">
+          <p className="text-2xl md: text-3xl text-cyan-100 mb-4 max-w-5xl mx-auto leading-relaxed font-semibold">",
             <strong className="text-white">Real-Time Decision Engines, Neural Code Synthesis, Multimodal Fusion, AI Supply Chains, Cognitive Assistants, Security Mesh, Federated Learning & Financial AI</strong>
           </p>
           
@@ -121,7 +121,7 @@ const September30MegaBanner2025 = () => {
         </div>
 
         {/* Article Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-6 mb-12">",
           {breakthroughArticles.map((article, index) => (
             <motion.div
               key={article.slug}
@@ -131,10 +131,10 @@ const September30MegaBanner2025 = () => {
               whileHover={{ scale: 1.05, translateY: -8 }}
               className="group relative"
             >
-              <Link to={`/blog/${article.slug}`}>
-                <div className={`relative bg-gradient-to-br ${article.gradient} rounded-2xl p-6 h-full border-2 border-white/30 hover:border-white/60 transition-all duration-300 shadow-xl hover:shadow-3xl`}>
+              <Link to={`/blog/${article.slug}`}>`;
+                <div className={`relative bg-gradient-to-br ${article.gradient} rounded-2xl p-6 h-full border-2 border-white/30 hover:border-white/60 transition-all duration-300 shadow-xl hover:shadow-3xl`}>`;
                   {/* Icon Badge */}
-                  <div className="absolute -top-4 -right-4 w-14 h-14 bg-white rounded-full flex items-center justify-center text-3xl shadow-2xl group-hover:rotate-12 group-hover:scale-110 transition-all duration-300">
+                  <div className="absolute -top-4 -right-4 w-14 h-14 bg-white rounded-full flex items-center justify-center text-3xl shadow-2xl group-hover: rotate-12 group-hover:scale-110 transition-all duration-300">",
                     {article.icon}
                   </div>
                   
@@ -146,7 +146,7 @@ const September30MegaBanner2025 = () => {
                   </div>
                   
                   {/* Title */}
-                  <h3 className="text-xl font-black text-white mb-3 leading-tight group-hover:text-yellow-100 transition-colors">
+                  <h3 className="text-xl font-black text-white mb-3 leading-tight group-hover: text-yellow-100 transition-colors">",
                     {article.title}
                   </h3>
                   
@@ -163,9 +163,9 @@ const September30MegaBanner2025 = () => {
                   </div>
                   
                   {/* Read More Arrow */}
-                  <div className="flex items-center gap-2 text-white font-bold text-sm group-hover:gap-4 transition-all">
+                  <div className="flex items-center gap-2 text-white font-bold text-sm group-hover: gap-4 transition-all">",
                     <span>Explore Now</span>
-                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight className="w-5 h-5 group-hover: translate-x-1 transition-transform/>",
                   </div>
                 </div>
               </Link>
@@ -175,31 +175,31 @@ const September30MegaBanner2025 = () => {
 
         {/* Stats Bar */}
         <div className="bg-white/15 backdrop-blur-xl rounded-2xl p-8 mb-10 border-2 border-white/30 shadow-2xl">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div className="grid grid-cols-2 md: grid-cols-4 gap-8 text-center">",
             <div>
-              <div className="text-4xl md:text-5xl font-black text-cyan-300 mb-2 animate-pulse">8</div>
+              <div className="text-4xl md: text-5xl font-black text-cyan-300 mb-2 animate-pulse">8</div>",
               <div className="text-sm text-blue-200 font-semibold uppercase tracking-wide">NEW Breakthroughs</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-black text-green-300 mb-2 animate-pulse">10,000x</div>
+              <div className="text-4xl md: text-5xl font-black text-green-300 mb-2 animate-pulse">10,000x</div>",
               <div className="text-sm text-blue-200 font-semibold uppercase tracking-wide">Performance Gains</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-black text-purple-300 mb-2 animate-pulse">95%+</div>
+              <div className="text-4xl md: text-5xl font-black text-purple-300 mb-2 animate-pulse">95%+</div>",
               <div className="text-sm text-blue-200 font-semibold uppercase tracking-wide">Accuracy Achieved</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-black text-pink-300 mb-2 animate-pulse">4-10</div>
+              <div className="text-4xl md: text-5xl font-black text-pink-300 mb-2 animate-pulse">4-10</div>",
               <div className="text-sm text-blue-200 font-semibold uppercase tracking-wide">Weeks to Deploy</div>
             </div>
           </div>
         </div>
 
         {/* Key Benefits Grid */}
-        <div className="grid md:grid-cols-3 gap-6 mb-10">
-          <div className="flex items-start gap-4 bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all">
+        <div className="grid md: grid-cols-3 gap-6 mb-10">",
+          <div className="flex items-start gap-4 bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover: bg-white/15 transition-all">",
             <div className="w-12 h-12 rounded-full bg-cyan-500/30 flex items-center justify-center flex-shrink-0">
-              <Zap className="w-6 h-6 text-cyan-200" />
+              <Zap className="w-6 h-6 text-cyan-200/>
             </div>
             <div>
               <h4 className="font-black text-white mb-2 text-lg">Production-Ready Today</h4>
@@ -207,9 +207,9 @@ const September30MegaBanner2025 = () => {
             </div>
           </div>
           
-          <div className="flex items-start gap-4 bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all">
+          <div className="flex items-start gap-4 bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover: bg-white/15 transition-all">",
             <div className="w-12 h-12 rounded-full bg-purple-500/30 flex items-center justify-center flex-shrink-0">
-              <Brain className="w-6 h-6 text-purple-200" />
+              <Brain className="w-6 h-6 text-purple-200/>
             </div>
             <div>
               <h4 className="font-black text-white mb-2 text-lg">Breakthrough Performance</h4>
@@ -217,9 +217,9 @@ const September30MegaBanner2025 = () => {
             </div>
           </div>
           
-          <div className="flex items-start gap-4 bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all">
+          <div className="flex items-start gap-4 bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover: bg-white/15 transition-all">",
             <div className="w-12 h-12 rounded-full bg-green-500/30 flex items-center justify-center flex-shrink-0">
-              <TrendingUp className="w-6 h-6 text-green-200" />
+              <TrendingUp className="w-6 h-6 text-green-200/>
             </div>
             <div>
               <h4 className="font-black text-white mb-2 text-lg">Measurable ROI</h4>
@@ -229,28 +229,28 @@ const September30MegaBanner2025 = () => {
         </div>
 
         {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-5 justify-center">
+        <div className="flex flex-col sm: flex-row gap-5 justify-center">",
           <Link
             to="/blog"
-            className="group bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 hover:from-cyan-400 hover:via-blue-400 hover:to-purple-400 text-white px-12 py-5 rounded-full font-black text-xl shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 flex items-center justify-center gap-4"
+            className="group bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 hover: from-cyan-400 hover:via-blue-400 hover:to-purple-400 text-white px-12 py-5 rounded-full font-black text-xl shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 flex items-center justify-center gap-4",
           >
-            <Rocket className="w-7 h-7 group-hover:rotate-12 transition-transform" />
+            <Rocket className="w-7 h-7 group-hover: rotate-12 transition-transform/>",
             <span>Explore All 8 Breakthroughs</span>
-            <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
+            <ArrowRight className="w-6 h-6 group-hover: translate-x-2 transition-transform/>",
           </Link>
           
           <Link
             to="/contact"
-            className="group border-3 border-white hover:bg-white text-white hover:text-indigo-900 px-12 py-5 rounded-full font-black text-xl transition-all duration-300 hover:scale-110 flex items-center justify-center gap-4 shadow-xl hover:shadow-2xl"
+            className="group border-3 border-white hover: bg-white text-white hover:text-indigo-900 px-12 py-5 rounded-full font-black text-xl transition-all duration-300 hover:scale-110 flex items-center justify-center gap-4 shadow-xl hover:shadow-2xl",
           >
-            <Lightbulb className="w-7 h-7 group-hover:animate-pulse" />
+            <Lightbulb className="w-7 h-7 group-hover: animate-pulse/>",
             <span>Schedule AI Strategy Call</span>
           </Link>
         </div>
 
         {/* Featured Topics */}
         <div className="mt-10 pt-8 border-t-2 border-white/30">
-          <p className="text-center text-cyan-200 text-sm mb-4 font-bold uppercase tracking-wider">BREAKTHROUGH TOPICS:</p>
+          <p className="text-center text-cyan-200 text-sm mb-4 font-bold uppercase tracking-wider">BREAKTHROUGH TOPICS: </p>",
           <div className="flex flex-wrap gap-3 justify-center">
             {[
               "Real-Time AI",
@@ -266,7 +266,7 @@ const September30MegaBanner2025 = () => {
               "10,000x Performance",
               "Enterprise Scale"
             ].map((topic) => (
-              <span key={topic} className="px-5 py-2.5 bg-white/15 backdrop-blur-md rounded-full text-sm font-bold text-white border-2 border-white/30 hover:bg-white/25 hover:scale-105 transition-all cursor-pointer shadow-lg">
+              <span key={topic} className="px-5 py-2.5 bg-white/15 backdrop-blur-md rounded-full text-sm font-bold text-white border-2 border-white/30 hover: bg-white/25 hover:scale-105 transition-all cursor-pointer shadow-lg">",
                 {topic}
               </span>
             ))}

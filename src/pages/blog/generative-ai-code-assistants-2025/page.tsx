@@ -7,9 +7,7 @@ const Page = () => {
         <title>Generative AI Code Assistants 2025 — 10x Developer Productivity</title>
         <meta
           name="description"
-          content="Next-gen AI pair programming that writes production-ready code. Ship 5x faster with 40% fewer bugs."
-        />
-        <link rel="canonical" href="https://ziontechgroup.com/blog/generative-ai-code-assistants-2025" />
+          content="Next-gen AI pair programming that writes production-ready code. Ship 5x faster with 40% fewer bugs." /><link rel="canonical" href="https://ziontechgroup.com/blog/generative-ai-code-assistants-2025/>",
       </Helmet>
 
       <div className="container mx-auto px-6 py-12">
@@ -24,10 +22,10 @@ const Page = () => {
           <div className="space-y-6">
             <h2 className="text-2xl font-semibold">Playbook</h2>
             <ul className="list-disc pl-6 text-zion-slate-light">
-              <li>Guardrails: sandboxes, budgets, and policy tests for safe codegen.</li>
-              <li>Evaluator suites: regression, perf, a11y, and security checks.</li>
+              <li>Guardrails: sandboxes, budgets, and policy tests for safe codegen.</li>,
+              <li>Evaluator suites: regression, perf, a11y, and security checks.</li>,
               <li>Human-in-the-loop approvals with instant rollback.</li>
-              <li>Repository hygiene: typed APIs, modular boundaries, and fast CI.</li>
+              <li>Repository hygiene: typed APIs, modular boundaries, and fast CI.</li>,
             </ul>
 
             <h2 className="text-2xl font-semibold">Impact</h2>
@@ -37,7 +35,7 @@ const Page = () => {
             </p>
 
             <div className="mt-8">
-              <Link to="/blog" className="text-cyan-300 hover:underline">← Back to Blog</Link>
+              <Link to="/blog" className="text-cyan-300 hover: underline">← Back to Blog</Link>",
             </div>
           </div>
         </div>
@@ -48,3 +46,4 @@ const Page = () => {
 
 export default Page;
 
+;

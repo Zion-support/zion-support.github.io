@@ -5,35 +5,33 @@ import {
 import {
 
 } from 'lucide-react';
-
 interface SecurityCheck {
-id: string;
-name: string;
-description: string;
-status: 'pass' | 'fail' | 'warning' | 'info';
-severity: 'low' | 'medium' | 'high' | 'critical';
-category: 'headers' | 'content' | 'network' | 'authentication' | 'data';
+id: string,
+name: string,
+description: string,
+status: 'pass' | 'fail' | 'warning' | 'info';',
+severity: 'low' | 'medium' | 'high' | 'critical';',
+category: 'headers' | 'content' | 'network' | 'authentication' | 'data';',
 recommendation?: string;
 details?: string;
 }
 
 interface SecurityReport {
-overallScore: number;
-totalChecks: number;
-passedChecks: number;
-failedChecks: number;
-warnings: number;
-checks: SecurityCheck[];
+overallScore: number,
+totalChecks: number,
+passedChecks: number,
+failedChecks: number,
+warnings: number,
+checks: SecurityCheck[],
 lastUpdated: number;
 }
 
-const SecurityAuditPanel: React.FC = () => {
+const SecurityAuditPanel: React.FC = () => {,
   const [report, setReport] = useState<SecurityReport | null>(null);
   const [isRunning, setIsRunning] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedSeverity, setSelectedSeverity] = useState<string>('all');
-
-  const securityChecks: SecurityCheck[] = [
+  const securityChecks: SecurityCheck[] = [,
     {
       id: 'https-check',
       name: 'HTTPS Enforcement',
@@ -148,11 +146,11 @@ const SecurityAuditPanel: React.FC = () => {
     const checks = securityChecks.map(check => {
       // Simulate some checks failing based on current state
       let status = check.status;
-      if (check.id === 'csp-header' && Math.random() > 0.5) {
+      if (check.id === 'csp-header' && Math.random() > 0.5) {;
         status = 'warning';
-      } else if (check.id === 'session-security' && Math.random() > 0.3) {
+      } else if (check.id === 'session-security' && Math.random() > 0.3) {;
         status = 'warning';
-      } else if (check.id === 'error-handling' && Math.random() > 0.4) {
+      } else if (check.id === 'error-handling' && Math.random() > 0.4) {;
         status = 'warning';
       }
       
@@ -166,7 +164,7 @@ const SecurityAuditPanel: React.FC = () => {
 
     setReport({
       overallScore,
-      totalChecks: checks.length,
+      totalChecks: checks.length,,
       passedChecks,
       failedChecks,
       warnings,
@@ -177,7 +175,7 @@ const SecurityAuditPanel: React.FC = () => {
     setIsRunning(false);
   };
 
-  const getStatusIcon = (status: string) => {
+  const getStatusIcon = (status: string) => {,
 switch (status) {
 case 'pass':
 return <CheckCircle className="w-5 h-5 text-green-600" />;
@@ -190,7 +188,7 @@ return <Eye className="w-5 h-5 text-blue-600" />;
 }
   };
 
-  const getSeverityColor = (severity: string) => {
+  const getSeverityColor = (severity: string) => {,
 switch (severity) {
 case 'critical':
 return 'bg-red-100 text-red-800 border-red-200';
@@ -200,10 +198,10 @@ case 'medium':
 return 'bg-yellow-100 text-yellow-800 border-yellow-200';
 default:
 return 'bg-blue-100 text-blue-800 border-blue-200';
-}
+};
   };
 
-  const getCategoryIcon = (category: string) => {
+  const getCategoryIcon = (category: string) => {,
 switch (category) {
 case 'headers':
 return <Globe className="w-4 h-4" />;
@@ -222,7 +220,6 @@ return <Shield className="w-4 h-4" />;
 
   const categories = ['all', ...Array.from(new Set(securityChecks.map(c => c.category)))];
   const severities = ['all', 'critical', 'high', 'medium', 'low'];
-
   useEffect(() => {
     // Run initial audit
     runSecurityAudit();
@@ -233,7 +230,7 @@ return <Shield className="w-4 h-4" />;
       <div className="flex justify-between items-center mb-6">
         <div>
           <h2 className="text-2xl font-bold text-gray-900 flex items-center gap-2">
-            <Shield className="w-6 h-6" />
+            <Shield className="w-6 h-6/>
             Security Audit Panel
           </h2>
           <p className="text-gray-600 mt-1">Comprehensive security assessment for your website</p>
@@ -241,11 +238,10 @@ return <Shield className="w-4 h-4" />;
         <button
           onClick={runSecurityAudit}
           disabled={isRunning}
-          className={`px-6 py-2 rounded-lg font-medium transition-colors flex items-center gap-2 ${
+          className={`px-6 py-2 rounded-lg font-medium transition-colors flex items-center gap-2 ${`;
             isRunning
               ? 'bg-gray-400 text-white cursor-not-allowed'
-              : 'bg-blue-600 text-white hover:bg-blue-700'
-          }`}
+              : 'bg-blue-600 text-white hover: bg-blue-700}`}`;
         >
           {
 isRunning ? (
@@ -255,7 +251,7 @@ Running Audit...
 </>
 ) : (,
 <>
-<Shield className="w-4 h-4" />
+<Shield className="w-4 h-4/>
 Run Security Audit
 </>
 )
@@ -266,14 +262,14 @@ Run Security Audit
       {report && (
         <>
           {/* Security Score Overview */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
+          <div className="grid grid-cols-1 md: grid-cols-4 gap-4 mb-6">",
             <div className="bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg p-4 text-white">
               <div className="flex justify-between items-center">
                 <div>
                   <p className="text-blue-100 text-sm">Security Score</p>
                   <p className="text-3xl font-bold">{report.overallScore}%</p>
                 </div>
-                <Shield className="w-8 h-8 text-blue-200" />
+                <Shield className="w-8 h-8 text-blue-200/>
               </div>
             </div>
             
@@ -283,7 +279,7 @@ Run Security Audit
                   <p className="text-green-600 text-sm">Passed</p>
                   <p className="text-2xl font-bold text-green-700">{report.passedChecks}</p>
                 </div>
-                <CheckCircle className="w-6 h-6 text-green-500" />
+                <CheckCircle className="w-6 h-6 text-green-500/>
               </div>
             </div>
             
@@ -293,7 +289,7 @@ Run Security Audit
                   <p className="text-yellow-600 text-sm">Warnings</p>
                   <p className="text-2xl font-bold text-yellow-700">{report.warnings}</p>
                 </div>
-                <AlertTriangle className="w-6 h-6 text-yellow-500" />
+                <AlertTriangle className="w-6 h-6 text-yellow-500/>
               </div>
             </div>
             
@@ -303,7 +299,7 @@ Run Security Audit
                   <p className="text-red-600 text-sm">Failed</p>
                   <p className="text-2xl font-bold text-red-700">{report.failedChecks}</p>
                 </div>
-                <XCircle className="w-6 h-6 text-red-500" />
+                <XCircle className="w-6 h-6 text-red-500/>
               </div>
             </div>
           </div>
@@ -351,7 +347,7 @@ Run Security Audit
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
-                  className="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow"
+                  className="border border-gray-200 rounded-lg p-4 hover: shadow-md transition-shadow",
                 >
                   <div className="flex items-start justify-between">
                     <div className="flex items-start gap-3 flex-1">
@@ -359,7 +355,7 @@ Run Security Audit
                       <div className="flex-1">
                         <div className="flex items-center gap-2 mb-1">
                           <h4 className="font-semibold text-gray-900">{check.name}</h4>
-                          <span className={`px-2 py-1 rounded-full text-xs font-medium border ${getSeverityColor(check.severity)}`}>
+                          <span className={`px-2 py-1 rounded-full text-xs font-medium border ${getSeverityColor(check.severity)}`}>`;
                             {check.severity}
                           </span>
                           <span className="flex items-center gap-1 text-gray-500 text-sm">

@@ -1,19 +1,19 @@
 export interface NewService {
-id: string;
-name: string;
-title: string;
-description: string;
-benefits: string[];
-features: string[];
-category: string;
-pricing: string;
-link: string;
-icon: string;
-featured: boolean;
+id: string,
+name: string,
+title: string,
+description: string,
+benefits: string[],
+features: string[],
+category: string,
+pricing: string,
+link: string,
+icon: string,
+featured: boolean,
 launchDate: string;
 }
 
-export const newServices2026: NewService[] = [
+export const newServices2026: NewService[] = [,
   {
     id: "ai-predictive-maintenance",
     name: "AI Predictive Maintenance Platform",

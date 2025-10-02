@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter, as, Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
-
 // Pages
 import HomePage from './pages/HomePage';
 import ServicesPage from './pages/ServicesPage';
@@ -9,7 +8,6 @@ import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import BlogPage from './pages/BlogPage';
 import CaseStudiesPage from './pages/CaseStudiesPage';
-
 // Layout Components
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -21,8 +19,7 @@ import PerformanceMonitor from './components/PerformanceMonitor';
 import EnhancedSEOHead from './components/EnhancedSEOHead';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
-
-const AppRouter: React.FC = () => {
+const AppRouter: React.FC = () => {,
   return (
     <HelmetProvider>
       <Router>

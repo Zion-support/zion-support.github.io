@@ -4,8 +4,8 @@
  */
 
 export interface ImageConfig {
-src: string;
-alt: string;
+src: string,
+alt: string,
 width?: number;
 height?: number;
 loading?: 'lazy' | 'eager';
@@ -24,11 +24,11 @@ breakpoints?: number[];
  * Generate srcSet for responsive images
  */
 export const generateSrcSet = (
-  baseSrc: string,
-  breakpoints: number[] = [640, 750, 828, 1080, 1200, 1920, 2048, 3840]
+  baseSrc: string,,
+  breakpoints: number[] = [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
 ): string => {
   return breakpoints
-    .map(width => `${getOptimizedUrl(baseSrc, { width })} ${width}w`)
+    .map(width => `${getOptimizedUrl(baseSrc, { width })} ${width}w`)`;
     .join(', ');
 };
 
@@ -72,16 +72,15 @@ format?: 'webp' | 'avif' | 'jpg' | 'png';
   if (options.height) params.append('h', options.height.toString());
   if (options.quality) params.append('q', options.quality.toString());
   if (options.format) params.append('fm', options.format);
-  
   const queryString = params.toString();
-  return queryString ? `${src}?${queryString}` : src;
+  return queryString ? `${src}?${queryString}` : src;`;
 };
 
 /**
  * Lazy load images with Intersection Observer
  */
-export const lazyLoadImage = (img: HTMLImageElement): void => {
-  if ('IntersectionObserver' in window) {
+export const lazyLoadImage = (img: HTMLImageElement): void => {,
+  if ('IntersectionObserver' in window) {;
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach(entry => {
@@ -102,7 +101,7 @@ export const lazyLoadImage = (img: HTMLImageElement): void => {
         });
       },
       {
-        rootMargin: '50px', // Start loading 50px before entering viewport
+        rootMargin: '50px', // Start loading 50px before entering viewport',
       }
     );
     
@@ -121,13 +120,13 @@ export const lazyLoadImage = (img: HTMLImageElement): void => {
 /**
  * Preload critical images
  */
-export const preloadImage = (src: string, type: 'image' | 'fetch' = 'image'): void => {
+export const preloadImage = (src: string, type: 'image' | 'fetch' = 'image'): void => {',
   const link = document.createElement('link');
   link.rel = 'preload';
   link.as = type;
   link.href = src;
   
-  if (type === 'image') {
+  if (type === 'image') {;
     // Add responsive image hints
     const img = new Image();
     img.src = src;
@@ -139,7 +138,7 @@ export const preloadImage = (src: string, type: 'image' | 'fetch' = 'image'): vo
 /**
  * Preload multiple images
  */
-export const preloadImages = (srcs: string[]): Promise<void[]> => {
+export const preloadImages = (srcs: string[]): Promise<void[]> => {,
   return Promise.all(
     srcs.map(src => {
       return new Promise<void>((resolve, reject) => {
@@ -172,9 +171,8 @@ export const getImageDimensions = (src: string): Promise<{ width: number; height
 /**
  * Check if image format is supported
  */
-export const isFormatSupported = async (format: 'webp' | 'avif'): Promise<boolean> => {
+export const isFormatSupported = async (format: 'webp' | 'avif'): Promise<boolean> => {',
   if (typeof window === 'undefined') return false;
-  
   const testImages = {
     webp: 'data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3AA/vuUAAA=',
     avif: 'data:image/avif;base64,AAAAIGZ0eXBhdmlmAAAAAGF2aWZtaWYxbWlhZk1BMUIAAADybWV0YQAAAAAAAAAoaGRscgAAAAAAAAAAcGljdAAAAAAAAAAAAAAAAGxpYmF2aWYAAAAADnBpdG0AAAAAAAEAAAAeaWxvYwAAAABEAAABAAEAAAABAAABGgAAAB0AAAAoaWluZgAAAAAAAQAAABppbmZlAgAAAAABAABhdjAxQ29sb3IAAAAAamlwcnAAAABLaXBjbwAAABRpc3BlAAAAAAAAAAIAAAACAAAAEHBpeGkAAAAAAwgICAAAAAxhdjFDgQ0MAAAAABNjb2xybmNseAACAAIAAYAAAAAXaXBtYQAAAAAAAAABAAEEAQKDBAAAACVtZGF0EgAKCBgANogQEAwgMg8f8D///8WfhwB8+ErK42A='
@@ -191,7 +189,7 @@ export const isFormatSupported = async (format: 'webp' | 'avif'): Promise<boolea
 /**
  * Get best supported format for the browser
  */
-export const getBestFormat = async (): Promise<'avif' | 'webp' | 'jpg'> => {
+export const getBestFormat = async (): Promise<'avif' | 'webp' | 'jpg'> => {;
   if (await isFormatSupported('avif')) return 'avif';
   if (await isFormatSupported('webp')) return 'webp';
   return 'jpg';
@@ -200,15 +198,14 @@ export const getBestFormat = async (): Promise<'avif' | 'webp' | 'jpg'> => {
 /**
  * Create picture element with multiple formats
  */
-export const createPictureElement = (config: ResponsiveImageConfig): HTMLPictureElement => {
+export const createPictureElement = (config: ResponsiveImageConfig): HTMLPictureElement => {,
   const picture = document.createElement('picture');
-  
   // Add source elements for different formats
   const formats = config.formats || ['avif', 'webp'];
   formats.forEach(format => {
     const source = document.createElement('source');
-    source.type = `image/${format}`;
-    source.srcset = generateSrcSet(config.src.replace(/\.[^.]+$/, `.${format}`));
+    source.type = `image/${format}`;`;
+    source.srcset = generateSrcSet(config.src.replace(/\.[^.]+$/, `.${format}`));`;
     if (config.sizes) source.sizes = config.sizes;
     picture.appendChild(source);
   });
@@ -259,7 +256,6 @@ export const loadProgressiveImage = (
     requestAnimationFrame(() => {
       fullImage.style.opacity = '1';
       placeholder.style.opacity = '0';
-      
       // Remove placeholder after transition
       setTimeout(() => {
         if (placeholder.parentNode) {
@@ -275,7 +271,7 @@ export const loadProgressiveImage = (
  * Calculate optimal image quality based on network speed
  */
 export const getOptimalQuality = (): number => {
-  if (typeof navigator === 'undefined' || !('connection' in navigator)) {
+  if (typeof navigator === 'undefined' || !('connection' in navigator)) {;
     return 80; // Default quality
   }
   
@@ -300,10 +296,9 @@ return 80;
  * Estimate data usage for image
  */
 export const estimateDataUsage = (
-  width: number,
-  height: number,
-  format: 'jpg' | 'png' | 'webp' | 'avif' = 'jpg'
-): number => {
+  width: number,,
+  height: number,,
+  format: 'jpg' | 'png' | 'webp' | 'avif' = 'jpg): number => {
   const pixels = width * height;
   const bytesPerPixel = {
     jpg: 0.5,
@@ -323,7 +318,7 @@ export class ImageLoader {
   private loading = 0;
   private maxConcurrent = 3;
   
-  add(src: string, priority: number = 0): Promise<void> {
+  add(src: string, priority: number = 0): Promise<void> {,
     return new Promise((resolve) => {
       this.queue.push({
         src,
@@ -379,3 +374,4 @@ export default {
   estimateDataUsage,
   imageLoader
 };
+;

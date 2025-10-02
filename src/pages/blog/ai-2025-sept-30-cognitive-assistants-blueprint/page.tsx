@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react";";
 
 export default function CognitiveAssistantsBlueprint2025(): React.JSX.Element {
   return (
@@ -7,16 +7,14 @@ export default function CognitiveAssistantsBlueprint2025(): React.JSX.Element {
         <title>Cognitive Assistants Blueprint — 92% CSAT, Governed Velocity</title>
         <meta
           name="description"
-          content="Production patterns for AI assistants with policy tests, eval scorecards, and KPI‑linked rollback for safe velocity."
-        />
-        <link
+          content="Production patterns for AI assistants with policy tests, eval scorecards, and KPI‑linked rollback for safe velocity." /><link
           rel="canonical"
-          href="https://ziontechgroup.com/blog/ai-2025-sept-30-cognitive-assistants-blueprint"
+          href="https://ziontechgroup.com/blog/ai-2025-sept-30-cognitive-assistants-blueprint",
         />
       </Helmet>
 
       <div className="container mx-auto px-6 py-16">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">
+        <h1 className="text-4xl md: text-5xl font-bold mb-4">",
           Cognitive Assistants Blueprint — 92% CSAT, Governed Velocity
         </h1>
         <p className="text-zion-slate-light mb-8">
@@ -34,7 +32,7 @@ export default function CognitiveAssistantsBlueprint2025(): React.JSX.Element {
             <li>Operationalize approvals and sandboxed tools</li>
           </ul>
           <p>
-            Start with a thin slice: define golden tasks, attach budgets to critical flows, and instrument traces. Use
+            Start with a thin slice: define golden tasks, attach budgets to critical flows, and instrument traces. Use,
             scorecards executives and engineers trust.
           </p>
         </div>
@@ -43,3 +41,4 @@ export default function CognitiveAssistantsBlueprint2025(): React.JSX.Element {
   );
 }
 
+;

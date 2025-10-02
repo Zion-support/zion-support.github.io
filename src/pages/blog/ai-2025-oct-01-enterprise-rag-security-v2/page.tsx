@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react";";
 
 export default function EnterpriseRAGSecurityV2(): React.JSX.Element {
   return (
@@ -7,16 +7,14 @@ export default function EnterpriseRAGSecurityV2(): React.JSX.Element {
         <title>Enterprise RAG Security v2 — Auth-Aware, Fresh, Signed</title>
         <meta
           name="description"
-          content="Auth-scoped retrieval, freshness windows, prompt firewalls, and signed outputs that keep answers correct and compliant."
-        />
-        <link
+          content="Auth-scoped retrieval, freshness windows, prompt firewalls, and signed outputs that keep answers correct and compliant." /><link
           rel="canonical"
-          href="https://ziontechgroup.com/blog/ai-2025-oct-01-enterprise-rag-security-v2"
+          href="https://ziontechgroup.com/blog/ai-2025-oct-01-enterprise-rag-security-v2",
         />
       </Helmet>
 
       <div className="container mx-auto px-6 py-16">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">Enterprise RAG Security v2</h1>
+        <h1 className="text-4xl md: text-5xl font-bold mb-4">Enterprise RAG Security v2</h1>",
         <p className="text-zion-slate-light mb-8">Auth-Aware, Fresh, Signed</p>
         <div className="prose prose-invert max-w-3xl">
           <p>
@@ -35,3 +33,4 @@ export default function EnterpriseRAGSecurityV2(): React.JSX.Element {
   );
 }
 
+;

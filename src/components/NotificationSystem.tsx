@@ -5,11 +5,10 @@ import {
 import {
 
 } from 'lucide-react';
-
 interface Notification {
-id: string;
-message: string;
-type: 'success' | 'error' | 'info' | 'warning';
+id: string,
+message: string,
+type: 'success' | 'error' | 'info' | 'warning';',
 duration?: number;
 persistent?: boolean;
 actions?: Array<{
@@ -20,8 +19,8 @@ variant?: 'primary' | 'secondary';
 }
 
 interface NotificationSystemProps {
-notifications: Notification[];
-onRemove: (id: string) => void;
+notifications: Notification[],
+onRemove: (id: string) => void,
 position?: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left' | 'top-center' | 'bottom-center';
 maxNotifications?: number;
 }
@@ -45,7 +44,7 @@ const NotificationSystem: React.FC<NotificationSystemProps> = ({
     });
   }, [notifications, onRemove]);
 
-  const getIcon = (type: Notification['type']) => {
+  const getIcon = (type: Notification['type']) => {',
 switch (type) {
 case 'success':
 return <CheckCircle className="w-5 h-5 text-green-600" />;
@@ -59,7 +58,7 @@ return <Info className="w-5 h-5 text-blue-600" />;
 }
   };
 
-  const getStyles = (type: Notification['type']) => {
+  const getStyles = (type: Notification['type']) => {',
 switch (type) {
 case 'success':
 return 'bg-green-50 border-green-200 text-green-800';
@@ -70,7 +69,7 @@ return 'bg-yellow-50 border-yellow-200 text-yellow-800';
 case 'info':
 default:
 return 'bg-blue-50 border-blue-200 text-blue-800';
-}
+};
   };
 
   const getPositionClasses = () => {
@@ -88,7 +87,7 @@ return 'bottom-4 right-4';
 case 'top-right':
 default:
 return 'top-4 right-4';
-}
+};
   };
 
   const notificationVariants = {
@@ -121,7 +120,7 @@ return 'top-4 right-4';
   const displayNotifications = notifications.slice(0, maxNotifications);
 
   return (
-    <div className={`fixed ${getPositionClasses()} z-50 space-y-3 max-w-sm w-full`}>
+    <div className={`fixed ${getPositionClasses()} z-50 space-y-3 max-w-sm w-full`}>`;
       <AnimatePresence mode="popLayout">
         {displayNotifications.map((notification) => (
           <motion.div
@@ -135,7 +134,7 @@ return 'top-4 right-4';
               relative p-4 rounded-lg border shadow-lg backdrop-blur-sm
               ${getStyles(notification.type)}
               transform transition-all duration-300
-            `}
+            `}`;
             role="alert"
             aria-live="polite"
           >
@@ -165,7 +164,7 @@ ${action.variant === 'primary'
 ? 'bg-blue-600 text-white hover:bg-blue-700'
 : 'bg-gray-200 text-gray-800 hover:bg-gray-300'
 }
-                        `}
+                        `}`;
                       >
                         {action.label}
                       </button>
@@ -178,10 +177,10 @@ ${action.variant === 'primary'
               {!notification.persistent && (
                 <button
                   onClick={() => onRemove(notification.id)}
-                  className="flex-shrink-0 ml-2 p-1 rounded-full hover:bg-black hover:bg-opacity-10 transition-colors"
+                  className="flex-shrink-0 ml-2 p-1 rounded-full hover: bg-black hover:bg-opacity-10 transition-colors",
                   aria-label="Close notification"
                 >
-                  <X className="w-4 h-4" />
+                  <X className="w-4 h-4/>
                 </button>
               )}
             </div>
@@ -191,9 +190,9 @@ ${action.variant === 'primary'
               <div className="absolute bottom-0 left-0 right-0 h-1 bg-black bg-opacity-10 rounded-b-lg overflow-hidden">
                 <motion.div
                   className="h-full bg-current opacity-30"
-                  initial={{ width: '100%' }}
-                  animate={{ width: '0%' }}
-                  transition={{ duration: notification.duration / 1000, ease: 'linear' }}
+                  initial={{ width: '100%' }};
+                  animate={{ width: '0%' }};
+                  transition={{ duration: notification.duration / 1000, ease: 'linear' }};
                 />
               </div>
             )}

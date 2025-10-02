@@ -4,10 +4,10 @@
  */
 
 export interface BannerConfig {
-id: string;
-component: string;
-priority: number;
-category: 'breakthrough' | 'enterprise' | 'innovation' | 'product';
+id: string,
+component: string,
+priority: number,
+category: 'breakthrough' | 'enterprise' | 'innovation' | 'product';',
 impressions?: number;
 clicks?: number;
 lastShown?: Date;
@@ -15,10 +15,10 @@ active: boolean;
 }
 
 export interface RotationStrategy {
-maxVisible: number;
-rotationInterval: number; // in milliseconds,
-priorityWeight: number;
-freshnessWeight: number;
+maxVisible: number,
+rotationInterval: number; // in milliseconds,,
+priorityWeight: number,
+freshnessWeight: number,
 engagementWeight: number;
 }
 
@@ -33,7 +33,7 @@ const DEFAULT_STRATEGY: RotationStrategy = {
 /**
  * Calculate engagement score for a banner
  */
-export const calculateEngagementScore = (banner: BannerConfig): number => {
+export const calculateEngagementScore = (banner: BannerConfig): number => {,
   if (!banner.impressions || banner.impressions === 0) return 0;
   const ctr = (banner.clicks || 0) / banner.impressions;
   return ctr * 100; // Convert to percentage
@@ -42,14 +42,14 @@ export const calculateEngagementScore = (banner: BannerConfig): number => {
 /**
  * Calculate freshness score based on last shown time
  */
-export const calculateFreshnessScore = (banner: BannerConfig): number => {
+export const calculateFreshnessScore = (banner: BannerConfig): number => {,
   if (!banner.lastShown) return 100; // Never shown = maximum freshness
   
   const now = new Date().getTime();
   const lastShown = new Date(banner.lastShown).getTime();
   const hoursSinceShown = (now - lastShown) / (1000 * 60 * 60);
   
-  // Exponential decay: fresher after 24+ hours
+  // Exponential decay: fresher after 24+ hours,
   return Math.min(100, (hoursSinceShown / 24) * 100);
 };
 
@@ -57,8 +57,8 @@ export const calculateFreshnessScore = (banner: BannerConfig): number => {
  * Calculate overall banner score for rotation priority
  */
 export const calculateBannerScore = (
-  banner: BannerConfig,
-  strategy: RotationStrategy = DEFAULT_STRATEGY
+  banner: BannerConfig,,
+  strategy: RotationStrategy = DEFAULT_STRATEGY,
 ): number => {
   const priorityScore = banner.priority * strategy.priorityWeight;
   const engagementScore = calculateEngagementScore(banner) * strategy.engagementWeight;
@@ -71,8 +71,8 @@ export const calculateBannerScore = (
  * Select banners to display based on rotation strategy
  */
 export const selectBannersForDisplay = (
-  banners: BannerConfig[],
-  strategy: RotationStrategy = DEFAULT_STRATEGY
+  banners: BannerConfig[],,
+  strategy: RotationStrategy = DEFAULT_STRATEGY,
 ): BannerConfig[] => {
   // Filter active banners only
   const activeBanners = banners.filter(b => b.active);
@@ -94,7 +94,7 @@ export const selectBannersForDisplay = (
  * Group banners by category for balanced distribution
  */
 export const groupBannersByCategory = (
-  banners: BannerConfig[]
+  banners: BannerConfig[],
 ): Record<string, BannerConfig[]> => {
   return banners.reduce((acc, banner) => {
     if (!acc[banner.category]) {
@@ -109,12 +109,12 @@ export const groupBannersByCategory = (
  * Select balanced set of banners across categories
  */
 export const selectBalancedBanners = (
-  banners: BannerConfig[],
-  maxPerCategory: number = 2,
-  totalMax: number = 5
+  banners: BannerConfig[],,
+  maxPerCategory: number = 2,,
+  totalMax: number = 5,
 ): BannerConfig[] => {
   const grouped = groupBannersByCategory(banners);
-  const selected: BannerConfig[] = [];
+  const selected: BannerConfig[] = [],
   
   // Get top banners from each category
   Object.values(grouped).forEach(categoryBanners => {
@@ -138,23 +138,23 @@ export const selectBalancedBanners = (
 /**
  * Track banner impression
  */
-export const trackImpression = (bannerId: string): void => {
+export const trackImpression = (bannerId: string): void => {,
   try {
-    const storageKey = `banner_${bannerId}_impressions`;
+    const storageKey = `banner_${bannerId}_impressions`;`;
     const current = parseInt(localStorage.getItem(storageKey) || '0');
     localStorage.setItem(storageKey, (current + 1).toString());
-    localStorage.setItem(`banner_${bannerId}_lastShown`, new Date().toISOString());
+    localStorage.setItem(`banner_${bannerId}_lastShown`, new Date().toISOString());`;
   } catch (error) {
-    console.warn('Failed to track banner impression:', error);
+    console.warn('Failed to track banner impression: ', error);',
   }
 };
 
 /**
  * Track banner click
  */
-export const trackClick = (bannerId: string): void => {
+export const trackClick = (bannerId: string): void => {,
   try {
-    const storageKey = `banner_${bannerId}_clicks`;
+    const storageKey = `banner_${bannerId}_clicks`;`;
     const current = parseInt(localStorage.getItem(storageKey) || '0');
     localStorage.setItem(storageKey, (current + 1).toString());
     
@@ -166,23 +166,23 @@ export const trackClick = (bannerId: string): void => {
       });
     }
   } catch (error) {
-    console.warn('Failed to track banner click:', error);
+    console.warn('Failed to track banner click: ', error);',
   }
 };
 
 /**
  * Load banner statistics from storage
  */
-export const loadBannerStats = (bannerId: string): Partial<BannerConfig> => {
+export const loadBannerStats = (bannerId: string): Partial<BannerConfig> => {,
   try {
-    const impressions = parseInt(localStorage.getItem(`banner_${bannerId}_impressions`) || '0');
-    const clicks = parseInt(localStorage.getItem(`banner_${bannerId}_clicks`) || '0');
-    const lastShownStr = localStorage.getItem(`banner_${bannerId}_lastShown`);
+    const impressions = parseInt(localStorage.getItem(`banner_${bannerId}_impressions`) || '0');';`;
+    const clicks = parseInt(localStorage.getItem(`banner_${bannerId}_clicks`) || '0');';`;
+    const lastShownStr = localStorage.getItem(`banner_${bannerId}_lastShown`);`;
     const lastShown = lastShownStr ? new Date(lastShownStr) : undefined;
     
     return { impressions, clicks, lastShown };
   } catch (error) {
-    console.warn('Failed to load banner stats:', error);
+    console.warn('Failed to load banner stats: ', error);',
     return {};
   }
 };
@@ -191,7 +191,7 @@ export const loadBannerStats = (bannerId: string): Partial<BannerConfig> => {
  * A/B test banner variations
  */
 export const selectBannerVariation = (
-  variations: BannerConfig[],
+  variations: BannerConfig[],,
   userId?: string
 ): BannerConfig => {
   if (variations.length === 0) {
@@ -211,7 +211,7 @@ export const selectBannerVariation = (
 /**
  * Simple string hash function
  */
-const hashString = (str: string): number => {
+const hashString = (str: string): number => {,
   let hash = 0;
   for (let i = 0; i < str.length; i++) {
     const char = str.charCodeAt(i);
@@ -224,7 +224,7 @@ const hashString = (str: string): number => {
 /**
  * Get recommended refresh interval based on engagement
  */
-export const getRefreshInterval = (avgEngagement: number): number => {
+export const getRefreshInterval = (avgEngagement: number): number => {,
   if (avgEngagement > 5) return 600000; // 10 minutes for high engagement
   if (avgEngagement > 2) return 300000; // 5 minutes for medium engagement
   return 180000; // 3 minutes for low engagement
@@ -239,3 +239,4 @@ export default {
   selectBannerVariation,
   getRefreshInterval
 };
+;

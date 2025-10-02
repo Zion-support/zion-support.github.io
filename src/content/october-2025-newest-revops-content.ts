@@ -1,5 +1,5 @@
 // October 2025 Newest Revenue Operations Content
-// JUST PUBLISHED: Autonomous RevOps Revolution
+// JUST PUBLISHED: Autonomous RevOps Revolution,
 
 export const octoberNewestRevOpsContent = [
   {
@@ -81,3 +81,4 @@ export const getBreakingRevOpsContent = () => {
 export const getAllRevOpsContent = () => {
   return octoberNewestRevOpsContent;
 };
+;

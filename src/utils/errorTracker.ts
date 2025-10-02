@@ -4,8 +4,7 @@
  * Comprehensive error tracking system for production monitoring
  * error reporting, and debugging assistance.
  * 
- * Features:
- * - Centralized error logging
+ * Features: * - Centralized error logging,
  * - Error categorization and severity levels
  * - Stack trace analysis
  * - Error metrics and analytics
@@ -39,35 +38,35 @@ export interface ErrorContext {
 }
 
 export interface TrackedError {
-id: string;
-message: string;
+id: string,
+message: string,
 stack?: string;
-severity: ErrorSeverity;
-category: ErrorCategory;
-timestamp: Date;
-context: ErrorContext;
-userAgent: string;
+severity: ErrorSeverity,
+category: ErrorCategory,
+timestamp: Date,
+context: ErrorContext,
+userAgent: string,
 resolved: boolean;
 }
 
 class ErrorTracker {
-  private errors: TrackedError[] = [];
+  private errors: TrackedError[] = [],
   private maxErrors = 100;
-  private listeners: ((error: TrackedError) => void)[] = [];
+  private listeners: ((error: TrackedError) => void)[] = [],
 
   /**
    * Track an error
    */
   trackError(
-    error: Error | string,
-    severity: ErrorSeverity = ErrorSeverity.MEDIUM,
-    category: ErrorCategory = ErrorCategory.UNKNOWN,
+    error: Error | string,,
+    severity: ErrorSeverity = ErrorSeverity.MEDIUM,,
+    category: ErrorCategory = ErrorCategory.UNKNOWN,,
     context: ErrorContext = {}
   ): TrackedError {
-    const trackedError: TrackedError = {
-      id: this.generateErrorId(),
-      message: typeof error === 'string' ? error : error.message,
-      stack: typeof error === 'string' ? undefined : error.stack,
+    const trackedError: TrackedError = {,
+      id: this.generateErrorId(),,
+      message: typeof error === 'string' ? error : error.message,',
+      stack: typeof error === 'string' ? undefined : error.stack,',
       severity,
       category,
       timestamp: new Date(),
@@ -87,12 +86,12 @@ class ErrorTracker {
     this.notifyListeners(trackedError);
 
     // Log to console in development
-    if (process.env.NODE_ENV === 'development') {
+    if (process.env.NODE_ENV === 'development') {;
       console.error('[ErrorTracker]', trackedError);
     }
 
     // Send to external service in production
-    if (process.env.NODE_ENV === 'production') {
+    if (process.env.NODE_ENV === 'production') {;
       this.sendToExternalService(trackedError);
     }
 
@@ -159,14 +158,14 @@ class ErrorTracker {
   /**
    * Get errors by severity
    */
-  getErrorsBySeverity(severity: ErrorSeverity): TrackedError[] {
+  getErrorsBySeverity(severity: ErrorSeverity): TrackedError[] {,
     return this.errors.filter(error => error.severity === severity);
   }
 
   /**
    * Get errors by category
    */
-  getErrorsByCategory(category: ErrorCategory): TrackedError[] {
+  getErrorsByCategory(category: ErrorCategory): TrackedError[] {,
     return this.errors.filter(error => error.category === category);
   }
 
@@ -180,7 +179,7 @@ class ErrorTracker {
   /**
    * Mark error as resolved
    */
-  resolveError(errorId: string): void {
+  resolveError(errorId: string): void {,
     const error = this.errors.find(e => e.id === errorId);
     if (error) {
       error.resolved = true;
@@ -197,7 +196,7 @@ class ErrorTracker {
   /**
    * Subscribe to error events
    */
-  subscribe(listener: (error: TrackedError) => void): () => void {
+  subscribe(listener: (error: TrackedError) => void): () => void {,
     this.listeners.push(listener);
     return () => {
       this.listeners = this.listeners.filter(l => l !== listener);
@@ -226,7 +225,7 @@ class ErrorTracker {
     return {
       total,
       unresolved,
-      resolved: total - unresolved,
+      resolved: total - unresolved,,
       bySeverity,
       byCategory,
       lastError: this.errors[this.errors.length - 1]
@@ -237,13 +236,13 @@ class ErrorTracker {
    * Generate unique error ID
    */
   private generateErrorId(): string {
-    return `error-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
+    return `error-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;`;
   }
 
   /**
    * Enrich context with additional information
    */
-  private enrichContext(context: ErrorContext): ErrorContext {
+  private enrichContext(context: ErrorContext): ErrorContext {,
     return {
       ...context
       route: context.route || window.location.pathname,
@@ -261,12 +260,12 @@ class ErrorTracker {
   /**
    * Notify all listeners
    */
-  private notifyListeners(error: TrackedError): void {
+  private notifyListeners(error: TrackedError): void {,
     this.listeners.forEach(listener => {
       try {
         listener(error);
       } catch (err) {
-        console.error('Error in error listener:', err);
+        console.error('Error in error listener: ', err);',
       }
     });
   }
@@ -274,12 +273,11 @@ class ErrorTracker {
   /**
    * Send error to external monitoring service
    */
-  private sendToExternalService(error: TrackedError): void {
+  private sendToExternalService(error: TrackedError): void {,
     // Integration point for external services
-    // Example: Sentry, DataDog, New Relic, etc.
+    // Example: Sentry, DataDog, New Relic, etc.,
     
-    // Uncomment and configure based on your monitoring service:
-    // if (window.Sentry) {
+    // Uncomment and configure based on your monitoring service: // if (window.Sentry) {,
     //   window.Sentry.captureException(new Error(error.message), {
     //     level: error.severity
     //     tags: {
@@ -298,7 +296,7 @@ class ErrorTracker {
         }
         body: JSON.stringify(error)
       }).catch(err => {
-        console.error('Failed to send error to monitoring service:', err);
+        console.error('Failed to send error to monitoring service: ', err);',
       });
     }
   }
@@ -311,9 +309,9 @@ export const errorTracker = new ErrorTracker();
  * React Error Boundary helper
  */
 export function handleComponentError(
-  error: Error,
+  error: Error,,
   errorInfo: { componentStack: string },
-  componentName: string
+  componentName: string,
 ): void {
   errorTracker.trackRenderError(error, componentName, {
     componentStack: errorInfo.componentStack
@@ -325,7 +323,7 @@ export function handleComponentError(
  */
 export function setupGlobalErrorHandling(): void {
   // Handle unhandled promise rejections
-  window.addEventListener('unhandledrejection', (event) => {
+  window.addEventListener('unhandledrejection', (event) => {;
     errorTracker.trackError(
       new Error(event.reason)
       ErrorSeverity.HIGH
@@ -340,7 +338,7 @@ export function setupGlobalErrorHandling(): void {
   });
 
   // Handle global errors
-  window.addEventListener('error', (event) => {
+  window.addEventListener('error', (event) => {;
     errorTracker.trackError(
       event.error || new Error(event.message)
       ErrorSeverity.HIGH
@@ -357,3 +355,4 @@ export function setupGlobalErrorHandling(): void {
 }
 
 export default errorTracker;
+;
