@@ -1423,10 +1423,6 @@ export const posts: BlogPost[] = [
     featured: true,
     readTime: "8 min read"
   },
-);
-
-// Sept 30, 2025 – Fresh drop to expand catalog and advertise on Home (v4)
-posts.push(
   {
     slug: "ai-operational-scorecards-v4-2026",
     title: "AI Operational Scorecards v4 (2026): SLIs, Budgets, Rollback",

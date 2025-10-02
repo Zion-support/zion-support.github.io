@@ -1,16 +1,15 @@
 import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import './index.css';
-import ModernHeader from './components/ModernHeader';
-import ModernFooter from './components/ModernFooter';
-import ModernHomepage from './components/ModernHomepage';
+import Header from './components/Header';
+import Footer from './components/Footer';
 import SEOOptimizer from './components/SEOOptimizer';
 import AdvancedAnalytics from './components/AdvancedAnalytics';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import NotificationSystem from './components/NotificationSystem';
 import { PerformanceMonitor } from './components/PerformanceMonitor';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import HomePage from './pages/HomePage';
 
 // Types and interfaces
 interface Notification {
@@ -162,7 +161,7 @@ const ContactPage = () => (
 // App Router Component
 const AppRouter = () => (
   <Routes>
-    <Route path="/" element={<ModernHomepage />} />
+    <Route path="/" element={<HomePage />} />
     <Route path="/services" element={<ServicesPage />} />
     <Route path="/case-studies" element={<CaseStudiesPage />} />
     <Route path="/blog" element={<BlogPage />} />
@@ -225,15 +224,14 @@ const App: React.FC = () => {
 
   return (
     <EnhancedErrorBoundary>
-      <AccessibilityEnhancer>
         <SEOOptimizer title={seoDataForOptimizer.title} description={seoDataForOptimizer.description} canonicalUrl={seoDataForOptimizer.canonical} />
         <AdvancedAnalytics enableConversionTracking enablePerformanceTracking enableErrorTracking />
         <div className="min-h-screen bg-white">
-          <ModernHeader />
+          <Header />
           <main>
             <AppRouter />
           </main>
-          <ModernFooter />
+          <Footer />
         </div>
 
         {showPerformanceOptimizer && (
@@ -261,7 +259,6 @@ const App: React.FC = () => {
         )}
 
         <NotificationSystem notifications={notifications} onRemove={handleRemoveNotification} />
-      </AccessibilityEnhancer>
     </EnhancedErrorBoundary>
   );
 };

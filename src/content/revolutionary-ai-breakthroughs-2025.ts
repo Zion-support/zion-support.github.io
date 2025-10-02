@@ -284,3 +284,4 @@ export const promotionalBanners2025 = [
       { label: '300% ROI', value: 'First Year Returns' }
     ]
   }
+];

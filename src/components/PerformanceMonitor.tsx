@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { useWebVitals } from '../hooks/usePerformance';
 
 interface PerformanceMetrics {
   lcp?: number;
@@ -13,7 +12,6 @@ export const PerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({});
   const [isVisible, setIsVisible] = useState(false);
 
-  useWebVitals();
 
   useEffect(() => {
     // Only show in development or when performance issues are detected
@@ -142,3 +140,5 @@ export const PerformanceMonitor: React.FC = () => {
     </div>
   );
 };
+
+export default PerformanceMonitor;
