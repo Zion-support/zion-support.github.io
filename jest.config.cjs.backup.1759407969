@@ -1,7 +1,12 @@
 module.exports = {
   testEnvironment: 'jsdom',
+<<<<<<< HEAD
+  roots: ['<rootDir>/src'],
+  setupFilesAfterEnv: [ '@testing-library/jest-dom' ],
+=======
   roots: ['<rootDir>/__tests__', '<rootDir>/src'],
   setupFilesAfterEnv: ['@testing-library/jest-dom'],
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-cc27
   moduleNameMapper: {
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
     '\\.(gif|ttf|eot|svg|png|jpg|jpeg)$': '<rootDir>/tests/__mocks__/fileMock.js',
@@ -43,7 +48,11 @@ module.exports = {
     '/apps.backup/',
   ],
   transform: {
+<<<<<<< HEAD
+    '^.+\\.(t|j)sx?$': 'jest-esbuild'
+=======
     '^.+\\.[tj]sx?$': 'jest-esbuild',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-cc27
   },
   moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx', 'json'],
   coverageDirectory: 'coverage',
