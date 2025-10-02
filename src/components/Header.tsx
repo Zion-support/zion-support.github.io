@@ -19,6 +19,10 @@ const ModernHeader: React.FC = () => {
       path: '/',
     },
     {
+      label: 'Pricing',
+      path: '/pricing',
+    },
+    {
       label: 'Solutions',
       path: '/solutions',
       dropdown: [
@@ -46,6 +50,10 @@ const ModernHeader: React.FC = () => {
         { label: 'Intelligent Document Processing', path: '/services/ai-intelligent-document-processing' },
         { label: 'Real-Time Cognitive Automation', path: '/services/real-time-cognitive-automation' },
         { label: 'Advanced Cybersecurity AI', path: '/services/advanced-cybersecurity-ai' },
+        { label: 'Edge AI Inference Platform', path: '/services/edge-ai-inference' },
+        { label: 'Email Deliverability Optimizer', path: '/services/email-deliverability-optimizer' },
+        { label: 'Sales Playbook Copilot', path: '/services/sales-playbook-copilot' },
+        { label: 'Code Quality Gatekeeper', path: '/services/code-quality-gatekeeper' },
         { label: 'AI Solutions Hub', path: '/ai-solutions' },
         { label: 'Quantum Computing', path: '/quantum-computing' },
         { label: 'Cloud & DevOps', path: '/cloud-devops' },
