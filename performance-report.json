@@ -1,42 +1,45 @@
 {
-  "timestamp": "2025-10-02T04:20:34.167Z",
-  "buildMetrics": {
-    "bundleSize": {
-      "totalSize": 0.5574169158935547,
-      "fileCount": 30,
-      "fileSizes": {
-        "_headers": 674,
-        "_redirects": 23,
-        "grid.svg": 368,
-        "index.html": 833,
-        "manifest.json": 394,
-        "offline.html": 1846,
-        "performance-monitor.js": 2079,
-        "robots.txt": 323,
-        "site.webmanifest": 1902,
-        "sitemap-blog.xml": 150789,
-        "sitemap-case-studies.xml": 97294,
-        "sitemap-index.xml": 224,
-        "sitemap-main.xml": 1521,
-        "sitemap-new-posts.xml": 773,
-        "sitemap-services.xml": 32607,
-        "sitemap.xml": 16654,
-        "structured-data.json": 1119,
-        "sw-enhanced.js": 7084,
-        "sw-performance.js": 3736,
-        "sw.js": 902,
-        "images/abstract-pattern.svg": 498,
-        "images/bio-pattern.svg": 556,
-        "images/grid-pattern.svg": 388,
-        "images/neural-network-bg.svg": 801,
-        "images/space-pattern.svg": 640,
-        "assets/css/main-BsaHA88z.css": 64498,
-        "assets/js/components-PocpM0N0.js": 14990,
-        "assets/js/main-DaSTzYl_.js": 5699,
-        "assets/js/vendor-C6ic3rlc.js": 3806,
-        "assets/js/vendor-react-DtyR1bJj.js": 171473
-      }
+  "timestamp": "2025-10-02T10:52:53.100Z",
+  "optimizations": {
+    "bundleOptimizations": {
+      "enableTreeShaking": true,
+      "enableCodeSplitting": true,
+      "enableCompression": true,
+      "removeUnusedCode": true,
+      "optimizeImports": true
+    },
+    "runtimeOptimizations": {
+      "enableLazyLoading": true,
+      "enablePreloading": true,
+      "enableCaching": true,
+      "optimizeImages": true,
+      "enableServiceWorker": true
+    },
+    "buildOptimizations": {
+      "enableMinification": true,
+      "enableSourceMaps": false,
+      "enableCompression": true,
+      "optimizeAssets": true,
+      "enableTreeShaking": true
     }
   },
-  "recommendations": []
+  "recommendations": [
+    "Implement React.lazy() for code splitting",
+    "Use dynamic imports for non-critical components",
+    "Optimize bundle size with tree shaking",
+    "Enable compression (gzip/brotli)",
+    "Implement service worker caching",
+    "Use WebP images with fallbacks",
+    "Optimize CSS delivery",
+    "Implement preloading for critical resources",
+    "Use CDN for static assets",
+    "Monitor Core Web Vitals"
+  ],
+  "nextSteps": [
+    "Run lighthouse audit",
+    "Implement recommended optimizations",
+    "Set up performance monitoring",
+    "Configure build optimizations",
+    "Test on various devices and networks"
+  ]
 }
