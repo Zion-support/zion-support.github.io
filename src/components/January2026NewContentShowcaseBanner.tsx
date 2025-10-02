@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 const January2026NewContentShowcaseBanner: React.FC = () => {,
   const features = [
@@ -17,7 +16,6 @@ const January2026NewContentShowcaseBanner: React.FC = () => {,
     { icon: Network, title: "Autonomous Mesh", desc: "Self-organizing systems" },";
     { icon: Shield, title: "Quantum Security", desc: "Unbreakable protection" },";
     { icon: Cpu, title: "Neuromorphic AI", desc: "Brain-inspired computing" }";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   ];
 
   return (
@@ -66,11 +64,9 @@ const January2026NewContentShowcaseBanner: React.FC = () => {,
         </div>
 
         {/* Features Grid */}
-<<<<<<< HEAD
         <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-5 gap-6 mb-8">",
 =======
         <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-5 gap-6 mb-8">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           {features.map((feature, index) => (
             <motion.div
               key={feature.title}
@@ -79,7 +75,6 @@ const January2026NewContentShowcaseBanner: React.FC = () => {,
               transition={{ delay: 0.5 + index * 0.1, duration: 0.6 }}
               className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center hover: bg-white/20 transition-all duration-300",
             >
-<<<<<<< HEAD
               <feature.icon className="w-8 h-8 mx-auto mb-3 text-purple-300/>
               <h3 className="font-semibold text-white mb-1">{feature.title}</h3>
               <p className="text-sm text-blue-200">{feature.desc}</p>
@@ -87,7 +82,6 @@ const January2026NewContentShowcaseBanner: React.FC = () => {,
               <feature.icon className="w-8 h-8 mx-auto mb-3 text-purple-300" />";
               <h3 className="font-semibold text-white mb-1">{feature.title}</h3>";
               <p className="text-sm text-blue-200">{feature.desc}</p>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             </motion.div>
           ))}
         </div>
@@ -129,11 +123,9 @@ const January2026NewContentShowcaseBanner: React.FC = () => {,
             className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 hover: from-purple-600 hover:to-blue-600 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl",
           >
             Explore January 2026 Content
-<<<<<<< HEAD
             <ArrowRight className="ml-2 w-5 h-5/>
 =======
             <ArrowRight className="ml-2 w-5 h-5" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           </a>
         </motion.div>
       </div>

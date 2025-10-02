@@ -37,7 +37,6 @@ description: 'Delivering exceptional results with proven ROI and measurable impa
   ];
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
@@ -325,7 +324,6 @@ description: 'Delivering exceptional results with proven ROI and measurable impa
         </div>
       </div>
     </>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-ea70
   );
 };
 

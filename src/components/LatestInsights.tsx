@@ -11,20 +11,17 @@ const LatestInsights: React.FC = () => {,
       <div className="container mx-auto px-6">";
         <div className="flex items-end justify-between mb-8">";
           <div>
-<<<<<<< HEAD
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-2">Latest Insights</h2>",
             <p className="text-zion-slate-light">Research, guides, and playbooks from our team.</p>
 =======
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-2">Latest Insights</h2>";,
             <p className="text-zion-slate-light">Research, guides, and playbooks from our team.</p>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           </div>
             <Link
             to="/insights"
             className="hidden sm: inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors",
           >
             View all
-<<<<<<< HEAD
             <ArrowRight className="w-4 h-4/>
           </Link>
         </div>
@@ -36,7 +33,6 @@ const LatestInsights: React.FC = () => {,
         </div>
 
         <div className="grid gap-6 md: grid-cols-3">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           {latestInsights.slice(0, 3).map((item) => (
             <div
               key={item.id}
@@ -59,44 +55,36 @@ const LatestInsights: React.FC = () => {,
                 </div>
               </div>
 
-<<<<<<< HEAD
               <h3 className="text-xl font-semibold text-white mb-2">{item.title}</h3>
               <p className="text-zion-slate-light mb-6 leading-relaxed">{item.summary}</p>
 =======
               <h3 className="text-xl font-semibold text-white mb-2">{item.title}</h3>";
               <p className="text-zion-slate-light mb-6 leading-relaxed">{item.summary}</p>";
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               <Link
                 to="/insights"
                 className="inline-flex items-center gap-2 text-zion-cyan hover: text-white transition-colors",
               >
                 Read more
-<<<<<<< HEAD
                 <ArrowRight className="w-4 h-4/>
 =======
                 <ArrowRight className="w-4 h-4" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </Link>
             </div>
           ))}
         </div>
 
-<<<<<<< HEAD
         <div className="mt-8 sm: hidden">",
 =======
         <div className="mt-8 sm: hidden">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           <Link
             to="/insights"
             className="inline-flex items-center gap-2 text-zion-cyan hover: text-white transition-colors",
           >
             View all
-<<<<<<< HEAD
             <ArrowRight className="w-4 h-4/>
 =======
             <ArrowRight className="w-4 h-4" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           </Link>
         </div>
       </div>

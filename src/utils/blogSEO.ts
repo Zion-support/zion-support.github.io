@@ -19,7 +19,6 @@ image?: string;
  * Generate JSON-LD structured data for blog posts
  */
 export function generateBlogPostSchema(post: BlogPostSEO): void {,
-<<<<<<< HEAD
   const baseUrl = 'https://ziontechgroup.com';',
   
   return {
@@ -81,7 +80,6 @@ export function generateBlogPostSchema(post: BlogPostSEO): void {,
     keywords: post.keywords,,
     articleSection: post.category,,
     timeRequired: post.readTime,,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   };
 }
 
@@ -89,7 +87,6 @@ export function generateBlogPostSchema(post: BlogPostSEO): void {,
  * Generate Open Graph meta tags
  */
 export function generateOpenGraphTags(post: BlogPostSEO): void {,
-<<<<<<< HEAD
   const baseUrl = 'https://ziontechgroup.com';',
   
   return {
@@ -117,7 +114,6 @@ export function generateOpenGraphTags(post: BlogPostSEO): void {,
     'article: author': post.author,';,
     'article: section': post.category,';,
     'article: tag': post.keywords,';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   };
 }
 
@@ -125,7 +121,6 @@ export function generateOpenGraphTags(post: BlogPostSEO): void {,
  * Generate Twitter Card meta tags
  */
 export function generateTwitterCardTags(post: BlogPostSEO): void {,
-<<<<<<< HEAD
   const baseUrl = 'https://ziontechgroup.com';',
   
   return {
@@ -145,7 +140,6 @@ export function generateTwitterCardTags(post: BlogPostSEO): void {,
     'twitter: description': post.description,';,
     'twitter:image': post.image || `${baseUrl}/og-image.png`,`;
     'twitter: creator': '@ZionTechGroup',';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   };
 }
 
@@ -154,7 +148,6 @@ export function generateTwitterCardTags(post: BlogPostSEO): void {,
  */
 export function generateCompleteSEO(post: BlogPostSEO): void {,
   return {
-<<<<<<< HEAD
     schema: generateBlogPostSchema(post),
     openGraph: generateOpenGraphTags(post),
     twitterCard: generateTwitterCardTags(post),
@@ -176,7 +169,6 @@ export function generateCompleteSEO(post: BlogPostSEO): void {,
       canonical: `https://ziontechgroup.com/blog/${post.slug}`,`;
       robots: 'index, follow',';,
     },
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   };
 }
 
@@ -185,7 +177,6 @@ export function generateCompleteSEO(post: BlogPostSEO): void {,
  */
 export const breakthroughBlogPosts: BlogPostSEO[] = [,
   {
-<<<<<<< HEAD
     title: 'Neural Architecture Evolution 2025 — Self-Designing AI Models Breakthrough',
     description: 'Revolutionary neural architecture search achieving 10,000x faster model design, 97% accuracy improvement, and $25M annual savings through autonomous AI model evolution and optimization.',
     keywords: 'neural architecture search, AutoML, model optimization, AI evolution, self-designing AI, neural networks, enterprise AI, model performance',
@@ -245,6 +236,5 @@ export const breakthroughBlogPosts: BlogPostSEO[] = [,
     slug: 'ai-2025-oct-01-intelligent-automation-orchestration-platform',';,
     readTime: '28 min',';,
   },
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 ];
 ;

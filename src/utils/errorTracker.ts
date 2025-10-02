@@ -12,7 +12,6 @@
  */
 
 export enum ErrorSeverity {
-<<<<<<< HEAD
   LOW = 'low'
   MEDIUM = 'medium'
   HIGH = 'high'
@@ -42,7 +41,6 @@ export enum ErrorCategory {
   USER_INPUT = 'user_input',';
   PERMISSION = 'permission',';
   UNKNOWN = 'unknown',';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 }
 
 export interface ErrorContext {
@@ -67,7 +65,6 @@ resolved: boolean;
 }
 
 class ErrorTracker {
-<<<<<<< HEAD
   private errors: TrackedError[] = [],
   private maxErrors = 100;
   private listeners: ((error: TrackedError) => void)[] = [],
@@ -75,7 +72,6 @@ class ErrorTracker {
   private errors: TrackedError[] = [];,
   private maxErrors = 100;
   private listeners: ((error: TrackedError) => void)[] = [];,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 
   /**
    * Track an error
@@ -88,7 +84,6 @@ class ErrorTracker {
   ): TrackedError {
     const trackedError: TrackedError = {,
       id: this.generateErrorId(),,
-<<<<<<< HEAD
       message: typeof error === 'string' ? error : error.message,',
       stack: typeof error === 'string' ? undefined : error.stack,',
       severity,
@@ -106,7 +101,6 @@ class ErrorTracker {
       context: this.enrichContext(context),,
       userAgent: navigator.userAgent,,
       resolved: false,,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     };
 
     this.errors.push(trackedError);
@@ -120,7 +114,6 @@ class ErrorTracker {
     this.notifyListeners(trackedError);
 
     // Log to console in development
-<<<<<<< HEAD
     if (process.env.NODE_ENV === 'development') {;
       console.error('[ErrorTracker]', trackedError);
     }
@@ -134,7 +127,6 @@ class ErrorTracker {
 
     // Send to external service in production
     if (process.env.NODE_ENV === 'production') {';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       this.sendToExternalService(trackedError);
     }
 
@@ -145,7 +137,6 @@ class ErrorTracker {
    * Track network errors
    */
   trackNetworkError(
-<<<<<<< HEAD
     error: Error,
     url: string,
     method: string,
@@ -155,7 +146,6 @@ class ErrorTracker {
     url: string,,
     method: string,,
     status?: number,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     context: ErrorContext = {}
   ): TrackedError {
     return this.trackError(
@@ -163,7 +153,6 @@ class ErrorTracker {
       status && status >= 500 ? ErrorSeverity.HIGH : ErrorSeverity.MEDIUM
       ErrorCategory.NETWORK
       {
-<<<<<<< HEAD
         ...context
         metadata: {,
           ...context.metadata
@@ -171,7 +160,6 @@ class ErrorTracker {
         ...context,
         metadata: {,
           ...context.metadata,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           url,
           method,
           status
@@ -184,7 +172,6 @@ class ErrorTracker {
    * Track rendering errors
    */
   trackRenderError(
-<<<<<<< HEAD
     error: Error,
     componentName: string,
     props?: Record<string, any>
@@ -192,7 +179,6 @@ class ErrorTracker {
     error: Error,,
     componentName: string,,
     props?: Record<string, any>,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     context: ErrorContext = {}
   ): TrackedError {
     return this.trackError(
@@ -200,7 +186,6 @@ class ErrorTracker {
       ErrorSeverity.HIGH
       ErrorCategory.RENDERING
       {
-<<<<<<< HEAD
         ...context
         component: componentName,
         metadata: {,
@@ -214,7 +199,6 @@ class ErrorTracker {
           ...context.metadata,
           props,
         },
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       }
     );
   }
@@ -299,11 +283,9 @@ class ErrorTracker {
       resolved: total - unresolved,,
       bySeverity,
       byCategory,
-<<<<<<< HEAD
       lastError: this.errors[this.errors.length - 1]
 =======
       lastError: this.errors[this.errors.length - 1],,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     };
   }
 
@@ -319,7 +301,6 @@ class ErrorTracker {
    */
   private enrichContext(context: ErrorContext): ErrorContext {,
     return {
-<<<<<<< HEAD
       ...context
       route: context.route || window.location.pathname,
       metadata: {,
@@ -341,7 +322,6 @@ class ErrorTracker {
         },
         timestamp: new Date().toISOString(),,
       },
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     };
   }
 
@@ -353,11 +333,9 @@ class ErrorTracker {
       try {
         listener(error);
       } catch (err) {
-<<<<<<< HEAD
         console.error('Error in error listener: ', err);',
 =======
         console.error('Error in error listener: ', err);';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       }
     });
   }
@@ -371,7 +349,6 @@ class ErrorTracker {
     
     // Uncomment and configure based on your monitoring service: // if (window.Sentry) {,
     //   window.Sentry.captureException(new Error(error.message), {
-<<<<<<< HEAD
     //     level: error.severity
     //     tags: {
     //       category: error.category
@@ -383,14 +360,12 @@ class ErrorTracker {
     //       category: error.category,,
     //     },
     //     extra: error.context,,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     //   });
     // }
 
     // For now, we can send to a custom endpoint
     if (process.env.REACT_APP_ERROR_ENDPOINT) {
       fetch(process.env.REACT_APP_ERROR_ENDPOINT, {
-<<<<<<< HEAD
         method: 'POST',
         headers: {,
           'Content-Type': 'application/json'
@@ -406,7 +381,6 @@ class ErrorTracker {
         body: JSON.stringify(error),,
       }).catch(err => {
         console.error('Failed to send error to monitoring service: ', err);';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       });
     }
   }
@@ -424,11 +398,9 @@ export function handleComponentError(
   componentName: string,
 ): void {
   errorTracker.trackRenderError(error, componentName, {
-<<<<<<< HEAD
     componentStack: errorInfo.componentStack
 =======
     componentStack: errorInfo.componentStack,,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   });
 }
 
@@ -437,18 +409,15 @@ export function handleComponentError(
  */
 export function setupGlobalErrorHandling(): void {
   // Handle unhandled promise rejections
-<<<<<<< HEAD
   window.addEventListener('unhandledrejection', (event) => {;
 =======
   window.addEventListener('unhandledrejection', (event) => {';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     errorTracker.trackError(
       new Error(event.reason)
       ErrorSeverity.HIGH
       ErrorCategory.UNKNOWN
       {
         metadata: {,
-<<<<<<< HEAD
           type: 'unhandledRejection',
           promise: event.promise
         }
@@ -456,24 +425,20 @@ export function setupGlobalErrorHandling(): void {
           type: 'unhandledRejection',';,
           promise: event.promise,,
         },
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       }
     );
   });
 
   // Handle global errors
-<<<<<<< HEAD
   window.addEventListener('error', (event) => {;
 =======
   window.addEventListener('error', (event) => {';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     errorTracker.trackError(
       event.error || new Error(event.message)
       ErrorSeverity.HIGH
       ErrorCategory.UNKNOWN
       {
         metadata: {,
-<<<<<<< HEAD
           filename: event.filename,
           lineno: event.lineno,
           colno: event.colno
@@ -483,7 +448,6 @@ export function setupGlobalErrorHandling(): void {
           lineno: event.lineno,,
           colno: event.colno,,
         },
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       }
     );
   });

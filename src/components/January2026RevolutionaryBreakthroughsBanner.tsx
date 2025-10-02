@@ -1,14 +1,11 @@
-<<<<<<< HEAD
 import React from 'react';
 =======
 import React from 'react';';
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 const January2026RevolutionaryBreakthroughsBanner: React.FC = () => {,
   const breakthroughs = [
     {
       icon: Brain,,
-<<<<<<< HEAD
       title: "Synthetic Consciousness AI",",
       description: "Revolutionary AI achieving genuine consciousness and emotional intelligence",",
       stats: "$500B Enterprise Value",",
@@ -18,12 +15,10 @@ const January2026RevolutionaryBreakthroughsBanner: React.FC = () => {,
       description: "Revolutionary AI achieving genuine consciousness and emotional intelligence",";,
       stats: "$500B Enterprise Value",";,
       color: "from-purple-500 to-pink-500",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       bgColor: "bg-purple-500/10",
     },
     {
       icon: Zap,,
-<<<<<<< HEAD
       title: "Quantum Edge Computing",",
       description: "Sub-millisecond processing with 200-250x speed improvements",",
       stats: "200x Faster",",
@@ -33,12 +28,10 @@ const January2026RevolutionaryBreakthroughsBanner: React.FC = () => {,
       description: "Sub-millisecond processing with 200-250x speed improvements",";,
       stats: "200x Faster",";,
       color: "from-blue-500 to-cyan-500",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       bgColor: "bg-blue-500/10",
     },
     {
       icon: Network,,
-<<<<<<< HEAD
       title: "Autonomous Enterprise Mesh",",
       description: "Self-organizing AI networks achieving 99.7% operational efficiency",",
       stats: "99.7% Efficiency",",
@@ -48,12 +41,10 @@ const January2026RevolutionaryBreakthroughsBanner: React.FC = () => {,
       description: "Self-organizing AI networks achieving 99.7% operational efficiency",";,
       stats: "99.7% Efficiency",";,
       color: "from-green-500 to-emerald-500",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       bgColor: "bg-green-500/10",
     },
     {
       icon: Shield,,
-<<<<<<< HEAD
       title: "Quantum-Safe Security",",
       description: "Unbreakable protection systems with 99.99% threat prevention",",
       stats: "$2.8B Protected",",
@@ -63,7 +54,6 @@ const January2026RevolutionaryBreakthroughsBanner: React.FC = () => {,
       description: "Unbreakable protection systems with 99.99% threat prevention",";,
       stats: "$2.8B Protected",";,
       color: "from-orange-500 to-red-500",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       bgColor: "bg-orange-500/10",
     }
   ];
@@ -89,11 +79,9 @@ const January2026RevolutionaryBreakthroughsBanner: React.FC = () => {,
             transition={{ delay: 0.2, duration: 0.6 }}
             className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500/20 to-blue-500/20 backdrop-blur-sm border border-purple-500/30 rounded-full text-sm font-semibold mb-6"
           >
-<<<<<<< HEAD
             <Sparkles className="w-4 h-4 mr-2 text-yellow-400/>
 =======
             <Sparkles className="w-4 h-4 mr-2 text-yellow-400" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             January 15, 2026 - Revolutionary Breakthroughs
           </motion.div>
           
@@ -119,11 +107,9 @@ const January2026RevolutionaryBreakthroughsBanner: React.FC = () => {,
         </div>
 
         {/* Breakthroughs Grid */}
-<<<<<<< HEAD
         <div className="grid grid-cols-1 md: grid-cols-2 gap-8 mb-12">",
 =======
         <div className="grid grid-cols-1 md: grid-cols-2 gap-8 mb-12">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           {breakthroughs.map((breakthrough, index) => (
             <motion.div
               key={breakthrough.title}
@@ -132,7 +118,6 @@ const January2026RevolutionaryBreakthroughsBanner: React.FC = () => {,
               transition={{ delay: 0.5 + index * 0.1, duration: 0.6 }}
               className={`${breakthrough.bgColor} backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300 group hover:transform hover:scale-105`}`;
             >
-<<<<<<< HEAD
               <div className="flex items-start space-x-4">
                 <div className={`p-3 rounded-xl bg-gradient-to-r ${breakthrough.color}`}>`;
                   <breakthrough.icon className="w-6 h-6 text-white/>
@@ -146,7 +131,6 @@ const January2026RevolutionaryBreakthroughsBanner: React.FC = () => {,
                 </div>
                 <div className="flex-1">";
                   <h3 className="text-xl font-bold text-white mb-2 group-hover: text-purple-300 transition-colors">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                     {breakthrough.title}
                   </h3>
                   <p className="text-gray-300 mb-4 leading-relaxed">";
@@ -207,21 +191,17 @@ const January2026RevolutionaryBreakthroughsBanner: React.FC = () => {,
             <p className="text-lg text-gray-300 mb-6">";
               Ready to transform your enterprise with revolutionary AI?
             </p>
-<<<<<<< HEAD
             <div className="flex flex-col sm: flex-row gap-4 justify-center">",
 =======
             <div className="flex flex-col sm: flex-row gap-4 justify-center">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               <a title="Internal link"
                 href="/blog"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 hover: from-purple-600 hover:to-blue-600 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl",
               >
                 Explore All Content
-<<<<<<< HEAD
                 <ArrowRight className="ml-2 w-5 h-5/>
 =======
                 <ArrowRight className="ml-2 w-5 h-5" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </a>
               <a title="Internal link"
                 href="/services"

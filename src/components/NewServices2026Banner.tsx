@@ -6,7 +6,6 @@ className?: string;
 };
 
 export default function NewServices2026Banner({
-<<<<<<< HEAD
   variant = "showcase"
   showCount = 6
   className = ""
@@ -30,7 +29,6 @@ export default function NewServices2026Banner({
     { title: "AI FinTech Transformation", link: "/services/ai-fintech-transformation", tag: "FinTech" },";
     { title: "AI Sustainability & Green Tech", link: "/services/ai-sustainability-green-tech", tag: "Sustainability" },";
     { title: "AI Retail Automation", link: "/services/ai-retail-automation", tag: "Retail" },";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   ].slice(0, Math.max(1, showCount));
 
   return (
@@ -39,11 +37,9 @@ export default function NewServices2026Banner({
 `w-full ${`;
 variant === "hero"
 ? "bg-gradient-to-r from-indigo-600 to-purple-600"
-<<<<<<< HEAD
 : variant === "info"
 =======
 : variant === "info",";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 ? "bg-gradient-to-r from-emerald-50 to-teal-50"
 : "bg-gradient-to-r from-blue-600 to-purple-600"
 } ${variant === "info" ? "text-gray-900" : "text-white"} py-12 ${className}`
@@ -68,7 +64,6 @@ variant === "hero"
           </p>
         </div>
 
-<<<<<<< HEAD
         <div className="grid sm: grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">",
           {services.map((s) => (
             <Link key={s.link} to={s.link} className={`rounded-xl border ${variant === "info" ? "bg-white border-gray-100" : "bg-white/10 border-white/20"} p-6 hover:scale-105 transition-all duration-300`}> `;
@@ -78,7 +73,6 @@ variant === "hero"
           {services.map((s) => (
             <Link key={s.link} to={s.link} className={`rounded-xl border ${variant === "info" ? "bg-white border-gray-100" : "bg-white/10 border-white/20"} p-6 hover:scale-105 transition-all duration-300`}> `;
               <div className="text-xs uppercase tracking-wider mb-2 opacity-80">{s.tag}</div>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               <div className={`text-xl font-semibold ${variant === "info" ? "text-gray-900" : "text-white"}`}>{s.title}</div>`;
               <div className={`${variant === "info" ? "text-gray-500" : "text-white/70"} mt-2 text-sm`}>Learn more →</div>`;
             </Link>

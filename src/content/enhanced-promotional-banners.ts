@@ -14,7 +14,6 @@ endDate?: string;
 
 export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [,
   {
-<<<<<<< HEAD
     id: 'oct-01-autonomous-business-ops-2025',
     title: '🚀 JUST RELEASED: Autonomous Business Operations Platform — $650M Value Creation, 85% Cost Reduction in 90 Days!',
     description: 'Revolutionary AI platform eliminating manual processes across 40+ workflows. Fortune 100 achieved $650M annual value, 99.7% accuracy, 10x faster operations. 50% OFF through December + FREE 30-day proof of concept!',
@@ -1326,13 +1325,11 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [,
     priority: 2,,
     startDate: '2025-10-03',
   }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 ];
 
 // Oct 1, 2025 – Promote three new articles across the site
 enhancedPromotionalBanners.unshift(
   {
-<<<<<<< HEAD
     id: 'oct-08-value-realization-2025',',
     title: '🚀 NEW TODAY: Enterprise AI Value Realization — 90 Days to Outcomes',',
     description: 'KPI scorecards, evaluator gates, tiered routing + caches, and rollback-first ops.',',
@@ -1424,13 +1421,11 @@ enhancedPromotionalBanners.unshift(
     priority: 2,,
     startDate: '2025-10-01',
   }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 );
 
 // Oct 8, 2025 – Promote three new posts
 enhancedPromotionalBanners.unshift(
   {
-<<<<<<< HEAD
     id: 'oct-08-2025-new-content-drop',',
     title: '🚀 NEW TODAY (Oct 8): Governed Agents, Edge Private Analytics, Cache Strata v5',',
     description: 'Budgets + SLIs for 10k+ agents, zero‑PII analytics under 100ms, and cache tiers that cut cost 60–85%.',',
@@ -1522,13 +1517,11 @@ enhancedPromotionalBanners.unshift(
     priority: 3,,
     startDate: '2025-10-08',
   }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 );
 
 // Oct 7, 2025 – Promote two new posts
 enhancedPromotionalBanners.unshift(
   {
-<<<<<<< HEAD
     id: 'oct-07-autonomous-platforms-roi',',
     title: '🚀 NEW TODAY: Autonomous Platforms — 3–6x ROI in 90 Days',',
     description: 'Budgets, approvals, canary scorecards, and instant rollback. Ship autonomy safely with measurable value in weeks.',',
@@ -1574,12 +1567,10 @@ enhancedPromotionalBanners.unshift(
     priority: 1,,
     startDate: '2025-10-07',
   }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 );
 
 // Sept 30, 2025 – Fresh homepage banner promoting the new content
 enhancedPromotionalBanners.push({
-<<<<<<< HEAD
   id: 'oct-05-governed-autonomy-2025',',
   title: '🛡️ NEW: Governed Autonomy — KPI Scorecards, Budgets, Instant Rollback',',
   description: 'Ship agents that move fast without incidents. KPI-linked SLIs, approvals, and one-click rollback.',',
@@ -1595,14 +1586,12 @@ enhancedPromotionalBanners.push({
   ctaLink: '/blog/ai-2025-oct-05-enterprise-agents-scorecards-v2',';,
   variant: 'success',';,
   icon: '🛡️',';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   featured: true,,
   priority: 0,,
   startDate: '2025-10-05'
 });
 
 enhancedPromotionalBanners.push({
-<<<<<<< HEAD
   id: 'oct-05-edge-experiments-v5',',
   title: '⚡ NEW: Edge Private Experiments v5 — Zero‑PII A/B <100ms',',
   description: 'Signed configs, scoped IDs, DP noise. Global experiments without data risk.',',
@@ -1618,14 +1607,12 @@ enhancedPromotionalBanners.push({
   ctaLink: '/blog/ai-2025-oct-05-edge-private-experiments-v5',';,
   variant: 'info',';,
   icon: '⚡',';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   featured: true,,
   priority: 1,,
   startDate: '2025-10-05'
 });
 
 enhancedPromotionalBanners.push({
-<<<<<<< HEAD
   id: 'oct-05-cache-strata-v4',',
   title: '🧠 NEW: Cache Strata v4 — 60–85% Cost ↓, Tighter P95',',
   description: 'Feature → chunk → answer caches with freshness windows and coalescing.',',
@@ -1641,14 +1628,12 @@ enhancedPromotionalBanners.push({
   ctaLink: '/blog/ai-2025-oct-05-cache-strata-v4',';,
   variant: 'success',';,
   icon: '🧠',';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   featured: true,,
   priority: 2,,
   startDate: '2025-10-05'
 });
 
 enhancedPromotionalBanners.push({
-<<<<<<< HEAD
   id: 'sept30-fresh-content-2025',',
   title: '🚀 Fresh Drop: Governance Guardrails, Edge Inference, Agent Observability',',
   description: 'Three new deep-dives just landed. Ship fast with policy checks, deliver <100ms at the edge, and get live traces for agents.',',
@@ -1664,7 +1649,6 @@ enhancedPromotionalBanners.push({
   ctaLink: '/blog',';,
   variant: 'success',';,
   icon: '🚀',';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   featured: true,,
   priority: 0,,
   startDate: '2025-09-30'
@@ -1672,7 +1656,6 @@ enhancedPromotionalBanners.push({
 
 // Oct 1, 2025 – New homepage promos for the two brand-new posts
 enhancedPromotionalBanners.push({
-<<<<<<< HEAD
   id: 'oct-01-enterprise-platforms-2025',',
   title: '🏗️ NEW: Enterprise AI Platforms — SLAs, Guardrails, Proven ROI',',
   description: 'Golden paths, eval gates, and cost controls your teams adopt. Proven 30–70% savings.',',
@@ -1688,14 +1671,12 @@ enhancedPromotionalBanners.push({
   ctaLink: '/blog/ai-2025-oct-enterprise-ai-platforms',';,
   variant: 'success',';,
   icon: '🏗️',';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   featured: true,,
   priority: 0,,
   startDate: '2025-10-01'
 });
 
 enhancedPromotionalBanners.push({
-<<<<<<< HEAD
   id: 'oct-01-intelligent-automation-2025',',
   title: '🤖 NEW: Intelligent Automation — From Tickets to Outcomes',',
   description: 'Approvals, budgets, eval‑gated actions, and instant rollback for safe autonomy.',',
@@ -1711,7 +1692,6 @@ enhancedPromotionalBanners.push({
   ctaLink: '/blog/ai-2025-oct-intelligent-automation-breakthrough',';,
   variant: 'info',';,
   icon: '🤖',';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   featured: true,,
   priority: 1,,
   startDate: '2025-10-01'
@@ -1719,7 +1699,6 @@ enhancedPromotionalBanners.push({
 
 // Sept 30, 2025 – New homepage promo for latest content set
 enhancedPromotionalBanners.push({
-<<<<<<< HEAD
   id: 'sept30-autonomous-euai-edge-2025',',
   title: '🔥 New: Autonomous Infra, EU AI Act Playbook, Edge RAG Cold‑Starts',',
   description: 'Zero‑touch ops with budgets + live canaries, practical EU AI Act guardrails, and <100ms private answers with warm pools.',',
@@ -1735,7 +1714,6 @@ enhancedPromotionalBanners.push({
   ctaLink: '/blog',';,
   variant: 'success',';,
   icon: '✨',';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   featured: true,,
   priority: 0,,
   startDate: '2025-09-30'
@@ -1743,7 +1721,6 @@ enhancedPromotionalBanners.push({
 
 // October 1, 2025 – MEGA BREAKTHROUGH CONTENT DROP
 enhancedPromotionalBanners.push({
-<<<<<<< HEAD
   id: 'oct-01-2025-breakthrough-content-mega-launch',',
   title: '🎉 MEGA BREAKTHROUGH: 6 Revolutionary AI Solutions Just Released!',',
   description: 'Game-changing content drop! Digital Twins with 92% defect reduction, Hyper-Personalization achieving 8x conversions, Autonomous Networks with 99.999% uptime, Cognitive Process Mining saving 73%, Decision Intelligence 10x faster, and Intelligent Document AI. Transform your enterprise now!',',
@@ -1759,14 +1736,12 @@ enhancedPromotionalBanners.push({
   ctaLink: '/blog',';,
   variant: 'success',';,
   icon: '🎉',';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   featured: true,,
   priority: 0,,
   startDate: '2025-10-01'
 });
 
 enhancedPromotionalBanners.push({
-<<<<<<< HEAD
   id: 'digital-twin-manufacturing-oct-2025',',
   title: '🏭 NEW: AI-Powered Digital Twins - 92% Defect Reduction, $320M Savings',',
   description: 'Revolutionary digital twin systems transforming manufacturing with real-time simulation and predictive analytics. Achieve 87% faster time-to-market and unprecedented production optimization.',',
@@ -1782,14 +1757,12 @@ enhancedPromotionalBanners.push({
   ctaLink: '/blog/ai-powered-digital-twin-manufacturing-2025',';,
   variant: 'success',';,
   icon: '🏭',';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   featured: true,,
   priority: 1,,
   startDate: '2025-10-01'
 });
 
 enhancedPromotionalBanners.push({
-<<<<<<< HEAD
   id: 'hyper-personalization-oct-2025',',
   title: '🎯 NEW: Hyper-Personalization AI - 8x Conversion Rates, 94% Satisfaction',',
   description: 'Next-generation personalization engines delivering individualized experiences at microsecond scale. Drive $280M+ revenue lift through AI-powered customer engagement.',',
@@ -1805,14 +1778,12 @@ enhancedPromotionalBanners.push({
   ctaLink: '/blog/hyper-personalization-real-time-ai-2025',';,
   variant: 'info',';,
   icon: '🎯',';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   featured: true,,
   priority: 2,,
   startDate: '2025-10-01'
 });
 
 enhancedPromotionalBanners.push({
-<<<<<<< HEAD
   id: 'autonomous-network-ops-oct-2025',',
   title: '🌐 NEW: Autonomous Network Operations - 99.999% Uptime Guaranteed',',
   description: 'Self-managing network systems that detect, diagnose, and resolve issues autonomously. Achieve 96% faster incident resolution and 82% cost reduction with zero human intervention.',',
@@ -1828,14 +1799,12 @@ enhancedPromotionalBanners.push({
   ctaLink: '/blog/autonomous-network-operations-2025',';,
   variant: 'warning',';,
   icon: '🌐',';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   featured: true,,
   priority: 3,,
   startDate: '2025-10-01'
 });
 
 enhancedPromotionalBanners.push({
-<<<<<<< HEAD
   id: 'cognitive-process-mining-oct-2025',',
   title: '🔍 NEW: Cognitive Process Mining - 73% Cost Savings, 6x Faster Execution',',
   description: 'AI-powered process discovery that automatically identifies bottlenecks and implements improvements. Achieve $195M+ annual savings through intelligent automation.',',
@@ -1851,14 +1820,12 @@ enhancedPromotionalBanners.push({
   ctaLink: '/blog/cognitive-process-mining-automation-2025',';,
   variant: 'success',';,
   icon: '🔍',';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   featured: true,,
   priority: 4,,
   startDate: '2025-10-01'
 });
 
 enhancedPromotionalBanners.push({
-<<<<<<< HEAD
   id: 'decision-intelligence-oct-2025',',
   title: '🧠 NEW: AI-Augmented Decision Intelligence - 10x Faster, 97% Accuracy',',
   description: 'Revolutionary platforms enabling executives to make complex decisions 10x faster with unprecedented accuracy. Create $450M+ value through intelligent decision support.',',
@@ -1874,14 +1841,12 @@ enhancedPromotionalBanners.push({
   ctaLink: '/blog/ai-augmented-decision-intelligence-2025',';,
   variant: 'info',';,
   icon: '🧠',';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   featured: true,,
   priority: 5,,
   startDate: '2025-10-01'
 });
 
 enhancedPromotionalBanners.push({
-<<<<<<< HEAD
   id: 'intelligent-document-understanding-oct-2025',',
   title: '📄 NEW: Intelligent Document AI - Process 1M+ Documents Daily at 99.2% Accuracy',',
   description: 'Next-generation document understanding that comprehends context and automates workflows. Achieve 95% faster processing and $140M+ annual savings.',',
@@ -1897,7 +1862,6 @@ enhancedPromotionalBanners.push({
   ctaLink: '/blog/intelligent-document-understanding-2025',';,
   variant: 'success',';,
   icon: '📄',';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   featured: true,,
   priority: 6,,
   startDate: '2025-10-01'
@@ -1921,7 +1885,6 @@ export const getFeaturedBanners = (): EnhancedPromotionalBanner[] => {
 // Oct 6, 2025 – New content promo for three fresh posts
 enhancedPromotionalBanners.unshift(
   {
-<<<<<<< HEAD
     id: 'oct-06-2025-new-content-drop',',
     title: '🚀 NEW TODAY (Oct 6): Feature Stores, Policy Tests v3, Evaluator Gates',',
     description: 'Millisecond features at 10M+ RPS, production-predictive policy tests, and evaluator-driven releases.',',
@@ -2013,5 +1976,4 @@ enhancedPromotionalBanners.unshift(
     priority: 3,,
     startDate: '2025-10-06',
   }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 );

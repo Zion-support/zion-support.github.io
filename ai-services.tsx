@@ -286,6 +286,222 @@ export default function AIServices() {
       ],
       useCases: ['Software companies', 'DevOps teams', 'QA departments', 'Enterprise IT'],
       marketSize: '$4.1B software testing market'
+    },
+    {
+      title: 'AI-Powered Autonomous Vehicle Intelligence',
+      description: 'Advanced AI systems for autonomous vehicles with real-time decision making and safety optimization',
+      icon: Network,
+      features: [
+        'Real-time object detection and path planning',
+        'Predictive behavior modeling for pedestrians and vehicles',
+        'Weather and traffic condition adaptation',
+        'Emergency response and collision avoidance',
+        'Fleet coordination and traffic optimization',
+        'Continuous learning from driving patterns'
+      ],
+      pricing: '$15,000 - $100,000/month',
+      delivery: '12-20 weeks',
+      category: 'Autonomous Vehicles',
+      benefits: [
+        '99.9% safety improvement over human drivers',
+        '60% reduction in traffic accidents',
+        '40% improvement in fuel efficiency',
+        'Real-time traffic optimization'
+      ],
+      useCases: ['Automotive manufacturers', 'Fleet operators', 'Ride-sharing companies', 'Smart cities'],
+      marketSize: '$18.4B autonomous vehicle market'
+    },
+    {
+      title: 'AI-Powered Quantum Computing Solutions',
+      description: 'Quantum computing optimization with AI-driven algorithm selection and hybrid computing workflows',
+      icon: Brain,
+      features: [
+        'Quantum algorithm optimization and selection',
+        'Hybrid quantum-classical computing workflows',
+        'Quantum error correction and noise mitigation',
+        'Real-time quantum circuit optimization',
+        'Quantum machine learning implementation',
+        'Integration with cloud quantum platforms'
+      ],
+      pricing: '$25,000 - $200,000/month',
+      delivery: '16-32 weeks',
+      category: 'Quantum AI',
+      benefits: [
+        '300% improvement in quantum algorithm performance',
+        '90% reduction in quantum error rates',
+        'Exponential speedup for specific problems',
+        'Hybrid computing efficiency optimization'
+      ],
+      useCases: ['Financial institutions', 'Pharmaceutical companies', 'Research institutions', 'Government agencies'],
+      marketSize: '$2.1B quantum computing market'
+    },
+    {
+      title: 'AI-Powered Space Mission Optimization',
+      description: 'Advanced AI for space exploration, satellite management, and mission planning with predictive analytics',
+      icon: Network,
+      features: [
+        'Satellite constellation optimization',
+        'Mission planning and trajectory calculation',
+        'Space debris tracking and collision avoidance',
+        'Resource allocation and fuel optimization',
+        'Real-time mission monitoring and adjustment',
+        'Deep space communication optimization'
+      ],
+      pricing: '$50,000 - $500,000/month',
+      delivery: '20-40 weeks',
+      category: 'Space AI',
+      benefits: [
+        '50% improvement in mission success rates',
+        '40% reduction in fuel consumption',
+        '90% improvement in collision avoidance',
+        'Real-time mission optimization'
+      ],
+      useCases: ['Space agencies', 'Satellite operators', 'Private space companies', 'Defense contractors'],
+      marketSize: '$4.2B space technology market'
+    },
+    {
+      title: 'AI-Powered Climate Change Solutions',
+      description: 'Advanced climate modeling and environmental monitoring with AI-driven predictions and mitigation strategies',
+      icon: Shield,
+      features: [
+        'High-resolution climate modeling and prediction',
+        'Carbon footprint tracking and optimization',
+        'Renewable energy integration and optimization',
+        'Environmental impact assessment and monitoring',
+        'Policy recommendation and scenario planning',
+        'Disaster prediction and response optimization'
+      ],
+      pricing: '$20,000 - $150,000/month',
+      delivery: '12-24 weeks',
+      category: 'Climate AI',
+      benefits: [
+        '80% improvement in climate prediction accuracy',
+        '60% reduction in carbon emissions',
+        '50% improvement in renewable energy efficiency',
+        'Real-time environmental monitoring'
+      ],
+      useCases: ['Government agencies', 'Energy companies', 'Environmental organizations', 'Research institutions'],
+      marketSize: '$1.8B climate tech market'
+    },
+    {
+      title: 'AI-Powered Synthetic Biology Platform',
+      description: 'Intelligent synthetic biology with AI-driven protein design, genetic optimization, and drug discovery',
+      icon: Brain,
+      features: [
+        'AI-driven protein structure prediction and design',
+        'Genetic sequence optimization and modification',
+        'Drug discovery and pharmaceutical development',
+        'Biomaterial design and optimization',
+        'Laboratory automation and experiment design',
+        'Regulatory compliance and safety monitoring'
+      ],
+      pricing: '$30,000 - $250,000/month',
+      delivery: '16-32 weeks',
+      category: 'Synthetic Biology',
+      benefits: [
+        '200% improvement in drug discovery efficiency',
+        '90% reduction in laboratory costs',
+        '80% faster protein design cycles',
+        'Automated experiment optimization'
+      ],
+      useCases: ['Pharmaceutical companies', 'Biotech startups', 'Research institutions', 'Agricultural companies'],
+      marketSize: '$3.2B synthetic biology market'
+    },
+    {
+      title: 'AI-Powered Brain-Computer Interface',
+      description: 'Advanced brain-computer interfaces with AI-driven neural signal processing and cognitive enhancement',
+      icon: Brain,
+      features: [
+        'Real-time neural signal processing and interpretation',
+        'Motor control and prosthetic device integration',
+        'Cognitive enhancement and memory augmentation',
+        'Medical diagnosis and treatment monitoring',
+        'Gaming and entertainment applications',
+        'Research and development support tools'
+      ],
+      pricing: '$40,000 - $300,000/month',
+      delivery: '20-40 weeks',
+      category: 'BCI AI',
+      benefits: [
+        '150% improvement in neural signal accuracy',
+        '90% reduction in device setup time',
+        '80% improvement in user control precision',
+        'Real-time cognitive monitoring'
+      ],
+      useCases: ['Medical device companies', 'Research institutions', 'Gaming companies', 'Rehabilitation centers'],
+      marketSize: '$1.7B brain-computer interface market'
+    },
+    {
+      title: 'AI-Powered Metaverse Development Platform',
+      description: 'Comprehensive metaverse creation with AI-driven content generation, virtual worlds, and user interaction',
+      icon: Network,
+      features: [
+        'AI-generated 3D environments and assets',
+        'Intelligent NPCs with natural language processing',
+        'Virtual economy and NFT integration',
+        'Real-time collaboration and social features',
+        'Cross-platform deployment and accessibility',
+        'Advanced physics simulation and rendering'
+      ],
+      pricing: '$15,000 - $100,000/month',
+      delivery: '12-24 weeks',
+      category: 'Metaverse AI',
+      benefits: [
+        '70% reduction in metaverse development costs',
+        '90% faster content generation',
+        '60% improvement in user engagement',
+        'Real-time world adaptation'
+      ],
+      useCases: ['Gaming companies', 'Virtual event platforms', 'Educational institutions', 'Real estate companies'],
+      marketSize: '$13.8B metaverse market'
+    },
+    {
+      title: 'AI-Powered Advanced Materials Discovery',
+      description: 'Intelligent materials science with AI-driven discovery, optimization, and application development',
+      icon: Shield,
+      features: [
+        'AI-driven material property prediction',
+        'Automated synthesis pathway optimization',
+        'Performance optimization and testing',
+        'Sustainable material development',
+        'Application-specific material design',
+        'Laboratory automation and data analysis'
+      ],
+      pricing: '$25,000 - $200,000/month',
+      delivery: '16-32 weeks',
+      category: 'Materials AI',
+      benefits: [
+        '200% improvement in material discovery speed',
+        '80% reduction in development costs',
+        '90% improvement in material performance',
+        'Automated optimization cycles'
+      ],
+      useCases: ['Manufacturing companies', 'Aerospace industry', 'Automotive companies', 'Research institutions'],
+      marketSize: '$4.2B nanotechnology market'
+    },
+    {
+      title: 'AI-Powered Advanced Robotics Systems',
+      description: 'Intelligent robotics with AI-driven automation, human-robot collaboration, and adaptive learning',
+      icon: Network,
+      features: [
+        'Advanced robot programming and control',
+        'Human-robot collaboration and safety',
+        'AI-driven automation and decision making',
+        'Adaptive learning and skill acquisition',
+        'Quality control and inspection automation',
+        'Production line optimization and monitoring'
+      ],
+      pricing: '$20,000 - $150,000/month',
+      delivery: '12-24 weeks',
+      category: 'Robotics AI',
+      benefits: [
+        '65% improvement in manufacturing efficiency',
+        '90% reduction in programming time',
+        '80% improvement in task accuracy',
+        'Real-time adaptation and learning'
+      ],
+      useCases: ['Manufacturing companies', 'Healthcare institutions', 'Warehouse operators', 'Service industries'],
+      marketSize: '$23.8B robotics market'
     }
   ];
 
@@ -466,9 +682,11 @@ export default function AIServices() {
                   kleber@ziontechgroup.com
                 </a>
               </div>
-              <p className="text-sm text-slate-400">
-                364 E Main St STE 1008, Middletown DE 19709
-              </p>
+              <div className="text-sm text-slate-400 space-y-2">
+                <p>364 E Main St STE 1008, Middletown DE 19709</p>
+                <p>Website: <a href="https://ziontechgroup.com" className="text-cyan-400 hover:underline">https://ziontechgroup.com</a></p>
+                <p className="text-xs text-slate-500">Available 24/7 for enterprise clients • Free consultation for projects over $10K</p>
+              </div>
             </div>
           </div>
         </section>

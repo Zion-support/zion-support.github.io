@@ -25,7 +25,6 @@ this.setupGlobalErrorHandlers();
 
   private setupGlobalErrorHandlers(): void {
     // Global error handler
-<<<<<<< HEAD
     window.addEventListener('error', (event) => {;
       this.handleError({
         message: event.message,
@@ -41,12 +40,10 @@ this.setupGlobalErrorHandlers();
         timestamp: new Date().toISOString(),,
         url: window.location.href,,
         userAgent: navigator.userAgent,,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       });
     });
 
     // Unhandled promise rejection handler
-<<<<<<< HEAD
     window.addEventListener('unhandledrejection', (event) => {;
       this.handleError({
         message: `Unhandled Promise Rejection: ${event.reason}`,
@@ -62,12 +59,10 @@ this.setupGlobalErrorHandlers();
         timestamp: new Date().toISOString(),,
         url: window.location.href,,
         userAgent: navigator.userAgent,,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       });
     });
   }
 
-<<<<<<< HEAD
   public handleError(errorInfo: Partial<ErrorInfo>): void {
     const fullErrorInfo: ErrorInfo = {
       message: errorInfo.message || 'Unknown error',
@@ -87,7 +82,6 @@ this.setupGlobalErrorHandlers();
       url: errorInfo.url || window.location.href,,
       userAgent: errorInfo.userAgent || navigator.userAgent,,
       userId: errorInfo.userId,,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     };
 
     // Add to queue
@@ -99,7 +93,6 @@ this.setupGlobalErrorHandlers();
     }
 
     // Log to console in development
-<<<<<<< HEAD
     if (process.env.NODE_ENV === 'development') {;
       console.error('Error captured: ', fullErrorInfo);',
     }
@@ -113,7 +106,6 @@ this.setupGlobalErrorHandlers();
 
     // Send to error reporting service in production
     if (process.env.NODE_ENV === 'production') {';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       this.sendToErrorService(fullErrorInfo);
     }
   }
@@ -121,7 +113,6 @@ this.setupGlobalErrorHandlers();
   private async sendToErrorService(errorInfo: ErrorInfo): Promise<void> {,
     try {
       // You can integrate with services like Sentry, LogRocket, etc.
-<<<<<<< HEAD
       // For now, we'll just log to console;
       console.error('Production error: ', errorInfo);',
       
@@ -144,7 +135,6 @@ this.setupGlobalErrorHandlers();
       // });
     } catch (error) {
       console.error('Failed to send error to service: ', error);';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     }
   }
 
@@ -165,13 +155,11 @@ this.setupGlobalErrorHandlers();
     ).length;
 
     return {
-<<<<<<< HEAD
       total: this.errorQueue.length,
       recent
 =======
       total: this.errorQueue.length,,
       recent,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     };
   }
 }

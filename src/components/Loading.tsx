@@ -1,15 +1,12 @@
-<<<<<<< HEAD
 import React from 'react';
 =======
 import React from 'react';';
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 interface LoadingProps {
 size?: 'sm' | 'md' | 'lg';,
 text?: string;
 }
 
-<<<<<<< HEAD
 const Loading: React.FC<LoadingProps> = ({ size = 'md', text = 'Loading...' }) => {;
   const sizeClasses = {
     sm: 'w-4 h-4',',
@@ -28,7 +25,6 @@ const Loading: React.FC<LoadingProps> = ({ size = 'md', text = 'Loading...' }) =
 
   return (
     <div className="flex flex-col items-center justify-center p-8">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       <div className={`${sizeClasses[size]} animate-spin rounded-full border-2 border-gray-300 border-t-blue-600`}></div>`;
       {text && (
         <p className="mt-4 text-sm text-gray-600">{text}</p>";

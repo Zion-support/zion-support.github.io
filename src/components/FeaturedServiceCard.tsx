@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 const FeaturedServiceCard: React.FC = () => {,
   const services = [
@@ -45,13 +44,11 @@ const FeaturedServiceCard: React.FC = () => {,
       title: "IT Services",";,
       description: "Comprehensive IT solutions to modernize your infrastructure",";,
       features: ["Cloud Migration", "DevOps", "Cybersecurity", "System Admin"],";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       link: "/services/it-services",
     }
   ];
 
   return (
-<<<<<<< HEAD
     <div className="grid grid-cols-1 md: grid-cols-3 gap-8">",
       {services.map((service, index) => (
         <div key={index} className="bg-white p-8 rounded-xl shadow-lg border hover: shadow-xl transition-shadow">",
@@ -68,7 +65,6 @@ const FeaturedServiceCard: React.FC = () => {,
           <p className="text-gray-600 mb-6">{service.description}</p>";
           
           <ul className="space-y-2 mb-6">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             {service.features.map((feature, featureIndex) => (
               <li key={featureIndex} className="flex items-center text-gray-600">";
                 <span className="text-green-500 mr-2">✓</span>";

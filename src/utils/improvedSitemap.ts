@@ -4,28 +4,23 @@
  */
 
 export interface SitemapURL {
-<<<<<<< HEAD
 loc: string,
 =======
 loc: string;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 lastmod?: string;
 changefreq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';';
 priority?: number;
-<<<<<<< HEAD
 images?: Array<{
 loc: string;
 =======
 images?: Array<{,
 loc: string;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 caption?: string;
 title?: string;
 }>;
 }
 
 export interface SitemapConfig {
-<<<<<<< HEAD
 baseUrl: string,
 routes: Array<{,,
 path: string,
@@ -33,7 +28,6 @@ path: string,
 baseUrl: string;,
 routes: Array<{,,
 path: string;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 priority?: number;
 changefreq?: SitemapURL['changefreq'];';
 dynamic?: boolean;
@@ -41,7 +35,6 @@ dynamic?: boolean;
 }
 
 export class ImprovedSitemapGenerator {
-<<<<<<< HEAD
 private config: SitemapConfig;
 private urls: SitemapURL[] = [];
 constructor(config: SitemapConfig) {
@@ -49,7 +42,6 @@ constructor(config: SitemapConfig) {
 private config: SitemapConfig;,
 private urls: SitemapURL[] = [];,
 constructor(config: SitemapConfig) {,,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 this.config = config;
 }
 
@@ -61,7 +53,6 @@ this.config = config;
     this.config.routes.forEach(route => {
       if (!route.dynamic) {
         this.addURL({
-<<<<<<< HEAD
           loc: `${this.config.baseUrl}${route.path}`,
           lastmod: new Date().toISOString(),
           changefreq: route.changefreq || 'weekly',
@@ -71,7 +62,6 @@ this.config = config;
           lastmod: new Date().toISOString(),,
           changefreq: route.changefreq || 'weekly',';,
           priority: route.priority || 0.5,,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
         });
       }
     });
@@ -79,7 +69,6 @@ this.config = config;
 
   public addBlogPosts(posts: Array<{ slug: string; date: string; images?: string[] }>): void {
 posts.forEach(post => {
-<<<<<<< HEAD
 const url: SitemapURL = {
 loc: `${this.config.baseUrl
 }/blog/${post.slug}`,
@@ -93,17 +82,14 @@ loc: `${this.config.baseUrl`;
         lastmod: post.date,,
         changefreq: 'monthly',';,
         priority: 0.8,,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       };
 
       if (post.images && post.images.length > 0) {
         url.images = post.images.map(img => ({
-<<<<<<< HEAD
           loc: `${this.config.baseUrl}${img}`}));
 =======
           loc: `${this.config.baseUrl}${img}`,`;
         }));
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       }
 
       this.addURL(url);
@@ -113,7 +99,6 @@ loc: `${this.config.baseUrl`;
   public addCaseStudies(caseStudies: Array<{ slug: string; date: string }>): void {
     caseStudies.forEach(study => {
       this.addURL({
-<<<<<<< HEAD
         loc: `${this.config.baseUrl}/case-studies/${study.slug}`,
         lastmod: study.date,
         changefreq: 'monthly',
@@ -123,7 +108,6 @@ loc: `${this.config.baseUrl`;
         lastmod: study.date,,
         changefreq: 'monthly',';,
         priority: 0.7,,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       });
     });
   }
@@ -131,7 +115,6 @@ loc: `${this.config.baseUrl`;
   public addServices(services: Array<{ slug: string }>): void {
     services.forEach(service => {
       this.addURL({
-<<<<<<< HEAD
         loc: `${this.config.baseUrl}/services/${service.slug}`,
         lastmod: new Date().toISOString(),
         changefreq: 'monthly',
@@ -141,13 +124,11 @@ loc: `${this.config.baseUrl`;
         lastmod: new Date().toISOString(),,
         changefreq: 'monthly',';,
         priority: 0.9,,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       });
     });
   }
 
   public generateXML(): string {
-<<<<<<< HEAD
 let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
 xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"';
 xml += ' xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n';
@@ -159,7 +140,6 @@ xml += '<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9"';';,
 xml += ' xmlns: image="http://www.google.com/schemas/sitemap-image/1.1">\n';';,
 this.urls.forEach(url => {
 xml += '  <url>\n';';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 xml += `    <loc>${this.escapeXML(url.loc)`;
 }</loc>\n`;`;
       
@@ -177,7 +157,6 @@ xml += `    <loc>${this.escapeXML(url.loc)`;
 
       if (url.images && url.images.length > 0) {
 url.images.forEach(image => {
-<<<<<<< HEAD
 xml += '    <image:image>\n';
 xml += `      <image:loc>${this.escapeXML(image.loc)
 }</image:loc>\n`;
@@ -199,7 +178,6 @@ xml += `      <image:loc>${this.escapeXML(image.loc)`;
             xml += `      <image:title>${this.escapeXML(image.title)}</image: title>\n`;,`;
           }
           xml += '    </image: image>\n';';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
         });
       }
 
@@ -211,7 +189,6 @@ xml += `      <image:loc>${this.escapeXML(image.loc)`;
   }
 
   public generateSitemapIndex(sitemaps: Array<{ loc: string; lastmod?: string }>): string {
-<<<<<<< HEAD
 let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
 xml += '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
 sitemaps.forEach(sitemap => {
@@ -221,7 +198,6 @@ let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';';
 xml += '<sitemapindex xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">\n';';,
 sitemaps.forEach(sitemap => {
 xml += '  <sitemap>\n';';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 xml += `    <loc>${this.escapeXML(sitemap.loc)`;
 }</loc>\n`;`;
       if (sitemap.lastmod) {
@@ -236,7 +212,6 @@ xml += `    <loc>${this.escapeXML(sitemap.loc)`;
 
   private escapeXML(str: string): string {,
     return str
-<<<<<<< HEAD
       .replace(/&/g, '&amp;');
       .replace(/</g, '&lt;');
       .replace(/>/g, '&gt;');
@@ -248,7 +223,6 @@ xml += `    <loc>${this.escapeXML(sitemap.loc)`;
       .replace(/>/g, '&gt;')';
       .replace(/"/g, '&quot;')';
       .replace(/'/g, '&apos;');';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   }
 
   public getURLCount(): number {
@@ -265,7 +239,6 @@ export const createSitemapGenerator = (baseUrl: string): ImprovedSitemapGenerato
   const config: SitemapConfig = {,
     baseUrl,
     routes: [,
-<<<<<<< HEAD
       { path: '/', priority: 1.0, changefreq: 'daily' }
       { path: '/about', priority: 0.8, changefreq: 'monthly' }
       { path: '/contact', priority: 0.9, changefreq: 'monthly' }
@@ -281,7 +254,6 @@ export const createSitemapGenerator = (baseUrl: string): ImprovedSitemapGenerato
       { path: '/case-studies', priority: 0.8, changefreq: 'weekly' },';
       { path: '/services', priority: 0.9, changefreq: 'monthly' },';
     ],
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   };
 
   return new ImprovedSitemapGenerator(config);

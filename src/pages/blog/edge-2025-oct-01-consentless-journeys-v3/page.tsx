@@ -9,7 +9,6 @@ export default function ConsentlessJourneysV3(): React.JSX.Element {
           name="description"
           content="Scoped IDs, signed configs, and on-device models for zero‑PII journeys worldwide under 100ms." /><link
           rel="canonical"
-<<<<<<< HEAD
           href="https://ziontechgroup.com/blog/edge-2025-oct-01-consentless-journeys-v3",
         />
       </Helmet>
@@ -27,7 +26,6 @@ export default function ConsentlessJourneysV3(): React.JSX.Element {
         <h1 className="text-4xl md: text-5xl font-bold mb-4">Consentless Journeys v3</h1>";,
         <p className="text-zion-slate-light mb-8">Private Personalization &lt;100ms</p>";
         <div className="prose prose-invert max-w-3xl">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           <p>
             Deliver privacy‑first personalization with scoped identifiers, signed
             configuration, and on‑device models. Achieve global &lt;100ms UX without
@@ -38,13 +36,11 @@ export default function ConsentlessJourneysV3(): React.JSX.Element {
             redaction, and differential privacy signals for compliant analytics.
           </p>
         </div>
-<<<<<<< HEAD
         <div className="mt-8">
           <Link to="/blog" className="text-cyan-300 hover: underline">← Back to Blog</Link>",
 =======
         <div className="mt-8">";
           <Link to="/blog" className="text-cyan-300 hover: underline">← Back to Blog</Link>";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
         </div>
       </div>
     </div>

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Cloud } from 'lucide-react';
@@ -15,80 +14,66 @@ Cloud
 import Header from '../../components/Header';';
 import Footer from '../../components/Footer';';
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 const EdgeComputingAI: React.FC = () => {,
   const features = [
     {
       icon: Cpu,,
-<<<<<<< HEAD
       title: "Edge AI Processing",",
       description: "Deploy AI models directly on edge devices for real-time inference without cloud dependency.",",
 =======
       title: "Edge AI Processing",";,
       description: "Deploy AI models directly on edge devices for real-time inference without cloud dependency.",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       benefit: "Sub-10ms response times",
     },
     {
       icon: Zap,,
-<<<<<<< HEAD
       title: "Real-Time Analytics",",
       description: "Process and analyze data at the edge for instant insights and immediate action triggers.",",
 =======
       title: "Real-Time Analytics",";,
       description: "Process and analyze data at the edge for instant insights and immediate action triggers.",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       benefit: "99.9% uptime with offline capability",
     },
     {
       icon: Wifi,,
-<<<<<<< HEAD
       title: "Low-Latency Communication",",
       description: "Optimized protocols for minimal latency between edge devices and central systems.",",
 =======
       title: "Low-Latency Communication",";,
       description: "Optimized protocols for minimal latency between edge devices and central systems.",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       benefit: "90% reduction in network latency",
     },
     {
       icon: Shield,,
-<<<<<<< HEAD
       title: "Enhanced Security",",
       description: "Data processing at the edge reduces exposure and provides local security controls.",",
 =======
       title: "Enhanced Security",";,
       description: "Data processing at the edge reduces exposure and provides local security controls.",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       benefit: "Zero data transmission vulnerabilities",
     },
     {
       icon: Clock,,
-<<<<<<< HEAD
       title: "Continuous Operation",",
       description: "Edge devices operate independently, ensuring functionality even during network outages.",",
 =======
       title: "Continuous Operation",";,
       description: "Edge devices operate independently, ensuring functionality even during network outages.",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       benefit: "100% local processing capability",
     },
     {
       icon: Users,,
-<<<<<<< HEAD
       title: "Scalable Deployment",",
       description: "Easily scale from single devices to thousands of edge nodes across multiple locations.",",
 =======
       title: "Scalable Deployment",";,
       description: "Easily scale from single devices to thousands of edge nodes across multiple locations.",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       benefit: "Unlimited edge node deployment",
     }
   ];
 
   const pricing = [
     {
-<<<<<<< HEAD
       name: "Edge Starter",
       price: "$1,999",
       period: "/month",
@@ -200,13 +185,11 @@ const EdgeComputingAI: React.FC = () => {,
         "Training & consultation"
       ],
       popular: false,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     }
   ];
 
   const testimonials = [
     {
-<<<<<<< HEAD
       name: "Robert Kim",",
       role: "CTO, Manufacturing Solutions",",
       content: "Edge AI processing reduced our production line response times from 500ms to 8ms. This enabled real-time quality control that increased our product quality by 40%.",",
@@ -214,12 +197,10 @@ const EdgeComputingAI: React.FC = () => {,
       name: "Robert Kim",";,
       role: "CTO, Manufacturing Solutions",";,
       content: "Edge AI processing reduced our production line response times from 500ms to 8ms. This enabled real-time quality control that increased our product quality by 40%.",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       rating: 5,,
       company: "Manufacturing Solutions",
     },
     {
-<<<<<<< HEAD
       name: "Lisa Chen",",
       role: "VP Engineering, Smart City Initiative",",
       content: "The edge computing platform enabled us to process traffic data locally, reducing network costs by 60% while improving traffic management response times by 10x.",",
@@ -227,12 +208,10 @@ const EdgeComputingAI: React.FC = () => {,
       name: "Lisa Chen",";,
       role: "VP Engineering, Smart City Initiative",";,
       content: "The edge computing platform enabled us to process traffic data locally, reducing network costs by 60% while improving traffic management response times by 10x.",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       rating: 5,,
       company: "Smart City Initiative",
     },
     {
-<<<<<<< HEAD
       name: "Dr. Michael Rodriguez",",
       role: "Head of Innovation, Healthcare Systems",",
       content: "Edge AI deployment in our medical devices enabled real-time patient monitoring with zero network dependency. Patient safety improved significantly with instant alerts.",",
@@ -240,7 +219,6 @@ const EdgeComputingAI: React.FC = () => {,
       name: "Dr. Michael Rodriguez",";,
       role: "Head of Innovation, Healthcare Systems",";,
       content: "Edge AI deployment in our medical devices enabled real-time patient monitoring with zero network dependency. Patient safety improved significantly with instant alerts.",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       rating: 5,,
       company: "Healthcare Systems",
     }
@@ -248,7 +226,6 @@ const EdgeComputingAI: React.FC = () => {,
 
   const useCases = [
     {
-<<<<<<< HEAD
       title: "Industrial IoT",",
       icon: Monitor,,
       description: "Real-time monitoring and control of industrial equipment with predictive maintenance capabilities.",",
@@ -294,13 +271,11 @@ const EdgeComputingAI: React.FC = () => {,
       icon: Database,,
       description: "Intelligent inventory management, customer behavior analysis, and automated checkout systems.",";,
       benefits: ["35% improvement in inventory accuracy", "25% increase in sales", "40% reduction in checkout time"]";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     }
   ];
 
   const technologies = [
     {
-<<<<<<< HEAD
       name: "TensorFlow Lite",",
       description: "Optimized AI model deployment for edge devices with minimal resource requirements.",
     },
@@ -344,7 +319,6 @@ const EdgeComputingAI: React.FC = () => {,
     },
     {
       name: "Custom Protocols",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       description: "Tailored communication protocols optimized for specific edge computing requirements.",
     }
   ];
@@ -355,21 +329,18 @@ const EdgeComputingAI: React.FC = () => {,
         <title>Edge Computing AI - Zion Tech Group | Real-Time Edge Intelligence</title>
         <meta
           name="description"
-<<<<<<< HEAD
           content="Deploy AI at the edge for real-time processing with sub-10ms response times. Edge computing solutions for IoT, industrial automation, smart cities, and healthcare applications." /><meta name="keywords" content="edge computing, edge AI, IoT, real-time processing, edge analytics, distributed computing, edge deployment, low latency AI" /><link rel="canonical" href="https://ziontechgroup.com/services/edge-computing-ai/>",
 =======
           content="Deploy AI at the edge for real-time processing with sub-10ms response times. Edge computing solutions for IoT, industrial automation, smart cities, and healthcare applications."
         />
         <meta name="keywords" content="edge computing, edge AI, IoT, real-time processing, edge analytics, distributed computing, edge deployment, low latency AI" />";
         <link rel="canonical" href="https: //ziontechgroup.com/services/edge-computing-ai" />";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       </Helmet>
 
       <Header />
       
       <main className="min-h-screen bg-white">";
         {/* Hero Section */}
-<<<<<<< HEAD
         <section className="bg-gradient-to-br from-teal-900 via-cyan-800 to-blue-900 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
             <div className="text-center">
@@ -393,16 +364,13 @@ const EdgeComputingAI: React.FC = () => {,
                 Transform your IoT, industrial, and smart city applications with distributed intelligence.
               </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 <a
                   href="/contact"
                   className="inline-flex items-center px-8 py-4 bg-teal-600 hover: bg-teal-700 text-white font-semibold rounded-lg transition-colors",
                 >
-<<<<<<< HEAD
                   <Phone className="w-5 h-5 mr-2/>
 =======
                   <Phone className="w-5 h-5 mr-2" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   Schedule Demo
                 </a>
                 <a
@@ -410,11 +378,9 @@ const EdgeComputingAI: React.FC = () => {,
                   className="inline-flex items-center px-8 py-4 border-2 border-white text-white hover: bg-white hover:text-teal-900 font-semibold rounded-lg transition-colors",
                 >
                   View Pricing
-<<<<<<< HEAD
                   <ArrowRight className="w-5 h-5 ml-2/>
 =======
                   <ArrowRight className="w-5 h-5 ml-2" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 </a>
               </div>
             </div>
@@ -422,7 +388,6 @@ const EdgeComputingAI: React.FC = () => {,
         </section>
 
         {/* Key Benefits */}
-<<<<<<< HEAD
         <section className="py-16 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
             <div className="text-center mb-12">
@@ -432,7 +397,6 @@ const EdgeComputingAI: React.FC = () => {,
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";,
             <div className="text-center mb-12">";
               <h2 className="text-4xl font-bold text-gray-900 mb-4">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 Why Choose Edge Computing AI?
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
@@ -440,7 +404,6 @@ const EdgeComputingAI: React.FC = () => {,
               </p>
             </div>
 
-<<<<<<< HEAD
             <div className="grid md: grid-cols-4 gap-8">",
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-teal-100 rounded-full mb-4">
@@ -450,12 +413,10 @@ const EdgeComputingAI: React.FC = () => {,
               <div className="text-center">";
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-teal-100 rounded-full mb-4">";
                   <Zap className="w-8 h-8 text-teal-600" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Sub-10ms Response</h3>";
                 <p className="text-gray-600">Ultra-low latency processing</p>";
               </div>
-<<<<<<< HEAD
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">
                   <Shield className="w-8 h-8 text-blue-600/>
@@ -463,12 +424,10 @@ const EdgeComputingAI: React.FC = () => {,
               <div className="text-center">";
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">";
                   <Shield className="w-8 h-8 text-blue-600" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Offline Capability</h3>";
                 <p className="text-gray-600">Works without network connection</p>";
               </div>
-<<<<<<< HEAD
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-cyan-100 rounded-full mb-4">
                   <Clock className="w-8 h-8 text-cyan-600/>
@@ -476,12 +435,10 @@ const EdgeComputingAI: React.FC = () => {,
               <div className="text-center">";
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-cyan-100 rounded-full mb-4">";
                   <Clock className="w-8 h-8 text-cyan-600" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">90% Latency Reduction</h3>";
                 <p className="text-gray-600">Massive network performance gains</p>";
               </div>
-<<<<<<< HEAD
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">
                   <Users className="w-8 h-8 text-green-600/>
@@ -489,7 +446,6 @@ const EdgeComputingAI: React.FC = () => {,
               <div className="text-center">";
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">";
                   <Users className="w-8 h-8 text-green-600" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Unlimited Scale</h3>";
                 <p className="text-gray-600">Deploy thousands of edge nodes</p>";
@@ -499,7 +455,6 @@ const EdgeComputingAI: React.FC = () => {,
         </section>
 
         {/* Use Cases */}
-<<<<<<< HEAD
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
             <div className="text-center mb-16">
@@ -509,7 +464,6 @@ const EdgeComputingAI: React.FC = () => {,
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";,
             <div className="text-center mb-16">";
               <h2 className="text-4xl font-bold text-gray-900 mb-4">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 Industry Applications
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
@@ -517,7 +471,6 @@ const EdgeComputingAI: React.FC = () => {,
               </p>
             </div>
 
-<<<<<<< HEAD
             <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">",
               {useCases.map((useCase, index) => {
                 const Icon = useCase.icon;
@@ -533,13 +486,11 @@ const EdgeComputingAI: React.FC = () => {,
                   <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">";,
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-teal-100 rounded-full mb-6">";
                       <Icon className="w-8 h-8 text-teal-600" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                     </div>
                     <h3 className="text-xl font-bold text-gray-900 mb-4">{useCase.title}</h3>";
                     <p className="text-gray-600 mb-6">{useCase.description}</p>";
                     <ul className="space-y-2">";
                       {useCase.benefits.map((benefit, benefitIndex) => (
-<<<<<<< HEAD
                         <li key={benefitIndex} className="flex items-center text-sm">
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0/>
                           <span className="text-gray-700">{benefit}</span>
@@ -547,7 +498,6 @@ const EdgeComputingAI: React.FC = () => {,
                         <li key={benefitIndex} className="flex items-center text-sm">";
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />";
                           <span className="text-gray-700">{benefit}</span>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                         </li>
                       ))}
                     </ul>
@@ -559,7 +509,6 @@ const EdgeComputingAI: React.FC = () => {,
         </section>
 
         {/* Technologies */}
-<<<<<<< HEAD
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
             <div className="text-center mb-16">
@@ -569,7 +518,6 @@ const EdgeComputingAI: React.FC = () => {,
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";,
             <div className="text-center mb-16">";
               <h2 className="text-4xl font-bold text-gray-900 mb-4">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 Supported Technologies
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
@@ -577,11 +525,9 @@ const EdgeComputingAI: React.FC = () => {,
               </p>
             </div>
 
-<<<<<<< HEAD
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
 =======
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               {technologies.map((tech, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200">";
                   <h3 className="text-xl font-bold text-gray-900 mb-4">{tech.name}</h3>";
@@ -593,7 +539,6 @@ const EdgeComputingAI: React.FC = () => {,
         </section>
 
         {/* Features */}
-<<<<<<< HEAD
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
             <div className="text-center mb-16">
@@ -603,7 +548,6 @@ const EdgeComputingAI: React.FC = () => {,
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";,
             <div className="text-center mb-16">";
               <h2 className="text-4xl font-bold text-gray-900 mb-4">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 Advanced Edge Computing Features
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
@@ -611,7 +555,6 @@ const EdgeComputingAI: React.FC = () => {,
               </p>
             </div>
 
-<<<<<<< HEAD
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
               {features.map((feature, index) => {
                 const Icon = feature.icon;
@@ -637,7 +580,6 @@ const EdgeComputingAI: React.FC = () => {,
                     <p className="text-gray-600 mb-4">{feature.description}</p>";
                     <div className="inline-flex items-center text-green-600 font-semibold text-sm">";
                       <CheckCircle className="w-4 h-4 mr-1" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                       {feature.benefit}
                     </div>
                   </div>
@@ -648,7 +590,6 @@ const EdgeComputingAI: React.FC = () => {,
         </section>
 
         {/* Pricing */}
-<<<<<<< HEAD
         <section id="pricing" className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
             <div className="text-center mb-16">
@@ -658,7 +599,6 @@ const EdgeComputingAI: React.FC = () => {,
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";,
             <div className="text-center mb-16">";
               <h2 className="text-4xl font-bold text-gray-900 mb-4">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 Transparent Pricing for Every Scale
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
@@ -666,11 +606,9 @@ const EdgeComputingAI: React.FC = () => {,
               </p>
             </div>
 
-<<<<<<< HEAD
             <div className="grid md: grid-cols-3 gap-8">",
 =======
             <div className="grid md: grid-cols-3 gap-8">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               {pricing.map((plan, index) => (
                 <div key={index} className={`bg-white rounded-2xl shadow-lg p-8 ${plan.popular ? 'ring-2 ring-teal-500 relative' : ''}`}>`;
                   {plan.popular && (
@@ -690,7 +628,6 @@ const EdgeComputingAI: React.FC = () => {,
                   </div>
                   <ul className="space-y-4 mb-8">";
                     {plan.features.map((feature, featureIndex) => (
-<<<<<<< HEAD
                       <li key={featureIndex} className="flex items-center">
                         <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0/>
                         <span className="text-gray-700">{feature}</span>
@@ -698,7 +635,6 @@ const EdgeComputingAI: React.FC = () => {,
                       <li key={featureIndex} className="flex items-center">";
                         <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />";
                         <span className="text-gray-700">{feature}</span>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                       </li>
                     ))}
                   </ul>
@@ -707,11 +643,9 @@ const EdgeComputingAI: React.FC = () => {,
                     className={
 `w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${`;
 plan.popular
-<<<<<<< HEAD
 ? 'bg-teal-600 text-white hover:bg-teal-700'
 =======
 ? 'bg-teal-600 text-white hover: bg-teal-700',';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
 }`}`;
                   >
@@ -728,18 +662,15 @@ plan.popular
                 className="inline-flex items-center text-teal-600 hover: text-teal-700 font-semibold",
               >
                 Contact our Edge Computing Team
-<<<<<<< HEAD
                 <ArrowRight className="w-4 h-4 ml-1/>
 =======
                 <ArrowRight className="w-4 h-4 ml-1" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </a>
             </div>
           </div>
         </section>
 
         {/* Testimonials */}
-<<<<<<< HEAD
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
             <div className="text-center mb-16">
@@ -749,7 +680,6 @@ plan.popular
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";,
             <div className="text-center mb-16">";
               <h2 className="text-4xl font-bold text-gray-900 mb-4">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 What Our Clients Say
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
@@ -757,20 +687,16 @@ plan.popular
               </p>
             </div>
 
-<<<<<<< HEAD
             <div className="grid md: grid-cols-3 gap-8">",
 =======
             <div className="grid md: grid-cols-3 gap-8">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200">";
                   <div className="flex items-center mb-4">";
                     {[...Array(testimonial.rating)].map((_, i) => (
-<<<<<<< HEAD
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current/>
 =======
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                     ))}
                   </div>
                   <blockquote className="text-gray-700 mb-6 italic">";
@@ -788,7 +714,6 @@ plan.popular
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
         <section className="py-20 bg-gradient-to-br from-teal-900 via-cyan-800 to-blue-900 text-white">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">",
             <h2 className="text-4xl font-bold mb-6">
@@ -796,26 +721,21 @@ plan.popular
         <section className="py-20 bg-gradient-to-br from-teal-900 via-cyan-800 to-blue-900 text-white">";
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">";,
             <h2 className="text-4xl font-bold mb-6">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               Ready to Deploy AI at the Edge?
             </h2>
             <p className="text-xl text-teal-100 max-w-3xl mx-auto mb-8">";
               Transform your applications with real-time edge AI processing and achieve unprecedented performance.
             </p>
-<<<<<<< HEAD
             <div className="flex flex-col sm: flex-row gap-4 justify-center">",
 =======
             <div className="flex flex-col sm: flex-row gap-4 justify-center">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               <a
                 href="/contact"
                 className="inline-flex items-center px-8 py-4 bg-teal-600 hover: bg-teal-700 text-white font-semibold rounded-lg transition-colors",
               >
-<<<<<<< HEAD
                 <Phone className="w-5 h-5 mr-2/>
 =======
                 <Phone className="w-5 h-5 mr-2" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 Schedule Demo
               </a>
               <a
@@ -823,11 +743,9 @@ plan.popular
                 className="inline-flex items-center px-8 py-4 border-2 border-white text-white hover: bg-white hover:text-teal-900 font-semibold rounded-lg transition-colors",
               >
                 View Success Stories
-<<<<<<< HEAD
                 <ArrowRight className="w-5 h-5 ml-2/>
 =======
                 <ArrowRight className="w-5 h-5 ml-2" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </a>
             </div>
           </div>

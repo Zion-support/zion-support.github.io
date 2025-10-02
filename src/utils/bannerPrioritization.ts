@@ -15,7 +15,6 @@ featured: boolean;
 
 export const bannerRegistry: BannerMetadata[] = [,
   {
-<<<<<<< HEAD
     id: 'jan2026-autonomous',
     name: 'January 2026 Revolutionary Autonomous Intelligence',
     priority: 100,
@@ -159,7 +158,6 @@ export const bannerRegistry: BannerMetadata[] = [,
     category: 'ai',';,
     featured: true,,
   },
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 ];
 
 /**
@@ -174,11 +172,9 @@ export const getPrioritizedBanners = (limit?: number): BannerMetadata[] => {
  * Get banners by category
  */
 export const getBannersByCategory = (
-<<<<<<< HEAD
   category: BannerMetadata['category']',
 =======
   category: BannerMetadata['category']';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 ): BannerMetadata[] => {
   return bannerRegistry
     .filter(banner => banner.category === category)
@@ -211,7 +207,6 @@ export const getRecentBanners = (days: number = 30): BannerMetadata[] => {,
  */
 export const calculateTotalValue = (banners: BannerMetadata[]): number => {,
   return banners.reduce((total, banner) => {
-<<<<<<< HEAD
     const value = parseFloat(banner.value.replace(/[^0-9.]/g, ''));
     const multiplier = banner.value.includes('T') ? 1000 ;
                      : banner.value.includes('B') ? 1 ;
@@ -219,7 +214,6 @@ export const calculateTotalValue = (banners: BannerMetadata[]): number => {,
     const value = parseFloat(banner.value.replace(/[^0-9.]/g, ''));';
     const multiplier = banner.value.includes('T') ? 1000 ';
                      : banner.value.includes('B') ? 1 ';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                      : 0.001; // M
     return total + (value * multiplier);
   }, 0);
@@ -230,7 +224,6 @@ export const calculateTotalValue = (banners: BannerMetadata[]): number => {,
  */
 export const getBannerAnalytics = () => {
   return {
-<<<<<<< HEAD
     totalBanners: bannerRegistry.length,
     featuredCount: bannerRegistry.filter(b => b.featured).length,
     totalValue: `$${calculateTotalValue(bannerRegistry).toFixed(1)}B`,
@@ -252,7 +245,6 @@ export const getBannerAnalytics = () => {
       green: getBannersByCategory('green').length,';,
       sovereign: getBannersByCategory('sovereign').length,';,
     },
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   };
 };
 
@@ -260,13 +252,11 @@ export const getBannerAnalytics = () => {
  * Smart banner rotation based on user engagement
  */
 export class BannerRotationManager {
-<<<<<<< HEAD
   private viewCounts: Map<string, number> = new Map(),
   private clickCounts: Map<string, number> = new Map(),
 =======
   private viewCounts: Map<string, number> = new Map();,
   private clickCounts: Map<string, number> = new Map();,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 
   recordView(bannerId: string) {,
     this.viewCounts.set(bannerId, (this.viewCounts.get(bannerId) || 0) + 1);

@@ -1,200 +1,180 @@
 import React from 'react';
-import { Metadata } from 'next';
 import Link from 'next/link';
 
-export const metadata: Metadata = {
-  title: 'Blog - Zion Tech Group',
-  description: 'Latest insights on AI, micro SaaS, IT services, and technology trends from Zion Tech Group experts.',
-  robots: {
-    index: true,
-    follow: true,
-  },
+export const metadata = {
+  title: 'Blog & Insights - Zion Tech Group',
+  description: 'Stay updated with the latest AI trends, technology insights, and industry best practices from Zion Tech Group experts.',
+  keywords: 'AI blog, technology insights, industry trends, AI news, tech articles',
 };
 
 export default function BlogPage() {
-  const blogPosts = [
+  const featuredPosts = [
     {
-      title: "AI Implementation Roadmap 2026: A Complete Guide",
-      excerpt: "Learn how to successfully implement AI solutions in your organization with our comprehensive roadmap.",
-      date: "January 15, 2025",
-      readTime: "8 min read",
-      category: "AI",
-      href: "/guides/ai-2026-implementation-roadmap",
+      title: 'Revolutionary AI Breakthroughs 2026: Quantum Computing & 1000x Performance Gains',
+      excerpt: 'Discover the latest quantum AI breakthroughs achieving unprecedented 1000x performance improvements and $500B ROI potential.',
+      date: 'November 2026',
+      category: 'AI Breakthroughs',
+      readTime: '8 min read',
       featured: true
     },
     {
-      title: "Autonomous Business Processes: The Future of Work",
-      excerpt: "Discover how autonomous business processes are revolutionizing the way companies operate.",
-      date: "January 10, 2025",
-      readTime: "6 min read",
-      category: "Automation",
-      href: "/guides/autonomous-business-processes-implementation-guide-2026",
-      featured: true
-    },
-    {
-      title: "Micro SaaS Development: Building Scalable Solutions",
-      excerpt: "Best practices for developing micro SaaS applications that scale with your business growth.",
-      date: "January 5, 2025",
-      readTime: "5 min read",
-      category: "SaaS",
-      href: "/blog/micro-saas-development",
+      title: 'Enterprise AI Transformation: A Complete Guide for 2026',
+      excerpt: 'Comprehensive guide to implementing AI in enterprise environments, covering strategy, implementation, and ROI measurement.',
+      date: 'October 2026',
+      category: 'Enterprise AI',
+      readTime: '12 min read',
       featured: false
     },
     {
-      title: "Cloud Migration Strategies for Enterprise",
-      excerpt: "Comprehensive guide to migrating your enterprise infrastructure to the cloud.",
-      date: "December 28, 2024",
-      readTime: "7 min read",
-      category: "Cloud",
-      href: "/blog/cloud-migration-strategies",
+      title: 'Micro SaaS Architecture: Building Scalable Solutions',
+      excerpt: 'Learn how to design and implement micro SaaS platforms that scale efficiently and deliver exceptional user experiences.',
+      date: 'September 2026',
+      category: 'Micro SaaS',
+      readTime: '6 min read',
       featured: false
     },
     {
-      title: "Cybersecurity Best Practices for 2025",
-      excerpt: "Essential cybersecurity practices to protect your business in the digital age.",
-      date: "December 20, 2024",
-      readTime: "4 min read",
-      category: "Security",
-      href: "/blog/cybersecurity-best-practices",
+      title: 'AI Cybersecurity: Automated Threat Detection and Response',
+      excerpt: 'Explore how AI is revolutionizing cybersecurity with automated threat detection, achieving 99.8% accuracy rates.',
+      date: 'August 2026',
+      category: 'Cybersecurity',
+      readTime: '10 min read',
       featured: false
     },
     {
-      title: "Blockchain Technology: Beyond Cryptocurrency",
-      excerpt: "Exploring real-world applications of blockchain technology in various industries.",
-      date: "December 15, 2024",
-      readTime: "6 min read",
-      category: "Blockchain",
-      href: "/blog/blockchain-applications",
+      title: 'Cloud Migration Best Practices: Zero Downtime Strategies',
+      excerpt: 'Best practices for migrating enterprise systems to cloud with zero downtime and maximum performance gains.',
+      date: 'July 2026',
+      category: 'Cloud Computing',
+      readTime: '7 min read',
+      featured: false
+    },
+    {
+      title: 'Data Analytics and Business Intelligence: AI-Powered Insights',
+      excerpt: 'How AI-powered analytics platforms are transforming business intelligence and driving data-driven decisions.',
+      date: 'June 2026',
+      category: 'Data Analytics',
+      readTime: '9 min read',
       featured: false
     }
   ];
 
-  const categories = ["All", "AI", "Automation", "SaaS", "Cloud", "Security", "Blockchain"];
+  const categories = [
+    'All Posts',
+    'AI Breakthroughs',
+    'Enterprise AI',
+    'Micro SaaS',
+    'Cybersecurity',
+    'Cloud Computing',
+    'Data Analytics',
+    'Case Studies'
+  ];
 
   return (
-    <div className="min-h-screen py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Technology Blog
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Stay updated with the latest insights on AI, micro SaaS, IT services, 
-              and emerging technology trends from our team of experts.
-            </p>
-          </div>
-
-          {/* Category Filter */}
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
-            {categories.map((category) => (
-              <button
-                key={category}
-                className={`px-6 py-2 rounded-full font-medium transition-colors ${
-                  category === "All" 
-                    ? "bg-blue-600 text-white" 
-                    : "bg-gray-100 text-gray-700 hover:bg-gray-200"
-                }`}
-              >
-                {category}
-              </button>
-            ))}
-          </div>
-
-          {/* Featured Posts */}
-          <div className="mb-16">
-            <h2 className="text-2xl font-bold text-gray-900 mb-8">Featured Articles</h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              {blogPosts.filter(post => post.featured).map((post, index) => (
-                <article key={index} className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100">
-                  <div className="p-8">
-                    <div className="flex items-center justify-between mb-4">
-                      <span className="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">
-                        {post.category}
-                      </span>
-                      <span className="text-sm text-gray-500">{post.readTime}</span>
-                    </div>
-                    
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">
-                      <Link href={post.href} className="hover:text-blue-600 transition-colors">
-                        {post.title}
-                      </Link>
-                    </h3>
-                    
-                    <p className="text-gray-600 mb-4 leading-relaxed">{post.excerpt}</p>
-                    
-                    <div className="flex items-center justify-between">
-                      <span className="text-sm text-gray-500">{post.date}</span>
-                      <Link
-                        href={post.href}
-                        className="text-blue-600 hover:text-blue-700 font-semibold flex items-center"
-                      >
-                        Read More
-                        <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
-                      </Link>
-                    </div>
-                  </div>
-                </article>
-              ))}
+    <div className="max-w-7xl mx-auto px-4 py-8">
+      <div className="text-center mb-12">
+        <h1 className="text-4xl font-bold text-gray-900 mb-4">Blog & Insights</h1>
+        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          Stay ahead of the curve with the latest AI trends, technology insights, 
+          and industry best practices from our expert team.
+        </p>
+      </div>
+      
+      {/* Category Filter */}
+      <div className="flex flex-wrap justify-center gap-4 mb-12">
+        {categories.map((category, index) => (
+          <button
+            key={index}
+            className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+              index === 0 
+                ? 'bg-blue-600 text-white' 
+                : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+            }`}
+          >
+            {category}
+          </button>
+        ))}
+      </div>
+      
+      {/* Featured Post */}
+      <div className="mb-12">
+        <h2 className="text-2xl font-bold text-gray-900 mb-6">Featured Article</h2>
+        <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-8 text-white">
+          <div className="max-w-3xl">
+            <div className="flex items-center gap-4 mb-4">
+              <span className="bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm font-medium">
+                {featuredPosts[0].category}
+              </span>
+              <span className="text-sm opacity-90">{featuredPosts[0].date}</span>
+              <span className="text-sm opacity-90">{featuredPosts[0].readTime}</span>
             </div>
-          </div>
-
-          {/* All Posts */}
-          <div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-8">All Articles</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {blogPosts.map((post, index) => (
-                <article key={index} className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100">
-                  <div className="p-6">
-                    <div className="flex items-center justify-between mb-3">
-                      <span className="bg-gray-100 text-gray-700 text-xs font-medium px-2 py-1 rounded-full">
-                        {post.category}
-                      </span>
-                      <span className="text-xs text-gray-500">{post.readTime}</span>
-                    </div>
-                    
-                    <h3 className="text-lg font-bold text-gray-900 mb-3">
-                      <Link href={post.href} className="hover:text-blue-600 transition-colors">
-                        {post.title}
-                      </Link>
-                    </h3>
-                    
-                    <p className="text-gray-600 mb-4 text-sm leading-relaxed">{post.excerpt}</p>
-                    
-                    <div className="flex items-center justify-between">
-                      <span className="text-xs text-gray-500">{post.date}</span>
-                      <Link
-                        href={post.href}
-                        className="text-blue-600 hover:text-blue-700 text-sm font-semibold"
-                      >
-                        Read →
-                      </Link>
-                    </div>
-                  </div>
-                </article>
-              ))}
-            </div>
-          </div>
-
-          {/* Newsletter Signup */}
-          <div className="mt-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-12 text-center text-white">
-            <h2 className="text-3xl font-bold mb-4">Stay Updated</h2>
-            <p className="text-xl text-blue-100 mb-8">
-              Get the latest technology insights and industry updates delivered to your inbox.
-            </p>
-            <div className="max-w-md mx-auto flex gap-4">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500"
-              />
-              <button className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                Subscribe
-              </button>
-            </div>
+            <h3 className="text-3xl font-bold mb-4">{featuredPosts[0].title}</h3>
+            <p className="text-xl opacity-90 mb-6">{featuredPosts[0].excerpt}</p>
+            <Link 
+              href="/blog/ai-2026-november-quantum-superintelligence-breakthrough"
+              className="inline-block bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+            >
+              Read Full Article →
+            </Link>
           </div>
         </div>
       </div>
+      
+      {/* Blog Posts Grid */}
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {featuredPosts.slice(1).map((post, index) => (
+          <article key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+            <div className="h-48 bg-gradient-to-br from-gray-400 to-gray-600 flex items-center justify-center">
+              <span className="text-white text-lg font-medium">Article {index + 2}</span>
+            </div>
+            
+            <div className="p-6">
+              <div className="flex items-center gap-4 mb-3">
+                <span className="bg-blue-100 text-blue-600 px-2 py-1 rounded-full text-xs font-medium">
+                  {post.category}
+                </span>
+                <span className="text-sm text-gray-500">{post.readTime}</span>
+              </div>
+              
+              <h3 className="text-xl font-semibold text-gray-900 mb-3 line-clamp-2">
+                {post.title}
+              </h3>
+              
+              <p className="text-gray-600 mb-4 line-clamp-3">
+                {post.excerpt}
+              </p>
+              
+              <div className="flex items-center justify-between">
+                <span className="text-sm text-gray-500">{post.date}</span>
+                <Link 
+                  href="#"
+                  className="text-blue-600 hover:text-blue-700 font-medium text-sm"
+                >
+                  Read More →
+                </Link>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+      
+      {/* Newsletter Signup */}
+      <div className="mt-16 bg-gray-50 rounded-lg p-8 text-center">
+        <h2 className="text-2xl font-bold text-gray-900 mb-4">Stay Updated</h2>
+        <p className="text-gray-600 mb-6">
+          Get the latest AI insights and technology trends delivered to your inbox.
+        </p>
+        <div className="max-w-md mx-auto flex gap-4">
+          <input
+            type="email"
+            placeholder="Enter your email"
+            className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          />
+          <button className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+            Subscribe
+          </button>
+        </div>
+      </div>
+    </div>
   );
 }

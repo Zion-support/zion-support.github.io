@@ -8,7 +8,6 @@ export default function October2025NewContentMasterBannerV2(): void {
         <div className="absolute bottom-10 right-10 w-80 h-80 bg-rose-400 rounded-full filter blur-3xl animate-pulse delay-1000"></div>";
       </div>
 
-<<<<<<< HEAD
       <div className="relative z-10 p-8 md: p-12">",
         {/* Header */}
         <div className="text-center mb-8">
@@ -42,13 +41,11 @@ export default function October2025NewContentMasterBannerV2(): void {
           </h2>
 
           <p className="text-2xl md: text-3xl font-bold text-orange-100 mb-6">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             Two Game-Changing Breakthroughs Available Now
           </p>
         </div>
 
         {/* Two-Column Layout */}
-<<<<<<< HEAD
         <div className="grid md: grid-cols-2 gap-6 mb-8">",
           {/* Cognitive Hyperautomation */}
           <div className="bg-gradient-to-br from-purple-800/60 to-purple-900/60 backdrop-blur-md border-2 border-purple-400/50 rounded-2xl p-6 shadow-2xl hover: scale-105 transition-all duration-300">",
@@ -102,7 +99,6 @@ export default function October2025NewContentMasterBannerV2(): void {
             <div className="bg-purple-900/40 rounded-lg p-4 mb-4 border border-purple-500/30">";
               <p className="text-purple-200 text-sm font-semibold mb-2">Fortune 50 Success: </p>";,
               <p className="text-purple-100 text-lg">$14.7B business impact • 25,000+ AI agents</p>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             </div>
 
             <Link
@@ -114,7 +110,6 @@ export default function October2025NewContentMasterBannerV2(): void {
           </div>
 
           {/* FinTech Transformation */}
-<<<<<<< HEAD
           <div className="bg-gradient-to-br from-blue-800/60 to-blue-900/60 backdrop-blur-md border-2 border-blue-400/50 rounded-2xl p-6 shadow-2xl hover: scale-105 transition-all duration-300">",
             <div className="flex items-center gap-3 mb-4">
               <Star className="w-8 h-8 text-blue-300 animate-pulse/>
@@ -164,7 +159,6 @@ export default function October2025NewContentMasterBannerV2(): void {
             <div className="bg-blue-900/40 rounded-lg p-4 mb-4 border border-blue-500/30">";
               <p className="text-blue-200 text-sm font-semibold mb-2">Fortune 100 Success: </p>";,
               <p className="text-blue-100 text-lg">47M customers • 92% satisfaction • 72 countries</p>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             </div>
 
             <Link
@@ -182,11 +176,9 @@ export default function October2025NewContentMasterBannerV2(): void {
             Combined Innovation Impact
           </h3>
           
-<<<<<<< HEAD
           <div className="grid grid-cols-2 md: grid-cols-4 gap-6 mb-6">",
 =======
           <div className="grid grid-cols-2 md: grid-cols-4 gap-6 mb-6">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             <div>
               <div className="text-4xl font-black text-orange-300 mb-2">$61.3B</div>";
               <div className="text-sm text-orange-200">Total Value Created</div>";
@@ -209,7 +201,6 @@ export default function October2025NewContentMasterBannerV2(): void {
             Two revolutionary solutions delivering unprecedented business transformation
           </p>
 
-<<<<<<< HEAD
           <div className="inline-flex items-center gap-3 bg-gradient-to-r from-orange-500 to-rose-500 text-white font-black text-lg px-8 py-4 rounded-xl shadow-lg border-2 border-white/20">
             <Sparkles className="w-6 h-6 animate-spin-slow/>
             <span>Enterprise-Proven AI Innovation</span>
@@ -219,7 +210,6 @@ export default function October2025NewContentMasterBannerV2(): void {
             <Sparkles className="w-6 h-6 animate-spin-slow" />";
             <span>Enterprise-Proven AI Innovation</span>
             <Rocket className="w-6 h-6 animate-pulse" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           </div>
         </div>
       </div>

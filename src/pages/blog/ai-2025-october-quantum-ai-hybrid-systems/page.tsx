@@ -4,7 +4,6 @@ const QuantumAIHybrid2025 = () => {
     <>
       <Helmet>
         <title>Quantum-AI Hybrid Systems 2025: Practical Near-Term Implementation | Zion Tech Group</title>,
-<<<<<<< HEAD
         <meta name="description" content="Discover how quantum-AI hybrid systems are revolutionizing enterprise computing. Learn implementation strategies, real-world applications, and ROI optimization for 1000x processing speed gains." /><meta property="og:title" content="Quantum-AI Hybrid Systems 2025: Practical Near-Term Implementation" />,
         <meta property="og:description" content="Discover how quantum-AI hybrid systems are revolutionizing enterprise computing. Learn implementation strategies, real-world applications, and ROI optimization for 1000x processing speed gains." />,
         <link rel="canonical" href="https://ziontechgroup.com/blog/ai-2025-october-quantum-ai-hybrid-systems/>",
@@ -49,12 +48,10 @@ const QuantumAIHybrid2025 = () => {
             
             <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 leading-tight">";,
               Quantum-AI Hybrid Systems 2025: <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 Practical Near-Term Implementation
               </span>
             </h1>
             
-<<<<<<< HEAD
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
               Discover how quantum-AI hybrid systems are revolutionizing enterprise computing. Learn implementation strategies
               real-world applications, and ROI optimization for 1000x processing speed gains.
@@ -96,13 +93,11 @@ const QuantumAIHybrid2025 = () => {
                 <div className="bg-gradient-to-r from-purple-500/20 to-cyan-500/20 border border-purple-400/30 rounded-xl p-6 mb-6">";
                   <p className="text-white text-lg leading-relaxed">";
                     Quantum-AI hybrid systems are no longer theoretical—they're delivering <strong>1000x processing speed</strong>, ';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                     <strong>99.9% accuracy improvements</strong>, and <strong>unprecedented optimization capabilities</strong> 
                     for enterprise applications today.
                   </p>
                 </div>
                 
-<<<<<<< HEAD
                 <div className="grid md: grid-cols-3 gap-6 mb-8">",
                   <div className="bg-white/10 rounded-xl p-6 text-center">
                     <div className="text-3xl font-bold text-purple-400 mb-2">1000x</div>
@@ -112,7 +107,6 @@ const QuantumAIHybrid2025 = () => {
                   <div className="bg-white/10 rounded-xl p-6 text-center">";
                     <div className="text-3xl font-bold text-purple-400 mb-2">1000x</div>";
                     <div className="text-white text-sm">Processing Speed</div>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   </div>
                   <div className="bg-white/10 rounded-xl p-6 text-center">";
                     <div className="text-3xl font-bold text-cyan-400 mb-2">99.9%</div>";
@@ -125,7 +119,6 @@ const QuantumAIHybrid2025 = () => {
                 </div>
               </section>
 
-<<<<<<< HEAD
               <section className="mb-12">
                 <h2 className="text-3xl font-bold text-white mb-6">Real-World Quantum-AI Applications</h2>
                 <p className="text-gray-300 mb-6 leading-relaxed">
@@ -177,7 +170,6 @@ const QuantumAIHybrid2025 = () => {
                     <li className="flex items-start">";
                       <CheckCircle className="w-5 h-5 text-emerald-400 mr-3 mt-0.5 flex-shrink-0" />";
                       <span className="text-white">Machine Learning: Quantum-enhanced neural networks</span>";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                     </li>
                   </ul>
                 </div>
@@ -192,21 +184,17 @@ const QuantumAIHybrid2025 = () => {
                     Join forward-thinking enterprises leveraging quantum-AI hybrid systems for competitive advantage. 
                     Get expert consultation and custom implementation strategy.
                   </p>
-<<<<<<< HEAD
                   <div className="flex flex-col sm: flex-row gap-4 justify-center">",
 =======
                   <div className="flex flex-col sm: flex-row gap-4 justify-center">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                     <Link
                       to="/contact"
                       className="bg-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover: bg-purple-600 transition-colors inline-flex items-center justify-center gap-2",
                     >
                       Explore Quantum-AI Solutions
-<<<<<<< HEAD
                       <ArrowRight className="w-5 h-5/>
 =======
                       <ArrowRight className="w-5 h-5" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                     </Link>
                     <Link
                       to="/services/quantum-computing-consulting"
