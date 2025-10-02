@@ -1558,6 +1558,7 @@ export const posts: BlogPost[] = [
     featured: true,
     readTime: "8 min read"
   },
+<<<<<<< HEAD
 ]);
 
 // Sept 30, 2025 – Fresh articles to add and advertise on homepage

@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Metadata } from 'next';
 import Link from 'next/link';
 
