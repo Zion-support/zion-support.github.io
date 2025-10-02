@@ -22,12 +22,10 @@ const ModernFooter: React.FC = () => {
       links: [
         { label: 'AI Workflow Automation', path: '/services/ai-workflow-automation' },
         { label: 'AI Virtual Assistant', path: '/services/ai-virtual-assistant' },
-        { label: 'AI Predictive Analytics', path: '/services/ai-predictive-analytics' },
-        { label: 'Conversational AI', path: '/services/conversational-ai' },
-        { label: 'Edge Computing AI', path: '/services/edge-computing-ai' },
-        { label: 'AI Email Marketing', path: '/services/ai-email-marketing' },
-        { label: 'Smart Contract Audit', path: '/services/smart-contract-audit' },
-        { label: 'Cybersecurity AI', path: '/services/advanced-cybersecurity-ai' },
+        { label: 'AI Data Analytics', path: '/services/ai-data-analytics' },
+        { label: 'Intelligent Document Processing', path: '/services/ai-intelligent-document-processing' },
+        { label: 'Real-Time Cognitive Automation', path: '/services/real-time-cognitive-automation' },
+        { label: 'Advanced Cybersecurity AI', path: '/services/advanced-cybersecurity-ai' },
         { label: 'Cloud & DevOps', path: '/cloud-devops' },
       ]
     },
@@ -35,11 +33,7 @@ const ModernFooter: React.FC = () => {
       title: 'Resources',
       links: [
         { label: 'Case Studies', path: '/case-studies' },
-        { label: 'White Papers', path: '/white-papers' },
-        { label: 'Webinars', path: '/webinars' },
-        { label: 'Documentation', path: '/docs' },
-        { label: 'Developer Tools', path: '/developer-tools' },
-        { label: 'Training', path: '/training' },
+        { label: 'Resources Hub', path: '/resources' },
         { label: 'Blog', path: '/blog' },
       ]
     },
@@ -49,10 +43,6 @@ const ModernFooter: React.FC = () => {
         { label: 'About Us', path: '/about' },
         { label: 'Our Team', path: '/team' },
         { label: 'Partners', path: '/partners' },
-        { label: 'News & Events', path: '/news' },
-        { label: 'Press Kit', path: '/press' },
-        { label: 'Investors', path: '/investors' },
-        { label: 'Careers', path: '/careers' },
       ]
     }
   ];

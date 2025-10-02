@@ -373,6 +373,71 @@ export default function ServicesPage() {
       category: 'AI Services'
     },
     {
+      title: 'Generative AI Solutions',
+      description: 'Create, innovate, and generate novel solutions with cutting-edge generative intelligence',
+      icon: '✨',
+      features: [
+        'Content Generation Systems',
+        'Creative AI Applications',
+        'Multimodal Generation',
+        'Adaptive Learning Systems',
+        'Innovation Automation'
+      ],
+      href: '/services/generative-ai'
+    },
+    {
+      title: 'Cloud Migration & DevOps',
+      description: 'Seamless cloud transitions and optimized DevOps practices for modern infrastructure',
+      icon: '☁️',
+      features: [
+        'Cloud Architecture Design',
+        'Migration Strategy & Execution',
+        'CI/CD Pipeline Development',
+        'Infrastructure as Code',
+        'Monitoring & Observability'
+      ],
+      href: '/services/cloud-migration'
+    },
+    {
+      title: 'Micro SaaS Solutions',
+      description: 'Production-ready micro SaaS applications for specific business needs with immediate ROI',
+      icon: '🔧',
+      features: [
+        'Cloud Cost Management',
+        'AI Content Creation',
+        'Compliance Automation',
+        'Smart HR & Analytics',
+        'Workflow Automation'
+      ],
+      href: '/services/micro-saas'
+    },
+    {
+      title: 'IT Services & Solutions',
+      description: 'Comprehensive IT services including cloud migration, DevOps, cybersecurity, and platform engineering',
+      icon: '🖥️',
+      features: [
+        'Platform Engineering',
+        'Cloud Migration',
+        'DevOps Automation',
+        'Cybersecurity Operations',
+        'Data Analytics Platforms'
+      ],
+      href: '/services/it-services'
+    },
+    {
+      title: 'Enterprise AI Consulting',
+      description: 'Strategic AI implementation guidance for enterprise-scale digital transformation',
+      icon: '🎯',
+      features: [
+        'AI Strategy Development',
+        'Technology Roadmap Planning',
+        'Change Management',
+        'ROI Optimization',
+        'Compliance & Governance'
+      ],
+      href: '/services/ai-consulting'
+    },
+    {
       title: 'Cybersecurity Risk Assessment',
       description: 'Comprehensive security evaluation with vulnerability scanning and compliance checks',
       icon: '🛡️',

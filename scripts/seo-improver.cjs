@@ -12,25 +12,25 @@ class SEOImprover {
     const sitemapContent = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://bolt.new.zion.app/</loc>
+    <loc>https://ziontechgroup.com/</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://bolt.new.zion.app/about</loc>
+    <loc>https://ziontechgroup.com/about</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bolt.new.zion.app/services</loc>
+    <loc>https://ziontechgroup.com/services</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bolt.new.zion.app/contact</loc>
+    <loc>https://ziontechgroup.com/contact</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -46,7 +46,7 @@ class SEOImprover {
     const robotsContent = `User-agent: *
 Allow: /
 
-Sitemap: https://bolt.new.zion.app/sitemap.xml
+Sitemap: https://ziontechgroup.com/sitemap.xml
 
 # Block access to admin areas
 Disallow: /admin/
@@ -69,24 +69,24 @@ Allow: /contact`;
     const metaConfig = `
 // Meta tags configuration
 export const metaTags = {
-  title: 'Bolt.new Zion App - Advanced Web Development Solutions',
-  description: 'Professional web development services with cutting-edge technology and innovative solutions.',
-  keywords: 'web development, react, nextjs, typescript, full-stack development',
+  title: 'Zion Tech Group - Advanced AI and IT Solutions',
+  description: 'AI workflow automation, cybersecurity, cloud and DevOps, and enterprise solutions.',
+  keywords: 'ai, automation, cybersecurity, cloud, devops, data, micro saas, consulting',
   author: 'Zion Tech Group',
   viewport: 'width=device-width, initial-scale=1',
   robots: 'index, follow',
   og: {
-    title: 'Bolt.new Zion App - Advanced Web Development Solutions',
-    description: 'Professional web development services with cutting-edge technology and innovative solutions.',
+    title: 'Zion Tech Group - Advanced AI and IT Solutions',
+    description: 'AI workflow automation, cybersecurity, cloud and DevOps, and enterprise solutions.',
     type: 'website',
-    url: 'https://bolt.new.zion.app',
-    image: 'https://bolt.new.zion.app/og-image.jpg'
+    url: 'https://ziontechgroup.com',
+    image: 'https://ziontechgroup.com/og-image.jpg'
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Bolt.new Zion App - Advanced Web Development Solutions',
-    description: 'Professional web development services with cutting-edge technology and innovative solutions.',
-    image: 'https://bolt.new.zion.app/og-image.jpg'
+    title: 'Zion Tech Group - Advanced AI and IT Solutions',
+    description: 'AI workflow automation, cybersecurity, cloud and DevOps, and enterprise solutions.',
+    image: 'https://ziontechgroup.com/og-image.jpg'
   }
 };
 

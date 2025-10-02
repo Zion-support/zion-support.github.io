@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 // Core Components
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Sidebar from './components/Sidebar';
 import BannerManager from './components/BannerManager';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import SEOHead from './components/EnhancedSEOHead';
@@ -21,6 +22,7 @@ import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import BlogPage from './pages/BlogPage';
 import CaseStudiesPage from './pages/CaseStudiesPage';
+import Resources from './pages/Resources';
 
 // Data
 import { bannerData } from './data/bannerData';
@@ -65,7 +67,7 @@ const App: React.FC = () => {
               />
             </motion.div>
 
-            {/* Main Content */}
+            {/* Main Content with Sidebar */}
             <motion.main
               initial="initial"
               animate="in"
@@ -74,7 +76,10 @@ const App: React.FC = () => {
               transition={pageTransition}
               className="relative z-10"
             >
-              <Routes>
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 xl:grid-cols-[18rem_1fr] gap-8">
+                <Sidebar />
+                <div id="main-content">
+                <Routes>
                 <Route path="/" element={<HomePage />} />
                 <Route path="/solutions/*" element={<SolutionsPage />} />
                 <Route path="/services/*" element={<ServicesPage />} />
@@ -82,6 +87,7 @@ const App: React.FC = () => {
                 <Route path="/contact" element={<ContactPage />} />
                 <Route path="/blog/*" element={<BlogPage />} />
                 <Route path="/case-studies" element={<CaseStudiesPage />} />
+                <Route path="/resources" element={<Resources />} />
                 
                 {/* Dynamic Routes for Solutions */}
                 <Route path="/solutions/enterprise" element={<SolutionsPage category="enterprise" />} />
@@ -128,7 +134,9 @@ const App: React.FC = () => {
                     </div>
                   </div>
                 } />
-              </Routes>
+                </Routes>
+                </div>
+              </div>
             </motion.main>
 
             <Footer />
