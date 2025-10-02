@@ -1,219 +1,155 @@
-import React, { useEffect, useState } from 'react';';
-import {
+import React, { useEffect, useState } from 'react';
+import { measurePerformance, reportWebVitals } from '../utils/performance';
 
-<<<<<<< HEAD
-} from '../utils/performance';
 interface PerformanceMetrics {
-domContentLoaded: number;,
-loadComplete: number;,
-firstPaint: number;,
-firstContentfulPaint: number;,
-cls?: number;,
-fid?: number;,
-lcp?: number;,
-ttfb?: number;
+  domContentLoaded: number;
+  loadComplete: number;
+  firstPaint: number;
+  firstContentfulPaint: number;
+  cls?: number;
+  fid?: number;
+  lcp?: number;
+  ttfb?: number;
 }
 
 interface PerformanceAlert {
-id: string;,
-type: 'warning' | 'error' | 'info';,
-message: string;,
-metric: string;,
-value: number;,
-threshold: number;
+  id: string;
+  type: 'warning' | 'error' | 'info';
+  message: string;
+  metric: string;
+  value: number;
+  threshold: number;
 }
 
-const EnhancedPerformanceMonitor: React.FC = () => {,
+const EnhancedPerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [alerts, setAlerts] = useState<PerformanceAlert[]>([]);
   const [isMonitoring, setIsMonitoring] = useState(false);
 
-  // Performance thresholds
   const thresholds = {
-    domContentLoaded: 1000, // ms,
-    loadComplete: 2000, // ms,
-    firstPaint: 1000, // ms,
-    firstContentfulPaint: 1500, // ms,
-    cls: 0.1, // Cumulative Layout Shift,
-    fid: 100, // ms,
-    lcp: 2500, // ms,
-<<<<<<< HEAD
-    ttfb: 600 // ms
-  };
+    domContentLoaded: 1000,
+    loadComplete: 2000,
+    firstPaint: 1000,
+    firstContentfulPaint: 1500,
+    cls: 0.1,
+    fid: 100,
+    lcp: 2500,
+    ttfb: 600,
+  } as const;
 
   const generateAlert = (metric: string, value: number, threshold: number): PerformanceAlert => {
-const type = value > threshold ? 'error' : value > threshold * 0.8 ? 'warning' : 'info';
-=======
-    ttfb: 600 // ms,
-  };
-
-  const generateAlert = (metric: string, value: number, threshold: number): PerformanceAlert => {,
-const type = value > threshold ? 'error' : value > threshold * 0.8 ? 'warning' : 'info';';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
-return {
-id: `${metric`;
-}-${Date.now()}`,`;
+    const type = value > threshold ? 'error' : value > threshold * 0.8 ? 'warning' : 'info';
+    return {
+      id: `${metric}-${Date.now()}`,
       type,
-      message: `${metric} is ${value}ms, threshold is ${threshold}ms`,`;
+      message: `${metric} is ${value}ms, threshold is ${threshold}ms`,
       metric,
       value,
-      threshold
+      threshold,
     };
   };
 
   useEffect(() => {
     const startMonitoring = () => {
       setIsMonitoring(true);
-      
-      // Measure initial performance
-      const initialMetrics = measurePerformance();
-      if (initialMetrics) {
-        setMetrics(initialMetrics);
-        
-        // Generate alerts for initial metrics
-<<<<<<< HEAD
-        const newAlerts: PerformanceAlert[] = [],
-=======
-        const newAlerts: PerformanceAlert[] = [];,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
-        Object.entries(thresholds).forEach(([key, threshold]) => {
-          const value = initialMetrics[key as keyof PerformanceMetrics];
-          if (value !== undefined && value > threshold * 0.8) {
-            newAlerts.push(generateAlert(key, value, threshold));
-          };
-        });
-        setAlerts(newAlerts);
-      }
 
-      // Monitor Core Web Vitals
-      reportWebVitals((metric: any) => {,
-<<<<<<< HEAD
-        console.log('Web Vital: ', metric);',
-=======
-        console.log('Web Vital: ', metric);';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
-        
-        // Update metrics with web vitals
+      // Initial timing via Performance API
+      try {
+        const nav = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming | undefined;
+        if (nav) {
+          const initial: PerformanceMetrics = {
+            domContentLoaded: nav.domContentLoadedEventEnd - nav.domContentLoadedEventStart,
+            loadComplete: nav.loadEventEnd - nav.loadEventStart,
+            firstPaint: (performance as any).timing?.responseStart ? performance.now() : 0,
+            firstContentfulPaint: 0,
+          };
+          setMetrics(initial);
+          const firstAlerts: PerformanceAlert[] = [];
+          Object.entries(thresholds).forEach(([key, threshold]) => {
+            const value = (initial as any)[key];
+            if (typeof value === 'number' && value > threshold * 0.8) {
+              firstAlerts.push(generateAlert(key, value, threshold as number));
+            }
+          });
+          if (firstAlerts.length) setAlerts(firstAlerts);
+        }
+      } catch {}
+
+      // Web Vitals
+      reportWebVitals((metric: any) => {
         setMetrics(prev => ({
-          ...prev
-          [metric.name.toLowerCase()]: metric.value
+          ...(prev || ({} as PerformanceMetrics)),
+          [metric.name.toLowerCase()]: metric.value,
         } as PerformanceMetrics));
 
-        // Check against thresholds and generate alerts
-        const threshold = thresholds[metric.name.toLowerCase() as keyof typeof thresholds];
-        if (threshold && metric.value > threshold * 0.8) {
-          const alert = generateAlert(metric.name.toLowerCase(), metric.value, threshold);
-          setAlerts(prev => [...prev, alert]);
+        const threshold = (thresholds as any)[metric.name.toLowerCase()];
+        if (typeof threshold === 'number' && metric.value > threshold * 0.8) {
+          setAlerts(prev => [...prev, generateAlert(metric.name.toLowerCase(), metric.value, threshold)]);
         }
       });
 
-      // Monitor resource loading
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-<<<<<<< HEAD
-          if (entry.entryType === 'navigation') {;
-            const navEntry = entry as PerformanceNavigationTiming;
-            console.log('Navigation timing: ', {',
-=======
-          if (entry.entryType === 'navigation') {';
-            const navEntry = entry as PerformanceNavigationTiming;
-            console.log('Navigation timing: ', {';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
-              domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.domContentLoadedEventStart,,
-              loadComplete: navEntry.loadEventEnd - navEntry.loadEventStart,
-            });
+      // Observe navigation timings
+      try {
+        const observer = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            if (entry.entryType === 'navigation') {
+              const navEntry = entry as PerformanceNavigationTiming;
+              setMetrics(prev => ({
+                ...(prev || ({} as PerformanceMetrics)),
+                domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.domContentLoadedEventStart,
+                loadComplete: navEntry.loadEventEnd - navEntry.loadEventStart,
+              } as PerformanceMetrics));
+            }
           }
-        }
-      });
-
-<<<<<<< HEAD
-      observer.observe({ entryTypes: ['navigation', 'resource'] });
-      // Monitor memory usage
-      if ('memory' in performance) {;
-        const memoryInfo = (performance as any).memory;
-        console.log('Memory usage: ', {',
-=======
-      observer.observe({ entryTypes: ['navigation', 'resource'] });';
-
-      // Monitor memory usage
-      if ('memory' in performance) {';
-        const memoryInfo = (performance as any).memory;
-        console.log('Memory usage: ', {';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
-          used: memoryInfo.usedJSHeapSize,,
-          total: memoryInfo.totalJSHeapSize,,
-          limit: memoryInfo.jsHeapSizeLimit,
         });
-      }
-
-      return () => {
-        observer.disconnect();
-        setIsMonitoring(false);
-      };
+        observer.observe({ entryTypes: ['navigation'] });
+      } catch {}
     };
 
-    // Start monitoring after page load
-<<<<<<< HEAD
-    if (document.readyState === 'complete') {;
-=======
-    if (document.readyState === 'complete') {';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
+    if (document.readyState === 'complete') {
       startMonitoring();
     } else {
-      window.addEventListener('load', startMonitoring);';
+      window.addEventListener('load', startMonitoring);
     }
+    return () => window.removeEventListener('load', startMonitoring);
+  }, []);
 
-    return () => {
-      window.removeEventListener('load', startMonitoring);';
-    };
-  }, [thresholds]);
+  if (process.env.NODE_ENV !== 'development') return null;
 
-  // Development mode: Show performance dashboard,
-<<<<<<< HEAD
-  if (process.env.NODE_ENV === 'development') {;
-    return (
-      <div className="performance-monitor fixed bottom-4 right-4 bg-black bg-opacity-80 text-white p-4 rounded-lg max-w-sm z-50">
-        <h3 className="text-sm font-bold mb-2">Performance Monitor</h3>
-        <div className="text-xs space-y-1">
-          <div>Status: {isMonitoring ? '🟢 Active' : '🔴 Inactive'}</div>;
-=======
-  if (process.env.NODE_ENV === 'development') {';
-    return (
-      <div className="performance-monitor fixed bottom-4 right-4 bg-black bg-opacity-80 text-white p-4 rounded-lg max-w-sm z-50">";
-        <h3 className="text-sm font-bold mb-2">Performance Monitor</h3>";
-        <div className="text-xs space-y-1">";
-          <div>Status: {isMonitoring ? '🟢 Active' : '🔴 Inactive'}</div>';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
-          {metrics && (
-            <>
+  return (
+    <div className="performance-monitor fixed bottom-4 right-4 bg-black bg-opacity-80 text-white p-4 rounded-lg max-w-sm z-50">
+      <h3 className="text-sm font-bold mb-2">Performance Monitor</h3>
+      <div className="text-xs space-y-1">
+        <div>Status: {isMonitoring ? '🟢 Active' : '🔴 Inactive'}</div>
+        {metrics && (
+          <>
+            {'domContentLoaded' in metrics && typeof metrics.domContentLoaded === 'number' && (
               <div>DOM Load: {metrics.domContentLoaded.toFixed(0)}ms</div>
+            )}
+            {'loadComplete' in metrics && typeof metrics.loadComplete === 'number' && (
               <div>Page Load: {metrics.loadComplete.toFixed(0)}ms</div>
+            )}
+            {'firstPaint' in metrics && typeof metrics.firstPaint === 'number' && (
               <div>First Paint: {metrics.firstPaint.toFixed(0)}ms</div>
+            )}
+            {'firstContentfulPaint' in metrics && typeof metrics.firstContentfulPaint === 'number' && (
               <div>FCP: {metrics.firstContentfulPaint.toFixed(0)}ms</div>
-            </>
-          )}
-          {alerts.length > 0 && (
-<<<<<<< HEAD
-            <div className="mt-2">
-              <div className="font-semibold">Alerts: </div>",
-=======
-            <div className="mt-2">";
-              <div className="font-semibold">Alerts: </div>";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
-              {alerts.slice(0, 3).map(alert => (
-                <div key={alert.id} className={`text-${alert.type === 'error' ? 'red' : 'yellow'}-400`}>`;
-                  {alert.type}: {alert.metric}
-                </div>
-              ))}
-            </div>
-          )}
-        </div>
+            )}
+          </>
+        )}
+        {alerts.length > 0 && (
+          <div className="mt-2">
+            <div className="font-semibold">Alerts:</div>
+            {alerts.slice(0, 3).map(alert => (
+              <div key={alert.id} className={`text-${alert.type === 'error' ? 'red' : 'yellow'}-400`}>
+                {alert.type}: {alert.metric}
+              </div>
+            ))}
+          </div>
+        )}
       </div>
-    );
-  }
-
-  // Production mode: Silent monitoring,
-  return null;
+    </div>
+  );
 };
 
 export default EnhancedPerformanceMonitor;
