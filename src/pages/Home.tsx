@@ -10,7 +10,8 @@ import {
   Target,
   TrendingUp,
   Users,
-  Zap
+  Zap,
+  BookOpen
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
@@ -21,7 +22,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import LatestArticlesShowcase from "../components/LatestArticlesShowcase";
 import LatestContentBanner from "../components/LatestContentBanner";
-// import LatestInsights from "../components/LatestInsights";
+import LatestInsights from "../components/LatestInsights";
 import ModernFeatures from "../components/ModernFeatures";
 import NewContentAnnouncement from "../components/NewContentAnnouncement";
 import NewContentPromoBanner from "../components/NewContentPromoBanner";
@@ -30,8 +31,126 @@ import SuccessStoriesShowcase from "../components/SuccessStoriesShowcase";
 import TrendingContentBanner from "../components/TrendingContentBanner";
 import NewContentPromotionalBanner2026 from "../components/NewContentPromotionalBanner2026";
 import NewServicesPromoBanner2026 from "../components/NewServicesPromoBanner2026";
-// import { newArticles2025 } from "../content/new-articles-2025";
-// import { featuredBlogPosts, featuredServices } from "../content/content-config";
+import EnhancedPromotionalBanner from "../components/EnhancedPromotionalBanner";
+import NewContentShowcase from "../components/NewContentShowcase";
+import NewContentShowcase2025 from "../components/NewContentShowcase2025";
+import ContentPromotionBanner from "../components/ContentPromotionBanner";
+import October2025MegaLaunchBanner from "../components/October2025MegaLaunchBanner";
+import September30NewContentMegaBanner from "../components/September30NewContentMegaBanner";
+import Revolutionary2026ContentMegaBanner from "../components/Revolutionary2026ContentMegaBanner";
+
+// Types
+interface BannerType {
+  id: string;
+  title: string;
+  description: string;
+  variant: 'success' | 'warning' | 'info' | 'error';
+  icon?: string;
+  ctaText: string;
+  ctaLink: string;
+}
+
+interface InsightType {
+  id: string;
+  title: string;
+  summary: string;
+  category: string;
+  date: string;
+  readMinutes: number;
+  featured?: boolean;
+}
+
+interface PostType {
+  slug: string;
+  title: string;
+  description: string;
+  category: string;
+  publishedAt: string;
+}
+
+// Mock data
+const getFeaturedBanners = (): BannerType[] => [
+  {
+    id: '1',
+    title: '🚀 NEW: AI Autonomous Infrastructure Platform',
+    description: 'Self-healing systems with 99.9% uptime and 85% MTTR reduction',
+    variant: 'success',
+    icon: '🤖',
+    ctaText: 'Explore Now',
+    ctaLink: '/services/ai-autonomous-infrastructure-platform'
+  },
+  {
+    id: '2',
+    title: '⚡ BREAKTHROUGH: Quantum-AI Hybrid Computing',
+    description: 'Revolutionary quantum computing applications for enterprise',
+    variant: 'info',
+    icon: '⚛️',
+    ctaText: 'Learn More',
+    ctaLink: '/services/quantum-ai-hybrid-computing'
+  },
+  {
+    id: '3',
+    title: '🛡️ SECURE: Zero Trust Security Framework',
+    description: 'Advanced security with 99.9% threat detection accuracy',
+    variant: 'warning',
+    icon: '🔒',
+    ctaText: 'Secure Now',
+    ctaLink: '/services/zero-trust-security'
+  }
+];
+
+const latestInsights: InsightType[] = [
+  {
+    id: '1',
+    title: 'AI Autonomous Infrastructure: The Future of Self-Healing Systems',
+    summary: 'Discover how AI-powered infrastructure can achieve 99.9% uptime with autonomous healing capabilities.',
+    category: 'AI Infrastructure',
+    date: '2025-10-01',
+    readMinutes: 8,
+    featured: true
+  },
+  {
+    id: '2',
+    title: 'Quantum-AI Hybrid Computing: Breaking Through Traditional Limits',
+    summary: 'Explore the revolutionary potential of combining quantum computing with artificial intelligence.',
+    category: 'Quantum Computing',
+    date: '2025-09-28',
+    readMinutes: 12,
+    featured: true
+  },
+  {
+    id: '3',
+    title: 'Zero Trust Security: Protecting Enterprise Data in the AI Era',
+    summary: 'Learn how zero trust architecture provides comprehensive security for modern AI-driven organizations.',
+    category: 'Cybersecurity',
+    date: '2025-09-25',
+    readMinutes: 6
+  }
+];
+
+const posts: PostType[] = [
+  {
+    slug: 'ai-autonomous-infrastructure-platform',
+    title: 'AI Autonomous Infrastructure Platform',
+    description: 'Revolutionary self-healing infrastructure with 99.9% uptime',
+    category: 'AI Infrastructure',
+    publishedAt: '2025-10-01'
+  },
+  {
+    slug: 'quantum-ai-hybrid-computing',
+    title: 'Quantum-AI Hybrid Computing',
+    description: 'Breakthrough quantum computing applications for enterprise',
+    category: 'Quantum Computing',
+    publishedAt: '2025-09-28'
+  },
+  {
+    slug: 'zero-trust-security-framework',
+    title: 'Zero Trust Security Framework',
+    description: 'Advanced security with 99.9% threat detection accuracy',
+    category: 'Cybersecurity',
+    publishedAt: '2025-09-25'
+  }
+];
 
 const Home = () => {
   return (
