@@ -10,6 +10,8 @@ const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) =>
   return <>{children}</>;
 };
 
+export { ThemeProvider };
+
 // Register enhanced service worker
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {

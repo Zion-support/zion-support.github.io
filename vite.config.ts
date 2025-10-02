@@ -2,7 +2,7 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { resolve } from 'path'
 
-// https://vitejs.dev/config/
+// Optimized Vite configuration for better performance and smaller bundle size
 export default defineConfig({
   plugins: [
     react({
@@ -12,11 +12,8 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': resolve(__dirname, 'src'),
-      '@components': resolve(__dirname, 'src/components'),
-      '@pages': resolve(__dirname, 'src/pages'),
-      '@utils': resolve(__dirname, 'src/utils'),
-      '@hooks': resolve(__dirname, 'src/hooks'),
-      '@styles': resolve(__dirname, 'src/styles'),
+      '@components': resolve(__dirname, 'components'),
+      '@app': resolve(__dirname, 'app'),
     },
   },
   build: {
@@ -37,22 +34,16 @@ export default defineConfig({
         manualChunks: (id) => {
           // Vendor chunks
           if (id.includes('node_modules')) {
+            // Group React-related packages
             if (id.includes('react') || id.includes('react-dom')) {
               return 'vendor-react';
             }
-            if (id.includes('react-router')) {
-              return 'vendor-router';
+            // Group UI libraries
+            if (id.includes('framer-motion') || id.includes('lucide-react')) {
+              return 'vendor-ui';
             }
-            if (id.includes('framer-motion')) {
-              return 'vendor-framer';
-            }
-            if (id.includes('lucide-react')) {
-              return 'vendor-icons';
-            }
-            if (id.includes('recharts')) {
-              return 'vendor-charts';
-            }
-            if (id.includes('clsx') || id.includes('tailwind-merge')) {
+            // Group utility libraries
+            if (id.includes('clsx') || id.includes('tailwind-merge') || id.includes('axios')) {
               return 'vendor-utils';
             }
             if (id.includes('axios')) {
@@ -130,7 +121,6 @@ export default defineConfig({
       'clsx',
       'tailwind-merge',
       'axios',
-      'web-vitals',
     ],
     exclude: ['@vite/client', '@vite/env'],
   },
@@ -138,7 +128,7 @@ export default defineConfig({
     global: 'globalThis',
   },
   esbuild: {
-    target: 'esnext',
+    target: 'es2020',
     format: 'esm',
     treeShaking: true,
     minifyIdentifiers: true,
