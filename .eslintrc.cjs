@@ -32,15 +32,8 @@ module.exports = {
     '.next/',
     'out/',
     'dist/',
-    'app/',
-    'corrupted_backup/',
-    'backup/',
-    'backup-*/',
-    'broken_files_backup/',
-    'deployments/',
-    'automation_logs/',
-    'automation-reports/',
-    'automation/',
+    'src/**',
+    'src/pages/**',
     'api-backup/',
     'pages.disabled/',
     'backup-pages/',
@@ -50,6 +43,7 @@ module.exports = {
     'automation_backup/',
     'broken_files_backup/',
     'contracts/',
-    'hardhat/'
+    'hardhat/',
+    'src/content/posts.ts'
   ]
 };

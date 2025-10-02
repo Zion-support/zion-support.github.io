@@ -1,12 +1,10 @@
-<svg width="150" height="150" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
   <defs>
     <pattern id="space" width="30" height="30" patternUnits="userSpaceOnUse">
-      <circle cx="5" cy="5" r="0.5" fill="currentColor" opacity="0.3"/>
-      <circle cx="25" cy="15" r="0.3" fill="currentColor" opacity="0.2"/>
-      <circle cx="15" cy="25" r="0.4" fill="currentColor" opacity="0.25"/>
-      <circle cx="8" cy="20" r="0.2" fill="currentColor" opacity="0.4"/>
-      <circle cx="22" cy="8" r="0.3" fill="currentColor" opacity="0.2"/>
+      <circle cx="15" cy="15" r="0.5" fill="#1e293b" opacity="0.6"/>
+      <circle cx="30" cy="10" r="0.3" fill="#1e293b" opacity="0.4"/>
+      <circle cx="10" cy="30" r="0.4" fill="#1e293b" opacity="0.5"/>
     </pattern>
   </defs>
-  <rect width="150" height="150" fill="url(#space)" />
+  <rect width="100" height="100" fill="url(#space)" />
 </svg>

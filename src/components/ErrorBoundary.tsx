@@ -1,108 +1,125 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 
 interface Props {
-  children: ReactNode;
+  children?: ReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
 }
 
 interface State {
   hasError: boolean;
-  error: Error | null;
+  error?: Error;
+  errorInfo?: ErrorInfo;
 }
 
 class ErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-    this.state = {
-      hasError: false,
-      error: null,
-    };
+  public state: State = {
+    hasError: false
+  };
+
+  public static getDerivedStateFromError(error: Error): State {
+    // Update state so the next render will show the fallback UI.
+    return { hasError: true, error };
   }
 
-  static getDerivedStateFromError(error: Error): State {
-    return {
-      hasError: true,
-      error,
-    };
-  }
+  public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    // Log error to console in development
+    if (import.meta.env.DEV) {
+      console.error("ErrorBoundary caught an error:", error, errorInfo);
+    }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('ErrorBoundary caught an error:', error, errorInfo);
-    
+    // Update state with error info
+    this.setState({ error, errorInfo });
+
     // Call custom error handler if provided
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
     }
-    
-    // Log to external service in production
-    if (process.env.NODE_ENV === 'production') {
-      // Add your error logging service here
-      // e.g., Sentry, LogRocket, etc.
+
+    // Log to error reporting service in production
+    if (import.meta.env.PROD) {
+      this.logErrorToService(error, errorInfo);
     }
   }
 
-  handleReset = () => {
-    this.setState({
-      hasError: false,
-      error: null,
-    });
+  private logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
+    // In a real app, you would send this to your error reporting service
+    // For now, we'll just store it in localStorage for debugging
+    try {
+      const errorData = {
+        message: error.message,
+        stack: error.stack,
+        componentStack: errorInfo.componentStack,
+        timestamp: new Date().toISOString(),
+        userAgent: navigator.userAgent,
+        url: window.location.href
+      };
+      
+      // Store recent errors (keep only last 5)
+      const existingErrors = JSON.parse(localStorage.getItem('app-errors') || '[]');
+      existingErrors.unshift(errorData);
+      existingErrors.splice(5); // Keep only last 5 errors
+      localStorage.setItem('app-errors', JSON.stringify(existingErrors));
+    } catch (e) {
+      // Silently fail if localStorage is not available
+    }
   };
 
-  render() {
+  private handleRetry = () => {
+    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
+  };
+
+  private handleReload = () => {
+    window.location.reload();
+  };
+
+  public render() {
     if (this.state.hasError) {
+      // Use custom fallback if provided
       if (this.props.fallback) {
         return this.props.fallback;
       }
 
+      // Default error UI with better UX
       return (
-        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-zion-blue-dark to-zion-purple-dark p-6">
-          <div className="max-w-md w-full bg-white/10 backdrop-blur-lg rounded-xl p-8 text-center">
-            <div className="mb-6">
-              <svg
-                className="mx-auto h-16 w-16 text-red-400"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
-                />
-              </svg>
-            </div>
-            <h2 className="text-2xl font-bold text-white mb-2">
-              Oops! Something went wrong
-            </h2>
-            <p className="text-zion-slate-light mb-6">
-              We're sorry for the inconvenience. Please try refreshing the page or contact support if the problem persists.
+        <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-red-50 to-red-100 p-4">
+          <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6 text-center">
+            <div className="text-red-500 text-6xl mb-4">⚠️</div>
+            <h1 className="text-2xl font-bold text-gray-900 mb-2">
+              Something went wrong
+            </h1>
+            <p className="text-gray-600 mb-6">
+              We encountered an unexpected error. Don't worry, your data is safe.
             </p>
-            {process.env.NODE_ENV === 'development' && this.state.error && (
-              <details className="text-left mb-6 text-sm">
-                <summary className="cursor-pointer text-red-300 font-semibold mb-2">
-                  Error Details (Development Only)
-                </summary>
-                <pre className="bg-black/20 p-4 rounded overflow-auto text-xs text-red-200">
-                  {this.state.error.toString()}
-                </pre>
-              </details>
-            )}
-            <div className="flex gap-4 justify-center">
+            
+            <div className="space-y-3">
               <button
-                onClick={this.handleReset}
-                className="bg-zion-cyan hover:bg-zion-blue-light text-white px-6 py-2 rounded-lg font-semibold transition-colors"
+                className="w-full bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors"
+                onClick={this.handleRetry}
               >
                 Try Again
               </button>
-              <a
-                href="/"
-                className="bg-white/10 hover:bg-white/20 text-white px-6 py-2 rounded-lg font-semibold transition-colors"
+              
+              <button
+                className="w-full bg-gray-200 text-gray-800 font-semibold py-2 px-4 rounded-lg hover:bg-gray-300 transition-colors"
+                onClick={this.handleReload}
               >
-                Go Home
-              </a>
+                Refresh Page
+              </button>
             </div>
+
+            {import.meta.env.DEV && this.state.error && (
+              <details className="mt-4 text-left">
+                <summary className="cursor-pointer text-sm text-gray-500 hover:text-gray-700">
+                  Error Details (Development)
+                </summary>
+                <pre className="mt-2 text-xs bg-gray-100 p-2 rounded overflow-auto">
+                  {this.state.error.message}
+                  {'\n'}
+                  {this.state.error.stack}
+                </pre>
+              </details>
+            )}
           </div>
         </div>
       );
