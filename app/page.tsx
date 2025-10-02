@@ -169,7 +169,7 @@ export default function HomePage() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl border border-blue-200">
               <div className="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center mb-4">
                 <Database className="w-5 h-5 text-white" />
@@ -205,6 +205,59 @@ export default function HomePage() {
               <p className="text-gray-600 text-sm mb-3">80% reduction in scheduling conflicts</p>
               <div className="text-xs text-orange-600 font-semibold">Starting at $29/month</div>
             </div>
+          </div>
+
+          {/* New Comprehensive Services Links */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <Link 
+              href="/comprehensive-micro-saas-services" 
+              className="bg-gradient-to-br from-cyan-50 to-blue-100 p-8 rounded-xl border border-cyan-200 hover:shadow-lg transition-all duration-300"
+            >
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mr-4">
+                  <Brain className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900">Comprehensive Micro SaaS Solutions</h3>
+                  <p className="text-cyan-600 text-sm">50+ AI-powered micro SaaS solutions</p>
+                </div>
+              </div>
+              <p className="text-gray-600 mb-4">
+                Revolutionary micro SaaS solutions across AI automation, data analytics, cybersecurity, cloud infrastructure, 
+                e-commerce, healthcare tech, fintech, education, real estate, and logistics with proven ROI and fast deployment.
+              </p>
+              <div className="flex items-center justify-between">
+                <div className="text-sm text-gray-500">
+                  <span className="font-semibold">50+ Solutions</span> • Starting at $49/month
+                </div>
+                <ArrowRight className="w-5 h-5 text-cyan-500" />
+              </div>
+            </Link>
+
+            <Link 
+              href="/comprehensive-it-services" 
+              className="bg-gradient-to-br from-purple-50 to-indigo-100 p-8 rounded-xl border border-purple-200 hover:shadow-lg transition-all duration-300"
+            >
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-indigo-500 rounded-lg flex items-center justify-center mr-4">
+                  <Server className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900">Comprehensive IT Services</h3>
+                  <p className="text-purple-600 text-sm">Professional IT solutions & support</p>
+                </div>
+              </div>
+              <p className="text-gray-600 mb-4">
+                Complete IT services including cloud migration, cybersecurity, infrastructure management, 
+                digital transformation, software development, and 24/7 support with industry expertise.
+              </p>
+              <div className="flex items-center justify-between">
+                <div className="text-sm text-gray-500">
+                  <span className="font-semibold">8 Categories</span> • Starting at $1,500/month
+                </div>
+                <ArrowRight className="w-5 h-5 text-purple-500" />
+              </div>
+            </Link>
           </div>
         </div>
       </section>
