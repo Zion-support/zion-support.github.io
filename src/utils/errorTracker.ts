@@ -38,14 +38,14 @@ export interface ErrorContext {
 }
 
 export interface TrackedError {
-id: string,
-message: string,
-stack?: string;
-severity: ErrorSeverity,
-category: ErrorCategory,
-timestamp: Date,
-context: ErrorContext,
-userAgent: string,
+id: string;,
+message: string;,
+stack?: string;,
+severity: ErrorSeverity;,
+category: ErrorCategory;,
+timestamp: Date;,
+context: ErrorContext;,
+userAgent: string;,
 resolved: boolean;
 }
 

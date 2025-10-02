@@ -4,13 +4,13 @@
  */
 
 export interface ImageConfig {
-src: string,
-alt: string,
-width?: number;
-height?: number;
-loading?: 'lazy' | 'eager';
-priority?: boolean;
-quality?: number;
+src: string;,
+alt: string;,
+width?: number;,
+height?: number;,
+loading?: 'lazy' | 'eager';,
+priority?: boolean;,
+quality?: number;,
 formats?: ('webp' | 'avif' | 'jpg' | 'png')[];
 }
 

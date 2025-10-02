@@ -5,17 +5,17 @@ import BlogPromotionBanner from "../components/BlogPromotionBanner";
 // import Header from "../components/Header";
 
 interface BlogPost {
-id: number,
-title: string,
-excerpt: string,
-content: string,
-author: string,
-date: string,
-readTime: string,
-category: string,
-tags: string[],
-image: string,
-featured: boolean,
+id: number;,
+title: string;,
+excerpt: string;,
+content: string;,
+author: string;,
+date: string;,
+readTime: string;,
+category: string;,
+tags: string[];,
+image: string;,
+featured: boolean;,
 views: number;
 }
 

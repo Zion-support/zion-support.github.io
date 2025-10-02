@@ -1,6 +1,6 @@
 import React from 'react';
 interface LoadingProps {
-size?: 'sm' | 'md' | 'lg';
+size?: 'sm' | 'md' | 'lg';,
 text?: string;
 }
 

@@ -17,10 +17,10 @@ size: number;
 }
 
 interface CacheStats {
-hits: number,
-misses: number,
-evictions: number,
-currentSize: number,
+hits: number;,
+misses: number;,
+evictions: number;,
+currentSize: number;,
 hitRate: number;
 }
 

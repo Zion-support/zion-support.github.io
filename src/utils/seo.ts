@@ -4,12 +4,12 @@
  */
 
 export interface SEOData {
-title: string,
-description: string,
-keywords?: string[];
-canonical?: string;
-ogImage?: string;
-ogType?: string;
+title: string;,
+description: string;,
+keywords?: string[];,
+canonical?: string;,
+ogImage?: string;,
+ogType?: string;,
 twitterCard?: string;
 }
 

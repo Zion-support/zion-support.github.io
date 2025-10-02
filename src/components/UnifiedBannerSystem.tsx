@@ -3,27 +3,27 @@ import {
 
 } from 'framer-motion';
 export interface BannerConfig {
-id: string,
-title: string,
-subtitle?: string;
-description: string,
-ctaText: string,
-ctaLink: string,
-imageUrl?: string;
-priority: number,
-category: string,
-tags: string[],
-backgroundColor?: string;
-textColor?: string;
-animation?: 'slide' | 'fade' | 'scale' | 'none';
+id: string;,
+title: string;,
+subtitle?: string;,
+description: string;,
+ctaText: string;,
+ctaLink: string;,
+imageUrl?: string;,
+priority: number;,
+category: string;,
+tags: string[];,
+backgroundColor?: string;,
+textColor?: string;,
+animation?: 'slide' | 'fade' | 'scale' | 'none';,
 duration?: number; // Auto-rotate duration in ms
 }
 
 interface UnifiedBannerSystemProps {
-banners: BannerConfig[],
-autoRotate?: boolean;
-rotationInterval?: number;
-showNavigation?: boolean;
+banners: BannerConfig[];,
+autoRotate?: boolean;,
+rotationInterval?: number;,
+showNavigation?: boolean;,
 maxVisible?: number;
 }
 

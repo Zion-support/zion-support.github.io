@@ -4,9 +4,9 @@
  */
 
 interface PerformanceMetric {
-name: string,
-value: number,
-rating: 'good' | 'needs-improvement' | 'poor';',
+name: string;,
+value: number;,
+rating: 'good' | 'needs-improvement' | 'poor';,
 timestamp: number;
 }
 

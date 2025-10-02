@@ -1,24 +1,24 @@
 import React from 'react';
 export interface FeaturedItem {
-title: string,
-category: string,
-link: string,
+title: string;,
+category: string;,
+link: string;,
 metrics?: string;
 }
 
 export interface UnifiedPromotionalBannerProps {
-variant?: 'default' | 'premium' | 'hero' | 'compact' | 'mega';
-title: string,
-description: string,
-ctaText: string,
-ctaLink: string,
-theme?: 'blue' | 'purple' | 'green' | 'orange' | 'red' | 'gradient' | 'cyan';
-featuredItems?: FeaturedItem[];
-showCount?: number;
-className?: string;
-icon?: 'sparkles' | 'zap' | 'rocket' | 'star' | 'none';
-animated?: boolean;
-badge?: string;
+variant?: 'default' | 'premium' | 'hero' | 'compact' | 'mega';,
+title: string;,
+description: string;,
+ctaText: string;,
+ctaLink: string;,
+theme?: 'blue' | 'purple' | 'green' | 'orange' | 'red' | 'gradient' | 'cyan';,
+featuredItems?: FeaturedItem[];,
+showCount?: number;,
+className?: string;,
+icon?: 'sparkles' | 'zap' | 'rocket' | 'star' | 'none';,
+animated?: boolean;,
+badge?: string;,
 date?: string;
 }
 

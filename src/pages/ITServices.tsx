@@ -1,6 +1,29 @@
 import React from "react";
-import { Helmet } from "react-helmet-async";
-import { Cloud, Shield, Server, Database, Network, Lock, CheckCircle, ArrowRight, DollarSign, Clock, Star, TrendingUp, Globe, Smartphone, MessageSquare, Zap, Settings, Monitor, Cpu, HardDrive, Wifi, Eye, Key, AlertTriangle, Users, Building } from "lucide-react";
+import {
+Helmet
+} from "react-helmet-async";
+import {
+CheckCircle,
+ArrowRight,
+DollarSign,
+Clock,
+Star,
+TrendingUp,
+Globe,
+Smartphone,
+MessageSquare,
+Zap,
+Settings,
+Monitor,
+Cpu,
+HardDrive,
+Wifi,
+Eye,
+Key,
+AlertTriangle,
+Users,
+Building
+} from "lucide-react";
 
 export default function ITServices(): React.JSX.Element {
   const itServices = [

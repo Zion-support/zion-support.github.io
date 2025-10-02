@@ -1,6 +1,10 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Users, Target, Award, Globe, Shield, TrendingUp, CheckCircle, Star, Phone, Mail, MapPin } from 'lucide-react';
+import {
+Helmet
+} from 'react-helmet-async';
+import {
+
+} from 'lucide-react';
 
 const About: React.FC = () => {
   const stats = [

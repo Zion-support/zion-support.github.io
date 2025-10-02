@@ -1,15 +1,15 @@
 // New January 2026 Content - Revolutionary AI Breakthroughs
 export interface BlogPost {
-id: string,
-title: string,
-excerpt: string,
-content: string,
-author: string,
-publishedAt: string,
-readTime: number,
-category: string,
-tags: string[],
-featured: boolean,
+id: string;,
+title: string;,
+excerpt: string;,
+content: string;,
+author: string;,
+publishedAt: string;,
+readTime: number;,
+category: string;,
+tags: string[];,
+featured: boolean;,
 imageUrl?: string;
 }
 

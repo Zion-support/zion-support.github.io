@@ -3,22 +3,22 @@ import {
 
 } from '../utils/performance';
 interface PerformanceMetrics {
-domContentLoaded: number,
-loadComplete: number,
-firstPaint: number,
-firstContentfulPaint: number,
-cls?: number;
-fid?: number;
-lcp?: number;
+domContentLoaded: number;,
+loadComplete: number;,
+firstPaint: number;,
+firstContentfulPaint: number;,
+cls?: number;,
+fid?: number;,
+lcp?: number;,
 ttfb?: number;
 }
 
 interface PerformanceAlert {
-id: string,
-type: 'warning' | 'error' | 'info';',
-message: string,
-metric: string,
-value: number,
+id: string;,
+type: 'warning' | 'error' | 'info';,
+message: string;,
+metric: string;,
+value: number;,
 threshold: number;
 }
 

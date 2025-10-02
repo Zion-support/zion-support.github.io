@@ -1,6 +1,9 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-const AboutPage: React.FC = () => {,
+import {
+Helmet
+} from 'react-helmet-async';
+
+const AboutPage: React.FC = () => {
 const values = [
 {
 icon: Brain,,

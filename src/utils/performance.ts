@@ -2,11 +2,11 @@ import {
 
 } from 'web-vitals';
 interface PerformanceMetrics {
-cls: number | null,
-inp: number | null,
-fcp: number | null,
-lcp: number | null,
-ttfb: number | null,
+cls: number | null;,
+inp: number | null;,
+fcp: number | null;,
+lcp: number | null;,
+ttfb: number | null;,
 timestamp: string;
 }
 

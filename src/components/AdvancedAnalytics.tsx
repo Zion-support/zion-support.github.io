@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 interface AdvancedAnalyticsProps {
-enableConversionTracking?: boolean;
-enablePerformanceTracking?: boolean;
+enableConversionTracking?: boolean;,
+enablePerformanceTracking?: boolean;,
 enableErrorTracking?: boolean;
 }
 

@@ -3,23 +3,23 @@ import {
 
 } from 'framer-motion';
 interface PerformanceMetrics {
-fcp: number,
-lcp: number,
-fid: number,
-cls: number,
-ttfb: number,
-inp: number,
-bundleSize: number,
+fcp: number;,
+lcp: number;,
+fid: number;,
+cls: number;,
+ttfb: number;,
+inp: number;,
+bundleSize: number;,
 loadTime: number;
 }
 
 interface PerformanceAlert {
-id: string,
-type: 'warning' | 'error' | 'info';',
-message: string,
-timestamp: number,
-metric: string,
-value: number,
+id: string;,
+type: 'warning' | 'error' | 'info';,
+message: string;,
+timestamp: number;,
+metric: string;,
+value: number;,
 threshold: number;
 }
 

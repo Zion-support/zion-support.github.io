@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react';
 // import { useWebVitals } from "../hooks/usePerformance";
 
 interface PerformanceMetrics {
-lcp?: number;
-fid?: number;
-cls?: number;
-fcp?: number;
+lcp?: number;,
+fid?: number;,
+cls?: number;,
+fcp?: number;,
 ttfb?: number;
 }
 

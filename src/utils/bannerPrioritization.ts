@@ -4,12 +4,12 @@
  */
 
 export interface BannerMetadata {
-id: string,
-name: string,
-priority: number,
-value: string,
-publishDate: Date,
-category: 'quantum' | 'autonomous' | 'ai' | 'green' | 'sovereign' | 'general';',
+id: string;,
+name: string;,
+priority: number;,
+value: string;,
+publishDate: Date;,
+category: 'quantum' | 'autonomous' | 'ai' | 'green' | 'sovereign' | 'general';,
 featured: boolean;
 }
 

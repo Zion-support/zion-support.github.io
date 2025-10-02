@@ -1,16 +1,18 @@
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import {
+
+} from 'react-router-dom';
 import SEO from '../components/SEO';
 type ServicesPageProps = {
-  category?:
-    | 'ai-solutions'
-    | 'cloud'
-    | 'analytics'
-    | 'security'
-    | 'automation'
-    | 'quantum-computing'
-    | 'cloud-devops';
-  service?: string;
+category?:,
+| 'ai-solutions'
+| 'cloud'
+| 'analytics'
+| 'security'
+| 'automation'
+| 'quantum-computing'
+| 'cloud-devops';
+service?: string;
 };
 
 const offerings = {
@@ -171,16 +173,16 @@ const CategorySection: React.FC<{ slug: keyof typeof offerings.categories }> = (
 };
 
 const ServicesPage: React.FC<ServicesPageProps> = ({ category }) => {
-  const location = useLocation();
-  const selectedCategory = (category as keyof typeof offerings.categories) || ((): keyof typeof offerings.categories | undefined => {
-    const path = location.pathname;
-    if (path.includes('/services/ai')) return 'ai-solutions';
-    if (path.includes('/services/cloud')) return 'cloud';
-    if (path.includes('/services/analytics')) return 'analytics';
-    if (path.includes('/services/security')) return 'security';
-    if (path.includes('/services/automation')) return 'automation';
-    return undefined;
-  })();
+const location = useLocation();
+const selectedCategory = (category as keyof typeof offerings.categories) || ((): keyof typeof offerings.categories | undefined => {,
+const path = location.pathname;
+if (path.includes('/services/ai')) return 'ai-solutions';
+if (path.includes('/services/cloud')) return 'cloud';
+if (path.includes('/services/analytics')) return 'analytics';
+if (path.includes('/services/security')) return 'security';
+if (path.includes('/services/automation')) return 'automation';
+return undefined;
+})();
 
   return (
     <>

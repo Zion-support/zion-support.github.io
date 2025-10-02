@@ -4,17 +4,17 @@
  */
 
 interface BundleAnalysis {
-totalSize: number,
-componentCount: number,
+totalSize: number;,
+componentCount: number;,
 largestComponents: Array<{ name: string; size: number
 }>;
   recommendations: string[];
 }
 
 interface OptimizationResult {
-before: BundleAnalysis,
-after: BundleAnalysis,
-savings: number,
+before: BundleAnalysis;,
+after: BundleAnalysis;,
+savings: number;,
 savingsPercentage: number;
 }
 

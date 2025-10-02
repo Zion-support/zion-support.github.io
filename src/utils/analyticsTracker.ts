@@ -15,17 +15,17 @@ export interface AnalyticsEvent {
 }
 
 export interface PageViewEvent {
-path: string,
-title: string,
-referrer?: string;
-timestamp: string,
+path: string;,
+title: string;,
+referrer?: string;,
+timestamp: string;,
 duration?: number;
 }
 
 export interface ConversionEvent {
-type: 'newsletter_signup' | 'contact_form' | 'service_inquiry' | 'blog_read';',
-value: number,
-source?: string;
+type: 'newsletter_signup' | 'contact_form' | 'service_inquiry' | 'blog_read';,
+value: number;,
+source?: string;,
 campaign?: string;
 }
 

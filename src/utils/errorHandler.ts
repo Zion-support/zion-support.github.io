@@ -1,10 +1,10 @@
 interface ErrorInfo {
-message: string,
-stack?: string;
-componentStack?: string;
-timestamp: string,
-url: string,
-userAgent: string,
+message: string;,
+stack?: string;,
+componentStack?: string;,
+timestamp: string;,
+url: string;,
+userAgent: string;,
 userId?: string;
 }
 

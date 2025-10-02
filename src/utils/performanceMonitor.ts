@@ -5,10 +5,10 @@
 
 
 export interface PerformanceMetrics {
-cls?: number;
-fid?: number;
-fcp?: number;
-lcp?: number;
+cls?: number;,
+fid?: number;,
+fcp?: number;,
+lcp?: number;,
 ttfb?: number;
 }
 

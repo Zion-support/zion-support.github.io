@@ -8,17 +8,17 @@ import {
 
 } from '../utils/bannerRotation';
 interface UseBannerRotationOptions {
-banners: BannerConfig[],
-strategy?: Partial<RotationStrategy>;
-autoRotate?: boolean;
+banners: BannerConfig[];,
+strategy?: Partial<RotationStrategy>;,
+autoRotate?: boolean;,
 balancedSelection?: boolean;
 }
 
 interface UseBannerRotationReturn {
-displayedBanners: BannerConfig[],
-handleBannerImpression: (bannerId: string) => void,
-handleBannerClick: (bannerId: string) => void,
-refreshBanners: () => void,
+displayedBanners: BannerConfig[];,
+handleBannerImpression: (bannerId: string) => void;,
+handleBannerClick: (bannerId: string) => void;,
+refreshBanners: () => void;,
 isLoading: boolean;
 }
 

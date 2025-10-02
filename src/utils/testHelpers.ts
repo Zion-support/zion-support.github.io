@@ -14,16 +14,16 @@
 
 
 export interface MockComponentProps {
-id?: string;
-className?: string;
-children?: React.ReactNode;
+id?: string;,
+className?: string;,
+children?: React.ReactNode;,
 [key: string]: any;
 }
 
 export interface TestSetupOptions {
-mockLocalStorage?: boolean;
-mockSessionStorage?: boolean;
-mockFetch?: boolean;
+mockLocalStorage?: boolean;,
+mockSessionStorage?: boolean;,
+mockFetch?: boolean;,
 mockConsole?: boolean;
 }
 

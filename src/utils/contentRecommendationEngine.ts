@@ -4,35 +4,35 @@
  */
 
 interface ContentItem {
-id: string,
-title: string,
-category: string,
-tags: string[],
-url: string,
-type: 'blog' | 'case-study' | 'service' | 'guide';',
-readTime?: number;
-publishDate: string,
-views?: number;
+id: string;,
+title: string;,
+category: string;,
+tags: string[];,
+url: string;,
+type: 'blog' | 'case-study' | 'service' | 'guide';,
+readTime?: number;,
+publishDate: string;,
+views?: number;,
 conversions?: number;
 }
 
 interface UserProfile {
-interests: string[],
-viewedContent: string[],
-preferredCategories: string[],
-readingLevel: 'beginner' | 'intermediate' | 'advanced';',
+interests: string[];,
+viewedContent: string[];,
+preferredCategories: string[];,
+readingLevel: 'beginner' | 'intermediate' | 'advanced';,
 engagement: number; // 0-1 score
 }
 
 interface RecommendationScore {
-contentId: string,
-score: number,
+contentId: string;,
+score: number;,
 reasons: string[];
 }
 
 interface RecommendationResult {
-content: ContentItem,
-score: number,
+content: ContentItem;,
+score: number;,
 reasons: string[];
 }
 

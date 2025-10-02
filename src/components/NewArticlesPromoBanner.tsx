@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 interface NewArticlesPromoBannerProps {
-variant?: 'default' | 'premium' | 'featured' | 'compact';
-showCount?: number;
-autoRotate?: boolean;
-rotationInterval?: number;
+variant?: 'default' | 'premium' | 'featured' | 'compact';,
+showCount?: number;,
+autoRotate?: boolean;,
+rotationInterval?: number;,
 className?: string;
 }
 

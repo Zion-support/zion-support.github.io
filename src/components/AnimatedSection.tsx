@@ -1,7 +1,7 @@
 import React from 'react';
 interface AnimatedSectionProps {
-animation?: 'fadeIn' | 'slideUp' | 'slideLeft' | 'slideRight' | 'scale';
-delay?: number;
+animation?: 'fadeIn' | 'slideUp' | 'slideLeft' | 'slideRight' | 'scale';,
+delay?: number;,
 children: React.ReactNode;
 }
 

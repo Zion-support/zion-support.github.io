@@ -4,30 +4,30 @@
  */
 
 export interface AccessibilityConfig {
-enableKeyboardNavigation: boolean,
-enableScreenReaderSupport: boolean,
-enableHighContrast: boolean,
-enableFocusManagement: boolean,
-enableARIALabels: boolean,
-enableColorContrast: boolean,
-enableTextScaling: boolean,
-enableMotionReduction: boolean,
-enableVoiceControl: boolean,
+enableKeyboardNavigation: boolean;,
+enableScreenReaderSupport: boolean;,
+enableHighContrast: boolean;,
+enableFocusManagement: boolean;,
+enableARIALabels: boolean;,
+enableColorContrast: boolean;,
+enableTextScaling: boolean;,
+enableMotionReduction: boolean;,
+enableVoiceControl: boolean;,
 enableTouchAccessibility: boolean;
 }
 
 export interface AccessibilityMetrics {
-colorContrastRatio: number,
-focusableElements: number,
-ariaLabels: number,
-headingStructure: number,
-altTexts: number,
-keyboardTraps: number,
-screenReaderCompatibility: number,
-overallScore: number,
-totalElements: number,
-accessibleElements: number,
-issuesFound: number,
+colorContrastRatio: number;,
+focusableElements: number;,
+ariaLabels: number;,
+headingStructure: number;,
+altTexts: number;,
+keyboardTraps: number;,
+screenReaderCompatibility: number;,
+overallScore: number;,
+totalElements: number;,
+accessibleElements: number;,
+issuesFound: number;,
 score: number;
 }
 

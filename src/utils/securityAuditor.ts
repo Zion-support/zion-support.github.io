@@ -4,11 +4,11 @@
  */
 
 interface SecurityVulnerability {
-severity: 'critical' | 'high' | 'medium' | 'low';',
-category: 'xss' | 'csrf' | 'auth' | 'data' | 'dependency' | 'config';',
-description: string,
-impact: string,
-remediation: string,
+severity: 'critical' | 'high' | 'medium' | 'low';,
+category: 'xss' | 'csrf' | 'auth' | 'data' | 'dependency' | 'config';,
+description: string;,
+impact: string;,
+remediation: string;,
 cweId?: string;
 }
 

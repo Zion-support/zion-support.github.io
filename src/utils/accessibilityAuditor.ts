@@ -4,10 +4,10 @@
  */
 
 interface AccessibilityIssue {
-severity: 'critical' | 'serious' | 'moderate' | 'minor';',
-element: string,
-issue: string,
-recommendation: string,
+severity: 'critical' | 'serious' | 'moderate' | 'minor';,
+element: string;,
+issue: string;,
+recommendation: string;,
 wcagCriterion: string;
 }
 

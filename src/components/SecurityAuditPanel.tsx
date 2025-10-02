@@ -6,23 +6,23 @@ import {
 
 } from 'lucide-react';
 interface SecurityCheck {
-id: string,
-name: string,
-description: string,
-status: 'pass' | 'fail' | 'warning' | 'info';',
-severity: 'low' | 'medium' | 'high' | 'critical';',
-category: 'headers' | 'content' | 'network' | 'authentication' | 'data';',
-recommendation?: string;
+id: string;,
+name: string;,
+description: string;,
+status: 'pass' | 'fail' | 'warning' | 'info';,
+severity: 'low' | 'medium' | 'high' | 'critical';,
+category: 'headers' | 'content' | 'network' | 'authentication' | 'data';,
+recommendation?: string;,
 details?: string;
 }
 
 interface SecurityReport {
-overallScore: number,
-totalChecks: number,
-passedChecks: number,
-failedChecks: number,
-warnings: number,
-checks: SecurityCheck[],
+overallScore: number;,
+totalChecks: number;,
+passedChecks: number;,
+failedChecks: number;,
+warnings: number;,
+checks: SecurityCheck[];,
 lastUpdated: number;
 }
 

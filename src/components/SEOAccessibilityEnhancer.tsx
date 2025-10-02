@@ -2,11 +2,11 @@ import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOAccessibilityEnhancerProps {
-title?: string;
-description?: string;
-keywords?: string[];
-canonicalUrl?: string;
-ogImage?: string;
+title?: string;,
+description?: string;,
+keywords?: string[];,
+canonicalUrl?: string;,
+ogImage?: string;,
 structuredData?: any;
 }
 

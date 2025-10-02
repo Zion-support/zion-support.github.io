@@ -6,13 +6,13 @@ import {
 
 } from 'lucide-react';
 interface SEOIssue {
-id: string,
-type: 'error' | 'warning' | 'info';',
-title: string,
-description: string,
-impact: 'high' | 'medium' | 'low';',
-category: 'content' | 'technical' | 'performance' | 'accessibility' | 'mobile';',
-fix: string,
+id: string;,
+type: 'error' | 'warning' | 'info';,
+title: string;,
+description: string;,
+impact: 'high' | 'medium' | 'low';,
+category: 'content' | 'technical' | 'performance' | 'accessibility' | 'mobile';,
+fix: string;,
 score: number;
 }
 

@@ -4,14 +4,14 @@
  */
 
 export interface BlogPostSEO {
-title: string,
-description: string,
-keywords: string,
-date: string,
-author: string,
-category: string,
-slug: string,
-readTime?: string;
+title: string;,
+description: string;,
+keywords: string;,
+date: string;,
+author: string;,
+category: string;,
+slug: string;,
+readTime?: string;,
 image?: string;
 }
 

@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 interface AIPerformanceDashboardProps {
-  isVisible: boolean,
-  onClose: () => void;
+isVisible: boolean;,
+onClose: () => void;
 }
 
 interface PerformanceMetrics {
-errorRate: number,
-avgResolutionTime: number,
-criticalErrorsToday: number,
+errorRate: number;,
+avgResolutionTime: number;,
+criticalErrorsToday: number;,
 userImpactScore: number;
 }
 

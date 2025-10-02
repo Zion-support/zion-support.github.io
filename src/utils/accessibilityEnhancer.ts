@@ -4,11 +4,11 @@
  */
 
 interface AccessibilityConfig {
-enableKeyboardNavigation: boolean,
-enableScreenReaderSupport: boolean,
-enableHighContrast: boolean,
-enableReducedMotion: boolean,
-enableFocusIndicators: boolean,
+enableKeyboardNavigation: boolean;,
+enableScreenReaderSupport: boolean;,
+enableHighContrast: boolean;,
+enableReducedMotion: boolean;,
+enableFocusIndicators: boolean;,
 enableAriaLabels: boolean;
 }
 

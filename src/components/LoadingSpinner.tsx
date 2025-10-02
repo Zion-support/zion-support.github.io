@@ -2,9 +2,9 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 interface LoadingSpinnerProps {
-size?: 'small' | 'medium' | 'large';
-color?: 'blue' | 'white' | 'gray';
-text?: string;
+size?: 'small' | 'medium' | 'large';,
+color?: 'blue' | 'white' | 'gray';,
+text?: string;,
 fullScreen?: boolean;
 }
 

@@ -2,13 +2,13 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOOptimizerProps {
-title: string,
-description: string,
-canonicalUrl: string,
-keywords?: string[];
-ogImage?: string;
-ogType?: string;
-twitterCard?: string;
+title: string;,
+description: string;,
+canonicalUrl: string;,
+keywords?: string[];,
+ogImage?: string;,
+ogType?: string;,
+twitterCard?: string;,
 structuredData?: object;
 }
 

@@ -12,23 +12,23 @@
  */
 
 export interface PerformanceMetric {
-name: string,
-value: number,
-rating: 'good' | 'needs-improvement' | 'poor';',
+name: string;,
+value: number;,
+rating: 'good' | 'needs-improvement' | 'poor';,
 timestamp: number;
 }
 
 export interface ResourceTiming {
-name: string,
-duration: number,
-size: number,
+name: string;,
+duration: number;,
+size: number;,
 type: string;
 }
 
 export interface PerformanceBudget {
-metric: string,
-budget: number,
-current: number,
+metric: string;,
+budget: number;,
+current: number;,
 status: 'pass' | 'warn' | 'fail';
 }
 

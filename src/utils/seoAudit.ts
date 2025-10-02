@@ -15,11 +15,11 @@
  */
 
 export interface SEOIssue {
-type: 'error' | 'warning' | 'info';',
-category: string,
-message: string,
-element?: string;
-recommendation: string,
+type: 'error' | 'warning' | 'info';,
+category: string;,
+message: string;,
+element?: string;,
+recommendation: string;,
 impact: 'high' | 'medium' | 'low';
 }
 

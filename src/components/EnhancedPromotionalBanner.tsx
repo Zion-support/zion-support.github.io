@@ -3,17 +3,17 @@ import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 interface BannerType {
-id: string,
-title: string,
-description: string,
-variant: 'success' | 'warning' | 'info' | 'error';',
-icon?: string;
-ctaText: string,
+id: string;,
+title: string;,
+description: string;,
+variant: 'success' | 'warning' | 'info' | 'error';,
+icon?: string;,
+ctaText: string;,
 ctaLink: string;
 }
 
 interface EnhancedPromotionalBannerProps {
-banner: BannerType,
+banner: BannerType;,
 className?: string;
 }
 

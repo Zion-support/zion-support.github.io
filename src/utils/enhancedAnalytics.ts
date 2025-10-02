@@ -6,18 +6,18 @@
 import { getPerformanceOptimizer } from './performanceOptimizer';
 
 interface PageView {
-path: string,
-title: string,
-timestamp: number,
-referrer: string,
+path: string;,
+title: string;,
+timestamp: number;,
+referrer: string;,
 userAgent: string;
 }
 
 interface UserEvent {
-category: string,
-action: string,
-label?: string;
-value?: number;
+category: string;,
+action: string;,
+label?: string;,
+value?: number;,
 timestamp: number;
 }
 
@@ -29,11 +29,11 @@ interface ConversionEvent {
 }
 
 interface SessionData {
-sessionId: string,
-startTime: number,
-pageViews: PageView[],
-events: UserEvent[],
-conversions: ConversionEvent[],
+sessionId: string;,
+startTime: number;,
+pageViews: PageView[];,
+events: UserEvent[];,
+conversions: ConversionEvent[];,
 performanceMetrics: any;
 }
 

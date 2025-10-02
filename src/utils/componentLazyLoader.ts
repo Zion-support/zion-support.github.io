@@ -6,8 +6,8 @@
 
 import React, { lazy, ComponentType } from 'react';
 export interface LazyLoadConfig {
-componentPath: string,
-preload?: boolean;
+componentPath: string;,
+preload?: boolean;,
 timeout?: number;
 }
 

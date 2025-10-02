@@ -4,15 +4,15 @@
  */
 
 export interface SEOConfig {
-title: string,
-description: string,
-keywords?: string[];
-author?: string;
-ogImage?: string;
-canonical?: string;
-publishDate?: string;
-modifiedDate?: string;
-type?: 'website' | 'article' | 'product';
+title: string;,
+description: string;,
+keywords?: string[];,
+author?: string;,
+ogImage?: string;,
+canonical?: string;,
+publishDate?: string;,
+modifiedDate?: string;,
+type?: 'website' | 'article' | 'product';,
 locale?: string;
 }
 
@@ -112,9 +112,9 @@ export function calculateReadingTime(content: string, wordsPerMinute: number = 2
  * Generate sitemap entry
  */
 export interface SitemapEntry {
-url: string,
-lastmod?: string;
-changefreq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
+url: string;,
+lastmod?: string;,
+changefreq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';,
 priority?: number;
 }
 
