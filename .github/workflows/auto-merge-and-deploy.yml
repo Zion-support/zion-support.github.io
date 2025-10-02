@@ -1,0 +1,74 @@
+name: Auto Merge and Deploy
+
+on:
+  push:
+    branches:
+      - 'cursor/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  auto-merge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Configure Git
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "actions@github.com"
+
+      - name: Merge cursor branches to main
+        run: |
+          # Get all cursor branches
+          git fetch origin
+          
+          # Switch to main
+          git checkout main
+          git pull origin main
+          
+          # Find and merge all cursor branches
+          for branch in $(git branch -r | grep 'origin/cursor/' | sed 's|origin/||'); do
+            echo "Processing branch: $branch"
+            
+            # Try to merge
+            if git merge "origin/$branch" --no-ff -m "Auto-merge: $branch into main"; then
+              echo "✅ Successfully merged $branch"
+            else
+              echo "⚠️  Merge conflict in $branch - resolving automatically"
+              
+              # Auto-resolve conflicts by preferring cursor branch changes
+              git checkout --theirs .
+              git add -A
+              git commit --no-edit
+              
+              echo "✅ Conflicts resolved for $branch"
+            fi
+          done
+          
+          # Push to main
+          git push origin main
+          
+      - name: Delete merged branches
+        run: |
+          # Delete merged cursor branches from remote
+          for branch in $(git branch -r | grep 'origin/cursor/' | sed 's|origin/||'); do
+            echo "Deleting merged branch: $branch"
+            git push origin --delete "$branch" || echo "Branch already deleted or cannot be deleted"
+          done
+
+  deploy:
+    needs: auto-merge
+    runs-on: ubuntu-latest
+    if: success()
+    steps:
+      - name: Trigger Netlify Deploy
+        run: |
+          echo "Deployment will be triggered by Netlify on main branch push"

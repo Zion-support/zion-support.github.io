@@ -1,8 +1,6 @@
-import React from 'react';
-import Link from 'next/link';
 
 // Latest Content 2026 Banner
-export function LatestContent2026Banner() {
+export function LatestContent2026Banner(): void {
   return (
     <div className="w-full bg-gradient-to-r from-purple-600 via-blue-600 to-teal-600 text-white py-4">
       <div className="max-w-6xl mx-auto px-4">
@@ -15,17 +13,17 @@ export function LatestContent2026Banner() {
               <span className="text-sm opacity-90">Latest AI Content</span>
             </div>
             <div className="hidden md:flex items-center gap-4 text-sm">
-              <Link href="/blog/ai-autonomous-cloud-operations-2026" className="hover:text-yellow-200 transition-colors">
+              <Link to="/blog/ai-autonomous-cloud-operations-2026" className="hover:text-yellow-200 transition-colors">
                 AI Autonomous Cloud Operations
               </Link>
               <span className="opacity-50">•</span>
-              <Link href="/blog/ai-fintech-transformation-2026" className="hover:text-yellow-200 transition-colors">
+              <Link to="/blog/ai-fintech-transformation-2026" className="hover:text-yellow-200 transition-colors">
                 AI FinTech Transformation
               </Link>
             </div>
           </div>
           <Link
-            href="/blog"
+            to="/blog"
             className="bg-white/20 hover:bg-white/30 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-colors"
           >
             Explore All Content →
@@ -37,7 +35,7 @@ export function LatestContent2026Banner() {
 }
 
 // AI Security Enterprise 2026 Banner
-export function AISecurityEnterprise2026Banner() {
+export function AISecurityEnterprise2026Banner(): void {
   return (
     <div className="w-full bg-gradient-to-r from-red-600 to-orange-600 text-white py-6">
       <div className="max-w-6xl mx-auto px-4">
@@ -56,13 +54,13 @@ export function AISecurityEnterprise2026Banner() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/services/ai-cybersecurity-consulting"
+              to="/services/ai-cybersecurity-consulting"
               className="bg-white text-red-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Explore Security Solutions
             </Link>
             <Link
-              href="/blog/ai-cybersecurity-2026"
+              to="/blog/ai-cybersecurity-2026"
               className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-colors"
             >
               Read Security Guide
@@ -75,7 +73,7 @@ export function AISecurityEnterprise2026Banner() {
 }
 
 // AI Multimodal Enterprise 2026 Banner
-export function AIMultimodalEnterprise2026Banner() {
+export function AIMultimodalEnterprise2026Banner(): void {
   return (
     <div className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-6">
       <div className="max-w-6xl mx-auto px-4">
@@ -110,7 +108,7 @@ export function AIMultimodalEnterprise2026Banner() {
             </div>
           </div>
           <Link
-            href="/services/ai-multimodal-enterprise"
+            to="/services/ai-multimodal-enterprise"
             className="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
           >
             Explore Multimodal AI →
@@ -122,7 +120,7 @@ export function AIMultimodalEnterprise2026Banner() {
 }
 
 // AI Sustainability Transformation Banner
-export function AISustainabilityTransformationBanner() {
+export function AISustainabilityTransformationBanner(): void {
   return (
     <div className="w-full bg-gradient-to-r from-green-600 to-teal-600 text-white py-6">
       <div className="max-w-6xl mx-auto px-4">
@@ -157,7 +155,7 @@ export function AISustainabilityTransformationBanner() {
             </div>
           </div>
           <Link
-            href="/blog/ai-sustainability-green-tech-2026"
+            to="/blog/ai-sustainability-green-tech-2026"
             className="bg-white text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
           >
             Read Sustainability Guide →
@@ -169,7 +167,7 @@ export function AISustainabilityTransformationBanner() {
 }
 
 // New Latest 2026 Content Banner
-export function NewLatest2026ContentBanner() {
+export function NewLatest2026ContentBanner(): void {
   return (
     <div className="w-full bg-gradient-to-r from-pink-600 via-purple-600 to-indigo-600 text-white py-6">
       <div className="max-w-6xl mx-auto px-4">
@@ -187,13 +185,13 @@ export function NewLatest2026ContentBanner() {
             Discover cutting-edge AI insights, case studies, and implementation guides that are transforming industries worldwide.
           </p>
           <div className="grid md:grid-cols-2 gap-6 mb-6">
-            <Link href="/blog/ai-autonomous-cloud-operations-2026" className="group">
+            <Link to="/blog/ai-autonomous-cloud-operations-2026" className="group">
               <div className="bg-white/10 rounded-lg p-4 hover:bg-white/20 transition-colors">
                 <h3 className="font-semibold mb-2 group-hover:text-yellow-200">AI Autonomous Cloud Operations</h3>
                 <p className="text-sm opacity-90">Self-healing infrastructure with 99.9% uptime</p>
               </div>
             </Link>
-            <Link href="/case-studies/ai-retail-automation-2026" className="group">
+            <Link to="/case-studies/ai-retail-automation-2026" className="group">
               <div className="bg-white/10 rounded-lg p-4 hover:bg-white/20 transition-colors">
                 <h3 className="font-semibold mb-2 group-hover:text-yellow-200">AI Retail Automation Case Study</h3>
                 <p className="text-sm opacity-90">$8M ROI with 98% automation</p>
@@ -201,7 +199,7 @@ export function NewLatest2026ContentBanner() {
             </Link>
           </div>
           <Link
-            href="/blog"
+            to="/blog"
             className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
           >
             View All Latest Content →
@@ -213,7 +211,7 @@ export function NewLatest2026ContentBanner() {
 }
 
 // AI Autonomous Cloud Ops Banner
-export function AIAutonomousCloudOpsBanner() {
+export function AIAutonomousCloudOpsBanner(): void {
   return (
     <div className="w-full bg-gradient-to-r from-cyan-600 to-blue-600 text-white py-6">
       <div className="max-w-6xl mx-auto px-4">
@@ -248,7 +246,7 @@ export function AIAutonomousCloudOpsBanner() {
             </div>
           </div>
           <Link
-            href="/blog/ai-autonomous-cloud-operations-2026"
+            to="/blog/ai-autonomous-cloud-operations-2026"
             className="bg-white text-cyan-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
           >
             Read Complete Guide →
@@ -260,7 +258,7 @@ export function AIAutonomousCloudOpsBanner() {
 }
 
 // AI FinTech Transformation Banner
-export function AIFinTechTransformationBanner() {
+export function AIFinTechTransformationBanner(): void {
   return (
     <div className="w-full bg-gradient-to-r from-emerald-600 to-green-600 text-white py-6">
       <div className="max-w-6xl mx-auto px-4">
@@ -295,7 +293,7 @@ export function AIFinTechTransformationBanner() {
             </div>
           </div>
           <Link
-            href="/blog/ai-fintech-transformation-2026"
+            to="/blog/ai-fintech-transformation-2026"
             className="bg-white text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
           >
             Read FinTech Guide →
@@ -307,7 +305,7 @@ export function AIFinTechTransformationBanner() {
 }
 
 // AI Retail Automation Banner
-export function AIRetailAutomationBanner() {
+export function AIRetailAutomationBanner(): void {
   return (
     <div className="w-full bg-gradient-to-r from-orange-600 to-red-600 text-white py-6">
       <div className="max-w-6xl mx-auto px-4">
@@ -342,7 +340,7 @@ export function AIRetailAutomationBanner() {
             </div>
           </div>
           <Link
-            href="/case-studies/ai-retail-automation-2026"
+            to="/case-studies/ai-retail-automation-2026"
             className="bg-white text-orange-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
           >
             View Case Study →
@@ -354,7 +352,7 @@ export function AIRetailAutomationBanner() {
 }
 
 // Latest 2026 Content Banner
-export function Latest2026ContentBanner() {
+export function Latest2026ContentBanner(): void {
   return (
     <div className="w-full bg-gradient-to-r from-violet-600 via-purple-600 to-fuchsia-600 text-white py-6">
       <div className="max-w-6xl mx-auto px-4">
@@ -372,21 +370,21 @@ export function Latest2026ContentBanner() {
             Explore the latest AI innovations, case studies, and implementation guides that are revolutionizing industries.
           </p>
           <div className="flex flex-wrap justify-center gap-4 mb-6">
-            <Link href="/blog/ai-autonomous-cloud-operations-2026" className="bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg text-sm font-semibold transition-colors">
+            <Link to="/blog/ai-autonomous-cloud-operations-2026" className="bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg text-sm font-semibold transition-colors">
               Cloud Operations
             </Link>
-            <Link href="/blog/ai-fintech-transformation-2026" className="bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg text-sm font-semibold transition-colors">
+            <Link to="/blog/ai-fintech-transformation-2026" className="bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg text-sm font-semibold transition-colors">
               FinTech Revolution
             </Link>
-            <Link href="/case-studies/ai-retail-automation-2026" className="bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg text-sm font-semibold transition-colors">
+            <Link to="/case-studies/ai-retail-automation-2026" className="bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg text-sm font-semibold transition-colors">
               Retail Automation
             </Link>
-            <Link href="/blog/ai-sustainability-green-tech-2026" className="bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg text-sm font-semibold transition-colors">
+            <Link to="/blog/ai-sustainability-green-tech-2026" className="bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg text-sm font-semibold transition-colors">
               Sustainability
             </Link>
           </div>
           <Link
-            href="/blog"
+            to="/blog"
             className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
           >
             Explore All Content →

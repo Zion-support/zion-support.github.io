@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { X, ArrowRight, BookOpen, TrendingUp, Sparkles, Zap } from 'lucide-react';
 
 interface NewContentPromotionBannerProps {
   variant?: 'info' | 'success' | 'warning' | 'error' | 'default' | 'premium';

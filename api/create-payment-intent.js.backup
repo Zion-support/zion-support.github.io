@@ -22,14 +22,3 @@ const PROD_DOMAIN =;
       currency:;
 
     res.statusCode = 500;
-<<<<<<< HEAD
-    res.json({ error: err.message }})}
-export: default withErrorLogging(handler);
-=======
-
-
-
-
-
-
->>>>>>> main

@@ -1,6 +1,5 @@
 // Minimal types; remove ts-nocheck
 import React from "react";
-import { Helmet } from "react-helmet-async";
 
 export default function GenAICostTiersV3_2027(): React.JSX.Element {
   return (
