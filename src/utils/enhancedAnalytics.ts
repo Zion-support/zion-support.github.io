@@ -3,37 +3,43 @@
  * Tracks user behavior, performance, and business metrics
  */
 
+<<<<<<< HEAD
 import { getPerformanceOptimizer } from './performanceOptimizer';
 
 interface PageView {
-path: string,
-title: string,
-timestamp: number,
-referrer: string,
+path: string;,
+title: string;,
+timestamp: number;,
+referrer: string;,
 userAgent: string;
 }
 
 interface UserEvent {
-category: string,
-action: string,
-label?: string;
-value?: number;
+category: string;,
+action: string;,
+label?: string;,
+value?: number;,
 timestamp: number;
 }
 
 interface ConversionEvent {
+<<<<<<< HEAD
   type: 'lead' | 'signup' | 'purchase' | 'download' | 'contact';',
   value: number,
+=======
+  type: 'lead' | 'signup' | 'purchase' | 'download' | 'contact';';,
+  value: number;,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   metadata?: Record<string, any>;
   timestamp: number;
 }
 
 interface SessionData {
-sessionId: string,
-startTime: number,
-pageViews: PageView[],
-events: UserEvent[],
-conversions: ConversionEvent[],
+sessionId: string;,
+startTime: number;,
+pageViews: PageView[];,
+events: UserEvent[];,
+conversions: ConversionEvent[];,
 performanceMetrics: any;
 }
 
@@ -43,7 +49,11 @@ private isInitialized = false;
 private performanceOptimizer: any;
 constructor() {
 this.session = this.createNewSession();
+<<<<<<< HEAD
 if (typeof window !== 'undefined') {;
+=======
+if (typeof window !== 'undefined') {';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 this.performanceOptimizer = getPerformanceOptimizer();
 this.initialize();
 }
@@ -75,12 +85,21 @@ this.initialize();
    */
   private createNewSession(): SessionData {
     return {
+<<<<<<< HEAD
       sessionId: this.generateSessionId(),
       startTime: Date.now(),
       pageViews: [],
       events: [],
       conversions: [],
       performanceMetrics: {}
+=======
+      sessionId: this.generateSessionId(),,
+      startTime: Date.now(),,
+      pageViews: [],,
+      events: [],,
+      conversions: [],,
+      performanceMetrics: {},
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     };
   }
 
@@ -95,27 +114,42 @@ this.initialize();
    * Track page view
    */
   trackPageView(path?: string, title?: string): void {
-    if (typeof window === 'undefined') return;
+    if (typeof window === 'undefined') return;';
 
+<<<<<<< HEAD
     const pageView: PageView = {
       path: path || window.location.pathname,
       title: title || document.title,
       timestamp: Date.now(),
       referrer: document.referrer,
       userAgent: navigator.userAgent
+=======
+    const pageView: PageView = {,
+      path: path || window.location.pathname,,
+      title: title || document.title,,
+      timestamp: Date.now(),,
+      referrer: document.referrer,,
+      userAgent: navigator.userAgent,,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     };
 
     this.session.pageViews.push(pageView);
-    this.sendToAnalytics('pageview', pageView);
+    this.sendToAnalytics('pageview', pageView);';
   }
 
   /**
    * Track custom event
    */
   trackEvent(
+<<<<<<< HEAD
     category: string,
     action: string,
     label?: string
+=======
+    category: string,,
+    action: string,,
+    label?: string,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     value?: number
   ): void {
     const event: UserEvent = {,
@@ -123,18 +157,26 @@ this.initialize();
       action,
       label,
       value,
+<<<<<<< HEAD
       timestamp: Date.now()
+=======
+      timestamp: Date.now(),,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     };
 
     this.session.events.push(event);
-    this.sendToAnalytics('event', event);
+    this.sendToAnalytics('event', event);';
   }
 
   /**
    * Track conversion
    */
   trackConversion(
+<<<<<<< HEAD
     type: ConversionEvent['type'],',
+=======
+    type: ConversionEvent['type'],';,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     value: number = 0,,
     metadata?: Record<string, any>
   ): void {
@@ -142,18 +184,26 @@ this.initialize();
       type,
       value,
       metadata,
+<<<<<<< HEAD
       timestamp: Date.now()
+=======
+      timestamp: Date.now(),,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     };
 
     this.session.conversions.push(conversion);
-    this.sendToAnalytics('conversion', conversion);
+    this.sendToAnalytics('conversion', conversion);';
   }
 
   /**
    * Track user interaction
    */
   trackInteraction(element: string, action: string): void {,
+<<<<<<< HEAD
     this.trackEvent('User Interaction', action, element);
+=======
+    this.trackEvent('User Interaction', action, element);';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   }
 
   /**
@@ -161,13 +211,18 @@ this.initialize();
    */
   trackFormSubmission(formName: string, success: boolean): void {,
     this.trackEvent(
+<<<<<<< HEAD
       'Form'
       success ? 'Submit Success' : 'Submit Error'
+=======
+      'Form',';
+      success ? 'Submit Success' : 'Submit Error',';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       formName
     );
 
     if (success) {
-      this.trackConversion('lead', 1, { form: formName });
+      this.trackConversion('lead', 1, { form: formName });';
     }
   }
 
@@ -175,7 +230,11 @@ this.initialize();
    * Track content engagement
    */
   trackContentEngagement(contentType: string, contentId: string, duration: number): void {,
+<<<<<<< HEAD
     this.trackEvent('Content Engagement', contentType, contentId, duration);
+=======
+    this.trackEvent('Content Engagement', contentType, contentId, duration);';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   }
 
   /**
@@ -204,10 +263,17 @@ this.initialize();
     this.session.performanceMetrics = {
       metrics,
       score,
+<<<<<<< HEAD
       timestamp: Date.now()
     };
 
     this.sendToAnalytics('performance', {;
+=======
+      timestamp: Date.now(),,
+    };
+
+    this.sendToAnalytics('performance', {';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       metrics,
       score
     });
@@ -252,6 +318,7 @@ this.initialize();
    * Setup event listeners
    */
   private setupEventListeners(): void {
+<<<<<<< HEAD
     if (typeof window === 'undefined') return;
     // Track clicks on important elements
     document.addEventListener('click', (e) => {;
@@ -260,12 +327,28 @@ this.initialize();
       // Track CTA clicks
       if (target.closest('button[class*="btn"], a[class*="btn"]')) {;
         const text = target.textContent?.trim() || 'Unknown';
+=======
+    if (typeof window === 'undefined') return;';
+
+    // Track clicks on important elements
+    document.addEventListener('click', (e) => {';
+      const target = e.target as HTMLElement;
+      
+      // Track CTA clicks
+      if (target.closest('button[class*="btn"], a[class*="btn"]')) {';
+        const text = target.textContent?.trim() || 'Unknown';';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
         this.trackInteraction('CTA Button', `Click: ${text}`);`;
       }
 
       // Track link clicks
+<<<<<<< HEAD
       if (target.closest('a[href]')) {;
         const href = (target.closest('a') as HTMLAnchorElement).href;
+=======
+      if (target.closest('a[href]')) {';
+        const href = (target.closest('a') as HTMLAnchorElement).href;';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
         this.trackInteraction('Link', `Click: ${href}`);`;
       }
     });
@@ -275,7 +358,11 @@ this.initialize();
     const scrollThresholds = [25, 50, 75, 90, 100];
     let trackedThresholds = new Set<number>();
 
+<<<<<<< HEAD
     window.addEventListener('scroll', () => {;
+=======
+    window.addEventListener('scroll', () => {';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       const scrollPercentage = Math.round(
         ((window.scrollY + window.innerHeight) / document.documentElement.scrollHeight) * 100
       );
@@ -297,29 +384,46 @@ this.initialize();
     let pageStartTime = Date.now();
     
     // Track before page unload
+<<<<<<< HEAD
     window.addEventListener('beforeunload', () => {;
+=======
+    window.addEventListener('beforeunload', () => {';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       const timeOnPage = Date.now() - pageStartTime;
-      this.trackContentEngagement('Page', window.location.pathname, timeOnPage);
+      this.trackContentEngagement('Page', window.location.pathname, timeOnPage);';
     });
 
     // Track visibility changes
+<<<<<<< HEAD
     document.addEventListener('visibilitychange', () => {;
+=======
+    document.addEventListener('visibilitychange', () => {';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       if (document.hidden) {
         const timeOnPage = Date.now() - pageStartTime;
-        this.trackContentEngagement('Page', window.location.pathname, timeOnPage);
+        this.trackContentEngagement('Page', window.location.pathname, timeOnPage);';
       } else {
         pageStartTime = Date.now();
       }
     });
 
     // Track errors
+<<<<<<< HEAD
     window.addEventListener('error', (e) => {;
+=======
+    window.addEventListener('error', (e) => {';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       this.trackError(new Error(e.message), e.filename);
     });
 
     // Track unhandled promise rejections
+<<<<<<< HEAD
     window.addEventListener('unhandledrejection', (e) => {;
       this.trackError(new Error(e.reason), 'Unhandled Promise');
+=======
+    window.addEventListener('unhandledrejection', (e) => {';
+      this.trackError(new Error(e.reason), 'Unhandled Promise');';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     });
   }
 
@@ -327,9 +431,16 @@ this.initialize();
    * Setup session tracking
    */
   private setupSessionTracking(): void {
+<<<<<<< HEAD
     if (typeof window === 'undefined') return;
     // Save session data before unload
     window.addEventListener('beforeunload', () => {;
+=======
+    if (typeof window === 'undefined') return;';
+
+    // Save session data before unload
+    window.addEventListener('beforeunload', () => {';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       this.saveSession();
     });
 
@@ -342,9 +453,13 @@ this.initialize();
    */
   private saveSession(): void {
     try {
-      localStorage.setItem('analytics_session', JSON.stringify(this.session));
+      localStorage.setItem('analytics_session', JSON.stringify(this.session));';
     } catch (error) {
+<<<<<<< HEAD
       console.warn('Failed to save analytics session: ', error);',
+=======
+      console.warn('Failed to save analytics session: ', error);';,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     }
   }
 
@@ -353,7 +468,7 @@ this.initialize();
    */
   private restoreSession(): void {
     try {
-      const stored = localStorage.getItem('analytics_session');
+      const stored = localStorage.getItem('analytics_session');';
       if (stored) {
         const data = JSON.parse(stored);
         
@@ -363,7 +478,11 @@ this.initialize();
         }
       }
     } catch (error) {
+<<<<<<< HEAD
       console.warn('Failed to restore analytics session: ', error);',
+=======
+      console.warn('Failed to restore analytics session: ', error);';,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     }
   }
 
@@ -396,13 +515,22 @@ this.initialize();
    */
   private sendToAnalytics(type: string, data: any): void {,
     // In production, send to your analytics service
+<<<<<<< HEAD
     if (process.env.NODE_ENV === 'development') {;
+=======
+    if (process.env.NODE_ENV === 'development') {';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       console.log(`[Analytics] ${type}:`, data);`;
     }
 
     // Example: Send to Google Analytics, Mixpanel, etc.,
+<<<<<<< HEAD
     if (typeof window !== 'undefined' && (window as any).gtag) {;
       (window as any).gtag('event', type, data);
+=======
+    if (typeof window !== 'undefined' && (window as any).gtag) {';
+      (window as any).gtag('event', type, data);';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     }
   }
 
@@ -411,15 +539,24 @@ this.initialize();
    */
   private sendBatchData(): void {
     const batchData = {
+<<<<<<< HEAD
       sessionId: this.session.sessionId,
       duration: this.getSessionDuration(),
       pageViews: this.session.pageViews.length,
       events: this.session.events.length,
       conversions: this.session.conversions.length,
       performanceScore: this.session.performanceMetrics?.score
+=======
+      sessionId: this.session.sessionId,,
+      duration: this.getSessionDuration(),,
+      pageViews: this.session.pageViews.length,,
+      events: this.session.events.length,,
+      conversions: this.session.conversions.length,,
+      performanceScore: this.session.performanceMetrics?.score,,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     };
 
-    this.sendToAnalytics('batch', batchData);
+    this.sendToAnalytics('batch', batchData);';
   }
 
   /**
@@ -433,6 +570,7 @@ conversions: any;
 } {
     return {
       summary: {,
+<<<<<<< HEAD
         sessionId: this.session.sessionId,
         duration: this.getSessionDuration(),
         startTime: new Date(this.session.startTime).toISOString()
@@ -450,6 +588,25 @@ conversions: any;
         total: this.getConversionsCount(),
         breakdown: this.getConversionsBreakdown()
       }
+=======
+        sessionId: this.session.sessionId,,
+        duration: this.getSessionDuration(),,
+        startTime: new Date(this.session.startTime).toISOString(),,
+      },
+      engagement: {,
+        pageViews: this.getPageViewsCount(),,
+        events: this.getEventsCount(),,
+        averageTimePerPage: this.calculateAverageTimePerPage(),,
+      },
+      performance: {,
+        score: this.session.performanceMetrics?.score,,
+        metrics: this.session.performanceMetrics?.metrics,,
+      },
+      conversions: {,
+        total: this.getConversionsCount(),,
+        breakdown: this.getConversionsBreakdown(),,
+      },
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     };
   }
 
@@ -493,7 +650,11 @@ conversions: any;
 }
 
 // Singleton instance
+<<<<<<< HEAD
 let analyticsInstance: EnhancedAnalytics | null = null,
+=======
+let analyticsInstance: EnhancedAnalytics | null = null;,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 
 export const getAnalytics = (): EnhancedAnalytics => {
   if (!analyticsInstance) {

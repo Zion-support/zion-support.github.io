@@ -1,267 +1,270 @@
 import React from 'react';
-import Link from 'next/link';
 import { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Sitemap | Zion Tech Group - All Pages & Services',
+  title: 'Sitemap - Zion Tech Group',
   description: 'Complete sitemap of Zion Tech Group website. Find all our AI services, micro SaaS solutions, IT services, and resources.',
-  keywords: 'sitemap, AI services, micro SaaS, IT services, Zion Tech Group, website navigation',
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function SitemapPage() {
+  const currentYear = new Date().getFullYear();
+  
   const mainPages = [
-    { title: 'Home', href: '/', description: 'Main homepage with service overview' },
-    { title: 'About Us', href: '/about', description: 'Company information and team' },
-    { title: 'Contact', href: '/contact', description: 'Contact information and inquiry form' },
-    { title: 'Privacy Policy', href: '/privacy', description: 'Privacy policy and data protection' },
-    { title: 'Terms of Service', href: '/terms', description: 'Terms and conditions' },
-    { title: 'Security', href: '/security', description: 'Security information and practices' }
+    { url: '/', title: 'Home' },
+    { url: '/about', title: 'About Us' },
+    { url: '/contact', title: 'Contact' },
+    { url: '/services', title: 'All Services' },
+    { url: '/solutions', title: 'Solutions' },
+    { url: '/enterprise', title: 'Enterprise Solutions' },
+    { url: '/pricing', title: 'Pricing' },
+    { url: '/support', title: 'Support' },
+    { url: '/privacy', title: 'Privacy Policy' },
+    { url: '/terms', title: 'Terms of Service' },
+    { url: '/security', title: 'Security' },
   ];
 
   const serviceCategories = [
     {
-      title: 'Comprehensive AI Services',
-      href: '/services/ai-services-comprehensive',
-      description: 'Full-spectrum AI solutions including ML, NLP, computer vision',
+      category: 'AI Services',
+      url: '/services/ai-services',
       services: [
-        { name: 'Machine Learning Model Development', href: '/services/machine-learning-development' },
-        { name: 'Natural Language Processing Suite', href: '/services/nlp-suite' },
-        { name: 'Computer Vision & Image Recognition', href: '/services/computer-vision' },
-        { name: 'Autonomous Systems Development', href: '/services/autonomous-systems' },
-        { name: 'AI-Powered Business Intelligence', href: '/services/ai-business-intelligence' },
-        { name: 'AI Consulting & Strategy', href: '/services/ai-consulting' }
+        { url: '/services/ai-content-optimization-platform', title: 'AI Content Optimization Platform' },
+        { url: '/services/ai-financial-forecasting-suite', title: 'AI Financial Forecasting Suite' },
+        { url: '/services/ai-customer-insights-platform', title: 'AI Customer Insights Platform' },
+        { url: '/services/ai-financial-analysis-platform', title: 'AI Financial Analysis Platform' },
+        { url: '/services/ai-marketing-studio', title: 'AI Marketing Studio' },
+        { url: '/services/ai-workflow-automation-platform', title: 'AI Workflow Automation Platform' },
+        { url: '/services/ai-cybersecurity-automation-suite', title: 'AI Cybersecurity Automation Suite' },
+        { url: '/services/ai-sales-copilot', title: 'AI Sales Copilot' },
       ]
     },
     {
-      title: 'Advanced Micro SaaS Solutions',
-      href: '/services/advanced-micro-saas-solutions',
-      description: 'Cutting-edge micro SaaS platforms for specific business challenges',
+      category: 'Micro SaaS',
+      url: '/services/micro-saas',
       services: [
-        { name: 'AI-Powered Content Creation Suite', href: '/services/ai-content-creation-suite' },
-        { name: 'Smart Inventory Management Platform', href: '/services/smart-inventory-management' },
-        { name: 'Automated Customer Support AI', href: '/services/automated-customer-support' },
-        { name: 'Financial Analytics Dashboard', href: '/services/financial-analytics-dashboard' },
-        { name: 'HR Automation Suite', href: '/services/hr-automation-suite' },
-        { name: 'Project Management Intelligence', href: '/services/project-management-intelligence' }
+        { url: '/services/micro-saas/ai-lead-scoring-api', title: 'AI Lead Scoring API' },
+        { url: '/services/micro-saas/ai-predictive-maintenance', title: 'AI Predictive Maintenance' },
+        { url: '/services/micro-saas/ai-sales-copilot', title: 'AI Sales Copilot' },
+        { url: '/services/micro-saas/ai-customer-support', title: 'AI Customer Support' },
+        { url: '/services/micro-saas/ai-fraud-detection', title: 'AI Fraud Detection' },
+        { url: '/services/micro-saas/ai-appointment-scheduler', title: 'AI Appointment Scheduler' },
+        { url: '/services/micro-saas/ai-code-reviewer', title: 'AI Code Reviewer' },
+        { url: '/services/micro-saas/ai-contract-summarizer', title: 'AI Contract Summarizer' },
       ]
     },
     {
-      title: 'Complete IT Services',
-      href: '/services/it-services-comprehensive',
-      description: 'Comprehensive IT services including cloud, DevOps, and cybersecurity',
+      category: 'IT Services',
+      url: '/services/it-services',
       services: [
-        { name: 'Cloud Migration & Management', href: '/services/cloud-migration' },
-        { name: 'DevOps & CI/CD Implementation', href: '/services/devops-implementation' },
-        { name: 'Cybersecurity Solutions', href: '/services/cybersecurity-solutions' },
-        { name: 'Infrastructure Management', href: '/services/infrastructure-management' },
-        { name: 'Digital Transformation Consulting', href: '/services/digital-transformation' },
-        { name: 'Database Management & Optimization', href: '/services/database-management' }
+        { url: '/services/it-services/ai-observability-platform', title: 'AI Observability Platform' },
+        { url: '/services/it-services/finops-managed-service', title: 'FinOps Managed Service' },
+        { url: '/services/it-services/observability-platform', title: 'Observability Platform' },
+        { url: '/services/it-services/soc2-readiness', title: 'SOC2 Readiness' },
+        { url: '/services/it-services/data-platform-modernization', title: 'Data Platform Modernization' },
+        { url: '/services/it-services/managed-kubernetes', title: 'Managed Kubernetes' },
+        { url: '/services/it-services/cloud-migration', title: 'Cloud Migration' },
+      ]
+    },
+    {
+      category: 'Specialized Solutions',
+      url: '/services',
+      services: [
+        { url: '/services/manufacturing-ai-platform', title: 'Manufacturing AI Platform' },
+        { url: '/services/supply-chain-intelligence', title: 'Supply Chain Intelligence' },
+        { url: '/services/blockchain-solutions', title: 'Blockchain Solutions' },
+        { url: '/services/quantum-computing-solutions', title: 'Quantum Computing Solutions' },
+        { url: '/services/ai-quantum-computing-2026', title: 'AI Quantum Computing 2026' },
+        { url: '/services/ai-autonomous-operations-2026', title: 'AI Autonomous Operations 2026' },
+        { url: '/services/cybersecurity-risk-assessment', title: 'Cybersecurity Risk Assessment' },
+        { url: '/services/ai-cybersecurity-2025', title: 'AI Cybersecurity Solutions 2025' },
       ]
     }
   ];
 
-  const additionalServices = [
-    { name: 'AI-Powered Email Marketing Suite', href: '/services/ai-email-marketing' },
-    { name: 'Healthcare Appointment AI Scheduler', href: '/services/healthcare-scheduler' },
-    { name: 'Autonomous Business Process Orchestrator', href: '/services/autonomous-orchestrator' },
-    { name: 'Smart Inventory Management System', href: '/services/smart-inventory' },
-    { name: 'AI Content Moderation Platform', href: '/services/content-moderation' },
-    { name: 'Quantum-Enhanced Business Intelligence', href: '/services/quantum-bi' },
-    { name: 'Blockchain Solutions', href: '/services/blockchain-solutions' },
-    { name: 'IoT Solutions', href: '/services/iot-solutions' },
-    { name: 'Data Analytics', href: '/services/data-analytics' },
-    { name: 'Manufacturing AI Platform', href: '/services/manufacturing-ai-platform' },
-    { name: 'Supply Chain Intelligence', href: '/services/supply-chain-intelligence' }
+  const resources = [
+    { url: '/blog', title: 'Blog & Insights' },
+    { url: '/case-studies', title: 'Case Studies' },
+    { url: '/guides', title: 'Implementation Guides' },
+    { url: '/content-hub', title: 'Content Hub' },
   ];
 
-  const resources = [
-    { title: 'Services Advertising & Pricing', href: '/services-advertising', description: 'Comprehensive pricing and service information' },
-    { title: 'Case Studies', href: '/case-studies', description: 'Client success stories and implementations' },
-    { title: 'Blog', href: '/blog', description: 'Latest insights and technology trends' },
-    { title: 'Content Hub', href: '/content-hub', description: 'Educational resources and guides' },
-    { title: 'Enterprise Solutions', href: '/enterprise', description: 'Enterprise-grade solutions and consulting' },
-    { title: 'AI 2026 Implementation Roadmap', href: '/guides/ai-2026-implementation-roadmap', description: 'Strategic AI implementation guide' },
-    { title: 'AI 2027 Implementation Roadmap', href: '/guides/ai-2027-implementation-roadmap', description: 'Advanced AI implementation guide' },
-    { title: 'Autonomous Business Processes Guide', href: '/guides/autonomous-business-processes-implementation-guide-2026', description: 'Business process automation guide' }
+  const recentBlogPosts = [
+    { url: '/blog/ai-2026-november-quantum-superintelligence-breakthrough', title: 'November 2026 Quantum AI Breakthrough' },
+    { url: '/blog/ai-2026-august-quantum-consciousness-revolution', title: 'August 2026 Quantum Consciousness Revolution' },
+    { url: '/blog/ai-2026-july-mega-breakthrough-revolution', title: 'July 2026 Mega Breakthrough Revolution' },
+    { url: '/blog/ai-2026-february-quantum-consciousness-enterprise-breakthrough', title: 'February 2026 Quantum Consciousness Enterprise Breakthrough' },
+    { url: '/blog/ai-2026-march-autonomous-enterprise-singularity', title: 'March 2026 Autonomous Enterprise Singularity' },
+    { url: '/blog/ai-2026-april-quantum-neural-superintelligence', title: 'April 2026 Quantum Neural Superintelligence' },
+  ];
+
+  const caseStudies = [
+    { url: '/case-studies/fortune-500-quantum-ai-transformation-success-story', title: 'Fortune 500 Quantum AI Transformation Success Story' },
+    { url: '/case-studies/fortune-500-ai-2026-transformation', title: 'Fortune 500 AI 2026 Transformation' },
+    { url: '/case-studies/fortune-500-ai-2026-breakthrough-mega-success', title: 'Fortune 500 AI 2026 Breakthrough Mega Success' },
+    { url: '/case-studies/ai-supply-chain-optimization-2025', title: 'AI Supply Chain Optimization 2025' },
+    { url: '/case-studies/ai-2026-mega-transformation-success-story', title: 'AI 2026 Mega Transformation Success Story' },
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Header */}
-      <div className="bg-white shadow-sm border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">
-              Website Sitemap
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Complete navigation guide to all pages and services on the Zion Tech Group website. 
-              Find exactly what you're looking for with our organized sitemap.
-            </p>
+    <div className="max-w-7xl mx-auto px-4 py-8">
+      <div className="text-center mb-12">
+        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          Site Map
+        </h1>
+        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          Navigate through all our AI services, micro SaaS solutions, IT services, 
+          and resources. Find exactly what you're looking for.
+        </p>
+      </div>
+
+      <div className="grid lg:grid-cols-3 gap-8">
+        {/* Main Pages */}
+        <div className="bg-white rounded-xl shadow-lg p-6">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">Main Pages</h2>
+          <div className="space-y-3">
+            {mainPages.map((page) => (
+              <Link
+                key={page.url}
+                href={page.url}
+                className="block text-blue-600 hover:text-blue-700 hover:underline transition-colors"
+              >
+                {page.title}
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        {/* Services */}
+        <div className="bg-white rounded-xl shadow-lg p-6">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">Services</h2>
+          <div className="space-y-6">
+            {serviceCategories.map((category) => (
+              <div key={category.category}>
+                <Link
+                  href={category.url}
+                  className="block font-semibold text-gray-900 mb-3 hover:text-blue-600 transition-colors"
+                >
+                  {category.category}
+                </Link>
+                <div className="ml-4 space-y-2">
+                  {category.services.slice(0, 4).map((service) => (
+                    <Link
+                      key={service.url}
+                      href={service.url}
+                      className="block text-sm text-gray-600 hover:text-blue-600 hover:underline transition-colors"
+                    >
+                      {service.title}
+                    </Link>
+                  ))}
+                  {category.services.length > 4 && (
+                    <Link
+                      href={category.url}
+                      className="block text-sm text-blue-600 hover:text-blue-700 font-medium"
+                    >
+                      View all {category.category.toLowerCase()} →
+                    </Link>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Resources */}
+        <div className="bg-white rounded-xl shadow-lg p-6">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">Resources</h2>
+          <div className="space-y-6">
+            <div>
+              <h3 className="font-semibold text-gray-900 mb-3">Resource Categories</h3>
+              <div className="space-y-2">
+                {resources.map((resource) => (
+                  <Link
+                    key={resource.url}
+                    href={resource.url}
+                    className="block text-blue-600 hover:text-blue-700 hover:underline transition-colors"
+                  >
+                    {resource.title}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <h3 className="font-semibold text-gray-900 mb-3">Recent Blog Posts</h3>
+              <div className="space-y-2">
+                {recentBlogPosts.slice(0, 4).map((post) => (
+                  <Link
+                    key={post.url}
+                    href={post.url}
+                    className="block text-sm text-gray-600 hover:text-blue-600 hover:underline transition-colors"
+                  >
+                    {post.title}
+                  </Link>
+                ))}
+                <Link
+                  href="/blog"
+                  className="block text-sm text-blue-600 hover:text-blue-700 font-medium"
+                >
+                  View all blog posts →
+                </Link>
+              </div>
+            </div>
+
+            <div>
+              <h3 className="font-semibold text-gray-900 mb-3">Case Studies</h3>
+              <div className="space-y-2">
+                {caseStudies.slice(0, 3).map((study) => (
+                  <Link
+                    key={study.url}
+                    href={study.url}
+                    className="block text-sm text-gray-600 hover:text-blue-600 hover:underline transition-colors"
+                  >
+                    {study.title}
+                  </Link>
+                ))}
+                <Link
+                  href="/case-studies"
+                  className="block text-sm text-blue-600 hover:text-blue-700 font-medium"
+                >
+                  View all case studies →
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Main Pages */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Main Pages</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {mainPages.map((page, index) => (
-              <Link 
-                key={index}
-                href={page.href}
-                className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow"
-              >
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">{page.title}</h3>
-                <p className="text-gray-600 text-sm">{page.description}</p>
-              </Link>
-            ))}
-          </div>
-        </section>
-
-        {/* Service Categories */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Service Categories</h2>
-          <div className="space-y-8">
-            {serviceCategories.map((category, categoryIndex) => (
-              <div key={categoryIndex} className="bg-white rounded-lg shadow-md p-6">
-                <div className="mb-4">
-                  <Link 
-                    href={category.href}
-                    className="text-2xl font-bold text-blue-600 hover:text-blue-700 transition-colors"
-                  >
-                    {category.title}
-                  </Link>
-                  <p className="text-gray-600 mt-2">{category.description}</p>
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
-                  {category.services.map((service, serviceIndex) => (
-                    <Link 
-                      key={serviceIndex}
-                      href={service.href}
-                      className="text-gray-700 hover:text-blue-600 transition-colors text-sm py-1"
-                    >
-                      • {service.name}
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Additional Services */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Additional Services</h2>
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
-              {additionalServices.map((service, index) => (
-                <Link 
-                  key={index}
-                  href={service.href}
-                  className="text-gray-700 hover:text-blue-600 transition-colors text-sm py-1"
-                >
-                  • {service.name}
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Resources */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Resources & Guides</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {resources.map((resource, index) => (
-              <Link 
-                key={index}
-                href={resource.href}
-                className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow"
-              >
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">{resource.title}</h3>
-                <p className="text-gray-600 text-sm">{resource.description}</p>
-              </Link>
-            ))}
-          </div>
-        </section>
-
-        {/* Contact Information */}
-        <section className="bg-blue-600 text-white rounded-lg p-8">
-          <h2 className="text-3xl font-bold mb-6">Can't Find What You're Looking For?</h2>
-          <p className="text-xl text-blue-100 mb-6">
-            Contact us directly for personalized assistance and custom solutions.
+      {/* XML Sitemap Link */}
+      <div className="mt-12 text-center">
+        <div className="bg-gray-50 rounded-xl p-6">
+          <h3 className="text-lg font-semibold text-gray-900 mb-3">XML Sitemap</h3>
+          <p className="text-gray-600 mb-4">
+            For search engines and developers, access our complete XML sitemap:
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="text-center">
-              <div className="text-3xl mb-3">📞</div>
-              <h3 className="text-lg font-semibold mb-2">Call Us</h3>
-              <a href="tel:+13024640950" className="text-blue-100 hover:text-white transition-colors">
-                +1 302 464 0950
-              </a>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl mb-3">✉️</div>
-              <h3 className="text-lg font-semibold mb-2">Email Us</h3>
-              <a href="mailto:kleber@ziontechgroup.com" className="text-blue-100 hover:text-white transition-colors">
-                kleber@ziontechgroup.com
-              </a>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl mb-3">📍</div>
-              <h3 className="text-lg font-semibold mb-2">Visit Us</h3>
-              <div className="text-blue-100">
-                364 E Main St STE 1008<br />
-                Middletown, DE 19709
-              </div>
-            </div>
-          </div>
-        </section>
+          <Link
+            href="/sitemap.xml"
+            className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
+          >
+            <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+            View XML Sitemap
+          </Link>
+        </div>
       </div>
 
       {/* Footer */}
-      <footer className="bg-gray-800 text-white mt-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div>
-              <h3 className="text-lg font-semibold mb-4">Zion Tech Group</h3>
-              <p className="text-gray-300">
-                Leading provider of AI services, micro SaaS solutions, and IT consulting.
-              </p>
-            </div>
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Services</h4>
-              <div className="space-y-2">
-                <Link href="/services/ai-services-comprehensive" className="block text-gray-300 hover:text-blue-400">AI Services</Link>
-                <Link href="/services/advanced-micro-saas-solutions" className="block text-gray-300 hover:text-green-400">Micro SaaS</Link>
-                <Link href="/services/it-services-comprehensive" className="block text-gray-300 hover:text-purple-400">IT Services</Link>
-                <Link href="/services" className="block text-gray-300 hover:text-blue-400">All Services</Link>
-              </div>
-            </div>
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Company</h4>
-              <div className="space-y-2">
-                <Link href="/about" className="block text-gray-300 hover:text-blue-400">About Us</Link>
-                <Link href="/contact" className="block text-gray-300 hover:text-blue-400">Contact</Link>
-                <Link href="/case-studies" className="block text-gray-300 hover:text-blue-400">Case Studies</Link>
-                <Link href="/blog" className="block text-gray-300 hover:text-blue-400">Blog</Link>
-              </div>
-            </div>
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
-              <div className="space-y-2 text-gray-300">
-                <p>📞 +1 302 464 0950</p>
-                <p>✉️ kleber@ziontechgroup.com</p>
-                <p>📍 364 E Main St STE 1008<br />Middletown, DE 19709</p>
-              </div>
-            </div>
-          </div>
-          <div className="border-t border-gray-700 mt-8 pt-4 text-center text-gray-400">
-            © {new Date().getFullYear()} Zion Tech Group. All rights reserved. | 
-            <Link href="https://ziontechgroup.com" className="hover:text-white ml-1">ziontechgroup.com</Link>
-          </div>
-        </div>
-      </footer>
+      <div className="mt-12 text-center text-gray-500 text-sm">
+        <p>
+          Last updated: {new Date().toLocaleDateString()} | 
+          Total pages: {mainPages.length + serviceCategories.reduce((acc, cat) => acc + cat.services.length, 0) + resources.length + recentBlogPosts.length + caseStudies.length}
+        </p>
+      </div>
     </div>
   );
 }

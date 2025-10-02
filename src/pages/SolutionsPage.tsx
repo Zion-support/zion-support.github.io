@@ -1,18 +1,19 @@
 import React from 'react';
 import SEO from '../components/SEO';
-const SolutionsPage: React.FC<{ category?: string }> = () => {
+
+const SolutionsPage: React.FC = () => {
   return (
     <>
       <SEO 
         title="Solutions - Zion Tech Group"
         description="Tailored solutions for enterprise, SMB, and startup businesses. AI-powered solutions that drive growth and efficiency."
-        keywords="enterprise solutions, SMB solutions, startup solutions, AI business solutions/>
+        keywords="enterprise solutions, SMB solutions, startup solutions, AI business solutions"
       
       <main className="py-20">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             <h1 className="text-4xl font-bold mb-8 text-center">Our Solutions</h1>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {/* Enterprise */}
               <div className="bg-white p-6 rounded-lg shadow-lg border">
                 <div className="text-4xl mb-4">🏢</div>

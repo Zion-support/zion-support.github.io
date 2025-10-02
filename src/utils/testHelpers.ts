@@ -14,16 +14,16 @@
 
 
 export interface MockComponentProps {
-id?: string;
-className?: string;
-children?: React.ReactNode;
+id?: string;,
+className?: string;,
+children?: React.ReactNode;,
 [key: string]: any;
 }
 
 export interface TestSetupOptions {
-mockLocalStorage?: boolean;
-mockSessionStorage?: boolean;
-mockFetch?: boolean;
+mockLocalStorage?: boolean;,
+mockSessionStorage?: boolean;,
+mockFetch?: boolean;,
 mockConsole?: boolean;
 }
 
@@ -38,8 +38,13 @@ export const wait = (ms: number): Promise<void> => {,
  * Wait for condition to be true
  */
 export const waitFor = async (
+<<<<<<< HEAD
   condition: () => boolean | Promise<boolean>,
   timeout = 5000
+=======
+  condition: () => boolean | Promise<boolean>,,
+  timeout = 5000,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   interval = 50
 ): Promise<void> => {
   const startTime = Date.now();
@@ -76,11 +81,19 @@ export const waitForElementToBeRemoved = async (
 /**
  * Simulate user click
  */
+<<<<<<< HEAD
 export const click = (element: Element): void => {
   const clickEvent = new MouseEvent('click', {
     bubbles: true,
     cancelable: true,
     view: window
+=======
+export const click = (element: Element): void => {,
+  const clickEvent = new MouseEvent('click', {';
+    bubbles: true,,
+    cancelable: true,,
+    view: window,,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   });
   element.dispatchEvent(clickEvent);
 };
@@ -92,6 +105,7 @@ export const type = (element: HTMLInputElement | HTMLTextAreaElement, text: stri
   element.focus();
   element.value = text;
   
+<<<<<<< HEAD
   const inputEvent = new Event('input', {
     bubbles: true,
     cancelable: true
@@ -101,6 +115,17 @@ export const type = (element: HTMLInputElement | HTMLTextAreaElement, text: stri
   const changeEvent = new Event('change', {
     bubbles: true,
     cancelable: true
+=======
+  const inputEvent = new Event('input', {';
+    bubbles: true,,
+    cancelable: true,,
+  });
+  element.dispatchEvent(inputEvent);
+  
+  const changeEvent = new Event('change', {';
+    bubbles: true,,
+    cancelable: true,,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   });
   element.dispatchEvent(changeEvent);
 };
@@ -109,10 +134,17 @@ export const type = (element: HTMLInputElement | HTMLTextAreaElement, text: stri
  * Clear input value
  */
 export const clear = (element: HTMLInputElement | HTMLTextAreaElement): void => {,
+<<<<<<< HEAD
   element.value = '';
   const changeEvent = new Event('change', {
     bubbles: true,
     cancelable: true
+=======
+  element.value = '';';
+  const changeEvent = new Event('change', {';
+    bubbles: true,,
+    cancelable: true,,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   });
   element.dispatchEvent(changeEvent);
 };
@@ -122,9 +154,15 @@ export const clear = (element: HTMLInputElement | HTMLTextAreaElement): void => 
  */
 export const selectOption = (element: HTMLSelectElement, value: string): void => {,
   element.value = value;
+<<<<<<< HEAD
   const changeEvent = new Event('change', {
     bubbles: true,
     cancelable: true
+=======
+  const changeEvent = new Event('change', {';
+    bubbles: true,,
+    cancelable: true,,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   });
   element.dispatchEvent(changeEvent);
 };
@@ -133,8 +171,13 @@ export const selectOption = (element: HTMLSelectElement, value: string): void =>
  * Mock fetch API
  */
 export class FetchMock {
+<<<<<<< HEAD
   private responses: Map<string, any> = new Map(),
   private originalFetch: typeof fetch,
+=======
+  private responses: Map<string, any> = new Map();,
+  private originalFetch: typeof fetch;,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 
   constructor() {
     this.originalFetch = globalThis.fetch;
@@ -147,9 +190,15 @@ export class FetchMock {
   }): void {
     this.responses.set(url, {
       response,
+<<<<<<< HEAD
       status: options?.status || 200,
       statusText: options?.statusText || 'OK',
       headers: options?.headers || {}
+=======
+      status: options?.status || 200,,
+      statusText: options?.statusText || 'OK',';,
+      headers: options?.headers || {},
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     });
   }
 
@@ -164,15 +213,24 @@ export class FetchMock {
     const original = this.responses.get(url);
     if (original) {
       this.responses.set(url, {
+<<<<<<< HEAD
         ...original
         once: true
+=======
+        ...original,
+        once: true,,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       });
     }
   }
 
   install(): void {
     globalThis.fetch = async (input: RequestInfo | URL, init?: RequestInit): Promise<Response> => {,
+<<<<<<< HEAD
       const url = typeof input === 'string' ? input : input.toString();
+=======
+      const url = typeof input === 'string' ? input : input.toString();';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       const mockData = this.responses.get(url);
 
       if (mockData) {
@@ -181,9 +239,15 @@ export class FetchMock {
         }
 
         return new Response(JSON.stringify(mockData.response), {
+<<<<<<< HEAD
           status: mockData.status,
           statusText: mockData.statusText,
           headers: mockData.headers
+=======
+          status: mockData.status,,
+          statusText: mockData.statusText,,
+          headers: mockData.headers,,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
         });
       }
 
@@ -266,6 +330,7 @@ console.error = (...args: any[]) => this.errors.push(args);
 export const generateMockData = {
   string: (length = 10): string => {,
     return Math.random().toString(36).substring(2, 2 + length);
+<<<<<<< HEAD
   }
   number: (min = 0, max = 100): number => {,
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -282,6 +347,30 @@ export const generateMockData = {
   date: (): Date => {,
     return new Date(Date.now() - generateMockData.number(0, 365) * 24 * 60 * 60 * 1000);
   }
+=======
+  },
+
+  number: (min = 0, max = 100): number => {,
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  },
+
+  boolean: (): boolean => {,
+    return Math.random() > 0.5;
+  },
+
+  email: (): string => {,
+    return `test${generateMockData.number()}@example.com`;`;
+  },
+
+  url: (): string => {,
+    return `https://example.com/${generateMockData.string()}`;`;
+  },
+
+  date: (): Date => {,
+    return new Date(Date.now() - generateMockData.number(0, 365) * 24 * 60 * 60 * 1000);
+  },
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   array: <T>(generator: () => T, length = 5): T[] => {,
     return Array.from({ length }, generator);
   }
@@ -298,8 +387,13 @@ export const generateMockData = {
  * Performance testing helper
  */
 export class PerformanceTester {
+<<<<<<< HEAD
   private startTime: number = 0,
   private measurements: Map<string, number[]> = new Map(),
+=======
+  private startTime: number = 0;,
+  private measurements: Map<string, number[]> = new Map();,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 
   start(label: string): void {,
     this.startTime = performance.now();
@@ -353,6 +447,7 @@ export class PerformanceTester {
  */
 export const checkAccessibility = {
 hasAriaLabel: (element: Element): boolean => {,,
+<<<<<<< HEAD
 return element.hasAttribute('aria-label') || element.hasAttribute('aria-labelledby');
 }
   hasRole: (element: Element, role: string): boolean => {,
@@ -365,6 +460,24 @@ return element.hasAttribute('aria-label') || element.hasAttribute('aria-labelled
   hasAltText: (img: HTMLImageElement): boolean => {,
     return Boolean(img.alt && img.alt.trim().length > 0);
   }
+=======
+return element.hasAttribute('aria-label') || element.hasAttribute('aria-labelledby');';
+},
+
+  hasRole: (element: Element, role: string): boolean => {,
+    return element.getAttribute('role') === role;';
+  },
+
+  isFocusable: (element: Element): boolean => {,
+    const tabindex = element.getAttribute('tabindex');';
+    return tabindex !== '-1' && (element as HTMLElement).tabIndex >= 0;';
+  },
+
+  hasAltText: (img: HTMLImageElement): boolean => {,
+    return Boolean(img.alt && img.alt.trim().length > 0);
+  },
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   hasValidContrast: (element: Element): boolean => {,
     const computed = window.getComputedStyle(element);
     const color = computed.color;
@@ -396,16 +509,28 @@ consoleMock: ConsoleMock;
   }
 
   if (options.mockLocalStorage) {
+<<<<<<< HEAD
     Object.defineProperty(window, 'localStorage', {
       value: localStorageMock,
       writable: true
+=======
+    Object.defineProperty(window, 'localStorage', {';
+      value: localStorageMock,,
+      writable: true,,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     });
   }
 
   if (options.mockSessionStorage) {
+<<<<<<< HEAD
     Object.defineProperty(window, 'sessionStorage', {
       value: new LocalStorageMock(),
       writable: true
+=======
+    Object.defineProperty(window, 'sessionStorage', {';
+      value: new LocalStorageMock(),,
+      writable: true,,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     });
   }
 

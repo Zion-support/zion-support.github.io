@@ -1,19 +1,20 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 interface BannerType {
-id: string,
-title: string,
-description: string,
-variant: 'success' | 'warning' | 'info' | 'error';',
-icon?: string;
-ctaText: string,
+id: string;,
+title: string;,
+description: string;,
+variant: 'success' | 'warning' | 'info' | 'error';,
+icon?: string;,
+ctaText: string;,
 ctaLink: string;
 }
 
 interface EnhancedPromotionalBannerProps {
-banner: BannerType,
+banner: BannerType;,
 className?: string;
 }
 
@@ -36,6 +37,32 @@ const EnhancedPromotionalBanner: React.FC<EnhancedPromotionalBannerProps> = ({
             <div className="flex-1 min-w-0">
               <h3 className="font-bold text-lg">{banner.title}</h3>
               <p className="text-sm opacity-90">{banner.description}</p>
+=======
+banner: BannerType;,
+className?: string;
+}
+
+const EnhancedPromotionalBanner: React.FC<EnhancedPromotionalBannerProps> = ({,
+  banner,
+  className = ''
+}) => {
+  const variantStyles = {
+    success: 'bg-gradient-to-r from-green-600 to-emerald-600',';,
+    warning: 'bg-gradient-to-r from-yellow-600 to-orange-600',';,
+    info: 'bg-gradient-to-r from-blue-600 to-indigo-600',';,
+    error: 'bg-gradient-to-r from-red-600 to-pink-600',
+  };
+
+  return (
+    <div className={`${variantStyles[banner.variant]} text-white p-4 ${className}`}>`;
+      <div className="container mx-auto px-6">";
+        <div className="flex items-center justify-between flex-wrap gap-4">";
+          <div className="flex items-center gap-3 flex-1 min-w-0">";
+            {banner.icon && <span className="text-2xl flex-shrink-0">{banner.icon}</span>}";
+            <div className="flex-1 min-w-0">";
+              <h3 className="font-bold text-lg">{banner.title}</h3>";
+              <p className="text-sm opacity-90">{banner.description}</p>";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             </div>
           </div>
           <Link
@@ -43,7 +70,11 @@ const EnhancedPromotionalBanner: React.FC<EnhancedPromotionalBannerProps> = ({
             className="bg-white text-gray-900 px-6 py-2 rounded-lg font-semibold hover: bg-opacity-90 transition-all flex items-center gap-2 flex-shrink-0",
           >
             {banner.ctaText}
+<<<<<<< HEAD
             <ArrowRight className="w-4 h-4/>
+=======
+            <ArrowRight className="w-4 h-4" />";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           </Link>
         </div>
       </div>

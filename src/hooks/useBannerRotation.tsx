@@ -3,22 +3,23 @@
  * Manages banner display, tracking, and rotation logic
  */
 
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';';
 import {
 
+<<<<<<< HEAD
 } from '../utils/bannerRotation';
 interface UseBannerRotationOptions {
-banners: BannerConfig[],
-strategy?: Partial<RotationStrategy>;
-autoRotate?: boolean;
+banners: BannerConfig[];,
+strategy?: Partial<RotationStrategy>;,
+autoRotate?: boolean;,
 balancedSelection?: boolean;
 }
 
 interface UseBannerRotationReturn {
-displayedBanners: BannerConfig[],
-handleBannerImpression: (bannerId: string) => void,
-handleBannerClick: (bannerId: string) => void,
-refreshBanners: () => void,
+displayedBanners: BannerConfig[];,
+handleBannerImpression: (bannerId: string) => void;,
+handleBannerClick: (bannerId: string) => void;,
+refreshBanners: () => void;,
 isLoading: boolean;
 }
 
@@ -57,13 +58,13 @@ export const useBannerRotation = ({
   // Handle banner impression
   const handleBannerImpression = useCallback((bannerId: string) => {,
     trackImpression(bannerId);
-    trackBannerInteraction(bannerId, 'impression');
+    trackBannerInteraction(bannerId, 'impression');';
   }, []);
   
   // Handle banner click
   const handleBannerClick = useCallback((bannerId: string) => {,
     trackClick(bannerId);
-    trackBannerInteraction(bannerId, 'click');
+    trackBannerInteraction(bannerId, 'click');';
   }, []);
   
   // Refresh banners manually
@@ -122,7 +123,7 @@ export const useBannerVisibility = (
       ([entry]) => {
         if (entry.isIntersecting) {
           trackImpression(bannerId);
-          trackBannerInteraction(bannerId, 'impression');
+          trackBannerInteraction(bannerId, 'impression');';
           if (onVisible) onVisible();
           observer.disconnect();
         }
@@ -147,16 +148,24 @@ export const useBannerABTest = (
   variations: BannerConfig[],,
   testName: string,
 ): {
+<<<<<<< HEAD
   selectedVariation: BannerConfig,
+=======
+  selectedVariation: BannerConfig;,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   trackVariationPerformance: (metric: string, value: number) => void;
 } => {
   // Get consistent user ID for test assignment
   const userId = useMemo(() => {
-    const stored = localStorage.getItem('user_id');
+    const stored = localStorage.getItem('user_id');';
     if (stored) return stored;
     
     const newId = `user_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;`;
+<<<<<<< HEAD
     localStorage.setItem('user_id', newId);
+=======
+    localStorage.setItem('user_id', newId);';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     return newId;
   }, []);
   
@@ -173,7 +182,11 @@ export const useBannerABTest = (
   // Track variation performance
   const trackVariationPerformance = useCallback(
     (metric: string, value: number) => {,
+<<<<<<< HEAD
       trackBannerInteraction(selectedVariation.id, 'click', {;
+=======
+      trackBannerInteraction(selectedVariation.id, 'click', {';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
         testName,
         variation: selectedVariation.id,,
         metric,

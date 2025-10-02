@@ -4,25 +4,25 @@
  */
 
 export interface ErrorInfo {
-message: string,
-stack?: string;
-componentStack?: string;
-errorBoundary?: string;
-timestamp: number,
-userAgent: string,
-url: string,
-userId?: string;
-sessionId?: string;
-severity: 'low' | 'medium' | 'high' | 'critical';',
+message: string;,
+stack?: string;,
+componentStack?: string;,
+errorBoundary?: string;,
+timestamp: number;,
+userAgent: string;,
+url: string;,
+userId?: string;,
+sessionId?: string;,
+severity: 'low' | 'medium' | 'high' | 'critical';,
 category: 'javascript' | 'network' | 'resource' | 'promise' | 'react' | 'unknown';
 }
 
 export interface ErrorReport {
-errors: ErrorInfo[],
-totalErrors: number,
-criticalErrors: number,
-lastError?: ErrorInfo;
-errorRate: number,
+errors: ErrorInfo[];,
+totalErrors: number;,
+criticalErrors: number;,
+lastError?: ErrorInfo;,
+errorRate: number;,
 timestamp: number;
 }
 
@@ -35,9 +35,16 @@ this.initialize();
 }
 
   private initialize(): void {
+<<<<<<< HEAD
     if (typeof window === 'undefined') return;
     // Global error handler
     window.addEventListener('error', (event) => {;
+=======
+    if (typeof window === 'undefined') return;';
+
+    // Global error handler
+    window.addEventListener('error', (event) => {';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       this.handleError({
         message: event.message,,
         stack: event.error?.stack,,
@@ -45,6 +52,7 @@ this.initialize();
         userAgent: navigator.userAgent,,
         url: window.location.href,,
         severity: this.determineSeverity(event.error),,
+<<<<<<< HEAD
         category: 'javascript});
     });
 
@@ -52,17 +60,33 @@ this.initialize();
     window.addEventListener('unhandledrejection', (event) => {;
       this.handleError({
         message: event.reason?.message || 'Unhandled promise rejection',',
+=======
+        category: 'javascript',
+      });
+    });
+
+    // Unhandled promise rejection handler
+    window.addEventListener('unhandledrejection', (event) => {';
+      this.handleError({
+        message: event.reason?.message || 'Unhandled promise rejection',';,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
         stack: event.reason?.stack,,
         timestamp: Date.now(),,
         userAgent: navigator.userAgent,,
         url: window.location.href,,
         severity: this.determineSeverity(event.reason),,
+<<<<<<< HEAD
         category: 'promise});
+=======
+        category: 'promise',
+      });
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     });
 
     this.isInitialized = true;
   }
 
+<<<<<<< HEAD
   private determineSeverity(error: any): 'low' | 'medium' | 'high' | 'critical' {',
     if (!error) return 'low';
     const message = error.message?.toLowerCase() || '';
@@ -79,9 +103,29 @@ this.initialize();
     // Medium severity errors
     if (message.includes('warning') || message.includes('deprecated')) {;
       return 'medium';
+=======
+  private determineSeverity(error: any): 'low' | 'medium' | 'high' | 'critical' {';,
+    if (!error) return 'low';';
+
+    const message = error.message?.toLowerCase() || '';';
+    
+    // Critical errors
+    if (message.includes('chunk') || message.includes('loading') || message.includes('network')) {';
+      return 'critical';';
     }
     
-    return 'low';
+    // High severity errors
+    if (message.includes('syntax') || message.includes('reference') || message.includes('type')) {';
+      return 'high';';
+    }
+    
+    // Medium severity errors
+    if (message.includes('warning') || message.includes('deprecated')) {';
+      return 'medium';';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
+    }
+    
+    return 'low';';
   }
 
   private handleError(errorInfo: ErrorInfo): void {,
@@ -93,8 +137,13 @@ this.initialize();
     }
 
     // Log critical errors immediately
+<<<<<<< HEAD
     if (errorInfo.severity === 'critical') {;
       console.error('Critical Error: ', errorInfo);',
+=======
+    if (errorInfo.severity === 'critical') {';
+      console.error('Critical Error: ', errorInfo);';,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     }
 
     // Send to analytics or error reporting service
@@ -103,6 +152,7 @@ this.initialize();
 
   private reportError(errorInfo: ErrorInfo): void {,
     // In a real application, you would send this to an error reporting service
+<<<<<<< HEAD
     console.log('Error reported: ', errorInfo);',
   }
 
@@ -122,6 +172,27 @@ this.initialize();
       url: typeof window !== 'undefined' ? window.location.href : 'unknown',',
       severity: 'medium',',
       category: 'react',',
+=======
+    console.log('Error reported: ', errorInfo);';,
+  }
+
+  public logError(
+    error: Error | string,,
+    componentStack?: string,
+    errorBoundary?: string,
+    additionalInfo?: Partial<ErrorInfo>
+  ): void {
+    const errorInfo: ErrorInfo = {,
+      message: typeof error === 'string' ? error : error.message,';,
+      stack: typeof error === 'object' ? error.stack : undefined,';,
+      componentStack,
+      errorBoundary,
+      timestamp: Date.now(),,
+      userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown',';,
+      url: typeof window !== 'undefined' ? window.location.href : 'unknown',';,
+      severity: 'medium',';,
+      category: 'react',';,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       ...additionalInfo
     };
 
@@ -133,7 +204,7 @@ this.initialize();
   }
 
   public getErrorReport(): ErrorReport {
-    const criticalErrors = this.errors.filter(e => e.severity === 'critical').length;
+    const criticalErrors = this.errors.filter(e => e.severity === 'critical').length;';
     const lastError = this.errors.length > 0 ? this.errors[this.errors.length - 1] : undefined;
     
     return {

@@ -45,6 +45,9 @@ export function Header() {
                 <Link href="/services/ai-content-optimization-platform" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
                   AI Content Optimization Platform
                 </Link>
+                <Link href="/services/micro-saas/ai-lead-scoring-api" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  AI Lead Scoring API
+                </Link>
                 <Link href="/services/ai-financial-forecasting-suite" className="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-600">
                   AI Financial Forecasting Suite
                 </Link>
@@ -87,6 +90,12 @@ export function Header() {
                 </Link>
                 <Link href="/services/ai-workflow-automation-platform" className="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-600">
                   AI Workflow Automation Platform
+                </Link>
+                <Link href="/services/it-services/ai-observability-platform" className="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600">
+                  AI Observability Platform
+                </Link>
+                <Link href="/services/ai-governance-risk-compliance" className="block px-4 py-2 text-sm text-gray-700 hover:bg-emerald-50 hover:text-emerald-600">
+                  AI Governance, Risk & Compliance
                 </Link>
                 <Link href="/services/ai-customer-insights-platform" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600">
                   AI Customer Insights Platform
@@ -189,6 +198,7 @@ export function Header() {
           </div>
 
           <Link href="/about" className="text-gray-700 hover:text-blue-600 transition-colors">About</Link>
+          <Link href="/portfolio" className="text-gray-700 hover:text-blue-600 transition-colors">Portfolio</Link>
           <Link href="/contact" className="text-gray-700 hover:text-blue-600 transition-colors">Contact</Link>
           
           {/* Featured Success Stories */}
@@ -331,6 +341,7 @@ export function Header() {
 
             {/* Direct Links */}
             <Link href="/about" className="block font-medium text-gray-700 hover:text-blue-600">About</Link>
+            <Link href="/portfolio" className="block font-medium text-gray-700 hover:text-blue-600">Portfolio</Link>
             <Link href="/contact" className="block font-medium text-gray-700 hover:text-blue-600">Contact</Link>
             
             {/* Success Stories */}
@@ -413,6 +424,9 @@ export function Footer() {
             <div className="space-y-3 mb-6">
               <Link href="/about" className="block text-gray-600 hover:text-blue-600 transition-colors">
                 About Us
+              </Link>
+              <Link href="/portfolio" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                Portfolio
               </Link>
               <Link href="/contact" className="block text-gray-600 hover:text-blue-600 transition-colors">
                 Contact

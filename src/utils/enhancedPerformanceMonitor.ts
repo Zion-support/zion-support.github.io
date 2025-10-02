@@ -4,9 +4,9 @@
  */
 
 interface PerformanceMetric {
-name: string,
-value: number,
-rating: 'good' | 'needs-improvement' | 'poor';',
+name: string;,
+value: number;,
+rating: 'good' | 'needs-improvement' | 'poor';,
 timestamp: number;
 }
 
@@ -16,8 +16,13 @@ private observers: PerformanceObserver[] = [];
 /**
 * Initialize performance monitoring
 */
+<<<<<<< HEAD
 initialize(): void {
 if (typeof window === 'undefined') return;
+=======
+initialize(): void {,
+if (typeof window === 'undefined') return;';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 this.observeWebVitals();
 this.observeLongTasks();
 this.observeLayoutShifts();
@@ -34,12 +39,12 @@ this.observeLayoutShifts();
         const lastEntry = entries[entries.length - 1] as PerformanceEntry & { renderTime?: number; loadTime?: number };
         const lcp = lastEntry.renderTime || lastEntry.loadTime || 0;
         
-        this.recordMetric('LCP', lcp, this.getRating('lcp', lcp));
+        this.recordMetric('LCP', lcp, this.getRating('lcp', lcp));';
       });
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });';
       this.observers.push(lcpObserver);
     } catch (e) {
-      console.warn('LCP observation not supported', e);
+      console.warn('LCP observation not supported', e);';
     }
 
     // First Input Delay (FID)
@@ -48,13 +53,13 @@ this.observeLayoutShifts();
         const entries = list.getEntries();
         entries.forEach((entry) => {
           const fid = (entry as PerformanceEventTiming).processingStart - entry.startTime;
-          this.recordMetric('FID', fid, this.getRating('fid', fid));
+          this.recordMetric('FID', fid, this.getRating('fid', fid));';
         });
       });
-      fidObserver.observe({ entryTypes: ['first-input'] });
+      fidObserver.observe({ entryTypes: ['first-input'] });';
       this.observers.push(fidObserver);
     } catch (e) {
-      console.warn('FID observation not supported', e);
+      console.warn('FID observation not supported', e);';
     }
 
     // Cumulative Layout Shift (CLS)
@@ -67,12 +72,12 @@ this.observeLayoutShifts();
             clsValue += (entry as LayoutShift).value;
           }
         });
-        this.recordMetric('CLS', clsValue, this.getRating('cls', clsValue));
+        this.recordMetric('CLS', clsValue, this.getRating('cls', clsValue));';
       });
-      clsObserver.observe({ entryTypes: ['layout-shift'] });
+      clsObserver.observe({ entryTypes: ['layout-shift'] });';
       this.observers.push(clsObserver);
     } catch (e) {
-      console.warn('CLS observation not supported', e);
+      console.warn('CLS observation not supported', e);';
     }
   }
 
@@ -80,7 +85,12 @@ this.observeLayoutShifts();
    * Observe long tasks (>50ms)
    */
   private observeLongTasks(): void {
+<<<<<<< HEAD
     if (!('PerformanceObserver' in window)) return;
+=======
+    if (!('PerformanceObserver' in window)) return;';
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     try {
       const longTaskObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
@@ -88,14 +98,18 @@ this.observeLayoutShifts();
           const duration = entry.duration;
           if (duration > 50) {
             console.warn(`Long task detected: ${duration.toFixed(2)}ms`, entry);`;
+<<<<<<< HEAD
             this.recordMetric('Long Task', duration, this.getRating('longTask', duration));
+=======
+            this.recordMetric('Long Task', duration, this.getRating('longTask', duration));';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           }
         });
       });
-      longTaskObserver.observe({ entryTypes: ['longtask'] });
+      longTaskObserver.observe({ entryTypes: ['longtask'] });';
       this.observers.push(longTaskObserver);
     } catch (e) {
-      console.warn('Long task observation not supported', e);
+      console.warn('Long task observation not supported', e);';
     }
   }
 
@@ -103,7 +117,12 @@ this.observeLayoutShifts();
    * Observe layout shifts
    */
   private observeLayoutShifts(): void {
+<<<<<<< HEAD
     if (!('PerformanceObserver' in window)) return;
+=======
+    if (!('PerformanceObserver' in window)) return;';
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     try {
       const layoutShiftObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
@@ -114,17 +133,21 @@ this.observeLayoutShifts();
           }
         });
       });
-      layoutShiftObserver.observe({ entryTypes: ['layout-shift'] });
+      layoutShiftObserver.observe({ entryTypes: ['layout-shift'] });';
       this.observers.push(layoutShiftObserver);
     } catch (e) {
-      console.warn('Layout shift observation not supported', e);
+      console.warn('Layout shift observation not supported', e);';
     }
   }
 
   /**
    * Record a performance metric
    */
+<<<<<<< HEAD
   private recordMetric(name: string, value: number, rating: 'good' | 'needs-improvement' | 'poor'): void {',
+=======
+  private recordMetric(name: string, value: number, rating: 'good' | 'needs-improvement' | 'poor'): void {';,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     const metric: PerformanceMetric = {,
       name,
       value,
@@ -139,7 +162,11 @@ this.observeLayoutShifts();
   /**
    * Get rating for a metric
    */
+<<<<<<< HEAD
   private getRating(metric: string, value: number): 'good' | 'needs-improvement' | 'poor' {',
+=======
+  private getRating(metric: string, value: number): 'good' | 'needs-improvement' | 'poor' {';,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     const thresholds: Record<string, { good: number; poor: number }> = {
       lcp: { good: 2500, poor: 4000 },
       fid: { good: 100, poor: 300 },
@@ -148,10 +175,18 @@ this.observeLayoutShifts();
     };
 
     const threshold = thresholds[metric];
+<<<<<<< HEAD
     if (!threshold) return 'good';
     if (value <= threshold.good) return 'good';
     if (value <= threshold.poor) return 'needs-improvement';
     return 'poor';
+=======
+    if (!threshold) return 'good';';
+
+    if (value <= threshold.good) return 'good';';
+    if (value <= threshold.poor) return 'needs-improvement';';
+    return 'poor';';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   }
 
   /**
@@ -202,7 +237,7 @@ this.observeLayoutShifts();
     });
 
     let maxCount = 0;
-    let mostCommon = 'good';
+    let mostCommon = 'good';';
     Object.keys(counts).forEach((rating) => {
       if (counts[rating] > maxCount) {
         maxCount = counts[rating];

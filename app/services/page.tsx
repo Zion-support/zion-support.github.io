@@ -25,6 +25,45 @@ export default function ServicesPage() {
       ]
     },
     {
+      title: 'AI Lead Scoring API',
+      description: 'Real-time lead scoring API using behavioral, firmographic, and engagement signals with explainability.',
+      icon: '📈',
+      href: '/services/micro-saas/ai-lead-scoring-api',
+      pricing: 'Starting from $99/month',
+      features: [
+        'HubSpot/Salesforce integrations',
+        'Explainable scores',
+        'Batch & streaming ingestion',
+        'SLA-backed responses'
+      ]
+    },
+    {
+      title: 'AI Observability Platform',
+      description: 'Unified logs, metrics, traces and AI anomaly detection with SLOs and guided RCA.',
+      icon: '📊',
+      href: '/services/it-services/ai-observability-platform',
+      pricing: 'Team $1,499/month',
+      features: [
+        'OpenTelemetry-native',
+        'SLOs & burn-rate alerts',
+        'Service topology map',
+        'RCA graph & log mining'
+      ]
+    },
+    {
+      title: 'AI Governance, Risk & Compliance',
+      description: 'Operationalize responsible AI with policies, evals, model cards, and evidence automation.',
+      icon: '⚖️',
+      href: '/services/ai-governance-risk-compliance',
+      pricing: 'Starting from $799/month',
+      features: [
+        'NIST AI RMF, EU AI Act mapping',
+        'Model inventory & cards',
+        'Bias & safety evaluations',
+        'Evidence automation'
+      ]
+    },
+    {
       title: 'AI Compliance GPT',
       description: 'Policy drafting, control mapping, evidence automation for SOC 2/ISO/HIPAA/GDPR',
       icon: '⚖️',
@@ -175,18 +214,78 @@ export default function ServicesPage() {
       ]
     },
     {
-      title: 'Habit Tracking & Wellness Platform',
+      title: 'AI Habit Tracking & Wellness Platform',
       description: 'AI-powered habit tracking and wellness platform for personal development and goal achievement',
       icon: '💪',
-      href: '/services/habit-tracking-wellness-platform',
-      pricing: 'Starting from $7.99/month',
+      href: '/services/ai-habit-tracking-wellness-platform',
+      pricing: 'Starting from $9.99/month',
       features: [
-        'Smart Habit Builder',
-        'Morning Routine Optimizer',
-        'Wellness Analytics',
-        'AI-Powered Insights',
-        'Community Features',
-        'Wearable Device Integration'
+        'Smart Habit Builder with AI Coaching',
+        'Goal Optimization & Progress Tracking',
+        'Wellness Analytics & Insights',
+        'Social Accountability Features',
+        'Achievement System & Gamification',
+        'Smart Reminders & Notifications'
+      ]
+    },
+    {
+      title: 'AI Meeting Intelligence Platform',
+      description: 'Transform meetings with AI-powered insights, automatic transcription, action item extraction, and real-time analytics',
+      icon: '🎯',
+      href: '/services/ai-meeting-intelligence-platform',
+      pricing: 'Starting from $29/month',
+      features: [
+        'Real-Time Transcription in 50+ Languages',
+        'Intelligent Summarization & Decision Extraction',
+        'Analytics Dashboard & Meeting Effectiveness',
+        'Speaker Analysis & Participation Insights',
+        'Time Optimization & Pattern Recognition',
+        'Action Item Tracking & Follow-ups'
+      ]
+    },
+    {
+      title: 'AI Financial Intelligence Platform',
+      description: 'Transform your financial management with AI-powered insights, automated budgeting, investment analysis, and intelligent financial planning',
+      icon: '💰',
+      href: '/services/ai-financial-intelligence-platform',
+      pricing: 'Starting from $19.99/month',
+      features: [
+        'Smart Budgeting & Expense Categorization',
+        'Investment Analysis & Portfolio Optimization',
+        'Goal Tracking & Financial Forecasting',
+        'Risk Assessment & Fraud Detection',
+        'Tax Optimization & Retirement Planning',
+        'Bank-Level Security & Compliance'
+      ]
+    },
+    {
+      title: 'AI Smart Home Automation Platform',
+      description: 'Transform your home into an intelligent living space with AI-powered automation, energy optimization, and seamless device control',
+      icon: '🏠',
+      href: '/services/ai-smart-home-automation-platform',
+      pricing: 'Starting from $29.99/month',
+      features: [
+        'Intelligent Device Control & Voice Commands',
+        'Energy Optimization (30% Cost Reduction)',
+        'Predictive Automation & Learning',
+        'Advanced Security with AI Monitoring',
+        'Unified Control & Remote Access',
+        'Usage Analytics & Cost Optimization'
+      ]
+    },
+    {
+      title: 'AI Remote Work Productivity Suite',
+      description: 'Boost remote team productivity with AI-powered collaboration tools, intelligent scheduling, and automated workflow optimization',
+      icon: '💻',
+      href: '/services/ai-remote-work-productivity-suite',
+      pricing: 'Starting from $19.99/user/month',
+      features: [
+        'Intelligent Task Management & Prioritization',
+        'Smart Team Collaboration & Communication',
+        'Time Tracking & Productivity Analytics',
+        'Goal & KPI Tracking with AI Insights',
+        'Work Pattern Analysis & Optimization',
+        'Smart Scheduling & Meeting Optimization'
       ]
     },
     {

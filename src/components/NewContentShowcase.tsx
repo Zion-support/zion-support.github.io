@@ -1,42 +1,53 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
+=======
+import {
+Link
+} from 'react-router-dom';
 import {
 
 } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a267
+
 // Mock data
 const newArticles2025 = [
   {
-    id: '1',',
-    title: 'AI Autonomous Infrastructure Platform',',
-    description: 'Revolutionary self-healing infrastructure with 99.9% uptime and 85% MTTR reduction',',
-    category: 'AI Infrastructure',',
-    link: '/blog/ai-autonomous-infrastructure-platform',',
-    readTime: '8 min read},
+    id: '1',
+    title: 'AI Autonomous Infrastructure Platform',
+    description: 'Revolutionary self-healing infrastructure with 99.9% uptime and 85% MTTR reduction',
+    category: 'AI Infrastructure',
+    link: '/blog/ai-autonomous-infrastructure-platform',
+    readTime: '8 min read'
+  },
   {
-    id: '2',',
-    title: 'Quantum-AI Hybrid Computing',',
-    description: 'Breakthrough quantum computing applications for enterprise transformation',',
-    category: 'Quantum Computing',',
-    link: '/blog/quantum-ai-hybrid-computing',',
-    readTime: '12 min read},
+    id: '2',
+    title: 'Quantum-AI Hybrid Computing',
+    description: 'Breakthrough quantum computing applications for enterprise transformation',
+    category: 'Quantum Computing',
+    link: '/blog/quantum-ai-hybrid-computing',
+    readTime: '12 min read'
+  },
   {
-    id: '3',',
-    title: 'Zero Trust Security Framework',',
-    description: 'Advanced security with 99.9% threat detection accuracy and automated response',',
-    category: 'Cybersecurity',',
-    link: '/blog/zero-trust-security-framework',',
-    readTime: '6 min read}
+    id: '3',
+    title: 'Zero Trust Security Framework',
+    description: 'Advanced security with 99.9% threat detection accuracy and automated response',
+    category: 'Cybersecurity',
+    link: '/blog/zero-trust-security-framework',
+    readTime: '6 min read'
+  }
 ];
 
 const newServices2026 = [
   {
-    id: '1',',
-    name: 'AI Autonomous Infrastructure Platform',',
-    description: 'Self-healing systems with 99.9% uptime and 85% MTTR reduction',',
-    category: 'AI Infrastructure',',
-    icon: '🤖',',
-    link: '/services/ai-autonomous-infrastructure-platform',',
-    pricing: 'Starting at $5,000/month},
+    id: '1',
+    name: 'AI Autonomous Infrastructure Platform',
+    description: 'Self-healing systems with 99.9% uptime and 85% MTTR reduction',
+    category: 'AI Infrastructure',
+    icon: '🤖',
+    link: '/services/ai-autonomous-infrastructure-platform',
+    pricing: 'Starting at $5,000/month'
+  },
   {
     id: '2',
     name: 'Quantum-AI Hybrid Computing',
@@ -48,16 +59,24 @@ const newServices2026 = [
   },
   {
     id: '3',
+<<<<<<< HEAD
     name: 'Zero Trust Security Framework',
     description: 'Advanced security with 99.9% threat detection accuracy',
     category: 'Cybersecurity',
     icon: '🔒',
     link: '/services/zero-trust-security',
+=======
+    name: 'Zero Trust Security Framework'
+    description: 'Advanced security with 99.9% threat detection accuracy'
+    category: 'Cybersecurity'
+    icon: '🔒'
+    link: '/services/zero-trust-security'
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a267
     pricing: 'Starting at $3,000/month'
   }
 ];
 
-const NewContentShowcase: React.FC = () => {,
+const NewContentShowcase: React.FC = () => {
   const topArticles = newArticles2025.slice(0, 3);
   const topServices = newServices2026.slice(0, 3);
 
@@ -76,7 +95,7 @@ const NewContentShowcase: React.FC = () => {,
           </p>
         </div>
 
-        <div className="grid lg: grid-cols-2 gap-12 mb-12">",
+        <div className="grid lg:grid-cols-2 gap-12 mb-12">
           {/* Articles Section */}
           <div>
             <div className="flex items-center gap-3 mb-6">
@@ -88,7 +107,7 @@ const NewContentShowcase: React.FC = () => {,
                 <Link
                   key={article.id}
                   to={article.link}
-                  className="block bg-white rounded-xl p-6 shadow-md hover: shadow-2xl transition-all hover:scale-105",
+                  className="block bg-white rounded-xl p-6 shadow-md hover:shadow-2xl transition-all hover:scale-105"
                 >
                   <div className="text-sm text-indigo-600 font-semibold mb-2">{article.category}</div>
                   <h4 className="text-xl font-bold text-gray-900 mb-2">{article.title}</h4>
@@ -105,10 +124,10 @@ const NewContentShowcase: React.FC = () => {,
             <div className="mt-6 text-center">
               <Link
                 to="/blog"
-                className="inline-flex items-center gap-2 text-indigo-600 font-bold hover: text-indigo-800",
+                className="inline-flex items-center gap-2 text-indigo-600 font-bold hover:text-indigo-800"
               >
                 View All Articles
-                <ArrowRight className="w-5 h-5/>
+                <ArrowRight className="w-5 h-5" />
               </Link>
             </div>
           </div>
@@ -124,7 +143,7 @@ const NewContentShowcase: React.FC = () => {,
                 <Link
                   key={service.id}
                   to={service.link}
-                  className="block bg-white rounded-xl p-6 shadow-md hover: shadow-2xl transition-all hover:scale-105",
+                  className="block bg-white rounded-xl p-6 shadow-md hover:shadow-2xl transition-all hover:scale-105"
                 >
                   <div className="flex items-center gap-2 mb-2">
                     <span className="text-2xl">{service.icon}</span>
@@ -144,10 +163,10 @@ const NewContentShowcase: React.FC = () => {,
             <div className="mt-6 text-center">
               <Link
                 to="/services"
-                className="inline-flex items-center gap-2 text-purple-600 font-bold hover: text-purple-800",
+                className="inline-flex items-center gap-2 text-purple-600 font-bold hover:text-purple-800"
               >
                 View All Services
-                <ArrowRight className="w-5 h-5/>
+                <ArrowRight className="w-5 h-5" />
               </Link>
             </div>
           </div>

@@ -4,27 +4,27 @@
  */
 
 export interface PerformanceMetrics {
-loadTime: number,
-firstContentfulPaint: number,
-largestContentfulPaint: number,
-firstInputDelay: number,
-cumulativeLayoutShift: number,
-timeToInteractive: number,
-totalBlockingTime: number,
-speedIndex: number,
-memoryUsage: number,
-networkRequests: number,
-domNodes: number,
-jsHeapSize: number,
+loadTime: number;,
+firstContentfulPaint: number;,
+largestContentfulPaint: number;,
+firstInputDelay: number;,
+cumulativeLayoutShift: number;,
+timeToInteractive: number;,
+totalBlockingTime: number;,
+speedIndex: number;,
+memoryUsage: number;,
+networkRequests: number;,
+domNodes: number;,
+jsHeapSize: number;,
 timestamp: number;
 }
 
 export interface PerformanceAlert {
-type: 'warning' | 'error' | 'info';',
-message: string,
-metric: keyof PerformanceMetrics,
-value: number,
-threshold: number,
+type: 'warning' | 'error' | 'info';,
+message: string;,
+metric: keyof PerformanceMetrics;,
+value: number;,
+threshold: number;,
 timestamp: number;
 }
 
@@ -38,22 +38,37 @@ this.initializeObservers();
 }
 
   private initializeObservers(): void {
+<<<<<<< HEAD
     if (typeof window === 'undefined') return;
     // Observe navigation timing
     if ('PerformanceObserver' in window) {;
+=======
+    if (typeof window === 'undefined') return;';
+
+    // Observe navigation timing
+    if ('PerformanceObserver' in window) {';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       try {
         const navObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           entries.forEach((entry) => {
+<<<<<<< HEAD
             if (entry.entryType === 'navigation') {;
+=======
+            if (entry.entryType === 'navigation') {';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               this.processNavigationTiming(entry as PerformanceNavigationTiming);
             }
           });
         });
-        navObserver.observe({ entryTypes: ['navigation'] });
+        navObserver.observe({ entryTypes: ['navigation'] });';
         this.observers.push(navObserver);
       } catch (error) {
+<<<<<<< HEAD
         console.warn('Navigation timing observer failed: ', error);',
+=======
+        console.warn('Navigation timing observer failed: ', error);';,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       }
     }
   }
@@ -92,9 +107,15 @@ this.initializeObservers();
 
     Object.entries(thresholds).forEach(([key, threshold]) => {
       const value = metrics[key as keyof PerformanceMetrics];
+<<<<<<< HEAD
       if (typeof value === 'number' && value > threshold) {;
         this.addAlert({
           type: value > threshold * 1.5 ? 'error' : 'warning',',
+=======
+      if (typeof value === 'number' && value > threshold) {';
+        this.addAlert({
+          type: value > threshold * 1.5 ? 'error' : 'warning',';,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           message: `${key} exceeded threshold: ${value}ms > ${threshold}ms`,`;
           metric: key as keyof PerformanceMetrics,,
           value,
@@ -114,21 +135,26 @@ this.initializeObservers();
     }
 
     // Log critical alerts
+<<<<<<< HEAD
     if (alert.type === 'error') {;
       console.error('Performance Alert: ', alert);',
+=======
+    if (alert.type === 'error') {';
+      console.error('Performance Alert: ', alert);';,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     }
   }
 
   public startMonitoring(): void {
     this.isMonitoring = true;
-    console.log('Enhanced performance monitoring started');
+    console.log('Enhanced performance monitoring started');';
   }
 
   public stopMonitoring(): void {
     this.isMonitoring = false;
     this.observers.forEach(observer => observer.disconnect());
     this.observers = [];
-    console.log('Enhanced performance monitoring stopped');
+    console.log('Enhanced performance monitoring stopped');';
   }
 
   public getMetrics(): PerformanceMetrics[] {
@@ -160,7 +186,11 @@ this.initializeObservers();
 export const enhancedPerformanceMonitor = new EnhancedPerformanceMonitor();
 
 // Auto-start monitoring in browser environment
+<<<<<<< HEAD
 if (typeof window !== 'undefined') {;
+=======
+if (typeof window !== 'undefined') {';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   enhancedPerformanceMonitor.startMonitoring();
 }
 ;

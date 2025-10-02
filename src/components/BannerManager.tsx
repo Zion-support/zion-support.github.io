@@ -2,45 +2,72 @@ import React, { useState, useEffect } from 'react';
 import {
 
 } from 'framer-motion';
-interface Banner {
-  id: string,
-  title: string,
-  description: string,
-  type: 'info' | 'success' | 'warning' | 'promotion';',
-  ctaText?: string;
-  ctaLink?: string;
-  icon?: string;
+
+<<<<<<< HEAD
+interface BannerData {
+id: string;
+title: string;
+subtitle?: string;
+description: string;
+ctaText: string;
+ctaLink: string;
+imageUrl?: string;
+category: string;
+priority: number;
+isActive: boolean;
+startDate?: string;
+endDate?: string;
 }
 
-const BannerManager: React.FC = () => {,
+interface BannerManagerProps {
+banners: BannerData[];
+rotationInterval?: number;
+maxVisibleBanners?: number;
+}
+=======
+interface Banner {
+id: string;,
+title: string;,
+description: string;,
+type: 'info' | 'success' | 'warning' | 'promotion';,
+ctaText?: string;,
+ctaLink?: string;,
+icon?: string;
+}
+
+const BannerManager: React.FC = () => {
   const [currentBannerIndex, setCurrentBannerIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-ea70
 
-  const banners: Banner[] = [,
+  const banners: Banner[] = [
     {
-      id: 'ai-solutions',',
-      title: '🚀 Revolutionary AI Solutions',',
-      description: 'Transform your business with cutting-edge artificial intelligence and machine learning technologies.',',
-      type: 'promotion',',
-      ctaText: 'Learn More',',
-      ctaLink: '/services',',
-      icon: '🤖},
+      id: 'ai-solutions',
+      title: '🚀 Revolutionary AI Solutions',
+      description: 'Transform your business with cutting-edge artificial intelligence and machine learning technologies.',
+      type: 'promotion',
+      ctaText: 'Learn More',
+      ctaLink: '/services',
+      icon: '🤖'
+    },
     {
-      id: 'cloud-migration',',
-      title: '☁️ Cloud Migration Services',',
-      description: 'Seamlessly migrate to the cloud with our expert guidance and proven methodologies.',',
-      type: 'info',',
-      ctaText: 'Get Started',',
-      ctaLink: '/contact',',
-      icon: '☁️},
+      id: 'cloud-migration',
+      title: '☁️ Cloud Migration Services',
+      description: 'Seamlessly migrate to the cloud with our expert guidance and proven methodologies.',
+      type: 'info',
+      ctaText: 'Get Started',
+      ctaLink: '/contact',
+      icon: '☁️'
+    },
     {
-      id: 'digital-transformation',',
-      title: '🚀 Digital Transformation',',
-      description: 'Accelerate your digital journey with our comprehensive transformation strategies.',',
-      type: 'success',',
-      ctaText: 'Explore Solutions',',
-      ctaLink: '/services',',
-      icon: '🚀}
+      id: 'digital-transformation',
+      title: '🚀 Digital Transformation',
+      description: 'Accelerate your digital journey with our comprehensive transformation strategies.',
+      type: 'success',
+      ctaText: 'Explore Solutions',
+      ctaLink: '/services',
+      icon: '🚀'
+    }
   ];
 
   useEffect(() => {
@@ -51,17 +78,18 @@ const BannerManager: React.FC = () => {,
     return () => clearInterval(interval);
   }, [banners.length]);
 
-  const getBannerStyles = (type: Banner['type']) => {',
-    switch (type) {
-      case 'promotion':;
-        return 'bg-gradient-to-r from-blue-500 to-purple-600 text-white';
-      case 'success':;
-        return 'bg-gradient-to-r from-green-500 to-blue-600 text-white';
-      case 'warning':;
-        return 'bg-gradient-to-r from-yellow-500 to-orange-600 text-white';
-      case 'info':;
-      default: return 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white';',
-    };
+  const getBannerStyles = (type: Banner['type']) => {
+switch (type) {
+case 'promotion':,
+return 'bg-gradient-to-r from-blue-500 to-purple-600 text-white';
+case 'success':,
+return 'bg-gradient-to-r from-green-500 to-blue-600 text-white';
+case 'warning':,
+return 'bg-gradient-to-r from-yellow-500 to-orange-600 text-white';
+case 'info':,
+default:,
+return 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white';
+}
   };
 
   const currentBanner = banners[currentBannerIndex];
@@ -75,7 +103,7 @@ const BannerManager: React.FC = () => {,
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 50 }}
           transition={{ duration: 0.5 }}
-          className={`${getBannerStyles(currentBanner.type)} py-4 px-6`}`;
+          className={`${getBannerStyles(currentBanner.type)} py-4 px-6`}
         >
           <div className="container mx-auto flex items-center justify-between">
             <div className="flex items-center space-x-4">
@@ -87,15 +115,17 @@ const BannerManager: React.FC = () => {,
             </div>
             
             <div className="flex items-center space-x-4">
-              {currentBanner.ctaText && (
-                <button className="bg-white bg-opacity-20 hover: bg-opacity-30 px-4 py-2 rounded-lg transition-all duration-200">",
-                  {currentBanner.ctaText}
+              {
+currentBanner.ctaText && (
+<button className="bg-white bg-opacity-20 hover:bg-opacity-30 px-4 py-2 rounded-lg transition-all duration-200">,
+{currentBanner.ctaText
+}
                 </button>
               )}
               
               <button
                 onClick={() => setIsVisible(false)}
-                className="text-white hover: text-gray-200 transition-colors",
+                className="text-white hover:text-gray-200 transition-colors"
               >
                 ✕
               </button>
@@ -110,9 +140,9 @@ const BannerManager: React.FC = () => {,
           <button
             key={index}
             onClick={() => setCurrentBannerIndex(index)}
-            className={`w-2 h-2 rounded-full transition-colors ${`;
+            className={`w-2 h-2 rounded-full transition-colors ${
               index === currentBannerIndex ? 'bg-white' : 'bg-white bg-opacity-50'
-            }`}`;
+            }`}
           />
         ))}
       </div>

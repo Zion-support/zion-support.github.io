@@ -51,6 +51,34 @@ def get_open_prs() -> List[Dict[str, Any]]:
     return prs
 
 
+def mark_pr_ready(pr_number: int) -> bool:
+    """Convert a draft PR to ready-for-review if needed"""
+    print(f"\nChecking if PR #{pr_number} is draft and marking ready if so...")
+    response = requests.get(
+        f"{PULLS_URL}/{pr_number}", headers=HEADERS, timeout=30
+    )
+    if response.status_code != 200:
+        print("  ✗ Could not fetch PR to check draft status")
+        return False
+    pr = response.json()
+    if not pr.get("draft", False):
+        print("  ✓ PR already ready for review")
+        return True
+    # Use the ready-for-review endpoint
+    rr = requests.put(
+        f"{PULLS_URL}/{pr_number}/ready_for_review", headers=HEADERS, timeout=30
+    )
+    if rr.status_code == 200:
+        print("  ✓ Marked PR ready for review")
+        return True
+    print(f"  ✗ Failed to mark ready: {rr.status_code}")
+    try:
+        print(rr.text)
+    except Exception:
+        pass
+    return False
+
+
 def check_pr_mergeable(pr_number: int) -> tuple[bool, str]:
     """Check if a PR is mergeable"""
     print(f"\nChecking PR #{pr_number} mergeable status...")
@@ -217,11 +245,15 @@ def main():
         print(f"Processing PR #{pr_number}: {pr_title}")
         print(f"{'='*60}")
         
-        # Skip draft PRs
+        # If draft, try to mark ready
         if is_draft:
-            print(f"⊘ Skipping draft PR #{pr_number}")
-            skipped_count += 1
-            continue
+            if mark_pr_ready(pr_number):
+                # Re-fetch draft status
+                is_draft = False
+            else:
+                print(f"⊘ Skipping draft PR #{pr_number}")
+                skipped_count += 1
+                continue
         
         # Check if mergeable
         mergeable, reason = check_pr_mergeable(pr_number)
