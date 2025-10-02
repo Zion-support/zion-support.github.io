@@ -6,7 +6,6 @@ import { resolve } from 'path'
 export default defineConfig({
   plugins: [
     react({
-      // Enable JSX runtime
       jsxRuntime: 'automatic',
     }),
   ],
@@ -35,9 +34,8 @@ export default defineConfig({
         preset: 'smallest'
       },
       output: {
-        // Manual chunk splitting for better caching
         manualChunks: (id) => {
-          // Vendor chunks - more granular splitting
+          // Vendor chunks
           if (id.includes('node_modules')) {
             if (id.includes('react') || id.includes('react-dom')) {
               return 'vendor-react';
@@ -60,48 +58,24 @@ export default defineConfig({
             if (id.includes('axios')) {
               return 'vendor-http';
             }
-            if (id.includes('web-vitals')) {
-              return 'vendor-vitals';
-            }
-            // All other node_modules go to vendor
             return 'vendor';
           }
-          // App chunks - more granular splitting
+          // App chunks
           if (id.includes('src/pages/')) {
             return 'pages';
           }
           if (id.includes('src/components/')) {
-            // Split large components into separate chunks
-            if (id.includes('Advanced') || id.includes('Comprehensive')) {
-              return 'components-advanced';
-            }
-            if (id.includes('Dashboard') || id.includes('Monitor')) {
-              return 'components-dashboard';
-            }
             return 'components';
           }
           if (id.includes('src/utils/')) {
-            // Split utils by functionality
-            if (id.includes('advanced') || id.includes('comprehensive')) {
-              return 'utils-advanced';
-            }
-            if (id.includes('performance') || id.includes('monitor')) {
-              return 'utils-performance';
-            }
             return 'utils';
           }
           if (id.includes('src/hooks/')) {
             return 'hooks';
           }
-          // Default chunk
           return 'app';
         },
-        chunkFileNames: (chunkInfo) => {
-          const facadeModuleId = chunkInfo.facadeModuleId
-            ? chunkInfo.facadeModuleId.split('/').pop().replace('.tsx', '').replace('.ts', '')
-            : 'chunk';
-          return `assets/js/${facadeModuleId}-[hash].js`;
-        },
+        chunkFileNames: 'assets/js/[name]-[hash].js',
         entryFileNames: 'assets/js/main-[hash].js',
         assetFileNames: (assetInfo) => {
           const info = assetInfo.name.split('.');
@@ -113,27 +87,20 @@ export default defineConfig({
         },
       },
     },
-    // Optimize chunk size
     chunkSizeWarningLimit: 1000,
     terserOptions: {
       compress: {
         drop_console: true,
         drop_debugger: true,
         pure_funcs: ['console.log', 'console.info', 'console.debug'],
-        passes: 3,
-        unsafe: true,
-        unsafe_comps: true,
-        unsafe_math: true,
-        unsafe_proto: true,
+        passes: 2,
+        unsafe: false,
         dead_code: true,
         unused: true,
       },
       mangle: {
         safari10: true,
         toplevel: true,
-        properties: {
-          regex: /^_/
-        }
       },
       format: {
         comments: false,

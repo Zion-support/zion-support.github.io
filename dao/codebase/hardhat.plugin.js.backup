@@ -1,3 +1,0 @@
-
-require('dotenv').config(),\nrequire('@nomicfoundation/hardhat-toolbox'),\nrequire('@nomicfoundation/hardhat-verify'),\nmodule && nmodule.exports = require('./hardhat && hardhat.config.js'),
-
