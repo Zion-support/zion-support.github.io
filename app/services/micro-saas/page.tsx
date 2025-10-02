@@ -1,48 +1,10 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { 
-  Cloud, 
-  Shield, 
-  BarChart3, 
-  Users, 
-  FileText, 
-  Zap, 
-  Monitor, 
-  Search, 
-  MessageSquare, 
-  CheckCircle, 
-  ArrowRight, 
-  DollarSign,
-  Clock,
-  Star,
-  Globe,
-  Lock,
-  Target,
-  TrendingUp,
-  Settings,
-  Database,
-  Bot,
-  Smartphone,
-  Mail,
-  Calendar,
-  CreditCard,
-  Headphones,
-  Code,
-  Layers,
-  Wifi,
-  Camera,
-  Mic,
-  MapPin,
-  ShoppingCart,
-  Package,
-  Truck,
-  Building,
-  Home,
-  Car,
-  Plane,
-  Ship
-} from 'lucide-react';
+import * as Lucide from 'lucide-react';
+const { 
+  Cloud, Shield, BarChart3, Users, FileText, Zap, MessageSquare, CheckCircle, ArrowRight, DollarSign, Clock, Star, Activity, Mail, Phone, Calendar, Headphones, Code, Package, TrendingUp, Bot
+} = Lucide as any;
 
 export const metadata: Metadata = {
   title: 'Micro SaaS Solutions | Zion Tech Group - Real Business Tools',
@@ -84,6 +46,122 @@ export default function MicroSAASPage() {
       link: '/services/micro-saas/cloud-cost-guard',
       popularity: 95,
       savings: '$50K+ annually'
+    },
+    {
+      id: 'ai-sales-copilot',
+      title: 'AI Sales Copilot',
+      subtitle: 'Pipeline Insights & Email Drafting',
+      description: 'Prospecting prioritization, next-best-action, and AI-drafted emails integrated with Salesforce and HubSpot.',
+      icon: Bot,
+      category: 'Sales Enablement',
+      pricing: '$149 - $799/month',
+      delivery: '1-2 weeks',
+      features: [
+        'Lead scoring and prioritization',
+        'Auto-drafted outreach with tone controls',
+        'Meeting summaries and follow-up generation',
+        'CRM integration (Salesforce, HubSpot)'
+      ],
+      benefits: [
+        '2x increase in meetings booked',
+        'Faster pipeline movement',
+        'Higher outbound reply rates'
+      ],
+      useCases: [
+        'SDR email personalization',
+        'Account research automation',
+        'Post-call follow-ups'
+      ],
+      link: '/services/micro-saas/ai-sales-copilot',
+      popularity: 86,
+      savings: '$25K+ annually'
+    },
+    {
+      id: 'ai-code-reviewer',
+      title: 'AI Code Reviewer',
+      subtitle: 'PR Reviews & Security Guards',
+      description: 'Automated pull request reviews for style, complexity, security patterns, and test suggestions.',
+      icon: Code,
+      category: 'Engineering Productivity',
+      pricing: '$99 - $499/month',
+      delivery: '1 week',
+      features: [
+        'Static analysis with custom rules',
+        'Secure coding pattern detection',
+        'Test case generation hints',
+        'CI integration (GitHub, GitLab, Bitbucket)'
+      ],
+      benefits: [
+        '30% faster PR cycle time',
+        'Fewer production defects',
+        'Improved developer experience'
+      ],
+      useCases: [
+        'PR quality gates',
+        'Security policy enforcement',
+        'Legacy refactor reviews'
+      ],
+      link: '/services/micro-saas/ai-code-reviewer',
+      popularity: 83,
+      savings: '$40K+ annually'
+    },
+    {
+      id: 'privacy-dsar-automation',
+      title: 'Privacy DSAR Automation',
+      subtitle: 'GDPR/CCPA Requests at Scale',
+      description: 'Automate data subject access requests: intake, identity verification, data retrieval, redaction, and delivery.',
+      icon: Shield,
+      category: 'Compliance & Security',
+      pricing: '$299 - $1,499/month',
+      delivery: '2-4 weeks',
+      features: [
+        'Self-service DSAR portal',
+        'Identity verification workflows',
+        'PII discovery and redaction',
+        'Audit trail and SLA tracking'
+      ],
+      benefits: [
+        '80% lower handling cost per request',
+        'Regulatory compliance and auditability',
+        'Faster response SLAs'
+      ],
+      useCases: [
+        'Consumer privacy operations',
+        'Regulatory reporting',
+        'Enterprise governance'
+      ],
+      link: '/services/micro-saas/privacy-dsar-automation',
+      popularity: 79,
+      savings: '$60K+ annually'
+    },
+    {
+      id: 'mlops-monitoring',
+      title: 'MLOps Monitoring',
+      subtitle: 'Model Drift & Data Quality',
+      description: 'Production ML monitoring for drift, data quality, feature health, and performance regression with alerts.',
+      icon: Activity,
+      category: 'AI & Analytics',
+      pricing: '$249 - $1,299/month',
+      delivery: '2-3 weeks',
+      features: [
+        'Drift and data quality detection',
+        'Model performance dashboards',
+        'Traffic shadowing and canaries',
+        'PagerDuty/Slack alert integrations'
+      ],
+      benefits: [
+        'Reduced model downtime',
+        'Faster incident response',
+        'Improved prediction accuracy'
+      ],
+      useCases: [
+        'Realtime scoring services',
+        'Batch inference monitoring',
+        'Feature store quality checks'
+      ],
+      link: '/services/micro-saas/mlops-monitoring',
+      popularity: 85,
+      savings: '$90K+ annually'
     },
     {
       id: 'ai-content-factory',
@@ -453,16 +531,18 @@ export default function MicroSAASPage() {
   const categories = [
     { name: 'Cloud Management', icon: Cloud, count: 1 },
     { name: 'Content Marketing', icon: FileText, count: 1 },
-    { name: 'Compliance & Security', icon: Shield, count: 1 },
+    { name: 'Compliance & Security', icon: Shield, count: 2 },
     { name: 'Human Resources', icon: Users, count: 1 },
-    { name: 'Analytics & Insights', icon: BarChart3, count: 1 },
+    { name: 'Analytics & Insights', icon: BarChart3, count: 2 },
     { name: 'Process Automation', icon: Zap, count: 1 },
     { name: 'Supply Chain', icon: Package, count: 1 },
     { name: 'Social Media', icon: MessageSquare, count: 1 },
     { name: 'Document Management', icon: FileText, count: 1 },
     { name: 'Customer Support', icon: Headphones, count: 1 },
     { name: 'Email Marketing', icon: Mail, count: 1 },
-    { name: 'Productivity', icon: Calendar, count: 1 }
+    { name: 'Productivity', icon: Calendar, count: 1 },
+    { name: 'Sales Enablement', icon: MessageSquare, count: 1 },
+    { name: 'Engineering Productivity', icon: Code, count: 1 }
   ];
 
   const contactInfo = {
