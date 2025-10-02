@@ -48,7 +48,58 @@ import {
   CheckSquare,
   PieChart,
   Activity,
-  Zap as Lightning
+  Zap as Lightning,
+  Package,
+  Bot,
+  Workflow,
+  BrainCircuit,
+  Sparkles,
+  CircuitBoard,
+  Cpu as Processor,
+  Database as DataStorage,
+  Network as NetworkIcon,
+  Cloud as CloudIcon,
+  Shield as SecurityIcon,
+  BarChart3 as AnalyticsIcon,
+  Settings as ConfigIcon,
+  Zap as PerformanceIcon,
+  Monitor as DisplayIcon,
+  Search as SearchIcon,
+  MessageSquare as ChatIcon,
+  CheckCircle as SuccessIcon,
+  ArrowRight as ArrowIcon,
+  DollarSign as MoneyIcon,
+  Users as TeamIcon,
+  Database as DataIcon,
+  Globe as WorldIcon,
+  Smartphone as MobileIcon,
+  Lock as SecurityLockIcon,
+  TrendingUp as GrowthIcon,
+  Target as GoalIcon,
+  Clock as TimeIcon,
+  Star as RatingIcon,
+  Phone as PhoneIcon,
+  Mail as EmailIcon,
+  MapPin as LocationIcon,
+  Rocket as LaunchIcon,
+  Cpu as ChipIcon,
+  FileText as DocumentIcon,
+  Camera as CameraIcon,
+  Mic as MicrophoneIcon,
+  Eye as VisionIcon,
+  Heart as HealthIcon,
+  ShoppingCart as CartIcon,
+  CreditCard as PaymentIcon,
+  Building as OfficeIcon,
+  Wrench as ToolIcon,
+  Layers as StackIcon,
+  GitBranch as VersionIcon,
+  Container as ContainerIcon,
+  Key as AccessIcon,
+  AlertTriangle as WarningIcon,
+  CheckSquare as CheckboxIcon,
+  PieChart as ChartIcon,
+  Activity as ActivityIcon
 } from 'lucide-react';
 
 export default function EnhancedServicesCatalog() {
@@ -169,6 +220,139 @@ export default function EnhancedServicesCatalog() {
       benefits: 'Improve team productivity by 30%, reduce communication overhead',
       marketPrice: '$500 - $8,000/month',
       link: '/services/micro-saas/team-collaboration'
+    },
+    {
+      name: 'AI-Powered Lead Generation Engine',
+      description: 'Automated lead scoring, qualification, and nurturing with predictive analytics',
+      icon: Target,
+      features: [
+        'AI-driven lead scoring and qualification',
+        'Automated email sequences and nurturing',
+        'Social media lead generation',
+        'CRM integration and data enrichment',
+        'Predictive analytics for conversion',
+        'Real-time lead alerts and notifications'
+      ],
+      pricing: '$499 - $3,800/month',
+      delivery: '2-3 weeks',
+      category: 'Sales & Marketing',
+      benefits: 'Increase qualified leads by 150%, improve conversion rates by 40%',
+      marketPrice: '$800 - $12,000/month',
+      link: '/services/micro-saas/lead-generation'
+    },
+    {
+      name: 'Smart Inventory Management System',
+      description: 'AI-powered inventory optimization with demand forecasting and automated reordering',
+      icon: Package,
+      features: [
+        'Demand forecasting with 95% accuracy',
+        'Automated reorder point calculations',
+        'Multi-location inventory tracking',
+        'Supplier management and integration',
+        'Cost optimization recommendations',
+        'Real-time inventory analytics'
+      ],
+      pricing: '$399 - $2,800/month',
+      delivery: '3-4 weeks',
+      category: 'Supply Chain',
+      benefits: 'Reduce inventory costs by 25%, eliminate stockouts',
+      marketPrice: '$600 - $10,000/month',
+      link: '/services/micro-saas/inventory-management'
+    },
+    {
+      name: 'AI Document Processing Suite',
+      description: 'Intelligent document extraction, classification, and workflow automation',
+      icon: FileText,
+      features: [
+        'OCR with 99% accuracy for any document type',
+        'Intelligent data extraction and validation',
+        'Document classification and routing',
+        'Workflow automation and approval processes',
+        'Integration with existing systems',
+        'Compliance and audit trail management'
+      ],
+      pricing: '$299 - $2,200/month',
+      delivery: '2-3 weeks',
+      category: 'Document Management',
+      benefits: 'Reduce processing time by 80%, eliminate manual errors',
+      marketPrice: '$500 - $8,000/month',
+      link: '/services/micro-saas/document-processing'
+    },
+    {
+      name: 'Smart Energy Management Platform',
+      description: 'AI-driven energy monitoring, optimization, and cost reduction for buildings',
+      icon: Zap,
+      features: [
+        'Real-time energy consumption monitoring',
+        'AI-powered optimization recommendations',
+        'Predictive maintenance for equipment',
+        'Carbon footprint tracking',
+        'Cost analysis and savings reports',
+        'Integration with smart building systems'
+      ],
+      pricing: '$199 - $1,500/month',
+      delivery: '2-3 weeks',
+      category: 'Sustainability',
+      benefits: 'Reduce energy costs by 30%, improve sustainability metrics',
+      marketPrice: '$400 - $6,000/month',
+      link: '/services/micro-saas/energy-management'
+    },
+    {
+      name: 'AI-Powered Fraud Detection System',
+      description: 'Real-time fraud detection with machine learning for financial transactions',
+      icon: Shield,
+      features: [
+        'Real-time transaction monitoring',
+        'Machine learning fraud detection models',
+        'Risk scoring and alert systems',
+        'Integration with payment processors',
+        'Customizable rules and thresholds',
+        'Comprehensive fraud analytics'
+      ],
+      pricing: '$899 - $6,500/month',
+      delivery: '3-5 weeks',
+      category: 'Security',
+      benefits: 'Reduce fraud losses by 85%, improve transaction approval rates',
+      marketPrice: '$1,500 - $25,000/month',
+      link: '/services/micro-saas/fraud-detection'
+    },
+    {
+      name: 'Smart Contract Management Platform',
+      description: 'AI-powered contract analysis, risk assessment, and lifecycle management',
+      icon: FileText,
+      features: [
+        'Automated contract analysis and extraction',
+        'Risk assessment and compliance checking',
+        'Contract lifecycle management',
+        'Renewal and expiration tracking',
+        'Integration with legal systems',
+        'Performance monitoring and analytics'
+      ],
+      pricing: '$599 - $4,200/month',
+      delivery: '3-4 weeks',
+      category: 'Legal Tech',
+      benefits: 'Reduce contract review time by 70%, minimize legal risks',
+      marketPrice: '$1,000 - $15,000/month',
+      link: '/services/micro-saas/contract-management'
+    },
+    {
+      name: 'AI Customer Behavior Analytics',
+      description: 'Advanced customer insights with predictive analytics and personalization',
+      icon: BarChart3,
+      features: [
+        'Customer journey mapping and analysis',
+        'Predictive behavior modeling',
+        'Personalization engine for recommendations',
+        'Churn prediction and prevention',
+        'Customer lifetime value optimization',
+        'Real-time behavioral insights'
+      ],
+      pricing: '$399 - $3,200/month',
+      delivery: '2-4 weeks',
+      category: 'Analytics',
+      benefits: 'Increase customer retention by 35%, boost revenue per customer',
+      marketPrice: '$800 - $12,000/month',
+      link: '/services/micro-saas/customer-analytics'
     }
   ];
 
@@ -286,6 +470,139 @@ export default function EnhancedServicesCatalog() {
       benefits: 'Process documents 10x faster, reduce errors by 95%',
       marketPrice: '$4,000 - $35,000/month',
       link: '/services/ai-services/document-processing'
+    },
+    {
+      name: 'AI-Powered Autonomous Agents',
+      description: 'Intelligent agents for business process automation and decision making',
+      icon: Bot,
+      features: [
+        'Multi-agent orchestration and coordination',
+        'Natural language task understanding',
+        'Autonomous decision making and execution',
+        'Learning and adaptation capabilities',
+        'Integration with business systems',
+        'Human-in-the-loop oversight'
+      ],
+      pricing: '$5,000 - $35,000/month',
+      delivery: '6-12 weeks',
+      category: 'Autonomous Systems',
+      benefits: 'Automate 80% of routine tasks, improve operational efficiency',
+      marketPrice: '$8,000 - $70,000/month',
+      link: '/services/ai-services/autonomous-agents'
+    },
+    {
+      name: 'Quantum-Enhanced AI Computing',
+      description: 'Next-generation AI powered by quantum computing for complex optimization',
+      icon: CircuitBoard,
+      features: [
+        'Quantum machine learning algorithms',
+        'Complex optimization problem solving',
+        'Quantum neural networks',
+        'Hybrid classical-quantum processing',
+        'Advanced cryptography and security',
+        'Research and development partnership'
+      ],
+      pricing: '$15,000 - $100,000/month',
+      delivery: '8-16 weeks',
+      category: 'Quantum AI',
+      benefits: 'Solve previously intractable problems, exponential speedup',
+      marketPrice: '$25,000 - $200,000/month',
+      link: '/services/ai-services/quantum-ai'
+    },
+    {
+      name: 'AI-Powered Drug Discovery Platform',
+      description: 'Machine learning for pharmaceutical research and drug development',
+      icon: Heart,
+      features: [
+        'Molecular property prediction',
+        'Drug-target interaction modeling',
+        'Clinical trial optimization',
+        'Adverse effect prediction',
+        'Patent analysis and IP research',
+        'Regulatory compliance support'
+      ],
+      pricing: '$10,000 - $75,000/month',
+      delivery: '10-20 weeks',
+      category: 'Healthcare AI',
+      benefits: 'Accelerate drug discovery by 5x, reduce development costs',
+      marketPrice: '$20,000 - $150,000/month',
+      link: '/services/ai-services/drug-discovery'
+    },
+    {
+      name: 'AI-Powered Supply Chain Optimization',
+      description: 'Intelligent supply chain management with predictive analytics and automation',
+      icon: Network,
+      features: [
+        'Demand forecasting and planning',
+        'Supplier risk assessment',
+        'Route optimization and logistics',
+        'Inventory management automation',
+        'Sustainability and ESG tracking',
+        'Real-time supply chain visibility'
+      ],
+      pricing: '$4,500 - $25,000/month',
+      delivery: '6-10 weeks',
+      category: 'Supply Chain AI',
+      benefits: 'Reduce supply chain costs by 30%, improve resilience',
+      marketPrice: '$7,000 - $50,000/month',
+      link: '/services/ai-services/supply-chain-ai'
+    },
+    {
+      name: 'AI-Powered Cybersecurity Platform',
+      description: 'Advanced threat detection and response with machine learning',
+      icon: Shield,
+      features: [
+        'Behavioral anomaly detection',
+        'Threat intelligence and analysis',
+        'Automated incident response',
+        'Zero-trust security architecture',
+        'Compliance monitoring and reporting',
+        'Security orchestration and automation'
+      ],
+      pricing: '$6,000 - $40,000/month',
+      delivery: '8-12 weeks',
+      category: 'Cybersecurity AI',
+      benefits: 'Detect threats 10x faster, reduce false positives by 90%',
+      marketPrice: '$10,000 - $80,000/month',
+      link: '/services/ai-services/cybersecurity-ai'
+    },
+    {
+      name: 'AI-Powered Climate Analytics',
+      description: 'Environmental monitoring and climate change prediction with AI',
+      icon: Globe,
+      features: [
+        'Climate data analysis and modeling',
+        'Carbon footprint tracking and optimization',
+        'Renewable energy optimization',
+        'Environmental risk assessment',
+        'Sustainability reporting automation',
+        'ESG compliance monitoring'
+      ],
+      pricing: '$3,500 - $20,000/month',
+      delivery: '6-10 weeks',
+      category: 'Climate AI',
+      benefits: 'Improve sustainability metrics, reduce environmental impact',
+      marketPrice: '$6,000 - $40,000/month',
+      link: '/services/ai-services/climate-analytics'
+    },
+    {
+      name: 'AI-Powered Financial Trading Platform',
+      description: 'Algorithmic trading and portfolio management with machine learning',
+      icon: TrendingUp,
+      features: [
+        'Algorithmic trading strategies',
+        'Risk management and portfolio optimization',
+        'Market sentiment analysis',
+        'High-frequency trading algorithms',
+        'Regulatory compliance monitoring',
+        'Performance analytics and reporting'
+      ],
+      pricing: '$8,000 - $60,000/month',
+      delivery: '10-16 weeks',
+      category: 'FinTech AI',
+      benefits: 'Improve trading performance, reduce risk exposure',
+      marketPrice: '$15,000 - $120,000/month',
+      link: '/services/ai-services/financial-trading'
     }
   ];
 
@@ -403,6 +720,139 @@ export default function EnhancedServicesCatalog() {
       benefits: 'Reduce MTTR by 70%, improve system reliability',
       marketPrice: '$4,000 - $50,000/project',
       link: '/services/it-services/observability'
+    },
+    {
+      name: 'Edge Computing Infrastructure',
+      description: 'Distributed computing infrastructure for low-latency applications',
+      icon: Network,
+      features: [
+        'Edge node deployment and management',
+        'Content delivery network optimization',
+        'IoT device connectivity and management',
+        'Real-time data processing at edge',
+        '5G network integration',
+        'Edge security and compliance'
+      ],
+      pricing: '$5,000 - $40,000/project',
+      delivery: '6-12 weeks',
+      category: 'Edge Computing',
+      benefits: 'Reduce latency by 80%, improve user experience',
+      marketPrice: '$10,000 - $80,000/project',
+      link: '/services/it-services/edge-computing'
+    },
+    {
+      name: 'Blockchain & Web3 Solutions',
+      description: 'Decentralized applications and blockchain infrastructure development',
+      icon: Key,
+      features: [
+        'Smart contract development and auditing',
+        'DeFi protocol development',
+        'NFT marketplace creation',
+        'Blockchain integration services',
+        'Cryptocurrency wallet development',
+        'Web3 application architecture'
+      ],
+      pricing: '$8,000 - $60,000/project',
+      delivery: '8-16 weeks',
+      category: 'Blockchain',
+      benefits: 'Enable decentralized solutions, improve transparency',
+      marketPrice: '$15,000 - $120,000/project',
+      link: '/services/it-services/blockchain'
+    },
+    {
+      name: 'API Gateway & Microservices',
+      description: 'Enterprise API management with microservices architecture',
+      icon: Server,
+      features: [
+        'API gateway design and implementation',
+        'Microservices architecture patterns',
+        'Service mesh implementation',
+        'API security and authentication',
+        'Rate limiting and throttling',
+        'API analytics and monitoring'
+      ],
+      pricing: '$4,000 - $30,000/project',
+      delivery: '4-10 weeks',
+      category: 'API Management',
+      benefits: 'Improve scalability, enhance developer experience',
+      marketPrice: '$8,000 - $60,000/project',
+      link: '/services/it-services/api-gateway'
+    },
+    {
+      name: 'Disaster Recovery & Business Continuity',
+      description: 'Comprehensive backup, recovery, and business continuity planning',
+      icon: Shield,
+      features: [
+        'Multi-region backup strategies',
+        'Automated disaster recovery testing',
+        'Business continuity planning',
+        'Data replication and synchronization',
+        'Recovery time objective optimization',
+        'Compliance and audit support'
+      ],
+      pricing: '$3,000 - $25,000/project',
+      delivery: '4-8 weeks',
+      category: 'Business Continuity',
+      benefits: 'Minimize downtime, ensure business resilience',
+      marketPrice: '$6,000 - $50,000/project',
+      link: '/services/it-services/disaster-recovery'
+    },
+    {
+      name: 'IT Infrastructure Automation',
+      description: 'Infrastructure as Code with automated provisioning and management',
+      icon: Settings,
+      features: [
+        'Infrastructure as Code (IaC) implementation',
+        'Automated provisioning and scaling',
+        'Configuration management',
+        'Infrastructure monitoring and alerting',
+        'Cost optimization automation',
+        'Compliance and security automation'
+      ],
+      pricing: '$4,000 - $35,000/project',
+      delivery: '4-12 weeks',
+      category: 'Infrastructure Automation',
+      benefits: 'Reduce manual errors, improve efficiency',
+      marketPrice: '$8,000 - $70,000/project',
+      link: '/services/it-services/infrastructure-automation'
+    },
+    {
+      name: 'Digital Transformation Consulting',
+      description: 'Strategic technology consulting for digital business transformation',
+      icon: Rocket,
+      features: [
+        'Digital strategy and roadmap development',
+        'Technology stack modernization',
+        'Process automation and optimization',
+        'Change management and training',
+        'ROI analysis and measurement',
+        'Continuous improvement programs'
+      ],
+      pricing: '$5,000 - $50,000/project',
+      delivery: '6-20 weeks',
+      category: 'Digital Transformation',
+      benefits: 'Accelerate digital adoption, improve competitiveness',
+      marketPrice: '$10,000 - $100,000/project',
+      link: '/services/it-services/digital-transformation'
+    },
+    {
+      name: 'Compliance & Governance Solutions',
+      description: 'Regulatory compliance and governance framework implementation',
+      icon: CheckSquare,
+      features: [
+        'SOC 2, HIPAA, GDPR compliance',
+        'Audit trail and documentation',
+        'Risk assessment and management',
+        'Policy development and implementation',
+        'Training and awareness programs',
+        'Continuous compliance monitoring'
+      ],
+      pricing: '$3,000 - $40,000/project',
+      delivery: '4-16 weeks',
+      category: 'Compliance',
+      benefits: 'Achieve compliance faster, reduce audit risks',
+      marketPrice: '$6,000 - $80,000/project',
+      link: '/services/it-services/compliance'
     }
   ];
 
@@ -493,9 +943,9 @@ export default function EnhancedServicesCatalog() {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
               {microSaaSServices.map((service, index) => (
-                <div key={index} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow p-8 border border-gray-100">
+                <div key={index} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow p-4 sm:p-6 lg:p-8 border border-gray-100">
                   <div className="flex items-center mb-6">
                     <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-xl flex items-center justify-center mr-4">
                       <service.icon className="w-8 h-8 text-white" />
@@ -556,9 +1006,9 @@ export default function EnhancedServicesCatalog() {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
               {aiServices.map((service, index) => (
-                <div key={index} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow p-8 border border-gray-100">
+                <div key={index} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow p-4 sm:p-6 lg:p-8 border border-gray-100">
                   <div className="flex items-center mb-6">
                     <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-xl flex items-center justify-center mr-4">
                       <service.icon className="w-8 h-8 text-white" />
@@ -619,9 +1069,9 @@ export default function EnhancedServicesCatalog() {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
               {itServices.map((service, index) => (
-                <div key={index} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow p-8 border border-gray-100">
+                <div key={index} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow p-4 sm:p-6 lg:p-8 border border-gray-100">
                   <div className="flex items-center mb-6">
                     <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-teal-500 rounded-xl flex items-center justify-center mr-4">
                       <service.icon className="w-8 h-8 text-white" />
