@@ -1584,8 +1584,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "8 min read"
-  }
-);
+  },
 
 // Sept 30, 2025 – New articles to expand catalog and promote on homepage
 posts.push(
@@ -1642,8 +1641,7 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "8 min read"
-  }
-);
+  },
 
 // Sept 30, 2025 – New posts for homepage promotion and advertising (added)
 posts.push(
@@ -1673,8 +1671,7 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "8 min read"
-  }
-);
+  },
 
 // Sept 30, 2025 – Brand-new trio for immediate homepage promotion
 posts.push(
@@ -1704,8 +1701,7 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "8 min read"
-  }
-);
+  },
 
 // New: Sept 30, 2025 – Fresh trio to advertise on homepage
 posts.push(
@@ -1735,8 +1731,7 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "9 min read"
-  }
-);
+  },
 
 // Sept 30, 2025 – New promotional articles to surface on homepage
 posts.push(
@@ -1767,7 +1762,6 @@ posts.push(
     featured: true,
     readTime: "8 min read"
   }
-);
 
 // Mar 2026 – Brand-new posts to advertise and surface on Home
 posts.push(
