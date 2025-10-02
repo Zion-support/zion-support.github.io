@@ -1,11 +1,12 @@
-import React from 'react';
+import React from 'react';';
+
 const January2026NewContentShowcaseBanner: React.FC = () => {,
   const features = [
-    { icon: Brain, title: "Synthetic Consciousness", desc: "True AI awareness" }
-    { icon: Zap, title: "Quantum Edge Processing", desc: "Sub-millisecond speed" }
-    { icon: Network, title: "Autonomous Mesh", desc: "Self-organizing systems" }
-    { icon: Shield, title: "Quantum Security", desc: "Unbreakable protection" }
-    { icon: Cpu, title: "Neuromorphic AI", desc: "Brain-inspired computing" }
+    { icon: Brain, title: "Synthetic Consciousness", desc: "True AI awareness" },";
+    { icon: Zap, title: "Quantum Edge Processing", desc: "Sub-millisecond speed" },";
+    { icon: Network, title: "Autonomous Mesh", desc: "Self-organizing systems" },";
+    { icon: Shield, title: "Quantum Security", desc: "Unbreakable protection" },";
+    { icon: Cpu, title: "Neuromorphic AI", desc: "Brain-inspired computing" }";
   ];
 
   return (
@@ -16,20 +17,20 @@ const January2026NewContentShowcaseBanner: React.FC = () => {,
       className="relative overflow-hidden bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 rounded-2xl p-8 text-white"
     >
       {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent"></div>
+      <div className="absolute inset-0 opacity-10">";
+        <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent"></div>";
       </div>
 
-      <div className="relative z-10">
+      <div className="relative z-10">";
         {/* Header */}
-        <div className="text-center mb-8">
+        <div className="text-center mb-8">";
           <motion.div
             initial={{ scale: 0.9 }}
             animate={{ scale: 1 }}
             transition={{ delay: 0.2, duration: 0.6 }}
             className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full text-sm font-semibold mb-4"
           >
-            <span className="mr-2">🚀</span>
+            <span className="mr-2">🚀</span>";
             January 2026 - Revolutionary AI Breakthroughs
           </motion.div>
           
@@ -54,7 +55,7 @@ const January2026NewContentShowcaseBanner: React.FC = () => {,
         </div>
 
         {/* Features Grid */}
-        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-5 gap-6 mb-8">",
+        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-5 gap-6 mb-8">";,
           {features.map((feature, index) => (
             <motion.div
               key={feature.title}
@@ -63,9 +64,9 @@ const January2026NewContentShowcaseBanner: React.FC = () => {,
               transition={{ delay: 0.5 + index * 0.1, duration: 0.6 }}
               className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center hover: bg-white/20 transition-all duration-300",
             >
-              <feature.icon className="w-8 h-8 mx-auto mb-3 text-purple-300/>
-              <h3 className="font-semibold text-white mb-1">{feature.title}</h3>
-              <p className="text-sm text-blue-200">{feature.desc}</p>
+              <feature.icon className="w-8 h-8 mx-auto mb-3 text-purple-300" />";
+              <h3 className="font-semibold text-white mb-1">{feature.title}</h3>";
+              <p className="text-sm text-blue-200">{feature.desc}</p>";
             </motion.div>
           ))}
         </div>
@@ -77,21 +78,21 @@ const January2026NewContentShowcaseBanner: React.FC = () => {,
           transition={{ delay: 0.8, duration: 0.6 }}
           className="grid grid-cols-2 md: grid-cols-4 gap-6 mb-8",
         >
-          <div className="text-center">
-            <div className="text-3xl font-bold text-purple-300 mb-1">99.7%</div>
-            <div className="text-sm text-blue-200">Efficiency</div>
+          <div className="text-center">";
+            <div className="text-3xl font-bold text-purple-300 mb-1">99.7%</div>";
+            <div className="text-sm text-blue-200">Efficiency</div>";
           </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-blue-300 mb-1">200x</div>
-            <div className="text-sm text-blue-200">Speed Boost</div>
+          <div className="text-center">";
+            <div className="text-3xl font-bold text-blue-300 mb-1">200x</div>";
+            <div className="text-sm text-blue-200">Speed Boost</div>";
           </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-green-300 mb-1">$500B</div>
-            <div className="text-sm text-blue-200">Enterprise Value</div>
+          <div className="text-center">";
+            <div className="text-3xl font-bold text-green-300 mb-1">$500B</div>";
+            <div className="text-sm text-blue-200">Enterprise Value</div>";
           </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-yellow-300 mb-1">95%</div>
-            <div className="text-sm text-blue-200">Automation</div>
+          <div className="text-center">";
+            <div className="text-3xl font-bold text-yellow-300 mb-1">95%</div>";
+            <div className="text-sm text-blue-200">Automation</div>";
           </div>
         </motion.div>
 
@@ -107,14 +108,14 @@ const January2026NewContentShowcaseBanner: React.FC = () => {,
             className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 hover: from-purple-600 hover:to-blue-600 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl",
           >
             Explore January 2026 Content
-            <ArrowRight className="ml-2 w-5 h-5/>
+            <ArrowRight className="ml-2 w-5 h-5" />";
           </a>
         </motion.div>
       </div>
 
       {/* Floating Elements */}
-      <div className="absolute top-10 left-10 w-20 h-20 bg-purple-500/20 rounded-full blur-xl animate-pulse"></div>
-      <div className="absolute bottom-10 right-10 w-32 h-32 bg-blue-500/20 rounded-full blur-xl animate-pulse delay-1000"></div>
+      <div className="absolute top-10 left-10 w-20 h-20 bg-purple-500/20 rounded-full blur-xl animate-pulse"></div>";
+      <div className="absolute bottom-10 right-10 w-32 h-32 bg-blue-500/20 rounded-full blur-xl animate-pulse delay-1000"></div>";
     </motion.div>
   );
 };

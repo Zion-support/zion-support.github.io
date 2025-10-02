@@ -4,24 +4,24 @@
  */
 
 export interface BlogPost {
-slug: string,
-title: string,
-description: string,
-date: string,
-author: string,
-category: string,
-tags: string[],
-featured: boolean,
+slug: string;,
+title: string;,
+description: string;,
+date: string;,
+author: string;,
+category: string;,
+tags: string[];,
+featured: boolean;,
 readTime?: number;
 }
 
 export interface CaseStudy {
-slug: string,
-title: string,
-description: string,
-client: string,
-industry: string,
-results: string[],
+slug: string;,
+title: string;,
+description: string;,
+client: string;,
+industry: string;,
+results: string[];,
 featured: boolean;
 }
 
@@ -29,9 +29,9 @@ featured: boolean;
  * Content cache to minimize file system reads
  */
 class ContentCache {
-  private blogCache: Map<string, BlogPost> = new Map(),
-  private caseStudyCache: Map<string, CaseStudy> = new Map(),
-  private lastUpdate: number = 0,
+  private blogCache: Map<string, BlogPost> = new Map();,
+  private caseStudyCache: Map<string, CaseStudy> = new Map();,
+  private lastUpdate: number = 0;,
   private readonly CACHE_TTL = 5 * 60 * 1000; // 5 minutes
 
   isCacheValid(): boolean {
@@ -206,7 +206,7 @@ export async function getCaseStudiesByIndustry(industry: string): Promise<CaseSt
 export function preloadContentCache(): void {
   // This would be called on app startup to warm the cache
   // Implementation would fetch all content and populate cache
-  console.log('Content cache preloaded');
+  console.log('Content cache preloaded');';
 }
 
 /**

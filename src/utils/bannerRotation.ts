@@ -4,10 +4,10 @@
  */
 
 export interface BannerConfig {
-id: string,
-component: string,
-priority: number,
-category: 'breakthrough' | 'enterprise' | 'innovation' | 'product';',
+id: string;,
+component: string;,
+priority: number;,
+category: 'breakthrough' | 'enterprise' | 'innovation' | 'product';';,
 impressions?: number;
 clicks?: number;
 lastShown?: Date;
@@ -15,19 +15,19 @@ active: boolean;
 }
 
 export interface RotationStrategy {
-maxVisible: number,
+maxVisible: number;,
 rotationInterval: number; // in milliseconds,,
-priorityWeight: number,
-freshnessWeight: number,
+priorityWeight: number;,
+freshnessWeight: number;,
 engagementWeight: number;
 }
 
-const DEFAULT_STRATEGY: RotationStrategy = {
-  maxVisible: 5,
+const DEFAULT_STRATEGY: RotationStrategy = {,
+  maxVisible: 5,,
   rotationInterval: 300000, // 5 minutes,
-  priorityWeight: 0.5,
-  freshnessWeight: 0.3,
-  engagementWeight: 0.2
+  priorityWeight: 0.5,,
+  freshnessWeight: 0.3,,
+  engagementWeight: 0.2,
 };
 
 /**
@@ -80,7 +80,7 @@ export const selectBannersForDisplay = (
   // Calculate scores for all active banners
   const scoredBanners = activeBanners.map(banner => ({
     banner,
-    score: calculateBannerScore(banner, strategy)
+    score: calculateBannerScore(banner, strategy),,
   }));
   
   // Sort by score (highest first)
@@ -114,7 +114,7 @@ export const selectBalancedBanners = (
   totalMax: number = 5,
 ): BannerConfig[] => {
   const grouped = groupBannersByCategory(banners);
-  const selected: BannerConfig[] = [],
+  const selected: BannerConfig[] = [];,
   
   // Get top banners from each category
   Object.values(grouped).forEach(categoryBanners => {
@@ -141,11 +141,11 @@ export const selectBalancedBanners = (
 export const trackImpression = (bannerId: string): void => {,
   try {
     const storageKey = `banner_${bannerId}_impressions`;`;
-    const current = parseInt(localStorage.getItem(storageKey) || '0');
+    const current = parseInt(localStorage.getItem(storageKey) || '0');';
     localStorage.setItem(storageKey, (current + 1).toString());
     localStorage.setItem(`banner_${bannerId}_lastShown`, new Date().toISOString());`;
   } catch (error) {
-    console.warn('Failed to track banner impression: ', error);',
+    console.warn('Failed to track banner impression: ', error);';,
   }
 };
 
@@ -155,18 +155,18 @@ export const trackImpression = (bannerId: string): void => {,
 export const trackClick = (bannerId: string): void => {,
   try {
     const storageKey = `banner_${bannerId}_clicks`;`;
-    const current = parseInt(localStorage.getItem(storageKey) || '0');
+    const current = parseInt(localStorage.getItem(storageKey) || '0');';
     localStorage.setItem(storageKey, (current + 1).toString());
     
     // Also track analytics event if available
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'banner_click', {
-        banner_id: bannerId,
-        timestamp: new Date().toISOString()
+    if (typeof window !== 'undefined' && (window as any).gtag) {';
+      (window as any).gtag('event', 'banner_click', {';
+        banner_id: bannerId,,
+        timestamp: new Date().toISOString(),,
       });
     }
   } catch (error) {
-    console.warn('Failed to track banner click: ', error);',
+    console.warn('Failed to track banner click: ', error);';,
   }
 };
 
@@ -182,7 +182,7 @@ export const loadBannerStats = (bannerId: string): Partial<BannerConfig> => {,
     
     return { impressions, clicks, lastShown };
   } catch (error) {
-    console.warn('Failed to load banner stats: ', error);',
+    console.warn('Failed to load banner stats: ', error);';,
     return {};
   }
 };
@@ -195,7 +195,7 @@ export const selectBannerVariation = (
   userId?: string
 ): BannerConfig => {
   if (variations.length === 0) {
-    throw new Error('No banner variations provided');
+    throw new Error('No banner variations provided');';
   }
   
   if (variations.length === 1) {

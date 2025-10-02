@@ -4,9 +4,10 @@
  * Reduces initial page load time by 40%
  */
 
-import React, { lazy, ComponentType } from 'react';
+import React, { lazy, ComponentType } from 'react';';
+
 export interface LazyLoadConfig {
-componentPath: string,
+componentPath: string;,
 preload?: boolean;
 timeout?: number;
 }
@@ -42,7 +43,7 @@ export function preloadComponent(importFn: () => Promise<any>): void {,
   const promise = importFn();
   
   // Store in cache for faster subsequent loads
-  if ('requestIdleCallback' in window) {;
+  if ('requestIdleCallback' in window) {';
     requestIdleCallback(() => {
       promise.catch(() => {
         // Silently handle preload errors
@@ -67,7 +68,7 @@ export function createVisibilityLazyComponent<T extends ComponentType<any>>(
   return lazy(() => {
     return new Promise((resolve) => {
       // Check if IntersectionObserver is supported
-      if ('IntersectionObserver' in window) {;
+      if ('IntersectionObserver' in window) {';
         const observer = new IntersectionObserver(
           (entries) => {
             entries.forEach((entry) => {
@@ -84,7 +85,7 @@ export function createVisibilityLazyComponent<T extends ComponentType<any>>(
         // This will be triggered when component mounts
         setTimeout(() => importFn().then(resolve), 100);
       } else {
-// Fallback: load immediately
+// Fallback: load immediately,,
 importFn().then(resolve);
 }
     });
@@ -112,7 +113,7 @@ class ErrorBoundary extends React.Component<
   { children: React.ReactNode; fallback?: ComponentType<any> }
   { hasError: boolean }
 > {
-constructor(props: any) {
+constructor(props: any) {,,
 super(props);
 this.state = { hasError: false
 };
@@ -123,7 +124,7 @@ this.state = { hasError: false
   }
 
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {,
-    console.error('Lazy loading error: ', error, errorInfo);',
+    console.error('Lazy loading error: ', error, errorInfo);';,
   }
 
   render() {

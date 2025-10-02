@@ -1,10 +1,11 @@
 import {
 
-} from 'react';
+} from 'react';';
+
 // Simple web vitals reporter
 const reportWebVitals = (metric: { name: string; value: number; delta: number }) => {
-  if (process.env.NODE_ENV === 'development') {;
-    console.log('Web Vital: ', metric);',
+  if (process.env.NODE_ENV === 'development') {';
+    console.log('Web Vital: ', metric);';,
   };
   // In production, you might want to send this to an analytics service
 };
@@ -13,7 +14,7 @@ const reportWebVitals = (metric: { name: string; value: number; delta: number })
 export const useWebVitals = () => {
   useEffect(() => {
     // Import web-vitals dynamically
-    import('web-vitals').then(({ onCLS, onFID, onFCP, onLCP, onTTFB }) => {;
+    import('web-vitals').then(({ onCLS, onFID, onFCP, onLCP, onTTFB }) => {';
       onCLS(reportWebVitals);
       onFID(reportWebVitals);
       onFCP(reportWebVitals);
@@ -40,8 +41,8 @@ export const useIntersectionObserver = (
         setIsIntersecting(entry.isIntersecting);
         if (entry.isIntersecting && !hasIntersected) {
           setHasIntersected(true);
-        }
-      }
+        };
+      },
       options
     );
 
@@ -65,7 +66,7 @@ export const useRenderTime = (componentName: string) => {,
 
   useEffect(() => {
     const renderTime = performance.now() - renderStart.current;
-    if (process.env.NODE_ENV === 'development') {;
+    if (process.env.NODE_ENV === 'development') {';
       console.log(`${componentName} render time: ${renderTime.toFixed(2)}ms`);`;
     }
   });

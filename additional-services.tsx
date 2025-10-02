@@ -926,6 +926,180 @@ export default function AdditionalServices() {
           link: '/contact'
         }
       ]
+    },
+    {
+      title: 'Enhanced Micro SaaS Solutions',
+      icon: Code,
+      color: 'purple',
+      items: [
+        {
+          name: 'AI-Powered Video Content Creator',
+          blurb: 'Automated video generation with AI avatars, voice synthesis, and multi-language support.',
+          price: '$299 - $1,999/month',
+          eta: '3-4 weeks',
+          bullets: [
+            'AI avatar generation with custom branding',
+            'Natural voice synthesis in 50+ languages',
+            'Automated video editing and transitions',
+            'Social media optimization and formatting',
+            'Template library with industry-specific designs',
+            'Real-time collaboration and approval workflows'
+          ],
+          link: '/contact',
+          marketSize: '$15.7B video marketing market',
+          roi: '70% reduction in video production costs'
+        },
+        {
+          name: 'Smart Expense Management SaaS',
+          blurb: 'AI-powered expense tracking, categorization, and automated reimbursement processing.',
+          price: '$149 - $799/month',
+          eta: '2-3 weeks',
+          bullets: [
+            'Automated receipt scanning and OCR',
+            'AI-powered expense categorization',
+            'Policy compliance checking',
+            'Multi-currency support',
+            'Integration with accounting systems',
+            'Real-time expense analytics and reporting'
+          ],
+          link: '/contact',
+          marketSize: '$4.2B expense management market',
+          roi: '60% reduction in expense processing time'
+        },
+        {
+          name: 'AI-Powered Customer Feedback Analyzer',
+          blurb: 'Intelligent sentiment analysis and actionable insights from customer feedback across all channels.',
+          price: '$199 - $999/month',
+          eta: '2-3 weeks',
+          bullets: [
+            'Multi-channel feedback aggregation',
+            'Advanced sentiment analysis and emotion detection',
+            'Automated insight generation and recommendations',
+            'Competitor analysis and benchmarking',
+            'Custom dashboard and reporting',
+            'Integration with CRM and support systems'
+          ],
+          link: '/contact',
+          marketSize: '$8.1B customer experience market',
+          roi: '45% improvement in customer satisfaction scores'
+        }
+      ]
+    },
+    {
+      title: 'Advanced AI Services',
+      icon: Brain,
+      color: 'blue',
+      items: [
+        {
+          name: 'AI-Powered Autonomous Testing Platform',
+          blurb: 'Self-healing test automation with AI-driven test case generation and maintenance.',
+          price: '$499 - $2,999/month',
+          eta: '4-6 weeks',
+          bullets: [
+            'Automated test case generation from requirements',
+            'Self-healing test scripts with AI maintenance',
+            'Cross-browser and cross-platform testing',
+            'Performance and load testing automation',
+            'Visual regression testing with AI',
+            'Integration with CI/CD pipelines'
+          ],
+          link: '/contact',
+          marketSize: '$12.3B test automation market',
+          roi: '80% reduction in test maintenance effort'
+        },
+        {
+          name: 'AI-Powered Voice Analytics Platform',
+          blurb: 'Advanced voice analysis for customer service optimization and compliance monitoring.',
+          price: '$399 - $1,999/month',
+          eta: '3-4 weeks',
+          bullets: [
+            'Real-time voice emotion and sentiment analysis',
+            'Automated compliance monitoring and alerting',
+            'Call quality scoring and improvement recommendations',
+            'Speaker identification and verification',
+            'Multi-language voice processing',
+            'Integration with contact center systems'
+          ],
+          link: '/contact',
+          marketSize: '$6.7B voice analytics market',
+          roi: '35% improvement in customer service quality'
+        },
+        {
+          name: 'AI-Powered Predictive Maintenance System',
+          blurb: 'Machine learning-driven equipment maintenance prediction and optimization.',
+          price: '$799 - $4,999/month',
+          eta: '6-8 weeks',
+          bullets: [
+            'IoT sensor data integration and analysis',
+            'Machine learning-based failure prediction',
+            'Maintenance scheduling optimization',
+            'Equipment performance monitoring',
+            'Cost-benefit analysis for maintenance decisions',
+            'Integration with ERP and maintenance systems'
+          ],
+          link: '/contact',
+          marketSize: '$9.8B predictive maintenance market',
+          roi: '25% reduction in unplanned downtime'
+        }
+      ]
+    },
+    {
+      title: 'Enterprise IT Solutions',
+      icon: Server,
+      color: 'green',
+      items: [
+        {
+          name: 'Cloud-Native Application Development',
+          blurb: 'Modern application development using microservices, containers, and cloud-native technologies.',
+          price: '$15,000 - $100,000/project',
+          eta: '8-16 weeks',
+          bullets: [
+            'Microservices architecture design and implementation',
+            'Container orchestration with Kubernetes',
+            'API gateway and service mesh implementation',
+            'Cloud-native monitoring and observability',
+            'CI/CD pipeline setup and optimization',
+            'Multi-cloud deployment and management'
+          ],
+          link: '/contact',
+          marketSize: '$25.4B cloud-native development market',
+          roi: '40% faster application deployment'
+        },
+        {
+          name: 'Enterprise Data Integration Platform',
+          blurb: 'Comprehensive data integration solution for enterprise-wide data management and analytics.',
+          price: '$25,000 - $150,000/project',
+          eta: '12-20 weeks',
+          bullets: [
+            'Real-time and batch data processing',
+            'Data quality management and cleansing',
+            'Master data management (MDM) implementation',
+            'Data governance and compliance frameworks',
+            'Advanced analytics and reporting capabilities',
+            'Integration with existing enterprise systems'
+          ],
+          link: '/contact',
+          marketSize: '$18.7B data integration market',
+          roi: '50% improvement in data quality and accessibility'
+        },
+        {
+          name: 'Multi-Cloud Infrastructure Management',
+          blurb: 'Unified management and optimization of multi-cloud infrastructure across AWS, Azure, and GCP.',
+          price: '$10,000 - $75,000/project',
+          eta: '6-12 weeks',
+          bullets: [
+            'Multi-cloud architecture design and implementation',
+            'Cost optimization and resource management',
+            'Security and compliance across cloud providers',
+            'Disaster recovery and backup strategies',
+            'Performance monitoring and optimization',
+            'Cloud migration and modernization services'
+          ],
+          link: '/contact',
+          marketSize: '$31.2B multi-cloud management market',
+          roi: '30% reduction in cloud costs'
+        }
+      ]
     }
   ];
 

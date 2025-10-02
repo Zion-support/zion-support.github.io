@@ -4,13 +4,13 @@
  */
 
 export interface ContentItem {
-id: string;
-title: string;
-date: Date;
-category: string;
-priority: number;
-value?: number; // Business value in billions
-roi?: number; // ROI percentage
+id: string;,
+title: string;,
+date: Date;,
+category: string;,
+priority: number;,
+value?: number; // Business value in billions,
+roi?: number; // ROI percentage,
 views?: number;
 engagement?: number; // 0-100
 freshness?: number; // Days since publication
@@ -24,12 +24,12 @@ priorityWeight: number; // Weight for manual priority,,
 categoryBalance: boolean; // Whether to balance across categories
 }
 
-const DEFAULT_CONFIG: PrioritizationConfig = {
-  recencyWeight: 0.3,
-  valueWeight: 0.25,
-  engagementWeight: 0.25,
-  priorityWeight: 0.2,
-  categoryBalance: true
+const DEFAULT_CONFIG: PrioritizationConfig = {,
+  recencyWeight: 0.3,,
+  valueWeight: 0.25,,
+  engagementWeight: 0.25,,
+  priorityWeight: 0.2,,
+  categoryBalance: true,
 };
 
 /**
@@ -131,7 +131,7 @@ export const prioritizeContent = (
 ): ContentItem[] => {
   const scoredItems = items.map(item => ({
     item,
-    score: calculateContentScore(item, config)
+    score: calculateContentScore(item, config),,
   }));
   
   scoredItems.sort((a, b) => b.score - a.score);
@@ -163,7 +163,7 @@ export const prioritizeWithBalance = (
   });
   
   // Round-robin selection from categories
-  const result: ContentItem[] = [],
+  const result: ContentItem[] = [];,
   const categories = Object.keys(prioritizedByCategory);
   const categoryIndices: Record<string, number> = {};
   categories.forEach(cat => (categoryIndices[cat] = 0));
@@ -175,7 +175,7 @@ export const prioritizeWithBalance = (
       const categoryItems = prioritizedByCategory[category];
       const currentIndex = categoryIndices[category];
       
-      // Check if we've exhausted this category or hit category limit;
+      // Check if we've exhausted this category or hit category limit';
       const categoryCount = result.filter(item => item.category === category).length;
       if (currentIndex >= categoryItems.length || categoryCount >= maxPerCategory) {
         continue;
@@ -188,7 +188,7 @@ export const prioritizeWithBalance = (
       if (result.length >= totalMax) break;
     }
     
-    // If no items were added in this round, we're done;
+    // If no items were added in this round, we're done';
     if (!addedInRound) break;
   }
   
@@ -246,11 +246,11 @@ export const getTrendingContent = (
   const recentItems = items.filter(item => item.date >= cutoffDate);
   
   return prioritizeContent(recentItems, {
-    recencyWeight: 0.2,
-    valueWeight: 0.2,
+    recencyWeight: 0.2,,
+    valueWeight: 0.2,,
     engagementWeight: 0.5, // High weight on engagement for trending,
-    priorityWeight: 0.1,
-    categoryBalance: false
+    priorityWeight: 0.1,,
+    categoryBalance: false,,
   }).slice(0, topN);
 };
 
@@ -263,10 +263,10 @@ export const getEvergreenContent = (
 ): ContentItem[] => {
   return prioritizeContent(items, {
     recencyWeight: 0.1, // Low weight on recency,
-    valueWeight: 0.3,
+    valueWeight: 0.3,,
     engagementWeight: 0.5, // High weight on engagement,
-    priorityWeight: 0.1,
-    categoryBalance: false
+    priorityWeight: 0.1,,
+    categoryBalance: false,,
   }).slice(0, topN);
 };
 
@@ -274,11 +274,11 @@ export const getEvergreenContent = (
  * Create a content feed with mixed types
  */
 export const createMixedFeed = (
-  items: ContentItem[],
+  items: ContentItem[],,
   config: {,
-trendingCount: number;
-newCount: number;
-evergreenCount: number;
+trendingCount: number;,
+newCount: number;,
+evergreenCount: number;,
 totalMax: number;
 }
 ): {
@@ -305,7 +305,7 @@ all: ContentItem[];
   
   // Combine all with deduplication
   const allIds = new Set<string>();
-  const all: ContentItem[] = [],
+  const all: ContentItem[] = [];,
   
   [...trending, ...newContent, ...evergreen].forEach(item => {
     if (!allIds.has(item.id) && all.length < config.totalMax) {

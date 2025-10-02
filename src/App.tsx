@@ -1,33 +1,4 @@
-import React, { useCallback, useEffect, useMemo, useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
-import { motion } from 'framer-motion';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import BannerManager from './components/BannerManager';
-import Sidebar from './components/Sidebar';
-import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
-import EnhancedSEOHead from './components/EnhancedSEOHead';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
-import PerformanceMonitor from './components/EnhancedPerformanceMonitor';
-import NotificationSystem from './components/NotificationSystem';
-import type { } from './components/NotificationSystem';
-// Lazy loaded pages
-const HomePage = React.lazy(() => import('./pages/HomePage'));
-const AboutPage = React.lazy(() => import('./pages/AboutPage'));
-const ContactPage = React.lazy(() => import('./pages/ContactPage'));
-const ServicesPage = React.lazy(() => import('./pages/ServicesPage'));
-const SolutionsPage = React.lazy(() => import('./pages/SolutionsPage'));
-const BlogPage = React.lazy(() => import('./pages/BlogPage'));
-const CaseStudiesPage = React.lazy(() => import('./pages/CaseStudiesPage'));
-const Resources = React.lazy(() => import('./pages/Resources'));
-const Privacy = React.lazy(() => import('./pages/Privacy'));
-const Terms = React.lazy(() => import('./pages/Terms'));
-const Team = React.lazy(() => import('./pages/Team'));
-const SupportPage = React.lazy(() => import('./pages/Support'));
-const SitemapPage = React.lazy(() => import('./pages/Sitemap'));
-const CookiesPage = React.lazy(() => import('./pages/Cookies'));
+import React from "react";";
 
 // Loading component
 const LoadingSpinner = () => (

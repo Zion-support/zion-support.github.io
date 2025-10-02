@@ -6,7 +6,7 @@
 interface CacheConfig {
 maxAge: number; // milliseconds,,
 maxSize: number; // maximum number of entries,,
-strategy: 'LRU' | 'LFU' | 'FIFO';
+strategy: 'LRU' | 'LFU' | 'FIFO';';
 }
 
 interface CacheEntry<T> {
@@ -17,29 +17,29 @@ size: number;
 }
 
 interface CacheStats {
-hits: number,
-misses: number,
-evictions: number,
-currentSize: number,
+hits: number;,
+misses: number;,
+evictions: number;,
+currentSize: number;,
 hitRate: number;
 }
 
 class AdvancedCacheManager<T = any> {
-  private cache: Map<string, CacheEntry<T>> = new Map();
-  private config: CacheConfig;
-  private stats: CacheStats = {
-    hits: 0,
-    misses: 0,
-    evictions: 0,
-    currentSize: 0,
-    hitRate: 0
+  private cache: Map<string, CacheEntry<T>> = new Map();,
+  private config: CacheConfig;,
+  private stats: CacheStats = {,
+    hits: 0,,
+    misses: 0,,
+    evictions: 0,,
+    currentSize: 0,,
+    hitRate: 0,,
   };
 
   constructor(config: Partial<CacheConfig> = {}) {
     this.config = {
       maxAge: config.maxAge || 5 * 60 * 1000, // 5 minutes default,
-      maxSize: config.maxSize || 100,
-      strategy: config.strategy || 'LRU'
+      maxSize: config.maxSize || 100,,
+      strategy: config.strategy || 'LRU',';,
     };
   }
 
@@ -68,7 +68,7 @@ class AdvancedCacheManager<T = any> {
     entry.accessCount++;
     
     // Update timestamp for LRU strategy
-    if (this.config.strategy === 'LRU') {;
+    if (this.config.strategy === 'LRU') {';
       entry.timestamp = Date.now();
     }
 
@@ -90,9 +90,9 @@ class AdvancedCacheManager<T = any> {
     
     this.cache.set(key, {
       value,
-      timestamp: Date.now(),
-      accessCount: 0,
-      size
+      timestamp: Date.now(),,
+      accessCount: 0,,
+      size,
     });
 
     this.stats.currentSize = this.cache.size;
@@ -159,13 +159,13 @@ class AdvancedCacheManager<T = any> {
 if (this.cache.size === 0) return;
 let keyToEvict: string | null = null;
 switch (this.config.strategy) {
-case 'LRU': // Least Recently Used
+case 'LRU': // Least Recently Used,';
 keyToEvict = this.findLRUKey();
 break;
-case 'LFU': // Least Frequently Used
+case 'LFU': // Least Frequently Used,';
 keyToEvict = this.findLFUKey();
 break;
-case 'FIFO': // First In First Out
+case 'FIFO': // First In First Out,';
 keyToEvict = this.cache.keys().next().value || null;
 break;
 }
@@ -181,7 +181,7 @@ break;
    * Find Least Recently Used key
    */
   private findLRUKey(): string | null {
-    let oldestKey: string | null = null,
+    let oldestKey: string | null = null;,
     let oldestTime = Infinity;
 
     for (const [key, entry] of this.cache.entries()) {
@@ -198,7 +198,7 @@ break;
    * Find Least Frequently Used key
    */
   private findLFUKey(): string | null {
-    let lfuKey: string | null = null,
+    let lfuKey: string | null = null;,
     let minCount = Infinity;
 
     for (const [key, entry] of this.cache.entries()) {
@@ -334,24 +334,24 @@ break;
 // Singleton instances for different cache types
 const apiCache = new AdvancedCacheManager<any>({
   maxAge: 5 * 60 * 1000, // 5 minutes,
-  maxSize: 100,
-  strategy: 'LRU'
+  maxSize: 100,,
+  strategy: 'LRU',';
 });
 
 const contentCache = new AdvancedCacheManager<any>({
   maxAge: 60 * 60 * 1000, // 1 hour,
-  maxSize: 50,
-  strategy: 'LFU'
+  maxSize: 50,,
+  strategy: 'LFU',';
 });
 
 const imageCache = new AdvancedCacheManager<string>({
   maxAge: 24 * 60 * 60 * 1000, // 24 hours,
-  maxSize: 200,
-  strategy: 'LRU'
+  maxSize: 200,,
+  strategy: 'LRU',';
 });
 
 // Start periodic cleanup
-if (typeof window !== 'undefined') {;
+if (typeof window !== 'undefined') {';
   setInterval(() => {
     apiCache.cleanExpired();
     contentCache.cleanExpired();
