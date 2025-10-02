@@ -71,13 +71,13 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <FeaturedServiceCard
               title="AI Services & Solutions"
-              description="Advanced artificial intelligence solutions including machine learning, deep learning, and AI automation."
+              description="Advanced artificial intelligence solutions including customer insights, financial forecasting, and predictive analytics."
               icon="🤖"
               href="/services/ai-services"
               features={[
+                "AI Customer Insights Platform",
+                "AI Financial Forecasting Suite", 
                 "Machine Learning Models",
-                "Deep Learning Systems", 
-                "AI Automation",
                 "Predictive Analytics"
               ]}
             />
@@ -153,6 +153,118 @@ export default function HomePage() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ContentShowcase />
+        </div>
+      </section>
+
+      {/* Innovative Solutions */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Cutting-Edge Technology Solutions
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Discover our latest innovations in AI, IoT, and blockchain technology
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
+              <div className="flex items-center mb-4">
+                <div className="p-2 bg-blue-100 rounded-lg text-blue-600 mr-3">
+                  <span className="text-2xl">🔍</span>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900">AI Customer Insights</h3>
+              </div>
+              <p className="text-gray-600 mb-4">Transform customer data into actionable insights with AI-powered analytics and predictive modeling.</p>
+              <div className="flex items-center justify-between">
+                <span className="text-sm text-gray-500">Starting from $299/month</span>
+                <Link href="/services/ai-customer-insights-platform" className="text-blue-600 hover:text-blue-700 font-semibold">
+                  Learn More →
+                </Link>
+              </div>
+            </div>
+
+            <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
+              <div className="flex items-center mb-4">
+                <div className="p-2 bg-green-100 rounded-lg text-green-600 mr-3">
+                  <span className="text-2xl">💰</span>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900">AI Financial Forecasting</h3>
+              </div>
+              <p className="text-gray-600 mb-4">Advanced AI-powered financial forecasting with real-time market predictions and risk assessment.</p>
+              <div className="flex items-center justify-between">
+                <span className="text-sm text-gray-500">Starting from $499/month</span>
+                <Link href="/services/ai-financial-forecasting-suite" className="text-green-600 hover:text-green-700 font-semibold">
+                  Learn More →
+                </Link>
+              </div>
+            </div>
+
+            <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
+              <div className="flex items-center mb-4">
+                <div className="p-2 bg-purple-100 rounded-lg text-purple-600 mr-3">
+                  <span className="text-2xl">🏗️</span>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900">IoT Smart Infrastructure</h3>
+              </div>
+              <p className="text-gray-600 mb-4">Comprehensive IoT platform for smart cities and buildings with real-time monitoring and predictive maintenance.</p>
+              <div className="flex items-center justify-between">
+                <span className="text-sm text-gray-500">Starting from $199/month</span>
+                <Link href="/services/iot-smart-infrastructure-platform" className="text-purple-600 hover:text-purple-700 font-semibold">
+                  Learn More →
+                </Link>
+              </div>
+            </div>
+
+            <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
+              <div className="flex items-center mb-4">
+                <div className="p-2 bg-orange-100 rounded-lg text-orange-600 mr-3">
+                  <span className="text-2xl">⛓️</span>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900">Blockchain Solutions</h3>
+              </div>
+              <p className="text-gray-600 mb-4">Enterprise-grade blockchain solutions for supply chain, finance, and data integrity with smart contracts.</p>
+              <div className="flex items-center justify-between">
+                <span className="text-sm text-gray-500">Starting from $2,999/project</span>
+                <Link href="/services/blockchain-enterprise-solutions" className="text-orange-600 hover:text-orange-700 font-semibold">
+                  Learn More →
+                </Link>
+              </div>
+            </div>
+
+            <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
+              <div className="flex items-center mb-4">
+                <div className="p-2 bg-red-100 rounded-lg text-red-600 mr-3">
+                  <span className="text-2xl">🔒</span>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900">AI Cybersecurity</h3>
+              </div>
+              <p className="text-gray-600 mb-4">Advanced AI-powered cybersecurity automation with threat detection and automated response systems.</p>
+              <div className="flex items-center justify-between">
+                <span className="text-sm text-gray-500">Starting from $1,499/month</span>
+                <Link href="/services/ai-cybersecurity-automation" className="text-red-600 hover:text-red-700 font-semibold">
+                  Learn More →
+                </Link>
+              </div>
+            </div>
+
+            <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
+              <div className="flex items-center mb-4">
+                <div className="p-2 bg-indigo-100 rounded-lg text-indigo-600 mr-3">
+                  <span className="text-2xl">🏥</span>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900">Healthcare Scheduling</h3>
+              </div>
+              <p className="text-gray-600 mb-4">Comprehensive healthcare scheduling SaaS for hospitals and clinics with HIPAA compliance.</p>
+              <div className="flex items-center justify-between">
+                <span className="text-sm text-gray-500">Starting from $149/month</span>
+                <Link href="/services/healthcare-scheduling-platform" className="text-indigo-600 hover:text-indigo-700 font-semibold">
+                  Learn More →
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

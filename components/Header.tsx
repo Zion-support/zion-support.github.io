@@ -12,12 +12,14 @@ const Header: React.FC = () => {
       href: '/services',
       submenu: [
         { name: 'AI Services', href: '/services/ai-services' },
-        { name: 'Micro SaaS', href: '/services/micro-saas' },
+        { name: 'AI Customer Insights', href: '/services/ai-customer-insights-platform' },
+        { name: 'AI Financial Forecasting', href: '/services/ai-financial-forecasting-suite' },
+        { name: 'Micro SaaS Solutions', href: '/services/micro-saas' },
+        { name: 'IoT Smart Infrastructure', href: '/services/iot-smart-infrastructure-platform' },
+        { name: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions' },
         { name: 'IT Services', href: '/services/it-services' },
         { name: 'Cloud Solutions', href: '/services/cloud-solutions' },
         { name: 'Cybersecurity', href: '/services/cybersecurity' },
-        { name: 'Blockchain', href: '/services/blockchain' },
-        { name: 'IoT Solutions', href: '/services/iot-solutions' },
         { name: 'Mobile Development', href: '/services/mobile-development' },
         { name: 'Web Development', href: '/services/web-development' }
       ]

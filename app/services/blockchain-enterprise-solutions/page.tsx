@@ -2,30 +2,21 @@ import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { 
-  TrendingUp, 
-  BarChart3, 
-  PieChart, 
-  LineChart, 
-  DollarSign, 
-  Calculator, 
-  Target, 
+  Shield, 
+  Lock, 
+  Database, 
+  Network, 
+  Globe, 
   Zap, 
   CheckCircle, 
   ArrowRight, 
+  DollarSign,
   Clock,
   Star,
-  Shield,
-  Database,
-  Globe,
-  Smartphone,
-  Mail,
-  Phone,
-  Calendar,
-  CreditCard,
-  Headphones,
-  Code,
-  Lock,
+  Target,
   Activity,
+  PieChart,
+  LineChart,
   RefreshCw,
   Download,
   Upload,
@@ -49,7 +40,6 @@ import {
   Search,
   Settings,
   Layers,
-  Network,
   Wifi,
   Monitor,
   Bot,
@@ -57,134 +47,144 @@ import {
   Users,
   Brain,
   MessageSquare,
-  Eye
+  Eye,
+  TrendingUp,
+  BarChart3,
+  Calculator,
+  Smartphone,
+  Mail,
+  Phone,
+  Calendar,
+  CreditCard,
+  Headphones,
+  Code
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'AI Financial Forecasting Suite | Zion Tech Group - Predictive Finance',
-  description: 'Advanced AI-powered financial forecasting and analysis platform. Real-time market predictions, risk assessment, and automated financial planning for businesses.',
-  keywords: 'AI financial forecasting, predictive finance, financial analytics, risk assessment, market predictions, automated financial planning',
+  title: 'Blockchain Enterprise Solutions | Zion Tech Group - Secure & Transparent',
+  description: 'Enterprise-grade blockchain solutions for supply chain, finance, and data integrity. Smart contracts, DeFi, and secure transaction processing.',
+  keywords: 'blockchain solutions, smart contracts, DeFi, supply chain blockchain, enterprise blockchain, cryptocurrency, distributed ledger',
 };
 
-export default function AIFinancialForecastingSuitePage() {
+export default function BlockchainEnterpriseSolutionsPage() {
   const features = [
     {
-      icon: <TrendingUp className="w-6 h-6" />,
-      title: "AI Market Predictions",
-      description: "Advanced machine learning models analyze market trends, economic indicators, and historical data to predict future market movements.",
-      benefits: [
-        "Real-time market analysis and predictions",
-        "Multi-asset portfolio optimization",
-        "Risk-adjusted return forecasting",
-        "Market volatility prediction models"
-      ]
-    },
-    {
-      icon: <BarChart3 className="w-6 h-6" />,
-      title: "Automated Financial Planning",
-      description: "AI-driven financial planning that adapts to changing market conditions and business objectives.",
-      benefits: [
-        "Dynamic budget allocation and optimization",
-        "Cash flow forecasting with 95%+ accuracy",
-        "Automated financial goal tracking",
-        "Scenario planning and stress testing"
-      ]
-    },
-    {
       icon: <Shield className="w-6 h-6" />,
-      title: "Advanced Risk Assessment",
-      description: "Comprehensive risk analysis using AI to identify potential financial threats and opportunities.",
+      title: "Smart Contract Development",
+      description: "Custom smart contract development for automated business processes and secure transactions.",
       benefits: [
-        "Multi-dimensional risk modeling",
-        "Credit risk assessment and scoring",
-        "Operational risk identification",
-        "Regulatory compliance monitoring"
+        "Automated contract execution",
+        "Reduced transaction costs",
+        "Elimination of intermediaries",
+        "Transparent and auditable processes"
       ]
     },
     {
-      icon: <Calculator className="w-6 h-6" />,
-      title: "Investment Optimization",
-      description: "AI-powered investment strategies that maximize returns while minimizing risk exposure.",
+      icon: <Network className="w-6 h-6" />,
+      title: "Supply Chain Transparency",
+      description: "End-to-end supply chain tracking with immutable records and real-time visibility.",
       benefits: [
-        "Portfolio optimization algorithms",
-        "Asset allocation recommendations",
-        "Tax-efficient investment strategies",
-        "Performance attribution analysis"
+        "Complete product traceability",
+        "Counterfeit prevention",
+        "Quality assurance tracking",
+        "Regulatory compliance automation"
       ]
     },
     {
-      icon: <Target className="w-6 h-6" />,
-      title: "Goal-Based Planning",
-      description: "Personalized financial planning based on individual or business goals and risk tolerance.",
+      icon: <DollarSign className="w-6 h-6" />,
+      title: "DeFi Solutions",
+      description: "Decentralized finance applications including lending, trading, and yield farming platforms.",
       benefits: [
-        "Custom financial goal setting",
-        "Progress tracking and monitoring",
-        "Automated rebalancing recommendations",
-        "Goal achievement probability analysis"
+        "Automated lending protocols",
+        "Decentralized exchange development",
+        "Yield optimization strategies",
+        "Cross-chain interoperability"
       ]
     },
     {
       icon: <Database className="w-6 h-6" />,
-      title: "Real-Time Data Integration",
-      description: "Seamless integration with financial data sources for up-to-date analysis and reporting.",
+      title: "Data Integrity & Security",
+      description: "Immutable data storage and verification systems for critical business information.",
       benefits: [
-        "Multi-source data aggregation",
-        "Real-time market data feeds",
-        "Automated data validation and cleaning",
-        "Custom data source integration"
+        "Tamper-proof data storage",
+        "Automated data verification",
+        "Audit trail maintenance",
+        "Compliance documentation"
+      ]
+    },
+    {
+      icon: <Globe className="w-6 h-6" />,
+      title: "Cross-Chain Integration",
+      description: "Seamless integration between different blockchain networks and traditional systems.",
+      benefits: [
+        "Multi-blockchain support",
+        "Legacy system integration",
+        "Interoperability solutions",
+        "Scalable architecture"
+      ]
+    },
+    {
+      icon: <Lock className="w-6 h-6" />,
+      title: "Enterprise Security",
+      description: "Advanced security features including private keys management and access control.",
+      benefits: [
+        "Enterprise-grade security",
+        "Private key management",
+        "Role-based access control",
+        "Compliance with regulations"
       ]
     }
   ];
 
   const pricingTiers = [
     {
-      name: "Professional",
-      price: "$499",
-      period: "/month",
-      description: "Perfect for financial advisors and small businesses",
+      name: "Starter",
+      price: "$2,999",
+      period: "/project",
+      description: "Perfect for small businesses exploring blockchain",
       features: [
-        "Up to 50 portfolios",
-        "Basic AI forecasting models",
-        "Standard risk assessment",
+        "Basic smart contract development",
+        "Single blockchain integration",
+        "Standard security features",
         "Email support",
-        "API access",
-        "Monthly reporting"
+        "Documentation and training",
+        "3-month maintenance included"
       ],
-      cta: "Start Free Trial",
+      cta: "Get Quote",
       popular: false
     },
     {
-      name: "Enterprise",
-      price: "$1,299",
-      period: "/month",
-      description: "Advanced features for growing financial firms",
+      name: "Professional",
+      price: "$9,999",
+      period: "/project",
+      description: "Advanced blockchain solutions for growing businesses",
       features: [
-        "Up to 500 portfolios",
-        "Advanced AI models and customization",
-        "Comprehensive risk analysis",
+        "Custom smart contract development",
+        "Multi-blockchain integration",
+        "Advanced security features",
         "Priority support",
-        "Advanced API access",
-        "Real-time reporting",
         "Custom integrations",
-        "White-label options"
+        "6-month maintenance included",
+        "Performance optimization",
+        "API development"
       ],
-      cta: "Start Free Trial",
+      cta: "Get Quote",
       popular: true
     },
     {
-      name: "Institutional",
+      name: "Enterprise",
       price: "Custom",
       period: "",
-      description: "Full-scale solution for large financial institutions",
+      description: "Full-scale blockchain solutions for large enterprises",
       features: [
-        "Unlimited portfolios",
-        "Custom AI model development",
-        "Full white-label solution",
-        "Dedicated account manager",
+        "Complete blockchain platform development",
+        "Custom blockchain network setup",
+        "Advanced security and compliance",
+        "Dedicated project manager",
         "Custom integrations",
-        "Advanced security features",
+        "12-month maintenance included",
         "SLA guarantees",
-        "On-premise deployment"
+        "White-label solutions"
       ],
       cta: "Contact Sales",
       popular: false
@@ -193,62 +193,61 @@ export default function AIFinancialForecastingSuitePage() {
 
   const useCases = [
     {
-      industry: "Investment Management",
-      challenge: "Optimizing portfolio performance while managing risk exposure",
-      solution: "AI-powered portfolio optimization algorithms automatically rebalance portfolios based on market conditions and risk parameters",
-      results: "23% improvement in risk-adjusted returns, 35% reduction in portfolio volatility"
+      industry: "Supply Chain",
+      challenge: "Ensuring product authenticity and tracking across complex supply chains",
+      solution: "Blockchain-based tracking system provides immutable records of product journey from origin to consumer",
+      results: "99.9% counterfeit detection, 60% reduction in supply chain disputes"
     },
     {
-      industry: "Corporate Finance",
-      challenge: "Accurate cash flow forecasting and budget planning",
-      solution: "Advanced AI models analyze historical patterns and market conditions to predict future cash flows with high accuracy",
-      results: "92% accuracy in cash flow predictions, 40% improvement in budget planning efficiency"
+      industry: "Financial Services",
+      challenge: "Reducing transaction costs and processing times for cross-border payments",
+      solution: "Smart contracts automate payment processing and reduce intermediary costs",
+      results: "80% reduction in transaction costs, 90% faster settlement times"
     },
     {
-      industry: "Banking",
-      challenge: "Credit risk assessment and loan portfolio management",
-      solution: "Machine learning models analyze borrower behavior and economic indicators to assess credit risk",
-      results: "45% reduction in bad debt, 30% improvement in loan approval accuracy"
+      industry: "Healthcare",
+      challenge: "Securing patient data and ensuring medical record integrity",
+      solution: "Blockchain-based medical records system ensures data integrity and patient privacy",
+      results: "100% data integrity, 50% reduction in data breaches"
     },
     {
-      industry: "Insurance",
-      challenge: "Pricing policies accurately while maintaining profitability",
-      solution: "AI-driven actuarial models predict risk factors and optimize pricing strategies",
-      results: "28% improvement in pricing accuracy, 22% increase in profit margins"
+      industry: "Real Estate",
+      challenge: "Streamlining property transactions and reducing fraud",
+      solution: "Smart contracts automate property transfers and title management",
+      results: "70% reduction in transaction time, 95% reduction in fraud cases"
     }
   ];
 
-  const marketData = [
-    { metric: "Forecasting Accuracy", value: "94.2%", description: "Average accuracy across all financial predictions" },
-    { metric: "Risk Reduction", value: "35%", description: "Average reduction in portfolio risk exposure" },
-    { metric: "ROI Improvement", value: "28%", description: "Average improvement in return on investment" },
-    { metric: "Time Savings", value: "75%", description: "Reduction in manual financial analysis time" }
+  const blockchainStats = [
+    { metric: "Transaction Speed", value: "10,000+", description: "Transactions per second processing capacity" },
+    { metric: "Security Level", value: "99.99%", description: "Immutable transaction security" },
+    { metric: "Cost Reduction", value: "80%", description: "Average reduction in transaction costs" },
+    { metric: "Processing Time", value: "90%", description: "Faster than traditional systems" }
   ];
 
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-green-50 to-blue-100 py-20">
+      <section className="relative bg-gradient-to-br from-orange-50 to-red-100 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              AI Financial Forecasting Suite
+              Blockchain Enterprise Solutions
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Transform your financial planning with advanced AI-powered forecasting and analysis. 
-              Predict market trends, optimize investments, and make data-driven financial decisions 
-              with unprecedented accuracy.
+              Transform your business with enterprise-grade blockchain solutions. Smart contracts, 
+              DeFi applications, and secure transaction processing for the modern enterprise.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 href="/contact" 
-                className="bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
+                className="bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors"
               >
-                Start Free Trial
+                Get Started
               </Link>
               <Link 
                 href="#demo" 
-                className="border border-green-600 text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors"
+                className="border border-orange-600 text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-orange-50 transition-colors"
               >
                 Watch Demo
               </Link>
@@ -257,20 +256,20 @@ export default function AIFinancialForecastingSuitePage() {
         </div>
       </section>
 
-      {/* Market Performance */}
+      {/* Blockchain Performance */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Proven Performance</h2>
-            <p className="text-xl text-gray-600">Real results from our AI financial forecasting platform</p>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Blockchain Performance</h2>
+            <p className="text-xl text-gray-600">Proven capabilities at enterprise scale</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {marketData.map((data, index) => (
+            {blockchainStats.map((stat, index) => (
               <div key={index} className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 text-center">
-                <div className="text-3xl font-bold text-green-600 mb-2">{data.value}</div>
-                <div className="text-lg font-semibold text-gray-900 mb-2">{data.metric}</div>
-                <div className="text-sm text-gray-600">{data.description}</div>
+                <div className="text-3xl font-bold text-orange-600 mb-2">{stat.value}</div>
+                <div className="text-lg font-semibold text-gray-900 mb-2">{stat.metric}</div>
+                <div className="text-sm text-gray-600">{stat.description}</div>
               </div>
             ))}
           </div>
@@ -282,10 +281,10 @@ export default function AIFinancialForecastingSuitePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Advanced AI Financial Capabilities
+              Comprehensive Blockchain Solutions
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Cutting-edge artificial intelligence for comprehensive financial analysis and forecasting
+              End-to-end blockchain development and integration services
             </p>
           </div>
           
@@ -293,7 +292,7 @@ export default function AIFinancialForecastingSuitePage() {
             {features.map((feature, index) => (
               <div key={index} className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
                 <div className="flex items-center mb-4">
-                  <div className="p-2 bg-green-100 rounded-lg text-green-600 mr-3">
+                  <div className="p-2 bg-orange-100 rounded-lg text-orange-600 mr-3">
                     {feature.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900">{feature.title}</h3>
@@ -318,21 +317,21 @@ export default function AIFinancialForecastingSuitePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Flexible Pricing Plans
+              Transparent Pricing
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Choose the plan that fits your financial analysis needs. All plans include a 30-day free trial.
+              Choose the blockchain solution that fits your business needs. All projects include consultation and support.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingTiers.map((tier, index) => (
               <div key={index} className={`bg-white p-8 rounded-xl shadow-lg border-2 transition-all ${
-                tier.popular ? 'border-green-500 relative' : 'border-gray-200'
+                tier.popular ? 'border-orange-500 relative' : 'border-gray-200'
               }`}>
                 {tier.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-green-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                    <span className="bg-orange-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
@@ -357,10 +356,10 @@ export default function AIFinancialForecastingSuitePage() {
                 </ul>
                 
                 <Link
-                  href={tier.name === 'Institutional' ? '/contact' : '/contact'}
+                  href="/contact"
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
                     tier.popular
-                      ? 'bg-green-600 text-white hover:bg-green-700'
+                      ? 'bg-orange-600 text-white hover:bg-orange-700'
                       : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
                   }`}
                 >
@@ -377,10 +376,10 @@ export default function AIFinancialForecastingSuitePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Industry Success Stories
+              Industry Applications
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              See how financial institutions are achieving better results with AI forecasting
+              See how blockchain is transforming industries across the globe
             </p>
           </div>
           
@@ -388,7 +387,7 @@ export default function AIFinancialForecastingSuitePage() {
             {useCases.map((useCase, index) => (
               <div key={index} className="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
                 <div className="mb-4">
-                  <span className="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold mb-3">
+                  <span className="inline-block bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-semibold mb-3">
                     {useCase.industry}
                   </span>
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">Challenge</h3>
@@ -411,26 +410,26 @@ export default function AIFinancialForecastingSuitePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-green-600 to-blue-600">
+      <section className="py-20 bg-gradient-to-r from-orange-600 to-red-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Revolutionize Your Financial Planning?
+            Ready to Transform Your Business with Blockchain?
           </h2>
-          <p className="text-xl text-green-100 mb-8 max-w-2xl mx-auto">
-            Join leading financial institutions using AI to make smarter, more profitable decisions.
+          <p className="text-xl text-orange-100 mb-8 max-w-2xl mx-auto">
+            Join forward-thinking companies leveraging blockchain for competitive advantage.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               href="/contact" 
-              className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              className="bg-white text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
-              Start Free Trial
+              Get Started
             </Link>
             <Link 
               href="/contact" 
-              className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
+              className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-orange-600 transition-colors"
             >
-              Schedule Demo
+              Schedule Consultation
             </Link>
           </div>
         </div>
@@ -443,17 +442,17 @@ export default function AIFinancialForecastingSuitePage() {
             <h2 className="text-2xl font-bold text-gray-900 mb-8">Get Started Today</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
-                <Phone className="w-8 h-8 text-green-600 mx-auto mb-4" />
+                <Phone className="w-8 h-8 text-orange-600 mx-auto mb-4" />
                 <h3 className="font-semibold text-gray-900 mb-2">Phone</h3>
                 <p className="text-gray-600">+1 302 464 0950</p>
               </div>
               <div className="text-center">
-                <Mail className="w-8 h-8 text-green-600 mx-auto mb-4" />
+                <Mail className="w-8 h-8 text-orange-600 mx-auto mb-4" />
                 <h3 className="font-semibold text-gray-900 mb-2">Email</h3>
                 <p className="text-gray-600">kleber@ziontechgroup.com</p>
               </div>
               <div className="text-center">
-                <MapPin className="w-8 h-8 text-green-600 mx-auto mb-4" />
+                <MapPin className="w-8 h-8 text-orange-600 mx-auto mb-4" />
                 <h3 className="font-semibold text-gray-900 mb-2">Address</h3>
                 <p className="text-gray-600">364 E Main St STE 1008<br />Middletown DE 19709</p>
               </div>

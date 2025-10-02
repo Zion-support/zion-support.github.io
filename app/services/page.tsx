@@ -179,14 +179,59 @@ export default function ServicesPage() {
       description: 'Transform customer data into actionable insights with AI-powered analytics and predictive modeling',
       icon: '🔍',
       href: '/services/ai-customer-insights-platform',
-      pricing: 'Starting from $399/month',
+      pricing: 'Starting from $299/month',
       features: [
-        'Behavioral Analytics',
-        'Predictive Analytics',
-        'Customer Segmentation',
-        'Sentiment Analysis',
-        'Real-time Alerts',
-        'Data Integration'
+        'AI-Powered Sentiment Analysis',
+        'Customer Behavior Analytics',
+        'Predictive Customer Lifetime Value',
+        'Personalized Recommendations',
+        'Revenue Optimization',
+        'Privacy-First Analytics'
+      ]
+    },
+    {
+      title: 'AI Financial Forecasting Suite',
+      description: 'Advanced AI-powered financial forecasting and analysis platform with real-time market predictions and risk assessment',
+      icon: '💰',
+      href: '/services/ai-financial-forecasting-suite',
+      pricing: 'Starting from $499/month',
+      features: [
+        'AI Market Predictions',
+        'Automated Financial Planning',
+        'Advanced Risk Assessment',
+        'Investment Optimization',
+        'Goal-Based Planning',
+        'Real-Time Data Integration'
+      ]
+    },
+    {
+      title: 'IoT Smart Infrastructure Platform',
+      description: 'Comprehensive IoT platform for smart cities, buildings, and infrastructure with real-time monitoring and predictive maintenance',
+      icon: '🏗️',
+      href: '/services/iot-smart-infrastructure-platform',
+      pricing: 'Starting from $199/month',
+      features: [
+        'Smart Device Management',
+        'Predictive Maintenance',
+        'Advanced Security',
+        'Real-Time Analytics',
+        'Energy Optimization',
+        'Scalable Architecture'
+      ]
+    },
+    {
+      title: 'Blockchain Enterprise Solutions',
+      description: 'Enterprise-grade blockchain solutions for supply chain, finance, and data integrity with smart contracts and DeFi',
+      icon: '⛓️',
+      href: '/services/blockchain-enterprise-solutions',
+      pricing: 'Starting from $2,999/project',
+      features: [
+        'Smart Contract Development',
+        'Supply Chain Transparency',
+        'DeFi Solutions',
+        'Data Integrity & Security',
+        'Cross-Chain Integration',
+        'Enterprise Security'
       ]
     },
     {
