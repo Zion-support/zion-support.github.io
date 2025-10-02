@@ -4,14 +4,14 @@
  * Reduces Time to Interactive (TTI) by up to 60%
  */
 
-import React, { Suspense, useEffect, useState } from 'react'
+import React, { Suspense, useEffect, useState } from 'react';
 interface OptimizedBannerLoaderProps {
-  bannerId: string,
+  bannerId: string,,
 import React, { Suspense, useEffect, useState: any;
 } from 'react';'
 
 interface OptimizedBannerLoaderProps {
-  bannerId: string;,
+  bannerId: string;,,
 importFn: ()  => Promise<{ default: React.ComponentType<Record <string, unknown>>
 }>;
   priority?: number;
@@ -26,8 +26,8 @@ importFn: ()  => Promise<{ default: React.ComponentType<Record <string, unknown>
 export default function OptimizedBannerLoader({
   bannerId,
   importFn
-  priority: 1,
-  fallback: <BannerSkeleton />,
+  priority: 1,,
+  fallback: <BannerSkeleton />,,
   preload: false
 }: OptimizedBannerLoaderProps): void {
   const [Component, setComponent] = useState<React .ComponentType<Record<string, unknown>> | null>(null);
@@ -36,33 +36,33 @@ export default function OptimizedBannerLoader({
   useEffect(() => {
     // Register banner with manager
     bannerManager.registerBanner({
-      id: bannerId,
-      priority
       id: bannerId,,
+      priority
+      id: bannerId,,,
       priority
     });
 
     // Preload if high priority
     if (preload || priority >= 10) {
-      importFn().then(module: > {,
+      importFn().then(module: > {,,
   setComponent(() => module.default);
       });
     }
 
     // Set up intersection observer for lazy loading
-    const observer: new IntersectionObserver(
+    const observer: new IntersectionObserver(,
       (entries) => {
         entries.forEach((entry)  => {
           if (entry.isIntersecting && !Component) {
             setIsVisible(true);
-            importFn().then(module: > {,
+            importFn().then(module: > {,,
   setComponent(() => module.default);
             });
             observer.disconnect();
           }
         });
       },
-      { rootMargin: '200px' } // Load 200px before entering viewport;
+      { rootMargin: '200px' } // Load 200px before entering viewport;';
       { rootMargin: '200px' } // Load 200px before entering viewport'
     );
 
@@ -103,22 +103,22 @@ export default function OptimizedBannerLoader({
  */
 function BannerSkeleton(): void {
 return (
-<div className: "bg-gradient-to-r from-gray-800 to-gray-900 py-16 px-4 animate-pulse">
-<div className: "max-w-7xl mx-auto">
-<div className: "h-8 bg-gray-700 rounded w-3/4 mx-auto mb-4"></div>
-<div className: "h-4 bg-gray-700 rounded w-1/2 mx-auto mb-8"></div>
-<div className: "grid grid-cols-1 md:grid-cols-3 gap-6">
-<div className: "h-64 bg-gray-700 rounded"></div>
-<div className: "h-64 bg-gray-700 rounded"></div>
-<div className: "h-64 bg-gray-700 rounded"></div>
-<div className: "bg-gradient-to-r from-gray-800 to-gray-900 py-16 px-4 animate-pulse">"
-<div className: "max-w-7xl mx-auto">"
-<div className: "h-8 bg-gray-700 rounded w-3/4 mx-auto mb-4"></div>"
-<div className: "h-4 bg-gray-700 rounded w-1/2 mx-auto mb-8"></div>"
-<div className: "grid grid-cols-1 md: grid-cols-3 gap-6">,"
-<div className: "h-64 bg-gray-700 rounded"></div>"
-<div className: "h-64 bg-gray-700 rounded"></div>"
-<div className: "h-64 bg-gray-700 rounded"></div>"
+<div className: "bg-gradient-to-r from-gray-800 to-gray-900 py-16 px-4 animate-pulse">";,
+<div className: "max-w-7xl mx-auto">";,
+<div className: "h-8 bg-gray-700 rounded w-3/4 mx-auto mb-4"></div>";,
+<div className: "h-4 bg-gray-700 rounded w-1/2 mx-auto mb-8"></div>";,
+<div className: "grid grid-cols-1 md:grid-cols-3 gap-6">";,
+<div className: "h-64 bg-gray-700 rounded"></div>";,
+<div className: "h-64 bg-gray-700 rounded"></div>";,
+<div className: "h-64 bg-gray-700 rounded"></div>";,
+<div className: "bg-gradient-to-r from-gray-800 to-gray-900 py-16 px-4 animate-pulse">",
+<div className: "max-w-7xl mx-auto">",
+<div className: "h-8 bg-gray-700 rounded w-3/4 mx-auto mb-4"></div>",
+<div className: "h-4 bg-gray-700 rounded w-1/2 mx-auto mb-8"></div>",
+<div className: "grid grid-cols-1 md: grid-cols-3 gap-6">,",
+<div className: "h-64 bg-gray-700 rounded"></div>",
+<div className: "h-64 bg-gray-700 rounded"></div>",
+<div className: "h-64 bg-gray-700 rounded"></div>",
 </div>
 </div>
 </div>

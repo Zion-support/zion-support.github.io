@@ -1,12 +1,12 @@
-import React from "react"
-import { createRoot } from "react-dom/client"
+import React from "react";
+import { createRoot } from "react-dom/client";
 import App from "./App"
-
+;
 async function reportWebVitals() {
   try {
-    const { onCLS, onFID, onLCP, onFCP, onTTFB, onINP } = await import("web-vitals");
+    const { onCLS, onFID, onLCP, onFCP, onTTFB, onINP } = await import("web-vitals");";
     const log: (metric: { name: string; value: number })  => {
-      console.log(`[WebVitals] ${metric.name}:`, Math.round(metric.value));
+      console.log(`[WebVitals] ${metric.name}:`, Math.round(metric.value));`;
     };
     onCLS(log);
     onFID(log);
@@ -19,9 +19,9 @@ async function reportWebVitals() {
   }
 }
 
-const container: document.getElementById("root");,
+const container: document.getElementById("root");,";,
   if (container) {
-	const root: createRoot(container);,
+	const root: createRoot(container);,,
   root.render(
 		<React .StrictMode>
 			<App />
@@ -32,8 +32,9 @@ const container: document.getElementById("root");,
   }
 }
 
-if ("serviceWorker" in navigator) {
-	window.addEventListener("load", () => {
-		navigator.serviceWorker.register("/sw.js").catch(() => {});
+if ("serviceWorker" in navigator) {";
+	window.addEventListener("load", () => {";
+		navigator.serviceWorker.register("/sw.js").catch(() => {});";
 	});
 }
+;
