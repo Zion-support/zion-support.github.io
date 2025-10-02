@@ -59,16 +59,16 @@ export default function HomePage() {
             {/* Key Metrics */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
               <div className="bg-gradient-to-r from-blue-500/20 to-blue-600/20 backdrop-blur-sm rounded-xl p-4 border border-blue-500/30">
-                <div className="text-2xl font-extrabold text-blue-400 mb-1">95%</div>
-                <div className="text-xs text-blue-300">Decision Accuracy</div>
+                <div className="text-2xl font-extrabold text-blue-400 mb-1">50+</div>
+                <div className="text-xs text-blue-300">AI Solutions</div>
               </div>
               <div className="bg-gradient-to-r from-purple-500/20 to-purple-600/20 backdrop-blur-sm rounded-xl p-4 border border-purple-500/30">
-                <div className="text-2xl font-extrabold text-purple-400 mb-1">2000x</div>
-                <div className="text-xs text-purple-300">Processing Speed</div>
+                <div className="text-2xl font-extrabold text-purple-400 mb-1">95%</div>
+                <div className="text-xs text-purple-300">Decision Accuracy</div>
               </div>
               <div className="bg-gradient-to-r from-green-500/20 to-green-600/20 backdrop-blur-sm rounded-xl p-4 border border-green-500/30">
                 <div className="text-2xl font-extrabold text-green-400 mb-1">99.9%</div>
-                <div className="text-xs text-green-300">Automation Rate</div>
+                <div className="text-xs text-green-300">Uptime Guarantee</div>
               </div>
               <div className="bg-gradient-to-r from-orange-500/20 to-orange-600/20 backdrop-blur-sm rounded-xl p-4 border border-orange-500/30">
                 <div className="text-2xl font-extrabold text-orange-400 mb-1">$5.2B</div>
@@ -87,6 +87,49 @@ export default function HomePage() {
             <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-4">
               Transform your organization with cutting-edge AI innovations and enterprise-grade solutions
             </p>
+          </div>
+
+          {/* New Innovative Services Highlight */}
+          <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-2xl p-8 mb-12 border border-green-200">
+            <div className="text-center mb-8">
+              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">🚀 NEW: 2026 Innovative Micro SaaS Solutions</h3>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                Discover our latest AI-powered micro SaaS solutions that deliver immediate ROI and transform business operations
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow border border-green-100">
+                <div className="text-4xl mb-4">💬</div>
+                <h4 className="text-lg font-semibold mb-2">AI Customer Feedback Analyzer</h4>
+                <p className="text-gray-600 text-sm mb-3">92% sentiment accuracy across all channels</p>
+                <div className="text-green-600 font-bold">$149/month</div>
+              </div>
+              
+              <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow border border-blue-100">
+                <div className="text-4xl mb-4">💳</div>
+                <h4 className="text-lg font-semibold mb-2">AI Expense Management SaaS</h4>
+                <p className="text-gray-600 text-sm mb-3">95% accuracy in automatic categorization</p>
+                <div className="text-blue-600 font-bold">$99/month</div>
+              </div>
+              
+              <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow border border-purple-100">
+                <div className="text-4xl mb-4">⏱️</div>
+                <h4 className="text-lg font-semibold mb-2">AI Time Tracking Suite</h4>
+                <p className="text-gray-600 text-sm mb-3">30% productivity improvement guaranteed</p>
+                <div className="text-purple-600 font-bold">$79/month</div>
+              </div>
+            </div>
+            
+            <div className="text-center mt-8">
+              <Link 
+                href="/services" 
+                className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-green-600 to-blue-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-blue-700 transition-all duration-300"
+              >
+                Explore All 50+ Solutions
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
+            </div>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
