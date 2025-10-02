@@ -1,118 +1,117 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { 
-  Cloud
-  Shield
-  Server
-  Database
-  Network
-  Lock
-  CheckCircle
-  ArrowRight
-  DollarSign
-  Clock
-  Star
-  TrendingUp
-  Globe
-  Smartphone
-  MessageSquare
-  Zap
-  
-  Settings
-  Monitor
-  Cpu
-  HardDrive
-  Wifi
-  Eye
-  Key
-  AlertTriangle
-  Users
+  Cloud,
+  Shield,
+  Server,
+  Database,
+  Network,
+  Lock,
+  CheckCircle,
+  ArrowRight,
+  DollarSign,
+  Clock,
+  Star,
+  TrendingUp,
+  Globe,
+  Smartphone,
+  MessageSquare,
+  Zap,
+  Settings,
+  Monitor,
+  Cpu,
+  HardDrive,
+  Wifi,
+  Eye,
+  Key,
+  AlertTriangle,
+  Users,
   Building
 } from "lucide-react";
 
 export default function ITServices(): React.JSX.Element {
   const itServices = [
     {
-      id: "cloud-migration-expert"
-      name: "Cloud Migration & Optimization Expert"
-      blurb: "Complete cloud transformation with cost optimization and security hardening"
-      price: "$5,000 - $25,000/month"
-      eta: "4-12 weeks"
-      category: "Cloud Infrastructure"
-      icon: Cloud
+      id: "cloud-migration-expert",
+      name: "Cloud Migration & Optimization Expert",
+      blurb: "Complete cloud transformation with cost optimization and security hardening",
+      price: "$5,000 - $25,000/month",
+      eta: "4-12 weeks",
+      category: "Cloud Infrastructure",
+      icon: Cloud,
       features: [
-        "Multi-cloud strategy and architecture design"
-        "Automated migration with zero downtime"
-        "Cost optimization with 30-50% savings"
-        "Security hardening and compliance setup"
-        "Performance monitoring and optimization"
-        "Disaster recovery and backup solutions"
+        "Multi-cloud strategy and architecture design",
+        "Automated migration with zero downtime",
+        "Cost optimization with 30-50% savings",
+        "Security hardening and compliance setup",
+        "Performance monitoring and optimization",
+        "Disaster recovery and backup solutions",
         "24/7 cloud operations support"
-      ]
+      ],
       benefits: [
-        "50% reduction in infrastructure costs"
-        "99.99% uptime guarantee"
-        "3x faster application deployment"
+        "50% reduction in infrastructure costs",
+        "99.99% uptime guarantee",
+        "3x faster application deployment",
         "Complete security compliance"
-      ]
-      useCases: ["Enterprise companies", "SaaS providers", "E-commerce platforms", "Healthcare systems"]
-      marketSize: "$623.3B cloud computing market"
+      ],
+      useCases: ["Enterprise companies", "SaaS providers", "E-commerce platforms", "Healthcare systems"],
+      marketSize: "$623.3B cloud computing market",
       link: "/contact"
-    }
+    },
     {
-      id: "zero-trust-security"
-      name: "Zero Trust Security Framework"
-      blurb: "Enterprise-grade security architecture with continuous verification"
-      price: "$3,500 - $18,000/month"
-      eta: "3-8 weeks"
-      category: "Cybersecurity"
-      icon: Shield
+      id: "zero-trust-security",
+      name: "Zero Trust Security Framework",
+      blurb: "Enterprise-grade security architecture with continuous verification",
+      price: "$3,500 - $18,000/month",
+      eta: "3-8 weeks",
+      category: "Cybersecurity",
+      icon: Shield,
       features: [
-        "Identity and access management (IAM) setup"
-        "Network segmentation and micro-segmentation"
-        "Endpoint detection and response (EDR)"
-        "Security information and event management (SIEM)"
-        "Multi-factor authentication (MFA) implementation"
-        "Continuous security monitoring"
+        "Identity and access management (IAM) setup",
+        "Network segmentation and micro-segmentation",
+        "Endpoint detection and response (EDR)",
+        "Security information and event management (SIEM)",
+        "Multi-factor authentication (MFA) implementation",
+        "Continuous security monitoring",
         "Incident response automation"
-      ]
+      ],
       benefits: [
-        "95% reduction in security incidents"
-        "100% compliance with industry standards"
-        "Real-time threat detection and response"
+        "95% reduction in security incidents",
+        "100% compliance with industry standards",
+        "Real-time threat detection and response",
         "Automated security policy enforcement"
-      ]
-      useCases: ["Financial institutions", "Government agencies", "Healthcare organizations", "Large enterprises"]
-      marketSize: "$366.1B cybersecurity market"
+      ],
+      useCases: ["Financial institutions", "Government agencies", "Healthcare organizations", "Large enterprises"],
+      marketSize: "$366.1B cybersecurity market",
       link: "/contact"
-    }
+    },
     {
-      id: "devops-automation"
-      name: "DevOps Automation Platform"
-      blurb: "Complete CI/CD pipeline with infrastructure as code and monitoring"
-      price: "$2,500 - $12,000/month"
-      eta: "3-6 weeks"
-      category: "DevOps & Automation"
-      icon: Zap
+      id: "devops-automation",
+      name: "DevOps Automation Platform",
+      blurb: "Complete CI/CD pipeline with infrastructure as code and monitoring",
+      price: "$2,500 - $12,000/month",
+      eta: "3-6 weeks",
+      category: "DevOps & Automation",
+      icon: Zap,
       features: [
-        "CI/CD pipeline setup with automated testing"
-        "Infrastructure as Code (IaC) with Terraform"
-        "Container orchestration with Kubernetes"
-        "Automated deployment and rollback"
-        "Performance monitoring and alerting"
-        "Security scanning and compliance checks"
+        "CI/CD pipeline setup with automated testing",
+        "Infrastructure as Code (IaC) with Terraform",
+        "Container orchestration with Kubernetes",
+        "Automated deployment and rollback",
+        "Performance monitoring and alerting",
+        "Security scanning and compliance checks",
         "Developer productivity tools integration"
-      ]
+      ],
       benefits: [
-        "10x faster deployment cycles"
-        "80% reduction in deployment failures"
-        "50% improvement in developer productivity"
+        "10x faster deployment cycles",
+        "80% reduction in deployment failures",
+        "50% improvement in developer productivity",
         "Automated quality assurance"
-      ]
-      useCases: ["Software companies", "Tech startups", "E-commerce platforms", "Financial services"]
-      marketSize: "$10.3B DevOps market"
+      ],
+      useCases: ["Software companies", "Tech startups", "E-commerce platforms", "Financial services"],
+      marketSize: "$10.3B DevOps market",
       link: "/contact"
-    }
+    },
     {
       id: "data-engineering-platform"
       name: "Data Engineering Platform"
@@ -120,7 +119,7 @@ export default function ITServices(): React.JSX.Element {
       price: "$4,000 - $20,000/month"
       eta: "4-10 weeks"
       category: "Data & Analytics"
-      icon: Database
+      icon: Database,
       features: [
         "Data lake and data warehouse architecture"
         "Real-time data streaming with Apache Kafka"
@@ -129,17 +128,17 @@ export default function ITServices(): React.JSX.Element {
         "Machine learning pipeline integration"
         "Business intelligence dashboard creation"
         "Data security and privacy compliance"
-      ]
+      ],
       benefits: [
         "5x faster data processing"
         "Real-time business insights"
         "90% reduction in data errors"
         "Automated data governance"
-      ]
-      useCases: ["Analytics companies", "E-commerce platforms", "Financial services", "Healthcare systems"]
-      marketSize: "$274.3B data analytics market"
+      ],
+      useCases: ["Analytics companies", "E-commerce platforms", "Financial services", "Healthcare systems"],
+      marketSize: "$274.3B data analytics market",
       link: "/contact"
-    }
+    },
     {
       id: "network-infrastructure"
       name: "Enterprise Network Infrastructure"
@@ -166,7 +165,7 @@ export default function ITServices(): React.JSX.Element {
       useCases: ["Multi-location businesses", "Remote work environments", "Healthcare networks", "Educational institutions"]
       marketSize: "$45.2B SD-WAN market"
       link: "/contact"
-    }
+    },
     {
       id: "compliance-automation"
       name: "Compliance Automation Suite"
@@ -193,59 +192,59 @@ export default function ITServices(): React.JSX.Element {
       useCases: ["Healthcare providers", "Financial services", "SaaS companies", "Government contractors"]
       marketSize: "$56.9B compliance management market"
       link: "/contact"
-    }
+    },
   ];
 
   const additionalITServices = [
     {
-      name: "IT Infrastructure Assessment"
-      description: "Comprehensive infrastructure audit and optimization recommendations"
-      price: "$1,500 - $5,000/month"
+      name: "IT Infrastructure Assessment",
+      description: "Comprehensive infrastructure audit and optimization recommendations",
+      price: "$1,500 - $5,000/month",
       features: ["Performance analysis", "Security assessment", "Cost optimization", "Modernization roadmap"]
-    }
+    },
     {
-      name: "24/7 IT Support & Monitoring"
-      description: "Round-the-clock IT support with proactive monitoring"
-      price: "$800 - $3,000/month"
+      name: "24/7 IT Support & Monitoring",
+      description: "Round-the-clock IT support with proactive monitoring",
+      price: "$800 - $3,000/month",
       features: ["24/7 helpdesk", "Proactive monitoring", "Remote support", "SLA guarantees"]
-    }
+    },
     {
-      name: "Backup & Disaster Recovery"
-      description: "Automated backup solutions with disaster recovery planning"
-      price: "$500 - $2,500/month"
+      name: "Backup & Disaster Recovery",
+      description: "Automated backup solutions with disaster recovery planning",
+      price: "$500 - $2,500/month",
       features: ["Automated backups", "Disaster recovery", "Business continuity", "Data protection"]
-    }
+    },
     {
-      name: "IT Consulting & Strategy"
-      description: "Strategic IT planning and digital transformation consulting"
-      price: "$200 - $500/hour"
+      name: "IT Consulting & Strategy",
+      description: "Strategic IT planning and digital transformation consulting",
+      price: "$200 - $500/hour",
       features: ["Strategic planning", "Technology roadmap", "Vendor selection", "Implementation guidance"]
     }
   ];
 
   const industrySolutions = [
     {
-      industry: "Healthcare"
-      solutions: ["HIPAA compliance", "Patient data security", "Telemedicine infrastructure", "Medical device integration"]
-      icon: Building
+      industry: "Healthcare",
+      solutions: ["HIPAA compliance", "Patient data security", "Telemedicine infrastructure", "Medical device integration"],
+      icon: Building,
       color: "from-green-500 to-teal-500"
-    }
+    },
     {
-      industry: "Financial Services"
-      solutions: ["PCI DSS compliance", "Fraud detection systems", "Risk management", "Regulatory reporting"]
-      icon: DollarSign
+      industry: "Financial Services",
+      solutions: ["PCI DSS compliance", "Fraud detection systems", "Risk management", "Regulatory reporting"],
+      icon: DollarSign,
       color: "from-blue-500 to-indigo-500"
-    }
+    },
     {
-      industry: "E-commerce"
-      solutions: ["Scalable infrastructure", "Payment security", "Inventory management", "Customer analytics"]
-      icon: Globe
+      industry: "E-commerce",
+      solutions: ["Scalable infrastructure", "Payment security", "Inventory management", "Customer analytics"],
+      icon: Globe,
       color: "from-purple-500 to-pink-500"
-    }
+    },
     {
-      industry: "Manufacturing"
-      solutions: ["IoT integration", "Predictive maintenance", "Supply chain optimization", "Quality control systems"]
-      icon: Cpu
+      industry: "Manufacturing",
+      solutions: ["IoT integration", "Predictive maintenance", "Supply chain optimization", "Quality control systems"],
+      icon: Cpu,
       color: "from-orange-500 to-red-500"
     }
   ];
