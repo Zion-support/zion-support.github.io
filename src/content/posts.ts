@@ -1557,8 +1557,8 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "8 min read"
-  }
-);
+  },
+]);
 
 // Sept 30, 2025 – Fresh articles to add and advertise on homepage
 posts.push(
