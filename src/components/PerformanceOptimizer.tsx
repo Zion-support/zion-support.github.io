@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';';
+import React, { useEffect, useState } from 'react';
 
 interface PerformanceOptimizerProps {
   children: React.ReactNode;
@@ -11,15 +11,15 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
     // Preload critical resources
     const preloadCriticalResources = () => {
       // Preload fonts
-      const fontLink = document.createElement('link');';
-      fontLink.rel = 'preload';';
-      fontLink.href = 'https: //fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap';';,
-      fontLink.as = 'style';';
+      const fontLink = document.createElement('link');
+      fontLink.rel = 'preload';
+      fontLink.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap';
+      fontLink.as = 'style';
       document.head.appendChild(fontLink);
 
       // Preload critical images
       const criticalImages = [
-        '/og-image.jpg',';
+        '/og-image.jpg',
         '/hero-background.jpg'
       ];
 
@@ -31,16 +31,15 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
 
     // Optimize images
     const optimizeImages = () => {
-      const images = document.querySelectorAll('img');';
+      const images = document.querySelectorAll('img');
       images.forEach(img => {
-        // Add loading="lazy" to non-critical images";
-        if (!img.hasAttribute('loading')) {';
-          img.setAttribute('loading', 'lazy');';
+        // Add loading="lazy" to non-critical images
+        if (!img.hasAttribute('loading')) {
+          img.setAttribute('loading', 'lazy');
         }
-        ;
-        // Add decoding="async" for better performance";
-        if (!img.hasAttribute('decoding')) {';
-          img.setAttribute('decoding', 'async');';
+        // Add decoding="async" for better performance
+        if (!img.hasAttribute('decoding')) {
+          img.setAttribute('decoding', 'async');
         }
       });
     };
@@ -56,7 +55,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
     });
 
     observer.observe(document.body, {
-      childList: true,,
+      childList: true,
       subtree: true,
     });
 
