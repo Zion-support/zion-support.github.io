@@ -1,9 +1,13 @@
 import React from 'react';
 import {
-
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Suspense,
+  lazy
 } from 'react-router-dom';
 import {
-HelmetProvider
+  HelmetProvider
 } from 'react-helmet-async';
 
 // Pages
@@ -35,6 +39,8 @@ import CloudDevOps from './pages/services/CloudDevOps';
 import AIDataAnalytics from './pages/services/AIDataAnalytics';
 import AdvancedCybersecurityAI from './pages/services/AdvancedCybersecurityAI';
 import AIWorkflowAutomation from './pages/services/AIWorkflowAutomation';
+import NewServices2026 from './pages/NewServices2026';
+import EnhancedServicesCatalog from './pages/EnhancedServicesCatalog';
 
 // Layout Components
 import Header from './components/Header';
@@ -66,6 +72,8 @@ const AppRouter: React.FC = () => {,
             <Route path="/services/analytics" element={<AIDataAnalytics />} />
             <Route path="/services/security" element={<AdvancedCybersecurityAI />} />
             <Route path="/services/automation" element={<AIWorkflowAutomation />} />
+            <Route path="/enhanced-services-catalog" element={<EnhancedServicesCatalog />} />
+            <Route path="/new-services-2026" element={<NewServices2026 />} />
             <Route path="/solutions" element={<SolutionsPage />} />
             <Route path="/solutions/enterprise" element={<SolutionsEnterprise />} />
             <Route path="/solutions/smb" element={<SolutionsSMB />} />
