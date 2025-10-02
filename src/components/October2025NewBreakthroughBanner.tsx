@@ -1,11 +1,8 @@
-import { ArrowRight, Zap, Brain, DollarSign, Eye, TrendingUp, Target } from "lucide-react";
-import { Link } from "react-router-dom";
-import { octoberNewBreakthroughContent, octoberContentStats } from "../content/october-2025-new-breakthrough-content";
 
 const October2025NewBreakthroughBanner = () => {
   const stats = octoberContentStats;
 
-  const iconMap: Record<string, React.ComponentType<any>> = {
+  const iconMap: Record<string, React.ComponentType<React.SVGProps<SVGSVGElement>>> = {
     '🧠': Brain,
     '💰': DollarSign,
     '🎨': Eye

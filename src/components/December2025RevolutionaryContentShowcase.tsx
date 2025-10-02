@@ -1,6 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { ArrowRight, Brain, Infinity, Zap, Sparkles, Rocket } from 'lucide-react';
 
 const December2025RevolutionaryContentShowcase: React.FC = () => {
   return (

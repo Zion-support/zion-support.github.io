@@ -1,7 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
 
-export default function October2025SelfHealingSpotlightBanner() {
+export default function October2025SelfHealingSpotlightBanner(): void {
   return (
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white py-12 px-4">
       <div className="max-w-6xl mx-auto">

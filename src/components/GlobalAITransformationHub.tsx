@@ -1,6 +1,19 @@
+
 import React from 'react';
-import { ArrowRight, Sparkles, Zap, Brain, CheckCircle, Star, Users, Award, TrendingUp, Rocket, Globe, Shield, Target } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { 
+  Target, 
+  Brain, 
+  Zap, 
+  Shield, 
+  Globe, 
+  TrendingUp, 
+  Rocket, 
+  Award, 
+  Users, 
+  ArrowRight, 
+  Sparkles 
+} from 'lucide-react';
 
 const GlobalAITransformationHub = () => {
   const transformationAreas = [

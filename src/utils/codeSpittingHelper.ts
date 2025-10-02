@@ -4,7 +4,6 @@
  * Provides utilities for intelligent code splitting and lazy loading
  */
 
-import { lazy, ComponentType } from 'react';
 
 /**
  * Retry mechanism for lazy-loaded components
@@ -56,8 +55,7 @@ export const preloadComponent = (
  * Creates lazy-loaded route components with error boundaries
  */
 export const createLazyRoute = <T extends ComponentType<any>>(
-  importFunc: () => Promise<{ default: T }>,
-  fallback?: React.ReactNode
+  importFunc: () => Promise<{ default: T }>
 ) => {
   const LazyComponent = lazyWithRetry(importFunc);
   

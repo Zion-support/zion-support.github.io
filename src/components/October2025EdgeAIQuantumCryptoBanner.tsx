@@ -1,7 +1,5 @@
-import { Sparkles, Zap, Shield, ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
 
-export default function October2025EdgeAIQuantumCryptoBanner() {
+export default function October2025EdgeAIQuantumCryptoBanner(): void {
   return (
     <section className="bg-gradient-to-r from-cyan-900/30 via-purple-900/30 to-pink-900/30 border-y border-cyan-500/30 py-12">
       <div className="container mx-auto px-6">

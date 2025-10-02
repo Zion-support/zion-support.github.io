@@ -1,224 +1,181 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import AnimatedSection from '../components/AnimatedSection';
-import './HomePage.css';
-import { BLOG_POSTS } from '../data/blog-posts';
-import October2025FeaturedContentBanner from '../components/October2025FeaturedContentBanner';
-import UnifiedPromotionalBanner from '../components/UnifiedPromotionalBanner';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { ArrowRight, Zap, Shield, Brain, Users, TrendingUp } from 'lucide-react';
 
 const HomePage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Revolutionary AI technologies transforming enterprise operations',
+      color: 'from-blue-500 to-purple-600'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Advanced cybersecurity with 99.97% threat prevention',
+      color: 'from-green-500 to-teal-600'
+    },
+    {
+      icon: Zap,
+      title: 'Real-Time Performance',
+      description: 'Sub-2ms latency intelligence mesh for instant insights',
+      color: 'from-yellow-500 to-orange-600'
+    },
+    {
+      icon: Users,
+      title: 'Fortune 500 Proven',
+      description: 'Trusted by 240+ Fortune 500 companies worldwide',
+      color: 'from-purple-500 to-pink-600'
+    },
+    {
+      icon: TrendingUp,
+      title: 'Proven ROI',
+      description: 'Average 1,840% ROI with our enterprise solutions',
+      color: 'from-indigo-500 to-blue-600'
+    }
+  ];
+
+  const stats = [
+    { value: '$211.7B', label: 'Combined Value Creation' },
+    { value: '287,000+', label: 'AI Agents Managed' },
+    { value: '99.97%', label: 'Autonomous Operations' },
+    { value: '240+', label: 'Fortune 500 Clients' }
+  ];
+
   return (
-    <>
-      <Helmet>
-        <title>Home - Zion Tech Group</title>
-        <meta name="description" content="Leading provider of AI, blockchain, cloud computing, and cybersecurity solutions for modern businesses." />
-      </Helmet>
-      
-      <div className="home-page">
-        <section className="hero-section">
-          <div className="hero-content">
-            <h1 className="hero-title">
-              Advanced Technology Solutions for the Future
+    <div className="space-y-20">
+      {/* Hero Section */}
+      <section className="relative py-20 bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white overflow-hidden">
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center"
+          >
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              Zion Tech Group
             </h1>
-            <p className="hero-subtitle">
-              Empowering businesses with cutting-edge AI, blockchain, cloud computing, 
-              and cybersecurity solutions that drive innovation and growth.
+            <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
+              Revolutionary AI and IT Solutions Transforming Enterprise Operations Worldwide
             </p>
-            <div className="hero-actions">
-              <button className="btn btn-primary">Get Started</button>
-              <button className="btn btn-secondary">Learn More</button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/solutions"
+                className="bg-white text-blue-900 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-300 flex items-center justify-center"
+              >
+                Explore Solutions
+                <ArrowRight className="ml-2" size={20} />
+              </Link>
+              <Link
+                to="/contact"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-colors duration-300"
+              >
+                Get Started
+              </Link>
             </div>
-          </div>
-          <div className="hero-visual">
-            <div className="tech-grid">
-              <div className="tech-card">AI</div>
-              <div className="tech-card">Blockchain</div>
-              <div className="tech-card">Cloud</div>
-              <div className="tech-card">Security</div>
-            </div>
-          </div>
-        </section>
+          </motion.div>
+        </div>
+      </section>
 
-        <AnimatedSection animation="slideUp" delay={200}>
-          <section className="features-section">
-            <div className="container">
-              <h2 className="section-title">Why Choose Zion Tech Group?</h2>
-              <div className="features-grid">
-                <AnimatedSection animation="fadeIn" delay={400}>
-                  <div className="feature-card">
-                    <div className="feature-icon">🚀</div>
-                    <h3>Innovation First</h3>
-                    <p>We stay ahead of technology trends to deliver solutions that give you a competitive edge.</p>
-                  </div>
-                </AnimatedSection>
-                <AnimatedSection animation="fadeIn" delay={600}>
-                  <div className="feature-card">
-                    <div className="feature-icon">🔒</div>
-                    <h3>Enterprise Security</h3>
-                    <p>Bank-grade security measures protect your data and ensure compliance with industry standards.</p>
-                  </div>
-                </AnimatedSection>
-                <AnimatedSection animation="fadeIn" delay={800}>
-                  <div className="feature-card">
-                    <div className="feature-icon">⚡</div>
-                    <h3>High Performance</h3>
-                    <p>Optimized solutions that scale with your business and deliver exceptional performance.</p>
-                  </div>
-                </AnimatedSection>
-                <AnimatedSection animation="fadeIn" delay={1000}>
-                  <div className="feature-card">
-                    <div className="feature-icon">🎯</div>
-                    <h3>Custom Solutions</h3>
-                    <p>Tailored technology solutions designed specifically for your business needs and goals.</p>
-                  </div>
-                </AnimatedSection>
-              </div>
-            </div>
-          </section>
-        </AnimatedSection>
-
-        <AnimatedSection animation="slideUp" delay={200}>
-          <section className="services-preview">
-            <div className="container">
-              <h2 className="section-title">Our Core Services</h2>
-              <div className="services-grid">
-                <AnimatedSection animation="slideLeft" delay={400}>
-                  <div className="service-card">
-                    <h3>Artificial Intelligence</h3>
-                    <p>Machine learning, natural language processing, and AI automation solutions.</p>
-                    <a href="/services#ai" className="service-link">Learn More →</a>
-                  </div>
-                </AnimatedSection>
-                <AnimatedSection animation="slideLeft" delay={600}>
-                  <div className="service-card">
-                    <h3>Blockchain Technology</h3>
-                    <p>Smart contracts, DeFi solutions, and blockchain infrastructure development.</p>
-                    <a href="/services#blockchain" className="service-link">Learn More →</a>
-                  </div>
-                </AnimatedSection>
-                <AnimatedSection animation="slideRight" delay={400}>
-                  <div className="service-card">
-                    <h3>Cloud Computing</h3>
-                    <p>Scalable cloud infrastructure, migration services, and cloud-native applications.</p>
-                    <a href="/services#cloud" className="service-link">Learn More →</a>
-                  </div>
-                </AnimatedSection>
-                <AnimatedSection animation="slideRight" delay={600}>
-                  <div className="service-card">
-                    <h3>Cybersecurity</h3>
-                    <p>Security audits, penetration testing, and comprehensive security solutions.</p>
-                    <a href="/services#security" className="service-link">Learn More →</a>
-                  </div>
-                </AnimatedSection>
-              </div>
-            </div>
-          </section>
-        </AnimatedSection>
-
-      {/* Featured Content Advertising Banner */}
-      <AnimatedSection animation="slideUp" delay={200}>
-        <section className="featured-banner-section">
-          <October2025FeaturedContentBanner />
-        </section>
-      </AnimatedSection>
-
-        <AnimatedSection animation="slideUp" delay={200}>
-          <section className="promo-section">
-            <div className="container">
-              <div className="promo-card">
-                <div className="promo-content">
-                  <h2 className="section-title">🚀 October 2025 Updates</h2>
-                  <p className="promo-text">Fresh insights on Multi-Agent AI Systems, Zero-Trust Architecture 2.0, Quantum-Safe Cryptography, Real-Time AI Training, Sustainable AI practices, Kubernetes Service Mesh comparisons, and Agentic Workflows. Plus: GenAI in production, privacy-first Edge AI, and incident-ready CI/CD playbooks.</p>
+      {/* Stats Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+                className="text-center"
+              >
+                <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
+                  {stat.value}
                 </div>
-                <a href="/blog" className="btn btn-primary">Explore the latest posts →</a>
-              </div>
-            </div>
-          </section>
-        </AnimatedSection>
+                <div className="text-gray-600">
+                  {stat.label}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-        {/* Unified banner advertising newly added content */}
-        <AnimatedSection animation="slideUp" delay={200}>
-          <section className="promo-section">
-            <div className="container">
-              <UnifiedPromotionalBanner
-                variant="premium"
-                theme="purple"
-                icon="rocket"
-                badge="New"
-                date={new Date().toLocaleDateString()}
-                title="Just Published: Governed Agents, RAG v3, Cost v6"
-                description="New enterprise guides: safe agentic automation, pragmatic RAG that lifts quality while cutting cost, and GenAI cost optimization v6."
-                ctaText="Explore all posts"
-                ctaLink="/blog"
-                showCount={3}
-                featuredItems={[
-                  {
-                    title: 'Governed Agentic Automation: Safe Tools, Fast Outcomes',
-                    category: 'AI',
-                    link: '/blog/governed-agentic-automation-2025-10-03',
-                    metrics: '8 min • 2025-10-03'
-                  },
-                  {
-                    title: 'Enterprise RAG Blueprint v3: 45% Quality ↑, 62% Cost ↓',
-                    category: 'RAG',
-                    link: '/blog/enterprise-rag-blueprint-v3-2025-10-03',
-                    metrics: '9 min • 2025-10-03'
-                  },
-                  {
-                    title: 'GenAI Cost Optimization v6: Quality Tiers, Coalesce, Distill',
-                    category: 'Cloud',
-                    link: '/blog/genai-cost-optimization-v6-2025-10-03',
-                    metrics: '9 min • 2025-10-03'
-                  }
-                ]}
-              />
-            </div>
-          </section>
-        </AnimatedSection>
+      {/* Features Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              Revolutionary AI Solutions
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Transform your enterprise with our cutting-edge AI technologies, proven across Fortune 500 companies worldwide.
+            </p>
+          </motion.div>
 
-        <AnimatedSection animation="slideUp" delay={200}>
-          <section className="blog-preview">
-            <div className="container">
-              <h2 className="section-title">From the Blog</h2>
-              <div className="blog-grid">
-                {[...BLOG_POSTS]
-                  .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime())
-                  .slice(0, 4)
-                  .map(post => (
-                  <article key={post.id} className="blog-card">
-                    <div className="blog-card-image" style={{ backgroundImage: `url(${post.featuredImage})` }} />
-                    <div className="blog-card-content">
-                      <div className="blog-meta">
-                        <span className="blog-category">{post.category}</span>
-                        <span className="blog-dot">•</span>
-                        <span className="blog-date">{new Date(post.publishedAt).toLocaleDateString()}</span>
-                        <span className="blog-dot">•</span>
-                        <span className="blog-readtime">{post.readTime} min read</span>
-                      </div>
-                      <h3 className="blog-title">{post.title}</h3>
-                      <p className="blog-excerpt">{post.excerpt}</p>
-                      <a href="/blog" className="service-link">Read on the blog →</a>
-                    </div>
-                  </article>
-                ))}
-              </div>
-            </div>
-          </section>
-        </AnimatedSection>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+                className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+              >
+                <div className={`w-16 h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-6`}>
+                  <feature.icon className="text-white" size={32} />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-600">
+                  {feature.description}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-        <AnimatedSection animation="scale" delay={200}>
-          <section className="cta-section">
-            <div className="container">
-              <div className="cta-content">
-                <h2>Ready to Transform Your Business?</h2>
-                <p>Let's discuss how our technology solutions can drive your success.</p>
-                <button className="btn btn-primary btn-large">Contact Us Today</button>
-              </div>
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              Ready to Transform Your Enterprise?
+            </h2>
+            <p className="text-xl mb-8 text-blue-100 max-w-3xl mx-auto">
+              Join 240+ Fortune 500 companies already leveraging our revolutionary AI solutions for unprecedented growth and efficiency.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-300"
+              >
+                Schedule Consultation
+              </Link>
+              <Link
+                to="/case-studies"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-300"
+              >
+                View Success Stories
+              </Link>
             </div>
-          </section>
-        </AnimatedSection>
-      </div>
-    </>
+          </motion.div>
+        </div>
+      </section>
+    </div>
   );
 };
 

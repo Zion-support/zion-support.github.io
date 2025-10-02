@@ -18,7 +18,7 @@ export interface BlogPostSEO {
 /**
  * Generate JSON-LD structured data for blog posts
  */
-export function generateBlogPostSchema(post: BlogPostSEO) {
+export function generateBlogPostSchema(post: BlogPostSEO): void {
   const baseUrl = 'https://ziontechgroup.com';
   
   return {
@@ -56,7 +56,7 @@ export function generateBlogPostSchema(post: BlogPostSEO) {
 /**
  * Generate Open Graph meta tags
  */
-export function generateOpenGraphTags(post: BlogPostSEO) {
+export function generateOpenGraphTags(post: BlogPostSEO): void {
   const baseUrl = 'https://ziontechgroup.com';
   
   return {
@@ -76,7 +76,7 @@ export function generateOpenGraphTags(post: BlogPostSEO) {
 /**
  * Generate Twitter Card meta tags
  */
-export function generateTwitterCardTags(post: BlogPostSEO) {
+export function generateTwitterCardTags(post: BlogPostSEO): void {
   const baseUrl = 'https://ziontechgroup.com';
   
   return {
@@ -92,7 +92,7 @@ export function generateTwitterCardTags(post: BlogPostSEO) {
 /**
  * Generate complete SEO package for a blog post
  */
-export function generateCompleteSEO(post: BlogPostSEO) {
+export function generateCompleteSEO(post: BlogPostSEO): void {
   return {
     schema: generateBlogPostSchema(post),
     openGraph: generateOpenGraphTags(post),

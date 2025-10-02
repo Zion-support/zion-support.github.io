@@ -36,23 +36,88 @@ interface ErrorReport {
 }
 
 const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisible, onClose }) => {
-  const [metrics] = useState<PerformanceMetrics | null>(null);
-  const [insights] = useState<AIInsights | null>(null);
-  const [errors] = useState<ErrorReport[]>([]);
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+  const [insights, setInsights] = useState<AIInsights | null>(null);
+  const [errors, setErrors] = useState<ErrorReport[]>([]);
 
   useEffect(() => {
     if (isVisible) {
-      const loadPerformanceData = () => {
+      const loadPerformanceData = async () => {
         try {
-          // TODO: Implement actual data fetching logic
-          console.log('Loading performance data...');
+          // Simulate API calls for performance data
+          const mockMetrics: PerformanceMetrics = {
+            errorRate: Math.random() * 5,
+            avgResolutionTime: Math.random() * 30 + 10,
+            criticalErrorsToday: Math.floor(Math.random() * 10),
+            userImpactScore: Math.floor(Math.random() * 40 + 60)
+          };
+
+          const mockInsights: AIInsights = {
+            predictedHighRiskActions: [
+              'High memory usage detected in user authentication flow',
+              'Potential race condition in data synchronization',
+              'Slow database queries affecting user experience'
+            ].slice(0, Math.floor(Math.random() * 3)),
+            recommendedImprovements: [
+              'Implement caching for frequently accessed data',
+              'Add error boundaries to prevent cascading failures',
+              'Optimize database indexes for better query performance',
+              'Consider implementing circuit breaker pattern'
+            ],
+            errorTrends: [
+              { category: 'authentication', trend: 'decreasing' },
+              { category: 'database', trend: 'stable' },
+              { category: 'ui', trend: 'increasing' }
+            ]
+          };
+
+          const mockErrors: ErrorReport[] = [
+            {
+              id: '1',
+              severity: 'high',
+              message: 'Failed to load user profile data',
+              lastOccurrence: new Date(Date.now() - Math.random() * 3600000),
+              occurrenceCount: Math.floor(Math.random() * 50 + 10),
+              context: { component: 'UserProfile', action: 'load' },
+              aiPredictedImpact: Math.random() * 0.8 + 0.2,
+              resolutionSuggestions: [
+                'Check database connection pool',
+                'Implement retry mechanism with exponential backoff',
+                'Add fallback to cached data'
+              ]
+            },
+            {
+              id: '2',
+              severity: 'medium',
+              message: 'Slow response time in search functionality',
+              lastOccurrence: new Date(Date.now() - Math.random() * 1800000),
+              occurrenceCount: Math.floor(Math.random() * 20 + 5),
+              context: { component: 'SearchBar', action: 'query' },
+              aiPredictedImpact: Math.random() * 0.6 + 0.1,
+              resolutionSuggestions: [
+                'Implement search result caching',
+                'Add debouncing to search input',
+                'Consider using Elasticsearch for better performance'
+              ]
+            }
+          ].slice(0, Math.floor(Math.random() * 2) + 1);
+
+          // Simulate async data loading
+          await new Promise(resolve => setTimeout(resolve, 1000));
+          
+          // Update state with mock data
+          setMetrics(mockMetrics);
+          setInsights(mockInsights);
+          setErrors(mockErrors);
+          
+          console.log('Performance data loaded successfully');
         } catch (error) {
           console.error('Failed to fetch dashboard data:', error);
         }
       };
 
       loadPerformanceData();
-      const interval = setInterval(loadPerformanceData, 5000); // Update every 5 seconds
+      const interval = setInterval(loadPerformanceData, 30000); // Update every 30 seconds
 
       return () => clearInterval(interval);
     }

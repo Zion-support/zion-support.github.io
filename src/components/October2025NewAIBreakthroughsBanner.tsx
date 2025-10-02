@@ -1,7 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
 
-export default function October2025NewAIBreakthroughsBanner() {
+export default function October2025NewAIBreakthroughsBanner(): void {
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-slate-950 via-indigo-950 to-slate-950 py-24">
       {/* Animated Background */}
