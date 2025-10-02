@@ -19,6 +19,7 @@ const SiteSidebar: React.FC = () => {
 							<NavLink to="/" className={linkClass}>Home</NavLink>
 							<NavLink to="/solutions" className={linkClass}>Solutions</NavLink>
 							<NavLink to="/services" className={linkClass}>Services</NavLink>
+						<NavLink to="/marketplace" className={linkClass}>Marketplace</NavLink>
 							<NavLink to="/resources" className={linkClass}>Resources</NavLink>
 							<NavLink to="/case-studies" className={linkClass}>Case Studies</NavLink>
 							<NavLink to="/blog" className={linkClass}>Blog</NavLink>
@@ -58,6 +59,8 @@ const SiteSidebar: React.FC = () => {
 							<NavLink to="/contact" className={linkClass}>Contact</NavLink>
 							<NavLink to="/partners" className={linkClass}>Partners</NavLink>
 							<NavLink to="/pricing" className={linkClass}>Pricing</NavLink>
+						<NavLink to="/careers" className={linkClass}>Careers</NavLink>
+						<NavLink to="/faq" className={linkClass}>FAQ</NavLink>
 							<NavLink to="/privacy" className={linkClass}>Privacy</NavLink>
 							<NavLink to="/terms" className={linkClass}>Terms</NavLink>
 						</nav>
