@@ -1,6 +1,5 @@
 import React from 'react';
-
-const LatestTrendsShowcase2026: React.FC = () => {
+const LatestTrendsShowcase2026: React.FC = () => {,
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900/20 to-purple-900/20">
       <div className="container mx-auto px-6">
@@ -20,10 +19,10 @@ const LatestTrendsShowcase2026: React.FC = () => {
         </div>
 
         {/* Trending Technologies Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-6 mb-16">",
           {/* Quantum Computing */}
-          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105 group">
-            <div className="text-5xl mb-4 group-hover:animate-spin">⚛️</div>
+          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover: border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105 group">",
+            <div className="text-5xl mb-4 group-hover: animate-spin">⚛️</div>",
             <h3 className="text-xl font-bold text-white mb-3">Quantum Computing</h3>
             <p className="text-gray-400 text-sm mb-4">
               Revolutionary quantum processors delivering 1000x speed improvements for complex AI computations.
@@ -32,8 +31,8 @@ const LatestTrendsShowcase2026: React.FC = () => {
           </div>
 
           {/* Neural Architecture Search */}
-          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105 group">
-            <div className="text-5xl mb-4 group-hover:animate-pulse">🔍</div>
+          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover: border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105 group">",
+            <div className="text-5xl mb-4 group-hover: animate-pulse">🔍</div>",
             <h3 className="text-xl font-bold text-white mb-3">AutoML Evolution</h3>
             <p className="text-gray-400 text-sm mb-4">
               Self-designing neural networks that automatically optimize architecture for maximum performance.
@@ -42,8 +41,8 @@ const LatestTrendsShowcase2026: React.FC = () => {
           </div>
 
           {/* Edge AI */}
-          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-green-500/50 transition-all duration-300 hover:transform hover:scale-105 group">
-            <div className="text-5xl mb-4 group-hover:animate-bounce">📱</div>
+          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover: border-green-500/50 transition-all duration-300 hover:transform hover:scale-105 group">",
+            <div className="text-5xl mb-4 group-hover: animate-bounce">📱</div>",
             <h3 className="text-xl font-bold text-white mb-3">Edge AI Revolution</h3>
             <p className="text-gray-400 text-sm mb-4">
               Ultra-fast AI processing at the edge with 99.9% accuracy and sub-millisecond response times.
@@ -52,8 +51,8 @@ const LatestTrendsShowcase2026: React.FC = () => {
           </div>
 
           {/* Explainable AI */}
-          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105 group">
-            <div className="text-5xl mb-4 group-hover:animate-pulse">🔮</div>
+          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover: border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105 group">",
+            <div className="text-5xl mb-4 group-hover: animate-pulse">🔮</div>",
             <h3 className="text-xl font-bold text-white mb-3">Explainable AI</h3>
             <p className="text-gray-400 text-sm mb-4">
               Transparent AI systems that explain their decisions with human-readable reasoning.
@@ -64,7 +63,7 @@ const LatestTrendsShowcase2026: React.FC = () => {
 
         {/* Featured Innovation */}
         <div className="bg-gradient-to-r from-blue-900/30 to-purple-900/30 rounded-2xl p-8 border border-blue-500/20 mb-16">
-          <div className="grid md:grid-cols-2 gap-8 items-center">
+          <div className="grid md: grid-cols-2 gap-8 items-center">",
             <div>
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-yellow-500/20 to-orange-500/20 border border-yellow-500/30 mb-4">
                 <span className="text-yellow-400 font-bold text-sm">🏆 FEATURED INNOVATION</span>
@@ -73,7 +72,7 @@ const LatestTrendsShowcase2026: React.FC = () => {
                 Meta-Cognitive AI Framework
               </h3>
               <p className="text-xl text-gray-300 mb-6 leading-relaxed">
-                The world's first AI system that thinks about thinking. Our Meta-Cognitive AI can reason about its own reasoning processes, 
+                The world's first AI system that thinks about thinking. Our Meta-Cognitive AI can reason about its own reasoning processes,
                 identify knowledge gaps, and autonomously improve its decision-making capabilities.
               </p>
               <div className="space-y-3 mb-6">
@@ -92,7 +91,7 @@ const LatestTrendsShowcase2026: React.FC = () => {
               </div>
               <a title="Internal link" 
                 href="/meta-cognitive-ai" 
-                className="inline-block bg-gradient-to-r from-yellow-500 to-orange-600 hover:from-yellow-400 hover:to-orange-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-yellow-500/50"
+                className="inline-block bg-gradient-to-r from-yellow-500 to-orange-600 hover: from-yellow-400 hover:to-orange-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-yellow-500/50",
               >
                 Explore Meta-Cognitive AI →
               </a>
@@ -110,7 +109,7 @@ const LatestTrendsShowcase2026: React.FC = () => {
         </div>
 
         {/* Industry Impact */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
+        <div className="grid md: grid-cols-3 gap-8 mb-16">",
           <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 text-center">
             <div className="text-5xl mb-4">🏭</div>
             <h3 className="text-2xl font-bold text-white mb-4">Manufacturing</h3>
@@ -156,16 +155,16 @@ const LatestTrendsShowcase2026: React.FC = () => {
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Join the elite group of enterprises already transforming their operations with our breakthrough AI technologies.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">",
             <a title="Internal link" 
               href="/contact" 
-              className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1"
+              className="bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1",
             >
               Start Your AI Journey
             </a>
             <a title="Internal link" 
               href="/trends-report" 
-              className="border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
+              className="border-2 border-cyan-500 text-cyan-400 hover: bg-cyan-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300",
             >
               Download Trends Report
             </a>

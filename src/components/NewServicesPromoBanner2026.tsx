@@ -1,41 +1,40 @@
 import React from 'react';
-
-const NewServicesPromoBanner2026: React.FC = () => {
+const NewServicesPromoBanner2026: React.FC = () => {,
   return (
     <div className="bg-gradient-to-r from-emerald-900 via-teal-900 to-cyan-900 py-12 relative overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-20 -right-20 w-40 h-40 bg-emerald-500/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-teal-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-cyan-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '4s' }}></div>
+        <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-teal-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>;
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-cyan-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '4s' }}></div>;
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 relative z-10">",
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-3 mb-6">
-            <Star className="w-6 h-6 text-yellow-400 animate-pulse" />
+            <Star className="w-6 h-6 text-yellow-400 animate-pulse/>
             <span className="text-2xl font-bold uppercase tracking-wider bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
               🔥 NEW SERVICES LAUNCH - JANUARY 2026
             </span>
-            <Star className="w-6 h-6 text-yellow-400 animate-pulse" />
+            <Star className="w-6 h-6 text-yellow-400 animate-pulse/>
           </div>
           
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white via-emerald-200 to-teal-200 bg-clip-text text-transparent">
+          <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-white via-emerald-200 to-teal-200 bg-clip-text text-transparent">",
             Revolutionary AI Services That Will Transform Your Business
           </h2>
           
           <p className="text-xl text-emerald-100 max-w-4xl mx-auto mb-8">
-            Three breakthrough services that are already delivering <span className="font-bold text-yellow-300">$2.8B+ in enterprise value</span> and 
+            Three breakthrough services that are already delivering <span className="font-bold text-yellow-300">$2.8B+ in enterprise value</span> and ";
             revolutionizing how companies operate. Join the AI revolution today.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid lg: grid-cols-3 gap-8 mb-12">",
           {/* Quantum Edge Fusion Platform */}
-          <div className="bg-gradient-to-br from-blue-800/60 to-purple-800/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-blue-400/40 hover:border-blue-400/70 transition-all duration-500 hover:scale-105 hover:shadow-2xl group">
+          <div className="bg-gradient-to-br from-blue-800/60 to-purple-800/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-blue-400/40 hover: border-blue-400/70 transition-all duration-500 hover:scale-105 hover:shadow-2xl group">",
             <div className="text-center mb-6">
-              <div className="bg-blue-500/20 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-500/30 transition-colors border-2 border-blue-400/30 shadow-lg">
-                <Zap className="w-10 h-10 text-blue-400 group-hover:scale-110 transition-transform duration-300" />
+              <div className="bg-blue-500/20 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover: bg-blue-500/30 transition-colors border-2 border-blue-400/30 shadow-lg">",
+                <Zap className="w-10 h-10 text-blue-400 group-hover: scale-110 transition-transform duration-300/>",
               </div>
               <h3 className="text-2xl font-bold text-white mb-2">Quantum Edge Fusion Platform</h3>
               <div className="text-blue-300 font-semibold">Starting at $25,000/month</div>
@@ -43,19 +42,19 @@ const NewServicesPromoBanner2026: React.FC = () => {
             
             <div className="space-y-4 mb-6">
               <div className="flex items-center gap-3 text-emerald-100">
-                <CheckCircle className="w-5 h-5 text-emerald-400 flex-shrink-0" />
+                <CheckCircle className="w-5 h-5 text-emerald-400 flex-shrink-0/>
                 <span className="font-semibold">1000x Speed Improvement</span>
               </div>
               <div className="flex items-center gap-3 text-emerald-100">
-                <CheckCircle className="w-5 h-5 text-emerald-400 flex-shrink-0" />
+                <CheckCircle className="w-5 h-5 text-emerald-400 flex-shrink-0/>
                 <span className="font-semibold">Sub-millisecond Latency</span>
               </div>
               <div className="flex items-center gap-3 text-emerald-100">
-                <CheckCircle className="w-5 h-5 text-emerald-400 flex-shrink-0" />
+                <CheckCircle className="w-5 h-5 text-emerald-400 flex-shrink-0/>
                 <span className="font-semibold">99.99% Reliability</span>
               </div>
               <div className="flex items-center gap-3 text-emerald-100">
-                <CheckCircle className="w-5 h-5 text-emerald-400 flex-shrink-0" />
+                <CheckCircle className="w-5 h-5 text-emerald-400 flex-shrink-0/>
                 <span className="font-semibold">90% Energy Reduction</span>
               </div>
             </div>
@@ -70,17 +69,17 @@ const NewServicesPromoBanner2026: React.FC = () => {
 
             <Link 
               to="/services/quantum-edge-fusion-platform" 
-              className="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-bold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+              className="block w-full text-center bg-blue-600 hover: bg-blue-700 text-white px-6 py-3 rounded-lg font-bold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl",
             >
               Get Started Today
             </Link>
           </div>
 
           {/* Synthetic Consciousness AI Platform */}
-          <div className="bg-gradient-to-br from-purple-800/60 to-pink-800/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-purple-400/40 hover:border-purple-400/70 transition-all duration-500 hover:scale-105 hover:shadow-2xl group">
+          <div className="bg-gradient-to-br from-purple-800/60 to-pink-800/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-purple-400/40 hover: border-purple-400/70 transition-all duration-500 hover:scale-105 hover:shadow-2xl group">",
             <div className="text-center mb-6">
-              <div className="bg-purple-500/20 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-purple-500/30 transition-colors border-2 border-purple-400/30 shadow-lg">
-                <Brain className="w-10 h-10 text-purple-400 group-hover:scale-110 transition-transform duration-300" />
+              <div className="bg-purple-500/20 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover: bg-purple-500/30 transition-colors border-2 border-purple-400/30 shadow-lg">",
+                <Brain className="w-10 h-10 text-purple-400 group-hover: scale-110 transition-transform duration-300/>",
               </div>
               <h3 className="text-2xl font-bold text-white mb-2">Synthetic Consciousness AI</h3>
               <div className="text-purple-300 font-semibold">Starting at $50,000/month</div>
@@ -88,19 +87,19 @@ const NewServicesPromoBanner2026: React.FC = () => {
             
             <div className="space-y-4 mb-6">
               <div className="flex items-center gap-3 text-emerald-100">
-                <CheckCircle className="w-5 h-5 text-emerald-400 flex-shrink-0" />
+                <CheckCircle className="w-5 h-5 text-emerald-400 flex-shrink-0/>
                 <span className="font-semibold">98.7% Consciousness Accuracy</span>
               </div>
               <div className="flex items-center gap-3 text-emerald-100">
-                <CheckCircle className="w-5 h-5 text-emerald-400 flex-shrink-0" />
+                <CheckCircle className="w-5 h-5 text-emerald-400 flex-shrink-0/>
                 <span className="font-semibold">94% Emotional Intelligence</span>
               </div>
               <div className="flex items-center gap-3 text-emerald-100">
-                <CheckCircle className="w-5 h-5 text-emerald-400 flex-shrink-0" />
+                <CheckCircle className="w-5 h-5 text-emerald-400 flex-shrink-0/>
                 <span className="font-semibold">87% Creative Originality</span>
               </div>
               <div className="flex items-center gap-3 text-emerald-100">
-                <CheckCircle className="w-5 h-5 text-emerald-400 flex-shrink-0" />
+                <CheckCircle className="w-5 h-5 text-emerald-400 flex-shrink-0/>
                 <span className="font-semibold">99.2% Ethical Alignment</span>
               </div>
             </div>
@@ -115,17 +114,17 @@ const NewServicesPromoBanner2026: React.FC = () => {
 
             <Link 
               to="/services/synthetic-consciousness-ai-platform" 
-              className="block w-full text-center bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-bold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+              className="block w-full text-center bg-purple-600 hover: bg-purple-700 text-white px-6 py-3 rounded-lg font-bold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl",
             >
               Explore Platform
             </Link>
           </div>
 
           {/* Neuromorphic Processing Suite */}
-          <div className="bg-gradient-to-br from-green-800/60 to-teal-800/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-green-400/40 hover:border-green-400/70 transition-all duration-500 hover:scale-105 hover:shadow-2xl group">
+          <div className="bg-gradient-to-br from-green-800/60 to-teal-800/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-green-400/40 hover: border-green-400/70 transition-all duration-500 hover:scale-105 hover:shadow-2xl group">",
             <div className="text-center mb-6">
-              <div className="bg-green-500/20 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-green-500/30 transition-colors border-2 border-green-400/30 shadow-lg">
-                <Cpu className="w-10 h-10 text-green-400 group-hover:scale-110 transition-transform duration-300" />
+              <div className="bg-green-500/20 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover: bg-green-500/30 transition-colors border-2 border-green-400/30 shadow-lg">",
+                <Cpu className="w-10 h-10 text-green-400 group-hover: scale-110 transition-transform duration-300/>",
               </div>
               <h3 className="text-2xl font-bold text-white mb-2">Neuromorphic Processing Suite</h3>
               <div className="text-green-300 font-semibold">Starting at $15,000/month</div>
@@ -133,19 +132,19 @@ const NewServicesPromoBanner2026: React.FC = () => {
             
             <div className="space-y-4 mb-6">
               <div className="flex items-center gap-3 text-emerald-100">
-                <CheckCircle className="w-5 h-5 text-emerald-400 flex-shrink-0" />
+                <CheckCircle className="w-5 h-5 text-emerald-400 flex-shrink-0/>
                 <span className="font-semibold">1000x Energy Efficiency</span>
               </div>
               <div className="flex items-center gap-3 text-emerald-100">
-                <CheckCircle className="w-5 h-5 text-emerald-400 flex-shrink-0" />
+                <CheckCircle className="w-5 h-5 text-emerald-400 flex-shrink-0/>
                 <span className="font-semibold">10,000x Speed Improvement</span>
               </div>
               <div className="flex items-center gap-3 text-emerald-100">
-                <CheckCircle className="w-5 h-5 text-emerald-400 flex-shrink-0" />
+                <CheckCircle className="w-5 h-5 text-emerald-400 flex-shrink-0/>
                 <span className="font-semibold">Real-Time Learning</span>
               </div>
               <div className="flex items-center gap-3 text-emerald-100">
-                <CheckCircle className="w-5 h-5 text-emerald-400 flex-shrink-0" />
+                <CheckCircle className="w-5 h-5 text-emerald-400 flex-shrink-0/>
                 <span className="font-semibold">99.9% Cognitive Accuracy</span>
               </div>
             </div>
@@ -160,7 +159,7 @@ const NewServicesPromoBanner2026: React.FC = () => {
 
             <Link 
               to="/services/neuromorphic-processing-suite" 
-              className="block w-full text-center bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-bold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+              className="block w-full text-center bg-green-600 hover: bg-green-700 text-white px-6 py-3 rounded-lg font-bold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl",
             >
               Start Free Trial
             </Link>
@@ -170,9 +169,9 @@ const NewServicesPromoBanner2026: React.FC = () => {
         <div className="text-center">
           <div className="bg-gradient-to-r from-yellow-500/20 to-orange-500/20 border-2 border-yellow-400/50 rounded-2xl p-8 mb-8">
             <div className="flex items-center justify-center gap-3 mb-4">
-              <TrendingUp className="w-8 h-8 text-yellow-400 animate-bounce" />
+              <TrendingUp className="w-8 h-8 text-yellow-400 animate-bounce/>
               <span className="text-2xl font-bold text-yellow-300">EARLY ACCESS SPECIAL OFFER</span>
-              <TrendingUp className="w-8 h-8 text-yellow-400 animate-bounce" />
+              <TrendingUp className="w-8 h-8 text-yellow-400 animate-bounce/>
             </div>
             <p className="text-white text-xl font-semibold mb-2">
               🎯 Get 40% OFF Your First 6 Months + FREE Implementation
@@ -182,28 +181,28 @@ const NewServicesPromoBanner2026: React.FC = () => {
             </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+          <div className="flex flex-col sm: flex-row gap-6 justify-center items-center">",
             <Link 
               to="/contact" 
-              className="inline-flex items-center gap-3 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white px-10 py-4 rounded-xl font-bold text-xl transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl"
+              className="inline-flex items-center gap-3 bg-gradient-to-r from-emerald-600 to-teal-600 hover: from-emerald-700 hover:to-teal-700 text-white px-10 py-4 rounded-xl font-bold text-xl transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl",
             >
-              <Shield className="w-6 h-6" />
+              <Shield className="w-6 h-6/>
               Get Started Now
-              <ArrowRight className="w-6 h-6" />
+              <ArrowRight className="w-6 h-6/>
             </Link>
             <Link 
               to="/services" 
-              className="inline-flex items-center gap-3 border-2 border-white text-white hover:bg-white hover:text-emerald-900 px-10 py-4 rounded-xl font-bold text-xl transition-all duration-300 hover:scale-105"
+              className="inline-flex items-center gap-3 border-2 border-white text-white hover: bg-white hover:text-emerald-900 px-10 py-4 rounded-xl font-bold text-xl transition-all duration-300 hover:scale-105",
             >
-              <Star className="w-6 h-6" />
+              <Star className="w-6 h-6/>
               View All Services
             </Link>
           </div>
 
           <div className="mt-8 text-lg text-emerald-200">
-            <span className="font-bold">Trusted by 500+ companies worldwide</span> • 
-            <span className="font-bold text-yellow-300"> $15B+ in value created</span> • 
-            <span className="font-bold"> 99.9% customer satisfaction</span> • 
+            <span className="font-bold">Trusted by 500+ companies worldwide</span> • ";
+            <span className="font-bold text-yellow-300"> $15B+ in value created</span> • ";
+            <span className="font-bold"> 99.9% customer satisfaction</span> • ";
             <span className="font-bold"> 24/7 expert support</span>
           </div>
         </div>

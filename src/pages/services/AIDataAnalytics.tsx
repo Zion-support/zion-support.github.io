@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react";";
 
 export default function AIDataAnalytics(): React.JSX.Element {
   return (
@@ -8,3 +8,4 @@ export default function AIDataAnalytics(): React.JSX.Element {
   );
 }
 
+;

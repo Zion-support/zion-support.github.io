@@ -7,19 +7,18 @@ import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import {
 
 } from '../utils/bannerRotation';
-
 interface UseBannerRotationOptions {
-banners: BannerConfig[];
+banners: BannerConfig[],
 strategy?: Partial<RotationStrategy>;
 autoRotate?: boolean;
 balancedSelection?: boolean;
 }
 
 interface UseBannerRotationReturn {
-displayedBanners: BannerConfig[];
-handleBannerImpression: (bannerId: string) => void;
-handleBannerClick: (bannerId: string) => void;
-refreshBanners: () => void;
+displayedBanners: BannerConfig[],
+handleBannerImpression: (bannerId: string) => void,
+handleBannerClick: (bannerId: string) => void,
+refreshBanners: () => void,
 isLoading: boolean;
 }
 
@@ -56,13 +55,13 @@ export const useBannerRotation = ({
   }, [bannersWithStats, strategy, balancedSelection]);
   
   // Handle banner impression
-  const handleBannerImpression = useCallback((bannerId: string) => {
+  const handleBannerImpression = useCallback((bannerId: string) => {,
     trackImpression(bannerId);
     trackBannerInteraction(bannerId, 'impression');
   }, []);
   
   // Handle banner click
-  const handleBannerClick = useCallback((bannerId: string) => {
+  const handleBannerClick = useCallback((bannerId: string) => {,
     trackClick(bannerId);
     trackBannerInteraction(bannerId, 'click');
   }, []);
@@ -110,7 +109,7 @@ export const useBannerRotation = ({
  * Hook for tracking banner visibility
  */
 export const useBannerVisibility = (
-  bannerId: string,
+  bannerId: string,,
   onVisible?: () => void
 ): { ref: React.RefObject<HTMLDivElement | null> } => {
   const ref = React.useRef<HTMLDivElement | null>(null);
@@ -129,7 +128,7 @@ export const useBannerVisibility = (
         }
       },
       {
-        threshold: 0.5, // 50% visible
+        threshold: 0.5, // 50% visible,
       }
     );
     
@@ -145,10 +144,10 @@ export const useBannerVisibility = (
  * Hook for A/B testing banners
  */
 export const useBannerABTest = (
-  variations: BannerConfig[],
-  testName: string
+  variations: BannerConfig[],,
+  testName: string,
 ): {
-  selectedVariation: BannerConfig;
+  selectedVariation: BannerConfig,
   trackVariationPerformance: (metric: string, value: number) => void;
 } => {
   // Get consistent user ID for test assignment
@@ -156,7 +155,7 @@ export const useBannerABTest = (
     const stored = localStorage.getItem('user_id');
     if (stored) return stored;
     
-    const newId = `user_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+    const newId = `user_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;`;
     localStorage.setItem('user_id', newId);
     return newId;
   }, []);
@@ -173,10 +172,10 @@ export const useBannerABTest = (
   
   // Track variation performance
   const trackVariationPerformance = useCallback(
-    (metric: string, value: number) => {
-      trackBannerInteraction(selectedVariation.id, 'click', {
+    (metric: string, value: number) => {,
+      trackBannerInteraction(selectedVariation.id, 'click', {;
         testName,
-        variation: selectedVariation.id,
+        variation: selectedVariation.id,,
         metric,
         value,
       });
@@ -191,3 +190,4 @@ export const useBannerABTest = (
 };
 
 export default useBannerRotation;
+;

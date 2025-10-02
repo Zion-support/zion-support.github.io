@@ -4,15 +4,15 @@
  */
 
 interface PerformanceMetric {
-name: string;
-value: number;
-rating: 'good' | 'needs-improvement' | 'poor';
+name: string,
+value: number,
+rating: 'good' | 'needs-improvement' | 'poor';',
 timestamp: number;
 }
 
 class EnhancedPerformanceMonitor {
-private metrics: PerformanceMetric[] = [];,
-private observers: PerformanceObserver[] = [];,
+private metrics: PerformanceMetric[] = [],,
+private observers: PerformanceObserver[] = [],,
 /**
 * Initialize performance monitoring
 */
@@ -81,14 +81,13 @@ this.observeLayoutShifts();
    */
   private observeLongTasks(): void {
     if (!('PerformanceObserver' in window)) return;
-
     try {
       const longTaskObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         entries.forEach((entry) => {
           const duration = entry.duration;
           if (duration > 50) {
-            console.warn(`Long task detected: ${duration.toFixed(2)}ms`, entry);
+            console.warn(`Long task detected: ${duration.toFixed(2)}ms`, entry);`;
             this.recordMetric('Long Task', duration, this.getRating('longTask', duration));
           }
         });
@@ -105,14 +104,13 @@ this.observeLayoutShifts();
    */
   private observeLayoutShifts(): void {
     if (!('PerformanceObserver' in window)) return;
-
     try {
       const layoutShiftObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         entries.forEach((entry) => {
           const shift = entry as LayoutShift;
           if (!shift.hadRecentInput) {
-            console.log(`Layout shift: ${shift.value.toFixed(4)}`, shift);
+            console.log(`Layout shift: ${shift.value.toFixed(4)}`, shift);`;
           }
         });
       });
@@ -126,22 +124,22 @@ this.observeLayoutShifts();
   /**
    * Record a performance metric
    */
-  private recordMetric(name: string, value: number, rating: 'good' | 'needs-improvement' | 'poor'): void {
-    const metric: PerformanceMetric = {
+  private recordMetric(name: string, value: number, rating: 'good' | 'needs-improvement' | 'poor'): void {',
+    const metric: PerformanceMetric = {,
       name,
       value,
       rating,
-      timestamp: Date.now()
+      timestamp: Date.now(),
     };
     
     this.metrics.push(metric);
-    console.log(`[Performance] ${name}: ${value.toFixed(2)} (${rating})`);
+    console.log(`[Performance] ${name}: ${value.toFixed(2)} (${rating})`);`;
   }
 
   /**
    * Get rating for a metric
    */
-  private getRating(metric: string, value: number): 'good' | 'needs-improvement' | 'poor' {
+  private getRating(metric: string, value: number): 'good' | 'needs-improvement' | 'poor' {',
     const thresholds: Record<string, { good: number; poor: number }> = {
       lcp: { good: 2500, poor: 4000 },
       fid: { good: 100, poor: 300 },
@@ -151,7 +149,6 @@ this.observeLayoutShifts();
 
     const threshold = thresholds[metric];
     if (!threshold) return 'good';
-
     if (value <= threshold.good) return 'good';
     if (value <= threshold.poor) return 'needs-improvement';
     return 'poor';
@@ -187,7 +184,7 @@ this.observeLayoutShifts();
       
       result[name] = {
         average,
-        count: values.length,
+        count: values.length,,
         rating
       };
     });
@@ -198,7 +195,7 @@ this.observeLayoutShifts();
   /**
    * Get most common rating
    */
-  private getMostCommonRating(ratings: string[]): string {
+  private getMostCommonRating(ratings: string[]): string {,
     const counts: Record<string, number> = {};
     ratings.forEach((rating) => {
       counts[rating] = (counts[rating] || 0) + 1;
@@ -228,7 +225,7 @@ this.observeLayoutShifts();
 
 // Type definitions for Performance API
 interface LayoutShift extends PerformanceEntry {
-value: number;,
+value: number,,
 hadRecentInput: boolean;
 }
 
@@ -237,3 +234,4 @@ interface PerformanceEventTiming extends PerformanceEntry {
 }
 
 export const enhancedPerformanceMonitor = new EnhancedPerformanceMonitor();
+;

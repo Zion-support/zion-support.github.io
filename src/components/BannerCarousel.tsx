@@ -1,30 +1,29 @@
 import React, { useState, useEffect } from 'react';
-
 interface BannerProps {
-title: string;
-description: string;
+title: string,
+description: string,
 image?: string;
 link?: string;
 }
 
-const BannerCarousel: React.FC = () => {
+const BannerCarousel: React.FC = () => {,
   const [currentBanner, setCurrentBanner] = useState(0);
 
-  const banners: BannerProps[] = [
+  const banners: BannerProps[] = [,
     {
-      title: "AI-Powered Business Solutions",
-      description: "Transform your business with cutting-edge AI technology",
-      link: "/services/ai-services"
+      title: "AI-Powered Business Solutions",",
+      description: "Transform your business with cutting-edge AI technology",",
+      link: "/services/ai-services",
     },
     {
-      title: "Micro SaaS Solutions",
-      description: "Scalable software solutions for modern businesses",
-      link: "/services/micro-saas"
+      title: "Micro SaaS Solutions",",
+      description: "Scalable software solutions for modern businesses",",
+      link: "/services/micro-saas",
     },
     {
-      title: "Enterprise IT Services",
-      description: "Comprehensive IT solutions for enterprise needs",
-      link: "/services/it-services"
+      title: "Enterprise IT Services",",
+      description: "Comprehensive IT solutions for enterprise needs",",
+      link: "/services/it-services",
     }
   ];
 
@@ -44,7 +43,7 @@ const BannerCarousel: React.FC = () => {
         {banners[currentBanner].link && (
           <a 
             href={banners[currentBanner].link}
-            className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+            className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover: bg-gray-100 transition-colors",
           >
             Learn More
           </a>
@@ -57,10 +56,10 @@ const BannerCarousel: React.FC = () => {
           <button
             key={index}
             onClick={() => setCurrentBanner(index)}
-            className={`w-3 h-3 rounded-full transition-colors ${
+            className={`w-3 h-3 rounded-full transition-colors ${`;
               index === currentBanner ? 'bg-white' : 'bg-white/50'
-            }`}
-            aria-label={`Go to banner ${index + 1}`}
+            }`}`;
+            aria-label={`Go to banner ${index + 1}`}`;
           />
         ))}
       </div>

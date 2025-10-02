@@ -1,38 +1,34 @@
 import {
 
-} from "lucide-react";
+} from "lucide-react";";
 
 const ZeroTrustAISecurityFramework2025 = () => {
   return (
     <>
       <Helmet>
         <title>
-          Zero-Trust AI Security Framework: Enterprise Implementation Guide | Zion Tech Group
+          Zero-Trust AI Security Framework: Enterprise Implementation Guide | Zion Tech Group,
         </title>
         <meta
           name="description"
-          content="Comprehensive zero-trust security framework for AI systems. Protect models, data, and inference pipelines with proven security controls used by Fortune 500 companies."
-        />
-        <meta
+          content="Comprehensive zero-trust security framework for AI systems. Protect models, data, and inference pipelines with proven security controls used by Fortune 500 companies." /><meta
           name="keywords"
-          content="AI security, zero trust, model security, ML security, AI governance, enterprise security"
-        />
-        <link
+          content="AI security, zero trust, model security, ML security, AI governance, enterprise security" /><link
           rel="canonical"
-          href="https://ziontechgroup.com/blog/zero-trust-ai-security-framework-2025"
+          href="https://ziontechgroup.com/blog/zero-trust-ai-security-framework-2025",
         />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900/30 to-slate-900">
-        {/* Hero Section */}
+        {/* Hero Section */};
         <div className="relative overflow-hidden bg-gradient-to-r from-red-600 to-orange-600 py-16">
           <div className="absolute inset-0 bg-black/20"></div>
           <div className="container mx-auto px-6 relative z-10">
             <Link
               to="/blog"
-              className="inline-flex items-center text-white/90 hover:text-white mb-8 transition-colors"
+              className="inline-flex items-center text-white/90 hover: text-white mb-8 transition-colors",
             >
-              <ArrowLeft className="w-4 h-4 mr-2" />
+              <ArrowLeft className="w-4 h-4 mr-2/>
               Back to Blog
             </Link>
 
@@ -49,21 +45,21 @@ const ZeroTrustAISecurityFramework2025 = () => {
                 </span>
               </div>
 
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
-                Zero-Trust AI Security Framework: Protecting Models, Data & Inference Pipelines
+              <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 leading-tight">",
+                Zero-Trust AI Security Framework: Protecting Models, Data & Inference Pipelines,
               </h1>
 
               <div className="flex flex-wrap items-center gap-6 text-white/90">
                 <div className="flex items-center">
-                  <Calendar className="w-5 h-5 mr-2" />
+                  <Calendar className="w-5 h-5 mr-2/>
                   <span>October 1, 2025</span>
                 </div>
                 <div className="flex items-center">
-                  <Clock className="w-5 h-5 mr-2" />
+                  <Clock className="w-5 h-5 mr-2/>
                   <span>14 min read</span>
                 </div>
                 <div className="flex items-center">
-                  <TrendingUp className="w-5 h-5 mr-2" />
+                  <TrendingUp className="w-5 h-5 mr-2/>
                   <span>Mission Critical</span>
                 </div>
               </div>
@@ -77,11 +73,11 @@ const ZeroTrustAISecurityFramework2025 = () => {
             {/* Threat Landscape */}
             <div className="bg-gradient-to-r from-red-500/10 to-orange-500/10 border-l-4 border-red-500 p-6 rounded-r-lg mb-12">
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
-                <AlertTriangle className="w-6 h-6 mr-2 text-red-400" />
+                <AlertTriangle className="w-6 h-6 mr-2 text-red-400/>
                 The AI Security Crisis
               </h2>
               <p className="text-gray-300 leading-relaxed mb-4">
-                AI systems face unprecedented security challenges: model theft, data poisoning, adversarial attacks,
+                AI systems face unprecedented security challenges: model theft, data poisoning, adversarial attacks,,
                 and prompt injection. Traditional perimeter security fails for distributed AI architectures.
                 Zero-trust frameworks are now mandatory for enterprise AI deployments.
               </p>
@@ -95,8 +91,8 @@ const ZeroTrustAISecurityFramework2025 = () => {
             {/* Core Principles */}
             <section className="mb-12">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center">
-                <ShieldCheck className="w-8 h-8 mr-3 text-emerald-400" />
-                Zero-Trust AI: Core Principles
+                <ShieldCheck className="w-8 h-8 mr-3 text-emerald-400/>
+                Zero-Trust AI: Core Principles,
               </h2>
 
               <div className="space-y-6">
@@ -193,26 +189,25 @@ const ZeroTrustAISecurityFramework2025 = () => {
             {/* Implementation Architecture */}
             <section className="mb-12">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center">
-                <Lock className="w-8 h-8 mr-3 text-blue-400" />
+                <Lock className="w-8 h-8 mr-3 text-blue-400/>
                 Reference Architecture
               </h2>
 
               <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-lg border border-slate-700 mb-6">
                 <h3 className="text-2xl font-semibold text-white mb-6">Five-Layer Security Model</h3>
-
                 <div className="space-y-6">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 w-16 h-16 bg-red-500/20 rounded-lg flex items-center justify-center mr-4">
                       <span className="text-3xl">🚪</span>
                     </div>
                     <div>
-                      <h4 className="text-lg font-semibold text-white mb-2">Layer 1: Identity & Access Management</h4>
+                      <h4 className="text-lg font-semibold text-white mb-2">Layer 1: Identity & Access Management</h4>",
                       <p className="text-gray-400 mb-2">
                         Centralized identity provider (Okta, Auth0) with SSO, MFA, and adaptive authentication.
                         All humans and services get unique identities.
                       </p>
                       <p className="text-sm text-emerald-400">
-                        Tools: Keycloak, Okta, AWS IAM Identity Center
+                        Tools: Keycloak, Okta, AWS IAM Identity Center,
                       </p>
                     </div>
                   </div>
@@ -222,13 +217,13 @@ const ZeroTrustAISecurityFramework2025 = () => {
                       <span className="text-3xl">🛡️</span>
                     </div>
                     <div>
-                      <h4 className="text-lg font-semibold text-white mb-2">Layer 2: Network Security</h4>
+                      <h4 className="text-lg font-semibold text-white mb-2">Layer 2: Network Security</h4>",
                       <p className="text-gray-400 mb-2">
                         Service mesh (Istio, Linkerd) with mTLS, traffic encryption, and zero-trust networking.
                         Every microservice authenticated before communication.
                       </p>
                       <p className="text-sm text-cyan-400">
-                        Tools: Istio, Linkerd, Cilium, Consul Connect
+                        Tools: Istio, Linkerd, Cilium, Consul Connect,
                       </p>
                     </div>
                   </div>
@@ -238,13 +233,13 @@ const ZeroTrustAISecurityFramework2025 = () => {
                       <span className="text-3xl">📋</span>
                     </div>
                     <div>
-                      <h4 className="text-lg font-semibold text-white mb-2">Layer 3: Policy Enforcement</h4>
+                      <h4 className="text-lg font-semibold text-white mb-2">Layer 3: Policy Enforcement</h4>",
                       <p className="text-gray-400 mb-2">
                         Declarative policies as code. API gateway enforces rate limits, quotas, and access controls.
                         OPA evaluates policies in real-time.
                       </p>
                       <p className="text-sm text-blue-400">
-                        Tools: Open Policy Agent, Kong Gateway, AWS API Gateway
+                        Tools: Open Policy Agent, Kong Gateway, AWS API Gateway,
                       </p>
                     </div>
                   </div>
@@ -254,13 +249,13 @@ const ZeroTrustAISecurityFramework2025 = () => {
                       <span className="text-3xl">🔍</span>
                     </div>
                     <div>
-                      <h4 className="text-lg font-semibold text-white mb-2">Layer 4: Monitoring & Detection</h4>
+                      <h4 className="text-lg font-semibold text-white mb-2">Layer 4: Monitoring & Detection</h4>",
                       <p className="text-gray-400 mb-2">
                         Continuous monitoring with behavioral baselines. ML-powered anomaly detection flags
                         suspicious patterns (unusual data access, model queries).
                       </p>
                       <p className="text-sm text-purple-400">
-                        Tools: Datadog Security, Splunk SIEM, Wiz, Lacework
+                        Tools: Datadog Security, Splunk SIEM, Wiz, Lacework,
                       </p>
                     </div>
                   </div>
@@ -270,13 +265,13 @@ const ZeroTrustAISecurityFramework2025 = () => {
                       <span className="text-3xl">📜</span>
                     </div>
                     <div>
-                      <h4 className="text-lg font-semibold text-white mb-2">Layer 5: Audit & Compliance</h4>
+                      <h4 className="text-lg font-semibold text-white mb-2">Layer 5: Audit & Compliance</h4>",
                       <p className="text-gray-400 mb-2">
                         Immutable audit logs for every model access, data query, and inference request.
                         Automated compliance reporting (SOC 2, ISO 27001, GDPR).
                       </p>
                       <p className="text-sm text-pink-400">
-                        Tools: AWS CloudTrail, GCP Audit Logs, Vanta, Drata
+                        Tools: AWS CloudTrail, GCP Audit Logs, Vanta, Drata,
                       </p>
                     </div>
                   </div>
@@ -287,7 +282,7 @@ const ZeroTrustAISecurityFramework2025 = () => {
             {/* Attack Vectors & Mitigations */}
             <section className="mb-12">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center">
-                <Shield className="w-8 h-8 mr-3 text-red-400" />
+                <Shield className="w-8 h-8 mr-3 text-red-400/>
                 Common AI Attack Vectors & Mitigations
               </h2>
 
@@ -299,7 +294,7 @@ const ZeroTrustAISecurityFramework2025 = () => {
                     or execute unauthorized actions.
                   </p>
                   <div className="bg-slate-900/70 p-4 rounded">
-                    <p className="text-emerald-400 font-semibold mb-2">Mitigations:</p>
+                    <p className="text-emerald-400 font-semibold mb-2">Mitigations: </p>",
                     <ul className="text-sm text-gray-300 space-y-1">
                       <li>• Input sanitization with LLM guardrails (NeMo Guardrails, Llama Guard)</li>
                       <li>• Prompt templates with variable substitution (no direct user input)</li>
@@ -315,7 +310,7 @@ const ZeroTrustAISecurityFramework2025 = () => {
                     Attackers inject malicious data during training to create backdoors or degrade model performance.
                   </p>
                   <div className="bg-slate-900/70 p-4 rounded">
-                    <p className="text-cyan-400 font-semibold mb-2">Mitigations:</p>
+                    <p className="text-cyan-400 font-semibold mb-2">Mitigations: </p>",
                     <ul className="text-sm text-gray-300 space-y-1">
                       <li>• Data provenance tracking with cryptographic signatures</li>
                       <li>• Outlier detection on training datasets (Isolation Forest, LOF)</li>
@@ -331,7 +326,7 @@ const ZeroTrustAISecurityFramework2025 = () => {
                     Adversaries query models repeatedly to reverse-engineer weights or steal intellectual property.
                   </p>
                   <div className="bg-slate-900/70 p-4 rounded">
-                    <p className="text-blue-400 font-semibold mb-2">Mitigations:</p>
+                    <p className="text-blue-400 font-semibold mb-2">Mitigations: </p>",
                     <ul className="text-sm text-gray-300 space-y-1">
                       <li>• Rate limiting (per user/API key) with adaptive throttling</li>
                       <li>• Query pattern analysis to detect scraping (abnormal distributions)</li>
@@ -347,7 +342,7 @@ const ZeroTrustAISecurityFramework2025 = () => {
             <section className="mb-12">
               <div className="bg-gradient-to-r from-emerald-500/20 to-blue-500/20 p-8 rounded-lg border border-emerald-500/30">
                 <h2 className="text-3xl font-bold text-white mb-6">Security Posture Improvements</h2>
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid md: grid-cols-2 gap-6">",
                   <div>
                     <p className="text-5xl font-bold text-emerald-400 mb-2">92%</p>
                     <p className="text-gray-300">Reduction in security incidents post-implementation</p>
@@ -379,10 +374,10 @@ const ZeroTrustAISecurityFramework2025 = () => {
                 </p>
                 <Link
                   to="/contact"
-                  className="inline-flex items-center px-8 py-4 bg-white text-red-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors"
+                  className="inline-flex items-center px-8 py-4 bg-white text-red-600 font-semibold rounded-lg hover: bg-gray-100 transition-colors",
                 >
                   Request Security Assessment
-                  <ArrowLeft className="w-5 h-5 ml-2 rotate-180" />
+                  <ArrowLeft className="w-5 h-5 ml-2 rotate-180/>
                 </Link>
               </div>
             </section>
@@ -394,3 +389,4 @@ const ZeroTrustAISecurityFramework2025 = () => {
 };
 
 export default ZeroTrustAISecurityFramework2025;
+;

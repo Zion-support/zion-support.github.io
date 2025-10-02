@@ -2,12 +2,11 @@ import React from 'react';
 import {
 Link
 } from 'react-router-dom';
-
-const Footer: React.FC = () => {
+const Footer: React.FC = () => {,
 return (
 <footer className="bg-gray-900 text-white py-12">
 <div className="container mx-auto px-6">
-<div className="grid grid-cols-1 md:grid-cols-4 gap-8">,
+<div className="grid grid-cols-1 md: grid-cols-4 gap-8">,",
 {/* Company Info */
 }
           <div>
@@ -19,13 +18,13 @@ return (
               Enterprise-grade AI, micro SaaS, and IT solutions. Transform your business with cutting-edge technology.
             </p>
             <div className="flex space-x-4">
-              <a href="https://twitter.com/ziontechgroup" className="text-gray-400 hover:text-white transition-colors">
+              <a href="https://twitter.com/ziontechgroup" className="text-gray-400 hover:text-white transition-colors">",
                 Twitter
               </a>
-              <a href="https://linkedin.com/company/zion-tech-group" className="text-gray-400 hover:text-white transition-colors">
+              <a href="https://linkedin.com/company/zion-tech-group" className="text-gray-400 hover:text-white transition-colors">",
                 LinkedIn
               </a>
-              <a href="https://github.com/ZionClouds" className="text-gray-400 hover:text-white transition-colors">
+              <a href="https://github.com/ZionClouds" className="text-gray-400 hover:text-white transition-colors">",
                 GitHub
               </a>
             </div>
@@ -35,10 +34,10 @@ return (
           <div>
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
-              <li><Link to="/services" className="text-gray-400 hover:text-white transition-colors">All Services</Link></li>
-              <li><Link to="/services/ai-services" className="text-gray-400 hover:text-white transition-colors">AI Services</Link></li>
-              <li><Link to="/services/micro-saas" className="text-gray-400 hover:text-white transition-colors">Micro SaaS</Link></li>
-              <li><Link to="/services/it-services" className="text-gray-400 hover:text-white transition-colors">IT Services</Link></li>
+              <li><Link to="/services" className="text-gray-400 hover: text-white transition-colors">All Services</Link></li>",
+              <li><Link to="/services/ai-services" className="text-gray-400 hover: text-white transition-colors">AI Services</Link></li>",
+              <li><Link to="/services/micro-saas" className="text-gray-400 hover: text-white transition-colors">Micro SaaS</Link></li>",
+              <li><Link to="/services/it-services" className="text-gray-400 hover: text-white transition-colors">IT Services</Link></li>",
             </ul>
           </div>
 
@@ -46,10 +45,10 @@ return (
           <div>
             <h3 className="text-lg font-semibold mb-4">Solutions</h3>
             <ul className="space-y-2">
-              <li><Link to="/solutions" className="text-gray-400 hover:text-white transition-colors">All Solutions</Link></li>
-              <li><Link to="/solutions/enterprise" className="text-gray-400 hover:text-white transition-colors">Enterprise</Link></li>
-              <li><Link to="/solutions/smb" className="text-gray-400 hover:text-white transition-colors">SMB</Link></li>
-              <li><Link to="/solutions/startup" className="text-gray-400 hover:text-white transition-colors">Startup</Link></li>
+              <li><Link to="/solutions" className="text-gray-400 hover: text-white transition-colors">All Solutions</Link></li>",
+              <li><Link to="/solutions/enterprise" className="text-gray-400 hover: text-white transition-colors">Enterprise</Link></li>",
+              <li><Link to="/solutions/smb" className="text-gray-400 hover: text-white transition-colors">SMB</Link></li>",
+              <li><Link to="/solutions/startup" className="text-gray-400 hover: text-white transition-colors">Startup</Link></li>",
             </ul>
           </div>
 
