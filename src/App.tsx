@@ -123,7 +123,6 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <>
       <HelmetProvider>
         <AccessibilityEnhancer>
           <EnhancedErrorBoundary>

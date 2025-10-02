@@ -1,130 +1,139 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Brain, Zap, Shield, Cloud, Database, Users, BarChart3, Cog, Target, Rocket } from 'lucide-react';
-import { } from 'react-helmet-async';
 
 const AISolutions: React.FC = () => {
   const aiSolutions = [
     {
-      icon: Brain
-      title: 'Machine Learning & Deep Learning'
-      description: 'Advanced AI models for predictive analytics, pattern recognition, and intelligent decision making.'
-      features: ['Neural Networks', 'Predictive Analytics', 'Pattern Recognition', 'Automated Learning']
-    }
+      icon: Brain,
+      title: 'Machine Learning & Deep Learning',
+      description: 'Advanced AI models for predictive analytics, pattern recognition, and intelligent decision making.',
+      features: ['Neural Networks', 'Predictive Analytics', 'Pattern Recognition', 'Automated Learning'],
+      color: 'blue',
+    },
     {
-      icon: Zap
-      title: 'AI Automation'
-      description: 'Streamline business processes with intelligent automation solutions.'
-      features: ['Process Automation', 'Workflow Optimization', 'Smart Decision Making', 'RPA Integration']
-    }
+      icon: Zap,
+      title: 'AI Automation',
+      description: 'Streamline business processes with intelligent automation solutions.',
+      features: ['Process Automation', 'Workflow Optimization', 'Smart Decision Making', 'RPA Integration'],
+      color: 'purple',
+    },
     {
-      icon: Shield
-      title: 'AI-Powered Cybersecurity'
-      description: 'Protect your digital assets with advanced AI-driven security solutions.'
-      features: ['Threat Detection', 'Anomaly Detection', 'Automated Response', 'Risk Assessment']
-    }
+      icon: Shield,
+      title: 'AI-Powered Cybersecurity',
+      description: 'Protect your digital assets with advanced AI-driven security solutions.',
+      features: ['Threat Detection', 'Anomaly Detection', 'Automated Response', 'Risk Assessment'],
+      color: 'red',
+    },
     {
-      icon: Cloud
-      title: 'Cloud AI Services'
-      description: 'Scalable AI solutions delivered through cloud infrastructure.'
-      features: ['Cloud ML Platforms', 'AI APIs', 'Scalable Computing', 'Edge AI']
-    }
+      icon: Cloud,
+      title: 'Cloud AI Services',
+      description: 'Scalable AI solutions delivered through cloud infrastructure.',
+      features: ['Cloud ML Platforms', 'AI APIs', 'Scalable Computing', 'Edge AI'],
+      color: 'cyan',
+    },
     {
-      icon: Database
-      title: 'Data Intelligence'
-      description: 'Transform raw data into actionable insights with AI-powered analytics.'
-      features: ['Data Mining', 'Business Intelligence', 'Real-time Analytics', 'Data Visualization']
-    }
+      icon: Database,
+      title: 'Data Intelligence',
+      description: 'Transform raw data into actionable insights with AI-powered analytics.',
+      features: ['Data Mining', 'Business Intelligence', 'Real-time Analytics', 'Data Visualization'],
+      color: 'emerald',
+    },
     {
-      icon: Users
-      title: 'AI Customer Experience'
-      description: 'Enhance customer interactions with intelligent chatbots and personalization.'
-      features: ['Chatbots', 'Personalization', 'Sentiment Analysis', 'Customer Insights']
-    }
+      icon: Users,
+      title: 'AI Customer Experience',
+      description: 'Enhance customer interactions with intelligent chatbots and personalization.',
+      features: ['Chatbots', 'Personalization', 'Sentiment Analysis', 'Customer Insights'],
+      color: 'fuchsia',
+    },
     {
-      icon: BarChart3
-      title: 'AI Business Intelligence'
-      description: 'Make data-driven decisions with AI-powered business intelligence tools.'
-      features: ['Predictive Modeling', 'Performance Analytics', 'Market Intelligence', 'Strategic Planning']
-    }
+      icon: BarChart3,
+      title: 'AI Business Intelligence',
+      description: 'Make data-driven decisions with AI-powered business intelligence tools.',
+      features: ['Predictive Modeling', 'Performance Analytics', 'Market Intelligence', 'Strategic Planning'],
+      color: 'indigo',
+    },
     {
-      icon: Cog
-      title: 'AI Operations'
-      description: 'Optimize operational efficiency with AI-driven process management.'
-      features: ['Process Optimization', 'Resource Allocation', 'Performance Monitoring', 'Quality Control']
-    }
+      icon: Cog,
+      title: 'AI Operations',
+      description: 'Optimize operational efficiency with AI-driven process management.',
+      features: ['Process Optimization', 'Resource Allocation', 'Performance Monitoring', 'Quality Control'],
+      color: 'orange',
+    },
     {
-      icon: Target
-      title: 'AI Strategy Consulting'
-      description: 'Strategic guidance for AI implementation and digital transformation.'
-      features: ['AI Roadmap', 'Technology Assessment', 'Change Management', 'ROI Optimization']
-    }
+      icon: Target,
+      title: 'AI Strategy Consulting',
+      description: 'Strategic guidance for AI implementation and digital transformation.',
+      features: ['AI Roadmap', 'Technology Assessment', 'Change Management', 'ROI Optimization'],
+      color: 'rose',
+    },
     {
-      icon: Rocket
-      title: 'AI Innovation Labs'
-      description: 'Cutting-edge AI research and development for breakthrough solutions.'
-      features: ['R&D Projects', 'Prototype Development', 'Innovation Workshops', 'Technology Transfer']
-    }
+      icon: Rocket,
+      title: 'AI Innovation Labs',
+      description: 'Cutting-edge AI research and development for breakthrough solutions.',
+      features: ['R&D Projects', 'Prototype Development', 'Innovation Workshops', 'Technology Transfer'],
+      color: 'teal',
+    },
   ];
 
   const industrySolutions = [
     {
-      title: 'Healthcare AI'
-      description: 'AI solutions for medical diagnosis, drug discovery, and patient care optimization'
-      icon: '🏥'
-      benefits: ['Improved Diagnosis Accuracy', 'Faster Drug Discovery', 'Personalized Treatment']
-    }
+      title: 'Healthcare AI',
+      description: 'AI solutions for medical diagnosis, drug discovery, and patient care optimization',
+      icon: '🏥',
+      benefits: ['Improved Diagnosis Accuracy', 'Faster Drug Discovery', 'Personalized Treatment'],
+    },
     {
-      title: 'Financial AI'
-      description: 'AI-powered fraud detection, risk assessment, and algorithmic trading solutions'
-      icon: '💰'
-      benefits: ['Fraud Prevention', 'Risk Management', 'Automated Trading']
-    }
+      title: 'Financial AI',
+      description: 'AI-powered fraud detection, risk assessment, and algorithmic trading solutions',
+      icon: '💰',
+      benefits: ['Fraud Prevention', 'Risk Management', 'Automated Trading'],
+    },
     {
-      title: 'Manufacturing AI'
-      description: 'Smart manufacturing with predictive maintenance and quality control'
-      icon: '🏭'
-      benefits: ['Predictive Maintenance', 'Quality Control', 'Supply Chain Optimization']
-    }
+      title: 'Manufacturing AI',
+      description: 'Smart manufacturing with predictive maintenance and quality control',
+      icon: '🏭',
+      benefits: ['Predictive Maintenance', 'Quality Control', 'Supply Chain Optimization'],
+    },
     {
-      title: 'Retail AI'
-      description: 'Personalized shopping experiences and intelligent inventory management'
-      icon: '🛍️'
-      benefits: ['Personalized Recommendations', 'Inventory Optimization', 'Customer Insights']
-    }
+      title: 'Retail AI',
+      description: 'Personalized shopping experiences and intelligent inventory management',
+      icon: '🛍️',
+      benefits: ['Personalized Recommendations', 'Inventory Optimization', 'Customer Insights'],
+    },
   ];
 
   const implementationProcess = [
     {
-      step: '01'
-      title: 'Discovery & Assessment'
-      description: 'We analyze your current systems, data, and business requirements to identify AI opportunities'
-      icon: Target
-    }
+      step: '01',
+      title: 'Discovery & Assessment',
+      description: 'We analyze your current systems, data, and business requirements to identify AI opportunities',
+      icon: Target,
+    },
     {
-      step: '02'
-      title: 'Strategy & Planning'
-      description: 'Develop a comprehensive AI strategy with clear objectives, timelines, and success metrics'
-      icon: BarChart3
-    }
+      step: '02',
+      title: 'Strategy & Planning',
+      description: 'Develop a comprehensive AI strategy with clear objectives, timelines, and success metrics',
+      icon: BarChart3,
+    },
     {
-      step: '03'
-      title: 'Development & Training'
-      description: 'Build and train custom AI models tailored to your specific business needs and data'
-      icon: Cog
-    }
+      step: '03',
+      title: 'Development & Training',
+      description: 'Build and train custom AI models tailored to your specific business needs and data',
+      icon: Cog,
+    },
     {
-      step: '04'
-      title: 'Deployment & Integration'
-      description: 'Seamlessly integrate AI solutions into your existing systems and workflows'
-      icon: Rocket
-    }
+      step: '04',
+      title: 'Deployment & Integration',
+      description: 'Seamlessly integrate AI solutions into your existing systems and workflows',
+      icon: Rocket,
+    },
     {
-      step: '05'
-      title: 'Monitoring & Optimization'
-      description: 'Continuously monitor performance and optimize AI models for better results'
-      icon: BarChart3
-    }
+      step: '05',
+      title: 'Monitoring & Optimization',
+      description: 'Continuously monitor performance and optimize AI models for better results',
+      icon: BarChart3,
+    },
   ];
 
   return (

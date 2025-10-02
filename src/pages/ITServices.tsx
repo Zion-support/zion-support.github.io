@@ -1,45 +1,45 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { 
-  Cloud
-  Shield
-  Server
-  Database
-  Network
-  Lock
-  CheckCircle
-  ArrowRight
-  DollarSign
-  Clock
-  Star
-  TrendingUp
-  Globe
-  Smartphone
-  MessageSquare
-  Zap
+  Cloud,
+  Shield,
+  Server,
+  Database,
+  Network,
+  Lock,
+  CheckCircle,
+  ArrowRight,
+  DollarSign,
+  Clock,
+  Star,
+  TrendingUp,
+  Globe,
+  Smartphone,
+  MessageSquare,
+  Zap,
   
-  Settings
-  Monitor
-  Cpu
-  HardDrive
-  Wifi
-  Eye
-  Key
-  AlertTriangle
-  Users
-  Building
+  Settings,
+  Monitor,
+  Cpu,
+  HardDrive,
+  Wifi,
+  Eye,
+  Key,
+  AlertTriangle,
+  Users,
+  Building,
 } from "lucide-react";
 
 export default function ITServices(): React.JSX.Element {
   const itServices = [
     {
-      id: "cloud-migration-expert"
-      name: "Cloud Migration & Optimization Expert"
-      blurb: "Complete cloud transformation with cost optimization and security hardening"
-      price: "$5,000 - $25,000/month"
-      eta: "4-12 weeks"
-      category: "Cloud Infrastructure"
-      icon: Cloud
+      id: "cloud-migration-expert",
+      name: "Cloud Migration & Optimization Expert",
+      blurb: "Complete cloud transformation with cost optimization and security hardening",
+      price: "$5,000 - $25,000/month",
+      eta: "4-12 weeks",
+      category: "Cloud Infrastructure",
+      icon: Cloud,
       features: [
         "Multi-cloud strategy and architecture design"
         "Automated migration with zero downtime"
@@ -48,25 +48,25 @@ export default function ITServices(): React.JSX.Element {
         "Performance monitoring and optimization"
         "Disaster recovery and backup solutions"
         "24/7 cloud operations support"
-      ]
+      ],
       benefits: [
         "50% reduction in infrastructure costs"
         "99.99% uptime guarantee"
         "3x faster application deployment"
         "Complete security compliance"
-      ]
-      useCases: ["Enterprise companies", "SaaS providers", "E-commerce platforms", "Healthcare systems"]
-      marketSize: "$623.3B cloud computing market"
-      link: "/contact"
-    }
+      ],
+      useCases: ["Enterprise companies", "SaaS providers", "E-commerce platforms", "Healthcare systems"],
+      marketSize: "$623.3B cloud computing market",
+      link: "/contact",
+    },
     {
-      id: "zero-trust-security"
-      name: "Zero Trust Security Framework"
-      blurb: "Enterprise-grade security architecture with continuous verification"
-      price: "$3,500 - $18,000/month"
-      eta: "3-8 weeks"
-      category: "Cybersecurity"
-      icon: Shield
+      id: "zero-trust-security",
+      name: "Zero Trust Security Framework",
+      blurb: "Enterprise-grade security architecture with continuous verification",
+      price: "$3,500 - $18,000/month",
+      eta: "3-8 weeks",
+      category: "Cybersecurity",
+      icon: Shield,
       features: [
         "Identity and access management (IAM) setup"
         "Network segmentation and micro-segmentation"
@@ -75,25 +75,25 @@ export default function ITServices(): React.JSX.Element {
         "Multi-factor authentication (MFA) implementation"
         "Continuous security monitoring"
         "Incident response automation"
-      ]
+      ],
       benefits: [
         "95% reduction in security incidents"
         "100% compliance with industry standards"
         "Real-time threat detection and response"
         "Automated security policy enforcement"
-      ]
-      useCases: ["Financial institutions", "Government agencies", "Healthcare organizations", "Large enterprises"]
-      marketSize: "$366.1B cybersecurity market"
-      link: "/contact"
-    }
+      ],
+      useCases: ["Financial institutions", "Government agencies", "Healthcare organizations", "Large enterprises"],
+      marketSize: "$366.1B cybersecurity market",
+      link: "/contact",
+    },
     {
-      id: "devops-automation"
-      name: "DevOps Automation Platform"
-      blurb: "Complete CI/CD pipeline with infrastructure as code and monitoring"
-      price: "$2,500 - $12,000/month"
-      eta: "3-6 weeks"
-      category: "DevOps & Automation"
-      icon: Zap
+      id: "devops-automation",
+      name: "DevOps Automation Platform",
+      blurb: "Complete CI/CD pipeline with infrastructure as code and monitoring",
+      price: "$2,500 - $12,000/month",
+      eta: "3-6 weeks",
+      category: "DevOps & Automation",
+      icon: Zap,
       features: [
         "CI/CD pipeline setup with automated testing"
         "Infrastructure as Code (IaC) with Terraform"
@@ -102,25 +102,25 @@ export default function ITServices(): React.JSX.Element {
         "Performance monitoring and alerting"
         "Security scanning and compliance checks"
         "Developer productivity tools integration"
-      ]
+      ],
       benefits: [
         "10x faster deployment cycles"
         "80% reduction in deployment failures"
         "50% improvement in developer productivity"
         "Automated quality assurance"
-      ]
-      useCases: ["Software companies", "Tech startups", "E-commerce platforms", "Financial services"]
-      marketSize: "$10.3B DevOps market"
-      link: "/contact"
-    }
+      ],
+      useCases: ["Software companies", "Tech startups", "E-commerce platforms", "Financial services"],
+      marketSize: "$10.3B DevOps market",
+      link: "/contact",
+    },
     {
-      id: "data-engineering-platform"
-      name: "Data Engineering Platform"
-      blurb: "Scalable data infrastructure with real-time processing and analytics"
-      price: "$4,000 - $20,000/month"
-      eta: "4-10 weeks"
-      category: "Data & Analytics"
-      icon: Database
+      id: "data-engineering-platform",
+      name: "Data Engineering Platform",
+      blurb: "Scalable data infrastructure with real-time processing and analytics",
+      price: "$4,000 - $20,000/month",
+      eta: "4-10 weeks",
+      category: "Data & Analytics",
+      icon: Database,
       features: [
         "Data lake and data warehouse architecture"
         "Real-time data streaming with Apache Kafka"
@@ -129,25 +129,25 @@ export default function ITServices(): React.JSX.Element {
         "Machine learning pipeline integration"
         "Business intelligence dashboard creation"
         "Data security and privacy compliance"
-      ]
+      ],
       benefits: [
         "5x faster data processing"
         "Real-time business insights"
         "90% reduction in data errors"
         "Automated data governance"
-      ]
-      useCases: ["Analytics companies", "E-commerce platforms", "Financial services", "Healthcare systems"]
-      marketSize: "$274.3B data analytics market"
-      link: "/contact"
-    }
+      ],
+      useCases: ["Analytics companies", "E-commerce platforms", "Financial services", "Healthcare systems"],
+      marketSize: "$274.3B data analytics market",
+      link: "/contact",
+    },
     {
-      id: "network-infrastructure"
-      name: "Enterprise Network Infrastructure"
-      blurb: "High-performance network design with SD-WAN and security integration"
-      price: "$3,000 - $15,000/month"
-      eta: "2-6 weeks"
-      category: "Network Solutions"
-      icon: Network
+      id: "network-infrastructure",
+      name: "Enterprise Network Infrastructure",
+      blurb: "High-performance network design with SD-WAN and security integration",
+      price: "$3,000 - $15,000/month",
+      eta: "2-6 weeks",
+      category: "Network Solutions",
+      icon: Network,
       features: [
         "SD-WAN implementation and optimization"
         "Network security with next-gen firewalls"
@@ -156,25 +156,25 @@ export default function ITServices(): React.JSX.Element {
         "Wireless infrastructure setup"
         "VPN and remote access solutions"
         "Disaster recovery network planning"
-      ]
+      ],
       benefits: [
         "60% improvement in network performance"
         "99.9% network uptime guarantee"
         "40% reduction in network costs"
         "Enhanced security and compliance"
-      ]
-      useCases: ["Multi-location businesses", "Remote work environments", "Healthcare networks", "Educational institutions"]
-      marketSize: "$45.2B SD-WAN market"
-      link: "/contact"
-    }
+      ],
+      useCases: ["Multi-location businesses", "Remote work environments", "Healthcare networks", "Educational institutions"],
+      marketSize: "$45.2B SD-WAN market",
+      link: "/contact",
+    },
     {
-      id: "compliance-automation"
-      name: "Compliance Automation Suite"
-      blurb: "Automated compliance monitoring for SOC 2, HIPAA, GDPR, and industry standards"
-      price: "$2,000 - $10,000/month"
-      eta: "2-4 weeks"
-      category: "Compliance & Governance"
-      icon: Lock
+      id: "compliance-automation",
+      name: "Compliance Automation Suite",
+      blurb: "Automated compliance monitoring for SOC 2, HIPAA, GDPR, and industry standards",
+      price: "$2,000 - $10,000/month",
+      eta: "2-4 weeks",
+      category: "Compliance & Governance",
+      icon: Lock,
       features: [
         "Automated compliance monitoring and reporting"
         "Policy management and enforcement"
@@ -183,71 +183,71 @@ export default function ITServices(): React.JSX.Element {
         "Employee training and awareness programs"
         "Incident response and breach notification"
         "Regulatory change management"
-      ]
+      ],
       benefits: [
         "90% reduction in compliance costs"
         "100% audit readiness"
         "Automated risk management"
         "Continuous compliance monitoring"
-      ]
-      useCases: ["Healthcare providers", "Financial services", "SaaS companies", "Government contractors"]
-      marketSize: "$56.9B compliance management market"
-      link: "/contact"
-    }
+      ],
+      useCases: ["Healthcare providers", "Financial services", "SaaS companies", "Government contractors"],
+      marketSize: "$56.9B compliance management market",
+      link: "/contact",
+    },
   ];
 
   const additionalITServices = [
     {
-      name: "IT Infrastructure Assessment"
+      name: "IT Infrastructure Assessment",
       description: "Comprehensive infrastructure audit and optimization recommendations"
-      price: "$1,500 - $5,000/month"
-      features: ["Performance analysis", "Security assessment", "Cost optimization", "Modernization roadmap"]
-    }
+      price: "$1,500 - $5,000/month",
+      features: ["Performance analysis", "Security assessment", "Cost optimization", "Modernization roadmap"],
+    },
     {
-      name: "24/7 IT Support & Monitoring"
+      name: "24/7 IT Support & Monitoring",
       description: "Round-the-clock IT support with proactive monitoring"
-      price: "$800 - $3,000/month"
-      features: ["24/7 helpdesk", "Proactive monitoring", "Remote support", "SLA guarantees"]
-    }
+      price: "$800 - $3,000/month",
+      features: ["24/7 helpdesk", "Proactive monitoring", "Remote support", "SLA guarantees"],
+    },
     {
-      name: "Backup & Disaster Recovery"
+      name: "Backup & Disaster Recovery",
       description: "Automated backup solutions with disaster recovery planning"
-      price: "$500 - $2,500/month"
-      features: ["Automated backups", "Disaster recovery", "Business continuity", "Data protection"]
-    }
+      price: "$500 - $2,500/month",
+      features: ["Automated backups", "Disaster recovery", "Business continuity", "Data protection"],
+    },
     {
-      name: "IT Consulting & Strategy"
+      name: "IT Consulting & Strategy",
       description: "Strategic IT planning and digital transformation consulting"
-      price: "$200 - $500/hour"
-      features: ["Strategic planning", "Technology roadmap", "Vendor selection", "Implementation guidance"]
-    }
+      price: "$200 - $500/hour",
+      features: ["Strategic planning", "Technology roadmap", "Vendor selection", "Implementation guidance"],
+    },
   ];
 
   const industrySolutions = [
     {
-      industry: "Healthcare"
-      solutions: ["HIPAA compliance", "Patient data security", "Telemedicine infrastructure", "Medical device integration"]
-      icon: Building
-      color: "from-green-500 to-teal-500"
-    }
+      industry: "Healthcare",
+      solutions: ["HIPAA compliance", "Patient data security", "Telemedicine infrastructure", "Medical device integration"],
+      icon: Building,
+      color: "from-green-500 to-teal-500",
+    },
     {
-      industry: "Financial Services"
-      solutions: ["PCI DSS compliance", "Fraud detection systems", "Risk management", "Regulatory reporting"]
-      icon: DollarSign
-      color: "from-blue-500 to-indigo-500"
-    }
+      industry: "Financial Services",
+      solutions: ["PCI DSS compliance", "Fraud detection systems", "Risk management", "Regulatory reporting"],
+      icon: DollarSign,
+      color: "from-blue-500 to-indigo-500",
+    },
     {
-      industry: "E-commerce"
-      solutions: ["Scalable infrastructure", "Payment security", "Inventory management", "Customer analytics"]
-      icon: Globe
-      color: "from-purple-500 to-pink-500"
-    }
+      industry: "E-commerce",
+      solutions: ["Scalable infrastructure", "Payment security", "Inventory management", "Customer analytics"],
+      icon: Globe,
+      color: "from-purple-500 to-pink-500",
+    },
     {
-      industry: "Manufacturing"
-      solutions: ["IoT integration", "Predictive maintenance", "Supply chain optimization", "Quality control systems"]
-      icon: Cpu
-      color: "from-orange-500 to-red-500"
-    }
+      industry: "Manufacturing",
+      solutions: ["IoT integration", "Predictive maintenance", "Supply chain optimization", "Quality control systems"],
+      icon: Cpu,
+      color: "from-orange-500 to-red-500",
+    },
   ];
 
   return (

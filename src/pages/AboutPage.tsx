@@ -5,34 +5,34 @@ import { Users, Target, Award, Brain, Shield } from 'lucide-react';
 const AboutPage: React.FC = () => {
   const values = [
     {
-      icon: Brain
-      title: 'Innovation'
-      description: 'Pushing the boundaries of AI technology to create revolutionary solutions'
-    }
+      icon: Brain,
+      title: 'Innovation',
+      description: 'Pushing the boundaries of AI technology to create revolutionary solutions',
+    },
     {
-      icon: Shield
-      title: 'Security'
-      description: 'Ensuring enterprise-grade security and compliance in all our solutions'
-    }
+      icon: Shield,
+      title: 'Security',
+      description: 'Ensuring enterprise-grade security and compliance in all our solutions',
+    },
     {
-      icon: Users
-      title: 'Collaboration'
-      description: 'Working closely with clients to understand and solve their unique challenges'
-    }
+      icon: Users,
+      title: 'Collaboration',
+      description: 'Working closely with clients to understand and solve their unique challenges',
+    },
     {
-      icon: Award
-      title: 'Excellence'
-      description: 'Delivering exceptional results with proven ROI and measurable impact'
-    }
+      icon: Award,
+      title: 'Excellence',
+      description: 'Delivering exceptional results with proven ROI and measurable impact',
+    },
   ];
 
   const milestones = [
-    { year: '2020', event: 'Founded Zion Tech Group' }
-    { year: '2021', event: 'First Fortune 500 client' }
-    { year: '2022', event: 'AI breakthrough platform launch' }
-    { year: '2023', event: '100+ enterprise clients' }
-    { year: '2024', event: 'Quantum computing integration' }
-    { year: '2025', event: '240+ Fortune 500 clients' }
+    { year: '2020', event: 'Founded Zion Tech Group' },
+    { year: '2021', event: 'First Fortune 500 client' },
+    { year: '2022', event: 'AI breakthrough platform launch' },
+    { year: '2023', event: '100+ enterprise clients' },
+    { year: '2024', event: 'Quantum computing integration' },
+    { year: '2025', event: '240+ Fortune 500 clients' },
   ];
 
   return (
