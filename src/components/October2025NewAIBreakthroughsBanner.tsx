@@ -23,7 +23,6 @@ export default function October2025NewAIBreakthroughsBanner(): void {
         </div>
 
         {/* Main Heading */}
-<<<<<<< HEAD
         <h2 className="text-6xl md: text-8xl font-black text-center mb-8 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent leading-tight">",
           Revolutionary AI Innovations
         </h2>
@@ -35,17 +34,14 @@ export default function October2025NewAIBreakthroughsBanner(): void {
         </h2>
         
         <p className="text-2xl md: text-3xl text-center text-gray-300 mb-16 max-w-5xl mx-auto font-light">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           Discover the latest breakthroughs in AI orchestration, neural reasoning, and enterprise platforms 
           that are transforming how organizations deploy and scale intelligence
         </p>
 
         {/* Content Cards */}
-<<<<<<< HEAD
         <div className="grid md: grid-cols-3 gap-8 mb-16">",
 =======
         <div className="grid md: grid-cols-3 gap-8 mb-16">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           {/* Card 1 */}
           <Link 
             to="/blog/ai-2025-october-agentic-orchestration-platform"
@@ -55,11 +51,9 @@ export default function October2025NewAIBreakthroughsBanner(): void {
               <span className="inline-block px-4 py-2 bg-cyan-500/20 text-cyan-300 rounded-full text-sm font-bold mb-4">";
                 🎯 Multi-Agent Systems
               </span>
-<<<<<<< HEAD
               <h3 className="text-3xl font-bold text-white mb-4 group-hover: text-cyan-400 transition-colors">",
 =======
               <h3 className="text-3xl font-bold text-white mb-4 group-hover: text-cyan-400 transition-colors">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 Agentic Orchestration Platform
               </h3>
               <p className="text-gray-400 text-lg mb-6">";
@@ -83,11 +77,9 @@ export default function October2025NewAIBreakthroughsBanner(): void {
               <span className="inline-block px-4 py-2 bg-purple-500/20 text-purple-300 rounded-full text-sm font-bold mb-4">";
                 🧠 Neural AI
               </span>
-<<<<<<< HEAD
               <h3 className="text-3xl font-bold text-white mb-4 group-hover: text-purple-400 transition-colors">",
 =======
               <h3 className="text-3xl font-bold text-white mb-4 group-hover: text-purple-400 transition-colors">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 Neural Reasoning Engines
               </h3>
               <p className="text-gray-400 text-lg mb-6">";
@@ -111,11 +103,9 @@ export default function October2025NewAIBreakthroughsBanner(): void {
               <span className="inline-block px-4 py-2 bg-emerald-500/20 text-emerald-300 rounded-full text-sm font-bold mb-4">";
                 🏗️ Enterprise Platform
               </span>
-<<<<<<< HEAD
               <h3 className="text-3xl font-bold text-white mb-4 group-hover: text-emerald-400 transition-colors">",
 =======
               <h3 className="text-3xl font-bold text-white mb-4 group-hover: text-emerald-400 transition-colors">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 Enterprise AI Fabric
               </h3>
               <p className="text-gray-400 text-lg mb-6">";
@@ -132,13 +122,11 @@ export default function October2025NewAIBreakthroughsBanner(): void {
         </div>
 
         {/* Stats Bar */}
-<<<<<<< HEAD
         <div className="bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 backdrop-blur-lg rounded-2xl p-8 border border-purple-500/30 mb-12">
           <div className="grid md: grid-cols-4 gap-8 text-center">",
 =======
         <div className="bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 backdrop-blur-lg rounded-2xl p-8 border border-purple-500/30 mb-12">";
           <div className="grid md: grid-cols-4 gap-8 text-center">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             <div>
               <div className="text-5xl font-black text-cyan-400 mb-2">$1.06B</div>";
               <div className="text-gray-400 text-sm uppercase tracking-wider">Combined Value</div>";

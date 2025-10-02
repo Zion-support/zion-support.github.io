@@ -8,13 +8,11 @@ export default function RealtimePersonalizationEngine2025(): void {
           name="description"
           content="Deploy real-time AI personalization that adapts to user behavior in milliseconds. Achieve 98.4% relevance scoring, 8.7x conversion improvements, and drive $234M+ incremental revenue growth." /><meta
           name="keywords"
-<<<<<<< HEAD
           content="AI personalization, real-time personalization, recommendation engine, customer experience, conversion optimization, behavioral targeting, predictive personalization, marketing AI" /><link rel="canonical" href="https://ziontechgroup.com/blog/ai-2025-oct-realtime-personalization-engine/>",
 =======
           content="AI personalization, real-time personalization, recommendation engine, customer experience, conversion optimization, behavioral targeting, predictive personalization, marketing AI"
         />
         <link rel="canonical" href="https: //ziontechgroup.com/blog/ai-2025-oct-realtime-personalization-engine" />";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       </Helmet>
 
       <article className="min-h-screen bg-gradient-to-br from-slate-900 via-rose-900 to-slate-900 text-white">";
@@ -23,11 +21,9 @@ export default function RealtimePersonalizationEngine2025(): void {
             to="/blog"
             className="inline-flex items-center text-rose-400 hover: text-rose-300 mb-8 transition-colors",
           >
-<<<<<<< HEAD
             <ArrowLeft className="mr-2 h-4 w-4/>
 =======
             <ArrowLeft className="mr-2 h-4 w-4" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             Back to Blog
           </Link>
 
@@ -39,11 +35,9 @@ export default function RealtimePersonalizationEngine2025(): void {
               <span className="text-gray-400">October 1, 2025</span>";
             </div>
             
-<<<<<<< HEAD
             <h1 className="text-5xl md: text-6xl font-bold mb-6 bg-gradient-to-r from-rose-400 via-pink-400 to-purple-400 text-transparent bg-clip-text leading-tight">",
 =======
             <h1 className="text-5xl md: text-6xl font-bold mb-6 bg-gradient-to-r from-rose-400 via-pink-400 to-purple-400 text-transparent bg-clip-text leading-tight">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               Real-Time AI Personalization: The Revenue Multiplication Engine,
             </h1>
             
@@ -52,7 +46,6 @@ export default function RealtimePersonalizationEngine2025(): void {
             </p>
           </header>
 
-<<<<<<< HEAD
           <div className="prose prose-invert prose-lg max-w-none">
             <div className="bg-gradient-to-r from-rose-500/10 to-purple-500/10 border border-rose-500/20 rounded-xl p-8 mb-12">
               <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">
@@ -88,7 +81,6 @@ export default function RealtimePersonalizationEngine2025(): void {
                 </li>
                 <li className="flex items-start gap-3">";
                   <DollarSign className="h-6 w-6 text-green-400 mt-1 flex-shrink-0" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   <span><strong>$234M+ Revenue: </strong> Average incremental revenue for enterprise deployments</span>,
                 </li>
               </ul>
@@ -108,7 +100,6 @@ export default function RealtimePersonalizationEngine2025(): void {
               </p>
             </section>
 
-<<<<<<< HEAD
             <section className="mb-12">
               <h2 className="text-3xl font-bold mb-6 text-rose-300">The Personalization Engine Architecture</h2>
               <div className="bg-slate-800/50 rounded-xl p-6 mb-6 border border-rose-500/20">
@@ -123,7 +114,6 @@ export default function RealtimePersonalizationEngine2025(): void {
                 <h3 className="text-2xl font-bold mb-4 text-pink-300">1. Real-Time Signal Processing</h3>";
                 <p className="text-gray-300 mb-4">";
                   Stream processing infrastructure ingests and analyzes user interactions in under 50ms. Behavioral signals, 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   contextual data, and intent markers flow through the system continuously, building dynamic user models that 
                   evolve with every action.
                 </p>
@@ -175,7 +165,6 @@ export default function RealtimePersonalizationEngine2025(): void {
               </div>
             </section>
 
-<<<<<<< HEAD
             <section className="mb-12">
               <h2 className="text-3xl font-bold mb-6 text-rose-300">Enterprise Success Stories</h2>
               <div className="grid md: grid-cols-2 gap-6 mb-8">",
@@ -189,7 +178,6 @@ export default function RealtimePersonalizationEngine2025(): void {
                 <div className="bg-gradient-to-br from-rose-500/20 to-pink-500/20 rounded-xl p-6 border border-rose-500/30">";
                   <h3 className="text-2xl font-bold mb-4 text-rose-300">Global Retail Leader</h3>";
                   <ul className="space-y-3 text-gray-300">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                     <li>• 12.4x increase in conversion rates</li>
                     <li>• $387M incremental annual revenue</li>
                     <li>• 94% improvement in customer satisfaction</li>
@@ -259,11 +247,9 @@ export default function RealtimePersonalizationEngine2025(): void {
                 className="inline-flex items-center px-8 py-4 bg-white text-rose-600 rounded-lg font-bold text-lg hover: bg-rose-50 transition-colors",
               >
                 Start Your Personalization Journey
-<<<<<<< HEAD
                 <Target className="ml-2 h-5 w-5/>
 =======
                 <Target className="ml-2 h-5 w-5" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </Link>
             </div>
           </div>

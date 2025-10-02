@@ -28,7 +28,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   const [currentOptimizations, setCurrentOptimizations] = useState<string[]>([]);
 =======
 import React, { useEffect } from 'react';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-8387
 
 const PerformanceOptimizer: React.FC = () => {
   useEffect(() => {
@@ -152,7 +151,6 @@ break;
         '/api/placeholder/800/400',
         '/api/placeholder/600/400'
       ];
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-8387
 
       criticalImages.forEach(src => {
         const link = document.createElement('link');
@@ -163,7 +161,6 @@ break;
       });
     };
 
-<<<<<<< HEAD
   return (
     <div className="space-y-6">
       <div className="flex justify-between items-center">
@@ -298,7 +295,6 @@ break;
   }, []);
 
   return null;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-8387
 };
 
 export default PerformanceOptimizer;

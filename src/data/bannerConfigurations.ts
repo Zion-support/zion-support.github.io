@@ -1,15 +1,12 @@
-<<<<<<< HEAD
 import { BannerConfig } from '../components/UnifiedBannerSystem';
 =======
 import {
 BannerConfig
 } from '../components/UnifiedBannerSystem';';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 
 // Centralized banner configuration management
 export const bannerConfigurations: BannerConfig[] = [,
   {
-<<<<<<< HEAD
     id: 'ai-revolution-2026',',
     title: 'AI Revolution 2026',',
     subtitle: 'Next-Generation Autonomous Systems',',
@@ -185,14 +182,12 @@ export const bannerConfigurations: BannerConfig[] = [,
     backgroundColor: '#0891b2',';,
     textColor: '#ffffff',';,
     animation: 'scale',';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     duration: 6000,
   }
 ];
 
 // Banner category filters
 export const bannerCategories = [
-<<<<<<< HEAD
   { id: 'all', name: 'All Categories', count: bannerConfigurations.length }
   { id: 'ai', name: 'AI & Machine Learning', count: bannerConfigurations.filter(b => b.category === 'ai').length }
   { id: 'quantum', name: 'Quantum Computing', count: bannerConfigurations.filter(b => b.category === 'quantum').length }
@@ -208,16 +203,13 @@ export const bannerCategories = [
   { id: 'cognitive', name: 'Cognitive Systems', count: bannerConfigurations.filter(b => b.category === 'cognitive').length },';
   { id: 'edge', name: 'Edge Computing', count: bannerConfigurations.filter(b => b.category === 'edge').length },';
   { id: 'security', name: 'Security', count: bannerConfigurations.filter(b => b.category === 'security').length }';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 ];
 
 // Utility functions for banner management
 export const getBannersByCategory = (category: string): BannerConfig[] => {,
-<<<<<<< HEAD
   if (category === 'all') return bannerConfigurations;
 =======
   if (category === 'all') return bannerConfigurations;';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   return bannerConfigurations.filter(banner => banner.category === category);
 };
 

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 const AdvertisingBanner: React.FC = () => {,
   return (
@@ -27,28 +26,23 @@ const AdvertisingBanner: React.FC = () => {,
           <div className="hidden sm: block h-6 w-px bg-white/30"></div>";,
           <p className="text-sm font-medium">";
             <span className="font-bold">NEW THIS WEEK: </span> Vector DB Optimization at 100B+ scale & Enterprise Agent Uptime 99.9%";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           </p>
           <Link 
             to="/blog/ai-2025-oct-01-vector-database-optimization-enterprise" 
             className="inline-flex items-center gap-1 bg-white text-purple-700 hover: bg-purple-50 px-4 py-1 rounded-full text-sm font-semibold transition-all duration-300 hover:scale-105 shadow-md",
           >
-<<<<<<< HEAD
             <Zap className="w-4 h-4/>
 =======
             <Zap className="w-4 h-4" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             Vector DB Guide
           </Link>
           <Link 
             to="/blog/ai-2025-oct-02-enterprise-agent-systems-uptime-999" 
             className="inline-flex items-center gap-1 bg-white text-purple-700 hover: bg-purple-50 px-4 py-1 rounded-full text-sm font-semibold transition-all duration-300 hover:scale-105 shadow-md",
           >
-<<<<<<< HEAD
             <Shield className="w-4 h-4/>
 =======
             <Shield className="w-4 h-4" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             Agent Uptime
           </Link>
         </div>

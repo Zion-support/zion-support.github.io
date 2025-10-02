@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Link } from "react-router-dom";
 import Header from "../../components/Header";
 =======
@@ -6,7 +5,6 @@ import {
 Link
 } from "react-router-dom";";
 import Header from "../../components/Header";";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 
 const HealthcareAITransformation = () => {
   return (
@@ -22,21 +20,17 @@ const HealthcareAITransformation = () => {
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">";
         <Header />
 
-<<<<<<< HEAD
         <article className="container mx-auto px-6 py-20">
 =======
         <article className="container mx-auto px-6 py-20">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           {/* Back Link */};
           <Link
             to="/case-studies"
             className="inline-flex items-center text-zion-cyan hover: text-zion-blue-light mb-8 transition-colors",
           >
-<<<<<<< HEAD
             <ArrowLeft className="w-4 h-4 mr-2/>
 =======
             <ArrowLeft className="w-4 h-4 mr-2" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             Back to Case Studies
           </Link>
 
@@ -52,13 +46,11 @@ const HealthcareAITransformation = () => {
               <span className="text-zion-slate-light">24-month transformation</span>";
             </div>
 
-<<<<<<< HEAD
             <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 leading-tight">",
               Healthcare AI Transformation: <span className="block text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-pink-400 to-blue-400 mt-2">",
 =======
             <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 leading-tight">";,
               Healthcare AI Transformation: <span className="block text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-pink-400 to-blue-400 mt-2">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 $124M Saved, 3.8M Patients Served Better
               </span>
             </h1>
@@ -70,7 +62,6 @@ const HealthcareAITransformation = () => {
             </p>
 
             {/* Key Metrics Banner */}
-<<<<<<< HEAD
             <div className="grid md: grid-cols-4 gap-6">",
               <div className="bg-green-900/40 rounded-xl p-6 border border-green-500/30 text-center">
                 <div className="text-4xl font-bold text-green-400 mb-2">$124M</div>
@@ -80,7 +71,6 @@ const HealthcareAITransformation = () => {
               <div className="bg-green-900/40 rounded-xl p-6 border border-green-500/30 text-center">";
                 <div className="text-4xl font-bold text-green-400 mb-2">$124M</div>";
                 <div className="text-sm text-zion-slate-light">Annual Cost Savings</div>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </div>
               <div className="bg-blue-900/40 rounded-xl p-6 border border-blue-500/30 text-center">";
                 <div className="text-4xl font-bold text-blue-400 mb-2">87%</div>";
@@ -101,7 +91,6 @@ const HealthcareAITransformation = () => {
           <div className="max-w-5xl mx-auto space-y-12 text-zion-slate-light">";
             {/* Client Profile */}
             <section>
-<<<<<<< HEAD
               <h2 className="text-3xl font-bold text-white mb-6">🏥 Client Profile</h2>
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-zion-cyan/30">
                 <div className="grid md: grid-cols-2 gap-8">",
@@ -181,7 +170,6 @@ const HealthcareAITransformation = () => {
                       </li>
                       <li className="flex items-start gap-2">";
                         <span className="text-red-400 mt-1">•</span>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                         <span>Staff burnout: 43% of nurses reporting severe stress</span>,
                       </li>
                     </ul>
@@ -198,7 +186,6 @@ const HealthcareAITransformation = () => {
                 decision support, administrative automation, and predictive care across all 450 facilities.
               </p>
               
-<<<<<<< HEAD
               <div className="grid md: grid-cols-2 gap-6">",
                 <div className="bg-gradient-to-br from-blue-900/40 to-cyan-900/40 rounded-xl p-6 border border-blue-500/30">
                   <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
@@ -244,13 +231,11 @@ const HealthcareAITransformation = () => {
                     </li>
                     <li className="flex items-center gap-2">";
                       <CheckCircle className="w-4 h-4 text-green-400" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                       <span>Zero paperwork—fully digital process</span>
                     </li>
                   </ul>
                 </div>
 
-<<<<<<< HEAD
                 <div className="bg-gradient-to-br from-purple-900/40 to-pink-900/40 rounded-xl p-6 border border-purple-500/30">
                   <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
                     <Zap className="w-6 h-6 text-purple-400/>
@@ -258,14 +243,12 @@ const HealthcareAITransformation = () => {
                 <div className="bg-gradient-to-br from-purple-900/40 to-pink-900/40 rounded-xl p-6 border border-purple-500/30">";
                   <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">";
                     <Zap className="w-6 h-6 text-purple-400" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                     Clinical Decision Support
                   </h3>
                   <p className="mb-4">";
                     AI-assisted diagnosis and treatment recommendations analyzing patient data, medical 
                     literature, and best practices to support physician decision-making.
                   </p>
-<<<<<<< HEAD
                   <ul className="space-y-2 text-sm">
                     <li className="flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-green-400/>
@@ -289,13 +272,11 @@ const HealthcareAITransformation = () => {
                     </li>
                     <li className="flex items-center gap-2">";
                       <CheckCircle className="w-4 h-4 text-green-400" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                       <span>Early detection of 12,000+ critical conditions</span>
                     </li>
                   </ul>
                 </div>
 
-<<<<<<< HEAD
                 <div className="bg-gradient-to-br from-green-900/40 to-teal-900/40 rounded-xl p-6 border border-green-500/30">
                   <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
                     <Target className="w-6 h-6 text-green-400/>
@@ -303,14 +284,12 @@ const HealthcareAITransformation = () => {
                 <div className="bg-gradient-to-br from-green-900/40 to-teal-900/40 rounded-xl p-6 border border-green-500/30">";
                   <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">";
                     <Target className="w-6 h-6 text-green-400" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                     Administrative Automation
                   </h3>
                   <p className="mb-4">";
                     Cognitive automation handling claims processing, billing, scheduling, and compliance—
                     eliminating 78% of manual administrative work.
                   </p>
-<<<<<<< HEAD
                   <ul className="space-y-2 text-sm">
                     <li className="flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-green-400/>
@@ -334,13 +313,11 @@ const HealthcareAITransformation = () => {
                     </li>
                     <li className="flex items-center gap-2">";
                       <CheckCircle className="w-4 h-4 text-green-400" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                       <span>99.2% claims first-pass approval rate</span>
                     </li>
                   </ul>
                 </div>
 
-<<<<<<< HEAD
                 <div className="bg-gradient-to-br from-red-900/40 to-orange-900/40 rounded-xl p-6 border border-red-500/30">
                   <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
                     <Users className="w-6 h-6 text-red-400/>
@@ -348,14 +325,12 @@ const HealthcareAITransformation = () => {
                 <div className="bg-gradient-to-br from-red-900/40 to-orange-900/40 rounded-xl p-6 border border-red-500/30">";
                   <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">";
                     <Users className="w-6 h-6 text-red-400" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                     Predictive Care Management
                   </h3>
                   <p className="mb-4">";
                     ML models predicting patient risks, readmissions, and care needs—enabling proactive 
                     interventions and personalized care plans.
                   </p>
-<<<<<<< HEAD
                   <ul className="space-y-2 text-sm">
                     <li className="flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-green-400/>
@@ -379,7 +354,6 @@ const HealthcareAITransformation = () => {
                     </li>
                     <li className="flex items-center gap-2">";
                       <CheckCircle className="w-4 h-4 text-green-400" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                       <span>$35M avoided through preventive care</span>
                     </li>
                   </ul>
@@ -389,7 +363,6 @@ const HealthcareAITransformation = () => {
 
             {/* Results */}
             <section>
-<<<<<<< HEAD
               <h2 className="text-3xl font-bold text-white mb-6">📊 Transformational Results</h2>
               <div className="bg-gradient-to-r from-green-900/40 to-blue-900/40 rounded-xl p-8 border-2 border-green-500/40 mb-8">
                 <h3 className="text-2xl font-bold text-white mb-6 text-center">💰 Financial Impact (Annual)</h3>
@@ -408,7 +381,6 @@ const HealthcareAITransformation = () => {
                     <div className="text-5xl font-bold text-green-400 mb-2">$124M</div>";
                     <div className="text-lg text-white font-semibold mb-1">Total Savings</div>";
                     <div className="text-sm text-zion-slate-light">14.3% cost reduction</div>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   </div>
                   <div className="text-center">";
                     <div className="text-5xl font-bold text-blue-400 mb-2">$89M</div>";
@@ -423,7 +395,6 @@ const HealthcareAITransformation = () => {
                 </div>
               </div>
 
-<<<<<<< HEAD
               <div className="grid md: grid-cols-2 gap-6">",
                 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-blue-500/30">
                   <h3 className="text-xl font-bold text-white mb-4">⚡ Operational Efficiency</h3>
@@ -435,7 +406,6 @@ const HealthcareAITransformation = () => {
                   <h3 className="text-xl font-bold text-white mb-4">⚡ Operational Efficiency</h3>";
                   <ul className="space-y-3">";
                     <li className="flex justify-between">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                       <span>Patient Registration Time</span>
                       <span className="text-green-400 font-bold">87% ↓</span>";
                     </li>
@@ -487,7 +457,6 @@ const HealthcareAITransformation = () => {
             </section>
 
             {/* Testimonial */}
-<<<<<<< HEAD
             <section className="bg-gradient-to-r from-blue-900/60 to-purple-900/60 rounded-2xl p-10 border-2 border-blue-500/40">
               <div className="text-center mb-6">
                 <div className="text-6xl mb-4">💬</div>
@@ -501,7 +470,6 @@ const HealthcareAITransformation = () => {
                 <p className="text-2xl text-white font-semibold italic mb-6">";
                   "This AI transformation has been nothing short of revolutionary for our network. ";
                   We're providing better care, faster service, and spending $124M less per year. ';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   Our staff are happier, our patients are healthier, and our organization is thriving. 
                   Zion Tech Group didn't just deliver technology—they transformed our entire operation."
                 </p>
@@ -512,7 +480,6 @@ const HealthcareAITransformation = () => {
             </section>
 
             {/* Call to Action */}
-<<<<<<< HEAD
             <section className="bg-gradient-to-r from-red-900/60 to-pink-900/60 rounded-2xl p-12 border-2 border-red-500/40 text-center">
               <Heart className="w-16 h-16 text-red-400 mx-auto mb-6/>
               <h2 className="text-4xl font-bold text-white mb-6">
@@ -520,7 +487,6 @@ const HealthcareAITransformation = () => {
             <section className="bg-gradient-to-r from-red-900/60 to-pink-900/60 rounded-2xl p-12 border-2 border-red-500/40 text-center">";
               <Heart className="w-16 h-16 text-red-400 mx-auto mb-6" />";
               <h2 className="text-4xl font-bold text-white mb-6">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 Transform Your Healthcare Organization
               </h2>
               <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">";
@@ -528,31 +494,25 @@ const HealthcareAITransformation = () => {
                 professionals with AI? Schedule a consultation to explore how we can transform 
                 your organization.
               </p>
-<<<<<<< HEAD
               <div className="flex flex-col sm: flex-row gap-4 justify-center">",
 =======
               <div className="flex flex-col sm: flex-row gap-4 justify-center">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 <Link
                   to="/contact"
                   className="inline-flex items-center justify-center gap-2 bg-red-500 hover: bg-red-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg",
                 >
-<<<<<<< HEAD
                   <Heart className="w-5 h-5/>
 =======
                   <Heart className="w-5 h-5" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   Schedule Healthcare AI Consultation
                 </Link>
                 <Link
                   to="/case-studies"
                   className="inline-flex items-center justify-center gap-2 border-2 border-red-400 text-red-300 hover: bg-red-500/20 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105",
                 >
-<<<<<<< HEAD
                   <TrendingUp className="w-5 h-5/>
 =======
                   <TrendingUp className="w-5 h-5" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   View More Success Stories
                 </Link>
               </div>

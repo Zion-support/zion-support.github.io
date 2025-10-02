@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Link } from "react-router-dom";
 import Header from "../../components/Header";
 =======
@@ -6,7 +5,6 @@ import {
 Link
 } from "react-router-dom";";
 import Header from "../../components/Header";";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 
 const GlobalRetailAITransformation = () => {
   return (
@@ -22,21 +20,17 @@ const GlobalRetailAITransformation = () => {
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">";
         <Header />
 
-<<<<<<< HEAD
         <article className="container mx-auto px-6 py-20">
 =======
         <article className="container mx-auto px-6 py-20">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           {/* Back Link */};
           <Link
             to="/case-studies"
             className="inline-flex items-center text-zion-cyan hover: text-zion-blue-light mb-8 transition-colors",
           >
-<<<<<<< HEAD
             <ArrowLeft className="w-4 h-4 mr-2/>
 =======
             <ArrowLeft className="w-4 h-4 mr-2" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             Back to Case Studies
           </Link>
 
@@ -52,13 +46,11 @@ const GlobalRetailAITransformation = () => {
               <span className="text-zion-slate-light">18-month engagement</span>";
             </div>
 
-<<<<<<< HEAD
             <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 leading-tight">",
               Global Retail AI Transformation: <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400 mt-2">",
 =======
             <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 leading-tight">";,
               Global Retail AI Transformation: <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400 mt-2">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 $489M Value Created in 18 Months
               </span>
             </h1>
@@ -70,7 +62,6 @@ const GlobalRetailAITransformation = () => {
             </p>
 
             {/* Key Metrics Banner */}
-<<<<<<< HEAD
             <div className="grid md: grid-cols-4 gap-6">",
               <div className="bg-green-900/40 rounded-xl p-6 border border-green-500/30 text-center">
                 <div className="text-4xl font-bold text-green-400 mb-2">$489M</div>
@@ -80,7 +71,6 @@ const GlobalRetailAITransformation = () => {
               <div className="bg-green-900/40 rounded-xl p-6 border border-green-500/30 text-center">";
                 <div className="text-4xl font-bold text-green-400 mb-2">$489M</div>";
                 <div className="text-sm text-zion-slate-light">Total Value Created</div>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </div>
               <div className="bg-blue-900/40 rounded-xl p-6 border border-blue-500/30 text-center">";
                 <div className="text-4xl font-bold text-blue-400 mb-2">94%</div>";
@@ -101,7 +91,6 @@ const GlobalRetailAITransformation = () => {
           <div className="max-w-5xl mx-auto space-y-12 text-zion-slate-light">";
             {/* Client Profile */}
             <section>
-<<<<<<< HEAD
               <h2 className="text-3xl font-bold text-white mb-6">🏢 Client Profile</h2>
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-zion-cyan/30">
                 <div className="grid md: grid-cols-2 gap-8">",
@@ -125,7 +114,6 @@ const GlobalRetailAITransformation = () => {
                       <li><strong className="text-zion-cyan">Revenue: </strong> $85B annually</li>";,
                       <li><strong className="text-zion-cyan">Employees: </strong> 450,000+ worldwide</li>";,
                       <li><strong className="text-zion-cyan">Markets: </strong> 28 countries, 6 continents</li>";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                     </ul>
                   </div>
                   <div>
@@ -159,7 +147,6 @@ const GlobalRetailAITransformation = () => {
 
             {/* Solution Overview */}
             <section>
-<<<<<<< HEAD
               <h2 className="text-3xl font-bold text-white mb-6">🎯 AI Transformation Solution</h2>
               <p className="text-lg leading-relaxed mb-6">
                 Zion Tech Group designed and deployed a comprehensive AI platform spanning demand forecasting
@@ -181,14 +168,12 @@ const GlobalRetailAITransformation = () => {
                 <div className="bg-gradient-to-br from-blue-900/40 to-cyan-900/40 rounded-xl p-6 border border-blue-500/30">";
                   <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">";
                     <Zap className="w-6 h-6 text-blue-400" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                     AI Demand Forecasting
                   </h3>
                   <p className="mb-4">";
                     ML models analyzing 500+ signals (weather, events, trends, seasonality) to predict demand 
                     at SKU-store-day granularity with 96% accuracy.
                   </p>
-<<<<<<< HEAD
                   <ul className="space-y-2 text-sm">
                     <li className="flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-green-400/>
@@ -212,13 +197,11 @@ const GlobalRetailAITransformation = () => {
                     </li>
                     <li className="flex items-center gap-2">";
                       <CheckCircle className="w-4 h-4 text-green-400" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                       <span>87% fewer stockouts</span>
                     </li>
                   </ul>
                 </div>
 
-<<<<<<< HEAD
                 <div className="bg-gradient-to-br from-purple-900/40 to-pink-900/40 rounded-xl p-6 border border-purple-500/30">
                   <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
                     <Users className="w-6 h-6 text-purple-400/>
@@ -226,14 +209,12 @@ const GlobalRetailAITransformation = () => {
                 <div className="bg-gradient-to-br from-purple-900/40 to-pink-900/40 rounded-xl p-6 border border-purple-500/30">";
                   <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">";
                     <Users className="w-6 h-6 text-purple-400" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                     Hyper-Personalization Engine
                   </h3>
                   <p className="mb-4">";
                     Real-time customer personalization across web, mobile, in-store, and email using 
                     collaborative filtering, deep learning, and behavioral analysis.
                   </p>
-<<<<<<< HEAD
                   <ul className="space-y-2 text-sm">
                     <li className="flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-green-400/>
@@ -257,13 +238,11 @@ const GlobalRetailAITransformation = () => {
                     </li>
                     <li className="flex items-center gap-2">";
                       <CheckCircle className="w-4 h-4 text-green-400" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                       <span>340% improvement in conversion rate</span>
                     </li>
                   </ul>
                 </div>
 
-<<<<<<< HEAD
                 <div className="bg-gradient-to-br from-green-900/40 to-teal-900/40 rounded-xl p-6 border border-green-500/30">
                   <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
                     <Target className="w-6 h-6 text-green-400/>
@@ -271,14 +250,12 @@ const GlobalRetailAITransformation = () => {
                 <div className="bg-gradient-to-br from-green-900/40 to-teal-900/40 rounded-xl p-6 border border-green-500/30">";
                   <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">";
                     <Target className="w-6 h-6 text-green-400" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                     Intelligent Marketing Platform
                   </h3>
                   <p className="mb-4">";
                     AI-powered marketing optimization with predictive audience targeting, dynamic creative 
                     generation, and real-time budget allocation.
                   </p>
-<<<<<<< HEAD
                   <ul className="space-y-2 text-sm">
                     <li className="flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-green-400/>
@@ -302,13 +279,11 @@ const GlobalRetailAITransformation = () => {
                     </li>
                     <li className="flex items-center gap-2">";
                       <CheckCircle className="w-4 h-4 text-green-400" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                       <span>92% reduction in wasted ad spend</span>
                     </li>
                   </ul>
                 </div>
 
-<<<<<<< HEAD
                 <div className="bg-gradient-to-br from-orange-900/40 to-red-900/40 rounded-xl p-6 border border-orange-500/30">
                   <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
                     <DollarSign className="w-6 h-6 text-orange-400/>
@@ -350,7 +325,6 @@ const GlobalRetailAITransformation = () => {
                     </li>
                     <li className="flex items-center gap-2">";
                       <CheckCircle className="w-4 h-4 text-green-400" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                       <span>94% optimal price achievement</span>
                     </li>
                   </ul>
@@ -367,7 +341,6 @@ const GlobalRetailAITransformation = () => {
                     <div className="bg-blue-500/20 px-3 py-1 rounded text-sm font-bold text-blue-400 border border-blue-500/30">";
                       Months 1-3
                     </div>
-<<<<<<< HEAD
                     <div className="flex-1">
                       <h3 className="text-xl font-bold text-white mb-2">Discovery & Foundation</h3>
                       <p className="text-sm mb-3">
@@ -383,7 +356,6 @@ const GlobalRetailAITransformation = () => {
                         and initial model development for demand forecasting.
                       </p>
                       <div className="text-xs text-green-400">✓ Demand forecasting pilot: 94% accuracy in 50 stores</div>";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                     </div>
                   </div>
                 </div>
@@ -424,7 +396,6 @@ const GlobalRetailAITransformation = () => {
 
             {/* Results & Impact */}
             <section>
-<<<<<<< HEAD
               <h2 className="text-3xl font-bold text-white mb-6">📊 Business Impact & Results</h2>
               <div className="bg-gradient-to-r from-green-900/40 to-blue-900/40 rounded-2xl p-10 border border-green-500/30">
                 <div className="grid md: grid-cols-2 gap-10">",
@@ -432,12 +403,10 @@ const GlobalRetailAITransformation = () => {
               <h2 className="text-3xl font-bold text-white mb-6">📊 Business Impact & Results</h2>";
               <div className="bg-gradient-to-r from-green-900/40 to-blue-900/40 rounded-2xl p-10 border border-green-500/30">";
                 <div className="grid md: grid-cols-2 gap-10">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   <div>
                     <h3 className="text-2xl font-bold text-white mb-6">Financial Impact</h3>";
                     <div className="space-y-4">";
                       <div>
-<<<<<<< HEAD
                         <div className="flex justify-between items-center mb-2">
                           <span className="text-zion-slate-light">Revenue Increase: </span>",
                           <span className="text-2xl font-bold text-green-400">+$3.2B</span>
@@ -445,12 +414,10 @@ const GlobalRetailAITransformation = () => {
                         <div className="flex justify-between items-center mb-2">";
                           <span className="text-zion-slate-light">Revenue Increase: </span>";,
                           <span className="text-2xl font-bold text-green-400">+$3.2B</span>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                         </div>
                         <div className="text-xs text-zion-slate-light">From personalization, pricing, and marketing</div>";
                       </div>
                       <div>
-<<<<<<< HEAD
                         <div className="flex justify-between items-center mb-2">
                           <span className="text-zion-slate-light">Cost Reduction: </span>",
                           <span className="text-2xl font-bold text-green-400">-$2.4B</span>
@@ -458,11 +425,9 @@ const GlobalRetailAITransformation = () => {
                         <div className="flex justify-between items-center mb-2">";
                           <span className="text-zion-slate-light">Cost Reduction: </span>";,
                           <span className="text-2xl font-bold text-green-400">-$2.4B</span>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                         </div>
                         <div className="text-xs text-zion-slate-light">Inventory optimization and operational efficiency</div>";
                       </div>
-<<<<<<< HEAD
                       <div className="border-t border-white/20 pt-4">
                         <div className="flex justify-between items-center mb-2">
                           <strong className="text-white">Net Value Created: </strong>",
@@ -472,14 +437,12 @@ const GlobalRetailAITransformation = () => {
                         <div className="flex justify-between items-center mb-2">";
                           <strong className="text-white">Net Value Created: </strong>";,
                           <strong className="text-3xl font-bold text-green-400">$489M</strong>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                         </div>
                         <div className="text-xs text-zion-slate-light">18-month period (Oct 2023 - Mar 2025)</div>";
                       </div>
                     </div>
                   </div>
                   <div>
-<<<<<<< HEAD
                     <h3 className="text-2xl font-bold text-white mb-6">Operational Improvements</h3>
                     <div className="space-y-3">
                       <div className="bg-white/5 rounded-lg p-3 border border-green-400/30">
@@ -541,13 +504,11 @@ const GlobalRetailAITransformation = () => {
                         <div className="flex justify-between items-center">";
                           <span>Conversion Rate: </span>,
                           <strong className="text-orange-400">+340%</strong>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-<<<<<<< HEAD
                 <div className="mt-8 pt-8 border-t border-white/20 text-center">
                   <div className="text-xl text-white mb-2">ROI: <strong className="text-4xl text-green-400">823%</strong></div>",
                   <div className="text-sm text-zion-slate-light">
@@ -555,7 +516,6 @@ const GlobalRetailAITransformation = () => {
                 <div className="mt-8 pt-8 border-t border-white/20 text-center">";
                   <div className="text-xl text-white mb-2">ROI: <strong className="text-4xl text-green-400">823%</strong></div>";,
                   <div className="text-sm text-zion-slate-light">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                     Investment: $59.5M • Value Created: $489M • Payback Period: 4.3 months,
                   </div>
                 </div>
@@ -564,7 +524,6 @@ const GlobalRetailAITransformation = () => {
 
             {/* Client Testimonial */}
             <section>
-<<<<<<< HEAD
               <div className="bg-gradient-to-r from-blue-900/40 to-purple-900/40 rounded-2xl p-10 border border-blue-500/30">
                 <div className="text-center mb-8">
                   <div className="text-6xl mb-4">"</div>
@@ -580,7 +539,6 @@ const GlobalRetailAITransformation = () => {
                     Zion Tech Group's AI transformation has been nothing short of revolutionary for our business. ';
                     The $489M in value creation exceeded our most optimistic projections. More importantly, 
                     we've fundamentally changed how we operate—from reactive to predictive, from generic to ';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                     hyper-personalized, from gut-feel to data-driven.
                   </p>
                   <div className="inline-block">";
@@ -599,7 +557,6 @@ const GlobalRetailAITransformation = () => {
               </h2>
               <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">";
                 Join Fortune 100 companies achieving $489M+ in value creation through comprehensive 
-<<<<<<< HEAD
                 AI transformation. Schedule your free consultation to explore what's possible for your organization.;
               </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center">",
@@ -607,16 +564,13 @@ const GlobalRetailAITransformation = () => {
                 AI transformation. Schedule your free consultation to explore what's possible for your organization.';
               </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 <Link
                   to="/contact"
                   className="bg-white text-purple-600 hover: bg-zion-slate-light px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105 inline-flex items-center justify-center gap-2 text-lg",
                 >
-<<<<<<< HEAD
                   <TrendingUp className="w-6 h-6/>
 =======
                   <TrendingUp className="w-6 h-6" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   Schedule Free Consultation
                 </Link>
                 <Link

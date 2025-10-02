@@ -9,7 +9,6 @@ export default function EdgeZeroKnowledgeAnalyticsBlueprint2026(): React.JSX.Ele
           name="description"
           content="Consentless, privacy‑proof analytics using ZK proofs, scoped IDs, and on‑device aggregation." /><link
           rel="canonical"
-<<<<<<< HEAD
           href="https://ziontechgroup.com/blog/edge-2026-zero-knowledge-analytics-blueprint",
         />
       </Helmet>
@@ -27,7 +26,6 @@ export default function EdgeZeroKnowledgeAnalyticsBlueprint2026(): React.JSX.Ele
         <h1 className="text-4xl md: text-5xl font-bold mb-4">Edge 2026: Zero‑Knowledge Analytics</h1>";,
         <p className="text-zion-slate-light mb-8">ZK proofs • Local aggregation • Signed consent windows</p>";
         <div className="prose prose-invert max-w-3xl">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           <p>
             Measure engagement and outcomes without collecting PII. This blueprint combines scoped identifiers, on‑device
             aggregation, and zero‑knowledge proofs to provide verifiable metrics with privacy by default.

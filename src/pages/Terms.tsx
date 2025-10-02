@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 =======
@@ -6,14 +5,12 @@ import React from 'react';';
 import {
 Helmet
 } from 'react-helmet-async';';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 
 const Terms: React.FC = () => {,
   return (
     <>
       <Helmet>
         <title>Terms of Service - Zion Tech Group</title>
-<<<<<<< HEAD
         <meta name="description" content="Terms of Service for Zion Tech Group - Our terms and conditions for using our services." /><meta name="robots" content="index, follow" /></Helmet>
       
       <div className="min-h-screen bg-white">
@@ -32,13 +29,11 @@ const Terms: React.FC = () => {,
             <h1 className="text-4xl font-bold text-gray-900 mb-8">Terms of Service</h1>";
             
             <p className="text-lg text-gray-600 mb-8">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               Last updated: January 2, 2025,
             </p>
 
             <div className="space-y-8">";
               <section>
-<<<<<<< HEAD
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">Acceptance of Terms</h2>
                 <p className="text-gray-600 mb-4">
                   By accessing and using Zion Tech Group's services, you accept and agree to be bound ;
@@ -46,13 +41,11 @@ const Terms: React.FC = () => {,
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">Acceptance of Terms</h2>";
                 <p className="text-gray-600 mb-4">";
                   By accessing and using Zion Tech Group's services, you accept and agree to be bound ';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   by the terms and provision of this agreement.
                 </p>
               </section>
 
               <section>
-<<<<<<< HEAD
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">Use License</h2>
                 <p className="text-gray-600 mb-4">
                   Permission is granted to temporarily download one copy of the materials on Zion Tech Group's ;
@@ -70,7 +63,6 @@ const Terms: React.FC = () => {,
                 <p className="text-gray-600 mb-4">";
                   This is the grant of a license, not a transfer of title, and under this license you may not: </p>,
                 <ul className="list-disc list-inside text-gray-600 space-y-2">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   <li>Modify or copy the materials</li>
                   <li>Use the materials for any commercial purpose or for any public display</li>
                   <li>Attempt to reverse engineer any software contained on the website</li>
@@ -87,7 +79,6 @@ const Terms: React.FC = () => {,
               </section>
 
               <section>
-<<<<<<< HEAD
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">User Responsibilities</h2>
                 <p className="text-gray-600 mb-4">
                   Users are responsible for: </p>,
@@ -97,7 +88,6 @@ const Terms: React.FC = () => {,
                 <p className="text-gray-600 mb-4">";
                   Users are responsible for: </p>,
                 <ul className="list-disc list-inside text-gray-600 space-y-2">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   <li>Maintaining the confidentiality of their account credentials</li>
                   <li>All activities that occur under their account</li>
                   <li>Complying with all applicable laws and regulations</li>
@@ -118,11 +108,9 @@ const Terms: React.FC = () => {,
                 <p className="text-gray-600 mb-4">";
                   In no event shall Zion Tech Group or its suppliers be liable for any damages 
                   (including, without limitation, damages for loss of data or profit, or due to business 
-<<<<<<< HEAD
                   interruption) arising out of the use or inability to use the materials on Zion Tech Group's ;
 =======
                   interruption) arising out of the use or inability to use the materials on Zion Tech Group's ';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   website, even if Zion Tech Group or an authorized representative has been notified orally 
                   or in writing of the possibility of such damage.
                 </p>
@@ -138,7 +126,6 @@ const Terms: React.FC = () => {,
               </section>
 
               <section>
-<<<<<<< HEAD
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">Contact Information</h2>
                 <p className="text-gray-600 mb-4">
                   If you have any questions about these Terms of Service, please contact us at: </p>,
@@ -150,7 +137,6 @@ const Terms: React.FC = () => {,
                   If you have any questions about these Terms of Service, please contact us at: </p>,
                 <div className="bg-gray-50 p-4 rounded-lg">";
                   <p className="text-gray-600">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                     Email: legal@ziontechgroup.com<br />,
                     Phone: +1 (555) 123-4567<br />,
                     Address: 123 Tech Street, Innovation City, IC 12345,

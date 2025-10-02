@@ -13,7 +13,6 @@ cweId?: string;
 }
 
 interface SecurityReport {
-<<<<<<< HEAD
 score: number,
 vulnerabilities: SecurityVulnerability[],
 secureAreas: string[],
@@ -39,14 +38,12 @@ low: number;
   complianceStatus: {,
 owasp: boolean;,
 gdpr: boolean;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 soc2: boolean;
 };
 }
 
 export class SecurityAuditor {
   private owaspTop10 = [
-<<<<<<< HEAD
     'A01: 2021 - Broken Access Control',',
     'A02: 2021 - Cryptographic Failures',',
     'A03: 2021 - Injection',',
@@ -69,18 +66,15 @@ export class SecurityAuditor {
     'A09: 2021 - Security Logging and Monitoring Failures',';,
     'A10: 2021 - Server-Side Request Forgery',
   ];
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 
   /**
    * Perform comprehensive security audit
    */
   auditSecurity(): SecurityReport {
-<<<<<<< HEAD
     console.log('Starting security audit...');
 =======
     console.log('Starting security audit...');';
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     const vulnerabilities = this.detectVulnerabilities();
     const secureAreas = this.identifySecureAreas();
     const score = this.calculateSecurityScore(vulnerabilities);
@@ -91,7 +85,6 @@ export class SecurityAuditor {
       vulnerabilities,
       secureAreas,
       summary: {,
-<<<<<<< HEAD
         critical: vulnerabilities.filter(v => v.severity === 'critical').length,
         high: vulnerabilities.filter(v => v.severity === 'high').length,
         medium: vulnerabilities.filter(v => v.severity === 'medium').length,
@@ -103,7 +96,6 @@ export class SecurityAuditor {
         medium: vulnerabilities.filter(v => v.severity === 'medium').length,';,
         low: vulnerabilities.filter(v => v.severity === 'low').length';,
       },
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       complianceStatus
     };
   }
@@ -112,7 +104,6 @@ export class SecurityAuditor {
    * Detect security vulnerabilities
    */
   private detectVulnerabilities(): SecurityVulnerability[] {
-<<<<<<< HEAD
     const vulnerabilities: SecurityVulnerability[] = [],
 
     // XSS Protection
@@ -249,7 +240,6 @@ export class SecurityAuditor {
       remediation: 'Implement strict input validation and sanitization',';,
       cweId: 'CWE-20',
     });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 
     return vulnerabilities;
   }
@@ -290,7 +280,6 @@ export class SecurityAuditor {
   /**
    * Check compliance status
    */
-<<<<<<< HEAD
   private checkCompliance(vulnerabilities: SecurityVulnerability[]): {
 owasp: boolean;
 gdpr: boolean;
@@ -298,7 +287,6 @@ gdpr: boolean;
   private checkCompliance(vulnerabilities: SecurityVulnerability[]): {,
 owasp: boolean;,
 gdpr: boolean;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 soc2: boolean;
 } {
     const criticalOrHigh = vulnerabilities.filter(
@@ -340,7 +328,6 @@ applied: string[];
 manual: string[];
 } {
     const applied = [
-<<<<<<< HEAD
       'Added Content-Security-Policy header',
       'Enabled HSTS header',
       'Set X-Frame-Options: DENY',',
@@ -350,7 +337,6 @@ manual: string[];
       'Enabled HSTS header',';
       'Set X-Frame-Options: DENY',';,
       'Added X-Content-Type-Options: nosniff',';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       'Implemented referrer policy'
     ];
 
@@ -371,7 +357,6 @@ manual: string[];
    */
   checkDependencies(): {
     vulnerable: Array<{ name: string; version: string; severity: string }>;
-<<<<<<< HEAD
     recommendation: string,
   } {
     // Mock implementation - in production, integrate with npm audit
@@ -385,7 +370,6 @@ manual: string[];
     const vulnerable = [
       { name: 'example-lib', version: '1.2.3', severity: 'high' },';
       { name: 'old-package', version: '2.0.0', severity: 'medium' }';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     ];
 
     return {
@@ -402,7 +386,6 @@ const audit = this.auditSecurity();
 const recommendations = this.generateRecommendations();
 const fixes = this.applyQuickFixes();
 const dependencies = this.checkDependencies();
-<<<<<<< HEAD
 const getRiskLevel = (score: number): string => {
 if (score >= 90) return 'LOW RISK ✅';
 if (score >= 75) return 'MODERATE RISK ⚠️';
@@ -414,7 +397,6 @@ if (score >= 90) return 'LOW RISK ✅';';
 if (score >= 75) return 'MODERATE RISK ⚠️';';
 if (score >= 60) return 'HIGH RISK 🔴';';
 return 'CRITICAL RISK 🚨';';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 };
 
     return `
@@ -449,7 +431,6 @@ ${vuln.cweId ? `- **CWE ID**: ${vuln.cweId}` : ''}';`;
 ${audit.secureAreas.map(area => `- ${area}`).join('\n')}';`;
 
 ## Compliance Status
-<<<<<<< HEAD
 - **OWASP Top 10**: ${audit.complianceStatus.owasp ? '✅ Compliant' : '❌ Non-Compliant'};
 - **GDPR**: ${audit.complianceStatus.gdpr ? '✅ Compliant' : '❌ Non-Compliant'};
 - **SOC 2**: ${audit.complianceStatus.soc2 ? '✅ Compliant' : '❌ Non-Compliant'};
@@ -458,28 +439,23 @@ ${audit.secureAreas.map(area => `- ${area}`).join('\n')}';`;
 - **GDPR**: ${audit.complianceStatus.gdpr ? '✅ Compliant' : '❌ Non-Compliant'}';
 - **SOC 2**: ${audit.complianceStatus.soc2 ? '✅ Compliant' : '❌ Non-Compliant'}';
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 ## Vulnerable Dependencies
 ${dependencies.vulnerable.length > 0 ? 
   dependencies.vulnerable.map(dep => 
     `- **${dep.name}** (${dep.version}) - Severity: ${dep.severity.toUpperCase()}`
-<<<<<<< HEAD
   ).join('\n') : ;
 =======
   ).join('\n') : ';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   '✅ No known vulnerable dependencies'
 }
 
 **Recommendation**: ${dependencies.recommendation}
 
 ## Security Recommendations
-<<<<<<< HEAD
 ${recommendations.map(rec => rec).join('\n')};
 =======
 ${recommendations.map(rec => rec).join('\n')}';
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 ## Quick Fixes Applied ✅
 ${fixes.applied.map(fix => `- ${fix}`).join('\n')}';`;
 

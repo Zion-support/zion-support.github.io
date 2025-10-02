@@ -2,7 +2,6 @@
 
 export default function Page(): void {
   return (
-<<<<<<< HEAD
     <main className="min-h-screen bg-white text-gray-900">
       <section className="container mx-auto px-6 py-16">
         <div className="max-w-3xl">
@@ -20,7 +19,6 @@ export default function Page(): void {
           </h1>
           <p className="text-gray-600 mb-6">";
             Ship useful analytics without collecting PII using scoped IDs, local redaction,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             and differential privacy at the edge. Keep SLAs while improving signal quality.
           </p>
           <div className="prose prose-indigo">";

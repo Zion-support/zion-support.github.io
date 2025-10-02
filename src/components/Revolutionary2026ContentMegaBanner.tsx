@@ -1,11 +1,9 @@
 import React from 'react';
-<<<<<<< HEAD
 import { TrendingUp, Zap } from 'lucide-react';
 =======
 import {
 
 } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a267
 
 const Revolutionary2026ContentMegaBanner: React.FC = () => {
   const revolutionaryContent = [
@@ -32,15 +30,12 @@ const Revolutionary2026ContentMegaBanner: React.FC = () => {
       readTime: "38 min",
       trending: true,
       icon: "🤖",
-<<<<<<< HEAD
       impact: "98% Automation",
 =======
       impact: "98% Automation"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a267
       featured: true
     },
     {
-<<<<<<< HEAD
       id: 3,
       title: "Quantum-Neural Network Architecture",
       description: "Next-generation computing combining quantum processing with neural networks for unprecedented performance",
@@ -92,7 +87,6 @@ icon: "🛡️",
 impact: "99.99% Security",
 featured: false
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a267
     {
       id: 5,
       title: "Edge AI Deployment at Scale",
@@ -107,7 +101,6 @@ featured: false
       featured: false
     },
     {
-<<<<<<< HEAD
       id: 6,
       title: "Synthetic Data Generation Revolution",
       description: "AI-generated datasets that outperform real data with 95% accuracy and infinite scalability",
@@ -133,7 +126,6 @@ icon: "🎭",
 impact: "95% Accuracy",
 featured: false
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a267
   ];
 
   return (

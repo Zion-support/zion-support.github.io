@@ -12,7 +12,6 @@ tags: string[];
 
 export const newArticles2025: NewArticle[] = [,
   {
-<<<<<<< HEAD
     id: "ai-2025-oct-03-reliable-agent-ops",",
     title: "🤖 Reliable Agent Ops: Budgets, Approvals, and Live Evals",",
     description: "Ship agentic systems with budgeted tools, PR policy tests, and instant rollback—safely and fast.",",
@@ -780,6 +779,5 @@ export const newArticles2025: NewArticle[] = [,
     link: "/blog/ai-real-time-anomaly-detection-2025",";,
     readTime: "13 min read",";,
     tags: ["Anomaly Detection", "Real-Time AI", "Security", "Monitoring"]";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   }
 ];

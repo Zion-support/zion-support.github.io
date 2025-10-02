@@ -1,7 +1,6 @@
 
 const October2025MultimodalCXRevolutionBanner = () => {
   return (
-<<<<<<< HEAD
     <div className="relative bg-gradient-to-br from-cyan-900/20 via-blue-900/20 to-purple-900/20 border-y border-cyan-500/30 overflow-hidden">
       {/* Animated background effects */};
       <div className="absolute inset-0 opacity-10">
@@ -39,7 +38,6 @@ const October2025MultimodalCXRevolutionBanner = () => {
           </div>
           
           <h2 className="text-4xl md: text-5xl font-bold text-white mb-4 leading-tight">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             Multimodal AI Customer Experience Platform
             <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400">";
@@ -47,17 +45,14 @@ const October2025MultimodalCXRevolutionBanner = () => {
             </span>
           </h2>
           
-<<<<<<< HEAD
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
 =======
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             Revolutionary platform integrating <strong className="text-white">Vision + Voice + Text + Emotion AI</strong> to deliver exceptional personalized experiences at scale. Achieve 85% automation, 87% first-contact resolution, and transform customer satisfaction. <strong className="text-cyan-400">Fortune 100 proven</strong> with 127M customers globally.";
           </p>
         </div>
 
         {/* Key Metrics Grid */}
-<<<<<<< HEAD
         <div className="grid grid-cols-2 md: grid-cols-4 gap-4 mb-10">",
           <div className="bg-gradient-to-br from-cyan-900/40 to-cyan-800/40 backdrop-blur-sm border border-cyan-500/30 rounded-xl p-6 text-center hover: scale-105 transition-transform duration-300">",
             <Heart className="w-8 h-8 text-cyan-400 mx-auto mb-2/>
@@ -113,7 +108,6 @@ const October2025MultimodalCXRevolutionBanner = () => {
             <div className="text-3xl font-bold text-white mb-1">85%</div>";
             <div className="text-sm text-green-200">Automation Rate</div>";
             <div className="text-xs text-gray-400 mt-1">$243M cost saved</div>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           </div>
         </div>
 
@@ -122,7 +116,6 @@ const October2025MultimodalCXRevolutionBanner = () => {
           <h3 className="text-2xl font-bold text-white mb-6 text-center">";
             🔥 Revolutionary Multimodal Capabilities
           </h3>
-<<<<<<< HEAD
           <div className="grid md: grid-cols-3 gap-6">",
             <div className="flex items-start gap-4">
               <div className="flex-shrink-0 w-12 h-12 bg-cyan-500/20 border border-cyan-500/30 rounded-lg flex items-center justify-center">
@@ -132,7 +125,6 @@ const October2025MultimodalCXRevolutionBanner = () => {
             <div className="flex items-start gap-4">";
               <div className="flex-shrink-0 w-12 h-12 bg-cyan-500/20 border border-cyan-500/30 rounded-lg flex items-center justify-center">";
                 <Eye className="w-6 h-6 text-cyan-400" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </div>
               <div>
                 <div className="font-semibold text-white mb-1">Vision AI Intelligence</div>";
@@ -142,7 +134,6 @@ const October2025MultimodalCXRevolutionBanner = () => {
               </div>
             </div>
 
-<<<<<<< HEAD
             <div className="flex items-start gap-4">
               <div className="flex-shrink-0 w-12 h-12 bg-blue-500/20 border border-blue-500/30 rounded-lg flex items-center justify-center">
                 <MessageCircle className="w-6 h-6 text-blue-400/>
@@ -150,7 +141,6 @@ const October2025MultimodalCXRevolutionBanner = () => {
             <div className="flex items-start gap-4">";
               <div className="flex-shrink-0 w-12 h-12 bg-blue-500/20 border border-blue-500/30 rounded-lg flex items-center justify-center">";
                 <MessageCircle className="w-6 h-6 text-blue-400" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </div>
               <div>
                 <div className="font-semibold text-white mb-1">Voice + Emotion AI</div>";
@@ -160,7 +150,6 @@ const October2025MultimodalCXRevolutionBanner = () => {
               </div>
             </div>
 
-<<<<<<< HEAD
             <div className="flex items-start gap-4">
               <div className="flex-shrink-0 w-12 h-12 bg-purple-500/20 border border-purple-500/30 rounded-lg flex items-center justify-center">
                 <Brain className="w-6 h-6 text-purple-400/>
@@ -168,7 +157,6 @@ const October2025MultimodalCXRevolutionBanner = () => {
             <div className="flex items-start gap-4">";
               <div className="flex-shrink-0 w-12 h-12 bg-purple-500/20 border border-purple-500/30 rounded-lg flex items-center justify-center">";
                 <Brain className="w-6 h-6 text-purple-400" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </div>
               <div>
                 <div className="font-semibold text-white mb-1">Predictive Intelligence</div>";
@@ -181,7 +169,6 @@ const October2025MultimodalCXRevolutionBanner = () => {
         </div>
 
         {/* Fortune 100 Success Story */}
-<<<<<<< HEAD
         <div className="bg-gradient-to-r from-cyan-900/30 via-blue-900/30 to-purple-900/30 backdrop-blur-sm border border-white/10 rounded-2xl p-8 mb-10">
           <div className="flex items-center justify-center gap-3 mb-4">
             <Users className="w-8 h-8 text-cyan-400/>
@@ -215,7 +202,6 @@ const October2025MultimodalCXRevolutionBanner = () => {
               <ul className="space-y-2 text-gray-300">";
                 <li className="flex items-start gap-2">";
                   <span className="text-red-400 mt-1">✗</span>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   <span>38% CSAT score (industry: 72%)</span>,
                 </li>
                 <li className="flex items-start gap-2">";
@@ -238,13 +224,11 @@ const October2025MultimodalCXRevolutionBanner = () => {
             </div>
 
             <div>
-<<<<<<< HEAD
               <div className="text-green-400 font-semibold mb-2 flex items-center gap-2">
                 <CheckCircle className="w-5 h-5" />
 =======
               <div className="text-green-400 font-semibold mb-2 flex items-center gap-2">";
                 <CheckCircle className="w-5 h-5" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 After: Multimodal AI Excellence,
               </div>
               <ul className="space-y-2 text-gray-300">";
@@ -272,7 +256,6 @@ const October2025MultimodalCXRevolutionBanner = () => {
             </div>
           </div>
 
-<<<<<<< HEAD
           <div className="text-center">
             <div className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 rounded-lg">
               <TrendingUp className="w-6 h-6 text-green-400/>
@@ -280,7 +263,6 @@ const October2025MultimodalCXRevolutionBanner = () => {
           <div className="text-center">";
             <div className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 rounded-lg">";
               <TrendingUp className="w-6 h-6 text-green-400" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               <div>
                 <div className="text-2xl font-bold text-white">287% ROI</div>";
                 <div className="text-sm text-gray-300">4-month payback period</div>";
@@ -304,7 +286,6 @@ const October2025MultimodalCXRevolutionBanner = () => {
           <h3 className="text-2xl font-bold text-white mb-6 text-center">";
             🌍 Proven Across Industries — 127M Customers Globally
           </h3>
-<<<<<<< HEAD
           <div className="grid grid-cols-2 md: grid-cols-5 gap-4">",
             <div className="text-center p-4 bg-white/5 rounded-lg hover: bg-white/10 transition-colors">",
               <div className="text-3xl mb-2">🛒</div>
@@ -364,34 +345,28 @@ const October2025MultimodalCXRevolutionBanner = () => {
               <div className="text-3xl mb-2">📱</div>";
               <div className="text-sm font-semibold text-white">Telecom</div>";
               <div className="text-xs text-gray-400 mt-1">67% cost cut</div>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             </div>
           </div>
         </div>
 
         {/* Call to Action Section */}
-<<<<<<< HEAD
         <div className="grid md: grid-cols-3 gap-6">",
 =======
         <div className="grid md: grid-cols-3 gap-6">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           <Link
             to="/blog/ai-2025-oct-multimodal-ai-customer-experience-revolution"
             className="group bg-gradient-to-br from-cyan-600 to-cyan-700 hover: from-cyan-500 hover:to-cyan-600 rounded-xl p-6 text-center transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/50",
           >
-<<<<<<< HEAD
             <Brain className="w-12 h-12 text-white mx-auto mb-4/>
             <div className="text-xl font-bold text-white mb-2">
 =======
             <Brain className="w-12 h-12 text-white mx-auto mb-4" />";
             <div className="text-xl font-bold text-white mb-2">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               Read Technical Guide
             </div>
             <div className="text-sm text-cyan-100 mb-4">";
               Complete guide to multimodal AI customer experience with architecture, implementation roadmap, and ROI calculator
             </div>
-<<<<<<< HEAD
             <div className="flex items-center justify-center gap-2 text-white font-semibold group-hover: gap-4 transition-all">",
               <span>Explore Technology</span>
               <ArrowRight className="w-5 h-5/>
@@ -399,7 +374,6 @@ const October2025MultimodalCXRevolutionBanner = () => {
             <div className="flex items-center justify-center gap-2 text-white font-semibold group-hover: gap-4 transition-all">";,
               <span>Explore Technology</span>
               <ArrowRight className="w-5 h-5" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             </div>
           </Link>
 
@@ -407,7 +381,6 @@ const October2025MultimodalCXRevolutionBanner = () => {
             to="/case-studies/ai-2025-oct-global-retail-multimodal-cx-transformation-340-million-success"
             className="group bg-gradient-to-br from-blue-600 to-blue-700 hover: from-blue-500 hover:to-blue-600 rounded-xl p-6 text-center transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/50",
           >
-<<<<<<< HEAD
             <Users className="w-12 h-12 text-white mx-auto mb-4/>
             <div className="text-xl font-bold text-white mb-2">
               $340M Success Story
@@ -429,7 +402,6 @@ const October2025MultimodalCXRevolutionBanner = () => {
             <div className="flex items-center justify-center gap-2 text-white font-semibold group-hover: gap-4 transition-all">";,
               <span>See Results</span>
               <ArrowRight className="w-5 h-5" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             </div>
           </Link>
 
@@ -437,19 +409,16 @@ const October2025MultimodalCXRevolutionBanner = () => {
             to="/services/multimodal-ai-customer-experience-platform-services"
             className="group bg-gradient-to-br from-purple-600 to-purple-700 hover: from-purple-500 hover:to-purple-600 rounded-xl p-6 text-center transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/50",
           >
-<<<<<<< HEAD
             <Target className="w-12 h-12 text-white mx-auto mb-4/>
             <div className="text-xl font-bold text-white mb-2">
 =======
             <Target className="w-12 h-12 text-white mx-auto mb-4" />";
             <div className="text-xl font-bold text-white mb-2">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               Our CX Platform Services
             </div>
             <div className="text-sm text-purple-100 mb-4">";
               Enterprise platform, implementation services, managed support — flexible pricing with guaranteed ROI and proven results
             </div>
-<<<<<<< HEAD
             <div className="flex items-center justify-center gap-2 text-white font-semibold group-hover: gap-4 transition-all">",
               <span>Get Started</span>
               <ArrowRight className="w-5 h-5/>
@@ -457,7 +426,6 @@ const October2025MultimodalCXRevolutionBanner = () => {
             <div className="flex items-center justify-center gap-2 text-white font-semibold group-hover: gap-4 transition-all">";,
               <span>Get Started</span>
               <ArrowRight className="w-5 h-5" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             </div>
           </Link>
         </div>
@@ -475,7 +443,6 @@ const October2025MultimodalCXRevolutionBanner = () => {
               to="/contact"
               className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 hover: from-cyan-500 hover:to-blue-500 rounded-lg text-white font-bold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/50",
             >
-<<<<<<< HEAD
               <Heart className="w-6 h-6/>
               <span>Schedule Free Assessment</span>
               <ArrowRight className="w-6 h-6/>
@@ -483,13 +450,11 @@ const October2025MultimodalCXRevolutionBanner = () => {
               <Heart className="w-6 h-6" />";
               <span>Schedule Free Assessment</span>
               <ArrowRight className="w-6 h-6" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             </Link>
           </div>
         </div>
 
         {/* Trust Indicators */}
-<<<<<<< HEAD
         <div className="mt-10 pt-8 border-t border-white/10">
           <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-gray-400">
             <div className="flex items-center gap-2">
@@ -531,7 +496,6 @@ const October2025MultimodalCXRevolutionBanner = () => {
             </div>
             <div className="flex items-center gap-2">";
               <CheckCircle className="w-4 h-4 text-green-400" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               <span>12-24 Week Implementation</span>
             </div>
           </div>

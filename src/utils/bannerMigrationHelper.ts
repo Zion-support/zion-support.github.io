@@ -4,12 +4,9 @@
  * This utility helps migrate from legacy banner components to the UnifiedPromotionalBanner.
  * It provides helper functions to convert existing banner props to the new unified format.
  */
-
-
 /**
  * Converts legacy NewContentPromoBanner props to UnifiedPromotionalBanner props
  */
-<<<<<<< HEAD
 export function convertNewContentPromoProps(legacyProps: {
 title: string;
 description: string;
@@ -21,23 +18,19 @@ title: string;,
 description: string;,
 ctaText: string;,
 ctaLink: string;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 featuredItems?: Array<{ title: string; category: string; link: string
 }>;
   className?: string;
   variant?: string;
 }): UnifiedPromotionalBannerProps {
   return {
-<<<<<<< HEAD
     variant: legacyProps.variant === 'premium' ? 'premium' : 'default',',
 =======
     variant: legacyProps.variant === 'premium' ? 'premium' : 'default',';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     title: legacyProps.title,,
     description: legacyProps.description,,
     ctaText: legacyProps.ctaText,,
     ctaLink: legacyProps.ctaLink,,
-<<<<<<< HEAD
     theme: 'gradient',',
     featuredItems: legacyProps.featuredItems || [],,
     className: legacyProps.className,,
@@ -52,7 +45,6 @@ featuredItems?: Array<{ title: string; category: string; link: string
     animated: true,,
     badge: 'NEW',
   };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 }
 
 /**
@@ -60,7 +52,6 @@ featuredItems?: Array<{ title: string; category: string; link: string
  */
 export const bannerPresets = {
   octoberBreakthrough: {,
-<<<<<<< HEAD
     variant: 'premium' as const,
     theme: 'gradient' as const,
     icon: 'rocket' as const,
@@ -130,7 +121,6 @@ export const bannerPresets = {
     icon: 'rocket' as const,';,
     badge: 'ENTERPRISE',';,
     animated: true,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   }
 };
 
@@ -151,7 +141,6 @@ export function createBannerConfig(
  * Banner content templates for common use cases
  */
 export const bannerTemplates = {
-<<<<<<< HEAD
 newAIBreakthroughs: (count: number = 3) => ({,
 title: `🚀 JUST RELEASED: ${count
 } Revolutionary AI Breakthroughs`,
@@ -191,14 +180,12 @@ title: `🚀 JUST RELEASED: ${count`;
     ctaText: 'Read Full Report',';,
     ctaLink: '/blog',';,
     icon: 'zap' as const';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   })
 };
 
 /**
  * Helper to create featured items with consistent formatting
  */
-<<<<<<< HEAD
 export function createFeaturedItems(items: Array<{
 title: string;
 category: string;
@@ -208,7 +195,6 @@ export function createFeaturedItems(items: Array<{,
 title: string;,
 category: string;,
 link: string;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 metrics?: string;
 }>): FeaturedItem[] {
   return items.map(item => ({
@@ -222,7 +208,6 @@ metrics?: string;
 /**
  * Date formatter for banner dates
  */
-<<<<<<< HEAD
 export function formatBannerDate(date: Date = new Date()): string {
   return date.toLocaleDateString('en-US', { 
     month: 'long',
@@ -234,7 +219,6 @@ export function formatBannerDate(date: Date = new Date()): string {,
     month: 'long', ';,
     day: 'numeric', ';,
     year: 'numeric' ,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   });
 }
 
@@ -242,17 +226,14 @@ export function formatBannerDate(date: Date = new Date()): string {,
  * Component usage guide for developers
  */
 export const usageExamples = {
-<<<<<<< HEAD
   basic: `,
 =======
   basic: `,`;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     <UnifiedPromotionalBanner
       variant="default"
       title="Your Title Here"
       description="Your description"
       ctaText="Learn More"
-<<<<<<< HEAD
       ctaLink="/blog/>
   `,`;
   
@@ -275,17 +256,14 @@ export const usageExamples = {
         description: "Transform your business with cutting-edge AI",";,
         ctaText: "Explore Breakthroughs",";,
         ctaLink: "/blog",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
         featuredItems: [...],
       })}
     />
   `,`;
   
-<<<<<<< HEAD
   withFeaturedItems: `,
 =======
   withFeaturedItems: `,`;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     <UnifiedPromotionalBanner
       variant="premium"
       title="Latest Innovations"
@@ -294,7 +272,6 @@ export const usageExamples = {
       ctaLink="/blog"
       featuredItems={createFeaturedItems([
         {
-<<<<<<< HEAD
           title: "AI System 1",",
           category: "Machine Learning",",
           link: "/blog/ai-system-1",",
@@ -302,7 +279,6 @@ export const usageExamples = {
           title: "AI System 1",";,
           category: "Machine Learning",";,
           link: "/blog/ai-system-1",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           metrics: "99% accuracy",
         }
       ])}

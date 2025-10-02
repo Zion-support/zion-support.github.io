@@ -1,6 +1,5 @@
 export const revolutionaryBreakthroughs2025 = [
   {
-<<<<<<< HEAD
     id: 'meta-cognitive-ai',
     title: 'Meta-Cognitive AI: The Thinking AI Revolution',
     description: 'Breakthrough AI systems that think about thinking, achieving 95% decision accuracy through self-reflection and meta-learning.',
@@ -260,14 +259,12 @@ export const revolutionaryBreakthroughs2025 = [
       energy: 'Ultra-Low',';,
       savings: '$4M+',';,
       architecture: 'Revolutionary',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     }
   }
 ];
 
 export const breakthroughServices2025 = [
   {
-<<<<<<< HEAD
     id: 'meta-cognitive-consulting',
     title: 'Meta-Cognitive AI Consulting',
     description: 'Transform your enterprise with AI that thinks about thinking. Achieve 95% decision accuracy and $2M+ annual savings.',
@@ -305,12 +302,10 @@ export const breakthroughServices2025 = [
       '95% Decision Accuracy',';
       '$2M+ Annual Savings',';
       '300% ROI',';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       '500+ Enterprise Clients'
     ]
   },
   {
-<<<<<<< HEAD
     id: 'quantum-neural-implementation',
     title: 'Quantum-Neural Network Implementation',
     description: 'Deploy quantum-neural networks for 1000x processing speed and $5M+ infrastructure savings.',
@@ -348,12 +343,10 @@ export const breakthroughServices2025 = [
       '1000x Processing Speed',';
       '$5M+ Infrastructure Savings',';
       '99.9% Efficiency',';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       'Revolutionary Performance'
     ]
   },
   {
-<<<<<<< HEAD
     id: 'autonomous-operations-service',
     title: 'Autonomous Operations Service',
     description: 'Achieve 98% operational automation with our comprehensive autonomous operations platform.',
@@ -391,7 +384,6 @@ export const breakthroughServices2025 = [
       '98% Automation Rate',';
       '$10M+ Annual Savings',';
       '300% Efficiency Gain',';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       '500% ROI'
     ]
   }
@@ -399,7 +391,6 @@ export const breakthroughServices2025 = [
 
 export const latestCaseStudies2025 = [
   {
-<<<<<<< HEAD
     id: 'fortune-500-transformation',
     title: 'Fortune 500 AI Transformation: $50M Annual Savings',
     description: 'How we helped a Fortune 500 company achieve $50M annual savings through comprehensive AI transformation.',
@@ -441,12 +432,10 @@ export const latestCaseStudies2025 = [
       'Complete AI infrastructure overhaul',';
       '95% process automation achieved',';
       '$50M annual cost savings',';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       '300% ROI in first year'
     ]
   },
   {
-<<<<<<< HEAD
     id: 'global-retail-optimization',
     title: 'Global Retail Chain: AI-Powered Optimization',
     description: 'Revolutionary AI optimization delivering $25M savings and 400% productivity gains for global retail chain.',
@@ -488,7 +477,6 @@ export const latestCaseStudies2025 = [
       'AI-powered inventory optimization',';
       '92% automated decision making',';
       '$25M annual savings',';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       '95% customer satisfaction'
     ]
   }
@@ -496,7 +484,6 @@ export const latestCaseStudies2025 = [
 
 export const promotionalBanners2025 = [
   {
-<<<<<<< HEAD
     id: 'revolutionary-breakthrough',
     title: '🚀 Revolutionary AI Breakthroughs 2025',
     subtitle: 'Meta-Cognitive AI • Quantum-Neural Networks • Autonomous Operations',
@@ -548,7 +535,6 @@ export const promotionalBanners2025 = [
       { label: '$50M+ Annual Savings', value: 'Average Client Results' },';
       { label: '95% Automation Rate', value: 'Operational Excellence' },';
       { label: '300% ROI', value: 'First Year Returns' }';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     ]
   }
 ];

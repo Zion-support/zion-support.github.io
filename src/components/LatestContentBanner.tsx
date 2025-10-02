@@ -1,9 +1,7 @@
-<<<<<<< HEAD
 import React from 'react';
 =======
 import React from 'react';';
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 interface LatestContentBannerProps {
 variant?: 'info' | 'success' | 'warning';,
 autoRotate?: boolean;,
@@ -11,7 +9,6 @@ rotationInterval?: number;,
 className?: string;
 }
 
-<<<<<<< HEAD
 const LatestContentBanner: React.FC<LatestContentBannerProps> = ({
   variant = 'info'
   className = ''
@@ -54,7 +51,6 @@ const LatestContentBanner: React.FC<LatestContentBannerProps> = ({,
                 🔥 New Today: Runtime Scorecards · Edge A/B &lt;100ms · Agent Guardrails v2,
               </h3>
               <p className="text-sm opacity-90">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 Now live: 3 new guides + dozens of updated insights,
               </p>
             </div>
@@ -63,11 +59,9 @@ const LatestContentBanner: React.FC<LatestContentBannerProps> = ({,
             to="/blog"
             className="bg-white text-gray-900 px-6 py-2 rounded-lg font-semibold hover: bg-opacity-90 transition-all flex items-center gap-2 flex-shrink-0",
           >
-<<<<<<< HEAD
             <TrendingUp className="w-4 h-4/>
 =======
             <TrendingUp className="w-4 h-4" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             Explore Now
           </Link>
         </div>

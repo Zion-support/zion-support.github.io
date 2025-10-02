@@ -4,7 +4,6 @@ import {
 } from 'framer-motion';';
 import {
 
-<<<<<<< HEAD
 } from 'lucide-react';
 interface SecurityCheck {
 id: string;,
@@ -30,7 +29,6 @@ lastUpdated: number;
 const SecurityAuditPanel: React.FC = () => {,
   const [report, setReport] = useState<SecurityReport | null>(null);
   const [isRunning, setIsRunning] = useState(false);
-<<<<<<< HEAD
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedSeverity, setSelectedSeverity] = useState<string>('all');
   const securityChecks: SecurityCheck[] = [,
@@ -245,7 +243,6 @@ const SecurityAuditPanel: React.FC = () => {,
       category: 'content',';,
       recommendation: 'Ensure errors don\'t leak sensitive information',';,
     },
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   ];
 
   const runSecurityAudit = async () => {
@@ -257,7 +254,6 @@ const SecurityAuditPanel: React.FC = () => {,
     const checks = securityChecks.map(check => {
       // Simulate some checks failing based on current state
       let status = check.status;
-<<<<<<< HEAD
       if (check.id === 'csp-header' && Math.random() > 0.5) {;
         status = 'warning';
       } else if (check.id === 'session-security' && Math.random() > 0.3) {;
@@ -271,7 +267,6 @@ const SecurityAuditPanel: React.FC = () => {,
         status = 'warning';';
       } else if (check.id === 'error-handling' && Math.random() > 0.4) {';
         status = 'warning';';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       }
       
       return { ...check, status };
@@ -289,11 +284,9 @@ const SecurityAuditPanel: React.FC = () => {,
       failedChecks,
       warnings,
       checks,
-<<<<<<< HEAD
       lastUpdated: Date.now()
 =======
       lastUpdated: Date.now(),,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     });
     
     setIsRunning(false);
@@ -301,7 +294,6 @@ const SecurityAuditPanel: React.FC = () => {,
 
   const getStatusIcon = (status: string) => {,
 switch (status) {
-<<<<<<< HEAD
 case 'pass':
 return <CheckCircle className="w-5 h-5 text-green-600" />;
 case 'fail':
@@ -321,12 +313,10 @@ return <AlertTriangle className="w-5 h-5 text-yellow-600" />;";
 default:
 return <Eye className="w-5 h-5 text-blue-600" />;";
 };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   };
 
   const getSeverityColor = (severity: string) => {,
 switch (severity) {
-<<<<<<< HEAD
 case 'critical':
 return 'bg-red-100 text-red-800 border-red-200';
 case 'high':
@@ -344,13 +334,11 @@ case 'medium':';
 return 'bg-yellow-100 text-yellow-800 border-yellow-200';';
 default:
 return 'bg-blue-100 text-blue-800 border-blue-200';';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 };
   };
 
   const getCategoryIcon = (category: string) => {,
 switch (category) {
-<<<<<<< HEAD
 case 'headers':
 return <Globe className="w-4 h-4" />;
 case 'authentication':
@@ -366,7 +354,6 @@ return <Lock className="w-4 h-4" />;";
 default:
 return <Shield className="w-4 h-4" />;";
 };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   };
 
   const filteredChecks = report?.checks.filter(check => {
@@ -375,14 +362,12 @@ return <Shield className="w-4 h-4" />;";
     return categoryMatch && severityMatch;
   }) || [];
 
-<<<<<<< HEAD
   const categories = ['all', ...Array.from(new Set(securityChecks.map(c => c.category)))];
   const severities = ['all', 'critical', 'high', 'medium', 'low'];
 =======
   const categories = ['all', ...Array.from(new Set(securityChecks.map(c => c.category)))];';
   const severities = ['all', 'critical', 'high', 'medium', 'low'];';
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   useEffect(() => {
     // Run initial audit
     runSecurityAudit();
@@ -392,13 +377,11 @@ return <Shield className="w-4 h-4" />;";
     <div className="bg-white rounded-lg shadow-lg p-6 max-w-6xl mx-auto">";
       <div className="flex justify-between items-center mb-6">";
         <div>
-<<<<<<< HEAD
           <h2 className="text-2xl font-bold text-gray-900 flex items-center gap-2">
             <Shield className="w-6 h-6/>
 =======
           <h2 className="text-2xl font-bold text-gray-900 flex items-center gap-2">";
             <Shield className="w-6 h-6" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             Security Audit Panel
           </h2>
           <p className="text-gray-600 mt-1">Comprehensive security assessment for your website</p>";
@@ -409,12 +392,10 @@ return <Shield className="w-4 h-4" />;";
           className={`px-6 py-2 rounded-lg font-medium transition-colors flex items-center gap-2 ${`;
             isRunning
               ? 'bg-gray-400 text-white cursor-not-allowed'
-<<<<<<< HEAD
               : 'bg-blue-600 text-white hover: bg-blue-700}`}`;
 =======
               : 'bg-blue-600 text-white hover: bg-blue-700',
           }`}`;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
         >
           {
 isRunning ? (
@@ -424,11 +405,9 @@ Running Audit...
 </>
 ) : (,
 <>
-<<<<<<< HEAD
 <Shield className="w-4 h-4/>
 =======
 <Shield className="w-4 h-4" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 Run Security Audit
 </>
 )
@@ -439,7 +418,6 @@ Run Security Audit
       {report && (
         <>
           {/* Security Score Overview */}
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md: grid-cols-4 gap-4 mb-6">",
             <div className="bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg p-4 text-white">
               <div className="flex justify-between items-center">
@@ -447,16 +425,13 @@ Run Security Audit
           <div className="grid grid-cols-1 md: grid-cols-4 gap-4 mb-6">";,
             <div className="bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg p-4 text-white">";
               <div className="flex justify-between items-center">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 <div>
                   <p className="text-blue-100 text-sm">Security Score</p>";
                   <p className="text-3xl font-bold">{report.overallScore}%</p>";
                 </div>
-<<<<<<< HEAD
                 <Shield className="w-8 h-8 text-blue-200/>
 =======
                 <Shield className="w-8 h-8 text-blue-200" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </div>
             </div>
             
@@ -466,11 +441,9 @@ Run Security Audit
                   <p className="text-green-600 text-sm">Passed</p>";
                   <p className="text-2xl font-bold text-green-700">{report.passedChecks}</p>";
                 </div>
-<<<<<<< HEAD
                 <CheckCircle className="w-6 h-6 text-green-500/>
 =======
                 <CheckCircle className="w-6 h-6 text-green-500" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </div>
             </div>
             
@@ -480,11 +453,9 @@ Run Security Audit
                   <p className="text-yellow-600 text-sm">Warnings</p>";
                   <p className="text-2xl font-bold text-yellow-700">{report.warnings}</p>";
                 </div>
-<<<<<<< HEAD
                 <AlertTriangle className="w-6 h-6 text-yellow-500/>
 =======
                 <AlertTriangle className="w-6 h-6 text-yellow-500" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </div>
             </div>
             
@@ -494,11 +465,9 @@ Run Security Audit
                   <p className="text-red-600 text-sm">Failed</p>";
                   <p className="text-2xl font-bold text-red-700">{report.failedChecks}</p>";
                 </div>
-<<<<<<< HEAD
                 <XCircle className="w-6 h-6 text-red-500/>
 =======
                 <XCircle className="w-6 h-6 text-red-500" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </div>
             </div>
           </div>
@@ -551,7 +520,6 @@ Run Security Audit
                   <div className="flex items-start justify-between">";
                     <div className="flex items-start gap-3 flex-1">";
                       {getStatusIcon(check.status)}
-<<<<<<< HEAD
                       <div className="flex-1">
                         <div className="flex items-center gap-2 mb-1">
                           <h4 className="font-semibold text-gray-900">{check.name}</h4>
@@ -559,7 +527,6 @@ Run Security Audit
                       <div className="flex-1">";
                         <div className="flex items-center gap-2 mb-1">";
                           <h4 className="font-semibold text-gray-900">{check.name}</h4>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                           <span className={`px-2 py-1 rounded-full text-xs font-medium border ${getSeverityColor(check.severity)}`}>`;
                             {check.severity}
                           </span>
@@ -571,7 +538,6 @@ Run Security Audit
                         <p className="text-gray-600 text-sm mb-2">{check.description}</p>";
                         {
 check.recommendation && (
-<<<<<<< HEAD
 <div className="bg-blue-50 border border-blue-200 rounded-lg p-3">
 <p className="text-blue-800 text-sm font-medium">Recommendation:</p>
 <p className="text-blue-700 text-sm">{check.recommendation
@@ -579,7 +545,6 @@ check.recommendation && (
 <div className="bg-blue-50 border border-blue-200 rounded-lg p-3">";
 <p className="text-blue-800 text-sm font-medium">Recommendation: </p>,";,
 <p className="text-blue-700 text-sm">{check.recommendation";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 }</p>
                           </div>
                         )}

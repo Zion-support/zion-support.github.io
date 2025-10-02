@@ -7,13 +7,11 @@ const Page = () => {
         <title>GenAI Cost Optimization v5 — Tier Routing + Caches + Scorecards</title>
         <meta
           name="description"
-<<<<<<< HEAD
           content="Achieve 60–85% GenAI cost savings with economy/quality tier routing, semantic caches, KV stores, and KPI-linked eval scorecards." /><link rel="canonical" href="https://ziontechgroup.com/blog/genai-2025-oct-01-cost-optimization-v5/>",
 =======
           content="Achieve 60–85% GenAI cost savings with economy/quality tier routing, semantic caches, KV stores, and KPI-linked eval scorecards."
         />
         <link rel="canonical" href="https: //ziontechgroup.com/blog/genai-2025-oct-01-cost-optimization-v5" />";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       </Helmet>
 
       <div className="container mx-auto px-6 py-12">";
@@ -34,24 +32,20 @@ const Page = () => {
               <li>Warm pools and prefetch for bursty traffic with SLO adherence.</li>
             </ul>
 
-<<<<<<< HEAD
             <h2 className="text-2xl font-semibold">Blueprint</h2>
             <p className="text-zion-slate-light">
 =======
             <h2 className="text-2xl font-semibold">Blueprint</h2>";
             <p className="text-zion-slate-light">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               Start with a budget per request type, attach a decision function that chooses: cache → economy → quality.,
               Record traces, costs, and quality metrics. Fail closed with rollbacks when scorecards dip below thresholds.
             </p>
 
-<<<<<<< HEAD
             <div className="mt-8">
               <Link to="/blog" className="text-cyan-300 hover: underline">← Back to Blog</Link>",
 =======
             <div className="mt-8">";
               <Link to="/blog" className="text-cyan-300 hover: underline">← Back to Blog</Link>";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             </div>
           </div>
         </div>

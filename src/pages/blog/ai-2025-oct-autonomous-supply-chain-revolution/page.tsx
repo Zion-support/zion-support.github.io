@@ -8,13 +8,11 @@ export default function AutonomousSupplyChainRevolution2025(): void {
           name="description"
           content="Transform supply chain operations with autonomous AI systems. Achieve 99.2% demand forecast accuracy, reduce operational costs by 78%, prevent $450M+ in disruptions, and unlock $1.8B+ in total value through intelligent automation." /><meta
           name="keywords"
-<<<<<<< HEAD
           content="AI supply chain, autonomous logistics, demand forecasting, inventory optimization, supply chain AI, predictive analytics, logistics automation, supply chain management" /><link rel="canonical" href="https://ziontechgroup.com/blog/ai-2025-oct-autonomous-supply-chain-revolution/>",
 =======
           content="AI supply chain, autonomous logistics, demand forecasting, inventory optimization, supply chain AI, predictive analytics, logistics automation, supply chain management"
         />
         <link rel="canonical" href="https: //ziontechgroup.com/blog/ai-2025-oct-autonomous-supply-chain-revolution" />";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       </Helmet>
 
       <article className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">";
@@ -23,11 +21,9 @@ export default function AutonomousSupplyChainRevolution2025(): void {
             to="/blog"
             className="inline-flex items-center text-blue-400 hover: text-blue-300 mb-8 transition-colors",
           >
-<<<<<<< HEAD
             <ArrowLeft className="mr-2 h-4 w-4/>
 =======
             <ArrowLeft className="mr-2 h-4 w-4" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             Back to Blog
           </Link>
 
@@ -39,11 +35,9 @@ export default function AutonomousSupplyChainRevolution2025(): void {
               <span className="text-gray-400">October 1, 2025</span>";
             </div>
             
-<<<<<<< HEAD
             <h1 className="text-5xl md: text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-400 text-transparent bg-clip-text leading-tight">",
 =======
             <h1 className="text-5xl md: text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-400 text-transparent bg-clip-text leading-tight">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               Autonomous AI Supply Chain: The $1.8B Efficiency Revolution,
             </h1>
             
@@ -52,7 +46,6 @@ export default function AutonomousSupplyChainRevolution2025(): void {
             </p>
           </header>
 
-<<<<<<< HEAD
           <div className="prose prose-invert prose-lg max-w-none">
             <div className="bg-gradient-to-r from-blue-500/10 to-cyan-500/10 border border-blue-500/20 rounded-xl p-8 mb-12">
               <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">
@@ -96,13 +89,11 @@ export default function AutonomousSupplyChainRevolution2025(): void {
                 </li>
                 <li className="flex items-start gap-3">";
                   <Globe className="h-6 w-6 text-blue-400 mt-1 flex-shrink-0" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   <span><strong>$450M+ Disruption Prevention: </strong> Predictive risk management prevents costly supply chain failures</span>,
                 </li>
               </ul>
             </div>
 
-<<<<<<< HEAD
             <section className="mb-12">
               <h2 className="text-3xl font-bold mb-6 text-blue-300">The Supply Chain Crisis</h2>
               <p className="text-gray-300 mb-4 leading-relaxed">
@@ -112,7 +103,6 @@ export default function AutonomousSupplyChainRevolution2025(): void {
               <h2 className="text-3xl font-bold mb-6 text-blue-300">The Supply Chain Crisis</h2>";
               <p className="text-gray-300 mb-4 leading-relaxed">";
                 Global supply chains face unprecedented complexity and volatility. Traditional manual planning can't keep pace with ';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 modern dynamics—geopolitical shifts, climate events, demand volatility, and supplier disruptions create chaos that 
                 costs enterprises billions annually. The average Fortune 500 company loses $184M per year to supply chain inefficiencies.
               </p>
@@ -123,7 +113,6 @@ export default function AutonomousSupplyChainRevolution2025(): void {
               </p>
             </section>
 
-<<<<<<< HEAD
             <section className="mb-12">
               <h2 className="text-3xl font-bold mb-6 text-blue-300">The Autonomous Supply Chain Architecture</h2>
               <div className="bg-slate-800/50 rounded-xl p-6 mb-6 border border-blue-500/20">
@@ -136,7 +125,6 @@ export default function AutonomousSupplyChainRevolution2025(): void {
               <div className="bg-slate-800/50 rounded-xl p-6 mb-6 border border-blue-500/20">";
                 <h3 className="text-2xl font-bold mb-4 text-cyan-300">1. Predictive Demand Intelligence</h3>";
                 <p className="text-gray-300 mb-4">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   Advanced ML models analyze historical patterns, market trends, external signals, and emerging indicators to 
                   forecast demand with 99.2% accuracy at SKU-location-week granularity. Deep learning captures complex seasonal 
                   patterns, promotional effects, and market dynamics that traditional forecasting methods miss.
@@ -195,7 +183,6 @@ export default function AutonomousSupplyChainRevolution2025(): void {
               </div>
             </section>
 
-<<<<<<< HEAD
             <section className="mb-12">
               <h2 className="text-3xl font-bold mb-6 text-blue-300">Enterprise Success Stories</h2>
               <div className="grid md: grid-cols-2 gap-6 mb-8">",
@@ -209,7 +196,6 @@ export default function AutonomousSupplyChainRevolution2025(): void {
                 <div className="bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-xl p-6 border border-blue-500/30">";
                   <h3 className="text-2xl font-bold mb-4 text-blue-300">Global Retail Corporation</h3>";
                   <ul className="space-y-3 text-gray-300">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                     <li>• $2.4B annual revenue increase from availability improvements</li>
                     <li>• 82% reduction in excess inventory carrying costs</li>
                     <li>• 94% decrease in stockouts across 12,000+ retail locations</li>
@@ -230,7 +216,6 @@ export default function AutonomousSupplyChainRevolution2025(): void {
               </div>
             </section>
 
-<<<<<<< HEAD
             <section className="mb-12">
               <h2 className="text-3xl font-bold mb-6 text-blue-300">Implementation Roadmap</h2>
               <div className="bg-slate-800/50 rounded-xl p-6 mb-6 border border-blue-500/20">
@@ -243,7 +228,6 @@ export default function AutonomousSupplyChainRevolution2025(): void {
               <div className="bg-slate-800/50 rounded-xl p-6 mb-6 border border-blue-500/20">";
                 <h3 className="text-2xl font-bold mb-4 text-cyan-300">Phase 1: Foundation (Months 1-3)</h3>";,
                 <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   <li>Data integration and quality assessment across supply chain systems</li>
                   <li>Baseline KPI measurement and improvement target definition</li>
                   <li>Pilot scope definition focusing on high-impact use cases</li>
@@ -251,7 +235,6 @@ export default function AutonomousSupplyChainRevolution2025(): void {
                 </ul>
               </div>
 
-<<<<<<< HEAD
               <div className="bg-slate-800/50 rounded-xl p-6 mb-6 border border-blue-500/20">
                 <h3 className="text-2xl font-bold mb-4 text-cyan-300">Phase 2: Pilot Deployment (Months 4-6)</h3>",
                 <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4">
@@ -259,7 +242,6 @@ export default function AutonomousSupplyChainRevolution2025(): void {
               <div className="bg-slate-800/50 rounded-xl p-6 mb-6 border border-blue-500/20">";
                 <h3 className="text-2xl font-bold mb-4 text-cyan-300">Phase 2: Pilot Deployment (Months 4-6)</h3>";,
                 <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   <li>Deploy demand forecasting AI for key product categories</li>
                   <li>Implement automated inventory optimization for pilot regions</li>
                   <li>Validate model performance and business impact</li>
@@ -267,7 +249,6 @@ export default function AutonomousSupplyChainRevolution2025(): void {
                 </ul>
               </div>
 
-<<<<<<< HEAD
               <div className="bg-slate-800/50 rounded-xl p-6 mb-6 border border-blue-500/20">
                 <h3 className="text-2xl font-bold mb-4 text-cyan-300">Phase 3: Scale (Months 7-12)</h3>",
                 <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4">
@@ -275,7 +256,6 @@ export default function AutonomousSupplyChainRevolution2025(): void {
               <div className="bg-slate-800/50 rounded-xl p-6 mb-6 border border-blue-500/20">";
                 <h3 className="text-2xl font-bold mb-4 text-cyan-300">Phase 3: Scale (Months 7-12)</h3>";,
                 <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   <li>Roll out across all product categories and geographies</li>
                   <li>Activate advanced capabilities: risk management, logistics optimization</li>,
                   <li>Integrate autonomous decision-making into operational workflows</li>
@@ -309,11 +289,9 @@ export default function AutonomousSupplyChainRevolution2025(): void {
                 className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover: from-blue-600 hover:to-cyan-600 transition-all shadow-lg",
               >
                 Schedule Your Supply Chain AI Assessment
-<<<<<<< HEAD
                 <ArrowLeft className="ml-2 h-5 w-5 rotate-180/>
 =======
                 <ArrowLeft className="ml-2 h-5 w-5 rotate-180" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </Link>
             </div>
           </div>

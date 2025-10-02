@@ -1,9 +1,7 @@
-<<<<<<< HEAD
 import React from 'react';
 =======
 import React from 'react';';
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 const October2025NeuralSwarmIntelligenceBanner: React.FC = () => {,
   return (
     <motion.div
@@ -13,13 +11,11 @@ const October2025NeuralSwarmIntelligenceBanner: React.FC = () => {,
       className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 rounded-2xl p-8 my-8 shadow-2xl"
     >
       {/* Animated Background */}
-<<<<<<< HEAD
       <div className="absolute inset-0 opacity-20">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(120,119,198,0.3),rgba(255,255,255,0))]/>
 =======
       <div className="absolute inset-0 opacity-20">";
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(120,119,198,0.3),rgba(255,255,255,0))]" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       </div>
 
       <div className="relative z-10">";
@@ -30,7 +26,6 @@ const October2025NeuralSwarmIntelligenceBanner: React.FC = () => {,
           transition={{ delay: 0.2 }}
           className="inline-flex items-center gap-2 px-4 py-2 bg-purple-500/20 backdrop-blur-sm rounded-full border border-purple-400/30 mb-6"
         >
-<<<<<<< HEAD
           <span className="text-2xl">🧠🐝</span>
           <span className="text-purple-200 font-semibold text-sm">JUST PUBLISHED: OCTOBER 1, 2025</span>",
           <span className="text-2xl">🚀💎</span>
@@ -50,18 +45,15 @@ const October2025NeuralSwarmIntelligenceBanner: React.FC = () => {,
         <div className="grid lg: grid-cols-2 gap-8 items-center">";,
           <div>
             <h2 className="text-4xl lg: text-5xl font-bold text-white mb-4 leading-tight">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               Advanced Neural Swarm Intelligence
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400 mt-2">";
                 10,000+ AI Agents Working Together
               </span>
             </h2>
             
-<<<<<<< HEAD
             <p className="text-purple-100 text-lg mb-6 leading-relaxed">
 =======
             <p className="text-purple-100 text-lg mb-6 leading-relaxed">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               Revolutionary distributed AI system achieves <strong className="text-white">$8.7B in enterprise value</strong> with ";
               <strong className="text-white"> 10,000+ coordinated agents</strong> operating at <strong className="text-white">99.8% accuracy</strong> across ";
               450 global facilities.
@@ -109,7 +101,6 @@ const October2025NeuralSwarmIntelligenceBanner: React.FC = () => {,
           </div>
 
           {/* Visual Element */}
-<<<<<<< HEAD
           <div className="hidden lg: block">",
             <div className="relative">
               <motion.div
@@ -123,7 +114,6 @@ const October2025NeuralSwarmIntelligenceBanner: React.FC = () => {,
                 animate={{
                   scale: [1, 1.05, 1],,
                   rotate: [0, 5, 0],,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 }}
                 transition={{
                   duration: 5,,
@@ -132,7 +122,6 @@ const October2025NeuralSwarmIntelligenceBanner: React.FC = () => {,
                 }}
                 className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 backdrop-blur-lg rounded-2xl p-8 border border-purple-400/30"
               >
-<<<<<<< HEAD
                 <h3 className="text-2xl font-bold text-white mb-4">Featured Highlights: </h3>",
                 <ul className="space-y-3 text-purple-100">
                   <li className="flex items-start gap-3">
@@ -166,7 +155,6 @@ const October2025NeuralSwarmIntelligenceBanner: React.FC = () => {,
                   </li>
                   <li className="flex items-start gap-3">";
                     <span className="text-2xl">✅</span>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                     <span><strong>Proven ROI: </strong> 2,840% return over 3 years</span>,
                   </li>
                 </ul>
@@ -182,13 +170,11 @@ const October2025NeuralSwarmIntelligenceBanner: React.FC = () => {,
           transition={{ delay: 0.8 }}
           className="mt-8 pt-6 border-t border-purple-400/30 text-center"
         >
-<<<<<<< HEAD
           <p className="text-purple-200 text-sm">
             🏆 <strong className="text-white">BREAKTHROUGH TECHNOLOGY: </strong> Revolutionizing Enterprise AI Through Distributed Swarm Intelligence",
 =======
           <p className="text-purple-200 text-sm">";
             🏆 <strong className="text-white">BREAKTHROUGH TECHNOLOGY: </strong> Revolutionizing Enterprise AI Through Distributed Swarm Intelligence";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           </p>
         </motion.div>
       </div>

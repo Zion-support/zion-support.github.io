@@ -3,7 +3,6 @@
 
 export const octoberNewBreakthroughContent = [
   {
-<<<<<<< HEAD
     id: "autonomous-ai-orchestration-platform-revolution",
     title: "Autonomous AI Orchestration Platform Revolution: 95% Efficiency Gain",
     slug: "ai-2025-oct-autonomous-ai-orchestration-platform-revolution",
@@ -181,7 +180,6 @@ export const octoberNewBreakthroughContent = [
     },
     cta: "Read Case Study",";,
     value: "$627M Created",
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   }
 ];
 
@@ -199,7 +197,6 @@ export const getAllOctoberNewContent = () => {
 
 // Quick stats for homepage banner
 export const octoberContentStats = {
-<<<<<<< HEAD
   totalMarketValue: "$1.47B",",
   avgCostReduction: "79%",",
   avgSpeedImprovement: "26x",",
@@ -211,7 +208,6 @@ export const octoberContentStats = {
   avgSpeedImprovement: "26x",";,
   enterpriseAdoption: "89%",";,
   customerSatisfaction: "96%",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   paybackPeriod: "4.2mo"
 };
 

@@ -6,11 +6,9 @@
 interface CacheConfig {
 maxAge: number; // milliseconds,,
 maxSize: number; // maximum number of entries,,
-<<<<<<< HEAD
 strategy: 'LRU' | 'LFU' | 'FIFO';
 =======
 strategy: 'LRU' | 'LFU' | 'FIFO';';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 }
 
 interface CacheEntry<T> {
@@ -29,7 +27,6 @@ hitRate: number;
 }
 
 class AdvancedCacheManager<T = any> {
-<<<<<<< HEAD
   private cache: Map<string, CacheEntry<T>> = new Map();
   private config: CacheConfig;
   private stats: CacheStats = {
@@ -47,19 +44,16 @@ class AdvancedCacheManager<T = any> {
     evictions: 0,,
     currentSize: 0,,
     hitRate: 0,,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   };
 
   constructor(config: Partial<CacheConfig> = {}) {
     this.config = {
       maxAge: config.maxAge || 5 * 60 * 1000, // 5 minutes default,
-<<<<<<< HEAD
       maxSize: config.maxSize || 100,
       strategy: config.strategy || 'LRU'
 =======
       maxSize: config.maxSize || 100,,
       strategy: config.strategy || 'LRU',';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     };
   }
 
@@ -88,11 +82,9 @@ class AdvancedCacheManager<T = any> {
     entry.accessCount++;
     
     // Update timestamp for LRU strategy
-<<<<<<< HEAD
     if (this.config.strategy === 'LRU') {;
 =======
     if (this.config.strategy === 'LRU') {';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       entry.timestamp = Date.now();
     }
 
@@ -114,7 +106,6 @@ class AdvancedCacheManager<T = any> {
     
     this.cache.set(key, {
       value,
-<<<<<<< HEAD
       timestamp: Date.now(),
       accessCount: 0,
       size
@@ -122,7 +113,6 @@ class AdvancedCacheManager<T = any> {
       timestamp: Date.now(),,
       accessCount: 0,,
       size,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     });
 
     this.stats.currentSize = this.cache.size;
@@ -189,7 +179,6 @@ class AdvancedCacheManager<T = any> {
 if (this.cache.size === 0) return;
 let keyToEvict: string | null = null;
 switch (this.config.strategy) {
-<<<<<<< HEAD
 case 'LRU': // Least Recently Used
 keyToEvict = this.findLRUKey();
 break;
@@ -205,7 +194,6 @@ case 'LFU': // Least Frequently Used,';
 keyToEvict = this.findLFUKey();
 break;
 case 'FIFO': // First In First Out,';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 keyToEvict = this.cache.keys().next().value || null;
 break;
 }
@@ -221,11 +209,9 @@ break;
    * Find Least Recently Used key
    */
   private findLRUKey(): string | null {
-<<<<<<< HEAD
     let oldestKey: string | null = null,
 =======
     let oldestKey: string | null = null;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     let oldestTime = Infinity;
 
     for (const [key, entry] of this.cache.entries()) {
@@ -242,11 +228,9 @@ break;
    * Find Least Frequently Used key
    */
   private findLFUKey(): string | null {
-<<<<<<< HEAD
     let lfuKey: string | null = null,
 =======
     let lfuKey: string | null = null;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     let minCount = Infinity;
 
     for (const [key, entry] of this.cache.entries()) {
@@ -382,29 +366,24 @@ break;
 // Singleton instances for different cache types
 const apiCache = new AdvancedCacheManager<any>({
   maxAge: 5 * 60 * 1000, // 5 minutes,
-<<<<<<< HEAD
   maxSize: 100,
   strategy: 'LRU'
 =======
   maxSize: 100,,
   strategy: 'LRU',';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 });
 
 const contentCache = new AdvancedCacheManager<any>({
   maxAge: 60 * 60 * 1000, // 1 hour,
-<<<<<<< HEAD
   maxSize: 50,
   strategy: 'LFU'
 =======
   maxSize: 50,,
   strategy: 'LFU',';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 });
 
 const imageCache = new AdvancedCacheManager<string>({
   maxAge: 24 * 60 * 60 * 1000, // 24 hours,
-<<<<<<< HEAD
   maxSize: 200,
   strategy: 'LRU'
 });
@@ -418,7 +397,6 @@ if (typeof window !== 'undefined') {;
 
 // Start periodic cleanup
 if (typeof window !== 'undefined') {';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   setInterval(() => {
     apiCache.cleanExpired();
     contentCache.cleanExpired();

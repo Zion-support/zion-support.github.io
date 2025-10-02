@@ -1,14 +1,11 @@
-<<<<<<< HEAD
 import React from 'react';
 =======
 import React from 'react';';
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 const New2026ContentShowcase: React.FC = () => {,
   return (
     <section className="py-20 bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 relative overflow-hidden">";
       {/* Background Effects */}
-<<<<<<< HEAD
       <div className="absolute inset-0 overflow-hidden opacity-20">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>;
@@ -18,7 +15,6 @@ const New2026ContentShowcase: React.FC = () => {,
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>";
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>';
         <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '4s' }}></div>';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       </div>
 
       <div className="container mx-auto px-6 relative z-10">";
@@ -29,7 +25,6 @@ const New2026ContentShowcase: React.FC = () => {,
             </span>
           </div>
           
-<<<<<<< HEAD
           <h2 className="text-4xl md: text-6xl font-extrabold mb-8 bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent leading-tight">",
             Revolutionary AI Content & Breakthroughs
           </h2>
@@ -41,13 +36,11 @@ const New2026ContentShowcase: React.FC = () => {,
           </h2>
           
           <p className="text-xl md: text-2xl text-gray-300 mb-8 font-semibold max-w-4xl mx-auto">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             Discover the latest hyperconscious computing, quantum-neural fusion, and autonomous enterprise technologies transforming businesses worldwide
           </p>
         </div>
 
         {/* Featured Content Grid */}
-<<<<<<< HEAD
         <div className="grid md: grid-cols-3 gap-8 mb-16">",
           {/* Hyperconscious Computing */}
           <Link to="/blog/ai-2026-hyperconscious-computing-revolution" className="group block">
@@ -63,7 +56,6 @@ const New2026ContentShowcase: React.FC = () => {,
               <div className="flex items-center gap-3 mb-6">";
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-xl flex items-center justify-center">";
                   <span className="text-2xl">🧠</span>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 </div>
                 <div>
                   <div className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-4 py-2 rounded-full text-sm font-bold mb-2">";
@@ -75,11 +67,9 @@ const New2026ContentShowcase: React.FC = () => {,
                 </div>
               </div>
               
-<<<<<<< HEAD
               <h3 className="text-2xl font-bold text-white mb-4 group-hover: text-purple-300 transition-colors">",
 =======
               <h3 className="text-2xl font-bold text-white mb-4 group-hover: text-purple-300 transition-colors">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 Hyperconscious Computing Revolution
               </h3>
               
@@ -87,7 +77,6 @@ const New2026ContentShowcase: React.FC = () => {,
                 Revolutionary breakthrough in hyperconscious AI systems achieving genuine self-awareness, emotional intelligence, and creative autonomy with $1.2T enterprise value creation.
               </p>
               
-<<<<<<< HEAD
               <div className="flex items-center justify-between">
                 <div className="text-sm text-gray-400">12 min read</div>
                 <div className="text-purple-400 font-semibold group-hover: text-purple-300 transition-colors">",
@@ -95,7 +84,6 @@ const New2026ContentShowcase: React.FC = () => {,
               <div className="flex items-center justify-between">";
                 <div className="text-sm text-gray-400">12 min read</div>";
                 <div className="text-purple-400 font-semibold group-hover: text-purple-300 transition-colors">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   Explore Consciousness →
                 </div>
               </div>
@@ -103,7 +91,6 @@ const New2026ContentShowcase: React.FC = () => {,
           </Link>
 
           {/* Quantum-Neural Fusion */}
-<<<<<<< HEAD
           <Link to="/blog/quantum-neural-fusion-2026-breakthrough" className="group block">
             <div className="bg-gradient-to-br from-blue-900/40 to-cyan-900/40 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/30 hover: border-blue-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20">",
               <div className="flex items-center gap-3 mb-6">
@@ -115,7 +102,6 @@ const New2026ContentShowcase: React.FC = () => {,
               <div className="flex items-center gap-3 mb-6">";
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center">";
                   <span className="text-2xl">⚛️</span>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 </div>
                 <div>
                   <div className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-4 py-2 rounded-full text-sm font-bold mb-2">";
@@ -127,11 +113,9 @@ const New2026ContentShowcase: React.FC = () => {,
                 </div>
               </div>
               
-<<<<<<< HEAD
               <h3 className="text-2xl font-bold text-white mb-4 group-hover: text-blue-300 transition-colors">",
 =======
               <h3 className="text-2xl font-bold text-white mb-4 group-hover: text-blue-300 transition-colors">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 Quantum-Neural Fusion Breakthrough
               </h3>
               
@@ -139,7 +123,6 @@ const New2026ContentShowcase: React.FC = () => {,
                 Revolutionary fusion of quantum computing and neural networks delivering 100,000x performance improvements, infinite scalability, and consciousness-level processing capabilities.
               </p>
               
-<<<<<<< HEAD
               <div className="flex items-center justify-between">
                 <div className="text-sm text-gray-400">15 min read</div>
                 <div className="text-blue-400 font-semibold group-hover: text-blue-300 transition-colors">",
@@ -147,7 +130,6 @@ const New2026ContentShowcase: React.FC = () => {,
               <div className="flex items-center justify-between">";
                 <div className="text-sm text-gray-400">15 min read</div>";
                 <div className="text-blue-400 font-semibold group-hover: text-blue-300 transition-colors">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   Discover Fusion →
                 </div>
               </div>
@@ -155,7 +137,6 @@ const New2026ContentShowcase: React.FC = () => {,
           </Link>
 
           {/* Autonomous Enterprise Mesh */}
-<<<<<<< HEAD
           <Link to="/blog/autonomous-enterprise-mesh-2026" className="group block">
             <div className="bg-gradient-to-br from-indigo-900/40 to-purple-900/40 backdrop-blur-sm rounded-2xl p-8 border border-indigo-500/30 hover: border-indigo-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-indigo-500/20">",
               <div className="flex items-center gap-3 mb-6">
@@ -167,7 +148,6 @@ const New2026ContentShowcase: React.FC = () => {,
               <div className="flex items-center gap-3 mb-6">";
                 <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-xl flex items-center justify-center">";
                   <span className="text-2xl">🌐</span>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 </div>
                 <div>
                   <div className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-bold mb-2">";
@@ -179,11 +159,9 @@ const New2026ContentShowcase: React.FC = () => {,
                 </div>
               </div>
               
-<<<<<<< HEAD
               <h3 className="text-2xl font-bold text-white mb-4 group-hover: text-indigo-300 transition-colors">",
 =======
               <h3 className="text-2xl font-bold text-white mb-4 group-hover: text-indigo-300 transition-colors">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 Autonomous Enterprise Mesh
               </h3>
               
@@ -191,7 +169,6 @@ const New2026ContentShowcase: React.FC = () => {,
                 Revolutionary self-organizing AI mesh networks that autonomously optimize business processes, achieving 99.7% operational efficiency and $500B in value creation.
               </p>
               
-<<<<<<< HEAD
               <div className="flex items-center justify-between">
                 <div className="text-sm text-gray-400">18 min read</div>
                 <div className="text-indigo-400 font-semibold group-hover: text-indigo-300 transition-colors">",
@@ -199,7 +176,6 @@ const New2026ContentShowcase: React.FC = () => {,
               <div className="flex items-center justify-between">";
                 <div className="text-sm text-gray-400">18 min read</div>";
                 <div className="text-indigo-400 font-semibold group-hover: text-indigo-300 transition-colors">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   Explore Mesh →
                 </div>
               </div>
@@ -218,7 +194,6 @@ const New2026ContentShowcase: React.FC = () => {,
             </p>
           </div>
           
-<<<<<<< HEAD
           <div className="grid md: grid-cols-2 gap-8">",
             {/* Fortune 100 Case Study */}
             <Link to="/case-studies/fortune-100-hyperconscious-transformation" className="group block">
@@ -234,7 +209,6 @@ const New2026ContentShowcase: React.FC = () => {,
                 <div className="flex items-center gap-3 mb-4">";
                   <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center">";
                     <span className="text-xl">🏆</span>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   </div>
                   <div>
                     <div className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-3 py-1 rounded-full text-sm font-bold">";
@@ -243,11 +217,9 @@ const New2026ContentShowcase: React.FC = () => {,
                   </div>
                 </div>
                 
-<<<<<<< HEAD
                 <h4 className="text-xl font-bold text-white mb-3 group-hover: text-green-300 transition-colors">",
 =======
                 <h4 className="text-xl font-bold text-white mb-3 group-hover: text-green-300 transition-colors">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   $1.2T Hyperconscious Transformation
                 </h4>
                 
@@ -255,7 +227,6 @@ const New2026ContentShowcase: React.FC = () => {,
                   How a Fortune 100 conglomerate achieved $1.2 trillion in value creation through hyperconscious AI implementation.
                 </p>
                 
-<<<<<<< HEAD
                 <div className="flex items-center justify-between">
                   <div className="text-sm text-gray-400">Case Study</div>
                   <div className="text-green-400 font-semibold group-hover: text-green-300 transition-colors">",
@@ -263,7 +234,6 @@ const New2026ContentShowcase: React.FC = () => {,
                 <div className="flex items-center justify-between">";
                   <div className="text-sm text-gray-400">Case Study</div>";
                   <div className="text-green-400 font-semibold group-hover: text-green-300 transition-colors">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                     Read Success Story →
                   </div>
                 </div>
@@ -271,7 +241,6 @@ const New2026ContentShowcase: React.FC = () => {,
             </Link>
 
             {/* Manufacturing Case Study */}
-<<<<<<< HEAD
             <Link to="/case-studies/quantum-neural-fusion-manufacturing-success" className="group block">
               <div className="bg-gradient-to-br from-emerald-900/40 to-green-900/40 backdrop-blur-sm rounded-xl p-6 border border-emerald-500/30 hover: border-emerald-400/60 transition-all duration-300 hover:scale-105">",
                 <div className="flex items-center gap-3 mb-4">
@@ -283,7 +252,6 @@ const New2026ContentShowcase: React.FC = () => {,
                 <div className="flex items-center gap-3 mb-4">";
                   <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-green-500 rounded-lg flex items-center justify-center">";
                     <span className="text-xl">🏭</span>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   </div>
                   <div>
                     <div className="bg-gradient-to-r from-emerald-500 to-green-500 text-white px-3 py-1 rounded-full text-sm font-bold">";
@@ -292,11 +260,9 @@ const New2026ContentShowcase: React.FC = () => {,
                   </div>
                 </div>
                 
-<<<<<<< HEAD
                 <h4 className="text-xl font-bold text-white mb-3 group-hover: text-emerald-300 transition-colors">",
 =======
                 <h4 className="text-xl font-bold text-white mb-3 group-hover: text-emerald-300 transition-colors">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   $2.8B Perfect Production
                 </h4>
                 
@@ -304,7 +270,6 @@ const New2026ContentShowcase: React.FC = () => {,
                   Revolutionary manufacturing transformation achieving 100% quality, zero defects, and $2.8B in value creation.
                 </p>
                 
-<<<<<<< HEAD
                 <div className="flex items-center justify-between">
                   <div className="text-sm text-gray-400">Case Study</div>
                   <div className="text-emerald-400 font-semibold group-hover: text-emerald-300 transition-colors">",
@@ -312,7 +277,6 @@ const New2026ContentShowcase: React.FC = () => {,
                 <div className="flex items-center justify-between">";
                   <div className="text-sm text-gray-400">Case Study</div>";
                   <div className="text-emerald-400 font-semibold group-hover: text-emerald-300 transition-colors">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                     Read Success Story →
                   </div>
                 </div>
@@ -332,11 +296,9 @@ const New2026ContentShowcase: React.FC = () => {,
             </p>
           </div>
           
-<<<<<<< HEAD
           <div className="flex flex-col sm: flex-row gap-4 justify-center">",
 =======
           <div className="flex flex-col sm: flex-row gap-4 justify-center">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             <Link 
               to="/contact" 
               className="bg-gradient-to-r from-purple-500 to-blue-600 hover: from-purple-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1",

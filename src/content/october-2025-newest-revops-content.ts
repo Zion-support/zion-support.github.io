@@ -3,7 +3,6 @@
 
 export const octoberNewestRevOpsContent = [
   {
-<<<<<<< HEAD
     id: "autonomous-revops-revolution-2025",
     title: "🚀 NEW: Autonomous Revenue Operations Revolution - 127% ROI",
     slug: "ai-2025-oct-01-autonomous-revenue-operations-revolution",
@@ -131,7 +130,6 @@ export const octoberNewestRevOpsContent = [
     cta: {,
       text: "Read the Full Case Study",";,
       link: "/case-studies/ai-2025-oct-01-global-saas-autonomous-revops-127-million-success",
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     }
   }
 ];

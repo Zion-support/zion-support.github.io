@@ -6,7 +6,6 @@ const AIMLOpsAutomation = () => {
         <title>AI MLOps Automation Services | Zion Tech Group</title>
         <meta 
           name="description" 
-<<<<<<< HEAD
           content="Enterprise MLOps automation with 99.9% reliability. Deploy, monitor, and scale ML models with automated pipelines, real-time monitoring, and intelligent optimization." /><meta name="keywords" content="MLOps, AI automation, ML deployment, model monitoring, CI/CD for ML, automated ML pipelines" /></Helmet>
 
       <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white dark: from-gray-900 dark:to-gray-800">",
@@ -35,7 +34,6 @@ const AIMLOpsAutomation = () => {
                 AI MLOps Automation
               </h1>
               <p className="text-xl md: text-2xl mb-8 max-w-3xl mx-auto">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 Deploy, monitor, and scale ML models with enterprise-grade automation achieving 99.9% reliability
               </p>
               <div className="flex flex-wrap justify-center gap-4">";
@@ -44,11 +42,9 @@ const AIMLOpsAutomation = () => {
                   className="inline-flex items-center px-8 py-3 bg-white text-blue-600 rounded-lg font-semibold hover: bg-gray-100 transition-colors",
                 >
                   Get Started
-<<<<<<< HEAD
                   <ArrowRight className="ml-2 h-5 w-5/>
 =======
                   <ArrowRight className="ml-2 h-5 w-5" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 </Link>
                 <a title="Internal link"
                   href="#features"
@@ -62,7 +58,6 @@ const AIMLOpsAutomation = () => {
         </section>
 
         {/* Key Metrics */}
-<<<<<<< HEAD
         <section className="py-16 bg-white dark: bg-gray-800">",
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
             <div className="grid grid-cols-1 md: grid-cols-4 gap-8 text-center">",
@@ -100,14 +95,12 @@ const AIMLOpsAutomation = () => {
               <div className="p-6">";
                 <div className="text-4xl font-bold text-blue-600 mb-2">72%</div>";
                 <div className="text-gray-600 dark: text-gray-300">Cost Reduction</div>";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </div>
             </div>
           </div>
         </section>
 
         {/* Features Section */}
-<<<<<<< HEAD
         <section id="features" className="py-20 bg-gray-50 dark: bg-gray-900">",
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
             <div className="text-center mb-16">
@@ -119,12 +112,10 @@ const AIMLOpsAutomation = () => {
             <div className="text-center mb-16">";
               <h2 className="text-4xl font-bold mb-4">Comprehensive MLOps Platform</h2>";
               <p className="text-xl text-gray-600 dark: text-gray-300 max-w-3xl mx-auto">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 End-to-end automation for the entire ML lifecycle - from development to production
               </p>
             </div>
 
-<<<<<<< HEAD
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">",
               {/* Automated Pipelines */}
               <div className="bg-white dark: bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow">",
@@ -166,13 +157,11 @@ const AIMLOpsAutomation = () => {
                   <li className="flex items-start">";
                     <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-1" />";
                     <span className="text-gray-700 dark: text-gray-300">Instant rollback on failure</span>";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   </li>
                 </ul>
               </div>
 
               {/* Real-time Monitoring */}
-<<<<<<< HEAD
               <div className="bg-white dark: bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow">",
                 <TrendingUp className="h-12 w-12 text-blue-600 mb-4/>
                 <h3 className="text-2xl font-bold mb-4">Real-time Model Monitoring</h3>
@@ -210,13 +199,11 @@ const AIMLOpsAutomation = () => {
                   <li className="flex items-start">";
                     <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-1" />";
                     <span className="text-gray-700 dark: text-gray-300">Automated retraining triggers</span>";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   </li>
                 </ul>
               </div>
 
               {/* Model Registry */}
-<<<<<<< HEAD
               <div className="bg-white dark: bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow">",
                 <Shield className="h-12 w-12 text-blue-600 mb-4/>
                 <h3 className="text-2xl font-bold mb-4">Centralized Model Registry</h3>
@@ -254,13 +241,11 @@ const AIMLOpsAutomation = () => {
                   <li className="flex items-start">";
                     <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-1" />";
                     <span className="text-gray-700 dark: text-gray-300">Compliance audit trails</span>";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   </li>
                 </ul>
               </div>
 
               {/* Feature Store */}
-<<<<<<< HEAD
               <div className="bg-white dark: bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow">",
                 <Users className="h-12 w-12 text-blue-600 mb-4/>
                 <h3 className="text-2xl font-bold mb-4">Enterprise Feature Store</h3>
@@ -298,13 +283,11 @@ const AIMLOpsAutomation = () => {
                   <li className="flex items-start">";
                     <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-1" />";
                     <span className="text-gray-700 dark: text-gray-300">Training-serving consistency</span>";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   </li>
                 </ul>
               </div>
 
               {/* Auto-scaling */}
-<<<<<<< HEAD
               <div className="bg-white dark: bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow">",
                 <Zap className="h-12 w-12 text-blue-600 mb-4/>
                 <h3 className="text-2xl font-bold mb-4">Intelligent Auto-scaling</h3>
@@ -342,13 +325,11 @@ const AIMLOpsAutomation = () => {
                   <li className="flex items-start">";
                     <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-1" />";
                     <span className="text-gray-700 dark: text-gray-300">Zero downtime scaling</span>";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   </li>
                 </ul>
               </div>
 
               {/* Experiment Tracking */}
-<<<<<<< HEAD
               <div className="bg-white dark: bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow">",
                 <TrendingUp className="h-12 w-12 text-blue-600 mb-4/>
                 <h3 className="text-2xl font-bold mb-4">Experiment Tracking</h3>
@@ -386,7 +367,6 @@ const AIMLOpsAutomation = () => {
                   <li className="flex items-start">";
                     <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-1" />";
                     <span className="text-gray-700 dark: text-gray-300">Reproducibility</span>";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   </li>
                 </ul>
               </div>
@@ -395,7 +375,6 @@ const AIMLOpsAutomation = () => {
         </section>
 
         {/* Use Cases */}
-<<<<<<< HEAD
         <section className="py-20 bg-white dark: bg-gray-800">",
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
             <div className="text-center mb-16">
@@ -407,12 +386,10 @@ const AIMLOpsAutomation = () => {
             <div className="text-center mb-16">";
               <h2 className="text-4xl font-bold mb-4">Proven Use Cases</h2>";
               <p className="text-xl text-gray-600 dark: text-gray-300">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 Real-world results from enterprise deployments
               </p>
             </div>
 
-<<<<<<< HEAD
             <div className="grid grid-cols-1 md: grid-cols-2 gap-8">",
               <div className="bg-gradient-to-br from-blue-50 to-purple-50 dark: from-gray-700 dark:to-gray-600 p-8 rounded-xl">",
                 <h3 className="text-2xl font-bold mb-4">Financial Services</h3>
@@ -448,13 +425,11 @@ const AIMLOpsAutomation = () => {
                   </li>
                   <li className="flex items-start">";
                     <CheckCircle className="h-5 w-5 text-green-600 mr-2 flex-shrink-0 mt-1" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                     <span>Full regulatory compliance</span>
                   </li>
                 </ul>
               </div>
 
-<<<<<<< HEAD
               <div className="bg-gradient-to-br from-green-50 to-blue-50 dark: from-gray-700 dark:to-gray-600 p-8 rounded-xl">",
                 <h3 className="text-2xl font-bold mb-4">E-Commerce</h3>
                 <p className="text-gray-700 dark: text-gray-200 mb-4">",
@@ -488,7 +463,6 @@ const AIMLOpsAutomation = () => {
                   </li>
                   <li className="flex items-start">";
                     <CheckCircle className="h-5 w-5 text-green-600 mr-2 flex-shrink-0 mt-1" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                     <span>Sub-100ms prediction latency</span>
                   </li>
                 </ul>
@@ -498,7 +472,6 @@ const AIMLOpsAutomation = () => {
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           <div className="max-w-4xl mx-auto text-center px-4 sm: px-6 lg:px-8">",
             <h2 className="text-4xl font-bold mb-6">
@@ -506,7 +479,6 @@ const AIMLOpsAutomation = () => {
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">";
           <div className="max-w-4xl mx-auto text-center px-4 sm: px-6 lg:px-8">";,
             <h2 className="text-4xl font-bold mb-6">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               Ready to Transform Your ML Operations?
             </h2>
             <p className="text-xl mb-8">";
@@ -518,11 +490,9 @@ const AIMLOpsAutomation = () => {
                 className="inline-flex items-center px-8 py-3 bg-white text-blue-600 rounded-lg font-semibold hover: bg-gray-100 transition-colors",
               >
                 Schedule Consultation
-<<<<<<< HEAD
                 <ArrowRight className="ml-2 h-5 w-5/>
 =======
                 <ArrowRight className="ml-2 h-5 w-5" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </Link>
               <Link
                 to="/blog"

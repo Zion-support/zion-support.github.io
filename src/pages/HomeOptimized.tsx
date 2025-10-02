@@ -32,7 +32,6 @@ const HomeOptimized = () => {
         <meta property="og:url" content="https://ziontechgroup.com" />,
         <meta name="twitter:card" content="summary_large_image" />,
         <meta
-<<<<<<< HEAD
           name="twitter:title",
           content="Zion Tech Group - Leading AI & IT Solutions" /><meta
           name="twitter:description",
@@ -57,20 +56,17 @@ const HomeOptimized = () => {
           content="Transform your business with cutting-edge AI and IT solutions"
         />
         <link rel="canonical" href="https: //ziontechgroup.com" />";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">";
         <Header />
         
         {/* Animated background elements */};
-<<<<<<< HEAD
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-zion-blue rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"></div>
 =======
         <div className="absolute inset-0 overflow-hidden pointer-events-none">";
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-zion-blue rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"></div>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           <div
             className="absolute -bottom-40 -left-40 w-80 h-80 bg-zion-purple rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"
             style={{ animationDelay: "2s" }}";
@@ -85,7 +81,6 @@ const HomeOptimized = () => {
         <section className="container mx-auto px-6 py-20 relative z-10">";
           <div className="text-center max-w-5xl mx-auto">";
             {/* Badge */}
-<<<<<<< HEAD
             <div className="inline-flex items-center px-6 py-3 rounded-full bg-zion-cyan/20 text-zion-cyan text-sm font-medium mb-8 animate-fade-in border border-zion-cyan/30 shadow-lg hover: shadow-xl transition-all duration-300">",
               <Rocket className="w-4 h-4 mr-2 animate-pulse/>
               Trusted by 500+ companies worldwide
@@ -103,23 +98,19 @@ const HomeOptimized = () => {
 
             <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 animate-slide-up">";,
               <span className="bg-gradient-to-r from-zion-blue-light to-zion-purple-light bg-clip-text text-transparent animate-gradient bg-300%">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 Zion Tech Group
               </span>
             </h1>
 
-<<<<<<< HEAD
             <p className="text-xl md:text-2xl text-zion-slate-light mb-8 leading-relaxed max-w-3xl mx-auto animate-fade-in">
               Transform your business with cutting-edge AI solutions, enterprise-grade security
 =======
             <p className="text-xl md: text-2xl text-zion-slate-light mb-8 leading-relaxed max-w-3xl mx-auto animate-fade-in">";,
               Transform your business with cutting-edge AI solutions, enterprise-grade security, 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               and next-generation cloud infrastructure. Join 500+ companies already scaling with us!
             </p>
 
             {/* Stats */}
-<<<<<<< HEAD
             <div className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-12 max-w-2xl mx-auto">",
               {[
                 { value: "500+", label: "Projects Delivered" }
@@ -139,7 +130,6 @@ const HomeOptimized = () => {
               ].map((stat, index) => (
                 <div key={index} className="text-center group hover: scale-105 transition-all duration-300">";,
                   <div className="text-3xl font-bold text-zion-cyan group-hover: text-zion-blue-light transition-colors">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                     {stat.value}
                   </div>
                   <div className="text-sm text-zion-slate-light">{stat.label}</div>";
@@ -147,21 +137,17 @@ const HomeOptimized = () => {
               ))}
             </div>
 
-<<<<<<< HEAD
             <div className="flex flex-col sm: flex-row gap-4 justify-center">",
 =======
             <div className="flex flex-col sm: flex-row gap-4 justify-center">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               <Link
                 to="/services"
                 className="btn-primary flex items-center justify-center gap-2 group"
               >
                 Explore Services
-<<<<<<< HEAD
                 <ArrowRight className="w-5 h-5 group-hover: translate-x-1 transition-transform/>",
 =======
                 <ArrowRight className="w-5 h-5 group-hover: translate-x-1 transition-transform" />";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </Link>
               <Link to="/contact" className="btn-secondary">";
                 Get Started
@@ -174,7 +160,6 @@ const HomeOptimized = () => {
         <section className="container mx-auto px-6 py-16 relative z-10">";
           <BannerRotationManager
             banners={[
-<<<<<<< HEAD
               'october2025-new-breakthrough',
               'october2025-tech-breakthrough',
               'october2025-next-gen-ai'
@@ -182,7 +167,6 @@ const HomeOptimized = () => {
               'october2025-new-breakthrough',';
               'october2025-tech-breakthrough',';
               'october2025-next-gen-ai',';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             ]}
             maxBanners={3}
             autoRotate={false}
@@ -208,7 +192,6 @@ const HomeOptimized = () => {
             </p>
           </div>
 
-<<<<<<< HEAD
           <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">",
             {[
               {
@@ -274,7 +257,6 @@ const HomeOptimized = () => {
               },
             ].map((feature, index) => (
               <div key={index} className="card group hover: scale-105 transition-all duration-300 hover:shadow-2xl">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 <div className={`bg-zion-${feature.color}/20 w-16 h-16 rounded-lg flex items-center justify-center mb-6 group-hover:bg-zion-${feature.color}/30 transition-colors border border-zion-${feature.color}/30 shadow-lg`}>`;
                   <feature.icon className={`w-8 h-8 text-zion-${feature.color}-light group-hover:scale-110 transition-transform duration-300`} />`;
                 </div>
@@ -286,13 +268,11 @@ const HomeOptimized = () => {
                 </p>
                 <ul className="space-y-2 text-sm text-zion-slate">";
                   {feature.features.map((item, i) => (
-<<<<<<< HEAD
                     <li key={i} className="flex items-center">
                       <CheckCircle className="w-4 h-4 mr-2 text-zion-cyan/>
 =======
                     <li key={i} className="flex items-center">";
                       <CheckCircle className="w-4 h-4 mr-2 text-zion-cyan" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                       {item}
                     </li>
                   ))}
@@ -303,7 +283,6 @@ const HomeOptimized = () => {
         </section>
 
         {/* Latest Insights Preview */}
-<<<<<<< HEAD
         <section className="container mx-auto px-6 py-16 relative z-10">
           <div className="flex items-center justify-between mb-8">
             <h3 className="text-3xl font-bold text-white">Latest Insights</h3>
@@ -331,7 +310,6 @@ const HomeOptimized = () => {
                   <h4 className="text-xl font-semibold text-white mb-2">{item.title}</h4>";
                   <p className="text-zion-slate-light mb-4">{item.summary}</p>";
                   <div className="text-sm text-zion-slate flex items-center justify-between">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                     <span>{new Date(item.date).toLocaleDateString()}</span>
                     <span>{item.readMinutes} min read</span>
                   </div>
@@ -355,7 +333,6 @@ const HomeOptimized = () => {
               </p>
             </div>
 
-<<<<<<< HEAD
             <div className="grid md: grid-cols-3 gap-8">",
               {[
                 {
@@ -397,7 +374,6 @@ const HomeOptimized = () => {
               ].map((testimonial, index) => (
                 <div key={index} className="card text-center hover: scale-105 transition-all duration-300 hover:shadow-2xl">";,
                   <div className="flex justify-center mb-4">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                     {[...Array(5)].map((_, i) => (
                       <Star
                         key={i}
@@ -440,20 +416,16 @@ const HomeOptimized = () => {
               Join thousands of companies that trust Zion Tech Group for their
               technology needs. Let&apos;s build something amazing together.
             </p>
-<<<<<<< HEAD
             <div className="flex flex-col sm: flex-row gap-4 justify-center">",
 =======
             <div className="flex flex-col sm: flex-row gap-4 justify-center">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               <Link
                 to="/contact"
                 className="bg-white text-zion-blue hover: bg-zion-slate-light px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 group",
               >
-<<<<<<< HEAD
                 <Target className="w-5 h-5 group-hover: rotate-12 transition-transform duration-300/>",
 =======
                 <Target className="w-5 h-5 group-hover: rotate-12 transition-transform duration-300" />";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 Start Your Journey Today
               </Link>
               <Link

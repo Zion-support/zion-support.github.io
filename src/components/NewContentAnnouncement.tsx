@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 const NewContentAnnouncement: React.FC = () => {,
 return (
@@ -25,14 +24,12 @@ return (
 🔥 OCTOBER 2025: MASSIVE CONTENT DROP!,,
 </span>
 <Sparkles className="w-5 h-5 animate-pulse" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 </div>
 <span className="text-pink-100">";
 10 Breakthrough Articles + 8 Revolutionary Services
 </span>
 <Link
 to="/blog"
-<<<<<<< HEAD
 className="bg-white text-purple-700 px-4 py-1.5 rounded-full font-semibold hover:bg-pink-50 transition-colors flex items-center gap-1 text-sm"
 >
 Explore Now
@@ -42,7 +39,6 @@ className="bg-white text-purple-700 px-4 py-1.5 rounded-full font-semibold hover
 >
 Explore Now
 <ArrowRight className="w-4 h-4" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 </Link>
 </div>
 </div>

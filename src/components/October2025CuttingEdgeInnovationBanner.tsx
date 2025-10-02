@@ -3,7 +3,6 @@ export default function October2025CuttingEdgeInnovationBanner(): void {
   return (
     <section className="relative overflow-hidden bg-gradient-to-r from-slate-950 via-purple-950 to-slate-950 py-20">";
       {/* Animated Grid Background */}
-<<<<<<< HEAD
       <div className="absolute inset-0 opacity-20">
         <div className="absolute inset-0" style={{
           backgroundImage: `linear-gradient(rgba(139, 92, 246, 0.1) 1px, transparent 1px),
@@ -15,7 +14,6 @@ export default function October2025CuttingEdgeInnovationBanner(): void {
           backgroundImage: `linear-gradient(rgba(139, 92, 246, 0.1) 1px, transparent 1px), ,`;
                            linear-gradient(90deg, rgba(139, 92, 246, 0.1) 1px, transparent 1px)`,`;
           backgroundSize: '50px 50px',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
         }}></div>
       </div>
 
@@ -29,7 +27,6 @@ export default function October2025CuttingEdgeInnovationBanner(): void {
               <span className="animate-pulse">⚡</span>";
             </div>
             
-<<<<<<< HEAD
             <h2 className="text-5xl md: text-7xl font-black mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-rose-400 bg-clip-text text-transparent">",
               Cutting-Edge AI Innovations
             </h2>
@@ -43,13 +40,11 @@ export default function October2025CuttingEdgeInnovationBanner(): void {
             
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">";
               Explore breakthrough technologies that are redefining enterprise AI: intelligent orchestration, ,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               advanced reasoning, and unified platforms
             </p>
           </div>
 
           {/* Feature Grid */}
-<<<<<<< HEAD
           <div className="grid md: grid-cols-2 gap-6 mb-12">",
             <div className="bg-gradient-to-br from-cyan-500/10 to-blue-500/10 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30">
               <div className="flex items-start gap-4">
@@ -59,7 +54,6 @@ export default function October2025CuttingEdgeInnovationBanner(): void {
             <div className="bg-gradient-to-br from-cyan-500/10 to-blue-500/10 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30">";
               <div className="flex items-start gap-4">";
                 <div className="text-5xl">🎯</div>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 <div>
                   <h3 className="text-2xl font-bold text-cyan-400 mb-3">Agentic Orchestration</h3>";
                   <p className="text-gray-300 mb-4">";
@@ -93,7 +87,6 @@ export default function October2025CuttingEdgeInnovationBanner(): void {
               </div>
             </div>
 
-<<<<<<< HEAD
             <div className="bg-gradient-to-br from-emerald-500/10 to-teal-500/10 backdrop-blur-sm rounded-2xl p-8 border border-emerald-500/30 md: col-span-2">",
               <div className="flex items-start gap-4">
                 <div className="text-5xl">🏗️</div>
@@ -107,7 +100,6 @@ export default function October2025CuttingEdgeInnovationBanner(): void {
                 <div className="flex-1">";
                   <h3 className="text-2xl font-bold text-emerald-400 mb-3">Enterprise AI Fabric</h3>";
                   <p className="text-gray-300 mb-4">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                     Unified intelligence platform managing 100+ models with 99.999% uptime, processing 10PB+ data daily
                   </p>
                   <div className="flex flex-wrap gap-6 mb-4">";

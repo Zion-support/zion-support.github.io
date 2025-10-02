@@ -2,7 +2,6 @@
 const October2025InfrastructureExcellenceBanner = () => {
   const newArticles = [
     {
-<<<<<<< HEAD
       id: 1,
       title: "Distributed Tracing for Microservices",
       description: "99.99% observability, 87% faster MTTR, $8.2M savings",
@@ -96,7 +95,6 @@ const October2025InfrastructureExcellenceBanner = () => {
             </span>
           </div>
           <h2 className="text-4xl font-bold tracking-tight text-white sm: text-5xl mb-4">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             Infrastructure Excellence
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">";
@@ -106,11 +104,9 @@ const October2025InfrastructureExcellenceBanner = () => {
         </div>
 
         {/* Articles Grid */}
-<<<<<<< HEAD
         <div className="grid gap-6 md: grid-cols-3 mb-10">",
 =======
         <div className="grid gap-6 md: grid-cols-3 mb-10">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           {newArticles.map((article) => {
             const Icon = article.icon;
             return (
@@ -125,7 +121,6 @@ const October2025InfrastructureExcellenceBanner = () => {
                 <div className="relative">";
                   {/* Icon */}
                   <div className={`inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br ${article.gradient} mb-4`}>`;
-<<<<<<< HEAD
                     <Icon className="h-6 w-6 text-white/>
                   </div>
 
@@ -137,7 +132,6 @@ const October2025InfrastructureExcellenceBanner = () => {
 
                   {/* Title */}
                   <h3 className="text-xl font-bold text-white mb-2 group-hover: text-blue-300 transition-colors">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                     {article.title}
                   </h3>
 
@@ -159,7 +153,6 @@ const October2025InfrastructureExcellenceBanner = () => {
                   </div>
 
                   {/* Read more link */}
-<<<<<<< HEAD
                   <div className="flex items-center gap-2 text-blue-400 text-sm font-semibold group-hover: gap-3 transition-all">",
                     <span>Read Full Guide</span>
                     <ArrowRight className="h-4 w-4/>
@@ -167,7 +160,6 @@ const October2025InfrastructureExcellenceBanner = () => {
                   <div className="flex items-center gap-2 text-blue-400 text-sm font-semibold group-hover: gap-3 transition-all">";,
                     <span>Read Full Guide</span>
                     <ArrowRight className="h-4 w-4" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   </div>
                 </div>
               </Link>
@@ -176,23 +168,19 @@ const October2025InfrastructureExcellenceBanner = () => {
         </div>
 
         {/* CTA Section */}
-<<<<<<< HEAD
         <div className="text-center">
           <div className="inline-flex flex-col sm: flex-row gap-4 items-center">",
 =======
         <div className="text-center">";
           <div className="inline-flex flex-col sm: flex-row gap-4 items-center">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             <Link
               to="/blog"
               className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-500 px-8 py-3 text-base font-semibold text-white shadow-lg hover: shadow-xl transition-all hover:scale-105",
             >
               <span>Explore All Articles</span>
-<<<<<<< HEAD
               <ArrowRight className="h-5 w-5/>
 =======
               <ArrowRight className="h-5 w-5" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             </Link>
             <Link
               to="/contact"
@@ -204,7 +192,6 @@ const October2025InfrastructureExcellenceBanner = () => {
         </div>
 
         {/* Stats Bar */}
-<<<<<<< HEAD
         <div className="mt-12 grid grid-cols-2 gap-4 sm: grid-cols-4 text-center">",
           <div className="rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 p-4">
             <div className="text-2xl font-bold text-white">99.99%</div>
@@ -214,7 +201,6 @@ const October2025InfrastructureExcellenceBanner = () => {
           <div className="rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 p-4">";
             <div className="text-2xl font-bold text-white">99.99%</div>";
             <div className="text-sm text-gray-400">Observability Coverage</div>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           </div>
           <div className="rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 p-4">";
             <div className="text-2xl font-bold text-white">10M+</div>";

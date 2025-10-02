@@ -3,7 +3,6 @@ import {
 
 } from 'framer-motion';
 
-<<<<<<< HEAD
 interface BannerData {
 id: string;
 title: string;
@@ -38,7 +37,6 @@ icon?: string;
 const BannerManager: React.FC = () => {
   const [currentBannerIndex, setCurrentBannerIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-ea70
 
   const banners: Banner[] = [
     {

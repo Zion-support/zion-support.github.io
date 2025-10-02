@@ -80,7 +80,7 @@ export function Header() {
                 <Link to="/services/supply-chain-intelligence" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
                   Supply Chain Intelligence
                 </Link>
-                <Link href="/services/ai-autonomous-operations" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600">
+                <Link to="/services/ai-autonomous-operations" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600">
                   Autonomous Operations
                 </Link>
                 <div className="border-t border-gray-100 my-2"></div>
@@ -109,19 +109,19 @@ export function Header() {
                 <Link to="/services/ai-marketing-studio" className="block px-4 py-2 text-sm text-gray-700 hover:bg-rose-50 hover:text-rose-600">
                   AI Marketing Studio
                 </Link>
-                <Link href="/services/ai-project-management-platform" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                <Link to="/services/ai-project-management-platform" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
                   AI Project Management Platform
                 </Link>
-                <Link href="/services/smart-invoice-processing" className="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-600">
+                <Link to="/services/smart-invoice-processing" className="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-600">
                   Smart Invoice Processing System
                 </Link>
-                <Link href="/services/ai-customer-onboarding" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600">
+                <Link to="/services/ai-customer-onboarding" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600">
                   AI Customer Onboarding Platform
                 </Link>
-                <Link href="/services/intelligent-expense-management" className="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600">
+                <Link to="/services/intelligent-expense-management" className="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600">
                   Intelligent Expense Management
                 </Link>
-                <Link href="/services/ai-lead-generation-engine" className="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600">
+                <Link to="/services/ai-lead-generation-engine" className="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600">
                   AI Lead Generation Engine
                 </Link>
                 <div className="border-t border-gray-100 my-2"></div>
@@ -196,16 +196,16 @@ export function Header() {
               openDropdown === 'resources' ? 'opacity-100 visible' : 'opacity-0 invisible'
             }`}>
               <div className="py-3">
-                <Link href="/blog" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                <Link to="/blog" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
                   Blog & Insights
                 </Link>
-                <Link href="/case-studies" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                <Link to="/case-studies" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
                   Case Studies
                 </Link>
-                <Link href="/guides" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                <Link to="/guides" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
                   Implementation Guides
                 </Link>
-                <Link href="/content-hub" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                <Link to="/content-hub" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
                   Content Hub
                 </Link>
               </div>
@@ -355,9 +355,9 @@ export function Header() {
             </div>
 
             {/* Direct Links */}
-            <Link href="/about" className="block font-medium text-gray-700 hover:text-blue-600">About</Link>
-            <Link href="/portfolio" className="block font-medium text-gray-700 hover:text-blue-600">Portfolio</Link>
-            <Link href="/contact" className="block font-medium text-gray-700 hover:text-blue-600">Contact</Link>
+            <Link to="/about" className="block font-medium text-gray-700 hover:text-blue-600">About</Link>
+            <Link to="/portfolio" className="block font-medium text-gray-700 hover:text-blue-600">Portfolio</Link>
+            <Link to="/contact" className="block font-medium text-gray-700 hover:text-blue-600">Contact</Link>
             
             {/* Success Stories */}
             <div>

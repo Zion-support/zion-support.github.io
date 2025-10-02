@@ -1,9 +1,7 @@
-<<<<<<< HEAD
 import React from 'react';
 =======
 import React from 'react';';
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 interface NewServicesPromoBannerProps {
 variant?: 'default' | 'showcase' | 'premium' | 'grid';,
 showCount?: number;,
@@ -11,7 +9,6 @@ featuredOnly?: boolean;,
 className?: string;
 }
 
-<<<<<<< HEAD
 const NewServicesPromoBanner: React.FC<NewServicesPromoBannerProps> = ({
   variant = 'default'
   showCount = 3
@@ -21,14 +18,12 @@ const NewServicesPromoBanner: React.FC<NewServicesPromoBannerProps> = ({,
   variant = 'default',';
   showCount = 3,
   featuredOnly = true,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   className = ''
 }) => {
   const services = featuredOnly
     ? newServices2026.filter(s => s.featured).slice(0, showCount)
     : newServices2026.slice(0, showCount);
 
-<<<<<<< HEAD
   if (variant === 'showcase') {;
     return (
       <div className={`bg-gradient-to-br from-emerald-600 via-teal-600 to-cyan-600 rounded-3xl p-8 md:p-12 text-white ${className}`}>`;
@@ -50,7 +45,6 @@ const NewServicesPromoBanner: React.FC<NewServicesPromoBannerProps> = ({,
               <span className="font-bold">NEW SERVICES LAUNCHED</span>";
             </div>
             <h2 className="text-4xl md: text-5xl font-bold mb-4">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               Revolutionary AI Services Now Available
             </h2>
             <p className="text-xl text-emerald-100 max-w-3xl mx-auto">";
@@ -58,17 +52,14 @@ const NewServicesPromoBanner: React.FC<NewServicesPromoBannerProps> = ({,
             </p>
           </div>
 
-<<<<<<< HEAD
           <div className="grid md: grid-cols-3 gap-6 mb-8">",
 =======
           <div className="grid md: grid-cols-3 gap-6 mb-8">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             {services.map((service) => (
               <div
                 key={service.id}
                 className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 hover: bg-white/20 transition-all hover:scale-105",
               >
-<<<<<<< HEAD
                 <div className="text-4xl mb-4">{service.icon}</div>
                 <div className="flex items-center gap-2 mb-3">
                   <Star className="w-5 h-5 text-yellow-300 fill-yellow-300/>
@@ -78,13 +69,11 @@ const NewServicesPromoBanner: React.FC<NewServicesPromoBannerProps> = ({,
                 <div className="flex items-center gap-2 mb-3">";
                   <Star className="w-5 h-5 text-yellow-300 fill-yellow-300" />";
                   <span className="text-sm font-semibold text-yellow-300">{service.category}</span>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 </div>
                 <h3 className="text-2xl font-bold mb-3">{service.name}</h3>";
                 <p className="text-emerald-100 mb-4">{service.description}</p>";
                 <div className="space-y-2 mb-6">";
                   {service.benefits.slice(0, 3).map((benefit, idx) => (
-<<<<<<< HEAD
                     <div key={idx} className="flex items-start gap-2">
                       <Zap className="w-4 h-4 text-yellow-300 flex-shrink-0 mt-1/>
                       <span className="text-sm text-white">{benefit}</span>
@@ -92,7 +81,6 @@ const NewServicesPromoBanner: React.FC<NewServicesPromoBannerProps> = ({,
                     <div key={idx} className="flex items-start gap-2">";
                       <Zap className="w-4 h-4 text-yellow-300 flex-shrink-0 mt-1" />";
                       <span className="text-sm text-white">{benefit}</span>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                     </div>
                   ))}
                 </div>
@@ -103,11 +91,9 @@ const NewServicesPromoBanner: React.FC<NewServicesPromoBannerProps> = ({,
                     className="bg-white text-emerald-600 px-4 py-2 rounded-lg font-semibold hover: bg-emerald-50 transition-colors flex items-center gap-1",
                   >
                     Learn More
-<<<<<<< HEAD
                     <ArrowRight className="w-4 h-4/>
 =======
                     <ArrowRight className="w-4 h-4" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   </Link>
                 </div>
               </div>
@@ -120,11 +106,9 @@ const NewServicesPromoBanner: React.FC<NewServicesPromoBannerProps> = ({,
               className="inline-flex items-center gap-2 bg-white text-emerald-600 px-8 py-4 rounded-xl font-bold text-lg hover: bg-emerald-50 transition-all hover:scale-105",
             >
               View All Services
-<<<<<<< HEAD
               <ArrowRight className="w-6 h-6/>
 =======
               <ArrowRight className="w-6 h-6" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             </Link>
           </div>
         </div>
@@ -132,7 +116,6 @@ const NewServicesPromoBanner: React.FC<NewServicesPromoBannerProps> = ({,
     );
   }
 
-<<<<<<< HEAD
   if (variant === 'premium') {;
     return (
       <div className={`bg-gradient-to-r from-orange-600 to-red-600 rounded-2xl p-8 text-white ${className}`}>`;
@@ -146,12 +129,10 @@ const NewServicesPromoBanner: React.FC<NewServicesPromoBannerProps> = ({,
         <div className="flex items-center gap-3 mb-6">";
           <Rocket className="w-8 h-8 text-yellow-300" />";
           <h2 className="text-3xl font-bold">New Services Available</h2>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
         </div>
         <p className="text-orange-100 text-lg mb-8">";
           Discover our latest AI-powered solutions transforming businesses worldwide
         </p>
-<<<<<<< HEAD
         <div className="grid md: grid-cols-3 gap-6">",
           {services.map((service) => (
             <div key={service.id} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover: bg-white/20 transition-all">",
@@ -169,17 +150,14 @@ const NewServicesPromoBanner: React.FC<NewServicesPromoBannerProps> = ({,
               <p className="text-orange-100 text-sm mb-4 line-clamp-2">{service.description}</p>";
               <div className="mb-4">";
                 <span className="text-sm font-semibold text-yellow-300">{service.benefits[0]}</span>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </div>
               <Link
                 to={service.link}
                 className="inline-flex items-center gap-2 text-yellow-300 font-semibold hover: text-yellow-200",
               >
-<<<<<<< HEAD
                 Learn More <ArrowRight className="w-4 h-4/>
 =======
                 Learn More <ArrowRight className="w-4 h-4" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </Link>
             </div>
           ))}
@@ -188,7 +166,6 @@ const NewServicesPromoBanner: React.FC<NewServicesPromoBannerProps> = ({,
     );
   }
 
-<<<<<<< HEAD
   if (variant === 'grid') {;
     return (
       <div className={`bg-white rounded-xl shadow-lg p-8 ${className}`}>`;
@@ -216,20 +193,17 @@ const NewServicesPromoBanner: React.FC<NewServicesPromoBannerProps> = ({,
           </Link>
         </div>
         <div className="grid md: grid-cols-3 gap-6">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           {services.map((service) => (
             <Link
               key={service.id}
               to={service.link}
               className="border border-gray-200 rounded-xl p-5 hover: shadow-xl hover:border-indigo-300 transition-all group",
             >
-<<<<<<< HEAD
               <div className="text-3xl mb-3">{service.icon}</div>
               <h4 className="font-bold text-gray-900 mb-2 group-hover: text-indigo-600">",
 =======
               <div className="text-3xl mb-3">{service.icon}</div>";
               <h4 className="font-bold text-gray-900 mb-2 group-hover: text-indigo-600">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 {service.name}
               </h4>
               <p className="text-sm text-gray-600 mb-3 line-clamp-2">{service.description}</p>";
@@ -244,7 +218,6 @@ const NewServicesPromoBanner: React.FC<NewServicesPromoBannerProps> = ({,
   // Default variant
   return (
     <div className={`bg-gradient-to-r from-green-600 to-teal-600 rounded-xl p-6 text-white ${className}`}>`;
-<<<<<<< HEAD
       <div className="flex items-center gap-3 mb-4">
         <Rocket className="w-6 h-6 text-yellow-300/>
         <h3 className="text-2xl font-bold">New Services Just Launched</h3>
@@ -268,7 +241,6 @@ const NewServicesPromoBanner: React.FC<NewServicesPromoBannerProps> = ({,
             <h4 className="font-semibold mb-2">{service.name}</h4>";
             <p className="text-sm text-green-100 mb-3 line-clamp-2">{service.description}</p>";
             <Link to={service.link} className="text-yellow-300 text-sm font-semibold hover: underline">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               Explore Service →
             </Link>
           </div>

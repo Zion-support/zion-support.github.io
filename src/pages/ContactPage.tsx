@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import {
 Helmet
@@ -26,16 +25,13 @@ const ContactPage: React.FC = () => {,
     service: '',';,
     message: '',
   });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 
   const handleSubmit = (e: React.FormEvent) => {,
     e.preventDefault();
     // Handle form submission
-<<<<<<< HEAD
     console.log('Form submitted: ', formData);',
 =======
     console.log('Form submitted: ', formData);';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {,
@@ -49,7 +45,6 @@ const ContactPage: React.FC = () => {,
     <>
       <Helmet>
         <title>Contact Us - Zion Tech Group</title>
-<<<<<<< HEAD
         <meta name="description" content="Get in touch with Zion Tech Group for AI and IT solutions. Contact our experts for consultation and support." /></Helmet>
       
       <div className="container mx-auto px-4 py-8">
@@ -64,7 +59,6 @@ const ContactPage: React.FC = () => {,
         <div className="max-w-6xl mx-auto">";
           <div className="text-center mb-12">";
             <h1 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               Contact Us
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
@@ -73,7 +67,6 @@ const ContactPage: React.FC = () => {,
             </p>
           </div>
 
-<<<<<<< HEAD
           <div className="grid grid-cols-1 lg: grid-cols-2 gap-12">",
             {/* Contact Information */}
             <div>
@@ -90,7 +83,6 @@ const ContactPage: React.FC = () => {,
               <div className="space-y-6">";
                 <div className="flex items-start">";
                   <div className="text-2xl mr-4">📧</div>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   <div>
                     <h3 className="text-xl font-bold text-gray-900 mb-2">Email</h3>";
                     <p className="text-gray-600">info@ziontechgroup.com</p>";
@@ -101,7 +93,6 @@ const ContactPage: React.FC = () => {,
                 <div className="flex items-start">";
                   <div className="text-2xl mr-4">📞</div>";
                   <div>
-<<<<<<< HEAD
                     <h3 className="text-xl font-bold text-gray-900 mb-2">Phone</h3>
                     <p className="text-gray-600">+1 (555) 123-4567</p>
                     <p className="text-gray-600">Mon-Fri: 9AM-6PM EST</p>",
@@ -109,7 +100,6 @@ const ContactPage: React.FC = () => {,
                     <h3 className="text-xl font-bold text-gray-900 mb-2">Phone</h3>";
                     <p className="text-gray-600">+1 (555) 123-4567</p>";
                     <p className="text-gray-600">Mon-Fri: 9AM-6PM EST</p>";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   </div>
                 </div>
 
@@ -128,7 +118,6 @@ const ContactPage: React.FC = () => {,
                 <div className="flex items-start">";
                   <div className="text-2xl mr-4">⏰</div>";
                   <div>
-<<<<<<< HEAD
                     <h3 className="text-xl font-bold text-gray-900 mb-2">Business Hours</h3>
                     <p className="text-gray-600">Monday - Friday: 9:00 AM - 6:00 PM</p>",
                     <p className="text-gray-600">Saturday: 10:00 AM - 4:00 PM</p>",
@@ -138,13 +127,11 @@ const ContactPage: React.FC = () => {,
                     <p className="text-gray-600">Monday - Friday: 9:00 AM - 6:00 PM</p>";,
                     <p className="text-gray-600">Saturday: 10:00 AM - 4:00 PM</p>";,
                     <p className="text-gray-600">Sunday: Closed</p>";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   </div>
                 </div>
               </div>
 
               {/* Services Quick Links */}
-<<<<<<< HEAD
               <div className="mt-12">
                 <h3 className="text-2xl font-bold text-gray-900 mb-6">Our Services</h3>
                 <div className="grid grid-cols-1 sm: grid-cols-2 gap-4">",
@@ -158,7 +145,6 @@ const ContactPage: React.FC = () => {,
                   <div className="bg-blue-50 p-4 rounded-lg">";
                     <h4 className="font-bold text-gray-900 mb-2">AI Solutions</h4>";
                     <p className="text-gray-600 text-sm">Machine Learning & Automation</p>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   </div>
                   <div className="bg-blue-50 p-4 rounded-lg">";
                     <h4 className="font-bold text-gray-900 mb-2">Cloud Computing</h4>";
@@ -188,7 +174,6 @@ const ContactPage: React.FC = () => {,
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">";
               Frequently Asked Questions
             </h2>
-<<<<<<< HEAD
             <div className="grid grid-cols-1 md: grid-cols-2 gap-8">",
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
@@ -196,7 +181,6 @@ const ContactPage: React.FC = () => {,
             <div className="grid grid-cols-1 md: grid-cols-2 gap-8">";,
               <div className="bg-white p-6 rounded-lg shadow-md">";
                 <h3 className="text-xl font-bold text-gray-900 mb-3">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   How long does a typical project take?
                 </h3>
                 <p className="text-gray-600">";
@@ -209,13 +193,11 @@ const ContactPage: React.FC = () => {,
                 <h3 className="text-xl font-bold text-gray-900 mb-3">";
                   Do you provide ongoing support?
                 </h3>
-<<<<<<< HEAD
                 <p className="text-gray-600">
                   Yes, we offer comprehensive support packages including maintenance
 =======
                 <p className="text-gray-600">";
                   Yes, we offer comprehensive support packages including maintenance, 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   updates, and 24/7 technical assistance for critical systems.
                 </p>
               </div>
@@ -223,13 +205,11 @@ const ContactPage: React.FC = () => {,
                 <h3 className="text-xl font-bold text-gray-900 mb-3">";
                   What industries do you serve?
                 </h3>
-<<<<<<< HEAD
                 <p className="text-gray-600">
                   We serve clients across various industries including healthcare
 =======
                 <p className="text-gray-600">";
                   We serve clients across various industries including healthcare, 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   finance, manufacturing, retail, and technology sectors.
                 </p>
               </div>

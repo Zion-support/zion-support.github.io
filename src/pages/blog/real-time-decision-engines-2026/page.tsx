@@ -9,7 +9,6 @@ export default function RealTimeDecisionEngines2026(): React.JSX.Element {
           name="description"
           content="Achieve 10M decisions/sec under 1ms with warm pools, intent prefetching, and layered caches." /><link
           rel="canonical"
-<<<<<<< HEAD
           href="https://ziontechgroup.com/blog/real-time-decision-engines-2026",
         />
       </Helmet>
@@ -23,7 +22,6 @@ export default function RealTimeDecisionEngines2026(): React.JSX.Element {
 
       <div className="container mx-auto px-6 py-16">";
         <h1 className="text-4xl md: text-5xl font-bold mb-4">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           Real‑Time Decision Engines 2026
         </h1>
         <p className="text-zion-slate-light mb-8">";
@@ -31,11 +29,9 @@ export default function RealTimeDecisionEngines2026(): React.JSX.Element {
         </p>
         <div className="prose prose-invert max-w-3xl">";
           <p>
-<<<<<<< HEAD
             Blueprint for ultra‑low latency decision engines: persistent warm pools
 =======
             Blueprint for ultra‑low latency decision engines: persistent warm pools,,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             cache hierarchies, and predictive prefetching to meet sub‑millisecond SLOs.
           </p>
           <p>

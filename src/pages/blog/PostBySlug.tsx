@@ -9,7 +9,6 @@ export default function PostBySlug(): React.JSX.Element {
     const fromLatest = latestArticles.find((a) => a.slug === slug);
     if (fromLatest) {
       return {
-<<<<<<< HEAD
         slug: fromLatest.slug,
         title: fromLatest.title,
         description: fromLatest.description || fromLatest.excerpt,
@@ -25,13 +24,11 @@ export default function PostBySlug(): React.JSX.Element {
         publishedAt: fromLatest.date,,
         readTime: fromLatest.readTime,,
         author: fromLatest.author,,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       };
     }
     const fromBlogPosts = blogPosts.find((p) => p.slug === slug);
     if (fromBlogPosts) {
       return {
-<<<<<<< HEAD
         slug: fromBlogPosts.slug,
         title: fromBlogPosts.title,
         description: fromBlogPosts.description,
@@ -47,13 +44,11 @@ export default function PostBySlug(): React.JSX.Element {
         publishedAt: fromBlogPosts.date,,
         readTime: fromBlogPosts.readTime,,
         author: fromBlogPosts.author,,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       };
     }
     const fromPosts = staticPosts.find((p) => p.slug === slug);
     if (fromPosts) {
       return {
-<<<<<<< HEAD
         slug: fromPosts.slug,
         title: fromPosts.title,
         description: fromPosts.description,
@@ -69,7 +64,6 @@ export default function PostBySlug(): React.JSX.Element {
         publishedAt: fromPosts.publishedAt,,
         readTime: fromPosts.readTime,,
         author: "Zion Tech Group Team",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       };
     }
     return undefined;
@@ -79,7 +73,6 @@ export default function PostBySlug(): React.JSX.Element {
 return (
 <>
 <Header />
-<<<<<<< HEAD
 <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white p-8">
 <div className="max-w-3xl mx-auto pt-20">
 <h1 className="text-3xl font-bold mb-4">Article not found</h1>
@@ -93,7 +86,6 @@ return (
 <p className="text-zion-slate-light mb-6">The post you are looking for does not exist or has been moved.</p>";
 <Link to="/blog" className="text-zion-cyan hover: underline inline-flex items-center gap-2">,";,
 <ArrowLeft className="w-4 h-4" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 Back to Blog
 </Link>
 </div>
@@ -106,7 +98,6 @@ Back to Blog
     <>
       <Helmet>
         <title>{article.title} | Zion Tech Group</title>
-<<<<<<< HEAD
         <meta name="description" content={article.description} />
         <meta property="og:title" content={article.title} />
         <meta property="og:description" content={article.description} />
@@ -116,11 +107,9 @@ Back to Blog
         <meta property="og:title" content={article.title} />";
         <meta property="og:description" content={article.description} />";
         <meta property="og: type" content="article" />";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">";
         <Header />
-<<<<<<< HEAD
         <div className="max-w-4xl mx-auto px-6 py-24">
           <Link to="/blog" className="text-zion-cyan hover: text-zion-blue-light mb-8 inline-flex items-center gap-2 transition-colors">",
             <ArrowLeft className="w-4 h-4/>
@@ -140,16 +129,13 @@ Back to Blog
           <article className="mt-8 bg-white/10 backdrop-blur-lg rounded-2xl p-8 md: p-12 border border-white/20">";,
             <div className="mb-6">";
               <span className="inline-block px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm font-medium rounded-full border border-zion-cyan/30">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 {article.category}
               </span>
             </div>
             
-<<<<<<< HEAD
             <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 leading-tight">",
 =======
             <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 leading-tight">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               {article.title}
             </h1>
             
@@ -157,7 +143,6 @@ Back to Blog
               {article.author && (
                 <span className="font-medium text-white">{article.author}</span>";
               )}
-<<<<<<< HEAD
               <span className="flex items-center gap-1">
                 <Calendar className="w-4 h-4" />
                 {new Date(article.publishedAt).toLocaleDateString('en-US', { 
@@ -181,7 +166,6 @@ Back to Blog
               {article.readTime && (
                 <span className="flex items-center gap-1">";
                   <Clock className="w-4 h-4" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   {article.readTime}
                 </span>
               )}
@@ -192,13 +176,11 @@ Back to Blog
                 {article.description}
               </p>
               
-<<<<<<< HEAD
               <div className="bg-zion-blue/20 border border-zion-blue/30 rounded-xl p-6 my-8">
                 <p className="text-zion-slate-light text-sm mb-0">
 =======
               <div className="bg-zion-blue/20 border border-zion-blue/30 rounded-xl p-6 my-8">";
                 <p className="text-zion-slate-light text-sm mb-0">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   💡 <strong>Coming Soon: </strong> Full article content will be available shortly. ,
                   This preview shows the key insights and value proposition of this groundbreaking topic.
                 </p>

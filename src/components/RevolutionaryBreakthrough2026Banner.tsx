@@ -1,14 +1,11 @@
-<<<<<<< HEAD
 import React from 'react';
 =======
 import React from 'react';';
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 const RevolutionaryBreakthrough2026Banner: React.FC = () => {,
   const breakthroughContent = [
     {
       id: 1,,
-<<<<<<< HEAD
       title: 'AI Revolutionary Breakthrough: 10x Performance Gains',',
       slug: 'ai-revolutionary-breakthrough-january-2026',',
       excerpt: 'Discover the groundbreaking AI innovations delivering 10x performance gains, 95% cost reduction, and $500M+ ROI for Fortune 500 companies.',',
@@ -100,14 +97,12 @@ const RevolutionaryBreakthrough2026Banner: React.FC = () => {,
       trending: true,,
       icon: '🤖',';,
       metrics: { value: '95%', label: 'Automation' }';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     }
   ];
 
   return (
     <div className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">";
       {/* Animated background effects */}
-<<<<<<< HEAD
       <div className="absolute inset-0 overflow-hidden opacity-30">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>;
@@ -117,12 +112,10 @@ const RevolutionaryBreakthrough2026Banner: React.FC = () => {,
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>";
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>';
         <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '4s' }}></div>';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       </div>
 
       <div className="container mx-auto px-6 relative z-10">";
         {/* Header Section */}
-<<<<<<< HEAD
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-purple-500/20 to-blue-500/20 border border-purple-500/30 mb-8 animate-fade-in">
             <Sparkles className="w-6 h-6 text-purple-400 animate-pulse/>
@@ -154,12 +147,10 @@ const RevolutionaryBreakthrough2026Banner: React.FC = () => {,
           
           <p className="text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">";
             Discover the most significant AI innovations of 2026: 10x performance gains, ,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             $300M+ ROI success stories, and revolutionary technologies transforming Fortune 500 operations.
           </p>
 
           {/* Key Stats */}
-<<<<<<< HEAD
           <div className="grid md: grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">",
             {[
               { value: '10x', label: 'Performance Gains', icon: '⚡' }
@@ -181,7 +172,6 @@ const RevolutionaryBreakthrough2026Banner: React.FC = () => {,
               <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover: border-purple-500/50 transition-all duration-300">";,
                 <div className="text-4xl mb-3">{stat.icon}</div>";
                 <div className="text-3xl font-extrabold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-2">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   {stat.value}
                 </div>
                 <div className="text-gray-300 text-sm font-medium">";
@@ -193,11 +183,9 @@ const RevolutionaryBreakthrough2026Banner: React.FC = () => {,
         </div>
 
         {/* Featured Content Grid */}
-<<<<<<< HEAD
         <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8 mb-16 max-w-[1600px] mx-auto">",
 =======
         <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8 mb-16 max-w-[1600px] mx-auto">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           {breakthroughContent.map((content, index) => (
             <div 
               key={content.id}
@@ -205,32 +193,26 @@ const RevolutionaryBreakthrough2026Banner: React.FC = () => {,
               style={{ animationDelay: `${index * 150}ms` }}`;
             >
               {/* Card glow effect */}
-<<<<<<< HEAD
               <div className="absolute inset-0 bg-gradient-to-br from-purple-500/0 via-blue-500/0 to-cyan-500/0 group-hover: from-purple-500/10 group-hover:via-blue-500/10 group-hover:to-cyan-500/10 transition-all duration-500"></div>",
 =======
               <div className="absolute inset-0 bg-gradient-to-br from-purple-500/0 via-blue-500/0 to-cyan-500/0 group-hover: from-purple-500/10 group-hover:via-blue-500/10 group-hover:to-cyan-500/10 transition-all duration-500"></div>";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               
               <div className="relative p-8">";
                 {/* Icon & Badges */}
-<<<<<<< HEAD
                 <div className="flex items-start justify-between mb-6">
                   <div className="text-6xl group-hover: scale-110 transition-transform duration-300">",
 =======
                 <div className="flex items-start justify-between mb-6">";
                   <div className="text-6xl group-hover: scale-110 transition-transform duration-300">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                     {content.icon}
                   </div>
                   <div className="flex flex-col gap-2">";
                     {content.trending && (
-<<<<<<< HEAD
                       <div className="flex items-center gap-1 px-3 py-1.5 rounded-full bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs font-bold shadow-lg">
                         <TrendingUp className="w-3 h-3/>
 =======
                       <div className="flex items-center gap-1 px-3 py-1.5 rounded-full bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs font-bold shadow-lg">";
                         <TrendingUp className="w-3 h-3" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                         <span>BREAKTHROUGH</span>
                       </div>
                     )}
@@ -248,11 +230,9 @@ const RevolutionaryBreakthrough2026Banner: React.FC = () => {,
                 </div>
 
                 {/* Title */}
-<<<<<<< HEAD
                 <h3 className="text-xl font-bold text-white mb-4 group-hover: text-purple-400 transition-colors duration-300 leading-tight">",
 =======
                 <h3 className="text-xl font-bold text-white mb-4 group-hover: text-purple-400 transition-colors duration-300 leading-tight">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   {content.title}
                 </h3>
 
@@ -276,7 +256,6 @@ const RevolutionaryBreakthrough2026Banner: React.FC = () => {,
                 </div>
 
                 {/* Meta Info */}
-<<<<<<< HEAD
                 <div className="flex items-center justify-between text-sm text-gray-500 mb-6 pb-6 border-b border-white/10">
                   <span className="flex items-center gap-2">
                     <Zap className="w-4 h-4 text-purple-400/>
@@ -290,7 +269,6 @@ const RevolutionaryBreakthrough2026Banner: React.FC = () => {,
                     {content.readTime}
                   </span>
                   <span>{new Date(content.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}</span>';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 </div>
 
                 {/* CTA Button */}
@@ -299,11 +277,9 @@ const RevolutionaryBreakthrough2026Banner: React.FC = () => {,
                   className="group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r from-purple-500 to-blue-600 hover: from-purple-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1",
                 >
                   <span>Read Full Article</span>
-<<<<<<< HEAD
                   <ArrowRight className="w-4 h-4 group-hover/btn: translate-x-1 transition-transform duration-300/>",
 =======
                   <ArrowRight className="w-4 h-4 group-hover/btn: translate-x-1 transition-transform duration-300" />";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 </Link>
               </div>
             </div>
@@ -321,20 +297,16 @@ const RevolutionaryBreakthrough2026Banner: React.FC = () => {,
                 Join Fortune 500 companies achieving 10x performance gains and $300M+ ROI 
                 with our revolutionary AI technologies. Schedule your transformation consultation today.
               </p>
-<<<<<<< HEAD
               <div className="flex flex-col sm: flex-row gap-4 justify-center">",
 =======
               <div className="flex flex-col sm: flex-row gap-4 justify-center">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 <a title="Internal link"
                   href="/contact"
                   className="bg-gradient-to-r from-purple-500 to-blue-600 hover: from-purple-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 flex items-center justify-center gap-2",
                 >
-<<<<<<< HEAD
                   <Sparkles className="w-5 h-5/>
 =======
                   <Sparkles className="w-5 h-5" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   <span>Start Your AI Transformation</span>
                 </a>
                 <a title="Internal link"
@@ -342,11 +314,9 @@ const RevolutionaryBreakthrough2026Banner: React.FC = () => {,
                   className="border-2 border-purple-500 text-purple-400 hover: bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2",
                 >
                   <span>Call +1 302 464 0950</span>
-<<<<<<< HEAD
                   <ArrowRight className="w-5 h-5/>
 =======
                   <ArrowRight className="w-5 h-5" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 </a>
               </div>
             </div>
@@ -354,7 +324,6 @@ const RevolutionaryBreakthrough2026Banner: React.FC = () => {,
         </div>
 
         {/* Success Indicators */}
-<<<<<<< HEAD
         <div className="grid md: grid-cols-4 gap-8 mt-20">",
           {[
             { value: '500+', label: 'Enterprise Clients Transformed' }
@@ -368,7 +337,6 @@ const RevolutionaryBreakthrough2026Banner: React.FC = () => {,
             { value: '$2B+', label: 'Total ROI Generated' },';
             { value: '99.9%', label: 'Success Rate' },';
             { value: '24/7', label: 'Expert Support' }';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           ].map((stat, index) => (
             <div key={index} className="text-center">";
               <div className="text-4xl font-extrabold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-2">";

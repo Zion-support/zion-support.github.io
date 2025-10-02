@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 =======
 import {
@@ -8,7 +7,6 @@ Link
 import {
 
 } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a267
 
 // Mock data
 const newArticles2025 = [
@@ -59,7 +57,6 @@ const newServices2026 = [
   },
   {
     id: '3',
-<<<<<<< HEAD
     name: 'Zero Trust Security Framework',
     description: 'Advanced security with 99.9% threat detection accuracy',
     category: 'Cybersecurity',
@@ -71,7 +68,6 @@ const newServices2026 = [
     category: 'Cybersecurity'
     icon: '🔒'
     link: '/services/zero-trust-security'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a267
     pricing: 'Starting at $3,000/month'
   }
 ];
