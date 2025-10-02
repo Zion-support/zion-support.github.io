@@ -1,247 +1,147 @@
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
+import { Activity, Zap, Clock, Database, Wifi } from 'lucide-react';
 
 interface PerformanceMetrics {
-  lcp?: number;
-  fid?: number;
-  cls?: number;
-  fcp?: number;
-  ttfb?: number;
-  loadTime?: number;
-  domContentLoaded?: number;
-  firstPaint?: number;
-  firstContentfulPaint?: number;
+  loadTime: number;
+  firstPaint: number;
+  firstContentfulPaint: number;
+  largestContentfulPaint: number;
+  cumulativeLayoutShift: number;
+  firstInputDelay: number;
+  timeToInteractive: number;
+  memoryUsage?: number;
+  networkSpeed?: string;
 }
 
-interface PerformanceMonitorProps {
-  enabled?: boolean;
-  showMetrics?: boolean;
-  onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
-}
-
-const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
-  enabled = process.env.NODE_ENV === 'development',
-  showMetrics = false,
-  onMetricsUpdate
-}) => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({});
+const PerformanceMonitor: React.FC = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isVisible, setIsVisible] = useState(false);
 
-  const updateMetrics = useCallback((newMetrics: PerformanceMetrics) => {
-    setMetrics(prev => ({ ...prev, ...newMetrics }));
-    onMetricsUpdate?.(newMetrics);
-  }, [onMetricsUpdate]);
-
   useEffect(() => {
-    if (!enabled) return;
+    const collectMetrics = () => {
+      if (typeof window === 'undefined' || !window.performance) return;
 
-    // Only show in development or when performance issues are detected
-    if (process.env.NODE_ENV === 'development') {
-      setIsVisible(true);
-    }
-
-    // Get basic performance metrics
-    const getBasicMetrics = () => {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const paint = performance.getEntriesByType('paint');
+      const paintEntries = performance.getEntriesByType('paint');
       
-      const basicMetrics: PerformanceMetrics = {
+      const firstPaint = paintEntries.find(entry => entry.name === 'first-paint')?.startTime || 0;
+      const firstContentfulPaint = paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
+
+      // Get Web Vitals if available
+      const vitals = {
         loadTime: navigation.loadEventEnd - navigation.loadEventStart,
-        domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-        ttfb: navigation.responseStart - navigation.requestStart,
-        firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime,
-        firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime,
+        firstPaint,
+        firstContentfulPaint,
+        largestContentfulPaint: 0, // Would need web-vitals library
+        cumulativeLayoutShift: 0, // Would need web-vitals library
+        firstInputDelay: 0, // Would need web-vitals library
+        timeToInteractive: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+        memoryUsage: (performance as any).memory?.usedJSHeapSize,
+        networkSpeed: navigator.connection?.effectiveType || 'unknown'
       };
 
-      updateMetrics(basicMetrics);
+      setMetrics(vitals);
     };
 
-    // Get Core Web Vitals using web-vitals library if available
-    const getWebVitals = async () => {
-      try {
-        // Dynamic import to avoid bundle size impact
-        const { getCLS, getFID, getFCP, getLCP, getTTFB } = await import('web-vitals');
-        
-        getCLS((metric) => {
-          updateMetrics({ cls: metric.value });
-        });
-        
-        getFID((metric) => {
-          updateMetrics({ fid: metric.value });
-        });
-        
-        getFCP((metric) => {
-          updateMetrics({ fcp: metric.value });
-        });
-        
-        getLCP((metric) => {
-          updateMetrics({ lcp: metric.value });
-        });
-        
-        getTTFB((metric) => {
-          updateMetrics({ ttfb: metric.value });
-        });
-      } catch (error) {
-        console.warn('Web Vitals library not available:', error);
-      }
-    };
-
-    // Monitor resource loading
-    const monitorResources = () => {
-      const observer = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        entries.forEach((entry) => {
-          if (entry.entryType === 'resource') {
-            const resourceEntry = entry as PerformanceResourceTiming;
-            if (resourceEntry.duration > 1000) { // Resources taking more than 1 second
-              console.warn('Slow resource detected:', {
-                name: resourceEntry.name,
-                duration: resourceEntry.duration,
-                size: resourceEntry.transferSize
-              });
-            }
-          }
-        });
-      });
-
-      observer.observe({ entryTypes: ['resource'] });
-    };
-
-    // Monitor long tasks
-    const monitorLongTasks = () => {
-      const observer = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        entries.forEach((entry) => {
-          if (entry.duration > 50) { // Tasks longer than 50ms
-            console.warn('Long task detected:', {
-              duration: entry.duration,
-              startTime: entry.startTime
-            });
-          }
-        });
-      });
-
-      observer.observe({ entryTypes: ['longtask'] });
-    };
-
-    // Initialize monitoring
-    getBasicMetrics();
-    getWebVitals();
-    monitorResources();
-    monitorLongTasks();
-
-    // Check for performance issues
-    const checkPerformanceIssues = () => {
-      const issues: string[] = [];
-      
-      if (metrics.lcp && metrics.lcp > 2500) {
-        issues.push('LCP is above 2.5s threshold');
-      }
-      
-      if (metrics.fid && metrics.fid > 100) {
-        issues.push('FID is above 100ms threshold');
-      }
-      
-      if (metrics.cls && metrics.cls > 0.1) {
-        issues.push('CLS is above 0.1 threshold');
-      }
-      
-      if (issues.length > 0) {
-        console.warn('Performance issues detected:', issues);
-        setIsVisible(true);
-      }
-    };
-
-    // Check performance after a delay to allow metrics to load
-    const timeoutId = setTimeout(checkPerformanceIssues, 3000);
+    // Collect metrics after page load
+    if (document.readyState === 'complete') {
+      collectMetrics();
+    } else {
+      window.addEventListener('load', collectMetrics);
+    }
 
     return () => {
-      clearTimeout(timeoutId);
+      window.removeEventListener('load', collectMetrics);
     };
-  }, [enabled, updateMetrics, metrics.lcp, metrics.fid, metrics.cls]);
+  }, []);
 
-  const getPerformanceGrade = (metric: number, thresholds: { good: number; needsImprovement: number }) => {
-    if (metric <= thresholds.good) return 'Good';
-    if (metric <= thresholds.needsImprovement) return 'Needs Improvement';
-    return 'Poor';
+  const getPerformanceGrade = (metric: number, thresholds: { good: number; poor: number }) => {
+    if (metric <= thresholds.good) return 'good';
+    if (metric <= thresholds.poor) return 'needs-improvement';
+    return 'poor';
   };
 
-  const formatMetric = (value?: number, unit: string = 'ms') => {
-    if (value === undefined) return 'N/A';
-    return `${value.toFixed(2)}${unit}`;
+  const getGradeColor = (grade: string) => {
+    switch (grade) {
+      case 'good': return 'text-green-600 bg-green-100';
+      case 'needs-improvement': return 'text-yellow-600 bg-yellow-100';
+      case 'poor': return 'text-red-600 bg-red-100';
+      default: return 'text-gray-600 bg-gray-100';
+    }
   };
 
-  if (!enabled || !isVisible) {
-    return null;
+  if (!isVisible) {
+    return (
+      <button
+        onClick={() => setIsVisible(true)}
+        className="fixed bottom-4 right-4 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors z-50"
+        title="Open Performance Monitor"
+      >
+        <Activity className="h-5 w-5" />
+      </button>
+    );
   }
 
   return (
-    <div 
-      className="performance-monitor"
-      style={{
-        position: 'fixed',
-        bottom: '20px',
-        left: '20px',
-        background: 'rgba(0, 0, 0, 0.9)',
-        color: 'white',
-        padding: '15px',
-        borderRadius: '8px',
-        fontSize: '12px',
-        fontFamily: 'monospace',
-        zIndex: 1000,
-        minWidth: '300px',
-        maxWidth: '400px'
-      }}
-      role="region"
-      aria-label="Performance metrics"
-    >
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '10px' }}>
-        <h3 style={{ margin: 0, fontSize: '14px' }}>Performance Monitor</h3>
+    <div className="fixed bottom-4 right-4 bg-white rounded-lg shadow-xl border p-6 w-80 z-50">
+      <div className="flex justify-between items-center mb-4">
+        <h3 className="text-lg font-semibold text-gray-900">Performance Monitor</h3>
         <button
           onClick={() => setIsVisible(false)}
-          style={{
-            background: 'transparent',
-            border: 'none',
-            color: 'white',
-            cursor: 'pointer',
-            fontSize: '16px'
-          }}
-          aria-label="Close performance monitor"
+          className="text-gray-400 hover:text-gray-600"
         >
-          ×
+          <X className="h-5 w-5" />
         </button>
       </div>
-      
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px' }}>
-        <div>
-          <div style={{ fontWeight: 'bold', marginBottom: '4px' }}>Core Web Vitals</div>
-          <div>LCP: {formatMetric(metrics.lcp, 'ms')}</div>
-          <div style={{ fontSize: '10px', color: '#ccc' }}>
-            {metrics.lcp ? getPerformanceGrade(metrics.lcp, { good: 2500, needsImprovement: 4000 }) : 'N/A'}
+
+      {metrics ? (
+        <div className="space-y-3">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center space-x-2">
+              <Clock className="h-4 w-4 text-gray-500" />
+              <span className="text-sm text-gray-600">Load Time</span>
+            </div>
+            <span className={`px-2 py-1 rounded text-xs font-medium ${getGradeColor(getPerformanceGrade(metrics.loadTime, { good: 1000, poor: 3000 }))}`}>
+              {metrics.loadTime.toFixed(0)}ms
+            </span>
           </div>
-          
-          <div>FID: {formatMetric(metrics.fid, 'ms')}</div>
-          <div style={{ fontSize: '10px', color: '#ccc' }}>
-            {metrics.fid ? getPerformanceGrade(metrics.fid, { good: 100, needsImprovement: 300 }) : 'N/A'}
+
+          <div className="flex items-center justify-between">
+            <div className="flex items-center space-x-2">
+              <Zap className="h-4 w-4 text-gray-500" />
+              <span className="text-sm text-gray-600">First Paint</span>
+            </div>
+            <span className={`px-2 py-1 rounded text-xs font-medium ${getGradeColor(getPerformanceGrade(metrics.firstPaint, { good: 1000, poor: 3000 }))}`}>
+              {metrics.firstPaint.toFixed(0)}ms
+            </span>
           </div>
-          
-          <div>CLS: {formatMetric(metrics.cls)}</div>
-          <div style={{ fontSize: '10px', color: '#ccc' }}>
-            {metrics.cls ? getPerformanceGrade(metrics.cls, { good: 0.1, needsImprovement: 0.25 }) : 'N/A'}
+
+          <div className="flex items-center justify-between">
+            <div className="flex items-center space-x-2">
+              <Database className="h-4 w-4 text-gray-500" />
+              <span className="text-sm text-gray-600">Memory Usage</span>
+            </div>
+            <span className="text-xs text-gray-600">
+              {metrics.memoryUsage ? `${(metrics.memoryUsage / 1024 / 1024).toFixed(1)}MB` : 'N/A'}
+            </span>
+          </div>
+
+          <div className="flex items-center justify-between">
+            <div className="flex items-center space-x-2">
+              <Wifi className="h-4 w-4 text-gray-500" />
+              <span className="text-sm text-gray-600">Network</span>
+            </div>
+            <span className="text-xs text-gray-600 capitalize">
+              {metrics.networkSpeed}
+            </span>
           </div>
         </div>
-        
-        <div>
-          <div style={{ fontWeight: 'bold', marginBottom: '4px' }}>Loading Metrics</div>
-          <div>FCP: {formatMetric(metrics.fcp, 'ms')}</div>
-          <div>TTFB: {formatMetric(metrics.ttfb, 'ms')}</div>
-          <div>Load: {formatMetric(metrics.loadTime, 'ms')}</div>
-          <div>DOM Ready: {formatMetric(metrics.domContentLoaded, 'ms')}</div>
+      ) : (
+        <div className="text-center text-gray-500">
+          <Activity className="h-8 w-8 mx-auto mb-2 animate-pulse" />
+          <p className="text-sm">Collecting metrics...</p>
         </div>
-      </div>
-      
-      <div style={{ marginTop: '10px', fontSize: '10px', color: '#ccc' }}>
-        <div>Green: Good | Yellow: Needs Improvement | Red: Poor</div>
-      </div>
+      )}
     </div>
   );
 };
