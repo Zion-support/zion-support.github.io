@@ -230,12 +230,13 @@ const App: React.FC = () => {
         <AdvancedAnalytics enableConversionTracking enablePerformanceTracking enableErrorTracking />
         <div className="min-h-screen bg-white">
           <ModernHeader />
-          <main>
-            <AppRouter />
-          </main>
-          <ModernFooter />
+            <main>
+              <AppRouter />
+            </main>
+          <Footer />
         </div>
 
+<<<<<<< HEAD
         {showPerformanceOptimizer && (
           <div className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center" role="dialog" aria-modal="true">
             <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
