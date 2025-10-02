@@ -17,6 +17,15 @@ color: 'blue',
 count: '25+'
 }
     {
+<<<<<<< HEAD
+icon: FileText,
+title: 'White Papers',
+description: 'In-depth research and analysis on AI trends and best practices',
+link: '/white-papers',
+color: 'green',
+count: '15+'
+}
+=======
       icon: BookOpen,
       title: 'Case Studies',
       description: 'Real-world success stories and implementation results from our clients',
@@ -24,6 +33,7 @@ count: '25+'
       color: 'blue',
       count: '25+'
     }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-55ae
     {
 icon: Video,
 title: 'Webinars',

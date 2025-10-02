@@ -50,10 +50,17 @@ contact: 'Schedule Call'
 
   const faqCategories = [
     {
+<<<<<<< HEAD
+id: 'general',
+title: 'General',
+icon: BookOpen
+}
+=======
       id: 'general',
       title: 'General',
       icon: BookOpen
     }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-55ae
     {
 id: 'technical',
 title: 'Technical',

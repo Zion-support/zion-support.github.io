@@ -1,4 +1,11 @@
 import React from 'react';
+<<<<<<< HEAD
+import {
+Link
+} from 'react-router-dom';
+import {
+
+=======
 import { Link } from 'react-router-dom';
 import { 
   Zap, Bot, BarChart3, Shield, Cloud, Database,
@@ -6,6 +13,7 @@ import {
   TrendingUp, Settings, Headphones, Code,
   Brain, Target, CheckCircle, Star,
   Mail, MessageCircle
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-55ae
 } from 'lucide-react';
 
 const ComprehensiveServices: React.FC = () => {

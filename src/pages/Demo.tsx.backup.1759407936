@@ -15,10 +15,17 @@ const Demo: React.FC = () => {
     phone: '',
     jobTitle: '',
     companySize: '',
+<<<<<<< HEAD
+    useCase: '',
+    preferredDate: '',
+    preferredTime: '',
+    timeZone: '',
+=======
     useCase: ''
     preferredDate: ''
     preferredTime: ''
     timeZone: ''
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-55ae
     message: ''
   });
 

@@ -14,6 +14,17 @@ title: 'Innovation',
 description: 'Pushing the boundaries of AI technology to create revolutionary solutions'
 }
     {
+<<<<<<< HEAD
+icon: Shield,
+title: 'Security',
+description: 'Ensuring enterprise-grade security and compliance in all our solutions'
+}
+    {
+icon: Users,
+title: 'Collaboration',
+description: 'Working closely with clients to understand and solve their unique challenges'
+}
+=======
       icon: Brain,
       title: 'Innovation',
       description: 'Pushing the boundaries of AI technology to create revolutionary solutions'
@@ -23,6 +34,7 @@ description: 'Pushing the boundaries of AI technology to create revolutionary so
       title: 'Security'
       description: 'Ensuring enterprise-grade security and compliance in all our solutions'
     }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-55ae
     {
 icon: Award,
 title: 'Excellence',

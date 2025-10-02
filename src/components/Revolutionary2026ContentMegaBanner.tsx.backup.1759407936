@@ -23,11 +23,19 @@ const Revolutionary2026ContentMegaBanner: React.FC = () => {
       title: "Autonomous Enterprise Operations 2026",
       description: "98% automation rates with self-healing systems, predictive maintenance, and zero-downtime operations",
       slug: "autonomous-enterprise-operations-2026",
+<<<<<<< HEAD
+      category: "Enterprise Automation",
+      date: "2026-01-15",
+      readTime: "38 min",
+      trending: true,
+      icon: "🤖",
+=======
       category: "Enterprise Automation"
       date: "2026-01-15"
       readTime: "38 min"
       trending: true
       icon: "🤖"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-55ae
       impact: "98% Automation"
       featured: true
     },

@@ -17,7 +17,11 @@ const CaseStudiesPage: React.FC = () => {
       company: 'Global Manufacturing Corp',
       industry: 'Manufacturing',
       challenge: 'Optimize production lines and reduce operational costs',
+<<<<<<< HEAD
+      solution: 'AI-powered predictive maintenance and workflow automation',
+=======
       solution: 'AI-powered predictive maintenance and workflow automation'
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-55ae
       results: {
         costReduction: '73%',
         productivityIncrease: '520%',

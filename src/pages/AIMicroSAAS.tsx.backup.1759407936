@@ -1,4 +1,24 @@
 import React from "react";
+<<<<<<< HEAD
+import {
+Helmet
+} from "react-helmet-async";
+import {
+Users,
+CheckCircle,
+ArrowRight,
+DollarSign,
+Clock,
+Star,
+TrendingUp,
+Lock,
+Smartphone,
+Cloud,
+Database,
+Cpu,
+Target,
+Rocket
+=======
 import { Helmet } from "react-helmet-async";
 import { 
   Brain,
@@ -22,6 +42,7 @@ import {
   Cpu
   Target
   Rocket
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-55ae
 } from "lucide-react";
 
 export default function AIMicroSAAS(): React.JSX.Element {
