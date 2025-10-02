@@ -8,7 +8,9 @@ export interface BlogPost {
   readTime?: string;
 }
 
-export const posts: BlogPost[] = [
+export const posts: BlogPost[] = [];
+
+posts.push(
   {
     slug: "ai-2027-operational-trust-blueprint",
     title: "AI 2027: Operational Trust Blueprint",
@@ -1556,10 +1558,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "8 min read"
-  }
-
-// Sept 30, 2025 – Fresh articles to add and advertise on homepage
-posts.push([
+  },
   {
     slug: "ai-safety-scorecards-2026",
     title: "AI Safety Scorecards 2026: KPIs, Budgets, Rollbacks",
@@ -1567,8 +1566,12 @@ posts.push([
     category: "AI Governance",
     publishedAt: "2025-09-30",
     featured: true,
-    readTime: "7 min read"
+    readTime: "6 min read"
   },
+]);
+
+// Sept 30, 2025 – Fresh articles to add and advertise on homepage
+posts.push([
   {
     slug: "edge-governed-flags-2026",
     title: "Edge‑Governed Flags 2026: Policies at <100ms",
@@ -1586,7 +1589,7 @@ posts.push([
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "8 min read"
-  },
+  }
 );
 
 // Sept 30, 2025 – New articles to expand catalog and promote on homepage
@@ -1644,11 +1647,9 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "8 min read"
-  }
-);
+  },
 
 // Sept 30, 2025 – New posts for homepage promotion and advertising (added)
-posts.push(
   {
     slug: "ai-governance-scorecards-q1-2026",
     title: "AI Governance Scorecards Q1 2026: Guardrails Wired to KPIs",
@@ -1675,11 +1676,9 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "8 min read"
-  }
-);
+  },
 
 // Sept 30, 2025 – Brand-new trio for immediate homepage promotion
-posts.push(
   {
     slug: "ai-change-management-2026",
     title: "AI Change Management 2026: From Pilot to Org-Wide Adoption",
@@ -1706,11 +1705,9 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "8 min read"
-  }
-);
+  },
 
 // New: Sept 30, 2025 – Fresh trio to advertise on homepage
-posts.push(
   {
     slug: "real-time-decision-engines-2027",
     title: "Real-Time Decision Engines 2027: 10M Decisions/sec under <1ms",
@@ -1737,11 +1734,9 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "9 min read"
-  }
-);
+  },
 
 // Sept 30, 2025 – New promotional articles to surface on homepage
-posts.push(
   {
     slug: "ai-governance-live-scorecards-2026",
     title: "AI Governance Live Scorecards 2026: Guardrails Wired to KPIs",
@@ -1769,10 +1764,8 @@ posts.push(
     featured: true,
     readTime: "8 min read"
   }
-);
 
 // Mar 2026 – Brand-new posts to advertise and surface on Home
-posts.push(
   {
     slug: "ai-governance-pr-policy-tests-2026",
     title: "PR Policy Tests 2026: Guardrails That Accelerate Delivery",
@@ -1799,11 +1792,9 @@ posts.push(
     publishedAt: "2025-10-31",
     featured: true,
     readTime: "8 min read"
-  }
-);
+  },
 
 // Sept 30, 2025 – Additional new posts to advertise on homepage
-posts.push(
   {
     slug: "ai-agent-reliability-playbook-2026",
     title: "AI Agent Reliability Playbook 2026: SLOs, Budgets, Rollbacks",
@@ -1830,11 +1821,9 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "6 min read"
-  }
-);
+  },
 
 // Sept 30, 2025 – Brand new posts to advertise on homepage
-posts.push(
   {
     slug: "ai-governance-real-time-guardrails-2025",
     title: "AI Governance 2025: Real-Time Guardrails that Don't Slow Teams",
@@ -1861,11 +1850,9 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "8 min read"
-  }
-);
+  },
 
 // Jan 15, 2026 – Fresh posts to advertise on homepage
-posts.push(
   {
     slug: "genai-routing-playbook-2026",
     title: "GenAI Routing Playbook 2026: Quality Tiers Under Budget",
@@ -1892,11 +1879,9 @@ posts.push(
     publishedAt: "2025-10-30",
     featured: true,
     readTime: "8 min read"
-  }
-);
+  },
 
 // Oct 31, 2025 – Fresh featured posts to surface on homepage
-posts.push(
   {
     slug: "agent-observability-blueprint-2026",
     title: "Agent Observability Blueprint 2026: Traces, SLIs, and Rollbacks",
@@ -1923,11 +1908,9 @@ posts.push(
     publishedAt: "2025-10-31",
     featured: true,
     readTime: "8 min read"
-  }
-);
+  },
 
 // Additional freshly published articles
-posts.push(
   {
     slug: "ai-reliability-scorecards-2026",
     title: "AI Reliability Scorecards 2026: SLIs, Error Budgets, Rollbacks",
@@ -1991,4 +1974,4 @@ posts.push(
     featured: true,
     readTime: "7 min read"
   }
-];
+);

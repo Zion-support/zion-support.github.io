@@ -25,6 +25,11 @@ import MultimodalEnterpriseIntelligence from './pages/blog/ai-2025-oct-multimoda
 import NextGenIntelligentAutomationBreakthrough from './pages/blog/ai-2025-oct-next-gen-intelligent-automation-breakthrough';
 import PostBySlug from './pages/blog/PostBySlug';
 import RealTimeCognitiveAutomation from './pages/services/RealTimeCognitiveAutomation';
+import AIPredictiveAnalytics from './pages/services/AIPredictiveAnalytics';
+import SmartContractAudit from './pages/services/SmartContractAudit';
+import EdgeComputingAI from './pages/services/EdgeComputingAI';
+import ConversationalAI from './pages/services/ConversationalAI';
+import AIEmailMarketing from './pages/services/AIEmailMarketing';
 import Services from './pages/Services';
 import Solutions from './pages/Solutions';
 import Resources from './pages/Resources';
@@ -53,6 +58,11 @@ export const AppRouter: React.FC = () => {
       <Route path="/services/advanced-cybersecurity-ai" element={<AdvancedCybersecurityAI />} />
       <Route path="/services/ai-content-generator" element={<AIContentGenerator />} />
       <Route path="/services/smart-appointment-scheduler" element={<SmartAppointmentScheduler />} />
+      <Route path="/services/ai-predictive-analytics" element={<AIPredictiveAnalytics />} />
+      <Route path="/services/smart-contract-audit" element={<SmartContractAudit />} />
+      <Route path="/services/edge-computing-ai" element={<EdgeComputingAI />} />
+      <Route path="/services/conversational-ai" element={<ConversationalAI />} />
+      <Route path="/services/ai-email-marketing" element={<AIEmailMarketing />} />
       <Route path="/case-studies" element={<CaseStudies />} />
       <Route path="/case-studies/global-retail-ai-transformation-2025" element={<GlobalRetailAITransformation />} />
       <Route path="/case-studies/healthcare-ai-transformation-2025" element={<HealthcareAITransformation />} />

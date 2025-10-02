@@ -18,7 +18,8 @@ export function Header() {
   return (
     <header className="border-b border-gray-200 sticky top-0 z-50 bg-white shadow-sm">
       <nav className="flex items-center justify-between px-4 py-3 max-w-6xl mx-auto">
-        <Link href="/" className="font-bold text-lg text-gray-900 hover:text-blue-600 transition-colors">
+        <Link href="/" className="font-bold text-lg text-gray-900 hover:text-blue-600 transition-colors flex items-center">
+          <span className="text-blue-600 mr-2 text-xl">🚀</span>
           Zion Tech Group
         </Link>
         
@@ -36,28 +37,28 @@ export function Header() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
             </button>
-            <div className={`absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-lg border border-gray-200 transition-all duration-200 z-50 ${
+            <div className={`absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-lg border border-gray-200 transition-all duration-200 z-50 ${
               openDropdown === 'services' ? 'opacity-100 visible' : 'opacity-0 invisible'
             }`}>
               <div className="py-3">
                 <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide">Featured Services</div>
-                <Link href="/services/ai-customer-service-automation" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                  AI Customer Service Automation
+                <Link href="/services/ai-content-optimization-platform" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  AI Content Optimization Platform
                 </Link>
-                <Link href="/services/appointment-scheduling-saas" className="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-600">
-                  Smart Appointment Scheduler
+                <Link href="/services/ai-financial-forecasting-suite" className="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-600">
+                  AI Financial Forecasting Suite
                 </Link>
-                <Link href="/services/cloud-migration-service" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600">
-                  Enterprise Cloud Migration
+                <Link href="/services/smart-inventory-management-saas" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600">
+                  Smart Inventory Management SaaS
                 </Link>
-                <Link href="/services/ai-business-intelligence" className="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600">
-                  AI Business Intelligence
+                <Link href="/services/ai-powered-crm-automation" className="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600">
+                  AI-Powered CRM Automation
                 </Link>
-                <Link href="/services/ai-cybersecurity-platform" className="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600">
-                  AI Cybersecurity Platform
+                <Link href="/services/cloud-native-devops-platform" className="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600">
+                  Cloud-Native DevOps Platform
                 </Link>
-                <Link href="/services/healthcare-telemedicine-platform" className="block px-4 py-2 text-sm text-gray-700 hover:bg-teal-50 hover:text-teal-600">
-                  Telemedicine Platform
+                <Link href="/services/ai-cybersecurity-automation-suite" className="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600">
+                  AI Cybersecurity Automation Suite
                 </Link>
                 <div className="border-t border-gray-100 my-2"></div>
                 <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide">Industry Solutions</div>
@@ -71,12 +72,31 @@ export function Header() {
                   Autonomous Operations
                 </Link>
                 <div className="border-t border-gray-100 my-2"></div>
-                <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide">All Services</div>
-                <Link href="/services/micro-saas" className="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600">
-                  Micro SaaS Solutions
+                <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide">New Micro SaaS Solutions</div>
+                <Link href="/services/ai-content-generation-tool" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  AI Content Generation Tool
                 </Link>
-                <Link href="/services/ai-services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                  AI Services & Solutions
+                <Link href="/services/automated-appointment-scheduler" className="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-600">
+                  Automated Appointment Scheduler
+                </Link>
+                <Link href="/services/ai-customer-support-chatbot" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600">
+                  AI Customer Support Chatbot
+                </Link>
+                <div className="border-t border-gray-100 my-2"></div>
+                <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide">Advanced AI Services</div>
+                <Link href="/services/ai-resume-screening-service" className="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600">
+                  AI Resume Screening Service
+                </Link>
+                <Link href="/services/ai-business-intelligence-2025" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  Business Intelligence
+                </Link>
+                <div className="border-t border-gray-100 my-2"></div>
+                <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide">IT Security Services</div>
+                <Link href="/services/cybersecurity-risk-assessment" className="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600">
+                  Cybersecurity Risk Assessment
+                </Link>
+                <Link href="/services/ai-cybersecurity-2025" className="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600">
+                  AI Cybersecurity Solutions
                 </Link>
                 <Link href="/services/it-services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-600">
                   IT Services & Solutions
@@ -235,13 +255,17 @@ export function Header() {
               </button>
               {openDropdown === 'mobile-services' && (
                 <div className="mt-2 pl-4 space-y-2">
-                  <Link href="/services/ai-customer-service-automation" className="block text-sm text-gray-600 hover:text-blue-600">AI Customer Service</Link>
-                  <Link href="/services/appointment-scheduling-saas" className="block text-sm text-gray-600 hover:text-blue-600">Appointment Scheduler</Link>
-                  <Link href="/services/cloud-migration-service" className="block text-sm text-gray-600 hover:text-blue-600">Cloud Migration</Link>
-                  <Link href="/services/ai-business-intelligence" className="block text-sm text-gray-600 hover:text-blue-600">AI Business Intelligence</Link>
-                  <Link href="/services/ai-cybersecurity-platform" className="block text-sm text-gray-600 hover:text-blue-600">AI Cybersecurity</Link>
-                  <Link href="/services/healthcare-telemedicine-platform" className="block text-sm text-gray-600 hover:text-blue-600">Telemedicine Platform</Link>
-                  <Link href="/services" className="block text-sm text-gray-600 hover:text-blue-600">View All Services</Link>
+                  <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Core Services</div>
+                  <Link href="/services/ai-services" className="block text-sm text-gray-600 hover:text-blue-600">AI Services</Link>
+                  <Link href="/services/micro-saas" className="block text-sm text-gray-600 hover:text-blue-600">Micro SaaS</Link>
+                  <Link href="/services/it-services" className="block text-sm text-gray-600 hover:text-blue-600">IT Services</Link>
+                  <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 mt-4">New Solutions</div>
+                  <Link href="/services/ai-content-generation-tool" className="block text-sm text-gray-600 hover:text-blue-600">AI Content Generation</Link>
+                  <Link href="/services/automated-appointment-scheduler" className="block text-sm text-gray-600 hover:text-blue-600">Appointment Scheduler</Link>
+                  <Link href="/services/ai-customer-support-chatbot" className="block text-sm text-gray-600 hover:text-blue-600">AI Support Chatbot</Link>
+                  <Link href="/services/ai-resume-screening-service" className="block text-sm text-gray-600 hover:text-blue-600">AI Resume Screening</Link>
+                  <Link href="/services/cybersecurity-risk-assessment" className="block text-sm text-gray-600 hover:text-blue-600">Cybersecurity Assessment</Link>
+                  <Link href="/services" className="block text-sm text-gray-600 hover:text-blue-600 font-medium mt-2">View All Services</Link>
                 </div>
               )}
             </div>
@@ -328,34 +352,39 @@ export function Footer() {
             <h3 className="font-semibold text-gray-900 mb-3">Featured Services</h3>
             <div className="space-y-2">
               <Link href="/services" className="block text-gray-600 hover:text-blue-600 transition-colors">All Services</Link>
-              <Link href="/services/ai-customer-service-automation" className="block text-gray-600 hover:text-blue-600 transition-colors">AI Customer Service</Link>
-              <Link href="/services/appointment-scheduling-saas" className="block text-gray-600 hover:text-blue-600 transition-colors">Appointment Scheduler</Link>
-              <Link href="/services/cloud-migration-service" className="block text-gray-600 hover:text-blue-600 transition-colors">Cloud Migration</Link>
-              <Link href="/services/ai-business-intelligence" className="block text-gray-600 hover:text-blue-600 transition-colors">AI Business Intelligence</Link>
-              <Link href="/services/ai-cybersecurity-platform" className="block text-gray-600 hover:text-blue-600 transition-colors">AI Cybersecurity</Link>
-              <Link href="/services/healthcare-telemedicine-platform" className="block text-gray-600 hover:text-blue-600 transition-colors">Telemedicine Platform</Link>
+              <Link href="/services/ai-services" className="block text-gray-600 hover:text-blue-600 transition-colors">AI Services</Link>
+              <Link href="/services/micro-saas" className="block text-gray-600 hover:text-blue-600 transition-colors">Micro SaaS</Link>
+              <Link href="/services/it-services" className="block text-gray-600 hover:text-blue-600 transition-colors">IT Services</Link>
+              <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mt-3 mb-2">New Solutions</div>
+              <Link href="/services/ai-content-generation-tool" className="block text-gray-600 hover:text-blue-600 transition-colors">AI Content Generation</Link>
+              <Link href="/services/automated-appointment-scheduler" className="block text-gray-600 hover:text-blue-600 transition-colors">Appointment Scheduler</Link>
+              <Link href="/services/ai-customer-support-chatbot" className="block text-gray-600 hover:text-blue-600 transition-colors">AI Support Chatbot</Link>
+              <Link href="/services/ai-resume-screening-service" className="block text-gray-600 hover:text-blue-600 transition-colors">AI Resume Screening</Link>
+              <Link href="/services/cybersecurity-risk-assessment" className="block text-gray-600 hover:text-blue-600 transition-colors">Cybersecurity Assessment</Link>
             </div>
           </div>
+          
+          {/* Solutions */}
           <div>
-            <h3 className="font-semibold text-gray-900 mb-3">Latest Content</h3>
+            <h3 className="font-semibold text-gray-900 mb-3">Solutions</h3>
             <div className="space-y-2">
-              <Link href="/blog/ai-customer-data-platforms-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">
-                📊 AI Customer Data Platforms 2026
-              </Link>
-              <Link href="/blog/ai-customer-journey-ai-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">
-                🛤️ AI Customer Journey 2026
-              </Link>
-              <Link href="/blog/ai-agent-observability-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">
-                🔍 AI Agent Observability 2026
-              </Link>
-              <Link href="/blog/agentic-workflow-orchestration-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">
-                ⚡ Agentic Workflow Orchestration
-              </Link>
-              <Link href="/blog/ai-autonomous-cloud-ops-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">
-                ☁️ AI Autonomous Cloud Ops 2026
-              </Link>
-              <Link href="/blog" className="block text-gray-600 hover:text-blue-600 transition-colors">
-                📚 View All Blog Posts
+              <Link href="/solutions" className="block text-gray-600 hover:text-blue-600 transition-colors">All Solutions</Link>
+              <Link href="/enterprise" className="block text-gray-600 hover:text-blue-600 transition-colors">Enterprise Solutions</Link>
+              <Link href="/services/ai-quantum-computing-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">⚛️ Quantum Computing</Link>
+              <Link href="/services/ai-autonomous-operations-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">🤖 AI Operations</Link>
+              <Link href="/case-studies" className="block text-gray-600 hover:text-blue-600 transition-colors">📊 Case Studies</Link>
+            </div>
+          </div>
+
+          {/* Resources */}
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-3">Resources</h3>
+            <div className="space-y-2">
+              <Link href="/blog" className="block text-gray-600 hover:text-blue-600 transition-colors">📚 Blog & Insights</Link>
+              <Link href="/guides" className="block text-gray-600 hover:text-blue-600 transition-colors">📖 Implementation Guides</Link>
+              <Link href="/content-hub" className="block text-gray-600 hover:text-blue-600 transition-colors">🎯 Content Hub</Link>
+              <Link href="/blog/ai-2026-november-quantum-superintelligence-breakthrough" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                🚀 Latest Breakthrough
               </Link>
             </div>
           </div>

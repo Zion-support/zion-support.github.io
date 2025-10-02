@@ -1,19 +1,16 @@
-import React, { useState, useEffect, useMemo, useCallback } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import { AppRouter } from './router';
 import './index.css';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import ModernHomepage from './components/LatestContentBanner2025';
+import ModernHeader from './components/Header';
+import ModernFooter from './components/Footer';
 import SEOOptimizer from './components/SEOOptimizer';
 import AdvancedAnalytics from './components/AdvancedAnalytics';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import NotificationSystem from './components/NotificationSystem';
-import PerformanceMonitor from './components/PerformanceMonitor';
+import { PerformanceMonitor } from './components/PerformanceMonitor';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import EnhancedSEOHead from './components/EnhancedSEOHead';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import { AppRouter } from './router';
-
 // Types and interfaces
 interface Notification {
   id: string;
@@ -115,11 +112,11 @@ const App: React.FC = () => {
         <AdvancedAnalytics enableConversionTracking enablePerformanceTracking enableErrorTracking />
         <PerformanceMonitor enabled={true} showMetrics={process.env.NODE_ENV === 'development'} />
         <div className="min-h-screen bg-white">
-          <Header />
+          <ModernHeader />
           <main>
             <AppRouter />
           </main>
-          <Footer />
+          <ModernFooter />
         </div>
 
         {showPerformanceOptimizer && (
@@ -147,8 +144,8 @@ const App: React.FC = () => {
         )}
 
         <NotificationSystem notifications={notifications} onRemove={handleRemoveNotification} />
-      </EnhancedErrorBoundary>
-    </AccessibilityEnhancer>
+      </AccessibilityEnhancer>
+    </EnhancedErrorBoundary>
   );
 };
 

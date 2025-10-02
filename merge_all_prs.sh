@@ -1,12 +1,11 @@
 #!/bin/bash
-
-# Script to merge all recent cursor branches and resolve conflicts
 set -e
 
 echo "🚀 Starting comprehensive PR merge process..."
 
 # List of recent cursor branches to merge
 CURSOR_BRANCHES=(
+    "origin/cursor/create-and-deploy-new-content-43b1"
     "origin/cursor/create-and-deploy-new-content-03fd"
     "origin/cursor/create-and-deploy-new-content-0d76"
     "origin/cursor/create-and-deploy-new-content-22ba"

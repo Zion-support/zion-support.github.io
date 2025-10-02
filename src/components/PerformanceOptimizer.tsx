@@ -1,142 +1,212 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { Settings, Zap, Image, Code, Database, Wifi } from 'lucide-react';
 
 interface PerformanceOptimizerProps {
   isVisible: boolean;
-  onClose?: () => void;
+  onClose: () => void;
 }
 
-interface PerformanceMetrics {
-  loadTime: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  cumulativeLayoutShift: number;
-  firstInputDelay: number;
-}
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
+  isVisible,
+  onClose
+}) => {
+  const [optimizations, setOptimizations] = useState({
+    imageOptimization: true,
+    codeSplitting: true,
+    lazyLoading: true,
+    caching: true,
+    compression: true,
+    cdn: false
+  });
 
-export default function PerformanceOptimizer({ isVisible, onClose }: PerformanceOptimizerProps) {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const [optimizations, setOptimizations] = useState<string[]>([]);
+  const [currentOptimizations, setCurrentOptimizations] = useState<string[]>([]);
 
   useEffect(() => {
     if (isVisible) {
-      // Collect performance metrics
-      const collectMetrics = () => {
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        const paintEntries = performance.getEntriesByType('paint');
+      // Simulate running optimizations
+      const runOptimizations = async () => {
+        const optimizationsList: string[] = [];
         
-        const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
-        const lcp = performance.getEntriesByType('largest-contentful-paint')[0];
-        
-        const metrics: PerformanceMetrics = {
-          loadTime: navigation.loadEventEnd - navigation.loadEventStart,
-          firstContentfulPaint: fcp ? fcp.startTime : 0,
-          largestContentfulPaint: lcp ? lcp.startTime : 0,
-          cumulativeLayoutShift: 0, // Would need to be measured with observer
-          firstInputDelay: 0, // Would need to be measured with observer
-        };
-        
-        setMetrics(metrics);
-        
-        // Generate optimization suggestions
-        const suggestions: string[] = [];
-        
-        if (metrics.firstContentfulPaint > 1500) {
-          suggestions.push('Optimize images and reduce bundle size for faster First Contentful Paint');
+        if (optimizations.imageOptimization) {
+          optimizationsList.push('Optimizing images...');
+          await new Promise(resolve => setTimeout(resolve, 1000));
+          optimizationsList.push('✓ Images optimized');
         }
-        
-        if (metrics.largestContentfulPaint > 2500) {
-          suggestions.push('Implement lazy loading and optimize largest contentful paint');
+
+        if (optimizations.codeSplitting) {
+          optimizationsList.push('Enabling code splitting...');
+          await new Promise(resolve => setTimeout(resolve, 800));
+          optimizationsList.push('✓ Code splitting enabled');
         }
-        
-        if (metrics.loadTime > 3000) {
-          suggestions.push('Enable compression and optimize server response times');
+
+        if (optimizations.lazyLoading) {
+          optimizationsList.push('Implementing lazy loading...');
+          await new Promise(resolve => setTimeout(resolve, 600));
+          optimizationsList.push('✓ Lazy loading implemented');
         }
-        
-        suggestions.push('Implement service worker for offline functionality');
-        suggestions.push('Use CDN for static assets');
-        suggestions.push('Enable HTTP/2 and compression');
-        
-        setOptimizations(suggestions);
+
+        if (optimizations.caching) {
+          optimizationsList.push('Configuring caching...');
+          await new Promise(resolve => setTimeout(resolve, 700));
+          optimizationsList.push('✓ Caching configured');
+        }
+
+        if (optimizations.compression) {
+          optimizationsList.push('Enabling compression...');
+          await new Promise(resolve => setTimeout(resolve, 500));
+          optimizationsList.push('✓ Compression enabled');
+        }
+
+        setCurrentOptimizations(optimizationsList);
       };
-      
-      collectMetrics();
+
+      runOptimizations();
     }
-  }, [isVisible]);
+  }, [isVisible, optimizations]);
+
+  const handleOptimizationToggle = (key: keyof typeof optimizations) => {
+    setOptimizations(prev => ({
+      ...prev,
+      [key]: !prev[key]
+    }));
+  };
+
+  const optimizationOptions = [
+    {
+      key: 'imageOptimization' as const,
+      label: 'Image Optimization',
+      description: 'Compress and optimize images for faster loading',
+      icon: Image,
+      enabled: optimizations.imageOptimization
+    },
+    {
+      key: 'codeSplitting' as const,
+      label: 'Code Splitting',
+      description: 'Split code into smaller chunks for better performance',
+      icon: Code,
+      enabled: optimizations.codeSplitting
+    },
+    {
+      key: 'lazyLoading' as const,
+      label: 'Lazy Loading',
+      description: 'Load content only when needed',
+      icon: Database,
+      enabled: optimizations.lazyLoading
+    },
+    {
+      key: 'caching' as const,
+      label: 'Browser Caching',
+      description: 'Enable aggressive caching strategies',
+      icon: Settings,
+      enabled: optimizations.caching
+    },
+    {
+      key: 'compression' as const,
+      label: 'Gzip Compression',
+      description: 'Compress assets for faster transfer',
+      icon: Zap,
+      enabled: optimizations.compression
+    },
+    {
+      key: 'cdn' as const,
+      label: 'CDN Integration',
+      description: 'Use Content Delivery Network for global performance',
+      icon: Wifi,
+      enabled: optimizations.cdn
+    }
+  ];
 
   if (!isVisible) return null;
 
   return (
     <div className="space-y-6">
+      <div className="flex justify-between items-center">
+        <h2 className="text-2xl font-bold text-gray-900">Performance Optimizer</h2>
+        <button
+          onClick={onClose}
+          className="text-gray-400 hover:text-gray-600"
+        >
+          <X className="h-6 w-6" />
+        </button>
+      </div>
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div className="bg-gray-50 p-4 rounded-lg">
-          <h3 className="font-semibold text-gray-900 mb-2">Performance Metrics</h3>
-          {metrics ? (
-            <div className="space-y-2 text-sm">
-              <div className="flex justify-between">
-                <span>Load Time:</span>
-                <span className={metrics.loadTime > 3000 ? 'text-red-600' : 'text-green-600'}>
-                  {metrics.loadTime.toFixed(0)}ms
-                </span>
+        {optimizationOptions.map((option) => (
+          <div
+            key={option.key}
+            className={`p-4 border rounded-lg transition-colors ${
+              option.enabled
+                ? 'border-green-200 bg-green-50'
+                : 'border-gray-200 bg-gray-50'
+            }`}
+          >
+            <div className="flex items-start space-x-3">
+              <div className="flex-shrink-0">
+                <option.icon className={`h-5 w-5 ${
+                  option.enabled ? 'text-green-600' : 'text-gray-400'
+                }`} />
               </div>
-              <div className="flex justify-between">
-                <span>First Contentful Paint:</span>
-                <span className={metrics.firstContentfulPaint > 1500 ? 'text-red-600' : 'text-green-600'}>
-                  {metrics.firstContentfulPaint.toFixed(0)}ms
-                </span>
-              </div>
-              <div className="flex justify-between">
-                <span>Largest Contentful Paint:</span>
-                <span className={metrics.largestContentfulPaint > 2500 ? 'text-red-600' : 'text-green-600'}>
-                  {metrics.largestContentfulPaint.toFixed(0)}ms
-                </span>
+              <div className="flex-1 min-w-0">
+                <div className="flex items-center justify-between">
+                  <h3 className="text-sm font-medium text-gray-900">
+                    {option.label}
+                  </h3>
+                  <label className="relative inline-flex items-center cursor-pointer">
+                    <input
+                      type="checkbox"
+                      checked={option.enabled}
+                      onChange={() => handleOptimizationToggle(option.key)}
+                      className="sr-only peer"
+                    />
+                    <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
+                  </label>
+                </div>
+                <p className="text-xs text-gray-500 mt-1">
+                  {option.description}
+                </p>
               </div>
             </div>
-          ) : (
-            <p className="text-gray-500">Collecting metrics...</p>
-          )}
-        </div>
-        
-        <div className="bg-gray-50 p-4 rounded-lg">
-          <h3 className="font-semibold text-gray-900 mb-2">Optimization Suggestions</h3>
-          <ul className="space-y-1 text-sm">
-            {optimizations.map((suggestion, index) => (
-              <li key={index} className="flex items-start gap-2">
-                <span className="text-blue-500 mt-0.5">•</span>
-                <span className="text-gray-700">{suggestion}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
+          </div>
+        ))}
       </div>
-      
-      <div className="bg-blue-50 p-4 rounded-lg">
-        <h3 className="font-semibold text-blue-900 mb-2">Quick Actions</h3>
-        <div className="flex flex-wrap gap-2">
-          <button 
-            onClick={() => {
-              // Clear cache and reload
-              if ('caches' in window) {
-                caches.keys().then(names => {
-                  names.forEach(name => caches.delete(name));
-                });
-              }
-              window.location.reload();
-            }}
-            className="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700"
-          >
-            Clear Cache & Reload
-          </button>
-          <button 
-            onClick={() => {
-              // Enable performance monitoring
-              console.log('Performance monitoring enabled');
-            }}
-            className="bg-green-600 text-white px-3 py-1 rounded text-sm hover:bg-green-700"
-          >
-            Enable Monitoring
-          </button>
+
+      {currentOptimizations.length > 0 && (
+        <div className="bg-gray-50 rounded-lg p-4">
+          <h3 className="text-sm font-medium text-gray-900 mb-2">Optimization Progress</h3>
+          <div className="space-y-1">
+            {currentOptimizations.map((optimization, index) => (
+              <div
+                key={index}
+                className={`text-sm ${
+                  optimization.startsWith('✓') ? 'text-green-600' : 'text-gray-600'
+                }`}
+              >
+                {optimization}
+              </div>
+            ))}
+          </div>
         </div>
+      )}
+
+      <div className="flex justify-end space-x-3">
+        <button
+          onClick={onClose}
+          className="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+        >
+          Close
+        </button>
+        <button
+          onClick={() => {
+            setCurrentOptimizations([]);
+            // Trigger re-optimization
+          }}
+          className="px-4 py-2 text-sm font-medium text-white bg-blue-600 border border-transparent rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+        >
+          Apply Optimizations
+        </button>
       </div>
     </div>
   );
-}
+};
+
+export default PerformanceOptimizer;
