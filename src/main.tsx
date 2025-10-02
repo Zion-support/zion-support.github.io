@@ -1,12 +1,12 @@
-import React from "react";";
-import { createRoot } from "react-dom/client";";
-import App from "./AppSafe";";
+import React from "react";
+import { createRoot } from "react-dom/client";
+import App from "./AppSafe";
 
 async function reportWebVitals() {
   try {
-    const { onCLS, onLCP, onFCP, onTTFB } = await import("web-vitals");";
+    const { onCLS, onLCP, onFCP, onTTFB } = await import("web-vitals");
     const log = (metric: { name: string; value: number }) => {
-      console.log(`[WebVitals] ${metric.name}:`, Math.round(metric.value));`;
+      console.log(`[WebVitals] ${metric.name}:`, Math.round(metric.value));
     };
     onCLS(log);
     onLCP(log);
@@ -17,7 +17,7 @@ async function reportWebVitals() {
   }
 }
 
-const container = document.getElementById("root");";
+const container = document.getElementById("root");
 if (container) {
   const root = createRoot(container);
   root.render(
@@ -30,8 +30,8 @@ if (container) {
   }
 }
 
-if (typeof window !== "undefined" && "serviceWorker" in navigator) {";
-  window.addEventListener("load", () => {";
-    void navigator.serviceWorker.register("/sw.js").catch(() => {});";
+if (typeof window !== "undefined" && "serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    void navigator.serviceWorker.register("/sw.js").catch(() => {});
   });
-};
+}
