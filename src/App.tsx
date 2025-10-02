@@ -21,6 +21,22 @@ const SitemapPage = React.lazy(() => import('./pages/Sitemap'));
 const CookiesPage = React.lazy(() => import('./pages/Cookies'));
 const AdditionalServicesPage = React.lazy(() => import('./pages/AdditionalServicesPage'));
 
+// Service-specific pages
+const AIServicesPage = React.lazy(() => import('./pages/services/AIServicesPage'));
+const MicroSAASPage = React.lazy(() => import('./pages/services/MicroSAASPage'));
+const ITServicesPage = React.lazy(() => import('./pages/services/ITServicesPage'));
+const RealTimeCognitiveAutomationPage = React.lazy(() => import('./pages/services/RealTimeCognitiveAutomationPage'));
+const QuantumComputingConsultingPage = React.lazy(() => import('./pages/services/QuantumComputingConsultingPage'));
+const CognitiveComputingTransformationPage = React.lazy(() => import('./pages/services/CognitiveComputingTransformationPage'));
+
+// Solution-specific pages
+const EnterpriseSolutionsPage = React.lazy(() => import('./pages/solutions/EnterpriseSolutionsPage'));
+const SMBSolutionsPage = React.lazy(() => import('./pages/solutions/SMBSolutionsPage'));
+const StartupSolutionsPage = React.lazy(() => import('./pages/solutions/StartupSolutionsPage'));
+
+// Additional pages
+const DocumentationPage = React.lazy(() => import('./pages/DocumentationPage'));
+
 // Loading component
 const LoadingSpinner = () => (
   <div className="flex items-center justify-center min-h-screen">
@@ -61,6 +77,20 @@ const App: React.FC = () => {
               <Route path="/resources" element={<ResourcesPage />} />
               <Route path="/team" element={<TeamPage />} />
               <Route path="/support" element={<SupportPage />} />
+              <Route path="/documentation" element={<DocumentationPage />} />
+              
+              {/* Service-specific Routes */}
+              <Route path="/services/ai-services" element={<AIServicesPage />} />
+              <Route path="/services/micro-saas" element={<MicroSAASPage />} />
+              <Route path="/services/it-services" element={<ITServicesPage />} />
+              <Route path="/services/real-time-cognitive-automation" element={<RealTimeCognitiveAutomationPage />} />
+              <Route path="/services/quantum-computing-consulting" element={<QuantumComputingConsultingPage />} />
+              <Route path="/services/cognitive-computing-transformation" element={<CognitiveComputingTransformationPage />} />
+              
+              {/* Solution-specific Routes */}
+              <Route path="/solutions/enterprise" element={<EnterpriseSolutionsPage />} />
+              <Route path="/solutions/smb" element={<SMBSolutionsPage />} />
+              <Route path="/solutions/startup" element={<StartupSolutionsPage />} />
               
               {/* Legal Pages */}
               <Route path="/privacy" element={<PrivacyPage />} />

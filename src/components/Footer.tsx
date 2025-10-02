@@ -39,10 +39,12 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
-              <li><Link to="/services" className="text-gray-400 hover:text-white transition-colors">AI Services</Link></li>
-              <li><Link to="/services" className="text-gray-400 hover:text-white transition-colors">Quantum Computing</Link></li>
-              <li><Link to="/services" className="text-gray-400 hover:text-white transition-colors">Autonomous Enterprise</Link></li>
-              <li><Link to="/services" className="text-gray-400 hover:text-white transition-colors">Cloud Solutions</Link></li>
+              <li><Link to="/services" className="text-gray-400 hover:text-white transition-colors">All Services</Link></li>
+              <li><Link to="/services/ai-services" className="text-gray-400 hover:text-white transition-colors">AI Services</Link></li>
+              <li><Link to="/services/micro-saas" className="text-gray-400 hover:text-white transition-colors">Micro SaaS</Link></li>
+              <li><Link to="/services/it-services" className="text-gray-400 hover:text-white transition-colors">IT Services</Link></li>
+              <li><Link to="/services/real-time-cognitive-automation" className="text-gray-400 hover:text-white transition-colors">Cognitive Automation</Link></li>
+              <li><Link to="/services/quantum-computing-consulting" className="text-gray-400 hover:text-white transition-colors">Quantum Computing</Link></li>
             </ul>
           </div>
 
@@ -51,10 +53,48 @@ const Footer: React.FC = () => {
             <h3 className="text-lg font-semibold mb-4">Company</h3>
             <ul className="space-y-2">
               <li><Link to="/about" className="text-gray-400 hover:text-white transition-colors">About Us</Link></li>
+              <li><Link to="/solutions" className="text-gray-400 hover:text-white transition-colors">Solutions</Link></li>
+              <li><Link to="/solutions/enterprise" className="text-gray-400 hover:text-white transition-colors">Enterprise</Link></li>
+              <li><Link to="/solutions/smb" className="text-gray-400 hover:text-white transition-colors">SMB</Link></li>
+              <li><Link to="/solutions/startup" className="text-gray-400 hover:text-white transition-colors">Startup</Link></li>
               <li><Link to="/case-studies" className="text-gray-400 hover:text-white transition-colors">Case Studies</Link></li>
+              <li><Link to="/blog" className="text-gray-400 hover:text-white transition-colors">Blog</Link></li>
               <li><Link to="/contact" className="text-gray-400 hover:text-white transition-colors">Contact</Link></li>
-              <li><Link to="/privacy" className="text-gray-400 hover:text-white transition-colors">Privacy</Link></li>
             </ul>
+          </div>
+        </div>
+
+        {/* Additional Links */}
+        <div className="border-t border-gray-800 mt-8 pt-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+              <h3 className="text-lg font-semibold mb-4">Resources</h3>
+              <ul className="space-y-2">
+                <li><Link to="/documentation" className="text-gray-400 hover:text-white transition-colors">Documentation</Link></li>
+                <li><Link to="/support" className="text-gray-400 hover:text-white transition-colors">Support</Link></li>
+                <li><Link to="/resources" className="text-gray-400 hover:text-white transition-colors">Resources</Link></li>
+                <li><Link to="/team" className="text-gray-400 hover:text-white transition-colors">Team</Link></li>
+              </ul>
+            </div>
+            
+            <div>
+              <h3 className="text-lg font-semibold mb-4">Legal</h3>
+              <ul className="space-y-2">
+                <li><Link to="/privacy" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</Link></li>
+                <li><Link to="/terms" className="text-gray-400 hover:text-white transition-colors">Terms of Service</Link></li>
+                <li><Link to="/cookies" className="text-gray-400 hover:text-white transition-colors">Cookie Policy</Link></li>
+                <li><Link to="/sitemap" className="text-gray-400 hover:text-white transition-colors">Sitemap</Link></li>
+              </ul>
+            </div>
+            
+            <div>
+              <h3 className="text-lg font-semibold mb-4">Contact Info</h3>
+              <ul className="space-y-2 text-gray-400">
+                <li>Email: info@ziontechgroup.com</li>
+                <li>Phone: +1 (555) 123-4567</li>
+                <li>Address: 123 Tech Street, Innovation City, IC 12345</li>
+              </ul>
+            </div>
           </div>
         </div>
 
