@@ -191,7 +191,7 @@ const GlobalTelecomCognitiveTransformation: React.FC = () => {,
                         "Automated issue resolution (85% success rate)"
                       ]
                       tech: "GPT-4 fine-tuned, Knowledge graphs, Vector databases, Real-time ML"
-                    },
+                    }
                     {
                       title: "Autonomous Network Intelligence",
                       icon: "🌐",
@@ -202,7 +202,7 @@ const GlobalTelecomCognitiveTransformation: React.FC = () => {,
                         "Self-healing network capabilities"
                       ]
                       tech: "Unsupervised learning, Causal reasoning, Optimization algorithms"
-                    },
+                    }
                     {
                       title: "Enterprise Cognitive Intelligence",
                       icon: "📊",

@@ -35,7 +35,7 @@ console.log(`[Performance] ${metric.name
           name: 'Page Load Time',
           value: pageLoadTime
         });
-      }, 0);
+      } 0);
     });
   }
 };

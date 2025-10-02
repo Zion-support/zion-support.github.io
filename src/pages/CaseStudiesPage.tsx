@@ -15,7 +15,7 @@ const CaseStudiesPage: React.FC = () => {,
         "$2.5M annual cost savings"
       ]
       image: "🏭"
-    },
+    }
     {
       id: 2,
       title: "Global Financial Services Firm",
@@ -28,7 +28,7 @@ const CaseStudiesPage: React.FC = () => {,
         "Enhanced security compliance"
       ]
       image: "🏦"
-    },
+    }
     {
       id: 3,
       title: "Healthcare Technology Provider",
@@ -41,7 +41,7 @@ const CaseStudiesPage: React.FC = () => {,
         "Streamlined care coordination"
       ]
       image: "🏥"
-    },
+    }
     {
       id: 4,
       title: "E-commerce Retail Giant",
@@ -54,7 +54,7 @@ const CaseStudiesPage: React.FC = () => {,
         "Seamless scalability during peak seasons"
       ]
       image: "🛒"
-    },
+    }
     {
       id: 5,
       title: "Technology Startup",
@@ -67,7 +67,7 @@ const CaseStudiesPage: React.FC = () => {,
         "10x faster feature delivery"
       ]
       image: "🚀"
-    },
+    }
     {
       id: 6,
       title: "Energy Sector Leader",

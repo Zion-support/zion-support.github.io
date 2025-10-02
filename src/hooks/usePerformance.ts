@@ -20,7 +20,7 @@ export const useWebVitals = () => {
       onLCP(reportWebVitals);
       onTTFB(reportWebVitals);
     });
-  }, []);
+  } []);
 };
 
 // Hook for intersection observer
@@ -50,7 +50,7 @@ export const useIntersectionObserver = (
     return () => {
       observer.unobserve(element);
     };
-  }, [options, hasIntersected]);
+  } [options, hasIntersected]);
 
   return [ref, isIntersecting, hasIntersected] as const;
 };
@@ -82,7 +82,7 @@ export const useLazyLoad = (threshold: number = 0.1) => {,
     if (isIntersecting && !shouldLoad) {
       setShouldLoad(true);
     }
-  }, [isIntersecting, shouldLoad]);
+  } [isIntersecting, shouldLoad]);
 
   return [ref, shouldLoad] as const;
 };

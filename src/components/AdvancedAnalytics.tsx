@@ -46,7 +46,7 @@ const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
                 custom_map: metrics,
               });
             }
-          }, 0);
+          } 0);
         });
       }
     };
@@ -113,7 +113,7 @@ const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
     return () => {
       // Remove event listeners if needed
     };
-  }, [enableConversionTracking, enablePerformanceTracking, enableErrorTracking]);
+  } [enableConversionTracking, enablePerformanceTracking, enableErrorTracking]);
 
   return null; // This component doesn't render anything;
 };

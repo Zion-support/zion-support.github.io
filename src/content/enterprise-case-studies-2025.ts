@@ -55,7 +55,7 @@ export const enterpriseCaseStudies2025: EnterpriseCaseStudy[] = [,
     image: "/images/fortune-500-ai-transformation.jpg",
     newBadge: true,
     trending: true
-  },
+  }
   {
     id: "financial-services-fraud-prevention",
     slug: "financial-services-fraud-prevention",
@@ -82,7 +82,7 @@ export const enterpriseCaseStudies2025: EnterpriseCaseStudy[] = [,
     image: "/images/financial-fraud-prevention.jpg",
     newBadge: true,
     trending: true
-  },
+  }
   {
     id: "healthcare-ai-diagnostic-system",
     slug: "healthcare-ai-diagnostic-system",
@@ -109,7 +109,7 @@ export const enterpriseCaseStudies2025: EnterpriseCaseStudy[] = [,
     image: "/images/healthcare-ai-diagnostics.jpg",
     newBadge: true,
     trending: true
-  },
+  }
   {
     id: "retail-supply-chain-optimization",
     slug: "retail-supply-chain-optimization",
@@ -136,7 +136,7 @@ export const enterpriseCaseStudies2025: EnterpriseCaseStudy[] = [,
     image: "/images/retail-supply-chain-ai.jpg",
     newBadge: true,
     trending: true
-  },
+  }
   {
     id: "energy-sector-smart-grid",
     slug: "energy-sector-smart-grid",
@@ -163,7 +163,7 @@ export const enterpriseCaseStudies2025: EnterpriseCaseStudy[] = [,
     image: "/images/energy-smart-grid-ai.jpg",
     newBadge: true,
     trending: true
-  },
+  }
   {
     id: "logistics-autonomous-fleet",
     slug: "logistics-autonomous-fleet",

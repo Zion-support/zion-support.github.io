@@ -154,7 +154,7 @@ export class AccessibilityAuditor {
 
     const deductions = issues.reduce((total, issue) => {
       return total + weights[issue.severity];
-    }, 0);
+    } 0);
 
     return Math.max(0, 100 - deductions);
   }

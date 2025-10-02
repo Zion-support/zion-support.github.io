@@ -166,7 +166,7 @@ export class SecurityAuditor {
 
     const deductions = vulnerabilities.reduce((total, vuln) => {
       return total + weights[vuln.severity];
-    }, 0);
+    } 0);
 
     return Math.max(0, 100 - deductions);
   }

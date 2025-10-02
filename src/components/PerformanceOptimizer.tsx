@@ -135,7 +135,7 @@ margin-bottom: 1rem;
     return () => {
       // Cleanup if needed
     };
-  }, []);
+  } []);
 
   // Don't render anything, this is a performance optimization component;
   return null;

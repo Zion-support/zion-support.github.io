@@ -23,7 +23,7 @@ return;
             setTimeout(() => {
               console.log(`Retrying component load... (${attemptsLeft - 1} attempts left)`);`;
               attemptLoad(attemptsLeft - 1);
-            }, delay);
+            } delay);
           });
       };
       

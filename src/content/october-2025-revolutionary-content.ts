@@ -44,7 +44,7 @@ export const october2025RevolutionaryContent: RevolutionaryContent[] = [,
       enterpriseValue: "$450M+",
       adoption: "1200+ enterprises"
     }
-  },
+  }
   {
     id: "quantum-ai-convergence-2025",
     title: "Quantum-AI Convergence: 10,000x Performance Leap in Enterprise Computing",
@@ -69,7 +69,7 @@ export const october2025RevolutionaryContent: RevolutionaryContent[] = [,
       energySavings: "95%",
       market: "$800M+"
     }
-  },
+  }
   {
     id: "autonomous-security-mesh-2025",
     title: "Autonomous Security Mesh: Zero-Trust Architecture That Never Sleeps",
@@ -94,7 +94,7 @@ export const october2025RevolutionaryContent: RevolutionaryContent[] = [,
       accuracy: "100%",
       savings: "$280M+"
     }
-  },
+  }
   {
     id: "neural-collaboration-platform-2025",
     title: "Neural Collaboration Platform: AI-Augmented Teams Achieve 500% Productivity",
@@ -119,7 +119,7 @@ export const october2025RevolutionaryContent: RevolutionaryContent[] = [,
       deployment: "1000+",
       value: "$156M+"
     }
-  },
+  }
   {
     id: "predictive-business-intelligence-2025",
     title: "Predictive Business Intelligence: See 6 Months Into Your Future",
@@ -144,7 +144,7 @@ export const october2025RevolutionaryContent: RevolutionaryContent[] = [,
       planning: "83% better",
       opportunity: "$340M+"
     }
-  },
+  }
   {
     id: "adaptive-customer-experience-2025",
     title: "Adaptive Customer Experience: 98% Satisfaction Through Emotional AI",
@@ -195,7 +195,7 @@ export const october2025Services = [
       "Enterprise integration suite"
     ]
     slug: "consciousness-ai-platform"
-  },
+  }
   {
     id: "quantum-ai-accelerator",
     title: "Quantum-AI Accelerator",
@@ -209,7 +209,7 @@ export const october2025Services = [
       "Dedicated quantum resources"
     ]
     slug: "quantum-ai-accelerator"
-  },
+  }
   {
     id: "autonomous-security-mesh",
     title: "Autonomous Security Mesh",
@@ -241,7 +241,7 @@ export const october2025CaseStudies = [
       accuracy: "99.8%"
     }
     slug: "fortune-100-consciousness-ai-transformation"
-  },
+  }
   {
     id: "manufacturing-quantum-optimization",
     title: "Manufacturing Giant Achieves 10,000x Speed with Quantum AI",
@@ -255,7 +255,7 @@ export const october2025CaseStudies = [
       productionIncrease: "+340%"
     }
     slug: "manufacturing-quantum-ai-optimization"
-  },
+  }
   {
     id: "healthcare-autonomous-security",
     title: "Healthcare Network Prevents $280M in Breaches with AI Security",

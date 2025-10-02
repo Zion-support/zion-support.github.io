@@ -38,7 +38,7 @@ export const newServices2026: NewService[] = [,
     icon: "⚙️",
     featured: true,
     launchDate: "2025-10-15"
-  },
+  }
   {
     id: "ai-talent-acquisition",
     name: "AI Talent Acquisition Suite",
@@ -63,7 +63,7 @@ export const newServices2026: NewService[] = [,
     icon: "👥",
     featured: true,
     launchDate: "2025-10-15"
-  },
+  }
   {
     id: "ai-fraud-prevention",
     name: "AI Fraud Prevention System",
@@ -88,7 +88,7 @@ export const newServices2026: NewService[] = [,
     icon: "🛡️",
     featured: true,
     launchDate: "2025-10-15"
-  },
+  }
   {
     id: "ai-creative-studio",
     name: "AI Creative Studio",
@@ -113,7 +113,7 @@ export const newServices2026: NewService[] = [,
     icon: "🎨",
     featured: true,
     launchDate: "2025-10-15"
-  },
+  }
   {
     id: "ai-legal-research",
     name: "AI Legal Research Assistant",
@@ -138,7 +138,7 @@ export const newServices2026: NewService[] = [,
     icon: "⚖️",
     featured: true,
     launchDate: "2025-10-15"
-  },
+  }
   {
     id: "ai-customer-sentiment-analysis",
     name: "AI Customer Sentiment Analysis",
@@ -163,7 +163,7 @@ export const newServices2026: NewService[] = [,
     icon: "💬",
     featured: true,
     launchDate: "2025-09-30"
-  },
+  }
   {
     id: "ai-supply-chain-visibility",
     name: "AI Supply Chain Visibility Platform",
@@ -188,7 +188,7 @@ export const newServices2026: NewService[] = [,
     icon: "📦",
     featured: true,
     launchDate: "2025-09-30"
-  },
+  }
   {
     id: "ai-code-quality-assistant",
     name: "AI Code Quality Assistant",
@@ -242,7 +242,7 @@ newServices2026.unshift(
     icon: "🛡️",
     featured: true,
     launchDate: "2025-10-03"
-  },
+  }
   {
     id: "risk-controlled-autonomy-implementation",
     name: "Risk‑Controlled Autonomy Implementation",
@@ -325,7 +325,7 @@ newServices2026.push(
     icon: "🏗️",
     featured: true,
     launchDate: "2026-01-15"
-  },
+  }
   {
     id: "quantum-ai-acceleration-service",
     name: "Quantum AI Acceleration Service",
@@ -350,7 +350,7 @@ newServices2026.push(
     icon: "⚛️",
     featured: true,
     launchDate: "2026-01-15"
-  },
+  }
   {
     id: "ai-multimodal-content-studio",
     name: "AI Multimodal Content Studio",
@@ -375,7 +375,7 @@ newServices2026.push(
     icon: "🎭",
     featured: true,
     launchDate: "2026-01-15"
-  },
+  }
   {
     id: "ai-autonomous-business-intelligence",
     name: "AI Autonomous Business Intelligence",
@@ -400,7 +400,7 @@ newServices2026.push(
     icon: "📊",
     featured: true,
     launchDate: "2026-01-15"
-  },
+  }
   {
     id: "ai-neural-architecture-optimization",
     name: "AI Neural Architecture Optimization",

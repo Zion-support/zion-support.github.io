@@ -31,7 +31,7 @@ export const octoberNewBreakthroughContent = [
     }
     cta: "Read Full Guide",
     value: "$847M Value Created"
-  },
+  }
   {
     id: "real-time-ai-powered-business-intelligence-transformation",
     title: "Real-Time AI Business Intelligence: From Hours to Milliseconds",
@@ -61,7 +61,7 @@ export const octoberNewBreakthroughContent = [
     }
     cta: "Explore Solution",
     value: "$627M Impact"
-  },
+  }
   {
     id: "fortune-100-retailer-real-time-intelligence-success",
     title: "Fortune 100 Retailer: $627M Value Through Real-Time AI Intelligence",
@@ -120,7 +120,7 @@ export const getOctober2025BreakthroughStats = () => {
   const totalValue = octoberNewBreakthroughContent.reduce((sum, item) => {
     const value = parseFloat(item.metrics.valueCreated?.replace(/[$M]/g, '') || item.metrics.totalValue?.replace(/[$M]/g, '') || '0');
     return sum + value;
-  }, 0);
+  } 0);
 
   return {
     totalArticles: octoberNewBreakthroughContent.length,,

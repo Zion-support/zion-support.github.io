@@ -141,9 +141,9 @@ this.observeLayoutShifts();
    */
   private getRating(metric: string, value: number): 'good' | 'needs-improvement' | 'poor' {',
     const thresholds: Record<string, { good: number; poor: number }> = {
-      lcp: { good: 2500, poor: 4000 },
-      fid: { good: 100, poor: 300 },
-      cls: { good: 0.1, poor: 0.25 },
+      lcp: { good: 2500, poor: 4000 }
+      fid: { good: 100, poor: 300 }
+      cls: { good: 0.1, poor: 0.25 }
       longTask: { good: 50, poor: 100 }
     };
 

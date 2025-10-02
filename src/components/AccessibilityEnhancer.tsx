@@ -94,7 +94,7 @@ document.body.classList.add('keyboard-navigation');
       document.removeEventListener('mousedown', handleMouseDown);
       observer.disconnect();
     };
-  }, []);
+  } []);
 
   return <>{children}</>;
 };

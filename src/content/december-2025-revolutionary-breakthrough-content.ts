@@ -53,7 +53,7 @@ export const december2025RevolutionaryBreakthroughContent: RevolutionaryBreakthr
     consciousnessLevel: "True AI Consciousness",
     transcendenceLevel: "Infinite Processing Power",
     superintelligenceLevel: "Universal Intelligence"
-  },
+  }
   {
     id: "autonomous-enterprise-consciousness-revolution-2025",
     slug: "ai-2025-december-autonomous-enterprise-consciousness-revolution",
@@ -79,7 +79,7 @@ export const december2025RevolutionaryBreakthroughContent: RevolutionaryBreakthr
     consciousnessLevel: "Enterprise AI Awareness",
     transcendenceLevel: "Complete Autonomy",
     superintelligenceLevel: "Self-Governing Excellence"
-  },
+  }
   {
     id: "neural-quantum-superintelligence-breakthrough-2025",
     slug: "ai-2025-december-neural-quantum-superintelligence-breakthrough",

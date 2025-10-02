@@ -155,7 +155,7 @@ white-space: normal;
       // Cleanup
       document.head.removeChild(style);
     };
-  }, []);
+  } []);
 
   // Default structured data for organization
   const defaultStructuredData = {
