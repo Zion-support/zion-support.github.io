@@ -135,31 +135,16 @@ const Home = () => {
           <EnhancedPromotionalBanner
             key={banner.id}
             banner={banner}
-            className="border-b border-white/10"
           />
         ))}
         
         <NewContentAnnouncement />
         <LatestContentBanner 
-          className="border-b border-white/10" 
           variant="info"
           autoRotate
           rotationInterval={7000}
         />
         <NewContentPromoBanner 
-          className="border-b border-white/10" 
-          variant="premium" 
-          title="New: Scorecards v4 + Zero‑PII Insights + Quality Tiers v2"
-          description="Ship faster with KPI‑linked scorecards, private <100ms analytics, and predictable GenAI costs."
-          ctaText="Explore new content"
-          ctaLink="/blog"
-          featuredItems={[
-            { title: "AI Executive Playbook 2027", category: "AI Strategy", link: "/blog/ai-executive-playbook-2027" },
-            { title: "AI 2027 Cost Optimization Playbook", category: "AI Operations", link: "/blog/ai-2027-cost-optimization-playbook" },
-            { title: "Edge 2026: Private Feature Flags", category: "Architecture", link: "/blog/edge-2026-private-feature-flags" },
-            { title: "AI Operational Resilience 2026", category: "AI Strategy", link: "/blog/ai-operational-resilience-2026" },
-            { title: "Edge Consentless Analytics 2026", category: "Analytics", link: "/blog/edge-consentless-analytics-2026" }
-          ]}
         />
         {/* Fresh content banner promoting brand-new articles */}
         <div className="container mx-auto px-6 mt-6">
