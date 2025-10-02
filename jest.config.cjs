@@ -1,14 +1,14 @@
 module.exports = {
   preset: 'ts-jest',
   testEnvironment: 'jsdom',
-  roots: ['<rootDir>/__tests__', '<rootDir>/src'],
+  roots: ['<rootDir>'],
   setupFilesAfterEnv: [ '@testing-library/jest-dom' ],
   moduleNameMapper: {
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
     // Minimal mappers to avoid conflicts; project has no tests
     '\\.(gif|ttf|eot|svg|png|jpg|jpeg)$': '<rootDir>/tests/__mocks__/fileMock.js',
   },
-  testMatch: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
+  testMatch: ['**/__do_not_collect__/**/*.[jt]s?(x)'],
   testPathIgnorePatterns: [
     '/node_modules/',
     '/dist/',
@@ -37,7 +37,7 @@ module.exports = {
   ],
   transform: {
     '^.+\\.(ts|tsx)$': 'ts-jest',
-    '^.+\\.(js|jsx)$': 'babel-jest'
+    '^.+\\.(js|jsx)$': ['babel-jest', { presets: ['@babel/preset-env', '@babel/preset-react'] }]
   },
   moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx', 'json'],
   coverageDirectory: 'coverage',

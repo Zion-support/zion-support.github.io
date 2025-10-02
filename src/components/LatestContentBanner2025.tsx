@@ -194,7 +194,7 @@ const LatestContentBanner2025: React.FC = () => {
                     <Zap className="w-4 h-4 text-cyan-400" />
                     {article.readTime}
                   </span>
-                  <span>{new Date(article.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
+                  <span>{article.date ? new Date(article.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) : ''}</span>
                 </div>
 
                 {/* CTA Button */}
