@@ -136,7 +136,7 @@ const AIAgentOrchestrationEnterprise2025 = () => {
                 <div className="bg-slate-800/50 p-6 rounded-lg border border-slate-700">
                   <h3 className="text-xl font-semibold text-white mb-3">3. Security & Governance</h3>
                   <p className="text-gray-300 mb-4">
-                    Autonomous agents with API access require robust security boundaries, audit trails,
+                    Autonomous agents with API access require robust security boundaries, audit trails
                     and compliance controls to prevent unauthorized actions.
                   </p>
                   <div className="bg-slate-900/50 p-4 rounded border border-slate-600">
@@ -175,7 +175,7 @@ const AIAgentOrchestrationEnterprise2025 = () => {
                     <div>
                       <h4 className="text-lg font-semibold text-white mb-2">Orchestrator Layer</h4>
                       <p className="text-gray-400">
-                        Master coordinators that decompose complex tasks, assign to specialist agents,
+                        Master coordinators that decompose complex tasks, assign to specialist agents
                         and aggregate results. Built with LangGraph or custom state machines.
                       </p>
                     </div>

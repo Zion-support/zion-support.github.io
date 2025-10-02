@@ -29,27 +29,25 @@ export function generateBlogPostSchema(post: BlogPostSEO): void {
     image: post.image || `${baseUrl}/og-image.png`,
     datePublished: post.date,
     dateModified: post.date,
-    author: {
+    author: {,
       '@type': 'Organization',
       name: post.author,
-      url: baseUrl,
-    },
-    publisher: {
+      url: baseUrl
+    }
+    publisher: {,
       '@type': 'Organization',
       name: 'Zion Tech Group',
       url: baseUrl,
-      logo: {
+      logo: {,
         '@type': 'ImageObject',
-        url: `${baseUrl}/logo.png`,
-      },
-    },
-    mainEntityOfPage: {
+        url: `${baseUrl}/logo.png`}
+    }
+    mainEntityOfPage: {,
       '@type': 'WebPage',
-      '@id': `${baseUrl}/blog/${post.slug}`,
-    },
+      '@id': `${baseUrl}/blog/${post.slug}`},
     keywords: post.keywords,
     articleSection: post.category,
-    timeRequired: post.readTime,
+    timeRequired: post.readTime
   };
 }
 
@@ -69,7 +67,7 @@ export function generateOpenGraphTags(post: BlogPostSEO): void {
     'article:published_time': post.date,
     'article:author': post.author,
     'article:section': post.category,
-    'article:tag': post.keywords,
+    'article:tag': post.keywords
   };
 }
 
@@ -85,7 +83,7 @@ export function generateTwitterCardTags(post: BlogPostSEO): void {
     'twitter:title': post.title,
     'twitter:description': post.description,
     'twitter:image': post.image || `${baseUrl}/og-image.png`,
-    'twitter:creator': '@ZionTechGroup',
+    'twitter:creator': '@ZionTechGroup'
   };
 }
 
@@ -97,13 +95,13 @@ export function generateCompleteSEO(post: BlogPostSEO): void {
     schema: generateBlogPostSchema(post),
     openGraph: generateOpenGraphTags(post),
     twitterCard: generateTwitterCardTags(post),
-    meta: {
+    meta: {,
       title: post.title,
       description: post.description,
       keywords: post.keywords,
       canonical: `https://ziontechgroup.com/blog/${post.slug}`,
-      robots: 'index, follow',
-    },
+      robots: 'index, follow'
+    }
   };
 }
 
@@ -119,7 +117,7 @@ export const breakthroughBlogPosts: BlogPostSEO[] = [
     author: 'Zion Tech Group',
     category: 'AI Innovation',
     slug: 'ai-2025-oct-01-neural-architecture-evolution-breakthrough',
-    readTime: '25 min',
+    readTime: '25 min'
   },
   {
     title: 'Quantum-Inspired Optimization 2025 — Enterprise Problem Solving Revolution',
@@ -129,7 +127,7 @@ export const breakthroughBlogPosts: BlogPostSEO[] = [
     author: 'Zion Tech Group',
     category: 'Quantum Computing',
     slug: 'ai-2025-oct-01-quantum-inspired-optimization-enterprise',
-    readTime: '22 min',
+    readTime: '22 min'
   },
   {
     title: 'Intelligent Automation Orchestration 2025 — Enterprise Process Revolution',
@@ -139,6 +137,6 @@ export const breakthroughBlogPosts: BlogPostSEO[] = [
     author: 'Zion Tech Group',
     category: 'Enterprise Automation',
     slug: 'ai-2025-oct-01-intelligent-automation-orchestration-platform',
-    readTime: '28 min',
-  },
+    readTime: '28 min'
+  }
 ];

@@ -1,6 +1,4 @@
-import {
-BannerConfig
-} from '../components/UnifiedBannerSystem';
+import { BannerConfig } from '../components/UnifiedBannerSystem';
 
 // Centralized banner configuration management
 export const bannerConfigurations: BannerConfig[] = [
@@ -98,12 +96,12 @@ export const bannerConfigurations: BannerConfig[] = [
 
 // Banner category filters
 export const bannerCategories = [
-  { id: 'all', name: 'All Categories', count: bannerConfigurations.length },
-  { id: 'ai', name: 'AI & Machine Learning', count: bannerConfigurations.filter(b => b.category === 'ai').length },
-  { id: 'quantum', name: 'Quantum Computing', count: bannerConfigurations.filter(b => b.category === 'quantum').length },
-  { id: 'automation', name: 'Automation', count: bannerConfigurations.filter(b => b.category === 'automation').length },
-  { id: 'cognitive', name: 'Cognitive Systems', count: bannerConfigurations.filter(b => b.category === 'cognitive').length },
-  { id: 'edge', name: 'Edge Computing', count: bannerConfigurations.filter(b => b.category === 'edge').length },
+  { id: 'all', name: 'All Categories', count: bannerConfigurations.length }
+  { id: 'ai', name: 'AI & Machine Learning', count: bannerConfigurations.filter(b => b.category === 'ai').length }
+  { id: 'quantum', name: 'Quantum Computing', count: bannerConfigurations.filter(b => b.category === 'quantum').length }
+  { id: 'automation', name: 'Automation', count: bannerConfigurations.filter(b => b.category === 'automation').length }
+  { id: 'cognitive', name: 'Cognitive Systems', count: bannerConfigurations.filter(b => b.category === 'cognitive').length }
+  { id: 'edge', name: 'Edge Computing', count: bannerConfigurations.filter(b => b.category === 'edge').length }
   { id: 'security', name: 'Security', count: bannerConfigurations.filter(b => b.category === 'security').length }
 ];
 

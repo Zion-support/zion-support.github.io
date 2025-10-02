@@ -25,9 +25,9 @@ const AutonomousEnterpriseMesh2026: React.FC = () => {
   ];
 
   const stats = [
-    { value: "99.7%", label: "Operational Efficiency", color: "text-green-400" },
-    { value: "Zero", label: "Human Intervention", color: "text-blue-400" },
-    { value: "89%", label: "Cost Reduction", color: "text-purple-400" },
+    { value: "99.7%", label: "Operational Efficiency", color: "text-green-400" }
+    { value: "Zero", label: "Human Intervention", color: "text-blue-400" }
+    { value: "89%", label: "Cost Reduction", color: "text-purple-400" }
     { value: "1000x", label: "Scalability", color: "text-orange-400" }
   ];
 
@@ -132,7 +132,7 @@ const AutonomousEnterpriseMesh2026: React.FC = () => {
             <p className="text-gray-300 mb-8 leading-relaxed">
               This revolutionary technology enables businesses to achieve 99.7% operational efficiency through AI systems that 
               autonomously form optimal network topologies, share collective intelligence, and continuously optimize business 
-              processes without any human intervention. The results speak for themselves: 89% cost reduction, 1000x scalability, 
+              processes without any human intervention. The results speak for themselves: 89% cost reduction, 1000x scalability
               and zero human error operations.
             </p>
 
@@ -177,7 +177,7 @@ const AutonomousEnterpriseMesh2026: React.FC = () => {
 
             <p className="text-gray-300 mb-8 leading-relaxed">
               The era of human-dependent business operations is ending. The future belongs to self-organizing, intelligent systems 
-              that can adapt, learn, and optimize in real-time. The Autonomous Enterprise Mesh is not just the future—it's the present, 
+              that can adapt, learn, and optimize in real-time. The Autonomous Enterprise Mesh is not just the future—it's the present
               and it's transforming businesses today.
             </p>
           </motion.div>

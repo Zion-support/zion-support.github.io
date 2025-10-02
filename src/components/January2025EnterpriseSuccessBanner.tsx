@@ -24,7 +24,7 @@ const January2025EnterpriseSuccessBanner: React.FC = () => {
           </h2>
           
           <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-12">
-            Discover how Fortune 500 companies are achieving unprecedented success with AI-powered transformations, 
+            Discover how Fortune 500 companies are achieving unprecedented success with AI-powered transformations
             generating billions in value and revolutionizing their industries.
           </p>
         </div>
@@ -189,7 +189,7 @@ const January2025EnterpriseSuccessBanner: React.FC = () => {
           </div>
           
           <p className="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
-            Join 500+ enterprise clients who have already transformed their operations with AI, 
+            Join 500+ enterprise clients who have already transformed their operations with AI
             generating billions in value and achieving unprecedented efficiency.
           </p>
           

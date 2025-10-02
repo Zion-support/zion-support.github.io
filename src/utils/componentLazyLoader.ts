@@ -25,8 +25,8 @@ export function createLazyComponent<T extends ComponentType<any>>(
     return (props: any) => {
       const FallbackComponent = fallback;
       return React.createElement(
-        ErrorBoundary,
-        { fallback: React.createElement(FallbackComponent) },
+        ErrorBoundary
+        { fallback: React.createElement(FallbackComponent) }
         React.createElement(LazyComponent, props)
       );
     };
@@ -85,7 +85,7 @@ export function createVisibilityLazyComponent<T extends ComponentType<any>>(
         // This will be triggered when component mounts
         setTimeout(() => importFn().then(resolve), 100);
       } else {
-// Fallback: load immediately,
+// Fallback: load immediately
 importFn().then(resolve);
 }
     });
@@ -110,10 +110,10 @@ export function batchPreload(
  * Error boundary for lazy-loaded components
  */
 class ErrorBoundary extends React.Component<
-  { children: React.ReactNode; fallback?: ComponentType<any> },
+  { children: React.ReactNode; fallback?: ComponentType<any> }
   { hasError: boolean }
 > {
-constructor(props: any) {,
+constructor(props: any) {
 super(props);
 this.state = { hasError: false
 };

@@ -20,7 +20,7 @@ export default function EnterpriseRAGSecurityV2(): React.JSX.Element {
         <p className="text-zion-slate-light mb-8">Auth-Aware, Fresh, Signed</p>
         <div className="prose prose-invert max-w-3xl">
           <p>
-            Upgrade enterprise RAG safety with auth-aware retrieval, freshness windows,
+            Upgrade enterprise RAG safety with auth-aware retrieval, freshness windows
             prompt firewalls, and signed outputs. Prevent data leaks and stale answers
             while maintaining performance guarantees.
           </p>

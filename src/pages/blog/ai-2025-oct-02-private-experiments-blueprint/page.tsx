@@ -5,7 +5,7 @@ const PrivateExperimentsBlueprint2025: React.FC = () => {
     <article className="prose prose-invert max-w-3xl mx-auto py-10">
       <h1>Private Experiments Blueprint: Zero‑PII Testing at the Edge</h1>
       <p>
-        Learn how to run high‑velocity experiments without centralizing PII using edge‑signed configs,
+        Learn how to run high‑velocity experiments without centralizing PII using edge‑signed configs
         scoped anonymous identifiers, and on‑device attribution. Achieve <strong>&lt;100ms</strong> decisioning
         with production‑grade guardrails.
       </p>

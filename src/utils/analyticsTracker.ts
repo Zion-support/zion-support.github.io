@@ -57,7 +57,7 @@ export const trackEvent = (event: Partial<AnalyticsEvent>): void => {
     timestamp: new Date().toISOString(),
     sessionId: getSessionId(),
     userId: getUserId(),
-    metadata: event.metadata,
+    metadata: event.metadata
   };
   
   // Send to Google Analytics if available
@@ -66,7 +66,7 @@ export const trackEvent = (event: Partial<AnalyticsEvent>): void => {
       event_category: fullEvent.category,
       event_label: fullEvent.label,
       value: fullEvent.value,
-      ...fullEvent.metadata,
+      ...fullEvent.metadata
     });
   }
   
@@ -85,14 +85,14 @@ export const trackPageView = (path: string, title?: string): void => {
     path,
     title: title || document.title,
     referrer: document.referrer,
-    timestamp: new Date().toISOString(),
+    timestamp: new Date().toISOString()
   };
   
   // Google Analytics
   if (typeof window !== 'undefined' && (window as any).gtag) {
     (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
       page_path: path,
-      page_title: event.title,
+      page_title: event.title
     });
   }
   
@@ -101,7 +101,7 @@ export const trackPageView = (path: string, title?: string): void => {
     category: 'page_view',
     action: 'view',
     label: path,
-    metadata: event,
+    metadata: event
   });
 };
 
@@ -117,10 +117,10 @@ export const trackBannerInteraction = (
     category: 'banner',
     action: action,
     label: bannerId,
-    metadata: {
-      bannerId,
-      ...metadata,
-    },
+    metadata: {,
+      bannerId
+      ...metadata
+    }
   });
 };
 
@@ -132,10 +132,10 @@ export const trackConversion = (conversion: ConversionEvent): void => {
     category: 'conversion',
     action: conversion.type,
     value: conversion.value,
-    metadata: {
+    metadata: {,
       source: conversion.source,
-      campaign: conversion.campaign,
-    },
+      campaign: conversion.campaign
+    }
   });
   
   // Send to conversion API if available
@@ -144,7 +144,7 @@ export const trackConversion = (conversion: ConversionEvent): void => {
       send_to: 'AW-CONVERSION_ID',
       value: conversion.value,
       currency: 'USD',
-      transaction_id: generateTransactionId(),
+      transaction_id: generateTransactionId()
     });
   }
 };
@@ -161,7 +161,7 @@ export const trackEngagement = (
     category: 'engagement',
     action: type,
     value,
-    metadata,
+    metadata
   });
 };
 
@@ -170,25 +170,25 @@ export const trackEngagement = (
  */
 export const trackError = (
   error: Error,
-  context?: string,
+  context?: string
   severity: 'low' | 'medium' | 'high' | 'critical' = 'medium'
 ): void => {
   trackEvent({
     category: 'error',
     action: 'exception',
     label: error.message,
-    metadata: {
+    metadata: {,
       stack: error.stack,
       context,
       severity,
-      userAgent: navigator.userAgent,
-    },
+      userAgent: navigator.userAgent
+    }
   });
   
   // Send to error tracking service
   if (typeof window !== 'undefined' && (window as any).Sentry) {
     (window as any).Sentry.captureException(error, {
-      contexts: { custom: { context, severity } },
+      contexts: { custom: { context, severity } }
     });
   }
 };
@@ -205,10 +205,10 @@ export const trackFormSubmission = (
     category: 'form',
     action: success ? 'submit_success' : 'submit_error',
     label: formName,
-    metadata: {
+    metadata: {,
       formName,
-      errorMessage,
-    },
+      errorMessage
+    }
   });
 };
 
@@ -221,10 +221,10 @@ export const trackSearch = (query: string, results: number): void => {
     action: 'query',
     label: query,
     value: results,
-    metadata: {
+    metadata: {,
       query,
-      resultsCount: results,
-    },
+      resultsCount: results
+    }
   });
 };
 
@@ -236,10 +236,10 @@ export const trackSocialShare = (platform: string, url: string): void => {
     category: 'social',
     action: 'share',
     label: platform,
-    metadata: {
+    metadata: {,
       platform,
-      url,
-    },
+      url
+    }
   });
 };
 
@@ -251,10 +251,10 @@ export const trackDownload = (fileName: string, fileType: string): void => {
     category: 'download',
     action: 'file',
     label: fileName,
-    metadata: {
+    metadata: {,
       fileName,
-      fileType,
-    },
+      fileType
+    }
   });
 };
 
@@ -271,10 +271,10 @@ export const trackVideo = (
     action,
     label: videoId,
     value: progress,
-    metadata: {
+    metadata: {,
       videoId,
-      progress,
-    },
+      progress
+    }
   });
 };
 
@@ -319,10 +319,10 @@ const setupAutoTracking = (): void => {
         category: 'outbound',
         action: 'click',
         label: link.href,
-        metadata: {
+        metadata: {,
           text: link.textContent,
-          url: link.href,
-        },
+          url: link.href
+        }
       });
     }
   });
@@ -339,7 +339,7 @@ const sendToAnalytics = async (event: AnalyticsEvent): Promise<void> => {
     await fetch('/api/analytics', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(event),
+      body: JSON.stringify(event)
     });
   } catch (error) {
     console.warn('Failed to send analytics:', error);
@@ -353,7 +353,7 @@ const storeEventLocally = (event: AnalyticsEvent): void => {
 try {
 const key = 'analytics_events';
 const stored = localStorage.getItem(key);
-const events: AnalyticsEvent[] = stored ? JSON.parse(stored) : [];,
+const events: AnalyticsEvent[] = stored ? JSON.parse(stored) : [];
 events.push(event);
 // Keep only last 100 events
 if (events.length > 100) {
@@ -421,8 +421,8 @@ const generateTransactionId = (): string => {
  * Get analytics summary
  */
 export const getAnalyticsSummary = (): {
-events: AnalyticsEvent[];,
-sessionId: string;,
+events: AnalyticsEvent[];
+sessionId: string;
 userId: string;
 } => {
   const stored = localStorage.getItem('analytics_events');
@@ -431,7 +431,7 @@ userId: string;
   return {
     events,
     sessionId: getSessionId(),
-    userId: getUserId() || '',
+    userId: getUserId() || ''
   };
 };
 
@@ -458,5 +458,5 @@ export default {
   trackDownload,
   trackVideo,
   getAnalyticsSummary,
-  clearAnalytics,
+  clearAnalytics
 };

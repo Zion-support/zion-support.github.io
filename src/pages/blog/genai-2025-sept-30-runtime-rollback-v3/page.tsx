@@ -10,7 +10,7 @@ export default function Page(): void {
       </p>
       <div className="prose max-w-none">
         <p>
-          This is a short placeholder article. Expand with runbooks for rollback triggers, evaluation gates,
+          This is a short placeholder article. Expand with runbooks for rollback triggers, evaluation gates
           and incident budgets that keep quality stable while iterating fast.
         </p>
       </div>

@@ -32,7 +32,7 @@ export const sept30BreakthroughArticles: BreakthroughArticle[] = [
     featured: true,
     readTime: "22 min read",
     impact: "Transform business operations with instant AI-powered decisions",
-    metrics: {
+    metrics: {,
       improvement: "10,000x faster decisions",
       roi: "400% increase in revenue",
       timeframe: "Deploy in 4 weeks"
@@ -51,7 +51,7 @@ export const sept30BreakthroughArticles: BreakthroughArticle[] = [
     featured: true,
     readTime: "18 min read",
     impact: "10x faster software development with AI-generated code",
-    metrics: {
+    metrics: {,
       improvement: "90% reduction in dev time",
       roi: "500% productivity increase",
       timeframe: "Immediate adoption"
@@ -70,7 +70,7 @@ export const sept30BreakthroughArticles: BreakthroughArticle[] = [
     featured: true,
     readTime: "20 min read",
     impact: "Breakthrough understanding across all content types",
-    metrics: {
+    metrics: {,
       improvement: "98% accuracy across modalities",
       roi: "250% better customer insights",
       timeframe: "6 weeks to production"
@@ -89,7 +89,7 @@ export const sept30BreakthroughArticles: BreakthroughArticle[] = [
     featured: true,
     readTime: "16 min read",
     impact: "Revolutionary supply chain efficiency and cost savings",
-    metrics: {
+    metrics: {,
       improvement: "85% inventory reduction",
       roi: "300% cost savings",
       timeframe: "8 weeks implementation"
@@ -108,7 +108,7 @@ export const sept30BreakthroughArticles: BreakthroughArticle[] = [
     featured: true,
     readTime: "19 min read",
     impact: "Transform customer interactions with truly intelligent AI",
-    metrics: {
+    metrics: {,
       improvement: "92% customer satisfaction",
       roi: "75% cost reduction",
       timeframe: "4 weeks to deploy"
@@ -127,7 +127,7 @@ export const sept30BreakthroughArticles: BreakthroughArticle[] = [
     featured: true,
     readTime: "21 min read",
     impact: "Impenetrable AI-powered security infrastructure",
-    metrics: {
+    metrics: {,
       improvement: "99.99% threat detection",
       roi: "80% reduction in breaches",
       timeframe: "10 weeks deployment"
@@ -146,7 +146,7 @@ export const sept30BreakthroughArticles: BreakthroughArticle[] = [
     featured: true,
     readTime: "17 min read",
     impact: "Enterprise AI with guaranteed data privacy",
-    metrics: {
+    metrics: {,
       improvement: "100% privacy compliance",
       roi: "Zero data breach risk",
       timeframe: "6 weeks implementation"
@@ -165,7 +165,7 @@ export const sept30BreakthroughArticles: BreakthroughArticle[] = [
     featured: true,
     readTime: "20 min read",
     impact: "Transform financial decision-making with AI precision",
-    metrics: {
+    metrics: {,
       improvement: "95% prediction accuracy",
       roi: "350% returns improvement",
       timeframe: "5 weeks to trading"

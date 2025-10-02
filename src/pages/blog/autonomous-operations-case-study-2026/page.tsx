@@ -21,7 +21,7 @@ export default function AutonomousOperationsCaseStudy2026(): React.JSX.Element {
         <p className="text-zion-slate-light mb-8">98% automation rates realized</p>
         <div className="prose prose-invert max-w-3xl">
           <p>
-            This case study details how a global enterprise deployed agentic workflows with budgeted actions,
+            This case study details how a global enterprise deployed agentic workflows with budgeted actions
             KPI‑linked canaries, and one‑click rollback to safely reach 98% automation.
           </p>
           <p>

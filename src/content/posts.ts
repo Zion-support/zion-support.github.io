@@ -886,21 +886,21 @@ export const posts: BlogPost[] = [
     slug: "genai-platform-blueprint-2025",
     title: "GenAI Platform Blueprint: Shipping Weekly With Guardrails",
     description:
-      "Reference architecture for prompts, tools, evals, and policy tests that let teams move fast safely.",
+      "Reference architecture for prompts, tools, evals, and policy tests that let teams move fast safely."
     category: "GenAI",
     publishedAt: "2025-09-29",
     featured: true,
-    readTime: "8 min read",
+    readTime: "8 min read"
   },
   {
     slug: "cost-optimized-vector-search",
     title: "Cost‑Optimized Vector Search: Hybrid, Caching, and Freshness",
     description:
-      "Design decisions to cut retrieval cost 40%+ while improving answer quality with hybrid search and freshness windows.",
+      "Design decisions to cut retrieval cost 40%+ while improving answer quality with hybrid search and freshness windows."
     category: "Architecture",
     publishedAt: "2025-09-29",
     featured: false,
-    readTime: "6 min read",
+    readTime: "6 min read"
   },
   {
     slug: "ai-risk-register-outcomes-2025",
@@ -927,7 +927,7 @@ export const posts: BlogPost[] = [
     category: "GenAI",
     publishedAt: "2025-09-29",
     featured: true,
-    readTime: "7 min read",
+    readTime: "7 min read"
   },
   {
     slug: "llm-policy-testing-2025",
@@ -941,102 +941,102 @@ export const posts: BlogPost[] = [
     slug: "ai-roadmaps",
     title: "Designing High-Impact AI Roadmaps",
     description:
-      "A practical framework to align AI investments with measurable business outcomes and reduce time-to-value.",
+      "A practical framework to align AI investments with measurable business outcomes and reduce time-to-value."
     category: "AI Strategy",
     publishedAt: "2025-09-15",
     featured: false,
-    readTime: "6 min read",
+    readTime: "6 min read"
   },
   {
     slug: "cloud-finops-tactics",
     title: "Cutting Cloud Spend Without Slowing Teams",
     description:
-      "Proven tactics for right-sizing, demand shaping, and engineering-friendly guardrails that keep velocity high.",
+      "Proven tactics for right-sizing, demand shaping, and engineering-friendly guardrails that keep velocity high."
     category: "Cloud FinOps",
     publishedAt: "2025-09-22",
     featured: false,
-    readTime: "6 min read",
+    readTime: "6 min read"
   },
   {
     slug: "zero-trust-for-saas",
     title: "Zero-Trust in Practice for SaaS",
     description:
-      "A pragmatic guide to rolling out least-privilege, continuous verification, and blast radius controls.",
+      "A pragmatic guide to rolling out least-privilege, continuous verification, and blast radius controls."
     category: "Security",
     publishedAt: "2025-09-25",
     featured: false,
-    readTime: "7 min read",
+    readTime: "7 min read"
   },
   {
     slug: "generative-ai-enterprise",
     title: "Generative AI in Enterprise: Real-World Success Stories",
     description:
-      "Case studies from Fortune 500 companies showing how GenAI is transforming customer service, content creation, and business operations.",
+      "Case studies from Fortune 500 companies showing how GenAI is transforming customer service, content creation, and business operations."
     category: "AI Innovation",
     publishedAt: "2025-01-20",
     featured: false,
-    readTime: "9 min read",
+    readTime: "9 min read"
   },
   {
     slug: "cloud-migration-best-practices",
     title: "Cloud Migration Best Practices: Lessons from 100+ Projects",
     description:
-      "Essential strategies for successful cloud migration, including risk mitigation, cost optimization, and timeline management.",
+      "Essential strategies for successful cloud migration, including risk mitigation, cost optimization, and timeline management."
     category: "Cloud Strategy",
     publishedAt: "2025-01-18",
     featured: false,
-    readTime: "7 min read",
+    readTime: "7 min read"
   },
   {
     slug: "cybersecurity-2025-trends",
     title: "Cybersecurity Trends 2025: What Every CISO Needs to Know",
     description:
-      "Emerging threats, new defense strategies, and the latest security technologies shaping the cybersecurity landscape.",
+      "Emerging threats, new defense strategies, and the latest security technologies shaping the cybersecurity landscape."
     category: "Cybersecurity",
     publishedAt: "2025-01-15",
     featured: false,
-    readTime: "8 min read",
+    readTime: "8 min read"
   },
   {
     slug: "data-analytics-automation",
     title: "Automating Data Analytics: From Insight to Action",
     description:
-      "How AI-powered analytics platforms are revolutionizing business intelligence and enabling real-time decision making.",
+      "How AI-powered analytics platforms are revolutionizing business intelligence and enabling real-time decision making."
     category: "Data Science",
     publishedAt: "2025-01-12",
     featured: false,
-    readTime: "8 min read",
+    readTime: "8 min read"
   },
   {
     slug: "devops-automation-guide",
     title: "The Complete Guide to DevOps Automation",
     description:
-      "Comprehensive strategies for automating CI/CD pipelines, infrastructure management, and deployment processes.",
+      "Comprehensive strategies for automating CI/CD pipelines, infrastructure management, and deployment processes."
     category: "DevOps",
     publishedAt: "2025-01-10",
     featured: false,
-    readTime: "10 min read",
+    readTime: "10 min read"
   },
   {
     slug: "microservices-architecture",
     title: "Microservices Architecture: Design Patterns and Best Practices",
     description:
-      "Essential patterns for building scalable, maintainable microservices architectures in modern applications.",
+      "Essential patterns for building scalable, maintainable microservices architectures in modern applications."
     category: "Software Architecture",
     publishedAt: "2025-01-08",
     featured: false,
-    readTime: "9 min read",
+    readTime: "9 min read"
   },
   {
     slug: "ai-ethics-compliance",
     title: "AI Ethics and Compliance: Building Responsible AI Systems",
     description:
-      "Framework for developing AI systems that are fair, transparent, and compliant with emerging regulations.",
+      "Framework for developing AI systems that are fair, transparent, and compliant with emerging regulations."
     category: "AI Governance",
     publishedAt: "2025-01-05",
     featured: false,
-    readTime: "8 min read",
-  },
+    readTime: "8 min read"
+  }
   // removed conflicting branch entries
   {
     slug: "finops-scorecards-2025",
@@ -1055,8 +1055,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-08",
     featured: true,
     readTime: "9 min read"
-  }
-  ,
+  },
   {
     slug: "ai-runbooks-with-risk-budgets-2026",
     title: "AI Runbooks with Risk Budgets: Safe Automation That Ships",
@@ -1074,8 +1073,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-12",
     featured: true,
     readTime: "8 min read"
-  }
-  ,
+  },
   {
     slug: "agentic-workflows-blueprint-2026",
     title: "Agentic Workflows Blueprint 2026: Tools, Traces, and Safety Budgets",
@@ -1093,8 +1091,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-10",
     featured: false,
     readTime: "7 min read"
-  }
-  ,
+  },
   {
     slug: "on-device-agents-2026",
     title: "On‑Device Agents 2026: Private Tools That Work Offline",
@@ -1148,8 +1145,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-11",
     featured: false,
     readTime: "8 min read"
-  }
-  ,
+  },
   {
     slug: "ai-governance-scorecards-quickstart-2025",
     title: "AI Governance Scorecards Quickstart: Ship Fast, Stay Safe",
@@ -1302,8 +1298,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "14 min read"
-  }
-  ,
+  },
   {
     slug: "ai-risk-budgets-2026",
     title: "AI Risk Budgets 2026: Ship Faster With Guardrails",
@@ -1411,8 +1406,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-29",
     featured: true,
     readTime: "7 min read"
-  }
-  ,
+  },
   {
     slug: "ai-supply-chain-optimization-2025",
     title: "AI Supply Chain Optimization: 65% Faster Deliveries Under Budget",
@@ -1610,8 +1604,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "16 min read"
-  }
-  ,
+  },
   {
     slug: "privacy-first-observability-quickstart-2025",
     title: "Privacy‑First Observability Quickstart: Scoped IDs and Redaction",
@@ -1643,14 +1636,14 @@ export const posts: BlogPost[] = [
 
 // Newly added content (auto-advertised on Home via latest sort)
 posts.push(
-  { slug: "ai-operational-trust-scorecards-2026", title: "AI Operational Trust Scorecards 2026: SLIs That Matter", description: "Define SLIs tied to product KPIs, wire budgets and rollback for trustworthy automation.", category: "AI Operations", publishedAt: "2025-09-30", featured: true, readTime: "7 min read" },
-  { slug: "edge-consentless-analytics-2026", title: "Edge Analytics 2026: Consent-Safe Insights Without PII", description: "On-device aggregation, scoped IDs, and DP noise for actionable, compliant insights.", category: "Analytics", publishedAt: "2025-09-30", featured: true, readTime: "6 min read" },
-  { slug: "genai-consent-mode-edge-2026", title: "GenAI Consent Mode 2026: On-Device Signals Without PII", description: "Respect user privacy with on-device aggregation, scoped IDs, and consent-aware analytics under strict SLAs.", category: "Analytics", publishedAt: "2025-10-31", featured: true, readTime: "6 min read" },
-  { slug: "ai-operational-evals-2026", title: "Operational Evals 2026: KPIs, Canaries, and Rollbacks", description: "Wire offline suites, PR checks, and live canaries to KPIs for safe, fast delivery.", category: "AI Engineering", publishedAt: "2025-09-30", featured: true, readTime: "7 min read" },
-  { slug: "edge-ab-testing-2026", title: "Edge A/B Testing 2026: Private Experiments at <100ms", description: "Scoped IDs, on-device metrics, and DP noise to run compliant, latency-free experiments.", category: "Analytics", publishedAt: "2025-09-30", featured: true, readTime: "6 min read" },
-  { slug: "ai-data-lineage-2026", title: "AI Data Lineage 2026: End-to-End Traceability for Models", description: "Track datasets, prompts, and model versions with signed SBOMs and audit-ready provenance.", category: "MLOps", publishedAt: "2025-10-31", featured: true, readTime: "7 min read" },
-  { slug: "agent-policy-gates-blueprint-2026", title: "Agent Policy Gates 2026: Approvals, Budgets, and Safe Tools", description: "Design approval workflows, budgeted actions, and sandboxed tools to ship reliable agent releases.", category: "AI Operations", publishedAt: "2025-10-31", featured: true, readTime: "7 min read" },
-  { slug: "sovereign-rag-platforms-2026", title: "Sovereign RAG Platforms 2026: Residency, Guardrails, and Speed", description: "Region-scoped corpora, auth-aware retrieval, and signed outputs without hurting UX.", category: "GenAI", publishedAt: "2025-09-30", featured: true, readTime: "8 min read" },
+  { slug: "ai-operational-trust-scorecards-2026", title: "AI Operational Trust Scorecards 2026: SLIs That Matter", description: "Define SLIs tied to product KPIs, wire budgets and rollback for trustworthy automation.", category: "AI Operations", publishedAt: "2025-09-30", featured: true, readTime: "7 min read" }
+  { slug: "edge-consentless-analytics-2026", title: "Edge Analytics 2026: Consent-Safe Insights Without PII", description: "On-device aggregation, scoped IDs, and DP noise for actionable, compliant insights.", category: "Analytics", publishedAt: "2025-09-30", featured: true, readTime: "6 min read" }
+  { slug: "genai-consent-mode-edge-2026", title: "GenAI Consent Mode 2026: On-Device Signals Without PII", description: "Respect user privacy with on-device aggregation, scoped IDs, and consent-aware analytics under strict SLAs.", category: "Analytics", publishedAt: "2025-10-31", featured: true, readTime: "6 min read" }
+  { slug: "ai-operational-evals-2026", title: "Operational Evals 2026: KPIs, Canaries, and Rollbacks", description: "Wire offline suites, PR checks, and live canaries to KPIs for safe, fast delivery.", category: "AI Engineering", publishedAt: "2025-09-30", featured: true, readTime: "7 min read" }
+  { slug: "edge-ab-testing-2026", title: "Edge A/B Testing 2026: Private Experiments at <100ms", description: "Scoped IDs, on-device metrics, and DP noise to run compliant, latency-free experiments.", category: "Analytics", publishedAt: "2025-09-30", featured: true, readTime: "6 min read" }
+  { slug: "ai-data-lineage-2026", title: "AI Data Lineage 2026: End-to-End Traceability for Models", description: "Track datasets, prompts, and model versions with signed SBOMs and audit-ready provenance.", category: "MLOps", publishedAt: "2025-10-31", featured: true, readTime: "7 min read" }
+  { slug: "agent-policy-gates-blueprint-2026", title: "Agent Policy Gates 2026: Approvals, Budgets, and Safe Tools", description: "Design approval workflows, budgeted actions, and sandboxed tools to ship reliable agent releases.", category: "AI Operations", publishedAt: "2025-10-31", featured: true, readTime: "7 min read" }
+  { slug: "sovereign-rag-platforms-2026", title: "Sovereign RAG Platforms 2026: Residency, Guardrails, and Speed", description: "Region-scoped corpora, auth-aware retrieval, and signed outputs without hurting UX.", category: "GenAI", publishedAt: "2025-09-30", featured: true, readTime: "8 min read" }
   {
     slug: "ai-platform-value-realization-2026",
     title: "AI Platform Value Realization 2026: From Pilots to Profit",

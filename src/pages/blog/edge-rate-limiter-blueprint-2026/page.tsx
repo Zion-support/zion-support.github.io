@@ -15,11 +15,11 @@ export default function EdgeRateLimiterBlueprint2026(): React.JSX.Element {
         <div className="prose prose-invert max-w-3xl">
           <p>
             This article outlines a globally consistent token‑bucket design using consistent hashing and
-            edge KV to enforce budgets under 10ms P95. It includes fallback behavior, replay protection,
+            edge KV to enforce budgets under 10ms P95. It includes fallback behavior, replay protection
             and fairness across regions for API and GenAI tool invocations.
           </p>
           <p>
-            Highlights: KV sharded buckets, leaky bucket smoothing, multi‑writer safeguards, deterministic
+            Highlights: KV sharded buckets, leaky bucket smoothing, multi‑writer safeguards, deterministic,
             fallbacks, and observability hooks for real‑time budget tracking.
           </p>
         </div>

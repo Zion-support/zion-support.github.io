@@ -1,7 +1,5 @@
 import React from 'react';
-import {
-motion
-} from 'framer-motion';
+import { motion } from 'framer-motion';
 
 interface LoadingSpinnerProps {
 size?: 'small' | 'medium' | 'large';
@@ -11,13 +9,13 @@ fullScreen?: boolean;
 }
 
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
-  size = 'md', 
+  size = 'md'
   message = 'Loading...' 
 }) => {
   const sizeClasses = {
     sm: 'w-8 h-8',
     md: 'w-12 h-12',
-    lg: 'w-16 h-16',
+    lg: 'w-16 h-16'
   };
 
   return (

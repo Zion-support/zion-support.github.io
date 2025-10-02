@@ -14,7 +14,7 @@ export default function January2027ContentAdvertisingBanner(): void {
         </h3>
         
         <p className="text-violet-200 text-lg mb-6 max-w-4xl mx-auto">
-          Discover the most advanced AI technologies reshaping enterprise operations: 1000x energy efficiency with neuromorphic computing, 
+          Discover the most advanced AI technologies reshaping enterprise operations: 1000x energy efficiency with neuromorphic computing
           $847B asset protection with quantum AI security, and proven Fortune 500 success stories with $2.3B+ annual savings.
         </p>
         

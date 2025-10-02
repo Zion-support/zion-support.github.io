@@ -1,7 +1,5 @@
 import React from 'react';
-import {
-Helmet
-} from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';
 
 const Terms: React.FC = () => {
   return (
@@ -103,9 +101,9 @@ const Terms: React.FC = () => {
                 </p>
                 <div className="bg-gray-50 p-4 rounded-lg">
                   <p className="text-gray-600">
-                    Email: legal@ziontechgroup.com<br />
-                    Phone: +1 (555) 123-4567<br />
-                    Address: 123 Tech Street, Innovation City, IC 12345
+                    Email: legal@ziontechgroup.com<br />,
+                    Phone: +1 (555) 123-4567<br />,
+                    Address: 123 Tech Street, Innovation City, IC 12345,
                   </p>
                 </div>
               </section>

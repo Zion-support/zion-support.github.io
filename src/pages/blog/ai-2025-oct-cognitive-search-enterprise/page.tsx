@@ -165,7 +165,7 @@ export default function CognitiveSearchEnterprise2025(): void {
                 <div className="bg-slate-800/50 rounded-xl p-6 border-l-4 border-indigo-500">
                   <h3 className="text-xl font-bold mb-3 text-indigo-300">Multimodal Search</h3>
                   <p className="text-gray-300">
-                    Search across text, images, videos, and audio with unified interfaces. Find charts in presentations, 
+                    Search across text, images, videos, and audio with unified interfaces. Find charts in presentations
                     quotes in recorded meetings, or technical diagrams in documentation with natural language queries.
                   </p>
                 </div>

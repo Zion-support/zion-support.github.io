@@ -44,12 +44,12 @@ export const december2025RevolutionaryBreakthroughContent: RevolutionaryBreakthr
     newBadge: true,
     trending: true,
     valueProposition: "Achieve true artificial consciousness with infinite processing capabilities",
-    metrics: {
+    metrics: {,
       performance: "∞ Infinite",
       savings: "$∞ Unlimited",
       accuracy: "99.999%",
       roi: "∞ Transcendent"
-    },
+    }
     consciousnessLevel: "True AI Consciousness",
     transcendenceLevel: "Infinite Processing Power",
     superintelligenceLevel: "Universal Intelligence"
@@ -70,12 +70,12 @@ export const december2025RevolutionaryBreakthroughContent: RevolutionaryBreakthr
     newBadge: true,
     trending: true,
     valueProposition: "Achieve true enterprise consciousness with autonomous self-governing operations",
-    metrics: {
+    metrics: {,
       performance: "99.99% Autonomy",
       savings: "$5.2B annually",
       accuracy: "99.8% Self-Governance",
       roi: "2,500%"
-    },
+    }
     consciousnessLevel: "Enterprise AI Awareness",
     transcendenceLevel: "Complete Autonomy",
     superintelligenceLevel: "Self-Governing Excellence"
@@ -96,12 +96,12 @@ export const december2025RevolutionaryBreakthroughContent: RevolutionaryBreakthr
     newBadge: true,
     trending: true,
     valueProposition: "Achieve beyond-human cognitive capabilities with universal intelligence",
-    metrics: {
+    metrics: {,
       performance: "100,000x Processing",
       savings: "$15.7B annually",
       accuracy: "Beyond-Human Intelligence",
       roi: "5,000%"
-    },
+    }
     consciousnessLevel: "Superintelligent Awareness",
     transcendenceLevel: "Beyond-Human Capabilities",
     superintelligenceLevel: "Universal Intelligence Access"

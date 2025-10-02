@@ -1,6 +1,4 @@
-import {
-Link
-} from "react-router-dom";
+import { Link } from "react-router-dom";
 import Header from "../../../components/Header";
 
 const MultimodalEnterpriseIntelligence = () => {
@@ -48,7 +46,7 @@ const MultimodalEnterpriseIntelligence = () => {
             </h1>
 
             <p className="text-xl text-zion-slate-light leading-relaxed">
-              Discover how unified multimodal AI systems are transforming enterprise operations, 
+              Discover how unified multimodal AI systems are transforming enterprise operations
               achieving 97% accuracy across vision, language, and audio processing with $2.3B+ 
               in proven ROI.
             </p>
@@ -95,7 +93,7 @@ const MultimodalEnterpriseIntelligence = () => {
               </p>
               <p className="text-lg leading-relaxed">
                 Leading organizations have reported 85% automation rates and $2.3B+ in value creation 
-                by implementing multimodal AI systems that seamlessly process images, text, audio, 
+                by implementing multimodal AI systems that seamlessly process images, text, audio
                 and video within unified workflows.
               </p>
             </section>
@@ -110,7 +108,7 @@ const MultimodalEnterpriseIntelligence = () => {
                     Vision-Language Understanding
                   </h3>
                   <p className="mb-3">
-                    Models like GPT-4V and Claude Vision analyze images and respond to complex queries, 
+                    Models like GPT-4V and Claude Vision analyze images and respond to complex queries
                     enabling document intelligence, visual QA, and automated quality inspection with 96% accuracy.
                   </p>
                   <div className="bg-zion-blue/10 rounded-lg p-4 border border-zion-blue/30">
@@ -160,14 +158,14 @@ const MultimodalEnterpriseIntelligence = () => {
                   <li className="flex items-start gap-3">
                     <Zap className="w-5 h-5 text-zion-cyan mt-1 flex-shrink-0" />
                     <div>
-                      <strong className="text-white">Vision Models:</strong> GPT-4V, Claude 3.5 Sonnet Vision, 
+                      <strong className="text-white">Vision Models:</strong> GPT-4V, Claude 3.5 Sonnet Vision
                       LLaVA 1.6, BLIP-2 for image understanding and generation
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
                     <Zap className="w-5 h-5 text-purple-400 mt-1 flex-shrink-0" />
                     <div>
-                      <strong className="text-white">Language Models:</strong> GPT-4 Turbo, Claude 3.5 Sonnet, 
+                      <strong className="text-white">Language Models:</strong> GPT-4 Turbo, Claude 3.5 Sonnet
                       Llama 3.1 405B for text processing and reasoning
                     </div>
                   </li>

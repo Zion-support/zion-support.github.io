@@ -15,7 +15,7 @@ export default function AIE2EObservabilityBlueprint2026(): React.JSX.Element {
         <p className="text-zion-slate-light mb-8">Traces • Budgets • SLIs • Rollback hooks</p>
         <div className="prose prose-invert max-w-3xl">
           <p>
-            Connect every prompt, tool call, and model decision to business outcomes. This blueprint covers trace design,
+            Connect every prompt, tool call, and model decision to business outcomes. This blueprint covers trace design
             budget instrumentation, KPI‑linked SLIs, and rollback signals that keep systems reliable and cost‑efficient.
           </p>
           <p>

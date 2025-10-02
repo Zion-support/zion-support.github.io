@@ -53,20 +53,20 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
           };
 
           const mockInsights: AIInsights = {
-            predictedHighRiskActions: [
+            predictedHighRiskActions: [,
               'High memory usage detected in user authentication flow',
               'Potential race condition in data synchronization',
               'Slow database queries affecting user experience'
-            ].slice(0, Math.floor(Math.random() * 3)),
-            recommendedImprovements: [
+            ].slice(0, Math.floor(Math.random() * 3))
+            recommendedImprovements: [,
               'Implement caching for frequently accessed data',
               'Add error boundaries to prevent cascading failures',
               'Optimize database indexes for better query performance',
               'Consider implementing circuit breaker pattern'
-            ],
-            errorTrends: [
-              { category: 'authentication', trend: 'decreasing' },
-              { category: 'database', trend: 'stable' },
+            ]
+            errorTrends: [,
+              { category: 'authentication', trend: 'decreasing' }
+              { category: 'database', trend: 'stable' }
               { category: 'ui', trend: 'increasing' }
             ]
           };
@@ -80,7 +80,7 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
               occurrenceCount: Math.floor(Math.random() * 50 + 10),
               context: { component: 'UserProfile', action: 'load' },
               aiPredictedImpact: Math.random() * 0.8 + 0.2,
-              resolutionSuggestions: [
+              resolutionSuggestions: [,
                 'Check database connection pool',
                 'Implement retry mechanism with exponential backoff',
                 'Add fallback to cached data'
@@ -94,7 +94,7 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
               occurrenceCount: Math.floor(Math.random() * 20 + 5),
               context: { component: 'SearchBar', action: 'query' },
               aiPredictedImpact: Math.random() * 0.6 + 0.1,
-              resolutionSuggestions: [
+              resolutionSuggestions: [,
                 'Implement search result caching',
                 'Add debouncing to search input',
                 'Consider using Elasticsearch for better performance'
@@ -127,19 +127,19 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
 
   const getSeverityColor = (severity: string) => {
 switch (severity) {
-case 'critical': return 'text-red-600 bg-red-100';,
-case 'high': return 'text-orange-600 bg-orange-100';,
-case 'medium': return 'text-yellow-600 bg-yellow-100';,
-case 'low': return 'text-blue-600 bg-blue-100';,
+case 'critical': return 'text-red-600 bg-red-100';
+case 'high': return 'text-orange-600 bg-orange-100';
+case 'medium': return 'text-yellow-600 bg-yellow-100';
+case 'low': return 'text-blue-600 bg-blue-100';
 default: return 'text-gray-600 bg-gray-100';
 }
   };
 
   const getTrendIcon = (trend: string) => {
 switch (trend) {
-case 'increasing': return '📈';,
-case 'decreasing': return '📉';,
-case 'stable': return '➡️';,
+case 'increasing': return '📈';
+case 'decreasing': return '📉';
+case 'stable': return '➡️';
 default: return '❓';
 }
   };
@@ -162,7 +162,7 @@ default: return '❓';
           {/* Performance Metrics */}
           {
 metrics ? (
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">,
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
 <div className="bg-gradient-to-r from-blue-500 to-blue-600 text-white p-4 rounded-lg">
 <h3 className="text-sm font-medium opacity-90">Error Rate (per hour)</h3>
 <p className="text-2xl font-bold">{metrics.errorRate.toFixed(2)
@@ -264,9 +264,9 @@ trend.trend === 'decreasing' ? 'text-green-600' : 'text-gray-600'
                         </div>
                         <h4 className="font-medium text-gray-800 mb-1">{error.message}</h4>
                         <div className="text-sm text-gray-600">
-                          Component: {error.context.component || 'Unknown'} | 
-                          Action: {error.context.action || 'Unknown'} |
-                          Count: {String(error.occurrenceCount)}
+                          Component: {error.context.component || 'Unknown'} | ,
+                          Action: {error.context.action || 'Unknown'} |,
+                          Count: {String(error.occurrenceCount)},
                         </div>
                         {error.aiPredictedImpact && (
                           <div className="text-sm text-blue-600 mt-1">

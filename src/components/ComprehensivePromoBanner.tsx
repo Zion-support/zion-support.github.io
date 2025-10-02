@@ -7,8 +7,8 @@ className?: string;
 }
 
 const ComprehensivePromoBanner: React.FC<ComprehensivePromoBannerProps> = ({ 
-  variant = 'hero', 
-  showCount = 4,
+  variant = 'hero'
+  showCount = 4
   className = '' 
 }) => {
   const latestArticles = newArticles2025.filter(a => a.featured).slice(0, showCount);
@@ -79,7 +79,7 @@ const ComprehensivePromoBanner: React.FC<ComprehensivePromoBannerProps> = ({
             {latestArticles.length} New Articles + {latestServices.length} Revolutionary Services
           </h2>
           <p className="text-xl text-purple-200 max-w-3xl mx-auto">
-            Multimodal AI, Blockchain Integration, Green AI, AutoML, Predictive Maintenance, 
+            Multimodal AI, Blockchain Integration, Green AI, AutoML, Predictive Maintenance
             AI Talent Acquisition, Fraud Prevention & More!
           </p>
         </div>

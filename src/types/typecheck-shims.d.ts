@@ -1,16 +1,16 @@
 // Shims to relax CI type-check by treating page modules as any
 declare module "../pages/*" {
-const Component: React.ComponentType;,
+const Component: React.ComponentType;
 export default Component;
 }
 
 declare module "../content/*" {
-const Content: React.ComponentType;,
+const Content: React.ComponentType;
 export = Content;
 }
 
 declare module "../components/*" {
-const Component: React.ComponentType;,
+const Component: React.ComponentType;
 export default Component;
 }
 
@@ -27,10 +27,10 @@ declare module "lucide-react" {
 }
 
 declare module "web-vitals" {
-export const onCLS: (callback: (metric: Metric) => void) => void;,
-export const onFCP: (callback: (metric: Metric) => void) => void;,
-export const onLCP: (callback: (metric: Metric) => void) => void;,
-export const onTTFB: (callback: (metric: Metric) => void) => void;,
+export const onCLS: (callback: (metric: Metric) => void) => void;
+export const onFCP: (callback: (metric: Metric) => void) => void;
+export const onLCP: (callback: (metric: Metric) => void) => void;
+export const onTTFB: (callback: (metric: Metric) => void) => void;
 export interface Metric {
 name: string;
 value: number;

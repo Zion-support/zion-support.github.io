@@ -32,13 +32,13 @@ export const october2025RevolutionaryContent: RevolutionaryContent[] = [
     gradient: "from-purple-600 via-pink-600 to-red-600",
     featured: true,
     tags: ["Consciousness AI", "Enterprise Intelligence", "Cognitive Computing", "Neural Networks"],
-    highlights: [
+    highlights: [,
       "Human-level reasoning with 99.8% accuracy",
       "78% operational cost reduction",
       "$450M+ average enterprise value delivered",
       "Real-time contextual awareness and adaptation"
-    ],
-    metrics: {
+    ]
+    metrics: {,
       accuracy: "99.8%",
       costReduction: "78%",
       enterpriseValue: "$450M+",
@@ -57,13 +57,13 @@ export const october2025RevolutionaryContent: RevolutionaryContent[] = [
     gradient: "from-blue-600 via-cyan-600 to-teal-600",
     featured: true,
     tags: ["Quantum Computing", "Hybrid AI", "Performance Optimization", "Enterprise Scale"],
-    highlights: [
+    highlights: [,
       "10,000x performance improvement over classical",
       "Sub-second optimization of billion-parameter models",
       "95% reduction in energy consumption",
       "$800M+ market opportunity by 2026"
-    ],
-    metrics: {
+    ]
+    metrics: {,
       performance: "10,000x",
       optimization: "<1s",
       energySavings: "95%",
@@ -82,13 +82,13 @@ export const october2025RevolutionaryContent: RevolutionaryContent[] = [
     gradient: "from-red-600 via-orange-600 to-yellow-600",
     featured: true,
     tags: ["Zero Trust", "AI Security", "Autonomous Defense", "Threat Prevention"],
-    highlights: [
+    highlights: [,
       "99.99% threat prevention rate",
       "Sub-millisecond threat detection and response",
       "Zero false positives with adaptive learning",
       "$280M+ in prevented breach costs"
-    ],
-    metrics: {
+    ]
+    metrics: {,
       prevention: "99.99%",
       responseTime: "<1ms",
       accuracy: "100%",
@@ -107,13 +107,13 @@ export const october2025RevolutionaryContent: RevolutionaryContent[] = [
     gradient: "from-green-600 via-emerald-600 to-teal-600",
     featured: true,
     tags: ["Collaboration AI", "Productivity", "Team Augmentation", "Hybrid Intelligence"],
-    highlights: [
+    highlights: [,
       "500% productivity improvement documented",
       "92% faster strategic decision-making",
       "Real-time knowledge synthesis across teams",
       "$156M+ average value per deployment"
-    ],
-    metrics: {
+    ]
+    metrics: {,
       productivity: "500%",
       decisions: "92% faster",
       deployment: "1000+",
@@ -132,13 +132,13 @@ export const october2025RevolutionaryContent: RevolutionaryContent[] = [
     gradient: "from-indigo-600 via-purple-600 to-pink-600",
     featured: true,
     tags: ["Predictive Analytics", "Business Intelligence", "Forecasting", "Strategic Planning"],
-    highlights: [
+    highlights: [,
       "96% accuracy at 6-month forecast horizon",
       "Identify opportunities 4-6 weeks before competitors",
       "83% improvement in strategic planning",
       "$340M+ in captured market opportunities"
-    ],
-    metrics: {
+    ]
+    metrics: {,
       accuracy: "96%",
       leadTime: "4-6 weeks",
       planning: "83% better",
@@ -157,13 +157,13 @@ export const october2025RevolutionaryContent: RevolutionaryContent[] = [
     gradient: "from-pink-600 via-rose-600 to-red-600",
     featured: true,
     tags: ["Emotional AI", "Customer Experience", "Sentiment Analysis", "Personalization"],
-    highlights: [
+    highlights: [,
       "98% customer satisfaction scores achieved",
       "156% increase in customer lifetime value",
       "Real-time emotional intelligence and adaptation",
       "$230M+ in enhanced revenue per client"
-    ],
-    metrics: {
+    ]
+    metrics: {,
       satisfaction: "98%",
       clv: "+156%",
       retention: "94%",
@@ -188,12 +188,12 @@ export const october2025Services = [
     description: "Enterprise-grade AI with human-level reasoning and contextual awareness",
     price: "$24,999/mo",
     savings: "$450M+ enterprise value",
-    features: [
+    features: [,
       "99.8% reasoning accuracy",
       "Real-time context awareness",
       "Autonomous decision-making",
       "Enterprise integration suite"
-    ],
+    ]
     slug: "consciousness-ai-platform"
   },
   {
@@ -202,12 +202,12 @@ export const october2025Services = [
     description: "Hybrid quantum-classical computing for impossible problems",
     price: "$49,999/mo",
     savings: "10,000x performance gain",
-    features: [
+    features: [,
       "Quantum-enhanced optimization",
       "Sub-second model training",
       "95% energy reduction",
       "Dedicated quantum resources"
-    ],
+    ]
     slug: "quantum-ai-accelerator"
   },
   {
@@ -216,12 +216,12 @@ export const october2025Services = [
     description: "Self-healing zero-trust security with AI-powered threat prevention",
     price: "$14,999/mo",
     savings: "$280M+ breach prevention",
-    features: [
+    features: [,
       "99.99% threat prevention",
       "Sub-ms response time",
       "Zero false positives",
       "24/7 autonomous protection"
-    ],
+    ]
     slug: "autonomous-security-mesh"
   }
 ];
@@ -234,12 +234,12 @@ export const october2025CaseStudies = [
     company: "Global Financial Services Leader",
     industry: "Financial Services",
     result: "$450M+ value delivered in 8 months",
-    metrics: {
+    metrics: {,
       roi: "1,250%",
       timeToValue: "8 months",
       efficiency: "+78%",
       accuracy: "99.8%"
-    },
+    }
     slug: "fortune-100-consciousness-ai-transformation"
   },
   {
@@ -248,12 +248,12 @@ export const october2025CaseStudies = [
     company: "Global Manufacturing Corporation",
     industry: "Manufacturing",
     result: "$380M annual savings through quantum optimization",
-    metrics: {
+    metrics: {,
       speedup: "10,000x",
       savings: "$380M/year",
       energyReduction: "95%",
       productionIncrease: "+340%"
-    },
+    }
     slug: "manufacturing-quantum-ai-optimization"
   },
   {
@@ -262,12 +262,12 @@ export const october2025CaseStudies = [
     company: "National Healthcare Network",
     industry: "Healthcare",
     result: "Zero security breaches, $280M+ in prevented costs",
-    metrics: {
+    metrics: {,
       breaches: "0",
       prevention: "$280M+",
       compliance: "100%",
       responseTime: "<1ms"
-    },
+    }
     slug: "healthcare-autonomous-security-success"
   }
 ];

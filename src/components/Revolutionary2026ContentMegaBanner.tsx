@@ -23,12 +23,12 @@ const Revolutionary2026ContentMegaBanner: React.FC = () => {
       title: "Autonomous Enterprise Operations 2026",
       description: "98% automation rates with self-healing systems, predictive maintenance, and zero-downtime operations",
       slug: "autonomous-enterprise-operations-2026",
-      category: "Enterprise Automation"
-      date: "2026-01-15"
-      readTime: "38 min"
-      trending: true
-      icon: "🤖"
-      impact: "98% Automation"
+      category: "Enterprise Automation",
+      date: "2026-01-15",
+      readTime: "38 min",
+      trending: true,
+      icon: "🤖",
+      impact: "98% Automation",
       featured: true
     },
     {
@@ -43,7 +43,7 @@ trending: true,
 icon: "⚛️",
 impact: "Quantum Breakthrough",
 featured: true
-}
+},
     {
 id: 4,
 title: "Zero Trust AI Security Framework",
@@ -56,7 +56,7 @@ trending: true,
 icon: "🛡️",
 impact: "99.99% Security",
 featured: false
-}
+},
     {
       id: 5,
       title: "Edge AI Deployment at Scale",

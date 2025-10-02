@@ -4,14 +4,14 @@
  */
 
 export interface CacheOptions {
-ttl?: number; // Time to live in milliseconds,
+ttl?: number; // Time to live in milliseconds
 strategy?: 'memory' | 'localStorage' | 'sessionStorage';
 maxSize?: number; // Maximum number of entries
 }
 
 export interface CacheEntry<T> {
-data: T;,
-timestamp: number;,
+data: T;
+timestamp: number;
 ttl: number;
 }
 
@@ -29,15 +29,15 @@ class CacheManager {
     options: CacheOptions = {}
   ): void {
     const {
-      ttl = this.DEFAULT_TTL,
-      strategy = 'memory',
-      maxSize = this.DEFAULT_MAX_SIZE,
+      ttl = this.DEFAULT_TTL
+      strategy = 'memory'
+      maxSize = this.DEFAULT_MAX_SIZE
     } = options;
 
     const entry: CacheEntry<T> = {
       data: value,
       timestamp: Date.now(),
-      ttl,
+      ttl
     };
 
     switch (strategy) {
@@ -93,13 +93,13 @@ class CacheManager {
     strategy: 'memory' | 'localStorage' | 'sessionStorage' = 'memory'
   ): void {
 switch (strategy) {
-case 'memory':,
+case 'memory':
 this.memoryCache.delete(key);
 break;
-case 'localStorage':,
+case 'localStorage':
 localStorage.removeItem(key);
 break;
-case 'sessionStorage':,
+case 'sessionStorage':
 sessionStorage.removeItem(key);
 break;
 }
@@ -156,17 +156,17 @@ break;
    */
   invalidatePattern(pattern: RegExp, strategy: 'memory' | 'localStorage' | 'sessionStorage' = 'memory'): void {
 switch (strategy) {
-case 'memory':,
+case 'memory':
 Array.from(this.memoryCache.keys())
 .filter(key => pattern.test(key))
 .forEach(key => this.memoryCache.delete(key));
 break;
-case 'localStorage':,
+case 'localStorage':
 Object.keys(localStorage)
 .filter(key => pattern.test(key))
 .forEach(key => localStorage.removeItem(key));
 break;
-case 'sessionStorage':,
+case 'sessionStorage':
 Object.keys(sessionStorage)
 .filter(key => pattern.test(key))
 .forEach(key => sessionStorage.removeItem(key));
@@ -178,14 +178,14 @@ break;
    * Get cache statistics
    */
   getStats(): {
-memorySize: number;,
-localStorageSize: number;,
+memorySize: number;
+localStorageSize: number;
 sessionStorageSize: number;
 } {
     return {
       memorySize: this.memoryCache.size,
       localStorageSize: localStorage.length,
-      sessionStorageSize: sessionStorage.length,
+      sessionStorageSize: sessionStorage.length
     };
   }
 
@@ -220,7 +220,7 @@ sessionStorageSize: number;
     storage: 'localStorage' | 'sessionStorage'
   ): CacheEntry<T> | null {
 try {
-const storageObj = storage === 'localStorage' ? localStorage : sessionStorage;,
+const storageObj = storage === 'localStorage' ? localStorage : sessionStorage;
 const item = storageObj.getItem(key);
 return item ? JSON.parse(item) : null;
 } catch (error) {

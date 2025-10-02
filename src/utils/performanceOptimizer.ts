@@ -7,11 +7,11 @@
  * Web Vitals metrics tracking
  */
 export interface WebVitalsMetrics {
-FCP?: number; // First Contentful Paint,
-LCP?: number; // Largest Contentful Paint,
-FID?: number; // First Input Delay,
-CLS?: number; // Cumulative Layout Shift,
-TTFB?: number; // Time to First Byte,
+FCP?: number; // First Contentful Paint
+LCP?: number; // Largest Contentful Paint
+FID?: number; // First Input Delay
+CLS?: number; // Cumulative Layout Shift
+TTFB?: number; // Time to First Byte
 INP?: number; // Interaction to Next Paint
 }
 
@@ -80,8 +80,8 @@ export function debounce<T extends (...args: any[]) => any>(
   func: T,
   wait: number
 ): (...args: Parameters<T>) => void {
-let timeout: NodeJS.Timeout | null = null;,
-return function executedFunction(...args: Parameters<T>) {,
+let timeout: NodeJS.Timeout | null = null;
+return function executedFunction(...args: Parameters<T>) {
 const later = () => {
 timeout = null;
 func(...args);
@@ -121,7 +121,7 @@ export const measurePageLoad = (): WebVitalsMetrics | null => {
 
   return {
     FCP: navigation?.responseStart - navigation?.fetchStart,
-    TTFB: perfData.responseStart - perfData.navigationStart,
+    TTFB: perfData.responseStart - perfData.navigationStart
   };
 };
 
@@ -138,7 +138,7 @@ export const reportWebVitals = (metrics: WebVitalsMetrics): void => {
         (window as any).gtag('event', key, {
           value: Math.round(value),
           event_category: 'Web Vitals',
-          non_interaction: true,
+          non_interaction: true
         });
       }
     });
@@ -284,7 +284,7 @@ maxInteractive: number; // in ms
 }
 
 export const checkPerformanceBudget = (budget: PerformanceBudget): {
-passed: boolean;,
+passed: boolean;
 violations: string[];
 } => {
   const violations: string[] = [];

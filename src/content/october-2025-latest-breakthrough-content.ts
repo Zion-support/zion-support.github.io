@@ -14,13 +14,13 @@ export const octoberLatestBreakthroughContent = [
     gradient: "from-blue-600 to-indigo-600",
     featured: true,
     tags: ["Digital Twins", "AI", "Enterprise", "IoT", "Predictive Analytics"],
-    highlights: [
+    highlights: [,
       "$850M success story from Fortune 100 energy company",
       "99.2% accuracy in failure prediction",
       "89% reduction in unplanned downtime",
       "$47B in aggregate business value created"
-    ],
-    metrics: {
+    ]
+    metrics: {,
       value: "$850M",
       accuracy: "99.2%",
       downtime: "89%",
@@ -39,13 +39,13 @@ export const octoberLatestBreakthroughContent = [
     gradient: "from-blue-600 to-cyan-600",
     featured: true,
     tags: ["LLM Orchestration", "Multi-Model AI", "Cost Optimization", "Enterprise AI"],
-    highlights: [
+    highlights: [,
       "60% cost reduction through intelligent model routing",
       "10x performance gain with multi-model systems",
       "95% accuracy in autonomous routing decisions",
       "$180B market by 2027"
-    ],
-    metrics: {
+    ]
+    metrics: {,
       costSavings: "60%",
       performance: "10x",
       accuracy: "95%",
@@ -64,13 +64,13 @@ export const octoberLatestBreakthroughContent = [
     gradient: "from-purple-600 to-pink-600",
     featured: true,
     tags: ["Vector Databases", "RAG", "Performance Optimization", "Semantic Search"],
-    highlights: [
+    highlights: [,
       "Sub-10ms queries at billion-vector scale",
       "70% infrastructure cost reduction",
       "99.9% recall accuracy maintained",
       "100x performance vs naive implementations"
-    ],
-    metrics: {
+    ]
+    metrics: {,
       latency: "<10ms",
       costSavings: "70%",
       recall: "99.9%",
@@ -89,13 +89,13 @@ export const octoberLatestBreakthroughContent = [
     gradient: "from-green-600 to-emerald-600",
     featured: true,
     tags: ["AI Agents", "Production AI", "Reliability Engineering", "Enterprise Architecture"],
-    highlights: [
+    highlights: [,
       "99.9% uptime for autonomous systems",
       "85% cost savings vs manual operations",
       "10x productivity through automation",
       "100% audit compliance"
-    ],
-    metrics: {
+    ]
+    metrics: {,
       uptime: "99.9%",
       costSavings: "85%",
       productivity: "10x",

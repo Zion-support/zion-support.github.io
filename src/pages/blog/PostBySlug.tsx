@@ -15,7 +15,7 @@ export default function PostBySlug(): React.JSX.Element {
         category: fromLatest.category,
         publishedAt: fromLatest.date,
         readTime: fromLatest.readTime,
-        author: fromLatest.author,
+        author: fromLatest.author
       };
     }
     const fromBlogPosts = blogPosts.find((p) => p.slug === slug);
@@ -27,7 +27,7 @@ export default function PostBySlug(): React.JSX.Element {
         category: fromBlogPosts.category,
         publishedAt: fromBlogPosts.date,
         readTime: fromBlogPosts.readTime,
-        author: fromBlogPosts.author,
+        author: fromBlogPosts.author
       };
     }
     const fromPosts = staticPosts.find((p) => p.slug === slug);
@@ -39,7 +39,7 @@ export default function PostBySlug(): React.JSX.Element {
         category: fromPosts.category,
         publishedAt: fromPosts.publishedAt,
         readTime: fromPosts.readTime,
-        author: "Zion Tech Group Team",
+        author: "Zion Tech Group Team"
       };
     }
     return undefined;
@@ -53,7 +53,7 @@ return (
 <div className="max-w-3xl mx-auto pt-20">
 <h1 className="text-3xl font-bold mb-4">Article not found</h1>
 <p className="text-zion-slate-light mb-6">The post you are looking for does not exist or has been moved.</p>
-<Link to="/blog" className="text-zion-cyan hover:underline inline-flex items-center gap-2">,
+<Link to="/blog" className="text-zion-cyan hover:underline inline-flex items-center gap-2">
 <ArrowLeft className="w-4 h-4" />
 Back to Blog
 </Link>
@@ -98,8 +98,8 @@ Back to Blog
               <span className="flex items-center gap-1">
                 <Calendar className="w-4 h-4" />
                 {new Date(article.publishedAt).toLocaleDateString('en-US', { 
-                  year: 'numeric', 
-                  month: 'long', 
+                  year: 'numeric',
+                  month: 'long',
                   day: 'numeric' 
                 })}
               </span>

@@ -7,12 +7,12 @@
  * Focus trap for modals and dialogs
  */
 export class FocusTrap {
-private element: HTMLElement;,
-private focusableElements: HTMLElement[] = [];,
-private firstFocusableElement?: HTMLElement;,
-private lastFocusableElement?: HTMLElement;,
-private previouslyFocusedElement?: HTMLElement;,
-constructor(element: HTMLElement) {,
+private element: HTMLElement;
+private focusableElements: HTMLElement[] = [];
+private firstFocusableElement?: HTMLElement;
+private lastFocusableElement?: HTMLElement;
+private previouslyFocusedElement?: HTMLElement;
+constructor(element: HTMLElement) {
 this.element = element;
 this.updateFocusableElements();
 }
@@ -24,7 +24,7 @@ this.updateFocusableElements();
       'textarea:not([disabled])',
       'input:not([disabled])',
       'select:not([disabled])',
-      '[tabindex]:not([tabindex="-1"])',
+      '[tabindex]:not([tabindex="-1"])'
     ].join(', ');
 
     this.focusableElements = Array.from(
@@ -115,8 +115,8 @@ export function prefersReducedMotion(): boolean {
 export function prefersHighContrast(): boolean {
 if (typeof window === 'undefined') return false;
 return (
-window.matchMedia('(prefers-contrast: high)').matches ||,
-window.matchMedia('(-ms-high-contrast: active)').matches,
+window.matchMedia('(prefers-contrast: high)').matches ||
+window.matchMedia('(-ms-high-contrast: active)').matches
 );
 }
 
@@ -147,7 +147,7 @@ export function setupSkipLinks(): void {
       target.setAttribute('tabindex', '-1');
       target.focus();
       target.addEventListener(
-        'blur',
+        'blur'
         () => {
           target.removeAttribute('tabindex');
         },
@@ -172,7 +172,7 @@ export function validateColorContrast(
   return {
     valid: ratio >= required,
     ratio,
-    required,
+    required
   };
 }
 
@@ -217,7 +217,7 @@ function hexToRgb(hex: string): { r: number; g: number; b: number } | null {
     ? {
         r: parseInt(result[1], 16),
         g: parseInt(result[2], 16),
-        b: parseInt(result[3], 16),
+        b: parseInt(result[3], 16)
       }
     : null;
 }
@@ -242,7 +242,7 @@ export function createLoadingAnnouncement(message = 'Loading...'): void {
  * Ensure proper heading hierarchy
  */
 export function validateHeadingHierarchy(): {
-valid: boolean;,
+valid: boolean;
 issues: string[];
 } {
   if (typeof document === 'undefined') {
@@ -271,7 +271,7 @@ issues: string[];
 
   return {
     valid: issues.length === 0,
-    issues,
+    issues
   };
 }
 
@@ -279,7 +279,7 @@ issues: string[];
  * Keyboard navigation helper
  */
 export const KeyboardNavigation = {
-  KEYS: {
+  KEYS: {,
     ENTER: 'Enter',
     SPACE: ' ',
     ESCAPE: 'Escape',
@@ -289,28 +289,25 @@ export const KeyboardNavigation = {
     ARROW_RIGHT: 'ArrowRight',
     HOME: 'Home',
     END: 'End',
-    TAB: 'Tab',
-  },
-
+    TAB: 'Tab'
+  }
   isActionKey(event: KeyboardEvent): boolean {
     return event.key === this.KEYS.ENTER || event.key === this.KEYS.SPACE;
-  },
-
+  }
   isArrowKey(event: KeyboardEvent): boolean {
     return [
-      this.KEYS.ARROW_UP,
-      this.KEYS.ARROW_DOWN,
-      this.KEYS.ARROW_LEFT,
-      this.KEYS.ARROW_RIGHT,
+      this.KEYS.ARROW_UP
+      this.KEYS.ARROW_DOWN
+      this.KEYS.ARROW_LEFT
+      this.KEYS.ARROW_RIGHT
     ].includes(event.key);
-  },
-
+  }
   handleActionKey(event: KeyboardEvent, callback: () => void) {
     if (this.isActionKey(event)) {
       event.preventDefault();
       callback();
     }
-  },
+  }
 };
 
 /**

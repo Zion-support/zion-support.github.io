@@ -1,6 +1,4 @@
-import {
-Link
-} from "react-router-dom";
+import { Link } from "react-router-dom";
 import Header from "../../components/Header";
 
 const CognitiveAutomationEnterpriseRevolution = () => {
@@ -52,7 +50,7 @@ const CognitiveAutomationEnterpriseRevolution = () => {
 
             <p className="text-xl text-zion-slate-light leading-relaxed mb-8">
               How intelligent automation is transforming enterprises from reactive operators to proactive 
-              innovators. Discover the cognitive automation revolution delivering 92% efficiency gains, 
+              innovators. Discover the cognitive automation revolution delivering 92% efficiency gains
               $3.2M average cost savings, and 10x productivity increases across Fortune 500 companies.
             </p>
 
@@ -85,7 +83,7 @@ const CognitiveAutomationEnterpriseRevolution = () => {
               <p className="text-lg leading-relaxed mb-4">
                 In 2025, we're witnessing a fundamental shift in how enterprises operate. The era of simple 
                 robotic process automation (RPA) is giving way to <strong className="text-white">cognitive automation</strong> 
-                —intelligent systems that don't just execute tasks, but understand context, make decisions, 
+                —intelligent systems that don't just execute tasks, but understand context, make decisions
                 and continuously learn from outcomes.
               </p>
               <p className="text-lg leading-relaxed mb-4">
@@ -123,7 +121,7 @@ const CognitiveAutomationEnterpriseRevolution = () => {
                     would break traditional automation.
                   </p>
                   <p className="text-sm text-cyan-300">
-                    Example: Processing invoices with missing fields, unusual formats, or partial information 
+                    Example: Processing invoices with missing fields, unusual formats, or partial information,
                     by inferring context from related documents and historical patterns.
                   </p>
                 </div>
@@ -134,11 +132,11 @@ const CognitiveAutomationEnterpriseRevolution = () => {
                     2. Decision-Making Capability
                   </h3>
                   <p className="mb-4">
-                    These systems make judgment calls based on complex criteria, weighing multiple factors, 
+                    These systems make judgment calls based on complex criteria, weighing multiple factors
                     assessing risks, and optimizing outcomes—capabilities that previously required human expertise.
                   </p>
                   <p className="text-sm text-purple-300">
-                    Example: Automatically approving or escalating customer service requests based on sentiment 
+                    Example: Automatically approving or escalating customer service requests based on sentiment,
                     analysis, customer history, business impact, and policy compliance.
                   </p>
                 </div>
@@ -153,7 +151,7 @@ const CognitiveAutomationEnterpriseRevolution = () => {
                     changing business conditions. Performance increases with each interaction.
                   </p>
                   <p className="text-sm text-pink-300">
-                    Example: Refining fraud detection models based on confirmed cases, improving accuracy 
+                    Example: Refining fraud detection models based on confirmed cases, improving accuracy,
                     from 85% to 98% over 6 months while reducing false positives by 75%.
                   </p>
                 </div>
@@ -168,7 +166,7 @@ const CognitiveAutomationEnterpriseRevolution = () => {
                     would with a human colleague. No specialized training or technical knowledge required.
                   </p>
                   <p className="text-sm text-blue-300">
-                    Example: "Generate a quarterly sales report for the Northeast region focusing on accounts 
+                    Example: "Generate a quarterly sales report for the Northeast region focusing on accounts,
                     that grew more than 20%" executed instantly with contextual intelligence.
                   </p>
                 </div>
@@ -273,7 +271,7 @@ const CognitiveAutomationEnterpriseRevolution = () => {
                     <div>
                       <h3 className="text-2xl font-bold text-white mb-3">Discovery & Assessment (Weeks 1-3)</h3>
                       <p className="mb-4">
-                        Identify high-value automation opportunities through process mining, stakeholder interviews, 
+                        Identify high-value automation opportunities through process mining, stakeholder interviews
                         and ROI modeling. Prioritize use cases based on business impact and technical feasibility.
                       </p>
                       <ul className="space-y-2 text-sm">

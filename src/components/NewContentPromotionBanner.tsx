@@ -11,13 +11,13 @@ className?: string;
 }
 
 const NewContentPromotionBanner: React.FC<NewContentPromotionBannerProps> = ({
-  variant = 'info',
-  title = "🚀 NEW CONTENT: Fresh Insights & Expert Guides",
-  description = "Discover our latest articles on real-time data pipelines, platform engineering, and GenAI operationalization.",
-  ctaText = "Explore Latest Content",
-  ctaLink = "/blog",
-  dismissible = true,
-  className = "",
+  variant = 'info'
+  title = "🚀 NEW CONTENT: Fresh Insights & Expert Guides"
+  description = "Discover our latest articles on real-time data pipelines, platform engineering, and GenAI operationalization."
+  ctaText = "Explore Latest Content"
+  ctaLink = "/blog"
+  dismissible = true
+  className = ""
 }) => {
   const [isVisible, setIsVisible] = useState(true);
 
@@ -33,7 +33,7 @@ const NewContentPromotionBanner: React.FC<NewContentPromotionBannerProps> = ({
     warning: "bg-gradient-to-r from-yellow-500/20 to-orange-500/20 border-yellow-400/30 text-yellow-100",
     error: "bg-gradient-to-r from-red-500/20 to-pink-500/20 border-red-400/30 text-red-100",
     default: "bg-gradient-to-r from-blue-500/20 to-purple-500/20 border-blue-400/30 text-blue-100",
-    premium: "bg-gradient-to-r from-purple-600/20 via-pink-600/20 to-red-600/20 border-purple-400/30 text-purple-100",
+    premium: "bg-gradient-to-r from-purple-600/20 via-pink-600/20 to-red-600/20 border-purple-400/30 text-purple-100"
   };
 
   const iconClasses = {
@@ -42,7 +42,7 @@ const NewContentPromotionBanner: React.FC<NewContentPromotionBannerProps> = ({
     warning: "text-yellow-400",
     error: "text-red-400",
     default: "text-blue-400",
-    premium: "text-purple-300",
+    premium: "text-purple-300"
   };
 
   return (

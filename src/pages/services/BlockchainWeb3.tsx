@@ -1,10 +1,6 @@
 import React from 'react';
-import {
-Helmet
-} from 'react-helmet-async';
-import {
-Coins
-} from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Coins } from 'lucide-react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 
@@ -54,7 +50,7 @@ const BlockchainWeb3: React.FC = () => {
       price: "$8,500",
       period: "/month",
       description: "Perfect for startups and small projects entering the Web3 space",
-      features: [
+      features: [,
         "Basic smart contract development",
         "Single blockchain integration",
         "Standard security auditing",
@@ -64,7 +60,7 @@ const BlockchainWeb3: React.FC = () => {
         "Simple NFT marketplace",
         "Standard token development",
         "Basic analytics dashboard"
-      ],
+      ]
       popular: false
     },
     {
@@ -72,7 +68,7 @@ const BlockchainWeb3: React.FC = () => {
       price: "$25,000",
       period: "/month",
       description: "Ideal for growing projects with complex blockchain requirements",
-      features: [
+      features: [,
         "Advanced smart contract development",
         "Multi-chain integration (5 networks)",
         "Comprehensive security auditing",
@@ -85,7 +81,7 @@ const BlockchainWeb3: React.FC = () => {
         "Custom Web3 integrations",
         "DAO governance setup",
         "Yield farming protocols"
-      ],
+      ]
       popular: true
     },
     {
@@ -93,7 +89,7 @@ const BlockchainWeb3: React.FC = () => {
       price: "$75,000",
       period: "/month",
       description: "Complete solution for large-scale blockchain and Web3 implementations",
-      features: [
+      features: [,
         "Enterprise-grade smart contract suite",
         "Unlimited blockchain integrations",
         "Third-party security audits",
@@ -108,7 +104,7 @@ const BlockchainWeb3: React.FC = () => {
         "Cross-chain bridge development",
         "SLA guarantee",
         "24/7 monitoring & support"
-      ],
+      ]
       popular: false
     }
   ];
@@ -169,17 +165,17 @@ const BlockchainWeb3: React.FC = () => {
   ];
 
   const technologies = [
-    { name: "Ethereum", type: "Smart Contracts" },
-    { name: "Polygon", type: "Layer 2 Scaling" },
-    { name: "Binance Smart Chain", type: "High Performance" },
-    { name: "Solana", type: "Ultra Fast" },
-    { name: "Polkadot", type: "Interoperability" },
-    { name: "Avalanche", type: "Subnets" },
-    { name: "Arbitrum", type: "Optimistic Rollups" },
-    { name: "Optimism", type: "Layer 2 Solution" },
-    { name: "Cosmos", type: "Inter-Blockchain" },
-    { name: "Near Protocol", type: "Developer Friendly" },
-    { name: "Algorand", type: "Pure Proof of Stake" },
+    { name: "Ethereum", type: "Smart Contracts" }
+    { name: "Polygon", type: "Layer 2 Scaling" }
+    { name: "Binance Smart Chain", type: "High Performance" }
+    { name: "Solana", type: "Ultra Fast" }
+    { name: "Polkadot", type: "Interoperability" }
+    { name: "Avalanche", type: "Subnets" }
+    { name: "Arbitrum", type: "Optimistic Rollups" }
+    { name: "Optimism", type: "Layer 2 Solution" }
+    { name: "Cosmos", type: "Inter-Blockchain" }
+    { name: "Near Protocol", type: "Developer Friendly" }
+    { name: "Algorand", type: "Pure Proof of Stake" }
     { name: "Fantom", type: "Fast Finality" }
   ];
 
@@ -206,7 +202,7 @@ const BlockchainWeb3: React.FC = () => {
                 Blockchain & <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">Web3</span>
               </h1>
               <p className="text-xl md:text-2xl text-indigo-100 max-w-4xl mx-auto mb-8">
-                Expert blockchain and Web3 services including DeFi protocols, NFT marketplaces, 
+                Expert blockchain and Web3 services including DeFi protocols, NFT marketplaces
                 DAO governance, and enterprise-grade smart contract development with multi-chain integration.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -414,7 +410,7 @@ const BlockchainWeb3: React.FC = () => {
                     className={
 `w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
 plan.popular
-? 'bg-indigo-600 text-white hover:bg-indigo-700',
+? 'bg-indigo-600 text-white hover:bg-indigo-700'
 : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
 }`}
                   >

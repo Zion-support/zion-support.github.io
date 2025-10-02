@@ -8,9 +8,9 @@ className?: string;
 }
 
 const NewServicesPromoBanner: React.FC<NewServicesPromoBannerProps> = ({
-  variant = 'default',
-  showCount = 3,
-  featuredOnly = true,
+  variant = 'default'
+  showCount = 3
+  featuredOnly = true
   className = ''
 }) => {
   const services = featuredOnly

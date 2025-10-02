@@ -24,17 +24,17 @@ date?: string;
 }
 
 const UnifiedPromotionalBanner: React.FC<UnifiedPromotionalBannerProps> = ({
-  variant = 'default',
+  variant = 'default'
   title,
   description,
   ctaText,
-  ctaLink,
-  theme = 'gradient',
-  featuredItems = [],
-  showCount = 3,
-  className = '',
-  icon = 'sparkles',
-  animated = true,
+  ctaLink
+  theme = 'gradient'
+  featuredItems = []
+  showCount = 3
+  className = ''
+  icon = 'sparkles'
+  animated = true
   badge,
   date
 }) => {

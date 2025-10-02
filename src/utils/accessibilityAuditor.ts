@@ -45,7 +45,7 @@ export class AccessibilityAuditor {
       score,
       issues,
       compliantAreas,
-      summary: {
+      summary: {,
         critical: issues.filter(i => i.severity === 'critical').length,
         serious: issues.filter(i => i.severity === 'serious').length,
         moderate: issues.filter(i => i.severity === 'moderate').length,
@@ -192,7 +192,7 @@ export class AccessibilityAuditor {
    * Quick accessibility fixes
    */
   applyQuickFixes(): {
-applied: string[];,
+applied: string[];
 manual: string[];
 } {
     const applied = [

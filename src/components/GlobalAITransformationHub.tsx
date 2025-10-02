@@ -1,11 +1,7 @@
 
 import React from 'react';
-import {
-Link
-} from 'react-router-dom';
-import {
-Sparkles
-} from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Sparkles } from 'lucide-react';
 
 const GlobalAITransformationHub = () => {
   const transformationAreas = [
@@ -44,9 +40,9 @@ const GlobalAITransformationHub = () => {
   ];
 
   const successMetrics = [
-    { metric: '2.5M+', label: 'Global Users' },
-    { metric: '$15B+', label: 'Value Created' },
-    { metric: '99.99%', label: 'Success Rate' },
+    { metric: '2.5M+', label: 'Global Users' }
+    { metric: '$15B+', label: 'Value Created' }
+    { metric: '99.99%', label: 'Success Rate' }
     { metric: '500K+', label: 'Enterprise Clients' }
   ];
 

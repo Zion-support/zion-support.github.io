@@ -1,7 +1,7 @@
 
 const October2025LatestPremiumContentBanner = () => {
 return (
-<div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 border-y border-purple-500/30 py-6 px-4 sm:px-6 lg:px-8 shadow-2xl relative overflow-hidden">,
+<div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 border-y border-purple-500/30 py-6 px-4 sm:px-6 lg:px-8 shadow-2xl relative overflow-hidden">
 {/* Animated background effects */
 }
       <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-transparent to-blue-500/10 animate-pulse"></div>

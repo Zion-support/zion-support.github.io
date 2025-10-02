@@ -9,8 +9,8 @@ userId?: string;
 }
 
 class ErrorHandler {
-private static instance: ErrorHandler;,
-private errorQueue: ErrorInfo[] = [];,
+private static instance: ErrorHandler;
+private errorQueue: ErrorInfo[] = [];
 private maxQueueSize = 50;
 private constructor() {
 this.setupGlobalErrorHandlers();
@@ -31,7 +31,7 @@ this.setupGlobalErrorHandlers();
         stack: event.error?.stack,
         timestamp: new Date().toISOString(),
         url: window.location.href,
-        userAgent: navigator.userAgent,
+        userAgent: navigator.userAgent
       });
     });
 
@@ -42,7 +42,7 @@ this.setupGlobalErrorHandlers();
         stack: event.reason?.stack,
         timestamp: new Date().toISOString(),
         url: window.location.href,
-        userAgent: navigator.userAgent,
+        userAgent: navigator.userAgent
       });
     });
   }
@@ -55,7 +55,7 @@ this.setupGlobalErrorHandlers();
       timestamp: errorInfo.timestamp || new Date().toISOString(),
       url: errorInfo.url || window.location.href,
       userAgent: errorInfo.userAgent || navigator.userAgent,
-      userId: errorInfo.userId,
+      userId: errorInfo.userId
     };
 
     // Add to queue
@@ -85,9 +85,9 @@ this.setupGlobalErrorHandlers();
       
       // Example integration with external service:
       // await fetch('/api/errors', {
-      //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify(errorInfo),
+      //   method: 'POST'
+      //   headers: { 'Content-Type': 'application/json' }
+      //   body: JSON.stringify(errorInfo)
       // });
     } catch (error) {
       console.error('Failed to send error to service:', error);
@@ -112,7 +112,7 @@ this.setupGlobalErrorHandlers();
 
     return {
       total: this.errorQueue.length,
-      recent,
+      recent
     };
   }
 }

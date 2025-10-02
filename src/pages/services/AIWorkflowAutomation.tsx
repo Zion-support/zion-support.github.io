@@ -1,10 +1,6 @@
 import React from 'react';
-import {
-Helmet
-} from 'react-helmet-async';
-import {
-TrendingUp
-} from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { TrendingUp } from 'lucide-react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 
@@ -54,14 +50,14 @@ const AIWorkflowAutomation: React.FC = () => {
       price: "$2,500",
       period: "/month",
       description: "Perfect for small businesses getting started with automation",
-      features: [
+      features: [,
         "Up to 10 automated workflows",
         "5 user accounts",
         "Basic analytics dashboard",
         "Email support",
         "Standard integrations (5)",
         "Monthly reporting"
-      ],
+      ]
       popular: false
     },
     {
@@ -69,7 +65,7 @@ const AIWorkflowAutomation: React.FC = () => {
       price: "$7,500",
       period: "/month",
       description: "Ideal for growing businesses with complex workflows",
-      features: [
+      features: [,
         "Unlimited automated workflows",
         "25 user accounts",
         "Advanced analytics & AI insights",
@@ -78,7 +74,7 @@ const AIWorkflowAutomation: React.FC = () => {
         "Real-time monitoring",
         "Custom workflow templates",
         "API access"
-      ],
+      ]
       popular: true
     },
     {
@@ -86,7 +82,7 @@ const AIWorkflowAutomation: React.FC = () => {
       price: "$25,000",
       period: "/month",
       description: "Complete solution for large organizations",
-      features: [
+      features: [,
         "Unlimited everything",
         "Unlimited user accounts",
         "Enterprise-grade analytics",
@@ -96,7 +92,7 @@ const AIWorkflowAutomation: React.FC = () => {
         "Custom development",
         "SLA guarantee",
         "On-premise deployment option"
-      ],
+      ]
       popular: false
     }
   ];
@@ -130,7 +126,7 @@ const AIWorkflowAutomation: React.FC = () => {
       title: "Fortune 500 Manufacturing",
       challenge: "Manual workflow processes causing delays and errors",
       solution: "Implemented AI-driven automation for supply chain management",
-      results: [
+      results: [,
         "85% reduction in processing time",
         "99.7% accuracy improvement",
         "$15M annual cost savings",
@@ -141,7 +137,7 @@ const AIWorkflowAutomation: React.FC = () => {
       title: "Global Financial Services",
       challenge: "Complex compliance workflows requiring manual oversight",
       solution: "Deployed intelligent automation with real-time monitoring",
-      results: [
+      results: [,
         "90% faster compliance reporting",
         "100% audit compliance rate",
         "$8M operational savings",
@@ -152,7 +148,7 @@ const AIWorkflowAutomation: React.FC = () => {
       title: "Healthcare System",
       challenge: "Patient data processing bottlenecks",
       solution: "Automated patient intake and data processing workflows",
-      results: [
+      results: [,
         "75% faster patient processing",
         "95% reduction in data entry errors",
         "40% improvement in patient satisfaction",
@@ -321,7 +317,7 @@ const AIWorkflowAutomation: React.FC = () => {
                     className={
 `w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
 plan.popular
-? 'bg-blue-600 text-white hover:bg-blue-700',
+? 'bg-blue-600 text-white hover:bg-blue-700'
 : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
 }`}
                   >

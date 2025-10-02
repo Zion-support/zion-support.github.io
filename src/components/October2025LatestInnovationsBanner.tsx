@@ -166,7 +166,7 @@ const October2025LatestInnovationsBanner = () => {
         <div className="mt-8 text-center">
           <p className="text-sm text-gray-400">
             💡 <strong className="text-white">Combined Impact:</strong> These three innovations deliver 
-            <span className="text-green-400 font-semibold"> $732M+ in total annual value</span> through enhanced governance, 
+            <span className="text-green-400 font-semibold"> $732M+ in total annual value</span> through enhanced governance
             quantum-powered optimization, and autonomous operations. Start your transformation today.
           </p>
         </div>

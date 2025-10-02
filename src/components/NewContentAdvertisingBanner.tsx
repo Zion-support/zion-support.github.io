@@ -78,9 +78,9 @@ const NewContentAdvertisingBanner: React.FC = () => {
   ];
 
   const achievements = [
-    { value: '500K+', label: 'Monthly Readers', icon: <Users className="w-8 h-8" /> },
-    { value: '98%', label: 'Customer Satisfaction', icon: <Star className="w-8 h-8" /> },
-    { value: '200+', label: 'Expert Articles', icon: <Award className="w-8 h-8" /> },
+    { value: '500K+', label: 'Monthly Readers', icon: <Users className="w-8 h-8" /> }
+    { value: '98%', label: 'Customer Satisfaction', icon: <Star className="w-8 h-8" /> }
+    { value: '200+', label: 'Expert Articles', icon: <Award className="w-8 h-8" /> }
     { value: '50+', label: 'Industry Awards', icon: <Target className="w-8 h-8" /> }
   ];
 

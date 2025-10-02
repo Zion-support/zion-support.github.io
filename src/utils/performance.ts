@@ -19,7 +19,7 @@ class PerformanceMonitor {
     fcp: null,
     lcp: null,
     ttfb: null,
-    timestamp: new Date().toISOString(),
+    timestamp: new Date().toISOString()
   };
   private observers: PerformanceObserver[] = [];
 
@@ -120,7 +120,7 @@ class PerformanceMonitor {
       request: navEntry.responseStart - navEntry.requestStart,
       response: navEntry.responseEnd - navEntry.responseStart,
       dom: navEntry.domContentLoadedEventEnd - navEntry.responseEnd,
-      load: navEntry.loadEventEnd - navEntry.navigationStart,
+      load: navEntry.loadEventEnd - navEntry.navigationStart
     };
 
     if (process.env.NODE_ENV === 'development') {

@@ -41,7 +41,7 @@ const SecurityAuditPanel: React.FC = () => {
       status: 'pass',
       severity: 'high',
       category: 'headers',
-      recommendation: 'Ensure all traffic is redirected to HTTPS',
+      recommendation: 'Ensure all traffic is redirected to HTTPS'
     },
     {
       id: 'hsts-header',
@@ -50,7 +50,7 @@ const SecurityAuditPanel: React.FC = () => {
       status: 'pass',
       severity: 'high',
       category: 'headers',
-      recommendation: 'Implement HSTS header with appropriate max-age',
+      recommendation: 'Implement HSTS header with appropriate max-age'
     },
     {
       id: 'csp-header',
@@ -60,7 +60,7 @@ const SecurityAuditPanel: React.FC = () => {
       severity: 'medium',
       category: 'headers',
       recommendation: 'Implement comprehensive CSP to prevent XSS attacks',
-      details: 'Current CSP may be too permissive',
+      details: 'Current CSP may be too permissive'
     },
     {
       id: 'x-frame-options',
@@ -68,7 +68,7 @@ const SecurityAuditPanel: React.FC = () => {
       description: 'Check for clickjacking protection',
       status: 'pass',
       severity: 'medium',
-      category: 'headers',
+      category: 'headers'
     },
     {
       id: 'x-content-type',
@@ -76,7 +76,7 @@ const SecurityAuditPanel: React.FC = () => {
       description: 'Verify MIME type sniffing protection',
       status: 'pass',
       severity: 'medium',
-      category: 'headers',
+      category: 'headers'
     },
     {
       id: 'referrer-policy',
@@ -84,7 +84,7 @@ const SecurityAuditPanel: React.FC = () => {
       description: 'Check referrer information leakage protection',
       status: 'pass',
       severity: 'low',
-      category: 'headers',
+      category: 'headers'
     },
     {
       id: 'mixed-content',
@@ -92,7 +92,7 @@ const SecurityAuditPanel: React.FC = () => {
       description: 'Scan for HTTP resources on HTTPS pages',
       status: 'pass',
       severity: 'high',
-      category: 'content',
+      category: 'content'
     },
     {
       id: 'sensitive-data',
@@ -100,7 +100,7 @@ const SecurityAuditPanel: React.FC = () => {
       description: 'Check for exposed sensitive information',
       status: 'pass',
       severity: 'critical',
-      category: 'data',
+      category: 'data'
     },
     {
       id: 'authentication',
@@ -109,7 +109,7 @@ const SecurityAuditPanel: React.FC = () => {
       status: 'info',
       severity: 'medium',
       category: 'authentication',
-      recommendation: 'Implement multi-factor authentication',
+      recommendation: 'Implement multi-factor authentication'
     },
     {
       id: 'session-security',
@@ -118,7 +118,7 @@ const SecurityAuditPanel: React.FC = () => {
       status: 'warning',
       severity: 'medium',
       category: 'authentication',
-      recommendation: 'Implement secure session management',
+      recommendation: 'Implement secure session management'
     },
     {
       id: 'input-validation',
@@ -126,7 +126,7 @@ const SecurityAuditPanel: React.FC = () => {
       description: 'Check for proper input validation',
       status: 'pass',
       severity: 'high',
-      category: 'content',
+      category: 'content'
     },
     {
       id: 'error-handling',
@@ -135,8 +135,8 @@ const SecurityAuditPanel: React.FC = () => {
       status: 'warning',
       severity: 'low',
       category: 'content',
-      recommendation: 'Ensure errors don\'t leak sensitive information',
-    },
+      recommendation: 'Ensure errors don\'t leak sensitive information'
+    }
   ];
 
   const runSecurityAudit = async () => {
@@ -171,7 +171,7 @@ const SecurityAuditPanel: React.FC = () => {
       failedChecks,
       warnings,
       checks,
-      lastUpdated: Date.now(),
+      lastUpdated: Date.now()
     });
     
     setIsRunning(false);
@@ -179,37 +179,37 @@ const SecurityAuditPanel: React.FC = () => {
 
   const getStatusIcon = (status: string) => {
 switch (status) {
-case 'pass':,
+case 'pass':
 return <CheckCircle className="w-5 h-5 text-green-600" />;
-case 'fail':,
+case 'fail':
 return <XCircle className="w-5 h-5 text-red-600" />;
-case 'warning':,
+case 'warning':
 return <AlertTriangle className="w-5 h-5 text-yellow-600" />;
-default:,
+default:
 return <Eye className="w-5 h-5 text-blue-600" />;
 }
   };
 
   const getSeverityColor = (severity: string) => {
 switch (severity) {
-case 'critical':,
+case 'critical':
 return 'bg-red-100 text-red-800 border-red-200';
-case 'high':,
+case 'high':
 return 'bg-orange-100 text-orange-800 border-orange-200';
-case 'medium':,
+case 'medium':
 return 'bg-yellow-100 text-yellow-800 border-yellow-200';
-default:,
+default:
 return 'bg-blue-100 text-blue-800 border-blue-200';
 }
   };
 
   const getCategoryIcon = (category: string) => {
 switch (category) {
-case 'headers':,
+case 'headers':
 return <Globe className="w-4 h-4" />;
-case 'authentication':,
+case 'authentication':
 return <Lock className="w-4 h-4" />;
-default:,
+default:
 return <Shield className="w-4 h-4" />;
 }
   };
@@ -371,7 +371,7 @@ Run Security Audit
                         {
 check.recommendation && (
 <div className="bg-blue-50 border border-blue-200 rounded-lg p-3">
-<p className="text-blue-800 text-sm font-medium">Recommendation:</p>,
+<p className="text-blue-800 text-sm font-medium">Recommendation:</p>
 <p className="text-blue-700 text-sm">{check.recommendation
 }</p>
                           </div>

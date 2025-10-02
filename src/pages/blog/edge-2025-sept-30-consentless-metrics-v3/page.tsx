@@ -19,7 +19,7 @@ export default function ConsentlessMetricsV3(): React.JSX.Element {
             differential privacy noise with verifiable attestations—all within 100ms.
           </p>
           <p>
-            Highlights: device-local metrics, freshness windows, attested config, audit trails, and guardrails that
+            Highlights: device-local metrics, freshness windows, attested config, audit trails, and guardrails that,
             enable global compliance without sacrificing speed or signal quality.
           </p>
         </div>

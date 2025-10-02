@@ -1,7 +1,7 @@
 export const measurePerformance = () => {
 if (typeof window === 'undefined') return;
 // Web Vitals monitoring
-const logMetric = (metric: any) => {,
+const logMetric = (metric: any) => {
 console.log(`[Performance] ${metric.name
 }:`, metric.value);
   };
@@ -14,7 +14,7 @@ console.log(`[Performance] ${metric.name
           if (entry.entryType === 'paint') {
             logMetric({
               name: entry.name,
-              value: entry.startTime,
+              value: entry.startTime
             });
           }
         }
@@ -33,7 +33,7 @@ console.log(`[Performance] ${metric.name
         const pageLoadTime = timing.loadEventEnd - timing.navigationStart;
         logMetric({
           name: 'Page Load Time',
-          value: pageLoadTime,
+          value: pageLoadTime
         });
       }, 0);
     });

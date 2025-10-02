@@ -29,7 +29,7 @@ export default function AIOperationalScorecards2027(): React.JSX.Element {
             pre-approved rollback actions automatically when thresholds breach.
           </p>
           <p>
-            This guide covers scorecard design, alert budgets, CI policy tests,
+            This guide covers scorecard design, alert budgets, CI policy tests
             and live canaries for GenAI and agentic systems.
           </p>
         </div>

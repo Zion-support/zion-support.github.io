@@ -254,7 +254,7 @@ const September30MegaBanner2025 = () => {
           <div className="flex flex-wrap gap-3 justify-center">
             {[
               "Real-Time AI",
-              "Neural Code Synthesis", 
+              "Neural Code Synthesis",
               "Multimodal Fusion",
               "Supply Chain Optimization",
               "Cognitive Assistants",

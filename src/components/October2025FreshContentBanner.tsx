@@ -23,7 +23,7 @@ const October2025FreshContentBanner = () => {
           </h2>
           
           <p className="text-xl text-purple-200 max-w-3xl mx-auto">
-            Fresh insights on DevSecOps automation, multimodal customer experience, autonomous networking, 
+            Fresh insights on DevSecOps automation, multimodal customer experience, autonomous networking
             and advanced prompt engineering—featuring real ROI metrics and implementation blueprints
           </p>
         </div>
@@ -115,7 +115,7 @@ const October2025FreshContentBanner = () => {
             </h3>
             
             <p className="text-blue-200/80 text-sm mb-4 line-clamp-3">
-              Transform network management with autonomous SD-WAN that optimizes routing, predicts failures, 
+              Transform network management with autonomous SD-WAN that optimizes routing, predicts failures
               and self-heals—reducing incidents by 91% and improving performance by 6.8x.
             </p>
             

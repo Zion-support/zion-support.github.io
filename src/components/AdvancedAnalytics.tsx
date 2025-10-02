@@ -7,8 +7,8 @@ enableErrorTracking?: boolean;
 }
 
 const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
-  enableConversionTracking = true,
-  enablePerformanceTracking = true,
+  enableConversionTracking = true
+  enablePerformanceTracking = true
   enableErrorTracking = true
 }) => {
   useEffect(() => {
@@ -18,7 +18,7 @@ const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
         window.gtag('config', 'G-XXXXXXXXXX', {
           page_title: document.title,
           page_location: window.location.href,
-          custom_map: {
+          custom_map: {,
             custom_parameter_1: 'ai_solutions',
             custom_parameter_2: 'enterprise_tech'
           }

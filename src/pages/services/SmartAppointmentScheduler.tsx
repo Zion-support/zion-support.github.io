@@ -1,7 +1,5 @@
 import React from 'react';
-import {
-Helmet
-} from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';
 import {
 
 } from 'lucide-react';
@@ -25,7 +23,7 @@ const SmartAppointmentScheduler: React.FC = () => {
               Smart Appointment Scheduler
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-              Healthcare-focused SaaS for online appointments, virtual consultations, patient data management, 
+              Healthcare-focused SaaS for online appointments, virtual consultations, patient data management
               and automated reminders. Streamline your practice with intelligent scheduling.
             </p>
             <div className="bg-white rounded-lg shadow-lg p-6 max-w-2xl mx-auto">

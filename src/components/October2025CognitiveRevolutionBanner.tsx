@@ -43,7 +43,7 @@ const October2025CognitiveRevolutionBanner: React.FC = () => {
                 <span className="font-bold text-green-300">98.7% decision accuracy</span>,{' '}
                 <span className="font-bold text-green-300">$4.7B+ in value creation</span>, and{' '}
                 <span className="font-bold text-green-300">3,600% ROI</span>. 
-                Explore multi-agent orchestration (97.8% automation, $847M+ value), cognitive enterprise transformation, 
+                Explore multi-agent orchestration (97.8% automation, $847M+ value), cognitive enterprise transformation
                 and real-world telecom success story with transformational results!
               </p>
               

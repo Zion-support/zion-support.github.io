@@ -37,16 +37,16 @@ popular?: boolean;
 };
   features: string[];
   metrics?: Array<{
-value: string;,
+value: string;
 label: string;
 }>;
   testimonial?: {
-quote: string;,
-author: string;,
+quote: string;
+author: string;
 company: string;
 };
-  cta: {
-primary: string;,
+  cta: {,
+primary: string;
 secondary: string;
 };
   icon: string;
@@ -210,32 +210,32 @@ export const services: Service[] = [
     title: 'AI Analytics Platform',
     description: 'Transform data into actionable insights with predictive modeling and real-time dashboards',
     category: 'AI & Analytics',
-    pricing: {
+    pricing: {,
       starting: '$199/month',
       popular: true
-    },
-    features: [
+    }
+    features: [,
       'Predictive Analytics',
       'Real-time Dashboards',
       'Data Integration',
       'Automated Reporting',
       'Machine Learning Models',
       'Custom Visualizations'
-    ],
-    metrics: [
-      { value: '85%', label: 'Faster Decision Making' },
-      { value: '98%', label: 'Prediction Accuracy' },
+    ]
+    metrics: [,
+      { value: '85%', label: 'Faster Decision Making' }
+      { value: '98%', label: 'Prediction Accuracy' }
       { value: '300%', label: 'ROI Improvement' }
-    ],
-    testimonial: {
+    ]
+    testimonial: {,
       quote: 'The AI Analytics Platform transformed how we make decisions. We can now predict trends and optimize operations like never before.',
       author: 'Sarah Chen',
       company: 'TechCorp Inc.'
-    },
-    cta: {
+    }
+    cta: {,
       primary: 'Start Free Trial',
       secondary: 'View Case Studies'
-    },
+    }
     icon: '📊',
     featured: true,
     slug: '/services/ai-analytics-platform',
@@ -246,26 +246,26 @@ export const services: Service[] = [
     title: 'AI Workflow Automation',
     description: 'Automate business processes with intelligent workflow design and smart triggers',
     category: 'AI & Automation',
-    pricing: {
+    pricing: {,
       starting: '$149/month'
-    },
-    features: [
+    }
+    features: [,
       'Process Automation',
       'Smart Triggers',
       'Performance Monitoring',
       'Exception Handling',
       'Integration APIs',
       'Custom Workflows'
-    ],
-    metrics: [
-      { value: '75%', label: 'Process Efficiency' },
-      { value: '60%', label: 'Time Savings' },
+    ]
+    metrics: [,
+      { value: '75%', label: 'Process Efficiency' }
+      { value: '60%', label: 'Time Savings' }
       { value: '90%', label: 'Error Reduction' }
-    ],
-    cta: {
+    ]
+    cta: {,
       primary: 'Get Started',
       secondary: 'View Demo'
-    },
+    }
     icon: '⚙️',
     featured: true,
     slug: '/services/ai-workflow-automation',
@@ -276,26 +276,26 @@ export const services: Service[] = [
     title: 'AI Virtual Assistant',
     description: '24/7 intelligent customer support with natural language processing',
     category: 'AI & Customer Service',
-    pricing: {
+    pricing: {,
       starting: '$99/month'
-    },
-    features: [
+    }
+    features: [,
       '24/7 Support',
       'Multi-channel',
       'Personalized Responses',
       'Natural Language Processing',
       'Sentiment Analysis',
       'Escalation Management'
-    ],
-    metrics: [
-      { value: '95%', label: 'Customer Satisfaction' },
-      { value: '80%', label: 'Faster Response' },
+    ]
+    metrics: [,
+      { value: '95%', label: 'Customer Satisfaction' }
+      { value: '80%', label: 'Faster Response' }
       { value: '50%', label: 'Cost Reduction' }
-    ],
-    cta: {
+    ]
+    cta: {,
       primary: 'Try Demo',
       secondary: 'Learn More'
-    },
+    }
     icon: '💬',
     featured: true,
     slug: '/services/ai-virtual-assistant',
@@ -306,21 +306,21 @@ export const services: Service[] = [
     title: 'Cloud Migration',
     description: 'Seamless migration to cloud infrastructure with zero downtime',
     category: 'Cloud Services',
-    pricing: {
+    pricing: {,
       starting: '$2,999'
-    },
-    features: [
+    }
+    features: [,
       'Zero Downtime',
       'Security Compliance',
       'Cost Optimization',
       'Performance Monitoring',
       'Disaster Recovery',
       'Scalability Planning'
-    ],
-    cta: {
+    ]
+    cta: {,
       primary: 'Get Quote',
       secondary: 'View Process'
-    },
+    }
     icon: '☁️',
     featured: false,
     slug: '/services/cloud-migration',
@@ -331,21 +331,21 @@ export const services: Service[] = [
     title: 'DevOps Automation',
     description: 'Automate CI/CD pipelines and infrastructure management',
     category: 'DevOps & Infrastructure',
-    pricing: {
+    pricing: {,
       starting: '$399/month'
-    },
-    features: [
+    }
+    features: [,
       'CI/CD Pipelines',
       'Infrastructure as Code',
       'Auto-scaling',
       'Monitoring & Alerting',
       'Security Scanning',
       'Performance Optimization'
-    ],
-    cta: {
+    ]
+    cta: {,
       primary: 'Start Setup',
       secondary: 'View Benefits'
-    },
+    }
     icon: '🔧',
     featured: false,
     slug: '/services/devops-automation',
@@ -356,21 +356,21 @@ export const services: Service[] = [
     title: 'Cybersecurity Consulting',
     description: 'Advanced threat detection and zero-trust security architecture',
     category: 'Security & Compliance',
-    pricing: {
+    pricing: {,
       starting: '$599/month'
-    },
-    features: [
+    }
+    features: [,
       'Threat Detection',
       'Zero-trust Architecture',
       'Compliance',
       'Security Audits',
       'Incident Response',
       'Security Training'
-    ],
-    cta: {
+    ]
+    cta: {,
       primary: 'Security Audit',
       secondary: 'View Services'
-    },
+    }
     icon: '🛡️',
     featured: false,
     slug: '/services/cybersecurity-consulting',
@@ -576,8 +576,8 @@ export const getContentByTag = (tag: string) => {
 
 export const getRecentContent = (limit: number = 3) => {
   const allContent = [
-    ...blogPosts.map(post => ({ ...post, type: 'blog' as const })),
-    ...caseStudies.map(study => ({ ...study, type: 'case-study' as const })),
+    ...blogPosts.map(post => ({ ...post, type: 'blog' as const }))
+    ...caseStudies.map(study => ({ ...study, type: 'case-study' as const }))
     ...services.map(service => ({ ...service, type: 'service' as const }))
   ];
   

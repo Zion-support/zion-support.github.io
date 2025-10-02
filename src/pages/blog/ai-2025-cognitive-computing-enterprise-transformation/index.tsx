@@ -53,7 +53,7 @@ const CognitiveComputingTransformation: React.FC = () => {
               </h1>
               
               <p className="text-xl text-purple-100 leading-relaxed mb-8">
-                Leading organizations are achieving <span className="font-bold text-green-300">98.5% decision accuracy</span>, 
+                Leading organizations are achieving <span className="font-bold text-green-300">98.5% decision accuracy</span>
                 <span className="font-bold text-green-300"> $1.2B+ in annual value</span>, and 
                 <span className="font-bold text-green-300"> 92% faster problem-solving</span> by deploying cognitive AI platforms that understand, reason, and learn like humans.
               </p>
@@ -136,7 +136,7 @@ const CognitiveComputingTransformation: React.FC = () => {
                     {
                       title: "Natural Language Understanding",
                       icon: "💬",
-                      features: [
+                      features: [,
                         "Semantic comprehension of unstructured text",
                         "Intent recognition with 98.7% accuracy",
                         "Multi-language support for global operations",
@@ -146,7 +146,7 @@ const CognitiveComputingTransformation: React.FC = () => {
                     {
                       title: "Knowledge Reasoning",
                       icon: "🧠",
-                      features: [
+                      features: [,
                         "Inference over complex knowledge graphs",
                         "Causal relationship understanding",
                         "Analogical reasoning for novel situations",
@@ -156,7 +156,7 @@ const CognitiveComputingTransformation: React.FC = () => {
                     {
                       title: "Continuous Learning",
                       icon: "📈",
-                      features: [
+                      features: [,
                         "Adaptive models that improve over time",
                         "Transfer learning across domains",
                         "Few-shot learning for new scenarios",
@@ -166,7 +166,7 @@ const CognitiveComputingTransformation: React.FC = () => {
                     {
                       title: "Explainable Intelligence",
                       icon: "🔍",
-                      features: [
+                      features: [,
                         "Transparent decision pathways",
                         "Confidence scoring for recommendations",
                         "Audit trails for compliance",
@@ -203,7 +203,7 @@ const CognitiveComputingTransformation: React.FC = () => {
                     {
                       title: "Intelligent Decision Support",
                       industry: "Financial Services",
-                      impact: {
+                      impact: {,
                         accuracy: "98.5% accurate risk predictions",
                         value: "$847M prevented losses",
                         speed: "85% faster decision-making",
@@ -213,7 +213,7 @@ const CognitiveComputingTransformation: React.FC = () => {
                     {
                       title: "Customer Intelligence Platform",
                       industry: "Retail",
-                      impact: {
+                      impact: {,
                         conversion: "12.8x increase in conversion rates",
                         satisfaction: "97.8% customer satisfaction",
                         revenue: "$3.4B incremental revenue",
@@ -223,7 +223,7 @@ const CognitiveComputingTransformation: React.FC = () => {
                     {
                       title: "Autonomous Operations Management",
                       industry: "Manufacturing",
-                      impact: {
+                      impact: {,
                         prediction: "99.6% prediction accuracy",
                         downtime: "87% reduction in downtime",
                         savings: "$2.1B prevented losses",

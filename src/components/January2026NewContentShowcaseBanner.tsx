@@ -2,10 +2,10 @@ import React from 'react';
 
 const January2026NewContentShowcaseBanner: React.FC = () => {
   const features = [
-    { icon: Brain, title: "Synthetic Consciousness", desc: "True AI awareness" },
-    { icon: Zap, title: "Quantum Edge Processing", desc: "Sub-millisecond speed" },
-    { icon: Network, title: "Autonomous Mesh", desc: "Self-organizing systems" },
-    { icon: Shield, title: "Quantum Security", desc: "Unbreakable protection" },
+    { icon: Brain, title: "Synthetic Consciousness", desc: "True AI awareness" }
+    { icon: Zap, title: "Quantum Edge Processing", desc: "Sub-millisecond speed" }
+    { icon: Network, title: "Autonomous Mesh", desc: "Self-organizing systems" }
+    { icon: Shield, title: "Quantum Security", desc: "Unbreakable protection" }
     { icon: Cpu, title: "Neuromorphic AI", desc: "Brain-inspired computing" }
   ];
 
@@ -49,7 +49,7 @@ const January2026NewContentShowcaseBanner: React.FC = () => {
             transition={{ delay: 0.4, duration: 0.6 }}
             className="text-xl text-blue-100 max-w-3xl mx-auto"
           >
-            Discover groundbreaking AI technologies that are revolutionizing enterprise operations, 
+            Discover groundbreaking AI technologies that are revolutionizing enterprise operations
             from synthetic consciousness to quantum edge computing and autonomous mesh networks.
           </motion.p>
         </div>

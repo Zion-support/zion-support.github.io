@@ -10,9 +10,9 @@ strategy: 'LRU' | 'LFU' | 'FIFO';
 }
 
 interface CacheEntry<T> {
-value: T;,
-timestamp: number;,
-accessCount: number;,
+value: T;
+timestamp: number;
+accessCount: number;
 size: number;
 }
 
@@ -32,14 +32,14 @@ class AdvancedCacheManager<T = any> {
     misses: 0,
     evictions: 0,
     currentSize: 0,
-    hitRate: 0,
+    hitRate: 0
   };
 
   constructor(config: Partial<CacheConfig> = {}) {
     this.config = {
-      maxAge: config.maxAge || 5 * 60 * 1000, // 5 minutes default
+      maxAge: config.maxAge || 5 * 60 * 1000, // 5 minutes default,
       maxSize: config.maxSize || 100,
-      strategy: config.strategy || 'LRU',
+      strategy: config.strategy || 'LRU'
     };
   }
 
@@ -92,7 +92,7 @@ class AdvancedCacheManager<T = any> {
       value,
       timestamp: Date.now(),
       accessCount: 0,
-      size,
+      size
     });
 
     this.stats.currentSize = this.cache.size;
@@ -157,15 +157,15 @@ class AdvancedCacheManager<T = any> {
    */
   private evict(): void {
 if (this.cache.size === 0) return;
-let keyToEvict: string | null = null;,
+let keyToEvict: string | null = null;
 switch (this.config.strategy) {
-case 'LRU': // Least Recently Used,
+case 'LRU': // Least Recently Used
 keyToEvict = this.findLRUKey();
 break;
-case 'LFU': // Least Frequently Used,
+case 'LFU': // Least Frequently Used
 keyToEvict = this.findLFUKey();
 break;
-case 'FIFO': // First In First Out,
+case 'FIFO': // First In First Out
 keyToEvict = this.cache.keys().next().value || null;
 break;
 }
@@ -285,8 +285,8 @@ break;
    */
   updateConfig(newConfig: Partial<CacheConfig>): void {
     this.config = {
-      ...this.config,
-      ...newConfig,
+      ...this.config
+      ...newConfig
     };
   }
 
@@ -333,21 +333,21 @@ break;
 
 // Singleton instances for different cache types
 const apiCache = new AdvancedCacheManager<any>({
-  maxAge: 5 * 60 * 1000, // 5 minutes
+  maxAge: 5 * 60 * 1000, // 5 minutes,
   maxSize: 100,
-  strategy: 'LRU',
+  strategy: 'LRU'
 });
 
 const contentCache = new AdvancedCacheManager<any>({
-  maxAge: 60 * 60 * 1000, // 1 hour
+  maxAge: 60 * 60 * 1000, // 1 hour,
   maxSize: 50,
-  strategy: 'LFU',
+  strategy: 'LFU'
 });
 
 const imageCache = new AdvancedCacheManager<string>({
-  maxAge: 24 * 60 * 60 * 1000, // 24 hours
+  maxAge: 24 * 60 * 60 * 1000, // 24 hours,
   maxSize: 200,
-  strategy: 'LRU',
+  strategy: 'LRU'
 });
 
 // Start periodic cleanup

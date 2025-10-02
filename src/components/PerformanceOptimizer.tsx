@@ -19,11 +19,11 @@ const PerformanceOptimizer: React.FC = () => {
     fcp: null,
     lcp: null,
     ttfb: null,
-    score: 0,
+    score: 0
   });
 
   useEffect(() => {
-const sendToAnalytics = (metric: any) => {,
+const sendToAnalytics = (metric: any) => {
 // Send to your analytics service
 console.log(`Performance metric ${metric.name
 }:`, metric.value);
@@ -31,19 +31,19 @@ console.log(`Performance metric ${metric.name
       setMetrics(prev => {
         const newMetrics = { ...prev };
         switch (metric.name) {
-case 'CLS':,
+case 'CLS':
 newMetrics.cls = metric.value;
 break;
-case 'FID':,
+case 'FID':
 newMetrics.fid = metric.value;
 break;
-case 'FCP':,
+case 'FCP':
 newMetrics.fcp = metric.value;
 break;
-case 'LCP':,
+case 'LCP':
 newMetrics.lcp = metric.value;
 break;
-case 'TTFB':,
+case 'TTFB':
 newMetrics.ttfb = metric.value;
 break;
 }
@@ -114,10 +114,10 @@ break;
           justify-content: center;
         }
         .hero-title {
-font-size: 3rem;,
-font-weight: 700;,
-color: white;,
-text-align: center;,
+font-size: 3rem;
+font-weight: 700;
+color: white;
+text-align: center;
 margin-bottom: 1rem;
 }
         @media (max-width: 768px) {

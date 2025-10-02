@@ -84,7 +84,7 @@ export default function RealtimePersonalizationEngine2025(): void {
               <div className="bg-slate-800/50 rounded-xl p-6 mb-6 border border-rose-500/20">
                 <h3 className="text-2xl font-bold mb-4 text-pink-300">1. Real-Time Signal Processing</h3>
                 <p className="text-gray-300 mb-4">
-                  Stream processing infrastructure ingests and analyzes user interactions in under 50ms. Behavioral signals, 
+                  Stream processing infrastructure ingests and analyzes user interactions in under 50ms. Behavioral signals
                   contextual data, and intent markers flow through the system continuously, building dynamic user models that 
                   evolve with every action.
                 </p>
@@ -99,7 +99,7 @@ export default function RealtimePersonalizationEngine2025(): void {
                 <h3 className="text-2xl font-bold mb-4 text-pink-300">2. Predictive Intent Modeling</h3>
                 <p className="text-gray-300 mb-4">
                   Deep learning models predict user goals, preferences, and likelihood of conversion based on behavioral 
-                  patterns and contextual signals. Multi-task learning enables simultaneous optimization for engagement, 
+                  patterns and contextual signals. Multi-task learning enables simultaneous optimization for engagement
                   conversion, and long-term value.
                 </p>
                 <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4">

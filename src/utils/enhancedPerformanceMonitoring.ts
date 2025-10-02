@@ -29,9 +29,9 @@ timestamp: number;
 }
 
 class EnhancedPerformanceMonitor {
-private metrics: PerformanceMetrics[] = [];,
-private alerts: PerformanceAlert[] = [];,
-private observers: PerformanceObserver[] = [];,
+private metrics: PerformanceMetrics[] = [];
+private alerts: PerformanceAlert[] = [];
+private observers: PerformanceObserver[] = [];
 private isMonitoring = false;
 constructor() {
 this.initializeObservers();

@@ -8,7 +8,7 @@ const October2025InfrastructureExcellenceBanner = () => {
       icon: Activity,
       link: "/blog/ai-2025-oct-distributed-tracing-microservices",
       gradient: "from-blue-500 to-cyan-500",
-      metrics: ["10M+ events/sec", "Sub-ms overhead", "OpenTelemetry"],
+      metrics: ["10M+ events/sec", "Sub-ms overhead", "OpenTelemetry"]
     },
     {
       id: 2,
@@ -17,7 +17,7 @@ const October2025InfrastructureExcellenceBanner = () => {
       icon: Shield,
       link: "/blog/ai-2025-oct-kubernetes-security-best-practices",
       gradient: "from-purple-500 to-pink-500",
-      metrics: ["89% fewer incidents", "Defense-in-depth", "mTLS"],
+      metrics: ["89% fewer incidents", "Defense-in-depth", "mTLS"]
     },
     {
       id: 3,
@@ -26,8 +26,8 @@ const October2025InfrastructureExcellenceBanner = () => {
       icon: Zap,
       link: "/blog/ai-2025-oct-real-time-data-streaming-architectures",
       gradient: "from-orange-500 to-red-500",
-      metrics: ["Kafka + Flink", "Exactly-once", "42% cost cut"],
-    },
+      metrics: ["Kafka + Flink", "Exactly-once", "42% cost cut"]
+    }
   ];
 
   return (

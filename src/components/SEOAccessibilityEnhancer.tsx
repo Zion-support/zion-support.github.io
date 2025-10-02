@@ -1,7 +1,5 @@
 import React, { useEffect } from 'react';
-import {
-Helmet
-} from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';
 
 interface SEOAccessibilityEnhancerProps {
 title?: string;
@@ -13,11 +11,11 @@ structuredData?: any;
 }
 
 const SEOAccessibilityEnhancer: React.FC<SEOAccessibilityEnhancerProps> = ({
-  title = "Zion Tech Group - Advanced AI and IT Solutions",
-  description = "Leading provider of AI-powered enterprise solutions, quantum computing, and autonomous systems. Transform your business with cutting-edge technology.",
-  keywords = ["AI", "Artificial Intelligence", "Enterprise Solutions", "Quantum Computing", "Automation", "IT Services"],
-  canonicalUrl,
-  ogImage = "/og-image.jpg",
+  title = "Zion Tech Group - Advanced AI and IT Solutions"
+  description = "Leading provider of AI-powered enterprise solutions, quantum computing, and autonomous systems. Transform your business with cutting-edge technology."
+  keywords = ["AI", "Artificial Intelligence", "Enterprise Solutions", "Quantum Computing", "Automation", "IT Services"]
+  canonicalUrl
+  ogImage = "/og-image.jpg"
   structuredData
 }) => {
   useEffect(() => {
@@ -102,7 +100,7 @@ const SEOAccessibilityEnhancer: React.FC<SEOAccessibilityEnhancerProps> = ({
 
       // Preload critical resources
       const criticalResources = [
-        { href: '/fonts/inter.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' },
+        { href: '/fonts/inter.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' }
         { href: '/css/critical.css', as: 'style' }
       ];
 
@@ -124,7 +122,7 @@ const SEOAccessibilityEnhancer: React.FC<SEOAccessibilityEnhancerProps> = ({
     const style = document.createElement('style');
     style.textContent = `
       .keyboard-navigation *:focus {
-outline: 2px solid #3b82f6 !important;,
+outline: 2px solid #3b82f6 !important;
 outline-offset: 2px !important;
 }
       
@@ -141,13 +139,13 @@ outline-offset: 2px !important;
       }
       
       .focus\\:not-sr-only:focus {
-position: static;,
-width: auto;,
-height: auto;,
-padding: inherit;,
-margin: inherit;,
-overflow: visible;,
-clip: auto;,
+position: static;
+width: auto;
+height: auto;
+padding: inherit;
+margin: inherit;
+overflow: visible;
+clip: auto;
 white-space: normal;
 }
     `;
@@ -167,12 +165,12 @@ white-space: normal;
     "description": description,
     "url": canonicalUrl || window.location.origin,
     "logo": `${window.location.origin}/logo.png`,
-    "sameAs": [
+    "sameAs": [,
       "https://twitter.com/ziontechgroup",
       "https://linkedin.com/company/ziontechgroup",
       "https://github.com/ziontechgroup"
-    ],
-    "contactPoint": {
+    ]
+    "contactPoint": {,
       "@type": "ContactPoint",
       "telephone": "+1-555-0123",
       "contactType": "customer service"

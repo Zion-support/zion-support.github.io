@@ -6,17 +6,17 @@ className?: string;
 };
 
 export default function NewServices2026Banner({
-  variant = "showcase",
-  showCount = 6,
-  className = "",
+  variant = "showcase"
+  showCount = 6
+  className = ""
 }: NewServices2026BannerProps): void {
   const services = [
-    { title: "AI Autonomous Cloud Ops", link: "/services/ai-autonomous-infrastructure-platform", tag: "Cloud" },
-    { title: "AI Cybersecurity Suite", link: "/services/ai-cybersecurity-suite", tag: "Security" },
-    { title: "AI Multimodal Enterprise", link: "/services/ai-multimodal-enterprise", tag: "Multimodal" },
-    { title: "AI FinTech Transformation", link: "/services/ai-fintech-transformation", tag: "FinTech" },
-    { title: "AI Sustainability & Green Tech", link: "/services/ai-sustainability-green-tech", tag: "Sustainability" },
-    { title: "AI Retail Automation", link: "/services/ai-retail-automation", tag: "Retail" },
+    { title: "AI Autonomous Cloud Ops", link: "/services/ai-autonomous-infrastructure-platform", tag: "Cloud" }
+    { title: "AI Cybersecurity Suite", link: "/services/ai-cybersecurity-suite", tag: "Security" }
+    { title: "AI Multimodal Enterprise", link: "/services/ai-multimodal-enterprise", tag: "Multimodal" }
+    { title: "AI FinTech Transformation", link: "/services/ai-fintech-transformation", tag: "FinTech" }
+    { title: "AI Sustainability & Green Tech", link: "/services/ai-sustainability-green-tech", tag: "Sustainability" }
+    { title: "AI Retail Automation", link: "/services/ai-retail-automation", tag: "Retail" }
   ].slice(0, Math.max(1, showCount));
 
   return (
@@ -25,7 +25,7 @@ export default function NewServices2026Banner({
 `w-full ${
 variant === "hero"
 ? "bg-gradient-to-r from-indigo-600 to-purple-600"
-: variant === "info",
+: variant === "info"
 ? "bg-gradient-to-r from-emerald-50 to-teal-50"
 : "bg-gradient-to-r from-blue-600 to-purple-600"
 } ${variant === "info" ? "text-gray-900" : "text-white"} py-12 ${className}`

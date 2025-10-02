@@ -38,16 +38,16 @@ export const enterpriseCaseStudies2025: EnterpriseCaseStudy[] = [
     description: "Complete enterprise AI transformation achieving 99.99% operational autonomy, $3.7B value creation, and zero human error operations.",
     challenge: "Manual processes, operational inefficiencies, and high error rates across 450 global facilities",
     solution: "Implemented comprehensive AI mesh network with autonomous decision-making and self-healing infrastructure",
-    results: {
-      metrics: {
+    results: {,
+      metrics: {,
         performance: "99.99% uptime",
         savings: "$3.7B annually",
         accuracy: "Zero errors",
         roi: "2,400%"
-      },
+      }
       timeframe: "18 months",
       scale: "450 facilities globally"
-    },
+    }
     technologies: ["Autonomous AI", "Self-Healing Infrastructure", "Predictive Analytics", "IoT Integration"],
     featured: true,
     date: "2025-01-20",
@@ -65,16 +65,16 @@ export const enterpriseCaseStudies2025: EnterpriseCaseStudy[] = [
     description: "Advanced AI fraud detection system preventing $47B in fraudulent transactions with 99.94% accuracy and real-time processing.",
     challenge: "Sophisticated fraud schemes causing $200M+ annual losses and regulatory compliance requirements",
     solution: "Deployed quantum-enhanced neural networks with real-time behavioral analysis and predictive modeling",
-    results: {
-      metrics: {
+    results: {,
+      metrics: {,
         performance: "99.94% accuracy",
         savings: "$47B prevented",
         accuracy: "Sub-1ms detection",
         roi: "3,200%"
-      },
+      }
       timeframe: "12 months",
       scale: "50M+ transactions daily"
-    },
+    }
     technologies: ["Quantum AI", "Real-time Analytics", "Behavioral Analysis", "Predictive Modeling"],
     featured: true,
     date: "2025-01-20",
@@ -92,16 +92,16 @@ export const enterpriseCaseStudies2025: EnterpriseCaseStudy[] = [
     description: "AI-powered diagnostic system achieving 94% diagnostic accuracy, 252 lives saved, and 497% ROI in healthcare delivery.",
     challenge: "Diagnostic delays, accuracy issues, and resource constraints affecting patient outcomes",
     solution: "Implemented multimodal AI diagnostic platform with real-time analysis and clinical decision support",
-    results: {
-      metrics: {
+    results: {,
+      metrics: {,
         performance: "94% accuracy",
         savings: "$1.5B value",
         accuracy: "252 lives saved",
         roi: "497%"
-      },
+      }
       timeframe: "15 months",
       scale: "25 hospitals, 500K patients"
-    },
+    }
     technologies: ["Multimodal AI", "Diagnostic Imaging", "Clinical Decision Support", "Real-time Analytics"],
     featured: true,
     date: "2025-01-20",
@@ -119,16 +119,16 @@ export const enterpriseCaseStudies2025: EnterpriseCaseStudy[] = [
     description: "AI-driven supply chain optimization achieving 65% faster deliveries, 40% cost reduction, and 95% inventory accuracy.",
     challenge: "Supply chain inefficiencies, stockouts, and delivery delays affecting customer satisfaction",
     solution: "Deployed autonomous supply chain AI with predictive analytics and dynamic optimization",
-    results: {
-      metrics: {
+    results: {,
+      metrics: {,
         performance: "65% faster delivery",
         savings: "40% cost reduction",
         accuracy: "95% inventory accuracy",
         roi: "2,800%"
-      },
+      }
       timeframe: "10 months",
       scale: "2,000+ stores globally"
-    },
+    }
     technologies: ["Supply Chain AI", "Predictive Analytics", "Autonomous Optimization", "IoT Sensors"],
     featured: true,
     date: "2025-01-20",
@@ -146,16 +146,16 @@ export const enterpriseCaseStudies2025: EnterpriseCaseStudy[] = [
     description: "Smart grid AI system achieving 99.97% uptime, 60% energy efficiency improvement, and $890M annual savings.",
     challenge: "Grid instability, energy waste, and maintenance inefficiencies in aging infrastructure",
     solution: "Implemented AI-powered smart grid with predictive maintenance and autonomous energy distribution",
-    results: {
-      metrics: {
+    results: {,
+      metrics: {,
         performance: "99.97% uptime",
         savings: "$890M annually",
         accuracy: "60% efficiency gain",
         roi: "1,600%"
-      },
+      }
       timeframe: "20 months",
       scale: "5M+ customers served"
-    },
+    }
     technologies: ["Smart Grid AI", "Predictive Maintenance", "Energy Optimization", "IoT Integration"],
     featured: true,
     date: "2025-01-20",
@@ -173,16 +173,16 @@ export const enterpriseCaseStudies2025: EnterpriseCaseStudy[] = [
     description: "Autonomous fleet management achieving 99.8% delivery accuracy, 45% fuel savings, and $2.3B operational value.",
     challenge: "Fleet inefficiencies, fuel costs, and delivery accuracy issues across global operations",
     solution: "Deployed autonomous fleet AI with route optimization and predictive maintenance systems",
-    results: {
-      metrics: {
+    results: {,
+      metrics: {,
         performance: "99.8% accuracy",
         savings: "$2.3B value",
         accuracy: "45% fuel savings",
         roi: "1,900%"
-      },
+      }
       timeframe: "14 months",
       scale: "50,000+ vehicles globally"
-    },
+    }
     technologies: ["Autonomous Fleet", "Route Optimization", "Predictive Maintenance", "IoT Sensors"],
     featured: true,
     date: "2025-01-20",

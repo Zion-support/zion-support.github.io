@@ -1,6 +1,4 @@
-import {
-Link
-} from "react-router-dom";
+import { Link } from "react-router-dom";
 import Header from "../../components/Header";
 
 const GlobalRetailAITransformation = () => {
@@ -127,7 +125,7 @@ const GlobalRetailAITransformation = () => {
             <section>
               <h2 className="text-3xl font-bold text-white mb-6">🎯 AI Transformation Solution</h2>
               <p className="text-lg leading-relaxed mb-6">
-                Zion Tech Group designed and deployed a comprehensive AI platform spanning demand forecasting, 
+                Zion Tech Group designed and deployed a comprehensive AI platform spanning demand forecasting
                 inventory optimization, personalized customer experiences, and intelligent marketing across 
                 all 2,800+ stores and digital channels.
               </p>
@@ -213,7 +211,7 @@ const GlobalRetailAITransformation = () => {
                     Dynamic Pricing Engine
                   </h3>
                   <p className="mb-4">
-                    Real-time pricing optimization considering demand, competition, inventory levels, 
+                    Real-time pricing optimization considering demand, competition, inventory levels
                     and customer segments to maximize revenue and margin.
                   </p>
                   <ul className="space-y-2 text-sm">
@@ -246,7 +244,7 @@ const GlobalRetailAITransformation = () => {
                     <div className="flex-1">
                       <h3 className="text-xl font-bold text-white mb-2">Discovery & Foundation</h3>
                       <p className="text-sm mb-3">
-                        Data infrastructure assessment, AI platform selection, pilot use case identification, 
+                        Data infrastructure assessment, AI platform selection, pilot use case identification
                         and initial model development for demand forecasting.
                       </p>
                       <div className="text-xs text-green-400">✓ Demand forecasting pilot: 94% accuracy in 50 stores</div>
@@ -358,7 +356,7 @@ const GlobalRetailAITransformation = () => {
                 <div className="mt-8 pt-8 border-t border-white/20 text-center">
                   <div className="text-xl text-white mb-2">ROI: <strong className="text-4xl text-green-400">823%</strong></div>
                   <div className="text-sm text-zion-slate-light">
-                    Investment: $59.5M • Value Created: $489M • Payback Period: 4.3 months
+                    Investment: $59.5M • Value Created: $489M • Payback Period: 4.3 months,
                   </div>
                 </div>
               </div>
@@ -371,7 +369,7 @@ const GlobalRetailAITransformation = () => {
                   <div className="text-6xl mb-4">"</div>
                   <p className="text-2xl text-white leading-relaxed mb-6">
                     Zion Tech Group's AI transformation has been nothing short of revolutionary for our business. 
-                    The $489M in value creation exceeded our most optimistic projections. More importantly, 
+                    The $489M in value creation exceeded our most optimistic projections. More importantly
                     we've fundamentally changed how we operate—from reactive to predictive, from generic to 
                     hyper-personalized, from gut-feel to data-driven.
                   </p>

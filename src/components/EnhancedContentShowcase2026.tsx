@@ -9,7 +9,7 @@ publishDate: string;
 category: string;
 featured?: boolean;
 href: string;
-metrics?: {,
+metrics?: {
 label: string;
 value: string;
 }[];
@@ -26,9 +26,9 @@ const contentItems: ContentItem[] = [
     category: 'Cloud Operations',
     featured: true,
     href: '/blog/ai-autonomous-cloud-operations-2026',
-    metrics: [
-      { label: 'Uptime', value: '99.9%' },
-      { label: 'Cost Reduction', value: '90%' },
+    metrics: [,
+      { label: 'Uptime', value: '99.9%' }
+      { label: 'Cost Reduction', value: '90%' }
       { label: 'Operations', value: 'Zero-touch' }
     ]
   },
@@ -42,9 +42,9 @@ const contentItems: ContentItem[] = [
     category: 'FinTech',
     featured: true,
     href: '/blog/ai-fintech-transformation-2026',
-    metrics: [
-      { label: 'Automation', value: '95%' },
-      { label: 'Annual Savings', value: '$5M+' },
+    metrics: [,
+      { label: 'Automation', value: '95%' }
+      { label: 'Annual Savings', value: '$5M+' }
       { label: 'Accuracy', value: '99.9%' }
     ]
   },
@@ -58,9 +58,9 @@ const contentItems: ContentItem[] = [
     category: 'Retail',
     featured: true,
     href: '/case-studies/ai-retail-automation-2026',
-    metrics: [
-      { label: 'Automation Rate', value: '98%' },
-      { label: 'Productivity', value: '300%' },
+    metrics: [,
+      { label: 'Automation Rate', value: '98%' }
+      { label: 'Productivity', value: '300%' }
       { label: 'Annual ROI', value: '$8M' }
     ]
   },
@@ -74,9 +74,9 @@ const contentItems: ContentItem[] = [
     category: 'Sustainability',
     featured: false,
     href: '/blog/ai-sustainability-green-tech-2026',
-    metrics: [
-      { label: 'Energy Reduction', value: '80%' },
-      { label: 'Annual Savings', value: '$2M+' },
+    metrics: [,
+      { label: 'Energy Reduction', value: '80%' }
+      { label: 'Annual Savings', value: '$2M+' }
       { label: 'Carbon Footprint', value: 'Neutral' }
     ]
   },
@@ -90,9 +90,9 @@ const contentItems: ContentItem[] = [
     category: 'Architecture',
     featured: false,
     href: '/blog/ai-platform-architecture-2026',
-    metrics: [
-      { label: 'Scalability', value: 'Enterprise' },
-      { label: 'Performance', value: '99.9%' },
+    metrics: [,
+      { label: 'Scalability', value: 'Enterprise' }
+      { label: 'Performance', value: '99.9%' }
       { label: 'Integration', value: 'Seamless' }
     ]
   },
@@ -106,9 +106,9 @@ const contentItems: ContentItem[] = [
     category: 'FinOps',
     featured: false,
     href: '/blog/ai-finops-advanced-2026',
-    metrics: [
-      { label: 'Cost Optimization', value: '70%' },
-      { label: 'Automation', value: '95%' },
+    metrics: [,
+      { label: 'Cost Optimization', value: '70%' }
+      { label: 'Automation', value: '95%' }
       { label: 'Accuracy', value: '99%' }
     ]
   }
@@ -138,21 +138,21 @@ export default function EnhancedContentShowcase2026(): void {
 
   const getTypeColor = (type: string) => {
 switch (type) {
-case 'blog': return 'bg-blue-100 text-blue-800';,
-case 'case-study': return 'bg-green-100 text-green-800';,
-case 'guide': return 'bg-purple-100 text-purple-800';,
+case 'blog': return 'bg-blue-100 text-blue-800';
+case 'case-study': return 'bg-green-100 text-green-800';
+case 'guide': return 'bg-purple-100 text-purple-800';
 default: return 'bg-gray-100 text-gray-800';
 }
   };
 
   const getCategoryColor = (category: string) => {
 switch (category) {
-case 'Cloud Operations': return 'bg-cyan-100 text-cyan-800';,
-case 'FinTech': return 'bg-emerald-100 text-emerald-800';,
-case 'Retail': return 'bg-orange-100 text-orange-800';,
-case 'Sustainability': return 'bg-green-100 text-green-800';,
-case 'Architecture': return 'bg-indigo-100 text-indigo-800';,
-case 'FinOps': return 'bg-violet-100 text-violet-800';,
+case 'Cloud Operations': return 'bg-cyan-100 text-cyan-800';
+case 'FinTech': return 'bg-emerald-100 text-emerald-800';
+case 'Retail': return 'bg-orange-100 text-orange-800';
+case 'Sustainability': return 'bg-green-100 text-green-800';
+case 'Architecture': return 'bg-indigo-100 text-indigo-800';
+case 'FinOps': return 'bg-violet-100 text-violet-800';
 default: return 'bg-gray-100 text-gray-800';
 }
   };

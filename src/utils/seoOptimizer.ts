@@ -24,7 +24,7 @@ export interface SEOMetadata {
  * Generate meta tags for SEO
  */
 export const generateMetaTags = (metadata: SEOMetadata): string => {
-const tags: string[] = [];,
+const tags: string[] = [];
 // Basic meta tags
 tags.push(`<title>${escapeHtml(metadata.title)
 }</title>`);
@@ -85,29 +85,29 @@ export const generateStructuredData = (type: string, data: Record<string, any>):
  * Generate article structured data
  */
 export const generateArticleStructuredData = (article: {
-title: string;,
-description: string;,
-author: string;,
-publishDate: string;,
-modifiedDate?: string;,
-image?: string;,
+title: string;
+description: string;
+author: string;
+publishDate: string;
+modifiedDate?: string;
+image?: string;
 url: string;
 }): string => {
   return generateStructuredData('Article', {
     headline: article.title,
     description: article.description,
-    author: {
+    author: {,
       '@type': 'Person',
       name: article.author
-    },
+    }
     datePublished: article.publishDate,
     dateModified: article.modifiedDate || article.publishDate,
     image: article.image,
     url: article.url,
-    publisher: {
+    publisher: {,
       '@type': 'Organization',
       name: 'Zion Tech Group',
-      logo: {
+      logo: {,
         '@type': 'ImageObject',
         url: 'https://ziontechgroup.com/logo.png'
       }
@@ -120,7 +120,7 @@ url: string;
  */
 export const generateBreadcrumbStructuredData = (breadcrumbs: Array<{ name: string; url: string }>): string => {
   return generateStructuredData('BreadcrumbList', {
-    itemListElement: breadcrumbs.map((crumb, index) => ({
+    itemListElement: breadcrumbs.map((crumb, index) => ({,
       '@type': 'ListItem',
       position: index + 1,
       name: crumb.name,
@@ -138,12 +138,12 @@ export const generateOrganizationStructuredData = (): string => {
     url: 'https://ziontechgroup.com',
     logo: 'https://ziontechgroup.com/logo.png',
     description: 'Leading AI & IT Solutions provider transforming businesses worldwide',
-    sameAs: [
+    sameAs: [,
       'https://twitter.com/ziontechgroup',
       'https://linkedin.com/company/ziontechgroup',
       'https://github.com/zion-holdings'
-    ],
-    contactPoint: {
+    ]
+    contactPoint: {,
       '@type': 'ContactPoint',
       telephone: '+1-800-ZION-TECH',
       contactType: 'Customer Service',
@@ -157,10 +157,10 @@ export const generateOrganizationStructuredData = (): string => {
  */
 export const generateFAQStructuredData = (faqs: Array<{ question: string; answer: string }>): string => {
   return generateStructuredData('FAQPage', {
-    mainEntity: faqs.map(faq => ({
+    mainEntity: faqs.map(faq => ({,
       '@type': 'Question',
       name: faq.question,
-      acceptedAnswer: {
+      acceptedAnswer: {,
         '@type': 'Answer',
         text: faq.answer
       }
@@ -190,12 +190,12 @@ ${urlsXml}
  * Generate robots.txt
  */
 export const generateRobotsTxt = (config: {
-userAgent?: string;,
-disallow?: string[];,
-allow?: string[];,
+userAgent?: string;
+disallow?: string[];
+allow?: string[];
 sitemap?: string;
 }): string => {
-const lines: string[] = [];,
+const lines: string[] = [];
 lines.push(`User-agent: ${config.userAgent || '*'
 }`);
 
@@ -280,7 +280,7 @@ export const generateSlug = (title: string): string => {
  * Validate URL for SEO
  */
 export const validateSEOUrl = (url: string): { valid: boolean; issues: string[] } => {
-const issues: string[] = [];,
+const issues: string[] = [];
 if (url.length > 100) {
 issues.push('URL is too long (>100 characters)');
 }
@@ -333,12 +333,12 @@ export const calculateReadingTime = (content: string, wordsPerMinute: number = 2
  * Check content quality for SEO
  */
 export const checkContentQuality = (content: string, title: string): {
-score: number;,
-issues: string[];,
+score: number;
+issues: string[];
 recommendations: string[];
 } => {
-const issues: string[] = [];,
-const recommendations: string[] = [];,
+const issues: string[] = [];
+const recommendations: string[] = [];
 let score = 100;
 // Word count check
 const wordCount = content.trim().split(/\s+/).length;

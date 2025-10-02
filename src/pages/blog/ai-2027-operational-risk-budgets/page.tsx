@@ -26,7 +26,7 @@ export default function AIOperationalRiskBudgets2027(): React.JSX.Element {
           <p>
             Move fast without breakage by introducing operational risk budgets: a
             quantified allowance of acceptable risk wired to product KPIs. Route
-            traffic by budget and quality tier, promote only when canaries pass,
+            traffic by budget and quality tier, promote only when canaries pass
             and roll back instantly on regression.
           </p>
           <p>

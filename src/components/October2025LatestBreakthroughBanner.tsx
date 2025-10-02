@@ -31,7 +31,7 @@ const October2025LatestBreakthroughBanner = () => {
         <div className="grid md:grid-cols-3 gap-6 mb-8">
           {
 octoberLatestBreakthroughContent.map((content) => {
-const Icon = content.icon === "🚀" ? Zap : content.icon === "⚡" ? Database : Bot;,
+const Icon = content.icon === "🚀" ? Zap : content.icon === "⚡" ? Database : Bot;
 return (
 <Link
 key={content.id

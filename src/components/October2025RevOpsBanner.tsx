@@ -27,7 +27,7 @@ const October2025RevOpsBanner = () => {
             Transform Your Revenue Engine with AI-Powered Intelligence
           </p>
           <p className="text-lg text-emerald-200 max-w-4xl mx-auto">
-            Discover how leading enterprises are achieving <span className="font-bold text-white">127% ROI</span>, 
+            Discover how leading enterprises are achieving <span className="font-bold text-white">127% ROI</span>
             <span className="font-bold text-white"> 89% forecast accuracy</span>, and 
             <span className="font-bold text-white"> 3.2x pipeline velocity</span> through autonomous revenue operations
           </p>
@@ -70,7 +70,7 @@ const October2025RevOpsBanner = () => {
                 Autonomous RevOps Revolution: Complete Implementation Guide
               </h3>
               <p className="text-emerald-100 text-sm mb-4">
-                Master autonomous revenue operations with AI-powered forecasting, intelligent pipeline management, 
+                Master autonomous revenue operations with AI-powered forecasting, intelligent pipeline management
                 and automated deal acceleration. Learn proven strategies delivering 127% ROI and 89% forecast accuracy.
               </p>
               <Link
@@ -92,7 +92,7 @@ const October2025RevOpsBanner = () => {
                 Fortune 500 SaaS: $127M Revenue Gain in 12 Months
               </h3>
               <p className="text-blue-100 text-sm mb-4">
-                Real-world transformation: How a $2.8B enterprise SaaS company achieved $127M incremental revenue, 
+                Real-world transformation: How a $2.8B enterprise SaaS company achieved $127M incremental revenue
                 89% forecast accuracy, and 3.2x pipeline velocity through autonomous revenue operations.
               </p>
               <Link

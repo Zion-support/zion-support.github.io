@@ -1,7 +1,5 @@
 import React from 'react';
-import {
-Helmet
-} from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';
 
 const Partners: React.FC = () => {
   const partners = [
@@ -54,7 +52,7 @@ const Partners: React.FC = () => {
       title: 'Technology Partners',
       description: 'Leading technology providers and platform partners',
       icon: '🔧',
-      benefits: [
+      benefits: [,
         'Access to cutting-edge technology',
         'Joint go-to-market strategies',
         'Technical support and training'
@@ -64,7 +62,7 @@ const Partners: React.FC = () => {
       title: 'Solution Partners',
       description: 'Specialized solution providers and integrators',
       icon: '🤝',
-      benefits: [
+      benefits: [,
         'Complementary solution offerings',
         'Joint customer implementations',
         'Shared expertise and resources'
@@ -74,7 +72,7 @@ const Partners: React.FC = () => {
       title: 'Channel Partners',
       description: 'Resellers and distribution partners',
       icon: '📈',
-      benefits: [
+      benefits: [,
         'Extended market reach',
         'Local customer support',
         'Revenue sharing opportunities'

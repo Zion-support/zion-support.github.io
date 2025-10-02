@@ -1,10 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import {
-motion
-} from 'framer-motion';
-import {
-Activity
-} from 'lucide-react';
+import { motion } from 'framer-motion';
+import { Activity } from 'lucide-react';
 
 interface AnalyticsData {
 visitors: {,
@@ -13,29 +9,29 @@ unique: number;
 returning: number;
 new: number;
 };
-  pageViews: {
-total: number;,
-average: number;,
+  pageViews: {,
+total: number;
+average: number;
 topPages: Array<{ page: string; views: number; bounceRate: number
 }>;
   };
-  traffic: {
+  traffic: {,
     sources: Array<{ source: string; visitors: number; percentage: number }>;
     countries: Array<{ country: string; visitors: number; percentage: number }>;
     devices: Array<{ device: string; visitors: number; percentage: number }>;
   };
-  performance: {
-averageLoadTime: number;,
-bounceRate: number;,
-conversionRate: number;,
+  performance: {,
+averageLoadTime: number;
+bounceRate: number;
+conversionRate: number;
 engagementScore: number;
 };
-  trends: {
+  trends: {,
     daily: Array<{ date: string; visitors: number; pageViews: number }>;
     weekly: Array<{ week: string; visitors: number; pageViews: number }>;
   };
-  realTime: {
-activeUsers: number;,
+  realTime: {,
+activeUsers: number;
 currentPages: Array<{ page: string; users: number
 }>;
     referrers: Array<{ source: string; users: number }>;
@@ -51,74 +47,74 @@ const AnalyticsDashboard: React.FC = () => {
     const baseMultiplier = range === '24h' ? 1 : range === '7d' ? 7 : range === '30d' ? 30 : 90;
     
     return {
-      visitors: {
+      visitors: {,
         total: Math.floor(Math.random() * 10000 * baseMultiplier) + 5000 * baseMultiplier,
         unique: Math.floor(Math.random() * 8000 * baseMultiplier) + 4000 * baseMultiplier,
         returning: Math.floor(Math.random() * 3000 * baseMultiplier) + 1500 * baseMultiplier,
-        new: Math.floor(Math.random() * 7000 * baseMultiplier) + 3500 * baseMultiplier,
-      },
-      pageViews: {
+        new: Math.floor(Math.random() * 7000 * baseMultiplier) + 3500 * baseMultiplier
+      }
+      pageViews: {,
         total: Math.floor(Math.random() * 50000 * baseMultiplier) + 25000 * baseMultiplier,
         average: Math.floor(Math.random() * 5) + 3,
-        topPages: [
-          { page: '/', views: Math.floor(Math.random() * 5000) + 3000, bounceRate: Math.random() * 0.4 + 0.2 },
-          { page: '/services', views: Math.floor(Math.random() * 3000) + 1500, bounceRate: Math.random() * 0.3 + 0.3 },
-          { page: '/about', views: Math.floor(Math.random() * 2000) + 1000, bounceRate: Math.random() * 0.2 + 0.2 },
-          { page: '/contact', views: Math.floor(Math.random() * 1500) + 800, bounceRate: Math.random() * 0.5 + 0.1 },
-          { page: '/blog', views: Math.floor(Math.random() * 1200) + 600, bounceRate: Math.random() * 0.3 + 0.4 },
-        ],
-      },
-      traffic: {
-        sources: [
-          { source: 'Organic Search', visitors: Math.floor(Math.random() * 3000) + 2000, percentage: 45 },
-          { source: 'Direct', visitors: Math.floor(Math.random() * 2000) + 1500, percentage: 30 },
-          { source: 'Social Media', visitors: Math.floor(Math.random() * 1000) + 500, percentage: 15 },
-          { source: 'Referral', visitors: Math.floor(Math.random() * 800) + 300, percentage: 10 },
-        ],
-        countries: [
-          { country: 'United States', visitors: Math.floor(Math.random() * 2000) + 1500, percentage: 35 },
-          { country: 'United Kingdom', visitors: Math.floor(Math.random() * 800) + 500, percentage: 15 },
-          { country: 'Canada', visitors: Math.floor(Math.random() * 600) + 400, percentage: 12 },
-          { country: 'Germany', visitors: Math.floor(Math.random() * 500) + 300, percentage: 10 },
-          { country: 'Australia', visitors: Math.floor(Math.random() * 400) + 250, percentage: 8 },
-        ],
-        devices: [
-          { device: 'Desktop', visitors: Math.floor(Math.random() * 3000) + 2000, percentage: 60 },
-          { device: 'Mobile', visitors: Math.floor(Math.random() * 2000) + 1500, percentage: 35 },
-          { device: 'Tablet', visitors: Math.floor(Math.random() * 500) + 200, percentage: 5 },
-        ],
-      },
-      performance: {
+        topPages: [,
+          { page: '/', views: Math.floor(Math.random() * 5000) + 3000, bounceRate: Math.random() * 0.4 + 0.2 }
+          { page: '/services', views: Math.floor(Math.random() * 3000) + 1500, bounceRate: Math.random() * 0.3 + 0.3 }
+          { page: '/about', views: Math.floor(Math.random() * 2000) + 1000, bounceRate: Math.random() * 0.2 + 0.2 }
+          { page: '/contact', views: Math.floor(Math.random() * 1500) + 800, bounceRate: Math.random() * 0.5 + 0.1 }
+          { page: '/blog', views: Math.floor(Math.random() * 1200) + 600, bounceRate: Math.random() * 0.3 + 0.4 }
+        ]
+      }
+      traffic: {,
+        sources: [,
+          { source: 'Organic Search', visitors: Math.floor(Math.random() * 3000) + 2000, percentage: 45 }
+          { source: 'Direct', visitors: Math.floor(Math.random() * 2000) + 1500, percentage: 30 }
+          { source: 'Social Media', visitors: Math.floor(Math.random() * 1000) + 500, percentage: 15 }
+          { source: 'Referral', visitors: Math.floor(Math.random() * 800) + 300, percentage: 10 }
+        ]
+        countries: [,
+          { country: 'United States', visitors: Math.floor(Math.random() * 2000) + 1500, percentage: 35 }
+          { country: 'United Kingdom', visitors: Math.floor(Math.random() * 800) + 500, percentage: 15 }
+          { country: 'Canada', visitors: Math.floor(Math.random() * 600) + 400, percentage: 12 }
+          { country: 'Germany', visitors: Math.floor(Math.random() * 500) + 300, percentage: 10 }
+          { country: 'Australia', visitors: Math.floor(Math.random() * 400) + 250, percentage: 8 }
+        ]
+        devices: [,
+          { device: 'Desktop', visitors: Math.floor(Math.random() * 3000) + 2000, percentage: 60 }
+          { device: 'Mobile', visitors: Math.floor(Math.random() * 2000) + 1500, percentage: 35 }
+          { device: 'Tablet', visitors: Math.floor(Math.random() * 500) + 200, percentage: 5 }
+        ]
+      }
+      performance: {,
         averageLoadTime: Math.random() * 2 + 1.5,
         bounceRate: Math.random() * 0.3 + 0.4,
         conversionRate: Math.random() * 0.05 + 0.02,
-        engagementScore: Math.random() * 30 + 70,
-      },
-      trends: {
-        daily: Array.from({ length: baseMultiplier }, (_, i) => ({
+        engagementScore: Math.random() * 30 + 70
+      }
+      trends: {,
+        daily: Array.from({ length: baseMultiplier }, (_, i) => ({,
           date: new Date(Date.now() - (baseMultiplier - i) * 24 * 60 * 60 * 1000).toLocaleDateString(),
           visitors: Math.floor(Math.random() * 500) + 200,
-          pageViews: Math.floor(Math.random() * 1500) + 800,
-        })),
-        weekly: Array.from({ length: Math.ceil(baseMultiplier / 7) }, (_, i) => ({
+          pageViews: Math.floor(Math.random() * 1500) + 800
+        }))
+        weekly: Array.from({ length: Math.ceil(baseMultiplier / 7) }, (_, i) => ({,
           week: `Week ${i + 1}`,
           visitors: Math.floor(Math.random() * 2000) + 1000,
-          pageViews: Math.floor(Math.random() * 8000) + 4000,
-        })),
-      },
-      realTime: {
+          pageViews: Math.floor(Math.random() * 8000) + 4000
+        }))
+      }
+      realTime: {,
         activeUsers: Math.floor(Math.random() * 50) + 20,
-        currentPages: [
-          { page: '/', users: Math.floor(Math.random() * 10) + 5 },
-          { page: '/services', users: Math.floor(Math.random() * 8) + 3 },
-          { page: '/about', users: Math.floor(Math.random() * 5) + 2 },
-        ],
-        referrers: [
-          { source: 'Google', users: Math.floor(Math.random() * 15) + 10 },
-          { source: 'Direct', users: Math.floor(Math.random() * 10) + 5 },
-          { source: 'LinkedIn', users: Math.floor(Math.random() * 5) + 2 },
-        ],
-      },
+        currentPages: [,
+          { page: '/', users: Math.floor(Math.random() * 10) + 5 }
+          { page: '/services', users: Math.floor(Math.random() * 8) + 3 }
+          { page: '/about', users: Math.floor(Math.random() * 5) + 2 }
+        ]
+        referrers: [,
+          { source: 'Google', users: Math.floor(Math.random() * 15) + 10 }
+          { source: 'Direct', users: Math.floor(Math.random() * 10) + 5 }
+          { source: 'LinkedIn', users: Math.floor(Math.random() * 5) + 2 }
+        ]
+      }
     };
   };
 

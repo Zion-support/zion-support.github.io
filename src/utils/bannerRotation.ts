@@ -24,10 +24,10 @@ engagementWeight: number;
 
 const DEFAULT_STRATEGY: RotationStrategy = {
   maxVisible: 5,
-  rotationInterval: 300000, // 5 minutes
+  rotationInterval: 300000, // 5 minutes,
   priorityWeight: 0.5,
   freshnessWeight: 0.3,
-  engagementWeight: 0.2,
+  engagementWeight: 0.2
 };
 
 /**
@@ -80,7 +80,7 @@ export const selectBannersForDisplay = (
   // Calculate scores for all active banners
   const scoredBanners = activeBanners.map(banner => ({
     banner,
-    score: calculateBannerScore(banner, strategy),
+    score: calculateBannerScore(banner, strategy)
   }));
   
   // Sort by score (highest first)
@@ -162,7 +162,7 @@ export const trackClick = (bannerId: string): void => {
     if (typeof window !== 'undefined' && (window as any).gtag) {
       (window as any).gtag('event', 'banner_click', {
         banner_id: bannerId,
-        timestamp: new Date().toISOString(),
+        timestamp: new Date().toISOString()
       });
     }
   } catch (error) {
@@ -237,5 +237,5 @@ export default {
   trackClick,
   loadBannerStats,
   selectBannerVariation,
-  getRefreshInterval,
+  getRefreshInterval
 };

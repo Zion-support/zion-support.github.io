@@ -38,8 +38,8 @@ const AIIncidentResponsePlaybooks2025: React.FC = () => {
           <h3>Example Playbook Skeleton</h3>
           <pre className="text-sm overflow-x-auto">
 {`playbook:
-  name: contain-compromised-credential
-  budget: low
+  name: contain-compromised-credential,
+  budget: low,
   approvals:
     - security_oncall
   steps:

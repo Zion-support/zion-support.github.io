@@ -1,7 +1,5 @@
 import React from 'react';
-import {
-Link
-} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import {
 
 } from 'lucide-react';
@@ -15,18 +13,18 @@ const Pricing: React.FC = () => {
       period: 'month',
       icon: Zap,
       color: 'blue',
-      features: [
+      features: [,
         'Basic AI Automation',
         'Email Support',
         'Up to 5 Users',
         'Standard Analytics',
         'Basic Integrations',
         'Monthly Reports'
-      ],
-      limitations: [
+      ]
+      limitations: [,
         'Limited API Calls',
         'Basic Customization'
-      ],
+      ]
       cta: 'Start Free Trial',
       popular: false
     },
@@ -37,7 +35,7 @@ const Pricing: React.FC = () => {
       period: 'month',
       icon: Shield,
       color: 'green',
-      features: [
+      features: [,
         'Advanced AI Automation',
         'Priority Support',
         'Up to 25 Users',
@@ -46,7 +44,7 @@ const Pricing: React.FC = () => {
         'Weekly Reports',
         'Training Sessions',
         'API Access'
-      ],
+      ]
       limitations: [],
       cta: 'Start Free Trial',
       popular: true
@@ -58,7 +56,7 @@ const Pricing: React.FC = () => {
       period: 'contact us',
       icon: Crown,
       color: 'purple',
-      features: [
+      features: [,
         'Unlimited AI Automation',
         '24/7 Dedicated Support',
         'Unlimited Users',
@@ -69,7 +67,7 @@ const Pricing: React.FC = () => {
         'Full API Access',
         'Custom Development',
         'SLA Guarantee'
-      ],
+      ]
       limitations: [],
       cta: 'Contact Sales',
       popular: false
@@ -136,7 +134,7 @@ const Pricing: React.FC = () => {
               Simple, Transparent Pricing
             </h1>
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-              Choose the perfect plan for your business. Start with a free trial, 
+              Choose the perfect plan for your business. Start with a free trial
               no credit card required. Scale as you grow.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -217,7 +215,7 @@ const Pricing: React.FC = () => {
                     className={
 `block w-full text-center px-6 py-3 rounded-lg font-semibold transition-colors ${
 plan.popular
-? 'bg-blue-600 text-white hover:bg-blue-700',
+? 'bg-blue-600 text-white hover:bg-blue-700'
 : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
 }`}
                   >

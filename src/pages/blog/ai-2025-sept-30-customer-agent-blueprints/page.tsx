@@ -15,7 +15,7 @@ export default function CustomerAgentBlueprints(): React.JSX.Element {
         <p className="text-zion-slate-light mb-8">Safe autonomy with budgets, KPI‑linked canaries, and instant rollback.</p>
         <div className="prose prose-invert max-w-3xl">
           <p>
-            Ship customer experience agents that teams can trust. Use budgeted actions, approval gates,
+            Ship customer experience agents that teams can trust. Use budgeted actions, approval gates
             live canaries wired to KPIs, and deterministic rollback to contain incidents in seconds.
           </p>
         </div>

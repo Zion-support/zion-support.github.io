@@ -41,7 +41,7 @@ export const breakthroughContent2025: BreakthroughContent[] = [
     newBadge: true,
     trending: true,
     valueProposition: "Transform your AI capabilities with quantum-enhanced neural processing",
-    metrics: {
+    metrics: {,
       performance: "10,000x faster",
       savings: "$2.8B annually",
       accuracy: "99.99%",
@@ -64,7 +64,7 @@ export const breakthroughContent2025: BreakthroughContent[] = [
     newBadge: true,
     trending: true,
     valueProposition: "Achieve complete business autonomy with self-organizing AI networks",
-    metrics: {
+    metrics: {,
       performance: "99.7% efficiency",
       savings: "$4.2B annually",
       accuracy: "98.5%",
@@ -87,7 +87,7 @@ export const breakthroughContent2025: BreakthroughContent[] = [
     newBadge: true,
     trending: true,
     valueProposition: "Unlock true AI consciousness for unprecedented business innovation",
-    metrics: {
+    metrics: {,
       performance: "Human-level creativity",
       savings: "$500B potential value",
       accuracy: "95% emotional accuracy",
@@ -110,7 +110,7 @@ export const breakthroughContent2025: BreakthroughContent[] = [
     newBadge: true,
     trending: true,
     valueProposition: "Deploy ultra-efficient AI at the edge with brain-inspired computing",
-    metrics: {
+    metrics: {,
       performance: "1000x efficiency",
       savings: "$32B annually",
       accuracy: "99.8%",
@@ -133,7 +133,7 @@ export const breakthroughContent2025: BreakthroughContent[] = [
     newBadge: true,
     trending: true,
     valueProposition: "Achieve complete business automation with AI-driven hyperautomation",
-    metrics: {
+    metrics: {,
       performance: "10x efficiency",
       savings: "$2.8B proven",
       accuracy: "95% automation",
@@ -156,7 +156,7 @@ export const breakthroughContent2025: BreakthroughContent[] = [
     newBadge: true,
     trending: true,
     valueProposition: "Protect enterprise assets with quantum-resistant blockchain security",
-    metrics: {
+    metrics: {,
       performance: "99.99% prevention",
       savings: "$2.8B protected",
       accuracy: "Zero breaches",

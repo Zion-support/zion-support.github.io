@@ -1,10 +1,6 @@
 import React from 'react';
-import {
-Helmet
-} from 'react-helmet-async';
-import {
-TrendingUp
-} from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { TrendingUp } from 'lucide-react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 
@@ -54,7 +50,7 @@ const AIEmailMarketing: React.FC = () => {
       price: "$79",
       period: "/month",
       description: "Perfect for small businesses starting with AI-powered email marketing",
-      features: [
+      features: [,
         "Up to 10,000 subscribers",
         "Basic AI content generation",
         "Simple automation",
@@ -63,7 +59,7 @@ const AIEmailMarketing: React.FC = () => {
         "Standard templates",
         "5 campaigns/month",
         "Basic segmentation"
-      ],
+      ]
       popular: false
     },
     {
@@ -71,7 +67,7 @@ const AIEmailMarketing: React.FC = () => {
       price: "$199",
       period: "/month",
       description: "Ideal for growing businesses with advanced email marketing needs",
-      features: [
+      features: [,
         "Up to 50,000 subscribers",
         "Advanced AI content generation",
         "Smart automation workflows",
@@ -82,7 +78,7 @@ const AIEmailMarketing: React.FC = () => {
         "Advanced segmentation",
         "A/B testing",
         "API access"
-      ],
+      ]
       popular: true
     },
     {
@@ -90,7 +86,7 @@ const AIEmailMarketing: React.FC = () => {
       price: "$599",
       period: "/month",
       description: "Complete solution for large organizations with enterprise requirements",
-      features: [
+      features: [,
         "Unlimited subscribers",
         "Enterprise AI capabilities",
         "Complex automation workflows",
@@ -103,7 +99,7 @@ const AIEmailMarketing: React.FC = () => {
         "Advanced security features",
         "SLA guarantee",
         "Training & consultation"
-      ],
+      ]
       popular: false
     }
   ];
@@ -413,7 +409,7 @@ const AIEmailMarketing: React.FC = () => {
                     className={
 `w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
 plan.popular
-? 'bg-emerald-600 text-white hover:bg-emerald-700',
+? 'bg-emerald-600 text-white hover:bg-emerald-700'
 : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
 }`}
                   >

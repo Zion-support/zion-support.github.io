@@ -165,7 +165,7 @@ const October2025NewBreakthroughBanner = () => {
         {/* Technology Tags */}
         <div className="mt-12 text-center">
           <div className="inline-flex flex-wrap gap-3 justify-center">
-            {['AI Agents', 'Memory Systems', 'FinOps', 'Cost Optimization', 'Multimodal AI', 
+            {['AI Agents', 'Memory Systems', 'FinOps', 'Cost Optimization', 'Multimodal AI'
               'Computer Vision', 'NLP', 'Enterprise Automation', 'Cloud Management'].map((tag) => (
               <span 
                 key={tag}

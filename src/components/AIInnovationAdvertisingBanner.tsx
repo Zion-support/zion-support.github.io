@@ -17,7 +17,7 @@ Exclusive AI Innovation Access
 Get early access to our breakthrough AI technologies and transform your enterprise with cutting-edge solutions.
 </p>
 </div>
-<div className="grid md:grid-cols-2 gap-8 mb-12">,
+<div className="grid md:grid-cols-2 gap-8 mb-12">
 {/* Left Side - Features */
 }
           <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">

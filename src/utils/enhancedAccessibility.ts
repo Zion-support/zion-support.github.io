@@ -32,9 +32,9 @@ score: number;
 }
 
 class EnhancedAccessibility {
-private config: AccessibilityConfig;,
-private metrics: AccessibilityMetrics;,
-private isInitialized: boolean = false;,
+private config: AccessibilityConfig;
+private metrics: AccessibilityMetrics;
+private isInitialized: boolean = false;
 constructor(config: Partial<AccessibilityConfig> = {
 }) {
     this.config = {
@@ -186,7 +186,7 @@ constructor(config: Partial<AccessibilityConfig> = {
   private setupHighContrast(): void {
 if (!this.config.enableHighContrast) return;
 // Check for high contrast mode preference
-if (window.matchMedia('(prefers-contrast: high)').matches) {,
+if (window.matchMedia('(prefers-contrast: high)').matches) {
 document.body.classList.add('high-contrast');
 }
 
@@ -255,7 +255,7 @@ document.body.classList.add('high-contrast');
   private setupMotionReduction(): void {
 if (!this.config.enableMotionReduction) return;
 // Check for reduced motion preference
-if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {,
+if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
 document.body.classList.add('reduced-motion');
 }
 
@@ -334,13 +334,13 @@ document.body.classList.add('reduced-motion');
     const imagesWithAlt = document.querySelectorAll('img[alt]');
 
     this.metrics = {
-      colorContrastRatio: 4.5, // Would be calculated by a contrast checker
+      colorContrastRatio: 4.5, // Would be calculated by a contrast checker,
       focusableElements: focusableElements.length,
       ariaLabels: ariaLabels.length,
       headingStructure: headings.length,
       altTexts: imagesWithAlt.length,
-      keyboardTraps: 0, // Would be detected by testing
-      screenReaderCompatibility: 85, // Would be calculated based on various factors
+      keyboardTraps: 0, // Would be detected by testing,
+      screenReaderCompatibility: 85, // Would be calculated based on various factors,
       overallScore: 0,
       totalElements: elements.length,
       accessibleElements: focusableElements.length + ariaLabels.length,

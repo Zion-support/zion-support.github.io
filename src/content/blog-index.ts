@@ -26,16 +26,16 @@ export const october2025Breakthroughs: BlogPost[] = [
     category: 'AI Innovation',
     date: '2025-10-01',
     readTime: '25 min',
-    tags: [
+    tags: [,
       'neural architecture search',
       'AutoML',
       'model optimization',
       'AI evolution',
       'machine learning',
-      'enterprise AI',
-    ],
+      'enterprise AI'
+    ]
     featured: true,
-    valueProposition: '$25M annual savings',
+    valueProposition: '$25M annual savings'
   },
   {
     slug: 'ai-2025-oct-01-quantum-inspired-optimization-enterprise',
@@ -44,16 +44,16 @@ export const october2025Breakthroughs: BlogPost[] = [
     category: 'Quantum Computing',
     date: '2025-10-01',
     readTime: '22 min',
-    tags: [
+    tags: [,
       'quantum optimization',
       'quantum computing',
       'enterprise optimization',
       'quantum algorithms',
       'supply chain',
-      'portfolio optimization',
-    ],
+      'portfolio optimization'
+    ]
     featured: true,
-    valueProposition: '$42M annual value creation',
+    valueProposition: '$42M annual value creation'
   },
   {
     slug: 'ai-2025-oct-01-intelligent-automation-orchestration-platform',
@@ -62,16 +62,16 @@ export const october2025Breakthroughs: BlogPost[] = [
     category: 'Enterprise Automation',
     date: '2025-10-01',
     readTime: '28 min',
-    tags: [
+    tags: [,
       'intelligent automation',
       'process automation',
       'RPA',
       'AI orchestration',
       'workflow automation',
-      'digital transformation',
-    ],
+      'digital transformation'
+    ]
     featured: true,
-    valueProposition: '$67M annual savings',
+    valueProposition: '$67M annual savings'
   },
   {
     slug: 'ai-2025-oct-03-continuous-intelligence-platforms',
@@ -105,14 +105,14 @@ export const october2025Breakthroughs: BlogPost[] = [
     tags: ['quantum', 'optimization', 'supply chain'],
     featured: true,
     valueProposition: '$127M annual savings'
-  },
+  }
 ];
 
 /**
  * All blog posts collection
  */
 export const allBlogPosts: BlogPost[] = [
-  ...october2025Breakthroughs,
+  ...october2025Breakthroughs
   // Newly added October 2025 posts
   {
     slug: 'ai-2025-oct-01-private-feature-flags-zero-pii',
@@ -135,7 +135,7 @@ export const allBlogPosts: BlogPost[] = [
     tags: ['Rollback', 'Canary', 'Guardrails', 'Deploy', 'SRE'],
     featured: true,
     valueProposition: 'Faster deploys, safer rollbacks'
-  },
+  }
   // October 1, 2025 additions (this branch)
   {
     slug: 'edge-2025-oct-01-zero-pii-telemetry-v2',
@@ -158,7 +158,7 @@ export const allBlogPosts: BlogPost[] = [
     tags: ['Evals', 'Scorecards', 'Canaries', 'Guardrails'],
     featured: true,
     valueProposition: 'Protect velocity, prevent regressions'
-  },
+  }
   // October 2, 2025 additions (from main)
   {
     slug: 'ai-2025-oct-02-private-experiments-blueprint',
@@ -181,7 +181,7 @@ export const allBlogPosts: BlogPost[] = [
     tags: ['Rollback', 'Canary', 'Guardrails', 'Budgets'],
     featured: true,
     valueProposition: 'Instant reversibility, resilient releases'
-  },
+  }
 ];
 
 /**
@@ -257,5 +257,5 @@ export const blogStats = {
   featuredPosts: getFeaturedPosts().length,
   categories: getAllCategories().length,
   tags: getAllTags().length,
-  totalValue: getTotalValueProposition(),
+  totalValue: getTotalValueProposition()
 };

@@ -9,13 +9,13 @@ return (
 💎 OCTOBER 2025: REVOLUTIONARY NEW CONTENT JUST PUBLISHED 💎,
 </div>
 <h2 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-yellow-300 via-pink-300 to-purple-300 bg-clip-text text-transparent">
-Cognitive Orchestration: The Future of Enterprise AI,
+Cognitive Orchestration: The Future of Enterprise AI
 </h2>
 <p className="text-2xl text-gray-300 max-w-4xl mx-auto">
 Discover how Fortune 50 companies are achieving $84.7B in value with autonomous AI operations
 </p>
 </div>
-<div className="grid md:grid-cols-3 gap-8 mb-12">,
+<div className="grid md:grid-cols-3 gap-8 mb-12">
 {/* Blog Post Card */
 }
           <div className="bg-gradient-to-br from-blue-600 to-cyan-600 rounded-2xl p-8 transform hover:scale-105 transition-all shadow-2xl hover:shadow-cyan-500/50">

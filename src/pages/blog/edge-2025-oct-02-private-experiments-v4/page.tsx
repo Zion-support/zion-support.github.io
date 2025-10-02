@@ -15,7 +15,7 @@ export default function PrivateExperimentsV4(): React.JSX.Element {
         <p className="text-zion-slate-light mb-8">Stand up privacy-first experiments with edge aggregation, signed configs, and budgets.</p>
         <div className="prose prose-invert max-w-3xl">
           <p>
-            Build consent-safe experimentation pipelines that run under 100ms. Use scoped identifiers,
+            Build consent-safe experimentation pipelines that run under 100ms. Use scoped identifiers
             on-device aggregation, and differential privacy to protect users while keeping signals rich.
           </p>
         </div>

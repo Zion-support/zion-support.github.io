@@ -1,7 +1,5 @@
 import React from 'react';
-import {
-Helmet
-} from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';
 
 interface SEOOptimizerProps {
 title: string;
@@ -17,7 +15,7 @@ structuredData?: object;
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   title,
   description,
-  canonicalUrl,
+  canonicalUrl
   keywords = [
     'AI solutions',
     'artificial intelligence',
@@ -29,10 +27,10 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     'technology consulting',
     'cloud solutions',
     'cybersecurity'
-  ],
-  ogImage = '/images/zion-tech-group-og-image.jpg',
-  ogType = 'website',
-  twitterCard = 'summary_large_image',
+  ]
+  ogImage = '/images/zion-tech-group-og-image.jpg'
+  ogType = 'website'
+  twitterCard = 'summary_large_image'
   structuredData
 }) => {
   const defaultStructuredData = {
@@ -42,21 +40,21 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     "description": "Leading provider of cutting-edge AI and IT solutions",
     "url": "https://ziontechgroup.com",
     "logo": "https://ziontechgroup.com/images/logo.png",
-    "contactPoint": {
+    "contactPoint": {,
       "@type": "ContactPoint",
       "telephone": "+1-302-464-0950",
       "contactType": "customer service",
       "email": "kleber@ziontechgroup.com"
-    },
-    "address": {
+    }
+    "address": {,
       "@type": "PostalAddress",
       "streetAddress": "364 E Main St STE 1008",
       "addressLocality": "Middletown",
       "addressRegion": "DE",
       "postalCode": "19709",
       "addressCountry": "US"
-    },
-    "sameAs": [
+    }
+    "sameAs": [,
       "https://twitter.com/ziontechgroup",
       "https://linkedin.com/company/ziontechgroup",
       "https://github.com/ziontechgroup"

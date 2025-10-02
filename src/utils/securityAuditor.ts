@@ -22,9 +22,9 @@ high: number;
 medium: number;
 low: number;
 };
-  complianceStatus: {
-owasp: boolean;,
-gdpr: boolean;,
+  complianceStatus: {,
+owasp: boolean;
+gdpr: boolean;
 soc2: boolean;
 };
 }
@@ -58,12 +58,12 @@ export class SecurityAuditor {
       score,
       vulnerabilities,
       secureAreas,
-      summary: {
+      summary: {,
         critical: vulnerabilities.filter(v => v.severity === 'critical').length,
         high: vulnerabilities.filter(v => v.severity === 'high').length,
         medium: vulnerabilities.filter(v => v.severity === 'medium').length,
         low: vulnerabilities.filter(v => v.severity === 'low').length
-      },
+      }
       complianceStatus
     };
   }
@@ -184,8 +184,8 @@ export class SecurityAuditor {
    * Check compliance status
    */
   private checkCompliance(vulnerabilities: SecurityVulnerability[]): {
-owasp: boolean;,
-gdpr: boolean;,
+owasp: boolean;
+gdpr: boolean;
 soc2: boolean;
 } {
     const criticalOrHigh = vulnerabilities.filter(
@@ -223,7 +223,7 @@ soc2: boolean;
    * Apply quick security fixes
    */
   applyQuickFixes(): {
-applied: string[];,
+applied: string[];
 manual: string[];
 } {
     const applied = [
@@ -255,7 +255,7 @@ manual: string[];
   } {
     // Mock implementation - in production, integrate with npm audit
     const vulnerable = [
-      { name: 'example-lib', version: '1.2.3', severity: 'high' },
+      { name: 'example-lib', version: '1.2.3', severity: 'high' }
       { name: 'old-package', version: '2.0.0', severity: 'medium' }
     ];
 
@@ -273,7 +273,7 @@ const audit = this.auditSecurity();
 const recommendations = this.generateRecommendations();
 const fixes = this.applyQuickFixes();
 const dependencies = this.checkDependencies();
-const getRiskLevel = (score: number): string => {,
+const getRiskLevel = (score: number): string => {
 if (score >= 90) return 'LOW RISK ✅';
 if (score >= 75) return 'MODERATE RISK ⚠️';
 if (score >= 60) return 'HIGH RISK 🔴';

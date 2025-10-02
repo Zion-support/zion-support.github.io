@@ -847,8 +847,7 @@ export const latestArticles: LatestArticle[] = [
     image: "/images/mlops-reliability.jpg",
     newBadge: false,
     trending: true
-  }
-  ,
+  },
   {
     id: "secure-ml-supply-chain-2026",
     slug: "secure-ml-supply-chain-2026",
@@ -1056,8 +1055,7 @@ export const latestArticles: LatestArticle[] = [
     image: "/images/secure-rag-2025.jpg",
     newBadge: true,
     trending: false
-  }
-  ,
+  },
   {
     id: "agentic-workflows-blueprint-2026",
     slug: "agentic-workflows-blueprint-2026",
@@ -1169,8 +1167,7 @@ export const latestArticles: LatestArticle[] = [
     image: "/images/edge-privacy-by-design-2026.jpg",
     newBadge: true,
     trending: true
-  }
-  ,
+  },
   {
     id: "ai-autonomous-incident-runbooks-2025",
     slug: "ai-autonomous-incident-runbooks-2025",

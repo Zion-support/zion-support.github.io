@@ -1,7 +1,5 @@
 import React from 'react';
-import {
-Link
-} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import {
 
 } from 'lucide-react';
@@ -78,26 +76,26 @@ const AISolutions: React.FC = () => {
       title: 'Healthcare AI',
       description: 'AI solutions for medical diagnosis, drug discovery, and patient care optimization',
       icon: '🏥',
-      benefits: ['Improved Diagnosis Accuracy', 'Faster Drug Discovery', 'Personalized Treatment'],
+      benefits: ['Improved Diagnosis Accuracy', 'Faster Drug Discovery', 'Personalized Treatment']
     },
     {
       title: 'Financial AI',
       description: 'AI-powered fraud detection, risk assessment, and algorithmic trading solutions',
       icon: '💰',
-      benefits: ['Fraud Prevention', 'Risk Management', 'Automated Trading'],
+      benefits: ['Fraud Prevention', 'Risk Management', 'Automated Trading']
     },
     {
       title: 'Manufacturing AI',
       description: 'Smart manufacturing with predictive maintenance and quality control',
       icon: '🏭',
-      benefits: ['Predictive Maintenance', 'Quality Control', 'Supply Chain Optimization'],
+      benefits: ['Predictive Maintenance', 'Quality Control', 'Supply Chain Optimization']
     },
     {
       title: 'Retail AI',
       description: 'Personalized shopping experiences and intelligent inventory management',
       icon: '🛍️',
-      benefits: ['Personalized Recommendations', 'Inventory Optimization', 'Customer Insights'],
-    },
+      benefits: ['Personalized Recommendations', 'Inventory Optimization', 'Customer Insights']
+    }
   ];
 
   const implementationProcess = [
@@ -105,26 +103,26 @@ const AISolutions: React.FC = () => {
       step: '01',
       title: 'Discovery & Assessment',
       description: 'We analyze your current systems, data, and business requirements to identify AI opportunities',
-      icon: Target,
+      icon: Target
     },
     {
       step: '02',
       title: 'Strategy & Planning',
       description: 'Develop a comprehensive AI strategy with clear objectives, timelines, and success metrics',
-      icon: BarChart3,
+      icon: BarChart3
     },
     {
 step: '03',
 title: 'Development & Training',
 description: 'Build and train custom AI models tailored to your specific business needs and data',
 icon: Cog
-}
+},
     {
 step: '04',
 title: 'Deployment & Integration',
 description: 'Seamlessly integrate AI solutions into your existing systems and workflows',
 icon: Rocket
-}
+},
     {
 step: '05',
 title: 'Monitoring & Optimization',

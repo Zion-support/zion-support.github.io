@@ -1,10 +1,6 @@
 import React from 'react';
-import {
-Helmet
-} from 'react-helmet-async';
-import {
-Monitor
-} from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Monitor } from 'lucide-react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 
@@ -54,7 +50,7 @@ const CloudDevOps: React.FC = () => {
       price: "$3,500",
       period: "/month",
       description: "Perfect for startups and small teams getting started with cloud infrastructure",
-      features: [
+      features: [,
         "Single cloud provider setup",
         "Basic CI/CD pipeline",
         "Standard monitoring",
@@ -63,7 +59,7 @@ const CloudDevOps: React.FC = () => {
         "Basic security scanning",
         "Up to 5 environments",
         "Standard backup strategy"
-      ],
+      ]
       popular: false
     },
     {
@@ -71,7 +67,7 @@ const CloudDevOps: React.FC = () => {
       price: "$8,500",
       period: "/month",
       description: "Ideal for growing companies with complex deployment needs",
-      features: [
+      features: [,
         "Multi-cloud setup",
         "Advanced CI/CD with testing",
         "Comprehensive monitoring & alerting",
@@ -82,7 +78,7 @@ const CloudDevOps: React.FC = () => {
         "Automated backup & recovery",
         "Performance optimization",
         "Disaster recovery planning"
-      ],
+      ]
       popular: true
     },
     {
@@ -90,7 +86,7 @@ const CloudDevOps: React.FC = () => {
       price: "$25,000",
       period: "/month",
       description: "Complete solution for large organizations with enterprise requirements",
-      features: [
+      features: [,
         "Hybrid & multi-cloud architecture",
         "Enterprise-grade CI/CD",
         "Advanced monitoring with AI insights",
@@ -103,7 +99,7 @@ const CloudDevOps: React.FC = () => {
         "Custom automation development",
         "SLA guarantee",
         "On-premise integration"
-      ],
+      ]
       popular: false
     }
   ];
@@ -182,7 +178,7 @@ const CloudDevOps: React.FC = () => {
                 Cloud & <span className="bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">DevOps</span>
               </h1>
               <p className="text-xl md:text-2xl text-green-100 max-w-4xl mx-auto mb-8">
-                Expert cloud infrastructure and DevOps services that deliver 99.99% uptime, 
+                Expert cloud infrastructure and DevOps services that deliver 99.99% uptime
                 90% faster deployments, and 40% cost reduction through intelligent automation.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -363,7 +359,7 @@ const CloudDevOps: React.FC = () => {
                     className={
 `w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
 plan.popular
-? 'bg-green-600 text-white hover:bg-green-700',
+? 'bg-green-600 text-white hover:bg-green-700'
 : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
 }`}
                   >

@@ -5,7 +5,7 @@ export default function October2025CuttingEdgeInnovationBanner(): void {
       {/* Animated Grid Background */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute inset-0" style={{
-          backgroundImage: `linear-gradient(rgba(139, 92, 246, 0.1) 1px, transparent 1px), 
+          backgroundImage: `linear-gradient(rgba(139, 92, 246, 0.1) 1px, transparent 1px),
                            linear-gradient(90deg, rgba(139, 92, 246, 0.1) 1px, transparent 1px)`,
           backgroundSize: '50px 50px'
         }}></div>
@@ -26,7 +26,7 @@ export default function October2025CuttingEdgeInnovationBanner(): void {
             </h2>
             
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Explore breakthrough technologies that are redefining enterprise AI: intelligent orchestration, 
+              Explore breakthrough technologies that are redefining enterprise AI: intelligent orchestration
               advanced reasoning, and unified platforms
             </p>
           </div>

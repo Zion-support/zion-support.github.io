@@ -31,26 +31,26 @@ export interface AnalyticsUser {
 
 export interface AnalyticsConfig {
 providers: {,
-googleAnalytics?: {,
+googleAnalytics?: {
 measurementId: string;
 enabled: boolean;
 };
     mixpanel?: {
-token: string;,
+token: string;
 enabled: boolean;
 };
     amplitude?: {
-apiKey: string;,
+apiKey: string;
 enabled: boolean;
 };
     segment?: {
-writeKey: string;,
+writeKey: string;
 enabled: boolean;
 };
   };
-  privacy: {
-respectDoNotTrack: boolean;,
-anonymizeIp: boolean;,
+  privacy: {,
+respectDoNotTrack: boolean;
+anonymizeIp: boolean;
 consentRequired: boolean;
 };
   debug: boolean;
@@ -192,8 +192,8 @@ class AnalyticsIntegration {
               };
             }
             for (
-              var d = {},
-                e = ['get_group'].concat(Array.prototype.slice.call(arguments, 0)),
+              var d = {}
+                e = ['get_group'].concat(Array.prototype.slice.call(arguments, 0))
                 c = 0;
               c < j.length;
               c++
@@ -210,7 +210,7 @@ class AnalyticsIntegration {
     (window as any).mixpanel.init(token, {
       debug: this.config.debug,
       track_pageview: false,
-      persistence: 'localStorage',
+      persistence: 'localStorage'
     });
 
     if (this.config.debug) {
@@ -288,9 +288,9 @@ class AnalyticsIntegration {
     (window as any).amplitude.getInstance().init(apiKey, undefined, {
       includeReferrer: true,
       includeUtm: true,
-      trackingOptions: {
-        ipAddress: !this.config.privacy.anonymizeIp,
-      },
+      trackingOptions: {,
+        ipAddress: !this.config.privacy.anonymizeIp
+      }
     });
 
     if (this.config.debug) {
@@ -334,7 +334,7 @@ class AnalyticsIntegration {
             'addSourceMiddleware',
             'addIntegrationMiddleware',
             'setAnonymousId',
-            'addDestinationMiddleware',
+            'addDestinationMiddleware'
           ];
           analytics.factory = function(e: any) {
             return function() {
@@ -380,7 +380,7 @@ class AnalyticsIntegration {
       properties,
       timestamp: Date.now(),
       userId: this.currentUser?.id,
-      sessionId: this.sessionId,
+      sessionId: this.sessionId
     };
 
     if (!this.consentGiven || !this.initialized) {
@@ -415,11 +415,11 @@ class AnalyticsIntegration {
    */
   page(pageName?: string, properties?: Record<string, any>): void {
     const pageProps = {
-      ...properties,
+      ...properties
       path: window.location.pathname,
       url: window.location.href,
       title: document.title,
-      referrer: document.referrer,
+      referrer: document.referrer
     };
 
     if (this.config.providers.googleAnalytics?.enabled) {
@@ -449,7 +449,7 @@ class AnalyticsIntegration {
   identify(userId: string, traits?: Record<string, any>): void {
     this.currentUser = {
       id: userId,
-      traits,
+      traits
     };
 
     if (!this.consentGiven || !this.initialized) {
@@ -556,12 +556,12 @@ class AnalyticsIntegration {
 // Default configuration
 const defaultConfig: AnalyticsConfig = {
   providers: {},
-  privacy: {
+  privacy: {,
     respectDoNotTrack: true,
     anonymizeIp: true,
-    consentRequired: false,
-  },
-  debug: process.env.NODE_ENV === 'development',
+    consentRequired: false
+  }
+  debug: process.env.NODE_ENV === 'development'
 };
 
 // Singleton instance (will be initialized with actual config by the app)
@@ -572,16 +572,16 @@ export let analytics: AnalyticsIntegration;
  */
 export function initializeAnalytics(config: Partial<AnalyticsConfig>): AnalyticsIntegration {
   const mergedConfig = {
-    ...defaultConfig,
-    ...config,
-    providers: {
-      ...defaultConfig.providers,
-      ...config.providers,
-    },
-    privacy: {
-      ...defaultConfig.privacy,
-      ...config.privacy,
-    },
+    ...defaultConfig
+    ...config
+    providers: {,
+      ...defaultConfig.providers
+      ...config.providers
+    }
+    privacy: {,
+      ...defaultConfig.privacy
+      ...config.privacy
+    }
   };
 
   analytics = new AnalyticsIntegration(mergedConfig);

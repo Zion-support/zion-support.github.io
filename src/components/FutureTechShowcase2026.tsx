@@ -113,7 +113,7 @@ const FutureTechShowcase2026: React.FC = () => {
           </h2>
           
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Experience the next generation of AI and technology breakthroughs. From quantum-neural fusion to self-evolving AI ecosystems, 
+            Experience the next generation of AI and technology breakthroughs. From quantum-neural fusion to self-evolving AI ecosystems
             discover technologies that will reshape the future of enterprise computing.
           </p>
         </div>
@@ -199,9 +199,9 @@ const FutureTechShowcase2026: React.FC = () => {
         {/* Revolutionary Stats Section */}
         <div className="grid md:grid-cols-4 gap-8 mb-16">
           {[
-            { value: '10,000x', label: 'Quantum Processing Speed', icon: '⚛️' },
-            { value: '99.7%', label: 'Auto-Improvement Rate', icon: '🧠' },
-            { value: '99.9%', label: 'Predictive Accuracy', icon: '🎯' },
+            { value: '10,000x', label: 'Quantum Processing Speed', icon: '⚛️' }
+            { value: '99.7%', label: 'Auto-Improvement Rate', icon: '🧠' }
+            { value: '99.9%', label: 'Predictive Accuracy', icon: '🎯' }
             { value: '$1B+', label: 'Enterprise Value Created', icon: '💰' }
           ].map((stat, index) => (
             <div key={index} className="text-center">

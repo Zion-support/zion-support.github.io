@@ -17,7 +17,7 @@ const Page = () => {
           <div className="mb-6 text-sm text-zion-slate-light">Platforms • 10 min read • 2025-10-01</div>
           <h1 className="text-4xl font-bold mb-4">Enterprise AI Platforms 2025: Architecture, SLAs, and ROI</h1>
           <p className="text-zion-slate-light mb-6">
-            Production patterns that scale: golden paths, eval‑gated releases, cost guardrails, privacy‑first telemetry,
+            Production patterns that scale: golden paths, eval‑gated releases, cost guardrails, privacy‑first telemetry
             and platform APIs that accelerate every team.
           </p>
 

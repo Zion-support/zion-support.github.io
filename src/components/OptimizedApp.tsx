@@ -1,10 +1,6 @@
 import React, { Suspense, lazy, useState, useEffect } from 'react';
-import {
-ErrorBoundary
-} from 'react-error-boundary';
-import {
-motion
-} from 'framer-motion';
+import { ErrorBoundary } from 'react-error-boundary';
+import { motion } from 'framer-motion';
 
 // Lazy load components for better performance
 const UnifiedBannerSystem = lazy(() => import('./UnifiedBannerSystem'));
@@ -12,9 +8,7 @@ const EnhancedPerformanceMonitor = lazy(() => import('./EnhancedPerformanceMonit
 const SEOAccessibilityEnhancer = lazy(() => import('./SEOAccessibilityEnhancer'));
 
 // Import banner configurations
-import {
-getFeaturedBanners
-} from '../data/bannerConfigurations';
+import { getFeaturedBanners } from '../data/bannerConfigurations';
 
 // Loading component
 const LoadingSpinner: React.FC = () => (
@@ -25,7 +19,7 @@ const LoadingSpinner: React.FC = () => (
 
 // Error fallback component
 const ErrorFallback: React.FC<{ error: Error; resetErrorBoundary: () => void }> = ({ 
-  error, 
+  error,
   resetErrorBoundary 
 }) => (
   <div className="min-h-screen flex items-center justify-center bg-gray-50">
@@ -89,7 +83,7 @@ const MainContent: React.FC = () => {
               Advanced AI and IT Solutions for the Future
             </p>
             <p className="text-lg mb-12 opacity-80">
-              Transform your business with cutting-edge AI, quantum computing, 
+              Transform your business with cutting-edge AI, quantum computing
               and autonomous systems. Experience the next generation of enterprise technology.
             </p>
             

@@ -1,7 +1,5 @@
 import React from 'react';
-import {
-Helmet
-} from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';
 
 const Privacy: React.FC = () => {
   return (
@@ -25,7 +23,7 @@ const Privacy: React.FC = () => {
               <section>
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">Information We Collect</h2>
                 <p className="text-gray-600 mb-4">
-                  We collect information you provide directly to us, such as when you create an account, 
+                  We collect information you provide directly to us, such as when you create an account
                   subscribe to our newsletter, or contact us for support.
                 </p>
                 <ul className="list-disc list-inside text-gray-600 space-y-2">
@@ -81,9 +79,9 @@ const Privacy: React.FC = () => {
                 </p>
                 <div className="bg-gray-50 p-4 rounded-lg">
                   <p className="text-gray-600">
-                    Email: privacy@ziontechgroup.com<br />
-                    Phone: +1 (555) 123-4567<br />
-                    Address: 123 Tech Street, Innovation City, IC 12345
+                    Email: privacy@ziontechgroup.com<br />,
+                    Phone: +1 (555) 123-4567<br />,
+                    Address: 123 Tech Street, Innovation City, IC 12345,
                   </p>
                 </div>
               </section>

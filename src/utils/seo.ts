@@ -16,11 +16,11 @@ twitterCard?: string;
 export const generateMetaTags = (data: SEOData) => {
   const {
     title,
-    description,
-    keywords = [],
-    canonical,
-    ogImage = '/images/og-default.jpg',
-    ogType = 'website',
+    description
+    keywords = []
+    canonical
+    ogImage = '/images/og-default.jpg'
+    ogType = 'website'
     twitterCard = 'summary_large_image'
   } = data;
 
@@ -42,10 +42,10 @@ export const generateMetaTags = (data: SEOData) => {
 };
 
 export const generateStructuredData = (data: {
-name: string;,
-description: string;,
-url: string;,
-logo?: string;,
+name: string;
+description: string;
+url: string;
+logo?: string;
 sameAs?: string[];
 }) => {
   return {
@@ -60,13 +60,13 @@ sameAs?: string[];
 };
 
 export const generateBreadcrumbStructuredData = (items: Array<{
-name: string;,
+name: string;
 url: string;
 }>) => {
   return {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
-    itemListElement: items.map((item, index) => ({
+    itemListElement: items.map((item, index) => ({,
       '@type': 'ListItem',
       position: index + 1,
       name: item.name,

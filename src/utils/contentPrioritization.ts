@@ -9,10 +9,10 @@ title: string;
 date: Date;
 category: string;
 priority: number;
-value?: number; // Business value in billions,
-roi?: number; // ROI percentage,
+value?: number; // Business value in billions
+roi?: number; // ROI percentage
 views?: number;
-engagement?: number; // 0-100,
+engagement?: number; // 0-100
 freshness?: number; // Days since publication
 }
 
@@ -29,7 +29,7 @@ const DEFAULT_CONFIG: PrioritizationConfig = {
   valueWeight: 0.25,
   engagementWeight: 0.25,
   priorityWeight: 0.2,
-  categoryBalance: true,
+  categoryBalance: true
 };
 
 /**
@@ -72,7 +72,7 @@ export const calculateValueScore = (value?: number): number => {
  * Based on views and engagement metrics
  */
 export const calculateEngagementScoreFromMetrics = (
-  views?: number,
+  views?: number
   engagement?: number
 ): number => {
   if (!views && !engagement) return 50; // Default score for new content
@@ -131,7 +131,7 @@ export const prioritizeContent = (
 ): ContentItem[] => {
   const scoredItems = items.map(item => ({
     item,
-    score: calculateContentScore(item, config),
+    score: calculateContentScore(item, config)
   }));
   
   scoredItems.sort((a, b) => b.score - a.score);
@@ -248,9 +248,9 @@ export const getTrendingContent = (
   return prioritizeContent(recentItems, {
     recencyWeight: 0.2,
     valueWeight: 0.2,
-    engagementWeight: 0.5, // High weight on engagement for trending
+    engagementWeight: 0.5, // High weight on engagement for trending,
     priorityWeight: 0.1,
-    categoryBalance: false,
+    categoryBalance: false
   }).slice(0, topN);
 };
 
@@ -262,11 +262,11 @@ export const getEvergreenContent = (
   topN: number = 5
 ): ContentItem[] => {
   return prioritizeContent(items, {
-    recencyWeight: 0.1, // Low weight on recency
+    recencyWeight: 0.1, // Low weight on recency,
     valueWeight: 0.3,
-    engagementWeight: 0.5, // High weight on engagement
+    engagementWeight: 0.5, // High weight on engagement,
     priorityWeight: 0.1,
-    categoryBalance: false,
+    categoryBalance: false
   }).slice(0, topN);
 };
 
@@ -275,16 +275,16 @@ export const getEvergreenContent = (
  */
 export const createMixedFeed = (
   items: ContentItem[],
-  config: {
-trendingCount: number;,
-newCount: number;,
-evergreenCount: number;,
+  config: {,
+trendingCount: number;
+newCount: number;
+evergreenCount: number;
 totalMax: number;
 }
 ): {
-trending: ContentItem[];,
-new: ContentItem[];,
-evergreen: ContentItem[];,
+trending: ContentItem[];
+new: ContentItem[];
+evergreen: ContentItem[];
 all: ContentItem[];
 } => {
   const trending = getTrendingContent(items, config.trendingCount);
@@ -318,7 +318,7 @@ all: ContentItem[];
     trending,
     new: newContent,
     evergreen,
-    all,
+    all
   };
 };
 
@@ -333,5 +333,5 @@ export default {
   filterByQuality,
   getTrendingContent,
   getEvergreenContent,
-  createMixedFeed,
+  createMixedFeed
 };

@@ -8,7 +8,7 @@ export const newInsights = [
     readMinutes: 7,
     featured: true,
     tags: ["Platform", "ROI", "Scorecards"],
-    content: `
+    content: `,
       <h2>Why Scorecards Win</h2>
       <p>Adoption, TTFX on golden paths, and reliability SLOs are the leading signals that predict platform ROI.</p>
       <h3>Operating Rhythm</h3>
@@ -28,7 +28,7 @@ export const newInsights = [
     readMinutes: 7,
     featured: true,
     tags: ["Guardrails", "Scorecards", "Evals"],
-    content: `
+    content: `,
       <h2>Ship Faster, Safer</h2>
       <p>Connect scorecards to product KPIs. Use PR gates for risky changes and run online canaries tied to outcomes.</p>
       <h3>Playbook</h3>
@@ -48,7 +48,7 @@ export const newInsights = [
     readMinutes: 6,
     featured: false,
     tags: ["Edge", "Flags", "Delivery"],
-    content: `
+    content: `,
       <h2>Progressive Delivery</h2>
       <p>Segment by geo and account, cap risk with budgets, and stream telemetry for evidence‑based releases.</p>
     `
@@ -62,7 +62,7 @@ export const newInsights = [
     readMinutes: 8,
     featured: true,
     tags: ["RAG", "Freshness", "Search"],
-    content: `
+    content: `,
       <h2>Operate with Freshness</h2>
       <p>Use TTL windows, async warmups, and versioned corpora to keep retrieval accurate at scale.</p>
     `
@@ -76,7 +76,7 @@ export const newInsights = [
     readMinutes: 6,
     featured: true,
     tags: ["Security", "ML", "Supply Chain"],
-    content: `
+    content: `,
       <h2>End-to-End Controls</h2>
       <p>Track lineage from datasets to deployed models. Enforce policy tests and signed artifacts across the pipeline.</p>
     `
@@ -90,7 +90,7 @@ export const newInsights = [
     readMinutes: 8,
     featured: true,
     tags: ["AI", "Automation", "Enterprise", "2025"],
-    content: `
+    content: `,
       <h2>Revolutionizing Enterprise Operations</h2>
       <p>Artificial Intelligence automation is no longer a future concept—it's the present reality for forward-thinking enterprises. In 2025, we're seeing unprecedented adoption rates and ROI from AI automation initiatives.</p>
       
@@ -123,7 +123,7 @@ export const newInsights = [
     readMinutes: 10,
     featured: true,
     tags: ["Cybersecurity", "AI", "Threat Detection", "Security"],
-    content: `
+    content: `,
       <h2>The Evolution of Cyber Threats</h2>
       <p>As cyber threats become more sophisticated, traditional security measures are no longer sufficient. AI-powered cybersecurity represents the next frontier in digital protection.</p>
       
@@ -151,7 +151,7 @@ export const newInsights = [
     readMinutes: 12,
     featured: false,
     tags: ["Cloud", "Microservices", "DevOps", "Scalability"],
-    content: `
+    content: `,
       <h2>The Cloud-Native Advantage</h2>
       <p>Cloud-native applications are designed from the ground up to leverage cloud infrastructure, providing unprecedented scalability and resilience.</p>
       
@@ -176,7 +176,7 @@ export const newInsights = [
     readMinutes: 9,
     featured: true,
     tags: ["Data Analytics", "AI", "Machine Learning", "Business Intelligence"],
-    content: `
+    content: `,
       <h2>The Data-Driven Transformation</h2>
       <p>Modern businesses generate vast amounts of data, but the real value lies in extracting meaningful insights and taking action based on those insights.</p>
       
@@ -201,7 +201,7 @@ export const newInsights = [
     readMinutes: 11,
     featured: false,
     tags: ["DevOps", "CI/CD", "Automation", "Infrastructure"],
-    content: `
+    content: `,
       <h2>Accelerating Software Delivery</h2>
       <p>DevOps automation is essential for modern software development, enabling teams to deliver features faster while maintaining quality and reliability.</p>
       
@@ -226,7 +226,7 @@ export const newInsights = [
     readMinutes: 7,
     featured: true,
     tags: ["Micro-SaaS", "Entrepreneurship", "Software", "Business"],
-    content: `
+    content: `,
       <h2>The Micro-SaaS Revolution</h2>
       <p>Micro-SaaS businesses are proving that you don't need massive scale to build profitable software companies. Focus and specialization are the keys to success.</p>
       
@@ -251,7 +251,7 @@ export const newInsights = [
     readMinutes: 9,
     featured: true,
     tags: ["RAG", "GenAI", "Search", "Security"],
-    content: `
+    content: `,
       <h2>Why RAG v2</h2>
       <p>Move beyond naive vector search with hybrid retrieval, freshness windows, and authorization-aware filters.</p>
       <h3>Operate with Confidence</h3>
@@ -271,7 +271,7 @@ export const newInsights = [
     readMinutes: 6,
     featured: true,
     tags: ["FinOps", "Cloud", "Governance"],
-    content: `
+    content: `,
       <h2>Scorecards That Matter</h2>
       <p>Connect spend to product goals, set guardrails engineers respect, and automate waste prevention.</p>
       <h3>Playbook</h3>
@@ -294,7 +294,7 @@ newInsights.unshift({
   readMinutes: 7,
   featured: true,
   tags: ["Governance", "Policy", "Scorecards"],
-  content: `
+  content: `,
     <h2>Guardrails That Ship</h2>
     <p>Adopt scorecards tied to KPIs, small PR checks for risky changes, and budgeted online canaries.</p>
     <h3>What to Implement</h3>

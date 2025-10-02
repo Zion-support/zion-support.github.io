@@ -27,7 +27,7 @@ const October2025DocumentAutomationBanner = () => {
             Transform Operations with AI-Powered Document Processing
           </p>
           <p className="text-lg text-indigo-200 max-w-4xl mx-auto">
-            Discover how leading enterprises achieve <span className="font-bold text-white">94% faster processing</span>, 
+            Discover how leading enterprises achieve <span className="font-bold text-white">94% faster processing</span>
             <span className="font-bold text-white"> 99.2% accuracy</span>, and 
             <span className="font-bold text-white"> $47M annual savings</span> through intelligent document automation
           </p>
@@ -93,7 +93,7 @@ const October2025DocumentAutomationBanner = () => {
                 Insurance Leader: $47M Saved Processing 2.4M Documents
               </h3>
               <p className="text-purple-100 text-sm mb-4">
-                Real transformation: How a $18B insurance company achieved $47M annual savings, 
+                Real transformation: How a $18B insurance company achieved $47M annual savings
                 94% faster processing (45 days → 2.7 days), and 99.2% accuracy by automating 
                 2.4M documents annually with zero manual intervention.
               </p>

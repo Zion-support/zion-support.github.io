@@ -29,10 +29,10 @@ maxVisible?: number;
 }
 
 const UnifiedBannerSystem: React.FC<UnifiedBannerSystemProps> = ({
-  banners,
-  autoRotate = true,
-  rotationInterval = 5000,
-  showNavigation = true,
+  banners
+  autoRotate = true
+  rotationInterval = 5000
+  showNavigation = true
   maxVisible = 3
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -132,7 +132,7 @@ const UnifiedBannerSystem: React.FC<UnifiedBannerSystemProps> = ({
                       </h2>
                       {
 banner.subtitle && (
-<h3 className="text-lg md:text-xl font-semibold mb-3 opacity-90">,
+<h3 className="text-lg md:text-xl font-semibold mb-3 opacity-90">
 {banner.subtitle
 }
                         </h3>
@@ -193,10 +193,10 @@ banner.subtitle && (
       <style jsx>{
 `
 .banner-item {
-position: absolute;,
-top: 0;,
-left: 0;,
-width: 100%;,
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
 height: 100%;
 }
         
@@ -205,7 +205,7 @@ height: 100%;
         }
         
         .banner-container {
-min-height: 300px;,
+min-height: 300px;
 position: relative;
 }
         

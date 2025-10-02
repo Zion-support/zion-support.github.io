@@ -27,7 +27,7 @@ export default function LLMSupplyChains2025(): React.JSX.Element {
         <div className="prose prose-invert max-w-3xl">
           <p>
             This guide details how to design AI-first supply chains that ship safely and
-            measurably improve KPIs. We combine freshness windows for data staleness control,
+            measurably improve KPIs. We combine freshness windows for data staleness control
             quality budgets for inference stability, and policy-tested rollbacks.
           </p>
           <ul>

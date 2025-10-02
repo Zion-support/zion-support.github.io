@@ -20,12 +20,12 @@ export default function ZeroPIITelemetryV2(): React.JSX.Element {
         <p className="text-zion-slate-light mb-8">Sub‑100ms, Signed, Differentially Private</p>
         <div className="prose prose-invert max-w-3xl">
           <p>
-            Ship privacy-preserving telemetry in under 100ms using scoped IDs,
+            Ship privacy-preserving telemetry in under 100ms using scoped IDs
             on-device aggregation, and differential privacy. Use signed
             attestations for trust and compliance.
           </p>
           <p>
-            We outline event schemas, device-side processing, aggregation windows,
+            We outline event schemas, device-side processing, aggregation windows
             DP calibration, and verification patterns that scale globally.
           </p>
         </div>

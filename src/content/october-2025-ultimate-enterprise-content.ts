@@ -16,7 +16,7 @@ export const octoberUltimateEnterpriseContent = [
     breaking: true,
     new: true,
     tags: ["Multi-Cloud", "FinOps", "Cloud Operations", "Cost Optimization", "AI Automation"],
-    highlights: [
+    highlights: [,
       "156% ROI within 18 months",
       "$89M annual savings (Fortune 100 case study)",
       "91% cost waste elimination",
@@ -24,16 +24,16 @@ export const octoberUltimateEnterpriseContent = [
       "99.7% cloud uptime guarantee",
       "67% reduction in cloud management complexity",
       "3.8x faster resource provisioning"
-    ],
-    metrics: {
+    ]
+    metrics: {,
       roi: "156%",
       savings: "$89M",
       optimization: "91%",
       efficiency: "4.5x",
       uptime: "99.7%",
       complexity: "-67%"
-    },
-    cta: {
+    }
+    cta: {,
       text: "Read the Multi-Cloud Intelligence Guide",
       link: "/blog/ai-2025-oct-01-adaptive-multi-cloud-intelligence-revolution",
       badge: "NEW RELEASE"
@@ -53,7 +53,7 @@ export const octoberUltimateEnterpriseContent = [
     breaking: true,
     new: true,
     tags: ["Conversational AI", "Customer Experience", "NLP", "Virtual Assistants", "Omnichannel"],
-    highlights: [
+    highlights: [,
       "184% ROI within 14 months",
       "94% customer satisfaction (CSAT)",
       "5.7x productivity improvement for support teams",
@@ -61,16 +61,16 @@ export const octoberUltimateEnterpriseContent = [
       "78% automation rate for routine inquiries",
       "2.3 minutes average response time (vs 14 min)",
       "97 languages, 12 integrated channels"
-    ],
-    metrics: {
+    ]
+    metrics: {,
       roi: "184%",
       satisfaction: "94%",
       productivity: "5.7x",
       savings: "$173M",
       automation: "78%",
       responseTime: "2.3min"
-    },
-    cta: {
+    }
+    cta: {,
       text: "Explore Conversational AI Platform",
       link: "/blog/ai-2025-oct-01-conversational-ai-enterprise-transformation-platform",
       badge: "FEATURED"

@@ -19,7 +19,7 @@ const January2026RevolutionaryAIBanner = () => {
       
       <p className="text-gray-300 text-base mb-8 text-center max-w-5xl mx-auto">
         Experience the revolutionary fusion of quantum computing and artificial consciousness. Our breakthrough 
-        quantum-conscious AI systems are transforming how enterprises operate, delivering unprecedented accuracy, 
+        quantum-conscious AI systems are transforming how enterprises operate, delivering unprecedented accuracy
         speed, and intelligent automation that was previously impossible.
       </p>
       

@@ -75,8 +75,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     
     // In production, send to error reporting service:
     // fetch('/api/errors', {
-    //   method: 'POST',
-    //   headers: { 'Content-Type': 'application/json' },
+    //   method: 'POST'
+    //   headers: { 'Content-Type': 'application/json' }
     //   body: JSON.stringify(errorReport)
     // });
   };
@@ -126,9 +126,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     const body = encodeURIComponent(`
 Error ID: ${this.state.errorId}
 Error Message: ${this.state.error?.message}
-URL: ${window.location.href}
-Timestamp: ${new Date().toISOString()}
-
+URL: ${window.location.href},
+Timestamp: ${new Date().toISOString()},
 Please describe what you were doing when this error occurred:
 [Your description here]
 
@@ -213,12 +212,12 @@ ${this.state.error?.stack}
             {
 process.env.NODE_ENV === 'development' && this.state.errorInfo && (
 <details className="mt-6 text-left">
-<summary className="cursor-pointer text-sm font-medium text-gray-700 hover:text-gray-900">,
+<summary className="cursor-pointer text-sm font-medium text-gray-700 hover:text-gray-900">
 Development Details
 </summary>
 <pre className="mt-2 text-xs text-gray-600 bg-gray-100 p-3 rounded overflow-auto max-h-64">
 {this.state.error?.stack
-}
+},
                   {this.state.errorInfo.componentStack}
                 </pre>
               </details>

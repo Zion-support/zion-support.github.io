@@ -1,10 +1,6 @@
 import React from 'react';
-import {
-Helmet
-} from 'react-helmet-async';
-import {
-Network
-} from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Network } from 'lucide-react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 
@@ -54,7 +50,7 @@ const IoTEdgeComputing: React.FC = () => {
       price: "$5,000",
       period: "/month",
       description: "Perfect for IoT projects in development and testing phases",
-      features: [
+      features: [,
         "Up to 1,000 connected devices",
         "Basic edge computing capabilities",
         "Standard data analytics",
@@ -63,7 +59,7 @@ const IoTEdgeComputing: React.FC = () => {
         "Basic security monitoring",
         "Cloud data storage (100GB)",
         "Standard integrations (10)"
-      ],
+      ]
       popular: false
     },
     {
@@ -71,7 +67,7 @@ const IoTEdgeComputing: React.FC = () => {
       price: "$15,000",
       period: "/month",
       description: "Ideal for production IoT deployments with high device counts",
-      features: [
+      features: [,
         "Up to 10,000 connected devices",
         "Advanced edge AI processing",
         "Real-time analytics & insights",
@@ -83,7 +79,7 @@ const IoTEdgeComputing: React.FC = () => {
         "Custom device protocols",
         "Edge-to-cloud synchronization",
         "5G connectivity support"
-      ],
+      ]
       popular: true
     },
     {
@@ -91,7 +87,7 @@ const IoTEdgeComputing: React.FC = () => {
       price: "$45,000",
       period: "/month",
       description: "Complete solution for large-scale enterprise IoT deployments",
-      features: [
+      features: [,
         "Unlimited connected devices",
         "Premium edge AI with custom models",
         "Enterprise-grade analytics platform",
@@ -105,7 +101,7 @@ const IoTEdgeComputing: React.FC = () => {
         "Private 5G network setup",
         "SLA guarantee",
         "On-premise edge infrastructure"
-      ],
+      ]
       popular: false
     }
   ];
@@ -166,11 +162,11 @@ const IoTEdgeComputing: React.FC = () => {
   ];
 
   const industries = [
-    { name: "Manufacturing", devices: "Industrial sensors, PLCs, robotics" },
-    { name: "Healthcare", devices: "Patient monitors, medical devices, wearables" },
-    { name: "Retail", devices: "POS systems, inventory sensors, customer analytics" },
-    { name: "Transportation", devices: "Fleet tracking, traffic sensors, autonomous vehicles" },
-    { name: "Energy", devices: "Smart meters, grid sensors, renewable energy" },
+    { name: "Manufacturing", devices: "Industrial sensors, PLCs, robotics" }
+    { name: "Healthcare", devices: "Patient monitors, medical devices, wearables" }
+    { name: "Retail", devices: "POS systems, inventory sensors, customer analytics" }
+    { name: "Transportation", devices: "Fleet tracking, traffic sensors, autonomous vehicles" }
+    { name: "Energy", devices: "Smart meters, grid sensors, renewable energy" }
     { name: "Agriculture", devices: "Soil sensors, weather stations, irrigation systems" }
   ];
 
@@ -197,7 +193,7 @@ const IoTEdgeComputing: React.FC = () => {
                 IoT & <span className="bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">Edge Computing</span>
               </h1>
               <p className="text-xl md:text-2xl text-orange-100 max-w-4xl mx-auto mb-8">
-                Advanced IoT and edge computing solutions with real-time AI processing, 
+                Advanced IoT and edge computing solutions with real-time AI processing
                 5G integration, and global connectivity for smart connected systems.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -405,7 +401,7 @@ const IoTEdgeComputing: React.FC = () => {
                     className={
 `w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
 plan.popular
-? 'bg-orange-600 text-white hover:bg-orange-700',
+? 'bg-orange-600 text-white hover:bg-orange-700'
 : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
 }`}
                   >

@@ -9,9 +9,9 @@ const October2025FeaturedContentBanner = () => {
       gradient: "from-indigo-600 to-blue-600",
       bgGradient: "from-indigo-900/40 to-blue-900/40",
       borderColor: "border-indigo-500/30",
-      stats: [
-        { value: "90d", label: "To Outcomes" },
-        { value: "KPI", label: "Linked Gates" },
+      stats: [,
+        { value: "90d", label: "To Outcomes" }
+        { value: "KPI", label: "Linked Gates" }
         { value: "$$", label: "Predictable Cost" }
       ]
     },
@@ -23,9 +23,9 @@ const October2025FeaturedContentBanner = () => {
       gradient: "from-blue-600 to-purple-600",
       bgGradient: "from-blue-900/40 to-purple-900/40",
       borderColor: "border-blue-500/30",
-      stats: [
-        { value: "89%", label: "Faster Deployment" },
-        { value: "94%", label: "Cost Reduction" },
+      stats: [,
+        { value: "89%", label: "Faster Deployment" }
+        { value: "94%", label: "Cost Reduction" }
         { value: "$12.4M", label: "Annual Savings" }
       ]
     },
@@ -37,9 +37,9 @@ const October2025FeaturedContentBanner = () => {
       gradient: "from-emerald-600 to-teal-600",
       bgGradient: "from-emerald-900/40 to-teal-900/40",
       borderColor: "border-emerald-500/30",
-      stats: [
-        { value: "76%", label: "Forecast Accuracy" },
-        { value: "68%", label: "Cost Reduction" },
+      stats: [,
+        { value: "76%", label: "Forecast Accuracy" }
+        { value: "68%", label: "Cost Reduction" }
         { value: "$18.7M", label: "Annual Value" }
       ]
     },
@@ -51,9 +51,9 @@ const October2025FeaturedContentBanner = () => {
       gradient: "from-cyan-600 to-blue-600",
       bgGradient: "from-cyan-900/40 to-blue-900/40",
       borderColor: "border-cyan-500/30",
-      stats: [
-        { value: "KPI", label: "Linked Evals" },
-        { value: "1‑click", label: "Rollback" },
+      stats: [,
+        { value: "KPI", label: "Linked Evals" }
+        { value: "1‑click", label: "Rollback" }
         { value: "24/7", label: "Safe Ops" }
       ]
     },
@@ -65,9 +65,9 @@ const October2025FeaturedContentBanner = () => {
       gradient: "from-purple-600 to-pink-600",
       bgGradient: "from-purple-900/40 to-pink-900/40",
       borderColor: "border-purple-500/30",
-      stats: [
-        { value: "<100ms", label: "P95 Latency" },
-        { value: "SLA", label: "Aware Routing" },
+      stats: [,
+        { value: "<100ms", label: "P95 Latency" }
+        { value: "SLA", label: "Aware Routing" }
         { value: "$", label: "Predictable Spend" }
       ]
     }

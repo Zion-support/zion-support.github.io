@@ -87,9 +87,9 @@ const AICostOptimizationBanner: React.FC = () => {
           {/* Key Stats */}
           <div className="grid md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">
             {[
-              { value: '90%', label: 'Cost Reduction', icon: '💰' },
-              { value: '$500M+', label: 'Total Savings', icon: '📈' },
-              { value: '10x', label: 'Efficiency Gains', icon: '⚡' },
+              { value: '90%', label: 'Cost Reduction', icon: '💰' }
+              { value: '$500M+', label: 'Total Savings', icon: '📈' }
+              { value: '10x', label: 'Efficiency Gains', icon: '⚡' }
               { value: '6', label: 'Months to Results', icon: '📅' }
             ].map((stat, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-green-500/50 transition-all duration-300">
@@ -222,9 +222,9 @@ const AICostOptimizationBanner: React.FC = () => {
         {/* Success Indicators */}
         <div className="grid md:grid-cols-4 gap-8 mt-20">
           {[
-            { value: '$2B+', label: 'Total Client Savings' },
-            { value: '500+', label: 'Companies Optimized' },
-            { value: '90%', label: 'Average Cost Reduction' },
+            { value: '$2B+', label: 'Total Client Savings' }
+            { value: '500+', label: 'Companies Optimized' }
+            { value: '90%', label: 'Average Cost Reduction' }
             { value: '99.9%', label: 'Accuracy Maintained' }
           ].map((stat, index) => (
             <div key={index} className="text-center">

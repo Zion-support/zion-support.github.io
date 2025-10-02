@@ -14,13 +14,13 @@ export const octoberBreakthroughContent = [
     gradient: "from-purple-600 to-pink-600",
     featured: true,
     tags: ["Neuro-Symbolic AI", "Hybrid Systems", "Explainability", "Enterprise AI"],
-    highlights: [
+    highlights: [,
       "10x better model explainability",
       "5x improved accuracy on reasoning tasks",
       "60% reduction in training data requirements",
       "Production-ready frameworks and tooling"
-    ],
-    metrics: {
+    ]
+    metrics: {,
       accuracy: "+500%",
       explainability: "10x",
       dataEfficiency: "60% less"
@@ -38,13 +38,13 @@ export const octoberBreakthroughContent = [
     gradient: "from-blue-600 to-cyan-600",
     featured: true,
     tags: ["DevOps", "CI/CD", "Autonomous Systems", "MLOps"],
-    highlights: [
+    highlights: [,
       "85% reduction in deployment failures",
       "3x faster rollback and recovery",
       "Predictive failure detection with 95% accuracy",
       "Self-optimizing pipeline configurations"
-    ],
-    metrics: {
+    ]
+    metrics: {,
       failureReduction: "85%",
       recoverySpeed: "3x faster",
       uptime: "99.99%"
@@ -62,13 +62,13 @@ export const octoberBreakthroughContent = [
     gradient: "from-green-600 to-teal-600",
     featured: true,
     tags: ["Federated Learning", "Privacy", "GDPR", "Distributed ML"],
-    highlights: [
+    highlights: [,
       "100% data privacy compliance",
       "Train on 1000+ edge devices simultaneously",
       "90% reduction in data transfer costs",
       "GDPR, HIPAA, and SOC 2 compliant"
-    ],
-    metrics: {
+    ]
+    metrics: {,
       privacy: "100%",
       costSavings: "90%",
       scalability: "1000+ devices"
@@ -86,13 +86,13 @@ export const octoberBreakthroughContent = [
     gradient: "from-yellow-600 to-orange-600",
     featured: true,
     tags: ["LLM", "Performance", "Streaming", "Edge Computing"],
-    highlights: [
+    highlights: [,
       "Sub-100ms time to first token",
       "80% reduction in latency",
       "Edge-optimized inference",
       "Real-world benchmarks and case studies"
-    ],
-    metrics: {
+    ]
+    metrics: {,
       latency: "<100ms",
       improvement: "80%",
       throughput: "5x"
@@ -110,13 +110,13 @@ export const octoberBreakthroughContent = [
     gradient: "from-indigo-600 to-purple-600",
     featured: true,
     tags: ["AI Ethics", "Governance", "Fairness", "Compliance"],
-    highlights: [
+    highlights: [,
       "Comprehensive bias detection toolkit",
       "Automated fairness monitoring",
       "Production-ready ethical guidelines",
       "Real-world implementation examples"
-    ],
-    metrics: {
+    ]
+    metrics: {,
       biasReduction: "75%",
       compliance: "100%",
       auditability: "Full"
@@ -134,13 +134,13 @@ export const octoberBreakthroughContent = [
     gradient: "from-sky-600 to-blue-600",
     featured: false,
     tags: ["Multi-Cloud", "Cost Optimization", "Orchestration", "Kubernetes"],
-    highlights: [
+    highlights: [,
       "50% reduction in cloud costs",
       "Zero vendor lock-in",
       "Automated workload optimization",
       "Unified management across clouds"
-    ],
-    metrics: {
+    ]
+    metrics: {,
       costSavings: "50%",
       flexibility: "3 clouds",
       efficiency: "+40%"
@@ -158,13 +158,13 @@ export const octoberBreakthroughContent = [
     gradient: "from-pink-600 to-rose-600",
     featured: false,
     tags: ["Conversational AI", "NLP", "Chatbots", "Customer Experience"],
-    highlights: [
+    highlights: [,
       "95% user satisfaction scores",
       "Cross-session context retention",
       "Multi-language support (50+ languages)",
       "Enterprise-grade security"
-    ],
-    metrics: {
+    ]
+    metrics: {,
       satisfaction: "95%",
       languages: "50+",
       accuracy: "92%"

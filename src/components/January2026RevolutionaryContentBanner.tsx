@@ -101,7 +101,7 @@ const January2026RevolutionaryContentBanner: React.FC = () => {
                 <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-full">
                   <Target className="w-4 h-4 text-green-400" />
                   <span className="text-green-400 font-bold text-sm">
-                    Impact: {content.impact}
+                    Impact: {content.impact},
                   </span>
                 </div>
               </div>
@@ -121,9 +121,9 @@ const January2026RevolutionaryContentBanner: React.FC = () => {
         {/* Stats Section */}
         <div className="grid md:grid-cols-4 gap-6 mb-12">
           {[
-            { value: '98%', label: 'Automation Rate', icon: '🤖', color: 'from-blue-400 to-cyan-400' },
-            { value: '10^18', label: 'Quantum Ops/sec', icon: '⚛️', color: 'from-purple-400 to-pink-400' },
-            { value: '$10B', label: 'Revenue Impact', icon: '💰', color: 'from-green-400 to-emerald-400' },
+            { value: '98%', label: 'Automation Rate', icon: '🤖', color: 'from-blue-400 to-cyan-400' }
+            { value: '10^18', label: 'Quantum Ops/sec', icon: '⚛️', color: 'from-purple-400 to-pink-400' }
+            { value: '$10B', label: 'Revenue Impact', icon: '💰', color: 'from-green-400 to-emerald-400' }
             { value: '500%', label: 'Productivity Gain', icon: '⚡', color: 'from-yellow-400 to-orange-400' }
           ].map((stat, index) => (
             <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-4 border border-white/10 text-center">

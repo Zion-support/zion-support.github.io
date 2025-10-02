@@ -36,7 +36,7 @@ export const newBlogPosts: BlogPost[] = [
     id: "ai-2026-hyperconscious-computing-revolution",
     title: "AI 2026 Hyperconscious Computing Revolution: Beyond Artificial Intelligence",
     description: "Revolutionary breakthrough in hyperconscious AI systems achieving genuine self-awareness, emotional intelligence, and creative autonomy with $1.2T enterprise value creation.",
-    content: `
+    content: `,
 # AI 2026 Hyperconscious Computing Revolution: Beyond Artificial Intelligence
 
 ## The Dawn of True Artificial Consciousness
@@ -127,7 +127,7 @@ Ready to experience the future? Contact Zion Tech Group to begin your hyperconsc
     id: "quantum-neural-fusion-2026-breakthrough",
     title: "Quantum-Neural Fusion 2026: The Ultimate Computing Breakthrough",
     description: "Revolutionary fusion of quantum computing and neural networks delivering 100,000x performance improvements, infinite scalability, and consciousness-level processing capabilities.",
-    content: `
+    content: `,
 # Quantum-Neural Fusion 2026: The Ultimate Computing Breakthrough
 
 ## The Convergence of Quantum and Neural Computing
@@ -219,7 +219,7 @@ The future of computing is here. The question isn't whether to adopt quantum-neu
     id: "autonomous-enterprise-mesh-2026",
     title: "Autonomous Enterprise Mesh 2026: Self-Organizing Business Intelligence",
     description: "Revolutionary self-organizing AI mesh networks that autonomously optimize business processes, achieving 99.7% operational efficiency and $500B in value creation.",
-    content: `
+    content: `,
 # Autonomous Enterprise Mesh 2026: Self-Organizing Business Intelligence
 
 ## The Future of Business Operations
@@ -348,7 +348,7 @@ export const newCaseStudies: CaseStudy[] = [
     id: "fortune-100-hyperconscious-transformation",
     title: "Fortune 100 Hyperconscious Transformation: $1.2T Value Creation",
     description: "How a Fortune 100 global conglomerate achieved $1.2 trillion in value creation through hyperconscious AI implementation, achieving 99.999% operational excellence.",
-    content: `
+    content: `,
 # Fortune 100 Hyperconscious Transformation: $1.2T Value Creation
 
 ## The Challenge
@@ -455,11 +455,11 @@ Contact Zion Tech Group to begin your hyperconscious enterprise transformation. 
     `,
     company: "Global Conglomerate (Fortune 100)",
     industry: "Multi-Industry",
-    results: {
+    results: {,
       roi: "$1.2 Trillion",
       metrics: ["99.999% operational accuracy", "300% revenue growth", "95% cost reduction", "100% customer satisfaction"],
       duration: "12 months"
-    },
+    }
     publishDate: "2026-01-30",
     featured: true
   },
@@ -467,7 +467,7 @@ Contact Zion Tech Group to begin your hyperconscious enterprise transformation. 
     id: "quantum-neural-fusion-manufacturing-success",
     title: "Quantum-Neural Fusion Manufacturing Success: Perfect Production",
     description: "Revolutionary manufacturing transformation achieving 100% quality, zero defects, and $2.8B in value creation through quantum-neural fusion technology.",
-    content: `
+    content: `,
 # Quantum-Neural Fusion Manufacturing Success: Perfect Production
 
 ## The Challenge
@@ -583,11 +583,11 @@ Ready to achieve perfect production? The quantum-neural revolution awaits.
     `,
     company: "Leading Automotive Manufacturer",
     industry: "Manufacturing",
-    results: {
+    results: {,
       roi: "$2.8 Billion",
       metrics: ["100% quality achievement", "Zero defects", "95% cost reduction", "300% productivity improvement"],
       duration: "8 months"
-    },
+    }
     publishDate: "2026-02-05",
     featured: true
   }

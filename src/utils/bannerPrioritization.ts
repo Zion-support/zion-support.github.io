@@ -21,7 +21,7 @@ export const bannerRegistry: BannerMetadata[] = [
     value: '$2.7B',
     publishDate: new Date('2026-01-01'),
     category: 'autonomous',
-    featured: true,
+    featured: true
   },
   {
     id: 'oct2025-governed-agent-platforms-v2',
@@ -30,7 +30,7 @@ export const bannerRegistry: BannerMetadata[] = [
     value: '$1.1B',
     publishDate: new Date('2025-10-01'),
     category: 'ai',
-    featured: true,
+    featured: true
   },
   {
     id: 'jan2026-quantum',
@@ -39,7 +39,7 @@ export const bannerRegistry: BannerMetadata[] = [
     value: '$847B',
     publishDate: new Date('2026-01-01'),
     category: 'quantum',
-    featured: true,
+    featured: true
   },
   {
     id: 'oct2025-neural-quantum',
@@ -48,7 +48,7 @@ export const bannerRegistry: BannerMetadata[] = [
     value: '$18.7B',
     publishDate: new Date('2025-10-01'),
     category: 'quantum',
-    featured: true,
+    featured: true
   },
   {
     id: 'oct2025-nas',
@@ -57,7 +57,7 @@ export const bannerRegistry: BannerMetadata[] = [
     value: '$47M',
     publishDate: new Date('2025-10-01'),
     category: 'ai',
-    featured: true,
+    featured: true
   },
   {
     id: 'oct2025-sovereign',
@@ -66,7 +66,7 @@ export const bannerRegistry: BannerMetadata[] = [
     value: '$2.4B',
     publishDate: new Date('2025-10-01'),
     category: 'sovereign',
-    featured: true,
+    featured: true
   },
   {
     id: 'oct2025-green',
@@ -75,7 +75,7 @@ export const bannerRegistry: BannerMetadata[] = [
     value: '$3.7B',
     publishDate: new Date('2025-10-01'),
     category: 'green',
-    featured: true,
+    featured: true
   },
   {
     id: 'oct2025-edge-feature-stores',
@@ -84,8 +84,8 @@ export const bannerRegistry: BannerMetadata[] = [
     value: '$1.2B',
     publishDate: new Date('2025-10-02'),
     category: 'ai',
-    featured: true,
-  },
+    featured: true
+  }
 ];
 
 /**
@@ -149,13 +149,13 @@ export const getBannerAnalytics = () => {
     totalBanners: bannerRegistry.length,
     featuredCount: bannerRegistry.filter(b => b.featured).length,
     totalValue: `$${calculateTotalValue(bannerRegistry).toFixed(1)}B`,
-    categories: {
+    categories: {,
       quantum: getBannersByCategory('quantum').length,
       autonomous: getBannersByCategory('autonomous').length,
       ai: getBannersByCategory('ai').length,
       green: getBannersByCategory('green').length,
-      sovereign: getBannersByCategory('sovereign').length,
-    },
+      sovereign: getBannersByCategory('sovereign').length
+    }
   };
 };
 

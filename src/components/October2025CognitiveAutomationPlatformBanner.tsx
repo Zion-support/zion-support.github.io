@@ -89,7 +89,7 @@ const October2025CognitiveAutomationPlatformBanner: React.FC = () => {
               <motion.div
                 animate={{
                   scale: [1, 1.05, 1],
-                  rotate: [0, 3, 0],
+                  rotate: [0, 3, 0]
                 }}
                 transition={{
                   duration: 5,

@@ -8,7 +8,7 @@ className?: string;
 }
 
 const LatestContentBanner: React.FC<LatestContentBannerProps> = ({
-  variant = 'info',
+  variant = 'info'
   className = ''
 }) => {
   const variantStyles = {

@@ -71,7 +71,7 @@ export default function NextGenSecurityOperations2025(): void {
             <section className="mb-12">
               <h2 className="text-3xl font-bold mb-6 text-purple-300">The Security Crisis</h2>
               <p className="text-gray-300 mb-4 leading-relaxed">
-                Cyber threats have evolved beyond human capacity to defend. Modern attacks leverage AI, operate at machine speed, 
+                Cyber threats have evolved beyond human capacity to defend. Modern attacks leverage AI, operate at machine speed
                 and exploit vulnerabilities faster than security teams can respond. The average enterprise faces 4,800+ security 
                 alerts daily, with security analysts spending 73% of their time on false positives while real threats slip through.
               </p>
@@ -133,7 +133,7 @@ export default function NextGenSecurityOperations2025(): void {
               <div className="bg-slate-800/50 rounded-xl p-6 mb-6 border border-purple-500/20">
                 <h3 className="text-2xl font-bold mb-4 text-pink-300">4. Threat Intelligence Fusion</h3>
                 <p className="text-gray-300 mb-4">
-                  AI aggregates and analyzes threat intelligence from hundreds of sources—commercial feeds, open source intel, 
+                  AI aggregates and analyzes threat intelligence from hundreds of sources—commercial feeds, open source intel
                   dark web monitoring, and internal telemetry. NLP models extract actionable insights, identify emerging 
                   threats, and automatically update detection rules and response playbooks.
                 </p>

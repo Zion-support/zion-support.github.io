@@ -10,7 +10,7 @@ export default function Page(): void {
       </p>
       <div className="prose max-w-none">
         <p>
-          This is a short placeholder article. Expand with practical patterns for edge KV, signed configs,
+          This is a short placeholder article. Expand with practical patterns for edge KV, signed configs
           and local telemetry that enable private, sub‑100ms experiences without collecting PII.
         </p>
       </div>

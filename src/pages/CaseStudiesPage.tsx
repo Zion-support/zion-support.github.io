@@ -10,11 +10,11 @@ const CaseStudiesPage: React.FC = () => {
       industry: "Manufacturing",
       challenge: "Legacy system modernization and process automation",
       solution: "Implemented AI-powered predictive maintenance and automated workflows",
-      results: [
+      results: [,
         "40% reduction in downtime",
         "60% improvement in operational efficiency",
         "$2.5M annual cost savings"
-      ],
+      ]
       image: "🏭"
     },
     {
@@ -23,11 +23,11 @@ const CaseStudiesPage: React.FC = () => {
       industry: "Financial Services",
       challenge: "Digital transformation and cloud migration",
       solution: "Complete cloud infrastructure migration with enhanced security",
-      results: [
+      results: [,
         "99.9% uptime achieved",
         "50% faster transaction processing",
         "Enhanced security compliance"
-      ],
+      ]
       image: "🏦"
     },
     {
@@ -36,11 +36,11 @@ const CaseStudiesPage: React.FC = () => {
       industry: "Healthcare",
       challenge: "AI implementation for patient care optimization",
       solution: "Machine learning models for predictive healthcare analytics",
-      results: [
+      results: [,
         "35% improvement in patient outcomes",
         "25% reduction in readmission rates",
         "Streamlined care coordination"
-      ],
+      ]
       image: "🏥"
     },
     {
@@ -49,11 +49,11 @@ const CaseStudiesPage: React.FC = () => {
       industry: "Retail",
       challenge: "Scalable infrastructure and personalization",
       solution: "Cloud-native architecture with AI-driven personalization",
-      results: [
+      results: [,
         "300% increase in website performance",
         "45% boost in conversion rates",
         "Seamless scalability during peak seasons"
-      ],
+      ]
       image: "🛒"
     },
     {
@@ -62,11 +62,11 @@ const CaseStudiesPage: React.FC = () => {
       industry: "Technology",
       challenge: "Rapid growth and infrastructure scaling",
       solution: "DevOps automation and microservices architecture",
-      results: [
+      results: [,
         "90% reduction in deployment time",
         "99.95% system reliability",
         "10x faster feature delivery"
-      ],
+      ]
       image: "🚀"
     },
     {
@@ -75,11 +75,11 @@ const CaseStudiesPage: React.FC = () => {
       industry: "Energy",
       challenge: "IoT integration and data analytics",
       solution: "Comprehensive IoT platform with real-time analytics",
-      results: [
+      results: [,
         "20% improvement in energy efficiency",
         "Real-time monitoring capabilities",
         "Predictive maintenance implementation"
-      ],
+      ]
       image: "⚡"
     }
   ];

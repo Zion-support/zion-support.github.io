@@ -39,23 +39,23 @@ class AdvancedSEOOptimizer {
    * Analyze page for SEO optimization
    */
   analyzePage(options: {
-title?: string;,
-description?: string;,
-content?: string;,
-headings?: string[];,
+title?: string;
+description?: string;
+content?: string;
+headings?: string[];
 images?: { src: string; alt: string
 }[];
     links?: { href: string; text: string; isInternal: boolean }[];
     keywords?: string[];
   }): SEOAnalysis {
     const {
-      title = '',
-      description = '',
-      content = '',
-      headings = [],
-      images = [],
-      links = [],
-      keywords = [],
+      title = ''
+      description = ''
+      content = ''
+      headings = []
+      images = []
+      links = []
+      keywords = []
     } = options;
 
     // Calculate metrics
@@ -88,7 +88,7 @@ images?: { src: string; alt: string
       recommendations,
       keywords: extractedKeywords,
       issues,
-      strengths,
+      strengths
     };
   }
 
@@ -288,7 +288,7 @@ images?: { src: string; alt: string
       keywordDensity: 0.15,
       readability: 0.15,
       images: 0.10,
-      links: 0.10,
+      links: 0.10
     };
 
     return Math.round(
@@ -316,7 +316,7 @@ images?: { src: string; alt: string
         category: 'critical',
         message: 'Title tag needs optimization',
         action: `Optimize title length (50-60 chars) and include primary keywords`,
-        impact: 'high',
+        impact: 'high'
       });
     }
 
@@ -326,7 +326,7 @@ images?: { src: string; alt: string
         category: 'critical',
         message: 'Meta description needs improvement',
         action: 'Write compelling description (150-160 chars) with keywords and CTA',
-        impact: 'high',
+        impact: 'high'
       });
     }
 
@@ -336,7 +336,7 @@ images?: { src: string; alt: string
         category: 'important',
         message: 'Heading structure could be improved',
         action: 'Add more headings with target keywords',
-        impact: 'medium',
+        impact: 'medium'
       });
     }
 
@@ -346,14 +346,14 @@ images?: { src: string; alt: string
         category: 'important',
         message: 'Keyword density is too low',
         action: 'Naturally incorporate keywords throughout content (target 1-3%)',
-        impact: 'high',
+        impact: 'high'
       });
     } else if (metrics.keywordDensity < 80) {
       recommendations.push({
         category: 'minor',
         message: 'Keyword density could be optimized',
         action: 'Fine-tune keyword usage for optimal density',
-        impact: 'low',
+        impact: 'low'
       });
     }
 
@@ -363,7 +363,7 @@ images?: { src: string; alt: string
         category: 'important',
         message: 'Content readability needs improvement',
         action: 'Use shorter sentences and simpler words',
-        impact: 'medium',
+        impact: 'medium'
       });
     }
 
@@ -373,7 +373,7 @@ images?: { src: string; alt: string
         category: 'important',
         message: 'Image optimization needed',
         action: 'Add descriptive alt text to all images',
-        impact: 'medium',
+        impact: 'medium'
       });
     }
 
@@ -383,7 +383,7 @@ images?: { src: string; alt: string
         category: 'minor',
         message: 'Link structure could be improved',
         action: 'Add more internal links with descriptive anchor text',
-        impact: 'low',
+        impact: 'low'
       });
     }
 
@@ -413,7 +413,7 @@ images?: { src: string; alt: string
       .map(([word, count]) => ({
         word,
         count,
-        density: count / totalWords,
+        density: count / totalWords
       }))
       .sort((a, b) => b.count - a.count)
       .slice(0, limit);
@@ -425,7 +425,7 @@ images?: { src: string; alt: string
    * Identify SEO issues
    */
   private identifyIssues(metrics: SEOMetrics): string[] {
-const issues: string[] = [];,
+const issues: string[] = [];
 if (metrics.titleScore < 50) issues.push('Title tag is poorly optimized');
 if (metrics.descriptionScore < 50) issues.push('Meta description is poorly optimized');
 if (metrics.headingScore < 40) issues.push('Missing or poorly structured headings');
@@ -440,7 +440,7 @@ return issues;
    * Identify SEO strengths
    */
   private identifyStrengths(metrics: SEOMetrics): string[] {
-const strengths: string[] = [];,
+const strengths: string[] = [];
 if (metrics.titleScore >= 80) strengths.push('Excellent title tag optimization');
 if (metrics.descriptionScore >= 80) strengths.push('Well-optimized meta description');
 if (metrics.headingScore >= 80) strengths.push('Strong heading structure');
@@ -457,7 +457,7 @@ return strengths;
   generateStructuredData(type: 'Article' | 'Product' | 'Service', data: any): string {
     const baseSchema = {
       '@context': 'https://schema.org',
-      '@type': type,
+      '@type': type
     };
 
     const schema = { ...baseSchema, ...data };
@@ -468,11 +468,11 @@ return strengths;
    * Optimize meta tags
    */
   optimizeMetaTags(page: {
-title: string;,
-description: string;,
-keywords: string[];,
-author?: string;,
-image?: string;,
+title: string;
+description: string;
+keywords: string[];
+author?: string;
+image?: string;
 url?: string;
 }): { [key: string]: string } {
     return {
@@ -487,7 +487,7 @@ url?: string;
       'twitter:title': page.title,
       'twitter:description': page.description,
       'twitter:image': page.image || '',
-      author: page.author || '',
+      author: page.author || ''
     };
   }
 

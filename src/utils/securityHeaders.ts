@@ -23,13 +23,13 @@ csp: {,
 'upgrade-insecure-requests': boolean;
 'block-all-mixed-content': boolean;
 };
-  headers: {
+  headers: {,
     [key: string]: string;
   };
 }
 
 export class SecurityManager {
-private config: SecurityConfig;,
+private config: SecurityConfig;
 constructor() {
 this.config = this.getDefaultConfig();
 }
@@ -41,7 +41,7 @@ this.config = this.getDefaultConfig();
 
   private getDefaultConfig(): SecurityConfig {
     return {
-      csp: {
+      csp: {,
         'default-src': ["'self'"],
         'script-src': ["'self'", "'unsafe-inline'", "'unsafe-eval'", 'https://www.googletagmanager.com', 'https://www.google-analytics.com'],
         'style-src': ["'self'", "'unsafe-inline'", 'https://fonts.googleapis.com'],
@@ -59,8 +59,8 @@ this.config = this.getDefaultConfig();
         'manifest-src': ["'self'"],
         'upgrade-insecure-requests': true,
         'block-all-mixed-content': true
-      },
-      headers: {
+      }
+      headers: {,
         'X-Frame-Options': 'DENY',
         'X-Content-Type-Options': 'nosniff',
         'X-XSS-Protection': '1; mode=block',
@@ -95,7 +95,7 @@ this.config = this.getDefaultConfig();
 
   public getSecurityHeaders(): { [key: string]: string } {
     return {
-      ...this.config.headers,
+      ...this.config.headers
       'Content-Security-Policy': this.getCSPDirective()
     };
   }
@@ -154,7 +154,7 @@ this.config = this.getDefaultConfig();
   }
 
   public getSecurityReport(): {
-csp: string;,
+csp: string;
 headers: { [key: string]: string
 };
     score: number;

@@ -10,10 +10,10 @@
  * Converts legacy NewContentPromoBanner props to UnifiedPromotionalBanner props
  */
 export function convertNewContentPromoProps(legacyProps: {
-title: string;,
-description: string;,
-ctaText: string;,
-ctaLink: string;,
+title: string;
+description: string;
+ctaText: string;
+ctaLink: string;
 featuredItems?: Array<{ title: string; category: string; link: string
 }>;
   className?: string;
@@ -38,38 +38,34 @@ featuredItems?: Array<{ title: string; category: string; link: string
  * Preset configurations for common banner types
  */
 export const bannerPresets = {
-  octoberBreakthrough: {
+  octoberBreakthrough: {,
     variant: 'premium' as const,
     theme: 'gradient' as const,
     icon: 'rocket' as const,
     badge: '🚀 OCTOBER 2025',
     animated: true
-  },
-  
-  januaryInnovation: {
+  }
+  januaryInnovation: {,
     variant: 'hero' as const,
     theme: 'purple' as const,
     icon: 'sparkles' as const,
     badge: '✨ JANUARY 2026',
     animated: true
-  },
-  
-  februaryRevolution: {
+  }
+  februaryRevolution: {,
     variant: 'mega' as const,
     theme: 'gradient' as const,
     icon: 'zap' as const,
     badge: '⚡ FEBRUARY 2026',
     animated: true
-  },
-  
-  compactUpdate: {
+  }
+  compactUpdate: {,
     variant: 'compact' as const,
     theme: 'blue' as const,
     icon: 'star' as const,
     animated: false
-  },
-  
-  enterpriseSolution: {
+  }
+  enterpriseSolution: {,
     variant: 'premium' as const,
     theme: 'cyan' as const,
     icon: 'rocket' as const,
@@ -86,7 +82,7 @@ export function createBannerConfig(
   overrides: Partial<UnifiedPromotionalBannerProps>
 ): UnifiedPromotionalBannerProps {
   return {
-    ...bannerPresets[preset],
+    ...bannerPresets[preset]
     ...overrides
   } as UnifiedPromotionalBannerProps;
 }
@@ -101,16 +97,14 @@ title: `🚀 JUST RELEASED: ${count
     ctaText: 'Explore Latest Innovations',
     ctaLink: '/blog',
     icon: 'rocket' as const
-  }),
-  
-  enterpriseUpdate: (topic: string) => ({
+  })
+  enterpriseUpdate: (topic: string) => ({,
     title: `🎯 NEW ENTERPRISE SOLUTION: ${topic}`,
     ctaText: 'Learn More',
     ctaLink: '/services',
     icon: 'sparkles' as const
-  }),
-  
-  researchRelease: (field: string) => ({
+  })
+  researchRelease: (field: string) => ({,
     title: `🔬 BREAKTHROUGH RESEARCH: ${field}`,
     ctaText: 'Read Full Report',
     ctaLink: '/blog',
@@ -122,9 +116,9 @@ title: `🚀 JUST RELEASED: ${count
  * Helper to create featured items with consistent formatting
  */
 export function createFeaturedItems(items: Array<{
-title: string;,
-category: string;,
-link: string;,
+title: string;
+category: string;
+link: string;
 metrics?: string;
 }>): FeaturedItem[] {
   return items.map(item => ({
@@ -140,8 +134,8 @@ metrics?: string;
  */
 export function formatBannerDate(date: Date = new Date()): string {
   return date.toLocaleDateString('en-US', { 
-    month: 'long', 
-    day: 'numeric', 
+    month: 'long',
+    day: 'numeric',
     year: 'numeric' 
   });
 }
@@ -150,7 +144,7 @@ export function formatBannerDate(date: Date = new Date()): string {
  * Component usage guide for developers
  */
 export const usageExamples = {
-  basic: `
+  basic: `,
     <UnifiedPromotionalBanner
       variant="default"
       title="Your Title Here"
@@ -160,7 +154,7 @@ export const usageExamples = {
     />
   `,
   
-  withPreset: `
+  withPreset: `,
     <UnifiedPromotionalBanner
       {...createBannerConfig('octoberBreakthrough', {
         title: "3 Revolutionary AI Systems",
@@ -172,7 +166,7 @@ export const usageExamples = {
     />
   `,
   
-  withFeaturedItems: `
+  withFeaturedItems: `,
     <UnifiedPromotionalBanner
       variant="premium"
       title="Latest Innovations"

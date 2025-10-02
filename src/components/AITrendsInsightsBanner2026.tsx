@@ -77,9 +77,9 @@ const AITrendsInsightsBanner2026: React.FC = () => {
   ];
 
   const marketInsights = [
-    { value: '$2.5T', label: 'Global AI Market Size', icon: <TrendingUp className="w-6 h-6" /> },
-    { value: '85%', label: 'Enterprise AI Adoption', icon: <Users className="w-6 h-6" /> },
-    { value: '500M+', label: 'AI-Powered Devices', icon: <Globe className="w-6 h-6" /> },
+    { value: '$2.5T', label: 'Global AI Market Size', icon: <TrendingUp className="w-6 h-6" /> }
+    { value: '85%', label: 'Enterprise AI Adoption', icon: <Users className="w-6 h-6" /> }
+    { value: '500M+', label: 'AI-Powered Devices', icon: <Globe className="w-6 h-6" /> }
     { value: '2.3M', label: 'AI Job Openings', icon: <Award className="w-6 h-6" /> }
   ];
 
@@ -215,7 +215,7 @@ const AITrendsInsightsBanner2026: React.FC = () => {
               Get Weekly AI Trends & Insights
             </h3>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Stay informed with our weekly AI trends newsletter. Get exclusive insights, market analysis, 
+              Stay informed with our weekly AI trends newsletter. Get exclusive insights, market analysis
               and early access to breakthrough technologies.
             </p>
             
@@ -244,7 +244,7 @@ const AITrendsInsightsBanner2026: React.FC = () => {
                 Lead the AI Revolution
               </h3>
               <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
-                Don't just follow trends – create them. Get exclusive access to our AI insights, 
+                Don't just follow trends – create them. Get exclusive access to our AI insights
                 early technology previews, and strategic guidance for your organization.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

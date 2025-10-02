@@ -51,7 +51,7 @@ const SEOAuditDashboard: React.FC = () => {
       impact: 'medium',
       category: 'content',
       fix: 'Optimize title length for better search engine visibility',
-      score: 75,
+      score: 75
     },
     {
       id: 'meta-description',
@@ -61,7 +61,7 @@ const SEOAuditDashboard: React.FC = () => {
       impact: 'medium',
       category: 'content',
       fix: 'Write compelling meta descriptions that encourage clicks',
-      score: 80,
+      score: 80
     },
     {
       id: 'heading-structure',
@@ -71,7 +71,7 @@ const SEOAuditDashboard: React.FC = () => {
       impact: 'medium',
       category: 'content',
       fix: 'Use only one H1 tag and maintain logical heading order',
-      score: 85,
+      score: 85
     },
     {
       id: 'image-alt-text',
@@ -81,7 +81,7 @@ const SEOAuditDashboard: React.FC = () => {
       impact: 'high',
       category: 'accessibility',
       fix: 'Add descriptive alt text to all images',
-      score: 60,
+      score: 60
     },
     {
       id: 'mobile-friendly',
@@ -91,7 +91,7 @@ const SEOAuditDashboard: React.FC = () => {
       impact: 'high',
       category: 'mobile',
       fix: 'Ensure all content is accessible on mobile devices',
-      score: 90,
+      score: 90
     },
     {
       id: 'page-speed',
@@ -101,7 +101,7 @@ const SEOAuditDashboard: React.FC = () => {
       impact: 'high',
       category: 'performance',
       fix: 'Optimize images, minimize CSS/JS, and use CDN',
-      score: 70,
+      score: 70
     },
     {
       id: 'internal-linking',
@@ -111,7 +111,7 @@ const SEOAuditDashboard: React.FC = () => {
       impact: 'medium',
       category: 'technical',
       fix: 'Create a logical internal linking structure',
-      score: 65,
+      score: 65
     },
     {
       id: 'schema-markup',
@@ -121,7 +121,7 @@ const SEOAuditDashboard: React.FC = () => {
       impact: 'medium',
       category: 'technical',
       fix: 'Add JSON-LD schema markup for better search results',
-      score: 50,
+      score: 50
     },
     {
       id: 'ssl-certificate',
@@ -131,7 +131,7 @@ const SEOAuditDashboard: React.FC = () => {
       impact: 'high',
       category: 'technical',
       fix: 'Maintain valid SSL certificate and redirect HTTP to HTTPS',
-      score: 95,
+      score: 95
     },
     {
       id: 'broken-links',
@@ -141,8 +141,8 @@ const SEOAuditDashboard: React.FC = () => {
       impact: 'medium',
       category: 'technical',
       fix: 'Fix or remove broken links to improve user experience',
-      score: 40,
-    },
+      score: 40
+    }
   ];
 
   const runSEOAudit = async () => {
@@ -184,16 +184,16 @@ const SEOAuditDashboard: React.FC = () => {
       errors,
       warnings,
       issues,
-      metrics: {
+      metrics: {,
         pageTitle: 'Zion Tech Group - Leading AI & Technology Solutions',
         metaDescription: 'Cutting-edge AI, cloud, and digital transformation solutions for modern enterprises. Expert IT consulting and innovative technology implementations.',
         headings: { h1: 1, h2: 8, h3: 15, h4: 12, h5: 6, h6: 2 },
         images: { total: 24, withAlt: 18, withoutAlt: 6 },
         links: { total: 45, internal: 32, external: 13 },
         wordCount: 2847,
-        readabilityScore: 72,
-      },
-      lastUpdated: Date.now(),
+        readabilityScore: 72
+      }
+      lastUpdated: Date.now()
     });
     
     setIsRunning(false);
@@ -201,35 +201,35 @@ const SEOAuditDashboard: React.FC = () => {
 
   const getIssueIcon = (type: string) => {
 switch (type) {
-case 'error':,
+case 'error':
 return <XCircle className="w-5 h-5 text-red-600" />;
-case 'warning':,
+case 'warning':
 return <AlertTriangle className="w-5 h-5 text-yellow-600" />;
-default:,
+default:
 return <CheckCircle className="w-5 h-5 text-blue-600" />;
 }
   };
 
   const getImpactColor = (impact: string) => {
 switch (impact) {
-case 'high':,
+case 'high':
 return 'bg-red-100 text-red-800 border-red-200';
-case 'medium':,
+case 'medium':
 return 'bg-yellow-100 text-yellow-800 border-yellow-200';
-default:,
+default:
 return 'bg-blue-100 text-blue-800 border-blue-200';
 }
   };
 
   const getCategoryIcon = (category: string) => {
 switch (category) {
-case 'content':,
+case 'content':
 return <Search className="w-4 h-4" />;
-case 'mobile':,
+case 'mobile':
 return <Smartphone className="w-4 h-4" />;
-case 'performance':,
+case 'performance':
 return <Zap className="w-4 h-4" />;
-default:,
+default:
 return <Globe className="w-4 h-4" />;
 }
   };

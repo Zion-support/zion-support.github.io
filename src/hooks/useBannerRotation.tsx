@@ -28,9 +28,9 @@ isLoading: boolean;
  */
 export const useBannerRotation = ({
   banners,
-  strategy,
-  autoRotate = true,
-  balancedSelection = false,
+  strategy
+  autoRotate = true
+  balancedSelection = false
 }: UseBannerRotationOptions): UseBannerRotationReturn => {
   const [displayedBanners, setDisplayedBanners] = useState<BannerConfig[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -39,8 +39,8 @@ export const useBannerRotation = ({
   // Load banner statistics from storage
   const bannersWithStats = useMemo(() => {
     return banners.map(banner => ({
-      ...banner,
-      ...loadBannerStats(banner.id),
+      ...banner
+      ...loadBannerStats(banner.id)
     }));
   }, [banners]);
   
@@ -102,7 +102,7 @@ export const useBannerRotation = ({
     handleBannerImpression,
     handleBannerClick,
     refreshBanners,
-    isLoading,
+    isLoading
   };
 };
 
@@ -164,7 +164,7 @@ export const useBannerABTest = (
   // Select variation based on user ID (consistent assignment)
   const selectedVariation = useMemo(() => {
     const hash = Array.from(userId + testName).reduce(
-      (acc, char) => acc + char.charCodeAt(0),
+      (acc, char) => acc + char.charCodeAt(0)
       0
     );
     const index = hash % variations.length;
@@ -178,15 +178,15 @@ export const useBannerABTest = (
         testName,
         variation: selectedVariation.id,
         metric,
-        value,
+        value
       });
-    },
+    }
     [selectedVariation, testName]
   );
   
   return {
     selectedVariation,
-    trackVariationPerformance,
+    trackVariationPerformance
   };
 };
 

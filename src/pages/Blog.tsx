@@ -1,6 +1,4 @@
-import {
-Zap
-} from "lucide-react";
+import { Zap } from "lucide-react";
 import React, { useMemo, useState } from "react";
 import BlogPromotionBanner from "../components/BlogPromotionBanner";
 // const Footer: React.FC = () => null;
@@ -36,7 +34,7 @@ export default function Blog(): React.JSX.Element {
     "AI Solutions",
     "Case Studies",
     "Industry Insights",
-    "Tutorials",
+    "Tutorials"
   ];
 
   const staticPosts: BlogPost[] = [
@@ -52,7 +50,7 @@ export default function Blog(): React.JSX.Element {
       tags: ["AI", "Automation", "Case Study", "Financial Services"],
       image: "/api/placeholder/400/250",
       featured: true,
-      views: 1250,
+      views: 1250
     },
     {
       id: 7,
@@ -66,7 +64,7 @@ export default function Blog(): React.JSX.Element {
       tags: ["Serverless", "Inference", "Cost"],
       image: "/api/placeholder/400/250",
       featured: true,
-      views: 421,
+      views: 421
     },
     {
       id: 8,
@@ -80,7 +78,7 @@ export default function Blog(): React.JSX.Element {
       tags: ["RAG", "Vector Search", "Evals"],
       image: "/api/placeholder/400/250",
       featured: true,
-      views: 368,
+      views: 368
     },
     {
       id: 9,
@@ -94,7 +92,7 @@ export default function Blog(): React.JSX.Element {
       tags: ["GenAI", "Security", "Compliance"],
       image: "/api/placeholder/400/250",
       featured: false,
-      views: 297,
+      views: 297
     },
     {
       id: 2,
@@ -108,7 +106,7 @@ export default function Blog(): React.JSX.Element {
       tags: ["AI", "Customer Support", "Virtual Assistant", "Trends"],
       image: "/api/placeholder/400/250",
       featured: true,
-      views: 980,
+      views: 980
     },
     {
       id: 3,
@@ -122,7 +120,7 @@ export default function Blog(): React.JSX.Element {
       tags: ["Cloud", "Infrastructure", "Scalability", "DevOps"],
       image: "/api/placeholder/400/250",
       featured: false,
-      views: 756,
+      views: 756
     },
     {
       id: 4,
@@ -136,7 +134,7 @@ export default function Blog(): React.JSX.Element {
       tags: ["AI", "Data Analytics", "Machine Learning", "Business Intelligence"],
       image: "/api/placeholder/400/250",
       featured: false,
-      views: 892,
+      views: 892
     },
     {
       id: 5,
@@ -150,7 +148,7 @@ export default function Blog(): React.JSX.Element {
       tags: ["Cybersecurity", "AI", "Security", "Threat Detection"],
       image: "/api/placeholder/400/250",
       featured: false,
-      views: 634,
+      views: 634
     },
     {
       id: 6,
@@ -164,8 +162,8 @@ export default function Blog(): React.JSX.Element {
       tags: ["AI", "Healthcare", "Patient Care", "Medical Technology"],
       image: "/api/placeholder/400/250",
       featured: false,
-      views: 445,
-    },
+      views: 445
+    }
   ];
 
   // Map content entries into this page's structure
@@ -201,22 +199,22 @@ export default function Blog(): React.JSX.Element {
 
   const getCategoryIcon = (category: string) => {
 switch (category) {
-case "AI Solutions": return Zap;,
-case "Case Studies": return BarChart3;,
-case "Technology": return Code;,
-case "Industry Insights": return TrendingUp;,
-case "Tutorials": return Bot;,
+case "AI Solutions": return Zap;
+case "Case Studies": return BarChart3;
+case "Technology": return Code;
+case "Industry Insights": return TrendingUp;
+case "Tutorials": return Bot;
 default: return Shield;
 }
   };
 
   const getCategoryColor = (category: string) => {
 switch (category) {
-case "AI Solutions": return "text-blue-400 bg-blue-500/10 border-blue-500/30";,
-case "Case Studies": return "text-green-400 bg-green-500/10 border-green-500/30";,
-case "Technology": return "text-purple-400 bg-purple-500/10 border-purple-500/30";,
-case "Industry Insights": return "text-orange-400 bg-orange-500/10 border-orange-500/30";,
-case "Tutorials": return "text-cyan-400 bg-cyan-500/10 border-cyan-500/30";,
+case "AI Solutions": return "text-blue-400 bg-blue-500/10 border-blue-500/30";
+case "Case Studies": return "text-green-400 bg-green-500/10 border-green-500/30";
+case "Technology": return "text-purple-400 bg-purple-500/10 border-purple-500/30";
+case "Industry Insights": return "text-orange-400 bg-orange-500/10 border-orange-500/30";
+case "Tutorials": return "text-cyan-400 bg-cyan-500/10 border-cyan-500/30";
 default: return "text-gray-400 bg-gray-500/10 border-gray-500/30";
 }
   };
@@ -282,7 +280,7 @@ default: return "text-gray-400 bg-gray-500/10 border-gray-500/30";
               </span>
             </h1>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Stay ahead with the latest insights on AI, technology trends, case studies, 
+              Stay ahead with the latest insights on AI, technology trends, case studies
               and industry best practices from our team of experts.
             </p>
           </div>
@@ -323,7 +321,7 @@ default: return "text-gray-400 bg-gray-500/10 border-gray-500/30";
 selectedCategory === "All" && searchTerm === "" && (
 <div className="mb-16">
 <h2 className="text-2xl font-bold text-white mb-8">Featured Articles</h2>
-<div className="grid md:grid-cols-2 gap-8">,
+<div className="grid md:grid-cols-2 gap-8">
 {featuredPosts.map((post) => {
 const CategoryIcon = getCategoryIcon(post.category);
 const categoryColor = getCategoryColor(post.category);

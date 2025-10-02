@@ -2,7 +2,7 @@
 // Brand new cutting-edge AI breakthroughs and enterprise solutions
 
 export const january2026NewContent = {
-  featuredArticles: [
+  featuredArticles: [,
     {
       id: "ai-2026-january-autonomous-enterprise-mesh",
       title: "🚀 Autonomous Enterprise Mesh 2026: Self-Organizing Business Intelligence",
@@ -81,8 +81,8 @@ export const january2026NewContent = {
       readTime: "13 min",
       excerpt: "Explore the future of cybersecurity with quantum-safe encryption and protection systems that are resistant to quantum computing attacks."
     }
-  ],
-  featuredServices: [
+  ]
+  featuredServices: [,
     {
       id: "ai-2026-autonomous-enterprise-solutions",
       title: "Autonomous Enterprise Solutions 2026",
@@ -116,8 +116,8 @@ export const january2026NewContent = {
       pricing: "Starting at $100K/month",
       features: ["Synthetic consciousness", "Emotional intelligence", "Creative autonomy", "Self-awareness"]
     }
-  ],
-  caseStudies: [
+  ]
+  caseStudies: [,
     {
       id: "fortune-100-autonomous-transformation",
       title: "Fortune 100 Autonomous Business Transformation",

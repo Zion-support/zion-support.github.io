@@ -1,10 +1,6 @@
 import React from 'react';
-import {
-Helmet
-} from 'react-helmet-async';
-import {
-Video
-} from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Video } from 'lucide-react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 
@@ -54,7 +50,7 @@ const ConversationalAI: React.FC = () => {
       price: "$399",
       period: "/month",
       description: "Perfect for small businesses wanting to add conversational AI capabilities",
-      features: [
+      features: [,
         "Up to 1,000 conversations/month",
         "Basic NLP capabilities",
         "Text & voice support",
@@ -63,7 +59,7 @@ const ConversationalAI: React.FC = () => {
         "Standard integrations",
         "5 language support",
         "Basic customization"
-      ],
+      ]
       popular: false
     },
     {
@@ -71,7 +67,7 @@ const ConversationalAI: React.FC = () => {
       price: "$1,299",
       period: "/month",
       description: "Ideal for growing companies with complex conversational needs",
-      features: [
+      features: [,
         "Up to 10,000 conversations/month",
         "Advanced NLP & NLU",
         "Text, voice & video support",
@@ -83,7 +79,7 @@ const ConversationalAI: React.FC = () => {
         "API access",
         "A/B testing",
         "Sentiment analysis"
-      ],
+      ]
       popular: true
     },
     {
@@ -91,7 +87,7 @@ const ConversationalAI: React.FC = () => {
       price: "$4,999",
       period: "/month",
       description: "Complete solution for large organizations with enterprise requirements",
-      features: [
+      features: [,
         "Unlimited conversations",
         "Enterprise NLP & NLU",
         "Full multi-modal support",
@@ -105,7 +101,7 @@ const ConversationalAI: React.FC = () => {
         "SLA guarantee",
         "On-premise deployment",
         "Training & consultation"
-      ],
+      ]
       popular: false
     }
   ];
@@ -217,7 +213,7 @@ const ConversationalAI: React.FC = () => {
                 Conversational <span className="bg-gradient-to-r from-violet-400 to-pink-400 bg-clip-text text-transparent">AI</span>
               </h1>
               <p className="text-xl md:text-2xl text-violet-100 max-w-4xl mx-auto mb-8">
-                Deploy advanced conversational AI with 96% accuracy, 150+ language support, 
+                Deploy advanced conversational AI with 96% accuracy, 150+ language support
                 and multi-modal conversations for customer support, sales, and engagement.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -427,7 +423,7 @@ const ConversationalAI: React.FC = () => {
                     className={
 `w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
 plan.popular
-? 'bg-violet-600 text-white hover:bg-violet-700',
+? 'bg-violet-600 text-white hover:bg-violet-700'
 : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
 }`}
                   >

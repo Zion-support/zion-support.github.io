@@ -1,10 +1,6 @@
 import React from 'react';
-import {
-Helmet
-} from 'react-helmet-async';
-import {
-Zap
-} from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Zap } from 'lucide-react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 
@@ -54,7 +50,7 @@ const AIPredictiveAnalytics: React.FC = () => {
       price: "$299",
       period: "/month",
       description: "Perfect for small businesses wanting to leverage predictive analytics",
-      features: [
+      features: [,
         "Up to 10 predictive models",
         "5 data sources",
         "Basic dashboard",
@@ -63,7 +59,7 @@ const AIPredictiveAnalytics: React.FC = () => {
         "Standard integrations",
         "Historical data analysis",
         "Basic forecasting"
-      ],
+      ]
       popular: false
     },
     {
@@ -71,7 +67,7 @@ const AIPredictiveAnalytics: React.FC = () => {
       price: "$899",
       period: "/month",
       description: "Ideal for growing companies with complex data needs",
-      features: [
+      features: [,
         "Unlimited predictive models",
         "25 data sources",
         "Advanced dashboard & visualization",
@@ -82,7 +78,7 @@ const AIPredictiveAnalytics: React.FC = () => {
         "API access",
         "Automated alerts",
         "A/B testing insights"
-      ],
+      ]
       popular: true
     },
     {
@@ -90,7 +86,7 @@ const AIPredictiveAnalytics: React.FC = () => {
       price: "$2,999",
       period: "/month",
       description: "Complete solution for large organizations with enterprise requirements",
-      features: [
+      features: [,
         "Unlimited everything",
         "Unlimited data sources",
         "Enterprise dashboard",
@@ -103,7 +99,7 @@ const AIPredictiveAnalytics: React.FC = () => {
         "On-premise deployment",
         "Custom reporting",
         "Training & consultation"
-      ],
+      ]
       popular: false
     }
   ];
@@ -182,7 +178,7 @@ const AIPredictiveAnalytics: React.FC = () => {
                 AI Predictive <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">Analytics</span>
               </h1>
               <p className="text-xl md:text-2xl text-indigo-100 max-w-4xl mx-auto mb-8">
-                Transform your business with advanced AI predictive analytics that deliver 94% accuracy in forecasting, 
+                Transform your business with advanced AI predictive analytics that deliver 94% accuracy in forecasting
                 customer behavior prediction, and risk assessment for data-driven decision making.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -363,7 +359,7 @@ const AIPredictiveAnalytics: React.FC = () => {
                     className={
 `w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
 plan.popular
-? 'bg-indigo-600 text-white hover:bg-indigo-700',
+? 'bg-indigo-600 text-white hover:bg-indigo-700'
 : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
 }`}
                   >

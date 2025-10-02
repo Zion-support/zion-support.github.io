@@ -1,10 +1,6 @@
 import React from 'react';
-import {
-Helmet
-} from 'react-helmet-async';
-import {
-Cloud
-} from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Cloud } from 'lucide-react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 
@@ -54,7 +50,7 @@ const EdgeComputingAI: React.FC = () => {
       price: "$1,999",
       period: "/month",
       description: "Perfect for small-scale edge deployments and proof of concepts",
-      features: [
+      features: [,
         "Up to 10 edge devices",
         "Basic AI model deployment",
         "Standard monitoring",
@@ -63,7 +59,7 @@ const EdgeComputingAI: React.FC = () => {
         "Basic security features",
         "Standard protocols",
         "Cloud backup integration"
-      ],
+      ]
       popular: false
     },
     {
@@ -71,7 +67,7 @@ const EdgeComputingAI: React.FC = () => {
       price: "$5,999",
       period: "/month",
       description: "Ideal for medium-scale deployments with advanced requirements",
-      features: [
+      features: [,
         "Up to 100 edge devices",
         "Advanced AI model deployment",
         "Real-time monitoring & alerting",
@@ -82,7 +78,7 @@ const EdgeComputingAI: React.FC = () => {
         "Hybrid cloud integration",
         "Custom model training",
         "API access"
-      ],
+      ]
       popular: true
     },
     {
@@ -90,7 +86,7 @@ const EdgeComputingAI: React.FC = () => {
       price: "$15,999",
       period: "/month",
       description: "Complete solution for large-scale enterprise edge deployments",
-      features: [
+      features: [,
         "Unlimited edge devices",
         "Custom AI model development",
         "Enterprise monitoring suite",
@@ -103,7 +99,7 @@ const EdgeComputingAI: React.FC = () => {
         "24/7 monitoring & support",
         "SLA guarantee",
         "Training & consultation"
-      ],
+      ]
       popular: false
     }
   ];
@@ -413,7 +409,7 @@ const EdgeComputingAI: React.FC = () => {
                     className={
 `w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
 plan.popular
-? 'bg-teal-600 text-white hover:bg-teal-700',
+? 'bg-teal-600 text-white hover:bg-teal-700'
 : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
 }`}
                   >

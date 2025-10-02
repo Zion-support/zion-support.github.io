@@ -89,7 +89,7 @@ const October2025QuantumEdgeFusionBanner: React.FC = () => {
               <motion.div
                 animate={{
                   scale: [1, 1.05, 1],
-                  rotate: [0, -5, 0],
+                  rotate: [0, -5, 0]
                 }}
                 transition={{
                   duration: 6,

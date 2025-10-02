@@ -8,7 +8,7 @@ loc: string;
 lastmod?: string;
 changefreq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
 priority?: number;
-images?: Array<{,
+images?: Array<{
 loc: string;
 caption?: string;
 title?: string;
@@ -26,9 +26,9 @@ dynamic?: boolean;
 }
 
 export class ImprovedSitemapGenerator {
-private config: SitemapConfig;,
-private urls: SitemapURL[] = [];,
-constructor(config: SitemapConfig) {,
+private config: SitemapConfig;
+private urls: SitemapURL[] = [];
+constructor(config: SitemapConfig) {
 this.config = config;
 }
 
@@ -43,7 +43,7 @@ this.config = config;
           loc: `${this.config.baseUrl}${route.path}`,
           lastmod: new Date().toISOString(),
           changefreq: route.changefreq || 'weekly',
-          priority: route.priority || 0.5,
+          priority: route.priority || 0.5
         });
       }
     });
@@ -51,18 +51,17 @@ this.config = config;
 
   public addBlogPosts(posts: Array<{ slug: string; date: string; images?: string[] }>): void {
 posts.forEach(post => {
-const url: SitemapURL = {,
+const url: SitemapURL = {
 loc: `${this.config.baseUrl
 }/blog/${post.slug}`,
         lastmod: post.date,
         changefreq: 'monthly',
-        priority: 0.8,
+        priority: 0.8
       };
 
       if (post.images && post.images.length > 0) {
         url.images = post.images.map(img => ({
-          loc: `${this.config.baseUrl}${img}`,
-        }));
+          loc: `${this.config.baseUrl}${img}`}));
       }
 
       this.addURL(url);
@@ -75,7 +74,7 @@ loc: `${this.config.baseUrl
         loc: `${this.config.baseUrl}/case-studies/${study.slug}`,
         lastmod: study.date,
         changefreq: 'monthly',
-        priority: 0.7,
+        priority: 0.7
       });
     });
   }
@@ -86,15 +85,15 @@ loc: `${this.config.baseUrl
         loc: `${this.config.baseUrl}/services/${service.slug}`,
         lastmod: new Date().toISOString(),
         changefreq: 'monthly',
-        priority: 0.9,
+        priority: 0.9
       });
     });
   }
 
   public generateXML(): string {
 let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
-xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"';,
-xml += ' xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n';,
+xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"';
+xml += ' xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n';
 this.urls.forEach(url => {
 xml += '  <url>\n';
 xml += `    <loc>${this.escapeXML(url.loc)
@@ -114,7 +113,7 @@ xml += `    <loc>${this.escapeXML(url.loc)
 
       if (url.images && url.images.length > 0) {
 url.images.forEach(image => {
-xml += '    <image:image>\n';,
+xml += '    <image:image>\n';
 xml += `      <image:loc>${this.escapeXML(image.loc)
 }</image:loc>\n`;
           if (image.caption) {
@@ -136,7 +135,7 @@ xml += `      <image:loc>${this.escapeXML(image.loc)
 
   public generateSitemapIndex(sitemaps: Array<{ loc: string; lastmod?: string }>): string {
 let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
-xml += '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';,
+xml += '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
 sitemaps.forEach(sitemap => {
 xml += '  <sitemap>\n';
 xml += `    <loc>${this.escapeXML(sitemap.loc)
@@ -173,14 +172,14 @@ xml += `    <loc>${this.escapeXML(sitemap.loc)
 export const createSitemapGenerator = (baseUrl: string): ImprovedSitemapGenerator => {
   const config: SitemapConfig = {
     baseUrl,
-    routes: [
-      { path: '/', priority: 1.0, changefreq: 'daily' },
-      { path: '/about', priority: 0.8, changefreq: 'monthly' },
-      { path: '/contact', priority: 0.9, changefreq: 'monthly' },
-      { path: '/blog', priority: 0.9, changefreq: 'daily' },
-      { path: '/case-studies', priority: 0.8, changefreq: 'weekly' },
-      { path: '/services', priority: 0.9, changefreq: 'monthly' },
-    ],
+    routes: [,
+      { path: '/', priority: 1.0, changefreq: 'daily' }
+      { path: '/about', priority: 0.8, changefreq: 'monthly' }
+      { path: '/contact', priority: 0.9, changefreq: 'monthly' }
+      { path: '/blog', priority: 0.9, changefreq: 'daily' }
+      { path: '/case-studies', priority: 0.8, changefreq: 'weekly' }
+      { path: '/services', priority: 0.9, changefreq: 'monthly' }
+    ]
   };
 
   return new ImprovedSitemapGenerator(config);

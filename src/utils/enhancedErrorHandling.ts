@@ -27,7 +27,7 @@ timestamp: number;
 }
 
 class EnhancedErrorHandler {
-private errors: ErrorInfo[] = [];,
+private errors: ErrorInfo[] = [];
 private maxErrors = 100;
 private isInitialized = false;
 constructor() {
@@ -113,8 +113,8 @@ this.initialize();
 
   public logError(
     error: Error | string,
-    componentStack?: string,
-    errorBoundary?: string,
+    componentStack?: string
+    errorBoundary?: string
     additionalInfo?: Partial<ErrorInfo>
   ): void {
     const errorInfo: ErrorInfo = {

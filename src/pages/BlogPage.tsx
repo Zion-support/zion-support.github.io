@@ -17,7 +17,7 @@ const BlogPage: React.FC = () => {
               Technology Insights & News
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Stay ahead of the curve with expert insights on AI, cloud computing, 
+              Stay ahead of the curve with expert insights on AI, cloud computing
               digital transformation, and emerging technologies.
             </p>
           </div>

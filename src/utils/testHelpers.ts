@@ -1,7 +1,7 @@
 /**
  * Testing Helpers and Utilities
  * 
- * Comprehensive testing utilities for React components, hooks,
+ * Comprehensive testing utilities for React components, hooks
  * and integration tests with support for async operations.
  * 
  * Features:
@@ -40,7 +40,7 @@ export const wait = (ms: number): Promise<void> => {
  */
 export const waitFor = async (
   condition: () => boolean | Promise<boolean>,
-  timeout = 5000,
+  timeout = 5000
   interval = 50
 ): Promise<void> => {
   const startTime = Date.now();
@@ -81,7 +81,7 @@ export const click = (element: Element): void => {
   const clickEvent = new MouseEvent('click', {
     bubbles: true,
     cancelable: true,
-    view: window,
+    view: window
   });
   element.dispatchEvent(clickEvent);
 };
@@ -95,13 +95,13 @@ export const type = (element: HTMLInputElement | HTMLTextAreaElement, text: stri
   
   const inputEvent = new Event('input', {
     bubbles: true,
-    cancelable: true,
+    cancelable: true
   });
   element.dispatchEvent(inputEvent);
   
   const changeEvent = new Event('change', {
     bubbles: true,
-    cancelable: true,
+    cancelable: true
   });
   element.dispatchEvent(changeEvent);
 };
@@ -113,7 +113,7 @@ export const clear = (element: HTMLInputElement | HTMLTextAreaElement): void => 
   element.value = '';
   const changeEvent = new Event('change', {
     bubbles: true,
-    cancelable: true,
+    cancelable: true
   });
   element.dispatchEvent(changeEvent);
 };
@@ -125,7 +125,7 @@ export const selectOption = (element: HTMLSelectElement, value: string): void =>
   element.value = value;
   const changeEvent = new Event('change', {
     bubbles: true,
-    cancelable: true,
+    cancelable: true
   });
   element.dispatchEvent(changeEvent);
 };
@@ -150,7 +150,7 @@ export class FetchMock {
       response,
       status: options?.status || 200,
       statusText: options?.statusText || 'OK',
-      headers: options?.headers || {},
+      headers: options?.headers || {}
     });
   }
 
@@ -165,8 +165,8 @@ export class FetchMock {
     const original = this.responses.get(url);
     if (original) {
       this.responses.set(url, {
-        ...original,
-        once: true,
+        ...original
+        once: true
       });
     }
   }
@@ -184,7 +184,7 @@ export class FetchMock {
         return new Response(JSON.stringify(mockData.response), {
           status: mockData.status,
           statusText: mockData.statusText,
-          headers: mockData.headers,
+          headers: mockData.headers
         });
       }
 
@@ -234,17 +234,17 @@ export class LocalStorageMock {
  * Mock console methods
  */
 export class ConsoleMock {
-private originalConsole: typeof console;,
-logs: any[] = [];,
-warnings: any[] = [];,
-errors: any[] = [];,
+private originalConsole: typeof console;
+logs: any[] = [];
+warnings: any[] = [];
+errors: any[] = [];
 constructor() {
 this.originalConsole = console;
 }
 
   install(): void {
-console.log = (...args: any[]) => this.logs.push(args);,
-console.warn = (...args: any[]) => this.warnings.push(args);,
+console.log = (...args: any[]) => this.logs.push(args);
+console.warn = (...args: any[]) => this.warnings.push(args);
 console.error = (...args: any[]) => this.errors.push(args);
 }
 
@@ -265,41 +265,34 @@ console.error = (...args: any[]) => this.errors.push(args);
  * Generate mock data
  */
 export const generateMockData = {
-  string: (length = 10): string => {
+  string: (length = 10): string => {,
     return Math.random().toString(36).substring(2, 2 + length);
-  },
-
-  number: (min = 0, max = 100): number => {
+  }
+  number: (min = 0, max = 100): number => {,
     return Math.floor(Math.random() * (max - min + 1)) + min;
-  },
-
-  boolean: (): boolean => {
+  }
+  boolean: (): boolean => {,
     return Math.random() > 0.5;
-  },
-
-  email: (): string => {
+  }
+  email: (): string => {,
     return `test${generateMockData.number()}@example.com`;
-  },
-
-  url: (): string => {
+  }
+  url: (): string => {,
     return `https://example.com/${generateMockData.string()}`;
-  },
-
-  date: (): Date => {
+  }
+  date: (): Date => {,
     return new Date(Date.now() - generateMockData.number(0, 365) * 24 * 60 * 60 * 1000);
-  },
-
-  array: <T>(generator: () => T, length = 5): T[] => {
+  }
+  array: <T>(generator: () => T, length = 5): T[] => {,
     return Array.from({ length }, generator);
-  },
-
-  object: <T extends Record<string, any>>(schema: { [K in keyof T]: () => T[K] }): T => {
+  }
+  object: <T extends Record<string, any>>(schema: { [K in keyof T]: () => T[K] }): T => {,
     const result = {} as T;
     Object.keys(schema).forEach(key => {
       result[key as keyof T] = schema[key as keyof T]();
     });
     return result;
-  },
+  }
 };
 
 /**
@@ -362,37 +355,33 @@ export class PerformanceTester {
 export const checkAccessibility = {
 hasAriaLabel: (element: Element): boolean => {,
 return element.hasAttribute('aria-label') || element.hasAttribute('aria-labelledby');
-},
-
-  hasRole: (element: Element, role: string): boolean => {
+}
+  hasRole: (element: Element, role: string): boolean => {,
     return element.getAttribute('role') === role;
-  },
-
-  isFocusable: (element: Element): boolean => {
+  }
+  isFocusable: (element: Element): boolean => {,
     const tabindex = element.getAttribute('tabindex');
     return tabindex !== '-1' && (element as HTMLElement).tabIndex >= 0;
-  },
-
-  hasAltText: (img: HTMLImageElement): boolean => {
+  }
+  hasAltText: (img: HTMLImageElement): boolean => {,
     return Boolean(img.alt && img.alt.trim().length > 0);
-  },
-
-  hasValidContrast: (element: Element): boolean => {
+  }
+  hasValidContrast: (element: Element): boolean => {,
     const computed = window.getComputedStyle(element);
     const color = computed.color;
     const background = computed.backgroundColor;
     
     // This is a simplified check - real implementation would calculate contrast ratio
     return color !== background;
-  },
+  }
 };
 
 /**
  * Setup test environment
  */
 export const setupTestEnvironment = (options: TestSetupOptions = {}): {
-cleanup: () => void;,
-fetchMock: FetchMock;,
+cleanup: () => void;
+fetchMock: FetchMock;
 consoleMock: ConsoleMock;
 } => {
   const fetchMock = new FetchMock();
@@ -410,14 +399,14 @@ consoleMock: ConsoleMock;
   if (options.mockLocalStorage) {
     Object.defineProperty(window, 'localStorage', {
       value: localStorageMock,
-      writable: true,
+      writable: true
     });
   }
 
   if (options.mockSessionStorage) {
     Object.defineProperty(window, 'sessionStorage', {
       value: new LocalStorageMock(),
-      writable: true,
+      writable: true
     });
   }
 
@@ -433,7 +422,7 @@ consoleMock: ConsoleMock;
   return {
     cleanup,
     fetchMock,
-    consoleMock,
+    consoleMock
   };
 };
 
@@ -452,5 +441,5 @@ export default {
   generateMockData,
   PerformanceTester,
   checkAccessibility,
-  setupTestEnvironment,
+  setupTestEnvironment
 };

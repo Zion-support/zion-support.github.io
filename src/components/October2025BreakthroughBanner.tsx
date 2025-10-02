@@ -21,7 +21,7 @@ const October2025BreakthroughBanner = () => {
           </h2>
           
           <p className="text-xl text-white/80 mb-8 max-w-4xl leading-relaxed">
-            Explore three groundbreaking AI innovations delivering unprecedented results: Sovereign Agents with 94% decision accuracy, 
+            Explore three groundbreaking AI innovations delivering unprecedented results: Sovereign Agents with 94% decision accuracy
             Quantum ML achieving 1000x speedup, and Neuromorphic Edge Computing at 10,000x energy efficiency.
           </p>
           

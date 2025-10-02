@@ -23,7 +23,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '🚀',
     featured: true,
     priority: 0,
-    startDate: '2025-10-01',
+    startDate: '2025-10-01'
   },
   {
     id: 'oct-01-autonomous-ops-blog-2025',
@@ -35,7 +35,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '📖',
     featured: true,
     priority: 1,
-    startDate: '2025-10-01',
+    startDate: '2025-10-01'
   },
   {
     id: 'oct-01-650m-case-study-2025',
@@ -47,7 +47,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '💰',
     featured: true,
     priority: 2,
-    startDate: '2025-10-01',
+    startDate: '2025-10-01'
   },
   {
     id: 'oct-01-agent-swarm-breakthrough-2025',
@@ -59,7 +59,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '🤖',
     featured: true,
     priority: 3,
-    startDate: '2025-10-01',
+    startDate: '2025-10-01'
   },
   {
     id: 'oct-01-healthcare-890m-success-2025',
@@ -71,7 +71,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '🏥',
     featured: true,
     priority: 1,
-    startDate: '2025-10-01',
+    startDate: '2025-10-01'
   },
   {
     id: 'oct-01-enterprise-platform-automation-2025',
@@ -83,7 +83,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '🚀',
     featured: true,
     priority: 2,
-    startDate: '2025-10-01',
+    startDate: '2025-10-01'
   },
   {
     id: 'enterprise-platform-implementation-service-2025',
@@ -95,7 +95,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '⚡',
     featured: true,
     priority: 1,
-    startDate: '2025-10-01',
+    startDate: '2025-10-01'
   },
   {
     id: 'oct-01-500m-success-story-2025',
@@ -107,7 +107,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '💰',
     featured: true,
     priority: 2,
-    startDate: '2025-10-01',
+    startDate: '2025-10-01'
   },
   {
     id: 'oct-01-latest-breakthrough-2025-featured',
@@ -119,7 +119,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '🎯',
     featured: true,
     priority: 3,
-    startDate: '2025-10-01',
+    startDate: '2025-10-01'
   },
   {
     id: 'ai-model-compression-edge-oct-2025',
@@ -131,7 +131,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '⚡',
     featured: true,
     priority: 1,
-    startDate: '2025-10-01',
+    startDate: '2025-10-01'
   },
   {
     id: 'continuous-learning-systems-oct-2025',
@@ -143,7 +143,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '🔄',
     featured: true,
     priority: 2,
-    startDate: '2025-10-01',
+    startDate: '2025-10-01'
   },
   {
     id: 'synthetic-data-generation-oct-2025',
@@ -155,7 +155,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '🎨',
     featured: true,
     priority: 3,
-    startDate: '2025-10-01',
+    startDate: '2025-10-01'
   },
   {
     id: 'oct-01-latest-breakthrough-content-2025',
@@ -167,7 +167,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '🚀',
     featured: true,
     priority: 0,
-    startDate: '2025-10-01',
+    startDate: '2025-10-01'
   },
   {
     id: 'continuous-intelligence-oct-2025',
@@ -179,7 +179,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '⚡',
     featured: true,
     priority: 1,
-    startDate: '2025-10-01',
+    startDate: '2025-10-01'
   },
   {
     id: 'genai-supply-chain-oct-2025',
@@ -191,7 +191,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '🔄',
     featured: true,
     priority: 2,
-    startDate: '2025-10-01',
+    startDate: '2025-10-01'
   },
   {
     id: 'autonomous-security-oct-2025',
@@ -203,7 +203,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '🛡️',
     featured: true,
     priority: 3,
-    startDate: '2025-10-01',
+    startDate: '2025-10-01'
   },
   {
     id: 'oct-01-breakthrough-new-content-2025',
@@ -215,7 +215,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '🔥',
     featured: true,
     priority: 4,
-    startDate: '2025-10-01',
+    startDate: '2025-10-01'
   },
   {
     id: 'ai-security-zero-trust-oct-2025',
@@ -227,7 +227,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '🛡️',
     featured: true,
     priority: 1,
-    startDate: '2025-10-01',
+    startDate: '2025-10-01'
   },
   {
     id: 'cloud-native-kubernetes-oct-2025',
@@ -239,7 +239,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '☁️',
     featured: true,
     priority: 2,
-    startDate: '2025-10-01',
+    startDate: '2025-10-01'
   },
   {
     id: 'real-time-analytics-oct-2025',
@@ -251,7 +251,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '⚡',
     featured: true,
     priority: 3,
-    startDate: '2025-10-01',
+    startDate: '2025-10-01'
   },
   {
     id: 'oct-01-new-content-2025',
@@ -263,7 +263,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '🚀',
     featured: true,
     priority: 4,
-    startDate: '2025-10-01',
+    startDate: '2025-10-01'
   },
   {
     id: 'multiagent-orchestration-oct-2025',
@@ -275,7 +275,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '🤖',
     featured: true,
     priority: 1,
-    startDate: '2025-10-01',
+    startDate: '2025-10-01'
   },
   {
     id: 'vector-search-optimization-oct-2025',
@@ -287,7 +287,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '⚡',
     featured: true,
     priority: 2,
-    startDate: '2025-10-01',
+    startDate: '2025-10-01'
   },
   {
     id: 'autonomous-pipelines-oct-2025',
@@ -299,7 +299,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '🔧',
     featured: true,
     priority: 3,
-    startDate: '2025-10-01',
+    startDate: '2025-10-01'
   },
   {
     id: 'oct-01-quantum-mesh-edge-2025',
@@ -311,7 +311,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '🌟',
     featured: true,
     priority: 4,
-    startDate: '2025-10-01',
+    startDate: '2025-10-01'
   },
   {
     id: 'agentic-swarm-intelligence-oct-2025',
@@ -323,7 +323,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '🤖',
     featured: true,
     priority: 1,
-    startDate: '2025-10-01',
+    startDate: '2025-10-01'
   },
   {
     id: 'quantum-supply-chain-oct-2025',
@@ -335,7 +335,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '⚡',
     featured: true,
     priority: 2,
-    startDate: '2025-10-01',
+    startDate: '2025-10-01'
   },
   {
     id: 'neural-architecture-search-oct-2025',
@@ -347,7 +347,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '🧠',
     featured: true,
     priority: 3,
-    startDate: '2025-10-01',
+    startDate: '2025-10-01'
   },
   {
     id: 'oct-breakthrough-2025',
@@ -359,7 +359,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '🚀',
     featured: true,
     priority: 4,
-    startDate: '2025-10-01',
+    startDate: '2025-10-01'
   },
   {
     id: 'neuromorphic-ai-chips-oct-2025',
@@ -371,7 +371,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '⚡',
     featured: true,
     priority: 1,
-    startDate: '2025-10-01',
+    startDate: '2025-10-01'
   },
   {
     id: 'sovereign-ai-centers-oct-2025',
@@ -383,7 +383,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '🛡️',
     featured: true,
     priority: 2,
-    startDate: '2025-10-01',
+    startDate: '2025-10-01'
   },
   {
     id: 'ai-native-databases-oct-2025',
@@ -395,7 +395,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '💾',
     featured: true,
     priority: 3,
-    startDate: '2025-10-01',
+    startDate: '2025-10-01'
   },
   {
     id: 'ai-self-healing-infrastructure-oct-2025',
@@ -407,7 +407,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '🔄',
     featured: true,
     priority: 4,
-    startDate: '2025-10-01',
+    startDate: '2025-10-01'
   },
   {
     id: 'generative-ai-code-assistants-oct-2025',
@@ -419,7 +419,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '💻',
     featured: true,
     priority: 2,
-    startDate: '2025-10-01',
+    startDate: '2025-10-01'
   },
   {
     id: 'edge-ai-privacy-analytics-oct-2025',
@@ -431,7 +431,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '🔐',
     featured: true,
     priority: 3,
-    startDate: '2025-10-01',
+    startDate: '2025-10-01'
   },
   {
     id: 'ai-supply-chain-optimization-oct-2025',
@@ -443,7 +443,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '📦',
     featured: true,
     priority: 4,
-    startDate: '2025-10-01',
+    startDate: '2025-10-01'
   },
   {
     id: 'ai-ethics-operational-blueprint-2026',
@@ -455,7 +455,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '⚖️',
     featured: true,
     priority: 5,
-    startDate: '2025-09-30',
+    startDate: '2025-09-30'
   },
   {
     id: 'edge-rag-blueprint-2026',
@@ -467,7 +467,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '🛰️',
     featured: true,
     priority: 2,
-    startDate: '2025-09-30',
+    startDate: '2025-09-30'
   },
   {
     id: 'platform-roi-scorecards-2026',
@@ -479,7 +479,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '📈',
     featured: true,
     priority: 3,
-    startDate: '2025-09-30',
+    startDate: '2025-09-30'
   },
   {
     id: 'multimodal-ai-launch',
@@ -491,7 +491,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '🎭',
     featured: true,
     priority: 1,
-    startDate: '2025-10-15',
+    startDate: '2025-10-15'
   },
   {
     id: 'blockchain-ai-integration',
@@ -503,7 +503,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '⛓️',
     featured: true,
     priority: 2,
-    startDate: '2025-10-15',
+    startDate: '2025-10-15'
   },
   {
     id: 'green-ai-sustainability',
@@ -515,7 +515,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '🌱',
     featured: true,
     priority: 3,
-    startDate: '2025-10-15',
+    startDate: '2025-10-15'
   },
   {
     id: 'ai-predictive-maintenance',
@@ -527,7 +527,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '⚙️',
     featured: true,
     priority: 4,
-    startDate: '2025-10-15',
+    startDate: '2025-10-15'
   },
   {
     id: 'ai-talent-acquisition',
@@ -539,9 +539,8 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '👥',
     featured: true,
     priority: 5,
-    startDate: '2025-10-15',
-  }
-  ,
+    startDate: '2025-10-15'
+  },
   {
     id: 'oct-30-new-content-drop',
     title: '🚀 New Content Drop: Platform ROI, Supply Chain v2, Edge Experiments',
@@ -637,8 +636,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     featured: true,
     priority: 6,
     startDate: '2025-10-01'
-  }
-  ,
+  },
   {
     id: 'oct-03-continuous-intelligence-2025',
     title: '⚡ NEW: Continuous Intelligence — 100M Events/sec under 50ms',
@@ -1000,7 +998,7 @@ const now = new Date();
 return enhancedPromotionalBanners
 .filter(banner => {
 const startDate = new Date(banner.startDate);
-const endDate = banner.endDate ? new Date(banner.endDate) : null;,
+const endDate = banner.endDate ? new Date(banner.endDate) : null;
 return startDate <= now && (!endDate || endDate >= now);
 })
     .sort((a, b) => a.priority - b.priority);

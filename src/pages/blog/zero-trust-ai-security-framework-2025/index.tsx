@@ -81,7 +81,7 @@ const ZeroTrustAISecurityFramework2025 = () => {
                 The AI Security Crisis
               </h2>
               <p className="text-gray-300 leading-relaxed mb-4">
-                AI systems face unprecedented security challenges: model theft, data poisoning, adversarial attacks,
+                AI systems face unprecedented security challenges: model theft, data poisoning, adversarial attacks
                 and prompt injection. Traditional perimeter security fails for distributed AI architectures.
                 Zero-trust frameworks are now mandatory for enterprise AI deployments.
               </p>
@@ -106,7 +106,7 @@ const ZeroTrustAISecurityFramework2025 = () => {
                     Never Trust, Always Verify
                   </h3>
                   <p className="text-gray-300 mb-4">
-                    Every request to models, data stores, and inference endpoints requires authentication,
+                    Every request to models, data stores, and inference endpoints requires authentication
                     authorization, and continuous validation—even from internal services.
                   </p>
                   <div className="bg-slate-900/50 p-4 rounded border border-slate-600">
@@ -212,7 +212,7 @@ const ZeroTrustAISecurityFramework2025 = () => {
                         All humans and services get unique identities.
                       </p>
                       <p className="text-sm text-emerald-400">
-                        Tools: Keycloak, Okta, AWS IAM Identity Center
+                        Tools: Keycloak, Okta, AWS IAM Identity Center,
                       </p>
                     </div>
                   </div>
@@ -228,7 +228,7 @@ const ZeroTrustAISecurityFramework2025 = () => {
                         Every microservice authenticated before communication.
                       </p>
                       <p className="text-sm text-cyan-400">
-                        Tools: Istio, Linkerd, Cilium, Consul Connect
+                        Tools: Istio, Linkerd, Cilium, Consul Connect,
                       </p>
                     </div>
                   </div>
@@ -244,7 +244,7 @@ const ZeroTrustAISecurityFramework2025 = () => {
                         OPA evaluates policies in real-time.
                       </p>
                       <p className="text-sm text-blue-400">
-                        Tools: Open Policy Agent, Kong Gateway, AWS API Gateway
+                        Tools: Open Policy Agent, Kong Gateway, AWS API Gateway,
                       </p>
                     </div>
                   </div>
@@ -260,7 +260,7 @@ const ZeroTrustAISecurityFramework2025 = () => {
                         suspicious patterns (unusual data access, model queries).
                       </p>
                       <p className="text-sm text-purple-400">
-                        Tools: Datadog Security, Splunk SIEM, Wiz, Lacework
+                        Tools: Datadog Security, Splunk SIEM, Wiz, Lacework,
                       </p>
                     </div>
                   </div>
@@ -276,7 +276,7 @@ const ZeroTrustAISecurityFramework2025 = () => {
                         Automated compliance reporting (SOC 2, ISO 27001, GDPR).
                       </p>
                       <p className="text-sm text-pink-400">
-                        Tools: AWS CloudTrail, GCP Audit Logs, Vanta, Drata
+                        Tools: AWS CloudTrail, GCP Audit Logs, Vanta, Drata,
                       </p>
                     </div>
                   </div>
@@ -295,7 +295,7 @@ const ZeroTrustAISecurityFramework2025 = () => {
                 <div className="bg-red-500/10 border-l-4 border-red-500 p-6 rounded-r-lg">
                   <h3 className="text-xl font-bold text-white mb-3">🎯 Prompt Injection Attacks</h3>
                   <p className="text-gray-300 mb-3">
-                    Malicious users manipulate prompts to extract training data, bypass safety filters,
+                    Malicious users manipulate prompts to extract training data, bypass safety filters
                     or execute unauthorized actions.
                   </p>
                   <div className="bg-slate-900/70 p-4 rounded">

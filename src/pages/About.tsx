@@ -1,15 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { 
-  Users, Target, Award, Globe, Shield,
-  TrendingUp, CheckCircle, Star, Phone, Mail, MapPin 
-} from 'lucide-react';
+import { Users, Target, Award, Globe, Shield, TrendingUp, CheckCircle, Star, Phone, Mail, MapPin } from 'lucide-react';
 
 const About: React.FC = () => {
   const stats = [
-    { number: '10+', label: 'Years Experience', icon: Award },
-    { number: '500+', label: 'Projects Completed', icon: CheckCircle },
-    { number: '50+', label: 'Happy Clients', icon: Users },
+    { number: '10+', label: 'Years Experience', icon: Award }
+    { number: '500+', label: 'Projects Completed', icon: CheckCircle }
+    { number: '50+', label: 'Happy Clients', icon: Users }
     { number: '99%', label: 'Client Satisfaction', icon: Star }
   ];
 
@@ -18,17 +15,17 @@ const About: React.FC = () => {
 icon: Target,
 title: 'Innovation First',
 description: 'We stay ahead of technology trends to deliver solutions that give you a competitive edge in the market.'
-}
+},
     {
 icon: Shield,
 title: 'Enterprise Security',
 description: 'Bank-grade security measures protect your data and ensure compliance with industry standards.'
-}
+},
     {
 icon: TrendingUp,
 title: 'Measurable Results',
 description: 'We deliver quantifiable outcomes with average 75% cost reduction and 10x efficiency gains.'
-}
+},
     {
 icon: Globe,
 title: 'Global Reach',
@@ -42,13 +39,13 @@ name: 'Kleber Santos',
 role: 'CEO & Founder',
 description: 'Technology visionary with 15+ years in AI and enterprise solutions.',
 email: 'kleber@ziontechgroup.com'
-}
+},
     {
 name: 'AI Engineering Team',
 role: 'Machine Learning Specialists',
 description: 'Expert team of AI engineers specializing in cutting-edge machine learning technologies.',
 email: 'ai-team@ziontechgroup.com'
-}
+},
     {
 name: 'DevOps Specialists',
 role: 'Infrastructure Experts',
@@ -202,8 +199,8 @@ email: 'devops@ziontechgroup.com'
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-2">Contact</h3>
                   <p className="text-gray-600">
-                    Phone: +1 302 464 0950<br />
-                    Email: kleber@ziontechgroup.com<br />
+                    Phone: +1 302 464 0950<br />,
+                    Email: kleber@ziontechgroup.com<br />,
                     Available 24/7
                   </p>
                 </div>
