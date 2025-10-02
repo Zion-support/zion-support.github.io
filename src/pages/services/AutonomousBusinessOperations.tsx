@@ -1,18 +1,18 @@
 
-const AutonomousBusinessOperations: ()  => {,,,
+const AutonomousBusinessOperations: () => {
   return (
     <>
-      <Helmet >
-        <title >Autonomous Business Operations Platform | 85% Cost Reduction in 90 Days | Zion Tech Group</title>
+      <Helmet>
+        <title>Autonomous Business Operations Platform | 85% Cost Reduction in 90 Days | Zion Tech Group</title>
         <meta name: "description",";,";,
   content: "Transform your enterprise with AI-powered autonomous operations. Deploy 40+ self-managing workflows in 90 days. $500M+ value creation. 300-500% ROI. Get started with a free consultation." /><meta ,";,";,
   name: "keywords",";,";,
   content: "autonomous business operations, AI automation platform, enterprise automation, business process automation, operational efficiency, AI transformation, ROI guarantee" /><link rel: "canonical" href ="https://ziontechgroup.com/services/autonomous-business-operations/>",";,
       </Helmet>
       
-      <div className: "min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900">";,";,
+      <div className: "min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900">,
         {/* Hero Section */};
-        <section className: "relative py-24 overflow-hidden">";,";,
+        <section className: "relative py-24 overflow-hidden">,
           <div className: "absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>,";,";,
   content: "autonomous business operations, AI automation platform, enterprise automation, business process automation, operational efficiency, AI transformation, ROI guarantee",";,
         />
@@ -32,9 +32,9 @@ const AutonomousBusinessOperations: ()  => {,,,
 
           <div className: "container mx-auto px-6 relative z-10">",";,
             {/* Limited Time Banner */}
-            <div className: "flex justify-center mb-8">";,";,
-              <div className: "inline-flex items-center px-6 py-3 rounded-full bg-green-500/20 border-2 border-green-400/50 text-green-300 text-sm font-bold uppercase tracking-wider animate-pulse">";,";,
-                <Rocket className: "w-5 h-5 mr-2/>";,";,
+            <div className: "flex justify-center mb-8">,
+              <div className: "inline-flex items-center px-6 py-3 rounded-full bg-green-500/20 border-2 border-green-400/50 text-green-300 text-sm font-bold uppercase tracking-wider animate-pulse">,
+                <Rocket className: "w-5 h-5 mr-2/>,
             <div className: "flex justify-center mb-8">",";,
               <div className: "inline-flex items-center px-6 py-3 rounded-full bg-green-500/20 border-2 border-green-400/50 text-green-300 text-sm font-bold uppercase tracking-wider animate-pulse">",";,
                 <Rocket className: "w-5 h-5 mr-2" />",";,
@@ -42,7 +42,7 @@ const AutonomousBusinessOperations: ()  => {,,,
               </div>
             </div>
 
-            <div className: "max-w-5xl mx-auto text-center">";,";,
+            <div className: "max-w-5xl mx-auto text-center">,
               <h1 className: "text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">",";,";,
   Autonomous Business Operations Platform
               </h1>
@@ -60,9 +60,9 @@ const AutonomousBusinessOperations: ()  => {,,,
 
               {/* Key Metrics */}
               <div className: "grid grid-cols-2 md: grid-cols-4 gap-6 mb-12">",";,
-                <div className: "bg-gradient-to-br from-green-600/30 to-emerald-600/30 backdrop-blur-sm rounded-xl p-6 border-2 border-green-400/50">";,";,
-                  <div className: "text-5xl font-bold text-green-300 mb-2">85%</div>";,";,
-                  <div className: "text-green-100 font-semibold">Cost Reduction</div>";,";,
+                <div className: "bg-gradient-to-br from-green-600/30 to-emerald-600/30 backdrop-blur-sm rounded-xl p-6 border-2 border-green-400/50">,
+                  <div className: "text-5xl font-bold text-green-300 mb-2">85%</$1>";,
+                  <div className: "text-green-100 font-semibold">Cost Reduction</$1>";,
               <div className: "grid grid-cols-2 md: grid-cols-4 gap-6 mb-12">",";,
                 <div className: "bg-gradient-to-br from-green-600/30 to-emerald-600/30 backdrop-blur-sm rounded-xl p-6 border-2 border-green-400/50">",";,
                   <div className: "text-5xl font-bold text-green-300 mb-2">85%</div>",";,
@@ -90,7 +90,7 @@ const AutonomousBusinessOperations: ()  => {,,,
                 >
                   <Rocket className: "w-6 h-6/>,";,";,
   Start Free Consultation
-                  <ArrowRight className: "w-5 h-5/>";,";,
+                  <ArrowRight className: "w-5 h-5/>,
                   <Rocket className: "w-6 h-6" />",";,";,
   Start Free Consultation
                   <ArrowRight className: "w-5 h-5" />",";,
@@ -106,24 +106,24 @@ const AutonomousBusinessOperations: ()  => {,,,
         </section>
 
         {/* Trust Indicators */}
-        <section className: "py-12 bg-black/20">";,";,
-          <div className: "container mx-auto px-6">";,";,
-            <div className: "flex flex-wrap justify-center items-center gap-8 text-blue-200">";,";,
-              <div className: "flex items-center gap-2">";,";,
-                <CheckCircle className: "w-5 h-5 text-green-400/>";,";,
-                <span className: "font-semibold">50+ Fortune 500 Clients</span>";,";,
+        <section className: "py-12 bg-black/20">,
+          <div className: "container mx-auto px-6">,
+            <div className: "flex flex-wrap justify-center items-center gap-8 text-blue-200">,
+              <div className: "flex items-center gap-2">,
+                <CheckCircle className: "w-5 h-5 text-green-400/>,
+                <span className: "font-semibold">50+ Fortune 500 Clients</$1>";,
               </div>
-              <div className: "flex items-center gap-2">";,";,
-                <CheckCircle className: "w-5 h-5 text-green-400/>";,";,
-                <span className: "font-semibold">$5B+ Value Created</span>";,";,
+              <div className: "flex items-center gap-2">,
+                <CheckCircle className: "w-5 h-5 text-green-400/>,
+                <span className: "font-semibold">$5B+ Value Created</$1>";,
               </div>
-              <div className: "flex items-center gap-2">";,";,
-                <CheckCircle className: "w-5 h-5 text-green-400/>";,";,
-                <span className: "font-semibold">SOC 2 Type II Certified</span>";,";,
+              <div className: "flex items-center gap-2">,
+                <CheckCircle className: "w-5 h-5 text-green-400/>,
+                <span className: "font-semibold">SOC 2 Type II Certified</$1>";,
               </div>
-              <div className: "flex items-center gap-2">";,";,
-                <CheckCircle className: "w-5 h-5 text-green-400/>";,";,
-                <span className: "font-semibold">99.97% Uptime SLA</span>";,";,
+              <div className: "flex items-center gap-2">,
+                <CheckCircle className: "w-5 h-5 text-green-400/>,
+                <span className: "font-semibold">99.97% Uptime SLA</$1>";,
         <section className: "py-12 bg-black/20">",";,
           <div className: "container mx-auto px-6">",";,
             <div className: "flex flex-wrap justify-center items-center gap-8 text-blue-200">",";,
@@ -148,8 +148,8 @@ const AutonomousBusinessOperations: ()  => {,,,
         </section>
 
         {/* What You Get */}
-        <section className: "container mx-auto px-6 py-20 max-w-6xl">";,";,
-          <div className: "text-center mb-16">";,";,
+        <section className: "container mx-auto px-6 py-20 max-w-6xl">,
+          <div className: "text-center mb-16">,
             <h2 className: "text-4xl md: text-5xl font-bold text-white mb-4">",";,";,
   What's Included in Your Platform;';';
         <section className: "container mx-auto px-6 py-20 max-w-6xl">",";,
@@ -165,8 +165,8 @@ const AutonomousBusinessOperations: ()  => {,,,
           <div className: "grid md: grid-cols-2 lg:grid-cols-3 gap-8">",";,
             {/* Feature 1 */}
             <div className: "bg-gradient-to-br from-blue-900/60 to-cyan-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-blue-400/50 hover: border-blue-400/80 transition-all hover:scale-105">",";,
-              <div className: "bg-blue-500/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6 border border-blue-400/30">";,";,
-                <Zap className: "w-8 h-8 text-blue-300/>";,";,
+              <div className: "bg-blue-500/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6 border border-blue-400/30">,
+                <Zap className: "w-8 h-8 text-blue-300/>,
           <div className: "grid md: grid-cols-2 lg:grid-cols-3 gap-8">",";,
             {/* Feature 1 */}
             <div className: "bg-gradient-to-br from-blue-900/60 to-cyan-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-blue-400/50 hover: border-blue-400/80 transition-all hover:scale-105">",";,
@@ -179,21 +179,21 @@ const AutonomousBusinessOperations: ()  => {,,,
               <p className: "text-blue-100 mb-4">",";,";,
   Pre-built workflows for finance, HR, operations, sales, support, and compliance. Fully customizable to your needs.
               </p>
-              <ul className: "space-y-2 text-blue-200 text-sm">";,";,
-                <li className: "flex items-start gap-2">";,";,
-                  <CheckCircle className: "w-4 h-4 text-blue-400 mt-1 flex-shrink-0/>";,";,
+              <ul className: "space-y-2 text-blue-200 text-sm">,
+                <li className: "flex items-start gap-2">,
+                  <CheckCircle className: "w-4 h-4 text-blue-400 mt-1 flex-shrink-0/>,
                   <span >Invoice processing & payment automation</span>
                 </li>
-                <li className: "flex items-start gap-2">";,";,
-                  <CheckCircle className: "w-4 h-4 text-blue-400 mt-1 flex-shrink-0/>";,";,
+                <li className: "flex items-start gap-2">,
+                  <CheckCircle className: "w-4 h-4 text-blue-400 mt-1 flex-shrink-0/>,
                   <span >Employee onboarding & offboarding</span>
                 </li>
-                <li className: "flex items-start gap-2">";,";,
-                  <CheckCircle className: "w-4 h-4 text-blue-400 mt-1 flex-shrink-0/>";,";,
+                <li className: "flex items-start gap-2">,
+                  <CheckCircle className: "w-4 h-4 text-blue-400 mt-1 flex-shrink-0/>,
                   <span >Customer support triage & routing</span>
                 </li>
-                <li className: "flex items-start gap-2">";,";,
-                  <CheckCircle className: "w-4 h-4 text-blue-400 mt-1 flex-shrink-0/>";,";,
+                <li className: "flex items-start gap-2">,
+                  <CheckCircle className: "w-4 h-4 text-blue-400 mt-1 flex-shrink-0/>,
               <ul className: "space-y-2 text-blue-200 text-sm">",";,
                 <li className: "flex items-start gap-2">",";,
                   <CheckCircle className: "w-4 h-4 text-blue-400 mt-1 flex-shrink-0" />",";,
@@ -216,8 +216,8 @@ const AutonomousBusinessOperations: ()  => {,,,
 
             {/* Feature 2 */}
             <div className: "bg-gradient-to-br from-purple-900/60 to-pink-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-purple-400/50 hover: border-purple-400/80 transition-all hover:scale-105">",";,
-              <div className: "bg-purple-500/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6 border border-purple-400/30">";,";,
-                <TrendingUp className: "w-8 h-8 text-purple-300/>";,";,
+              <div className: "bg-purple-500/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6 border border-purple-400/30">,
+                <TrendingUp className: "w-8 h-8 text-purple-300/>,
             <div className: "bg-gradient-to-br from-purple-900/60 to-pink-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-purple-400/50 hover: border-purple-400/80 transition-all hover:scale-105">",";,
               <div className: "bg-purple-500/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6 border border-purple-400/30">",";,
                 <TrendingUp className: "w-8 h-8 text-purple-300" />",";,
@@ -228,21 +228,21 @@ const AutonomousBusinessOperations: ()  => {,,,
               <p className: "text-purple-100 mb-4">",";,";,
   Real-time decision-making with 99.7% accuracy. Learns from every interaction and continuously improves.
               </p>
-              <ul className: "space-y-2 text-purple-200 text-sm">";,";,
-                <li className: "flex items-start gap-2">";,";,
-                  <CheckCircle className: "w-4 h-4 text-purple-400 mt-1 flex-shrink-0/>";,";,
+              <ul className: "space-y-2 text-purple-200 text-sm">,
+                <li className: "flex items-start gap-2">,
+                  <CheckCircle className: "w-4 h-4 text-purple-400 mt-1 flex-shrink-0/>,
                   <span >&lt;100ms inference latency</span>
                 </li>
-                <li className: "flex items-start gap-2">";,";,
-                  <CheckCircle className: "w-4 h-4 text-purple-400 mt-1 flex-shrink-0/>";,";,
+                <li className: "flex items-start gap-2">,
+                  <CheckCircle className: "w-4 h-4 text-purple-400 mt-1 flex-shrink-0/>,
                   <span >Multi-model ensemble for complex decisions</span>
                 </li>
-                <li className: "flex items-start gap-2">";,";,
-                  <CheckCircle className: "w-4 h-4 text-purple-400 mt-1 flex-shrink-0/>";,";,
+                <li className: "flex items-start gap-2">,
+                  <CheckCircle className: "w-4 h-4 text-purple-400 mt-1 flex-shrink-0/>,
                   <span >Explainable AI for compliance</span>
                 </li>
-                <li className: "flex items-start gap-2">";,";,
-                  <CheckCircle className: "w-4 h-4 text-purple-400 mt-1 flex-shrink-0/>";,";,
+                <li className: "flex items-start gap-2">,
+                  <CheckCircle className: "w-4 h-4 text-purple-400 mt-1 flex-shrink-0/>,
               <ul className: "space-y-2 text-purple-200 text-sm">",";,
                 <li className: "flex items-start gap-2">",";,
                   <CheckCircle className: "w-4 h-4 text-purple-400 mt-1 flex-shrink-0" />",";,
@@ -265,8 +265,8 @@ const AutonomousBusinessOperations: ()  => {,,,
 
             {/* Feature 3 */}
             <div className: "bg-gradient-to-br from-green-900/60 to-emerald-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-green-400/50 hover: border-green-400/80 transition-all hover:scale-105">",";,
-              <div className: "bg-green-500/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6 border border-green-400/30">";,";,
-                <Shield className: "w-8 h-8 text-green-300/>";,";,
+              <div className: "bg-green-500/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6 border border-green-400/30">,
+                <Shield className: "w-8 h-8 text-green-300/>,
             <div className: "bg-gradient-to-br from-green-900/60 to-emerald-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-green-400/50 hover: border-green-400/80 transition-all hover:scale-105">",";,
               <div className: "bg-green-500/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6 border border-green-400/30">",";,
                 <Shield className: "w-8 h-8 text-green-300" />",";,
@@ -277,21 +277,21 @@ const AutonomousBusinessOperations: ()  => {,,,
               <p className: "text-green-100 mb-4">",";,";,
   Zero Trust architecture with SOC 2 Type II compliance. Your data stays secure and compliant.
               </p>
-              <ul className: "space-y-2 text-green-200 text-sm">";,";,
-                <li className: "flex items-start gap-2">";,";,
-                  <CheckCircle className: "w-4 h-4 text-green-400 mt-1 flex-shrink-0/>";,";,
+              <ul className: "space-y-2 text-green-200 text-sm">,
+                <li className: "flex items-start gap-2">,
+                  <CheckCircle className: "w-4 h-4 text-green-400 mt-1 flex-shrink-0/>,
                   <span >End-to-end encryption</span>
                 </li>
-                <li className: "flex items-start gap-2">";,";,
-                  <CheckCircle className: "w-4 h-4 text-green-400 mt-1 flex-shrink-0/>";,";,
+                <li className: "flex items-start gap-2">,
+                  <CheckCircle className: "w-4 h-4 text-green-400 mt-1 flex-shrink-0/>,
                   <span >Multi-factor authentication</span>
                 </li>
-                <li className: "flex items-start gap-2">";,";,
-                  <CheckCircle className: "w-4 h-4 text-green-400 mt-1 flex-shrink-0/>";,";,
+                <li className: "flex items-start gap-2">,
+                  <CheckCircle className: "w-4 h-4 text-green-400 mt-1 flex-shrink-0/>,
                   <span >Role-based access controls</span>
                 </li>
-                <li className: "flex items-start gap-2">";,";,
-                  <CheckCircle className: "w-4 h-4 text-green-400 mt-1 flex-shrink-0/>";,";,
+                <li className: "flex items-start gap-2">,
+                  <CheckCircle className: "w-4 h-4 text-green-400 mt-1 flex-shrink-0/>,
               <ul className: "space-y-2 text-green-200 text-sm">",";,
                 <li className: "flex items-start gap-2">",";,
                   <CheckCircle className: "w-4 h-4 text-green-400 mt-1 flex-shrink-0" />",";,
@@ -314,8 +314,8 @@ const AutonomousBusinessOperations: ()  => {,,,
 
             {/* Feature 4 */}
             <div className: "bg-gradient-to-br from-orange-900/60 to-red-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-orange-400/50 hover: border-orange-400/80 transition-all hover:scale-105">",";,
-              <div className: "bg-orange-500/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6 border border-orange-400/30">";,";,
-                <Users className: "w-8 h-8 text-orange-300/>";,";,
+              <div className: "bg-orange-500/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6 border border-orange-400/30">,
+                <Users className: "w-8 h-8 text-orange-300/>,
             <div className: "bg-gradient-to-br from-orange-900/60 to-red-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-orange-400/50 hover: border-orange-400/80 transition-all hover:scale-105">",";,
               <div className: "bg-orange-500/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6 border border-orange-400/30">",";,
                 <Users className: "w-8 h-8 text-orange-300" />",";,
@@ -326,21 +326,21 @@ const AutonomousBusinessOperations: ()  => {,,,
               <p className: "text-orange-100 mb-4">",";,";,
   Dedicated team of AI engineers, data scientists, and consultants to ensure successful deployment.
               </p>
-              <ul className: "space-y-2 text-orange-200 text-sm">";,";,
-                <li className: "flex items-start gap-2">";,";,
-                  <CheckCircle className: "w-4 h-4 text-orange-400 mt-1 flex-shrink-0/>";,";,
+              <ul className: "space-y-2 text-orange-200 text-sm">,
+                <li className: "flex items-start gap-2">,
+                  <CheckCircle className: "w-4 h-4 text-orange-400 mt-1 flex-shrink-0/>,
                   <span >90-day deployment timeline</span>
                 </li>
-                <li className: "flex items-start gap-2">";,";,
-                  <CheckCircle className: "w-4 h-4 text-orange-400 mt-1 flex-shrink-0/>";,";,
+                <li className: "flex items-start gap-2">,
+                  <CheckCircle className: "w-4 h-4 text-orange-400 mt-1 flex-shrink-0/>,
                   <span >Custom workflow development</span>
                 </li>
-                <li className: "flex items-start gap-2">";,";,
-                  <CheckCircle className: "w-4 h-4 text-orange-400 mt-1 flex-shrink-0/>";,";,
+                <li className: "flex items-start gap-2">,
+                  <CheckCircle className: "w-4 h-4 text-orange-400 mt-1 flex-shrink-0/>,
                   <span >Change management & training</span>
                 </li>
-                <li className: "flex items-start gap-2">";,";,
-                  <CheckCircle className: "w-4 h-4 text-orange-400 mt-1 flex-shrink-0/>";,";,
+                <li className: "flex items-start gap-2">,
+                  <CheckCircle className: "w-4 h-4 text-orange-400 mt-1 flex-shrink-0/>,
               <ul className: "space-y-2 text-orange-200 text-sm">",";,
                 <li className: "flex items-start gap-2">",";,
                   <CheckCircle className: "w-4 h-4 text-orange-400 mt-1 flex-shrink-0" />",";,
@@ -363,8 +363,8 @@ const AutonomousBusinessOperations: ()  => {,,,
 
             {/* Feature 5 */}
             <div className: "bg-gradient-to-br from-cyan-900/60 to-blue-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-cyan-400/50 hover: border-cyan-400/80 transition-all hover:scale-105">",";,
-              <div className: "bg-cyan-500/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6 border border-cyan-400/30">";,";,
-                <Clock className: "w-8 h-8 text-cyan-300/>";,";,
+              <div className: "bg-cyan-500/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6 border border-cyan-400/30">,
+                <Clock className: "w-8 h-8 text-cyan-300/>,
             <div className: "bg-gradient-to-br from-cyan-900/60 to-blue-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-cyan-400/50 hover: border-cyan-400/80 transition-all hover:scale-105">",";,
               <div className: "bg-cyan-500/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6 border border-cyan-400/30">",";,
                 <Clock className: "w-8 h-8 text-cyan-300" />",";,
@@ -375,21 +375,21 @@ const AutonomousBusinessOperations: ()  => {,,,
               <p className: "text-cyan-100 mb-4">",";,";,
   Complete visibility into all operations with real-time dashboards, alerts, and analytics.
               </p>
-              <ul className: "space-y-2 text-cyan-200 text-sm">";,";,
-                <li className: "flex items-start gap-2">";,";,
-                  <CheckCircle className: "w-4 h-4 text-cyan-400 mt-1 flex-shrink-0/>";,";,
+              <ul className: "space-y-2 text-cyan-200 text-sm">,
+                <li className: "flex items-start gap-2">,
+                  <CheckCircle className: "w-4 h-4 text-cyan-400 mt-1 flex-shrink-0/>,
                   <span >Live KPI dashboards</span>
                 </li>
-                <li className: "flex items-start gap-2">";,";,
-                  <CheckCircle className: "w-4 h-4 text-cyan-400 mt-1 flex-shrink-0/>";,";,
+                <li className: "flex items-start gap-2">,
+                  <CheckCircle className: "w-4 h-4 text-cyan-400 mt-1 flex-shrink-0/>,
                   <span >Anomaly detection & alerting</span>
                 </li>
-                <li className: "flex items-start gap-2">";,";,
-                  <CheckCircle className: "w-4 h-4 text-cyan-400 mt-1 flex-shrink-0/>";,";,
+                <li className: "flex items-start gap-2">,
+                  <CheckCircle className: "w-4 h-4 text-cyan-400 mt-1 flex-shrink-0/>,
                   <span >Performance analytics</span>
                 </li>
-                <li className: "flex items-start gap-2">";,";,
-                  <CheckCircle className: "w-4 h-4 text-cyan-400 mt-1 flex-shrink-0/>";,";,
+                <li className: "flex items-start gap-2">,
+                  <CheckCircle className: "w-4 h-4 text-cyan-400 mt-1 flex-shrink-0/>,
               <ul className: "space-y-2 text-cyan-200 text-sm">",";,
                 <li className: "flex items-start gap-2">",";,
                   <CheckCircle className: "w-4 h-4 text-cyan-400 mt-1 flex-shrink-0" />",";,
@@ -412,8 +412,8 @@ const AutonomousBusinessOperations: ()  => {,,,
 
             {/* Feature 6 */}
             <div className: "bg-gradient-to-br from-indigo-900/60 to-purple-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-indigo-400/50 hover: border-indigo-400/80 transition-all hover:scale-105">",";,
-              <div className: "bg-indigo-500/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6 border border-indigo-400/30">";,";,
-                <DollarSign className: "w-8 h-8 text-indigo-300/>";,";,
+              <div className: "bg-indigo-500/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6 border border-indigo-400/30">,
+                <DollarSign className: "w-8 h-8 text-indigo-300/>,
             <div className: "bg-gradient-to-br from-indigo-900/60 to-purple-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-indigo-400/50 hover: border-indigo-400/80 transition-all hover:scale-105">",";,
               <div className: "bg-indigo-500/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6 border border-indigo-400/30">",";,
                 <DollarSign className: "w-8 h-8 text-indigo-300" />",";,
@@ -424,21 +424,21 @@ const AutonomousBusinessOperations: ()  => {,,,
               <p className: "text-indigo-100 mb-4">,";,";,
   We're so confident in our platform that we guarantee 300% ROI within 18 months, or your money back.;';';
               </p>
-              <ul className: "space-y-2 text-indigo-200 text-sm">";,";,
-                <li className: "flex items-start gap-2">";,";,
-                  <CheckCircle className: "w-4 h-4 text-indigo-400 mt-1 flex-shrink-0/>";,";,
+              <ul className: "space-y-2 text-indigo-200 text-sm">,
+                <li className: "flex items-start gap-2">,
+                  <CheckCircle className: "w-4 h-4 text-indigo-400 mt-1 flex-shrink-0/>,
                   <span >Detailed ROI modeling upfront</span>
                 </li>
-                <li className: "flex items-start gap-2">";,";,
-                  <CheckCircle className: "w-4 h-4 text-indigo-400 mt-1 flex-shrink-0/>";,";,
+                <li className: "flex items-start gap-2">,
+                  <CheckCircle className: "w-4 h-4 text-indigo-400 mt-1 flex-shrink-0/>,
                   <span >Continuous value tracking</span>
                 </li>
-                <li className: "flex items-start gap-2">";,";,
-                  <CheckCircle className: "w-4 h-4 text-indigo-400 mt-1 flex-shrink-0/>";,";,
+                <li className: "flex items-start gap-2">,
+                  <CheckCircle className: "w-4 h-4 text-indigo-400 mt-1 flex-shrink-0/>,
                   <span >Performance-based pricing options</span>
                 </li>
-                <li className: "flex items-start gap-2">";,";,
-                  <CheckCircle className: "w-4 h-4 text-indigo-400 mt-1 flex-shrink-0/>";,";,
+                <li className: "flex items-start gap-2">,
+                  <CheckCircle className: "w-4 h-4 text-indigo-400 mt-1 flex-shrink-0/>,
               <p className: "text-indigo-100 mb-4">",";,";,
   We're so confident in our platform that we guarantee 300% ROI within 18 months, or your money back.'
               </p>
@@ -465,8 +465,8 @@ const AutonomousBusinessOperations: ()  => {,,,
         </section>
 
         {/* Implementation Timeline */}
-        <section className: "container mx-auto px-6 py-20 max-w-6xl">";,";,
-          <div className: "text-center mb-16">";,";,
+        <section className: "container mx-auto px-6 py-20 max-w-6xl">,
+          <div className: "text-center mb-16">,
             <h2 className: "text-4xl md: text-5xl font-bold text-white mb-4">",";,
         <section className: "container mx-auto px-6 py-20 max-w-6xl">",";,
           <div className: "text-center mb-16">",";,
@@ -491,16 +491,16 @@ const AutonomousBusinessOperations: ()  => {,,,
   Process mapping, data assessment, and ROI modeling with your team
                   </p>
                   <div className: "grid md: grid-cols-3 gap-4 text-sm">",";,
-                    <div className: "flex items-center gap-2 text-blue-200">";,";,
-                      <CheckCircle className: "w-4 h-4 text-blue-400/>";,";,
+                    <div className: "flex items-center gap-2 text-blue-200">,
+                      <CheckCircle className: "w-4 h-4 text-blue-400/>,
                       <span >Process workshops</span>
                     </div>
-                    <div className: "flex items-center gap-2 text-blue-200">";,";,
-                      <CheckCircle className: "w-4 h-4 text-blue-400/>";,";,
+                    <div className: "flex items-center gap-2 text-blue-200">,
+                      <CheckCircle className: "w-4 h-4 text-blue-400/>,
                       <span >Data quality audit</span>
                     </div>
-                    <div className: "flex items-center gap-2 text-blue-200">";,";,
-                      <CheckCircle className: "w-4 h-4 text-blue-400/>";,";,
+                    <div className: "flex items-center gap-2 text-blue-200">,
+                      <CheckCircle className: "w-4 h-4 text-blue-400/>,
                   <div className: "grid md: grid-cols-3 gap-4 text-sm">",";,
                     <div className: "flex items-center gap-2 text-blue-200">",";,
                       <CheckCircle className: "w-4 h-4 text-blue-400" />",";,
@@ -531,16 +531,16 @@ const AutonomousBusinessOperations: ()  => {,,,
   Infrastructure deployment, model training, and system integration
                   </p>
                   <div className: "grid md: grid-cols-3 gap-4 text-sm">",";,
-                    <div className: "flex items-center gap-2 text-purple-200">";,";,
-                      <CheckCircle className: "w-4 h-4 text-purple-400/>";,";,
+                    <div className: "flex items-center gap-2 text-purple-200">,
+                      <CheckCircle className: "w-4 h-4 text-purple-400/>,
                       <span >Cloud infrastructure</span>
                     </div>
-                    <div className: "flex items-center gap-2 text-purple-200">";,";,
-                      <CheckCircle className: "w-4 h-4 text-purple-400/>";,";,
+                    <div className: "flex items-center gap-2 text-purple-200">,
+                      <CheckCircle className: "w-4 h-4 text-purple-400/>,
                       <span >AI model training</span>
                     </div>
-                    <div className: "flex items-center gap-2 text-purple-200">";,";,
-                      <CheckCircle className: "w-4 h-4 text-purple-400/>";,";,
+                    <div className: "flex items-center gap-2 text-purple-200">,
+                      <CheckCircle className: "w-4 h-4 text-purple-400/>,
                   <div className: "grid md: grid-cols-3 gap-4 text-sm">",";,
                     <div className: "flex items-center gap-2 text-purple-200">",";,
                       <CheckCircle className: "w-4 h-4 text-purple-400" />",";,
@@ -571,16 +571,16 @@ const AutonomousBusinessOperations: ()  => {,,,
   Pilot deployment, validation, and full-scale rollout
                   </p>
                   <div className: "grid md: grid-cols-3 gap-4 text-sm">",";,
-                    <div className: "flex items-center gap-2 text-green-200">";,";,
-                      <CheckCircle className: "w-4 h-4 text-green-400/>";,";,
+                    <div className: "flex items-center gap-2 text-green-200">,
+                      <CheckCircle className: "w-4 h-4 text-green-400/>,
                       <span >Pilot workflows</span>
                     </div>
-                    <div className: "flex items-center gap-2 text-green-200">";,";,
-                      <CheckCircle className: "w-4 h-4 text-green-400/>";,";,
+                    <div className: "flex items-center gap-2 text-green-200">,
+                      <CheckCircle className: "w-4 h-4 text-green-400/>,
                       <span >User training</span>
                     </div>
-                    <div className: "flex items-center gap-2 text-green-200">";,";,
-                      <CheckCircle className: "w-4 h-4 text-green-400/>";,";,
+                    <div className: "flex items-center gap-2 text-green-200">,
+                      <CheckCircle className: "w-4 h-4 text-green-400/>,
                   <div className: "grid md: grid-cols-3 gap-4 text-sm">",";,
                     <div className: "flex items-center gap-2 text-green-200">",";,
                       <CheckCircle className: "w-4 h-4 text-green-400" />",";,
@@ -602,8 +602,8 @@ const AutonomousBusinessOperations: ()  => {,,,
         </section>
 
         {/* Pricing Section */}
-        <section className: "container mx-auto px-6 py-20 max-w-6xl">";,";,
-          <div className: "text-center mb-16">";,";,
+        <section className: "container mx-auto px-6 py-20 max-w-6xl">,
+          <div className: "text-center mb-16">,
             <h2 className: "text-4xl md: text-5xl font-bold text-white mb-4">",";,
         <section className: "container mx-auto px-6 py-20 max-w-6xl">",";,
           <div className: "text-center mb-16">",";,
@@ -624,21 +624,21 @@ const AutonomousBusinessOperations: ()  => {,,,
                 <div className: "text-5xl font-bold text-white mb-2">$10-25M</div>",";,
                 <div className: "text-blue-200">3-Year Total Cost</div>",";,
               </div>
-              <ul className: "space-y-3 text-blue-100">";,";,
-                <li className: "flex items-start gap-2">";,";,
-                  <CheckCircle className: "w-5 h-5 text-blue-400 mt-1 flex-shrink-0/>";,";,
+              <ul className: "space-y-3 text-blue-100">,
+                <li className: "flex items-start gap-2">,
+                  <CheckCircle className: "w-5 h-5 text-blue-400 mt-1 flex-shrink-0/>,
                   <span >Platform licensing</span>
                 </li>
-                <li className: "flex items-start gap-2">";,";,
-                  <CheckCircle className: "w-5 h-5 text-blue-400 mt-1 flex-shrink-0/>";,";,
+                <li className: "flex items-start gap-2">,
+                  <CheckCircle className: "w-5 h-5 text-blue-400 mt-1 flex-shrink-0/>,
                   <span >Implementation services</span>
                 </li>
-                <li className: "flex items-start gap-2">";,";,
-                  <CheckCircle className: "w-5 h-5 text-blue-400 mt-1 flex-shrink-0/>";,";,
+                <li className: "flex items-start gap-2">,
+                  <CheckCircle className: "w-5 h-5 text-blue-400 mt-1 flex-shrink-0/>,
                   <span >Training & change management</span>
                 </li>
-                <li className: "flex items-start gap-2">";,";,
-                  <CheckCircle className: "w-5 h-5 text-blue-400 mt-1 flex-shrink-0/>";,";,
+                <li className: "flex items-start gap-2">,
+                  <CheckCircle className: "w-5 h-5 text-blue-400 mt-1 flex-shrink-0/>,
               <ul className: "space-y-3 text-blue-100">",";,
                 <li className: "flex items-start gap-2">",";,
                   <CheckCircle className: "w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />",";,
@@ -666,21 +666,21 @@ const AutonomousBusinessOperations: ()  => {,,,
                 <div className: "text-5xl font-bold text-white mb-2">$90-330M</div>",";,
                 <div className: "text-green-200">3-Year Value Creation</div>",";,
               </div>
-              <ul className: "space-y-3 text-green-100">";,";,
-                <li className: "flex items-start gap-2">";,";,
-                  <CheckCircle className: "w-5 h-5 text-green-400 mt-1 flex-shrink-0/>";,";,
+              <ul className: "space-y-3 text-green-100">,
+                <li className: "flex items-start gap-2">,
+                  <CheckCircle className: "w-5 h-5 text-green-400 mt-1 flex-shrink-0/>,
                   <span >Cost savings (labor, errors, infrastructure)</span>
                 </li>
-                <li className: "flex items-start gap-2">";,";,
-                  <CheckCircle className: "w-5 h-5 text-green-400 mt-1 flex-shrink-0/>";,";,
+                <li className: "flex items-start gap-2">,
+                  <CheckCircle className: "w-5 h-5 text-green-400 mt-1 flex-shrink-0/>,
                   <span >Revenue acceleration (faster cycles)</span>
                 </li>
-                <li className: "flex items-start gap-2">";,";,
-                  <CheckCircle className: "w-5 h-5 text-green-400 mt-1 flex-shrink-0/>";,";,
+                <li className: "flex items-start gap-2">,
+                  <CheckCircle className: "w-5 h-5 text-green-400 mt-1 flex-shrink-0/>,
                   <span >Risk reduction (compliance, fraud)</span>
                 </li>
-                <li className: "flex items-start gap-2">";,";,
-                  <CheckCircle className: "w-5 h-5 text-green-400 mt-1 flex-shrink-0/>";,";,
+                <li className: "flex items-start gap-2">,
+                  <CheckCircle className: "w-5 h-5 text-green-400 mt-1 flex-shrink-0/>,
               <ul className: "space-y-3 text-green-100">",";,
                 <li className: "flex items-start gap-2">",";,
                   <CheckCircle className: "w-5 h-5 text-green-400 mt-1 flex-shrink-0" />",";,
@@ -711,9 +711,9 @@ const AutonomousBusinessOperations: ()  => {,,,
         </section>
 
         {/* Success Story CTA */}
-        <section className: "container mx-auto px-6 py-20 max-w-6xl">";,";,
-          <div className: "bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-12 text-center">";,";,
-            <h2 className: "text-4xl font-bold text-white mb-4">";,";,
+        <section className: "container mx-auto px-6 py-20 max-w-6xl">,
+          <div className: "bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-12 text-center">,
+            <h2 className: "text-4xl font-bold text-white mb-4">,
         <section className: "container mx-auto px-6 py-20 max-w-6xl">",";,
           <div className: "bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-12 text-center">",";,
             <h2 className: "text-4xl font-bold text-white mb-4">",";,";,
@@ -726,15 +726,15 @@ const AutonomousBusinessOperations: ()  => {,,,
   className: "inline-flex items-center gap-2 bg-white text-green-600 hover: bg-green-50 px-8 py-4 rounded-lg font-bold text-lg transition-all shadow-xl hover:shadow-2xl",";,
             >
               Read Complete Case Study
-              <ArrowRight className: "w-5 h-5/>";,";,
+              <ArrowRight className: "w-5 h-5/>,
               <ArrowRight className: "w-5 h-5" />",";,
             </Link>
           </div>
         </section>
 
         {/* Final CTA */}
-        <section className: "container mx-auto px-6 py-20 max-w-6xl">";,";,
-          <div className: "bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-center">";,";,
+        <section className: "container mx-auto px-6 py-20 max-w-6xl">,
+          <div className: "bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-center">,
             <h2 className: "text-4xl md: text-5xl font-bold text-white mb-6">",";,
         <section className: "container mx-auto px-6 py-20 max-w-6xl">",";,
           <div className: "bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-center">",";,
@@ -752,7 +752,7 @@ const AutonomousBusinessOperations: ()  => {,,,
               >
                 <Rocket className: "w-5 h-5/>,";,";,
   Schedule Free Consultation
-                <ArrowRight className: "w-5 h-5/>";,";,
+                <ArrowRight className: "w-5 h-5/>,
                 <Rocket className: "w-5 h-5" />",";,";,
   Schedule Free Consultation
                 <ArrowRight className: "w-5 h-5" />",";,

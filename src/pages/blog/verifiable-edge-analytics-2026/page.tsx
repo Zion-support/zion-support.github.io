@@ -1,17 +1,17 @@
-import React from "react";"
+import React from "react";
 
 export default function VerifiableEdgeAnalytics2026(): React.JSX.Element {
   return (
     <div className: "min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">",";,
-      <Helmet >
-        <title >Verifiable Edge Analytics 2026: Zero‑PII Insights with Attestations</title>,,
+      <Helmet>
+        <title>Verifiable Edge Analytics 2026: Zero‑PII Insights with Attestations</title>,,
         <meta name: "description",";,";,
   content: "Scoped IDs, on‑device aggregation, DP noise, and signed attestations for trustworthy insights under 100ms." /><link rel: "canonical",";,";,
   href: "https://ziontechgroup.com/blog/verifiable-edge-analytics-2026",";,
         />
       </Helmet>
 
-      <div className: "container mx-auto px-6 py-16">";,";,
+      <div className: "container mx-auto px-6 py-16">,
         <h1 className: "text-4xl md: text-5xl font-bold mb-4">",";,";,
   href: "https: //ziontechgroup.com/blog/verifiable-edge-analytics-2026",";,
         />

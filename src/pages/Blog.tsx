@@ -1,6 +1,6 @@
-import { Zap } from "lucide-react";";
-import React, { useMemo, useState } from "react";";
-import BlogPromotionBanner from "../components/BlogPromotionBanner";";
+import { Zap } from "lucide-react";
+import React, { useMemo, useState } from "react";
+import BlogPromotionBanner from "../components/BlogPromotionBanner";
 // const Footer: React.FC: ()  => null;,,
 // import Header from "../components/Header"
 
@@ -364,15 +364,15 @@ default: return "text-gray-400 bg-gray-500/10 border-gray-500/30";"
 
   return (
     <>
-      <Helmet >
-        <title >Blog & Insights - Zion Tech Group | AI & Technology Expertise</title>
+      <Helmet>
+        <title>Blog & Insights - Zion Tech Group | AI & Technology Expertise</title>
         <meta name: "description",";,";,
-  content: "Stay updated with the latest insights on AI, technology trends, case studies, and industry best practices from Zion Tech Group experts." /><meta property: "og:title" content ="Blog & Insights - Zion Tech Group" />";,";,
+  content: "Stay updated with the latest insights on AI, technology trends, case studies, and industry best practices from Zion Tech Group experts." /><meta property: "og:title" content ="Blog & Insights - Zion Tech Group" />,
         <meta property: "og:description",";,";,
-  content: "Latest insights on AI and technology trends" /><meta property="og:type" content="website" />";,";,
-        <meta property: "og:url" content="https://ziontechgroup.com/blog" />";,";,
-        <meta name: "twitter:card" content="summary_large_image" />";,";,
-        <meta name: "twitter:title" content ="Blog & Insights - Zion Tech Group" />";,";,
+  content: "Latest insights on AI and technology trends" /><meta property="og:type" content="website" />,
+        <meta property: "og:url" content="https://ziontechgroup.com/blog" />,
+        <meta name: "twitter:card" content="summary_large_image" />,
+        <meta name: "twitter:title" content ="Blog & Insights - Zion Tech Group" />,
         <meta name: "twitter:description",";,";,
   content: "Latest insights on AI and technology trends" /><link rel: "canonical" href ="https://ziontechgroup.com/blog/>",";,";,
   content: "Stay updated with the latest insights on AI, technology trends, case studies, and industry best practices from Zion Tech Group experts.",";,
@@ -393,12 +393,12 @@ default: return "text-gray-400 bg-gray-500/10 border-gray-500/30";"
 
       <div className: "min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">",";,
         {/* New Content Promo Banner */}
-        <div className: "border-b border-white/10">";,";,
-          <div className: "max-w-7xl mx-auto px-6">";,";,
-              <div className: "mt-4 mb-2 rounded-xl bg-gradient-to-r from-fuchsia-600 to-purple-600 p-4 text-white flex items-center justify-between">";,";,
-              <div className: "mr-4">";,";,
+        <div className: "border-b border-white/10">,
+          <div className: "max-w-7xl mx-auto px-6">,
+              <div className: "mt-4 mb-2 rounded-xl bg-gradient-to-r from-fuchsia-600 to-purple-600 p-4 text-white flex items-center justify-between">,
+              <div className: "mr-4">,
                 <div className: "text-sm font-semibold">🚀 Fresh: Governance Quickstart + Privacy‑First Agents</div>",";,
-                <div className: "text-xs text-white/90">Ship KPI‑linked guardrails and private assistants under real budgets.</div>";,";,
+                <div className: "text-xs text-white/90">Ship KPI‑linked guardrails and private assistants under real budgets.</$1>";,
               </div>
               <a title: "Internal link" href="/blog/ai-governance-scorecards-quickstart-2026" className="bg-white text-gray-900 px-4 py-2 rounded-lg font-semibold hover: bg-gray-100 transition-colors whitespace-nowrap">",";,
         <div className: "border-b border-white/10">",";,
@@ -416,9 +416,9 @@ default: return "text-gray-400 bg-gray-500/10 border-gray-500/30";"
         </div>
         
         {/* Additional Content Promo Banner */}
-        <div className: "border-b border-white/10">";,";,
-          <div className: "max-w-7xl mx-auto px-6">";,";,
-              <div className: "mt-4 mb-2 rounded-xl bg-gradient-to-r from-cyan-600 to-blue-600 p-4 text-white flex items-center gap-3 flex-wrap">";,";,
+        <div className: "border-b border-white/10">,
+          <div className: "max-w-7xl mx-auto px-6">,
+              <div className: "mt-4 mb-2 rounded-xl bg-gradient-to-r from-cyan-600 to-blue-600 p-4 text-white flex items-center gap-3 flex-wrap">,
                 <a title: "Internal link" href="/blog/ai-e2e-tracing-2025" className="bg-white text-gray-900 px-3 py-2 rounded-lg font-semibold hover: bg-gray-100 transition-colors whitespace-nowrap">E2E AI Tracing</a>",";,
                 <a title: "Internal link" href="/blog/edge-personalization-2025" className="bg-white text-gray-900 px-3 py-2 rounded-lg font-semibold hover: bg-gray-100 transition-colors whitespace-nowrap">Edge Personalization</a>",";,
                 <a title: "Internal link" href="/blog/policy-tests-quickstart-2025" className="bg-white text-gray-900 px-3 py-2 rounded-lg font-semibold hover: bg-gray-100 transition-colors whitespace-nowrap">Policy Tests Quickstart</a>",";,
@@ -433,8 +433,8 @@ default: return "text-gray-400 bg-gray-500/10 border-gray-500/30";"
         </div>
 
         {/* Hero Section */}
-        <section className: "container mx-auto px-6 py-20">";,";,
-          <div className: "text-center mb-16">";,";,
+        <section className: "container mx-auto px-6 py-20">,
+          <div className: "text-center mb-16">,
             <h1 className: "text-4xl md: text-6xl font-bold text-white mb-6">",";,";,
   Insights &{" "}"
               <span className: "bg-gradient-to-r from-zion-blue-light to-zion-purple-light bg-clip-text text-transparent">,";,";,
@@ -458,10 +458,10 @@ default: return "text-gray-400 bg-gray-500/10 border-gray-500/30";"
           </div>
 
           {/* Search and Filter */}
-          <div className: "max-w-4xl mx-auto mb-12">";,";,
+          <div className: "max-w-4xl mx-auto mb-12">,
             <div className: "flex flex-col md: flex-row gap-4 mb-8">",";,
-              <div className: "relative flex-1">";,";,
-                <Search className: "absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5/>";,";,
+              <div className: "relative flex-1">,
+                <Search className: "absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5/>,
           <div className: "max-w-4xl mx-auto mb-12">",";,
             <div className: "flex flex-col md: flex-row gap-4 mb-8">",";,
               <div className: "relative flex-1">",";,
@@ -493,9 +493,9 @@ default: return "text-gray-400 bg-gray-500/10 border-gray-500/30";"
           {/* Featured Posts */}
           {
 selectedCategory: == "All" && searchTerm == = "" && (",";,
-<div className: "mb-16">";,";,
-<h2 className: "text-2xl font-bold text-white mb-8">Featured Articles</h2>";,";,
-<div className: "grid md:grid-cols-2 gap-8">";,";,
+<div className: "mb-16">,
+<h2 className: "text-2xl font-bold text-white mb-8">Featured Articles</$1>";,
+<div className: "grid md:grid-cols-2 gap-8">,
 <div className: "mb-16">",";,
 <h2 className: "text-2xl font-bold text-white mb-8">Featured Articles</h2>",";,
 <div className: "grid md: grid-cols-2 gap-8">,",";,
@@ -507,13 +507,13 @@ const CategoryIcon: getCategoryIcon(post.category);,,,
 }
                       className: "bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover: bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl group",";,
                     >
-                      <div className: "flex items-center justify-between mb-4">";,";,
+                      <div className: "flex items-center justify-between mb-4">,
                         <div className: {`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium border ${categoryColor}`}>`
-                          <CategoryIcon className: "w-3 h-3 mr-1/>";,";,
+                          <CategoryIcon className: "w-3 h-3 mr-1/>,
                           {post.category}
                         </div>
-                        <div className: "flex items-center text-zion-slate-light text-sm">";,";,
-                          <TrendingUp className: "w-4 h-4 mr-1/>";,";,
+                        <div className: "flex items-center text-zion-slate-light text-sm">,
+                          <TrendingUp className: "w-4 h-4 mr-1/>,
                       <div className: "flex items-center justify-between mb-4">",";,
                         <div className: {`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium border ${categoryColor}`}>`
                           <CategoryIcon className: "w-3 h-3 mr-1" />",";,
@@ -543,18 +543,18 @@ const CategoryIcon: getCategoryIcon(post.category);,,,
                         ))}
                       </div>
 
-                      <div className: "flex items-center justify-between">";,";,
-                        <div className: "flex items-center space-x-4 text-sm text-zion-slate-light">";,";,
-                          <div className: "flex items-center">";,";,
-                            <User className: "w-4 h-4 mr-1/>";,";,
+                      <div className: "flex items-center justify-between">,
+                        <div className: "flex items-center space-x-4 text-sm text-zion-slate-light">,
+                          <div className: "flex items-center">,
+                            <User className: "w-4 h-4 mr-1/>,
                             {post.author}
                           </div>
-                          <div className: "flex items-center">";,";,
-                            <Calendar className: "w-4 h-4 mr-1/>";,";,
+                          <div className: "flex items-center">,
+                            <Calendar className: "w-4 h-4 mr-1/>,
                             {new Date(post.date).toLocaleDateString()}
                           </div>
-                          <div className: "flex items-center">";,";,
-                            <Clock className: "w-4 h-4 mr-1/>";,";,
+                          <div className: "flex items-center">,
+                            <Clock className: "w-4 h-4 mr-1/>,
                             {post.readTime}
                           </div>
                         </div>
@@ -590,7 +590,7 @@ const CategoryIcon: getCategoryIcon(post.category);,,,
 
           {/* Regular Posts */}
           <div >
-            <h2 className: "text-2xl font-bold text-white mb-8">";,";,
+            <h2 className: "text-2xl font-bold text-white mb-8">,
               {selectedCategory !== "All" || searchTerm ? "Search Results" : "Latest Articles"}"
             </h2>
             <div className: "grid md: grid-cols-2 lg:grid-cols-3 gap-8">",";,
@@ -605,13 +605,13 @@ const CategoryIcon: getCategoryIcon(post.category);,,,
                   <article key: {post.id}
                     className: "bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover: bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl group",";,
                   >
-                    <div className: "flex items-center justify-between mb-4">";,";,
+                    <div className: "flex items-center justify-between mb-4">,
                       <div className: {`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium border ${categoryColor}`}>`
-                        <CategoryIcon className: "w-3 h-3 mr-1/>";,";,
+                        <CategoryIcon className: "w-3 h-3 mr-1/>,
                         {post.category}
                       </div>
-                      <div className: "flex items-center text-zion-slate-light text-xs">";,";,
-                        <TrendingUp className: "w-3 h-3 mr-1/>";,";,
+                      <div className: "flex items-center text-zion-slate-light text-xs">,
+                        <TrendingUp className: "w-3 h-3 mr-1/>,
                     <div className: "flex items-center justify-between mb-4">",";,
                       <div className: {`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium border ${categoryColor}`}>`
                         <CategoryIcon className: "w-3 h-3 mr-1" />",";,
@@ -646,13 +646,13 @@ const CategoryIcon: getCategoryIcon(post.category);,,,
                       )}
                     </div>
 
-                    <div className: "flex items-center justify-between text-xs text-zion-slate-light">";,";,
-                      <div className: "flex items-center">";,";,
-                        <User className: "w-3 h-3 mr-1/>";,";,
+                    <div className: "flex items-center justify-between text-xs text-zion-slate-light">,
+                      <div className: "flex items-center">,
+                        <User className: "w-3 h-3 mr-1/>,
                         {post.author}
                       </div>
-                      <div className: "flex items-center">";,";,
-                        <Clock className: "w-3 h-3 mr-1/>";,";,
+                      <div className: "flex items-center">,
+                        <Clock className: "w-3 h-3 mr-1/>,
                     <div className: "flex items-center justify-between text-xs text-zion-slate-light">",";,
                       <div className: "flex items-center">",";,
                         <User className: "w-3 h-3 mr-1" />",";,

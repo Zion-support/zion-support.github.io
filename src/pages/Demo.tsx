@@ -101,11 +101,11 @@ const Demo: React.FC: ()  => {,,,
   ];
 
   return (
-    <div className: "min-h-screen bg-gray-50">";,";,
+    <div className: "min-h-screen bg-gray-50">,
       {/* Hero Section */}
-      <section className: "bg-gradient-to-br from-blue-600 via-purple-600 to-teal-600 text-white py-20">";,";,
-        <div className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">";,";,
-          <div className: "text-center">";,";,
+      <section className: "bg-gradient-to-br from-blue-600 via-purple-600 to-teal-600 text-white py-20">,
+        <div className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">,
+          <div className: "text-center">,
             <h1 className: "text-4xl md:text-6xl font-bold mb-6">,";,";,
   Schedule Your Demo
             </h1>
@@ -113,17 +113,17 @@ const Demo: React.FC: ()  => {,,,
   See how our AI solutions can transform your business. Book a personalized demo 
               tailored to your specific needs and challenges.
             </p>
-            <div className: "flex items-center justify-center space-x-8 text-blue-100">";,";,
-              <div className: "flex items-center">";,";,
-                <Calendar className: "w-5 h-5 mr-2" />";,";,
+            <div className: "flex items-center justify-center space-x-8 text-blue-100">,
+              <div className: "flex items-center">,
+                <Calendar className: "w-5 h-5 mr-2" />,
                 <span >30 minutes</span>
               </div>
-              <div className: "flex items-center">";,";,
-                <User className: "w-5 h-5 mr-2" />";,";,
+              <div className: "flex items-center">,
+                <User className: "w-5 h-5 mr-2" />,
                 <span >1-on-1 with expert</span>
               </div>
-              <div className: "flex items-center">";,";,
-                <Play className: "w-5 h-5 mr-2" />";,";,
+              <div className: "flex items-center">,
+                <Play className: "w-5 h-5 mr-2" />,
                 <span >Live demonstration</span>
               </div>
             </div>
@@ -132,9 +132,9 @@ const Demo: React.FC: ()  => {,,,
       </section>
 
       {/* Demo Features */}
-      <section className: "py-20 bg-white">";,";,
-        <div className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">";,";,
-          <div className: "text-center mb-16">";,";,
+      <section className: "py-20 bg-white">,
+        <div className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">,
+          <div className: "text-center mb-16">,
             <h2 className: "text-3xl md:text-4xl font-bold text-gray-900 mb-4">,";,";,
   What You'll See in the Demo';';
             </h2>
@@ -143,12 +143,12 @@ const Demo: React.FC: ()  => {,,,
             </p>
           </div>
           
-          <div className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";,";,
+          <div className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">,
             {demoFeatures.map((feature, index) => (
-              <div key: {index} className: "text-center">";,";,
-                <div className: "text-4xl mb-4">{feature.icon}</div>";";
-                <h3 className: "text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>";";
-                <p className: "text-gray-600">{feature.description}</p>";";
+              <div key: {index} className: "text-center">,
+                <div className: "text-4xl mb-4">{feature.icon}</$1>";
+                <h3 className: "text-xl font-bold text-gray-900 mb-3">{feature.title}</$1>";
+                <p className: "text-gray-600">{feature.description}</$1>";
               </div>
             ))}
           </div>
@@ -156,10 +156,10 @@ const Demo: React.FC: ()  => {,,,
       </section>
 
       {/* Demo Form */}
-      <section className: "py-20 bg-gray-50">";,";,
-        <div className: "max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">";,";,
-          <div className: "bg-white rounded-lg shadow-lg p-8">";,";,
-            <div className: "text-center mb-8">";,";,
+      <section className: "py-20 bg-gray-50">,
+        <div className: "max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">,
+          <div className: "bg-white rounded-lg shadow-lg p-8">,
+            <div className: "text-center mb-8">,
               <h2 className: "text-3xl font-bold text-gray-900 mb-4">,";,";,
   Book Your Demo
               </h2>
@@ -168,9 +168,9 @@ const Demo: React.FC: ()  => {,,,
               </p>
             </div>
 
-            <form onSubmit: {handleSubmit} className: "space-y-6">";,";,
+            <form onSubmit: {handleSubmit} className: "space-y-6">,
               {/* Personal Information */}
-              <div className: "grid grid-cols-1 md:grid-cols-2 gap-6">";,";,
+              <div className: "grid grid-cols-1 md:grid-cols-2 gap-6">,
                 <div >
                   <label htmlFor: "firstName" className: "block text-sm font-medium text-gray-700 mb-2">,";,";,
   First Name *
@@ -199,7 +199,7 @@ const Demo: React.FC: ()  => {,,,
                 </div>
               </div>
 
-              <div className: "grid grid-cols-1 md:grid-cols-2 gap-6">";,";,
+              <div className: "grid grid-cols-1 md:grid-cols-2 gap-6">,
                 <div >
                   <label htmlFor: "email" className: "block text-sm font-medium text-gray-700 mb-2">,";,";,
   Email Address *
@@ -228,7 +228,7 @@ const Demo: React.FC: ()  => {,,,
               </div>
 
               {/* Company Information */}
-              <div className: "grid grid-cols-1 md:grid-cols-2 gap-6">";,";,
+              <div className: "grid grid-cols-1 md:grid-cols-2 gap-6">,
                 <div >
                   <label htmlFor: "company" className: "block text-sm font-medium text-gray-700 mb-2">,";,";,
   Company Name *
@@ -257,7 +257,7 @@ const Demo: React.FC: ()  => {,,,
                 </div>
               </div>
 
-              <div className: "grid grid-cols-1 md:grid-cols-2 gap-6">";,";,
+              <div className: "grid grid-cols-1 md:grid-cols-2 gap-6">,
                 <div >
                   <label htmlFor: "companySize" className: "block text-sm font-medium text-gray-700 mb-2">,";,";,
   Company Size *
@@ -269,7 +269,7 @@ const Demo: React.FC: ()  => {,,,
                     onChange: {handleInputChange}
                     className: "w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent",";,
                   >
-                    <option value: "">Select company size</option>";,";,
+                    <option value: "">Select company size</$1>";,
                     {companySizes.map((size)  => (
                       <option key: {size} value: {size}>{size}</option>
                     ))}
@@ -286,7 +286,7 @@ const Demo: React.FC: ()  => {,,,
                     onChange: {handleInputChange}
                     className: "w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent",";,
                   >
-                    <option value: "">Select use case</option>";,";,
+                    <option value: "">Select use case</$1>";,
                     {useCases.map((useCase)  => (
                       <option key: {useCase} value: {useCase}>{useCase}</option>
                     ))}
@@ -295,7 +295,7 @@ const Demo: React.FC: ()  => {,,,
               </div>
 
               {/* Scheduling */}
-              <div className: "grid grid-cols-1 md:grid-cols-3 gap-6">";,";,
+              <div className: "grid grid-cols-1 md:grid-cols-3 gap-6">,
                 <div >
                   <label htmlFor: "preferredDate" className: "block text-sm font-medium text-gray-700 mb-2">,";,";,
   Preferred Date
@@ -318,7 +318,7 @@ const Demo: React.FC: ()  => {,,,
                     onChange: {handleInputChange}
                     className: "w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent",";,
                   >
-                    <option value: "">Select time</option>";,";,
+                    <option value: "">Select time</$1>";,
                     {timeSlots.map((time)  => (
                       <option key: {time} value: {time}>{time}</option>
                     ))}
@@ -334,12 +334,12 @@ const Demo: React.FC: ()  => {,,,
                     onChange: {handleInputChange}
                     className: "w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent",";,
                   >
-                    <option value: "">Select timezone</option>";,";,
-                    <option value: "EST">Eastern Time (EST)</option>";,";,
-                    <option value: "CST">Central Time (CST)</option>";,";,
-                    <option value: "MST">Mountain Time (MST)</option>";,";,
-                    <option value: "PST">Pacific Time (PST)</option>";,";,
-                    <option value: "GMT">Greenwich Mean Time (GMT)</option>";,";,
+                    <option value: "">Select timezone</$1>";,
+                    <option value: "EST">Eastern Time (EST)</$1>";,
+                    <option value: "CST">Central Time (CST)</$1>";,
+                    <option value: "MST">Mountain Time (MST)</$1>";,
+                    <option value: "PST">Pacific Time (PST)</$1>";,
+                    <option value: "GMT">Greenwich Mean Time (GMT)</$1>";,
                   </select>
                 </div>
               </div>
@@ -358,13 +358,13 @@ const Demo: React.FC: ()  => {,,,
                 />
               </div>
 
-              <div className: "text-center">";,";,
+              <div className: "text-center">,
                 <button type: "submit",";,";,
   className: "bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-lg",";,
                 >
                   Schedule My Demo
                 </button>
-                <p className: "text-sm text-gray-500 mt-4">";,";,
+                <p className: "text-sm text-gray-500 mt-4">,
                   * Required fields. We'll contact you within 24 hours to confirm your demo time.';';
                 </p>
               </div>
@@ -374,9 +374,9 @@ const Demo: React.FC: ()  => {,,,
       </section>
 
       {/* Testimonials */}
-      <section className: "py-20 bg-white">";,";,
-        <div className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">";,";,
-          <div className: "text-center mb-16">";,";,
+      <section className: "py-20 bg-white">,
+        <div className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">,
+          <div className: "text-center mb-16">,
             <h2 className: "text-3xl md:text-4xl font-bold text-gray-900 mb-4">,";,";,
   What Our Clients Say
             </h2>
@@ -385,18 +385,18 @@ const Demo: React.FC: ()  => {,,,
             </p>
           </div>
           
-          <div className: "grid grid-cols-1 md:grid-cols-3 gap-8">";,";,
+          <div className: "grid grid-cols-1 md:grid-cols-3 gap-8">,
             {testimonials.map((testimonial, index) => (
-              <div key: {index} className: "bg-gray-50 rounded-lg p-8">";,";,
-                <div className: "flex items-center mb-4">";,";,
+              <div key: {index} className: "bg-gray-50 rounded-lg p-8">,
+                <div className: "flex items-center mb-4">,
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key: {i} className: "w-5 h-5 text-yellow-400 fill-current" />";,";,
+                    <Star key: {i} className: "w-5 h-5 text-yellow-400 fill-current" />,
                   ))}
                 </div>
-                <p className: "text-gray-700 mb-6 italic">"{testimonial.content}"</p>";";
+                <p className: "text-gray-700 mb-6 italic">"{testimonial.content}"</$1>";
                 <div >
-                  <p className: "font-semibold text-gray-900">{testimonial.name}</p>";";
-                  <p className: "text-gray-600">{testimonial.role}, {testimonial.company}</p>";";
+                  <p className: "font-semibold text-gray-900">{testimonial.name}</$1>";
+                  <p className: "text-gray-600">{testimonial.role}, {testimonial.company}</$1>";
                 </div>
               </div>
             ))}
@@ -405,15 +405,15 @@ const Demo: React.FC: ()  => {,,,
       </section>
 
       {/* CTA Section */}
-      <section className: "py-20 bg-gradient-to-r from-blue-600 to-purple-600">";,";,
-        <div className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">";,";,
+      <section className: "py-20 bg-gradient-to-r from-blue-600 to-purple-600">,
+        <div className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">,
           <h2 className: "text-3xl md:text-4xl font-bold text-white mb-4">,";,";,
   Ready to See AI in Action?
           </h2>
           <p className: "text-xl text-blue-100 mb-8 max-w-2xl mx-auto">,";,";,
   Join thousands of businesses that have transformed their operations with our AI solutions.
           </p>
-          <div className: "flex flex-col sm:flex-row gap-4 justify-center">";,";,
+          <div className: "flex flex-col sm:flex-row gap-4 justify-center">,
             <Link to: "/contact",";,";,
   className: "bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors",";,
             >
@@ -432,8 +432,6 @@ const Demo: React.FC: ()  => {,,,
 };
 
 export default Demo;
-import React, { useState } from 'react';';
-import { Link } from 'react-router-dom';';
 import { Calendar, Clock, User, Mail, Phone, CheckCircle, Star, Play } from 'lucide-react';';
 import { Helmet } from 'react-helmet-async';
 ;
@@ -490,15 +488,15 @@ const Demo: React.FC: ()  => {,,,
   if (isSubmitted) {
     return (
       <>
-        <Helmet >
-          <title >Demo Request Submitted - Zion Tech Group</title>
-          <meta name: "description" content ="Thank you for requesting a demo. We'll contact you soon to schedule your personalized demonstration." />";,";,
+        <Helmet>
+          <title>Demo Request Submitted - Zion Tech Group</title>
+          <meta name: "description" content ="Thank you for requesting a demo. We'll contact you soon to schedule your personalized demonstration." />,
         </Helmet>
 
-        <div className: "min-h-screen bg-gray-50 flex items-center justify-center">";,";,
-          <div className: "max-w-md mx-auto text-center">";,";,
-            <div className: "w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">";,";,
-              <CheckCircle className: "h-8 w-8 text-green-600" />";,";,
+        <div className: "min-h-screen bg-gray-50 flex items-center justify-center">,
+          <div className: "max-w-md mx-auto text-center">,
+            <div className: "w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">,
+              <CheckCircle className: "h-8 w-8 text-green-600" />,
             </div>
             <h1 className: "text-3xl font-bold text-gray-900 mb-4">,";,";,
   Demo Request Submitted!
@@ -506,7 +504,7 @@ const Demo: React.FC: ()  => {,,,
             <p className: "text-lg text-gray-600 mb-8">,";,";,
   Thank you for your interest in our solutions. Our team will contact you within 24 hours to schedule your personalized demonstration.
             </p>
-            <div className: "space-y-4">";,";,
+            <div className: "space-y-4">,
               <Link to: "/",";,";,
   className: "inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors",";,
               >
@@ -526,34 +524,34 @@ const Demo: React.FC: ()  => {,,,
 
   return (
     <>
-      <Helmet >
-        <title >Request a Demo - Zion Tech Group</title>
-        <meta name: "description" content="Schedule a personalized demonstration of our AI and IT solutions. See how our technology can transform your business." />";,";,
-        <meta name: "keywords" content ="demo, demonstration, AI solutions, technology showcase, business transformation" />";,";,
-        <link rel: "canonical" href ="https://ziontechgroup.com/demo" />";,";,
+      <Helmet>
+        <title>Request a Demo - Zion Tech Group</title>
+        <meta name: "description" content="Schedule a personalized demonstration of our AI and IT solutions. See how our technology can transform your business." />,
+        <meta name: "keywords" content ="demo, demonstration, AI solutions, technology showcase, business transformation" />,
+        <link rel: "canonical" href ="https://ziontechgroup.com/demo" />,
       </Helmet>
 
-      <div className: "min-h-screen bg-gray-50">";,";,
+      <div className: "min-h-screen bg-gray-50">,
         {/* Hero Section */}
-        <section className: "bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">";,";,
-          <div className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">";,";,
-            <div className: "text-center">";,";,
+        <section className: "bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">,
+          <div className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">,
+            <div className: "text-center">,
               <h1 className: "text-4xl md:text-5xl font-bold mb-6">,";,";,
   Request a Demo
               </h1>
               <p className: "text-xl mb-8 max-w-3xl mx-auto">,";,";,
   See our AI and IT solutions in action. Schedule a personalized demonstration tailored to your business needs.
               </p>
-              <div className: "flex items-center justify-center space-x-8 text-sm">";,";,
-                <div className: "flex items-center">";,";,
+              <div className: "flex items-center justify-center space-x-8 text-sm">,
+                <div className: "flex items-center">,
                   <Clock className: "h-4 w-4 mr-2" />,";,";,
   30-minute session
                 </div>
-                <div className: "flex items-center">";,";,
+                <div className: "flex items-center">,
                   <User className: "h-4 w-4 mr-2" />,";,";,
   Expert presenter
                 </div>
-                <div className: "flex items-center">";,";,
+                <div className: "flex items-center">,
                   <Star className: "h-4 w-4 mr-2" />,";,";,
   Customized demo
                 </div>
@@ -563,10 +561,10 @@ const Demo: React.FC: ()  => {,,,
         </section>
 
         {/* Demo Form */}
-        <section className: "py-20 px-4 sm:px-6 lg:px-8">";,";,
-          <div className: "max-w-4xl mx-auto">";,";,
-            <div className: "bg-white rounded-lg shadow-lg p-8">";,";,
-              <div className: "text-center mb-8">";,";,
+        <section className: "py-20 px-4 sm:px-6 lg:px-8">,
+          <div className: "max-w-4xl mx-auto">,
+            <div className: "bg-white rounded-lg shadow-lg p-8">,
+              <div className: "text-center mb-8">,
                 <h2 className: "text-3xl font-bold text-gray-900 mb-4">,";,";,
   Schedule Your Demo
                 </h2>
@@ -575,9 +573,9 @@ const Demo: React.FC: ()  => {,,,
                 </p>
               </div>
 
-              <form onSubmit: {handleSubmit} className: "space-y-6">";,";,
+              <form onSubmit: {handleSubmit} className: "space-y-6">,
                 {/* Personal Information */}
-                <div className: "grid grid-cols-1 md:grid-cols-2 gap-6">";,";,
+                <div className: "grid grid-cols-1 md:grid-cols-2 gap-6">,
                   <div >
                     <label htmlFor: "firstName" className: "block text-sm font-medium text-gray-700 mb-1">,";,";,
   First Name *
@@ -606,7 +604,7 @@ const Demo: React.FC: ()  => {,,,
                   </div>
                 </div>
 
-                <div className: "grid grid-cols-1 md:grid-cols-2 gap-6">";,";,
+                <div className: "grid grid-cols-1 md:grid-cols-2 gap-6">,
                   <div >
                     <label htmlFor: "email" className: "block text-sm font-medium text-gray-700 mb-1">,";,";,
   Email Address *
@@ -658,7 +656,7 @@ const Demo: React.FC: ()  => {,,,
                     onChange: {handleInputChange}
                     className: "w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500",";,
                   >
-                    <option value: "">Select a use case</option>";,";,
+                    <option value: "">Select a use case</$1>";,
                     {useCases.map((useCase)  => (
                       <option key: {useCase} value: {useCase}>
                         {useCase}
@@ -667,7 +665,7 @@ const Demo: React.FC: ()  => {,,,
                   </select>
                 </div>
 
-                <div className: "grid grid-cols-1 md:grid-cols-2 gap-6">";,";,
+                <div className: "grid grid-cols-1 md:grid-cols-2 gap-6">,
                   <div >
                     <label htmlFor: "preferredTime" className: "block text-sm font-medium text-gray-700 mb-1">,";,";,
   Preferred Time Slot
@@ -678,7 +676,7 @@ const Demo: React.FC: ()  => {,,,
                       onChange: {handleInputChange}
                       className: "w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500",";,
                     >
-                      <option value: "">Select a time</option>";,";,
+                      <option value: "">Select a time</$1>";,
                       {timeSlots.map((time)  => (
                         <option key: {time} value: {time}>
                           {time}
@@ -696,15 +694,15 @@ const Demo: React.FC: ()  => {,,,
                       onChange: {handleInputChange}
                       className: "w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500",";,
                     >
-                      <option value: "">Select time zone</option>";,";,
-                      <option value: "EST">Eastern Time (EST)</option>";,";,
-                      <option value: "CST">Central Time (CST)</option>";,";,
-                      <option value: "MST">Mountain Time (MST)</option>";,";,
-                      <option value: "PST">Pacific Time (PST)</option>";,";,
-                      <option value: "GMT">Greenwich Mean Time (GMT)</option>";,";,
-                      <option value: "CET">Central European Time (CET)</option>";,";,
-                      <option value: "IST">India Standard Time (IST)</option>";,";,
-                      <option value: "JST">Japan Standard Time (JST)</option>";,";,
+                      <option value: "">Select time zone</$1>";,
+                      <option value: "EST">Eastern Time (EST)</$1>";,
+                      <option value: "CST">Central Time (CST)</$1>";,
+                      <option value: "MST">Mountain Time (MST)</$1>";,
+                      <option value: "PST">Pacific Time (PST)</$1>";,
+                      <option value: "GMT">Greenwich Mean Time (GMT)</$1>";,
+                      <option value: "CET">Central European Time (CET)</$1>";,
+                      <option value: "IST">India Standard Time (IST)</$1>";,
+                      <option value: "JST">Japan Standard Time (JST)</$1>";,
                     </select>
                   </div>
                 </div>
@@ -723,7 +721,7 @@ const Demo: React.FC: ()  => {,,,
                   />
                 </div>
 
-                <div className: "text-center">";,";,
+                <div className: "text-center">,
                   <button type: "submit",";,";,
   className: "inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors",";,
                   >
@@ -737,9 +735,9 @@ const Demo: React.FC: ()  => {,,,
         </section>
 
         {/* Benefits Section */}
-        <section className: "py-20 px-4 sm:px-6 lg:px-8 bg-white">";,";,
-          <div className: "max-w-7xl mx-auto">";,";,
-            <div className: "text-center mb-16">";,";,
+        <section className: "py-20 px-4 sm:px-6 lg:px-8 bg-white">,
+          <div className: "max-w-7xl mx-auto">,
+            <div className: "text-center mb-16">,
               <h2 className: "text-3xl md:text-4xl font-bold text-gray-900 mb-4">,";,";,
   Why Schedule a Demo?
               </h2>
@@ -748,10 +746,10 @@ const Demo: React.FC: ()  => {,,,
               </p>
             </div>
 
-            <div className: "grid grid-cols-1 md:grid-cols-3 gap-8">";,";,
-              <div className: "text-center">";,";,
-                <div className: "w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">";,";,
-                  <User className: "h-8 w-8 text-blue-600" />";,";,
+            <div className: "grid grid-cols-1 md:grid-cols-3 gap-8">,
+              <div className: "text-center">,
+                <div className: "w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">,
+                  <User className: "h-8 w-8 text-blue-600" />,
                 </div>
                 <h3 className: "text-xl font-semibold text-gray-900 mb-2">,";,";,
   Personalized Experience
@@ -761,9 +759,9 @@ const Demo: React.FC: ()  => {,,,
                 </p>
               </div>
 
-              <div className: "text-center">";,";,
-                <div className: "w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">";,";,
-                  <CheckCircle className: "h-8 w-8 text-green-600" />";,";,
+              <div className: "text-center">,
+                <div className: "w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">,
+                  <CheckCircle className: "h-8 w-8 text-green-600" />,
                 </div>
                 <h3 className: "text-xl font-semibold text-gray-900 mb-2">,";,";,
   Real-World Examples
@@ -773,9 +771,9 @@ const Demo: React.FC: ()  => {,,,
                 </p>
               </div>
 
-              <div className: "text-center">";,";,
-                <div className: "w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">";,";,
-                  <Mail className: "h-8 w-8 text-purple-600" />";,";,
+              <div className: "text-center">,
+                <div className: "w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">,
+                  <Mail className: "h-8 w-8 text-purple-600" />,
                 </div>
                 <h3 className: "text-xl font-semibold text-gray-900 mb-2">,";,";,
   Expert Q&A

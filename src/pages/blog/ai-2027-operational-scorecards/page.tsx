@@ -1,10 +1,10 @@
-import React from "react";"
+import React from "react";
 
 export default function AIOperationalScorecards2027(): React.JSX.Element {
   return (
     <div className: "min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">",";,
-      <Helmet >
-        <title >Operational AI Scorecards 2027 — KPIs, Budgets, Rollback</title>
+      <Helmet>
+        <title>Operational AI Scorecards 2027 — KPIs, Budgets, Rollback</title>
         <meta name: "description",";,";,
   content: "Live scorecards that link SLIs to product KPIs with budgeted actions and instant rollback." /><link ,";,";,
   rel: "canonical",";,";,
@@ -12,7 +12,7 @@ export default function AIOperationalScorecards2027(): React.JSX.Element {
         />
       </Helmet>
 
-      <div className: "container mx-auto px-6 py-16">";,";,
+      <div className: "container mx-auto px-6 py-16">,
         <h1 className: "text-4xl md: text-5xl font-bold mb-4">",";,";,
   href: "https: //ziontechgroup.com/blog/ai-2027-operational-scorecards",";,
         />

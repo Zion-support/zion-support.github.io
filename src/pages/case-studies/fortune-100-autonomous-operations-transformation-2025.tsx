@@ -1,27 +1,25 @@
-import { Link } from "react-router-dom";";
-import Header from "../../components/Header";";
-import { Link } from "react-router-dom";"
-import Header from "../../components/Header";"
+import { Link } from "react-router-dom";
+import Header from "../../components/Header";
 
-const Fortune100AutonomousOperationsTransformation: ()  => {,,,
+const Fortune100AutonomousOperationsTransformation: () => {
   return (
     <>
-      <Helmet >
-        <title >Fortune 100: $650M Value Through Autonomous Operations | Zion Tech Group</title>,,
+      <Helmet>
+        <title>Fortune 100: $650M Value Through Autonomous Operations | Zion Tech Group</title>,,
         <meta name: "description",";,";,
   content: "Fortune 100 financial services company creates $650M annual value through AI-powered autonomous operations. 85% cost reduction, 99.7% accuracy, 40+ workflows in 90 days." /><meta name: "keywords",";,";,
-  content: "autonomous operations case study, AI transformation, business automation, operational efficiency, Fortune 100, ROI" /></Helmet>";,";,
+  content: "autonomous operations case study, AI transformation, business automation, operational efficiency, Fortune 100, ROI" /></$1>";,
 
       <div className: "min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900">",";,
         <Header />
 
-        <article className: "container mx-auto px-6 py-20">";,";,
+        <article className: "container mx-auto px-6 py-20">,
         <article className: "container mx-auto px-6 py-20">",";,
           {/* Back Link */};
           <Link to: "/case-studies",";,";,
   className: "inline-flex items-center text-cyan-400 hover: text-cyan-300 mb-8 transition-colors",";,
           >
-            <ArrowLeft className: "w-4 h-4 mr-2/>";,";,
+            <ArrowLeft className: "w-4 h-4 mr-2/>,
             <ArrowLeft className: "w-4 h-4 mr-2" />",";,";,
   Back to Case Studies
           </Link>
@@ -52,25 +50,25 @@ const Fortune100AutonomousOperationsTransformation: ()  => {,,,
 
             {/* Key Metrics */}
             <div className: "grid grid-cols-2 md: grid-cols-4 gap-6">",";,
-              <div className: "bg-gradient-to-br from-green-900/60 to-emerald-900/60 backdrop-blur-sm rounded-xl p-6 border border-green-400/30">";,";,
-                <DollarSign className: "w-8 h-8 text-green-400 mb-2/>";,";,
-                <div className: "text-3xl font-bold text-white mb-1">$650M</div>";,";,
-                <div className: "text-green-200 text-sm">Annual Value Creation</div>";,";,
+              <div className: "bg-gradient-to-br from-green-900/60 to-emerald-900/60 backdrop-blur-sm rounded-xl p-6 border border-green-400/30">,
+                <DollarSign className: "w-8 h-8 text-green-400 mb-2/>,
+                <div className: "text-3xl font-bold text-white mb-1">$650M</$1>";,
+                <div className: "text-green-200 text-sm">Annual Value Creation</$1>";,
               </div>
-              <div className: "bg-gradient-to-br from-blue-900/60 to-cyan-900/60 backdrop-blur-sm rounded-xl p-6 border border-blue-400/30">";,";,
-                <TrendingUp className: "w-8 h-8 text-blue-400 mb-2/>";,";,
-                <div className: "text-3xl font-bold text-white mb-1">85%</div>";,";,
-                <div className: "text-blue-200 text-sm">Cost Reduction</div>";,";,
+              <div className: "bg-gradient-to-br from-blue-900/60 to-cyan-900/60 backdrop-blur-sm rounded-xl p-6 border border-blue-400/30">,
+                <TrendingUp className: "w-8 h-8 text-blue-400 mb-2/>,
+                <div className: "text-3xl font-bold text-white mb-1">85%</$1>";,
+                <div className: "text-blue-200 text-sm">Cost Reduction</$1>";,
               </div>
-              <div className: "bg-gradient-to-br from-purple-900/60 to-pink-900/60 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30">";,";,
-                <Zap className: "w-8 h-8 text-purple-400 mb-2/>";,";,
-                <div className: "text-3xl font-bold text-white mb-1">99.7%</div>";,";,
-                <div className: "text-purple-200 text-sm">Accuracy Rate</div>";,";,
+              <div className: "bg-gradient-to-br from-purple-900/60 to-pink-900/60 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30">,
+                <Zap className: "w-8 h-8 text-purple-400 mb-2/>,
+                <div className: "text-3xl font-bold text-white mb-1">99.7%</$1>";,
+                <div className: "text-purple-200 text-sm">Accuracy Rate</$1>";,
               </div>
-              <div className: "bg-gradient-to-br from-orange-900/60 to-red-900/60 backdrop-blur-sm rounded-xl p-6 border border-orange-400/30">";,";,
-                <Users className: "w-8 h-8 text-orange-400 mb-2/>";,";,
-                <div className: "text-3xl font-bold text-white mb-1">3,611%</div>";,";,
-                <div className: "text-orange-200 text-sm">3-Year ROI</div>";,";,
+              <div className: "bg-gradient-to-br from-orange-900/60 to-red-900/60 backdrop-blur-sm rounded-xl p-6 border border-orange-400/30">,
+                <Users className: "w-8 h-8 text-orange-400 mb-2/>,
+                <div className: "text-3xl font-bold text-white mb-1">3,611%</$1>";,
+                <div className: "text-orange-200 text-sm">3-Year ROI</$1>";,
             <div className: "grid grid-cols-2 md: grid-cols-4 gap-6">",";,
               <div className: "bg-gradient-to-br from-green-900/60 to-emerald-900/60 backdrop-blur-sm rounded-xl p-6 border border-green-400/30">",";,
                 <DollarSign className: "w-8 h-8 text-green-400 mb-2" />",";,
@@ -96,13 +94,13 @@ const Fortune100AutonomousOperationsTransformation: ()  => {,,,
           </div>
 
           {/* Executive Summary */}
-          <div className: "max-w-5xl mx-auto mb-16">";,";,
+          <div className: "max-w-5xl mx-auto mb-16">,
             <div className: "bg-gradient-to-br from-blue-900/60 to-purple-900/60 backdrop-blur-sm rounded-2xl p-8 md: p-12 border border-blue-400/30">",";,
-              <h2 className: "text-3xl font-bold text-white mb-6">Executive Summary</h2>";,";,
+              <h2 className: "text-3xl font-bold text-white mb-6">Executive Summary</$1>";,
               <p className: "text-blue-100 text-lg mb-6 leading-relaxed">,";,";,
   A Fortune 100 financial services company with 80,000+ employees globally faced mounting operational challenges: 2.3M manual transactions per month, $420M in annual operational costs growing at 15% YoY, and a 3.2% error rate costing $45M annually.,,,
               </p>
-              <p className: "text-blue-100 text-lg leading-relaxed">";,";,
+              <p className: "text-blue-100 text-lg leading-relaxed">,
           <div className: "max-w-5xl mx-auto mb-16">",";,
             <div className: "bg-gradient-to-br from-blue-900/60 to-purple-900/60 backdrop-blur-sm rounded-2xl p-8 md: p-12 border border-blue-400/30">",";,
               <h2 className: "text-3xl font-bold text-white mb-6">Executive Summary</h2>",";,
@@ -116,14 +114,14 @@ const Fortune100AutonomousOperationsTransformation: ()  => {,,,
           </div>
 
           {/* The Challenge */}
-          <div className: "max-w-5xl mx-auto mb-16">";,";,
-            <h2 className: "text-4xl font-bold text-white mb-8">The Challenge</h2>";,";,
+          <div className: "max-w-5xl mx-auto mb-16">,
+            <h2 className: "text-4xl font-bold text-white mb-8">The Challenge</$1>";,
             <div className: "grid md: grid-cols-2 gap-8 mb-8">",";,
-              <div className: "bg-gradient-to-br from-red-900/40 to-orange-900/40 backdrop-blur-sm rounded-xl p-8 border border-red-400/30">";,";,
-                <h3 className: "text-2xl font-bold text-white mb-4">Operational Inefficiencies</h3>";,";,
-                <ul className: "space-y-3 text-red-100">";,";,
-                  <li className: "flex items-start gap-2">";,";,
-                    <div className: "w-2 h-2 bg-red-400 rounded-full mt-2"></div>";,";,
+              <div className: "bg-gradient-to-br from-red-900/40 to-orange-900/40 backdrop-blur-sm rounded-xl p-8 border border-red-400/30">,
+                <h3 className: "text-2xl font-bold text-white mb-4">Operational Inefficiencies</$1>";,
+                <ul className: "space-y-3 text-red-100">,
+                  <li className: "flex items-start gap-2">,
+                    <div className: "w-2 h-2 bg-red-400 rounded-full mt-2"></$1>";,
           <div className: "max-w-5xl mx-auto mb-16">",";,
             <h2 className: "text-4xl font-bold text-white mb-8">The Challenge</h2>",";,
             
@@ -154,27 +152,27 @@ const Fortune100AutonomousOperationsTransformation: ()  => {,,,
                 </ul>
               </div>
 
-              <div className: "bg-gradient-to-br from-yellow-900/40 to-amber-900/40 backdrop-blur-sm rounded-xl p-8 border border-yellow-400/30">";,";,
-                <h3 className: "text-2xl font-bold text-white mb-4">Strategic Imperatives</h3>";,";,
-                <ul className: "space-y-3 text-yellow-100">";,";,
-                  <li className: "flex items-start gap-2">";,";,
-                    <CheckCircle className: "w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0/>";,";,
+              <div className: "bg-gradient-to-br from-yellow-900/40 to-amber-900/40 backdrop-blur-sm rounded-xl p-8 border border-yellow-400/30">,
+                <h3 className: "text-2xl font-bold text-white mb-4">Strategic Imperatives</$1>";,
+                <ul className: "space-y-3 text-yellow-100">,
+                  <li className: "flex items-start gap-2">,
+                    <CheckCircle className: "w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0/>,
                     <span >Reduce operational costs by 60%+ within 18 months</span>
                   </li>
-                  <li className: "flex items-start gap-2">";,";,
-                    <CheckCircle className: "w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0/>";,";,
+                  <li className: "flex items-start gap-2">,
+                    <CheckCircle className: "w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0/>,
                     <span >Improve processing speed by 10x</span>
                   </li>
-                  <li className: "flex items-start gap-2">";,";,
-                    <CheckCircle className: "w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0/>";,";,
+                  <li className: "flex items-start gap-2">,
+                    <CheckCircle className: "w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0/>,
                     <span >Achieve 99.5%+ accuracy across all operations</span>
                   </li>
-                  <li className: "flex items-start gap-2">";,";,
-                    <CheckCircle className: "w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0/>";,";,
+                  <li className: "flex items-start gap-2">,
+                    <CheckCircle className: "w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0/>,
                     <span >Enable 24/7 global operations without offshore labor</span>
                   </li>
-                  <li className: "flex items-start gap-2">";,";,
-                    <CheckCircle className: "w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0/>";,";,
+                  <li className: "flex items-start gap-2">,
+                    <CheckCircle className: "w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0/>,
               <div className: "bg-gradient-to-br from-yellow-900/40 to-amber-900/40 backdrop-blur-sm rounded-xl p-8 border border-yellow-400/30">",";,
                 <h3 className: "text-2xl font-bold text-white mb-4">Strategic Imperatives</h3>",";,
                 <ul className: "space-y-3 text-yellow-100">",";,
@@ -204,11 +202,11 @@ const Fortune100AutonomousOperationsTransformation: ()  => {,,,
           </div>
 
           {/* The Solution */}
-          <div className: "max-w-5xl mx-auto mb-16">";,";,
-            <h2 className: "text-4xl font-bold text-white mb-8">The Solution</h2>";,";,
+          <div className: "max-w-5xl mx-auto mb-16">,
+            <h2 className: "text-4xl font-bold text-white mb-8">The Solution</$1>";,
             <div className: "bg-gradient-to-br from-blue-900/60 to-cyan-900/60 backdrop-blur-sm rounded-2xl p-8 md: p-12 border border-blue-400/30 mb-8">",";,
-              <h3 className: "text-2xl font-bold text-white mb-6">Autonomous Business Operations Platform</h3>";,";,
-              <p className: "text-blue-100 mb-6 leading-relaxed">";,";,
+              <h3 className: "text-2xl font-bold text-white mb-6">Autonomous Business Operations Platform</$1>";,
+              <p className: "text-blue-100 mb-6 leading-relaxed">,
           <div className: "max-w-5xl mx-auto mb-16">",";,
             <h2 className: "text-4xl font-bold text-white mb-8">The Solution</h2>",";,
             
@@ -260,15 +258,15 @@ const Fortune100AutonomousOperationsTransformation: ()  => {,,,
               <div className: "space-y-6">",";,
                 <div >
                   <h4 className: "text-lg font-semibold text-green-300 mb-2">Phase 1: Discovery & Assessment (Days 1-30)</h4>",";,
-                  <p className: "text-green-100 text-sm">Process mapping, data assessment, ROI modeling, architecture design</p>";,";,
+                  <p className: "text-green-100 text-sm">Process mapping, data assessment, ROI modeling, architecture design</$1>";,
                 </div>
                 <div >
                   <h4 className: "text-lg font-semibold text-green-300 mb-2">Phase 2: Platform Build (Days 31-60)</h4>",";,
-                  <p className: "text-green-100 text-sm">Infrastructure deployment, model training, system integration, security implementation</p>";,";,
+                  <p className: "text-green-100 text-sm">Infrastructure deployment, model training, system integration, security implementation</$1>";,
                 </div>
                 <div >
                   <h4 className: "text-lg font-semibold text-green-300 mb-2">Phase 3: Launch & Scale (Days 61-90)</h4>",";,
-                  <p className: "text-green-100 text-sm">Pilot deployment of 5 workflows, validation, full-scale rollout to 40+ workflows</p>";,";,
+                  <p className: "text-green-100 text-sm">Pilot deployment of 5 workflows, validation, full-scale rollout to 40+ workflows</$1>";,
                   <h4 className: "text-lg font-semibold text-green-300 mb-2">Phase 1: Discovery & Assessment (Days 1-30)</h4>",";,
                   <p className: "text-green-100 text-sm">Process mapping, data assessment, ROI modeling, architecture design</p>",";,
                 </div>
@@ -285,20 +283,20 @@ const Fortune100AutonomousOperationsTransformation: ()  => {,,,
           </div>
 
           {/* The Results */}
-          <div className: "max-w-5xl mx-auto mb-16">";,";,
+          <div className: "max-w-5xl mx-auto mb-16">,
             <h2 className: "text-4xl font-bold text-white mb-8">The Results: Transformational Impact</h2>",";,
             {/* Financial Impact */}
             <div className: "bg-gradient-to-br from-green-900/60 to-emerald-900/60 backdrop-blur-sm rounded-2xl p-8 md: p-12 border border-green-400/30 mb-8">",";,
-              <h3 className: "text-3xl font-bold text-white mb-8 flex items-center gap-3">";,";,
+              <h3 className: "text-3xl font-bold text-white mb-8 flex items-center gap-3">,
                 <DollarSign className: "w-8 h-8 text-green-400/>,";,";,
   Financial Impact: $650M+ Annual Value,,
               </h3>
               
               <div className: "grid md: grid-cols-3 gap-6 mb-8">",";,
-                <div className: "bg-green-800/30 rounded-xl p-6 border border-green-400/30">";,";,
-                  <div className: "text-4xl font-bold text-green-300 mb-2">$443M</div>";,";,
-                  <div className: "text-green-100 font-semibold mb-3">Cost Savings</div>";,";,
-                  <ul className: "space-y-2 text-green-200 text-sm">";,";,
+                <div className: "bg-green-800/30 rounded-xl p-6 border border-green-400/30">,
+                  <div className: "text-4xl font-bold text-green-300 mb-2">$443M</$1>";,
+                  <div className: "text-green-100 font-semibold mb-3">Cost Savings</$1>";,
+                  <ul className: "space-y-2 text-green-200 text-sm">,
           <div className: "max-w-5xl mx-auto mb-16">",";,
             <h2 className: "text-4xl font-bold text-white mb-8">The Results: Transformational Impact</h2>",";,
             {/* Financial Impact */}
@@ -345,11 +343,11 @@ const Fortune100AutonomousOperationsTransformation: ()  => {,,,
 
             {/* Operational Excellence */}
             <div className: "grid md: grid-cols-2 gap-8 mb-8">",";,
-              <div className: "bg-gradient-to-br from-blue-900/60 to-cyan-900/60 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30">";,";,
-                <h3 className: "text-2xl font-bold text-white mb-6">Speed & Scale</h3>";,";,
-                <ul className: "space-y-3">";,";,
-                  <li className: "flex items-start gap-3">";,";,
-                    <CheckCircle className: "w-5 h-5 text-blue-400 mt-1 flex-shrink-0/>";,";,
+              <div className: "bg-gradient-to-br from-blue-900/60 to-cyan-900/60 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30">,
+                <h3 className: "text-2xl font-bold text-white mb-6">Speed & Scale</$1>";,
+                <ul className: "space-y-3">,
+                  <li className: "flex items-start gap-3">,
+                    <CheckCircle className: "w-5 h-5 text-blue-400 mt-1 flex-shrink-0/>,
             <div className: "grid md: grid-cols-2 gap-8 mb-8">",";,
               <div className: "bg-gradient-to-br from-blue-900/60 to-cyan-900/60 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30">",";,
                 <h3 className: "text-2xl font-bold text-white mb-6">Speed & Scale</h3>",";,
@@ -361,8 +359,8 @@ const Fortune100AutonomousOperationsTransformation: ()  => {,,,
                       <div className: "text-blue-200 text-sm">5 days → 12 hours average</div>",";,
                     </div>
                   </li>
-                  <li className: "flex items-start gap-3">";,";,
-                    <CheckCircle className: "w-5 h-5 text-blue-400 mt-1 flex-shrink-0/>";,";,
+                  <li className: "flex items-start gap-3">,
+                    <CheckCircle className: "w-5 h-5 text-blue-400 mt-1 flex-shrink-0/>,
                   <li className: "flex items-start gap-3">",";,
                     <CheckCircle className: "w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />",";,
                     <div >
@@ -370,8 +368,8 @@ const Fortune100AutonomousOperationsTransformation: ()  => {,,,
                       <div className: "text-blue-200 text-sm">Real-time operations</div>",";,
                     </div>
                   </li>
-                  <li className: "flex items-start gap-3">";,";,
-                    <CheckCircle className: "w-5 h-5 text-blue-400 mt-1 flex-shrink-0/>";,";,
+                  <li className: "flex items-start gap-3">,
+                    <CheckCircle className: "w-5 h-5 text-blue-400 mt-1 flex-shrink-0/>,
                   <li className: "flex items-start gap-3">",";,
                     <CheckCircle className: "w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />",";,
                     <div >
@@ -382,11 +380,11 @@ const Fortune100AutonomousOperationsTransformation: ()  => {,,,
                 </ul>
               </div>
 
-              <div className: "bg-gradient-to-br from-purple-900/60 to-pink-900/60 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30">";,";,
-                <h3 className: "text-2xl font-bold text-white mb-6">Quality & Accuracy</h3>";,";,
-                <ul className: "space-y-3">";,";,
-                  <li className: "flex items-start gap-3">";,";,
-                    <CheckCircle className: "w-5 h-5 text-purple-400 mt-1 flex-shrink-0/>";,";,
+              <div className: "bg-gradient-to-br from-purple-900/60 to-pink-900/60 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30">,
+                <h3 className: "text-2xl font-bold text-white mb-6">Quality & Accuracy</$1>";,
+                <ul className: "space-y-3">,
+                  <li className: "flex items-start gap-3">,
+                    <CheckCircle className: "w-5 h-5 text-purple-400 mt-1 flex-shrink-0/>,
               <div className: "bg-gradient-to-br from-purple-900/60 to-pink-900/60 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30">",";,
                 <h3 className: "text-2xl font-bold text-white mb-6">Quality & Accuracy</h3>",";,
                 <ul className: "space-y-3">",";,
@@ -397,8 +395,8 @@ const Fortune100AutonomousOperationsTransformation: ()  => {,,,
                       <div className: "text-purple-200 text-sm">Across all workflows</div>",";,
                     </div>
                   </li>
-                  <li className: "flex items-start gap-3">";,";,
-                    <CheckCircle className: "w-5 h-5 text-purple-400 mt-1 flex-shrink-0/>";,";,
+                  <li className: "flex items-start gap-3">,
+                    <CheckCircle className: "w-5 h-5 text-purple-400 mt-1 flex-shrink-0/>,
                   <li className: "flex items-start gap-3">",";,
                     <CheckCircle className: "w-5 h-5 text-purple-400 mt-1 flex-shrink-0" />",";,
                     <div >
@@ -406,8 +404,8 @@ const Fortune100AutonomousOperationsTransformation: ()  => {,,,
                       <div className: "text-purple-200 text-sm">3.2% → 0.1% error rate</div>",";,
                     </div>
                   </li>
-                  <li className: "flex items-start gap-3">";,";,
-                    <CheckCircle className: "w-5 h-5 text-purple-400 mt-1 flex-shrink-0/>";,";,
+                  <li className: "flex items-start gap-3">,
+                    <CheckCircle className: "w-5 h-5 text-purple-400 mt-1 flex-shrink-0/>,
                   <li className: "flex items-start gap-3">",";,
                     <CheckCircle className: "w-5 h-5 text-purple-400 mt-1 flex-shrink-0" />",";,
                     <div >
@@ -420,22 +418,22 @@ const Fortune100AutonomousOperationsTransformation: ()  => {,,,
             </div>
 
             {/* Customer & Employee Impact */}
-            <div className: "bg-gradient-to-br from-orange-900/60 to-red-900/60 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30">";,";,
-              <h3 className: "text-2xl font-bold text-white mb-6">Customer & Employee Experience</h3>";,";,
+            <div className: "bg-gradient-to-br from-orange-900/60 to-red-900/60 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30">,
+              <h3 className: "text-2xl font-bold text-white mb-6">Customer & Employee Experience</$1>";,
               <div className: "grid md: grid-cols-2 gap-8">",";,
                 <div >
-                  <h4 className: "text-lg font-semibold text-orange-300 mb-4">Customer Impact</h4>";,";,
-                  <ul className: "space-y-2 text-orange-100">";,";,
-                    <li className: "flex items-center gap-2">";,";,
-                      <div className: "w-2 h-2 bg-orange-400 rounded-full"></div>";,";,
+                  <h4 className: "text-lg font-semibold text-orange-300 mb-4">Customer Impact</$1>";,
+                  <ul className: "space-y-2 text-orange-100">,
+                    <li className: "flex items-center gap-2">,
+                      <div className: "w-2 h-2 bg-orange-400 rounded-full"></$1>";,
                       <span >NPS: +32 points (38 → 70)</span>,,
                     </li>
-                    <li className: "flex items-center gap-2">";,";,
-                      <div className: "w-2 h-2 bg-orange-400 rounded-full"></div>";,";,
+                    <li className: "flex items-center gap-2">,
+                      <div className: "w-2 h-2 bg-orange-400 rounded-full"></$1>";,
                       <span >CSAT: +28% (72% → 92%)</span>,,
                     </li>
-                    <li className: "flex items-center gap-2">";,";,
-                      <div className: "w-2 h-2 bg-orange-400 rounded-full"></div>";,";,
+                    <li className: "flex items-center gap-2">,
+                      <div className: "w-2 h-2 bg-orange-400 rounded-full"></$1>";,
             <div className: "bg-gradient-to-br from-orange-900/60 to-red-900/60 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30">",";,
               <h3 className: "text-2xl font-bold text-white mb-6">Customer & Employee Experience</h3>",";,
               <div className: "grid md: grid-cols-2 gap-8">",";,
@@ -478,26 +476,26 @@ const Fortune100AutonomousOperationsTransformation: ()  => {,,,
           </div>
 
           {/* Key Learnings */}
-          <div className: "max-w-5xl mx-auto mb-16">";,";,
-            <h2 className: "text-4xl font-bold text-white mb-8">Key Learnings & Best Practices</h2>";,";,
-            <div className: "space-y-6">";,";,
-              <div className: "bg-gradient-to-br from-blue-900/60 to-purple-900/60 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30">";,";,
-                <h3 className: "text-xl font-bold text-white mb-4">✅ Critical Success Factors</h3>";,";,
-                <ul className: "space-y-3 text-blue-100">";,";,
-                  <li className: "flex items-start gap-3">";,";,
-                    <div className: "w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>";,";,
+          <div className: "max-w-5xl mx-auto mb-16">,
+            <h2 className: "text-4xl font-bold text-white mb-8">Key Learnings & Best Practices</$1>";,
+            <div className: "space-y-6">,
+              <div className: "bg-gradient-to-br from-blue-900/60 to-purple-900/60 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30">,
+                <h3 className: "text-xl font-bold text-white mb-4">✅ Critical Success Factors</$1>";,
+                <ul className: "space-y-3 text-blue-100">,
+                  <li className: "flex items-start gap-3">,
+                    <div className: "w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></$1>";,
                     <span ><strong >Executive Sponsorship: </strong> C-suite commitment with quarterly business reviews and protected budget</span>,,
                   </li>
-                  <li className: "flex items-start gap-3">";,";,
-                    <div className: "w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>";,";,
+                  <li className: "flex items-start gap-3">,
+                    <div className: "w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></$1>";,
                     <span ><strong >Change Management: </strong> Transparent communication, comprehensive training, reskilling programs</span>,,
                   </li>
-                  <li className: "flex items-start gap-3">";,";,
-                    <div className: "w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>";,";,
+                  <li className: "flex items-start gap-3">,
+                    <div className: "w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></$1>";,
                     <span ><strong >Technology Choices: </strong> Cloud-native, open-source, best-of-breed, modular design</span>,,
                   </li>
-                  <li className: "flex items-start gap-3">";,";,
-                    <div className: "w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>";,";,
+                  <li className: "flex items-start gap-3">,
+                    <div className: "w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></$1>";,
           <div className: "max-w-5xl mx-auto mb-16">",";,
             <h2 className: "text-4xl font-bold text-white mb-8">Key Learnings & Best Practices</h2>",";,
             
@@ -564,7 +562,7 @@ const Fortune100AutonomousOperationsTransformation: ()  => {,,,
   className: "inline-flex items-center justify-center gap-2 bg-white text-green-600 hover: bg-green-50 px-8 py-4 rounded-lg font-bold text-lg transition-all shadow-xl",";,
                 >
                   Explore Our Services
-                  <ArrowRight className: "w-5 h-5/>";,";,
+                  <ArrowRight className: "w-5 h-5/>,
                   <ArrowRight className: "w-5 h-5" />",";,
                 </Link>
                 <Link to: "/contact",";,";,
@@ -584,8 +582,8 @@ const Fortune100AutonomousOperationsTransformation: ()  => {,,,
           </div>
 
           {/* Related Content */}
-          <div className: "max-w-5xl mx-auto mt-16">";,";,
-            <h2 className: "text-3xl font-bold text-white mb-8">Related Resources</h2>";,";,
+          <div className: "max-w-5xl mx-auto mt-16">,
+            <h2 className: "text-3xl font-bold text-white mb-8">Related Resources</$1>";,
             <div className: "grid md: grid-cols-2 gap-6">",";,
           <div className: "max-w-5xl mx-auto mt-16">",";,
             <h2 className: "text-3xl font-bold text-white mb-8">Related Resources</h2>",";,
@@ -593,7 +591,7 @@ const Fortune100AutonomousOperationsTransformation: ()  => {,,,
               <Link to: "/blog/ai-autonomous-business-operations-revolution-2025",";,";,
   className: "bg-gradient-to-br from-blue-900/60 to-cyan-900/60 backdrop-blur-sm rounded-xl p-6 border border-blue-400/30 hover: border-blue-400/60 transition-all group",";,
               >
-                <div className: "text-blue-400 text-sm font-semibold mb-2 uppercase">Blog Post</div>";,";,
+                <div className: "text-blue-400 text-sm font-semibold mb-2 uppercase">Blog Post</$1>";,
                 <h3 className: "text-xl font-bold text-white mb-3 group-hover: text-blue-300 transition-colors">",";,
                 <div className: "text-blue-400 text-sm font-semibold mb-2 uppercase">Blog Post</div>",";,
                 <h3 className: "text-xl font-bold text-white mb-3 group-hover: text-blue-300 transition-colors">",";,";,
@@ -612,7 +610,7 @@ const Fortune100AutonomousOperationsTransformation: ()  => {,,,
               <Link to: "/services/autonomous-business-operations",";,";,
   className: "bg-gradient-to-br from-green-900/60 to-emerald-900/60 backdrop-blur-sm rounded-xl p-6 border border-green-400/30 hover: border-green-400/60 transition-all group",";,
               >
-                <div className: "text-green-400 text-sm font-semibold mb-2 uppercase">Service</div>";,";,
+                <div className: "text-green-400 text-sm font-semibold mb-2 uppercase">Service</$1>";,
                 <h3 className: "text-xl font-bold text-white mb-3 group-hover: text-green-300 transition-colors">",";,
                 <div className: "text-green-400 text-sm font-semibold mb-2 uppercase">Service</div>",";,
                 <h3 className: "text-xl font-bold text-white mb-3 group-hover: text-green-300 transition-colors">",";,";,

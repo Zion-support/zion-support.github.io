@@ -101,8 +101,7 @@ const PricingPage: React.FC = () => {,
         {/* Header */}
         <section className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-800 text-white py-16">
           <div className="container mx-auto px-6 text-center">
-            <h1 className="text-4xl md: text-5xl font-bold mb-4">Transparent Pricing</h1>";,
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+            <h1 className="text-4xl md: text-5xl font-bold mb-4">Transparent Pricing</$1><p className="text-xl text-blue-100 max-w-3xl mx-auto">
               Choose the perfect plan for your business needs. All plans include our commitment to quality, security, and innovation.
             </p>
           </div>
@@ -111,8 +110,7 @@ const PricingPage: React.FC = () => {,
         {/* Main Pricing Tiers */}
         <section className="py-20">
           <div className="container mx-auto px-6">
-            <div className="grid grid-cols-1 md: grid-cols-3 gap-8">";,
-              {pricingTiers.map((tier, index) => (
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-8">{pricingTiers.map((tier, index) => (
                 <div 
                   key={index} 
                   className={`relative bg-white p-8 rounded-xl shadow-lg hover: shadow-xl transition-all duration-300 border-2 ${,`;
@@ -178,10 +176,8 @@ const PricingPage: React.FC = () => {,
               {servicePricing.map((category, categoryIndex) => (
                 <div key={categoryIndex}>
                   <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">{category.category}</h3>
-                  <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">";,
-                    {category.services.map((service, serviceIndex) => (
-                      <div key={serviceIndex} className="bg-gray-50 p-6 rounded-xl hover: shadow-md transition-shadow">";,
-                        <h4 className="text-lg font-bold text-gray-900 mb-2">{service.name}</h4>
+                  <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">{category.services.map((service, serviceIndex) => (
+                      <div key={serviceIndex} className="bg-gray-50 p-6 rounded-xl hover: shadow-md transition-shadow"><h4 className="text-lg font-bold text-gray-900 mb-2">{service.name}</h4>
                         <p className="text-2xl font-bold text-blue-600 mb-3">{service.price}</p>
                         <p className="text-gray-600 text-sm">{service.description}</p>
                       </div>
@@ -204,8 +200,7 @@ const PricingPage: React.FC = () => {,
             </div>
 
             <div className="bg-white p-8 rounded-xl shadow-lg max-w-4xl mx-auto">
-              <div className="grid grid-cols-1 md: grid-cols-2 gap-8">";,
-                <div>
+              <div className="grid grid-cols-1 md: grid-cols-2 gap-8"><div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">What's Included</h3>';
                   <ul className="space-y-3">
                     <li className="flex items-center">
@@ -241,16 +236,13 @@ const PricingPage: React.FC = () => {,
                   </p>
                   <div className="space-y-4">
                     <div className="flex items-center">
-                      <span className="text-sm text-gray-500 w-20">Email: </span>";,
-                      <span className="text-gray-900">kleber@ziontechgroup.com</span>
+                      <span className="text-sm text-gray-500 w-20">Email: </$1><span className="text-gray-900">kleber@ziontechgroup.com</span>
                     </div>
                     <div className="flex items-center">
-                      <span className="text-sm text-gray-500 w-20">Phone: </span>";,
-                      <span className="text-gray-900">+1 302 464 0950</span>
+                      <span className="text-sm text-gray-500 w-20">Phone: </$1><span className="text-gray-900">+1 302 464 0950</span>
                     </div>
                     <div className="flex items-center">
-                      <span className="text-sm text-gray-500 w-20">Address: </span>";,
-                      <span className="text-gray-900">364 E Main St STE 1008<br />Middletown DE 19709</span>
+                      <span className="text-sm text-gray-500 w-20">Address: </$1><span className="text-gray-900">364 E Main St STE 1008<br />Middletown DE 19709</span>
                     </div>
                   </div>
                   <Link 
@@ -300,8 +292,7 @@ const PricingPage: React.FC = () => {,
             <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
               Choose the perfect plan for your business or contact us for a custom solution.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">";,
-              <Link 
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"><Link 
                 to="/contact" 
                 className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover: bg-gray-100 transition-colors shadow-lg",
               >

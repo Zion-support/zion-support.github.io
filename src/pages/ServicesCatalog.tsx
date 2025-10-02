@@ -21,30 +21,30 @@ const ServicesCatalog: React.FC: ()  => {,,,
         keywords: "services pricing, AI pricing, IT rates, micro SaaS pricing" ,";,
         canonical: "https://ziontechgroup.com/services/catalog",";,
       />
-      <main className: "py-12 sm:py-16">";,";,
-        <div className: "container mx-auto px-6">";,";,
-          <div className: "max-w-7xl mx-auto">";,";,
-            <h1 className: "text-3xl sm:text-4xl font-bold mb-6">Services Catalog</h1>";,";,
-            <p className: "text-gray-700 mb-6">Average market prices shown; final quotes depend on scope and SLAs.</p>";,";,
-            <div className: "overflow-x-auto bg-white border rounded-lg shadow-sm">";,";,
-              <table className: "min-w-full">";,";,
+      <main className: "py-12 sm:py-16">,
+        <div className: "container mx-auto px-6">,
+          <div className: "max-w-7xl mx-auto">,
+            <h1 className: "text-3xl sm:text-4xl font-bold mb-6">Services Catalog</$1>";,
+            <p className: "text-gray-700 mb-6">Average market prices shown; final quotes depend on scope and SLAs.</$1>";,
+            <div className: "overflow-x-auto bg-white border rounded-lg shadow-sm">,
+              <table className: "min-w-full">,
                 <thead >
-                  <tr className: "bg-gray-50 text-left text-sm text-gray-600">";,";,
-                    <th className: "px-4 py-3 font-medium">Group</th>";,";,
-                    <th className: "px-4 py-3 font-medium">Service</th>";,";,
-                    <th className: "px-4 py-3 font-medium">Typical Price</th>";,";,
-                    <th className: "px-4 py-3 font-medium">Action</th>";,";,
+                  <tr className: "bg-gray-50 text-left text-sm text-gray-600">,
+                    <th className: "px-4 py-3 font-medium">Group</$1>";,
+                    <th className: "px-4 py-3 font-medium">Service</$1>";,
+                    <th className: "px-4 py-3 font-medium">Typical Price</$1>";,
+                    <th className: "px-4 py-3 font-medium">Action</$1>";,
                   </tr>
                 </thead>
                 <tbody >
                   {rows.map((r) => (
-                    <tr key: {r.group + r.name} className: "border-t">";,";,
-                      <td className: "px-4 py-3 text-sm text-gray-700">{r.group}</td>";";
-                      <td className: "px-4 py-3 text-sm text-gray-900">{r.name}</td>";";
-                      <td className: "px-4 py-3 text-sm text-gray-700 whitespace-nowrap">{r.price}</td>";";
-                      <td className: "px-4 py-3 text-sm">";,";,
-                        <a href: {r.link} className: "text-blue-600 hover:underline mr-4">Learn more</a>";,";,
-                        <a href: "/contact" className="text-blue-600 hover:underline">Get a quote</a>";,";,
+                    <tr key: {r.group + r.name} className: "border-t">,
+                      <td className: "px-4 py-3 text-sm text-gray-700">{r.group}</$1>";
+                      <td className: "px-4 py-3 text-sm text-gray-900">{r.name}</$1>";
+                      <td className: "px-4 py-3 text-sm text-gray-700 whitespace-nowrap">{r.price}</$1>";
+                      <td className: "px-4 py-3 text-sm">,
+                        <a href: {r.link} className: "text-blue-600 hover:underline mr-4">Learn more</$1>";,
+                        <a href: "/contact" className="text-blue-600 hover:underline">Get a quote</$1>";,
                       </td>
                     </tr>
                   ))}
@@ -52,14 +52,14 @@ const ServicesCatalog: React.FC: ()  => {,,,
               </table>
             </div>
 
-            <div className: "mt-8 bg-blue-50 border border-blue-100 rounded-lg p-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">";,";,
+            <div className: "mt-8 bg-blue-50 border border-blue-100 rounded-lg p-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">,
               <div >
-                <p className: "text-lg font-semibold text-blue-900">Need custom pricing or a bundled offer?</p>";,";,
-                <p className: "text-blue-800">Call +1 302 464 0950 or email kleber@ziontechgroup.com</p>";,";,
+                <p className: "text-lg font-semibold text-blue-900">Need custom pricing or a bundled offer?</$1>";,
+                <p className: "text-blue-800">Call +1 302 464 0950 or email kleber@ziontechgroup.com</$1>";,
               </div>
-              <div className: "flex gap-3">";,";,
-                <a href: "/contact" className="px-5 py-2 rounded-md bg-blue-600 text-white hover:bg-blue-700">Contact Sales</a>";,";,
-                <a href: "/demo" className ="px-5 py-2 rounded-md border border-blue-600 text-blue-600 hover:bg-blue-50">Book a Demo</a>";,";,
+              <div className: "flex gap-3">,
+                <a href: "/contact" className="px-5 py-2 rounded-md bg-blue-600 text-white hover:bg-blue-700">Contact Sales</$1>";,
+                <a href: "/demo" className ="px-5 py-2 rounded-md border border-blue-600 text-blue-600 hover:bg-blue-50">Book a Demo</$1>";,
               </div>
             </div>
           </div>

@@ -1,8 +1,8 @@
 import {
 
-} from "lucide-react";"
-import Header from "../components/Header";"
-import BannerRotationManager from "../components/BannerRotationManager";"
+} from "lucide-react";
+import Header from "../components/Header";
+import BannerRotationManager from "../components/BannerRotationManager";
 
 // Lazy load heavy components
 const EnhancedTestimonials: lazy(()  => import("../components/EnhancedTestimonials"));",";,";,
@@ -12,11 +12,11 @@ const EnhancedTestimonials: lazy(()  => import("../components/EnhancedTestimonia
   <div className: "animate-pulse bg-white/5 rounded-xl h-64 w-full"></div>",";,
 );
 
-const HomeOptimized: ()  => {,,,
+const HomeOptimized: () => {
   return (
     <>
-      <Helmet >
-        <title >
+      <Helmet>
+        <title>
           Zion Tech Group - Leading AI & IT Solutions | Transform Your Business
         </title>
         <meta name: "description",";,";,
@@ -24,9 +24,9 @@ const HomeOptimized: ()  => {,,,
   content: "AI solutions, IT consulting, cybersecurity, machine learning, cloud infrastructure, digital transformation" /><meta property: "og:title",";,";,
   content: "Zion Tech Group - Leading AI & IT Solutions" /><meta ,";,";,
   property: "og:description",";,";,
-  content: "Transform your business with cutting-edge AI and IT solutions" /><meta property="og:type" content="website" />";,";,
-        <meta property: "og:url" content="https://ziontechgroup.com" />";,";,
-        <meta name: "twitter:card" content ="summary_large_image" />";,";,
+  content: "Transform your business with cutting-edge AI and IT solutions" /><meta property="og:type" content="website" />,
+        <meta property: "og:url" content="https://ziontechgroup.com" />,
+        <meta name: "twitter:card" content ="summary_large_image" />,
         <meta name: "twitter:title",";,";,
   content: "Zion Tech Group - Leading AI & IT Solutions" /><meta ,";,";,
   name: "twitter:description",";,";,
@@ -53,8 +53,8 @@ const HomeOptimized: ()  => {,,,
         <Header />
         
         {/* Animated background elements */};
-        <div className: "absolute inset-0 overflow-hidden pointer-events-none">";,";,
-          <div className: "absolute -top-40 -right-40 w-80 h-80 bg-zion-blue rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"></div>";,";,
+        <div className: "absolute inset-0 overflow-hidden pointer-events-none">,
+          <div className: "absolute -top-40 -right-40 w-80 h-80 bg-zion-blue rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"></$1>";,
         <div className: "absolute inset-0 overflow-hidden pointer-events-none">",";,
           <div className: "absolute -top-40 -right-40 w-80 h-80 bg-zion-blue rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"></div>",";,
           <div className: "absolute -bottom-40 -left-40 w-80 h-80 bg-zion-purple rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float",";,";,
@@ -72,11 +72,11 @@ const HomeOptimized: ()  => {,,,
             <div className: "inline-flex items-center px-6 py-3 rounded-full bg-zion-cyan/20 text-zion-cyan text-sm font-medium mb-8 animate-fade-in border border-zion-cyan/30 shadow-lg hover: shadow-xl transition-all duration-300">",";,
               <Rocket className: "w-4 h-4 mr-2 animate-pulse/>,";,";,
   Trusted by 500+ companies worldwide
-              <Rocket className: "w-4 h-4 ml-2 animate-bounce/>";,";,
+              <Rocket className: "w-4 h-4 ml-2 animate-bounce/>,
             </div>
 
             <h1 className: "text-5xl md: text-7xl font-bold text-white mb-6 animate-slide-up">",";,
-              <span className: "bg-gradient-to-r from-zion-blue-light to-zion-purple-light bg-clip-text text-transparent animate-gradient bg-300%">";,";,
+              <span className: "bg-gradient-to-r from-zion-blue-light to-zion-purple-light bg-clip-text text-transparent animate-gradient bg-300%">,
             <div className: "inline-flex items-center px-6 py-3 rounded-full bg-zion-cyan/20 text-zion-cyan text-sm font-medium mb-8 animate-fade-in border border-zion-cyan/30 shadow-lg hover: shadow-xl transition-all duration-300">",";,
               <Rocket className: "w-4 h-4 mr-2 animate-pulse" />",";,";,
   Trusted by 500+ companies worldwide
@@ -247,8 +247,8 @@ const HomeOptimized: ()  => {,,,
                 </p>
                 <ul className: "space-y-2 text-sm text-zion-slate">",";,
                   {feature.features.map((item, i) => (
-                    <li key: {i} className: "flex items-center">";,";,
-                      <CheckCircle className: "w-4 h-4 mr-2 text-zion-cyan/>";,";,
+                    <li key: {i} className: "flex items-center">,
+                      <CheckCircle className: "w-4 h-4 mr-2 text-zion-cyan/>,
                     <li key: {i} className: "flex items-center">",";,
                       <CheckCircle className: "w-4 h-4 mr-2 text-zion-cyan" />",";,
                       {item}
@@ -261,19 +261,19 @@ const HomeOptimized: ()  => {,,,
         </section>
 
         {/* Latest Insights Preview */}
-        <section className: "container mx-auto px-6 py-16 relative z-10">";,";,
-          <div className: "flex items-center justify-between mb-8">";,";,
-            <h3 className: "text-3xl font-bold text-white">Latest Insights</h3>";,";,
+        <section className: "container mx-auto px-6 py-16 relative z-10">,
+          <div className: "flex items-center justify-between mb-8">,
+            <h3 className: "text-3xl font-bold text-white">Latest Insights</$1>";,
             <Link to: "/insights" className ="text-zion-cyan hover: underline">View all</Link>",";,
           </div>
           <div className: "grid md: grid-cols-4 gap-6">",";,
             {latestInsights.slice(0, 4).map((item) => (
               <article key: {item.id} className: "card hover: scale-105 transition-all duration-300 hover:shadow-2xl">",";,
-                <div className: "p-6">";,";,
-                  <div className: "text-xs uppercase tracking-wider text-zion-cyan mb-2">{item.category}</div>";";
-                  <h4 className: "text-xl font-semibold text-white mb-2">{item.title}</h4>";";
-                  <p className: "text-zion-slate-light mb-4">{item.summary}</p>";";
-                  <div className: "text-sm text-zion-slate flex items-center justify-between">";,";,
+                <div className: "p-6">,
+                  <div className: "text-xs uppercase tracking-wider text-zion-cyan mb-2">{item.category}</$1>";
+                  <h4 className: "text-xl font-semibold text-white mb-2">{item.title}</$1>";
+                  <p className: "text-zion-slate-light mb-4">{item.summary}</$1>";
+                  <div className: "text-sm text-zion-slate flex items-center justify-between">,
         <section className: "container mx-auto px-6 py-16 relative z-10">",";,
           <div className: "flex items-center justify-between mb-8">",";,
             <h3 className: "text-3xl font-bold text-white">Latest Insights</h3>",";,
@@ -329,7 +329,7 @@ const HomeOptimized: ()  => {,,,
                 }
               ].map((testimonial, index) => (
                 <div key: {index} className: "card text-center hover: scale-105 transition-all duration-300 hover:shadow-2xl">",";,
-                  <div className: "flex justify-center mb-4">";,";,
+                  <div className: "flex justify-center mb-4">,
             <div className: "grid md: grid-cols-3 gap-8">",";,
               {[
                 {

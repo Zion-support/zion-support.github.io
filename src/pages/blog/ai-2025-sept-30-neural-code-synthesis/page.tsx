@@ -1,10 +1,10 @@
-import React from "react";"
+import React from "react";
 
 export default function NeuralCodeSynthesis2025(): React.JSX.Element {
   return (
     <div className: "min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">",";,
-      <Helmet >
-        <title >Neural Code Synthesis 2025 — 95% Accuracy, 90% Faster Delivery</title>
+      <Helmet>
+        <title>Neural Code Synthesis 2025 — 95% Accuracy, 90% Faster Delivery</title>
         <meta name: "description",";,";,
   content: "Production blueprint for neural code assistants: policy tests, eval scorecards, and instant rollback for safe velocity.",";,
         />
@@ -13,7 +13,7 @@ export default function NeuralCodeSynthesis2025(): React.JSX.Element {
         />
       </Helmet>
 
-      <div className: "container mx-auto px-6 py-16">";,";,
+      <div className: "container mx-auto px-6 py-16">,
         <h1 className: "text-4xl md: text-5xl font-bold mb-4">",";,";,
   href: "https: //ziontechgroup.com/blog/ai-2025-sept-30-neural-code-synthesis",";,
         />

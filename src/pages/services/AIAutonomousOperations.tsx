@@ -1,9 +1,9 @@
 import React from 'react';';
 const AIAutonomousOperations: React.FC: ()  => {,,,
   return (
-    <div className: "min-h-screen bg-slate-950">";,";,
-      <div className: "container mx-auto px-6 py-20">";,";,
-        <div className: "text-center mb-16">";,";,
+    <div className: "min-h-screen bg-slate-950">,
+      <div className: "container mx-auto px-6 py-20">,
+        <div className: "text-center mb-16">,
           <h1 className: "text-4xl md: text-5xl font-extrabold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">",";,";,
   import React from 'react';'
 
@@ -23,9 +23,9 @@ const AIAutonomousOperations: React.FC: ()  => {,,,
 
         <div className: "grid md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16">",";,
           <div className: "bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover: border-blue-500/50 transition-all duration-300">",";,
-            <div className: "text-6xl mb-6">🤖</div>";,";,
-            <h3 className: "text-2xl font-bold text-white mb-4">Self-Managing Systems</h3>";,";,
-            <p className: "text-gray-300 mb-6">";,";,
+            <div className: "text-6xl mb-6">🤖</$1>";,
+            <h3 className: "text-2xl font-bold text-white mb-4">Self-Managing Systems</$1>";,
+            <p className: "text-gray-300 mb-6">,
         <div className: "grid md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16">",";,
           <div className: "bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover: border-blue-500/50 transition-all duration-300">",";,
             <div className: "text-6xl mb-6">🤖</div>",";,
@@ -36,9 +36,9 @@ const AIAutonomousOperations: React.FC: ()  => {,,,
           </div>
 
           <div className: "bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover: border-purple-500/50 transition-all duration-300">",";,
-            <div className: "text-6xl mb-6">⚡</div>";,";,
-            <h3 className: "text-2xl font-bold text-white mb-4">Real-time Optimization</h3>";,";,
-            <p className: "text-gray-300 mb-6">";,";,
+            <div className: "text-6xl mb-6">⚡</$1>";,
+            <h3 className: "text-2xl font-bold text-white mb-4">Real-time Optimization</$1>";,
+            <p className: "text-gray-300 mb-6">,
           <div className: "bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover: border-purple-500/50 transition-all duration-300">",";,
             <div className: "text-6xl mb-6">⚡</div>",";,
             <h3 className: "text-2xl font-bold text-white mb-4">Real-time Optimization</h3>",";,
@@ -48,9 +48,9 @@ const AIAutonomousOperations: React.FC: ()  => {,,,
           </div>
 
           <div className: "bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover: border-green-500/50 transition-all duration-300">",";,
-            <div className: "text-6xl mb-6">📊</div>";,";,
-            <h3 className: "text-2xl font-bold text-white mb-4">Predictive Analytics</h3>";,";,
-            <p className: "text-gray-300 mb-6">";,";,
+            <div className: "text-6xl mb-6">📊</$1>";,
+            <h3 className: "text-2xl font-bold text-white mb-4">Predictive Analytics</$1>";,
+            <p className: "text-gray-300 mb-6">,
           <div className: "bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover: border-green-500/50 transition-all duration-300">",";,
             <div className: "text-6xl mb-6">📊</div>",";,
             <h3 className: "text-2xl font-bold text-white mb-4">Predictive Analytics</h3>",";,

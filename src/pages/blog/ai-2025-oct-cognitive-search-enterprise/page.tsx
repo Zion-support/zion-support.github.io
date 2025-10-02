@@ -2,8 +2,8 @@
 export default function CognitiveSearchEnterprise2025(): void {
   return (
     <>
-      <Helmet >
-        <title >Cognitive Enterprise Search 2025 — 97% Answer Accuracy, 12x Faster Discovery, $124M+ Productivity Gains | Zion Tech Group</title>
+      <Helmet>
+        <title>Cognitive Enterprise Search 2025 — 97% Answer Accuracy, 12x Faster Discovery, $124M+ Productivity Gains | Zion Tech Group</title>
         <meta name: "description",";,";,
   content: "Transform enterprise knowledge discovery with AI-powered cognitive search. Achieve 97% answer accuracy, 12x faster information retrieval, and unlock $124M+ in productivity gains across your organization." /><meta name: "keywords",";,";,
   content: "cognitive search, enterprise search, AI search, semantic search, knowledge management, information retrieval, enterprise AI, vector search, RAG systems" /><link rel: "canonical" href: "https://ziontechgroup.com/blog/ai-2025-oct-cognitive-search-enterprise/>",";,";,
@@ -17,7 +17,7 @@ export default function CognitiveSearchEnterprise2025(): void {
           <Link to: "/blog",";,";,
   className: "inline-flex items-center text-indigo-400 hover: text-indigo-300 mb-8 transition-colors",";,
           >
-            <ArrowLeft className: "mr-2 h-4 w-4/>";,";,
+            <ArrowLeft className: "mr-2 h-4 w-4/>,
             <ArrowLeft className: "mr-2 h-4 w-4" />",";,";,
   Back to Blog
           </Link>
@@ -40,23 +40,23 @@ export default function CognitiveSearchEnterprise2025(): void {
             </p>
           </header>
 
-          <div className: "prose prose-invert prose-lg max-w-none">";,";,
-            <div className: "bg-gradient-to-r from-indigo-500/10 to-purple-500/10 border border-indigo-500/20 rounded-xl p-8 mb-12">";,";,
-              <h2 className: "text-3xl font-bold mb-6 flex items-center gap-3">";,";,
+          <div className: "prose prose-invert prose-lg max-w-none">,
+            <div className: "bg-gradient-to-r from-indigo-500/10 to-purple-500/10 border border-indigo-500/20 rounded-xl p-8 mb-12">,
+              <h2 className: "text-3xl font-bold mb-6 flex items-center gap-3">,
                 <Brain className: "h-8 w-8 text-indigo-400/>,";,";,
   Transformative Results
               </h2>
-              <ul className: "space-y-4 text-lg">";,";,
-                <li className: "flex items-start gap-3">";,";,
-                  <Search className: "h-6 w-6 text-purple-400 mt-1 flex-shrink-0/>";,";,
+              <ul className: "space-y-4 text-lg">,
+                <li className: "flex items-start gap-3">,
+                  <Search className: "h-6 w-6 text-purple-400 mt-1 flex-shrink-0/>,
                   <span ><strong >97% Answer Accuracy: </strong> AI understands context and delivers precise answers, not just documents</span>,,
                 </li>
-                <li className: "flex items-start gap-3">";,";,
-                  <Zap className: "h-6 w-6 text-yellow-400 mt-1 flex-shrink-0/>";,";,
+                <li className: "flex items-start gap-3">,
+                  <Zap className: "h-6 w-6 text-yellow-400 mt-1 flex-shrink-0/>,
                   <span ><strong >12x Faster Discovery: </strong> Find critical information in seconds instead of hours</span>,,
                 </li>
-                <li className: "flex items-start gap-3">";,";,
-                  <TrendingUp className: "h-6 w-6 text-green-400 mt-1 flex-shrink-0/>";,";,
+                <li className: "flex items-start gap-3">,
+                  <TrendingUp className: "h-6 w-6 text-green-400 mt-1 flex-shrink-0/>,
           <div className: "prose prose-invert prose-lg max-w-none">",";,
             <div className: "bg-gradient-to-r from-indigo-500/10 to-purple-500/10 border border-indigo-500/20 rounded-xl p-8 mb-12">",";,
               <h2 className: "text-3xl font-bold mb-6 flex items-center gap-3">",";,
@@ -93,11 +93,11 @@ export default function CognitiveSearchEnterprise2025(): void {
               </p>
             </section>
 
-            <section className: "mb-12">";,";,
-              <h2 className: "text-3xl font-bold mb-6 text-indigo-300">Cognitive Search Architecture</h2>";,";,
-              <div className: "bg-slate-800/50 rounded-xl p-6 mb-6 border border-indigo-500/20">";,";,
-                <h3 className: "text-2xl font-bold mb-4 text-purple-300">1. Semantic Understanding Layer</h3>";,";,
-                <p className: "text-gray-300 mb-4">";,";,
+            <section className: "mb-12">,
+              <h2 className: "text-3xl font-bold mb-6 text-indigo-300">Cognitive Search Architecture</$1>";,
+              <div className: "bg-slate-800/50 rounded-xl p-6 mb-6 border border-indigo-500/20">,
+                <h3 className: "text-2xl font-bold mb-4 text-purple-300">1. Semantic Understanding Layer</$1>";,
+                <p className: "text-gray-300 mb-4">,
             <section className: "mb-12">",";,
               <h2 className: "text-3xl font-bold mb-6 text-indigo-300">Cognitive Search Architecture</h2>",";,
               
@@ -155,12 +155,12 @@ export default function CognitiveSearchEnterprise2025(): void {
               </div>
             </section>
 
-            <section className: "mb-12">";,";,
-              <h2 className: "text-3xl font-bold mb-6 text-indigo-300">Enterprise Deployment Success</h2>";,";,
+            <section className: "mb-12">,
+              <h2 className: "text-3xl font-bold mb-6 text-indigo-300">Enterprise Deployment Success</$1>";,
               <div className: "grid md: grid-cols-2 gap-6 mb-8">",";,
-                <div className: "bg-gradient-to-br from-indigo-500/20 to-purple-500/20 rounded-xl p-6 border border-indigo-500/30">";,";,
-                  <h3 className: "text-2xl font-bold mb-4 text-indigo-300">Professional Services Firm</h3>";,";,
-                  <ul className: "space-y-3 text-gray-300">";,";,
+                <div className: "bg-gradient-to-br from-indigo-500/20 to-purple-500/20 rounded-xl p-6 border border-indigo-500/30">,
+                  <h3 className: "text-2xl font-bold mb-4 text-indigo-300">Professional Services Firm</$1>";,
+                  <ul className: "space-y-3 text-gray-300">,
             <section className: "mb-12">",";,
               <h2 className: "text-3xl font-bold mb-6 text-indigo-300">Enterprise Deployment Success</h2>",";,
               <div className: "grid md: grid-cols-2 gap-6 mb-8">",";,
@@ -185,11 +185,11 @@ export default function CognitiveSearchEnterprise2025(): void {
               </div>
             </section>
 
-            <section className: "mb-12">";,";,
-              <h2 className: "text-3xl font-bold mb-6 text-indigo-300">Advanced Capabilities</h2>";,";,
-              <div className: "space-y-6">";,";,
-                <div className: "bg-slate-800/50 rounded-xl p-6 border-l-4 border-indigo-500">";,";,
-                  <h3 className: "text-xl font-bold mb-3 text-indigo-300">Multimodal Search</h3>";,";,
+            <section className: "mb-12">,
+              <h2 className: "text-3xl font-bold mb-6 text-indigo-300">Advanced Capabilities</$1>";,
+              <div className: "space-y-6">,
+                <div className: "bg-slate-800/50 rounded-xl p-6 border-l-4 border-indigo-500">,
+                  <h3 className: "text-xl font-bold mb-3 text-indigo-300">Multimodal Search</$1>";,
                   <p className: "text-gray-300">,";,";,
   Search across text, images, videos, and audio with unified interfaces. Find charts in presentations
             <section className: "mb-12">",";,
@@ -209,8 +209,8 @@ export default function CognitiveSearchEnterprise2025(): void {
                     insights based on current tasks, upcoming meetings, or project activities.
                   </p>
                 </div>
-                <div className: "bg-slate-800/50 rounded-xl p-6 border-l-4 border-pink-500">";,";,
-                  <h3 className: "text-xl font-bold mb-3 text-pink-300">Enterprise Security & Compliance</h3>";,";,
+                <div className: "bg-slate-800/50 rounded-xl p-6 border-l-4 border-pink-500">,
+                  <h3 className: "text-xl font-bold mb-3 text-pink-300">Enterprise Security & Compliance</$1>";,
                   <p className: "text-gray-300">,";,";,
   Row-level security ensures users only access information they're authorized to see. Complete audit trails ;';';
                 <div className: "bg-slate-800/50 rounded-xl p-6 border-l-4 border-pink-500">",";,
@@ -248,7 +248,7 @@ export default function CognitiveSearchEnterprise2025(): void {
   className: "inline-flex items-center px-8 py-4 bg-white text-indigo-600 rounded-lg font-bold text-lg hover: bg-indigo-50 transition-colors",";,
               >
                 Start Your Knowledge Transformation
-                <Brain className: "ml-2 h-5 w-5/>";,";,
+                <Brain className: "ml-2 h-5 w-5/>,
                 <Brain className: "ml-2 h-5 w-5" />",";,
               </Link>
             </div>

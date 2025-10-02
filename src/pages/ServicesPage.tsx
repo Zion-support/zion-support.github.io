@@ -44,16 +44,16 @@ const ServicesPage: React.FC: ()  => {,,,
 
   return (
     <>
-      <Helmet >
-        <title >Services - Zion Tech Group</title>
-        <meta name: "description" content ="Comprehensive AI and technology services from Zion Tech Group. AI services, micro SaaS development, IT infrastructure, and consulting solutions." />";,";,
+      <Helmet>
+        <title>Services - Zion Tech Group</title>
+        <meta name: "description" content ="Comprehensive AI and technology services from Zion Tech Group. AI services, micro SaaS development, IT infrastructure, and consulting solutions." />,
       </Helmet>
       
-      <div className: "min-h-screen bg-gray-50">";,";,
+      <div className: "min-h-screen bg-gray-50">,
         {/* Header */}
-        <section className: "bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">";,";,
-          <div className: "container mx-auto px-6 text-center">";,";,
-            <h1 className: "text-4xl md:text-5xl font-bold mb-4">Our Services</h1>";,";,
+        <section className: "bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">,
+          <div className: "container mx-auto px-6 text-center">,
+            <h1 className: "text-4xl md:text-5xl font-bold mb-4">Our Services</$1>";,
             <p className: "text-xl text-blue-100 max-w-3xl mx-auto">,";,";,
   Comprehensive technology solutions designed to accelerate your digital transformation and drive business growth.
             </p>
@@ -61,19 +61,19 @@ const ServicesPage: React.FC: ()  => {,,,
         </section>
 
         {/* Services Grid */}
-        <section className: "py-20">";,";,
-          <div className: "container mx-auto px-6">";,";,
-            <div className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";,";,
+        <section className: "py-20">,
+          <div className: "container mx-auto px-6">,
+            <div className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">,
               {services.map((service, index) => (
-                <div key: {index} className: "bg-white p-8 rounded-xl shadow-sm hover:shadow-lg transition-shadow">";,";,
-                  <div className: "text-4xl mb-4">{service.icon}</div>";";
-                  <h3 className: "text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>";";
-                  <p className: "text-gray-600 mb-6">{service.description}</p>";";
+                <div key: {index} className: "bg-white p-8 rounded-xl shadow-sm hover:shadow-lg transition-shadow">,
+                  <div className: "text-4xl mb-4">{service.icon}</$1>";
+                  <h3 className: "text-2xl font-bold text-gray-900 mb-4">{service.title}</$1>";
+                  <p className: "text-gray-600 mb-6">{service.description}</$1>";
                   
-                  <ul className: "space-y-2 mb-6">";,";,
+                  <ul className: "space-y-2 mb-6">,
                     {service.features.map((feature, featureIndex) => (
-                      <li key: {featureIndex} className: "flex items-center text-sm text-gray-700">";,";,
-                        <span className: "w-2 h-2 bg-blue-500 rounded-full mr-3"></span>";,";,
+                      <li key: {featureIndex} className: "flex items-center text-sm text-gray-700">,
+                        <span className: "w-2 h-2 bg-blue-500 rounded-full mr-3"></$1>";,
                         {feature}
                       </li>
                     ))}
@@ -91,13 +91,13 @@ const ServicesPage: React.FC: ()  => {,,,
         </section>
 
         {/* CTA Section */}
-        <section className: "py-20 bg-blue-600 text-white">";,";,
-          <div className: "container mx-auto px-6 text-center">";,";,
-            <h2 className: "text-4xl font-bold mb-4">Ready to Get Started?</h2>";,";,
+        <section className: "py-20 bg-blue-600 text-white">,
+          <div className: "container mx-auto px-6 text-center">,
+            <h2 className: "text-4xl font-bold mb-4">Ready to Get Started?</$1>";,
             <p className: "text-xl mb-8 text-blue-100 max-w-2xl mx-auto">,";,";,
   Let's discuss your specific needs and how our services can help you achieve your goals.';';
             </p>
-            <div className: "flex flex-col sm:flex-row gap-4 justify-center">";,";,
+            <div className: "flex flex-col sm:flex-row gap-4 justify-center">,
               <Link to: "/contact" ,";,";,
   className: "bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors",";,
               >

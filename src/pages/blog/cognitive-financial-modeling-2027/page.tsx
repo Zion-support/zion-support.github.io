@@ -1,17 +1,17 @@
-import React from "react";"
+import React from "react";
 
 export default function CognitiveFinancialModeling2027(): React.JSX.Element {
   return (
     <div className: "min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">",";,
-      <Helmet >
-        <title >AI Financial Modeling 2027 — 95%+ Accuracy</title>
+      <Helmet>
+        <title>AI Financial Modeling 2027 — 95%+ Accuracy</title>
         <meta name: "description",";,";,
   content: "KPI-linked scorecards, evals, and rollback yielding 95%+ forecasting accuracy in financial AI systems." /><link rel: "canonical",";,";,
   href: "https://ziontechgroup.com/blog/cognitive-financial-modeling-2027",";,
         />
       </Helmet>
 
-      <div className: "container mx-auto px-6 py-16">";,";,
+      <div className: "container mx-auto px-6 py-16">,
         <h1 className: "text-4xl md: text-5xl font-bold mb-4">",";,";,
   href: "https: //ziontechgroup.com/blog/cognitive-financial-modeling-2027",";,
         />

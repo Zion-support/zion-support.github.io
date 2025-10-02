@@ -2,8 +2,8 @@
 export default function RealtimePersonalizationEngine2025(): void {
   return (
     <>
-      <Helmet >
-        <title >Real-Time AI Personalization Engine 2025 — 98.4% Relevance, 8.7x Conversion Lift, $234M+ Revenue Growth | Zion Tech Group</title>
+      <Helmet>
+        <title>Real-Time AI Personalization Engine 2025 — 98.4% Relevance, 8.7x Conversion Lift, $234M+ Revenue Growth | Zion Tech Group</title>
         <meta name: "description",";,";,
   content: "Deploy real-time AI personalization that adapts to user behavior in milliseconds. Achieve 98.4% relevance scoring, 8.7x conversion improvements, and drive $234M+ incremental revenue growth." /><meta name: "keywords",";,";,
   content: "AI personalization, real-time personalization, recommendation engine, customer experience, conversion optimization, behavioral targeting, predictive personalization, marketing AI" /><link rel: "canonical" href: "https://ziontechgroup.com/blog/ai-2025-oct-realtime-personalization-engine/>",";,";,
@@ -17,7 +17,7 @@ export default function RealtimePersonalizationEngine2025(): void {
           <Link to: "/blog",";,";,
   className: "inline-flex items-center text-rose-400 hover: text-rose-300 mb-8 transition-colors",";,
           >
-            <ArrowLeft className: "mr-2 h-4 w-4/>";,";,
+            <ArrowLeft className: "mr-2 h-4 w-4/>,
             <ArrowLeft className: "mr-2 h-4 w-4" />",";,";,
   Back to Blog
           </Link>
@@ -40,23 +40,23 @@ export default function RealtimePersonalizationEngine2025(): void {
             </p>
           </header>
 
-          <div className: "prose prose-invert prose-lg max-w-none">";,";,
-            <div className: "bg-gradient-to-r from-rose-500/10 to-purple-500/10 border border-rose-500/20 rounded-xl p-8 mb-12">";,";,
-              <h2 className: "text-3xl font-bold mb-6 flex items-center gap-3">";,";,
+          <div className: "prose prose-invert prose-lg max-w-none">,
+            <div className: "bg-gradient-to-r from-rose-500/10 to-purple-500/10 border border-rose-500/20 rounded-xl p-8 mb-12">,
+              <h2 className: "text-3xl font-bold mb-6 flex items-center gap-3">,
                 <Target className: "h-8 w-8 text-rose-400/>,";,";,
   Revenue Impact
               </h2>
-              <ul className: "space-y-4 text-lg">";,";,
-                <li className: "flex items-start gap-3">";,";,
-                  <Zap className: "h-6 w-6 text-yellow-400 mt-1 flex-shrink-0/>";,";,
+              <ul className: "space-y-4 text-lg">,
+                <li className: "flex items-start gap-3">,
+                  <Zap className: "h-6 w-6 text-yellow-400 mt-1 flex-shrink-0/>,
                   <span ><strong >98.4% Relevance: </strong> AI predicts user intent and preferences with near-perfect accuracy</span>,,
                 </li>
-                <li className: "flex items-start gap-3">";,";,
-                  <Users className: "h-6 w-6 text-blue-400 mt-1 flex-shrink-0/>";,";,
+                <li className: "flex items-start gap-3">,
+                  <Users className: "h-6 w-6 text-blue-400 mt-1 flex-shrink-0/>,
                   <span ><strong >8.7x Conversion Lift: </strong> Personalized experiences drive dramatic engagement increases</span>,,
                 </li>
-                <li className: "flex items-start gap-3">";,";,
-                  <DollarSign className: "h-6 w-6 text-green-400 mt-1 flex-shrink-0/>";,";,
+                <li className: "flex items-start gap-3">,
+                  <DollarSign className: "h-6 w-6 text-green-400 mt-1 flex-shrink-0/>,
           <div className: "prose prose-invert prose-lg max-w-none">",";,
             <div className: "bg-gradient-to-r from-rose-500/10 to-purple-500/10 border border-rose-500/20 rounded-xl p-8 mb-12">",";,
               <h2 className: "text-3xl font-bold mb-6 flex items-center gap-3">",";,
@@ -93,10 +93,10 @@ export default function RealtimePersonalizationEngine2025(): void {
               </p>
             </section>
 
-            <section className: "mb-12">";,";,
-              <h2 className: "text-3xl font-bold mb-6 text-rose-300">The Personalization Engine Architecture</h2>";,";,
-              <div className: "bg-slate-800/50 rounded-xl p-6 mb-6 border border-rose-500/20">";,";,
-                <h3 className: "text-2xl font-bold mb-4 text-pink-300">1. Real-Time Signal Processing</h3>";,";,
+            <section className: "mb-12">,
+              <h2 className: "text-3xl font-bold mb-6 text-rose-300">The Personalization Engine Architecture</$1>";,
+              <div className: "bg-slate-800/50 rounded-xl p-6 mb-6 border border-rose-500/20">,
+                <h3 className: "text-2xl font-bold mb-4 text-pink-300">1. Real-Time Signal Processing</$1>";,
                 <p className: "text-gray-300 mb-4">,";,";,
   Stream processing infrastructure ingests and analyzes user interactions in under 50ms. Behavioral signals
             <section className: "mb-12">",";,
@@ -157,12 +157,12 @@ export default function RealtimePersonalizationEngine2025(): void {
               </div>
             </section>
 
-            <section className: "mb-12">";,";,
-              <h2 className: "text-3xl font-bold mb-6 text-rose-300">Enterprise Success Stories</h2>";,";,
+            <section className: "mb-12">,
+              <h2 className: "text-3xl font-bold mb-6 text-rose-300">Enterprise Success Stories</$1>";,
               <div className: "grid md: grid-cols-2 gap-6 mb-8">",";,
-                <div className: "bg-gradient-to-br from-rose-500/20 to-pink-500/20 rounded-xl p-6 border border-rose-500/30">";,";,
-                  <h3 className: "text-2xl font-bold mb-4 text-rose-300">Global Retail Leader</h3>";,";,
-                  <ul className: "space-y-3 text-gray-300">";,";,
+                <div className: "bg-gradient-to-br from-rose-500/20 to-pink-500/20 rounded-xl p-6 border border-rose-500/30">,
+                  <h3 className: "text-2xl font-bold mb-4 text-rose-300">Global Retail Leader</$1>";,
+                  <ul className: "space-y-3 text-gray-300">,
             <section className: "mb-12">",";,
               <h2 className: "text-3xl font-bold mb-6 text-rose-300">Enterprise Success Stories</h2>",";,
               <div className: "grid md: grid-cols-2 gap-6 mb-8">",";,
@@ -237,7 +237,7 @@ export default function RealtimePersonalizationEngine2025(): void {
   className: "inline-flex items-center px-8 py-4 bg-white text-rose-600 rounded-lg font-bold text-lg hover: bg-rose-50 transition-colors",";,
               >
                 Start Your Personalization Journey
-                <Target className: "ml-2 h-5 w-5/>";,";,
+                <Target className: "ml-2 h-5 w-5/>,
                 <Target className: "ml-2 h-5 w-5" />",";,
               </Link>
             </div>

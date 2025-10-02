@@ -1,27 +1,25 @@
-import { Link } from "react-router-dom";";
-import Header from "../../components/Header";";
-import { Link } from "react-router-dom";"
-import Header from "../../components/Header";"
+import { Link } from "react-router-dom";
+import Header from "../../components/Header";
 
-const AdvancedCybersecurityAI: ()  => {,,,
+const AdvancedCybersecurityAI: () => {
   return (
     <>
-      <Helmet >
-        <title >Advanced Cybersecurity AI Platform | Next-Gen Threat Detection & Response | Zion Tech Group</title>
+      <Helmet>
+        <title>Advanced Cybersecurity AI Platform | Next-Gen Threat Detection & Response | Zion Tech Group</title>
         <meta name: "description",";,";,
   content: "AI-powered cybersecurity platform with 99.92% threat detection accuracy. Real-time protection, autonomous incident response, and predictive security intelligence." /><meta name: "keywords",";,";,
-  content: "cybersecurity AI, threat detection, incident response, SIEM, EDR, security automation, AI security" /></Helmet>";,";,
+  content: "cybersecurity AI, threat detection, incident response, SIEM, EDR, security automation, AI security" /></$1>";,
 
       <div className: "min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">",";,
         <Header />
 
-        <article className: "container mx-auto px-6 py-20">";,";,
+        <article className: "container mx-auto px-6 py-20">,
         <article className: "container mx-auto px-6 py-20">",";,
           {/* Back Link */};
           <Link to: "/services",";,";,
   className: "inline-flex items-center text-zion-cyan hover: text-zion-blue-light mb-8 transition-colors",";,
           >
-            <ArrowLeft className: "w-4 h-4 mr-2/>";,";,
+            <ArrowLeft className: "w-4 h-4 mr-2/>,
             <ArrowLeft className: "w-4 h-4 mr-2" />",";,";,
   Back to Services
           </Link>
@@ -54,20 +52,20 @@ const AdvancedCybersecurityAI: ()  => {,,,
             {/* Key Metrics Banner */}
             <div className: "grid md: grid-cols-4 gap-6">",";,
               <div className: "bg-red-900/40 rounded-xl p-6 border border-red-500/30 text-center hover: scale-105 transition-transform">",";,
-                <div className: "text-4xl font-bold text-red-400 mb-2">99.92%</div>";,";,
-                <div className: "text-sm text-zion-slate-light">Threat Detection</div>";,";,
+                <div className: "text-4xl font-bold text-red-400 mb-2">99.92%</$1>";,
+                <div className: "text-sm text-zion-slate-light">Threat Detection</$1>";,
               </div>
               <div className: "bg-blue-900/40 rounded-xl p-6 border border-blue-500/30 text-center hover: scale-105 transition-transform">",";,
-                <div className: "text-4xl font-bold text-blue-400 mb-2">&lt;50ms</div>";,";,
-                <div className: "text-sm text-zion-slate-light">Detection Latency</div>";,";,
+                <div className: "text-4xl font-bold text-blue-400 mb-2">&lt;50ms</$1>";,
+                <div className: "text-sm text-zion-slate-light">Detection Latency</$1>";,
               </div>
               <div className: "bg-green-900/40 rounded-xl p-6 border border-green-500/30 text-center hover: scale-105 transition-transform">",";,
-                <div className: "text-4xl font-bold text-green-400 mb-2">95%</div>";,";,
-                <div className: "text-sm text-zion-slate-light">False Positive Reduction</div>";,";,
+                <div className: "text-4xl font-bold text-green-400 mb-2">95%</$1>";,
+                <div className: "text-sm text-zion-slate-light">False Positive Reduction</$1>";,
               </div>
               <div className: "bg-purple-900/40 rounded-xl p-6 border border-purple-500/30 text-center hover: scale-105 transition-transform">",";,
-                <div className: "text-4xl font-bold text-purple-400 mb-2">&lt;5s</div>";,";,
-                <div className: "text-sm text-zion-slate-light">Response Time</div>";,";,
+                <div className: "text-4xl font-bold text-purple-400 mb-2">&lt;5s</$1>";,
+                <div className: "text-sm text-zion-slate-light">Response Time</$1>";,
             <div className: "grid md: grid-cols-4 gap-6">",";,
               <div className: "bg-red-900/40 rounded-xl p-6 border border-red-500/30 text-center hover: scale-105 transition-transform">",";,
                 <div className: "text-4xl font-bold text-red-400 mb-2">99.92%</div>",";,
@@ -92,24 +90,24 @@ const AdvancedCybersecurityAI: ()  => {,,,
           <div className: "max-w-5xl mx-auto space-y-12 text-zion-slate-light">",";,
             {/* Threat Landscape */}
             <section >
-              <h2 className: "text-3xl font-bold text-white mb-6 flex items-center gap-3">";,";,
+              <h2 className: "text-3xl font-bold text-white mb-6 flex items-center gap-3">,
                 <Shield className: "w-8 h-8 text-red-400/>,";,";,
   The Modern Threat Landscape
               </h2>
-              <div className: "bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-red-500/30">";,";,
+              <div className: "bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-red-500/30">,
                 <div className: "grid md: grid-cols-2 gap-8">",";,
                   <div >
-                    <h3 className: "text-xl font-bold text-white mb-4">🔴 Security Challenges</h3>";,";,
-                    <ul className: "space-y-3">";,";,
-                      <li className: "flex items-start gap-2">";,";,
+                    <h3 className: "text-xl font-bold text-white mb-4">🔴 Security Challenges</$1>";,
+                    <ul className: "space-y-3">,
+                      <li className: "flex items-start gap-2">,
                         <span className: "text-red-400 font-bold">207 days: </span>",";,
                         <span >Average breach detection time (industry)</span>
                       </li>
-                      <li className: "flex items-start gap-2">";,";,
+                      <li className: "flex items-start gap-2">,
                         <span className: "text-red-400 font-bold">$4.45M: </span>",";,
                         <span >Average cost per data breach</span>
                       </li>
-                      <li className: "flex items-start gap-2">";,";,
+                      <li className: "flex items-start gap-2">,
                         <span className: "text-red-400 font-bold">60 seconds: </span>",";,
               <h2 className: "text-3xl font-bold text-white mb-6 flex items-center gap-3">",";,
                 <Shield className: "w-8 h-8 text-red-400" />",";,";,
@@ -135,18 +133,18 @@ const AdvancedCybersecurityAI: ()  => {,,,
                     </ul>
                   </div>
                   <div >
-                    <h3 className: "text-xl font-bold text-white mb-4">✅ Our Solution</h3>";,";,
-                    <ul className: "space-y-3">";,";,
-                      <li className: "flex items-start gap-2">";,";,
-                        <CheckCircle className: "w-5 h-5 text-green-400 flex-shrink-0 mt-1/>";,";,
+                    <h3 className: "text-xl font-bold text-white mb-4">✅ Our Solution</$1>";,
+                    <ul className: "space-y-3">,
+                      <li className: "flex items-start gap-2">,
+                        <CheckCircle className: "w-5 h-5 text-green-400 flex-shrink-0 mt-1/>,
                         <span >&lt;50ms detection time (real-time)</span>
                       </li>
-                      <li className: "flex items-start gap-2">";,";,
-                        <CheckCircle className: "w-5 h-5 text-green-400 flex-shrink-0 mt-1/>";,";,
+                      <li className: "flex items-start gap-2">,
+                        <CheckCircle className: "w-5 h-5 text-green-400 flex-shrink-0 mt-1/>,
                         <span >Prevent breaches before they occur</span>
                       </li>
-                      <li className: "flex items-start gap-2">";,";,
-                        <CheckCircle className: "w-5 h-5 text-green-400 flex-shrink-0 mt-1/>";,";,
+                      <li className: "flex items-start gap-2">,
+                        <CheckCircle className: "w-5 h-5 text-green-400 flex-shrink-0 mt-1/>,
                     <h3 className: "text-xl font-bold text-white mb-4">✅ Our Solution</h3>",";,
                     <ul className: "space-y-3">",";,
                       <li className: "flex items-start gap-2">",";,
@@ -169,7 +167,7 @@ const AdvancedCybersecurityAI: ()  => {,,,
 
             {/* Platform Features */}
             <section >
-              <h2 className: "text-3xl font-bold text-white mb-6 flex items-center gap-3">";,";,
+              <h2 className: "text-3xl font-bold text-white mb-6 flex items-center gap-3">,
                 <Lock className: "w-8 h-8 text-blue-400/>,";,";,
   Platform Features
               </h2>
@@ -207,9 +205,9 @@ const AdvancedCybersecurityAI: ()  => {,,,
                   }
                 ].map((feature, index) => (
                   <div key: {index} className: "bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-zion-cyan/20 hover: border-zion-cyan/50 transition-all">",";,
-                    <div className: "text-4xl mb-4">{feature.icon}</div>";";
-                    <h3 className: "text-xl font-bold text-white mb-3">{feature.title}</h3>";";
-                    <p className: "text-zion-slate-light">{feature.description}</p>";";
+                    <div className: "text-4xl mb-4">{feature.icon}</$1>";
+                    <h3 className: "text-xl font-bold text-white mb-3">{feature.title}</$1>";
+                    <p className: "text-zion-slate-light">{feature.description}</$1>";
               <h2 className: "text-3xl font-bold text-white mb-6 flex items-center gap-3">",";,
                 <Lock className: "w-8 h-8 text-blue-400" />",";,";,
   Platform Features
@@ -322,8 +320,8 @@ const AdvancedCybersecurityAI: ()  => {,,,
                     </div>
                     <ul className: "space-y-2">",";,
                       {solution.highlights.map((highlight, hIndex) => (
-                        <li key: {hIndex} className: "flex items-start gap-2">";,";,
-                          <CheckCircle className: "w-5 h-5 text-green-400 flex-shrink-0 mt-1/>";,";,
+                        <li key: {hIndex} className: "flex items-start gap-2">,
+                          <CheckCircle className: "w-5 h-5 text-green-400 flex-shrink-0 mt-1/>,
                         <li key: {hIndex} className: "flex items-start gap-2">",";,
                           <CheckCircle className: "w-5 h-5 text-green-400 flex-shrink-0 mt-1" />",";,
                           <span >{highlight}</span>
@@ -337,7 +335,7 @@ const AdvancedCybersecurityAI: ()  => {,,,
 
             {/* Pricing Packages */}
             <section >
-              <h2 className: "text-3xl font-bold text-white mb-6 flex items-center gap-3">";,";,
+              <h2 className: "text-3xl font-bold text-white mb-6 flex items-center gap-3">,
                 <DollarSign className: "w-8 h-8 text-green-400/>,";,";,
   Pricing & Packages
               </h2>
@@ -391,8 +389,8 @@ const AdvancedCybersecurityAI: ()  => {,,,
                     <div className: "text-4xl font-bold text-green-400 mb-6">{pkg.price}<span className: "text-lg text-zion-slate-light">/month</span></div>",";,
                     <ul className: "space-y-3">",";,
                       {pkg.features.map((feature, fIndex) => (
-                        <li key: {fIndex} className: "flex items-start gap-2">";,";,
-                          <CheckCircle className: "w-5 h-5 text-green-400 flex-shrink-0 mt-1/>";,";,
+                        <li key: {fIndex} className: "flex items-start gap-2">,
+                          <CheckCircle className: "w-5 h-5 text-green-400 flex-shrink-0 mt-1/>,
                         <li key: {fIndex} className: "flex items-start gap-2">",";,
                           <CheckCircle className: "w-5 h-5 text-green-400 flex-shrink-0 mt-1" />",";,
                           <span >{feature}</span>
@@ -406,12 +404,12 @@ const AdvancedCybersecurityAI: ()  => {,,,
 
             {/* Limited Time Offer */}
             <section >
-              <div className: "bg-gradient-to-r from-red-900/40 via-orange-900/40 to-yellow-900/40 rounded-xl p-8 border-2 border-red-500/50">";,";,
-                <div className: "flex items-center justify-between flex-wrap gap-6">";,";,
-                  <div className: "flex-1">";,";,
-                    <div className: "flex items-center gap-3 mb-4">";,";,
-                      <Shield className: "w-8 h-8 text-red-400/>";,";,
-                      <h3 className: "text-2xl font-bold text-white">🛡️ October 2025 Security Initiative</h3>";,";,
+              <div className: "bg-gradient-to-r from-red-900/40 via-orange-900/40 to-yellow-900/40 rounded-xl p-8 border-2 border-red-500/50">,
+                <div className: "flex items-center justify-between flex-wrap gap-6">,
+                  <div className: "flex-1">,
+                    <div className: "flex items-center gap-3 mb-4">,
+                      <Shield className: "w-8 h-8 text-red-400/>,
+                      <h3 className: "text-2xl font-bold text-white">🛡️ October 2025 Security Initiative</$1>";,
               <div className: "bg-gradient-to-r from-red-900/40 via-orange-900/40 to-yellow-900/40 rounded-xl p-8 border-2 border-red-500/50">",";,
                 <div className: "flex items-center justify-between flex-wrap gap-6">",";,
                   <div className: "flex-1">",";,
@@ -422,17 +420,17 @@ const AdvancedCybersecurityAI: ()  => {,,,
                     <p className: "text-xl text-red-200 mb-4">",";,";,
   Get <strong >60 Days FREE</strong> when you start before October 31, 2025
                     </p>
-                    <ul className: "space-y-2">";,";,
-                      <li className: "flex items-start gap-2">";,";,
-                        <CheckCircle className: "w-5 h-5 text-green-400 flex-shrink-0 mt-1/>";,";,
+                    <ul className: "space-y-2">,
+                      <li className: "flex items-start gap-2">,
+                        <CheckCircle className: "w-5 h-5 text-green-400 flex-shrink-0 mt-1/>,
                         <span >Free security assessment ($25,000 value)</span>
                       </li>
-                      <li className: "flex items-start gap-2">";,";,
-                        <CheckCircle className: "w-5 h-5 text-green-400 flex-shrink-0 mt-1/>";,";,
+                      <li className: "flex items-start gap-2">,
+                        <CheckCircle className: "w-5 h-5 text-green-400 flex-shrink-0 mt-1/>,
                         <span >Complimentary penetration test ($35,000 value)</span>
                       </li>
-                      <li className: "flex items-start gap-2">";,";,
-                        <CheckCircle className: "w-5 h-5 text-green-400 flex-shrink-0 mt-1/>";,";,
+                      <li className: "flex items-start gap-2">,
+                        <CheckCircle className: "w-5 h-5 text-green-400 flex-shrink-0 mt-1/>,
                     <ul className: "space-y-2">",";,
                       <li className: "flex items-start gap-2">",";,
                         <CheckCircle className: "w-5 h-5 text-green-400 flex-shrink-0 mt-1" />",";,
@@ -456,7 +454,7 @@ const AdvancedCybersecurityAI: ()  => {,,,
   className: "inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white font-bold rounded-lg hover: from-red-600 hover:to-orange-600 transition-all transform hover:scale-105",";,
                     >
                       Secure Your Enterprise
-                      <Shield className: "w-5 h-5/>";,";,
+                      <Shield className: "w-5 h-5/>,
                       <Shield className: "w-5 h-5" />",";,
                     </Link>
                   </div>
@@ -475,7 +473,7 @@ const AdvancedCybersecurityAI: ()  => {,,,
   className: "inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white font-bold rounded-lg hover: from-red-600 hover:to-orange-600 transition-all transform hover:scale-105",";,
                 >
                   Schedule Security Assessment
-                  <Shield className: "w-5 h-5/>";,";,
+                  <Shield className: "w-5 h-5/>,
                   <Shield className: "w-5 h-5" />",";,
                 </Link>
                 <Link to: "/contact",";,";,

@@ -65,8 +65,7 @@ const AdvancedAIServices: React.FC = () => {,
         {/* Header */}
         <section className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-800 text-white py-16">
           <div className="container mx-auto px-6 text-center">
-            <h1 className="text-4xl md: text-5xl font-bold mb-4">Advanced AI Services</h1>";,
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+            <h1 className="text-4xl md: text-5xl font-bold mb-4">Advanced AI Services</$1><p className="text-xl text-blue-100 max-w-3xl mx-auto">
               Next-generation artificial intelligence solutions that transform how businesses operate, analyze data, and interact with customers.
             </p>
           </div>
@@ -75,10 +74,8 @@ const AdvancedAIServices: React.FC = () => {,
         {/* Services Grid */}
         <section className="py-20">
           <div className="container mx-auto px-6">
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">";,
-              {advancedAIServices.map((service, index) => (
-                <div key={index} className="bg-white p-8 rounded-xl shadow-sm hover: shadow-lg transition-all duration-300 border border-gray-100">";,
-                  <div className="text-4xl mb-4">{service.icon}</div>
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">{advancedAIServices.map((service, index) => (
+                <div key={index} className="bg-white p-8 rounded-xl shadow-sm hover: shadow-lg transition-all duration-300 border border-gray-100"><div className="text-4xl mb-4">{service.icon}</div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
                   <p className="text-gray-600 mb-6">{service.description}</p>
                   
@@ -92,13 +89,11 @@ const AdvancedAIServices: React.FC = () => {,
                   </ul>
 
                   <div className="mb-6 p-4 bg-green-50 rounded-lg border border-green-200">
-                    <h4 className="font-semibold text-green-800 mb-2">Pricing: </h4>";,
-                    <p className="text-green-700 font-medium">{service.pricing}</p>
+                    <h4 className="font-semibold text-green-800 mb-2">Pricing: </$1><p className="text-green-700 font-medium">{service.pricing}</p>
                   </div>
 
                   <div className="mb-6">
-                    <h4 className="font-semibold text-gray-900 mb-2">Key Benefits: </h4>";,
-                    <ul className="space-y-1">
+                    <h4 className="font-semibold text-gray-900 mb-2">Key Benefits: </$1><ul className="space-y-1">
                       {service.benefits.map((benefit, benefitIndex) => (
                         <li key={benefitIndex} className="text-sm text-gray-600 flex items-center">
                           <span className="w-1.5 h-1.5 bg-green-500 rounded-full mr-2"></span>
@@ -130,8 +125,7 @@ const AdvancedAIServices: React.FC = () => {,
               </p>
             </div>
             
-            <div className="grid grid-cols-2 md: grid-cols-4 gap-8">";,
-              <div className="bg-gradient-to-br from-blue-50 to-indigo-100 p-6 rounded-xl text-center border border-blue-200">
+            <div className="grid grid-cols-2 md: grid-cols-4 gap-8"><div className="bg-gradient-to-br from-blue-50 to-indigo-100 p-6 rounded-xl text-center border border-blue-200">
                 <h3 className="text-lg font-bold text-gray-900 mb-2">Machine Learning</h3>
                 <p className="text-gray-600">TensorFlow, PyTorch, Scikit-learn</p>
               </div>
@@ -161,8 +155,7 @@ const AdvancedAIServices: React.FC = () => {,
             <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
               Contact us today to discuss how our advanced AI services can drive innovation and growth in your organization.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">";,
-              <Link 
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"><Link 
                 to="/contact" 
                 className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover: bg-gray-100 transition-colors shadow-lg",
               >

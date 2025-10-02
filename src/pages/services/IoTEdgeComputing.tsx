@@ -287,8 +287,8 @@ const IoTEdgeComputing: React.FC: ()  => {,,,
 
   return (
     <>
-      <Helmet >
-        <title >IoT & Edge Computing - Zion Tech Group | Smart Connected Solutions</title>
+      <Helmet>
+        <title>IoT & Edge Computing - Zion Tech Group | Smart Connected Solutions</title>
         <meta name: "description",";,";,
   content: "Advanced IoT and edge computing solutions with real-time AI processing, 5G integration, and global connectivity. 95% latency reduction, enterprise security." /><meta name: "keywords" content ="IoT solutions, edge computing, smart devices, connected systems, real-time analytics, 5G IoT, industrial IoT" /><link rel: "canonical" href: "https://ziontechgroup.com/services/iot-edge-computing/>",";,";,
   content: "Advanced IoT and edge computing solutions with real-time AI processing, 5G integration, and global connectivity. 95% latency reduction, enterprise security.",";,
@@ -301,11 +301,11 @@ const IoTEdgeComputing: React.FC: ()  => {,,,
       
       <main className: "min-h-screen bg-white">",";,
         {/* Hero Section */}
-        <section className: "bg-gradient-to-br from-orange-900 via-orange-800 to-red-900 text-white py-20">";,";,
+        <section className: "bg-gradient-to-br from-orange-900 via-orange-800 to-red-900 text-white py-20">,
           <div className: "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",";,
-            <div className: "text-center">";,";,
+            <div className: "text-center">,
               <h1 className: "text-5xl md: text-7xl font-bold mb-6">",";,";,
-  IoT & <span className: "bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">Edge Computing</span>";,";,
+  IoT & <span className: "bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">Edge Computing</$1>";,
               </h1>
               <p className: "text-xl md:text-2xl text-orange-100 max-w-4xl mx-auto mb-8">,";,";,
   Advanced IoT and edge computing solutions with real-time AI processing
@@ -326,7 +326,7 @@ const IoTEdgeComputing: React.FC: ()  => {,,,
                 <a href: "/contact",";,";,
   className: "inline-flex items-center px-8 py-4 bg-orange-600 hover: bg-orange-700 text-white font-semibold rounded-lg transition-colors",";,
                 >
-                  <Phone className: "w-5 h-5 mr-2/>";,";,
+                  <Phone className: "w-5 h-5 mr-2/>,
                   <Phone className: "w-5 h-5 mr-2" />",";,";,
   Schedule Demo
                 </a>
@@ -334,7 +334,7 @@ const IoTEdgeComputing: React.FC: ()  => {,,,
   className: "inline-flex items-center px-8 py-4 border-2 border-white text-white hover: bg-white hover:text-orange-900 font-semibold rounded-lg transition-colors",";,
                 >
                   View Pricing
-                  <ArrowRight className: "w-5 h-5 ml-2/>";,";,
+                  <ArrowRight className: "w-5 h-5 ml-2/>,
                   <ArrowRight className: "w-5 h-5 ml-2" />",";,
                 </a>
               </div>
@@ -343,10 +343,10 @@ const IoTEdgeComputing: React.FC: ()  => {,,,
         </section>
 
         {/* Key Benefits */}
-        <section className: "py-16 bg-gray-50">";,";,
+        <section className: "py-16 bg-gray-50">,
           <div className: "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",";,
-            <div className: "text-center mb-12">";,";,
-              <h2 className: "text-4xl font-bold text-gray-900 mb-4">";,";,
+            <div className: "text-center mb-12">,
+              <h2 className: "text-4xl font-bold text-gray-900 mb-4">,
         <section className: "py-16 bg-gray-50">",";,
           <div className: "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",";,
             <div className: "text-center mb-12">",";,
@@ -359,9 +359,9 @@ const IoTEdgeComputing: React.FC: ()  => {,,,
             </div>
 
             <div className: "grid md: grid-cols-4 gap-8">",";,
-              <div className: "text-center">";,";,
-                <div className: "inline-flex items-center justify-center w-16 h-16 bg-orange-100 rounded-full mb-4">";,";,
-                  <Zap className: "w-8 h-8 text-orange-600/>";,";,
+              <div className: "text-center">,
+                <div className: "inline-flex items-center justify-center w-16 h-16 bg-orange-100 rounded-full mb-4">,
+                  <Zap className: "w-8 h-8 text-orange-600/>,
             <div className: "grid md: grid-cols-4 gap-8">",";,
               <div className: "text-center">",";,
                 <div className: "inline-flex items-center justify-center w-16 h-16 bg-orange-100 rounded-full mb-4">",";,
@@ -370,9 +370,9 @@ const IoTEdgeComputing: React.FC: ()  => {,,,
                 <h3 className: "text-xl font-bold text-gray-900 mb-2">95% Latency Reduction</h3>",";,
                 <p className: "text-gray-600">Real-time edge processing</p>",";,
               </div>
-              <div className: "text-center">";,";,
-                <div className: "inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">";,";,
-                  <Network className: "w-8 h-8 text-blue-600/>";,";,
+              <div className: "text-center">,
+                <div className: "inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">,
+                  <Network className: "w-8 h-8 text-blue-600/>,
               <div className: "text-center">",";,
                 <div className: "inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">",";,
                   <Network className: "w-8 h-8 text-blue-600" />",";,
@@ -380,9 +380,9 @@ const IoTEdgeComputing: React.FC: ()  => {,,,
                 <h3 className: "text-xl font-bold text-gray-900 mb-2">5G Integration</h3>",";,
                 <p className: "text-gray-600">Ultra-low latency connectivity</p>",";,
               </div>
-              <div className: "text-center">";,";,
-                <div className: "inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">";,";,
-                  <Shield className: "w-8 h-8 text-green-600/>";,";,
+              <div className: "text-center">,
+                <div className: "inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">,
+                  <Shield className: "w-8 h-8 text-green-600/>,
               <div className: "text-center">",";,
                 <div className: "inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">",";,
                   <Shield className: "w-8 h-8 text-green-600" />",";,
@@ -390,9 +390,9 @@ const IoTEdgeComputing: React.FC: ()  => {,,,
                 <h3 className: "text-xl font-bold text-gray-900 mb-2">Zero-Trust Security</h3>",";,
                 <p className: "text-gray-600">Enterprise-grade protection</p>",";,
               </div>
-              <div className: "text-center">";,";,
-                <div className: "inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4">";,";,
-                  <Globe className: "w-8 h-8 text-purple-600/>";,";,
+              <div className: "text-center">,
+                <div className: "inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4">,
+                  <Globe className: "w-8 h-8 text-purple-600/>,
               <div className: "text-center">",";,
                 <div className: "inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4">",";,
                   <Globe className: "w-8 h-8 text-purple-600" />",";,
@@ -405,10 +405,10 @@ const IoTEdgeComputing: React.FC: ()  => {,,,
         </section>
 
         {/* Use Cases */}
-        <section className: "py-20">";,";,
+        <section className: "py-20">,
           <div className: "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",";,
-            <div className: "text-center mb-16">";,";,
-              <h2 className: "text-4xl font-bold text-gray-900 mb-4">";,";,
+            <div className: "text-center mb-16">,
+              <h2 className: "text-4xl font-bold text-gray-900 mb-4">,
         <section className: "py-20">",";,
           <div className: "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",";,
             <div className: "text-center mb-16">",";,
@@ -425,8 +425,8 @@ const IoTEdgeComputing: React.FC: ()  => {,,,
                 const Icon: useCase.icon;,,,
   return (
                   <div key: {index} className: "bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">",";,
-                    <div className: "inline-flex items-center justify-center w-16 h-16 bg-orange-100 rounded-full mb-6">";,";,
-                      <Icon className: "w-8 h-8 text-orange-600/>";,";,
+                    <div className: "inline-flex items-center justify-center w-16 h-16 bg-orange-100 rounded-full mb-6">,
+                      <Icon className: "w-8 h-8 text-orange-600/>,
             <div className: "grid md: grid-cols-2 lg:grid-cols-4 gap-8">",";,
               {useCases.map((useCase, index) => {
                 const Icon: useCase.icon;,,,
@@ -440,9 +440,9 @@ const IoTEdgeComputing: React.FC: ()  => {,,,
                     <div className: "text-orange-600 font-semibold mb-4">{useCase.metrics}</div>"
                     <ul className: "space-y-2">",";,
                       {useCase.benefits.map((benefit, benefitIndex) => (
-                        <li key: {benefitIndex} className: "flex items-center text-sm">";,";,
-                          <CheckCircle className: "w-4 h-4 text-orange-500 mr-2 flex-shrink-0/>";,";,
-                          <span className: "text-gray-700">{benefit}</span>";";
+                        <li key: {benefitIndex} className: "flex items-center text-sm">,
+                          <CheckCircle className: "w-4 h-4 text-orange-500 mr-2 flex-shrink-0/>,
+                          <span className: "text-gray-700">{benefit}</$1>";
                         <li key: {benefitIndex} className: "flex items-center text-sm">",";,
                           <CheckCircle className: "w-4 h-4 text-orange-500 mr-2 flex-shrink-0" />",";,
                           <span className: "text-gray-700">{benefit}</span>"
@@ -457,10 +457,10 @@ const IoTEdgeComputing: React.FC: ()  => {,,,
         </section>
 
         {/* Features */}
-        <section className: "py-20 bg-gray-50">";,";,
+        <section className: "py-20 bg-gray-50">,
           <div className: "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",";,
-            <div className: "text-center mb-16">";,";,
-              <h2 className: "text-4xl font-bold text-gray-900 mb-4">";,";,
+            <div className: "text-center mb-16">,
+              <h2 className: "text-4xl font-bold text-gray-900 mb-4">,
         <section className: "py-20 bg-gray-50">",";,
           <div className: "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",";,
             <div className: "text-center mb-16">",";,
@@ -477,13 +477,13 @@ const IoTEdgeComputing: React.FC: ()  => {,,,
                 const Icon: feature.icon;,,,
   return (
                   <div key: {index} className: "bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">",";,
-                    <div className: "inline-flex items-center justify-center w-12 h-12 bg-orange-100 rounded-lg mb-4">";,";,
-                      <Icon className: "w-6 h-6 text-orange-600/>";,";,
+                    <div className: "inline-flex items-center justify-center w-12 h-12 bg-orange-100 rounded-lg mb-4">,
+                      <Icon className: "w-6 h-6 text-orange-600/>,
                     </div>
-                    <h3 className: "text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>";";
-                    <p className: "text-gray-600 mb-4">{feature.description}</p>";";
-                    <div className: "inline-flex items-center text-orange-600 font-semibold text-sm">";,";,
-                      <CheckCircle className: "w-4 h-4 mr-1/>";,";,
+                    <h3 className: "text-xl font-bold text-gray-900 mb-3">{feature.title}</$1>";
+                    <p className: "text-gray-600 mb-4">{feature.description}</$1>";
+                    <div className: "inline-flex items-center text-orange-600 font-semibold text-sm">,
+                      <CheckCircle className: "w-4 h-4 mr-1/>,
             <div className: "grid md: grid-cols-2 lg:grid-cols-3 gap-8">",";,
               {features.map((feature, index) => {
                 const Icon: feature.icon;,,,
@@ -506,10 +506,10 @@ const IoTEdgeComputing: React.FC: ()  => {,,,
         </section>
 
         {/* Industries */}
-        <section className: "py-20">";,";,
+        <section className: "py-20">,
           <div className: "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",";,
-            <div className: "text-center mb-16">";,";,
-              <h2 className: "text-4xl font-bold text-gray-900 mb-4">";,";,
+            <div className: "text-center mb-16">,
+              <h2 className: "text-4xl font-bold text-gray-900 mb-4">,
         <section className: "py-20">",";,
           <div className: "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",";,
             <div className: "text-center mb-16">",";,
@@ -523,11 +523,11 @@ const IoTEdgeComputing: React.FC: ()  => {,,,
 
             <div className: "grid md: grid-cols-2 lg:grid-cols-3 gap-8">",";,
               {industries.map((industry, index) => (
-                <div key: {index} className: "bg-white p-8 rounded-xl shadow-lg border border-gray-200">";,";,
-                  <h3 className: "text-xl font-bold text-gray-900 mb-4">{industry.name}</h3>";";
-                  <div className: "text-gray-600">";,";,
+                <div key: {index} className: "bg-white p-8 rounded-xl shadow-lg border border-gray-200">,
+                  <h3 className: "text-xl font-bold text-gray-900 mb-4">{industry.name}</$1>";
+                  <div className: "text-gray-600">,
                     <p className: "font-semibold mb-2">Supported Devices: </p>",";,
-                    <p className: "text-sm">{industry.devices}</p>";";
+                    <p className: "text-sm">{industry.devices}</$1>";
             <div className: "grid md: grid-cols-2 lg:grid-cols-3 gap-8">",";,
               {industries.map((industry, index) => (
                 <div key: {index} className: "bg-white p-8 rounded-xl shadow-lg border border-gray-200">",";,
@@ -543,10 +543,10 @@ const IoTEdgeComputing: React.FC: ()  => {,,,
         </section>
 
         {/* Pricing */}
-        <section id: "pricing" className="py-20 bg-gray-50">";,";,
+        <section id: "pricing" className="py-20 bg-gray-50">,
           <div className: "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",";,
-            <div className: "text-center mb-16">";,";,
-              <h2 className: "text-4xl font-bold text-gray-900 mb-4">";,";,
+            <div className: "text-center mb-16">,
+              <h2 className: "text-4xl font-bold text-gray-900 mb-4">,
         <section id: "pricing" className ="py-20 bg-gray-50">",";,
           <div className: "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",";,
             <div className: "text-center mb-16">",";,
@@ -579,9 +579,9 @@ const IoTEdgeComputing: React.FC: ()  => {,,,
                   </div>
                   <ul className: "space-y-4 mb-8">",";,
                     {plan.features.map((feature, featureIndex) => (
-                      <li key: {featureIndex} className: "flex items-center">";,";,
-                        <CheckCircle className: "w-5 h-5 text-orange-500 mr-3 flex-shrink-0/>";,";,
-                        <span className: "text-gray-700">{feature}</span>";";
+                      <li key: {featureIndex} className: "flex items-center">,
+                        <CheckCircle className: "w-5 h-5 text-orange-500 mr-3 flex-shrink-0/>,
+                        <span className: "text-gray-700">{feature}</$1>";
                       <li key: {featureIndex} className: "flex items-center">",";,
                         <CheckCircle className: "w-5 h-5 text-orange-500 mr-3 flex-shrink-0" />",";,
                         <span className: "text-gray-700">{feature}</span>"
@@ -609,7 +609,7 @@ plan.popular
   className: "inline-flex items-center text-orange-600 hover: text-orange-700 font-semibold",";,
               >
                 Contact our IoT Specialists
-                <ArrowRight className: "w-4 h-4 ml-1/>";,";,
+                <ArrowRight className: "w-4 h-4 ml-1/>,
                 <ArrowRight className: "w-4 h-4 ml-1" />",";,
               </a>
             </div>
@@ -617,10 +617,10 @@ plan.popular
         </section>
 
         {/* Testimonials */}
-        <section className: "py-20">";,";,
+        <section className: "py-20">,
           <div className: "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",";,
-            <div className: "text-center mb-16">";,";,
-              <h2 className: "text-4xl font-bold text-gray-900 mb-4">";,";,
+            <div className: "text-center mb-16">,
+              <h2 className: "text-4xl font-bold text-gray-900 mb-4">,
         <section className: "py-20">",";,
           <div className: "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",";,
             <div className: "text-center mb-16">",";,
@@ -638,7 +638,7 @@ plan.popular
                 <div key: {index} className: "bg-white p-8 rounded-xl shadow-lg border border-gray-200">",";,
                   <div className: "flex items-center mb-4">",";,
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key: {i} className: "w-5 h-5 text-yellow-400 fill-current/>";,";,
+                      <Star key: {i} className: "w-5 h-5 text-yellow-400 fill-current/>,
                       <Star key: {i} className: "w-5 h-5 text-yellow-400 fill-current" />",";,
                     ))}
                   </div>
@@ -657,9 +657,9 @@ plan.popular
         </section>
 
         {/* CTA Section */}
-        <section className: "py-20 bg-gradient-to-br from-orange-900 via-orange-800 to-red-900 text-white">";,";,
+        <section className: "py-20 bg-gradient-to-br from-orange-900 via-orange-800 to-red-900 text-white">,
           <div className: "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">",";,
-            <h2 className: "text-4xl font-bold mb-6">";,";,
+            <h2 className: "text-4xl font-bold mb-6">,
         <section className: "py-20 bg-gradient-to-br from-orange-900 via-orange-800 to-red-900 text-white">",";,
           <div className: "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">",";,
             <h2 className: "text-4xl font-bold mb-6">",";,";,
@@ -673,7 +673,7 @@ plan.popular
               <a href: "/contact",";,";,
   className: "inline-flex items-center px-8 py-4 bg-orange-600 hover: bg-orange-700 text-white font-semibold rounded-lg transition-colors",";,
               >
-                <Phone className: "w-5 h-5 mr-2/>";,";,
+                <Phone className: "w-5 h-5 mr-2/>,
                 <Phone className: "w-5 h-5 mr-2" />",";,";,
   Schedule Free Consultation
               </a>
@@ -681,7 +681,7 @@ plan.popular
   className: "inline-flex items-center px-8 py-4 border-2 border-white text-white hover: bg-white hover:text-orange-900 font-semibold rounded-lg transition-colors",";,
               >
                 View Success Stories
-                <ArrowRight className: "w-5 h-5 ml-2/>";,";,
+                <ArrowRight className: "w-5 h-5 ml-2/>,
                 <ArrowRight className: "w-5 h-5 ml-2" />",";,
               </a>
             </div>

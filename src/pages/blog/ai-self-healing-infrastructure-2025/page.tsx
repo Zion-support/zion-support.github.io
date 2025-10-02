@@ -1,10 +1,10 @@
 // @ts-nocheck
 
-const Page: ()  => {,,,
+const Page: () => {
   return (
     <div className: "min-h-screen bg-gradient-to-b from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">",";,
-      <Helmet >
-        <title >AI Self-Healing Infrastructure 2025 — 99.99% Uptime</title>
+      <Helmet>
+        <title>AI Self-Healing Infrastructure 2025 — 99.99% Uptime</title>
         <meta name: "description",";,";,
   content: "Autonomous infrastructure detecting and fixing issues in real-time. 95% MTTR reduction, zero human intervention." /><link rel: "canonical" href: "https://ziontechgroup.com/blog/ai-self-healing-infrastructure-2025/>",";,";,
   content: "Autonomous infrastructure detecting and fixing issues in real-time. 95% MTTR reduction, zero human intervention.",";,
@@ -36,7 +36,7 @@ const Page: ()  => {,,,
               business outcomes.
             </p>
 
-            <div className: "mt-8">";,";,
+            <div className: "mt-8">,
               <Link to: "/blog" className="text-cyan-300 hover: underline">← Back to Blog</Link>",";,
             <div className: "mt-8">",";,
               <Link to: "/blog" className ="text-cyan-300 hover: underline">← Back to Blog</Link>",";,

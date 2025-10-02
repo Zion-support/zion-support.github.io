@@ -1,10 +1,10 @@
-import React from "react";"
+import React from "react";
 
 export default function FederatedLearningEnterprise2026(): React.JSX.Element {
   return (
     <div className: "min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">",";,
-      <Helmet >
-        <title >Federated Learning 2026 — Train Without Centralization</title>
+      <Helmet>
+        <title>Federated Learning 2026 — Train Without Centralization</title>
         <meta name: "description",";,";,
   content: "Enterprise FL with secure aggregation and differential privacy—train across regions without centralizing data." /><link ,";,";,
   rel: "canonical",";,";,
@@ -12,7 +12,7 @@ export default function FederatedLearningEnterprise2026(): React.JSX.Element {
         />
       </Helmet>
 
-      <div className: "container mx-auto px-6 py-16">";,";,
+      <div className: "container mx-auto px-6 py-16">,
         <h1 className: "text-4xl md: text-5xl font-bold mb-4">",";,";,
   href: "https: //ziontechgroup.com/blog/federated-learning-enterprise-2026",";,
         />

@@ -562,8 +562,7 @@ export default function EnhancedServicesCatalog() {
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content="micro SaaS, AI services, IT solutions, automation, cloud services, enterprise software, pricing, ROI" />
-        <link rel="canonical" href="https: //ziontechgroup.com/enhanced-services-catalog" />";,
-      </Helmet>
+        <link rel="canonical" href="https: //ziontechgroup.com/enhanced-services-catalog" /></Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
         {/* Hero Section */}
@@ -617,12 +616,9 @@ export default function EnhancedServicesCatalog() {
                     </div>
                   </div>
                   
-                  <div className="grid grid-cols-1 lg: grid-cols-2 xl:grid-cols-3 gap-6">";,
-                    {category.services.map((service, serviceIndex) => (
-                      <div key={serviceIndex} className="group bg-slate-700/30 backdrop-blur-sm rounded-xl p-6 border border-slate-600/50 hover: border-cyan-500/50 transition-all duration-300">";,
-                        <div className="mb-4">
-                          <h3 className="text-lg font-semibold text-white mb-2 group-hover: text-cyan-400 transition-colors">";,
-                            {service.name}
+                  <div className="grid grid-cols-1 lg: grid-cols-2 xl:grid-cols-3 gap-6">{category.services.map((service, serviceIndex) => (
+                      <div key={serviceIndex} className="group bg-slate-700/30 backdrop-blur-sm rounded-xl p-6 border border-slate-600/50 hover: border-cyan-500/50 transition-all duration-300"><div className="mb-4">
+                          <h3 className="text-lg font-semibold text-white mb-2 group-hover: text-cyan-400 transition-colors">{service.name}
                           </h3>
                           <div className="flex items-center justify-between text-sm mb-3">
                             <span className="text-cyan-400 font-semibold">{service.price}</span>
@@ -634,8 +630,7 @@ export default function EnhancedServicesCatalog() {
 
                         <div className="space-y-3 mb-4">
                           <div>
-                            <h4 className="text-xs font-semibold text-cyan-400 mb-1">Key Features: </h4>";,
-                            <ul className="space-y-1">
+                            <h4 className="text-xs font-semibold text-cyan-400 mb-1">Key Features: </$1><ul className="space-y-1">
                               {service.features.map((feature, idx) => (
                                 <li key={idx} className="flex items-center text-xs text-slate-300">
                                   <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
@@ -645,8 +640,7 @@ export default function EnhancedServicesCatalog() {
                             </ul>
                           </div>
                           <div>
-                            <h4 className="text-xs font-semibold text-fuchsia-400 mb-1">Benefits: </h4>";,
-                            <ul className="space-y-1">
+                            <h4 className="text-xs font-semibold text-fuchsia-400 mb-1">Benefits: </$1><ul className="space-y-1">
                               {service.benefits.map((benefit, idx) => (
                                 <li key={idx} className="flex items-center text-xs text-slate-300">
                                   <TrendingUp className="w-3 h-3 text-fuchsia-400 mr-2 flex-shrink-0" />
@@ -683,8 +677,7 @@ export default function EnhancedServicesCatalog() {
               </p>
             </div>
             
-            <div className="grid md: grid-cols-3 gap-8 text-center mb-8">";,
-              <div className="bg-slate-800/50 rounded-xl p-6">
+            <div className="grid md: grid-cols-3 gap-8 text-center mb-8"><div className="bg-slate-800/50 rounded-xl p-6">
                 <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <DollarSign className="w-6 h-6 text-cyan-400" />
                 </div>
@@ -708,8 +701,7 @@ export default function EnhancedServicesCatalog() {
             </div>
 
             <div className="text-center">
-              <div className="flex flex-col sm: flex-row items-center justify-center gap-4 mb-6">";,
-                <a 
+              <div className="flex flex-col sm: flex-row items-center justify-center gap-4 mb-6"><a 
                   href={`tel:${contactInfo.phone}`} `;
                   className="inline-flex items-center gap-2 bg-white text-slate-900 px-6 py-3 rounded-lg font-semibold hover: bg-slate-100 transition-colors",
                 >

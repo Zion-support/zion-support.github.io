@@ -1,99 +1,108 @@
+#!/usr/bin/env node
 
-const fixes = [
-  // Fix import statements with comma issues
-  {
-    pattern: /import\s+(\w+)\s+from\s*,\s*['"`]([^'"`]+)['"`]/g,
-    replacement: "import $1 from '$2'"
-  }, {
-    pattern: /import\s+(\w+)\s+from\s*,\s*([^]+);/g,
-    replacement: "import $1 from $2;"
-  },
+const fs = require('fs');
+const path = require('path');
+
+// Function to fix common syntax errors
+function fixSyntaxErrors(content) {
+  // Fix import statements with extra semicolons
+  content = content.replace(/import\s+([^;]+);";/g, 'import $1;');
+  content = content.replace(/import\s+([^;]+);"/g, 'import $1;');
   
-  // Fix missing semicolons in function calls
-  {
-    pattern: /(\w+\([^)]*\))\s*\)\s*}/g,
-    replacement: "$1);"
-  },
+  // Fix function declarations with extra commas
+  content = content.replace(/const\s+(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*\{\s*,\s*,\s*,/g, 'const $1: React.FC = () => {');
+  content = content.replace(/const\s+(\w+):\s*\(\)\s*=>\s*\{\s*,\s*,\s*,/g, 'const $1: () => {');
   
-  // Fix unterminated strings
-  {
-    pattern: /(['"`])([^'"`]*)\s*$/gm,
-    replacement: (match, quote, content) => {
-      if (!content.includes(quote)) {
-        return match + quote}
-      return match}
-  },
+  // Fix JSX attributes with extra semicolons and commas
+  content = content.replace(/className:\s*"([^"]+)";\s*,\s*,\s*/g, 'className="$1"');
+  content = content.replace(/name:\s*"([^"]+)";\s*,\s*,\s*/g, 'name="$1"');
+  content = content.replace(/content:\s*"([^"]+)";\s*,\s*,\s*/g, 'content="$1"');
   
-  // Fix missing commas in object literals
-  {
-    pattern: /(\w+:\s*[^}]+)\s*(\w+:\s*[^}]+)/g,
-    replacement: "$1,\n    $2"
-  },
+  // Fix JSX closing tags with extra semicolons
+  content = content.replace(/<\/\w+>";\s*,\s*,\s*/g, '</$1>');
+  content = content.replace(/<\/\w+>";\s*,\s*/g, '</$1>');
+  content = content.replace(/<\/\w+>";/g, '</$1>');
   
-  // Fix missing semicolons after statements
-  {
-
-];
-
-function fixFile(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let originalContent = content;
-    
-
-function fixSyntaxErrors(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false];
-
-
-    // Apply fixes
-    fixes.forEach(fix => {
-      if (typeof fix.replacement === 'function') {
-        content = content.replace(fix.pattern, fix.replacement)} else {
-        content = content.replace(fix.pattern, fix.replacement)}
-    });
-
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed: ${filePath}`);
-
-      return true}
-    
-    return false} catch (error) { 
-    console.error(`Error fixing ${filePath }:`, error.message);
-    return false}
+  // Fix JSX opening tags with extra semicolons
+  content = content.replace(/<(\w+)\s+([^>]+)>";\s*,\s*,\s*/g, '<$1 $2>');
+  content = content.replace(/<(\w+)\s+([^>]+)>";\s*,\s*/g, '<$1 $2>');
+  content = content.replace(/<(\w+)\s+([^>]+)>";/g, '<$1 $2>');
+  
+  // Fix Helmet tags
+  content = content.replace(/<Helmet\s*>/g, '<Helmet>');
+  content = content.replace(/<title\s*>/g, '<title>');
+  
+  // Fix duplicate imports
+  const lines = content.split('\n');
+  const seenImports = new Set();
+  const filteredLines = [];
+  
+  for (const line of lines) {
+    if (line.trim().startsWith('import ')) {
+      if (!seenImports.has(line.trim())) {
+        seenImports.add(line.trim());
+        filteredLines.push(line);
+      }
+    } else {
+      filteredLines.push(line);
+    }
+  }
+  
+  return filteredLines.join('\n');
 }
 
+// Function to process a file
+function processFile(filePath) {
+  try {
+    const content = fs.readFileSync(filePath, 'utf8');
+    const fixedContent = fixSyntaxErrors(content);
+    
+    if (content !== fixedContent) {
+      fs.writeFileSync(filePath, fixedContent, 'utf8');
+      console.log(`Fixed: ${filePath}`);
+      return true;
+    }
+    return false;
+  } catch (error) {
+    console.error(`Error processing ${filePath}:`, error.message);
+    return false;
+  }
+}
 
-  const files = fs.readdirSync(dirPath);
-
-  let fixedCount = 0;
-
-function walkDir(dir) {
-  const filesInDir = fs.readdirSync(dir);
-  for (const file of filesInDir) {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
-
-    if (
-      stat.isDirectory() &&
-      !file.startsWith(`.`) &&
-      file !== 'node_modules'
-    ) {
-      fixedCount += fixFilesInDirectory(filePath);
-
-      if (fixSyntaxErrors(filePath)) {
-        fixedCount++}
+// Function to recursively find TypeScript/TSX files
+function findTsFiles(dir) {
+  const files = [];
+  
+  function traverse(currentDir) {
+    const items = fs.readdirSync(currentDir);
+    
+    for (const item of items) {
+      const fullPath = path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+        traverse(fullPath);
+      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts'))) {
+        files.push(fullPath);
+      }
     }
   }
   
   traverse(dir);
-  return files}
+  return files;
+}
 
+// Main execution
+const srcDir = path.join(__dirname, 'src');
+const files = findTsFiles(srcDir);
 
-console.log('🔧 Starting syntax error fixes...');
-const fixedCount = fixFilesInDirectory('.');
-console.log(`✅ Fixed syntax errors in ${fixedCount} files`);
+console.log(`Found ${files.length} TypeScript files to process...`);
 
+let fixedCount = 0;
+for (const file of files) {
+  if (processFile(file)) {
+    fixedCount++;
+  }
+}
 
-
+console.log(`Fixed ${fixedCount} files out of ${files.length} total files.`);

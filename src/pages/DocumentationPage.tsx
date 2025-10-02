@@ -83,8 +83,7 @@ const DocumentationPage: React.FC = () => {,
         {/* Header */}
         <section className="bg-gradient-to-r from-gray-800 to-gray-900 text-white py-16">
           <div className="container mx-auto px-6 text-center">
-            <h1 className="text-4xl md: text-5xl font-bold mb-4">Documentation</h1>";,
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <h1 className="text-4xl md: text-5xl font-bold mb-4">Documentation</$1><p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Comprehensive guides, API documentation, and resources to help you get the most out of our solutions.
             </p>
           </div>
@@ -113,10 +112,8 @@ const DocumentationPage: React.FC = () => {,
         {/* Documentation Sections */}
         <section className="py-20">
           <div className="container mx-auto px-6">
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">";,
-              {documentationSections.map((section, index) => (
-                <div key={index} className="bg-white p-8 rounded-xl shadow-sm hover: shadow-lg transition-shadow">";,
-                  <div className="text-4xl mb-4">{section.icon}</div>
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">{documentationSections.map((section, index) => (
+                <div key={index} className="bg-white p-8 rounded-xl shadow-sm hover: shadow-lg transition-shadow"><div className="text-4xl mb-4">{section.icon}</div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">{section.title}</h3>
                   <p className="text-gray-600 mb-6">{section.description}</p>
                   
@@ -148,45 +145,28 @@ const DocumentationPage: React.FC = () => {,
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md: grid-cols-2 gap-8">";,
-              <div className="bg-gray-50 p-8 rounded-xl">
+            <div className="grid grid-cols-1 md: grid-cols-2 gap-8"><div className="bg-gray-50 p-8 rounded-xl">
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Quick Start Guides</h3>
                 <ul className="space-y-2 text-gray-600">
-                  <li>• <Link to="/docs/quick-start" className="text-blue-600 hover: text-blue-800">Getting Started with AI Services</Link></li>";,
-                  <li>• <Link to="/docs/micro-saas-setup" className="text-blue-600 hover: text-blue-800">Setting Up Your Micro SaaS</Link></li>";,
-                  <li>• <Link to="/docs/cloud-migration" className="text-blue-600 hover: text-blue-800">Cloud Migration Guide</Link></li>";,
-                  <li>• <Link to="/docs/automation-setup" className="text-blue-600 hover: text-blue-800">Automation Setup</Link></li>";,
-                </ul>
+                  <li>• <Link to="/docs/quick-start" className="text-blue-600 hover: text-blue-800">Getting Started with AI Services</Link></$1><li>• <Link to="/docs/micro-saas-setup" className="text-blue-600 hover: text-blue-800">Setting Up Your Micro SaaS</Link></$1><li>• <Link to="/docs/cloud-migration" className="text-blue-600 hover: text-blue-800">Cloud Migration Guide</Link></$1><li>• <Link to="/docs/automation-setup" className="text-blue-600 hover: text-blue-800">Automation Setup</Link></$1></ul>
               </div>
               
               <div className="bg-gray-50 p-8 rounded-xl">
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Integration Guides</h3>
                 <ul className="space-y-2 text-gray-600">
-                  <li>• <Link to="/docs/api-integration" className="text-blue-600 hover: text-blue-800">API Integration</Link></li>";,
-                  <li>• <Link to="/docs/webhook-setup" className="text-blue-600 hover: text-blue-800">Webhook Configuration</Link></li>";,
-                  <li>• <Link to="/docs/sdk-integration" className="text-blue-600 hover: text-blue-800">SDK Integration</Link></li>";,
-                  <li>• <Link to="/docs/third-party-apis" className="text-blue-600 hover: text-blue-800">Third-party API Integration</Link></li>";,
-                </ul>
+                  <li>• <Link to="/docs/api-integration" className="text-blue-600 hover: text-blue-800">API Integration</Link></$1><li>• <Link to="/docs/webhook-setup" className="text-blue-600 hover: text-blue-800">Webhook Configuration</Link></$1><li>• <Link to="/docs/sdk-integration" className="text-blue-600 hover: text-blue-800">SDK Integration</Link></$1><li>• <Link to="/docs/third-party-apis" className="text-blue-600 hover: text-blue-800">Third-party API Integration</Link></$1></ul>
               </div>
               
               <div className="bg-gray-50 p-8 rounded-xl">
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Troubleshooting</h3>
                 <ul className="space-y-2 text-gray-600">
-                  <li>• <Link to="/docs/common-issues" className="text-blue-600 hover: text-blue-800">Common Issues</Link></li>";,
-                  <li>• <Link to="/docs/error-codes" className="text-blue-600 hover: text-blue-800">Error Codes Reference</Link></li>";,
-                  <li>• <Link to="/docs/performance-optimization" className="text-blue-600 hover: text-blue-800">Performance Optimization</Link></li>";,
-                  <li>• <Link to="/docs/debugging-guide" className="text-blue-600 hover: text-blue-800">Debugging Guide</Link></li>";,
-                </ul>
+                  <li>• <Link to="/docs/common-issues" className="text-blue-600 hover: text-blue-800">Common Issues</Link></$1><li>• <Link to="/docs/error-codes" className="text-blue-600 hover: text-blue-800">Error Codes Reference</Link></$1><li>• <Link to="/docs/performance-optimization" className="text-blue-600 hover: text-blue-800">Performance Optimization</Link></$1><li>• <Link to="/docs/debugging-guide" className="text-blue-600 hover: text-blue-800">Debugging Guide</Link></$1></ul>
               </div>
               
               <div className="bg-gray-50 p-8 rounded-xl">
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Advanced Topics</h3>
                 <ul className="space-y-2 text-gray-600">
-                  <li>• <Link to="/docs/custom-models" className="text-blue-600 hover: text-blue-800">Custom AI Models</Link></li>";,
-                  <li>• <Link to="/docs/scaling-guide" className="text-blue-600 hover: text-blue-800">Scaling Your Solution</Link></li>";,
-                  <li>• <Link to="/docs/security-hardening" className="text-blue-600 hover: text-blue-800">Security Hardening</Link></li>";,
-                  <li>• <Link to="/docs/monitoring-setup" className="text-blue-600 hover: text-blue-800">Monitoring & Alerting</Link></li>";,
-                </ul>
+                  <li>• <Link to="/docs/custom-models" className="text-blue-600 hover: text-blue-800">Custom AI Models</Link></$1><li>• <Link to="/docs/scaling-guide" className="text-blue-600 hover: text-blue-800">Scaling Your Solution</Link></$1><li>• <Link to="/docs/security-hardening" className="text-blue-600 hover: text-blue-800">Security Hardening</Link></$1><li>• <Link to="/docs/monitoring-setup" className="text-blue-600 hover: text-blue-800">Monitoring & Alerting</Link></$1></ul>
               </div>
             </div>
           </div>
@@ -202,8 +182,7 @@ const DocumentationPage: React.FC = () => {,
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md: grid-cols-3 gap-8">";,
-              <div className="bg-white p-8 rounded-xl shadow-sm text-center">
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-8"><div className="bg-white p-8 rounded-xl shadow-sm text-center">
                 <div className="text-4xl mb-4">💬</div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Live Chat</h3>
                 <p className="text-gray-600 mb-4">Get instant help from our support team</p>
@@ -249,8 +228,7 @@ const DocumentationPage: React.FC = () => {,
             <p className="text-xl mb-8 text-gray-300 max-w-2xl mx-auto">
               Explore our solutions and start building with our comprehensive documentation and support.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">";,
-              <Link 
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"><Link 
                 to="/services" 
                 className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover: bg-blue-700 transition-colors",
               >

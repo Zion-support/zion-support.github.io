@@ -1,17 +1,17 @@
-import React from "react";"
+import React from "react";
 
 export default function FederatedLearningZeroPII2025(): React.JSX.Element {
   return (
     <div className: "min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">",";,
-      <Helmet >
-        <title >Federated Learning — Zero‑PII Personalization at the Edge</title>
+      <Helmet>
+        <title>Federated Learning — Zero‑PII Personalization at the Edge</title>
         <meta name: "description",";,";,
   content: "Scoped IDs, on‑device training, DP noise, and attestations enabling privacy‑preserving learning worldwide." /><link rel: "canonical",";,";,
   href: "https://ziontechgroup.com/blog/edge-2025-sept-30-federated-learning-zero-pii",";,
         />
       </Helmet>
 
-      <div className: "container mx-auto px-6 py-16">";,";,
+      <div className: "container mx-auto px-6 py-16">,
         <h1 className: "text-4xl md: text-5xl font-bold mb-4">",";,";,
   href: "https: //ziontechgroup.com/blog/edge-2025-sept-30-federated-learning-zero-pii",";,
         />

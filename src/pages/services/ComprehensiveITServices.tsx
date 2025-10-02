@@ -89,8 +89,7 @@ const ComprehensiveITServices: React.FC = () => {,
         {/* Header */}
         <section className="bg-gradient-to-r from-purple-600 via-violet-600 to-indigo-600 text-white py-16">
           <div className="container mx-auto px-6 text-center">
-            <h1 className="text-4xl md: text-5xl font-bold mb-4">Comprehensive IT Services</h1>";,
-            <p className="text-xl text-purple-100 max-w-3xl mx-auto">
+            <h1 className="text-4xl md: text-5xl font-bold mb-4">Comprehensive IT Services</$1><p className="text-xl text-purple-100 max-w-3xl mx-auto">
               End-to-end IT solutions that modernize your infrastructure, enhance security, and drive digital transformation for sustainable growth.
             </p>
           </div>
@@ -99,10 +98,8 @@ const ComprehensiveITServices: React.FC = () => {,
         {/* Services Grid */}
         <section className="py-20">
           <div className="container mx-auto px-6">
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">";,
-              {itServices.map((service, index) => (
-                <div key={index} className="bg-white p-8 rounded-xl shadow-sm hover: shadow-lg transition-all duration-300 border border-gray-100">";,
-                  <div className="text-4xl mb-4">{service.icon}</div>
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">{itServices.map((service, index) => (
+                <div key={index} className="bg-white p-8 rounded-xl shadow-sm hover: shadow-lg transition-all duration-300 border border-gray-100"><div className="text-4xl mb-4">{service.icon}</div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
                   <p className="text-gray-600 mb-6">{service.description}</p>
                   
@@ -116,13 +113,11 @@ const ComprehensiveITServices: React.FC = () => {,
                   </ul>
 
                   <div className="mb-6 p-4 bg-purple-50 rounded-lg border border-purple-200">
-                    <h4 className="font-semibold text-purple-800 mb-2">Pricing: </h4>";,
-                    <p className="text-purple-700 font-medium">{service.pricing}</p>
+                    <h4 className="font-semibold text-purple-800 mb-2">Pricing: </$1><p className="text-purple-700 font-medium">{service.pricing}</p>
                   </div>
 
                   <div className="mb-6">
-                    <h4 className="font-semibold text-gray-900 mb-2">Key Benefits: </h4>";,
-                    <ul className="space-y-1">
+                    <h4 className="font-semibold text-gray-900 mb-2">Key Benefits: </$1><ul className="space-y-1">
                       {service.benefits.map((benefit, benefitIndex) => (
                         <li key={benefitIndex} className="text-sm text-gray-600 flex items-center">
                           <span className="w-1.5 h-1.5 bg-purple-500 rounded-full mr-2"></span>
@@ -133,8 +128,7 @@ const ComprehensiveITServices: React.FC = () => {,
                   </div>
 
                   <div className="mb-6">
-                    <h4 className="font-semibold text-gray-900 mb-2">Technologies: </h4>";,
-                    <div className="flex flex-wrap gap-2">
+                    <h4 className="font-semibold text-gray-900 mb-2">Technologies: </$1><div className="flex flex-wrap gap-2">
                       {service.technologies.map((tech, techIndex) => (
                         <span key={techIndex} className="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">
                           {tech}
@@ -165,8 +159,7 @@ const ComprehensiveITServices: React.FC = () => {,
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md: grid-cols-4 gap-8">";,
-              <div className="bg-gradient-to-br from-blue-50 to-indigo-100 p-6 rounded-xl text-center border border-blue-200">
+            <div className="grid grid-cols-1 md: grid-cols-4 gap-8"><div className="bg-gradient-to-br from-blue-50 to-indigo-100 p-6 rounded-xl text-center border border-blue-200">
                 <div className="text-4xl mb-4">⏱️</div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Response Time</h3>
                 <p className="text-gray-600">15 minutes for critical issues, 1 hour for standard requests</p>
@@ -203,8 +196,7 @@ const ComprehensiveITServices: React.FC = () => {,
               </p>
             </div>
             
-            <div className="grid grid-cols-2 md: grid-cols-6 gap-8">";,
-              {[
+            <div className="grid grid-cols-2 md: grid-cols-6 gap-8">{[
                 { name: "Healthcare", logo: "🏥", description: "HIPAA compliant solutions" },";
                 { name: "Finance", logo: "🏦", description: "PCI DSS compliance" },";
                 { name: "E-commerce", logo: "🛒", description: "Scalable platforms" },";
@@ -229,8 +221,7 @@ const ComprehensiveITServices: React.FC = () => {,
             <p className="text-xl mb-8 text-purple-100 max-w-2xl mx-auto">
               Let's discuss how our comprehensive IT services can transform your technology stack and drive business growth.';
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">";,
-              <Link 
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"><Link 
                 to="/contact" 
                 className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover: bg-gray-100 transition-colors shadow-lg",
               >

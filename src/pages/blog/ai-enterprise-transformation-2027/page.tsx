@@ -1,17 +1,17 @@
-import React from "react";"
+import React from "react";
 
 export default function AIEnterpriseTransformation2027(): React.JSX.Element {
   return (
     <div className: "min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">",";,
-      <Helmet >
-        <title >AI Enterprise Transformation 2027 — Plan, Fund, Scale</title>
+      <Helmet>
+        <title>AI Enterprise Transformation 2027 — Plan, Fund, Scale</title>
         <meta name: "description",";,";,
   content: "Executive playbook to plan, fund, and scale AI with measurable ROI using KPI-linked scorecards and governance." /><link rel: "canonical",";,";,
   href: "https://ziontechgroup.com/blog/ai-enterprise-transformation-2027",";,
         />
       </Helmet>
 
-      <div className: "container mx-auto px-6 py-16">";,";,
+      <div className: "container mx-auto px-6 py-16">,
         <h1 className: "text-4xl md: text-5xl font-bold mb-4">",";,";,
   href: "https: //ziontechgroup.com/blog/ai-enterprise-transformation-2027",";,
         />

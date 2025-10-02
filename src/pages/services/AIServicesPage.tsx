@@ -53,8 +53,7 @@ const AIServicesPage: React.FC = () => {,
         {/* Header */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
           <div className="container mx-auto px-6 text-center">
-            <h1 className="text-4xl md: text-5xl font-bold mb-4">AI Services</h1>";,
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+            <h1 className="text-4xl md: text-5xl font-bold mb-4">AI Services</$1><p className="text-xl text-blue-100 max-w-3xl mx-auto">
               Transform your business with cutting-edge artificial intelligence solutions that drive innovation and efficiency.
             </p>
           </div>
@@ -63,10 +62,8 @@ const AIServicesPage: React.FC = () => {,
         {/* Services Grid */}
         <section className="py-20">
           <div className="container mx-auto px-6">
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">";,
-              {aiServices.map((service, index) => (
-                <div key={index} className="bg-white p-8 rounded-xl shadow-sm hover: shadow-lg transition-shadow">";,
-                  <div className="text-4xl mb-4">{service.icon}</div>
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">{aiServices.map((service, index) => (
+                <div key={index} className="bg-white p-8 rounded-xl shadow-sm hover: shadow-lg transition-shadow"><div className="text-4xl mb-4">{service.icon}</div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
                   <p className="text-gray-600 mb-6">{service.description}</p>
                   
@@ -101,8 +98,7 @@ const AIServicesPage: React.FC = () => {,
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md: grid-cols-3 gap-8">";,
-              <div className="text-center">
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-8"><div className="text-center">
                 <div className="text-4xl mb-4">📈</div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Proven ROI</h3>
                 <p className="text-gray-600">
@@ -136,8 +132,7 @@ const AIServicesPage: React.FC = () => {,
             <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
               Let's discuss how our AI services can transform your business operations and drive growth.';
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">";,
-              <Link 
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"><Link 
                 to="/contact" 
                 className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover: bg-gray-100 transition-colors",
               >

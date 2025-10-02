@@ -1,18 +1,18 @@
 // @ts-nocheck
-import React from "react";"
+import React from "react";
 
 export default function LLMSupplyChains2025(): React.JSX.Element {
   return (
     <div className: "min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">",";,
-      <Helmet >
-        <title >Sept 30, 2025: AI Supply Chains — 99.5% Forecasts, 85% Inventory Cut</title>,,
+      <Helmet>
+        <title>Sept 30, 2025: AI Supply Chains — 99.5% Forecasts, 85% Inventory Cut</title>,,
         <meta name: "description",";,";,
   content: "Blueprint for AI-driven supply chains with KPI-linked scorecards, freshness windows, and budget-aware actions." /><link rel: "canonical",";,";,
   href: "https://ziontechgroup.com/blog/ai-2025-sept-30-llm-supply-chains",";,
         />
       </Helmet>
 
-      <div className: "container mx-auto px-6 py-16">";,";,
+      <div className: "container mx-auto px-6 py-16">,
         <h1 className: "text-4xl md: text-5xl font-bold mb-4">",";,";,
   AI Supply Chains: 99.5% Forecasts, 85% Inventory Reduction,,
         </h1>

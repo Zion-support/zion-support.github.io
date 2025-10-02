@@ -89,8 +89,7 @@ const InnovativeMicroSAAS: React.FC = () => {,
         {/* Header */}
         <section className="bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600 text-white py-16">
           <div className="container mx-auto px-6 text-center">
-            <h1 className="text-4xl md: text-5xl font-bold mb-4">Innovative Micro SaaS Solutions</h1>";,
-            <p className="text-xl text-green-100 max-w-3xl mx-auto">
+            <h1 className="text-4xl md: text-5xl font-bold mb-4">Innovative Micro SaaS Solutions</$1><p className="text-xl text-green-100 max-w-3xl mx-auto">
               Specialized software solutions that solve specific business problems with AI-powered intelligence and seamless integration.
             </p>
           </div>
@@ -99,10 +98,8 @@ const InnovativeMicroSAAS: React.FC = () => {,
         {/* Services Grid */}
         <section className="py-20">
           <div className="container mx-auto px-6">
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">";,
-              {microSAASServices.map((service, index) => (
-                <div key={index} className="bg-white p-8 rounded-xl shadow-sm hover: shadow-lg transition-all duration-300 border border-gray-100">";,
-                  <div className="text-4xl mb-4">{service.icon}</div>
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">{microSAASServices.map((service, index) => (
+                <div key={index} className="bg-white p-8 rounded-xl shadow-sm hover: shadow-lg transition-all duration-300 border border-gray-100"><div className="text-4xl mb-4">{service.icon}</div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
                   <p className="text-gray-600 mb-6">{service.description}</p>
                   
@@ -116,13 +113,11 @@ const InnovativeMicroSAAS: React.FC = () => {,
                   </ul>
 
                   <div className="mb-6 p-4 bg-green-50 rounded-lg border border-green-200">
-                    <h4 className="font-semibold text-green-800 mb-2">Pricing: </h4>";,
-                    <p className="text-green-700 font-medium">{service.pricing}</p>
+                    <h4 className="font-semibold text-green-800 mb-2">Pricing: </$1><p className="text-green-700 font-medium">{service.pricing}</p>
                   </div>
 
                   <div className="mb-6">
-                    <h4 className="font-semibold text-gray-900 mb-2">Key Benefits: </h4>";,
-                    <ul className="space-y-1">
+                    <h4 className="font-semibold text-gray-900 mb-2">Key Benefits: </$1><ul className="space-y-1">
                       {service.benefits.map((benefit, benefitIndex) => (
                         <li key={benefitIndex} className="text-sm text-gray-600 flex items-center">
                           <span className="w-1.5 h-1.5 bg-green-500 rounded-full mr-2"></span>
@@ -133,8 +128,7 @@ const InnovativeMicroSAAS: React.FC = () => {,
                   </div>
 
                   <div className="mb-6">
-                    <h4 className="font-semibold text-gray-900 mb-2">Ideal For: </h4>";,
-                    <div className="flex flex-wrap gap-2">
+                    <h4 className="font-semibold text-gray-900 mb-2">Ideal For: </$1><div className="flex flex-wrap gap-2">
                       {service.useCases.map((useCase, useCaseIndex) => (
                         <span key={useCaseIndex} className="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">
                           {useCase}
@@ -165,8 +159,7 @@ const InnovativeMicroSAAS: React.FC = () => {,
               </p>
             </div>
             
-            <div className="grid grid-cols-2 md: grid-cols-4 gap-8">";,
-              <div className="bg-gradient-to-br from-blue-50 to-indigo-100 p-6 rounded-xl text-center border border-blue-200">
+            <div className="grid grid-cols-2 md: grid-cols-4 gap-8"><div className="bg-gradient-to-br from-blue-50 to-indigo-100 p-6 rounded-xl text-center border border-blue-200">
                 <h3 className="text-lg font-bold text-gray-900 mb-2">Frontend</h3>
                 <p className="text-gray-600">React, Vue.js, Next.js</p>
               </div>
@@ -199,8 +192,7 @@ const InnovativeMicroSAAS: React.FC = () => {,
               </p>
             </div>
             
-            <div className="grid grid-cols-2 md: grid-cols-6 gap-8">";,
-              {[
+            <div className="grid grid-cols-2 md: grid-cols-6 gap-8">{[
                 { name: "Salesforce", logo: "🔄" },";
                 { name: "HubSpot", logo: "📊" },";
                 { name: "Slack", logo: "💬" },";
@@ -224,8 +216,7 @@ const InnovativeMicroSAAS: React.FC = () => {,
             <p className="text-xl mb-8 text-green-100 max-w-2xl mx-auto">
               Discover how our innovative micro SaaS solutions can solve your specific business challenges and drive growth.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">";,
-              <Link 
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"><Link 
                 to="/contact" 
                 className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover: bg-gray-100 transition-colors shadow-lg",
               >

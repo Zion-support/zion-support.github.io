@@ -29,16 +29,16 @@ export default function NextGenCloudSecurityAI2025Page(): void {
         </header>
 
         {/* Content */}
-        <div className: "prose prose-invert prose-lg max-w-none">";,";,
-          <section className: "mb-12 bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">";,";,
-            <h2 className: "text-3xl font-bold text-white mb-6">Executive Summary</h2>";,";,
+        <div className: "prose prose-invert prose-lg max-w-none">,
+          <section className: "mb-12 bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">,
+            <h2 className: "text-3xl font-bold text-white mb-6">Executive Summary</$1>";,
             <p className: "text-gray-300 leading-relaxed mb-4">,";,";,
   Traditional security approaches can't keep pace with modern cloud threats. AI-powered cloud security systems analyze 100 billion+ security events daily, detect threats before they materialize, and respond autonomously in milliseconds. Organizations implementing AI security reduce breaches by 99%, cut incident response time from hours to seconds, and achieve full regulatory compliance with automated evidence collection.;';';
             </p>
             <div className: "grid md: grid-cols-2 gap-4 mt-6">",";,
-              <div className: "bg-red-500/10 rounded-xl p-6 border border-red-500/20">";,";,
-                <div className: "text-2xl font-bold text-red-300 mb-2">99.97% Detection Rate</div>";,";,
-                <p className: "text-sm text-gray-300">AI identifies threats invisible to traditional security tools</p>";,";,
+              <div className: "bg-red-500/10 rounded-xl p-6 border border-red-500/20">,
+                <div className: "text-2xl font-bold text-red-300 mb-2">99.97% Detection Rate</$1>";,
+                <p className: "text-sm text-gray-300">AI identifies threats invisible to traditional security tools</$1>";,
         <div className: "prose prose-invert prose-lg max-w-none">",";,
           <section className: "mb-12 bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">",";,
             <h2 className: "text-3xl font-bold text-white mb-6">Executive Summary</h2>",";,
@@ -57,14 +57,14 @@ export default function NextGenCloudSecurityAI2025Page(): void {
             </div>
           </section>
 
-          <section className: "mb-12">";,";,
-            <h2 className: "text-3xl font-bold text-white mb-6">The AI-Powered Security Platform</h2>";,";,
+          <section className: "mb-12">,
+            <h2 className: "text-3xl font-bold text-white mb-6">The AI-Powered Security Platform</$1>";,
             <p className: "text-gray-300 leading-relaxed mb-6">,";,";,
   Our comprehensive security platform combines multiple AI-driven defense layers: </p>,,
-            <div className: "space-y-6">";,";,
-              <div className: "bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">";,";,
-                <h3 className: "text-xl font-bold text-red-300 mb-3">🛡️ Predictive Threat Intelligence</h3>";,";,
-                <p className: "text-gray-300 leading-relaxed">";,";,
+            <div className: "space-y-6">,
+              <div className: "bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">,
+                <h3 className: "text-xl font-bold text-red-300 mb-3">🛡️ Predictive Threat Intelligence</$1>";,
+                <p className: "text-gray-300 leading-relaxed">,
           <section className: "mb-12">",";,
             <h2 className: "text-3xl font-bold text-white mb-6">The AI-Powered Security Platform</h2>",";,
             <p className: "text-gray-300 leading-relaxed mb-6">",";,";,
@@ -107,14 +107,14 @@ export default function NextGenCloudSecurityAI2025Page(): void {
             </div>
           </section>
 
-          <section className: "mb-12 bg-gradient-to-r from-red-500/10 to-orange-500/10 rounded-2xl p-8 border border-red-500/20">";,";,
+          <section className: "mb-12 bg-gradient-to-r from-red-500/10 to-orange-500/10 rounded-2xl p-8 border border-red-500/20">,
             <h2 className: "text-3xl font-bold text-white mb-6">Success Story: Healthcare Provider Transformation</h2>",";,
             <p className: "text-gray-300 leading-relaxed mb-6">,";,";,
   A national healthcare provider securing 10M+ patient records deployed our AI security platform: </p>,,
             <div className: "grid md: grid-cols-3 gap-4 mb-6">",";,
-              <div className: "bg-white/10 rounded-xl p-6">";,";,
-                <div className: "text-3xl font-bold text-red-300 mb-2">Zero Breaches</div>";,";,
-                <p className: "text-sm text-gray-300">In 18 Months of Operation</p>";,";,
+              <div className: "bg-white/10 rounded-xl p-6">,
+                <div className: "text-3xl font-bold text-red-300 mb-2">Zero Breaches</$1>";,
+                <p className: "text-sm text-gray-300">In 18 Months of Operation</$1>";,
           <section className: "mb-12 bg-gradient-to-r from-red-500/10 to-orange-500/10 rounded-2xl p-8 border border-red-500/20">",";,
             <h2 className: "text-3xl font-bold text-white mb-6">Success Story: Healthcare Provider Transformation</h2>",";,
             <p className: "text-gray-300 leading-relaxed mb-6">",";,";,
@@ -138,12 +138,12 @@ export default function NextGenCloudSecurityAI2025Page(): void {
             </p>
           </section>
 
-          <section className: "mb-12">";,";,
-            <h2 className: "text-3xl font-bold text-white mb-6">Key Security Capabilities</h2>";,";,
-            <div className: "space-y-6">";,";,
-              <div className: "bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">";,";,
-                <h3 className: "text-xl font-bold text-red-300 mb-3">🎯 Advanced Threat Detection</h3>";,";,
-                <ul className: "text-gray-300 space-y-2 ml-6 list-disc">";,";,
+          <section className: "mb-12">,
+            <h2 className: "text-3xl font-bold text-white mb-6">Key Security Capabilities</$1>";,
+            <div className: "space-y-6">,
+              <div className: "bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">,
+                <h3 className: "text-xl font-bold text-red-300 mb-3">🎯 Advanced Threat Detection</$1>";,
+                <ul className: "text-gray-300 space-y-2 ml-6 list-disc">,
           <section className: "mb-12">",";,
             <h2 className: "text-3xl font-bold text-white mb-6">Key Security Capabilities</h2>",";,
             <div className: "space-y-6">",";,
@@ -157,9 +157,9 @@ export default function NextGenCloudSecurityAI2025Page(): void {
                 </ul>
               </div>
 
-              <div className: "bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">";,";,
-                <h3 className: "text-xl font-bold text-orange-300 mb-3">🔒 Data Protection</h3>";,";,
-                <ul className: "text-gray-300 space-y-2 ml-6 list-disc">";,";,
+              <div className: "bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">,
+                <h3 className: "text-xl font-bold text-orange-300 mb-3">🔒 Data Protection</$1>";,
+                <ul className: "text-gray-300 space-y-2 ml-6 list-disc">,
               <div className: "bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">",";,
                 <h3 className: "text-xl font-bold text-orange-300 mb-3">🔒 Data Protection</h3>",";,
                 <ul className: "text-gray-300 space-y-2 ml-6 list-disc">",";,
@@ -170,9 +170,9 @@ export default function NextGenCloudSecurityAI2025Page(): void {
                 </ul>
               </div>
 
-              <div className: "bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">";,";,
-                <h3 className: "text-xl font-bold text-yellow-300 mb-3">🌐 Cloud-Native Security</h3>";,";,
-                <ul className: "text-gray-300 space-y-2 ml-6 list-disc">";,";,
+              <div className: "bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">,
+                <h3 className: "text-xl font-bold text-yellow-300 mb-3">🌐 Cloud-Native Security</$1>";,
+                <ul className: "text-gray-300 space-y-2 ml-6 list-disc">,
               <div className: "bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">",";,
                 <h3 className: "text-xl font-bold text-yellow-300 mb-3">🌐 Cloud-Native Security</h3>",";,
                 <ul className: "text-gray-300 space-y-2 ml-6 list-disc">",";,
@@ -185,8 +185,8 @@ export default function NextGenCloudSecurityAI2025Page(): void {
             </div>
           </section>
 
-          <section className: "mb-12 bg-gradient-to-r from-red-500/20 to-yellow-500/20 rounded-2xl p-8 border border-red-500/30">";,";,
-            <h2 className: "text-3xl font-bold text-white mb-6">Threat Landscape 2025</h2>";,";,
+          <section className: "mb-12 bg-gradient-to-r from-red-500/20 to-yellow-500/20 rounded-2xl p-8 border border-red-500/30">,
+            <h2 className: "text-3xl font-bold text-white mb-6">Threat Landscape 2025</$1>";,
             <div className: "grid md: grid-cols-2 gap-6">",";,
           <section className: "mb-12 bg-gradient-to-r from-red-500/20 to-yellow-500/20 rounded-2xl p-8 border border-red-500/30">",";,
             <h2 className: "text-3xl font-bold text-white mb-6">Threat Landscape 2025</h2>",";,
@@ -202,8 +202,8 @@ export default function NextGenCloudSecurityAI2025Page(): void {
                 </ul>
               </div>
               <div >
-                <h3 className: "text-xl font-bold text-orange-300 mb-4">Our Defense</h3>";,";,
-                <ul className: "text-gray-300 space-y-2">";,";,
+                <h3 className: "text-xl font-bold text-orange-300 mb-4">Our Defense</$1>";,
+                <ul className: "text-gray-300 space-y-2">,
                 <h3 className: "text-xl font-bold text-orange-300 mb-4">Our Defense</h3>",";,
                 <ul className: "text-gray-300 space-y-2">",";,
                   <li >• AI vs AI: Machine learning threat detection</li>,,
@@ -216,12 +216,12 @@ export default function NextGenCloudSecurityAI2025Page(): void {
             </div>
           </section>
 
-          <section className: "mb-12">";,";,
-            <h2 className: "text-3xl font-bold text-white mb-6">Implementation Timeline</h2>";,";,
-            <div className: "space-y-6">";,";,
-              <div className: "bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">";,";,
+          <section className: "mb-12">,
+            <h2 className: "text-3xl font-bold text-white mb-6">Implementation Timeline</$1>";,
+            <div className: "space-y-6">,
+              <div className: "bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">,
                 <h3 className: "text-xl font-bold text-red-300 mb-3">Week 1-2: Security Assessment</h3>",";,
-                <p className: "text-gray-300 leading-relaxed">";,";,
+                <p className: "text-gray-300 leading-relaxed">,
           <section className: "mb-12">",";,
             <h2 className: "text-3xl font-bold text-white mb-6">Implementation Timeline</h2>",";,
             <div className: "space-y-6">",";,
@@ -232,9 +232,9 @@ export default function NextGenCloudSecurityAI2025Page(): void {
                 </p>
               </div>
 
-              <div className: "bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">";,";,
+              <div className: "bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">,
                 <h3 className: "text-xl font-bold text-orange-300 mb-3">Week 3-4: Foundation Deployment</h3>",";,
-                <p className: "text-gray-300 leading-relaxed">";,";,
+                <p className: "text-gray-300 leading-relaxed">,
               <div className: "bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">",";,
                 <h3 className: "text-xl font-bold text-orange-300 mb-3">Week 3-4: Foundation Deployment</h3>",";,
                 <p className: "text-gray-300 leading-relaxed">",";,";,
@@ -242,9 +242,9 @@ export default function NextGenCloudSecurityAI2025Page(): void {
                 </p>
               </div>
 
-              <div className: "bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">";,";,
+              <div className: "bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">,
                 <h3 className: "text-xl font-bold text-yellow-300 mb-3">Week 5-8: Advanced Protection</h3>",";,
-                <p className: "text-gray-300 leading-relaxed">";,";,
+                <p className: "text-gray-300 leading-relaxed">,
               <div className: "bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">",";,
                 <h3 className: "text-xl font-bold text-yellow-300 mb-3">Week 5-8: Advanced Protection</h3>",";,
                 <p className: "text-gray-300 leading-relaxed">",";,";,
@@ -254,8 +254,8 @@ export default function NextGenCloudSecurityAI2025Page(): void {
             </div>
           </section>
 
-          <section className: "mb-12 bg-gradient-to-r from-red-500/10 to-orange-500/10 rounded-2xl p-8 border border-red-500/20">";,";,
-            <h2 className: "text-3xl font-bold text-white mb-6">ROI Analysis</h2>";,";,
+          <section className: "mb-12 bg-gradient-to-r from-red-500/10 to-orange-500/10 rounded-2xl p-8 border border-red-500/20">,
+            <h2 className: "text-3xl font-bold text-white mb-6">ROI Analysis</$1>";,
             <div className: "grid md: grid-cols-2 gap-6 mb-6">",";,
           <section className: "mb-12 bg-gradient-to-r from-red-500/10 to-orange-500/10 rounded-2xl p-8 border border-red-500/20">",";,
             <h2 className: "text-3xl font-bold text-white mb-6">ROI Analysis</h2>",";,
@@ -282,8 +282,8 @@ export default function NextGenCloudSecurityAI2025Page(): void {
             </div>
           </section>
 
-          <section className: "mb-12 bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">";,";,
-            <h2 className: "text-3xl font-bold text-white mb-6">Secure Your Cloud Today</h2>";,";,
+          <section className: "mb-12 bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">,
+            <h2 className: "text-3xl font-bold text-white mb-6">Secure Your Cloud Today</$1>";,
             <p className: "text-gray-300 leading-relaxed mb-6">,";,";,
   Don't wait for a breach to transform your security posture. Our security experts will conduct a complimentary security assessment and show you how AI-powered security can protect your organization.;';';
             </p>

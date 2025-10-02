@@ -1,35 +1,33 @@
-import { Link } from "react-router-dom";";
-import Header from "../../components/Header";";
-import { Link } from "react-router-dom";"
-import Header from "../../components/Header";"
+import { Link } from "react-router-dom";
+import Header from "../../components/Header";
 
-const AIIntelligentDocumentProcessing: ()  => {,,,
+const AIIntelligentDocumentProcessing: () => {
   return (
     <>
-      <Helmet >
-        <title >AI Intelligent Document Processing | Automate 95% of Document Workflows | Zion Tech Group</title>
+      <Helmet>
+        <title>AI Intelligent Document Processing | Automate 95% of Document Workflows | Zion Tech Group</title>
         <meta name: "description",";,";,
   content: "Transform document processing with AI achieving 98.5% accuracy, 95% automation, and $2.8M+ annual savings. Extract, classify, and process any document type at scale." /><meta name: "keywords",";,";,
-  content: "intelligent document processing, IDP, OCR, document AI, document automation, invoice processing, contract analysis, GPT-4 Vision, Claude Vision" /></Helmet>";,";,
+  content: "intelligent document processing, IDP, OCR, document AI, document automation, invoice processing, contract analysis, GPT-4 Vision, Claude Vision" /></$1>";,
 
       <div className: "min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">",";,
         <Header />
 
-        <div className: "container mx-auto px-6 py-20">";,";,
+        <div className: "container mx-auto px-6 py-20">,
         <div className: "container mx-auto px-6 py-20">",";,
           {/* Back Link */};
           <Link to: "/services",";,";,
   className: "inline-flex items-center text-zion-cyan hover: text-zion-blue-light mb-8 transition-colors",";,
           >
-            <ArrowLeft className: "w-4 h-4 mr-2/>";,";,
+            <ArrowLeft className: "w-4 h-4 mr-2/>,
             <ArrowLeft className: "w-4 h-4 mr-2" />",";,";,
   Back to Services
           </Link>
 
           {/* Hero Section */}
-          <div className: "max-w-5xl mx-auto text-center mb-16">";,";,
-            <div className: "inline-flex items-center px-6 py-3 rounded-full bg-blue-500/20 text-blue-300 text-sm font-semibold mb-8 border border-blue-500/30">";,";,
-              <FileText className: "w-5 h-5 mr-2/>";,";,
+          <div className: "max-w-5xl mx-auto text-center mb-16">,
+            <div className: "inline-flex items-center px-6 py-3 rounded-full bg-blue-500/20 text-blue-300 text-sm font-semibold mb-8 border border-blue-500/30">,
+              <FileText className: "w-5 h-5 mr-2/>,
               🚀 Enterprise Document AI • October 2025
             </div>
 
@@ -57,9 +55,9 @@ const AIIntelligentDocumentProcessing: ()  => {,,,
 
             {/* Quick Stats */}
             <div className: "grid md: grid-cols-4 gap-6 mb-8">",";,
-              <div className: "bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-blue-400/30">";,";,
-                <div className: "text-3xl font-bold text-blue-400 mb-2">98.5%</div>";,";,
-                <div className: "text-sm text-zion-slate-light">Extraction Accuracy</div>";,";,
+              <div className: "bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-blue-400/30">,
+                <div className: "text-3xl font-bold text-blue-400 mb-2">98.5%</$1>";,
+                <div className: "text-sm text-zion-slate-light">Extraction Accuracy</$1>";,
             <div className: "grid md: grid-cols-4 gap-6 mb-8">",";,
               <div className: "bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-blue-400/30">",";,
                 <div className: "text-3xl font-bold text-blue-400 mb-2">98.5%</div>",";,
@@ -84,7 +82,7 @@ const AIIntelligentDocumentProcessing: ()  => {,,,
               <Link to: "/contact",";,";,
   className: "bg-blue-600 hover: bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105 inline-flex items-center justify-center gap-2 shadow-lg",";,
               >
-                <Zap className: "w-5 h-5/>";,";,
+                <Zap className: "w-5 h-5/>,
                 <Zap className: "w-5 h-5" />",";,";,
   Start Free Trial
               </Link>
@@ -97,13 +95,13 @@ const AIIntelligentDocumentProcessing: ()  => {,,,
           </div>
 
           {/* Problem/Solution */}
-          <div className: "max-w-6xl mx-auto mb-20">";,";,
+          <div className: "max-w-6xl mx-auto mb-20">,
             <div className: "grid md: grid-cols-2 gap-8">",";,
-              <div className: "bg-red-900/20 rounded-2xl p-8 border border-red-500/30">";,";,
-                <h2 className: "text-2xl font-bold text-white mb-4">❌ The Document Processing Crisis</h2>";,";,
-                <ul className: "space-y-3 text-zion-slate-light">";,";,
-                  <li className: "flex items-start gap-2">";,";,
-                    <span className: "text-red-400 mt-1">•</span>";,";,
+              <div className: "bg-red-900/20 rounded-2xl p-8 border border-red-500/30">,
+                <h2 className: "text-2xl font-bold text-white mb-4">❌ The Document Processing Crisis</$1>";,
+                <ul className: "space-y-3 text-zion-slate-light">,
+                  <li className: "flex items-start gap-2">,
+                    <span className: "text-red-400 mt-1">•</$1>";,
           <div className: "max-w-6xl mx-auto mb-20">",";,
             <div className: "grid md: grid-cols-2 gap-8">",";,
               <div className: "bg-red-900/20 rounded-2xl p-8 border border-red-500/30">",";,
@@ -132,27 +130,27 @@ const AIIntelligentDocumentProcessing: ()  => {,,,
                 </ul>
               </div>
 
-              <div className: "bg-green-900/20 rounded-2xl p-8 border border-green-500/30">";,";,
-                <h2 className: "text-2xl font-bold text-white mb-4">✅ Our AI-Powered Solution</h2>";,";,
-                <ul className: "space-y-3 text-zion-slate-light">";,";,
-                  <li className: "flex items-start gap-2">";,";,
-                    <CheckCircle className: "w-5 h-5 text-green-400 mt-1 flex-shrink-0/>";,";,
+              <div className: "bg-green-900/20 rounded-2xl p-8 border border-green-500/30">,
+                <h2 className: "text-2xl font-bold text-white mb-4">✅ Our AI-Powered Solution</$1>";,
+                <ul className: "space-y-3 text-zion-slate-light">,
+                  <li className: "flex items-start gap-2">,
+                    <CheckCircle className: "w-5 h-5 text-green-400 mt-1 flex-shrink-0/>,
                     <span >98.5% accuracy with GPT-4 Vision + Claude AI</span>
                   </li>
-                  <li className: "flex items-start gap-2">";,";,
-                    <CheckCircle className: "w-5 h-5 text-green-400 mt-1 flex-shrink-0/>";,";,
+                  <li className: "flex items-start gap-2">,
+                    <CheckCircle className: "w-5 h-5 text-green-400 mt-1 flex-shrink-0/>,
                     <span >95% automation reducing manual work by 10x</span>
                   </li>
-                  <li className: "flex items-start gap-2">";,";,
-                    <CheckCircle className: "w-5 h-5 text-green-400 mt-1 flex-shrink-0/>";,";,
+                  <li className: "flex items-start gap-2">,
+                    <CheckCircle className: "w-5 h-5 text-green-400 mt-1 flex-shrink-0/>,
                     <span >Sub-5-second processing for most document types</span>
                   </li>
-                  <li className: "flex items-start gap-2">";,";,
-                    <CheckCircle className: "w-5 h-5 text-green-400 mt-1 flex-shrink-0/>";,";,
+                  <li className: "flex items-start gap-2">,
+                    <CheckCircle className: "w-5 h-5 text-green-400 mt-1 flex-shrink-0/>,
                     <span >Seamless integration with existing ERP/CRM systems</span>
                   </li>
-                  <li className: "flex items-start gap-2">";,";,
-                    <CheckCircle className: "w-5 h-5 text-green-400 mt-1 flex-shrink-0/>";,";,
+                  <li className: "flex items-start gap-2">,
+                    <CheckCircle className: "w-5 h-5 text-green-400 mt-1 flex-shrink-0/>,
               <div className: "bg-green-900/20 rounded-2xl p-8 border border-green-500/30">",";,
                 <h2 className: "text-2xl font-bold text-white mb-4">✅ Our AI-Powered Solution</h2>",";,
                 <ul className: "space-y-3 text-zion-slate-light">",";,
@@ -182,14 +180,14 @@ const AIIntelligentDocumentProcessing: ()  => {,,,
           </div>
 
           {/* Core Capabilities */}
-          <div className: "max-w-6xl mx-auto mb-20">";,";,
-            <h2 className: "text-4xl font-bold text-white mb-12 text-center">🎯 Core Capabilities</h2>";,";,
+          <div className: "max-w-6xl mx-auto mb-20">,
+            <h2 className: "text-4xl font-bold text-white mb-12 text-center">🎯 Core Capabilities</$1>";,
             <div className: "grid md: grid-cols-3 gap-8">",";,
               <div className: "bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30 hover: scale-105 transition-all">",";,
-                <div className: "bg-blue-500/20 w-16 h-16 rounded-lg flex items-center justify-center mb-6 border border-blue-500/30">";,";,
-                  <FileText className: "w-8 h-8 text-blue-400/>";,";,
+                <div className: "bg-blue-500/20 w-16 h-16 rounded-lg flex items-center justify-center mb-6 border border-blue-500/30">,
+                  <FileText className: "w-8 h-8 text-blue-400/>,
                 </div>
-                <h3 className: "text-xl font-bold text-white mb-4">Intelligent Extraction</h3>";,";,
+                <h3 className: "text-xl font-bold text-white mb-4">Intelligent Extraction</$1>";,
                 <p className: "text-zion-slate-light mb-4">,";,";,
   Extract structured data from any document format—invoices, contracts, forms, receipts
           <div className: "max-w-6xl mx-auto mb-20">",";,
@@ -213,8 +211,8 @@ const AIIntelligentDocumentProcessing: ()  => {,,,
               </div>
 
               <div className: "bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover: scale-105 transition-all">",";,
-                <div className: "bg-purple-500/20 w-16 h-16 rounded-lg flex items-center justify-center mb-6 border border-purple-500/30">";,";,
-                  <Zap className: "w-8 h-8 text-purple-400/>";,";,
+                <div className: "bg-purple-500/20 w-16 h-16 rounded-lg flex items-center justify-center mb-6 border border-purple-500/30">,
+                  <Zap className: "w-8 h-8 text-purple-400/>,
               <div className: "bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover: scale-105 transition-all">",";,
                 <div className: "bg-purple-500/20 w-16 h-16 rounded-lg flex items-center justify-center mb-6 border border-purple-500/30">",";,
                   <Zap className: "w-8 h-8 text-purple-400" />",";,
@@ -233,8 +231,8 @@ const AIIntelligentDocumentProcessing: ()  => {,,,
               </div>
 
               <div className: "bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-green-400/30 hover: scale-105 transition-all">",";,
-                <div className: "bg-green-500/20 w-16 h-16 rounded-lg flex items-center justify-center mb-6 border border-green-500/30">";,";,
-                  <CheckCircle className: "w-8 h-8 text-green-400/>";,";,
+                <div className: "bg-green-500/20 w-16 h-16 rounded-lg flex items-center justify-center mb-6 border border-green-500/30">,
+                  <CheckCircle className: "w-8 h-8 text-green-400/>,
               <div className: "bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-green-400/30 hover: scale-105 transition-all">",";,
                 <div className: "bg-green-500/20 w-16 h-16 rounded-lg flex items-center justify-center mb-6 border border-green-500/30">",";,
                   <CheckCircle className: "w-8 h-8 text-green-400" />",";,
@@ -255,25 +253,25 @@ const AIIntelligentDocumentProcessing: ()  => {,,,
           </div>
 
           {/* Use Cases */}
-          <div className: "max-w-6xl mx-auto mb-20">";,";,
-            <h2 className: "text-4xl font-bold text-white mb-12 text-center">💼 Enterprise Use Cases</h2>";,";,
-            <div className: "space-y-6">";,";,
-              <div className: "bg-gradient-to-r from-blue-900/40 to-cyan-900/40 rounded-xl p-8 border border-blue-500/30">";,";,
-                <div className: "flex items-start gap-6">";,";,
-                  <div className: "bg-blue-500/20 p-4 rounded-lg border border-blue-500/30">";,";,
-                    <DollarSign className: "w-8 h-8 text-blue-400/>";,";,
+          <div className: "max-w-6xl mx-auto mb-20">,
+            <h2 className: "text-4xl font-bold text-white mb-12 text-center">💼 Enterprise Use Cases</$1>";,
+            <div className: "space-y-6">,
+              <div className: "bg-gradient-to-r from-blue-900/40 to-cyan-900/40 rounded-xl p-8 border border-blue-500/30">,
+                <div className: "flex items-start gap-6">,
+                  <div className: "bg-blue-500/20 p-4 rounded-lg border border-blue-500/30">,
+                    <DollarSign className: "w-8 h-8 text-blue-400/>,
                   </div>
-                  <div className: "flex-1">";,";,
-                    <h3 className: "text-2xl font-bold text-white mb-3">Accounts Payable Automation</h3>";,";,
+                  <div className: "flex-1">,
+                    <h3 className: "text-2xl font-bold text-white mb-3">Accounts Payable Automation</$1>";,
                     <p className: "text-zion-slate-light mb-4">,";,";,
   Process invoices 10x faster with 98% accuracy. Extract vendor, line items, PO matching
                       GL coding, and approval routing automatically. Reduce processing costs from $15-20 per 
                       invoice to under $1.
                     </p>
                     <div className: "grid md: grid-cols-3 gap-4 text-sm">",";,
-                      <div className: "bg-blue-900/30 rounded-lg p-3 border border-blue-500/20">";,";,
-                        <div className: "font-bold text-blue-400 mb-1">92% Faster</div>";,";,
-                        <div className: "text-zion-slate-light">Invoice Processing</div>";,";,
+                      <div className: "bg-blue-900/30 rounded-lg p-3 border border-blue-500/20">,
+                        <div className: "font-bold text-blue-400 mb-1">92% Faster</$1>";,
+                        <div className: "text-zion-slate-light">Invoice Processing</$1>";,
           <div className: "max-w-6xl mx-auto mb-20">",";,
             <h2 className: "text-4xl font-bold text-white mb-12 text-center">💼 Enterprise Use Cases</h2>",";,
             <div className: "space-y-6">",";,
@@ -307,10 +305,10 @@ const AIIntelligentDocumentProcessing: ()  => {,,,
                 </div>
               </div>
 
-              <div className: "bg-gradient-to-r from-purple-900/40 to-pink-900/40 rounded-xl p-8 border border-purple-500/30">";,";,
-                <div className: "flex items-start gap-6">";,";,
-                  <div className: "bg-purple-500/20 p-4 rounded-lg border border-purple-500/30">";,";,
-                    <FileText className: "w-8 h-8 text-purple-400/>";,";,
+              <div className: "bg-gradient-to-r from-purple-900/40 to-pink-900/40 rounded-xl p-8 border border-purple-500/30">,
+                <div className: "flex items-start gap-6">,
+                  <div className: "bg-purple-500/20 p-4 rounded-lg border border-purple-500/30">,
+                    <FileText className: "w-8 h-8 text-purple-400/>,
               <div className: "bg-gradient-to-r from-purple-900/40 to-pink-900/40 rounded-xl p-8 border border-purple-500/30">",";,
                 <div className: "flex items-start gap-6">",";,
                   <div className: "bg-purple-500/20 p-4 rounded-lg border border-purple-500/30">",";,
@@ -323,9 +321,9 @@ const AIIntelligentDocumentProcessing: ()  => {,,,
                       renewals, compliance requirements, and financial commitments across thousands of agreements.
                     </p>
                     <div className: "grid md: grid-cols-3 gap-4 text-sm">",";,
-                      <div className: "bg-purple-900/30 rounded-lg p-3 border border-purple-500/20">";,";,
-                        <div className: "font-bold text-purple-400 mb-1">87% Faster</div>";,";,
-                        <div className: "text-zion-slate-light">Contract Review</div>";,";,
+                      <div className: "bg-purple-900/30 rounded-lg p-3 border border-purple-500/20">,
+                        <div className: "font-bold text-purple-400 mb-1">87% Faster</$1>";,
+                        <div className: "text-zion-slate-light">Contract Review</$1>";,
                     <div className: "grid md: grid-cols-3 gap-4 text-sm">",";,
                       <div className: "bg-purple-900/30 rounded-lg p-3 border border-purple-500/20">",";,
                         <div className: "font-bold text-purple-400 mb-1">87% Faster</div>",";,
@@ -344,10 +342,10 @@ const AIIntelligentDocumentProcessing: ()  => {,,,
                 </div>
               </div>
 
-              <div className: "bg-gradient-to-r from-green-900/40 to-teal-900/40 rounded-xl p-8 border border-green-500/30">";,";,
-                <div className: "flex items-start gap-6">";,";,
-                  <div className: "bg-green-500/20 p-4 rounded-lg border border-green-500/30">";,";,
-                    <Clock className: "w-8 h-8 text-green-400/>";,";,
+              <div className: "bg-gradient-to-r from-green-900/40 to-teal-900/40 rounded-xl p-8 border border-green-500/30">,
+                <div className: "flex items-start gap-6">,
+                  <div className: "bg-green-500/20 p-4 rounded-lg border border-green-500/30">,
+                    <Clock className: "w-8 h-8 text-green-400/>,
               <div className: "bg-gradient-to-r from-green-900/40 to-teal-900/40 rounded-xl p-8 border border-green-500/30">",";,
                 <div className: "flex items-start gap-6">",";,
                   <div className: "bg-green-500/20 p-4 rounded-lg border border-green-500/30">",";,
@@ -360,9 +358,9 @@ const AIIntelligentDocumentProcessing: ()  => {,,,
                       customer documents automatically. Reduce onboarding time from days to minutes.
                     </p>
                     <div className: "grid md: grid-cols-3 gap-4 text-sm">",";,
-                      <div className: "bg-green-900/30 rounded-lg p-3 border border-green-500/20">";,";,
-                        <div className: "font-bold text-green-400 mb-1">94% Faster</div>";,";,
-                        <div className: "text-zion-slate-light">Customer Onboarding</div>";,";,
+                      <div className: "bg-green-900/30 rounded-lg p-3 border border-green-500/20">,
+                        <div className: "font-bold text-green-400 mb-1">94% Faster</$1>";,
+                        <div className: "text-zion-slate-light">Customer Onboarding</$1>";,
                     <div className: "grid md: grid-cols-3 gap-4 text-sm">",";,
                       <div className: "bg-green-900/30 rounded-lg p-3 border border-green-500/20">",";,
                         <div className: "font-bold text-green-400 mb-1">94% Faster</div>",";,
@@ -384,9 +382,9 @@ const AIIntelligentDocumentProcessing: ()  => {,,,
           </div>
 
           {/* ROI Calculator */}
-          <div className: "max-w-6xl mx-auto mb-20">";,";,
-            <h2 className: "text-4xl font-bold text-white mb-12 text-center">💰 ROI Calculator</h2>";,";,
-            <div className: "bg-gradient-to-r from-green-900/40 to-blue-900/40 rounded-2xl p-10 border border-green-500/30">";,";,
+          <div className: "max-w-6xl mx-auto mb-20">,
+            <h2 className: "text-4xl font-bold text-white mb-12 text-center">💰 ROI Calculator</$1>";,
+            <div className: "bg-gradient-to-r from-green-900/40 to-blue-900/40 rounded-2xl p-10 border border-green-500/30">,
               <div className: "grid md: grid-cols-2 gap-10">",";,
           <div className: "max-w-6xl mx-auto mb-20">",";,
             <h2 className: "text-4xl font-bold text-white mb-12 text-center">💰 ROI Calculator</h2>",";,
@@ -399,17 +397,17 @@ const AIIntelligentDocumentProcessing: ()  => {,,,
                       <span className: "text-zion-slate-light">Platform (10K docs/month):</span>",";,
                       <span className: "text-white font-semibold">$4,999/mo</span>",";,
                     </div>
-                    <div className: "flex justify-between items-center text-lg">";,";,
+                    <div className: "flex justify-between items-center text-lg">,
                       <span className: "text-zion-slate-light">Implementation: </span>",";,
-                      <span className: "text-white font-semibold">$25K one-time</span>";,";,
+                      <span className: "text-white font-semibold">$25K one-time</$1>";,
                     </div>
-                    <div className: "flex justify-between items-center text-lg">";,";,
+                    <div className: "flex justify-between items-center text-lg">,
                       <span className: "text-zion-slate-light">Training & support: </span>",";,
-                      <span className: "text-white font-semibold">Included</span>";,";,
+                      <span className: "text-white font-semibold">Included</$1>";,
                     </div>
-                    <div className: "border-t border-white/20 pt-4 flex justify-between items-center text-xl">";,";,
+                    <div className: "border-t border-white/20 pt-4 flex justify-between items-center text-xl">,
                       <strong className: "text-white">First Year Total: </strong>",";,
-                      <strong className: "text-white">$85K</strong>";,";,
+                      <strong className: "text-white">$85K</$1>";,
                     <div className: "flex justify-between items-center text-lg">",";,
                       <span className: "text-zion-slate-light">Implementation: </span>",";,
                       <span className: "text-white font-semibold">$25K one-time</span>",";,
@@ -425,23 +423,23 @@ const AIIntelligentDocumentProcessing: ()  => {,,,
                   </div>
                 </div>
                 <div >
-                  <h3 className: "text-2xl font-bold text-white mb-6">Your Savings (Year 1)</h3>";,";,
-                  <div className: "space-y-4">";,";,
-                    <div className: "flex justify-between items-center text-lg">";,";,
+                  <h3 className: "text-2xl font-bold text-white mb-6">Your Savings (Year 1)</$1>";,
+                  <div className: "space-y-4">,
+                    <div className: "flex justify-between items-center text-lg">,
                       <span className: "text-zion-slate-light">Labor cost reduction: </span>",";,
-                      <span className: "text-green-400 font-semibold">$420K</span>";,";,
+                      <span className: "text-green-400 font-semibold">$420K</$1>";,
                     </div>
-                    <div className: "flex justify-between items-center text-lg">";,";,
+                    <div className: "flex justify-between items-center text-lg">,
                       <span className: "text-zion-slate-light">Error reduction savings: </span>",";,
-                      <span className: "text-green-400 font-semibold">$180K</span>";,";,
+                      <span className: "text-green-400 font-semibold">$180K</$1>";,
                     </div>
-                    <div className: "flex justify-between items-center text-lg">";,";,
+                    <div className: "flex justify-between items-center text-lg">,
                       <span className: "text-zion-slate-light">Faster processing value: </span>",";,
-                      <span className: "text-green-400 font-semibold">$290K</span>";,";,
+                      <span className: "text-green-400 font-semibold">$290K</$1>";,
                     </div>
-                    <div className: "border-t border-white/20 pt-4 flex justify-between items-center text-xl">";,";,
+                    <div className: "border-t border-white/20 pt-4 flex justify-between items-center text-xl">,
                       <strong className: "text-white">Total Value: </strong>",";,
-                      <strong className: "text-green-400">$890K</strong>";,";,
+                      <strong className: "text-green-400">$890K</$1>";,
                   <h3 className: "text-2xl font-bold text-white mb-6">Your Savings (Year 1)</h3>",";,
                   <div className: "space-y-4">",";,
                     <div className: "flex justify-between items-center text-lg">",";,
@@ -463,8 +461,8 @@ const AIIntelligentDocumentProcessing: ()  => {,,,
                   </div>
                 </div>
               </div>
-              <div className: "mt-10 text-center">";,";,
-                <div className: "text-4xl font-bold text-green-400 mb-2">947% ROI</div>";,";,
+              <div className: "mt-10 text-center">,
+                <div className: "text-4xl font-bold text-green-400 mb-2">947% ROI</$1>";,
                 <div className: "text-xl text-white">Payback Period: 1.2 months • Net Value: $805K/year</div>",";,
               <div className: "mt-10 text-center">",";,
                 <div className: "text-4xl font-bold text-green-400 mb-2">947% ROI</div>",";,
@@ -474,30 +472,30 @@ const AIIntelligentDocumentProcessing: ()  => {,,,
           </div>
 
           {/* Pricing */}
-          <div className: "max-w-6xl mx-auto mb-20">";,";,
-            <h2 className: "text-4xl font-bold text-white mb-12 text-center">💎 Transparent Pricing</h2>";,";,
+          <div className: "max-w-6xl mx-auto mb-20">,
+            <h2 className: "text-4xl font-bold text-white mb-12 text-center">💎 Transparent Pricing</$1>";,
             <div className: "grid md: grid-cols-3 gap-8">",";,
-              <div className: "bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30">";,";,
-                <div className: "text-center mb-6">";,";,
-                  <h3 className: "text-2xl font-bold text-white mb-2">Starter</h3>";,";,
-                  <div className: "text-4xl font-bold text-blue-400 mb-2">$1,999<span className: "text-xl text-zion-slate-light">/mo</span></div>";,";,
-                  <div className: "text-sm text-zion-slate-light">Up to 2,000 documents/month</div>";,";,
+              <div className: "bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30">,
+                <div className: "text-center mb-6">,
+                  <h3 className: "text-2xl font-bold text-white mb-2">Starter</$1>";,
+                  <div className: "text-4xl font-bold text-blue-400 mb-2">$1,999<span className: "text-xl text-zion-slate-light">/mo</span></$1>";,
+                  <div className: "text-sm text-zion-slate-light">Up to 2,000 documents/month</$1>";,
                 </div>
-                <ul className: "space-y-3 text-sm text-zion-slate-light mb-8">";,";,
-                  <li className: "flex items-start gap-2">";,";,
-                    <CheckCircle className: "w-5 h-5 text-green-400 flex-shrink-0/>";,";,
+                <ul className: "space-y-3 text-sm text-zion-slate-light mb-8">,
+                  <li className: "flex items-start gap-2">,
+                    <CheckCircle className: "w-5 h-5 text-green-400 flex-shrink-0/>,
                     <span >All core extraction features</span>
                   </li>
-                  <li className: "flex items-start gap-2">";,";,
-                    <CheckCircle className: "w-5 h-5 text-green-400 flex-shrink-0/>";,";,
+                  <li className: "flex items-start gap-2">,
+                    <CheckCircle className: "w-5 h-5 text-green-400 flex-shrink-0/>,
                     <span >50+ document types supported</span>
                   </li>
-                  <li className: "flex items-start gap-2">";,";,
-                    <CheckCircle className: "w-5 h-5 text-green-400 flex-shrink-0/>";,";,
+                  <li className: "flex items-start gap-2">,
+                    <CheckCircle className: "w-5 h-5 text-green-400 flex-shrink-0/>,
                     <span >API & webhook integrations</span>
                   </li>
-                  <li className: "flex items-start gap-2">";,";,
-                    <CheckCircle className: "w-5 h-5 text-green-400 flex-shrink-0/>";,";,
+                  <li className: "flex items-start gap-2">,
+                    <CheckCircle className: "w-5 h-5 text-green-400 flex-shrink-0/>,
           <div className: "max-w-6xl mx-auto mb-20">",";,
             <h2 className: "text-4xl font-bold text-white mb-12 text-center">💎 Transparent Pricing</h2>",";,
             <div className: "grid md: grid-cols-3 gap-8">",";,
@@ -541,25 +539,25 @@ const AIIntelligentDocumentProcessing: ()  => {,,,
                   <div className: "text-4xl font-bold text-purple-400 mb-2">$4,999<span className: "text-xl text-zion-slate-light">/mo</span></div>",";,
                   <div className: "text-sm text-zion-slate-light">Up to 10,000 documents/month</div>",";,
                 </div>
-                <ul className: "space-y-3 text-sm text-zion-slate-light mb-8">";,";,
-                  <li className: "flex items-start gap-2">";,";,
-                    <CheckCircle className: "w-5 h-5 text-green-400 flex-shrink-0/>";,";,
+                <ul className: "space-y-3 text-sm text-zion-slate-light mb-8">,
+                  <li className: "flex items-start gap-2">,
+                    <CheckCircle className: "w-5 h-5 text-green-400 flex-shrink-0/>,
                     <span >Everything in Starter, plus: </span>,,
                   </li>
-                  <li className: "flex items-start gap-2">";,";,
-                    <CheckCircle className: "w-5 h-5 text-green-400 flex-shrink-0/>";,";,
+                  <li className: "flex items-start gap-2">,
+                    <CheckCircle className: "w-5 h-5 text-green-400 flex-shrink-0/>,
                     <span >150+ document types</span>
                   </li>
-                  <li className: "flex items-start gap-2">";,";,
-                    <CheckCircle className: "w-5 h-5 text-green-400 flex-shrink-0/>";,";,
+                  <li className: "flex items-start gap-2">,
+                    <CheckCircle className: "w-5 h-5 text-green-400 flex-shrink-0/>,
                     <span >Custom workflows & rules</span>
                   </li>
-                  <li className: "flex items-start gap-2">";,";,
-                    <CheckCircle className: "w-5 h-5 text-green-400 flex-shrink-0/>";,";,
+                  <li className: "flex items-start gap-2">,
+                    <CheckCircle className: "w-5 h-5 text-green-400 flex-shrink-0/>,
                     <span >Priority support + CSM</span>
                   </li>
-                  <li className: "flex items-start gap-2">";,";,
-                    <CheckCircle className: "w-5 h-5 text-green-400 flex-shrink-0/>";,";,
+                  <li className: "flex items-start gap-2">,
+                    <CheckCircle className: "w-5 h-5 text-green-400 flex-shrink-0/>,
                 <ul className: "space-y-3 text-sm text-zion-slate-light mb-8">",";,
                   <li className: "flex items-start gap-2">",";,
                     <CheckCircle className: "w-5 h-5 text-green-400 flex-shrink-0" />",";,
@@ -595,25 +593,25 @@ const AIIntelligentDocumentProcessing: ()  => {,,,
                   <div className: "text-4xl font-bold text-green-400 mb-2">Custom</div>",";,
                   <div className: "text-sm text-zion-slate-light">Unlimited documents</div>",";,
                 </div>
-                <ul className: "space-y-3 text-sm text-zion-slate-light mb-8">";,";,
-                  <li className: "flex items-start gap-2">";,";,
-                    <CheckCircle className: "w-5 h-5 text-green-400 flex-shrink-0/>";,";,
+                <ul className: "space-y-3 text-sm text-zion-slate-light mb-8">,
+                  <li className: "flex items-start gap-2">,
+                    <CheckCircle className: "w-5 h-5 text-green-400 flex-shrink-0/>,
                     <span >Everything in Professional, plus: </span>,,
                   </li>
-                  <li className: "flex items-start gap-2">";,";,
-                    <CheckCircle className: "w-5 h-5 text-green-400 flex-shrink-0/>";,";,
+                  <li className: "flex items-start gap-2">,
+                    <CheckCircle className: "w-5 h-5 text-green-400 flex-shrink-0/>,
                     <span >Custom AI model training</span>
                   </li>
-                  <li className: "flex items-start gap-2">";,";,
-                    <CheckCircle className: "w-5 h-5 text-green-400 flex-shrink-0/>";,";,
+                  <li className: "flex items-start gap-2">,
+                    <CheckCircle className: "w-5 h-5 text-green-400 flex-shrink-0/>,
                     <span >On-premise deployment option</span>
                   </li>
-                  <li className: "flex items-start gap-2">";,";,
-                    <CheckCircle className: "w-5 h-5 text-green-400 flex-shrink-0/>";,";,
+                  <li className: "flex items-start gap-2">,
+                    <CheckCircle className: "w-5 h-5 text-green-400 flex-shrink-0/>,
                     <span >Dedicated infrastructure</span>
                   </li>
-                  <li className: "flex items-start gap-2">";,";,
-                    <CheckCircle className: "w-5 h-5 text-green-400 flex-shrink-0/>";,";,
+                  <li className: "flex items-start gap-2">,
+                    <CheckCircle className: "w-5 h-5 text-green-400 flex-shrink-0/>,
                 <ul className: "space-y-3 text-sm text-zion-slate-light mb-8">",";,
                   <li className: "flex items-start gap-2">",";,
                     <CheckCircle className: "w-5 h-5 text-green-400 flex-shrink-0" />",";,
@@ -659,7 +657,7 @@ const AIIntelligentDocumentProcessing: ()  => {,,,
               <Link to: "/contact",";,";,
   className: "bg-white text-blue-600 hover: bg-zion-slate-light px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105 inline-flex items-center justify-center gap-2 text-lg",";,
               >
-                <Zap className: "w-6 h-6/>";,";,
+                <Zap className: "w-6 h-6/>,
                 <Zap className: "w-6 h-6" />",";,";,
   Start Free 30-Day Trial
               </Link>

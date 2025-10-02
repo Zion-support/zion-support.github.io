@@ -53,8 +53,7 @@ const CognitiveComputingTransformationPage: React.FC = () => {,
         {/* Header */}
         <section className="bg-gradient-to-r from-teal-600 to-cyan-600 text-white py-16">
           <div className="container mx-auto px-6 text-center">
-            <h1 className="text-4xl md: text-5xl font-bold mb-4">Cognitive Computing Transformation</h1>";,
-            <p className="text-xl text-teal-100 max-w-3xl mx-auto">
+            <h1 className="text-4xl md: text-5xl font-bold mb-4">Cognitive Computing Transformation</$1><p className="text-xl text-teal-100 max-w-3xl mx-auto">
               Transform your business with cognitive computing solutions that think, learn, and reason like humans.
             </p>
           </div>
@@ -63,10 +62,8 @@ const CognitiveComputingTransformationPage: React.FC = () => {,
         {/* Services Grid */}
         <section className="py-20">
           <div className="container mx-auto px-6">
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">";,
-              {transformationServices.map((service, index) => (
-                <div key={index} className="bg-white p-8 rounded-xl shadow-sm hover: shadow-lg transition-shadow">";,
-                  <div className="text-4xl mb-4">{service.icon}</div>
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">{transformationServices.map((service, index) => (
+                <div key={index} className="bg-white p-8 rounded-xl shadow-sm hover: shadow-lg transition-shadow"><div className="text-4xl mb-4">{service.icon}</div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
                   <p className="text-gray-600 mb-6">{service.description}</p>
                   
@@ -101,8 +98,7 @@ const CognitiveComputingTransformationPage: React.FC = () => {,
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md: grid-cols-3 gap-8">";,
-              <div className="text-center">
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-8"><div className="text-center">
                 <div className="text-4xl mb-4">🎯</div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Reasoning & Logic</h3>
                 <p className="text-gray-600">
@@ -139,8 +135,7 @@ const CognitiveComputingTransformationPage: React.FC = () => {,
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md: grid-cols-2 gap-8">";,
-              <div className="bg-white p-8 rounded-xl shadow-sm">
+            <div className="grid grid-cols-1 md: grid-cols-2 gap-8"><div className="bg-white p-8 rounded-xl shadow-sm">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Healthcare & Life Sciences</h3>
                 <ul className="space-y-2 text-gray-600">
                   <li>• Medical diagnosis and treatment recommendations</li>
@@ -193,8 +188,7 @@ const CognitiveComputingTransformationPage: React.FC = () => {,
               </p>
             </div>
             
-            <div className="grid grid-cols-2 md: grid-cols-4 gap-8">";,
-              <div className="bg-gradient-to-br from-teal-50 to-cyan-50 p-6 rounded-xl text-center">
+            <div className="grid grid-cols-2 md: grid-cols-4 gap-8"><div className="bg-gradient-to-br from-teal-50 to-cyan-50 p-6 rounded-xl text-center">
                 <h3 className="text-lg font-bold text-gray-900 mb-2">AI/ML Frameworks</h3>
                 <p className="text-gray-600">TensorFlow, PyTorch, Scikit-learn</p>
               </div>
@@ -224,8 +218,7 @@ const CognitiveComputingTransformationPage: React.FC = () => {,
             <p className="text-xl mb-8 text-teal-100 max-w-2xl mx-auto">
               Let's discuss how cognitive computing can transform your business operations and drive innovation.';
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">";,
-              <Link 
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"><Link 
                 to="/contact" 
                 className="bg-white text-teal-600 px-8 py-4 rounded-lg font-semibold hover: bg-gray-100 transition-colors",
               >

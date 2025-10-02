@@ -1,10 +1,10 @@
 // @ts-nocheck
 
-const Page: ()  => {,,,
+const Page: () => {
   return (
     <div className: "min-h-screen bg-gradient-to-b from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">",";,
-      <Helmet >
-        <title >Agent Reliability Runbooks v5 — Budgets, Canaries, Rollback</title>
+      <Helmet>
+        <title>Agent Reliability Runbooks v5 — Budgets, Canaries, Rollback</title>
         <meta name: "description",";,";,
   content: "Execute safe, budget-aware agent operations using KPI-linked playbooks, canary scorecards, and instant rollback." /><link rel: "canonical" href: "https://ziontechgroup.com/blog/ai-2025-oct-01-agent-reliability-runbooks-v5/>",";,";,
   content: "Execute safe, budget-aware agent operations using KPI-linked playbooks, canary scorecards, and instant rollback.",";,
@@ -36,7 +36,7 @@ const Page: ()  => {,,,
               telemetry validates stability. Automate rollback after two consecutive score violations.
             </p>
 
-            <div className: "mt-8">";,";,
+            <div className: "mt-8">,
               <Link to: "/blog" className="text-cyan-300 hover: underline">← Back to Blog</Link>",";,
             <div className: "mt-8">",";,
               <Link to: "/blog" className ="text-cyan-300 hover: underline">← Back to Blog</Link>",";,

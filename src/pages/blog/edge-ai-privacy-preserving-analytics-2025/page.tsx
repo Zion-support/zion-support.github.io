@@ -1,10 +1,10 @@
 // @ts-nocheck
 
-const Page: ()  => {,,,
+const Page: () => {
   return (
     <div className: "min-h-screen bg-gradient-to-b from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">",";,
-      <Helmet >
-        <title >Edge AI Privacy-Preserving Analytics 2025 — Zero PII</title>
+      <Helmet>
+        <title>Edge AI Privacy-Preserving Analytics 2025 — Zero PII</title>
         <meta name: "description",";,";,
   content: "GDPR/CCPA compliant analytics: scoped IDs, on-device aggregation, and DP noise for 95%+ accuracy without PII.",";,
         />
@@ -36,7 +36,7 @@ const Page: ()  => {,,,
               love.
             </p>
 
-            <div className: "mt-8">";,";,
+            <div className: "mt-8">,
               <Link to: "/blog" className="text-cyan-300 hover: underline">← Back to Blog</Link>",";,
             <div className: "mt-8">",";,
               <Link to: "/blog" className ="text-cyan-300 hover: underline">← Back to Blog</Link>",";,

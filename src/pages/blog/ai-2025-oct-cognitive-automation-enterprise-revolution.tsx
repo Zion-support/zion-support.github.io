@@ -1,27 +1,25 @@
-import { Link } from "react-router-dom";";
-import Header from "../../components/Header";";
-import { Link } from "react-router-dom";"
-import Header from "../../components/Header";"
+import { Link } from "react-router-dom";
+import Header from "../../components/Header";
 
-const CognitiveAutomationEnterpriseRevolution: ()  => {,,,
+const CognitiveAutomationEnterpriseRevolution: () => {
   return (
     <>
-      <Helmet >
-        <title >Cognitive Automation: The Enterprise Revolution of 2025 | Zion Tech Group</title>,,
+      <Helmet>
+        <title>Cognitive Automation: The Enterprise Revolution of 2025 | Zion Tech Group</title>,,
         <meta name: "description",";,";,
   content: "Discover how cognitive automation is transforming enterprises in 2025. 92% efficiency gains, $3.2M average savings, and 10x productivity increases through intelligent AI systems." /><meta name: "keywords",";,";,
-  content: "cognitive automation, enterprise AI, intelligent automation, business process automation, AI transformation, digital workforce" /></Helmet>";,";,
+  content: "cognitive automation, enterprise AI, intelligent automation, business process automation, AI transformation, digital workforce" /></$1>";,
 
       <div className: "min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">",";,
         <Header />
 
-        <article className: "container mx-auto px-6 py-20">";,";,
+        <article className: "container mx-auto px-6 py-20">,
         <article className: "container mx-auto px-6 py-20">",";,
           {/* Back Link */};
           <Link to: "/blog",";,";,
   className: "inline-flex items-center text-zion-cyan hover: text-zion-blue-light mb-8 transition-colors",";,
           >
-            <ArrowLeft className: "w-4 h-4 mr-2/>";,";,
+            <ArrowLeft className: "w-4 h-4 mr-2/>,
             <ArrowLeft className: "w-4 h-4 mr-2" />",";,";,
   Back to Blog
           </Link>
@@ -54,9 +52,9 @@ const CognitiveAutomationEnterpriseRevolution: ()  => {,,,
 
             {/* Key Stats */}
             <div className: "grid md: grid-cols-4 gap-6">",";,
-              <div className: "bg-purple-900/40 rounded-xl p-6 border border-purple-500/30 text-center">";,";,
-                <div className: "text-4xl font-bold text-purple-400 mb-2">92%</div>";,";,
-                <div className: "text-sm text-zion-slate-light">Efficiency Gains</div>";,";,
+              <div className: "bg-purple-900/40 rounded-xl p-6 border border-purple-500/30 text-center">,
+                <div className: "text-4xl font-bold text-purple-400 mb-2">92%</$1>";,
+                <div className: "text-sm text-zion-slate-light">Efficiency Gains</$1>";,
             <div className: "grid md: grid-cols-4 gap-6">",";,
               <div className: "bg-purple-900/40 rounded-xl p-6 border border-purple-500/30 text-center">",";,
                 <div className: "text-4xl font-bold text-purple-400 mb-2">92%</div>",";,
@@ -81,7 +79,7 @@ const CognitiveAutomationEnterpriseRevolution: ()  => {,,,
           <div className: "max-w-5xl mx-auto space-y-12 text-zion-slate-light">",";,
             {/* Introduction */}
             <section >
-              <h2 className: "text-3xl font-bold text-white mb-6">🚀 The Cognitive Automation Era Has Arrived</h2>";,";,
+              <h2 className: "text-3xl font-bold text-white mb-6">🚀 The Cognitive Automation Era Has Arrived</$1>";,
               <p className: "text-lg leading-relaxed mb-4">,";,";,
   In 2025, we're witnessing a fundamental shift in how enterprises operate. The era of simple ';';
                 robotic process automation (RPA) is giving way to <strong className: "text-white">cognitive automation</strong> ";,";,
@@ -98,10 +96,10 @@ const CognitiveAutomationEnterpriseRevolution: ()  => {,,,
                 AI capabilities including natural language processing, computer vision, machine learning, and 
                 deep reasoning to handle complex, judgment-based tasks that previously required human expertise.
               </p>
-              <div className: "bg-gradient-to-r from-purple-900/40 to-blue-900/40 rounded-xl p-8 border border-purple-500/30">";,";,
-                <p className: "text-lg font-semibold text-white mb-2">";,";,
+              <div className: "bg-gradient-to-r from-purple-900/40 to-blue-900/40 rounded-xl p-8 border border-purple-500/30">,
+                <p className: "text-lg font-semibold text-white mb-2">,
                   💡 Key Insight: </p>,,
-                <p className: "text-lg">";,";,
+                <p className: "text-lg">,
               <div className: "bg-gradient-to-r from-purple-900/40 to-blue-900/40 rounded-xl p-8 border border-purple-500/30">",";,
                 <p className: "text-lg font-semibold text-white mb-2">",";,
                   💡 Key Insight: </p>,,
@@ -118,10 +116,10 @@ const CognitiveAutomationEnterpriseRevolution: ()  => {,,,
               <p className: "text-lg leading-relaxed mb-6">",";,";,
   Cognitive automation systems possess four defining characteristics that separate them from 
                 traditional automation: </p>,,
-              <div className: "space-y-4">";,";,
-                <div className: "bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/30">";,";,
-                  <h3 className: "text-xl font-bold text-white mb-3 flex items-center gap-2">";,";,
-                    <Brain className: "w-6 h-6 text-cyan-400/>";,";,
+              <div className: "space-y-4">,
+                <div className: "bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/30">,
+                  <h3 className: "text-xl font-bold text-white mb-3 flex items-center gap-2">,
+                    <Brain className: "w-6 h-6 text-cyan-400/>,
               <div className: "space-y-4">",";,
                 <div className: "bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/30">",";,
                   <h3 className: "text-xl font-bold text-white mb-3 flex items-center gap-2">",";,
@@ -141,8 +139,8 @@ const CognitiveAutomationEnterpriseRevolution: ()  => {,,,
                   </p>
                 </div>
 
-                <div className: "bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-purple-500/30">";,";,
-                  <h3 className: "text-xl font-bold text-white mb-3 flex items-center gap-2">";,";,
+                <div className: "bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-purple-500/30">,
+                  <h3 className: "text-xl font-bold text-white mb-3 flex items-center gap-2">,
                     <Target className: "w-6 h-6 text-purple-400/>,";,";,
   2. Decision-Making Capability
                   </h3>
@@ -167,9 +165,9 @@ const CognitiveAutomationEnterpriseRevolution: ()  => {,,,
                   </p>
                 </div>
 
-                <div className: "bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-pink-500/30">";,";,
-                  <h3 className: "text-xl font-bold text-white mb-3 flex items-center gap-2">";,";,
-                    <Zap className: "w-6 h-6 text-pink-400/>";,";,
+                <div className: "bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-pink-500/30">,
+                  <h3 className: "text-xl font-bold text-white mb-3 flex items-center gap-2">,
+                    <Zap className: "w-6 h-6 text-pink-400/>,
                 <div className: "bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-pink-500/30">",";,
                   <h3 className: "text-xl font-bold text-white mb-3 flex items-center gap-2">",";,
                     <Zap className: "w-6 h-6 text-pink-400" />",";,";,
@@ -187,9 +185,9 @@ const CognitiveAutomationEnterpriseRevolution: ()  => {,,,
                   </p>
                 </div>
 
-                <div className: "bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-blue-500/30">";,";,
-                  <h3 className: "text-xl font-bold text-white mb-3 flex items-center gap-2">";,";,
-                    <Shield className: "w-6 h-6 text-blue-400/>";,";,
+                <div className: "bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-blue-500/30">,
+                  <h3 className: "text-xl font-bold text-white mb-3 flex items-center gap-2">,
+                    <Shield className: "w-6 h-6 text-blue-400/>,
                 <div className: "bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-blue-500/30">",";,
                   <h3 className: "text-xl font-bold text-white mb-3 flex items-center gap-2">",";,
                     <Shield className: "w-6 h-6 text-blue-400" />",";,";,
@@ -212,23 +210,23 @@ const CognitiveAutomationEnterpriseRevolution: ()  => {,,,
 
             {/* Business Impact */}
             <section >
-              <h2 className: "text-3xl font-bold text-white mb-6">📊 Proven Business Impact</h2>";,";,
+              <h2 className: "text-3xl font-bold text-white mb-6">📊 Proven Business Impact</$1>";,
               <p className: "text-lg leading-relaxed mb-6">,";,";,
   Real-world implementations across industries are delivering transformational results: </p>,,
               <div className: "grid md: grid-cols-2 gap-6 mb-8">",";,
-                <div className: "bg-green-900/40 rounded-xl p-6 border border-green-500/30">";,";,
-                  <h3 className: "text-xl font-bold text-white mb-4">💰 Financial Services</h3>";,";,
-                  <ul className: "space-y-3">";,";,
-                    <li className: "flex items-start gap-2">";,";,
-                      <CheckCircle className: "w-5 h-5 text-green-400 mt-1 flex-shrink-0/>";,";,
+                <div className: "bg-green-900/40 rounded-xl p-6 border border-green-500/30">,
+                  <h3 className: "text-xl font-bold text-white mb-4">💰 Financial Services</$1>";,
+                  <ul className: "space-y-3">,
+                    <li className: "flex items-start gap-2">,
+                      <CheckCircle className: "w-5 h-5 text-green-400 mt-1 flex-shrink-0/>,
                       <span ><strong >94% reduction</strong> in loan processing time (from 3 weeks to 4 hours)</span>
                     </li>
-                    <li className: "flex items-start gap-2">";,";,
-                      <CheckCircle className: "w-5 h-5 text-green-400 mt-1 flex-shrink-0/>";,";,
+                    <li className: "flex items-start gap-2">,
+                      <CheckCircle className: "w-5 h-5 text-green-400 mt-1 flex-shrink-0/>,
                       <span ><strong >$12M annual savings</strong> in back-office operations</span>
                     </li>
-                    <li className: "flex items-start gap-2">";,";,
-                      <CheckCircle className: "w-5 h-5 text-green-400 mt-1 flex-shrink-0/>";,";,
+                    <li className: "flex items-start gap-2">,
+                      <CheckCircle className: "w-5 h-5 text-green-400 mt-1 flex-shrink-0/>,
               <h2 className: "text-3xl font-bold text-white mb-6">📊 Proven Business Impact</h2>",";,
               <p className: "text-lg leading-relaxed mb-6">",";,";,
   Real-world implementations across industries are delivering transformational results: </p>,,
@@ -251,19 +249,19 @@ const CognitiveAutomationEnterpriseRevolution: ()  => {,,,
                   </ul>
                 </div>
 
-                <div className: "bg-blue-900/40 rounded-xl p-6 border border-blue-500/30">";,";,
-                  <h3 className: "text-xl font-bold text-white mb-4">🏥 Healthcare</h3>";,";,
-                  <ul className: "space-y-3">";,";,
-                    <li className: "flex items-start gap-2">";,";,
-                      <CheckCircle className: "w-5 h-5 text-blue-400 mt-1 flex-shrink-0/>";,";,
+                <div className: "bg-blue-900/40 rounded-xl p-6 border border-blue-500/30">,
+                  <h3 className: "text-xl font-bold text-white mb-4">🏥 Healthcare</$1>";,
+                  <ul className: "space-y-3">,
+                    <li className: "flex items-start gap-2">,
+                      <CheckCircle className: "w-5 h-5 text-blue-400 mt-1 flex-shrink-0/>,
                       <span ><strong >87% faster</strong> insurance claims processing</span>
                     </li>
-                    <li className: "flex items-start gap-2">";,";,
-                      <CheckCircle className: "w-5 h-5 text-blue-400 mt-1 flex-shrink-0/>";,";,
+                    <li className: "flex items-start gap-2">,
+                      <CheckCircle className: "w-5 h-5 text-blue-400 mt-1 flex-shrink-0/>,
                       <span ><strong >62% improvement</strong> in patient appointment scheduling efficiency</span>
                     </li>
-                    <li className: "flex items-start gap-2">";,";,
-                      <CheckCircle className: "w-5 h-5 text-blue-400 mt-1 flex-shrink-0/>";,";,
+                    <li className: "flex items-start gap-2">,
+                      <CheckCircle className: "w-5 h-5 text-blue-400 mt-1 flex-shrink-0/>,
                 <div className: "bg-blue-900/40 rounded-xl p-6 border border-blue-500/30">",";,
                   <h3 className: "text-xl font-bold text-white mb-4">🏥 Healthcare</h3>",";,
                   <ul className: "space-y-3">",";,
@@ -282,19 +280,19 @@ const CognitiveAutomationEnterpriseRevolution: ()  => {,,,
                   </ul>
                 </div>
 
-                <div className: "bg-purple-900/40 rounded-xl p-6 border border-purple-500/30">";,";,
-                  <h3 className: "text-xl font-bold text-white mb-4">🏭 Manufacturing</h3>";,";,
-                  <ul className: "space-y-3">";,";,
-                    <li className: "flex items-start gap-2">";,";,
-                      <CheckCircle className: "w-5 h-5 text-purple-400 mt-1 flex-shrink-0/>";,";,
+                <div className: "bg-purple-900/40 rounded-xl p-6 border border-purple-500/30">,
+                  <h3 className: "text-xl font-bold text-white mb-4">🏭 Manufacturing</$1>";,
+                  <ul className: "space-y-3">,
+                    <li className: "flex items-start gap-2">,
+                      <CheckCircle className: "w-5 h-5 text-purple-400 mt-1 flex-shrink-0/>,
                       <span ><strong >91% reduction</strong> in unplanned downtime through predictive maintenance</span>
                     </li>
-                    <li className: "flex items-start gap-2">";,";,
-                      <CheckCircle className: "w-5 h-5 text-purple-400 mt-1 flex-shrink-0/>";,";,
+                    <li className: "flex items-start gap-2">,
+                      <CheckCircle className: "w-5 h-5 text-purple-400 mt-1 flex-shrink-0/>,
                       <span ><strong >35% improvement</strong> in supply chain optimization</span>
                     </li>
-                    <li className: "flex items-start gap-2">";,";,
-                      <CheckCircle className: "w-5 h-5 text-purple-400 mt-1 flex-shrink-0/>";,";,
+                    <li className: "flex items-start gap-2">,
+                      <CheckCircle className: "w-5 h-5 text-purple-400 mt-1 flex-shrink-0/>,
                 <div className: "bg-purple-900/40 rounded-xl p-6 border border-purple-500/30">",";,
                   <h3 className: "text-xl font-bold text-white mb-4">🏭 Manufacturing</h3>",";,
                   <ul className: "space-y-3">",";,
@@ -313,19 +311,19 @@ const CognitiveAutomationEnterpriseRevolution: ()  => {,,,
                   </ul>
                 </div>
 
-                <div className: "bg-cyan-900/40 rounded-xl p-6 border border-cyan-500/30">";,";,
-                  <h3 className: "text-xl font-bold text-white mb-4">🛒 Retail & E-Commerce</h3>";,";,
-                  <ul className: "space-y-3">";,";,
-                    <li className: "flex items-start gap-2">";,";,
-                      <CheckCircle className: "w-5 h-5 text-cyan-400 mt-1 flex-shrink-0/>";,";,
+                <div className: "bg-cyan-900/40 rounded-xl p-6 border border-cyan-500/30">,
+                  <h3 className: "text-xl font-bold text-white mb-4">🛒 Retail & E-Commerce</$1>";,
+                  <ul className: "space-y-3">,
+                    <li className: "flex items-start gap-2">,
+                      <CheckCircle className: "w-5 h-5 text-cyan-400 mt-1 flex-shrink-0/>,
                       <span ><strong >83% improvement</strong> in customer service response time</span>
                     </li>
-                    <li className: "flex items-start gap-2">";,";,
-                      <CheckCircle className: "w-5 h-5 text-cyan-400 mt-1 flex-shrink-0/>";,";,
+                    <li className: "flex items-start gap-2">,
+                      <CheckCircle className: "w-5 h-5 text-cyan-400 mt-1 flex-shrink-0/>,
                       <span ><strong >2.4x increase</strong> in customer satisfaction scores</span>
                     </li>
-                    <li className: "flex items-start gap-2">";,";,
-                      <CheckCircle className: "w-5 h-5 text-cyan-400 mt-1 flex-shrink-0/>";,";,
+                    <li className: "flex items-start gap-2">,
+                      <CheckCircle className: "w-5 h-5 text-cyan-400 mt-1 flex-shrink-0/>,
                 <div className: "bg-cyan-900/40 rounded-xl p-6 border border-cyan-500/30">",";,
                   <h3 className: "text-xl font-bold text-white mb-4">🛒 Retail & E-Commerce</h3>",";,
                   <ul className: "space-y-3">",";,
@@ -348,7 +346,7 @@ const CognitiveAutomationEnterpriseRevolution: ()  => {,,,
 
             {/* Implementation Framework */}
             <section >
-              <h2 className: "text-3xl font-bold text-white mb-6">🎯 Enterprise Implementation Framework</h2>";,";,
+              <h2 className: "text-3xl font-bold text-white mb-6">🎯 Enterprise Implementation Framework</$1>";,
               <p className: "text-lg leading-relaxed mb-6">,";,";,
   Successful cognitive automation requires a structured approach. Here's our proven 6-phase framework: ',';,
               <h2 className: "text-3xl font-bold text-white mb-6">🎯 Enterprise Implementation Framework</h2>",";,
@@ -363,7 +361,7 @@ const CognitiveAutomationEnterpriseRevolution: ()  => {,,,
                       <span className: "text-2xl font-bold text-cyan-400">1</span>",";,
                     </div>
                     <div >
-                      <h3 className: "text-2xl font-bold text-white mb-3">Discovery & Assessment (Weeks 1-3)</h3>";,";,
+                      <h3 className: "text-2xl font-bold text-white mb-3">Discovery & Assessment (Weeks 1-3)</$1>";,
                       <p className: "mb-4">,";,";,
   Identify high-value automation opportunities through process mining, stakeholder interviews
                       <h3 className: "text-2xl font-bold text-white mb-3">Discovery & Assessment (Weeks 1-3)</h3>",";,
@@ -489,9 +487,9 @@ const CognitiveAutomationEnterpriseRevolution: ()  => {,,,
             </section>
 
             {/* Call to Action */}
-            <section className: "bg-gradient-to-r from-purple-900/60 to-blue-900/60 rounded-2xl p-12 border-2 border-purple-500/40 text-center">";,";,
-              <Rocket className: "w-16 h-16 text-purple-400 mx-auto mb-6/>";,";,
-              <h2 className: "text-4xl font-bold text-white mb-6">";,";,
+            <section className: "bg-gradient-to-r from-purple-900/60 to-blue-900/60 rounded-2xl p-12 border-2 border-purple-500/40 text-center">,
+              <Rocket className: "w-16 h-16 text-purple-400 mx-auto mb-6/>,
+              <h2 className: "text-4xl font-bold text-white mb-6">,
             <section className: "bg-gradient-to-r from-purple-900/60 to-blue-900/60 rounded-2xl p-12 border-2 border-purple-500/40 text-center">",";,
               <Rocket className: "w-16 h-16 text-purple-400 mx-auto mb-6" />",";,
               <h2 className: "text-4xl font-bold text-white mb-6">",";,";,
@@ -507,14 +505,14 @@ const CognitiveAutomationEnterpriseRevolution: ()  => {,,,
                 <Link to: "/contact",";,";,
   className: "inline-flex items-center justify-center gap-2 bg-purple-500 hover: bg-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg",";,
                 >
-                  <Rocket className: "w-5 h-5/>";,";,
+                  <Rocket className: "w-5 h-5/>,
                   <Rocket className: "w-5 h-5" />",";,";,
   Schedule Consultation
                 </Link>
                 <Link to: "/services",";,";,
   className: "inline-flex items-center justify-center gap-2 border-2 border-purple-400 text-purple-300 hover: bg-purple-500/20 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105",";,
                 >
-                  <TrendingUp className: "w-5 h-5/>";,";,
+                  <TrendingUp className: "w-5 h-5/>,
                   <TrendingUp className: "w-5 h-5" />",";,";,
   Explore AI Services
                 </Link>

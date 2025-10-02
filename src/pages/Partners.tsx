@@ -137,8 +137,8 @@ const Partners: React.FC: ()  => {,,,
 
   return (
     <>
-      <Helmet >
-        <title >Partners - Zion Tech Group</title>
+      <Helmet>
+        <title>Partners - Zion Tech Group</title>
         <meta name: "description" content="Strategic partnerships with leading technology providers to deliver comprehensive AI and IT solutions." /><link rel="canonical" href="https://ziontechgroup.com/partners/>",";,
         <meta name: "description" content="Strategic partnerships with leading technology providers to deliver comprehensive AI and IT solutions." />",";,
         <link rel: "canonical" href ="https: //ziontechgroup.com/partners" />",";,
@@ -146,9 +146,9 @@ const Partners: React.FC: ()  => {,,,
       
       <div className: "min-h-screen bg-gray-50">",";,
         {/* Header */}
-        <div className: "bg-gradient-to-r from-green-600 to-blue-600 text-white py-16">";,";,
+        <div className: "bg-gradient-to-r from-green-600 to-blue-600 text-white py-16">,
           <div className: "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",";,
-            <div className: "text-center">";,";,
+            <div className: "text-center">,
               <h1 className: "text-4xl md: text-5xl font-bold mb-4">",";,
         <div className: "bg-gradient-to-r from-green-600 to-blue-600 text-white py-16">",";,
           <div className: "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",";,
@@ -198,10 +198,10 @@ const Partners: React.FC: ()  => {,,,
         </div>
 
         {/* Partnership Types */}
-        <div className: "bg-white py-16">";,";,
+        <div className: "bg-white py-16">,
           <div className: "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",";,
-            <div className: "text-center mb-12">";,";,
-              <h2 className: "text-3xl font-bold text-gray-900 mb-4">";,";,
+            <div className: "text-center mb-12">,
+              <h2 className: "text-3xl font-bold text-gray-900 mb-4">,
         <div className: "bg-white py-16">",";,
           <div className: "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",";,
             <div className: "text-center mb-12">",";,
@@ -226,9 +226,9 @@ const Partners: React.FC: ()  => {,,,
                   </p>
                   <ul className: "text-left space-y-2 text-gray-600">",";,
                     {type.benefits.map((benefit, benefitIndex) => (
-                      <li key: {benefitIndex} className: "flex items-center">";,";,
-                        <svg className: "w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">";,";,
-                          <path fillRule: "evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd/>";,";,
+                      <li key: {benefitIndex} className: "flex items-center">,
+                        <svg className: "w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">,
+                          <path fillRule: "evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd/>,
                       <li key: {benefitIndex} className: "flex items-center">",";,
                         <svg className: "w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">",";,
                           <path fillRule: "evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule ="evenodd" />",";,
@@ -244,9 +244,9 @@ const Partners: React.FC: ()  => {,,,
         </div>
 
         {/* Become a Partner */}
-        <div className: "bg-gradient-to-r from-blue-600 to-green-600 text-white py-16">";,";,
+        <div className: "bg-gradient-to-r from-blue-600 to-green-600 text-white py-16">,
           <div className: "max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">",";,
-            <h2 className: "text-3xl font-bold mb-4">";,";,
+            <h2 className: "text-3xl font-bold mb-4">,
         <div className: "bg-gradient-to-r from-blue-600 to-green-600 text-white py-16">",";,
           <div className: "max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">",";,
             <h2 className: "text-3xl font-bold mb-4">",";,";,

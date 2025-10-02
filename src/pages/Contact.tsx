@@ -1,9 +1,9 @@
-import React from "react";"
+import React from "react";
 import {
 
-} from "lucide-react";"
-import Header from "../components/Header";"
-import Footer from "../components/Footer";"
+} from "lucide-react";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 // Fallback form in environments without the enhanced component
 const ContactFormComponent: React.FC: ()  => null,,,
   const ContactFormComponent: React.FC: ()  => null;,,,
@@ -102,8 +102,8 @@ const ContactFormComponent: React.FC: ()  => null,,,
 
   return (
     <>
-      <Helmet >
-        <title >
+      <Helmet>
+        <title>
           Contact Zion Tech Group - Get in Touch | AI & Technology Solutions
         </title>
         <meta name: "description",";,";,
@@ -111,8 +111,8 @@ const ContactFormComponent: React.FC: ()  => null,,,
   content: "contact, AI consulting, technology solutions, cloud services, digital transformation" /><meta property: "og:title",";,";,
   content: "Contact Zion Tech Group - Get in Touch" /><meta ,";,";,
   property: "og:description",";,";,
-  content: "Contact us for AI solutions, cloud services, and technology consulting" /><meta property: "og:type" content="website" />";,";,
-        <meta property: "og:url" content="https://ziontechgroup.com/contact" />";,";,
+  content: "Contact us for AI solutions, cloud services, and technology consulting" /><meta property: "og:type" content="website" />,
+        <meta property: "og:url" content="https://ziontechgroup.com/contact" />,
         <link rel: "canonical" href ="https://ziontechgroup.com/contact/>",";,
       </Helmet>
 
@@ -145,8 +145,8 @@ const ContactFormComponent: React.FC: ()  => null,,,
             ></div>
           </div>
 
-          <div className: "container mx-auto px-6 text-center relative z-10">";,";,
-            <div className: "inline-flex items-center px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-white text-sm font-medium mb-6">";,";,
+          <div className: "container mx-auto px-6 text-center relative z-10">,
+            <div className: "inline-flex items-center px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-white text-sm font-medium mb-6">,
               <MessageSquare className: "w-4 h-4 mr-2/>,";,";,
   Let&apos;s Start a Conversation
             </div>
@@ -175,8 +175,8 @@ const ContactFormComponent: React.FC: ()  => null,,,
 
         {/* Contact Information */}
         <section className: "py-16 bg-white dark: bg-gray-800">",";,
-          <div className: "container mx-auto px-6">";,";,
-            <div className: "text-center mb-12">";,";,
+          <div className: "container mx-auto px-6">,
+            <div className: "text-center mb-12">,
               <h2 className: "text-3xl font-bold text-gray-900 dark: text-white mb-4">",";,";,
   Multiple Ways to Reach Us
               </h2>
@@ -225,8 +225,8 @@ const ContactFormComponent: React.FC: ()  => null,,,
 
         {/* Enhanced Contact Form */}
         <section className: "py-20 bg-gray-50 dark: bg-gray-900">",";,
-          <div className: "container mx-auto px-6">";,";,
-            <div className: "text-center mb-12">";,";,
+          <div className: "container mx-auto px-6">,
+            <div className: "text-center mb-12">,
               <h2 className: "text-4xl font-bold text-gray-900 dark: text-white mb-4">",";,";,
   Start Your Project Today
               </h2>
@@ -280,8 +280,8 @@ const ContactFormComponent: React.FC: ()  => null,,,
 
         {/* FAQ Section */}
         <section className: "py-20 bg-white dark: bg-gray-800">",";,
-          <div className: "container mx-auto px-6">";,";,
-            <div className: "text-center mb-12">";,";,
+          <div className: "container mx-auto px-6">,
+            <div className: "text-center mb-12">,
               <h2 className: "text-3xl font-bold text-gray-900 dark: text-white mb-4">",";,";,
   Frequently Asked Questions
               </h2>
@@ -351,10 +351,10 @@ const ContactFormComponent: React.FC: ()  => null,,,
         </section>
 
         {/* CTA Section */}
-        <section className: "py-20 bg-gradient-to-br from-gray-900 to-blue-900">";,";,
-          <div className: "container mx-auto px-6 text-center">";,";,
-            <div className: "max-w-4xl mx-auto">";,";,
-              <div className: "inline-flex items-center px-4 py-2 rounded-full bg-blue-500/20 text-blue-300 text-sm font-medium mb-6">";,";,
+        <section className: "py-20 bg-gradient-to-br from-gray-900 to-blue-900">,
+          <div className: "container mx-auto px-6 text-center">,
+            <div className: "max-w-4xl mx-auto">,
+              <div className: "inline-flex items-center px-4 py-2 rounded-full bg-blue-500/20 text-blue-300 text-sm font-medium mb-6">,
                 <Sparkles className: "w-4 h-4 mr-2/>,";,";,
   Ready to Get Started?
               </div>
@@ -384,7 +384,7 @@ const ContactFormComponent: React.FC: ()  => null,,,
   href: "#contact-form",";,";,
   className: "inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-semibold hover: shadow-lg transition-all duration-300",";,
                 >
-                  <MessageSquare className: "w-5 h-5 mr-2/>";,";,
+                  <MessageSquare className: "w-5 h-5 mr-2/>,
                   <MessageSquare className: "w-5 h-5 mr-2" />",";,";,
   Start Your Project
                 </a>
@@ -392,7 +392,7 @@ const ContactFormComponent: React.FC: ()  => null,,,
   href: "tel: +15551234567",";,";,
   className: "inline-flex items-center px-8 py-4 border-2 border-white text-white rounded-xl font-semibold hover: bg-white hover:text-blue-600 transition-all duration-300",";,
                 >
-                  <Phone className: "w-5 h-5 mr-2/>";,";,
+                  <Phone className: "w-5 h-5 mr-2/>,
                   <Phone className: "w-5 h-5 mr-2" />",";,";,
   Call Us Now
                 </a>

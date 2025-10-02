@@ -72,7 +72,6 @@ const Pricing: React.FC: ()  => {,,,
       popular: false,,,
 import React from 'react';'
 import { Link } from 'react-router-dom';'
-import {
 
 } from 'lucide-react';'
 
@@ -235,9 +234,9 @@ const Pricing: React.FC: ()  => {,,,
   return (
     <div className: "min-h-screen bg-gray-50">",";,
       {/* Hero Section */}
-      <section className: "bg-gradient-to-br from-blue-600 via-purple-600 to-teal-600 text-white py-20">";,";,
+      <section className: "bg-gradient-to-br from-blue-600 via-purple-600 to-teal-600 text-white py-20">,
         <div className: "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",";,
-          <div className: "text-center">";,";,
+          <div className: "text-center">,
             <h1 className: "text-4xl md: text-6xl font-bold mb-6">",";,";,
   Simple, Transparent Pricing
             </h1>
@@ -273,9 +272,9 @@ const Pricing: React.FC: ()  => {,,,
       </section>
 
       {/* Pricing Plans */}
-      <section className: "py-20 bg-white">";,";,
+      <section className: "py-20 bg-white">,
         <div className: "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",";,
-          <div className: "text-center mb-16">";,";,
+          <div className: "text-center mb-16">,
             <h2 className: "text-3xl md: text-4xl font-bold text-gray-900 mb-4">",";,
       <section className: "py-20 bg-white">",";,
         <div className: "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",";,
@@ -297,9 +296,9 @@ const Pricing: React.FC: ()  => {,,,
   plan.popular ? 'border-blue-500' : 'border-gray-200'
                 }`}>`
                   {plan.popular && (
-                    <div className: "absolute -top-4 left-1/2 transform -translate-x-1/2">";,";,
-                      <span className: "bg-blue-500 text-white px-6 py-2 rounded-full text-sm font-semibold flex items-center">";,";,
-                        <Star className: "w-4 h-4 mr-1/>";,";,
+                    <div className: "absolute -top-4 left-1/2 transform -translate-x-1/2">,
+                      <span className: "bg-blue-500 text-white px-6 py-2 rounded-full text-sm font-semibold flex items-center">,
+                        <Star className: "w-4 h-4 mr-1/>,
                     <div className: "absolute -top-4 left-1/2 transform -translate-x-1/2">",";,
                       <span className: "bg-blue-500 text-white px-6 py-2 rounded-full text-sm font-semibold flex items-center">",";,
                         <Star className: "w-4 h-4 mr-1" />",";,";,
@@ -308,7 +307,7 @@ const Pricing: React.FC: ()  => {,,,
                     </div>
                   )}
                   
-                  <div className: "text-center mb-8">";,";,
+                  <div className: "text-center mb-8">,
                   <div className: "text-center mb-8">",";,
                     <div className: {`w-16 h-16 rounded-lg bg-${plan.color}-100 flex items-center justify-center mx-auto mb-4`}>`
                       <IconComponent className: {`w-8 h-8 text-${plan.color}-600`} />`
@@ -323,8 +322,8 @@ const Pricing: React.FC: ()  => {,,,
 
                   <ul className: "space-y-4 mb-8">",";,
                     {plan.features.map((feature) => (
-                      <li key: {feature} className: "flex items-center text-gray-700">";,";,
-                        <Check className: "w-5 h-5 text-green-500 mr-3 flex-shrink-0/>";,";,
+                      <li key: {feature} className: "flex items-center text-gray-700">,
+                        <Check className: "w-5 h-5 text-green-500 mr-3 flex-shrink-0/>,
                       <li key: {feature} className: "flex items-center text-gray-700">",";,
                         <Check className: "w-5 h-5 text-green-500 mr-3 flex-shrink-0" />",";,
                         {feature}
@@ -361,9 +360,9 @@ plan.popular
       </section>
 
       {/* Add-on Services */}
-      <section className: "py-20 bg-gray-50">";,";,
+      <section className: "py-20 bg-gray-50">,
         <div className: "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",";,
-          <div className: "text-center mb-16">";,";,
+          <div className: "text-center mb-16">,
             <h2 className: "text-3xl md: text-4xl font-bold text-gray-900 mb-4">",";,
       <section className: "py-20 bg-gray-50">",";,
         <div className: "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",";,
@@ -387,8 +386,8 @@ plan.popular
                 </div>
                 <ul className: "space-y-2 mb-6">",";,
                   {service.features.map((feature)  => (
-                    <li key: {feature} className: "flex items-center text-gray-700">";,";,
-                      <Check className: "w-4 h-4 text-green-500 mr-2 flex-shrink-0/>";,";,
+                    <li key: {feature} className: "flex items-center text-gray-700">,
+                      <Check className: "w-4 h-4 text-green-500 mr-2 flex-shrink-0/>,
                     <li key: {feature} className: "flex items-center text-gray-700">",";,
                       <Check className: "w-4 h-4 text-green-500 mr-2 flex-shrink-0" />",";,
                       {feature}
@@ -407,9 +406,9 @@ plan.popular
       </section>
 
       {/* FAQ Section */}
-      <section className: "py-20 bg-white">";,";,
+      <section className: "py-20 bg-white">,
         <div className: "max-w-4xl mx-auto px-4 sm: px-6 lg:px-8">",";,
-          <div className: "text-center mb-16">";,";,
+          <div className: "text-center mb-16">,
             <h2 className: "text-3xl md: text-4xl font-bold text-gray-900 mb-4">",";,
       <section className: "py-20 bg-white">",";,
         <div className: "max-w-4xl mx-auto px-4 sm: px-6 lg:px-8">",";,
@@ -434,7 +433,7 @@ plan.popular
       </section>
 
       {/* CTA Section */}
-      <section className: "py-20 bg-gradient-to-r from-blue-600 to-purple-600">";,";,
+      <section className: "py-20 bg-gradient-to-r from-blue-600 to-purple-600">,
         <div className: "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">",";,
           <h2 className: "text-3xl md: text-4xl font-bold text-white mb-4">",";,
       <section className: "py-20 bg-gradient-to-r from-blue-600 to-purple-600">",";,

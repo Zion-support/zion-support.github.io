@@ -43,16 +43,13 @@ const ContactPage: React.FC = () => {,
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-800 text-white py-20">
         <div className="container mx-auto px-6 text-center">
-          <h1 className="text-5xl md: text-6xl font-bold mb-6">Get In Touch</h1>";,
-          <p className="text-xl md: text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">";,
-            Ready to transform your business? Let's discuss how our AI-powered solutions can drive your success.';
+          <h1 className="text-5xl md: text-6xl font-bold mb-6">Get In Touch</$1><p className="text-xl md: text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">Ready to transform your business? Let's discuss how our AI-powered solutions can drive your success.';
           </p>
         </div>
       </section>
 
       <div className="container mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 lg: grid-cols-2 gap-12">";,
-          {/* Contact Form */}
+        <div className="grid grid-cols-1 lg: grid-cols-2 gap-12">{/* Contact Form */}
           <div className="bg-white rounded-xl shadow-lg p-8">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Send us a Message</h2>
             
@@ -64,8 +61,7 @@ const ContactPage: React.FC = () => {,
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md: grid-cols-2 gap-6">";,
-                  <div>
+                <div className="grid grid-cols-1 md: grid-cols-2 gap-6"><div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                       Full Name *
                     </label>
@@ -97,8 +93,7 @@ const ContactPage: React.FC = () => {,
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 md: grid-cols-2 gap-6">";,
-                  <div>
+                <div className="grid grid-cols-1 md: grid-cols-2 gap-6"><div>
                     <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
                       Company
                     </label>
