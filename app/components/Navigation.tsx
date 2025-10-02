@@ -1,40 +1,20 @@
-import React from 'react';
+'use client';
+
+import React, { useState } from 'react';
 import Link from 'next/link';
-import './globals.css';
-import { Header, Footer } from './components/Navigation';
 
-export const metadata = {
-  title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
-  description: 'Enterprise-grade AI, micro SaaS, and IT solutions. Build faster with Zion Tech Group.',
-  keywords: 'AI services, micro SaaS, IT services, cloud migration, DevOps, SRE, enterprise software',
-  authors: [{ name: 'Zion Tech Group' }],
-  openGraph: {
-    title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
-    description: 'Enterprise-grade AI, micro SaaS, and IT solutions. Build faster with Zion Tech Group.',
-    url: 'https://ziontechgroup.com',
-    siteName: 'Zion Tech Group',
-    locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
-    description: 'Enterprise-grade AI, micro SaaS, and IT solutions. Build faster with Zion Tech Group.',
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-};
+export function Header() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
 
-function Header() {
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const toggleDropdown = (dropdown: string) => {
+    setOpenDropdown(openDropdown === dropdown ? null : dropdown);
+  };
+
   return (
     <header className="border-b border-gray-200 sticky top-0 z-50 bg-white shadow-sm">
       <nav className="flex items-center justify-between px-4 py-3 max-w-6xl mx-auto">
@@ -46,37 +26,29 @@ function Header() {
         <div className="hidden lg:flex items-center gap-6">
           {/* Services Dropdown */}
           <div className="relative group">
-            <button className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1 font-medium">
+            <button 
+              className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1 font-medium"
+              onMouseEnter={() => setOpenDropdown('services')}
+              onMouseLeave={() => setOpenDropdown(null)}
+            >
               Services
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
             </button>
-            <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+            <div className={`absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-lg border border-gray-200 transition-all duration-200 z-50 ${
+              openDropdown === 'services' ? 'opacity-100 visible' : 'opacity-0 invisible'
+            }`}>
               <div className="py-3">
                 <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide">Core Services</div>
-                <Link href="/services/ai-services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600">
-                  AI & Machine Learning
+                <Link href="/services/ai-services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  AI Services & Solutions
                 </Link>
                 <Link href="/services/micro-saas" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
                   Micro SaaS Solutions
                 </Link>
-                <Link href="/services/it-services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-600">
-                  IT Services & Infrastructure
-                </Link>
-                <div className="border-t border-gray-100 my-2"></div>
-                <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide">Emerging Technologies</div>
-                <Link href="/services/blockchain-solutions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-50 hover:text-yellow-600">
-                  Blockchain Solutions
-                </Link>
-                <Link href="/services/iot-solutions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-600">
-                  IoT Solutions
-                </Link>
-                <Link href="/services/cybersecurity-solutions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600">
-                  Cybersecurity Solutions
-                </Link>
-                <Link href="/services/data-analytics" className="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600">
-                  Data Analytics & BI
+                <Link href="/services/it-services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  IT Services & Solutions
                 </Link>
                 <div className="border-t border-gray-100 my-2"></div>
                 <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide">Industry Solutions</div>
@@ -90,6 +62,17 @@ function Header() {
                   Autonomous Operations
                 </Link>
                 <div className="border-t border-gray-100 my-2"></div>
+                <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide">Specialized Solutions</div>
+                <Link href="/services/ai-business-intelligence-2025" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  Business Intelligence
+                </Link>
+                <Link href="/services/ai-cybersecurity-2025" className="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600">
+                  Cybersecurity
+                </Link>
+                <Link href="/services/ai-cloud-infrastructure-2025" className="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600">
+                  Cloud Infrastructure
+                </Link>
+                <div className="border-t border-gray-100 my-2"></div>
                 <Link href="/services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 font-medium">
                   View All Services →
                 </Link>
@@ -99,13 +82,19 @@ function Header() {
           
           {/* Solutions Dropdown */}
           <div className="relative group">
-            <button className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1 font-medium">
+            <button 
+              className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1 font-medium"
+              onMouseEnter={() => setOpenDropdown('solutions')}
+              onMouseLeave={() => setOpenDropdown(null)}
+            >
               Solutions
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
             </button>
-            <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+            <div className={`absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 transition-all duration-200 z-50 ${
+              openDropdown === 'solutions' ? 'opacity-100 visible' : 'opacity-0 invisible'
+            }`}>
               <div className="py-3">
                 <Link href="/solutions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
                   All Solutions
@@ -125,13 +114,19 @@ function Header() {
 
           {/* Resources Dropdown */}
           <div className="relative group">
-            <button className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1 font-medium">
+            <button 
+              className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1 font-medium"
+              onMouseEnter={() => setOpenDropdown('resources')}
+              onMouseLeave={() => setOpenDropdown(null)}
+            >
               Resources
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
             </button>
-            <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+            <div className={`absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 transition-all duration-200 z-50 ${
+              openDropdown === 'resources' ? 'opacity-100 visible' : 'opacity-0 invisible'
+            }`}>
               <div className="py-3">
                 <Link href="/blog" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
                   Blog & Insights
@@ -154,13 +149,19 @@ function Header() {
           
           {/* Featured Success Stories */}
           <div className="relative group">
-            <button className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1 font-medium">
+            <button 
+              className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1 font-medium"
+              onMouseEnter={() => setOpenDropdown('success')}
+              onMouseLeave={() => setOpenDropdown(null)}
+            >
               Success Stories
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
             </button>
-            <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+            <div className={`absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-lg border border-gray-200 transition-all duration-200 z-50 ${
+              openDropdown === 'success' ? 'opacity-100 visible' : 'opacity-0 invisible'
+            }`}>
               <div className="py-3">
                 <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide">Featured Breakthroughs</div>
                 <Link href="/blog/ai-2026-november-quantum-superintelligence-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 flex items-center gap-2">
@@ -189,58 +190,139 @@ function Header() {
             </div>
           </div>
         </div>
-        <button className="md:hidden p-2" aria-label="Toggle menu">
+
+        {/* Mobile Menu Button */}
+        <button 
+          className="lg:hidden p-2" 
+          aria-label="Toggle menu"
+          onClick={toggleMobileMenu}
+        >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            {isMobileMenuOpen ? (
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            ) : (
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            )}
           </svg>
         </button>
       </nav>
+
+      {/* Mobile Menu */}
+      <div className={`lg:hidden transition-all duration-300 ease-in-out ${
+        isMobileMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
+      } overflow-hidden`}>
+        <div className="bg-white border-t border-gray-200 shadow-lg">
+          <div className="px-4 py-4 space-y-4">
+            {/* Mobile Services Section */}
+            <div>
+              <button 
+                className="flex items-center justify-between w-full text-left font-medium text-gray-700 hover:text-blue-600"
+                onClick={() => toggleDropdown('mobile-services')}
+              >
+                Services
+                <svg className={`w-4 h-4 transition-transform ${openDropdown === 'mobile-services' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              {openDropdown === 'mobile-services' && (
+                <div className="mt-2 pl-4 space-y-2">
+                  <Link href="/services/ai-services" className="block text-sm text-gray-600 hover:text-blue-600">AI Services</Link>
+                  <Link href="/services/micro-saas" className="block text-sm text-gray-600 hover:text-blue-600">Micro SaaS</Link>
+                  <Link href="/services/it-services" className="block text-sm text-gray-600 hover:text-blue-600">IT Services</Link>
+                  <Link href="/services/manufacturing-ai-platform" className="block text-sm text-gray-600 hover:text-blue-600">Manufacturing AI</Link>
+                  <Link href="/services/supply-chain-intelligence" className="block text-sm text-gray-600 hover:text-blue-600">Supply Chain</Link>
+                  <Link href="/services" className="block text-sm text-gray-600 hover:text-blue-600">View All Services</Link>
+                </div>
+              )}
+            </div>
+
+            {/* Mobile Solutions Section */}
+            <div>
+              <button 
+                className="flex items-center justify-between w-full text-left font-medium text-gray-700 hover:text-blue-600"
+                onClick={() => toggleDropdown('mobile-solutions')}
+              >
+                Solutions
+                <svg className={`w-4 h-4 transition-transform ${openDropdown === 'mobile-solutions' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              {openDropdown === 'mobile-solutions' && (
+                <div className="mt-2 pl-4 space-y-2">
+                  <Link href="/solutions" className="block text-sm text-gray-600 hover:text-blue-600">All Solutions</Link>
+                  <Link href="/enterprise" className="block text-sm text-gray-600 hover:text-blue-600">Enterprise Solutions</Link>
+                  <Link href="/services/ai-quantum-computing-2026" className="block text-sm text-gray-600 hover:text-blue-600">Quantum Computing</Link>
+                </div>
+              )}
+            </div>
+
+            {/* Mobile Resources Section */}
+            <div>
+              <button 
+                className="flex items-center justify-between w-full text-left font-medium text-gray-700 hover:text-blue-600"
+                onClick={() => toggleDropdown('mobile-resources')}
+              >
+                Resources
+                <svg className={`w-4 h-4 transition-transform ${openDropdown === 'mobile-resources' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              {openDropdown === 'mobile-resources' && (
+                <div className="mt-2 pl-4 space-y-2">
+                  <Link href="/blog" className="block text-sm text-gray-600 hover:text-blue-600">Blog & Insights</Link>
+                  <Link href="/case-studies" className="block text-sm text-gray-600 hover:text-blue-600">Case Studies</Link>
+                  <Link href="/guides" className="block text-sm text-gray-600 hover:text-blue-600">Implementation Guides</Link>
+                  <Link href="/content-hub" className="block text-sm text-gray-600 hover:text-blue-600">Content Hub</Link>
+                </div>
+              )}
+            </div>
+
+            {/* Direct Links */}
+            <Link href="/about" className="block font-medium text-gray-700 hover:text-blue-600">About</Link>
+            <Link href="/contact" className="block font-medium text-gray-700 hover:text-blue-600">Contact</Link>
+            
+            {/* Success Stories */}
+            <div>
+              <button 
+                className="flex items-center justify-between w-full text-left font-medium text-gray-700 hover:text-blue-600"
+                onClick={() => toggleDropdown('mobile-success')}
+              >
+                Success Stories
+                <svg className={`w-4 h-4 transition-transform ${openDropdown === 'mobile-success' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              {openDropdown === 'mobile-success' && (
+                <div className="mt-2 pl-4 space-y-2">
+                  <Link href="/blog/ai-2026-november-quantum-superintelligence-breakthrough" className="block text-sm text-gray-600 hover:text-blue-600">Quantum AI Breakthrough</Link>
+                  <Link href="/blog/ai-2026-august-quantum-consciousness-revolution" className="block text-sm text-gray-600 hover:text-blue-600">Quantum Consciousness</Link>
+                  <Link href="/blog/ai-2026-july-mega-breakthrough-revolution" className="block text-sm text-gray-600 hover:text-blue-600">Mega Breakthrough</Link>
+                  <Link href="/case-studies" className="block text-sm text-gray-600 hover:text-blue-600">All Case Studies</Link>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
     </header>
-  )
+  );
 }
 
-function Footer() {
+export function Footer() {
   return (
     <footer className="border-t border-gray-200 mt-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Services */}
           <div>
-            <h3 className="font-semibold text-gray-900 mb-4 text-lg">Services</h3>
-            <div className="space-y-3">
-              <div className="text-sm font-medium text-gray-500 uppercase tracking-wide mb-2">Core Services</div>
-              <Link href="/services/ai-services" className="block text-gray-600 hover:text-purple-600 transition-colors">
-                AI & Machine Learning
-              </Link>
-              <Link href="/services/micro-saas" className="block text-gray-600 hover:text-blue-600 transition-colors">
-                Micro SaaS Solutions
-              </Link>
-              <Link href="/services/it-services" className="block text-gray-600 hover:text-gray-600 transition-colors">
-                IT Services & Infrastructure
-              </Link>
-              
-              <div className="text-sm font-medium text-gray-500 uppercase tracking-wide mb-2 mt-4">Emerging Technologies</div>
-              <Link href="/services/blockchain-solutions" className="block text-gray-600 hover:text-yellow-600 transition-colors">
-                Blockchain Solutions
-              </Link>
-              <Link href="/services/iot-solutions" className="block text-gray-600 hover:text-green-600 transition-colors">
-                IoT Solutions
-              </Link>
-              <Link href="/services/cybersecurity-solutions" className="block text-gray-600 hover:text-red-600 transition-colors">
-                Cybersecurity Solutions
-              </Link>
-              <Link href="/services/data-analytics" className="block text-gray-600 hover:text-indigo-600 transition-colors">
-                Data Analytics & BI
-              </Link>
-              <Link href="/services/manufacturing-ai-platform" className="block text-gray-600 hover:text-green-600 transition-colors">
-                Manufacturing AI Platform
-              </Link>
-              <Link href="/services/supply-chain-intelligence" className="block text-gray-600 hover:text-blue-600 transition-colors">
-                Supply Chain Intelligence
-              </Link>
-              <Link href="/services" className="block text-gray-600 hover:text-blue-600 transition-colors font-medium">
-                All Services →
-              </Link>
+            <h3 className="font-semibold text-gray-900 mb-3">Services</h3>
+            <div className="space-y-2">
+              <Link href="/services" className="block text-gray-600 hover:text-blue-600 transition-colors">All Services</Link>
+              <Link href="/services/ai-services" className="block text-gray-600 hover:text-blue-600 transition-colors">AI Services</Link>
+              <Link href="/services/micro-saas" className="block text-gray-600 hover:text-blue-600 transition-colors">Micro SaaS</Link>
+              <Link href="/services/it-services" className="block text-gray-600 hover:text-blue-600 transition-colors">IT Services</Link>
+              <Link href="/services/manufacturing-ai-platform" className="block text-gray-600 hover:text-blue-600 transition-colors">Manufacturing AI</Link>
+              <Link href="/services/supply-chain-intelligence" className="block text-gray-600 hover:text-blue-600 transition-colors">Supply Chain</Link>
             </div>
           </div>
           <div>
@@ -276,9 +358,6 @@ function Footer() {
               </Link>
               <Link href="/contact" className="block text-gray-600 hover:text-blue-600 transition-colors">
                 Contact
-              </Link>
-              <Link href="/sitemap" className="block text-gray-600 hover:text-blue-600 transition-colors">
-                Sitemap
               </Link>
               <Link href="/privacy" className="block text-gray-600 hover:text-blue-600 transition-colors">
                 Privacy Policy
@@ -349,19 +428,5 @@ function Footer() {
         </div>
       </div>
     </footer>
-  )
-}
-
-export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return (
-    <html lang="en">
-      <body className="min-h-screen bg-white text-gray-900">
-        <Header />
-        <main className="max-w-6xl mx-auto px-4 py-6 min-h-screen">
-          {children}
-        </main>
-        <Footer />
-      </body>
-    </html>
-  )
+  );
 }

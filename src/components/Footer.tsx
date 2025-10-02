@@ -20,6 +20,8 @@ const Footer: React.FC = () => {
     {
       title: 'Services',
       links: [
+        { label: 'AI Content Generator Pro', path: '/services/ai-content-generator' },
+        { label: 'Smart Appointment Scheduler', path: '/services/smart-appointment-scheduler' },
         { label: 'AI Workflow Automation', path: '/services/ai-workflow-automation' },
         { label: 'AI Virtual Assistant', path: '/services/ai-virtual-assistant' },
         { label: 'AI Data Analytics', path: '/services/ai-data-analytics' },
@@ -75,8 +77,8 @@ const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="bg-slate-900 border-t border-slate-800">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <footer className="bg-slate-900 border-t border-slate-800 shadow-lg">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
@@ -93,15 +95,15 @@ const Footer: React.FC = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3 text-slate-400">
                 <Mail className="h-4 w-4" />
-                <span>contact@ziontechgroup.com</span>
+                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-blue-400 transition-colors">kleber@ziontechgroup.com</a>
               </div>
               <div className="flex items-center space-x-3 text-slate-400">
                 <Phone className="h-4 w-4" />
-                <span>+1 (555) 123-4567</span>
+                <a href="tel:+13024640950" className="hover:text-blue-400 transition-colors">+1 302 464 0950</a>
               </div>
               <div className="flex items-center space-x-3 text-slate-400">
                 <MapPin className="h-4 w-4" />
-                <span>San Francisco, CA</span>
+                <span>364 E Main St STE 1008, Middletown, DE 19709</span>
               </div>
             </div>
 
