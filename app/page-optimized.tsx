@@ -1,46 +1,47 @@
-import React, { Suspense, lazy } from 'react';
+import React from 'react';
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
 
-// Dynamic imports for better performance
-const Ultimate2025ContentShowcaseBanner = lazy(() => import('../components/Ultimate2025ContentShowcaseBanner'));
-const March2027QuantumSingularityBanner = lazy(() => import('../components/March2027QuantumSingularityBanner'));
-const ContentShowcase = lazy(() => import('../components/ContentShowcase'));
-const FeaturedServiceCard = lazy(() => import('../components/FeaturedServiceCard'));
-const SuccessStory = lazy(() => import('../components/SuccessStory'));
+// Lazy load heavy components
+const UnifiedContentPromotion = dynamic(() => import('../components/UnifiedContentPromotion'), {
+  loading: () => <div className="h-screen bg-gray-100 animate-pulse"></div>
+});
 
-// Loading component
-const LoadingSpinner = () => (
-  <div className="flex items-center justify-center p-8">
-    <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
-  </div>
-);
+const InteractiveAIROICalculator = dynamic(() => import('../components/InteractiveAIROICalculator'), {
+  loading: () => <div className="h-96 bg-gray-100 animate-pulse"></div>
+});
+
+const ContentShowcase = dynamic(() => import('../components/ContentShowcase'), {
+  loading: () => <div className="h-96 bg-gray-100 animate-pulse"></div>
+});
+
+const InteractiveContentShowcase2026 = dynamic(() => import('../components/InteractiveContentShowcase2026'), {
+  loading: () => <div className="h-96 bg-gray-100 animate-pulse"></div>
+});
 
 export const metadata = {
-  title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
-  description: 'Enterprise-grade AI, micro SaaS, and IT solutions. Transform your business with cutting-edge technology and automation.',
-  keywords: 'AI services, micro SaaS, IT services, cloud migration, DevOps, SRE, enterprise software, automation',
-  authors: [{ name: 'Zion Tech Group' }],
+  title: 'Zion Tech Group — AI Enterprise Transformation & IT Services | 300% ROI Guaranteed',
+  description: 'Transform your enterprise with AI-powered solutions. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains. Expert AI consulting, autonomous systems, and digital transformation services.',
+  keywords: 'AI enterprise transformation, AI consulting, autonomous AI systems, enterprise AI services, digital transformation, AI implementation, AI ROI calculator, manufacturing AI, AI automation, AI strategy',
   openGraph: {
-    title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
-    description: 'Enterprise-grade AI, micro SaaS, and IT solutions. Transform your business with cutting-edge technology and automation.',
-    url: 'https://ziontechgroup.com',
-    siteName: 'Zion Tech Group',
-    locale: 'en_US',
+    title: 'Zion Tech Group — AI Enterprise Transformation & IT Services',
+    description: 'Transform your enterprise with AI-powered solutions. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains.',
     type: 'website',
+    url: 'https://ziontechgroup.com',
     images: [
       {
-        url: '/images/zion-tech-group-og.jpg',
+        url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Zion Tech Group - AI and IT Solutions',
+        alt: 'Zion Tech Group AI Enterprise Transformation',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
-    description: 'Enterprise-grade AI, micro SaaS, and IT solutions. Transform your business with cutting-edge technology and automation.',
-    images: ['/images/zion-tech-group-twitter.jpg'],
+    title: 'Zion Tech Group — AI Enterprise Transformation & IT Services',
+    description: 'Transform your enterprise with AI-powered solutions. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains.',
+    images: ['/og-image.jpg'],
   },
   robots: {
     index: true,
@@ -56,184 +57,205 @@ export const metadata = {
 };
 
 export default function HomePage() {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Zion Tech Group",
+    "description": "Leading provider of AI-powered enterprise solutions and digital transformation services",
+    "url": "https://ziontechgroup.com",
+    "logo": "https://ziontechgroup.com/logo.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-302-464-0950",
+      "contactType": "customer service",
+      "email": "kleber@ziontechgroup.com"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "364 E Main St STE 1008",
+      "addressLocality": "Middletown",
+      "addressRegion": "DE",
+      "postalCode": "19709",
+      "addressCountry": "US"
+    },
+    "sameAs": [
+      "https://linkedin.com/company/zion-tech-group",
+      "https://twitter.com/ziontechgroup"
+    ],
+    "offers": {
+      "@type": "Offer",
+      "name": "AI Enterprise Transformation Services",
+      "description": "Transform your enterprise with AI-powered solutions achieving 300% ROI, 70% cost reduction, and 90% efficiency gains",
+      "price": "50000",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    }
+  };
+
   return (
     <>
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-50 to-indigo-100 py-20 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-            Transform Your Business with
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              {' '}AI & IT Solutions
-            </span>
-          </h1>
-          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Enterprise-grade AI services, micro SaaS solutions, and cutting-edge IT infrastructure. 
-            Accelerate your digital transformation with Zion Tech Group.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/contact" 
-              className="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-colors font-semibold text-lg"
-            >
-              Get Started Today
-            </Link>
-            <Link 
-              href="/services" 
-              className="border border-blue-600 text-blue-600 px-8 py-4 rounded-lg hover:bg-blue-50 transition-colors font-semibold text-lg"
-            >
-              Explore Services
-            </Link>
-          </div>
-        </div>
-      </section>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+      <div className="animate-fade-in">
+        
+        {/* Unified Content Promotion - Replaces multiple redundant banners */}
+        <UnifiedContentPromotion />
 
-      {/* Services Section */}
-      <section className="py-20 px-4 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive AI and IT solutions designed to drive innovation and growth
+        {/* Hero Section */}
+        <section className="text-center py-20 bg-gradient-to-br from-blue-50 via-white to-teal-50">
+          <div className="max-w-4xl mx-auto px-4">
+            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+              Transform Your Business with
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-teal-600">
+                {' '}AI-Powered Solutions
+              </span>
+            </h1>
+            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Zion Tech Group delivers cutting-edge AI micro SaaS services, cloud automation, 
+              and enterprise IT solutions that drive growth, efficiency, and innovation.
             </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
-              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">AI Services & Solutions</h3>
-              <p className="text-gray-600 mb-6">
-                Advanced AI implementations including machine learning, natural language processing, 
-                and autonomous systems to drive business intelligence and automation.
-              </p>
-              <Link href="/services/ai-services" className="text-blue-600 font-semibold hover:text-blue-700">
-                Learn More →
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+              <Link
+                href="/services"
+                className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl"
+              >
+                Explore Our Services
               </Link>
+              <a
+                href="tel:+13024640950"
+                className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 hover:text-white transition-colors"
+              >
+                Call +1 302 464 0950
+              </a>
             </div>
-
-            <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
-              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-                <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                </svg>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+              <div>
+                <div className="text-3xl font-bold text-blue-600">500+</div>
+                <div className="text-gray-600">Projects Delivered</div>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Micro SaaS Solutions</h3>
-              <p className="text-gray-600 mb-6">
-                Scalable software-as-a-service platforms built with modern architecture, 
-                designed for rapid deployment and seamless integration.
-              </p>
-              <Link href="/services/micro-saas" className="text-blue-600 font-semibold hover:text-blue-700">
-                Learn More →
-              </Link>
-            </div>
-
-            <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
-              <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-                <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
-                </svg>
+              <div>
+                <div className="text-3xl font-bold text-blue-600">99.9%</div>
+                <div className="text-gray-600">Uptime Guarantee</div>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">IT Services & Solutions</h3>
-              <p className="text-gray-600 mb-6">
-                Comprehensive IT infrastructure, cloud migration, DevOps, and system administration 
-                services to optimize your technology stack.
-              </p>
-              <Link href="/services/it-services" className="text-blue-600 font-semibold hover:text-blue-700">
-                Learn More →
-              </Link>
+              <div>
+                <div className="text-3xl font-bold text-blue-600">24/7</div>
+                <div className="text-gray-600">Expert Support</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-blue-600">$2M+</div>
+                <div className="text-gray-600">Cost Savings</div>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Dynamic Content Sections */}
-      <Suspense fallback={<LoadingSpinner />}>
-        <Ultimate2025ContentShowcaseBanner />
-      </Suspense>
+        {/* Interactive AI ROI Calculator */}
+        <InteractiveAIROICalculator />
 
-      <Suspense fallback={<LoadingSpinner />}>
+        {/* Dynamic Content Showcase */}
         <ContentShowcase />
-      </Suspense>
 
-      <Suspense fallback={<LoadingSpinner />}>
-        <FeaturedServiceCard />
-      </Suspense>
+        {/* Interactive Content Showcase 2026 */}
+        <InteractiveContentShowcase2026 />
 
-      <Suspense fallback={<LoadingSpinner />}>
-        <SuccessStory />
-      </Suspense>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 bg-gradient-to-r from-blue-600 to-purple-600">
-        <div className="max-w-4xl mx-auto text-center text-white">
-          <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
-          <p className="text-xl mb-8 opacity-90">
-            Join hundreds of companies that have accelerated their digital transformation with Zion Tech Group.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/contact" 
-              className="bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-semibold text-lg"
-            >
-              Start Your Project
-            </Link>
-            <Link 
-              href="/case-studies" 
-              className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold text-lg"
-            >
-              View Case Studies
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Information */}
-      <section className="py-16 px-4 bg-gray-50">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">Get In Touch</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="flex flex-col items-center">
-              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                </svg>
+        {/* Enhanced Newsletter Signup */}
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-teal-600 text-white">
+          <div className="max-w-6xl mx-auto px-4">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              {/* Newsletter Signup */}
+              <div className="text-center md:text-left">
+                <h2 className="text-4xl font-bold mb-6">
+                  Stay Ahead with AI & Tech Insights
+                </h2>
+                <p className="text-xl mb-8 opacity-90">
+                  Get weekly updates on AI trends, tech innovations, and exclusive service offers
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start max-w-md mx-auto md:mx-0">
+                  <input
+                    type="email"
+                    placeholder="Enter your email"
+                    className="flex-1 px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-white"
+                  />
+                  <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                    Subscribe
+                  </button>
+                </div>
+                <p className="text-sm mt-4 opacity-75">
+                  Join 10,000+ professionals. Unsubscribe anytime.
+                </p>
               </div>
-              <h3 className="font-semibold text-gray-900 mb-2">Phone</h3>
-              <a href="tel:+13024640950" className="text-gray-600 hover:text-blue-600">
-                +1 302 464 0950
-              </a>
-            </div>
-            <div className="flex flex-col items-center">
-              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-              </div>
-              <h3 className="font-semibold text-gray-900 mb-2">Email</h3>
-              <a href="mailto:kleber@ziontechgroup.com" className="text-gray-600 hover:text-blue-600">
-                kleber@ziontechgroup.com
-              </a>
-            </div>
-            <div className="flex flex-col items-center">
-              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-              </div>
-              <h3 className="font-semibold text-gray-900 mb-2">Address</h3>
-              <div className="text-gray-600 text-center">
-                <div>364 E Main St STE 1008</div>
-                <div>Middletown DE 19709</div>
+
+              {/* Content Highlights */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+                <h3 className="text-2xl font-bold mb-6">Latest Content Highlights</h3>
+                <div className="space-y-4">
+                  <a href="/blog/ai-2026-enterprise-rag-guardrails" className="flex items-start gap-3 group">
+                    <div className="text-2xl">🛡️</div>
+                    <div>
+                      <h4 className="font-semibold mb-1 group-hover:underline">Enterprise RAG Guardrails 2026</h4>
+                      <p className="text-sm opacity-90">Safe, reliable RAG with verifiable citations</p>
+                    </div>
+                  </a>
+                  <a href="/blog/ai-2026-autonomous-enterprise-operations" className="flex items-start gap-3 group">
+                    <div className="text-2xl">🏭</div>
+                    <div>
+                      <h4 className="font-semibold mb-1 group-hover:underline">Autonomous Enterprise Operations 2026</h4>
+                      <p className="text-sm opacity-90">90% efficiency, 300% ROI with guardrailed agents</p>
+                    </div>
+                  </a>
+                  <a href="/blog/ai-cloud-cost-optimization-2025" className="flex items-start gap-3 group">
+                    <div className="text-2xl">💸</div>
+                    <div>
+                      <h4 className="font-semibold mb-1 group-hover:underline">AI Cloud Cost Optimization</h4>
+                      <p className="text-sm opacity-90">Cut spend by 70–85% with smart routing</p>
+                    </div>
+                  </a>
+                </div>
+                <div className="mt-6 pt-4 border-t border-white/20">
+                  <Link
+                    href="/blog"
+                    className="inline-block bg-white/20 hover:bg-white/30 text-white px-4 py-2 rounded-lg font-semibold transition-colors"
+                  >
+                    View All Content →
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 bg-white">
+          <div className="max-w-4xl mx-auto px-4 text-center">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-600 mb-8">
+              Let's discuss how our AI and IT solutions can drive your success
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="tel:+13024640950"
+                className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg"
+              >
+                Call +1 302 464 0950
+              </a>
+              <a
+                href="mailto:kleber@ziontechgroup.com"
+                className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 hover:text-white transition-colors"
+              >
+                Get Free Consultation
+              </a>
+            </div>
+            <div className="mt-8 text-sm text-gray-500">
+              <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
+              <p>📧 kleber@ziontechgroup.com | 📞 +1 302 464 0950</p>
+            </div>
+          </div>
+        </section>
+      </div>
     </>
   );
 }

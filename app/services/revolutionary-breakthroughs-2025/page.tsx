@@ -383,3 +383,4 @@ export default function RevolutionaryBreakthroughs2025() {
       </footer>
     </div>
   );
+}
