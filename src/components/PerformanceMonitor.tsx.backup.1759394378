@@ -1,6 +1,25 @@
 import React, { useState, useEffect } from 'react';
 import { Activity, Zap, Clock, Database, Wifi } from 'lucide-react';
 
+<<<<<<< HEAD
+interface PerformanceMetrics {
+  loadTime: number;
+  firstPaint: number;
+  firstContentfulPaint: number;
+  largestContentfulPaint: number;
+  cumulativeLayoutShift: number;
+  firstInputDelay: number;
+  timeToInteractive: number;
+  memoryUsage?: number;
+  networkSpeed?: string;
+}
+
+const PerformanceMonitor: React.FC = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-fbd6
 const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
     const collectMetrics = () => {
