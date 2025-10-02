@@ -236,6 +236,8 @@ const Home = () => {
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-teal-50">
         <Header />
         
+<<<<<<< HEAD
+=======
         {/* 🚀 SEPTEMBER 30, 2025 - MEGA BREAKTHROUGH ANNOUNCEMENT */}
         <div className="container mx-auto px-6 pt-8">
           <September30MegaBanner2025 />
@@ -381,6 +383,7 @@ const Home = () => {
           ></div>
         </div>
 
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-cdce
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

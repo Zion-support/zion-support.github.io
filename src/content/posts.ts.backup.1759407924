@@ -10,7 +10,10 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+<<<<<<< HEAD
+=======
  
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-cdce
     slug: "ai-executive-playbook-2027",
     title: "AI Executive Playbook 2027: Fund, Govern, and Scale with KPIs",
     description: "Executive‑ready roadmap: KPI‑linked scorecards, budgeted actions, and governance that accelerates delivery.",
@@ -34,6 +37,8 @@ export const posts: BlogPost[] = [
     description: "Signed configs, scoped IDs, and on‑device telemetry for zero‑PII rollouts worldwide under 100ms.",
     category: "Architecture",
     publishedAt: "2025-10-01",
+<<<<<<< HEAD
+=======
     featured: true,
     readTime: "8 min read"
   },
@@ -52,6 +57,7 @@ export const posts: BlogPost[] = [
     description: "Scoped IDs, device aggregation, and warm pools for global sub‑100ms inference without PII.",
     category: "Edge Computing",
     publishedAt: "2025-10-03",
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-cdce
     featured: true,
     readTime: "8 min read"
   },
