@@ -79,7 +79,6 @@ export default function HomePage() {
         </div>
       </header>
 
-<<<<<<< HEAD
       {/* Featured Services */}
       <section className="py-12 md:py-20 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto">
@@ -143,44 +142,10 @@ export default function HomePage() {
                 Leverage quantum-enhanced AI for unprecedented computational power and breakthrough performance.
               </p>
               <Link href="/services/ai-quantum-computing-2026" className="text-blue-600 font-semibold hover:text-blue-700 text-sm md:text-base">
-=======
-      {/* AI Innovation Showcase */}
-      <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-extrabold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
-              Revolutionary AI Technologies
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the next generation of artificial intelligence that's transforming how enterprises operate, 
-              make decisions, and deliver value to their customers.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
-            <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-blue-500/50 transition-all duration-300">
-              <div className="text-6xl mb-6">⚛️</div>
-              <h3 className="text-2xl font-bold text-white mb-4">Quantum-Consciousness Fusion</h3>
-              <p className="text-gray-300 mb-6">
-                Revolutionary AI that combines quantum computing with neural networks, delivering 2000x processing speed 
-                and unprecedented problem-solving capabilities.
-              </p>
-              <ul className="space-y-2 mb-6 text-gray-300">
-                <li>• 2000x faster processing</li>
-                <li>• 95% decision accuracy</li>
-                <li>• Real-time optimization</li>
-                <li>• Quantum parallelism</li>
-              </ul>
-              <Link 
-                href="/blog/ai-2026-june-mega-breakthrough-revolution"
-                className="inline-block bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
-              >
->>>>>>> cursor/analyze-improve-and-deploy-application-04be
                 Learn More →
               </Link>
             </div>
 
-<<<<<<< HEAD
             <div className="bg-white p-6 md:p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
               <div className="w-10 md:w-12 h-10 md:h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-3 md:mb-4">
                 <Zap className="w-5 md:w-6 h-5 md:h-6 text-purple-600" />
@@ -243,7 +208,6 @@ export default function HomePage() {
               </p>
               <Link href="/services/ai-business-intelligence-platform" className="text-indigo-600 font-semibold hover:text-indigo-700 text-sm md:text-base">
                 Learn More →
-=======
             <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-purple-500/50 transition-all duration-300">
               <div className="text-6xl mb-6">🤖</div>
               <h3 className="text-2xl font-bold text-white mb-4">Enterprise Automation</h3>
@@ -283,14 +247,12 @@ export default function HomePage() {
                 className="inline-block bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
               >
                 View Case Study →
->>>>>>> cursor/analyze-improve-and-deploy-application-04be
               </Link>
             </div>
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Success Stories */}
       <section className="py-12 md:py-20 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
@@ -319,26 +281,9 @@ export default function HomePage() {
                   <div className="font-semibold text-sm md:text-base">Sarah Chen</div>
                   <div className="text-gray-600 text-sm md:text-base">CTO, Global Tech Corp</div>
                 </div>
-=======
-      {/* Services Showcase */}
-      <section className="py-20 px-4 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Latest Micro SaaS Solutions</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Innovative AI-powered micro SaaS solutions designed to solve specific business challenges
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl border border-blue-200">
-              <div className="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center mb-4">
-                <Database className="w-5 h-5 text-white" />
->>>>>>> cursor/analyze-improve-and-deploy-application-04be
               </div>
             </div>
 
-<<<<<<< HEAD
             <div className="bg-gradient-to-br from-green-50 to-blue-50 p-6 md:p-8 rounded-xl">
               <div className="flex items-center mb-4">
                 <Zap className="w-6 md:w-8 h-6 md:h-8 text-green-600 mr-3" />
@@ -356,7 +301,6 @@ export default function HomePage() {
                   <div className="font-semibold text-sm md:text-base">Michael Rodriguez</div>
                   <div className="text-gray-600 text-sm md:text-base">CEO, InnovateCorp</div>
                 </div>
-=======
             <div className="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl border border-green-200">
               <div className="w-10 h-10 bg-green-500 rounded-lg flex items-center justify-center mb-4">
                 <Users className="w-5 h-5 text-white" />
@@ -369,7 +313,6 @@ export default function HomePage() {
             <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-xl border border-purple-200">
               <div className="w-10 h-10 bg-purple-500 rounded-lg flex items-center justify-center mb-4">
                 <Target className="w-5 h-5 text-white" />
->>>>>>> cursor/analyze-improve-and-deploy-application-04be
               </div>
             </div>
           </div>
@@ -557,7 +500,6 @@ export default function HomePage() {
                 href="tel:+13024640950" 
                 className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
-<<<<<<< HEAD
                 Call: +1 302 464 0950
               </a>
             </div>
@@ -583,10 +525,8 @@ export default function HomePage() {
                 <p>🌐 Website: <a href="https://ziontechgroup.com" className="text-blue-400 hover:underline">https://ziontechgroup.com</a></p>
                 <p className="text-xs text-gray-400">Available 24/7 for enterprise clients • Free consultation for projects over $10K</p>
               </div>
-=======
                 View $5.2B Success Story
               </Link>
->>>>>>> cursor/analyze-improve-and-deploy-application-04be
             </div>
           </div>
         </div>
