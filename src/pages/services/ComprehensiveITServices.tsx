@@ -82,61 +82,61 @@ const ComprehensiveITServices: React.FC = () => {,
     <>
       <Helmet>
         <title>Comprehensive IT Services - Zion Tech Group</title>
-        <meta name="description" content="Complete IT services including cloud migration, DevOps, cybersecurity, data analytics, and digital transformation from Zion Tech Group." />";
+        <meta name="description" content="Complete IT services including cloud migration, DevOps, cybersecurity, data analytics, and digital transformation from Zion Tech Group." />
       </Helmet>
       
-      <div className="min-h-screen bg-gray-50">";
+      <div className="min-h-screen bg-gray-50">
         {/* Header */}
-        <section className="bg-gradient-to-r from-purple-600 via-violet-600 to-indigo-600 text-white py-16">";
-          <div className="container mx-auto px-6 text-center">";
+        <section className="bg-gradient-to-r from-purple-600 via-violet-600 to-indigo-600 text-white py-16">
+          <div className="container mx-auto px-6 text-center">
             <h1 className="text-4xl md: text-5xl font-bold mb-4">Comprehensive IT Services</h1>";,
-            <p className="text-xl text-purple-100 max-w-3xl mx-auto">";
+            <p className="text-xl text-purple-100 max-w-3xl mx-auto">
               End-to-end IT solutions that modernize your infrastructure, enhance security, and drive digital transformation for sustainable growth.
             </p>
           </div>
         </section>
 
         {/* Services Grid */}
-        <section className="py-20">";
-          <div className="container mx-auto px-6">";
+        <section className="py-20">
+          <div className="container mx-auto px-6">
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">";,
               {itServices.map((service, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-sm hover: shadow-lg transition-all duration-300 border border-gray-100">";,
-                  <div className="text-4xl mb-4">{service.icon}</div>";
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>";
-                  <p className="text-gray-600 mb-6">{service.description}</p>";
+                  <div className="text-4xl mb-4">{service.icon}</div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
+                  <p className="text-gray-600 mb-6">{service.description}</p>
                   
-                  <ul className="space-y-2 mb-6">";
+                  <ul className="space-y-2 mb-6">
                     {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-700">";
-                        <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>";
+                      <li key={featureIndex} className="flex items-center text-sm text-gray-700">
+                        <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
                         {feature}
                       </li>
                     ))}
                   </ul>
 
-                  <div className="mb-6 p-4 bg-purple-50 rounded-lg border border-purple-200">";
+                  <div className="mb-6 p-4 bg-purple-50 rounded-lg border border-purple-200">
                     <h4 className="font-semibold text-purple-800 mb-2">Pricing: </h4>";,
-                    <p className="text-purple-700 font-medium">{service.pricing}</p>";
+                    <p className="text-purple-700 font-medium">{service.pricing}</p>
                   </div>
 
-                  <div className="mb-6">";
+                  <div className="mb-6">
                     <h4 className="font-semibold text-gray-900 mb-2">Key Benefits: </h4>";,
-                    <ul className="space-y-1">";
+                    <ul className="space-y-1">
                       {service.benefits.map((benefit, benefitIndex) => (
-                        <li key={benefitIndex} className="text-sm text-gray-600 flex items-center">";
-                          <span className="w-1.5 h-1.5 bg-purple-500 rounded-full mr-2"></span>";
+                        <li key={benefitIndex} className="text-sm text-gray-600 flex items-center">
+                          <span className="w-1.5 h-1.5 bg-purple-500 rounded-full mr-2"></span>
                           {benefit}
                         </li>
                       ))}
                     </ul>
                   </div>
 
-                  <div className="mb-6">";
+                  <div className="mb-6">
                     <h4 className="font-semibold text-gray-900 mb-2">Technologies: </h4>";,
-                    <div className="flex flex-wrap gap-2">";
+                    <div className="flex flex-wrap gap-2">
                       {service.technologies.map((tech, techIndex) => (
-                        <span key={techIndex} className="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">";
+                        <span key={techIndex} className="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">
                           {tech}
                         </span>
                       ))}
@@ -156,49 +156,49 @@ const ComprehensiveITServices: React.FC = () => {,
         </section>
 
         {/* Service Level Agreements */}
-        <section className="py-20 bg-white">";
-          <div className="container mx-auto px-6">";
-            <div className="text-center mb-16">";
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Service Level Agreements</h2>";
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">";
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-6">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Service Level Agreements</h2>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
                 We guarantee exceptional service with our comprehensive SLAs and 24/7 support
               </p>
             </div>
             
             <div className="grid grid-cols-1 md: grid-cols-4 gap-8">";,
-              <div className="bg-gradient-to-br from-blue-50 to-indigo-100 p-6 rounded-xl text-center border border-blue-200">";
-                <div className="text-4xl mb-4">⏱️</div>";
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Response Time</h3>";
-                <p className="text-gray-600">15 minutes for critical issues, 1 hour for standard requests</p>";
+              <div className="bg-gradient-to-br from-blue-50 to-indigo-100 p-6 rounded-xl text-center border border-blue-200">
+                <div className="text-4xl mb-4">⏱️</div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Response Time</h3>
+                <p className="text-gray-600">15 minutes for critical issues, 1 hour for standard requests</p>
               </div>
               
-              <div className="bg-gradient-to-br from-green-50 to-emerald-100 p-6 rounded-xl text-center border border-green-200">";
-                <div className="text-4xl mb-4">📈</div>";
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Uptime Guarantee</h3>";
-                <p className="text-gray-600">99.9% uptime SLA with financial penalties for non-compliance</p>";
+              <div className="bg-gradient-to-br from-green-50 to-emerald-100 p-6 rounded-xl text-center border border-green-200">
+                <div className="text-4xl mb-4">📈</div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Uptime Guarantee</h3>
+                <p className="text-gray-600">99.9% uptime SLA with financial penalties for non-compliance</p>
               </div>
               
-              <div className="bg-gradient-to-br from-purple-50 to-violet-100 p-6 rounded-xl text-center border border-purple-200">";
-                <div className="text-4xl mb-4">🛡️</div>";
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Security</h3>";
-                <p className="text-gray-600">SOC 2 Type II compliant with regular security audits</p>";
+              <div className="bg-gradient-to-br from-purple-50 to-violet-100 p-6 rounded-xl text-center border border-purple-200">
+                <div className="text-4xl mb-4">🛡️</div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Security</h3>
+                <p className="text-gray-600">SOC 2 Type II compliant with regular security audits</p>
               </div>
               
-              <div className="bg-gradient-to-br from-orange-50 to-red-100 p-6 rounded-xl text-center border border-orange-200">";
-                <div className="text-4xl mb-4">📞</div>";
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Support</h3>";
-                <p className="text-gray-600">24/7 support with dedicated account managers</p>";
+              <div className="bg-gradient-to-br from-orange-50 to-red-100 p-6 rounded-xl text-center border border-orange-200">
+                <div className="text-4xl mb-4">📞</div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Support</h3>
+                <p className="text-gray-600">24/7 support with dedicated account managers</p>
               </div>
             </div>
           </div>
         </section>
 
         {/* Industry Expertise */}
-        <section className="py-20 bg-gray-50">";
-          <div className="container mx-auto px-6">";
-            <div className="text-center mb-16">";
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Industry Expertise</h2>";
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">";
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-6">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Industry Expertise</h2>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
                 We serve clients across various industries with specialized IT solutions
               </p>
             </div>
@@ -212,10 +212,10 @@ const ComprehensiveITServices: React.FC = () => {,
                 { name: "Education", logo: "🎓", description: "Learning management" },";
                 { name: "Government", logo: "🏛️", description: "Security clearance" }";
               ].map((industry, index) => (
-                <div key={index} className="bg-white p-6 rounded-xl text-center shadow-sm border border-gray-100">";
-                  <div className="text-3xl mb-2">{industry.logo}</div>";
-                  <h3 className="text-lg font-bold text-gray-900 mb-1">{industry.name}</h3>";
-                  <p className="text-sm text-gray-600">{industry.description}</p>";
+                <div key={index} className="bg-white p-6 rounded-xl text-center shadow-sm border border-gray-100">
+                  <div className="text-3xl mb-2">{industry.logo}</div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-1">{industry.name}</h3>
+                  <p className="text-sm text-gray-600">{industry.description}</p>
                 </div>
               ))}
             </div>
@@ -223,10 +223,10 @@ const ComprehensiveITServices: React.FC = () => {,
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-purple-600 to-violet-600 text-white">";
-          <div className="container mx-auto px-6 text-center">";
-            <h2 className="text-4xl font-bold mb-4">Ready to Modernize Your IT Infrastructure?</h2>";
-            <p className="text-xl mb-8 text-purple-100 max-w-2xl mx-auto">";
+        <section className="py-20 bg-gradient-to-r from-purple-600 to-violet-600 text-white">
+          <div className="container mx-auto px-6 text-center">
+            <h2 className="text-4xl font-bold mb-4">Ready to Modernize Your IT Infrastructure?</h2>
+            <p className="text-xl mb-8 text-purple-100 max-w-2xl mx-auto">
               Let's discuss how our comprehensive IT services can transform your technology stack and drive business growth.';
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">";,

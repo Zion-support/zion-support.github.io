@@ -46,34 +46,34 @@ const AIServicesPage: React.FC = () => {,
     <>
       <Helmet>
         <title>AI Services - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI services including machine learning, NLP, computer vision, and AI automation solutions from Zion Tech Group." />";
+        <meta name="description" content="Advanced AI services including machine learning, NLP, computer vision, and AI automation solutions from Zion Tech Group." />
       </Helmet>
       
-      <div className="min-h-screen bg-gray-50">";
+      <div className="min-h-screen bg-gray-50">
         {/* Header */}
-        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">";
-          <div className="container mx-auto px-6 text-center">";
+        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
+          <div className="container mx-auto px-6 text-center">
             <h1 className="text-4xl md: text-5xl font-bold mb-4">AI Services</h1>";,
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto">";
+            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
               Transform your business with cutting-edge artificial intelligence solutions that drive innovation and efficiency.
             </p>
           </div>
         </section>
 
         {/* Services Grid */}
-        <section className="py-20">";
-          <div className="container mx-auto px-6">";
+        <section className="py-20">
+          <div className="container mx-auto px-6">
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">";,
               {aiServices.map((service, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-sm hover: shadow-lg transition-shadow">";,
-                  <div className="text-4xl mb-4">{service.icon}</div>";
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>";
-                  <p className="text-gray-600 mb-6">{service.description}</p>";
+                  <div className="text-4xl mb-4">{service.icon}</div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
+                  <p className="text-gray-600 mb-6">{service.description}</p>
                   
-                  <ul className="space-y-2 mb-6">";
+                  <ul className="space-y-2 mb-6">
                     {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-700">";
-                        <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>";
+                      <li key={featureIndex} className="flex items-center text-sm text-gray-700">
+                        <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
                         {feature}
                       </li>
                     ))}
@@ -92,36 +92,36 @@ const AIServicesPage: React.FC = () => {,
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20 bg-white">";
-          <div className="container mx-auto px-6">";
-            <div className="text-center mb-16">";
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose Our AI Services?</h2>";
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">";
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-6">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose Our AI Services?</h2>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
                 We deliver AI solutions that provide measurable business value
               </p>
             </div>
             
             <div className="grid grid-cols-1 md: grid-cols-3 gap-8">";,
-              <div className="text-center">";
-                <div className="text-4xl mb-4">📈</div>";
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Proven ROI</h3>";
-                <p className="text-gray-600">";
+              <div className="text-center">
+                <div className="text-4xl mb-4">📈</div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Proven ROI</h3>
+                <p className="text-gray-600">
                   Our AI solutions deliver measurable returns on investment, with clients seeing average cost savings of 40% and efficiency gains of 60%.
                 </p>
               </div>
               
-              <div className="text-center">";
-                <div className="text-4xl mb-4">🔧</div>";
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Custom Solutions</h3>";
-                <p className="text-gray-600">";
+              <div className="text-center">
+                <div className="text-4xl mb-4">🔧</div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Custom Solutions</h3>
+                <p className="text-gray-600">
                   Every AI solution is tailored to your specific business needs, ensuring optimal performance and seamless integration.
                 </p>
               </div>
               
-              <div className="text-center">";
-                <div className="text-4xl mb-4">🚀</div>";
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Scalable Architecture</h3>";
-                <p className="text-gray-600">";
+              <div className="text-center">
+                <div className="text-4xl mb-4">🚀</div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Scalable Architecture</h3>
+                <p className="text-gray-600">
                   Our AI solutions are built to scale with your business, handling increased data volumes and user loads seamlessly.
                 </p>
               </div>
@@ -130,10 +130,10 @@ const AIServicesPage: React.FC = () => {,
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-blue-600 text-white">";
-          <div className="container mx-auto px-6 text-center">";
-            <h2 className="text-4xl font-bold mb-4">Ready to Harness the Power of AI?</h2>";
-            <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">";
+        <section className="py-20 bg-blue-600 text-white">
+          <div className="container mx-auto px-6 text-center">
+            <h2 className="text-4xl font-bold mb-4">Ready to Harness the Power of AI?</h2>
+            <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
               Let's discuss how our AI services can transform your business operations and drive growth.';
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">";,
