@@ -1,230 +1,278 @@
 #!/usr/bin/env node
 
-import axios from 'axios';
-import * as cheerio from 'cheerio';
-import fs from 'fs';
-import path from 'path';
+import { readFileSync, writeFileSync, existsSync } from 'fs';
+import { join, dirname } from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+// Website analysis configuration
+const BASE_URL = 'https://ziontechgroup.com';
+const MAX_DEPTH = 3;
+const CONCURRENT_REQUESTS = 5;
 
 class WebsiteAnalyzer {
-  constructor(baseUrl = 'https://ziontechgroup.com') {
-    this.baseUrl = baseUrl;
+  constructor() {
     this.visitedUrls = new Set();
     this.brokenLinks = [];
+    this.workingLinks = [];
+    this.internalLinks = [];
+    this.externalLinks = [];
     this.missingPages = [];
-    this.allLinks = new Set();
-    this.pageStructure = {};
-    this.maxDepth = 3;
-    this.currentDepth = 0;
+    this.visitedPages = [];
+    this.requestQueue = [];
+    this.activeRequests = 0;
   }
 
   async analyzeWebsite() {
     console.log('🔍 Starting comprehensive website analysis...');
-    console.log(`📊 Target: ${this.baseUrl}`);
+    console.log(`📍 Base URL: ${BASE_URL}`);
     
     try {
-      await this.crawlWebsite(this.baseUrl, 0);
+      await this.crawlPage(BASE_URL, 0);
+      
+      // Process remaining queue
+      while (this.requestQueue.length > 0 || this.activeRequests > 0) {
+        await this.processQueue();
+        await this.sleep(100);
+      }
+      
       await this.generateReport();
+      
     } catch (error) {
-      console.error('❌ Analysis failed:', error.message);
+      console.error('❌ Analysis failed:', error);
     }
   }
 
-  async crawlWebsite(url, depth) {
-    if (depth > this.maxDepth || this.visitedUrls.has(url)) {
+  async crawlPage(url, depth) {
+    if (depth > MAX_DEPTH || this.visitedUrls.has(url)) {
       return;
     }
 
     this.visitedUrls.add(url);
-    console.log(`📄 Analyzing: ${url} (depth: ${depth})`);
+    this.requestQueue.push({ url, depth });
+    await this.processQueue();
+  }
 
+  async processQueue() {
+    while (this.requestQueue.length > 0 && this.activeRequests < CONCURRENT_REQUESTS) {
+      const { url, depth } = this.requestQueue.shift();
+      this.activeRequests++;
+      
+      this.analyzePage(url, depth).finally(() => {
+        this.activeRequests--;
+      });
+    }
+  }
+
+  async analyzePage(url, depth) {
     try {
-      const response = await axios.get(url, {
-        timeout: 10000,
+      console.log(`🔍 Analyzing: ${url} (depth: ${depth})`);
+      
+      const response = await fetch(url, {
+        method: 'GET',
         headers: {
-          'User-Agent': 'Mozilla/5.0 (compatible; WebsiteAnalyzer/1.0)'
-        }
+          'User-Agent': 'Mozilla/5.0 (compatible; WebsiteAnalyzer/1.0)',
+        },
+        redirect: 'follow'
       });
 
-      const $ = cheerio.load(response.data);
-      const links = this.extractLinks($, url);
-      
-      this.pageStructure[url] = {
-        title: $('title').text(),
-        status: response.status,
-        links: links,
-        hasContent: this.hasSubstantialContent($),
-        lastModified: response.headers['last-modified'] || 'unknown'
-      };
-
-      // Check for broken links and missing content
-      for (const link of links) {
-        this.allLinks.add(link.href);
+      if (response.ok) {
+        this.workingLinks.push({
+          url,
+          status: response.status,
+          statusText: response.statusText,
+          contentType: response.headers.get('content-type'),
+          depth
+        });
         
-        if (link.isInternal && !this.visitedUrls.has(link.href)) {
-          try {
-            await this.crawlWebsite(link.href, depth + 1);
-          } catch (error) {
-            this.brokenLinks.push({
-              url: link.href,
-              source: url,
-              error: error.message,
-              text: link.text
-            });
+        this.visitedPages.push(url);
+        
+        // Only parse HTML pages for links
+        const contentType = response.headers.get('content-type');
+        if (contentType && contentType.includes('text/html')) {
+          const html = await response.text();
+          await this.extractLinks(html, url, depth);
+        }
+      } else {
+        this.brokenLinks.push({
+          url,
+          status: response.status,
+          statusText: response.statusText,
+          contentType: response.headers.get('content-type'),
+          depth,
+          parentUrl: url
+        });
+      }
+    } catch (error) {
+      console.error(`❌ Error analyzing ${url}:`, error.message);
+      this.brokenLinks.push({
+        url,
+        status: 'ERROR',
+        statusText: error.message,
+        contentType: null,
+        depth,
+        parentUrl: url
+      });
+    }
+  }
+
+  async extractLinks(html, parentUrl, depth) {
+    try {
+      // Extract links using regex (simple approach)
+      const linkRegex = /href=["']([^"']+)["']/gi;
+      const srcRegex = /src=["']([^"']+)["']/gi;
+      
+      const links = [];
+      let match;
+      
+      // Extract href links
+      while ((match = linkRegex.exec(html)) !== null) {
+        links.push(match[1]);
+      }
+      
+      // Extract src links
+      while ((match = srcRegex.exec(html)) !== null) {
+        links.push(match[1]);
+      }
+      
+      for (const link of links) {
+        const absoluteUrl = this.resolveUrl(link, parentUrl);
+        
+        if (this.isInternalLink(absoluteUrl)) {
+          this.internalLinks.push({
+            url: absoluteUrl,
+            parentUrl: parentUrl,
+            depth: depth + 1
+          });
+          
+          // Queue for further analysis
+          if (depth < MAX_DEPTH && !this.visitedUrls.has(absoluteUrl)) {
+            this.requestQueue.push({ url: absoluteUrl, depth: depth + 1 });
           }
+        } else {
+          this.externalLinks.push({
+            url: absoluteUrl,
+            parentUrl: parentUrl,
+            depth: depth + 1
+          });
         }
       }
-
     } catch (error) {
-      this.brokenLinks.push({
-        url: url,
-        source: 'direct',
-        error: error.message,
-        text: 'Page load failed'
-      });
+      console.error(`❌ Error extracting links from ${parentUrl}:`, error.message);
     }
   }
 
-  extractLinks($, currentUrl) {
-    const links = [];
-    
-    $('a[href]').each((i, element) => {
-      const $el = $(element);
-      const href = $el.attr('href');
-      const text = $el.text().trim();
-      
-      if (!href) return;
-
-      const absoluteUrl = this.resolveUrl(href, currentUrl);
-      const isInternal = absoluteUrl.startsWith(this.baseUrl);
-      
-      links.push({
-        href: absoluteUrl,
-        text: text,
-        isInternal: isInternal,
-        element: $el.prop('tagName')
-      });
-    });
-
-    return links;
-  }
-
-  resolveUrl(href, baseUrl) {
+  resolveUrl(link, baseUrl) {
     try {
-      return new URL(href, baseUrl).href;
-    } catch {
-      return href;
+      if (link.startsWith('http://') || link.startsWith('https://')) {
+        return link;
+      }
+      
+      if (link.startsWith('//')) {
+        return 'https:' + link;
+      }
+      
+      if (link.startsWith('/')) {
+        const base = new URL(baseUrl);
+        return `${base.protocol}//${base.host}${link}`;
+      }
+      
+      const base = new URL(baseUrl);
+      const basePath = base.pathname.endsWith('/') ? base.pathname : dirname(base.pathname);
+      return `${base.protocol}//${base.host}${basePath}/${link}`;
+    } catch (error) {
+      return link;
     }
   }
 
-  hasSubstantialContent($) {
-    const textContent = $('body').text().replace(/\s+/g, ' ').trim();
-    const hasImages = $('img').length > 0;
-    const hasHeadings = $('h1, h2, h3, h4, h5, h6').length > 0;
-    
-    return textContent.length > 100 || hasImages || hasHeadings;
+  isInternalLink(url) {
+    try {
+      const urlObj = new URL(url);
+      const baseObj = new URL(BASE_URL);
+      return urlObj.hostname === baseObj.hostname;
+    } catch {
+      return false;
+    }
   }
 
   async generateReport() {
     console.log('\n📊 Generating comprehensive analysis report...');
     
     const report = {
-      analysisDate: new Date().toISOString(),
-      baseUrl: this.baseUrl,
+      timestamp: new Date().toISOString(),
+      baseUrl: BASE_URL,
       summary: {
-        totalPagesAnalyzed: this.visitedUrls.size,
-        totalLinksFound: this.allLinks.size,
-        brokenLinksCount: this.brokenLinks.length,
-        missingPagesCount: this.missingPages.length
+        totalLinksChecked: this.workingLinks.length + this.brokenLinks.length,
+        brokenLinks: this.brokenLinks.length,
+        workingLinks: this.workingLinks.length,
+        internalLinks: this.internalLinks.length,
+        externalLinks: this.externalLinks.length,
+        pagesVisited: this.visitedPages.length,
+        successRate: `${((this.workingLinks.length / (this.workingLinks.length + this.brokenLinks.length)) * 100).toFixed(2)}%`
       },
-      pageStructure: this.pageStructure,
       brokenLinks: this.brokenLinks,
-      missingPages: this.missingPages,
+      workingLinks: this.workingLinks,
+      internalLinks: this.internalLinks,
+      externalLinks: this.externalLinks,
+      visitedPages: this.visitedPages,
       recommendations: this.generateRecommendations()
     };
-
-    // Save detailed report
-    fs.writeFileSync(
-      '/workspace/comprehensive-website-analysis.json',
-      JSON.stringify(report, null, 2)
-    );
-
-    // Generate markdown report
-    const markdownReport = this.generateMarkdownReport(report);
-    fs.writeFileSync(
-      '/workspace/website-analysis-report.md',
-      markdownReport
-    );
-
-    console.log('\n✅ Analysis complete!');
-    console.log(`📄 Pages analyzed: ${this.visitedUrls.size}`);
-    console.log(`🔗 Total links found: ${this.allLinks.size}`);
-    console.log(`❌ Broken links: ${this.brokenLinks.length}`);
-    console.log(`📝 Missing pages: ${this.missingPages.length}`);
-    console.log('\n📋 Reports generated:');
-    console.log('  - comprehensive-website-analysis.json');
-    console.log('  - website-analysis-report.md');
-  }
-
-  generateMarkdownReport(report) {
-    return `# Website Analysis Report
-
-## Summary
-- **Analysis Date**: ${new Date(report.analysisDate).toLocaleString()}
-- **Target Website**: ${report.baseUrl}
-- **Pages Analyzed**: ${report.summary.totalPagesAnalyzed}
-- **Total Links Found**: ${report.summary.totalLinksFound}
-- **Broken Links**: ${report.summary.brokenLinksCount}
-- **Missing Pages**: ${report.summary.missingPagesCount}
-
-## Page Structure
-${Object.entries(report.pageStructure).map(([url, data]) => 
-  `### ${data.title || 'Untitled'}
-- **URL**: ${url}
-- **Status**: ${data.status}
-- **Links**: ${data.links.length}
-- **Has Content**: ${data.hasContent ? 'Yes' : 'No'}
-- **Last Modified**: ${data.lastModified}
-`).join('\n')}
-
-## Broken Links
-${report.brokenLinks.length > 0 ? report.brokenLinks.map(link => 
-  `- **URL**: ${link.url}
-  - **Source**: ${link.source}
-  - **Error**: ${link.error}
-  - **Link Text**: ${link.text}
-`).join('\n') : 'No broken links found!'}
-
-## Recommendations
-${report.recommendations.map(rec => `- ${rec}`).join('\n')}
-`;
+    
+    // Save report
+    const reportPath = join(__dirname, 'website-analysis-comprehensive.json');
+    writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    
+    // Generate summary
+    console.log('\n📈 ANALYSIS SUMMARY:');
+    console.log(`✅ Working Links: ${report.summary.workingLinks}`);
+    console.log(`❌ Broken Links: ${report.summary.brokenLinks}`);
+    console.log(`🔗 Internal Links: ${report.summary.internalLinks}`);
+    console.log(`🌐 External Links: ${report.summary.externalLinks}`);
+    console.log(`📄 Pages Visited: ${report.summary.pagesVisited}`);
+    console.log(`📊 Success Rate: ${report.summary.successRate}`);
+    
+    if (report.brokenLinks.length > 0) {
+      console.log('\n❌ BROKEN LINKS FOUND:');
+      report.brokenLinks.forEach(link => {
+        console.log(`  - ${link.url} (${link.status})`);
+      });
+    }
+    
+    console.log('\n💡 RECOMMENDATIONS:');
+    report.recommendations.forEach(rec => {
+      console.log(`  - ${rec}`);
+    });
+    
+    console.log(`\n📄 Full report saved to: ${reportPath}`);
   }
 
   generateRecommendations() {
     const recommendations = [];
     
     if (this.brokenLinks.length > 0) {
-      recommendations.push(`Fix ${this.brokenLinks.length} broken links identified in the analysis`);
+      recommendations.push(`Fix ${this.brokenLinks.length} broken links found during analysis`);
     }
     
-    if (this.missingPages.length > 0) {
-      recommendations.push(`Create ${this.missingPages.length} missing pages identified in the analysis`);
+    if (this.externalLinks.length > 0) {
+      recommendations.push(`Review ${this.externalLinks.length} external links for relevance and accessibility`);
     }
-
-    recommendations.push('Implement proper error handling for 404 pages');
-    recommendations.push('Add sitemap.xml for better SEO');
-    recommendations.push('Implement proper meta tags for all pages');
-    recommendations.push('Add structured data markup');
-    recommendations.push('Optimize page loading speeds');
-    recommendations.push('Implement proper internal linking strategy');
-    recommendations.push('Add breadcrumb navigation');
-    recommendations.push('Implement proper mobile responsiveness');
-
+    
+    recommendations.push('Implement proper error handling for missing pages');
+    recommendations.push('Add comprehensive navigation structure');
+    recommendations.push('Optimize internal linking for better SEO');
+    recommendations.push('Implement proper redirects for moved content');
+    recommendations.push('Add sitemap.xml for better search engine indexing');
+    
     return recommendations;
+  }
+
+  sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
   }
 }
 
-// Run the analysis
-const analyzer = new WebsiteAnalyzer('https://ziontechgroup.com');
+// Run analysis
+const analyzer = new WebsiteAnalyzer();
 analyzer.analyzeWebsite().catch(console.error);
-
-export default WebsiteAnalyzer;
