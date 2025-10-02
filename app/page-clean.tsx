@@ -1,8 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-import SimplifiedBanner from '../components/SimplifiedBanner';
-import ServiceCard from '../components/ServiceCard';
-import BlogCard from '../components/BlogCard';
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -80,25 +77,6 @@ export default function HomePage() {
         </div>
       </header>
 
-      {/* Featured Content Banners */}
-      <SimplifiedBanner
-        title="Latest AI Breakthroughs"
-        description="Discover our newest AI innovations and enterprise solutions"
-        link="/blog/ai-breakthroughs-2024"
-        badge="NEW"
-        badgeColor="green"
-        icon="🧠"
-      />
-
-      <SimplifiedBanner
-        title="Enterprise Success Stories"
-        description="See how Fortune 500 companies achieved 300% ROI with our solutions"
-        link="/case-studies"
-        badge="FEATURED"
-        badgeColor="blue"
-        icon="💼"
-      />
-
       {/* Services Section */}
       <section className="py-20 bg-slate-900">
         <div className="container mx-auto px-6">
@@ -112,50 +90,38 @@ export default function HomePage() {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <ServiceCard
-              title="AI Solutions"
-              description="Advanced artificial intelligence solutions including machine learning, natural language processing, and computer vision."
-              icon="🤖"
-              link="/services/ai-solutions"
-              features={[
-                "Machine Learning Models",
-                "Natural Language Processing",
-                "Computer Vision",
-                "Predictive Analytics"
-              ]}
-              gradientFrom="blue"
-              gradientTo="purple"
-            />
+            <div className="bg-gradient-to-br from-blue-500/20 to-purple-500/20 backdrop-blur-lg rounded-2xl p-8 border border-blue-500/30 hover:border-blue-400/50 transition-all duration-300 hover:transform hover:scale-105">
+              <div className="text-4xl mb-4">🤖</div>
+              <h3 className="text-2xl font-bold mb-4 text-white">AI Solutions</h3>
+              <p className="text-gray-300 mb-6">
+                Advanced artificial intelligence solutions including machine learning, natural language processing, and computer vision.
+              </p>
+              <Link href="/services/ai-solutions" className="text-blue-400 hover:text-blue-300 font-semibold">
+                Learn More →
+              </Link>
+            </div>
             
-            <ServiceCard
-              title="Cloud Migration"
-              description="Seamless migration to cloud platforms with zero downtime and optimized performance."
-              icon="☁️"
-              link="/services/cloud-migration"
-              features={[
-                "Zero Downtime Migration",
-                "Performance Optimization",
-                "Cost Reduction",
-                "Security Enhancement"
-              ]}
-              gradientFrom="green"
-              gradientTo="teal"
-            />
+            <div className="bg-gradient-to-br from-green-500/20 to-teal-500/20 backdrop-blur-lg rounded-2xl p-8 border border-green-500/30 hover:border-green-400/50 transition-all duration-300 hover:transform hover:scale-105">
+              <div className="text-4xl mb-4">☁️</div>
+              <h3 className="text-2xl font-bold mb-4 text-white">Cloud Migration</h3>
+              <p className="text-gray-300 mb-6">
+                Seamless migration to cloud platforms with zero downtime and optimized performance.
+              </p>
+              <Link href="/services/cloud-migration" className="text-green-400 hover:text-green-300 font-semibold">
+                Learn More →
+              </Link>
+            </div>
             
-            <ServiceCard
-              title="DevOps & SRE"
-              description="Modern DevOps practices and Site Reliability Engineering for robust, scalable systems."
-              icon="⚡"
-              link="/services/devops-sre"
-              features={[
-                "CI/CD Pipeline Setup",
-                "Infrastructure as Code",
-                "Monitoring & Alerting",
-                "Performance Optimization"
-              ]}
-              gradientFrom="purple"
-              gradientTo="pink"
-            />
+            <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 backdrop-blur-lg rounded-2xl p-8 border border-purple-500/30 hover:border-purple-400/50 transition-all duration-300 hover:transform hover:scale-105">
+              <div className="text-4xl mb-4">⚡</div>
+              <h3 className="text-2xl font-bold mb-4 text-white">DevOps & SRE</h3>
+              <p className="text-gray-300 mb-6">
+                Modern DevOps practices and Site Reliability Engineering for robust, scalable systems.
+              </p>
+              <Link href="/services/devops-sre" className="text-purple-400 hover:text-purple-300 font-semibold">
+                Learn More →
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -173,32 +139,38 @@ export default function HomePage() {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <BlogCard
-              title="AI Trends 2024"
-              description="Discover the latest trends and breakthroughs in artificial intelligence that are shaping the future."
-              icon="📊"
-              link="/blog/ai-trends-2024"
-              readTime="8 min read"
-              category="AI Research"
-            />
+            <div className="bg-gradient-to-br from-slate-700/50 to-slate-800/50 backdrop-blur-lg rounded-2xl p-8 border border-slate-600/30 hover:border-slate-500/50 transition-all duration-300">
+              <div className="text-3xl mb-4">📊</div>
+              <h3 className="text-xl font-bold mb-4 text-white">AI Trends 2024</h3>
+              <p className="text-gray-300 mb-6">
+                Discover the latest trends and breakthroughs in artificial intelligence that are shaping the future.
+              </p>
+              <Link href="/blog/ai-trends-2024" className="text-purple-400 hover:text-purple-300 font-semibold">
+                Read Article →
+              </Link>
+            </div>
             
-            <BlogCard
-              title="Enterprise Case Study"
-              description="How we helped a Fortune 500 company achieve 300% ROI through AI implementation."
-              icon="💼"
-              link="/case-studies/enterprise-ai-success"
-              readTime="12 min read"
-              category="Case Study"
-            />
+            <div className="bg-gradient-to-br from-slate-700/50 to-slate-800/50 backdrop-blur-lg rounded-2xl p-8 border border-slate-600/30 hover:border-slate-500/50 transition-all duration-300">
+              <div className="text-3xl mb-4">💼</div>
+              <h3 className="text-xl font-bold mb-4 text-white">Enterprise Case Study</h3>
+              <p className="text-gray-300 mb-6">
+                How we helped a Fortune 500 company achieve 300% ROI through AI implementation.
+              </p>
+              <Link href="/case-studies/enterprise-ai-success" className="text-purple-400 hover:text-purple-300 font-semibold">
+                View Case Study →
+              </Link>
+            </div>
             
-            <BlogCard
-              title="Cloud Best Practices"
-              description="Essential strategies for successful cloud migration and optimization."
-              icon="🚀"
-              link="/blog/cloud-best-practices"
-              readTime="6 min read"
-              category="Cloud Computing"
-            />
+            <div className="bg-gradient-to-br from-slate-700/50 to-slate-800/50 backdrop-blur-lg rounded-2xl p-8 border border-slate-600/30 hover:border-slate-500/50 transition-all duration-300">
+              <div className="text-3xl mb-4">🚀</div>
+              <h3 className="text-xl font-bold mb-4 text-white">Cloud Best Practices</h3>
+              <p className="text-gray-300 mb-6">
+                Essential strategies for successful cloud migration and optimization.
+              </p>
+              <Link href="/blog/cloud-best-practices" className="text-purple-400 hover:text-purple-300 font-semibold">
+                Read Guide →
+              </Link>
+            </div>
           </div>
         </div>
       </section>
