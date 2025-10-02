@@ -1,8 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
 import Link from 'next/link';
->>>>>>> cursor/analyze-improve-and-deploy-application-5157
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
@@ -33,7 +30,6 @@ export default function HomePage() {
                 href="/contact" 
                 className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
               >
-<<<<<<< HEAD
                 Get Started Today
               </a>
               <a 
@@ -53,18 +49,6 @@ export default function HomePage() {
                 className="bg-gradient-to-r from-green-500 to-teal-600 hover:from-green-400 hover:to-teal-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
               >
                 View All Services →
-              </a>
-              <a 
-                href="/blog/ai-2026-april-mega-breakthrough-revolution" 
-                className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
-              >
-                Read Latest Insights →
-              </a>
-              <a 
-                href="/case-studies" 
-                className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
-              >
-                View Success Stories
               </a>
             </div>
             
@@ -89,26 +73,7 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-      </header>
-
-      {/* Featured Content Banners */}
-      <SimplifiedBanner
-        title="Latest AI Breakthroughs"
-        description="Discover our newest AI innovations and enterprise solutions"
-        link="/blog/ai-breakthroughs-2024"
-        badge="NEW"
-        badgeColor="green"
-        icon="🧠"
-      />
-
-      <SimplifiedBanner
-        title="Enterprise Success Stories"
-        description="See how Fortune 500 companies achieved 300% ROI with our solutions"
-        link="/case-studies"
-        badge="FEATURED"
-        badgeColor="blue"
-        icon="💼"
-      />
+      </section>
 
       {/* Services Section */}
       <section className="py-20 bg-slate-900">
@@ -394,11 +359,6 @@ export default function HomePage() {
               to="/services/innovative-solutions-2025"
               popular={true}
             />
-=======
-                Get Started
-              </a>
-            </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-d5ef
           </div>
         </div>
       </section>
