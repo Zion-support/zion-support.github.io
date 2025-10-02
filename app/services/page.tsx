@@ -21,7 +21,13 @@ import {
 
 export default function ServicesOverview() {
   const title = 'Services — Zion Tech Group';
-  const description = 'Comprehensive AI, micro SaaS, and IT services for modern businesses. Proven solutions with transparent pricing and fast delivery.';
+  const description = 'Comprehensive AI, micro SaaS, and IT services for modern businesses. Proven solutions with transparent pricing and fast delivery. Contact us at +1 302 464 0950 or kleber@ziontechgroup.com';
+
+  const contactInfo = {
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709'
+  };
 
   const serviceCategories = [
     {
@@ -288,12 +294,47 @@ export default function ServicesOverview() {
           </div>
         </section>
 
+        {/* Comprehensive Services Section */}
+        <section className="bg-gradient-to-r from-orange-500 to-red-500 text-white py-16">
+          <div className="max-w-7xl mx-auto px-6 text-center">
+            <h2 className="text-3xl font-bold mb-6">Explore Our Complete Service Catalog</h2>
+            <p className="text-xl text-orange-100 mb-8 max-w-3xl mx-auto">
+              Discover our full range of innovative micro SaaS, AI, and IT solutions with detailed pricing, features, and benefits. 
+              Compare our competitive rates with market prices and see why we deliver exceptional value.
+            </p>
+            <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-8">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                <Code className="w-8 h-8 mx-auto mb-3" />
+                <h3 className="text-lg font-semibold mb-2">8 Micro SaaS Solutions</h3>
+                <p className="text-orange-100 text-sm">From $600 to $8,500/month</p>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                <Brain className="w-8 h-8 mx-auto mb-3" />
+                <h3 className="text-lg font-semibold mb-2">6 AI Services</h3>
+                <p className="text-orange-100 text-sm">From $2,000 to $40,000/month</p>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                <Cloud className="w-8 h-8 mx-auto mb-3" />
+                <h3 className="text-lg font-semibold mb-2">6 IT Services</h3>
+                <p className="text-orange-100 text-sm">From $2,000 to $80,000/project</p>
+              </div>
+            </div>
+            <a 
+              href="/services/comprehensive"
+              className="inline-flex items-center px-8 py-3 bg-white text-orange-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300"
+            >
+              View Complete Catalog
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </a>
+          </div>
+        </section>
+
         {/* Contact Section */}
         <section className="bg-blue-600 text-white py-16">
           <div className="max-w-7xl mx-auto px-6 text-center">
             <h2 className="text-3xl font-bold mb-6">Ready to Transform Your Business?</h2>
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Get a free consultation and discover how our solutions can drive your success.
+              Get a free consultation and discover how our solutions can drive your success. Contact us at +1 302 464 0950 or kleber@ziontechgroup.com
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
