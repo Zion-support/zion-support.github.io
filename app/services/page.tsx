@@ -1,5 +1,6 @@
 import React from 'react';
-import { Metadata } from 'next';
+import Link from 'next/link';
+import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'AI & IT Services | Zion Tech Group - Enterprise Solutions',
@@ -1010,11 +1011,6 @@ const ServicesPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive AI, micro SaaS, and IT services. Explore our full range of technology solutions." />
-      </Helmet>
-      
       <div className="min-h-screen py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -1047,10 +1043,7 @@ const ServicesPage: React.FC = () => {
                   ))}
                 </ul>
                 
-                <Link
-                  to={service.href}
-                  className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center py-3 rounded-lg font-semibold transition-colors"
-                >
+                <Link href={service.href} className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center py-3 rounded-lg font-semibold transition-colors">
                   Learn More
                 </Link>
               </div>
@@ -1067,13 +1060,13 @@ const ServicesPage: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                to="/contact" 
+                href="/contact" 
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 Contact Us
               </Link>
               <Link 
-                to="/case-studies" 
+                href="/case-studies" 
                 className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
               >
                 View Case Studies
