@@ -6,25 +6,29 @@ const Footer: React.FC = () => {
 
   const footerLinks = {
     services: [
-      { name: 'AI Development', href: '/services/ai-development' },
-      { name: 'Cloud Services', href: '/services/cloud-services' },
-      { name: 'Web Development', href: '/services/web-development' },
-      { name: 'Mobile Development', href: '/services/mobile-development' },
+      { name: 'AI Services', href: '/services/ai-services' },
+      { name: 'Micro SaaS', href: '/services/micro-saas' },
+      { name: 'IT Services', href: '/services/it-services' },
+      { name: 'Cloud Solutions', href: '/services/cloud-solutions' },
       { name: 'Cybersecurity', href: '/services/cybersecurity' },
+      { name: 'Blockchain', href: '/services/blockchain' },
+      { name: 'IoT Solutions', href: '/services/iot-solutions' },
+      { name: 'Mobile Development', href: '/services/mobile-development' },
+      { name: 'Web Development', href: '/services/web-development' },
     ],
     company: [
       { name: 'About Us', href: '/about' },
-      { name: 'Our Team', href: '/about#team' },
-      { name: 'Careers', href: '/careers' },
-      { name: 'Contact', href: '/contact' },
+      { name: 'Solutions', href: '/solutions' },
+      { name: 'Case Studies', href: '/case-studies' },
       { name: 'Blog', href: '/blog' },
+      { name: 'Contact', href: '/contact' },
     ],
     resources: [
-      { name: 'Documentation', href: '/docs' },
-      { name: 'API Reference', href: '/api-docs' },
-      { name: 'Support', href: '/support' },
-      { name: 'Status', href: '/status' },
+      { name: 'AI Implementation Guide', href: '/guides/ai-2026-implementation-roadmap' },
+      { name: 'Autonomous Business Guide', href: '/guides/autonomous-business-processes-implementation-guide-2026' },
       { name: 'Privacy Policy', href: '/privacy' },
+      { name: 'Terms of Service', href: '/terms' },
+      { name: 'Security', href: '/security' },
     ]
   };
 
@@ -52,6 +56,29 @@ const Footer: React.FC = () => {
               Leading technology solutions provider helping businesses transform their digital presence 
               with cutting-edge AI, cloud architecture, and innovative development services.
             </p>
+            
+            {/* Contact Information */}
+            <div className="space-y-3 mb-6">
+              <div className="flex items-center text-gray-400">
+                <span className="mr-3">📞</span>
+                <a href="tel:+13024640950" className="hover:text-white transition-colors">
+                  +1 302 464 0950
+                </a>
+              </div>
+              <div className="flex items-center text-gray-400">
+                <span className="mr-3">✉️</span>
+                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-white transition-colors">
+                  kleber@ziontechgroup.com
+                </a>
+              </div>
+              <div className="flex items-start text-gray-400">
+                <span className="mr-3 mt-1">📍</span>
+                <span>
+                  364 E Main St STE 1008<br />
+                  Middletown, DE 19709
+                </span>
+              </div>
+            </div>
 
             <div className="flex space-x-4">
               {socialLinks.map((social) => (
