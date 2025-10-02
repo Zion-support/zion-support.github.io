@@ -34,34 +34,70 @@ export default function ServicesOverview() {
 
   const featuredServices = [
     {
-      name: 'Micro SaaS Solutions',
-      description: 'Production-ready micro SaaS applications with fast deployment and transparent pricing',
-      icon: Code,
-      link: '/services/micro-saas',
-      features: ['150+ Deployed', '280% Average ROI', '3 Week Delivery', '99% Satisfaction'],
-      color: 'from-orange-500 to-red-500',
-      bgColor: 'bg-orange-50',
-      textColor: 'text-orange-600'
-    },
-    {
-      name: 'Advanced AI Services',
-      description: 'Cutting-edge AI solutions including autonomous systems, quantum computing, and neural interfaces',
+      name: 'AI Customer Service Automation',
+      description: 'Transform customer support with intelligent automation and 24/7 AI-powered assistance',
       icon: Brain,
-      link: '/services/ai-services',
-      features: ['200+ Solutions', '350% Average ROI', '8 Week Delivery', '98% Satisfaction'],
+      link: '/services/ai-customer-service-automation',
+      features: ['300% ROI', '60% Cost Reduction', '80% Faster Response', '24/7 Support'],
       color: 'from-blue-500 to-purple-500',
       bgColor: 'bg-blue-50',
-      textColor: 'text-blue-600'
+      textColor: 'text-blue-600',
+      price: '$299/month'
     },
     {
-      name: 'IT Services & Solutions',
-      description: 'Comprehensive IT services including cloud migration, cybersecurity, and digital transformation',
-      icon: Server,
-      link: '/services/it-services',
-      features: ['500+ Projects', '250% Average ROI', 'On-Time Delivery', '97% Satisfaction'],
+      name: 'Smart Appointment Scheduler',
+      description: 'Streamline bookings with AI-powered optimization and automated reminders',
+      icon: Clock,
+      link: '/services/appointment-scheduling-saas',
+      features: ['250% ROI', '50% Less No-Shows', '35% More Bookings', '30 Day Trial'],
       color: 'from-green-500 to-blue-500',
       bgColor: 'bg-green-50',
-      textColor: 'text-green-600'
+      textColor: 'text-green-600',
+      price: '$49/month'
+    },
+    {
+      name: 'Enterprise Cloud Migration',
+      description: 'Seamless cloud transformation with zero downtime and expert guidance',
+      icon: Server,
+      link: '/services/cloud-migration-service',
+      features: ['200% ROI', '40% Cost Reduction', 'Zero Downtime', '24/7 Support'],
+      color: 'from-purple-500 to-pink-500',
+      bgColor: 'bg-purple-50',
+      textColor: 'text-purple-600',
+      price: 'Custom Pricing'
+    },
+    {
+      name: 'AI Business Intelligence',
+      description: 'Transform data into actionable insights with AI-powered analytics and reporting',
+      icon: TrendingUp,
+      link: '/services/ai-business-intelligence',
+      features: ['400% ROI', '70% Time Savings', 'Real-time Analytics', '21 Day Trial'],
+      color: 'from-orange-500 to-red-500',
+      bgColor: 'bg-orange-50',
+      textColor: 'text-orange-600',
+      price: '$199/month'
+    },
+    {
+      name: 'AI Cybersecurity Platform',
+      description: 'Advanced threat detection and response with AI-powered security automation',
+      icon: Shield,
+      link: '/services/ai-cybersecurity-platform',
+      features: ['500% ROI', '90% Threat Reduction', 'Real-time Monitoring', '14 Day Trial'],
+      color: 'from-red-500 to-pink-500',
+      bgColor: 'bg-red-50',
+      textColor: 'text-red-600',
+      price: '$399/month'
+    },
+    {
+      name: 'Telemedicine Platform',
+      description: 'Complete virtual healthcare solution with video consultations and patient management',
+      icon: Users,
+      link: '/services/healthcare-telemedicine-platform',
+      features: ['300% ROI', '200% Patient Reach', '60% Less No-Shows', '30 Day Trial'],
+      color: 'from-teal-500 to-blue-500',
+      bgColor: 'bg-teal-50',
+      textColor: 'text-teal-600',
+      price: '$149/month'
     }
   ];
 
@@ -130,6 +166,14 @@ export default function ServicesOverview() {
                     
                     <p className="text-gray-600 mb-8 text-lg leading-relaxed">{service.description}</p>
                     
+                    {/* Pricing */}
+                    <div className="mb-6 p-4 bg-gray-50 rounded-xl">
+                      <div className="text-center">
+                        <div className="text-2xl font-bold text-gray-900 mb-1">{service.price}</div>
+                        <div className="text-sm text-gray-500">Starting price</div>
+                      </div>
+                    </div>
+                    
                     <div className="grid grid-cols-2 gap-4 mb-8">
                       {service.features.map((feature, idx) => (
                         <div key={idx} className="flex items-center">
@@ -139,13 +183,21 @@ export default function ServicesOverview() {
                       ))}
                     </div>
                     
-                    <Link 
-                      href={service.link}
-                      className={`w-full ${service.bgColor} ${service.textColor} hover:opacity-90 font-bold py-4 px-6 rounded-xl transition-all duration-300 flex items-center justify-center group-hover:scale-105`}
-                    >
-                      Explore Services
-                      <ArrowRight className="ml-2 h-5 w-5" />
-                    </Link>
+                    <div className="flex gap-3">
+                      <Link 
+                        href={service.link}
+                        className={`flex-1 ${service.bgColor} ${service.textColor} hover:opacity-90 font-bold py-3 px-4 rounded-xl transition-all duration-300 flex items-center justify-center group-hover:scale-105`}
+                      >
+                        Learn More
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </Link>
+                      <a 
+                        href={`tel:${contactInfo.phone}`}
+                        className="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-xl transition-all duration-300 flex items-center justify-center"
+                      >
+                        Call Now
+                      </a>
+                    </div>
                   </div>
                 </div>
               ))}
