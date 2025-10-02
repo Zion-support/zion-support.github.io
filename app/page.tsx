@@ -192,15 +192,276 @@ export default function HomePage() {
         </div>
       </header>
 
-      {/* Featured Services Section */}
-      <section className="py-20 px-6 bg-white">
-        <div className="container mx-auto">
+      {/* NEW INNOVATIVE SERVICES SHOWCASE */}
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Featured Services</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Discover our most popular AI-powered solutions that are transforming businesses worldwide
+            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-full text-sm font-bold mb-6">
+              🚀 Revolutionary AI Solutions
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Cutting-Edge AI Services & Micro SaaS Solutions
+            </h2>
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-8">
+              Transform your business with our innovative AI-powered platforms. From meeting intelligence to financial automation, 
+              we deliver enterprise-grade solutions that drive real results.
             </p>
           </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            {/* AI Meeting Intelligence Platform */}
+            <div className="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-200">
+              <div className="p-8">
+                <div className="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
+                  <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">AI Meeting Intelligence Platform</h3>
+                <p className="text-gray-600 mb-6">
+                  Revolutionary AI platform that records, transcribes, analyzes, and extracts actionable insights from meetings automatically.
+                </p>
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-center text-sm text-gray-500">
+                    <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                    95% transcription accuracy
+                  </div>
+                  <div className="flex items-center text-sm text-gray-500">
+                    <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                    Automated task assignment
+                  </div>
+                  <div className="flex items-center text-sm text-gray-500">
+                    <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                    Real-time sentiment analysis
+                  </div>
+                </div>
+                <div className="flex items-center justify-between">
+                  <div className="text-2xl font-bold text-blue-600">$29-79/month</div>
+                  <Link 
+                    href="/services/ai-meeting-intelligence-platform"
+                    className="bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+                  >
+                    Learn More →
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            {/* AI Content Optimization Suite */}
+            <div className="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-200">
+              <div className="p-8">
+                <div className="w-16 h-16 bg-purple-100 rounded-xl flex items-center justify-center mb-6">
+                  <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">AI Content Optimization Suite</h3>
+                <p className="text-gray-600 mb-6">
+                  Transform your content strategy with AI that analyzes, optimizes, and maximizes engagement across all content types.
+                </p>
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-center text-sm text-gray-500">
+                    <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
+                    300% increase in engagement
+                  </div>
+                  <div className="flex items-center text-sm text-gray-500">
+                    <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
+                    SEO optimization
+                  </div>
+                  <div className="flex items-center text-sm text-gray-500">
+                    <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
+                    Multi-platform optimization
+                  </div>
+                </div>
+                <div className="flex items-center justify-between">
+                  <div className="text-2xl font-bold text-purple-600">$49-149/month</div>
+                  <Link 
+                    href="/services/ai-content-optimization-suite"
+                    className="bg-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
+                  >
+                    Learn More →
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            {/* AI Customer Insights Platform */}
+            <div className="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-200">
+              <div className="p-8">
+                <div className="w-16 h-16 bg-green-100 rounded-xl flex items-center justify-center mb-6">
+                  <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">AI Customer Insights Platform</h3>
+                <p className="text-gray-600 mb-6">
+                  Transform customer data into actionable insights with AI that predicts churn and maximizes customer lifetime value.
+                </p>
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-center text-sm text-gray-500">
+                    <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                    95% churn prediction accuracy
+                  </div>
+                  <div className="flex items-center text-sm text-gray-500">
+                    <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                    Behavioral analytics
+                  </div>
+                  <div className="flex items-center text-sm text-gray-500">
+                    <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                    Upsell optimization
+                  </div>
+                </div>
+                <div className="flex items-center justify-between">
+                  <div className="text-2xl font-bold text-green-600">$199-499/month</div>
+                  <Link 
+                    href="/services/ai-customer-insights-platform"
+                    className="bg-green-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-green-700 transition-colors"
+                  >
+                    Learn More →
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            {/* AI Workflow Automation Engine */}
+            <div className="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-200">
+              <div className="p-8">
+                <div className="w-16 h-16 bg-orange-100 rounded-xl flex items-center justify-center mb-6">
+                  <svg className="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">AI Workflow Automation Engine</h3>
+                <p className="text-gray-600 mb-6">
+                  Eliminate manual tasks with intelligent automation that learns and adapts to your business processes.
+                </p>
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-center text-sm text-gray-500">
+                    <span className="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>
+                    400% productivity increase
+                  </div>
+                  <div className="flex items-center text-sm text-gray-500">
+                    <span className="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>
+                    95% error reduction
+                  </div>
+                  <div className="flex items-center text-sm text-gray-500">
+                    <span className="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>
+                    500+ integrations
+                  </div>
+                </div>
+                <div className="flex items-center justify-between">
+                  <div className="text-2xl font-bold text-orange-600">$99-299/month</div>
+                  <Link 
+                    href="/services/ai-workflow-automation-engine"
+                    className="bg-orange-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-orange-700 transition-colors"
+                  >
+                    Learn More →
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            {/* AI Predictive Maintenance Platform */}
+            <div className="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-200">
+              <div className="p-8">
+                <div className="w-16 h-16 bg-red-100 rounded-xl flex items-center justify-center mb-6">
+                  <svg className="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">AI Predictive Maintenance Platform</h3>
+                <p className="text-gray-600 mb-6">
+                  Prevent equipment failures before they happen with AI that monitors health and predicts maintenance needs.
+                </p>
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-center text-sm text-gray-500">
+                    <span className="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
+                    80% downtime reduction
+                  </div>
+                  <div className="flex items-center text-sm text-gray-500">
+                    <span className="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
+                    95% prediction accuracy
+                  </div>
+                  <div className="flex items-center text-sm text-gray-500">
+                    <span className="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
+                    40% cost reduction
+                  </div>
+                </div>
+                <div className="flex items-center justify-between">
+                  <div className="text-2xl font-bold text-red-600">$299-999/month</div>
+                  <Link 
+                    href="/services/ai-predictive-maintenance-platform"
+                    className="bg-red-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-red-700 transition-colors"
+                  >
+                    Learn More →
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            {/* AI Financial Intelligence Platform */}
+            <div className="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-200">
+              <div className="p-8">
+                <div className="w-16 h-16 bg-emerald-100 rounded-xl flex items-center justify-center mb-6">
+                  <svg className="w-8 h-8 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">AI Financial Intelligence Platform</h3>
+                <p className="text-gray-600 mb-6">
+                  Secure your finances with AI that detects fraud, automates accounting, and provides real-time financial insights.
+                </p>
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-center text-sm text-gray-500">
+                    <span className="w-2 h-2 bg-emerald-500 rounded-full mr-3"></span>
+                    99.9% fraud detection
+                  </div>
+                  <div className="flex items-center text-sm text-gray-500">
+                    <span className="w-2 h-2 bg-emerald-500 rounded-full mr-3"></span>
+                    90% time savings
+                  </div>
+                  <div className="flex items-center text-sm text-gray-500">
+                    <span className="w-2 h-2 bg-emerald-500 rounded-full mr-3"></span>
+                    Automated compliance
+                  </div>
+                </div>
+                <div className="flex items-center justify-between">
+                  <div className="text-2xl font-bold text-emerald-600">$199-799/month</div>
+                  <Link 
+                    href="/services/ai-financial-intelligence-platform"
+                    className="bg-emerald-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-emerald-700 transition-colors"
+                  >
+                    Learn More →
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Contact Information */}
+          <div className="text-center bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white">
+            <h3 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h3>
+            <p className="text-xl mb-8 opacity-90">
+              Contact us today to learn how our AI solutions can drive your business forward
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+              <a 
+                href="mailto:kleber@ziontechgroup.com"
+                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              >
+                📧 kleber@ziontechgroup.com
+              </a>
+              <a 
+                href="tel:+13024640950"
+                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              >
+                📞 +1 302 464 0950
+              </a>
+            </div>
+            <div className="text-sm opacity-80">
+              <p>📍 364 E Main St STE 1008, Middletown, DE 19709</p>
+              <p>🌐 <a href="https://ziontechgroup.com" className="underline hover:no-underline">ziontechgroup.com</a></p>
+            </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* AI Social Media Automation */}
