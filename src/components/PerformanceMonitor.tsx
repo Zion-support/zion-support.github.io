@@ -87,7 +87,7 @@ const PerformanceMonitor: React.FC = () => {
       <div>TTFB: {metrics.ttfb?.toFixed(2) || 'N/A'}ms</div>
     </div>
   );
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-bd1a
+
 };
 
 export default PerformanceMonitor;

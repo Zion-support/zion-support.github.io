@@ -6,7 +6,7 @@ import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStoriesShowcase from '../components/SuccessStoriesShowcase';
 import LatestInsights from '../components/LatestInsights';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-ea70
+
 
 const HomePage: React.FC = () => {
   return (
