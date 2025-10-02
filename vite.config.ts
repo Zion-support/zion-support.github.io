@@ -20,6 +20,7 @@ export default defineConfig({
     sourcemap: false,
     minify: 'terser',
     cssMinify: true,
+    target: 'es2020',
     rollupOptions: {
       input: {
         main: './index.html'
