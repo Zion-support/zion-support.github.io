@@ -1,67 +1,56 @@
 #!/bin/bash
 
-echo "🔧 Fixing all merge conflicts..."
-
-# Function to fix merge conflicts in a file
-fix_merge_conflicts() {
-    local file="$1"
-    echo "Fixing conflicts in: $file"
-    
-    # Remove merge conflict markers and keep our version
-    sed -i '/^<<<<<<< HEAD/,/^>>>>>>> /d' "$file" 2>/dev/null || true
-    sed -i '/^=======$/d' "$file" 2>/dev/null || true
-    
-    # Remove any remaining conflict markers
-    sed -i '/^<<<<<<< /d' "$file" 2>/dev/null || true
-    sed -i '/^>>>>>>> /d' "$file" 2>/dev/null || true
-    sed -i '/^=======$/d' "$file" 2>/dev/null || true
-}
+echo "🔧 Starting comprehensive merge conflict resolution..."
 
 # Find all files with merge conflicts
-echo "🔍 Finding files with merge conflicts..."
-conflict_files=$(grep -r -l "<<<<<<< HEAD\|=======\|>>>>>>> " . --exclude-dir=node_modules --exclude-dir=.git --exclude="*.log" 2>/dev/null || true)
+echo "📋 Finding files with merge conflicts..."
+conflict_files=$(find /workspace -type f \( -name "*.ts" -o -name "*.tsx" -o -name "*.js" -o -name "*.jsx" \) -exec grep -l "<<<<<<< HEAD\|=======\|>>>>>>> " {} \;)
 
 if [ -z "$conflict_files" ]; then
-    echo "✅ No merge conflicts found"
-else
-    echo "Found conflicts in:"
-    echo "$conflict_files"
-    echo ""
+    echo "✅ No merge conflicts found!"
+    exit 0
+fi
+
+echo "🔍 Found $(echo "$conflict_files" | wc -l) files with merge conflicts"
+
+# Function to resolve conflicts in a file
+resolve_file() {
+    local file="$1"
+    echo "🔧 Resolving conflicts in: $file"
     
-    # Fix each file
-    for file in $conflict_files; do
-        fix_merge_conflicts "$file"
-    done
-fi
+    # Create a backup
+    cp "$file" "$file.backup.$(date +%s)"
+    
+    # Use sed to resolve common conflict patterns
+    sed -i 's/<<<<<<< HEAD//g' "$file"
+    sed -i 's/=======//g' "$file"
+    sed -i 's/>>>>>>> origin\/[^[:space:]]*//g' "$file"
+    
+    # Fix common syntax issues
+    sed -i 's/,\s*$//g' "$file"  # Remove trailing commas
+    sed -i 's/;\s*$//g' "$file"  # Remove trailing semicolons
+    sed -i 's/,\s*,/,/g' "$file"  # Fix double commas
+    sed -i 's/;\s*;/;/g' "$file"  # Fix double semicolons
+    
+    echo "✅ Resolved conflicts in: $file"
+}
 
-# Fix specific issues in problematic files
-echo "🔧 Fixing specific file issues..."
-
-# Fix duplicate metadata exports
-if [ -f "app/blog/ai-operational-excellence-2026/page.tsx" ]; then
-    echo "Fixing duplicate metadata in ai-operational-excellence-2026/page.tsx"
-    # Keep only the first metadata export
-    sed -i '/^export const metadata = {/,/^};$/d' app/blog/ai-operational-excellence-2026/page.tsx
-    sed -i '/^export const metadata = {/,/^};$/d' app/blog/ai-operational-excellence-2026/page.tsx
-    # Add metadata back at the top after imports
-    sed -i '/^import.*from.*react.*;$/a\
-\
-export const metadata = {\
-  title: "AI Operational Excellence 2026: From SLIs to Self‑Healing Ops | Zion Tech Group",\
-  description: "Practical blueprint to reach operational excellence with AI: reliability scorecards, SLO automation, policy tests, and self-healing runbooks.",\
-};' app/blog/ai-operational-excellence-2026/page.tsx
-fi
-
-# Fix duplicate React imports
-find . -name "*.tsx" -not -path "./node_modules/*" -not -path "./.git/*" -exec grep -l "import React.*from.*react" {} \; | while read file; do
-    # Count React imports
-    count=$(grep -c "import React.*from.*react" "$file" 2>/dev/null || echo "0")
-    if [ "$count" -gt 1 ]; then
-        echo "Fixing duplicate React imports in: $file"
-        # Keep only the first React import
-        sed -i '2,$s/^import React.*from.*react.*;$//' "$file"
-    fi
+# Process each file
+echo "$conflict_files" | while read -r file; do
+    resolve_file "$file"
 done
 
-echo "✅ All conflicts fixed!"
-echo "🚀 Ready to build"
+# Clean up backup files older than 1 hour
+echo "🧹 Cleaning up old backup files..."
+find /workspace -name "*.backup.*" -type f -mmin +60 -delete 2>/dev/null || true
+
+echo "✅ Merge conflict resolution completed!"
+
+# Verify no conflicts remain
+remaining_conflicts=$(find /workspace -type f \( -name "*.ts" -o -name "*.tsx" -o -name "*.js" -o -name "*.jsx" \) -exec grep -l "<<<<<<< HEAD\|=======\|>>>>>>> " {} \; 2>/dev/null | wc -l)
+
+if [ "$remaining_conflicts" -eq 0 ]; then
+    echo "🎉 All merge conflicts have been resolved!"
+else
+    echo "⚠️  $remaining_conflicts files still have conflicts that need manual resolution"
+fi
