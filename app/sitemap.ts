@@ -293,3 +293,5 @@ export default function sitemap(): SiteEntry[] {
       changeFrequency: 'monthly',
       priority: 0.8,
     },
+  ];
+}
