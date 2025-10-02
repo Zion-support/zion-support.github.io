@@ -7,34 +7,18 @@
 import { getPerformanceOptimizer } from './performanceOptimizer';
 
 interface PageView {
-path: string,
-title: string,
-timestamp: number,
-referrer: string,
-=======
-// import {
-getPerformanceOptimizer
-} from './performanceOptimizer';';
-
-interface PageView {
 path: string;,
 title: string;,
 timestamp: number;,
 referrer: string;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 userAgent: string;
 }
 
 interface UserEvent {
-<<<<<<< HEAD
-category: string,
-action: string,
-=======
 category: string;,
 action: string;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
-label?: string;
-value?: number;
+label?: string;,
+value?: number;,
 timestamp: number;
 }
 
@@ -51,19 +35,11 @@ interface ConversionEvent {
 }
 
 interface SessionData {
-<<<<<<< HEAD
-sessionId: string,
-startTime: number,
-pageViews: PageView[],
-events: UserEvent[],
-conversions: ConversionEvent[],
-=======
 sessionId: string;,
 startTime: number;,
 pageViews: PageView[];,
 events: UserEvent[];,
 conversions: ConversionEvent[];,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 performanceMetrics: any;
 }
 

@@ -7,25 +7,13 @@ import {
 <<<<<<< HEAD
 } from 'lucide-react';
 interface SEOIssue {
-id: string,
-type: 'error' | 'warning' | 'info';',
-title: string,
-description: string,
-impact: 'high' | 'medium' | 'low';',
-category: 'content' | 'technical' | 'performance' | 'accessibility' | 'mobile';',
-fix: string,
-=======
-} from 'lucide-react';';
-
-interface SEOIssue {
 id: string;,
-type: 'error' | 'warning' | 'info';';,
+type: 'error' | 'warning' | 'info';,
 title: string;,
 description: string;,
-impact: 'high' | 'medium' | 'low';';,
-category: 'content' | 'technical' | 'performance' | 'accessibility' | 'mobile';';,
+impact: 'high' | 'medium' | 'low';,
+category: 'content' | 'technical' | 'performance' | 'accessibility' | 'mobile';,
 fix: string;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 score: number;
 }
 

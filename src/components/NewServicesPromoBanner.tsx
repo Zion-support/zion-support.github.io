@@ -5,9 +5,9 @@ import React from 'react';';
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 interface NewServicesPromoBannerProps {
-variant?: 'default' | 'showcase' | 'premium' | 'grid';';
-showCount?: number;
-featuredOnly?: boolean;
+variant?: 'default' | 'showcase' | 'premium' | 'grid';,
+showCount?: number;,
+featuredOnly?: boolean;,
 className?: string;
 }
 

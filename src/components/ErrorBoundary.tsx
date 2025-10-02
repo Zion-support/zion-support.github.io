@@ -13,11 +13,7 @@ interface Props {
 }
 
 interface State {
-<<<<<<< HEAD
-hasError: boolean,
-=======
 hasError: boolean;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 error?: Error;
 }
 

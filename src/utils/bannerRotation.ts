@@ -4,20 +4,13 @@
  */
 
 export interface BannerConfig {
-<<<<<<< HEAD
-id: string,
-component: string,
-priority: number,
-category: 'breakthrough' | 'enterprise' | 'innovation' | 'product';',
-=======
 id: string;,
 component: string;,
 priority: number;,
-category: 'breakthrough' | 'enterprise' | 'innovation' | 'product';';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
-impressions?: number;
-clicks?: number;
-lastShown?: Date;
+category: 'breakthrough' | 'enterprise' | 'innovation' | 'product';,
+impressions?: number;,
+clicks?: number;,
+lastShown?: Date;,
 active: boolean;
 }
 

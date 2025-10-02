@@ -4,16 +4,6 @@
  */
 
 export interface BlogPost {
-<<<<<<< HEAD
-slug: string,
-title: string,
-description: string,
-date: string,
-author: string,
-category: string,
-tags: string[],
-featured: boolean,
-=======
 slug: string;,
 title: string;,
 description: string;,
@@ -22,26 +12,16 @@ author: string;,
 category: string;,
 tags: string[];,
 featured: boolean;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 readTime?: number;
 }
 
 export interface CaseStudy {
-<<<<<<< HEAD
-slug: string,
-title: string,
-description: string,
-client: string,
-industry: string,
-results: string[],
-=======
 slug: string;,
 title: string;,
 description: string;,
 client: string;,
 industry: string;,
 results: string[];,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 featured: boolean;
 }
 

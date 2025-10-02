@@ -5,8 +5,8 @@ import React from 'react';';
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 interface AnimatedSectionProps {
-animation?: 'fadeIn' | 'slideUp' | 'slideLeft' | 'slideRight' | 'scale';';
-delay?: number;
+animation?: 'fadeIn' | 'slideUp' | 'slideLeft' | 'slideRight' | 'scale';,
+delay?: number;,
 children: React.ReactNode;
 }
 

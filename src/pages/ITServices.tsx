@@ -1,37 +1,29 @@
 import React from "react";
-import { Helmet } from "react-helmet-async";
-<<<<<<< HEAD
-// Icon imports removed for compatibility
-=======
-import { 
-  Cloud,
-  Shield,
-  Server,
-  Database,
-  Network,
-  Lock,
-  CheckCircle,
-  ArrowRight,
-  DollarSign,
-  Clock,
-  Star,
-  TrendingUp,
-  Globe,
-  Smartphone,
-  MessageSquare,
-  Zap,
-  Settings,
-  Monitor,
-  Cpu,
-  HardDrive,
-  Wifi,
-  Eye,
-  Key,
-  AlertTriangle,
-  Users,
-  Building
+import {
+Helmet
+} from "react-helmet-async";
+import {
+CheckCircle,
+ArrowRight,
+DollarSign,
+Clock,
+Star,
+TrendingUp,
+Globe,
+Smartphone,
+MessageSquare,
+Zap,
+Settings,
+Monitor,
+Cpu,
+HardDrive,
+Wifi,
+Eye,
+Key,
+AlertTriangle,
+Users,
+Building
 } from "lucide-react";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-73c1
 
 export default function ITServices(): React.JSX.Element {
   const itServices = [

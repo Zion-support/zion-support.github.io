@@ -1,11 +1,7 @@
 import React from 'react';
-<<<<<<< HEAD
-import SEO from '../components/SEO';
 import {
-
-} from '../components/LazyLoader';
-=======
-import { Helmet } from 'react-helmet-async';
+Helmet
+} from 'react-helmet-async';
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStoriesShowcase from '../components/SuccessStoriesShowcase';

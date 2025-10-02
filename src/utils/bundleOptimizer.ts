@@ -4,28 +4,17 @@
  */
 
 interface BundleAnalysis {
-<<<<<<< HEAD
-totalSize: number,
-componentCount: number,
-=======
 totalSize: number;,
 componentCount: number;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 largestComponents: Array<{ name: string; size: number
 }>;
   recommendations: string[];
 }
 
 interface OptimizationResult {
-<<<<<<< HEAD
-before: BundleAnalysis,
-after: BundleAnalysis,
-savings: number,
-=======
 before: BundleAnalysis;,
 after: BundleAnalysis;,
 savings: number;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 savingsPercentage: number;
 }
 

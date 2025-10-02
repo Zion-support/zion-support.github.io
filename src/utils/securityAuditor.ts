@@ -4,19 +4,11 @@
  */
 
 interface SecurityVulnerability {
-<<<<<<< HEAD
-severity: 'critical' | 'high' | 'medium' | 'low';',
-category: 'xss' | 'csrf' | 'auth' | 'data' | 'dependency' | 'config';',
-description: string,
-impact: string,
-remediation: string,
-=======
-severity: 'critical' | 'high' | 'medium' | 'low';';,
-category: 'xss' | 'csrf' | 'auth' | 'data' | 'dependency' | 'config';';,
+severity: 'critical' | 'high' | 'medium' | 'low';,
+category: 'xss' | 'csrf' | 'auth' | 'data' | 'dependency' | 'config';,
 description: string;,
 impact: string;,
 remediation: string;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 cweId?: string;
 }
 

@@ -1,41 +1,26 @@
-<<<<<<< HEAD
-import React, { useEffect, useState } from 'react';
-import Link from 'next/link';
+import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 const Sidebar: React.FC = () => {
-  const [pathname, setPathname] = useState<string>('');
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      setPathname(window.location.pathname);
-    }
-  }, []);
-  const isActive = (path: string) => pathname === path;
-=======
-import React from 'react';
-import {
-
-} from 'react-router-dom';
-const Sidebar: React.FC = () => {,
   const location = useLocation();
-  const isActive = (path: string) => location.pathname === path,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7dc2
+  const isActive = (path: string) => location.pathname === path;
 
   const sections = [
     {
-      title: 'Explore',',
-      links: [,
+      title: 'Explore',
+      links: [
         { label: 'Home', path: '/' },
         { label: 'Solutions', path: '/solutions' },
         { label: 'Services', path: '/services' },
-        { label: 'Guides', path: '/guides' },
+        { label: 'Resources', path: '/resources' },
         { label: 'Case Studies', path: '/case-studies' },
         { label: 'Blog', path: '/blog' },
         { label: 'About', path: '/about' },
-      ]
+      ],
     },
     {
-      title: 'Solutions',',
-      links: [,
+      title: 'Solutions',
+      links: [
         { label: 'Enterprise', path: '/solutions/enterprise' },
         { label: 'SMB', path: '/solutions/smb' },
         { label: 'Startup', path: '/solutions/startup' },
@@ -43,32 +28,37 @@ const Sidebar: React.FC = () => {,
         { label: 'Financial', path: '/solutions/financial' },
         { label: 'Retail', path: '/solutions/retail' },
         { label: 'Manufacturing', path: '/solutions/manufacturing' },
-      ]
+      ],
     },
     {
-      title: 'Services',',
-      links: [,
+      title: 'Services',
+      links: [
         { label: 'AI Services', path: '/services/ai-services' },
         { label: 'IT Services', path: '/services/it-services' },
         { label: 'Micro SaaS', path: '/services/micro-saas' },
-        { label: 'Blockchain Solutions', path: '/services/blockchain-solutions' },
-        { label: 'AI Quantum Computing', path: '/services/ai-quantum-computing-2026' },
+        { label: 'Cloud Solutions', path: '/services/cloud' },
+        { label: 'Data Analytics', path: '/services/analytics' },
+        { label: 'Cybersecurity', path: '/services/security' },
         { label: 'Automation', path: '/services/automation' },
-      ]
+      ],
     },
     {
-      title: 'Support',',
-      links: [,
+      title: 'Support',
+      links: [
         { label: 'Contact', path: '/contact' },
-        { label: 'Sitemap', path: '/sitemap' },
-      ]
-    }
+        { label: 'Support', path: '/support' },
+        { label: 'Documentation', path: '/docs' },
+        { label: 'Pricing', path: '/pricing' },
+        { label: 'Partners', path: '/partners' },
+      ],
+    },
   ];
 
   return (
-    <aside className="w-64 bg-gray-50 border-r border-gray-200 h-full overflow-y-auto">
+    <aside className="w-full xl:w-72 bg-gray-50 border-r border-gray-200 h-full overflow-y-auto">
       <div className="p-6">
         <h2 className="text-lg font-semibold text-gray-900 mb-6">Navigation</h2>
+
         {sections.map((section, index) => (
           <div key={index} className="mb-8">
             <h3 className="text-sm font-medium text-gray-700 uppercase tracking-wider mb-3">
@@ -83,11 +73,11 @@ const Sidebar: React.FC = () => {,
                   className={`block px-3 py-2 rounded-md text-sm transition-colors ${
 =======
                   to={link.path}
-                  className={`block px-3 py-2 rounded-md text-sm transition-colors ${`;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7dc2
+                  className={`block px-3 py-2 rounded-md text-sm transition-colors ${
                     isActive(link.path)
                       ? 'bg-blue-100 text-blue-700 font-medium'
-                      : 'text-gray-600 hover: text-gray-900 hover:bg-gray-100}`}`;
+                      : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
+                  }`}
                 >
                   {link.label}
                 </Link>

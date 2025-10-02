@@ -4,20 +4,6 @@
  */
 
 export interface PerformanceMetrics {
-<<<<<<< HEAD
-loadTime: number,
-firstContentfulPaint: number,
-largestContentfulPaint: number,
-firstInputDelay: number,
-cumulativeLayoutShift: number,
-timeToInteractive: number,
-totalBlockingTime: number,
-speedIndex: number,
-memoryUsage: number,
-networkRequests: number,
-domNodes: number,
-jsHeapSize: number,
-=======
 loadTime: number;,
 firstContentfulPaint: number;,
 largestContentfulPaint: number;,
@@ -30,24 +16,15 @@ memoryUsage: number;,
 networkRequests: number;,
 domNodes: number;,
 jsHeapSize: number;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 timestamp: number;
 }
 
 export interface PerformanceAlert {
-<<<<<<< HEAD
-type: 'warning' | 'error' | 'info';',
-message: string,
-metric: keyof PerformanceMetrics,
-value: number,
-threshold: number,
-=======
-type: 'warning' | 'error' | 'info';';,
+type: 'warning' | 'error' | 'info';,
 message: string;,
 metric: keyof PerformanceMetrics;,
 value: number;,
 threshold: number;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 timestamp: number;
 }
 

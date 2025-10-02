@@ -1,14 +1,4 @@
 export interface NewArticle {
-<<<<<<< HEAD
-id: string,
-title: string,
-description: string,
-category: string,
-publishedDate: string,
-featured: boolean,
-link: string,
-readTime: string,
-=======
 id: string;,
 title: string;,
 description: string;,
@@ -17,7 +7,6 @@ publishedDate: string;,
 featured: boolean;,
 link: string;,
 readTime: string;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 tags: string[];
 }
 

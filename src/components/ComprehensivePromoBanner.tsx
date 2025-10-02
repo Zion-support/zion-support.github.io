@@ -5,8 +5,8 @@ import React from 'react';';
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 interface ComprehensivePromoBannerProps {
-variant?: 'hero' | 'compact' | 'featured';';
-showCount?: number;
+variant?: 'hero' | 'compact' | 'featured';,
+showCount?: number;,
 className?: string;
 }
 

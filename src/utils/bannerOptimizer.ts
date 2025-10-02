@@ -5,29 +5,18 @@
  */
 
 export interface BannerConfig {
-<<<<<<< HEAD
-id: string,
-priority: number,
-=======
 id: string;,
 priority: number;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
-displayDuration?: number;
-targetAudience?: string[];
-expiryDate?: Date;
+displayDuration?: number;,
+targetAudience?: string[];,
+expiryDate?: Date;,
 maxImpressions?: number;
 }
 
 export interface BannerMetrics {
-<<<<<<< HEAD
-impressions: number,
-clicks: number,
-conversions: number,
-=======
 impressions: number;,
 clicks: number;,
 conversions: number;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 lastShown: Date;
 }
 

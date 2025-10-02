@@ -1,19 +1,6 @@
 <<<<<<< HEAD
 import React from 'react';
 interface FeaturedContent {
-id: number,
-title: string,
-category: string,
-readTime: string,
-rating: number,
-readers: string,
-badge: string,
-gradient: string,
-icon: React.ReactNode,
-=======
-import React from 'react';';
-
-interface FeaturedContent {
 id: number;,
 title: string;,
 category: string;,
@@ -23,7 +10,6 @@ readers: string;,
 badge: string;,
 gradient: string;,
 icon: React.ReactNode;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 link: string;
 }
 

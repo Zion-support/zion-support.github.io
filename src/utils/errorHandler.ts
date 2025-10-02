@@ -1,19 +1,10 @@
 interface ErrorInfo {
-<<<<<<< HEAD
-message: string,
-stack?: string;
-componentStack?: string;
-timestamp: string,
-url: string,
-userAgent: string,
-=======
 message: string;,
-stack?: string;
-componentStack?: string;
+stack?: string;,
+componentStack?: string;,
 timestamp: string;,
 url: string;,
 userAgent: string;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 userId?: string;
 }
 

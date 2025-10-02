@@ -34,15 +34,9 @@ variant?: 'primary' | 'secondary';';
 }
 
 interface NotificationSystemProps {
-<<<<<<< HEAD
-notifications: Notification[],
-onRemove: (id: string) => void,
-position?: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left' | 'top-center' | 'bottom-center';
-=======
 notifications: Notification[];,
 onRemove: (id: string) => void;,
-position?: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left' | 'top-center' | 'bottom-center';';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
+position?: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left' | 'top-center' | 'bottom-center';,
 maxNotifications?: number;
 }
 

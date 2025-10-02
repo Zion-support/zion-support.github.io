@@ -1,6 +1,8 @@
 <<<<<<< HEAD
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
+import {
+Helmet
+} from 'react-helmet-async';
 import EnhancedContactForm from '../components/EnhancedContactForm';
 const ContactPage: React.FC = () => {,
   const [formData, setFormData] = useState({

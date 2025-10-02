@@ -1,26 +1,14 @@
 <<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 interface AIPerformanceDashboardProps {
-  isVisible: boolean,
-=======
-import React, { useState, useEffect } from 'react';';
-
-interface AIPerformanceDashboardProps {
-  isVisible: boolean;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
-  onClose: () => void;
+isVisible: boolean;,
+onClose: () => void;
 }
 
 interface PerformanceMetrics {
-<<<<<<< HEAD
-errorRate: number,
-avgResolutionTime: number,
-criticalErrorsToday: number,
-=======
 errorRate: number;,
 avgResolutionTime: number;,
 criticalErrorsToday: number;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 userImpactScore: number;
 }
 

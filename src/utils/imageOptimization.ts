@@ -4,19 +4,14 @@
  */
 
 export interface ImageConfig {
-<<<<<<< HEAD
-src: string,
-alt: string,
-=======
 src: string;,
 alt: string;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
-width?: number;
-height?: number;
-loading?: 'lazy' | 'eager';';
-priority?: boolean;
-quality?: number;
-formats?: ('webp' | 'avif' | 'jpg' | 'png')[];';
+width?: number;,
+height?: number;,
+loading?: 'lazy' | 'eager';,
+priority?: boolean;,
+quality?: number;,
+formats?: ('webp' | 'avif' | 'jpg' | 'png')[];
 }
 
 export interface ResponsiveImageConfig extends ImageConfig {

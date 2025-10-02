@@ -1,28 +1,15 @@
 export interface BannerData {
-<<<<<<< HEAD
-id: string,
-title: string,
-subtitle?: string;
-description: string,
-ctaText: string,
-ctaLink: string,
-imageUrl?: string;
-category: string,
-priority: number,
-isActive: boolean,
-=======
 id: string;,
 title: string;,
-subtitle?: string;
+subtitle?: string;,
 description: string;,
 ctaText: string;,
 ctaLink: string;,
-imageUrl?: string;
+imageUrl?: string;,
 category: string;,
 priority: number;,
 isActive: boolean;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
-startDate?: string;
+startDate?: string;,
 endDate?: string;
 }
 

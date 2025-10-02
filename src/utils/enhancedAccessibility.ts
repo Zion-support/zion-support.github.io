@@ -4,17 +4,6 @@
  */
 
 export interface AccessibilityConfig {
-<<<<<<< HEAD
-enableKeyboardNavigation: boolean,
-enableScreenReaderSupport: boolean,
-enableHighContrast: boolean,
-enableFocusManagement: boolean,
-enableARIALabels: boolean,
-enableColorContrast: boolean,
-enableTextScaling: boolean,
-enableMotionReduction: boolean,
-enableVoiceControl: boolean,
-=======
 enableKeyboardNavigation: boolean;,
 enableScreenReaderSupport: boolean;,
 enableHighContrast: boolean;,
@@ -24,24 +13,10 @@ enableColorContrast: boolean;,
 enableTextScaling: boolean;,
 enableMotionReduction: boolean;,
 enableVoiceControl: boolean;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 enableTouchAccessibility: boolean;
 }
 
 export interface AccessibilityMetrics {
-<<<<<<< HEAD
-colorContrastRatio: number,
-focusableElements: number,
-ariaLabels: number,
-headingStructure: number,
-altTexts: number,
-keyboardTraps: number,
-screenReaderCompatibility: number,
-overallScore: number,
-totalElements: number,
-accessibleElements: number,
-issuesFound: number,
-=======
 colorContrastRatio: number;,
 focusableElements: number;,
 ariaLabels: number;,
@@ -53,7 +28,6 @@ overallScore: number;,
 totalElements: number;,
 accessibleElements: number;,
 issuesFound: number;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 score: number;
 }
 

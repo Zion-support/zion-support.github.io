@@ -526,6 +526,188 @@ export default function MicroSAASPage() {
       popularity: 92,
       savings: '$15K+ annually'
     }
+    ,
+    {
+      id: 'ai-legal-contract-review',
+      title: 'AI Legal Contract Review',
+      subtitle: 'Clause Risk & Obligation Extraction',
+      description: 'Automated contract analysis that flags risky clauses, extracts obligations and dates, and drafts redlines aligned to your playbooks.',
+      icon: FileText,
+      category: 'Legal Ops',
+      pricing: '$299 - $1,999/month',
+      delivery: '1-2 weeks',
+      features: [
+        'Clause classification and risk scoring',
+        'Obligation, date, and party extraction',
+        'Playbook-aligned suggested redlines',
+        'Contract comparison and change tracking',
+        'Secure data handling and access control',
+        'Export to Word and CLM integration'
+      ],
+      benefits: [
+        '70% faster review cycle time',
+        'Reduced legal spend and outside counsel hours',
+        'Standardized negotiations with fewer escalations'
+      ],
+      useCases: [
+        'Sales order forms and MSAs',
+        'Vendor contracts and DPAs',
+        'NDA bulk screening'
+      ],
+      link: '/services/micro-saas/ai-legal-contract-review',
+      popularity: 88,
+      savings: '$100K+ annually'
+    },
+    {
+      id: 'vendor-risk-scoring',
+      title: 'Vendor Risk Scoring API',
+      subtitle: 'Third-Party GRC Intelligence',
+      description: 'Continuous vendor monitoring with public cyber hygiene signals, breach intel, and questionnaire parsing into a unified risk score.',
+      icon: Shield,
+      category: 'Compliance & Security',
+      pricing: '$399 - $2,499/month',
+      delivery: '2-3 weeks',
+      features: [
+        'Security rating aggregation and normalization',
+        'Questionnaire ingestion (SIG, CAIQ) with mapping',
+        'Breach and exposure monitoring',
+        'Tiering, SLAs, and auto-remediation tasks',
+        'API and webhook notifications'
+      ],
+      benefits: [
+        'Faster vendor onboarding and re-assessments',
+        'Improved risk visibility and compliance evidence',
+        'Automated follow-ups and ticketing'
+      ],
+      useCases: [
+        'Third-party due diligence',
+        'Annual vendor reviews',
+        'Board and audit reporting'
+      ],
+      link: '/services/micro-saas/vendor-risk-scoring',
+      popularity: 82,
+      savings: '$75K+ annually'
+    },
+    {
+      id: 'social-ads-optimizer',
+      title: 'AI Social Ads Optimizer',
+      subtitle: 'Creative Generation & Budget Allocation',
+      description: 'Generates and tests ad variants across platforms, shifts budget to winners automatically, and explains performance drivers.',
+      icon: MessageSquare,
+      category: 'Marketing',
+      pricing: '$149 - $999/month',
+      delivery: '1-2 weeks',
+      features: [
+        'Creative and copy generation with brand guardrails',
+        'Multi-variate testing and flywheel learning',
+        'Budget reallocation and pacing',
+        'Attribution and incrementality insights',
+        'Platform integrations (Meta, Google, LinkedIn)'
+      ],
+      benefits: [
+        'Higher ROAS with continuous optimization',
+        'Faster experiment cycles',
+        'Transparency into drivers of performance'
+      ],
+      useCases: [
+        'Paid social acquisition',
+        'Creative testing lab',
+        'Always-on campaign optimization'
+      ],
+      link: '/services/micro-saas/social-ads-optimizer',
+      popularity: 90,
+      savings: '$40K+ annually'
+    },
+    {
+      id: 'api-uptime-slo-monitor',
+      title: 'API Uptime & SLO Monitor',
+      subtitle: 'SLA Tracking with Synthetic Checks',
+      description: 'Global synthetic monitoring, latency SLOs, and burn-rate alerts with runbook links for fast incident response.',
+      icon: Activity,
+      category: 'Engineering Productivity',
+      pricing: '$79 - $499/month',
+      delivery: '1 week',
+      features: [
+        'HTTP and browser-based checks from multiple regions',
+        'Latency/error budgets and burn-rate alerts',
+        'On-call rotations and escalation policies',
+        'Dashboards and public status pages',
+        'Jira/PagerDuty/Slack integrations'
+      ],
+      benefits: [
+        'Reduced MTTR and fewer incidents',
+        'Clear SLOs and compliance reporting',
+        'Improved customer trust'
+      ],
+      useCases: [
+        'API reliability guardrails',
+        'Customer SLAs tracking',
+        'Release readiness gates'
+      ],
+      link: '/services/micro-saas/api-uptime-slo-monitor',
+      popularity: 86,
+      savings: '$25K+ annually'
+    },
+    {
+      id: 'ai-localization-qa',
+      title: 'AI Localization QA',
+      subtitle: 'Multilingual UX & Copy Validation',
+      description: 'Automated linguistic QA checks for localized apps and content, flagging layout overflows, tone mismatches, and glossary violations.',
+      icon: Globe,
+      category: 'Content & Localization',
+      pricing: '$129 - $799/month',
+      delivery: '1-2 weeks',
+      features: [
+        'Glossary and style guide enforcement',
+        'Visual layout checks and truncation detection',
+        'Tone and formality consistency',
+        'Screenshot-based review workflows',
+        'Connector for common TMS platforms'
+      ],
+      benefits: [
+        'Consistent global UX',
+        'Lower localization costs',
+        'Faster release cycles in all markets'
+      ],
+      useCases: [
+        'Website and app localization',
+        'Support content translations',
+        'Product copy QA at scale'
+      ],
+      link: '/services/micro-saas/ai-localization-qa',
+      popularity: 78,
+      savings: '$30K+ annually'
+    },
+    {
+      id: 'data-pipeline-cost-inspector',
+      title: 'Data Pipeline Cost Inspector',
+      subtitle: 'Warehouse & Orchestration Spend Guard',
+      description: 'Analyzes warehouse queries and orchestration runs to identify costly patterns, propose fixes, and auto-open PRs.',
+      icon: BarChart3,
+      category: 'Analytics & Insights',
+      pricing: '$199 - $1,299/month',
+      delivery: '2-3 weeks',
+      features: [
+        'Hotspot detection for queries and jobs',
+        'Materialization and partitioning recommendations',
+        'Cost anomaly alerts and budgets',
+        'dbt/Airflow/Dagster integration',
+        'Git PR hints to optimize SQL/ETL'
+      ],
+      benefits: [
+        'Lower warehouse and compute bills',
+        'Faster jobs and stable SLAs',
+        'Developer time savings with PR hints'
+      ],
+      useCases: [
+        'Snowflake/BigQuery cost tuning',
+        'dbt model optimization',
+        'Airflow schedule right-sizing'
+      ],
+      link: '/services/micro-saas/data-pipeline-cost-inspector',
+      popularity: 88,
+      savings: '$120K+ annually'
+    }
   ];
 
   const categories = [

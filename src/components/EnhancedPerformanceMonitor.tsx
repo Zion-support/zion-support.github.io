@@ -4,39 +4,22 @@ import {
 <<<<<<< HEAD
 } from '../utils/performance';
 interface PerformanceMetrics {
-domContentLoaded: number,
-loadComplete: number,
-firstPaint: number,
-firstContentfulPaint: number,
-=======
-} from '../utils/performance';';
-
-interface PerformanceMetrics {
 domContentLoaded: number;,
 loadComplete: number;,
 firstPaint: number;,
 firstContentfulPaint: number;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
-cls?: number;
-fid?: number;
-lcp?: number;
+cls?: number;,
+fid?: number;,
+lcp?: number;,
 ttfb?: number;
 }
 
 interface PerformanceAlert {
-<<<<<<< HEAD
-id: string,
-type: 'warning' | 'error' | 'info';',
-message: string,
-metric: string,
-value: number,
-=======
 id: string;,
-type: 'warning' | 'error' | 'info';';,
+type: 'warning' | 'error' | 'info';,
 message: string;,
 metric: string;,
 value: number;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 threshold: number;
 }
 

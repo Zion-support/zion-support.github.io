@@ -21,17 +21,10 @@ size: number;
 }
 
 interface CacheStats {
-<<<<<<< HEAD
-hits: number,
-misses: number,
-evictions: number,
-currentSize: number,
-=======
 hits: number;,
 misses: number;,
 evictions: number;,
 currentSize: number;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 hitRate: number;
 }
 

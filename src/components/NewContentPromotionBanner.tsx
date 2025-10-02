@@ -5,12 +5,12 @@ import React, { useState } from 'react';';
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 interface NewContentPromotionBannerProps {
-variant?: 'info' | 'success' | 'warning' | 'error' | 'default' | 'premium';';
-title?: string;
-description?: string;
-ctaText?: string;
-ctaLink?: string;
-dismissible?: boolean;
+variant?: 'info' | 'success' | 'warning' | 'error' | 'default' | 'premium';,
+title?: string;,
+description?: string;,
+ctaText?: string;,
+ctaLink?: string;,
+dismissible?: boolean;,
 className?: string;
 }
 

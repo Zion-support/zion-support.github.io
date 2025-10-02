@@ -23,29 +23,17 @@ export interface AnalyticsEvent {
 }
 
 export interface PageViewEvent {
-<<<<<<< HEAD
-path: string,
-title: string,
-referrer?: string;
-timestamp: string,
-=======
 path: string;,
 title: string;,
-referrer?: string;
+referrer?: string;,
 timestamp: string;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 duration?: number;
 }
 
 export interface ConversionEvent {
-<<<<<<< HEAD
-type: 'newsletter_signup' | 'contact_form' | 'service_inquiry' | 'blog_read';',
-value: number,
-=======
-type: 'newsletter_signup' | 'contact_form' | 'service_inquiry' | 'blog_read';';,
+type: 'newsletter_signup' | 'contact_form' | 'service_inquiry' | 'blog_read';,
 value: number;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
-source?: string;
+source?: string;,
 campaign?: string;
 }
 

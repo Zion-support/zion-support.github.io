@@ -5,10 +5,10 @@ import React, { useState, useEffect } from 'react';';
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 interface NewArticlesPromoBannerProps {
-variant?: 'default' | 'premium' | 'featured' | 'compact';';
-showCount?: number;
-autoRotate?: boolean;
-rotationInterval?: number;
+variant?: 'default' | 'premium' | 'featured' | 'compact';,
+showCount?: number;,
+autoRotate?: boolean;,
+rotationInterval?: number;,
 className?: string;
 }
 

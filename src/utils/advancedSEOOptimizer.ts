@@ -4,15 +4,6 @@
  */
 
 interface SEOMetrics {
-<<<<<<< HEAD
-titleScore: number,
-descriptionScore: number,
-headingScore: number,
-keywordDensity: number,
-readabilityScore: number,
-imageOptimization: number,
-linkScore: number,
-=======
 titleScore: number;,
 descriptionScore: number;,
 headingScore: number;,
@@ -20,21 +11,19 @@ keywordDensity: number;,
 readabilityScore: number;,
 imageOptimization: number;,
 linkScore: number;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 overallScore: number;
 }
 
 interface SEORecommendation {
-<<<<<<< HEAD
-category: 'critical' | 'important' | 'minor';',
-message: string,
-action: string,
+category: 'critical' | 'important' | 'minor';,
+message: string;,
+action: string;,
 impact: 'high' | 'medium' | 'low';
 }
 
 interface SEOAnalysis {
-metrics: SEOMetrics,
-recommendations: SEORecommendation[],
+metrics: SEOMetrics;,
+recommendations: SEORecommendation[];,
 keywords: { word: string; count: number; density: number
 }[];
   issues: string[],

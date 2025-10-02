@@ -1,9 +1,9 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-
-const CaseStudiesPage: React.FC = () => {
+import {
+Helmet
+} from 'react-helmet-async';
+import SuccessStoriesShowcase from '../components/SuccessStoriesShowcase';
+const CaseStudiesPage: React.FC = () => {,
   const caseStudies = [
     {
       id: 'fortune-100-manufacturing',

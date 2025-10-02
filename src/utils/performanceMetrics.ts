@@ -12,36 +12,23 @@
  */
 
 export interface PerformanceMetric {
-<<<<<<< HEAD
-name: string,
-value: number,
-rating: 'good' | 'needs-improvement' | 'poor';',
-=======
 name: string;,
 value: number;,
-rating: 'good' | 'needs-improvement' | 'poor';';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
+rating: 'good' | 'needs-improvement' | 'poor';,
 timestamp: number;
 }
 
 export interface ResourceTiming {
-<<<<<<< HEAD
-name: string,
-duration: number,
-size: number,
-=======
 name: string;,
 duration: number;,
 size: number;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 type: string;
 }
 
 export interface PerformanceBudget {
-<<<<<<< HEAD
-metric: string,
-budget: number,
-current: number,
+metric: string;,
+budget: number;,
+current: number;,
 status: 'pass' | 'warn' | 'fail';
 =======
 metric: string;,

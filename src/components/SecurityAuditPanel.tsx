@@ -7,43 +7,23 @@ import {
 <<<<<<< HEAD
 } from 'lucide-react';
 interface SecurityCheck {
-id: string,
-name: string,
-description: string,
-status: 'pass' | 'fail' | 'warning' | 'info';',
-severity: 'low' | 'medium' | 'high' | 'critical';',
-category: 'headers' | 'content' | 'network' | 'authentication' | 'data';',
-=======
-} from 'lucide-react';';
-
-interface SecurityCheck {
 id: string;,
 name: string;,
 description: string;,
-status: 'pass' | 'fail' | 'warning' | 'info';';,
-severity: 'low' | 'medium' | 'high' | 'critical';';,
-category: 'headers' | 'content' | 'network' | 'authentication' | 'data';';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
-recommendation?: string;
+status: 'pass' | 'fail' | 'warning' | 'info';,
+severity: 'low' | 'medium' | 'high' | 'critical';,
+category: 'headers' | 'content' | 'network' | 'authentication' | 'data';,
+recommendation?: string;,
 details?: string;
 }
 
 interface SecurityReport {
-<<<<<<< HEAD
-overallScore: number,
-totalChecks: number,
-passedChecks: number,
-failedChecks: number,
-warnings: number,
-checks: SecurityCheck[],
-=======
 overallScore: number;,
 totalChecks: number;,
 passedChecks: number;,
 failedChecks: number;,
 warnings: number;,
 checks: SecurityCheck[];,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 lastUpdated: number;
 }
 

@@ -4,15 +4,6 @@
  */
 
 export interface BlogPost {
-<<<<<<< HEAD
-slug: string,
-title: string,
-description: string,
-category: string,
-date: string,
-readTime: string,
-tags: string[],
-=======
 slug: string;,
 title: string;,
 description: string;,
@@ -20,8 +11,7 @@ category: string;,
 date: string;,
 readTime: string;,
 tags: string[];,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
-featured?: boolean;
+featured?: boolean;,
 valueProposition: string;
 }
 

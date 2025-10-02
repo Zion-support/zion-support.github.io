@@ -1,10 +1,15 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import { Settings, Zap, Image, Code, Database, Wifi } from 'lucide-react';
+import React, { useEffect, useState } from 'react';
+import {
 
-interface PerformanceOptimizerProps {
-  isVisible: boolean;
-  onClose: () => void;
+} from 'web-vitals';
+
+interface PerformanceMetrics {
+cls: number | null;,
+fid: number | null;,
+fcp: number | null;,
+lcp: number | null;,
+ttfb: number | null;,
+score: number;
 }
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
@@ -27,11 +32,30 @@ import React, { useEffect } from 'react';
 
 const PerformanceOptimizer: React.FC = () => {
   useEffect(() => {
-<<<<<<< HEAD
-    if (isVisible) {
-      // Simulate running optimizations
-      const runOptimizations = async () => {
-        const optimizationsList: string[] = [];
+const sendToAnalytics = (metric: any) => {,
+// Send to your analytics service
+console.log(`Performance metric ${metric.name
+}:`, metric.value);
+      
+      setMetrics(prev => {
+        const newMetrics = { ...prev };
+        switch (metric.name) {
+case 'CLS':,
+newMetrics.cls = metric.value;
+break;
+case 'FID':,
+newMetrics.fid = metric.value;
+break;
+case 'FCP':,
+newMetrics.fcp = metric.value;
+break;
+case 'LCP':,
+newMetrics.lcp = metric.value;
+break;
+case 'TTFB':,
+newMetrics.ttfb = metric.value;
+break;
+}
         
         if (optimizations.imageOptimization) {
           optimizationsList.push('Optimizing images...');

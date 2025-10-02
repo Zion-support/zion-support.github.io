@@ -9,14 +9,14 @@ Helmet
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 
 interface SEOProps {
-	title?: string;
-	description?: string;
-	keywords?: string;
-	canonical?: string;
-	ogImage?: string;
-	ogType?: string;
-	twitterCard?: string;
-	noIndex?: boolean;
+title?: string;,
+description?: string;,
+keywords?: string;,
+canonical?: string;,
+ogImage?: string;,
+ogType?: string;,
+twitterCard?: string;,
+noIndex?: boolean;
 }
 
 <<<<<<< HEAD

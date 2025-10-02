@@ -7,14 +7,8 @@
 <<<<<<< HEAD
 import React, { lazy, ComponentType } from 'react';
 export interface LazyLoadConfig {
-componentPath: string,
-=======
-import React, { lazy, ComponentType } from 'react';';
-
-export interface LazyLoadConfig {
 componentPath: string;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
-preload?: boolean;
+preload?: boolean;,
 timeout?: number;
 }
 

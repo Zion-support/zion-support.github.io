@@ -1,13 +1,19 @@
 import React from 'react';
-<<<<<<< HEAD
-import { motion } from 'framer-motion';
-import { Link, useParams } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Brain, Zap, Shield, Users } from 'lucide-react';
+import {
 
-interface ServicesPageProps {
-  service?: string;
-  category?: string;
-}
+} from 'react-router-dom';
+import SEO from '../components/SEO';
+type ServicesPageProps = {
+category?:,
+| 'ai-solutions'
+| 'cloud'
+| 'analytics'
+| 'security'
+| 'automation'
+| 'quantum-computing'
+| 'cloud-devops';
+service?: string;
+};
 
 const ServicesPage: React.FC<ServicesPageProps> = ({ service, category }) => {
   const { service: urlService } = useParams();
@@ -196,10 +202,89 @@ const ServicesPage: React.FC<ServicesPageProps> = ({ service, category }) => {
     }
   ];
 
-  const selectedService = services.find(s => s.id === activeService) || services[0];
-=======
-import SEO from '../components/SEO';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-3e47
+const Card: React.FC<{ title: string; emoji: string; children: React.ReactNode }> = ({ title, emoji, children }) => (
+  <div className="bg-white p-6 rounded-lg shadow-lg border">
+    <div className="text-4xl mb-4">{emoji}</div>
+    <h2 className="text-2xl font-bold mb-4">{title}</h2>
+    {children}
+  </div>
+);
+
+const ServicesGrid: React.FC = () => (,
+  <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">",
+    <Card title="AI Services" emoji="🧠">
+      <p className="text-gray-600 mb-4">Leverage AI to automate, gain insights, and innovate.</p>
+      <ul className="text-sm text-gray-600 space-y-1">
+        <li>• Machine Learning, NLP, Vision</li>
+        <li>• RAG Chatbots for documents</li>
+        <li>• Predictive Analytics</li>
+      </ul>
+      <div className="mt-4">
+        <Link className="text-blue-600 hover: underline" to="/services/ai-services">Explore AI Services →</Link>",
+      </div>
+    </Card>
+    <Card title="Micro SaaS" emoji="🚀">
+      <p className="text-gray-600 mb-4">Targeted apps that solve specific business workflows.</p>
+      <ul className="text-sm text-gray-600 space-y-1">
+        <li>• Custom web apps and APIs</li>
+        <li>• Payment & auth integrations</li>
+        <li>• Analytics & billing</li>
+      </ul>
+      <div className="mt-4">
+        <Link className="text-blue-600 hover: underline" to="/services/micro-saas">Explore Micro SaaS →</Link>",
+      </div>
+    </Card>
+    <Card title="IT Services" emoji="💻">
+      <p className="text-gray-600 mb-4">Modernize infrastructure, improve security, and ship faster.</p>
+      <ul className="text-sm text-gray-600 space-y-1">
+        <li>• Cloud migration & DevOps</li>
+        <li>• Cybersecurity assessments</li>
+        <li>• SRE & reliability</li>
+      </ul>
+      <div className="mt-4">
+        <Link className="text-blue-600 hover: underline" to="/services/it-services">Explore IT Services →</Link>",
+      </div>
+    </Card>
+  </div>
+);
+
+const CategorySection: React.FC<{ slug: keyof typeof offerings.categories }> = ({ slug }) => {
+  const category = offerings.categories[slug];
+  return (
+    <div className="space-y-6">
+      <h2 className="text-3xl font-bold">{category.title}</h2>
+      <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">",
+        {category.items.map((item) => (
+          <div key={item.name} className="bg-white rounded-lg border shadow-sm p-6 flex flex-col">
+            <h3 className="text-xl font-semibold mb-2">{item.name}</h3>
+            <p className="text-gray-600 text-sm mb-3">{item.priceHint}</p>
+            <ul className="text-gray-600 text-sm space-y-1 mb-4">
+              {item.features.map((f) => (
+                <li key={f}>• {f}</li>
+              ))}
+            </ul>
+            <div className="mt-auto flex gap-3">
+              <Link to={item.path} className="px-4 py-2 rounded-md bg-blue-600 text-white hover: bg-blue-700">Learn more</Link>",
+              <a href="/contact" className="px-4 py-2 rounded-md border border-blue-600 text-blue-600 hover: bg-blue-50">Get a quote</a>",
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+const ServicesPage: React.FC<ServicesPageProps> = ({ category }) => {
+const location = useLocation();
+const selectedCategory = (category as keyof typeof offerings.categories) || ((): keyof typeof offerings.categories | undefined => {,
+const path = location.pathname;
+if (path.includes('/services/ai')) return 'ai-solutions';
+if (path.includes('/services/cloud')) return 'cloud';
+if (path.includes('/services/analytics')) return 'analytics';
+if (path.includes('/services/security')) return 'security';
+if (path.includes('/services/automation')) return 'automation';
+return undefined;
+})();
 
 const ServicesPage: React.FC = () => {
   return (

@@ -4,17 +4,6 @@ import {
 <<<<<<< HEAD
 } from 'framer-motion';
 interface PerformanceMetrics {
-fcp: number,
-lcp: number,
-fid: number,
-cls: number,
-ttfb: number,
-inp: number,
-bundleSize: number,
-=======
-} from 'framer-motion';';
-
-interface PerformanceMetrics {
 fcp: number;,
 lcp: number;,
 fid: number;,
@@ -22,26 +11,16 @@ cls: number;,
 ttfb: number;,
 inp: number;,
 bundleSize: number;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 loadTime: number;
 }
 
 interface PerformanceAlert {
-<<<<<<< HEAD
-id: string,
-type: 'warning' | 'error' | 'info';',
-message: string,
-timestamp: number,
-metric: string,
-value: number,
-=======
 id: string;,
-type: 'warning' | 'error' | 'info';';,
+type: 'warning' | 'error' | 'info';,
 message: string;,
 timestamp: number;,
 metric: string;,
 value: number;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 threshold: number;
 }
 

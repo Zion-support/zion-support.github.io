@@ -1,47 +1,98 @@
-import React, { Suspense, lazy } from 'react';
-import { Routes, Route } from 'react-router-dom';
-<<<<<<< HEAD
-import AIDataAnalytics from './pages/services/AIDataAnalytics';
-import AIIntelligentDocumentProcessing from './pages/services/AIIntelligentDocumentProcessing';
-import AIVirtualAssistant from './pages/services/AIVirtualAssistant';
-import AIWorkflowAutomation from './pages/services/AIWorkflowAutomation';
-import AIContentGenerator from './pages/services/AIContentGenerator';
-import SmartAppointmentScheduler from './pages/services/SmartAppointmentScheduler';
-import About from './pages/About';
-import AdaptiveLearningPlatforms from './pages/blog/ai-2025-oct-adaptive-learning-platforms';
-import AdvancedCybersecurityAI from './pages/services/AdvancedCybersecurityAI';
-import Blog from './pages/Blog';
-import CaseStudies from './pages/CaseStudies';
-import CognitiveAutomationEnterpriseRevolution from './pages/blog/ai-2025-oct-cognitive-automation-enterprise-revolution';
-import CognitiveComputingTransformation from './pages/blog/ai-2025-cognitive-computing-enterprise-transformation';
-import Contact from './pages/Contact';
-import EnterpriseAITransformationSuccessStrategies from './pages/blog/ai-2025-oct-enterprise-ai-transformation-success-strategies';
-import GlobalFinTechAITransformation from './pages/case-studies/global-fintech-ai-transformation-2025';
-import GlobalRetailAITransformation from './pages/case-studies/global-retail-ai-transformation-2025';
-import GlobalTelecomCognitiveTransformation from './pages/case-studies/global-telecom-cognitive-transformation-4-7-billion';
-import HealthcareAITransformation from './pages/case-studies/healthcare-ai-transformation-2025';
-import Home from './pages/Home';
-import MultiAgentEnterpriseOrchestration from './pages/blog/ai-2025-multiagent-enterprise-orchestration-revolution';
-import MultimodalEnterpriseIntelligence from './pages/blog/ai-2025-oct-multimodal-enterprise-intelligence';
-import NextGenIntelligentAutomationBreakthrough from './pages/blog/ai-2025-oct-next-gen-intelligent-automation-breakthrough';
-import PostBySlug from './pages/blog/PostBySlug';
-import RealTimeCognitiveAutomation from './pages/services/RealTimeCognitiveAutomation';
-import AIPredictiveAnalytics from './pages/services/AIPredictiveAnalytics';
-import SmartContractAudit from './pages/services/SmartContractAudit';
-import EdgeComputingAI from './pages/services/EdgeComputingAI';
-import ConversationalAI from './pages/services/ConversationalAI';
-import AIEmailMarketing from './pages/services/AIEmailMarketing';
-import Services from './pages/Services';
-import Solutions from './pages/Solutions';
+import React from 'react';
+import {
+
+} from 'react-router-dom';
+import {
+HelmetProvider
+} from 'react-helmet-async';
+
+// Pages
+import HomePage from './pages/HomePage';
+import ServicesPage from './pages/ServicesPage';
+import AboutPage from './pages/AboutPage';
+import ContactPage from './pages/ContactPage';
+import BlogPage from './pages/BlogPage';
+import CaseStudiesPage from './pages/CaseStudiesPage';
+import SolutionsPage from './pages/SolutionsPage';
 import Resources from './pages/Resources';
-import AISolutions from './pages/AISolutions';
 import Pricing from './pages/Pricing';
-import Demo from './pages/Demo';
-import Support from './pages/Support';
+import Partners from './pages/Partners';
+import Team from './pages/Team';
 import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
-=======
-import Loading from './components/Loading';
+import ServicesCatalog from './pages/ServicesCatalog';
+import SolutionsEnterprise from './pages/SolutionsEnterprise';
+import SolutionsSMB from './pages/SolutionsSMB';
+import SolutionsStartup from './pages/SolutionsStartup';
+import SolutionsHealthcare from './pages/solutions/Healthcare';
+import SolutionsFinancial from './pages/solutions/Financial';
+import SolutionsRetail from './pages/solutions/Retail';
+import SolutionsManufacturing from './pages/solutions/Manufacturing';
+import AISolutions from './pages/AISolutions';
+import ITServices from './pages/ITServices';
+import AIMicroSAAS from './pages/AIMicroSAAS';
+import CloudDevOps from './pages/services/CloudDevOps';
+import AIDataAnalytics from './pages/services/AIDataAnalytics';
+import AdvancedCybersecurityAI from './pages/services/AdvancedCybersecurityAI';
+import AIWorkflowAutomation from './pages/services/AIWorkflowAutomation';
+
+// Layout Components
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Sidebar from './components/Sidebar';
+import BannerManager from './components/BannerManager';
+import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
+import NotificationSystem from './components/NotificationSystem';
+import PerformanceMonitor from './components/PerformanceMonitor';
+import EnhancedSEOHead from './components/EnhancedSEOHead';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import PerformanceOptimizer from './components/PerformanceOptimizer';
+const AppRouter: React.FC = () => {,
+  return (
+    <HelmetProvider>
+      <Router>
+        <div className="min-h-screen bg-white">
+          <Header />
+          
+          <main>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/services" element={<ServicesPage />} />
+            <Route path="/services/catalog" element={<ServicesCatalog />} />
+            <Route path="/services/ai-services" element={<AISolutions />} />
+            <Route path="/services/it-services" element={<ITServices />} />
+            <Route path="/services/micro-saas" element={<AIMicroSAAS />} />
+            <Route path="/services/cloud" element={<CloudDevOps />} />
+            <Route path="/services/analytics" element={<AIDataAnalytics />} />
+            <Route path="/services/security" element={<AdvancedCybersecurityAI />} />
+            <Route path="/services/automation" element={<AIWorkflowAutomation />} />
+            <Route path="/solutions" element={<SolutionsPage />} />
+            <Route path="/solutions/enterprise" element={<SolutionsEnterprise />} />
+            <Route path="/solutions/smb" element={<SolutionsSMB />} />
+            <Route path="/solutions/startup" element={<SolutionsStartup />} />
+            <Route path="/solutions/healthcare" element={<SolutionsHealthcare />} />
+            <Route path="/solutions/financial" element={<SolutionsFinancial />} />
+            <Route path="/solutions/retail" element={<SolutionsRetail />} />
+            <Route path="/solutions/manufacturing" element={<SolutionsManufacturing />} />
+            <Route path="/resources" element={<Resources />} />
+            <Route path="/pricing" element={<Pricing />} />
+            <Route path="/partners" element={<Partners />} />
+            <Route path="/team" element={<Team />} />
+            <Route path="/privacy" element={<Privacy />} />
+            <Route path="/terms" element={<Terms />} />
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/contact" element={<ContactPage />} />
+              <Route path="/blog" element={<BlogPage />} />
+              <Route path="/case-studies" element={<CaseStudiesPage />} />
+            </Routes>
+          </main>
+          
+          <Footer />
+        </div>
+      </Router>
+    </HelmetProvider>
+  );
+};
 
 // Lazy load components for better performance
 const Home = lazy(() => import('./pages/Home'));

@@ -55,25 +55,14 @@ export interface ErrorContext {
 }
 
 export interface TrackedError {
-<<<<<<< HEAD
-id: string,
-message: string,
-stack?: string;
-severity: ErrorSeverity,
-category: ErrorCategory,
-timestamp: Date,
-context: ErrorContext,
-userAgent: string,
-=======
 id: string;,
 message: string;,
-stack?: string;
+stack?: string;,
 severity: ErrorSeverity;,
 category: ErrorCategory;,
 timestamp: Date;,
 context: ErrorContext;,
 userAgent: string;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 resolved: boolean;
 }
 
