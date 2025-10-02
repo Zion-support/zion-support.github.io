@@ -43,7 +43,12 @@ print_error() {
 # Function to check if we have GitHub CLI
 check_github_cli() {
     if command -v gh &> /dev/null; then
-        return 0
+        # ensure authenticated, otherwise treat as unavailable
+        if gh auth status &>/dev/null; then
+            return 0
+        else
+            return 1
+        fi
     else
         return 1
     fi
