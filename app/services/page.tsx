@@ -1,4 +1,41 @@
 import React from 'react';
+import Link from 'next/link';
+import { services } from './data';
+
+export default function ServicesIndexPage() {
+  const grouped = services.reduce<Record<string, typeof services>>( (acc, s) => {
+    (acc[s.category] = acc[s.category] || []).push(s);
+    return acc;
+  }, {} as Record<string, typeof services>);
+
+  return (
+    <div className="max-w-7xl mx-auto px-6 py-10">
+      <h1 className="text-3xl font-bold mb-2">Services</h1>
+      <p className="text-gray-600 mb-8">AI services, Micro SaaS products, and IT solutions to accelerate your roadmap.</p>
+      <div className="space-y-10">
+        {Object.entries(grouped).map(([category, list]) => (
+          <section key={category}>
+            <h2 className="text-xl font-semibold mb-4">{category}</h2>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {list.map(s => (
+                <Link key={s.slug} href={`/services/${s.slug}`} className="block border border-gray-200 rounded-xl p-5 bg-white hover:shadow-md transition-shadow">
+                  <div className="text-lg font-semibold mb-1">{s.name}</div>
+                  <div className="text-sm text-gray-600 mb-3">{s.headline}</div>
+                  <div className="flex flex-wrap gap-2">
+                    {s.features.slice(0,3).map(f => (
+                      <span key={f} className="text-xs bg-blue-50 text-blue-700 px-2 py-1 rounded">{f}</span>
+                    ))}
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </section>
+        ))}
+      </div>
+    </div>
+  );
+}
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 export default function ServicesPage() {
