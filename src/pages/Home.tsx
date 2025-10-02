@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { CheckCircle, Rocket, Shield, Sparkles, Zap } from "lucide-react";
+// Icon imports removed for compatibility
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import NewServicesPromoBanner2026 from "../components/NewServicesPromoBanner2026";
@@ -13,53 +13,53 @@ const Home = () => {
   // Mock data for the homepage
   const latestInsights = [
     {
-      id: '1'
-      title: 'AI Revolution 2026: The Next Frontier of Enterprise Intelligence'
-      summary: 'Discover autonomous AI agents, neural interfaces, and predictive intelligence systems achieving 300% productivity gains.'
-      category: 'AI Innovation'
-      date: '2025-01-15'
-      readMinutes: 25
+      id: '1',
+      title: 'AI Revolution 2026: The Next Frontier of Enterprise Intelligence',
+      summary: 'Discover autonomous AI agents, neural interfaces, and predictive intelligence systems achieving 300% productivity gains.',
+      category: 'AI Innovation',
+      date: '2025-01-15',
+      readMinutes: 25,
       featured: true
-    }
+    },
     {
-      id: '2'
-      title: 'Quantum AI Breakthrough: Solving Impossible Problems in Seconds'
-      summary: 'Explore quantum-enhanced AI delivering 500x faster results and revolutionizing computational capabilities.'
-      category: 'Quantum Computing'
-      date: '2025-01-10'
-      readMinutes: 20
+      id: '2',
+      title: 'Quantum AI Breakthrough: Solving Impossible Problems in Seconds',
+      summary: 'Explore quantum-enhanced AI delivering 500x faster results and revolutionizing computational capabilities.',
+      category: 'Quantum Computing',
+      date: '2025-01-10',
+      readMinutes: 20,
       featured: false
-    }
+    },
     {
-      id: '3'
-      title: 'Manufacturing AI Transformation: $50M Savings & 95% Efficiency'
-      summary: 'See how a Fortune 500 manufacturer achieved $50M annual savings and 95% efficiency improvements.'
-      category: 'Success Story'
-      date: '2025-01-05'
-      readMinutes: 15
+      id: '3',
+      title: 'Manufacturing AI Transformation: $50M Savings & 95% Efficiency',
+      summary: 'See how a Fortune 500 manufacturer achieved $50M annual savings and 95% efficiency improvements.',
+      category: 'Success Story',
+      date: '2025-01-05',
+      readMinutes: 15,
       featured: true
     }
   ];
-
+  const highlightedPosts = [
     {
-      slug: 'ai-revolution-2026'
-      title: 'AI Revolution 2026: The Next Frontier of Enterprise Intelligence'
-      description: 'Discover autonomous AI agents, neural interfaces, and predictive intelligence systems achieving 300% productivity gains.'
-      category: 'AI Innovation'
+      slug: 'ai-revolution-2026',
+      title: 'AI Revolution 2026: The Next Frontier of Enterprise Intelligence',
+      description: 'Discover autonomous AI agents, neural interfaces, and predictive intelligence systems achieving 300% productivity gains.',
+      category: 'AI Innovation',
       publishedAt: '2025-01-15'
-    }
+    },
     {
-      slug: 'quantum-ai-breakthrough'
-      title: 'Quantum AI Breakthrough: Solving Impossible Problems in Seconds'
-      description: 'Explore quantum-enhanced AI delivering 500x faster results and revolutionizing computational capabilities.'
-      category: 'Quantum Computing'
+      slug: 'quantum-ai-breakthrough',
+      title: 'Quantum AI Breakthrough: Solving Impossible Problems in Seconds',
+      description: 'Explore quantum-enhanced AI delivering 500x faster results and revolutionizing computational capabilities.',
+      category: 'Quantum Computing',
       publishedAt: '2025-01-10'
-    }
+    },
     {
-      slug: 'manufacturing-success'
-      title: 'Manufacturing AI Transformation: $50M Savings & 95% Efficiency'
-      description: 'See how a Fortune 500 manufacturer achieved $50M annual savings and 95% efficiency improvements.'
-      category: 'Success Story'
+      slug: 'manufacturing-success',
+      title: 'Manufacturing AI Transformation: $50M Savings & 95% Efficiency',
+      description: 'See how a Fortune 500 manufacturer achieved $50M annual savings and 95% efficiency improvements.',
+      category: 'Success Story',
       publishedAt: '2025-01-05'
     }
   ];
@@ -92,91 +92,91 @@ const Home = () => {
         <link rel="canonical" href="https://ziontechgroup.com" />
         
         {/* Enhanced Structured Data */}
-        <script type="application/ld+json">
+            <script type="application/ld+json">
           {JSON.stringify({
-            "@context": "https://schema.org"
-            "@type": "Organization"
-            "name": "Zion Tech Group"
-            "alternateName": "Zion Tech"
-            "description": "Leading AI and IT solutions provider specializing in AI workflow automation, quantum computing, edge AI, and zero trust security."
-            "url": "https://ziontechgroup.com"
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Zion Tech Group",
+            "alternateName": "Zion Tech",
+            "description": "Leading AI and IT solutions provider specializing in AI workflow automation, quantum computing, edge AI, and zero trust security.",
+            "url": "https://ziontechgroup.com",
             "logo": {
-              "@type": "ImageObject"
-              "url": "https://ziontechgroup.com/logo.png"
-              "width": 200
+              "@type": "ImageObject",
+              "url": "https://ziontechgroup.com/logo.png",
+              "width": 200,
               "height": 60
-            }
-            "image": "https://ziontechgroup.com/og-image.jpg"
+            },
+            "image": "https://ziontechgroup.com/og-image.jpg",
             "contactPoint": {
-              "@type": "ContactPoint"
-              "telephone": "+1-302-464-0950"
-              "contactType": "customer service"
-              "availableLanguage": "English"
-              "areaServed": "US"
+              "@type": "ContactPoint",
+              "telephone": "+1-302-464-0950",
+              "contactType": "customer service",
+              "availableLanguage": "English",
+              "areaServed": "US",
               "email": "kleber@ziontechgroup.com"
-            }
+            },
             "sameAs": [
-              "https://linkedin.com/company/zion-tech-group"
-              "https://twitter.com/ziontechgroup"
+              "https://linkedin.com/company/zion-tech-group",
+              "https://twitter.com/ziontechgroup",
               "https://github.com/ZionClouds"
-            ]
-            "foundingDate": "2020"
-            "numberOfEmployees": "50-100"
+            ],
+            "foundingDate": "2020",
+            "numberOfEmployees": "50-100",
             "address": {
-              "@type": "PostalAddress"
-              "streetAddress": "364 E Main St STE 1008"
-              "addressLocality": "Middletown"
-              "addressRegion": "DE"
-              "postalCode": "19709"
+              "@type": "PostalAddress",
+              "streetAddress": "364 E Main St STE 1008",
+              "addressLocality": "Middletown",
+              "addressRegion": "DE",
+              "postalCode": "19709",
               "addressCountry": "US"
-            }
+            },
             "serviceArea": {
-              "@type": "Country"
+              "@type": "Country",
               "name": "United States"
-            }
+            },
             "hasOfferCatalog": {
-              "@type": "OfferCatalog"
-              "name": "AI and IT Solutions"
+              "@type": "OfferCatalog",
+              "name": "AI and IT Solutions",
               "itemListElement": [
                 {
-                  "@type": "Offer"
+                  "@type": "Offer",
                   "itemOffered": {
-                    "@type": "Service"
-                    "name": "AI Workflow Automation"
+                    "@type": "Service",
+                    "name": "AI Workflow Automation",
                     "description": "Automate complex business processes with AI-powered workflows"
                   }
-                }
+                },
                 {
-                  "@type": "Offer"
+                  "@type": "Offer",
                   "itemOffered": {
-                    "@type": "Service"
-                    "name": "AI Virtual Assistant"
+                    "@type": "Service",
+                    "name": "AI Virtual Assistant",
                     "description": "Intelligent virtual assistants for customer service and support"
                   }
-                }
+                },
                 {
-                  "@type": "Offer"
+                  "@type": "Offer",
                   "itemOffered": {
-                    "@type": "Service"
-                    "name": "AI Data Analytics"
+                    "@type": "Service",
+                    "name": "AI Data Analytics",
                     "description": "Advanced data analytics and insights powered by AI"
                   }
-                }
+                },
                 {
-                  "@type": "Offer"
+                  "@type": "Offer",
                   "itemOffered": {
-                    "@type": "Service"
-                    "name": "Quantum Computing Consulting"
+                    "@type": "Service",
+                    "name": "Quantum Computing Consulting",
                     "description": "Expert consulting on quantum computing solutions"
                   }
                 }
               ]
-            }
+            },
             "aggregateRating": {
-              "@type": "AggregateRating"
-              "ratingValue": "4.8"
-              "reviewCount": "150"
-              "bestRating": "5"
+              "@type": "AggregateRating",
+              "ratingValue": "4.8",
+              "reviewCount": "150",
+              "bestRating": "5",
               "worstRating": "1"
             }
           })}
@@ -240,9 +240,9 @@ const Home = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <div className="inline-flex items-center px-6 py-3 rounded-full bg-blue-100 text-blue-800 text-sm font-medium mb-8">
-                <Sparkles className="w-4 h-4 mr-2" />
+                <span className="w-4 h-4 mr-2">✨</span>
                 Trusted by 500+ companies worldwide
-                <Rocket className="w-4 h-4 ml-2" />
+                <span className="w-4 h-4 ml-2">🚀</span>
               </div>
               
               <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
@@ -288,7 +288,7 @@ const Home = () => {
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-200 hover:border-blue-300">
                 <div className="text-center mb-6">
                   <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                    <Zap className="w-8 h-8 text-blue-600" />
+                    <span className="w-8 h-8 text-blue-600">⚡</span>
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">AI Services & Solutions</h3>
                   <p className="text-gray-600 mb-4">Advanced artificial intelligence solutions including machine learning, deep learning, and AI automation.</p>
@@ -297,19 +297,19 @@ const Home = () => {
                 
                 <ul className="space-y-3 mb-6">
                   <li className="flex items-center gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-600" />
+                    <span className="w-5 h-5 text-green-600">✔️</span>
                     <span className="text-gray-700">Machine Learning Models</span>
                   </li>
                   <li className="flex items-center gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-600" />
+                    <span className="w-5 h-5 text-green-600">✔️</span>
                     <span className="text-gray-700">Deep Learning Systems</span>
                   </li>
                   <li className="flex items-center gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-600" />
+                    <span className="w-5 h-5 text-green-600">✔️</span>
                     <span className="text-gray-700">AI Automation</span>
                   </li>
                   <li className="flex items-center gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-600" />
+                    <span className="w-5 h-5 text-green-600">✔️</span>
                     <span className="text-gray-700">Predictive Analytics</span>
                   </li>
                 </ul>
@@ -331,7 +331,7 @@ const Home = () => {
                 
                 <div className="text-center mb-6">
                   <div className="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                    <Rocket className="w-8 h-8 text-purple-600" />
+                    <span className="w-8 h-8 text-purple-600">🚀</span>
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">Micro SaaS Solutions</h3>
                   <p className="text-gray-600 mb-4">Scalable software-as-a-service applications designed for rapid deployment and growth.</p>
@@ -368,7 +368,7 @@ const Home = () => {
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-200 hover:border-blue-300">
                 <div className="text-center mb-6">
                   <div className="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                    <Shield className="w-8 h-8 text-green-600" />
+                    <span className="w-8 h-8 text-green-600">🛡️</span>
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">IT Services & Solutions</h3>
                   <p className="text-gray-600 mb-4">Comprehensive IT infrastructure, cloud migration, and DevOps services.</p>
@@ -569,7 +569,7 @@ const Home = () => {
               <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition-shadow">
                 <div className="flex items-center mb-4">
                   <div className="bg-green-100 w-12 h-12 rounded-lg flex items-center justify-center mr-4">
-                    <TrendingUp className="w-6 h-6 text-green-600" />
+                    <span className="w-6 h-6 text-green-600">📈</span>
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900">RetailMax Corporation</h3>
@@ -583,7 +583,7 @@ const Home = () => {
               <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition-shadow">
                 <div className="flex items-center mb-4">
                   <div className="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center mr-4">
-                    <Users className="w-6 h-6 text-blue-600" />
+                    <span className="w-6 h-6 text-blue-600">👥</span>
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900">First National Bank</h3>
@@ -597,7 +597,7 @@ const Home = () => {
               <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition-shadow">
                 <div className="flex items-center mb-4">
                   <div className="bg-purple-100 w-12 h-12 rounded-lg flex items-center justify-center mr-4">
-                    <Target className="w-6 h-6 text-purple-600" />
+                    <span className="w-6 h-6 text-purple-600">🎯</span>
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900">Precision Manufacturing</h3>
@@ -614,7 +614,7 @@ const Home = () => {
                 to="/case-studies"
                 className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-xl transition-all duration-300 hover:scale-105 inline-flex items-center gap-2"
               >
-                <Award className="w-5 h-5" />
+                <span className="w-5 h-5">🏆</span>
                 View All Success Stories
               </Link>
             </div>
@@ -631,7 +631,7 @@ const Home = () => {
                 </div>
                 <Link to="/blog" className="bg-white text-indigo-700 hover:bg-indigo-50 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 self-start md:self-auto">
                   Read the latest
-                  <ArrowRight className="w-5 h-5" />
+                  <span className="w-5 h-5">›</span>
                 </Link>
               </div>
 

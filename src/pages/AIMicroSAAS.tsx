@@ -1,212 +1,190 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
-import { 
-  Brain
-  Zap
-  Shield
-  BarChart3
-  MessageSquare
-  FileText
-  Users
-  CheckCircle
-  ArrowRight
-  DollarSign
-  Clock
-  Star
-  TrendingUp
-  
-  Lock
-  Smartphone
-  Cloud
-  Database
-  Cpu
-  Target
-  Rocket
-} from "lucide-react";
+// Icon imports removed for compatibility
 
 export default function AIMicroSAAS(): React.JSX.Element {
   const microSaaSServices = [
     {
-      id: "ai-content-optimizer"
-      name: "AI Content Optimizer Pro"
-      blurb: "AI-powered content creation and optimization platform for marketing teams"
-      price: "$299 - $1,499/month"
-      eta: "1-2 weeks"
-      category: "Content AI"
-      icon: FileText
+      id: "ai-content-optimizer",
+      name: "AI Content Optimizer Pro",
+      blurb: "AI-powered content creation and optimization platform for marketing teams",
+      price: "$299 - $1,499/month",
+      eta: "1-2 weeks",
+      category: "Content AI",
+      icon: undefined,
       features: [
-        "AI-generated blog posts, social media content, and email campaigns"
-        "SEO optimization with real-time keyword analysis"
-        "Brand voice consistency across all content"
-        "A/B testing and performance analytics"
-        "Multi-language content generation with cultural adaptation"
-        "Content calendar automation and scheduling"
-      ]
+        "AI-generated blog posts, social media content, and email campaigns",
+        "SEO optimization with real-time keyword analysis",
+        "Brand voice consistency across all content",
+        "A/B testing and performance analytics",
+        "Multi-language content generation with cultural adaptation",
+        "Content calendar automation and scheduling",
+      ],
       benefits: [
-        "10x faster content creation"
-        "40% improvement in engagement rates"
-        "60% reduction in content production costs"
-        "24/7 automated content optimization"
-      ]
-      useCases: ["Marketing agencies", "E-commerce brands", "SaaS companies", "Content creators"]
-      marketSize: "$8.2B content marketing market"
+        "10x faster content creation",
+        "40% improvement in engagement rates",
+        "60% reduction in content production costs",
+        "24/7 automated content optimization",
+      ],
+      useCases: ["Marketing agencies", "E-commerce brands", "SaaS companies", "Content creators"],
+      marketSize: "$8.2B content marketing market",
       link: "/contact"
-    }
+    },
     {
-      id: "smart-automation-hub"
-      name: "Smart Automation Hub"
-      blurb: "No-code automation platform for business process optimization"
-      price: "$199 - $999/month"
-      eta: "1-2 weeks"
-      category: "Process Automation"
-      icon: Zap
+      id: "smart-automation-hub",
+      name: "Smart Automation Hub",
+      blurb: "No-code automation platform for business process optimization",
+      price: "$199 - $999/month",
+      eta: "1-2 weeks",
+      category: "Process Automation",
+      icon: undefined,
       features: [
-        "Visual workflow builder with drag-and-drop interface"
-        "500+ pre-built integrations (Slack, Salesforce, HubSpot, etc.)"
-        "AI-powered process discovery and optimization suggestions"
-        "Real-time monitoring and performance analytics"
-        "Custom trigger and action creation"
-        "Multi-user collaboration and approval workflows"
-      ]
+        "Visual workflow builder with drag-and-drop interface",
+        "500+ pre-built integrations (Slack, Salesforce, HubSpot, etc.)",
+        "AI-powered process discovery and optimization suggestions",
+        "Real-time monitoring and performance analytics",
+        "Custom trigger and action creation",
+        "Multi-user collaboration and approval workflows",
+      ],
       benefits: [
-        "75% reduction in manual tasks"
-        "50% faster process execution"
-        "99.9% uptime guarantee"
-        "ROI visible within 30 days"
-      ]
-      useCases: ["HR departments", "Sales teams", "Customer support", "Operations"]
-      marketSize: "$13.8B automation market"
+        "75% reduction in manual tasks",
+        "50% faster process execution",
+        "99.9% uptime guarantee",
+        "ROI visible within 30 days",
+      ],
+      useCases: ["HR departments", "Sales teams", "Customer support", "Operations"],
+      marketSize: "$13.8B automation market",
       link: "/contact"
-    }
+    },
     {
-      id: "ai-analytics-dashboard"
-      name: "AI Analytics Dashboard"
-      blurb: "Intelligent business intelligence platform with predictive analytics"
-      price: "$399 - $1,999/month"
-      eta: "2-3 weeks"
-      category: "Business Intelligence"
-      icon: BarChart3
+      id: "ai-analytics-dashboard",
+      name: "AI Analytics Dashboard",
+      blurb: "Intelligent business intelligence platform with predictive analytics",
+      price: "$399 - $1,999/month",
+      eta: "2-3 weeks",
+      category: "Business Intelligence",
+      icon: undefined,
       features: [
-        "Real-time data visualization and custom dashboards"
-        "AI-powered insights and anomaly detection"
-        "Predictive analytics and forecasting"
-        "Natural language query interface"
-        "Automated report generation and distribution"
-        "Multi-source data integration (CRM, ERP, social media)"
-      ]
+        "Real-time data visualization and custom dashboards",
+        "AI-powered insights and anomaly detection",
+        "Predictive analytics and forecasting",
+        "Natural language query interface",
+        "Automated report generation and distribution",
+        "Multi-source data integration (CRM, ERP, social media)",
+      ],
       benefits: [
-        "300% faster decision making"
-        "25% increase in revenue through insights"
-        "90% reduction in report generation time"
-        "Proactive issue identification"
-      ]
-      useCases: ["C-level executives", "Marketing managers", "Sales directors", "Operations teams"]
-      marketSize: "$33.3B business intelligence market"
+        "300% faster decision making",
+        "25% increase in revenue through insights",
+        "90% reduction in report generation time",
+        "Proactive issue identification",
+      ],
+      useCases: ["C-level executives", "Marketing managers", "Sales directors", "Operations teams"],
+      marketSize: "$33.3B business intelligence market",
       link: "/contact"
-    }
+    },
     {
-      id: "customer-intelligence-platform"
-      name: "Customer Intelligence Platform"
-      blurb: "AI-powered customer behavior analysis and personalization engine"
-      price: "$599 - $2,499/month"
-      eta: "2-4 weeks"
-      category: "Customer Analytics"
-      icon: Users
+      id: "customer-intelligence-platform",
+      name: "Customer Intelligence Platform",
+      blurb: "AI-powered customer behavior analysis and personalization engine",
+      price: "$599 - $2,499/month",
+      eta: "2-4 weeks",
+      category: "Customer Analytics",
+      icon: undefined,
       features: [
-        "Real-time customer journey mapping"
-        "AI-powered segmentation and targeting"
-        "Predictive customer lifetime value modeling"
-        "Churn prediction and prevention strategies"
-        "Personalized content and product recommendations"
-        "Multi-channel customer interaction tracking"
-      ]
+        "Real-time customer journey mapping",
+        "AI-powered segmentation and targeting",
+        "Predictive customer lifetime value modeling",
+        "Churn prediction and prevention strategies",
+        "Personalized content and product recommendations",
+        "Multi-channel customer interaction tracking",
+      ],
       benefits: [
-        "35% increase in customer retention"
-        "45% improvement in conversion rates"
-        "60% reduction in customer acquisition costs"
-        "Real-time personalization at scale"
-      ]
-      useCases: ["E-commerce platforms", "SaaS companies", "Retail chains", "Financial services"]
-      marketSize: "$15.8B customer analytics market"
+        "35% increase in customer retention",
+        "45% improvement in conversion rates",
+        "60% reduction in customer acquisition costs",
+        "Real-time personalization at scale",
+      ],
+      useCases: ["E-commerce platforms", "SaaS companies", "Retail chains", "Financial services"],
+      marketSize: "$15.8B customer analytics market",
       link: "/contact"
-    }
+    },
     {
-      id: "ai-security-monitor"
-      name: "AI Security Monitor"
-      blurb: "Advanced threat detection and cybersecurity automation platform"
-      price: "$799 - $3,999/month"
-      eta: "2-3 weeks"
-      category: "Cybersecurity"
-      icon: Shield
+      id: "ai-security-monitor",
+      name: "AI Security Monitor",
+      blurb: "Advanced threat detection and cybersecurity automation platform",
+      price: "$799 - $3,999/month",
+      eta: "2-3 weeks",
+      category: "Cybersecurity",
+      icon: undefined,
       features: [
-        "AI-powered threat detection and response"
-        "Automated incident response workflows"
-        "Vulnerability assessment and patch management"
-        "Compliance monitoring (GDPR, HIPAA, SOC 2)"
-        "Real-time security dashboard and alerts"
-        "Zero-trust architecture implementation"
-      ]
+        "AI-powered threat detection and response",
+        "Automated incident response workflows",
+        "Vulnerability assessment and patch management",
+        "Compliance monitoring (GDPR, HIPAA, SOC 2)",
+        "Real-time security dashboard and alerts",
+        "Zero-trust architecture implementation",
+      ],
       benefits: [
-        "99.9% threat detection accuracy"
-        "80% faster incident response"
-        "50% reduction in security breaches"
-        "Automated compliance reporting"
-      ]
-      useCases: ["Healthcare organizations", "Financial institutions", "Government agencies", "Enterprise companies"]
-      marketSize: "$366.1B cybersecurity market"
+        "99.9% threat detection accuracy",
+        "80% faster incident response",
+        "50% reduction in security breaches",
+        "Automated compliance reporting",
+      ],
+      useCases: ["Healthcare organizations", "Financial institutions", "Government agencies", "Enterprise companies"],
+      marketSize: "$366.1B cybersecurity market",
       link: "/contact"
-    }
+    },
     {
-      id: "voice-ai-assistant"
-      name: "Voice AI Assistant Platform"
-      blurb: "Enterprise-grade voice AI for customer service and internal operations"
-      price: "$1,299 - $4,999/month"
-      eta: "3-4 weeks"
-      category: "Voice AI"
-      icon: MessageSquare
+      id: "voice-ai-assistant",
+      name: "Voice AI Assistant Platform",
+      blurb: "Enterprise-grade voice AI for customer service and internal operations",
+      price: "$1,299 - $4,999/month",
+      eta: "3-4 weeks",
+      category: "Voice AI",
+      icon: undefined,
       features: [
-        "Natural language processing with 95% accuracy"
-        "Multi-language support with accent adaptation"
-        "Custom voice training and brand voice creation"
-        "Integration with existing phone systems and CRM"
-        "Real-time transcription and sentiment analysis"
-        "Escalation to human agents when needed"
-      ]
+        "Natural language processing with 95% accuracy",
+        "Multi-language support with accent adaptation",
+        "Custom voice training and brand voice creation",
+        "Integration with existing phone systems and CRM",
+        "Real-time transcription and sentiment analysis",
+        "Escalation to human agents when needed",
+      ],
       benefits: [
-        "24/7 customer service availability"
-        "70% reduction in call center costs"
-        "90% customer satisfaction scores"
-        "Instant response to customer inquiries"
-      ]
-      useCases: ["Call centers", "Healthcare providers", "Financial services", "E-commerce support"]
-      marketSize: "$45.2B conversational AI market"
+        "24/7 customer service availability",
+        "70% reduction in call center costs",
+        "90% customer satisfaction scores",
+        "Instant response to customer inquiries",
+      ],
+      useCases: ["Call centers", "Healthcare providers", "Financial services", "E-commerce support"],
+      marketSize: "$45.2B conversational AI market",
       link: "/contact"
     }
   ];
 
   const additionalServices = [
     {
-      name: "AI Document Processor"
-      description: "Intelligent document analysis and data extraction"
-      price: "$199 - $899/month"
+      name: "AI Document Processor",
+      description: "Intelligent document analysis and data extraction",
+      price: "$199 - $899/month",
       features: ["OCR with 99.5% accuracy", "Automated form processing", "Contract analysis", "Compliance checking"]
-    }
+    },
     {
-      name: "Smart Inventory Manager"
-      description: "AI-powered inventory optimization and demand forecasting"
-      price: "$299 - $1,299/month"
+      name: "Smart Inventory Manager",
+      description: "AI-powered inventory optimization and demand forecasting",
+      price: "$299 - $1,299/month",
       features: ["Demand forecasting", "Automated reordering", "Waste reduction", "Cost optimization"]
-    }
+    },
     {
-      name: "AI Recruitment Suite"
-      description: "Intelligent candidate screening and matching platform"
-      price: "$399 - $1,599/month"
+      name: "AI Recruitment Suite",
+      description: "Intelligent candidate screening and matching platform",
+      price: "$399 - $1,599/month",
       features: ["Resume parsing", "Skill matching", "Interview scheduling", "Candidate ranking"]
-    }
+    },
     {
-      name: "Predictive Maintenance AI"
-      description: "Equipment monitoring and maintenance prediction"
-      price: "$599 - $2,299/month"
+      name: "Predictive Maintenance AI",
+      description: "Equipment monitoring and maintenance prediction",
+      price: "$599 - $2,299/month",
       features: ["IoT sensor integration", "Failure prediction", "Maintenance scheduling", "Cost optimization"]
     }
   ];
