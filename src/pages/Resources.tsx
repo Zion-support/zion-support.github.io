@@ -13,7 +13,6 @@ import {
   MessageCircle,
   ArrowRight,
   Download,
-  ExternalLink,
   Calendar,
   Award,
   TrendingUp
@@ -219,7 +218,7 @@ const Resources: React.FC = () => {
 
             {/* Resource Categories */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {resourceCategories.map((category, index) => (
+              {resourceCategories.map((category) => (
                 <div
                   key={category.path}
                   className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300 hover:scale-105 group"

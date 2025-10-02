@@ -194,4 +194,95 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   );
 };
 
+// Utility function to generate structured data for different page types
+const generateStructuredData = {
+  organization: () => ({
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Zion Tech Group",
+    "url": "https://ziontechgroup.com",
+    "logo": "https://ziontechgroup.com/logo.png",
+    "description": "Leading AI and IT solutions provider specializing in digital transformation, cybersecurity, and business automation.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "US"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer service",
+      "url": "https://ziontechgroup.com/contact"
+    },
+    "sameAs": [
+      "https://linkedin.com/company/zion-tech-group",
+      "https://twitter.com/ziontechgroup"
+    ]
+  }),
+
+  service: (serviceData: { name: string; description: string }) => ({
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": serviceData.name,
+    "description": serviceData.description,
+    "provider": {
+      "@type": "Organization",
+      "name": "Zion Tech Group"
+    },
+    "category": serviceData.category,
+    "offers": {
+      "@type": "Offer",
+      "price": serviceData.pricing?.starting,
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    }
+  }),
+
+  article: (articleData: { title: string; description: string; author: string }) => ({
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": articleData.title,
+    "description": articleData.description,
+    "author": {
+      "@type": "Person",
+      "name": articleData.author
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://ziontechgroup.com/logo.png"
+      }
+    },
+    "datePublished": articleData.publishDate,
+    "dateModified": articleData.publishDate,
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `https://ziontechgroup.com${articleData.url}`
+    }
+  }),
+
+  breadcrumb: (breadcrumbs: Array<{name: string, url: string}>) => ({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": breadcrumbs.map((crumb, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "name": crumb.name,
+      "item": `https://ziontechgroup.com${crumb.url}`
+    }))
+  }),
+
+  faq: (faqs: Array<{question: string, answer: string}>) => ({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  })
+};
 export default SEOOptimizer;
