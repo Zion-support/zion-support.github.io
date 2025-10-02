@@ -1,43 +1,51 @@
 // @ts-nocheck
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
 
-const Page = () => {
+const Page: ()  => {,,
   return (
-    <div className="min-h-screen bg-gradient-to-b from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-      <Helmet>
-        <title>Intelligent Automation Breakthrough 2025: From Tickets to Outcomes</title>
-        <meta
-          name="description"
-          content="Shift from manual tickets to outcome‑driven automation with safe agent runbooks, budgets, and instant rollback."
-        />
-        <link rel="canonical" href="https://ziontechgroup.com/blog/ai-2025-oct-intelligent-automation-breakthrough" />
+    <div className: "min-h-screen bg-gradient-to-b from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">",
+      <Helmet >
+        <title >Intelligent Automation Breakthrough 2025: From Tickets to Outcomes</title>,
+        <meta name: "description",";,
+  content: "Shift from manual tickets to outcome‑driven automation with safe agent runbooks, budgets, and instant rollback." /><link rel: "canonical" href ="https://ziontechgroup.com/blog/ai-2025-oct-intelligent-automation-breakthrough/>",
       </Helmet>
 
-      <div className="container mx-auto px-6 py-12">
-        <div className="max-w-3xl mx-auto">
-          <div className="mb-6 text-sm text-zion-slate-light">Automation • 8 min read • 2025-10-01</div>
-          <h1 className="text-4xl font-bold mb-4">Intelligent Automation Breakthrough 2025</h1>
-          <p className="text-zion-slate-light mb-6">
-            Go beyond scripts with agents that plan, execute, and recover safely. Learn production patterns for approvals,
+      <div className: "container mx-auto px-6 py-12">";,
+        <div className: "max-w-3xl mx-auto">";,
+          <div className: "mb-6 text-sm text-zion-slate-light">Automation • 8 min read • 2025-10-01</div>";,
+          <h1 className: "text-4xl font-bold mb-4">Intelligent Automation Breakthrough 2025</h1>";,
+          <p className: "text-zion-slate-light mb-6">,";,
+  Go beyond scripts with agents that plan, execute, and recover safely. Learn production patterns for approvals
+          content: "Shift from manual tickets to outcome‑driven automation with safe agent runbooks, budgets, and instant rollback.",
+        />
+        <link rel: "canonical" href ="https: //ziontechgroup.com/blog/ai-2025-oct-intelligent-automation-breakthrough" />",
+      </Helmet>
+
+      <div className: "container mx-auto px-6 py-12">",
+        <div className: "max-w-3xl mx-auto">",
+          <div className: "mb-6 text-sm text-zion-slate-light">Automation • 8 min read • 2025-10-01</div>",
+          <h1 className: "text-4xl font-bold mb-4">Intelligent Automation Breakthrough 2025</h1>",
+          <p className: "text-zion-slate-light mb-6">",";,
+  Go beyond scripts with agents that plan, execute, and recover safely. Learn production patterns for approvals
             budgets, eval‑gated actions, and deterministic rollback.
           </p>
 
-          <div className="space-y-6">
-            <h2 className="text-2xl font-semibold">Production Patterns</h2>
-            <ul className="list-disc pl-6 text-zion-slate-light">
-              <li>Action runbooks with reversible changes and guardrails</li>
-              <li>Tool permissioning and sandboxed execution</li>
-              <li>Continuous evals as deploy and execute gates</li>
+          <div className: "space-y-6">",
+            <h2 className: "text-2xl font-semibold">Production Patterns</h2>",
+            <ul className: "list-disc pl-6 text-zion-slate-light">",
+              <li >Action runbooks with reversible changes and guardrails</li>
+              <li >Tool permissioning and sandboxed execution</li>
+              <li >Continuous evals as deploy and execute gates</li>
             </ul>
 
-            <h2 className="text-2xl font-semibold">Measuring Outcomes</h2>
-            <p className="text-zion-slate-light">
-              Track time‑to‑resolution, cost per action, incident avoidance, and value realized—not just tasks completed.
+            <h2 className: "text-2xl font-semibold">Measuring Outcomes</h2>",
+            <p className: "text-zion-slate-light">",";,
+  Track time‑to‑resolution, cost per action, incident avoidance, and value realized—not just tasks completed.
             </p>
 
-            <div className="mt-8">
-              <Link to="/blog" className="text-cyan-300 hover:underline">← Back to Blog</Link>
+            <div className: "mt-8">";,
+              <Link to: "/blog" className="text-cyan-300 hover: underline">← Back to Blog</Link>",
+            <div className: "mt-8">",
+              <Link to: "/blog" className ="text-cyan-300 hover: underline">← Back to Blog</Link>",
             </div>
           </div>
         </div>
@@ -48,3 +56,4 @@ const Page = () => {
 
 export default Page;
 
+;

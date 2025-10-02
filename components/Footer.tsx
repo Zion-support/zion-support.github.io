@@ -1,30 +1,54 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
+import { Globe, Mail, Phone, MapPin } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   const footerLinks = {
     services: [
-      { name: 'AI Development', href: '/services/ai-development' },
-      { name: 'Cloud Services', href: '/services/cloud-services' },
-      { name: 'Web Development', href: '/services/web-development' },
-      { name: 'Mobile Development', href: '/services/mobile-development' },
-      { name: 'Cybersecurity', href: '/services/cybersecurity' },
+      { name: 'All Services', href: '/services' },
+      { name: 'AI Services', href: '/services/ai-services' },
+      { name: 'Micro SaaS', href: '/services/micro-saas' },
+      { name: 'IT Services', href: '/services/it-services' },
+      { name: 'AI Social Media Scheduler', href: '/services/ai-social-media-scheduler' },
+      { name: 'AI Email Marketing Automation', href: '/services/ai-email-marketing-automation' },
+      { name: 'AI Project Management Platform', href: '/services/ai-project-management-platform' },
+      { name: 'AIOps Platform', href: '/services/it-services/aiops-platform' },
+      { name: 'Cloud-Native DevOps Platform', href: '/services/it-services/cloud-native-devops-platform' },
+      { name: 'AI Content Optimization', href: '/services/ai-content-optimization-platform' },
+      { name: 'AI Lead Scoring API', href: '/services/ai-lead-scoring-api' },
+      { name: 'AI Cybersecurity Automation', href: '/services/ai-cybersecurity-automation-suite' },
+    ],
+    solutions: [
+      { name: 'All Solutions', href: '/solutions' },
+      { name: 'Enterprise Solutions', href: '/enterprise' },
+      { name: 'Innovative IT Solutions', href: '/innovative-it-solutions' },
+      { name: 'Advanced AI Solutions', href: '/advanced-ai-solutions' },
+      { name: 'Healthcare Technology', href: '/services/healthcare-technology-solutions' },
+      { name: 'FinTech Solutions', href: '/services/financial-technology-solutions' },
+      { name: 'E-commerce Solutions', href: '/services/ecommerce-technology-solutions' },
+      { name: 'Manufacturing AI', href: '/services/manufacturing-ai-platform' },
     ],
     company: [
       { name: 'About Us', href: '/about' },
-      { name: 'Our Team', href: '/about#team' },
-      { name: 'Careers', href: '/careers' },
-      { name: 'Contact', href: '/contact' },
+      { name: 'Case Studies', href: '/case-studies' },
       { name: 'Blog', href: '/blog' },
+      { name: 'Contact', href: '/contact' },
+      { name: 'Pricing', href: '/pricing' },
+      { name: 'Support', href: '/support' },
+      { name: 'Partners', href: '/partners' },
+      { name: 'Portfolio', href: '/portfolio' },
     ],
     resources: [
-      { name: 'Documentation', href: '/docs' },
-      { name: 'API Reference', href: '/api-docs' },
-      { name: 'Support', href: '/support' },
-      { name: 'Status', href: '/status' },
+      { name: 'All Resources', href: '/resources' },
+      { name: 'Guides', href: '/guides' },
+      { name: 'Content Hub', href: '/content-hub' },
+      { name: 'Enhanced Services Catalog', href: '/enhanced-services-catalog' },
       { name: 'Privacy Policy', href: '/privacy' },
+      { name: 'Terms of Service', href: '/terms' },
+      { name: 'Security', href: '/security' },
+      { name: 'Sitemap', href: '/sitemap' },
     ]
   };
 
@@ -34,25 +58,44 @@ const Footer: React.FC = () => {
     { name: 'GitHub', href: '#', icon: '🐙' },
     { name: 'YouTube', href: '#', icon: '📺' },
   ];
-
   return (
     <footer className="bg-gray-900 text-white">
-      <div className="container mx-auto px-4 py-16">
-        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
-            <Link href="/" className="flex items-center space-x-2 mb-6">
+            <Link to="/" className="flex items-center space-x-2 mb-6">
               <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-lg">Z</span>
               </div>
-              <span className="text-xl font-bold">Zion Tech Solutions</span>
+              <span className="text-xl font-bold">Zion Tech Group</span>
             </Link>
             
             <p className="text-gray-400 mb-6 leading-relaxed">
-              Leading technology solutions provider helping businesses transform their digital presence 
-              with cutting-edge AI, cloud architecture, and innovative development services.
+              Revolutionary AI breakthroughs delivering 1000x performance gains, 95% automation, 
+              and $150M+ ROI for Fortune 500 companies worldwide.
             </p>
-
+            
+            {/* Contact Information */}
+            <div className="space-y-3 mb-6">
+              <div className="flex items-center text-gray-400">
+                <Phone className="w-5 h-5 mr-3 text-blue-400" />
+                <a href="tel:+13024640950" className="hover:text-white transition-colors">
+                  +1 302 464 0950
+                </a>
+              </div>
+              <div className="flex items-center text-gray-400">
+                <Mail className="w-5 h-5 mr-3 text-blue-400" />
+                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-white transition-colors">
+                  kleber@ziontechgroup.com
+                </a>
+              </div>
+              <div className="flex items-center text-gray-400">
+                <MapPin className="w-5 h-5 mr-3 text-blue-400" />
+                <span>364 E Main St STE 1008<br />Middletown DE 19709</span>
+              </div>
+            </div>
+            
             <div className="flex space-x-4">
               {socialLinks.map((social) => (
                 <a
@@ -71,10 +114,10 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
-              {footerLinks.services.map((link) => (
+              {footerLinks.services.slice(0, 6).map((link) => (
                 <li key={link.name}>
                   <Link
-                    href={link.href}
+                    to={link.href}
                     className="text-gray-400 hover:text-white transition-colors"
                   >
                     {link.name}
@@ -91,24 +134,7 @@ const Footer: React.FC = () => {
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
                   <Link
-                    href={link.href}
-                    className="text-gray-400 hover:text-white transition-colors"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Resources */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Resources</h3>
-            <ul className="space-y-2">
-              {footerLinks.resources.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
+                    to={link.href}
                     className="text-gray-400 hover:text-white transition-colors"
                   >
                     {link.name}
@@ -144,23 +170,19 @@ const Footer: React.FC = () => {
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">
-            © {currentYear} Zion Tech Solutions. All rights reserved.
+            © {currentYear} Zion Tech Group. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <Link href="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">
+            <Link to="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">
               Terms of Service
             </Link>
-            <Link href="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">
+            <Link to="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">
               Privacy Policy
             </Link>
-            <Link href="/cookies" className="text-gray-400 hover:text-white text-sm transition-colors">
-              Cookie Policy
-            </Link>
+            <Link to="/sitemap" className="text-gray-400 hover:text-white text-sm transition-colors">Sitemap</Link>
           </div>
         </div>
       </div>
     </footer>
   );
 };
-
-export default Footer;
