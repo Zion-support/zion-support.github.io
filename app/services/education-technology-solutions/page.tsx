@@ -15,10 +15,9 @@ export const metadata = {
 };
 
 export default function EducationTechnologySolutions() {
-  const phoneHref = "tel:+13024640950";
-  const emailHref = "mailto:kleber@ziontechgroup.com";
-  const websiteHref = "https://ziontechgroup.com";
-
+  const phoneHref = "tel:+13024640950"
+  const emailHref = "mailto:kleber@ziontechgroup.com"
+  const websiteHref = "https://ziontechgroup.com"
   const edtechServices = [
     {
       name: 'AI-Powered Learning Management System',
