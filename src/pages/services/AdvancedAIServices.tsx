@@ -58,50 +58,50 @@ const AdvancedAIServices: React.FC = () => {,
     <>
       <Helmet>
         <title>Advanced AI Services - Zion Tech Group</title>
-        <meta name="description" content="Cutting-edge AI services including content generation, document processing, predictive analytics, and fraud detection from Zion Tech Group." />";
+        <meta name="description" content="Cutting-edge AI services including content generation, document processing, predictive analytics, and fraud detection from Zion Tech Group." />
       </Helmet>
       
-      <div className="min-h-screen bg-gray-50">";
+      <div className="min-h-screen bg-gray-50">
         {/* Header */}
-        <section className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-800 text-white py-16">";
-          <div className="container mx-auto px-6 text-center">";
+        <section className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-800 text-white py-16">
+          <div className="container mx-auto px-6 text-center">
             <h1 className="text-4xl md: text-5xl font-bold mb-4">Advanced AI Services</h1>";,
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto">";
+            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
               Next-generation artificial intelligence solutions that transform how businesses operate, analyze data, and interact with customers.
             </p>
           </div>
         </section>
 
         {/* Services Grid */}
-        <section className="py-20">";
-          <div className="container mx-auto px-6">";
+        <section className="py-20">
+          <div className="container mx-auto px-6">
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">";,
               {advancedAIServices.map((service, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-sm hover: shadow-lg transition-all duration-300 border border-gray-100">";,
-                  <div className="text-4xl mb-4">{service.icon}</div>";
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>";
-                  <p className="text-gray-600 mb-6">{service.description}</p>";
+                  <div className="text-4xl mb-4">{service.icon}</div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
+                  <p className="text-gray-600 mb-6">{service.description}</p>
                   
-                  <ul className="space-y-2 mb-6">";
+                  <ul className="space-y-2 mb-6">
                     {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-700">";
-                        <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>";
+                      <li key={featureIndex} className="flex items-center text-sm text-gray-700">
+                        <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
                         {feature}
                       </li>
                     ))}
                   </ul>
 
-                  <div className="mb-6 p-4 bg-green-50 rounded-lg border border-green-200">";
+                  <div className="mb-6 p-4 bg-green-50 rounded-lg border border-green-200">
                     <h4 className="font-semibold text-green-800 mb-2">Pricing: </h4>";,
-                    <p className="text-green-700 font-medium">{service.pricing}</p>";
+                    <p className="text-green-700 font-medium">{service.pricing}</p>
                   </div>
 
-                  <div className="mb-6">";
+                  <div className="mb-6">
                     <h4 className="font-semibold text-gray-900 mb-2">Key Benefits: </h4>";,
-                    <ul className="space-y-1">";
+                    <ul className="space-y-1">
                       {service.benefits.map((benefit, benefitIndex) => (
-                        <li key={benefitIndex} className="text-sm text-gray-600 flex items-center">";
-                          <span className="w-1.5 h-1.5 bg-green-500 rounded-full mr-2"></span>";
+                        <li key={benefitIndex} className="text-sm text-gray-600 flex items-center">
+                          <span className="w-1.5 h-1.5 bg-green-500 rounded-full mr-2"></span>
                           {benefit}
                         </li>
                       ))}
@@ -121,44 +121,44 @@ const AdvancedAIServices: React.FC = () => {,
         </section>
 
         {/* Technology Stack */}
-        <section className="py-20 bg-white">";
-          <div className="container mx-auto px-6">";
-            <div className="text-center mb-16">";
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">AI Technology Stack</h2>";
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">";
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-6">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">AI Technology Stack</h2>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
                 Built with cutting-edge AI frameworks and technologies for maximum performance and reliability
               </p>
             </div>
             
             <div className="grid grid-cols-2 md: grid-cols-4 gap-8">";,
-              <div className="bg-gradient-to-br from-blue-50 to-indigo-100 p-6 rounded-xl text-center border border-blue-200">";
-                <h3 className="text-lg font-bold text-gray-900 mb-2">Machine Learning</h3>";
-                <p className="text-gray-600">TensorFlow, PyTorch, Scikit-learn</p>";
+              <div className="bg-gradient-to-br from-blue-50 to-indigo-100 p-6 rounded-xl text-center border border-blue-200">
+                <h3 className="text-lg font-bold text-gray-900 mb-2">Machine Learning</h3>
+                <p className="text-gray-600">TensorFlow, PyTorch, Scikit-learn</p>
               </div>
               
-              <div className="bg-gradient-to-br from-green-50 to-emerald-100 p-6 rounded-xl text-center border border-green-200">";
-                <h3 className="text-lg font-bold text-gray-900 mb-2">NLP</h3>";
-                <p className="text-gray-600">BERT, GPT, Transformers</p>";
+              <div className="bg-gradient-to-br from-green-50 to-emerald-100 p-6 rounded-xl text-center border border-green-200">
+                <h3 className="text-lg font-bold text-gray-900 mb-2">NLP</h3>
+                <p className="text-gray-600">BERT, GPT, Transformers</p>
               </div>
               
-              <div className="bg-gradient-to-br from-purple-50 to-violet-100 p-6 rounded-xl text-center border border-purple-200">";
-                <h3 className="text-lg font-bold text-gray-900 mb-2">Computer Vision</h3>";
-                <p className="text-gray-600">OpenCV, YOLO, ResNet</p>";
+              <div className="bg-gradient-to-br from-purple-50 to-violet-100 p-6 rounded-xl text-center border border-purple-200">
+                <h3 className="text-lg font-bold text-gray-900 mb-2">Computer Vision</h3>
+                <p className="text-gray-600">OpenCV, YOLO, ResNet</p>
               </div>
               
-              <div className="bg-gradient-to-br from-orange-50 to-red-100 p-6 rounded-xl text-center border border-orange-200">";
-                <h3 className="text-lg font-bold text-gray-900 mb-2">Cloud AI</h3>";
-                <p className="text-gray-600">AWS SageMaker, Azure ML, GCP AI</p>";
+              <div className="bg-gradient-to-br from-orange-50 to-red-100 p-6 rounded-xl text-center border border-orange-200">
+                <h3 className="text-lg font-bold text-gray-900 mb-2">Cloud AI</h3>
+                <p className="text-gray-600">AWS SageMaker, Azure ML, GCP AI</p>
               </div>
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">";
-          <div className="container mx-auto px-6 text-center">";
-            <h2 className="text-4xl font-bold mb-4">Ready to Transform Your Business with AI?</h2>";
-            <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">";
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+          <div className="container mx-auto px-6 text-center">
+            <h2 className="text-4xl font-bold mb-4">Ready to Transform Your Business with AI?</h2>
+            <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
               Contact us today to discuss how our advanced AI services can drive innovation and growth in your organization.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">";,

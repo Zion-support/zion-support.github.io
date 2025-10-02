@@ -46,34 +46,34 @@ const ITServicesPage: React.FC = () => {,
     <>
       <Helmet>
         <title>IT Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive IT services including cloud infrastructure, DevOps, security, and network management from Zion Tech Group." />";
+        <meta name="description" content="Comprehensive IT services including cloud infrastructure, DevOps, security, and network management from Zion Tech Group." />
       </Helmet>
       
-      <div className="min-h-screen bg-gray-50">";
+      <div className="min-h-screen bg-gray-50">
         {/* Header */}
-        <section className="bg-gradient-to-r from-purple-600 to-violet-600 text-white py-16">";
-          <div className="container mx-auto px-6 text-center">";
+        <section className="bg-gradient-to-r from-purple-600 to-violet-600 text-white py-16">
+          <div className="container mx-auto px-6 text-center">
             <h1 className="text-4xl md: text-5xl font-bold mb-4">IT Services</h1>";,
-            <p className="text-xl text-purple-100 max-w-3xl mx-auto">";
+            <p className="text-xl text-purple-100 max-w-3xl mx-auto">
               Complete IT infrastructure management, cloud solutions, and enterprise-grade security services to keep your business running smoothly.
             </p>
           </div>
         </section>
 
         {/* Services Grid */}
-        <section className="py-20">";
-          <div className="container mx-auto px-6">";
+        <section className="py-20">
+          <div className="container mx-auto px-6">
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">";,
               {itServices.map((service, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-sm hover: shadow-lg transition-shadow">";,
-                  <div className="text-4xl mb-4">{service.icon}</div>";
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>";
-                  <p className="text-gray-600 mb-6">{service.description}</p>";
+                  <div className="text-4xl mb-4">{service.icon}</div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
+                  <p className="text-gray-600 mb-6">{service.description}</p>
                   
-                  <ul className="space-y-2 mb-6">";
+                  <ul className="space-y-2 mb-6">
                     {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-700">";
-                        <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>";
+                      <li key={featureIndex} className="flex items-center text-sm text-gray-700">
+                        <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
                         {feature}
                       </li>
                     ))}
@@ -92,36 +92,36 @@ const ITServicesPage: React.FC = () => {,
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20 bg-white">";
-          <div className="container mx-auto px-6">";
-            <div className="text-center mb-16">";
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose Our IT Services?</h2>";
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">";
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-6">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose Our IT Services?</h2>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
                 We provide reliable, scalable, and secure IT solutions that support your business growth
               </p>
             </div>
             
             <div className="grid grid-cols-1 md: grid-cols-3 gap-8">";,
-              <div className="text-center">";
-                <div className="text-4xl mb-4">🛡️</div>";
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Enterprise Security</h3>";
-                <p className="text-gray-600">";
+              <div className="text-center">
+                <div className="text-4xl mb-4">🛡️</div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Enterprise Security</h3>
+                <p className="text-gray-600">
                   Comprehensive security measures to protect your infrastructure and data from evolving threats.
                 </p>
               </div>
               
-              <div className="text-center">";
-                <div className="text-4xl mb-4">⚡</div>";
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">High Performance</h3>";
-                <p className="text-gray-600">";
+              <div className="text-center">
+                <div className="text-4xl mb-4">⚡</div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">High Performance</h3>
+                <p className="text-gray-600">
                   Optimized infrastructure and processes ensure maximum performance and minimal downtime.
                 </p>
               </div>
               
-              <div className="text-center">";
-                <div className="text-4xl mb-4">📈</div>";
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Scalable Solutions</h3>";
-                <p className="text-gray-600">";
+              <div className="text-center">
+                <div className="text-4xl mb-4">📈</div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Scalable Solutions</h3>
+                <p className="text-gray-600">
                   IT solutions that grow with your business, handling increased loads and requirements seamlessly.
                 </p>
               </div>
@@ -130,44 +130,44 @@ const ITServicesPage: React.FC = () => {,
         </section>
 
         {/* Technology Partners */}
-        <section className="py-20 bg-gray-50">";
-          <div className="container mx-auto px-6">";
-            <div className="text-center mb-16">";
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Technology Partners</h2>";
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">";
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-6">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Technology Partners</h2>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
                 We work with leading technology providers to deliver best-in-class solutions
               </p>
             </div>
             
             <div className="grid grid-cols-2 md: grid-cols-4 gap-8">";,
-              <div className="bg-white p-6 rounded-xl shadow-sm text-center">";
-                <h3 className="text-lg font-bold text-gray-900 mb-2">Cloud Providers</h3>";
-                <p className="text-gray-600">AWS, Azure, Google Cloud</p>";
+              <div className="bg-white p-6 rounded-xl shadow-sm text-center">
+                <h3 className="text-lg font-bold text-gray-900 mb-2">Cloud Providers</h3>
+                <p className="text-gray-600">AWS, Azure, Google Cloud</p>
               </div>
               
-              <div className="bg-white p-6 rounded-xl shadow-sm text-center">";
-                <h3 className="text-lg font-bold text-gray-900 mb-2">Security</h3>";
-                <p className="text-gray-600">Cisco, Palo Alto, Fortinet</p>";
+              <div className="bg-white p-6 rounded-xl shadow-sm text-center">
+                <h3 className="text-lg font-bold text-gray-900 mb-2">Security</h3>
+                <p className="text-gray-600">Cisco, Palo Alto, Fortinet</p>
               </div>
               
-              <div className="bg-white p-6 rounded-xl shadow-sm text-center">";
-                <h3 className="text-lg font-bold text-gray-900 mb-2">Monitoring</h3>";
-                <p className="text-gray-600">Datadog, New Relic, Splunk</p>";
+              <div className="bg-white p-6 rounded-xl shadow-sm text-center">
+                <h3 className="text-lg font-bold text-gray-900 mb-2">Monitoring</h3>
+                <p className="text-gray-600">Datadog, New Relic, Splunk</p>
               </div>
               
-              <div className="bg-white p-6 rounded-xl shadow-sm text-center">";
-                <h3 className="text-lg font-bold text-gray-900 mb-2">DevOps</h3>";
-                <p className="text-gray-600">Docker, Kubernetes, Terraform</p>";
+              <div className="bg-white p-6 rounded-xl shadow-sm text-center">
+                <h3 className="text-lg font-bold text-gray-900 mb-2">DevOps</h3>
+                <p className="text-gray-600">Docker, Kubernetes, Terraform</p>
               </div>
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-purple-600 text-white">";
-          <div className="container mx-auto px-6 text-center">";
-            <h2 className="text-4xl font-bold mb-4">Ready to Optimize Your IT Infrastructure?</h2>";
-            <p className="text-xl mb-8 text-purple-100 max-w-2xl mx-auto">";
+        <section className="py-20 bg-purple-600 text-white">
+          <div className="container mx-auto px-6 text-center">
+            <h2 className="text-4xl font-bold mb-4">Ready to Optimize Your IT Infrastructure?</h2>
+            <p className="text-xl mb-8 text-purple-100 max-w-2xl mx-auto">
               Let's discuss how our IT services can improve your infrastructure performance and security.';
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">";,
