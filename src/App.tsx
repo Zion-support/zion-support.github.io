@@ -13,10 +13,6 @@ import NotificationSystem from './components/NotificationSystem';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import EnhancedSEOHead from './components/EnhancedSEOHead';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
-import SecurityAuditPanel from './components/SecurityAuditPanel';
-import SEOAuditDashboard from './components/SEOAuditDashboard';
-import AnalyticsDashboard from './components/AnalyticsDashboard';
 
 // Lazy loaded components for better performance
 const HomePage = React.lazy(() => import('./pages/HomePage'));
@@ -98,15 +94,7 @@ const initializePerformanceEnhancements = () => {
 const App: React.FC = () => {
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
-  const [showAdvancedPerformanceMonitor, setShowAdvancedPerformanceMonitor] = useState(false);
-  const [showSecurityAudit, setShowSecurityAudit] = useState(false);
-  const [showSEOAudit, setShowSEOAudit] = useState(false);
-  const [showAnalytics, setShowAnalytics] = useState(false);
   const [notifications, setNotifications] = useState<Notification[]>([]);
-
-  const handleRemoveNotification = (id: string) => {
-    setNotifications(prev => prev.filter(notification => notification.id !== id));
-  };
 
   interface SEOData {
     title: string;
@@ -120,7 +108,7 @@ const App: React.FC = () => {
     canonical: typeof window !== 'undefined' ? window.location.href : 'https://zion.app/',
   }), []);
 
-  // Enhanced hotkeys for admin panels
+  // Simple hotkeys for demo toggles and initialization
   useEffect(() => {
     const onKeyDown = (e: KeyboardEvent) => {
       if (!e.ctrlKey || !e.shiftKey) return;
@@ -132,22 +120,6 @@ const App: React.FC = () => {
         case 'm':
           e.preventDefault();
           setShowPerformanceMonitor((v) => !v);
-          break;
-        case 'a':
-          e.preventDefault();
-          setShowAdvancedPerformanceMonitor((v) => !v);
-          break;
-        case 's':
-          e.preventDefault();
-          setShowSecurityAudit((v) => !v);
-          break;
-        case 'o':
-          e.preventDefault();
-          setShowSEOAudit((v) => !v);
-          break;
-        case 'd':
-          e.preventDefault();
-          setShowAnalytics((v) => !v);
           break;
         default:
           break;
@@ -171,199 +143,144 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <HelmetProvider>
-      <AccessibilityEnhancer>
-        <EnhancedErrorBoundary>
-          <EnhancedSEOHead 
-            title={seoDataForOptimizer.title} 
-            description={seoDataForOptimizer.description} 
-            canonical={seoDataForOptimizer.canonical}
-            keywords={['AI', 'IT Solutions', 'Enterprise Automation', 'Technology Services', 'Artificial Intelligence']}
-            author="Zion Tech Group"
-          />
-          <Router>
-            <div className="min-h-screen bg-gray-50">
-              <Header />
+    <>
+      <HelmetProvider>
+        <AccessibilityEnhancer>
+          <EnhancedErrorBoundary>
+            <EnhancedSEOHead 
+              title={seoDataForOptimizer.title} 
+              description={seoDataForOptimizer.description} 
+              canonical={seoDataForOptimizer.canonical}
+              keywords={['AI', 'IT Solutions', 'Enterprise Automation', 'Technology Services', 'Artificial Intelligence']}
+              author="Zion Tech Group"
+            />
+            <Router>
+              <div className="min-h-screen bg-gray-50">
+                <Header />
 
-              {/* Dynamic Banner System */}
-              <motion.div
-                initial="initial"
-                animate="in"
-                exit="out"
-                variants={pageVariants}
-                transition={pageTransition}
-                className="relative"
-              >
-                <BannerManager
-                  banners={bannerData}
-                  rotationInterval={8000}
-                  maxVisibleBanners={3}
-                />
-              </motion.div>
+                {/* Dynamic Banner System */}
+                <motion.div
+                  initial="initial"
+                  animate="in"
+                  exit="out"
+                  variants={pageVariants}
+                  transition={pageTransition}
+                  className="relative"
+                >
+                  <BannerManager
+                    banners={bannerData}
+                    rotationInterval={8000}
+                    maxVisibleBanners={3}
+                  />
+                </motion.div>
 
-            {/* Main Content with Sidebar */}
-            <motion.main
-              id="main-content"
-              initial="initial"
-              animate="in"
-              exit="out"
-              variants={pageVariants}
-              transition={pageTransition}
-              className="relative z-10"
-            >
-              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 xl:grid-cols-[18rem_1fr] gap-8">
-                <Sidebar />
-                <div id="main-content">
-                  <React.Suspense fallback={<LoadingSpinner />}>
-                    <Routes>
-                      <Route path="/" element={<HomePage />} />
-                      <Route path="/solutions/*" element={<SolutionsPage />} />
-                      <Route path="/services/*" element={<ServicesPage />} />
-                      <Route path="/about" element={<AboutPage />} />
-                      <Route path="/contact" element={<ContactPage />} />
-                      <Route path="/blog/*" element={<BlogPage />} />
-                      <Route path="/case-studies" element={<CaseStudiesPage />} />
-                      <Route path="/resources" element={<Resources />} />
-                      
-                      {/* Dynamic Routes for Solutions */}
-                      <Route path="/solutions/enterprise" element={<SolutionsPage category="enterprise" />} />
-                      <Route path="/solutions/smb" element={<SolutionsPage category="smb" />} />
-                      <Route path="/solutions/startup" element={<SolutionsPage category="startup" />} />
-                      <Route path="/solutions/government" element={<SolutionsPage category="government" />} />
-                      <Route path="/solutions/healthcare" element={<SolutionsPage category="healthcare" />} />
-                      <Route path="/solutions/financial" element={<SolutionsPage category="financial" />} />
-                      <Route path="/solutions/manufacturing" element={<SolutionsPage category="manufacturing" />} />
-                      <Route path="/solutions/retail" element={<SolutionsPage category="retail" />} />
-                      <Route path="/solutions/education" element={<SolutionsPage category="education" />} />
-                      <Route path="/solutions/transportation" element={<SolutionsPage category="transportation" />} />
-                      
-                      {/* Dynamic Routes for Services */}
-                      <Route path="/services/ai-content-generator" element={<ServicesPage service="ai-content-generator" />} />
-                      <Route path="/services/smart-appointment-scheduler" element={<ServicesPage service="smart-appointment-scheduler" />} />
-                      <Route path="/services/ai-workflow-automation" element={<ServicesPage service="ai-workflow-automation" />} />
-                      <Route path="/services/ai-virtual-assistant" element={<ServicesPage service="ai-virtual-assistant" />} />
-                      <Route path="/services/ai-data-analytics" element={<ServicesPage service="ai-data-analytics" />} />
-                      <Route path="/services/ai-intelligent-document-processing" element={<ServicesPage service="ai-intelligent-document-processing" />} />
-                      <Route path="/services/real-time-cognitive-automation" element={<ServicesPage service="real-time-cognitive-automation" />} />
-                      <Route path="/services/advanced-cybersecurity-ai" element={<ServicesPage service="advanced-cybersecurity-ai" />} />
-                      
-                      {/* AI Solutions Routes */}
-                      <Route path="/ai-solutions" element={<ServicesPage category="ai-solutions" />} />
-                      <Route path="/quantum-computing" element={<ServicesPage category="quantum-computing" />} />
-                      <Route path="/cloud-devops" element={<ServicesPage category="cloud-devops" />} />
-                      
-                      {/* Blog Routes */}
-                      <Route path="/blog/:slug" element={<BlogPage />} />
-                      
-                      {/* 404 Fallback */}
-                      <Route path="*" element={
-                        <div className="min-h-screen flex items-center justify-center">
-                          <div className="text-center">
-                            <h1 className="text-6xl font-bold text-gray-300 mb-4">404</h1>
-                            <p className="text-xl text-gray-600 mb-8">Page not found</p>
-                            <a 
-                              href="/" 
-                              className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
-                            >
-                              Return Home
-                            </a>
-                          </div>
-                        </div>
-                      } />
-                    </Routes>
-                  </React.Suspense>
-                </div>
+                {/* Main Content */}
+                <motion.main
+                  initial="initial"
+                  animate="in"
+                  exit="out"
+                  variants={pageVariants}
+                  transition={pageTransition}
+                  className="relative z-10"
+                >
+                  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 xl:grid-cols-[18rem_1fr] gap-8">
+                    <Sidebar />
+                    <div id="main-content">
+                      <React.Suspense fallback={<LoadingSpinner />}>
+                        <Routes>
+                          <Route path="/" element={<HomePage />} />
+                          <Route path="/solutions/*" element={<SolutionsPage />} />
+                          <Route path="/services/*" element={<ServicesPage />} />
+                          <Route path="/about" element={<AboutPage />} />
+                          <Route path="/contact" element={<ContactPage />} />
+                          <Route path="/blog/*" element={<BlogPage />} />
+                          <Route path="/case-studies" element={<CaseStudiesPage />} />
+                          <Route path="/resources" element={<Resources />} />
+                          
+                          {/* Dynamic Routes for Solutions */}
+                          <Route path="/solutions/enterprise" element={<SolutionsPage category="enterprise" />} />
+                          <Route path="/solutions/smb" element={<SolutionsPage category="smb" />} />
+                          <Route path="/solutions/startup" element={<SolutionsPage category="startup" />} />
+                          <Route path="/solutions/government" element={<SolutionsPage category="government" />} />
+                          <Route path="/solutions/healthcare" element={<SolutionsPage category="healthcare" />} />
+                          <Route path="/solutions/financial" element={<SolutionsPage category="financial" />} />
+                          <Route path="/solutions/manufacturing" element={<SolutionsPage category="manufacturing" />} />
+                          <Route path="/solutions/retail" element={<SolutionsPage category="retail" />} />
+                          <Route path="/solutions/education" element={<SolutionsPage category="education" />} />
+                          <Route path="/solutions/transportation" element={<SolutionsPage category="transportation" />} />
+                          
+                          {/* Dynamic Routes for Services */}
+                          <Route path="/services/ai-content-generator" element={<ServicesPage service="ai-content-generator" />} />
+                          <Route path="/services/smart-appointment-scheduler" element={<ServicesPage service="smart-appointment-scheduler" />} />
+                          <Route path="/services/ai-workflow-automation" element={<ServicesPage service="ai-workflow-automation" />} />
+                          <Route path="/services/ai-virtual-assistant" element={<ServicesPage service="ai-virtual-assistant" />} />
+                          <Route path="/services/ai-data-analytics" element={<ServicesPage service="ai-data-analytics" />} />
+                          <Route path="/services/ai-intelligent-document-processing" element={<ServicesPage service="ai-intelligent-document-processing" />} />
+                          <Route path="/services/real-time-cognitive-automation" element={<ServicesPage service="real-time-cognitive-automation" />} />
+                          <Route path="/services/advanced-cybersecurity-ai" element={<ServicesPage service="advanced-cybersecurity-ai" />} />
+                          
+                          {/* AI Solutions Routes */}
+                          <Route path="/ai-solutions" element={<ServicesPage category="ai-solutions" />} />
+                          <Route path="/quantum-computing" element={<ServicesPage category="quantum-computing" />} />
+                          <Route path="/cloud-devops" element={<ServicesPage category="cloud-devops" />} />
+                          
+                          {/* Blog Routes */}
+                          <Route path="/blog/:slug" element={<BlogPage />} />
+                          
+                          {/* 404 Fallback */}
+                          <Route path="*" element={
+                            <div className="min-h-screen flex items-center justify-center">
+                              <div className="text-center">
+                                <h1 className="text-6xl font-bold text-gray-300 mb-4">404</h1>
+                                <p className="text-xl text-gray-600 mb-8">Page not found</p>
+                                <a 
+                                  href="/" 
+                                  className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+                                >
+                                  Return Home
+                                </a>
+                              </div>
+                            </div>
+                          } />
+                        </Routes>
+                      </React.Suspense>
+                    </div>
+                  </div>
+                </motion.main>
+
+                <Footer />
               </div>
-            </motion.main>
-
-              <Footer />
-            </div>
-          </Router>
-        </EnhancedErrorBoundary>
-      </AccessibilityEnhancer>
+            </Router>
+          </EnhancedErrorBoundary>
+        </AccessibilityEnhancer>
+      </HelmetProvider>
 
       {showPerformanceOptimizer && (
-        <div className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center" role="dialog" aria-modal="true">
-          <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
-            <div className="flex justify-between items-center mb-4">
-              <h2 className="text-2xl font-bold">Performance Optimizer</h2>
-              <button onClick={() => setShowPerformanceOptimizer(false)} className="text-gray-500 hover:text-gray-700 text-2xl">✕</button>
-            </div>
-            <PerformanceOptimizer isVisible={true} onClose={() => setShowPerformanceOptimizer(false)} />
+      <div className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center" role="dialog" aria-modal="true">
+        <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+          <div className="flex justify-between items-center mb-4">
+            <h2 className="text-2xl font-bold">Performance Optimizer</h2>
+            <button onClick={() => setShowPerformanceOptimizer(false)} className="text-gray-500 hover:text-gray-700 text-2xl">✕</button>
           </div>
+          <PerformanceOptimizer isVisible={true} onClose={() => setShowPerformanceOptimizer(false)} />
         </div>
-      )}
+      </div>
+    )}
 
-      {showPerformanceMonitor && (
-        <div className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center" role="dialog" aria-modal="true">
-          <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
-            <div className="flex justify-between items-center mb-4">
-              <h2 className="text-2xl font-bold">Performance Monitor</h2>
-              <button onClick={() => setShowPerformanceMonitor(false)} className="text-gray-500 hover:text-gray-700 text-2xl">✕</button>
-            </div>
-            <PerformanceMonitor />
+    {showPerformanceMonitor && (
+      <div className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center" role="dialog" aria-modal="true">
+        <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+          <div className="flex justify-between items-center mb-4">
+            <h2 className="text-2xl font-bold">Performance Monitor</h2>
+            <button onClick={() => setShowPerformanceMonitor(false)} className="text-gray-500 hover:text-gray-700 text-2xl">✕</button>
           </div>
+          <PerformanceMonitor />
         </div>
-      )}
-
-      {showAdvancedPerformanceMonitor && (
-        <div className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center" role="dialog" aria-modal="true">
-          <div className="max-w-6xl w-full mx-4 max-h-[90vh] overflow-y-auto">
-            <div className="bg-white rounded-lg p-6">
-              <div className="flex justify-between items-center mb-4">
-                <h2 className="text-2xl font-bold">Advanced Performance Monitor</h2>
-                <button onClick={() => setShowAdvancedPerformanceMonitor(false)} className="text-gray-500 hover:text-gray-700 text-2xl">✕</button>
-              </div>
-              <AdvancedPerformanceMonitor />
-            </div>
-          </div>
-        </div>
-      )}
-
-      {showSecurityAudit && (
-        <div className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center" role="dialog" aria-modal="true">
-          <div className="max-w-6xl w-full mx-4 max-h-[90vh] overflow-y-auto">
-            <div className="bg-white rounded-lg p-6">
-              <div className="flex justify-between items-center mb-4">
-                <h2 className="text-2xl font-bold">Security Audit Panel</h2>
-                <button onClick={() => setShowSecurityAudit(false)} className="text-gray-500 hover:text-gray-700 text-2xl">✕</button>
-              </div>
-              <SecurityAuditPanel />
-            </div>
-          </div>
-        </div>
-      )}
-
-      {showSEOAudit && (
-        <div className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center" role="dialog" aria-modal="true">
-          <div className="max-w-6xl w-full mx-4 max-h-[90vh] overflow-y-auto">
-            <div className="bg-white rounded-lg p-6">
-              <div className="flex justify-between items-center mb-4">
-                <h2 className="text-2xl font-bold">SEO Audit Dashboard</h2>
-                <button onClick={() => setShowSEOAudit(false)} className="text-gray-500 hover:text-gray-700 text-2xl">✕</button>
-              </div>
-              <SEOAuditDashboard />
-            </div>
-          </div>
-        </div>
-      )}
-
-      {showAnalytics && (
-        <div className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center" role="dialog" aria-modal="true">
-          <div className="max-w-6xl w-full mx-4 max-h-[90vh] overflow-y-auto">
-            <div className="bg-white rounded-lg p-6">
-              <div className="flex justify-between items-center mb-4">
-                <h2 className="text-2xl font-bold">Analytics Dashboard</h2>
-                <button onClick={() => setShowAnalytics(false)} className="text-gray-500 hover:text-gray-700 text-2xl">✕</button>
-              </div>
-              <AnalyticsDashboard />
-            </div>
-          </div>
-        </div>
+      </div>
       )}
 
       <NotificationSystem notifications={notifications} onRemove={handleRemoveNotification} />
-    </HelmetProvider>
+    </>
   );
 };
 
