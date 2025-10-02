@@ -1,98 +1,98 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  Zap, Bot, BarChart3, Shield, Cloud, Database
-  Smartphone, Globe, Cpu, Lock, Users, FileText
-  TrendingUp, Settings, Headphones, Code
-  Brain, Target, CheckCircle, Star
+  Zap, Bot, BarChart3, Shield, Cloud, Database,
+  Smartphone, Globe, Cpu, Lock, Users, FileText,
+  TrendingUp, Settings, Headphones, Code,
+  Brain, Target, CheckCircle, Star,
   Mail, MessageCircle
 } from 'lucide-react';
 
 const ComprehensiveServices: React.FC = () => {
   const microSaasServices = [
     {
-      id: 'ai-content-generator'
-      title: 'AI Content Generator Pro'
-      description: 'Generate high-quality blog posts, social media content, and marketing copy with advanced AI. Includes SEO optimization and brand voice training.'
-      features: ['Multi-language support', 'SEO optimization', 'Brand voice training', 'Content scheduling', 'Analytics dashboard']
-      pricing: 'Starting at $29/month'
-      icon: FileText
-      color: 'from-blue-600 to-purple-600'
+      id: 'ai-content-generator',
+      title: 'AI Content Generator Pro',
+      description: 'Generate high-quality blog posts, social media content, and marketing copy with advanced AI. Includes SEO optimization and brand voice training.',
+      features: ['Multi-language support', 'SEO optimization', 'Brand voice training', 'Content scheduling', 'Analytics dashboard'],
+      pricing: 'Starting at $29/month',
+      icon: FileText,
+      color: 'from-blue-600 to-purple-600',
       link: '/services/ai-content-generator'
-    }
+    },
     {
-      id: 'smart-appointment-scheduler'
-      title: 'Smart Appointment Scheduler'
-      description: 'Healthcare-focused SaaS for online appointments, virtual consultations, patient data management, and automated reminders.'
-      features: ['Virtual consultations', 'Patient data storage', 'Automated reminders', 'Payment integration', 'Calendar sync']
-      pricing: 'Starting at $49/month'
-      icon: Users
-      color: 'from-green-600 to-teal-600'
+      id: 'smart-appointment-scheduler',
+      title: 'Smart Appointment Scheduler',
+      description: 'Healthcare-focused SaaS for online appointments, virtual consultations, patient data management, and automated reminders.',
+      features: ['Virtual consultations', 'Patient data storage', 'Automated reminders', 'Payment integration', 'Calendar sync'],
+      pricing: 'Starting at $49/month',
+      icon: Users,
+      color: 'from-green-600 to-teal-600',
       link: '/services/smart-appointment-scheduler'
-    }
+    },
     {
-      id: 'ai-email-marketing'
-      title: 'AI Email Marketing Platform'
-      description: 'Transform your email marketing with AI-powered personalization, automation, and analytics. 300% increase in open rates and 250% ROI improvement.'
-      features: ['AI content generation', 'Smart segmentation', 'Predictive analytics', 'Automated campaigns', 'Optimal timing']
-      pricing: 'Starting at $79/month'
-      icon: Mail
-      color: 'from-emerald-600 to-green-600'
+      id: 'ai-email-marketing',
+      title: 'AI Email Marketing Platform',
+      description: 'Transform your email marketing with AI-powered personalization, automation, and analytics. 300% increase in open rates and 250% ROI improvement.',
+      features: ['AI content generation', 'Smart segmentation', 'Predictive analytics', 'Automated campaigns', 'Optimal timing'],
+      pricing: 'Starting at $79/month',
+      icon: Mail,
+      color: 'from-emerald-600 to-green-600',
       link: '/services/ai-email-marketing'
-    }
+    },
     {
-      id: 'api-integration-hub'
-      title: 'API Integration Hub'
-      description: 'Connect your software with 500+ platforms and services. Pre-built connectors, custom integrations, and real-time data sync.'
-      features: ['500+ pre-built connectors', 'Custom integrations', 'Real-time sync', 'Error handling', 'Analytics']
-      pricing: 'Starting at $39/month'
-      icon: Code
-      color: 'from-orange-600 to-red-600'
+      id: 'api-integration-hub',
+      title: 'API Integration Hub',
+      description: 'Connect your software with 500+ platforms and services. Pre-built connectors, custom integrations, and real-time data sync.',
+      features: ['500+ pre-built connectors', 'Custom integrations', 'Real-time sync', 'Error handling', 'Analytics'],
+      pricing: 'Starting at $39/month',
+      icon: Code,
+      color: 'from-orange-600 to-red-600',
       link: '/services/api-integration-hub'
-    }
+    },
     {
-      id: 'remote-collaboration-suite'
-      title: 'Remote Collaboration Suite'
-      description: 'All-in-one platform combining video conferencing, project management, and team messaging for distributed teams.'
-      features: ['HD video conferencing', 'Project management', 'Team messaging', 'File sharing', 'Screen sharing']
-      pricing: 'Starting at $19/user/month'
-      icon: Globe
-      color: 'from-purple-600 to-pink-600'
+      id: 'remote-collaboration-suite',
+      title: 'Remote Collaboration Suite',
+      description: 'All-in-one platform combining video conferencing, project management, and team messaging for distributed teams.',
+      features: ['HD video conferencing', 'Project management', 'Team messaging', 'File sharing', 'Screen sharing'],
+      pricing: 'Starting at $19/user/month',
+      icon: Globe,
+      color: 'from-purple-600 to-pink-600',
       link: '/services/remote-collaboration-suite'
-    }
+    },
     {
-      id: 'smart-contract-audit'
-      title: 'Smart Contract Audit Service'
-      description: 'Professional smart contract auditing with 99.8% vulnerability detection rate. Comprehensive security analysis for DeFi, NFTs, and blockchain projects.'
-      features: ['99.8% vulnerability detection', '5-10 day delivery', '50+ audits completed', '100% compliance', 'Expert team']
-      pricing: 'Starting at $2,500'
-      icon: Shield
-      color: 'from-red-600 to-orange-600'
+      id: 'smart-contract-audit',
+      title: 'Smart Contract Audit Service',
+      description: 'Professional smart contract auditing with 99.8% vulnerability detection rate. Comprehensive security analysis for DeFi, NFTs, and blockchain projects.',
+      features: ['99.8% vulnerability detection', '5-10 day delivery', '50+ audits completed', '100% compliance', 'Expert team'],
+      pricing: 'Starting at $2,500',
+      icon: Shield,
+      color: 'from-red-600 to-orange-600',
       link: '/services/smart-contract-audit'
     }
   ];
 
   const aiServices = [
     {
-      id: 'ai-workflow-automation'
-      title: 'AI Workflow Automation'
-      description: 'Transform your business processes with intelligent automation that reduces costs by 75% and increases efficiency by 10x.'
-      features: ['Process mining', 'RPA integration', 'Machine learning models', 'Real-time monitoring', 'Custom workflows']
-      pricing: 'Custom pricing'
-      icon: Zap
-      color: 'from-blue-600 to-purple-600'
+      id: 'ai-workflow-automation',
+      title: 'AI Workflow Automation',
+      description: 'Transform your business processes with intelligent automation that reduces costs by 75% and increases efficiency by 10x.',
+      features: ['Process mining', 'RPA integration', 'Machine learning models', 'Real-time monitoring', 'Custom workflows'],
+      pricing: 'Custom pricing',
+      icon: Zap,
+      color: 'from-blue-600 to-purple-600',
       link: '/services/ai-workflow-automation'
-    }
+    },
     {
-      id: 'ai-virtual-assistant'
-      title: 'AI Virtual Assistant'
-      description: 'Deploy AI-powered virtual assistants that handle customer inquiries 24/7 with 95% accuracy and multilingual support.'
-      features: ['24/7 availability', '95% accuracy rate', 'Multilingual support', 'CRM integration', 'Voice & text']
-      pricing: 'Starting at $199/month'
-      icon: Bot
-      color: 'from-purple-600 to-pink-600'
+      id: 'ai-virtual-assistant',
+      title: 'AI Virtual Assistant',
+      description: 'Deploy AI-powered virtual assistants that handle customer inquiries 24/7 with 95% accuracy and multilingual support.',
+      features: ['24/7 availability', '95% accuracy rate', 'Multilingual support', 'CRM integration', 'Voice & text'],
+      pricing: 'Starting at $199/month',
+      icon: Bot,
+      color: 'from-purple-600 to-pink-600',
       link: '/services/ai-virtual-assistant'
-    }
+    },
     {
       id: 'ai-predictive-analytics'
       title: 'AI Predictive Analytics'

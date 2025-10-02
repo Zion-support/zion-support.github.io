@@ -1,99 +1,98 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { 
-  Cloud
-  Shield
-  Server
-  Database
-  Network
-  Lock
-  CheckCircle
-  ArrowRight
-  DollarSign
-  Clock
-  Star
-  TrendingUp
-  Globe
-  Smartphone
-  MessageSquare
-  Zap
-  
-  Settings
-  Monitor
-  Cpu
-  HardDrive
-  Wifi
-  Eye
-  Key
-  AlertTriangle
-  Users
+  Cloud,
+  Shield,
+  Server,
+  Database,
+  Network,
+  Lock,
+  CheckCircle,
+  ArrowRight,
+  DollarSign,
+  Clock,
+  Star,
+  TrendingUp,
+  Globe,
+  Smartphone,
+  MessageSquare,
+  Zap,
+  Settings,
+  Monitor,
+  Cpu,
+  HardDrive,
+  Wifi,
+  Eye,
+  Key,
+  AlertTriangle,
+  Users,
   Building
 } from "lucide-react";
 
 export default function ITServices(): React.JSX.Element {
   const itServices = [
     {
-      id: "cloud-migration-expert"
-      name: "Cloud Migration & Optimization Expert"
-      blurb: "Complete cloud transformation with cost optimization and security hardening"
-      price: "$5,000 - $25,000/month"
-      eta: "4-12 weeks"
-      category: "Cloud Infrastructure"
-      icon: Cloud
+      id: "cloud-migration-expert",
+      name: "Cloud Migration & Optimization Expert",
+      blurb: "Complete cloud transformation with cost optimization and security hardening",
+      price: "$5,000 - $25,000/month",
+      eta: "4-12 weeks",
+      category: "Cloud Infrastructure",
+      icon: Cloud,
       features: [
-        "Multi-cloud strategy and architecture design"
-        "Automated migration with zero downtime"
-        "Cost optimization with 30-50% savings"
-        "Security hardening and compliance setup"
-        "Performance monitoring and optimization"
-        "Disaster recovery and backup solutions"
+        "Multi-cloud strategy and architecture design",
+        "Automated migration with zero downtime",
+        "Cost optimization with 30-50% savings",
+        "Security hardening and compliance setup",
+        "Performance monitoring and optimization",
+        "Disaster recovery and backup solutions",
         "24/7 cloud operations support"
-      ]
+      ],
       benefits: [
-        "50% reduction in infrastructure costs"
-        "99.99% uptime guarantee"
-        "3x faster application deployment"
+        "50% reduction in infrastructure costs",
+        "99.99% uptime guarantee",
+        "3x faster application deployment",
         "Complete security compliance"
-      ]
-      useCases: ["Enterprise companies", "SaaS providers", "E-commerce platforms", "Healthcare systems"]
-      marketSize: "$623.3B cloud computing market"
+      ],
+      useCases: ["Enterprise companies", "SaaS providers", "E-commerce platforms", "Healthcare systems"],
+      marketSize: "$623.3B cloud computing market",
       link: "/contact"
-    }
+    },
     {
-      id: "zero-trust-security"
-      name: "Zero Trust Security Framework"
-      blurb: "Enterprise-grade security architecture with continuous verification"
-      price: "$3,500 - $18,000/month"
-      eta: "3-8 weeks"
-      category: "Cybersecurity"
-      icon: Shield
+      id: "zero-trust-security",
+      name: "Zero Trust Security Framework",
+      blurb: "Enterprise-grade security architecture with continuous verification",
+      price: "$3,500 - $18,000/month",
+      eta: "3-8 weeks",
+      category: "Cybersecurity",
+      icon: Shield,
       features: [
-        "Identity and access management (IAM) setup"
-        "Network segmentation and micro-segmentation"
-        "Endpoint detection and response (EDR)"
-        "Security information and event management (SIEM)"
-        "Multi-factor authentication (MFA) implementation"
-        "Continuous security monitoring"
+        "Identity and access management (IAM) setup",
+        "Network segmentation and micro-segmentation",
+        "Endpoint detection and response (EDR)",
+        "Security information and event management (SIEM)",
+        "Multi-factor authentication (MFA) implementation",
+        "Continuous security monitoring",
         "Incident response automation"
-      ]
+      ],
       benefits: [
-        "95% reduction in security incidents"
-        "100% compliance with industry standards"
-        "Real-time threat detection and response"
+        "95% reduction in security incidents",
+        "100% compliance with industry standards",
+        "Real-time threat detection and response",
         "Automated security policy enforcement"
-      ]
-      useCases: ["Financial institutions", "Government agencies", "Healthcare organizations", "Large enterprises"]
-      marketSize: "$366.1B cybersecurity market"
+      ],
+      useCases: ["Financial institutions", "Government agencies", "Healthcare organizations", "Large enterprises"],
+      marketSize: "$366.1B cybersecurity market",
       link: "/contact"
-    }
+    },
     {
-      id: "devops-automation"
-      name: "DevOps Automation Platform"
-      blurb: "Complete CI/CD pipeline with infrastructure as code and monitoring"
-      price: "$2,500 - $12,000/month"
-      eta: "3-6 weeks"
-      category: "DevOps & Automation"
-      icon: Zap
+      id: "devops-automation",
+      name: "DevOps Automation Platform",
+      blurb: "Complete CI/CD pipeline with infrastructure as code and monitoring",
+      price: "$2,500 - $12,000/month",
+      eta: "3-6 weeks",
+      category: "DevOps & Automation",
+      icon: Zap,
       features: [
         "CI/CD pipeline setup with automated testing"
         "Infrastructure as Code (IaC) with Terraform"
@@ -102,15 +101,15 @@ export default function ITServices(): React.JSX.Element {
         "Performance monitoring and alerting"
         "Security scanning and compliance checks"
         "Developer productivity tools integration"
-      ]
+      ],
       benefits: [
         "10x faster deployment cycles"
         "80% reduction in deployment failures"
         "50% improvement in developer productivity"
         "Automated quality assurance"
-      ]
-      useCases: ["Software companies", "Tech startups", "E-commerce platforms", "Financial services"]
-      marketSize: "$10.3B DevOps market"
+      ],
+      useCases: ["Software companies", "Tech startups", "E-commerce platforms", "Financial services"],
+      marketSize: "$10.3B DevOps market",
       link: "/contact"
     }
     {
