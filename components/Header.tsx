@@ -13,21 +13,17 @@ export default function Header() {
       href: '/services',
       submenu: [
         { name: 'All Services', href: '/services' },
-        { name: 'AI Services', href: '/ai-services' },
+        { name: 'AI Services', href: '/services/ai-services' },
         { name: 'Micro SaaS', href: '/services/micro-saas' },
-        { name: 'IT Services', href: '/services/it-services-comprehensive' },
-        { name: 'AI Content Tools', href: '/services/ai-powered-content-tools' },
-        { name: 'Telemedicine Platform', href: '/services/telemedicine-platform' },
-        { name: 'Remote Collaboration', href: '/services/remote-collaboration-suite' },
-        { name: 'API Integration', href: '/services/api-integration-platform' },
-        { name: 'Customer Insights', href: '/services/ai-customer-insights-platform' },
-        { name: 'Blockchain Solutions', href: '/services/blockchain-solutions' },
-        { name: 'Quantum Computing', href: '/services/ai-quantum-computing-2026' },
-        { name: 'Additional Services', href: '/additional-services' },
-        { name: 'Comprehensive Services', href: '/comprehensive-services' },
-        { name: 'Cloud Migration', href: '/services/cloud-migration-service' },
-        { name: 'Cybersecurity', href: '/services/cybersecurity-solutions' },
-        { name: 'Data Analytics', href: '/services/data-analytics-business-intelligence' }
+        { name: 'IT Services', href: '/services/it-services' },
+        { name: 'AI Social Media Scheduler', href: '/services/micro-saas/ai-social-media-scheduler' },
+        { name: 'AI Email Marketing Automation', href: '/services/micro-saas/ai-email-marketing-automation' },
+        { name: 'AI Project Management Platform', href: '/services/micro-saas/ai-project-management-platform' },
+        { name: 'AIOps Platform', href: '/services/it-services/aiops-platform' },
+        { name: 'Cloud-Native DevOps Platform', href: '/services/it-services/cloud-native-devops-platform' },
+        { name: 'AI Content Optimization', href: '/services/ai-content-optimization-platform' },
+        { name: 'AI Lead Scoring API', href: '/services/micro-saas/ai-lead-scoring-api' },
+        { name: 'AI Cybersecurity Automation', href: '/services/ai-cybersecurity-automation-suite' }
       ]
     },
     { 
