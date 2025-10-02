@@ -304,8 +304,7 @@ class AdvancedSEOOptimizer {
    * Generate recommendations
    */
   private generateRecommendations(
-    metrics: SEOMetrics,
-    options: any
+    metrics: SEOMetrics
   ): SEORecommendation[] {
     const recommendations: SEORecommendation[] = [];
 
@@ -423,7 +422,7 @@ class AdvancedSEOOptimizer {
   /**
    * Identify SEO issues
    */
-  private identifyIssues(metrics: SEOMetrics, options: any): string[] {
+  private identifyIssues(metrics: SEOMetrics): string[] {
     const issues: string[] = [];
 
     if (metrics.titleScore < 50) issues.push('Title tag is poorly optimized');
@@ -440,7 +439,7 @@ class AdvancedSEOOptimizer {
   /**
    * Identify SEO strengths
    */
-  private identifyStrengths(metrics: SEOMetrics, options: any): string[] {
+  private identifyStrengths(metrics: SEOMetrics): string[] {
     const strengths: string[] = [];
 
     if (metrics.titleScore >= 80) strengths.push('Excellent title tag optimization');
@@ -497,7 +496,7 @@ class AdvancedSEOOptimizer {
   /**
    * Optimize title
    */
-  private optimizeTitle(title: string, keywords: string[]): string {
+  private optimizeTitle(title: string): string {
     if (!title) return '';
     
     // Truncate if too long
@@ -511,7 +510,7 @@ class AdvancedSEOOptimizer {
   /**
    * Optimize description
    */
-  private optimizeDescription(description: string, keywords: string[]): string {
+  private optimizeDescription(description: string): string {
     if (!description) return '';
 
     // Truncate if too long

@@ -317,7 +317,7 @@ class SEOAuditor {
       try {
         const data = JSON.parse(script.textContent || '');
         structuredData.push(data);
-      } catch (e) {
+      } catch {
         this.addIssue('error', 'structured-data', 'Invalid JSON-LD structured data', 'script[type="application/ld+json"]', 'Fix JSON syntax in structured data', 'high');
       }
     });

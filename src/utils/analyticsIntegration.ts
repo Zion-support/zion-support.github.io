@@ -155,7 +155,7 @@ class AnalyticsIntegration {
     // Load Mixpanel
     (function(f: any, b: any) {
       if (!b.__SV) {
-        var e, g, i, h;
+        var i, h;
         window.mixpanel = b;
         b._i = [];
         b.init = function(e: any, f: any, c: any) {
