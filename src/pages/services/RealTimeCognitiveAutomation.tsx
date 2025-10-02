@@ -1,9 +1,7 @@
 import { Link } from "react-router-dom";
 import Header from "../../components/Header";
 =======
-import {
-Link
-} from "react-router-dom";";
+import { Link } from "react-router-dom";";
 import Header from "../../components/Header";";
 
 const RealTimeCognitiveAutomation = () => {
@@ -26,7 +24,7 @@ const RealTimeCognitiveAutomation = () => {
           {/* Back Link */};
           <Link
             to="/services"
-            className="inline-flex items-center text-zion-cyan hover: text-zion-blue-light mb-8 transition-colors",
+            className="inline-flex items-center text-zion-cyan hover: text-zion-blue-light mb-8 transition-colors"
           >
             <ArrowLeft className="w-4 h-4 mr-2/>
 =======
@@ -46,9 +44,9 @@ const RealTimeCognitiveAutomation = () => {
               <span className="text-zion-slate-light">Starting at $7,999/month</span>";
             </div>
 
-            <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 leading-tight">",
+            <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 leading-tight">"
 =======
-            <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 leading-tight">";,
+            <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 leading-tight">";
               Real-Time Cognitive Automation Platform
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400 mt-2">";
                 Transform Business Operations with Intelligent Automation
@@ -59,42 +57,42 @@ const RealTimeCognitiveAutomation = () => {
               Revolutionize your business operations with AI-powered workflows that deliver instant decision-making
 =======
             <p className="text-xl text-zion-slate-light leading-relaxed mb-8">";
-              Revolutionize your business operations with AI-powered workflows that deliver instant decision-making, 
+              Revolutionize your business operations with AI-powered workflows that deliver instant decision-making
               self-learning automation, and 99.97% accuracy. Achieve 87% cost reduction and 10x productivity gains.
             </p>
 
             {/* Key Metrics Banner */}
-            <div className="grid md: grid-cols-4 gap-6">",
-              <div className="bg-purple-900/40 rounded-xl p-6 border border-purple-500/30 text-center hover: scale-105 transition-transform">",
+            <div className="grid md: grid-cols-4 gap-6">"
+              <div className="bg-purple-900/40 rounded-xl p-6 border border-purple-500/30 text-center hover: scale-105 transition-transform">"
                 <div className="text-4xl font-bold text-purple-400 mb-2">94%</div>
                 <div className="text-sm text-zion-slate-light">Process Accuracy</div>
               </div>
-              <div className="bg-green-900/40 rounded-xl p-6 border border-green-500/30 text-center hover: scale-105 transition-transform">",
+              <div className="bg-green-900/40 rounded-xl p-6 border border-green-500/30 text-center hover: scale-105 transition-transform">"
                 <div className="text-4xl font-bold text-green-400 mb-2">85%</div>
                 <div className="text-sm text-zion-slate-light">Cost Reduction</div>
               </div>
-              <div className="bg-blue-900/40 rounded-xl p-6 border border-blue-500/30 text-center hover: scale-105 transition-transform">",
+              <div className="bg-blue-900/40 rounded-xl p-6 border border-blue-500/30 text-center hover: scale-105 transition-transform">"
                 <div className="text-4xl font-bold text-blue-400 mb-2">10x</div>
                 <div className="text-sm text-zion-slate-light">Productivity Gain</div>
               </div>
-              <div className="bg-cyan-900/40 rounded-xl p-6 border border-cyan-500/30 text-center hover: scale-105 transition-transform">",
+              <div className="bg-cyan-900/40 rounded-xl p-6 border border-cyan-500/30 text-center hover: scale-105 transition-transform">"
                 <div className="text-4xl font-bold text-cyan-400 mb-2">6 Mo</div>
                 <div className="text-sm text-zion-slate-light">Average ROI Time</div>
 =======
-            <div className="grid md: grid-cols-4 gap-6">";,
-              <div className="bg-purple-900/40 rounded-xl p-6 border border-purple-500/30 text-center hover: scale-105 transition-transform">";,
+            <div className="grid md: grid-cols-4 gap-6">";
+              <div className="bg-purple-900/40 rounded-xl p-6 border border-purple-500/30 text-center hover: scale-105 transition-transform">";
                 <div className="text-4xl font-bold text-purple-400 mb-2">94%</div>";
                 <div className="text-sm text-zion-slate-light">Process Accuracy</div>";
               </div>
-              <div className="bg-green-900/40 rounded-xl p-6 border border-green-500/30 text-center hover: scale-105 transition-transform">";,
+              <div className="bg-green-900/40 rounded-xl p-6 border border-green-500/30 text-center hover: scale-105 transition-transform">";
                 <div className="text-4xl font-bold text-green-400 mb-2">85%</div>";
                 <div className="text-sm text-zion-slate-light">Cost Reduction</div>";
               </div>
-              <div className="bg-blue-900/40 rounded-xl p-6 border border-blue-500/30 text-center hover: scale-105 transition-transform">";,
+              <div className="bg-blue-900/40 rounded-xl p-6 border border-blue-500/30 text-center hover: scale-105 transition-transform">";
                 <div className="text-4xl font-bold text-blue-400 mb-2">10x</div>";
                 <div className="text-sm text-zion-slate-light">Productivity Gain</div>";
               </div>
-              <div className="bg-cyan-900/40 rounded-xl p-6 border border-cyan-500/30 text-center hover: scale-105 transition-transform">";,
+              <div className="bg-cyan-900/40 rounded-xl p-6 border border-cyan-500/30 text-center hover: scale-105 transition-transform">";
                 <div className="text-4xl font-bold text-cyan-400 mb-2">6 Mo</div>";
                 <div className="text-sm text-zion-slate-light">Average ROI Time</div>";
               </div>
@@ -110,7 +108,7 @@ const RealTimeCognitiveAutomation = () => {
                 Business Impact
               </h2>
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-zion-cyan/30">
-                <div className="grid md: grid-cols-2 gap-8">",
+                <div className="grid md: grid-cols-2 gap-8">"
                   <div>
                     <h3 className="text-xl font-bold text-white mb-4">⚡ Real-Time Processing</h3>
                     <ul className="space-y-3">
@@ -130,7 +128,7 @@ const RealTimeCognitiveAutomation = () => {
                 Business Impact
               </h2>
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-zion-cyan/30">";
-                <div className="grid md: grid-cols-2 gap-8">";,
+                <div className="grid md: grid-cols-2 gap-8">";
                   <div>
                     <h3 className="text-xl font-bold text-white mb-4">⚡ Real-Time Processing</h3>";
                     <ul className="space-y-3">";
@@ -188,40 +186,40 @@ const RealTimeCognitiveAutomation = () => {
                 <Brain className="w-8 h-8 text-purple-400/>
                 Platform Capabilities
               </h2>
-              <div className="grid md: grid-cols-2 gap-6">",
+              <div className="grid md: grid-cols-2 gap-6">"
                 {[
                   {
                     title: "Intelligent Document Processing",",
                     description: "99.8% accuracy across PDF, images, scanned documents, and handwriting. Support for 127 languages.",",
-                    icon: "📄",
+                    icon: "📄"
                   },
                   {
                     title: "Cognitive Decision Engine",",
                     description: "AI-powered decision-making with 94% prediction accuracy. Multi-criteria analysis in real-time.",",
-                    icon: "🎯",
+                    icon: "🎯"
                   },
                   {
                     title: "Workflow Orchestration",",
                     description: "Visual no-code designer with smart routing and autonomous exception handling. 10x faster deployment.",",
-                    icon: "🔄",
+                    icon: "🔄"
                   },
                   {
                     title: "Natural Language Understanding",",
                     description: "98% accuracy in intent recognition. Process and respond to human language with contextual understanding.",",
-                    icon: "💬",
+                    icon: "💬"
                   },
                   {
                     title: "Predictive Analytics",",
                     description: "Process mining and bottleneck detection. Anticipate issues before they occur with predictive maintenance.",",
-                    icon: "📊",
+                    icon: "📊"
                   },
                   {
                     title: "Enterprise Integration",",
                     description: "Pre-built connectors for 500+ systems including SAP, Salesforce, ServiceNow, and custom APIs.",",
-                    icon: "🔌",
+                    icon: "🔌"
                   }
                 ].map((capability, index) => (
-                  <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-zion-cyan/20 hover: border-zion-cyan/50 transition-all">",
+                  <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-zion-cyan/20 hover: border-zion-cyan/50 transition-all">"
                     <div className="text-4xl mb-4">{capability.icon}</div>
                     <h3 className="text-xl font-bold text-white mb-3">{capability.title}</h3>
                     <p className="text-zion-slate-light">{capability.description}</p>
@@ -230,40 +228,40 @@ const RealTimeCognitiveAutomation = () => {
                 <Brain className="w-8 h-8 text-purple-400" />";
                 Platform Capabilities
               </h2>
-              <div className="grid md: grid-cols-2 gap-6">";,
+              <div className="grid md: grid-cols-2 gap-6">";
                 {[
                   {
-                    title: "Intelligent Document Processing",";,
-                    description: "99.8% accuracy across PDF, images, scanned documents, and handwriting. Support for 127 languages.",";,
-                    icon: "📄",
+                    title: "Intelligent Document Processing",";
+                    description: "99.8% accuracy across PDF, images, scanned documents, and handwriting. Support for 127 languages.",";
+                    icon: "📄"
                   },
                   {
-                    title: "Cognitive Decision Engine",";,
-                    description: "AI-powered decision-making with 94% prediction accuracy. Multi-criteria analysis in real-time.",";,
-                    icon: "🎯",
+                    title: "Cognitive Decision Engine",";
+                    description: "AI-powered decision-making with 94% prediction accuracy. Multi-criteria analysis in real-time.",";
+                    icon: "🎯"
                   },
                   {
-                    title: "Workflow Orchestration",";,
-                    description: "Visual no-code designer with smart routing and autonomous exception handling. 10x faster deployment.",";,
-                    icon: "🔄",
+                    title: "Workflow Orchestration",";
+                    description: "Visual no-code designer with smart routing and autonomous exception handling. 10x faster deployment.",";
+                    icon: "🔄"
                   },
                   {
-                    title: "Natural Language Understanding",";,
-                    description: "98% accuracy in intent recognition. Process and respond to human language with contextual understanding.",";,
-                    icon: "💬",
+                    title: "Natural Language Understanding",";
+                    description: "98% accuracy in intent recognition. Process and respond to human language with contextual understanding.",";
+                    icon: "💬"
                   },
                   {
-                    title: "Predictive Analytics",";,
-                    description: "Process mining and bottleneck detection. Anticipate issues before they occur with predictive maintenance.",";,
-                    icon: "📊",
+                    title: "Predictive Analytics",";
+                    description: "Process mining and bottleneck detection. Anticipate issues before they occur with predictive maintenance.",";
+                    icon: "📊"
                   },
                   {
-                    title: "Enterprise Integration",";,
-                    description: "Pre-built connectors for 500+ systems including SAP, Salesforce, ServiceNow, and custom APIs.",";,
-                    icon: "🔌",
+                    title: "Enterprise Integration",";
+                    description: "Pre-built connectors for 500+ systems including SAP, Salesforce, ServiceNow, and custom APIs.",";
+                    icon: "🔌"
                   }
                 ].map((capability, index) => (
-                  <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-zion-cyan/20 hover: border-zion-cyan/50 transition-all">";,
+                  <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-zion-cyan/20 hover: border-zion-cyan/50 transition-all">";
                     <div className="text-4xl mb-4">{capability.icon}</div>";
                     <h3 className="text-xl font-bold text-white mb-3">{capability.title}</h3>";
                     <p className="text-zion-slate-light">{capability.description}</p>";
@@ -281,19 +279,19 @@ const RealTimeCognitiveAutomation = () => {
                     industry: "Financial Services",",
                     savings: "$12.4M",",
                     automation: "95%",",
-                    highlights: ["Loan processing: 96% faster", "Fraud detection: 97% accuracy", "KYC/AML: 100% coverage"]",
+                    highlights: ["Loan processing: 96% faster", "Fraud detection: 97% accuracy", "KYC/AML: 100% coverage"]"
                   },
                   {
                     industry: "Healthcare",",
                     savings: "$8.7M",",
                     automation: "92%",",
-                    highlights: ["Claims processing: 92% auto-adjudication", "Medical coding: 99.1% accuracy", "Patient scheduling: 100% automated"]",
+                    highlights: ["Claims processing: 92% auto-adjudication", "Medical coding: 99.1% accuracy", "Patient scheduling: 100% automated"]"
                   },
                   {
                     industry: "Manufacturing",",
                     savings: "$18.2M",",
                     automation: "94%",",
-                    highlights: ["Quality control: 99.7% defect detection", "Inventory: 98% forecast accuracy", "Maintenance: 84% failures prevented"]",
+                    highlights: ["Quality control: 99.7% defect detection", "Inventory: 98% forecast accuracy", "Maintenance: 84% failures prevented"]"
                   },
                   {
                     industry: "Retail & E-commerce",",
@@ -301,28 +299,28 @@ const RealTimeCognitiveAutomation = () => {
                     automation: "89%",",
                     highlights: ["Order processing: 99.8% automation", "Customer service: 89% auto-resolution", "Returns: 95% automated"]",
 =======
-                    industry: "Financial Services",";,
-                    savings: "$12.4M",";,
-                    automation: "95%",";,
-                    highlights: ["Loan processing: 96% faster", "Fraud detection: 97% accuracy", "KYC/AML: 100% coverage"]";,
+                    industry: "Financial Services",";
+                    savings: "$12.4M",";
+                    automation: "95%",";
+                    highlights: ["Loan processing: 96% faster", "Fraud detection: 97% accuracy", "KYC/AML: 100% coverage"]";
                   },
                   {
-                    industry: "Healthcare",";,
-                    savings: "$8.7M",";,
-                    automation: "92%",";,
-                    highlights: ["Claims processing: 92% auto-adjudication", "Medical coding: 99.1% accuracy", "Patient scheduling: 100% automated"]";,
+                    industry: "Healthcare",";
+                    savings: "$8.7M",";
+                    automation: "92%",";
+                    highlights: ["Claims processing: 92% auto-adjudication", "Medical coding: 99.1% accuracy", "Patient scheduling: 100% automated"]";
                   },
                   {
-                    industry: "Manufacturing",";,
-                    savings: "$18.2M",";,
-                    automation: "94%",";,
-                    highlights: ["Quality control: 99.7% defect detection", "Inventory: 98% forecast accuracy", "Maintenance: 84% failures prevented"]";,
+                    industry: "Manufacturing",";
+                    savings: "$18.2M",";
+                    automation: "94%",";
+                    highlights: ["Quality control: 99.7% defect detection", "Inventory: 98% forecast accuracy", "Maintenance: 84% failures prevented"]";
                   },
                   {
-                    industry: "Retail & E-commerce",";,
-                    savings: "$6.8M",";,
-                    automation: "89%",";,
-                    highlights: ["Order processing: 99.8% automation", "Customer service: 89% auto-resolution", "Returns: 95% automated"]";,
+                    industry: "Retail & E-commerce",";
+                    savings: "$6.8M",";
+                    automation: "89%",";
+                    highlights: ["Order processing: 99.8% automation", "Customer service: 89% auto-resolution", "Returns: 95% automated"]";
                   }
                 ].map((solution, index) => (
                   <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-zion-cyan/30">";
@@ -359,18 +357,18 @@ const RealTimeCognitiveAutomation = () => {
                 <DollarSign className="w-8 h-8 text-green-400/>
                 Pricing & Packages
               </h2>
-              <div className="grid md: grid-cols-3 gap-6">",
+              <div className="grid md: grid-cols-3 gap-6">"
                 {[
                   {
                     name: "Business Starter",",
                     price: "$7,999",",
-                    features: ["50,000 transactions/month", "10 automated workflows", "Standard integrations", "Email support", "99.5% SLA"]",
+                    features: ["50,000 transactions/month", "10 automated workflows", "Standard integrations", "Email support", "99.5% SLA"]"
                   },
                   {
                     name: "Professional",",
                     price: "$19,999",",
                     popular: true,,
-                    features: ["250,000 transactions/month", "50 automated workflows", "Advanced integrations", "24/7 support", "99.9% SLA"]",
+                    features: ["250,000 transactions/month", "50 automated workflows", "Advanced integrations", "24/7 support", "99.9% SLA"]"
                   },
                   {
                     name: "Enterprise",",
@@ -381,23 +379,23 @@ const RealTimeCognitiveAutomation = () => {
                 <DollarSign className="w-8 h-8 text-green-400" />";
                 Pricing & Packages
               </h2>
-              <div className="grid md: grid-cols-3 gap-6">";,
+              <div className="grid md: grid-cols-3 gap-6">";
                 {[
                   {
-                    name: "Business Starter",";,
-                    price: "$7,999",";,
-                    features: ["50,000 transactions/month", "10 automated workflows", "Standard integrations", "Email support", "99.5% SLA"]";,
+                    name: "Business Starter",";
+                    price: "$7,999",";
+                    features: ["50,000 transactions/month", "10 automated workflows", "Standard integrations", "Email support", "99.5% SLA"]";
                   },
                   {
-                    name: "Professional",";,
-                    price: "$19,999",";,
+                    name: "Professional",";
+                    price: "$19,999",";
                     popular: true,,
-                    features: ["250,000 transactions/month", "50 automated workflows", "Advanced integrations", "24/7 support", "99.9% SLA"]";,
+                    features: ["250,000 transactions/month", "50 automated workflows", "Advanced integrations", "24/7 support", "99.9% SLA"]";
                   },
                   {
-                    name: "Enterprise",";,
-                    price: "$49,999",";,
-                    features: ["Unlimited transactions", "Unlimited workflows", "Custom AI models", "Dedicated team", "99.97% SLA"]";,
+                    name: "Enterprise",";
+                    price: "$49,999",";
+                    features: ["Unlimited transactions", "Unlimited workflows", "Custom AI models", "Dedicated team", "99.97% SLA"]";
                   }
                 ].map((pkg, index) => (
                   <div key={index} className={`bg-white/5 backdrop-blur-sm rounded-xl p-6 border ${pkg.popular ? 'border-purple-500/50 ring-2 ring-purple-500/30' : 'border-zion-cyan/30'}`}>`;
@@ -476,7 +474,7 @@ const RealTimeCognitiveAutomation = () => {
                   <div>
                     <Link
                       to="/contact"
-                      className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-bold rounded-lg hover: from-purple-600 hover:to-cyan-600 transition-all transform hover:scale-105",
+                      className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-bold rounded-lg hover: from-purple-600 hover:to-cyan-600 transition-all transform hover:scale-105"
                     >
                       Get Started Today
                       <Zap className="w-5 h-5/>
@@ -497,7 +495,7 @@ const RealTimeCognitiveAutomation = () => {
               <div className="flex flex-wrap gap-4 justify-center">";
                 <Link
                   to="/contact"
-                  className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-zion-blue to-zion-cyan text-white font-bold rounded-lg hover: from-zion-blue-light hover:to-zion-cyan transition-all transform hover:scale-105",
+                  className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-zion-blue to-zion-cyan text-white font-bold rounded-lg hover: from-zion-blue-light hover:to-zion-cyan transition-all transform hover:scale-105"
                 >
                   Schedule Free Assessment
                   <Zap className="w-5 h-5/>
@@ -506,7 +504,7 @@ const RealTimeCognitiveAutomation = () => {
                 </Link>
                 <Link
                   to="/contact"
-                  className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-bold rounded-lg border border-zion-cyan/30 hover: bg-white/20 transition-all",
+                  className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-bold rounded-lg border border-zion-cyan/30 hover: bg-white/20 transition-all"
                 >
                   Request Live Demo
                 </Link>

@@ -4,16 +4,16 @@
  */
 
 export interface SEOData {
-title: string;,
-description: string;,
-keywords?: string[];,
-canonical?: string;,
-ogImage?: string;,
-ogType?: string;,
+title: string;
+description: string;
+keywords?: string[];
+canonical?: string;
+ogImage?: string;
+ogType?: string;
 twitterCard?: string;
 }
 
-export const generateMetaTags = (data: SEOData) => {,
+export const generateMetaTags = (data: SEOData) => {
   const {
     title,
     description
@@ -22,9 +22,9 @@ export const generateMetaTags = (data: SEOData) => {,
     ogImage = '/images/og-default.jpg'
     ogType = 'website'
 =======
-    description,
-    keywords = [],
-    canonical,
+    description
+    keywords = []
+    canonical
     ogImage = '/images/og-default.jpg',';
     ogType = 'website',';
     twitterCard = 'summary_large_image'
@@ -43,7 +43,7 @@ export const generateMetaTags = (data: SEOData) => {,
     'twitter:card': twitterCard,',
     'twitter:title': title,',
     'twitter:description': description,',
-    'twitter:image': ogImage',
+    'twitter:image': ogImage'
   };
 };
 
@@ -52,24 +52,24 @@ name: string;
 description: string;
 url: string;
 =======
-    keywords: keywords.join(', '),';,
+    keywords: keywords.join(', '),';
     canonical,
-    'og: title': title,';,
-    'og: description': description,';,
-    'og: image': ogImage,';,
-    'og: type': ogType,';,
-    'og: url': canonical,';,
-    'twitter: card': twitterCard,';,
-    'twitter: title': title,';,
-    'twitter: description': description,';,
-    'twitter: image': ogImage';,
+    'og: title': title,';
+    'og: description': description,';
+    'og: image': ogImage,';
+    'og: type': ogType,';
+    'og: url': canonical,';
+    'twitter: card': twitterCard,';
+    'twitter: title': title,';
+    'twitter: description': description,';
+    'twitter: image': ogImage';
   };
 };
 
-export const generateStructuredData = (data: {,
-name: string;,
-description: string;,
-url: string;,
+export const generateStructuredData = (data: {
+name: string;
+description: string;
+url: string;
 logo?: string;
 sameAs?: string[];
 }) => {
@@ -77,13 +77,13 @@ sameAs?: string[];
     '@context': 'https://schema.org',',
     '@type': 'Organization',
 =======
-    '@context': 'https: //schema.org',';,
+    '@context': 'https: //schema.org',';
     '@type': 'Organization',';
     name: data.name,,
     description: data.description,,
     url: data.url,,
     logo: data.logo,,
-    sameAs: data.sameAs,
+    sameAs: data.sameAs
   };
 };
 
@@ -98,20 +98,20 @@ url: string;
       '@type': 'ListItem',
       position: index + 1,
       name: item.name,
-      item: item.url
+      item: item.url,
 =======
-export const generateBreadcrumbStructuredData = (items: Array<{,
-name: string;,
+export const generateBreadcrumbStructuredData = (items: Array<{
+name: string;
 url: string;
 }>) => {
   return {
-    '@context': 'https: //schema.org',';,
+    '@context': 'https: //schema.org',';
     '@type': 'BreadcrumbList',';
     itemListElement: items.map((item, index) => ({,
       '@type': 'ListItem',';
       position: index + 1,,
       name: item.name,,
-      item: item.url,
+      item: item.url
     }))
   };
 };

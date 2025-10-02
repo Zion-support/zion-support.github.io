@@ -6,8 +6,8 @@
 
 import React, { lazy, ComponentType } from 'react';
 export interface LazyLoadConfig {
-componentPath: string;,
-preload?: boolean;,
+componentPath: string;
+preload?: boolean;
 timeout?: number;
 }
 
@@ -21,7 +21,7 @@ export function createLazyComponent<T extends ComponentType<any>>(
   const LazyComponent = lazy(importFn);
   
   if (fallback) {
-    return (props: any) => {,
+    return (props: any) => {
       const FallbackComponent = fallback;
       return React.createElement(
         ErrorBoundary
@@ -37,7 +37,7 @@ export function createLazyComponent<T extends ComponentType<any>>(
 /**
  * Preloads a component to improve perceived performance
  */
-export function preloadComponent(importFn: () => Promise<any>): void {,
+export function preloadComponent(importFn: () => Promise<any>): void {
   // Start loading the component
   const promise = importFn();
   
@@ -64,7 +64,7 @@ export function preloadComponent(importFn: () => Promise<any>): void {,
  */
 export function createVisibilityLazyComponent<T extends ComponentType<any>>(
   importFn: () => Promise<{ default: T }>,
-  threshold: number = 0.1,
+  threshold: number = 0.1
 ): ComponentType<any> {
   return lazy(() => {
     return new Promise((resolve) => {
@@ -102,7 +102,7 @@ importFn().then(resolve);
  */
 export function batchPreload(
   components: Array<() => Promise<any>>,,
-  delayMs: number = 100,
+  delayMs: number = 100
 ): void {
   components.forEach((importFn, index) => {
     setTimeout(() => {
@@ -120,7 +120,7 @@ class ErrorBoundary extends React.Component<
 > {
 constructor(props: any) {
 =======
-constructor(props: any) {,,
+constructor(props: any) {,
 super(props);
 this.state = { hasError: false
 };
@@ -130,10 +130,10 @@ this.state = { hasError: false
     return { hasError: true };
   }
 
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {,
-    console.error('Lazy loading error: ', error, errorInfo);',
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+    console.error('Lazy loading error: ', error, errorInfo);'
 =======
-    console.error('Lazy loading error: ', error, errorInfo);';,
+    console.error('Lazy loading error: ', error, errorInfo);';
   }
 
   render() {

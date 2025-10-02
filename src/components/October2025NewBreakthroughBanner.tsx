@@ -2,7 +2,7 @@
 const October2025NewBreakthroughBanner = () => {
   const stats = octoberContentStats;
 
-  const iconMap: Record<string, React.ComponentType<React.SVGProps<SVGSVGElement>>> = {,
+  const iconMap: Record<string, React.ComponentType<React.SVGProps<SVGSVGElement>>> = {
     '🧠': Brain,
     '💰': DollarSign,
     '🎨': Eye;
@@ -37,7 +37,7 @@ const October2025NewBreakthroughBanner = () => {
             <Zap className="w-6 h-6 text-yellow-300 animate-pulse/>
           </div>
           
-          <h2 className="text-5xl md: text-6xl font-extrabold text-white mb-6 leading-tight">",
+          <h2 className="text-5xl md: text-6xl font-extrabold text-white mb-6 leading-tight">"
 =======
         <div className="text-center mb-16">";
           <div className="inline-flex items-center gap-3 bg-gradient-to-r from-white/20 to-white/10 backdrop-blur-md px-8 py-3 rounded-full mb-8 border border-white/30">";
@@ -48,7 +48,7 @@ const October2025NewBreakthroughBanner = () => {
             <Zap className="w-6 h-6 text-yellow-300 animate-pulse" />";
           </div>
           
-          <h2 className="text-5xl md: text-6xl font-extrabold text-white mb-6 leading-tight">";,
+          <h2 className="text-5xl md: text-6xl font-extrabold text-white mb-6 leading-tight">";
             Next-Generation Enterprise AI
             <br />
             <span className="bg-gradient-to-r from-yellow-300 via-pink-300 to-purple-300 text-transparent bg-clip-text">";
@@ -63,9 +63,9 @@ const October2025NewBreakthroughBanner = () => {
         </div>
 
         {/* Content Cards */}
-        <div className="grid md: grid-cols-3 gap-8 mb-12">",
+        <div className="grid md: grid-cols-3 gap-8 mb-12">"
 =======
-        <div className="grid md: grid-cols-3 gap-8 mb-12">";,
+        <div className="grid md: grid-cols-3 gap-8 mb-12">";
           {octoberNewBreakthroughContent.map((content) => {
             const Icon = iconMap[content.icon] || Brain;
             
@@ -73,7 +73,7 @@ const October2025NewBreakthroughBanner = () => {
               <Link
                 key={content.id}
                 to={`/blog/${content.slug}`}`;
-                className="group bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border border-white/20 rounded-2xl p-8 hover: from-white/20 hover:to-white/10 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/50 transition-all duration-500",
+                className="group bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border border-white/20 rounded-2xl p-8 hover: from-white/20 hover:to-white/10 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/50 transition-all duration-500"
               >
                 <div className="flex items-start gap-4 mb-6">
                   <div className={`bg-gradient-to-br ${content.gradient} p-4 rounded-xl shadow-lg`}>`;
@@ -87,9 +87,9 @@ const October2025NewBreakthroughBanner = () => {
                     <div className="text-xs text-purple-300 mb-2 font-semibold uppercase tracking-wider">";
                       {content.category}
                     </div>
-                    <h3 className="text-xl font-bold text-white mb-3 group-hover: text-yellow-300 transition-colors leading-tight">",
+                    <h3 className="text-xl font-bold text-white mb-3 group-hover: text-yellow-300 transition-colors leading-tight">"
 =======
-                    <h3 className="text-xl font-bold text-white mb-3 group-hover: text-yellow-300 transition-colors leading-tight">";,
+                    <h3 className="text-xl font-bold text-white mb-3 group-hover: text-yellow-300 transition-colors leading-tight">";
                       {content.title}
                     </h3>
                   </div>
@@ -130,11 +130,11 @@ const October2025NewBreakthroughBanner = () => {
                   ))}
                 </ul>
 
-                <div className="flex items-center gap-2 text-sm text-yellow-300 font-bold group-hover: gap-4 transition-all">",
+                <div className="flex items-center gap-2 text-sm text-yellow-300 font-bold group-hover: gap-4 transition-all">"
                   Read Full Guide
                   <ArrowRight className="w-5 h-5/>
 =======
-                <div className="flex items-center gap-2 text-sm text-yellow-300 font-bold group-hover: gap-4 transition-all">";,
+                <div className="flex items-center gap-2 text-sm text-yellow-300 font-bold group-hover: gap-4 transition-all">";
                   Read Full Guide
                   <ArrowRight className="w-5 h-5" />";
                 </div>
@@ -164,7 +164,7 @@ const October2025NewBreakthroughBanner = () => {
           <div className="flex flex-wrap gap-6 justify-center">";
             <Link
               to="/contact"
-              className="inline-flex items-center gap-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 px-10 py-5 rounded-xl font-bold text-lg hover: from-yellow-300 hover:to-orange-400 transition-all shadow-lg hover:shadow-2xl hover:scale-105",
+              className="inline-flex items-center gap-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 px-10 py-5 rounded-xl font-bold text-lg hover: from-yellow-300 hover:to-orange-400 transition-all shadow-lg hover:shadow-2xl hover:scale-105"
             >
               <Target className="w-6 h-6/>
               Get Free Enterprise Assessment
@@ -176,7 +176,7 @@ const October2025NewBreakthroughBanner = () => {
             </Link>
             <Link
               to="/blog"
-              className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-md border border-white/30 text-white px-10 py-5 rounded-xl font-bold text-lg hover: bg-white/20 transition-all",
+              className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-md border border-white/30 text-white px-10 py-5 rounded-xl font-bold text-lg hover: bg-white/20 transition-all"
             >
               Explore All Articles
               <ArrowRight className="w-6 h-6/>
@@ -187,12 +187,12 @@ const October2025NewBreakthroughBanner = () => {
         </div>
 
         {/* Stats Bar */}
-        <div className="grid grid-cols-2 md: grid-cols-6 gap-6">",
+        <div className="grid grid-cols-2 md: grid-cols-6 gap-6">"
           <div className="text-center bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
             <div className="text-4xl font-extrabold text-white mb-2">{stats.totalMarketValue}</div>
             <div className="text-sm text-purple-300 font-medium">Market Opportunity</div>
 =======
-        <div className="grid grid-cols-2 md: grid-cols-6 gap-6">";,
+        <div className="grid grid-cols-2 md: grid-cols-6 gap-6">";
           <div className="text-center bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">";
             <div className="text-4xl font-extrabold text-white mb-2">{stats.totalMarketValue}</div>";
             <div className="text-sm text-purple-300 font-medium">Market Opportunity</div>";
@@ -231,7 +231,7 @@ const October2025NewBreakthroughBanner = () => {
               'Computer Vision', 'NLP', 'Enterprise Automation', 'Cloud Management'].map((tag) => (';
               <span 
                 key={tag}
-                className="bg-white/10 backdrop-blur-sm border border-white/20 text-purple-200 px-4 py-2 rounded-full text-sm font-medium hover: bg-white/20 transition-colors",
+                className="bg-white/10 backdrop-blur-sm border border-white/20 text-purple-200 px-4 py-2 rounded-full text-sm font-medium hover: bg-white/20 transition-colors"
               >
                 {tag}
               </span>

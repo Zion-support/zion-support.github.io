@@ -1,12 +1,6 @@
 import React, { Suspense, lazy } from 'react';
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route
-} from 'react-router-dom';
-import {
-  HelmetProvider
-} from 'react-helmet-async';
+import { BrowserRouter, as, Router, Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 
 // Pages
 import HomePage from './pages/HomePage';

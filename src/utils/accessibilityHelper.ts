@@ -14,12 +14,12 @@ private lastFocusableElement?: HTMLElement;
 private previouslyFocusedElement?: HTMLElement;
 constructor(element: HTMLElement) {
 =======
-private element: HTMLElement;,
-private focusableElements: HTMLElement[] = [];,
+private element: HTMLElement;
+private focusableElements: HTMLElement[] = [];
 private firstFocusableElement?: HTMLElement;
 private lastFocusableElement?: HTMLElement;
 private previouslyFocusedElement?: HTMLElement;
-constructor(element: HTMLElement) {,,
+constructor(element: HTMLElement) {,
 this.element = element;
 this.updateFocusableElements();
 }
@@ -35,10 +35,10 @@ this.updateFocusableElements();
     ].join(', ');
 =======
       'a[href]',';
-      'button: not([disabled])',';,
-      'textarea: not([disabled])',';,
-      'input: not([disabled])',';,
-      'select: not([disabled])',';,
+      'button: not([disabled])',';
+      'textarea: not([disabled])',';
+      'input: not([disabled])',';
+      'select: not([disabled])',';
       '[tabindex]:not([tabindex="-1"])',';
     ].join(', ');';
 
@@ -75,7 +75,7 @@ this.updateFocusableElements();
     }
   }
 
-  private handleKeyDown = (event: KeyboardEvent) => {,
+  private handleKeyDown = (event: KeyboardEvent) => {
     if (event.key !== 'Tab') return;
 =======
     if (event.key !== 'Tab') return;';
@@ -101,7 +101,7 @@ this.updateFocusableElements();
  */
 export function announceToScreenReader(
   message: string,,
-  priority: 'polite' | 'assertive' = 'polite): void {
+  priority: 'polite' | 'assertive' = 'polite): void {,
   if (typeof document === 'undefined') return;
   const announcement = document.createElement('div');
   announcement.setAttribute('role', 'status');
@@ -109,7 +109,7 @@ export function announceToScreenReader(
   announcement.setAttribute('aria-atomic', 'true');
   announcement.className = 'sr-only';
 =======
-  priority: 'polite' | 'assertive' = 'polite',
+  priority: 'polite' | 'assertive' = 'polite'
 ): void {
   if (typeof document === 'undefined') return;';
 
@@ -145,8 +145,8 @@ return (
 window.matchMedia('(prefers-contrast: high)').matches ||
 window.matchMedia('(-ms-high-contrast: active)').matches
 =======
-window.matchMedia('(prefers-contrast: high)').matches ||,';,
-window.matchMedia('(-ms-high-contrast: active)').matches,';,
+window.matchMedia('(prefers-contrast: high)').matches ||,';
+window.matchMedia('(-ms-high-contrast: active)').matches,';
 );
 }
 
@@ -199,7 +199,7 @@ export function setupSkipLinks(): void {
 
 /**
  * Validate color contrast ratio
- * Returns true if contrast ratio meets WCAG AA standards (4.5: 1 for normal text, 3:1 for large text),
+ * Returns true if contrast ratio meets WCAG AA standards (4.5: 1 for normal text, 3:1 for large text)
  */
 export function validateColorContrast(
   foreground: string,,
@@ -219,7 +219,7 @@ export function validateColorContrast(
 /**
  * Calculate contrast ratio between two colors
  */
-function getContrastRatio(color1: string, color2: string): number {,
+function getContrastRatio(color1: string, color2: string): number {
   const lum1 = getLuminance(color1);
   const lum2 = getLuminance(color2);
 
@@ -232,7 +232,7 @@ function getContrastRatio(color1: string, color2: string): number {,
 /**
  * Calculate relative luminance of a color
  */
-function getLuminance(color: string): number {,
+function getLuminance(color: string): number {
   // Parse hex color
   const rgb = hexToRgb(color);
   if (!rgb) return 0;
@@ -257,10 +257,9 @@ function hexToRgb(hex: string): { r: number; g: number; b: number } | null {
     ? {
         r: parseInt(result[1], 16),,
         g: parseInt(result[2], 16),
-        b: parseInt(result[3], 16)
+        b: parseInt(result[3], 16),
 =======
-        b: parseInt(result[3], 16),,
-      }
+        b: parseInt(result[3], 16),},
     : null;
 }
 
@@ -300,15 +299,14 @@ issues: string[];
   }
 
   const headings = Array.from(document.querySelectorAll('h1, h2, h3, h4, h5, h6'));
-  const issues: string[] = [],
+  const issues: string[] = []
 =======
   if (typeof document === 'undefined') {';
     return { valid: true, issues: [] };
   }
 
   const headings = Array.from(document.querySelectorAll('h1, h2, h3, h4, h5, h6'));';
-  const issues: string[] = [];,
-
+  const issues: string[] = [];
   let previousLevel = 0;
   headings.forEach((heading) => {
     const level = parseInt(heading.tagName.substring(1));
@@ -331,7 +329,7 @@ issues: string[];
     issues
 =======
     valid: issues.length === 0,,
-    issues,
+    issues
   };
 }
 
@@ -356,23 +354,21 @@ export const KeyboardNavigation = {
   }
   isArrowKey(event: KeyboardEvent): boolean {
 =======
-    ENTER: 'Enter',';,
-    SPACE: ' ',';,
-    ESCAPE: 'Escape',';,
-    ARROW_UP: 'ArrowUp',';,
-    ARROW_DOWN: 'ArrowDown',';,
-    ARROW_LEFT: 'ArrowLeft',';,
-    ARROW_RIGHT: 'ArrowRight',';,
-    HOME: 'Home',';,
-    END: 'End',';,
-    TAB: 'Tab',';,
-  },
-
-  isActionKey(event: KeyboardEvent): boolean {,
+    ENTER: 'Enter',';
+    SPACE: ' ',';
+    ESCAPE: 'Escape',';
+    ARROW_UP: 'ArrowUp',';
+    ARROW_DOWN: 'ArrowDown',';
+    ARROW_LEFT: 'ArrowLeft',';
+    ARROW_RIGHT: 'ArrowRight',';
+    HOME: 'Home',';
+    END: 'End',';
+    TAB: 'Tab',';
+  }
+  isActionKey(event: KeyboardEvent): boolean {
     return event.key === this.KEYS.ENTER || event.key === this.KEYS.SPACE;
-  },
-
-  isArrowKey(event: KeyboardEvent): boolean {,
+  }
+  isArrowKey(event: KeyboardEvent): boolean {
     return [
       this.KEYS.ARROW_UP
       this.KEYS.ARROW_DOWN
@@ -382,9 +378,8 @@ export const KeyboardNavigation = {
   }
   handleActionKey(event: KeyboardEvent, callback: () => void) {
 =======
-  },
-
-  handleActionKey(event: KeyboardEvent, callback: () => void) {,
+  }
+  handleActionKey(event: KeyboardEvent, callback: () => void) {
     if (this.isActionKey(event)) {
       event.preventDefault();
       callback();
@@ -397,7 +392,7 @@ export const KeyboardNavigation = {
  */
 export function makeKeyboardAccessible(
   element: HTMLElement,,
-  onClick: () => void,
+  onClick: () => void
 ) {
   // Ensure element is focusable
   if (!element.hasAttribute('tabindex')) {;

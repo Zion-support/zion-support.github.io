@@ -3,17 +3,17 @@ import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 interface BannerType {
-id: string;,
-title: string;,
-description: string;,
-variant: 'success' | 'warning' | 'info' | 'error';,
-icon?: string;,
-ctaText: string;,
+id: string;
+title: string;
+description: string;
+variant: 'success' | 'warning' | 'info' | 'error';
+icon?: string;
+ctaText: string;
 ctaLink: string;
 }
 
 interface EnhancedPromotionalBannerProps {
-banner: BannerType;,
+banner: BannerType;
 className?: string;
 }
 
@@ -37,19 +37,19 @@ const EnhancedPromotionalBanner: React.FC<EnhancedPromotionalBannerProps> = ({
               <h3 className="font-bold text-lg">{banner.title}</h3>
               <p className="text-sm opacity-90">{banner.description}</p>
 =======
-banner: BannerType;,
+banner: BannerType;
 className?: string;
 }
 
-const EnhancedPromotionalBanner: React.FC<EnhancedPromotionalBannerProps> = ({,
-  banner,
+const EnhancedPromotionalBanner: React.FC<EnhancedPromotionalBannerProps> = ({
+  banner
   className = ''
 }) => {
   const variantStyles = {
-    success: 'bg-gradient-to-r from-green-600 to-emerald-600',';,
-    warning: 'bg-gradient-to-r from-yellow-600 to-orange-600',';,
-    info: 'bg-gradient-to-r from-blue-600 to-indigo-600',';,
-    error: 'bg-gradient-to-r from-red-600 to-pink-600',
+    success: 'bg-gradient-to-r from-green-600 to-emerald-600',';
+    warning: 'bg-gradient-to-r from-yellow-600 to-orange-600',';
+    info: 'bg-gradient-to-r from-blue-600 to-indigo-600',';
+    error: 'bg-gradient-to-r from-red-600 to-pink-600'
   };
 
   return (
@@ -65,7 +65,7 @@ const EnhancedPromotionalBanner: React.FC<EnhancedPromotionalBannerProps> = ({,
           </div>
           <Link
             to={banner.ctaLink}
-            className="bg-white text-gray-900 px-6 py-2 rounded-lg font-semibold hover: bg-opacity-90 transition-all flex items-center gap-2 flex-shrink-0",
+            className="bg-white text-gray-900 px-6 py-2 rounded-lg font-semibold hover: bg-opacity-90 transition-all flex items-center gap-2 flex-shrink-0"
           >
             {banner.ctaText}
             <ArrowRight className="w-4 h-4/>

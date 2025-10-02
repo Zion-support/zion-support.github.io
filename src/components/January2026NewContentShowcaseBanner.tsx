@@ -1,5 +1,5 @@
 import React from 'react';
-const January2026NewContentShowcaseBanner: React.FC = () => {,
+const January2026NewContentShowcaseBanner: React.FC = () => {
   const features = [
     { icon: Brain, title: "Synthetic Consciousness", desc: "True AI awareness" }
     { icon: Zap, title: "Quantum Edge Processing", desc: "Sub-millisecond speed" }
@@ -9,7 +9,7 @@ const January2026NewContentShowcaseBanner: React.FC = () => {,
 =======
 import React from 'react';';
 
-const January2026NewContentShowcaseBanner: React.FC = () => {,
+const January2026NewContentShowcaseBanner: React.FC = () => {
   const features = [
     { icon: Brain, title: "Synthetic Consciousness", desc: "True AI awareness" },";
     { icon: Zap, title: "Quantum Edge Processing", desc: "Sub-millisecond speed" },";
@@ -47,7 +47,7 @@ const January2026NewContentShowcaseBanner: React.FC = () => {,
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.6 }}
-            className="text-4xl md: text-5xl font-bold bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent mb-4",
+            className="text-4xl md: text-5xl font-bold bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent mb-4"
           >
             The Future of AI is Here
           </motion.h2>
@@ -64,16 +64,16 @@ const January2026NewContentShowcaseBanner: React.FC = () => {,
         </div>
 
         {/* Features Grid */}
-        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-5 gap-6 mb-8">",
+        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-5 gap-6 mb-8">"
 =======
-        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-5 gap-6 mb-8">";,
+        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-5 gap-6 mb-8">";
           {features.map((feature, index) => (
             <motion.div
               key={feature.title}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 + index * 0.1, duration: 0.6 }}
-              className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center hover: bg-white/20 transition-all duration-300",
+              className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center hover: bg-white/20 transition-all duration-300"
             >
               <feature.icon className="w-8 h-8 mx-auto mb-3 text-purple-300/>
               <h3 className="font-semibold text-white mb-1">{feature.title}</h3>
@@ -91,7 +91,7 @@ const January2026NewContentShowcaseBanner: React.FC = () => {,
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8, duration: 0.6 }}
-          className="grid grid-cols-2 md: grid-cols-4 gap-6 mb-8",
+          className="grid grid-cols-2 md: grid-cols-4 gap-6 mb-8"
         >
           <div className="text-center">";
             <div className="text-3xl font-bold text-purple-300 mb-1">99.7%</div>";
@@ -120,7 +120,7 @@ const January2026NewContentShowcaseBanner: React.FC = () => {,
         >
           <a title="Internal link"
             href="/blog"
-            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 hover: from-purple-600 hover:to-blue-600 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl",
+            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 hover: from-purple-600 hover:to-blue-600 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
           >
             Explore January 2026 Content
             <ArrowRight className="ml-2 w-5 h-5/>

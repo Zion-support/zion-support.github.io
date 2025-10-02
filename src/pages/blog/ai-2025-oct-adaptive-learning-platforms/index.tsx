@@ -1,16 +1,14 @@
 import { Link } from "react-router-dom";
 import Header from "../../../components/Header";
 =======
-import {
-Link
-} from "react-router-dom";";
+import { Link } from "react-router-dom";";
 import Header from "../../../components/Header";";
 
 const AdaptiveLearningPlatforms = () => {
   return (
     <>
       <Helmet>
-        <title>AI-Powered Adaptive Learning Platforms 2025: Personalized Enterprise Training at Scale | Zion Tech Group</title>,
+        <title>AI-Powered Adaptive Learning Platforms 2025: Personalized Enterprise Training at Scale | Zion Tech Group</title>
         <meta
           name="description"
           content="Revolutionary adaptive learning systems using AI to personalize enterprise training. Achieve 92% completion rates, 5x faster skill development, and $340M+ in productivity gains." /><meta
@@ -26,7 +24,7 @@ const AdaptiveLearningPlatforms = () => {
           {/* Back Link */};
           <Link
             to="/blog"
-            className="inline-flex items-center text-zion-cyan hover: text-zion-blue-light mb-8 transition-colors",
+            className="inline-flex items-center text-zion-cyan hover: text-zion-blue-light mb-8 transition-colors"
           >
             <ArrowLeft className="w-4 h-4 mr-2/>
 =======
@@ -43,11 +41,11 @@ const AdaptiveLearningPlatforms = () => {
               <span className="text-zion-slate-light">12 min read</span>";
             </div>
 
-            <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 leading-tight">",
-              AI-Powered Adaptive Learning Platforms 2025: <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">",
+            <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 leading-tight">"
+              AI-Powered Adaptive Learning Platforms 2025: <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">"
 =======
-            <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 leading-tight">";,
-              AI-Powered Adaptive Learning Platforms 2025: <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">";,
+            <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 leading-tight">";
+              AI-Powered Adaptive Learning Platforms 2025: <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">";
                 Personalized Enterprise Training at Scale
               </span>
             </h1>
@@ -76,14 +74,14 @@ const AdaptiveLearningPlatforms = () => {
             {/* Key Metrics */}
             <div className="bg-gradient-to-r from-blue-900/40 to-cyan-900/40 rounded-2xl p-8 border border-blue-500/30">
               <h2 className="text-2xl font-bold text-white mb-6">📊 Adaptive Learning Impact</h2>
-              <div className="grid md: grid-cols-4 gap-6">",
+              <div className="grid md: grid-cols-4 gap-6">"
                 <div className="text-center">
                   <div className="text-4xl font-bold text-blue-400 mb-2">92%</div>
                   <div className="text-sm">Course Completion</div>
 =======
             <div className="bg-gradient-to-r from-blue-900/40 to-cyan-900/40 rounded-2xl p-8 border border-blue-500/30">";
               <h2 className="text-2xl font-bold text-white mb-6">📊 Adaptive Learning Impact</h2>";
-              <div className="grid md: grid-cols-4 gap-6">";,
+              <div className="grid md: grid-cols-4 gap-6">";
                 <div className="text-center">";
                   <div className="text-4xl font-bold text-blue-400 mb-2">92%</div>";
                   <div className="text-sm">Course Completion</div>";
@@ -115,7 +113,7 @@ const AdaptiveLearningPlatforms = () => {
                 By personalizing learning paths in real-time based on individual performance, learning styles
 =======
               <p className="text-lg leading-relaxed mb-4">";
-                By personalizing learning paths in real-time based on individual performance, learning styles, 
+                By personalizing learning paths in real-time based on individual performance, learning styles
                 and career goals, adaptive platforms achieve 92% completion rates—a 4x improvement over 
                 traditional methods.
               </p>
@@ -146,10 +144,10 @@ const AdaptiveLearningPlatforms = () => {
                     including strengths, gaps, and optimal learning modalities.
                   </p>
                   <div className="bg-blue-900/20 rounded-lg p-4 border border-blue-500/30">
-                    <strong className="text-blue-400">Technology: </strong> GPT-4 for natural language ",
+                    <strong className="text-blue-400">Technology: </strong> GPT-4 for natural language "
 =======
                   <div className="bg-blue-900/20 rounded-lg p-4 border border-blue-500/30">";
-                    <strong className="text-blue-400">Technology: </strong> GPT-4 for natural language ";,
+                    <strong className="text-blue-400">Technology: </strong> GPT-4 for natural language ";
                     assessments, computer vision for practical skill evaluation, psychometric analysis for 
                     learning style detection.
                   </div>
@@ -170,10 +168,10 @@ const AdaptiveLearningPlatforms = () => {
                     adjusts difficulty. High performers skip redundant content and advance faster.
                   </p>
                   <div className="bg-cyan-900/20 rounded-lg p-4 border border-cyan-500/30">
-                    <strong className="text-cyan-400">Result: </strong> 67% reduction in time-to-competency ",
+                    <strong className="text-cyan-400">Result: </strong> 67% reduction in time-to-competency "
 =======
                   <div className="bg-cyan-900/20 rounded-lg p-4 border border-cyan-500/30">";
-                    <strong className="text-cyan-400">Result: </strong> 67% reduction in time-to-competency ";,
+                    <strong className="text-cyan-400">Result: </strong> 67% reduction in time-to-competency ";
                     while improving knowledge retention by 89%.
                   </div>
                 </div>
@@ -193,13 +191,13 @@ const AdaptiveLearningPlatforms = () => {
                     to individual skill levels.
                   </p>
                   <div className="bg-purple-900/20 rounded-lg p-4 border border-purple-500/30">
-                    <strong className="text-purple-400">Innovation: </strong> GPT-4 generates role-specific ",
+                    <strong className="text-purple-400">Innovation: </strong> GPT-4 generates role-specific "
 =======
                     to the learner's role, industry, and experience level. Interactive simulations adapt ';
                     to individual skill levels.
                   </p>
                   <div className="bg-purple-900/20 rounded-lg p-4 border border-purple-500/30">";
-                    <strong className="text-purple-400">Innovation: </strong> GPT-4 generates role-specific ";,
+                    <strong className="text-purple-400">Innovation: </strong> GPT-4 generates role-specific ";
                     case studies, DALL-E 3 creates custom visuals, and voice AI provides personalized tutoring.
                   </div>
                 </div>
@@ -219,10 +217,10 @@ const AdaptiveLearningPlatforms = () => {
                     optimal learning schedules based on engagement patterns.
                   </p>
                   <div className="bg-green-900/20 rounded-lg p-4 border border-green-500/30">
-                    <strong className="text-green-400">Impact: </strong> 92% course completion rate vs. ",
+                    <strong className="text-green-400">Impact: </strong> 92% course completion rate vs. "
 =======
                   <div className="bg-green-900/20 rounded-lg p-4 border border-green-500/30">";
-                    <strong className="text-green-400">Impact: </strong> 92% course completion rate vs. ";,
+                    <strong className="text-green-400">Impact: </strong> 92% course completion rate vs. ";
                     23% industry average through predictive intervention.
                   </div>
                 </div>
@@ -232,7 +230,7 @@ const AdaptiveLearningPlatforms = () => {
             {/* Use Cases */}
             <section>
               <h2 className="text-3xl font-bold text-white mb-6">🎯 Enterprise Use Cases</h2>
-              <div className="grid md: grid-cols-2 gap-6">",
+              <div className="grid md: grid-cols-2 gap-6">"
                 <div className="bg-gradient-to-br from-blue-900/40 to-cyan-900/40 rounded-xl p-6 border border-blue-500/30">
                   <h3 className="text-xl font-bold text-white mb-3">Technical Skills Development</h3>
                   <p className="mb-3">
@@ -248,7 +246,7 @@ const AdaptiveLearningPlatforms = () => {
                       <CheckCircle className="w-4 h-4 text-green-400/>
 =======
               <h2 className="text-3xl font-bold text-white mb-6">🎯 Enterprise Use Cases</h2>";
-              <div className="grid md: grid-cols-2 gap-6">";,
+              <div className="grid md: grid-cols-2 gap-6">";
                 <div className="bg-gradient-to-br from-blue-900/40 to-cyan-900/40 rounded-xl p-6 border border-blue-500/30">";
                   <h3 className="text-xl font-bold text-white mb-3">Technical Skills Development</h3>";
                   <p className="mb-3">";
@@ -310,7 +308,7 @@ const AdaptiveLearningPlatforms = () => {
                 <div className="bg-gradient-to-br from-green-900/40 to-teal-900/40 rounded-xl p-6 border border-green-500/30">";
                   <h3 className="text-xl font-bold text-white mb-3">Compliance Training</h3>";
                   <p className="mb-3">";
-                    Transform mandatory compliance training from boring checkbox exercises into engaging, 
+                    Transform mandatory compliance training from boring checkbox exercises into engaging
                     personalized experiences with scenario-based learning.
                   </p>
                   <div className="text-sm space-y-1">";
@@ -357,54 +355,54 @@ const AdaptiveLearningPlatforms = () => {
             <section>
               <h2 className="text-3xl font-bold text-white mb-6">💰 Enterprise ROI Analysis</h2>
               <div className="bg-gradient-to-r from-green-900/40 to-blue-900/40 rounded-xl p-8 border border-green-500/30">
-                <div className="grid md: grid-cols-2 gap-8">",
+                <div className="grid md: grid-cols-2 gap-8">"
                   <div>
                     <h3 className="text-xl font-bold text-white mb-4">Investment (1,000 learners)</h3>
                     <ul className="space-y-2 text-sm">
                       <li className="flex justify-between">
-                        <span>Platform licensing: </span>,
+                        <span>Platform licensing: </span>
                         <span className="text-white font-semibold">$240K/year</span>
                       </li>
                       <li className="flex justify-between">
-                        <span>Content migration: </span>,
+                        <span>Content migration: </span>
                         <span className="text-white font-semibold">$180K one-time</span>
                       </li>
                       <li className="flex justify-between">
-                        <span>Integration & training: </span>,
+                        <span>Integration & training: </span>
                         <span className="text-white font-semibold">$120K one-time</span>
                       </li>
                       <li className="flex justify-between">
-                        <span>Ongoing support: </span>,
+                        <span>Ongoing support: </span>
                         <span className="text-white font-semibold">$60K/year</span>
                       </li>
                       <li className="flex justify-between border-t border-white/20 pt-2 mt-2">
-                        <strong>First Year Total: </strong>,
+                        <strong>First Year Total: </strong>
                         <strong className="text-white">$600K</strong>
 =======
               <h2 className="text-3xl font-bold text-white mb-6">💰 Enterprise ROI Analysis</h2>";
               <div className="bg-gradient-to-r from-green-900/40 to-blue-900/40 rounded-xl p-8 border border-green-500/30">";
-                <div className="grid md: grid-cols-2 gap-8">";,
+                <div className="grid md: grid-cols-2 gap-8">";
                   <div>
                     <h3 className="text-xl font-bold text-white mb-4">Investment (1,000 learners)</h3>";
                     <ul className="space-y-2 text-sm">";
                       <li className="flex justify-between">";
-                        <span>Platform licensing: </span>,
+                        <span>Platform licensing: </span>
                         <span className="text-white font-semibold">$240K/year</span>";
                       </li>
                       <li className="flex justify-between">";
-                        <span>Content migration: </span>,
+                        <span>Content migration: </span>
                         <span className="text-white font-semibold">$180K one-time</span>";
                       </li>
                       <li className="flex justify-between">";
-                        <span>Integration & training: </span>,
+                        <span>Integration & training: </span>
                         <span className="text-white font-semibold">$120K one-time</span>";
                       </li>
                       <li className="flex justify-between">";
-                        <span>Ongoing support: </span>,
+                        <span>Ongoing support: </span>
                         <span className="text-white font-semibold">$60K/year</span>";
                       </li>
                       <li className="flex justify-between border-t border-white/20 pt-2 mt-2">";
-                        <strong>First Year Total: </strong>,
+                        <strong>First Year Total: </strong>
                         <strong className="text-white">$600K</strong>";
                       </li>
                     </ul>
@@ -417,11 +415,11 @@ const AdaptiveLearningPlatforms = () => {
                         <span className="text-green-400 font-semibold">$2.1M</span>";
                       </li>
                       <li className="flex justify-between">
-                        <span>Faster time-to-productivity: </span>,
+                        <span>Faster time-to-productivity: </span>
                         <span className="text-green-400 font-semibold">$1.8M</span>
 =======
                       <li className="flex justify-between">";
-                        <span>Faster time-to-productivity: </span>,
+                        <span>Faster time-to-productivity: </span>
                         <span className="text-green-400 font-semibold">$1.8M</span>";
                       </li>
                       <li className="flex justify-between">";
@@ -433,11 +431,11 @@ const AdaptiveLearningPlatforms = () => {
                         <span className="text-green-400 font-semibold">$1.3M</span>";
                       </li>
                       <li className="flex justify-between border-t border-white/20 pt-2 mt-2">
-                        <strong>Total Value: </strong>,
+                        <strong>Total Value: </strong>
                         <strong className="text-green-400">$7.6M</strong>
 =======
                       <li className="flex justify-between border-t border-white/20 pt-2 mt-2">";
-                        <strong>Total Value: </strong>,
+                        <strong>Total Value: </strong>
                         <strong className="text-green-400">$7.6M</strong>";
                       </li>
                     </ul>
@@ -445,11 +443,11 @@ const AdaptiveLearningPlatforms = () => {
                 </div>
                 <div className="mt-8 text-center">
                   <div className="text-3xl font-bold text-green-400">1,167% ROI in Year 1</div>
-                  <div className="text-sm mt-2">Payback period: 1.2 months • $7.0M net value</div>",
+                  <div className="text-sm mt-2">Payback period: 1.2 months • $7.0M net value</div>"
 =======
                 <div className="mt-8 text-center">";
                   <div className="text-3xl font-bold text-green-400">1,167% ROI in Year 1</div>";
-                  <div className="text-sm mt-2">Payback period: 1.2 months • $7.0M net value</div>";,
+                  <div className="text-sm mt-2">Payback period: 1.2 months • $7.0M net value</div>";
                 </div>
               </div>
             </section>
@@ -459,13 +457,13 @@ const AdaptiveLearningPlatforms = () => {
               <h2 className="text-3xl font-bold text-white mb-6">🚀 90-Day Implementation Plan</h2>
               <div className="space-y-4">
                 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border-l-4 border-blue-400">
-                  <h3 className="text-xl font-bold text-white mb-3">Month 1: Foundation & Pilot</h3>",
+                  <h3 className="text-xl font-bold text-white mb-3">Month 1: Foundation & Pilot</h3>"
                   <ul className="space-y-2 ml-4 text-sm">
 =======
               <h2 className="text-3xl font-bold text-white mb-6">🚀 90-Day Implementation Plan</h2>";
               <div className="space-y-4">";
                 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border-l-4 border-blue-400">";
-                  <h3 className="text-xl font-bold text-white mb-3">Month 1: Foundation & Pilot</h3>";,
+                  <h3 className="text-xl font-bold text-white mb-3">Month 1: Foundation & Pilot</h3>";
                   <ul className="space-y-2 ml-4 text-sm">";
                     <li>✓ Platform selection and procurement</li>
                     <li>✓ Integration with existing LMS and HR systems</li>
@@ -475,11 +473,11 @@ const AdaptiveLearningPlatforms = () => {
                 </div>
 
                 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border-l-4 border-cyan-400">
-                  <h3 className="text-xl font-bold text-white mb-3">Month 2: Expansion & Refinement</h3>",
+                  <h3 className="text-xl font-bold text-white mb-3">Month 2: Expansion & Refinement</h3>"
                   <ul className="space-y-2 ml-4 text-sm">
 =======
                 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border-l-4 border-cyan-400">";
-                  <h3 className="text-xl font-bold text-white mb-3">Month 2: Expansion & Refinement</h3>";,
+                  <h3 className="text-xl font-bold text-white mb-3">Month 2: Expansion & Refinement</h3>";
                   <ul className="space-y-2 ml-4 text-sm">";
                     <li>✓ Analyze pilot results and gather feedback</li>
                     <li>✓ Expand to 200-300 learners across multiple departments</li>
@@ -489,11 +487,11 @@ const AdaptiveLearningPlatforms = () => {
                 </div>
 
                 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border-l-4 border-green-400">
-                  <h3 className="text-xl font-bold text-white mb-3">Month 3: Full Deployment</h3>",
+                  <h3 className="text-xl font-bold text-white mb-3">Month 3: Full Deployment</h3>"
                   <ul className="space-y-2 ml-4 text-sm">
 =======
                 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border-l-4 border-green-400">";
-                  <h3 className="text-xl font-bold text-white mb-3">Month 3: Full Deployment</h3>";,
+                  <h3 className="text-xl font-bold text-white mb-3">Month 3: Full Deployment</h3>";
                   <ul className="space-y-2 ml-4 text-sm">";
                     <li>✓ Organization-wide rollout to all eligible learners</li>
                     <li>✓ Implement full analytics and reporting dashboards</li>
@@ -513,12 +511,12 @@ const AdaptiveLearningPlatforms = () => {
                 Join leading enterprises achieving 92% completion rates, 5x faster learning, and $340M+ 
                 in value creation. Start your adaptive learning journey today.
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">",
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">"
 =======
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">";,
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">";
                 <Link
                   to="/contact"
-                  className="bg-white text-blue-600 hover: bg-zion-slate-light px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105 inline-flex items-center justify-center gap-2",
+                  className="bg-white text-blue-600 hover: bg-zion-slate-light px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105 inline-flex items-center justify-center gap-2"
                 >
                   <Target className="w-5 h-5/>
 =======
@@ -527,7 +525,7 @@ const AdaptiveLearningPlatforms = () => {
                 </Link>
                 <Link
                   to="/case-studies"
-                  className="border-2 border-white text-white hover: bg-white/10 px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105",
+                  className="border-2 border-white text-white hover: bg-white/10 px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
                 >
                   View Success Stories
                 </Link>

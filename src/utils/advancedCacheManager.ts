@@ -19,10 +19,10 @@ size: number;
 }
 
 interface CacheStats {
-hits: number;,
-misses: number;,
-evictions: number;,
-currentSize: number;,
+hits: number;
+misses: number;
+evictions: number;
+currentSize: number;
 hitRate: number;
 }
 
@@ -34,33 +34,32 @@ class AdvancedCacheManager<T = any> {
     misses: 0,
     evictions: 0,
     currentSize: 0,
-    hitRate: 0
+    hitRate: 0,
 =======
-  private cache: Map<string, CacheEntry<T>> = new Map();,
-  private config: CacheConfig;,
-  private stats: CacheStats = {,
+  private cache: Map<string, CacheEntry<T>> = new Map();
+  private config: CacheConfig;
+  private stats: CacheStats = {
     hits: 0,,
     misses: 0,,
     evictions: 0,,
     currentSize: 0,,
-    hitRate: 0,,
-  };
+    hitRate: 0,};
 
   constructor(config: Partial<CacheConfig> = {}) {
     this.config = {
       maxAge: config.maxAge || 5 * 60 * 1000, // 5 minutes default,
       maxSize: config.maxSize || 100,
-      strategy: config.strategy || 'LRU'
+      strategy: config.strategy || 'LRU',
 =======
       maxSize: config.maxSize || 100,,
-      strategy: config.strategy || 'LRU',';,
+      strategy: config.strategy || 'LRU',';
     };
   }
 
   /**
    * Get value from cache
    */
-  get(key: string): T | null {,
+  get(key: string): T | null {
     const entry = this.cache.get(key);
 
     if (!entry) {
@@ -96,7 +95,7 @@ class AdvancedCacheManager<T = any> {
   /**
    * Set value in cache
    */
-  set(key: string, value: T, customMaxAge?: number): void {,
+  set(key: string, value: T, customMaxAge?: number): void {
     // If cache is full, evict based on strategy
     if (this.cache.size >= this.config.maxSize) {
       this.evict();
@@ -112,7 +111,7 @@ class AdvancedCacheManager<T = any> {
 =======
       timestamp: Date.now(),,
       accessCount: 0,,
-      size,
+      size
     });
 
     this.stats.currentSize = this.cache.size;
@@ -121,7 +120,7 @@ class AdvancedCacheManager<T = any> {
   /**
    * Check if key exists and is valid
    */
-  has(key: string): boolean {,
+  has(key: string): boolean {
     const entry = this.cache.get(key);
     if (!entry) return false;
 
@@ -138,7 +137,7 @@ class AdvancedCacheManager<T = any> {
   /**
    * Delete key from cache
    */
-  delete(key: string): boolean {,
+  delete(key: string): boolean {
     const deleted = this.cache.delete(key);
     if (deleted) {
       this.stats.currentSize = this.cache.size;
@@ -209,9 +208,9 @@ break;
    * Find Least Recently Used key
    */
   private findLRUKey(): string | null {
-    let oldestKey: string | null = null,
+    let oldestKey: string | null = null
 =======
-    let oldestKey: string | null = null;,
+    let oldestKey: string | null = null;
     let oldestTime = Infinity;
 
     for (const [key, entry] of this.cache.entries()) {
@@ -228,9 +227,9 @@ break;
    * Find Least Frequently Used key
    */
   private findLFUKey(): string | null {
-    let lfuKey: string | null = null,
+    let lfuKey: string | null = null
 =======
-    let lfuKey: string | null = null;,
+    let lfuKey: string | null = null;
     let minCount = Infinity;
 
     for (const [key, entry] of this.cache.entries()) {
@@ -246,7 +245,7 @@ break;
   /**
    * Estimate size of value
    */
-  private estimateSize(value: T): number {,
+  private estimateSize(value: T): number {
     try {
       return JSON.stringify(value).length;
     } catch {
@@ -315,7 +314,7 @@ break;
   /**
    * Update config
    */
-  updateConfig(newConfig: Partial<CacheConfig>): void {,
+  updateConfig(newConfig: Partial<CacheConfig>): void {
     this.config = {
       ...this.config
       ...newConfig
@@ -325,7 +324,7 @@ break;
   /**
    * Batch get
    */
-  batchGet(keys: string[]): Map<string, T | null> {,
+  batchGet(keys: string[]): Map<string, T | null> {
     const result = new Map<string, T | null>();
     for (const key of keys) {
       result.set(key, this.get(key));
@@ -336,7 +335,7 @@ break;
   /**
    * Batch set
    */
-  batchSet(entries: Map<string, T>): void {,
+  batchSet(entries: Map<string, T>): void {
     for (const [key, value] of entries.entries()) {
       this.set(key, value);
     }
@@ -367,7 +366,7 @@ break;
 const apiCache = new AdvancedCacheManager<any>({
   maxAge: 5 * 60 * 1000, // 5 minutes,
   maxSize: 100,
-  strategy: 'LRU'
+  strategy: 'LRU',
 =======
   maxSize: 100,,
   strategy: 'LRU',';
@@ -376,7 +375,7 @@ const apiCache = new AdvancedCacheManager<any>({
 const contentCache = new AdvancedCacheManager<any>({
   maxAge: 60 * 60 * 1000, // 1 hour,
   maxSize: 50,
-  strategy: 'LFU'
+  strategy: 'LFU',
 =======
   maxSize: 50,,
   strategy: 'LFU',';

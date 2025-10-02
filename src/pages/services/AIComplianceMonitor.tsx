@@ -55,7 +55,7 @@ const AIComplianceMonitor: React.FC = () => {
         <ul className="mt-3 space-y-2 text-blue-700">
           <li>
             <a href="https://www.aicpa.org/resources/article/what-is-soc-2" target="_blank" rel="noreferrer" className="hover:underline">
-              AICPA: What is SOC 2?
+              AICPA: What is SOC 2?,
             </a>
           </li>
           <li>
@@ -79,7 +79,7 @@ const AIComplianceMonitor: React.FC = () => {
       <div className="mt-10">
         <a href="/contact" className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">Request a demo</a>
         <p className="mt-4 text-sm text-gray-600">
-          Contact: +1 302 464 0950 · kleber@ziontechgroup.com · 364 E Main St STE 1008, Middletown DE 19709
+          Contact: +1 302 464 0950 · kleber@ziontechgroup.com · 364 E Main St STE 1008, Middletown DE 19709,
         </p>
       </div>
     </section>

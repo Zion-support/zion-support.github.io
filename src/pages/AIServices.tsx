@@ -20,7 +20,7 @@ const AIServices: React.FC = () => {
       price: '$3,000 - $12,000/mo',
       features: ['Time-series models', 'Anomaly detection', 'What-if scenarios', 'BI integrations'],
       link: 'https://ziontechgroup.com/services/ai-services'
-    },
+    }
   ];
 
   return (

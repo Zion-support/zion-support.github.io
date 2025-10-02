@@ -4,11 +4,11 @@
  */
 
 interface SecurityVulnerability {
-severity: 'critical' | 'high' | 'medium' | 'low';,
-category: 'xss' | 'csrf' | 'auth' | 'data' | 'dependency' | 'config';,
-description: string;,
-impact: string;,
-remediation: string;,
+severity: 'critical' | 'high' | 'medium' | 'low';
+category: 'xss' | 'csrf' | 'auth' | 'data' | 'dependency' | 'config';
+description: string;
+impact: string;
+remediation: string;
 cweId?: string;
 }
 
@@ -16,7 +16,7 @@ interface SecurityReport {
 score: number,
 vulnerabilities: SecurityVulnerability[],
 secureAreas: string[],
-summary: {,,
+summary: {,
 critical: number,
 high: number,
 medium: number,
@@ -26,18 +26,18 @@ low: number;
 owasp: boolean;
 gdpr: boolean;
 =======
-score: number;,
-vulnerabilities: SecurityVulnerability[];,
-secureAreas: string[];,
-summary: {,,
-critical: number;,
-high: number;,
-medium: number;,
+score: number;
+vulnerabilities: SecurityVulnerability[];
+secureAreas: string[];
+summary: {,
+critical: number;
+high: number;
+medium: number;
 low: number;
 };
   complianceStatus: {,
-owasp: boolean;,
-gdpr: boolean;,
+owasp: boolean;
+gdpr: boolean;
 soc2: boolean;
 };
 }
@@ -55,16 +55,16 @@ export class SecurityAuditor {
     'A09: 2021 - Security Logging and Monitoring Failures',',
     'A10: 2021 - Server-Side Request Forgery];
 =======
-    'A01: 2021 - Broken Access Control',';,
-    'A02: 2021 - Cryptographic Failures',';,
-    'A03: 2021 - Injection',';,
-    'A04: 2021 - Insecure Design',';,
-    'A05: 2021 - Security Misconfiguration',';,
-    'A06: 2021 - Vulnerable and Outdated Components',';,
-    'A07: 2021 - Identification and Authentication Failures',';,
-    'A08: 2021 - Software and Data Integrity Failures',';,
-    'A09: 2021 - Security Logging and Monitoring Failures',';,
-    'A10: 2021 - Server-Side Request Forgery',
+    'A01: 2021 - Broken Access Control',';
+    'A02: 2021 - Cryptographic Failures',';
+    'A03: 2021 - Injection',';
+    'A04: 2021 - Insecure Design',';
+    'A05: 2021 - Security Misconfiguration',';
+    'A06: 2021 - Vulnerable and Outdated Components',';
+    'A07: 2021 - Identification and Authentication Failures',';
+    'A08: 2021 - Software and Data Integrity Failures',';
+    'A09: 2021 - Security Logging and Monitoring Failures',';
+    'A10: 2021 - Server-Side Request Forgery'
   ];
 
   /**
@@ -91,11 +91,11 @@ export class SecurityAuditor {
         low: vulnerabilities.filter(v => v.severity === 'low').length
       }
 =======
-        critical: vulnerabilities.filter(v => v.severity === 'critical').length,';,
-        high: vulnerabilities.filter(v => v.severity === 'high').length,';,
-        medium: vulnerabilities.filter(v => v.severity === 'medium').length,';,
-        low: vulnerabilities.filter(v => v.severity === 'low').length';,
-      },
+        critical: vulnerabilities.filter(v => v.severity === 'critical').length,';
+        high: vulnerabilities.filter(v => v.severity === 'high').length,';
+        medium: vulnerabilities.filter(v => v.severity === 'medium').length,';
+        low: vulnerabilities.filter(v => v.severity === 'low').length';
+      }
       complianceStatus
     };
   }
@@ -104,8 +104,7 @@ export class SecurityAuditor {
    * Detect security vulnerabilities
    */
   private detectVulnerabilities(): SecurityVulnerability[] {
-    const vulnerabilities: SecurityVulnerability[] = [],
-
+    const vulnerabilities: SecurityVulnerability[] = []
     // XSS Protection
     vulnerabilities.push({
       severity: 'high',',
@@ -169,76 +168,75 @@ export class SecurityAuditor {
       remediation: 'Implement strict input validation and sanitization',',
       cweId: 'CWE-20});
 =======
-    const vulnerabilities: SecurityVulnerability[] = [];,
-
+    const vulnerabilities: SecurityVulnerability[] = [];
     // XSS Protection
     vulnerabilities.push({
-      severity: 'high',';,
-      category: 'xss',';,
-      description: 'Potential XSS vulnerability in user-generated content',';,
-      impact: 'Attackers could inject malicious scripts',';,
-      remediation: 'Implement Content Security Policy and sanitize all user inputs',';,
-      cweId: 'CWE-79',
+      severity: 'high',';
+      category: 'xss',';
+      description: 'Potential XSS vulnerability in user-generated content',';
+      impact: 'Attackers could inject malicious scripts',';
+      remediation: 'Implement Content Security Policy and sanitize all user inputs',';
+      cweId: 'CWE-79'
     });
 
     // CSRF Protection
     vulnerabilities.push({
-      severity: 'medium',';,
-      category: 'csrf',';,
-      description: 'CSRF tokens not implemented on state-changing operations',';,
-      impact: 'Unauthorized actions could be performed on behalf of authenticated users',';,
-      remediation: 'Implement CSRF tokens for all POST/PUT/DELETE requests',';,
-      cweId: 'CWE-352',
+      severity: 'medium',';
+      category: 'csrf',';
+      description: 'CSRF tokens not implemented on state-changing operations',';
+      impact: 'Unauthorized actions could be performed on behalf of authenticated users',';
+      remediation: 'Implement CSRF tokens for all POST/PUT/DELETE requests',';
+      cweId: 'CWE-352'
     });
 
     // Dependency Vulnerabilities
     vulnerabilities.push({
-      severity: 'high',';,
-      category: 'dependency',';,
-      description: 'Outdated dependencies with known vulnerabilities',';,
-      impact: 'Known exploits could be used against the application',';,
-      remediation: 'Update all dependencies to latest secure versions',';,
-      cweId: 'CWE-1035',
+      severity: 'high',';
+      category: 'dependency',';
+      description: 'Outdated dependencies with known vulnerabilities',';
+      impact: 'Known exploits could be used against the application',';
+      remediation: 'Update all dependencies to latest secure versions',';
+      cweId: 'CWE-1035'
     });
 
     // Authentication
     vulnerabilities.push({
-      severity: 'medium',';,
-      category: 'auth',';,
-      description: 'Session tokens not using secure flags',';,
-      impact: 'Session hijacking possible over insecure connections',';,
-      remediation: 'Set Secure and HttpOnly flags on all cookies',';,
-      cweId: 'CWE-614',
+      severity: 'medium',';
+      category: 'auth',';
+      description: 'Session tokens not using secure flags',';
+      impact: 'Session hijacking possible over insecure connections',';
+      remediation: 'Set Secure and HttpOnly flags on all cookies',';
+      cweId: 'CWE-614'
     });
 
     // Data Exposure
     vulnerabilities.push({
-      severity: 'low',';,
-      category: 'data',';,
-      description: 'Sensitive data logged to console in production',';,
-      impact: 'Potential information disclosure',';,
-      remediation: 'Remove console.log statements in production build',';,
-      cweId: 'CWE-532',
+      severity: 'low',';
+      category: 'data',';
+      description: 'Sensitive data logged to console in production',';
+      impact: 'Potential information disclosure',';
+      remediation: 'Remove console.log statements in production build',';
+      cweId: 'CWE-532'
     });
 
     // Security Headers
     vulnerabilities.push({
-      severity: 'medium',';,
-      category: 'config',';,
-      description: 'Missing security headers',';,
-      impact: 'Increased attack surface for various attacks',';,
-      remediation: 'Implement CSP, X-Frame-Options, HSTS, and other security headers',';,
-      cweId: 'CWE-16',
+      severity: 'medium',';
+      category: 'config',';
+      description: 'Missing security headers',';
+      impact: 'Increased attack surface for various attacks',';
+      remediation: 'Implement CSP, X-Frame-Options, HSTS, and other security headers',';
+      cweId: 'CWE-16'
     });
 
     // Input Validation
     vulnerabilities.push({
-      severity: 'high',';,
-      category: 'xss',';,
-      description: 'Insufficient input validation on forms',';,
-      impact: 'Could lead to injection attacks or malformed data',';,
-      remediation: 'Implement strict input validation and sanitization',';,
-      cweId: 'CWE-20',
+      severity: 'high',';
+      category: 'xss',';
+      description: 'Insufficient input validation on forms',';
+      impact: 'Could lead to injection attacks or malformed data',';
+      remediation: 'Implement strict input validation and sanitization',';
+      cweId: 'CWE-20'
     });
 
     return vulnerabilities;
@@ -262,12 +260,12 @@ export class SecurityAuditor {
   /**
    * Calculate security score
    */
-  private calculateSecurityScore(vulnerabilities: SecurityVulnerability[]): number {,
+  private calculateSecurityScore(vulnerabilities: SecurityVulnerability[]): number {
     const weights = {
       critical: 30,,
       high: 20,,
       medium: 10,,
-      low: 5,
+      low: 5
     };
 
     const deductions = vulnerabilities.reduce((total, vuln) => {
@@ -284,9 +282,9 @@ export class SecurityAuditor {
 owasp: boolean;
 gdpr: boolean;
 =======
-  private checkCompliance(vulnerabilities: SecurityVulnerability[]): {,
-owasp: boolean;,
-gdpr: boolean;,
+  private checkCompliance(vulnerabilities: SecurityVulnerability[]): {
+owasp: boolean;
+gdpr: boolean;
 soc2: boolean;
 } {
     const criticalOrHigh = vulnerabilities.filter(
@@ -296,7 +294,7 @@ soc2: boolean;
     return {
       owasp: criticalOrHigh === 0,,
       gdpr: criticalOrHigh === 0 && vulnerabilities.length < 5,,
-      soc2: vulnerabilities.length < 3,
+      soc2: vulnerabilities.length < 3
     };
   }
 
@@ -331,12 +329,12 @@ manual: string[];
       'Added Content-Security-Policy header',
       'Enabled HSTS header',
       'Set X-Frame-Options: DENY',',
-      'Added X-Content-Type-Options: nosniff',',
+      'Added X-Content-Type-Options: nosniff','
 =======
       'Added Content-Security-Policy header',';
       'Enabled HSTS header',';
-      'Set X-Frame-Options: DENY',';,
-      'Added X-Content-Type-Options: nosniff',';,
+      'Set X-Frame-Options: DENY',';
+      'Added X-Content-Type-Options: nosniff',';
       'Implemented referrer policy'
     ];
 
@@ -357,14 +355,14 @@ manual: string[];
    */
   checkDependencies(): {
     vulnerable: Array<{ name: string; version: string; severity: string }>;
-    recommendation: string,
+    recommendation: string
   } {
     // Mock implementation - in production, integrate with npm audit
     const vulnerable = [
       { name: 'example-lib', version: '1.2.3', severity: 'high' }
       { name: 'old-package', version: '2.0.0', severity: 'medium' }
 =======
-    recommendation: string;,
+    recommendation: string;
   } {
     // Mock implementation - in production, integrate with npm audit
     const vulnerable = [
@@ -392,7 +390,7 @@ if (score >= 75) return 'MODERATE RISK ⚠️';
 if (score >= 60) return 'HIGH RISK 🔴';
 return 'CRITICAL RISK 🚨';
 =======
-const getRiskLevel = (score: number): string => {,,
+const getRiskLevel = (score: number): string => {,
 if (score >= 90) return 'LOW RISK ✅';';
 if (score >= 75) return 'MODERATE RISK ⚠️';';
 if (score >= 60) return 'HIGH RISK 🔴';';
@@ -488,10 +486,9 @@ ${this.owaspTop10.map((item, index) => `${index + 1}. ${item}`).join('\n')}';`;
 
 ## Resources
 - OWASP Top 10: https://owasp.org/www-project-top-ten/,
-- npm Security Advisories: https://www.npmjs.com/advisories,
+- npm Security Advisories: https://www.npmjs.com/advisories
 - CWE List: https://cwe.mitre.org/,
-- CSP Generator: https://report-uri.com/home/generate,
-
+- CSP Generator: https://report-uri.com/home/generate
 ---
 **Generated**: ${new Date().toISOString()}
 **Next Audit**: Recommended in 30 days or after major changes

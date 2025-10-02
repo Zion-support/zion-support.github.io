@@ -4,7 +4,7 @@
  * Comprehensive error tracking system for production monitoring
  * error reporting, and debugging assistance.
  * 
- * Features: * - Centralized error logging,
+ * Features: * - Centralized error logging
  * - Error categorization and severity levels
  * - Stack trace analysis
  * - Error metrics and analytics
@@ -53,26 +53,25 @@ export interface ErrorContext {
 }
 
 export interface TrackedError {
-id: string;,
-message: string;,
-stack?: string;,
-severity: ErrorSeverity;,
-category: ErrorCategory;,
-timestamp: Date;,
-context: ErrorContext;,
-userAgent: string;,
+id: string;
+message: string;
+stack?: string;
+severity: ErrorSeverity;
+category: ErrorCategory;
+timestamp: Date;
+context: ErrorContext;
+userAgent: string;
 resolved: boolean;
 }
 
 class ErrorTracker {
-  private errors: TrackedError[] = [],
+  private errors: TrackedError[] = []
   private maxErrors = 100;
-  private listeners: ((error: TrackedError) => void)[] = [],
+  private listeners: ((error: TrackedError) => void)[] = []
 =======
-  private errors: TrackedError[] = [];,
+  private errors: TrackedError[] = [];
   private maxErrors = 100;
-  private listeners: ((error: TrackedError) => void)[] = [];,
-
+  private listeners: ((error: TrackedError) => void)[] = [];
   /**
    * Track an error
    */
@@ -82,7 +81,7 @@ class ErrorTracker {
     category: ErrorCategory = ErrorCategory.UNKNOWN,,
     context: ErrorContext = {}
   ): TrackedError {
-    const trackedError: TrackedError = {,
+    const trackedError: TrackedError = {
       id: this.generateErrorId(),,
       message: typeof error === 'string' ? error : error.message,',
       stack: typeof error === 'string' ? undefined : error.stack,',
@@ -91,17 +90,16 @@ class ErrorTracker {
       timestamp: new Date(),
       context: this.enrichContext(context),
       userAgent: navigator.userAgent,
-      resolved: false
+      resolved: false,
 =======
-      message: typeof error === 'string' ? error : error.message,';,
-      stack: typeof error === 'string' ? undefined : error.stack,';,
+      message: typeof error === 'string' ? error : error.message,';
+      stack: typeof error === 'string' ? undefined : error.stack,';
       severity,
       category,
       timestamp: new Date(),,
       context: this.enrichContext(context),,
       userAgent: navigator.userAgent,,
-      resolved: false,,
-    };
+      resolved: false,};
 
     this.errors.push(trackedError);
     
@@ -145,7 +143,7 @@ class ErrorTracker {
     error: Error,,
     url: string,,
     method: string,,
-    status?: number,
+    status?: number
     context: ErrorContext = {}
   ): TrackedError {
     return this.trackError(
@@ -157,9 +155,9 @@ class ErrorTracker {
         metadata: {,
           ...context.metadata
 =======
-        ...context,
+        ...context
         metadata: {,
-          ...context.metadata,
+          ...context.metadata
           url,
           method,
           status
@@ -178,7 +176,7 @@ class ErrorTracker {
 =======
     error: Error,,
     componentName: string,,
-    props?: Record<string, any>,
+    props?: Record<string, any>
     context: ErrorContext = {}
   ): TrackedError {
     return this.trackError(
@@ -193,12 +191,12 @@ class ErrorTracker {
           props
         }
 =======
-        ...context,
+        ...context
         component: componentName,,
         metadata: {,
-          ...context.metadata,
-          props,
-        },
+          ...context.metadata
+          props
+        }
       }
     );
   }
@@ -213,14 +211,14 @@ class ErrorTracker {
   /**
    * Get errors by severity
    */
-  getErrorsBySeverity(severity: ErrorSeverity): TrackedError[] {,
+  getErrorsBySeverity(severity: ErrorSeverity): TrackedError[] {
     return this.errors.filter(error => error.severity === severity);
   }
 
   /**
    * Get errors by category
    */
-  getErrorsByCategory(category: ErrorCategory): TrackedError[] {,
+  getErrorsByCategory(category: ErrorCategory): TrackedError[] {
     return this.errors.filter(error => error.category === category);
   }
 
@@ -234,7 +232,7 @@ class ErrorTracker {
   /**
    * Mark error as resolved
    */
-  resolveError(errorId: string): void {,
+  resolveError(errorId: string): void {
     const error = this.errors.find(e => e.id === errorId);
     if (error) {
       error.resolved = true;
@@ -251,7 +249,7 @@ class ErrorTracker {
   /**
    * Subscribe to error events
    */
-  subscribe(listener: (error: TrackedError) => void): () => void {,
+  subscribe(listener: (error: TrackedError) => void): () => void {
     this.listeners.push(listener);
     return () => {
       this.listeners = this.listeners.filter(l => l !== listener);
@@ -283,10 +281,9 @@ class ErrorTracker {
       resolved: total - unresolved,,
       bySeverity,
       byCategory,
-      lastError: this.errors[this.errors.length - 1]
+      lastError: this.errors[this.errors.length - 1],
 =======
-      lastError: this.errors[this.errors.length - 1],,
-    };
+      lastError: this.errors[this.errors.length - 1],};
   }
 
   /**
@@ -299,7 +296,7 @@ class ErrorTracker {
   /**
    * Enrich context with additional information
    */
-  private enrichContext(context: ErrorContext): ErrorContext {,
+  private enrichContext(context: ErrorContext): ErrorContext {
     return {
       ...context
       route: context.route || window.location.pathname,
@@ -312,30 +309,28 @@ class ErrorTracker {
         timestamp: new Date().toISOString()
       }
 =======
-      ...context,
+      ...context
       route: context.route || window.location.pathname,,
       metadata: {,
-        ...context.metadata,
+        ...context.metadata
         viewport: {,
           width: window.innerWidth,,
-          height: window.innerHeight,,
-        },
-        timestamp: new Date().toISOString(),,
-      },
+          height: window.innerHeight,},
+        timestamp: new Date().toISOString(),}
     };
   }
 
   /**
    * Notify all listeners
    */
-  private notifyListeners(error: TrackedError): void {,
+  private notifyListeners(error: TrackedError): void {
     this.listeners.forEach(listener => {
       try {
         listener(error);
       } catch (err) {
-        console.error('Error in error listener: ', err);',
+        console.error('Error in error listener: ', err);'
 =======
-        console.error('Error in error listener: ', err);';,
+        console.error('Error in error listener: ', err);';
       }
     });
   }
@@ -343,11 +338,11 @@ class ErrorTracker {
   /**
    * Send error to external monitoring service
    */
-  private sendToExternalService(error: TrackedError): void {,
+  private sendToExternalService(error: TrackedError): void {
     // Integration point for external services
     // Example: Sentry, DataDog, New Relic, etc.,
     
-    // Uncomment and configure based on your monitoring service: // if (window.Sentry) {,
+    // Uncomment and configure based on your monitoring service: // if (window.Sentry) {
     //   window.Sentry.captureException(new Error(error.message), {
     //     level: error.severity
     //     tags: {
@@ -356,9 +351,9 @@ class ErrorTracker {
     //     extra: error.context
 =======
     //     level: error.severity,,
-    //     tags: {,
+    //     tags: {
     //       category: error.category,,
-    //     },
+    //     }
     //     extra: error.context,,
     //   });
     // }
@@ -372,15 +367,14 @@ class ErrorTracker {
         }
         body: JSON.stringify(error)
       }).catch(err => {
-        console.error('Failed to send error to monitoring service: ', err);',
+        console.error('Failed to send error to monitoring service: ', err);'
 =======
-        method: 'POST',';,
+        method: 'POST',';
         headers: {,
           'Content-Type': 'application/json',';
-        },
-        body: JSON.stringify(error),,
-      }).catch(err => {
-        console.error('Failed to send error to monitoring service: ', err);';,
+        }
+        body: JSON.stringify(error),}).catch(err => {,
+        console.error('Failed to send error to monitoring service: ', err);';
       });
     }
   }
@@ -395,13 +389,12 @@ export const errorTracker = new ErrorTracker();
 export function handleComponentError(
   error: Error,,
   errorInfo: { componentStack: string },
-  componentName: string,
+  componentName: string
 ): void {
   errorTracker.trackRenderError(error, componentName, {
-    componentStack: errorInfo.componentStack
+    componentStack: errorInfo.componentStack,
 =======
-    componentStack: errorInfo.componentStack,,
-  });
+    componentStack: errorInfo.componentStack,});
 }
 
 /**
@@ -422,9 +415,8 @@ export function setupGlobalErrorHandling(): void {
           promise: event.promise
         }
 =======
-          type: 'unhandledRejection',';,
-          promise: event.promise,,
-        },
+          type: 'unhandledRejection',';
+          promise: event.promise,}
       }
     );
   });
@@ -446,8 +438,7 @@ export function setupGlobalErrorHandling(): void {
 =======
           filename: event.filename,,
           lineno: event.lineno,,
-          colno: event.colno,,
-        },
+          colno: event.colno,}
       }
     );
   });

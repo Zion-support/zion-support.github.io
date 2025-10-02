@@ -2,11 +2,9 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 =======
 import React, { useState } from 'react';';
-import {
-Link
-} from 'react-router-dom';';
+import { Link } from 'react-router-dom';';
 
-const ModernHeader: React.FC = () => {,
+const ModernHeader: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
@@ -66,13 +64,13 @@ const ModernHeader: React.FC = () => {,
 
   return (
     <header className="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
         <div className="flex justify-between items-center h-16">
 =======
     { name: 'Home', href: '/' },';
     { 
-      name: 'Solutions', ';,
-      href: '/solutions',';,
+      name: 'Solutions', ';
+      href: '/solutions',';
       dropdown: [,
         { name: 'Enterprise Solutions', href: '/solutions/enterprise' },';
         { name: 'SMB Solutions', href: '/solutions/smb' },';
@@ -83,8 +81,8 @@ const ModernHeader: React.FC = () => {,
       ]
     },
     { 
-      name: 'Services', ';,
-      href: '/services',';,
+      name: 'Services', ';
+      href: '/services',';
       dropdown: [,
         { name: 'AI Solutions', href: '/services/ai-solutions' },';
         { name: 'Cloud & DevOps', href: '/services/cloud-devops' },';
@@ -95,8 +93,8 @@ const ModernHeader: React.FC = () => {,
       ]
     },
     { 
-      name: 'Resources', ';,
-      href: '/resources',';,
+      name: 'Resources', ';
+      href: '/resources',';
       dropdown: [,
         { name: 'Case Studies', href: '/case-studies' },';
         { name: 'Documentation', href: '/docs' },';
@@ -108,8 +106,8 @@ const ModernHeader: React.FC = () => {,
     },
     { name: 'Blog', href: '/blog' },';
     { 
-      name: 'Company', ';,
-      href: '/about',';,
+      name: 'Company', ';
+      href: '/about',';
       dropdown: [,
         { name: 'About Us', href: '/about' },';
         { name: 'Our Team', href: '/team' },';
@@ -124,7 +122,7 @@ const ModernHeader: React.FC = () => {,
 
   return (
     <header className="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50">";
-      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";,
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";
         <div className="flex justify-between items-center h-16">";
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">";
@@ -135,9 +133,9 @@ const ModernHeader: React.FC = () => {,
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md: flex space-x-8">",
+          <nav className="hidden md: flex space-x-8">"
 =======
-          <nav className="hidden md: flex space-x-8">";,
+          <nav className="hidden md: flex space-x-8">";
             {navigationItems.map((item) => (
               <div
                 key={item.name}
@@ -147,7 +145,7 @@ const ModernHeader: React.FC = () => {,
               >
                 <Link
                   to={item.href}
-                  className="text-gray-700 hover: text-blue-600 transition-colors font-medium flex items-center",
+                  className="text-gray-700 hover: text-blue-600 transition-colors font-medium flex items-center"
                 >
                   {item.name}
                   {item.dropdown && (
@@ -167,7 +165,7 @@ const ModernHeader: React.FC = () => {,
                       <Link
                         key={index}
                         to={dropdownItem.href}
-                        className="block px-4 py-2 text-sm text-gray-700 hover: bg-gray-100 hover:text-blue-600 transition-colors",
+                        className="block px-4 py-2 text-sm text-gray-700 hover: bg-gray-100 hover:text-blue-600 transition-colors"
                       >
                         {dropdownItem.name}
                       </Link>
@@ -179,18 +177,18 @@ const ModernHeader: React.FC = () => {,
           </nav>
 
           {/* CTA Button */}
-          <div className="hidden md: flex items-center space-x-4">",
+          <div className="hidden md: flex items-center space-x-4">"
 =======
-          <div className="hidden md: flex items-center space-x-4">";,
+          <div className="hidden md: flex items-center space-x-4">";
             <a title="Internal link"
-              href="tel: +13024640950",
-              className="text-gray-700 hover: text-blue-600 transition-colors font-medium",
+              href="tel: +13024640950"
+              className="text-gray-700 hover: text-blue-600 transition-colors font-medium"
             >
               +1 302 464 0950
             </a>
             <Link
               to="/contact"
-              className="px-4 py-2 bg-blue-600 text-white rounded-lg hover: bg-blue-700 transition-colors font-medium",
+              className="px-4 py-2 bg-blue-600 text-white rounded-lg hover: bg-blue-700 transition-colors font-medium"
             >
               Get Started
             </Link>
@@ -199,7 +197,7 @@ const ModernHeader: React.FC = () => {,
           {/* Mobile menu button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md: hidden p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100 transition-colors",
+            className="md: hidden p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100 transition-colors"
             aria-label="Toggle menu"
           >
             <svg
@@ -231,14 +229,14 @@ isMenuOpen && (
 <div className="md:hidden py-4 border-t border-gray-200">
 <nav className="flex flex-col space-y-1">
 =======
-<div className="md: hidden py-4 border-t border-gray-200">,";,
+<div className="md: hidden py-4 border-t border-gray-200">,";
 <nav className="flex flex-col space-y-1">";
 {navigationItems.map((item) => (
 <div key={item.name
 }>
                   <Link
                     to={item.href}
-                    className="block px-4 py-2 text-gray-700 hover: text-blue-600 hover:bg-gray-100 rounded-md transition-colors font-medium",
+                    className="block px-4 py-2 text-gray-700 hover: text-blue-600 hover:bg-gray-100 rounded-md transition-colors font-medium"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {item.name}
@@ -249,7 +247,7 @@ isMenuOpen && (
                         <Link
                           key={index}
                           to={dropdownItem.href}
-                          className="block px-4 py-1 text-sm text-gray-600 hover: text-blue-600 hover:bg-gray-100 rounded-md transition-colors",
+                          className="block px-4 py-1 text-sm text-gray-600 hover: text-blue-600 hover:bg-gray-100 rounded-md transition-colors"
                           onClick={() => setIsMenuOpen(false)}
                         >
                           {dropdownItem.name}
@@ -261,14 +259,14 @@ isMenuOpen && (
               ))}
               <div className="px-4 py-2 border-t border-gray-200 mt-2">";
                 <a title="Internal link"
-                  href="tel: +13024640950",
-                  className="block text-gray-700 hover: text-blue-600 transition-colors font-medium mb-2",
+                  href="tel: +13024640950"
+                  className="block text-gray-700 hover: text-blue-600 transition-colors font-medium mb-2"
                 >
                   +1 302 464 0950
                 </a>
                 <Link
                   to="/contact"
-                  className="block px-4 py-2 bg-blue-600 text-white rounded-lg hover: bg-blue-700 transition-colors font-medium text-center",
+                  className="block px-4 py-2 bg-blue-600 text-white rounded-lg hover: bg-blue-700 transition-colors font-medium text-center"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Get Started

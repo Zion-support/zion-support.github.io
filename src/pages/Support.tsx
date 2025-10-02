@@ -206,9 +206,9 @@ const Support: React.FC = () => {
   ];
 
   const quickActions = [
-    { title: 'Report a Bug', description: 'Found an issue? Let us know', link: '/contact', icon: '🐛' },
-    { title: 'Request a Feature', description: "Have an idea? We'd love to hear it", link: '/contact', icon: '💡' },
-    { title: 'Schedule Training', description: 'Book a training session for your team', link: '/training', icon: '🎓' },
+    { title: 'Report a Bug', description: 'Found an issue? Let us know', link: '/contact', icon: '🐛' }
+    { title: 'Request a Feature', description: "Have an idea? We'd love to hear it", link: '/contact', icon: '💡' }
+    { title: 'Schedule Training', description: 'Book a training session for your team', link: '/training', icon: '🎓' }
     { title: 'View Status Page', description: 'Check system status and uptime', link: '/status', icon: '📊' }
   ];
 

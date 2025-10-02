@@ -34,7 +34,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
     cls: 0.1,
     fid: 100,
     lcp: 2500,
-    ttfb: 600,
+    ttfb: 600
   } as const;
 
   const generateAlert = (metric: string, value: number, threshold: number): PerformanceAlert => {
@@ -45,7 +45,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
       message: `${metric} is ${value}ms, threshold is ${threshold}ms`,
       metric,
       value,
-      threshold,
+      threshold
     };
   };
 
@@ -61,7 +61,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
             domContentLoaded: nav.domContentLoadedEventEnd - nav.domContentLoadedEventStart,
             loadComplete: nav.loadEventEnd - nav.loadEventStart,
             firstPaint: (performance as any).timing?.responseStart ? performance.now() : 0,
-            firstContentfulPaint: 0,
+            firstContentfulPaint: 0
           };
           setMetrics(initial);
           const firstAlerts: PerformanceAlert[] = [];
@@ -78,8 +78,8 @@ const EnhancedPerformanceMonitor: React.FC = () => {
       // Web Vitals
       reportWebVitals((metric: any) => {
         setMetrics(prev => ({
-          ...(prev || ({} as PerformanceMetrics)),
-          [metric.name.toLowerCase()]: metric.value,
+          ...(prev || ({} as PerformanceMetrics))
+          [metric.name.toLowerCase()]: metric.value
         } as PerformanceMetrics));
 
         const threshold = (thresholds as any)[metric.name.toLowerCase()];
@@ -95,9 +95,9 @@ const EnhancedPerformanceMonitor: React.FC = () => {
             if (entry.entryType === 'navigation') {
               const navEntry = entry as PerformanceNavigationTiming;
               setMetrics(prev => ({
-                ...(prev || ({} as PerformanceMetrics)),
+                ...(prev || ({} as PerformanceMetrics))
                 domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.domContentLoadedEventStart,
-                loadComplete: navEntry.loadEventEnd - navEntry.loadEventStart,
+                loadComplete: navEntry.loadEventEnd - navEntry.loadEventStart
               } as PerformanceMetrics));
             }
           }

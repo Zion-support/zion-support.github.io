@@ -8,9 +8,9 @@ export default function October2025NewAdvancedAIContentBanner(): void {
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-500 rounded-full filter blur-3xl animate-pulse delay-700"></div>";
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-8">",
+      <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-8">"
 =======
-      <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-8">";,
+      <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-8">";
         {/* Header Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -24,11 +24,11 @@ export default function October2025NewAdvancedAIContentBanner(): void {
             <Sparkles className="w-5 h-5 animate-pulse/>
           </div>
           
-          <h2 className="text-4xl md: text-5xl font-extrabold text-white mb-4">",
+          <h2 className="text-4xl md: text-5xl font-extrabold text-white mb-4">"
             🚀 3 Revolutionary AI Platform Breakthroughs
           </h2>
           
-          <p className="text-xl md: text-2xl text-blue-100 max-w-4xl mx-auto font-semibold">",
+          <p className="text-xl md: text-2xl text-blue-100 max-w-4xl mx-auto font-semibold">"
             Privacy-First Federated AI • Unlimited Synthetic Data • Enterprise AI Governance
           </p>
           
@@ -50,11 +50,11 @@ export default function October2025NewAdvancedAIContentBanner(): void {
             <Sparkles className="w-5 h-5 animate-pulse" />";
           </div>
           
-          <h2 className="text-4xl md: text-5xl font-extrabold text-white mb-4">";,
+          <h2 className="text-4xl md: text-5xl font-extrabold text-white mb-4">";
             🚀 3 Revolutionary AI Platform Breakthroughs
           </h2>
           
-          <p className="text-xl md: text-2xl text-blue-100 max-w-4xl mx-auto font-semibold">";,
+          <p className="text-xl md: text-2xl text-blue-100 max-w-4xl mx-auto font-semibold">";
             Privacy-First Federated AI • Unlimited Synthetic Data • Enterprise AI Governance
           </p>
           
@@ -75,9 +75,9 @@ export default function October2025NewAdvancedAIContentBanner(): void {
         </motion.div>
 
         {/* Content Grid */}
-        <div className="grid md: grid-cols-3 gap-6 mb-8">",
+        <div className="grid md: grid-cols-3 gap-6 mb-8">"
 =======
-        <div className="grid md: grid-cols-3 gap-6 mb-8">";,
+        <div className="grid md: grid-cols-3 gap-6 mb-8">";
           {/* Federated AI */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -88,12 +88,12 @@ export default function October2025NewAdvancedAIContentBanner(): void {
               to="/blog/ai-2025-oct-advanced-federated-ai-enterprise-revolution"
               className="block group"
             >
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover: border-purple-400 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/50 h-full">",
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover: border-purple-400 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/50 h-full">"
                 <div className="flex items-center gap-3 mb-4">
                   <div className="p-3 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg">
                     <Brain className="w-6 h-6 text-white/>
 =======
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover: border-purple-400 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/50 h-full">";,
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover: border-purple-400 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/50 h-full">";
                 <div className="flex items-center gap-3 mb-4">";
                   <div className="p-3 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg">";
                     <Brain className="w-6 h-6 text-white" />";
@@ -103,13 +103,13 @@ export default function October2025NewAdvancedAIContentBanner(): void {
                   </span>
                 </div>
                 
-                <h3 className="text-xl font-bold text-white mb-3 group-hover: text-purple-300 transition-colors">",
+                <h3 className="text-xl font-bold text-white mb-3 group-hover: text-purple-300 transition-colors">"
                   Advanced Federated AI Enterprise Revolution
                 </h3>
                 
                 <p className="text-blue-100 text-sm mb-4 leading-relaxed">
 =======
-                <h3 className="text-xl font-bold text-white mb-3 group-hover: text-purple-300 transition-colors">";,
+                <h3 className="text-xl font-bold text-white mb-3 group-hover: text-purple-300 transition-colors">";
                   Advanced Federated AI Enterprise Revolution
                 </h3>
                 
@@ -132,13 +132,13 @@ export default function October2025NewAdvancedAIContentBanner(): void {
                   </div>
                 </div>
 
-                <div className="mt-6 flex items-center text-purple-300 font-semibold group-hover: text-white transition-colors">",
+                <div className="mt-6 flex items-center text-purple-300 font-semibold group-hover: text-white transition-colors">"
                   <span>Explore Privacy-First AI</span>
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover: translate-x-1 transition-transform/>",
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover: translate-x-1 transition-transform/>"
 =======
-                <div className="mt-6 flex items-center text-purple-300 font-semibold group-hover: text-white transition-colors">";,
+                <div className="mt-6 flex items-center text-purple-300 font-semibold group-hover: text-white transition-colors">";
                   <span>Explore Privacy-First AI</span>
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover: translate-x-1 transition-transform" />";,
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover: translate-x-1 transition-transform" />";
                 </div>
               </div>
             </Link>
@@ -154,12 +154,12 @@ export default function October2025NewAdvancedAIContentBanner(): void {
               to="/blog/ai-2025-oct-synthetic-data-generation-enterprise-breakthrough"
               className="block group"
             >
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover: border-blue-400 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/50 h-full">",
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover: border-blue-400 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/50 h-full">"
                 <div className="flex items-center gap-3 mb-4">
                   <div className="p-3 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg">
                     <Database className="w-6 h-6 text-white/>
 =======
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover: border-blue-400 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/50 h-full">";,
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover: border-blue-400 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/50 h-full">";
                 <div className="flex items-center gap-3 mb-4">";
                   <div className="p-3 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg">";
                     <Database className="w-6 h-6 text-white" />";
@@ -169,13 +169,13 @@ export default function October2025NewAdvancedAIContentBanner(): void {
                   </span>
                 </div>
                 
-                <h3 className="text-xl font-bold text-white mb-3 group-hover: text-blue-300 transition-colors">",
+                <h3 className="text-xl font-bold text-white mb-3 group-hover: text-blue-300 transition-colors">"
                   Synthetic Data Generation Enterprise Breakthrough
                 </h3>
                 
                 <p className="text-blue-100 text-sm mb-4 leading-relaxed">
 =======
-                <h3 className="text-xl font-bold text-white mb-3 group-hover: text-blue-300 transition-colors">";,
+                <h3 className="text-xl font-bold text-white mb-3 group-hover: text-blue-300 transition-colors">";
                   Synthetic Data Generation Enterprise Breakthrough
                 </h3>
                 
@@ -198,13 +198,13 @@ export default function October2025NewAdvancedAIContentBanner(): void {
                   </div>
                 </div>
 
-                <div className="mt-6 flex items-center text-blue-300 font-semibold group-hover: text-white transition-colors">",
+                <div className="mt-6 flex items-center text-blue-300 font-semibold group-hover: text-white transition-colors">"
                   <span>Unlock Unlimited Data</span>
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover: translate-x-1 transition-transform/>",
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover: translate-x-1 transition-transform/>"
 =======
-                <div className="mt-6 flex items-center text-blue-300 font-semibold group-hover: text-white transition-colors">";,
+                <div className="mt-6 flex items-center text-blue-300 font-semibold group-hover: text-white transition-colors">";
                   <span>Unlock Unlimited Data</span>
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover: translate-x-1 transition-transform" />";,
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover: translate-x-1 transition-transform" />";
                 </div>
               </div>
             </Link>
@@ -220,12 +220,12 @@ export default function October2025NewAdvancedAIContentBanner(): void {
               to="/blog/ai-2025-oct-ai-model-governance-compliance-breakthrough"
               className="block group"
             >
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover: border-green-400 transition-all duration-300 hover:shadow-2xl hover:shadow-green-500/50 h-full">",
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover: border-green-400 transition-all duration-300 hover:shadow-2xl hover:shadow-green-500/50 h-full">"
                 <div className="flex items-center gap-3 mb-4">
                   <div className="p-3 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg">
                     <Shield className="w-6 h-6 text-white/>
 =======
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover: border-green-400 transition-all duration-300 hover:shadow-2xl hover:shadow-green-500/50 h-full">";,
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover: border-green-400 transition-all duration-300 hover:shadow-2xl hover:shadow-green-500/50 h-full">";
                 <div className="flex items-center gap-3 mb-4">";
                   <div className="p-3 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg">";
                     <Shield className="w-6 h-6 text-white" />";
@@ -235,13 +235,13 @@ export default function October2025NewAdvancedAIContentBanner(): void {
                   </span>
                 </div>
                 
-                <h3 className="text-xl font-bold text-white mb-3 group-hover: text-green-300 transition-colors">",
+                <h3 className="text-xl font-bold text-white mb-3 group-hover: text-green-300 transition-colors">"
                   AI Model Governance & Compliance Breakthrough
                 </h3>
                 
                 <p className="text-blue-100 text-sm mb-4 leading-relaxed">
 =======
-                <h3 className="text-xl font-bold text-white mb-3 group-hover: text-green-300 transition-colors">";,
+                <h3 className="text-xl font-bold text-white mb-3 group-hover: text-green-300 transition-colors">";
                   AI Model Governance & Compliance Breakthrough
                 </h3>
                 
@@ -264,13 +264,13 @@ export default function October2025NewAdvancedAIContentBanner(): void {
                   </div>
                 </div>
 
-                <div className="mt-6 flex items-center text-green-300 font-semibold group-hover: text-white transition-colors">",
+                <div className="mt-6 flex items-center text-green-300 font-semibold group-hover: text-white transition-colors">"
                   <span>Ensure AI Compliance</span>
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover: translate-x-1 transition-transform/>",
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover: translate-x-1 transition-transform/>"
 =======
-                <div className="mt-6 flex items-center text-green-300 font-semibold group-hover: text-white transition-colors">";,
+                <div className="mt-6 flex items-center text-green-300 font-semibold group-hover: text-white transition-colors">";
                   <span>Ensure AI Compliance</span>
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover: translate-x-1 transition-transform" />";,
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover: translate-x-1 transition-transform" />";
                 </div>
               </div>
             </Link>
@@ -286,7 +286,7 @@ export default function October2025NewAdvancedAIContentBanner(): void {
         >
           <Link
             to="/blog"
-            className="inline-flex items-center gap-3 bg-gradient-to-r from-purple-600 to-blue-600 hover: from-purple-500 hover:to-blue-500 text-white px-8 py-4 rounded-full font-bold text-lg shadow-2xl hover:shadow-purple-500/50 transition-all duration-300 transform hover:scale-105",
+            className="inline-flex items-center gap-3 bg-gradient-to-r from-purple-600 to-blue-600 hover: from-purple-500 hover:to-blue-500 text-white px-8 py-4 rounded-full font-bold text-lg shadow-2xl hover:shadow-purple-500/50 transition-all duration-300 transform hover:scale-105"
           >
             <span>Explore All October 2025 Breakthroughs</span>
             <ArrowRight className="w-5 h-5/>

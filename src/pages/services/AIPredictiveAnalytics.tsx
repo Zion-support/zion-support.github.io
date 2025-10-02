@@ -5,70 +5,66 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 =======
 import React from 'react';';
-import {
-Helmet
-} from 'react-helmet-async';';
-import {
-Zap
-} from 'lucide-react';';
+import { Helmet } from 'react-helmet-async';';
+import { Zap } from 'lucide-react';';
 import Header from '../../components/Header';';
 import Footer from '../../components/Footer';';
 
-const AIPredictiveAnalytics: React.FC = () => {,
+const AIPredictiveAnalytics: React.FC = () => {
   const features = [
     {
       icon: Brain,,
       title: "Machine Learning Models",",
       description: "Advanced ML algorithms that predict future trends, customer behavior, and business outcomes with 94% accuracy.",",
 =======
-      title: "Machine Learning Models",";,
-      description: "Advanced ML algorithms that predict future trends, customer behavior, and business outcomes with 94% accuracy.",";,
-      benefit: "94% prediction accuracy rate",
+      title: "Machine Learning Models",";
+      description: "Advanced ML algorithms that predict future trends, customer behavior, and business outcomes with 94% accuracy.",";
+      benefit: "94% prediction accuracy rate"
     },
     {
       icon: TrendingUp,,
       title: "Real-Time Forecasting",",
       description: "Live predictive analytics that update continuously as new data flows in, providing instant insights.",",
 =======
-      title: "Real-Time Forecasting",";,
-      description: "Live predictive analytics that update continuously as new data flows in, providing instant insights.",";,
-      benefit: "Real-time decision making",
+      title: "Real-Time Forecasting",";
+      description: "Live predictive analytics that update continuously as new data flows in, providing instant insights.",";
+      benefit: "Real-time decision making"
     },
     {
       icon: Target,,
       title: "Customer Lifetime Value",",
       description: "Predict customer behavior, churn risk, and lifetime value to optimize marketing spend and retention.",",
 =======
-      title: "Customer Lifetime Value",";,
-      description: "Predict customer behavior, churn risk, and lifetime value to optimize marketing spend and retention.",";,
-      benefit: "35% increase in customer retention",
+      title: "Customer Lifetime Value",";
+      description: "Predict customer behavior, churn risk, and lifetime value to optimize marketing spend and retention.",";
+      benefit: "35% increase in customer retention"
     },
     {
       icon: BarChart3,,
       title: "Revenue Forecasting",",
       description: "Accurate revenue predictions based on historical data, market trends, and external factors.",",
 =======
-      title: "Revenue Forecasting",";,
-      description: "Accurate revenue predictions based on historical data, market trends, and external factors.",";,
-      benefit: "98% forecast accuracy",
+      title: "Revenue Forecasting",";
+      description: "Accurate revenue predictions based on historical data, market trends, and external factors.",";
+      benefit: "98% forecast accuracy"
     },
     {
       icon: Shield,,
       title: "Risk Assessment",",
       description: "Identify potential risks and opportunities before they impact your business operations.",",
 =======
-      title: "Risk Assessment",";,
-      description: "Identify potential risks and opportunities before they impact your business operations.",";,
-      benefit: "60% risk reduction",
+      title: "Risk Assessment",";
+      description: "Identify potential risks and opportunities before they impact your business operations.",";
+      benefit: "60% risk reduction"
     },
     {
       icon: Clock,,
       title: "Automated Insights",",
       description: "AI-generated insights and recommendations delivered directly to decision-makers.",",
 =======
-      title: "Automated Insights",";,
-      description: "AI-generated insights and recommendations delivered directly to decision-makers.",";,
-      benefit: "50% faster decision making",
+      title: "Automated Insights",";
+      description: "AI-generated insights and recommendations delivered directly to decision-makers.",";
+      benefit: "50% faster decision making"
     }
   ];
 
@@ -128,12 +124,12 @@ const AIPredictiveAnalytics: React.FC = () => {,
         "Custom reporting",
         "Training & consultation"
       ]
-      popular: false
+      popular: false,
 =======
-      name: "Starter",";,
-      price: "$299",";,
-      period: "/month",";,
-      description: "Perfect for small businesses wanting to leverage predictive analytics",";,
+      name: "Starter",";
+      price: "$299",";
+      period: "/month",";
+      description: "Perfect for small businesses wanting to leverage predictive analytics",";
       features: [,
         "Up to 10 predictive models",";
         "5 data sources",";
@@ -143,14 +139,14 @@ const AIPredictiveAnalytics: React.FC = () => {,
         "Standard integrations",";
         "Historical data analysis",";
         "Basic forecasting"
-      ],
-      popular: false,
+      ]
+      popular: false
     },
     {
-      name: "Professional",";,
-      price: "$899",";,
-      period: "/month",";,
-      description: "Ideal for growing companies with complex data needs",";,
+      name: "Professional",";
+      price: "$899",";
+      period: "/month",";
+      description: "Ideal for growing companies with complex data needs",";
       features: [,
         "Unlimited predictive models",";
         "25 data sources",";
@@ -162,14 +158,14 @@ const AIPredictiveAnalytics: React.FC = () => {,
         "API access",";
         "Automated alerts",";
         "A/B testing insights"
-      ],
-      popular: true,
+      ]
+      popular: true
     },
     {
-      name: "Enterprise",";,
-      price: "$2,999",";,
-      period: "/month",";,
-      description: "Complete solution for large organizations with enterprise requirements",";,
+      name: "Enterprise",";
+      price: "$2,999",";
+      period: "/month",";
+      description: "Complete solution for large organizations with enterprise requirements",";
       features: [,
         "Unlimited everything",";
         "Unlimited data sources",";
@@ -183,8 +179,8 @@ const AIPredictiveAnalytics: React.FC = () => {,
         "On-premise deployment",";
         "Custom reporting",";
         "Training & consultation"
-      ],
-      popular: false,
+      ]
+      popular: false
     }
   ];
 
@@ -194,33 +190,33 @@ const AIPredictiveAnalytics: React.FC = () => {,
       role: "VP Marketing, RetailTech Solutions",",
       content: "The predictive analytics platform helped us increase our customer retention by 40% and optimize our marketing spend by $2M annually. The ROI was evident within the first quarter.",",
 =======
-      name: "Jennifer Martinez",";,
-      role: "VP Marketing, RetailTech Solutions",";,
-      content: "The predictive analytics platform helped us increase our customer retention by 40% and optimize our marketing spend by $2M annually. The ROI was evident within the first quarter.",";,
+      name: "Jennifer Martinez",";
+      role: "VP Marketing, RetailTech Solutions",";
+      content: "The predictive analytics platform helped us increase our customer retention by 40% and optimize our marketing spend by $2M annually. The ROI was evident within the first quarter.",";
       rating: 5,,
-      company: "RetailTech Solutions",
+      company: "RetailTech Solutions"
     },
     {
       name: "David Kim",",
       role: "CFO, FinTech Innovations",",
       content: "Revenue forecasting accuracy improved from 78% to 98%. This gave us the confidence to make strategic investments and secure additional funding rounds.",",
 =======
-      name: "David Kim",";,
-      role: "CFO, FinTech Innovations",";,
-      content: "Revenue forecasting accuracy improved from 78% to 98%. This gave us the confidence to make strategic investments and secure additional funding rounds.",";,
+      name: "David Kim",";
+      role: "CFO, FinTech Innovations",";
+      content: "Revenue forecasting accuracy improved from 78% to 98%. This gave us the confidence to make strategic investments and secure additional funding rounds.",";
       rating: 5,,
-      company: "FinTech Innovations",
+      company: "FinTech Innovations"
     },
     {
       name: "Dr. Sarah Thompson",",
       role: "Head of Analytics, Healthcare Network",",
       content: "The risk assessment models identified potential issues 3 months before they occurred, saving us $5M in potential losses and improving patient outcomes.",",
 =======
-      name: "Dr. Sarah Thompson",";,
-      role: "Head of Analytics, Healthcare Network",";,
-      content: "The risk assessment models identified potential issues 3 months before they occurred, saving us $5M in potential losses and improving patient outcomes.",";,
+      name: "Dr. Sarah Thompson",";
+      role: "Head of Analytics, Healthcare Network",";
+      content: "The risk assessment models identified potential issues 3 months before they occurred, saving us $5M in potential losses and improving patient outcomes.",";
       rating: 5,,
-      company: "Healthcare Network",
+      company: "Healthcare Network"
     }
   ];
 
@@ -229,19 +225,19 @@ const AIPredictiveAnalytics: React.FC = () => {,
       title: "E-Commerce Optimization",",
       icon: Globe,,
       description: "Predict customer purchase behavior, optimize inventory, and personalize shopping experiences.",",
-      benefits: ["25% increase in conversion", "30% reduction in inventory costs", "40% improvement in customer satisfaction"]",
+      benefits: ["25% increase in conversion", "30% reduction in inventory costs", "40% improvement in customer satisfaction"]"
     },
     {
       title: "Financial Services",",
       icon: Database,,
       description: "Credit risk assessment, fraud detection, and investment portfolio optimization.",",
-      benefits: ["60% reduction in bad debt", "95% fraud detection accuracy", "20% increase in portfolio returns"]",
+      benefits: ["60% reduction in bad debt", "95% fraud detection accuracy", "20% increase in portfolio returns"]"
     },
     {
       title: "Healthcare Analytics",",
       icon: Users,,
       description: "Patient outcome prediction, resource allocation, and treatment optimization.",",
-      benefits: ["35% improvement in patient outcomes", "25% reduction in readmissions", "40% cost savings"]",
+      benefits: ["35% improvement in patient outcomes", "25% reduction in readmissions", "40% cost savings"]"
     },
     {
       title: "Supply Chain",",
@@ -249,28 +245,28 @@ const AIPredictiveAnalytics: React.FC = () => {,
       description: "Demand forecasting, supplier risk assessment, and logistics optimization.",",
       benefits: ["45% reduction in stockouts", "30% improvement in delivery times", "25% cost reduction"]",
 =======
-      title: "E-Commerce Optimization",";,
+      title: "E-Commerce Optimization",";
       icon: Globe,,
-      description: "Predict customer purchase behavior, optimize inventory, and personalize shopping experiences.",";,
-      benefits: ["25% increase in conversion", "30% reduction in inventory costs", "40% improvement in customer satisfaction"]";,
+      description: "Predict customer purchase behavior, optimize inventory, and personalize shopping experiences.",";
+      benefits: ["25% increase in conversion", "30% reduction in inventory costs", "40% improvement in customer satisfaction"]";
     },
     {
-      title: "Financial Services",";,
+      title: "Financial Services",";
       icon: Database,,
-      description: "Credit risk assessment, fraud detection, and investment portfolio optimization.",";,
-      benefits: ["60% reduction in bad debt", "95% fraud detection accuracy", "20% increase in portfolio returns"]";,
+      description: "Credit risk assessment, fraud detection, and investment portfolio optimization.",";
+      benefits: ["60% reduction in bad debt", "95% fraud detection accuracy", "20% increase in portfolio returns"]";
     },
     {
-      title: "Healthcare Analytics",";,
+      title: "Healthcare Analytics",";
       icon: Users,,
-      description: "Patient outcome prediction, resource allocation, and treatment optimization.",";,
-      benefits: ["35% improvement in patient outcomes", "25% reduction in readmissions", "40% cost savings"]";,
+      description: "Patient outcome prediction, resource allocation, and treatment optimization.",";
+      benefits: ["35% improvement in patient outcomes", "25% reduction in readmissions", "40% cost savings"]";
     },
     {
-      title: "Supply Chain",";,
+      title: "Supply Chain",";
       icon: Zap,,
-      description: "Demand forecasting, supplier risk assessment, and logistics optimization.",";,
-      benefits: ["45% reduction in stockouts", "30% improvement in delivery times", "25% cost reduction"]";,
+      description: "Demand forecasting, supplier risk assessment, and logistics optimization.",";
+      benefits: ["45% reduction in stockouts", "30% improvement in delivery times", "25% cost reduction"]";
     }
   ];
 
@@ -280,12 +276,12 @@ const AIPredictiveAnalytics: React.FC = () => {,
         <title>AI Predictive Analytics - Zion Tech Group | Advanced Forecasting & Insights</title>
         <meta
           name="description"
-          content="Transform your business with AI predictive analytics that deliver 94% accuracy in forecasting, customer behavior prediction, and risk assessment. Real-time insights for better decisions." /><meta name="keywords" content="predictive analytics, machine learning, forecasting, business intelligence, data analytics, AI insights, predictive modeling" /><link rel="canonical" href="https://ziontechgroup.com/services/ai-predictive-analytics/>",
+          content="Transform your business with AI predictive analytics that deliver 94% accuracy in forecasting, customer behavior prediction, and risk assessment. Real-time insights for better decisions." /><meta name="keywords" content="predictive analytics, machine learning, forecasting, business intelligence, data analytics, AI insights, predictive modeling" /><link rel="canonical" href="https://ziontechgroup.com/services/ai-predictive-analytics/>"
 =======
           content="Transform your business with AI predictive analytics that deliver 94% accuracy in forecasting, customer behavior prediction, and risk assessment. Real-time insights for better decisions."
         />
         <meta name="keywords" content="predictive analytics, machine learning, forecasting, business intelligence, data analytics, AI insights, predictive modeling" />";
-        <link rel="canonical" href="https: //ziontechgroup.com/services/ai-predictive-analytics" />";,
+        <link rel="canonical" href="https: //ziontechgroup.com/services/ai-predictive-analytics" />";
       </Helmet>
 
       <Header />
@@ -293,31 +289,31 @@ const AIPredictiveAnalytics: React.FC = () => {,
       <main className="min-h-screen bg-white">";
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-indigo-900 via-blue-800 to-purple-900 text-white py-20">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
             <div className="text-center">
-              <h1 className="text-5xl md: text-7xl font-bold mb-6">",
+              <h1 className="text-5xl md: text-7xl font-bold mb-6">"
                 AI Predictive <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">Analytics</span>
               </h1>
               <p className="text-xl md:text-2xl text-indigo-100 max-w-4xl mx-auto mb-8">
                 Transform your business with advanced AI predictive analytics that deliver 94% accuracy in forecasting
                 customer behavior prediction, and risk assessment for data-driven decision making.
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">",
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">"
 =======
         <section className="bg-gradient-to-br from-indigo-900 via-blue-800 to-purple-900 text-white py-20">";
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";,
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";
             <div className="text-center">";
-              <h1 className="text-5xl md: text-7xl font-bold mb-6">";,
+              <h1 className="text-5xl md: text-7xl font-bold mb-6">";
                 AI Predictive <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">Analytics</span>";
               </h1>
-              <p className="text-xl md: text-2xl text-indigo-100 max-w-4xl mx-auto mb-8">";,
-                Transform your business with advanced AI predictive analytics that deliver 94% accuracy in forecasting, 
+              <p className="text-xl md: text-2xl text-indigo-100 max-w-4xl mx-auto mb-8">";
+                Transform your business with advanced AI predictive analytics that deliver 94% accuracy in forecasting
                 customer behavior prediction, and risk assessment for data-driven decision making.
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">";,
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">";
                 <a
                   href="/contact"
-                  className="inline-flex items-center px-8 py-4 bg-indigo-600 hover: bg-indigo-700 text-white font-semibold rounded-lg transition-colors",
+                  className="inline-flex items-center px-8 py-4 bg-indigo-600 hover: bg-indigo-700 text-white font-semibold rounded-lg transition-colors"
                 >
                   <Phone className="w-5 h-5 mr-2/>
 =======
@@ -326,7 +322,7 @@ const AIPredictiveAnalytics: React.FC = () => {,
                 </a>
                 <a
                   href="#pricing"
-                  className="inline-flex items-center px-8 py-4 border-2 border-white text-white hover: bg-white hover:text-indigo-900 font-semibold rounded-lg transition-colors",
+                  className="inline-flex items-center px-8 py-4 border-2 border-white text-white hover: bg-white hover:text-indigo-900 font-semibold rounded-lg transition-colors"
                 >
                   View Pricing
                   <ArrowRight className="w-5 h-5 ml-2/>
@@ -340,12 +336,12 @@ const AIPredictiveAnalytics: React.FC = () => {,
 
         {/* Key Benefits */}
         <section className="py-16 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">
 =======
         <section className="py-16 bg-gray-50">";
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";,
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";
             <div className="text-center mb-12">";
               <h2 className="text-4xl font-bold text-gray-900 mb-4">";
                 Why Choose Our AI Predictive Analytics?
@@ -355,12 +351,12 @@ const AIPredictiveAnalytics: React.FC = () => {,
               </p>
             </div>
 
-            <div className="grid md: grid-cols-4 gap-8">",
+            <div className="grid md: grid-cols-4 gap-8">"
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-indigo-100 rounded-full mb-4">
                   <TrendingUp className="w-8 h-8 text-indigo-600/>
 =======
-            <div className="grid md: grid-cols-4 gap-8">";,
+            <div className="grid md: grid-cols-4 gap-8">";
               <div className="text-center">";
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-indigo-100 rounded-full mb-4">";
                   <TrendingUp className="w-8 h-8 text-indigo-600" />";
@@ -407,12 +403,12 @@ const AIPredictiveAnalytics: React.FC = () => {,
 
         {/* Use Cases */}
         <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">
 =======
         <section className="py-20">";
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";,
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";
             <div className="text-center mb-16">";
               <h2 className="text-4xl font-bold text-gray-900 mb-4">";
                 Industry Applications
@@ -422,19 +418,19 @@ const AIPredictiveAnalytics: React.FC = () => {,
               </p>
             </div>
 
-            <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">",
+            <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">"
               {useCases.map((useCase, index) => {
                 const Icon = useCase.icon;
                 return (
-                  <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">",
+                  <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">"
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-indigo-100 rounded-full mb-6">
                       <Icon className="w-8 h-8 text-indigo-600/>
 =======
-            <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">";,
+            <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">";
               {useCases.map((useCase, index) => {
                 const Icon = useCase.icon;
                 return (
-                  <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">";,
+                  <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">";
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-indigo-100 rounded-full mb-6">";
                       <Icon className="w-8 h-8 text-indigo-600" />";
                     </div>
@@ -461,12 +457,12 @@ const AIPredictiveAnalytics: React.FC = () => {,
 
         {/* Features */}
         <section className="py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">
 =======
         <section className="py-20 bg-gray-50">";
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";,
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";
             <div className="text-center mb-16">";
               <h2 className="text-4xl font-bold text-gray-900 mb-4">";
                 Advanced AI Capabilities
@@ -476,11 +472,11 @@ const AIPredictiveAnalytics: React.FC = () => {,
               </p>
             </div>
 
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">"
               {features.map((feature, index) => {
                 const Icon = feature.icon;
                 return (
-                  <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">",
+                  <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">"
                     <div className="inline-flex items-center justify-center w-12 h-12 bg-indigo-100 rounded-lg mb-4">
                       <Icon className="w-6 h-6 text-indigo-600/>
                     </div>
@@ -489,11 +485,11 @@ const AIPredictiveAnalytics: React.FC = () => {,
                     <div className="inline-flex items-center text-green-600 font-semibold text-sm">
                       <CheckCircle className="w-4 h-4 mr-1/>
 =======
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">";,
+            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">";
               {features.map((feature, index) => {
                 const Icon = feature.icon;
                 return (
-                  <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">";,
+                  <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">";
                     <div className="inline-flex items-center justify-center w-12 h-12 bg-indigo-100 rounded-lg mb-4">";
                       <Icon className="w-6 h-6 text-indigo-600" />";
                     </div>
@@ -512,12 +508,12 @@ const AIPredictiveAnalytics: React.FC = () => {,
 
         {/* Pricing */}
         <section id="pricing" className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">
 =======
         <section id="pricing" className="py-20">";
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";,
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";
             <div className="text-center mb-16">";
               <h2 className="text-4xl font-bold text-gray-900 mb-4">";
                 Transparent Pricing for Every Business Size
@@ -527,9 +523,9 @@ const AIPredictiveAnalytics: React.FC = () => {,
               </p>
             </div>
 
-            <div className="grid md: grid-cols-3 gap-8">",
+            <div className="grid md: grid-cols-3 gap-8">"
 =======
-            <div className="grid md: grid-cols-3 gap-8">";,
+            <div className="grid md: grid-cols-3 gap-8">";
               {pricing.map((plan, index) => (
                 <div key={index} className={`bg-white rounded-2xl shadow-lg p-8 ${plan.popular ? 'ring-2 ring-indigo-500 relative' : ''}`}>`;
                   {plan.popular && (
@@ -566,7 +562,7 @@ const AIPredictiveAnalytics: React.FC = () => {,
 plan.popular
 ? 'bg-indigo-600 text-white hover:bg-indigo-700'
 =======
-? 'bg-indigo-600 text-white hover: bg-indigo-700',';,
+? 'bg-indigo-600 text-white hover: bg-indigo-700',';
 : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
 }`}`;
                   >
@@ -580,7 +576,7 @@ plan.popular
               <p className="text-gray-600 mb-4">Need a custom solution?</p>";
               <a
                 href="/contact"
-                className="inline-flex items-center text-indigo-600 hover: text-indigo-700 font-semibold",
+                className="inline-flex items-center text-indigo-600 hover: text-indigo-700 font-semibold"
               >
                 Contact our Data Science Team
                 <ArrowRight className="w-4 h-4 ml-1/>
@@ -593,12 +589,12 @@ plan.popular
 
         {/* Testimonials */}
         <section className="py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">
 =======
         <section className="py-20 bg-gray-50">";
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";,
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";
             <div className="text-center mb-16">";
               <h2 className="text-4xl font-bold text-gray-900 mb-4">";
                 What Our Clients Say
@@ -608,9 +604,9 @@ plan.popular
               </p>
             </div>
 
-            <div className="grid md: grid-cols-3 gap-8">",
+            <div className="grid md: grid-cols-3 gap-8">"
 =======
-            <div className="grid md: grid-cols-3 gap-8">";,
+            <div className="grid md: grid-cols-3 gap-8">";
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200">";
                   <div className="flex items-center mb-4">";
@@ -636,23 +632,23 @@ plan.popular
 
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-br from-indigo-900 via-blue-800 to-purple-900 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">",
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">"
             <h2 className="text-4xl font-bold mb-6">
 =======
         <section className="py-20 bg-gradient-to-br from-indigo-900 via-blue-800 to-purple-900 text-white">";
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">";,
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">";
             <h2 className="text-4xl font-bold mb-6">";
               Ready to Predict the Future of Your Business?
             </h2>
             <p className="text-xl text-indigo-100 max-w-3xl mx-auto mb-8">";
               Transform your decision-making with AI predictive analytics that deliver accurate forecasts and actionable insights.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">",
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">"
 =======
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">";,
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">";
               <a
                 href="/contact"
-                className="inline-flex items-center px-8 py-4 bg-indigo-600 hover: bg-indigo-700 text-white font-semibold rounded-lg transition-colors",
+                className="inline-flex items-center px-8 py-4 bg-indigo-600 hover: bg-indigo-700 text-white font-semibold rounded-lg transition-colors"
               >
                 <Phone className="w-5 h-5 mr-2/>
 =======
@@ -661,7 +657,7 @@ plan.popular
               </a>
               <a
                 href="/case-studies"
-                className="inline-flex items-center px-8 py-4 border-2 border-white text-white hover: bg-white hover:text-indigo-900 font-semibold rounded-lg transition-colors",
+                className="inline-flex items-center px-8 py-4 border-2 border-white text-white hover: bg-white hover:text-indigo-900 font-semibold rounded-lg transition-colors"
               >
                 View Success Stories
                 <ArrowRight className="w-5 h-5 ml-2/>

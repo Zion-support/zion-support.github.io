@@ -5,14 +5,12 @@ import {
 } from 'lucide-react';
 =======
 import React from 'react';';
-import {
-Helmet
-} from 'react-helmet-async';';
+import { Helmet } from 'react-helmet-async';';
 import {
 
 } from 'lucide-react';';
 
-const AIContentGenerator: React.FC = () => {,
+const AIContentGenerator: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -29,13 +27,13 @@ const AIContentGenerator: React.FC = () => {,
             <div className="bg-gradient-to-r from-blue-600 to-purple-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
               <FileText className="w-10 h-10 text-white/>
             </div>
-            <h1 className="text-4xl md: text-6xl font-bold text-gray-900 mb-6">",
+            <h1 className="text-4xl md: text-6xl font-bold text-gray-900 mb-6">"
 =======
           <div className="text-center mb-16">";
             <div className="bg-gradient-to-r from-blue-600 to-purple-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">";
               <FileText className="w-10 h-10 text-white" />";
             </div>
-            <h1 className="text-4xl md: text-6xl font-bold text-gray-900 mb-6">";,
+            <h1 className="text-4xl md: text-6xl font-bold text-gray-900 mb-6">";
               AI Content Generator Pro
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">";
@@ -47,19 +45,19 @@ const AIContentGenerator: React.FC = () => {,
                 <span className="text-3xl font-bold text-blue-600">Starting at $29/month</span>";
               </div>
               <p className="text-gray-600 mb-6">Perfect for content creators, marketers, and businesses looking to scale their content production.</p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">",
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">"
 =======
               <p className="text-gray-600 mb-6">Perfect for content creators, marketers, and businesses looking to scale their content production.</p>";
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">";,
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">";
                 <a 
-                  href="tel: +13024640950" ,
-                  className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover: bg-blue-700 transition-colors text-center",
+                  href="tel: +13024640950"
+                  className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover: bg-blue-700 transition-colors text-center"
                 >
                   Call +1 302 464 0950
                 </a>
                 <a 
-                  href="mailto: kleber@ziontechgroup.com" ,
-                  className="border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-semibold hover: bg-blue-50 transition-colors text-center",
+                  href="mailto: kleber@ziontechgroup.com"
+                  className="border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-semibold hover: bg-blue-50 transition-colors text-center"
                 >
                   Email Us
                 </a>
@@ -70,14 +68,14 @@ const AIContentGenerator: React.FC = () => {,
           {/* Features */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Key Features</h2>
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">"
               <div className="bg-white rounded-lg shadow-lg p-6">
                 <div className="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
                   <FileText className="w-6 h-6 text-blue-600/>
 =======
           <section className="mb-16">";
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Key Features</h2>";
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">";,
+            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">";
               <div className="bg-white rounded-lg shadow-lg p-6">";
                 <div className="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">";
                   <FileText className="w-6 h-6 text-blue-600" />";
@@ -149,7 +147,7 @@ const AIContentGenerator: React.FC = () => {,
           {/* Pricing */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Pricing Plans</h2>
-            <div className="grid md: grid-cols-3 gap-8">",
+            <div className="grid md: grid-cols-3 gap-8">"
               <div className="bg-white rounded-lg shadow-lg p-8">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Starter</h3>
                 <div className="text-3xl font-bold text-blue-600 mb-6">$29/month</div>
@@ -171,7 +169,7 @@ const AIContentGenerator: React.FC = () => {,
 =======
           <section className="mb-16">";
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Pricing Plans</h2>";
-            <div className="grid md: grid-cols-3 gap-8">";,
+            <div className="grid md: grid-cols-3 gap-8">";
               <div className="bg-white rounded-lg shadow-lg p-8">";
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Starter</h3>";
                 <div className="text-3xl font-bold text-blue-600 mb-6">$29/month</div>";
@@ -194,8 +192,8 @@ const AIContentGenerator: React.FC = () => {,
                   </li>
                 </ul>
                 <a 
-                  href="tel: +13024640950" ,
-                  className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover: bg-blue-700 transition-colors text-center block",
+                  href="tel: +13024640950"
+                  className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover: bg-blue-700 transition-colors text-center block"
                 >
                   Get Started
                 </a>
@@ -251,8 +249,8 @@ const AIContentGenerator: React.FC = () => {,
                   </li>
                 </ul>
                 <a 
-                  href="tel: +13024640950" ,
-                  className="w-full bg-white text-blue-600 py-3 rounded-lg font-semibold hover: bg-gray-100 transition-colors text-center block",
+                  href="tel: +13024640950"
+                  className="w-full bg-white text-blue-600 py-3 rounded-lg font-semibold hover: bg-gray-100 transition-colors text-center block"
                 >
                   Get Started
                 </a>
@@ -306,8 +304,8 @@ const AIContentGenerator: React.FC = () => {,
                   </li>
                 </ul>
                 <a 
-                  href="mailto: kleber@ziontechgroup.com" ,
-                  className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover: bg-blue-700 transition-colors text-center block",
+                  href="mailto: kleber@ziontechgroup.com"
+                  className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover: bg-blue-700 transition-colors text-center block"
                 >
                   Contact Sales
                 </a>
@@ -322,18 +320,18 @@ const AIContentGenerator: React.FC = () => {,
               <p className="text-lg text-gray-600 mb-8">";
                 Contact us today for a free consultation and to discuss your content generation needs.
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">",
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">"
 =======
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">";,
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">";
                 <a 
-                  href="tel: +13024640950" ,
-                  className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover: bg-blue-700 transition-colors text-center",
+                  href="tel: +13024640950"
+                  className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover: bg-blue-700 transition-colors text-center"
                 >
                   Call +1 302 464 0950
                 </a>
                 <a 
-                  href="mailto: kleber@ziontechgroup.com" ,
-                  className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold hover: bg-blue-50 transition-colors text-center",
+                  href="mailto: kleber@ziontechgroup.com"
+                  className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold hover: bg-blue-50 transition-colors text-center"
                 >
                   Email Us
                 </a>

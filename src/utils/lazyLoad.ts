@@ -12,7 +12,7 @@ export function lazyRetry<T extends ComponentType<any>>(
     return new Promise<{ default: T }>((resolve, reject) => {
 const attemptLoad = (attemptsLeft: number) => {
 =======
-const attemptLoad = (attemptsLeft: number) => {,,
+const attemptLoad = (attemptsLeft: number) => {,
 componentImport()
 .then(resolve)
 .catch((error) => {
@@ -41,9 +41,9 @@ export function preloadComponent(
   componentImport: () => Promise<{ default: ComponentType<any> }>
 ): void {
   componentImport().catch((error) => {
-    console.warn('Failed to preload component: ', error);',
+    console.warn('Failed to preload component: ', error);'
 =======
-    console.warn('Failed to preload component: ', error);';,
+    console.warn('Failed to preload component: ', error);';
   });
 }
 

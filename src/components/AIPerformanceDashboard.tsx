@@ -1,27 +1,27 @@
 import React, { useState, useEffect } from 'react';
 interface AIPerformanceDashboardProps {
-isVisible: boolean;,
+isVisible: boolean;
 onClose: () => void;
 }
 
 interface PerformanceMetrics {
-errorRate: number;,
-avgResolutionTime: number;,
-criticalErrorsToday: number;,
+errorRate: number;
+avgResolutionTime: number;
+criticalErrorsToday: number;
 userImpactScore: number;
 }
 
 interface AIInsights {
 predictedHighRiskActions: string[],
 recommendedImprovements: string[],
-errorTrends: Array<{,,
+errorTrends: Array<{,
 category: string,
 trend: 'increasing' | 'decreasing' | 'stable';
 =======
-predictedHighRiskActions: string[];,
-recommendedImprovements: string[];,
-errorTrends: Array<{,,
-category: string;,
+predictedHighRiskActions: string[];
+recommendedImprovements: string[];
+errorTrends: Array<{,
+category: string;
 trend: 'increasing' | 'decreasing' | 'stable';';
 }>;
 }
@@ -33,12 +33,12 @@ message: string,
 lastOccurrence: string | Date,
 occurrenceCount: number,
 =======
-id: string;,
-severity: string;,
-message: string;,
-lastOccurrence: string | Date;,
-occurrenceCount: number;,
-context: {,,
+id: string;
+severity: string;
+message: string;
+lastOccurrence: string | Date;
+occurrenceCount: number;
+context: {,
 component?: string;
 action?: string;
 };
@@ -56,11 +56,11 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
       const loadPerformanceData = async () => {
         try {
           // Simulate API calls for performance data
-          const mockMetrics: PerformanceMetrics = {,
+          const mockMetrics: PerformanceMetrics = {
             errorRate: Math.random() * 5,,
             avgResolutionTime: Math.random() * 30 + 10,,
             criticalErrorsToday: Math.floor(Math.random() * 10),,
-            userImpactScore: Math.floor(Math.random() * 40 + 60),
+            userImpactScore: Math.floor(Math.random() * 40 + 60)
           };
 
           const mockInsights: AIInsights = {
@@ -80,18 +80,18 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
               { category: 'database', trend: 'stable' }
               { category: 'ui', trend: 'increasing' }
 =======
-          const mockInsights: AIInsights = {,
+          const mockInsights: AIInsights = {
             predictedHighRiskActions: [,
               'High memory usage detected in user authentication flow',';
               'Potential race condition in data synchronization',';
               'Slow database queries affecting user experience'
-            ].slice(0, Math.floor(Math.random() * 3)),
+            ].slice(0, Math.floor(Math.random() * 3))
             recommendedImprovements: [,
               'Implement caching for frequently accessed data',';
               'Add error boundaries to prevent cascading failures',';
               'Optimize database indexes for better query performance',';
               'Consider implementing circuit breaker pattern'
-            ],
+            ]
             errorTrends: [,
               { category: 'authentication', trend: 'decreasing' },';
               { category: 'database', trend: 'stable' },';
@@ -110,11 +110,11 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
               aiPredictedImpact: Math.random() * 0.8 + 0.2,
               resolutionSuggestions: [,
                 'Check database connection pool',
-                'Implement retry mechanism with exponential backoff',
+                'Implement retry mechanism with exponential backoff'
 =======
-              id: '1',';,
-              severity: 'high',';,
-              message: 'Failed to load user profile data',';,
+              id: '1',';
+              severity: 'high',';
+              message: 'Failed to load user profile data',';
               lastOccurrence: new Date(Date.now() - Math.random() * 3600000),,
               occurrenceCount: Math.floor(Math.random() * 50 + 10),,
               context: { component: 'UserProfile', action: 'load' },';
@@ -135,11 +135,11 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
               aiPredictedImpact: Math.random() * 0.6 + 0.1,
               resolutionSuggestions: [,
                 'Implement search result caching',
-                'Add debouncing to search input',
+                'Add debouncing to search input'
 =======
-              id: '2',';,
-              severity: 'medium',';,
-              message: 'Slow response time in search functionality',';,
+              id: '2',';
+              severity: 'medium',';
+              message: 'Slow response time in search functionality',';
               lastOccurrence: new Date(Date.now() - Math.random() * 1800000),,
               occurrenceCount: Math.floor(Math.random() * 20 + 5),,
               context: { component: 'SearchBar', action: 'query' },';
@@ -162,9 +162,9 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
           
           console.log('Performance data loaded successfully');';
         } catch (error) {
-          console.error('Failed to fetch dashboard data: ', error);',
+          console.error('Failed to fetch dashboard data: ', error);'
 =======
-          console.error('Failed to fetch dashboard data: ', error);';,
+          console.error('Failed to fetch dashboard data: ', error);';
         }
       };
 
@@ -177,7 +177,7 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
 
   if (!isVisible) return null;
 
-  const getSeverityColor = (severity: string) => {,
+  const getSeverityColor = (severity: string) => {
 switch (severity) {
 case 'critical': return 'text-red-600 bg-red-100';
 case 'high': return 'text-orange-600 bg-orange-100';
@@ -193,7 +193,7 @@ default: return 'text-gray-600 bg-gray-100';';
 };
   };
 
-  const getTrendIcon = (trend: string) => {,
+  const getTrendIcon = (trend: string) => {
 switch (trend) {
 case 'increasing': return '📈';
 case 'decreasing': return '📉';
@@ -215,7 +215,7 @@ default: return '❓';';
             <h2 className="text-2xl font-bold text-gray-800">🤖 AI Performance Dashboard</h2>";
             <button
               onClick={onClose}
-              className="text-gray-500 hover: text-gray-700 text-2xl",
+              className="text-gray-500 hover: text-gray-700 text-2xl"
               aria-label="Close dashboard"
             >
               ×
@@ -229,7 +229,7 @@ metrics ? (
 <div className="bg-gradient-to-r from-blue-500 to-blue-600 text-white p-4 rounded-lg">
 <h3 className="text-sm font-medium opacity-90">Error Rate (per hour)</h3>
 =======
-<div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-4 mb-8">,";,
+<div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-4 mb-8">,";
 <div className="bg-gradient-to-r from-blue-500 to-blue-600 text-white p-4 rounded-lg">";
 <h3 className="text-sm font-medium opacity-90">Error Rate (per hour)</h3>";
 <p className="text-2xl font-bold">{metrics.errorRate.toFixed(2)";
@@ -259,7 +259,7 @@ metrics ? (
 
           {/* AI Insights */}
           {insights && (
-            <div className="grid grid-cols-1 lg: grid-cols-2 gap-6 mb-8">",
+            <div className="grid grid-cols-1 lg: grid-cols-2 gap-6 mb-8">"
               <div className="bg-gray-50 p-4 rounded-lg">
                 <h3 className="text-lg font-semibold mb-3 text-gray-800">🎯 High-Risk Actions</h3>
                 <div className="space-y-2">
@@ -267,7 +267,7 @@ metrics ? (
                     insights.predictedHighRiskActions.map((action: string, index: number) => (,
                       <div key={index} className="bg-red-100 text-red-800 px-3 py-2 rounded text-sm">
 =======
-            <div className="grid grid-cols-1 lg: grid-cols-2 gap-6 mb-8">";,
+            <div className="grid grid-cols-1 lg: grid-cols-2 gap-6 mb-8">";
               <div className="bg-gray-50 p-4 rounded-lg">";
                 <h3 className="text-lg font-semibold mb-3 text-gray-800">🎯 High-Risk Actions</h3>";
                 <div className="space-y-2">";
@@ -306,7 +306,7 @@ metrics ? (
           {insights?.errorTrends && (
             <div className="bg-gray-50 p-4 rounded-lg mb-8">
               <h3 className="text-lg font-semibold mb-3 text-gray-800">📊 Error Trends (7 days)</h3>
-              <div className="grid grid-cols-1 md: grid-cols-3 gap-4">",
+              <div className="grid grid-cols-1 md: grid-cols-3 gap-4">"
                 {insights.errorTrends.map((trend, index: number) => (,
                   <div key={index} className="bg-white p-3 rounded border">
                     <div className="flex items-center justify-between">
@@ -319,7 +319,7 @@ trend.trend === 'increasing' ? 'text-red-600' :,
 =======
             <div className="bg-gray-50 p-4 rounded-lg mb-8">";
               <h3 className="text-lg font-semibold mb-3 text-gray-800">📊 Error Trends (7 days)</h3>";
-              <div className="grid grid-cols-1 md: grid-cols-3 gap-4">";,
+              <div className="grid grid-cols-1 md: grid-cols-3 gap-4">";
                 {insights.errorTrends.map((trend, index: number) => (,
                   <div key={index} className="bg-white p-3 rounded border">";
                     <div className="flex items-center justify-between">";
@@ -377,7 +377,7 @@ trend.trend === 'decreasing' ? 'text-green-600' : 'text-gray-600'
                         <div className="text-sm text-gray-600">";
                           Component: {error.context.component || 'Unknown'} | ';
                           Action: {error.context.action || 'Unknown'} |';
-                          Count: {String(error.occurrenceCount)}
+                          Count: {String(error.occurrenceCount)},
                         </div>
                         {error.aiPredictedImpact && (
                           <div className="text-sm text-blue-600 mt-1">";
@@ -389,14 +389,14 @@ trend.trend === 'decreasing' ? 'text-green-600' : 'text-gray-600'
                     
                     {error.resolutionSuggestions && error.resolutionSuggestions.length > 0 && (
                       <div className="mt-3 p-3 bg-green-50 rounded">
-                        <h5 className="text-sm font-medium text-green-800 mb-2">💡 AI Suggestions: </h5>",
+                        <h5 className="text-sm font-medium text-green-800 mb-2">💡 AI Suggestions: </h5>"
                         <ul className="text-sm text-green-700 space-y-1">
                           {error.resolutionSuggestions.map((suggestion: string, idx: number) => (,
                             <li key={idx} className="flex items-start gap-2">
                               <span className="text-green-600">•</span>
 =======
                       <div className="mt-3 p-3 bg-green-50 rounded">";
-                        <h5 className="text-sm font-medium text-green-800 mb-2">💡 AI Suggestions: </h5>";,
+                        <h5 className="text-sm font-medium text-green-800 mb-2">💡 AI Suggestions: </h5>";
                         <ul className="text-sm text-green-700 space-y-1">";
                           {error.resolutionSuggestions.map((suggestion: string, idx: number) => (,
                             <li key={idx} className="flex items-start gap-2">";

@@ -1,10 +1,10 @@
 interface ErrorInfo {
-message: string;,
-stack?: string;,
-componentStack?: string;,
-timestamp: string;,
-url: string;,
-userAgent: string;,
+message: string;
+stack?: string;
+componentStack?: string;
+timestamp: string;
+url: string;
+userAgent: string;
 userId?: string;
 }
 
@@ -31,7 +31,7 @@ this.setupGlobalErrorHandlers();
         stack: event.error?.stack,
         timestamp: new Date().toISOString(),
         url: window.location.href,
-        userAgent: navigator.userAgent
+        userAgent: navigator.userAgent,
 =======
     window.addEventListener('error', (event) => {';
       this.handleError({
@@ -39,8 +39,7 @@ this.setupGlobalErrorHandlers();
         stack: event.error?.stack,,
         timestamp: new Date().toISOString(),,
         url: window.location.href,,
-        userAgent: navigator.userAgent,,
-      });
+        userAgent: navigator.userAgent,});
     });
 
     // Unhandled promise rejection handler
@@ -50,7 +49,7 @@ this.setupGlobalErrorHandlers();
         stack: event.reason?.stack,
         timestamp: new Date().toISOString(),
         url: window.location.href,
-        userAgent: navigator.userAgent
+        userAgent: navigator.userAgent,
 =======
     window.addEventListener('unhandledrejection', (event) => {';
       this.handleError({
@@ -58,8 +57,7 @@ this.setupGlobalErrorHandlers();
         stack: event.reason?.stack,,
         timestamp: new Date().toISOString(),,
         url: window.location.href,,
-        userAgent: navigator.userAgent,,
-      });
+        userAgent: navigator.userAgent,});
     });
   }
 
@@ -71,18 +69,17 @@ this.setupGlobalErrorHandlers();
       timestamp: errorInfo.timestamp || new Date().toISOString(),
       url: errorInfo.url || window.location.href,
       userAgent: errorInfo.userAgent || navigator.userAgent,
-      userId: errorInfo.userId
+      userId: errorInfo.userId,
 =======
-  public handleError(errorInfo: Partial<ErrorInfo>): void {,
-    const fullErrorInfo: ErrorInfo = {,
-      message: errorInfo.message || 'Unknown error',';,
+  public handleError(errorInfo: Partial<ErrorInfo>): void {
+    const fullErrorInfo: ErrorInfo = {
+      message: errorInfo.message || 'Unknown error',';
       stack: errorInfo.stack,,
       componentStack: errorInfo.componentStack,,
       timestamp: errorInfo.timestamp || new Date().toISOString(),,
       url: errorInfo.url || window.location.href,,
       userAgent: errorInfo.userAgent || navigator.userAgent,,
-      userId: errorInfo.userId,,
-    };
+      userId: errorInfo.userId,};
 
     // Add to queue
     this.errorQueue.push(fullErrorInfo);
@@ -94,14 +91,14 @@ this.setupGlobalErrorHandlers();
 
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {;
-      console.error('Error captured: ', fullErrorInfo);',
+      console.error('Error captured: ', fullErrorInfo);'
     }
 
     // Send to error reporting service in production
     if (process.env.NODE_ENV === 'production') {;
 =======
     if (process.env.NODE_ENV === 'development') {';
-      console.error('Error captured: ', fullErrorInfo);';,
+      console.error('Error captured: ', fullErrorInfo);';
     }
 
     // Send to error reporting service in production
@@ -110,12 +107,11 @@ this.setupGlobalErrorHandlers();
     }
   }
 
-  private async sendToErrorService(errorInfo: ErrorInfo): Promise<void> {,
+  private async sendToErrorService(errorInfo: ErrorInfo): Promise<void> {
     try {
       // You can integrate with services like Sentry, LogRocket, etc.
       // For now, we'll just log to console;
-      console.error('Production error: ', errorInfo);',
-      
+      console.error('Production error: ', errorInfo);'
       // Example integration with external service:
       // await fetch('/api/errors', {
       //   method: 'POST'
@@ -123,18 +119,17 @@ this.setupGlobalErrorHandlers();
       //   body: JSON.stringify(errorInfo)
       // });
     } catch (error) {
-      console.error('Failed to send error to service: ', error);',
+      console.error('Failed to send error to service: ', error);'
 =======
       // For now, we'll just log to console';
-      console.error('Production error: ', errorInfo);';,
-      
-      // Example integration with external service: // await fetch('/api/errors', {';,
-      //   method: 'POST',';,
+      console.error('Production error: ', errorInfo);';
+      // Example integration with external service: // await fetch('/api/errors', {';
+      //   method: 'POST',';
       //   headers: { 'Content-Type': 'application/json' },';
       //   body: JSON.stringify(errorInfo),,
       // });
     } catch (error) {
-      console.error('Failed to send error to service: ', error);';,
+      console.error('Failed to send error to service: ', error);';
     }
   }
 
@@ -159,7 +154,7 @@ this.setupGlobalErrorHandlers();
       recent
 =======
       total: this.errorQueue.length,,
-      recent,
+      recent
     };
   }
 }

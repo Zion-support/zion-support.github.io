@@ -23,10 +23,10 @@ const mockLocalStorage = (() => {
     getItem: (key: string) => store[key] || null,,
     setItem: (key: string, value: string) => {,
       store[key] = value;
-    },
+    }
     removeItem: (key: string) => {,
       delete store[key];
-    },
+    }
     clear: () => {,
       store = {};
     }
@@ -47,10 +47,10 @@ const mockSessionStorage = (() => {
     getItem: (key: string) => store[key] || null,,
     setItem: (key: string, value: string) => {,
       store[key] = value;
-    },
+    }
     removeItem: (key: string) => {,
       delete store[key];
-    },
+    }
     clear: () => {,
       store = {};
     }
@@ -78,14 +78,14 @@ describe('Analytics Tracking System', () => {';
         action: 'click',
         label: 'button',
         value: 100,
-        metadata: { extra: 'data' }
+        metadata: { extra: 'data' },
 =======
   describe('trackEvent', () => {';
     it('should track custom event with all properties', () => {';
       const event = {
-        category: 'test',';,
-        action: 'click',';,
-        label: 'button',';,
+        category: 'test',';
+        action: 'click',';
+        label: 'button',';
         value: 100,,
         metadata: { extra: 'data' },';
       };
@@ -96,12 +96,12 @@ describe('Analytics Tracking System', () => {';
     it('should store event in localStorage', () => {;
       trackEvent({
         category: 'test',
-        action: 'test_action'
+        action: 'test_action',
 =======
     it('should store event in localStorage', () => {';
       trackEvent({
-        category: 'test',';,
-        action: 'test_action',';,
+        category: 'test',';
+        action: 'test_action',';
       });
 
       const stored = mockLocalStorage.getItem('analytics_events');';
@@ -126,7 +126,7 @@ describe('Analytics Tracking System', () => {';
       // Track 150 events
       for (let i = 0; i < 150; i++) {
         trackEvent({
-          category: 'test',';,
+          category: 'test',';
           action: `action_${i}`,`;
         });
       }
@@ -155,16 +155,15 @@ const pageViewEvent = events.find((e: any) => e.category === 'page_view');
   describe('trackPageView', () => {';
     it('should track page view with path', () => {';
       Object.defineProperty(document, 'title', {';
-        value: 'Test Page',';,
-        writable: true,,
-      });
+        value: 'Test Page',';
+        writable: true,});
 
       trackPageView('/test-path', 'Test Page');';
 
       const stored = mockLocalStorage.getItem('analytics_events');';
       if (stored) {
 const events = JSON.parse(stored);
-const pageViewEvent = events.find((e: any) => e.category === 'page_view');';,
+const pageViewEvent = events.find((e: any) => e.category === 'page_view');';
 expect(pageViewEvent).toBeTruthy();
 expect(pageViewEvent.label).toBe('/test-path');';
 }
@@ -177,7 +176,7 @@ expect(pageViewEvent.label).toBe('/test-path');';
       const stored = mockLocalStorage.getItem('analytics_events');
       if (stored) {
         const events = JSON.parse(stored);
-        const bannerEvent = events.find((e: any) => e.category === 'banner');',
+        const bannerEvent = events.find((e: any) => e.category === 'banner');'
 =======
   describe('trackBannerInteraction', () => {';
     it('should track banner impression', () => {';
@@ -186,7 +185,7 @@ expect(pageViewEvent.label).toBe('/test-path');';
       const stored = mockLocalStorage.getItem('analytics_events');';
       if (stored) {
         const events = JSON.parse(stored);
-        const bannerEvent = events.find((e: any) => e.category === 'banner');';,
+        const bannerEvent = events.find((e: any) => e.category === 'banner');';
         expect(bannerEvent).toBeTruthy();
         expect(bannerEvent.action).toBe('impression');';
         expect(bannerEvent.label).toBe('banner123');';
@@ -208,7 +207,7 @@ const bannerEvent = events.find(
       if (stored) {
 const events = JSON.parse(stored);
 const bannerEvent = events.find(
-(e: any) => e.category === 'banner' && e.action === 'click',';,
+(e: any) => e.category === 'banner' && e.action === 'click',';
 );
 expect(bannerEvent).toBeTruthy();
 expect(bannerEvent.metadata.source).toBe('homepage');';
@@ -221,14 +220,14 @@ expect(bannerEvent.metadata.source).toBe('homepage');';
       trackConversion({
         type: 'newsletter_signup',
         value: 10,
-        source: 'homepage'
+        source: 'homepage',
 =======
   describe('trackConversion', () => {';
     it('should track newsletter signup conversion', () => {';
       trackConversion({
-        type: 'newsletter_signup',';,
+        type: 'newsletter_signup',';
         value: 10,,
-        source: 'homepage',';,
+        source: 'homepage',';
       });
 
       const stored = mockLocalStorage.getItem('analytics_events');';
@@ -236,7 +235,7 @@ expect(bannerEvent.metadata.source).toBe('homepage');';
 const events = JSON.parse(stored);
 const conversionEvent = events.find((e: any) => e.category === 'conversion');
 =======
-const conversionEvent = events.find((e: any) => e.category === 'conversion');';,
+const conversionEvent = events.find((e: any) => e.category === 'conversion');';
 expect(conversionEvent).toBeTruthy();
 expect(conversionEvent.action).toBe('newsletter_signup');';
 expect(conversionEvent.value).toBe(10);
@@ -251,7 +250,7 @@ expect(conversionEvent.value).toBe(10);
       const stored = mockLocalStorage.getItem('analytics_events');
       if (stored) {
         const events = JSON.parse(stored);
-        const errorEvent = events.find((e: any) => e.category === 'error');',
+        const errorEvent = events.find((e: any) => e.category === 'error');'
 =======
   describe('trackError', () => {';
     it('should track error with context', () => {';
@@ -261,7 +260,7 @@ expect(conversionEvent.value).toBe(10);
       const stored = mockLocalStorage.getItem('analytics_events');';
       if (stored) {
         const events = JSON.parse(stored);
-        const errorEvent = events.find((e: any) => e.category === 'error');';,
+        const errorEvent = events.find((e: any) => e.category === 'error');';
         expect(errorEvent).toBeTruthy();
         expect(errorEvent.label).toBe('Test error');';
         expect(errorEvent.metadata.context).toBe('test-context');';
@@ -276,7 +275,7 @@ expect(conversionEvent.value).toBe(10);
       const stored = mockLocalStorage.getItem('analytics_events');
       if (stored) {
         const events = JSON.parse(stored);
-        const formEvent = events.find((e: any) => e.category === 'form');',
+        const formEvent = events.find((e: any) => e.category === 'form');'
 =======
   describe('trackFormSubmission', () => {';
     it('should track successful form submission', () => {';
@@ -285,7 +284,7 @@ expect(conversionEvent.value).toBe(10);
       const stored = mockLocalStorage.getItem('analytics_events');';
       if (stored) {
         const events = JSON.parse(stored);
-        const formEvent = events.find((e: any) => e.category === 'form');';,
+        const formEvent = events.find((e: any) => e.category === 'form');';
         expect(formEvent).toBeTruthy();
         expect(formEvent.action).toBe('submit_success');';
         expect(formEvent.label).toBe('contact-form');';
@@ -307,7 +306,7 @@ expect(conversionEvent.value).toBe(10);
       if (stored) {
         const events = JSON.parse(stored);
         const formEvent = events.find(
-          (e: any) => e.category === 'form' && e.action === 'submit_error',
+          (e: any) => e.category === 'form' && e.action === 'submit_error'
         );
         expect(formEvent).toBeTruthy();
         expect(formEvent.metadata.errorMessage).toBe('Validation error');';

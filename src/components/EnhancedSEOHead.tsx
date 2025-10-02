@@ -13,13 +13,13 @@ interface SEOHeadProps {
 }
 
 const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
-  title = 'Zion Tech Group - Revolutionary AI and IT Solutions',
-  description = "Transform your enterprise with Zion Tech Group's revolutionary AI solutions.",
-  keywords = 'AI solutions, enterprise AI, artificial intelligence, machine learning, automation',
-  canonical,
-  url = 'https://ziontechgroup.com',
-  image = 'https://ziontechgroup.com/og-image.jpg',
-  type = 'website',
+  title = 'Zion Tech Group - Revolutionary AI and IT Solutions'
+  description = "Transform your enterprise with Zion Tech Group's revolutionary AI solutions."
+  keywords = 'AI solutions, enterprise AI, artificial intelligence, machine learning, automation'
+  canonical
+  url = 'https://ziontechgroup.com'
+  image = 'https://ziontechgroup.com/og-image.jpg'
+  type = 'website'
   author = 'Zion Tech Group'
 }) => {
   const metaKeywords = Array.isArray(keywords) ? keywords.join(', ') : keywords;
@@ -32,29 +32,29 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
     description,
     url: 'https://ziontechgroup.com',
     logo: 'https://ziontechgroup.com/logo.png',
-    sameAs: [
+    sameAs: [,
       'https://linkedin.com/company/zion-tech-group',
       'https://twitter.com/ziontechgroup',
       'https://github.com/ZionClouds'
-    ],
-    "contactPoint": {
+    ]
+    "contactPoint": {,
       "@type": "ContactPoint",
       "telephone": "+1-555-123-4567",
       "contactType": "customer service",
       "email": "info@ziontechgroup.com"
-    },
-    "address": {
+    }
+    "address": {,
       "@type": "PostalAddress",
       "streetAddress": "123 Innovation Drive",
       "addressLocality": "San Francisco",
       "addressRegion": "CA",
       "postalCode": "94105",
       "addressCountry": "US"
-    },
+    }
     "foundingDate": "2020",
     "numberOfEmployees": "500+",
     "industry": "Artificial Intelligence",
-    "services": [
+    "services": [,
       "AI Workflow Automation",
       "Enterprise AI Solutions",
       "AI Data Analytics",
@@ -64,7 +64,7 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
     ]
   };
 =======
-    contactPoint: {
+    contactPoint: {,
       '@type': 'ContactPoint',
       telephone: '+1-302-464-0950',
       contactType: 'customer service',

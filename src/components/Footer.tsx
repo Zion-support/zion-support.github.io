@@ -18,7 +18,7 @@ const Footer: React.FC = () => {
             </Link>
             
             <p className="text-gray-400 mb-6 leading-relaxed">
-              Revolutionary AI breakthroughs delivering 1000x performance gains, 95% automation, 
+              Revolutionary AI breakthroughs delivering 1000x performance gains, 95% automation
               and $150M+ ROI for Fortune 500 companies worldwide.
             </p>
             

@@ -2,16 +2,14 @@ import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 =======
 import React, { useEffect } from 'react';';
-import {
-Helmet
-} from 'react-helmet-async';';
+import { Helmet } from 'react-helmet-async';';
 
 interface SEOAccessibilityEnhancerProps {
-title?: string;,
-description?: string;,
-keywords?: string[];,
-canonicalUrl?: string;,
-ogImage?: string;,
+title?: string;
+description?: string;
+keywords?: string[];
+canonicalUrl?: string;
+ogImage?: string;
 structuredData?: any;
 }
 
@@ -22,11 +20,11 @@ const SEOAccessibilityEnhancer: React.FC<SEOAccessibilityEnhancerProps> = ({
   canonicalUrl
   ogImage = "/og-image.jpg"
 =======
-const SEOAccessibilityEnhancer: React.FC<SEOAccessibilityEnhancerProps> = ({,
+const SEOAccessibilityEnhancer: React.FC<SEOAccessibilityEnhancerProps> = ({
   title = "Zion Tech Group - Advanced AI and IT Solutions",";
   description = "Leading provider of AI-powered enterprise solutions, quantum computing, and autonomous systems. Transform your business with cutting-edge technology.",";
   keywords = ["AI", "Artificial Intelligence", "Enterprise Solutions", "Quantum Computing", "Automation", "IT Services"],";
-  canonicalUrl,
+  canonicalUrl
   ogImage = "/og-image.jpg",";
   structuredData
 }) => {
@@ -37,12 +35,12 @@ const SEOAccessibilityEnhancer: React.FC<SEOAccessibilityEnhancerProps> = ({,
       const skipLink = document.createElement('a');
       skipLink.href = '#main-content';
       skipLink.textContent = 'Skip to main content';
-      skipLink.className = 'sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';',
+      skipLink.className = 'sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';'
 =======
       const skipLink = document.createElement('a');';
       skipLink.href = '#main-content';';
       skipLink.textContent = 'Skip to main content';';
-      skipLink.className = 'sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';';,
+      skipLink.className = 'sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';';
       document.body.insertBefore(skipLink, document.body.firstChild);
 
       // Add main content landmark
@@ -106,9 +104,9 @@ const SEOAccessibilityEnhancer: React.FC<SEOAccessibilityEnhancerProps> = ({,
       });
 
       // Enhance button accessibility
-      const buttons = document.querySelectorAll('button: not([aria-label])');',
+      const buttons = document.querySelectorAll('button: not([aria-label])');'
 =======
-      const buttons = document.querySelectorAll('button: not([aria-label])');';,
+      const buttons = document.querySelectorAll('button: not([aria-label])');';
       buttons.forEach(button => {
         if (!button.textContent?.trim()) {
           button.setAttribute('aria-label', 'Button');';
@@ -116,9 +114,9 @@ const SEOAccessibilityEnhancer: React.FC<SEOAccessibilityEnhancerProps> = ({,
       });
 
       // Enhance image accessibility
-      const images = document.querySelectorAll('img: not([alt])');',
+      const images = document.querySelectorAll('img: not([alt])');'
 =======
-      const images = document.querySelectorAll('img: not([alt])');';,
+      const images = document.querySelectorAll('img: not([alt])');';
       images.forEach(img => {
         img.setAttribute('alt', '');';
       });
@@ -181,7 +179,7 @@ outline-offset: 2px !important;
         overflow: hidden,
         clip: rect(0, 0, 0, 0),
         white-space: nowrap,
-        border: 0,
+        border: 0
       }
       
       .focus\\:not-sr-only:focus {
@@ -193,25 +191,25 @@ margin: inherit;
 overflow: visible;
 clip: auto;
 =======
-        position: absolute;,
-        width: 1px;,
-        height: 1px;,
-        padding: 0;,
-        margin: -1px;,
-        overflow: hidden;,
-        clip: rect(0, 0, 0, 0);,
-        white-space: nowrap;,
-        border: 0;,
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
       }
       
-      .focus\\:not-sr-only: focus {,
-position: static;,
-width: auto;,
-height: auto;,
-padding: inherit;,
-margin: inherit;,
-overflow: visible;,
-clip: auto;,
+      .focus\\:not-sr-only: focus {
+position: static;
+width: auto;
+height: auto;
+padding: inherit;
+margin: inherit;
+overflow: visible;
+clip: auto;
 white-space: normal;
 }
     `;`;
@@ -240,17 +238,17 @@ white-space: normal;
       "@type": "ContactPoint",
       "telephone": "+1-555-0123",
 =======
-    "@context": "https: //schema.org",";,
+    "@context": "https: //schema.org",";
     "@type": "Organization",";
     "name": "Zion Tech Group",";
     "description": description,";
     "url": canonicalUrl || window.location.origin,";
     "logo": `${window.location.origin}/logo.png`,`;
     "sameAs": [";
-      "https: //twitter.com/ziontechgroup",";,
-      "https: //linkedin.com/company/ziontechgroup",";,
-      "https: //github.com/ziontechgroup",
-    ],
+      "https: //twitter.com/ziontechgroup",";
+      "https: //linkedin.com/company/ziontechgroup",";
+      "https: //github.com/ziontechgroup"
+    ]
     "contactPoint": {";
       "@type": "ContactPoint",";
       "telephone": "+1-555-0123",";
@@ -270,15 +268,14 @@ white-space: normal;
       {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}";
       
       {/* Open Graph Tags */}
-      <meta property="og:type" content="website" />,
+      <meta property="og:type" content="website" />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={ogImage.startsWith('http') ? ogImage : `${window.location.origin}${ogImage}`} />`;
       <meta property="og:url" content={canonicalUrl || window.location.href} />
-      <meta property="og:site_name" content="Zion Tech Group" />,
-      
+      <meta property="og:site_name" content="Zion Tech Group" />
       {/* Twitter Card Tags */}
-      <meta name="twitter:card" content="summary_large_image" />,
+      <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage.startsWith('http') ? ogImage : `${window.location.origin}${ogImage}`} />`;
@@ -297,15 +294,14 @@ white-space: normal;
       {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}";
       
       {/* Open Graph Tags */}
-      <meta property="og: type" content="website" />";,
+      <meta property="og: type" content="website" />";
       <meta property="og:title" content={title} />";
       <meta property="og:description" content={description} />";
       <meta property="og:image" content={ogImage.startsWith('http') ? ogImage : `${window.location.origin}${ogImage}`} />`;
       <meta property="og:url" content={canonicalUrl || window.location.href} />";
-      <meta property="og: site_name" content="Zion Tech Group" />";,
-      
+      <meta property="og: site_name" content="Zion Tech Group" />";
       {/* Twitter Card Tags */}
-      <meta name="twitter: card" content="summary_large_image" />";,
+      <meta name="twitter: card" content="summary_large_image" />";
       <meta name="twitter:title" content={title} />";
       <meta name="twitter:description" content={description} />";
       <meta name="twitter:image" content={ogImage.startsWith('http') ? ogImage : `${window.location.origin}${ogImage}`} />`;

@@ -2,7 +2,7 @@ import React from 'react';
 =======
 import React from 'react';';
 
-const January2026ContentShowcaseBanner: React.FC = () => {,
+const January2026ContentShowcaseBanner: React.FC = () => {
   const latestArticles = [
     {
       id: 1,,
@@ -39,44 +39,44 @@ const January2026ContentShowcaseBanner: React.FC = () => {,
       trending: true,,
       icon: '🧠',',
       featured: true,,
-      gradient: 'from-indigo-500 to-purple-600}
+      gradient: 'from-indigo-500 to-purple-600},
 =======
-      title: 'AI 2026: Autonomous Agent Factories - The Future of Enterprise Automation',';,
-      slug: 'ai-2026-autonomous-agent-factories',';,
-      excerpt: 'Discover how autonomous agent factories are revolutionizing enterprise automation in 2026. Learn about self-replicating AI systems, agent orchestration, and achieving 95% automation rates with breakthrough agent factory architectures.',';,
-      category: 'Autonomous AI Systems',';,
-      date: '2025-01-30',';,
-      readTime: '15 min',';,
+      title: 'AI 2026: Autonomous Agent Factories - The Future of Enterprise Automation',';
+      slug: 'ai-2026-autonomous-agent-factories',';
+      excerpt: 'Discover how autonomous agent factories are revolutionizing enterprise automation in 2026. Learn about self-replicating AI systems, agent orchestration, and achieving 95% automation rates with breakthrough agent factory architectures.',';
+      category: 'Autonomous AI Systems',';
+      date: '2025-01-30',';
+      readTime: '15 min',';
       trending: true,,
-      icon: '🤖',';,
+      icon: '🤖',';
       featured: true,,
-      gradient: 'from-cyan-500 to-blue-600',
+      gradient: 'from-cyan-500 to-blue-600'
     },
     {
       id: 2,,
-      title: 'AI 2026: Quantum Neural Optimization - Revolutionary AI Performance Breakthrough',';,
-      slug: 'ai-2026-quantum-neural-optimization',';,
-      excerpt: 'Explore quantum neural optimization in 2026: breakthrough AI performance gains, quantum-enhanced neural networks, and achieving 1000x faster training with quantum computing integration.',';,
-      category: 'Quantum AI',';,
-      date: '2025-01-30',';,
-      readTime: '18 min',';,
+      title: 'AI 2026: Quantum Neural Optimization - Revolutionary AI Performance Breakthrough',';
+      slug: 'ai-2026-quantum-neural-optimization',';
+      excerpt: 'Explore quantum neural optimization in 2026: breakthrough AI performance gains, quantum-enhanced neural networks, and achieving 1000x faster training with quantum computing integration.',';
+      category: 'Quantum AI',';
+      date: '2025-01-30',';
+      readTime: '18 min',';
       trending: true,,
-      icon: '⚛️',';,
+      icon: '⚛️',';
       featured: true,,
-      gradient: 'from-purple-500 to-cyan-600',
+      gradient: 'from-purple-500 to-cyan-600'
     },
     {
       id: 3,,
-      title: 'AI 2026: Meta-Cognitive Reasoning - The Next Frontier of Artificial Intelligence',';,
-      slug: 'ai-2026-meta-cognitive-reasoning',';,
-      excerpt: 'Explore meta-cognitive reasoning in AI 2026: self-aware AI systems, cognitive architecture breakthroughs, and achieving human-level reasoning through advanced meta-cognition frameworks.',';,
-      category: 'Cognitive AI',';,
-      date: '2025-01-30',';,
-      readTime: '20 min',';,
+      title: 'AI 2026: Meta-Cognitive Reasoning - The Next Frontier of Artificial Intelligence',';
+      slug: 'ai-2026-meta-cognitive-reasoning',';
+      excerpt: 'Explore meta-cognitive reasoning in AI 2026: self-aware AI systems, cognitive architecture breakthroughs, and achieving human-level reasoning through advanced meta-cognition frameworks.',';
+      category: 'Cognitive AI',';
+      date: '2025-01-30',';
+      readTime: '20 min',';
       trending: true,,
-      icon: '🧠',';,
+      icon: '🧠',';
       featured: true,,
-      gradient: 'from-indigo-500 to-purple-600',
+      gradient: 'from-indigo-500 to-purple-600'
     }
   ];
 
@@ -105,8 +105,8 @@ const January2026ContentShowcaseBanner: React.FC = () => {,
             <Sparkles className="w-5 h-5 text-cyan-400 animate-pulse/>
           </div>
 
-          <h2 className="text-5xl md: text-6xl font-extrabold mb-6 bg-gradient-to-r from-purple-400 via-cyan-400 to-indigo-400 bg-clip-text text-transparent animate-fade-in">",
-            AI 2026: The Future is Here,
+          <h2 className="text-5xl md: text-6xl font-extrabold mb-6 bg-gradient-to-r from-purple-400 via-cyan-400 to-indigo-400 bg-clip-text text-transparent animate-fade-in">"
+            AI 2026: The Future is Here
           </h2>
           
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
@@ -121,8 +121,8 @@ const January2026ContentShowcaseBanner: React.FC = () => {,
             <Sparkles className="w-5 h-5 text-cyan-400 animate-pulse" />";
           </div>
 
-          <h2 className="text-5xl md: text-6xl font-extrabold mb-6 bg-gradient-to-r from-purple-400 via-cyan-400 to-indigo-400 bg-clip-text text-transparent animate-fade-in">";,
-            AI 2026: The Future is Here,
+          <h2 className="text-5xl md: text-6xl font-extrabold mb-6 bg-gradient-to-r from-purple-400 via-cyan-400 to-indigo-400 bg-clip-text text-transparent animate-fade-in">";
+            AI 2026: The Future is Here
           </h2>
           
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">";
@@ -131,11 +131,11 @@ const January2026ContentShowcaseBanner: React.FC = () => {,
           </p>
 
           {/* Stats */}
-          <div className="grid md: grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">",
+          <div className="grid md: grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">"
             <div className="bg-white/5 backdrop-blur-lg rounded-xl p-4 border border-white/10">
               <div className="text-3xl font-extrabold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent mb-2">
 =======
-          <div className="grid md: grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">";,
+          <div className="grid md: grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">";
             <div className="bg-white/5 backdrop-blur-lg rounded-xl p-4 border border-white/10">";
               <div className="text-3xl font-extrabold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent mb-2">";
                 95%
@@ -172,27 +172,26 @@ const January2026ContentShowcaseBanner: React.FC = () => {,
         </div>
 
         {/* Featured Articles Grid */}
-        <div className="grid lg: grid-cols-3 gap-8 mb-16">",
+        <div className="grid lg: grid-cols-3 gap-8 mb-16">"
 =======
-        <div className="grid lg: grid-cols-3 gap-8 mb-16">";,
+        <div className="grid lg: grid-cols-3 gap-8 mb-16">";
           {latestArticles.map((article, index) => (
             <div 
               key={article.id}
-              className="group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover: border-purple-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20",
+              className="group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover: border-purple-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20"
               style={{ animationDelay: `${index * 200}ms` }}`;
             >
               {/* Card glow effect */}
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/0 via-cyan-500/0 to-indigo-500/0 group-hover: from-purple-500/10 group-hover:via-cyan-500/10 group-hover:to-indigo-500/10 transition-all duration-500"></div>",
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/0 via-cyan-500/0 to-indigo-500/0 group-hover: from-purple-500/10 group-hover:via-cyan-500/10 group-hover:to-indigo-500/10 transition-all duration-500"></div>"
 =======
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/0 via-cyan-500/0 to-indigo-500/0 group-hover: from-purple-500/10 group-hover:via-cyan-500/10 group-hover:to-indigo-500/10 transition-all duration-500"></div>";,
-              
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/0 via-cyan-500/0 to-indigo-500/0 group-hover: from-purple-500/10 group-hover:via-cyan-500/10 group-hover:to-indigo-500/10 transition-all duration-500"></div>";
               <div className="relative p-8">";
                 {/* Icon & Badges */}
                 <div className="flex items-start justify-between mb-6">
-                  <div className="text-6xl group-hover: scale-110 transition-transform duration-300">",
+                  <div className="text-6xl group-hover: scale-110 transition-transform duration-300">"
 =======
                 <div className="flex items-start justify-between mb-6">";
-                  <div className="text-6xl group-hover: scale-110 transition-transform duration-300">";,
+                  <div className="text-6xl group-hover: scale-110 transition-transform duration-300">";
                     {article.icon}
                   </div>
                   <div className="flex flex-col gap-2">";
@@ -219,9 +218,9 @@ const January2026ContentShowcaseBanner: React.FC = () => {,
                 </div>
 
                 {/* Title */}
-                <h3 className="text-xl font-bold text-white mb-4 group-hover: text-purple-400 transition-colors duration-300 leading-tight">",
+                <h3 className="text-xl font-bold text-white mb-4 group-hover: text-purple-400 transition-colors duration-300 leading-tight">"
 =======
-                <h3 className="text-xl font-bold text-white mb-4 group-hover: text-purple-400 transition-colors duration-300 leading-tight">";,
+                <h3 className="text-xl font-bold text-white mb-4 group-hover: text-purple-400 transition-colors duration-300 leading-tight">";
                   {article.title}
                 </h3>
 
@@ -252,9 +251,9 @@ const January2026ContentShowcaseBanner: React.FC = () => {,
                   className={`group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r ${article.gradient} hover:opacity-90 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1`}`;
                 >
                   <span>Read Full Article</span>
-                  <ArrowRight className="w-4 h-4 group-hover/btn: translate-x-1 transition-transform duration-300/>",
+                  <ArrowRight className="w-4 h-4 group-hover/btn: translate-x-1 transition-transform duration-300/>"
 =======
-                  <ArrowRight className="w-4 h-4 group-hover/btn: translate-x-1 transition-transform duration-300" />";,
+                  <ArrowRight className="w-4 h-4 group-hover/btn: translate-x-1 transition-transform duration-300" />";
                 </a>
               </div>
             </div>
@@ -262,13 +261,13 @@ const January2026ContentShowcaseBanner: React.FC = () => {,
         </div>
 
         {/* Technology Highlights */}
-        <div className="grid md: grid-cols-3 gap-8 mb-16">",
+        <div className="grid md: grid-cols-3 gap-8 mb-16">"
           <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/30 rounded-2xl p-8 text-center">
             <Brain className="w-16 h-16 text-cyan-400 mx-auto mb-4/>
             <h3 className="text-2xl font-bold mb-4 text-cyan-400">Autonomous Agent Factories</h3>
             <p className="text-gray-300 mb-6">
 =======
-        <div className="grid md: grid-cols-3 gap-8 mb-16">";,
+        <div className="grid md: grid-cols-3 gap-8 mb-16">";
           <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/30 rounded-2xl p-8 text-center">";
             <Brain className="w-16 h-16 text-cyan-400 mx-auto mb-4" />";
             <h3 className="text-2xl font-bold mb-4 text-cyan-400">Autonomous Agent Factories</h3>";
@@ -333,12 +332,12 @@ const January2026ContentShowcaseBanner: React.FC = () => {,
                 Be among the first to implement these breakthrough AI technologies. Get a personalized assessment and discover 
                 how autonomous agents, quantum optimization, and meta-cognitive reasoning can transform your organization.
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">",
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">"
 =======
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">";,
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">";
                 <a title="Internal link"
                   href="/blog"
-                  className="bg-gradient-to-r from-purple-500 to-cyan-600 hover: from-purple-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 flex items-center justify-center gap-2",
+                  className="bg-gradient-to-r from-purple-500 to-cyan-600 hover: from-purple-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 flex items-center justify-center gap-2"
                 >
                   <Sparkles className="w-5 h-5/>
 =======
@@ -347,7 +346,7 @@ const January2026ContentShowcaseBanner: React.FC = () => {,
                 </a>
                 <a title="Internal link"
                   href="/contact"
-                  className="border-2 border-purple-500 text-purple-400 hover: bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2",
+                  className="border-2 border-purple-500 text-purple-400 hover: bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2"
                 >
                   <span>Get AI 2026 Assessment</span>
                   <ArrowRight className="w-5 h-5/>
@@ -362,13 +361,13 @@ const January2026ContentShowcaseBanner: React.FC = () => {,
         {/* Success Stories Preview */}
         <div className="mt-20 bg-gradient-to-r from-slate-800/50 to-slate-900/50 border border-white/10 rounded-2xl p-8">
           <h3 className="text-2xl font-bold mb-6 text-white text-center">Proven Results from Fortune 500 Companies</h3>
-          <div className="grid md: grid-cols-3 gap-8">",
+          <div className="grid md: grid-cols-3 gap-8">"
             <div className="text-center">
               <div className="text-4xl font-extrabold bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent mb-2">
 =======
         <div className="mt-20 bg-gradient-to-r from-slate-800/50 to-slate-900/50 border border-white/10 rounded-2xl p-8">";
           <h3 className="text-2xl font-bold mb-6 text-white text-center">Proven Results from Fortune 500 Companies</h3>";
-          <div className="grid md: grid-cols-3 gap-8">";,
+          <div className="grid md: grid-cols-3 gap-8">";
             <div className="text-center">";
               <div className="text-4xl font-extrabold bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent mb-2">";
                 $500M+

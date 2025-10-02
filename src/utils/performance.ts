@@ -1,11 +1,11 @@
 import { onCLS, onFCP, onLCP, onTTFB, Metric } from 'web-vitals';
 
 interface PerformanceMetrics {
-cls: number | null;,
-inp: number | null;,
-fcp: number | null;,
-lcp: number | null;,
-ttfb: number | null;,
+cls: number | null;
+inp: number | null;
+fcp: number | null;
+lcp: number | null;
+ttfb: number | null;
 timestamp: string;
 }
 
@@ -15,7 +15,7 @@ class PerformanceMonitor {
     fid: null,
     fcp: null,
     lcp: null,
-    ttfb: null,
+    ttfb: null
   };
 
   private observers: PerformanceObserver[] = [];
@@ -123,10 +123,10 @@ class PerformanceMonitor {
       window.gtag('event', 'performance_metric', {
         metric_name: name,
         metric_value: value,
-        custom_map: {
+        custom_map: {,
           metric_name: 'metric_name',
-          metric_value: 'metric_value',
-        },
+          metric_value: 'metric_value'
+        }
       });
     }
 
@@ -208,7 +208,7 @@ export const getResourceTimings = () => {
     name: resource.name,
     duration: resource.duration,
     size: resource.transferSize,
-    type: resource.initiatorType,
+    type: resource.initiatorType
   }));
 };
 
@@ -219,7 +219,7 @@ export const getMemoryUsage = () => {
     return {
       used: memory.usedJSHeapSize,
       total: memory.totalJSHeapSize,
-      limit: memory.jsHeapSizeLimit,
+      limit: memory.jsHeapSizeLimit
     };
   }
   return null;

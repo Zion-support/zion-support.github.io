@@ -45,20 +45,20 @@ const October2025CuttingEdgeAIBanner = () => {
         </div>
 
         {/* Featured Articles Grid */}
-        <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-6 mb-10">",
+        <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-6 mb-10">"
 =======
-        <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-6 mb-10">";,
+        <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-6 mb-10">";
           {/* Article 1 - Agentic Governance */}
           <Link 
             to="/blog/ai-2025-october-agentic-governance-frameworks"
-            className="group bg-gradient-to-br from-emerald-800/40 to-teal-900/40 backdrop-blur-sm border border-emerald-400/30 rounded-2xl p-6 hover: scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-emerald-500/50",
+            className="group bg-gradient-to-br from-emerald-800/40 to-teal-900/40 backdrop-blur-sm border border-emerald-400/30 rounded-2xl p-6 hover: scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-emerald-500/50"
           >
             <div className="flex items-center gap-3 mb-4">
-              <div className="p-3 bg-emerald-500/20 rounded-xl group-hover: bg-emerald-500/30 transition-colors">",
+              <div className="p-3 bg-emerald-500/20 rounded-xl group-hover: bg-emerald-500/30 transition-colors">"
                 <Scale className="w-8 h-8 text-emerald-300/>
 =======
             <div className="flex items-center gap-3 mb-4">";
-              <div className="p-3 bg-emerald-500/20 rounded-xl group-hover: bg-emerald-500/30 transition-colors">";,
+              <div className="p-3 bg-emerald-500/20 rounded-xl group-hover: bg-emerald-500/30 transition-colors">";
                 <Scale className="w-8 h-8 text-emerald-300" />";
               </div>
               <div className="flex-1">";
@@ -66,9 +66,9 @@ const October2025CuttingEdgeAIBanner = () => {
               </div>
             </div>
             
-            <h3 className="text-lg font-bold text-white mb-3 group-hover: text-emerald-200 transition-colors">",
+            <h3 className="text-lg font-bold text-white mb-3 group-hover: text-emerald-200 transition-colors">"
 =======
-            <h3 className="text-lg font-bold text-white mb-3 group-hover: text-emerald-200 transition-colors">";,
+            <h3 className="text-lg font-bold text-white mb-3 group-hover: text-emerald-200 transition-colors">";
               Agentic Governance Frameworks
             </h3>
             
@@ -80,23 +80,23 @@ const October2025CuttingEdgeAIBanner = () => {
               <div className="flex items-center gap-2 text-emerald-300 text-sm">";
                 <span>18 min read</span>
               </div>
-              <ArrowRight className="w-5 h-5 text-emerald-300 group-hover: translate-x-1 transition-transform/>",
+              <ArrowRight className="w-5 h-5 text-emerald-300 group-hover: translate-x-1 transition-transform/>"
 =======
-              <ArrowRight className="w-5 h-5 text-emerald-300 group-hover: translate-x-1 transition-transform" />";,
+              <ArrowRight className="w-5 h-5 text-emerald-300 group-hover: translate-x-1 transition-transform" />";
             </div>
           </Link>
 
           {/* Article 2 - Neural-Symbolic Fusion */}
           <Link 
             to="/blog/ai-2025-october-neural-symbolic-fusion"
-            className="group bg-gradient-to-br from-violet-800/40 to-fuchsia-900/40 backdrop-blur-sm border border-violet-400/30 rounded-2xl p-6 hover: scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-violet-500/50",
+            className="group bg-gradient-to-br from-violet-800/40 to-fuchsia-900/40 backdrop-blur-sm border border-violet-400/30 rounded-2xl p-6 hover: scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-violet-500/50"
           >
             <div className="flex items-center gap-3 mb-4">
-              <div className="p-3 bg-violet-500/20 rounded-xl group-hover: bg-violet-500/30 transition-colors">",
+              <div className="p-3 bg-violet-500/20 rounded-xl group-hover: bg-violet-500/30 transition-colors">"
                 <Brain className="w-8 h-8 text-violet-300/>
 =======
             <div className="flex items-center gap-3 mb-4">";
-              <div className="p-3 bg-violet-500/20 rounded-xl group-hover: bg-violet-500/30 transition-colors">";,
+              <div className="p-3 bg-violet-500/20 rounded-xl group-hover: bg-violet-500/30 transition-colors">";
                 <Brain className="w-8 h-8 text-violet-300" />";
               </div>
               <div className="flex-1">";
@@ -104,9 +104,9 @@ const October2025CuttingEdgeAIBanner = () => {
               </div>
             </div>
             
-            <h3 className="text-lg font-bold text-white mb-3 group-hover: text-violet-200 transition-colors">",
+            <h3 className="text-lg font-bold text-white mb-3 group-hover: text-violet-200 transition-colors">"
 =======
-            <h3 className="text-lg font-bold text-white mb-3 group-hover: text-violet-200 transition-colors">";,
+            <h3 className="text-lg font-bold text-white mb-3 group-hover: text-violet-200 transition-colors">";
               Neural-Symbolic Fusion
             </h3>
             
@@ -118,23 +118,23 @@ const October2025CuttingEdgeAIBanner = () => {
               <div className="flex items-center gap-2 text-violet-300 text-sm">";
                 <span>22 min read</span>
               </div>
-              <ArrowRight className="w-5 h-5 text-violet-300 group-hover: translate-x-1 transition-transform/>",
+              <ArrowRight className="w-5 h-5 text-violet-300 group-hover: translate-x-1 transition-transform/>"
 =======
-              <ArrowRight className="w-5 h-5 text-violet-300 group-hover: translate-x-1 transition-transform" />";,
+              <ArrowRight className="w-5 h-5 text-violet-300 group-hover: translate-x-1 transition-transform" />";
             </div>
           </Link>
 
           {/* Article 3 - Continuous Learning */}
           <Link 
             to="/blog/ai-2025-october-continuous-learning-systems"
-            className="group bg-gradient-to-br from-cyan-800/40 to-blue-900/40 backdrop-blur-sm border border-cyan-400/30 rounded-2xl p-6 hover: scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/50",
+            className="group bg-gradient-to-br from-cyan-800/40 to-blue-900/40 backdrop-blur-sm border border-cyan-400/30 rounded-2xl p-6 hover: scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/50"
           >
             <div className="flex items-center gap-3 mb-4">
-              <div className="p-3 bg-cyan-500/20 rounded-xl group-hover: bg-cyan-500/30 transition-colors">",
+              <div className="p-3 bg-cyan-500/20 rounded-xl group-hover: bg-cyan-500/30 transition-colors">"
                 <Repeat className="w-8 h-8 text-cyan-300/>
 =======
             <div className="flex items-center gap-3 mb-4">";
-              <div className="p-3 bg-cyan-500/20 rounded-xl group-hover: bg-cyan-500/30 transition-colors">";,
+              <div className="p-3 bg-cyan-500/20 rounded-xl group-hover: bg-cyan-500/30 transition-colors">";
                 <Repeat className="w-8 h-8 text-cyan-300" />";
               </div>
               <div className="flex-1">";
@@ -142,9 +142,9 @@ const October2025CuttingEdgeAIBanner = () => {
               </div>
             </div>
             
-            <h3 className="text-lg font-bold text-white mb-3 group-hover: text-cyan-200 transition-colors">",
+            <h3 className="text-lg font-bold text-white mb-3 group-hover: text-cyan-200 transition-colors">"
 =======
-            <h3 className="text-lg font-bold text-white mb-3 group-hover: text-cyan-200 transition-colors">";,
+            <h3 className="text-lg font-bold text-white mb-3 group-hover: text-cyan-200 transition-colors">";
               Continuous Learning Systems
             </h3>
             
@@ -156,23 +156,23 @@ const October2025CuttingEdgeAIBanner = () => {
               <div className="flex items-center gap-2 text-cyan-300 text-sm">";
                 <span>20 min read</span>
               </div>
-              <ArrowRight className="w-5 h-5 text-cyan-300 group-hover: translate-x-1 transition-transform/>",
+              <ArrowRight className="w-5 h-5 text-cyan-300 group-hover: translate-x-1 transition-transform/>"
 =======
-              <ArrowRight className="w-5 h-5 text-cyan-300 group-hover: translate-x-1 transition-transform" />";,
+              <ArrowRight className="w-5 h-5 text-cyan-300 group-hover: translate-x-1 transition-transform" />";
             </div>
           </Link>
 
           {/* Article 4 - Distributed Inference */}
           <Link 
             to="/blog/ai-2025-october-distributed-inference-optimization"
-            className="group bg-gradient-to-br from-amber-800/40 to-orange-900/40 backdrop-blur-sm border border-amber-400/30 rounded-2xl p-6 hover: scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-amber-500/50",
+            className="group bg-gradient-to-br from-amber-800/40 to-orange-900/40 backdrop-blur-sm border border-amber-400/30 rounded-2xl p-6 hover: scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-amber-500/50"
           >
             <div className="flex items-center gap-3 mb-4">
-              <div className="p-3 bg-amber-500/20 rounded-xl group-hover: bg-amber-500/30 transition-colors">",
+              <div className="p-3 bg-amber-500/20 rounded-xl group-hover: bg-amber-500/30 transition-colors">"
                 <Zap className="w-8 h-8 text-amber-300/>
 =======
             <div className="flex items-center gap-3 mb-4">";
-              <div className="p-3 bg-amber-500/20 rounded-xl group-hover: bg-amber-500/30 transition-colors">";,
+              <div className="p-3 bg-amber-500/20 rounded-xl group-hover: bg-amber-500/30 transition-colors">";
                 <Zap className="w-8 h-8 text-amber-300" />";
               </div>
               <div className="flex-1">";
@@ -180,13 +180,13 @@ const October2025CuttingEdgeAIBanner = () => {
               </div>
             </div>
             
-            <h3 className="text-lg font-bold text-white mb-3 group-hover: text-amber-200 transition-colors">",
+            <h3 className="text-lg font-bold text-white mb-3 group-hover: text-amber-200 transition-colors">"
               Distributed Inference Optimization
             </h3>
             
             <p className="text-orange-200/80 text-sm mb-4 line-clamp-3">
 =======
-            <h3 className="text-lg font-bold text-white mb-3 group-hover: text-amber-200 transition-colors">";,
+            <h3 className="text-lg font-bold text-white mb-3 group-hover: text-amber-200 transition-colors">";
               Distributed Inference Optimization
             </h3>
             
@@ -198,9 +198,9 @@ const October2025CuttingEdgeAIBanner = () => {
               <div className="flex items-center gap-2 text-amber-300 text-sm">";
                 <span>19 min read</span>
               </div>
-              <ArrowRight className="w-5 h-5 text-amber-300 group-hover: translate-x-1 transition-transform/>",
+              <ArrowRight className="w-5 h-5 text-amber-300 group-hover: translate-x-1 transition-transform/>"
 =======
-              <ArrowRight className="w-5 h-5 text-amber-300 group-hover: translate-x-1 transition-transform" />";,
+              <ArrowRight className="w-5 h-5 text-amber-300 group-hover: translate-x-1 transition-transform" />";
             </div>
           </Link>
         </div>
@@ -209,7 +209,7 @@ const October2025CuttingEdgeAIBanner = () => {
         <div className="text-center mt-10">";
           <Link 
             to="/blog"
-            className="inline-flex items-center gap-3 bg-gradient-to-r from-indigo-600 to-pink-600 hover: from-indigo-700 hover:to-pink-700 text-white font-bold text-lg px-10 py-4 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-2xl",
+            className="inline-flex items-center gap-3 bg-gradient-to-r from-indigo-600 to-pink-600 hover: from-indigo-700 hover:to-pink-700 text-white font-bold text-lg px-10 py-4 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-2xl"
           >
             <span>Read All Articles</span>
             <ArrowRight className="w-6 h-6/>
@@ -223,11 +223,11 @@ const October2025CuttingEdgeAIBanner = () => {
         </div>
 
         {/* Stats Bar */}
-        <div className="mt-12 grid grid-cols-2 md: grid-cols-4 gap-6">",
+        <div className="mt-12 grid grid-cols-2 md: grid-cols-4 gap-6">"
           <div className="text-center">
             <div className="text-3xl font-extrabold text-transparent bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text mb-1">
 =======
-        <div className="mt-12 grid grid-cols-2 md: grid-cols-4 gap-6">";,
+        <div className="mt-12 grid grid-cols-2 md: grid-cols-4 gap-6">";
           <div className="text-center">";
             <div className="text-3xl font-extrabold text-transparent bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text mb-1">";
               99.9%

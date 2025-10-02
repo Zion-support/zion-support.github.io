@@ -8,20 +8,20 @@ interface Props {
 } from 'lucide-react';';
 
 interface Props {
-  children: ReactNode;,
+  children: ReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
 }
 
 interface State {
-hasError: boolean;,
-error: Error | null;,
-errorInfo: ErrorInfo | null;,
+hasError: boolean;
+error: Error | null;
+errorInfo: ErrorInfo | null;
 errorId: string;
 }
 
 class EnhancedErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {,
+  constructor(props: Props) {
     super(props);
     this.state = {
       hasError: false,,
@@ -29,11 +29,11 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       errorInfo: null,,
       errorId: '};
 =======
-      errorId: '',
+      errorId: ''
     };
   }
 
-  static getDerivedStateFromError(error: Error): Partial<State> {,
+  static getDerivedStateFromError(error: Error): Partial<State> {
     return {
       hasError: true,,
       error,
@@ -41,7 +41,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     };
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {,
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
       errorInfo
@@ -49,10 +49,10 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {;
-      console.error('Error Boundary caught an error: ', error, errorInfo);',
+      console.error('Error Boundary caught an error: ', error, errorInfo);'
 =======
     if (process.env.NODE_ENV === 'development') {';
-      console.error('Error Boundary caught an error: ', error, errorInfo);';,
+      console.error('Error Boundary caught an error: ', error, errorInfo);';
     }
 
     // Report error to external service
@@ -64,7 +64,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     }
   }
 
-  reportError = (error: Error, errorInfo: ErrorInfo) => {,
+  reportError = (error: Error, errorInfo: ErrorInfo) => {
     // In a real application, you would send this to an error reporting service
     // like Sentry, LogRocket, or Bugsnag
     const errorReport = {
@@ -76,12 +76,11 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       userAgent: navigator.userAgent,,
       url: window.location.href,,
       userId: this.getUserId(),,
-      sessionId: this.getSessionId(),
+      sessionId: this.getSessionId()
     };
 
     // For now, we'll just log it;
-    console.error('Error Report: ', errorReport);',
-    
+    console.error('Error Report: ', errorReport);'
     // In production, send to error reporting service:
     // fetch('/api/errors', {
     //   method: 'POST'
@@ -89,12 +88,11 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     //   body: JSON.stringify(errorReport)
 =======
     // For now, we'll just log it';
-    console.error('Error Report: ', errorReport);';,
-    
-    // In production, send to error reporting service: // fetch('/api/errors', {';,
-    //   method: 'POST',';,
+    console.error('Error Report: ', errorReport);';
+    // In production, send to error reporting service: // fetch('/api/errors', {';
+    //   method: 'POST',';
     //   headers: { 'Content-Type': 'application/json' },';
-    //   body: JSON.stringify(errorReport),
+    //   body: JSON.stringify(errorReport)
     // });
   };
 
@@ -121,7 +119,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       errorInfo: null,,
       errorId: '});
 =======
-      errorId: '',
+      errorId: ''
     });
   };
 
@@ -139,7 +137,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       message: this.state.error?.message,,
       stack: this.state.error?.stack,,
       url: window.location.href,,
-      timestamp: new Date().toISOString(),
+      timestamp: new Date().toISOString()
     };
 
     // Open email client with error details
@@ -152,11 +150,10 @@ Timestamp: ${new Date().toISOString()},
 Please describe what you were doing when this error occurred:
 [Your description here]
 =======
-URL: ${window.location.href}
-Timestamp: ${new Date().toISOString()}
+URL: ${window.location.href},
+Timestamp: ${new Date().toISOString()},
 
-Please describe what you were doing when this error occurred: [Your description here],
-
+Please describe what you were doing when this error occurred: [Your description here]
 Stack Trace:
 ${this.state.error?.stack}
     `);`;
@@ -197,7 +194,7 @@ ${this.state.error?.stack}
             </div>
 
             <div className="bg-gray-100 rounded-lg p-4 mb-6 text-left">
-              <h3 className="font-semibold text-gray-900 mb-2">Error Details: </h3>",
+              <h3 className="font-semibold text-gray-900 mb-2">Error Details: </h3>"
               <p className="text-sm text-gray-600 mb-2">
                 <strong>Error ID:</strong> {this.state.errorId}
               </p>
@@ -206,10 +203,10 @@ ${this.state.error?.stack}
               </p>
             </div>
 
-            <div className="flex flex-col sm: flex-row gap-3 justify-center">",
+            <div className="flex flex-col sm: flex-row gap-3 justify-center">"
 =======
             <div className="bg-gray-100 rounded-lg p-4 mb-6 text-left">";
-              <h3 className="font-semibold text-gray-900 mb-2">Error Details: </h3>";,
+              <h3 className="font-semibold text-gray-900 mb-2">Error Details: </h3>";
               <p className="text-sm text-gray-600 mb-2">";
                 <strong>Error ID:</strong> {this.state.errorId}
               </p>
@@ -218,10 +215,10 @@ ${this.state.error?.stack}
               </p>
             </div>
 
-            <div className="flex flex-col sm: flex-row gap-3 justify-center">";,
+            <div className="flex flex-col sm: flex-row gap-3 justify-center">";
               <button
                 onClick={this.handleRetry}
-                className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover: bg-blue-700 transition-colors",
+                className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover: bg-blue-700 transition-colors"
               >
                 <RefreshCw className="w-4 h-4 mr-2/>
 =======
@@ -231,7 +228,7 @@ ${this.state.error?.stack}
               
               <button
                 onClick={this.handleGoHome}
-                className="inline-flex items-center px-4 py-2 bg-gray-600 text-white rounded-lg hover: bg-gray-700 transition-colors",
+                className="inline-flex items-center px-4 py-2 bg-gray-600 text-white rounded-lg hover: bg-gray-700 transition-colors"
               >
                 <Home className="w-4 h-4 mr-2/>
 =======
@@ -241,7 +238,7 @@ ${this.state.error?.stack}
               
               <button
                 onClick={this.handleReload}
-                className="inline-flex items-center px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover: bg-gray-50 transition-colors",
+                className="inline-flex items-center px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover: bg-gray-50 transition-colors"
               >
                 <RefreshCw className="w-4 h-4 mr-2/>
 =======
@@ -256,7 +253,7 @@ ${this.state.error?.stack}
               </p>
               <button
                 onClick={this.handleReportError}
-                className="inline-flex items-center px-4 py-2 text-blue-600 hover: text-blue-700 transition-colors",
+                className="inline-flex items-center px-4 py-2 text-blue-600 hover: text-blue-700 transition-colors"
               >
                 <Mail className="w-4 h-4 mr-2/>
 =======
@@ -272,7 +269,7 @@ process.env.NODE_ENV === 'development' && this.state.errorInfo && (;
 =======
 process.env.NODE_ENV === 'development' && this.state.errorInfo && (';
 <details className="mt-6 text-left">";
-<summary className="cursor-pointer text-sm font-medium text-gray-700 hover: text-gray-900">,";,
+<summary className="cursor-pointer text-sm font-medium text-gray-700 hover: text-gray-900">,";
 Development Details
 </summary>
 <pre className="mt-2 text-xs text-gray-600 bg-gray-100 p-3 rounded overflow-auto max-h-64">";

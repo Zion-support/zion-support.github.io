@@ -113,8 +113,8 @@ const Resources: React.FC = () => {
       title: 'Building Ethical AI Systems',
       excerpt: 'Principles and practices for developing AI systems that are fair and transparent.',
       date: '2025-01-08',
-      link: '/blog/ethical-ai-systems',
-    },
+      link: '/blog/ethical-ai-systems'
+    }
 =======
       link: '/blog/ethical-ai-systems'
     }

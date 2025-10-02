@@ -46,71 +46,70 @@ const October2025NextGenAIBanner = () => {
             <span className="text-purple-300 font-semibold"> Hybrid Human-AI Intelligence</span>
 =======
           <p className="text-2xl text-blue-200 max-w-4xl mx-auto leading-relaxed">";
-            Discover the cutting-edge AI innovations powering Fortune 500 success: <span className="text-cyan-300 font-semibold"> Collaborative Agent Teams</span>, ";,
+            Discover the cutting-edge AI innovations powering Fortune 500 success: <span className="text-cyan-300 font-semibold"> Collaborative Agent Teams</span>, ";
             <span className="text-blue-300 font-semibold"> Real-Time Adaptive AI</span>, and ";
             <span className="text-purple-300 font-semibold"> Hybrid Human-AI Intelligence</span>";
           </p>
         </div>
 
         {/* Key Metrics Showcase */}
-        <div className="grid md: grid-cols-4 gap-4 mb-12 max-w-6xl mx-auto">",
-          <div className="bg-gradient-to-br from-cyan-800/40 to-cyan-900/40 backdrop-blur-sm border border-cyan-400/30 rounded-2xl p-6 text-center hover: scale-105 transition-transform shadow-lg">",
+        <div className="grid md: grid-cols-4 gap-4 mb-12 max-w-6xl mx-auto">"
+          <div className="bg-gradient-to-br from-cyan-800/40 to-cyan-900/40 backdrop-blur-sm border border-cyan-400/30 rounded-2xl p-6 text-center hover: scale-105 transition-transform shadow-lg">"
             <div className="text-5xl font-extrabold text-cyan-300 mb-2">580%</div>
             <div className="text-cyan-200 font-semibold text-sm uppercase tracking-wide">Cognitive Amplification</div>
           </div>
           
-          <div className="bg-gradient-to-br from-blue-800/40 to-blue-900/40 backdrop-blur-sm border border-blue-400/30 rounded-2xl p-6 text-center hover: scale-105 transition-transform shadow-lg">",
+          <div className="bg-gradient-to-br from-blue-800/40 to-blue-900/40 backdrop-blur-sm border border-blue-400/30 rounded-2xl p-6 text-center hover: scale-105 transition-transform shadow-lg">"
             <div className="text-5xl font-extrabold text-blue-300 mb-2">$17B</div>
             <div className="text-blue-200 font-semibold text-sm uppercase tracking-wide">Annual Value Created</div>
           </div>
           
-          <div className="bg-gradient-to-br from-purple-800/40 to-purple-900/40 backdrop-blur-sm border border-purple-400/30 rounded-2xl p-6 text-center hover: scale-105 transition-transform shadow-lg">",
+          <div className="bg-gradient-to-br from-purple-800/40 to-purple-900/40 backdrop-blur-sm border border-purple-400/30 rounded-2xl p-6 text-center hover: scale-105 transition-transform shadow-lg">"
             <div className="text-5xl font-extrabold text-purple-300 mb-2">98.7%</div>
             <div className="text-purple-200 font-semibold text-sm uppercase tracking-wide">Prediction Accuracy</div>
           </div>
           
-          <div className="bg-gradient-to-br from-pink-800/40 to-pink-900/40 backdrop-blur-sm border border-pink-400/30 rounded-2xl p-6 text-center hover: scale-105 transition-transform shadow-lg">",
+          <div className="bg-gradient-to-br from-pink-800/40 to-pink-900/40 backdrop-blur-sm border border-pink-400/30 rounded-2xl p-6 text-center hover: scale-105 transition-transform shadow-lg">"
             <div className="text-5xl font-extrabold text-pink-300 mb-2">11.7x</div>
             <div className="text-pink-200 font-semibold text-sm uppercase tracking-wide">Average ROI</div>
 =======
-        <div className="grid md: grid-cols-4 gap-4 mb-12 max-w-6xl mx-auto">";,
-          <div className="bg-gradient-to-br from-cyan-800/40 to-cyan-900/40 backdrop-blur-sm border border-cyan-400/30 rounded-2xl p-6 text-center hover: scale-105 transition-transform shadow-lg">";,
+        <div className="grid md: grid-cols-4 gap-4 mb-12 max-w-6xl mx-auto">";
+          <div className="bg-gradient-to-br from-cyan-800/40 to-cyan-900/40 backdrop-blur-sm border border-cyan-400/30 rounded-2xl p-6 text-center hover: scale-105 transition-transform shadow-lg">";
             <div className="text-5xl font-extrabold text-cyan-300 mb-2">580%</div>";
             <div className="text-cyan-200 font-semibold text-sm uppercase tracking-wide">Cognitive Amplification</div>";
           </div>
           
-          <div className="bg-gradient-to-br from-blue-800/40 to-blue-900/40 backdrop-blur-sm border border-blue-400/30 rounded-2xl p-6 text-center hover: scale-105 transition-transform shadow-lg">";,
+          <div className="bg-gradient-to-br from-blue-800/40 to-blue-900/40 backdrop-blur-sm border border-blue-400/30 rounded-2xl p-6 text-center hover: scale-105 transition-transform shadow-lg">";
             <div className="text-5xl font-extrabold text-blue-300 mb-2">$17B</div>";
             <div className="text-blue-200 font-semibold text-sm uppercase tracking-wide">Annual Value Created</div>";
           </div>
           
-          <div className="bg-gradient-to-br from-purple-800/40 to-purple-900/40 backdrop-blur-sm border border-purple-400/30 rounded-2xl p-6 text-center hover: scale-105 transition-transform shadow-lg">";,
+          <div className="bg-gradient-to-br from-purple-800/40 to-purple-900/40 backdrop-blur-sm border border-purple-400/30 rounded-2xl p-6 text-center hover: scale-105 transition-transform shadow-lg">";
             <div className="text-5xl font-extrabold text-purple-300 mb-2">98.7%</div>";
             <div className="text-purple-200 font-semibold text-sm uppercase tracking-wide">Prediction Accuracy</div>";
           </div>
           
-          <div className="bg-gradient-to-br from-pink-800/40 to-pink-900/40 backdrop-blur-sm border border-pink-400/30 rounded-2xl p-6 text-center hover: scale-105 transition-transform shadow-lg">";,
+          <div className="bg-gradient-to-br from-pink-800/40 to-pink-900/40 backdrop-blur-sm border border-pink-400/30 rounded-2xl p-6 text-center hover: scale-105 transition-transform shadow-lg">";
             <div className="text-5xl font-extrabold text-pink-300 mb-2">11.7x</div>";
             <div className="text-pink-200 font-semibold text-sm uppercase tracking-wide">Average ROI</div>";
           </div>
         </div>
 
         {/* Featured Articles Grid */}
-        <div className="grid md: grid-cols-3 gap-6 mb-10">",
+        <div className="grid md: grid-cols-3 gap-6 mb-10">"
 =======
-        <div className="grid md: grid-cols-3 gap-6 mb-10">";,
-          
+        <div className="grid md: grid-cols-3 gap-6 mb-10">";
           {/* Article 1 - Collaborative AI Agent Teams */}
           <Link 
             to="/blog/ai-2025-oct-01-collaborative-ai-agent-teams-enterprise"
-            className="group bg-gradient-to-br from-cyan-800/50 to-cyan-900/50 backdrop-blur-sm border-2 border-cyan-400/40 rounded-2xl p-8 hover: scale-105 hover:shadow-2xl hover:shadow-cyan-500/50 transition-all duration-300",
+            className="group bg-gradient-to-br from-cyan-800/50 to-cyan-900/50 backdrop-blur-sm border-2 border-cyan-400/40 rounded-2xl p-8 hover: scale-105 hover:shadow-2xl hover:shadow-cyan-500/50 transition-all duration-300"
           >
             <div className="flex items-center gap-4 mb-6">
-              <div className="p-4 bg-cyan-500/30 rounded-2xl group-hover: bg-cyan-500/40 transition-colors shadow-lg">",
+              <div className="p-4 bg-cyan-500/30 rounded-2xl group-hover: bg-cyan-500/40 transition-colors shadow-lg">"
                 <Users className="w-10 h-10 text-cyan-200/>
 =======
             <div className="flex items-center gap-4 mb-6">";
-              <div className="p-4 bg-cyan-500/30 rounded-2xl group-hover: bg-cyan-500/40 transition-colors shadow-lg">";,
+              <div className="p-4 bg-cyan-500/30 rounded-2xl group-hover: bg-cyan-500/40 transition-colors shadow-lg">";
                 <Users className="w-10 h-10 text-cyan-200" />";
               </div>
               <div className="flex-1">";
@@ -120,14 +119,14 @@ const October2025NextGenAIBanner = () => {
               </div>
             </div>
             
-            <h3 className="text-2xl font-bold text-white mb-4 group-hover: text-cyan-200 transition-colors leading-tight">",
-              Collaborative AI Agent Teams: Enterprise Coordination Revolution,
+            <h3 className="text-2xl font-bold text-white mb-4 group-hover: text-cyan-200 transition-colors leading-tight">"
+              Collaborative AI Agent Teams: Enterprise Coordination Revolution
             </h3>
             
             <p className="text-blue-200 text-base mb-6 leading-relaxed line-clamp-4">
 =======
-            <h3 className="text-2xl font-bold text-white mb-4 group-hover: text-cyan-200 transition-colors leading-tight">";,
-              Collaborative AI Agent Teams: Enterprise Coordination Revolution,
+            <h3 className="text-2xl font-bold text-white mb-4 group-hover: text-cyan-200 transition-colors leading-tight">";
+              Collaborative AI Agent Teams: Enterprise Coordination Revolution
             </h3>
             
             <p className="text-blue-200 text-base mb-6 leading-relaxed line-clamp-4">";
@@ -169,23 +168,23 @@ const October2025NextGenAIBanner = () => {
                 <span>•</span>
                 <span className="font-medium">Oct 1, 2025</span>";
               </div>
-              <ArrowRight className="w-6 h-6 text-cyan-300 group-hover: translate-x-2 transition-transform/>",
+              <ArrowRight className="w-6 h-6 text-cyan-300 group-hover: translate-x-2 transition-transform/>"
 =======
-              <ArrowRight className="w-6 h-6 text-cyan-300 group-hover: translate-x-2 transition-transform" />";,
+              <ArrowRight className="w-6 h-6 text-cyan-300 group-hover: translate-x-2 transition-transform" />";
             </div>
           </Link>
 
           {/* Article 2 - Real-Time Adaptive AI */}
           <Link 
             to="/blog/ai-2025-oct-01-real-time-adaptive-ai-enterprise-systems"
-            className="group bg-gradient-to-br from-blue-800/50 to-blue-900/50 backdrop-blur-sm border-2 border-blue-400/40 rounded-2xl p-8 hover: scale-105 hover:shadow-2xl hover:shadow-blue-500/50 transition-all duration-300",
+            className="group bg-gradient-to-br from-blue-800/50 to-blue-900/50 backdrop-blur-sm border-2 border-blue-400/40 rounded-2xl p-8 hover: scale-105 hover:shadow-2xl hover:shadow-blue-500/50 transition-all duration-300"
           >
             <div className="flex items-center gap-4 mb-6">
-              <div className="p-4 bg-blue-500/30 rounded-2xl group-hover: bg-blue-500/40 transition-colors shadow-lg">",
+              <div className="p-4 bg-blue-500/30 rounded-2xl group-hover: bg-blue-500/40 transition-colors shadow-lg">"
                 <Zap className="w-10 h-10 text-blue-200/>
 =======
             <div className="flex items-center gap-4 mb-6">";
-              <div className="p-4 bg-blue-500/30 rounded-2xl group-hover: bg-blue-500/40 transition-colors shadow-lg">";,
+              <div className="p-4 bg-blue-500/30 rounded-2xl group-hover: bg-blue-500/40 transition-colors shadow-lg">";
                 <Zap className="w-10 h-10 text-blue-200" />";
               </div>
               <div className="flex-1">";
@@ -195,14 +194,14 @@ const October2025NextGenAIBanner = () => {
               </div>
             </div>
             
-            <h3 className="text-2xl font-bold text-white mb-4 group-hover: text-blue-200 transition-colors leading-tight">",
-              Real-Time Adaptive AI: Self-Learning Enterprise Systems,
+            <h3 className="text-2xl font-bold text-white mb-4 group-hover: text-blue-200 transition-colors leading-tight">"
+              Real-Time Adaptive AI: Self-Learning Enterprise Systems
             </h3>
             
             <p className="text-blue-200 text-base mb-6 leading-relaxed line-clamp-4">
 =======
-            <h3 className="text-2xl font-bold text-white mb-4 group-hover: text-blue-200 transition-colors leading-tight">";,
-              Real-Time Adaptive AI: Self-Learning Enterprise Systems,
+            <h3 className="text-2xl font-bold text-white mb-4 group-hover: text-blue-200 transition-colors leading-tight">";
+              Real-Time Adaptive AI: Self-Learning Enterprise Systems
             </h3>
             
             <p className="text-blue-200 text-base mb-6 leading-relaxed line-clamp-4">";
@@ -244,23 +243,23 @@ const October2025NextGenAIBanner = () => {
                 <span>•</span>
                 <span className="font-medium">Oct 1, 2025</span>";
               </div>
-              <ArrowRight className="w-6 h-6 text-blue-300 group-hover: translate-x-2 transition-transform/>",
+              <ArrowRight className="w-6 h-6 text-blue-300 group-hover: translate-x-2 transition-transform/>"
 =======
-              <ArrowRight className="w-6 h-6 text-blue-300 group-hover: translate-x-2 transition-transform" />";,
+              <ArrowRight className="w-6 h-6 text-blue-300 group-hover: translate-x-2 transition-transform" />";
             </div>
           </Link>
 
           {/* Article 3 - Hybrid Human-AI Intelligence */}
           <Link 
             to="/blog/ai-2025-oct-01-hybrid-human-ai-intelligence-augmentation"
-            className="group bg-gradient-to-br from-purple-800/50 to-purple-900/50 backdrop-blur-sm border-2 border-purple-400/40 rounded-2xl p-8 hover: scale-105 hover:shadow-2xl hover:shadow-purple-500/50 transition-all duration-300",
+            className="group bg-gradient-to-br from-purple-800/50 to-purple-900/50 backdrop-blur-sm border-2 border-purple-400/40 rounded-2xl p-8 hover: scale-105 hover:shadow-2xl hover:shadow-purple-500/50 transition-all duration-300"
           >
             <div className="flex items-center gap-4 mb-6">
-              <div className="p-4 bg-purple-500/30 rounded-2xl group-hover: bg-purple-500/40 transition-colors shadow-lg">",
+              <div className="p-4 bg-purple-500/30 rounded-2xl group-hover: bg-purple-500/40 transition-colors shadow-lg">"
                 <Brain className="w-10 h-10 text-purple-200/>
 =======
             <div className="flex items-center gap-4 mb-6">";
-              <div className="p-4 bg-purple-500/30 rounded-2xl group-hover: bg-purple-500/40 transition-colors shadow-lg">";,
+              <div className="p-4 bg-purple-500/30 rounded-2xl group-hover: bg-purple-500/40 transition-colors shadow-lg">";
                 <Brain className="w-10 h-10 text-purple-200" />";
               </div>
               <div className="flex-1">";
@@ -270,14 +269,14 @@ const October2025NextGenAIBanner = () => {
               </div>
             </div>
             
-            <h3 className="text-2xl font-bold text-white mb-4 group-hover: text-purple-200 transition-colors leading-tight">",
-              Hybrid Human-AI Intelligence: Cognitive Augmentation Revolution,
+            <h3 className="text-2xl font-bold text-white mb-4 group-hover: text-purple-200 transition-colors leading-tight">"
+              Hybrid Human-AI Intelligence: Cognitive Augmentation Revolution
             </h3>
             
             <p className="text-purple-200 text-base mb-6 leading-relaxed line-clamp-4">
 =======
-            <h3 className="text-2xl font-bold text-white mb-4 group-hover: text-purple-200 transition-colors leading-tight">";,
-              Hybrid Human-AI Intelligence: Cognitive Augmentation Revolution,
+            <h3 className="text-2xl font-bold text-white mb-4 group-hover: text-purple-200 transition-colors leading-tight">";
+              Hybrid Human-AI Intelligence: Cognitive Augmentation Revolution
             </h3>
             
             <p className="text-purple-200 text-base mb-6 leading-relaxed line-clamp-4">";
@@ -319,9 +318,9 @@ const October2025NextGenAIBanner = () => {
                 <span>•</span>
                 <span className="font-medium">Oct 1, 2025</span>";
               </div>
-              <ArrowRight className="w-6 h-6 text-purple-300 group-hover: translate-x-2 transition-transform/>",
+              <ArrowRight className="w-6 h-6 text-purple-300 group-hover: translate-x-2 transition-transform/>"
 =======
-              <ArrowRight className="w-6 h-6 text-purple-300 group-hover: translate-x-2 transition-transform" />";,
+              <ArrowRight className="w-6 h-6 text-purple-300 group-hover: translate-x-2 transition-transform" />";
             </div>
           </Link>
         </div>
@@ -343,7 +342,7 @@ const October2025NextGenAIBanner = () => {
           <div className="flex flex-wrap gap-4 justify-center">";
             <Link
               to="/blog"
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 hover: from-cyan-400 hover:to-blue-400 text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105",
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 hover: from-cyan-400 hover:to-blue-400 text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105"
             >
               <span>Explore All Articles</span>
               <ArrowRight className="w-5 h-5/>
@@ -353,7 +352,7 @@ const October2025NextGenAIBanner = () => {
             
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 bg-white/10 hover: bg-white/20 backdrop-blur-sm border-2 border-white/30 text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105",
+              className="inline-flex items-center gap-2 bg-white/10 hover: bg-white/20 backdrop-blur-sm border-2 border-white/30 text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105"
             >
               <span>Schedule Consultation</span>
               <ArrowRight className="w-5 h-5/>

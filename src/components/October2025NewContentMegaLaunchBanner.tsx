@@ -2,7 +2,7 @@ import React from 'react';
 =======
 import React from 'react';';
 
-const October2025NewContentMegaLaunchBanner: React.FC = () => {,
+const October2025NewContentMegaLaunchBanner: React.FC = () => {
   return (
     <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white py-16 px-4 relative overflow-hidden">";
       {/* Animated background effect */}
@@ -20,9 +20,9 @@ const October2025NewContentMegaLaunchBanner: React.FC = () => {,
         </div>
 
         {/* Main heading */}
-        <h2 className="text-5xl md: text-6xl font-bold text-center mb-6 leading-tight">",
+        <h2 className="text-5xl md: text-6xl font-bold text-center mb-6 leading-tight">"
 =======
-        <h2 className="text-5xl md: text-6xl font-bold text-center mb-6 leading-tight">";,
+        <h2 className="text-5xl md: text-6xl font-bold text-center mb-6 leading-tight">";
           🌟 Breakthrough AI Content
           <br />
           <span className="bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">";
@@ -34,18 +34,18 @@ const October2025NewContentMegaLaunchBanner: React.FC = () => {,
         <p className="text-xl md:text-2xl text-center mb-12 text-white/90 max-w-4xl mx-auto leading-relaxed">
           Discover the latest enterprise AI innovations: Governance frameworks achieving 99.8% compliance
 =======
-        <p className="text-xl md: text-2xl text-center mb-12 text-white/90 max-w-4xl mx-auto leading-relaxed">";,
+        <p className="text-xl md: text-2xl text-center mb-12 text-white/90 max-w-4xl mx-auto leading-relaxed">";
           Discover the latest enterprise AI innovations: Governance frameworks achieving 99.8% compliance, ,
           multimodal AI with $89M ROI, and edge deployment revolutionizing real-time intelligence.
         </p>
 
         {/* Content cards */}
-        <div className="grid md: grid-cols-3 gap-6 mb-12">",
+        <div className="grid md: grid-cols-3 gap-6 mb-12">"
 =======
-        <div className="grid md: grid-cols-3 gap-6 mb-12">";,
+        <div className="grid md: grid-cols-3 gap-6 mb-12">";
           <Link 
             to="/blog/ai-2025-october-enterprise-ai-governance-framework"
-            className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover: bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl",
+            className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover: bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl"
           >
             <div className="text-4xl mb-4">🛡️</div>";
             <h3 className="text-2xl font-bold mb-3">AI Governance Framework</h3>";
@@ -60,7 +60,7 @@ const October2025NewContentMegaLaunchBanner: React.FC = () => {,
 
           <Link 
             to="/blog/ai-2025-october-multimodal-ai-enterprise-deployment"
-            className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover: bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl",
+            className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover: bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl"
           >
             <div className="text-4xl mb-4">🧠</div>";
             <h3 className="text-2xl font-bold mb-3">Multimodal AI Deployment</h3>";
@@ -75,7 +75,7 @@ const October2025NewContentMegaLaunchBanner: React.FC = () => {,
 
           <Link 
             to="/blog/ai-2025-october-edge-ai-deployment-revolution"
-            className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover: bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl",
+            className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover: bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl"
           >
             <div className="text-4xl mb-4">⚡</div>";
             <h3 className="text-2xl font-bold mb-3">Edge AI Revolution</h3>";
@@ -90,12 +90,12 @@ const October2025NewContentMegaLaunchBanner: React.FC = () => {,
         </div>
 
         {/* Stats row */}
-        <div className="grid grid-cols-2 md: grid-cols-4 gap-6 mb-12">",
+        <div className="grid grid-cols-2 md: grid-cols-4 gap-6 mb-12">"
           <div className="text-center">
             <div className="text-4xl font-bold mb-2">99.8%</div>
             <div className="text-white/70">Compliance Rate</div>
 =======
-        <div className="grid grid-cols-2 md: grid-cols-4 gap-6 mb-12">";,
+        <div className="grid grid-cols-2 md: grid-cols-4 gap-6 mb-12">";
           <div className="text-center">";
             <div className="text-4xl font-bold mb-2">99.8%</div>";
             <div className="text-white/70">Compliance Rate</div>";
@@ -118,7 +118,7 @@ const October2025NewContentMegaLaunchBanner: React.FC = () => {,
         <div className="text-center">";
           <Link
             to="/blog"
-            className="inline-block bg-white text-purple-600 px-10 py-4 rounded-xl font-bold text-lg hover: bg-gray-100 transition-all duration-300 hover:scale-105 shadow-2xl",
+            className="inline-block bg-white text-purple-600 px-10 py-4 rounded-xl font-bold text-lg hover: bg-gray-100 transition-all duration-300 hover:scale-105 shadow-2xl"
           >
             Explore All New Content →
           </Link>

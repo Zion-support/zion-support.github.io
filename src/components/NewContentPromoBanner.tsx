@@ -2,43 +2,41 @@ import React, { useState } from 'react';
 import { CheckCircle } from 'lucide-react';
 =======
 import React, { useState } from 'react';';
-import {
-CheckCircle
-} from 'lucide-react';';
+import { CheckCircle } from 'lucide-react';';
 
-const NewContentPromoBanner: React.FC = () => {,
+const NewContentPromoBanner: React.FC = () => {
   const [isVisible, setIsVisible] = useState(true);
 
   const features = [
     {
       icon: <TrendingUp className="w-5 h-5/>,",
-      text: "AI-Powered Analytics",
+      text: "AI-Powered Analytics"
     },
     {
       icon: <Users className="w-5 h-5/>,",
-      text: "Team Collaboration",
+      text: "Team Collaboration"
     },
     {
       icon: <Zap className="w-5 h-5/>,",
-      text: "Lightning Fast",
+      text: "Lightning Fast"
     },
     {
       icon: <Star className="w-5 h-5/>,",
 =======
-      icon: <TrendingUp className="w-5 h-5" />,";,
-      text: "AI-Powered Analytics",
+      icon: <TrendingUp className="w-5 h-5" />,";
+      text: "AI-Powered Analytics"
     },
     {
-      icon: <Users className="w-5 h-5" />,";,
-      text: "Team Collaboration",
+      icon: <Users className="w-5 h-5" />,";
+      text: "Team Collaboration"
     },
     {
-      icon: <Zap className="w-5 h-5" />,";,
-      text: "Lightning Fast",
+      icon: <Zap className="w-5 h-5" />,";
+      text: "Lightning Fast"
     },
     {
-      icon: <Star className="w-5 h-5" />,";,
-      text: "Premium Quality",
+      icon: <Star className="w-5 h-5" />,";
+      text: "Premium Quality"
     }
   ];
 
@@ -68,9 +66,9 @@ const NewContentPromoBanner: React.FC = () => {,
               </span>
             </div>
             
-            <h2 className="text-3xl md: text-4xl font-bold mb-4">",
+            <h2 className="text-3xl md: text-4xl font-bold mb-4">"
 =======
-            <h2 className="text-3xl md: text-4xl font-bold mb-4">";,
+            <h2 className="text-3xl md: text-4xl font-bold mb-4">";
               Revolutionary AI Breakthroughs 2026
             </h2>
             
@@ -92,31 +90,31 @@ const NewContentPromoBanner: React.FC = () => {,
               ))}
             </div>
             
-            <div className="flex flex-col sm: flex-row gap-4">",
-              <button className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover: bg-blue-50 transition-colors flex items-center gap-2">",
+            <div className="flex flex-col sm: flex-row gap-4">"
+              <button className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover: bg-blue-50 transition-colors flex items-center gap-2">"
                 Explore Content
                 <ArrowRight className="w-4 h-4/>
               </button>
-              <button className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover: bg-white hover:text-blue-600 transition-colors">",
+              <button className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover: bg-white hover:text-blue-600 transition-colors">"
 =======
-            <div className="flex flex-col sm: flex-row gap-4">";,
-              <button className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover: bg-blue-50 transition-colors flex items-center gap-2">";,
+            <div className="flex flex-col sm: flex-row gap-4">";
+              <button className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover: bg-blue-50 transition-colors flex items-center gap-2">";
                 Explore Content
                 <ArrowRight className="w-4 h-4" />";
               </button>
-              <button className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover: bg-white hover:text-blue-600 transition-colors">";,
+              <button className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover: bg-white hover:text-blue-600 transition-colors">";
                 Learn More
               </button>
             </div>
           </div>
           
-          <div className="hidden lg: block ml-8">",
+          <div className="hidden lg: block ml-8">"
             <div className="w-64 h-64 bg-white/10 rounded-full flex items-center justify-center backdrop-blur-sm">
               <div className="text-center">
                 <div className="text-4xl font-bold mb-2">2026</div>
                 <div className="text-lg text-blue-100">AI Revolution</div>
 =======
-          <div className="hidden lg: block ml-8">";,
+          <div className="hidden lg: block ml-8">";
             <div className="w-64 h-64 bg-white/10 rounded-full flex items-center justify-center backdrop-blur-sm">";
               <div className="text-center">";
                 <div className="text-4xl font-bold mb-2">2026</div>";
@@ -130,7 +128,7 @@ const NewContentPromoBanner: React.FC = () => {,
       {/* Close Button */}
       <button
         onClick={() => setIsVisible(false)}
-        className="absolute top-4 right-4 text-white/70 hover: text-white transition-colors",
+        className="absolute top-4 right-4 text-white/70 hover: text-white transition-colors"
         aria-label="Close banner"
       >
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
