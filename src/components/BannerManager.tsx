@@ -1,25 +1,27 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import {
+
+} from 'framer-motion';
 
 interface BannerData {
-  id: string;
-  title: string;
-  subtitle?: string;
-  description: string;
-  ctaText: string;
-  ctaLink: string;
-  imageUrl?: string;
-  category: string;
-  priority: number;
-  isActive: boolean;
-  startDate?: string;
-  endDate?: string;
+id: string;
+title: string;
+subtitle?: string;
+description: string;
+ctaText: string;
+ctaLink: string;
+imageUrl?: string;
+category: string;
+priority: number;
+isActive: boolean;
+startDate?: string;
+endDate?: string;
 }
 
 interface BannerManagerProps {
-  banners: BannerData[];
-  rotationInterval?: number;
-  maxVisibleBanners?: number;
+banners: BannerData[];
+rotationInterval?: number;
+maxVisibleBanners?: number;
 }
 
 const BannerManager: React.FC<BannerManagerProps> = ({

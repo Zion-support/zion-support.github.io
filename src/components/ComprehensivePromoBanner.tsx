@@ -1,9 +1,9 @@
 import React from 'react';
 
 interface ComprehensivePromoBannerProps {
-  variant?: 'hero' | 'compact' | 'featured';
-  showCount?: number;
-  className?: string;
+variant?: 'hero' | 'compact' | 'featured';
+showCount?: number;
+className?: string;
 }
 
 const ComprehensivePromoBanner: React.FC<ComprehensivePromoBannerProps> = ({ 

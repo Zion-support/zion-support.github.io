@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 
 interface NewArticlesPromoBannerProps {
-  variant?: 'default' | 'premium' | 'featured' | 'compact';
-  showCount?: number;
-  autoRotate?: boolean;
-  rotationInterval?: number;
-  className?: string;
+variant?: 'default' | 'premium' | 'featured' | 'compact';
+showCount?: number;
+autoRotate?: boolean;
+rotationInterval?: number;
+className?: string;
 }
 
 const NewArticlesPromoBanner: React.FC<NewArticlesPromoBannerProps> = ({

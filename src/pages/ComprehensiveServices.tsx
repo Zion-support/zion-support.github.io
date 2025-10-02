@@ -1,11 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { 
-  Zap, Bot, BarChart3, Shield, Cloud, Database
-  Smartphone, Globe, Cpu, Lock, Users, FileText
-  TrendingUp, Settings, Headphones, Code
-  Brain, Target, CheckCircle, Star
-  Mail, MessageCircle
+import {
+Link
+} from 'react-router-dom';
+import {
+
 } from 'lucide-react';
 
 const ComprehensiveServices: React.FC = () => {
@@ -229,10 +227,11 @@ const ComprehensiveServices: React.FC = () => {
   ];
 
   const ServiceCard = ({ service }: { service: any }) => {
-    const Icon = service.icon;
-    return (
-      <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 overflow-hidden">
-        <div className={`bg-gradient-to-br ${service.color} p-6 text-white`}>
+const Icon = service.icon;
+return (
+<div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 overflow-hidden">,
+<div className={`bg-gradient-to-br ${service.color
+} p-6 text-white`}>
           <Icon className="w-12 h-12 mb-4" />
           <h3 className="text-xl font-bold mb-2">{service.title}</h3>
           <p className="text-white/90 mb-4">{service.description}</p>

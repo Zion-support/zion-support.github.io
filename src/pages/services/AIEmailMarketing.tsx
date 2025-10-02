@@ -1,20 +1,9 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { 
-  Mail, 
-  Target, 
-  BarChart3, 
-  Users, 
-  Zap, 
-  CheckCircle, 
-  ArrowRight,
-  Phone,
-  Star,
-  Brain,
-  Clock,
-  Shield,
-  Globe,
-  TrendingUp
+import {
+Helmet
+} from 'react-helmet-async';
+import {
+TrendingUp
 } from 'lucide-react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
@@ -421,11 +410,12 @@ const AIEmailMarketing: React.FC = () => {
                   </ul>
                   <a
                     href="/contact"
-                    className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
-                      plan.popular
-                        ? 'bg-emerald-600 text-white hover:bg-emerald-700'
-                        : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
-                    }`}
+                    className={
+`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
+plan.popular
+? 'bg-emerald-600 text-white hover:bg-emerald-700',
+: 'bg-gray-100 text-gray-900 hover:bg-gray-200'
+}`}
                   >
                     Get Started
                   </a>

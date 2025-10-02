@@ -5,29 +5,22 @@
 
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import {
-  BannerConfig,
-  RotationStrategy,
-  selectBannersForDisplay,
-  selectBalancedBanners,
-  trackImpression,
-  trackClick,
-  loadBannerStats,
-  getRefreshInterval,
+
 } from '../utils/bannerRotation';
 
 interface UseBannerRotationOptions {
-  banners: BannerConfig[];
-  strategy?: Partial<RotationStrategy>;
-  autoRotate?: boolean;
-  balancedSelection?: boolean;
+banners: BannerConfig[];
+strategy?: Partial<RotationStrategy>;
+autoRotate?: boolean;
+balancedSelection?: boolean;
 }
 
 interface UseBannerRotationReturn {
-  displayedBanners: BannerConfig[];
-  handleBannerImpression: (bannerId: string) => void;
-  handleBannerClick: (bannerId: string) => void;
-  refreshBanners: () => void;
-  isLoading: boolean;
+displayedBanners: BannerConfig[];
+handleBannerImpression: (bannerId: string) => void;
+handleBannerClick: (bannerId: string) => void;
+refreshBanners: () => void;
+isLoading: boolean;
 }
 
 /**

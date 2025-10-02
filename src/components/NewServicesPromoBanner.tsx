@@ -1,10 +1,10 @@
 import React from 'react';
 
 interface NewServicesPromoBannerProps {
-  variant?: 'default' | 'showcase' | 'premium' | 'grid';
-  showCount?: number;
-  featuredOnly?: boolean;
-  className?: string;
+variant?: 'default' | 'showcase' | 'premium' | 'grid';
+showCount?: number;
+featuredOnly?: boolean;
+className?: string;
 }
 
 const NewServicesPromoBanner: React.FC<NewServicesPromoBannerProps> = ({

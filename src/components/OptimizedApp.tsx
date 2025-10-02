@@ -1,6 +1,10 @@
 import React, { Suspense, lazy, useState, useEffect } from 'react';
-import { ErrorBoundary } from 'react-error-boundary';
-import { motion } from 'framer-motion';
+import {
+ErrorBoundary
+} from 'react-error-boundary';
+import {
+motion
+} from 'framer-motion';
 
 // Lazy load components for better performance
 const UnifiedBannerSystem = lazy(() => import('./UnifiedBannerSystem'));
@@ -8,7 +12,9 @@ const EnhancedPerformanceMonitor = lazy(() => import('./EnhancedPerformanceMonit
 const SEOAccessibilityEnhancer = lazy(() => import('./SEOAccessibilityEnhancer'));
 
 // Import banner configurations
-import { getFeaturedBanners } from '../data/bannerConfigurations';
+import {
+getFeaturedBanners
+} from '../data/bannerConfigurations';
 
 // Loading component
 const LoadingSpinner: React.FC = () => (

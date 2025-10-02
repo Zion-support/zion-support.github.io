@@ -6,31 +6,31 @@ interface AIPerformanceDashboardProps {
 }
 
 interface PerformanceMetrics {
-  errorRate: number;
-  avgResolutionTime: number;
-  criticalErrorsToday: number;
-  userImpactScore: number;
+errorRate: number;
+avgResolutionTime: number;
+criticalErrorsToday: number;
+userImpactScore: number;
 }
 
 interface AIInsights {
-  predictedHighRiskActions: string[];
-  recommendedImprovements: string[];
-  errorTrends: Array<{
-    category: string;
-    trend: 'increasing' | 'decreasing' | 'stable';
-  }>;
+predictedHighRiskActions: string[];
+recommendedImprovements: string[];
+errorTrends: Array<{,
+category: string;
+trend: 'increasing' | 'decreasing' | 'stable';
+}>;
 }
 
 interface ErrorReport {
-  id: string;
-  severity: string;
-  message: string;
-  lastOccurrence: string | Date;
-  occurrenceCount: number;
-  context: {
-    component?: string;
-    action?: string;
-  };
+id: string;
+severity: string;
+message: string;
+lastOccurrence: string | Date;
+occurrenceCount: number;
+context: {,
+component?: string;
+action?: string;
+};
   aiPredictedImpact?: number;
   resolutionSuggestions?: string[];
 }
@@ -126,22 +126,22 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
   if (!isVisible) return null;
 
   const getSeverityColor = (severity: string) => {
-    switch (severity) {
-      case 'critical': return 'text-red-600 bg-red-100';
-      case 'high': return 'text-orange-600 bg-orange-100';
-      case 'medium': return 'text-yellow-600 bg-yellow-100';
-      case 'low': return 'text-blue-600 bg-blue-100';
-      default: return 'text-gray-600 bg-gray-100';
-    }
+switch (severity) {
+case 'critical': return 'text-red-600 bg-red-100';,
+case 'high': return 'text-orange-600 bg-orange-100';,
+case 'medium': return 'text-yellow-600 bg-yellow-100';,
+case 'low': return 'text-blue-600 bg-blue-100';,
+default: return 'text-gray-600 bg-gray-100';
+}
   };
 
   const getTrendIcon = (trend: string) => {
-    switch (trend) {
-      case 'increasing': return '📈';
-      case 'decreasing': return '📉';
-      case 'stable': return '➡️';
-      default: return '❓';
-    }
+switch (trend) {
+case 'increasing': return '📈';,
+case 'decreasing': return '📉';,
+case 'stable': return '➡️';,
+default: return '❓';
+}
   };
 
   return (
@@ -160,11 +160,13 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
           </div>
 
           {/* Performance Metrics */}
-          {metrics ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-              <div className="bg-gradient-to-r from-blue-500 to-blue-600 text-white p-4 rounded-lg">
-                <h3 className="text-sm font-medium opacity-90">Error Rate (per hour)</h3>
-                <p className="text-2xl font-bold">{metrics.errorRate.toFixed(2)}</p>
+          {
+metrics ? (
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">,
+<div className="bg-gradient-to-r from-blue-500 to-blue-600 text-white p-4 rounded-lg">
+<h3 className="text-sm font-medium opacity-90">Error Rate (per hour)</h3>
+<p className="text-2xl font-bold">{metrics.errorRate.toFixed(2)
+}</p>
               </div>
               <div className="bg-gradient-to-r from-red-500 to-red-600 text-white p-4 rounded-lg">
                 <h3 className="text-sm font-medium opacity-90">Critical Errors Today</h3>
@@ -230,10 +232,11 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
                       <span className="font-medium capitalize">{String(trend.category)}</span>
                       <span className="text-lg">{getTrendIcon(String(trend.trend))}</span>
                     </div>
-                    <div className={`text-sm mt-1 ${
-                      trend.trend === 'increasing' ? 'text-red-600' :
-                      trend.trend === 'decreasing' ? 'text-green-600' : 'text-gray-600'
-                    }`}>
+                    <div className={
+`text-sm mt-1 ${
+trend.trend === 'increasing' ? 'text-red-600' :,
+trend.trend === 'decreasing' ? 'text-green-600' : 'text-gray-600'
+}`}>
                       {String(trend.trend)}
                     </div>
                   </div>

@@ -4,22 +4,22 @@
  */
 
 export interface BannerConfig {
-  id: string;
-  component: string;
-  priority: number;
-  category: 'breakthrough' | 'enterprise' | 'innovation' | 'product';
-  impressions?: number;
-  clicks?: number;
-  lastShown?: Date;
-  active: boolean;
+id: string;
+component: string;
+priority: number;
+category: 'breakthrough' | 'enterprise' | 'innovation' | 'product';
+impressions?: number;
+clicks?: number;
+lastShown?: Date;
+active: boolean;
 }
 
 export interface RotationStrategy {
-  maxVisible: number;
-  rotationInterval: number; // in milliseconds
-  priorityWeight: number;
-  freshnessWeight: number;
-  engagementWeight: number;
+maxVisible: number;
+rotationInterval: number; // in milliseconds,
+priorityWeight: number;
+freshnessWeight: number;
+engagementWeight: number;
 }
 
 const DEFAULT_STRATEGY: RotationStrategy = {

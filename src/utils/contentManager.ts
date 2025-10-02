@@ -4,25 +4,25 @@
  */
 
 export interface BlogPost {
-  slug: string;
-  title: string;
-  description: string;
-  date: string;
-  author: string;
-  category: string;
-  tags: string[];
-  featured: boolean;
-  readTime?: number;
+slug: string;
+title: string;
+description: string;
+date: string;
+author: string;
+category: string;
+tags: string[];
+featured: boolean;
+readTime?: number;
 }
 
 export interface CaseStudy {
-  slug: string;
-  title: string;
-  description: string;
-  client: string;
-  industry: string;
-  results: string[];
-  featured: boolean;
+slug: string;
+title: string;
+description: string;
+client: string;
+industry: string;
+results: string[];
+featured: boolean;
 }
 
 /**

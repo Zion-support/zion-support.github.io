@@ -4,39 +4,38 @@
  */
 
 export interface PerformanceMetrics {
-  loadTime: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  firstInputDelay: number;
-  cumulativeLayoutShift: number;
-  timeToInteractive: number;
-  totalBlockingTime: number;
-  speedIndex: number;
-  memoryUsage: number;
-  networkRequests: number;
-  domNodes: number;
-  jsHeapSize: number;
-  timestamp: number;
+loadTime: number;
+firstContentfulPaint: number;
+largestContentfulPaint: number;
+firstInputDelay: number;
+cumulativeLayoutShift: number;
+timeToInteractive: number;
+totalBlockingTime: number;
+speedIndex: number;
+memoryUsage: number;
+networkRequests: number;
+domNodes: number;
+jsHeapSize: number;
+timestamp: number;
 }
 
 export interface PerformanceAlert {
-  type: 'warning' | 'error' | 'info';
-  message: string;
-  metric: keyof PerformanceMetrics;
-  value: number;
-  threshold: number;
-  timestamp: number;
+type: 'warning' | 'error' | 'info';
+message: string;
+metric: keyof PerformanceMetrics;
+value: number;
+threshold: number;
+timestamp: number;
 }
 
 class EnhancedPerformanceMonitor {
-  private metrics: PerformanceMetrics[] = [];
-  private alerts: PerformanceAlert[] = [];
-  private observers: PerformanceObserver[] = [];
-  private isMonitoring = false;
-
-  constructor() {
-    this.initializeObservers();
-  }
+private metrics: PerformanceMetrics[] = [];,
+private alerts: PerformanceAlert[] = [];,
+private observers: PerformanceObserver[] = [];,
+private isMonitoring = false;
+constructor() {
+this.initializeObservers();
+}
 
   private initializeObservers(): void {
     if (typeof window === 'undefined') return;

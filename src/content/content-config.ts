@@ -1,54 +1,54 @@
 export interface BlogPost {
-  id: string;
-  title: string;
-  excerpt: string;
-  date: string;
-  category: string;
-  readTime: string;
-  image: string;
-  featured?: boolean;
-  slug: string;
-  tags: string[];
+id: string;
+title: string;
+excerpt: string;
+date: string;
+category: string;
+readTime: string;
+image: string;
+featured?: boolean;
+slug: string;
+tags: string[];
 }
 
 export interface CaseStudy {
-  id: string;
-  title: string;
-  excerpt: string;
-  company: string;
-  industry: string;
-  challenge: string;
-  solution: string;
-  result: string;
-  metric: string;
-  featured?: boolean;
-  slug: string;
-  tags: string[];
+id: string;
+title: string;
+excerpt: string;
+company: string;
+industry: string;
+challenge: string;
+solution: string;
+result: string;
+metric: string;
+featured?: boolean;
+slug: string;
+tags: string[];
 }
 
 export interface Service {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  pricing: {
-    starting: string;
-    popular?: boolean;
-  };
+id: string;
+title: string;
+description: string;
+category: string;
+pricing: {,
+starting: string;
+popular?: boolean;
+};
   features: string[];
   metrics?: Array<{
-    value: string;
-    label: string;
-  }>;
+value: string;,
+label: string;
+}>;
   testimonial?: {
-    quote: string;
-    author: string;
-    company: string;
-  };
+quote: string;,
+author: string;,
+company: string;
+};
   cta: {
-    primary: string;
-    secondary: string;
-  };
+primary: string;,
+secondary: string;
+};
   icon: string;
   featured?: boolean;
   slug: string;
@@ -56,17 +56,17 @@ export interface Service {
 }
 
 export interface PromotionalBanner {
-  id: string;
-  message: string;
-  ctaText: string;
-  ctaLink: string;
-  backgroundColor: string;
-  textColor: string;
-  showClose: boolean;
-  autoHide: boolean;
-  hideAfter: number;
-  active: boolean;
-  priority: number;
+id: string;
+message: string;
+ctaText: string;
+ctaLink: string;
+backgroundColor: string;
+textColor: string;
+showClose: boolean;
+autoHide: boolean;
+hideAfter: number;
+active: boolean;
+priority: number;
 }
 
 // Blog Posts Configuration

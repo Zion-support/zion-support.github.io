@@ -1,26 +1,30 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Shield, AlertTriangle, CheckCircle, XCircle, Lock, Eye, Globe } from 'lucide-react';
+import {
+
+} from 'framer-motion';
+import {
+
+} from 'lucide-react';
 
 interface SecurityCheck {
-  id: string;
-  name: string;
-  description: string;
-  status: 'pass' | 'fail' | 'warning' | 'info';
-  severity: 'low' | 'medium' | 'high' | 'critical';
-  category: 'headers' | 'content' | 'network' | 'authentication' | 'data';
-  recommendation?: string;
-  details?: string;
+id: string;
+name: string;
+description: string;
+status: 'pass' | 'fail' | 'warning' | 'info';
+severity: 'low' | 'medium' | 'high' | 'critical';
+category: 'headers' | 'content' | 'network' | 'authentication' | 'data';
+recommendation?: string;
+details?: string;
 }
 
 interface SecurityReport {
-  overallScore: number;
-  totalChecks: number;
-  passedChecks: number;
-  failedChecks: number;
-  warnings: number;
-  checks: SecurityCheck[];
-  lastUpdated: number;
+overallScore: number;
+totalChecks: number;
+passedChecks: number;
+failedChecks: number;
+warnings: number;
+checks: SecurityCheck[];
+lastUpdated: number;
 }
 
 const SecurityAuditPanel: React.FC = () => {
@@ -174,40 +178,40 @@ const SecurityAuditPanel: React.FC = () => {
   };
 
   const getStatusIcon = (status: string) => {
-    switch (status) {
-      case 'pass':
-        return <CheckCircle className="w-5 h-5 text-green-600" />;
-      case 'fail':
-        return <XCircle className="w-5 h-5 text-red-600" />;
-      case 'warning':
-        return <AlertTriangle className="w-5 h-5 text-yellow-600" />;
-      default:
-        return <Eye className="w-5 h-5 text-blue-600" />;
-    }
+switch (status) {
+case 'pass':,
+return <CheckCircle className="w-5 h-5 text-green-600" />;
+case 'fail':,
+return <XCircle className="w-5 h-5 text-red-600" />;
+case 'warning':,
+return <AlertTriangle className="w-5 h-5 text-yellow-600" />;
+default:,
+return <Eye className="w-5 h-5 text-blue-600" />;
+}
   };
 
   const getSeverityColor = (severity: string) => {
-    switch (severity) {
-      case 'critical':
-        return 'bg-red-100 text-red-800 border-red-200';
-      case 'high':
-        return 'bg-orange-100 text-orange-800 border-orange-200';
-      case 'medium':
-        return 'bg-yellow-100 text-yellow-800 border-yellow-200';
-      default:
-        return 'bg-blue-100 text-blue-800 border-blue-200';
-    }
+switch (severity) {
+case 'critical':,
+return 'bg-red-100 text-red-800 border-red-200';
+case 'high':,
+return 'bg-orange-100 text-orange-800 border-orange-200';
+case 'medium':,
+return 'bg-yellow-100 text-yellow-800 border-yellow-200';
+default:,
+return 'bg-blue-100 text-blue-800 border-blue-200';
+}
   };
 
   const getCategoryIcon = (category: string) => {
-    switch (category) {
-      case 'headers':
-        return <Globe className="w-4 h-4" />;
-      case 'authentication':
-        return <Lock className="w-4 h-4" />;
-      default:
-        return <Shield className="w-4 h-4" />;
-    }
+switch (category) {
+case 'headers':,
+return <Globe className="w-4 h-4" />;
+case 'authentication':,
+return <Lock className="w-4 h-4" />;
+default:,
+return <Shield className="w-4 h-4" />;
+}
   };
 
   const filteredChecks = report?.checks.filter(check => {
@@ -243,17 +247,19 @@ const SecurityAuditPanel: React.FC = () => {
               : 'bg-blue-600 text-white hover:bg-blue-700'
           }`}
         >
-          {isRunning ? (
-            <>
-              <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
-              Running Audit...
-            </>
-          ) : (
-            <>
-              <Shield className="w-4 h-4" />
-              Run Security Audit
-            </>
-          )}
+          {
+isRunning ? (
+<>
+<div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
+Running Audit...
+</>
+) : (,
+<>
+<Shield className="w-4 h-4" />
+Run Security Audit
+</>
+)
+}
         </button>
       </div>
 
@@ -362,10 +368,12 @@ const SecurityAuditPanel: React.FC = () => {
                           </span>
                         </div>
                         <p className="text-gray-600 text-sm mb-2">{check.description}</p>
-                        {check.recommendation && (
-                          <div className="bg-blue-50 border border-blue-200 rounded-lg p-3">
-                            <p className="text-blue-800 text-sm font-medium">Recommendation:</p>
-                            <p className="text-blue-700 text-sm">{check.recommendation}</p>
+                        {
+check.recommendation && (
+<div className="bg-blue-50 border border-blue-200 rounded-lg p-3">
+<p className="text-blue-800 text-sm font-medium">Recommendation:</p>,
+<p className="text-blue-700 text-sm">{check.recommendation
+}</p>
                           </div>
                         )}
                         {check.details && (

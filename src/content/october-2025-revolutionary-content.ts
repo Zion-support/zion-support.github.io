@@ -2,21 +2,21 @@
 // Premium content showcasing cutting-edge AI innovations
 
 export interface RevolutionaryContent {
-  id: string;
-  title: string;
-  slug: string;
-  description: string;
-  category: string;
-  date: string;
-  readTime: string;
-  icon: string;
-  gradient: string;
-  featured: boolean;
-  tags: string[];
-  highlights: string[];
-  metrics: {
-    [key: string]: string;
-  };
+id: string;
+title: string;
+slug: string;
+description: string;
+category: string;
+date: string;
+readTime: string;
+icon: string;
+gradient: string;
+featured: boolean;
+tags: string[];
+highlights: string[];
+metrics: {,
+[key: string]: string;
+};
 }
 
 export const october2025RevolutionaryContent: RevolutionaryContent[] = [

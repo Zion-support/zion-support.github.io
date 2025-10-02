@@ -1,10 +1,10 @@
 import React from 'react';
 
 interface LatestContentBannerProps {
-  variant?: 'info' | 'success' | 'warning';
-  autoRotate?: boolean;
-  rotationInterval?: number;
-  className?: string;
+variant?: 'info' | 'success' | 'warning';
+autoRotate?: boolean;
+rotationInterval?: number;
+className?: string;
 }
 
 const LatestContentBanner: React.FC<LatestContentBannerProps> = ({

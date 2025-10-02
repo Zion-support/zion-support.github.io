@@ -1,25 +1,29 @@
 import React, { useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { CheckCircle, XCircle, Info, AlertTriangle, X } from 'lucide-react';
+import {
+
+} from 'framer-motion';
+import {
+
+} from 'lucide-react';
 
 interface Notification {
-  id: string;
-  message: string;
-  type: 'success' | 'error' | 'info' | 'warning';
-  duration?: number;
-  persistent?: boolean;
-  actions?: Array<{
-    label: string;
-    action: () => void;
-    variant?: 'primary' | 'secondary';
-  }>;
+id: string;
+message: string;
+type: 'success' | 'error' | 'info' | 'warning';
+duration?: number;
+persistent?: boolean;
+actions?: Array<{,
+label: string;
+action: () => void;
+variant?: 'primary' | 'secondary';
+}>;
 }
 
 interface NotificationSystemProps {
-  notifications: Notification[];
-  onRemove: (id: string) => void;
-  position?: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left' | 'top-center' | 'bottom-center';
-  maxNotifications?: number;
+notifications: Notification[];
+onRemove: (id: string) => void;
+position?: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left' | 'top-center' | 'bottom-center';
+maxNotifications?: number;
 }
 
 const NotificationSystem: React.FC<NotificationSystemProps> = ({
@@ -42,49 +46,49 @@ const NotificationSystem: React.FC<NotificationSystemProps> = ({
   }, [notifications, onRemove]);
 
   const getIcon = (type: Notification['type']) => {
-    switch (type) {
-      case 'success':
-        return <CheckCircle className="w-5 h-5 text-green-600" />;
-      case 'error':
-        return <XCircle className="w-5 h-5 text-red-600" />;
-      case 'warning':
-        return <AlertTriangle className="w-5 h-5 text-yellow-600" />;
-      case 'info':
-      default:
-        return <Info className="w-5 h-5 text-blue-600" />;
-    }
+switch (type) {
+case 'success':,
+return <CheckCircle className="w-5 h-5 text-green-600" />;
+case 'error':,
+return <XCircle className="w-5 h-5 text-red-600" />;
+case 'warning':,
+return <AlertTriangle className="w-5 h-5 text-yellow-600" />;
+case 'info':,
+default:,
+return <Info className="w-5 h-5 text-blue-600" />;
+}
   };
 
   const getStyles = (type: Notification['type']) => {
-    switch (type) {
-      case 'success':
-        return 'bg-green-50 border-green-200 text-green-800';
-      case 'error':
-        return 'bg-red-50 border-red-200 text-red-800';
-      case 'warning':
-        return 'bg-yellow-50 border-yellow-200 text-yellow-800';
-      case 'info':
-      default:
-        return 'bg-blue-50 border-blue-200 text-blue-800';
-    }
+switch (type) {
+case 'success':,
+return 'bg-green-50 border-green-200 text-green-800';
+case 'error':,
+return 'bg-red-50 border-red-200 text-red-800';
+case 'warning':,
+return 'bg-yellow-50 border-yellow-200 text-yellow-800';
+case 'info':,
+default:,
+return 'bg-blue-50 border-blue-200 text-blue-800';
+}
   };
 
   const getPositionClasses = () => {
-    switch (position) {
-      case 'top-left':
-        return 'top-4 left-4';
-      case 'top-center':
-        return 'top-4 left-1/2 transform -translate-x-1/2';
-      case 'bottom-left':
-        return 'bottom-4 left-4';
-      case 'bottom-center':
-        return 'bottom-4 left-1/2 transform -translate-x-1/2';
-      case 'bottom-right':
-        return 'bottom-4 right-4';
-      case 'top-right':
-      default:
-        return 'top-4 right-4';
-    }
+switch (position) {
+case 'top-left':,
+return 'top-4 left-4';
+case 'top-center':,
+return 'top-4 left-1/2 transform -translate-x-1/2';
+case 'bottom-left':,
+return 'bottom-4 left-4';
+case 'bottom-center':,
+return 'bottom-4 left-1/2 transform -translate-x-1/2';
+case 'bottom-right':,
+return 'bottom-4 right-4';
+case 'top-right':,
+default:,
+return 'top-4 right-4';
+}
   };
 
   const notificationVariants = {
@@ -154,12 +158,13 @@ const NotificationSystem: React.FC<NotificationSystemProps> = ({
                       <button
                         key={index}
                         onClick={action.action}
-                        className={`
-                          text-xs font-medium px-3 py-1 rounded-md transition-colors
-                          ${action.variant === 'primary' 
-                            ? 'bg-blue-600 text-white hover:bg-blue-700' 
-                            : 'bg-gray-200 text-gray-800 hover:bg-gray-300'
-                          }
+                        className={
+`
+text-xs font-medium px-3 py-1 rounded-md transition-colors
+${action.variant === 'primary'
+? 'bg-blue-600 text-white hover:bg-blue-700',
+: 'bg-gray-200 text-gray-800 hover:bg-gray-300'
+}
                         `}
                       >
                         {action.label}

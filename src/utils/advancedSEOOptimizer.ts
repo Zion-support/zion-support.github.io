@@ -4,27 +4,28 @@
  */
 
 interface SEOMetrics {
-  titleScore: number;
-  descriptionScore: number;
-  headingScore: number;
-  keywordDensity: number;
-  readabilityScore: number;
-  imageOptimization: number;
-  linkScore: number;
-  overallScore: number;
+titleScore: number;
+descriptionScore: number;
+headingScore: number;
+keywordDensity: number;
+readabilityScore: number;
+imageOptimization: number;
+linkScore: number;
+overallScore: number;
 }
 
 interface SEORecommendation {
-  category: 'critical' | 'important' | 'minor';
-  message: string;
-  action: string;
-  impact: 'high' | 'medium' | 'low';
+category: 'critical' | 'important' | 'minor';
+message: string;
+action: string;
+impact: 'high' | 'medium' | 'low';
 }
 
 interface SEOAnalysis {
-  metrics: SEOMetrics;
-  recommendations: SEORecommendation[];
-  keywords: { word: string; count: number; density: number }[];
+metrics: SEOMetrics;
+recommendations: SEORecommendation[];
+keywords: { word: string; count: number; density: number
+}[];
   issues: string[];
   strengths: string[];
 }
@@ -38,11 +39,12 @@ class AdvancedSEOOptimizer {
    * Analyze page for SEO optimization
    */
   analyzePage(options: {
-    title?: string;
-    description?: string;
-    content?: string;
-    headings?: string[];
-    images?: { src: string; alt: string }[];
+title?: string;,
+description?: string;,
+content?: string;,
+headings?: string[];,
+images?: { src: string; alt: string
+}[];
     links?: { href: string; text: string; isInternal: boolean }[];
     keywords?: string[];
   }): SEOAnalysis {
@@ -423,35 +425,31 @@ class AdvancedSEOOptimizer {
    * Identify SEO issues
    */
   private identifyIssues(metrics: SEOMetrics): string[] {
-    const issues: string[] = [];
-
-    if (metrics.titleScore < 50) issues.push('Title tag is poorly optimized');
-    if (metrics.descriptionScore < 50) issues.push('Meta description is poorly optimized');
-    if (metrics.headingScore < 40) issues.push('Missing or poorly structured headings');
-    if (metrics.keywordDensity < 30) issues.push('Keyword density is too low');
-    if (metrics.readabilityScore < 50) issues.push('Content is difficult to read');
-    if (metrics.imageOptimization < 60) issues.push('Images lack proper alt text');
-    if (metrics.linkScore < 40) issues.push('Weak internal linking structure');
-
-    return issues;
-  }
+const issues: string[] = [];,
+if (metrics.titleScore < 50) issues.push('Title tag is poorly optimized');
+if (metrics.descriptionScore < 50) issues.push('Meta description is poorly optimized');
+if (metrics.headingScore < 40) issues.push('Missing or poorly structured headings');
+if (metrics.keywordDensity < 30) issues.push('Keyword density is too low');
+if (metrics.readabilityScore < 50) issues.push('Content is difficult to read');
+if (metrics.imageOptimization < 60) issues.push('Images lack proper alt text');
+if (metrics.linkScore < 40) issues.push('Weak internal linking structure');
+return issues;
+}
 
   /**
    * Identify SEO strengths
    */
   private identifyStrengths(metrics: SEOMetrics): string[] {
-    const strengths: string[] = [];
-
-    if (metrics.titleScore >= 80) strengths.push('Excellent title tag optimization');
-    if (metrics.descriptionScore >= 80) strengths.push('Well-optimized meta description');
-    if (metrics.headingScore >= 80) strengths.push('Strong heading structure');
-    if (metrics.keywordDensity >= 80) strengths.push('Optimal keyword density');
-    if (metrics.readabilityScore >= 70) strengths.push('Highly readable content');
-    if (metrics.imageOptimization >= 80) strengths.push('Well-optimized images');
-    if (metrics.linkScore >= 70) strengths.push('Good internal linking');
-
-    return strengths;
-  }
+const strengths: string[] = [];,
+if (metrics.titleScore >= 80) strengths.push('Excellent title tag optimization');
+if (metrics.descriptionScore >= 80) strengths.push('Well-optimized meta description');
+if (metrics.headingScore >= 80) strengths.push('Strong heading structure');
+if (metrics.keywordDensity >= 80) strengths.push('Optimal keyword density');
+if (metrics.readabilityScore >= 70) strengths.push('Highly readable content');
+if (metrics.imageOptimization >= 80) strengths.push('Well-optimized images');
+if (metrics.linkScore >= 70) strengths.push('Good internal linking');
+return strengths;
+}
 
   /**
    * Generate structured data (JSON-LD)
@@ -470,13 +468,13 @@ class AdvancedSEOOptimizer {
    * Optimize meta tags
    */
   optimizeMetaTags(page: {
-    title: string;
-    description: string;
-    keywords: string[];
-    author?: string;
-    image?: string;
-    url?: string;
-  }): { [key: string]: string } {
+title: string;,
+description: string;,
+keywords: string[];,
+author?: string;,
+image?: string;,
+url?: string;
+}): { [key: string]: string } {
     return {
       title: this.optimizeTitle(page.title, page.keywords),
       description: this.optimizeDescription(page.description, page.keywords),

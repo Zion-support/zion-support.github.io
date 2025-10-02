@@ -1,6 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Sparkles, ArrowRight } from 'lucide-react';
+import {
+Link
+} from 'react-router-dom';
+import {
+
+} from 'lucide-react';
 
 const October2025MegaLaunchBanner: React.FC = () => {
   const megaArticles = [

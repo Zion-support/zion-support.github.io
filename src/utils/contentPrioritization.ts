@@ -4,24 +4,24 @@
  */
 
 export interface ContentItem {
-  id: string;
-  title: string;
-  date: Date;
-  category: string;
-  priority: number;
-  value?: number; // Business value in billions
-  roi?: number; // ROI percentage
-  views?: number;
-  engagement?: number; // 0-100
-  freshness?: number; // Days since publication
+id: string;
+title: string;
+date: Date;
+category: string;
+priority: number;
+value?: number; // Business value in billions,
+roi?: number; // ROI percentage,
+views?: number;
+engagement?: number; // 0-100,
+freshness?: number; // Days since publication
 }
 
 export interface PrioritizationConfig {
-  recencyWeight: number; // Weight for how recent the content is
-  valueWeight: number; // Weight for business value
-  engagementWeight: number; // Weight for user engagement
-  priorityWeight: number; // Weight for manual priority
-  categoryBalance: boolean; // Whether to balance across categories
+recencyWeight: number; // Weight for how recent the content is,
+valueWeight: number; // Weight for business value,
+engagementWeight: number; // Weight for user engagement,
+priorityWeight: number; // Weight for manual priority,
+categoryBalance: boolean; // Whether to balance across categories
 }
 
 const DEFAULT_CONFIG: PrioritizationConfig = {
@@ -276,16 +276,16 @@ export const getEvergreenContent = (
 export const createMixedFeed = (
   items: ContentItem[],
   config: {
-    trendingCount: number;
-    newCount: number;
-    evergreenCount: number;
-    totalMax: number;
-  }
+trendingCount: number;,
+newCount: number;,
+evergreenCount: number;,
+totalMax: number;
+}
 ): {
-  trending: ContentItem[];
-  new: ContentItem[];
-  evergreen: ContentItem[];
-  all: ContentItem[];
+trending: ContentItem[];,
+new: ContentItem[];,
+evergreen: ContentItem[];,
+all: ContentItem[];
 } => {
   const trending = getTrendingContent(items, config.trendingCount);
   const trendingIds = new Set(trending.map(item => item.id));

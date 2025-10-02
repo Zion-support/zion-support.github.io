@@ -1,11 +1,13 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import {
+motion
+} from 'framer-motion';
 
 interface LoadingSpinnerProps {
-  size?: 'small' | 'medium' | 'large';
-  color?: 'blue' | 'white' | 'gray';
-  text?: string;
-  fullScreen?: boolean;
+size?: 'small' | 'medium' | 'large';
+color?: 'blue' | 'white' | 'gray';
+text?: string;
+fullScreen?: boolean;
 }
 
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({

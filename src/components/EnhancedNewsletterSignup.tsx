@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 
 interface Props {
-  title?: string;
-  subtitle?: string;
-  className?: string;
+title?: string;
+subtitle?: string;
+className?: string;
 }
 
 export default function EnhancedNewsletterSignup({ title = 'Stay Updated', subtitle = 'Get the latest insights on AI and technology trends.', className = '' }: Props): React.JSX.Element {

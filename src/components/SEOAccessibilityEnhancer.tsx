@@ -1,13 +1,15 @@
 import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
+import {
+Helmet
+} from 'react-helmet-async';
 
 interface SEOAccessibilityEnhancerProps {
-  title?: string;
-  description?: string;
-  keywords?: string[];
-  canonicalUrl?: string;
-  ogImage?: string;
-  structuredData?: any;
+title?: string;
+description?: string;
+keywords?: string[];
+canonicalUrl?: string;
+ogImage?: string;
+structuredData?: any;
 }
 
 const SEOAccessibilityEnhancer: React.FC<SEOAccessibilityEnhancerProps> = ({
@@ -122,9 +124,9 @@ const SEOAccessibilityEnhancer: React.FC<SEOAccessibilityEnhancerProps> = ({
     const style = document.createElement('style');
     style.textContent = `
       .keyboard-navigation *:focus {
-        outline: 2px solid #3b82f6 !important;
-        outline-offset: 2px !important;
-      }
+outline: 2px solid #3b82f6 !important;,
+outline-offset: 2px !important;
+}
       
       .sr-only {
         position: absolute;
@@ -139,15 +141,15 @@ const SEOAccessibilityEnhancer: React.FC<SEOAccessibilityEnhancerProps> = ({
       }
       
       .focus\\:not-sr-only:focus {
-        position: static;
-        width: auto;
-        height: auto;
-        padding: inherit;
-        margin: inherit;
-        overflow: visible;
-        clip: auto;
-        white-space: normal;
-      }
+position: static;,
+width: auto;,
+height: auto;,
+padding: inherit;,
+margin: inherit;,
+overflow: visible;,
+clip: auto;,
+white-space: normal;
+}
     `;
     document.head.appendChild(style);
 

@@ -1,5 +1,7 @@
 import React, { Suspense, lazy } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import {
+
+} from 'react-router-dom';
 import Loading from './components/Loading';
 
 // Lazy load components for better performance

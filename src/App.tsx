@@ -1,7 +1,13 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
-import { motion } from 'framer-motion';
+import {
+
+} from 'react-router-dom';
+import {
+HelmetProvider
+} from 'react-helmet-async';
+import {
+motion
+} from 'framer-motion';
 import './index.css';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import Header from './components/Header';
@@ -90,20 +96,20 @@ const App: React.FC = () => {
 
   // Simple hotkeys for demo toggles and initialization
   useEffect(() => {
-    const onKeyDown = (e: KeyboardEvent) => {
-      if (!e.ctrlKey || !e.shiftKey) return;
-      switch (e.key.toLowerCase()) {
-        case 'p':
-          e.preventDefault();
-          setShowPerformanceOptimizer((v) => !v);
-          break;
-        case 'm':
-          e.preventDefault();
-          setShowPerformanceMonitor((v) => !v);
-          break;
-        default:
-          break;
-      }
+const onKeyDown = (e: KeyboardEvent) => {,
+if (!e.ctrlKey || !e.shiftKey) return;
+switch (e.key.toLowerCase()) {
+case 'p':,
+e.preventDefault();
+setShowPerformanceOptimizer((v) => !v);
+break;
+case 'm':,
+e.preventDefault();
+setShowPerformanceMonitor((v) => !v);
+break;
+default:,
+break;
+}
     };
 
     window.addEventListener('keydown', onKeyDown);
@@ -209,19 +215,19 @@ const App: React.FC = () => {
                           
                           {/* 404 Fallback */}
                           <Route path="*" element={
-                            <div className="min-h-screen flex items-center justify-center">
-                              <div className="text-center">
-                                <h1 className="text-6xl font-bold text-gray-300 mb-4">404</h1>
-                                <p className="text-xl text-gray-600 mb-8">Page not found</p>
-                                <a 
-                                  href="/" 
-                                  className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
-                                >
-                                  Return Home
-                                </a>
-                              </div>
-                            </div>
-                          } />
+<div className="min-h-screen flex items-center justify-center">
+<div className="text-center">
+<h1 className="text-6xl font-bold text-gray-300 mb-4">404</h1>
+<p className="text-xl text-gray-600 mb-8">Page not found</p>
+<a
+href="/"
+className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors",
+>
+Return Home
+</a>
+</div>
+</div>
+} />
                         </Routes>
                       </React.Suspense>
                     </div>
