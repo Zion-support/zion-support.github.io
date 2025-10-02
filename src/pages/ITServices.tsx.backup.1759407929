@@ -113,12 +113,21 @@ export default function ITServices(): React.JSX.Element {
       link: "/contact"
     },
     {
+<<<<<<< HEAD
+      id: "data-engineering-platform",
+      name: "Data Engineering Platform",
+      blurb: "Scalable data infrastructure with real-time processing and analytics",
+      price: "$4,000 - $20,000/month",
+      eta: "4-10 weeks",
+      category: "Data & Analytics",
+=======
       id: "data-engineering-platform"
       name: "Data Engineering Platform"
       blurb: "Scalable data infrastructure with real-time processing and analytics"
       price: "$4,000 - $20,000/month"
       eta: "4-10 weeks"
       category: "Data & Analytics"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e54d
       icon: Database,
       features: [
         "Data lake and data warehouse architecture",

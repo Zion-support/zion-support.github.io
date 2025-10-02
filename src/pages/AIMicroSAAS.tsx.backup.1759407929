@@ -47,7 +47,11 @@ export default function AIMicroSAAS(): React.JSX.Element {
         "60% reduction in content production costs",
         "24/7 automated content optimization"
       ],
+<<<<<<< HEAD
+      useCases: ["Marketing agencies", "E-commerce brands", "SaaS companies", "Content creators"],
+=======
       useCases: ["Marketing agencies", "SaaS companies", "Content creators"],
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e54d
       marketSize: "$8.2B content marketing market",
       link: "/contact"
     },

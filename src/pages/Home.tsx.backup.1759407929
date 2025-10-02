@@ -1,7 +1,11 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+<<<<<<< HEAD
+// Icon imports removed for compatibility
+=======
 import { CheckCircle, Rocket, Shield, Sparkles, Zap, Award } from "lucide-react";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e54d
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import NewServicesPromoBanner2026 from "../components/NewServicesPromoBanner2026";
@@ -40,6 +44,11 @@ const Home = () => {
       featured: true
     }
   ];
+<<<<<<< HEAD
+  
+  // Additional curated items (if needed)
+  // const curatedItems = [ ... ];
+=======
 
   const featuredArticles = [
     {
@@ -64,6 +73,7 @@ const Home = () => {
       publishedAt: '2025-01-05'
     }
   ];
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e54d
 
   return (
     <>
@@ -98,6 +108,9 @@ const Home = () => {
             "@context": "https://schema.org",
             "@type": "Organization",
             "name": "Zion Tech Group",
+<<<<<<< HEAD
+            "url": "https://ziontechgroup.com"
+=======
             "alternateName": "Zion Tech",
             "description": "Leading AI and IT solutions provider specializing in AI workflow automation, quantum computing, edge AI, and zero trust security.",
             "url": "https://ziontechgroup.com",
@@ -180,6 +193,7 @@ const Home = () => {
               "bestRating": "5",
               "worstRating": "1"
             }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e54d
           })}
         </script>
         
