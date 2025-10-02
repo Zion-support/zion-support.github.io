@@ -43,17 +43,17 @@ export default function HomePage() {
                 Get Started Today
               </Link>
               <Link 
-                href="/blog/ai-2026-june-mega-breakthrough-revolution" 
+                href="/services" 
                 className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
               >
-                Read Latest Breakthroughs →
+                Explore Our Services →
               </Link>
-              <Link 
-                href="/case-studies/fortune-500-ai-2026-mega-transformation-success" 
+              <a 
+                href="tel:+13024640950" 
                 className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
-                View $5.2B Success Story
-              </Link>
+                Call: +1 302 464 0950
+              </a>
             </div>
             
             {/* Key Metrics */}
@@ -79,7 +79,6 @@ export default function HomePage() {
         </div>
       </header>
 
-<<<<<<< HEAD
       {/* AI Innovation Showcase */}
       <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
         <div className="container mx-auto px-6">
@@ -108,36 +107,13 @@ export default function HomePage() {
                 <li>• Quantum parallelism</li>
               </ul>
               <Link 
-                href="/blog/ai-2026-june-mega-breakthrough-revolution"
+                href="/services/quantum-ai"
                 className="inline-block bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
               >
-=======
-      {/* Featured Services */}
-      <section className="py-12 md:py-20 px-4 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12 md:mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Revolutionary AI Services</h2>
-            <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-4">
-              Transform your organization with cutting-edge AI innovations and enterprise-grade solutions
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            <div className="bg-white p-6 md:p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-              <div className="w-10 md:w-12 h-10 md:h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-3 md:mb-4">
-                <Brain className="w-5 md:w-6 h-5 md:h-6 text-blue-600" />
-              </div>
-              <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-3">Quantum AI Computing</h3>
-              <p className="text-sm md:text-base text-gray-600 mb-3 md:mb-4">
-                Leverage quantum-enhanced AI for unprecedented computational power and breakthrough performance.
-              </p>
-              <Link to="/services/quantum-ai" className="text-blue-600 font-semibold hover:text-blue-700 text-sm md:text-base">
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-06a2
                 Learn More →
               </Link>
             </div>
 
-<<<<<<< HEAD
             <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-purple-500/50 transition-all duration-300">
               <div className="text-6xl mb-6">🤖</div>
               <h3 className="text-2xl font-bold text-white mb-4">Enterprise Automation</h3>
@@ -152,7 +128,7 @@ export default function HomePage() {
                 <li>• Complete enterprise autonomy</li>
               </ul>
               <Link 
-                href="/blog/ai-2026-quantum-consciousness-autonomous-enterprise"
+                href="/services/autonomous-enterprise"
                 className="inline-block bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
               >
                 Get Guide →
@@ -177,92 +153,12 @@ export default function HomePage() {
                 className="inline-block bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
               >
                 View Case Study →
-=======
-            <div className="bg-white p-6 md:p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-              <div className="w-10 md:w-12 h-10 md:h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-3 md:mb-4">
-                <Cpu className="w-5 md:w-6 h-5 md:h-6 text-purple-600" />
-              </div>
-              <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-3">Autonomous Enterprise</h3>
-              <p className="text-sm md:text-base text-gray-600 mb-3 md:mb-4">
-                Achieve 95% automation across your enterprise with self-managing AI systems.
-              </p>
-              <Link to="/services/autonomous-enterprise" className="text-purple-600 font-semibold hover:text-purple-700 text-sm md:text-base">
-                Learn More →
-              </Link>
-            </div>
-
-            <div className="bg-white p-6 md:p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-              <div className="w-10 md:w-12 h-10 md:h-12 bg-green-100 rounded-lg flex items-center justify-center mb-3 md:mb-4">
-                <TrendingUp className="w-5 md:w-6 h-5 md:h-6 text-green-600" />
-              </div>
-              <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-3">AI ROI Optimization</h3>
-              <p className="text-sm md:text-base text-gray-600 mb-3 md:mb-4">
-                Proven strategies to achieve $150M+ ROI through strategic AI implementation.
-              </p>
-              <Link to="/services/ai-roi" className="text-green-600 font-semibold hover:text-green-700 text-sm md:text-base">
-                Learn More →
-              </Link>
-            </div>
-
-            <div className="bg-white p-6 md:p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-              <div className="w-10 md:w-12 h-10 md:h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-3 md:mb-4">
-                <Shield className="w-5 md:w-6 h-5 md:h-6 text-orange-600" />
-              </div>
-              <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-3">AI Security & Governance</h3>
-              <p className="text-sm md:text-base text-gray-600 mb-3 md:mb-4">
-                Enterprise-grade AI security frameworks and governance models.
-              </p>
-              <Link to="/services/ai-security" className="text-orange-600 font-semibold hover:text-orange-700 text-sm md:text-base">
-                Learn More →
-              </Link>
-            </div>
-
-            <div className="bg-white p-6 md:p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-              <div className="w-10 md:w-12 h-10 md:h-12 bg-red-100 rounded-lg flex items-center justify-center mb-3 md:mb-4">
-                <Cloud className="w-5 md:w-6 h-5 md:h-6 text-red-600" />
-              </div>
-              <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-3">Cloud AI Infrastructure</h3>
-              <p className="text-sm md:text-base text-gray-600 mb-3 md:mb-4">
-                Scalable, secure cloud infrastructure optimized for AI workloads.
-              </p>
-              <Link to="/services/cloud-ai" className="text-red-600 font-semibold hover:text-red-700 text-sm md:text-base">
-                Learn More →
-              </Link>
-            </div>
-
-            <div className="bg-white p-6 md:p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-              <div className="w-10 md:w-12 h-10 md:h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-3 md:mb-4">
-                <BarChart3 className="w-5 md:w-6 h-5 md:h-6 text-indigo-600" />
-              </div>
-              <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-3">AI Analytics & Insights</h3>
-              <p className="text-sm md:text-base text-gray-600 mb-3 md:mb-4">
-                Advanced analytics platforms powered by next-generation AI.
-              </p>
-              <Link to="/services/ai-analytics" className="text-indigo-600 font-semibold hover:text-indigo-700 text-sm md:text-base">
-                Learn More →
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-06a2
               </Link>
             </div>
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
-      {/* Services Showcase */}
-      <section className="py-20 px-4 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Latest Micro SaaS Solutions</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Innovative AI-powered micro SaaS solutions designed to solve specific business challenges
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl border border-blue-200">
-              <div className="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center mb-4">
-                <Database className="w-5 h-5 text-white" />
-=======
       {/* Success Stories */}
       <section className="py-12 md:py-20 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
@@ -276,7 +172,9 @@ export default function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
             <div className="bg-gradient-to-br from-blue-50 to-purple-50 p-6 md:p-8 rounded-xl">
               <div className="flex items-center mb-4">
-                <Award className="w-6 md:w-8 h-6 md:h-8 text-blue-600 mr-3" />
+                <div className="w-6 md:w-8 h-6 md:h-8 bg-blue-600 rounded-lg flex items-center justify-center mr-3">
+                  <Users className="w-4 md:w-5 h-4 md:h-5 text-white" />
+                </div>
                 <h3 className="text-xl md:text-2xl font-semibold">Fortune 500 Transformation</h3>
               </div>
               <p className="text-sm md:text-base text-gray-600 mb-4 md:mb-6">
@@ -291,30 +189,14 @@ export default function HomePage() {
                   <div className="font-semibold text-sm md:text-base">Sarah Chen</div>
                   <div className="text-gray-600 text-sm md:text-base">CTO, Global Tech Corp</div>
                 </div>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-06a2
               </div>
-              <h3 className="text-lg font-semibold mb-2">AI Expense Management</h3>
-              <p className="text-gray-600 text-sm mb-3">75% reduction in expense processing time</p>
-              <div className="text-xs text-blue-600 font-semibold">Starting at $49/month</div>
             </div>
 
-<<<<<<< HEAD
-            <div className="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl border border-green-200">
-              <div className="w-10 h-10 bg-green-500 rounded-lg flex items-center justify-center mb-4">
-                <Users className="w-5 h-5 text-white" />
-              </div>
-              <h3 className="text-lg font-semibold mb-2">AI Customer Onboarding</h3>
-              <p className="text-gray-600 text-sm mb-3">60% faster time-to-value</p>
-              <div className="text-xs text-green-600 font-semibold">Starting at $79/month</div>
-            </div>
-
-            <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-xl border border-purple-200">
-              <div className="w-10 h-10 bg-purple-500 rounded-lg flex items-center justify-center mb-4">
-                <Target className="w-5 h-5 text-white" />
-=======
             <div className="bg-gradient-to-br from-green-50 to-blue-50 p-6 md:p-8 rounded-xl">
               <div className="flex items-center mb-4">
-                <Target className="w-6 md:w-8 h-6 md:h-8 text-green-600 mr-3" />
+                <div className="w-6 md:w-8 h-6 md:h-8 bg-green-600 rounded-lg flex items-center justify-center mr-3">
+                  <Zap className="w-4 md:w-5 h-4 md:h-5 text-white" />
+                </div>
                 <h3 className="text-xl md:text-2xl font-semibold">95% Automation Achievement</h3>
               </div>
               <p className="text-sm md:text-base text-gray-600 mb-4 md:mb-6">
@@ -329,26 +211,12 @@ export default function HomePage() {
                   <div className="font-semibold text-sm md:text-base">Michael Rodriguez</div>
                   <div className="text-gray-600 text-sm md:text-base">CEO, InnovateCorp</div>
                 </div>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-06a2
               </div>
-              <h3 className="text-lg font-semibold mb-2">AI Lead Generation</h3>
-              <p className="text-gray-600 text-sm mb-3">300% increase in qualified leads</p>
-              <div className="text-xs text-purple-600 font-semibold">Starting at $97/month</div>
-            </div>
-
-            <div className="bg-gradient-to-br from-orange-50 to-orange-100 p-6 rounded-xl border border-orange-200">
-              <div className="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center mb-4">
-                <Zap className="w-5 h-5 text-white" />
-              </div>
-              <h3 className="text-lg font-semibold mb-2">AI Appointment Scheduling</h3>
-              <p className="text-gray-600 text-sm mb-3">80% reduction in scheduling conflicts</p>
-              <div className="text-xs text-orange-600 font-semibold">Starting at $29/month</div>
             </div>
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Contact Information Section */}
       <section className="py-16 px-4 bg-gradient-to-r from-blue-600 to-purple-600">
         <div className="max-w-7xl mx-auto">
@@ -427,36 +295,10 @@ export default function HomePage() {
                 Explore All Services
               </Link>
             </div>
-=======
-      {/* CTA Section */}
-      <section className="py-12 md:py-20 px-4 bg-gradient-to-r from-blue-600 to-purple-600">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 md:mb-6">
-            Ready to Transform Your Organization?
-          </h2>
-          <p className="text-lg md:text-xl text-blue-100 mb-6 md:mb-8 px-4">
-            Join the AI revolution and unlock unprecedented growth with Zion Tech Group
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact" 
-              className="inline-flex items-center justify-center px-6 md:px-8 py-3 md:py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 text-sm md:text-base"
-            >
-              Get Started Today
-              <Rocket className="ml-2 w-4 md:w-5 h-4 md:h-5" />
-            </Link>
-            <Link 
-              to="/services" 
-              className="inline-flex items-center justify-center px-6 md:px-8 py-3 md:py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 text-sm md:text-base"
-            >
-              Explore Solutions
-            </Link>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-06a2
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Footer */}
       <footer className="bg-slate-900 border-t border-slate-800 py-12">
         <div className="container mx-auto px-6">
@@ -474,36 +316,40 @@ export default function HomePage() {
                 Get Started Today
               </Link>
               <Link 
-                href="/blog/ai-2026-june-mega-breakthrough-revolution" 
+                href="/services" 
                 className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
               >
-                Read Latest Breakthroughs →
+                Explore Our Services →
               </Link>
-              <Link 
-                href="/case-studies/fortune-500-ai-2026-mega-transformation-success" 
+              <a 
+                href="tel:+13024640950" 
                 className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
-                View $5.2B Success Story
-              </Link>
-=======
-      {/* Contact Info */}
-      <section className="py-8 md:py-12 px-4 bg-gray-900 text-white">
-        <div className="max-w-7xl mx-auto text-center">
-          <h3 className="text-xl md:text-2xl font-bold mb-4">Get in Touch</h3>
-          <div className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8">
-            <div className="flex items-center">
-              <Globe className="w-4 md:w-5 h-4 md:h-5 mr-2" />
-              <span className="text-sm md:text-base">ziontechgroup.com</span>
+                Call: +1 302 464 0950
+              </a>
             </div>
-            <div className="flex items-center">
-              <span className="text-sm md:text-base">📧 kleber@ziontechgroup.com</span>
-            </div>
-            <div className="flex items-center">
-              <span className="text-sm md:text-base">📞 +1 302 464 0950</span>
-            </div>
-            <div className="flex items-center">
-              <span className="text-sm md:text-base">📍 364 E Main St STE 1008, Middletown DE 19709</span>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-06a2
+            
+            {/* Contact Information */}
+            <div className="mt-8 text-center">
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-4">
+                <a 
+                  href="tel:+13024640950" 
+                  className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/20 transition-colors"
+                >
+                  📞 +1 302 464 0950
+                </a>
+                <a 
+                  href="mailto:kleber@ziontechgroup.com" 
+                  className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/20 transition-colors"
+                >
+                  ✉️ kleber@ziontechgroup.com
+                </a>
+              </div>
+              <div className="text-sm text-gray-300 space-y-1">
+                <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
+                <p>🌐 Website: <a href="https://ziontechgroup.com" className="text-blue-400 hover:underline">https://ziontechgroup.com</a></p>
+                <p className="text-xs text-gray-400">Available 24/7 for enterprise clients • Free consultation for projects over $10K</p>
+              </div>
             </div>
           </div>
         </div>

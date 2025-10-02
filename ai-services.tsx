@@ -683,8 +683,8 @@ export default function AIServices() {
                 </a>
               </div>
               <div className="text-sm text-slate-400 space-y-2">
-                <p>364 E Main St STE 1008, Middletown DE 19709</p>
-                <p>Website: <a href="https://ziontechgroup.com" className="text-cyan-400 hover:underline">https://ziontechgroup.com</a></p>
+                <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
+                <p>🌐 Website: <a href="https://ziontechgroup.com" className="text-cyan-400 hover:underline">https://ziontechgroup.com</a></p>
                 <p className="text-xs text-slate-500">Available 24/7 for enterprise clients • Free consultation for projects over $10K</p>
               </div>
             </div>
