@@ -1,52 +1,58 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
-import { BrowserRouter } from "react-router-dom";
-import { HelmetProvider } from "react-helmet-async";
-// Fallback: simple passthrough provider while ThemeContext is absent
-const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  return <>{children}</>;
-};
+import { createRoot } from "react-dom/client";
 import App from "./App";
-import "./index.css";
 
-// Register enhanced service worker
-if ("serviceWorker" in navigator) {
-  window.addEventListener("load", () => {
-    navigator.serviceWorker
-      .register("/sw-enhanced.js")
-      .then((registration) => {
-        // console.log("🚀 Enhanced Service Worker registered successfully:", registration.scope);
+// Performance optimizations
+const reportWebVitals = async () => {
+  try {
+    const { onCLS, onLCP, onFCP, onTTFB } = await import("web-vitals");
+    const log = (metric: { name: string; value: number }) => {
+      if (import.meta.env.PROD) {
+        console.log(`[WebVitals] ${metric.name}:`, Math.round(metric.value));
+      }
+    };
+    onCLS(log);
+    onLCP(log);
+    onFCP(log);
+    onTTFB(log);
+  } catch {
+    // ignore in unsupported environments
+  }
+};
 
-        // Check for updates
-        registration.addEventListener("updatefound", () => {
-          const newWorker = registration.installing;
-          if (newWorker) {
-            newWorker.addEventListener("statechange", () => {
-              if (
-                newWorker.state === "installed" &&
-                navigator.serviceWorker.controller
-              ) {
-                // console.log("🔄 New service worker available. Reloading...");
-                window.location.reload();
-              }
-            });
-          }
-        });
-      })
-      .catch((error) => {
-        // console.error("❌ Service Worker registration failed:", error);
+// Optimized service worker registration
+const registerServiceWorker = () => {
+  if (typeof window !== "undefined" && "serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+      navigator.serviceWorker.register("/sw.js").catch(() => {
+        // Silently fail if service worker registration fails
       });
-  });
-}
+    });
+  }
+};
 
-ReactDOM.createRoot(document.getElementById("root")!).render(
-  <React.StrictMode>
-    <HelmetProvider>
-      <BrowserRouter>
-        <ThemeProvider>
-          <App />
-        </ThemeProvider>
-      </BrowserRouter>
-    </HelmetProvider>
-  </React.StrictMode>,
-);
+// Main app initialization with performance optimizations
+const initializeApp = () => {
+  const container = document.getElementById("root");
+  if (!container) {
+    console.error("Root container not found");
+    return;
+  }
+
+  const root = createRoot(container);
+  
+  root.render(
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  );
+
+  // Initialize performance monitoring and service worker
+  if (import.meta.env.PROD) {
+    void reportWebVitals();
+    registerServiceWorker();
+  }
+};
+
+// Start the app
+initializeApp();
