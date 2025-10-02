@@ -24,6 +24,7 @@ const BlogPage = React.lazy(() => import('./pages/BlogPage'));
 const CaseStudiesPage = React.lazy(() => import('./pages/CaseStudiesPage'));
 const Resources = React.lazy(() => import('./pages/Resources'));
 const ServicesCatalog = React.lazy(() => import('./pages/ServicesCatalog'));
+const Docs = React.lazy(() => import('./pages/Docs'));
 
 const LoadingSpinner = () => (
   <div className="flex items-center justify-center min-h-screen">
@@ -151,6 +152,10 @@ const App: React.FC = () => {
                         <Route path="/blog/*" element={<BlogPage />} />
                         <Route path="/case-studies" element={<CaseStudiesPage />} />
                         <Route path="/resources" element={<Resources />} />
+                        <Route path="/docs" element={<Docs />} />
+                        <Route path="/pricing" element={<Resources />} />
+                        <Route path="/support" element={<Resources />} />
+                        <Route path="/partners" element={<Resources />} />
                         <Route path="*" element={
                           <div className="min-h-screen flex items-center justify-center">
                             <div className="text-center">
