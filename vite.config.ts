@@ -7,6 +7,11 @@ export default defineConfig({
   plugins: [
     react({
       jsxRuntime: 'automatic',
+      babel: {
+        plugins: [
+          ['@babel/plugin-transform-react-jsx', { runtime: 'automatic' }]
+        ]
+      }
     }),
   ],
   resolve: {
@@ -47,9 +52,6 @@ export default defineConfig({
             // Group utility libraries
             if (id.includes('clsx') || id.includes('tailwind-merge') || id.includes('axios')) {
               return 'vendor-utils';
-            }
-            if (id.includes('axios')) {
-              return 'vendor-http';
             }
             return 'vendor';
           }

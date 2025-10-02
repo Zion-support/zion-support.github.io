@@ -1,6 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { ArrowRight, Sparkles, TrendingUp, Zap, Star, Rocket, Brain, Shield } from 'lucide-react';
+import { ArrowRight, Sparkles, TrendingUp, Zap, Star, Rocket, Brain, Atom, Bot, Gem, Microscope, Shield } from 'lucide-react';
 
 const Revolutionary2026ContentMegaBanner: React.FC = () => {
   const revolutionaryContent = [
@@ -97,12 +96,6 @@ const Revolutionary2026ContentMegaBanner: React.FC = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-3 mb-6">
-            <motion.div
-              animate={{ rotate: [0, 360] }}
-              transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
-            >
-              <Sparkles className="w-8 h-8 text-yellow-400" />
-            </motion.div>
             <div className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-500/20 to-blue-500/20 backdrop-blur-sm rounded-full border border-purple-500/30">
               <Rocket className="w-4 h-4 text-purple-400" />
               <span className="text-sm font-semibold text-white">REVOLUTIONARY BREAKTHROUGH • 2026</span>
@@ -141,12 +134,8 @@ const Revolutionary2026ContentMegaBanner: React.FC = () => {
         {/* Featured Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {revolutionaryContent.map((content, index) => (
-            <motion.div
+            <div
               key={content.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
-              whileHover={{ scale: 1.05 }}
               className="group relative"
             >
               {/* Featured badge */}
@@ -224,7 +213,7 @@ const Revolutionary2026ContentMegaBanner: React.FC = () => {
                   <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
                 </a>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 

@@ -8,13 +8,20 @@
 
 ## 🚀 Tech Stack
 
-There are several ways of editing your application.
+- **Frontend**: React 18, TypeScript, Vite
+- **Styling**: TailwindCSS 4.x
+- **Routing**: React Router DOM
+- **SEO**: React Helmet Async
+- **Performance**: Web Vitals, Bundle Analysis
+- **Security**: CSP Headers, Security Audits
 
-**Use Lovable**
+## 🏗️ Architecture
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/3fad5ec6-2b6e-4163-b266-afac8f1ced32) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
+The application follows modern React patterns with:
+- **Error Boundaries**: Graceful error handling
+- **Performance Monitoring**: Built-in metrics tracking
+- **SEO Optimization**: Meta tags and structured data
+- **Security Headers**: CSP and security configurations
 
 **Use your preferred IDE**
 
