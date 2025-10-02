@@ -2,189 +2,189 @@ import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { 
-  TrendingUp, 
-  BarChart3, 
+  Wifi, 
+  Smartphone, 
+  Monitor, 
+  Camera, 
+  Mic, 
+  Search, 
+  Settings, 
+  Layers, 
+  Network, 
+  Globe, 
+  Lock, 
+  Target, 
+  Activity, 
   PieChart, 
   LineChart, 
-  DollarSign, 
-  Calculator, 
-  Target, 
+  RefreshCw, 
+  Download, 
+  Upload, 
+  Play, 
+  Pause, 
+  Square, 
+  Triangle, 
+  Circle, 
+  Hexagon, 
+  Building, 
+  Home, 
+  Car, 
+  Plane, 
+  Ship, 
+  Truck, 
+  Package, 
+  ShoppingCart, 
+  MapPin, 
   Zap, 
   CheckCircle, 
   ArrowRight, 
+  DollarSign,
   Clock,
   Star,
   Shield,
   Database,
-  Globe,
-  Smartphone,
   Mail,
   Phone,
   Calendar,
   CreditCard,
   Headphones,
   Code,
-  Lock,
-  Activity,
-  RefreshCw,
-  Download,
-  Upload,
-  Play,
-  Pause,
-  Square,
-  Triangle,
-  Circle,
-  Hexagon,
-  Building,
-  Home,
-  Car,
-  Plane,
-  Ship,
-  Truck,
-  Package,
-  ShoppingCart,
-  MapPin,
-  Camera,
-  Mic,
-  Search,
-  Settings,
-  Layers,
-  Network,
-  Wifi,
-  Monitor,
   Bot,
   FileText,
   Users,
   Brain,
   MessageSquare,
-  Eye
+  Eye,
+  TrendingUp,
+  BarChart3,
+  Calculator
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'AI Financial Forecasting Suite | Zion Tech Group - Predictive Finance',
-  description: 'Advanced AI-powered financial forecasting and analysis platform. Real-time market predictions, risk assessment, and automated financial planning for businesses.',
-  keywords: 'AI financial forecasting, predictive finance, financial analytics, risk assessment, market predictions, automated financial planning',
+  title: 'IoT Smart Infrastructure Platform | Zion Tech Group - Connected Solutions',
+  description: 'Comprehensive IoT platform for smart cities, buildings, and infrastructure. Real-time monitoring, predictive maintenance, and intelligent automation.',
+  keywords: 'IoT platform, smart infrastructure, connected devices, predictive maintenance, smart cities, building automation, industrial IoT',
 };
 
-export default function AIFinancialForecastingSuitePage() {
+export default function IoTSmartInfrastructurePlatformPage() {
   const features = [
     {
-      icon: <TrendingUp className="w-6 h-6" />,
-      title: "AI Market Predictions",
-      description: "Advanced machine learning models analyze market trends, economic indicators, and historical data to predict future market movements.",
+      icon: <Network className="w-6 h-6" />,
+      title: "Smart Device Management",
+      description: "Centralized platform to manage thousands of connected devices across your infrastructure.",
       benefits: [
-        "Real-time market analysis and predictions",
-        "Multi-asset portfolio optimization",
-        "Risk-adjusted return forecasting",
-        "Market volatility prediction models"
+        "Real-time device monitoring and control",
+        "Automated device provisioning and updates",
+        "Remote diagnostics and troubleshooting",
+        "Device lifecycle management"
       ]
     },
     {
       icon: <BarChart3 className="w-6 h-6" />,
-      title: "Automated Financial Planning",
-      description: "AI-driven financial planning that adapts to changing market conditions and business objectives.",
+      title: "Predictive Maintenance",
+      description: "AI-powered analytics to predict equipment failures before they occur, reducing downtime and costs.",
       benefits: [
-        "Dynamic budget allocation and optimization",
-        "Cash flow forecasting with 95%+ accuracy",
-        "Automated financial goal tracking",
-        "Scenario planning and stress testing"
+        "Machine learning-based failure prediction",
+        "Automated maintenance scheduling",
+        "Cost optimization through preventive actions",
+        "Equipment performance optimization"
       ]
     },
     {
       icon: <Shield className="w-6 h-6" />,
-      title: "Advanced Risk Assessment",
-      description: "Comprehensive risk analysis using AI to identify potential financial threats and opportunities.",
+      title: "Advanced Security",
+      description: "Enterprise-grade security for IoT devices and data with end-to-end encryption.",
       benefits: [
-        "Multi-dimensional risk modeling",
-        "Credit risk assessment and scoring",
-        "Operational risk identification",
-        "Regulatory compliance monitoring"
+        "End-to-end encryption for all data",
+        "Device authentication and authorization",
+        "Threat detection and response",
+        "Compliance with industry standards"
       ]
     },
     {
-      icon: <Calculator className="w-6 h-6" />,
-      title: "Investment Optimization",
-      description: "AI-powered investment strategies that maximize returns while minimizing risk exposure.",
+      icon: <Activity className="w-6 h-6" />,
+      title: "Real-Time Analytics",
+      description: "Live dashboards and analytics to monitor infrastructure performance and make data-driven decisions.",
       benefits: [
-        "Portfolio optimization algorithms",
-        "Asset allocation recommendations",
-        "Tax-efficient investment strategies",
-        "Performance attribution analysis"
+        "Real-time performance monitoring",
+        "Customizable dashboards and reports",
+        "Historical data analysis and trends",
+        "Automated alerting and notifications"
       ]
     },
     {
-      icon: <Target className="w-6 h-6" />,
-      title: "Goal-Based Planning",
-      description: "Personalized financial planning based on individual or business goals and risk tolerance.",
+      icon: <Zap className="w-6 h-6" />,
+      title: "Energy Optimization",
+      description: "Intelligent energy management to reduce consumption and optimize efficiency across your infrastructure.",
       benefits: [
-        "Custom financial goal setting",
-        "Progress tracking and monitoring",
-        "Automated rebalancing recommendations",
-        "Goal achievement probability analysis"
+        "Smart energy consumption monitoring",
+        "Automated energy optimization",
+        "Renewable energy integration",
+        "Cost reduction through efficiency"
       ]
     },
     {
-      icon: <Database className="w-6 h-6" />,
-      title: "Real-Time Data Integration",
-      description: "Seamless integration with financial data sources for up-to-date analysis and reporting.",
+      icon: <Globe className="w-6 h-6" />,
+      title: "Scalable Architecture",
+      description: "Cloud-native platform that scales from single buildings to entire smart cities.",
       benefits: [
-        "Multi-source data aggregation",
-        "Real-time market data feeds",
-        "Automated data validation and cleaning",
-        "Custom data source integration"
+        "Horizontal and vertical scaling",
+        "Multi-tenant architecture",
+        "Global deployment capabilities",
+        "Edge computing support"
       ]
     }
   ];
 
   const pricingTiers = [
     {
-      name: "Professional",
-      price: "$499",
+      name: "Building",
+      price: "$199",
       period: "/month",
-      description: "Perfect for financial advisors and small businesses",
+      description: "Perfect for smart buildings and small facilities",
       features: [
-        "Up to 50 portfolios",
-        "Basic AI forecasting models",
-        "Standard risk assessment",
+        "Up to 100 connected devices",
+        "Basic monitoring and control",
+        "Standard security features",
         "Email support",
-        "API access",
-        "Monthly reporting"
+        "Basic analytics dashboard",
+        "Mobile app access"
       ],
       cta: "Start Free Trial",
       popular: false
     },
     {
-      name: "Enterprise",
-      price: "$1,299",
+      name: "Campus",
+      price: "$799",
       period: "/month",
-      description: "Advanced features for growing financial firms",
+      description: "Advanced features for campuses and medium facilities",
       features: [
-        "Up to 500 portfolios",
-        "Advanced AI models and customization",
-        "Comprehensive risk analysis",
+        "Up to 1,000 connected devices",
+        "Advanced analytics and AI insights",
+        "Predictive maintenance capabilities",
         "Priority support",
-        "Advanced API access",
-        "Real-time reporting",
         "Custom integrations",
-        "White-label options"
+        "Advanced security features",
+        "Multi-site management",
+        "API access"
       ],
       cta: "Start Free Trial",
       popular: true
     },
     {
-      name: "Institutional",
+      name: "City",
       price: "Custom",
       period: "",
-      description: "Full-scale solution for large financial institutions",
+      description: "Full-scale solution for smart cities and large infrastructure",
       features: [
-        "Unlimited portfolios",
+        "Unlimited connected devices",
         "Custom AI model development",
         "Full white-label solution",
         "Dedicated account manager",
         "Custom integrations",
         "Advanced security features",
         "SLA guarantees",
-        "On-premise deployment"
+        "On-premise deployment option"
       ],
       cta: "Contact Sales",
       popular: false
@@ -193,62 +193,61 @@ export default function AIFinancialForecastingSuitePage() {
 
   const useCases = [
     {
-      industry: "Investment Management",
-      challenge: "Optimizing portfolio performance while managing risk exposure",
-      solution: "AI-powered portfolio optimization algorithms automatically rebalance portfolios based on market conditions and risk parameters",
-      results: "23% improvement in risk-adjusted returns, 35% reduction in portfolio volatility"
+      industry: "Smart Buildings",
+      challenge: "Managing energy consumption and optimizing building operations",
+      solution: "IoT sensors monitor occupancy, temperature, and energy usage to automatically adjust HVAC and lighting systems",
+      results: "35% reduction in energy costs, 50% improvement in occupant comfort"
     },
     {
-      industry: "Corporate Finance",
-      challenge: "Accurate cash flow forecasting and budget planning",
-      solution: "Advanced AI models analyze historical patterns and market conditions to predict future cash flows with high accuracy",
-      results: "92% accuracy in cash flow predictions, 40% improvement in budget planning efficiency"
+      industry: "Manufacturing",
+      challenge: "Preventing equipment failures and optimizing production efficiency",
+      solution: "Predictive maintenance algorithms analyze sensor data to predict equipment failures before they occur",
+      results: "60% reduction in unplanned downtime, 25% increase in production efficiency"
     },
     {
-      industry: "Banking",
-      challenge: "Credit risk assessment and loan portfolio management",
-      solution: "Machine learning models analyze borrower behavior and economic indicators to assess credit risk",
-      results: "45% reduction in bad debt, 30% improvement in loan approval accuracy"
+      industry: "Smart Cities",
+      challenge: "Managing traffic flow and reducing congestion",
+      solution: "Connected traffic sensors and AI algorithms optimize traffic light timing and route recommendations",
+      results: "30% reduction in traffic congestion, 20% decrease in travel times"
     },
     {
-      industry: "Insurance",
-      challenge: "Pricing policies accurately while maintaining profitability",
-      solution: "AI-driven actuarial models predict risk factors and optimize pricing strategies",
-      results: "28% improvement in pricing accuracy, 22% increase in profit margins"
+      industry: "Healthcare",
+      challenge: "Monitoring patient safety and optimizing facility operations",
+      solution: "IoT sensors track patient movement, equipment status, and environmental conditions",
+      results: "40% improvement in patient safety, 35% reduction in operational costs"
     }
   ];
 
-  const marketData = [
-    { metric: "Forecasting Accuracy", value: "94.2%", description: "Average accuracy across all financial predictions" },
-    { metric: "Risk Reduction", value: "35%", description: "Average reduction in portfolio risk exposure" },
-    { metric: "ROI Improvement", value: "28%", description: "Average improvement in return on investment" },
-    { metric: "Time Savings", value: "75%", description: "Reduction in manual financial analysis time" }
+  const capabilities = [
+    { metric: "Device Support", value: "10,000+", description: "Simultaneous connected devices per deployment" },
+    { metric: "Uptime", value: "99.9%", description: "Platform availability and reliability" },
+    { metric: "Data Processing", value: "1M+", description: "Data points processed per second" },
+    { metric: "Energy Savings", value: "40%", description: "Average energy cost reduction" }
   ];
 
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-green-50 to-blue-100 py-20">
+      <section className="relative bg-gradient-to-br from-purple-50 to-blue-100 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              AI Financial Forecasting Suite
+              IoT Smart Infrastructure Platform
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Transform your financial planning with advanced AI-powered forecasting and analysis. 
-              Predict market trends, optimize investments, and make data-driven financial decisions 
-              with unprecedented accuracy.
+              Transform your infrastructure with our comprehensive IoT platform. Connect, monitor, and optimize 
+              your buildings, facilities, and cities with intelligent automation and predictive analytics.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 href="/contact" 
-                className="bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
+                className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
               >
                 Start Free Trial
               </Link>
               <Link 
                 href="#demo" 
-                className="border border-green-600 text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors"
+                className="border border-purple-600 text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors"
               >
                 Watch Demo
               </Link>
@@ -257,20 +256,20 @@ export default function AIFinancialForecastingSuitePage() {
         </div>
       </section>
 
-      {/* Market Performance */}
+      {/* Platform Capabilities */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Proven Performance</h2>
-            <p className="text-xl text-gray-600">Real results from our AI financial forecasting platform</p>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Platform Capabilities</h2>
+            <p className="text-xl text-gray-600">Proven performance at scale</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {marketData.map((data, index) => (
+            {capabilities.map((capability, index) => (
               <div key={index} className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 text-center">
-                <div className="text-3xl font-bold text-green-600 mb-2">{data.value}</div>
-                <div className="text-lg font-semibold text-gray-900 mb-2">{data.metric}</div>
-                <div className="text-sm text-gray-600">{data.description}</div>
+                <div className="text-3xl font-bold text-purple-600 mb-2">{capability.value}</div>
+                <div className="text-lg font-semibold text-gray-900 mb-2">{capability.metric}</div>
+                <div className="text-sm text-gray-600">{capability.description}</div>
               </div>
             ))}
           </div>
@@ -282,10 +281,10 @@ export default function AIFinancialForecastingSuitePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Advanced AI Financial Capabilities
+              Comprehensive IoT Capabilities
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Cutting-edge artificial intelligence for comprehensive financial analysis and forecasting
+              Everything you need to build and manage smart infrastructure
             </p>
           </div>
           
@@ -293,7 +292,7 @@ export default function AIFinancialForecastingSuitePage() {
             {features.map((feature, index) => (
               <div key={index} className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
                 <div className="flex items-center mb-4">
-                  <div className="p-2 bg-green-100 rounded-lg text-green-600 mr-3">
+                  <div className="p-2 bg-purple-100 rounded-lg text-purple-600 mr-3">
                     {feature.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900">{feature.title}</h3>
@@ -321,18 +320,18 @@ export default function AIFinancialForecastingSuitePage() {
               Flexible Pricing Plans
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Choose the plan that fits your financial analysis needs. All plans include a 30-day free trial.
+              Choose the plan that fits your infrastructure needs. All plans include a 30-day free trial.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingTiers.map((tier, index) => (
               <div key={index} className={`bg-white p-8 rounded-xl shadow-lg border-2 transition-all ${
-                tier.popular ? 'border-green-500 relative' : 'border-gray-200'
+                tier.popular ? 'border-purple-500 relative' : 'border-gray-200'
               }`}>
                 {tier.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-green-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                    <span className="bg-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
@@ -357,10 +356,10 @@ export default function AIFinancialForecastingSuitePage() {
                 </ul>
                 
                 <Link
-                  href={tier.name === 'Institutional' ? '/contact' : '/contact'}
+                  href={tier.name === 'City' ? '/contact' : '/contact'}
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
                     tier.popular
-                      ? 'bg-green-600 text-white hover:bg-green-700'
+                      ? 'bg-purple-600 text-white hover:bg-purple-700'
                       : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
                   }`}
                 >
@@ -377,10 +376,10 @@ export default function AIFinancialForecastingSuitePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Industry Success Stories
+              Real-World Applications
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              See how financial institutions are achieving better results with AI forecasting
+              See how organizations are transforming their infrastructure with IoT
             </p>
           </div>
           
@@ -388,7 +387,7 @@ export default function AIFinancialForecastingSuitePage() {
             {useCases.map((useCase, index) => (
               <div key={index} className="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
                 <div className="mb-4">
-                  <span className="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold mb-3">
+                  <span className="inline-block bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-semibold mb-3">
                     {useCase.industry}
                   </span>
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">Challenge</h3>
@@ -411,24 +410,24 @@ export default function AIFinancialForecastingSuitePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-green-600 to-blue-600">
+      <section className="py-20 bg-gradient-to-r from-purple-600 to-blue-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Revolutionize Your Financial Planning?
+            Ready to Build Smart Infrastructure?
           </h2>
-          <p className="text-xl text-green-100 mb-8 max-w-2xl mx-auto">
-            Join leading financial institutions using AI to make smarter, more profitable decisions.
+          <p className="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">
+            Join leading organizations transforming their infrastructure with IoT technology.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               href="/contact" 
-              className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Start Free Trial
             </Link>
             <Link 
               href="/contact" 
-              className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
+              className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
             >
               Schedule Demo
             </Link>
@@ -443,17 +442,17 @@ export default function AIFinancialForecastingSuitePage() {
             <h2 className="text-2xl font-bold text-gray-900 mb-8">Get Started Today</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
-                <Phone className="w-8 h-8 text-green-600 mx-auto mb-4" />
+                <Phone className="w-8 h-8 text-purple-600 mx-auto mb-4" />
                 <h3 className="font-semibold text-gray-900 mb-2">Phone</h3>
                 <p className="text-gray-600">+1 302 464 0950</p>
               </div>
               <div className="text-center">
-                <Mail className="w-8 h-8 text-green-600 mx-auto mb-4" />
+                <Mail className="w-8 h-8 text-purple-600 mx-auto mb-4" />
                 <h3 className="font-semibold text-gray-900 mb-2">Email</h3>
                 <p className="text-gray-600">kleber@ziontechgroup.com</p>
               </div>
               <div className="text-center">
-                <MapPin className="w-8 h-8 text-green-600 mx-auto mb-4" />
+                <MapPin className="w-8 h-8 text-purple-600 mx-auto mb-4" />
                 <h3 className="font-semibold text-gray-900 mb-2">Address</h3>
                 <p className="text-gray-600">364 E Main St STE 1008<br />Middletown DE 19709</p>
               </div>

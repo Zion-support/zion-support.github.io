@@ -129,7 +129,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
     return () => {
       window.removeEventListener('load', startMonitoring);
     };
-  }, []);
+  }, [thresholds]);
 
   // Development mode: Show performance dashboard
   if (process.env.NODE_ENV === 'development') {
