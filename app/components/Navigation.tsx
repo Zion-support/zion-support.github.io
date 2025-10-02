@@ -62,6 +62,20 @@ export function Header() {
                   Autonomous Operations
                 </Link>
                 <div className="border-t border-gray-100 my-2"></div>
+                <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide">New AI-Powered Solutions</div>
+                <Link href="/services/ai-content-optimization-suite" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  AI Content Optimization Suite
+                </Link>
+                <Link href="/services/ai-workflow-automation-platform" className="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-600">
+                  AI Workflow Automation Platform
+                </Link>
+                <Link href="/services/ai-customer-insights-platform" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600">
+                  AI Customer Insights Platform
+                </Link>
+                <Link href="/services/ai-financial-analysis-platform" className="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600">
+                  AI Financial Analysis Platform
+                </Link>
+                <div className="border-t border-gray-100 my-2"></div>
                 <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide">Specialized Solutions</div>
                 <Link href="/services/ai-business-intelligence-2025" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
                   Business Intelligence
@@ -229,6 +243,13 @@ export function Header() {
                   <Link href="/services/ai-services" className="block text-sm text-gray-600 hover:text-blue-600">AI Services</Link>
                   <Link href="/services/micro-saas" className="block text-sm text-gray-600 hover:text-blue-600">Micro SaaS</Link>
                   <Link href="/services/it-services" className="block text-sm text-gray-600 hover:text-blue-600">IT Services</Link>
+                  <div className="border-t border-gray-200 my-2"></div>
+                  <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide">New AI Solutions</div>
+                  <Link href="/services/ai-content-optimization-suite" className="block text-sm text-gray-600 hover:text-blue-600">AI Content Suite</Link>
+                  <Link href="/services/ai-workflow-automation-platform" className="block text-sm text-gray-600 hover:text-blue-600">Workflow Automation</Link>
+                  <Link href="/services/ai-customer-insights-platform" className="block text-sm text-gray-600 hover:text-blue-600">Customer Insights</Link>
+                  <Link href="/services/ai-financial-analysis-platform" className="block text-sm text-gray-600 hover:text-blue-600">Financial Analysis</Link>
+                  <div className="border-t border-gray-200 my-2"></div>
                   <Link href="/services/manufacturing-ai-platform" className="block text-sm text-gray-600 hover:text-blue-600">Manufacturing AI</Link>
                   <Link href="/services/supply-chain-intelligence" className="block text-sm text-gray-600 hover:text-blue-600">Supply Chain</Link>
                   <Link href="/services" className="block text-sm text-gray-600 hover:text-blue-600">View All Services</Link>
@@ -321,8 +342,12 @@ export function Footer() {
               <Link href="/services/ai-services" className="block text-gray-600 hover:text-blue-600 transition-colors">AI Services</Link>
               <Link href="/services/micro-saas" className="block text-gray-600 hover:text-blue-600 transition-colors">Micro SaaS</Link>
               <Link href="/services/it-services" className="block text-gray-600 hover:text-blue-600 transition-colors">IT Services</Link>
-              <Link href="/services/manufacturing-ai-platform" className="block text-gray-600 hover:text-blue-600 transition-colors">Manufacturing AI</Link>
-              <Link href="/services/supply-chain-intelligence" className="block text-gray-600 hover:text-blue-600 transition-colors">Supply Chain</Link>
+              <div className="border-t border-gray-200 my-2"></div>
+              <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-1">New AI Solutions</div>
+              <Link href="/services/ai-content-optimization-suite" className="block text-gray-600 hover:text-blue-600 transition-colors">AI Content Suite</Link>
+              <Link href="/services/ai-workflow-automation-platform" className="block text-gray-600 hover:text-blue-600 transition-colors">Workflow Automation</Link>
+              <Link href="/services/ai-customer-insights-platform" className="block text-gray-600 hover:text-blue-600 transition-colors">Customer Insights</Link>
+              <Link href="/services/ai-financial-analysis-platform" className="block text-gray-600 hover:text-blue-600 transition-colors">Financial Analysis</Link>
             </div>
           </div>
           <div>
