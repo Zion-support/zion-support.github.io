@@ -1,29 +1,36 @@
-import React from 'react';';
-import {
-motion
-} from 'framer-motion';';
+import React from 'react';
+<<<<<<< HEAD
 
 interface LoadingSpinnerProps {
-size?: 'small' | 'medium' | 'large';';
-color?: 'blue' | 'white' | 'gray';';
+  size?: 'sm' | 'md' | 'lg';
+  message?: string;
+=======
+import {
+motion
+} from 'framer-motion';
+
+interface LoadingSpinnerProps {
+size?: 'small' | 'medium' | 'large';
+color?: 'blue' | 'white' | 'gray';
 text?: string;
 fullScreen?: boolean;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a267
 }
 
-const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ ,
-  size = 'md', ';
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
+  size = 'md', 
   message = 'Loading...' 
 }) => {
   const sizeClasses = {
-    sm: 'w-8 h-8',';,
-    md: 'w-12 h-12',';,
-    lg: 'w-16 h-16',';,
+    sm: 'w-8 h-8',
+    md: 'w-12 h-12',
+    lg: 'w-16 h-16',
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-[200px]">";
-      <div className={`${sizeClasses[size]} animate-spin`}>`;
-        <svg className="w-full h-full" viewBox="0 0 24 24">";
+    <div className="flex flex-col items-center justify-center min-h-[200px]">
+      <div className={`${sizeClasses[size]} animate-spin`}>
+        <svg className="w-full h-full" viewBox="0 0 24 24">
           <circle
             className="opacity-25"
             cx="12"
@@ -31,19 +38,20 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ ,
             r="10"
             stroke="currentColor"
             strokeWidth="4"
-            fill="none/>
+            fill="none"
+          />
           <path
             className="opacity-75"
             fill="currentColor"
-            d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z/>
+            d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+          />
         </svg>
       </div>
       {message && (
-        <p className="mt-4 text-gray-600 text-sm font-medium">{message}</p>";
+        <p className="mt-4 text-gray-600 text-sm font-medium">{message}</p>
       )}
     </div>
   );
 };
 
 export default LoadingSpinner;
-;

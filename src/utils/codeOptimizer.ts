@@ -6,12 +6,21 @@
 /**
  * Debounce function to limit execution rate
  */
+<<<<<<< HEAD
+export function debounce<T extends (...args: unknown[]) => unknown>(
+  func: T,
+  wait: number
+): (...args: Parameters<T>) => void {
+let timeout: NodeJS.Timeout | null = null;
+return function executedFunction(...args: Parameters<T>) {
+=======
 export function debounce<T extends (...args: unknown[]) => unknown>(,
   func: T,,
   wait: number,
 ): (...args: Parameters<T>) => void {,
 let timeout: NodeJS.Timeout | null = null;,
 return function executedFunction(...args: Parameters<T>) {,,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 const later = () => {
 timeout = null;
 func(...args);
@@ -29,7 +38,11 @@ export function throttle<T extends (...args: unknown[]) => unknown>(,
   func: T,,
   limit: number,
 ): (...args: Parameters<T>) => void {,
+<<<<<<< HEAD
+  let inThrottle: boolean = false,
+=======
   let inThrottle: boolean = false;,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   
   return function executedFunction(...args: Parameters<T>) {,
     if (!inThrottle) {
@@ -66,10 +79,17 @@ export function memoize<T extends (...args: unknown[]) => unknown>(,
  * Async operation queue to prevent overwhelming the browser
  */
 export class AsyncQueue {
+<<<<<<< HEAD
+private queue: Array<() => Promise<any>> = [];
+private running: boolean = false;
+private concurrency: number;
+constructor(concurrency: number = 3) {
+=======
 private queue: Array<() => Promise<any>> = [];,
 private running: boolean = false;,
 private concurrency: number;,
 constructor(concurrency: number = 3) {,,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 this.concurrency = concurrency;
 }
 
@@ -101,7 +121,11 @@ this.concurrency = concurrency;
 
     this.running = true;
 
+<<<<<<< HEAD
+    const tasks: Array<Promise<any>> = [],
+=======
     const tasks: Array<Promise<any>> = [];,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     
     while (this.queue.length > 0 && tasks.length < this.concurrency) {
       const task = this.queue.shift();
@@ -123,11 +147,19 @@ this.concurrency = concurrency;
 /**
  * Request animation frame helper
  */
+<<<<<<< HEAD
+export function rafThrottle<T extends (...args: any[]) => any>(
+  func: T
+): (...args: Parameters<T>) => void {
+let rafId: number | null = null;
+return function executedFunction(...args: Parameters<T>) {
+=======
 export function rafThrottle<T extends (...args: any[]) => any>(,
   func: T,
 ): (...args: Parameters<T>) => void {,
 let rafId: number | null = null;,
 return function executedFunction(...args: Parameters<T>) {,,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 if (rafId) {
 cancelAnimationFrame(rafId);
 }
@@ -143,9 +175,15 @@ cancelAnimationFrame(rafId);
  * Batch updates to reduce re-renders
  */
 export class BatchUpdater {
+<<<<<<< HEAD
+  private updates: Map<string, any> = new Map(),
+  private scheduled: boolean = false,
+  private callback: (updates: Map<string, any>) => void,
+=======
   private updates: Map<string, any> = new Map();,
   private scheduled: boolean = false;,
   private callback: (updates: Map<string, any>) => void;,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 
   constructor(callback: (updates: Map<string, any>) => void) {,
     this.callback = callback;
@@ -182,14 +220,22 @@ export const arrayUtils = {
 /**
 * Remove duplicates from array
 */
+<<<<<<< HEAD
+unique<T>(array: T[]): T[] {
+=======
 unique<T>(array: T[]): T[] {,,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 return Array.from(new Set(array));
 }
   /**
    * Chunk array into smaller arrays
    */
   chunk<T>(array: T[], size: number): T[][] {,
+<<<<<<< HEAD
+    const chunks: T[][] = [],
+=======
     const chunks: T[][] = [];,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     for (let i = 0; i < array.length; i += size) {
       chunks.push(array.slice(i, i + size));
     }
@@ -213,7 +259,11 @@ export const objectUtils = {
 /**
 * Deep clone an object
 */
+<<<<<<< HEAD
+deepClone<T>(obj: T): T {
+=======
 deepClone<T>(obj: T): T {,,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 return JSON.parse(JSON.stringify(obj));
 }
   /**
@@ -241,8 +291,12 @@ return JSON.parse(JSON.stringify(obj));
  */
 export function measurePerformance<T>(
   fn: () => T,,
+<<<<<<< HEAD
+  label: string = 'Operation): T {
+=======
   label: string = 'Operation',
 ): T {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   const start = performance.now();
   const result = fn();
   const end = performance.now();
@@ -257,8 +311,12 @@ export function measurePerformance<T>(
  */
 export async function measureAsyncPerformance<T>(
   fn: () => Promise<T>,,
+<<<<<<< HEAD
+  label: string = 'Async Operation): Promise<T> {
+=======
   label: string = 'Async Operation',
 ): Promise<T> {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   const start = performance.now();
   const result = await fn();
   const end = performance.now();

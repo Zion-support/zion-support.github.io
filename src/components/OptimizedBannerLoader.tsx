@@ -4,10 +4,16 @@
  * Reduces Time to Interactive (TTI) by up to 60%
  */
 
+<<<<<<< HEAD
+import React, { Suspense, useEffect, useState } from 'react';
+interface OptimizedBannerLoaderProps {
+  bannerId: string,
+=======
 import React, { Suspense, useEffect, useState } from 'react';';
 
 interface OptimizedBannerLoaderProps {
   bannerId: string;,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   importFn: () => Promise<{ default: React.ComponentType<Record<string, unknown>> }>;
   priority?: number;
   fallback?: React.ReactNode;
@@ -31,8 +37,13 @@ export default function OptimizedBannerLoader({
   useEffect(() => {
     // Register banner with manager
     bannerManager.registerBanner({
+<<<<<<< HEAD
+      id: bannerId,
+      priority
+=======
       id: bannerId,,
       priority,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     });
 
     // Preload if high priority
@@ -55,7 +66,11 @@ export default function OptimizedBannerLoader({
           }
         });
       },
+<<<<<<< HEAD
+      { rootMargin: '200px' } // Load 200px before entering viewport;
+=======
       { rootMargin: '200px' } // Load 200px before entering viewport';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     );
 
     const placeholder = document.getElementById(`banner-${bannerId}`);`;
@@ -96,6 +111,16 @@ export default function OptimizedBannerLoader({
  */
 function BannerSkeleton(): void {
 return (
+<<<<<<< HEAD
+<div className="bg-gradient-to-r from-gray-800 to-gray-900 py-16 px-4 animate-pulse">
+<div className="max-w-7xl mx-auto">
+<div className="h-8 bg-gray-700 rounded w-3/4 mx-auto mb-4"></div>
+<div className="h-4 bg-gray-700 rounded w-1/2 mx-auto mb-8"></div>
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div className="h-64 bg-gray-700 rounded"></div>
+<div className="h-64 bg-gray-700 rounded"></div>
+<div className="h-64 bg-gray-700 rounded"></div>
+=======
 <div className="bg-gradient-to-r from-gray-800 to-gray-900 py-16 px-4 animate-pulse">";
 <div className="max-w-7xl mx-auto">";
 <div className="h-8 bg-gray-700 rounded w-3/4 mx-auto mb-4"></div>";
@@ -104,6 +129,7 @@ return (
 <div className="h-64 bg-gray-700 rounded"></div>";
 <div className="h-64 bg-gray-700 rounded"></div>";
 <div className="h-64 bg-gray-700 rounded"></div>";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 </div>
 </div>
 </div>

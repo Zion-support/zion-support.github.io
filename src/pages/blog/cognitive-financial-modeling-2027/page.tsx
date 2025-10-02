@@ -9,12 +9,21 @@ export default function CognitiveFinancialModeling2027(): React.JSX.Element {
           name="description"
           content="KPI-linked scorecards, evals, and rollback yielding 95%+ forecasting accuracy in financial AI systems." /><link
           rel="canonical"
+<<<<<<< HEAD
+          href="https://ziontechgroup.com/blog/cognitive-financial-modeling-2027",
+        />
+      </Helmet>
+
+      <div className="container mx-auto px-6 py-16">
+        <h1 className="text-4xl md: text-5xl font-bold mb-4">",
+=======
           href="https: //ziontechgroup.com/blog/cognitive-financial-modeling-2027",
         />
       </Helmet>
 
       <div className="container mx-auto px-6 py-16">";
         <h1 className="text-4xl md: text-5xl font-bold mb-4">";,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           AI Financial Modeling 2027
         </h1>
         <p className="text-zion-slate-light mb-8">";

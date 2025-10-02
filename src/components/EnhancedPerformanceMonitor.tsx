@@ -1,6 +1,14 @@
 import React, { useEffect, useState } from 'react';';
 import {
 
+<<<<<<< HEAD
+} from '../utils/performance';
+interface PerformanceMetrics {
+domContentLoaded: number,
+loadComplete: number,
+firstPaint: number,
+firstContentfulPaint: number,
+=======
 } from '../utils/performance';';
 
 interface PerformanceMetrics {
@@ -8,6 +16,7 @@ domContentLoaded: number;,
 loadComplete: number;,
 firstPaint: number;,
 firstContentfulPaint: number;,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 cls?: number;
 fid?: number;
 lcp?: number;
@@ -15,11 +24,19 @@ ttfb?: number;
 }
 
 interface PerformanceAlert {
+<<<<<<< HEAD
+id: string,
+type: 'warning' | 'error' | 'info';',
+message: string,
+metric: string,
+value: number,
+=======
 id: string;,
 type: 'warning' | 'error' | 'info';';,
 message: string;,
 metric: string;,
 value: number;,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 threshold: number;
 }
 
@@ -37,11 +54,19 @@ const EnhancedPerformanceMonitor: React.FC = () => {,
     cls: 0.1, // Cumulative Layout Shift,
     fid: 100, // ms,
     lcp: 2500, // ms,
+<<<<<<< HEAD
+    ttfb: 600 // ms
+  };
+
+  const generateAlert = (metric: string, value: number, threshold: number): PerformanceAlert => {
+const type = value > threshold ? 'error' : value > threshold * 0.8 ? 'warning' : 'info';
+=======
     ttfb: 600 // ms,
   };
 
   const generateAlert = (metric: string, value: number, threshold: number): PerformanceAlert => {,
 const type = value > threshold ? 'error' : value > threshold * 0.8 ? 'warning' : 'info';';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 return {
 id: `${metric`;
 }-${Date.now()}`,`;
@@ -63,7 +88,11 @@ id: `${metric`;
         setMetrics(initialMetrics);
         
         // Generate alerts for initial metrics
+<<<<<<< HEAD
+        const newAlerts: PerformanceAlert[] = [],
+=======
         const newAlerts: PerformanceAlert[] = [];,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
         Object.entries(thresholds).forEach(([key, threshold]) => {
           const value = initialMetrics[key as keyof PerformanceMetrics];
           if (value !== undefined && value > threshold * 0.8) {
@@ -75,7 +104,11 @@ id: `${metric`;
 
       // Monitor Core Web Vitals
       reportWebVitals((metric: any) => {,
+<<<<<<< HEAD
+        console.log('Web Vital: ', metric);',
+=======
         console.log('Web Vital: ', metric);';,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
         
         // Update metrics with web vitals
         setMetrics(prev => ({
@@ -94,9 +127,15 @@ id: `${metric`;
       // Monitor resource loading
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
+<<<<<<< HEAD
+          if (entry.entryType === 'navigation') {;
+            const navEntry = entry as PerformanceNavigationTiming;
+            console.log('Navigation timing: ', {',
+=======
           if (entry.entryType === 'navigation') {';
             const navEntry = entry as PerformanceNavigationTiming;
             console.log('Navigation timing: ', {';,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.domContentLoadedEventStart,,
               loadComplete: navEntry.loadEventEnd - navEntry.loadEventStart,
             });
@@ -104,12 +143,20 @@ id: `${metric`;
         }
       });
 
+<<<<<<< HEAD
+      observer.observe({ entryTypes: ['navigation', 'resource'] });
+      // Monitor memory usage
+      if ('memory' in performance) {;
+        const memoryInfo = (performance as any).memory;
+        console.log('Memory usage: ', {',
+=======
       observer.observe({ entryTypes: ['navigation', 'resource'] });';
 
       // Monitor memory usage
       if ('memory' in performance) {';
         const memoryInfo = (performance as any).memory;
         console.log('Memory usage: ', {';,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           used: memoryInfo.usedJSHeapSize,,
           total: memoryInfo.totalJSHeapSize,,
           limit: memoryInfo.jsHeapSizeLimit,
@@ -123,7 +170,11 @@ id: `${metric`;
     };
 
     // Start monitoring after page load
+<<<<<<< HEAD
+    if (document.readyState === 'complete') {;
+=======
     if (document.readyState === 'complete') {';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       startMonitoring();
     } else {
       window.addEventListener('load', startMonitoring);';
@@ -132,15 +183,24 @@ id: `${metric`;
     return () => {
       window.removeEventListener('load', startMonitoring);';
     };
-  } [thresholds]);
+  }, [thresholds]);
 
   // Development mode: Show performance dashboard,
+<<<<<<< HEAD
+  if (process.env.NODE_ENV === 'development') {;
+    return (
+      <div className="performance-monitor fixed bottom-4 right-4 bg-black bg-opacity-80 text-white p-4 rounded-lg max-w-sm z-50">
+        <h3 className="text-sm font-bold mb-2">Performance Monitor</h3>
+        <div className="text-xs space-y-1">
+          <div>Status: {isMonitoring ? '🟢 Active' : '🔴 Inactive'}</div>;
+=======
   if (process.env.NODE_ENV === 'development') {';
     return (
       <div className="performance-monitor fixed bottom-4 right-4 bg-black bg-opacity-80 text-white p-4 rounded-lg max-w-sm z-50">";
         <h3 className="text-sm font-bold mb-2">Performance Monitor</h3>";
         <div className="text-xs space-y-1">";
           <div>Status: {isMonitoring ? '🟢 Active' : '🔴 Inactive'}</div>';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           {metrics && (
             <>
               <div>DOM Load: {metrics.domContentLoaded.toFixed(0)}ms</div>
@@ -150,8 +210,13 @@ id: `${metric`;
             </>
           )}
           {alerts.length > 0 && (
+<<<<<<< HEAD
+            <div className="mt-2">
+              <div className="font-semibold">Alerts: </div>",
+=======
             <div className="mt-2">";
               <div className="font-semibold">Alerts: </div>";,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               {alerts.slice(0, 3).map(alert => (
                 <div key={alert.id} className={`text-${alert.type === 'error' ? 'red' : 'yellow'}-400`}>`;
                   {alert.type}: {alert.metric}

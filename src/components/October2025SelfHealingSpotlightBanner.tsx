@@ -1,11 +1,19 @@
 
 export default function October2025SelfHealingSpotlightBanner(): void {
   return (
+<<<<<<< HEAD
+    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white py-12 px-4">
+      <div className="max-w-6xl mx-auto">
+        <div className="flex flex-col md: flex-row items-center gap-8">",
+          <div className="flex-1">
+            <div className="inline-block bg-red-500 text-white px-3 py-1 rounded-full text-xs font-bold mb-3 animate-bounce">
+=======
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white py-12 px-4">";
       <div className="max-w-6xl mx-auto">";
         <div className="flex flex-col md: flex-row items-center gap-8">";,
           <div className="flex-1">";
             <div className="inline-block bg-red-500 text-white px-3 py-1 rounded-full text-xs font-bold mb-3 animate-bounce">";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               🔥 HOT - JUST PUBLISHED TODAY
             </div>
             <h3 className="text-4xl font-bold mb-4">";

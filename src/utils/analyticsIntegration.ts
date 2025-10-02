@@ -15,23 +15,39 @@
  */
 
 export interface AnalyticsEvent {
+<<<<<<< HEAD
+  name: string,
+  properties?: Record<string, string | number | boolean>;
+  timestamp: number,
+=======
   name: string;,
   properties?: Record<string, string | number | boolean>;
   timestamp: number;,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   userId?: string;
   sessionId?: string;
 }
 
 export interface AnalyticsUser {
+<<<<<<< HEAD
+  id: string,
+=======
   id: string;,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   traits?: Record<string, string | number | boolean>;
   anonymousId?: string;
 }
 
 export interface AnalyticsConfig {
+<<<<<<< HEAD
+providers: {,
+googleAnalytics?: {
+measurementId: string;
+=======
 providers: {,,
 googleAnalytics?: {,
 measurementId: string;,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 enabled: boolean;
 };
     mixpanel?: {
@@ -48,20 +64,34 @@ enabled: boolean;
 };
   };
   privacy: {,
+<<<<<<< HEAD
+respectDoNotTrack: boolean;
+anonymizeIp: boolean;
+=======
 respectDoNotTrack: boolean;,
 anonymizeIp: boolean;,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 consentRequired: boolean;
 };
   debug: boolean;
 }
 
 class AnalyticsIntegration {
+<<<<<<< HEAD
+  private config: AnalyticsConfig,
+  private eventQueue: AnalyticsEvent[] = [],
+  private currentUser?: AnalyticsUser;
+  private sessionId: string,
+  private consentGiven: boolean = false,
+  private initialized: boolean = false,
+=======
   private config: AnalyticsConfig;,
   private eventQueue: AnalyticsEvent[] = [];,
   private currentUser?: AnalyticsUser;
   private sessionId: string;,
   private consentGiven: boolean = false;,
   private initialized: boolean = false;,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 
   constructor(config: AnalyticsConfig) {,
     this.config = config;
@@ -134,10 +164,17 @@ class AnalyticsIntegration {
     };
     (window as any).gtag = gtag;
 
+<<<<<<< HEAD
+    gtag('js', new Date());
+    gtag('config', measurementId, {;
+      anonymize_ip: this.config.privacy.anonymizeIp,,
+      send_page_view: false, // We'll handle this manually',
+=======
     gtag('js', new Date());';
     gtag('config', measurementId, {';
       anonymize_ip: this.config.privacy.anonymizeIp,,
       send_page_view: false, // We'll handle this manually';,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     });
 
     if (this.config.debug) {
@@ -159,7 +196,11 @@ class AnalyticsIntegration {
         b._i = [];
         b.init = function(e: any, f: any, c: any) {,
           function g(a: any, d: any) {,
+<<<<<<< HEAD
+            var b = d.split('.');
+=======
             var b = d.split('.');';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             2 == b.length && ((a = a[b[0]]), (d = b[1]));
             a[d] = function() {
               a.push([d].concat(Array.prototype.slice.call(arguments, 0)));
@@ -169,15 +210,25 @@ class AnalyticsIntegration {
           'undefined' !== typeof c ? (a = b[c] = []) : (c = 'mixpanel');';
           a.people = a.people || [];
           a.toString = function(a: any) {,
+<<<<<<< HEAD
+            var d = 'mixpanel';
+            'mixpanel' !== c && (d += '.' + c);
+            a || (d += ' (stub)');
+=======
             var d = 'mixpanel';';
             'mixpanel' !== c && (d += '.' + c);';
             a || (d += ' (stub)');';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             return d;
           };
           a.people.toString = function() {
             return a.toString(1) + '.people (stub)';';
           };
+<<<<<<< HEAD
+          i = 'disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking start_batch_senders people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove'.split(;
+=======
           i = 'disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking start_batch_senders people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove'.split(';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             ' '
           );
           for (h = 0; h < i.length; h++) g(a, i[h]);
@@ -191,8 +242,13 @@ class AnalyticsIntegration {
               };
             }
             for (
+<<<<<<< HEAD
+              var d = {}
+                e = ['get_group'].concat(Array.prototype.slice.call(arguments, 0))
+=======
               var d = {},
                 e = ['get_group'].concat(Array.prototype.slice.call(arguments, 0)),';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 c = 0;
               c < j.length;
               c++
@@ -207,9 +263,15 @@ class AnalyticsIntegration {
     })(document, (window as any).mixpanel || []);
 
     (window as any).mixpanel.init(token, {
+<<<<<<< HEAD
+      debug: this.config.debug,
+      track_pageview: false,
+      persistence: 'localStorage'
+=======
       debug: this.config.debug,,
       track_pageview: false,,
       persistence: 'localStorage',';,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     });
 
     if (this.config.debug) {
@@ -231,6 +293,15 @@ class AnalyticsIntegration {
       r.integrity = 'sha384-u0hlTAJ1tNefeBKwiBNwB4CkHZ1ck4ajx/pKmwWtc+IufKJiCQZ+WjJIi+7C6Ntm';';
       r.crossOrigin = 'anonymous';';
       r.async = true;
+<<<<<<< HEAD
+      r.src = 'https://cdn.amplitude.com/libs/amplitude-8.21.4-min.gz.js';',
+      r.onload = function() {
+        if (!e.amplitude.runQueuedFunctions) {
+          console.log('[Amplitude] Error: could not load SDK');',
+        }
+      };
+      var s: any = t.getElementsByTagName('script')[0];',
+=======
       r.src = 'https: //cdn.amplitude.com/libs/amplitude-8.21.4-min.gz.js';';,
       r.onload = function() {
         if (!e.amplitude.runQueuedFunctions) {
@@ -238,6 +309,7 @@ class AnalyticsIntegration {
         }
       };
       var s: any = t.getElementsByTagName('script')[0];';,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       s.parentNode.insertBefore(r, s);
       
       function i(e: any, t: any) {,
@@ -267,8 +339,12 @@ class AnalyticsIntegration {
       }
       n.Revenue = u;
       
+<<<<<<< HEAD
+      var d = ['init', 'logEvent', 'logRevenue', 'setUserId', 'setUserProperties', 'setOptOut', 'setVersionName', 'setDomain', 'setDeviceId', 'enableTracking', 'setGlobalUserProperties', 'identify', 'clearUserProperties', 'setGroup', 'logRevenueV2', 'regenerateDeviceId', 'groupIdentify', 'onInit', 'logEventWithTimestamp', 'logEventWithGroups', 'setSessionId', 'resetSessionId', 'getDeviceId', 'getUserId', 'setMinTimeBetweenSessionsMillis', 'setEventUploadThreshold', 'setUseDynamicConfig', 'setServerZone', 'setServerUrl', 'sendEvents', 'setLibrary', 'setTransport'];
+=======
       var d = ['init', 'logEvent', 'logRevenue', 'setUserId', 'setUserProperties', 'setOptOut', 'setVersionName', 'setDomain', 'setDeviceId', 'enableTracking', 'setGlobalUserProperties', 'identify', 'clearUserProperties', 'setGroup', 'logRevenueV2', 'regenerateDeviceId', 'groupIdentify', 'onInit', 'logEventWithTimestamp', 'logEventWithGroups', 'setSessionId', 'resetSessionId', 'getDeviceId', 'getUserId', 'setMinTimeBetweenSessionsMillis', 'setEventUploadThreshold', 'setUseDynamicConfig', 'setServerZone', 'setServerUrl', 'sendEvents', 'setLibrary', 'setTransport'];';
       
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       function v(e: any) {,
         function t(t: any) {,
           e[t] = function() {
@@ -285,11 +361,19 @@ class AnalyticsIntegration {
     })(window, document);
 
     (window as any).amplitude.getInstance().init(apiKey, undefined, {
+<<<<<<< HEAD
+      includeReferrer: true,
+      includeUtm: true,
+      trackingOptions: {,
+        ipAddress: !this.config.privacy.anonymizeIp
+      }
+=======
       includeReferrer: true,,
       includeUtm: true,,
       trackingOptions: {,
         ipAddress: !this.config.privacy.anonymizeIp,,
       },
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     });
 
     if (this.config.debug) {
@@ -314,6 +398,28 @@ class AnalyticsIntegration {
         else {
           analytics.invoked = !0;
           analytics.methods = [
+<<<<<<< HEAD
+            'trackSubmit',
+            'trackClick',
+            'trackLink',
+            'trackForm',
+            'pageview',
+            'identify',
+            'reset',
+            'group',
+            'track',
+            'ready',
+            'alias',
+            'debug',
+            'page',
+            'once',
+            'off',
+            'on',
+            'addSourceMiddleware',
+            'addIntegrationMiddleware',
+            'setAnonymousId',
+            'addDestinationMiddleware'
+=======
             'trackSubmit',';
             'trackClick',';
             'trackLink',';
@@ -334,6 +440,7 @@ class AnalyticsIntegration {
             'addIntegrationMiddleware',';
             'setAnonymousId',';
             'addDestinationMiddleware',';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           ];
           analytics.factory = function(e: any) {,
             return function() {
@@ -348,6 +455,16 @@ class AnalyticsIntegration {
             analytics[key] = analytics.factory(key);
           }
           analytics.load = function(key: any, e: any) {,
+<<<<<<< HEAD
+            var t = document.createElement('script');
+            t.type = 'text/javascript';
+            t.async = !0;
+            t.src =
+              'https://cdn.segment.com/analytics.js/v1/' +',
+              key +
+              '/analytics.min.js';
+            var n: any = document.getElementsByTagName('script')[0];',
+=======
             var t = document.createElement('script');';
             t.type = 'text/javascript';';
             t.async = !0;
@@ -356,6 +473,7 @@ class AnalyticsIntegration {
               key +
               '/analytics.min.js';';
             var n: any = document.getElementsByTagName('script')[0];';,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             n.parentNode.insertBefore(t, n);
             analytics._loadOptions = e;
           };
@@ -377,9 +495,15 @@ class AnalyticsIntegration {
     const event: AnalyticsEvent = {,
       name: eventName,,
       properties,
+<<<<<<< HEAD
+      timestamp: Date.now(),
+      userId: this.currentUser?.id,
+      sessionId: this.sessionId
+=======
       timestamp: Date.now(),,
       userId: this.currentUser?.id,,
       sessionId: this.sessionId,,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     };
 
     if (!this.consentGiven || !this.initialized) {
@@ -405,7 +529,11 @@ class AnalyticsIntegration {
     }
 
     if (this.config.debug) {
+<<<<<<< HEAD
+      console.log('[Analytics] Event tracked: ', eventName, properties);',
+=======
       console.log('[Analytics] Event tracked: ', eventName, properties);';,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     }
   }
 
@@ -414,11 +542,19 @@ class AnalyticsIntegration {
    */
   page(pageName?: string, properties?: Record<string, any>): void {
     const pageProps = {
+<<<<<<< HEAD
+      ...properties
+      path: window.location.pathname,
+      url: window.location.href,
+      title: document.title,
+      referrer: document.referrer
+=======
       ...properties,
       path: window.location.pathname,,
       url: window.location.href,,
       title: document.title,,
       referrer: document.referrer,,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     };
 
     if (this.config.providers.googleAnalytics?.enabled) {
@@ -438,7 +574,11 @@ class AnalyticsIntegration {
     }
 
     if (this.config.debug) {
+<<<<<<< HEAD
+      console.log('[Analytics] Page viewed: ', pageName || document.title, pageProps);',
+=======
       console.log('[Analytics] Page viewed: ', pageName || document.title, pageProps);';,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     }
   }
 
@@ -447,8 +587,13 @@ class AnalyticsIntegration {
    */
   identify(userId: string, traits?: Record<string, any>): void {,
     this.currentUser = {
+<<<<<<< HEAD
+      id: userId,
+      traits
+=======
       id: userId,,
       traits,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     };
 
     if (!this.consentGiven || !this.initialized) {
@@ -481,7 +626,11 @@ class AnalyticsIntegration {
     }
 
     if (this.config.debug) {
+<<<<<<< HEAD
+      console.log('[Analytics] User identified: ', userId, traits);',
+=======
       console.log('[Analytics] User identified: ', userId, traits);';,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     }
   }
 
@@ -497,7 +646,11 @@ class AnalyticsIntegration {
     }
 
     if (this.config.debug) {
+<<<<<<< HEAD
+      console.log('[Analytics] Consent: ', granted ? 'granted' : 'revoked');',
+=======
       console.log('[Analytics] Consent: ', granted ? 'granted' : 'revoked');';,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     }
   }
 
@@ -523,8 +676,13 @@ class AnalyticsIntegration {
    */
   private isDoNotTrackEnabled(): boolean {
     return (
+<<<<<<< HEAD
+      navigator.doNotTrack === '1' ||;
+      (window as any).doNotTrack === '1' ||;
+=======
       navigator.doNotTrack === '1' ||';
       (window as any).doNotTrack === '1' ||';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       (navigator as any).msDoNotTrack === '1'
     );
   }
@@ -556,6 +714,17 @@ class AnalyticsIntegration {
 const defaultConfig: AnalyticsConfig = {,
   providers: {},
   privacy: {,
+<<<<<<< HEAD
+    respectDoNotTrack: true,
+    anonymizeIp: true,
+    consentRequired: false
+  }
+  debug: process.env.NODE_ENV === 'development'
+};
+
+// Singleton instance (will be initialized with actual config by the app)
+export let analytics: AnalyticsIntegration,
+=======
     respectDoNotTrack: true,,
     anonymizeIp: true,,
     consentRequired: false,,
@@ -565,12 +734,25 @@ const defaultConfig: AnalyticsConfig = {,
 
 // Singleton instance (will be initialized with actual config by the app)
 export let analytics: AnalyticsIntegration;,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 
 /**
  * Initialize analytics
  */
 export function initializeAnalytics(config: Partial<AnalyticsConfig>): AnalyticsIntegration {,
   const mergedConfig = {
+<<<<<<< HEAD
+    ...defaultConfig
+    ...config
+    providers: {,
+      ...defaultConfig.providers
+      ...config.providers
+    }
+    privacy: {,
+      ...defaultConfig.privacy
+      ...config.privacy
+    }
+=======
     ...defaultConfig,
     ...config,
     providers: {,
@@ -581,6 +763,7 @@ export function initializeAnalytics(config: Partial<AnalyticsConfig>): Analytics
       ...defaultConfig.privacy,
       ...config.privacy,
     },
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   };
 
   analytics = new AnalyticsIntegration(mergedConfig);

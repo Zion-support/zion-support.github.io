@@ -9,12 +9,21 @@ export default function AIAutonomousInfraBlueprint2029(): React.JSX.Element {
           name="description"
           content="Design autonomic infrastructure with budgeted actions, live scorecards, and instant rollback for 99.99% uptime and predictable cost." /><link
           rel="canonical"
+<<<<<<< HEAD
+          href="https://ziontechgroup.com/blog/ai-2029-autonomous-infra-blueprint",
+        />
+      </Helmet>
+
+      <div className="container mx-auto px-6 py-16">
+        <h1 className="text-4xl md: text-5xl font-bold mb-4">",
+=======
           href="https: //ziontechgroup.com/blog/ai-2029-autonomous-infra-blueprint",
         />
       </Helmet>
 
       <div className="container mx-auto px-6 py-16">";
         <h1 className="text-4xl md: text-5xl font-bold mb-4">";,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           AI 2029: Autonomous Infrastructure Blueprint,
         </h1>
         <p className="text-zion-slate-light mb-8">";

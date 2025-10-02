@@ -6,7 +6,7 @@
   },
   "include": [
     "src/main.tsx",
-    "src/App.minimal.tsx"
+    "src/App.tsx"
   ],
   "exclude": [
     "node_modules",
