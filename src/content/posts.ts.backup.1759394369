@@ -1587,7 +1587,12 @@ posts.push([
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "8 min read"
+<<<<<<< HEAD
+  }
+];
+=======
   },
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ea04
 
 // Sept 30, 2025 – New articles to expand catalog and promote on homepage
 posts.push(
@@ -1760,7 +1765,11 @@ posts.push(
     publishedAt: "2025-10-31",
     featured: true,
     readTime: "8 min read"
+<<<<<<< HEAD
+  },
+=======
   }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ea04
 
 // Mar 2026 – Brand-new posts to advertise and surface on Home
   {
