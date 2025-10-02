@@ -10,7 +10,7 @@ import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import NotificationSystem from './components/NotificationSystem';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
-// import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 
 // Types and interfaces
 interface Notification {
@@ -85,11 +85,11 @@ const AboutPage = () => (
 );
 
 const ContactPage = () => (
-  <div className="min-h-screen bg-gray-50 py-16">
+  <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50 py-16">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h1 className="text-4xl font-bold text-gray-900 mb-8">Contact Us</h1>
+      <h1 className="text-4xl font-bold text-gray-900 mb-8 text-center">Contact Us</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div>
+        <div className="bg-white p-8 rounded-lg shadow-lg">
           <h2 className="text-2xl font-semibold mb-4">Get in Touch</h2>
           <div className="space-y-4">
             <div>
@@ -113,8 +113,11 @@ const ContactPage = () => (
             </div>
           </div>
         </div>
-        <div>
+        <div className="bg-white p-8 rounded-lg shadow-lg">
           <h2 className="text-2xl font-semibold mb-4">Send us a Message</h2>
+          <p className="text-gray-600 mb-6">
+            Ready to transform your business? Contact us today for a consultation.
+          </p>
           <form className="space-y-4">
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
@@ -233,7 +236,7 @@ const App: React.FC = () => {
             <main>
               <AppRouter />
             </main>
-          <Footer />
+          <ModernFooter />
         </div>
 
         {showPerformanceOptimizer && (
