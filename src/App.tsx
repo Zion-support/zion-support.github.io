@@ -37,7 +37,7 @@ const App: React.FC = () => {
       <div className="min-h-screen flex flex-col bg-white">
         <Header />
         <div className="flex-1">
-          <div className="container mx-auto px-6 py-6">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
             <div className="grid grid-cols-1 xl:grid-cols-[18rem_1fr] gap-8">
               <div className="hidden xl:block">
                 <Sidebar />
