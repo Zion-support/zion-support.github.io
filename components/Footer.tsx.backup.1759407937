@@ -7,6 +7,16 @@ const Footer: React.FC = () => {
   const footerLinks = {
     services: [
       { name: 'AI Services', href: '/services/ai-services' },
+<<<<<<< HEAD
+      { name: 'AI Customer Insights', href: '/services/ai-customer-insights-platform' },
+      { name: 'AI Financial Forecasting', href: '/services/ai-financial-forecasting-suite' },
+      { name: 'Micro SaaS Solutions', href: '/services/micro-saas' },
+      { name: 'IoT Smart Infrastructure', href: '/services/iot-smart-infrastructure-platform' },
+      { name: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions' },
+      { name: 'IT Services', href: '/services/it-services' },
+      { name: 'Cloud Solutions', href: '/services/cloud-solutions' },
+      { name: 'Cybersecurity', href: '/services/cybersecurity' },
+=======
       { name: 'AI Customer Insights', href: '/services/ai-powered-customer-insights-platform' },
       { name: 'AI Financial Intelligence', href: '/services/ai-powered-financial-intelligence-platform' },
       { name: 'AI Autonomous DevOps', href: '/services/ai-autonomous-devops-platform' },
@@ -15,6 +25,7 @@ const Footer: React.FC = () => {
       { name: 'Healthcare Scheduling', href: '/services/healthcare-scheduling-platform' },
       { name: 'IT Services', href: '/services/it-services' },
       { name: 'Cybersecurity', href: '/services/ai-cybersecurity-automation' },
+>>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-827e
     ],
     company: [
       { name: 'About Us', href: '/about' },
