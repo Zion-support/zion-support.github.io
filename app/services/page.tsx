@@ -10,6 +10,111 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   const serviceCategories = [
     {
+      title: 'AI Content Optimization Suite',
+      description: 'AI-powered content optimization platform for headlines, email subject lines, and marketing copy',
+      icon: '📝',
+      href: '/services/ai-content-optimization-suite',
+      pricing: 'Starting from $29/month',
+      features: [
+        'HeadlineMaster AI - B2B Marketing Headlines',
+        'PodcastTranscriber Pro - Accurate Transcriptions',
+        'ContentAnalyzer AI - Performance Analytics',
+        'A/B Testing Capabilities',
+        'Industry-Specific Optimization',
+        'Real-time Performance Tracking'
+      ]
+    },
+    {
+      title: 'Remote Work Productivity Suite',
+      description: 'Comprehensive remote work solutions including meeting optimization, team onboarding, and productivity analytics',
+      icon: '🏠',
+      href: '/services/remote-work-productivity-suite',
+      pricing: 'Starting from $19/month',
+      features: [
+        'MeetingTimer Pro - Meeting Efficiency',
+        'RemoteOnboarding - Team Integration',
+        'TeamAnalytics Pro - Productivity Insights',
+        'AI-Powered Meeting Assistant',
+        'Virtual Team Building Tools',
+        'Collaboration Analytics'
+      ]
+    },
+    {
+      title: 'Healthcare Scheduling Platform',
+      description: 'Comprehensive healthcare scheduling SaaS for hospitals and clinics with HIPAA compliance',
+      icon: '🏥',
+      href: '/services/healthcare-scheduling-platform',
+      pricing: 'Starting from $149/month',
+      features: [
+        'Smart Appointment Scheduling',
+        'Virtual Consultations Platform',
+        'Patient Data Management',
+        'HIPAA Compliance & Security',
+        'Analytics Dashboard',
+        'Mobile Applications'
+      ]
+    },
+    {
+      title: 'AI Meeting Assistant Platform',
+      description: 'AI-powered meeting assistant that records conversations, extracts decisions, and manages tasks automatically',
+      icon: '🤖',
+      href: '/services/ai-meeting-assistant-platform',
+      pricing: 'Starting from $29/month',
+      features: [
+        'Intelligent Recording & Transcription',
+        'Smart Summarization & Decision Extraction',
+        'Automatic Task Management',
+        'Natural Language Processing',
+        'Calendar Integration',
+        'Advanced Analytics'
+      ]
+    },
+    {
+      title: 'Habit Tracking & Wellness Platform',
+      description: 'AI-powered habit tracking and wellness platform for personal development and goal achievement',
+      icon: '💪',
+      href: '/services/habit-tracking-wellness-platform',
+      pricing: 'Starting from $7.99/month',
+      features: [
+        'Smart Habit Builder',
+        'Morning Routine Optimizer',
+        'Wellness Analytics',
+        'AI-Powered Insights',
+        'Community Features',
+        'Wearable Device Integration'
+      ]
+    },
+    {
+      title: 'AI Cybersecurity Automation',
+      description: 'Advanced AI-powered cybersecurity automation platform with threat detection and automated response',
+      icon: '🔒',
+      href: '/services/ai-cybersecurity-automation',
+      pricing: 'Starting from $1,499/month',
+      features: [
+        'AI Threat Detection',
+        'Automated Response System',
+        'Vulnerability Assessment',
+        'Zero Trust Architecture',
+        'Security Orchestration',
+        'Compliance & Reporting'
+      ]
+    },
+    {
+      title: 'Cloud-Native DevOps Platform',
+      description: 'Comprehensive cloud-native DevOps platform with CI/CD automation and infrastructure as code',
+      icon: '☁️',
+      href: '/services/cloud-native-devops-platform',
+      pricing: 'Starting from $1,499/month',
+      features: [
+        'CI/CD Automation',
+        'Infrastructure as Code',
+        'Container Orchestration',
+        'Monitoring & Observability',
+        'Security & Compliance',
+        'Multi-Cloud Support'
+      ]
+    },
+    {
       title: 'Advanced Micro SaaS Solutions',
       description: 'Cutting-edge micro SaaS platforms designed to solve specific business challenges with AI-powered automation',
       icon: '🚀',
