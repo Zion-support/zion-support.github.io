@@ -8,7 +8,7 @@ export default function Footer() {
   const footerLinks = {
     services: [
       { name: 'All Services', href: '/services' },
-      { name: 'AI Services', href: '/ai-services' },
+      { name: 'AI Services', href: '/services/ai-services' },
       { name: 'Micro SaaS', href: '/services/micro-saas' },
       { name: 'IT Services', href: '/services/it-services-comprehensive' },
       { name: 'Blockchain Solutions', href: '/services/blockchain-solutions' },
@@ -19,13 +19,13 @@ export default function Footer() {
     ],
     solutions: [
       { name: 'All Solutions', href: '/solutions' },
-      { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
-      { name: 'SMB Solutions', href: '/solutions/smb' },
-      { name: 'Startup Solutions', href: '/solutions/startup' },
-      { name: 'Healthcare Solutions', href: '/solutions/healthcare' },
-      { name: 'Financial Solutions', href: '/solutions/financial' },
-      { name: 'Retail Solutions', href: '/solutions/retail' },
-      { name: 'Manufacturing Solutions', href: '/solutions/manufacturing' }
+      { name: 'Enterprise Solutions', href: '/enterprise' },
+      { name: 'Innovative IT Solutions', href: '/innovative-it-solutions' },
+      { name: 'Advanced AI Solutions', href: '/advanced-ai-solutions' },
+      { name: 'Healthcare Technology', href: '/services/healthcare-technology-solutions' },
+      { name: 'FinTech Solutions', href: '/services/financial-technology-solutions' },
+      { name: 'E-commerce Solutions', href: '/services/ecommerce-technology-solutions' },
+      { name: 'Manufacturing AI', href: '/services/manufacturing-ai-platform' }
     ],
     company: [
       { name: 'About Us', href: '/about' },
@@ -35,7 +35,7 @@ export default function Footer() {
       { name: 'Pricing', href: '/pricing' },
       { name: 'Support', href: '/support' },
       { name: 'Partners', href: '/partners' },
-      { name: 'Team', href: '/team' }
+      { name: 'Portfolio', href: '/portfolio' }
     ],
     resources: [
       { name: 'All Resources', href: '/resources' },
@@ -61,7 +61,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
-          <div className="lg:col-span-2">
+          <div className="col-span-1 md:col-span-2">
             <Link to="/" className="flex items-center space-x-2 mb-6">
               <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-lg">Z</span>
@@ -69,12 +69,76 @@ export default function Footer() {
               <span className="text-xl font-bold">Zion Tech Group</span>
             </Link>
             
-            <p className="text-gray-400 mb-6 leading-relaxed">
-              Leading technology solutions provider helping businesses transform their digital presence 
-              with cutting-edge AI, cloud architecture, and innovative development services.
+            <p className="text-gray-300 mb-6 max-w-md">
+              Revolutionary AI breakthroughs delivering 1000x performance gains, 95% automation, 
+              and $150M+ ROI for Fortune 500 companies worldwide.
             </p>
-            
             <div className="flex space-x-4">
+              <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-400 hover:text-white transition-colors">
+                LinkedIn
+              </a>
+              <a href="https://twitter.com/ziontechgroup" className="text-gray-400 hover:text-white transition-colors">
+                Twitter
+              </a>
+              <a href="https://github.com/ziontechgroup" className="text-gray-400 hover:text-white transition-colors">
+                GitHub
+              </a>
+            </div>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
+            <ul className="space-y-2">
+              <li>
+                <Link to="/services" className="text-gray-300 hover:text-white transition-colors">
+                  AI Services
+                </Link>
+              </li>
+              <li>
+                <Link to="/case-studies" className="text-gray-300 hover:text-white transition-colors">
+                  Success Stories
+                </Link>
+              </li>
+              <li>
+                <Link to="/about" className="text-gray-300 hover:text-white transition-colors">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="text-gray-300 hover:text-white transition-colors">
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Contact Info */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
+            <div className="space-y-3">
+              <div className="flex items-center">
+                <Globe className="w-5 h-5 mr-3 text-blue-400" />
+                <span className="text-gray-300">ziontechgroup.com</span>
+              </div>
+              <div className="flex items-center">
+                <Mail className="w-5 h-5 mr-3 text-blue-400" />
+                <span className="text-gray-300">kleber@ziontechgroup.com</span>
+              </div>
+              <div className="flex items-center">
+                <Phone className="w-5 h-5 mr-3 text-blue-400" />
+                <span className="text-gray-300">+1 302 464 0950</span>
+              </div>
+              <div className="flex items-start">
+                <MapPin className="w-5 h-5 mr-3 text-blue-400 mt-0.5" />
+                <span className="text-gray-300">
+                  364 E Main St STE 1008<br />
+                  Middletown DE 19709
+                </span>
+              </div>
+            </div>
+
+            <div className="flex space-x-4 mt-6">
               {socialLinks.map((social) => (
                 <a
                   key={social.name}
@@ -88,74 +152,6 @@ export default function Footer() {
                 </a>
               ))}
             </div>
-          </div>
-
-          {/* Services */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Services</h3>
-            <ul className="space-y-2">
-              {footerLinks.services.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    to={link.href}
-                    className="text-gray-400 hover:text-white transition-colors"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Solutions */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Solutions</h3>
-            <ul className="space-y-2">
-              {footerLinks.solutions.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    to={link.href}
-                    className="text-gray-400 hover:text-white transition-colors"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Company */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Company</h3>
-            <ul className="space-y-2">
-              {footerLinks.company.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    to={link.href}
-                    className="text-gray-400 hover:text-white transition-colors"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Resources */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Resources</h3>
-            <ul className="space-y-2">
-              {footerLinks.resources.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    to={link.href}
-                    className="text-gray-400 hover:text-white transition-colors"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
           </div>
         </div>
 
@@ -181,36 +177,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Contact Info */}
-        <div className="border-t border-gray-800 mt-8 pt-8">
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
-              <div className="space-y-3">
-                <div className="flex items-center">
-                  <Globe className="w-5 h-5 mr-3 text-blue-400" />
-                  <span className="text-gray-300">ziontechgroup.com</span>
-                </div>
-                <div className="flex items-center">
-                  <Mail className="w-5 h-5 mr-3 text-blue-400" />
-                  <span className="text-gray-300">kleber@ziontechgroup.com</span>
-                </div>
-                <div className="flex items-center">
-                  <Phone className="w-5 h-5 mr-3 text-blue-400" />
-                  <span className="text-gray-300">+1 302 464 0950</span>
-                </div>
-                <div className="flex items-start">
-                  <MapPin className="w-5 h-5 mr-3 text-blue-400 mt-0.5" />
-                  <span className="text-gray-300">
-                    364 E Main St STE 1008<br />
-                    Middletown DE 19709
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">
@@ -231,4 +197,6 @@ export default function Footer() {
       </div>
     </footer>
   );
-}
+};
+
+export default Footer;

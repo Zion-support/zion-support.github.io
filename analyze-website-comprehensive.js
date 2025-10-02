@@ -1,278 +1,409 @@
 #!/usr/bin/env node
 
-import { readFileSync, writeFileSync, existsSync } from 'fs';
-import { join, dirname } from 'path';
+import fs from 'fs';
+import path from 'path';
+import { execSync } from 'child_process';
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+const __dirname = path.dirname(__filename);
 
-// Website analysis configuration
-const BASE_URL = 'https://ziontechgroup.com';
-const MAX_DEPTH = 3;
-const CONCURRENT_REQUESTS = 5;
-
+// Comprehensive website analysis script
 class WebsiteAnalyzer {
   constructor() {
-    this.visitedUrls = new Set();
-    this.brokenLinks = [];
-    this.workingLinks = [];
-    this.internalLinks = [];
-    this.externalLinks = [];
+    this.baseUrl = 'https://ziontechgroup.com';
+    this.appDir = '/workspace/app';
+    this.componentsDir = '/workspace/components';
+    this.issues = [];
     this.missingPages = [];
-    this.visitedPages = [];
-    this.requestQueue = [];
-    this.activeRequests = 0;
+    this.brokenLinks = [];
+    this.navigationIssues = [];
   }
 
-  async analyzeWebsite() {
-    console.log('🔍 Starting comprehensive website analysis...');
-    console.log(`📍 Base URL: ${BASE_URL}`);
+  // Analyze all pages and routes
+  analyzeRoutes() {
+    console.log('🔍 Analyzing website routes and pages...');
+    
+    // Get all page directories
+    const pages = this.getPageDirectories();
+    
+    // Check each page exists and has proper content
+    pages.forEach(page => {
+      this.analyzePage(page);
+    });
+    
+    // Check navigation consistency
+    this.analyzeNavigation();
+    
+    // Check sitemap consistency
+    this.analyzeSitemap();
+  }
+
+  getPageDirectories() {
+    const pages = [];
     
     try {
-      await this.crawlPage(BASE_URL, 0);
+      const appContents = fs.readdirSync(this.appDir, { withFileTypes: true });
       
-      // Process remaining queue
-      while (this.requestQueue.length > 0 || this.activeRequests > 0) {
-        await this.processQueue();
-        await this.sleep(100);
-      }
+      appContents.forEach(item => {
+        if (item.isDirectory() && !item.name.startsWith('_') && !item.name.includes('.')) {
+          const pagePath = path.join(this.appDir, item.name);
+          pages.push({
+            name: item.name,
+            path: pagePath,
+            url: `/${item.name}`,
+            pageFile: path.join(pagePath, 'page.tsx')
+          });
+        }
+      });
       
-      await this.generateReport();
+      // Check nested routes
+      this.getNestedRoutes(pages);
       
     } catch (error) {
-      console.error('❌ Analysis failed:', error);
+      console.error('Error reading app directory:', error);
     }
+    
+    return pages;
   }
 
-  async crawlPage(url, depth) {
-    if (depth > MAX_DEPTH || this.visitedUrls.has(url)) {
+  getNestedRoutes(pages) {
+    pages.forEach(page => {
+      try {
+        const subContents = fs.readdirSync(page.path, { withFileTypes: true });
+        
+        subContents.forEach(item => {
+          if (item.isDirectory()) {
+            const nestedPath = path.join(page.path, item.name);
+            pages.push({
+              name: `${page.name}/${item.name}`,
+              path: nestedPath,
+              url: `/${page.name}/${item.name}`,
+              pageFile: path.join(nestedPath, 'page.tsx')
+            });
+          }
+        });
+      } catch (error) {
+        // Directory might not exist or be readable
+      }
+    });
+  }
+
+  analyzePage(page) {
+    console.log(`📄 Analyzing page: ${page.name}`);
+    
+    // Check if page.tsx exists
+    if (!fs.existsSync(page.pageFile)) {
+      this.missingPages.push({
+        name: page.name,
+        url: page.url,
+        path: page.pageFile,
+        issue: 'Missing page.tsx file'
+      });
       return;
     }
-
-    this.visitedUrls.add(url);
-    this.requestQueue.push({ url, depth });
-    await this.processQueue();
-  }
-
-  async processQueue() {
-    while (this.requestQueue.length > 0 && this.activeRequests < CONCURRENT_REQUESTS) {
-      const { url, depth } = this.requestQueue.shift();
-      this.activeRequests++;
-      
-      this.analyzePage(url, depth).finally(() => {
-        this.activeRequests--;
+    
+    // Read and analyze page content
+    try {
+      const content = fs.readFileSync(page.pageFile, 'utf8');
+      this.analyzePageContent(content, page);
+    } catch (error) {
+      this.issues.push({
+        page: page.name,
+        issue: 'Error reading page content',
+        error: error.message
       });
     }
   }
 
-  async analyzePage(url, depth) {
-    try {
-      console.log(`🔍 Analyzing: ${url} (depth: ${depth})`);
-      
-      const response = await fetch(url, {
-        method: 'GET',
-        headers: {
-          'User-Agent': 'Mozilla/5.0 (compatible; WebsiteAnalyzer/1.0)',
-        },
-        redirect: 'follow'
-      });
-
-      if (response.ok) {
-        this.workingLinks.push({
-          url,
-          status: response.status,
-          statusText: response.statusText,
-          contentType: response.headers.get('content-type'),
-          depth
-        });
-        
-        this.visitedPages.push(url);
-        
-        // Only parse HTML pages for links
-        const contentType = response.headers.get('content-type');
-        if (contentType && contentType.includes('text/html')) {
-          const html = await response.text();
-          await this.extractLinks(html, url, depth);
+  analyzePageContent(content, page) {
+    // Check for broken imports
+    const importRegex = /import.*from\s+['"]([^'"]+)['"]/g;
+    let match;
+    while ((match = importRegex.exec(content)) !== null) {
+      const importPath = match[1];
+      if (importPath.startsWith('./') || importPath.startsWith('../')) {
+        const resolvedPath = path.resolve(path.dirname(page.pageFile), importPath);
+        if (!fs.existsSync(resolvedPath) && !fs.existsSync(resolvedPath + '.tsx') && !fs.existsSync(resolvedPath + '.ts')) {
+          this.brokenLinks.push({
+            page: page.name,
+            type: 'import',
+            path: importPath,
+            issue: 'Broken import path'
+          });
         }
-      } else {
+      }
+    }
+    
+    // Check for broken Link components
+    const linkRegex = /to\s*=\s*['"]([^'"]+)['"]/g;
+    while ((match = linkRegex.exec(content)) !== null) {
+      const linkPath = match[1];
+      if (linkPath.startsWith('/')) {
+        this.checkLinkExists(linkPath, page.name);
+      }
+    }
+    
+    // Check for missing metadata
+    if (!content.includes('export const metadata')) {
+      this.issues.push({
+        page: page.name,
+        issue: 'Missing metadata export'
+      });
+    }
+    
+    // Check for proper React component structure
+    if (!content.includes('export default function')) {
+      this.issues.push({
+        page: page.name,
+        issue: 'Missing default export function'
+      });
+    }
+  }
+
+  checkLinkExists(linkPath, sourcePage) {
+    // Remove query parameters and fragments
+    const cleanPath = linkPath.split('?')[0].split('#')[0];
+    
+    // Check if it's an external link
+    if (cleanPath.startsWith('http')) {
+      return;
+    }
+    
+    // Check if page exists
+    const pagePath = path.join(this.appDir, cleanPath.substring(1), 'page.tsx');
+    const indexPagePath = path.join(this.appDir, cleanPath.substring(1), 'index.tsx');
+    
+    if (!fs.existsSync(pagePath) && !fs.existsSync(indexPagePath)) {
+      // Check if it's a dynamic route
+      const dynamicPath = path.join(this.appDir, cleanPath.substring(1), '[id]', 'page.tsx');
+      if (!fs.existsSync(dynamicPath)) {
         this.brokenLinks.push({
-          url,
-          status: response.status,
-          statusText: response.statusText,
-          contentType: response.headers.get('content-type'),
-          depth,
-          parentUrl: url
+          page: sourcePage,
+          type: 'internal_link',
+          path: cleanPath,
+          issue: 'Link points to non-existent page'
         });
       }
+    }
+  }
+
+  analyzeNavigation() {
+    console.log('🧭 Analyzing navigation components...');
+    
+    const navFiles = [
+      '/workspace/components/Header.tsx',
+      '/workspace/components/Footer.tsx',
+      '/workspace/components/Sidebar.tsx'
+    ];
+    
+    navFiles.forEach(file => {
+      if (fs.existsSync(file)) {
+        this.analyzeNavigationFile(file);
+      } else {
+        this.navigationIssues.push({
+          file,
+          issue: 'Navigation component missing'
+        });
+      }
+    });
+  }
+
+  analyzeNavigationFile(filePath) {
+    try {
+      const content = fs.readFileSync(filePath, 'utf8');
+      
+      // Extract all navigation links
+      const linkRegex = /(?:href|to)\s*=\s*['"]([^'"]+)['"]/g;
+      let match;
+      const links = [];
+      
+      while ((match = linkRegex.exec(content)) !== null) {
+        links.push(match[1]);
+      }
+      
+      // Check each navigation link
+      links.forEach(link => {
+        if (link.startsWith('/') && !link.startsWith('http')) {
+          this.checkLinkExists(link, path.basename(filePath));
+        }
+      });
+      
     } catch (error) {
-      console.error(`❌ Error analyzing ${url}:`, error.message);
-      this.brokenLinks.push({
-        url,
-        status: 'ERROR',
-        statusText: error.message,
-        contentType: null,
-        depth,
-        parentUrl: url
+      this.navigationIssues.push({
+        file: filePath,
+        issue: 'Error reading navigation file',
+        error: error.message
       });
     }
   }
 
-  async extractLinks(html, parentUrl, depth) {
+  analyzeSitemap() {
+    console.log('🗺️ Analyzing sitemap...');
+    
+    const sitemapFile = path.join(this.appDir, 'sitemap.ts');
+    if (!fs.existsSync(sitemapFile)) {
+      this.issues.push({
+        issue: 'Missing sitemap.ts file'
+      });
+      return;
+    }
+    
     try {
-      // Extract links using regex (simple approach)
-      const linkRegex = /href=["']([^"']+)["']/gi;
-      const srcRegex = /src=["']([^"']+)["']/gi;
+      const content = fs.readFileSync(sitemapFile, 'utf8');
       
-      const links = [];
+      // Extract URLs from sitemap
+      const urlRegex = /url:\s*[`'"]([^`'"]+)[`'"]/g;
       let match;
       
-      // Extract href links
-      while ((match = linkRegex.exec(html)) !== null) {
-        links.push(match[1]);
-      }
-      
-      // Extract src links
-      while ((match = srcRegex.exec(html)) !== null) {
-        links.push(match[1]);
-      }
-      
-      for (const link of links) {
-        const absoluteUrl = this.resolveUrl(link, parentUrl);
-        
-        if (this.isInternalLink(absoluteUrl)) {
-          this.internalLinks.push({
-            url: absoluteUrl,
-            parentUrl: parentUrl,
-            depth: depth + 1
-          });
-          
-          // Queue for further analysis
-          if (depth < MAX_DEPTH && !this.visitedUrls.has(absoluteUrl)) {
-            this.requestQueue.push({ url: absoluteUrl, depth: depth + 1 });
-          }
-        } else {
-          this.externalLinks.push({
-            url: absoluteUrl,
-            parentUrl: parentUrl,
-            depth: depth + 1
-          });
+      while ((match = urlRegex.exec(content)) !== null) {
+        const url = match[1].replace(this.baseUrl, '');
+        if (url) {
+          this.checkLinkExists(url, 'sitemap');
         }
       }
+      
     } catch (error) {
-      console.error(`❌ Error extracting links from ${parentUrl}:`, error.message);
+      this.issues.push({
+        issue: 'Error reading sitemap file',
+        error: error.message
+      });
     }
   }
 
-  resolveUrl(link, baseUrl) {
-    try {
-      if (link.startsWith('http://') || link.startsWith('https://')) {
-        return link;
-      }
-      
-      if (link.startsWith('//')) {
-        return 'https:' + link;
-      }
-      
-      if (link.startsWith('/')) {
-        const base = new URL(baseUrl);
-        return `${base.protocol}//${base.host}${link}`;
-      }
-      
-      const base = new URL(baseUrl);
-      const basePath = base.pathname.endsWith('/') ? base.pathname : dirname(base.pathname);
-      return `${base.protocol}//${base.host}${basePath}/${link}`;
-    } catch (error) {
-      return link;
-    }
-  }
-
-  isInternalLink(url) {
-    try {
-      const urlObj = new URL(url);
-      const baseObj = new URL(BASE_URL);
-      return urlObj.hostname === baseObj.hostname;
-    } catch {
-      return false;
-    }
-  }
-
-  async generateReport() {
-    console.log('\n📊 Generating comprehensive analysis report...');
-    
+  // Generate comprehensive report
+  generateReport() {
     const report = {
       timestamp: new Date().toISOString(),
-      baseUrl: BASE_URL,
       summary: {
-        totalLinksChecked: this.workingLinks.length + this.brokenLinks.length,
+        totalIssues: this.issues.length,
+        missingPages: this.missingPages.length,
         brokenLinks: this.brokenLinks.length,
-        workingLinks: this.workingLinks.length,
-        internalLinks: this.internalLinks.length,
-        externalLinks: this.externalLinks.length,
-        pagesVisited: this.visitedPages.length,
-        successRate: `${((this.workingLinks.length / (this.workingLinks.length + this.brokenLinks.length)) * 100).toFixed(2)}%`
+        navigationIssues: this.navigationIssues.length
       },
+      issues: this.issues,
+      missingPages: this.missingPages,
       brokenLinks: this.brokenLinks,
-      workingLinks: this.workingLinks,
-      internalLinks: this.internalLinks,
-      externalLinks: this.externalLinks,
-      visitedPages: this.visitedPages,
+      navigationIssues: this.navigationIssues,
       recommendations: this.generateRecommendations()
     };
     
     // Save report
-    const reportPath = join(__dirname, 'website-analysis-comprehensive.json');
-    writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    const reportPath = '/workspace/website-analysis-report.json';
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     
-    // Generate summary
-    console.log('\n📈 ANALYSIS SUMMARY:');
-    console.log(`✅ Working Links: ${report.summary.workingLinks}`);
-    console.log(`❌ Broken Links: ${report.summary.brokenLinks}`);
-    console.log(`🔗 Internal Links: ${report.summary.internalLinks}`);
-    console.log(`🌐 External Links: ${report.summary.externalLinks}`);
-    console.log(`📄 Pages Visited: ${report.summary.pagesVisited}`);
-    console.log(`📊 Success Rate: ${report.summary.successRate}`);
+    // Generate markdown report
+    this.generateMarkdownReport(report);
     
-    if (report.brokenLinks.length > 0) {
-      console.log('\n❌ BROKEN LINKS FOUND:');
-      report.brokenLinks.forEach(link => {
-        console.log(`  - ${link.url} (${link.status})`);
-      });
-    }
-    
-    console.log('\n💡 RECOMMENDATIONS:');
-    report.recommendations.forEach(rec => {
-      console.log(`  - ${rec}`);
-    });
-    
-    console.log(`\n📄 Full report saved to: ${reportPath}`);
+    return report;
   }
 
   generateRecommendations() {
     const recommendations = [];
     
+    if (this.missingPages.length > 0) {
+      recommendations.push({
+        priority: 'HIGH',
+        category: 'Missing Pages',
+        description: 'Create missing page components',
+        actions: this.missingPages.map(page => `Create ${page.pageFile}`)
+      });
+    }
+    
     if (this.brokenLinks.length > 0) {
-      recommendations.push(`Fix ${this.brokenLinks.length} broken links found during analysis`);
+      recommendations.push({
+        priority: 'HIGH',
+        category: 'Broken Links',
+        description: 'Fix broken internal links',
+        actions: this.brokenLinks.map(link => `Fix ${link.type} in ${link.page}: ${link.path}`)
+      });
     }
     
-    if (this.externalLinks.length > 0) {
-      recommendations.push(`Review ${this.externalLinks.length} external links for relevance and accessibility`);
+    if (this.navigationIssues.length > 0) {
+      recommendations.push({
+        priority: 'MEDIUM',
+        category: 'Navigation Issues',
+        description: 'Fix navigation component issues',
+        actions: this.navigationIssues.map(issue => `Fix ${issue.file}: ${issue.issue}`)
+      });
     }
     
-    recommendations.push('Implement proper error handling for missing pages');
-    recommendations.push('Add comprehensive navigation structure');
-    recommendations.push('Optimize internal linking for better SEO');
-    recommendations.push('Implement proper redirects for moved content');
-    recommendations.push('Add sitemap.xml for better search engine indexing');
+    recommendations.push({
+      priority: 'LOW',
+      category: 'Performance',
+      description: 'Optimize page loading and SEO',
+      actions: [
+        'Add proper meta descriptions to all pages',
+        'Implement proper error boundaries',
+        'Add loading states for better UX',
+        'Optimize images and assets'
+      ]
+    });
     
     return recommendations;
   }
 
-  sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
+  generateMarkdownReport(report) {
+    const mdReport = `# Website Analysis Report
+
+## Summary
+- **Total Issues**: ${report.summary.totalIssues}
+- **Missing Pages**: ${report.summary.missingPages}
+- **Broken Links**: ${report.summary.brokenLinks}
+- **Navigation Issues**: ${report.summary.navigationIssues}
+
+## Missing Pages
+${report.missingPages.map(page => `- **${page.name}**: ${page.issue} (${page.pageFile})`).join('\n')}
+
+## Broken Links
+${report.brokenLinks.map(link => `- **${link.page}**: ${link.issue} - ${link.path}`).join('\n')}
+
+## Navigation Issues
+${report.navigationIssues.map(issue => `- **${issue.file}**: ${issue.issue}`).join('\n')}
+
+## General Issues
+${report.issues.map(issue => `- **${issue.page || 'Global'}**: ${issue.issue}`).join('\n')}
+
+## Recommendations
+${report.recommendations.map(rec => `
+### ${rec.category} (${rec.priority} Priority)
+${rec.description}
+
+**Actions:**
+${rec.actions.map(action => `- ${action}`).join('\n')}
+`).join('\n')}
+
+---
+*Generated on ${report.timestamp}*
+`;
+
+    fs.writeFileSync('/workspace/website-analysis-report.md', mdReport);
+  }
+
+  // Main analysis function
+  async run() {
+    console.log('🚀 Starting comprehensive website analysis...');
+    
+    this.analyzeRoutes();
+    
+    const report = this.generateReport();
+    
+    console.log('\n📊 Analysis Complete!');
+    console.log(`Total Issues: ${report.summary.totalIssues}`);
+    console.log(`Missing Pages: ${report.summary.missingPages}`);
+    console.log(`Broken Links: ${report.summary.brokenLinks}`);
+    console.log(`Navigation Issues: ${report.summary.navigationIssues}`);
+    
+    console.log('\n📄 Reports generated:');
+    console.log('- website-analysis-report.json');
+    console.log('- website-analysis-report.md');
+    
+    return report;
   }
 }
 
-// Run analysis
+// Run the analysis
 const analyzer = new WebsiteAnalyzer();
-analyzer.analyzeWebsite().catch(console.error);
+analyzer.run().catch(console.error);
+
+export default WebsiteAnalyzer;

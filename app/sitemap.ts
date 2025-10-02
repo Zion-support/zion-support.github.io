@@ -35,13 +35,13 @@ export default function sitemap(): SiteEntry[] {
       priority: 0.5,
     },
     {
-      url: `${baseUrl}/services/ai-data-governance-platform`,
+      url: `${baseUrl}/services/ai-services`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/services/rpa-automation-suite`,
+      url: `${baseUrl}/services/micro-saas`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.8,
@@ -71,7 +71,7 @@ export default function sitemap(): SiteEntry[] {
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/services-advertising`,
+      url: `${baseUrl}/services`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,
@@ -107,13 +107,13 @@ export default function sitemap(): SiteEntry[] {
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/services/ai-services/ai-fraud-detection-advanced`,
+      url: `${baseUrl}/services/ai-services`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/services/micro-saas/ai-predictive-maintenance`,
+      url: `${baseUrl}/services/micro-saas`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.8,
