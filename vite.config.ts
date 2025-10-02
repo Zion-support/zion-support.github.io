@@ -39,28 +39,56 @@ export default defineConfig({
       },
       output: {
         manualChunks: (id) => {
-          // Vendor chunks
+          // Vendor chunks - more granular splitting
           if (id.includes('node_modules')) {
-            // Group React-related packages
+            // React core
             if (id.includes('react') || id.includes('react-dom')) {
               return 'vendor-react';
             }
-            // Group UI libraries
-            if (id.includes('framer-motion') || id.includes('lucide-react')) {
-              return 'vendor-ui';
+            // Router
+            if (id.includes('react-router')) {
+              return 'vendor-router';
             }
-            // Group utility libraries
-            if (id.includes('clsx') || id.includes('tailwind-merge') || id.includes('axios')) {
-              return 'vendor-utils';
+            // UI libraries
+            if (id.includes('framer-motion')) {
+              return 'vendor-animations';
             }
-            return 'vendor';
+            if (id.includes('lucide-react')) {
+              return 'vendor-icons';
+            }
+            // Utility libraries
+            if (id.includes('clsx') || id.includes('tailwind-merge')) {
+              return 'vendor-styling';
+            }
+            if (id.includes('axios')) {
+              return 'vendor-http';
+            }
+            // SEO and analytics
+            if (id.includes('react-helmet') || id.includes('web-vitals')) {
+              return 'vendor-seo';
+            }
+            return 'vendor-misc';
           }
-          // App chunks
+          // App chunks - lazy load pages
           if (id.includes('src/pages/')) {
-            return 'pages';
+            // Split large page bundles
+            if (id.includes('services/')) {
+              return 'pages-services';
+            }
+            if (id.includes('case-studies/')) {
+              return 'pages-case-studies';
+            }
+            if (id.includes('blog/')) {
+              return 'pages-blog';
+            }
+            return 'pages-core';
           }
+          // Component chunks
           if (id.includes('src/components/')) {
-            return 'components';
+            if (id.includes('banner') || id.includes('Banner')) {
+              return 'components-banners';
+            }
+            return 'components-core';
           }
           if (id.includes('src/utils/')) {
             return 'utils';
