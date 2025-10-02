@@ -42,17 +42,17 @@ export default function HomePage() {
                 Get Started Today
               </Link>
               <Link 
-                href="/blog/ai-2026-june-mega-breakthrough-revolution" 
+                href="/services" 
                 className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
               >
-                Read Latest Breakthroughs →
+                Explore Our Services →
               </Link>
-              <Link 
-                href="/case-studies/fortune-500-ai-2026-mega-transformation-success" 
+              <a 
+                href="tel:+13024640950" 
                 className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
-                View $5.2B Success Story
-              </Link>
+                Call: +1 302 464 0950
+              </a>
             </div>
             
             {/* Key Metrics */}
@@ -175,17 +175,40 @@ export default function HomePage() {
                 Get Started Today
               </Link>
               <Link 
-                href="/blog/ai-2026-june-mega-breakthrough-revolution" 
+                href="/services" 
                 className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
               >
-                Read Latest Breakthroughs →
+                Explore Our Services →
               </Link>
-              <Link 
-                href="/case-studies/fortune-500-ai-2026-mega-transformation-success" 
+              <a 
+                href="tel:+13024640950" 
                 className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
-                View $5.2B Success Story
-              </Link>
+                Call: +1 302 464 0950
+              </a>
+            </div>
+            
+            {/* Contact Information */}
+            <div className="mt-8 text-center">
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-4">
+                <a 
+                  href="tel:+13024640950" 
+                  className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/20 transition-colors"
+                >
+                  📞 +1 302 464 0950
+                </a>
+                <a 
+                  href="mailto:kleber@ziontechgroup.com" 
+                  className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/20 transition-colors"
+                >
+                  ✉️ kleber@ziontechgroup.com
+                </a>
+              </div>
+              <div className="text-sm text-gray-300 space-y-1">
+                <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
+                <p>🌐 Website: <a href="https://ziontechgroup.com" className="text-blue-400 hover:underline">https://ziontechgroup.com</a></p>
+                <p className="text-xs text-gray-400">Available 24/7 for enterprise clients • Free consultation for projects over $10K</p>
+              </div>
             </div>
           </div>
         </div>
