@@ -27,7 +27,6 @@ const Demo: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
     console.log('Form submitted:', formData);
   };
 
@@ -66,7 +65,7 @@ const Demo: React.FC = () => {
       name: 'Michael Chen',
       company: 'FinanceFlow',
       role: 'VP of Operations',
-      content: 'Zion Tech Group\'s demo was eye-opening. We saw immediate value and signed up the same week.',
+      content: "Zion Tech Group's demo was eye-opening. We saw immediate value and signed up the same week.",
       rating: 5
     },
     {
@@ -448,3 +447,4 @@ const Demo: React.FC = () => {
 };
 
 export default Demo;
+import React, { useState } from 'react';

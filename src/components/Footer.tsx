@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Zap, Mail, Phone, MapPin, Twitter, Linkedin, Github, Globe } from 'lucide-react';
 
-const Footer: React.FC = () => {
+const ModernFooter: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   const footerSections = [
@@ -23,8 +23,9 @@ const Footer: React.FC = () => {
         { label: 'AI Workflow Automation', path: '/services/ai-workflow-automation' },
         { label: 'AI Virtual Assistant', path: '/services/ai-virtual-assistant' },
         { label: 'AI Data Analytics', path: '/services/ai-data-analytics' },
-        { label: 'Cybersecurity AI', path: '/services/advanced-cybersecurity-ai' },
-        { label: 'Quantum Computing', path: '/quantum-computing' },
+        { label: 'Intelligent Document Processing', path: '/services/ai-intelligent-document-processing' },
+        { label: 'Real-Time Cognitive Automation', path: '/services/real-time-cognitive-automation' },
+        { label: 'Advanced Cybersecurity AI', path: '/services/advanced-cybersecurity-ai' },
         { label: 'Cloud & DevOps', path: '/cloud-devops' },
       ]
     },
@@ -32,11 +33,7 @@ const Footer: React.FC = () => {
       title: 'Resources',
       links: [
         { label: 'Case Studies', path: '/case-studies' },
-        { label: 'White Papers', path: '/white-papers' },
-        { label: 'Webinars', path: '/webinars' },
-        { label: 'Documentation', path: '/docs' },
-        { label: 'Developer Tools', path: '/developer-tools' },
-        { label: 'Training', path: '/training' },
+        { label: 'Resources Hub', path: '/resources' },
         { label: 'Blog', path: '/blog' },
       ]
     },
@@ -46,10 +43,6 @@ const Footer: React.FC = () => {
         { label: 'About Us', path: '/about' },
         { label: 'Our Team', path: '/team' },
         { label: 'Partners', path: '/partners' },
-        { label: 'News & Events', path: '/news' },
-        { label: 'Press Kit', path: '/press' },
-        { label: 'Investors', path: '/investors' },
-        { label: 'Careers', path: '/careers' },
       ]
     }
   ];
@@ -75,7 +68,7 @@ const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="bg-slate-900 border-t border-slate-800">
+    <footer className="bg-slate-900 border-t border-slate-800" role="contentinfo" aria-label="Site footer">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           {/* Company Info */}
@@ -187,5 +180,5 @@ const Footer: React.FC = () => {
   );
 };
 
-export default Footer;
+export default ModernFooter;
 

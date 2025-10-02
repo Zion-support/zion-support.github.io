@@ -73,7 +73,8 @@ const LatestContentBanner2025: React.FC = () => {
       emoji: "🏆",
       highlight: "MEGA SUCCESS",
       impact: "$10B Revenue"
-=======
+    },
+    {
       title: "Meta-Cognitive AI: The Thinking AI Revolution",
       description: "95% Decision Accuracy, $2M+ Annual Savings",
       slug: "meta-cognitive-ai-revolution-2025",
@@ -191,7 +192,6 @@ const LatestContentBanner2025: React.FC = () => {
           </p>
         </div>
 
-        <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">🚀 JUST PUBLISHED: 14 Revolutionary Breakthrough Articles!</h2>
         <p className="text-xl text-blue-100 mb-8 max-w-3xl">
           Experience <span className="font-bold text-yellow-300">3 REVOLUTIONARY breakthrough technologies</span> including our latest: "Meta-Cognitive AI: The Thinking AI Revolution" (95% decision accuracy, $2M+ savings), "Quantum-Neural Networks: 1000x Processing Speed" ($5M+ infrastructure savings), and "Autonomous Enterprise Operations: 98% Automation" ($10M+ annual savings) - plus comprehensive case studies and implementation guides!
         </p>
@@ -252,7 +252,6 @@ const LatestContentBanner2025: React.FC = () => {
                     <Zap className="w-4 h-4 text-cyan-400" />
                     {article.readTime}
                   </span>
-                  <span>{article.date ? new Date(article.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) : ''}</span>
                 </div>
 
                 {/* CTA Button */}

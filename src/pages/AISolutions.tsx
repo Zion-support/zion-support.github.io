@@ -1,92 +1,69 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Brain, Zap, Shield, Cloud, Database, Users, BarChart3, Cog, Target, Rocket } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
 const AISolutions: React.FC = () => {
   const aiSolutions = [
     {
       icon: Brain,
       title: 'Machine Learning & Deep Learning',
-      description: 'Advanced ML models and neural networks for predictive analytics and pattern recognition',
-      features: [
-        'Custom Model Development',
-        'Predictive Analytics',
-        'Computer Vision',
-        'Natural Language Processing',
-        'Recommendation Systems',
-        'Anomaly Detection'
-      ],
-      color: 'blue'
+      description: 'Advanced AI models for predictive analytics, pattern recognition, and intelligent decision making.',
+      features: ['Neural Networks', 'Predictive Analytics', 'Pattern Recognition', 'Automated Learning']
     },
     {
       icon: Zap,
-      title: 'AI Automation & Workflows',
-      description: 'Intelligent automation solutions that streamline business processes and reduce manual work',
-      features: [
-        'Process Automation',
-        'Workflow Optimization',
-        'RPA Integration',
-        'Smart Document Processing',
-        'Task Orchestration',
-        'Decision Automation'
-      ],
-      color: 'green'
+      title: 'AI Automation',
+      description: 'Streamline business processes with intelligent automation solutions.',
+      features: ['Process Automation', 'Workflow Optimization', 'Smart Decision Making', 'RPA Integration']
     },
     {
       icon: Shield,
-      title: 'AI Security & Compliance',
-      description: 'Enterprise-grade AI security solutions with built-in compliance and governance',
-      features: [
-        'AI Model Security',
-        'Data Privacy Protection',
-        'Compliance Monitoring',
-        'Threat Detection',
-        'Access Control',
-        'Audit Trails'
-      ],
-      color: 'red'
+      title: 'AI-Powered Cybersecurity',
+      description: 'Protect your digital assets with advanced AI-driven security solutions.',
+      features: ['Threat Detection', 'Anomaly Detection', 'Automated Response', 'Risk Assessment']
     },
     {
       icon: Cloud,
-      title: 'Cloud-Native AI Platforms',
-      description: 'Scalable AI infrastructure and platforms designed for cloud environments',
-      features: [
-        'Auto-scaling Infrastructure',
-        'Multi-cloud Deployment',
-        'Container Orchestration',
-        'API Management',
-        'Real-time Processing',
-        'Edge Computing'
-      ],
-      color: 'purple'
+      title: 'Cloud AI Services',
+      description: 'Scalable AI solutions delivered through cloud infrastructure.',
+      features: ['Cloud ML Platforms', 'AI APIs', 'Scalable Computing', 'Edge AI']
     },
     {
       icon: Database,
-      title: 'AI Data Management',
-      description: 'Intelligent data processing, storage, and analytics solutions',
-      features: [
-        'Data Pipeline Automation',
-        'Real-time Analytics',
-        'Data Quality Management',
-        'Feature Engineering',
-        'Data Lake Solutions',
-        'Stream Processing'
-      ],
-      color: 'orange'
+      title: 'Data Intelligence',
+      description: 'Transform raw data into actionable insights with AI-powered analytics.',
+      features: ['Data Mining', 'Business Intelligence', 'Real-time Analytics', 'Data Visualization']
     },
     {
       icon: Users,
-      title: 'AI-Powered Customer Experience',
-      description: 'Enhance customer interactions with intelligent chatbots, personalization, and support',
-      features: [
-        'Intelligent Chatbots',
-        'Personalization Engines',
-        'Customer Analytics',
-        'Sentiment Analysis',
-        'Predictive Support',
-        'Omnichannel AI'
-      ],
-      color: 'teal'
+      title: 'AI Customer Experience',
+      description: 'Enhance customer interactions with intelligent chatbots and personalization.',
+      features: ['Chatbots', 'Personalization', 'Sentiment Analysis', 'Customer Insights']
+    },
+    {
+      icon: BarChart3,
+      title: 'AI Business Intelligence',
+      description: 'Make data-driven decisions with AI-powered business intelligence tools.',
+      features: ['Predictive Modeling', 'Performance Analytics', 'Market Intelligence', 'Strategic Planning']
+    },
+    {
+      icon: Cog,
+      title: 'AI Operations',
+      description: 'Optimize operational efficiency with AI-driven process management.',
+      features: ['Process Optimization', 'Resource Allocation', 'Performance Monitoring', 'Quality Control']
+    },
+    {
+      icon: Target,
+      title: 'AI Strategy Consulting',
+      description: 'Strategic guidance for AI implementation and digital transformation.',
+      features: ['AI Roadmap', 'Technology Assessment', 'Change Management', 'ROI Optimization']
+    },
+    {
+      icon: Rocket,
+      title: 'AI Innovation Labs',
+      description: 'Cutting-edge AI research and development for breakthrough solutions.',
+      features: ['R&D Projects', 'Prototype Development', 'Innovation Workshops', 'Technology Transfer']
     }
   ];
 
