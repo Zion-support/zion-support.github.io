@@ -1,6 +1,13 @@
 import React, { JSX } from "react";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './app/page';
+import SolutionsPage from './app/solutions/page';
+import ResourcesPage from './app/resources/page';
+import TeamPage from './app/team/page';
+import NewsPage from './app/news/page';
+import PressPage from './app/press/page';
+import CareersPage from './app/careers/page';
+import MarketplacePage from './app/marketplace/page';
 import { Header, Footer } from './app/components/Navigation';
 import './app/globals.css';
 import ConsensusIntelligenceBreakthroughBanner from "./components/ConsensusIntelligenceBreakthroughBanner";
@@ -27,6 +34,13 @@ export default function App(): JSX.Element {
         <main className="min-h-screen">
           <Routes>
             <Route path="/" element={<HomePage />} />
+            <Route path="/solutions" element={<SolutionsPage />} />
+            <Route path="/resources" element={<ResourcesPage />} />
+            <Route path="/team" element={<TeamPage />} />
+            <Route path="/news" element={<NewsPage />} />
+            <Route path="/press" element={<PressPage />} />
+            <Route path="/careers" element={<CareersPage />} />
+            <Route path="/marketplace" element={<MarketplacePage />} />
             <Route path="/services" element={<div className="py-20 px-4"><h1 className="text-4xl font-bold text-center text-white">Services</h1></div>} />
             <Route path="/case-studies" element={<div className="py-20 px-4"><h1 className="text-4xl font-bold text-center text-white">Case Studies</h1></div>} />
             <Route path="/contact" element={<div className="py-20 px-4"><h1 className="text-4xl font-bold text-center text-white">Contact</h1></div>} />
