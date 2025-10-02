@@ -36,6 +36,7 @@ export const posts: BlogPost[] = [
     featured: true,
     readTime: "9 min read"
   },
+  {
     slug: "ai-2027-customer-experience-agents",
     title: "AI 2027: Customer Experience Agents — 24/7 Autonomous CX",
     description: "Deploy trusted CX agents with budgets, live KPIs, and instant rollback that resolve 80% of tickets autonomously.",

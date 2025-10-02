@@ -227,6 +227,9 @@ export default function HomePage() {
       {/* 🚀 NEWEST BREAKTHROUGH CONTENT - JANUARY 30, 2026 - REVOLUTIONARY AI TECHNOLOGIES! */}
       <NewContent2026BreakthroughBanner />
 
+      {/* 🚀 REVOLUTIONARY AI BREAKTHROUGH SHOWCASE */}
+      <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
+        <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-8 mb-16">
             <Link href="/blog/ai-2027-quantum-revolution" className="group">
               <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 backdrop-blur-lg rounded-2xl p-8 border border-purple-500/30 hover:border-purple-400/50 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/30">
@@ -337,6 +340,7 @@ export default function HomePage() {
             </div>
           </div>
         </div>
+        </div>
       </section>
       {/* 🚀 NEWEST 2027 CONTENT - BREAKTHROUGH QUANTUM AI & AUTONOMOUS INTELLIGENCE! */}
       <NewContent2027ShowcaseBanner />
@@ -376,6 +380,9 @@ export default function HomePage() {
               <h3 className="text-xl font-bold">AI 2027 Autonomous Governance Blueprint</h3>
               <p className="text-white/80 mt-2 text-sm">Policy → controls → telemetry → review. Ship autonomy safely with measurable guardrails.</p>
             </Link>
+          </div>
+        </div>
+      </section>
 
       {/* 🔔 New: Enterprise Autonomy Blueprint 2026 */}
       <AutonomyBlueprint2026Banner />
