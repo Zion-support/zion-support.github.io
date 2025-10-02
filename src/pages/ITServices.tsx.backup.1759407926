@@ -17,7 +17,10 @@ import {
   Smartphone,
   MessageSquare,
   Zap,
+<<<<<<< HEAD
+=======
   
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3026
   Settings,
   Monitor,
   Cpu,
@@ -47,13 +50,21 @@ export default function ITServices(): React.JSX.Element {
         "Security hardening and compliance setup",
         "Performance monitoring and optimization",
         "Disaster recovery and backup solutions",
+<<<<<<< HEAD
+        "24/7 cloud operations support",
+=======
         "24/7 cloud operations support"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3026
       ],
       benefits: [
         "50% reduction in infrastructure costs",
         "99.99% uptime guarantee",
         "3x faster application deployment",
+<<<<<<< HEAD
+        "Complete security compliance",
+=======
         "Complete security compliance"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3026
       ],
       useCases: ["Enterprise companies", "SaaS providers", "E-commerce platforms", "Healthcare systems"],
       marketSize: "$623.3B cloud computing market",
@@ -74,13 +85,21 @@ export default function ITServices(): React.JSX.Element {
         "Security information and event management (SIEM)",
         "Multi-factor authentication (MFA) implementation",
         "Continuous security monitoring",
+<<<<<<< HEAD
+        "Incident response automation",
+=======
         "Incident response automation"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3026
       ],
       benefits: [
         "95% reduction in security incidents",
         "100% compliance with industry standards",
         "Real-time threat detection and response",
+<<<<<<< HEAD
+        "Automated security policy enforcement",
+=======
         "Automated security policy enforcement"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3026
       ],
       useCases: ["Financial institutions", "Government agencies", "Healthcare organizations", "Large enterprises"],
       marketSize: "$366.1B cybersecurity market",
@@ -101,13 +120,21 @@ export default function ITServices(): React.JSX.Element {
         "Automated deployment and rollback",
         "Performance monitoring and alerting",
         "Security scanning and compliance checks",
+<<<<<<< HEAD
+        "Developer productivity tools integration",
+=======
         "Developer productivity tools integration"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3026
       ],
       benefits: [
         "10x faster deployment cycles",
         "80% reduction in deployment failures",
         "50% improvement in developer productivity",
+<<<<<<< HEAD
+        "Automated quality assurance",
+=======
         "Automated quality assurance"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3026
       ],
       useCases: ["Software companies", "Tech startups", "E-commerce platforms", "Financial services"],
       marketSize: "$10.3B DevOps market",
@@ -128,13 +155,21 @@ export default function ITServices(): React.JSX.Element {
         "Data quality monitoring and governance",
         "Machine learning pipeline integration",
         "Business intelligence dashboard creation",
+<<<<<<< HEAD
+        "Data security and privacy compliance",
+=======
         "Data security and privacy compliance"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3026
       ],
       benefits: [
         "5x faster data processing",
         "Real-time business insights",
         "90% reduction in data errors",
+<<<<<<< HEAD
+        "Automated data governance",
+=======
         "Automated data governance"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3026
       ],
       useCases: ["Analytics companies", "E-commerce platforms", "Financial services", "Healthcare systems"],
       marketSize: "$274.3B data analytics market",
@@ -142,11 +177,19 @@ export default function ITServices(): React.JSX.Element {
     },
     {
       id: "network-infrastructure",
+<<<<<<< HEAD
+      name: "Enterprise Network Infrastructure",
+      blurb: "High-performance network design with SD-WAN and security integration",
+      price: "$3,000 - $15,000/month",
+      eta: "2-6 weeks",
+      category: "Network Solutions",
+=======
       name: "Enterprise Network Infrastructure"
       blurb: "High-performance network design with SD-WAN and security integration"
       price: "$3,000 - $15,000/month"
       eta: "2-6 weeks"
       category: "Network Solutions"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3026
       icon: Network,
       features: [
         "SD-WAN implementation and optimization",
@@ -155,13 +198,21 @@ export default function ITServices(): React.JSX.Element {
         "Network monitoring and performance analytics",
         "Wireless infrastructure setup",
         "VPN and remote access solutions",
+<<<<<<< HEAD
+        "Disaster recovery network planning",
+=======
         "Disaster recovery network planning"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3026
       ],
       benefits: [
         "60% improvement in network performance",
         "99.9% network uptime guarantee",
         "40% reduction in network costs",
+<<<<<<< HEAD
+        "Enhanced security and compliance",
+=======
         "Enhanced security and compliance"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3026
       ],
       useCases: ["Multi-location businesses", "Remote work environments", "Healthcare networks", "Educational institutions"],
       marketSize: "$45.2B SD-WAN market",
@@ -169,11 +220,19 @@ export default function ITServices(): React.JSX.Element {
     },
     {
       id: "compliance-automation",
+<<<<<<< HEAD
+      name: "Compliance Automation Suite",
+      blurb: "Automated compliance monitoring for SOC 2, HIPAA, GDPR, and industry standards",
+      price: "$2,000 - $10,000/month",
+      eta: "2-4 weeks",
+      category: "Compliance & Governance",
+=======
       name: "Compliance Automation Suite"
       blurb: "Automated compliance monitoring for SOC 2, HIPAA, GDPR, and industry standards"
       price: "$2,000 - $10,000/month"
       eta: "2-4 weeks"
       category: "Compliance & Governance"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3026
       icon: Lock,
       features: [
         "Automated compliance monitoring and reporting",
@@ -182,13 +241,21 @@ export default function ITServices(): React.JSX.Element {
         "Audit trail and evidence collection",
         "Employee training and awareness programs",
         "Incident response and breach notification",
+<<<<<<< HEAD
+        "Regulatory change management",
+=======
         "Regulatory change management"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3026
       ],
       benefits: [
         "90% reduction in compliance costs",
         "100% audit readiness",
         "Automated risk management",
+<<<<<<< HEAD
+        "Continuous compliance monitoring",
+=======
         "Continuous compliance monitoring"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3026
       ],
       useCases: ["Healthcare providers", "Financial services", "SaaS companies", "Government contractors"],
       marketSize: "$56.9B compliance management market",
@@ -205,20 +272,35 @@ export default function ITServices(): React.JSX.Element {
     },
     {
       name: "24/7 IT Support & Monitoring",
+<<<<<<< HEAD
+      description: "Round-the-clock IT support with proactive monitoring",
+      price: "$800 - $3,000/month",
+=======
       description: "Round-the-clock IT support with proactive monitoring"
       price: "$800 - $3,000/month"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3026
       features: ["24/7 helpdesk", "Proactive monitoring", "Remote support", "SLA guarantees"]
     },
     {
       name: "Backup & Disaster Recovery",
+<<<<<<< HEAD
+      description: "Automated backup solutions with disaster recovery planning",
+      price: "$500 - $2,500/month",
+=======
       description: "Automated backup solutions with disaster recovery planning"
       price: "$500 - $2,500/month"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3026
       features: ["Automated backups", "Disaster recovery", "Business continuity", "Data protection"]
     },
     {
       name: "IT Consulting & Strategy",
+<<<<<<< HEAD
+      description: "Strategic IT planning and digital transformation consulting",
+      price: "$200 - $500/hour",
+=======
       description: "Strategic IT planning and digital transformation consulting"
       price: "$200 - $500/hour"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3026
       features: ["Strategic planning", "Technology roadmap", "Vendor selection", "Implementation guidance"]
     }
   ];

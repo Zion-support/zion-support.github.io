@@ -14,7 +14,10 @@ import {
   Clock,
   Star,
   TrendingUp,
+<<<<<<< HEAD
+=======
   
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3026
   Lock,
   Smartphone,
   Cloud,
@@ -50,7 +53,11 @@ export default function AIMicroSAAS(): React.JSX.Element {
       ],
       useCases: ["Marketing agencies", "E-commerce brands", "SaaS companies", "Content creators"],
       marketSize: "$8.2B content marketing market",
+<<<<<<< HEAD
+      link: "/contact"
+=======
       link: "/contact",
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3026
     },
     {
       id: "smart-automation-hub",
@@ -76,7 +83,11 @@ export default function AIMicroSAAS(): React.JSX.Element {
       ],
       useCases: ["HR departments", "Sales teams", "Customer support", "Operations"],
       marketSize: "$13.8B automation market",
+<<<<<<< HEAD
+      link: "/contact"
+=======
       link: "/contact",
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3026
     },
     {
       id: "ai-analytics-dashboard",
@@ -102,7 +113,11 @@ export default function AIMicroSAAS(): React.JSX.Element {
       ],
       useCases: ["C-level executives", "Marketing managers", "Sales directors", "Operations teams"],
       marketSize: "$33.3B business intelligence market",
+<<<<<<< HEAD
+      link: "/contact"
+=======
       link: "/contact",
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3026
     },
     {
       id: "customer-intelligence-platform",
@@ -128,7 +143,11 @@ export default function AIMicroSAAS(): React.JSX.Element {
       ],
       useCases: ["E-commerce platforms", "SaaS companies", "Retail chains", "Financial services"],
       marketSize: "$15.8B customer analytics market",
+<<<<<<< HEAD
+      link: "/contact"
+=======
       link: "/contact",
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3026
     },
     {
       id: "ai-security-monitor",
@@ -154,7 +173,11 @@ export default function AIMicroSAAS(): React.JSX.Element {
       ],
       useCases: ["Healthcare organizations", "Financial institutions", "Government agencies", "Enterprise companies"],
       marketSize: "$366.1B cybersecurity market",
+<<<<<<< HEAD
+      link: "/contact"
+=======
       link: "/contact",
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3026
     },
     {
       id: "voice-ai-assistant",
@@ -180,7 +203,11 @@ export default function AIMicroSAAS(): React.JSX.Element {
       ],
       useCases: ["Call centers", "Healthcare providers", "Financial services", "E-commerce support"],
       marketSize: "$45.2B conversational AI market",
+<<<<<<< HEAD
+      link: "/contact"
+=======
       link: "/contact",
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3026
     }
   ];
 
@@ -189,25 +216,41 @@ export default function AIMicroSAAS(): React.JSX.Element {
       name: "AI Document Processor",
       description: "Intelligent document analysis and data extraction",
       price: "$199 - $899/month",
+<<<<<<< HEAD
+      features: ["OCR with 99.5% accuracy", "Automated form processing", "Contract analysis", "Compliance checking"]
+=======
       features: ["OCR with 99.5% accuracy", "Automated form processing", "Contract analysis", "Compliance checking"],
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3026
     },
     {
       name: "Smart Inventory Manager",
       description: "AI-powered inventory optimization and demand forecasting",
       price: "$299 - $1,299/month",
+<<<<<<< HEAD
+      features: ["Demand forecasting", "Automated reordering", "Waste reduction", "Cost optimization"]
+=======
       features: ["Demand forecasting", "Automated reordering", "Waste reduction", "Cost optimization"],
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3026
     },
     {
       name: "AI Recruitment Suite",
       description: "Intelligent candidate screening and matching platform",
       price: "$399 - $1,599/month",
+<<<<<<< HEAD
+      features: ["Resume parsing", "Skill matching", "Interview scheduling", "Candidate ranking"]
+=======
       features: ["Resume parsing", "Skill matching", "Interview scheduling", "Candidate ranking"],
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3026
     },
     {
       name: "Predictive Maintenance AI",
       description: "Equipment monitoring and maintenance prediction",
       price: "$599 - $2,299/month",
+<<<<<<< HEAD
+      features: ["IoT sensor integration", "Failure prediction", "Maintenance scheduling", "Cost optimization"]
+=======
       features: ["IoT sensor integration", "Failure prediction", "Maintenance scheduling", "Cost optimization"],
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3026
     }
   ];
 
