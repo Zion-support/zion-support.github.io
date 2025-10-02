@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { onCLS, onFID, onFCP, onLCP, onTTFB } from 'web-vitals';
+import { onCLS, onFCP, onLCP, onTTFB } from 'web-vitals';
 
 interface PerformanceMetrics {
   cls: number | null;
@@ -10,7 +10,7 @@ interface PerformanceMetrics {
   score: number;
 }
 
-const PerformanceOptimizer: React.FC = () => {
+const PerformanceOptimizer: React.FC<{ isVisible?: boolean; onClose?: () => void }> = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     cls: null,
     fid: null,
@@ -71,7 +71,6 @@ const PerformanceOptimizer: React.FC = () => {
 
     // Measure Core Web Vitals
     onCLS(sendToAnalytics);
-    onFID(sendToAnalytics);
     onFCP(sendToAnalytics);
     onLCP(sendToAnalytics);
     onTTFB(sendToAnalytics);

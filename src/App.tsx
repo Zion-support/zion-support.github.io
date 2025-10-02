@@ -23,6 +23,7 @@ const SolutionsPage = React.lazy(() => import('./pages/SolutionsPage'));
 const BlogPage = React.lazy(() => import('./pages/BlogPage'));
 const CaseStudiesPage = React.lazy(() => import('./pages/CaseStudiesPage'));
 const Resources = React.lazy(() => import('./pages/Resources'));
+const ServicesCatalog = React.lazy(() => import('./pages/ServicesCatalog'));
 
 // Loading component
 const LoadingSpinner = () => (
@@ -38,22 +39,14 @@ const pageVariants = {
   out: { opacity: 0, y: -20 }
 };
 
-const pageTransition = {
+  const pageTransition: any = {
   type: "tween",
   ease: "anticipate",
   duration: 0.5
 };
 
 // Banner data
-const bannerData = [
-  {
-    id: 1,
-    title: "Welcome to Zion Tech Group",
-    content: "Leading AI and IT Solutions Provider",
-    link: "/about",
-    image: "/api/placeholder/1200/400"
-  }
-];
+  const bannerDataLocal = [] as any[];
 
 // Types and interfaces
 interface Notification {
@@ -125,13 +118,13 @@ const App: React.FC = () => {
   return (
     <>
       <HelmetProvider>
-        <AccessibilityEnhancer>
-          <EnhancedErrorBoundary>
+        <AccessibilityEnhancer></AccessibilityEnhancer>
+        <EnhancedErrorBoundary>
             <EnhancedSEOHead 
               title={seoDataForOptimizer.title} 
               description={seoDataForOptimizer.description} 
               canonical={seoDataForOptimizer.canonical}
-              keywords={['AI', 'IT Solutions', 'Enterprise Automation', 'Technology Services', 'Artificial Intelligence']}
+              keywords={'AI, IT Solutions, Enterprise Automation, Technology Services, Artificial Intelligence'}
               author="Zion Tech Group"
             />
             <Router>
@@ -148,7 +141,7 @@ const App: React.FC = () => {
                   className="relative"
                 >
                   <BannerManager
-                    banners={bannerData}
+                    banners={bannerDataLocal}
                     rotationInterval={8000}
                     maxVisibleBanners={3}
                   />
@@ -171,6 +164,15 @@ const App: React.FC = () => {
                           <Route path="/" element={<HomePage />} />
                           <Route path="/solutions/*" element={<SolutionsPage />} />
                           <Route path="/services/*" element={<ServicesPage />} />
+                          <Route path="/services/catalog" element={<ServicesCatalog />} />
+                          {/* Common service category shortcuts */}
+                          <Route path="/services/ai-services" element={<ServicesPage category="ai-solutions" />} />
+                          <Route path="/services/micro-saas" element={<ServicesPage category="automation" />} />
+                          <Route path="/services/it-services" element={<ServicesPage category="cloud" />} />
+                          <Route path="/services/cloud" element={<ServicesPage category="cloud" />} />
+                          <Route path="/services/analytics" element={<ServicesPage category="analytics" />} />
+                          <Route path="/services/security" element={<ServicesPage category="security" />} />
+                          <Route path="/services/automation" element={<ServicesPage category="automation" />} />
                           <Route path="/about" element={<AboutPage />} />
                           <Route path="/contact" element={<ContactPage />} />
                           <Route path="/blog/*" element={<BlogPage />} />
@@ -178,26 +180,26 @@ const App: React.FC = () => {
                           <Route path="/resources" element={<Resources />} />
                           
                           {/* Dynamic Routes for Solutions */}
-                          <Route path="/solutions/enterprise" element={<SolutionsPage category="enterprise" />} />
-                          <Route path="/solutions/smb" element={<SolutionsPage category="smb" />} />
-                          <Route path="/solutions/startup" element={<SolutionsPage category="startup" />} />
-                          <Route path="/solutions/government" element={<SolutionsPage category="government" />} />
-                          <Route path="/solutions/healthcare" element={<SolutionsPage category="healthcare" />} />
-                          <Route path="/solutions/financial" element={<SolutionsPage category="financial" />} />
-                          <Route path="/solutions/manufacturing" element={<SolutionsPage category="manufacturing" />} />
-                          <Route path="/solutions/retail" element={<SolutionsPage category="retail" />} />
-                          <Route path="/solutions/education" element={<SolutionsPage category="education" />} />
-                          <Route path="/solutions/transportation" element={<SolutionsPage category="transportation" />} />
+                          <Route path="/solutions/enterprise" element={<SolutionsPage />} />
+                          <Route path="/solutions/smb" element={<SolutionsPage />} />
+                          <Route path="/solutions/startup" element={<SolutionsPage />} />
+                          <Route path="/solutions/government" element={<SolutionsPage />} />
+                          <Route path="/solutions/healthcare" element={<SolutionsPage />} />
+                          <Route path="/solutions/financial" element={<SolutionsPage />} />
+                          <Route path="/solutions/manufacturing" element={<SolutionsPage />} />
+                          <Route path="/solutions/retail" element={<SolutionsPage />} />
+                          <Route path="/solutions/education" element={<SolutionsPage />} />
+                          <Route path="/solutions/transportation" element={<SolutionsPage />} />
                           
                           {/* Dynamic Routes for Services */}
-                          <Route path="/services/ai-content-generator" element={<ServicesPage service="ai-content-generator" />} />
-                          <Route path="/services/smart-appointment-scheduler" element={<ServicesPage service="smart-appointment-scheduler" />} />
-                          <Route path="/services/ai-workflow-automation" element={<ServicesPage service="ai-workflow-automation" />} />
-                          <Route path="/services/ai-virtual-assistant" element={<ServicesPage service="ai-virtual-assistant" />} />
-                          <Route path="/services/ai-data-analytics" element={<ServicesPage service="ai-data-analytics" />} />
-                          <Route path="/services/ai-intelligent-document-processing" element={<ServicesPage service="ai-intelligent-document-processing" />} />
-                          <Route path="/services/real-time-cognitive-automation" element={<ServicesPage service="real-time-cognitive-automation" />} />
-                          <Route path="/services/advanced-cybersecurity-ai" element={<ServicesPage service="advanced-cybersecurity-ai" />} />
+                          <Route path="/services/ai-content-generator" element={<ServicesPage />} />
+                          <Route path="/services/smart-appointment-scheduler" element={<ServicesPage />} />
+                          <Route path="/services/ai-workflow-automation" element={<ServicesPage />} />
+                          <Route path="/services/ai-virtual-assistant" element={<ServicesPage />} />
+                          <Route path="/services/ai-data-analytics" element={<ServicesPage />} />
+                          <Route path="/services/ai-intelligent-document-processing" element={<ServicesPage />} />
+                          <Route path="/services/real-time-cognitive-automation" element={<ServicesPage />} />
+                          <Route path="/services/advanced-cybersecurity-ai" element={<ServicesPage />} />
                           
                           {/* AI Solutions Routes */}
                           <Route path="/ai-solutions" element={<ServicesPage category="ai-solutions" />} />
@@ -232,7 +234,6 @@ const App: React.FC = () => {
               </div>
             </Router>
           </EnhancedErrorBoundary>
-        </AccessibilityEnhancer>
 
       {showPerformanceOptimizer && (
         <div className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center" role="dialog" aria-modal="true">
