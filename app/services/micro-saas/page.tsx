@@ -158,6 +158,176 @@ export default function MicroSaasServices() {
       category: 'Analytics',
       marketPrice: '$1000-4000/month',
       benefits: 'Make data-driven decisions 24/7 from anywhere'
+    },
+    {
+      name: 'AI Social Media Manager',
+      description: 'Intelligent social media automation and content optimization platform',
+      icon: MessageSquare,
+      features: [
+        'AI-powered content generation and scheduling',
+        'Cross-platform posting and analytics',
+        'Hashtag optimization and trend analysis',
+        'Engagement automation and response management',
+        'ROI tracking and performance insights'
+      ],
+      pricing: '$399 - $2,499/month',
+      delivery: '2-3 weeks',
+      category: 'Social Media',
+      marketPrice: '$800-4000/month',
+      benefits: 'Increase social engagement by 150% with 50% less effort'
+    },
+    {
+      name: 'Blockchain Invoice Tracker',
+      description: 'Decentralized invoice management and payment tracking system',
+      icon: Database,
+      features: [
+        'Blockchain-based invoice verification',
+        'Smart contract automation',
+        'Cryptocurrency payment integration',
+        'Fraud prevention and audit trails',
+        'Multi-currency support and conversion'
+      ],
+      pricing: '$699 - $4,999/month',
+      delivery: '3-5 weeks',
+      category: 'Blockchain',
+      marketPrice: '$1500-8000/month',
+      benefits: 'Eliminate payment disputes and reduce processing time by 80%'
+    },
+    {
+      name: 'AI Customer Support Bot',
+      description: 'Advanced chatbot with natural language processing and human handoff',
+      icon: Users,
+      features: [
+        'Multi-language conversational AI',
+        'Context-aware responses and learning',
+        'Seamless human agent escalation',
+        'Integration with CRM and ticketing systems',
+        'Performance analytics and optimization'
+      ],
+      pricing: '$599 - $3,999/month',
+      delivery: '2-4 weeks',
+      category: 'Customer Support',
+      marketPrice: '$1200-6000/month',
+      benefits: 'Handle 85% of inquiries automatically with 95% satisfaction'
+    },
+    {
+      name: 'IoT Device Management Platform',
+      description: 'Comprehensive IoT device monitoring and management solution',
+      icon: Zap,
+      features: [
+        'Real-time device monitoring and alerts',
+        'Remote device configuration and updates',
+        'Data analytics and predictive maintenance',
+        'Multi-protocol support (MQTT, CoAP, HTTP)',
+        'Security management and access control'
+      ],
+      pricing: '$1,299 - $7,999/month',
+      delivery: '4-8 weeks',
+      category: 'IoT',
+      marketPrice: '$2500-12000/month',
+      benefits: 'Reduce device downtime by 70% with proactive maintenance'
+    },
+    {
+      name: 'AI-Powered Inventory Optimizer',
+      description: 'Intelligent inventory management with demand forecasting',
+      icon: BarChart3,
+      features: [
+        'AI-driven demand forecasting',
+        'Automated reorder point optimization',
+        'Multi-location inventory tracking',
+        'Supplier performance analytics',
+        'Integration with ERP and POS systems'
+      ],
+      pricing: '$899 - $5,999/month',
+      delivery: '3-6 weeks',
+      category: 'Supply Chain',
+      marketPrice: '$1800-9000/month',
+      benefits: 'Reduce inventory costs by 30% while improving stock availability'
+    },
+    {
+      name: 'Voice-Controlled Meeting Assistant',
+      description: 'AI-powered meeting transcription, summarization, and action item tracking',
+      icon: Mic,
+      features: [
+        'Real-time meeting transcription',
+        'AI-generated meeting summaries',
+        'Action item extraction and tracking',
+        'Voice command integration',
+        'Calendar and CRM synchronization'
+      ],
+      pricing: '$299 - $1,999/month',
+      delivery: '2-3 weeks',
+      category: 'Productivity',
+      marketPrice: '$600-3000/month',
+      benefits: 'Save 5+ hours weekly on meeting management and follow-ups'
+    },
+    {
+      name: 'AI Legal Document Analyzer',
+      description: 'Intelligent contract analysis and legal document review platform',
+      icon: FileText,
+      features: [
+        'Contract clause analysis and risk assessment',
+        'Legal precedent matching',
+        'Compliance checking and reporting',
+        'Automated contract generation',
+        'Integration with legal databases'
+      ],
+      pricing: '$1,599 - $9,999/month',
+      delivery: '4-8 weeks',
+      category: 'Legal Tech',
+      marketPrice: '$3000-15000/month',
+      benefits: 'Reduce contract review time by 90% with 99% accuracy'
+    },
+    {
+      name: 'Quantum-Safe Password Manager',
+      description: 'Next-generation password management with quantum-resistant encryption',
+      icon: Shield,
+      features: [
+        'Quantum-resistant encryption algorithms',
+        'Biometric authentication support',
+        'Cross-platform synchronization',
+        'Breach monitoring and alerts',
+        'Team password sharing and management'
+      ],
+      pricing: '$199 - $1,299/month',
+      delivery: '2-4 weeks',
+      category: 'Cybersecurity',
+      marketPrice: '$400-2000/month',
+      benefits: 'Future-proof security with quantum-safe encryption'
+    },
+    {
+      name: 'AI-Powered Learning Management System',
+      description: 'Intelligent educational platform with personalized learning paths',
+      icon: Users,
+      features: [
+        'AI-driven personalized learning recommendations',
+        'Automated assessment and grading',
+        'Progress tracking and analytics',
+        'Multi-modal content support',
+        'Gamification and engagement tools'
+      ],
+      pricing: '$999 - $6,999/month',
+      delivery: '4-10 weeks',
+      category: 'EdTech',
+      marketPrice: '$2000-10000/month',
+      benefits: 'Improve learning outcomes by 40% with personalized education'
+    },
+    {
+      name: 'Sustainable Business Analytics Platform',
+      description: 'ESG tracking and sustainability reporting automation platform',
+      icon: BarChart3,
+      features: [
+        'Carbon footprint tracking and reporting',
+        'ESG metrics monitoring and analysis',
+        'Sustainability goal setting and tracking',
+        'Regulatory compliance reporting',
+        'Stakeholder communication tools'
+      ],
+      pricing: '$799 - $4,999/month',
+      delivery: '3-6 weeks',
+      category: 'Sustainability',
+      marketPrice: '$1500-7500/month',
+      benefits: 'Streamline ESG reporting and improve sustainability scores by 35%'
     }
   ];
 
