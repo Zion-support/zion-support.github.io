@@ -45,6 +45,130 @@ export const services: Service[] = [
     ]
   },
   {
+    slug: 'ai-code-review-assistant',
+    name: 'AI Code Review Assistant',
+    category: 'AI Services',
+    headline: 'Automated code review with AI-powered quality analysis and security scanning',
+    description:
+      'Revolutionize your development workflow with AI-powered code review that identifies bugs, security vulnerabilities, performance issues, and suggests improvements.',
+    features: [
+      'Automated bug detection and security scanning',
+      'Code quality metrics and improvement suggestions',
+      'Performance optimization recommendations',
+      'Integration with GitHub, GitLab, and Bitbucket',
+      'Custom coding standards enforcement',
+      'Real-time feedback during development'
+    ],
+    benefits: [
+      'Reduce code review time by 70%',
+      'Catch 90% more bugs before production',
+      'Improve code quality and maintainability',
+      'Accelerate development cycles'
+    ],
+    pricing: [
+      { plan: 'Developer', pricePerMonthUsd: 29, includes: ['Up to 5 repositories', 'Basic AI analysis', 'Email support'] },
+      { plan: 'Team', pricePerMonthUsd: 99, includes: ['Up to 25 repositories', 'Advanced security scanning', 'Priority support'] },
+      { plan: 'Enterprise', pricePerMonthUsd: 299, includes: ['Unlimited repositories', 'Custom rules', 'Dedicated support'] }
+    ],
+    externalLinks: [
+      { label: 'GitHub Code Review Best Practices', url: 'https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests' },
+      { label: 'OWASP Security Guidelines', url: 'https://owasp.org/www-project-top-ten/' }
+    ]
+  },
+  {
+    slug: 'ai-document-processing-platform',
+    name: 'AI Document Processing Platform',
+    category: 'AI Services',
+    headline: 'Intelligent document processing with OCR, data extraction, and workflow automation',
+    description:
+      'Transform unstructured documents into actionable data with AI-powered OCR, intelligent data extraction, and automated workflow processing.',
+    features: [
+      'Advanced OCR with 99.5% accuracy',
+      'Intelligent data extraction and classification',
+      'Automated workflow processing',
+      'Multi-language document support',
+      'Integration with popular business systems',
+      'Custom template creation and training'
+    ],
+    benefits: [
+      'Process documents 10x faster than manual methods',
+      'Reduce data entry errors by 95%',
+      'Save 20+ hours per week on document processing',
+      'Improve compliance and audit trails'
+    ],
+    pricing: [
+      { plan: 'Starter', pricePerMonthUsd: 149, includes: ['Up to 1,000 documents', 'Basic OCR', 'Email support'] },
+      { plan: 'Professional', pricePerMonthUsd: 399, includes: ['Up to 10,000 documents', 'Advanced AI extraction', 'Priority support'] },
+      { plan: 'Enterprise', pricePerMonthUsd: 999, includes: ['Unlimited documents', 'Custom workflows', 'Dedicated support'] }
+    ],
+    externalLinks: [
+      { label: 'Document Processing Industry Report', url: 'https://www.gartner.com/en/information-technology/glossary/document-processing' },
+      { label: 'OCR Technology Guide', url: 'https://www.ibm.com/cloud/learn/optical-character-recognition' }
+    ]
+  },
+  {
+    slug: 'ai-customer-insights-platform',
+    name: 'AI Customer Insights Platform',
+    category: 'AI Services',
+    headline: 'Unlock customer behavior insights with AI-powered analytics and predictive modeling',
+    description:
+      'Gain deep customer insights with AI-powered analytics, sentiment analysis, churn prediction, and personalized recommendation engines.',
+    features: [
+      'Real-time customer behavior analytics',
+      'Sentiment analysis across all touchpoints',
+      'Churn prediction and retention strategies',
+      'Personalized recommendation engines',
+      'Customer journey mapping and optimization',
+      'Advanced segmentation and targeting'
+    ],
+    benefits: [
+      'Increase customer lifetime value by 35%',
+      'Reduce churn rate by 40%',
+      'Improve customer satisfaction scores',
+      'Drive data-driven marketing decisions'
+    ],
+    pricing: [
+      { plan: 'Starter', pricePerMonthUsd: 199, includes: ['Up to 10,000 customers', 'Basic analytics', 'Email support'] },
+      { plan: 'Growth', pricePerMonthUsd: 499, includes: ['Up to 100,000 customers', 'Advanced AI features', 'Priority support'] },
+      { plan: 'Enterprise', pricePerMonthUsd: 1299, includes: ['Unlimited customers', 'Custom models', 'Dedicated support'] }
+    ],
+    externalLinks: [
+      { label: 'Customer Analytics Best Practices', url: 'https://www.salesforce.com/resources/articles/customer-analytics/' },
+      { label: 'Predictive Analytics Guide', url: 'https://www.ibm.com/cloud/learn/predictive-analytics' }
+    ]
+  },
+  {
+    slug: 'ai-predictive-analytics-suite',
+    name: 'AI Predictive Analytics Suite',
+    category: 'AI Services',
+    headline: 'Advanced predictive analytics with machine learning models and forecasting',
+    description:
+      'Leverage advanced machine learning models for accurate forecasting, trend analysis, and predictive insights across your business operations.',
+    features: [
+      'Advanced machine learning algorithms',
+      'Real-time forecasting and trend analysis',
+      'Custom model development and training',
+      'Automated report generation',
+      'Integration with business intelligence tools',
+      'Scenario planning and what-if analysis'
+    ],
+    benefits: [
+      'Improve forecast accuracy by 60%',
+      'Reduce inventory costs by 25%',
+      'Optimize resource allocation',
+      'Make data-driven strategic decisions'
+    ],
+    pricing: [
+      { plan: 'Analyst', pricePerMonthUsd: 299, includes: ['Up to 5 models', 'Basic forecasting', 'Email support'] },
+      { plan: 'Data Scientist', pricePerMonthUsd: 799, includes: ['Up to 20 models', 'Advanced ML features', 'Priority support'] },
+      { plan: 'Enterprise', pricePerMonthUsd: 1999, includes: ['Unlimited models', 'Custom algorithms', 'Dedicated support'] }
+    ],
+    externalLinks: [
+      { label: 'Predictive Analytics Market Research', url: 'https://www.gartner.com/en/information-technology/glossary/predictive-analytics' },
+      { label: 'Machine Learning Best Practices', url: 'https://cloud.google.com/architecture/mlops-continuous-delivery-and-automation-pipelines-in-machine-learning' }
+    ]
+  },
+  {
     slug: 'ai-lead-scoring-api',
     name: 'AI Lead Scoring API',
     category: 'Micro SaaS',
@@ -73,6 +197,130 @@ export const services: Service[] = [
     ]
   },
   {
+    slug: 'ai-invoice-processing-saas',
+    name: 'AI Invoice Processing SaaS',
+    category: 'Micro SaaS',
+    headline: 'Automated invoice processing with AI-powered data extraction and approval workflows',
+    description:
+      'Streamline your accounts payable with AI-powered invoice processing that automatically extracts data, validates information, and routes for approval.',
+    features: [
+      'Automated invoice data extraction',
+      'Smart approval routing and workflows',
+      'Integration with accounting systems',
+      'Duplicate detection and fraud prevention',
+      'Real-time processing status tracking',
+      'Custom approval rules and thresholds'
+    ],
+    benefits: [
+      'Process invoices 15x faster',
+      'Reduce processing costs by 80%',
+      'Eliminate manual data entry errors',
+      'Improve cash flow management'
+    ],
+    pricing: [
+      { plan: 'Small Business', pricePerMonthUsd: 79, includes: ['Up to 100 invoices', 'Basic AI extraction', 'Email support'] },
+      { plan: 'Professional', pricePerMonthUsd: 199, includes: ['Up to 500 invoices', 'Advanced workflows', 'Priority support'] },
+      { plan: 'Enterprise', pricePerMonthUsd: 499, includes: ['Unlimited invoices', 'Custom integrations', 'Dedicated support'] }
+    ],
+    externalLinks: [
+      { label: 'Invoice Processing Automation Guide', url: 'https://www.sap.com/products/financial-management/invoice-processing.html' },
+      { label: 'Accounts Payable Best Practices', url: 'https://www.netsuite.com/portal/resource/articles/accounting/accounts-payable.shtml' }
+    ]
+  },
+  {
+    slug: 'smart-expense-tracking-saas',
+    name: 'Smart Expense Tracking SaaS',
+    category: 'Micro SaaS',
+    headline: 'AI-powered expense tracking with receipt scanning and automated categorization',
+    description:
+      'Simplify expense management with AI-powered receipt scanning, automatic categorization, and intelligent expense reporting for individuals and teams.',
+    features: [
+      'AI-powered receipt scanning and OCR',
+      'Automatic expense categorization',
+      'Smart duplicate detection',
+      'Real-time expense reporting',
+      'Integration with accounting software',
+      'Mobile app for on-the-go tracking'
+    ],
+    benefits: [
+      'Save 5+ hours per week on expense management',
+      'Reduce expense processing errors by 95%',
+      'Improve compliance and audit readiness',
+      'Streamline reimbursement processes'
+    ],
+    pricing: [
+      { plan: 'Individual', pricePerMonthUsd: 9, includes: ['Unlimited receipts', 'Basic categorization', 'Email support'] },
+      { plan: 'Team', pricePerMonthUsd: 29, includes: ['Up to 10 users', 'Advanced features', 'Priority support'] },
+      { plan: 'Business', pricePerMonthUsd: 79, includes: ['Unlimited users', 'Custom workflows', 'Dedicated support'] }
+    ],
+    externalLinks: [
+      { label: 'Expense Management Software Comparison', url: 'https://www.capterra.com/expense-management-software/' },
+      { label: 'Receipt Scanning Technology', url: 'https://www.adobe.com/acrobat/how-to/scan-receipts-mobile-app.html' }
+    ]
+  },
+  {
+    slug: 'automated-meeting-scheduler-saas',
+    name: 'Automated Meeting Scheduler SaaS',
+    category: 'Micro SaaS',
+    headline: 'Intelligent meeting scheduling with AI-powered optimization and conflict resolution',
+    description:
+      'Eliminate scheduling headaches with AI-powered meeting coordination that finds optimal times, handles conflicts, and manages complex scheduling scenarios.',
+    features: [
+      'AI-powered optimal time suggestions',
+      'Automatic conflict detection and resolution',
+      'Multi-timezone coordination',
+      'Integration with calendar systems',
+      'Smart buffer time management',
+      'Custom scheduling rules and preferences'
+    ],
+    benefits: [
+      'Reduce scheduling time by 90%',
+      'Eliminate double-bookings',
+      'Improve meeting attendance rates',
+      'Optimize team productivity'
+    ],
+    pricing: [
+      { plan: 'Personal', pricePerMonthUsd: 15, includes: ['Up to 3 calendars', 'Basic scheduling', 'Email support'] },
+      { plan: 'Professional', pricePerMonthUsd: 39, includes: ['Up to 10 calendars', 'Advanced features', 'Priority support'] },
+      { plan: 'Enterprise', pricePerMonthUsd: 99, includes: ['Unlimited calendars', 'Custom integrations', 'Dedicated support'] }
+    ],
+    externalLinks: [
+      { label: 'Meeting Scheduling Best Practices', url: 'https://www.microsoft.com/en-us/microsoft-365/blog/2020/03/12/meeting-scheduling-best-practices/' },
+      { label: 'Calendar Integration Guide', url: 'https://developers.google.com/calendar/api/v3/reference' }
+    ]
+  },
+  {
+    slug: 'ai-resume-screening-saas',
+    name: 'AI Resume Screening SaaS',
+    category: 'Micro SaaS',
+    headline: 'Automated resume screening with AI-powered candidate matching and ranking',
+    description:
+      'Accelerate your hiring process with AI-powered resume screening that automatically matches candidates to job requirements and ranks them by fit.',
+    features: [
+      'AI-powered resume parsing and analysis',
+      'Automatic candidate-job matching',
+      'Intelligent ranking and scoring',
+      'Integration with ATS systems',
+      'Bias detection and mitigation',
+      'Custom screening criteria'
+    ],
+    benefits: [
+      'Screen resumes 10x faster',
+      'Improve candidate quality by 40%',
+      'Reduce hiring bias',
+      'Accelerate time-to-hire'
+    ],
+    pricing: [
+      { plan: 'Startup', pricePerMonthUsd: 49, includes: ['Up to 100 resumes', 'Basic AI screening', 'Email support'] },
+      { plan: 'Growth', pricePerMonthUsd: 149, includes: ['Up to 500 resumes', 'Advanced matching', 'Priority support'] },
+      { plan: 'Enterprise', pricePerMonthUsd: 399, includes: ['Unlimited resumes', 'Custom integrations', 'Dedicated support'] }
+    ],
+    externalLinks: [
+      { label: 'AI in Recruitment Research', url: 'https://www.gartner.com/en/human-resources/insights/artificial-intelligence-in-recruiting' },
+      { label: 'ATS Integration Guide', url: 'https://www.workday.com/en-us/products/human-capital-management/recruiting.html' }
+    ]
+  },
+  {
     slug: 'cloud-native-devops-platform',
     name: 'Cloud-Native DevOps Platform',
     category: 'IT Services',
@@ -98,6 +346,130 @@ export const services: Service[] = [
     externalLinks: [
       { label: 'Terraform docs', url: 'https://developer.hashicorp.com/terraform/docs' },
       { label: 'Google SRE workbook', url: 'https://sre.google/workbook/' }
+    ]
+  },
+  {
+    slug: 'cloud-migration-consulting',
+    name: 'Cloud Migration Consulting',
+    category: 'IT Services',
+    headline: 'Expert cloud migration services with zero-downtime strategies and cost optimization',
+    description:
+      'Accelerate your cloud transformation with expert consulting services that ensure seamless migration, optimal architecture, and maximum ROI.',
+    features: [
+      'Comprehensive cloud readiness assessment',
+      'Zero-downtime migration strategies',
+      'Cost optimization and FinOps implementation',
+      'Security and compliance framework alignment',
+      'Performance optimization and monitoring',
+      'Training and knowledge transfer'
+    ],
+    benefits: [
+      'Reduce migration time by 50%',
+      'Achieve 30% cost savings post-migration',
+      'Minimize business disruption',
+      'Ensure security and compliance'
+    ],
+    pricing: [
+      { plan: 'Assessment', pricePerMonthUsd: 5000, includes: ['Cloud readiness analysis', 'Migration roadmap', 'Cost estimation'] },
+      { plan: 'Migration', pricePerMonthUsd: 15000, includes: ['Full migration execution', 'Testing and validation', 'Go-live support'] },
+      { plan: 'Enterprise', pricePerMonthUsd: 'Custom', includes: ['Custom migration strategy', 'Dedicated team', 'Ongoing optimization'] }
+    ],
+    externalLinks: [
+      { label: 'AWS Migration Guide', url: 'https://aws.amazon.com/migration/' },
+      { label: 'Azure Migration Center', url: 'https://azure.microsoft.com/en-us/migration/' }
+    ]
+  },
+  {
+    slug: 'cybersecurity-assessment-service',
+    name: 'Cybersecurity Assessment Service',
+    category: 'IT Services',
+    headline: 'Comprehensive cybersecurity assessment with penetration testing and compliance auditing',
+    description:
+      'Protect your organization with comprehensive cybersecurity assessments, penetration testing, and compliance auditing services.',
+    features: [
+      'Vulnerability assessment and scanning',
+      'Penetration testing and ethical hacking',
+      'Compliance auditing (SOC2, ISO27001, GDPR)',
+      'Security architecture review',
+      'Incident response planning',
+      'Security awareness training'
+    ],
+    benefits: [
+      'Identify and remediate security vulnerabilities',
+      'Ensure compliance with industry standards',
+      'Reduce security breach risk',
+      'Improve security posture'
+    ],
+    pricing: [
+      { plan: 'Basic Assessment', pricePerMonthUsd: 2500, includes: ['Vulnerability scanning', 'Basic report', 'Email support'] },
+      { plan: 'Comprehensive', pricePerMonthUsd: 7500, includes: ['Penetration testing', 'Compliance audit', 'Priority support'] },
+      { plan: 'Enterprise', pricePerMonthUsd: 15000, includes: ['Full security assessment', 'Custom testing', 'Dedicated support'] }
+    ],
+    externalLinks: [
+      { label: 'NIST Cybersecurity Framework', url: 'https://www.nist.gov/cyberframework' },
+      { label: 'OWASP Security Guidelines', url: 'https://owasp.org/www-project-top-ten/' }
+    ]
+  },
+  {
+    slug: 'devops-automation-service',
+    name: 'DevOps Automation Service',
+    category: 'IT Services',
+    headline: 'Complete DevOps automation with CI/CD pipelines, infrastructure as code, and monitoring',
+    description:
+      'Transform your development workflow with comprehensive DevOps automation including CI/CD pipelines, infrastructure as code, and advanced monitoring.',
+    features: [
+      'Custom CI/CD pipeline development',
+      'Infrastructure as Code implementation',
+      'Container orchestration and management',
+      'Monitoring and alerting setup',
+      'Security scanning and compliance',
+      'Performance optimization'
+    ],
+    benefits: [
+      'Accelerate software delivery by 300%',
+      'Reduce deployment failures by 80%',
+      'Improve system reliability and uptime',
+      'Enable faster time-to-market'
+    ],
+    pricing: [
+      { plan: 'Starter', pricePerMonthUsd: 2000, includes: ['Basic CI/CD setup', 'Standard monitoring', 'Email support'] },
+      { plan: 'Professional', pricePerMonthUsd: 5000, includes: ['Advanced automation', 'Custom monitoring', 'Priority support'] },
+      { plan: 'Enterprise', pricePerMonthUsd: 12000, includes: ['Full DevOps transformation', 'Custom solutions', 'Dedicated support'] }
+    ],
+    externalLinks: [
+      { label: 'DevOps Best Practices', url: 'https://aws.amazon.com/devops/what-is-devops/' },
+      { label: 'CI/CD Pipeline Guide', url: 'https://www.atlassian.com/continuous-delivery/ci-cd-pipeline' }
+    ]
+  },
+  {
+    slug: 'api-integration-services',
+    name: 'API Integration Services',
+    category: 'IT Services',
+    headline: 'Expert API development and integration services for seamless system connectivity',
+    description:
+      'Connect your systems and applications with expert API development, integration, and management services for optimal performance and security.',
+    features: [
+      'Custom API development and design',
+      'Third-party API integration',
+      'API security and authentication',
+      'Performance optimization and monitoring',
+      'Documentation and testing',
+      'API lifecycle management'
+    ],
+    benefits: [
+      'Improve system connectivity and data flow',
+      'Reduce integration complexity',
+      'Enhance security and performance',
+      'Accelerate digital transformation'
+    ],
+    pricing: [
+      { plan: 'Basic Integration', pricePerMonthUsd: 1500, includes: ['Simple API connections', 'Basic documentation', 'Email support'] },
+      { plan: 'Advanced Integration', pricePerMonthUsd: 4000, includes: ['Complex integrations', 'Custom APIs', 'Priority support'] },
+      { plan: 'Enterprise', pricePerMonthUsd: 8000, includes: ['Full API strategy', 'Custom development', 'Dedicated support'] }
+    ],
+    externalLinks: [
+      { label: 'API Design Best Practices', url: 'https://restfulapi.net/' },
+      { label: 'API Security Guidelines', url: 'https://owasp.org/www-project-api-security/' }
     ]
   },
   {
