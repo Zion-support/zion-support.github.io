@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import PromoBanner from './PromoBanner';
 
 const Header: React.FC = () => {
@@ -54,7 +54,7 @@ const Header: React.FC = () => {
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
+          <Link to="/" className="flex items-center space-x-2">
             <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-lg">Z</span>
             </div>
@@ -66,7 +66,7 @@ const Header: React.FC = () => {
             {navigation.map((item) => (
               <div key={item.name} className="relative group">
                 <Link
-                  href={item.href}
+                  to={item.href}
                   className="text-gray-700 hover:text-blue-600 font-medium transition-colors flex items-center gap-1"
                 >
                   {item.name}
@@ -84,7 +84,7 @@ const Header: React.FC = () => {
                       {item.submenu.map((subItem) => (
                         <Link
                           key={subItem.name}
-                          href={subItem.href}
+                          to={subItem.href}
                           className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
                         >
                           {subItem.name}
@@ -97,7 +97,7 @@ const Header: React.FC = () => {
             ))}
             
             <Link
-              href="/contact"
+              to="/contact"
               className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors"
             >
               Get Started
@@ -122,7 +122,7 @@ const Header: React.FC = () => {
               {navigation.map((item) => (
                 <div key={item.name}>
                   <Link
-                    href={item.href}
+                    to={item.href}
                     className="text-gray-700 hover:text-blue-600 font-medium py-2 transition-colors block"
                     onClick={() => setIsMenuOpen(false)}
                   >
@@ -133,7 +133,7 @@ const Header: React.FC = () => {
                       {item.submenu.map((subItem) => (
                         <Link
                           key={subItem.name}
-                          href={subItem.href}
+                          to={subItem.href}
                           className="text-gray-600 hover:text-blue-600 text-sm py-1 transition-colors block"
                           onClick={() => setIsMenuOpen(false)}
                         >
@@ -146,7 +146,7 @@ const Header: React.FC = () => {
               ))}
               
               <Link
-                href="/contact"
+                to="/contact"
                 className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors text-center mt-4"
                 onClick={() => setIsMenuOpen(false)}
               >
