@@ -1,11 +1,6 @@
 import React from 'react';
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: 'AI & IT Services | Zion Tech Group - Enterprise Solutions',
-  description: 'Comprehensive AI services, micro SaaS solutions, and IT consulting. Transform your business with cutting-edge technology and automation.',
-  keywords: 'AI services, micro SaaS, IT consulting, cloud migration, DevOps, enterprise software, automation',
-};
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
 export default function ServicesPage() {
   const serviceCategories = [
