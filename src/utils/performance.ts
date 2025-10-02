@@ -1,36 +1,57 @@
-// Performance utilities for the Zion Tech Group website
-
+// Enhanced performance utilities
 export const preloadCriticalResources = () => {
   // Preload critical fonts
-  const fontLink = document.createElement('link');
-  fontLink.rel = 'preload';
-  fontLink.href = '/fonts/inter-var.woff2';
-  fontLink.as = 'font';
-  fontLink.type = 'font/woff2';
-  fontLink.crossOrigin = 'anonymous';
-  document.head.appendChild(fontLink);
+  const fontPreloads = [
+    'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap'
+  ];
+
+  fontPreloads.forEach(font => {
+    const link = document.createElement('link');
+    link.rel = 'preload';
+    link.as = 'style';
+    link.href = font;
+    document.head.appendChild(link);
+  });
 
   // Preload critical images
   const criticalImages = [
-    '/images/hero-bg.webp',
-    '/images/logo.svg',
-    '/images/cta-bg.webp'
+    '/logo.png',
+    '/hero-bg.jpg'
   ];
 
   criticalImages.forEach(src => {
-    const img = new Image();
-    img.src = src;
+    const link = document.createElement('link');
+    link.rel = 'preload';
+    link.as = 'image';
+    link.href = src;
+    document.head.appendChild(link);
   });
 };
 
-export const optimizeImages = (src: string, width?: number, quality: number = 80): string => {
-  // Convert to WebP format with optimization
-  const params = new URLSearchParams();
-  if (width) params.set('w', width.toString());
-  params.set('q', quality.toString());
-  params.set('f', 'webp');
-  
-  return `${src}?${params.toString()}`;
+export const measurePerformance = () => {
+  if ('performance' in window) {
+    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    
+    return {
+      domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+      loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
+      firstPaint: performance.getEntriesByName('first-paint')[0]?.startTime || 0,
+      firstContentfulPaint: performance.getEntriesByName('first-contentful-paint')[0]?.startTime || 0,
+    };
+  }
+  return null;
+};
+
+export const optimizeImages = () => {
+  const images = document.querySelectorAll('img');
+  images.forEach(img => {
+    if (!img.loading) {
+      img.loading = 'lazy';
+    }
+    if (!img.decoding) {
+      img.decoding = 'async';
+    }
+  });
 };
 
 export const debounce = <T extends (...args: any[]) => any>(
@@ -53,45 +74,7 @@ export const throttle = <T extends (...args: any[]) => any>(
     if (!inThrottle) {
       func(...args);
       inThrottle = true;
-      setTimeout(() => inThrottle = false, limit);
+      setTimeout(() => (inThrottle = false), limit);
     }
   };
-};
-
-// Web Vitals monitoring
-export const reportWebVitals = (metric: any) => {
-  // Send to analytics service
-  if (process.env.NODE_ENV === 'production') {
-    // Example: Google Analytics 4
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', metric.name, {
-        value: Math.round(metric.value),
-        event_category: 'Web Vitals',
-        event_label: metric.id,
-        non_interaction: true,
-      });
-    }
-  }
-};
-
-// Intersection Observer for lazy loading
-export const createIntersectionObserver = (
-  callback: (entries: IntersectionObserverEntry[]) => void,
-  options: IntersectionObserverInit = {}
-): IntersectionObserver => {
-  const defaultOptions: IntersectionObserverInit = {
-    rootMargin: '50px',
-    threshold: 0.1,
-    ...options,
-  };
-
-  return new IntersectionObserver(callback, defaultOptions);
-};
-
-// Performance monitoring
-export const measurePerformance = (name: string, fn: () => void) => {
-  const start = performance.now();
-  fn();
-  const end = performance.now();
-  console.log(`${name} took ${end - start} milliseconds`);
 };
