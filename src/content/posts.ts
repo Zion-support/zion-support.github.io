@@ -1476,11 +1476,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "8 min read"
-  }
-);
-
-// New: Additional fresh content to surface on homepage (promoted trio)
-posts.push(
+  },
   {
     slug: "ai-operational-risk-budgets-2026",
     title: "AI Operational Risk Budgets 2026: Ship Faster, Stay Safe",
