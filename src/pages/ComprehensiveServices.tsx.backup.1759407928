@@ -97,7 +97,11 @@ const ComprehensiveServices: React.FC = () => {
       id: 'ai-predictive-analytics',
       title: 'AI Predictive Analytics',
       description: 'Transform your business with advanced AI predictive analytics that deliver 94% accuracy in forecasting, customer behavior prediction, and risk assessment.',
+<<<<<<< HEAD
+      features: ['94% prediction accuracy', 'Real-time forecasting', 'Customer lifetime value', 'Revenue forecasting', 'Risk assessment'],
+=======
       features: ['94% prediction accuracy', 'Real-time forecasting', 'Customer lifetime value', 'Revenue forecasting', 'Risk assessment']
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d094
       pricing: 'Starting at $299/month',
       icon: BarChart3,
       color: 'from-indigo-600 to-purple-600',
@@ -116,7 +120,11 @@ const ComprehensiveServices: React.FC = () => {
     {
       id: 'ai-data-analytics',
       title: 'AI Data Analytics Platform',
+<<<<<<< HEAD
+      description: 'Turn raw data into actionable insights with advanced machine learning, predictive analytics, and automated reporting.',
+=======
       description: 'Turn raw data into actionable insights with advanced machine learning, predictive analytics, and automated reporting.'
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d094
       features: ['Predictive analytics', 'Automated reporting', 'Real-time dashboards', 'Data visualization', 'ML models'],
       pricing: 'Starting at $299/month',
       icon: BarChart3,
@@ -126,8 +134,13 @@ const ComprehensiveServices: React.FC = () => {
     {
       id: 'edge-computing-ai',
       title: 'Edge Computing AI',
+<<<<<<< HEAD
+      description: 'Deploy AI at the edge for real-time processing with sub-10ms response times. Transform IoT, industrial, and smart city applications.',
+      features: ['Sub-10ms response times', 'Offline capability', '90% latency reduction', 'Unlimited scale', 'Real-time analytics'],
+=======
       description: 'Deploy AI at the edge for real-time processing with sub-10ms response times. Transform IoT, industrial, and smart city applications.'
       features: ['Sub-10ms response times', 'Offline capability', '90% latency reduction', 'Unlimited scale', 'Real-time analytics']
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d094
       pricing: 'Starting at $1,999/month',
       icon: Cpu,
       color: 'from-teal-600 to-blue-600',
@@ -136,8 +149,13 @@ const ComprehensiveServices: React.FC = () => {
     {
       id: 'ai-document-processing',
       title: 'Intelligent Document Processing',
+<<<<<<< HEAD
+      description: 'Extract, classify, and process documents automatically with 99% accuracy using advanced OCR and NLP technologies.',
+      features: ['99% accuracy', 'OCR technology', 'NLP processing', 'Document classification', 'Data extraction'],
+=======
       description: 'Extract, classify, and process documents automatically with 99% accuracy using advanced OCR and NLP technologies.'
       features: ['99% accuracy', 'OCR technology', 'NLP processing', 'Document classification', 'Data extraction']
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d094
       pricing: 'Starting at $149/month',
       icon: FileText,
       color: 'from-indigo-600 to-blue-600',
@@ -146,8 +164,13 @@ const ComprehensiveServices: React.FC = () => {
     {
       id: 'ai-cognitive-automation',
       title: 'Real-Time Cognitive Automation',
+<<<<<<< HEAD
+      description: 'Advanced AI system that learns and adapts to your business processes in real-time, optimizing performance continuously.',
+      features: ['Real-time learning', 'Adaptive algorithms', 'Performance optimization', 'Self-healing systems', 'Continuous improvement'],
+=======
       description: 'Advanced AI system that learns and adapts to your business processes in real-time, optimizing performance continuously.'
       features: ['Real-time learning', 'Adaptive algorithms', 'Performance optimization', 'Self-healing systems', 'Continuous improvement']
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d094
       pricing: 'Custom pricing',
       icon: Brain,
       color: 'from-cyan-600 to-blue-600',
@@ -156,8 +179,13 @@ const ComprehensiveServices: React.FC = () => {
     {
       id: 'ai-cybersecurity',
       title: 'Advanced Cybersecurity AI',
+<<<<<<< HEAD
+      description: 'AI-powered security solutions that detect and prevent threats in real-time with advanced behavioral analysis.',
+      features: ['Real-time threat detection', 'Behavioral analysis', 'Automated response', 'Threat intelligence', 'Compliance monitoring'],
+=======
       description: 'AI-powered security solutions that detect and prevent threats in real-time with advanced behavioral analysis.'
       features: ['Real-time threat detection', 'Behavioral analysis', 'Automated response', 'Threat intelligence', 'Compliance monitoring']
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d094
       pricing: 'Starting at $399/month',
       icon: Shield,
       color: 'from-red-600 to-orange-600',
@@ -168,9 +196,15 @@ const ComprehensiveServices: React.FC = () => {
   const itServices = [
     {
       id: 'cloud-migration',
+<<<<<<< HEAD
+      title: 'Cloud Migration Services',
+      description: 'Seamless migration to cloud platforms with zero downtime. AWS, Azure, and GCP certified experts.',
+      features: ['Zero downtime migration', 'Multi-cloud support', 'Cost optimization', 'Security compliance', '24/7 support'],
+=======
       title: 'Cloud Migration Services'
       description: 'Seamless migration to cloud platforms with zero downtime. AWS, Azure, and GCP certified experts.'
       features: ['Zero downtime migration', 'Multi-cloud support', 'Cost optimization', 'Security compliance', '24/7 support']
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d094
       pricing: 'Starting at $5,000',
       icon: Cloud,
       color: 'from-blue-600 to-cyan-600',
@@ -178,9 +212,15 @@ const ComprehensiveServices: React.FC = () => {
     },
     {
       id: 'devops-automation',
+<<<<<<< HEAD
+      title: 'DevOps Automation',
+      description: 'Complete DevOps transformation with CI/CD pipelines, infrastructure as code, and automated testing.',
+      features: ['CI/CD pipelines', 'Infrastructure as code', 'Automated testing', 'Monitoring & alerting', 'Security scanning'],
+=======
       title: 'DevOps Automation'
       description: 'Complete DevOps transformation with CI/CD pipelines, infrastructure as code, and automated testing.'
       features: ['CI/CD pipelines', 'Infrastructure as code', 'Automated testing', 'Monitoring & alerting', 'Security scanning']
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d094
       pricing: 'Starting at $3,000/month',
       icon: Settings,
       color: 'from-green-600 to-emerald-600',
@@ -188,9 +228,15 @@ const ComprehensiveServices: React.FC = () => {
     },
     {
       id: 'database-optimization',
+<<<<<<< HEAD
+      title: 'Database Optimization',
+      description: 'Optimize database performance, implement backup strategies, and ensure data security and compliance.',
+      features: ['Performance tuning', 'Backup strategies', 'Data security', 'Compliance', 'Monitoring'],
+=======
       title: 'Database Optimization'
       description: 'Optimize database performance, implement backup strategies, and ensure data security and compliance.'
       features: ['Performance tuning', 'Backup strategies', 'Data security', 'Compliance', 'Monitoring']
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d094
       pricing: 'Starting at $2,500',
       icon: Database,
       color: 'from-purple-600 to-violet-600',
@@ -198,9 +244,15 @@ const ComprehensiveServices: React.FC = () => {
     },
     {
       id: 'mobile-app-development',
+<<<<<<< HEAD
+      title: 'Mobile App Development',
+      description: 'Native and cross-platform mobile app development with modern frameworks and best practices.',
+      features: ['Native & cross-platform', 'Modern frameworks', 'App store optimization', 'Performance optimization', 'Maintenance'],
+=======
       title: 'Mobile App Development'
       description: 'Native and cross-platform mobile app development with modern frameworks and best practices.'
       features: ['Native & cross-platform', 'Modern frameworks', 'App store optimization', 'Performance optimization', 'Maintenance']
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d094
       pricing: 'Starting at $15,000',
       icon: Smartphone,
       color: 'from-pink-600 to-rose-600',
@@ -208,9 +260,15 @@ const ComprehensiveServices: React.FC = () => {
     },
     {
       id: 'quantum-computing',
+<<<<<<< HEAD
+      title: 'Quantum Computing Solutions',
+      description: 'Cutting-edge quantum computing services for optimization, cryptography, and advanced simulations.',
+      features: ['Quantum algorithms', 'Cryptography', 'Optimization problems', 'Simulation', 'Research & development'],
+=======
       title: 'Quantum Computing Solutions'
       description: 'Cutting-edge quantum computing services for optimization, cryptography, and advanced simulations.'
       features: ['Quantum algorithms', 'Cryptography', 'Optimization problems', 'Simulation', 'Research & development']
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d094
       pricing: 'Custom pricing',
       icon: Cpu,
       color: 'from-indigo-600 to-purple-600',
@@ -218,9 +276,15 @@ const ComprehensiveServices: React.FC = () => {
     },
     {
       id: 'blockchain-web3',
+<<<<<<< HEAD
+      title: 'Blockchain & Web3 Development',
+      description: 'Smart contracts, DeFi solutions, NFT platforms, and blockchain infrastructure development.',
+      features: ['Smart contracts', 'DeFi solutions', 'NFT platforms', 'Blockchain infrastructure', 'Token development'],
+=======
       title: 'Blockchain & Web3 Development'
       description: 'Smart contracts, DeFi solutions, NFT platforms, and blockchain infrastructure development.'
       features: ['Smart contracts', 'DeFi solutions', 'NFT platforms', 'Blockchain infrastructure', 'Token development']
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d094
       pricing: 'Starting at $10,000',
       icon: Lock,
       color: 'from-yellow-600 to-orange-600',

@@ -41,7 +41,8 @@ const Home = () => {
     }
   ];
   
-  // Additional curated items could be defined here in the future
+  // Additional curated items (if needed)
+  // const curatedItems = [ ... ];
 
   return (
     <>

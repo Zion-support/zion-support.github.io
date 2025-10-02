@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, PropsWithChildren } from 'react';
 
-const AccessibilityEnhancer: React.FC = () => {
+const AccessibilityEnhancer: React.FC<PropsWithChildren> = ({ children }) => {
   useEffect(() => {
     // Skip link functionality
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -98,7 +98,7 @@ const AccessibilityEnhancer: React.FC = () => {
     };
   }, []);
 
-  return null;
+  return <>{children}</>;
 };
 
 export default AccessibilityEnhancer;
