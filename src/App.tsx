@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
-import SEO from './components/SEO';
+import { motion } from 'framer-motion';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -28,6 +28,30 @@ const LoadingSpinner = () => (
     <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
   </div>
 );
+
+// Animation variants
+const pageVariants = {
+  initial: { opacity: 0, y: 20 },
+  in: { opacity: 1, y: 0 },
+  out: { opacity: 0, y: -20 }
+};
+
+const pageTransition = {
+  type: "tween",
+  ease: "anticipate",
+  duration: 0.5
+};
+
+// Banner data
+const bannerData = [
+  {
+    id: 1,
+    title: "Welcome to Zion Tech Group",
+    content: "Leading AI and IT Solutions Provider",
+    link: "/about",
+    image: "/api/placeholder/1200/400"
+  }
+];
 
 // Error boundary component
 class ErrorBoundary extends React.Component<
@@ -115,7 +139,8 @@ const App: React.FC = () => {
               <div className="flex gap-6 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <Sidebar />
                 <div id="main-content" className="flex-1">
-                <Routes>
+                  <React.Suspense fallback={<LoadingSpinner />}>
+                    <Routes>
                 <Route path="/" element={<HomePage />} />
                 <Route path="/about" element={<AboutPage />} />
                 <Route path="/contact" element={<ContactPage />} />
@@ -143,10 +168,12 @@ const App: React.FC = () => {
                         </a>
                       </div>
                     </div>
-                  </div>
                 } />
-              </Routes>
-            </React.Suspense>
+                    </Routes>
+                  </React.Suspense>
+                </div>
+              </div>
+            </motion.main>
 
             <Footer />
           </EnhancedErrorBoundary>
