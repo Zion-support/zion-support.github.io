@@ -53,12 +53,20 @@ const HomePage: React.FC = () => {
                 Advanced artificial intelligence solutions including machine learning, 
                 natural language processing, and predictive analytics.
               </p>
-              <Link 
-                to="/services/ai-services"
-                className="text-blue-600 font-semibold hover:text-blue-800 transition-colors"
-              >
-                Learn More →
-              </Link>
+              <div className="space-y-2">
+                <Link 
+                  to="/services/ai-services"
+                  className="block text-blue-600 font-semibold hover:text-blue-800 transition-colors"
+                >
+                  AI Services →
+                </Link>
+                <Link 
+                  to="/services/advanced-ai"
+                  className="block text-blue-600 font-semibold hover:text-blue-800 transition-colors text-sm"
+                >
+                  Advanced AI Solutions →
+                </Link>
+              </div>
             </div>
 
             {/* Micro SaaS */}
@@ -69,12 +77,20 @@ const HomePage: React.FC = () => {
                 Scalable software-as-a-service solutions that deliver immediate value 
                 and grow with your business needs.
               </p>
-              <Link 
-                to="/services/micro-saas"
-                className="text-green-600 font-semibold hover:text-green-800 transition-colors"
-              >
-                Learn More →
-              </Link>
+              <div className="space-y-2">
+                <Link 
+                  to="/services/micro-saas"
+                  className="block text-green-600 font-semibold hover:text-green-800 transition-colors"
+                >
+                  Micro SaaS →
+                </Link>
+                <Link 
+                  to="/services/innovative-micro-saas"
+                  className="block text-green-600 font-semibold hover:text-green-800 transition-colors text-sm"
+                >
+                  Innovative Micro SaaS →
+                </Link>
+              </div>
             </div>
 
             {/* IT Services */}
@@ -85,12 +101,20 @@ const HomePage: React.FC = () => {
                 Complete IT infrastructure management, cloud solutions, and 
                 enterprise-grade security services.
               </p>
-              <Link 
-                to="/services/it-services"
-                className="text-purple-600 font-semibold hover:text-purple-800 transition-colors"
-              >
-                Learn More →
-              </Link>
+              <div className="space-y-2">
+                <Link 
+                  to="/services/it-services"
+                  className="block text-purple-600 font-semibold hover:text-purple-800 transition-colors"
+                >
+                  IT Services →
+                </Link>
+                <Link 
+                  to="/services/comprehensive-it"
+                  className="block text-purple-600 font-semibold hover:text-purple-800 transition-colors text-sm"
+                >
+                  Comprehensive IT Solutions →
+                </Link>
+              </div>
             </div>
           </div>
         </div>

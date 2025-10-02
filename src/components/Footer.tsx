@@ -39,13 +39,28 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link to="/services/advanced-ai" className="text-gray-300 hover:text-blue-400 transition-colors duration-200 text-sm">
+                  Advanced AI Solutions
+                </Link>
+              </li>
+              <li>
                 <Link to="/services/it-services" className="text-gray-300 hover:text-blue-400 transition-colors duration-200 text-sm">
                   IT Services
                 </Link>
               </li>
               <li>
+                <Link to="/services/comprehensive-it" className="text-gray-300 hover:text-blue-400 transition-colors duration-200 text-sm">
+                  Comprehensive IT Solutions
+                </Link>
+              </li>
+              <li>
                 <Link to="/services/micro-saas" className="text-gray-300 hover:text-blue-400 transition-colors duration-200 text-sm">
                   Micro SaaS
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/innovative-micro-saas" className="text-gray-300 hover:text-blue-400 transition-colors duration-200 text-sm">
+                  Innovative Micro SaaS
                 </Link>
               </li>
               <li>
@@ -99,15 +114,15 @@ export default function Footer() {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Mail className="h-4 w-4 text-blue-400" />
-                <span className="text-gray-300 text-sm">contact@ziontechgroup.com</span>
+                <span className="text-gray-300 text-sm">kleber@ziontechgroup.com</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-4 w-4 text-blue-400" />
-                <span className="text-gray-300 text-sm">+1 (555) 123-4567</span>
+                <span className="text-gray-300 text-sm">+1 302 464 0950</span>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="h-4 w-4 text-blue-400" />
-                <span className="text-gray-300 text-sm">San Francisco, CA</span>
+                <span className="text-gray-300 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</span>
               </div>
             </div>
           </div>
