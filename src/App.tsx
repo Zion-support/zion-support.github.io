@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 // Core Components
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Sidebar from './components/Sidebar';
 import BannerManager from './components/BannerManager';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import SEOHead from './components/EnhancedSEOHead';
@@ -74,7 +75,10 @@ const App: React.FC = () => {
               transition={pageTransition}
               className="relative z-10"
             >
-              <Routes>
+              <div className="flex gap-6 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <Sidebar />
+                <div id="main-content" className="flex-1">
+                <Routes>
                 <Route path="/" element={<HomePage />} />
                 <Route path="/solutions/*" element={<SolutionsPage />} />
                 <Route path="/services/*" element={<ServicesPage />} />
@@ -128,7 +132,9 @@ const App: React.FC = () => {
                     </div>
                   </div>
                 } />
-              </Routes>
+                </Routes>
+                </div>
+              </div>
             </motion.main>
 
             <Footer />
