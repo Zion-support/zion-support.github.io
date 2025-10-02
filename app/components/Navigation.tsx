@@ -18,7 +18,8 @@ export function Header() {
   return (
     <header className="border-b border-gray-200 sticky top-0 z-50 bg-white shadow-sm">
       <nav className="flex items-center justify-between px-4 py-3 max-w-6xl mx-auto">
-        <Link href="/" className="font-bold text-lg text-gray-900 hover:text-blue-600 transition-colors">
+        <Link href="/" className="font-bold text-lg text-gray-900 hover:text-blue-600 transition-colors flex items-center">
+          <span className="text-blue-600 mr-2 text-xl">🚀</span>
           Zion Tech Group
         </Link>
         
@@ -41,23 +42,23 @@ export function Header() {
             }`}>
               <div className="py-3">
                 <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide">Featured Services</div>
-                <Link href="/services/ai-customer-service-automation" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                  AI Customer Service Automation
+                <Link href="/services/ai-content-optimization-platform" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  AI Content Optimization Platform
                 </Link>
-                <Link href="/services/appointment-scheduling-saas" className="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-600">
-                  Smart Appointment Scheduler
+                <Link href="/services/ai-financial-forecasting-suite" className="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-600">
+                  AI Financial Forecasting Suite
                 </Link>
-                <Link href="/services/cloud-migration-service" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600">
-                  Enterprise Cloud Migration
+                <Link href="/services/smart-inventory-management-saas" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600">
+                  Smart Inventory Management SaaS
                 </Link>
-                <Link href="/services/ai-business-intelligence" className="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600">
-                  AI Business Intelligence
+                <Link href="/services/ai-powered-crm-automation" className="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600">
+                  AI-Powered CRM Automation
                 </Link>
-                <Link href="/services/ai-cybersecurity-platform" className="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600">
-                  AI Cybersecurity Platform
+                <Link href="/services/cloud-native-devops-platform" className="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600">
+                  Cloud-Native DevOps Platform
                 </Link>
-                <Link href="/services/healthcare-telemedicine-platform" className="block px-4 py-2 text-sm text-gray-700 hover:bg-teal-50 hover:text-teal-600">
-                  Telemedicine Platform
+                <Link href="/services/ai-cybersecurity-automation-suite" className="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600">
+                  AI Cybersecurity Automation Suite
                 </Link>
                 <div className="border-t border-gray-100 my-2"></div>
                 <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide">Industry Solutions</div>
@@ -71,7 +72,7 @@ export function Header() {
                   Autonomous Operations
                 </Link>
                 <div className="border-t border-gray-100 my-2"></div>
-                <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide">All Services</div>
+                <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide">Service Categories</div>
                 <Link href="/services/micro-saas" className="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600">
                   Micro SaaS Solutions
                 </Link>
@@ -328,12 +329,12 @@ export function Footer() {
             <h3 className="font-semibold text-gray-900 mb-3">Featured Services</h3>
             <div className="space-y-2">
               <Link href="/services" className="block text-gray-600 hover:text-blue-600 transition-colors">All Services</Link>
-              <Link href="/services/ai-customer-service-automation" className="block text-gray-600 hover:text-blue-600 transition-colors">AI Customer Service</Link>
-              <Link href="/services/appointment-scheduling-saas" className="block text-gray-600 hover:text-blue-600 transition-colors">Appointment Scheduler</Link>
-              <Link href="/services/cloud-migration-service" className="block text-gray-600 hover:text-blue-600 transition-colors">Cloud Migration</Link>
-              <Link href="/services/ai-business-intelligence" className="block text-gray-600 hover:text-blue-600 transition-colors">AI Business Intelligence</Link>
-              <Link href="/services/ai-cybersecurity-platform" className="block text-gray-600 hover:text-blue-600 transition-colors">AI Cybersecurity</Link>
-              <Link href="/services/healthcare-telemedicine-platform" className="block text-gray-600 hover:text-blue-600 transition-colors">Telemedicine Platform</Link>
+              <Link href="/services/ai-content-optimization-platform" className="block text-gray-600 hover:text-blue-600 transition-colors">AI Content Optimization</Link>
+              <Link href="/services/ai-financial-forecasting-suite" className="block text-gray-600 hover:text-blue-600 transition-colors">AI Financial Forecasting</Link>
+              <Link href="/services/smart-inventory-management-saas" className="block text-gray-600 hover:text-blue-600 transition-colors">Smart Inventory Management</Link>
+              <Link href="/services/ai-powered-crm-automation" className="block text-gray-600 hover:text-blue-600 transition-colors">AI CRM Automation</Link>
+              <Link href="/services/cloud-native-devops-platform" className="block text-gray-600 hover:text-blue-600 transition-colors">Cloud-Native DevOps</Link>
+              <Link href="/services/ai-cybersecurity-automation-suite" className="block text-gray-600 hover:text-blue-600 transition-colors">AI Cybersecurity Suite</Link>
             </div>
           </div>
           <div>
