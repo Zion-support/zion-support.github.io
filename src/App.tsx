@@ -165,6 +165,9 @@ const App: React.FC = () => {
                     />
                   </Routes>
                 </React.Suspense>
+                </div>
+              </div>
+            </motion.main>
 
             <Footer />
           </EnhancedErrorBoundary>
