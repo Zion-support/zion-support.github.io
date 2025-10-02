@@ -1583,7 +1583,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "8 min read"
-  }
+  },
 );
 
 // Sept 30, 2025 – New articles to expand catalog and promote on homepage
