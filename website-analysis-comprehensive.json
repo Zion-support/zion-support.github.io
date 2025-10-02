@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-10-02T15:09:24.837Z",
+  "timestamp": "2025-10-02T16:59:22.549Z",
   "baseUrl": "https://ziontechgroup.com",
   "summary": {
     "totalLinksChecked": 71,
@@ -27,10 +27,10 @@
       "depth": 1
     },
     {
-      "url": "https://ziontechgroup.com/js/react-vendor-ClxMxoJB.js",
+      "url": "https://ziontechgroup.com/",
       "status": 200,
       "statusText": "OK",
-      "contentType": "application/javascript; charset=UTF-8",
+      "contentType": "text/html; charset=UTF-8",
       "depth": 1
     },
     {
@@ -41,6 +41,13 @@
       "depth": 1
     },
     {
+      "url": "https://ziontechgroup.com/js/react-vendor-ClxMxoJB.js",
+      "status": 200,
+      "statusText": "OK",
+      "contentType": "application/javascript; charset=UTF-8",
+      "depth": 1
+    },
+    {
       "url": "https://ziontechgroup.com/logo192.png",
       "status": 200,
       "statusText": "OK",
@@ -48,7 +55,7 @@
       "depth": 1
     },
     {
-      "url": "https://ziontechgroup.com/js/router-vendor-BYHOfCvf.js",
+      "url": "https://ziontechgroup.com/js/utils-vendor-CrFdsnXa.js",
       "status": 200,
       "statusText": "OK",
       "contentType": "application/javascript; charset=UTF-8",
@@ -62,13 +69,6 @@
       "depth": 1
     },
     {
-      "url": "https://ziontechgroup.com/js/utils-vendor-CrFdsnXa.js",
-      "status": 200,
-      "statusText": "OK",
-      "contentType": "application/javascript; charset=UTF-8",
-      "depth": 1
-    },
-    {
       "url": "https://ziontechgroup.com/css/main-C3rjQXSa.css",
       "status": 200,
       "statusText": "OK",
@@ -76,11 +76,81 @@
       "depth": 1
     },
     {
+      "url": "https://ziontechgroup.com/js/router-vendor-BYHOfCvf.js",
+      "status": 200,
+      "statusText": "OK",
+      "contentType": "application/javascript; charset=UTF-8",
+      "depth": 1
+    },
+    {
+      "url": "https://ziontechgroup.com/favicon.svg",
+      "status": 200,
+      "statusText": "OK",
+      "contentType": "image/svg+xml",
+      "depth": 2
+    },
+    {
+      "url": "https://ziontechgroup.com/logo192.png",
+      "status": 200,
+      "statusText": "OK",
+      "contentType": "text/html; charset=UTF-8",
+      "depth": 2
+    },
+    {
       "url": "https://ziontechgroup.com/",
       "status": 200,
       "statusText": "OK",
       "contentType": "text/html; charset=UTF-8",
+      "depth": 2
+    },
+    {
+      "url": "https://ziontechgroup.com/manifest.json",
+      "status": 200,
+      "statusText": "OK",
+      "contentType": "application/json",
+      "depth": 2
+    },
+    {
+      "url": "https://ziontechgroup.com/js/main-3lYBb4BX.js",
+      "status": 200,
+      "statusText": "OK",
+      "contentType": "application/javascript; charset=UTF-8",
       "depth": 1
+    },
+    {
+      "url": "https://ziontechgroup.com/js/ui-vendor-BZl2CecO.js",
+      "status": 200,
+      "statusText": "OK",
+      "contentType": "application/javascript; charset=UTF-8",
+      "depth": 2
+    },
+    {
+      "url": "https://ziontechgroup.com/js/utils-vendor-CrFdsnXa.js",
+      "status": 200,
+      "statusText": "OK",
+      "contentType": "application/javascript; charset=UTF-8",
+      "depth": 2
+    },
+    {
+      "url": "https://ziontechgroup.com/css/main-C3rjQXSa.css",
+      "status": 200,
+      "statusText": "OK",
+      "contentType": "text/css; charset=UTF-8",
+      "depth": 2
+    },
+    {
+      "url": "https://ziontechgroup.com/js/react-vendor-ClxMxoJB.js",
+      "status": 200,
+      "statusText": "OK",
+      "contentType": "application/javascript; charset=UTF-8",
+      "depth": 2
+    },
+    {
+      "url": "https://ziontechgroup.com/js/router-vendor-BYHOfCvf.js",
+      "status": 200,
+      "statusText": "OK",
+      "contentType": "application/javascript; charset=UTF-8",
+      "depth": 2
     },
     {
       "url": "https://ziontechgroup.com/favicon.svg",
@@ -108,13 +178,27 @@
       "status": 200,
       "statusText": "OK",
       "contentType": "application/javascript; charset=UTF-8",
-      "depth": 1
+      "depth": 2
     },
     {
       "url": "https://ziontechgroup.com/manifest.json",
       "status": 200,
       "statusText": "OK",
       "contentType": "application/json",
+      "depth": 2
+    },
+    {
+      "url": "https://ziontechgroup.com/js/ui-vendor-BZl2CecO.js",
+      "status": 200,
+      "statusText": "OK",
+      "contentType": "application/javascript; charset=UTF-8",
+      "depth": 2
+    },
+    {
+      "url": "https://ziontechgroup.com/js/utils-vendor-CrFdsnXa.js",
+      "status": 200,
+      "statusText": "OK",
+      "contentType": "application/javascript; charset=UTF-8",
       "depth": 2
     },
     {
@@ -132,165 +216,11 @@
       "depth": 2
     },
     {
-      "url": "https://ziontechgroup.com/js/utils-vendor-CrFdsnXa.js",
-      "status": 200,
-      "statusText": "OK",
-      "contentType": "application/javascript; charset=UTF-8",
-      "depth": 2
-    },
-    {
-      "url": "https://ziontechgroup.com/js/ui-vendor-BZl2CecO.js",
-      "status": 200,
-      "statusText": "OK",
-      "contentType": "application/javascript; charset=UTF-8",
-      "depth": 2
-    },
-    {
       "url": "https://ziontechgroup.com/css/main-C3rjQXSa.css",
       "status": 200,
       "statusText": "OK",
       "contentType": "text/css; charset=UTF-8",
       "depth": 2
-    },
-    {
-      "url": "https://ziontechgroup.com/logo192.png",
-      "status": 200,
-      "statusText": "OK",
-      "contentType": "text/html; charset=UTF-8",
-      "depth": 2
-    },
-    {
-      "url": "https://ziontechgroup.com/favicon.svg",
-      "status": 200,
-      "statusText": "OK",
-      "contentType": "image/svg+xml",
-      "depth": 2
-    },
-    {
-      "url": "https://ziontechgroup.com/js/main-3lYBb4BX.js",
-      "status": 200,
-      "statusText": "OK",
-      "contentType": "application/javascript; charset=UTF-8",
-      "depth": 2
-    },
-    {
-      "url": "https://ziontechgroup.com/manifest.json",
-      "status": 200,
-      "statusText": "OK",
-      "contentType": "application/json",
-      "depth": 2
-    },
-    {
-      "url": "https://ziontechgroup.com/",
-      "status": 200,
-      "statusText": "OK",
-      "contentType": "text/html; charset=UTF-8",
-      "depth": 2
-    },
-    {
-      "url": "https://ziontechgroup.com/js/utils-vendor-CrFdsnXa.js",
-      "status": 200,
-      "statusText": "OK",
-      "contentType": "application/javascript; charset=UTF-8",
-      "depth": 2
-    },
-    {
-      "url": "https://ziontechgroup.com/js/ui-vendor-BZl2CecO.js",
-      "status": 200,
-      "statusText": "OK",
-      "contentType": "application/javascript; charset=UTF-8",
-      "depth": 2
-    },
-    {
-      "url": "https://ziontechgroup.com/js/react-vendor-ClxMxoJB.js",
-      "status": 200,
-      "statusText": "OK",
-      "contentType": "application/javascript; charset=UTF-8",
-      "depth": 2
-    },
-    {
-      "url": "https://ziontechgroup.com/js/router-vendor-BYHOfCvf.js",
-      "status": 200,
-      "statusText": "OK",
-      "contentType": "application/javascript; charset=UTF-8",
-      "depth": 2
-    },
-    {
-      "url": "https://ziontechgroup.com/css/main-C3rjQXSa.css",
-      "status": 200,
-      "statusText": "OK",
-      "contentType": "text/css; charset=UTF-8",
-      "depth": 2
-    },
-    {
-      "url": "https://ziontechgroup.com/logo192.png",
-      "status": 200,
-      "statusText": "OK",
-      "contentType": "text/html; charset=UTF-8",
-      "depth": 3
-    },
-    {
-      "url": "https://ziontechgroup.com/favicon.svg",
-      "status": 200,
-      "statusText": "OK",
-      "contentType": "image/svg+xml",
-      "depth": 3
-    },
-    {
-      "url": "https://ziontechgroup.com/js/main-3lYBb4BX.js",
-      "status": 200,
-      "statusText": "OK",
-      "contentType": "application/javascript; charset=UTF-8",
-      "depth": 2
-    },
-    {
-      "url": "https://ziontechgroup.com/manifest.json",
-      "status": 200,
-      "statusText": "OK",
-      "contentType": "application/json",
-      "depth": 3
-    },
-    {
-      "url": "https://ziontechgroup.com/",
-      "status": 200,
-      "statusText": "OK",
-      "contentType": "text/html; charset=UTF-8",
-      "depth": 3
-    },
-    {
-      "url": "https://ziontechgroup.com/js/router-vendor-BYHOfCvf.js",
-      "status": 200,
-      "statusText": "OK",
-      "contentType": "application/javascript; charset=UTF-8",
-      "depth": 3
-    },
-    {
-      "url": "https://ziontechgroup.com/js/react-vendor-ClxMxoJB.js",
-      "status": 200,
-      "statusText": "OK",
-      "contentType": "application/javascript; charset=UTF-8",
-      "depth": 3
-    },
-    {
-      "url": "https://ziontechgroup.com/js/utils-vendor-CrFdsnXa.js",
-      "status": 200,
-      "statusText": "OK",
-      "contentType": "application/javascript; charset=UTF-8",
-      "depth": 3
-    },
-    {
-      "url": "https://ziontechgroup.com/js/ui-vendor-BZl2CecO.js",
-      "status": 200,
-      "statusText": "OK",
-      "contentType": "application/javascript; charset=UTF-8",
-      "depth": 3
-    },
-    {
-      "url": "https://ziontechgroup.com/css/main-C3rjQXSa.css",
-      "status": 200,
-      "statusText": "OK",
-      "contentType": "text/css; charset=UTF-8",
-      "depth": 3
     },
     {
       "url": "https://ziontechgroup.com/favicon.svg",
@@ -301,13 +231,6 @@
     },
     {
       "url": "https://ziontechgroup.com/logo192.png",
-      "status": 200,
-      "statusText": "OK",
-      "contentType": "text/html; charset=UTF-8",
-      "depth": 3
-    },
-    {
-      "url": "https://ziontechgroup.com/",
       "status": 200,
       "statusText": "OK",
       "contentType": "text/html; charset=UTF-8",
@@ -325,6 +248,34 @@
       "status": 200,
       "statusText": "OK",
       "contentType": "application/javascript; charset=UTF-8",
+      "depth": 2
+    },
+    {
+      "url": "https://ziontechgroup.com/",
+      "status": 200,
+      "statusText": "OK",
+      "contentType": "text/html; charset=UTF-8",
+      "depth": 3
+    },
+    {
+      "url": "https://ziontechgroup.com/js/react-vendor-ClxMxoJB.js",
+      "status": 200,
+      "statusText": "OK",
+      "contentType": "application/javascript; charset=UTF-8",
+      "depth": 3
+    },
+    {
+      "url": "https://ziontechgroup.com/js/ui-vendor-BZl2CecO.js",
+      "status": 200,
+      "statusText": "OK",
+      "contentType": "application/javascript; charset=UTF-8",
+      "depth": 3
+    },
+    {
+      "url": "https://ziontechgroup.com/css/main-C3rjQXSa.css",
+      "status": 200,
+      "statusText": "OK",
+      "contentType": "text/css; charset=UTF-8",
       "depth": 3
     },
     {
@@ -339,55 +290,6 @@
       "status": 200,
       "statusText": "OK",
       "contentType": "application/javascript; charset=UTF-8",
-      "depth": 3
-    },
-    {
-      "url": "https://ziontechgroup.com/js/ui-vendor-BZl2CecO.js",
-      "status": 200,
-      "statusText": "OK",
-      "contentType": "application/javascript; charset=UTF-8",
-      "depth": 3
-    },
-    {
-      "url": "https://ziontechgroup.com/js/react-vendor-ClxMxoJB.js",
-      "status": 200,
-      "statusText": "OK",
-      "contentType": "application/javascript; charset=UTF-8",
-      "depth": 3
-    },
-    {
-      "url": "https://ziontechgroup.com/css/main-C3rjQXSa.css",
-      "status": 200,
-      "statusText": "OK",
-      "contentType": "text/css; charset=UTF-8",
-      "depth": 3
-    },
-    {
-      "url": "https://ziontechgroup.com/logo192.png",
-      "status": 200,
-      "statusText": "OK",
-      "contentType": "text/html; charset=UTF-8",
-      "depth": 3
-    },
-    {
-      "url": "https://ziontechgroup.com/favicon.svg",
-      "status": 200,
-      "statusText": "OK",
-      "contentType": "image/svg+xml",
-      "depth": 3
-    },
-    {
-      "url": "https://ziontechgroup.com/",
-      "status": 200,
-      "statusText": "OK",
-      "contentType": "text/html; charset=UTF-8",
-      "depth": 3
-    },
-    {
-      "url": "https://ziontechgroup.com/manifest.json",
-      "status": 200,
-      "statusText": "OK",
-      "contentType": "application/json",
       "depth": 3
     },
     {
@@ -398,6 +300,34 @@
       "depth": 3
     },
     {
+      "url": "https://ziontechgroup.com/favicon.svg",
+      "status": 200,
+      "statusText": "OK",
+      "contentType": "image/svg+xml",
+      "depth": 3
+    },
+    {
+      "url": "https://ziontechgroup.com/manifest.json",
+      "status": 200,
+      "statusText": "OK",
+      "contentType": "application/json",
+      "depth": 3
+    },
+    {
+      "url": "https://ziontechgroup.com/",
+      "status": 200,
+      "statusText": "OK",
+      "contentType": "text/html; charset=UTF-8",
+      "depth": 3
+    },
+    {
+      "url": "https://ziontechgroup.com/logo192.png",
+      "status": 200,
+      "statusText": "OK",
+      "contentType": "text/html; charset=UTF-8",
+      "depth": 3
+    },
+    {
       "url": "https://ziontechgroup.com/js/ui-vendor-BZl2CecO.js",
       "status": 200,
       "statusText": "OK",
@@ -412,10 +342,10 @@
       "depth": 3
     },
     {
-      "url": "https://ziontechgroup.com/js/utils-vendor-CrFdsnXa.js",
+      "url": "https://ziontechgroup.com/css/main-C3rjQXSa.css",
       "status": 200,
       "statusText": "OK",
-      "contentType": "application/javascript; charset=UTF-8",
+      "contentType": "text/css; charset=UTF-8",
       "depth": 3
     },
     {
@@ -426,10 +356,10 @@
       "depth": 3
     },
     {
-      "url": "https://ziontechgroup.com/css/main-C3rjQXSa.css",
+      "url": "https://ziontechgroup.com/js/utils-vendor-CrFdsnXa.js",
       "status": 200,
       "statusText": "OK",
-      "contentType": "text/css; charset=UTF-8",
+      "contentType": "application/javascript; charset=UTF-8",
       "depth": 3
     },
     {
@@ -454,7 +384,63 @@
       "depth": 3
     },
     {
+      "url": "https://ziontechgroup.com/js/main-3lYBb4BX.js",
+      "status": 200,
+      "statusText": "OK",
+      "contentType": "application/javascript; charset=UTF-8",
+      "depth": 3
+    },
+    {
       "url": "https://ziontechgroup.com/",
+      "status": 200,
+      "statusText": "OK",
+      "contentType": "text/html; charset=UTF-8",
+      "depth": 3
+    },
+    {
+      "url": "https://ziontechgroup.com/js/utils-vendor-CrFdsnXa.js",
+      "status": 200,
+      "statusText": "OK",
+      "contentType": "application/javascript; charset=UTF-8",
+      "depth": 3
+    },
+    {
+      "url": "https://ziontechgroup.com/css/main-C3rjQXSa.css",
+      "status": 200,
+      "statusText": "OK",
+      "contentType": "text/css; charset=UTF-8",
+      "depth": 3
+    },
+    {
+      "url": "https://ziontechgroup.com/js/react-vendor-ClxMxoJB.js",
+      "status": 200,
+      "statusText": "OK",
+      "contentType": "application/javascript; charset=UTF-8",
+      "depth": 3
+    },
+    {
+      "url": "https://ziontechgroup.com/js/router-vendor-BYHOfCvf.js",
+      "status": 200,
+      "statusText": "OK",
+      "contentType": "application/javascript; charset=UTF-8",
+      "depth": 3
+    },
+    {
+      "url": "https://ziontechgroup.com/js/ui-vendor-BZl2CecO.js",
+      "status": 200,
+      "statusText": "OK",
+      "contentType": "application/javascript; charset=UTF-8",
+      "depth": 3
+    },
+    {
+      "url": "https://ziontechgroup.com/favicon.svg",
+      "status": 200,
+      "statusText": "OK",
+      "contentType": "image/svg+xml",
+      "depth": 3
+    },
+    {
+      "url": "https://ziontechgroup.com/logo192.png",
       "status": 200,
       "statusText": "OK",
       "contentType": "text/html; charset=UTF-8",
@@ -468,10 +454,17 @@
       "depth": 3
     },
     {
-      "url": "https://ziontechgroup.com/js/utils-vendor-CrFdsnXa.js",
+      "url": "https://ziontechgroup.com/manifest.json",
       "status": 200,
       "statusText": "OK",
-      "contentType": "application/javascript; charset=UTF-8",
+      "contentType": "application/json",
+      "depth": 3
+    },
+    {
+      "url": "https://ziontechgroup.com/",
+      "status": 200,
+      "statusText": "OK",
+      "contentType": "text/html; charset=UTF-8",
       "depth": 3
     },
     {
@@ -479,6 +472,20 @@
       "status": 200,
       "statusText": "OK",
       "contentType": "application/javascript; charset=UTF-8",
+      "depth": 3
+    },
+    {
+      "url": "https://ziontechgroup.com/js/utils-vendor-CrFdsnXa.js",
+      "status": 200,
+      "statusText": "OK",
+      "contentType": "application/javascript; charset=UTF-8",
+      "depth": 3
+    },
+    {
+      "url": "https://ziontechgroup.com/css/main-C3rjQXSa.css",
+      "status": 200,
+      "statusText": "OK",
+      "contentType": "text/css; charset=UTF-8",
       "depth": 3
     },
     {
@@ -493,13 +500,6 @@
       "status": 200,
       "statusText": "OK",
       "contentType": "application/javascript; charset=UTF-8",
-      "depth": 3
-    },
-    {
-      "url": "https://ziontechgroup.com/css/main-C3rjQXSa.css",
-      "status": 200,
-      "statusText": "OK",
-      "contentType": "text/css; charset=UTF-8",
       "depth": 3
     },
     {
@@ -563,56 +563,6 @@
     },
     {
       "url": "https://ziontechgroup.com/favicon.svg",
-      "parentUrl": "https://ziontechgroup.com/logo192.png",
-      "depth": 2
-    },
-    {
-      "url": "https://ziontechgroup.com/",
-      "parentUrl": "https://ziontechgroup.com/logo192.png",
-      "depth": 2
-    },
-    {
-      "url": "https://ziontechgroup.com/logo192.png",
-      "parentUrl": "https://ziontechgroup.com/logo192.png",
-      "depth": 2
-    },
-    {
-      "url": "https://ziontechgroup.com/manifest.json",
-      "parentUrl": "https://ziontechgroup.com/logo192.png",
-      "depth": 2
-    },
-    {
-      "url": "https://ziontechgroup.com/js/react-vendor-ClxMxoJB.js",
-      "parentUrl": "https://ziontechgroup.com/logo192.png",
-      "depth": 2
-    },
-    {
-      "url": "https://ziontechgroup.com/js/router-vendor-BYHOfCvf.js",
-      "parentUrl": "https://ziontechgroup.com/logo192.png",
-      "depth": 2
-    },
-    {
-      "url": "https://ziontechgroup.com/js/ui-vendor-BZl2CecO.js",
-      "parentUrl": "https://ziontechgroup.com/logo192.png",
-      "depth": 2
-    },
-    {
-      "url": "https://ziontechgroup.com/js/utils-vendor-CrFdsnXa.js",
-      "parentUrl": "https://ziontechgroup.com/logo192.png",
-      "depth": 2
-    },
-    {
-      "url": "https://ziontechgroup.com/css/main-C3rjQXSa.css",
-      "parentUrl": "https://ziontechgroup.com/logo192.png",
-      "depth": 2
-    },
-    {
-      "url": "https://ziontechgroup.com/js/main-3lYBb4BX.js",
-      "parentUrl": "https://ziontechgroup.com/logo192.png",
-      "depth": 2
-    },
-    {
-      "url": "https://ziontechgroup.com/favicon.svg",
       "parentUrl": "https://ziontechgroup.com/",
       "depth": 2
     },
@@ -664,102 +614,52 @@
     {
       "url": "https://ziontechgroup.com/favicon.svg",
       "parentUrl": "https://ziontechgroup.com/logo192.png",
-      "depth": 3
+      "depth": 2
     },
     {
       "url": "https://ziontechgroup.com/",
       "parentUrl": "https://ziontechgroup.com/logo192.png",
-      "depth": 3
+      "depth": 2
     },
     {
       "url": "https://ziontechgroup.com/logo192.png",
       "parentUrl": "https://ziontechgroup.com/logo192.png",
-      "depth": 3
+      "depth": 2
     },
     {
       "url": "https://ziontechgroup.com/manifest.json",
       "parentUrl": "https://ziontechgroup.com/logo192.png",
-      "depth": 3
+      "depth": 2
     },
     {
       "url": "https://ziontechgroup.com/js/react-vendor-ClxMxoJB.js",
       "parentUrl": "https://ziontechgroup.com/logo192.png",
-      "depth": 3
+      "depth": 2
     },
     {
       "url": "https://ziontechgroup.com/js/router-vendor-BYHOfCvf.js",
       "parentUrl": "https://ziontechgroup.com/logo192.png",
-      "depth": 3
+      "depth": 2
     },
     {
       "url": "https://ziontechgroup.com/js/ui-vendor-BZl2CecO.js",
       "parentUrl": "https://ziontechgroup.com/logo192.png",
-      "depth": 3
+      "depth": 2
     },
     {
       "url": "https://ziontechgroup.com/js/utils-vendor-CrFdsnXa.js",
       "parentUrl": "https://ziontechgroup.com/logo192.png",
-      "depth": 3
+      "depth": 2
     },
     {
       "url": "https://ziontechgroup.com/css/main-C3rjQXSa.css",
       "parentUrl": "https://ziontechgroup.com/logo192.png",
-      "depth": 3
+      "depth": 2
     },
     {
       "url": "https://ziontechgroup.com/js/main-3lYBb4BX.js",
       "parentUrl": "https://ziontechgroup.com/logo192.png",
-      "depth": 3
-    },
-    {
-      "url": "https://ziontechgroup.com/favicon.svg",
-      "parentUrl": "https://ziontechgroup.com/",
-      "depth": 3
-    },
-    {
-      "url": "https://ziontechgroup.com/",
-      "parentUrl": "https://ziontechgroup.com/",
-      "depth": 3
-    },
-    {
-      "url": "https://ziontechgroup.com/logo192.png",
-      "parentUrl": "https://ziontechgroup.com/",
-      "depth": 3
-    },
-    {
-      "url": "https://ziontechgroup.com/manifest.json",
-      "parentUrl": "https://ziontechgroup.com/",
-      "depth": 3
-    },
-    {
-      "url": "https://ziontechgroup.com/js/react-vendor-ClxMxoJB.js",
-      "parentUrl": "https://ziontechgroup.com/",
-      "depth": 3
-    },
-    {
-      "url": "https://ziontechgroup.com/js/router-vendor-BYHOfCvf.js",
-      "parentUrl": "https://ziontechgroup.com/",
-      "depth": 3
-    },
-    {
-      "url": "https://ziontechgroup.com/js/ui-vendor-BZl2CecO.js",
-      "parentUrl": "https://ziontechgroup.com/",
-      "depth": 3
-    },
-    {
-      "url": "https://ziontechgroup.com/js/utils-vendor-CrFdsnXa.js",
-      "parentUrl": "https://ziontechgroup.com/",
-      "depth": 3
-    },
-    {
-      "url": "https://ziontechgroup.com/css/main-C3rjQXSa.css",
-      "parentUrl": "https://ziontechgroup.com/",
-      "depth": 3
-    },
-    {
-      "url": "https://ziontechgroup.com/js/main-3lYBb4BX.js",
-      "parentUrl": "https://ziontechgroup.com/",
-      "depth": 3
+      "depth": 2
     },
     {
       "url": "https://ziontechgroup.com/favicon.svg",
@@ -864,6 +764,106 @@
     {
       "url": "https://ziontechgroup.com/favicon.svg",
       "parentUrl": "https://ziontechgroup.com/logo192.png",
+      "depth": 3
+    },
+    {
+      "url": "https://ziontechgroup.com/",
+      "parentUrl": "https://ziontechgroup.com/logo192.png",
+      "depth": 3
+    },
+    {
+      "url": "https://ziontechgroup.com/logo192.png",
+      "parentUrl": "https://ziontechgroup.com/logo192.png",
+      "depth": 3
+    },
+    {
+      "url": "https://ziontechgroup.com/manifest.json",
+      "parentUrl": "https://ziontechgroup.com/logo192.png",
+      "depth": 3
+    },
+    {
+      "url": "https://ziontechgroup.com/js/react-vendor-ClxMxoJB.js",
+      "parentUrl": "https://ziontechgroup.com/logo192.png",
+      "depth": 3
+    },
+    {
+      "url": "https://ziontechgroup.com/js/router-vendor-BYHOfCvf.js",
+      "parentUrl": "https://ziontechgroup.com/logo192.png",
+      "depth": 3
+    },
+    {
+      "url": "https://ziontechgroup.com/js/ui-vendor-BZl2CecO.js",
+      "parentUrl": "https://ziontechgroup.com/logo192.png",
+      "depth": 3
+    },
+    {
+      "url": "https://ziontechgroup.com/js/utils-vendor-CrFdsnXa.js",
+      "parentUrl": "https://ziontechgroup.com/logo192.png",
+      "depth": 3
+    },
+    {
+      "url": "https://ziontechgroup.com/css/main-C3rjQXSa.css",
+      "parentUrl": "https://ziontechgroup.com/logo192.png",
+      "depth": 3
+    },
+    {
+      "url": "https://ziontechgroup.com/js/main-3lYBb4BX.js",
+      "parentUrl": "https://ziontechgroup.com/logo192.png",
+      "depth": 3
+    },
+    {
+      "url": "https://ziontechgroup.com/favicon.svg",
+      "parentUrl": "https://ziontechgroup.com/",
+      "depth": 3
+    },
+    {
+      "url": "https://ziontechgroup.com/",
+      "parentUrl": "https://ziontechgroup.com/",
+      "depth": 3
+    },
+    {
+      "url": "https://ziontechgroup.com/logo192.png",
+      "parentUrl": "https://ziontechgroup.com/",
+      "depth": 3
+    },
+    {
+      "url": "https://ziontechgroup.com/manifest.json",
+      "parentUrl": "https://ziontechgroup.com/",
+      "depth": 3
+    },
+    {
+      "url": "https://ziontechgroup.com/js/react-vendor-ClxMxoJB.js",
+      "parentUrl": "https://ziontechgroup.com/",
+      "depth": 3
+    },
+    {
+      "url": "https://ziontechgroup.com/js/router-vendor-BYHOfCvf.js",
+      "parentUrl": "https://ziontechgroup.com/",
+      "depth": 3
+    },
+    {
+      "url": "https://ziontechgroup.com/js/ui-vendor-BZl2CecO.js",
+      "parentUrl": "https://ziontechgroup.com/",
+      "depth": 3
+    },
+    {
+      "url": "https://ziontechgroup.com/js/utils-vendor-CrFdsnXa.js",
+      "parentUrl": "https://ziontechgroup.com/",
+      "depth": 3
+    },
+    {
+      "url": "https://ziontechgroup.com/css/main-C3rjQXSa.css",
+      "parentUrl": "https://ziontechgroup.com/",
+      "depth": 3
+    },
+    {
+      "url": "https://ziontechgroup.com/js/main-3lYBb4BX.js",
+      "parentUrl": "https://ziontechgroup.com/",
+      "depth": 3
+    },
+    {
+      "url": "https://ziontechgroup.com/favicon.svg",
+      "parentUrl": "https://ziontechgroup.com/logo192.png",
       "depth": 4
     },
     {
@@ -963,102 +963,102 @@
     },
     {
       "url": "https://ziontechgroup.com/favicon.svg",
-      "parentUrl": "https://ziontechgroup.com/logo192.png",
+      "parentUrl": "https://ziontechgroup.com/",
       "depth": 4
     },
     {
       "url": "https://ziontechgroup.com/",
-      "parentUrl": "https://ziontechgroup.com/logo192.png",
+      "parentUrl": "https://ziontechgroup.com/",
       "depth": 4
     },
     {
       "url": "https://ziontechgroup.com/logo192.png",
-      "parentUrl": "https://ziontechgroup.com/logo192.png",
+      "parentUrl": "https://ziontechgroup.com/",
       "depth": 4
     },
     {
       "url": "https://ziontechgroup.com/manifest.json",
-      "parentUrl": "https://ziontechgroup.com/logo192.png",
+      "parentUrl": "https://ziontechgroup.com/",
       "depth": 4
     },
     {
       "url": "https://ziontechgroup.com/js/react-vendor-ClxMxoJB.js",
-      "parentUrl": "https://ziontechgroup.com/logo192.png",
+      "parentUrl": "https://ziontechgroup.com/",
       "depth": 4
     },
     {
       "url": "https://ziontechgroup.com/js/router-vendor-BYHOfCvf.js",
-      "parentUrl": "https://ziontechgroup.com/logo192.png",
+      "parentUrl": "https://ziontechgroup.com/",
       "depth": 4
     },
     {
       "url": "https://ziontechgroup.com/js/ui-vendor-BZl2CecO.js",
-      "parentUrl": "https://ziontechgroup.com/logo192.png",
+      "parentUrl": "https://ziontechgroup.com/",
       "depth": 4
     },
     {
       "url": "https://ziontechgroup.com/js/utils-vendor-CrFdsnXa.js",
-      "parentUrl": "https://ziontechgroup.com/logo192.png",
+      "parentUrl": "https://ziontechgroup.com/",
       "depth": 4
     },
     {
       "url": "https://ziontechgroup.com/css/main-C3rjQXSa.css",
-      "parentUrl": "https://ziontechgroup.com/logo192.png",
+      "parentUrl": "https://ziontechgroup.com/",
       "depth": 4
     },
     {
       "url": "https://ziontechgroup.com/js/main-3lYBb4BX.js",
-      "parentUrl": "https://ziontechgroup.com/logo192.png",
+      "parentUrl": "https://ziontechgroup.com/",
       "depth": 4
     },
     {
       "url": "https://ziontechgroup.com/favicon.svg",
-      "parentUrl": "https://ziontechgroup.com/",
+      "parentUrl": "https://ziontechgroup.com/logo192.png",
       "depth": 4
     },
     {
       "url": "https://ziontechgroup.com/",
-      "parentUrl": "https://ziontechgroup.com/",
+      "parentUrl": "https://ziontechgroup.com/logo192.png",
       "depth": 4
     },
     {
       "url": "https://ziontechgroup.com/logo192.png",
-      "parentUrl": "https://ziontechgroup.com/",
+      "parentUrl": "https://ziontechgroup.com/logo192.png",
       "depth": 4
     },
     {
       "url": "https://ziontechgroup.com/manifest.json",
-      "parentUrl": "https://ziontechgroup.com/",
+      "parentUrl": "https://ziontechgroup.com/logo192.png",
       "depth": 4
     },
     {
       "url": "https://ziontechgroup.com/js/react-vendor-ClxMxoJB.js",
-      "parentUrl": "https://ziontechgroup.com/",
+      "parentUrl": "https://ziontechgroup.com/logo192.png",
       "depth": 4
     },
     {
       "url": "https://ziontechgroup.com/js/router-vendor-BYHOfCvf.js",
-      "parentUrl": "https://ziontechgroup.com/",
+      "parentUrl": "https://ziontechgroup.com/logo192.png",
       "depth": 4
     },
     {
       "url": "https://ziontechgroup.com/js/ui-vendor-BZl2CecO.js",
-      "parentUrl": "https://ziontechgroup.com/",
+      "parentUrl": "https://ziontechgroup.com/logo192.png",
       "depth": 4
     },
     {
       "url": "https://ziontechgroup.com/js/utils-vendor-CrFdsnXa.js",
-      "parentUrl": "https://ziontechgroup.com/",
+      "parentUrl": "https://ziontechgroup.com/logo192.png",
       "depth": 4
     },
     {
       "url": "https://ziontechgroup.com/css/main-C3rjQXSa.css",
-      "parentUrl": "https://ziontechgroup.com/",
+      "parentUrl": "https://ziontechgroup.com/logo192.png",
       "depth": 4
     },
     {
       "url": "https://ziontechgroup.com/js/main-3lYBb4BX.js",
-      "parentUrl": "https://ziontechgroup.com/",
+      "parentUrl": "https://ziontechgroup.com/logo192.png",
       "depth": 4
     },
     {
@@ -1290,31 +1290,6 @@
     },
     {
       "url": "https://fonts.googleapis.com",
-      "parentUrl": "https://ziontechgroup.com/logo192.png",
-      "depth": 2
-    },
-    {
-      "url": "https://fonts.gstatic.com",
-      "parentUrl": "https://ziontechgroup.com/logo192.png",
-      "depth": 2
-    },
-    {
-      "url": "https://fonts.googleapis.com",
-      "parentUrl": "https://ziontechgroup.com/logo192.png",
-      "depth": 2
-    },
-    {
-      "url": "https://fonts.gstatic.com",
-      "parentUrl": "https://ziontechgroup.com/logo192.png",
-      "depth": 2
-    },
-    {
-      "url": "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap",
-      "parentUrl": "https://ziontechgroup.com/logo192.png",
-      "depth": 2
-    },
-    {
-      "url": "https://fonts.googleapis.com",
       "parentUrl": "https://ziontechgroup.com/",
       "depth": 2
     },
@@ -1341,52 +1316,27 @@
     {
       "url": "https://fonts.googleapis.com",
       "parentUrl": "https://ziontechgroup.com/logo192.png",
-      "depth": 3
+      "depth": 2
     },
     {
       "url": "https://fonts.gstatic.com",
       "parentUrl": "https://ziontechgroup.com/logo192.png",
-      "depth": 3
+      "depth": 2
     },
     {
       "url": "https://fonts.googleapis.com",
       "parentUrl": "https://ziontechgroup.com/logo192.png",
-      "depth": 3
+      "depth": 2
     },
     {
       "url": "https://fonts.gstatic.com",
       "parentUrl": "https://ziontechgroup.com/logo192.png",
-      "depth": 3
+      "depth": 2
     },
     {
       "url": "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap",
       "parentUrl": "https://ziontechgroup.com/logo192.png",
-      "depth": 3
-    },
-    {
-      "url": "https://fonts.googleapis.com",
-      "parentUrl": "https://ziontechgroup.com/",
-      "depth": 3
-    },
-    {
-      "url": "https://fonts.gstatic.com",
-      "parentUrl": "https://ziontechgroup.com/",
-      "depth": 3
-    },
-    {
-      "url": "https://fonts.googleapis.com",
-      "parentUrl": "https://ziontechgroup.com/",
-      "depth": 3
-    },
-    {
-      "url": "https://fonts.gstatic.com",
-      "parentUrl": "https://ziontechgroup.com/",
-      "depth": 3
-    },
-    {
-      "url": "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap",
-      "parentUrl": "https://ziontechgroup.com/",
-      "depth": 3
+      "depth": 2
     },
     {
       "url": "https://fonts.googleapis.com",
@@ -1441,6 +1391,56 @@
     {
       "url": "https://fonts.googleapis.com",
       "parentUrl": "https://ziontechgroup.com/logo192.png",
+      "depth": 3
+    },
+    {
+      "url": "https://fonts.gstatic.com",
+      "parentUrl": "https://ziontechgroup.com/logo192.png",
+      "depth": 3
+    },
+    {
+      "url": "https://fonts.googleapis.com",
+      "parentUrl": "https://ziontechgroup.com/logo192.png",
+      "depth": 3
+    },
+    {
+      "url": "https://fonts.gstatic.com",
+      "parentUrl": "https://ziontechgroup.com/logo192.png",
+      "depth": 3
+    },
+    {
+      "url": "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap",
+      "parentUrl": "https://ziontechgroup.com/logo192.png",
+      "depth": 3
+    },
+    {
+      "url": "https://fonts.googleapis.com",
+      "parentUrl": "https://ziontechgroup.com/",
+      "depth": 3
+    },
+    {
+      "url": "https://fonts.gstatic.com",
+      "parentUrl": "https://ziontechgroup.com/",
+      "depth": 3
+    },
+    {
+      "url": "https://fonts.googleapis.com",
+      "parentUrl": "https://ziontechgroup.com/",
+      "depth": 3
+    },
+    {
+      "url": "https://fonts.gstatic.com",
+      "parentUrl": "https://ziontechgroup.com/",
+      "depth": 3
+    },
+    {
+      "url": "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap",
+      "parentUrl": "https://ziontechgroup.com/",
+      "depth": 3
+    },
+    {
+      "url": "https://fonts.googleapis.com",
+      "parentUrl": "https://ziontechgroup.com/logo192.png",
       "depth": 4
     },
     {
@@ -1490,31 +1490,6 @@
     },
     {
       "url": "https://fonts.googleapis.com",
-      "parentUrl": "https://ziontechgroup.com/logo192.png",
-      "depth": 4
-    },
-    {
-      "url": "https://fonts.gstatic.com",
-      "parentUrl": "https://ziontechgroup.com/logo192.png",
-      "depth": 4
-    },
-    {
-      "url": "https://fonts.googleapis.com",
-      "parentUrl": "https://ziontechgroup.com/logo192.png",
-      "depth": 4
-    },
-    {
-      "url": "https://fonts.gstatic.com",
-      "parentUrl": "https://ziontechgroup.com/logo192.png",
-      "depth": 4
-    },
-    {
-      "url": "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap",
-      "parentUrl": "https://ziontechgroup.com/logo192.png",
-      "depth": 4
-    },
-    {
-      "url": "https://fonts.googleapis.com",
       "parentUrl": "https://ziontechgroup.com/",
       "depth": 4
     },
@@ -1536,6 +1511,31 @@
     {
       "url": "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap",
       "parentUrl": "https://ziontechgroup.com/",
+      "depth": 4
+    },
+    {
+      "url": "https://fonts.googleapis.com",
+      "parentUrl": "https://ziontechgroup.com/logo192.png",
+      "depth": 4
+    },
+    {
+      "url": "https://fonts.gstatic.com",
+      "parentUrl": "https://ziontechgroup.com/logo192.png",
+      "depth": 4
+    },
+    {
+      "url": "https://fonts.googleapis.com",
+      "parentUrl": "https://ziontechgroup.com/logo192.png",
+      "depth": 4
+    },
+    {
+      "url": "https://fonts.gstatic.com",
+      "parentUrl": "https://ziontechgroup.com/logo192.png",
+      "depth": 4
+    },
+    {
+      "url": "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap",
+      "parentUrl": "https://ziontechgroup.com/logo192.png",
       "depth": 4
     },
     {
@@ -1642,74 +1642,74 @@
   "visitedPages": [
     "https://ziontechgroup.com",
     "https://ziontechgroup.com/favicon.svg",
-    "https://ziontechgroup.com/js/react-vendor-ClxMxoJB.js",
-    "https://ziontechgroup.com/manifest.json",
-    "https://ziontechgroup.com/logo192.png",
-    "https://ziontechgroup.com/js/router-vendor-BYHOfCvf.js",
-    "https://ziontechgroup.com/js/ui-vendor-BZl2CecO.js",
-    "https://ziontechgroup.com/js/utils-vendor-CrFdsnXa.js",
-    "https://ziontechgroup.com/css/main-C3rjQXSa.css",
     "https://ziontechgroup.com/",
-    "https://ziontechgroup.com/favicon.svg",
-    "https://ziontechgroup.com/logo192.png",
-    "https://ziontechgroup.com/",
-    "https://ziontechgroup.com/js/main-3lYBb4BX.js",
     "https://ziontechgroup.com/manifest.json",
-    "https://ziontechgroup.com/js/router-vendor-BYHOfCvf.js",
     "https://ziontechgroup.com/js/react-vendor-ClxMxoJB.js",
+    "https://ziontechgroup.com/logo192.png",
     "https://ziontechgroup.com/js/utils-vendor-CrFdsnXa.js",
     "https://ziontechgroup.com/js/ui-vendor-BZl2CecO.js",
     "https://ziontechgroup.com/css/main-C3rjQXSa.css",
-    "https://ziontechgroup.com/logo192.png",
-    "https://ziontechgroup.com/favicon.svg",
-    "https://ziontechgroup.com/js/main-3lYBb4BX.js",
-    "https://ziontechgroup.com/manifest.json",
-    "https://ziontechgroup.com/",
-    "https://ziontechgroup.com/js/utils-vendor-CrFdsnXa.js",
-    "https://ziontechgroup.com/js/ui-vendor-BZl2CecO.js",
-    "https://ziontechgroup.com/js/react-vendor-ClxMxoJB.js",
     "https://ziontechgroup.com/js/router-vendor-BYHOfCvf.js",
-    "https://ziontechgroup.com/css/main-C3rjQXSa.css",
-    "https://ziontechgroup.com/logo192.png",
-    "https://ziontechgroup.com/favicon.svg",
-    "https://ziontechgroup.com/js/main-3lYBb4BX.js",
-    "https://ziontechgroup.com/manifest.json",
-    "https://ziontechgroup.com/",
-    "https://ziontechgroup.com/js/router-vendor-BYHOfCvf.js",
-    "https://ziontechgroup.com/js/react-vendor-ClxMxoJB.js",
-    "https://ziontechgroup.com/js/utils-vendor-CrFdsnXa.js",
-    "https://ziontechgroup.com/js/ui-vendor-BZl2CecO.js",
-    "https://ziontechgroup.com/css/main-C3rjQXSa.css",
     "https://ziontechgroup.com/favicon.svg",
     "https://ziontechgroup.com/logo192.png",
     "https://ziontechgroup.com/",
     "https://ziontechgroup.com/manifest.json",
     "https://ziontechgroup.com/js/main-3lYBb4BX.js",
-    "https://ziontechgroup.com/js/router-vendor-BYHOfCvf.js",
-    "https://ziontechgroup.com/js/utils-vendor-CrFdsnXa.js",
     "https://ziontechgroup.com/js/ui-vendor-BZl2CecO.js",
-    "https://ziontechgroup.com/js/react-vendor-ClxMxoJB.js",
-    "https://ziontechgroup.com/css/main-C3rjQXSa.css",
-    "https://ziontechgroup.com/logo192.png",
-    "https://ziontechgroup.com/favicon.svg",
-    "https://ziontechgroup.com/",
-    "https://ziontechgroup.com/manifest.json",
-    "https://ziontechgroup.com/js/main-3lYBb4BX.js",
-    "https://ziontechgroup.com/js/ui-vendor-BZl2CecO.js",
-    "https://ziontechgroup.com/js/react-vendor-ClxMxoJB.js",
     "https://ziontechgroup.com/js/utils-vendor-CrFdsnXa.js",
-    "https://ziontechgroup.com/js/router-vendor-BYHOfCvf.js",
     "https://ziontechgroup.com/css/main-C3rjQXSa.css",
+    "https://ziontechgroup.com/js/react-vendor-ClxMxoJB.js",
+    "https://ziontechgroup.com/js/router-vendor-BYHOfCvf.js",
     "https://ziontechgroup.com/favicon.svg",
     "https://ziontechgroup.com/logo192.png",
-    "https://ziontechgroup.com/manifest.json",
     "https://ziontechgroup.com/",
     "https://ziontechgroup.com/js/main-3lYBb4BX.js",
+    "https://ziontechgroup.com/manifest.json",
+    "https://ziontechgroup.com/js/ui-vendor-BZl2CecO.js",
     "https://ziontechgroup.com/js/utils-vendor-CrFdsnXa.js",
+    "https://ziontechgroup.com/js/router-vendor-BYHOfCvf.js",
+    "https://ziontechgroup.com/js/react-vendor-ClxMxoJB.js",
+    "https://ziontechgroup.com/css/main-C3rjQXSa.css",
+    "https://ziontechgroup.com/favicon.svg",
+    "https://ziontechgroup.com/logo192.png",
+    "https://ziontechgroup.com/manifest.json",
+    "https://ziontechgroup.com/js/main-3lYBb4BX.js",
+    "https://ziontechgroup.com/",
     "https://ziontechgroup.com/js/react-vendor-ClxMxoJB.js",
     "https://ziontechgroup.com/js/ui-vendor-BZl2CecO.js",
-    "https://ziontechgroup.com/js/router-vendor-BYHOfCvf.js",
     "https://ziontechgroup.com/css/main-C3rjQXSa.css",
+    "https://ziontechgroup.com/js/router-vendor-BYHOfCvf.js",
+    "https://ziontechgroup.com/js/utils-vendor-CrFdsnXa.js",
+    "https://ziontechgroup.com/js/main-3lYBb4BX.js",
+    "https://ziontechgroup.com/favicon.svg",
+    "https://ziontechgroup.com/manifest.json",
+    "https://ziontechgroup.com/",
+    "https://ziontechgroup.com/logo192.png",
+    "https://ziontechgroup.com/js/ui-vendor-BZl2CecO.js",
+    "https://ziontechgroup.com/js/react-vendor-ClxMxoJB.js",
+    "https://ziontechgroup.com/css/main-C3rjQXSa.css",
+    "https://ziontechgroup.com/js/router-vendor-BYHOfCvf.js",
+    "https://ziontechgroup.com/js/utils-vendor-CrFdsnXa.js",
+    "https://ziontechgroup.com/favicon.svg",
+    "https://ziontechgroup.com/logo192.png",
+    "https://ziontechgroup.com/manifest.json",
+    "https://ziontechgroup.com/js/main-3lYBb4BX.js",
+    "https://ziontechgroup.com/",
+    "https://ziontechgroup.com/js/utils-vendor-CrFdsnXa.js",
+    "https://ziontechgroup.com/css/main-C3rjQXSa.css",
+    "https://ziontechgroup.com/js/react-vendor-ClxMxoJB.js",
+    "https://ziontechgroup.com/js/router-vendor-BYHOfCvf.js",
+    "https://ziontechgroup.com/js/ui-vendor-BZl2CecO.js",
+    "https://ziontechgroup.com/favicon.svg",
+    "https://ziontechgroup.com/logo192.png",
+    "https://ziontechgroup.com/js/main-3lYBb4BX.js",
+    "https://ziontechgroup.com/manifest.json",
+    "https://ziontechgroup.com/",
+    "https://ziontechgroup.com/js/react-vendor-ClxMxoJB.js",
+    "https://ziontechgroup.com/js/utils-vendor-CrFdsnXa.js",
+    "https://ziontechgroup.com/css/main-C3rjQXSa.css",
+    "https://ziontechgroup.com/js/ui-vendor-BZl2CecO.js",
+    "https://ziontechgroup.com/js/router-vendor-BYHOfCvf.js",
     "https://ziontechgroup.com/js/main-3lYBb4BX.js"
   ],
   "recommendations": [
