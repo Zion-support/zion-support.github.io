@@ -10,7 +10,11 @@ export function lazyRetry<T extends ComponentType<any>>(
 ): React.LazyExoticComponent<T> {
   return lazy(() => {
     return new Promise<{ default: T }>((resolve, reject) => {
+<<<<<<< HEAD
+const attemptLoad = (attemptsLeft: number) => {
+=======
 const attemptLoad = (attemptsLeft: number) => {,,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 componentImport()
 .then(resolve)
 .catch((error) => {
@@ -23,7 +27,7 @@ return;
             setTimeout(() => {
               console.log(`Retrying component load... (${attemptsLeft - 1} attempts left)`);`;
               attemptLoad(attemptsLeft - 1);
-            } delay);
+            }, delay);
           });
       };
       
@@ -39,7 +43,11 @@ export function preloadComponent(
   componentImport: () => Promise<{ default: ComponentType<any> }>
 ): void {
   componentImport().catch((error) => {
+<<<<<<< HEAD
+    console.warn('Failed to preload component: ', error);',
+=======
     console.warn('Failed to preload component: ', error);';,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   });
 }
 

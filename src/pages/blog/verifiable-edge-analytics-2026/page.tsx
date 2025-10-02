@@ -9,12 +9,21 @@ export default function VerifiableEdgeAnalytics2026(): React.JSX.Element {
           name="description"
           content="Scoped IDs, on‑device aggregation, DP noise, and signed attestations for trustworthy insights under 100ms." /><link
           rel="canonical"
+<<<<<<< HEAD
+          href="https://ziontechgroup.com/blog/verifiable-edge-analytics-2026",
+        />
+      </Helmet>
+
+      <div className="container mx-auto px-6 py-16">
+        <h1 className="text-4xl md: text-5xl font-bold mb-4">",
+=======
           href="https: //ziontechgroup.com/blog/verifiable-edge-analytics-2026",
         />
       </Helmet>
 
       <div className="container mx-auto px-6 py-16">";
         <h1 className="text-4xl md: text-5xl font-bold mb-4">";,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           Verifiable Edge Analytics 2026
         </h1>
         <p className="text-zion-slate-light mb-8">";
@@ -28,8 +37,13 @@ export default function VerifiableEdgeAnalytics2026(): React.JSX.Element {
             attestations to make pipelines verifiable across environments.
           </p>
           <p>
+<<<<<<< HEAD
+            Highlights: key derivation for scoped IDs, local redaction filters,
+            minimal event shapes, DP parameters, signed SBOMs and attestations
+=======
             Highlights: key derivation for scoped IDs, local redaction filters,,
             minimal event shapes, DP parameters, signed SBOMs and attestations,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             and observability hooks that link SLIs to product KPIs.
           </p>
         </div>

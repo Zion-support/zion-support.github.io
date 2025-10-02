@@ -1,37 +1,63 @@
 export const generateSitemap = () => {
-  const baseUrl = 'https://ziontechgroup.com';
+<<<<<<< HEAD
+  const baseUrl = 'https://ziontechgroup.com';',
   const pages = [
-    { url: '/', priority: 1.0, changefreq: 'daily' },
-    { url: '/blog', priority: 0.9, changefreq: 'daily' },
-    { url: '/case-studies', priority: 0.9, changefreq: 'weekly' },
-    { url: '/services', priority: 0.9, changefreq: 'weekly' },
-    { url: '/contact', priority: 0.8, changefreq: 'monthly' },
+    { url: '/', priority: 1.0, changefreq: 'daily' }
+    { url: '/blog', priority: 0.9, changefreq: 'daily' }
+    { url: '/case-studies', priority: 0.9, changefreq: 'weekly' }
+    { url: '/services', priority: 0.9, changefreq: 'weekly' }
+    { url: '/contact', priority: 0.8, changefreq: 'monthly' }
   ];
 
   const blogPosts = [
     '/blog/ai-autonomous-threat-response-2025',
     '/blog/ai-prompt-engineering-mastery-2025',
-    '/blog/ai-synthetic-data-generation-2025',
+    '/blog/ai-synthetic-data-generation-2025'
+=======
+  const baseUrl = 'https: //ziontechgroup.com';';,
+  const pages = [
+    { url: '/', priority: 1.0, changefreq: 'daily' },';
+    { url: '/blog', priority: 0.9, changefreq: 'daily' },';
+    { url: '/case-studies', priority: 0.9, changefreq: 'weekly' },';
+    { url: '/services', priority: 0.9, changefreq: 'weekly' },';
+    { url: '/contact', priority: 0.8, changefreq: 'monthly' },';
   ];
 
-  blogPosts.forEach((post) => {
+  const blogPosts = [
+    '/blog/ai-autonomous-threat-response-2025',';
+    '/blog/ai-prompt-engineering-mastery-2025',';
+    '/blog/ai-synthetic-data-generation-2025',';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
+  ];
+
+  blogPosts.forEach(post => {
     pages.push({
+<<<<<<< HEAD
       url: post,
       priority: 0.8,
-      changefreq: 'weekly',
+      changefreq: 'weekly'
+=======
+      url: post,,
+      priority: 0.8,,
+      changefreq: 'weekly',';,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     });
   });
 
-  const xmlHeader = '<?xml version="1.0" encoding="UTF-8"?>';
-  const urlsetOpen = '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
-  const urlsetClose = '</urlset>';
+  const xml = `<?xml version="1.0" encoding="UTF-8"?>";`;
+<<<<<<< HEAD
+<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">",
+=======
+<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">";,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
+${pages.map(page => `  <url>`;
+    <loc>${baseUrl}${page.url}</loc>
+    <changefreq>${page.changefreq}</changefreq>
+    <priority>${page.priority}</priority>
+    <lastmod>${new Date().toISOString()}</lastmod>
+  </url>`).join('\n')}';`;
+</urlset>`;`;
 
-  const urls = pages
-    .map(
-      (page) =>
-        `  <url>\n    <loc>${baseUrl}${page.url}</loc>\n    <changefreq>${page.changefreq}</changefreq>\n    <priority>${page.priority}</priority>\n    <lastmod>${new Date().toISOString()}</lastmod>\n  </url>`
-    )
-    .join('\n');
-
-  return `${xmlHeader}\n${urlsetOpen}\n${urls}\n${urlsetClose}`;
+  return xml;
 };
+;

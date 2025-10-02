@@ -1,5 +1,9 @@
+<<<<<<< HEAD
+import React from 'react';
+=======
 import React from 'react';';
 
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 const BlogPromotionBanner: React.FC = () => {,
   return (
     <section className="py-16 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">";
@@ -10,7 +14,11 @@ const BlogPromotionBanner: React.FC = () => {,
               🚀 Latest AI Insights
             </span>
           </div>
+<<<<<<< HEAD
+          <h2 className="text-4xl md: text-5xl font-extrabold mb-6 bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">",
+=======
           <h2 className="text-4xl md: text-5xl font-extrabold mb-6 bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">";,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             Stay Ahead with AI Innovation
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">";

@@ -1,9 +1,27 @@
+<<<<<<< HEAD
+import React from 'react';
+=======
 import React from 'react';';
 
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 const January2025EnterpriseSuccessBanner: React.FC = () => {,
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-gray-900 to-slate-800">";
       {/* Background Pattern */}
+<<<<<<< HEAD
+      <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-5"></div>
+      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-blue-500/10 to-transparent rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-emerald-500/10 to-transparent rounded-full blur-3xl"></div>
+      <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-20">",
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-2 bg-blue-500/20 text-blue-400 px-6 py-3 rounded-full text-sm font-medium mb-8">
+            <Award className="w-5 h-5/>
+            <span>ENTERPRISE SUCCESS STORIES</span>
+          </div>
+          
+          <h2 className="text-4xl md: text-6xl font-bold text-white mb-6 leading-tight">",
+            <span className="bg-gradient-to-r from-blue-400 via-emerald-400 to-purple-400 bg-clip-text text-transparent">
+=======
       <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-5"></div>";
       <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-blue-500/10 to-transparent rounded-full blur-3xl"></div>";
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-emerald-500/10 to-transparent rounded-full blur-3xl"></div>";
@@ -17,19 +35,35 @@ const January2025EnterpriseSuccessBanner: React.FC = () => {,
           
           <h2 className="text-4xl md: text-6xl font-bold text-white mb-6 leading-tight">";,
             <span className="bg-gradient-to-r from-blue-400 via-emerald-400 to-purple-400 bg-clip-text text-transparent">";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               Real Results
             </span>
             <br />
             <span className="text-white">From Real Companies</span>";
           </h2>
           
+<<<<<<< HEAD
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-12">
+            Discover how Fortune 500 companies are achieving unprecedented success with AI-powered transformations
+=======
           <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-12">";
             Discover how Fortune 500 companies are achieving unprecedented success with AI-powered transformations, 
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             generating billions in value and revolutionizing their industries.
           </p>
         </div>
 
         {/* Success Stories Grid */}
+<<<<<<< HEAD
+        <div className="grid lg: grid-cols-2 gap-8 mb-16">",
+          {/* Manufacturing Transformation */}
+          <div className="group relative bg-white/5 backdrop-blur-lg rounded-3xl p-8 border border-white/10 hover: border-blue-400/50 transition-all duration-300 hover:transform hover:scale-[1.02]">",
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-emerald-500/5 rounded-3xl opacity-0 group-hover: opacity-100 transition-opacity duration-300"></div>",
+            <div className="relative">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="p-3 bg-blue-500/20 rounded-xl">
+                  <Building2 className="w-8 h-8 text-blue-400/>
+=======
         <div className="grid lg: grid-cols-2 gap-8 mb-16">";,
           {/* Manufacturing Transformation */}
           <div className="group relative bg-white/5 backdrop-blur-lg rounded-3xl p-8 border border-white/10 hover: border-blue-400/50 transition-all duration-300 hover:transform hover:scale-[1.02]">";,
@@ -38,6 +72,7 @@ const January2025EnterpriseSuccessBanner: React.FC = () => {,
               <div className="flex items-center gap-4 mb-6">";
                 <div className="p-3 bg-blue-500/20 rounded-xl">";
                   <Building2 className="w-8 h-8 text-blue-400" />";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-white">Global Manufacturing Corp</h3>";
@@ -66,18 +101,31 @@ const January2025EnterpriseSuccessBanner: React.FC = () => {,
                 className="inline-flex items-center gap-2 text-blue-400 hover: text-blue-300 font-medium transition-colors",
               >
                 Read Full Case Study
+<<<<<<< HEAD
+                <ArrowRight className="w-4 h-4/>
+=======
                 <ArrowRight className="w-4 h-4" />";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </Link>
             </div>
           </div>
 
           {/* Financial Services */}
+<<<<<<< HEAD
+          <div className="group relative bg-white/5 backdrop-blur-lg rounded-3xl p-8 border border-white/10 hover: border-emerald-400/50 transition-all duration-300 hover:transform hover:scale-[1.02]">",
+            <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-blue-500/5 rounded-3xl opacity-0 group-hover: opacity-100 transition-opacity duration-300"></div>",
+            <div className="relative">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="p-3 bg-emerald-500/20 rounded-xl">
+                  <TrendingUp className="w-8 h-8 text-emerald-400/>
+=======
           <div className="group relative bg-white/5 backdrop-blur-lg rounded-3xl p-8 border border-white/10 hover: border-emerald-400/50 transition-all duration-300 hover:transform hover:scale-[1.02]">";,
             <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-blue-500/5 rounded-3xl opacity-0 group-hover: opacity-100 transition-opacity duration-300"></div>";,
             <div className="relative">";
               <div className="flex items-center gap-4 mb-6">";
                 <div className="p-3 bg-emerald-500/20 rounded-xl">";
                   <TrendingUp className="w-8 h-8 text-emerald-400" />";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-white">Global Financial Services</h3>";
@@ -106,19 +154,32 @@ const January2025EnterpriseSuccessBanner: React.FC = () => {,
                 className="inline-flex items-center gap-2 text-emerald-400 hover: text-emerald-300 font-medium transition-colors",
               >
                 Read Full Case Study
+<<<<<<< HEAD
+                <ArrowRight className="w-4 h-4/>
+=======
                 <ArrowRight className="w-4 h-4" />";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </Link>
             </div>
           </div>
         </div>
 
         {/* Additional Success Stories */}
+<<<<<<< HEAD
+        <div className="grid md: grid-cols-3 gap-6 mb-16">",
+          {/* Healthcare */}
+          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover: border-purple-400/50 transition-all duration-300">",
+            <div className="flex items-center gap-3 mb-4">
+              <div className="p-2 bg-purple-500/20 rounded-lg">
+                <Users className="w-6 h-6 text-purple-400/>
+=======
         <div className="grid md: grid-cols-3 gap-6 mb-16">";,
           {/* Healthcare */}
           <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover: border-purple-400/50 transition-all duration-300">";,
             <div className="flex items-center gap-3 mb-4">";
               <div className="p-2 bg-purple-500/20 rounded-lg">";
                 <Users className="w-6 h-6 text-purple-400" />";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </div>
               <div>
                 <h4 className="text-lg font-bold text-white">Regional Healthcare</h4>";
@@ -128,19 +189,33 @@ const January2025EnterpriseSuccessBanner: React.FC = () => {,
             <p className="text-gray-300 text-sm mb-4">";
               AI diagnostic system achieving 94% accuracy and saving 252 lives with 497% ROI.
             </p>
+<<<<<<< HEAD
+            <div className="flex items-center justify-between">
+              <span className="text-purple-400 font-bold">$1.5B Value</span>
+              <Link to="/case-studies/healthcare-ai-diagnostic-system" className="text-purple-400 hover: text-purple-300">",
+                <ArrowRight className="w-4 h-4/>
+=======
             <div className="flex items-center justify-between">";
               <span className="text-purple-400 font-bold">$1.5B Value</span>";
               <Link to="/case-studies/healthcare-ai-diagnostic-system" className="text-purple-400 hover: text-purple-300">";,
                 <ArrowRight className="w-4 h-4" />";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </Link>
             </div>
           </div>
 
           {/* Retail */}
+<<<<<<< HEAD
+          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover: border-blue-400/50 transition-all duration-300">",
+            <div className="flex items-center gap-3 mb-4">
+              <div className="p-2 bg-blue-500/20 rounded-lg">
+                <Zap className="w-6 h-6 text-blue-400/>
+=======
           <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover: border-blue-400/50 transition-all duration-300">";,
             <div className="flex items-center gap-3 mb-4">";
               <div className="p-2 bg-blue-500/20 rounded-lg">";
                 <Zap className="w-6 h-6 text-blue-400" />";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </div>
               <div>
                 <h4 className="text-lg font-bold text-white">Global Retail Corp</h4>";
@@ -150,19 +225,33 @@ const January2025EnterpriseSuccessBanner: React.FC = () => {,
             <p className="text-gray-300 text-sm mb-4">";
               Supply chain optimization achieving 65% faster deliveries and 40% cost reduction.
             </p>
+<<<<<<< HEAD
+            <div className="flex items-center justify-between">
+              <span className="text-blue-400 font-bold">2,800% ROI</span>
+              <Link to="/case-studies/retail-supply-chain-optimization" className="text-blue-400 hover: text-blue-300">",
+                <ArrowRight className="w-4 h-4/>
+=======
             <div className="flex items-center justify-between">";
               <span className="text-blue-400 font-bold">2,800% ROI</span>";
               <Link to="/case-studies/retail-supply-chain-optimization" className="text-blue-400 hover: text-blue-300">";,
                 <ArrowRight className="w-4 h-4" />";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </Link>
             </div>
           </div>
 
           {/* Energy */}
+<<<<<<< HEAD
+          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover: border-emerald-400/50 transition-all duration-300">",
+            <div className="flex items-center gap-3 mb-4">
+              <div className="p-2 bg-emerald-500/20 rounded-lg">
+                <Award className="w-6 h-6 text-emerald-400/>
+=======
           <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover: border-emerald-400/50 transition-all duration-300">";,
             <div className="flex items-center gap-3 mb-4">";
               <div className="p-2 bg-emerald-500/20 rounded-lg">";
                 <Award className="w-6 h-6 text-emerald-400" />";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </div>
               <div>
                 <h4 className="text-lg font-bold text-white">Energy Utility</h4>";
@@ -172,16 +261,37 @@ const January2025EnterpriseSuccessBanner: React.FC = () => {,
             <p className="text-gray-300 text-sm mb-4">";
               Smart grid AI achieving 99.97% uptime and $890M annual savings.
             </p>
+<<<<<<< HEAD
+            <div className="flex items-center justify-between">
+              <span className="text-emerald-400 font-bold">1,600% ROI</span>
+              <Link to="/case-studies/energy-sector-smart-grid" className="text-emerald-400 hover: text-emerald-300">",
+                <ArrowRight className="w-4 h-4/>
+=======
             <div className="flex items-center justify-between">";
               <span className="text-emerald-400 font-bold">1,600% ROI</span>";
               <Link to="/case-studies/energy-sector-smart-grid" className="text-emerald-400 hover: text-emerald-300">";,
                 <ArrowRight className="w-4 h-4" />";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </Link>
             </div>
           </div>
         </div>
 
         {/* Call to Action */}
+<<<<<<< HEAD
+        <div className="text-center bg-white/5 backdrop-blur-lg rounded-3xl p-12 border border-white/10">
+          <div className="flex items-center justify-center gap-2 mb-6">
+            <Star className="w-6 h-6 text-yellow-400 fill-current/>
+            <h3 className="text-3xl font-bold text-white">Ready to Transform Your Enterprise?</h3>
+          </div>
+          
+          <p className="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
+            Join 500+ enterprise clients who have already transformed their operations with AI
+            generating billions in value and achieving unprecedented efficiency.
+          </p>
+          
+          <div className="flex flex-col sm: flex-row items-center justify-center gap-4">",
+=======
         <div className="text-center bg-white/5 backdrop-blur-lg rounded-3xl p-12 border border-white/10">";
           <div className="flex items-center justify-center gap-2 mb-6">";
             <Star className="w-6 h-6 text-yellow-400 fill-current" />";
@@ -194,11 +304,16 @@ const January2025EnterpriseSuccessBanner: React.FC = () => {,
           </p>
           
           <div className="flex flex-col sm: flex-row items-center justify-center gap-4">";,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             <Link
               to="/contact"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-emerald-500 text-white px-8 py-4 rounded-full font-semibold hover: from-blue-600 hover:to-emerald-600 transition-all duration-300 transform hover:scale-105",
             >
+<<<<<<< HEAD
+              <CheckCircle className="w-5 h-5/>
+=======
               <CheckCircle className="w-5 h-5" />";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               Start Your AI Transformation
             </Link>
             <Link
@@ -206,7 +321,11 @@ const January2025EnterpriseSuccessBanner: React.FC = () => {,
               className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-full font-semibold border border-white/20 hover: bg-white/20 transition-all duration-300",
             >
               View All Success Stories
+<<<<<<< HEAD
+              <ArrowRight className="w-5 h-5/>
+=======
               <ArrowRight className="w-5 h-5" />";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             </Link>
           </div>
         </div>
