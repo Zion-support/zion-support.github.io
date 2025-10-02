@@ -167,6 +167,21 @@ const Home = () => {
         <div className="container mx-auto px-6 mt-6">
           <ComprehensivePromoBanner variant="hero" showCount={4} />
         </div>
+
+        {/* Latest AI Breakthroughs Promo */}
+        <NewContentPromoBanner 
+          className="border-b border-white/10" 
+          variant="premium" 
+          title="🚀 JUST RELEASED: Latest AI Breakthroughs — Autonomous DevOps, Multimodal AI, and Advanced Scorecards"
+          description="Discover cutting-edge AI innovations: self-healing infrastructure achieving 99.9% uptime, unified multimodal AI processing vision and language, and operational scorecards that gate risk while shipping faster."
+          ctaText="Explore Latest Breakthroughs"
+          ctaLink="/blog"
+          featuredItems={[
+            { title: "Autonomous DevOps Platforms — Self-Healing Infrastructure (99.9% Uptime, 85% MTTR Reduction)", category: "DevOps & Infrastructure", link: "/blog/ai-2025-oct-04-autonomous-devops-platforms" },
+            { title: "Multimodal AI Integration — Vision, Language & Decision Making (Cross-Modal Understanding)", category: "AI Research", link: "/blog/ai-2025-oct-04-multimodal-ai-integration" },
+            { title: "Operational AI Scorecards v2 — Gate Risk, Ship Faster (KPI-Linked SLIs, Rollback-First)", category: "AI Reliability", link: "/blog/ai-2025-oct-04-operational-ai-scorecards-v2" }
+          ]}
+        />
         
         {/* New Articles Promotional Banner */}
         <div className="container mx-auto px-6 mt-6">
