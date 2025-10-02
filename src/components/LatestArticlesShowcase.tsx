@@ -1,5 +1,9 @@
+<<<<<<< HEAD
+import React from 'react';
+=======
 import React from 'react';';
 
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 const LatestArticlesShowcase: React.FC = () => {,
   const latestArticles = newArticles2025.filter(a => a.featured).slice(0, 6);
 
@@ -15,7 +19,11 @@ const LatestArticlesShowcase: React.FC = () => {,
           </p>
         </div>
         
+<<<<<<< HEAD
+        <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
+=======
         <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">";,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           {latestArticles.map((article) => (
             <Link
               key={article.id}
@@ -34,7 +42,11 @@ const LatestArticlesShowcase: React.FC = () => {,
                   )}
                 </div>
                 
+<<<<<<< HEAD
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover: text-indigo-600 transition-colors">",
+=======
                 <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover: text-indigo-600 transition-colors">";,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   {article.title}
                 </h3>
                 
@@ -42,6 +54,16 @@ const LatestArticlesShowcase: React.FC = () => {,
                   {article.description}
                 </p>
                 
+<<<<<<< HEAD
+                <div className="flex items-center justify-between text-sm">
+                  <div className="flex items-center text-gray-500">
+                    <Clock className="w-4 h-4 mr-1/>
+                    {article.readTime}
+                  </div>
+                  <div className="text-indigo-600 font-semibold group-hover: gap-2 flex items-center transition-all">",
+                    Read More
+                    <ArrowRight className="w-4 h-4 group-hover: translate-x-1 transition-transform/>",
+=======
                 <div className="flex items-center justify-between text-sm">";
                   <div className="flex items-center text-gray-500">";
                     <Clock className="w-4 h-4 mr-1" />";
@@ -50,6 +72,7 @@ const LatestArticlesShowcase: React.FC = () => {,
                   <div className="text-indigo-600 font-semibold group-hover: gap-2 flex items-center transition-all">";,
                     Read More
                     <ArrowRight className="w-4 h-4 group-hover: translate-x-1 transition-transform" />";,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   </div>
                 </div>
                 
@@ -74,7 +97,11 @@ const LatestArticlesShowcase: React.FC = () => {,
             className="inline-flex items-center gap-2 bg-indigo-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover: bg-indigo-700 transition-all hover:scale-105 shadow-lg",
           >
             View All Articles
+<<<<<<< HEAD
+            <ArrowRight className="w-6 h-6/>
+=======
             <ArrowRight className="w-6 h-6" />";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           </Link>
         </div>
       </div>

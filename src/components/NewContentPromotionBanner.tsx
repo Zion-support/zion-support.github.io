@@ -1,15 +1,29 @@
+<<<<<<< HEAD
+import React, { useState } from 'react';
+=======
 import React, { useState } from 'react';';
 
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 interface NewContentPromotionBannerProps {
-variant?: 'info' | 'success' | 'warning' | 'error' | 'default' | 'premium';';
-title?: string;
-description?: string;
-ctaText?: string;
-ctaLink?: string;
-dismissible?: boolean;
+variant?: 'info' | 'success' | 'warning' | 'error' | 'default' | 'premium';,
+title?: string;,
+description?: string;,
+ctaText?: string;,
+ctaLink?: string;,
+dismissible?: boolean;,
 className?: string;
 }
 
+<<<<<<< HEAD
+const NewContentPromotionBanner: React.FC<NewContentPromotionBannerProps> = ({
+  variant = 'info'
+  title = "🚀 NEW CONTENT: Fresh Insights & Expert Guides"
+  description = "Discover our latest articles on real-time data pipelines, platform engineering, and GenAI operationalization."
+  ctaText = "Explore Latest Content"
+  ctaLink = "/blog"
+  dismissible = true
+  className = ""
+=======
 const NewContentPromotionBanner: React.FC<NewContentPromotionBannerProps> = ({,
   variant = 'info',';
   title = "🚀 NEW CONTENT: Fresh Insights & Expert Guides",";,
@@ -18,6 +32,7 @@ const NewContentPromotionBanner: React.FC<NewContentPromotionBannerProps> = ({,
   ctaLink = "/blog",";
   dismissible = true,
   className = "",";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 }) => {
   const [isVisible, setIsVisible] = useState(true);
 
@@ -28,6 +43,23 @@ const NewContentPromotionBanner: React.FC<NewContentPromotionBannerProps> = ({,
   if (!isVisible) return null;
 
   const variantClasses = {
+<<<<<<< HEAD
+    info: "bg-gradient-to-r from-blue-500/20 to-purple-500/20 border-blue-400/30 text-blue-100",
+    success: "bg-gradient-to-r from-green-500/20 to-emerald-500/20 border-green-400/30 text-green-100",
+    warning: "bg-gradient-to-r from-yellow-500/20 to-orange-500/20 border-yellow-400/30 text-yellow-100",
+    error: "bg-gradient-to-r from-red-500/20 to-pink-500/20 border-red-400/30 text-red-100",
+    default: "bg-gradient-to-r from-blue-500/20 to-purple-500/20 border-blue-400/30 text-blue-100",
+    premium: "bg-gradient-to-r from-purple-600/20 via-pink-600/20 to-red-600/20 border-purple-400/30 text-purple-100"
+  };
+
+  const iconClasses = {
+    info: "text-blue-400",
+    success: "text-green-400",
+    warning: "text-yellow-400",
+    error: "text-red-400",
+    default: "text-blue-400",
+    premium: "text-purple-300"
+=======
     info: "bg-gradient-to-r from-blue-500/20 to-purple-500/20 border-blue-400/30 text-blue-100",";,
     success: "bg-gradient-to-r from-green-500/20 to-emerald-500/20 border-green-400/30 text-green-100",";,
     warning: "bg-gradient-to-r from-yellow-500/20 to-orange-500/20 border-yellow-400/30 text-yellow-100",";,
@@ -43,6 +75,7 @@ const NewContentPromotionBanner: React.FC<NewContentPromotionBannerProps> = ({,
     error: "text-red-400",";,
     default: "text-blue-400",";,
     premium: "text-purple-300",";,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   };
 
   return (
@@ -54,6 +87,21 @@ const NewContentPromotionBanner: React.FC<NewContentPromotionBannerProps> = ({,
         <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-white/5 rounded-full"></div>";
       </div>
 
+<<<<<<< HEAD
+      <div className="relative z-10">
+        <div className="flex items-start justify-between">
+          <div className="flex-1">
+            <div className="flex items-center gap-3 mb-3">
+              <div className="flex items-center gap-2">
+                <Sparkles className={`w-5 h-5 ${iconClasses[variant]} animate-pulse`} />`;
+                <span className="text-sm font-medium uppercase tracking-wider opacity-90">
+                  Fresh Content
+                </span>
+              </div>
+              <div className="flex items-center gap-1">
+                <TrendingUp className={`w-4 h-4 ${iconClasses[variant]} animate-bounce`} />`;
+                <span className="text-xs opacity-75">Trending</span>
+=======
       <div className="relative z-10">";
         <div className="flex items-start justify-between">";
           <div className="flex-1">";
@@ -67,6 +115,7 @@ const NewContentPromotionBanner: React.FC<NewContentPromotionBannerProps> = ({,
               <div className="flex items-center gap-1">";
                 <TrendingUp className={`w-4 h-4 ${iconClasses[variant]} animate-bounce`} />`;
                 <span className="text-xs opacity-75">Trending</span>";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </div>
             </div>
 
@@ -79,27 +128,49 @@ const NewContentPromotionBanner: React.FC<NewContentPromotionBannerProps> = ({,
             </p>
 
             {/* Featured Content Preview */}
+<<<<<<< HEAD
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-3 mb-4">",
+              <div className="bg-white/10 rounded-lg p-3 border border-white/20">
+                <div className="flex items-center gap-2 mb-1">
+                  <BookOpen className="w-3 h-3/>
+                  <span className="text-xs font-medium">Data Engineering</span>
+=======
             <div className="grid grid-cols-1 md: grid-cols-3 gap-3 mb-4">";,
               <div className="bg-white/10 rounded-lg p-3 border border-white/20">";
                 <div className="flex items-center gap-2 mb-1">";
                   <BookOpen className="w-3 h-3" />";
                   <span className="text-xs font-medium">Data Engineering</span>";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 </div>
                 <div className="text-xs opacity-90">Real-Time Data Pipelines Guide</div>";
               </div>
               
+<<<<<<< HEAD
+              <div className="bg-white/10 rounded-lg p-3 border border-white/20">
+                <div className="flex items-center gap-2 mb-1">
+                  <Zap className="w-3 h-3/>
+                  <span className="text-xs font-medium">Platform Engineering</span>
+=======
               <div className="bg-white/10 rounded-lg p-3 border border-white/20">";
                 <div className="flex items-center gap-2 mb-1">";
                   <Zap className="w-3 h-3" />";
                   <span className="text-xs font-medium">Platform Engineering</span>";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 </div>
                 <div className="text-xs opacity-90">Scorecards That Drive Adoption</div>";
               </div>
               
+<<<<<<< HEAD
+              <div className="bg-white/10 rounded-lg p-3 border border-white/20">
+                <div className="flex items-center gap-2 mb-1">
+                  <Sparkles className="w-3 h-3/>
+                  <span className="text-xs font-medium">GenAI</span>
+=======
               <div className="bg-white/10 rounded-lg p-3 border border-white/20">";
                 <div className="flex items-center gap-2 mb-1">";
                   <Sparkles className="w-3 h-3" />";
                   <span className="text-xs font-medium">GenAI</span>";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 </div>
                 <div className="text-xs opacity-90">Production Deployment Patterns</div>";
               </div>
@@ -110,7 +181,11 @@ const NewContentPromotionBanner: React.FC<NewContentPromotionBannerProps> = ({,
               className="inline-flex items-center gap-2 bg-white/20 hover: bg-white/30 text-white px-4 py-2 rounded-lg font-medium text-sm transition-all duration-300 hover:scale-105 border border-white/30",
             >
               {ctaText}
+<<<<<<< HEAD
+              <ArrowRight className="w-4 h-4/>
+=======
               <ArrowRight className="w-4 h-4" />";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             </Link>
           </div>
 
@@ -120,7 +195,11 @@ const NewContentPromotionBanner: React.FC<NewContentPromotionBannerProps> = ({,
               className="ml-4 p-1 rounded-full hover: bg-white/20 transition-colors",
               aria-label="Dismiss banner"
             >
+<<<<<<< HEAD
+              <X className="w-5 h-5 opacity-75 hover: opacity-100/>",
+=======
               <X className="w-5 h-5 opacity-75 hover: opacity-100" />";,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             </button>
           )}
         </div>

@@ -1,10 +1,45 @@
+<<<<<<< HEAD
+import { Link } from "react-router-dom";
+=======
 import {
 Link
 } from "react-router-dom";";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 
 const October2025NewContentBanner2 = () => {
   const newArticles = [
     {
+<<<<<<< HEAD
+      title: "AI-Powered Sustainable Data Centers",",
+      description: "Discover how AI is reducing data center energy consumption by 40% while improving performance",",
+      icon: Leaf,,
+      slug: "ai-2025-oct-01-ai-powered-sustainable-data-centers",",
+      gradient: "from-green-500 to-emerald-600",",
+      badge: "Green AI",
+    },
+    {
+      title: "Next-Gen Financial Risk Prediction",",
+      description: "94% accuracy in real-time market volatility forecasting with AI-powered risk systems",",
+      icon: DollarSign,,
+      slug: "ai-2025-oct-01-ai-financial-risk-prediction-systems",",
+      gradient: "from-blue-500 to-cyan-600",",
+      badge: "FinTech",
+    },
+    {
+      title: "Voice AI Revolution in Enterprise",",
+      description: "Transform communication with 98% accuracy voice AI across 95+ languages",",
+      icon: Mic,,
+      slug: "ai-2025-oct-01-voice-ai-revolution-enterprise",",
+      gradient: "from-purple-500 to-pink-600",",
+      badge: "Voice AI",
+    },
+    {
+      title: "Intelligent Automation & RPA 2.0",",
+      description: "Next-generation RPA with self-learning bots delivering 10x ROI",",
+      icon: Bot,,
+      slug: "ai-2025-oct-01-robotics-process-automation-next-gen",",
+      gradient: "from-orange-500 to-red-600",",
+=======
       title: "AI-Powered Sustainable Data Centers",";,
       description: "Discover how AI is reducing data center energy consumption by 40% while improving performance",";,
       icon: Leaf,,
@@ -34,6 +69,7 @@ const October2025NewContentBanner2 = () => {
       icon: Bot,,
       slug: "ai-2025-oct-01-robotics-process-automation-next-gen",";,
       gradient: "from-orange-500 to-red-600",";,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       badge: "Automation",
     }
   ];
@@ -48,6 +84,15 @@ const October2025NewContentBanner2 = () => {
 
       <div className="max-w-7xl mx-auto relative z-10">";
         {/* Header */}
+<<<<<<< HEAD
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500/20 to-blue-500/20 px-6 py-2 rounded-full border border-purple-500/30 mb-6">
+            <Brain className="w-5 h-5 text-purple-400 animate-pulse/>
+            <span className="text-purple-300 font-semibold">FRESH INSIGHTS | October 2025</span>
+          </div>
+          
+          <h2 className="text-4xl md: text-5xl font-bold text-white mb-4">",
+=======
         <div className="text-center mb-12">";
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500/20 to-blue-500/20 px-6 py-2 rounded-full border border-purple-500/30 mb-6">";
             <Brain className="w-5 h-5 text-purple-400 animate-pulse" />";
@@ -55,6 +100,7 @@ const October2025NewContentBanner2 = () => {
           </div>
           
           <h2 className="text-4xl md: text-5xl font-bold text-white mb-4">";,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             Latest AI Breakthroughs & Innovations
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">";
@@ -63,7 +109,11 @@ const October2025NewContentBanner2 = () => {
         </div>
 
         {/* Articles Grid */}
+<<<<<<< HEAD
+        <div className="grid md: grid-cols-2 gap-6 mb-12">",
+=======
         <div className="grid md: grid-cols-2 gap-6 mb-12">";,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           {newArticles.map((article) => {
             const Icon = article.icon;
             return (
@@ -81,11 +131,19 @@ const October2025NewContentBanner2 = () => {
 
                 {/* Icon */}
                 <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${article.gradient} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>`;
+<<<<<<< HEAD
+                  <Icon className="w-8 h-8 text-white/>
+                </div>
+
+                {/* Content */}
+                <h3 className="text-2xl font-bold text-white mb-3 group-hover: text-purple-400 transition-colors">",
+=======
                   <Icon className="w-8 h-8 text-white" />";
                 </div>
 
                 {/* Content */}
                 <h3 className="text-2xl font-bold text-white mb-3 group-hover: text-purple-400 transition-colors">";,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   {article.title}
                 </h3>
                 <p className="text-gray-400 mb-4 leading-relaxed">";
@@ -93,9 +151,15 @@ const October2025NewContentBanner2 = () => {
                 </p>
 
                 {/* Read More Link */}
+<<<<<<< HEAD
+                <div className="flex items-center gap-2 text-purple-400 font-semibold group-hover: gap-4 transition-all">",
+                  <span>Read Article</span>
+                  <ArrowRight className="w-5 h-5 group-hover: translate-x-1 transition-transform/>",
+=======
                 <div className="flex items-center gap-2 text-purple-400 font-semibold group-hover: gap-4 transition-all">";,
                   <span>Read Article</span>
                   <ArrowRight className="w-5 h-5 group-hover: translate-x-1 transition-transform" />";,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 </div>
 
                 {/* Hover Gradient Effect */}
@@ -112,7 +176,11 @@ const October2025NewContentBanner2 = () => {
             className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 hover: from-purple-700 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all hover:shadow-2xl hover:shadow-purple-500/50 hover:scale-105",
           >
             <span>Explore All AI Insights</span>
+<<<<<<< HEAD
+            <ArrowRight className="w-5 h-5/>
+=======
             <ArrowRight className="w-5 h-5" />";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           </Link>
         </div>
       </div>

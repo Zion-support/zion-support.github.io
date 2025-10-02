@@ -15,6 +15,19 @@ overallScore: number;
 }
 
 interface SEORecommendation {
+category: 'critical' | 'important' | 'minor';,
+message: string;,
+action: string;,
+impact: 'high' | 'medium' | 'low';
+}
+
+interface SEOAnalysis {
+metrics: SEOMetrics;,
+recommendations: SEORecommendation[];,
+keywords: { word: string; count: number; density: number
+}[];
+  issues: string[],
+=======
 category: 'critical' | 'important' | 'minor';';,
 message: string;,
 action: string;,
@@ -27,6 +40,7 @@ recommendations: SEORecommendation[];,
 keywords: { word: string; count: number; density: number
 }[];
   issues: string[];,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   strengths: string[];
 }
 
@@ -38,7 +52,11 @@ class AdvancedSEOOptimizer {
   /**
    * Analyze page for SEO optimization
    */
+<<<<<<< HEAD
+  analyzePage(options: {
+=======
   analyzePage(options: {,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 title?: string;
 description?: string;
 content?: string;
@@ -49,6 +67,15 @@ images?: { src: string; alt: string
     keywords?: string[];
   }): SEOAnalysis {
     const {
+<<<<<<< HEAD
+      title = ''
+      description = ''
+      content = ''
+      headings = []
+      images = []
+      links = []
+      keywords = []
+=======
       title = '',';
       description = '',';
       content = '',';
@@ -56,6 +83,7 @@ images?: { src: string; alt: string
       images = [],
       links = [],
       keywords = [],
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     } = options;
 
     // Calculate metrics
@@ -226,9 +254,14 @@ images?: { src: string; alt: string
     word = word.toLowerCase();
     if (word.length <= 3) return 1;
 
+<<<<<<< HEAD
+    word = word.replace(/(?:[^laeiouy]es|ed|[^laeiouy]e)$/, '');
+    word = word.replace(/^y/, '');
+=======
     word = word.replace(/(?:[^laeiouy]es|ed|[^laeiouy]e)$/, '');';
     word = word.replace(/^y/, '');';
 
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     const matches = word.match(/[aeiouy]{1,2}/g);
     return matches ? matches.length : 1;
   }
@@ -282,6 +315,15 @@ images?: { src: string; alt: string
    */
   private calculateOverallScore(metrics: SEOMetrics): number {,
     const weights = {
+<<<<<<< HEAD
+      title: 0.20,
+      description: 0.15,
+      headings: 0.15,
+      keywordDensity: 0.15,
+      readability: 0.15,
+      images: 0.10,
+      links: 0.10
+=======
       title: 0.20,,
       description: 0.15,,
       headings: 0.15,,
@@ -289,6 +331,7 @@ images?: { src: string; alt: string
       readability: 0.15,,
       images: 0.10,,
       links: 0.10,,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     };
 
     return Math.round(
@@ -308,41 +351,79 @@ images?: { src: string; alt: string
   private generateRecommendations(
     metrics: SEOMetrics,
   ): SEORecommendation[] {
+<<<<<<< HEAD
+    const recommendations: SEORecommendation[] = [],
+=======
     const recommendations: SEORecommendation[] = [];,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 
     // Title recommendations
     if (metrics.titleScore < 70) {
       recommendations.push({
+<<<<<<< HEAD
+        category: 'critical',
+        message: 'Title tag needs optimization',
+        action: `Optimize title length (50-60 chars) and include primary keywords`,
+        impact: 'high'
+=======
         category: 'critical',';,
         message: 'Title tag needs optimization',';,
         action: `Optimize title length (50-60 chars) and include primary keywords`,,`;
         impact: 'high',';,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       });
     }
 
     // Description recommendations
     if (metrics.descriptionScore < 70) {
       recommendations.push({
+<<<<<<< HEAD
+        category: 'critical',
+        message: 'Meta description needs improvement',
+        action: 'Write compelling description (150-160 chars) with keywords and CTA',
+        impact: 'high'
+=======
         category: 'critical',';,
         message: 'Meta description needs improvement',';,
         action: 'Write compelling description (150-160 chars) with keywords and CTA',';,
         impact: 'high',';,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       });
     }
 
     // Heading recommendations
     if (metrics.headingScore < 60) {
       recommendations.push({
+<<<<<<< HEAD
+        category: 'important',
+        message: 'Heading structure could be improved',
+        action: 'Add more headings with target keywords',
+        impact: 'medium'
+=======
         category: 'important',';,
         message: 'Heading structure could be improved',';,
         action: 'Add more headings with target keywords',';,
         impact: 'medium',';,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       });
     }
 
     // Keyword density recommendations
     if (metrics.keywordDensity < 50) {
       recommendations.push({
+<<<<<<< HEAD
+        category: 'important',
+        message: 'Keyword density is too low',
+        action: 'Naturally incorporate keywords throughout content (target 1-3%)',
+        impact: 'high'
+      });
+    } else if (metrics.keywordDensity < 80) {
+      recommendations.push({
+        category: 'minor',
+        message: 'Keyword density could be optimized',
+        action: 'Fine-tune keyword usage for optimal density',
+        impact: 'low'
+=======
         category: 'important',';,
         message: 'Keyword density is too low',';,
         action: 'Naturally incorporate keywords throughout content (target 1-3%)',';,
@@ -354,36 +435,58 @@ images?: { src: string; alt: string
         message: 'Keyword density could be optimized',';,
         action: 'Fine-tune keyword usage for optimal density',';,
         impact: 'low',';,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       });
     }
 
     // Readability recommendations
     if (metrics.readabilityScore < 60) {
       recommendations.push({
+<<<<<<< HEAD
+        category: 'important',
+        message: 'Content readability needs improvement',
+        action: 'Use shorter sentences and simpler words',
+        impact: 'medium'
+=======
         category: 'important',';,
         message: 'Content readability needs improvement',';,
         action: 'Use shorter sentences and simpler words',';,
         impact: 'medium',';,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       });
     }
 
     // Image recommendations
     if (metrics.imageOptimization < 80) {
       recommendations.push({
+<<<<<<< HEAD
+        category: 'important',
+        message: 'Image optimization needed',
+        action: 'Add descriptive alt text to all images',
+        impact: 'medium'
+=======
         category: 'important',';,
         message: 'Image optimization needed',';,
         action: 'Add descriptive alt text to all images',';,
         impact: 'medium',';,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       });
     }
 
     // Link recommendations
     if (metrics.linkScore < 60) {
       recommendations.push({
+<<<<<<< HEAD
+        category: 'minor',
+        message: 'Link structure could be improved',
+        action: 'Add more internal links with descriptive anchor text',
+        impact: 'low'
+=======
         category: 'minor',';,
         message: 'Link structure could be improved',';,
         action: 'Add more internal links with descriptive anchor text',';,
         impact: 'low',';,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       });
     }
 
@@ -399,7 +502,11 @@ images?: { src: string; alt: string
   private extractKeywords(content: string, limit: number = 10): { word: string; count: number; density: number }[] {
     const words = content
       .toLowerCase()
+<<<<<<< HEAD
+      .replace(/[^\w\s]/g, ' ');
+=======
       .replace(/[^\w\s]/g, ' ')';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       .split(/\s+/)
       .filter((w) => w.length > 3);
 
@@ -413,7 +520,11 @@ images?: { src: string; alt: string
       .map(([word, count]) => ({
         word,
         count,
+<<<<<<< HEAD
+        density: count / totalWords
+=======
         density: count / totalWords,,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       }))
       .sort((a, b) => b.count - a.count)
       .slice(0, limit);
@@ -424,6 +535,17 @@ images?: { src: string; alt: string
   /**
    * Identify SEO issues
    */
+<<<<<<< HEAD
+  private identifyIssues(metrics: SEOMetrics): string[] {
+const issues: string[] = [];
+if (metrics.titleScore < 50) issues.push('Title tag is poorly optimized');
+if (metrics.descriptionScore < 50) issues.push('Meta description is poorly optimized');
+if (metrics.headingScore < 40) issues.push('Missing or poorly structured headings');
+if (metrics.keywordDensity < 30) issues.push('Keyword density is too low');
+if (metrics.readabilityScore < 50) issues.push('Content is difficult to read');
+if (metrics.imageOptimization < 60) issues.push('Images lack proper alt text');
+if (metrics.linkScore < 40) issues.push('Weak internal linking structure');
+=======
   private identifyIssues(metrics: SEOMetrics): string[] {,
 const issues: string[] = [];,
 if (metrics.titleScore < 50) issues.push('Title tag is poorly optimized');';
@@ -433,12 +555,24 @@ if (metrics.keywordDensity < 30) issues.push('Keyword density is too low');';
 if (metrics.readabilityScore < 50) issues.push('Content is difficult to read');';
 if (metrics.imageOptimization < 60) issues.push('Images lack proper alt text');';
 if (metrics.linkScore < 40) issues.push('Weak internal linking structure');';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 return issues;
 }
 
   /**
    * Identify SEO strengths
    */
+<<<<<<< HEAD
+  private identifyStrengths(metrics: SEOMetrics): string[] {
+const strengths: string[] = [];
+if (metrics.titleScore >= 80) strengths.push('Excellent title tag optimization');
+if (metrics.descriptionScore >= 80) strengths.push('Well-optimized meta description');
+if (metrics.headingScore >= 80) strengths.push('Strong heading structure');
+if (metrics.keywordDensity >= 80) strengths.push('Optimal keyword density');
+if (metrics.readabilityScore >= 70) strengths.push('Highly readable content');
+if (metrics.imageOptimization >= 80) strengths.push('Well-optimized images');
+if (metrics.linkScore >= 70) strengths.push('Good internal linking');
+=======
   private identifyStrengths(metrics: SEOMetrics): string[] {,
 const strengths: string[] = [];,
 if (metrics.titleScore >= 80) strengths.push('Excellent title tag optimization');';
@@ -448,16 +582,24 @@ if (metrics.keywordDensity >= 80) strengths.push('Optimal keyword density');';
 if (metrics.readabilityScore >= 70) strengths.push('Highly readable content');';
 if (metrics.imageOptimization >= 80) strengths.push('Well-optimized images');';
 if (metrics.linkScore >= 70) strengths.push('Good internal linking');';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 return strengths;
 }
 
   /**
    * Generate structured data (JSON-LD)
    */
+<<<<<<< HEAD
+  generateStructuredData(type: 'Article' | 'Product' | 'Service', data: any): string {',
+    const baseSchema = {
+      '@context': 'https://schema.org',
+      '@type': type
+=======
   generateStructuredData(type: 'Article' | 'Product' | 'Service', data: any): string {';,
     const baseSchema = {
       '@context': 'https: //schema.org',';,
       '@type': type,';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     };
 
     const schema = { ...baseSchema, ...data };
@@ -467,15 +609,36 @@ return strengths;
   /**
    * Optimize meta tags
    */
+<<<<<<< HEAD
+  optimizeMetaTags(page: {
+title: string;
+description: string;
+keywords: string[];
+=======
   optimizeMetaTags(page: {,
 title: string;,
 description: string;,
 keywords: string[];,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 author?: string;
 image?: string;
 url?: string;
 }): { [key: string]: string } {
     return {
+<<<<<<< HEAD
+      title: this.optimizeTitle(page.title, page.keywords),
+      description: this.optimizeDescription(page.description, page.keywords),
+      keywords: page.keywords.join(', '),
+      'og:title': page.title,
+      'og:description': page.description,
+      'og:image': page.image || '',
+      'og:url': page.url || '',
+      'twitter:card': 'summary_large_image',
+      'twitter:title': page.title,
+      'twitter:description': page.description,
+      'twitter:image': page.image || '',
+      author: page.author || ''
+=======
       title: this.optimizeTitle(page.title, page.keywords),,
       description: this.optimizeDescription(page.description, page.keywords),,
       keywords: page.keywords.join(', '),';,
@@ -488,6 +651,7 @@ url?: string;
       'twitter: description': page.description,';,
       'twitter: image': page.image || '',';,
       author: page.author || '',';,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     };
   }
 
@@ -495,8 +659,12 @@ url?: string;
    * Optimize title
    */
   private optimizeTitle(title: string): string {,
+<<<<<<< HEAD
+    if (!title) return '';
+=======
     if (!title) return '';';
     
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     // Truncate if too long
     if (title.length > 60) {
       title = title.substring(0, 57) + '...';';
@@ -509,8 +677,12 @@ url?: string;
    * Optimize description
    */
   private optimizeDescription(description: string): string {,
+<<<<<<< HEAD
+    if (!description) return '';
+=======
     if (!description) return '';';
 
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     // Truncate if too long
     if (description.length > 160) {
       description = description.substring(0, 157) + '...';';
@@ -521,7 +693,11 @@ url?: string;
 }
 
 // Singleton instance
+<<<<<<< HEAD
+let seoOptimizerInstance: AdvancedSEOOptimizer | null = null,
+=======
 let seoOptimizerInstance: AdvancedSEOOptimizer | null = null;,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 
 export const getSEOOptimizer = (): AdvancedSEOOptimizer => {
   if (!seoOptimizerInstance) {

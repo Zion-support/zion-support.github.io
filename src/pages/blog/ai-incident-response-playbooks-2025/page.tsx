@@ -1,5 +1,9 @@
+<<<<<<< HEAD
+import React from 'react';
+=======
 import React from 'react';';
 
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 const AIIncidentResponsePlaybooks2025: React.FC = () => {,
   return (
     <div className="min-h-screen bg-white">";
@@ -12,10 +16,17 @@ const AIIncidentResponsePlaybooks2025: React.FC = () => {,
             <span>•</span>
             <span>7 min read</span>
           </div>
+<<<<<<< HEAD
+          <h1 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">",
+            AI Incident Response Playbooks: Contain in &lt;60s with Confidence,
+          </h1>
+          <p className="text-xl text-gray-600 leading-relaxed">
+=======
           <h1 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">";,
             AI Incident Response Playbooks: Contain in &lt;60s with Confidence,
           </h1>
           <p className="text-xl text-gray-600 leading-relaxed">";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             From detections to safe actions: policy‑tested playbooks and rollback‑ready automations. ,
             Design incident playbooks with budgeted actions, approvals, and telemetry that close the loop fast.
           </p>
@@ -36,6 +47,23 @@ const AIIncidentResponsePlaybooks2025: React.FC = () => {,
           </ul>
 
           <h3>Example Playbook Skeleton</h3>
+<<<<<<< HEAD
+          <pre className="text-sm overflow-x-auto">
+{`playbook:
+  name: contain-compromised-credential,
+  budget: low,
+  approvals:
+    - security_oncall
+  steps:
+    - verify_signal: oidc-anomaly
+    - action: revoke_tokens scoped:user_id
+    - action: rotate_keys scoped:workload
+    - rollback: restore_tokens if:canary_fails
+  telemetry:
+    - emit: action.outcome
+    - emit: time_to_contain
+`}
+=======
           <pre className="text-sm overflow-x-auto">";
 {`playbook: name: contain-compromised-credential,`;
   budget: low,
@@ -47,6 +75,7 @@ const AIIncidentResponsePlaybooks2025: React.FC = () => {,
   telemetry: - emit: action.outcome,
     - emit: time_to_contain,
 `}`;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           </pre>
 
           <h3>Rollout Strategy</h3>
@@ -68,9 +97,15 @@ const AIIncidentResponsePlaybooks2025: React.FC = () => {,
           <p className="text-gray-300 mb-6">";
             We help teams design budgeted actions, wire approvals, and ship safe automations fast.
           </p>
+<<<<<<< HEAD
+          <div className="flex flex-wrap justify-center gap-4">
+            <a title="Internal link" href="/contact" className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover: bg-blue-700 transition-colors">Talk to an Expert</a>",
+            <a title="Internal link" href="/services/ai-autonomous-operations" className="border border-gray-600 text-white px-8 py-3 rounded-lg font-semibold hover: bg-gray-800 transition-colors">Explore Services</a>",
+=======
           <div className="flex flex-wrap justify-center gap-4">";
             <a title="Internal link" href="/contact" className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover: bg-blue-700 transition-colors">Talk to an Expert</a>";,
             <a title="Internal link" href="/services/ai-autonomous-operations" className="border border-gray-600 text-white px-8 py-3 rounded-lg font-semibold hover: bg-gray-800 transition-colors">Explore Services</a>";,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           </div>
         </div>
       </div>

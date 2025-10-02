@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import PromoBanner from './PromoBanner';
+import Sidebar from './Sidebar';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const navigation = [
     { name: 'Home', href: '/' },
@@ -18,7 +20,10 @@ const Header: React.FC = () => {
         { name: 'Blockchain Solutions', href: '/services/blockchain-solutions' },
         { name: 'Quantum Computing', href: '/services/ai-quantum-computing-2026' },
         { name: 'Additional Services', href: '/additional-services' },
-        { name: 'Comprehensive Services', href: '/comprehensive-services' }
+        { name: 'Comprehensive Services', href: '/comprehensive-services' },
+        { name: 'Cloud Migration', href: '/services/cloud-migration-service' },
+        { name: 'Cybersecurity', href: '/services/cybersecurity-solutions' },
+        { name: 'Data Analytics', href: '/services/data-analytics-business-intelligence' }
       ]
     },
     { 
@@ -28,7 +33,11 @@ const Header: React.FC = () => {
         { name: 'All Solutions', href: '/solutions' },
         { name: 'Enterprise Solutions', href: '/enterprise' },
         { name: 'Innovative IT Solutions', href: '/innovative-it-solutions' },
-        { name: 'Advanced AI Solutions', href: '/advanced-ai-solutions' }
+        { name: 'Advanced AI Solutions', href: '/advanced-ai-solutions' },
+        { name: 'Healthcare Technology', href: '/services/healthcare-technology-solutions' },
+        { name: 'FinTech Solutions', href: '/services/financial-technology-solutions' },
+        { name: 'E-commerce Solutions', href: '/services/ecommerce-technology-solutions' },
+        { name: 'Manufacturing AI', href: '/services/manufacturing-ai-platform' }
       ]
     },
     { name: 'Case Studies', href: '/case-studies' },
@@ -40,21 +49,38 @@ const Header: React.FC = () => {
         { name: 'All Resources', href: '/resources' },
         { name: 'Guides', href: '/guides' },
         { name: 'Content Hub', href: '/content-hub' },
-        { name: 'Enhanced Services Catalog', href: '/enhanced-services-catalog' }
+        { name: 'Enhanced Services Catalog', href: '/enhanced-services-catalog' },
+        { name: 'Privacy Policy', href: '/privacy' },
+        { name: 'Terms of Service', href: '/terms' },
+        { name: 'Security', href: '/security' }
       ]
     },
-    { name: 'About', href: '/about' },
+    { 
+      name: 'Company', 
+      href: '/about',
+      submenu: [
+        { name: 'About Us', href: '/about' },
+        { name: 'Pricing', href: '/pricing' },
+        { name: 'Support', href: '/support' },
+        { name: 'Partners', href: '/partners' },
+        { name: 'Portfolio', href: '/portfolio' }
+      ]
+    },
     { name: 'Contact', href: '/contact' },
   ];
 
   return (
-    <header className="bg-white shadow-lg sticky top-0 z-50">
-      <PromoBanner />
+    <>
+      {/* Mobile Sidebar */}
+      <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
       
-      <nav className="container mx-auto px-4 py-4">
+      <header className="bg-white shadow-lg sticky top-0 z-50">
+        <PromoBanner />
+        
+        <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
+          <Link to="/" className="flex items-center space-x-2">
             <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-lg">Z</span>
             </div>
@@ -66,7 +92,7 @@ const Header: React.FC = () => {
             {navigation.map((item) => (
               <div key={item.name} className="relative group">
                 <Link
-                  href={item.href}
+                  to={item.href}
                   className="text-gray-700 hover:text-blue-600 font-medium transition-colors flex items-center gap-1"
                 >
                   {item.name}
@@ -84,7 +110,7 @@ const Header: React.FC = () => {
                       {item.submenu.map((subItem) => (
                         <Link
                           key={subItem.name}
-                          href={subItem.href}
+                          to={subItem.href}
                           className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
                         >
                           {subItem.name}
@@ -97,22 +123,35 @@ const Header: React.FC = () => {
             ))}
             
             <Link
-              href="/contact"
+              to="/contact"
               className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors"
             >
               Get Started
             </Link>
           </div>
 
-          {/* Mobile menu button */}
-          <button
-            className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} />
-            </svg>
-          </button>
+          {/* Mobile menu buttons */}
+          <div className="md:hidden flex items-center space-x-2">
+            {/* Sidebar toggle */}
+            <button
+              className="p-2 rounded-lg hover:bg-gray-100 transition-colors"
+              onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+            
+            {/* Mobile menu toggle */}
+            <button
+              className="p-2 rounded-lg hover:bg-gray-100 transition-colors"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} />
+              </svg>
+            </button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}
@@ -122,7 +161,7 @@ const Header: React.FC = () => {
               {navigation.map((item) => (
                 <div key={item.name}>
                   <Link
-                    href={item.href}
+                    to={item.href}
                     className="text-gray-700 hover:text-blue-600 font-medium py-2 transition-colors block"
                     onClick={() => setIsMenuOpen(false)}
                   >
@@ -133,7 +172,7 @@ const Header: React.FC = () => {
                       {item.submenu.map((subItem) => (
                         <Link
                           key={subItem.name}
-                          href={subItem.href}
+                          to={subItem.href}
                           className="text-gray-600 hover:text-blue-600 text-sm py-1 transition-colors block"
                           onClick={() => setIsMenuOpen(false)}
                         >
@@ -146,7 +185,7 @@ const Header: React.FC = () => {
               ))}
               
               <Link
-                href="/contact"
+                to="/contact"
                 className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors text-center mt-4"
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -157,6 +196,7 @@ const Header: React.FC = () => {
         )}
       </nav>
     </header>
+    </>
   );
 };
 

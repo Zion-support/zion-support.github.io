@@ -1,23 +1,30 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import {
+Helmet
+} from 'react-helmet-async';
 
 const AboutPage: React.FC = () => {
-  const values = [
+const values = [
+{
+icon: Brain,
+title: 'Innovation',
+description: 'Pushing the boundaries of AI technology to create revolutionary solutions'
+}
     {
-      icon: '🧠',
+      icon: Brain,
       title: 'Innovation',
       description: 'Pushing the boundaries of AI technology to create revolutionary solutions'
     },
     {
-      icon: '🛡️',
-      title: 'Security',
+      icon: Shield,
+      title: 'Security'
       description: 'Ensuring enterprise-grade security and compliance in all our solutions'
-    },
-    {
-      icon: '🏆',
-      title: 'Excellence',
-      description: 'Delivering exceptional results with proven ROI and measurable impact'
     }
+    {
+icon: Award,
+title: 'Excellence',
+description: 'Delivering exceptional results with proven ROI and measurable impact'
+}
   ];
 
   const milestones = [
@@ -26,10 +33,196 @@ const AboutPage: React.FC = () => {
     { year: '2022', event: 'AI breakthrough platform launch' },
     { year: '2023', event: '100+ enterprise clients' },
     { year: '2024', event: 'Quantum computing integration' },
-    { year: '2025', event: '240+ Fortune 500 clients' }
+    { year: '2025', event: '240+ Fortune 500 clients' },
   ];
 
   return (
+<<<<<<< HEAD
+    <div className="min-h-screen bg-gray-50">
+      {/* Hero Section */}
+      <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-center"
+          >
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              About Zion Tech Group
+            </h1>
+            <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
+              Pioneering the future of AI and IT solutions for enterprise transformation
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Mission Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+            >
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">
+                Our Mission
+              </h2>
+              <p className="text-lg text-gray-600 mb-6">
+                To revolutionize enterprise operations through cutting-edge AI technologies
+                delivering unprecedented value, efficiency, and innovation to businesses worldwide.
+              </p>
+              <p className="text-lg text-gray-600 mb-8">
+                We believe in the transformative power of AI to solve complex business challenges 
+                and create sustainable competitive advantages for our clients.
+              </p>
+              <div className="grid grid-cols-2 gap-6">
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-blue-600 mb-2">240+</div>
+                  <div className="text-gray-600">Fortune 500 Clients</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-blue-600 mb-2">$211.7B</div>
+                  <div className="text-gray-600">Value Created</div>
+                </div>
+              </div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.2 }}
+              className="bg-gradient-to-br from-blue-500 to-purple-600 p-8 rounded-xl text-white"
+            >
+              <Target className="w-16 h-16 mb-6" />
+              <h3 className="text-2xl font-bold mb-4">Our Vision</h3>
+              <p className="text-blue-100">
+                To be the global leader in AI-powered enterprise solutions
+                transforming how businesses operate and compete in the digital age.
+              </p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Values Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Our Values
+            </h2>
+            <p className="text-xl text-gray-600">
+              The principles that guide everything we do
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {values.map((value, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+                className="bg-white p-6 rounded-xl shadow-lg text-center"
+              >
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <value.icon className="text-white" size={32} />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                  {value.title}
+                </h3>
+                <p className="text-gray-600">
+                  {value.description}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Timeline Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Our Journey
+            </h2>
+            <p className="text-xl text-gray-600">
+              Key milestones in our growth and innovation
+            </p>
+          </motion.div>
+
+          <div className="relative">
+            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-blue-500 to-purple-600"></div>
+            {milestones.map((milestone, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: index * 0.2 }}
+                className={`relative flex items-center mb-12 ${
+                  index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'
+                }`}
+              >
+                <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
+                  <div className="bg-white p-6 rounded-xl shadow-lg">
+                    <div className="text-2xl font-bold text-blue-600 mb-2">
+                      {milestone.year}
+                    </div>
+                    <div className="text-gray-900">
+                      {milestone.event}
+                    </div>
+                  </div>
+                </div>
+                <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-blue-600 rounded-full border-4 border-white shadow-lg"></div>
+                <div className="w-1/2"></div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+          >
+            <h2 className="text-4xl font-bold mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl mb-8 text-blue-100 max-w-3xl mx-auto">
+              Join hundreds of enterprises already leveraging our revolutionary AI solutions 
+              for unprecedented growth and efficiency.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/contact"
+                className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-300"
+              >
+                Get Started Today
+              </a>
+              <a
+                href="/case-studies"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-300"
+              >
+                View Success Stories
+              </a>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+=======
     <>
       <Helmet>
         <title>About Us - Zion Tech Group</title>
@@ -68,7 +261,7 @@ const AboutPage: React.FC = () => {
                 <div className="bg-white p-6 rounded-lg shadow-md">
                   <h3 className="text-xl font-bold text-gray-900 mb-3">Innovation</h3>
                   <p className="text-gray-700">
-                    We continuously push the boundaries of what's possible with technology,
+                    We continuously push the boundaries of what's possible with technology, 
                     always seeking new ways to solve complex problems.
                   </p>
                 </div>
@@ -132,6 +325,7 @@ const AboutPage: React.FC = () => {
         </div>
       </div>
     </>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-ea70
   );
 };
 

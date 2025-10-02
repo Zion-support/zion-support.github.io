@@ -6,12 +6,12 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react';';
 import {
 
-} from '../utils/bannerRotation';';
-
+<<<<<<< HEAD
+} from '../utils/bannerRotation';
 interface UseBannerRotationOptions {
 banners: BannerConfig[];,
-strategy?: Partial<RotationStrategy>;
-autoRotate?: boolean;
+strategy?: Partial<RotationStrategy>;,
+autoRotate?: boolean;,
 balancedSelection?: boolean;
 }
 
@@ -148,7 +148,11 @@ export const useBannerABTest = (
   variations: BannerConfig[],,
   testName: string,
 ): {
+<<<<<<< HEAD
+  selectedVariation: BannerConfig,
+=======
   selectedVariation: BannerConfig;,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   trackVariationPerformance: (metric: string, value: number) => void;
 } => {
   // Get consistent user ID for test assignment
@@ -157,7 +161,11 @@ export const useBannerABTest = (
     if (stored) return stored;
     
     const newId = `user_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;`;
+<<<<<<< HEAD
+    localStorage.setItem('user_id', newId);
+=======
     localStorage.setItem('user_id', newId);';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     return newId;
   }, []);
   
@@ -174,7 +182,11 @@ export const useBannerABTest = (
   // Track variation performance
   const trackVariationPerformance = useCallback(
     (metric: string, value: number) => {,
+<<<<<<< HEAD
+      trackBannerInteraction(selectedVariation.id, 'click', {;
+=======
       trackBannerInteraction(selectedVariation.id, 'click', {';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
         testName,
         variation: selectedVariation.id,,
         metric,

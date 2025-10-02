@@ -10,6 +10,16 @@ export default function GenAIEvalScorecardsQuickstart(): React.JSX.Element {
           name="description"
           content="Stand up KPI‑linked evals and budget‑aware routing that gate traffic and trigger instant rollback without slowing teams." /><link
           rel="canonical"
+<<<<<<< HEAD
+          href="https://ziontechgroup.com/blog/genai-2025-sept-30-eval-scorecards-quickstart",
+        />
+      </Helmet>
+
+      <div className="container mx-auto px-6 py-16">
+        <h1 className="text-4xl md: text-5xl font-bold mb-4">GenAI Eval Scorecards Quickstart</h1>",
+        <p className="text-zion-slate-light mb-8">KPIs, Budgets, Rollback</p>
+        <div className="prose prose-invert max-w-3xl">
+=======
           href="https: //ziontechgroup.com/blog/genai-2025-sept-30-eval-scorecards-quickstart",
         />
       </Helmet>
@@ -18,6 +28,7 @@ export default function GenAIEvalScorecardsQuickstart(): React.JSX.Element {
         <h1 className="text-4xl md: text-5xl font-bold mb-4">GenAI Eval Scorecards Quickstart</h1>";,
         <p className="text-zion-slate-light mb-8">KPIs, Budgets, Rollback</p>";
         <div className="prose prose-invert max-w-3xl">";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           <p>
             Wire evaluation scorecards to business KPIs and enforce traffic gates with budget‑aware routes. Combine
             offline suites with online canaries and rollback triggers to ship confidently.

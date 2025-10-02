@@ -9,6 +9,16 @@ export default function AITrustlessEvaluationBlueprint2026(): React.JSX.Element 
           name="description"
           content="Cryptographically verifiable evals, signed datasets, and reproducible pipelines for zero‑trust AI validation." /><link
           rel="canonical"
+<<<<<<< HEAD
+          href="https://ziontechgroup.com/blog/ai-2026-trustless-evaluation-blueprint",
+        />
+      </Helmet>
+
+      <div className="container mx-auto px-6 py-16">
+        <h1 className="text-4xl md: text-5xl font-bold mb-4">AI 2026: Trustless Evaluation Blueprint</h1>",
+        <p className="text-zion-slate-light mb-8">Signed datasets • Verifiable pipelines • Tamper‑evident scoring</p>
+        <div className="prose prose-invert max-w-3xl">
+=======
           href="https: //ziontechgroup.com/blog/ai-2026-trustless-evaluation-blueprint",
         />
       </Helmet>
@@ -17,6 +27,7 @@ export default function AITrustlessEvaluationBlueprint2026(): React.JSX.Element 
         <h1 className="text-4xl md: text-5xl font-bold mb-4">AI 2026: Trustless Evaluation Blueprint</h1>";,
         <p className="text-zion-slate-light mb-8">Signed datasets • Verifiable pipelines • Tamper‑evident scoring</p>";
         <div className="prose prose-invert max-w-3xl">";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           <p>
             Establish end‑to‑end integrity for AI evaluation using cryptographic attestations, signed datasets, and
             reproducible pipelines. Achieve audit‑ready transparency across teams and vendors without sharing raw data.

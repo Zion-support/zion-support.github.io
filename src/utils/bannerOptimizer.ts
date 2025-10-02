@@ -7,9 +7,9 @@
 export interface BannerConfig {
 id: string;,
 priority: number;,
-displayDuration?: number;
-targetAudience?: string[];
-expiryDate?: Date;
+displayDuration?: number;,
+targetAudience?: string[];,
+expiryDate?: Date;,
 maxImpressions?: number;
 }
 
@@ -25,8 +25,13 @@ lastShown: Date;
  * Determines which banners to show based on business rules
  */
 export class BannerPriorityManager {
+<<<<<<< HEAD
+  private banners: Map<string, BannerConfig> = new Map(),
+  private metrics: Map<string, BannerMetrics> = new Map(),
+=======
   private banners: Map<string, BannerConfig> = new Map();,
   private metrics: Map<string, BannerMetrics> = new Map();,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 
   constructor() {
     this.loadMetricsFromStorage();
@@ -40,10 +45,17 @@ export class BannerPriorityManager {
     
     if (!this.metrics.has(config.id)) {
       this.metrics.set(config.id, {
+<<<<<<< HEAD
+        impressions: 0,
+        clicks: 0,
+        conversions: 0,
+        lastShown: new Date()
+=======
         impressions: 0,,
         clicks: 0,,
         conversions: 0,,
         lastShown: new Date(),,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       });
     }
   }
@@ -136,7 +148,11 @@ export class BannerPriorityManager {
       const data = Array.from(this.metrics.entries());
       localStorage.setItem('bannerMetrics', JSON.stringify(data));';
     } catch (error) {
+<<<<<<< HEAD
+      console.warn('Failed to save banner metrics: ', error);',
+=======
       console.warn('Failed to save banner metrics: ', error);';,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     }
   }
 
@@ -151,6 +167,15 @@ export class BannerPriorityManager {
         this.metrics = new Map(entries.map(([id, metrics]: [string, any]) => [
           id
           {
+<<<<<<< HEAD
+            ...metrics
+            lastShown: new Date(metrics.lastShown)
+          }
+        ]));
+      }
+    } catch (error) {
+      console.warn('Failed to load banner metrics: ', error);',
+=======
             ...metrics,
             lastShown: new Date(metrics.lastShown),,
           },
@@ -158,6 +183,7 @@ export class BannerPriorityManager {
       }
     } catch (error) {
       console.warn('Failed to load banner metrics: ', error);';,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     }
   }
 
@@ -187,8 +213,13 @@ export function useBannerOptimization(bannerId: string) {,
     recordImpression,
     recordClick,
     recordConversion,
+<<<<<<< HEAD
+    ctr: bannerManager.getCTR(bannerId),
+    conversionRate: bannerManager.getConversionRate(bannerId)
+=======
     ctr: bannerManager.getCTR(bannerId),,
     conversionRate: bannerManager.getConversionRate(bannerId),,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   };
 }
 ;

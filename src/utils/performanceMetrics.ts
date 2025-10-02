@@ -14,7 +14,7 @@
 export interface PerformanceMetric {
 name: string;,
 value: number;,
-rating: 'good' | 'needs-improvement' | 'poor';';,
+rating: 'good' | 'needs-improvement' | 'poor';,
 timestamp: number;
 }
 
@@ -29,7 +29,13 @@ export interface PerformanceBudget {
 metric: string;,
 budget: number;,
 current: number;,
+status: 'pass' | 'warn' | 'fail';
+=======
+metric: string;,
+budget: number;,
+current: number;,
 status: 'pass' | 'warn' | 'fail';';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 }
 
 export interface PerformanceReport {
@@ -40,17 +46,30 @@ cls?: PerformanceMetric;
 fcp?: PerformanceMetric;
 ttfb?: PerformanceMetric;
 };
+<<<<<<< HEAD
+  customMetrics: PerformanceMetric[],
+  resourceTimings: ResourceTiming[],
+  budgets: PerformanceBudget[],
+=======
   customMetrics: PerformanceMetric[];,
   resourceTimings: ResourceTiming[];,
   budgets: PerformanceBudget[];,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   timestamp: Date;
 }
 
 class PerformanceMetricsTracker {
+<<<<<<< HEAD
+  private metrics: Map<string, PerformanceMetric> = new Map(),
+  private customMarkers: Map<string, number> = new Map(),
+  private budgets: PerformanceBudget[] = [],
+  private observers: PerformanceObserver[] = [],
+=======
   private metrics: Map<string, PerformanceMetric> = new Map();,
   private customMarkers: Map<string, number> = new Map();,
   private budgets: PerformanceBudget[] = [];,
   private observers: PerformanceObserver[] = [];,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 
   constructor() {
     this.setupObservers();
@@ -62,11 +81,19 @@ class PerformanceMetricsTracker {
    */
   private setupObservers(): void {
     // Observe resource timing
+<<<<<<< HEAD
+    if ('PerformanceObserver' in window) {;
+      try {
+        const resourceObserver = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            if (entry.entryType === 'resource') {;
+=======
     if ('PerformanceObserver' in window) {';
       try {
         const resourceObserver = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
             if (entry.entryType === 'resource') {';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               this.trackResourceTiming(entry as PerformanceResourceTiming);
             }
           }
@@ -74,7 +101,11 @@ class PerformanceMetricsTracker {
         resourceObserver.observe({ entryTypes: ['resource'] });';
         this.observers.push(resourceObserver);
       } catch (e) {
+<<<<<<< HEAD
+        console.warn('Failed to setup resource observer: ', e);',
+=======
         console.warn('Failed to setup resource observer: ', e);';,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       }
     }
   }
@@ -103,7 +134,11 @@ class PerformanceMetricsTracker {
    * Observe Largest Contentful Paint (LCP)
    */
   private observeLCP(): void {
+<<<<<<< HEAD
+    if ('PerformanceObserver' in window) {;
+=======
     if ('PerformanceObserver' in window) {';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       try {
         const observer = new PerformanceObserver((list) => {
           const entries = list.getEntries();
@@ -115,7 +150,11 @@ class PerformanceMetricsTracker {
         observer.observe({ entryTypes: ['largest-contentful-paint'] });';
         this.observers.push(observer);
       } catch (e) {
+<<<<<<< HEAD
+        console.warn('Failed to observe LCP: ', e);',
+=======
         console.warn('Failed to observe LCP: ', e);';,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       }
     }
   }
@@ -124,7 +163,11 @@ class PerformanceMetricsTracker {
    * Observe First Input Delay (FID)
    */
   private observeFID(): void {
+<<<<<<< HEAD
+    if ('PerformanceObserver' in window) {;
+=======
     if ('PerformanceObserver' in window) {';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       try {
         const observer = new PerformanceObserver((list) => {
           const entries = list.getEntries();
@@ -136,7 +179,11 @@ class PerformanceMetricsTracker {
         observer.observe({ entryTypes: ['first-input'] });';
         this.observers.push(observer);
       } catch (e) {
+<<<<<<< HEAD
+        console.warn('Failed to observe FID: ', e);',
+=======
         console.warn('Failed to observe FID: ', e);';,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       }
     }
   }
@@ -145,7 +192,11 @@ class PerformanceMetricsTracker {
    * Observe Cumulative Layout Shift (CLS)
    */
   private observeCLS(): void {
+<<<<<<< HEAD
+    if ('PerformanceObserver' in window) {;
+=======
     if ('PerformanceObserver' in window) {';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       try {
         let clsValue = 0;
         const observer = new PerformanceObserver((list) => {
@@ -159,7 +210,11 @@ class PerformanceMetricsTracker {
         observer.observe({ entryTypes: ['layout-shift'] });';
         this.observers.push(observer);
       } catch (e) {
+<<<<<<< HEAD
+        console.warn('Failed to observe CLS: ', e);',
+=======
         console.warn('Failed to observe CLS: ', e);';,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       }
     }
   }
@@ -168,7 +223,11 @@ class PerformanceMetricsTracker {
    * Observe First Contentful Paint (FCP)
    */
   private observeFCP(): void {
+<<<<<<< HEAD
+    if ('PerformanceObserver' in window) {;
+=======
     if ('PerformanceObserver' in window) {';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       try {
         const observer = new PerformanceObserver((list) => {
           const entries = list.getEntries();
@@ -180,7 +239,11 @@ class PerformanceMetricsTracker {
         observer.observe({ entryTypes: ['paint'] });';
         this.observers.push(observer);
       } catch (e) {
+<<<<<<< HEAD
+        console.warn('Failed to observe FCP: ', e);',
+=======
         console.warn('Failed to observe FCP: ', e);';,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       }
     }
   }
@@ -201,13 +264,21 @@ class PerformanceMetricsTracker {
   private recordMetric(
     name: string,,
     value: number,,
+<<<<<<< HEAD
+    rating: 'good' | 'needs-improvement' | 'poor): void {
+=======
     rating: 'good' | 'needs-improvement' | 'poor',
   ): void {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     const metric: PerformanceMetric = {,
       name,
       value: Math.round(value),,
       rating,
+<<<<<<< HEAD
+      timestamp: Date.now()
+=======
       timestamp: Date.now(),,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     };
     
     this.metrics.set(name, metric);
@@ -216,7 +287,11 @@ class PerformanceMetricsTracker {
     this.checkBudgets();
     
     // Log in development
+<<<<<<< HEAD
+    if (process.env.NODE_ENV === 'development') {;
+=======
     if (process.env.NODE_ENV === 'development') {';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       console.log(`[Performance] ${name}: ${metric.value}ms (${rating})`);`;
     }
   }
@@ -268,11 +343,19 @@ class PerformanceMetricsTracker {
    * Get resource type from URL
    */
   private getResourceType(url: string): string {,
+<<<<<<< HEAD
+    if (url.match(/\.(js|mjs)$/)) return 'script';
+    if (url.match(/\.css$/)) return 'stylesheet';
+    if (url.match(/\.(jpg|jpeg|png|gif|svg|webp)$/)) return 'image';
+    if (url.match(/\.(woff|woff2|ttf|eot)$/)) return 'font';
+    return 'other';
+=======
     if (url.match(/\.(js|mjs)$/)) return 'script';';
     if (url.match(/\.css$/)) return 'stylesheet';';
     if (url.match(/\.(jpg|jpeg|png|gif|svg|webp)$/)) return 'image';';
     if (url.match(/\.(woff|woff2|ttf|eot)$/)) return 'font';';
     return 'other';';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   }
 
   /**
@@ -286,8 +369,13 @@ class PerformanceMetricsTracker {
       this.budgets.push({
         metric,
         budget,
+<<<<<<< HEAD
+        current: 0,
+        status: 'pass'
+=======
         current: 0,,
         status: 'pass',';,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       });
     }
     this.checkBudgets();
@@ -319,6 +407,20 @@ class PerformanceMetricsTracker {
   getReport(): PerformanceReport {
     return {
       webVitals: {,
+<<<<<<< HEAD
+        lcp: this.metrics.get('LCP'),
+        fid: this.metrics.get('FID'),
+        cls: this.metrics.get('CLS'),
+        fcp: this.metrics.get('FCP'),
+        ttfb: this.metrics.get('TTFB')
+      }
+      customMetrics: Array.from(this.metrics.values()).filter(,
+        m => !['LCP', 'FID', 'CLS', 'FCP', 'TTFB'].includes(m.name)
+      )
+      resourceTimings: this.getResourceTimings(),
+      budgets: [...this.budgets],
+      timestamp: new Date()
+=======
         lcp: this.metrics.get('LCP'),';,
         fid: this.metrics.get('FID'),';,
         cls: this.metrics.get('CLS'),';,
@@ -331,6 +433,7 @@ class PerformanceMetricsTracker {
       resourceTimings: this.getResourceTimings(),,
       budgets: [...this.budgets],,
       timestamp: new Date(),,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     };
   }
 
@@ -340,65 +443,114 @@ class PerformanceMetricsTracker {
   private getResourceTimings(): ResourceTiming[] {
     const resources = performance.getEntriesByType('resource') as PerformanceResourceTiming[];';
     return resources.map(resource => ({
+<<<<<<< HEAD
+      name: resource.name,
+      duration: Math.round(resource.duration),
+      size: resource.transferSize || 0,
+      type: this.getResourceType(resource.name)
+=======
       name: resource.name,,
       duration: Math.round(resource.duration),,
       size: resource.transferSize || 0,,
       type: this.getResourceType(resource.name),,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     }));
   }
 
   /**
    * Get rating for LCP
    */
+<<<<<<< HEAD
+  private getRatingForLCP(value: number): 'good' | 'needs-improvement' | 'poor' {',
+    if (value <= 2500) return 'good';
+    if (value <= 4000) return 'needs-improvement';
+    return 'poor';
+=======
   private getRatingForLCP(value: number): 'good' | 'needs-improvement' | 'poor' {';,
     if (value <= 2500) return 'good';';
     if (value <= 4000) return 'needs-improvement';';
     return 'poor';';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   }
 
   /**
    * Get rating for FID
    */
+<<<<<<< HEAD
+  private getRatingForFID(value: number): 'good' | 'needs-improvement' | 'poor' {',
+    if (value <= 100) return 'good';
+    if (value <= 300) return 'needs-improvement';
+    return 'poor';
+=======
   private getRatingForFID(value: number): 'good' | 'needs-improvement' | 'poor' {';,
     if (value <= 100) return 'good';';
     if (value <= 300) return 'needs-improvement';';
     return 'poor';';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   }
 
   /**
    * Get rating for CLS
    */
+<<<<<<< HEAD
+  private getRatingForCLS(value: number): 'good' | 'needs-improvement' | 'poor' {',
+    if (value <= 0.1) return 'good';
+    if (value <= 0.25) return 'needs-improvement';
+    return 'poor';
+=======
   private getRatingForCLS(value: number): 'good' | 'needs-improvement' | 'poor' {';,
     if (value <= 0.1) return 'good';';
     if (value <= 0.25) return 'needs-improvement';';
     return 'poor';';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   }
 
   /**
    * Get rating for FCP
    */
+<<<<<<< HEAD
+  private getRatingForFCP(value: number): 'good' | 'needs-improvement' | 'poor' {',
+    if (value <= 1800) return 'good';
+    if (value <= 3000) return 'needs-improvement';
+    return 'poor';
+=======
   private getRatingForFCP(value: number): 'good' | 'needs-improvement' | 'poor' {';,
     if (value <= 1800) return 'good';';
     if (value <= 3000) return 'needs-improvement';';
     return 'poor';';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   }
 
   /**
    * Get rating for TTFB
    */
+<<<<<<< HEAD
+  private getRatingForTTFB(value: number): 'good' | 'needs-improvement' | 'poor' {',
+    if (value <= 800) return 'good';
+    if (value <= 1800) return 'needs-improvement';
+    return 'poor';
+=======
   private getRatingForTTFB(value: number): 'good' | 'needs-improvement' | 'poor' {';,
     if (value <= 800) return 'good';';
     if (value <= 1800) return 'needs-improvement';';
     return 'poor';';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   }
 
   /**
    * Get rating for custom metrics
    */
+<<<<<<< HEAD
+  private getRatingForCustomMetric(value: number): 'good' | 'needs-improvement' | 'poor' {',
+    if (value <= 1000) return 'good';
+    if (value <= 3000) return 'needs-improvement';
+    return 'poor';
+=======
   private getRatingForCustomMetric(value: number): 'good' | 'needs-improvement' | 'poor' {';,
     if (value <= 1000) return 'good';';
     if (value <= 3000) return 'needs-improvement';';
     return 'poor';';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   }
 
   /**
@@ -414,11 +566,19 @@ class PerformanceMetricsTracker {
 export const performanceMetrics = new PerformanceMetricsTracker();
 
 // Setup default budgets
+<<<<<<< HEAD
+performanceMetrics.setBudget('LCP', 2500);
+performanceMetrics.setBudget('FID', 100);
+performanceMetrics.setBudget('CLS', 0.1);
+performanceMetrics.setBudget('FCP', 1800);
+performanceMetrics.setBudget('TTFB', 800);
+=======
 performanceMetrics.setBudget('LCP', 2500);';
 performanceMetrics.setBudget('FID', 100);';
 performanceMetrics.setBudget('CLS', 0.1);';
 performanceMetrics.setBudget('FCP', 1800);';
 performanceMetrics.setBudget('TTFB', 800);';
 
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 export default performanceMetrics;
 ;

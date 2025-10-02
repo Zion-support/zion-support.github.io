@@ -1,8 +1,8 @@
 import React from 'react';
-import AppRouter from './router';
+import AppMinimal from './App.minimal';
 
 const App: React.FC = () => {
-  return <AppRouter />;
+  return <AppMinimal />;
 };
 
 export default App;
