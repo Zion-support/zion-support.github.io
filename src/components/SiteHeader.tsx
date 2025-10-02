@@ -22,6 +22,9 @@ const SiteHeader: React.FC = () => {
 						<NavLink to="/solutions" className={navLinkClass}>
 							Solutions
 						</NavLink>
+						<NavLink to="/marketplace" className={navLinkClass}>
+							Marketplace
+						</NavLink>
 						<NavLink to="/case-studies" className={navLinkClass}>
 							Case Studies
 						</NavLink>
@@ -33,6 +36,9 @@ const SiteHeader: React.FC = () => {
 						</NavLink>
 						<NavLink to="/about" className={navLinkClass}>
 							About
+						</NavLink>
+						<NavLink to="/careers" className={navLinkClass}>
+							Careers
 						</NavLink>
 						<Link to="/contact" className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors">
 							Get Started
