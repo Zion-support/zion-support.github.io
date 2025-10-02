@@ -141,9 +141,9 @@ const Solutions: React.FC = () => {
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
           </div>
-        </div>
-      </section>
-    </div>
+        </section>
+      </div>
+    </>
   );
 };
 

@@ -132,11 +132,14 @@ const Support: React.FC = () => {
               </div>
             </div>
           </div>
-        </div>
-      </section>
+          </div>
+        </section>
 
-            {/* Category Filter */}
-            <div className="flex flex-wrap justify-center gap-4 mb-12">
+      {/* Category Filter and FAQs */}
+      <section className="py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Category Filter */}
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
               <button
                 onClick={() => setSelectedCategory('all')}
                 className={`px-6 py-3 rounded-lg font-semibold transition-colors ${
@@ -161,31 +164,31 @@ const Support: React.FC = () => {
                   {category.title}
                 </button>
               ))}
-            </div>
+          </div>
 
             {/* FAQ Items */}
-            <div className="space-y-6">
-              {filteredFaqs.map((faq, index) => (
-                <div key={index} className="bg-gray-50 rounded-lg p-6">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                    {faq.question}
-                  </h3>
-                  <p className="text-gray-600">
-                    {faq.answer}
-                  </p>
-                </div>
-              ))}
-            </div>
-
-            {filteredFaqs.length === 0 && (
-              <div className="text-center py-12">
-                <p className="text-gray-500 text-lg">
-                  No FAQs found matching your search criteria.
+          <div className="space-y-6">
+            {filteredFaqs.map((faq, index) => (
+              <div key={index} className="bg-gray-50 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                  {faq.question}
+                </h3>
+                <p className="text-gray-600">
+                  {faq.answer}
                 </p>
               </div>
-            )}
+            ))}
           </div>
-        </section>
+
+          {filteredFaqs.length === 0 && (
+            <div className="text-center py-12">
+              <p className="text-gray-500 text-lg">
+                No FAQs found matching your search criteria.
+              </p>
+            </div>
+          )}
+        </div>
+      </section>
 
         {/* Contact CTA */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-600">
@@ -213,7 +216,6 @@ const Support: React.FC = () => {
               </Link>
             </div>
           </div>
-        </div>
       </section>
     </div>
   );
