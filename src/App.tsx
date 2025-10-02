@@ -15,6 +15,22 @@ import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 import CookiesPage from "./pages/Cookies";
 import SitemapPage from "./pages/Sitemap";
+import Careers from "./pages/Careers";
+import FAQ from "./pages/FAQ";
+import News from "./pages/News";
+import Marketplace from "./pages/Marketplace";
+import MarketplaceProducts from "./pages/MarketplaceProducts";
+import MarketplaceServices from "./pages/MarketplaceServices";
+import MarketplaceEquipment from "./pages/MarketplaceEquipment";
+import MarketplaceTalent from "./pages/MarketplaceTalent";
+import RequestQuote from "./pages/RequestQuote";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
+import Status from "./pages/Status";
+import Help from "./pages/Help";
+import Security from "./pages/Security";
+import ResearchDevelopment from "./pages/ResearchDevelopment";
+import GreenIT from "./pages/GreenIT";
 
 const App: React.FC = () => {
 	return (
@@ -33,6 +49,22 @@ const App: React.FC = () => {
 							<Route path="/blog/*" element={<BlogPage />} />
 							<Route path="/case-studies" element={<CaseStudiesPage />} />
 							<Route path="/resources" element={<Resources />} />
+						<Route path="/careers" element={<Careers />} />
+						<Route path="/faq" element={<FAQ />} />
+						<Route path="/news" element={<News />} />
+						<Route path="/marketplace" element={<Marketplace />} />
+						<Route path="/marketplace/products" element={<MarketplaceProducts />} />
+						<Route path="/marketplace/services" element={<MarketplaceServices />} />
+						<Route path="/marketplace/equipment" element={<MarketplaceEquipment />} />
+						<Route path="/marketplace/talent" element={<MarketplaceTalent />} />
+						<Route path="/request-quote" element={<RequestQuote />} />
+						<Route path="/login" element={<Login />} />
+						<Route path="/signup" element={<Signup />} />
+						<Route path="/status" element={<Status />} />
+						<Route path="/help" element={<Help />} />
+						<Route path="/security" element={<Security />} />
+						<Route path="/research-development" element={<ResearchDevelopment />} />
+						<Route path="/green-it" element={<GreenIT />} />
 							<Route path="/privacy" element={<Privacy />} />
 							<Route path="/terms" element={<Terms />} />
 							<Route path="/cookies" element={<CookiesPage />} />
