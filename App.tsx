@@ -56,7 +56,6 @@ import June2026AutonomousEnterpriseBanner from "./components/June2026AutonomousE
 import NewContent2026MegaShowcaseBanner from "./components/NewContent2026MegaShowcaseBanner";
 import June2026MegaAutomationBanner from "./components/June2026MegaAutomationBanner";
 import InteractiveContentShowcase2026Advanced from "./components/InteractiveContentShowcase2026Advanced";
-=======
 
 // 🚀🚀🚀 ABSOLUTE NEWEST: JANUARY 2026 - REVOLUTIONARY AI BREAKTHROUGHS - ABSOLUTE #1 TOP PRIORITY! 🚀🚀🚀
 // 💎💎💎 JUST PUBLISHED: AI 2026 Autonomous Enterprise ($127B+ Value) + Quantum AI Breakthrough ($84.7B Value) = $211.7B COMBINED VALUE! 💎💎💎
@@ -707,7 +706,6 @@ import October2025InfrastructureIntelligenceBanner from "./components/October202
 import October2025SecurityDataFabricBanner from "./components/October2025SecurityDataFabricBanner";
 import October2025QuantumEdgeAIBanner from "./components/October2025QuantumEdgeAIBanner";
 import October2025KubernetesCostOptimizationBanner from "./components/October2025KubernetesCostOptimizationBanner";
->>>>>>> 26a7335f084f61ec2f728d09c59178f9aaf166df
 
 export default function App(): JSX.Element {
   return (

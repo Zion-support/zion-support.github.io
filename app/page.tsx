@@ -97,7 +97,6 @@ import RevolutionaryAI2027Banner from '../components/RevolutionaryAI2027Banner';
 import AI2028RevolutionaryBreakthroughBanner from '../components/AI2028RevolutionaryBreakthroughBanner';
 import AI2028ContentShowcaseBanner from '../components/AI2028ContentShowcaseBanner';
 import Ultimate2025ContentShowcaseBanner from '../components/Ultimate2025ContentShowcaseBanner';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-263e
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
   description: 'Enterprise-grade AI, micro SaaS, and IT solutions. Transform your business with cutting-edge technology and automation.',
@@ -1926,6 +1925,5 @@ export default function HomePage() {
       </section>
       </div>
     </>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-263e
   );
 }
