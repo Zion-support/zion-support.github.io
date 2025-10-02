@@ -10,31 +10,6 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
-<<<<<<< HEAD
-    slug: "ai-executive-playbook-2027",
-    title: "AI Executive Playbook 2027: Fund, Govern, and Scale with KPIs",
-    description: "Executive‑ready roadmap: KPI‑linked scorecards, budgeted actions, and governance that accelerates delivery.",
-    category: "AI Strategy",
-    publishedAt: "2025-10-03",
-    featured: true,
-    readTime: "12 min read"
-  },
-  {
-    slug: "ai-2027-cost-optimization-playbook",
-    title: "AI 2027 Cost Optimization Playbook: Quality Tiers + Caches",
-    description: "Deterministic tiering, semantic caches, and policy tests to cut spend 40–70% while keeping UX stable.",
-    category: "AI Operations",
-    publishedAt: "2025-10-02",
-    featured: true,
-    readTime: "9 min read"
-  },
-  {
-    slug: "edge-2026-private-feature-flags",
-    title: "Edge 2026: Private Feature Flags at <100ms",
-    description: "Signed configs, scoped IDs, and on‑device telemetry for zero‑PII rollouts worldwide under 100ms.",
-    category: "Architecture",
-    publishedAt: "2025-10-01",
-=======
     slug: "ai-2027-executive-playbook-v2",
     title: "AI 2027: Executive Playbook v2 — Fund, Govern, Scale",
     description: "Scorecards tied to KPIs, budget controls, and rollout guardrails to scale AI with confidence.",
@@ -49,13 +24,10 @@ export const posts: BlogPost[] = [
     description: "Scoped IDs, device aggregation, and warm pools for global sub‑100ms inference without PII.",
     category: "Edge Computing",
     publishedAt: "2025-10-03",
->>>>>>> cursor/create-and-deploy-new-content-5b7c
     featured: true,
     readTime: "8 min read"
   },
   {
-<<<<<<< HEAD
-=======
     slug: "genai-2027-cost-controllers-v2",
     title: "GenAI 2027: Cost Controllers v2 — Predictable Spend, Stable UX",
     description: "Quality tiers, semantic caches, and policy tests to cut spend 30–70% without regressions.",
@@ -64,8 +36,6 @@ export const posts: BlogPost[] = [
     featured: true,
     readTime: "9 min read"
   },
-  {
->>>>>>> cursor/create-and-deploy-new-content-5b7c
     slug: "ai-2027-customer-experience-agents",
     title: "AI 2027: Customer Experience Agents — 24/7 Autonomous CX",
     description: "Deploy trusted CX agents with budgets, live KPIs, and instant rollback that resolve 80% of tickets autonomously.",
