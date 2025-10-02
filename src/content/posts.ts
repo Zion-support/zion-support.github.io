@@ -1763,7 +1763,7 @@ posts.push(
     publishedAt: "2025-10-31",
     featured: true,
     readTime: "8 min read"
-  }
+  },
 
 // Mar 2026 – Brand-new posts to advertise and surface on Home
   {
