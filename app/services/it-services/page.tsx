@@ -1,311 +1,142 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Metadata } from 'next';
-import Link from 'next/link';
 
-export const metadata: Metadata = {
-  title: 'IT Services & Solutions - Zion Tech Group',
-  description: 'Comprehensive IT services including cloud migration, DevOps, cybersecurity, infrastructure management, and enterprise software solutions.',
-  keywords: 'IT services, cloud migration, DevOps, cybersecurity, infrastructure, enterprise software',
-  robots: {
-    index: true,
-    follow: true,
-  },
+export const metadata = {
+  title: 'IT Services | Zion Tech Group',
+  description: 'Comprehensive IT services including cloud migration, DevOps, cybersecurity, and digital transformation.',
+  keywords: 'IT services, cloud migration, DevOps, cybersecurity, digital transformation, infrastructure management',
 };
 
-export default function ITServices() {
+export default function ITServicesPage() {
+  const services = [
+    {
+      title: 'Cloud Migration & Management',
+      description: 'Seamless migration to cloud platforms with ongoing management and optimization',
+      features: ['Cloud Strategy Planning', 'Migration Execution', 'Cost Optimization', 'Ongoing Management'],
+      pricing: 'Starting at $10,000'
+    },
+    {
+      title: 'DevOps & CI/CD Implementation',
+      description: 'Complete DevOps transformation with continuous integration and deployment',
+      features: ['CI/CD Pipeline Setup', 'Infrastructure as Code', 'Automated Testing', 'Deployment Automation'],
+      pricing: 'Starting at $8,000'
+    },
+    {
+      title: 'Cybersecurity Solutions',
+      description: 'Comprehensive cybersecurity solutions to protect your organization',
+      features: ['Security Assessment', 'Threat Detection', 'Incident Response', 'Compliance Management'],
+      pricing: 'Starting at $12,000'
+    },
+    {
+      title: 'Infrastructure Management',
+      description: 'Complete infrastructure management and optimization services',
+      features: ['Server Management', 'Network Configuration', 'Performance Monitoring', 'Capacity Planning'],
+      pricing: 'Starting at $5,000'
+    },
+    {
+      title: 'Digital Transformation Consulting',
+      description: 'Strategic consulting to guide your digital transformation journey',
+      features: ['Digital Strategy', 'Technology Assessment', 'Change Management', 'Implementation Planning'],
+      pricing: 'Starting at $7,500'
+    },
+    {
+      title: 'Database Management & Optimization',
+      description: 'Database design, management, and optimization for peak performance',
+      features: ['Database Design', 'Performance Tuning', 'Backup & Recovery', 'Data Migration'],
+      pricing: 'Starting at $6,000'
+    }
+  ];
+
   return (
-    <div className="max-w-6xl mx-auto px-4 py-8">
-      <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">IT Services & Solutions</h1>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Comprehensive IT services to modernize your infrastructure, enhance security, 
-          and accelerate digital transformation across your organization.
-        </p>
-      </div>
-
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-        <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
-          <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-            <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
-            </svg>
-          </div>
-          <h3 className="text-xl font-semibold text-gray-900 mb-3">Cloud Migration</h3>
-          <p className="text-gray-600 mb-4">
-            Seamlessly migrate your infrastructure to the cloud with minimal downtime and maximum efficiency.
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+      {/* Hero Section */}
+      <section className="relative py-20 px-6 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+        <div className="container mx-auto text-center">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+            IT Services
+          </h1>
+          <p className="text-2xl text-blue-100 mb-8 max-w-3xl mx-auto">
+            Comprehensive IT services including cloud migration, DevOps, cybersecurity, and digital transformation
           </p>
-          <Link href="/services/cloud-migration" className="text-blue-600 hover:text-blue-800 font-medium">
-            Learn More →
-          </Link>
         </div>
+      </section>
 
-        <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
-          <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
-            <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-            </svg>
-          </div>
-          <h3 className="text-xl font-semibold text-gray-900 mb-3">DevOps & SRE</h3>
-          <p className="text-gray-600 mb-4">
-            Implement DevOps practices and Site Reliability Engineering to improve deployment velocity and system reliability.
-          </p>
-          <Link href="/services/devops-automation" className="text-blue-600 hover:text-blue-800 font-medium">
-            Learn More →
-          </Link>
-        </div>
-
-        <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
-          <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
-            <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-            </svg>
-          </div>
-          <h3 className="text-xl font-semibold text-gray-900 mb-3">Cybersecurity</h3>
-          <p className="text-gray-600 mb-4">
-            Protect your organization with comprehensive cybersecurity solutions and threat management.
-          </p>
-          <Link href="/services/ai-cybersecurity-2025" className="text-blue-600 hover:text-blue-800 font-medium">
-            Learn More →
-          </Link>
-        </div>
-
-        <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
-          <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
-            <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-            </svg>
-          </div>
-          <h3 className="text-xl font-semibold text-gray-900 mb-3">Infrastructure Management</h3>
-          <p className="text-gray-600 mb-4">
-            Optimize and manage your IT infrastructure for maximum performance and reliability.
-          </p>
-          <Link href="/services/ai-cloud-infrastructure-2025" className="text-blue-600 hover:text-blue-800 font-medium">
-            Learn More →
-          </Link>
-        </div>
-
-        <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
-          <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
-            <svg className="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-            </svg>
-          </div>
-          <h3 className="text-xl font-semibold text-gray-900 mb-3">Enterprise Software</h3>
-          <p className="text-gray-600 mb-4">
-            Custom enterprise software solutions tailored to your business requirements and workflows.
-          </p>
-          <Link href="/services/enterprise-ai-solutions" className="text-blue-600 hover:text-blue-800 font-medium">
-            Learn More →
-          </Link>
-        </div>
-
-        <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
-          <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
-            <svg className="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-            </svg>
-          </div>
-          <h3 className="text-xl font-semibold text-gray-900 mb-3">Data Analytics</h3>
-          <p className="text-gray-600 mb-4">
-            Transform your data into actionable insights with advanced analytics and business intelligence solutions.
-          </p>
-          <Link href="/services/ai-data-analytics" className="text-blue-600 hover:text-blue-800 font-medium">
-            Learn More →
-          </Link>
-        </div>
-      </div>
-
-      <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-8 rounded-lg mb-12">
-        <h2 className="text-3xl font-bold text-gray-900 mb-6">Our IT Service Methodology</h2>
-        <div className="grid md:grid-cols-2 gap-8">
-          <div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Assessment & Planning</h3>
-            <ul className="space-y-3 text-gray-700">
-              <li className="flex items-start">
-                <span className="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center mr-3 mt-0.5">
-                  <span className="text-blue-600 text-sm font-semibold">1</span>
-                </span>
-                <span><strong>Infrastructure Audit:</strong> Comprehensive analysis of current IT environment</span>
-              </li>
-              <li className="flex items-start">
-                <span className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mr-3 mt-0.5">
-                  <span className="text-green-600 text-sm font-semibold">2</span>
-                </span>
-                <span><strong>Strategy Development:</strong> Create roadmap for IT transformation</span>
-              </li>
-              <li className="flex items-start">
-                <span className="w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center mr-3 mt-0.5">
-                  <span className="text-purple-600 text-sm font-semibold">3</span>
-                </span>
-                <span><strong>Risk Assessment:</strong> Identify security vulnerabilities and compliance gaps</span>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Implementation & Support</h3>
-            <ul className="space-y-3 text-gray-700">
-              <li className="flex items-start">
-                <span className="w-6 h-6 bg-orange-100 rounded-full flex items-center justify-center mr-3 mt-0.5">
-                  <span className="text-orange-600 text-sm font-semibold">4</span>
-                </span>
-                <span><strong>Solution Deployment:</strong> Implement IT solutions with minimal disruption</span>
-              </li>
-              <li className="flex items-start">
-                <span className="w-6 h-6 bg-red-100 rounded-full flex items-center justify-center mr-3 mt-0.5">
-                  <span className="text-red-600 text-sm font-semibold">5</span>
-                </span>
-                <span><strong>Training & Documentation:</strong> Ensure your team can effectively use new systems</span>
-              </li>
-              <li className="flex items-start">
-                <span className="w-6 h-6 bg-indigo-100 rounded-full flex items-center justify-center mr-3 mt-0.5">
-                  <span className="text-indigo-600 text-sm font-semibold">6</span>
-                </span>
-                <span><strong>Ongoing Support:</strong> 24/7 monitoring and maintenance services</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div className="grid md:grid-cols-2 gap-8 mb-12">
-        <div className="bg-white p-8 rounded-lg shadow-lg border border-gray-200">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Cloud Services</h2>
-          <div className="space-y-4">
-            <div className="flex items-center">
-              <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-4">
-                <svg className="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                </svg>
-              </div>
-              <span className="text-gray-700">AWS, Azure, and GCP migration and optimization</span>
-            </div>
-            <div className="flex items-center">
-              <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-4">
-                <svg className="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                </svg>
-              </div>
-              <span className="text-gray-700">Container orchestration with Kubernetes</span>
-            </div>
-            <div className="flex items-center">
-              <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-4">
-                <svg className="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                </svg>
-              </div>
-              <span className="text-gray-700">Infrastructure as Code (IaC) implementation</span>
-            </div>
-            <div className="flex items-center">
-              <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-4">
-                <svg className="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                </svg>
-              </div>
-              <span className="text-gray-700">Cost optimization and resource management</span>
-            </div>
-          </div>
-        </div>
-
-        <div className="bg-white p-8 rounded-lg shadow-lg border border-gray-200">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Security & Compliance</h2>
-          <div className="space-y-4">
-            <div className="flex items-center">
-              <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-4">
-                <svg className="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                </svg>
-              </div>
-              <span className="text-gray-700">SOC 2 Type II compliance implementation</span>
-            </div>
-            <div className="flex items-center">
-              <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-4">
-                <svg className="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                </svg>
-              </div>
-              <span className="text-gray-700">Penetration testing and vulnerability assessments</span>
-            </div>
-            <div className="flex items-center">
-              <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-4">
-                <svg className="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                </svg>
-              </div>
-              <span className="text-gray-700">Identity and access management (IAM)</span>
-            </div>
-            <div className="flex items-center">
-              <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-4">
-                <svg className="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                </svg>
-              </div>
-              <span className="text-gray-700">24/7 security monitoring and incident response</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="bg-white p-8 rounded-lg shadow-lg border border-gray-200 mb-12">
-        <h2 className="text-3xl font-bold text-gray-900 mb-6">Why Choose Our IT Services?</h2>
-        <div className="grid md:grid-cols-3 gap-8">
-          <div className="text-center">
-            <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-            </div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-3">Certified Experts</h3>
-            <p className="text-gray-600">
-              Our team holds certifications in AWS, Azure, Google Cloud, Kubernetes, and security frameworks.
+      {/* Services Grid */}
+      <section className="py-20 px-6">
+        <div className="container mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Our IT Services
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              End-to-end IT solutions to modernize your infrastructure and optimize performance
             </p>
           </div>
-          <div className="text-center">
-            <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-              </svg>
-            </div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-3">Proven Results</h3>
-            <p className="text-gray-600">
-              Successfully delivered IT transformations for Fortune 500 companies with measurable ROI.
-            </p>
-          </div>
-          <div className="text-center">
-            <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M12 2.25a9.75 9.75 0 100 19.5 9.75 9.75 0 000-19.5z" />
-              </svg>
-            </div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-3">24/7 Support</h3>
-            <p className="text-gray-600">
-              Round-the-clock monitoring, maintenance, and support to ensure optimal system performance.
-            </p>
-          </div>
-        </div>
-      </div>
 
-      <div className="text-center">
-        <h2 className="text-3xl font-bold text-gray-900 mb-6">Ready to Modernize Your IT Infrastructure?</h2>
-        <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-          Let's discuss how our IT services can transform your organization's technology landscape.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link 
-            href="/contact" 
-            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-          >
-            Get IT Consultation
-          </Link>
-          <Link 
-            href="/case-studies" 
-            className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
-          >
-            View IT Case Studies
-          </Link>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, index) => (
+              <div key={index} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-8">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  {service.title}
+                </h3>
+                <p className="text-gray-600 mb-6 leading-relaxed">
+                  {service.description}
+                </p>
+                <ul className="space-y-2 mb-6">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-sm text-gray-600">
+                      <svg className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                <div className="mb-4 p-3 bg-blue-50 rounded-lg border border-blue-200">
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm text-blue-800 font-medium">Starting at:</span>
+                    <span className="text-lg font-bold text-blue-600">{service.pricing}</span>
+                  </div>
+                </div>
+                <a
+                  href="/contact"
+                  className="inline-flex items-center justify-center w-full py-3 px-6 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  <span>Get Started</span>
+                  <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+        <div className="container mx-auto px-6 text-center">
+          <h2 className="text-4xl font-bold mb-4">
+            Ready to Modernize Your IT?
+          </h2>
+          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+            Let's discuss how our IT services can optimize your infrastructure and drive efficiency
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="tel:+13024640950"
+              className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors shadow-lg hover:shadow-xl"
+            >
+              Call +1 302 464 0950
+            </a>
+            <a
+              href="mailto:kleber@ziontechgroup.com"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors"
+            >
+              Get IT Consultation
+            </a>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

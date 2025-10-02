@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "timestamp": "2025-10-02T04:28:27.388Z",
+=======
+  "timestamp": "2025-10-02T07:17:00.960Z",
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-f1fb
   "baseUrl": "https://ziontechgroup.com",
   "summary": {
     "totalLinksChecked": 14,

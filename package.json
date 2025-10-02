@@ -97,6 +97,7 @@
     "clsx": "^2.1.1",
     "esbuild": "^0.25.10",
     "framer-motion": "^12.23.22",
+    "glob": "^11.0.3",
     "gray-matter": "^4.0.3",
     "lucide-react": "^0.544.0",
     "react": "^18.3.1",

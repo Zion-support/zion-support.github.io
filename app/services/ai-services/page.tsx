@@ -1,198 +1,142 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
 
-export const metadata: Metadata = {
-  title: 'AI Services & Solutions - Zion Tech Group',
-  description: 'Comprehensive AI services including machine learning, deep learning, natural language processing, and computer vision solutions for enterprise applications.',
-  keywords: 'AI services, machine learning, deep learning, NLP, computer vision, artificial intelligence consulting',
-  robots: {
-    index: true,
-    follow: true,
-  },
+export const metadata = {
+  title: 'AI Services | Zion Tech Group',
+  description: 'Comprehensive AI services including machine learning, NLP, computer vision, and autonomous systems.',
+  keywords: 'AI services, machine learning, NLP, computer vision, autonomous systems, AI consulting',
 };
 
-export default function AIServices() {
+export default function AIServicesPage() {
+  const services = [
+    {
+      title: 'Machine Learning Model Development',
+      description: 'Custom ML models tailored to your specific business needs and data',
+      features: ['Custom Model Architecture', 'Data Preprocessing', 'Model Training & Validation', 'Performance Optimization'],
+      pricing: 'Starting at $5,000'
+    },
+    {
+      title: 'Natural Language Processing',
+      description: 'Advanced NLP solutions for text analysis, sentiment analysis, and language understanding',
+      features: ['Text Classification', 'Sentiment Analysis', 'Named Entity Recognition', 'Language Translation'],
+      pricing: 'Starting at $3,500'
+    },
+    {
+      title: 'Computer Vision & Image Recognition',
+      description: 'Visual AI solutions for image analysis, object detection, and visual understanding',
+      features: ['Object Detection', 'Image Classification', 'Facial Recognition', 'Visual Search'],
+      pricing: 'Starting at $4,500'
+    },
+    {
+      title: 'Autonomous Systems Development',
+      description: 'AI-powered autonomous systems for automation and decision-making',
+      features: ['Autonomous Agents', 'Decision Making Systems', 'Process Automation', 'Self-Learning Systems'],
+      pricing: 'Starting at $15,000'
+    },
+    {
+      title: 'AI-Powered Business Intelligence',
+      description: 'Advanced analytics and business intelligence powered by AI',
+      features: ['Predictive Analytics', 'Data Visualization', 'Automated Reporting', 'Insight Generation'],
+      pricing: 'Starting at $7,500'
+    },
+    {
+      title: 'AI Consulting & Strategy',
+      description: 'Strategic AI consulting to help you plan and implement AI initiatives',
+      features: ['AI Strategy Development', 'Technology Assessment', 'Implementation Planning', 'Team Training'],
+      pricing: 'Starting at $2,500'
+    }
+  ];
+
   return (
-    <div className="max-w-6xl mx-auto px-4 py-8">
-      <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">AI Services & Solutions</h1>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Transform your business with cutting-edge artificial intelligence solutions. 
-          From machine learning to advanced AI systems, we deliver enterprise-grade AI services.
-        </p>
-      </div>
-
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-        <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
-          <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-            <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-            </svg>
-          </div>
-          <h3 className="text-xl font-semibold text-gray-900 mb-3">Machine Learning</h3>
-          <p className="text-gray-600 mb-4">
-            Build and deploy machine learning models that drive business value with our expert ML engineering services.
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+      {/* Hero Section */}
+      <section className="relative py-20 px-6 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+        <div className="container mx-auto text-center">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+            AI Services
+          </h1>
+          <p className="text-2xl text-blue-100 mb-8 max-w-3xl mx-auto">
+            Comprehensive artificial intelligence solutions to transform your business with cutting-edge AI technology
           </p>
-          <Link href="/services/ai-data-analytics" className="text-blue-600 hover:text-blue-800 font-medium">
-            Learn More →
-          </Link>
         </div>
+      </section>
 
-        <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
-          <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
-            <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-            </svg>
+      {/* Services Grid */}
+      <section className="py-20 px-6">
+        <div className="container mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Our AI Services
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              From machine learning to autonomous systems, we provide end-to-end AI solutions
+            </p>
           </div>
-          <h3 className="text-xl font-semibold text-gray-900 mb-3">Natural Language Processing</h3>
-          <p className="text-gray-600 mb-4">
-            Leverage NLP for text analysis, chatbots, sentiment analysis, and automated content processing.
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, index) => (
+              <div key={index} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-8">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  {service.title}
+                </h3>
+                <p className="text-gray-600 mb-6 leading-relaxed">
+                  {service.description}
+                </p>
+                <ul className="space-y-2 mb-6">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-sm text-gray-600">
+                      <svg className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                <div className="mb-4 p-3 bg-blue-50 rounded-lg border border-blue-200">
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm text-blue-800 font-medium">Starting at:</span>
+                    <span className="text-lg font-bold text-blue-600">{service.pricing}</span>
+                  </div>
+                </div>
+                <a
+                  href="/contact"
+                  className="inline-flex items-center justify-center w-full py-3 px-6 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  <span>Get Started</span>
+                  <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+        <div className="container mx-auto px-6 text-center">
+          <h2 className="text-4xl font-bold mb-4">
+            Ready to Implement AI?
+          </h2>
+          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+            Let's discuss how AI can transform your business and drive innovation
           </p>
-          <Link href="/services/ai-workflow-automation" className="text-blue-600 hover:text-blue-800 font-medium">
-            Learn More →
-          </Link>
-        </div>
-
-        <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
-          <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
-            <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
-            </svg>
-          </div>
-          <h3 className="text-xl font-semibold text-gray-900 mb-3">Computer Vision</h3>
-          <p className="text-gray-600 mb-4">
-            Implement image recognition, object detection, and visual analytics solutions for your business.
-          </p>
-          <Link href="/services/ai-virtual-assistant" className="text-blue-600 hover:text-blue-800 font-medium">
-            Learn More →
-          </Link>
-        </div>
-
-        <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
-          <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
-            <svg className="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-            </svg>
-          </div>
-          <h3 className="text-xl font-semibold text-gray-900 mb-3">Deep Learning</h3>
-          <p className="text-gray-600 mb-4">
-            Advanced neural networks and deep learning architectures for complex pattern recognition and prediction.
-          </p>
-          <Link href="/services/ai-cognitive-computing" className="text-blue-600 hover:text-blue-800 font-medium">
-            Learn More →
-          </Link>
-        </div>
-
-        <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
-          <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
-            <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-            </svg>
-          </div>
-          <h3 className="text-xl font-semibold text-gray-900 mb-3">Predictive Analytics</h3>
-          <p className="text-gray-600 mb-4">
-            Forecast trends, predict outcomes, and make data-driven decisions with advanced predictive modeling.
-          </p>
-          <Link href="/services/ai-business-intelligence-2025" className="text-blue-600 hover:text-blue-800 font-medium">
-            Learn More →
-          </Link>
-        </div>
-
-        <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
-          <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
-            <svg className="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-            </svg>
-          </div>
-          <h3 className="text-xl font-semibold text-gray-900 mb-3">AI Security</h3>
-          <p className="text-gray-600 mb-4">
-            Secure AI systems with advanced threat detection, model protection, and privacy-preserving techniques.
-          </p>
-          <Link href="/services/ai-cybersecurity-2025" className="text-blue-600 hover:text-blue-800 font-medium">
-            Learn More →
-          </Link>
-        </div>
-      </div>
-
-      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-8 rounded-lg mb-12">
-        <h2 className="text-3xl font-bold text-gray-900 mb-6">Why Choose Our AI Services?</h2>
-        <div className="grid md:grid-cols-2 gap-8">
-          <div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Expert AI Team</h3>
-            <ul className="space-y-2 text-gray-700">
-              <li>• PhD-level AI researchers and engineers</li>
-              <li>• 10+ years of experience in AI development</li>
-              <li>• Proven track record with Fortune 500 companies</li>
-              <li>• Continuous learning and certification in latest AI technologies</li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Enterprise-Grade Solutions</h3>
-            <ul className="space-y-2 text-gray-700">
-              <li>• Scalable AI infrastructure and deployment</li>
-              <li>• Security-first approach to AI implementation</li>
-              <li>• Compliance with industry regulations</li>
-              <li>• 24/7 monitoring and support</li>
-            </ul>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="tel:+13024640950"
+              className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors shadow-lg hover:shadow-xl"
+            >
+              Call +1 302 464 0950
+            </a>
+            <a
+              href="mailto:kleber@ziontechgroup.com"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors"
+            >
+              Get AI Consultation
+            </a>
           </div>
         </div>
-      </div>
-
-      <div className="bg-white p-8 rounded-lg shadow-lg border border-gray-200 mb-12">
-        <h2 className="text-3xl font-bold text-gray-900 mb-6">Our AI Development Process</h2>
-        <div className="grid md:grid-cols-4 gap-6">
-          <div className="text-center">
-            <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <span className="text-2xl font-bold text-blue-600">1</span>
-            </div>
-            <h3 className="font-semibold text-gray-900 mb-2">Discovery</h3>
-            <p className="text-gray-600 text-sm">Understand your business needs and AI opportunities</p>
-          </div>
-          <div className="text-center">
-            <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <span className="text-2xl font-bold text-green-600">2</span>
-            </div>
-            <h3 className="font-semibold text-gray-900 mb-2">Design</h3>
-            <p className="text-gray-600 text-sm">Architect AI solutions tailored to your requirements</p>
-          </div>
-          <div className="text-center">
-            <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <span className="text-2xl font-bold text-purple-600">3</span>
-            </div>
-            <h3 className="font-semibold text-gray-900 mb-2">Develop</h3>
-            <p className="text-gray-600 text-sm">Build and train AI models with rigorous testing</p>
-          </div>
-          <div className="text-center">
-            <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <span className="text-2xl font-bold text-orange-600">4</span>
-            </div>
-            <h3 className="font-semibold text-gray-900 mb-2">Deploy</h3>
-            <p className="text-gray-600 text-sm">Implement and monitor AI solutions in production</p>
-          </div>
-        </div>
-      </div>
-
-      <div className="text-center">
-        <h2 className="text-3xl font-bold text-gray-900 mb-6">Ready to Transform Your Business with AI?</h2>
-        <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-          Let's discuss how our AI services can drive innovation and growth for your organization.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link 
-            href="/contact" 
-            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-          >
-            Get Started Today
-          </Link>
-          <Link 
-            href="/case-studies" 
-            className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
-          >
-            View Case Studies
-          </Link>
-        </div>
-      </div>
+      </section>
     </div>
   );
 }
