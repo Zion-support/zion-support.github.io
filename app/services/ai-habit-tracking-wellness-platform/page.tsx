@@ -1,167 +1,165 @@
 import React from 'react';
 import { Metadata } from 'next';
 import { 
-  DollarSign, 
-  TrendingUp, 
-  PieChart, 
-  Shield, 
+  Heart, 
   Target, 
+  TrendingUp, 
+  Users, 
+  Award, 
   CheckCircle, 
   Zap, 
+  DollarSign,
   Star,
   Smartphone,
   Calendar,
   MessageSquare,
   FileText,
+  Shield,
   BarChart3,
   Clock,
-  Bell,
-  Users,
-  Award
+  Bell
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'AI Financial Intelligence Platform | Zion Tech Group - Smart Financial Analytics',
-  description: 'Transform your financial management with AI-powered insights, automated budgeting, investment analysis, and intelligent financial planning. Make smarter financial decisions.',
-  keywords: 'AI financial platform, financial analytics, investment analysis, budgeting AI, financial planning, wealth management AI',
+  title: 'AI Habit Tracking & Wellness Platform | Zion Tech Group - Smart Health Analytics',
+  description: 'Transform your wellness journey with AI-powered habit tracking, personalized insights, and behavioral coaching. Achieve your health goals with intelligent analytics.',
+  keywords: 'AI habit tracking, wellness platform, health analytics, behavioral coaching, fitness tracking, wellness AI',
 };
 
-export default function AIFinancialIntelligencePlatform() {
+export default function AIHabitTrackingWellnessPlatform() {
   const features = [
     {
-      icon: DollarSign,
-      title: 'Smart Budgeting',
-      description: 'AI-powered budget creation and optimization based on your spending patterns and financial goals'
-    },
-    {
-      icon: TrendingUp,
-      title: 'Investment Analysis',
-      description: 'Advanced portfolio analysis with AI-driven investment recommendations and risk assessment'
-    },
-    {
-      icon: PieChart,
-      title: 'Expense Categorization',
-      description: 'Automatic expense categorization and spending pattern analysis with actionable insights'
+      icon: Heart,
+      title: 'Smart Habit Tracking',
+      description: 'AI-powered habit formation with personalized recommendations and streak tracking'
     },
     {
       icon: Target,
-      title: 'Goal Tracking',
-      description: 'Set and track financial goals with AI-powered progress monitoring and recommendations'
+      title: 'Goal Optimization',
+      description: 'Intelligent goal setting based on your lifestyle, preferences, and behavioral patterns'
     },
     {
-      icon: Shield,
-      title: 'Risk Assessment',
-      description: 'Comprehensive financial risk analysis and fraud detection with real-time alerts'
+      icon: TrendingUp,
+      title: 'Progress Analytics',
+      description: 'Advanced analytics showing correlations between habits and wellness outcomes'
     },
     {
-      icon: BarChart3,
-      title: 'Financial Forecasting',
-      description: 'Predict future financial scenarios with advanced AI modeling and scenario planning'
+      icon: Users,
+      title: 'Social Accountability',
+      description: 'Connect with friends, family, or coaches for motivation and support'
+    },
+    {
+      icon: Award,
+      title: 'Achievement System',
+      description: 'Gamified rewards and milestones to keep you motivated and engaged'
+    },
+    {
+      icon: Bell,
+      title: 'Smart Reminders',
+      description: 'AI-powered reminder system that adapts to your schedule and preferences'
     }
   ];
 
   const benefits = [
-    '25% increase in savings rates',
-    '40% improvement in investment returns',
-    '60% reduction in financial stress',
-    'Real-time fraud protection'
+    '85% increase in habit completion rates',
+    '60% improvement in goal achievement',
+    '40% reduction in wellness-related stress',
+    'Personalized coaching recommendations'
   ];
 
-  const financialServices = [
+  const wellnessCategories = [
     {
-      title: 'Personal Finance Management',
-      description: 'Complete personal finance tracking and optimization',
-      icon: DollarSign,
-      features: ['Expense tracking', 'Budget optimization', 'Bill management', 'Savings goals']
+      title: 'Physical Health',
+      description: 'Track exercise, nutrition, sleep, and physical wellness metrics',
+      icon: Heart,
+      features: ['Workout tracking', 'Nutrition monitoring', 'Sleep analysis', 'Hydration reminders']
     },
     {
-      title: 'Investment Portfolio Analysis',
-      description: 'Advanced portfolio management and optimization',
-      icon: TrendingUp,
-      features: ['Portfolio analysis', 'Risk assessment', 'Rebalancing alerts', 'Performance tracking']
+      title: 'Mental Wellness',
+      description: 'Meditation, mindfulness, stress management, and mental health tracking',
+      icon: Brain,
+      features: ['Meditation sessions', 'Mood tracking', 'Stress monitoring', 'Mindfulness exercises']
     },
     {
-      title: 'Tax Optimization',
-      description: 'Smart tax planning and optimization strategies',
-      icon: PieChart,
-      features: ['Tax planning', 'Deduction optimization', 'Filing assistance', 'Year-end strategies']
-    },
-    {
-      title: 'Retirement Planning',
-      description: 'Comprehensive retirement planning and projection',
+      title: 'Productivity',
+      description: 'Focus time, work habits, learning goals, and productivity optimization',
       icon: Target,
-      features: ['Retirement projections', 'Contribution optimization', 'Social Security analysis', 'Withdrawal strategies']
+      features: ['Focus sessions', 'Learning goals', 'Work habits', 'Time management']
+    },
+    {
+      title: 'Social Connections',
+      description: 'Relationship building, social activities, and community engagement',
+      icon: Users,
+      features: ['Social activities', 'Relationship goals', 'Community challenges', 'Support groups']
     }
   ];
 
   const pricingTiers = [
     {
-      name: 'Essential',
-      price: '$19.99',
+      name: 'Personal',
+      price: '$9.99',
       period: '/month',
-      description: 'Perfect for basic financial management',
+      description: 'Perfect for individual wellness journeys',
       features: [
-        'Unlimited account connections',
-        'Basic budgeting tools',
-        'Expense categorization',
-        'Goal tracking',
+        'Unlimited habit tracking',
+        'Basic analytics dashboard',
+        'Smart reminders',
+        'Goal setting & tracking',
         'Mobile app access',
         'Email support'
       ],
       popular: false
     },
     {
-      name: 'Professional',
-      price: '$39.99',
+      name: 'Premium',
+      price: '$19.99',
       period: '/month',
-      description: 'Advanced features for serious investors',
+      description: 'Advanced features for serious wellness enthusiasts',
       features: [
-        'Everything in Essential',
-        'Advanced investment analysis',
-        'Tax optimization tools',
-        'Retirement planning',
-        'Risk assessment',
+        'Everything in Personal',
+        'Advanced AI insights',
+        'Custom coaching recommendations',
+        'Social features & challenges',
+        'Integration with fitness devices',
         'Priority support'
       ],
       popular: true
     },
     {
-      name: 'Wealth Management',
-      price: '$79.99',
+      name: 'Family',
+      price: '$39.99',
       period: '/month',
-      description: 'Complete wealth management solution',
+      description: 'For families and groups up to 6 members',
       features: [
-        'Everything in Professional',
-        'Personal financial advisor access',
-        'Custom investment strategies',
-        'Estate planning tools',
-        'Family wealth management',
+        'Everything in Premium',
+        'Up to 6 family members',
+        'Family wellness challenges',
+        'Parental controls & insights',
+        'Family goal tracking',
         '24/7 phone support'
       ],
       popular: false
     }
   ];
 
-  const successMetrics = [
+  const successStories = [
     {
-      metric: 'Average User Savings Increase',
-      value: '25%',
-      description: 'Users save more with AI-powered budgeting'
+      name: 'Sarah Johnson',
+      role: 'Marketing Manager',
+      story: 'Lost 30 pounds and built consistent exercise habits using the AI coaching features',
+      achievement: '6 months streak'
     },
     {
-      metric: 'Investment Return Improvement',
-      value: '40%',
-      description: 'Better returns with AI portfolio optimization'
+      name: 'Mike Chen',
+      role: 'Software Engineer',
+      story: 'Improved sleep quality and reduced stress through personalized wellness recommendations',
+      achievement: '85% sleep score improvement'
     },
     {
-      metric: 'Financial Stress Reduction',
-      value: '60%',
-      description: 'Users report less financial anxiety'
-    },
-    {
-      metric: 'Fraud Detection Rate',
-      value: '99.8%',
-      description: 'Advanced AI fraud protection'
+      name: 'The Rodriguez Family',
+      role: 'Family of 4',
+      story: 'Built healthier family routines and improved overall wellness together',
+      achievement: '4x family engagement'
     }
   ];
 
@@ -173,11 +171,11 @@ export default function AIFinancialIntelligencePlatform() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              AI Financial Intelligence Platform
+              AI Habit Tracking & Wellness Platform
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-green-100 max-w-4xl mx-auto">
-              Transform your financial future with AI-powered insights, automated budgeting, 
-              and intelligent investment analysis
+              Transform your wellness journey with AI-powered habit tracking, personalized insights, 
+              and intelligent behavioral coaching
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
@@ -190,7 +188,7 @@ export default function AIFinancialIntelligencePlatform() {
                 href="mailto:kleber@ziontechgroup.com" 
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
               >
-                Get Free Financial Assessment
+                Start Free Trial
               </a>
             </div>
           </div>
@@ -202,10 +200,10 @@ export default function AIFinancialIntelligencePlatform() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              AI-Powered Financial Features
+              AI-Powered Wellness Features
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Everything you need to take control of your financial future with intelligent automation
+              Everything you need to build lasting healthy habits and achieve your wellness goals
             </p>
           </div>
           
@@ -225,32 +223,32 @@ export default function AIFinancialIntelligencePlatform() {
         </div>
       </div>
 
-      {/* Financial Services */}
+      {/* Wellness Categories */}
       <div className="py-20 bg-gradient-to-r from-green-50 to-blue-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Comprehensive Financial Services
+              Comprehensive Wellness Tracking
             </h2>
             <p className="text-xl text-gray-600">
-              Cover all aspects of your financial life with specialized AI-powered tools
+              Cover all aspects of your wellness journey with specialized tracking categories
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {financialServices.map((service, index) => (
+            {wellnessCategories.map((category, index) => (
               <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-100">
                 <div className="flex items-center mb-6">
                   <div className="bg-blue-100 p-4 rounded-lg">
-                    <service.icon className="h-8 w-8 text-blue-600" />
+                    <category.icon className="h-8 w-8 text-blue-600" />
                   </div>
                   <div className="ml-4">
-                    <h3 className="text-2xl font-semibold text-gray-900">{service.title}</h3>
-                    <p className="text-gray-600">{service.description}</p>
+                    <h3 className="text-2xl font-semibold text-gray-900">{category.title}</h3>
+                    <p className="text-gray-600">{category.description}</p>
                   </div>
                 </div>
                 <ul className="space-y-2">
-                  {service.features.map((feature, featureIndex) => (
+                  {category.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center">
                       <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
                       <span className="text-gray-700">{feature}</span>
@@ -263,28 +261,58 @@ export default function AIFinancialIntelligencePlatform() {
         </div>
       </div>
 
-      {/* Success Metrics */}
+      {/* Benefits Section */}
       <div className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Proven Financial Results
+              Proven Results & Benefits
             </h2>
             <p className="text-xl text-gray-600">
-              Real results from thousands of users who have transformed their financial lives
+              Join thousands of users who have transformed their wellness journey
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {successMetrics.map((metric, index) => (
+            {benefits.map((benefit, index) => (
               <div key={index} className="text-center">
                 <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
                   <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                     <TrendingUp className="h-8 w-8 text-green-600" />
                   </div>
-                  <div className="text-3xl font-bold text-green-600 mb-2">{metric.value}</div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{metric.metric}</h3>
-                  <p className="text-gray-600">{metric.description}</p>
+                  <p className="text-lg font-semibold text-gray-900">{benefit}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Success Stories */}
+      <div className="py-20 bg-gradient-to-r from-blue-50 to-green-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Success Stories
+            </h2>
+            <p className="text-xl text-gray-600">
+              Real people, real results with our AI wellness platform
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {successStories.map((story, index) => (
+              <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                <div className="text-center mb-6">
+                  <div className="bg-green-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Award className="h-10 w-10 text-green-600" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900">{story.name}</h3>
+                  <p className="text-gray-600">{story.role}</p>
+                </div>
+                <p className="text-gray-700 mb-4 italic">"{story.story}"</p>
+                <div className="bg-green-50 p-3 rounded-lg text-center">
+                  <span className="text-green-700 font-semibold">{story.achievement}</span>
                 </div>
               </div>
             ))}
@@ -293,14 +321,14 @@ export default function AIFinancialIntelligencePlatform() {
       </div>
 
       {/* Pricing Section */}
-      <div className="py-20 bg-gradient-to-r from-blue-50 to-green-50">
+      <div className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Transparent Financial Pricing
+              Simple, Affordable Pricing
             </h2>
             <p className="text-xl text-gray-600">
-              Choose the plan that fits your financial management needs
+              Choose the plan that fits your wellness journey
             </p>
           </div>
           
@@ -351,54 +379,14 @@ export default function AIFinancialIntelligencePlatform() {
         </div>
       </div>
 
-      {/* Security & Compliance */}
-      <div className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Bank-Level Security & Compliance
-            </h2>
-            <p className="text-xl text-gray-600">
-              Your financial data is protected with enterprise-grade security
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 text-center">
-              <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Shield className="h-8 w-8 text-blue-600" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">256-bit Encryption</h3>
-              <p className="text-gray-600">Military-grade encryption protects all your financial data</p>
-            </div>
-            
-            <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 text-center">
-              <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <CheckCircle className="h-8 w-8 text-green-600" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">SOC 2 Compliant</h3>
-              <p className="text-gray-600">Certified security controls and regular audits</p>
-            </div>
-            
-            <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 text-center">
-              <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="h-8 w-8 text-purple-600" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Read-Only Access</h3>
-              <p className="text-gray-600">We never store your banking credentials or passwords</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* CTA Section */}
       <div className="py-20 bg-gradient-to-r from-green-600 to-blue-600 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Take Control of Your Financial Future Today
+            Start Your Wellness Transformation Today
           </h2>
           <p className="text-xl mb-8 text-green-100">
-            Join thousands of users who have achieved financial freedom with AI-powered insights
+            Join thousands of users who have achieved their wellness goals with AI-powered habit tracking
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
