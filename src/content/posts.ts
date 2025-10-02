@@ -1385,8 +1385,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-29",
     featured: false,
     readTime: "6 min read"
-  }
-  ,
+  },
   {
     slug: "ai-sre-blueprints-2026",
     title: "AI SRE Blueprints 2026: Error Budgets, Rollbacks, and Live Traces",
@@ -1589,7 +1588,7 @@ posts.push([
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "8 min read"
-  }
+  },
 );
 
 // Sept 30, 2025 – New articles to expand catalog and promote on homepage

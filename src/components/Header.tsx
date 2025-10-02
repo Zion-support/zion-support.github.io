@@ -38,6 +38,8 @@ const Header: React.FC = () => {
       label: 'Services',
       path: '/services',
       dropdown: [
+        { label: 'AI Content Generator Pro', path: '/services/ai-content-generator' },
+        { label: 'Smart Appointment Scheduler', path: '/services/smart-appointment-scheduler' },
         { label: 'AI Workflow Automation', path: '/services/ai-workflow-automation' },
         { label: 'AI Virtual Assistant', path: '/services/ai-virtual-assistant' },
         { label: 'AI Data Analytics', path: '/services/ai-data-analytics' },
@@ -91,9 +93,9 @@ const Header: React.FC = () => {
   ];
 
   return (
-    <header className="bg-slate-900 border-b border-slate-800 sticky top-0 z-50">
+    <header className="bg-slate-900 border-b border-slate-800 sticky top-0 z-50 shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 text-white hover:text-blue-400 transition-colors">
             <Zap className="h-8 w-8 text-blue-400" />

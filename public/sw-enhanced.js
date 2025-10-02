@@ -1,60 +1,46 @@
-// Enhanced Service Worker for Zion Tech Group
 const CACHE_NAME = 'zion-tech-group-v1';
-const STATIC_CACHE = 'zion-static-v1';
-const DYNAMIC_CACHE = 'zion-dynamic-v1';
+const STATIC_CACHE = 'static-v1';
+const DYNAMIC_CACHE = 'dynamic-v1';
 
-// Assets to cache immediately
 const STATIC_ASSETS = [
   '/',
   '/index.html',
-  '/src/main.tsx',
-  '/src/App.tsx',
   '/manifest.json',
-  '/favicon.ico'
+  '/favicon.ico',
+  '/logo.png'
 ];
 
-// Install event - cache static assets
+// Install event
 self.addEventListener('install', (event) => {
-  console.log('🚀 Service Worker installing...');
   event.waitUntil(
     caches.open(STATIC_CACHE)
       .then((cache) => {
-        console.log('📦 Caching static assets');
         return cache.addAll(STATIC_ASSETS);
       })
       .then(() => {
-        console.log('✅ Static assets cached successfully');
         return self.skipWaiting();
       })
-      .catch((error) => {
-        console.error('❌ Failed to cache static assets:', error);
-      })
   );
 });
 
-// Activate event - clean up old caches
+// Activate event
 self.addEventListener('activate', (event) => {
-  console.log('🔄 Service Worker activating...');
   event.waitUntil(
-    caches.keys()
-      .then((cacheNames) => {
-        return Promise.all(
-          cacheNames.map((cacheName) => {
-            if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) {
-              console.log('🗑️ Deleting old cache:', cacheName);
-              return caches.delete(cacheName);
-            }
-          })
-        );
-      })
-      .then(() => {
-        console.log('✅ Service Worker activated');
-        return self.clients.claim();
-      })
+    caches.keys().then((cacheNames) => {
+      return Promise.all(
+        cacheNames.map((cacheName) => {
+          if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) {
+            return caches.delete(cacheName);
+          }
+        })
+      );
+    }).then(() => {
+      return self.clients.claim();
+    })
   );
 });
 
-// Fetch event - serve from cache with network fallback
+// Fetch event
 self.addEventListener('fetch', (event) => {
   const { request } = event;
   const url = new URL(request.url);
@@ -71,33 +57,36 @@ self.addEventListener('fetch', (event) => {
 
   event.respondWith(
     caches.match(request)
-      .then((cachedResponse) => {
-        // Return cached version if available
-        if (cachedResponse) {
-          console.log('📦 Serving from cache:', request.url);
-          return cachedResponse;
+      .then((response) => {
+        if (response) {
+          return response;
         }
 
-        // Otherwise fetch from network
         return fetch(request)
-          .then((networkResponse) => {
-            // Check if response is valid
-            if (!networkResponse || networkResponse.status !== 200 || networkResponse.type !== 'basic') {
-              return networkResponse;
+          .then((response) => {
+            // Don't cache non-successful responses
+            if (!response || response.status !== 200 || response.type !== 'basic') {
+              return response;
             }
 
             // Clone the response
-            const responseToCache = networkResponse.clone();
+            const responseToCache = response.clone();
 
-            // Cache dynamic content
-            if (url.pathname.startsWith('/api/') || url.pathname.startsWith('/blog/')) {
+            // Cache static assets
+            if (STATIC_ASSETS.includes(url.pathname)) {
+              caches.open(STATIC_CACHE)
+                .then((cache) => {
+                  cache.put(request, responseToCache);
+                });
+            } else {
+              // Cache dynamic content with size limit
               caches.open(DYNAMIC_CACHE)
                 .then((cache) => {
                   cache.put(request, responseToCache);
                 });
             }
 
-            return networkResponse;
+            return response;
           })
           .catch(() => {
             // Return offline page for navigation requests
@@ -109,15 +98,17 @@ self.addEventListener('fetch', (event) => {
   );
 });
 
-// Background sync for form submissions
+// Background sync
 self.addEventListener('sync', (event) => {
-  if (event.tag === 'contact-form') {
-    event.waitUntil(
-      // Handle offline form submissions
-      console.log('📝 Processing offline contact form submission')
-    );
+  if (event.tag === 'background-sync') {
+    event.waitUntil(doBackgroundSync());
   }
 });
+
+function doBackgroundSync() {
+  // Implement background sync logic here
+  return Promise.resolve();
+}
 
 // Push notifications
 self.addEventListener('push', (event) => {
@@ -125,23 +116,23 @@ self.addEventListener('push', (event) => {
     const data = event.data.json();
     const options = {
       body: data.body,
-      icon: '/favicon.ico',
-      badge: '/favicon.ico',
+      icon: '/logo.png',
+      badge: '/logo.png',
       vibrate: [100, 50, 100],
       data: {
         dateOfArrival: Date.now(),
-        primaryKey: data.primaryKey
+        primaryKey: 1
       },
       actions: [
         {
           action: 'explore',
-          title: 'Learn More',
-          icon: '/favicon.ico'
+          title: 'View',
+          icon: '/logo.png'
         },
         {
           action: 'close',
           title: 'Close',
-          icon: '/favicon.ico'
+          icon: '/logo.png'
         }
       ]
     };
@@ -152,23 +143,13 @@ self.addEventListener('push', (event) => {
   }
 });
 
-// Handle notification clicks
+// Notification click
 self.addEventListener('notificationclick', (event) => {
   event.notification.close();
 
   if (event.action === 'explore') {
     event.waitUntil(
-      clients.openWindow('/contact')
+      clients.openWindow('/')
     );
   }
 });
-
-// Performance monitoring
-self.addEventListener('message', (event) => {
-  if (event.data && event.data.type === 'PERFORMANCE_METRICS') {
-    // Log performance metrics
-    console.log('📊 Performance metrics:', event.data.metrics);
-  }
-});
-
-console.log('🎯 Enhanced Service Worker loaded successfully');
