@@ -1,16 +1,16 @@
 export interface BannerData {
-  id: string;
-  title: string;
-  subtitle?: string;
-  description: string;
-  ctaText: string;
-  ctaLink: string;
-  imageUrl?: string;
-  category: string;
-  priority: number;
-  isActive: boolean;
-  startDate?: string;
-  endDate?: string;
+id: string;
+title: string;
+subtitle?: string;
+description: string;
+ctaText: string;
+ctaLink: string;
+imageUrl?: string;
+category: string;
+priority: number;
+isActive: boolean;
+startDate?: string;
+endDate?: string;
 }
 
 export const bannerData: BannerData[] = [

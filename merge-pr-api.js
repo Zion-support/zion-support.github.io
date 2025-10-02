@@ -1,10 +1,26 @@
-const https = require('https');
+import https from 'https';
 
 // GitHub API token and repository info
 const token = 'ghs_1p4lcqrpBjJ6F2MrwojlqhiwI6pDXo4CoAGZ';
 const owner = 'Zion-Holdings';
 const repo = 'zion.app';
-const prNumber = 24664;
+// Function to get all open PRs
+async function getOpenPRs() {
+    try {
+        console.log('📋 Fetching open PRs...');
+        const response = await makeGitHubRequest(`/repos/${owner}/${repo}/pulls?state=open&per_page=100`);
+        
+        if (response.status !== 200) {
+            console.error('❌ Failed to fetch PRs:', response.data);
+            return [];
+        }
+        
+        return response.data;
+    } catch (error) {
+        console.error('❌ Error fetching PRs:', error.message);
+        return [];
+    }
+}
 
 // Function to make GitHub API requests
 function makeGitHubRequest(path, method = 'GET', data = null) {
@@ -53,7 +69,7 @@ function makeGitHubRequest(path, method = 'GET', data = null) {
     });
 }
 
-async function mergePR() {
+async function mergePR(prNumber) {
     try {
         console.log(`🔄 Attempting to merge PR #${prNumber}...`);
         
@@ -63,7 +79,7 @@ async function mergePR() {
         
         if (prResponse.status !== 200) {
             console.error('❌ Failed to fetch PR:', prResponse.data);
-            return;
+            return false;
         }
 
         const pr = prResponse.data;
@@ -73,12 +89,12 @@ async function mergePR() {
 
         if (pr.mergeable === false) {
             console.log('⚠️  PR has conflicts and cannot be merged automatically');
-            return;
+            return false;
         }
 
         if (pr.state !== 'open') {
             console.log(`⚠️  PR is not open (state: ${pr.state})`);
-            return;
+            return false;
         }
 
         // Attempt to merge the PR
@@ -98,14 +114,54 @@ async function mergePR() {
         if (mergeResponse.status === 200) {
             console.log('✅ PR merged successfully!');
             console.log(`🔗 Merge commit SHA: ${mergeResponse.data.sha}`);
+            return true;
         } else {
             console.error('❌ Failed to merge PR:', mergeResponse.data);
+            return false;
         }
 
+    } catch (error) {
+        console.error('❌ Error during merge process:', error.message);
+        return false;
+    }
+}
+
+async function mergeAllOpenPRs() {
+    try {
+        const openPRs = await getOpenPRs();
+        
+        if (openPRs.length === 0) {
+            console.log('📭 No open PRs found');
+            return;
+        }
+        
+        console.log(`📊 Found ${openPRs.length} open PRs`);
+        
+        let mergedCount = 0;
+        let failedCount = 0;
+        
+        for (const pr of openPRs) {
+            console.log(`\n🔄 Processing PR #${pr.number}: ${pr.title}`);
+            const success = await mergePR(pr.number);
+            
+            if (success) {
+                mergedCount++;
+            } else {
+                failedCount++;
+            }
+            
+            // Add a small delay between merges
+            await new Promise(resolve => setTimeout(resolve, 1000));
+        }
+        
+        console.log(`\n📊 Merge Summary:`);
+        console.log(`✅ Successfully merged: ${mergedCount}`);
+        console.log(`❌ Failed to merge: ${failedCount}`);
+        
     } catch (error) {
         console.error('❌ Error during merge process:', error.message);
     }
 }
 
-// Run the merge
-mergePR();
+// Run the merge all PRs
+mergeAllOpenPRs();

@@ -15,17 +15,17 @@
 
 
 export interface MockComponentProps {
-  id?: string;
-  className?: string;
-  children?: React.ReactNode;
-  [key: string]: any;
+id?: string;
+className?: string;
+children?: React.ReactNode;
+[key: string]: any;
 }
 
 export interface TestSetupOptions {
-  mockLocalStorage?: boolean;
-  mockSessionStorage?: boolean;
-  mockFetch?: boolean;
-  mockConsole?: boolean;
+mockLocalStorage?: boolean;
+mockSessionStorage?: boolean;
+mockFetch?: boolean;
+mockConsole?: boolean;
 }
 
 /**
@@ -234,20 +234,19 @@ export class LocalStorageMock {
  * Mock console methods
  */
 export class ConsoleMock {
-  private originalConsole: typeof console;
-  logs: any[] = [];
-  warnings: any[] = [];
-  errors: any[] = [];
-
-  constructor() {
-    this.originalConsole = console;
-  }
+private originalConsole: typeof console;,
+logs: any[] = [];,
+warnings: any[] = [];,
+errors: any[] = [];,
+constructor() {
+this.originalConsole = console;
+}
 
   install(): void {
-    console.log = (...args: any[]) => this.logs.push(args);
-    console.warn = (...args: any[]) => this.warnings.push(args);
-    console.error = (...args: any[]) => this.errors.push(args);
-  }
+console.log = (...args: any[]) => this.logs.push(args);,
+console.warn = (...args: any[]) => this.warnings.push(args);,
+console.error = (...args: any[]) => this.errors.push(args);
+}
 
   restore(): void {
     console.log = this.originalConsole.log;
@@ -361,9 +360,9 @@ export class PerformanceTester {
  * Accessibility testing helper
  */
 export const checkAccessibility = {
-  hasAriaLabel: (element: Element): boolean => {
-    return element.hasAttribute('aria-label') || element.hasAttribute('aria-labelledby');
-  },
+hasAriaLabel: (element: Element): boolean => {,
+return element.hasAttribute('aria-label') || element.hasAttribute('aria-labelledby');
+},
 
   hasRole: (element: Element, role: string): boolean => {
     return element.getAttribute('role') === role;
@@ -392,9 +391,9 @@ export const checkAccessibility = {
  * Setup test environment
  */
 export const setupTestEnvironment = (options: TestSetupOptions = {}): {
-  cleanup: () => void;
-  fetchMock: FetchMock;
-  consoleMock: ConsoleMock;
+cleanup: () => void;,
+fetchMock: FetchMock;,
+consoleMock: ConsoleMock;
 } => {
   const fetchMock = new FetchMock();
   const consoleMock = new ConsoleMock();

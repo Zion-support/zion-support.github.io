@@ -10,13 +10,12 @@ export function debounce<T extends (...args: unknown[]) => unknown>(
   func: T,
   wait: number
 ): (...args: Parameters<T>) => void {
-  let timeout: NodeJS.Timeout | null = null;
-  
-  return function executedFunction(...args: Parameters<T>) {
-    const later = () => {
-      timeout = null;
-      func(...args);
-    };
+let timeout: NodeJS.Timeout | null = null;,
+return function executedFunction(...args: Parameters<T>) {,
+const later = () => {
+timeout = null;
+func(...args);
+};
     
     if (timeout) clearTimeout(timeout);
     timeout = setTimeout(later, wait);
@@ -67,13 +66,12 @@ export function memoize<T extends (...args: unknown[]) => unknown>(
  * Async operation queue to prevent overwhelming the browser
  */
 export class AsyncQueue {
-  private queue: Array<() => Promise<any>> = [];
-  private running: boolean = false;
-  private concurrency: number;
-
-  constructor(concurrency: number = 3) {
-    this.concurrency = concurrency;
-  }
+private queue: Array<() => Promise<any>> = [];,
+private running: boolean = false;,
+private concurrency: number;,
+constructor(concurrency: number = 3) {,
+this.concurrency = concurrency;
+}
 
   /**
    * Add task to queue
@@ -128,12 +126,11 @@ export class AsyncQueue {
 export function rafThrottle<T extends (...args: any[]) => any>(
   func: T
 ): (...args: Parameters<T>) => void {
-  let rafId: number | null = null;
-  
-  return function executedFunction(...args: Parameters<T>) {
-    if (rafId) {
-      cancelAnimationFrame(rafId);
-    }
+let rafId: number | null = null;,
+return function executedFunction(...args: Parameters<T>) {,
+if (rafId) {
+cancelAnimationFrame(rafId);
+}
     
     rafId = requestAnimationFrame(() => {
       func(...args);
@@ -182,12 +179,12 @@ export class BatchUpdater {
  * Efficient array operations
  */
 export const arrayUtils = {
-  /**
-   * Remove duplicates from array
-   */
-  unique<T>(array: T[]): T[] {
-    return Array.from(new Set(array));
-  },
+/**
+* Remove duplicates from array
+*/
+unique<T>(array: T[]): T[] {,
+return Array.from(new Set(array));
+},
 
   /**
    * Chunk array into smaller arrays
@@ -215,12 +212,12 @@ export const arrayUtils = {
  * Object utilities
  */
 export const objectUtils = {
-  /**
-   * Deep clone an object
-   */
-  deepClone<T>(obj: T): T {
-    return JSON.parse(JSON.stringify(obj));
-  },
+/**
+* Deep clone an object
+*/
+deepClone<T>(obj: T): T {,
+return JSON.parse(JSON.stringify(obj));
+},
 
   /**
    * Check if two objects are equal

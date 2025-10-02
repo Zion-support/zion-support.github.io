@@ -1,13 +1,19 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Search, MessageCircle, Phone, Mail, BookOpen, Video, Users, Zap, Clock, CheckCircle } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
+import {
+Link
+} from 'react-router-dom';
+import {
+
+} from 'lucide-react';
+import {
+Helmet
+} from 'react-helmet-async';
 
 const Support: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
-  const supportChannels = [
+  const contactMethods = [
     {
       icon: Phone,
       title: 'Phone Support',
@@ -17,29 +23,29 @@ const Support: React.FC = () => {
       contact: '+1 (555) 123-4567'
     },
     {
-      icon: MessageCircle,
-      title: 'Live Chat',
-      description: 'Get instant help through our chat system',
-      availability: '24/7',
-      responseTime: '< 30 seconds',
-      contact: 'Start Chat'
-    },
+icon: MessageCircle,
+title: 'Live Chat',
+description: 'Get instant help through our chat system',
+availability: '24/7',
+responseTime: '< 30 seconds',
+contact: 'Start Chat'
+}
     {
-      icon: Mail,
-      title: 'Email Support',
-      description: 'Send us detailed questions and get comprehensive answers',
-      availability: '24/7',
-      responseTime: '< 2 hours',
-      contact: 'support@ziontechgroup.com'
-    },
+icon: Mail,
+title: 'Email Support',
+description: 'Send us detailed questions and get comprehensive answers',
+availability: '24/7',
+responseTime: '< 2 hours',
+contact: 'support@ziontechgroup.com'
+}
     {
-      icon: Video,
-      title: 'Video Call',
-      description: 'Schedule a screen sharing session with our experts',
-      availability: 'Business Hours',
-      responseTime: '< 4 hours',
-      contact: 'Schedule Call'
-    }
+icon: Video,
+title: 'Video Call',
+description: 'Schedule a screen sharing session with our experts',
+availability: 'Business Hours',
+responseTime: '< 4 hours',
+contact: 'Schedule Call'
+}
   ];
 
   const faqCategories = [
@@ -47,22 +53,22 @@ const Support: React.FC = () => {
       id: 'general',
       title: 'General',
       icon: BookOpen
-    },
-    {
-      id: 'technical',
-      title: 'Technical',
-      icon: Zap
-    },
-    {
-      id: 'billing',
-      title: 'Billing',
-      icon: Users
-    },
-    {
-      id: 'account',
-      title: 'Account',
-      icon: Clock
     }
+    {
+id: 'technical',
+title: 'Technical',
+icon: Zap
+}
+    {
+id: 'billing',
+title: 'Billing',
+icon: Users
+}
+    {
+id: 'account',
+title: 'Account',
+icon: Clock
+}
   ];
 
   const faqs = [
@@ -82,10 +88,10 @@ const Support: React.FC = () => {
       answer: 'We offer flexible pricing including subscription-based, project-based, and custom enterprise solutions tailored to your needs.'
     },
     {
-      category: 'account',
-      question: 'How do I update my account information?',
-      answer: 'You can update your account information through our client portal or contact our support team for assistance.'
-    },
+category: 'account',
+question: 'How do I update my account information?',
+answer: 'You can update your account information through our client portal or contact our support team for assistance.'
+}
     {
       category: 'technical',
       question: 'Do you provide training for your solutions?',
@@ -105,18 +111,12 @@ const Support: React.FC = () => {
       (faq.question?.toLowerCase().includes(query) || faq.answer?.toLowerCase().includes(query));
     return matchesCategory && matchesQuery;
   });
-
   const quickActions = [
     { title: 'Report a Bug', description: 'Found an issue? Let us know', link: '/contact', icon: '🐛' },
     { title: 'Request a Feature', description: "Have an idea? We'd love to hear it", link: '/contact', icon: '💡' },
     { title: 'Schedule Training', description: 'Book a training session for your team', link: '/training', icon: '🎓' },
     { title: 'View Status Page', description: 'Check system status and uptime', link: '/status', icon: '📊' }
   ];
-
-  const filteredFaqs = faqs.filter((faq) => {
-    if (selectedCategory === 'all') return true;
-    return faq.category === selectedCategory;
-  });
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -135,7 +135,7 @@ const Support: React.FC = () => {
             {/* Search Bar */}
             <div className="max-w-2xl mx-auto">
               <div className="relative">
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <span className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5">🔎</span>
                 <input
                   type="text"
                   placeholder="Search our knowledge base..."
@@ -148,10 +148,9 @@ const Support: React.FC = () => {
           </div>
         </div>
       </section>
-
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-5xl mx-auto">
-          {/* Category Filter */}
+      <section className="py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            {/* Category Filter */}
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               <button
                 onClick={() => setSelectedCategory('all')}
@@ -173,7 +172,7 @@ const Support: React.FC = () => {
                       : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
                   }`}
                 >
-                  <category.icon className="h-4 w-4 mr-2" />
+                  <span className="h-4 w-4 mr-2">📂</span>
                   {category.title}
                 </button>
               ))}
@@ -200,11 +199,11 @@ const Support: React.FC = () => {
                 </p>
               </div>
             )}
-        </div>
-      </section>
+          </div>
+        </section>
 
-      {/* Contact CTA */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-600">
+        {/* Contact CTA */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-600">
           <div className="max-w-7xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Still Need Help?

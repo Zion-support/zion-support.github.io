@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import PromoBanner from './PromoBanner';
 
 const Header: React.FC = () => {
@@ -11,15 +11,17 @@ const Header: React.FC = () => {
       name: 'Services', 
       href: '/services',
       submenu: [
+        { name: 'All Services', href: '/services' },
         { name: 'AI Services', href: '/services/ai-services' },
-        { name: 'Micro SaaS', href: '/services/micro-saas' },
+        { name: 'AI Customer Insights', href: '/services/ai-powered-customer-insights-platform' },
+        { name: 'AI Financial Intelligence', href: '/services/ai-powered-financial-intelligence-platform' },
+        { name: 'AI Autonomous DevOps', href: '/services/ai-autonomous-devops-platform' },
+        { name: 'Quantum Computing', href: '/services/quantum-computing-solutions' },
+        { name: 'Micro SaaS Solutions', href: '/services/micro-saas' },
+        { name: 'Healthcare Scheduling', href: '/services/healthcare-scheduling-platform' },
         { name: 'IT Services', href: '/services/it-services' },
-        { name: 'Cloud Solutions', href: '/services/cloud-solutions' },
-        { name: 'Cybersecurity', href: '/services/cybersecurity' },
-        { name: 'Blockchain', href: '/services/blockchain' },
-        { name: 'IoT Solutions', href: '/services/iot-solutions' },
-        { name: 'Mobile Development', href: '/services/mobile-development' },
-        { name: 'Web Development', href: '/services/web-development' }
+        { name: 'Cybersecurity', href: '/services/ai-cybersecurity-automation' },
+        { name: 'Cloud Solutions', href: '/services/cloud-native-devops-platform' }
       ]
     },
     { name: 'Solutions', href: '/solutions' },
@@ -40,7 +42,7 @@ const Header: React.FC = () => {
             <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-lg">Z</span>
             </div>
-            <span className="text-xl font-bold text-gray-900">Zion Tech Solutions</span>
+            <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
           </Link>
 
           {/* Desktop Navigation */}

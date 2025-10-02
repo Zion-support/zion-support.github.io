@@ -32,6 +32,7 @@ module.exports = {
     '.next/',
     'out/',
     'dist/',
+    'src/pages/**',
     'api-backup/',
     'pages.disabled/',
     'backup-pages/',

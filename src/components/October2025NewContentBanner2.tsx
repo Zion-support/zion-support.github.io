@@ -1,4 +1,6 @@
-import { Link } from "react-router-dom";
+import {
+Link
+} from "react-router-dom";
 
 const October2025NewContentBanner2 = () => {
   const newArticles = [

@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from 'react';
-import { onCLS, onFID, onFCP, onLCP, onTTFB } from 'web-vitals';
+import { onCLS, onFCP, onLCP, onTTFB } from 'web-vitals';
 
 interface PerformanceMetrics {
-  cls: number | null;
-  fid: number | null;
-  fcp: number | null;
-  lcp: number | null;
-  ttfb: number | null;
-  score: number;
+cls: number | null;
+fid: number | null;
+fcp: number | null;
+lcp: number | null;
+ttfb: number | null;
+score: number;
 }
 
-const PerformanceOptimizer: React.FC = () => {
+const PerformanceOptimizer: React.FC<{ isVisible?: boolean; onClose?: () => void }> = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     cls: null,
     fid: null,
@@ -71,7 +71,6 @@ const PerformanceOptimizer: React.FC = () => {
 
     // Measure Core Web Vitals
     onCLS(sendToAnalytics);
-    onFID(sendToAnalytics);
     onFCP(sendToAnalytics);
     onLCP(sendToAnalytics);
     onTTFB(sendToAnalytics);
@@ -111,12 +110,12 @@ const PerformanceOptimizer: React.FC = () => {
           justify-content: center;
         }
         .hero-title {
-          font-size: 3rem;
-          font-weight: 700;
-          color: white;
-          text-align: center;
-          margin-bottom: 1rem;
-        }
+font-size: 3rem;,
+font-weight: 700;,
+color: white;,
+text-align: center;,
+margin-bottom: 1rem;
+}
         @media (max-width: 768px) {
           .hero-title { font-size: 2rem; }
         }

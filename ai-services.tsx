@@ -19,7 +19,7 @@ import {
 
 export default function AIServices() {
   const title = 'AI Services — Zion Tech Group';
-  const description = 'Cutting-edge AI solutions including autonomous systems, machine learning, natural language processing, and intelligent automation with proven ROI.';
+  const description = 'Cutting-edge AI solutions including autonomous systems, machine learning, natural language processing, and intelligent automation with proven ROI. Enterprise-grade AI services with transparent pricing and fast delivery.';
 
   const aiServices = [
     {
@@ -165,6 +165,126 @@ export default function AIServices() {
       ],
       useCases: ['Financial institutions', 'Healthcare organizations', 'Government agencies', 'Enterprise companies'],
       marketSize: '$366.1B cybersecurity market'
+    },
+    {
+      title: 'AI-Powered Supply Chain Optimization',
+      description: 'Intelligent supply chain management with demand forecasting and inventory optimization',
+      icon: Network,
+      features: [
+        'Demand forecasting with 95% accuracy',
+        'Automated inventory optimization',
+        'Supplier risk assessment and monitoring',
+        'Route optimization and logistics planning',
+        'Real-time supply chain visibility',
+        'Sustainability and carbon footprint tracking'
+      ],
+      pricing: '$3,500 - $15,000/month',
+      delivery: '4-8 weeks',
+      category: 'Supply Chain AI',
+      benefits: [
+        '25% reduction in inventory costs',
+        '40% improvement in delivery times',
+        '30% reduction in supply chain risks',
+        'Automated supplier relationship management'
+      ],
+      useCases: ['Manufacturing companies', 'Retail chains', 'Logistics providers', 'E-commerce platforms'],
+      marketSize: '$37.4B supply chain management market'
+    },
+    {
+      title: 'AI-Powered Financial Risk Management',
+      description: 'Advanced financial risk assessment and portfolio optimization with real-time monitoring',
+      icon: BarChart3,
+      features: [
+        'Real-time credit risk assessment',
+        'Portfolio optimization algorithms',
+        'Market volatility prediction',
+        'Regulatory compliance monitoring',
+        'Fraud detection and prevention',
+        'Automated risk reporting and alerts'
+      ],
+      pricing: '$5,000 - $25,000/month',
+      delivery: '6-10 weeks',
+      category: 'Financial AI',
+      benefits: [
+        '35% reduction in credit losses',
+        '20% improvement in portfolio returns',
+        '90% faster risk assessment',
+        'Automated regulatory compliance'
+      ],
+      useCases: ['Banks', 'Investment firms', 'Insurance companies', 'Fintech startups'],
+      marketSize: '$28.5B financial risk management market'
+    },
+    {
+      title: 'AI-Powered Healthcare Diagnostics',
+      description: 'Medical image analysis and diagnostic assistance with AI-powered insights',
+      icon: Shield,
+      features: [
+        'Medical image analysis (X-ray, MRI, CT scans)',
+        'Symptom analysis and preliminary diagnosis',
+        'Drug interaction checking',
+        'Patient risk stratification',
+        'Treatment recommendation engine',
+        'Clinical decision support system'
+      ],
+      pricing: '$8,000 - $35,000/month',
+      delivery: '8-12 weeks',
+      category: 'Healthcare AI',
+      benefits: [
+        '30% improvement in diagnostic accuracy',
+        '50% reduction in diagnostic time',
+        '25% reduction in medical errors',
+        'Enhanced patient outcomes'
+      ],
+      useCases: ['Hospitals', 'Clinics', 'Diagnostic centers', 'Telemedicine platforms'],
+      marketSize: '$45.2B healthcare AI market'
+    },
+    {
+      title: 'AI-Powered Marketing Automation',
+      description: 'Intelligent marketing campaign optimization with personalized customer journeys',
+      icon: Zap,
+      features: [
+        'Customer segmentation and persona analysis',
+        'Personalized content generation',
+        'Campaign performance optimization',
+        'Predictive customer lifetime value',
+        'Multi-channel campaign orchestration',
+        'Real-time marketing analytics'
+      ],
+      pricing: '$2,000 - $12,000/month',
+      delivery: '3-6 weeks',
+      category: 'Marketing AI',
+      benefits: [
+        '40% improvement in conversion rates',
+        '60% reduction in customer acquisition costs',
+        '35% increase in customer lifetime value',
+        'Automated campaign optimization'
+      ],
+      useCases: ['E-commerce brands', 'SaaS companies', 'Marketing agencies', 'Enterprise organizations'],
+      marketSize: '$6.4B marketing automation market'
+    },
+    {
+      title: 'AI-Powered Quality Assurance',
+      description: 'Automated software testing and quality assurance with intelligent test generation',
+      icon: CheckCircle,
+      features: [
+        'Automated test case generation',
+        'Intelligent bug detection and classification',
+        'Performance testing automation',
+        'Security vulnerability scanning',
+        'Code quality analysis',
+        'Continuous testing integration'
+      ],
+      pricing: '$1,500 - $8,000/month',
+      delivery: '2-5 weeks',
+      category: 'QA AI',
+      benefits: [
+        '70% reduction in testing time',
+        '85% improvement in bug detection',
+        '50% reduction in production defects',
+        'Automated quality reporting'
+      ],
+      useCases: ['Software companies', 'DevOps teams', 'QA departments', 'Enterprise IT'],
+      marketSize: '$4.1B software testing market'
     }
   ];
 

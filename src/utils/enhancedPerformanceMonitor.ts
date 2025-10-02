@@ -4,26 +4,24 @@
  */
 
 interface PerformanceMetric {
-  name: string;
-  value: number;
-  rating: 'good' | 'needs-improvement' | 'poor';
-  timestamp: number;
+name: string;
+value: number;
+rating: 'good' | 'needs-improvement' | 'poor';
+timestamp: number;
 }
 
 class EnhancedPerformanceMonitor {
-  private metrics: PerformanceMetric[] = [];
-  private observers: PerformanceObserver[] = [];
-
-  /**
-   * Initialize performance monitoring
-   */
-  initialize(): void {
-    if (typeof window === 'undefined') return;
-
-    this.observeWebVitals();
-    this.observeLongTasks();
-    this.observeLayoutShifts();
-  }
+private metrics: PerformanceMetric[] = [];,
+private observers: PerformanceObserver[] = [];,
+/**
+* Initialize performance monitoring
+*/
+initialize(): void {,
+if (typeof window === 'undefined') return;
+this.observeWebVitals();
+this.observeLongTasks();
+this.observeLayoutShifts();
+}
 
   /**
    * Observe Core Web Vitals (LCP, FID, CLS)
@@ -230,8 +228,8 @@ class EnhancedPerformanceMonitor {
 
 // Type definitions for Performance API
 interface LayoutShift extends PerformanceEntry {
-  value: number;
-  hadRecentInput: boolean;
+value: number;,
+hadRecentInput: boolean;
 }
 
 interface PerformanceEventTiming extends PerformanceEntry {

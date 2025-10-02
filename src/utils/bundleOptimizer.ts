@@ -4,17 +4,18 @@
  */
 
 interface BundleAnalysis {
-  totalSize: number;
-  componentCount: number;
-  largestComponents: Array<{ name: string; size: number }>;
+totalSize: number;
+componentCount: number;
+largestComponents: Array<{ name: string; size: number
+}>;
   recommendations: string[];
 }
 
 interface OptimizationResult {
-  before: BundleAnalysis;
-  after: BundleAnalysis;
-  savings: number;
-  savingsPercentage: number;
+before: BundleAnalysis;
+after: BundleAnalysis;
+savings: number;
+savingsPercentage: number;
 }
 
 export class BundleOptimizer {
@@ -86,16 +87,15 @@ export class BundleOptimizer {
    * Generate optimization recommendations
    */
   private generateRecommendations(analysis: BundleAnalysis): string[] {
-    const recommendations: string[] = [];
-
-    // Check for large components
-    const largeComponents = analysis.largestComponents.filter(
-      c => c.size > this.threshold
-    );
-
-    if (largeComponents.length > 0) {
-      recommendations.push(
-        `Found ${largeComponents.length} components over ${this.threshold / 1024}KB - consider code splitting`
+const recommendations: string[] = [];,
+// Check for large components
+const largeComponents = analysis.largestComponents.filter(
+c => c.size > this.threshold
+);
+if (largeComponents.length > 0) {
+recommendations.push(
+`Found ${largeComponents.length
+} components over ${this.threshold / 1024}KB - consider code splitting`
       );
     }
 
@@ -134,9 +134,9 @@ export class BundleOptimizer {
    * Implement tree shaking for unused exports
    */
   enableTreeShaking(): {
-    unusedExports: string[];
-    potentialSavings: number;
-  } {
+unusedExports: string[];,
+potentialSavings: number;
+} {
     console.log('Analyzing unused exports...');
     
     // Mock implementation
@@ -158,9 +158,9 @@ export class BundleOptimizer {
    * Optimize chunk splitting strategy
    */
   optimizeChunkStrategy(): {
-    strategy: string;
-    expectedImprovement: string;
-  } {
+strategy: string;,
+expectedImprovement: string;
+} {
     return {
       strategy: 'vendor-async-pages',
       expectedImprovement: '40-50% reduction in initial bundle size'

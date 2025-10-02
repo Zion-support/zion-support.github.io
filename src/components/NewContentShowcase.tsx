@@ -1,6 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, BookOpen, Rocket } from 'lucide-react';
+import {
+Link
+} from 'react-router-dom';
+import {
+
+} from 'lucide-react';
 
 // Mock data
 const newArticles2025 = [
@@ -46,16 +50,16 @@ const newServices2026 = [
     description: 'Revolutionary quantum computing applications for enterprise',
     category: 'Quantum Computing',
     icon: '⚛️',
-    link: '/services/quantum-ai-hybrid-computing',
+    link: '/services/quantum-ai-hybrid-computing'
     pricing: 'Starting at $10,000/month'
   },
   {
     id: '3',
-    name: 'Zero Trust Security Framework',
-    description: 'Advanced security with 99.9% threat detection accuracy',
-    category: 'Cybersecurity',
-    icon: '🔒',
-    link: '/services/zero-trust-security',
+    name: 'Zero Trust Security Framework'
+    description: 'Advanced security with 99.9% threat detection accuracy'
+    category: 'Cybersecurity'
+    icon: '🔒'
+    link: '/services/zero-trust-security'
     pricing: 'Starting at $3,000/month'
   }
 ];
@@ -83,7 +87,7 @@ const NewContentShowcase: React.FC = () => {
           {/* Articles Section */}
           <div>
             <div className="flex items-center gap-3 mb-6">
-              <BookOpen className="w-8 h-8 text-indigo-600" />
+              <span className="w-8 h-8 text-indigo-600">📘</span>
               <h3 className="text-3xl font-bold text-gray-900">Latest Articles</h3>
             </div>
             <div className="space-y-4">
@@ -99,7 +103,7 @@ const NewContentShowcase: React.FC = () => {
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-gray-500">{article.readTime}</span>
                     <span className="text-indigo-600 font-semibold flex items-center gap-1">
-                      Read More <ArrowRight className="w-4 h-4" />
+                      Read More ›
                     </span>
                   </div>
                 </Link>
@@ -119,7 +123,7 @@ const NewContentShowcase: React.FC = () => {
           {/* Services Section */}
           <div>
             <div className="flex items-center gap-3 mb-6">
-              <Rocket className="w-8 h-8 text-purple-600" />
+              <span className="w-8 h-8 text-purple-600">🚀</span>
               <h3 className="text-3xl font-bold text-gray-900">New Services</h3>
             </div>
             <div className="space-y-4">
@@ -138,7 +142,7 @@ const NewContentShowcase: React.FC = () => {
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-gray-700 font-semibold">{service.pricing}</span>
                     <span className="text-purple-600 font-semibold flex items-center gap-1">
-                      Learn More <ArrowRight className="w-4 h-4" />
+                      Learn More ›
                     </span>
                   </div>
                 </Link>

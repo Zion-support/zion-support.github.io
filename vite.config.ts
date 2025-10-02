@@ -9,6 +9,8 @@ export default defineConfig({
       jsxRuntime: 'automatic'
     }),
   ],
+  root: '.',
+  publicDir: 'public',
   resolve: {
     alias: {
       '@': resolve(__dirname, 'src'),

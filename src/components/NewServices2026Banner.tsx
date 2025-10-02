@@ -1,8 +1,8 @@
 
 type NewServices2026BannerProps = {
-  variant?: "showcase" | "hero" | "info";
-  showCount?: number;
-  className?: string;
+variant?: "showcase" | "hero" | "info";
+showCount?: number;
+className?: string;
 };
 
 export default function NewServices2026Banner({
@@ -22,13 +22,13 @@ export default function NewServices2026Banner({
   return (
     <section
       className={
-        `w-full ${
-          variant === "hero"
-            ? "bg-gradient-to-r from-indigo-600 to-purple-600"
-            : variant === "info"
-            ? "bg-gradient-to-r from-emerald-50 to-teal-50"
-            : "bg-gradient-to-r from-blue-600 to-purple-600"
-        } ${variant === "info" ? "text-gray-900" : "text-white"} py-12 ${className}`
+`w-full ${
+variant === "hero"
+? "bg-gradient-to-r from-indigo-600 to-purple-600"
+: variant === "info",
+? "bg-gradient-to-r from-emerald-50 to-teal-50"
+: "bg-gradient-to-r from-blue-600 to-purple-600"
+} ${variant === "info" ? "text-gray-900" : "text-white"} py-12 ${className}`
       }
     >
       <div className="container mx-auto px-6">

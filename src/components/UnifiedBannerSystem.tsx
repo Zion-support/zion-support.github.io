@@ -1,29 +1,31 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import {
+
+} from 'framer-motion';
 
 export interface BannerConfig {
-  id: string;
-  title: string;
-  subtitle?: string;
-  description: string;
-  ctaText: string;
-  ctaLink: string;
-  imageUrl?: string;
-  priority: number;
-  category: string;
-  tags: string[];
-  backgroundColor?: string;
-  textColor?: string;
-  animation?: 'slide' | 'fade' | 'scale' | 'none';
-  duration?: number; // Auto-rotate duration in ms
+id: string;
+title: string;
+subtitle?: string;
+description: string;
+ctaText: string;
+ctaLink: string;
+imageUrl?: string;
+priority: number;
+category: string;
+tags: string[];
+backgroundColor?: string;
+textColor?: string;
+animation?: 'slide' | 'fade' | 'scale' | 'none';
+duration?: number; // Auto-rotate duration in ms
 }
 
 interface UnifiedBannerSystemProps {
-  banners: BannerConfig[];
-  autoRotate?: boolean;
-  rotationInterval?: number;
-  showNavigation?: boolean;
-  maxVisible?: number;
+banners: BannerConfig[];
+autoRotate?: boolean;
+rotationInterval?: number;
+showNavigation?: boolean;
+maxVisible?: number;
 }
 
 const UnifiedBannerSystem: React.FC<UnifiedBannerSystemProps> = ({
@@ -128,9 +130,11 @@ const UnifiedBannerSystem: React.FC<UnifiedBannerSystemProps> = ({
                       <h2 className="text-2xl md:text-3xl font-bold mb-2">
                         {banner.title}
                       </h2>
-                      {banner.subtitle && (
-                        <h3 className="text-lg md:text-xl font-semibold mb-3 opacity-90">
-                          {banner.subtitle}
+                      {
+banner.subtitle && (
+<h3 className="text-lg md:text-xl font-semibold mb-3 opacity-90">,
+{banner.subtitle
+}
                         </h3>
                       )}
                       <p className="text-base md:text-lg mb-6 opacity-80">
@@ -186,23 +190,24 @@ const UnifiedBannerSystem: React.FC<UnifiedBannerSystemProps> = ({
         </div>
       )}
 
-      <style jsx>{`
-        .banner-item {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-        }
+      <style jsx>{
+`
+.banner-item {
+position: absolute;,
+top: 0;,
+left: 0;,
+width: 100%;,
+height: 100%;
+}
         
         .banner-item.hidden {
           pointer-events: none;
         }
         
         .banner-container {
-          min-height: 300px;
-          position: relative;
-        }
+min-height: 300px;,
+position: relative;
+}
         
         @media (max-width: 768px) {
           .banner-container {

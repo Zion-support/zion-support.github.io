@@ -1,24 +1,26 @@
 import React, { useEffect, useState } from 'react';
-import { measurePerformance, reportWebVitals } from '../utils/performance';
+import {
+
+} from '../utils/performance';
 
 interface PerformanceMetrics {
-  domContentLoaded: number;
-  loadComplete: number;
-  firstPaint: number;
-  firstContentfulPaint: number;
-  cls?: number;
-  fid?: number;
-  lcp?: number;
-  ttfb?: number;
+domContentLoaded: number;
+loadComplete: number;
+firstPaint: number;
+firstContentfulPaint: number;
+cls?: number;
+fid?: number;
+lcp?: number;
+ttfb?: number;
 }
 
 interface PerformanceAlert {
-  id: string;
-  type: 'warning' | 'error' | 'info';
-  message: string;
-  metric: string;
-  value: number;
-  threshold: number;
+id: string;
+type: 'warning' | 'error' | 'info';
+message: string;
+metric: string;
+value: number;
+threshold: number;
 }
 
 const EnhancedPerformanceMonitor: React.FC = () => {
@@ -39,9 +41,10 @@ const EnhancedPerformanceMonitor: React.FC = () => {
   };
 
   const generateAlert = (metric: string, value: number, threshold: number): PerformanceAlert => {
-    const type = value > threshold ? 'error' : value > threshold * 0.8 ? 'warning' : 'info';
-    return {
-      id: `${metric}-${Date.now()}`,
+const type = value > threshold ? 'error' : value > threshold * 0.8 ? 'warning' : 'info';,
+return {
+id: `${metric
+}-${Date.now()}`,
       type,
       message: `${metric} is ${value}ms, threshold is ${threshold}ms`,
       metric,
@@ -129,7 +132,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
     return () => {
       window.removeEventListener('load', startMonitoring);
     };
-  }, []);
+  }, [thresholds]);
 
   // Development mode: Show performance dashboard
   if (process.env.NODE_ENV === 'development') {

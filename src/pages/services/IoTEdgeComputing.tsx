@@ -1,18 +1,9 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { 
-  Cpu, 
-  Database, 
-  Shield, 
-  Zap, 
-  BarChart3, 
-  CheckCircle, 
-  ArrowRight,
-  Phone,
-  Star,
-  Globe,
-  Monitor,
-  Network
+import {
+Helmet
+} from 'react-helmet-async';
+import {
+Network
 } from 'lucide-react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
@@ -411,11 +402,12 @@ const IoTEdgeComputing: React.FC = () => {
                   </ul>
                   <a
                     href="/contact"
-                    className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
-                      plan.popular
-                        ? 'bg-orange-600 text-white hover:bg-orange-700'
-                        : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
-                    }`}
+                    className={
+`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
+plan.popular
+? 'bg-orange-600 text-white hover:bg-orange-700',
+: 'bg-gray-100 text-gray-900 hover:bg-gray-200'
+}`}
                   >
                     Get Started
                   </a>

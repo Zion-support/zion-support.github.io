@@ -1,12 +1,12 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, PropsWithChildren } from 'react';
 
 const AccessibilityEnhancer: React.FC = () => {
-  useEffect(() => {
-    // Skip link functionality
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === 'Tab') {
-        document.body.classList.add('keyboard-navigation');
-      }
+useEffect(() => {
+// Skip link functionality
+const handleKeyDown = (event: KeyboardEvent) => {,
+if (event.key === 'Tab') {
+document.body.classList.add('keyboard-navigation');
+}
     };
 
     const handleMouseDown = () => {
@@ -88,7 +88,7 @@ const AccessibilityEnhancer: React.FC = () => {
 
     observer.observe(document.body, {
       childList: true,
-      subtree: true,
+      subtree: true
     });
 
     return () => {
@@ -98,7 +98,7 @@ const AccessibilityEnhancer: React.FC = () => {
     };
   }, []);
 
-  return null;
+  return <>{children}</>;
 };
 
 export default AccessibilityEnhancer;

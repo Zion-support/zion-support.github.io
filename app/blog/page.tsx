@@ -1,297 +1,200 @@
 import React from 'react';
-import Link from 'next/link';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
-export const metadata = {
-  title: 'Blog & Insights - Zion Tech Group',
-  description: 'Stay updated with the latest AI trends, breakthrough innovations, and enterprise transformation insights from Zion Tech Group.',
-  keywords: 'AI blog, technology insights, enterprise transformation, AI trends, breakthrough innovations',
-};
-
-export default function BlogPage() {
-  const featuredPosts = [
+const BlogPage: React.FC = () => {
+  const blogPosts = [
     {
-      title: 'AI 2026 November Quantum Superintelligence Breakthrough',
-      excerpt: 'Revolutionary quantum AI implementation achieving unprecedented business transformation with $500B ROI.',
-      date: 'November 2026',
-      readTime: '8 min read',
-      category: 'Quantum AI',
-      link: '/blog/ai-2026-november-quantum-superintelligence-breakthrough',
+      title: "AI Implementation Roadmap 2026: A Complete Guide",
+      excerpt: "Learn how to successfully implement AI solutions in your organization with our comprehensive roadmap.",
+      date: "January 15, 2025",
+      readTime: "8 min read",
+      category: "AI",
+      href: "/guides/ai-2026-implementation-roadmap",
       featured: true
     },
     {
-      title: 'AI 2026 August Quantum Consciousness Revolution',
-      excerpt: 'Autonomous operations transformation with quantum consciousness breakthrough delivering $50B success.',
-      date: 'August 2026',
-      readTime: '6 min read',
-      category: 'Autonomous Systems',
-      link: '/blog/ai-2026-august-quantum-consciousness-revolution',
+      title: "Autonomous Business Processes: The Future of Work",
+      excerpt: "Discover how autonomous business processes are revolutionizing the way companies operate.",
+      date: "January 10, 2025",
+      readTime: "6 min read",
+      category: "Automation",
+      href: "/guides/autonomous-business-processes-implementation-guide-2026",
       featured: true
     },
     {
-      title: 'AI 2026 July Mega Breakthrough Revolution',
-      excerpt: 'Enterprise automation revolution with AI-powered business intelligence achieving $25.3B success.',
-      date: 'July 2026',
-      readTime: '7 min read',
-      category: 'Enterprise AI',
-      link: '/blog/ai-2026-july-mega-breakthrough-revolution',
-      featured: true
+      title: "Micro SaaS Development: Building Scalable Solutions",
+      excerpt: "Best practices for developing micro SaaS applications that scale with your business growth.",
+      date: "January 5, 2025",
+      readTime: "5 min read",
+      category: "SaaS",
+      href: "/blog/micro-saas-development",
+      featured: false
+    },
+    {
+      title: "Cloud Migration Strategies for Enterprise",
+      excerpt: "Comprehensive guide to migrating your enterprise infrastructure to the cloud.",
+      date: "December 28, 2024",
+      readTime: "7 min read",
+      category: "Cloud",
+      href: "/blog/cloud-migration-strategies",
+      featured: false
+    },
+    {
+      title: "Cybersecurity Best Practices for 2025",
+      excerpt: "Essential cybersecurity practices to protect your business in the digital age.",
+      date: "December 20, 2024",
+      readTime: "4 min read",
+      category: "Security",
+      href: "/blog/cybersecurity-best-practices",
+      featured: false
+    },
+    {
+      title: "Blockchain Technology: Beyond Cryptocurrency",
+      excerpt: "Exploring real-world applications of blockchain technology in various industries.",
+      date: "December 15, 2024",
+      readTime: "6 min read",
+      category: "Blockchain",
+      href: "/blog/blockchain-applications",
+      featured: false
     }
   ];
 
-  const recentPosts = [
-    {
-      title: 'AI Customer Data Platforms 2026',
-      excerpt: 'Next-generation customer data platforms powered by AI for enterprise transformation.',
-      date: 'December 2025',
-      readTime: '5 min read',
-      category: 'Data Analytics',
-      link: '/blog/ai-customer-data-platforms-2026'
-    },
-    {
-      title: 'AI Customer Journey AI 2026',
-      excerpt: 'Revolutionary AI-powered customer journey optimization for enterprise success.',
-      date: 'December 2025',
-      readTime: '6 min read',
-      category: 'Customer Experience',
-      link: '/blog/ai-customer-journey-ai-2026'
-    },
-    {
-      title: 'AI Agent Observability 2026',
-      excerpt: 'Advanced observability solutions for AI agents in enterprise environments.',
-      date: 'December 2025',
-      readTime: '4 min read',
-      category: 'AI Operations',
-      link: '/blog/ai-agent-observability-2026'
-    },
-    {
-      title: 'Agentic Workflow Orchestration 2026',
-      excerpt: 'Autonomous workflow orchestration powered by AI agents for enterprise efficiency.',
-      date: 'December 2025',
-      readTime: '7 min read',
-      category: 'Workflow Automation',
-      link: '/blog/agentic-workflow-orchestration-2026'
-    },
-    {
-      title: 'AI Autonomous Cloud Ops 2026',
-      excerpt: 'Revolutionary autonomous cloud operations powered by AI for enterprise infrastructure.',
-      date: 'December 2025',
-      readTime: '5 min read',
-      category: 'Cloud Operations',
-      link: '/blog/ai-autonomous-cloud-ops-2026'
-    },
-    {
-      title: 'AI 2026 January Revolutionary Breakthroughs',
-      excerpt: 'Comprehensive overview of January 2026 AI breakthroughs and enterprise transformations.',
-      date: 'January 2026',
-      readTime: '8 min read',
-      category: 'AI Breakthroughs',
-      link: '/blog/ai-2026-january-revolutionary-breakthroughs'
-    }
-  ];
-
-  const categories = [
-    { name: 'AI Breakthroughs', count: 45 },
-    { name: 'Enterprise AI', count: 32 },
-    { name: 'Quantum Computing', count: 28 },
-    { name: 'Autonomous Systems', count: 25 },
-    { name: 'Data Analytics', count: 22 },
-    { name: 'Cloud Operations', count: 18 },
-    { name: 'Customer Experience', count: 15 },
-    { name: 'AI Operations', count: 12 }
-  ];
+  const categories = ["All", "AI", "Automation", "SaaS", "Cloud", "Security", "Blockchain"];
 
   return (
-    <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white py-20">
+    <>
+      <Helmet>
+        <title>Blog - Zion Tech Group</title>
+        <meta name="description" content="Latest insights on AI, micro SaaS, IT services, and technology trends from Zion Tech Group experts." />
+      </Helmet>
+      
+      <div className="min-h-screen py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Blog & Insights
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Technology Blog
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Stay ahead with the latest AI trends, breakthrough innovations, and enterprise transformation insights
-            </p>
-            <div className="flex flex-wrap justify-center gap-4 text-sm">
-              <div className="bg-blue-600 px-4 py-2 rounded-full">
-                <span className="font-semibold">200+</span> Articles Published
-              </div>
-              <div className="bg-green-600 px-4 py-2 rounded-full">
-                <span className="font-semibold">50K+</span> Monthly Readers
-              </div>
-              <div className="bg-purple-600 px-4 py-2 rounded-full">
-                <span className="font-semibold">Fortune 500</span> Insights
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Featured Posts */}
-      <div className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Featured Articles
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Our most impactful insights and breakthrough discoveries
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Stay updated with the latest insights on AI, micro SaaS, IT services, 
+              and emerging technology trends from our team of experts.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredPosts.map((post, index) => (
-              <article key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <div className="p-6">
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
-                      {post.category}
-                    </span>
-                    <span className="text-sm text-gray-500">
-                      {post.readTime}
-                    </span>
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">
-                    {post.title}
-                  </h3>
-                  <p className="text-gray-600 mb-4">
-                    {post.excerpt}
-                  </p>
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm text-gray-500">
-                      {post.date}
-                    </span>
-                    <Link 
-                      href={post.link}
-                      className="text-blue-600 hover:text-blue-800 font-medium text-sm flex items-center gap-1"
-                    >
-                      Read Article
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg>
-                    </Link>
-                  </div>
-                </div>
-              </article>
+          {/* Category Filter */}
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
+            {categories.map((category) => (
+              <button
+                key={category}
+                className={`px-6 py-2 rounded-full font-medium transition-colors ${
+                  category === "All" 
+                    ? "bg-blue-600 text-white" 
+                    : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+                }`}
+              >
+                {category}
+              </button>
             ))}
           </div>
-        </div>
-      </div>
 
-      <div className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
-            {/* Main Content */}
-            <div className="lg:col-span-3">
-              <div className="mb-8">
-                <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                  Recent Articles
-                </h2>
-                <p className="text-lg text-gray-600">
-                  Latest insights and breakthrough discoveries
-                </p>
-              </div>
-
-              <div className="space-y-6">
-                {recentPosts.map((post, index) => (
-                  <article key={index} className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow duration-300">
-                    <div className="flex items-start justify-between mb-3">
-                      <span className="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm font-medium">
+          {/* Featured Posts */}
+          <div className="mb-16">
+            <h2 className="text-2xl font-bold text-gray-900 mb-8">Featured Articles</h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              {blogPosts.filter(post => post.featured).map((post, index) => (
+                <article key={index} className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100">
+                  <div className="p-8">
+                    <div className="flex items-center justify-between mb-4">
+                      <span className="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">
                         {post.category}
                       </span>
-                      <span className="text-sm text-gray-500">
-                        {post.readTime}
-                      </span>
+                      <span className="text-sm text-gray-500">{post.readTime}</span>
                     </div>
-                    <h3 className="text-lg font-bold text-gray-900 mb-2">
-                      {post.title}
+                    
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">
+                      <Link to={post.href} className="hover:text-blue-600 transition-colors">
+                        {post.title}
+                      </Link>
                     </h3>
-                    <p className="text-gray-600 mb-4">
-                      {post.excerpt}
-                    </p>
+                    
+                    <p className="text-gray-600 mb-4 leading-relaxed">{post.excerpt}</p>
+                    
                     <div className="flex items-center justify-between">
-                      <span className="text-sm text-gray-500">
-                        {post.date}
-                      </span>
-                      <Link 
-                        href={post.link}
-                        className="text-blue-600 hover:text-blue-800 font-medium text-sm flex items-center gap-1"
+                      <span className="text-sm text-gray-500">{post.date}</span>
+                      <Link
+                        to={post.href}
+                        className="text-blue-600 hover:text-blue-700 font-semibold flex items-center"
                       >
                         Read More
-                        <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                         </svg>
                       </Link>
                     </div>
-                  </article>
-                ))}
-              </div>
+                  </div>
+                </article>
+              ))}
             </div>
+          </div>
 
-            {/* Sidebar */}
-            <div className="lg:col-span-1">
-              <div className="bg-gray-50 rounded-lg p-6">
-                <h3 className="text-lg font-bold text-gray-900 mb-4">
-                  Categories
-                </h3>
-                <div className="space-y-2">
-                  {categories.map((category, index) => (
-                    <div key={index} className="flex items-center justify-between">
-                      <span className="text-gray-700 hover:text-blue-600 cursor-pointer">
-                        {category.name}
+          {/* All Posts */}
+          <div>
+            <h2 className="text-2xl font-bold text-gray-900 mb-8">All Articles</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {blogPosts.map((post, index) => (
+                <article key={index} className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100">
+                  <div className="p-6">
+                    <div className="flex items-center justify-between mb-3">
+                      <span className="bg-gray-100 text-gray-700 text-xs font-medium px-2 py-1 rounded-full">
+                        {post.category}
                       </span>
-                      <span className="text-sm text-gray-500">
-                        {category.count}
-                      </span>
+                      <span className="text-xs text-gray-500">{post.readTime}</span>
                     </div>
-                  ))}
-                </div>
-              </div>
+                    
+                    <h3 className="text-lg font-bold text-gray-900 mb-3">
+                      <Link to={post.href} className="hover:text-blue-600 transition-colors">
+                        {post.title}
+                      </Link>
+                    </h3>
+                    
+                    <p className="text-gray-600 mb-4 text-sm leading-relaxed">{post.excerpt}</p>
+                    
+                    <div className="flex items-center justify-between">
+                      <span className="text-xs text-gray-500">{post.date}</span>
+                      <Link
+                        to={post.href}
+                        className="text-blue-600 hover:text-blue-700 text-sm font-semibold"
+                      >
+                        Read →
+                      </Link>
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
 
-              <div className="bg-blue-50 rounded-lg p-6 mt-6">
-                <h3 className="text-lg font-bold text-gray-900 mb-4">
-                  Stay Updated
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Get the latest AI insights and breakthrough discoveries delivered to your inbox.
-                </p>
-                <Link 
-                  href="/contact"
-                  className="bg-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-200 inline-block"
-                >
-                  Subscribe Now
-                </Link>
-              </div>
+          {/* Newsletter Signup */}
+          <div className="mt-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-12 text-center text-white">
+            <h2 className="text-3xl font-bold mb-4">Stay Updated</h2>
+            <p className="text-xl text-blue-100 mb-8">
+              Get the latest technology insights and industry updates delivered to your inbox.
+            </p>
+            <div className="max-w-md mx-auto flex gap-4">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="flex-1 px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500"
+              />
+              <button className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                Subscribe
+              </button>
             </div>
           </div>
         </div>
       </div>
-
-      {/* CTA Section */}
-      <div className="bg-blue-600 py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Discover how our AI and IT solutions can drive breakthrough results for your organization
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/contact"
-              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200"
-            >
-              Get Started Today
-            </Link>
-            <Link 
-              href="/services"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-200"
-            >
-              Explore Our Services
-            </Link>
-          </div>
-        </div>
-      </div>
-    </div>
+    </>
   );
-}
+};
+
+export default BlogPage;

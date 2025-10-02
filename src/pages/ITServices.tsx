@@ -1,32 +1,32 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { 
-  Cloud, 
-  Shield, 
-  Server, 
-  Database, 
-  Network, 
-  Lock, 
-  CheckCircle, 
-  ArrowRight,
-  DollarSign,
-  Clock,
-  Star,
-  TrendingUp,
-  Globe,
-  Smartphone,
-  MessageSquare,
-  Zap,
-  BarChart3,
-  Settings,
-  Monitor,
-  Cpu,
-  HardDrive,
-  Wifi,
-  Eye,
-  Key,
-  AlertTriangle,
-  Users,
+  Cloud,
+  Shield,
+  Server,
+  Database,
+  Network,
+  Lock,
+  CheckCircle
+  ArrowRight
+  DollarSign
+  Clock
+  Star
+  TrendingUp
+  Globe
+  Smartphone
+  MessageSquare
+  Zap
+  
+  Settings
+  Monitor
+  Cpu
+  HardDrive
+  Wifi
+  Eye
+  Key
+  AlertTriangle
+  Users
   Building
 } from "lucide-react";
 
@@ -112,7 +112,7 @@ export default function ITServices(): React.JSX.Element {
       useCases: ["Software companies", "Tech startups", "E-commerce platforms", "Financial services"],
       marketSize: "$10.3B DevOps market",
       link: "/contact"
-    },
+    }
     {
       id: "data-engineering-platform",
       name: "Data Engineering Platform",
@@ -138,7 +138,7 @@ export default function ITServices(): React.JSX.Element {
       ],
       useCases: ["Analytics companies", "E-commerce platforms", "Financial services", "Healthcare systems"],
       marketSize: "$274.3B data analytics market",
-      link: "/contact"
+      link: "/contact",
     },
     {
       id: "network-infrastructure",
@@ -165,7 +165,7 @@ export default function ITServices(): React.JSX.Element {
       ],
       useCases: ["Multi-location businesses", "Remote work environments", "Healthcare networks", "Educational institutions"],
       marketSize: "$45.2B SD-WAN market",
-      link: "/contact"
+      link: "/contact",
     },
     {
       id: "compliance-automation",
@@ -192,35 +192,35 @@ export default function ITServices(): React.JSX.Element {
       ],
       useCases: ["Healthcare providers", "Financial services", "SaaS companies", "Government contractors"],
       marketSize: "$56.9B compliance management market",
-      link: "/contact"
-    }
+      link: "/contact",
+    },
   ];
 
   const additionalITServices = [
     {
       name: "IT Infrastructure Assessment",
-      description: "Comprehensive infrastructure audit and optimization recommendations",
+      description: "Comprehensive infrastructure audit and optimization recommendations"
       price: "$1,500 - $5,000/month",
-      features: ["Performance analysis", "Security assessment", "Cost optimization", "Modernization roadmap"]
+      features: ["Performance analysis", "Security assessment", "Cost optimization", "Modernization roadmap"],
     },
     {
       name: "24/7 IT Support & Monitoring",
-      description: "Round-the-clock IT support with proactive monitoring",
+      description: "Round-the-clock IT support with proactive monitoring"
       price: "$800 - $3,000/month",
-      features: ["24/7 helpdesk", "Proactive monitoring", "Remote support", "SLA guarantees"]
+      features: ["24/7 helpdesk", "Proactive monitoring", "Remote support", "SLA guarantees"],
     },
     {
       name: "Backup & Disaster Recovery",
-      description: "Automated backup solutions with disaster recovery planning",
+      description: "Automated backup solutions with disaster recovery planning"
       price: "$500 - $2,500/month",
-      features: ["Automated backups", "Disaster recovery", "Business continuity", "Data protection"]
+      features: ["Automated backups", "Disaster recovery", "Business continuity", "Data protection"],
     },
     {
       name: "IT Consulting & Strategy",
-      description: "Strategic IT planning and digital transformation consulting",
+      description: "Strategic IT planning and digital transformation consulting"
       price: "$200 - $500/hour",
-      features: ["Strategic planning", "Technology roadmap", "Vendor selection", "Implementation guidance"]
-    }
+      features: ["Strategic planning", "Technology roadmap", "Vendor selection", "Implementation guidance"],
+    },
   ];
 
   const industrySolutions = [
@@ -228,26 +228,26 @@ export default function ITServices(): React.JSX.Element {
       industry: "Healthcare",
       solutions: ["HIPAA compliance", "Patient data security", "Telemedicine infrastructure", "Medical device integration"],
       icon: Building,
-      color: "from-green-500 to-teal-500"
+      color: "from-green-500 to-teal-500",
     },
     {
       industry: "Financial Services",
       solutions: ["PCI DSS compliance", "Fraud detection systems", "Risk management", "Regulatory reporting"],
       icon: DollarSign,
-      color: "from-blue-500 to-indigo-500"
+      color: "from-blue-500 to-indigo-500",
     },
     {
       industry: "E-commerce",
       solutions: ["Scalable infrastructure", "Payment security", "Inventory management", "Customer analytics"],
       icon: Globe,
-      color: "from-purple-500 to-pink-500"
+      color: "from-purple-500 to-pink-500",
     },
     {
       industry: "Manufacturing",
       solutions: ["IoT integration", "Predictive maintenance", "Supply chain optimization", "Quality control systems"],
       icon: Cpu,
-      color: "from-orange-500 to-red-500"
-    }
+      color: "from-orange-500 to-red-500",
+    },
   ];
 
   return (

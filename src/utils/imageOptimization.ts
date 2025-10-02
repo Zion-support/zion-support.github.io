@@ -4,20 +4,20 @@
  */
 
 export interface ImageConfig {
-  src: string;
-  alt: string;
-  width?: number;
-  height?: number;
-  loading?: 'lazy' | 'eager';
-  priority?: boolean;
-  quality?: number;
-  formats?: ('webp' | 'avif' | 'jpg' | 'png')[];
+src: string;
+alt: string;
+width?: number;
+height?: number;
+loading?: 'lazy' | 'eager';
+priority?: boolean;
+quality?: number;
+formats?: ('webp' | 'avif' | 'jpg' | 'png')[];
 }
 
 export interface ResponsiveImageConfig extends ImageConfig {
-  srcSet?: string;
-  sizes?: string;
-  breakpoints?: number[];
+srcSet?: string;,
+sizes?: string;,
+breakpoints?: number[];
 }
 
 /**
@@ -59,11 +59,11 @@ export const generateSizes = (
 export const getOptimizedUrl = (
   src: string,
   options: {
-    width?: number;
-    height?: number;
-    quality?: number;
-    format?: 'webp' | 'avif' | 'jpg' | 'png';
-  } = {}
+width?: number;,
+height?: number;,
+quality?: number;,
+format?: 'webp' | 'avif' | 'jpg' | 'png';
+} = {}
 ): string => {
   // If using a CDN with query parameters
   const params = new URLSearchParams();
@@ -283,17 +283,17 @@ export const getOptimalQuality = (): number => {
   const effectiveType = connection?.effectiveType;
   
   switch (effectiveType) {
-    case '4g':
-      return 85;
-    case '3g':
-      return 70;
-    case '2g':
-      return 50;
-    case 'slow-2g':
-      return 40;
-    default:
-      return 80;
-  }
+case '4g':,
+return 85;
+case '3g':,
+return 70;
+case '2g':,
+return 50;
+case 'slow-2g':,
+return 40;
+default:,
+return 80;
+}
 };
 
 /**

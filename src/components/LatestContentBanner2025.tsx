@@ -1,4 +1,7 @@
 import React from 'react';
+import {
+
+} from 'lucide-react';
 
 const LatestContentBanner2025: React.FC = () => {
   const latestArticles = [
@@ -75,24 +78,6 @@ const LatestContentBanner2025: React.FC = () => {
       impact: "$10B Revenue"
     },
     {
-      title: "Meta-Cognitive AI: The Thinking AI Revolution",
-      description: "95% Decision Accuracy, $2M+ Annual Savings",
-      slug: "meta-cognitive-ai-revolution-2025",
-      category: "AI Innovation",
-      emoji: "🧠",
-      highlight: "BREAKTHROUGH",
-      impact: "95% Decision Accuracy"
-    },
-    {
-      title: "Quantum-Neural Networks: 1000x Processing Speed",
-      description: "Revolutionary Processing Power, $5M+ Savings",
-      slug: "quantum-neural-networks-2025",
-      category: "Quantum Computing",
-      emoji: "⚛️",
-      highlight: "BREAKTHROUGH",
-      impact: "1000x Speed Boost"
-    },
-    {
       title: "AI 2025: Autonomous Operations Revolution",
       description: "98% Automation, $10M+ Annual Savings",
       slug: "ai-autonomous-operations-2025",
@@ -127,39 +112,6 @@ const LatestContentBanner2025: React.FC = () => {
       emoji: "🤖",
       highlight: "NEW TODAY",
       impact: "70% Cost Savings"
-    },
-    {
-      id: 2,
-      title: 'AI Enterprise Transformation: $50M Annual Savings Blueprint',
-      slug: 'ai-enterprise-transformation-2025',
-      excerpt: 'Discover how Fortune 500 companies achieve $50M annual savings, 95% process automation, and 300% ROI through comprehensive AI transformation strategies and proven implementation frameworks.',
-      category: 'Enterprise AI Transformation',
-      date: '2025-01-28',
-      readTime: '50 min',
-      trending: true,
-      icon: '💰'
-    },
-    {
-      id: 3,
-      title: 'AI Innovation Labs: Product Development Revolution 2025',
-      slug: 'ai-innovation-labs-product-development-2025',
-      excerpt: 'Revolutionize product development with AI Innovation Labs achieving 10x faster time-to-market, 85% cost reduction, and 300% innovation acceleration through cutting-edge AI-powered development.',
-      category: 'AI Innovation Labs',
-      date: '2025-01-25',
-      readTime: '40 min',
-      trending: true,
-      icon: '🚀'
-    },
-    {
-      id: 4,
-      title: 'AI/ML Pipeline Automation: Complete 2025 Enterprise Guide',
-      slug: 'ai-ml-pipeline-automation-2025',
-      excerpt: 'Master AI/ML pipeline automation with proven strategies achieving 90% faster deployments and 75% cost reduction. Complete guide covering orchestration, monitoring, and MLOps best practices.',
-      category: 'MLOps & Automation',
-      date: '2025-01-20',
-      readTime: '45 min',
-      trending: true,
-      icon: '⚙️'
     }
   ];
 
@@ -192,6 +144,9 @@ const LatestContentBanner2025: React.FC = () => {
           </p>
         </div>
 
+        <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          🚀 JUST PUBLISHED: Revolutionary AI Breakthrough Articles!
+        </h2>
         <p className="text-xl text-blue-100 mb-8 max-w-3xl">
           Experience <span className="font-bold text-yellow-300">3 REVOLUTIONARY breakthrough technologies</span> including our latest: "Meta-Cognitive AI: The Thinking AI Revolution" (95% decision accuracy, $2M+ savings), "Quantum-Neural Networks: 1000x Processing Speed" ($5M+ infrastructure savings), and "Autonomous Enterprise Operations: 98% Automation" ($10M+ annual savings) - plus comprehensive case studies and implementation guides!
         </p>
@@ -250,8 +205,9 @@ const LatestContentBanner2025: React.FC = () => {
                 <div className="flex items-center justify-between text-sm text-gray-500 mb-6 pb-6 border-b border-white/10">
                   <span className="flex items-center gap-2">
                     <Zap className="w-4 h-4 text-cyan-400" />
-                    {article.readTime}
+                    {article.readTime || '5 min'}
                   </span>
+                  <span>{article.date ? new Date(article.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) : ''}</span>
                 </div>
 
                 {/* CTA Button */}

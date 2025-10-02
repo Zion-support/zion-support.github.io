@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import {
+Link
+} from 'react-router-dom';
 
 const Header: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -18,6 +20,9 @@ const Header: React.FC = () => {
           <nav className="hidden md:flex items-center space-x-8">
             <Link to="/services" className="text-gray-600 hover:text-blue-600 transition-colors">
               Services
+            </Link>
+            <Link to="/services/catalog" className="text-gray-600 hover:text-blue-600 transition-colors">
+              Services Catalog
             </Link>
             <Link to="/solutions" className="text-gray-600 hover:text-blue-600 transition-colors">
               Solutions
@@ -49,15 +54,24 @@ const Header: React.FC = () => {
         </div>
 
         {/* Mobile Navigation */}
-        {isMobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-gray-200">
-            <nav className="flex flex-col space-y-4">
+        {
+isMobileMenuOpen && (
+<div className="md:hidden py-4 border-t border-gray-200">,
+<nav className="flex flex-col space-y-4">
+<Link
+to="/services"
+className="text-gray-600 hover:text-blue-600 transition-colors",
+onClick={() => setIsMobileMenuOpen(false)
+}
+              >
+                Services
+              </Link>
               <Link 
-                to="/services" 
+                to="/services/catalog" 
                 className="text-gray-600 hover:text-blue-600 transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Services
+                Services Catalog
               </Link>
               <Link 
                 to="/solutions" 

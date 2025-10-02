@@ -1,31 +1,31 @@
 // New 2026 AI Breakthrough Content - Latest Revolutionary Technologies
 
 export interface BlogPost {
-  id: string;
-  title: string;
-  description: string;
-  content: string;
-  publishDate: string;
-  author: string;
-  category: string;
-  tags: string[];
-  featured: boolean;
-  readTime: string;
-  imageUrl?: string;
+id: string;
+title: string;
+description: string;
+content: string;
+publishDate: string;
+author: string;
+category: string;
+tags: string[];
+featured: boolean;
+readTime: string;
+imageUrl?: string;
 }
 
 export interface CaseStudy {
-  id: string;
-  title: string;
-  description: string;
-  content: string;
-  company: string;
-  industry: string;
-  results: {
-    roi: string;
-    metrics: string[];
-    duration: string;
-  };
+id: string;
+title: string;
+description: string;
+content: string;
+company: string;
+industry: string;
+results: {,
+roi: string;
+metrics: string[];
+duration: string;
+};
   publishDate: string;
   featured: boolean;
 }

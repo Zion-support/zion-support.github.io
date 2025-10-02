@@ -1,7 +1,9 @@
-import { useEffect, useRef, useState } from 'react';
+import {
+
+} from 'react';
 
 // Simple web vitals reporter
-const reportWebVitals = (metric: any) => {
+const reportWebVitals = (metric: { name: string; value: number; delta: number }) => {
   if (process.env.NODE_ENV === 'development') {
     console.log('Web Vital:', metric);
   }

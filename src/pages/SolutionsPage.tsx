@@ -1,7 +1,7 @@
 import React from 'react';
 import SEO from '../components/SEO';
 
-const SolutionsPage: React.FC = () => {
+const SolutionsPage: React.FC<{ category?: string }> = () => {
   return (
     <>
       <SEO 

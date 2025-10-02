@@ -16,44 +16,44 @@
  */
 
 export interface SEOIssue {
-  type: 'error' | 'warning' | 'info';
-  category: string;
-  message: string;
-  element?: string;
-  recommendation: string;
-  impact: 'high' | 'medium' | 'low';
+type: 'error' | 'warning' | 'info';
+category: string;
+message: string;
+element?: string;
+recommendation: string;
+impact: 'high' | 'medium' | 'low';
 }
 
 export interface SEOMetrics {
-  score: number; // 0-100
-  issues: SEOIssue[];
-  metadata: {
-    title?: string;
-    description?: string;
-    keywords?: string;
-    canonical?: string;
-    robots?: string;
-  };
+score: number; // 0-100,
+issues: SEOIssue[];
+metadata: {,
+title?: string;
+description?: string;
+keywords?: string;
+canonical?: string;
+robots?: string;
+};
   openGraph: Record<string, string>;
   twitterCard: Record<string, string>;
   headings: {
-    h1: number;
-    h2: number;
-    h3: number;
-    h4: number;
-    h5: number;
-    h6: number;
-  };
+h1: number;,
+h2: number;,
+h3: number;,
+h4: number;,
+h5: number;,
+h6: number;
+};
   images: {
-    total: number;
-    withAlt: number;
-    withoutAlt: number;
-  };
+total: number;,
+withAlt: number;,
+withoutAlt: number;
+};
   links: {
-    internal: number;
-    external: number;
-    nofollow: number;
-  };
+internal: number;,
+external: number;,
+nofollow: number;
+};
   structuredData: any[];
   mobileOptimized: boolean;
 }
@@ -310,14 +310,13 @@ class SEOAuditor {
    * Audit structured data
    */
   private auditStructuredData(): any[] {
-    const structuredData: any[] = [];
-    const scripts = document.querySelectorAll('script[type="application/ld+json"]');
-
-    scripts.forEach(script => {
-      try {
-        const data = JSON.parse(script.textContent || '');
-        structuredData.push(data);
-      } catch {
+const structuredData: any[] = [];,
+const scripts = document.querySelectorAll('script[type="application/ld+json"]');
+scripts.forEach(script => {
+try {
+const data = JSON.parse(script.textContent || '');
+structuredData.push(data);
+} catch {
         this.addIssue('error', 'structured-data', 'Invalid JSON-LD structured data', 'script[type="application/ld+json"]', 'Fix JSON syntax in structured data', 'high');
       }
     });

@@ -1,9 +1,21 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { BookOpen, FileText, Video, Users, Code, Award, MessageSquare, Download } from 'lucide-react';
+import {
+Link
+} from 'react-router-dom';
+import {
+
+} from 'lucide-react';
 
 const Resources: React.FC = () => {
-  const resourceCategories = [
+const resourceCategories = [
+{
+icon: BookOpen,
+title: 'Case Studies',
+description: 'Real-world success stories and implementation results from our clients',
+link: '/case-studies',
+color: 'blue',
+count: '25+'
+}
     {
       icon: BookOpen,
       title: 'Case Studies',
@@ -11,105 +23,97 @@ const Resources: React.FC = () => {
       link: '/case-studies',
       color: 'blue',
       count: '25+'
-    },
-    {
-      icon: FileText,
-      title: 'White Papers',
-      description: 'In-depth research and analysis on AI trends and best practices',
-      link: '/white-papers',
-      color: 'green',
-      count: '15+'
-    },
-    {
-      icon: Video,
-      title: 'Webinars',
-      description: 'Expert-led sessions covering the latest in AI and automation',
-      link: '/webinars',
-      color: 'purple',
-      count: '40+'
-    },
-    {
-      icon: Code,
-      title: 'Documentation',
-      description: 'Comprehensive guides and technical documentation for developers',
-      link: '/docs',
-      color: 'orange',
-      count: '100+'
-    },
-    {
-      icon: Users,
-      title: 'Training & Certification',
-      description: 'Professional training programs and certification courses',
-      link: '/training',
-      color: 'teal',
-      count: '10+'
-    },
-    {
-      icon: MessageSquare,
-      title: 'Community Forum',
-      description: 'Connect with peers and get support from our expert community',
-      link: '/community',
-      color: 'red',
-      count: '5000+'
     }
+    {
+icon: Video,
+title: 'Webinars',
+description: 'Expert-led sessions covering the latest in AI and automation',
+link: '/webinars',
+color: 'purple',
+count: '40+'
+}
+    {
+icon: Code,
+title: 'Documentation',
+description: 'Comprehensive guides and technical documentation for developers',
+link: '/docs',
+color: 'orange',
+count: '100+'
+}
+    {
+icon: Users,
+title: 'Training & Certification',
+description: 'Professional training programs and certification courses',
+link: '/training',
+color: 'teal',
+count: '10+'
+}
+    {
+icon: MessageSquare,
+title: 'Community Forum',
+description: 'Connect with peers and get support from our expert community',
+link: '/community',
+color: 'red',
+count: '5000+'
+}
   ];
 
   const featuredResources = [
     {
-      title: 'AI Implementation Roadmap 2025',
-      type: 'White Paper',
-      description: 'Comprehensive guide to implementing AI solutions in your organization',
-      downloadLink: '/downloads/ai-implementation-roadmap-2025.pdf',
-      icon: Download
-    },
+title: 'AI Implementation Roadmap 2025',
+type: 'White Paper',
+description: 'Comprehensive guide to implementing AI solutions in your organization',
+downloadLink: '/downloads/ai-implementation-roadmap-2025.pdf',
+icon: Download
+}
     {
-      title: 'Enterprise AI Transformation Case Study',
-      type: 'Case Study',
-      description: 'How a Fortune 500 company achieved 300% ROI with our AI solutions',
-      link: '/case-studies/enterprise-ai-transformation',
-      icon: FileText
-    },
+title: 'Enterprise AI Transformation Case Study',
+type: 'Case Study',
+description: 'How a Fortune 500 company achieved 300% ROI with our AI solutions',
+link: '/case-studies/enterprise-ai-transformation',
+icon: FileText
+}
     {
-      title: 'Building Scalable AI Systems',
-      type: 'Webinar',
-      description: 'Expert insights on architecting AI systems that scale with your business',
-      link: '/webinars/building-scalable-ai-systems',
-      icon: Video
-    },
+title: 'Building Scalable AI Systems',
+type: 'Webinar',
+description: 'Expert insights on architecting AI systems that scale with your business',
+link: '/webinars/building-scalable-ai-systems',
+icon: Video
+}
     {
-      title: 'API Documentation v2.1',
-      type: 'Documentation',
-      description: 'Complete API reference for integrating with our AI services',
-      link: '/docs/api',
-      icon: Code
-    }
+title: 'API Documentation v2.1',
+type: 'Documentation',
+description: 'Complete API reference for integrating with our AI services',
+link: '/docs/api',
+icon: Code
+}
   ];
 
   const latestBlogPosts = [
     {
-      title: 'The Future of AI in Manufacturing',
-      excerpt: 'Exploring how AI is revolutionizing manufacturing processes and predictive maintenance.',
-      date: '2025-01-15',
-      link: '/blog/ai-manufacturing-future'
-    },
+title: 'The Future of AI in Manufacturing',
+excerpt: 'Exploring how AI is revolutionizing manufacturing processes and predictive maintenance.',
+date: '2025-01-15',
+link: '/blog/ai-manufacturing-future'
+}
     {
-      title: 'Cybersecurity Best Practices for AI Systems',
-      excerpt: 'Essential security measures to protect your AI infrastructure and data.',
-      date: '2025-01-12',
-      link: '/blog/ai-cybersecurity-best-practices'
-    },
+title: 'Cybersecurity Best Practices for AI Systems',
+excerpt: 'Essential security measures to protect your AI infrastructure and data.',
+date: '2025-01-12',
+link: '/blog/ai-cybersecurity-best-practices'
+}
     {
-      title: 'ROI Calculation for AI Implementations',
-      excerpt: 'A comprehensive guide to measuring and maximizing ROI from AI investments.',
-      date: '2025-01-10',
-      link: '/blog/ai-roi-calculation-guide'
-    },
+title: 'ROI Calculation for AI Implementations',
+excerpt: 'A comprehensive guide to measuring and maximizing ROI from AI investments.',
+date: '2025-01-10',
+link: '/blog/ai-roi-calculation-guide'
+}
     {
-      title: 'Building Ethical AI Systems',
-      excerpt: 'Principles and practices for developing AI systems that are fair and transparent.',
-      date: '2025-01-08',
-      link: '/blog/ethical-ai-systems'
-    }
+title: 'Building Ethical AI Systems',
+excerpt: 'Principles and practices for developing AI systems that are fair and transparent.',
+date: '2025-01-08',
+link: '/blog/ethical-ai-systems'
+}
   ];
 
   return (
@@ -164,8 +168,8 @@ const Resources: React.FC = () => {
                   to={category.link}
                   className="bg-white rounded-lg shadow-lg border border-gray-200 p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
                 >
-                  <div className={`w-16 h-16 rounded-lg bg-${category.color}-100 flex items-center justify-center mb-6`}>
-                    <IconComponent className={`w-8 h-8 text-${category.color}-600`} />
+              <div className={`w-16 h-16 rounded-lg bg-${category.color}-100 flex items-center justify-center mb-6`}>
+                    <span className={`w-8 h-8 text-${category.color}-600`}>📘</span>
                   </div>
                   <div className="flex justify-between items-start mb-4">
                     <h3 className="text-2xl font-bold text-gray-900">{category.title}</h3>
@@ -227,7 +231,7 @@ const Resources: React.FC = () => {
                       className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold transition-colors"
                     >
                       Read More
-                      <IconComponent className="w-4 h-4 ml-2" />
+                    <span className="w-4 h-4 ml-2">›</span>
                     </Link>
                   )}
                 </div>

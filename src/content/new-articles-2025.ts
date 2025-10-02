@@ -1,13 +1,13 @@
 export interface NewArticle {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  publishedDate: string;
-  featured: boolean;
-  link: string;
-  readTime: string;
-  tags: string[];
+id: string;
+title: string;
+description: string;
+category: string;
+publishedDate: string;
+featured: boolean;
+link: string;
+readTime: string;
+tags: string[];
 }
 
 export const newArticles2025: NewArticle[] = [

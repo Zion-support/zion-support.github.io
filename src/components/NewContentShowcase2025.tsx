@@ -1,6 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Sparkles } from 'lucide-react';
+import {
+Link
+} from 'react-router-dom';
+import {
+Sparkles
+} from 'lucide-react';
 
 const NewContentShowcase2025: React.FC = () => {
   const highlights = [

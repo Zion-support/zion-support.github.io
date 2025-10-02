@@ -7,12 +7,12 @@
  * Web Vitals metrics tracking
  */
 export interface WebVitalsMetrics {
-  FCP?: number; // First Contentful Paint
-  LCP?: number; // Largest Contentful Paint
-  FID?: number; // First Input Delay
-  CLS?: number; // Cumulative Layout Shift
-  TTFB?: number; // Time to First Byte
-  INP?: number; // Interaction to Next Paint
+FCP?: number; // First Contentful Paint,
+LCP?: number; // Largest Contentful Paint,
+FID?: number; // First Input Delay,
+CLS?: number; // Cumulative Layout Shift,
+TTFB?: number; // Time to First Byte,
+INP?: number; // Interaction to Next Paint
 }
 
 /**
@@ -80,13 +80,12 @@ export function debounce<T extends (...args: any[]) => any>(
   func: T,
   wait: number
 ): (...args: Parameters<T>) => void {
-  let timeout: NodeJS.Timeout | null = null;
-
-  return function executedFunction(...args: Parameters<T>) {
-    const later = () => {
-      timeout = null;
-      func(...args);
-    };
+let timeout: NodeJS.Timeout | null = null;,
+return function executedFunction(...args: Parameters<T>) {,
+const later = () => {
+timeout = null;
+func(...args);
+};
 
     if (timeout) clearTimeout(timeout);
     timeout = setTimeout(later, wait);
@@ -278,15 +277,15 @@ export const clearOldCaches = async (currentVersion: string): Promise<void> => {
  * Performance budget checker
  */
 export interface PerformanceBudget {
-  maxBundleSize: number; // in KB
-  maxImageSize: number; // in KB
-  maxFirstLoad: number; // in ms
-  maxInteractive: number; // in ms
+maxBundleSize: number; // in KB,
+maxImageSize: number; // in KB,
+maxFirstLoad: number; // in ms,
+maxInteractive: number; // in ms
 }
 
 export const checkPerformanceBudget = (budget: PerformanceBudget): {
-  passed: boolean;
-  violations: string[];
+passed: boolean;,
+violations: string[];
 } => {
   const violations: string[] = [];
 

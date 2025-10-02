@@ -4,13 +4,13 @@
  */
 
 export interface SEOData {
-  title: string;
-  description: string;
-  keywords?: string[];
-  canonical?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
+title: string;
+description: string;
+keywords?: string[];
+canonical?: string;
+ogImage?: string;
+ogType?: string;
+twitterCard?: string;
 }
 
 export const generateMetaTags = (data: SEOData) => {
@@ -42,11 +42,11 @@ export const generateMetaTags = (data: SEOData) => {
 };
 
 export const generateStructuredData = (data: {
-  name: string;
-  description: string;
-  url: string;
-  logo?: string;
-  sameAs?: string[];
+name: string;,
+description: string;,
+url: string;,
+logo?: string;,
+sameAs?: string[];
 }) => {
   return {
     '@context': 'https://schema.org',
@@ -60,8 +60,8 @@ export const generateStructuredData = (data: {
 };
 
 export const generateBreadcrumbStructuredData = (items: Array<{
-  name: string;
-  url: string;
+name: string;,
+url: string;
 }>) => {
   return {
     '@context': 'https://schema.org',

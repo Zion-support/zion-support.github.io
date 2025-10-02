@@ -1,7 +1,13 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Brain, Zap, Shield, Cloud, Database, Users, BarChart3, Cog, Target, Rocket } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
+import {
+Link
+} from 'react-router-dom';
+import {
+
+} from 'lucide-react';
+import {
+
+} from 'react-helmet-async';
 
 const AISolutions: React.FC = () => {
   const aiSolutions = [
@@ -72,26 +78,26 @@ const AISolutions: React.FC = () => {
       title: 'Healthcare AI',
       description: 'AI solutions for medical diagnosis, drug discovery, and patient care optimization',
       icon: '🏥',
-      benefits: ['Improved Diagnosis Accuracy', 'Faster Drug Discovery', 'Personalized Treatment']
+      benefits: ['Improved Diagnosis Accuracy', 'Faster Drug Discovery', 'Personalized Treatment'],
     },
     {
       title: 'Financial AI',
       description: 'AI-powered fraud detection, risk assessment, and algorithmic trading solutions',
       icon: '💰',
-      benefits: ['Fraud Prevention', 'Risk Management', 'Automated Trading']
+      benefits: ['Fraud Prevention', 'Risk Management', 'Automated Trading'],
     },
     {
       title: 'Manufacturing AI',
       description: 'Smart manufacturing with predictive maintenance and quality control',
       icon: '🏭',
-      benefits: ['Predictive Maintenance', 'Quality Control', 'Supply Chain Optimization']
+      benefits: ['Predictive Maintenance', 'Quality Control', 'Supply Chain Optimization'],
     },
     {
       title: 'Retail AI',
       description: 'Personalized shopping experiences and intelligent inventory management',
       icon: '🛍️',
-      benefits: ['Personalized Recommendations', 'Inventory Optimization', 'Customer Insights']
-    }
+      benefits: ['Personalized Recommendations', 'Inventory Optimization', 'Customer Insights'],
+    },
   ];
 
   const implementationProcess = [
@@ -99,32 +105,32 @@ const AISolutions: React.FC = () => {
       step: '01',
       title: 'Discovery & Assessment',
       description: 'We analyze your current systems, data, and business requirements to identify AI opportunities',
-      icon: Target
+      icon: Target,
     },
     {
       step: '02',
       title: 'Strategy & Planning',
       description: 'Develop a comprehensive AI strategy with clear objectives, timelines, and success metrics',
-      icon: BarChart3
+      icon: BarChart3,
     },
     {
-      step: '03',
-      title: 'Development & Training',
-      description: 'Build and train custom AI models tailored to your specific business needs and data',
-      icon: Cog
-    },
+step: '03',
+title: 'Development & Training',
+description: 'Build and train custom AI models tailored to your specific business needs and data',
+icon: Cog
+}
     {
-      step: '04',
-      title: 'Deployment & Integration',
-      description: 'Seamlessly integrate AI solutions into your existing systems and workflows',
-      icon: Rocket
-    },
+step: '04',
+title: 'Deployment & Integration',
+description: 'Seamlessly integrate AI solutions into your existing systems and workflows',
+icon: Rocket
+}
     {
-      step: '05',
-      title: 'Monitoring & Optimization',
-      description: 'Continuously monitor performance and optimize AI models for better results',
-      icon: BarChart3
-    }
+step: '05',
+title: 'Monitoring & Optimization',
+description: 'Continuously monitor performance and optimize AI models for better results',
+icon: BarChart3
+}
   ];
 
   return (
@@ -248,7 +254,7 @@ const AISolutions: React.FC = () => {
           </div>
           
           <div className="space-y-8">
-            {implementationProcess.map((step, index) => {
+            {implementationProcess.map((step) => {
               const IconComponent = step.icon;
               return (
                 <div key={step.step} className="flex flex-col md:flex-row items-center gap-8">

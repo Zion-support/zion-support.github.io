@@ -1,6 +1,10 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { FileText, CheckCircle, Star, Users, Zap, Shield } from 'lucide-react';
+import {
+Helmet
+} from 'react-helmet-async';
+import {
+
+} from 'lucide-react';
 
 const AIContentGenerator: React.FC = () => {
   return (

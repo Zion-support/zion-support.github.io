@@ -4,39 +4,39 @@
  */
 
 export interface AccessibilityConfig {
-  enableKeyboardNavigation: boolean;
-  enableScreenReaderSupport: boolean;
-  enableHighContrast: boolean;
-  enableFocusManagement: boolean;
-  enableARIALabels: boolean;
-  enableColorContrast: boolean;
-  enableTextScaling: boolean;
-  enableMotionReduction: boolean;
-  enableVoiceControl: boolean;
-  enableTouchAccessibility: boolean;
+enableKeyboardNavigation: boolean;
+enableScreenReaderSupport: boolean;
+enableHighContrast: boolean;
+enableFocusManagement: boolean;
+enableARIALabels: boolean;
+enableColorContrast: boolean;
+enableTextScaling: boolean;
+enableMotionReduction: boolean;
+enableVoiceControl: boolean;
+enableTouchAccessibility: boolean;
 }
 
 export interface AccessibilityMetrics {
-  colorContrastRatio: number;
-  focusableElements: number;
-  ariaLabels: number;
-  headingStructure: number;
-  altTexts: number;
-  keyboardTraps: number;
-  screenReaderCompatibility: number;
-  overallScore: number;
-  totalElements: number;
-  accessibleElements: number;
-  issuesFound: number;
-  score: number;
+colorContrastRatio: number;
+focusableElements: number;
+ariaLabels: number;
+headingStructure: number;
+altTexts: number;
+keyboardTraps: number;
+screenReaderCompatibility: number;
+overallScore: number;
+totalElements: number;
+accessibleElements: number;
+issuesFound: number;
+score: number;
 }
 
 class EnhancedAccessibility {
-  private config: AccessibilityConfig;
-  private metrics: AccessibilityMetrics;
-  private isInitialized: boolean = false;
-
-  constructor(config: Partial<AccessibilityConfig> = {}) {
+private config: AccessibilityConfig;,
+private metrics: AccessibilityMetrics;,
+private isInitialized: boolean = false;,
+constructor(config: Partial<AccessibilityConfig> = {
+}) {
     this.config = {
       enableKeyboardNavigation: true,
       enableScreenReaderSupport: true,
@@ -184,12 +184,11 @@ class EnhancedAccessibility {
   }
 
   private setupHighContrast(): void {
-    if (!this.config.enableHighContrast) return;
-
-    // Check for high contrast mode preference
-    if (window.matchMedia('(prefers-contrast: high)').matches) {
-      document.body.classList.add('high-contrast');
-    }
+if (!this.config.enableHighContrast) return;
+// Check for high contrast mode preference
+if (window.matchMedia('(prefers-contrast: high)').matches) {,
+document.body.classList.add('high-contrast');
+}
 
     // Listen for changes in contrast preference
     window.matchMedia('(prefers-contrast: high)').addEventListener('change', (e) => {
@@ -254,12 +253,11 @@ class EnhancedAccessibility {
   }
 
   private setupMotionReduction(): void {
-    if (!this.config.enableMotionReduction) return;
-
-    // Check for reduced motion preference
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      document.body.classList.add('reduced-motion');
-    }
+if (!this.config.enableMotionReduction) return;
+// Check for reduced motion preference
+if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {,
+document.body.classList.add('reduced-motion');
+}
 
     // Listen for changes in motion preference
     window.matchMedia('(prefers-reduced-motion: reduce)').addEventListener('change', (e) => {
@@ -396,10 +394,11 @@ class EnhancedAccessibility {
   }
 
   public getReport(): string {
-    const metrics = this.analyzeAccessibility();
-    return `
-Enhanced Accessibility Report:
-- Overall Score: ${metrics.overallScore}/100
+const metrics = this.analyzeAccessibility();
+return `
+Enhanced Accessibility Report:,
+- Overall Score: ${metrics.overallScore
+}/100
 - Focusable Elements: ${metrics.focusableElements}
 - ARIA Labels: ${metrics.ariaLabels}
 - Alt Texts: ${metrics.altTexts}

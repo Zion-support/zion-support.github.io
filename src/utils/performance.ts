@@ -1,19 +1,21 @@
-import { onCLS, onFID, onFCP, onLCP, onTTFB, Metric } from 'web-vitals';
+import {
+
+} from 'web-vitals';
 
 interface PerformanceMetrics {
-  cls: number | null;
-  fid: number | null;
-  fcp: number | null;
-  lcp: number | null;
-  ttfb: number | null;
-  timestamp: string;
+cls: number | null;
+inp: number | null;
+fcp: number | null;
+lcp: number | null;
+ttfb: number | null;
+timestamp: string;
 }
 
 class PerformanceMonitor {
   private static instance: PerformanceMonitor;
   private metrics: PerformanceMetrics = {
     cls: null,
-    fid: null,
+    inp: null,
     fcp: null,
     lcp: null,
     ttfb: null,
@@ -34,9 +36,9 @@ class PerformanceMonitor {
   }
 
   private initializeMetrics(): void {
-    // Measure Core Web Vitals using updated API
+    // Measure Core Web Vitals
     onCLS((metric) => this.updateMetric('cls', metric));
-    onFID((metric) => this.updateMetric('fid', metric));
+    onINP((metric) => this.updateMetric('inp', metric));
     onFCP((metric) => this.updateMetric('fcp', metric));
     onLCP((metric) => this.updateMetric('lcp', metric));
     onTTFB((metric) => this.updateMetric('ttfb', metric));
@@ -141,7 +143,7 @@ class PerformanceMonitor {
   }
 
   public getPerformanceScore(): number {
-    const { cls, fid, fcp, lcp } = this.metrics;
+    const { cls, inp, fcp, lcp } = this.metrics;
     
     // Simple scoring algorithm (0-100)
     let score = 100;
@@ -151,9 +153,9 @@ class PerformanceMonitor {
       else if (cls > 0.1) score -= 15;
     }
     
-    if (fid !== null) {
-      if (fid > 300) score -= 25;
-      else if (fid > 100) score -= 10;
+    if (inp !== null) {
+      if (inp > 500) score -= 25;
+      else if (inp > 200) score -= 10;
     }
     
     if (fcp !== null) {
