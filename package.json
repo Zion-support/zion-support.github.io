@@ -45,6 +45,7 @@
     "analyze:bundle": "vite-bundle-analyzer dist/stats.html",
     "test:performance": "lighthouse http://localhost:3000 --output=html --output-path=./performance-report.html",
     "audit:security": "npm audit --audit-level=moderate",
+    "security:check": "npm audit --audit-level=moderate && npm run audit:security",
     "preload:critical": "echo \"Preloading critical resources...\"",
     "optimize:advanced": "node scripts/advanced-performance-optimizer.js",
     "audit:accessibility": "echo \"Running accessibility audit...\"",
