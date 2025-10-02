@@ -2,6 +2,12 @@ import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import LoadingSpinner from './components/LoadingSpinner';
+import PerformanceOptimizer from './components/PerformanceOptimizer';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import SEOOptimizer from './components/SEOOptimizer';
+import AnalyticsTracker from './components/AnalyticsTracker';
+import ErrorBoundary from './components/ErrorBoundary';
 import './styles/globals.css';
 
 // Lazy load pages for better performance
@@ -21,13 +27,6 @@ const SitemapPage = React.lazy(() => import('./pages/Sitemap'));
 const CookiesPage = React.lazy(() => import('./pages/Cookies'));
 const AdditionalServicesPage = React.lazy(() => import('./pages/AdditionalServicesPage'));
 
-// Loading component
-const LoadingSpinner = () => (
-  <div className="flex items-center justify-center min-h-screen">
-    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
-  </div>
-);
-
 // 404 Page
 const NotFoundPage = () => (
   <div className="min-h-screen flex items-center justify-center bg-gray-50">
@@ -43,43 +42,53 @@ const NotFoundPage = () => (
 
 const App: React.FC = () => {
   return (
-    <Router>
-      <div className="min-h-screen bg-gray-50 flex flex-col">
-        <Header />
-        
-        <main className="flex-1">
-          <Suspense fallback={<LoadingSpinner />}>
-            <Routes>
-              {/* Main Routes */}
-              <Route path="/" element={<HomePage />} />
-              <Route path="/services" element={<ServicesPage />} />
-              <Route path="/solutions" element={<SolutionsPage />} />
-              <Route path="/about" element={<AboutPage />} />
-              <Route path="/contact" element={<ContactPage />} />
-              <Route path="/blog" element={<BlogPage />} />
-              <Route path="/case-studies" element={<CaseStudiesPage />} />
-              <Route path="/resources" element={<ResourcesPage />} />
-              <Route path="/team" element={<TeamPage />} />
-              <Route path="/support" element={<SupportPage />} />
+    <ErrorBoundary>
+      <AnalyticsTracker>
+        <PerformanceOptimizer>
+          <AccessibilityEnhancer>
+            <SEOOptimizer>
+          <Router>
+            <div className="min-h-screen bg-gray-50 flex flex-col">
+              <Header />
               
-              {/* Legal Pages */}
-              <Route path="/privacy" element={<PrivacyPage />} />
-              <Route path="/terms" element={<TermsPage />} />
-              <Route path="/cookies" element={<CookiesPage />} />
-              <Route path="/sitemap" element={<SitemapPage />} />
+              <main className="flex-1">
+                <Suspense fallback={<LoadingSpinner size="lg" className="min-h-screen" />}>
+                  <Routes>
+                    {/* Main Routes */}
+                    <Route path="/" element={<HomePage />} />
+                    <Route path="/services" element={<ServicesPage />} />
+                    <Route path="/solutions" element={<SolutionsPage />} />
+                    <Route path="/about" element={<AboutPage />} />
+                    <Route path="/contact" element={<ContactPage />} />
+                    <Route path="/blog" element={<BlogPage />} />
+                    <Route path="/case-studies" element={<CaseStudiesPage />} />
+                    <Route path="/resources" element={<ResourcesPage />} />
+                    <Route path="/team" element={<TeamPage />} />
+                    <Route path="/support" element={<SupportPage />} />
+                    
+                    {/* Legal Pages */}
+                    <Route path="/privacy" element={<PrivacyPage />} />
+                    <Route path="/terms" element={<TermsPage />} />
+                    <Route path="/cookies" element={<CookiesPage />} />
+                    <Route path="/sitemap" element={<SitemapPage />} />
+                    
+                    {/* Additional Services */}
+                    <Route path="/additional-services" element={<AdditionalServicesPage />} />
+                    
+                    {/* 404 Route */}
+                    <Route path="*" element={<NotFoundPage />} />
+                  </Routes>
+                </Suspense>
+              </main>
               
-              {/* Additional Services */}
-              <Route path="/additional-services" element={<AdditionalServicesPage />} />
-              
-              {/* 404 Route */}
-              <Route path="*" element={<NotFoundPage />} />
-            </Routes>
-          </Suspense>
-        </main>
-        
-        <Footer />
-      </div>
-    </Router>
+              <Footer />
+            </div>
+          </Router>
+            </SEOOptimizer>
+          </AccessibilityEnhancer>
+        </PerformanceOptimizer>
+      </AnalyticsTracker>
+    </ErrorBoundary>
   );
 };
 
