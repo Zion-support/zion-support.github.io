@@ -1,84 +1,41 @@
 import React from 'react';
-import {
-Helmet
-} from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';
 
 interface SEOHeadProps {
-title?: string;,
-description?: string;,
-keywords?: string | string[];,
-canonical?: string;,
-ogImage?: string;,
-structuredData?: object;,
-author?: string;
+  title?: string;
+  description?: string;
+  keywords?: string | string[];
+  canonical?: string;
+  image?: string;
+  url?: string;
+  type?: string;
+  author?: string;
 }
 
 const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
-  title,
-  description,
+  title = 'Zion Tech Group - Revolutionary AI and IT Solutions',
+  description = "Transform your enterprise with Zion Tech Group's revolutionary AI solutions.",
+  keywords = 'AI solutions, enterprise AI, artificial intelligence, machine learning, automation',
   canonical,
-  keywords = [],
-  author = 'Zion Tech Group',
+  url = 'https://ziontechgroup.com',
   image = 'https://ziontechgroup.com/og-image.jpg',
   type = 'website',
-  publishedTime,
-  modifiedTime,
-  section,
-  tags = []
+  author = 'Zion Tech Group'
 }) => {
+  const metaKeywords = Array.isArray(keywords) ? keywords.join(', ') : keywords;
+  const canonicalUrl = canonical || url;
+
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'Zion Tech Group',
+    description,
     url: 'https://ziontechgroup.com',
     logo: 'https://ziontechgroup.com/logo.png',
-    description: 'Leading AI and technology solutions provider for modern enterprises',
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: '123 Tech Street',
-      addressLocality: 'Innovation City',
-      addressRegion: 'IC',
-      postalCode: '12345',
-      addressCountry: 'US'
-    },
-    contactPoint: {
-      '@type': 'ContactPoint',
-      telephone: '+1-555-123-4567',
-      contactType: 'customer service',
-      email: 'info@ziontechgroup.com'
-    },
     sameAs: [
       'https://linkedin.com/company/zion-tech-group',
       'https://twitter.com/ziontechgroup',
-      'https://github.com/ziontechgroup'
-=======
-  title?: string;
-  description?: string;
-  keywords?: string;
-  image?: string;
-  url?: string;
-  type?: string;
-}
-
-const SEOHead: React.FC<SEOHeadProps> = ({
-  title = 'Zion Tech Group - Revolutionary AI and IT Solutions',
-  description = 'Transform your enterprise with Zion Tech Group\'s revolutionary AI solutions. Trusted by 240+ Fortune 500 companies with $211.7B value creation and 99.97% autonomous operations.',
-  keywords = 'AI solutions, enterprise AI, artificial intelligence, machine learning, automation, Fortune 500, business transformation, AI consulting',
-  image = '/api/placeholder/1200/630',
-  url = 'https://ziontechgroup.com',
-  type = 'website'
-}) => {
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Zion Tech Group",
-    "description": description,
-    "url": url,
-    "logo": "https://ziontechgroup.com/logo.png",
-    "sameAs": [
-      "https://linkedin.com/company/ziontechgroup",
-      "https://twitter.com/ziontechgroup",
-      "https://github.com/ziontechgroup"
+      'https://github.com/ZionClouds'
     ],
     "contactPoint": {
       "@type": "ContactPoint",
@@ -106,42 +63,37 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       "AI Consulting"
     ]
   };
+=======
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: '+1-302-464-0950',
+      contactType: 'customer service',
+      email: 'info@ziontechgroup.com'
+    }
+  } as const;
 
   return (
     <Helmet>
-      {/* Basic Meta Tags */}
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords.join(', ')} />
-      <meta name="author" content={author} />
-      <link rel="canonical" href={canonical} />
-      
-      {/* Open Graph Tags */}
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:url" content={canonical} />
-      <meta property="og:type" content={type} />
-      <meta property="og:image" content={image} />
-      <meta property="og:site_name" content="Zion Tech Group" />
-      <meta property="og:locale" content="en_US" />
-      
-      {/* Twitter Card Tags */}
 =======
-      <meta name="keywords" content={keywords} />
-      <meta name="author" content="Zion Tech Group" />
+      <meta name="keywords" content={metaKeywords} />
+      <meta name="author" content={author} />
       <meta name="robots" content="index, follow" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      
-      {/* Open Graph Meta Tags */}
+
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
-      <meta property="og:url" content={url} />
+      <meta property="og:url" content={canonicalUrl} />
       <meta property="og:type" content={type} />
       <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
       
       {/* Twitter Card Meta Tags */}
+=======
+
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
@@ -179,17 +131,15 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <link rel="canonical" href={url} />
       
       {/* Favicon */}
+=======
+
+      <link rel="canonical" href={canonicalUrl} />
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-      
-      {/* Structured Data */}
-      <script type="application/ld+json">
-        {JSON.stringify(structuredData)}
-      </script>
-      
-      {/* Preconnect to external domains */}
+
+      <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       
@@ -209,8 +159,9 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       
       {/* Performance Hints */}
       <meta httpEquiv="x-dns-prefetch-control" content="on" />
+=======
     </Helmet>
   );
 };
 
-export default SEOHead;
+export default EnhancedSEOHead;
