@@ -714,6 +714,12 @@ export default function HomePage() {
               Transform your business with cutting-edge AI, micro SaaS, and enterprise IT solutions. 
               Build faster, scale smarter, and achieve unprecedented results with our proven solutions.
             </p>
+<<<<<<< HEAD
+            <div className="flex flex-wrap justify-center gap-4 mb-8 text-sm text-gray-600">
+              <span className="flex items-center"><span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>99.9% Uptime SLA</span>
+              <span className="flex items-center"><span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>24/7 Support</span>
+              <span className="flex items-center"><span className="w-2 h-2 bg-purple-500 rounded-full mr-2"></span>Enterprise Security</span>
+=======
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               <div className="bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2 text-sm">
                 <span className="text-green-400 font-semibold">✓</span> 50+ Production-Ready Solutions
@@ -727,6 +733,7 @@ export default function HomePage() {
               <div className="bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2 text-sm">
                 <span className="text-green-400 font-semibold">✓</span> Expert Support & Training
               </div>
+>>>>>>> origin/cursor/add-new-services-and-deploy-updates-d96e
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 

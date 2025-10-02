@@ -186,6 +186,11 @@ export default function AdditionalServices() {
             'Engagement rate optimization',
             'Competitor analysis and benchmarking'
           ],
+<<<<<<< HEAD
+          link: '/contact',
+          marketSize: '$15.2B social media management market',
+          roi: '30% increase in engagement rates'
+=======
           link: '/contact'
         },
         {
@@ -337,6 +342,7 @@ export default function AdditionalServices() {
             'Integration with payment processing'
           ],
           link: '/contact'
+>>>>>>> origin/cursor/add-new-services-and-deploy-updates-d96e
         }
       ]
     },
@@ -444,6 +450,11 @@ export default function AdditionalServices() {
             'Chatbot and virtual assistant development',
             'Custom model training and optimization'
           ],
+<<<<<<< HEAD
+          link: '/contact',
+          marketSize: '$26.4B NLP market',
+          roi: '50% improvement in content processing efficiency'
+=======
           link: '/contact'
         },
         {
@@ -550,6 +561,7 @@ export default function AdditionalServices() {
             'API integration and batch processing'
           ],
           link: '/contact'
+>>>>>>> origin/cursor/add-new-services-and-deploy-updates-d96e
         }
       ]
     },
@@ -606,6 +618,62 @@ export default function AdditionalServices() {
             'Vulnerability management and patching',
             '24/7 security monitoring and support'
           ],
+<<<<<<< HEAD
+          link: '/contact',
+          marketSize: '$173B cybersecurity market',
+          roi: '90% reduction in security incidents'
+        },
+        {
+          name: 'Data Analytics & Business Intelligence',
+          blurb: 'Advanced data analytics solutions with real-time dashboards and predictive insights.',
+          price: '$2,000 - $10,000/month',
+          eta: '3-6 weeks',
+          bullets: [
+            'Data warehouse design and implementation',
+            'ETL/ELT pipeline development',
+            'Real-time analytics and reporting',
+            'Machine learning model deployment',
+            'Data visualization and dashboards',
+            'Data governance and quality management'
+          ],
+          link: '/contact',
+          marketSize: '$33.3B business intelligence market',
+          roi: '35% improvement in data-driven decisions'
+        },
+        {
+          name: 'API Development & Integration',
+          blurb: 'Custom API development and system integration services for seamless data flow.',
+          price: '$1,500 - $8,000/month',
+          eta: '2-4 weeks',
+          bullets: [
+            'RESTful and GraphQL API development',
+            'Third-party system integration',
+            'API security and authentication',
+            'Performance optimization and caching',
+            'Documentation and testing automation',
+            'API monitoring and analytics'
+          ],
+          link: '/contact',
+          marketSize: '$4.1B API management market',
+          roi: '50% faster integration, 25% cost savings'
+        },
+        {
+          name: 'IT Infrastructure Management',
+          blurb: 'Complete IT infrastructure management including servers, networks, and storage solutions.',
+          price: '$3,000 - $15,000/month',
+          eta: '2-6 weeks',
+          bullets: [
+            'Server setup and configuration management',
+            'Network design and security implementation',
+            'Storage solutions and backup systems',
+            'Performance monitoring and optimization',
+            'Disaster recovery planning and testing',
+            '24/7 infrastructure support and maintenance'
+          ],
+          link: '/contact',
+          marketSize: '$1.2T IT services market',
+          roi: '40% reduction in downtime, 25% cost savings'
+=======
           link: '/contact'
         },
         {
@@ -742,6 +810,7 @@ export default function AdditionalServices() {
             'Web3 wallet integration'
           ],
           link: '/contact'
+>>>>>>> origin/cursor/add-new-services-and-deploy-updates-d96e
         }
       ]
     }
