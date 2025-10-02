@@ -1,159 +1,260 @@
 #!/usr/bin/env node
 
-/**
- * Performance Optimization Script for Zion Tech Group Website
- * Optimizes bundle size, removes dead code, and enhances performance
- */
+import fs from 'fs';
+import path from 'path';
 
-const fs = require('fs');
-const path = require('path');
+// Create lazy loading wrapper component
+const lazyLoaderComponent = `import React, { Suspense, lazy } from 'react';
 
-// Configuration
-const config = {
-  srcDir: './src',
-  buildDir: './dist',
-  maxBundleSize: 500000, // 500KB
-  optimizationLevel: 'aggressive'
+// Loading component
+const LoadingSpinner = () => (
+  <div className="flex items-center justify-center p-8">
+    <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+    <span className="ml-2 text-gray-600">Loading...</span>
+  </div>
+);
+
+// Lazy load components
+export const LazyUnifiedBanner = lazy(() => import('../components/UnifiedBannerSystem'));
+export const LazyContentShowcase = lazy(() => import('../components/ContentShowcase'));
+export const LazyFeaturedServiceCard = lazy(() => import('../components/FeaturedServiceCard'));
+export const LazyNavigation = lazy(() => import('../components/Navigation'));
+
+// Higher-order component for lazy loading
+export const withLazyLoading = (Component, fallback = <LoadingSpinner />) => {
+  return (props) => (
+    <Suspense fallback={fallback}>
+      <Component {...props} />
+    </Suspense>
+  );
 };
 
-// Performance optimization utilities
-const performanceOptimizer = {
-  
-  // Remove unused imports and dead code
-  optimizeImports: (filePath) => {
-    try {
-      let content = fs.readFileSync(filePath, 'utf8');
-      
-      // Remove unused imports (basic pattern matching)
-      const lines = content.split('\n');
-      const optimizedLines = lines.filter(line => {
-        // Keep essential imports, remove unused ones
-        if (line.includes('import') && line.includes('from')) {
-          const importName = line.match(/import\s+{\s*([^}]+)\s*}/);
-          if (importName) {
-            const imports = importName[1].split(',').map(imp => imp.trim());
-            // This is a simplified check - in production, use AST parsing
-            return imports.some(imp => content.includes(imp.replace(/\s+as\s+\w+/, '')));
-          }
-        }
-        return true;
-      });
-      
-      if (optimizedLines.length !== lines.length) {
-        fs.writeFileSync(filePath, optimizedLines.join('\n'));
-        console.log(`✓ Optimized imports in ${filePath}`);
-      }
-    } catch (error) {
-      console.warn(`⚠ Could not optimize ${filePath}:`, error.message);
-    }
-  },
+// Lazy loading wrapper
+export const LazyWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => (
+  <Suspense fallback={<LoadingSpinner />}>
+    {children}
+  </Suspense>
+);
 
-  // Optimize CSS and remove unused styles
-  optimizeStyles: () => {
-    const cssFiles = this.findFiles('./src', '.css');
-    cssFiles.forEach(file => {
-      try {
-        let content = fs.readFileSync(file, 'utf8');
-        
-        // Remove empty rules
-        content = content.replace(/\s*{\s*}/g, '');
-        
-        // Remove unused CSS classes (basic pattern)
-        content = content.replace(/\.\w+\s*{\s*}/g, '');
-        
-        // Minify whitespace
-        content = content.replace(/\s+/g, ' ').trim();
-        
-        fs.writeFileSync(file, content);
-        console.log(`✓ Optimized styles in ${file}`);
-      } catch (error) {
-        console.warn(`⚠ Could not optimize styles in ${file}:`, error.message);
-      }
-    });
-  },
+export default LazyWrapper;
+`;
 
-  // Find files by extension
-  findFiles: (dir, ext) => {
-    let results = [];
-    const list = fs.readdirSync(dir);
-    
-    list.forEach(file => {
-      const filePath = path.join(dir, file);
-      const stat = fs.statSync(filePath);
-      
-      if (stat && stat.isDirectory()) {
-        results = results.concat(this.findFiles(filePath, ext));
-      } else if (file.endsWith(ext)) {
-        results.push(filePath);
-      }
-    });
-    
-    return results;
-  },
+// Create performance monitoring component
+const performanceMonitorComponent = `import React, { useEffect, useState } from 'react';
 
-  // Generate performance report
-  generateReport: () => {
-    const report = {
-      timestamp: new Date().toISOString(),
-      optimizations: [
-        'Removed unused imports',
-        'Optimized CSS styles',
-        'Enhanced bundle splitting',
-        'Improved caching strategies'
-      ],
-      recommendations: [
-        'Implement lazy loading for images',
-        'Add service worker for caching',
-        'Optimize font loading',
-        'Implement code splitting'
-      ],
-      metrics: {
-        bundleSize: 'Optimized',
-        loadTime: 'Improved',
-        lighthouseScore: 'Enhanced'
-      }
-    };
-
-    fs.writeFileSync('./performance-report.json', JSON.stringify(report, null, 2));
-    console.log('✓ Performance report generated: performance-report.json');
-  }
-};
-
-// Main optimization process
-const optimize = async () => {
-  console.log('🚀 Starting performance optimization...\n');
-
-  try {
-    // Optimize TypeScript/JavaScript files
-    const tsFiles = performanceOptimizer.findFiles('./src', '.tsx');
-    const jsFiles = performanceOptimizer.findFiles('./src', '.ts');
-    
-    [...tsFiles, ...jsFiles].forEach(file => {
-      performanceOptimizer.optimizeImports(file);
-    });
-
-    // Optimize styles
-    performanceOptimizer.optimizeStyles();
-
-    // Generate report
-    performanceOptimizer.generateReport();
-
-    console.log('\n✅ Performance optimization completed successfully!');
-    console.log('\n📊 Summary:');
-    console.log('   • Optimized imports and removed dead code');
-    console.log('   • Enhanced CSS optimization');
-    console.log('   • Generated performance report');
-    console.log('   • Ready for production build');
-
-  } catch (error) {
-    console.error('❌ Optimization failed:', error.message);
-    process.exit(1);
-  }
-};
-
-// Run optimization if called directly
-if (require.main === module) {
-  optimize();
+interface PerformanceMetrics {
+  loadTime: number;
+  renderTime: number;
+  memoryUsage?: number;
+  errorCount: number;
 }
 
-module.exports = { performanceOptimizer, optimize };
+export const PerformanceMonitor: React.FC = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    loadTime: 0,
+    renderTime: 0,
+    errorCount: 0
+  });
+
+  useEffect(() => {
+    // Measure page load time
+    const loadTime = performance.now();
+    
+    // Measure render time
+    const renderStart = performance.now();
+    
+    // Simulate render completion
+    requestAnimationFrame(() => {
+      const renderTime = performance.now() - renderStart;
+      
+      setMetrics(prev => ({
+        ...prev,
+        loadTime,
+        renderTime
+      }));
+    });
+
+    // Monitor memory usage if available
+    if ('memory' in performance) {
+      const memory = (performance as any).memory;
+      setMetrics(prev => ({
+        ...prev,
+        memoryUsage: memory.usedJSHeapSize / 1024 / 1024 // Convert to MB
+      }));
+    }
+
+    // Error tracking
+    const errorHandler = () => {
+      setMetrics(prev => ({
+        ...prev,
+        errorCount: prev.errorCount + 1
+      }));
+    };
+
+    window.addEventListener('error', errorHandler);
+    window.addEventListener('unhandledrejection', errorHandler);
+
+    return () => {
+      window.removeEventListener('error', errorHandler);
+      window.removeEventListener('unhandledrejection', errorHandler);
+    };
+  }, []);
+
+  // Only show in development
+  if (process.env.NODE_ENV !== 'development') {
+    return null;
+  }
+
+  return (
+    <div className="fixed bottom-4 right-4 bg-black bg-opacity-75 text-white p-3 rounded-lg text-xs font-mono">
+      <div>Load: {metrics.loadTime.toFixed(2)}ms</div>
+      <div>Render: {metrics.renderTime.toFixed(2)}ms</div>
+      {metrics.memoryUsage && <div>Memory: {metrics.memoryUsage.toFixed(2)}MB</div>}
+      <div>Errors: {metrics.errorCount}</div>
+    </div>
+  );
+};
+
+export default PerformanceMonitor;
+`;
+
+// Create SEO optimization component
+const seoOptimizerComponent = `import React from 'react';
+import Head from 'next/head';
+
+interface SEOProps {
+  title?: string;
+  description?: string;
+  keywords?: string[];
+  ogImage?: string;
+  canonicalUrl?: string;
+  structuredData?: any;
+}
+
+export const SEOOptimizer: React.FC<SEOProps> = ({
+  title = 'Zion Tech Group - AI & IT Solutions',
+  description = 'Leading provider of AI-powered solutions, micro SaaS services, and comprehensive IT consulting. Transform your business with cutting-edge technology.',
+  keywords = ['AI solutions', 'micro SaaS', 'IT consulting', 'automation', 'cloud services'],
+  ogImage = '/images/og-image.jpg',
+  canonicalUrl,
+  structuredData
+}) => {
+  const fullTitle = title.includes('Zion Tech Group') ? title : \`\${title} | Zion Tech Group\`;
+
+  return (
+    <Head>
+      <title>{fullTitle}</title>
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords.join(', ')} />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="robots" content="index, follow" />
+      
+      {/* Open Graph */}
+      <meta property="og:title" content={fullTitle} />
+      <meta property="og:description" content={description} />
+      <meta property="og:image" content={ogImage} />
+      <meta property="og:type" content="website" />
+      <meta property="og:site_name" content="Zion Tech Group" />
+      
+      {/* Twitter */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={fullTitle} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={ogImage} />
+      
+      {/* Canonical URL */}
+      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+      
+      {/* Structured Data */}
+      {structuredData && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(structuredData)
+          }}
+        />
+      )}
+    </Head>
+  );
+};
+
+export default SEOOptimizer;
+`;
+
+// Create accessibility enhancer
+const accessibilityEnhancer = `import React, { useEffect } from 'react';
+
+export const AccessibilityEnhancer: React.FC = () => {
+  useEffect(() => {
+    // Add skip links
+    const skipLink = document.createElement('a');
+    skipLink.href = '#main-content';
+    skipLink.textContent = 'Skip to main content';
+    skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
+    document.body.insertBefore(skipLink, document.body.firstChild);
+
+    // Add focus indicators
+    const style = document.createElement('style');
+    style.textContent = \`
+      *:focus {
+        outline: 2px solid #3b82f6;
+        outline-offset: 2px;
+      }
+      
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+    \`;
+    document.head.appendChild(style);
+
+    // Add ARIA labels to interactive elements
+    const buttons = document.querySelectorAll('button:not([aria-label]):not([aria-labelledby])');
+    buttons.forEach(button => {
+      if (!button.getAttribute('aria-label') && !button.textContent?.trim()) {
+        button.setAttribute('aria-label', 'Button');
+      }
+    });
+
+    // Add role attributes
+    const navs = document.querySelectorAll('nav:not([role])');
+    navs.forEach(nav => nav.setAttribute('role', 'navigation'));
+
+    const mains = document.querySelectorAll('main:not([role])');
+    mains.forEach(main => main.setAttribute('role', 'main'));
+
+    return () => {
+      // Cleanup
+      if (skipLink.parentNode) {
+        skipLink.parentNode.removeChild(skipLink);
+      }
+      if (style.parentNode) {
+        style.parentNode.removeChild(style);
+      }
+    };
+  }, []);
+
+  return null;
+};
+
+export default AccessibilityEnhancer;
+`;
+
+// Write all components to files
+fs.writeFileSync('/workspace/app/components/LazyLoader.tsx', lazyLoaderComponent);
+fs.writeFileSync('/workspace/app/components/PerformanceMonitor.tsx', performanceMonitorComponent);
+fs.writeFileSync('/workspace/app/components/SEOOptimizer.tsx', seoOptimizerComponent);
+fs.writeFileSync('/workspace/app/components/AccessibilityEnhancer.tsx', accessibilityEnhancer);
+
+console.log('✅ Created performance optimization components:');
+console.log('📁 LazyLoader.tsx - Lazy loading wrapper');
+console.log('📁 PerformanceMonitor.tsx - Performance metrics');
+console.log('📁 SEOOptimizer.tsx - SEO optimization');
+console.log('📁 AccessibilityEnhancer.tsx - Accessibility improvements');
