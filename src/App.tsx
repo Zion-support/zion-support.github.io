@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { motion } from 'framer-motion';
@@ -10,6 +10,9 @@ import BannerManager from './components/BannerManager';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import SEOHead from './components/EnhancedSEOHead';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import NotificationSystem from './components/NotificationSystem';
+import PerformanceMonitor from './components/PerformanceMonitor';
 
 // Pages
 import HomePage from './pages/HomePage';
@@ -37,9 +40,18 @@ const pageTransition = {
 };
 
 const App: React.FC = () => {
+  const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
+  const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
+  const [notifications, setNotifications] = useState([]);
+
+  const handleRemoveNotification = (id: string) => {
+    setNotifications(prev => prev.filter(notification => notification.id !== id));
+  };
+
   return (
     <HelmetProvider>
-      <Router>
+      <AccessibilityEnhancer>
+        <Router>
         <div className="min-h-screen bg-gray-50">
           <SEOHead />
           <PerformanceOptimizer />
@@ -157,8 +169,9 @@ const App: React.FC = () => {
         )}
 
         <NotificationSystem notifications={notifications} onRemove={handleRemoveNotification} />
-      </EnhancedErrorBoundary>
-    </AccessibilityEnhancer>
+        </Router>
+      </AccessibilityEnhancer>
+    </HelmetProvider>
   );
 };
 
