@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import './globals.css';
@@ -37,14 +37,14 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body className="min-h-screen bg-white text-gray-900">
+    <Router>
+      <div className="min-h-screen bg-white text-gray-900">
         <Header />
         <main className="max-w-6xl mx-auto px-4 py-6 min-h-screen">
           {children}
         </main>
         <Footer />
-      </body>
-    </html>
+      </div>
+    </Router>
   );
 }
