@@ -1,190 +1,144 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useEffect, useState } from 'react';
+import { useWebVitals } from '../hooks/usePerformance';
 
 interface PerformanceMetrics {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-  componentCount: number;
-  bundleSize: number;
+  lcp?: number;
+  fid?: number;
+  cls?: number;
+  fcp?: number;
+  ttfb?: number;
 }
 
-interface PerformanceMonitorProps {
-  enabled?: boolean;
-  logLevel?: 'debug' | 'info' | 'warn' | 'error';
-  reportInterval?: number;
-}
-
-const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
-  enabled = true,
-  logLevel = 'info',
-  reportInterval = 5000,
-}) => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    loadTime: 0,
-    renderTime: 0,
-    memoryUsage: 0,
-    componentCount: 0,
-    bundleSize: 0,
-  });
-
+export const PerformanceMonitor: React.FC = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({});
   const [isVisible, setIsVisible] = useState(false);
 
-  // Measure performance metrics
-  const measurePerformance = useCallback(() => {
-    if (!enabled) return;
+  useWebVitals();
 
-    const startTime = performance.now();
-    
-    // Measure page load time
-    const loadTime = performance.timing?.loadEventEnd 
-      ? performance.timing.loadEventEnd - performance.timing.navigationStart
-      : 0;
-
-    // Measure render time
-    const renderTime = performance.now() - startTime;
-
-    // Estimate memory usage (if available)
-    const memoryUsage = (performance as any).memory?.usedJSHeapSize 
-      ? Math.round((performance as any).memory.usedJSHeapSize / 1024 / 1024)
-      : 0;
-
-    // Count React components (rough estimate)
-    const componentCount = document.querySelectorAll('[data-reactroot]').length;
-
-    // Estimate bundle size (rough calculation)
-    const scripts = document.querySelectorAll('script[src]');
-    let bundleSize = 0;
-    scripts.forEach(script => {
-      const src = script.getAttribute('src');
-      if (src && !src.includes('vendor')) {
-        bundleSize += 50; // Rough estimate
-      }
-    });
-
-    setMetrics({
-      loadTime,
-      renderTime,
-      memoryUsage,
-      componentCount,
-      bundleSize,
-    });
-
-    // Log performance data
-    if (logLevel === 'debug' || logLevel === 'info') {
-      console.log('Performance Metrics:', {
-        loadTime: `${loadTime}ms`,
-        renderTime: `${renderTime.toFixed(2)}ms`,
-        memoryUsage: `${memoryUsage}MB`,
-        componentCount,
-        bundleSize: `${bundleSize}KB`,
-      });
-    }
-  }, [enabled, logLevel]);
-
-  // Set up performance monitoring
   useEffect(() => {
-    if (!enabled) return;
-
-    // Initial measurement
-    measurePerformance();
-
-    // Set up interval monitoring
-    const interval = setInterval(measurePerformance, reportInterval);
-
-    // Monitor performance entries
-    const observer = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      entries.forEach((entry) => {
-        if (entry.entryType === 'measure' || entry.entryType === 'navigation') {
-          if (logLevel === 'debug') {
-            console.log('Performance Entry:', entry);
-          }
-        }
-      });
-    });
-
-    try {
-      observer.observe({ entryTypes: ['measure', 'navigation'] });
-    } catch (error) {
-      console.warn('Performance Observer not supported:', error);
+    // Only show in development or when performance issues are detected
+    if (process.env.NODE_ENV === 'development') {
+      setIsVisible(true);
     }
+
+    // Listen for performance metrics
+    const handleMetric = (metric: any) => {
+      setMetrics(prev => ({
+        ...prev,
+        [metric.name.toLowerCase()]: metric.value,
+      }));
+
+      // Show monitor if poor performance is detected
+      if (metric.name === 'LCP' && metric.value > 4000) {
+        setIsVisible(true);
+      }
+      if (metric.name === 'CLS' && metric.value > 0.25) {
+        setIsVisible(true);
+      }
+    };
+
+    // Import and set up web vitals
+    import('web-vitals').then(({ onCLS, onFID, onFCP, onLCP, onTTFB }) => {
+      onCLS(handleMetric);
+      onFID(handleMetric);
+      onFCP(handleMetric);
+      onLCP(handleMetric);
+      onTTFB(handleMetric);
+    });
 
     return () => {
-      clearInterval(interval);
-      observer.disconnect();
+      setIsVisible(false);
     };
-  }, [enabled, logLevel, reportInterval, measurePerformance]);
-
-  // Toggle visibility with keyboard shortcut
-  useEffect(() => {
-    const handleKeyPress = (event: KeyboardEvent) => {
-      if (event.ctrlKey && event.shiftKey && event.key === 'P') {
-        setIsVisible(prev => !prev);
-      }
-    };
-
-    document.addEventListener('keydown', handleKeyPress);
-    return () => document.removeEventListener('keydown', handleKeyPress);
   }, []);
 
-  if (!enabled || !isVisible) {
-    return null;
-  }
+  if (!isVisible) return null;
+
+  const getMetricColor = (name: string, value: number) => {
+    switch (name) {
+      case 'lcp':
+        return value <= 2500 ? 'text-green-400' : value <= 4000 ? 'text-yellow-400' : 'text-red-400';
+      case 'fid':
+        return value <= 100 ? 'text-green-400' : value <= 300 ? 'text-yellow-400' : 'text-red-400';
+      case 'cls':
+        return value <= 0.1 ? 'text-green-400' : value <= 0.25 ? 'text-yellow-400' : 'text-red-400';
+      case 'fcp':
+        return value <= 1800 ? 'text-green-400' : value <= 3000 ? 'text-yellow-400' : 'text-red-400';
+      case 'ttfb':
+        return value <= 800 ? 'text-green-400' : value <= 1800 ? 'text-yellow-400' : 'text-red-400';
+      default:
+        return 'text-gray-400';
+    }
+  };
+
+  const getMetricLabel = (name: string) => {
+    const labels: Record<string, string> = {
+      lcp: 'Largest Contentful Paint',
+      fid: 'First Input Delay',
+      cls: 'Cumulative Layout Shift',
+      fcp: 'First Contentful Paint',
+      ttfb: 'Time to First Byte',
+    };
+    return labels[name] || name.toUpperCase();
+  };
+
+  const formatMetricValue = (name: string, value: number) => {
+    if (name === 'cls') {
+      return value.toFixed(3);
+    }
+    return Math.round(value).toLocaleString();
+  };
+
+  const formatMetricUnit = (name: string) => {
+    return name === 'cls' ? '' : 'ms';
+  };
 
   return (
-    <div className="fixed bottom-4 right-4 bg-black bg-opacity-90 text-white p-4 rounded-lg shadow-lg z-50 min-w-[300px]">
+    <div className="fixed bottom-4 right-4 bg-slate-800/90 backdrop-blur-sm border border-slate-700 rounded-lg p-4 text-white text-sm z-50 max-w-xs">
       <div className="flex items-center justify-between mb-2">
-        <h3 className="text-sm font-semibold">Performance Monitor</h3>
+        <h3 className="font-semibold text-blue-400">Performance</h3>
         <button
           onClick={() => setIsVisible(false)}
-          className="text-gray-400 hover:text-white text-lg"
+          className="text-gray-400 hover:text-white text-xs"
         >
-          ×
+          ✕
         </button>
       </div>
       
-      <div className="space-y-2 text-xs">
-        <div className="flex justify-between">
-          <span>Load Time:</span>
-          <span className={`${metrics.loadTime > 3000 ? 'text-red-400' : metrics.loadTime > 1000 ? 'text-yellow-400' : 'text-green-400'}`}>
-            {metrics.loadTime.toFixed(0)}ms
-          </span>
-        </div>
-        
-        <div className="flex justify-between">
-          <span>Render Time:</span>
-          <span className={`${metrics.renderTime > 100 ? 'text-red-400' : metrics.renderTime > 50 ? 'text-yellow-400' : 'text-green-400'}`}>
-            {metrics.renderTime.toFixed(2)}ms
-          </span>
-        </div>
-        
-        <div className="flex justify-between">
-          <span>Memory Usage:</span>
-          <span className={`${metrics.memoryUsage > 100 ? 'text-red-400' : metrics.memoryUsage > 50 ? 'text-yellow-400' : 'text-green-400'}`}>
-            {metrics.memoryUsage}MB
-          </span>
-        </div>
-        
-        <div className="flex justify-between">
-          <span>Components:</span>
-          <span className="text-blue-400">{metrics.componentCount}</span>
-        </div>
-        
-        <div className="flex justify-between">
-          <span>Bundle Size:</span>
-          <span className={`${metrics.bundleSize > 1000 ? 'text-red-400' : metrics.bundleSize > 500 ? 'text-yellow-400' : 'text-green-400'}`}>
-            ~{metrics.bundleSize}KB
-          </span>
-        </div>
+      <div className="space-y-1">
+        {Object.entries(metrics).map(([name, value]) => (
+          <div key={name} className="flex justify-between items-center">
+            <span className="text-gray-300 text-xs">
+              {getMetricLabel(name)}:
+            </span>
+            <span className={`font-mono text-xs ${getMetricColor(name, value)}`}>
+              {formatMetricValue(name, value)}{formatMetricUnit(name)}
+            </span>
+          </div>
+        ))}
       </div>
       
-      <div className="mt-3 pt-2 border-t border-gray-600">
+      {Object.keys(metrics).length === 0 && (
+        <div className="text-gray-400 text-xs">
+          Loading metrics...
+        </div>
+      )}
+      
+      <div className="mt-2 pt-2 border-t border-slate-700">
         <div className="text-xs text-gray-400">
-          Press Ctrl+Shift+P to toggle
+          <div className="flex items-center space-x-1">
+            <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+            <span>Good</span>
+          </div>
+          <div className="flex items-center space-x-1 mt-1">
+            <div className="w-2 h-2 bg-yellow-400 rounded-full"></div>
+            <span>Needs Improvement</span>
+          </div>
+          <div className="flex items-center space-x-1 mt-1">
+            <div className="w-2 h-2 bg-red-400 rounded-full"></div>
+            <span>Poor</span>
+          </div>
         </div>
       </div>
     </div>
   );
 };
-
-export default PerformanceMonitor;
