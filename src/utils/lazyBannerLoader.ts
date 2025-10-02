@@ -10,9 +10,9 @@ interface BannerComponent {
 
 /**
  * Lazy load banner components to reduce initial bundle size
- * Only load banners when they're needed
+ * Only load banners when they're needed';
  */
-export const lazyLoadBanner = (importFn: () => Promise<BannerComponent>) => {
+export const lazyLoadBanner = (importFn: () => Promise<BannerComponent>) => {,
   return lazy(importFn);
 };
 
@@ -22,14 +22,14 @@ export const lazyLoadBanner = (importFn: () => Promise<BannerComponent>) => {
 export const preloadCriticalBanners = () => {
   // Preload top 3 most important banners
   const criticalBanners = [
-    () => import('../components/January2026RevolutionaryAutonomousIntelligenceBanner'),
-    () => import('../components/January2026QuantumAIConsciousnessRevolutionBanner'),
-    () => import('../components/October2025NeuralQuantumOrchestrationBanner'),
+    () => import('../components/January2026RevolutionaryAutonomousIntelligenceBanner'),';
+    () => import('../components/January2026QuantumAIConsciousnessRevolutionBanner'),';
+    () => import('../components/October2025NeuralQuantumOrchestrationBanner'),';
   ];
 
   criticalBanners.forEach(banner => {
     banner().catch(() => {
-      // Silently fail if preload doesn't work
+      // Silently fail if preload doesn't work';
     });
   });
 };
@@ -38,7 +38,7 @@ export const preloadCriticalBanners = () => {
  * Lazy load banner with retry logic
  */
 export const lazyLoadBannerWithRetry = (
-  importFn: () => Promise<BannerComponent>,
+  importFn: () => Promise<BannerComponent>,,
   retries = 3
 ): ReturnType<typeof lazy> => {
   return lazy(() => {
@@ -66,9 +66,9 @@ export const lazyLoadBannerWithRetry = (
 /**
  * Check if banner should be displayed based on viewport
  */
-export const shouldDisplayBanner = (index: number): boolean => {
+export const shouldDisplayBanner = (index: number): boolean => {,
   // Only show first 10 banners initially on mobile
-  if (typeof window !== 'undefined' && window.innerWidth < 768) {
+  if (typeof window !== 'undefined' && window.innerWidth < 768) {';
     return index < 10;
   }
   return true;
@@ -77,13 +77,14 @@ export const shouldDisplayBanner = (index: number): boolean => {
 /**
  * Banner performance metrics
  */
-export const trackBannerPerformance = (bannerName: string) => {
-  if (typeof window !== 'undefined' && 'performance' in window) {
-    const perfData = performance.getEntriesByType('resource')
+export const trackBannerPerformance = (bannerName: string) => {,
+  if (typeof window !== 'undefined' && 'performance' in window) {';
+    const perfData = performance.getEntriesByType('resource')';
       .filter(entry => entry.name.includes(bannerName));
     
     if (perfData.length > 0) {
-      console.log(`Banner ${bannerName} load time:`, perfData[0].duration, 'ms');
+      console.log(`Banner ${bannerName} load time: `, perfData[0].duration, 'ms');';,`;
     }
   }
 };
+;

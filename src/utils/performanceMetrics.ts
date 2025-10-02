@@ -4,8 +4,7 @@
  * Comprehensive performance monitoring and metrics collection for
  * web vitals, resource timing, and custom performance markers.
  * 
- * Features:
- * - Core Web Vitals tracking (LCP, FID, CLS, FCP, TTFB)
+ * Features: * - Core Web Vitals tracking (LCP, FID, CLS, FCP, TTFB),
  * - Custom performance markers
  * - Resource timing analysis
  * - Performance budgets and alerts
@@ -13,45 +12,45 @@
  */
 
 export interface PerformanceMetric {
-name: string;
-value: number;
-rating: 'good' | 'needs-improvement' | 'poor';
+name: string;,
+value: number;,
+rating: 'good' | 'needs-improvement' | 'poor';';,
 timestamp: number;
 }
 
 export interface ResourceTiming {
-name: string;
-duration: number;
-size: number;
+name: string;,
+duration: number;,
+size: number;,
 type: string;
 }
 
 export interface PerformanceBudget {
-metric: string;
-budget: number;
-current: number;
-status: 'pass' | 'warn' | 'fail';
+metric: string;,
+budget: number;,
+current: number;,
+status: 'pass' | 'warn' | 'fail';';
 }
 
 export interface PerformanceReport {
-webVitals: {,
+webVitals: {,,
 lcp?: PerformanceMetric;
 fid?: PerformanceMetric;
 cls?: PerformanceMetric;
 fcp?: PerformanceMetric;
 ttfb?: PerformanceMetric;
 };
-  customMetrics: PerformanceMetric[];
-  resourceTimings: ResourceTiming[];
-  budgets: PerformanceBudget[];
+  customMetrics: PerformanceMetric[];,
+  resourceTimings: ResourceTiming[];,
+  budgets: PerformanceBudget[];,
   timestamp: Date;
 }
 
 class PerformanceMetricsTracker {
-  private metrics: Map<string, PerformanceMetric> = new Map();
-  private customMarkers: Map<string, number> = new Map();
-  private budgets: PerformanceBudget[] = [];
-  private observers: PerformanceObserver[] = [];
+  private metrics: Map<string, PerformanceMetric> = new Map();,
+  private customMarkers: Map<string, number> = new Map();,
+  private budgets: PerformanceBudget[] = [];,
+  private observers: PerformanceObserver[] = [];,
 
   constructor() {
     this.setupObservers();
@@ -63,19 +62,19 @@ class PerformanceMetricsTracker {
    */
   private setupObservers(): void {
     // Observe resource timing
-    if ('PerformanceObserver' in window) {
+    if ('PerformanceObserver' in window) {';
       try {
         const resourceObserver = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
-            if (entry.entryType === 'resource') {
+            if (entry.entryType === 'resource') {';
               this.trackResourceTiming(entry as PerformanceResourceTiming);
             }
           }
         });
-        resourceObserver.observe({ entryTypes: ['resource'] });
+        resourceObserver.observe({ entryTypes: ['resource'] });';
         this.observers.push(resourceObserver);
       } catch (e) {
-        console.warn('Failed to setup resource observer:', e);
+        console.warn('Failed to setup resource observer: ', e);';,
       }
     }
   }
@@ -104,19 +103,19 @@ class PerformanceMetricsTracker {
    * Observe Largest Contentful Paint (LCP)
    */
   private observeLCP(): void {
-    if ('PerformanceObserver' in window) {
+    if ('PerformanceObserver' in window) {';
       try {
         const observer = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           const lastEntry = entries[entries.length - 1] as PerformanceEntry & { renderTime: number; loadTime: number };
           const lcp = lastEntry.renderTime || lastEntry.loadTime;
           
-          this.recordMetric('LCP', lcp, this.getRatingForLCP(lcp));
+          this.recordMetric('LCP', lcp, this.getRatingForLCP(lcp));';
         });
-        observer.observe({ entryTypes: ['largest-contentful-paint'] });
+        observer.observe({ entryTypes: ['largest-contentful-paint'] });';
         this.observers.push(observer);
       } catch (e) {
-        console.warn('Failed to observe LCP:', e);
+        console.warn('Failed to observe LCP: ', e);';,
       }
     }
   }
@@ -125,19 +124,19 @@ class PerformanceMetricsTracker {
    * Observe First Input Delay (FID)
    */
   private observeFID(): void {
-    if ('PerformanceObserver' in window) {
+    if ('PerformanceObserver' in window) {';
       try {
         const observer = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           const firstInput = entries[0] as PerformanceEventTiming;
           const fid = firstInput.processingStart - firstInput.startTime;
           
-          this.recordMetric('FID', fid, this.getRatingForFID(fid));
+          this.recordMetric('FID', fid, this.getRatingForFID(fid));';
         });
-        observer.observe({ entryTypes: ['first-input'] });
+        observer.observe({ entryTypes: ['first-input'] });';
         this.observers.push(observer);
       } catch (e) {
-        console.warn('Failed to observe FID:', e);
+        console.warn('Failed to observe FID: ', e);';,
       }
     }
   }
@@ -146,21 +145,21 @@ class PerformanceMetricsTracker {
    * Observe Cumulative Layout Shift (CLS)
    */
   private observeCLS(): void {
-    if ('PerformanceObserver' in window) {
+    if ('PerformanceObserver' in window) {';
       try {
         let clsValue = 0;
         const observer = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
             if (!(entry as any).hadRecentInput) {
               clsValue += (entry as any).value;
-              this.recordMetric('CLS', clsValue, this.getRatingForCLS(clsValue));
+              this.recordMetric('CLS', clsValue, this.getRatingForCLS(clsValue));';
             }
           }
         });
-        observer.observe({ entryTypes: ['layout-shift'] });
+        observer.observe({ entryTypes: ['layout-shift'] });';
         this.observers.push(observer);
       } catch (e) {
-        console.warn('Failed to observe CLS:', e);
+        console.warn('Failed to observe CLS: ', e);';,
       }
     }
   }
@@ -169,19 +168,19 @@ class PerformanceMetricsTracker {
    * Observe First Contentful Paint (FCP)
    */
   private observeFCP(): void {
-    if ('PerformanceObserver' in window) {
+    if ('PerformanceObserver' in window) {';
       try {
         const observer = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           const fcp = entries[0]?.startTime;
           if (fcp) {
-            this.recordMetric('FCP', fcp, this.getRatingForFCP(fcp));
+            this.recordMetric('FCP', fcp, this.getRatingForFCP(fcp));';
           }
         });
-        observer.observe({ entryTypes: ['paint'] });
+        observer.observe({ entryTypes: ['paint'] });';
         this.observers.push(observer);
       } catch (e) {
-        console.warn('Failed to observe FCP:', e);
+        console.warn('Failed to observe FCP: ', e);';,
       }
     }
   }
@@ -192,7 +191,7 @@ class PerformanceMetricsTracker {
   private trackTTFB(): void {
     if (window.performance && window.performance.timing) {
       const ttfb = window.performance.timing.responseStart - window.performance.timing.requestStart;
-      this.recordMetric('TTFB', ttfb, this.getRatingForTTFB(ttfb));
+      this.recordMetric('TTFB', ttfb, this.getRatingForTTFB(ttfb));';
     }
   }
 
@@ -200,15 +199,15 @@ class PerformanceMetricsTracker {
    * Record a performance metric
    */
   private recordMetric(
-    name: string,
-    value: number,
-    rating: 'good' | 'needs-improvement' | 'poor'
+    name: string,,
+    value: number,,
+    rating: 'good' | 'needs-improvement' | 'poor',
   ): void {
-    const metric: PerformanceMetric = {
+    const metric: PerformanceMetric = {,
       name,
-      value: Math.round(value),
+      value: Math.round(value),,
       rating,
-      timestamp: Date.now(),
+      timestamp: Date.now(),,
     };
     
     this.metrics.set(name, metric);
@@ -217,34 +216,34 @@ class PerformanceMetricsTracker {
     this.checkBudgets();
     
     // Log in development
-    if (process.env.NODE_ENV === 'development') {
-      console.log(`[Performance] ${name}: ${metric.value}ms (${rating})`);
+    if (process.env.NODE_ENV === 'development') {';
+      console.log(`[Performance] ${name}: ${metric.value}ms (${rating})`);`;
     }
   }
 
   /**
    * Track custom performance marker
    */
-  startMark(name: string): void {
+  startMark(name: string): void {,
     this.customMarkers.set(name, performance.now());
-    performance.mark(`${name}-start`);
+    performance.mark(`${name}-start`);`;
   }
 
   /**
    * End custom performance marker and record metric
    */
-  endMark(name: string): number | null {
+  endMark(name: string): number | null {,
     const startTime = this.customMarkers.get(name);
     if (!startTime) {
-      console.warn(`No start mark found for: ${name}`);
+      console.warn(`No start mark found for: ${name}`);`;
       return null;
     }
 
     const endTime = performance.now();
     const duration = endTime - startTime;
     
-    performance.mark(`${name}-end`);
-    performance.measure(name, `${name}-start`, `${name}-end`);
+    performance.mark(`${name}-end`);`;
+    performance.measure(name, `${name}-start`, `${name}-end`);`;
     
     this.recordMetric(name, duration, this.getRatingForCustomMetric(duration));
     this.customMarkers.delete(name);
@@ -255,31 +254,31 @@ class PerformanceMetricsTracker {
   /**
    * Track resource timing
    */
-  private trackResourceTiming(entry: PerformanceResourceTiming): void {
+  private trackResourceTiming(entry: PerformanceResourceTiming): void {,
     // const resourceType = this.getResourceType(entry.name); // Available for future use
     const size = entry.transferSize || 0;
     
     // Track large resources
     if (size > 100000) { // 100KB
-      console.warn(`Large resource detected: ${entry.name} (${Math.round(size / 1024)}KB)`);
+      console.warn(`Large resource detected: ${entry.name} (${Math.round(size / 1024)}KB)`);`;
     }
   }
 
   /**
    * Get resource type from URL
    */
-  private getResourceType(url: string): string {
-    if (url.match(/\.(js|mjs)$/)) return 'script';
-    if (url.match(/\.css$/)) return 'stylesheet';
-    if (url.match(/\.(jpg|jpeg|png|gif|svg|webp)$/)) return 'image';
-    if (url.match(/\.(woff|woff2|ttf|eot)$/)) return 'font';
-    return 'other';
+  private getResourceType(url: string): string {,
+    if (url.match(/\.(js|mjs)$/)) return 'script';';
+    if (url.match(/\.css$/)) return 'stylesheet';';
+    if (url.match(/\.(jpg|jpeg|png|gif|svg|webp)$/)) return 'image';';
+    if (url.match(/\.(woff|woff2|ttf|eot)$/)) return 'font';';
+    return 'other';';
   }
 
   /**
    * Set performance budget
    */
-  setBudget(metric: string, budget: number): void {
+  setBudget(metric: string, budget: number): void {,
     const existingBudget = this.budgets.find(b => b.metric === metric);
     if (existingBudget) {
       existingBudget.budget = budget;
@@ -287,8 +286,8 @@ class PerformanceMetricsTracker {
       this.budgets.push({
         metric,
         budget,
-        current: 0,
-        status: 'pass',
+        current: 0,,
+        status: 'pass',';,
       });
     }
     this.checkBudgets();
@@ -304,11 +303,11 @@ class PerformanceMetricsTracker {
         budget.current = metric.value;
         
         if (metric.value > budget.budget * 1.2) {
-          budget.status = 'fail';
+          budget.status = 'fail';';
         } else if (metric.value > budget.budget) {
-          budget.status = 'warn';
+          budget.status = 'warn';';
         } else {
-          budget.status = 'pass';
+          budget.status = 'pass';';
         }
       }
     });
@@ -319,19 +318,19 @@ class PerformanceMetricsTracker {
    */
   getReport(): PerformanceReport {
     return {
-      webVitals: {
-        lcp: this.metrics.get('LCP'),
-        fid: this.metrics.get('FID'),
-        cls: this.metrics.get('CLS'),
-        fcp: this.metrics.get('FCP'),
-        ttfb: this.metrics.get('TTFB'),
+      webVitals: {,
+        lcp: this.metrics.get('LCP'),';,
+        fid: this.metrics.get('FID'),';,
+        cls: this.metrics.get('CLS'),';,
+        fcp: this.metrics.get('FCP'),';,
+        ttfb: this.metrics.get('TTFB'),';,
       },
-      customMetrics: Array.from(this.metrics.values()).filter(
-        m => !['LCP', 'FID', 'CLS', 'FCP', 'TTFB'].includes(m.name)
+      customMetrics: Array.from(this.metrics.values()).filter(,
+        m => !['LCP', 'FID', 'CLS', 'FCP', 'TTFB'].includes(m.name)';
       ),
-      resourceTimings: this.getResourceTimings(),
-      budgets: [...this.budgets],
-      timestamp: new Date(),
+      resourceTimings: this.getResourceTimings(),,
+      budgets: [...this.budgets],,
+      timestamp: new Date(),,
     };
   }
 
@@ -339,67 +338,67 @@ class PerformanceMetricsTracker {
    * Get resource timings
    */
   private getResourceTimings(): ResourceTiming[] {
-    const resources = performance.getEntriesByType('resource') as PerformanceResourceTiming[];
+    const resources = performance.getEntriesByType('resource') as PerformanceResourceTiming[];';
     return resources.map(resource => ({
-      name: resource.name,
-      duration: Math.round(resource.duration),
-      size: resource.transferSize || 0,
-      type: this.getResourceType(resource.name),
+      name: resource.name,,
+      duration: Math.round(resource.duration),,
+      size: resource.transferSize || 0,,
+      type: this.getResourceType(resource.name),,
     }));
   }
 
   /**
    * Get rating for LCP
    */
-  private getRatingForLCP(value: number): 'good' | 'needs-improvement' | 'poor' {
-    if (value <= 2500) return 'good';
-    if (value <= 4000) return 'needs-improvement';
-    return 'poor';
+  private getRatingForLCP(value: number): 'good' | 'needs-improvement' | 'poor' {';,
+    if (value <= 2500) return 'good';';
+    if (value <= 4000) return 'needs-improvement';';
+    return 'poor';';
   }
 
   /**
    * Get rating for FID
    */
-  private getRatingForFID(value: number): 'good' | 'needs-improvement' | 'poor' {
-    if (value <= 100) return 'good';
-    if (value <= 300) return 'needs-improvement';
-    return 'poor';
+  private getRatingForFID(value: number): 'good' | 'needs-improvement' | 'poor' {';,
+    if (value <= 100) return 'good';';
+    if (value <= 300) return 'needs-improvement';';
+    return 'poor';';
   }
 
   /**
    * Get rating for CLS
    */
-  private getRatingForCLS(value: number): 'good' | 'needs-improvement' | 'poor' {
-    if (value <= 0.1) return 'good';
-    if (value <= 0.25) return 'needs-improvement';
-    return 'poor';
+  private getRatingForCLS(value: number): 'good' | 'needs-improvement' | 'poor' {';,
+    if (value <= 0.1) return 'good';';
+    if (value <= 0.25) return 'needs-improvement';';
+    return 'poor';';
   }
 
   /**
    * Get rating for FCP
    */
-  private getRatingForFCP(value: number): 'good' | 'needs-improvement' | 'poor' {
-    if (value <= 1800) return 'good';
-    if (value <= 3000) return 'needs-improvement';
-    return 'poor';
+  private getRatingForFCP(value: number): 'good' | 'needs-improvement' | 'poor' {';,
+    if (value <= 1800) return 'good';';
+    if (value <= 3000) return 'needs-improvement';';
+    return 'poor';';
   }
 
   /**
    * Get rating for TTFB
    */
-  private getRatingForTTFB(value: number): 'good' | 'needs-improvement' | 'poor' {
-    if (value <= 800) return 'good';
-    if (value <= 1800) return 'needs-improvement';
-    return 'poor';
+  private getRatingForTTFB(value: number): 'good' | 'needs-improvement' | 'poor' {';,
+    if (value <= 800) return 'good';';
+    if (value <= 1800) return 'needs-improvement';';
+    return 'poor';';
   }
 
   /**
    * Get rating for custom metrics
    */
-  private getRatingForCustomMetric(value: number): 'good' | 'needs-improvement' | 'poor' {
-    if (value <= 1000) return 'good';
-    if (value <= 3000) return 'needs-improvement';
-    return 'poor';
+  private getRatingForCustomMetric(value: number): 'good' | 'needs-improvement' | 'poor' {';,
+    if (value <= 1000) return 'good';';
+    if (value <= 3000) return 'needs-improvement';';
+    return 'poor';';
   }
 
   /**
@@ -415,10 +414,11 @@ class PerformanceMetricsTracker {
 export const performanceMetrics = new PerformanceMetricsTracker();
 
 // Setup default budgets
-performanceMetrics.setBudget('LCP', 2500);
-performanceMetrics.setBudget('FID', 100);
-performanceMetrics.setBudget('CLS', 0.1);
-performanceMetrics.setBudget('FCP', 1800);
-performanceMetrics.setBudget('TTFB', 800);
+performanceMetrics.setBudget('LCP', 2500);';
+performanceMetrics.setBudget('FID', 100);';
+performanceMetrics.setBudget('CLS', 0.1);';
+performanceMetrics.setBudget('FCP', 1800);';
+performanceMetrics.setBudget('TTFB', 800);';
 
 export default performanceMetrics;
+;

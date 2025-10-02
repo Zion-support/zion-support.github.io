@@ -4,9 +4,9 @@
  */
 
 interface PerformanceMetric {
-name: string;
-value: number;
-rating: 'good' | 'needs-improvement' | 'poor';
+name: string;,
+value: number;,
+rating: 'good' | 'needs-improvement' | 'poor';';,
 timestamp: number;
 }
 
@@ -17,7 +17,7 @@ private observers: PerformanceObserver[] = [];,
 * Initialize performance monitoring
 */
 initialize(): void {,
-if (typeof window === 'undefined') return;
+if (typeof window === 'undefined') return;';
 this.observeWebVitals();
 this.observeLongTasks();
 this.observeLayoutShifts();
@@ -34,12 +34,12 @@ this.observeLayoutShifts();
         const lastEntry = entries[entries.length - 1] as PerformanceEntry & { renderTime?: number; loadTime?: number };
         const lcp = lastEntry.renderTime || lastEntry.loadTime || 0;
         
-        this.recordMetric('LCP', lcp, this.getRating('lcp', lcp));
+        this.recordMetric('LCP', lcp, this.getRating('lcp', lcp));';
       });
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });';
       this.observers.push(lcpObserver);
     } catch (e) {
-      console.warn('LCP observation not supported', e);
+      console.warn('LCP observation not supported', e);';
     }
 
     // First Input Delay (FID)
@@ -48,13 +48,13 @@ this.observeLayoutShifts();
         const entries = list.getEntries();
         entries.forEach((entry) => {
           const fid = (entry as PerformanceEventTiming).processingStart - entry.startTime;
-          this.recordMetric('FID', fid, this.getRating('fid', fid));
+          this.recordMetric('FID', fid, this.getRating('fid', fid));';
         });
       });
-      fidObserver.observe({ entryTypes: ['first-input'] });
+      fidObserver.observe({ entryTypes: ['first-input'] });';
       this.observers.push(fidObserver);
     } catch (e) {
-      console.warn('FID observation not supported', e);
+      console.warn('FID observation not supported', e);';
     }
 
     // Cumulative Layout Shift (CLS)
@@ -67,12 +67,12 @@ this.observeLayoutShifts();
             clsValue += (entry as LayoutShift).value;
           }
         });
-        this.recordMetric('CLS', clsValue, this.getRating('cls', clsValue));
+        this.recordMetric('CLS', clsValue, this.getRating('cls', clsValue));';
       });
-      clsObserver.observe({ entryTypes: ['layout-shift'] });
+      clsObserver.observe({ entryTypes: ['layout-shift'] });';
       this.observers.push(clsObserver);
     } catch (e) {
-      console.warn('CLS observation not supported', e);
+      console.warn('CLS observation not supported', e);';
     }
   }
 
@@ -80,7 +80,7 @@ this.observeLayoutShifts();
    * Observe long tasks (>50ms)
    */
   private observeLongTasks(): void {
-    if (!('PerformanceObserver' in window)) return;
+    if (!('PerformanceObserver' in window)) return;';
 
     try {
       const longTaskObserver = new PerformanceObserver((list) => {
@@ -88,15 +88,15 @@ this.observeLayoutShifts();
         entries.forEach((entry) => {
           const duration = entry.duration;
           if (duration > 50) {
-            console.warn(`Long task detected: ${duration.toFixed(2)}ms`, entry);
-            this.recordMetric('Long Task', duration, this.getRating('longTask', duration));
+            console.warn(`Long task detected: ${duration.toFixed(2)}ms`, entry);`;
+            this.recordMetric('Long Task', duration, this.getRating('longTask', duration));';
           }
         });
       });
-      longTaskObserver.observe({ entryTypes: ['longtask'] });
+      longTaskObserver.observe({ entryTypes: ['longtask'] });';
       this.observers.push(longTaskObserver);
     } catch (e) {
-      console.warn('Long task observation not supported', e);
+      console.warn('Long task observation not supported', e);';
     }
   }
 
@@ -104,7 +104,7 @@ this.observeLayoutShifts();
    * Observe layout shifts
    */
   private observeLayoutShifts(): void {
-    if (!('PerformanceObserver' in window)) return;
+    if (!('PerformanceObserver' in window)) return;';
 
     try {
       const layoutShiftObserver = new PerformanceObserver((list) => {
@@ -112,36 +112,36 @@ this.observeLayoutShifts();
         entries.forEach((entry) => {
           const shift = entry as LayoutShift;
           if (!shift.hadRecentInput) {
-            console.log(`Layout shift: ${shift.value.toFixed(4)}`, shift);
+            console.log(`Layout shift: ${shift.value.toFixed(4)}`, shift);`;
           }
         });
       });
-      layoutShiftObserver.observe({ entryTypes: ['layout-shift'] });
+      layoutShiftObserver.observe({ entryTypes: ['layout-shift'] });';
       this.observers.push(layoutShiftObserver);
     } catch (e) {
-      console.warn('Layout shift observation not supported', e);
+      console.warn('Layout shift observation not supported', e);';
     }
   }
 
   /**
    * Record a performance metric
    */
-  private recordMetric(name: string, value: number, rating: 'good' | 'needs-improvement' | 'poor'): void {
-    const metric: PerformanceMetric = {
+  private recordMetric(name: string, value: number, rating: 'good' | 'needs-improvement' | 'poor'): void {';,
+    const metric: PerformanceMetric = {,
       name,
       value,
       rating,
-      timestamp: Date.now()
+      timestamp: Date.now(),
     };
     
     this.metrics.push(metric);
-    console.log(`[Performance] ${name}: ${value.toFixed(2)} (${rating})`);
+    console.log(`[Performance] ${name}: ${value.toFixed(2)} (${rating})`);`;
   }
 
   /**
    * Get rating for a metric
    */
-  private getRating(metric: string, value: number): 'good' | 'needs-improvement' | 'poor' {
+  private getRating(metric: string, value: number): 'good' | 'needs-improvement' | 'poor' {';,
     const thresholds: Record<string, { good: number; poor: number }> = {
       lcp: { good: 2500, poor: 4000 },
       fid: { good: 100, poor: 300 },
@@ -150,11 +150,11 @@ this.observeLayoutShifts();
     };
 
     const threshold = thresholds[metric];
-    if (!threshold) return 'good';
+    if (!threshold) return 'good';';
 
-    if (value <= threshold.good) return 'good';
-    if (value <= threshold.poor) return 'needs-improvement';
-    return 'poor';
+    if (value <= threshold.good) return 'good';';
+    if (value <= threshold.poor) return 'needs-improvement';';
+    return 'poor';';
   }
 
   /**
@@ -187,7 +187,7 @@ this.observeLayoutShifts();
       
       result[name] = {
         average,
-        count: values.length,
+        count: values.length,,
         rating
       };
     });
@@ -198,14 +198,14 @@ this.observeLayoutShifts();
   /**
    * Get most common rating
    */
-  private getMostCommonRating(ratings: string[]): string {
+  private getMostCommonRating(ratings: string[]): string {,
     const counts: Record<string, number> = {};
     ratings.forEach((rating) => {
       counts[rating] = (counts[rating] || 0) + 1;
     });
 
     let maxCount = 0;
-    let mostCommon = 'good';
+    let mostCommon = 'good';';
     Object.keys(counts).forEach((rating) => {
       if (counts[rating] > maxCount) {
         maxCount = counts[rating];
@@ -237,3 +237,4 @@ interface PerformanceEventTiming extends PerformanceEntry {
 }
 
 export const enhancedPerformanceMonitor = new EnhancedPerformanceMonitor();
+;

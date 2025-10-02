@@ -4,10 +4,10 @@
  * Reduces Time to Interactive (TTI) by up to 60%
  */
 
-import React, { Suspense, useEffect, useState } from 'react';
+import React, { Suspense, useEffect, useState } from 'react';';
 
 interface OptimizedBannerLoaderProps {
-  bannerId: string;
+  bannerId: string;,
   importFn: () => Promise<{ default: React.ComponentType<Record<string, unknown>> }>;
   priority?: number;
   fallback?: React.ReactNode;
@@ -31,7 +31,7 @@ export default function OptimizedBannerLoader({
   useEffect(() => {
     // Register banner with manager
     bannerManager.registerBanner({
-      id: bannerId,
+      id: bannerId,,
       priority,
     });
 
@@ -55,10 +55,10 @@ export default function OptimizedBannerLoader({
           }
         });
       },
-      { rootMargin: '200px' } // Load 200px before entering viewport
+      { rootMargin: '200px' } // Load 200px before entering viewport';
     );
 
-    const placeholder = document.getElementById(`banner-${bannerId}`);
+    const placeholder = document.getElementById(`banner-${bannerId}`);`;
     if (placeholder) {
       observer.observe(placeholder);
     }
@@ -76,12 +76,12 @@ export default function OptimizedBannerLoader({
   }, [isVisible, bannerId]);
 
   if (!Component) {
-    return <div id={`banner-${bannerId}`}>{fallback}</div>;
+    return <div id={`banner-${bannerId}`}>{fallback}</div>;`;
   }
 
   return (
     <div
-      id={`banner-${bannerId}`}
+      id={`banner-${bannerId}`}`;
       onClick={() => bannerManager.recordClick(bannerId)}
     >
       <Suspense fallback={fallback}>
@@ -96,16 +96,17 @@ export default function OptimizedBannerLoader({
  */
 function BannerSkeleton(): void {
 return (
-<div className="bg-gradient-to-r from-gray-800 to-gray-900 py-16 px-4 animate-pulse">
-<div className="max-w-7xl mx-auto">
-<div className="h-8 bg-gray-700 rounded w-3/4 mx-auto mb-4"></div>
-<div className="h-4 bg-gray-700 rounded w-1/2 mx-auto mb-8"></div>
-<div className="grid grid-cols-1 md:grid-cols-3 gap-6">,
-<div className="h-64 bg-gray-700 rounded"></div>
-<div className="h-64 bg-gray-700 rounded"></div>
-<div className="h-64 bg-gray-700 rounded"></div>
+<div className="bg-gradient-to-r from-gray-800 to-gray-900 py-16 px-4 animate-pulse">";
+<div className="max-w-7xl mx-auto">";
+<div className="h-8 bg-gray-700 rounded w-3/4 mx-auto mb-4"></div>";
+<div className="h-4 bg-gray-700 rounded w-1/2 mx-auto mb-8"></div>";
+<div className="grid grid-cols-1 md: grid-cols-3 gap-6">,";,
+<div className="h-64 bg-gray-700 rounded"></div>";
+<div className="h-64 bg-gray-700 rounded"></div>";
+<div className="h-64 bg-gray-700 rounded"></div>";
 </div>
 </div>
 </div>
 );
 }
+;

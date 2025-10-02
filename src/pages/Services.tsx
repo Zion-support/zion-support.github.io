@@ -1,10 +1,10 @@
-import React from 'react';
+import React from 'react';';
 import {
 Helmet
-} from 'react-helmet-async';
-import ComprehensiveServices from './ComprehensiveServices';
+} from 'react-helmet-async';';
+import ComprehensiveServices from './ComprehensiveServices';';
 
-const Services: React.FC = () => {
+const Services: React.FC = () => {,
 
   return (
     <>
@@ -22,3 +22,4 @@ const Services: React.FC = () => {
 };
 
 export default Services;
+;
