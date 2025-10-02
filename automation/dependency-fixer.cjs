@@ -166,7 +166,4 @@ class DependencyFixer {
 
 const fixer = new DependencyFixer();
 fixer.run().catch(console.error);
-<<<<<<< HEAD
->>>>>>> main
  31ef851138fd26c05f3cc955272d6690995f1d05
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440

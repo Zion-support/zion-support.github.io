@@ -1,5 +1,4 @@
 import React from 'react';
-import { ArrowRight, Sparkles, TrendingUp, Zap, Brain, Clock, Users, Award, Star, Eye } from 'lucide-react';
 
 const NewBlogContentShowcase2026: React.FC = () => {
   const blogPosts = [

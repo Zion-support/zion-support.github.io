@@ -26,9 +26,7 @@ export default function April2026RevolutionaryBreakthroughBanner() {
           
           {/* Subtitle */}
           <p className="text-2xl md:text-3xl text-gray-300 mb-8 font-semibold max-w-4xl mx-auto">
-            The world's first AI that thinks about thinking, delivering 
-            <span className="text-purple-400 font-bold"> 1000x performance improvements</span> and 
-            <span className="text-blue-400 font-bold"> $5.2B in proven value</span>
+            The world's first AI that thinks about thinking, delivering 1000x performance improvements and $5.2B in proven value
           </p>
           
           {/* Key Metrics */}
