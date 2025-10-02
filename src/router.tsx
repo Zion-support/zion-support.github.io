@@ -9,6 +9,18 @@ import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import BlogPage from './pages/BlogPage';
 import CaseStudiesPage from './pages/CaseStudiesPage';
+import SolutionsPage from './pages/SolutionsPage';
+import ServicesCatalog from './pages/ServicesCatalog';
+import Pricing from './pages/Pricing';
+import Partners from './pages/Partners';
+import Support from './pages/Support';
+import Resources from './pages/Resources';
+import AISolutions from './pages/AISolutions';
+import ITServices from './pages/ITServices';
+import AIMicroSAAS from './pages/AIMicroSAAS';
+import SolutionsEnterprise from './pages/SolutionsEnterprise';
+import SolutionsSMB from './pages/SolutionsSMB';
+import SolutionsStartup from './pages/SolutionsStartup';
 
 // Layout Components
 import Header from './components/Header';
@@ -43,8 +55,20 @@ const AppRouter: React.FC = () => {
                   <Routes>
                     <Route path="/" element={<HomePage />} />
                     <Route path="/services" element={<ServicesPage />} />
+                    <Route path="/services/catalog" element={<ServicesCatalog />} />
+                    <Route path="/services/ai-services" element={<AISolutions />} />
+                    <Route path="/services/it-services" element={<ITServices />} />
+                    <Route path="/services/micro-saas" element={<AIMicroSAAS />} />
+                    <Route path="/solutions" element={<SolutionsPage />} />
+                    <Route path="/solutions/enterprise" element={<SolutionsEnterprise />} />
+                    <Route path="/solutions/smb" element={<SolutionsSMB />} />
+                    <Route path="/solutions/startup" element={<SolutionsStartup />} />
                     <Route path="/about" element={<AboutPage />} />
                     <Route path="/contact" element={<ContactPage />} />
+                    <Route path="/resources" element={<Resources />} />
+                    <Route path="/support" element={<Support />} />
+                    <Route path="/pricing" element={<Pricing />} />
+                    <Route path="/partners" element={<Partners />} />
                     <Route path="/blog" element={<BlogPage />} />
                     <Route path="/case-studies" element={<CaseStudiesPage />} />
                   </Routes>
