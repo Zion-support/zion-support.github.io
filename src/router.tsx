@@ -47,7 +47,7 @@ import PerformanceMonitor from './components/PerformanceMonitor';
 import EnhancedSEOHead from './components/EnhancedSEOHead';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
-const AppRouter: React.FC = () => {,
+const AppRouter: React.FC = () => {
   return (
     <HelmetProvider>
       <Router>
