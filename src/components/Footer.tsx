@@ -22,9 +22,12 @@ const Footer: React.FC = () => {
       links: [
         { label: 'AI Workflow Automation', path: '/services/ai-workflow-automation' },
         { label: 'AI Virtual Assistant', path: '/services/ai-virtual-assistant' },
-        { label: 'AI Data Analytics', path: '/services/ai-data-analytics' },
+        { label: 'AI Predictive Analytics', path: '/services/ai-predictive-analytics' },
+        { label: 'Conversational AI', path: '/services/conversational-ai' },
+        { label: 'Edge Computing AI', path: '/services/edge-computing-ai' },
+        { label: 'AI Email Marketing', path: '/services/ai-email-marketing' },
+        { label: 'Smart Contract Audit', path: '/services/smart-contract-audit' },
         { label: 'Cybersecurity AI', path: '/services/advanced-cybersecurity-ai' },
-        { label: 'Quantum Computing', path: '/quantum-computing' },
         { label: 'Cloud & DevOps', path: '/cloud-devops' },
       ]
     },
