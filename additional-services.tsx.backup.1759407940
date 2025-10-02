@@ -394,7 +394,11 @@ export default function AdditionalServices() {
     },
     {
       id: 'ai',
+<<<<<<< HEAD
+      title: 'AI Services — Cutting-Edge Solutions',
+=======
       title: 'AI Services — Advanced Capabilities',
+>>>>>>> origin/cursor/add-new-services-and-deploy-updates-dad3
       icon: Brain,
       color: 'blue',
       items: [
@@ -931,8 +935,13 @@ export default function AdditionalServices() {
 
   const phoneHref = 'tel:+13024640950';
   const emailHref = 'mailto:kleber@ziontechgroup.com';
+<<<<<<< HEAD
+  const websiteHref = 'https://ziontechgroup.com';
+  const contactHref = 'https://ziontechgroup.com/contact';
+=======
   const websiteUrl = 'https://ziontechgroup.com';
   const address = '364 E Main St STE 1008, Middletown DE 19709';
+>>>>>>> origin/cursor/add-new-services-and-deploy-updates-dad3
 
   return (
     <>

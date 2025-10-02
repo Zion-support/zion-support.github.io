@@ -344,6 +344,15 @@ const ServicesPage: React.FC = () => {
       icon: "⛓️",
       href: "/services/blockchain",
       features: [
+<<<<<<< HEAD
+        "Smart Contract Development",
+        "DeFi Applications",
+        "NFT Platforms",
+        "Blockchain Integration",
+        "Cryptocurrency Solutions",
+        "Web3 Development"
+      ]
+=======
         'Demand Forecasting',
         'Automated Reordering',
         'Stock Optimization',
@@ -801,6 +810,7 @@ const ServicesPage: React.FC = () => {
       href: '/services/ai-quality-assurance',
       pricing: '$1,500/month',
       category: 'Micro SaaS'
+>>>>>>> origin/cursor/add-new-services-and-deploy-updates-dad3
     }
   ];
 
