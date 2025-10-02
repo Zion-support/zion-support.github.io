@@ -16,10 +16,9 @@ export const metadata = {
 };
 
 export default function AdvancedAISolutions() {
-  const phoneHref = "tel:+13024640950";
-  const emailHref = "mailto:kleber@ziontechgroup.com";
-  const websiteHref = "https://ziontechgroup.com";
-
+  const phoneHref = "tel:+13024640950"
+  const emailHref = "mailto:kleber@ziontechgroup.com"
+  const websiteHref = "https://ziontechgroup.com"
   const advancedAIServices = [
     {
       name: 'Quantum-Enhanced Neural Networks',

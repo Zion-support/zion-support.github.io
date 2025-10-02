@@ -3,77 +3,71 @@
 const fs = require('fs');
 const path = require('path');
 
-// Function to fix common syntax errors
-function fixSyntaxErrors(content) {
-  // Fix import statements with extra semicolons
-  content = content.replace(/import\s+([^;]+);";/g, 'import $1;');
-  content = content.replace(/import\s+([^;]+);"/g, 'import $1;');
+// Common syntax error patterns to fix
+const fixes = [
+  // Fix extra semicolons in JSX attributes
+  { pattern: /className="([^"]*)"\s*;"/g, replacement: 'className="$1"' },
+  { pattern: /className="([^"]*)"\s*;,\s*"/g, replacement: 'className="$1"' },
+  { pattern: /className="([^"]*)"\s*;,\s*$/gm, replacement: 'className="$1"' },
   
-  // Fix function declarations with extra commas
-  content = content.replace(/const\s+(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*\{\s*,\s*,\s*,/g, 'const $1: React.FC = () => {');
-  content = content.replace(/const\s+(\w+):\s*\(\)\s*=>\s*\{\s*,\s*,\s*,/g, 'const $1: () => {');
+  // Fix extra commas in JSX
+  { pattern: />\s*;,\s*$/gm, replacement: '>' },
+  { pattern: />\s*;,\s*</gm, replacement: '><' },
   
-  // Fix JSX attributes with extra semicolons and commas
-  content = content.replace(/className:\s*"([^"]+)";\s*,\s*,\s*/g, 'className="$1"');
-  content = content.replace(/name:\s*"([^"]+)";\s*,\s*,\s*/g, 'name="$1"');
-  content = content.replace(/content:\s*"([^"]+)";\s*,\s*,\s*/g, 'content="$1"');
+  // Fix unterminated string literals
+  { pattern: /"\s*;\s*$/gm, replacement: '"' },
+  { pattern: /"\s*;,\s*$/gm, replacement: '"' },
   
-  // Fix JSX closing tags with extra semicolons
-  content = content.replace(/<\/\w+>";\s*,\s*,\s*/g, '</$1>');
-  content = content.replace(/<\/\w+>";\s*,\s*/g, '</$1>');
-  content = content.replace(/<\/\w+>";/g, '</$1>');
+  // Fix import statements
+  { pattern: /import\s+([^;]+);';/g, replacement: "import $1';" },
+  { pattern: /import\s+([^;]+);,\s*$/gm, replacement: "import $1;" },
   
-  // Fix JSX opening tags with extra semicolons
-  content = content.replace(/<(\w+)\s+([^>]+)>";\s*,\s*,\s*/g, '<$1 $2>');
-  content = content.replace(/<(\w+)\s+([^>]+)>";\s*,\s*/g, '<$1 $2>');
-  content = content.replace(/<(\w+)\s+([^>]+)>";/g, '<$1 $2>');
+  // Fix function declarations
+  { pattern: /const\s+([^=]+)=\s*\(\)\s*=>\s*{,\s*$/gm, replacement: 'const $1 = () => {' },
+  
+  // Fix JSX closing tags
+  { pattern: /<\/div>\s*;,\s*$/gm, replacement: '</div>' },
+  { pattern: /<\/section>\s*;,\s*$/gm, replacement: '</section>' },
+  { pattern: /<\/h[1-6]>\s*;,\s*$/gm, replacement: (match) => match.replace(/;,\s*$/, '') },
+  
+  // Fix meta tags
+  { pattern: /<meta[^>]*>\s*;,\s*$/gm, replacement: (match) => match.replace(/;,\s*$/, '') },
   
   // Fix Helmet tags
-  content = content.replace(/<Helmet\s*>/g, '<Helmet>');
-  content = content.replace(/<title\s*>/g, '<title>');
-  
-  // Fix duplicate imports
-  const lines = content.split('\n');
-  const seenImports = new Set();
-  const filteredLines = [];
-  
-  for (const line of lines) {
-    if (line.trim().startsWith('import ')) {
-      if (!seenImports.has(line.trim())) {
-        seenImports.add(line.trim());
-        filteredLines.push(line);
-      }
-    } else {
-      filteredLines.push(line);
-    }
-  }
-  
-  return filteredLines.join('\n');
-}
+  { pattern: /<\/Helmet>\s*;,\s*$/gm, replacement: '</Helmet>' },
+];
 
-// Function to process a file
-function processFile(filePath) {
+function fixFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
-    const fixedContent = fixSyntaxErrors(content);
+    let fixedContent = content;
     
-    if (content !== fixedContent) {
+    // Apply all fixes
+    fixes.forEach(fix => {
+      if (typeof fix.replacement === 'function') {
+        fixedContent = fixedContent.replace(fix.pattern, fix.replacement);
+      } else {
+        fixedContent = fixedContent.replace(fix.pattern, fix.replacement);
+      }
+    });
+    
+    // Only write if content changed
+    if (fixedContent !== content) {
       fs.writeFileSync(filePath, fixedContent, 'utf8');
       console.log(`Fixed: ${filePath}`);
       return true;
     }
     return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
 }
 
-// Function to recursively find TypeScript/TSX files
-function findTsFiles(dir) {
+function walkDirectory(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {
   const files = [];
   
-  function traverse(currentDir) {
+  function walk(currentDir) {
     const items = fs.readdirSync(currentDir);
     
     for (const item of items) {
@@ -81,28 +75,45 @@ function findTsFiles(dir) {
       const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        traverse(fullPath);
-      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts'))) {
+        walk(fullPath);
+      } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
         files.push(fullPath);
       }
     }
   }
   
-  traverse(dir);
+  walk(dir);
   return files;
 }
 
 // Main execution
 const srcDir = path.join(__dirname, 'src');
-const files = findTsFiles(srcDir);
+const appDir = path.join(__dirname, 'app');
 
-console.log(`Found ${files.length} TypeScript files to process...`);
+let totalFixed = 0;
 
-let fixedCount = 0;
-for (const file of files) {
-  if (processFile(file)) {
-    fixedCount++;
+// Fix files in src directory
+if (fs.existsSync(srcDir)) {
+  const srcFiles = walkDirectory(srcDir);
+  console.log(`Found ${srcFiles.length} files in src directory`);
+  
+  for (const file of srcFiles) {
+    if (fixFile(file)) {
+      totalFixed++;
+    }
   }
 }
 
-console.log(`Fixed ${fixedCount} files out of ${files.length} total files.`);
+// Fix files in app directory
+if (fs.existsSync(appDir)) {
+  const appFiles = walkDirectory(appDir);
+  console.log(`Found ${appFiles.length} files in app directory`);
+  
+  for (const file of appFiles) {
+    if (fixFile(file)) {
+      totalFixed++;
+    }
+  }
+}
+
+console.log(`\nTotal files fixed: ${totalFixed}`);
