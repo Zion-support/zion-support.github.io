@@ -1,4 +1,4 @@
-import { onCLS, onINP, onFCP, onLCP, onTTFB, Metric } from 'web-vitals';
+import { onCLS, onFCP, onLCP, onTTFB, onINP, Metric } from 'web-vitals';
 
 interface PerformanceMetrics {
   cls: number | null;
@@ -151,11 +151,9 @@ class PerformanceMonitor {
       else if (cls > 0.1) score -= 15;
     }
     
-    // INP replaces FID. Lower is better.
     if (inp !== null) {
-      if (inp > 300) score -= 25;
-      else if (inp > 200) score -= 15;
-      else if (inp > 100) score -= 5;
+      if (inp > 500) score -= 25;
+      else if (inp > 200) score -= 10;
     }
     
     if (fcp !== null) {
