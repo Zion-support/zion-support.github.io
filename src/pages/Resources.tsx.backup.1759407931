@@ -11,10 +11,10 @@ const Resources: React.FC = () => {
       link: '/case-studies',
       color: 'blue',
 <<<<<<< HEAD
-      count: '25+'
-=======
       count: '25+',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
+=======
+      count: '25+'
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-22df
     },
     {
       icon: FileText,
@@ -23,10 +23,10 @@ const Resources: React.FC = () => {
       link: '/white-papers',
       color: 'green',
 <<<<<<< HEAD
-      count: '15+'
-=======
       count: '15+',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
+=======
+      count: '15+'
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-22df
     },
     {
       icon: Video,
@@ -35,10 +35,10 @@ const Resources: React.FC = () => {
       link: '/webinars',
       color: 'purple',
 <<<<<<< HEAD
-      count: '40+'
-=======
       count: '40+',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
+=======
+      count: '40+'
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-22df
     },
     {
       icon: Code,
@@ -47,10 +47,10 @@ const Resources: React.FC = () => {
       link: '/docs',
       color: 'orange',
 <<<<<<< HEAD
-      count: '100+'
-=======
       count: '100+',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
+=======
+      count: '100+'
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-22df
     },
     {
       icon: Users,
@@ -59,10 +59,10 @@ const Resources: React.FC = () => {
       link: '/training',
       color: 'teal',
 <<<<<<< HEAD
-      count: '10+'
-=======
       count: '10+',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
+=======
+      count: '10+'
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-22df
     },
     {
       icon: MessageSquare,
@@ -71,12 +71,12 @@ const Resources: React.FC = () => {
       link: '/community',
       color: 'red',
 <<<<<<< HEAD
-      count: '5000+'
-    }
-=======
       count: '5000+',
     },
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
+=======
+      count: '5000+'
+    }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-22df
   ];
 
   const featuredResources = [
@@ -86,10 +86,10 @@ const Resources: React.FC = () => {
       description: 'Comprehensive guide to implementing AI solutions in your organization',
       downloadLink: '/downloads/ai-implementation-roadmap-2025.pdf',
 <<<<<<< HEAD
-      icon: Download
-=======
       icon: Download,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
+=======
+      icon: Download
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-22df
     },
     {
       title: 'Enterprise AI Transformation Case Study',
@@ -97,10 +97,10 @@ const Resources: React.FC = () => {
       description: 'How a Fortune 500 company achieved 300% ROI with our AI solutions',
       link: '/case-studies/enterprise-ai-transformation',
 <<<<<<< HEAD
-      icon: FileText
-=======
       icon: FileText,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
+=======
+      icon: FileText
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-22df
     },
     {
       title: 'Building Scalable AI Systems',
@@ -108,10 +108,10 @@ const Resources: React.FC = () => {
       description: 'Expert insights on architecting AI systems that scale with your business',
       link: '/webinars/building-scalable-ai-systems',
 <<<<<<< HEAD
-      icon: Video
-=======
       icon: Video,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
+=======
+      icon: Video
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-22df
     },
     {
       title: 'API Documentation v2.1',
@@ -119,12 +119,12 @@ const Resources: React.FC = () => {
       description: 'Complete API reference for integrating with our AI services',
       link: '/docs/api',
 <<<<<<< HEAD
-      icon: Code
-    }
-=======
       icon: Code,
     },
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
+=======
+      icon: Code
+    }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-22df
   ];
 
   const latestBlogPosts = [
@@ -133,42 +133,42 @@ const Resources: React.FC = () => {
       excerpt: 'Exploring how AI is revolutionizing manufacturing processes and predictive maintenance.',
       date: '2025-01-15',
 <<<<<<< HEAD
-      link: '/blog/ai-manufacturing-future'
-=======
       link: '/blog/ai-manufacturing-future',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
+=======
+      link: '/blog/ai-manufacturing-future'
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-22df
     },
     {
       title: 'Cybersecurity Best Practices for AI Systems',
       excerpt: 'Essential security measures to protect your AI infrastructure and data.',
       date: '2025-01-12',
 <<<<<<< HEAD
-      link: '/blog/ai-cybersecurity-best-practices'
-=======
       link: '/blog/ai-cybersecurity-best-practices',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
+=======
+      link: '/blog/ai-cybersecurity-best-practices'
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-22df
     },
     {
       title: 'ROI Calculation for AI Implementations',
       excerpt: 'A comprehensive guide to measuring and maximizing ROI from AI investments.',
       date: '2025-01-10',
 <<<<<<< HEAD
-      link: '/blog/ai-roi-calculation-guide'
-=======
       link: '/blog/ai-roi-calculation-guide',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
+=======
+      link: '/blog/ai-roi-calculation-guide'
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-22df
     },
     {
       title: 'Building Ethical AI Systems',
       excerpt: 'Principles and practices for developing AI systems that are fair and transparent.',
       date: '2025-01-08',
 <<<<<<< HEAD
-      link: '/blog/ethical-ai-systems'
-    }
-=======
       link: '/blog/ethical-ai-systems',
     },
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
+=======
+      link: '/blog/ethical-ai-systems'
+    }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-22df
   ];
 
   return (

@@ -7,11 +7,7 @@ const Support: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
-<<<<<<< HEAD
-  const supportChannels = [
-=======
   const contactMethods = [
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
     {
       icon: Phone,
       title: 'Phone Support',
@@ -109,7 +105,10 @@ const Support: React.FC = () => {
       (faq.question?.toLowerCase().includes(query) || faq.answer?.toLowerCase().includes(query));
     return matchesCategory && matchesQuery;
   });
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-22df
   const quickActions = [
     { title: 'Report a Bug', description: 'Found an issue? Let us know', link: '/contact', icon: '🐛' },
     { title: 'Request a Feature', description: "Have an idea? We'd love to hear it", link: '/contact', icon: '💡' },

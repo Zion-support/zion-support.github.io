@@ -5,7 +5,7 @@ import {
   Smartphone, Globe, Cpu, Lock, Users, FileText,
   TrendingUp, Settings, Headphones, Code,
   Brain, Target, CheckCircle, Star,
-  Mail, MessageCircle,
+  Mail, MessageCircle
 } from 'lucide-react';
 
 const ComprehensiveServices: React.FC = () => {
@@ -18,7 +18,7 @@ const ComprehensiveServices: React.FC = () => {
       pricing: 'Starting at $29/month',
       icon: FileText,
       color: 'from-blue-600 to-purple-600',
-      link: '/services/ai-content-generator',
+      link: '/services/ai-content-generator'
     },
     {
       id: 'smart-appointment-scheduler',
@@ -28,7 +28,7 @@ const ComprehensiveServices: React.FC = () => {
       pricing: 'Starting at $49/month',
       icon: Users,
       color: 'from-green-600 to-teal-600',
-      link: '/services/smart-appointment-scheduler',
+      link: '/services/smart-appointment-scheduler'
     },
     {
       id: 'ai-email-marketing',
@@ -38,7 +38,7 @@ const ComprehensiveServices: React.FC = () => {
       pricing: 'Starting at $79/month',
       icon: Mail,
       color: 'from-emerald-600 to-green-600',
-      link: '/services/ai-email-marketing',
+      link: '/services/ai-email-marketing'
     },
     {
       id: 'api-integration-hub',
@@ -48,7 +48,7 @@ const ComprehensiveServices: React.FC = () => {
       pricing: 'Starting at $39/month',
       icon: Code,
       color: 'from-orange-600 to-red-600',
-      link: '/services/api-integration-hub',
+      link: '/services/api-integration-hub'
     },
     {
       id: 'remote-collaboration-suite',
@@ -58,7 +58,7 @@ const ComprehensiveServices: React.FC = () => {
       pricing: 'Starting at $19/user/month',
       icon: Globe,
       color: 'from-purple-600 to-pink-600',
-      link: '/services/remote-collaboration-suite',
+      link: '/services/remote-collaboration-suite'
     },
     {
       id: 'smart-contract-audit',
@@ -68,8 +68,8 @@ const ComprehensiveServices: React.FC = () => {
       pricing: 'Starting at $2,500',
       icon: Shield,
       color: 'from-red-600 to-orange-600',
-      link: '/services/smart-contract-audit',
-    },
+      link: '/services/smart-contract-audit'
+    }
   ];
 
   const aiServices = [
@@ -81,7 +81,7 @@ const ComprehensiveServices: React.FC = () => {
       pricing: 'Custom pricing',
       icon: Zap,
       color: 'from-blue-600 to-purple-600',
-      link: '/services/ai-workflow-automation',
+      link: '/services/ai-workflow-automation'
     },
     {
       id: 'ai-virtual-assistant',
@@ -91,7 +91,7 @@ const ComprehensiveServices: React.FC = () => {
       pricing: 'Starting at $199/month',
       icon: Bot,
       color: 'from-purple-600 to-pink-600',
-      link: '/services/ai-virtual-assistant',
+      link: '/services/ai-virtual-assistant'
     },
     {
       id: 'ai-predictive-analytics',

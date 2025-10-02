@@ -17,7 +17,6 @@ import {
   Smartphone,
   MessageSquare,
   Zap,
-  
   Settings,
   Monitor,
   Cpu,
@@ -27,7 +26,7 @@ import {
   Key,
   AlertTriangle,
   Users,
-  Building,
+  Building
 } from "lucide-react";
 
 export default function ITServices(): React.JSX.Element {
@@ -57,7 +56,7 @@ export default function ITServices(): React.JSX.Element {
       ],
       useCases: ["Enterprise companies", "SaaS providers", "E-commerce platforms", "Healthcare systems"],
       marketSize: "$623.3B cloud computing market",
-      link: "/contact",
+      link: "/contact"
     },
     {
       id: "zero-trust-security",
@@ -84,7 +83,7 @@ export default function ITServices(): React.JSX.Element {
       ],
       useCases: ["Financial institutions", "Government agencies", "Healthcare organizations", "Large enterprises"],
       marketSize: "$366.1B cybersecurity market",
-      link: "/contact",
+      link: "/contact"
     },
     {
       id: "devops-automation",
@@ -111,8 +110,8 @@ export default function ITServices(): React.JSX.Element {
       ],
       useCases: ["Software companies", "Tech startups", "E-commerce platforms", "Financial services"],
       marketSize: "$10.3B DevOps market",
-      link: "/contact",
-    },
+      link: "/contact"
+    }
     {
       id: "data-engineering-platform",
       name: "Data Engineering Platform",

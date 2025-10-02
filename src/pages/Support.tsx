@@ -105,7 +105,6 @@ const Support: React.FC = () => {
       (faq.question?.toLowerCase().includes(query) || faq.answer?.toLowerCase().includes(query));
     return matchesCategory && matchesQuery;
   });
-
   const quickActions = [
     { title: 'Report a Bug', description: 'Found an issue? Let us know', link: '/contact', icon: '🐛' },
     { title: 'Request a Feature', description: "Have an idea? We'd love to hear it", link: '/contact', icon: '💡' },

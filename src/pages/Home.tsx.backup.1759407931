@@ -1,7 +1,11 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+<<<<<<< HEAD
 import { CheckCircle, Rocket, Shield, Sparkles, Zap, Award } from "lucide-react";
+=======
+import { CheckCircle, Rocket, Shield, Sparkles, Zap, Users, Target, Award, ArrowRight } from "lucide-react";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-22df
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import NewServicesPromoBanner2026 from "../components/NewServicesPromoBanner2026";
@@ -20,10 +24,10 @@ const Home = () => {
       date: '2025-01-15',
       readMinutes: 25,
 <<<<<<< HEAD
-      featured: true
-=======
       featured: true,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
+=======
+      featured: true
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-22df
     },
     {
       id: '2',
@@ -33,10 +37,10 @@ const Home = () => {
       date: '2025-01-10',
       readMinutes: 20,
 <<<<<<< HEAD
-      featured: false
-=======
       featured: false,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
+=======
+      featured: false
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-22df
     },
     {
       id: '3',
@@ -46,38 +50,15 @@ const Home = () => {
       date: '2025-01-05',
       readMinutes: 15,
 <<<<<<< HEAD
+      featured: true,
+    },
+  ];
+  // Removed stray block that caused a syntax error
+=======
       featured: true
     }
   ];
-
-  const featuredArticles = [
-    {
-      slug: 'ai-revolution-2026',
-      title: 'AI Revolution 2026: The Next Frontier of Enterprise Intelligence',
-      description: 'Discover autonomous AI agents, neural interfaces, and predictive intelligence systems achieving 300% productivity gains.',
-      category: 'AI Innovation',
-      publishedAt: '2025-01-15'
-    },
-    {
-      slug: 'quantum-ai-breakthrough',
-      title: 'Quantum AI Breakthrough: Solving Impossible Problems in Seconds',
-      description: 'Explore quantum-enhanced AI delivering 500x faster results and revolutionizing computational capabilities.',
-      category: 'Quantum Computing',
-      publishedAt: '2025-01-10'
-    },
-    {
-      slug: 'manufacturing-success',
-      title: 'Manufacturing AI Transformation: $50M Savings & 95% Efficiency',
-      description: 'See how a Fortune 500 manufacturer achieved $50M annual savings and 95% efficiency improvements.',
-      category: 'Success Story',
-      publishedAt: '2025-01-05'
-    }
-=======
-      featured: true,
-    },
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
-  ];
-  // Removed stray block that caused a syntax error
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-22df
 
   return (
     <>
@@ -155,6 +136,37 @@ const Home = () => {
               "itemListElement": [
                 {
 <<<<<<< HEAD
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "AI Workflow Automation",
+                "description": "Automate complex business processes with AI-powered workflows"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "AI Virtual Assistant",
+                "description": "Intelligent virtual assistants for customer service and support"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "AI Data Analytics",
+                "description": "Advanced data analytics and insights powered by AI"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Quantum Computing Consulting",
+                "description": "Expert consulting on quantum computing solutions"
+              }
+=======
                   "@type": "Offer",
                   "itemOffered": {
                     "@type": "Service",
@@ -194,38 +206,7 @@ const Home = () => {
               "reviewCount": "150",
               "bestRating": "5",
               "worstRating": "1"
-=======
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "AI Workflow Automation",
-                "description": "Automate complex business processes with AI-powered workflows"
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "AI Virtual Assistant",
-                "description": "Intelligent virtual assistants for customer service and support"
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "AI Data Analytics",
-                "description": "Advanced data analytics and insights powered by AI"
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Quantum Computing Consulting",
-                "description": "Expert consulting on quantum computing solutions"
-              }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-22df
             }
           ]
         },

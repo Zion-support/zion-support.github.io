@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { CheckCircle, Rocket, Shield, Sparkles, Zap, Award } from "lucide-react";
+import { CheckCircle, Rocket, Shield, Sparkles, Zap, Users, Target, Award, ArrowRight } from "lucide-react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import NewServicesPromoBanner2026 from "../components/NewServicesPromoBanner2026";
@@ -19,7 +19,7 @@ const Home = () => {
       category: 'AI Innovation',
       date: '2025-01-15',
       readMinutes: 25,
-      featured: true,
+      featured: true
     },
     {
       id: '2',
@@ -28,7 +28,7 @@ const Home = () => {
       category: 'Quantum Computing',
       date: '2025-01-10',
       readMinutes: 20,
-      featured: false,
+      featured: false
     },
     {
       id: '3',
@@ -37,10 +37,9 @@ const Home = () => {
       category: 'Success Story',
       date: '2025-01-05',
       readMinutes: 15,
-      featured: true,
-    },
+      featured: true
+    }
   ];
-  // Removed stray block that caused a syntax error
 
   return (
     <>
@@ -117,36 +116,45 @@ const Home = () => {
               "name": "AI and IT Solutions",
               "itemListElement": [
                 {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "AI Workflow Automation",
-                "description": "Automate complex business processes with AI-powered workflows"
-              }
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "AI Workflow Automation",
+                    "description": "Automate complex business processes with AI-powered workflows"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "AI Virtual Assistant",
+                    "description": "Intelligent virtual assistants for customer service and support"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "AI Data Analytics",
+                    "description": "Advanced data analytics and insights powered by AI"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Quantum Computing Consulting",
+                    "description": "Expert consulting on quantum computing solutions"
+                  }
+                }
+              ]
             },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "AI Virtual Assistant",
-                "description": "Intelligent virtual assistants for customer service and support"
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "AI Data Analytics",
-                "description": "Advanced data analytics and insights powered by AI"
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Quantum Computing Consulting",
-                "description": "Expert consulting on quantum computing solutions"
-              }
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.8",
+              "reviewCount": "150",
+              "bestRating": "5",
+              "worstRating": "1"
             }
           ]
         },
