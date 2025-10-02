@@ -259,10 +259,11 @@ export default function ServicesAdvertisingPage() {
 
                     {/* CTA */}
                     <div className="border-t pt-4">
-                      <a 
-                        href={service.contactLink}
-                        className={`w-full bg-${category.color}-600 text-white text-center py-3 px-6 rounded-lg font-semibold hover:bg-${category.color}-700 transition-colors block`}
-                      >
+                <a 
+                href={service.contactLink}
+                className={`w-full bg-${category.color}-600 text-white text-center py-3 px-6 rounded-lg font-semibold hover:bg-${category.color}-700 transition-colors block`}
+                aria-label={`Request custom quote for ${service.name}`}
+              >
                         Get Custom Quote
                       </a>
                     </div>
