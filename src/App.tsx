@@ -144,8 +144,8 @@ const App: React.FC = () => {
         )}
 
         <NotificationSystem notifications={notifications} onRemove={handleRemoveNotification} />
-      </AccessibilityEnhancer>
-    </EnhancedErrorBoundary>
+      </EnhancedErrorBoundary>
+    </AccessibilityEnhancer>
   );
 };
 
