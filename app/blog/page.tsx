@@ -1,362 +1,226 @@
 // @ts-nocheck
-import React from 'react';
-import Link from 'next/link';
-export const metadata = {
-  title: 'Blog | Zion Tech Group',
-  description: 'Explore our latest AI insights, guides, and case studies.'
-};
 
-const blogPosts = [
+const posts = [
   {
-    title: 'Revolutionary AI Breakthroughs: Meta-Cognitive Intelligence Achieves 95% Decision Accuracy',
-    slug: 'ai-2026-breakthrough-announcement',
-    excerpt: 'Revolutionary AI systems that think about their own thinking processes, achieving unprecedented accuracy in complex enterprise scenarios.',
-    category: 'Breakthrough Technology',
-    publishedAt: 'January 30, 2026',
-    image: '🧠',
-    color: 'purple',
-    readTime: '8 min read'
+    title: 'Enterprise AI Roadmap 2025: Scorecards, Guardrails, and Reliable Velocity',
+    description:
+      'A practical roadmap to fund, govern, and ship AI with KPI‑linked scorecards and guardrails‑as‑code.',
+    href: '/blog/ai-2025-oct-04-enterprise-ai-roadmap-scorecards',
+    date: '2025-10-04',
+    tags: ['Roadmap', 'Scorecards', 'Guardrails'],
+    featured: true,
   },
   {
-    title: 'Quantum AI Enterprise Solutions: 1000x Performance Breakthrough',
-    slug: 'quantum-ai-enterprise-solutions-2026',
-    excerpt: 'Revolutionary quantum-classical hybrid systems delivering unprecedented computational power and solving previously intractable problems in real-time.',
-    category: 'Breakthrough Technology',
-    publishedAt: 'January 30, 2026',
-    image: '⚛️',
-    color: 'cyan',
-    readTime: '12 min read'
+    title: 'AI 2026: Quantum-Neural Fusion Revolutionary Breakthrough',
+    description:
+      'Explore the groundbreaking convergence of quantum computing and neural networks that\'s revolutionizing enterprise AI in 2026.',
+    href: '/blog/ai-2026-quantum-neural-fusion-revolutionary-breakthrough',
+    date: '2026-01-15',
+    tags: ['Quantum Computing', 'Neural Networks', 'AI Fusion', 'Enterprise AI'],
+    featured: true,
   },
   {
-    title: 'AI 2027 Hyper‑Automation Blueprint',
-    slug: 'ai-2027-hyper-automation-blueprint',
-    excerpt: 'Scale reliable hyper‑automation with policy gates, evals, and value stream analytics.',
-    category: 'Implementation Guide',
-    publishedAt: 'October 1, 2025',
-    image: '🧩',
-    color: 'emerald',
-    readTime: '14 min read'
+    title: 'AI 2026: Synthetic Consciousness Enterprise Transformation',
+    description:
+      'Discover how synthetic consciousness AI is revolutionizing enterprise operations with self-aware systems and autonomous decision-making.',
+    href: '/blog/ai-2026-synthetic-consciousness-enterprise-transformation',
+    date: '2026-01-20',
+    tags: ['Synthetic Consciousness', 'Self-Aware AI', 'Enterprise Transformation', 'AI Ethics'],
+    featured: true,
   },
   {
-    title: 'AI 2027: Quantum Computing Breakthrough Revolutionizing Enterprise Operations',
-    slug: 'ai-2027-quantum-breakthrough',
-    excerpt: 'Discover how quantum computing breakthroughs in 2027 are revolutionizing enterprise AI operations, delivering unprecedented computational power and optimization capabilities.',
-    category: 'Breakthrough Technology',
-    publishedAt: 'January 15, 2027',
-    image: '⚛️',
-    color: 'purple',
-    readTime: '12 min read'
+    title: 'AI 2026: Autonomous Enterprise Operations Revolution',
+    description:
+      'Learn how autonomous AI systems are revolutionizing enterprise operations with self-managing, self-optimizing, and self-healing capabilities.',
+    href: '/blog/ai-2026-autonomous-enterprise-operations-revolution',
+    date: '2026-01-25',
+    tags: ['Autonomous Operations', 'Enterprise AI', 'Self-Managing Systems', 'Business Automation'],
+    featured: true,
   },
   {
-    title: 'AI 2027: The Dawn of Fully Autonomous Enterprise Operations',
-    slug: 'ai-2027-autonomous-enterprise',
-    excerpt: 'Explore how AI-driven autonomous enterprise systems are transforming business operations, delivering unprecedented efficiency and decision-making capabilities without human intervention.',
-    category: 'Revolutionary Technology',
-    publishedAt: 'February 20, 2027',
-    image: '🤖',
-    color: 'green',
-    readTime: '15 min read'
+    title: 'GenAI Security in 2025: Practical Controls That Actually Work',
+    description:
+      'A pragmatic security blueprint for production GenAI: controls, gateways, and evals.',
+    href: '/blog/genai-security-2025',
+    date: '2025-09-11',
+    tags: ['AI', 'Security', 'Governance'],
   },
   {
-    title: 'Enterprise RAG Guardrails 2026: Safe, Reliable, and Controllable AI',
-    slug: 'ai-2026-enterprise-rag-guardrails',
-    excerpt: 'Design enterprise-grade RAG with policy guardrails, verifiable citations, and cost-aware routing. Prevent hallucinations and ensure compliance.',
-    category: 'Implementation Guide',
-    publishedAt: 'January 20, 2026',
-    image: '🛡️',
-    color: 'indigo',
-    readTime: '24 min read'
+    title: 'Secure RAG Architecture in 2025: Safety, Scale, and Speed',
+    description:
+      'A pragmatic blueprint for multi-tenant, eval-driven RAG with strong isolation and uptime.',
+    href: '/blog/secure-rag-architecture-2025',
+    date: '2025-09-11',
+    tags: ['RAG', 'Security', 'Architecture'],
   },
   {
-    title: 'AI‑Powered Enterprise Autonomous Systems',
-    slug: 'ai-2025-enterprise-autonomous-systems',
-    excerpt: 'Blueprint to deploy self‑healing, policy‑aware autonomous workflows with verifiable outcomes and 99.99% uptime.',
-    category: 'Revolutionary Technology',
-    publishedAt: 'January 30, 2025',
-    image: '🤖',
-    color: 'purple',
-    readTime: '45 min read'
+    title: 'AI Product Roadmaps That Actually Ship',
+    description:
+      'Milestones, guardrails, and evals that keep AI features shipping on time with quality.',
+    href: '/blog/ai-product-roadmaps-that-ship',
+    date: '2025-09-11',
+    tags: ['Product', 'AI', 'Strategy'],
   },
   {
-    title: 'AI 2026: Mega Trends & Predictions',
-    slug: 'ai-2026-mega-trends-predictions',
-    excerpt: 'The most consequential AI shifts in 2026—agentic automation, observability, and cost optimization.',
-    category: 'Featured Article',
-    publishedAt: 'January 15, 2026',
-    image: '🚀',
-    color: 'blue',
-    readTime: '12 min read'
+    title: 'Edge AI in Manufacturing 2025: Faster Decisions, Lower Costs',
+    description:
+      'Move inference to the edge for sub-100ms decisions, resilience, and bandwidth savings.',
+    href: '/blog/edge-ai-in-manufacturing-2025',
+    date: '2025-09-11',
+    tags: ['Edge AI', 'Manufacturing', 'IoT'],
   },
   {
-    title: 'Autonomous Enterprise Operations 2026: 90% Efficiency, 300% ROI',
-    slug: 'ai-2026-autonomous-enterprise-operations',
-    excerpt: 'Deploy autonomous AI for incident response, finance, supply chain, and support with provable guardrails and ROI.',
-    category: 'Revolutionary Technology',
-    publishedAt: 'January 18, 2026',
-    image: '🏭',
-    color: 'green',
-    readTime: '28 min read'
+    title: 'GenAI Evals in Production: What Actually Works',
+    description:
+      'Build continuous eval loops with golden tasks, HITL audits, and drift-aware sampling.',
+    href: '/blog/genai-evals-in-production',
+    date: '2025-09-11',
+    tags: ['GenAI', 'Evals', 'Quality'],
   },
   {
-    title: 'AI 2026 Neural Superintelligence: The Next Frontier of Artificial Intelligence',
-    slug: 'ai-2026-neural-superintelligence',
-    excerpt: 'Explore the revolutionary AI 2026 neural superintelligence systems that surpass human intelligence, delivering 1000x performance gains and transforming enterprise operations.',
-    category: 'Breakthrough Technology',
-    publishedAt: 'January 20, 2026',
-    image: '🧠',
-    color: 'indigo',
-    readTime: '18 min read'
+    title: 'Startup Micro SaaS Playbook: From Idea to $10k MRR',
+    description:
+      'A pragmatic blueprint to launch and grow a Micro SaaS with capital efficiency.',
+    href: '/blog/startup-micro-saas-playbook',
+    date: '2025-09-11',
+    tags: ['Startup', 'SaaS', 'Growth'],
   },
   {
-    title: 'AI Roadmaps 2026: What to Build Next and Why',
-    slug: 'ai-roadmaps-2026',
-    excerpt: 'A pragmatic roadmap across CX, ops, and platforms with reliability, governance, and ROI.',
-    category: 'Strategy',
-    publishedAt: 'September 30, 2025',
-    image: '🧭',
-    color: 'indigo',
-    readTime: '10 min read'
+    title: 'AI Governance Operating Model: From Policy to Practice',
+    description:
+      'Translate policy into day-to-day decisions with risk tiering, evals, and reviews.',
+    href: '/blog/ai-governance-operating-model',
+    date: '2025-09-11',
+    tags: ['AI', 'Governance', 'Risk'],
   },
   {
-    title: 'AI Operational Resilience 2026: Designing for Failure and Recovery',
-    slug: 'ai-operational-resilience-2026',
-    excerpt: 'Blueprint for 99.99% uptime with policy tests, isolation, and automated recovery.',
-    category: 'Operations',
-    publishedAt: 'September 29, 2025',
-    image: '🧯',
-    color: 'blue',
-    readTime: '14 min read'
+    title: 'Serverless for ML in 2025: Simple, Cost-Efficient, Production-Ready',
+    description:
+      'Run ML and GenAI on serverless with predictable cost and strong reliability.',
+    href: '/blog/serverless-for-ml-2025',
+    date: '2025-09-11',
+    tags: ['Serverless', 'ML', 'Cloud'],
   },
   {
-    title: 'AI Agent Observability 2026: Metrics, Traces, and Guardrails',
-    slug: 'ai-agent-observability-2026',
-    excerpt: 'Instrument agents with traces, evals, and policy guardrails to ship reliable autonomy.',
-    category: 'AI Reliability',
-    publishedAt: 'September 29, 2025',
-    image: '🔎',
-    color: 'purple',
-    readTime: '12 min read'
+    title: 'Practical AI Agents for Small Businesses',
+    description:
+      'How SMBs can deploy lightweight AI agents to automate support, sales outreach, and back-office tasks safely.',
+    href: '/blog/ai-agents-for-smbs',
+    date: '2025-09-11',
+    tags: ['AI', 'Automation', 'Agents'],
   },
   {
-    title: 'AI Value Stream Analytics 2026: Trace ROI from Token to Revenue',
-    slug: 'ai-value-stream-analytics-2026',
-    excerpt: 'Connect model spend to customer value with end-to-end tracing and scorecards.',
-    category: 'Analytics',
-    publishedAt: 'September 30, 2025',
-    image: '📈',
-    color: 'blue',
-    readTime: '9 min read'
+    title: 'Production-Grade AI Agents: Observability and Safety',
+    description:
+      'How to harden agents for production with logging, evals, safety and cost controls.',
+    href: '/blog/production-grade-ai-agents',
+    date: '2025-09-11',
+    tags: ['AI', 'Agents', 'MLOps'],
   },
   {
-    title: 'AI 2026 Enterprise Autonomous Systems: The Future of Business Automation',
-    slug: 'ai-2026-enterprise-autonomous-systems',
-    excerpt: 'Discover how next-generation AI autonomous systems are revolutionizing enterprise operations, delivering 400% efficiency gains, 70% cost reduction, and complete business process automation.',
-    category: 'Revolutionary Technology',
-    publishedAt: 'January 20, 2026',
-    image: '🤖',
-    color: 'purple',
-    readTime: '15 min read'
+    title: 'Cloud Cost Optimization in 2025: Proven Playbook',
+    description:
+      'A tactical guide to cut 20–40% of cloud spend without sacrificing performance or velocity.',
+    href: '/blog/cloud-cost-optimization-2025',
+    date: '2025-09-11',
+    tags: ['Cloud', 'FinOps', 'DevOps'],
   },
   {
-    title: 'AI 2026: Revolutionary Trends Transforming Enterprise',
-    slug: 'ai-2026-revolutionary-trends',
-    excerpt: 'Discover the revolutionary AI trends shaping 2026. From autonomous enterprise systems to quantum AI, explore how these breakthroughs are transforming business operations.',
-    category: 'Featured Article',
-    publishedAt: 'January 15, 2026',
-    image: '🚀',
-    color: 'blue',
-    readTime: '12 min read'
+    title: 'Cloud FinOps Automation: 30% Savings With Guardrails',
+    description:
+      'Automation-first FinOps: waste sweeps, rightsizing approvals, commitments, and guardrails.',
+    href: '/blog/cloud-finops-automation',
+    date: '2025-09-11',
+    tags: ['Cloud', 'FinOps', 'Automation'],
   },
   {
-    title: 'AI 2026 Quantum Computing Breakthrough: Revolutionary Processing Power',
-    slug: 'quantum-ai-breakthrough-2026',
-    excerpt: 'Explore the revolutionary AI quantum computing breakthrough of 2026. Discover how quantum-enhanced AI is solving complex problems 1000x faster and transforming enterprise computing.',
-    category: 'Breakthrough Technology',
-    publishedAt: 'January 10, 2026',
-    image: '⚛️',
-    color: 'purple',
-    readTime: '14 min read'
+    title: 'AI-Powered Customer Support Playbooks',
+    description:
+      'Production-ready patterns for self-serve assistants, case triage, agent copilots, and QA.',
+    href: '/blog/ai-customer-support-playbooks',
+    date: '2025-09-11',
+    tags: ['AI', 'CX', 'Automation'],
   },
   {
-    title: 'AI 2026 Enterprise Autonomous Systems: The Future of Business Automation',
-    slug: 'ai-2026-enterprise-autonomous-systems',
-    excerpt: 'Discover how next-generation AI autonomous systems are revolutionizing enterprise operations, delivering 400% efficiency gains, 70% cost reduction, and complete business process automation.',
-    category: 'Revolutionary Technology',
-    publishedAt: 'January 20, 2026',
-    image: '🤖',
-    color: 'purple',
-    readTime: '15 min read'
+    title: 'AI Infrastructure Cost Controls That Actually Work',
+    description:
+      'A pragmatic framework to reduce inference costs while maintaining performance and velocity.',
+    href: '/blog/ai-infra-cost-controls',
+    date: '2025-09-11',
+    tags: ['Cloud', 'FinOps', 'AI'],
   },
   {
-    title: 'AI 2026: Revolutionary Trends Transforming Enterprise',
-    slug: 'ai-2026-revolutionary-trends',
-    excerpt: 'Discover the revolutionary AI trends shaping 2026. From autonomous enterprise systems to quantum AI, explore how these breakthroughs are transforming business operations.',
-    category: 'Featured Article',
-    publishedAt: 'January 15, 2026',
-    image: '🚀',
-    color: 'blue',
-    readTime: '12 min read'
+    title: 'Enterprise RAG Blueprint: From Pilot to Production',
+    description:
+      'Step-by-step architecture and rollout plan for RAG in regulated, multi-tenant environments.',
+    href: '/blog/enterprise-rag-blueprint',
+    date: '2025-09-11',
+    tags: ['RAG', 'LLM', 'Architecture'],
   },
   {
-    title: 'AI 2026 Quantum Computing Breakthrough: Revolutionary Processing Power',
-    slug: 'quantum-ai-breakthrough-2026',
-    excerpt: 'Explore the revolutionary AI quantum computing breakthrough of 2026. Discover how quantum-enhanced AI is solving complex problems 1000x faster and transforming enterprise computing.',
-    category: 'Breakthrough Technology',
-    publishedAt: 'January 10, 2026',
-    image: '⚛️',
-    color: 'purple',
-    readTime: '14 min read'
+    title: 'The Modern Data Stack in 2025: Pragmatic Guide',
+    description:
+      'Ingestion, lakehouse, transformations, metrics and activation that actually work at scale.',
+    href: '/blog/modern-data-stack-2025',
+    date: '2025-09-11',
+    tags: ['Data', 'Analytics', 'Engineering'],
   },
-  {
-    title: 'AI Enterprise Transformation 2026: Complete Implementation Guide',
-    slug: 'ai-enterprise-transformation-2026',
-    excerpt: 'Master AI enterprise transformation with proven strategies, ROI frameworks, and implementation roadmaps. Achieve 300% ROI and 70% cost reduction.',
-    category: 'Implementation Guide',
-    publishedAt: 'January 5, 2026',
-    image: '🏢',
-    color: 'green',
-    readTime: '20 min read'
-  },
-  {
-    title: 'AI Autonomous Agents 2025: Enterprise Implementation Guide',
-    slug: 'ai-autonomous-agents-2025',
-    excerpt: 'Master autonomous AI agents with 300% ROI strategies and enterprise-ready deployment patterns. Achieve 80% automation and 90% efficiency gains.',
-    category: 'Implementation Guide',
-    publishedAt: 'December 28, 2025',
-    image: '🤖',
-    color: 'blue',
-    readTime: '16 min read'
-  },
-  {
-    title: 'AI 2027 Cost Optimization Playbook: Reliable, Fast, and Affordable AI',
-    slug: 'ai-2027-cost-optimization-playbook',
-    excerpt: 'Cut AI spend 30–70% with routing, caching, quantization, and guardrails while improving reliability.',
-    category: 'Implementation Guide',
-    publishedAt: 'September 30, 2025',
-    image: '💸',
-    color: 'green',
-    readTime: '13 min read'
-  },
-  {
-    title: 'AI Executive Playbook 2027: Ship Reliable, Measurable AI',
-    slug: 'ai-executive-playbook-2027',
-    excerpt: 'A concise executive guide to planning, funding, and governing AI that delivers measurable outcomes in 2027.',
-    category: 'Strategy',
-    publishedAt: 'January 2027',
-    image: '📘',
-    color: 'indigo',
-    readTime: '12 min read'
-  },
-  {
-    title: 'AI Operational Resilience 2026: Designing for Failure and Recovery',
-    slug: 'ai-operational-resilience-2026',
-    excerpt: 'Blueprint for 99.99% uptime with policy tests, isolation, chaos testing, and automated recovery for AI systems.',
-    category: 'Operations',
-    publishedAt: 'September 30, 2025',
-    image: '🧯',
-    color: 'orange',
-    readTime: '14 min read'
-  }
-  ,
-  {
-    title: 'Agentic Workflow Orchestration 2026: Reliable AI Workflows',
-    slug: 'agentic-workflow-orchestration-2026',
-    excerpt: 'Orchestrate multi-step agents with policy gates, human approvals, and observability for measurable ROI.',
-    category: 'Architecture',
-    publishedAt: 'September 30, 2025',
-    image: '🧩',
-    color: 'purple',
-    readTime: '16 min read'
-  },
-  {
-    title: 'AI Enterprise Automation Revolution 2026: Complete Business Transformation',
-    slug: 'ai-2026-enterprise-automation-revolution',
-    excerpt: 'Discover how next-generation AI automation is revolutionizing enterprise operations, delivering unprecedented efficiency gains, massive cost reductions, and complete business process autonomy.',
-    category: 'Revolutionary Technology',
-    publishedAt: 'January 30, 2026',
-    image: '🚀',
-    color: 'blue',
-    readTime: '22 min read'
-  },
-  {
-    title: 'AI 2026 Quantum Neural Networks: Revolutionary Processing Power',
-    slug: 'ai-2026-quantum-neural-networks',
-    excerpt: 'Explore the revolutionary AI quantum neural networks breakthrough of 2026. Discover how quantum-enhanced AI is solving complex problems 1000x faster and transforming enterprise computing.',
-    category: 'Breakthrough Technology',
-    publishedAt: 'January 30, 2026',
-    image: '⚛️',
-    color: 'purple',
-    readTime: '18 min read'
-  }
 ];
 
-const categories = [
-  { name: 'All', count: blogPosts.length, color: 'gray' },
-  { name: 'Breakthrough Technology', count: blogPosts.filter(post => post.category === 'Breakthrough Technology').length, color: 'purple' },
-  { name: 'Revolutionary Technology', count: blogPosts.filter(post => post.category === 'Revolutionary Technology').length, color: 'indigo' },
-  { name: 'Implementation Guide', count: blogPosts.filter(post => post.category === 'Implementation Guide').length, color: 'green' },
-  { name: 'Featured Article', count: blogPosts.filter(post => post.category === 'Featured Article').length, color: 'blue' }
-];
-
-export default function BlogPage() {
+export default function BlogIndexPage() {
   return (
-    <div className="min-h-screen bg-slate-950 text-white">
-      <main className="max-w-4xl mx-auto px-6 py-16">
-        <h1 className="text-4xl font-extrabold mb-6">Zion Insights Blog</h1>
-        <p className="text-white/70 mb-10">
-          Curated research, playbooks, and case studies for enterprise AI leaders.
+    <div className='min-h-screen'>
+      <header className='mb-10'>
+        <h1 className='text-4xl md:text-5xl font-bold text-gray-900'>Blog</h1>
+        <p className='mt-3 text-gray-600 max-w-2xl'>
+          Curated insights, implementation guides, and trend reports from Zion Tech Group.
         </p>
-        
-        {/* Featured Posts */}
-        <div className="mb-12">
-          <h2 className="text-2xl font-bold mb-6">🚀 Latest Breakthrough Articles</h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            <Link href="/blog/ai-2026-breakthrough-announcement" className="block p-6 bg-gradient-to-br from-purple-900/30 to-blue-900/30 rounded-lg hover:bg-purple-900/50 transition-all duration-300 border border-purple-500/30 hover:border-purple-400/60">
-              <div className="flex items-center gap-3 mb-3">
-                <span className="text-3xl">🧠</span>
-                <span className="px-3 py-1 text-xs font-bold rounded-full bg-purple-500/20 text-purple-400 border border-purple-500/30">BREAKTHROUGH</span>
-              </div>
-              <h3 className="text-xl font-semibold mb-2 text-white">Meta-Cognitive AI Achieves 95% Decision Accuracy</h3>
-              <p className="text-slate-300 mb-3">Revolutionary AI systems that think about their own thinking processes, achieving unprecedented accuracy in complex enterprise scenarios.</p>
-              <span className="text-purple-400 text-sm font-semibold">Read the breakthrough →</span>
-            </Link>
-            <Link href="/blog/quantum-ai-enterprise-solutions-2026" className="block p-6 bg-gradient-to-br from-cyan-900/30 to-purple-900/30 rounded-lg hover:bg-cyan-900/50 transition-all duration-300 border border-cyan-500/30 hover:border-cyan-400/60">
-              <div className="flex items-center gap-3 mb-3">
-                <span className="text-3xl">⚛️</span>
-                <span className="px-3 py-1 text-xs font-bold rounded-full bg-cyan-500/20 text-cyan-400 border border-cyan-500/30">QUANTUM</span>
-              </div>
-              <h3 className="text-xl font-semibold mb-2 text-white">Quantum AI: 1000x Performance Breakthrough</h3>
-              <p className="text-slate-300 mb-3">Revolutionary quantum-classical hybrid systems delivering unprecedented computational power and solving previously intractable problems.</p>
-              <span className="text-cyan-400 text-sm font-semibold">Explore quantum AI →</span>
-            </Link>
-          </div>
-        </div>
+      </header>
 
-        {/* All Posts */}
-        <div>
-          <h2 className="text-2xl font-bold mb-6">All Articles</h2>
-          <div className="space-y-4">
-            {blogPosts.map((post, index) => (
-              <Link key={index} href={`/blog/${post.slug}`} className="block p-4 bg-slate-800 rounded-lg hover:bg-slate-700 transition-colors">
-                <div className="flex items-start justify-between">
-                  <div className="flex-1">
-                    <div className="flex items-center gap-2 mb-2">
-                      <span className="text-2xl">{post.image}</span>
-                      <span className={`px-2 py-1 text-xs font-semibold rounded-full bg-${post.color}-100 text-${post.color}-800`}>
-                        {post.category}
-                      </span>
-                      <span className="text-slate-400 text-sm">{post.readTime}</span>
-                    </div>
-                    <h3 className="text-lg font-semibold mb-1">{post.title}</h3>
-                    <p className="text-slate-300 text-sm mb-2">{post.excerpt}</p>
-                    <span className="text-slate-400 text-xs">{post.publishedAt}</span>
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </main>
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
+        {posts.map((post) => (
+          <a key={post.href} href={post.href} className='group'>
+            <article className={`border rounded-lg p-6 h-full hover:shadow-lg transition-all duration-300 ${
+              post.featured 
+                ? 'border-purple-200 bg-gradient-to-br from-purple-50 to-blue-50 hover:shadow-purple-200 hover:border-purple-300' 
+                : 'border-gray-200 bg-white hover:shadow-md hover:border-gray-300'
+            }`}>
+              <div className={`text-sm ${post.featured ? 'text-purple-600' : 'text-gray-500'}`}>
+                {post.date}
+                {post.featured && <span className='ml-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-2 py-1 rounded-full text-xs font-bold'>FEATURED</span>}
+              </div>
+              <h2 className={`mt-2 text-2xl font-semibold transition-colors ${
+                post.featured 
+                  ? 'text-purple-900 group-hover:text-purple-700' 
+                  : 'text-gray-900 group-hover:text-blue-600'
+              }`}>
+                {post.title}
+              </h2>
+              <p className={`mt-2 ${post.featured ? 'text-purple-700' : 'text-gray-600'}`}>
+                {post.description}
+              </p>
+              <div className='mt-4 flex gap-2 flex-wrap'>
+                {post.tags.map((tag) => (
+                  <span key={tag} className={`text-xs px-2 py-1 rounded ${
+                    post.featured 
+                      ? 'bg-purple-100 text-purple-700 border border-purple-200' 
+                      : 'bg-blue-50 text-blue-700'
+                  }`}>
+                    {tag}
+                  </span>
+                ))}
+              </div>
+              <div className={`mt-4 font-medium transition-colors ${
+                post.featured 
+                  ? 'text-purple-600 group-hover:text-purple-800' 
+                  : 'text-blue-600 group-hover:text-blue-800'
+              }`}>
+                Read more →
+              </div>
+            </article>
+          </a>
+        ))}
+      </div>
     </div>
   );
 }

@@ -5,7 +5,6 @@ export const metadata = {
   title: 'AI Supply Chain Optimization: 60% Cost Reduction & 90% Efficiency Gain | Zion Tech Group',
   description: 'See how a global manufacturer achieved 60% cost reduction and 90% efficiency improvement with AI supply chain optimization, saving $12M annually.',
   keywords: 'AI supply chain optimization, supply chain AI, manufacturing AI, supply chain automation, AI case study, supply chain efficiency',
-=======
 export const metadata = {
   title: 'AI Supply Chain Optimization: 60% Cost Reduction & 90% Efficiency Gain | Zion Tech Group',
   description: 'See how a global manufacturer achieved 60% cost reduction and 90% efficiency improvement, saving $12M annually with AI supply chain optimization.',
@@ -329,7 +328,6 @@ export default function AISupplyChainOptimization2025() {
             </div>
           </div>
         </div>
-=======
         {/* Case Study Content */}
         <article className="prose prose-lg max-w-none">
           <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-xl p-8 mb-12">

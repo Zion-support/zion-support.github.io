@@ -79,21 +79,8 @@ const errorChecks = Object.values(healthCheck.checks).filter(
 
 
 
-<<<<<<< HEAD
-if (healthCheck.status === 'healthy') {
-  
-  process.exit(0);
-} else {
-  
-  process.exit(1);
-}
- cursor/fix-syntax-push-and-merge-to-main-0308
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const fs = require("fs");
 const path = require("path");
-=======
->>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 class HealthChecker {
   constructor() {
     this.projectRoot = process.cwd();
@@ -103,13 +90,9 @@ class HealthChecker {
 
  HEAD
  cursor/fix-syntax-push-and-merge-to-main-0308
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
 
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 class HealthChecker {
   // TODO: Implement
   constructor() {
@@ -119,48 +102,12 @@ class HealthChecker {
     this.errors = [];
   }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  log(message) {
-    console.log(`🏥 [Health Check] ${message}`);
- origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 #!/usr/bin/env node
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 /**
  * Health Check Monitor;
  * Monitors application health and provides alerts;
  */
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-const healthReport = {
-    timestamp: new Date().toISOString(),
-    status: 'healthy',
-    checks: {},
-    summary: {
-        total: 0,
-        passed: 0,
-        failed: 0,
-        warnings: 0
-    }
-};
-
-function runCheck(name, checkFunction) {
-    healthReport.summary.total++;
-    console.log(`\n🔍 Checking: ${name}`);
-    
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
-
-class HealthCheckMonitor {
->>>>>>> origin/chore/fix-lint-and-merge
   constructor() {
     this.projectRoot = process.cwd();
     this.issues = [];

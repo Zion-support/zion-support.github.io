@@ -1,6 +1,5 @@
-import React from 'react';
 
-export default function FeaturedContentBanner2025() {
+export default function FeaturedContentBanner2025(): void {
   const featuredContent = [
     {
       type: 'blog',

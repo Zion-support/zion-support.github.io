@@ -1,6 +1,3 @@
-import { ArrowRight, Brain, Code, Database, Lightbulb, Rocket, Shield, Sparkles, TrendingUp, Zap } from "lucide-react";
-import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
 
 const September30MegaBanner2025 = () => {
   const breakthroughArticles = [

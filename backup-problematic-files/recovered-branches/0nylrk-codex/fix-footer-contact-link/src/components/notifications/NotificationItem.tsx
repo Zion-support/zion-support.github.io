@@ -1,5 +1,5 @@
 
-import React from 'react',;
+
 // Use the centralized icon wrapper to avoid missing icons;
 import { Check, Trash2, ChevronRight } from '@/components/icons',;
 import { Button } from '@/components/ui/button',;
