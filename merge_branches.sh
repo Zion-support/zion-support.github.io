@@ -1,46 +1,75 @@
 #!/bin/bash
 
-# List of branches to merge
+# Script to merge recent branches systematically
+set -e
+
+echo "Starting systematic branch merging process..."
+
+# Array of recent branches to merge (most recent first)
 branches=(
-    "origin/chore/content-update-2025-09-30"
-    "origin/chore/merge-ci-fixes-into-main"
-    "origin/content-update-2025"
-    "origin/content/advertise-latest-2025"
-    "origin/feat/add-sept-content-and-home-promo"
-    "origin/cursor/check-fix-push-and-merge-to-main-653d"
-    "origin/cursor/check-fix-push-and-merge-to-main-d33b"
+    "origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-bf6e"
+    "origin/cursor/add-new-services-and-deploy-updates-1399"
+    "origin/cursor/fix-errors-and-merge-to-main-0499"
+    "origin/cursor/add-new-services-and-deploy-updates-0c16"
+    "origin/cursor/fix-errors-and-merge-to-main-1c5e"
+    "origin/cursor/fix-errors-and-merge-to-main-50bf"
+    "origin/cursor/fix-errors-and-merge-to-main-e83a"
+    "origin/cursor/fix-errors-and-merge-to-main-ff8e"
+    "origin/cursor/fix-errors-and-merge-to-main-3092"
+    "origin/cursor/fix-errors-and-merge-to-main-dde8"
 )
 
-for branch in "${branches[@]}"; do
-    echo "Attempting to merge $branch..."
-    
-    # Fetch the branch
-    git fetch origin "$(basename $branch)"
-    
-    # Try to merge
-    if git merge "$branch" --no-commit --no-ff 2>/dev/null; then
-        echo "Successfully merged $branch"
-        git commit -m "Merge branch '$branch' into main
+# Ensure we're on main branch
+git checkout main
+git pull origin main
 
-Automated merge of branch with resolved conflicts."
+# Function to merge a branch
+merge_branch() {
+    local branch=$1
+    local branch_name=$(echo $branch | sed 's/origin\///')
+    
+    echo "Processing branch: $branch_name"
+    
+    # Check if branch exists locally
+    if git show-ref --verify --quiet refs/heads/$branch_name; then
+        echo "Branch $branch_name exists locally, switching to it"
+        git checkout $branch_name
+        git pull origin $branch_name
     else
-        echo "Merge conflict detected in $branch, resolving..."
-        
-        # Resolve conflicts automatically
-        find . -name "*.ts" -o -name "*.tsx" -o -name "*.js" -o -name "*.jsx" | xargs sed -i '/<<<<<<< HEAD/d'
-        find . -name "*.ts" -o -name "*.tsx" -o -name "*.js" -o -name "*.jsx" | xargs sed -i '/=======/d'
-        find . -name "*.ts" -o -name "*.tsx" -o -name "*.js" -o -name "*.jsx" | xargs sed -i '/>>>>>>> origin\//d'
-        
-        # Add all resolved files
-        git add .
-        
-        # Commit the merge
-        git commit -m "Merge branch '$branch' into main
-
-Resolved merge conflicts automatically."
-        
-        echo "Resolved conflicts and merged $branch"
+        echo "Creating local branch $branch_name from remote"
+        git checkout -b $branch_name $branch
     fi
+    
+    # Switch back to main
+    git checkout main
+    
+    # Attempt to merge
+    echo "Attempting to merge $branch_name into main..."
+    if git merge $branch_name --no-ff -m "Merge $branch_name into main"; then
+        echo "Successfully merged $branch_name"
+        git push origin main
+    else
+        echo "Merge conflict detected for $branch_name"
+        echo "Resolving conflicts..."
+        
+        # Check for conflicts
+        if git status --porcelain | grep -q "^UU\|^AA\|^DD"; then
+            echo "Manual conflict resolution needed for $branch_name"
+            echo "Skipping this branch for now"
+            git merge --abort
+        else
+            echo "No conflicts found, completing merge"
+            git push origin main
+        fi
+    fi
+    
+    echo "Completed processing $branch_name"
+    echo "---"
+}
+
+# Process each branch
+for branch in "${branches[@]}"; do
+    merge_branch "$branch"
 done
 
-echo "All branches merged successfully!"
+echo "Branch merging process completed!"
