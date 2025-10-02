@@ -68,6 +68,53 @@ export const AppRouter: React.FC = () => {
       <Route path="/blog/ai-2025-oct-next-gen-intelligent-automation-breakthrough" element={<NextGenIntelligentAutomationBreakthrough />} />
       <Route path="/blog/ai-2025-multiagent-enterprise-orchestration-revolution" element={<MultiAgentEnterpriseOrchestration />} />
       <Route path="/blog/ai-2025-cognitive-computing-enterprise-transformation" element={<CognitiveComputingTransformation />} />
+      
+      {/* Additional routes for missing pages */}
+      <Route path="/solutions/enterprise" element={<Solutions />} />
+      <Route path="/solutions/smb" element={<Solutions />} />
+      <Route path="/solutions/startup" element={<Solutions />} />
+      <Route path="/solutions/government" element={<Solutions />} />
+      <Route path="/solutions/healthcare" element={<Solutions />} />
+      <Route path="/solutions/financial" element={<Solutions />} />
+      <Route path="/solutions/manufacturing" element={<Solutions />} />
+      <Route path="/solutions/retail" element={<Solutions />} />
+      <Route path="/solutions/education" element={<Solutions />} />
+      <Route path="/solutions/transportation" element={<Solutions />} />
+      
+      {/* Resources routes */}
+      <Route path="/white-papers" element={<Resources />} />
+      <Route path="/webinars" element={<Resources />} />
+      <Route path="/docs" element={<Resources />} />
+      <Route path="/docs/api" element={<Resources />} />
+      <Route path="/developer-tools" element={<Resources />} />
+      <Route path="/training" element={<Resources />} />
+      <Route path="/community" element={<Resources />} />
+      
+      {/* Company routes */}
+      <Route path="/team" element={<About />} />
+      <Route path="/partners" element={<About />} />
+      <Route path="/news" element={<About />} />
+      <Route path="/press" element={<About />} />
+      <Route path="/investors" element={<About />} />
+      <Route path="/sustainability" element={<About />} />
+      <Route path="/diversity" element={<About />} />
+      <Route path="/careers" element={<About />} />
+      
+      {/* Additional service routes */}
+      <Route path="/quantum-computing" element={<Services />} />
+      <Route path="/cybersecurity" element={<Services />} />
+      <Route path="/cloud-devops" element={<Services />} />
+      <Route path="/iot-edge-computing" element={<Services />} />
+      <Route path="/digital-twin" element={<Services />} />
+      <Route path="/blockchain-web3" element={<Services />} />
+      <Route path="/space-tech" element={<Services />} />
+      
+      {/* Additional action routes */}
+      <Route path="/request-quote" element={<Contact />} />
+      <Route path="/privacy" element={<About />} />
+      <Route path="/terms" element={<About />} />
+      <Route path="/cookies" element={<About />} />
+      <Route path="/status" element={<Support />} />
     </Routes>
   );
 };
