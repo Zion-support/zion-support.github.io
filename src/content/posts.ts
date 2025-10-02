@@ -1449,10 +1449,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "8 min read"
-  }
-);
-// Sept 30, 2025 – Brand-new content to advertise on homepage (fresh trio v3)
-posts.push(
+  },
   {
     slug: "ai-operational-trust-scorecards-v2-2026",
     title: "AI Operational Trust Scorecards v2 (2026): SLIs, Budgets, Rollback",
