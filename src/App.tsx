@@ -1,93 +1,83 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import SiteHeader from "./components/SiteHeader";
-import SiteFooter from "./components/SiteFooter";
-import SiteSidebar from "./components/SiteSidebar";
-import HomePage from "./pages/HomePage";
-import ServicesPage from "./pages/ServicesPage";
-import SolutionsPage from "./pages/SolutionsPage";
-import AboutPage from "./pages/AboutPage";
-import ContactPage from "./pages/ContactPage";
-import BlogPage from "./pages/BlogPage";
-import CaseStudiesPage from "./pages/CaseStudiesPage";
-import Resources from "./pages/Resources";
-import Privacy from "./pages/Privacy";
-import Terms from "./pages/Terms";
-import CookiesPage from "./pages/Cookies";
-import SitemapPage from "./pages/Sitemap";
-import Careers from "./pages/Careers";
-import FAQ from "./pages/FAQ";
-import News from "./pages/News";
-import Marketplace from "./pages/Marketplace";
-import MarketplaceProducts from "./pages/MarketplaceProducts";
-import MarketplaceServices from "./pages/MarketplaceServices";
-import MarketplaceEquipment from "./pages/MarketplaceEquipment";
-import MarketplaceTalent from "./pages/MarketplaceTalent";
-import RequestQuote from "./pages/RequestQuote";
-import Login from "./pages/Login";
-import Signup from "./pages/Signup";
-import Status from "./pages/Status";
-import Help from "./pages/Help";
-import Security from "./pages/Security";
-import ResearchDevelopment from "./pages/ResearchDevelopment";
-import GreenIT from "./pages/GreenIT";
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+// Layout
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Sidebar from './components/Sidebar';
+
+// Core pages (already present in repo)
+import HomePage from './pages/HomePage';
+import ServicesPage from './pages/ServicesPage';
+import SolutionsPage from './pages/SolutionsPage';
+import AboutPage from './pages/AboutPage';
+import ContactPage from './pages/ContactPage';
+import BlogPage from './pages/BlogPage';
+import CaseStudiesPage from './pages/CaseStudiesPage';
+import Resources from './pages/Resources';
+import Pricing from './pages/Pricing';
+
+// Services (existing)
+import AISolutions from './pages/AISolutions';
+import ITServices from './pages/ITServices';
+import AIMicroSAAS from './pages/AIMicroSAAS';
+import CloudDevOps from './pages/services/CloudDevOps';
+import AIDataAnalytics from './pages/services/AIDataAnalytics';
+import AdvancedCybersecurityAI from './pages/services/AdvancedCybersecurityAI';
+import AIWorkflowAutomation from './pages/services/AIWorkflowAutomation';
+
+// Services (newly added in this update)
+import AIComplianceMonitor from './pages/services/AIComplianceMonitor';
+import SEOSplitTesting from './pages/services/SEOSplitTesting';
+import ImageCDNOptimizer from './pages/services/ImageCDNOptimizer';
 
 const App: React.FC = () => {
-	return (
-		<Router>
-			<div className="min-h-screen bg-gray-50">
-				<SiteHeader />
-				<main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 grid grid-cols-1 xl:grid-cols-[16rem_1fr] gap-8">
-					<SiteSidebar />
-					<div>
-						<Routes>
-							<Route path="/" element={<HomePage />} />
-							<Route path="/solutions/*" element={<SolutionsPage />} />
-							<Route path="/services/*" element={<ServicesPage />} />
-							<Route path="/about" element={<AboutPage />} />
-							<Route path="/contact" element={<ContactPage />} />
-							<Route path="/blog/*" element={<BlogPage />} />
-							<Route path="/case-studies" element={<CaseStudiesPage />} />
-							<Route path="/resources" element={<Resources />} />
-						<Route path="/careers" element={<Careers />} />
-						<Route path="/faq" element={<FAQ />} />
-						<Route path="/news" element={<News />} />
-						<Route path="/marketplace" element={<Marketplace />} />
-						<Route path="/marketplace/products" element={<MarketplaceProducts />} />
-						<Route path="/marketplace/services" element={<MarketplaceServices />} />
-						<Route path="/marketplace/equipment" element={<MarketplaceEquipment />} />
-						<Route path="/marketplace/talent" element={<MarketplaceTalent />} />
-						<Route path="/request-quote" element={<RequestQuote />} />
-						<Route path="/login" element={<Login />} />
-						<Route path="/signup" element={<Signup />} />
-						<Route path="/status" element={<Status />} />
-						<Route path="/help" element={<Help />} />
-						<Route path="/security" element={<Security />} />
-						<Route path="/research-development" element={<ResearchDevelopment />} />
-						<Route path="/green-it" element={<GreenIT />} />
-							<Route path="/privacy" element={<Privacy />} />
-							<Route path="/terms" element={<Terms />} />
-							<Route path="/cookies" element={<CookiesPage />} />
-							<Route path="/sitemap" element={<SitemapPage />} />
-							<Route
-								path="*"
-								element={
-									<div className="min-h-[40vh] flex items-center justify-center">
-										<div className="text-center">
-											<h1 className="text-5xl font-bold text-gray-300 mb-3">404</h1>
-											<p className="text-gray-600 mb-6">Page not found</p>
-											<a href="/" className="bg-blue-600 text-white px-5 py-2 rounded-md hover:bg-blue-700 transition-colors">Return Home</a>
-										</div>
-									</div>
-								}
-							/>
-						</Routes>
-					</div>
-				</main>
-				<SiteFooter />
-			</div>
-		</Router>
-	);
+  return (
+    <Router>
+      <div className="min-h-screen flex flex-col bg-white">
+        <Header />
+        <div className="flex-1">
+          <div className="container mx-auto px-6 py-6">
+            <div className="grid grid-cols-1 xl:grid-cols-[18rem_1fr] gap-8">
+              <div className="hidden xl:block">
+                <Sidebar />
+              </div>
+              <main className="min-w-0">
+                <Routes>
+                  <Route path="/" element={<HomePage />} />
+                  <Route path="/about" element={<AboutPage />} />
+                  <Route path="/contact" element={<ContactPage />} />
+                  <Route path="/blog" element={<BlogPage />} />
+                  <Route path="/case-studies" element={<CaseStudiesPage />} />
+                  <Route path="/resources" element={<Resources />} />
+                  <Route path="/pricing" element={<Pricing />} />
+
+                  {/* Services hub */}
+                  <Route path="/services" element={<ServicesPage />} />
+                  <Route path="/services/ai-services" element={<AISolutions />} />
+                  <Route path="/services/it-services" element={<ITServices />} />
+                  <Route path="/services/micro-saas" element={<AIMicroSAAS />} />
+                  <Route path="/services/cloud" element={<CloudDevOps />} />
+                  <Route path="/services/analytics" element={<AIDataAnalytics />} />
+                  <Route path="/services/security" element={<AdvancedCybersecurityAI />} />
+                  <Route path="/services/automation" element={<AIWorkflowAutomation />} />
+
+                  {/* New micro-SaaS services */}
+                  <Route path="/services/ai-compliance-monitor" element={<AIComplianceMonitor />} />
+                  <Route path="/services/seo-split-testing" element={<SEOSplitTesting />} />
+                  <Route path="/services/image-cdn-optimizer" element={<ImageCDNOptimizer />} />
+
+                  {/* Solutions hub */}
+                  <Route path="/solutions" element={<SolutionsPage />} />
+                </Routes>
+              </main>
+            </div>
+          </div>
+        </div>
+        <Footer />
+      </div>
+    </Router>
+  );
 };
 
 export default App;
