@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 
 const Header: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-3e47
 
   return (
     <header className="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50">
