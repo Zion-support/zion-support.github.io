@@ -14,36 +14,36 @@ const AccessibilityEnhancer: React.FC = () => {
     };
 
     // Focus management for modals and overlays
-    const trapFocus = (element: HTMLElement) => {
-      const focusableElements = element.querySelectorAll(
-        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-      );
-      const firstElement = focusableElements[0] as HTMLElement;
-      const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
+    // const trapFocus = (element: HTMLElement) => {
+    //   const focusableElements = element.querySelectorAll(
+    //     'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    //   );
+    //   const firstElement = focusableElements[0] as HTMLElement;
+    //   const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
 
-      const handleTabKey = (e: KeyboardEvent) => {
-        if (e.key === 'Tab') {
-          if (e.shiftKey) {
-            if (document.activeElement === firstElement) {
-              lastElement.focus();
-              e.preventDefault();
-            }
-          } else {
-            if (document.activeElement === lastElement) {
-              firstElement.focus();
-              e.preventDefault();
-            }
-          }
-        }
-      };
+    //   const handleTabKey = (e: KeyboardEvent) => {
+    //     if (e.key === 'Tab') {
+    //       if (e.shiftKey) {
+    //         if (document.activeElement === firstElement) {
+    //           lastElement.focus();
+    //           e.preventDefault();
+    //         }
+    //       } else {
+    //         if (document.activeElement === lastElement) {
+    //           firstElement.focus();
+    //           e.preventDefault();
+    //         }
+    //       }
+    //     }
+    //   };
 
-      element.addEventListener('keydown', handleTabKey);
-      firstElement?.focus();
+    //   element.addEventListener('keydown', handleTabKey);
+    //   firstElement?.focus();
 
-      return () => {
-        element.removeEventListener('keydown', handleTabKey);
-      };
-    };
+    //   return () => {
+    //     element.removeEventListener('keydown', handleTabKey);
+    //   };
+    // };
 
     // Add ARIA labels to interactive elements without labels
     const addAriaLabels = () => {

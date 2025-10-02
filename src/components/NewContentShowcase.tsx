@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, BookOpen, Rocket, Sparkles } from 'lucide-react';
+import { ArrowRight, BookOpen, Rocket } from 'lucide-react';
 
 // Mock data
 const newArticles2025 = [
