@@ -139,6 +139,18 @@ export default function HomePage() {
                 Get Started Today
               </a>
               <a 
+                href="/services/innovative-solutions-2025" 
+                className="bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-400 hover:to-red-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-orange-500/50 transform hover:-translate-y-1"
+              >
+                New 2025 Solutions →
+              </a>
+              <a 
+                href="/services-advertising" 
+                className="bg-gradient-to-r from-yellow-500 to-orange-600 hover:from-yellow-400 hover:to-orange-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-yellow-500/50 transform hover:-translate-y-1"
+              >
+                View Pricing →
+              </a>
+              <a 
                 href="/comprehensive-services" 
                 className="bg-gradient-to-r from-green-500 to-teal-600 hover:from-green-400 hover:to-teal-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
               >
@@ -444,6 +456,46 @@ export default function HomePage() {
               features={['Object Detection', 'Facial Recognition', 'Content Moderation', 'Custom Models', 'API Access']}
               to="/services/ai-image-recognition"
               popular={false}
+            />
+            <FeaturedServiceCard
+              title="AI Meeting Intelligence Platform"
+              description="Real-time meeting analysis with sentiment tracking, action item extraction, and automated follow-ups. Transform meetings into actionable insights."
+              price="$299/month"
+              features={['Real-time Transcription', 'Sentiment Analysis', 'Action Item Extraction', 'CRM Integration', 'Automated Follow-ups']}
+              to="/services/innovative-solutions-2025"
+              popular={true}
+            />
+            <FeaturedServiceCard
+              title="Smart Document Processing Suite"
+              description="AI-powered document analysis, extraction, and workflow automation. Process thousands of documents with 99.8% accuracy."
+              price="$199/month"
+              features={['OCR Processing', 'Data Extraction', 'Workflow Automation', 'Compliance Monitoring', 'API Integration']}
+              to="/services/innovative-solutions-2025"
+              popular={false}
+            />
+            <FeaturedServiceCard
+              title="Customer Experience Analytics Engine"
+              description="Multi-channel customer journey tracking with predictive analytics and personalization. Increase retention by 45%."
+              price="$399/month"
+              features={['Journey Mapping', 'Predictive Analytics', 'Personalization', 'A/B Testing', 'Advanced Segmentation']}
+              to="/services/innovative-solutions-2025"
+              popular={true}
+            />
+            <FeaturedServiceCard
+              title="Autonomous Business Process Orchestration"
+              description="Self-managing workflows that adapt and optimize business processes in real-time. Achieve 500% efficiency gains."
+              price="$2,999/month"
+              features={['Self-healing Automation', 'Dynamic Optimization', 'Cross-system Integration', 'Predictive Prevention', 'Real-time Monitoring']}
+              to="/services/innovative-solutions-2025"
+              popular={false}
+            />
+            <FeaturedServiceCard
+              title="Zero-Trust Security Architecture"
+              description="Comprehensive security framework with continuous verification and micro-segmentation. Reduce security incidents by 99.9%."
+              price="$4,999/month"
+              features={['Identity Management', 'Micro-segmentation', 'Continuous Monitoring', 'Threat Detection', 'Compliance Automation']}
+              to="/services/innovative-solutions-2025"
+              popular={true}
             />
           </div>
         </div>
