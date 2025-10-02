@@ -1557,6 +1557,10 @@ export const posts: BlogPost[] = [
     featured: true,
     readTime: "8 min read"
   }
+<<<<<<< HEAD
+]);
+=======
+>>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-c5bd
 
 // Sept 30, 2025 – Fresh articles to add and advertise on homepage
 posts.push(
