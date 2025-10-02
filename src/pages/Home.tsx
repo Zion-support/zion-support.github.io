@@ -182,6 +182,21 @@ const Home = () => {
             { title: "Operational AI Scorecards v2 — Gate Risk, Ship Faster (KPI-Linked SLIs, Rollback-First)", category: "AI Reliability", link: "/blog/ai-2025-oct-04-operational-ai-scorecards-v2" }
           ]}
         />
+
+        {/* Enterprise Solutions Showcase */}
+        <NewContentPromoBanner 
+          className="border-b border-white/10" 
+          variant="premium" 
+          title="🛡️ ENTERPRISE SOLUTIONS: AI Governance, Edge Computing, and Production-Ready Systems"
+          description="Scale your AI initiatives with enterprise-grade solutions: comprehensive governance achieving 95% compliance reduction, edge computing with sub-millisecond latency, and production-ready systems with automated monitoring."
+          ctaText="Explore Enterprise Solutions"
+          ctaLink="/blog"
+          featuredItems={[
+            { title: "Enterprise AI Governance — Risk Management & Compliance at Scale (95% Violation Reduction)", category: "AI Governance", link: "/blog/ai-2025-oct-04-enterprise-ai-governance" },
+            { title: "Edge Computing Optimization — Deploy AI at Network Edge (Sub-millisecond Latency)", category: "Edge Computing", link: "/blog/ai-2025-oct-04-edge-computing-optimization" },
+            { title: "Enterprise RAG Quality Budgets — Lift Correctness, Cut Spend (45% Quality + 38-62% Cost Reduction)", category: "RAG Engineering", link: "/blog/ai-2025-oct-04-enterprise-rag-quality-budgets" }
+          ]}
+        />
         
         {/* New Articles Promotional Banner */}
         <div className="container mx-auto px-6 mt-6">

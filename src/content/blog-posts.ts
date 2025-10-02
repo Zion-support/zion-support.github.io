@@ -121,6 +121,63 @@ Enterprise AI systems need to process and understand multiple data types simulta
     image: "/images/multimodal-ai-integration.jpg"
   },
   {
+    slug: "ai-2025-oct-04-enterprise-ai-governance",
+    title: "Enterprise AI Governance: Risk Management and Compliance at Scale",
+    description: "Implement comprehensive AI governance frameworks with automated risk assessment, compliance monitoring, and ethical AI practices.",
+    content: `
+# Enterprise AI Governance: Risk Management and Compliance at Scale
+
+Modern enterprises need robust AI governance to manage risks and ensure compliance across all AI systems.
+
+## Core Components
+- Automated risk assessment and monitoring
+- Compliance tracking and reporting
+- Ethical AI guidelines and enforcement
+- Model lifecycle management
+
+## Benefits
+- 95% reduction in compliance violations
+- 80% faster audit preparation
+- 60% cost savings in governance overhead
+    `,
+    author: "Zion Tech Group Governance Team",
+    date: "2025-10-04",
+    category: "AI Governance",
+    tags: ["Governance", "Compliance", "Risk Management", "Ethics"],
+    featured: true,
+    readTime: "12 min read",
+    image: "/images/enterprise-ai-governance.jpg"
+  },
+  {
+    slug: "ai-2025-oct-04-edge-computing-optimization",
+    title: "Edge Computing Optimization: Deploy AI at the Network Edge",
+    description: "Optimize AI inference at the edge with reduced latency, improved privacy, and enhanced performance for real-time applications.",
+    content: `
+# Edge Computing Optimization: Deploy AI at the Network Edge
+
+Edge computing brings AI closer to data sources, enabling real-time processing with enhanced privacy and reduced latency.
+
+## Key Features
+- Sub-millisecond inference latency
+- Privacy-preserving processing
+- Offline-capable AI models
+- Intelligent edge orchestration
+
+## Use Cases
+- Autonomous vehicles and IoT devices
+- Real-time video analytics
+- Industrial automation and control
+- Healthcare monitoring systems
+    `,
+    author: "Zion Tech Group Edge Computing",
+    date: "2025-10-04",
+    category: "Edge Computing",
+    tags: ["Edge", "IoT", "Latency", "Privacy"],
+    featured: true,
+    readTime: "11 min read",
+    image: "/images/edge-computing-optimization.jpg"
+  },
+  {
     slug: "ai-2025-oct-04-enterprise-agents-in-production",
     title: "Enterprise Agents in Production: Budgets, Approvals, and Rollback",
     description: "Practical patterns to run AI agents safely in prod with KPI-linked SLIs, action budgets, and instant rollback.",
