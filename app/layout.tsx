@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import Sidebar from '../components/Sidebar';
 import './globals.css';
 
 export const metadata = {
@@ -39,11 +40,21 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className="min-h-screen bg-white text-gray-900">
-        <Header />
-        <main className="max-w-6xl mx-auto px-4 py-6 min-h-screen">
-          {children}
-        </main>
-        <Footer />
+        <div className="flex">
+          {/* Sidebar */}
+          <div className="hidden md:block md:w-80 md:flex-shrink-0">
+            <Sidebar isOpen={true} onClose={() => {}} />
+          </div>
+          
+          {/* Main Content */}
+          <div className="flex-1 flex flex-col">
+            <Header />
+            <main className="flex-1 max-w-6xl mx-auto px-4 py-6 min-h-screen">
+              {children}
+            </main>
+            <Footer />
+          </div>
+        </div>
       </body>
     </html>
   );

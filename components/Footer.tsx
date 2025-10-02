@@ -11,6 +11,9 @@ const Footer: React.FC = () => {
       { name: 'IT Services', href: '/services/it-services-comprehensive' },
       { name: 'Blockchain Solutions', href: '/services/blockchain-solutions' },
       { name: 'Quantum Computing', href: '/services/ai-quantum-computing-2026' },
+      { name: 'Cloud Migration', href: '/services/cloud-migration-service' },
+      { name: 'Cybersecurity', href: '/services/cybersecurity-solutions' },
+      { name: 'Data Analytics', href: '/services/data-analytics-business-intelligence' },
       { name: 'Additional Services', href: '/additional-services' },
       { name: 'Comprehensive Services', href: '/comprehensive-services' },
     ],
@@ -19,6 +22,10 @@ const Footer: React.FC = () => {
       { name: 'Enterprise Solutions', href: '/enterprise' },
       { name: 'Innovative IT Solutions', href: '/innovative-it-solutions' },
       { name: 'Advanced AI Solutions', href: '/advanced-ai-solutions' },
+      { name: 'Healthcare Technology', href: '/services/healthcare-technology-solutions' },
+      { name: 'FinTech Solutions', href: '/services/financial-technology-solutions' },
+      { name: 'E-commerce Solutions', href: '/services/ecommerce-technology-solutions' },
+      { name: 'Manufacturing AI', href: '/services/manufacturing-ai-platform' },
     ],
     company: [
       { name: 'About Us', href: '/about' },
@@ -27,6 +34,8 @@ const Footer: React.FC = () => {
       { name: 'Contact', href: '/contact' },
       { name: 'Pricing', href: '/pricing' },
       { name: 'Support', href: '/support' },
+      { name: 'Partners', href: '/partners' },
+      { name: 'Portfolio', href: '/portfolio' },
     ],
     resources: [
       { name: 'All Resources', href: '/resources' },
@@ -36,6 +45,7 @@ const Footer: React.FC = () => {
       { name: 'Privacy Policy', href: '/privacy' },
       { name: 'Terms of Service', href: '/terms' },
       { name: 'Security', href: '/security' },
+      { name: 'Sitemap', href: '/sitemap' },
     ]
   };
 
