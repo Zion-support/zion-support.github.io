@@ -1,6 +1,26 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+export const metadata = {
+  title: 'Services — Zion Tech Group Revolutionary AI & IT Solutions',
+  description: 'Comprehensive AI services including Quantum Computing, Autonomous Enterprise Systems, AI ROI Optimization, and cutting-edge technology solutions.',
+  keywords: 'AI services, quantum computing, autonomous enterprise, AI ROI optimization, enterprise AI solutions, AI transformation services',
+  openGraph: {
+    title: 'Services — Zion Tech Group Revolutionary AI & IT Solutions',
+    description: 'Comprehensive AI services including Quantum Computing, Autonomous Enterprise Systems, AI ROI Optimization, and cutting-edge technology solutions.',
+    type: 'website',
+    url: 'https://ziontechgroup.com/services',
+    images: [
+      {
+        url: '/og-services.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Zion Tech Group AI Services - Revolutionary Solutions',
+      },
+    ],
+  },
+};
+
 export default function ServicesPage() {
   const serviceCategories = [
     {

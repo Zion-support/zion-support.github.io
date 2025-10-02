@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Globe, Mail, Phone, MapPin } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -7,21 +8,14 @@ const Footer: React.FC = () => {
   const footerLinks = {
     services: [
       { name: 'All Services', href: '/services' },
-      { name: 'AI Services', href: '/ai-services' },
+      { name: 'AI Services', href: '/services/ai-services' },
       { name: 'Micro SaaS', href: '/services/micro-saas' },
       { name: 'IT Services', href: '/services/it-services-comprehensive' },
       { name: 'Blockchain Solutions', href: '/services/blockchain-solutions' },
       { name: 'Quantum Computing', href: '/services/ai-quantum-computing-2026' },
       { name: 'Cloud Migration', href: '/services/cloud-migration-service' },
       { name: 'Cybersecurity', href: '/services/cybersecurity-solutions' },
-      { name: 'Data Analytics', href: '/services/data-analytics-business-intelligence' },
-      { name: 'Additional Services', href: '/additional-services' },
-      { name: 'Comprehensive Services', href: '/comprehensive-services' },
-      { name: 'AI Content Tools', href: '/services/ai-powered-content-tools' },
-      { name: 'Telemedicine Platform', href: '/services/telemedicine-platform' },
-      { name: 'Remote Collaboration', href: '/services/remote-collaboration-suite' },
-      { name: 'API Integration', href: '/services/api-integration-platform' },
-      { name: 'Customer Insights', href: '/services/ai-customer-insights-platform' },
+      { name: 'Data Analytics', href: '/services/data-analytics-business-intelligence' }
     ],
     solutions: [
       { name: 'All Solutions', href: '/solutions' },
@@ -31,7 +25,7 @@ const Footer: React.FC = () => {
       { name: 'Healthcare Technology', href: '/services/healthcare-technology-solutions' },
       { name: 'FinTech Solutions', href: '/services/financial-technology-solutions' },
       { name: 'E-commerce Solutions', href: '/services/ecommerce-technology-solutions' },
-      { name: 'Manufacturing AI', href: '/services/manufacturing-ai-platform' },
+      { name: 'Manufacturing AI', href: '/services/manufacturing-ai-platform' }
     ],
     company: [
       { name: 'About Us', href: '/about' },
@@ -41,7 +35,7 @@ const Footer: React.FC = () => {
       { name: 'Pricing', href: '/pricing' },
       { name: 'Support', href: '/support' },
       { name: 'Partners', href: '/partners' },
-      { name: 'Portfolio', href: '/portfolio' },
+      { name: 'Portfolio', href: '/portfolio' }
     ],
     resources: [
       { name: 'All Resources', href: '/resources' },
@@ -51,7 +45,7 @@ const Footer: React.FC = () => {
       { name: 'Privacy Policy', href: '/privacy' },
       { name: 'Terms of Service', href: '/terms' },
       { name: 'Security', href: '/security' },
-      { name: 'Sitemap', href: '/sitemap' },
+      { name: 'Sitemap', href: '/sitemap' }
     ]
   };
 
@@ -61,16 +55,13 @@ const Footer: React.FC = () => {
     { name: 'GitHub', href: '#', icon: '🐙' },
     { name: 'YouTube', href: '#', icon: '📺' },
   ];
-=======
-import { Globe, Mail, Phone, MapPin } from 'lucide-react';
 
-export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
-          <div className="lg:col-span-2">
+          <div className="col-span-1 md:col-span-2">
             <Link to="/" className="flex items-center space-x-2 mb-6">
               <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-lg">Z</span>
@@ -78,14 +69,6 @@ export default function Footer() {
               <span className="text-xl font-bold">Zion Tech Group</span>
             </Link>
             
-            <p className="text-gray-400 mb-6 leading-relaxed">
-              Leading technology solutions provider helping businesses transform their digital presence 
-              with cutting-edge AI, cloud architecture, and innovative development services.
-=======
-          <div className="col-span-1 md:col-span-2">
-            <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              Zion Tech Group
-            </h3>
             <p className="text-gray-300 mb-6 max-w-md">
               Revolutionary AI breakthroughs delivering 1000x performance gains, 95% automation, 
               and $150M+ ROI for Fortune 500 companies worldwide.
@@ -155,7 +138,7 @@ export default function Footer() {
               </div>
             </div>
 
-            <div className="flex space-x-4">
+            <div className="flex space-x-4 mt-6">
               {socialLinks.map((social) => (
                 <a
                   key={social.name}
@@ -167,57 +150,6 @@ export default function Footer() {
                 </a>
               ))}
             </div>
-          </div>
-
-          {/* Services */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Services</h3>
-            <ul className="space-y-2">
-              {footerLinks.services.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    to={link.href}
-                    className="text-gray-400 hover:text-white transition-colors"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Company */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Company</h3>
-            <ul className="space-y-2">
-              {footerLinks.company.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    to={link.href}
-                    className="text-gray-400 hover:text-white transition-colors"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Resources */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Resources</h3>
-            <ul className="space-y-2">
-              {footerLinks.resources.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    to={link.href}
-                    className="text-gray-400 hover:text-white transition-colors"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
           </div>
         </div>
 
@@ -240,14 +172,13 @@ export default function Footer() {
                 Subscribe
               </button>
             </div>
-=======
           </div>
         </div>
 
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">
-            © 2026 Zion Tech Group. All rights reserved.
+            © {currentYear} Zion Tech Group. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link to="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">
@@ -256,17 +187,14 @@ export default function Footer() {
             <Link to="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">
               Privacy Policy
             </Link>
-            <Link to="/sitemap" className="text-gray-400 hover:text-white text-sm transition-colors">Sitemap</Link>
-=======
-            <Link to="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">
-              Privacy Policy
-            </Link>
-            <Link to="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">
-              Terms of Service
+            <Link to="/sitemap" className="text-gray-400 hover:text-white text-sm transition-colors">
+              Sitemap
             </Link>
           </div>
         </div>
       </div>
     </footer>
   );
-}
+};
+
+export default Footer;
