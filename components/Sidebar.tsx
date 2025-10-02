@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 interface SidebarProps {
   isOpen: boolean;
@@ -92,7 +92,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       `}>
         {/* Header */}
         <div className="flex items-center justify-between p-6 border-b border-gray-200">
-          <Link href="/" className="flex items-center space-x-2" onClick={onClose}>
+          <Link to="/" className="flex items-center space-x-2" onClick={onClose}>
             <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-sm">Z</span>
             </div>
@@ -121,7 +121,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                   {section.items.map((item) => (
                     <Link
                       key={item.name}
-                      href={item.href}
+                      to={item.href}
                       className="flex items-center space-x-3 px-3 py-2 rounded-lg text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors group"
                       onClick={onClose}
                     >
@@ -140,7 +140,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           <div className="px-6 py-4 border-t border-gray-200">
             <div className="space-y-3">
               <Link
-                href="/contact"
+                to="/contact"
                 className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 w-full text-center"
                 onClick={onClose}
               >
@@ -148,7 +148,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               </Link>
               
               <Link
-                href="/pricing"
+                to="/pricing"
                 className="inline-block border-2 border-blue-600 text-blue-600 px-4 py-2 rounded-lg font-semibold hover:bg-blue-50 transition-colors w-full text-center"
                 onClick={onClose}
               >
