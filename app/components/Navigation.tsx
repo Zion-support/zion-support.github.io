@@ -198,6 +198,7 @@ export function Header() {
           </div>
 
           <Link href="/about" className="text-gray-700 hover:text-blue-600 transition-colors">About</Link>
+          <Link href="/portfolio" className="text-gray-700 hover:text-blue-600 transition-colors">Portfolio</Link>
           <Link href="/contact" className="text-gray-700 hover:text-blue-600 transition-colors">Contact</Link>
           
           {/* Featured Success Stories */}
@@ -340,6 +341,7 @@ export function Header() {
 
             {/* Direct Links */}
             <Link href="/about" className="block font-medium text-gray-700 hover:text-blue-600">About</Link>
+            <Link href="/portfolio" className="block font-medium text-gray-700 hover:text-blue-600">Portfolio</Link>
             <Link href="/contact" className="block font-medium text-gray-700 hover:text-blue-600">Contact</Link>
             
             {/* Success Stories */}
@@ -422,6 +424,9 @@ export function Footer() {
             <div className="space-y-3 mb-6">
               <Link href="/about" className="block text-gray-600 hover:text-blue-600 transition-colors">
                 About Us
+              </Link>
+              <Link href="/portfolio" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                Portfolio
               </Link>
               <Link href="/contact" className="block text-gray-600 hover:text-blue-600 transition-colors">
                 Contact
