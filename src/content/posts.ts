@@ -1585,7 +1585,7 @@ export const posts: BlogPost[] = [
     featured: true,
     readTime: "8 min read"
   }
-);
+];
 
 // Sept 30, 2025 – New articles to expand catalog and promote on homepage
 posts.push(
@@ -1989,4 +1989,4 @@ posts.push(
     featured: true,
     readTime: "7 min read"
   }
-];
+);
