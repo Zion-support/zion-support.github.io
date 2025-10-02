@@ -132,6 +132,66 @@ const ServicesPage: React.FC<ServicesPageProps> = ({ service, category }) => {
       ],
       stats: { value: '99.97%', label: 'Threat Prevention' },
       color: 'from-gray-500 to-slate-600'
+    },
+    {
+      id: 'edge-ai-inference',
+      title: 'Edge AI Inference Platform',
+      description: 'Deploy compact, low-latency AI models to edge devices with OTA updates and observability.',
+      icon: Zap,
+      features: [
+        'Hardware-aware model optimization',
+        'Online/offline fallback and caching',
+        'Shadow deployments and A/B tests',
+        'Fleet telemetry and drift detection',
+        'Secure OTA updates with rollback'
+      ],
+      stats: { value: '<10ms', label: 'On-device inference' },
+      color: 'from-cyan-500 to-blue-600'
+    },
+    {
+      id: 'email-deliverability-optimizer',
+      title: 'Email Deliverability Optimizer',
+      description: 'Boost sender reputation, warm up inboxes, and maximize inbox placement automatically.',
+      icon: Brain,
+      features: [
+        'Reputation monitoring and alerts',
+        'Automated warm-up sequences',
+        'SPF/DKIM/DMARC assistant',
+        'Seed list testing and analytics',
+        'ESP integrations (SES, SendGrid, Mailgun)'
+      ],
+      stats: { value: '25-40%', label: 'Open rate lift' },
+      color: 'from-amber-500 to-orange-600'
+    },
+    {
+      id: 'sales-playbook-copilot',
+      title: 'Sales Playbook Copilot',
+      description: 'Adaptive AI that personalizes outreach, follow-ups, and mutual action plans by ICP.',
+      icon: Users,
+      features: [
+        'ICP and persona modeling',
+        'Sequence experimentation and guardrails',
+        'Meeting summarization to CRM',
+        'Deal risk signals and nudges',
+        'Auto-CSAT and NPS follow-ups'
+      ],
+      stats: { value: '30-60%', label: 'Reply rate improvement' },
+      color: 'from-fuchsia-500 to-pink-600'
+    },
+    {
+      id: 'code-quality-gatekeeper',
+      title: 'Code Quality Gatekeeper',
+      description: 'Policy-as-code quality gates with AI-powered static analysis and auto-fixes in PRs.',
+      icon: Shield,
+      features: [
+        'Repo-wide rules and waivers',
+        'AI suggestions with diffs',
+        'Security patterns and supply-chain checks',
+        'Test coverage enforcement',
+        'Language support for TS/JS, Python, Go'
+      ],
+      stats: { value: '70%', label: 'Defects caught pre-merge' },
+      color: 'from-slate-500 to-gray-700'
     }
   ];
 
@@ -240,6 +300,40 @@ const ServicesPage: React.FC<ServicesPageProps> = ({ service, category }) => {
                   </motion.li>
                 ))}
               </ul>
+
+              {/* Pricing Tiers */}
+              <div className="mt-10">
+                <h4 className="text-xl font-semibold text-gray-900 mb-4">Pricing</h4>
+                <div className="grid sm:grid-cols-2 gap-4">
+                  <div className="border rounded-lg p-4">
+                    <div className="text-gray-900 font-semibold">Growth</div>
+                    <div className="text-2xl font-bold text-purple-600 mt-1">$149/mo</div>
+                    <div className="text-sm text-gray-500">Best for startups and SMBs</div>
+                  </div>
+                  <div className="border rounded-lg p-4">
+                    <div className="text-gray-900 font-semibold">Scale</div>
+                    <div className="text-2xl font-bold text-purple-600 mt-1">$499/mo</div>
+                    <div className="text-sm text-gray-500">Advanced features and SLAs</div>
+                  </div>
+                </div>
+                <p className="text-sm text-gray-500 mt-2">Enterprise pricing available on request.</p>
+              </div>
+
+              {/* Reference Links */}
+              <div className="mt-6">
+                <h4 className="text-sm font-semibold text-gray-900 mb-2">Learn more</h4>
+                <ul className="list-disc list-inside text-sm text-blue-600">
+                  <li>
+                    <a href="https://developers.google.com/machine-learning" target="_blank" rel="noopener noreferrer">ML engineering best practices</a>
+                  </li>
+                  <li>
+                    <a href="https://owasp.org/www-project-top-ten/" target="_blank" rel="noopener noreferrer">OWASP Top 10 (security)</a>
+                  </li>
+                  <li>
+                    <a href="https://12factor.net/" target="_blank" rel="noopener noreferrer">12-Factor App methodology</a>
+                  </li>
+                </ul>
+              </div>
             </motion.div>
           </div>
         </div>

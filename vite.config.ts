@@ -99,29 +99,7 @@ export default defineConfig({
             return 'vendor-large';
           }
           return 'vendor';
-        }
-        
-        // App chunks - feature-based splitting
-        if (id.includes('src/pages/services/')) {
-          return 'pages-services';
-        }
-        if (id.includes('src/pages/case-studies/')) {
-          return 'pages-case-studies';
-        }
-        if (id.includes('src/pages/blog/')) {
-          return 'pages-blog';
-        }
-        if (id.includes('src/components/')) {
-          return 'components';
-        }
-        if (id.includes('src/utils/')) {
-          return 'utils';
-        }
-        if (id.includes('src/hooks/')) {
-          return 'hooks';
-        }
-        return 'app';
-      },
+        },
         chunkFileNames: 'assets/js/[name]-[hash].js',
         entryFileNames: 'assets/js/main-[hash].js',
         assetFileNames: (assetInfo) => {
