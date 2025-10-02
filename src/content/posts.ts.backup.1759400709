@@ -1560,6 +1560,8 @@ posts.push(
     readTime: "8 min read"
   }
 );
+<<<<<<< HEAD
+=======
 
 // Sept 30, 2025 – Fresh articles to add and advertise on homepage
 posts.push({
@@ -1571,6 +1573,7 @@ posts.push({
   featured: true,
   readTime: "6 min read"
 });
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-20ac
 
 // Sept 30, 2025 – Fresh articles to add and advertise on homepage
 posts.push({
