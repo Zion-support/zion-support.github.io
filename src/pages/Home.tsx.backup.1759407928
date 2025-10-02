@@ -40,8 +40,13 @@ const Home = () => {
       featured: true
     }
   ];
+<<<<<<< HEAD
+
+  // Removed stray malformed array/object block that caused parse errors
+=======
   
   // Additional curated items could be defined here in the future
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7aa2
 
   return (
     <>

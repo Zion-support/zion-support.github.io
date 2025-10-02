@@ -6,6 +6,10 @@ import { Helmet } from 'react-helmet-async';
 const Support: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7aa2
   const contactMethods = [
     {
       icon: Phone,
@@ -112,6 +116,8 @@ const Support: React.FC = () => {
     return matchesCategory && matchesQuery;
   });
 
+<<<<<<< HEAD
+=======
   const quickActions = [
     { title: 'Report a Bug', description: 'Found an issue? Let us know', link: '/contact', icon: '🐛' },
     { title: 'Request a Feature', description: "Have an idea? We'd love to hear it", link: '/contact', icon: '💡' },
@@ -119,6 +125,7 @@ const Support: React.FC = () => {
     { title: 'View Status Page', description: 'Check system status and uptime', link: '/status', icon: '📊' }
   ];
 
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7aa2
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}

@@ -17,6 +17,10 @@ import {
   Smartphone,
   MessageSquare,
   Zap,
+<<<<<<< HEAD
+  
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7aa2
   Settings,
   Monitor,
   Cpu,
@@ -141,11 +145,19 @@ export default function ITServices(): React.JSX.Element {
     },
     {
       id: "network-infrastructure",
+<<<<<<< HEAD
+      name: "Enterprise Network Infrastructure"
+      blurb: "High-performance network design with SD-WAN and security integration"
+      price: "$3,000 - $15,000/month"
+      eta: "2-6 weeks"
+      category: "Network Solutions"
+=======
       name: "Enterprise Network Infrastructure",
       blurb: "High-performance network design with SD-WAN and security integration",
       price: "$3,000 - $15,000/month",
       eta: "2-6 weeks",
       category: "Network Solutions",
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7aa2
       icon: Network,
       features: [
         "SD-WAN implementation and optimization",
@@ -168,11 +180,19 @@ export default function ITServices(): React.JSX.Element {
     },
     {
       id: "compliance-automation",
+<<<<<<< HEAD
+      name: "Compliance Automation Suite"
+      blurb: "Automated compliance monitoring for SOC 2, HIPAA, GDPR, and industry standards"
+      price: "$2,000 - $10,000/month"
+      eta: "2-4 weeks"
+      category: "Compliance & Governance"
+=======
       name: "Compliance Automation Suite",
       blurb: "Automated compliance monitoring for SOC 2, HIPAA, GDPR, and industry standards",
       price: "$2,000 - $10,000/month",
       eta: "2-4 weeks",
       category: "Compliance & Governance",
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7aa2
       icon: Lock,
       features: [
         "Automated compliance monitoring and reporting",
@@ -204,20 +224,35 @@ export default function ITServices(): React.JSX.Element {
     },
     {
       name: "24/7 IT Support & Monitoring",
+<<<<<<< HEAD
+      description: "Round-the-clock IT support with proactive monitoring"
+      price: "$800 - $3,000/month"
+=======
       description: "Round-the-clock IT support with proactive monitoring",
       price: "$800 - $3,000/month",
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7aa2
       features: ["24/7 helpdesk", "Proactive monitoring", "Remote support", "SLA guarantees"]
     },
     {
       name: "Backup & Disaster Recovery",
+<<<<<<< HEAD
+      description: "Automated backup solutions with disaster recovery planning"
+      price: "$500 - $2,500/month"
+=======
       description: "Automated backup solutions with disaster recovery planning",
       price: "$500 - $2,500/month",
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7aa2
       features: ["Automated backups", "Disaster recovery", "Business continuity", "Data protection"]
     },
     {
       name: "IT Consulting & Strategy",
+<<<<<<< HEAD
+      description: "Strategic IT planning and digital transformation consulting"
+      price: "$200 - $500/hour"
+=======
       description: "Strategic IT planning and digital transformation consulting",
       price: "$200 - $500/hour",
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7aa2
       features: ["Strategic planning", "Technology roadmap", "Vendor selection", "Implementation guidance"]
     }
   ];
