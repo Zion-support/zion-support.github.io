@@ -113,6 +113,33 @@ export default function AIServices() {
             Learn More →
           </Link>
         </div>
+
+        <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
+          <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
+            <svg className="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 1.79-3 4s1.343 4 3 4 3-1.79 3-4-1.343-4-3-4z" />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 12a6 6 0 0112 0 6 6 0 01-12 0z" />
+            </svg>
+          </div>
+          <h3 className="text-xl font-semibold text-gray-900 mb-3">AI Governance & Risk</h3>
+          <p className="text-gray-600 mb-4">Operationalize responsible AI with model inventory, evals, and audit trails.</p>
+          <Link href="/services/ai-services/ai-governance-risk-platform" className="text-blue-600 hover:text-blue-800 font-medium">
+            Learn More →
+          </Link>
+        </div>
+
+        <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
+          <div className="w-12 h-12 bg-pink-100 rounded-lg flex items-center justify-center mb-4">
+            <svg className="w-6 h-6 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+          </div>
+          <h3 className="text-xl font-semibold text-gray-900 mb-3">Multimodal Search</h3>
+          <p className="text-gray-600 mb-4">Search text, images, audio, and video with hybrid retrieval and analytics.</p>
+          <Link href="/services/ai-services/multimodal-search-platform" className="text-blue-600 hover:text-blue-800 font-medium">
+            Learn More →
+          </Link>
+        </div>
       </div>
 
       <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-8 rounded-lg mb-12">

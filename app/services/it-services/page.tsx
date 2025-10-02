@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Metadata } from 'next';
 import Link from 'next/link';
 
@@ -112,6 +111,32 @@ export default function ITServices() {
             Transform your data into actionable insights with advanced analytics and business intelligence solutions.
           </p>
           <Link href="/services/ai-data-analytics" className="text-blue-600 hover:text-blue-800 font-medium">
+            Learn More →
+          </Link>
+        </div>
+
+        <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
+          <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-4">
+            <svg className="w-6 h-6 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 7h18M3 12h18M3 17h18" />
+            </svg>
+          </div>
+          <h3 className="text-xl font-semibold text-gray-900 mb-3">Managed Kubernetes</h3>
+          <p className="text-gray-600 mb-4">EKS/AKS/GKE design, upgrades, security hardening, and 24/7 SRE.</p>
+          <Link href="/services/it-services/managed-kubernetes" className="text-blue-600 hover:text-blue-800 font-medium">
+            Learn More →
+          </Link>
+        </div>
+
+        <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
+          <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4">
+            <svg className="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M12 2a10 10 0 100 20 10 10 0 000-20z" />
+            </svg>
+          </div>
+          <h3 className="text-xl font-semibold text-gray-900 mb-3">Observability Platform</h3>
+          <p className="text-gray-600 mb-4">Unified logs, metrics, traces, SLOs, and actionable alerting.</p>
+          <Link href="/services/it-services/observability-platform" className="text-blue-600 hover:text-blue-800 font-medium">
             Learn More →
           </Link>
         </div>
