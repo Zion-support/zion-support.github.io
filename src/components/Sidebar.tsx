@@ -68,10 +68,6 @@ const Sidebar: React.FC = () => {
               {section.links.map((link, linkIndex) => (
                 <Link
                   key={linkIndex}
-<<<<<<< HEAD
-                  href={link.path}
-                  className={`block px-3 py-2 rounded-md text-sm transition-colors ${
-=======
                   to={link.path}
                   className={`block px-3 py-2 rounded-md text-sm transition-colors ${
                     isActive(link.path)
