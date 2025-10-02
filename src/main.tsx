@@ -1,23 +1,25 @@
-import React from "react";";
-import { createRoot } from "react-dom/client";";
-import App from "./AppSafe";";
+import React from "react"
+import { createRoot } from "react-dom/client"
+import App from "./App"
 
 async function reportWebVitals() {
   try {
-    const { onCLS, onLCP, onFCP, onTTFB } = await import("web-vitals");";
+    const { onCLS, onFID, onLCP, onFCP, onTTFB, onINP } = await import("web-vitals");
     const log = (metric: { name: string; value: number }) => {
-      console.log(`[WebVitals] ${metric.name}:`, Math.round(metric.value));`;
+      console.log(`[WebVitals] ${metric.name}:`, Math.round(metric.value));
     };
     onCLS(log);
+    onFID(log);
     onLCP(log);
     onFCP(log);
     onTTFB(log);
+    if (onINP) onINP(log as (metric: { name: string; value: number }) => void);
   } catch {
     // ignore in unsupported environments
   }
 }
 
-const container = document.getElementById("root");";
+const container = document.getElementById("root");
 if (container) {
   const root = createRoot(container);
   root.render(
@@ -25,13 +27,13 @@ if (container) {
       <App />
     </React.StrictMode>
   );
-  if (import.meta.env && import.meta.env.PROD) {
+  if (import.meta.env.PROD) {
     void reportWebVitals();
   }
 }
 
-if (typeof window !== "undefined" && "serviceWorker" in navigator) {";
-  window.addEventListener("load", () => {";
-    void navigator.serviceWorker.register("/sw.js").catch(() => {});";
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("/sw.js").catch(() => {});
   });
-};
+}

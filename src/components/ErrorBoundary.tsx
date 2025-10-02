@@ -1,59 +1,44 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';';
-import { AlertTriangle } from 'lucide-react';';
+import React, { Component, ErrorInfo, ReactNode } from 'react';
 
 interface Props {
-  children: ReactNode;
+  children?: ReactNode;
 }
 
 interface State {
-  hasError: boolean;,
-  error?: Error;
+  hasError: boolean;
 }
 
 class ErrorBoundary extends Component<Props, State> {
-  public state: State = {,
-    hasError: false,
+  public state: State = {
+    hasError: false
   };
 
-  public static getDerivedStateFromError(error: Error): State {,
-    return { hasError: true, error };
+  public static getDerivedStateFromError(_: Error): State {
+    // Update state so the next render will show the fallback UI.
+    return { hasError: true };
   }
 
-  public componentDidCatch(error: Error, errorInfo: ErrorInfo) {,
-    console.error('Uncaught error: ', error, errorInfo);';,
+  public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    console.error("Uncaught error:", error, errorInfo);
+    // You can also log the error to an error reporting service
+    // logErrorToMyService(error, errorInfo);
   }
 
   public render() {
     if (this.state.hasError) {
+      // You can render any custom fallback UI
       return (
-        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-red-50 to-orange-50">";
-          <div className="max-w-md w-full mx-4">";
-            <div className="bg-white rounded-2xl shadow-xl p-8 text-center">";
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-red-100 mb-4">";
-                <AlertTriangle className="w-8 h-8 text-red-600" />";
-              </div>
-              <h1 className="text-2xl font-bold text-gray-900 mb-2">";
-                Oops! Something went wrong
-              </h1>
-              <p className="text-gray-600 mb-6">";
-                We're sorry for the inconvenience. Please try refreshing the page.';
-              </p>
-              <div className="space-y-3">";
-                <button
-                  onClick={() => window.location.reload()}
-                  className="w-full bg-red-600 hover: bg-red-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors",
-                >
-                  Refresh Page
-                </button>
-                <a
-                  href="/"
-                  className="block w-full border-2 border-red-600 text-red-600 hover: bg-red-50 font-semibold py-3 px-6 rounded-lg transition-colors",
-                >
-                  Go to Homepage
-                </a>
-              </div>
-            </div>
-          </div>
+        <div className="flex flex-col items-center justify-center min-h-screen bg-red-900 text-white p-4">
+          <h1 className="text-4xl font-bold mb-4">Oops! Something went wrong.</h1>
+          <p className="text-lg text-center mb-6">
+            We're sorry for the inconvenience. Please try refreshing the page or contact support if the issue persists.
+          </p>
+          <button
+            className="bg-white text-red-700 font-semibold py-2 px-4 rounded-lg shadow hover:bg-gray-100 transition-colors"
+            onClick={() => window.location.reload()}
+          >
+            Refresh Page
+          </button>
         </div>
       );
     }
@@ -63,4 +48,3 @@ class ErrorBoundary extends Component<Props, State> {
 }
 
 export default ErrorBoundary;
-;
