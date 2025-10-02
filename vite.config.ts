@@ -26,6 +26,7 @@ export default defineConfig({
     minify: 'terser',
     cssMinify: true,
     target: 'es2020',
+    reportCompressedSize: false,
     rollupOptions: {
       input: {
         main: './index.html'
@@ -51,9 +52,6 @@ export default defineConfig({
             // Group utility libraries
             if (id.includes('clsx') || id.includes('tailwind-merge') || id.includes('axios')) {
               return 'vendor-utils';
-            }
-            if (id.includes('axios')) {
-              return 'vendor-http';
             }
             return 'vendor';
           }

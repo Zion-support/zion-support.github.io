@@ -111,11 +111,7 @@ class SEOAuditor {
         this.addIssue('warning', 'metadata', 'Title is too long', 'title', 'Keep title under 60 characters to avoid truncation', 'medium');
       }
     } else {
-      this.addIssue('error', 'metadata', 'Title tag is missing', 'head', 'Add a <title> tag to the <head>
-    <meta name="twitter:site" content="@ziontechgroup" />
-    <meta property="og:site_name" content="Zion Tech Group" />
-    <meta name="theme-color" content="#1e40af" />
-    <meta name="author" content="Zion Tech Group" />', 'high');
+      this.addIssue('error', 'metadata', 'Title tag is missing', 'head', 'Add a <title> tag to the <head> section', 'high');
     }
 
     // Meta description

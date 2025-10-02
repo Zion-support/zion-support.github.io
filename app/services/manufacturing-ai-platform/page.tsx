@@ -1,51 +1,326 @@
 import React from 'react';
+<<<<<<< HEAD
+import { Metadata } from 'next';
 import Link from 'next/link';
 
-export const metadata = {
-  title: 'Manufacturing AI Platform: Predictive Maintenance & Quality Control | Zion Tech Group',
-  description: 'Transform manufacturing with AI-powered predictive maintenance, quality control, and supply chain optimization. Achieve 99.9% uptime and 95% fewer defects.',
-  keywords: 'manufacturing AI, predictive maintenance, quality control, supply chain optimization, industrial AI',
+export const metadata: Metadata = {
+  title: 'Manufacturing AI Platform - Zion Tech Group',
+  description: 'Revolutionary AI platform for manufacturing optimization, predictive maintenance, quality control, and autonomous operations.',
+  keywords: 'manufacturing AI, industrial AI, predictive maintenance, quality control, smart manufacturing',
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function ManufacturingAIPlatform() {
   return (
-    <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-green-600 via-emerald-600 to-teal-600 text-white py-20">
-        <div className="max-w-6xl mx-auto px-4">
+    <div className="max-w-6xl mx-auto px-4 py-8">
+      <div className="text-center mb-12">
+        <h1 className="text-4xl font-bold text-gray-900 mb-4">Manufacturing AI Platform</h1>
+        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          Transform your manufacturing operations with our comprehensive AI platform. 
+          Achieve unprecedented efficiency, quality, and predictive capabilities.
+        </p>
+      </div>
+
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
+          <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+            <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+            </svg>
+          </div>
+          <h3 className="text-xl font-semibold text-gray-900 mb-3">Predictive Maintenance</h3>
+          <p className="text-gray-600 mb-4">
+            Prevent equipment failures before they happen with AI-powered predictive maintenance algorithms.
+          </p>
+          <Link href="/case-studies/ai-automation-manufacturing-success-2026" className="text-blue-600 hover:text-blue-800 font-medium">
+            Learn More →
+          </Link>
+        </div>
+
+        <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
+          <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+            <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 className="text-xl font-semibold text-gray-900 mb-3">Quality Control</h3>
+          <p className="text-gray-600 mb-4">
+            Automated quality inspection and defect detection using computer vision and machine learning.
+          </p>
+          <Link href="/case-studies/ai-manufacturing-excellence-2026" className="text-blue-600 hover:text-blue-800 font-medium">
+            Learn More →
+          </Link>
+        </div>
+
+        <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
+          <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+            <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </div>
+          <h3 className="text-xl font-semibold text-gray-900 mb-3">Process Optimization</h3>
+          <p className="text-gray-600 mb-4">
+            Optimize production processes in real-time with AI-driven decision making and automation.
+          </p>
+          <Link href="/services/ai-autonomous-operations" className="text-blue-600 hover:text-blue-800 font-medium">
+            Learn More →
+          </Link>
+        </div>
+
+        <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
+          <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
+            <svg className="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+            </svg>
+          </div>
+          <h3 className="text-xl font-semibold text-gray-900 mb-3">Supply Chain Intelligence</h3>
+          <p className="text-gray-600 mb-4">
+            Intelligent supply chain management with demand forecasting and inventory optimization.
+          </p>
+          <Link href="/services/supply-chain-intelligence" className="text-blue-600 hover:text-blue-800 font-medium">
+            Learn More →
+          </Link>
+        </div>
+
+        <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
+          <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
+            <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <h3 className="text-xl font-semibold text-gray-900 mb-3">Computer Vision</h3>
+          <p className="text-gray-600 mb-4">
+            Advanced visual inspection systems for real-time monitoring and quality assurance.
+          </p>
+          <Link href="/services/ai-virtual-assistant" className="text-blue-600 hover:text-blue-800 font-medium">
+            Learn More →
+          </Link>
+        </div>
+
+        <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
+          <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
+            <svg className="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+            </svg>
+          </div>
+          <h3 className="text-xl font-semibold text-gray-900 mb-3">Safety Monitoring</h3>
+          <p className="text-gray-600 mb-4">
+            AI-powered safety systems to prevent accidents and ensure compliance with regulations.
+          </p>
+          <Link href="/security" className="text-blue-600 hover:text-blue-800 font-medium">
+            Learn More →
+          </Link>
+        </div>
+      </div>
+
+      <div className="bg-gradient-to-r from-blue-50 to-green-50 p-8 rounded-lg mb-12">
+        <h2 className="text-3xl font-bold text-gray-900 mb-6">Manufacturing AI Platform Features</h2>
+        <div className="grid md:grid-cols-2 gap-8">
+          <div>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Real-Time Analytics</h3>
+            <ul className="space-y-3 text-gray-700">
+              <li className="flex items-start">
+                <span className="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center mr-3 mt-0.5">
+                  <span className="text-blue-600 text-sm font-semibold">✓</span>
+                </span>
+                <span>Live production monitoring and performance analytics</span>
+              </li>
+              <li className="flex items-start">
+                <span className="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center mr-3 mt-0.5">
+                  <span className="text-blue-600 text-sm font-semibold">✓</span>
+                </span>
+                <span>Predictive maintenance with 95% accuracy</span>
+              </li>
+              <li className="flex items-start">
+                <span className="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center mr-3 mt-0.5">
+                  <span className="text-blue-600 text-sm font-semibold">✓</span>
+                </span>
+                <span>Quality control automation with computer vision</span>
+              </li>
+              <li className="flex items-start">
+                <span className="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center mr-3 mt-0.5">
+                  <span className="text-blue-600 text-sm font-semibold">✓</span>
+                </span>
+                <span>Energy consumption optimization</span>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Advanced Capabilities</h3>
+            <ul className="space-y-3 text-gray-700">
+              <li className="flex items-start">
+                <span className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mr-3 mt-0.5">
+                  <span className="text-green-600 text-sm font-semibold">✓</span>
+                </span>
+                <span>Autonomous production line management</span>
+              </li>
+              <li className="flex items-start">
+                <span className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mr-3 mt-0.5">
+                  <span className="text-green-600 text-sm font-semibold">✓</span>
+                </span>
+                <span>Supply chain demand forecasting</span>
+              </li>
+              <li className="flex items-start">
+                <span className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mr-3 mt-0.5">
+                  <span className="text-green-600 text-sm font-semibold">✓</span>
+                </span>
+                <span>Worker safety monitoring and alerts</span>
+              </li>
+              <li className="flex items-start">
+                <span className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mr-3 mt-0.5">
+                  <span className="text-green-600 text-sm font-semibold">✓</span>
+                </span>
+                <span>Digital twin technology integration</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-white p-8 rounded-lg shadow-lg border border-gray-200 mb-12">
+        <h2 className="text-3xl font-bold text-gray-900 mb-6">Implementation Process</h2>
+        <div className="grid md:grid-cols-4 gap-6">
           <div className="text-center">
-            <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-white/20 border border-white/30 mb-8">
-              <span className="text-green-200 font-bold text-lg tracking-wide uppercase">
-                🏭 Manufacturing AI Platform
-              </span>
+            <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <span className="text-2xl font-bold text-blue-600">1</span>
             </div>
-            
-            <h1 className="text-4xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-green-200 via-emerald-200 to-teal-200 bg-clip-text text-transparent">
-              AI-Powered Manufacturing Revolution
+            <h3 className="font-semibold text-gray-900 mb-2">Assessment</h3>
+            <p className="text-gray-600 text-sm">Analyze current manufacturing processes and identify AI opportunities</p>
+          </div>
+          <div className="text-center">
+            <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <span className="text-2xl font-bold text-green-600">2</span>
+            </div>
+            <h3 className="font-semibold text-gray-900 mb-2">Integration</h3>
+            <p className="text-gray-600 text-sm">Seamlessly integrate AI sensors and systems with existing infrastructure</p>
+          </div>
+          <div className="text-center">
+            <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <span className="text-2xl font-bold text-purple-600">3</span>
+            </div>
+            <h3 className="font-semibold text-gray-900 mb-2">Training</h3>
+            <p className="text-gray-600 text-sm">Train AI models on your specific manufacturing data and processes</p>
+          </div>
+          <div className="text-center">
+            <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <span className="text-2xl font-bold text-orange-600">4</span>
+            </div>
+            <h3 className="font-semibold text-gray-900 mb-2">Optimization</h3>
+            <p className="text-gray-600 text-sm">Continuously optimize AI models for maximum efficiency and accuracy</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="grid md:grid-cols-2 gap-8 mb-12">
+        <div className="bg-white p-8 rounded-lg shadow-lg border border-gray-200">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">ROI Benefits</h2>
+          <div className="space-y-4">
+            <div className="flex items-center justify-between">
+              <span className="text-gray-700">Reduced Downtime</span>
+              <span className="text-green-600 font-semibold">-40%</span>
+            </div>
+            <div className="flex items-center justify-between">
+              <span className="text-gray-700">Quality Improvement</span>
+              <span className="text-green-600 font-semibold">+25%</span>
+            </div>
+            <div className="flex items-center justify-between">
+              <span className="text-gray-700">Energy Savings</span>
+              <span className="text-green-600 font-semibold">-30%</span>
+            </div>
+            <div className="flex items-center justify-between">
+              <span className="text-gray-700">Production Efficiency</span>
+              <span className="text-green-600 font-semibold">+35%</span>
+            </div>
+            <div className="flex items-center justify-between">
+              <span className="text-gray-700">Maintenance Costs</span>
+              <span className="text-green-600 font-semibold">-50%</span>
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-white p-8 rounded-lg shadow-lg border border-gray-200">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">Technology Stack</h2>
+          <div className="space-y-4">
+            <div>
+              <h3 className="font-semibold text-gray-900 mb-2">AI/ML Technologies</h3>
+              <p className="text-gray-600 text-sm">TensorFlow, PyTorch, Computer Vision, Time Series Analysis</p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-gray-900 mb-2">IoT Integration</h3>
+              <p className="text-gray-600 text-sm">Industrial sensors, edge computing, real-time data streaming</p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-gray-900 mb-2">Cloud Platform</h3>
+              <p className="text-gray-600 text-sm">AWS Industrial IoT, Azure IoT Hub, Google Cloud IoT</p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-gray-900 mb-2">Visualization</h3>
+              <p className="text-gray-600 text-sm">Real-time dashboards, predictive analytics, mobile access</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="text-center">
+        <h2 className="text-3xl font-bold text-gray-900 mb-6">Ready to Revolutionize Your Manufacturing?</h2>
+        <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+          Join leading manufacturers who have transformed their operations with our AI platform. 
+          Schedule a demo to see the platform in action.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <Link 
+            href="/contact" 
+            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+          >
+            Schedule Demo
+          </Link>
+          <Link 
+            href="/case-studies/ai-automation-manufacturing-success-2026" 
+            className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
+          >
+            View Manufacturing Case Studies
+          </Link>
+        </div>
+      </div>
+=======
+import Link from 'next/link';
+
+export const metadata = {
+  title: 'Manufacturing AI Platform - Zion Tech Group',
+  description: 'Revolutionary AI platform for manufacturing optimization, predictive maintenance, and autonomous operations.',
+  keywords: 'manufacturing AI, predictive maintenance, industrial automation, smart manufacturing',
+};
+
+export default function ManufacturingAIPlatformPage() {
+  return (
+    <div className="min-h-screen">
+      {/* Hero Section */}
+      <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              Manufacturing AI Platform
             </h1>
-            
-            <p className="text-xl md:text-2xl text-green-100 mb-8 max-w-4xl mx-auto">
-              Transform your manufacturing operations with AI-powered predictive maintenance, 
-              quality control, and supply chain optimization. Achieve 99.9% uptime and 95% fewer defects.
+            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+              Transform your manufacturing operations with our advanced AI platform featuring 
+              predictive maintenance, quality control, and autonomous optimization.
             </p>
-            
-            <div className="flex flex-wrap justify-center gap-4 mb-12">
-              <div className="bg-white/20 backdrop-blur-sm rounded-xl p-4 border border-white/30">
-                <div className="text-3xl font-extrabold text-green-200 mb-1">99.9%</div>
-                <div className="text-sm text-green-100">Uptime</div>
-              </div>
-              <div className="bg-white/20 backdrop-blur-sm rounded-xl p-4 border border-white/30">
-                <div className="text-3xl font-extrabold text-emerald-200 mb-1">95%</div>
-                <div className="text-sm text-green-100">Fewer Defects</div>
-              </div>
-              <div className="bg-white/20 backdrop-blur-sm rounded-xl p-4 border border-white/30">
-                <div className="text-3xl font-extrabold text-teal-200 mb-1">85%</div>
-                <div className="text-sm text-green-100">Downtime Reduction</div>
-              </div>
-              <div className="bg-white/20 backdrop-blur-sm rounded-xl p-4 border border-white/30">
-                <div className="text-3xl font-extrabold text-green-200 mb-1">$18M</div>
-                <div className="text-sm text-green-100">Average ROI</div>
-              </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                href="/contact" 
+                className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+              >
+                Get Started
+              </Link>
+              <Link 
+                href="/case-studies" 
+                className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
+              >
+                View Case Studies
+              </Link>
             </div>
           </div>
         </div>
@@ -53,166 +328,63 @@ export default function ManufacturingAIPlatform() {
 
       {/* Features Section */}
       <section className="py-20 bg-white">
-        <div className="max-w-6xl mx-auto px-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Comprehensive Manufacturing AI Solutions
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Platform Capabilities
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              End-to-end AI platform covering predictive maintenance, quality control, 
-              supply chain optimization, and operational excellence.
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Comprehensive AI solutions designed for modern manufacturing
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-8">
-              <div className="w-16 h-16 bg-blue-600 rounded-xl flex items-center justify-center mb-6">
-                <span className="text-2xl text-white">🔧</span>
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Predictive Maintenance</h3>
-              <ul className="space-y-3 text-gray-600">
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-blue-600 rounded-full"></span>
-                  IoT sensor integration
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-blue-600 rounded-full"></span>
-                  Real-time equipment monitoring
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-blue-600 rounded-full"></span>
-                  Failure prediction (7 days ahead)
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-blue-600 rounded-full"></span>
-                  Automated maintenance scheduling
-                </li>
-              </ul>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <div className="text-3xl mb-4">🔧</div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Predictive Maintenance</h3>
+              <p className="text-gray-600">
+                AI-powered predictive maintenance reduces downtime by up to 40% and extends equipment life.
+              </p>
             </div>
             
-            <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-8">
-              <div className="w-16 h-16 bg-green-600 rounded-xl flex items-center justify-center mb-6">
-                <span className="text-2xl text-white">🎯</span>
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Quality Control AI</h3>
-              <ul className="space-y-3 text-gray-600">
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-green-600 rounded-full"></span>
-                  Computer vision defect detection
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-green-600 rounded-full"></span>
-                  Real-time quality monitoring
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-green-600 rounded-full"></span>
-                  Automated quality scoring
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-green-600 rounded-full"></span>
-                  Predictive quality analytics
-                </li>
-              </ul>
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <div className="text-3xl mb-4">📊</div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Quality Control</h3>
+              <p className="text-gray-600">
+                Advanced computer vision and ML algorithms ensure 99.9% quality accuracy.
+              </p>
             </div>
             
-            <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-8">
-              <div className="w-16 h-16 bg-purple-600 rounded-xl flex items-center justify-center mb-6">
-                <span className="text-2xl text-white">📦</span>
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Supply Chain Optimization</h3>
-              <ul className="space-y-3 text-gray-600">
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-purple-600 rounded-full"></span>
-                  Demand forecasting algorithms
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-purple-600 rounded-full"></span>
-                  Inventory optimization
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-purple-600 rounded-full"></span>
-                  Supplier performance analytics
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-purple-600 rounded-full"></span>
-                  Automated reorder systems
-                </li>
-              </ul>
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <div className="text-3xl mb-4">⚡</div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Autonomous Operations</h3>
+              <p className="text-gray-600">
+                Self-optimizing production lines that adapt to changing conditions in real-time.
+              </p>
             </div>
             
-            <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-8">
-              <div className="w-16 h-16 bg-orange-600 rounded-xl flex items-center justify-center mb-6">
-                <span className="text-2xl text-white">📊</span>
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Production Analytics</h3>
-              <ul className="space-y-3 text-gray-600">
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-orange-600 rounded-full"></span>
-                  Real-time production monitoring
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-orange-600 rounded-full"></span>
-                  Performance optimization
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-orange-600 rounded-full"></span>
-                  Energy efficiency tracking
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-orange-600 rounded-full"></span>
-                  Capacity planning
-                </li>
-              </ul>
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <div className="text-3xl mb-4">📈</div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Performance Analytics</h3>
+              <p className="text-gray-600">
+                Real-time insights and analytics to optimize production efficiency and reduce costs.
+              </p>
             </div>
             
-            <div className="bg-gradient-to-br from-red-50 to-red-100 rounded-xl p-8">
-              <div className="w-16 h-16 bg-red-600 rounded-xl flex items-center justify-center mb-6">
-                <span className="text-2xl text-white">🛡️</span>
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Safety & Compliance</h3>
-              <ul className="space-y-3 text-gray-600">
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-red-600 rounded-full"></span>
-                  Safety monitoring systems
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-red-600 rounded-full"></span>
-                  Compliance automation
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-red-600 rounded-full"></span>
-                  Risk assessment
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-red-600 rounded-full"></span>
-                  Incident prevention
-                </li>
-              </ul>
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <div className="text-3xl mb-4">🔄</div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Supply Chain Integration</h3>
+              <p className="text-gray-600">
+                Seamless integration with supply chain systems for end-to-end optimization.
+              </p>
             </div>
             
-            <div className="bg-gradient-to-br from-indigo-50 to-indigo-100 rounded-xl p-8">
-              <div className="w-16 h-16 bg-indigo-600 rounded-xl flex items-center justify-center mb-6">
-                <span className="text-2xl text-white">🤖</span>
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Process Automation</h3>
-              <ul className="space-y-3 text-gray-600">
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-indigo-600 rounded-full"></span>
-                  Workflow automation
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-indigo-600 rounded-full"></span>
-                  Intelligent scheduling
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-indigo-600 rounded-full"></span>
-                  Resource optimization
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-indigo-600 rounded-full"></span>
-                  Autonomous decision making
-                </li>
-              </ul>
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <div className="text-3xl mb-4">🛡️</div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Safety Monitoring</h3>
+              <p className="text-gray-600">
+                AI-powered safety systems that prevent accidents and ensure compliance.
+              </p>
             </div>
           </div>
         </div>
@@ -220,435 +392,63 @@ export default function ManufacturingAIPlatform() {
 
       {/* Benefits Section */}
       <section className="py-20 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Proven Results & Benefits
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Proven Results
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our manufacturing AI platform delivers measurable improvements across all key operational metrics.
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Real-world impact from our manufacturing AI implementations
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-            <div className="bg-white rounded-xl p-8 shadow-lg text-center">
-              <div className="text-4xl font-extrabold text-green-600 mb-2">$18M</div>
-              <div className="text-lg font-semibold text-gray-900 mb-2">Average ROI</div>
-              <div className="text-sm text-gray-600">6-month payback period</div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="text-4xl font-bold text-blue-600 mb-2">40%</div>
+              <div className="text-gray-600">Reduction in Downtime</div>
             </div>
-            <div className="bg-white rounded-xl p-8 shadow-lg text-center">
-              <div className="text-4xl font-extrabold text-blue-600 mb-2">99.9%</div>
-              <div className="text-lg font-semibold text-gray-900 mb-2">Equipment Uptime</div>
-              <div className="text-sm text-gray-600">From 95% to 99.9%</div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-blue-600 mb-2">$25M</div>
+              <div className="text-gray-600">Annual Cost Savings</div>
             </div>
-            <div className="bg-white rounded-xl p-8 shadow-lg text-center">
-              <div className="text-4xl font-extrabold text-purple-600 mb-2">95%</div>
-              <div className="text-lg font-semibold text-gray-900 mb-2">Fewer Defects</div>
-              <div className="text-sm text-gray-600">Quality improvement</div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-blue-600 mb-2">99.9%</div>
+              <div className="text-gray-600">Quality Accuracy</div>
             </div>
-            <div className="bg-white rounded-xl p-8 shadow-lg text-center">
-              <div className="text-4xl font-extrabold text-orange-600 mb-2">85%</div>
-              <div className="text-lg font-semibold text-gray-900 mb-2">Downtime Reduction</div>
-              <div className="text-sm text-gray-600">Predictive maintenance</div>
-            </div>
-          </div>
-          
-          <div className="bg-white rounded-xl p-8 shadow-xl">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">Key Performance Improvements</h3>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <h4 className="text-lg font-semibold text-gray-900 mb-4">Operational Efficiency</h4>
-                <ul className="space-y-3">
-                  <li className="flex justify-between items-center py-2 border-b border-gray-100">
-                    <span className="text-gray-700">Production Output</span>
-                    <span className="font-semibold text-green-600">+35%</span>
-                  </li>
-                  <li className="flex justify-between items-center py-2 border-b border-gray-100">
-                    <span className="text-gray-700">Energy Efficiency</span>
-                    <span className="font-semibold text-green-600">+25%</span>
-                  </li>
-                  <li className="flex justify-between items-center py-2 border-b border-gray-100">
-                    <span className="text-gray-700">Maintenance Costs</span>
-                    <span className="font-semibold text-green-600">-60%</span>
-                  </li>
-                  <li className="flex justify-between items-center py-2">
-                    <span className="text-gray-700">First Pass Yield</span>
-                    <span className="font-semibold text-green-600">78% → 95%</span>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="text-lg font-semibold text-gray-900 mb-4">Quality & Safety</h4>
-                <ul className="space-y-3">
-                  <li className="flex justify-between items-center py-2 border-b border-gray-100">
-                    <span className="text-gray-700">Customer Complaints</span>
-                    <span className="font-semibold text-green-600">-90%</span>
-                  </li>
-                  <li className="flex justify-between items-center py-2 border-b border-gray-100">
-                    <span className="text-gray-700">Safety Incidents</span>
-                    <span className="font-semibold text-green-600">-75%</span>
-                  </li>
-                  <li className="flex justify-between items-center py-2 border-b border-gray-100">
-                    <span className="text-gray-700">Compliance Score</span>
-                    <span className="font-semibold text-green-600">+40%</span>
-                  </li>
-                  <li className="flex justify-between items-center py-2">
-                    <span className="text-gray-700">Waste Reduction</span>
-                    <span className="font-semibold text-green-600">-50%</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Technology Stack */}
-      <section className="py-20 bg-white">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Advanced Technology Stack
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Cutting-edge AI technologies and industrial IoT platforms powering the manufacturing transformation.
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 gap-12">
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">AI & Machine Learning</h3>
-              <div className="space-y-4">
-                <div className="flex items-center gap-4 p-4 bg-gray-50 rounded-lg">
-                  <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
-                    <span className="text-white font-bold">ML</span>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900">Predictive Analytics</h4>
-                    <p className="text-gray-600 text-sm">Time series forecasting for equipment maintenance</p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-4 p-4 bg-gray-50 rounded-lg">
-                  <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center">
-                    <span className="text-white font-bold">CV</span>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900">Computer Vision</h4>
-                    <p className="text-gray-600 text-sm">Real-time defect detection and quality control</p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-4 p-4 bg-gray-50 rounded-lg">
-                  <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center">
-                    <span className="text-white font-bold">NLP</span>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900">Natural Language Processing</h4>
-                    <p className="text-gray-600 text-sm">Automated report generation and analysis</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Industrial IoT & Integration</h3>
-              <div className="space-y-4">
-                <div className="flex items-center gap-4 p-4 bg-gray-50 rounded-lg">
-                  <div className="w-12 h-12 bg-orange-600 rounded-lg flex items-center justify-center">
-                    <span className="text-white font-bold">IoT</span>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900">Industrial IoT</h4>
-                    <p className="text-gray-600 text-sm">500+ sensors across manufacturing equipment</p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-4 p-4 bg-gray-50 rounded-lg">
-                  <div className="w-12 h-12 bg-red-600 rounded-lg flex items-center justify-center">
-                    <span className="text-white font-bold">☁️</span>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900">Cloud Platform</h4>
-                    <p className="text-gray-600 text-sm">Scalable cloud infrastructure for AI workloads</p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-4 p-4 bg-gray-50 rounded-lg">
-                  <div className="w-12 h-12 bg-indigo-600 rounded-lg flex items-center justify-center">
-                    <span className="text-white font-bold">API</span>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900">ERP Integration</h4>
-                    <p className="text-gray-600 text-sm">Seamless integration with existing enterprise systems</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Case Study */}
-      <section className="py-20 bg-gradient-to-br from-green-50 to-emerald-50">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Success Story: Fortune 500 Manufacturer
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              See how a leading manufacturer achieved $18M ROI with our AI platform.
-            </p>
-          </div>
-          
-          <div className="bg-white rounded-xl p-8 shadow-xl mb-12">
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">Challenge</h3>
-                <ul className="space-y-4 text-gray-600">
-                  <li className="flex items-start gap-3">
-                    <span className="text-red-600 font-bold">•</span>
-                    <span>40% production downtime from equipment failures</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-red-600 font-bold">•</span>
-                    <span>15% defect rate with manual quality control</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-red-600 font-bold">•</span>
-                    <span>$5M annual inventory waste</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-red-600 font-bold">•</span>
-                    <span>2,000 manual hours per month</span>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">Solution</h3>
-                <ul className="space-y-4 text-gray-600">
-                  <li className="flex items-start gap-3">
-                    <span className="text-green-600 font-bold">•</span>
-                    <span>AI-powered predictive maintenance system</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-green-600 font-bold">•</span>
-                    <span>Computer vision quality control</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-green-600 font-bold">•</span>
-                    <span>Supply chain optimization algorithms</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-green-600 font-bold">•</span>
-                    <span>Automated workflow management</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          
-          <div className="grid md:grid-cols-4 gap-6 mb-12">
-            <div className="bg-white rounded-xl p-6 shadow-lg text-center">
-              <div className="text-3xl font-extrabold text-green-600 mb-2">$18M</div>
-              <div className="text-sm text-gray-600">Total ROI</div>
-            </div>
-            <div className="bg-white rounded-xl p-6 shadow-lg text-center">
-              <div className="text-3xl font-extrabold text-blue-600 mb-2">99.9%</div>
-              <div className="text-sm text-gray-600">Uptime</div>
-            </div>
-            <div className="bg-white rounded-xl p-6 shadow-lg text-center">
-              <div className="text-3xl font-extrabold text-purple-600 mb-2">92%</div>
-              <div className="text-sm text-gray-600">Fewer Defects</div>
-            </div>
-            <div className="bg-white rounded-xl p-6 shadow-lg text-center">
-              <div className="text-3xl font-extrabold text-orange-600 mb-2">6 Months</div>
-              <div className="text-sm text-gray-600">Payback Period</div>
-            </div>
-          </div>
-          
-          <div className="bg-white rounded-xl p-8 shadow-xl">
-            <blockquote className="text-xl text-gray-700 italic mb-6">
-              "The AI transformation exceeded our expectations. We've achieved $18M ROI in just 6 months, 
-              with 85% reduction in downtime and 92% fewer defects. This is the future of manufacturing."
-            </blockquote>
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center">
-                <span className="text-white font-bold">JD</span>
-              </div>
-              <div>
-                <div className="font-semibold text-gray-900">John Davis</div>
-                <div className="text-gray-600">Chief Operations Officer</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Flexible Pricing Options
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Choose the plan that fits your manufacturing needs. All plans include comprehensive support and training.
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-xl p-8 shadow-lg border border-gray-200">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Starter</h3>
-              <div className="text-4xl font-extrabold text-gray-900 mb-6">$2,499<span className="text-lg text-gray-600">/month</span></div>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-center gap-2">
-                  <span className="w-5 h-5 bg-green-600 rounded-full flex items-center justify-center">
-                    <span className="text-white text-xs">✓</span>
-                  </span>
-                  <span className="text-gray-600">Up to 50 machines</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-5 h-5 bg-green-600 rounded-full flex items-center justify-center">
-                    <span className="text-white text-xs">✓</span>
-                  </span>
-                  <span className="text-gray-600">Basic predictive maintenance</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-5 h-5 bg-green-600 rounded-full flex items-center justify-center">
-                    <span className="text-white text-xs">✓</span>
-                  </span>
-                  <span className="text-gray-600">Quality control AI</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-5 h-5 bg-green-600 rounded-full flex items-center justify-center">
-                    <span className="text-white text-xs">✓</span>
-                  </span>
-                  <span className="text-gray-600">24/7 support</span>
-                </li>
-              </ul>
-              <Link
-                href="/contact"
-                className="w-full bg-gray-900 text-white py-3 rounded-lg font-semibold text-center hover:bg-gray-800 transition-colors block"
-              >
-                Get Started
-              </Link>
-            </div>
-            
-            <div className="bg-white rounded-xl p-8 shadow-xl border-2 border-green-600 relative">
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                <span className="bg-green-600 text-white px-4 py-2 rounded-full text-sm font-semibold">Most Popular</span>
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Professional</h3>
-              <div className="text-4xl font-extrabold text-gray-900 mb-6">$4,999<span className="text-lg text-gray-600">/month</span></div>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-center gap-2">
-                  <span className="w-5 h-5 bg-green-600 rounded-full flex items-center justify-center">
-                    <span className="text-white text-xs">✓</span>
-                  </span>
-                  <span className="text-gray-600">Up to 200 machines</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-5 h-5 bg-green-600 rounded-full flex items-center justify-center">
-                    <span className="text-white text-xs">✓</span>
-                  </span>
-                  <span className="text-gray-600">Advanced predictive maintenance</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-5 h-5 bg-green-600 rounded-full flex items-center justify-center">
-                    <span className="text-white text-xs">✓</span>
-                  </span>
-                  <span className="text-gray-600">Supply chain optimization</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-5 h-5 bg-green-600 rounded-full flex items-center justify-center">
-                    <span className="text-white text-xs">✓</span>
-                  </span>
-                  <span className="text-gray-600">Custom integrations</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-5 h-5 bg-green-600 rounded-full flex items-center justify-center">
-                    <span className="text-white text-xs">✓</span>
-                  </span>
-                  <span className="text-gray-600">Dedicated support</span>
-                </li>
-              </ul>
-              <Link
-                href="/contact"
-                className="w-full bg-green-600 text-white py-3 rounded-lg font-semibold text-center hover:bg-green-700 transition-colors block"
-              >
-                Get Started
-              </Link>
-            </div>
-            
-            <div className="bg-white rounded-xl p-8 shadow-lg border border-gray-200">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Enterprise</h3>
-              <div className="text-4xl font-extrabold text-gray-900 mb-6">Custom<span className="text-lg text-gray-600"> pricing</span></div>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-center gap-2">
-                  <span className="w-5 h-5 bg-green-600 rounded-full flex items-center justify-center">
-                    <span className="text-white text-xs">✓</span>
-                  </span>
-                  <span className="text-gray-600">Unlimited machines</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-5 h-5 bg-green-600 rounded-full flex items-center justify-center">
-                    <span className="text-white text-xs">✓</span>
-                  </span>
-                  <span className="text-gray-600">Full AI platform</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-5 h-5 bg-green-600 rounded-full flex items-center justify-center">
-                    <span className="text-white text-xs">✓</span>
-                  </span>
-                  <span className="text-gray-600">Custom AI models</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-5 h-5 bg-green-600 rounded-full flex items-center justify-center">
-                    <span className="text-white text-xs">✓</span>
-                  </span>
-                  <span className="text-gray-600">On-premise deployment</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-5 h-5 bg-green-600 rounded-full flex items-center justify-center">
-                    <span className="text-white text-xs">✓</span>
-                  </span>
-                  <span className="text-gray-600">White-glove service</span>
-                </li>
-              </ul>
-              <Link
-                href="/contact"
-                className="w-full bg-gray-900 text-white py-3 rounded-lg font-semibold text-center hover:bg-gray-800 transition-colors block"
-              >
-                Contact Sales
-              </Link>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-blue-600 mb-2">350%</div>
+              <div className="text-gray-600">ROI</div>
             </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-green-600 to-emerald-600">
-        <div className="max-w-6xl mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Manufacturing Operations?
+      <section className="py-20 bg-blue-600">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Ready to Transform Your Manufacturing?
           </h2>
-          <p className="text-xl text-green-100 mb-8 max-w-3xl mx-auto">
-            Join leading manufacturers who are achieving unprecedented results with AI-powered 
-            predictive maintenance, quality control, and supply chain optimization.
+          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+            Join leading manufacturers already leveraging our AI platform for unprecedented results.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/contact"
-              className="bg-white text-green-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+            <Link 
+              href="/contact" 
+              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
-              Start Your AI Transformation
+              Schedule Consultation
             </Link>
-            <Link
-              href="/case-studies/manufacturing-ai-transformation-2026"
-              className="border-2 border-white text-white hover:bg-white hover:text-green-600 font-bold py-4 px-8 rounded-xl transition-all duration-300"
+            <Link 
+              href="/case-studies" 
+              className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
             >
               View Success Stories
             </Link>
           </div>
         </div>
       </section>
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f3e7
     </div>
   );
 }

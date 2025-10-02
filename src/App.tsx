@@ -1,16 +1,60 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React from 'react'
+import HomePage from '../app/page'
+=======
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import { AppRouter } from './router';
+=======
 import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import { Routes, Route } from 'react-router-dom';
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f3e7
 import './index.css';
-import ModernHeader from './components/ModernHeader';
-import ModernFooter from './components/ModernFooter';
-import ModernHomepage from './components/ModernHomepage';
+import ModernHeader from './components/Header';
+import ModernFooter from './components/Footer';
+import ModernHomepage from './components/LatestContentBanner2025';
 import SEOOptimizer from './components/SEOOptimizer';
 import AdvancedAnalytics from './components/AdvancedAnalytics';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import NotificationSystem from './components/NotificationSystem';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
+<<<<<<< HEAD
+import EnhancedSEOHead from './components/EnhancedSEOHead';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import HomePage from './pages/HomePage';
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-44c4
+
+function App() {
+  return <HomePage />
+}
+
+<<<<<<< HEAD
+export default App
+=======
+// interface WindowWithEnhancements extends Window {
+//   advancedPerformanceOptimizer?: { initialize?: () => void };
+//   advancedSEOOptimizer?: { initialize?: () => void };
+//   advancedSecurityManager?: { initialize?: () => void };
+//   advancedAnalytics?: { initialize?: () => void };
+//   advancedErrorHandler?: { initialize?: () => void };
+//   advancedCachingSystem?: { initialize?: () => void };
+//   advancedUXOptimizer?: { initialize?: () => void };
+//   advancedTestingFramework?: { initialize?: () => void };
+//   advancedI18n?: { initialize?: () => void };
+//   enhancements?: Record<string, unknown>;
+//   performanceOptimizer?: Record<string, unknown>;
+//   seoOptimizer?: Record<string, unknown>;
+//   securityManager?: Record<string, unknown>;
+//   analytics?: Record<string, unknown>;
+//   errorHandler?: Record<string, unknown>;
+//   cachingSystem?: Record<string, unknown>;
+//   uxOptimizer?: Record<string, unknown>;
+//   testingFramework?: Record<string, unknown>;
+//   i18n?: Record<string, unknown>;
+// }
+=======
+// import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 
 // Types and interfaces
 interface Notification {
@@ -40,6 +84,7 @@ interface WindowWithEnhancements extends Window {
   testingFramework?: any;
   i18n?: any;
 }
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f3e7
 
 // Initialize performance enhancements function
 const initializePerformanceEnhancements = () => {
@@ -47,6 +92,8 @@ const initializePerformanceEnhancements = () => {
   console.log('Performance enhancements initialized');
 };
 
+<<<<<<< HEAD
+=======
 // Simple placeholder components for other routes
 const ServicesPage = () => (
   <div className="min-h-screen bg-gray-50 py-16">
@@ -170,12 +217,13 @@ const AppRouter = () => (
     <Route path="/contact" element={<ContactPage />} />
   </Routes>
 );
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f3e7
 
 // Main App Component
 const App: React.FC = () => {
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
-  const [notifications, setNotifications] = useState<Notification[]>([]);
+  const [notifications, setNotifications] = useState<any[]>([]);
 
   interface SEOData {
     title: string;
@@ -230,11 +278,24 @@ const App: React.FC = () => {
         <AdvancedAnalytics enableConversionTracking enablePerformanceTracking enableErrorTracking />
         <div className="min-h-screen bg-white">
           <ModernHeader />
-          <main>
-            <AppRouter />
-          </main>
-          <ModernFooter />
+            <main>
+              <AppRouter />
+            </main>
+          <Footer />
         </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <NotificationSystem notifications={notifications} onRemove={handleRemoveNotification} />
+      </EnhancedErrorBoundary>
+    </AccessibilityEnhancer>
+  );
+};
+
+export default App;
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-44c4
+=======
+=======
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d21e
 
         {showPerformanceOptimizer && (
           <div className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center" role="dialog" aria-modal="true">
@@ -261,8 +322,9 @@ const App: React.FC = () => {
         )}
 
         <NotificationSystem notifications={notifications} onRemove={handleRemoveNotification} />
-      </AccessibilityEnhancer>
+      {/* </AccessibilityEnhancer> */}
     </EnhancedErrorBoundary>
   );
 };
 export default App;
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f3e7

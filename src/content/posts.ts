@@ -1385,8 +1385,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-29",
     featured: false,
     readTime: "6 min read"
-  }
-  ,
+  },
   {
     slug: "ai-sre-blueprints-2026",
     title: "AI SRE Blueprints 2026: Error Budgets, Rollbacks, and Live Traces",
@@ -1422,11 +1421,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-13",
     featured: true,
     readTime: "8 min read"
-  }
-);
-
-// Sept 30, 2025 – Fresh drop to expand catalog and advertise on Home (v4)
-posts.push(
+  },
   {
     slug: "ai-operational-scorecards-v4-2026",
     title: "AI Operational Scorecards v4 (2026): SLIs, Budgets, Rollback",
@@ -1453,10 +1448,7 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "8 min read"
-  }
-);
-// Sept 30, 2025 – Brand-new content to advertise on homepage (fresh trio v3)
-posts.push(
+  },
   {
     slug: "ai-operational-trust-scorecards-v2-2026",
     title: "AI Operational Trust Scorecards v2 (2026): SLIs, Budgets, Rollback",
@@ -1483,11 +1475,7 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "8 min read"
-  }
-);
-
-// New: Additional fresh content to surface on homepage (promoted trio)
-posts.push(
+  },
   {
     slug: "ai-operational-risk-budgets-2026",
     title: "AI Operational Risk Budgets 2026: Ship Faster, Stay Safe",
@@ -1514,11 +1502,7 @@ posts.push(
     publishedAt: "2026-04-01",
     featured: true,
     readTime: "8 min read"
-  }
-);
-
-// Jan 2026 – New articles to create more content and advertise on Home
-posts.push(
+  },
   {
     slug: "ai-risk-budgets-blueprint-2026",
     title: "AI Risk Budgets Blueprint 2026: Ship Faster, Stay Safe",
@@ -1545,11 +1529,7 @@ posts.push(
     publishedAt: "2026-01-05",
     featured: true,
     readTime: "8 min read"
-  }
-);
-
-// Sept 30, 2025 – Newly added trio to expand content and surface on Home
-posts.push(
+  },
   {
     slug: "ai-slo-scorecards-2026",
     title: "AI SLO Scorecards 2026: Prove Reliability Week by Week",
@@ -1576,11 +1556,12 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "8 min read"
-  }
-);
+  },
+<<<<<<< HEAD
+]);
 
 // Sept 30, 2025 – Fresh articles to add and advertise on homepage
-posts.push(
+posts.push([
   {
     slug: "ai-safety-scorecards-2026",
     title: "AI Safety Scorecards 2026: KPIs, Budgets, Rollbacks",
@@ -1607,7 +1588,7 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "8 min read"
-  }
+  },
 );
 
 // Sept 30, 2025 – New articles to expand catalog and promote on homepage
