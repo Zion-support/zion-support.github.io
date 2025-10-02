@@ -4,27 +4,32 @@
  */
 
 interface CacheConfig {
-  maxAge: number; // milliseconds
-  maxSize: number; // maximum number of entries
-  strategy: 'LRU' | 'LFU' | 'FIFO';
+maxAge: number; // milliseconds,,
+maxSize: number; // maximum number of entries,,
+<<<<<<< HEAD
+strategy: 'LRU' | 'LFU' | 'FIFO';
+=======
+strategy: 'LRU' | 'LFU' | 'FIFO';';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 }
 
 interface CacheEntry<T> {
-  value: T;
-  timestamp: number;
-  accessCount: number;
-  size: number;
+value: T;
+timestamp: number;
+accessCount: number;
+size: number;
 }
 
 interface CacheStats {
-  hits: number;
-  misses: number;
-  evictions: number;
-  currentSize: number;
-  hitRate: number;
+hits: number;,
+misses: number;,
+evictions: number;,
+currentSize: number;,
+hitRate: number;
 }
 
 class AdvancedCacheManager<T = any> {
+<<<<<<< HEAD
   private cache: Map<string, CacheEntry<T>> = new Map();
   private config: CacheConfig;
   private stats: CacheStats = {
@@ -32,21 +37,36 @@ class AdvancedCacheManager<T = any> {
     misses: 0,
     evictions: 0,
     currentSize: 0,
-    hitRate: 0,
+    hitRate: 0
+=======
+  private cache: Map<string, CacheEntry<T>> = new Map();,
+  private config: CacheConfig;,
+  private stats: CacheStats = {,
+    hits: 0,,
+    misses: 0,,
+    evictions: 0,,
+    currentSize: 0,,
+    hitRate: 0,,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   };
 
   constructor(config: Partial<CacheConfig> = {}) {
     this.config = {
-      maxAge: config.maxAge || 5 * 60 * 1000, // 5 minutes default
+      maxAge: config.maxAge || 5 * 60 * 1000, // 5 minutes default,
+<<<<<<< HEAD
       maxSize: config.maxSize || 100,
-      strategy: config.strategy || 'LRU',
+      strategy: config.strategy || 'LRU'
+=======
+      maxSize: config.maxSize || 100,,
+      strategy: config.strategy || 'LRU',';,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     };
   }
 
   /**
    * Get value from cache
    */
-  get(key: string): T | null {
+  get(key: string): T | null {,
     const entry = this.cache.get(key);
 
     if (!entry) {
@@ -68,7 +88,11 @@ class AdvancedCacheManager<T = any> {
     entry.accessCount++;
     
     // Update timestamp for LRU strategy
-    if (this.config.strategy === 'LRU') {
+<<<<<<< HEAD
+    if (this.config.strategy === 'LRU') {;
+=======
+    if (this.config.strategy === 'LRU') {';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       entry.timestamp = Date.now();
     }
 
@@ -80,7 +104,7 @@ class AdvancedCacheManager<T = any> {
   /**
    * Set value in cache
    */
-  set(key: string, value: T, customMaxAge?: number): void {
+  set(key: string, value: T, customMaxAge?: number): void {,
     // If cache is full, evict based on strategy
     if (this.cache.size >= this.config.maxSize) {
       this.evict();
@@ -90,9 +114,15 @@ class AdvancedCacheManager<T = any> {
     
     this.cache.set(key, {
       value,
+<<<<<<< HEAD
       timestamp: Date.now(),
       accessCount: 0,
+      size
+=======
+      timestamp: Date.now(),,
+      accessCount: 0,,
       size,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     });
 
     this.stats.currentSize = this.cache.size;
@@ -101,7 +131,7 @@ class AdvancedCacheManager<T = any> {
   /**
    * Check if key exists and is valid
    */
-  has(key: string): boolean {
+  has(key: string): boolean {,
     const entry = this.cache.get(key);
     if (!entry) return false;
 
@@ -118,7 +148,7 @@ class AdvancedCacheManager<T = any> {
   /**
    * Delete key from cache
    */
-  delete(key: string): boolean {
+  delete(key: string): boolean {,
     const deleted = this.cache.delete(key);
     if (deleted) {
       this.stats.currentSize = this.cache.size;
@@ -138,8 +168,8 @@ class AdvancedCacheManager<T = any> {
    * Get or set with callback (memoization pattern)
    */
   async getOrSet(
-    key: string,
-    fetchFn: () => Promise<T>,
+    key: string,,
+    fetchFn: () => Promise<T>,,
     customMaxAge?: number
   ): Promise<T> {
     const cached = this.get(key);
@@ -156,21 +186,29 @@ class AdvancedCacheManager<T = any> {
    * Evict entries based on strategy
    */
   private evict(): void {
-    if (this.cache.size === 0) return;
-
-    let keyToEvict: string | null = null;
-
-    switch (this.config.strategy) {
-      case 'LRU': // Least Recently Used
-        keyToEvict = this.findLRUKey();
-        break;
-      case 'LFU': // Least Frequently Used
-        keyToEvict = this.findLFUKey();
-        break;
-      case 'FIFO': // First In First Out
-        keyToEvict = this.cache.keys().next().value;
-        break;
-    }
+if (this.cache.size === 0) return;
+let keyToEvict: string | null = null;
+switch (this.config.strategy) {
+<<<<<<< HEAD
+case 'LRU': // Least Recently Used
+keyToEvict = this.findLRUKey();
+break;
+case 'LFU': // Least Frequently Used
+keyToEvict = this.findLFUKey();
+break;
+case 'FIFO': // First In First Out
+=======
+case 'LRU': // Least Recently Used,';
+keyToEvict = this.findLRUKey();
+break;
+case 'LFU': // Least Frequently Used,';
+keyToEvict = this.findLFUKey();
+break;
+case 'FIFO': // First In First Out,';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
+keyToEvict = this.cache.keys().next().value || null;
+break;
+}
 
     if (keyToEvict) {
       this.cache.delete(keyToEvict);
@@ -183,7 +221,11 @@ class AdvancedCacheManager<T = any> {
    * Find Least Recently Used key
    */
   private findLRUKey(): string | null {
-    let oldestKey: string | null = null;
+<<<<<<< HEAD
+    let oldestKey: string | null = null,
+=======
+    let oldestKey: string | null = null;,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     let oldestTime = Infinity;
 
     for (const [key, entry] of this.cache.entries()) {
@@ -200,7 +242,11 @@ class AdvancedCacheManager<T = any> {
    * Find Least Frequently Used key
    */
   private findLFUKey(): string | null {
-    let lfuKey: string | null = null;
+<<<<<<< HEAD
+    let lfuKey: string | null = null,
+=======
+    let lfuKey: string | null = null;,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     let minCount = Infinity;
 
     for (const [key, entry] of this.cache.entries()) {
@@ -216,7 +262,7 @@ class AdvancedCacheManager<T = any> {
   /**
    * Estimate size of value
    */
-  private estimateSize(value: T): number {
+  private estimateSize(value: T): number {,
     try {
       return JSON.stringify(value).length;
     } catch {
@@ -285,17 +331,17 @@ class AdvancedCacheManager<T = any> {
   /**
    * Update config
    */
-  updateConfig(newConfig: Partial<CacheConfig>): void {
+  updateConfig(newConfig: Partial<CacheConfig>): void {,
     this.config = {
-      ...this.config,
-      ...newConfig,
+      ...this.config
+      ...newConfig
     };
   }
 
   /**
    * Batch get
    */
-  batchGet(keys: string[]): Map<string, T | null> {
+  batchGet(keys: string[]): Map<string, T | null> {,
     const result = new Map<string, T | null>();
     for (const key of keys) {
       result.set(key, this.get(key));
@@ -306,7 +352,7 @@ class AdvancedCacheManager<T = any> {
   /**
    * Batch set
    */
-  batchSet(entries: Map<string, T>): void {
+  batchSet(entries: Map<string, T>): void {,
     for (const [key, value] of entries.entries()) {
       this.set(key, value);
     }
@@ -335,25 +381,44 @@ class AdvancedCacheManager<T = any> {
 
 // Singleton instances for different cache types
 const apiCache = new AdvancedCacheManager<any>({
-  maxAge: 5 * 60 * 1000, // 5 minutes
+  maxAge: 5 * 60 * 1000, // 5 minutes,
+<<<<<<< HEAD
   maxSize: 100,
-  strategy: 'LRU',
+  strategy: 'LRU'
+=======
+  maxSize: 100,,
+  strategy: 'LRU',';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 });
 
 const contentCache = new AdvancedCacheManager<any>({
-  maxAge: 60 * 60 * 1000, // 1 hour
+  maxAge: 60 * 60 * 1000, // 1 hour,
+<<<<<<< HEAD
   maxSize: 50,
-  strategy: 'LFU',
+  strategy: 'LFU'
+=======
+  maxSize: 50,,
+  strategy: 'LFU',';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 });
 
 const imageCache = new AdvancedCacheManager<string>({
-  maxAge: 24 * 60 * 60 * 1000, // 24 hours
+  maxAge: 24 * 60 * 60 * 1000, // 24 hours,
+<<<<<<< HEAD
   maxSize: 200,
-  strategy: 'LRU',
+  strategy: 'LRU'
 });
 
 // Start periodic cleanup
-if (typeof window !== 'undefined') {
+if (typeof window !== 'undefined') {;
+=======
+  maxSize: 200,,
+  strategy: 'LRU',';
+});
+
+// Start periodic cleanup
+if (typeof window !== 'undefined') {';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   setInterval(() => {
     apiCache.cleanExpired();
     contentCache.cleanExpired();
@@ -363,3 +428,4 @@ if (typeof window !== 'undefined') {
 
 export { AdvancedCacheManager, apiCache, contentCache, imageCache };
 export type { CacheConfig, CacheStats };
+;

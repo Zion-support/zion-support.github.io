@@ -1,219 +1,200 @@
 import React from 'react';
+import { Metadata } from 'next';
 import Link from 'next/link';
 
-const posts = [
-  {
-    title: 'AI 2026: Quantum-Neural Fusion Revolutionary Breakthrough',
-    description:
-      'Explore the groundbreaking convergence of quantum computing and neural networks that\'s revolutionizing enterprise AI in 2026.',
-    href: '/blog/ai-2026-quantum-neural-fusion-revolutionary-breakthrough',
-    date: '2026-01-15',
-    tags: ['Quantum Computing', 'Neural Networks', 'AI Fusion', 'Enterprise AI'],
-    featured: true,
+export const metadata: Metadata = {
+  title: 'Blog - Zion Tech Group',
+  description: 'Latest insights on AI, micro SaaS, IT services, and technology trends from Zion Tech Group experts.',
+  robots: {
+    index: true,
+    follow: true,
   },
-  {
-    title: 'AI 2026: Synthetic Consciousness Enterprise Transformation',
-    description:
-      'Discover how synthetic consciousness AI is revolutionizing enterprise operations with self-aware systems and autonomous decision-making.',
-    href: '/blog/ai-2026-synthetic-consciousness-enterprise-transformation',
-    date: '2026-01-20',
-    tags: ['Synthetic Consciousness', 'Self-Aware AI', 'Enterprise Transformation', 'AI Ethics'],
-    featured: true,
-  },
-  {
-    title: 'AI 2026: Autonomous Enterprise Operations Revolution',
-    description:
-      'Learn how autonomous AI systems are revolutionizing enterprise operations with self-managing, self-optimizing, and self-healing capabilities.',
-    href: '/blog/ai-2026-autonomous-enterprise-operations-revolution',
-    date: '2026-01-25',
-    tags: ['Autonomous Operations', 'Enterprise AI', 'Self-Managing Systems', 'Business Automation'],
-    featured: true,
-  },
-  {
-    title: 'GenAI Security in 2025: Practical Controls That Actually Work',
-    description:
-      'A pragmatic security blueprint for production GenAI: controls, gateways, and evals.',
-    href: '/blog/genai-security-2025',
-    date: '2025-09-11',
-    tags: ['AI', 'Security', 'Governance'],
-  },
-  {
-    title: 'Secure RAG Architecture in 2025: Safety, Scale, and Speed',
-    description:
-      'A pragmatic blueprint for multi-tenant, eval-driven RAG with strong isolation and uptime.',
-    href: '/blog/secure-rag-architecture-2025',
-    date: '2025-09-11',
-    tags: ['RAG', 'Security', 'Architecture'],
-  },
-  {
-    title: 'AI Product Roadmaps That Actually Ship',
-    description:
-      'Milestones, guardrails, and evals that keep AI features shipping on time with quality.',
-    href: '/blog/ai-product-roadmaps-that-ship',
-    date: '2025-09-11',
-    tags: ['Product', 'AI', 'Strategy'],
-  },
-  {
-    title: 'Edge AI in Manufacturing 2025: Faster Decisions, Lower Costs',
-    description:
-      'Move inference to the edge for sub-100ms decisions, resilience, and bandwidth savings.',
-    href: '/blog/edge-ai-in-manufacturing-2025',
-    date: '2025-09-11',
-    tags: ['Edge AI', 'Manufacturing', 'IoT'],
-  },
-  {
-    title: 'GenAI Evals in Production: What Actually Works',
-    description:
-      'Build continuous eval loops with golden tasks, HITL audits, and drift-aware sampling.',
-    href: '/blog/genai-evals-in-production',
-    date: '2025-09-11',
-    tags: ['GenAI', 'Evals', 'Quality'],
-  },
-  {
-    title: 'Startup Micro SaaS Playbook: From Idea to $10k MRR',
-    description:
-      'A pragmatic blueprint to launch and grow a Micro SaaS with capital efficiency.',
-    href: '/blog/startup-micro-saas-playbook',
-    date: '2025-09-11',
-    tags: ['Startup', 'SaaS', 'Growth'],
-  },
-  {
-    title: 'AI Governance Operating Model: From Policy to Practice',
-    description:
-      'Translate policy into day-to-day decisions with risk tiering, evals, and reviews.',
-    href: '/blog/ai-governance-operating-model',
-    date: '2025-09-11',
-    tags: ['AI', 'Governance', 'Risk'],
-  },
-  {
-    title: 'Serverless for ML in 2025: Simple, Cost-Efficient, Production-Ready',
-    description:
-      'Run ML and GenAI on serverless with predictable cost and strong reliability.',
-    href: '/blog/serverless-for-ml-2025',
-    date: '2025-09-11',
-    tags: ['Serverless', 'ML', 'Cloud'],
-  },
-  {
-    title: 'Practical AI Agents for Small Businesses',
-    description:
-      'How SMBs can deploy lightweight AI agents to automate support, sales outreach, and back-office tasks safely.',
-    href: '/blog/ai-agents-for-smbs',
-    date: '2025-09-11',
-    tags: ['AI', 'Automation', 'Agents'],
-  },
-  {
-    title: 'Production-Grade AI Agents: Observability and Safety',
-    description:
-      'How to harden agents for production with logging, evals, safety and cost controls.',
-    href: '/blog/production-grade-ai-agents',
-    date: '2025-09-11',
-    tags: ['AI', 'Agents', 'MLOps'],
-  },
-  {
-    title: 'Cloud Cost Optimization in 2025: Proven Playbook',
-    description:
-      'A tactical guide to cut 20–40% of cloud spend without sacrificing performance or velocity.',
-    href: '/blog/cloud-cost-optimization-2025',
-    date: '2025-09-11',
-    tags: ['Cloud', 'FinOps', 'DevOps'],
-  },
-  {
-    title: 'Cloud FinOps Automation: 30% Savings With Guardrails',
-    description:
-      'Automation-first FinOps: waste sweeps, rightsizing approvals, commitments, and guardrails.',
-    href: '/blog/cloud-finops-automation',
-    date: '2025-09-11',
-    tags: ['Cloud', 'FinOps', 'Automation'],
-  },
-  {
-    title: 'AI-Powered Customer Support Playbooks',
-    description:
-      'Production-ready patterns for self-serve assistants, case triage, agent copilots, and QA.',
-    href: '/blog/ai-customer-support-playbooks',
-    date: '2025-09-11',
-    tags: ['AI', 'CX', 'Automation'],
-  },
-  {
-    title: 'AI Infrastructure Cost Controls That Actually Work',
-    description:
-      'A pragmatic framework to reduce inference costs while maintaining performance and velocity.',
-    href: '/blog/ai-infra-cost-controls',
-    date: '2025-09-11',
-    tags: ['Cloud', 'FinOps', 'AI'],
-  },
-  {
-    title: 'Enterprise RAG Blueprint: From Pilot to Production',
-    description:
-      'Step-by-step architecture and rollout plan for RAG in regulated, multi-tenant environments.',
-    href: '/blog/enterprise-rag-blueprint',
-    date: '2025-09-11',
-    tags: ['RAG', 'LLM', 'Architecture'],
-  },
-  {
-    title: 'The Modern Data Stack in 2025: Pragmatic Guide',
-    description:
-      'Ingestion, lakehouse, transformations, metrics and activation that actually work at scale.',
-    href: '/blog/modern-data-stack-2025',
-    date: '2025-09-11',
-    tags: ['Data', 'Analytics', 'Engineering'],
-  },
-];
+};
 
-export default function BlogIndexPage() {
+export default function BlogPage() {
+  const blogPosts = [
+    {
+      title: "AI Implementation Roadmap 2026: A Complete Guide",
+      excerpt: "Learn how to successfully implement AI solutions in your organization with our comprehensive roadmap.",
+      date: "January 15, 2025",
+      readTime: "8 min read",
+      category: "AI",
+      href: "/guides/ai-2026-implementation-roadmap",
+      featured: true
+    },
+    {
+      title: "Autonomous Business Processes: The Future of Work",
+      excerpt: "Discover how autonomous business processes are revolutionizing the way companies operate.",
+      date: "January 10, 2025",
+      readTime: "6 min read",
+      category: "Automation",
+      href: "/guides/autonomous-business-processes-implementation-guide-2026",
+      featured: true
+    },
+    {
+      title: "Micro SaaS Development: Building Scalable Solutions",
+      excerpt: "Best practices for developing micro SaaS applications that scale with your business growth.",
+      date: "January 5, 2025",
+      readTime: "5 min read",
+      category: "SaaS",
+      href: "/blog/micro-saas-development",
+      featured: false
+    },
+    {
+      title: "Cloud Migration Strategies for Enterprise",
+      excerpt: "Comprehensive guide to migrating your enterprise infrastructure to the cloud.",
+      date: "December 28, 2024",
+      readTime: "7 min read",
+      category: "Cloud",
+      href: "/blog/cloud-migration-strategies",
+      featured: false
+    },
+    {
+      title: "Cybersecurity Best Practices for 2025",
+      excerpt: "Essential cybersecurity practices to protect your business in the digital age.",
+      date: "December 20, 2024",
+      readTime: "4 min read",
+      category: "Security",
+      href: "/blog/cybersecurity-best-practices",
+      featured: false
+    },
+    {
+      title: "Blockchain Technology: Beyond Cryptocurrency",
+      excerpt: "Exploring real-world applications of blockchain technology in various industries.",
+      date: "December 15, 2024",
+      readTime: "6 min read",
+      category: "Blockchain",
+      href: "/blog/blockchain-applications",
+      featured: false
+    }
+  ];
+
+  const categories = ["All", "AI", "Automation", "SaaS", "Cloud", "Security", "Blockchain"];
+
   return (
-    <div className='min-h-screen'>
-      <header className='mb-10'>
-        <h1 className='text-4xl md:text-5xl font-bold text-gray-900'>Blog</h1>
-        <p className='mt-3 text-gray-600 max-w-2xl'>
-          Curated insights, implementation guides, and trend reports from Zion Tech Group.
-        </p>
-      </header>
+    <div className="min-h-screen py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Technology Blog
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Stay updated with the latest insights on AI, micro SaaS, IT services, 
+              and emerging technology trends from our team of experts.
+            </p>
+          </div>
 
-      <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
-        {posts.map((post) => (
-          <Link key={post.href} href={post.href} className='group'>
-            <article className={`border rounded-lg p-6 h-full hover:shadow-lg transition-all duration-300 ${
-              post.featured 
-                ? 'border-purple-200 bg-gradient-to-br from-purple-50 to-blue-50 hover:shadow-purple-200 hover:border-purple-300' 
-                : 'border-gray-200 bg-white hover:shadow-md hover:border-gray-300'
-            }`}>
-              <div className={`text-sm ${post.featured ? 'text-purple-600' : 'text-gray-500'}`}>
-                {post.date}
-                {post.featured && <span className='ml-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-2 py-1 rounded-full text-xs font-bold'>FEATURED</span>}
-              </div>
-              <h2 className={`mt-2 text-2xl font-semibold transition-colors ${
-                post.featured 
-                  ? 'text-purple-900 group-hover:text-purple-700' 
-                  : 'text-gray-900 group-hover:text-blue-600'
-              }`}>
-                {post.title}
-              </h2>
-              <p className={`mt-2 ${post.featured ? 'text-purple-700' : 'text-gray-600'}`}>
-                {post.description}
-              </p>
-              <div className='mt-4 flex gap-2 flex-wrap'>
-                {post.tags.map((tag) => (
-                  <span key={tag} className={`text-xs px-2 py-1 rounded ${
-                    post.featured 
-                      ? 'bg-purple-100 text-purple-700 border border-purple-200' 
-                      : 'bg-blue-50 text-blue-700'
-                  }`}>
-                    {tag}
-                  </span>
-                ))}
-              </div>
-              <div className={`mt-4 font-medium transition-colors ${
-                post.featured 
-                  ? 'text-purple-600 group-hover:text-purple-800' 
-                  : 'text-blue-600 group-hover:text-blue-800'
-              }`}>
-                Read more →
-              </div>
-            </article>
-          </Link>
-        ))}
+          {/* Category Filter */}
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
+            {categories.map((category) => (
+              <button
+                key={category}
+                className={`px-6 py-2 rounded-full font-medium transition-colors ${
+                  category === "All" 
+                    ? "bg-blue-600 text-white" 
+                    : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+                }`}
+              >
+                {category}
+              </button>
+            ))}
+          </div>
+
+          {/* Featured Posts */}
+          <div className="mb-16">
+            <h2 className="text-2xl font-bold text-gray-900 mb-8">Featured Articles</h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              {blogPosts.filter(post => post.featured).map((post, index) => (
+                <article key={index} className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100">
+                  <div className="p-8">
+                    <div className="flex items-center justify-between mb-4">
+                      <span className="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">
+                        {post.category}
+                      </span>
+                      <span className="text-sm text-gray-500">{post.readTime}</span>
+                    </div>
+                    
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">
+                      <Link href={post.href} className="hover:text-blue-600 transition-colors">
+                        {post.title}
+                      </Link>
+                    </h3>
+                    
+                    <p className="text-gray-600 mb-4 leading-relaxed">{post.excerpt}</p>
+                    
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm text-gray-500">{post.date}</span>
+                      <Link
+                        href={post.href}
+                        className="text-blue-600 hover:text-blue-700 font-semibold flex items-center"
+                      >
+                        Read More
+                        <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </Link>
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+
+          {/* All Posts */}
+          <div>
+            <h2 className="text-2xl font-bold text-gray-900 mb-8">All Articles</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {blogPosts.map((post, index) => (
+                <article key={index} className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100">
+                  <div className="p-6">
+                    <div className="flex items-center justify-between mb-3">
+                      <span className="bg-gray-100 text-gray-700 text-xs font-medium px-2 py-1 rounded-full">
+                        {post.category}
+                      </span>
+                      <span className="text-xs text-gray-500">{post.readTime}</span>
+                    </div>
+                    
+                    <h3 className="text-lg font-bold text-gray-900 mb-3">
+                      <Link href={post.href} className="hover:text-blue-600 transition-colors">
+                        {post.title}
+                      </Link>
+                    </h3>
+                    
+                    <p className="text-gray-600 mb-4 text-sm leading-relaxed">{post.excerpt}</p>
+                    
+                    <div className="flex items-center justify-between">
+                      <span className="text-xs text-gray-500">{post.date}</span>
+                      <Link
+                        href={post.href}
+                        className="text-blue-600 hover:text-blue-700 text-sm font-semibold"
+                      >
+                        Read →
+                      </Link>
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+
+          {/* Newsletter Signup */}
+          <div className="mt-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-12 text-center text-white">
+            <h2 className="text-3xl font-bold mb-4">Stay Updated</h2>
+            <p className="text-xl text-blue-100 mb-8">
+              Get the latest technology insights and industry updates delivered to your inbox.
+            </p>
+            <div className="max-w-md mx-auto flex gap-4">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="flex-1 px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500"
+              />
+              <button className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                Subscribe
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
   );
 }
-
