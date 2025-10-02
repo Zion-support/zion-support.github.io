@@ -48,26 +48,15 @@ const ModernHeader: React.FC = () => {
         { label: 'Advanced Cybersecurity AI', path: '/services/advanced-cybersecurity-ai' },
         { label: 'AI Solutions Hub', path: '/ai-solutions' },
         { label: 'Quantum Computing', path: '/quantum-computing' },
-        { label: 'Cybersecurity Platform', path: '/cybersecurity' },
         { label: 'Cloud & DevOps', path: '/cloud-devops' },
-        { label: 'IoT & Edge Computing', path: '/iot-edge-computing' },
-        { label: 'Digital Twin Solutions', path: '/digital-twin' },
-        { label: 'Blockchain & Web3', path: '/blockchain-web3' },
-        { label: 'Space Technology', path: '/space-tech' },
       ]
     },
     {
       label: 'Resources',
       path: '/resources',
       dropdown: [
+        { label: 'Resources Hub', path: '/resources' },
         { label: 'Case Studies', path: '/case-studies' },
-        { label: 'White Papers', path: '/white-papers' },
-        { label: 'Webinars', path: '/webinars' },
-        { label: 'Documentation', path: '/docs' },
-        { label: 'API Reference', path: '/docs/api' },
-        { label: 'Developer Tools', path: '/developer-tools' },
-        { label: 'Training & Certification', path: '/training' },
-        { label: 'Community Forum', path: '/community' },
         { label: 'Blog', path: '/blog' },
       ]
     },
@@ -78,12 +67,6 @@ const ModernHeader: React.FC = () => {
         { label: 'About Us', path: '/about' },
         { label: 'Our Team', path: '/team' },
         { label: 'Partners', path: '/partners' },
-        { label: 'News & Events', path: '/news' },
-        { label: 'Press Kit', path: '/press' },
-        { label: 'Investor Relations', path: '/investors' },
-        { label: 'Sustainability', path: '/sustainability' },
-        { label: 'Diversity & Inclusion', path: '/diversity' },
-        { label: 'Careers', path: '/careers' },
       ]
     },
     {
@@ -93,12 +76,25 @@ const ModernHeader: React.FC = () => {
   ];
 
   return (
-    <header className="bg-slate-900 border-b border-slate-800 sticky top-0 z-50 shadow-lg">
+    <>
+      {/* Skip Navigation Link */}
+      <a 
+        href="#main-content" 
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded-md z-50 focus:outline-none focus:ring-2 focus:ring-blue-400"
+      >
+        Skip to main content
+      </a>
+      
+      <header className="bg-slate-900 border-b border-slate-800 sticky top-0 z-50 shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2 text-white hover:text-blue-400 transition-colors">
-            <Zap className="h-8 w-8 text-blue-400" />
+          <Link 
+            to="/" 
+            className="flex items-center space-x-2 text-white hover:text-blue-400 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded-md"
+            aria-label="Zion Tech Group - Go to homepage"
+          >
+            <Zap className="h-8 w-8 text-blue-400" aria-hidden="true" />
             <span className="text-xl font-bold">Zion Tech Group</span>
           </Link>
 
@@ -110,24 +106,32 @@ const ModernHeader: React.FC = () => {
                   <div className="relative">
                     <button
                       onClick={() => toggleDropdown(item.label)}
-                      className={`flex items-center space-x-1 px-3 py-2 text-sm font-medium rounded-md transition-colors ${
+                      className={`flex items-center space-x-1 px-3 py-2 text-sm font-medium rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-slate-900 ${
                         isActive(item.path) || activeDropdown === item.label
                           ? 'text-blue-400 bg-slate-800'
                           : 'text-slate-300 hover:text-white hover:bg-slate-800'
                       }`}
+                      aria-expanded={activeDropdown === item.label}
+                      aria-haspopup="true"
+                      aria-label={`${item.label} menu`}
                     >
                       <span>{item.label}</span>
-                      <ChevronDown className="h-4 w-4" />
+                      <ChevronDown className="h-4 w-4" aria-hidden="true" />
                     </button>
                     
                     {activeDropdown === item.label && (
-                      <div className="absolute top-full left-0 mt-1 w-64 bg-slate-800 rounded-md shadow-lg border border-slate-700 py-2 z-50">
+                      <div 
+                        className="absolute top-full left-0 mt-1 w-64 bg-slate-800 rounded-md shadow-lg border border-slate-700 py-2 z-50"
+                        role="menu"
+                        aria-label={`${item.label} submenu`}
+                      >
                         {item.dropdown.map((dropdownItem) => (
                           <Link
                             key={dropdownItem.path}
                             to={dropdownItem.path}
-                            className="block px-4 py-2 text-sm text-slate-300 hover:text-white hover:bg-slate-700 transition-colors"
+                            className="block px-4 py-2 text-sm text-slate-300 hover:text-white hover:bg-slate-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-inset"
                             onClick={() => setActiveDropdown(null)}
+                            role="menuitem"
                           >
                             {dropdownItem.label}
                           </Link>
@@ -138,7 +142,7 @@ const ModernHeader: React.FC = () => {
                 ) : (
                   <Link
                     to={item.path}
-                    className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${
+                    className={`px-3 py-2 text-sm font-medium rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-slate-900 ${
                       isActive(item.path)
                         ? 'text-blue-400 bg-slate-800'
                         : 'text-slate-300 hover:text-white hover:bg-slate-800'
@@ -231,6 +235,7 @@ const ModernHeader: React.FC = () => {
         )}
       </div>
     </header>
+    </>
   );
 };
 

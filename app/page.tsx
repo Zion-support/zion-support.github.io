@@ -1,102 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
-import Ultimate2025ContentShowcaseBanner from '../components/Ultimate2025ContentShowcaseBanner';
-import March2027QuantumSingularityBanner from '../components/March2027QuantumSingularityBanner';
-import {
-  NewBlogBanner,
-  AnalyticsPlatformBanner,
-  TechCorpSuccessBanner,
-  WorkflowAutomationBanner,
-  AIAnalyticsBanner,
-  HealthTechSuccessBanner,
-  ComprehensiveAIBanner,
-  EnterpriseAIBanner,
-  NewContentBanner,
-  CustomerServiceAIBanner,
-  HealthcareAIBanner,
-  RetailSuccessBanner,
-  AIContentShowcaseBanner,
-  AIRevolutionBanner,
-  AutonomousAgentsBanner,
-  AIGovernanceBanner,
-  FinTechSuccessBanner,
-  NewContentShowcaseBanner,
-  AIRoadmapsBanner,
-  AIFinOpsBanner,
-  AIMultimodalEnterpriseBanner,
-  AIEnterpriseAutomationBanner,
-  AIDataAnalyticsEnterpriseBanner,
-  EnterpriseTransformationSuccessBanner,
-  HealthcareTransformationBanner,
-  NewContent2026Banner,
-  AIAgentOrchestrationBanner,
-  AISustainabilityBanner,
-  QuantumComputingBanner,
-  SustainabilityCaseStudyBanner,
-  QuantumOptimizationBanner,
-  AIOperationalExcellenceBanner,
-  AIAgentObservabilityBanner,
-  ManufacturingTransformationBanner,
-  Latest2026ContentBanner,
-  AISecurityEnterprise2026Banner,
-  AIMultimodalEnterprise2026Banner,
-  AISustainabilityTransformationBanner,
-  LatestContent2026Banner
-} from '../components/PromotionalBanner';
-import {
-  NewContent2026Banner as NewContent2026BannerComponent,
-  AutonomousOperationsBanner,
-  FinOpsAdvancedBanner,
-  PlatformArchitectureBanner,
-  AutonomousOperationsSuccessBanner,
-  NewContentShowcaseBanner2026,
-  LatestContent2026Banner,
-  AISecurityEnterprise2026Banner,
-  AIMultimodalEnterprise2026Banner,
-  AISustainabilityTransformationBanner,
-  NewLatest2026ContentBanner,
-  AIAutonomousCloudOpsBanner,
-  AIFinTechTransformationBanner,
-  AIRetailAutomationBanner,
-  Latest2026ContentBanner
-} from '../components/NewContent2026Banners';
+import { ArrowRight } from 'lucide-react';
+import { NewContent2026MegaBanner } from '../components/NewContent2026Banners';
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
-import InteractiveContentShowcase from '../components/InteractiveContentShowcase';
-import ContentRecommendationSystem from '../components/ContentRecommendationSystem';
-import EnhancedContentShowcase2026 from '../components/EnhancedContentShowcase2026';
-import LatestContent2026Banner from '../components/LatestContent2026Banner';
-import NewContent2026ShowcaseBanner from '../components/NewContent2026ShowcaseBanner';
-import LatestContentPromotionalBanner from '../components/LatestContentPromotionalBanner';
-import NewContentPromotionalBanner2026 from '../components/NewContentPromotionalBanner2026';
-import AIInnovationShowcaseBanner2026 from '../components/AIInnovationShowcaseBanner2026';
-import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
-import UltimateContent2026Showcase from '../components/UltimateContent2026Showcase';
-import Revolutionary2027ContentBanner from '../components/Revolutionary2027ContentBanner';
-import UltimateContent2027Showcase from '../components/UltimateContent2027Showcase';
-import NewContentShowcase2026 from '../src/components/NewContentShowcase2026';
-import September30NewAIBreakthroughsBanner from '../components/September30NewAIBreakthroughsBanner';
-import September30BreakthroughContentBanner from '../components/September30BreakthroughContentBanner';
-import Revolutionary2026ContentShowcaseBanner from '../components/Revolutionary2026ContentShowcaseBanner';
-import Latest2026ContentMegaBanner from '../components/Latest2026ContentMegaBanner';
-import Ultimate2026ContentShowcaseBanner from '../components/Ultimate2026ContentShowcaseBanner';
-import RevolutionaryQuantumAIBreakthroughBanner from '../components/RevolutionaryQuantumAIBreakthroughBanner';
-import AutonomousBusinessSystemsMegaBanner from '../components/AutonomousBusinessSystemsMegaBanner';
-import QuantumAI2027BreakthroughBanner from '../components/QuantumAI2027BreakthroughBanner';
-import AutonomousBusinessIntelligence2026Banner from '../components/AutonomousBusinessIntelligence2026Banner';
-import NewContent2027ShowcaseBanner from '../components/NewContent2027ShowcaseBanner';
-import RevolutionaryBreakthrough2026Banner from '../src/components/RevolutionaryBreakthrough2026Banner';
-import AICostOptimizationBanner from '../src/components/AICostOptimizationBanner';
-import AutonomyBlueprint2026Banner from '../components/AutonomyBlueprint2026Banner';
-import September30ContentPromo2025 from '../components/September30ContentPromo2025';
-import NewContent2026BreakthroughBanner from '../components/NewContent2026BreakthroughBanner';
-import InteractiveAI2026BreakthroughCalculator from '../components/InteractiveAI2026BreakthroughCalculator';
-import FreshContent2027ShowcaseBanner from '../components/FreshContent2027ShowcaseBanner';
-import RevolutionaryAI2027Banner from '../components/RevolutionaryAI2027Banner';
-import AI2028RevolutionaryBreakthroughBanner from '../components/AI2028RevolutionaryBreakthroughBanner';
-import AI2028ContentShowcaseBanner from '../components/AI2028ContentShowcaseBanner';
-import Ultimate2025ContentShowcaseBanner from '../components/Ultimate2025ContentShowcaseBanner';
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
   description: 'Enterprise-grade AI, micro SaaS, and IT solutions. Transform your business with cutting-edge technology and automation.',
@@ -105,10 +13,9 @@ export const metadata = {
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-slate-950">
-      {/* Hero Section */}
-      <header className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-20">
-        <div className="absolute inset-0 overflow-hidden opacity-20">
+    <>
+      <div className="animate-fade-in">
+      {/* AI Content Banners */}
           <div className="absolute top-0 left-1/3 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
           <div className="absolute bottom-0 right-1/3 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
         </div>
@@ -190,17 +97,278 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-      </header>
+      </div>
 
-      {/* Featured Services Section */}
-      <section className="py-20 px-6 bg-white">
-        <div className="container mx-auto">
+      {/* NEW INNOVATIVE SERVICES SHOWCASE */}
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Featured Services</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Discover our most popular AI-powered solutions that are transforming businesses worldwide
+            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-full text-sm font-bold mb-6">
+              🚀 Revolutionary AI Solutions
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Cutting-Edge AI Services & Micro SaaS Solutions
+            </h2>
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-8">
+              Transform your business with our innovative AI-powered platforms. From meeting intelligence to financial automation, 
+              we deliver enterprise-grade solutions that drive real results.
             </p>
           </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            {/* AI Meeting Intelligence Platform */}
+            <div className="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-200">
+              <div className="p-8">
+                <div className="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
+                  <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">AI Meeting Intelligence Platform</h3>
+                <p className="text-gray-600 mb-6">
+                  Revolutionary AI platform that records, transcribes, analyzes, and extracts actionable insights from meetings automatically.
+                </p>
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-center text-sm text-gray-500">
+                    <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                    95% transcription accuracy
+                  </div>
+                  <div className="flex items-center text-sm text-gray-500">
+                    <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                    Automated task assignment
+                  </div>
+                  <div className="flex items-center text-sm text-gray-500">
+                    <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                    Real-time sentiment analysis
+                  </div>
+                </div>
+                <div className="flex items-center justify-between">
+                  <div className="text-2xl font-bold text-blue-600">$29-79/month</div>
+                  <Link 
+                    href="/services/ai-meeting-intelligence-platform"
+                    className="bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+                  >
+                    Learn More →
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            {/* AI Content Optimization Suite */}
+            <div className="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-200">
+              <div className="p-8">
+                <div className="w-16 h-16 bg-purple-100 rounded-xl flex items-center justify-center mb-6">
+                  <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">AI Content Optimization Suite</h3>
+                <p className="text-gray-600 mb-6">
+                  Transform your content strategy with AI that analyzes, optimizes, and maximizes engagement across all content types.
+                </p>
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-center text-sm text-gray-500">
+                    <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
+                    300% increase in engagement
+                  </div>
+                  <div className="flex items-center text-sm text-gray-500">
+                    <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
+                    SEO optimization
+                  </div>
+                  <div className="flex items-center text-sm text-gray-500">
+                    <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
+                    Multi-platform optimization
+                  </div>
+                </div>
+                <div className="flex items-center justify-between">
+                  <div className="text-2xl font-bold text-purple-600">$49-149/month</div>
+                  <Link 
+                    href="/services/ai-content-optimization-suite"
+                    className="bg-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
+                  >
+                    Learn More →
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            {/* AI Customer Insights Platform */}
+            <div className="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-200">
+              <div className="p-8">
+                <div className="w-16 h-16 bg-green-100 rounded-xl flex items-center justify-center mb-6">
+                  <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">AI Customer Insights Platform</h3>
+                <p className="text-gray-600 mb-6">
+                  Transform customer data into actionable insights with AI that predicts churn and maximizes customer lifetime value.
+                </p>
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-center text-sm text-gray-500">
+                    <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                    95% churn prediction accuracy
+                  </div>
+                  <div className="flex items-center text-sm text-gray-500">
+                    <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                    Behavioral analytics
+                  </div>
+                  <div className="flex items-center text-sm text-gray-500">
+                    <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                    Upsell optimization
+                  </div>
+                </div>
+                <div className="flex items-center justify-between">
+                  <div className="text-2xl font-bold text-green-600">$199-499/month</div>
+                  <Link 
+                    href="/services/ai-customer-insights-platform"
+                    className="bg-green-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-green-700 transition-colors"
+                  >
+                    Learn More →
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            {/* AI Workflow Automation Engine */}
+            <div className="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-200">
+              <div className="p-8">
+                <div className="w-16 h-16 bg-orange-100 rounded-xl flex items-center justify-center mb-6">
+                  <svg className="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">AI Workflow Automation Engine</h3>
+                <p className="text-gray-600 mb-6">
+                  Eliminate manual tasks with intelligent automation that learns and adapts to your business processes.
+                </p>
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-center text-sm text-gray-500">
+                    <span className="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>
+                    400% productivity increase
+                  </div>
+                  <div className="flex items-center text-sm text-gray-500">
+                    <span className="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>
+                    95% error reduction
+                  </div>
+                  <div className="flex items-center text-sm text-gray-500">
+                    <span className="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>
+                    500+ integrations
+                  </div>
+                </div>
+                <div className="flex items-center justify-between">
+                  <div className="text-2xl font-bold text-orange-600">$99-299/month</div>
+                  <Link 
+                    href="/services/ai-workflow-automation-engine"
+                    className="bg-orange-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-orange-700 transition-colors"
+                  >
+                    Learn More →
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            {/* AI Predictive Maintenance Platform */}
+            <div className="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-200">
+              <div className="p-8">
+                <div className="w-16 h-16 bg-red-100 rounded-xl flex items-center justify-center mb-6">
+                  <svg className="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">AI Predictive Maintenance Platform</h3>
+                <p className="text-gray-600 mb-6">
+                  Prevent equipment failures before they happen with AI that monitors health and predicts maintenance needs.
+                </p>
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-center text-sm text-gray-500">
+                    <span className="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
+                    80% downtime reduction
+                  </div>
+                  <div className="flex items-center text-sm text-gray-500">
+                    <span className="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
+                    95% prediction accuracy
+                  </div>
+                  <div className="flex items-center text-sm text-gray-500">
+                    <span className="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
+                    40% cost reduction
+                  </div>
+                </div>
+                <div className="flex items-center justify-between">
+                  <div className="text-2xl font-bold text-red-600">$299-999/month</div>
+                  <Link 
+                    href="/services/ai-predictive-maintenance-platform"
+                    className="bg-red-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-red-700 transition-colors"
+                  >
+                    Learn More →
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            {/* AI Financial Intelligence Platform */}
+            <div className="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-200">
+              <div className="p-8">
+                <div className="w-16 h-16 bg-emerald-100 rounded-xl flex items-center justify-center mb-6">
+                  <svg className="w-8 h-8 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">AI Financial Intelligence Platform</h3>
+                <p className="text-gray-600 mb-6">
+                  Secure your finances with AI that detects fraud, automates accounting, and provides real-time financial insights.
+                </p>
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-center text-sm text-gray-500">
+                    <span className="w-2 h-2 bg-emerald-500 rounded-full mr-3"></span>
+                    99.9% fraud detection
+                  </div>
+                  <div className="flex items-center text-sm text-gray-500">
+                    <span className="w-2 h-2 bg-emerald-500 rounded-full mr-3"></span>
+                    90% time savings
+                  </div>
+                  <div className="flex items-center text-sm text-gray-500">
+                    <span className="w-2 h-2 bg-emerald-500 rounded-full mr-3"></span>
+                    Automated compliance
+                  </div>
+                </div>
+                <div className="flex items-center justify-between">
+                  <div className="text-2xl font-bold text-emerald-600">$199-799/month</div>
+                  <Link 
+                    href="/services/ai-financial-intelligence-platform"
+                    className="bg-emerald-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-emerald-700 transition-colors"
+                  >
+                    Learn More →
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Contact Information */}
+          <div className="text-center bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white">
+            <h3 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h3>
+            <p className="text-xl mb-8 opacity-90">
+              Contact us today to learn how our AI solutions can drive your business forward
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+              <a 
+                href="mailto:kleber@ziontechgroup.com"
+                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              >
+                📧 kleber@ziontechgroup.com
+              </a>
+              <a 
+                href="tel:+13024640950"
+                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              >
+                📞 +1 302 464 0950
+              </a>
+            </div>
+            <div className="text-sm opacity-80">
+              <p>📍 364 E Main St STE 1008, Middletown, DE 19709</p>
+              <p>🌐 <a href="https://ziontechgroup.com" className="underline hover:no-underline">ziontechgroup.com</a></p>
+            </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* AI Social Media Automation */}
@@ -321,46 +489,7 @@ export default function HomePage() {
       </section>
 
       {/* NEW DECEMBER 2026 ULTIMATE AUTONOMOUS REVOLUTION - MOST PROMINENT */}
-      <December2026UltimateAutonomousBanner />
-
-      {/* NEW NOVEMBER 2026 QUANTUM SUPERINTELLIGENCE - MOST PROMINENT */}
-      <November2026QuantumSuperintelligenceBanner />
-
-      {/* NEW AUGUST 2026 QUANTUM CONSCIOUSNESS - MOST PROMINENT */}
-      <August2026QuantumConsciousnessBanner />
-
-      {/* ULTIMATE AUTONOMOUS REVOLUTION 2026 - MOST PROMINENT */}
-      <UltimateAutonomousRevolutionBanner />
-
-      {/* NEW JULY 2026 MEGA BREAKTHROUGH - FEATURED PROMINENTLY */}
-      <July2026MegaBreakthroughBanner />
-
-      {/* NEW APRIL 2026 ULTIMATE BREAKTHROUGH - MOST PROMINENT */}
-      <April2026UltimateBreakthroughBanner />
-
-      {/* NEW MAY 2026 REVOLUTIONARY BREAKTHROUGH - FEATURED PROMINENTLY */}
-      <May2026RevolutionaryBreakthroughBanner />
-
-      {/* NEW JUNE 2026 ULTIMATE BREAKTHROUGH - FEATURED PROMINENTLY */}
-      <June2026UltimateBreakthroughBanner />
-
-      {/* NEW APRIL 2026 MEGA BREAKTHROUGH */}
-      <April2026MegaBreakthroughBanner />
-
-      {/* NEW MARCH 2026 MEGA BREAKTHROUGH - MOST PROMINENT */}
-      <March2026MegaBreakthroughBanner />
-
-      {/* NEW 2026 REVOLUTIONARY CONTENT - Featured prominently */}
-      <AI2026RevolutionaryAutonomousSystemsBanner />
-      
-      {/* NEW 2026 QUANTUM AI REVOLUTION - Featured prominently */}
-      <AI2026QuantumAIRevolutionBanner />
-      
-      {/* Revolutionary 2029 Content Mega Banner - Featured prominently */}
-      <Revolutionary2029ContentMegaBanner />
-      
-      {/* Ultimate 2030 Consciousness Banner */}
-      <Ultimate2030ConsciousnessBanner />
+      {/* Content Banners */}
 
       {/* Fresh content promo — newly published */}
       <section className="py-4 border-t border-b border-white/10 bg-white/5">
@@ -379,18 +508,12 @@ export default function HomePage() {
             </div>
       
       {/* 🌟 AI 2028 REVOLUTIONARY BREAKTHROUGH BANNER */}
-      <AI2028RevolutionaryBreakthroughBanner />
       
       {/* 🌟 AI 2028 CONTENT SHOWCASE */}
-      <AI2028ContentShowcaseBanner />
-      <Ultimate2025ContentShowcaseBanner />
       
       {/* 🌟 AI 2028 REVOLUTIONARY BREAKTHROUGH BANNER */}
-      <AI2028RevolutionaryBreakthroughBanner />
       
       {/* 🌟 AI 2028 CONTENT SHOWCASE */}
-      <AI2028ContentShowcaseBanner />
-      <Ultimate2025ContentShowcaseBanner />
       
       {/* New Content Promo Strip */}
       <div className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
@@ -418,16 +541,10 @@ export default function HomePage() {
             Read the latest
           </Link>
         </div>
-      </section>
-      {/* 🚀🚀🚀 FRESH CONTENT 2027 - Revolutionary AI Breakthroughs! 🚀🚀🚀 */}
-      <RevolutionaryAI2027Banner />
-      
-      {/* 🌟 Fresh Content 2027 Showcase */}
-      <FreshContent2027ShowcaseBanner />
-      
-      {/* 🚀 NEWEST BREAKTHROUGH CONTENT - JANUARY 30, 2026 - REVOLUTIONARY AI TECHNOLOGIES! */}
-      <NewContent2026BreakthroughBanner />
-
+      </div>
+      {/* Revolutionary Content */}
+      <section className="py-16 bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white">
+        <div className="max-w-6xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-8 mb-16">
             <Link href="/blog/ai-2027-quantum-revolution" className="group">
               <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 backdrop-blur-lg rounded-2xl p-8 border border-purple-500/30 hover:border-purple-400/50 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/30">
@@ -539,19 +656,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      {/* 🚀 NEWEST 2027 CONTENT - BREAKTHROUGH QUANTUM AI & AUTONOMOUS INTELLIGENCE! */}
-      <NewContent2027ShowcaseBanner />
-
-      {/* 🚀 REVOLUTIONARY AI ENTERPRISE AUTOMATION 2026 */}
-      <RevolutionaryAIEnterpriseAutomationBanner />
-
-      {/* ⚛️ QUANTUM AI BREAKTHROUGH 2026 */}
-      <QuantumAIBreakthroughBanner />
-
-      {/* 🏆 ENTERPRISE AUTOMATION SUCCESS CASE STUDY */}
-      <EnterpriseAutomationSuccessBanner />
-
-      {/* 📣 Featured: New — Autonomous Governance & Agent Ops Observability */}
+      {/* Featured: New — Autonomous Governance & Agent Ops Observability */}
       <div className="bg-gradient-to-r from-purple-700/20 to-fuchsia-700/20 border border-white/10 rounded-2xl p-6 mb-8">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
           <div>
@@ -562,9 +667,9 @@ export default function HomePage() {
           <div className="flex gap-3">
             <Link href="/blog/ai-2027-autonomous-governance-blueprint" className="inline-flex items-center gap-2 bg-white text-purple-700 px-4 py-2 rounded-lg font-semibold hover:bg-purple-50 transition-colors">Read Governance</Link>
             <Link href="/blog/ai-2026-agent-ops-observability" className="inline-flex items-center gap-2 bg-fuchsia-500 text-white px-4 py-2 rounded-lg font-semibold hover:bg-fuchsia-400 transition-colors">Read Observability</Link>
-                  </div>
-                </div>
-              </div>
+          </div>
+        </div>
+      </div>
       {/* 🔔 New Promotions: Governance + Agent Ops */}
       <section className="py-6 bg-gradient-to-r from-blue-700 via-indigo-700 to-fuchsia-700 text-white">
         <div className="max-w-6xl mx-auto px-4">
@@ -577,9 +682,11 @@ export default function HomePage() {
               <h3 className="text-xl font-bold">AI 2027 Autonomous Governance Blueprint</h3>
               <p className="text-white/80 mt-2 text-sm">Policy → controls → telemetry → review. Ship autonomy safely with measurable guardrails.</p>
             </Link>
+          </div>
+        </div>
+      </section>
 
-      {/* 🔔 New: Enterprise Autonomy Blueprint 2026 */}
-      <AutonomyBlueprint2026Banner />
+      {/* Enterprise Autonomy Blueprint 2026 */}
 
       {/* NEW: Fresh today – promote brand-new guides */}
       <section className="py-8 bg-gradient-to-r from-emerald-600/20 to-cyan-600/20 border-y border-white/10">
@@ -610,128 +717,12 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      
       {/* 🚀🚀🚀 FRESH CONTENT 2027 - Revolutionary AI Breakthroughs! 🚀🚀🚀 */}
-      <RevolutionaryAI2027Banner />
       
-      {/* 🌟 Fresh Content 2027 Showcase */}
-      <FreshContent2027ShowcaseBanner />
-      
-      {/* 🚀🚀🚀 BREAKTHROUGH CONTENT - September 30, 2025 - 3 REVOLUTIONARY INNOVATIONS! 🚀🚀🚀 */}
-      <September30BreakthroughContentBanner />
-      
-      {/* 🚀 REVOLUTIONARY NEW CONTENT 2026 - FEATURED PROMINENTLY */}
-      <NewContent2026RevolutionaryBanner />
-      
-      {/* 🚀 REVOLUTIONARY AI 2027 CONTENT - BREAKTHROUGH TECHNOLOGIES! */}
-      <NewContent2027RevolutionaryBanner />
-      <AI2027RevolutionaryBreakthroughBanner />
-      
-      {/* 🆕 ULTIMATE 2026 CONTENT SHOWCASE - NEW BREAKTHROUGH CONTENT */}
-      <Ultimate2026ContentShowcaseBanner />
-      
-      {/* 🌟 Latest 2026 Content Mega Showcase */}
-      <Latest2026ContentMegaBanner />
-      
-      {/* 🚀 Revolutionary 2026 Content Showcase */}
-      <Revolutionary2026ContentShowcaseBanner />
-      
-      {/* 🚀 MEGA CONTENT UPDATE - September 30, 2025 - 116+ NEW RESOURCES! */}
-      <NewContentShowcase2026 />
-      
-      {/* 🚀 NEWEST CONTENT - September 30, 2025 - 3 Breakthrough AI Technologies! */}
-      <September30NewAIBreakthroughsBanner />
-      
-      <September30FreshContentBanner />
-      
-      {/* 🎉 NEW BLOG POSTS - September 30, 2025 - Revolutionary AI Breakthroughs! */}
-      <September30NewBlogsBanner />
-      
-      {/* New Content 2025 Banner */}
-      <NewContent2025Banner />
-      
-      {/* Latest AI 2025 Insights Banner */}
-      <LatestAI2025InsightsBanner />
-      
-      {/* Revolutionary AI 2025 Banner */}
-      <RevolutionaryAI2025Banner />
-      
-      {/* Latest Content 2025 Banner */}
-      <LatestContent2025Banner />
-      
-      {/* 🔥🔥🔥 NEWEST BREAKTHROUGH CONTENT - JANUARY 30, 2027 - 3 REVOLUTIONARY PUBLICATIONS! 🔥🔥🔥 */}
-      <AI2027RevolutionaryBreakthroughBanner />
-      
-      {/* Revolutionary Content 2026 Banner */}
-      <RevolutionaryContent2026Banner />
-      
-      {/* Latest 2026 Mega Content Banners */}
-      <Revolutionary2026ContentBanner />
-      <AI2026ContentShowcaseBanner />
-      <AIEnterpriseAutomationRevolutionBanner />
-      <AIQuantumComputingBreakthroughBanner />
-      <AIMegaTransformationSuccessBanner />
-      <AI2026InnovationShowcaseBanner />
-      {/* Revolutionary 2026 Content Banners */}
-      <RevolutionaryContent2026Banner />
-      <LatestAI2026ContentBanner />
-      {/* New 2026 Mega Content Banner */}
+      {/* Content Banners */}
       <NewContent2026MegaBanner />
-      {/* Latest 2026 Revolutionary Content Banners */}
-      <AINeuralSuperintelligenceBanner />
-      <AIQuantumComputingBanner />
-      <NewAIAutonomousSystemsBanner />
-      <NeuralSuperintelligenceCaseStudyBanner />
-      <InteractiveAIToolsBanner />
-      <NewLatestContentShowcaseBanner />
-      
-      {/* Latest Content Banner 2025 - September 30 */}
-      <LatestContentBanner2025 />
-      
-      {/* Latest 2026 Content Banner */}
-      
-      {/* Promotional Banners */}
-      <AIEnterpriseTransformationBanner />
-      <AIEnterpriseSuccessBanner />
-      <LatestEnterpriseContentBanner />
-      <NewContentShowcase2026Banner />
-      <AIEthicalFrameworkBanner />
-      <AIEthicsSuccessBanner />
-      <LatestContent2026Banner />
-      <AISecurityEnterprise2026Banner />
-      <AIMultimodalEnterprise2026Banner />
-      <AISustainabilityTransformationBanner />
-      <NewLatest2026ContentBanner />
-      <AINeuralArchitectureOptimizationBanner />
-      <AIFederatedLearningBanner />
-      <FederatedLearningSuccessBanner />
-      <AIAutonomousCloudOpsBanner />
-      <AIFinTechTransformationBanner />
-      <AIRetailAutomationBanner />
-      <Latest2026ContentBanner />
-      <AIOperationalExcellenceBanner />
-      <AIAgentObservabilityBanner />
-      <ManufacturingTransformationBanner />
-      <NewContent2026Banner />
-      <AIMultimodalEnterpriseBanner />
-      <AIEnterpriseAutomationBanner />
-      <AIDataAnalyticsEnterpriseBanner />
-      <EnterpriseTransformationSuccessBanner />
-      <HealthcareTransformationBanner />
-      <NewContentShowcaseBanner />
-      <AIRoadmapsBanner />
-      <AIFinOpsBanner />
-      <AutonomousAgentsBanner />
-      <AIGovernanceBanner />
-      <FinTechSuccessBanner />
-      <AIContentShowcaseBanner />
-      <CustomerServiceAIBanner />
-      <HealthcareAIBanner />
-      <RetailSuccessBanner />
-      <AIRevolutionBanner />
-      <NewBlogBanner />
-      <WorkflowAutomationBanner />
-      <AIAnalyticsBanner />
+      {/* Content Banners */}
+      {/* Additional Content Banners */}
       
       {/* Hero Section */}
       <section className="text-center py-20 bg-gradient-to-br from-blue-50 via-white to-teal-50">
@@ -1003,108 +994,11 @@ export default function HomePage() {
         </div>
       </section>
       
-      {/* Revolutionary 2026 Content Banner */}
-      <Revolutionary2026ContentBanner />
-      
-      {/* Promotional Banners */}
-      <NewContent2026Banner />
-      <AINeuralArchitectureBanner />
-      <AISpaceTechBanner />
-      <AISustainabilityCaseStudyBanner />
-      <AITechnologyBreakthroughBanner />
-      <EnterpriseAITransformationBanner />
-      <AIAgentOrchestrationBanner />
-      <AISustainabilityBanner />
-      <QuantumComputingBanner />
-      <SustainabilityCaseStudyBanner />
-      <QuantumOptimizationBanner />
-      <AIMultimodalEnterpriseBanner />
-      <AIEnterpriseAutomationBanner />
-      <AIDataAnalyticsEnterpriseBanner />
-      <EnterpriseTransformationSuccessBanner />
-      <HealthcareTransformationBanner />
-      <NewContentShowcaseBanner />
-      <AIRoadmapsBanner />
-      <AIFinOpsBanner />
-      <AutonomousAgentsBanner />
-      <AIGovernanceBanner />
-      <FinTechSuccessBanner />
-      <AIContentShowcaseBanner />
-      <CustomerServiceAIBanner />
-      <HealthcareAIBanner />
-      <RetailSuccessBanner />
-      <AIRevolutionBanner />
-      <NewBlogBanner />
-      <WorkflowAutomationBanner />
-      <AIAnalyticsBanner />
-      
-      {/* New Content Promotional Banner 2026 */}
-      <NewContentPromotionalBanner2026 />
-      
-      {/* AI Innovation Showcase Banner 2026 */}
-      <AIInnovationShowcaseBanner2026 />
-      
-      {/* Latest 2026 Content Banner */}
-      <LatestContent2026Banner />
-      
-      {/* Next-Generation Autonomous Systems Banner */}
-      <NextGenAutonomousBanner />
-      
-      {/* Interactive Content Recommendation */}
-      <InteractiveContentRecommendation />
-      
-      {/* Enhanced Content Showcase */}
-      <EnhancedContentShowcase2026 />
-      
-      {/* Hero Section */}
-      <section className="text-center py-20 bg-gradient-to-br from-blue-50 via-white to-teal-50">
-        <div className="max-w-4xl mx-auto px-4">
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-            Transform Your Business with
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-teal-600">
-              {' '}AI-Powered Solutions
-            </span>
-          </h1>
-          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Zion Tech Group delivers cutting-edge AI micro SaaS services, cloud automation, 
-            and enterprise IT solutions that drive growth, efficiency, and innovation.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Link
-              to="/services"
-              className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl"
-            >
-              Explore Our Services
-            </Link>
-            <a
-              to="tel:+13024640950"
-              className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 hover:text-white transition-colors"
-            >
-              Call +1 302 464 0950
-            </a>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-3xl font-bold text-blue-600">500+</div>
-              <div className="text-gray-600">Projects Delivered</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-blue-600">99.9%</div>
-              <div className="text-gray-600">Uptime Guarantee</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-blue-600">24/7</div>
-              <div className="text-gray-600">Expert Support</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-blue-600">$2M+</div>
-              <div className="text-gray-600">Cost Savings</div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Additional Content */}
 
       {/* Featured Services */}
+      {/* New Services Hero Section */}
+
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
@@ -1120,114 +1014,94 @@ export default function HomePage() {
             <FeaturedServiceCard
               title="AI Data Analytics"
               description="Transform data into actionable insights with predictive modeling and real-time dashboards"
-              price="$199/month"
+              icon="📊"
               features={['Predictive Analytics', 'Real-time Dashboards', 'Data Integration']}
               href="/services/ai-data-analytics"
-              popular={true}
             />
             <FeaturedServiceCard
               title="AI Workflow Automation"
               description="Automate business processes with intelligent workflow design and smart triggers"
-              price="$149/month"
+              icon="⚙️"
               features={['Process Automation', 'Smart Triggers', 'Performance Monitoring']}
               href="/services/ai-workflow-automation"
-              popular={false}
             />
             <FeaturedServiceCard
               title="AI Virtual Assistant"
               description="24/7 intelligent customer support with natural language processing"
-              price="$99/month"
+              icon="🤖"
               features={['24/7 Support', 'Multi-channel', 'Personalized Responses']}
               href="/services/ai-virtual-assistant"
-              popular={false}
             />
             <FeaturedServiceCard
               title="Cloud Migration"
               description="Seamless migration to cloud infrastructure with zero downtime"
-              price="$2,999"
+              icon="💰"
               features={['Zero Downtime', 'Security Compliance', 'Cost Optimization']}
               href="/services/cloud-migration"
-              popular={false}
             />
             <FeaturedServiceCard
               title="DevOps Automation"
               description="Automate CI/CD pipelines and infrastructure management"
-              price="$399/month"
+              icon="🔒"
               features={['CI/CD Pipelines', 'Infrastructure as Code', 'Auto-scaling']}
               href="/services/devops-automation"
-              popular={false}
             />
             <FeaturedServiceCard
               title="Cybersecurity Consulting"
               description="Advanced threat detection and zero-trust security architecture"
-              price="$599/month"
+              icon="🏥"
               features={['Threat Detection', 'Zero-trust Architecture', 'Compliance']}
               href="/services/cybersecurity-consulting"
-              popular={false}
             />
             <FeaturedServiceCard
               title="AI Edge Computing"
               description="Real-time AI processing at the edge with sub-50ms response times"
-              price="$799/month"
+              icon="🛒"
               features={['Sub-50ms Latency', 'Edge Intelligence', 'Offline Capability']}
               href="/services/ai-edge-computing"
-              popular={false}
             />
             <FeaturedServiceCard
               title="AI Finance Automation"
               description="Automate financial processes with 95% accuracy and $3M+ savings"
-              price="$1,299/month"
+              icon="🏭"
               features={['95% Automation', 'Fraud Detection', 'Real-time Reporting']}
               href="/services/ai-finance-automation"
-              popular={false}
             />
             <FeaturedServiceCard
               title="AI Edge Computing"
               description="Real-time AI processing at the edge with sub-50ms response times"
-              price="$799/month"
+              icon="🛒"
               features={['Sub-50ms Latency', 'Edge Intelligence', 'Offline Capability']}
-              to="/services/ai-edge-computing"
-              popular={false}
+              href="/services/ai-edge-computing"
             />
             <FeaturedServiceCard
               title="AI Finance Automation"
               description="Automate financial processes with 95% accuracy and $3M+ savings"
-              price="$1,299/month"
+              icon="🏭"
               features={['95% Automation', 'Fraud Detection', 'Real-time Reporting']}
-              to="/services/ai-finance-automation"
-              popular={false}
+              href="/services/ai-finance-automation"
             />
             <FeaturedServiceCard
               title="AI Infrastructure Orchestration"
               description="Achieve 99.99% uptime and 85% cost reduction with intelligent automation"
-              price="$15,000/month"
+              icon="🚀"
               features={['99.99% Uptime', 'Self-Healing', '85% Cost Reduction']}
-              to="/services/ai-infrastructure-orchestration-platform-2026"
-              popular={true}
+              href="/services/ai-infrastructure-orchestration-platform-2026"
             />
             <FeaturedServiceCard
               title="AI DevSecOps Automation"
               description="Reduce security vulnerabilities by 95% with automated security operations"
-              price="$12,500/month"
+              icon="🏢"
               features={['95% Vuln Reduction', 'Automated Compliance', '$18M+ ROI']}
-              to="/services/ai-devsecops-automation"
-              popular={true}
+              href="/services/ai-devsecops-automation"
             />
           </div>
         </div>
       </section>
 
       {/* Enhanced Content Showcase 2026 */}
-      <EnhancedContentShowcase2026 />
-      
       {/* Dynamic Content Showcase */}
       <ContentShowcase />
-      
-      {/* Interactive Content Hub */}
-      <InteractiveContentShowcase />
-      
-      {/* Personalized Content Recommendations */}
-      <ContentRecommendationSystem />
 
       {/* Latest Innovations Section */}
       <section className="py-20 bg-gradient-to-br from-indigo-50 via-white to-purple-50">
@@ -1936,28 +1810,34 @@ export default function HomePage() {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <SuccessStory
-              company="TechCorp Inc."
+              title="TechCorp Inc. - E-commerce Success"
+              description="AI Data Analytics automation reduced manual data processing from 40 hours/week to 4 hours/week, achieving 90% time reduction and 60% cost savings."
               industry="E-commerce"
-              challenge="Manual data processing taking 40 hours/week"
-              solution="AI Data Analytics automation"
-              result="90% time reduction, 60% cost savings"
-              metric="$500K saved annually"
+              metrics={[
+                { label: "Time Saved", value: "90%" },
+                { label: "Cost Savings", value: "$500K annually" },
+                { label: "Efficiency Gain", value: "60%" }
+              ]}
             />
             <SuccessStory
-              company="HealthTech Solutions"
+              title="HealthTech Solutions - Healthcare Success"
+              description="AI Virtual Assistant implementation provided 24/7 customer support, achieving 80% faster response time and 95% customer satisfaction."
               industry="Healthcare"
-              challenge="Customer support overwhelmed with queries"
-              solution="AI Virtual Assistant implementation"
-              result="80% faster response time, 24/7 support"
-              metric="95% customer satisfaction"
+              metrics={[
+                { label: "Response Time", value: "80% faster" },
+                { label: "Customer Satisfaction", value: "95%" },
+                { label: "Support Coverage", value: "24/7" }
+              ]}
             />
             <SuccessStory
-              company="FinanceFlow Ltd."
+              title="FinanceFlow Ltd. - Fintech Success"
+              description="AI Workflow Automation platform eliminated complex workflow bottlenecks, achieving 75% process efficiency improvement and 300% ROI in 6 months."
               industry="Fintech"
-              challenge="Complex workflow bottlenecks"
-              solution="AI Workflow Automation platform"
-              result="75% process efficiency improvement"
-              metric="300% ROI in 6 months"
+              metrics={[
+                { label: "Efficiency Improvement", value: "75%" },
+                { label: "ROI", value: "300%" },
+                { label: "Timeframe", value: "6 months" }
+              ]}
             />
           </div>
         </div>
@@ -2037,9 +1917,6 @@ export default function HomePage() {
       </section>
 
       {/* Additional Promotional Banners */}
-      <AnalyticsPlatformBanner />
-      <HealthTechSuccessBanner />
-      <ComprehensiveAIBanner />
 
       {/* CTA Section */}
       <section className="py-20 bg-white">

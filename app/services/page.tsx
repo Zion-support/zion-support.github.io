@@ -145,6 +145,66 @@ export default function ServicesPage() {
       ]
     },
     {
+      title: 'AI Content Optimization Suite',
+      description: 'AI-powered content creation, optimization, and performance analytics for marketing and business growth',
+      icon: '📝',
+      href: '/services/ai-content-optimization-suite',
+      pricing: 'Starting from $199/month',
+      features: [
+        'AI Content Generation',
+        'SEO Optimization',
+        'Performance Analytics',
+        'Content Personalization',
+        'Quality Assurance',
+        'Content Calendar Management'
+      ]
+    },
+    {
+      title: 'AI Workflow Automation Platform',
+      description: 'Automate complex business workflows with AI-powered automation and intelligent decision making',
+      icon: '⚡',
+      href: '/services/ai-workflow-automation-platform',
+      pricing: 'Starting from $299/month',
+      features: [
+        'Visual Workflow Builder',
+        'AI-Powered Decision Making',
+        'Integration Hub (500+ apps)',
+        'Real-time Monitoring',
+        'Enterprise Security',
+        'Custom Development'
+      ]
+    },
+    {
+      title: 'AI Customer Insights Platform',
+      description: 'Transform customer data into actionable insights with AI-powered analytics and predictive modeling',
+      icon: '🔍',
+      href: '/services/ai-customer-insights-platform',
+      pricing: 'Starting from $399/month',
+      features: [
+        'Behavioral Analytics',
+        'Predictive Analytics',
+        'Customer Segmentation',
+        'Sentiment Analysis',
+        'Real-time Alerts',
+        'Data Integration'
+      ]
+    },
+    {
+      title: 'AI Financial Analysis Platform',
+      description: 'Advanced AI-powered financial analysis, forecasting, and risk assessment for informed decision making',
+      icon: '💰',
+      href: '/services/ai-financial-analysis-platform',
+      pricing: 'Starting from $599/month',
+      features: [
+        'Automated Financial Reporting',
+        'Predictive Forecasting',
+        'Risk Assessment',
+        'Investment Analysis',
+        'Fraud Detection',
+        'Regulatory Compliance'
+      ]
+    },
+    {
       title: 'Complete IT Services',
       description: 'Comprehensive IT services including cloud migration, DevOps, cybersecurity, and digital transformation',
       icon: '💻',
@@ -311,6 +371,71 @@ export default function ServicesPage() {
       href: '/services/ai-resume-screening-service',
       pricing: '$500 - $5,000/month',
       category: 'AI Services'
+    },
+    {
+      title: 'Generative AI Solutions',
+      description: 'Create, innovate, and generate novel solutions with cutting-edge generative intelligence',
+      icon: '✨',
+      features: [
+        'Content Generation Systems',
+        'Creative AI Applications',
+        'Multimodal Generation',
+        'Adaptive Learning Systems',
+        'Innovation Automation'
+      ],
+      href: '/services/generative-ai'
+    },
+    {
+      title: 'Cloud Migration & DevOps',
+      description: 'Seamless cloud transitions and optimized DevOps practices for modern infrastructure',
+      icon: '☁️',
+      features: [
+        'Cloud Architecture Design',
+        'Migration Strategy & Execution',
+        'CI/CD Pipeline Development',
+        'Infrastructure as Code',
+        'Monitoring & Observability'
+      ],
+      href: '/services/cloud-migration'
+    },
+    {
+      title: 'Micro SaaS Solutions',
+      description: 'Production-ready micro SaaS applications for specific business needs with immediate ROI',
+      icon: '🔧',
+      features: [
+        'Cloud Cost Management',
+        'AI Content Creation',
+        'Compliance Automation',
+        'Smart HR & Analytics',
+        'Workflow Automation'
+      ],
+      href: '/services/micro-saas'
+    },
+    {
+      title: 'IT Services & Solutions',
+      description: 'Comprehensive IT services including cloud migration, DevOps, cybersecurity, and platform engineering',
+      icon: '🖥️',
+      features: [
+        'Platform Engineering',
+        'Cloud Migration',
+        'DevOps Automation',
+        'Cybersecurity Operations',
+        'Data Analytics Platforms'
+      ],
+      href: '/services/it-services'
+    },
+    {
+      title: 'Enterprise AI Consulting',
+      description: 'Strategic AI implementation guidance for enterprise-scale digital transformation',
+      icon: '🎯',
+      features: [
+        'AI Strategy Development',
+        'Technology Roadmap Planning',
+        'Change Management',
+        'ROI Optimization',
+        'Compliance & Governance'
+      ],
+      href: '/services/ai-consulting'
     },
     {
       title: 'Cybersecurity Risk Assessment',

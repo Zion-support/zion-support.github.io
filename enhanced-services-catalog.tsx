@@ -240,6 +240,63 @@ export default function EnhancedServicesCatalog() {
       link: '/services/micro-saas/social-media-management'
     },
     {
+      name: 'AI Contract Summarizer for SMBs',
+      description: 'Summarize lengthy contracts, extract key clauses, deadlines, and risks automatically.',
+      icon: FileText,
+      features: [
+        'Clause extraction and risk scoring',
+        'Deadline and obligation reminders',
+        'Comparison against standard templates',
+        'Multi-language legal document support',
+        'Export to PDF and Word with highlights',
+        'Integrations with Google Drive and SharePoint'
+      ],
+      pricing: '$99 - $799/month',
+      delivery: '1-2 weeks',
+      category: 'Legal Tech',
+      benefits: 'Reduce review time by 70%, lower legal costs',
+      marketPrice: '$200 - $1,500/month',
+      link: '/services/micro-saas/ai-contract-summarizer'
+    },
+    {
+      name: 'Technical SEO Auditor',
+      description: 'Automated site crawling, Core Web Vitals, schema, and backlink health with actionable fixes.',
+      icon: Search,
+      features: [
+        'Weekly automated crawls and issue tracker',
+        'Core Web Vitals and performance insights',
+        'Structured data/schema validation',
+        'Sitemap and robots checks',
+        'Backlink and anchor text analysis',
+        'Exportable developer-ready fix list'
+      ],
+      pricing: '$59 - $499/month',
+      delivery: 'Instant',
+      category: 'Marketing',
+      benefits: 'Improve SEO by 30%+, faster fixes for devs',
+      marketPrice: '$99 - $900/month',
+      link: '/services/micro-saas/technical-seo-auditor'
+    },
+    {
+      name: 'Invoice OCR & AP Automation',
+      description: 'Accurate invoice data capture, validation, and approval workflows with ERP export.',
+      icon: DollarSign,
+      features: [
+        'Line-item extraction and tax detection',
+        'Fraud and duplicate invoice checks',
+        'Multi-currency and vendor normalizations',
+        'Approval routing and audit trails',
+        'QuickBooks/Xero/NetSuite exports',
+        'SOC 2 ready controls'
+      ],
+      pricing: '$149 - $1,499/month',
+      delivery: '1-2 weeks',
+      category: 'Finance',
+      benefits: 'Cut AP processing cost by 60%, faster cycle time',
+      marketPrice: '$250 - $2,500/month',
+      link: '/services/micro-saas/invoice-ocr'
+    },
+    {
       name: 'Automated Email Marketing Platform',
       description: 'AI-powered email campaigns with personalization, A/B testing, and behavioral triggers',
       icon: Mail,
@@ -680,6 +737,44 @@ export default function EnhancedServicesCatalog() {
       link: '/services/ai-services/cybersecurity-platform'
     },
     {
+      name: 'Enterprise RAG Knowledge Platform',
+      description: 'Secure Retrieval-Augmented Generation on your private data with governance and audit.',
+      icon: Database,
+      features: [
+        'Document ingestion with PII redaction',
+        'Vector search and hybrid retrieval',
+        'Prompt controls, guardrails, and audit logs',
+        'SSO, roles, and dataset scoping',
+        'Human-in-the-loop feedback',
+        'On-prem and cloud options'
+      ],
+      pricing: '$3,000 - $18,000/month',
+      delivery: '4-8 weeks',
+      category: 'GenAI',
+      benefits: 'Reduce search time by 80%, safer AI answers',
+      marketPrice: '$5,000 - $35,000/month',
+      link: '/services/ai-services/enterprise-rag-platform'
+    },
+    {
+      name: 'Agentic Sales Assistant',
+      description: 'Autonomous SDR workflows for prospecting, outreach, qualification, and CRM updates.',
+      icon: Target,
+      features: [
+        'Lead sourcing and enrichment',
+        'Personalized multi-step outreach',
+        'Meeting booking and objection handling',
+        'Auto logging to Salesforce/HubSpot',
+        'Safety guardrails and approval queues',
+        'KPI dashboards and A/B testing'
+      ],
+      pricing: '$1,200 - $7,500/month',
+      delivery: '2-4 weeks',
+      category: 'RevOps',
+      benefits: '2-3x pipeline, 50% less manual SDR work',
+      marketPrice: '$2,000 - $12,000/month',
+      link: '/services/ai-services/agentic-sales-assistant'
+    },
+    {
       name: 'AI-Powered Content Generation Suite',
       description: 'Advanced content creation including text, images, videos, and multimedia',
       icon: PenTool,
@@ -1042,6 +1137,63 @@ export default function EnhancedServicesCatalog() {
       benefits: 'Reduce IT overhead, improve system reliability',
       marketPrice: '$4,000 - $30,000/month',
       link: '/services/it-services/managed-support'
+    },
+    {
+      name: 'SOC 2 Readiness Program',
+      description: 'End-to-end SOC 2 readiness with gap analysis, controls, evidence, and audit support.',
+      icon: Shield,
+      features: [
+        'Readiness assessment and roadmap',
+        'Policy templates and control implementation',
+        'Evidence collection automation',
+        'Risk register and remediation tracking',
+        'Continuous monitoring setup',
+        'Auditor coordination and support'
+      ],
+      pricing: '$12,000 - $85,000/project',
+      delivery: '6-16 weeks',
+      category: 'Security & Compliance',
+      benefits: 'Achieve SOC 2 faster, reduce audit surprises',
+      marketPrice: '$20,000 - $120,000/project',
+      link: '/services/it-services/soc2-readiness'
+    },
+    {
+      name: 'Data Platform Modernization (dbt + Snowflake)',
+      description: 'Modern ELT with dbt, Snowflake/BigQuery, and governed metrics layer for reliable BI.',
+      icon: BarChart3,
+      features: [
+        'Warehouse migration and modeling',
+        'dbt transformation pipelines',
+        'Semantic layer and metrics governance',
+        'Orchestration and observability',
+        'Cost control and performance tuning',
+        'Data quality tests and SLAs'
+      ],
+      pricing: '$25,000 - $180,000/project',
+      delivery: '8-24 weeks',
+      category: 'Data',
+      benefits: 'Trustworthy analytics with lower costs',
+      marketPrice: '$40,000 - $300,000/project',
+      link: '/services/it-services/data-platform-modernization'
+    },
+    {
+      name: 'FinOps Managed Service',
+      description: 'Ongoing cloud cost optimization with budgets, unit economics, and actionable guardrails.',
+      icon: TrendingUp,
+      features: [
+        'Rightsizing and autoscaling policies',
+        'Idle resource detection and cleanup',
+        'Tagging hygiene and chargeback',
+        'Budget alerts and anomaly detection',
+        'Savings plans and RI strategy',
+        'Monthly executive reports'
+      ],
+      pricing: '$3,000 - $15,000/month',
+      delivery: '2-4 weeks onboarding',
+      category: 'Cloud',
+      benefits: 'Save 25-45% on cloud spend',
+      marketPrice: '$4,000 - $25,000/month',
+      link: '/services/it-services/finops-managed-service'
     },
     {
       name: 'Cloud Security & Compliance',
