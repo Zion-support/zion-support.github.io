@@ -11,121 +11,139 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   const services = [
     {
-      title: 'AI Data Analytics',
-      description: 'Transform data into actionable insights with predictive modeling and real-time dashboards',
-      icon: '📊',
+      title: 'AI-Powered Email Marketing Suite',
+      description: 'Revolutionary email marketing platform with AI-driven optimization and automated personalization',
+      icon: '📧',
       features: [
-        'Predictive Analytics & Forecasting',
-        'Real-time Business Intelligence',
-        'Machine Learning Model Development',
-        'Data Visualization & Reporting',
-        'Custom Analytics Solutions'
+        'AI-Driven Subject Line Optimization',
+        'Predictive Send Time Optimization',
+        'Automated A/B Testing with ML',
+        'Advanced Segmentation Algorithms',
+        'Real-time Engagement Scoring'
       ],
-      href: '/services/ai-data-analytics'
+      href: '/services/ai-email-marketing',
+      pricing: '$299 - $1,999/month',
+      category: 'Micro SaaS'
     },
     {
-      title: 'AI Workflow Automation',
-      description: 'Automate business processes with intelligent workflow design and smart triggers',
-      icon: '⚡',
+      title: 'Healthcare Appointment AI Scheduler',
+      description: 'Intelligent scheduling system for healthcare providers with patient preference learning',
+      icon: '🏥',
       features: [
-        'Process Automation Design',
-        'Intelligent Document Processing',
-        'Business Rule Engine Development',
-        'Workflow Optimization',
-        'Integration & Orchestration'
+        'AI-Powered Appointment Optimization',
+        'Patient Preference Learning',
+        'Automated Rescheduling & Reminders',
+        'Provider Availability Optimization',
+        'HIPAA-Compliant Communication'
       ],
-      href: '/services/ai-workflow-automation'
+      href: '/services/healthcare-scheduler',
+      pricing: '$899 - $4,999/month',
+      category: 'Micro SaaS'
     },
     {
-      title: 'AI Virtual Assistant',
-      description: '24/7 intelligent customer support with natural language processing',
+      title: 'Autonomous Business Process Orchestrator',
+      description: 'Revolutionary AI system that autonomously manages and optimizes entire business processes',
       icon: '🤖',
       features: [
-        'Natural Language Processing',
-        'Multi-channel Support',
-        'Intelligent Routing',
-        'Sentiment Analysis',
-        'Continuous Learning Systems'
+        'Autonomous Process Discovery',
+        'Self-Optimizing Workflow Execution',
+        'Predictive Process Failure Prevention',
+        'Dynamic Resource Allocation',
+        'Continuous Learning & Adaptation'
       ],
-      href: '/services/ai-virtual-assistant'
+      href: '/services/autonomous-orchestrator',
+      pricing: '$4,999 - $24,999/month',
+      category: 'Advanced AI'
     },
     {
-      title: 'Autonomous Business Operations',
-      description: 'Self-managing AI systems that operate entire business processes autonomously',
-      icon: '🧠',
+      title: 'Smart Inventory Management System',
+      description: 'AI-driven inventory optimization with demand forecasting and automated reordering',
+      icon: '📦',
       features: [
-        'Autonomous Process Management',
-        'Predictive Maintenance',
-        'Intelligent Resource Allocation',
-        'Self-healing Systems',
-        'Continuous Optimization'
+        'Predictive Demand Forecasting',
+        'Automated Reorder Point Calculation',
+        'Multi-location Inventory Tracking',
+        'Supplier Performance Analytics',
+        'Real-time Stock Level Monitoring'
       ],
-      href: '/services/autonomous-operations'
+      href: '/services/smart-inventory',
+      pricing: '$599 - $3,499/month',
+      category: 'Micro SaaS'
     },
     {
-      title: 'Generative AI Solutions',
-      description: 'Create, innovate, and generate novel solutions with cutting-edge generative intelligence',
-      icon: '✨',
-      features: [
-        'Content Generation Systems',
-        'Creative AI Applications',
-        'Multimodal Generation',
-        'Adaptive Learning Systems',
-        'Innovation Automation'
-      ],
-      href: '/services/generative-ai'
-    },
-    {
-      title: 'Cloud Migration & DevOps',
-      description: 'Seamless cloud transitions and optimized DevOps practices for modern infrastructure',
-      icon: '☁️',
-      features: [
-        'Cloud Architecture Design',
-        'Migration Strategy & Execution',
-        'CI/CD Pipeline Development',
-        'Infrastructure as Code',
-        'Monitoring & Observability'
-      ],
-      href: '/services/cloud-migration'
-    },
-    {
-      title: 'Micro SaaS Development',
-      description: 'Custom micro SaaS solutions designed for specific business needs and rapid deployment',
-      icon: '🔧',
-      features: [
-        'Rapid Prototype Development',
-        'Scalable Architecture Design',
-        'API Development & Integration',
-        'User Experience Optimization',
-        'Performance Monitoring'
-      ],
-      href: '/services/micro-saas'
-    },
-    {
-      title: 'Enterprise AI Consulting',
-      description: 'Strategic AI implementation guidance for enterprise-scale digital transformation',
-      icon: '🎯',
-      features: [
-        'AI Strategy Development',
-        'Technology Roadmap Planning',
-        'Change Management',
-        'ROI Optimization',
-        'Compliance & Governance'
-      ],
-      href: '/services/ai-consulting'
-    },
-    {
-      title: 'Cybersecurity & AI Security',
-      description: 'Advanced security solutions powered by AI for comprehensive threat protection',
+      title: 'AI Content Moderation Platform',
+      description: 'Automated content moderation with real-time filtering and policy enforcement',
       icon: '🛡️',
       features: [
-        'AI-Powered Threat Detection',
-        'Security Orchestration',
-        'Vulnerability Assessment',
-        'Incident Response Automation',
-        'Compliance Management'
+        'Real-time Content Analysis',
+        'Multi-language Support',
+        'Custom Policy Configuration',
+        'Human-in-the-loop Workflows',
+        'Compliance Reporting & Analytics'
       ],
-      href: '/services/ai-security'
+      href: '/services/content-moderation',
+      pricing: '$799 - $5,999/month',
+      category: 'Micro SaaS'
+    },
+    {
+      title: 'Quantum-Enhanced Business Intelligence',
+      description: 'Next-generation BI platform leveraging quantum computing principles for advanced analytics',
+      icon: '⚛️',
+      features: [
+        'Quantum-Inspired Optimization Algorithms',
+        'Advanced Pattern Recognition',
+        'Multi-dimensional Data Analysis',
+        'Real-time Predictive Modeling',
+        'Quantum-Safe Data Encryption'
+      ],
+      href: '/services/quantum-bi',
+      pricing: '$8,999 - $49,999/month',
+      category: 'Advanced AI'
+    },
+    {
+      title: 'Autonomous Cloud Infrastructure Platform',
+      description: 'Self-managing cloud infrastructure that automatically scales and optimizes resources',
+      icon: '☁️',
+      features: [
+        'Autonomous Resource Provisioning',
+        'Intelligent Cost Optimization',
+        'Predictive Infrastructure Maintenance',
+        'Multi-cloud Orchestration',
+        'Zero-downtime Deployments'
+      ],
+      href: '/services/autonomous-cloud',
+      pricing: '$9,999 - $49,999/month',
+      category: 'IT Services'
+    },
+    {
+      title: 'Edge Computing Intelligence Network',
+      description: 'Distributed computing platform that brings AI processing to the edge',
+      icon: '🌐',
+      features: [
+        'Edge AI Model Deployment',
+        'Distributed Processing Orchestration',
+        'Real-time Data Streaming',
+        'Edge-to-cloud Synchronization',
+        'Autonomous Edge Device Management'
+      ],
+      href: '/services/edge-computing',
+      pricing: '$7,999 - $39,999/month',
+      category: 'IT Services'
+    },
+    {
+      title: 'AI-Driven DevOps Automation Suite',
+      description: 'Intelligent DevOps platform that automates the entire software delivery pipeline',
+      icon: '⚙️',
+      features: [
+        'Autonomous CI/CD Pipeline Optimization',
+        'Intelligent Code Quality Analysis',
+        'Predictive Deployment Risk Assessment',
+        'Automated Testing & Validation',
+        'Self-healing Infrastructure Management'
+      ],
+      href: '/services/ai-devops',
+      pricing: '$5,999 - $29,999/month',
+      category: 'IT Services'
     }
   ];
 
@@ -177,8 +195,17 @@ export default function ServicesPage() {
                 key={index}
                 className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-200 hover:border-blue-300 group"
               >
-                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                  {service.icon}
+                <div className="flex items-center justify-between mb-4">
+                  <div className="text-4xl group-hover:scale-110 transition-transform duration-300">
+                    {service.icon}
+                  </div>
+                  <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
+                    service.category === 'Micro SaaS' ? 'bg-orange-100 text-orange-800' :
+                    service.category === 'Advanced AI' ? 'bg-blue-100 text-blue-800' :
+                    'bg-green-100 text-green-800'
+                  }`}>
+                    {service.category}
+                  </span>
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
                   {service.title}
@@ -196,11 +223,17 @@ export default function ServicesPage() {
                     </li>
                   ))}
                 </ul>
+                <div className="mb-4 p-3 bg-blue-50 rounded-lg border border-blue-200">
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm text-blue-800 font-medium">Starting at:</span>
+                    <span className="text-lg font-bold text-blue-600">{service.pricing}</span>
+                  </div>
+                </div>
                 <Link
                   href={service.href}
-                  className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors group-hover:underline"
+                  className="inline-flex items-center justify-center w-full py-3 px-6 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors group-hover:shadow-lg"
                 >
-                  <span>Learn More</span>
+                  <span>Get Started</span>
                   <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
                   </svg>

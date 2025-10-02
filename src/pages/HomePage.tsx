@@ -1,5 +1,4 @@
 import React from 'react';
-import './HomePage.css';
 import AnimatedSection from '../components/AnimatedSection';
 import October2025FeaturedContentBanner from '../components/October2025FeaturedContentBanner';
 import UnifiedPromotionalBanner from '../components/UnifiedPromotionalBanner';

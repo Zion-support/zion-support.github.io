@@ -21,6 +21,7 @@ export default defineConfig({
     minify: 'terser',
     cssMinify: true,
     target: 'es2020',
+    reportCompressedSize: false,
     rollupOptions: {
       input: {
         main: './index.html'
