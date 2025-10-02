@@ -1,39 +1,39 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
-  Users, Target, Award, Globe, Shield
+  Users, Target, Award, Globe, Shield,
   TrendingUp, CheckCircle, Star, Phone, Mail, MapPin 
 } from 'lucide-react';
 
 const About: React.FC = () => {
   const stats = [
-    { number: '10+', label: 'Years Experience', icon: Award }
-    { number: '500+', label: 'Projects Completed', icon: CheckCircle }
-    { number: '50+', label: 'Happy Clients', icon: Users }
+    { number: '10+', label: 'Years Experience', icon: Award },
+    { number: '500+', label: 'Projects Completed', icon: CheckCircle },
+    { number: '50+', label: 'Happy Clients', icon: Users },
     { number: '99%', label: 'Client Satisfaction', icon: Star }
   ];
 
   const values = [
     {
-      icon: Target
-      title: 'Innovation First'
+      icon: Target,
+      title: 'Innovation First',
       description: 'We stay ahead of technology trends to deliver solutions that give you a competitive edge in the market.'
-    }
+    },
     {
-      icon: Shield
-      title: 'Enterprise Security'
+      icon: Shield,
+      title: 'Enterprise Security',
       description: 'Bank-grade security measures protect your data and ensure compliance with industry standards.'
-    }
+    },
     {
-      icon: TrendingUp
-      title: 'Measurable Results'
+      icon: TrendingUp,
+      title: 'Measurable Results',
       description: 'We deliver quantifiable outcomes with average 75% cost reduction and 10x efficiency gains.'
-    }
+    },
     {
-      icon: Globe
-      title: 'Global Reach'
+      icon: Globe,
+      title: 'Global Reach',
       description: 'Serving clients worldwide with 24/7 support and localized solutions for international markets.'
-    }
+    },
   ];
 
   const team = [

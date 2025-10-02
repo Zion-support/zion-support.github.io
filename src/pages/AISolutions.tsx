@@ -6,63 +6,63 @@ import { } from 'react-helmet-async';
 const AISolutions: React.FC = () => {
   const aiSolutions = [
     {
-      icon: Brain
-      title: 'Machine Learning & Deep Learning'
-      description: 'Advanced AI models for predictive analytics, pattern recognition, and intelligent decision making.'
+      icon: Brain,
+      title: 'Machine Learning & Deep Learning',
+      description: 'Advanced AI models for predictive analytics, pattern recognition, and intelligent decision making.',
       features: ['Neural Networks', 'Predictive Analytics', 'Pattern Recognition', 'Automated Learning']
-    }
+    },
     {
-      icon: Zap
-      title: 'AI Automation'
-      description: 'Streamline business processes with intelligent automation solutions.'
+      icon: Zap,
+      title: 'AI Automation',
+      description: 'Streamline business processes with intelligent automation solutions.',
       features: ['Process Automation', 'Workflow Optimization', 'Smart Decision Making', 'RPA Integration']
-    }
+    },
     {
-      icon: Shield
-      title: 'AI-Powered Cybersecurity'
-      description: 'Protect your digital assets with advanced AI-driven security solutions.'
+      icon: Shield,
+      title: 'AI-Powered Cybersecurity',
+      description: 'Protect your digital assets with advanced AI-driven security solutions.',
       features: ['Threat Detection', 'Anomaly Detection', 'Automated Response', 'Risk Assessment']
-    }
+    },
     {
-      icon: Cloud
-      title: 'Cloud AI Services'
-      description: 'Scalable AI solutions delivered through cloud infrastructure.'
+      icon: Cloud,
+      title: 'Cloud AI Services',
+      description: 'Scalable AI solutions delivered through cloud infrastructure.',
       features: ['Cloud ML Platforms', 'AI APIs', 'Scalable Computing', 'Edge AI']
-    }
+    },
     {
-      icon: Database
-      title: 'Data Intelligence'
-      description: 'Transform raw data into actionable insights with AI-powered analytics.'
+      icon: Database,
+      title: 'Data Intelligence',
+      description: 'Transform raw data into actionable insights with AI-powered analytics.',
       features: ['Data Mining', 'Business Intelligence', 'Real-time Analytics', 'Data Visualization']
-    }
+    },
     {
-      icon: Users
-      title: 'AI Customer Experience'
-      description: 'Enhance customer interactions with intelligent chatbots and personalization.'
+      icon: Users,
+      title: 'AI Customer Experience',
+      description: 'Enhance customer interactions with intelligent chatbots and personalization.',
       features: ['Chatbots', 'Personalization', 'Sentiment Analysis', 'Customer Insights']
-    }
+    },
     {
-      icon: BarChart3
-      title: 'AI Business Intelligence'
-      description: 'Make data-driven decisions with AI-powered business intelligence tools.'
+      icon: BarChart3,
+      title: 'AI Business Intelligence',
+      description: 'Make data-driven decisions with AI-powered business intelligence tools.',
       features: ['Predictive Modeling', 'Performance Analytics', 'Market Intelligence', 'Strategic Planning']
-    }
+    },
     {
-      icon: Cog
-      title: 'AI Operations'
-      description: 'Optimize operational efficiency with AI-driven process management.'
+      icon: Cog,
+      title: 'AI Operations',
+      description: 'Optimize operational efficiency with AI-driven process management.',
       features: ['Process Optimization', 'Resource Allocation', 'Performance Monitoring', 'Quality Control']
-    }
+    },
     {
-      icon: Target
-      title: 'AI Strategy Consulting'
-      description: 'Strategic guidance for AI implementation and digital transformation.'
+      icon: Target,
+      title: 'AI Strategy Consulting',
+      description: 'Strategic guidance for AI implementation and digital transformation.',
       features: ['AI Roadmap', 'Technology Assessment', 'Change Management', 'ROI Optimization']
-    }
+    },
     {
-      icon: Rocket
-      title: 'AI Innovation Labs'
-      description: 'Cutting-edge AI research and development for breakthrough solutions.'
+      icon: Rocket,
+      title: 'AI Innovation Labs',
+      description: 'Cutting-edge AI research and development for breakthrough solutions.',
       features: ['R&D Projects', 'Prototype Development', 'Innovation Workshops', 'Technology Transfer']
     }
   ];
