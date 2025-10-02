@@ -40,6 +40,125 @@ export default function ITServices() {
       benefits: 'Reduce infrastructure costs by 30-50%'
     },
     {
+      name: 'Enterprise Platform Engineering',
+      description: 'Internal Developer Platform (IDP) creation with golden paths and self-service capabilities',
+      icon: Settings,
+      features: [
+        'Developer portal with self-service capabilities',
+        'Golden path templates and best practices',
+        'Multi-tenant Kubernetes clusters',
+        'GitOps workflows and CI/CD automation',
+        'Observability and monitoring integration'
+      ],
+      pricing: '$8,000 - $60,000/project',
+      delivery: '6-12 weeks',
+      category: 'Platform Engineering',
+      marketPrice: '$15,000-120,000/project',
+      benefits: 'Accelerate developer productivity by 300% and reduce time-to-market by 50%'
+    },
+    {
+      name: 'Zero Trust Security Architecture',
+      description: 'Comprehensive zero trust implementation with identity-centric security',
+      icon: Shield,
+      features: [
+        'Identity and access management (IAM) design',
+        'Network segmentation and micro-segmentation',
+        'Device trust and endpoint security',
+        'Data protection and encryption',
+        'Continuous verification and monitoring'
+      ],
+      pricing: '$10,000 - $75,000/project',
+      delivery: '8-16 weeks',
+      category: 'Security Architecture',
+      marketPrice: '$20,000-150,000/project',
+      benefits: 'Reduce security incidents by 85% and improve compliance posture'
+    },
+    {
+      name: 'Observability & Monitoring Stack',
+      description: 'Comprehensive observability platform with logs, metrics, traces, and SLOs',
+      icon: Monitor,
+      features: [
+        'OpenTelemetry instrumentation and data collection',
+        'Centralized logging with ELK/EFK stack',
+        'Metrics collection and alerting with Prometheus',
+        'Distributed tracing and performance analysis',
+        'SLO/SLA monitoring and error budget tracking'
+      ],
+      pricing: '$3,000 - $25,000/project',
+      delivery: '3-8 weeks',
+      category: 'Observability',
+      marketPrice: '$6,000-50,000/project',
+      benefits: 'Reduce MTTR by 70% and improve system reliability by 95%'
+    },
+    {
+      name: 'Data Engineering & Analytics Platform',
+      description: 'Modern data platform with real-time processing and analytics capabilities',
+      icon: Database,
+      features: [
+        'Data lake and data warehouse architecture',
+        'Real-time streaming with Apache Kafka',
+        'ETL/ELT pipeline automation',
+        'Data quality and governance frameworks',
+        'Business intelligence and analytics dashboards'
+      ],
+      pricing: '$12,000 - $80,000/project',
+      delivery: '8-16 weeks',
+      category: 'Data Engineering',
+      marketPrice: '$25,000-160,000/project',
+      benefits: 'Enable data-driven decisions and reduce data processing time by 80%'
+    },
+    {
+      name: 'API Gateway & Microservices Architecture',
+      description: 'Scalable microservices architecture with API management and service mesh',
+      icon: Network,
+      features: [
+        'API gateway design and implementation',
+        'Microservices decomposition and design',
+        'Service mesh with Istio or Linkerd',
+        'API versioning and lifecycle management',
+        'Rate limiting and security policies'
+      ],
+      pricing: '$6,000 - $45,000/project',
+      delivery: '6-12 weeks',
+      category: 'Microservices',
+      marketPrice: '$12,000-90,000/project',
+      benefits: 'Improve scalability by 500% and reduce coupling between services'
+    },
+    {
+      name: 'Disaster Recovery & Business Continuity',
+      description: 'Comprehensive disaster recovery planning and implementation',
+      icon: Shield,
+      features: [
+        'Business impact analysis and risk assessment',
+        'Multi-region backup and replication strategies',
+        'Automated failover and recovery procedures',
+        'RTO/RPO optimization and testing',
+        'Compliance and audit documentation'
+      ],
+      pricing: '$5,000 - $40,000/project',
+      delivery: '4-10 weeks',
+      category: 'Business Continuity',
+      marketPrice: '$10,000-80,000/project',
+      benefits: 'Achieve 99.99% uptime and reduce recovery time by 90%'
+    },
+    {
+      name: 'IT Service Management (ITSM) Implementation',
+      description: 'Complete ITSM transformation with ServiceNow or similar platforms',
+      icon: Users,
+      features: [
+        'ITIL framework implementation and customization',
+        'Service catalog design and automation',
+        'Incident and problem management workflows',
+        'Change management and approval processes',
+        'Knowledge management and self-service portals'
+      ],
+      pricing: '$8,000 - $50,000/project',
+      delivery: '6-14 weeks',
+      category: 'ITSM',
+      marketPrice: '$15,000-100,000/project',
+      benefits: 'Improve service delivery efficiency by 60% and customer satisfaction by 40%'
+    },
+    {
       name: 'DevOps & CI/CD Pipeline',
       description: 'Complete DevOps transformation with automated deployment pipelines',
       icon: Zap,

@@ -41,6 +41,125 @@ export default function MicroSaasServices() {
       benefits: 'Save 20-40% on cloud costs'
     },
     {
+      name: 'AI-Powered Lead Scoring Engine',
+      description: 'Intelligent lead qualification and scoring using machine learning algorithms',
+      icon: BarChart3,
+      features: [
+        'Behavioral pattern analysis and scoring',
+        'Predictive lead conversion modeling',
+        'Real-time lead prioritization',
+        'CRM integration (Salesforce, HubSpot, Pipedrive)',
+        'Custom scoring models and thresholds'
+      ],
+      pricing: '$499 - $2,999/month',
+      delivery: '2-3 weeks',
+      category: 'Sales Intelligence',
+      marketPrice: '$1,000-5,000/month',
+      benefits: 'Increase conversion rates by 35-60%'
+    },
+    {
+      name: 'Smart Inventory Management System',
+      description: 'AI-driven inventory optimization with demand forecasting and automated reordering',
+      icon: Database,
+      features: [
+        'Demand forecasting using ML algorithms',
+        'Automated reorder point calculations',
+        'Multi-location inventory tracking',
+        'Supplier integration and PO automation',
+        'Dead stock identification and liquidation'
+      ],
+      pricing: '$799 - $4,999/month',
+      delivery: '3-4 weeks',
+      category: 'Supply Chain',
+      marketPrice: '$1,500-8,000/month',
+      benefits: 'Reduce inventory costs by 25-45%'
+    },
+    {
+      name: 'Employee Wellness & Productivity Tracker',
+      description: 'Comprehensive employee wellness monitoring with productivity insights and burnout prevention',
+      icon: Users,
+      features: [
+        'Workload and stress level monitoring',
+        'Productivity pattern analysis',
+        'Burnout risk assessment and alerts',
+        'Wellness program recommendations',
+        'Anonymous reporting and analytics'
+      ],
+      pricing: '$399 - $2,499/month',
+      delivery: '2-3 weeks',
+      category: 'HR Tech',
+      marketPrice: '$800-4,000/month',
+      benefits: 'Reduce turnover by 30% and increase productivity by 20%'
+    },
+    {
+      name: 'Automated Social Media Content Scheduler',
+      description: 'AI-powered social media management with content optimization and engagement analytics',
+      icon: MessageSquare,
+      features: [
+        'AI-generated content suggestions',
+        'Optimal posting time recommendations',
+        'Cross-platform content adaptation',
+        'Engagement analytics and ROI tracking',
+        'Hashtag optimization and trending analysis'
+      ],
+      pricing: '$199 - $1,299/month',
+      delivery: '1-2 weeks',
+      category: 'Marketing Automation',
+      marketPrice: '$300-2,500/month',
+      benefits: 'Increase engagement by 50-80%'
+    },
+    {
+      name: 'Smart Contract Management Platform',
+      description: 'AI-powered contract lifecycle management with risk assessment and compliance monitoring',
+      icon: FileText,
+      features: [
+        'Contract template generation and customization',
+        'Risk assessment and clause analysis',
+        'Automated renewal and expiration alerts',
+        'Compliance monitoring and reporting',
+        'Digital signature integration'
+      ],
+      pricing: '$899 - $5,999/month',
+      delivery: '3-5 weeks',
+      category: 'Legal Tech',
+      marketPrice: '$1,500-10,000/month',
+      benefits: 'Reduce contract processing time by 70%'
+    },
+    {
+      name: 'Real-Time Customer Feedback Analytics',
+      description: 'Advanced sentiment analysis and customer feedback processing across all channels',
+      icon: BarChart3,
+      features: [
+        'Multi-channel feedback collection',
+        'Real-time sentiment analysis',
+        'Trend identification and alerting',
+        'Competitor comparison analysis',
+        'Actionable insights and recommendations'
+      ],
+      pricing: '$299 - $1,999/month',
+      delivery: '2-3 weeks',
+      category: 'Customer Intelligence',
+      marketPrice: '$500-3,500/month',
+      benefits: 'Improve customer satisfaction by 25-40%'
+    },
+    {
+      name: 'Automated Financial Reporting Suite',
+      description: 'AI-powered financial reporting and analysis with predictive insights',
+      icon: BarChart3,
+      features: [
+        'Automated report generation',
+        'Financial forecasting and modeling',
+        'Anomaly detection and fraud prevention',
+        'Regulatory compliance reporting',
+        'Executive dashboard and KPI tracking'
+      ],
+      pricing: '$1,299 - $7,999/month',
+      delivery: '3-6 weeks',
+      category: 'FinTech',
+      marketPrice: '$2,000-15,000/month',
+      benefits: 'Reduce reporting time by 80% and improve accuracy'
+    },
+    {
       name: 'AI Content Localization',
       description: 'Neural translation and localization platform for global content',
       icon: Globe,

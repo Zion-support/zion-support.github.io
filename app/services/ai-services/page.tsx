@@ -44,6 +44,125 @@ export default function AIServices() {
       benefits: 'Reduce support costs by 70% while improving satisfaction'
     },
     {
+      name: 'Autonomous Business Process Orchestration',
+      description: 'AI-driven workflow automation that learns and optimizes business processes autonomously',
+      icon: Zap,
+      features: [
+        'Self-learning process optimization',
+        'Cross-system integration and automation',
+        'Dynamic workflow adaptation',
+        'Performance monitoring and improvement',
+        'Exception handling and recovery'
+      ],
+      pricing: '$3,500 - $25,000/month',
+      delivery: '4-8 weeks',
+      category: 'Process Automation',
+      marketPrice: '$5,000-40,000/month',
+      benefits: 'Increase operational efficiency by 60-85%'
+    },
+    {
+      name: 'Predictive Maintenance & Asset Management',
+      description: 'AI-powered predictive analytics for equipment maintenance and asset optimization',
+      icon: Shield,
+      features: [
+        'IoT sensor data analysis and pattern recognition',
+        'Predictive failure modeling and alerts',
+        'Maintenance scheduling optimization',
+        'Asset lifecycle management',
+        'Cost-benefit analysis and ROI tracking'
+      ],
+      pricing: '$2,999 - $18,000/month',
+      delivery: '3-6 weeks',
+      category: 'Industrial AI',
+      marketPrice: '$4,000-30,000/month',
+      benefits: 'Reduce downtime by 40-70% and maintenance costs by 25-50%'
+    },
+    {
+      name: 'Advanced Computer Vision Analytics',
+      description: 'Sophisticated image and video analysis for security, quality control, and business insights',
+      icon: Eye,
+      features: [
+        'Real-time object detection and recognition',
+        'Quality control and defect detection',
+        'Security monitoring and threat detection',
+        'Behavioral analysis and pattern recognition',
+        'Custom model training and deployment'
+      ],
+      pricing: '$2,500 - $15,000/month',
+      delivery: '3-5 weeks',
+      category: 'Computer Vision',
+      marketPrice: '$3,500-25,000/month',
+      benefits: 'Improve accuracy by 90%+ and reduce manual inspection costs'
+    },
+    {
+      name: 'AI-Powered Fraud Detection & Risk Management',
+      description: 'Advanced fraud prevention and risk assessment using machine learning algorithms',
+      icon: Shield,
+      features: [
+        'Real-time transaction monitoring',
+        'Behavioral pattern analysis',
+        'Risk scoring and alert systems',
+        'Adaptive learning and model updates',
+        'Regulatory compliance and reporting'
+      ],
+      pricing: '$4,000 - $20,000/month',
+      delivery: '4-6 weeks',
+      category: 'Financial AI',
+      marketPrice: '$6,000-35,000/month',
+      benefits: 'Reduce fraud losses by 60-85% and false positives by 40%'
+    },
+    {
+      name: 'Intelligent Supply Chain Optimization',
+      description: 'AI-driven supply chain management with demand forecasting and logistics optimization',
+      icon: Database,
+      features: [
+        'Demand forecasting and inventory optimization',
+        'Route optimization and logistics planning',
+        'Supplier performance analysis',
+        'Risk assessment and mitigation',
+        'Sustainability tracking and optimization'
+      ],
+      pricing: '$3,000 - $18,000/month',
+      delivery: '4-7 weeks',
+      category: 'Supply Chain AI',
+      marketPrice: '$5,000-30,000/month',
+      benefits: 'Reduce costs by 20-35% and improve delivery times by 30%'
+    },
+    {
+      name: 'AI-Powered Personalization Engine',
+      description: 'Advanced personalization platform for customer experiences and content delivery',
+      icon: Users,
+      features: [
+        'Real-time customer behavior analysis',
+        'Dynamic content personalization',
+        'Recommendation engine optimization',
+        'A/B testing and performance tracking',
+        'Cross-channel experience consistency'
+      ],
+      pricing: '$2,000 - $12,000/month',
+      delivery: '3-5 weeks',
+      category: 'Personalization',
+      marketPrice: '$3,000-20,000/month',
+      benefits: 'Increase conversion rates by 25-60% and customer engagement by 40%'
+    },
+    {
+      name: 'Autonomous Data Quality & Governance',
+      description: 'AI-powered data quality management with automated governance and compliance',
+      icon: Database,
+      features: [
+        'Automated data quality assessment',
+        'Data lineage tracking and documentation',
+        'Privacy compliance and GDPR automation',
+        'Data cataloging and discovery',
+        'Anomaly detection and remediation'
+      ],
+      pricing: '$2,500 - $15,000/month',
+      delivery: '3-6 weeks',
+      category: 'Data Management',
+      marketPrice: '$4,000-25,000/month',
+      benefits: 'Improve data quality by 80% and reduce compliance costs by 50%'
+    },
+    {
       name: 'Intelligent Document Processing',
       description: 'AI-powered document analysis, extraction, and automation',
       icon: FileText,
