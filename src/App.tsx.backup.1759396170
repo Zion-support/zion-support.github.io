@@ -1,3 +1,24 @@
+<<<<<<< HEAD
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import { AppRouter } from './router';
+import './index.css';
+import ModernHeader from './components/Header';
+import ModernFooter from './components/Footer';
+import SEOOptimizer from './components/SEOOptimizer';
+import AdvancedAnalytics from './components/AdvancedAnalytics';
+import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
+import NotificationSystem from './components/NotificationSystem';
+import PerformanceMonitor from './components/PerformanceMonitor';
+import PerformanceOptimizer from './components/PerformanceOptimizer';
+import EnhancedSEOHead from './components/EnhancedSEOHead';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+// Types and interfaces
+interface Notification {
+  id: string;
+  message: string;
+  type: 'success' | 'error' | 'warning' | 'info';
+}
+=======
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
@@ -19,6 +40,7 @@ import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import BlogPage from './pages/BlogPage';
 import CaseStudiesPage from './pages/CaseStudiesPage';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-8387
 
 // Data
 import { bannerData } from './data/bannerData';
@@ -38,6 +60,26 @@ const pageTransition = {
 
 const App: React.FC = () => {
   return (
+<<<<<<< HEAD
+    <AccessibilityEnhancer>
+      <EnhancedErrorBoundary>
+        <EnhancedSEOHead 
+          title={seoDataForOptimizer.title} 
+          description={seoDataForOptimizer.description} 
+          canonical={seoDataForOptimizer.canonical}
+          keywords={['AI', 'IT Solutions', 'Enterprise Automation', 'Technology Services', 'Artificial Intelligence']}
+          author="Zion Tech Group"
+        />
+        <SEOOptimizer title={seoDataForOptimizer.title} description={seoDataForOptimizer.description} canonicalUrl={seoDataForOptimizer.canonical} />
+        <AdvancedAnalytics enableConversionTracking enablePerformanceTracking enableErrorTracking />
+        <PerformanceMonitor enabled={true} showMetrics={process.env.NODE_ENV === 'development'} />
+        <div className="min-h-screen bg-white">
+          <ModernHeader />
+          <main id="main-content" role="main">
+            <AppRouter />
+          </main>
+          <ModernFooter />
+=======
     <HelmetProvider>
       <Router>
         <div className="min-h-screen bg-gray-50">
@@ -130,6 +172,7 @@ const App: React.FC = () => {
 
             <Footer />
           </EnhancedErrorBoundary>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-8387
         </div>
       </Router>
     </HelmetProvider>
