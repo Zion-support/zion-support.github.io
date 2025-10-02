@@ -1,6 +1,6 @@
-import { MetadataRoute } from 'next'
+type SiteEntry = { url: string; lastModified: Date; changeFrequency: 'daily' | 'weekly' | 'monthly'; priority: number };
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default function sitemap(): SiteEntry[] {
   const baseUrl = 'https://ziontechgroup.com'
   
   return [
@@ -9,6 +9,36 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: 'daily',
       priority: 1,
+    },
+    {
+      url: `${baseUrl}/services/ai-data-governance-platform`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/services/rpa-automation-suite`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/partners`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/pricing`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/support`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.7,
     },
     {
       url: `${baseUrl}/services`,

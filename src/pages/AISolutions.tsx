@@ -248,7 +248,7 @@ const AISolutions: React.FC = () => {
           </div>
           
           <div className="space-y-8">
-            {implementationProcess.map((step, index) => {
+            {implementationProcess.map((step) => {
               const IconComponent = step.icon;
               return (
                 <div key={step.step} className="flex flex-col md:flex-row items-center gap-8">

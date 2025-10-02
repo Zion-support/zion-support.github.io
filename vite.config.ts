@@ -23,9 +23,6 @@ export default defineConfig({
     target: 'es2020',
     reportCompressedSize: false,
     rollupOptions: {
-      input: {
-        main: './index.html'
-      },
       treeshake: {
         moduleSideEffects: false,
         propertyReadSideEffects: false,
@@ -104,7 +101,7 @@ export default defineConfig({
             return `assets/css/[name]-[hash].${ext}`;
           }
           return `assets/[name]-[hash].${ext}`;
-        },
+        }
       },
     },
     chunkSizeWarningLimit: 1000,
@@ -153,6 +150,7 @@ export default defineConfig({
     ],
     exclude: ['@vite/client', '@vite/env'],
   },
+  assetsInclude: ['**/*.html', '**/*.new'],
   define: {
     global: 'globalThis',
   },

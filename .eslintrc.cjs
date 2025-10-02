@@ -41,6 +41,7 @@ module.exports = {
     'automation_backup/',
     'broken_files_backup/',
     'contracts/',
-    'hardhat/'
+    'hardhat/',
+    'src/content/posts.ts'
   ]
 };

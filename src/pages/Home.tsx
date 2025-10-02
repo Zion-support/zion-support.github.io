@@ -4,6 +4,10 @@ import { Helmet } from "react-helmet-async";
 import { ArrowRight, Award, CheckCircle, Globe, Rocket, Shield, Sparkles, Star, Target, TrendingUp, Users, Zap } from "lucide-react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import NewServicesPromoBanner2026 from "../components/NewServicesPromoBanner2026";
+import NewServicesShowcase from "../components/NewServicesShowcase";
+import LatestArticlesShowcase from "../components/LatestArticlesShowcase";
+import SuccessStoriesShowcase from "../components/SuccessStoriesShowcase";
 
 const Home = () => {
   // Mock data for the homepage
@@ -548,6 +552,144 @@ const Home = () => {
           </div>
         </section>
 
+        {/* Case Studies Preview */}
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-6">
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-100 text-green-700 text-sm font-medium mb-4">
+                <Sparkles className="w-4 h-4 mr-2" />
+                New Success Stories Available
+              </div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Success Stories</h2>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                See how Fortune 500 companies are transforming their operations with our breakthrough AI solutions. New: Enterprise AI Platform Modernization, Multi-Modal AI, Edge AI Deployment & More.
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-3 gap-8 mb-12">
+              <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition-shadow">
+                <div className="flex items-center mb-4">
+                  <div className="bg-green-100 w-12 h-12 rounded-lg flex items-center justify-center mr-4">
+                    <TrendingUp className="w-6 h-6 text-green-600" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-gray-900">RetailMax Corporation</h3>
+                    <p className="text-sm text-gray-600">E-commerce</p>
+                  </div>
+                </div>
+                <p className="text-gray-600 mb-4">Reduced order processing time from 24 hours to 2 minutes with AI workflow automation.</p>
+                <div className="text-2xl font-bold text-green-600">99% Time Reduction</div>
+              </div>
+              
+              <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition-shadow">
+                <div className="flex items-center mb-4">
+                  <div className="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center mr-4">
+                    <Users className="w-6 h-6 text-blue-600" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-gray-900">First National Bank</h3>
+                    <p className="text-sm text-gray-600">Banking</p>
+                  </div>
+                </div>
+                <p className="text-gray-600 mb-4">Reduced customer wait times from 45 minutes to 2 minutes with AI virtual assistant.</p>
+                <div className="text-2xl font-bold text-blue-600">95% Faster Response</div>
+              </div>
+              
+              <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition-shadow">
+                <div className="flex items-center mb-4">
+                  <div className="bg-purple-100 w-12 h-12 rounded-lg flex items-center justify-center mr-4">
+                    <Target className="w-6 h-6 text-purple-600" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-gray-900">Precision Manufacturing</h3>
+                    <p className="text-sm text-gray-600">Manufacturing</p>
+                  </div>
+                </div>
+                <p className="text-gray-600 mb-4">Reduced production waste by 70% with AI data analytics and predictive maintenance.</p>
+                <div className="text-2xl font-bold text-purple-600">70% Waste Reduction</div>
+              </div>
+            </div>
+            
+            <div className="text-center">
+              <Link
+                to="/case-studies"
+                className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-xl transition-all duration-300 hover:scale-105 inline-flex items-center gap-2"
+              >
+                <Award className="w-5 h-5" />
+                View All Success Stories
+              </Link>
+            </div>
+          </div>
+        </section>
+        {/* New Content Promo */}
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-6">
+            <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-8 md:p-12 text-white">
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
+                <div className="max-w-2xl">
+                  <h2 className="text-3xl font-bold mb-2">Latest from Zion Insights</h2>
+              <p className="text-white/90">New: AI SRE Runbooks 2026, Real‑Time Evals, and Cost‑Aware Agents.</p>
+                </div>
+                <Link to="/blog" className="bg-white text-indigo-700 hover:bg-indigo-50 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 self-start md:self-auto">
+                  Read the latest
+                  <ArrowRight className="w-5 h-5" />
+                </Link>
+              </div>
+
+              {/* Inline featured list (auto-curated highlights) */}
+              <div className="mt-8 grid gap-6 md:grid-cols-3">
+                <div className="bg-white/10 rounded-xl p-5">
+                  <div className="text-sm text-purple-200 mb-1">Observability</div>
+                  <div className="font-semibold text-white">E2E AI Tracing</div>
+                </div>
+                <div className="bg-white/10 rounded-xl p-5">
+                  <div className="text-sm text-rose-200 mb-1">Edge Computing</div>
+                  <div className="font-semibold text-white">Edge Personalization</div>
+                </div>
+                <div className="bg-white/10 rounded-xl p-5">
+                  <div className="text-sm text-blue-200 mb-1">AI Governance</div>
+                  <div className="font-semibold text-white">Policy Tests Quickstart</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* New Services Promotional Section */}
+        <section className="py-20 bg-gradient-to-r from-emerald-50 to-teal-50 relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-emerald-100/20 to-teal-100/20"></div>
+          <div className="container mx-auto px-6 relative z-10">
+            <div className="text-center">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Latest AI Services</h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Discover our newest AI-powered solutions designed to accelerate your digital transformation.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* New Services Promo 2026 */}
+        <NewServicesPromoBanner2026 />
+        <NewServicesShowcase />
+
+        {/* Latest Articles Promotional Section */}
+        <section className="py-20 bg-gradient-to-r from-purple-50 to-indigo-50 relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-purple-100/20 to-indigo-100/20"></div>
+          <div className="container mx-auto px-6 relative z-10">
+            <div className="text-center">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Latest Articles & Insights</h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Stay ahead with our latest AI insights, technical guides, and industry best practices.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Latest Articles Showcase */}
+        <LatestArticlesShowcase />
+
+        {/* Success Stories Showcase */}
+        <SuccessStoriesShowcase />
         {/* CTA Section */}
         <section className="py-20 bg-blue-600">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

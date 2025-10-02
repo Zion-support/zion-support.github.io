@@ -18,7 +18,7 @@ const ComprehensiveServices: React.FC = () => {
       pricing: 'Starting at $29/month',
       icon: FileText,
       color: 'from-blue-600 to-purple-600',
-      link: '/services/ai-content-generator'
+      link: 'https://ziontechgroup.com/services/ai-content-generator'
     },
     {
       id: 'smart-appointment-scheduler',
@@ -28,7 +28,7 @@ const ComprehensiveServices: React.FC = () => {
       pricing: 'Starting at $49/month',
       icon: Users,
       color: 'from-green-600 to-teal-600',
-      link: '/services/smart-appointment-scheduler'
+      link: 'https://ziontechgroup.com/services/smart-appointment-scheduler'
     },
     {
       id: 'ai-email-marketing',
@@ -38,7 +38,7 @@ const ComprehensiveServices: React.FC = () => {
       pricing: 'Starting at $79/month',
       icon: Mail,
       color: 'from-emerald-600 to-green-600',
-      link: '/services/ai-email-marketing'
+      link: 'https://ziontechgroup.com/services/ai-email-marketing'
     },
     {
       id: 'api-integration-hub',
@@ -48,7 +48,7 @@ const ComprehensiveServices: React.FC = () => {
       pricing: 'Starting at $39/month',
       icon: Code,
       color: 'from-orange-600 to-red-600',
-      link: '/services/api-integration-hub'
+      link: 'https://ziontechgroup.com/services/api-integration-hub'
     },
     {
       id: 'remote-collaboration-suite',
@@ -58,7 +58,7 @@ const ComprehensiveServices: React.FC = () => {
       pricing: 'Starting at $19/user/month',
       icon: Globe,
       color: 'from-purple-600 to-pink-600',
-      link: '/services/remote-collaboration-suite'
+      link: 'https://ziontechgroup.com/services/remote-collaboration-suite'
     },
     {
       id: 'smart-contract-audit',
@@ -68,7 +68,37 @@ const ComprehensiveServices: React.FC = () => {
       pricing: 'Starting at $2,500',
       icon: Shield,
       color: 'from-red-600 to-orange-600',
-      link: '/services/smart-contract-audit'
+      link: 'https://ziontechgroup.com/services/smart-contract-audit'
+    },
+    {
+      id: 'ai-seo-copilot',
+      title: 'AI SEO Copilot',
+      description: 'On-page and technical SEO automation with AI-written meta, schema, and internal linking recommendations.',
+      features: ['Automated meta + schema', 'Keyword clustering', 'Internal link builder', 'Page speed checks', 'Change tracking'],
+      pricing: 'Starting at $59/month',
+      icon: TrendingUp,
+      color: 'from-cyan-600 to-blue-600',
+      link: 'https://ziontechgroup.com/services/ai-seo-copilot'
+    },
+    {
+      id: 'reviews-reputation-hub',
+      title: 'Reviews & Reputation Hub',
+      description: 'Collect, moderate, and publish reviews automatically; respond with AI and monitor brand sentiment.',
+      features: ['Review aggregation', 'AI reply suggestions', 'Sentiment tracking', 'Widget embeds', 'Abuse filtering'],
+      pricing: 'Starting at $39/month',
+      icon: Star,
+      color: 'from-amber-600 to-orange-600',
+      link: 'https://ziontechgroup.com/services/reviews-reputation-hub'
+    },
+    {
+      id: 'ai-proposals-quoting',
+      title: 'AI Proposals & Quoting',
+      description: 'Generate branded proposals and quotes with dynamic pricing rules and e-signature.',
+      features: ['Templates & brand kit', 'CPQ rules', 'E-signature', 'Rev ops analytics', 'CRM sync'],
+      pricing: 'Starting at $69/month',
+      icon: FileText,
+      color: 'from-fuchsia-600 to-pink-600',
+      link: 'https://ziontechgroup.com/services/ai-proposals-quoting'
     }
   ];
 
@@ -81,7 +111,7 @@ const ComprehensiveServices: React.FC = () => {
       pricing: 'Custom pricing',
       icon: Zap,
       color: 'from-blue-600 to-purple-600',
-      link: '/services/ai-workflow-automation'
+      link: 'https://ziontechgroup.com/services/ai-workflow-automation'
     },
     {
       id: 'ai-virtual-assistant',
@@ -91,7 +121,7 @@ const ComprehensiveServices: React.FC = () => {
       pricing: 'Starting at $199/month',
       icon: Bot,
       color: 'from-purple-600 to-pink-600',
-      link: '/services/ai-virtual-assistant'
+      link: 'https://ziontechgroup.com/services/ai-virtual-assistant'
     },
     {
       id: 'ai-predictive-analytics',
@@ -101,7 +131,7 @@ const ComprehensiveServices: React.FC = () => {
       pricing: 'Starting at $299/month',
       icon: BarChart3,
       color: 'from-indigo-600 to-purple-600',
-      link: '/services/ai-predictive-analytics'
+      link: 'https://ziontechgroup.com/services/ai-predictive-analytics'
     },
     {
       id: 'conversational-ai',
@@ -111,7 +141,7 @@ const ComprehensiveServices: React.FC = () => {
       pricing: 'Starting at $399/month',
       icon: MessageCircle,
       color: 'from-violet-600 to-pink-600',
-      link: '/services/conversational-ai'
+      link: 'https://ziontechgroup.com/services/conversational-ai'
     },
     {
       id: 'ai-data-analytics',
@@ -121,7 +151,7 @@ const ComprehensiveServices: React.FC = () => {
       pricing: 'Starting at $299/month',
       icon: BarChart3,
       color: 'from-green-600 to-teal-600',
-      link: '/services/ai-data-analytics'
+      link: 'https://ziontechgroup.com/services/ai-data-analytics'
     },
     {
       id: 'edge-computing-ai',
@@ -131,7 +161,7 @@ const ComprehensiveServices: React.FC = () => {
       pricing: 'Starting at $1,999/month',
       icon: Cpu,
       color: 'from-teal-600 to-blue-600',
-      link: '/services/edge-computing-ai'
+      link: 'https://ziontechgroup.com/services/edge-computing-ai'
     },
     {
       id: 'ai-document-processing',
@@ -141,7 +171,7 @@ const ComprehensiveServices: React.FC = () => {
       pricing: 'Starting at $149/month',
       icon: FileText,
       color: 'from-indigo-600 to-blue-600',
-      link: '/services/ai-document-processing'
+      link: 'https://ziontechgroup.com/services/ai-document-processing'
     },
     {
       id: 'ai-cognitive-automation',
@@ -151,7 +181,7 @@ const ComprehensiveServices: React.FC = () => {
       pricing: 'Custom pricing',
       icon: Brain,
       color: 'from-cyan-600 to-blue-600',
-      link: '/services/ai-cognitive-automation'
+      link: 'https://ziontechgroup.com/services/ai-cognitive-automation'
     },
     {
       id: 'ai-cybersecurity',
@@ -161,7 +191,27 @@ const ComprehensiveServices: React.FC = () => {
       pricing: 'Starting at $399/month',
       icon: Shield,
       color: 'from-red-600 to-orange-600',
-      link: '/services/ai-cybersecurity'
+      link: 'https://ziontechgroup.com/services/ai-cybersecurity'
+    },
+    {
+      id: 'genai-code-assistant',
+      title: 'GenAI Code Assistant (Enterprise)',
+      description: 'Secure, on-prem compatible coding copilot with repository-aware context and policy guardrails.',
+      features: ['Context window 1M tokens', 'Policy guardrails', 'Self-hosting option', 'Secret redaction', 'Audit logs'],
+      pricing: 'Starting at $25/user/month',
+      icon: Code,
+      color: 'from-slate-700 to-gray-900',
+      link: 'https://ziontechgroup.com/services/genai-code-assistant'
+    },
+    {
+      id: 'ai-sales-copilot',
+      title: 'AI Sales Copilot',
+      description: 'Real-time call coaching, auto-notes, CRM updates, and win-likelihood predictions.',
+      features: ['Real-time coaching', 'Auto notes + CRM', 'ICP fit scoring', 'Deal risk alerts', 'Revenue insights'],
+      pricing: 'Starting at $99/user/month',
+      icon: TrendingUp,
+      color: 'from-lime-600 to-emerald-600',
+      link: 'https://ziontechgroup.com/services/ai-sales-copilot'
     }
   ];
 
@@ -174,7 +224,7 @@ const ComprehensiveServices: React.FC = () => {
       pricing: 'Starting at $5,000',
       icon: Cloud,
       color: 'from-blue-600 to-cyan-600',
-      link: '/services/cloud-migration'
+      link: 'https://ziontechgroup.com/services/cloud-migration'
     },
     {
       id: 'devops-automation',
@@ -184,7 +234,7 @@ const ComprehensiveServices: React.FC = () => {
       pricing: 'Starting at $3,000/month',
       icon: Settings,
       color: 'from-green-600 to-emerald-600',
-      link: '/services/devops-automation'
+      link: 'https://ziontechgroup.com/services/devops-automation'
     },
     {
       id: 'database-optimization',
@@ -194,7 +244,7 @@ const ComprehensiveServices: React.FC = () => {
       pricing: 'Starting at $2,500',
       icon: Database,
       color: 'from-purple-600 to-violet-600',
-      link: '/services/database-optimization'
+      link: 'https://ziontechgroup.com/services/database-optimization'
     },
     {
       id: 'mobile-app-development',
@@ -204,7 +254,7 @@ const ComprehensiveServices: React.FC = () => {
       pricing: 'Starting at $15,000',
       icon: Smartphone,
       color: 'from-pink-600 to-rose-600',
-      link: '/services/mobile-app-development'
+      link: 'https://ziontechgroup.com/services/mobile-app-development'
     },
     {
       id: 'quantum-computing',
@@ -214,7 +264,7 @@ const ComprehensiveServices: React.FC = () => {
       pricing: 'Custom pricing',
       icon: Cpu,
       color: 'from-indigo-600 to-purple-600',
-      link: '/services/quantum-computing'
+      link: 'https://ziontechgroup.com/services/quantum-computing'
     },
     {
       id: 'blockchain-web3',
@@ -224,7 +274,27 @@ const ComprehensiveServices: React.FC = () => {
       pricing: 'Starting at $10,000',
       icon: Lock,
       color: 'from-yellow-600 to-orange-600',
-      link: '/services/blockchain-web3'
+      link: 'https://ziontechgroup.com/services/blockchain-web3'
+    },
+    {
+      id: 'soc2-readiness',
+      title: 'SOC 2 Readiness & Audit Support',
+      description: 'Policy templates, gap assessment, remediation, and tooling integrations to achieve SOC 2.',
+      features: ['Gap assessment', 'Policy library', 'Evidence automation', 'Risk register', 'Audit liaison'],
+      pricing: 'Engagements from $12,000',
+      icon: Shield,
+      color: 'from-sky-600 to-indigo-600',
+      link: 'https://ziontechgroup.com/services/soc2-readiness'
+    },
+    {
+      id: 'finops-managed',
+      title: 'FinOps Managed Service',
+      description: 'Cloud cost governance with anomaly detection, rightsizing, and commitment management.',
+      features: ['Anomaly detection', 'Rightsizing', 'Savings plans mgmt', 'Unit economics', 'Executive reports'],
+      pricing: 'Starting at $2,000/month',
+      icon: TrendingUp,
+      color: 'from-emerald-600 to-teal-600',
+      link: 'https://ziontechgroup.com/services/finops-managed-service'
     }
   ];
 
