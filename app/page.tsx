@@ -269,7 +269,7 @@ export default function HomePage() {
           {/* New Comprehensive Services Links */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
             <Link 
-              href="/services" 
+              href="/services/comprehensive-micro-saas-solutions" 
               className="bg-gradient-to-br from-cyan-50 to-blue-100 p-8 rounded-xl border border-cyan-200 hover:shadow-lg transition-all duration-300"
             >
               <div className="flex items-center mb-4">
@@ -294,7 +294,7 @@ export default function HomePage() {
             </Link>
 
             <Link 
-              href="/services" 
+              href="/services/comprehensive-it-services" 
               className="bg-gradient-to-br from-purple-50 to-indigo-100 p-8 rounded-xl border border-purple-200 hover:shadow-lg transition-all duration-300"
             >
               <div className="flex items-center mb-4">
