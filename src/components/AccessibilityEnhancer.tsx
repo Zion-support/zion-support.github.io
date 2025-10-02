@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 
-const AccessibilityEnhancer: React.FC = () => {
+const AccessibilityEnhancer: React.FC<React.PropsWithChildren> = ({ children }) => {
   useEffect(() => {
     // Skip link functionality
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -87,7 +87,7 @@ const AccessibilityEnhancer: React.FC = () => {
     });
 
     observer.observe(document.body, {
-      childList: true
+      childList: true,
       subtree: true
     });
 
@@ -98,7 +98,7 @@ const AccessibilityEnhancer: React.FC = () => {
     };
   }, []);
 
-  return null;
+  return <>{children}</>;
 };
 
 export default AccessibilityEnhancer;
