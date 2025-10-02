@@ -63,6 +63,9 @@ function Header() {
                 <Link href="/services/it-services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-600">
                   IT Services & Infrastructure
                 </Link>
+                <Link href="/services/ai-workflow-automation" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600">
+                  AI Workflow Automation
+                </Link>
                 <div className="border-t border-gray-100 my-2"></div>
                 <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide">Emerging Technologies</div>
                 <Link href="/services/blockchain-solutions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-50 hover:text-yellow-600">
