@@ -150,9 +150,5 @@ const App: React.FC = () => {
     </AccessibilityEnhancer>
   );
 };
-<<<<<<< HEAD
 
 export default App;
-=======
-export default App;
->>>>>>> 1763b7a69f262bf3befeb423d4f568349f702cf5
