@@ -1,5 +1,6 @@
 module.exports = {
   testEnvironment: 'jsdom',
+  // Only run tests within src; ignore corrupted legacy __tests__ content
   roots: ['<rootDir>/src'],
   setupFilesAfterEnv: [ '@testing-library/jest-dom' ],
   moduleNameMapper: {
@@ -14,6 +15,7 @@ module.exports = {
     '/build/',
     '/.next/',
     '/out/',
+    '/__tests__/',
     '/tests.disabled/',
     '/__tests__/',
     '/automation/',
@@ -26,6 +28,7 @@ module.exports = {
     '/apps.backup/',
   ],
   modulePathIgnorePatterns: [
+    '/__tests__/',
     '/automation/',
     '/automation_backup/',
     '/backup/',
