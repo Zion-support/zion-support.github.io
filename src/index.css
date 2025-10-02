@@ -33,7 +33,14 @@ body {
   text-align: center;
 }
 
-<<<<<<< HEAD
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -44,13 +51,7 @@ body {
   }
   button {
     background-color: #f9f9f9;
-=======
-.text-left {
-  text-align: left;
-}
-
-.text-right {
-  text-align: right;
+  }
 }
 
 .hidden {
@@ -171,6 +172,5 @@ body {
   .btn-large {
     padding: 1rem 2rem;
     font-size: 1rem;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-44c4
   }
 }
