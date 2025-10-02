@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Sparkles, TrendingUp, Zap, Star, Rocket, Brain, Atom, Bot, Gem, Microscope, Shield } from 'lucide-react';
+import { ArrowRight, TrendingUp, Zap, Star, Rocket, Brain, Shield } from 'lucide-react';
 
 const Revolutionary2026ContentMegaBanner: React.FC = () => {
   const revolutionaryContent = [
@@ -133,7 +133,7 @@ const Revolutionary2026ContentMegaBanner: React.FC = () => {
 
         {/* Featured Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {revolutionaryContent.map((content, index) => (
+          {revolutionaryContent.map((content) => (
             <div
               key={content.id}
               className="group relative"

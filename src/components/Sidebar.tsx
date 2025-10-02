@@ -16,50 +16,74 @@ const Sidebar: React.FC = () => {
         { label: 'Case Studies', path: '/case-studies' },
         { label: 'Blog', path: '/blog' },
         { label: 'About', path: '/about' },
-        { label: 'Contact', path: '/contact' },
-      ],
+      ]
     },
     {
-      title: 'Popular Services',
+      title: 'Solutions',
       links: [
-        { label: 'AI Workflow Automation', path: '/services/ai-workflow-automation' },
-        { label: 'AI Virtual Assistant', path: '/services/ai-virtual-assistant' },
-        { label: 'AI Data Analytics', path: '/services/ai-data-analytics' },
-        { label: 'Advanced Cybersecurity AI', path: '/services/advanced-cybersecurity-ai' },
-      ],
+        { label: 'Enterprise', path: '/solutions/enterprise' },
+        { label: 'SMB', path: '/solutions/smb' },
+        { label: 'Startup', path: '/solutions/startup' },
+        { label: 'Healthcare', path: '/solutions/healthcare' },
+        { label: 'Financial', path: '/solutions/financial' },
+        { label: 'Retail', path: '/solutions/retail' },
+        { label: 'Manufacturing', path: '/solutions/manufacturing' },
+      ]
     },
+    {
+      title: 'Services',
+      links: [
+        { label: 'AI Services', path: '/services/ai-services' },
+        { label: 'IT Services', path: '/services/it-services' },
+        { label: 'Micro SaaS', path: '/services/micro-saas' },
+        { label: 'Cloud Solutions', path: '/services/cloud' },
+        { label: 'Data Analytics', path: '/services/analytics' },
+        { label: 'Cybersecurity', path: '/services/security' },
+        { label: 'Automation', path: '/services/automation' },
+      ]
+    },
+    {
+      title: 'Support',
+      links: [
+        { label: 'Contact', path: '/contact' },
+        { label: 'Support', path: '/support' },
+        { label: 'Documentation', path: '/docs' },
+        { label: 'Pricing', path: '/pricing' },
+        { label: 'Partners', path: '/partners' },
+      ]
+    }
   ];
 
   return (
-    <aside className="hidden xl:block w-72 shrink-0" aria-label="Sidebar navigation">
-      <nav className="sticky top-24 space-y-8">
-        {sections.map((section) => (
-          <div key={section.title}>
-            <h3 className="text-xs font-semibold text-slate-400 uppercase tracking-wide mb-3">
+    <aside className="w-64 bg-gray-50 border-r border-gray-200 h-full overflow-y-auto">
+      <div className="p-6">
+        <h2 className="text-lg font-semibold text-gray-900 mb-6">Navigation</h2>
+        
+        {sections.map((section, index) => (
+          <div key={index} className="mb-8">
+            <h3 className="text-sm font-medium text-gray-700 uppercase tracking-wider mb-3">
               {section.title}
             </h3>
-            <ul className="space-y-1">
-              {section.links.map((item) => (
-                <li key={item.path}>
-                  <Link
-                    to={item.path}
-                    className={`block px-3 py-2 rounded-md text-sm transition-colors ${
-                      isActive(item.path)
-                        ? 'bg-slate-800 text-blue-400'
-                        : 'text-slate-300 hover:text-white hover:bg-slate-800'
-                    }`}
-                  >
-                    {item.label}
-                  </Link>
-                </li>
+            <nav className="space-y-2">
+              {section.links.map((link, linkIndex) => (
+                <Link
+                  key={linkIndex}
+                  to={link.path}
+                  className={`block px-3 py-2 rounded-md text-sm transition-colors ${
+                    isActive(link.path)
+                      ? 'bg-blue-100 text-blue-700 font-medium'
+                      : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
+                  }`}
+                >
+                  {link.label}
+                </Link>
               ))}
-            </ul>
+            </nav>
           </div>
         ))}
-      </nav>
+      </div>
     </aside>
   );
 };
 
 export default Sidebar;
-
