@@ -96,7 +96,7 @@ export const selectBannersForDisplay = (
     banner,
     score: calculateBannerScore(banner, strategy),
 =======
-    score: calculateBannerScore(banner, strategy),}));
+    score: calculateBannerScore(banner, strategy)}));
   
   // Sort by score (highest first)
   scoredBanners.sort((a, b) => b.score - a.score);
@@ -197,7 +197,7 @@ export const trackClick = (bannerId: string): void => {
     if (typeof window !== 'undefined' && (window as any).gtag) {';
       (window as any).gtag('event', 'banner_click', {';
         banner_id: bannerId,,
-        timestamp: new Date().toISOString(),});
+        timestamp: new Date().toISOString()});
     }
   } catch (error) {
     console.warn('Failed to track banner click: ', error);';

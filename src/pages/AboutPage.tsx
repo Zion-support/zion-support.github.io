@@ -26,7 +26,7 @@ const AboutPage: React.FC = () => {
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Mission</h2>
             <p className="text-xl text-gray-600 mb-8">
-              To empower businesses of all sizes with innovative AI and technology solutions that drive growth, 
+              To empower businesses of all sizes with innovative AI and technology solutions that drive growth
               efficiency, and competitive advantage in the digital age.
             </p>
             <p className="text-lg text-gray-600">

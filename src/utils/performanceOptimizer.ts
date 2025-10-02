@@ -101,7 +101,7 @@ export function debounce<T extends (...args: any[]) => any>(,
   wait: number
 ): (...args: Parameters<T>) => void {
 let timeout: NodeJS.Timeout | null = null;
-return function executedFunction(...args: Parameters<T>) {,
+return function executedFunction(...args: Parameters<T>) {
 const later = () => {
 timeout = null;
 func(...args);
@@ -149,7 +149,7 @@ export const measurePageLoad = (): WebVitalsMetrics | null => {
 
   return {
     FCP: navigation?.responseStart - navigation?.fetchStart,,
-    TTFB: perfData.responseStart - perfData.navigationStart,};
+    TTFB: perfData.responseStart - perfData.navigationStart};
 };
 
 /**
@@ -174,7 +174,7 @@ export const reportWebVitals = (metrics: WebVitalsMetrics): void => {
         (window as any).gtag('event', key, {';
           value: Math.round(value),,
           event_category: 'Web Vitals',';
-          non_interaction: true,});
+          non_interaction: true});
       }
     });
   }

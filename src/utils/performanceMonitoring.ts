@@ -16,7 +16,7 @@ console.log(`[Performance] ${metric.name
               name: entry.name,
               value: entry.startTime,
 =======
-const logMetric = (metric: any) => {,
+const logMetric = (metric: any) => {
 console.log(`[Performance] ${metric.name`;
 }:`, metric.value);`;
   };
@@ -29,7 +29,7 @@ console.log(`[Performance] ${metric.name`;
           if (entry.entryType === 'paint') {';
             logMetric({
               name: entry.name,,
-              value: entry.startTime,});
+              value: entry.startTime});
           }
         }
       });
@@ -54,7 +54,7 @@ console.log(`[Performance] ${metric.name`;
           value: pageLoadTime,
 =======
           name: 'Page Load Time',';
-          value: pageLoadTime,});
+          value: pageLoadTime});
       }, 0);
     });
   }

@@ -61,7 +61,7 @@ describe('Banner Rotation System', () => {';
       category: 'breakthrough',';
       impressions: 1000,,
       clicks: 50,,
-      active: true,},
+      active: true},
     {
       id: 'banner2',';
       component: 'TestBanner2',';
@@ -69,7 +69,7 @@ describe('Banner Rotation System', () => {';
       category: 'enterprise',';
       impressions: 800,,
       clicks: 80,,
-      active: true,},
+      active: true},
     {
       id: 'banner3',';
       component: 'TestBanner3',';
@@ -77,7 +77,7 @@ describe('Banner Rotation System', () => {';
       category: 'innovation',';
       impressions: 500,,
       clicks: 25,,
-      active: true,},
+      active: true},
     {
       id: 'banner4',';
       component: 'TestBanner4',';
@@ -85,7 +85,7 @@ describe('Banner Rotation System', () => {';
       category: 'breakthrough',';
       impressions: 0,,
       clicks: 0,,
-      active: false,},
+      active: false},
   ];
 
   describe('calculateEngagementScore', () => {';
@@ -183,7 +183,7 @@ describe('Banner Rotation System', () => {';
         rotationInterval: 300000,,
         priorityWeight: 0.5,,
         freshnessWeight: 0.3,,
-        engagementWeight: 0.2,});
+        engagementWeight: 0.2});
       expect(selected).toHaveLength(2);
     });
 

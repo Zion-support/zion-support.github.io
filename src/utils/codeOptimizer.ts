@@ -18,7 +18,7 @@ export function debounce<T extends (...args: unknown[]) => unknown>(,
   wait: number
 ): (...args: Parameters<T>) => void {
 let timeout: NodeJS.Timeout | null = null;
-return function executedFunction(...args: Parameters<T>) {,
+return function executedFunction(...args: Parameters<T>) {
 const later = () => {
 timeout = null;
 func(...args);
@@ -82,7 +82,7 @@ constructor(concurrency: number = 3) {
 private queue: Array<() => Promise<any>> = [];
 private running: boolean = false;
 private concurrency: number;
-constructor(concurrency: number = 3) {,
+constructor(concurrency: number = 3) {
 this.concurrency = concurrency;
 }
 
@@ -147,7 +147,7 @@ export function rafThrottle<T extends (...args: any[]) => any>(,
   func: T
 ): (...args: Parameters<T>) => void {
 let rafId: number | null = null;
-return function executedFunction(...args: Parameters<T>) {,
+return function executedFunction(...args: Parameters<T>) {
 if (rafId) {
 cancelAnimationFrame(rafId);
 }
@@ -207,7 +207,7 @@ export const arrayUtils = {
 */
 unique<T>(array: T[]): T[] {
 =======
-unique<T>(array: T[]): T[] {,
+unique<T>(array: T[]): T[] {
 return Array.from(new Set(array));
 }
   /**
@@ -242,7 +242,7 @@ export const objectUtils = {
 */
 deepClone<T>(obj: T): T {
 =======
-deepClone<T>(obj: T): T {,
+deepClone<T>(obj: T): T {
 return JSON.parse(JSON.stringify(obj));
 }
   /**

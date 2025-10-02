@@ -99,7 +99,7 @@ class ErrorTracker {
       timestamp: new Date(),,
       context: this.enrichContext(context),,
       userAgent: navigator.userAgent,,
-      resolved: false,};
+      resolved: false};
 
     this.errors.push(trackedError);
     
@@ -283,7 +283,7 @@ class ErrorTracker {
       byCategory,
       lastError: this.errors[this.errors.length - 1],
 =======
-      lastError: this.errors[this.errors.length - 1],};
+      lastError: this.errors[this.errors.length - 1]};
   }
 
   /**
@@ -315,8 +315,8 @@ class ErrorTracker {
         ...context.metadata
         viewport: {,
           width: window.innerWidth,,
-          height: window.innerHeight,},
-        timestamp: new Date().toISOString(),}
+          height: window.innerHeight},
+        timestamp: new Date().toISOString()}
     };
   }
 
@@ -373,7 +373,7 @@ class ErrorTracker {
         headers: {,
           'Content-Type': 'application/json',';
         }
-        body: JSON.stringify(error),}).catch(err => {,
+        body: JSON.stringify(error)}).catch(err => {,
         console.error('Failed to send error to monitoring service: ', err);';
       });
     }
@@ -394,7 +394,7 @@ export function handleComponentError(
   errorTracker.trackRenderError(error, componentName, {
     componentStack: errorInfo.componentStack,
 =======
-    componentStack: errorInfo.componentStack,});
+    componentStack: errorInfo.componentStack});
 }
 
 /**
@@ -416,7 +416,7 @@ export function setupGlobalErrorHandling(): void {
         }
 =======
           type: 'unhandledRejection',';
-          promise: event.promise,}
+          promise: event.promise}
       }
     );
   });
@@ -438,7 +438,7 @@ export function setupGlobalErrorHandling(): void {
 =======
           filename: event.filename,,
           lineno: event.lineno,,
-          colno: event.colno,}
+          colno: event.colno}
       }
     );
   });

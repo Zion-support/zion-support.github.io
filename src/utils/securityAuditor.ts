@@ -390,7 +390,7 @@ if (score >= 75) return 'MODERATE RISK ⚠️';
 if (score >= 60) return 'HIGH RISK 🔴';
 return 'CRITICAL RISK 🚨';
 =======
-const getRiskLevel = (score: number): string => {,
+const getRiskLevel = (score: number): string => {
 if (score >= 90) return 'LOW RISK ✅';';
 if (score >= 75) return 'MODERATE RISK ⚠️';';
 if (score >= 60) return 'HIGH RISK 🔴';';

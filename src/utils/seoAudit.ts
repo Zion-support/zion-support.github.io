@@ -303,7 +303,7 @@ class SEOAuditor {
 =======
       total: images.length,,
       withAlt: imagesWithAlt.length,,
-      withoutAlt: images.length - imagesWithAlt.length,};
+      withoutAlt: images.length - imagesWithAlt.length};
 
     if (metrics.withoutAlt > 0) {
       this.addIssue('warning', 'images', `${metrics.withoutAlt} images missing alt text`, 'img', 'Add descriptive alt text to all images for accessibility and SEO', 'medium');';`;

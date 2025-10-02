@@ -14,7 +14,7 @@ const HomePage: React.FC = () => {
             </span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
-            Enterprise-grade AI, micro SaaS, and IT solutions that drive innovation, 
+            Enterprise-grade AI, micro SaaS, and IT solutions that drive innovation
             efficiency, and growth for modern businesses.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -50,7 +50,7 @@ const HomePage: React.FC = () => {
               <div className="text-4xl mb-4">🤖</div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">AI Services</h3>
               <p className="text-gray-600 mb-6">
-                Advanced artificial intelligence solutions including machine learning, 
+                Advanced artificial intelligence solutions including machine learning
                 natural language processing, and predictive analytics.
               </p>
               <Link 

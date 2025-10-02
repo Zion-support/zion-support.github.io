@@ -16,7 +16,7 @@ export const lazyWithRetry = <T extends ComponentType<any>>(
     new Promise<{ default: T }>((resolve, reject) => {
 const attemptImport = async (retriesLeft: number) => {
 =======
-const attemptImport = async (retriesLeft: number) => {,
+const attemptImport = async (retriesLeft: number) => {
 try {
 const module = await importFunc();
 resolve(module);
@@ -68,7 +68,7 @@ export const createLazyRoute = <T extends ComponentType<any>>(
     preload: () => preloadComponent(importFunc),
 =======
     Component: LazyComponent,,
-    preload: () => preloadComponent(importFunc),};
+    preload: () => preloadComponent(importFunc)};
 };
 
 /**

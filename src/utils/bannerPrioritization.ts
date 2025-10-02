@@ -93,7 +93,7 @@ export const bannerRegistry: BannerMetadata[] = [,
     value: '$2.7B',';
     publishDate: new Date('2026-01-01'),';
     category: 'autonomous',';
-    featured: true,},
+    featured: true},
   {
     id: 'oct2025-governed-agent-platforms-v2',';
     name: 'Governed Agent Platforms v2 — Budgets, Scorecards, Instant Rollback',';
@@ -101,7 +101,7 @@ export const bannerRegistry: BannerMetadata[] = [,
     value: '$1.1B',';
     publishDate: new Date('2025-10-01'),';
     category: 'ai',';
-    featured: true,},
+    featured: true},
   {
     id: 'jan2026-quantum',';
     name: 'January 2026 Quantum AI Consciousness Revolution',';
@@ -109,7 +109,7 @@ export const bannerRegistry: BannerMetadata[] = [,
     value: '$847B',';
     publishDate: new Date('2026-01-01'),';
     category: 'quantum',';
-    featured: true,},
+    featured: true},
   {
     id: 'oct2025-neural-quantum',';
     name: 'October 2025 Neural-Quantum Orchestration',';
@@ -117,7 +117,7 @@ export const bannerRegistry: BannerMetadata[] = [,
     value: '$18.7B',';
     publishDate: new Date('2025-10-01'),';
     category: 'quantum',';
-    featured: true,},
+    featured: true},
   {
     id: 'oct2025-nas',';
     name: 'Neural Architecture Search',';
@@ -125,7 +125,7 @@ export const bannerRegistry: BannerMetadata[] = [,
     value: '$47M',';
     publishDate: new Date('2025-10-01'),';
     category: 'ai',';
-    featured: true,},
+    featured: true},
   {
     id: 'oct2025-sovereign',';
     name: 'Sovereign AI Infrastructure',';
@@ -133,7 +133,7 @@ export const bannerRegistry: BannerMetadata[] = [,
     value: '$2.4B',';
     publishDate: new Date('2025-10-01'),';
     category: 'sovereign',';
-    featured: true,},
+    featured: true},
   {
     id: 'oct2025-green',';
     name: 'Green AI & Sustainable Computing',';
@@ -141,7 +141,7 @@ export const bannerRegistry: BannerMetadata[] = [,
     value: '$3.7B',';
     publishDate: new Date('2025-10-01'),';
     category: 'green',';
-    featured: true,},
+    featured: true},
   {
     id: 'oct2025-edge-feature-stores',';
     name: 'Edge Feature Stores: Zero‑PII Personalization',';
@@ -149,7 +149,7 @@ export const bannerRegistry: BannerMetadata[] = [,
     value: '$1.2B',';
     publishDate: new Date('2025-10-02'),';
     category: 'ai',';
-    featured: true,},
+    featured: true},
 ];
 
 /**

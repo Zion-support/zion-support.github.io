@@ -152,7 +152,6 @@ Please describe what you were doing when this error occurred:
 =======
 URL: ${window.location.href},
 Timestamp: ${new Date().toISOString()},
-
 Please describe what you were doing when this error occurred: [Your description here]
 Stack Trace:
 ${this.state.error?.stack}

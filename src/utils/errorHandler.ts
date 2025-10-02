@@ -39,7 +39,7 @@ this.setupGlobalErrorHandlers();
         stack: event.error?.stack,,
         timestamp: new Date().toISOString(),,
         url: window.location.href,,
-        userAgent: navigator.userAgent,});
+        userAgent: navigator.userAgent});
     });
 
     // Unhandled promise rejection handler
@@ -57,7 +57,7 @@ this.setupGlobalErrorHandlers();
         stack: event.reason?.stack,,
         timestamp: new Date().toISOString(),,
         url: window.location.href,,
-        userAgent: navigator.userAgent,});
+        userAgent: navigator.userAgent});
     });
   }
 
@@ -79,7 +79,7 @@ this.setupGlobalErrorHandlers();
       timestamp: errorInfo.timestamp || new Date().toISOString(),,
       url: errorInfo.url || window.location.href,,
       userAgent: errorInfo.userAgent || navigator.userAgent,,
-      userId: errorInfo.userId,};
+      userId: errorInfo.userId};
 
     // Add to queue
     this.errorQueue.push(fullErrorInfo);

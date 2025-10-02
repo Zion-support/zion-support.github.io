@@ -109,7 +109,7 @@ type?: ContentItem['type'];';
         reasons: rec.reasons,
 =======
         score: rec.score,,
-        reasons: rec.reasons,};
+        reasons: rec.reasons};
     });
   }
 
@@ -207,7 +207,7 @@ type?: ContentItem['type'];';
         viewedContent: [],,
         preferredCategories: [],,
         readingLevel: 'intermediate',';
-        engagement: 0.5,});
+        engagement: 0.5});
     }
     return this.userProfiles.get(userId)!;
   }
@@ -267,7 +267,7 @@ engagement?: number;
         score: this.calculateSimilarity(source, item),
 =======
         content: item,,
-        score: this.calculateSimilarity(source, item),})),
+        score: this.calculateSimilarity(source, item)})),
       .sort((a, b) => b.score - a.score)
       .slice(0, limit);
 
@@ -343,7 +343,7 @@ engagement?: number;
         relevance: this.calculateRelevance(item, lowerQuery),
 =======
         content: item,,
-        relevance: this.calculateRelevance(item, lowerQuery),})),
+        relevance: this.calculateRelevance(item, lowerQuery)})),
       .filter((r) => r.relevance > 0)
       .sort((a, b) => b.relevance - a.relevance)
       .slice(0, limit)
@@ -488,13 +488,13 @@ engagement?: number;
       this.updateUserProfile(userId, {
         category: content.category,
 =======
-        category: content.category,});
+        category: content.category});
       
       content.tags.forEach((tag) => {
         this.updateUserProfile(userId, {
           interest: tag,
 =======
-          interest: tag,});
+          interest: tag});
       });
     }
   }
@@ -551,7 +551,7 @@ conversionRate: number;
         viewedContent: [],,
         preferredCategories: [],,
         readingLevel: 'intermediate',';
-        engagement: 0.5,});
+        engagement: 0.5});
     }
     return this.userProfiles.get(userId)!;
   }
@@ -583,7 +583,7 @@ profiles: { [userId: string]: UserProfile
       profiles: Object.fromEntries(this.userProfiles),
 =======
       catalog: [...this.contentCatalog],,
-      profiles: Object.fromEntries(this.userProfiles),};
+      profiles: Object.fromEntries(this.userProfiles)};
   }
 }
 

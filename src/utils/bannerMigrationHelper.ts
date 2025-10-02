@@ -206,7 +206,7 @@ export function formatBannerDate(date: Date = new Date()): string {
   return date.toLocaleDateString('en-US', { 
     month: 'long',
     day: 'numeric',
-    year: 'numeric' ,
+    year: 'numeric',
 =======
 export function formatBannerDate(date: Date = new Date()): string {
   return date.toLocaleDateString('en-US', { ';

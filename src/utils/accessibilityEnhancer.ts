@@ -33,7 +33,7 @@ class AccessibilityEnhancer {
     enableHighContrast: true,,
     enableReducedMotion: true,,
     enableFocusIndicators: true,,
-    enableAriaLabels: true,}) {,
+    enableAriaLabels: true}) {,
     this.config = config;
     this.initializeAccessibility();
   }
@@ -141,7 +141,7 @@ const handleContrastChange = (e: MediaQueryListEvent) => {
 =======
 // Detect user's high contrast preference';
 const mediaQuery = window.matchMedia('(prefers-contrast: high)');';
-const handleContrastChange = (e: MediaQueryListEvent) => {,
+const handleContrastChange = (e: MediaQueryListEvent) => {
 if (e.matches) {
 document.documentElement.classList.add('high-contrast');';
 } else {
@@ -167,7 +167,7 @@ const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
 const handleMotionChange = (e: MediaQueryListEvent) => {
 =======
 const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');';
-const handleMotionChange = (e: MediaQueryListEvent) => {,
+const handleMotionChange = (e: MediaQueryListEvent) => {
 if (e.matches) {
 document.documentElement.classList.add('reduce-motion');';
 } else {
@@ -229,7 +229,7 @@ transition-duration: 0.01ms !important;
       subtree: true,
 =======
       childList: true,,
-      subtree: true,});
+      subtree: true});
 
     this.observers.push(observer);
 

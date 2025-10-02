@@ -19,7 +19,7 @@ private focusableElements: HTMLElement[] = [];
 private firstFocusableElement?: HTMLElement;
 private lastFocusableElement?: HTMLElement;
 private previouslyFocusedElement?: HTMLElement;
-constructor(element: HTMLElement) {,
+constructor(element: HTMLElement) {
 this.element = element;
 this.updateFocusableElements();
 }
@@ -259,7 +259,7 @@ function hexToRgb(hex: string): { r: number; g: number; b: number } | null {
         g: parseInt(result[2], 16),
         b: parseInt(result[3], 16),
 =======
-        b: parseInt(result[3], 16),},
+        b: parseInt(result[3], 16)},
     : null;
 }
 

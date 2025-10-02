@@ -41,7 +41,7 @@ const AdvancedPerformanceMonitor: React.FC = () => {
     ttfb: 0,,
     inp: 0,,
     bundleSize: 0,,
-    loadTime: 0,});
+    loadTime: 0});
 
   const [alerts, setAlerts] = useState<PerformanceAlert[]>([]);
   const [isMonitoring, setIsMonitoring] = useState(false);
@@ -160,7 +160,7 @@ default: return 'text-gray-600 bg-gray-100';';
             id: `${key}-${Date.now()}`,`;
             type: 'warning',',
 =======
-            threshold: thresholds[key as keyof typeof thresholds].poor,});
+            threshold: thresholds[key as keyof typeof thresholds].poor});
         } else if (status === 'needs-improvement') {';
           newAlerts.push({
             id: `${key}-${Date.now()}`,`;
@@ -171,7 +171,7 @@ default: return 'text-gray-600 bg-gray-100';';
             value,
             threshold: thresholds[key as keyof typeof thresholds].poor,
 =======
-            threshold: thresholds[key as keyof typeof thresholds].poor,});
+            threshold: thresholds[key as keyof typeof thresholds].poor});
         }
       });
 
@@ -238,7 +238,7 @@ return `${(value / 1024).toFixed(1)`;
       alerts,
       timestamp: new Date().toISOString(),
 =======
-      timestamp: new Date().toISOString(),};
+      timestamp: new Date().toISOString()};
     
     const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });';
     const url = URL.createObjectURL(blob);
@@ -431,25 +431,25 @@ status === 'good'
 metrics.lcp > thresholds.lcp.poor && (
 <li>• Optimize Largest Contentful Paint: Consider image optimization and critical CSS</li>
 =======
-<li>• Optimize Largest Contentful Paint: Consider image optimization and critical CSS</li>,)
+<li>• Optimize Largest Contentful Paint: Consider image optimization and critical CSS</li>)
 },
           {
 metrics.fcp > thresholds.fcp.poor && (
 <li>• Improve First Contentful Paint: Reduce render-blocking resources</li>
 =======
-<li>• Improve First Contentful Paint: Reduce render-blocking resources</li>,)
+<li>• Improve First Contentful Paint: Reduce render-blocking resources</li>)
 },
           {
 metrics.cls > thresholds.cls.poor && (
 <li>• Reduce Cumulative Layout Shift: Add dimensions to images and ads</li>
 =======
-<li>• Reduce Cumulative Layout Shift: Add dimensions to images and ads</li>,)
+<li>• Reduce Cumulative Layout Shift: Add dimensions to images and ads</li>)
 },
           {
 metrics.bundleSize > thresholds.bundleSize.poor && (
 <li>• Reduce bundle size: Implement code splitting and tree shaking</li>
 =======
-<li>• Reduce bundle size: Implement code splitting and tree shaking</li>,)
+<li>• Reduce bundle size: Implement code splitting and tree shaking</li>)
 },
           {metrics.fcp <= thresholds.fcp.good && metrics.lcp <= thresholds.lcp.good && metrics.cls <= thresholds.cls.good && (
             <li>• Great job! Your performance metrics are in the green zone.</li>

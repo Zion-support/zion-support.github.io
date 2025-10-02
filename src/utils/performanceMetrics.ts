@@ -248,7 +248,7 @@ class PerformanceMetricsTracker {
       rating,
       timestamp: Date.now(),
 =======
-      timestamp: Date.now(),};
+      timestamp: Date.now()};
     
     this.metrics.set(name, metric);
     
@@ -394,7 +394,7 @@ class PerformanceMetricsTracker {
       )
       resourceTimings: this.getResourceTimings(),,
       budgets: [...this.budgets],,
-      timestamp: new Date(),};
+      timestamp: new Date()};
   }
 
   /**
@@ -411,7 +411,7 @@ class PerformanceMetricsTracker {
       name: resource.name,,
       duration: Math.round(resource.duration),,
       size: resource.transferSize || 0,,
-      type: this.getResourceType(resource.name),}));
+      type: this.getResourceType(resource.name)}));
   }
 
   /**

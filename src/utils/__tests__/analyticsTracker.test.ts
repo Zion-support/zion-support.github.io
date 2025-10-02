@@ -156,7 +156,7 @@ const pageViewEvent = events.find((e: any) => e.category === 'page_view');
     it('should track page view with path', () => {';
       Object.defineProperty(document, 'title', {';
         value: 'Test Page',';
-        writable: true,});
+        writable: true});
 
       trackPageView('/test-path', 'Test Page');';
 

@@ -590,7 +590,7 @@ export const BLOG_POSTS: BlogPost[] = [,
     tags: ['Agents', 'Governance', 'Guardrails', 'Rollback'],';
     author: 'Zion Tech Team',';
     publishedAt: '2025-10-03',';
-    readTime: 8,},
+    readTime: 8},
   {
     id: '98',';
     title: 'Enterprise RAG Blueprint v3: 45% Quality ↑, 62% Cost ↓',';
@@ -602,7 +602,7 @@ export const BLOG_POSTS: BlogPost[] = [,
     tags: ['RAG', 'Retrieval', 'Caching', 'Quality', 'Cost'],';
     author: 'Zion Tech Group Knowledge Systems',';
     publishedAt: '2025-10-03',';
-    readTime: 9,},
+    readTime: 9},
   {
     id: '97',';
     title: 'Cloud Cost Optimization v6: Quality Tiers, Coalesce, Distill',';
@@ -614,7 +614,7 @@ export const BLOG_POSTS: BlogPost[] = [,
     tags: ['FinOps', 'LLM', 'Caching', 'Optimization'],';
     author: 'Zion Tech Team',';
     publishedAt: '2025-10-03',';
-    readTime: 9,},
+    readTime: 9},
   {
     id: '1',';
     title: 'Welcome to Our Blog',';
@@ -626,7 +626,7 @@ export const BLOG_POSTS: BlogPost[] = [,
     tags: ['welcome', 'introduction', 'technology'],';
     author: 'Zion Tech Team',';
     publishedAt: '2024-01-01',';
-    readTime: 5,},
+    readTime: 5},
   {
     id: '31',';
     title: 'AI Platform Reliability Scorecards 2027: SLIs That Drive Outcomes',';
@@ -638,7 +638,7 @@ export const BLOG_POSTS: BlogPost[] = [,
     tags: ['Scorecards', 'SLIs', 'Budgets', 'Rollback'],';
     author: 'Zion Tech Team',';
     publishedAt: '2025-10-03',';
-    readTime: 8,},
+    readTime: 8},
   {
     id: '32',';
     title: 'Edge Experiments v4 (2026): Zero‑PII A/B Under 100ms',';
@@ -650,7 +650,7 @@ export const BLOG_POSTS: BlogPost[] = [,
     tags: ['Edge', 'A/B', 'Privacy', 'DP'],';
     author: 'Zion Tech Team',';
     publishedAt: '2025-10-03',';
-    readTime: 7,},
+    readTime: 7},
   {
     id: '33',';
     title: 'GenAI Cost Controllers v4 (2027): Quality Tiers + Caches at Scale',';
@@ -662,7 +662,7 @@ export const BLOG_POSTS: BlogPost[] = [,
     tags: ['Cost', 'Quality Tiers', 'Caching', 'Evals'],';
     author: 'Zion Tech Team',';
     publishedAt: '2025-10-03',';
-    readTime: 9,},
+    readTime: 9},
   {
     id: '23',';
     title: 'Autonomous Cost Control: Real-Time FinOps with AI Guardrails',';
@@ -674,7 +674,7 @@ export const BLOG_POSTS: BlogPost[] = [,
     tags: ['FinOps', 'LLM', 'Cost Optimization', 'Automation'],';
     author: 'Zion Tech Team',';
     publishedAt: '2025-10-02',';
-    readTime: 7,},
+    readTime: 7},
   {
     id: '24',';
     title: 'Enterprise Agent Reliability: Safe Autonomy in Production',';
@@ -686,7 +686,7 @@ export const BLOG_POSTS: BlogPost[] = [,
     tags: ['Agents', 'Reliability', 'Production', 'Evals'],';
     author: 'Zion Tech Team',';
     publishedAt: '2025-10-02',';
-    readTime: 8,},
+    readTime: 8},
   {
     id: '11',';
     title: 'GenAI in Production: SLAs, Costs, and Control in 2025',';
@@ -698,7 +698,7 @@ export const BLOG_POSTS: BlogPost[] = [,
     tags: ['GenAI', 'SLOs', 'Cost Management'],';
     author: 'Zion Tech Team',';
     publishedAt: '2025-09-11',';
-    readTime: 6,},
+    readTime: 6},
   {
     id: '12',';
     title: 'Edge + AI: Personalization Without the Privacy Tradeoff',';
@@ -710,7 +710,7 @@ export const BLOG_POSTS: BlogPost[] = [,
     tags: ['Edge', 'Privacy', 'Personalization'],';
     author: 'Zion Tech Team',';
     publishedAt: '2025-09-11',';
-    readTime: 5,},
+    readTime: 5},
   {
     id: '13',';
     title: 'Shipping Safer: Incident-Ready CI/CD for High-Velocity Teams',';
@@ -722,7 +722,7 @@ export const BLOG_POSTS: BlogPost[] = [,
     tags: ['DevOps', 'Reliability', 'CI/CD'],';
     author: 'Zion Tech Team',';
     publishedAt: '2025-09-11',';
-    readTime: 6,},
+    readTime: 6},
   {
     id: '2',';
     title: 'AI RFP Response Copilot: Win More, Write Less',';
@@ -734,7 +734,7 @@ export const BLOG_POSTS: BlogPost[] = [,
     tags: ['AI', 'Sales', 'RFP', 'Copilot'],';
     author: 'Zion Tech Team',';
     publishedAt: '2025-09-10',';
-    readTime: 7,},
+    readTime: 7},
   {
     id: '3',';
     title: 'SEO Change Monitor: Catch Drops Before Rankings Slip',';
@@ -746,7 +746,7 @@ export const BLOG_POSTS: BlogPost[] = [,
     tags: ['SEO', 'Monitoring', 'Growth'],';
     author: 'Zion Tech Team',';
     publishedAt: '2025-09-10',';
-    readTime: 6,},
+    readTime: 6},
   {
     id: '4',';
     title: 'LLM Guardrails: Production Patterns That Actually Work',';
@@ -758,7 +758,7 @@ export const BLOG_POSTS: BlogPost[] = [,
     tags: ['LLM', 'Safety', 'Production'],';
     author: 'Zion Tech Team',';
     publishedAt: '2025-09-11',';
-    readTime: 8,},
+    readTime: 8},
   {
     id: '5',';
     title: 'Cloud Cost Autopilot: 30% Savings Without Slowing Down',';
@@ -770,7 +770,7 @@ export const BLOG_POSTS: BlogPost[] = [,
     tags: ['FinOps', 'Automation', 'DevOps'],';
     author: 'Zion Tech Team',';
     publishedAt: '2025-09-11',';
-    readTime: 6,},
+    readTime: 6},
   {
     id: '6',';
     title: 'Proactive Security: Attack Paths, Not Just Vulnerabilities',';
@@ -782,7 +782,7 @@ export const BLOG_POSTS: BlogPost[] = [,
     tags: ['Security', 'Attack Graphs', 'Defense'],';
     author: 'Zion Tech Team',';
     publishedAt: '2025-09-11',';
-    readTime: 7,},
+    readTime: 7},
   {
     id: '7',';
     title: 'RAG Done Right: From Toy Demos to Reliable Systems',';
@@ -794,7 +794,7 @@ export const BLOG_POSTS: BlogPost[] = [,
     tags: ['RAG', 'LLM', 'Search'],';
     author: 'Zion Tech Team',';
     publishedAt: '2025-09-11',';
-    readTime: 7,},
+    readTime: 7},
   {
     id: '8',';
     title: 'From Dashboards to Decisions: Actionable Observability',';
@@ -806,7 +806,7 @@ export const BLOG_POSTS: BlogPost[] = [,
     tags: ['SRE', 'SLO', 'Automation'],';
     author: 'Zion Tech Team',';
     publishedAt: '2025-09-11',';
-    readTime: 6,},
+    readTime: 6},
   {
     id: '9',';
     title: 'Designing AI Products Users Actually Trust',';
@@ -818,7 +818,7 @@ export const BLOG_POSTS: BlogPost[] = [,
     tags: ['UX', 'AI', 'Product'],';
     author: 'Zion Tech Team',';
     publishedAt: '2025-09-11',';
-    readTime: 5,},
+    readTime: 5},
   {
     id: '10',';
     title: 'Serverless at Scale: Cost, Cold Starts, and Control',';
@@ -830,7 +830,7 @@ export const BLOG_POSTS: BlogPost[] = [,
     tags: ['Serverless', 'Architecture', 'Performance'],';
     author: 'Zion Tech Team',';
     publishedAt: '2025-09-11',';
-    readTime: 7,},
+    readTime: 7},
   {
     id: '14',';
     title: 'Multi-Agent AI Systems: The Future of Enterprise Automation',';
@@ -842,7 +842,7 @@ export const BLOG_POSTS: BlogPost[] = [,
     tags: ['Multi-Agent', 'Automation', 'Enterprise AI', 'Orchestration'],';
     author: 'Zion Tech Team',';
     publishedAt: '2025-10-01',';
-    readTime: 9,},
+    readTime: 9},
   {
     id: '15',';
     title: 'Zero-Trust Architecture 2.0: Beyond Perimeter Security',';
@@ -854,7 +854,7 @@ export const BLOG_POSTS: BlogPost[] = [,
     tags: ['Zero-Trust', 'Cybersecurity', 'Identity', 'Cloud Security'],';
     author: 'Zion Tech Team',';
     publishedAt: '2025-10-01',';
-    readTime: 8,},
+    readTime: 8},
   {
     id: '16',';
     title: 'Quantum-Safe Cryptography: Preparing for the Post-Quantum Era',';
@@ -866,7 +866,7 @@ export const BLOG_POSTS: BlogPost[] = [,
     tags: ['Quantum', 'Cryptography', 'Security', 'NIST'],';
     author: 'Zion Tech Team',';
     publishedAt: '2025-10-01',';
-    readTime: 10,},
+    readTime: 10},
   {
     id: '17',';
     title: 'Real-Time AI Training: From Batch to Streaming Learning',';
@@ -878,7 +878,7 @@ export const BLOG_POSTS: BlogPost[] = [,
     tags: ['Machine Learning', 'Real-Time', 'Streaming', 'MLOps'],';
     author: 'Zion Tech Team',';
     publishedAt: '2025-10-01',';
-    readTime: 8,},
+    readTime: 8},
   {
     id: '18',';
     title: 'Sustainable AI: Reducing the Carbon Footprint of ML Operations',';
@@ -890,7 +890,7 @@ export const BLOG_POSTS: BlogPost[] = [,
     tags: ['Sustainability', 'Green AI', 'Carbon', 'Efficiency'],';
     author: 'Zion Tech Team',';
     publishedAt: '2025-10-01',';
-    readTime: 7,},
+    readTime: 7},
   {
     id: '19',';
     title: 'Kubernetes Service Mesh: Istio vs Linkerd Performance Analysis',';
@@ -902,7 +902,7 @@ export const BLOG_POSTS: BlogPost[] = [,
     tags: ['Kubernetes', 'Service Mesh', 'Istio', 'Linkerd'],';
     author: 'Zion Tech Team',';
     publishedAt: '2025-10-01',';
-    readTime: 11,},
+    readTime: 11},
   {
     id: '20',';
     title: 'Agentic Workflows: AI That Takes Action, Not Just Suggestions',';
@@ -914,7 +914,7 @@ export const BLOG_POSTS: BlogPost[] = [,
     tags: ['Agents', 'Automation', 'LLM', 'Workflows'],';
     author: 'Zion Tech Team',';
     publishedAt: '2025-10-01',';
-    readTime: 9,},
+    readTime: 9},
   {
     id: '21',';
     title: 'AI Procurement Copilots: Faster RFPs, Higher Win Rates',';
@@ -926,7 +926,7 @@ export const BLOG_POSTS: BlogPost[] = [,
     tags: ['RFP', 'Sales', 'Copilot', 'GenAI'],';
     author: 'Zion Tech Team',';
     publishedAt: '2025-10-02',';
-    readTime: 7,},
+    readTime: 7},
   {
     id: '22',';
     title: 'Edge Feature Stores: Personalization With Zero PII',';
@@ -938,7 +938,7 @@ export const BLOG_POSTS: BlogPost[] = [,
     tags: ['Edge', 'Feature Stores', 'Privacy'],';
     author: 'Zion Tech Team',';
     publishedAt: '2025-10-02',';
-    readTime: 6,},
+    readTime: 6},
   {
     id: '25',';
     title: 'Autonomous FinOps Playbook: Real-Time Guardrails That Cut Spend 40%',';
@@ -950,7 +950,7 @@ export const BLOG_POSTS: BlogPost[] = [,
     tags: ['FinOps', 'Guardrails', 'LLM', 'Cost Optimization'],';
     author: 'Zion Tech Team',';
     publishedAt: '2025-10-01',';
-    readTime: 8,},
+    readTime: 8},
   {
     id: '26',';
     title: 'Production Agents: Evals, Rollbacks, and Approval Gates That Scale',';
@@ -962,7 +962,7 @@ export const BLOG_POSTS: BlogPost[] = [,
     tags: ['Agents', 'Reliability', 'Safety', 'Evals'],';
     author: 'Zion Tech Team',';
     publishedAt: '2025-10-01',';
-    readTime: 9,},
+    readTime: 9},
   {
     id: '27',';
     title: 'Policy-Driven AI: Guardrails as Code for Safer Autonomy',';
@@ -974,7 +974,7 @@ export const BLOG_POSTS: BlogPost[] = [,
     tags: ['Guardrails', 'Safety', 'Policy as Code'],';
     author: 'Zion Tech Team',';
     publishedAt: '2025-10-02',';
-    readTime: 7,},
+    readTime: 7},
   {
     id: '28',';
     title: 'Platform Observability 2025: From Signals to Automated Actions',';
@@ -986,7 +986,7 @@ export const BLOG_POSTS: BlogPost[] = [,
     tags: ['SRE', 'Automation', 'SLO'],';
     author: 'Zion Tech Team',';
     publishedAt: '2025-10-02',';
-    readTime: 6,},
+    readTime: 6},
   {
     id: '29',';
     title: 'Cloud Cost Playbooks 2025: LLM + Infra Savings Without Slowdowns',';
@@ -998,7 +998,7 @@ export const BLOG_POSTS: BlogPost[] = [,
     tags: ['FinOps', 'LLM', 'Optimization'],';
     author: 'Zion Tech Team',';
     publishedAt: '2025-10-02',';
-    readTime: 7,},
+    readTime: 7},
   {
     id: '30',';
     title: 'Quantum-Safe Cryptography: Enterprise Migration Playbook (2025)',';
@@ -1010,7 +1010,7 @@ export const BLOG_POSTS: BlogPost[] = [,
     tags: ['Post-Quantum', 'Cryptography', 'NIST', 'Migration'],';
     author: 'Zion Tech Team',';
     publishedAt: '2025-10-03',';
-    readTime: 9,},
+    readTime: 9},
   {
     id: '31',';
     title: 'Neuromorphic Edge AI: Event-Driven Intelligence Under 10ms',';
@@ -1022,7 +1022,7 @@ export const BLOG_POSTS: BlogPost[] = [,
     tags: ['Neuromorphic', 'Edge AI', 'SNN', 'Efficiency'],';
     author: 'Zion Tech Team',';
     publishedAt: '2025-10-03',';
-    readTime: 8,},
+    readTime: 8},
   {
     id: '32',';
     title: 'Synthetic Data in Production: Privacy-Safe Accuracy Gains',';
@@ -1034,6 +1034,6 @@ export const BLOG_POSTS: BlogPost[] = [,
     tags: ['Synthetic Data', 'Privacy', 'Quality', 'MLOps'],';
     author: 'Zion Tech Team',';
     publishedAt: '2025-10-03',';
-    readTime: 10,},
+    readTime: 10},
 ];
 ;

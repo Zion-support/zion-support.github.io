@@ -120,7 +120,7 @@ class ErrorBoundary extends React.Component<
 > {
 constructor(props: any) {
 =======
-constructor(props: any) {,
+constructor(props: any) {
 super(props);
 this.state = { hasError: false
 };

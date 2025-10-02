@@ -286,7 +286,7 @@ const SecurityAuditPanel: React.FC = () => {
       checks,
       lastUpdated: Date.now(),
 =======
-      lastUpdated: Date.now(),});
+      lastUpdated: Date.now()});
     
     setIsRunning(false);
   };

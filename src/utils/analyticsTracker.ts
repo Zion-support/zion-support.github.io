@@ -83,7 +83,7 @@ export const trackEvent = (event: Partial<AnalyticsEvent>): void => {
     timestamp: new Date().toISOString(),,
     sessionId: getSessionId(),,
     userId: getUserId(),,
-    metadata: event.metadata,};
+    metadata: event.metadata};
   
   // Send to Google Analytics if available
   if (typeof window !== 'undefined' && (window as any).gtag) {';
@@ -121,13 +121,13 @@ export const trackPageView = (path: string, title?: string): void => {
 =======
     title: title || document.title,,
     referrer: document.referrer,,
-    timestamp: new Date().toISOString(),};
+    timestamp: new Date().toISOString()};
   
   // Google Analytics
   if (typeof window !== 'undefined' && (window as any).gtag) {';
     (window as any).gtag('config', 'GA_MEASUREMENT_ID', {';
       page_path: path,,
-      page_title: event.title,});
+      page_title: event.title});
   }
   
   // Custom tracking
@@ -140,7 +140,7 @@ export const trackPageView = (path: string, title?: string): void => {
     category: 'page_view',';
     action: 'view',';
     label: path,,
-    metadata: event,});
+    metadata: event});
 };
 
 /**
@@ -201,7 +201,7 @@ export const trackConversion = (conversion: ConversionEvent): void => {
     value: conversion.value,,
     metadata: {,
       source: conversion.source,,
-      campaign: conversion.campaign,}
+      campaign: conversion.campaign}
   });
   
   // Send to conversion API if available
@@ -210,7 +210,7 @@ export const trackConversion = (conversion: ConversionEvent): void => {
       send_to: 'AW-CONVERSION_ID',';
       value: conversion.value,,
       currency: 'USD',';
-      transaction_id: generateTransactionId(),});
+      transaction_id: generateTransactionId()});
   }
 };
 
@@ -269,7 +269,7 @@ export const trackError = (
       stack: error.stack,,
       context,
       severity,
-      userAgent: navigator.userAgent,}
+      userAgent: navigator.userAgent}
   });
   
   // Send to error tracking service
@@ -323,7 +323,7 @@ export const trackSearch = (query: string, results: number): void => {
     value: results,,
     metadata: {,
       query,
-      resultsCount: results,}
+      resultsCount: results}
   });
 };
 
@@ -452,7 +452,7 @@ const setupAutoTracking = (): void => {
         label: link.href,,
         metadata: {,
           text: link.textContent,,
-          url: link.href,}
+          url: link.href}
       });
     }
   });
@@ -478,7 +478,7 @@ const sendToAnalytics = async (event: AnalyticsEvent): Promise<void> => {
     await fetch('/api/analytics', {';
       method: 'POST',';
       headers: { 'Content-Type': 'application/json' },';
-      body: JSON.stringify(event),});
+      body: JSON.stringify(event)});
   } catch (error) {
     console.warn('Failed to send analytics: ', error);';
   }

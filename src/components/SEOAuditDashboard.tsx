@@ -166,7 +166,7 @@ const SEOAuditDashboard: React.FC = () => {
       impact: 'medium',';
       category: 'content',';
       fix: 'Optimize title length for better search engine visibility',';
-      score: 75,},
+      score: 75},
     {
       id: 'meta-description',';
       type: 'warning',';
@@ -175,7 +175,7 @@ const SEOAuditDashboard: React.FC = () => {
       impact: 'medium',';
       category: 'content',';
       fix: 'Write compelling meta descriptions that encourage clicks',';
-      score: 80,},
+      score: 80},
     {
       id: 'heading-structure',';
       type: 'info',';
@@ -184,7 +184,7 @@ const SEOAuditDashboard: React.FC = () => {
       impact: 'medium',';
       category: 'content',';
       fix: 'Use only one H1 tag and maintain logical heading order',';
-      score: 85,},
+      score: 85},
     {
       id: 'image-alt-text',';
       type: 'warning',';
@@ -193,7 +193,7 @@ const SEOAuditDashboard: React.FC = () => {
       impact: 'high',';
       category: 'accessibility',';
       fix: 'Add descriptive alt text to all images',';
-      score: 60,},
+      score: 60},
     {
       id: 'mobile-friendly',';
       type: 'info',';
@@ -202,7 +202,7 @@ const SEOAuditDashboard: React.FC = () => {
       impact: 'high',';
       category: 'mobile',';
       fix: 'Ensure all content is accessible on mobile devices',';
-      score: 90,},
+      score: 90},
     {
       id: 'page-speed',';
       type: 'warning',';
@@ -211,7 +211,7 @@ const SEOAuditDashboard: React.FC = () => {
       impact: 'high',';
       category: 'performance',';
       fix: 'Optimize images, minimize CSS/JS, and use CDN',';
-      score: 70,},
+      score: 70},
     {
       id: 'internal-linking',';
       type: 'info',';
@@ -220,7 +220,7 @@ const SEOAuditDashboard: React.FC = () => {
       impact: 'medium',';
       category: 'technical',';
       fix: 'Create a logical internal linking structure',';
-      score: 65,},
+      score: 65},
     {
       id: 'schema-markup',';
       type: 'info',';
@@ -229,7 +229,7 @@ const SEOAuditDashboard: React.FC = () => {
       impact: 'medium',';
       category: 'technical',';
       fix: 'Add JSON-LD schema markup for better search results',';
-      score: 50,},
+      score: 50},
     {
       id: 'ssl-certificate',';
       type: 'info',';
@@ -238,7 +238,7 @@ const SEOAuditDashboard: React.FC = () => {
       impact: 'high',';
       category: 'technical',';
       fix: 'Maintain valid SSL certificate and redirect HTTP to HTTPS',';
-      score: 95,},
+      score: 95},
     {
       id: 'broken-links',';
       type: 'error',';
@@ -247,7 +247,7 @@ const SEOAuditDashboard: React.FC = () => {
       impact: 'medium',';
       category: 'technical',';
       fix: 'Fix or remove broken links to improve user experience',';
-      score: 40,},
+      score: 40},
   ];
 
   const runSEOAudit = async () => {
@@ -318,8 +318,8 @@ const SEOAuditDashboard: React.FC = () => {
         images: { total: 24, withAlt: 18, withoutAlt: 6 },
         links: { total: 45, internal: 32, external: 13 },
         wordCount: 2847,,
-        readabilityScore: 72,},
-      lastUpdated: Date.now(),});
+        readabilityScore: 72},
+      lastUpdated: Date.now()});
     
     setIsRunning(false);
   };

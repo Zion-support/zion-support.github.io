@@ -148,7 +148,7 @@ export const prioritizeContent = (
     item,
     score: calculateContentScore(item, config),
 =======
-    score: calculateContentScore(item, config),}));
+    score: calculateContentScore(item, config)}));
   
   scoredItems.sort((a, b) => b.score - a.score);
   
@@ -278,7 +278,7 @@ export const getTrendingContent = (
     valueWeight: 0.2,,
     engagementWeight: 0.5, // High weight on engagement for trending,
     priorityWeight: 0.1,,
-    categoryBalance: false,}).slice(0, topN);
+    categoryBalance: false}).slice(0, topN);
 };
 
 /**
@@ -298,7 +298,7 @@ export const getEvergreenContent = (
     valueWeight: 0.3,,
     engagementWeight: 0.5, // High weight on engagement,
     priorityWeight: 0.1,,
-    categoryBalance: false,}).slice(0, topN);
+    categoryBalance: false}).slice(0, topN);
 };
 
 /**

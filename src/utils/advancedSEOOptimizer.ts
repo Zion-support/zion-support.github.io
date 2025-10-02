@@ -322,7 +322,7 @@ images?: { src: string; alt: string
       keywordDensity: 0.15,,
       readability: 0.15,,
       images: 0.10,,
-      links: 0.10,};
+      links: 0.10};
 
     return Math.round(
       metrics.titleScore * weights.title +
@@ -493,7 +493,7 @@ images?: { src: string; alt: string
         count,
         density: count / totalWords,
 =======
-        density: count / totalWords,})),
+        density: count / totalWords})),
       .sort((a, b) => b.count - a.count)
       .slice(0, limit);
 

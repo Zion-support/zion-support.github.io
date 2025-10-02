@@ -41,7 +41,7 @@ constructor(config: SitemapConfig) {
 =======
 private config: SitemapConfig;
 private urls: SitemapURL[] = [];
-constructor(config: SitemapConfig) {,
+constructor(config: SitemapConfig) {
 this.config = config;
 }
 
@@ -61,7 +61,7 @@ this.config = config;
           loc: `${this.config.baseUrl}${route.path}`,`;
           lastmod: new Date().toISOString(),,
           changefreq: route.changefreq || 'weekly',';
-          priority: route.priority || 0.5,});
+          priority: route.priority || 0.5});
       }
     });
   }
@@ -75,12 +75,12 @@ loc: `${this.config.baseUrl
         changefreq: 'monthly',
         priority: 0.8,
 =======
-const url: SitemapURL = {,
+const url: SitemapURL = {
 loc: `${this.config.baseUrl`;
 }/blog/${post.slug}`,`;
         lastmod: post.date,,
         changefreq: 'monthly',';
-        priority: 0.8,};
+        priority: 0.8};
 
       if (post.images && post.images.length > 0) {
         url.images = post.images.map(img => ({
@@ -105,7 +105,7 @@ loc: `${this.config.baseUrl`;
         loc: `${this.config.baseUrl}/case-studies/${study.slug}`,`;
         lastmod: study.date,,
         changefreq: 'monthly',';
-        priority: 0.7,});
+        priority: 0.7});
     });
   }
 
@@ -120,7 +120,7 @@ loc: `${this.config.baseUrl`;
         loc: `${this.config.baseUrl}/services/${service.slug}`,`;
         lastmod: new Date().toISOString(),,
         changefreq: 'monthly',';
-        priority: 0.9,});
+        priority: 0.9});
     });
   }
 

@@ -23,7 +23,7 @@ export default function PostBySlug(): React.JSX.Element {
         category: fromLatest.category,,
         publishedAt: fromLatest.date,,
         readTime: fromLatest.readTime,,
-        author: fromLatest.author,};
+        author: fromLatest.author};
     }
     const fromBlogPosts = blogPosts.find((p) => p.slug === slug);
     if (fromBlogPosts) {
@@ -42,7 +42,7 @@ export default function PostBySlug(): React.JSX.Element {
         category: fromBlogPosts.category,,
         publishedAt: fromBlogPosts.date,,
         readTime: fromBlogPosts.readTime,,
-        author: fromBlogPosts.author,};
+        author: fromBlogPosts.author};
     }
     const fromPosts = staticPosts.find((p) => p.slug === slug);
     if (fromPosts) {

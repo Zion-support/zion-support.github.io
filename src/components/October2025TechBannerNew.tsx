@@ -215,11 +215,11 @@ const October2025TechBannerNew = () => {
             }}
             animate={{
               y: [0, -30, 0],,
-              opacity: [0.2, 0.5, 0.2],}},
+              opacity: [0.2, 0.5, 0.2]}},
             transition={{
               duration: 3 + Math.random() * 2,,
               repeat: Infinity,,
-              delay: Math.random() * 2,}},
+              delay: Math.random() * 2}},
           />
         ))}
       </div>
