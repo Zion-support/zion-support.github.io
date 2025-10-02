@@ -1,5 +1,8 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
+<<<<<<< HEAD
+// Icon imports removed for compatibility
+=======
 import { 
   Cloud,
   Shield,
@@ -28,6 +31,7 @@ import {
   Users,
   Building
 } from "lucide-react";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-73c1
 
 export default function ITServices(): React.JSX.Element {
   const itServices = [

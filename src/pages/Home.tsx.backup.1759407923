@@ -40,8 +40,12 @@ const Home = () => {
       featured: true
     }
   ];
+<<<<<<< HEAD
+  const highlightedPosts = [
+=======
 
   const featuredArticles = [
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-73c1
     {
       slug: 'ai-revolution-2026',
       title: 'AI Revolution 2026: The Next Frontier of Enterprise Intelligence',

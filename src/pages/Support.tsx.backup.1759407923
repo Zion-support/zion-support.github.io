@@ -6,7 +6,12 @@ import { Helmet } from 'react-helmet-async';
 const Support: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
+<<<<<<< HEAD
+
+  const contactMethods = [
+=======
   const supportChannels = [
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-73c1
     {
       icon: Phone,
       title: 'Phone Support',
@@ -105,7 +110,11 @@ const Support: React.FC = () => {
     return matchesCategory && matchesQuery;
   });
 
+<<<<<<< HEAD
+  const quickActions = [
+=======
   const quickLinks = [
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-73c1
     { title: 'Report a Bug', description: 'Found an issue? Let us know', link: '/contact', icon: '🐛' },
     { title: 'Request a Feature', description: "Have an idea? We'd love to hear it", link: '/contact', icon: '💡' },
     { title: 'Schedule Training', description: 'Book a training session for your team', link: '/training', icon: '🎓' },
