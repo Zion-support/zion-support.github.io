@@ -5,6 +5,8 @@ import SEO from './components/SEO';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import Header from './components/Header';
 import Footer from './components/Footer';
+<<<<<<< HEAD
+=======
 import BannerManager from './components/BannerManager';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import SEOHead from './components/EnhancedSEOHead';
@@ -12,6 +14,7 @@ import PerformanceOptimizer from './components/PerformanceOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import NotificationSystem from './components/NotificationSystem';
 import PerformanceMonitor from './components/PerformanceMonitor';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2478
 
 // Lazy loaded components for better performance
 const HomePage = React.lazy(() => import('./pages/HomePage'));
@@ -72,7 +75,11 @@ class ErrorBoundary extends React.Component<
 const App: React.FC = () => {
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
+<<<<<<< HEAD
+  const [notifications, setNotifications] = useState<Array<{id: string; message: string; type: 'success' | 'error' | 'info'}>>([]);
+=======
   const [notifications, setNotifications] = useState([]);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2478
 
   const handleRemoveNotification = (id: string) => {
     setNotifications(prev => prev.filter(notification => notification.id !== id));
@@ -148,6 +155,9 @@ const App: React.FC = () => {
             <Footer />
           </EnhancedErrorBoundary>
         </div>
+<<<<<<< HEAD
+      </Router>
+=======
 
         {showPerformanceOptimizer && (
           <div className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center" role="dialog" aria-modal="true">
@@ -176,6 +186,7 @@ const App: React.FC = () => {
         <NotificationSystem notifications={notifications} onRemove={handleRemoveNotification} />
         </Router>
       </AccessibilityEnhancer>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2478
     </HelmetProvider>
   );
 };
