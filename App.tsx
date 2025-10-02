@@ -29,6 +29,7 @@ import Revolutionary2026ContentMegaBreakthroughBanner from "./components/Revolut
 import January2026RevolutionaryContentBanner from "./components/January2026RevolutionaryContentBanner";
 import NewContent2026AdvertisingMegaBanner from "./components/NewContent2026AdvertisingMegaBanner";
 import AI2026ConsultingAdvertisingBanner from "./components/AI2026ConsultingAdvertisingBanner";
+import AutonomousEnterpriseMeshAdvertisingBanner from "./components/AutonomousEnterpriseMeshAdvertisingBanner";
 import InteractiveContentShowcase2026 from "./components/InteractiveContentShowcase2026";
 import February2026ContentMegaBanner from "./components/February2026ContentMegaBanner";
 import NewContent2026BreakthroughShowcaseBanner from "./components/NewContent2026BreakthroughShowcaseBanner";
@@ -749,6 +750,9 @@ export default function App(): JSX.Element {
       {/* 🧠🧠🧠 BRAND NEW: COGNITIVE HYPERAUTOMATION PLATFORM - REVOLUTIONARY ENTERPRISE INTELLIGENCE - JUST PUBLISHED! 🧠🧠🧠 */}
       {/* 💎💎💎 $38.5B Total Value • 15,200% ROI • 98.9% Automation Rate • 25,000+ AI Agents • Fortune 50 Validated ($14.7B Success) 💎💎💎 */}
       <October2025CognitiveHyperautomationBanner />
+      
+      {/* NEW: Autonomous Enterprise Mesh Revolution Banner - Most Prominent */}
+      <AutonomousEnterpriseMeshAdvertisingBanner />
       
       {/* NEW: AI 2026 Consulting Services Banner - Most Prominent */}
       <AI2026ConsultingAdvertisingBanner />
