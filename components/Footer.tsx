@@ -6,6 +6,7 @@ const Footer: React.FC = () => {
 
   const footerLinks = {
     services: [
+      { name: 'All Services', href: '/services' },
       { name: 'AI Services', href: '/ai-services' },
       { name: 'Micro SaaS', href: '/services/micro-saas' },
       { name: 'IT Services', href: '/services/it-services-comprehensive' },
@@ -16,6 +17,11 @@ const Footer: React.FC = () => {
       { name: 'Data Analytics', href: '/services/data-analytics-business-intelligence' },
       { name: 'Additional Services', href: '/additional-services' },
       { name: 'Comprehensive Services', href: '/comprehensive-services' },
+      { name: 'AI Content Tools', href: '/services/ai-powered-content-tools' },
+      { name: 'Telemedicine Platform', href: '/services/telemedicine-platform' },
+      { name: 'Remote Collaboration', href: '/services/remote-collaboration-suite' },
+      { name: 'API Integration', href: '/services/api-integration-platform' },
+      { name: 'Customer Insights', href: '/services/ai-customer-insights-platform' },
     ],
     solutions: [
       { name: 'All Solutions', href: '/solutions' },
