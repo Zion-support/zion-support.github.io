@@ -1,44 +1,44 @@
-import React from 'react';';
-import { Link } from 'react-router-dom';';
-import { Helmet } from 'react-helmet-async';';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
-const EnterpriseSolutionsPage: React.FC = () => {,
+const EnterpriseSolutionsPage: React.FC = () => {
   const enterpriseSolutions = [
     {
-      title: "Enterprise AI Platform",";,
-      description: "Comprehensive AI platform designed for large-scale enterprise deployment with advanced analytics and automation capabilities.",";,
-      icon: "🏢",";,
-      features: ["Scalable AI Infrastructure", "Enterprise Security", "Multi-tenant Architecture", "Advanced Analytics"]";,
+      title: "Enterprise AI Platform",
+      description: "Comprehensive AI platform designed for large-scale enterprise deployment with advanced analytics and automation capabilities.",
+      icon: "🏢",
+      features: ["Scalable AI Infrastructure", "Enterprise Security", "Multi-tenant Architecture", "Advanced Analytics"],
     },
     {
-      title: "Digital Transformation",";,
-      description: "Complete digital transformation solutions that modernize legacy systems and enable new digital capabilities.",";,
-      icon: "🔄",";,
-      features: ["Legacy Modernization", "Cloud Migration", "Process Automation", "Change Management"]";,
+      title: "Digital Transformation",
+      description: "Complete digital transformation solutions that modernize legacy systems and enable new digital capabilities.",
+      icon: "🔄",
+      features: ["Legacy Modernization", "Cloud Migration", "Process Automation", "Change Management"],
     },
     {
-      title: "Enterprise Security",";,
-      description: "Comprehensive security solutions including threat detection, compliance management, and data protection.",";,
-      icon: "🛡️",";,
-      features: ["Threat Detection", "Compliance Management", "Data Protection", "Security Monitoring"]";,
+      title: "Enterprise Security",
+      description: "Comprehensive security solutions including threat detection, compliance management, and data protection.",
+      icon: "🛡️",
+      features: ["Threat Detection", "Compliance Management", "Data Protection", "Security Monitoring"],
     },
     {
-      title: "Enterprise Analytics",";,
-      description: "Advanced analytics and business intelligence solutions for data-driven decision making across the organization.",";,
-      icon: "📊",";,
-      features: ["Business Intelligence", "Predictive Analytics", "Real-time Dashboards", "Data Governance"]";,
+      title: "Enterprise Analytics",
+      description: "Advanced analytics and business intelligence solutions for data-driven decision making across the organization.",
+      icon: "📊",
+      features: ["Business Intelligence", "Predictive Analytics", "Real-time Dashboards", "Data Governance"],
     },
     {
-      title: "Enterprise Integration",";,
-      description: "Seamless integration solutions that connect disparate systems and enable data flow across the enterprise.",";,
-      icon: "🔗",";,
-      features: ["System Integration", "API Management", "Data Synchronization", "Workflow Automation"]";,
+      title: "Enterprise Integration",
+      description: "Seamless integration solutions that connect disparate systems and enable data flow across the enterprise.",
+      icon: "🔗",
+      features: ["System Integration", "API Management", "Data Synchronization", "Workflow Automation"],
     },
     {
-      title: "Enterprise Support",";,
-      description: "24/7 enterprise-grade support and maintenance services to ensure optimal system performance.",";,
-      icon: "🛠️",";,
-      features: ["24/7 Support", "Proactive Monitoring", "Performance Optimization", "Disaster Recovery"]";,
+      title: "Enterprise Support",
+      description: "24/7 enterprise-grade support and maintenance services to ensure optimal system performance.",
+      icon: "🛠️",
+      features: ["24/7 Support", "Proactive Monitoring", "Performance Optimization", "Disaster Recovery"],
     }
   ];
 
@@ -53,7 +53,8 @@ const EnterpriseSolutionsPage: React.FC = () => {,
         {/* Header */}
         <section className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-16">
           <div className="container mx-auto px-6 text-center">
-            <h1 className="text-4xl md: text-5xl font-bold mb-4">Enterprise Solutions</$1><p className="text-xl text-blue-100 max-w-3xl mx-auto">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">Enterprise Solutions</h1>
+            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
               Comprehensive technology solutions designed for large organizations with complex infrastructure needs and enterprise-scale requirements.
             </p>
           </div>
@@ -62,8 +63,10 @@ const EnterpriseSolutionsPage: React.FC = () => {,
         {/* Solutions Grid */}
         <section className="py-20">
           <div className="container mx-auto px-6">
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">{enterpriseSolutions.map((solution, index) => (
-                <div key={index} className="bg-white p-8 rounded-xl shadow-sm hover: shadow-lg transition-shadow"><div className="text-4xl mb-4">{solution.icon}</div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {enterpriseSolutions.map((solution, index) => (
+                <div key={index} className="bg-white p-8 rounded-xl shadow-sm hover:shadow-lg transition-shadow">
+                  <div className="text-4xl mb-4">{solution.icon}</div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">{solution.title}</h3>
                   <p className="text-gray-600 mb-6">{solution.description}</p>
                   
@@ -78,7 +81,7 @@ const EnterpriseSolutionsPage: React.FC = () => {,
                   
                   <Link 
                     to="/contact" 
-                    className="text-blue-600 font-semibold hover: text-blue-800 transition-colors",
+                    className="text-blue-600 font-semibold hover:text-blue-800 transition-colors"
                   >
                     Learn More →
                   </Link>
@@ -216,17 +219,18 @@ const EnterpriseSolutionsPage: React.FC = () => {,
           <div className="container mx-auto px-6 text-center">
             <h2 className="text-4xl font-bold mb-4">Ready to Transform Your Enterprise?</h2>
             <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
-              Let's discuss how our enterprise solutions can drive your digital transformation and business growth.';
+              Let's discuss how our enterprise solutions can drive your digital transformation and business growth.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"><Link 
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
                 to="/contact" 
-                className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover: bg-gray-100 transition-colors",
+                className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 Schedule Consultation
               </Link>
               <Link 
                 to="/case-studies" 
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover: bg-white hover:text-blue-600 transition-colors",
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
               >
                 View Case Studies
               </Link>

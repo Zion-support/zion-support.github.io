@@ -51,19 +51,11 @@ const SMBSolutionsPage: React.FC = () => {
       
       <div className="min-h-screen bg-gray-50">
         {/* Header */}
-<<<<<<< HEAD
-        <section className="bg-gradient-to-r from-green-600 to-blue-600 text-white py-16">
-          <div className="container mx-auto px-6 text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">SMB Solutions</h1>
-            <p className="text-xl text-green-100 max-w-3xl mx-auto">
-              Cost-effective technology solutions designed specifically for small and medium businesses to compete and grow.
-=======
         <section className="bg-gradient-to-r from-green-600 to-emerald-600 text-white py-16">
           <div className="container mx-auto px-6 text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">SMB Solutions</h1>
             <p className="text-xl text-green-100 max-w-3xl mx-auto">
               Cost-effective technology solutions designed for small and medium businesses to drive growth and efficiency.
->>>>>>> cursor/fix-errors-and-merge-to-main-3ffa
             </p>
           </div>
         </section>
@@ -114,52 +106,30 @@ const SMBSolutionsPage: React.FC = () => {
                 <div className="text-4xl mb-4">💰</div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Cost-Effective</h3>
                 <p className="text-gray-600">
-<<<<<<< HEAD
-                  Affordable solutions that deliver enterprise-grade capabilities without the enterprise price tag.
-=======
                   Affordable solutions that provide maximum value without breaking your budget.
->>>>>>> cursor/fix-errors-and-merge-to-main-3ffa
                 </p>
               </div>
               
               <div className="text-center">
-<<<<<<< HEAD
-                <div className="text-4xl mb-4">⚡</div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Quick Implementation</h3>
-                <p className="text-gray-600">
-                  Fast deployment and setup to get your business running with minimal downtime.
-=======
                 <div className="text-4xl mb-4">🚀</div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Quick Implementation</h3>
                 <p className="text-gray-600">
                   Fast deployment and implementation to get you up and running quickly.
->>>>>>> cursor/fix-errors-and-merge-to-main-3ffa
                 </p>
               </div>
               
               <div className="text-center">
-<<<<<<< HEAD
-                <div className="text-4xl mb-4">🎯</div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">SMB-Focused</h3>
-                <p className="text-gray-600">
-                  Solutions designed specifically for small and medium business requirements and constraints.
-=======
                 <div className="text-4xl mb-4">📈</div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Scalable Growth</h3>
                 <p className="text-gray-600">
                   Solutions that grow with your business and adapt to changing needs.
->>>>>>> cursor/fix-errors-and-merge-to-main-3ffa
                 </p>
               </div>
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* SMB-Focused Features */}
-=======
         {/* SMB Features */}
->>>>>>> cursor/fix-errors-and-merge-to-main-3ffa
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
@@ -169,31 +139,6 @@ const SMBSolutionsPage: React.FC = () => {
               </p>
             </div>
             
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="bg-white p-6 rounded-xl shadow-sm text-center">
-                <div className="text-3xl mb-4">📱</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Mobile-First</h3>
-                <p className="text-gray-600">Access your business tools from anywhere with mobile-optimized solutions</p>
-              </div>
-              
-              <div className="bg-white p-6 rounded-xl shadow-sm text-center">
-                <div className="text-3xl mb-4">🔧</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Easy Setup</h3>
-                <p className="text-gray-600">Simple installation and configuration with minimal technical expertise required</p>
-              </div>
-              
-              <div className="bg-white p-6 rounded-xl shadow-sm text-center">
-                <div className="text-3xl mb-4">📈</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Scalable Growth</h3>
-                <p className="text-gray-600">Solutions that grow with your business from startup to enterprise</p>
-              </div>
-              
-              <div className="bg-white p-6 rounded-xl shadow-sm text-center">
-                <div className="text-3xl mb-4">🛡️</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Security Built-In</h3>
-                <p className="text-gray-600">Enterprise-grade security features included at no extra cost</p>
-=======
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-white p-8 rounded-xl shadow-sm">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Easy Setup & Management</h3>
@@ -235,17 +180,12 @@ const SMBSolutionsPage: React.FC = () => {
                     Priority response times
                   </li>
                 </ul>
->>>>>>> cursor/fix-errors-and-merge-to-main-3ffa
               </div>
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* SMB Success Stories */}
-=======
         {/* Success Stories */}
->>>>>>> cursor/fix-errors-and-merge-to-main-3ffa
         <section className="py-20 bg-white">
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
@@ -256,24 +196,6 @@ const SMBSolutionsPage: React.FC = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-<<<<<<< HEAD
-              <div className="bg-gradient-to-br from-green-50 to-blue-50 p-8 rounded-xl text-center">
-                <div className="text-4xl font-bold text-green-600 mb-2">40%</div>
-                <div className="text-lg font-semibold text-gray-900 mb-2">Cost Reduction</div>
-                <p className="text-gray-600">Average reduction in operational costs</p>
-              </div>
-              
-              <div className="bg-gradient-to-br from-blue-50 to-green-50 p-8 rounded-xl text-center">
-                <div className="text-4xl font-bold text-blue-600 mb-2">60%</div>
-                <div className="text-lg font-semibold text-gray-900 mb-2">Efficiency Gain</div>
-                <p className="text-gray-600">Average improvement in business process efficiency</p>
-              </div>
-              
-              <div className="bg-gradient-to-br from-purple-50 to-green-50 p-8 rounded-xl text-center">
-                <div className="text-4xl font-bold text-purple-600 mb-2">85%</div>
-                <div className="text-lg font-semibold text-gray-900 mb-2">Customer Satisfaction</div>
-                <p className="text-gray-600">Average improvement in customer satisfaction scores</p>
-=======
               <div className="text-center">
                 <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl">📈</span>
@@ -302,7 +224,6 @@ const SMBSolutionsPage: React.FC = () => {
                 <p className="text-gray-600 text-sm">
                   Service company achieved 95% uptime with our IT support and monitoring solutions.
                 </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-3ffa
               </div>
             </div>
           </div>
@@ -316,24 +237,14 @@ const SMBSolutionsPage: React.FC = () => {
               Let's discuss how our SMB solutions can help you compete with larger businesses and drive growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD
-              <Link 
-                to="/contact" 
-=======
               <Link
                 to="/contact"
->>>>>>> cursor/fix-errors-and-merge-to-main-3ffa
                 className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 Get Started Today
               </Link>
-<<<<<<< HEAD
-              <Link 
-                to="/pricing" 
-=======
               <Link
                 to="/pricing"
->>>>>>> cursor/fix-errors-and-merge-to-main-3ffa
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
               >
                 View Pricing
