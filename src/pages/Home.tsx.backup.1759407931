@@ -19,7 +19,11 @@ const Home = () => {
       category: 'AI Innovation',
       date: '2025-01-15',
       readMinutes: 25,
+<<<<<<< HEAD
+      featured: true
+=======
       featured: true,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
     },
     {
       id: '2',
@@ -28,7 +32,11 @@ const Home = () => {
       category: 'Quantum Computing',
       date: '2025-01-10',
       readMinutes: 20,
+<<<<<<< HEAD
+      featured: false
+=======
       featured: false,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
     },
     {
       id: '3',
@@ -37,8 +45,37 @@ const Home = () => {
       category: 'Success Story',
       date: '2025-01-05',
       readMinutes: 15,
+<<<<<<< HEAD
+      featured: true
+    }
+  ];
+
+  const featuredArticles = [
+    {
+      slug: 'ai-revolution-2026',
+      title: 'AI Revolution 2026: The Next Frontier of Enterprise Intelligence',
+      description: 'Discover autonomous AI agents, neural interfaces, and predictive intelligence systems achieving 300% productivity gains.',
+      category: 'AI Innovation',
+      publishedAt: '2025-01-15'
+    },
+    {
+      slug: 'quantum-ai-breakthrough',
+      title: 'Quantum AI Breakthrough: Solving Impossible Problems in Seconds',
+      description: 'Explore quantum-enhanced AI delivering 500x faster results and revolutionizing computational capabilities.',
+      category: 'Quantum Computing',
+      publishedAt: '2025-01-10'
+    },
+    {
+      slug: 'manufacturing-success',
+      title: 'Manufacturing AI Transformation: $50M Savings & 95% Efficiency',
+      description: 'See how a Fortune 500 manufacturer achieved $50M annual savings and 95% efficiency improvements.',
+      category: 'Success Story',
+      publishedAt: '2025-01-05'
+    }
+=======
       featured: true,
     },
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
   ];
   // Removed stray block that caused a syntax error
 
@@ -117,6 +154,47 @@ const Home = () => {
               "name": "AI and IT Solutions",
               "itemListElement": [
                 {
+<<<<<<< HEAD
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "AI Workflow Automation",
+                    "description": "Automate complex business processes with AI-powered workflows"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "AI Virtual Assistant",
+                    "description": "Intelligent virtual assistants for customer service and support"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "AI Data Analytics",
+                    "description": "Advanced data analytics and insights powered by AI"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Quantum Computing Consulting",
+                    "description": "Expert consulting on quantum computing solutions"
+                  }
+                }
+              ]
+            },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.8",
+              "reviewCount": "150",
+              "bestRating": "5",
+              "worstRating": "1"
+=======
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
@@ -147,6 +225,7 @@ const Home = () => {
                 "name": "Quantum Computing Consulting",
                 "description": "Expert consulting on quantum computing solutions"
               }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
             }
           ]
         },

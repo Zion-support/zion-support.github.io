@@ -1,6 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Brain, Zap, Shield, Cloud, Database, Users, BarChart3, Cog, Target, Rocket } from 'lucide-react';
+<<<<<<< HEAD
+import { Helmet } from 'react-helmet-async';
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
 
 const AISolutions: React.FC = () => {
   const aiSolutions = [
@@ -8,71 +12,111 @@ const AISolutions: React.FC = () => {
       icon: Brain,
       title: 'Machine Learning & Deep Learning',
       description: 'Advanced AI models for predictive analytics, pattern recognition, and intelligent decision making.',
+<<<<<<< HEAD
+      features: ['Neural Networks', 'Predictive Analytics', 'Pattern Recognition', 'Automated Learning']
+=======
       features: ['Neural Networks', 'Predictive Analytics', 'Pattern Recognition', 'Automated Learning'],
       color: 'blue',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
     },
     {
       icon: Zap,
       title: 'AI Automation',
       description: 'Streamline business processes with intelligent automation solutions.',
+<<<<<<< HEAD
+      features: ['Process Automation', 'Workflow Optimization', 'Smart Decision Making', 'RPA Integration']
+=======
       features: ['Process Automation', 'Workflow Optimization', 'Smart Decision Making', 'RPA Integration'],
       color: 'purple',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
     },
     {
       icon: Shield,
       title: 'AI-Powered Cybersecurity',
       description: 'Protect your digital assets with advanced AI-driven security solutions.',
+<<<<<<< HEAD
+      features: ['Threat Detection', 'Anomaly Detection', 'Automated Response', 'Risk Assessment']
+=======
       features: ['Threat Detection', 'Anomaly Detection', 'Automated Response', 'Risk Assessment'],
       color: 'red',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
     },
     {
       icon: Cloud,
       title: 'Cloud AI Services',
       description: 'Scalable AI solutions delivered through cloud infrastructure.',
+<<<<<<< HEAD
+      features: ['Cloud ML Platforms', 'AI APIs', 'Scalable Computing', 'Edge AI']
+=======
       features: ['Cloud ML Platforms', 'AI APIs', 'Scalable Computing', 'Edge AI'],
       color: 'cyan',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
     },
     {
       icon: Database,
       title: 'Data Intelligence',
       description: 'Transform raw data into actionable insights with AI-powered analytics.',
+<<<<<<< HEAD
+      features: ['Data Mining', 'Business Intelligence', 'Real-time Analytics', 'Data Visualization']
+=======
       features: ['Data Mining', 'Business Intelligence', 'Real-time Analytics', 'Data Visualization'],
       color: 'emerald',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
     },
     {
       icon: Users,
       title: 'AI Customer Experience',
       description: 'Enhance customer interactions with intelligent chatbots and personalization.',
+<<<<<<< HEAD
+      features: ['Chatbots', 'Personalization', 'Sentiment Analysis', 'Customer Insights']
+=======
       features: ['Chatbots', 'Personalization', 'Sentiment Analysis', 'Customer Insights'],
       color: 'fuchsia',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
     },
     {
       icon: BarChart3,
       title: 'AI Business Intelligence',
       description: 'Make data-driven decisions with AI-powered business intelligence tools.',
+<<<<<<< HEAD
+      features: ['Predictive Modeling', 'Performance Analytics', 'Market Intelligence', 'Strategic Planning']
+=======
       features: ['Predictive Modeling', 'Performance Analytics', 'Market Intelligence', 'Strategic Planning'],
       color: 'indigo',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
     },
     {
       icon: Cog,
       title: 'AI Operations',
       description: 'Optimize operational efficiency with AI-driven process management.',
+<<<<<<< HEAD
+      features: ['Process Optimization', 'Resource Allocation', 'Performance Monitoring', 'Quality Control']
+=======
       features: ['Process Optimization', 'Resource Allocation', 'Performance Monitoring', 'Quality Control'],
       color: 'orange',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
     },
     {
       icon: Target,
       title: 'AI Strategy Consulting',
       description: 'Strategic guidance for AI implementation and digital transformation.',
+<<<<<<< HEAD
+      features: ['AI Roadmap', 'Technology Assessment', 'Change Management', 'ROI Optimization']
+=======
       features: ['AI Roadmap', 'Technology Assessment', 'Change Management', 'ROI Optimization'],
       color: 'rose',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
     },
     {
       icon: Rocket,
       title: 'AI Innovation Labs',
       description: 'Cutting-edge AI research and development for breakthrough solutions.',
+<<<<<<< HEAD
+      features: ['R&D Projects', 'Prototype Development', 'Innovation Workshops', 'Technology Transfer']
+=======
       features: ['R&D Projects', 'Prototype Development', 'Innovation Workshops', 'Technology Transfer'],
       color: 'teal',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
     },
   ];
 
@@ -81,25 +125,41 @@ const AISolutions: React.FC = () => {
       title: 'Healthcare AI',
       description: 'AI solutions for medical diagnosis, drug discovery, and patient care optimization',
       icon: '🏥',
+<<<<<<< HEAD
+      benefits: ['Improved Diagnosis Accuracy', 'Faster Drug Discovery', 'Personalized Treatment']
+=======
       benefits: ['Improved Diagnosis Accuracy', 'Faster Drug Discovery', 'Personalized Treatment'],
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
     },
     {
       title: 'Financial AI',
       description: 'AI-powered fraud detection, risk assessment, and algorithmic trading solutions',
       icon: '💰',
+<<<<<<< HEAD
+      benefits: ['Fraud Prevention', 'Risk Management', 'Automated Trading']
+=======
       benefits: ['Fraud Prevention', 'Risk Management', 'Automated Trading'],
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
     },
     {
       title: 'Manufacturing AI',
       description: 'Smart manufacturing with predictive maintenance and quality control',
       icon: '🏭',
+<<<<<<< HEAD
+      benefits: ['Predictive Maintenance', 'Quality Control', 'Supply Chain Optimization']
+=======
       benefits: ['Predictive Maintenance', 'Quality Control', 'Supply Chain Optimization'],
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
     },
     {
       title: 'Retail AI',
       description: 'Personalized shopping experiences and intelligent inventory management',
       icon: '🛍️',
+<<<<<<< HEAD
+      benefits: ['Personalized Recommendations', 'Inventory Optimization', 'Customer Insights']
+=======
       benefits: ['Personalized Recommendations', 'Inventory Optimization', 'Customer Insights'],
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
     },
   ];
 
@@ -108,31 +168,51 @@ const AISolutions: React.FC = () => {
       step: '01',
       title: 'Discovery & Assessment',
       description: 'We analyze your current systems, data, and business requirements to identify AI opportunities',
+<<<<<<< HEAD
+      icon: Target
+=======
       icon: Target,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
     },
     {
       step: '02',
       title: 'Strategy & Planning',
       description: 'Develop a comprehensive AI strategy with clear objectives, timelines, and success metrics',
+<<<<<<< HEAD
+      icon: BarChart3
+=======
       icon: BarChart3,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
     },
     {
       step: '03',
       title: 'Development & Training',
       description: 'Build and train custom AI models tailored to your specific business needs and data',
+<<<<<<< HEAD
+      icon: Cog
+=======
       icon: Cog,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
     },
     {
       step: '04',
       title: 'Deployment & Integration',
       description: 'Seamlessly integrate AI solutions into your existing systems and workflows',
+<<<<<<< HEAD
+      icon: Rocket
+=======
       icon: Rocket,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
     },
     {
       step: '05',
       title: 'Monitoring & Optimization',
       description: 'Continuously monitor performance and optimize AI models for better results',
+<<<<<<< HEAD
+      icon: BarChart3
+=======
       icon: BarChart3,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
     },
   ];
 

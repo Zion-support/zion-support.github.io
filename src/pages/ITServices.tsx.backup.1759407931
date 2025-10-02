@@ -17,7 +17,10 @@ import {
   Smartphone,
   MessageSquare,
   Zap,
+<<<<<<< HEAD
+=======
   
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
   Settings,
   Monitor,
   Cpu,
@@ -27,7 +30,11 @@ import {
   Key,
   AlertTriangle,
   Users,
+<<<<<<< HEAD
+  Building
+=======
   Building,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
 } from "lucide-react";
 
 export default function ITServices(): React.JSX.Element {
@@ -57,7 +64,11 @@ export default function ITServices(): React.JSX.Element {
       ],
       useCases: ["Enterprise companies", "SaaS providers", "E-commerce platforms", "Healthcare systems"],
       marketSize: "$623.3B cloud computing market",
+<<<<<<< HEAD
+      link: "/contact"
+=======
       link: "/contact",
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
     },
     {
       id: "zero-trust-security",
@@ -84,7 +95,11 @@ export default function ITServices(): React.JSX.Element {
       ],
       useCases: ["Financial institutions", "Government agencies", "Healthcare organizations", "Large enterprises"],
       marketSize: "$366.1B cybersecurity market",
+<<<<<<< HEAD
+      link: "/contact"
+=======
       link: "/contact",
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
     },
     {
       id: "devops-automation",
@@ -111,6 +126,17 @@ export default function ITServices(): React.JSX.Element {
       ],
       useCases: ["Software companies", "Tech startups", "E-commerce platforms", "Financial services"],
       marketSize: "$10.3B DevOps market",
+<<<<<<< HEAD
+      link: "/contact"
+    },
+    {
+      id: "data-engineering-platform"
+      name: "Data Engineering Platform"
+      blurb: "Scalable data infrastructure with real-time processing and analytics"
+      price: "$4,000 - $20,000/month"
+      eta: "4-10 weeks"
+      category: "Data & Analytics"
+=======
       link: "/contact",
     },
     {
@@ -120,6 +146,7 @@ export default function ITServices(): React.JSX.Element {
       price: "$4,000 - $20,000/month",
       eta: "4-10 weeks",
       category: "Data & Analytics",
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
       icon: Database,
       features: [
         "Data lake and data warehouse architecture",
@@ -138,7 +165,11 @@ export default function ITServices(): React.JSX.Element {
       ],
       useCases: ["Analytics companies", "E-commerce platforms", "Financial services", "Healthcare systems"],
       marketSize: "$274.3B data analytics market",
+<<<<<<< HEAD
+      link: "/contact"
+=======
       link: "/contact",
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
     },
     {
       id: "network-infrastructure",
@@ -165,7 +196,11 @@ export default function ITServices(): React.JSX.Element {
       ],
       useCases: ["Multi-location businesses", "Remote work environments", "Healthcare networks", "Educational institutions"],
       marketSize: "$45.2B SD-WAN market",
+<<<<<<< HEAD
+      link: "/contact"
+=======
       link: "/contact",
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
     },
     {
       id: "compliance-automation",
@@ -192,13 +227,41 @@ export default function ITServices(): React.JSX.Element {
       ],
       useCases: ["Healthcare providers", "Financial services", "SaaS companies", "Government contractors"],
       marketSize: "$56.9B compliance management market",
+<<<<<<< HEAD
+      link: "/contact"
+=======
       link: "/contact",
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
     },
   ];
 
   const additionalITServices = [
     {
       name: "IT Infrastructure Assessment",
+<<<<<<< HEAD
+      description: "Comprehensive infrastructure audit and optimization recommendations",
+      price: "$1,500 - $5,000/month",
+      features: ["Performance analysis", "Security assessment", "Cost optimization", "Modernization roadmap"]
+    },
+    {
+      name: "24/7 IT Support & Monitoring",
+      description: "Round-the-clock IT support with proactive monitoring",
+      price: "$800 - $3,000/month",
+      features: ["24/7 helpdesk", "Proactive monitoring", "Remote support", "SLA guarantees"]
+    },
+    {
+      name: "Backup & Disaster Recovery",
+      description: "Automated backup solutions with disaster recovery planning",
+      price: "$500 - $2,500/month",
+      features: ["Automated backups", "Disaster recovery", "Business continuity", "Data protection"]
+    },
+    {
+      name: "IT Consulting & Strategy",
+      description: "Strategic IT planning and digital transformation consulting",
+      price: "$200 - $500/hour",
+      features: ["Strategic planning", "Technology roadmap", "Vendor selection", "Implementation guidance"]
+    }
+=======
       description: "Comprehensive infrastructure audit and optimization recommendations"
       price: "$1,500 - $5,000/month",
       features: ["Performance analysis", "Security assessment", "Cost optimization", "Modernization roadmap"],
@@ -221,6 +284,7 @@ export default function ITServices(): React.JSX.Element {
       price: "$200 - $500/hour",
       features: ["Strategic planning", "Technology roadmap", "Vendor selection", "Implementation guidance"],
     },
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
   ];
 
   const industrySolutions = [
@@ -228,26 +292,43 @@ export default function ITServices(): React.JSX.Element {
       industry: "Healthcare",
       solutions: ["HIPAA compliance", "Patient data security", "Telemedicine infrastructure", "Medical device integration"],
       icon: Building,
+<<<<<<< HEAD
+      color: "from-green-500 to-teal-500"
+=======
       color: "from-green-500 to-teal-500",
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
     },
     {
       industry: "Financial Services",
       solutions: ["PCI DSS compliance", "Fraud detection systems", "Risk management", "Regulatory reporting"],
       icon: DollarSign,
+<<<<<<< HEAD
+      color: "from-blue-500 to-indigo-500"
+=======
       color: "from-blue-500 to-indigo-500",
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
     },
     {
       industry: "E-commerce",
       solutions: ["Scalable infrastructure", "Payment security", "Inventory management", "Customer analytics"],
       icon: Globe,
+<<<<<<< HEAD
+      color: "from-purple-500 to-pink-500"
+=======
       color: "from-purple-500 to-pink-500",
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
     },
     {
       industry: "Manufacturing",
       solutions: ["IoT integration", "Predictive maintenance", "Supply chain optimization", "Quality control systems"],
       icon: Cpu,
+<<<<<<< HEAD
+      color: "from-orange-500 to-red-500"
+    }
+=======
       color: "from-orange-500 to-red-500",
     },
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
   ];
 
   return (

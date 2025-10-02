@@ -7,23 +7,40 @@ const AboutPage: React.FC = () => {
     {
       icon: Brain,
       title: 'Innovation',
+<<<<<<< HEAD
+      description: 'Pushing the boundaries of AI technology to create revolutionary solutions'
+=======
       description: 'Pushing the boundaries of AI technology to create revolutionary solutions',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
     },
     {
       icon: Shield,
       title: 'Security',
+<<<<<<< HEAD
+      description: 'Ensuring enterprise-grade security and compliance in all our solutions'
+=======
       description: 'Ensuring enterprise-grade security and compliance in all our solutions',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
     },
     {
       icon: Users,
       title: 'Collaboration',
+<<<<<<< HEAD
+      description: 'Working closely with clients to understand and solve their unique challenges'
+=======
       description: 'Working closely with clients to understand and solve their unique challenges',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
     },
     {
       icon: Award,
       title: 'Excellence',
+<<<<<<< HEAD
+      description: 'Delivering exceptional results with proven ROI and measurable impact'
+    }
+=======
       description: 'Delivering exceptional results with proven ROI and measurable impact',
     },
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
   ];
 
   const milestones = [
@@ -32,7 +49,11 @@ const AboutPage: React.FC = () => {
     { year: '2022', event: 'AI breakthrough platform launch' },
     { year: '2023', event: '100+ enterprise clients' },
     { year: '2024', event: 'Quantum computing integration' },
+<<<<<<< HEAD
+    { year: '2025', event: '240+ Fortune 500 clients' }
+=======
     { year: '2025', event: '240+ Fortune 500 clients' },
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
   ];
 
   return (

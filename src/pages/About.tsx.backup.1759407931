@@ -10,30 +10,51 @@ const About: React.FC = () => {
     { number: '10+', label: 'Years Experience', icon: Award },
     { number: '500+', label: 'Projects Completed', icon: CheckCircle },
     { number: '50+', label: 'Happy Clients', icon: Users },
+<<<<<<< HEAD
+    { number: '99%', label: 'Client Satisfaction', icon: Star }
+=======
     { number: '99%', label: 'Client Satisfaction', icon: Star },
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
   ];
 
   const values = [
     {
       icon: Target,
       title: 'Innovation First',
+<<<<<<< HEAD
+      description: 'We stay ahead of technology trends to deliver solutions that give you a competitive edge in the market.'
+=======
       description: 'We stay ahead of technology trends to deliver solutions that give you a competitive edge in the market.',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
     },
     {
       icon: Shield,
       title: 'Enterprise Security',
+<<<<<<< HEAD
+      description: 'Bank-grade security measures protect your data and ensure compliance with industry standards.'
+=======
       description: 'Bank-grade security measures protect your data and ensure compliance with industry standards.',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
     },
     {
       icon: TrendingUp,
       title: 'Measurable Results',
+<<<<<<< HEAD
+      description: 'We deliver quantifiable outcomes with average 75% cost reduction and 10x efficiency gains.'
+=======
       description: 'We deliver quantifiable outcomes with average 75% cost reduction and 10x efficiency gains.',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
     },
     {
       icon: Globe,
       title: 'Global Reach',
+<<<<<<< HEAD
+      description: 'Serving clients worldwide with 24/7 support and localized solutions for international markets.'
+    }
+=======
       description: 'Serving clients worldwide with 24/7 support and localized solutions for international markets.',
     },
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
   ];
 
   const team = [
@@ -41,20 +62,33 @@ const About: React.FC = () => {
       name: 'Kleber Santos',
       role: 'CEO & Founder',
       description: 'Technology visionary with 15+ years in AI and enterprise solutions.',
+<<<<<<< HEAD
+      email: 'kleber@ziontechgroup.com'
+=======
       email: 'kleber@ziontechgroup.com',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
     },
     {
       name: 'AI Engineering Team',
       role: 'Machine Learning Specialists',
       description: 'Expert team of AI engineers specializing in cutting-edge machine learning technologies.',
+<<<<<<< HEAD
+      email: 'ai-team@ziontechgroup.com'
+=======
       email: 'ai-team@ziontechgroup.com',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
     },
     {
       name: 'DevOps Specialists',
       role: 'Infrastructure Experts',
       description: 'Cloud and DevOps professionals ensuring scalable and secure infrastructure solutions.',
+<<<<<<< HEAD
+      email: 'devops@ziontechgroup.com'
+    }
+=======
       email: 'devops@ziontechgroup.com',
     },
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
   ];
 
   return (

@@ -5,7 +5,11 @@ import {
   Smartphone, Globe, Cpu, Lock, Users, FileText,
   TrendingUp, Settings, Headphones, Code,
   Brain, Target, CheckCircle, Star,
+<<<<<<< HEAD
+  Mail, MessageCircle
+=======
   Mail, MessageCircle,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
 } from 'lucide-react';
 
 const ComprehensiveServices: React.FC = () => {
@@ -18,7 +22,11 @@ const ComprehensiveServices: React.FC = () => {
       pricing: 'Starting at $29/month',
       icon: FileText,
       color: 'from-blue-600 to-purple-600',
+<<<<<<< HEAD
+      link: '/services/ai-content-generator'
+=======
       link: '/services/ai-content-generator',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
     },
     {
       id: 'smart-appointment-scheduler',
@@ -28,7 +36,11 @@ const ComprehensiveServices: React.FC = () => {
       pricing: 'Starting at $49/month',
       icon: Users,
       color: 'from-green-600 to-teal-600',
+<<<<<<< HEAD
+      link: '/services/smart-appointment-scheduler'
+=======
       link: '/services/smart-appointment-scheduler',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
     },
     {
       id: 'ai-email-marketing',
@@ -38,7 +50,11 @@ const ComprehensiveServices: React.FC = () => {
       pricing: 'Starting at $79/month',
       icon: Mail,
       color: 'from-emerald-600 to-green-600',
+<<<<<<< HEAD
+      link: '/services/ai-email-marketing'
+=======
       link: '/services/ai-email-marketing',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
     },
     {
       id: 'api-integration-hub',
@@ -48,7 +64,11 @@ const ComprehensiveServices: React.FC = () => {
       pricing: 'Starting at $39/month',
       icon: Code,
       color: 'from-orange-600 to-red-600',
+<<<<<<< HEAD
+      link: '/services/api-integration-hub'
+=======
       link: '/services/api-integration-hub',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
     },
     {
       id: 'remote-collaboration-suite',
@@ -58,7 +78,11 @@ const ComprehensiveServices: React.FC = () => {
       pricing: 'Starting at $19/user/month',
       icon: Globe,
       color: 'from-purple-600 to-pink-600',
+<<<<<<< HEAD
+      link: '/services/remote-collaboration-suite'
+=======
       link: '/services/remote-collaboration-suite',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
     },
     {
       id: 'smart-contract-audit',
@@ -68,8 +92,13 @@ const ComprehensiveServices: React.FC = () => {
       pricing: 'Starting at $2,500',
       icon: Shield,
       color: 'from-red-600 to-orange-600',
+<<<<<<< HEAD
+      link: '/services/smart-contract-audit'
+    }
+=======
       link: '/services/smart-contract-audit',
     },
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
   ];
 
   const aiServices = [
@@ -81,7 +110,11 @@ const ComprehensiveServices: React.FC = () => {
       pricing: 'Custom pricing',
       icon: Zap,
       color: 'from-blue-600 to-purple-600',
+<<<<<<< HEAD
+      link: '/services/ai-workflow-automation'
+=======
       link: '/services/ai-workflow-automation',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
     },
     {
       id: 'ai-virtual-assistant',
@@ -91,7 +124,11 @@ const ComprehensiveServices: React.FC = () => {
       pricing: 'Starting at $199/month',
       icon: Bot,
       color: 'from-purple-600 to-pink-600',
+<<<<<<< HEAD
+      link: '/services/ai-virtual-assistant'
+=======
       link: '/services/ai-virtual-assistant',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
     },
     {
       id: 'ai-predictive-analytics',
@@ -101,7 +138,11 @@ const ComprehensiveServices: React.FC = () => {
       pricing: 'Starting at $299/month',
       icon: BarChart3,
       color: 'from-indigo-600 to-purple-600',
+<<<<<<< HEAD
+      link: '/services/ai-predictive-analytics'
+=======
       link: '/services/ai-predictive-analytics',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
     },
     {
       id: 'conversational-ai',
@@ -111,7 +152,11 @@ const ComprehensiveServices: React.FC = () => {
       pricing: 'Starting at $399/month',
       icon: MessageCircle,
       color: 'from-violet-600 to-pink-600',
+<<<<<<< HEAD
+      link: '/services/conversational-ai'
+=======
       link: '/services/conversational-ai',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
     },
     {
       id: 'ai-data-analytics',
@@ -121,7 +166,11 @@ const ComprehensiveServices: React.FC = () => {
       pricing: 'Starting at $299/month',
       icon: BarChart3,
       color: 'from-green-600 to-teal-600',
+<<<<<<< HEAD
+      link: '/services/ai-data-analytics'
+=======
       link: '/services/ai-data-analytics',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
     },
     {
       id: 'edge-computing-ai',
@@ -131,7 +180,11 @@ const ComprehensiveServices: React.FC = () => {
       pricing: 'Starting at $1,999/month',
       icon: Cpu,
       color: 'from-teal-600 to-blue-600',
+<<<<<<< HEAD
+      link: '/services/edge-computing-ai'
+=======
       link: '/services/edge-computing-ai',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
     },
     {
       id: 'ai-document-processing',
@@ -141,7 +194,11 @@ const ComprehensiveServices: React.FC = () => {
       pricing: 'Starting at $149/month',
       icon: FileText,
       color: 'from-indigo-600 to-blue-600',
+<<<<<<< HEAD
+      link: '/services/ai-document-processing'
+=======
       link: '/services/ai-document-processing',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
     },
     {
       id: 'ai-cognitive-automation',
@@ -151,7 +208,11 @@ const ComprehensiveServices: React.FC = () => {
       pricing: 'Custom pricing',
       icon: Brain,
       color: 'from-cyan-600 to-blue-600',
+<<<<<<< HEAD
+      link: '/services/ai-cognitive-automation'
+=======
       link: '/services/ai-cognitive-automation',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
     },
     {
       id: 'ai-cybersecurity',
@@ -161,69 +222,128 @@ const ComprehensiveServices: React.FC = () => {
       pricing: 'Starting at $399/month',
       icon: Shield,
       color: 'from-red-600 to-orange-600',
+<<<<<<< HEAD
+      link: '/services/ai-cybersecurity'
+    }
+=======
       link: '/services/ai-cybersecurity',
     },
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
   ];
 
   const itServices = [
     {
       id: 'cloud-migration',
+<<<<<<< HEAD
+      title: 'Cloud Migration Services',
+      description: 'Seamless migration to cloud platforms with zero downtime. AWS, Azure, and GCP certified experts.',
+      features: ['Zero downtime migration', 'Multi-cloud support', 'Cost optimization', 'Security compliance', '24/7 support'],
+      pricing: 'Starting at $5,000',
+      icon: Cloud,
+      color: 'from-blue-600 to-cyan-600',
+=======
       title: 'Cloud Migration Services'
       description: 'Seamless migration to cloud platforms with zero downtime. AWS, Azure, and GCP certified experts.'
       features: ['Zero downtime migration', 'Multi-cloud support', 'Cost optimization', 'Security compliance', '24/7 support']
       pricing: 'Starting at $5,000'
       icon: Cloud,
       color: 'from-blue-600 to-cyan-600'
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
       link: '/services/cloud-migration'
     },
     {
       id: 'devops-automation',
+<<<<<<< HEAD
+      title: 'DevOps Automation',
+      description: 'Complete DevOps transformation with CI/CD pipelines, infrastructure as code, and automated testing.',
+      features: ['CI/CD pipelines', 'Infrastructure as code', 'Automated testing', 'Monitoring & alerting', 'Security scanning'],
+      pricing: 'Starting at $3,000/month',
+      icon: Settings,
+      color: 'from-green-600 to-emerald-600',
+=======
       title: 'DevOps Automation'
       description: 'Complete DevOps transformation with CI/CD pipelines, infrastructure as code, and automated testing.'
       features: ['CI/CD pipelines', 'Infrastructure as code', 'Automated testing', 'Monitoring & alerting', 'Security scanning']
       pricing: 'Starting at $3,000/month'
       icon: Settings,
       color: 'from-green-600 to-emerald-600'
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
       link: '/services/devops-automation'
     },
     {
       id: 'database-optimization',
+<<<<<<< HEAD
+      title: 'Database Optimization',
+      description: 'Optimize database performance, implement backup strategies, and ensure data security and compliance.',
+      features: ['Performance tuning', 'Backup strategies', 'Data security', 'Compliance', 'Monitoring'],
+      pricing: 'Starting at $2,500',
+      icon: Database,
+      color: 'from-purple-600 to-violet-600',
+=======
       title: 'Database Optimization'
       description: 'Optimize database performance, implement backup strategies, and ensure data security and compliance.'
       features: ['Performance tuning', 'Backup strategies', 'Data security', 'Compliance', 'Monitoring']
       pricing: 'Starting at $2,500'
       icon: Database,
       color: 'from-purple-600 to-violet-600'
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
       link: '/services/database-optimization'
     },
     {
       id: 'mobile-app-development',
+<<<<<<< HEAD
+      title: 'Mobile App Development',
+      description: 'Native and cross-platform mobile app development with modern frameworks and best practices.',
+      features: ['Native & cross-platform', 'Modern frameworks', 'App store optimization', 'Performance optimization', 'Maintenance'],
+      pricing: 'Starting at $15,000',
+      icon: Smartphone,
+      color: 'from-pink-600 to-rose-600',
+=======
       title: 'Mobile App Development'
       description: 'Native and cross-platform mobile app development with modern frameworks and best practices.'
       features: ['Native & cross-platform', 'Modern frameworks', 'App store optimization', 'Performance optimization', 'Maintenance']
       pricing: 'Starting at $15,000'
       icon: Smartphone,
       color: 'from-pink-600 to-rose-600'
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
       link: '/services/mobile-app-development'
     },
     {
       id: 'quantum-computing',
+<<<<<<< HEAD
+      title: 'Quantum Computing Solutions',
+      description: 'Cutting-edge quantum computing services for optimization, cryptography, and advanced simulations.',
+      features: ['Quantum algorithms', 'Cryptography', 'Optimization problems', 'Simulation', 'Research & development'],
+      pricing: 'Custom pricing',
+      icon: Cpu,
+      color: 'from-indigo-600 to-purple-600',
+=======
       title: 'Quantum Computing Solutions'
       description: 'Cutting-edge quantum computing services for optimization, cryptography, and advanced simulations.'
       features: ['Quantum algorithms', 'Cryptography', 'Optimization problems', 'Simulation', 'Research & development']
       pricing: 'Custom pricing'
       icon: Cpu,
       color: 'from-indigo-600 to-purple-600'
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
       link: '/services/quantum-computing'
     },
     {
       id: 'blockchain-web3',
+<<<<<<< HEAD
+      title: 'Blockchain & Web3 Development',
+      description: 'Smart contracts, DeFi solutions, NFT platforms, and blockchain infrastructure development.',
+      features: ['Smart contracts', 'DeFi solutions', 'NFT platforms', 'Blockchain infrastructure', 'Token development'],
+      pricing: 'Starting at $10,000',
+      icon: Lock,
+      color: 'from-yellow-600 to-orange-600',
+=======
       title: 'Blockchain & Web3 Development'
       description: 'Smart contracts, DeFi solutions, NFT platforms, and blockchain infrastructure development.'
       features: ['Smart contracts', 'DeFi solutions', 'NFT platforms', 'Blockchain infrastructure', 'Token development']
       pricing: 'Starting at $10,000'
       icon: Lock,
       color: 'from-yellow-600 to-orange-600'
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
       link: '/services/blockchain-web3'
     },
   ];

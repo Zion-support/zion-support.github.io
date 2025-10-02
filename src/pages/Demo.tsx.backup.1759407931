@@ -15,13 +15,21 @@ const Demo: React.FC = () => {
     preferredDate: '',
     preferredTime: '',
     timeZone: '',
+<<<<<<< HEAD
+    message: ''
+=======
     message: '',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
   });
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
+<<<<<<< HEAD
+      [e.target.name]: e.target.value
+=======
       [e.target.name]: e.target.value,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
     });
   };
 
@@ -34,23 +42,40 @@ const Demo: React.FC = () => {
     {
       title: 'AI-Powered Automation',
       description: 'See how our AI can automate your repetitive tasks and workflows',
+<<<<<<< HEAD
+      icon: '🤖'
+=======
       icon: '🤖',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
     },
     {
       title: 'Real-time Analytics',
       description: 'Experience our advanced analytics and reporting capabilities',
+<<<<<<< HEAD
+      icon: '📊'
+=======
       icon: '📊',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
     },
     {
       title: 'Custom Integrations',
       description: 'Learn how we can integrate with your existing systems',
+<<<<<<< HEAD
+      icon: '🔗'
+=======
       icon: '🔗',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
     },
     {
       title: 'Security & Compliance',
       description: 'Understand our enterprise-grade security and compliance features',
+<<<<<<< HEAD
+      icon: '🔒'
+    }
+=======
       icon: '🔒',
     },
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
   ];
 
   const testimonials = [
@@ -59,27 +84,44 @@ const Demo: React.FC = () => {
       company: 'TechCorp',
       role: 'CTO',
       content: 'The demo showed us exactly how AI could transform our operations. The ROI was clear from day one.',
+<<<<<<< HEAD
+      rating: 5
+=======
       rating: 5,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
     },
     {
       name: 'Michael Chen',
       company: 'FinanceFlow',
       role: 'VP of Operations',
       content: "Zion Tech Group's demo was eye-opening. We saw immediate value and signed up the same week.",
+<<<<<<< HEAD
+      rating: 5
+=======
       rating: 5,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
     },
     {
       name: 'Emily Rodriguez',
       company: 'HealthTech Solutions',
       role: 'CEO',
       content: 'The personalized demo addressed all our specific needs. Highly recommend scheduling one.',
+<<<<<<< HEAD
+      rating: 5
+    }
+=======
       rating: 5,
     },
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
   ];
 
   const timeSlots = [
     '9:00 AM', '10:00 AM', '11:00 AM', '12:00 PM',
+<<<<<<< HEAD
+    '1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM'
+=======
     '1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
   ];
 
   const companySizes = [
@@ -87,7 +129,11 @@ const Demo: React.FC = () => {
     '11-50 employees',
     '51-200 employees',
     '201-1000 employees',
+<<<<<<< HEAD
+    '1000+ employees'
+=======
     '1000+ employees',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
   ];
 
   const useCases = [
@@ -97,7 +143,11 @@ const Demo: React.FC = () => {
     'Supply Chain Optimization',
     'Predictive Maintenance',
     'Document Processing',
+<<<<<<< HEAD
+    'Other'
+=======
     'Other',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
   ];
 
   return (

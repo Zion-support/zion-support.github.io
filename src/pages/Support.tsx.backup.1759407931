@@ -7,7 +7,11 @@ const Support: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
+<<<<<<< HEAD
+  const supportChannels = [
+=======
   const contactMethods = [
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-786c
     {
       icon: Phone,
       title: 'Phone Support',
