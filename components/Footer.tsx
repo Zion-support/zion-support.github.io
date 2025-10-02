@@ -6,20 +6,33 @@ const Footer: React.FC = () => {
 
   const footerLinks = {
     services: [
+      { name: 'AI Services', href: '/ai-services' },
       { name: 'Micro SaaS', href: '/services/micro-saas' },
-      { name: 'IT Services (Comprehensive)', href: '/services/it-services-comprehensive' },
+      { name: 'IT Services', href: '/services/it-services-comprehensive' },
       { name: 'Blockchain Solutions', href: '/services/blockchain-solutions' },
-      { name: 'AI Quantum Computing', href: '/services/ai-quantum-computing-2026' },
+      { name: 'Quantum Computing', href: '/services/ai-quantum-computing-2026' },
+      { name: 'Additional Services', href: '/additional-services' },
+      { name: 'Comprehensive Services', href: '/comprehensive-services' },
+    ],
+    solutions: [
+      { name: 'All Solutions', href: '/solutions' },
+      { name: 'Enterprise Solutions', href: '/enterprise' },
+      { name: 'Innovative IT Solutions', href: '/innovative-it-solutions' },
+      { name: 'Advanced AI Solutions', href: '/advanced-ai-solutions' },
     ],
     company: [
       { name: 'About Us', href: '/about' },
-      { name: 'Solutions', href: '/solutions' },
       { name: 'Case Studies', href: '/case-studies' },
       { name: 'Blog', href: '/blog' },
       { name: 'Contact', href: '/contact' },
+      { name: 'Pricing', href: '/pricing' },
+      { name: 'Support', href: '/support' },
     ],
     resources: [
+      { name: 'All Resources', href: '/resources' },
       { name: 'Guides', href: '/guides' },
+      { name: 'Content Hub', href: '/content-hub' },
+      { name: 'Enhanced Services Catalog', href: '/enhanced-services-catalog' },
       { name: 'Privacy Policy', href: '/privacy' },
       { name: 'Terms of Service', href: '/terms' },
       { name: 'Security', href: '/security' },
