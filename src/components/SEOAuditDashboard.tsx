@@ -1,28 +1,33 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Search, Eye, AlertTriangle, CheckCircle, XCircle, Globe, Smartphone, Zap } from 'lucide-react';
+import {
+
+} from 'framer-motion';
+import {
+
+} from 'lucide-react';
 
 interface SEOIssue {
-  id: string;
-  type: 'error' | 'warning' | 'info';
-  title: string;
-  description: string;
-  impact: 'high' | 'medium' | 'low';
-  category: 'content' | 'technical' | 'performance' | 'accessibility' | 'mobile';
-  fix: string;
-  score: number;
+id: string;
+type: 'error' | 'warning' | 'info';
+title: string;
+description: string;
+impact: 'high' | 'medium' | 'low';
+category: 'content' | 'technical' | 'performance' | 'accessibility' | 'mobile';
+fix: string;
+score: number;
 }
 
 interface SEOReport {
-  overallScore: number;
-  totalIssues: number;
-  errors: number;
-  warnings: number;
-  issues: SEOIssue[];
-  metrics: {
-    pageTitle: string;
-    metaDescription: string;
-    headings: { h1: number; h2: number; h3: number; h4: number; h5: number; h6: number };
+overallScore: number;
+totalIssues: number;
+errors: number;
+warnings: number;
+issues: SEOIssue[];
+metrics: {,
+pageTitle: string;
+metaDescription: string;
+headings: { h1: number; h2: number; h3: number; h4: number; h5: number; h6: number
+};
     images: { total: number; withAlt: number; withoutAlt: number };
     links: { total: number; internal: number; external: number };
     wordCount: number;
@@ -195,38 +200,38 @@ const SEOAuditDashboard: React.FC = () => {
   };
 
   const getIssueIcon = (type: string) => {
-    switch (type) {
-      case 'error':
-        return <XCircle className="w-5 h-5 text-red-600" />;
-      case 'warning':
-        return <AlertTriangle className="w-5 h-5 text-yellow-600" />;
-      default:
-        return <CheckCircle className="w-5 h-5 text-blue-600" />;
-    }
+switch (type) {
+case 'error':,
+return <XCircle className="w-5 h-5 text-red-600" />;
+case 'warning':,
+return <AlertTriangle className="w-5 h-5 text-yellow-600" />;
+default:,
+return <CheckCircle className="w-5 h-5 text-blue-600" />;
+}
   };
 
   const getImpactColor = (impact: string) => {
-    switch (impact) {
-      case 'high':
-        return 'bg-red-100 text-red-800 border-red-200';
-      case 'medium':
-        return 'bg-yellow-100 text-yellow-800 border-yellow-200';
-      default:
-        return 'bg-blue-100 text-blue-800 border-blue-200';
-    }
+switch (impact) {
+case 'high':,
+return 'bg-red-100 text-red-800 border-red-200';
+case 'medium':,
+return 'bg-yellow-100 text-yellow-800 border-yellow-200';
+default:,
+return 'bg-blue-100 text-blue-800 border-blue-200';
+}
   };
 
   const getCategoryIcon = (category: string) => {
-    switch (category) {
-      case 'content':
-        return <Search className="w-4 h-4" />;
-      case 'mobile':
-        return <Smartphone className="w-4 h-4" />;
-      case 'performance':
-        return <Zap className="w-4 h-4" />;
-      default:
-        return <Globe className="w-4 h-4" />;
-    }
+switch (category) {
+case 'content':,
+return <Search className="w-4 h-4" />;
+case 'mobile':,
+return <Smartphone className="w-4 h-4" />;
+case 'performance':,
+return <Zap className="w-4 h-4" />;
+default:,
+return <Globe className="w-4 h-4" />;
+}
   };
 
   const getScoreColor = (score: number) => {
@@ -267,17 +272,19 @@ const SEOAuditDashboard: React.FC = () => {
               : 'bg-blue-600 text-white hover:bg-blue-700'
           }`}
         >
-          {isRunning ? (
-            <>
-              <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
-              Analyzing...
-            </>
-          ) : (
-            <>
-              <Search className="w-4 h-4" />
-              Run SEO Audit
-            </>
-          )}
+          {
+isRunning ? (
+<>
+<div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
+Analyzing...
+</>
+) : (,
+<>
+<Search className="w-4 h-4" />
+Run SEO Audit
+</>
+)
+}
         </button>
       </div>
 

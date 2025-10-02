@@ -1,6 +1,8 @@
 import React from 'react';
 import SEO from '../components/SEO';
-import { LazyBanner, LazyContentShowcase, LazyFeaturedServices } from '../components/LazyLoader';
+import {
+
+} from '../components/LazyLoader';
 
 const HomePage: React.FC = () => {
   return (

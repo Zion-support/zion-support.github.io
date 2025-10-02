@@ -4,12 +4,12 @@
  */
 
 interface AccessibilityConfig {
-  enableKeyboardNavigation: boolean;
-  enableScreenReaderSupport: boolean;
-  enableHighContrast: boolean;
-  enableReducedMotion: boolean;
-  enableFocusIndicators: boolean;
-  enableAriaLabels: boolean;
+enableKeyboardNavigation: boolean;
+enableScreenReaderSupport: boolean;
+enableHighContrast: boolean;
+enableReducedMotion: boolean;
+enableFocusIndicators: boolean;
+enableAriaLabels: boolean;
 }
 
 class AccessibilityEnhancer {
@@ -109,13 +109,12 @@ class AccessibilityEnhancer {
    * Setup high contrast support
    */
   private setupHighContrastSupport(): void {
-    // Detect user's high contrast preference
-    const mediaQuery = window.matchMedia('(prefers-contrast: high)');
-    
-    const handleContrastChange = (e: MediaQueryListEvent) => {
-      if (e.matches) {
-        document.documentElement.classList.add('high-contrast');
-      } else {
+// Detect user's high contrast preference
+const mediaQuery = window.matchMedia('(prefers-contrast: high)');,
+const handleContrastChange = (e: MediaQueryListEvent) => {,
+if (e.matches) {
+document.documentElement.classList.add('high-contrast');
+} else {
         document.documentElement.classList.remove('high-contrast');
       }
     };
@@ -132,12 +131,11 @@ class AccessibilityEnhancer {
    * Setup reduced motion support
    */
   private setupReducedMotionSupport(): void {
-    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-    
-    const handleMotionChange = (e: MediaQueryListEvent) => {
-      if (e.matches) {
-        document.documentElement.classList.add('reduce-motion');
-      } else {
+const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');,
+const handleMotionChange = (e: MediaQueryListEvent) => {,
+if (e.matches) {
+document.documentElement.classList.add('reduce-motion');
+} else {
         document.documentElement.classList.remove('reduce-motion');
       }
     };
@@ -154,23 +152,23 @@ class AccessibilityEnhancer {
    * Setup focus indicators
    */
   private setupFocusIndicators(): void {
-    const style = document.createElement('style');
-    style.textContent = `
-      .keyboard-navigation *:focus {
-        outline: 2px solid #3b82f6 !important;
-        outline-offset: 2px !important;
-      }
+const style = document.createElement('style');
+style.textContent = `
+.keyboard-navigation *:focus {,
+outline: 2px solid #3b82f6 !important;,
+outline-offset: 2px !important;
+}
       
       .high-contrast *:focus {
-        outline: 3px solid #ffffff !important;
-        outline-offset: 3px !important;
-      }
+outline: 3px solid #ffffff !important;,
+outline-offset: 3px !important;
+}
       
       .reduce-motion * {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-      }
+animation-duration: 0.01ms !important;,
+animation-iteration-count: 1 !important;,
+transition-duration: 0.01ms !important;
+}
     `;
     document.head.appendChild(style);
   }

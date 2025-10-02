@@ -4,36 +4,36 @@
  */
 
 interface ContentItem {
-  id: string;
-  title: string;
-  category: string;
-  tags: string[];
-  url: string;
-  type: 'blog' | 'case-study' | 'service' | 'guide';
-  readTime?: number;
-  publishDate: string;
-  views?: number;
-  conversions?: number;
+id: string;
+title: string;
+category: string;
+tags: string[];
+url: string;
+type: 'blog' | 'case-study' | 'service' | 'guide';
+readTime?: number;
+publishDate: string;
+views?: number;
+conversions?: number;
 }
 
 interface UserProfile {
-  interests: string[];
-  viewedContent: string[];
-  preferredCategories: string[];
-  readingLevel: 'beginner' | 'intermediate' | 'advanced';
-  engagement: number; // 0-1 score
+interests: string[];
+viewedContent: string[];
+preferredCategories: string[];
+readingLevel: 'beginner' | 'intermediate' | 'advanced';
+engagement: number; // 0-1 score
 }
 
 interface RecommendationScore {
-  contentId: string;
-  score: number;
-  reasons: string[];
+contentId: string;
+score: number;
+reasons: string[];
 }
 
 interface RecommendationResult {
-  content: ContentItem;
-  score: number;
-  reasons: string[];
+content: ContentItem;
+score: number;
+reasons: string[];
 }
 
 class ContentRecommendationEngine {
@@ -54,11 +54,11 @@ class ContentRecommendationEngine {
   getRecommendations(
     userId: string,
     options: {
-      limit?: number;
-      excludeViewed?: boolean;
-      category?: string;
-      type?: ContentItem['type'];
-    } = {}
+limit?: number;,
+excludeViewed?: boolean;,
+category?: string;,
+type?: ContentItem['type'];
+} = {}
   ): RecommendationResult[] {
     const {
       limit = 5,
@@ -200,11 +200,11 @@ class ContentRecommendationEngine {
   updateUserProfile(
     userId: string,
     update: {
-      viewedContent?: string;
-      interest?: string;
-      category?: string;
-      engagement?: number;
-    }
+viewedContent?: string;,
+interest?: string;,
+category?: string;,
+engagement?: number;
+}
   ): void {
     const profile = this.createUserProfile(userId);
 
@@ -472,10 +472,10 @@ class ContentRecommendationEngine {
    * Get content stats
    */
   getContentStats(contentId: string): {
-    views: number;
-    conversions: number;
-    conversionRate: number;
-  } | null {
+views: number;,
+conversions: number;,
+conversionRate: number;
+} | null {
     const content = this.contentCatalog.find((c) => c.id === contentId);
     if (!content) return null;
 
@@ -524,8 +524,9 @@ class ContentRecommendationEngine {
    * Export recommendations data
    */
   exportData(): {
-    catalog: ContentItem[];
-    profiles: { [userId: string]: UserProfile };
+catalog: ContentItem[];,
+profiles: { [userId: string]: UserProfile
+};
   } {
     return {
       catalog: [...this.contentCatalog],

@@ -1,6 +1,10 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Users, CheckCircle, Star, Calendar, CreditCard, Bell, Shield } from 'lucide-react';
+import {
+Helmet
+} from 'react-helmet-async';
+import {
+
+} from 'lucide-react';
 
 const SmartAppointmentScheduler: React.FC = () => {
   return (

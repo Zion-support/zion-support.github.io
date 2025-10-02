@@ -1,12 +1,6 @@
 import React, { useState } from 'react';
-import { 
-  Sparkles, 
-  ArrowRight, 
-  TrendingUp, 
-  Users, 
-  Zap,
-  Star,
-  CheckCircle
+import {
+CheckCircle
 } from 'lucide-react';
 
 const NewContentPromoBanner: React.FC = () => {

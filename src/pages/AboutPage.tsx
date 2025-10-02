@@ -1,29 +1,33 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { Users, Target, Award, Brain, Shield } from 'lucide-react';
+import {
+motion
+} from 'framer-motion';
+import {
+
+} from 'lucide-react';
 
 const AboutPage: React.FC = () => {
-  const values = [
+const values = [
+{
+icon: Brain,
+title: 'Innovation',
+description: 'Pushing the boundaries of AI technology to create revolutionary solutions'
+}
     {
-      icon: Brain,
-      title: 'Innovation',
-      description: 'Pushing the boundaries of AI technology to create revolutionary solutions',
-    },
+icon: Shield,
+title: 'Security',
+description: 'Ensuring enterprise-grade security and compliance in all our solutions'
+}
     {
-      icon: Shield,
-      title: 'Security',
-      description: 'Ensuring enterprise-grade security and compliance in all our solutions',
-    },
+icon: Users,
+title: 'Collaboration',
+description: 'Working closely with clients to understand and solve their unique challenges'
+}
     {
-      icon: Users,
-      title: 'Collaboration',
-      description: 'Working closely with clients to understand and solve their unique challenges',
-    },
-    {
-      icon: Award,
-      title: 'Excellence',
-      description: 'Delivering exceptional results with proven ROI and measurable impact',
-    },
+icon: Award,
+title: 'Excellence',
+description: 'Delivering exceptional results with proven ROI and measurable impact'
+}
   ];
 
   const milestones = [

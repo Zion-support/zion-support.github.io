@@ -1,8 +1,8 @@
 import React from 'react';
 
 interface LoadingProps {
-  size?: 'sm' | 'md' | 'lg';
-  text?: string;
+size?: 'sm' | 'md' | 'lg';
+text?: string;
 }
 
 const Loading: React.FC<LoadingProps> = ({ size = 'md', text = 'Loading...' }) => {

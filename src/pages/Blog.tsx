@@ -1,15 +1,5 @@
 import {
-  ArrowRight,
-  BarChart3,
-  Bot,
-  Calendar,
-  Clock,
-  Code,
-  Search,
-  Shield,
-  TrendingUp,
-  User,
-  Zap
+Zap
 } from "lucide-react";
 import React, { useMemo, useState } from "react";
 import BlogPromotionBanner from "../components/BlogPromotionBanner";
@@ -17,18 +7,18 @@ import BlogPromotionBanner from "../components/BlogPromotionBanner";
 // import Header from "../components/Header";
 
 interface BlogPost {
-  id: number;
-  title: string;
-  excerpt: string;
-  content: string;
-  author: string;
-  date: string;
-  readTime: string;
-  category: string;
-  tags: string[];
-  image: string;
-  featured: boolean;
-  views: number;
+id: number;
+title: string;
+excerpt: string;
+content: string;
+author: string;
+date: string;
+readTime: string;
+category: string;
+tags: string[];
+image: string;
+featured: boolean;
+views: number;
 }
 
 export default function Blog(): React.JSX.Element {
@@ -210,25 +200,25 @@ export default function Blog(): React.JSX.Element {
   const regularPosts = filteredPosts.filter(post => !post.featured);
 
   const getCategoryIcon = (category: string) => {
-    switch (category) {
-      case "AI Solutions": return Zap;
-      case "Case Studies": return BarChart3;
-      case "Technology": return Code;
-      case "Industry Insights": return TrendingUp;
-      case "Tutorials": return Bot;
-      default: return Shield;
-    }
+switch (category) {
+case "AI Solutions": return Zap;,
+case "Case Studies": return BarChart3;,
+case "Technology": return Code;,
+case "Industry Insights": return TrendingUp;,
+case "Tutorials": return Bot;,
+default: return Shield;
+}
   };
 
   const getCategoryColor = (category: string) => {
-    switch (category) {
-      case "AI Solutions": return "text-blue-400 bg-blue-500/10 border-blue-500/30";
-      case "Case Studies": return "text-green-400 bg-green-500/10 border-green-500/30";
-      case "Technology": return "text-purple-400 bg-purple-500/10 border-purple-500/30";
-      case "Industry Insights": return "text-orange-400 bg-orange-500/10 border-orange-500/30";
-      case "Tutorials": return "text-cyan-400 bg-cyan-500/10 border-cyan-500/30";
-      default: return "text-gray-400 bg-gray-500/10 border-gray-500/30";
-    }
+switch (category) {
+case "AI Solutions": return "text-blue-400 bg-blue-500/10 border-blue-500/30";,
+case "Case Studies": return "text-green-400 bg-green-500/10 border-green-500/30";,
+case "Technology": return "text-purple-400 bg-purple-500/10 border-purple-500/30";,
+case "Industry Insights": return "text-orange-400 bg-orange-500/10 border-orange-500/30";,
+case "Tutorials": return "text-cyan-400 bg-cyan-500/10 border-cyan-500/30";,
+default: return "text-gray-400 bg-gray-500/10 border-gray-500/30";
+}
   };
 
   return (
@@ -329,17 +319,18 @@ export default function Blog(): React.JSX.Element {
           </div>
 
           {/* Featured Posts */}
-          {selectedCategory === "All" && searchTerm === "" && (
-            <div className="mb-16">
-              <h2 className="text-2xl font-bold text-white mb-8">Featured Articles</h2>
-              <div className="grid md:grid-cols-2 gap-8">
-                {featuredPosts.map((post) => {
-                  const CategoryIcon = getCategoryIcon(post.category);
-                  const categoryColor = getCategoryColor(post.category);
-                  
-                  return (
-                    <article
-                      key={post.id}
+          {
+selectedCategory === "All" && searchTerm === "" && (
+<div className="mb-16">
+<h2 className="text-2xl font-bold text-white mb-8">Featured Articles</h2>
+<div className="grid md:grid-cols-2 gap-8">,
+{featuredPosts.map((post) => {
+const CategoryIcon = getCategoryIcon(post.category);
+const categoryColor = getCategoryColor(post.category);
+return (
+<article
+key={post.id
+}
                       className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl group"
                     >
                       <div className="flex items-center justify-between mb-4">

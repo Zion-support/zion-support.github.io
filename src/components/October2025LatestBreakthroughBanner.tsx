@@ -29,12 +29,13 @@ const October2025LatestBreakthroughBanner = () => {
 
         {/* Content Cards */}
         <div className="grid md:grid-cols-3 gap-6 mb-8">
-          {octoberLatestBreakthroughContent.map((content) => {
-            const Icon = content.icon === "🚀" ? Zap : content.icon === "⚡" ? Database : Bot;
-            
-            return (
-              <Link
-                key={content.id}
+          {
+octoberLatestBreakthroughContent.map((content) => {
+const Icon = content.icon === "🚀" ? Zap : content.icon === "⚡" ? Database : Bot;,
+return (
+<Link
+key={content.id
+}
                 to={`/blog/${content.slug}`}
                 className="group bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-6 hover:bg-white/20 hover:scale-105 transition-all duration-300"
               >

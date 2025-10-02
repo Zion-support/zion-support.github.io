@@ -1,15 +1,15 @@
 export interface EnhancedPromotionalBanner {
-  id: string;
-  title: string;
-  description: string;
-  ctaText: string;
-  ctaLink: string;
-  variant: 'success' | 'warning' | 'info' | 'error';
-  icon?: string;
-  featured: boolean;
-  priority: number;
-  startDate: string;
-  endDate?: string;
+id: string;
+title: string;
+description: string;
+ctaText: string;
+ctaLink: string;
+variant: 'success' | 'warning' | 'info' | 'error';
+icon?: string;
+featured: boolean;
+priority: number;
+startDate: string;
+endDate?: string;
 }
 
 export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
@@ -996,13 +996,13 @@ enhancedPromotionalBanners.push({
 });
 
 export const getActiveEnhancedBanners = (): EnhancedPromotionalBanner[] => {
-  const now = new Date();
-  return enhancedPromotionalBanners
-    .filter(banner => {
-      const startDate = new Date(banner.startDate);
-      const endDate = banner.endDate ? new Date(banner.endDate) : null;
-      return startDate <= now && (!endDate || endDate >= now);
-    })
+const now = new Date();
+return enhancedPromotionalBanners
+.filter(banner => {
+const startDate = new Date(banner.startDate);
+const endDate = banner.endDate ? new Date(banner.endDate) : null;,
+return startDate <= now && (!endDate || endDate >= now);
+})
     .sort((a, b) => a.priority - b.priority);
 };
 

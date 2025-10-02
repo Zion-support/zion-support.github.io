@@ -1,16 +1,16 @@
 import React from 'react';
 
 interface FeaturedContent {
-  id: number;
-  title: string;
-  category: string;
-  readTime: string;
-  rating: number;
-  readers: string;
-  badge: string;
-  gradient: string;
-  icon: React.ReactNode;
-  link: string;
+id: number;
+title: string;
+category: string;
+readTime: string;
+rating: number;
+readers: string;
+badge: string;
+gradient: string;
+icon: React.ReactNode;
+link: string;
 }
 
 const NewContentAdvertisingBanner: React.FC = () => {

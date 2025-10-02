@@ -3,13 +3,7 @@
  */
 
 import {
-  BannerConfig,
-  calculateEngagementScore,
-  calculateFreshnessScore,
-  calculateBannerScore,
-  selectBannersForDisplay,
-  selectBalancedBanners,
-  groupBannersByCategory,
+
 } from '../bannerRotation';
 
 describe('Banner Rotation System', () => {

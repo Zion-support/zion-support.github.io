@@ -1,27 +1,27 @@
 // New breakthrough content for 2025 - Latest AI innovations and enterprise solutions
 
 export interface BreakthroughContent {
-  id: string;
-  slug?: string;
-  title: string;
-  description: string;
-  excerpt: string;
-  author: string;
-  date: string;
-  category: string;
-  tags: string[];
-  featured: boolean;
-  readTime: string;
-  image?: string;
-  newBadge?: boolean;
-  trending?: boolean;
-  valueProposition: string;
-  metrics: {
-    performance: string;
-    savings: string;
-    accuracy: string;
-    roi: string;
-  };
+id: string;
+slug?: string;
+title: string;
+description: string;
+excerpt: string;
+author: string;
+date: string;
+category: string;
+tags: string[];
+featured: boolean;
+readTime: string;
+image?: string;
+newBadge?: boolean;
+trending?: boolean;
+valueProposition: string;
+metrics: {,
+performance: string;
+savings: string;
+accuracy: string;
+roi: string;
+};
 }
 
 export const breakthroughContent2025: BreakthroughContent[] = [

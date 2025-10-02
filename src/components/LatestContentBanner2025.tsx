@@ -1,5 +1,7 @@
 import React from 'react';
-import { Sparkles, ArrowRight, TrendingUp, Zap } from 'lucide-react';
+import {
+
+} from 'lucide-react';
 
 const LatestContentBanner2025: React.FC = () => {
   const latestArticles = [

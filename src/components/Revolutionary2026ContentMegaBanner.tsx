@@ -1,5 +1,7 @@
 import React from 'react';
-import { TrendingUp, Zap } from 'lucide-react';
+import {
+
+} from 'lucide-react';
 
 const Revolutionary2026ContentMegaBanner: React.FC = () => {
   const revolutionaryContent = [
@@ -26,35 +28,35 @@ const Revolutionary2026ContentMegaBanner: React.FC = () => {
       readTime: "38 min",
       trending: true,
       icon: "🤖",
-      impact: "98% Automation",
+      impact: "98% Automation"
       featured: true
     },
     {
-      id: 3,
-      title: "Quantum-Neural Network Architecture",
-      description: "Next-generation computing combining quantum processing with neural networks for unprecedented performance",
-      slug: "quantum-neural-network-architecture-2026",
-      category: "Quantum Computing",
-      date: "2026-01-15",
-      readTime: "52 min",
-      trending: true,
-      icon: "⚛️",
-      impact: "Quantum Breakthrough",
-      featured: true
-    },
+id: 3,
+title: "Quantum-Neural Network Architecture",
+description: "Next-generation computing combining quantum processing with neural networks for unprecedented performance",
+slug: "quantum-neural-network-architecture-2026",
+category: "Quantum Computing",
+date: "2026-01-15",
+readTime: "52 min",
+trending: true,
+icon: "⚛️",
+impact: "Quantum Breakthrough",
+featured: true
+}
     {
-      id: 4,
-      title: "Zero Trust AI Security Framework",
-      description: "Military-grade security protocols for AI systems with 99.99% threat detection and autonomous response",
-      slug: "zero-trust-ai-security-framework-2026",
-      category: "AI Security",
-      date: "2026-01-15",
-      readTime: "41 min",
-      trending: true,
-      icon: "🛡️",
-      impact: "99.99% Security",
-      featured: false
-    },
+id: 4,
+title: "Zero Trust AI Security Framework",
+description: "Military-grade security protocols for AI systems with 99.99% threat detection and autonomous response",
+slug: "zero-trust-ai-security-framework-2026",
+category: "AI Security",
+date: "2026-01-15",
+readTime: "41 min",
+trending: true,
+icon: "🛡️",
+impact: "99.99% Security",
+featured: false
+}
     {
       id: 5,
       title: "Edge AI Deployment at Scale",
@@ -69,18 +71,18 @@ const Revolutionary2026ContentMegaBanner: React.FC = () => {
       featured: false
     },
     {
-      id: 6,
-      title: "Synthetic Data Generation Revolution",
-      description: "AI-generated datasets that outperform real data with 95% accuracy and infinite scalability",
-      slug: "synthetic-data-generation-revolution-2026",
-      category: "Data Science",
-      date: "2026-01-15",
-      readTime: "43 min",
-      trending: true,
-      icon: "🎭",
-      impact: "95% Accuracy",
-      featured: false
-    }
+id: 6,
+title: "Synthetic Data Generation Revolution",
+description: "AI-generated datasets that outperform real data with 95% accuracy and infinite scalability",
+slug: "synthetic-data-generation-revolution-2026",
+category: "Data Science",
+date: "2026-01-15",
+readTime: "43 min",
+trending: true,
+icon: "🎭",
+impact: "95% Accuracy",
+featured: false
+}
   ];
 
   return (

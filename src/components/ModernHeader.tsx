@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import {
+Link
+} from 'react-router-dom';
 
 const ModernHeader: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -158,11 +160,13 @@ const ModernHeader: React.FC = () => {
         </div>
 
         {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-gray-200">
-            <nav className="flex flex-col space-y-1">
-              {navigationItems.map((item) => (
-                <div key={item.name}>
+        {
+isMenuOpen && (
+<div className="md:hidden py-4 border-t border-gray-200">,
+<nav className="flex flex-col space-y-1">
+{navigationItems.map((item) => (
+<div key={item.name
+}>
                   <Link
                     to={item.href}
                     className="block px-4 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-100 rounded-md transition-colors font-medium"

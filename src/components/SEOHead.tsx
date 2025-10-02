@@ -1,15 +1,17 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import {
+Helmet
+} from 'react-helmet-async';
 
 interface SEOHeadProps {
-  title?: string;
-  description?: string;
-  keywords?: string;
-  canonicalUrl?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  structuredData?: object;
+title?: string;
+description?: string;
+keywords?: string;
+canonicalUrl?: string;
+ogImage?: string;
+ogType?: string;
+twitterCard?: string;
+structuredData?: object;
 }
 
 const SEOHead: React.FC<SEOHeadProps> = ({

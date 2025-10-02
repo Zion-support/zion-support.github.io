@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 
 interface AdvancedAnalyticsProps {
-  enableConversionTracking?: boolean;
-  enablePerformanceTracking?: boolean;
-  enableErrorTracking?: boolean;
+enableConversionTracking?: boolean;
+enablePerformanceTracking?: boolean;
+enableErrorTracking?: boolean;
 }
 
 const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({

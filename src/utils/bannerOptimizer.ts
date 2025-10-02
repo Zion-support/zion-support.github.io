@@ -5,19 +5,19 @@
  */
 
 export interface BannerConfig {
-  id: string;
-  priority: number;
-  displayDuration?: number;
-  targetAudience?: string[];
-  expiryDate?: Date;
-  maxImpressions?: number;
+id: string;
+priority: number;
+displayDuration?: number;
+targetAudience?: string[];
+expiryDate?: Date;
+maxImpressions?: number;
 }
 
 export interface BannerMetrics {
-  impressions: number;
-  clicks: number;
-  conversions: number;
-  lastShown: Date;
+impressions: number;
+clicks: number;
+conversions: number;
+lastShown: Date;
 }
 
 /**

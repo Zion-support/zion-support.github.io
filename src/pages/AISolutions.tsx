@@ -1,6 +1,13 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Brain, Zap, Shield, Cloud, Database, Users, BarChart3, Cog, Target, Rocket } from 'lucide-react';
+import {
+Link
+} from 'react-router-dom';
+import {
+
+} from 'lucide-react';
+import {
+
+} from 'react-helmet-async';
 
 const AISolutions: React.FC = () => {
   const aiSolutions = [
@@ -107,23 +114,23 @@ const AISolutions: React.FC = () => {
       icon: BarChart3,
     },
     {
-      step: '03',
-      title: 'Development & Training',
-      description: 'Build and train custom AI models tailored to your specific business needs and data',
-      icon: Cog,
-    },
+step: '03',
+title: 'Development & Training',
+description: 'Build and train custom AI models tailored to your specific business needs and data',
+icon: Cog
+}
     {
-      step: '04',
-      title: 'Deployment & Integration',
-      description: 'Seamlessly integrate AI solutions into your existing systems and workflows',
-      icon: Rocket,
-    },
+step: '04',
+title: 'Deployment & Integration',
+description: 'Seamlessly integrate AI solutions into your existing systems and workflows',
+icon: Rocket
+}
     {
-      step: '05',
-      title: 'Monitoring & Optimization',
-      description: 'Continuously monitor performance and optimize AI models for better results',
-      icon: BarChart3,
-    },
+step: '05',
+title: 'Monitoring & Optimization',
+description: 'Continuously monitor performance and optimize AI models for better results',
+icon: BarChart3
+}
   ];
 
   return (

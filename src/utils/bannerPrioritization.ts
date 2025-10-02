@@ -4,13 +4,13 @@
  */
 
 export interface BannerMetadata {
-  id: string;
-  name: string;
-  priority: number;
-  value: string;
-  publishDate: Date;
-  category: 'quantum' | 'autonomous' | 'ai' | 'green' | 'sovereign' | 'general';
-  featured: boolean;
+id: string;
+name: string;
+priority: number;
+value: string;
+publishDate: Date;
+category: 'quantum' | 'autonomous' | 'ai' | 'green' | 'sovereign' | 'general';
+featured: boolean;
 }
 
 export const bannerRegistry: BannerMetadata[] = [

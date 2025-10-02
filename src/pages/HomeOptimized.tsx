@@ -1,13 +1,5 @@
 import {
-  ArrowRight,
-  CheckCircle,
-  Globe,
-  Rocket,
-  Shield,
-  Star,
-  Target,
-  Users,
-  Zap,
+
 } from "lucide-react";
 import Header from "../components/Header";
 import BannerRotationManager from "../components/BannerRotationManager";

@@ -1,17 +1,9 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { 
-  Zap, 
-  Brain, 
-  BarChart3, 
-  Shield, 
-  Clock, 
-  Users, 
-  CheckCircle, 
-  ArrowRight,
-  Phone,
-  Star,
-  TrendingUp
+import {
+Helmet
+} from 'react-helmet-async';
+import {
+TrendingUp
 } from 'lucide-react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
@@ -326,11 +318,12 @@ const AIWorkflowAutomation: React.FC = () => {
                   </ul>
                   <a
                     href="/contact"
-                    className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
-                      plan.popular
-                        ? 'bg-blue-600 text-white hover:bg-blue-700'
-                        : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
-                    }`}
+                    className={
+`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
+plan.popular
+? 'bg-blue-600 text-white hover:bg-blue-700',
+: 'bg-gray-100 text-gray-900 hover:bg-gray-200'
+}`}
                   >
                     Get Started
                   </a>

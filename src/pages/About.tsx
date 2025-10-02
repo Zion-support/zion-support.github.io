@@ -1,8 +1,9 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { 
-  Users, Target, Award, Globe, Shield,
-  TrendingUp, CheckCircle, Star, Phone, Mail, MapPin 
+import {
+Helmet
+} from 'react-helmet-async';
+import {
+
 } from 'lucide-react';
 
 const About: React.FC = () => {
@@ -15,46 +16,46 @@ const About: React.FC = () => {
 
   const values = [
     {
-      icon: Target,
-      title: 'Innovation First',
-      description: 'We stay ahead of technology trends to deliver solutions that give you a competitive edge in the market.'
-    },
+icon: Target,
+title: 'Innovation First',
+description: 'We stay ahead of technology trends to deliver solutions that give you a competitive edge in the market.'
+}
     {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-grade security measures protect your data and ensure compliance with industry standards.'
-    },
+icon: Shield,
+title: 'Enterprise Security',
+description: 'Bank-grade security measures protect your data and ensure compliance with industry standards.'
+}
     {
-      icon: TrendingUp,
-      title: 'Measurable Results',
-      description: 'We deliver quantifiable outcomes with average 75% cost reduction and 10x efficiency gains.'
-    },
+icon: TrendingUp,
+title: 'Measurable Results',
+description: 'We deliver quantifiable outcomes with average 75% cost reduction and 10x efficiency gains.'
+}
     {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Serving clients worldwide with 24/7 support and localized solutions for international markets.'
-    },
+icon: Globe,
+title: 'Global Reach',
+description: 'Serving clients worldwide with 24/7 support and localized solutions for international markets.'
+}
   ];
 
   const team = [
     {
-      name: 'Kleber Santos',
-      role: 'CEO & Founder',
-      description: 'Technology visionary with 15+ years in AI and enterprise solutions.',
-      email: 'kleber@ziontechgroup.com',
-    },
+name: 'Kleber Santos',
+role: 'CEO & Founder',
+description: 'Technology visionary with 15+ years in AI and enterprise solutions.',
+email: 'kleber@ziontechgroup.com'
+}
     {
-      name: 'AI Engineering Team',
-      role: 'Machine Learning Specialists',
-      description: 'Expert team of AI engineers specializing in cutting-edge machine learning technologies.',
-      email: 'ai-team@ziontechgroup.com',
-    },
+name: 'AI Engineering Team',
+role: 'Machine Learning Specialists',
+description: 'Expert team of AI engineers specializing in cutting-edge machine learning technologies.',
+email: 'ai-team@ziontechgroup.com'
+}
     {
-      name: 'DevOps Specialists',
-      role: 'Infrastructure Experts',
-      description: 'Cloud and DevOps professionals ensuring scalable and secure infrastructure solutions.',
-      email: 'devops@ziontechgroup.com',
-    },
+name: 'DevOps Specialists',
+role: 'Infrastructure Experts',
+description: 'Cloud and DevOps professionals ensuring scalable and secure infrastructure solutions.',
+email: 'devops@ziontechgroup.com'
+}
   ];
 
   return (

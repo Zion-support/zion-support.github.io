@@ -24,10 +24,10 @@ export interface SEOMetadata {
  * Generate meta tags for SEO
  */
 export const generateMetaTags = (metadata: SEOMetadata): string => {
-  const tags: string[] = [];
-
-  // Basic meta tags
-  tags.push(`<title>${escapeHtml(metadata.title)}</title>`);
+const tags: string[] = [];,
+// Basic meta tags
+tags.push(`<title>${escapeHtml(metadata.title)
+}</title>`);
   tags.push(`<meta name="description" content="${escapeHtml(metadata.description)}" />`);
 
   if (metadata.keywords && metadata.keywords.length > 0) {
@@ -85,13 +85,13 @@ export const generateStructuredData = (type: string, data: Record<string, any>):
  * Generate article structured data
  */
 export const generateArticleStructuredData = (article: {
-  title: string;
-  description: string;
-  author: string;
-  publishDate: string;
-  modifiedDate?: string;
-  image?: string;
-  url: string;
+title: string;,
+description: string;,
+author: string;,
+publishDate: string;,
+modifiedDate?: string;,
+image?: string;,
+url: string;
 }): string => {
   return generateStructuredData('Article', {
     headline: article.title,
@@ -190,14 +190,14 @@ ${urlsXml}
  * Generate robots.txt
  */
 export const generateRobotsTxt = (config: {
-  userAgent?: string;
-  disallow?: string[];
-  allow?: string[];
-  sitemap?: string;
+userAgent?: string;,
+disallow?: string[];,
+allow?: string[];,
+sitemap?: string;
 }): string => {
-  const lines: string[] = [];
-
-  lines.push(`User-agent: ${config.userAgent || '*'}`);
+const lines: string[] = [];,
+lines.push(`User-agent: ${config.userAgent || '*'
+}`);
 
   if (config.disallow && config.disallow.length > 0) {
     config.disallow.forEach(path => lines.push(`Disallow: ${path}`));
@@ -280,11 +280,10 @@ export const generateSlug = (title: string): string => {
  * Validate URL for SEO
  */
 export const validateSEOUrl = (url: string): { valid: boolean; issues: string[] } => {
-  const issues: string[] = [];
-  
-  if (url.length > 100) {
-    issues.push('URL is too long (>100 characters)');
-  }
+const issues: string[] = [];,
+if (url.length > 100) {
+issues.push('URL is too long (>100 characters)');
+}
   
   if (url.includes('_')) {
     issues.push('URL contains underscores (use hyphens instead)');
@@ -334,20 +333,19 @@ export const calculateReadingTime = (content: string, wordsPerMinute: number = 2
  * Check content quality for SEO
  */
 export const checkContentQuality = (content: string, title: string): {
-  score: number;
-  issues: string[];
-  recommendations: string[];
+score: number;,
+issues: string[];,
+recommendations: string[];
 } => {
-  const issues: string[] = [];
-  const recommendations: string[] = [];
-  let score = 100;
-  
-  // Word count check
-  const wordCount = content.trim().split(/\s+/).length;
-  if (wordCount < 300) {
-    issues.push('Content is too short (<300 words)');
-    score -= 20;
-  }
+const issues: string[] = [];,
+const recommendations: string[] = [];,
+let score = 100;
+// Word count check
+const wordCount = content.trim().split(/\s+/).length;
+if (wordCount < 300) {
+issues.push('Content is too short (<300 words)');
+score -= 20;
+}
   
   // Keyword density check (title in content)
   const titleWords = title.toLowerCase().split(/\s+/);

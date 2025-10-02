@@ -1,21 +1,20 @@
 interface ErrorInfo {
-  message: string;
-  stack?: string;
-  componentStack?: string;
-  timestamp: string;
-  url: string;
-  userAgent: string;
-  userId?: string;
+message: string;
+stack?: string;
+componentStack?: string;
+timestamp: string;
+url: string;
+userAgent: string;
+userId?: string;
 }
 
 class ErrorHandler {
-  private static instance: ErrorHandler;
-  private errorQueue: ErrorInfo[] = [];
-  private maxQueueSize = 50;
-
-  private constructor() {
-    this.setupGlobalErrorHandlers();
-  }
+private static instance: ErrorHandler;,
+private errorQueue: ErrorInfo[] = [];,
+private maxQueueSize = 50;
+private constructor() {
+this.setupGlobalErrorHandlers();
+}
 
   public static getInstance(): ErrorHandler {
     if (!ErrorHandler.instance) {
