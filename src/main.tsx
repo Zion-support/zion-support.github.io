@@ -17,7 +17,7 @@ if ('serviceWorker' in navigator) {
 }
 
 // Initialize performance monitoring
-import { performanceMonitor } from './utils/performance';
+import performanceMonitor from './utils/performance';
 
 // Report performance metrics
 performanceMonitor.getMetrics();
