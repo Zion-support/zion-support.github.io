@@ -48,15 +48,14 @@ const initializePerformanceEnhancements = () => {
   // Performance enhancements initialized
 };
 
-// Simple placeholder components for other routes
-const ServicesPage = () => (
-  <div className="min-h-screen bg-gray-50 py-16">
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h1 className="text-4xl font-bold text-gray-900 mb-8">Our Services</h1>
-      <p className="text-lg text-gray-600">Comprehensive AI and IT solutions for modern enterprises.</p>
-    </div>
-  </div>
-);
+// Import service components
+import Services from './pages/Services';
+import AIWorkflowAutomation from './pages/services/AIWorkflowAutomation';
+import AIVirtualAssistant from './pages/services/AIVirtualAssistant';
+import AIDataAnalytics from './pages/services/AIDataAnalytics';
+import CloudDevOps from './pages/services/CloudDevOps';
+import IoTEdgeComputing from './pages/services/IoTEdgeComputing';
+import BlockchainWeb3 from './pages/services/BlockchainWeb3';
 
 const CaseStudiesPage = () => (
   <div className="min-h-screen bg-gray-50 py-16">
@@ -164,7 +163,13 @@ const ContactPage = () => (
 const AppRouter = () => (
   <Routes>
     <Route path="/" element={<HomePage />} />
-    <Route path="/services" element={<ServicesPage />} />
+    <Route path="/services" element={<Services />} />
+    <Route path="/services/ai-workflow-automation" element={<AIWorkflowAutomation />} />
+    <Route path="/services/ai-virtual-assistant" element={<AIVirtualAssistant />} />
+    <Route path="/services/ai-data-analytics" element={<AIDataAnalytics />} />
+    <Route path="/services/cloud-devops" element={<CloudDevOps />} />
+    <Route path="/services/iot-edge-computing" element={<IoTEdgeComputing />} />
+    <Route path="/services/blockchain-web3" element={<BlockchainWeb3 />} />
     <Route path="/case-studies" element={<CaseStudiesPage />} />
     <Route path="/blog" element={<BlogPage />} />
     <Route path="/about" element={<AboutPage />} />
