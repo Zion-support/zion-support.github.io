@@ -191,9 +191,9 @@ const Resources: React.FC = () => {
             <div className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-8 text-center">Featured Resources</h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {featuredResources.map((resource, index) => (
+                {featuredResources.map((resource) => (
                   <div
-                    key={index}
+                    key={resource.title}
                     className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300"
                   >
                     <div className="flex items-center mb-4">
