@@ -3,6 +3,8 @@ import { Routes, Route } from 'react-router-dom';
 import './index.css';
 import ModernHeader from './components/Header';
 import ModernFooter from './components/Footer';
+import Header from './components/Header';
+import Footer from './components/Footer';
 import ModernHomepage from './components/LatestContentBanner2025';
 import SEOOptimizer from './components/SEOOptimizer';
 import AdvancedAnalytics from './components/AdvancedAnalytics';
@@ -10,7 +12,7 @@ import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import NotificationSystem from './components/NotificationSystem';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
-// import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 
 // Types and interfaces
 interface Notification {
@@ -233,7 +235,7 @@ const App: React.FC = () => {
             <main>
               <AppRouter />
             </main>
-          <Footer />
+          <ModernFooter />
         </div>
 
         {showPerformanceOptimizer && (
