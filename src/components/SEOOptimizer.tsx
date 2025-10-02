@@ -87,7 +87,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
 };
 
 // Utility function to generate structured data for different page types
-export const generateStructuredData = {
+const generateStructuredData = {
   organization: () => ({
     "@context": "https://schema.org",
     "@type": "Organization",
