@@ -36,21 +36,74 @@ export default function HomePage() {
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
               Transform your business with cutting-edge AI, micro SaaS, and enterprise IT solutions. 
-              Build faster, scale smarter, and achieve unprecedented results.
+              Build faster, scale smarter, and achieve unprecedented results with our proven solutions.
             </p>
+            <div className="flex flex-wrap justify-center gap-4 mb-8">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2 text-sm">
+                <span className="text-green-400 font-semibold">✓</span> 50+ Production-Ready Solutions
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2 text-sm">
+                <span className="text-green-400 font-semibold">✓</span> Fast 1-8 Week Delivery
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2 text-sm">
+                <span className="text-green-400 font-semibold">✓</span> Proven ROI & Results
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2 text-sm">
+                <span className="text-green-400 font-semibold">✓</span> Expert Support & Training
+              </div>
+            </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                href="/services" 
+                href="/additional-services" 
                 className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
               >
-                Explore Services
+                View All Services
               </Link>
               <Link 
                 href="/contact" 
                 className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
               >
-                Get Started
+                Get Free Consultation
               </Link>
+              <a 
+                href="tel:+13024640950"
+                className="bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
+              >
+                Call Now: +1 302 464 0950
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Service Statistics */}
+      <section className="py-16 bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Comprehensive Technology Solutions
+            </h2>
+            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+              We offer over 50 production-ready solutions across AI, micro SaaS, and IT services with proven ROI and fast delivery.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div>
+              <div className="text-4xl font-bold text-cyan-400 mb-2">50+</div>
+              <div className="text-blue-100">Production-Ready Solutions</div>
+            </div>
+            <div>
+              <div className="text-4xl font-bold text-cyan-400 mb-2">1-8</div>
+              <div className="text-blue-100">Weeks Delivery Time</div>
+            </div>
+            <div>
+              <div className="text-4xl font-bold text-cyan-400 mb-2">95%</div>
+              <div className="text-blue-100">Client Satisfaction Rate</div>
+            </div>
+            <div>
+              <div className="text-4xl font-bold text-cyan-400 mb-2">24/7</div>
+              <div className="text-blue-100">Expert Support Available</div>
             </div>
           </div>
         </div>
@@ -61,7 +114,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our Core Services
+              Our Core Service Categories
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Comprehensive solutions designed to accelerate your digital transformation
@@ -73,7 +126,7 @@ export default function HomePage() {
               title="AI Services & Solutions"
               description="Advanced artificial intelligence solutions including machine learning, deep learning, and AI automation."
               icon="🤖"
-              href="/services/ai-services"
+              href="/additional-services"
               features={[
                 "Machine Learning Models",
                 "Deep Learning Systems", 
@@ -86,7 +139,7 @@ export default function HomePage() {
               title="Micro SaaS Solutions"
               description="Scalable software-as-a-service applications designed for rapid deployment and growth."
               icon="⚡"
-              href="/services/micro-saas"
+              href="/additional-services"
               features={[
                 "Rapid Development",
                 "Scalable Architecture",
@@ -99,7 +152,7 @@ export default function HomePage() {
               title="IT Services & Solutions"
               description="Comprehensive IT infrastructure, cloud migration, and DevOps services."
               icon="☁️"
-              href="/services/it-services"
+              href="/additional-services"
               features={[
                 "Cloud Migration",
                 "DevOps & SRE",
