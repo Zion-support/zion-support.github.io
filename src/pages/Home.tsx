@@ -12,6 +12,8 @@ Helmet
 import {
 
 } from "lucide-react";
+=======
+import { CheckCircle, Sparkles } from "lucide-react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import NewServicesPromoBanner2026 from "../components/NewServicesPromoBanner2026";
@@ -94,6 +96,7 @@ publishedAt: '2025-01-05'
 }
   ];
 
+=======
   return (
     <>
       <Helmet>
@@ -122,7 +125,7 @@ publishedAt: '2025-01-05'
         <link rel="canonical" href="https://ziontechgroup.com" />
         
         {/* Enhanced Structured Data */}
-            <script type="application/ld+json">
+        <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Organization",
@@ -153,6 +156,7 @@ publishedAt: '2025-01-05'
 "areaServed": "US",
 "email": "kleber@ziontechgroup.com"
 }
+=======
             "sameAs": [
               "https://linkedin.com/company/zion-tech-group",
               "https://twitter.com/ziontechgroup",
@@ -254,6 +258,7 @@ publishedAt: '2025-01-05'
 "name": "Quantum Computing Consulting",
 "description": "Expert consulting on quantum computing solutions"
 }
+=======
                 }
               ]
             },
@@ -280,6 +285,7 @@ publishedAt: '2025-01-05'
 "bestRating": "5",
 "worstRating": "1"
 }
+=======
           })}
         </script>
         
