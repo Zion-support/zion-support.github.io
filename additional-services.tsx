@@ -389,6 +389,159 @@ export default function AdditionalServices() {
             'Compliance tracking and reporting'
           ],
           link: '/contact'
+        },
+        {
+          name: 'AI-Powered Video Content Creator',
+          blurb: 'Automated video generation with AI avatars, voice synthesis, and multi-language support.',
+          price: '$299 - $1,999/month',
+          eta: '3-4 weeks',
+          bullets: [
+            'AI avatar generation with custom branding',
+            'Natural voice synthesis in 50+ languages',
+            'Automated video editing and transitions',
+            'Social media optimization and formatting',
+            'Template library with industry-specific designs',
+            'Real-time collaboration and approval workflows'
+          ],
+          link: '/contact',
+          marketSize: '$15.7B video marketing market',
+          roi: '70% reduction in video production costs'
+        },
+        {
+          name: 'Smart Expense Management SaaS',
+          blurb: 'AI-powered expense tracking with automated categorization and compliance monitoring.',
+          price: '$49 - $299/month',
+          eta: '2-3 weeks',
+          bullets: [
+            'AI-powered receipt scanning and OCR',
+            'Automated expense categorization and tax optimization',
+            'Policy compliance monitoring and alerts',
+            'Multi-currency support with real-time conversion',
+            'Integration with accounting software (QuickBooks, Xero)',
+            'Advanced analytics and spending insights'
+          ],
+          link: '/contact',
+          marketSize: '$8.2B expense management market',
+          roi: '45% reduction in expense processing time'
+        },
+        {
+          name: 'AI-Powered Customer Feedback Analyzer',
+          blurb: 'Intelligent sentiment analysis and feedback categorization with actionable insights.',
+          price: '$199 - $999/month',
+          eta: '2-3 weeks',
+          bullets: [
+            'Real-time sentiment analysis across all channels',
+            'Automated feedback categorization and tagging',
+            'Trend analysis and performance tracking',
+            'Competitor sentiment comparison',
+            'Custom dashboard and reporting tools',
+            'Integration with CRM and support systems'
+          ],
+          link: '/contact',
+          marketSize: '$4.1B customer feedback market',
+          roi: '60% improvement in customer satisfaction scores'
+        },
+        {
+          name: 'Smart Contract Analytics Platform',
+          blurb: 'Blockchain analytics and monitoring for DeFi protocols and smart contract interactions.',
+          price: '$499 - $2,999/month',
+          eta: '3-5 weeks',
+          bullets: [
+            'Real-time smart contract monitoring and alerts',
+            'Transaction flow analysis and visualization',
+            'Risk assessment and vulnerability detection',
+            'DeFi protocol performance analytics',
+            'Custom dashboard and reporting tools',
+            'Multi-blockchain support (Ethereum, Polygon, BSC)'
+          ],
+          link: '/contact',
+          marketSize: '$2.1B blockchain analytics market',
+          roi: '80% reduction in smart contract risks'
+        },
+        {
+          name: 'AI-Powered SEO Content Optimizer',
+          blurb: 'Intelligent content optimization with keyword research and performance tracking.',
+          price: '$99 - $599/month',
+          eta: '1-2 weeks',
+          bullets: [
+            'AI-powered keyword research and analysis',
+            'Content optimization suggestions and scoring',
+            'Competitor analysis and gap identification',
+            'Performance tracking and ROI measurement',
+            'Multi-language SEO support',
+            'Integration with CMS and publishing platforms'
+          ],
+          link: '/contact',
+          marketSize: '$6.8B SEO tools market',
+          roi: '120% increase in organic traffic'
+        },
+        {
+          name: 'Smart Property Management System',
+          blurb: 'Comprehensive property management with tenant screening and maintenance automation.',
+          price: '$199 - $999/month',
+          eta: '3-4 weeks',
+          bullets: [
+            'Automated tenant screening and background checks',
+            'Maintenance request tracking and scheduling',
+            'Rent collection and payment processing',
+            'Property performance analytics and reporting',
+            'Tenant communication and portal management',
+            'Integration with accounting and banking systems'
+          ],
+          link: '/contact',
+          marketSize: '$3.2B property management market',
+          roi: '35% reduction in property management costs'
+        },
+        {
+          name: 'AI-Powered Legal Document Analyzer',
+          blurb: 'Intelligent legal document review with risk assessment and compliance checking.',
+          price: '$799 - $4,999/month',
+          eta: '4-6 weeks',
+          bullets: [
+            'Automated contract analysis and risk assessment',
+            'Compliance checking and regulatory monitoring',
+            'Document comparison and version control',
+            'Legal research and precedent analysis',
+            'Custom clause generation and templates',
+            'Integration with legal practice management systems'
+          ],
+          link: '/contact',
+          marketSize: '$12.4B legal tech market',
+          roi: '75% reduction in document review time'
+        },
+        {
+          name: 'Smart Fleet Management Platform',
+          blurb: 'IoT-powered fleet tracking with predictive maintenance and route optimization.',
+          price: '$299 - $1,999/month',
+          eta: '3-5 weeks',
+          bullets: [
+            'Real-time GPS tracking and route optimization',
+            'Predictive maintenance and vehicle health monitoring',
+            'Driver behavior analysis and safety scoring',
+            'Fuel consumption tracking and optimization',
+            'Compliance monitoring and reporting',
+            'Integration with dispatch and logistics systems'
+          ],
+          link: '/contact',
+          marketSize: '$5.8B fleet management market',
+          roi: '25% reduction in fleet operating costs'
+        },
+        {
+          name: 'AI-Powered Email Deliverability Optimizer',
+          blurb: 'Advanced email deliverability monitoring with reputation management and optimization.',
+          price: '$149 - $799/month',
+          eta: '2-3 weeks',
+          bullets: [
+            'Real-time deliverability monitoring and alerts',
+            'Sender reputation tracking and optimization',
+            'Spam score analysis and improvement suggestions',
+            'ISP-specific deliverability insights',
+            'A/B testing for subject lines and content',
+            'Integration with major email marketing platforms'
+          ],
+          link: '/contact',
+          marketSize: '$7.5B email marketing market',
+          roi: '40% improvement in email deliverability rates'
         }
       ]
     },
@@ -667,6 +820,159 @@ export default function AdditionalServices() {
             'False positive reduction through ML'
           ],
           link: '/contact'
+        },
+        {
+          name: 'AI-Powered Autonomous Testing Platform',
+          blurb: 'Self-healing test automation with AI-driven test generation and maintenance.',
+          price: '$1,500 - $8,000/month',
+          eta: '3-5 weeks',
+          bullets: [
+            'AI-generated test cases and scenarios',
+            'Self-healing test automation with element recognition',
+            'Intelligent test maintenance and updates',
+            'Performance testing with load prediction',
+            'Cross-browser and cross-device testing',
+            'Integration with CI/CD pipelines and DevOps tools'
+          ],
+          link: '/contact',
+          marketSize: '$4.1B test automation market',
+          roi: '85% reduction in test maintenance costs'
+        },
+        {
+          name: 'AI-Powered Voice Analytics Platform',
+          blurb: 'Advanced voice analysis for customer service optimization and sentiment detection.',
+          price: '$399 - $2,499/month',
+          eta: '3-4 weeks',
+          bullets: [
+            'Real-time voice sentiment analysis',
+            'Speaker identification and authentication',
+            'Call quality monitoring and optimization',
+            'Automated transcription with accuracy scoring',
+            'Customer emotion detection and escalation',
+            'Integration with call center and CRM systems'
+          ],
+          link: '/contact',
+          marketSize: '$2.8B voice analytics market',
+          roi: '50% improvement in customer service quality'
+        },
+        {
+          name: 'AI-Powered Predictive Maintenance System',
+          blurb: 'IoT sensor data analysis for predictive equipment maintenance and failure prevention.',
+          price: '$1,200 - $6,000/month',
+          eta: '4-8 weeks',
+          bullets: [
+            'Real-time sensor data processing and analysis',
+            'Machine learning failure prediction models',
+            'Automated maintenance scheduling and alerts',
+            'Equipment health scoring and trending',
+            'Cost optimization through proactive maintenance',
+            'Integration with CMMS and ERP systems'
+          ],
+          link: '/contact',
+          marketSize: '$4.5B predictive maintenance market',
+          roi: '40% reduction in unplanned downtime'
+        },
+        {
+          name: 'AI-Powered Content Moderation Suite',
+          blurb: 'Automated content moderation with multi-modal AI for text, image, and video analysis.',
+          price: '$299 - $1,999/month',
+          eta: '2-4 weeks',
+          bullets: [
+            'Multi-modal content analysis (text, image, video)',
+            'Real-time moderation with customizable policies',
+            'False positive reduction through ML feedback',
+            'Multi-language support and cultural context',
+            'Integration with social media and content platforms',
+            'Custom model training for specific use cases'
+          ],
+          link: '/contact',
+          marketSize: '$3.2B content moderation market',
+          roi: '70% reduction in moderation costs'
+        },
+        {
+          name: 'AI-Powered Energy Optimization Platform',
+          blurb: 'Smart energy management with predictive analytics and automated optimization.',
+          price: '$499 - $3,999/month',
+          eta: '4-6 weeks',
+          bullets: [
+            'Real-time energy consumption monitoring',
+            'Predictive energy demand forecasting',
+            'Automated load balancing and optimization',
+            'Renewable energy integration and management',
+            'Cost optimization through smart scheduling',
+            'Integration with smart grid and IoT devices'
+          ],
+          link: '/contact',
+          marketSize: '$12.8B energy management market',
+          roi: '30% reduction in energy costs'
+        },
+        {
+          name: 'AI-Powered Talent Acquisition Platform',
+          blurb: 'Intelligent recruitment with candidate matching and bias-free screening.',
+          price: '$799 - $4,999/month',
+          eta: '3-6 weeks',
+          bullets: [
+            'AI-powered candidate sourcing and matching',
+            'Bias-free resume screening and evaluation',
+            'Video interview analysis and scoring',
+            'Cultural fit assessment and team compatibility',
+            'Predictive hiring success modeling',
+            'Integration with ATS and HR systems'
+          ],
+          link: '/contact',
+          marketSize: '$15.8B talent acquisition market',
+          roi: '60% reduction in time-to-hire'
+        },
+        {
+          name: 'AI-Powered Supply Chain Optimization',
+          blurb: 'End-to-end supply chain optimization with demand forecasting and logistics automation.',
+          price: '$1,999 - $12,000/month',
+          eta: '6-12 weeks',
+          bullets: [
+            'AI-driven demand forecasting with 95% accuracy',
+            'Automated inventory optimization and reordering',
+            'Route optimization and logistics planning',
+            'Supplier performance monitoring and risk assessment',
+            'Real-time supply chain visibility and tracking',
+            'Integration with ERP and logistics systems'
+          ],
+          link: '/contact',
+          marketSize: '$37.4B supply chain management market',
+          roi: '25% reduction in supply chain costs'
+        },
+        {
+          name: 'AI-Powered Financial Risk Assessment',
+          blurb: 'Advanced financial risk modeling with real-time monitoring and automated alerts.',
+          price: '$2,500 - $15,000/month',
+          eta: '4-8 weeks',
+          bullets: [
+            'Real-time credit risk assessment and scoring',
+            'Market risk analysis and portfolio optimization',
+            'Operational risk monitoring and mitigation',
+            'Regulatory compliance monitoring and reporting',
+            'Stress testing and scenario analysis',
+            'Integration with trading and risk management systems'
+          ],
+          link: '/contact',
+          marketSize: '$28.5B financial risk management market',
+          roi: '35% reduction in credit losses'
+        },
+        {
+          name: 'AI-Powered Healthcare Diagnostics Assistant',
+          blurb: 'Medical image analysis and diagnostic support with AI-powered insights.',
+          price: '$3,000 - $20,000/month',
+          eta: '6-12 weeks',
+          bullets: [
+            'Medical image analysis (X-ray, MRI, CT, ultrasound)',
+            'Symptom analysis and preliminary diagnosis support',
+            'Drug interaction checking and allergy detection',
+            'Patient risk stratification and monitoring',
+            'Treatment recommendation engine',
+            'Integration with EHR and healthcare systems'
+          ],
+          link: '/contact',
+          marketSize: '$45.2B healthcare AI market',
+          roi: '30% improvement in diagnostic accuracy'
         }
       ]
     },
@@ -924,6 +1230,159 @@ export default function AdditionalServices() {
             'Developer portal and documentation'
           ],
           link: '/contact'
+        },
+        {
+          name: 'Cloud-Native Application Development',
+          blurb: 'Modern cloud-native applications with microservices architecture and container orchestration.',
+          price: '$8,000 - $75,000/project',
+          eta: '8-20 weeks',
+          bullets: [
+            'Microservices architecture design and implementation',
+            'Container orchestration with Kubernetes',
+            'Service mesh implementation and management',
+            'Cloud-native CI/CD pipeline setup',
+            'Auto-scaling and load balancing configuration',
+            'Monitoring and observability implementation'
+          ],
+          link: '/contact',
+          marketSize: '$445B cloud computing market',
+          roi: '60% reduction in infrastructure costs'
+        },
+        {
+          name: 'Enterprise Data Integration Platform',
+          blurb: 'Comprehensive data integration with ETL/ELT pipelines and real-time processing.',
+          price: '$5,000 - $40,000/project',
+          eta: '6-16 weeks',
+          bullets: [
+            'Data warehouse and lake architecture design',
+            'ETL/ELT pipeline development and automation',
+            'Real-time data streaming and processing',
+            'Data quality monitoring and validation',
+            'Master data management and governance',
+            'Integration with cloud and on-premise systems'
+          ],
+          link: '/contact',
+          marketSize: '$33.3B data integration market',
+          roi: '50% reduction in data processing time'
+        },
+        {
+          name: 'Multi-Cloud Infrastructure Management',
+          blurb: 'Comprehensive multi-cloud strategy with cost optimization and security management.',
+          price: '$3,000 - $25,000/month',
+          eta: '4-12 weeks',
+          bullets: [
+            'Multi-cloud architecture design and implementation',
+            'Cost optimization and resource management',
+            'Security and compliance across cloud providers',
+            'Disaster recovery and backup strategies',
+            'Performance monitoring and optimization',
+            'Cloud migration and modernization services'
+          ],
+          link: '/contact',
+          marketSize: '$445B cloud computing market',
+          roi: '35% reduction in cloud costs'
+        },
+        {
+          name: 'Edge Computing Solutions',
+          blurb: 'Edge computing infrastructure with IoT integration and real-time processing.',
+          price: '$2,500 - $20,000/project',
+          eta: '4-10 weeks',
+          bullets: [
+            'Edge computing infrastructure design',
+            'IoT device integration and management',
+            'Real-time data processing and analytics',
+            'Edge-to-cloud connectivity and synchronization',
+            'Latency optimization and performance tuning',
+            'Security and compliance for edge deployments'
+          ],
+          link: '/contact',
+          marketSize: '$15.7B edge computing market',
+          roi: '40% improvement in response times'
+        },
+        {
+          name: 'Enterprise Security Operations Center (SOC)',
+          blurb: '24/7 security monitoring with threat detection and incident response.',
+          price: '$5,000 - $30,000/month',
+          eta: '6-12 weeks',
+          bullets: [
+            '24/7 security monitoring and threat detection',
+            'Security incident response and management',
+            'Vulnerability assessment and penetration testing',
+            'Security awareness training and education',
+            'Compliance monitoring and reporting',
+            'Integration with SIEM and security tools'
+          ],
+          link: '/contact',
+          marketSize: '$366.1B cybersecurity market',
+          roi: '70% reduction in security incidents'
+        },
+        {
+          name: 'Digital Transformation Consulting',
+          blurb: 'Comprehensive digital transformation strategy with technology modernization and process optimization.',
+          price: '$2,000 - $20,000/month',
+          eta: '3-12 months',
+          bullets: [
+            'Digital transformation strategy and planning',
+            'Technology assessment and modernization roadmap',
+            'Process optimization and automation',
+            'Change management and training programs',
+            'Performance measurement and ROI tracking',
+            'Ongoing support and optimization'
+          ],
+          link: '/contact',
+          marketSize: '$1.8T digital transformation market',
+          roi: '300% average ROI within 2 years'
+        },
+        {
+          name: 'IoT Platform Development',
+          blurb: 'Comprehensive IoT solutions with device management and data analytics.',
+          price: '$10,000 - $100,000/project',
+          eta: '8-24 weeks',
+          bullets: [
+            'IoT device connectivity and management',
+            'Real-time data collection and processing',
+            'Predictive analytics and machine learning',
+            'Dashboard and visualization development',
+            'Integration with enterprise systems',
+            'Security and compliance implementation'
+          ],
+          link: '/contact',
+          marketSize: '$1.3T IoT market',
+          roi: '25% reduction in operational costs'
+        },
+        {
+          name: 'Enterprise Resource Planning (ERP) Implementation',
+          blurb: 'Complete ERP system implementation with customization and integration services.',
+          price: '$25,000 - $500,000/project',
+          eta: '12-36 weeks',
+          bullets: [
+            'ERP system selection and implementation',
+            'Business process mapping and optimization',
+            'Data migration and system integration',
+            'Custom development and configuration',
+            'User training and change management',
+            'Ongoing support and maintenance'
+          ],
+          link: '/contact',
+          marketSize: '$54.8B ERP market',
+          roi: '20% improvement in operational efficiency'
+        },
+        {
+          name: 'Customer Relationship Management (CRM) Solutions',
+          blurb: 'Advanced CRM implementation with sales automation and customer analytics.',
+          price: '$5,000 - $50,000/project',
+          eta: '4-16 weeks',
+          bullets: [
+            'CRM system design and implementation',
+            'Sales automation and lead management',
+            'Customer analytics and reporting',
+            'Integration with marketing and support systems',
+            'Mobile app development and deployment',
+            'Training and ongoing support'
+          ],
+          link: '/contact',
+          marketSize: '$58.8B CRM market',
+          roi: '45% improvement in sales productivity'
         }
       ]
     },
