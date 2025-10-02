@@ -1,37 +1,37 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Users, Target, Award, Globe, Brain, Shield } from 'lucide-react';
+import { Users, Target, Award, Brain, Shield } from 'lucide-react';
 
 const AboutPage: React.FC = () => {
   const values = [
     {
-      icon: Brain,
-      title: 'Innovation',
+      icon: Brain
+      title: 'Innovation'
       description: 'Pushing the boundaries of AI technology to create revolutionary solutions'
-    },
+    }
     {
-      icon: Shield,
-      title: 'Security',
+      icon: Shield
+      title: 'Security'
       description: 'Ensuring enterprise-grade security and compliance in all our solutions'
-    },
+    }
     {
-      icon: Users,
-      title: 'Collaboration',
+      icon: Users
+      title: 'Collaboration'
       description: 'Working closely with clients to understand and solve their unique challenges'
-    },
+    }
     {
-      icon: Award,
-      title: 'Excellence',
+      icon: Award
+      title: 'Excellence'
       description: 'Delivering exceptional results with proven ROI and measurable impact'
     }
   ];
 
   const milestones = [
-    { year: '2020', event: 'Founded Zion Tech Group' },
-    { year: '2021', event: 'First Fortune 500 client' },
-    { year: '2022', event: 'AI breakthrough platform launch' },
-    { year: '2023', event: '100+ enterprise clients' },
-    { year: '2024', event: 'Quantum computing integration' },
+    { year: '2020', event: 'Founded Zion Tech Group' }
+    { year: '2021', event: 'First Fortune 500 client' }
+    { year: '2022', event: 'AI breakthrough platform launch' }
+    { year: '2023', event: '100+ enterprise clients' }
+    { year: '2024', event: 'Quantum computing integration' }
     { year: '2025', event: '240+ Fortune 500 clients' }
   ];
 
@@ -67,7 +67,7 @@ const AboutPage: React.FC = () => {
                 Our Mission
               </h2>
               <p className="text-lg text-gray-600 mb-6">
-                To revolutionize enterprise operations through cutting-edge AI technologies, 
+                To revolutionize enterprise operations through cutting-edge AI technologies
                 delivering unprecedented value, efficiency, and innovation to businesses worldwide.
               </p>
               <p className="text-lg text-gray-600 mb-8">
@@ -94,7 +94,7 @@ const AboutPage: React.FC = () => {
               <Target className="w-16 h-16 mb-6" />
               <h3 className="text-2xl font-bold mb-4">Our Vision</h3>
               <p className="text-blue-100">
-                To be the global leader in AI-powered enterprise solutions, 
+                To be the global leader in AI-powered enterprise solutions
                 transforming how businesses operate and compete in the digital age.
               </p>
             </motion.div>
