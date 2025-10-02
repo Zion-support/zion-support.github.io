@@ -14,13 +14,21 @@ import {
   Clock,
   Star,
   TrendingUp,
+<<<<<<< HEAD
+  
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b18b
   Lock,
   Smartphone,
   Cloud,
   Database,
   Cpu,
   Target,
+<<<<<<< HEAD
+  Rocket,
+=======
   Rocket
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b18b
 } from "lucide-react";
 
 export default function AIMicroSAAS(): React.JSX.Element {

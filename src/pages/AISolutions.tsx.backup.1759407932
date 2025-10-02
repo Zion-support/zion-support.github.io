@@ -8,62 +8,113 @@ const AISolutions: React.FC = () => {
       icon: Brain,
       title: 'Machine Learning & Deep Learning',
       description: 'Advanced AI models for predictive analytics, pattern recognition, and intelligent decision making.',
+<<<<<<< HEAD
+      features: ['Neural Networks', 'Predictive Analytics', 'Pattern Recognition', 'Automated Learning'],
+      color: 'blue',
+=======
       features: ['Neural Networks', 'Predictive Analytics', 'Pattern Recognition', 'Automated Learning']
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b18b
     },
     {
       icon: Zap,
       title: 'AI Automation',
       description: 'Streamline business processes with intelligent automation solutions.',
+<<<<<<< HEAD
+      features: ['Process Automation', 'Workflow Optimization', 'Smart Decision Making', 'RPA Integration'],
+      color: 'purple',
+=======
       features: ['Process Automation', 'Workflow Optimization', 'Smart Decision Making', 'RPA Integration']
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b18b
     },
     {
       icon: Shield,
       title: 'AI-Powered Cybersecurity',
       description: 'Protect your digital assets with advanced AI-driven security solutions.',
+<<<<<<< HEAD
+      features: ['Threat Detection', 'Anomaly Detection', 'Automated Response', 'Risk Assessment'],
+      color: 'red',
+=======
       features: ['Threat Detection', 'Anomaly Detection', 'Automated Response', 'Risk Assessment']
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b18b
     },
     {
       icon: Cloud,
       title: 'Cloud AI Services',
       description: 'Scalable AI solutions delivered through cloud infrastructure.',
+<<<<<<< HEAD
+      features: ['Cloud ML Platforms', 'AI APIs', 'Scalable Computing', 'Edge AI'],
+      color: 'cyan',
+=======
       features: ['Cloud ML Platforms', 'AI APIs', 'Scalable Computing', 'Edge AI']
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b18b
     },
     {
       icon: Database,
       title: 'Data Intelligence',
       description: 'Transform raw data into actionable insights with AI-powered analytics.',
+<<<<<<< HEAD
+      features: ['Data Mining', 'Business Intelligence', 'Real-time Analytics', 'Data Visualization'],
+      color: 'emerald',
+=======
       features: ['Data Mining', 'Business Intelligence', 'Real-time Analytics', 'Data Visualization']
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b18b
     },
     {
       icon: Users,
       title: 'AI Customer Experience',
       description: 'Enhance customer interactions with intelligent chatbots and personalization.',
+<<<<<<< HEAD
+      features: ['Chatbots', 'Personalization', 'Sentiment Analysis', 'Customer Insights'],
+      color: 'fuchsia',
+=======
       features: ['Chatbots', 'Personalization', 'Sentiment Analysis', 'Customer Insights']
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b18b
     },
     {
       icon: BarChart3,
       title: 'AI Business Intelligence',
       description: 'Make data-driven decisions with AI-powered business intelligence tools.',
+<<<<<<< HEAD
+      features: ['Predictive Modeling', 'Performance Analytics', 'Market Intelligence', 'Strategic Planning'],
+      color: 'indigo',
+=======
       features: ['Predictive Modeling', 'Performance Analytics', 'Market Intelligence', 'Strategic Planning']
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b18b
     },
     {
       icon: Cog,
       title: 'AI Operations',
       description: 'Optimize operational efficiency with AI-driven process management.',
+<<<<<<< HEAD
+      features: ['Process Optimization', 'Resource Allocation', 'Performance Monitoring', 'Quality Control'],
+      color: 'orange',
+=======
       features: ['Process Optimization', 'Resource Allocation', 'Performance Monitoring', 'Quality Control']
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b18b
     },
     {
       icon: Target,
       title: 'AI Strategy Consulting',
       description: 'Strategic guidance for AI implementation and digital transformation.',
+<<<<<<< HEAD
+      features: ['AI Roadmap', 'Technology Assessment', 'Change Management', 'ROI Optimization'],
+      color: 'rose',
+=======
       features: ['AI Roadmap', 'Technology Assessment', 'Change Management', 'ROI Optimization']
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b18b
     },
     {
       icon: Rocket,
       title: 'AI Innovation Labs',
       description: 'Cutting-edge AI research and development for breakthrough solutions.',
+<<<<<<< HEAD
+      features: ['R&D Projects', 'Prototype Development', 'Innovation Workshops', 'Technology Transfer'],
+      color: 'teal',
+    },
+=======
       features: ['R&D Projects', 'Prototype Development', 'Innovation Workshops', 'Technology Transfer']
     }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b18b
   ];
 
   const industrySolutions = [
