@@ -1,7 +1,6 @@
 // @ts-nocheck
-import React from "react";
 
-export default function Page() {
+export default function Page(): void {
   return (
     <main className="min-h-screen bg-white text-gray-900">
       <section className="container mx-auto px-6 py-16">

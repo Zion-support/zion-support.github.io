@@ -1,6 +1,6 @@
-import { MetadataRoute } from 'next'
+type SiteEntry = { url: string; lastModified: Date; changeFrequency: 'daily' | 'weekly' | 'monthly'; priority: number };
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default function sitemap(): SiteEntry[] {
   const baseUrl = 'https://ziontechgroup.com'
   
   return [
@@ -11,7 +11,85 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
+      url: `${baseUrl}/services/ai-data-governance-platform`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/services/rpa-automation-suite`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/partners`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/pricing`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/support`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.7,
+    },
+    {
       url: `${baseUrl}/services`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/services-advertising`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/services/ai-services`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/services/micro-saas`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/services/it-services`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/services/ai-quantum-computing-2026`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/services/ai-autonomous-business-operations`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/services/ai-services/ai-fraud-detection-advanced`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/services/micro-saas/ai-predictive-maintenance`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.8,

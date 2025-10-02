@@ -1,5 +1,4 @@
 import React from "react";
-import { Helmet } from "react-helmet-async";
 
 export default function ConsentlessMetricsV3(): React.JSX.Element {
   return (

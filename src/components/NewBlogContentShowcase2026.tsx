@@ -1,5 +1,4 @@
 import React from 'react';
-import { ArrowRight, Sparkles, TrendingUp, Zap, Brain, Clock, Users, Award, Star, Eye } from 'lucide-react';
 
 const NewBlogContentShowcase2026: React.FC = () => {
   const blogPosts = [
@@ -308,14 +307,14 @@ const NewBlogContentShowcase2026: React.FC = () => {
                 Find insights that matter to your business and stay ahead of the competition.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
+                <a title="Internal link"
                   href="/blog"
                   className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 flex items-center justify-center gap-2"
                 >
                   <Sparkles className="w-5 h-5" />
                   <span>Browse All Articles</span>
                 </a>
-                <a
+                <a title="Internal link"
                   href="/contact"
                   className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2"
                 >

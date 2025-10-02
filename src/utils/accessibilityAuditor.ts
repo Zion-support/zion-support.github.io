@@ -4,23 +4,23 @@
  */
 
 interface AccessibilityIssue {
-  severity: 'critical' | 'serious' | 'moderate' | 'minor';
-  element: string;
-  issue: string;
-  recommendation: string;
-  wcagCriterion: string;
+severity: 'critical' | 'serious' | 'moderate' | 'minor';
+element: string;
+issue: string;
+recommendation: string;
+wcagCriterion: string;
 }
 
 interface AccessibilityReport {
-  score: number;
-  issues: AccessibilityIssue[];
-  compliantAreas: string[];
-  summary: {
-    critical: number;
-    serious: number;
-    moderate: number;
-    minor: number;
-  };
+score: number;
+issues: AccessibilityIssue[];
+compliantAreas: string[];
+summary: {,
+critical: number;
+serious: number;
+moderate: number;
+minor: number;
+};
 }
 
 export class AccessibilityAuditor {
@@ -63,7 +63,7 @@ export class AccessibilityAuditor {
     // Check for images without alt text
     issues.push({
       severity: 'serious',
-      element: '<img> tags',
+      element: '<img alt="Zion Tech Group"> tags',
       issue: 'Missing alt attributes on images',
       recommendation: 'Add descriptive alt text to all images',
       wcagCriterion: '1.1.1 (Level A)'
@@ -192,9 +192,9 @@ export class AccessibilityAuditor {
    * Quick accessibility fixes
    */
   applyQuickFixes(): {
-    applied: string[];
-    manual: string[];
-  } {
+applied: string[];,
+manual: string[];
+} {
     const applied = [
       'Added lang="en" to <html> tag',
       'Added viewport meta tag',

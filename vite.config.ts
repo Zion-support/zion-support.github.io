@@ -2,32 +2,29 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { resolve } from 'path'
 
-// https://vitejs.dev/config/
+// Optimized Vite configuration for better performance and smaller bundle size
 export default defineConfig({
   plugins: [
     react({
-      // Enable JSX runtime
-      jsxRuntime: 'automatic',
+      jsxRuntime: 'automatic'
     }),
   ],
+  root: '.',
+  publicDir: 'public',
   resolve: {
     alias: {
       '@': resolve(__dirname, 'src'),
-      '@components': resolve(__dirname, 'src/components'),
-      '@pages': resolve(__dirname, 'src/pages'),
-      '@utils': resolve(__dirname, 'src/utils'),
-      '@hooks': resolve(__dirname, 'src/hooks'),
-      '@styles': resolve(__dirname, 'src/styles'),
+      '@components': resolve(__dirname, 'components'),
+      '@app': resolve(__dirname, 'app'),
     },
   },
   build: {
     sourcemap: false,
     minify: 'terser',
     cssMinify: true,
+    target: 'es2020',
+    reportCompressedSize: false,
     rollupOptions: {
-      input: {
-        main: './index.html'
-      },
       treeshake: {
         moduleSideEffects: false,
         propertyReadSideEffects: false,
@@ -35,41 +32,69 @@ export default defineConfig({
         preset: 'smallest'
       },
       output: {
-        // Manual chunk splitting for better caching
         manualChunks: (id) => {
+          // Vendor chunks - more granular splitting
           if (id.includes('node_modules')) {
-            // Consolidate all vendor chunks into fewer, larger chunks
-            if (id.includes('react') || id.includes('react-dom') || id.includes('react-router')) {
-              return 'react-vendor';
+            // React core
+            if (id.includes('react') || id.includes('react-dom')) {
+              return 'vendor-react';
             }
-            if (id.includes('framer-motion') || id.includes('lucide-react') || id.includes('@headlessui')) {
-              return 'ui-vendor';
+            // Router
+            if (id.includes('react-router')) {
+              return 'vendor-router';
             }
-            if (id.includes('lodash') || id.includes('date-fns') || id.includes('axios')) {
-              return 'utils-vendor';
+            // UI libraries
+            if (id.includes('framer-motion')) {
+              return 'vendor-animations';
             }
-            // Group all other node_modules into a single vendor chunk
-            return 'vendor';
+            if (id.includes('lucide-react')) {
+              return 'vendor-icons';
+            }
+            // Utility libraries
+            if (id.includes('clsx') || id.includes('tailwind-merge')) {
+              return 'vendor-styling';
+            }
+            if (id.includes('axios')) {
+              return 'vendor-http';
+            }
+            // SEO and analytics
+            if (id.includes('react-helmet') || id.includes('web-vitals')) {
+              return 'vendor-seo';
+            }
+            return 'vendor-misc';
           }
-          // Consolidate component chunks
+          // App chunks - lazy load pages
+          if (id.includes('src/pages/')) {
+            // Split large page bundles
+            if (id.includes('services/')) {
+              return 'pages-services';
+            }
+            if (id.includes('case-studies/')) {
+              return 'pages-case-studies';
+            }
+            if (id.includes('blog/')) {
+              return 'pages-blog';
+            }
+            return 'pages-core';
+          }
+          // Component chunks
           if (id.includes('src/components/')) {
-            return 'components';
+            if (id.includes('banner') || id.includes('Banner')) {
+              return 'components-banners';
+            }
+            return 'components-core';
           }
-          // Consolidate utility chunks
-          if (id.includes('src/utils/')) {
-            return 'utils';
+          // Charts and data visualization
+          if (id.includes('recharts') || id.includes('d3')) {
+            return 'vendor-charts';
           }
-          // Consolidate hooks
-          if (id.includes('src/hooks/')) {
-            return 'hooks';
+          // Large libraries
+          if (id.includes('lodash') || id.includes('moment')) {
+            return 'vendor-large';
           }
+          return 'vendor';
         },
-        chunkFileNames: (chunkInfo) => {
-          const facadeModuleId = chunkInfo.facadeModuleId
-            ? chunkInfo.facadeModuleId.split('/').pop().replace('.tsx', '').replace('.ts', '')
-            : 'chunk';
-          return `assets/js/${facadeModuleId}-[hash].js`;
-        },
+        chunkFileNames: 'assets/js/[name]-[hash].js',
         entryFileNames: 'assets/js/main-[hash].js',
         assetFileNames: (assetInfo) => {
           const info = assetInfo.name.split('.');
@@ -78,30 +103,23 @@ export default defineConfig({
             return `assets/css/[name]-[hash].${ext}`;
           }
           return `assets/[name]-[hash].${ext}`;
-        },
+        }
       },
     },
-    // Optimize chunk size
     chunkSizeWarningLimit: 1000,
     terserOptions: {
       compress: {
         drop_console: true,
         drop_debugger: true,
         pure_funcs: ['console.log', 'console.info', 'console.debug'],
-        passes: 3,
-        unsafe: true,
-        unsafe_comps: true,
-        unsafe_math: true,
-        unsafe_proto: true,
+        passes: 2,
+        unsafe: false,
         dead_code: true,
         unused: true,
       },
       mangle: {
         safari10: true,
         toplevel: true,
-        properties: {
-          regex: /^_/
-        }
       },
       format: {
         comments: false,
@@ -131,15 +149,15 @@ export default defineConfig({
       'clsx',
       'tailwind-merge',
       'axios',
-      'web-vitals',
     ],
     exclude: ['@vite/client', '@vite/env'],
   },
+  assetsInclude: ['**/*.html', '**/*.new'],
   define: {
     global: 'globalThis',
   },
   esbuild: {
-    target: 'esnext',
+    target: 'es2020',
     format: 'esm',
     treeShaking: true,
     minifyIdentifiers: true,

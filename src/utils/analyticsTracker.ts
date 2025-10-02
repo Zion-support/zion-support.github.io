@@ -11,22 +11,22 @@ export interface AnalyticsEvent {
   timestamp: string;
   sessionId?: string;
   userId?: string;
-  metadata?: Record<string, any>;
+  metadata?: Record<string, string | number | boolean>;
 }
 
 export interface PageViewEvent {
-  path: string;
-  title: string;
-  referrer?: string;
-  timestamp: string;
-  duration?: number;
+path: string;
+title: string;
+referrer?: string;
+timestamp: string;
+duration?: number;
 }
 
 export interface ConversionEvent {
-  type: 'newsletter_signup' | 'contact_form' | 'service_inquiry' | 'blog_read';
-  value: number;
-  source?: string;
-  campaign?: string;
+type: 'newsletter_signup' | 'contact_form' | 'service_inquiry' | 'blog_read';
+value: number;
+source?: string;
+campaign?: string;
 }
 
 /**
@@ -350,17 +350,15 @@ const sendToAnalytics = async (event: AnalyticsEvent): Promise<void> => {
  * Store event locally for offline analysis
  */
 const storeEventLocally = (event: AnalyticsEvent): void => {
-  try {
-    const key = 'analytics_events';
-    const stored = localStorage.getItem(key);
-    const events: AnalyticsEvent[] = stored ? JSON.parse(stored) : [];
-    
-    events.push(event);
-    
-    // Keep only last 100 events
-    if (events.length > 100) {
-      events.shift();
-    }
+try {
+const key = 'analytics_events';
+const stored = localStorage.getItem(key);
+const events: AnalyticsEvent[] = stored ? JSON.parse(stored) : [];,
+events.push(event);
+// Keep only last 100 events
+if (events.length > 100) {
+events.shift();
+}
     
     localStorage.setItem(key, JSON.stringify(events));
   } catch (error) {
@@ -423,9 +421,9 @@ const generateTransactionId = (): string => {
  * Get analytics summary
  */
 export const getAnalyticsSummary = (): {
-  events: AnalyticsEvent[];
-  sessionId: string;
-  userId: string;
+events: AnalyticsEvent[];,
+sessionId: string;,
+userId: string;
 } => {
   const stored = localStorage.getItem('analytics_events');
   const events: AnalyticsEvent[] = stored ? JSON.parse(stored) : [];

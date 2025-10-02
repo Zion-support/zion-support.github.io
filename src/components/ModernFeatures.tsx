@@ -1,5 +1,4 @@
 import React from 'react';
-import { Zap, Shield, TrendingUp, Users, Globe, Award } from 'lucide-react';
 
 const ModernFeatures: React.FC = () => {
   const features = [

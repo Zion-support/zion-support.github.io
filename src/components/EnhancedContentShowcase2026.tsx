@@ -1,20 +1,18 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 
 interface ContentItem {
-  id: string;
-  title: string;
-  description: string;
-  type: 'blog' | 'case-study' | 'guide';
-  readTime: string;
-  publishDate: string;
-  category: string;
-  featured?: boolean;
-  href: string;
-  metrics?: {
-    label: string;
-    value: string;
-  }[];
+id: string;
+title: string;
+description: string;
+type: 'blog' | 'case-study' | 'guide';
+readTime: string;
+publishDate: string;
+category: string;
+featured?: boolean;
+href: string;
+metrics?: {,
+label: string;
+value: string;
+}[];
 }
 
 const contentItems: ContentItem[] = [
@@ -118,7 +116,7 @@ const contentItems: ContentItem[] = [
 
 const categories = ['All', 'Cloud Operations', 'FinTech', 'Retail', 'Sustainability', 'Architecture', 'FinOps'];
 
-export default function EnhancedContentShowcase2026() {
+export default function EnhancedContentShowcase2026(): void {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [sortBy, setSortBy] = useState('featured');
 
@@ -139,24 +137,24 @@ export default function EnhancedContentShowcase2026() {
   });
 
   const getTypeColor = (type: string) => {
-    switch (type) {
-      case 'blog': return 'bg-blue-100 text-blue-800';
-      case 'case-study': return 'bg-green-100 text-green-800';
-      case 'guide': return 'bg-purple-100 text-purple-800';
-      default: return 'bg-gray-100 text-gray-800';
-    }
+switch (type) {
+case 'blog': return 'bg-blue-100 text-blue-800';,
+case 'case-study': return 'bg-green-100 text-green-800';,
+case 'guide': return 'bg-purple-100 text-purple-800';,
+default: return 'bg-gray-100 text-gray-800';
+}
   };
 
   const getCategoryColor = (category: string) => {
-    switch (category) {
-      case 'Cloud Operations': return 'bg-cyan-100 text-cyan-800';
-      case 'FinTech': return 'bg-emerald-100 text-emerald-800';
-      case 'Retail': return 'bg-orange-100 text-orange-800';
-      case 'Sustainability': return 'bg-green-100 text-green-800';
-      case 'Architecture': return 'bg-indigo-100 text-indigo-800';
-      case 'FinOps': return 'bg-violet-100 text-violet-800';
-      default: return 'bg-gray-100 text-gray-800';
-    }
+switch (category) {
+case 'Cloud Operations': return 'bg-cyan-100 text-cyan-800';,
+case 'FinTech': return 'bg-emerald-100 text-emerald-800';,
+case 'Retail': return 'bg-orange-100 text-orange-800';,
+case 'Sustainability': return 'bg-green-100 text-green-800';,
+case 'Architecture': return 'bg-indigo-100 text-indigo-800';,
+case 'FinOps': return 'bg-violet-100 text-violet-800';,
+default: return 'bg-gray-100 text-gray-800';
+}
   };
 
   return (

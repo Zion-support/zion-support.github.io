@@ -1,6 +1,6 @@
-import { ArrowLeft, Zap, Brain, Rocket, DollarSign, CheckCircle, TrendingUp } from "lucide-react";
-import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
+import {
+Link
+} from "react-router-dom";
 import Header from "../../components/Header";
 
 const RealTimeCognitiveAutomation = () => {

@@ -1,6 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Building2, TrendingUp, Award, Users, ArrowRight, Star, CheckCircle, Zap } from 'lucide-react';
 
 const January2025EnterpriseSuccessBanner: React.FC = () => {
   return (

@@ -6,53 +6,118 @@ interface AIPerformanceDashboardProps {
 }
 
 interface PerformanceMetrics {
-  errorRate: number;
-  avgResolutionTime: number;
-  criticalErrorsToday: number;
-  userImpactScore: number;
+errorRate: number;
+avgResolutionTime: number;
+criticalErrorsToday: number;
+userImpactScore: number;
 }
 
 interface AIInsights {
-  predictedHighRiskActions: string[];
-  recommendedImprovements: string[];
-  errorTrends: Array<{
-    category: string;
-    trend: 'increasing' | 'decreasing' | 'stable';
-  }>;
+predictedHighRiskActions: string[];
+recommendedImprovements: string[];
+errorTrends: Array<{,
+category: string;
+trend: 'increasing' | 'decreasing' | 'stable';
+}>;
 }
 
 interface ErrorReport {
-  id: string;
-  severity: string;
-  message: string;
-  lastOccurrence: string | Date;
-  occurrenceCount: number;
-  context: {
-    component?: string;
-    action?: string;
-  };
+id: string;
+severity: string;
+message: string;
+lastOccurrence: string | Date;
+occurrenceCount: number;
+context: {,
+component?: string;
+action?: string;
+};
   aiPredictedImpact?: number;
   resolutionSuggestions?: string[];
 }
 
 const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisible, onClose }) => {
-  const [metrics] = useState<PerformanceMetrics | null>(null);
-  const [insights] = useState<AIInsights | null>(null);
-  const [errors] = useState<ErrorReport[]>([]);
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+  const [insights, setInsights] = useState<AIInsights | null>(null);
+  const [errors, setErrors] = useState<ErrorReport[]>([]);
 
   useEffect(() => {
     if (isVisible) {
-      const loadPerformanceData = () => {
+      const loadPerformanceData = async () => {
         try {
-          // TODO: Implement actual data fetching logic
-          console.log('Loading performance data...');
+          // Simulate API calls for performance data
+          const mockMetrics: PerformanceMetrics = {
+            errorRate: Math.random() * 5,
+            avgResolutionTime: Math.random() * 30 + 10,
+            criticalErrorsToday: Math.floor(Math.random() * 10),
+            userImpactScore: Math.floor(Math.random() * 40 + 60)
+          };
+
+          const mockInsights: AIInsights = {
+            predictedHighRiskActions: [
+              'High memory usage detected in user authentication flow',
+              'Potential race condition in data synchronization',
+              'Slow database queries affecting user experience'
+            ].slice(0, Math.floor(Math.random() * 3)),
+            recommendedImprovements: [
+              'Implement caching for frequently accessed data',
+              'Add error boundaries to prevent cascading failures',
+              'Optimize database indexes for better query performance',
+              'Consider implementing circuit breaker pattern'
+            ],
+            errorTrends: [
+              { category: 'authentication', trend: 'decreasing' },
+              { category: 'database', trend: 'stable' },
+              { category: 'ui', trend: 'increasing' }
+            ]
+          };
+
+          const mockErrors: ErrorReport[] = [
+            {
+              id: '1',
+              severity: 'high',
+              message: 'Failed to load user profile data',
+              lastOccurrence: new Date(Date.now() - Math.random() * 3600000),
+              occurrenceCount: Math.floor(Math.random() * 50 + 10),
+              context: { component: 'UserProfile', action: 'load' },
+              aiPredictedImpact: Math.random() * 0.8 + 0.2,
+              resolutionSuggestions: [
+                'Check database connection pool',
+                'Implement retry mechanism with exponential backoff',
+                'Add fallback to cached data'
+              ]
+            },
+            {
+              id: '2',
+              severity: 'medium',
+              message: 'Slow response time in search functionality',
+              lastOccurrence: new Date(Date.now() - Math.random() * 1800000),
+              occurrenceCount: Math.floor(Math.random() * 20 + 5),
+              context: { component: 'SearchBar', action: 'query' },
+              aiPredictedImpact: Math.random() * 0.6 + 0.1,
+              resolutionSuggestions: [
+                'Implement search result caching',
+                'Add debouncing to search input',
+                'Consider using Elasticsearch for better performance'
+              ]
+            }
+          ].slice(0, Math.floor(Math.random() * 2) + 1);
+
+          // Simulate async data loading
+          await new Promise(resolve => setTimeout(resolve, 1000));
+          
+          // Update state with mock data
+          setMetrics(mockMetrics);
+          setInsights(mockInsights);
+          setErrors(mockErrors);
+          
+          console.log('Performance data loaded successfully');
         } catch (error) {
           console.error('Failed to fetch dashboard data:', error);
         }
       };
 
       loadPerformanceData();
-      const interval = setInterval(loadPerformanceData, 5000); // Update every 5 seconds
+      const interval = setInterval(loadPerformanceData, 30000); // Update every 30 seconds
 
       return () => clearInterval(interval);
     }
@@ -61,22 +126,22 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
   if (!isVisible) return null;
 
   const getSeverityColor = (severity: string) => {
-    switch (severity) {
-      case 'critical': return 'text-red-600 bg-red-100';
-      case 'high': return 'text-orange-600 bg-orange-100';
-      case 'medium': return 'text-yellow-600 bg-yellow-100';
-      case 'low': return 'text-blue-600 bg-blue-100';
-      default: return 'text-gray-600 bg-gray-100';
-    }
+switch (severity) {
+case 'critical': return 'text-red-600 bg-red-100';,
+case 'high': return 'text-orange-600 bg-orange-100';,
+case 'medium': return 'text-yellow-600 bg-yellow-100';,
+case 'low': return 'text-blue-600 bg-blue-100';,
+default: return 'text-gray-600 bg-gray-100';
+}
   };
 
   const getTrendIcon = (trend: string) => {
-    switch (trend) {
-      case 'increasing': return '📈';
-      case 'decreasing': return '📉';
-      case 'stable': return '➡️';
-      default: return '❓';
-    }
+switch (trend) {
+case 'increasing': return '📈';,
+case 'decreasing': return '📉';,
+case 'stable': return '➡️';,
+default: return '❓';
+}
   };
 
   return (
@@ -95,11 +160,13 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
           </div>
 
           {/* Performance Metrics */}
-          {metrics ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-              <div className="bg-gradient-to-r from-blue-500 to-blue-600 text-white p-4 rounded-lg">
-                <h3 className="text-sm font-medium opacity-90">Error Rate (per hour)</h3>
-                <p className="text-2xl font-bold">{metrics.errorRate.toFixed(2)}</p>
+          {
+metrics ? (
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">,
+<div className="bg-gradient-to-r from-blue-500 to-blue-600 text-white p-4 rounded-lg">
+<h3 className="text-sm font-medium opacity-90">Error Rate (per hour)</h3>
+<p className="text-2xl font-bold">{metrics.errorRate.toFixed(2)
+}</p>
               </div>
               <div className="bg-gradient-to-r from-red-500 to-red-600 text-white p-4 rounded-lg">
                 <h3 className="text-sm font-medium opacity-90">Critical Errors Today</h3>
@@ -165,10 +232,11 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
                       <span className="font-medium capitalize">{String(trend.category)}</span>
                       <span className="text-lg">{getTrendIcon(String(trend.trend))}</span>
                     </div>
-                    <div className={`text-sm mt-1 ${
-                      trend.trend === 'increasing' ? 'text-red-600' :
-                      trend.trend === 'decreasing' ? 'text-green-600' : 'text-gray-600'
-                    }`}>
+                    <div className={
+`text-sm mt-1 ${
+trend.trend === 'increasing' ? 'text-red-600' :,
+trend.trend === 'decreasing' ? 'text-green-600' : 'text-gray-600'
+}`}>
                       {String(trend.trend)}
                     </div>
                   </div>

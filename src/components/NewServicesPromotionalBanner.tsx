@@ -43,7 +43,7 @@ const NewServicesPromotionalBanner: React.FC = () => {
               </div>
             </div>
             <div className="text-emerald-400 font-bold text-lg mb-4">Starting at $25,000/month</div>
-            <a 
+            <a title="Internal link" 
               href="/services/quantum-ai-consulting" 
               className="inline-block bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50"
             >
@@ -73,7 +73,7 @@ const NewServicesPromotionalBanner: React.FC = () => {
               </div>
             </div>
             <div className="text-blue-400 font-bold text-lg mb-4">Starting at $15,000/month</div>
-            <a 
+            <a title="Internal link" 
               href="/services/ai-security-soc" 
               className="inline-block bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-400 hover:to-cyan-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50"
             >
@@ -103,7 +103,7 @@ const NewServicesPromotionalBanner: React.FC = () => {
               </div>
             </div>
             <div className="text-purple-400 font-bold text-lg mb-4">Starting at $35,000/month</div>
-            <a 
+            <a title="Internal link" 
               href="/services/autonomous-operations" 
               className="inline-block bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50"
             >
@@ -153,7 +153,7 @@ const NewServicesPromotionalBanner: React.FC = () => {
               <div className="text-2xl text-emerald-400 font-bold mb-6">
                 Save $30,000/month!
               </div>
-              <a 
+              <a title="Internal link" 
                 href="/contact?offer=bundle-services-40" 
                 className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50 transform hover:-translate-y-1"
               >

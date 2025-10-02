@@ -7,16 +7,15 @@
  * Focus trap for modals and dialogs
  */
 export class FocusTrap {
-  private element: HTMLElement;
-  private focusableElements: HTMLElement[] = [];
-  private firstFocusableElement?: HTMLElement;
-  private lastFocusableElement?: HTMLElement;
-  private previouslyFocusedElement?: HTMLElement;
-
-  constructor(element: HTMLElement) {
-    this.element = element;
-    this.updateFocusableElements();
-  }
+private element: HTMLElement;,
+private focusableElements: HTMLElement[] = [];,
+private firstFocusableElement?: HTMLElement;,
+private lastFocusableElement?: HTMLElement;,
+private previouslyFocusedElement?: HTMLElement;,
+constructor(element: HTMLElement) {,
+this.element = element;
+this.updateFocusableElements();
+}
 
   private updateFocusableElements() {
     const focusableSelectors = [
@@ -84,7 +83,7 @@ export class FocusTrap {
 export function announceToScreenReader(
   message: string,
   priority: 'polite' | 'assertive' = 'polite'
-) {
+): void {
   if (typeof document === 'undefined') return;
 
   const announcement = document.createElement('div');
@@ -114,11 +113,11 @@ export function prefersReducedMotion(): boolean {
  * Check if high contrast is preferred
  */
 export function prefersHighContrast(): boolean {
-  if (typeof window === 'undefined') return false;
-  return (
-    window.matchMedia('(prefers-contrast: high)').matches ||
-    window.matchMedia('(-ms-high-contrast: active)').matches
-  );
+if (typeof window === 'undefined') return false;
+return (
+window.matchMedia('(prefers-contrast: high)').matches ||,
+window.matchMedia('(-ms-high-contrast: active)').matches,
+);
 }
 
 /**
@@ -132,7 +131,7 @@ export function generateAriaId(prefix = 'aria'): string {
 /**
  * Skip link helper for keyboard navigation
  */
-export function setupSkipLinks() {
+export function setupSkipLinks(): void {
   if (typeof document === 'undefined') return;
 
   const skipLink = document.querySelector<HTMLAnchorElement>('a.skip-link');
@@ -226,7 +225,7 @@ function hexToRgb(hex: string): { r: number; g: number; b: number } | null {
 /**
  * Create accessible loading state
  */
-export function createLoadingAnnouncement(message = 'Loading...') {
+export function createLoadingAnnouncement(message = 'Loading...'): void {
   if (typeof document === 'undefined') return null;
 
   const loader = document.createElement('div');
@@ -243,8 +242,8 @@ export function createLoadingAnnouncement(message = 'Loading...') {
  * Ensure proper heading hierarchy
  */
 export function validateHeadingHierarchy(): {
-  valid: boolean;
-  issues: string[];
+valid: boolean;,
+issues: string[];
 } {
   if (typeof document === 'undefined') {
     return { valid: true, issues: [] };
@@ -340,7 +339,7 @@ export function makeKeyboardAccessible(
 /**
  * Initialize accessibility features
  */
-export function initializeAccessibility() {
+export function initializeAccessibility(): void {
   if (typeof document === 'undefined') return;
 
   // Setup skip links

@@ -1,28 +1,26 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Sparkles, Zap, Rocket, Star } from 'lucide-react';
 
 export interface FeaturedItem {
-  title: string;
-  category: string;
-  link: string;
-  metrics?: string;
+title: string;
+category: string;
+link: string;
+metrics?: string;
 }
 
 export interface UnifiedPromotionalBannerProps {
-  variant?: 'default' | 'premium' | 'hero' | 'compact' | 'mega';
-  title: string;
-  description: string;
-  ctaText: string;
-  ctaLink: string;
-  theme?: 'blue' | 'purple' | 'green' | 'orange' | 'red' | 'gradient' | 'cyan';
-  featuredItems?: FeaturedItem[];
-  showCount?: number;
-  className?: string;
-  icon?: 'sparkles' | 'zap' | 'rocket' | 'star' | 'none';
-  animated?: boolean;
-  badge?: string;
-  date?: string;
+variant?: 'default' | 'premium' | 'hero' | 'compact' | 'mega';
+title: string;
+description: string;
+ctaText: string;
+ctaLink: string;
+theme?: 'blue' | 'purple' | 'green' | 'orange' | 'red' | 'gradient' | 'cyan';
+featuredItems?: FeaturedItem[];
+showCount?: number;
+className?: string;
+icon?: 'sparkles' | 'zap' | 'rocket' | 'star' | 'none';
+animated?: boolean;
+badge?: string;
+date?: string;
 }
 
 const UnifiedPromotionalBanner: React.FC<UnifiedPromotionalBannerProps> = ({
@@ -109,33 +107,39 @@ const UnifiedPromotionalBanner: React.FC<UnifiedPromotionalBannerProps> = ({
         )}
 
         {/* Title */}
-        <h2 className={`
-          font-extrabold mb-4 bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent
-          ${variant === 'hero' || variant === 'mega' ? 'text-4xl md:text-5xl' : 
-            variant === 'premium' ? 'text-3xl md:text-4xl' : 
-            variant === 'compact' ? 'text-xl md:text-2xl' : 
-            'text-2xl md:text-3xl'}
+        <h2 className={
+`
+font-extrabold mb-4 bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent
+${variant === 'hero' || variant === 'mega' ? 'text-4xl md:text-5xl' :,
+variant === 'premium' ? 'text-3xl md:text-4xl' :,
+variant === 'compact' ? 'text-xl md:text-2xl' :,
+'text-2xl md:text-3xl'
+}
         `}>
           {title}
         </h2>
 
         {/* Description */}
-        <p className={`
-          text-gray-200 mb-6
-          ${variant === 'hero' || variant === 'mega' ? 'text-lg md:text-xl' : 
-            variant === 'compact' ? 'text-sm' : 
-            'text-base md:text-lg'}
+        <p className={
+`
+text-gray-200 mb-6
+${variant === 'hero' || variant === 'mega' ? 'text-lg md:text-xl' :,
+variant === 'compact' ? 'text-sm' :,
+'text-base md:text-lg'
+}
         `}>
           {description}
         </p>
 
         {/* Featured Items */}
-        {visibleItems.length > 0 && (
-          <div className={`
-            grid gap-4 mb-6
-            ${variant === 'mega' ? 'md:grid-cols-3' : 
-              variant === 'hero' || variant === 'premium' ? 'md:grid-cols-2' : 
-              'md:grid-cols-1'}
+        {
+visibleItems.length > 0 && (
+<div className={`
+grid gap-4 mb-6
+${variant === 'mega' ? 'md:grid-cols-3' :,
+variant === 'hero' || variant === 'premium' ? 'md:grid-cols-2' :,
+'md:grid-cols-1'
+}
           `}>
             {visibleItems.map((item, index) => (
               <Link
@@ -171,9 +175,11 @@ const UnifiedPromotionalBanner: React.FC<UnifiedPromotionalBannerProps> = ({
               inline-flex items-center gap-2 px-8 py-4 rounded-lg font-bold text-white
               bg-gradient-to-r ${buttonThemes[theme]}
               transform transition-all duration-300 hover:scale-105 hover:shadow-xl
-              ${variant === 'compact' ? 'px-6 py-3 text-sm' : 
-                variant === 'hero' || variant === 'mega' ? 'px-10 py-5 text-lg' : 
-                'text-base'}
+              ${
+variant === 'compact' ? 'px-6 py-3 text-sm' :,
+variant === 'hero' || variant === 'mega' ? 'px-10 py-5 text-lg' :,
+'text-base'
+}
             `}
           >
             {ctaText}

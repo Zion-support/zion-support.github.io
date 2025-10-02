@@ -1,7 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
 
-export default function October2025NewestAIInnovationsBanner() {
+export default function October2025NewestAIInnovationsBanner(): void {
   return (
     <div className="bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white py-16 px-4">
       <div className="max-w-7xl mx-auto">

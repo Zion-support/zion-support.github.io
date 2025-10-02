@@ -1,16 +1,16 @@
 // New January 2026 Blog Posts - Additional Content
 export interface BlogPost {
-  id: string;
-  title: string;
-  excerpt: string;
-  content: string;
-  author: string;
-  publishedAt: string;
-  readTime: number;
-  category: string;
-  tags: string[];
-  featured: boolean;
-  imageUrl?: string;
+id: string;
+title: string;
+excerpt: string;
+content: string;
+author: string;
+publishedAt: string;
+readTime: number;
+category: string;
+tags: string[];
+featured: boolean;
+imageUrl?: string;
 }
 
 export const newJanuary2026BlogPosts: BlogPost[] = [

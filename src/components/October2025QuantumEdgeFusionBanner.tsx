@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 
 const October2025QuantumEdgeFusionBanner: React.FC = () => {
   return (

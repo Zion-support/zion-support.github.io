@@ -1,5 +1,3 @@
-import { ArrowRight, DollarSign, TrendingUp, Target, Sparkles } from "lucide-react";
-import { Link } from "react-router-dom";
 
 const October2025RevOpsBanner = () => {
   return (

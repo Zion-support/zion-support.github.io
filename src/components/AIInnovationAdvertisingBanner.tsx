@@ -1,25 +1,25 @@
 import React from 'react';
 
 const AIInnovationAdvertisingBanner: React.FC = () => {
-  return (
-    <section className="py-16 bg-gradient-to-r from-blue-900/40 via-purple-900/40 to-pink-900/40 border-y border-blue-500/20">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 mb-6">
-            <span className="text-blue-400 font-bold text-sm tracking-wider uppercase animate-pulse">
-              🔥 LIMITED TIME OFFER - 2026 AI REVOLUTION
-            </span>
-          </div>
-          <h2 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-            Exclusive AI Innovation Access
-          </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Get early access to our breakthrough AI technologies and transform your enterprise with cutting-edge solutions.
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
-          {/* Left Side - Features */}
+return (
+<section className="py-16 bg-gradient-to-r from-blue-900/40 via-purple-900/40 to-pink-900/40 border-y border-blue-500/20">
+<div className="container mx-auto px-6">
+<div className="text-center mb-12">
+<div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 mb-6">
+<span className="text-blue-400 font-bold text-sm tracking-wider uppercase animate-pulse">
+🔥 LIMITED TIME OFFER - 2026 AI REVOLUTION
+</span>
+</div>
+<h2 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+Exclusive AI Innovation Access
+</h2>
+<p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+Get early access to our breakthrough AI technologies and transform your enterprise with cutting-edge solutions.
+</p>
+</div>
+<div className="grid md:grid-cols-2 gap-8 mb-12">,
+{/* Left Side - Features */
+}
           <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
             <h3 className="text-3xl font-bold text-white mb-6">What You'll Get:</h3>
             <div className="space-y-4">
@@ -100,13 +100,13 @@ const AIInnovationAdvertisingBanner: React.FC = () => {
             </div>
 
             <div className="space-y-4">
-              <a 
+              <a title="Internal link" 
                 href="/contact?offer=ai-innovation-50" 
                 className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1 text-center block"
               >
                 Claim Your 50% Discount Now
               </a>
-              <a 
+              <a title="Internal link" 
                 href="/schedule-demo" 
                 className="w-full border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 text-center block"
               >

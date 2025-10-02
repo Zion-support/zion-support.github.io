@@ -1,24 +1,23 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 const October2025CognitiveOrchestrationShowcase: React.FC = () => {
-  return (
-    <section className="w-full bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 text-white py-16 px-4 mb-8">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
-          <div className="inline-block bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-6 py-3 rounded-full font-bold text-lg mb-6 animate-pulse">
-            💎 OCTOBER 2025: REVOLUTIONARY NEW CONTENT JUST PUBLISHED 💎
-          </div>
-          <h2 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-yellow-300 via-pink-300 to-purple-300 bg-clip-text text-transparent">
-            Cognitive Orchestration: The Future of Enterprise AI
-          </h2>
-          <p className="text-2xl text-gray-300 max-w-4xl mx-auto">
-            Discover how Fortune 50 companies are achieving $84.7B in value with autonomous AI operations
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
-          {/* Blog Post Card */}
+return (
+<section className="w-full bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 text-white py-16 px-4 mb-8">
+<div className="max-w-7xl mx-auto">
+<div className="text-center mb-12">
+<div className="inline-block bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-6 py-3 rounded-full font-bold text-lg mb-6 animate-pulse">
+💎 OCTOBER 2025: REVOLUTIONARY NEW CONTENT JUST PUBLISHED 💎,
+</div>
+<h2 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-yellow-300 via-pink-300 to-purple-300 bg-clip-text text-transparent">
+Cognitive Orchestration: The Future of Enterprise AI,
+</h2>
+<p className="text-2xl text-gray-300 max-w-4xl mx-auto">
+Discover how Fortune 50 companies are achieving $84.7B in value with autonomous AI operations
+</p>
+</div>
+<div className="grid md:grid-cols-3 gap-8 mb-12">,
+{/* Blog Post Card */
+}
           <div className="bg-gradient-to-br from-blue-600 to-cyan-600 rounded-2xl p-8 transform hover:scale-105 transition-all shadow-2xl hover:shadow-cyan-500/50">
             <div className="bg-white/20 backdrop-blur-sm rounded-lg px-4 py-2 inline-block mb-4">
               <span className="font-bold text-sm">📖 COMPREHENSIVE GUIDE</span>
@@ -100,7 +99,7 @@ const October2025CognitiveOrchestrationShowcase: React.FC = () => {
             Schedule your free assessment and discover how Cognitive Orchestration can transform your enterprise
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
+            <a title="Internal link"
               href="tel:+13024640950"
               className="bg-black text-white hover:bg-gray-800 font-bold py-4 px-8 rounded-lg text-lg transition-all inline-block"
             >

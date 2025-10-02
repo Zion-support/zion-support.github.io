@@ -4,19 +4,19 @@
  */
 
 export interface CacheOptions {
-  ttl?: number; // Time to live in milliseconds
-  strategy?: 'memory' | 'localStorage' | 'sessionStorage';
-  maxSize?: number; // Maximum number of entries
+ttl?: number; // Time to live in milliseconds,
+strategy?: 'memory' | 'localStorage' | 'sessionStorage';
+maxSize?: number; // Maximum number of entries
 }
 
 export interface CacheEntry<T> {
-  data: T;
-  timestamp: number;
-  ttl: number;
+data: T;,
+timestamp: number;,
+ttl: number;
 }
 
 class CacheManager {
-  private memoryCache: Map<string, CacheEntry<any>> = new Map();
+  private memoryCache: Map<string, CacheEntry<unknown>> = new Map();
   private readonly DEFAULT_TTL = 5 * 60 * 1000; // 5 minutes
   private readonly DEFAULT_MAX_SIZE = 100;
 
@@ -92,17 +92,17 @@ class CacheManager {
     key: string,
     strategy: 'memory' | 'localStorage' | 'sessionStorage' = 'memory'
   ): void {
-    switch (strategy) {
-      case 'memory':
-        this.memoryCache.delete(key);
-        break;
-      case 'localStorage':
-        localStorage.removeItem(key);
-        break;
-      case 'sessionStorage':
-        sessionStorage.removeItem(key);
-        break;
-    }
+switch (strategy) {
+case 'memory':,
+this.memoryCache.delete(key);
+break;
+case 'localStorage':,
+localStorage.removeItem(key);
+break;
+case 'sessionStorage':,
+sessionStorage.removeItem(key);
+break;
+}
   }
 
   /**
@@ -155,33 +155,33 @@ class CacheManager {
    * Invalidate cache entries matching a pattern
    */
   invalidatePattern(pattern: RegExp, strategy: 'memory' | 'localStorage' | 'sessionStorage' = 'memory'): void {
-    switch (strategy) {
-      case 'memory':
-        Array.from(this.memoryCache.keys())
-          .filter(key => pattern.test(key))
-          .forEach(key => this.memoryCache.delete(key));
-        break;
-      case 'localStorage':
-        Object.keys(localStorage)
-          .filter(key => pattern.test(key))
-          .forEach(key => localStorage.removeItem(key));
-        break;
-      case 'sessionStorage':
-        Object.keys(sessionStorage)
-          .filter(key => pattern.test(key))
-          .forEach(key => sessionStorage.removeItem(key));
-        break;
-    }
+switch (strategy) {
+case 'memory':,
+Array.from(this.memoryCache.keys())
+.filter(key => pattern.test(key))
+.forEach(key => this.memoryCache.delete(key));
+break;
+case 'localStorage':,
+Object.keys(localStorage)
+.filter(key => pattern.test(key))
+.forEach(key => localStorage.removeItem(key));
+break;
+case 'sessionStorage':,
+Object.keys(sessionStorage)
+.filter(key => pattern.test(key))
+.forEach(key => sessionStorage.removeItem(key));
+break;
+}
   }
 
   /**
    * Get cache statistics
    */
   getStats(): {
-    memorySize: number;
-    localStorageSize: number;
-    sessionStorageSize: number;
-  } {
+memorySize: number;,
+localStorageSize: number;,
+sessionStorageSize: number;
+} {
     return {
       memorySize: this.memoryCache.size,
       localStorageSize: localStorage.length,
@@ -195,7 +195,9 @@ class CacheManager {
     // Implement LRU eviction if cache is full
     if (this.memoryCache.size >= maxSize) {
       const firstKey = this.memoryCache.keys().next().value;
-      this.memoryCache.delete(firstKey);
+      if (firstKey) {
+        this.memoryCache.delete(firstKey);
+      }
     }
     this.memoryCache.set(key, entry);
   }
@@ -217,11 +219,11 @@ class CacheManager {
     key: string,
     storage: 'localStorage' | 'sessionStorage'
   ): CacheEntry<T> | null {
-    try {
-      const storageObj = storage === 'localStorage' ? localStorage : sessionStorage;
-      const item = storageObj.getItem(key);
-      return item ? JSON.parse(item) : null;
-    } catch (error) {
+try {
+const storageObj = storage === 'localStorage' ? localStorage : sessionStorage;,
+const item = storageObj.getItem(key);
+return item ? JSON.parse(item) : null;
+} catch (error) {
       console.warn(`Failed to get from ${storage}:`, error);
       return null;
     }

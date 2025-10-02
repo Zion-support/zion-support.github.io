@@ -1,0 +1,5874 @@
+{
+  "timestamp": "2025-10-01T18:13:26.930Z",
+  "analysis": {
+    "imports": {
+      "totalImports": 261,
+      "componentImports": 257,
+      "srcImports": 4,
+      "duplicates": []
+    },
+    "sizes": [
+      {
+        "name": "PromotionalBanner.tsx",
+        "sizeKB": "25.97",
+        "lines": 771,
+        "complexity": 131
+      },
+      {
+        "name": "UnifiedContentPromotion.tsx",
+        "sizeKB": "18.74",
+        "lines": 470,
+        "complexity": 20
+      },
+      {
+        "name": "October2025PredictiveMaintenanceBanner.tsx",
+        "sizeKB": "18.39",
+        "lines": 600,
+        "complexity": 47
+      },
+      {
+        "name": "October2025NextGenEnterpriseAIBanner.tsx",
+        "sizeKB": "17.03",
+        "lines": 329,
+        "complexity": 20
+      },
+      {
+        "name": "January2026NeuralArchitectureShowcaseBanner.tsx",
+        "sizeKB": "16.69",
+        "lines": 315,
+        "complexity": 19
+      },
+      {
+        "name": "October2025NeuromorphicBreakthroughMegaBanner.tsx",
+        "sizeKB": "15.85",
+        "lines": 245,
+        "complexity": 20
+      },
+      {
+        "name": "InteractiveContentShowcase2026.tsx",
+        "sizeKB": "15.73",
+        "lines": 359,
+        "complexity": 28
+      },
+      {
+        "name": "October2025HyperautomationMegaBanner.tsx",
+        "sizeKB": "15.70",
+        "lines": 267,
+        "complexity": 15
+      },
+      {
+        "name": "October2025NewContentShowcase.tsx",
+        "sizeKB": "15.67",
+        "lines": 300,
+        "complexity": 17
+      },
+      {
+        "name": "UltimateContentShowcase2026MegaBanner.tsx",
+        "sizeKB": "15.47",
+        "lines": 251,
+        "complexity": 36
+      },
+      {
+        "name": "ContentDiscoveryHub.tsx",
+        "sizeKB": "15.29",
+        "lines": 338,
+        "complexity": 28
+      },
+      {
+        "name": "InteractiveContentDiscovery.tsx",
+        "sizeKB": "15.23",
+        "lines": 364,
+        "complexity": 47
+      },
+      {
+        "name": "InteractiveAI2026ROICalculator.tsx",
+        "sizeKB": "14.94",
+        "lines": 334,
+        "complexity": 30
+      },
+      {
+        "name": "October2025LLMOrchestrationMegaBanner.tsx",
+        "sizeKB": "14.89",
+        "lines": 271,
+        "complexity": 23
+      },
+      {
+        "name": "UltimateContent2026Showcase.tsx",
+        "sizeKB": "14.69",
+        "lines": 268,
+        "complexity": 11
+      },
+      {
+        "name": "NewContent2026Banners.tsx",
+        "sizeKB": "14.66",
+        "lines": 309,
+        "complexity": 22
+      },
+      {
+        "name": "October2025ContinuousIntelligenceBanner.tsx",
+        "sizeKB": "14.55",
+        "lines": 246,
+        "complexity": 24
+      },
+      {
+        "name": "InteractiveQuantumAICalculator.tsx",
+        "sizeKB": "14.47",
+        "lines": 327,
+        "complexity": 29
+      },
+      {
+        "name": "LatestContentShowcase2025September.tsx",
+        "sizeKB": "14.46",
+        "lines": 279,
+        "complexity": 17
+      },
+      {
+        "name": "October1st2025ContentSpotlight.tsx",
+        "sizeKB": "14.43",
+        "lines": 241,
+        "complexity": 21
+      },
+      {
+        "name": "October2025LatestEnterpriseInnovationsBanner.tsx",
+        "sizeKB": "14.21",
+        "lines": 258,
+        "complexity": 13
+      },
+      {
+        "name": "January2026ContentDiscoveryHub.tsx",
+        "sizeKB": "14.18",
+        "lines": 294,
+        "complexity": 19
+      },
+      {
+        "name": "Ultimate2026ContentShowcaseMegaBanner.tsx",
+        "sizeKB": "14.09",
+        "lines": 259,
+        "complexity": 9
+      },
+      {
+        "name": "NewContent2027PromotionalBanner.tsx",
+        "sizeKB": "14.05",
+        "lines": 240,
+        "complexity": 10
+      },
+      {
+        "name": "October2025RTDIContentShowcase.tsx",
+        "sizeKB": "14.05",
+        "lines": 274,
+        "complexity": 23
+      },
+      {
+        "name": "October2025NewPracticalContentBanner.tsx",
+        "sizeKB": "14.04",
+        "lines": 281,
+        "complexity": 15
+      },
+      {
+        "name": "October2025LatestEnterpriseBreakthroughsBanner.tsx",
+        "sizeKB": "13.95",
+        "lines": 225,
+        "complexity": 13
+      },
+      {
+        "name": "October2026NewContentMegaBanner.tsx",
+        "sizeKB": "13.93",
+        "lines": 273,
+        "complexity": 21
+      },
+      {
+        "name": "CognitiveComputingBreakthroughBanner.tsx",
+        "sizeKB": "13.82",
+        "lines": 264,
+        "complexity": 7
+      },
+      {
+        "name": "February2027ContentShowcaseBanner.tsx",
+        "sizeKB": "13.77",
+        "lines": 245,
+        "complexity": 10
+      },
+      {
+        "name": "UltimateContentShowcase2026.tsx",
+        "sizeKB": "13.69",
+        "lines": 240,
+        "complexity": 15
+      },
+      {
+        "name": "October2025QuantumCryptographyAIBanner.tsx",
+        "sizeKB": "13.65",
+        "lines": 243,
+        "complexity": 14
+      },
+      {
+        "name": "AI2026FutureAutonomousEnterpriseRevolutionBanner.tsx",
+        "sizeKB": "13.56",
+        "lines": 269,
+        "complexity": 9
+      },
+      {
+        "name": "October2025NewContentMasterShowcaseBanner.tsx",
+        "sizeKB": "13.53",
+        "lines": 263,
+        "complexity": 21
+      },
+      {
+        "name": "October2025AutomotiveEdgeAISuccessBanner.tsx",
+        "sizeKB": "13.52",
+        "lines": 248,
+        "complexity": 13
+      },
+      {
+        "name": "NewContentShowcase.tsx",
+        "sizeKB": "13.35",
+        "lines": 336,
+        "complexity": 51
+      },
+      {
+        "name": "InteractiveAI2026BreakthroughCalculator.tsx",
+        "sizeKB": "13.32",
+        "lines": 307,
+        "complexity": 29
+      },
+      {
+        "name": "UltimateContentShowcase2027.tsx",
+        "sizeKB": "13.23",
+        "lines": 314,
+        "complexity": 17
+      },
+      {
+        "name": "InteractiveContentHub2026.tsx",
+        "sizeKB": "13.21",
+        "lines": 289,
+        "complexity": 23
+      },
+      {
+        "name": "InteractiveAI2027Calculator.tsx",
+        "sizeKB": "13.17",
+        "lines": 289,
+        "complexity": 7
+      },
+      {
+        "name": "October2025AgenticProcessMiningBanner.tsx",
+        "sizeKB": "13.09",
+        "lines": 240,
+        "complexity": 20
+      },
+      {
+        "name": "October2025NewEnterpriseAIContentBanner.tsx",
+        "sizeKB": "13.06",
+        "lines": 233,
+        "complexity": 11
+      },
+      {
+        "name": "RevolutionaryContentMegaBanner2026.tsx",
+        "sizeKB": "13.01",
+        "lines": 239,
+        "complexity": 17
+      },
+      {
+        "name": "September30ContentBanner2025.tsx",
+        "sizeKB": "13.01",
+        "lines": 240,
+        "complexity": 14
+      },
+      {
+        "name": "October2025BreakingContentBanner.tsx",
+        "sizeKB": "12.95",
+        "lines": 227,
+        "complexity": 8
+      },
+      {
+        "name": "October2025ContentBanner.tsx",
+        "sizeKB": "12.93",
+        "lines": 238,
+        "complexity": 14
+      },
+      {
+        "name": "September2025ContentBanners.tsx",
+        "sizeKB": "12.91",
+        "lines": 280,
+        "complexity": 23
+      },
+      {
+        "name": "EnterpriseSolutionsShowcase2026.tsx",
+        "sizeKB": "12.85",
+        "lines": 243,
+        "complexity": 21
+      },
+      {
+        "name": "January2025UltimateTechShowcaseBanner.tsx",
+        "sizeKB": "12.85",
+        "lines": 249,
+        "complexity": 17
+      },
+      {
+        "name": "January2026ContentBanner.tsx",
+        "sizeKB": "12.85",
+        "lines": 262,
+        "complexity": 14
+      },
+      {
+        "name": "October2025NeuroSymbolicAIBanner.tsx",
+        "sizeKB": "12.81",
+        "lines": 232,
+        "complexity": 17
+      },
+      {
+        "name": "January2027NewContentAdvertisingBanner.tsx",
+        "sizeKB": "12.79",
+        "lines": 237,
+        "complexity": 18
+      },
+      {
+        "name": "October2025NewIndustryContentBanner.tsx",
+        "sizeKB": "12.78",
+        "lines": 231,
+        "complexity": 17
+      },
+      {
+        "name": "New2025ContentBanners.tsx",
+        "sizeKB": "12.77",
+        "lines": 269,
+        "complexity": 13
+      },
+      {
+        "name": "NewBlogContentShowcase2026.tsx",
+        "sizeKB": "12.73",
+        "lines": 244,
+        "complexity": 14
+      },
+      {
+        "name": "October2025NewContentMasterLaunchBanner.tsx",
+        "sizeKB": "12.70",
+        "lines": 238,
+        "complexity": 9
+      },
+      {
+        "name": "QuantumConsciousnessFusion2026Banner.tsx",
+        "sizeKB": "12.70",
+        "lines": 227,
+        "complexity": 9
+      },
+      {
+        "name": "January2026AutonomousEnterpriseBanner.tsx",
+        "sizeKB": "12.67",
+        "lines": 231,
+        "complexity": 9
+      },
+      {
+        "name": "NewContent2026ShowcaseBanner.tsx",
+        "sizeKB": "12.66",
+        "lines": 218,
+        "complexity": 15
+      },
+      {
+        "name": "January2027InteractiveAIRevolution.tsx",
+        "sizeKB": "12.54",
+        "lines": 259,
+        "complexity": 7
+      },
+      {
+        "name": "January2026BreakthroughShowcaseBanner.tsx",
+        "sizeKB": "12.53",
+        "lines": 225,
+        "complexity": 16
+      },
+      {
+        "name": "LatestPracticalAIGuidesShowcase.tsx",
+        "sizeKB": "12.51",
+        "lines": 217,
+        "complexity": 20
+      },
+      {
+        "name": "October2025AutonomousFinancialIntelligenceRevolutionBanner.tsx",
+        "sizeKB": "12.48",
+        "lines": 240,
+        "complexity": 17
+      },
+      {
+        "name": "ComprehensiveContentShowcase2026Banner.tsx",
+        "sizeKB": "12.46",
+        "lines": 196,
+        "complexity": 19
+      },
+      {
+        "name": "October2025NewContentLaunchBanner.tsx",
+        "sizeKB": "12.44",
+        "lines": 230,
+        "complexity": 10
+      },
+      {
+        "name": "ContentRecommendationSystem.tsx",
+        "sizeKB": "12.40",
+        "lines": 328,
+        "complexity": 45
+      },
+      {
+        "name": "October2025SecurityDataFabricBanner.tsx",
+        "sizeKB": "12.39",
+        "lines": 197,
+        "complexity": 12
+      },
+      {
+        "name": "October2025NewContentMegaShowcaseBanner.tsx",
+        "sizeKB": "12.38",
+        "lines": 274,
+        "complexity": 16
+      },
+      {
+        "name": "January2026QuantumNeuralFusionRevolutionaryBanner.tsx",
+        "sizeKB": "12.29",
+        "lines": 247,
+        "complexity": 8
+      },
+      {
+        "name": "October2025AutonomousDataGovernanceBanner.tsx",
+        "sizeKB": "12.22",
+        "lines": 253,
+        "complexity": 9
+      },
+      {
+        "name": "October2025FraudDetectionAIBanner.tsx",
+        "sizeKB": "12.20",
+        "lines": 236,
+        "complexity": 11
+      },
+      {
+        "name": "UltimateContent2027Showcase.tsx",
+        "sizeKB": "12.16",
+        "lines": 232,
+        "complexity": 12
+      },
+      {
+        "name": "NewContentAdvertisingBanner2026.tsx",
+        "sizeKB": "12.10",
+        "lines": 243,
+        "complexity": 7
+      },
+      {
+        "name": "MegaTransformationSuccessBanner.tsx",
+        "sizeKB": "12.09",
+        "lines": 243,
+        "complexity": 18
+      },
+      {
+        "name": "InteractiveAIInnovationDemo.tsx",
+        "sizeKB": "12.06",
+        "lines": 256,
+        "complexity": 6
+      },
+      {
+        "name": "AI2033UniversalConsciousnessBanner.tsx",
+        "sizeKB": "12.04",
+        "lines": 203,
+        "complexity": 16
+      },
+      {
+        "name": "December2025April2026NewContentShowcaseBanner.tsx",
+        "sizeKB": "12.03",
+        "lines": 215,
+        "complexity": 10
+      },
+      {
+        "name": "October2025RealTimeAIContentBanner.tsx",
+        "sizeKB": "11.99",
+        "lines": 199,
+        "complexity": 24
+      },
+      {
+        "name": "January2026TranscendentIntelligenceRevolutionBanner.tsx",
+        "sizeKB": "11.96",
+        "lines": 203,
+        "complexity": 12
+      },
+      {
+        "name": "October2025ResponsibleAIGovernanceBanner.tsx",
+        "sizeKB": "11.96",
+        "lines": 249,
+        "complexity": 5
+      },
+      {
+        "name": "December2025ContentShowcaseMegaBanner.tsx",
+        "sizeKB": "11.93",
+        "lines": 223,
+        "complexity": 17
+      },
+      {
+        "name": "October2025AdvancedAIBreakthroughBanner.tsx",
+        "sizeKB": "11.92",
+        "lines": 214,
+        "complexity": 15
+      },
+      {
+        "name": "October2025SupplyChainResilienceBanner.tsx",
+        "sizeKB": "11.91",
+        "lines": 209,
+        "complexity": 21
+      },
+      {
+        "name": "January2026QuantumAIConsciousnessRevolutionBanner.tsx",
+        "sizeKB": "11.89",
+        "lines": 204,
+        "complexity": 6
+      },
+      {
+        "name": "October2025ScientificDiscoveryRevolutionBanner.tsx",
+        "sizeKB": "11.87",
+        "lines": 187,
+        "complexity": 11
+      },
+      {
+        "name": "December2026NextGenAutonomousSystemsBanner.tsx",
+        "sizeKB": "11.83",
+        "lines": 201,
+        "complexity": 12
+      },
+      {
+        "name": "October2025QuantumSwarmMegaShowcase.tsx",
+        "sizeKB": "11.82",
+        "lines": 240,
+        "complexity": 16
+      },
+      {
+        "name": "October2025CuttingEdgeAIContentBanner.tsx",
+        "sizeKB": "11.79",
+        "lines": 214,
+        "complexity": 18
+      },
+      {
+        "name": "January2026RevolutionaryContentShowcaseBanner.tsx",
+        "sizeKB": "11.75",
+        "lines": 205,
+        "complexity": 13
+      },
+      {
+        "name": "October2025NewContentShowcaseBanner.tsx",
+        "sizeKB": "11.74",
+        "lines": 221,
+        "complexity": 17
+      },
+      {
+        "name": "January2026AutonomousOperationsBanner.tsx",
+        "sizeKB": "11.71",
+        "lines": 204,
+        "complexity": 7
+      },
+      {
+        "name": "December2025ContentShowcaseInteractive.tsx",
+        "sizeKB": "11.69",
+        "lines": 243,
+        "complexity": 19
+      },
+      {
+        "name": "December2025CostOptimizationBanner.tsx",
+        "sizeKB": "11.66",
+        "lines": 203,
+        "complexity": 12
+      },
+      {
+        "name": "October2025NewFreshContentBanner.tsx",
+        "sizeKB": "11.66",
+        "lines": 198,
+        "complexity": 14
+      },
+      {
+        "name": "AI2026FutureTrendsBreakthroughBanner.tsx",
+        "sizeKB": "11.65",
+        "lines": 196,
+        "complexity": 11
+      },
+      {
+        "name": "January2025EnterpriseAutomationBreakthroughBanner.tsx",
+        "sizeKB": "11.64",
+        "lines": 196,
+        "complexity": 21
+      },
+      {
+        "name": "October2025NewContentMegaLaunchBanner3.tsx",
+        "sizeKB": "11.64",
+        "lines": 259,
+        "complexity": 13
+      },
+      {
+        "name": "October2025ProductionAIEngineeringBanner.tsx",
+        "sizeKB": "11.62",
+        "lines": 184,
+        "complexity": 21
+      },
+      {
+        "name": "October2025NewAIBreakthroughsBanner.tsx",
+        "sizeKB": "11.60",
+        "lines": 214,
+        "complexity": 10
+      },
+      {
+        "name": "EnterpriseSolutionsBanner.tsx",
+        "sizeKB": "11.53",
+        "lines": 236,
+        "complexity": 14
+      },
+      {
+        "name": "October2025BionicAINeuralInterfaceBanner.tsx",
+        "sizeKB": "11.52",
+        "lines": 213,
+        "complexity": 11
+      },
+      {
+        "name": "AITrendsInsightsBanner2026.tsx",
+        "sizeKB": "11.50",
+        "lines": 256,
+        "complexity": 7
+      },
+      {
+        "name": "April2027UniversalIntelligenceBanner.tsx",
+        "sizeKB": "11.44",
+        "lines": 204,
+        "complexity": 4
+      },
+      {
+        "name": "Revolutionary2026ContentShowcaseBanner.tsx",
+        "sizeKB": "11.43",
+        "lines": 196,
+        "complexity": 19
+      },
+      {
+        "name": "October2025HealthcareTransformationBanner.tsx",
+        "sizeKB": "11.42",
+        "lines": 219,
+        "complexity": 23
+      },
+      {
+        "name": "October2025NeuralAPIOrchestrationBanner.tsx",
+        "sizeKB": "11.36",
+        "lines": 223,
+        "complexity": 17
+      },
+      {
+        "name": "October2025AdaptiveNeuralConsciousnessBanner.tsx",
+        "sizeKB": "11.34",
+        "lines": 201,
+        "complexity": 18
+      },
+      {
+        "name": "October2025CustomerExperienceBanner.tsx",
+        "sizeKB": "11.32",
+        "lines": 204,
+        "complexity": 14
+      },
+      {
+        "name": "February2025AutonomousBusinessIntelligenceRevolutionBanner.tsx",
+        "sizeKB": "11.29",
+        "lines": 202,
+        "complexity": 8
+      },
+      {
+        "name": "FutureTechShowcase2026.tsx",
+        "sizeKB": "11.27",
+        "lines": 204,
+        "complexity": 13
+      },
+      {
+        "name": "October2025CuttingEdgeContentBanner.tsx",
+        "sizeKB": "11.27",
+        "lines": 185,
+        "complexity": 23
+      },
+      {
+        "name": "October2025NewAIContentMegaBanner.tsx",
+        "sizeKB": "11.27",
+        "lines": 228,
+        "complexity": 11
+      },
+      {
+        "name": "FebruaryMarch2026ContentShowcaseBanner.tsx",
+        "sizeKB": "11.24",
+        "lines": 194,
+        "complexity": 14
+      },
+      {
+        "name": "September30NewAIInnovationsBanner.tsx",
+        "sizeKB": "11.24",
+        "lines": 202,
+        "complexity": 14
+      },
+      {
+        "name": "UltimateContentAdvertisingBanner.tsx",
+        "sizeKB": "11.24",
+        "lines": 225,
+        "complexity": 12
+      },
+      {
+        "name": "InteractiveContentShowcase2026Advanced.tsx",
+        "sizeKB": "11.21",
+        "lines": 179,
+        "complexity": 23
+      },
+      {
+        "name": "October2026NewContentBanner.tsx",
+        "sizeKB": "11.21",
+        "lines": 208,
+        "complexity": 18
+      },
+      {
+        "name": "QuantumSuperintelligence2026Banner.tsx",
+        "sizeKB": "11.21",
+        "lines": 188,
+        "complexity": 16
+      },
+      {
+        "name": "October2025LatestAIInnovationsBanner.tsx",
+        "sizeKB": "11.18",
+        "lines": 200,
+        "complexity": 11
+      },
+      {
+        "name": "Latest2026ContentShowcaseBanner.tsx",
+        "sizeKB": "11.15",
+        "lines": 149,
+        "complexity": 15
+      },
+      {
+        "name": "October2025AIBreakthroughTrilogybanner.tsx",
+        "sizeKB": "11.12",
+        "lines": 215,
+        "complexity": 12
+      },
+      {
+        "name": "October2025AutonomousDataOpsBanner.tsx",
+        "sizeKB": "11.12",
+        "lines": 193,
+        "complexity": 13
+      },
+      {
+        "name": "October2025NewContentAIEthicsShowcase.tsx",
+        "sizeKB": "11.12",
+        "lines": 245,
+        "complexity": 14
+      },
+      {
+        "name": "NewContent2026BreakthroughShowcaseBanner.tsx",
+        "sizeKB": "11.09",
+        "lines": 199,
+        "complexity": 18
+      },
+      {
+        "name": "September2025NewContentMegaBanner.tsx",
+        "sizeKB": "11.08",
+        "lines": 202,
+        "complexity": 18
+      },
+      {
+        "name": "ServicesAdvertisingPromo.tsx",
+        "sizeKB": "11.04",
+        "lines": 217,
+        "complexity": 13
+      },
+      {
+        "name": "January2025NextGenAutonomousSystemsBanner.tsx",
+        "sizeKB": "11.03",
+        "lines": 191,
+        "complexity": 11
+      },
+      {
+        "name": "AI2026QuantumConsciousnessRevolutionaryBanner.tsx",
+        "sizeKB": "10.99",
+        "lines": 210,
+        "complexity": 10
+      },
+      {
+        "name": "AIROICalculator.tsx",
+        "sizeKB": "10.99",
+        "lines": 292,
+        "complexity": 20
+      },
+      {
+        "name": "September30LatestContentBanner.tsx",
+        "sizeKB": "10.98",
+        "lines": 217,
+        "complexity": 21
+      },
+      {
+        "name": "AutonomousBusinessProcessesBanner.tsx",
+        "sizeKB": "10.95",
+        "lines": 193,
+        "complexity": 11
+      },
+      {
+        "name": "October2025NewManufacturingLogisticsBanner.tsx",
+        "sizeKB": "10.91",
+        "lines": 205,
+        "complexity": 14
+      },
+      {
+        "name": "October2025FraudDetectionBreakthroughBanner.tsx",
+        "sizeKB": "10.90",
+        "lines": 165,
+        "complexity": 14
+      },
+      {
+        "name": "December2026SingularityAchievementBanner.tsx",
+        "sizeKB": "10.89",
+        "lines": 193,
+        "complexity": 11
+      },
+      {
+        "name": "QuantumEnhancedBusinessIntelligence2026Banner.tsx",
+        "sizeKB": "10.86",
+        "lines": 176,
+        "complexity": 13
+      },
+      {
+        "name": "InteractiveContentDiscovery2026.tsx",
+        "sizeKB": "10.81",
+        "lines": 273,
+        "complexity": 14
+      },
+      {
+        "name": "October2025EdgeComputingMegaShowcase.tsx",
+        "sizeKB": "10.79",
+        "lines": 227,
+        "complexity": 13
+      },
+      {
+        "name": "October2025NewAIContentBreakthroughBanner.tsx",
+        "sizeKB": "10.79",
+        "lines": 184,
+        "complexity": 23
+      },
+      {
+        "name": "October1st2025QuantumEdgeBanner.tsx",
+        "sizeKB": "10.76",
+        "lines": 178,
+        "complexity": 21
+      },
+      {
+        "name": "October2025AgenticOperationsBanner.tsx",
+        "sizeKB": "10.76",
+        "lines": 192,
+        "complexity": 7
+      },
+      {
+        "name": "December2025AutonomousOperationsRevolutionBanner.tsx",
+        "sizeKB": "10.75",
+        "lines": 186,
+        "complexity": 12
+      },
+      {
+        "name": "InteractiveAIROICalculator.tsx",
+        "sizeKB": "10.72",
+        "lines": 286,
+        "complexity": 25
+      },
+      {
+        "name": "March2025AutonomousOperationsRevolutionBanner.tsx",
+        "sizeKB": "10.72",
+        "lines": 187,
+        "complexity": 7
+      },
+      {
+        "name": "AIAdvertisingBanner.tsx",
+        "sizeKB": "10.70",
+        "lines": 229,
+        "complexity": 15
+      },
+      {
+        "name": "LatestContent2026ShowcaseBanner.tsx",
+        "sizeKB": "10.70",
+        "lines": 213,
+        "complexity": 11
+      },
+      {
+        "name": "AI2026RevolutionaryBreakthroughBanner.tsx",
+        "sizeKB": "10.68",
+        "lines": 211,
+        "complexity": 7
+      },
+      {
+        "name": "October2025NeuralMeshMegaShowcase.tsx",
+        "sizeKB": "10.68",
+        "lines": 206,
+        "complexity": 32
+      },
+      {
+        "name": "October2025UltimateAIInnovationsBanner.tsx",
+        "sizeKB": "10.67",
+        "lines": 150,
+        "complexity": 15
+      },
+      {
+        "name": "January2025EnterpriseSolutionsBanner.tsx",
+        "sizeKB": "10.65",
+        "lines": 189,
+        "complexity": 12
+      },
+      {
+        "name": "October2025PredictiveAnalyticsShowcase.tsx",
+        "sizeKB": "10.64",
+        "lines": 202,
+        "complexity": 22
+      },
+      {
+        "name": "February2025QuantumNeuralSuperintelligenceBreakthroughBanner.tsx",
+        "sizeKB": "10.62",
+        "lines": 181,
+        "complexity": 13
+      },
+      {
+        "name": "NewContent2026RevolutionaryBanners.tsx",
+        "sizeKB": "10.61",
+        "lines": 206,
+        "complexity": 14
+      },
+      {
+        "name": "October2025AgentSwarmRevolutionBanner.tsx",
+        "sizeKB": "10.61",
+        "lines": 190,
+        "complexity": 18
+      },
+      {
+        "name": "October2025QuantumAIRevolutionBanner.tsx",
+        "sizeKB": "10.61",
+        "lines": 208,
+        "complexity": 25
+      },
+      {
+        "name": "AdvancedContentDiscoveryHub.tsx",
+        "sizeKB": "10.60",
+        "lines": 263,
+        "complexity": 44
+      },
+      {
+        "name": "AI2027BreakthroughBanner.tsx",
+        "sizeKB": "10.57",
+        "lines": 206,
+        "complexity": 6
+      },
+      {
+        "name": "EmergingTech2026Banner.tsx",
+        "sizeKB": "10.57",
+        "lines": 182,
+        "complexity": 14
+      },
+      {
+        "name": "October2025NewProductionAIContentBanner.tsx",
+        "sizeKB": "10.57",
+        "lines": 186,
+        "complexity": 8
+      },
+      {
+        "name": "Revolutionary2027ContentBanner.tsx",
+        "sizeKB": "10.57",
+        "lines": 232,
+        "complexity": 9
+      },
+      {
+        "name": "July2026ContentShowcaseBanner.tsx",
+        "sizeKB": "10.55",
+        "lines": 184,
+        "complexity": 18
+      },
+      {
+        "name": "December2025QuantumSyntheticConsciousnessRevolutionBanner.tsx",
+        "sizeKB": "10.52",
+        "lines": 205,
+        "complexity": 4
+      },
+      {
+        "name": "October2025MultimodalIntelligenceRevolutionBanner.tsx",
+        "sizeKB": "10.52",
+        "lines": 227,
+        "complexity": 13
+      },
+      {
+        "name": "AI2026InnovationShowcaseBanner.tsx",
+        "sizeKB": "10.51",
+        "lines": 199,
+        "complexity": 9
+      },
+      {
+        "name": "January2025NewContentShowcaseBanner.tsx",
+        "sizeKB": "10.51",
+        "lines": 214,
+        "complexity": 12
+      },
+      {
+        "name": "October2025NewContentMegaBannerOct1.tsx",
+        "sizeKB": "10.50",
+        "lines": 226,
+        "complexity": 11
+      },
+      {
+        "name": "October2025PredictiveBusinessIntelligenceBanner.tsx",
+        "sizeKB": "10.50",
+        "lines": 170,
+        "complexity": 20
+      },
+      {
+        "name": "October2025GreenAIBanner.tsx",
+        "sizeKB": "10.49",
+        "lines": 181,
+        "complexity": 25
+      },
+      {
+        "name": "AI2026QuantumConsciousnessBreakthroughBanner.tsx",
+        "sizeKB": "10.48",
+        "lines": 163,
+        "complexity": 4
+      },
+      {
+        "name": "October2025NeuralMeshComputingBanner.tsx",
+        "sizeKB": "10.48",
+        "lines": 239,
+        "complexity": 8
+      },
+      {
+        "name": "October2025NewTechBreakthroughsBanner.tsx",
+        "sizeKB": "10.47",
+        "lines": 209,
+        "complexity": 13
+      },
+      {
+        "name": "January2026Fortune500AutonomousTransformationBanner.tsx",
+        "sizeKB": "10.46",
+        "lines": 208,
+        "complexity": 12
+      },
+      {
+        "name": "October2025NewContentMegaBannerLatest.tsx",
+        "sizeKB": "10.46",
+        "lines": 203,
+        "complexity": 17
+      },
+      {
+        "name": "January2026AdvancedNeuralArchitectureEvolutionBanner.tsx",
+        "sizeKB": "10.45",
+        "lines": 213,
+        "complexity": 10
+      },
+      {
+        "name": "October2025SupplyChainShowcase.tsx",
+        "sizeKB": "10.45",
+        "lines": 186,
+        "complexity": 29
+      },
+      {
+        "name": "AIInnovationBreakthrough2026Banner.tsx",
+        "sizeKB": "10.44",
+        "lines": 210,
+        "complexity": 14
+      },
+      {
+        "name": "Revolutionary2026ContentShowcase.tsx",
+        "sizeKB": "10.43",
+        "lines": 227,
+        "complexity": 22
+      },
+      {
+        "name": "Revolutionary2026MegaBreakthroughBanner.tsx",
+        "sizeKB": "10.42",
+        "lines": 188,
+        "complexity": 14
+      },
+      {
+        "name": "October2025AIEthicsGovernanceMegaBanner.tsx",
+        "sizeKB": "10.40",
+        "lines": 207,
+        "complexity": 13
+      },
+      {
+        "name": "September30NewContentMegaBanner.tsx",
+        "sizeKB": "10.40",
+        "lines": 169,
+        "complexity": 18
+      },
+      {
+        "name": "InteractiveROICalculator2026.tsx",
+        "sizeKB": "10.39",
+        "lines": 227,
+        "complexity": 9
+      },
+      {
+        "name": "Revolutionary2026ContentMegaBreakthroughBanner.tsx",
+        "sizeKB": "10.36",
+        "lines": 167,
+        "complexity": 16
+      },
+      {
+        "name": "October2025GenerativeAIBreakthroughBanner.tsx",
+        "sizeKB": "10.35",
+        "lines": 177,
+        "complexity": 19
+      },
+      {
+        "name": "January2025ConsciousAIServicesBanner.tsx",
+        "sizeKB": "10.30",
+        "lines": 187,
+        "complexity": 11
+      },
+      {
+        "name": "January2025NextGenerationAISystemsBanner.tsx",
+        "sizeKB": "10.30",
+        "lines": 186,
+        "complexity": 11
+      },
+      {
+        "name": "Fortune500SuccessStoryBanner.tsx",
+        "sizeKB": "10.28",
+        "lines": 177,
+        "complexity": 15
+      },
+      {
+        "name": "October2025RealTimeIntelligenceMeshBanner.tsx",
+        "sizeKB": "10.28",
+        "lines": 188,
+        "complexity": 11
+      },
+      {
+        "name": "October2026HAEMBanner.tsx",
+        "sizeKB": "10.27",
+        "lines": 195,
+        "complexity": 5
+      },
+      {
+        "name": "September30FreshContent2025Banner.tsx",
+        "sizeKB": "10.27",
+        "lines": 191,
+        "complexity": 16
+      },
+      {
+        "name": "January2025AdvancedAIInnovationBanner.tsx",
+        "sizeKB": "10.26",
+        "lines": 204,
+        "complexity": 9
+      },
+      {
+        "name": "January2025RevolutionaryAIBreakthroughBanner.tsx",
+        "sizeKB": "10.26",
+        "lines": 177,
+        "complexity": 14
+      },
+      {
+        "name": "October2025LatestContentHighlightBanner.tsx",
+        "sizeKB": "10.26",
+        "lines": 183,
+        "complexity": 4
+      },
+      {
+        "name": "October2025CognitiveDigitalTwinBanner.tsx",
+        "sizeKB": "10.25",
+        "lines": 188,
+        "complexity": 16
+      },
+      {
+        "name": "January2025AutonomousSystemsMegaBanner.tsx",
+        "sizeKB": "10.24",
+        "lines": 204,
+        "complexity": 5
+      },
+      {
+        "name": "October2025NewContentMasterBanner.tsx",
+        "sizeKB": "10.24",
+        "lines": 188,
+        "complexity": 17
+      },
+      {
+        "name": "January2025FutureTechRevolutionBanner.tsx",
+        "sizeKB": "10.23",
+        "lines": 204,
+        "complexity": 8
+      },
+      {
+        "name": "January2025HyperIntelligentSystemsBanner.tsx",
+        "sizeKB": "10.23",
+        "lines": 204,
+        "complexity": 10
+      },
+      {
+        "name": "January2027EnterpriseBreakthroughBanner.tsx",
+        "sizeKB": "10.22",
+        "lines": 194,
+        "complexity": 14
+      },
+      {
+        "name": "February2026QuantumNeuralSuperintelligenceBanner.tsx",
+        "sizeKB": "10.21",
+        "lines": 159,
+        "complexity": 10
+      },
+      {
+        "name": "January2025InnovationShowcaseBanner.tsx",
+        "sizeKB": "10.21",
+        "lines": 174,
+        "complexity": 25
+      },
+      {
+        "name": "January2025QuantumBusinessIntelligenceBanner.tsx",
+        "sizeKB": "10.21",
+        "lines": 173,
+        "complexity": 6
+      },
+      {
+        "name": "January2026NewContentBreakthroughBanner.tsx",
+        "sizeKB": "10.21",
+        "lines": 180,
+        "complexity": 10
+      },
+      {
+        "name": "InteractiveDecember2026Showcase.tsx",
+        "sizeKB": "10.20",
+        "lines": 217,
+        "complexity": 16
+      },
+      {
+        "name": "January2027ContentShowcaseBanner.tsx",
+        "sizeKB": "10.20",
+        "lines": 194,
+        "complexity": 6
+      },
+      {
+        "name": "RevolutionaryAI2026MegaBreakthroughBanner.tsx",
+        "sizeKB": "10.19",
+        "lines": 198,
+        "complexity": 12
+      },
+      {
+        "name": "October2025InfrastructureIntelligenceBanner.tsx",
+        "sizeKB": "10.16",
+        "lines": 190,
+        "complexity": 10
+      },
+      {
+        "name": "June2026AMIBreakthroughBanner.tsx",
+        "sizeKB": "10.15",
+        "lines": 170,
+        "complexity": 11
+      },
+      {
+        "name": "October2025AgenticMarketplaceShowcaseBanner.tsx",
+        "sizeKB": "10.13",
+        "lines": 201,
+        "complexity": 17
+      },
+      {
+        "name": "October2025EdgeComputingRevolutionBanner.tsx",
+        "sizeKB": "10.11",
+        "lines": 185,
+        "complexity": 6
+      },
+      {
+        "name": "January2025GlobalTransformationBanner.tsx",
+        "sizeKB": "10.08",
+        "lines": 175,
+        "complexity": 14
+      },
+      {
+        "name": "October2025AIRevolutionMegaBanner.tsx",
+        "sizeKB": "10.08",
+        "lines": 175,
+        "complexity": 14
+      },
+      {
+        "name": "FederatedLearningPrivacyBanner.tsx",
+        "sizeKB": "10.07",
+        "lines": 165,
+        "complexity": 9
+      },
+      {
+        "name": "October2025NewContentMegaBannerOct2.tsx",
+        "sizeKB": "10.07",
+        "lines": 171,
+        "complexity": 4
+      },
+      {
+        "name": "Revolutionary2026ContentMegaBanner.tsx",
+        "sizeKB": "10.07",
+        "lines": 181,
+        "complexity": 15
+      },
+      {
+        "name": "AutonomousBIRevolutionBanner2026.tsx",
+        "sizeKB": "10.06",
+        "lines": 172,
+        "complexity": 13
+      },
+      {
+        "name": "January2026RevolutionaryAIContentBanner.tsx",
+        "sizeKB": "10.06",
+        "lines": 188,
+        "complexity": 20
+      },
+      {
+        "name": "PerformanceComparison.tsx",
+        "sizeKB": "10.04",
+        "lines": 239,
+        "complexity": 28
+      },
+      {
+        "name": "January2026RevolutionaryBreakthroughsMegaBanner.tsx",
+        "sizeKB": "10.03",
+        "lines": 182,
+        "complexity": 9
+      },
+      {
+        "name": "October2025Fortune500EdgeSuccessBanner.tsx",
+        "sizeKB": "10.03",
+        "lines": 178,
+        "complexity": 14
+      },
+      {
+        "name": "January2025AutonomousCodingBanner.tsx",
+        "sizeKB": "9.99",
+        "lines": 178,
+        "complexity": 12
+      },
+      {
+        "name": "New2025ContentShowcase.tsx",
+        "sizeKB": "9.99",
+        "lines": 207,
+        "complexity": 19
+      },
+      {
+        "name": "AI2026QuantumAIRevolutionBanner.tsx",
+        "sizeKB": "9.97",
+        "lines": 179,
+        "complexity": 13
+      },
+      {
+        "name": "October2025CognitiveAutomationMegaShowcase.tsx",
+        "sizeKB": "9.95",
+        "lines": 202,
+        "complexity": 15
+      },
+      {
+        "name": "February2026MultimodalAITransformationBanner.tsx",
+        "sizeKB": "9.94",
+        "lines": 168,
+        "complexity": 20
+      },
+      {
+        "name": "October2025FinancialAIContentShowcase.tsx",
+        "sizeKB": "9.92",
+        "lines": 190,
+        "complexity": 16
+      },
+      {
+        "name": "January2026RevolutionaryContentMegaBanner.tsx",
+        "sizeKB": "9.91",
+        "lines": 154,
+        "complexity": 15
+      },
+      {
+        "name": "AI2027UniversalIntelligenceSingularityBanner.tsx",
+        "sizeKB": "9.89",
+        "lines": 166,
+        "complexity": 9
+      },
+      {
+        "name": "Fortune500AI2027InfiniteValueBanner.tsx",
+        "sizeKB": "9.87",
+        "lines": 158,
+        "complexity": 12
+      },
+      {
+        "name": "November2025NewContentMegaBanner.tsx",
+        "sizeKB": "9.87",
+        "lines": 161,
+        "complexity": 17
+      },
+      {
+        "name": "February2026ContentMegaBanner.tsx",
+        "sizeKB": "9.86",
+        "lines": 172,
+        "complexity": 14
+      },
+      {
+        "name": "October2025ManufacturingAISuccessBanner.tsx",
+        "sizeKB": "9.86",
+        "lines": 163,
+        "complexity": 17
+      },
+      {
+        "name": "RevolutionaryContentShowcase2026.tsx",
+        "sizeKB": "9.84",
+        "lines": 186,
+        "complexity": 16
+      },
+      {
+        "name": "October2025NewContentMegaLaunchShowcase.tsx",
+        "sizeKB": "9.82",
+        "lines": 185,
+        "complexity": 14
+      },
+      {
+        "name": "October2025TripleBreakthroughMegaShowcase.tsx",
+        "sizeKB": "9.82",
+        "lines": 186,
+        "complexity": 12
+      },
+      {
+        "name": "NewContent2026AdvertisingMegaBanner.tsx",
+        "sizeKB": "9.81",
+        "lines": 168,
+        "complexity": 11
+      },
+      {
+        "name": "AI2026AutonomousEnterpriseEcosystemBanner.tsx",
+        "sizeKB": "9.77",
+        "lines": 170,
+        "complexity": 8
+      },
+      {
+        "name": "November2026QuantumConsciousnessBanner.tsx",
+        "sizeKB": "9.76",
+        "lines": 168,
+        "complexity": 9
+      },
+      {
+        "name": "October2025QuantumLeapAIBanner.tsx",
+        "sizeKB": "9.76",
+        "lines": 170,
+        "complexity": 13
+      },
+      {
+        "name": "October2025UnifiedAIOrchestrationBanner.tsx",
+        "sizeKB": "9.76",
+        "lines": 186,
+        "complexity": 15
+      },
+      {
+        "name": "January2026AutonomousAIGovernanceBanner.tsx",
+        "sizeKB": "9.75",
+        "lines": 168,
+        "complexity": 15
+      },
+      {
+        "name": "October2025AIGovernanceBanner.tsx",
+        "sizeKB": "9.74",
+        "lines": 184,
+        "complexity": 11
+      },
+      {
+        "name": "AutonomousEnterpriseOperations2027Banner.tsx",
+        "sizeKB": "9.72",
+        "lines": 177,
+        "complexity": 7
+      },
+      {
+        "name": "ContentRecommendationEngine.tsx",
+        "sizeKB": "9.72",
+        "lines": 261,
+        "complexity": 37
+      },
+      {
+        "name": "January2026NewContentShowcaseBanner.tsx",
+        "sizeKB": "9.72",
+        "lines": 188,
+        "complexity": 11
+      },
+      {
+        "name": "December2025NewContentShowcaseBanner.tsx",
+        "sizeKB": "9.71",
+        "lines": 170,
+        "complexity": 20
+      },
+      {
+        "name": "October2025DigitalTwinsBreakthroughBanner.tsx",
+        "sizeKB": "9.71",
+        "lines": 194,
+        "complexity": 10
+      },
+      {
+        "name": "October2025NeuromorphicContentBanner.tsx",
+        "sizeKB": "9.71",
+        "lines": 169,
+        "complexity": 15
+      },
+      {
+        "name": "January2026RevolutionaryAutonomousIntelligenceBanner.tsx",
+        "sizeKB": "9.70",
+        "lines": 168,
+        "complexity": 11
+      },
+      {
+        "name": "RevolutionaryContentShowcaseBanner.tsx",
+        "sizeKB": "9.67",
+        "lines": 190,
+        "complexity": 13
+      },
+      {
+        "name": "October2025NewContentSpotlight.tsx",
+        "sizeKB": "9.65",
+        "lines": 205,
+        "complexity": 16
+      },
+      {
+        "name": "October2025MultiAgentRevolutionBanner.tsx",
+        "sizeKB": "9.64",
+        "lines": 163,
+        "complexity": 23
+      },
+      {
+        "name": "October2025SupplyChainContentShowcase.tsx",
+        "sizeKB": "9.64",
+        "lines": 176,
+        "complexity": 25
+      },
+      {
+        "name": "January2025UltimateBreakthroughBanner.tsx",
+        "sizeKB": "9.63",
+        "lines": 172,
+        "complexity": 8
+      },
+      {
+        "name": "Interactive2027ContentDiscovery.tsx",
+        "sizeKB": "9.60",
+        "lines": 236,
+        "complexity": 25
+      },
+      {
+        "name": "October2025NewTechInnovationsBanner.tsx",
+        "sizeKB": "9.59",
+        "lines": 183,
+        "complexity": 12
+      },
+      {
+        "name": "February2026ContentShowcaseBanner.tsx",
+        "sizeKB": "9.58",
+        "lines": 164,
+        "complexity": 12
+      },
+      {
+        "name": "JulyAugust2026RevolutionaryBreakthroughBanner.tsx",
+        "sizeKB": "9.58",
+        "lines": 155,
+        "complexity": 14
+      },
+      {
+        "name": "Fortune100SuccessStoryBanner.tsx",
+        "sizeKB": "9.56",
+        "lines": 189,
+        "complexity": 12
+      },
+      {
+        "name": "March2026AutonomousBusinessIntelligenceBanner.tsx",
+        "sizeKB": "9.56",
+        "lines": 163,
+        "complexity": 9
+      },
+      {
+        "name": "October2025MLOpsPlatformSuccessBanner.tsx",
+        "sizeKB": "9.56",
+        "lines": 179,
+        "complexity": 14
+      },
+      {
+        "name": "October2025AutonomousIntelligenceMegaBanner.tsx",
+        "sizeKB": "9.54",
+        "lines": 151,
+        "complexity": 25
+      },
+      {
+        "name": "ContentNavigationHub.tsx",
+        "sizeKB": "9.53",
+        "lines": 163,
+        "complexity": 10
+      },
+      {
+        "name": "Revolutionary2026BreakthroughContentBanner.tsx",
+        "sizeKB": "9.53",
+        "lines": 178,
+        "complexity": 9
+      },
+      {
+        "name": "Ultimate2027ContentShowcase.tsx",
+        "sizeKB": "9.53",
+        "lines": 170,
+        "complexity": 19
+      },
+      {
+        "name": "February2026RevolutionaryContentMegaBanner.tsx",
+        "sizeKB": "9.51",
+        "lines": 160,
+        "complexity": 17
+      },
+      {
+        "name": "NewContent2026RevolutionaryBanner.tsx",
+        "sizeKB": "9.51",
+        "lines": 176,
+        "complexity": 10
+      },
+      {
+        "name": "October2025AutonomousCodingBanner.tsx",
+        "sizeKB": "9.51",
+        "lines": 147,
+        "complexity": 13
+      },
+      {
+        "name": "October2025NewContentLaunchSpotlight.tsx",
+        "sizeKB": "9.51",
+        "lines": 163,
+        "complexity": 15
+      },
+      {
+        "name": "October2025ContentMegaShowcaseBanner.tsx",
+        "sizeKB": "9.50",
+        "lines": 222,
+        "complexity": 10
+      },
+      {
+        "name": "AI2040TranscendentEconomyBanner.tsx",
+        "sizeKB": "9.48",
+        "lines": 154,
+        "complexity": 10
+      },
+      {
+        "name": "AutonomousEnterpriseBreakthroughBanner.tsx",
+        "sizeKB": "9.48",
+        "lines": 178,
+        "complexity": 12
+      },
+      {
+        "name": "February2026ContentRevolutionBanner.tsx",
+        "sizeKB": "9.48",
+        "lines": 182,
+        "complexity": 13
+      },
+      {
+        "name": "January2025AIAutomationMasteryBanner.tsx",
+        "sizeKB": "9.48",
+        "lines": 169,
+        "complexity": 13
+      },
+      {
+        "name": "October2025AgentMeshBanner.tsx",
+        "sizeKB": "9.48",
+        "lines": 179,
+        "complexity": 15
+      },
+      {
+        "name": "December2026UniversalConsciousnessBanner.tsx",
+        "sizeKB": "9.47",
+        "lines": 163,
+        "complexity": 9
+      },
+      {
+        "name": "February2026SyntheticConsciousnessBanner.tsx",
+        "sizeKB": "9.47",
+        "lines": 163,
+        "complexity": 9
+      },
+      {
+        "name": "March2026EnterpriseTransformationMasterclassBanner.tsx",
+        "sizeKB": "9.46",
+        "lines": 180,
+        "complexity": 13
+      },
+      {
+        "name": "October2025NewCuttingEdgeAIContentBanner.tsx",
+        "sizeKB": "9.46",
+        "lines": 166,
+        "complexity": 13
+      },
+      {
+        "name": "September30CognitiveAutomationBanner.tsx",
+        "sizeKB": "9.46",
+        "lines": 178,
+        "complexity": 26
+      },
+      {
+        "name": "October2025NewContentMegaBannerACM.tsx",
+        "sizeKB": "9.45",
+        "lines": 182,
+        "complexity": 15
+      },
+      {
+        "name": "March2026QuantumConsciousnessTransformationBanner.tsx",
+        "sizeKB": "9.44",
+        "lines": 150,
+        "complexity": 16
+      },
+      {
+        "name": "October2025NeuralQuantumMegaShowcase.tsx",
+        "sizeKB": "9.44",
+        "lines": 189,
+        "complexity": 6
+      },
+      {
+        "name": "UltimateNeuralFusionAdvertisingBanner.tsx",
+        "sizeKB": "9.44",
+        "lines": 145,
+        "complexity": 16
+      },
+      {
+        "name": "October2025UnifiedAIPlatformMegaBanner.tsx",
+        "sizeKB": "9.43",
+        "lines": 193,
+        "complexity": 17
+      },
+      {
+        "name": "February2026NewContentBreakthroughBanner.tsx",
+        "sizeKB": "9.42",
+        "lines": 149,
+        "complexity": 17
+      },
+      {
+        "name": "NewContentJanuary2026Banner.tsx",
+        "sizeKB": "9.42",
+        "lines": 181,
+        "complexity": 10
+      },
+      {
+        "name": "October2025NewInnovationsBanner.tsx",
+        "sizeKB": "9.42",
+        "lines": 179,
+        "complexity": 5
+      },
+      {
+        "name": "October2025TelecomSuccessBanner.tsx",
+        "sizeKB": "9.42",
+        "lines": 183,
+        "complexity": 11
+      },
+      {
+        "name": "January2026QuantumNeuralBreakthroughBanner.tsx",
+        "sizeKB": "9.41",
+        "lines": 163,
+        "complexity": 9
+      },
+      {
+        "name": "January2026QuantumNeuralConsensusBreakthroughBanner.tsx",
+        "sizeKB": "9.41",
+        "lines": 159,
+        "complexity": 13
+      },
+      {
+        "name": "October2025NewContentMegaBanner.tsx",
+        "sizeKB": "9.41",
+        "lines": 181,
+        "complexity": 17
+      },
+      {
+        "name": "January2027QuantumNeuralFusionBanner.tsx",
+        "sizeKB": "9.40",
+        "lines": 176,
+        "complexity": 5
+      },
+      {
+        "name": "NewContentPromotionalBanner.tsx",
+        "sizeKB": "9.40",
+        "lines": 169,
+        "complexity": 16
+      },
+      {
+        "name": "NewContentShowcase2027.tsx",
+        "sizeKB": "9.40",
+        "lines": 157,
+        "complexity": 20
+      },
+      {
+        "name": "AI2026UltimateConsciousnessBreakthroughBanner.tsx",
+        "sizeKB": "9.39",
+        "lines": 150,
+        "complexity": 10
+      },
+      {
+        "name": "January2032TranscendentContentBanner.tsx",
+        "sizeKB": "9.39",
+        "lines": 169,
+        "complexity": 12
+      },
+      {
+        "name": "AI2027AutonomousEnterpriseRevolutionBanner.tsx",
+        "sizeKB": "9.38",
+        "lines": 150,
+        "complexity": 9
+      },
+      {
+        "name": "January2026MultimodalAIBanner.tsx",
+        "sizeKB": "9.38",
+        "lines": 164,
+        "complexity": 9
+      },
+      {
+        "name": "AI2027TranscendentQuantumConsciousnessBreakthroughBanner.tsx",
+        "sizeKB": "9.37",
+        "lines": 170,
+        "complexity": 8
+      },
+      {
+        "name": "January2026RevolutionaryBreakthroughBanner.tsx",
+        "sizeKB": "9.35",
+        "lines": 165,
+        "complexity": 7
+      },
+      {
+        "name": "October2025AutonomousCognitionPlatformBanner.tsx",
+        "sizeKB": "9.35",
+        "lines": 202,
+        "complexity": 6
+      },
+      {
+        "name": "November2026UniversalIntelligenceBanner.tsx",
+        "sizeKB": "9.34",
+        "lines": 163,
+        "complexity": 12
+      },
+      {
+        "name": "October2025QuantumEdgeComputingBanner.tsx",
+        "sizeKB": "9.34",
+        "lines": 173,
+        "complexity": 10
+      },
+      {
+        "name": "October2025SustainableAIBanner.tsx",
+        "sizeKB": "9.34",
+        "lines": 165,
+        "complexity": 22
+      },
+      {
+        "name": "TranscendentIntelligence2027AdvertisingBanner.tsx",
+        "sizeKB": "9.34",
+        "lines": 168,
+        "complexity": 10
+      },
+      {
+        "name": "December2025NeuralMeshConsciousnessBreakthroughBanner.tsx",
+        "sizeKB": "9.33",
+        "lines": 173,
+        "complexity": 5
+      },
+      {
+        "name": "NewContentShowcase2026.tsx",
+        "sizeKB": "9.31",
+        "lines": 173,
+        "complexity": 15
+      },
+      {
+        "name": "October2025AIInnovationSpotlight.tsx",
+        "sizeKB": "9.30",
+        "lines": 172,
+        "complexity": 5
+      },
+      {
+        "name": "October2025AISecurityTrustFrameworkBanner.tsx",
+        "sizeKB": "9.30",
+        "lines": 186,
+        "complexity": 2
+      },
+      {
+        "name": "October2025LatestContentRevolutionBanner.tsx",
+        "sizeKB": "9.30",
+        "lines": 170,
+        "complexity": 5
+      },
+      {
+        "name": "Fortune500AI2026TransformationBanner.tsx",
+        "sizeKB": "9.27",
+        "lines": 159,
+        "complexity": 22
+      },
+      {
+        "name": "July2026AutonomousIntelligenceBanner.tsx",
+        "sizeKB": "9.27",
+        "lines": 154,
+        "complexity": 16
+      },
+      {
+        "name": "AI2026AutonomousAIConsciousnessRevolutionBanner.tsx",
+        "sizeKB": "9.25",
+        "lines": 153,
+        "complexity": 11
+      },
+      {
+        "name": "October2025NewBreakthroughContentMegaBanner.tsx",
+        "sizeKB": "9.25",
+        "lines": 227,
+        "complexity": 10
+      },
+      {
+        "name": "InteractiveAI2026Calculator.tsx",
+        "sizeKB": "9.23",
+        "lines": 236,
+        "complexity": 11
+      },
+      {
+        "name": "March2026NewContentShowcaseBanner.tsx",
+        "sizeKB": "9.23",
+        "lines": 170,
+        "complexity": 21
+      },
+      {
+        "name": "October2025LatestContentShowcaseBanner.tsx",
+        "sizeKB": "9.23",
+        "lines": 152,
+        "complexity": 14
+      },
+      {
+        "name": "January2025NewContentAdvertisingMegaBanner.tsx",
+        "sizeKB": "9.22",
+        "lines": 182,
+        "complexity": 8
+      },
+      {
+        "name": "AI2026QuantumConsciousnessRevolutionBanner.tsx",
+        "sizeKB": "9.21",
+        "lines": 167,
+        "complexity": 10
+      },
+      {
+        "name": "October2025NewBreakthroughContentBanner.tsx",
+        "sizeKB": "9.21",
+        "lines": 152,
+        "complexity": 4
+      },
+      {
+        "name": "Ultimate2026HyperintelligenceBanner.tsx",
+        "sizeKB": "9.21",
+        "lines": 151,
+        "complexity": 12
+      },
+      {
+        "name": "December2025RevolutionaryAutonomousEnterpriseBanner.tsx",
+        "sizeKB": "9.19",
+        "lines": 163,
+        "complexity": 9
+      },
+      {
+        "name": "MetaCognitiveAutonomousSystemsBanner.tsx",
+        "sizeKB": "9.19",
+        "lines": 159,
+        "complexity": 12
+      },
+      {
+        "name": "October2025CognitiveWorkforceBanner.tsx",
+        "sizeKB": "9.19",
+        "lines": 161,
+        "complexity": 13
+      },
+      {
+        "name": "December2025QuantumNeuralFusionBreakthroughBanner.tsx",
+        "sizeKB": "9.17",
+        "lines": 162,
+        "complexity": 10
+      },
+      {
+        "name": "InteractiveAI2026Showcase.tsx",
+        "sizeKB": "9.16",
+        "lines": 234,
+        "complexity": 13
+      },
+      {
+        "name": "October2025CognitiveBusinessIntelligenceBanner.tsx",
+        "sizeKB": "9.16",
+        "lines": 173,
+        "complexity": 10
+      },
+      {
+        "name": "October2025EdgeIoTShowcaseBanner.tsx",
+        "sizeKB": "9.15",
+        "lines": 200,
+        "complexity": 21
+      },
+      {
+        "name": "January2026UltimateBreakthroughShowcaseBanner.tsx",
+        "sizeKB": "9.14",
+        "lines": 157,
+        "complexity": 17
+      },
+      {
+        "name": "AI2026FutureTrendsMegaBreakthroughBanner.tsx",
+        "sizeKB": "9.12",
+        "lines": 161,
+        "complexity": 8
+      },
+      {
+        "name": "January2026BreakthroughContentBanner.tsx",
+        "sizeKB": "9.12",
+        "lines": 167,
+        "complexity": 13
+      },
+      {
+        "name": "January2026RevolutionaryAIBanner.tsx",
+        "sizeKB": "9.12",
+        "lines": 148,
+        "complexity": 11
+      },
+      {
+        "name": "May2026NeuroSymbolicFusionBanner.tsx",
+        "sizeKB": "9.11",
+        "lines": 164,
+        "complexity": 7
+      },
+      {
+        "name": "March2026EdgeIntelligenceRevolutionBanner.tsx",
+        "sizeKB": "9.10",
+        "lines": 158,
+        "complexity": 11
+      },
+      {
+        "name": "NeuralSuperintelligencePlatformBanner.tsx",
+        "sizeKB": "9.10",
+        "lines": 168,
+        "complexity": 18
+      },
+      {
+        "name": "October2025BreakthroughContentBanner.tsx",
+        "sizeKB": "9.09",
+        "lines": 164,
+        "complexity": 26
+      },
+      {
+        "name": "May2026ContentShowcaseBanner.tsx",
+        "sizeKB": "9.08",
+        "lines": 170,
+        "complexity": 15
+      },
+      {
+        "name": "January2025AdvancedAutonomousOperationsBanner.tsx",
+        "sizeKB": "9.07",
+        "lines": 162,
+        "complexity": 8
+      },
+      {
+        "name": "October2025EnterpriseMetaverseSyntheticRealityBanner.tsx",
+        "sizeKB": "9.07",
+        "lines": 164,
+        "complexity": 12
+      },
+      {
+        "name": "NewContentJune2026PromotionalBanner.tsx",
+        "sizeKB": "9.04",
+        "lines": 167,
+        "complexity": 9
+      },
+      {
+        "name": "January2026ContentMegaBanner.tsx",
+        "sizeKB": "9.02",
+        "lines": 160,
+        "complexity": 17
+      },
+      {
+        "name": "January2026MetaCognitiveEnterpriseBanner.tsx",
+        "sizeKB": "9.02",
+        "lines": 148,
+        "complexity": 13
+      },
+      {
+        "name": "June2026ContentShowcaseBanner.tsx",
+        "sizeKB": "9.02",
+        "lines": 153,
+        "complexity": 19
+      },
+      {
+        "name": "January2025CognitiveAutomationBanner.tsx",
+        "sizeKB": "9.01",
+        "lines": 162,
+        "complexity": 9
+      },
+      {
+        "name": "October2025AutonomousSupplyChainRevolutionBanner.tsx",
+        "sizeKB": "9.01",
+        "lines": 162,
+        "complexity": 22
+      },
+      {
+        "name": "October2025QuantumSwarmCognitiveNetworksBanner.tsx",
+        "sizeKB": "9.01",
+        "lines": 167,
+        "complexity": 15
+      },
+      {
+        "name": "January2025NewContentRevolutionBanner.tsx",
+        "sizeKB": "8.99",
+        "lines": 162,
+        "complexity": 12
+      },
+      {
+        "name": "January2027RevolutionaryContentShowcase.tsx",
+        "sizeKB": "8.99",
+        "lines": 161,
+        "complexity": 11
+      },
+      {
+        "name": "October2025NeuralQuantumConvergenceBanner.tsx",
+        "sizeKB": "8.98",
+        "lines": 164,
+        "complexity": 12
+      },
+      {
+        "name": "UltraIntelligentAutonomousSystemsBanner.tsx",
+        "sizeKB": "8.98",
+        "lines": 148,
+        "complexity": 10
+      },
+      {
+        "name": "October2025NewDevOpsContentBanner.tsx",
+        "sizeKB": "8.97",
+        "lines": 165,
+        "complexity": 10
+      },
+      {
+        "name": "October2025AutonomousSelfHealingInfrastructureBanner.tsx",
+        "sizeKB": "8.96",
+        "lines": 164,
+        "complexity": 13
+      },
+      {
+        "name": "October2025IntelligentProcessAutomationBanner.tsx",
+        "sizeKB": "8.95",
+        "lines": 162,
+        "complexity": 9
+      },
+      {
+        "name": "October2025NewContentMegaAdvertisingBanner.tsx",
+        "sizeKB": "8.95",
+        "lines": 186,
+        "complexity": 12
+      },
+      {
+        "name": "New2026ContentBreakthroughBanner.tsx",
+        "sizeKB": "8.94",
+        "lines": 165,
+        "complexity": 14
+      },
+      {
+        "name": "October2025RealTimeStreamingAIPlatformBanner.tsx",
+        "sizeKB": "8.94",
+        "lines": 148,
+        "complexity": 19
+      },
+      {
+        "name": "May2026RevolutionaryContentBanner.tsx",
+        "sizeKB": "8.93",
+        "lines": 157,
+        "complexity": 12
+      },
+      {
+        "name": "May2026ContentShowcase.tsx",
+        "sizeKB": "8.92",
+        "lines": 199,
+        "complexity": 18
+      },
+      {
+        "name": "RevolutionaryAIBreakthrough2026Banner.tsx",
+        "sizeKB": "8.92",
+        "lines": 142,
+        "complexity": 10
+      },
+      {
+        "name": "January2026NewContentMegaShowcaseBanner.tsx",
+        "sizeKB": "8.91",
+        "lines": 172,
+        "complexity": 14
+      },
+      {
+        "name": "February2027SyntheticConsciousnessBanner.tsx",
+        "sizeKB": "8.90",
+        "lines": 126,
+        "complexity": 14
+      },
+      {
+        "name": "October2025EnterpriseAITransformationBanner.tsx",
+        "sizeKB": "8.90",
+        "lines": 154,
+        "complexity": 8
+      },
+      {
+        "name": "October2025SwarmIntelligenceBreakthroughBanner.tsx",
+        "sizeKB": "8.90",
+        "lines": 144,
+        "complexity": 10
+      },
+      {
+        "name": "April2026SuccessStoryBanner.tsx",
+        "sizeKB": "8.88",
+        "lines": 145,
+        "complexity": 10
+      },
+      {
+        "name": "March2027QuantumConsciousnessBanner.tsx",
+        "sizeKB": "8.88",
+        "lines": 160,
+        "complexity": 4
+      },
+      {
+        "name": "NewContentNavigationHub.tsx",
+        "sizeKB": "8.87",
+        "lines": 192,
+        "complexity": 7
+      },
+      {
+        "name": "October2025MLOpsAutomationBanner.tsx",
+        "sizeKB": "8.87",
+        "lines": 163,
+        "complexity": 11
+      },
+      {
+        "name": "October2025AutonomousSuperintelligenceBanner.tsx",
+        "sizeKB": "8.85",
+        "lines": 206,
+        "complexity": 7
+      },
+      {
+        "name": "January2025NewContentBanner.tsx",
+        "sizeKB": "8.84",
+        "lines": 162,
+        "complexity": 8
+      },
+      {
+        "name": "NextGenAutonomousIntelligence2026Banner.tsx",
+        "sizeKB": "8.84",
+        "lines": 140,
+        "complexity": 11
+      },
+      {
+        "name": "October2025HolographicAIRevolutionBanner.tsx",
+        "sizeKB": "8.83",
+        "lines": 169,
+        "complexity": 15
+      },
+      {
+        "name": "January2025AIAutomationShowcaseBanner.tsx",
+        "sizeKB": "8.82",
+        "lines": 172,
+        "complexity": 11
+      },
+      {
+        "name": "October2025DataGovernanceShowcase.tsx",
+        "sizeKB": "8.74",
+        "lines": 191,
+        "complexity": 14
+      },
+      {
+        "name": "QuantumNeuralSuperintelligence2026Banner.tsx",
+        "sizeKB": "8.74",
+        "lines": 136,
+        "complexity": 13
+      },
+      {
+        "name": "RevolutionaryContentCarousel.tsx",
+        "sizeKB": "8.73",
+        "lines": 201,
+        "complexity": 16
+      },
+      {
+        "name": "AI2027TranscendentIntelligenceBanner.tsx",
+        "sizeKB": "8.72",
+        "lines": 149,
+        "complexity": 9
+      },
+      {
+        "name": "April2026AutonomousEnterpriseOperationsBanner.tsx",
+        "sizeKB": "8.72",
+        "lines": 159,
+        "complexity": 4
+      },
+      {
+        "name": "AutonomousBusinessIntelligenceBanner.tsx",
+        "sizeKB": "8.72",
+        "lines": 151,
+        "complexity": 9
+      },
+      {
+        "name": "InteractiveAICalculator2026.tsx",
+        "sizeKB": "8.72",
+        "lines": 185,
+        "complexity": 11
+      },
+      {
+        "name": "Latest2026RevolutionaryContentBanner.tsx",
+        "sizeKB": "8.72",
+        "lines": 163,
+        "complexity": 9
+      },
+      {
+        "name": "October2025AdvancedMLOpsPlatformBanner.tsx",
+        "sizeKB": "8.71",
+        "lines": 184,
+        "complexity": 15
+      },
+      {
+        "name": "February2026MegaBreakthroughBanner.tsx",
+        "sizeKB": "8.69",
+        "lines": 146,
+        "complexity": 11
+      },
+      {
+        "name": "January2025ContentShowcaseBanner.tsx",
+        "sizeKB": "8.67",
+        "lines": 162,
+        "complexity": 17
+      },
+      {
+        "name": "October2025AutonomousDataCentersRevolutionBanner.tsx",
+        "sizeKB": "8.67",
+        "lines": 142,
+        "complexity": 13
+      },
+      {
+        "name": "October2025IntelligentAutomationPlatformBanner.tsx",
+        "sizeKB": "8.67",
+        "lines": 151,
+        "complexity": 15
+      },
+      {
+        "name": "AI2027NeuralQuantumFusionBanner.tsx",
+        "sizeKB": "8.66",
+        "lines": 175,
+        "complexity": 5
+      },
+      {
+        "name": "October2025CybersecurityEvolutionBanner.tsx",
+        "sizeKB": "8.66",
+        "lines": 142,
+        "complexity": 11
+      },
+      {
+        "name": "NeuromorphicComputingRevolutionBanner.tsx",
+        "sizeKB": "8.65",
+        "lines": 144,
+        "complexity": 11
+      },
+      {
+        "name": "October2025BreakthroughShowcase.tsx",
+        "sizeKB": "8.65",
+        "lines": 156,
+        "complexity": 11
+      },
+      {
+        "name": "January2025QuantumComputingRevolutionBanner.tsx",
+        "sizeKB": "8.62",
+        "lines": 167,
+        "complexity": 6
+      },
+      {
+        "name": "April2026SustainableAITransformationBanner.tsx",
+        "sizeKB": "8.61",
+        "lines": 154,
+        "complexity": 14
+      },
+      {
+        "name": "January2025AutonomousIntelligenceBanner.tsx",
+        "sizeKB": "8.60",
+        "lines": 130,
+        "complexity": 13
+      },
+      {
+        "name": "October2025AIEthicsGovernanceBanner.tsx",
+        "sizeKB": "8.60",
+        "lines": 142,
+        "complexity": 12
+      },
+      {
+        "name": "November2025PredictiveMaintenanceShowcase.tsx",
+        "sizeKB": "8.59",
+        "lines": 161,
+        "complexity": 20
+      },
+      {
+        "name": "Latest2026ContentBanner.tsx",
+        "sizeKB": "8.58",
+        "lines": 177,
+        "complexity": 11
+      },
+      {
+        "name": "October2025ExplainableAIBanner.tsx",
+        "sizeKB": "8.57",
+        "lines": 171,
+        "complexity": 8
+      },
+      {
+        "name": "April2026QuantumAIRevolutionBanner.tsx",
+        "sizeKB": "8.55",
+        "lines": 146,
+        "complexity": 8
+      },
+      {
+        "name": "January2026FreshContentShowcaseBanner.tsx",
+        "sizeKB": "8.55",
+        "lines": 146,
+        "complexity": 23
+      },
+      {
+        "name": "May2026ConsciousnessBreakthroughBanner.tsx",
+        "sizeKB": "8.55",
+        "lines": 153,
+        "complexity": 10
+      },
+      {
+        "name": "NewContent20252026MegaBanner.tsx",
+        "sizeKB": "8.54",
+        "lines": 175,
+        "complexity": 17
+      },
+      {
+        "name": "October2025BusinessIntelligenceRevolutionBanner.tsx",
+        "sizeKB": "8.54",
+        "lines": 142,
+        "complexity": 16
+      },
+      {
+        "name": "October2025NewTechContentMegaBanner.tsx",
+        "sizeKB": "8.54",
+        "lines": 136,
+        "complexity": 4
+      },
+      {
+        "name": "AI2028AutonomousEnterpriseRevolutionaryBanner.tsx",
+        "sizeKB": "8.53",
+        "lines": 156,
+        "complexity": 6
+      },
+      {
+        "name": "AIMegaTransformationSuccessBanner.tsx",
+        "sizeKB": "8.53",
+        "lines": 164,
+        "complexity": 12
+      },
+      {
+        "name": "October2025NewContentLLMShowcase.tsx",
+        "sizeKB": "8.52",
+        "lines": 202,
+        "complexity": 20
+      },
+      {
+        "name": "QuantumNeuralFusionBanner.tsx",
+        "sizeKB": "8.50",
+        "lines": 156,
+        "complexity": 5
+      },
+      {
+        "name": "January2026UltraIntelligentAutonomousSystemsRevolutionBanner.tsx",
+        "sizeKB": "8.49",
+        "lines": 160,
+        "complexity": 5
+      },
+      {
+        "name": "October2025TechnicalContentBanner.tsx",
+        "sizeKB": "8.49",
+        "lines": 150,
+        "complexity": 15
+      },
+      {
+        "name": "October2025EdgeIoTCognitiveRevolutionBanner.tsx",
+        "sizeKB": "8.48",
+        "lines": 172,
+        "complexity": 12
+      },
+      {
+        "name": "September30NewContentBanner.tsx",
+        "sizeKB": "8.48",
+        "lines": 174,
+        "complexity": 14
+      },
+      {
+        "name": "October2025EdgeNativeIntelligenceBanner.tsx",
+        "sizeKB": "8.47",
+        "lines": 143,
+        "complexity": 21
+      },
+      {
+        "name": "October2025IntelligentEdgeComputingRevolutionBanner.tsx",
+        "sizeKB": "8.47",
+        "lines": 183,
+        "complexity": 12
+      },
+      {
+        "name": "UltimateContent2026MegaBanner.tsx",
+        "sizeKB": "8.47",
+        "lines": 159,
+        "complexity": 17
+      },
+      {
+        "name": "January2026QuantumNeuralAIFusionRevolutionBanner.tsx",
+        "sizeKB": "8.45",
+        "lines": 147,
+        "complexity": 11
+      },
+      {
+        "name": "January2026HomepageContentSpotlight.tsx",
+        "sizeKB": "8.44",
+        "lines": 145,
+        "complexity": 21
+      },
+      {
+        "name": "September2025ContentShowcaseBanner.tsx",
+        "sizeKB": "8.44",
+        "lines": 161,
+        "complexity": 15
+      },
+      {
+        "name": "October2025DigitalTransformationPlatformBanner.tsx",
+        "sizeKB": "8.42",
+        "lines": 171,
+        "complexity": 17
+      },
+      {
+        "name": "AI2026QuantumNeuralOptimizationBanner.tsx",
+        "sizeKB": "8.41",
+        "lines": 126,
+        "complexity": 10
+      },
+      {
+        "name": "October2025EdgeAI5GRevolutionBanner.tsx",
+        "sizeKB": "8.41",
+        "lines": 154,
+        "complexity": 7
+      },
+      {
+        "name": "NewOctoberContentBanner.tsx",
+        "sizeKB": "8.40",
+        "lines": 177,
+        "complexity": 27
+      },
+      {
+        "name": "October2025NewTechInsightsBanner.tsx",
+        "sizeKB": "8.40",
+        "lines": 139,
+        "complexity": 6
+      },
+      {
+        "name": "October2025ContinuousLearningBanner.tsx",
+        "sizeKB": "8.38",
+        "lines": 166,
+        "complexity": 5
+      },
+      {
+        "name": "October2025EnterpriseTransformationRoadmapBanner.tsx",
+        "sizeKB": "8.37",
+        "lines": 188,
+        "complexity": 14
+      },
+      {
+        "name": "October2025RealTimeDecisionMeshBanner.tsx",
+        "sizeKB": "8.36",
+        "lines": 159,
+        "complexity": 16
+      },
+      {
+        "name": "AI2026ContentShowcaseBanner.tsx",
+        "sizeKB": "8.34",
+        "lines": 181,
+        "complexity": 11
+      },
+      {
+        "name": "AI2035PostSingularityTransformationBanner.tsx",
+        "sizeKB": "8.33",
+        "lines": 132,
+        "complexity": 15
+      },
+      {
+        "name": "October2025AgentCollaborationNetworksBanner.tsx",
+        "sizeKB": "8.33",
+        "lines": 144,
+        "complexity": 15
+      },
+      {
+        "name": "AI2026FutureTrendsBanner.tsx",
+        "sizeKB": "8.32",
+        "lines": 142,
+        "complexity": 6
+      },
+      {
+        "name": "AI2027UltimateBreakthroughBanner.tsx",
+        "sizeKB": "8.32",
+        "lines": 143,
+        "complexity": 7
+      },
+      {
+        "name": "December2025NewContentBanner.tsx",
+        "sizeKB": "8.32",
+        "lines": 146,
+        "complexity": 19
+      },
+      {
+        "name": "January2027TechTrendsBanner.tsx",
+        "sizeKB": "8.32",
+        "lines": 164,
+        "complexity": 4
+      },
+      {
+        "name": "LatestTrendsShowcase2026.tsx",
+        "sizeKB": "8.32",
+        "lines": 156,
+        "complexity": 14
+      },
+      {
+        "name": "October2025RealTimeDecisionIntelligenceBanner.tsx",
+        "sizeKB": "8.32",
+        "lines": 135,
+        "complexity": 20
+      },
+      {
+        "name": "October2025QuantumEdgeRevolutionMegaBanner.tsx",
+        "sizeKB": "8.31",
+        "lines": 137,
+        "complexity": 15
+      },
+      {
+        "name": "October2025SupplyChainRevolutionBanner.tsx",
+        "sizeKB": "8.30",
+        "lines": 144,
+        "complexity": 19
+      },
+      {
+        "name": "February2026AutonomousEnterpriseEcosystemBanner.tsx",
+        "sizeKB": "8.29",
+        "lines": 135,
+        "complexity": 12
+      },
+      {
+        "name": "November2026QuantumSuperintelligenceBanner.tsx",
+        "sizeKB": "8.29",
+        "lines": 138,
+        "complexity": 11
+      },
+      {
+        "name": "April2026UniversalIntelligenceBanner.tsx",
+        "sizeKB": "8.28",
+        "lines": 133,
+        "complexity": 14
+      },
+      {
+        "name": "AutonomousEnterpriseTransformation2026Banner.tsx",
+        "sizeKB": "8.27",
+        "lines": 155,
+        "complexity": 14
+      },
+      {
+        "name": "January2025NextGenAIBreakthroughBanner.tsx",
+        "sizeKB": "8.27",
+        "lines": 163,
+        "complexity": 5
+      },
+      {
+        "name": "October2025NewDataIntelligenceContentBanner.tsx",
+        "sizeKB": "8.27",
+        "lines": 139,
+        "complexity": 8
+      },
+      {
+        "name": "October2025QuantumAISecurityBanner.tsx",
+        "sizeKB": "8.27",
+        "lines": 150,
+        "complexity": 10
+      },
+      {
+        "name": "Ultimate2026ContentPromotionalBanner.tsx",
+        "sizeKB": "8.27",
+        "lines": 145,
+        "complexity": 15
+      },
+      {
+        "name": "October2025IntelligentDataFabricBanner.tsx",
+        "sizeKB": "8.26",
+        "lines": 144,
+        "complexity": 18
+      },
+      {
+        "name": "October2025QuantumEdgeBanner.tsx",
+        "sizeKB": "8.26",
+        "lines": 135,
+        "complexity": 15
+      },
+      {
+        "name": "October2025ZeroTrustAISecurityBanner.tsx",
+        "sizeKB": "8.26",
+        "lines": 144,
+        "complexity": 12
+      },
+      {
+        "name": "AI2030TranscendentBusinessIntelligenceBanner.tsx",
+        "sizeKB": "8.25",
+        "lines": 132,
+        "complexity": 9
+      },
+      {
+        "name": "February2025QuantumAIBreakthroughBanner.tsx",
+        "sizeKB": "8.25",
+        "lines": 146,
+        "complexity": 10
+      },
+      {
+        "name": "October2025RealTimeAnalyticsShowcase.tsx",
+        "sizeKB": "8.24",
+        "lines": 200,
+        "complexity": 17
+      },
+      {
+        "name": "December2025QuantumAISingularityBreakthroughBanner.tsx",
+        "sizeKB": "8.22",
+        "lines": 170,
+        "complexity": 10
+      },
+      {
+        "name": "January2026NewContentBanner.tsx",
+        "sizeKB": "8.22",
+        "lines": 147,
+        "complexity": 12
+      },
+      {
+        "name": "January2027AutonomousCognitiveEnterpriseBanner.tsx",
+        "sizeKB": "8.21",
+        "lines": 150,
+        "complexity": 8
+      },
+      {
+        "name": "October2025EnterpriseIntelligenceRevolutionBanner.tsx",
+        "sizeKB": "8.21",
+        "lines": 142,
+        "complexity": 18
+      },
+      {
+        "name": "October2025QuantumReadyInfrastructureBanner.tsx",
+        "sizeKB": "8.21",
+        "lines": 143,
+        "complexity": 11
+      },
+      {
+        "name": "October2025NewestContentMegaBanner.tsx",
+        "sizeKB": "8.20",
+        "lines": 146,
+        "complexity": 10
+      },
+      {
+        "name": "AI2027BreakthroughPromotionalBanner.tsx",
+        "sizeKB": "8.19",
+        "lines": 152,
+        "complexity": 8
+      },
+      {
+        "name": "January2026QuantumNeuralFusionBreakthroughBanner.tsx",
+        "sizeKB": "8.19",
+        "lines": 135,
+        "complexity": 13
+      },
+      {
+        "name": "March2026MegaBreakthroughBanner.tsx",
+        "sizeKB": "8.19",
+        "lines": 149,
+        "complexity": 9
+      },
+      {
+        "name": "MetaCognitiveRevolutionaryBanner.tsx",
+        "sizeKB": "8.19",
+        "lines": 139,
+        "complexity": 13
+      },
+      {
+        "name": "October2025NewCuttingEdgeContentBanner.tsx",
+        "sizeKB": "8.19",
+        "lines": 156,
+        "complexity": 6
+      },
+      {
+        "name": "AutonomousIntelligenceRevolutionBanner.tsx",
+        "sizeKB": "8.18",
+        "lines": 161,
+        "complexity": 5
+      },
+      {
+        "name": "January2025AdvancedAutonomousWorkflowBanner.tsx",
+        "sizeKB": "8.18",
+        "lines": 143,
+        "complexity": 7
+      },
+      {
+        "name": "December2025QuantumAIRevolutionBanner.tsx",
+        "sizeKB": "8.17",
+        "lines": 138,
+        "complexity": 15
+      },
+      {
+        "name": "NewContent2026MegaTrendsBanner.tsx",
+        "sizeKB": "8.17",
+        "lines": 157,
+        "complexity": 12
+      },
+      {
+        "name": "October2025CognitiveAutomationRevolutionBanner.tsx",
+        "sizeKB": "8.17",
+        "lines": 150,
+        "complexity": 9
+      },
+      {
+        "name": "QuantumNeuralSuperintelligenceBanner.tsx",
+        "sizeKB": "8.17",
+        "lines": 138,
+        "complexity": 8
+      },
+      {
+        "name": "January2025CognitiveAutomationBreakthroughBanner.tsx",
+        "sizeKB": "8.16",
+        "lines": 142,
+        "complexity": 8
+      },
+      {
+        "name": "January2025SustainableAITransformationBanner.tsx",
+        "sizeKB": "8.13",
+        "lines": 147,
+        "complexity": 11
+      },
+      {
+        "name": "March2026QuantumAIOptimizationBreakthroughBanner.tsx",
+        "sizeKB": "8.12",
+        "lines": 143,
+        "complexity": 10
+      },
+      {
+        "name": "SyntheticConsciousnessRevolutionBanner.tsx",
+        "sizeKB": "8.11",
+        "lines": 140,
+        "complexity": 5
+      },
+      {
+        "name": "October2025AutonomousMeshIntelligenceMegaBanner.tsx",
+        "sizeKB": "8.10",
+        "lines": 147,
+        "complexity": 17
+      },
+      {
+        "name": "UltimateContentShowcase2030.tsx",
+        "sizeKB": "8.10",
+        "lines": 160,
+        "complexity": 8
+      },
+      {
+        "name": "January2025EnterpriseAutomationBanner.tsx",
+        "sizeKB": "8.08",
+        "lines": 145,
+        "complexity": 8
+      },
+      {
+        "name": "January2026AutonomousGovernanceBanner.tsx",
+        "sizeKB": "8.08",
+        "lines": 137,
+        "complexity": 10
+      },
+      {
+        "name": "October2025CybersecurityMeshBanner.tsx",
+        "sizeKB": "8.08",
+        "lines": 144,
+        "complexity": 10
+      },
+      {
+        "name": "October2025EnterpriseIntelligenceBanner.tsx",
+        "sizeKB": "8.08",
+        "lines": 132,
+        "complexity": 17
+      },
+      {
+        "name": "AI2026RevolutionaryAutonomousSystemsBanner.tsx",
+        "sizeKB": "8.07",
+        "lines": 146,
+        "complexity": 10
+      },
+      {
+        "name": "February2026BreakthroughShowcaseBanner.tsx",
+        "sizeKB": "8.07",
+        "lines": 150,
+        "complexity": 9
+      },
+      {
+        "name": "January2026FederatedLearningBanner.tsx",
+        "sizeKB": "8.06",
+        "lines": 136,
+        "complexity": 13
+      },
+      {
+        "name": "AIGovernance2026Banner.tsx",
+        "sizeKB": "8.05",
+        "lines": 136,
+        "complexity": 3
+      },
+      {
+        "name": "December2026UltimateBreakthroughBanner.tsx",
+        "sizeKB": "8.05",
+        "lines": 111,
+        "complexity": 8
+      },
+      {
+        "name": "October2025MultiModalKnowledgeBanner.tsx",
+        "sizeKB": "8.05",
+        "lines": 144,
+        "complexity": 8
+      },
+      {
+        "name": "October2025QuantumEdgeAIBanner.tsx",
+        "sizeKB": "8.05",
+        "lines": 118,
+        "complexity": 11
+      },
+      {
+        "name": "January2025Fortune500SuccessBanner.tsx",
+        "sizeKB": "8.04",
+        "lines": 143,
+        "complexity": 9
+      },
+      {
+        "name": "January2027NextGenAIRevolutionBanner.tsx",
+        "sizeKB": "8.04",
+        "lines": 146,
+        "complexity": 10
+      },
+      {
+        "name": "QuantumConsciousnessRevolutionBanner.tsx",
+        "sizeKB": "8.04",
+        "lines": 133,
+        "complexity": 7
+      },
+      {
+        "name": "AI20262027RevolutionaryBreakthroughComprehensiveBanner.tsx",
+        "sizeKB": "8.03",
+        "lines": 144,
+        "complexity": 7
+      },
+      {
+        "name": "October2025CloudNativeRevolutionBanner.tsx",
+        "sizeKB": "8.03",
+        "lines": 166,
+        "complexity": 13
+      },
+      {
+        "name": "October2025NewContentHighlightBanner.tsx",
+        "sizeKB": "8.03",
+        "lines": 146,
+        "complexity": 21
+      },
+      {
+        "name": "RevolutionaryTechShowcase.tsx",
+        "sizeKB": "8.03",
+        "lines": 190,
+        "complexity": 11
+      },
+      {
+        "name": "January2025NewContentAdvertisingBanner.tsx",
+        "sizeKB": "8.02",
+        "lines": 133,
+        "complexity": 15
+      },
+      {
+        "name": "October2025NewContentMegaLaunchBanner2.tsx",
+        "sizeKB": "8.02",
+        "lines": 175,
+        "complexity": 12
+      },
+      {
+        "name": "October2025AdaptiveIntelligenceFabricBanner.tsx",
+        "sizeKB": "8.01",
+        "lines": 145,
+        "complexity": 11
+      },
+      {
+        "name": "October2025CodeModernizationBanner.tsx",
+        "sizeKB": "8.01",
+        "lines": 144,
+        "complexity": 13
+      },
+      {
+        "name": "October2025HyperIntelligentMeshBanner.tsx",
+        "sizeKB": "8.01",
+        "lines": 149,
+        "complexity": 14
+      },
+      {
+        "name": "January2027UniversalConsciousnessBanner.tsx",
+        "sizeKB": "8.00",
+        "lines": 142,
+        "complexity": 7
+      },
+      {
+        "name": "October2025MultimodalAIBanner.tsx",
+        "sizeKB": "8.00",
+        "lines": 146,
+        "complexity": 6
+      },
+      {
+        "name": "October2025NewContentMasterShowcase.tsx",
+        "sizeKB": "8.00",
+        "lines": 202,
+        "complexity": 15
+      },
+      {
+        "name": "AITrends2026PredictionsBanner.tsx",
+        "sizeKB": "7.99",
+        "lines": 163,
+        "complexity": 6
+      },
+      {
+        "name": "February2026NextGenerationAutonomousIntelligenceBanner.tsx",
+        "sizeKB": "7.99",
+        "lines": 128,
+        "complexity": 10
+      },
+      {
+        "name": "October2025EdgeManufacturingBanner.tsx",
+        "sizeKB": "7.98",
+        "lines": 142,
+        "complexity": 9
+      },
+      {
+        "name": "January2026FederatedLearningPrivacyBanner.tsx",
+        "sizeKB": "7.97",
+        "lines": 149,
+        "complexity": 10
+      },
+      {
+        "name": "October2025AutonomousSOCBanner.tsx",
+        "sizeKB": "7.97",
+        "lines": 143,
+        "complexity": 9
+      },
+      {
+        "name": "October2025LatestTechBreakthroughsBanner.tsx",
+        "sizeKB": "7.97",
+        "lines": 137,
+        "complexity": 12
+      },
+      {
+        "name": "October2025RealTimePredictiveAnalyticsBanner.tsx",
+        "sizeKB": "7.97",
+        "lines": 178,
+        "complexity": 12
+      },
+      {
+        "name": "AI2026QuantumNeuralSuperintelligenceBanner.tsx",
+        "sizeKB": "7.96",
+        "lines": 138,
+        "complexity": 7
+      },
+      {
+        "name": "January2026LatestTrendsBanner.tsx",
+        "sizeKB": "7.96",
+        "lines": 153,
+        "complexity": 10
+      },
+      {
+        "name": "March2026QuantumEnterpriseAutomationBanner.tsx",
+        "sizeKB": "7.96",
+        "lines": 134,
+        "complexity": 8
+      },
+      {
+        "name": "SelfEvolvingAIBanner.tsx",
+        "sizeKB": "7.96",
+        "lines": 168,
+        "complexity": 10
+      },
+      {
+        "name": "UltimateAutonomousRevolutionBanner.tsx",
+        "sizeKB": "7.96",
+        "lines": 127,
+        "complexity": 12
+      },
+      {
+        "name": "February2026AutonomousBusinessIntelligenceBanner.tsx",
+        "sizeKB": "7.95",
+        "lines": 130,
+        "complexity": 4
+      },
+      {
+        "name": "October2025DevOpsRevolutionBanner.tsx",
+        "sizeKB": "7.95",
+        "lines": 142,
+        "complexity": 16
+      },
+      {
+        "name": "October2025DistributedAIEcosystemBanner.tsx",
+        "sizeKB": "7.94",
+        "lines": 136,
+        "complexity": 9
+      },
+      {
+        "name": "August2026RevolutionaryBreakthroughBanner.tsx",
+        "sizeKB": "7.93",
+        "lines": 146,
+        "complexity": 9
+      },
+      {
+        "name": "October2025ContentShowcase.tsx",
+        "sizeKB": "7.93",
+        "lines": 170,
+        "complexity": 13
+      },
+      {
+        "name": "December2026UltimateSingularityBanner.tsx",
+        "sizeKB": "7.91",
+        "lines": 141,
+        "complexity": 7
+      },
+      {
+        "name": "October2025NeuralProcessingBreakthroughBanner.tsx",
+        "sizeKB": "7.91",
+        "lines": 158,
+        "complexity": 7
+      },
+      {
+        "name": "October2025CognitiveAIRevolutionBanner.tsx",
+        "sizeKB": "7.90",
+        "lines": 118,
+        "complexity": 16
+      },
+      {
+        "name": "April2026QuantumAIShowcaseBanner.tsx",
+        "sizeKB": "7.89",
+        "lines": 154,
+        "complexity": 14
+      },
+      {
+        "name": "January2026AdaptiveConsciousnessBanner.tsx",
+        "sizeKB": "7.88",
+        "lines": 147,
+        "complexity": 16
+      },
+      {
+        "name": "January2027NewYearContentBanner.tsx",
+        "sizeKB": "7.87",
+        "lines": 149,
+        "complexity": 8
+      },
+      {
+        "name": "October2025TechBreakthroughsBanner.tsx",
+        "sizeKB": "7.87",
+        "lines": 158,
+        "complexity": 3
+      },
+      {
+        "name": "December2026UltimateConsciousnessBanner.tsx",
+        "sizeKB": "7.86",
+        "lines": 122,
+        "complexity": 11
+      },
+      {
+        "name": "October2025AIProductivityBanner.tsx",
+        "sizeKB": "7.86",
+        "lines": 168,
+        "complexity": 9
+      },
+      {
+        "name": "SuperintelligentAutomationBanner.tsx",
+        "sizeKB": "7.86",
+        "lines": 144,
+        "complexity": 8
+      },
+      {
+        "name": "December2025NewContentShowcase.tsx",
+        "sizeKB": "7.84",
+        "lines": 186,
+        "complexity": 11
+      },
+      {
+        "name": "February2026RevolutionaryBreakthroughBanner.tsx",
+        "sizeKB": "7.84",
+        "lines": 127,
+        "complexity": 13
+      },
+      {
+        "name": "January2025ContentShowcase.tsx",
+        "sizeKB": "7.84",
+        "lines": 158,
+        "complexity": 14
+      },
+      {
+        "name": "Ultimate2026ContentShowcaseBanner.tsx",
+        "sizeKB": "7.84",
+        "lines": 161,
+        "complexity": 7
+      },
+      {
+        "name": "February2026MultimodalRevolutionBanner.tsx",
+        "sizeKB": "7.81",
+        "lines": 134,
+        "complexity": 13
+      },
+      {
+        "name": "October2025NewGovernanceAndFinOpsBanner.tsx",
+        "sizeKB": "7.80",
+        "lines": 130,
+        "complexity": 11
+      },
+      {
+        "name": "TranscendentIntelligenceAdvertisingBanner.tsx",
+        "sizeKB": "7.80",
+        "lines": 140,
+        "complexity": 9
+      },
+      {
+        "name": "January2026NewContentMegaShowcase.tsx",
+        "sizeKB": "7.79",
+        "lines": 148,
+        "complexity": 5
+      },
+      {
+        "name": "March2026ContentShowcase.tsx",
+        "sizeKB": "7.79",
+        "lines": 146,
+        "complexity": 15
+      },
+      {
+        "name": "October2025AIOrchestrationMasteryBanner.tsx",
+        "sizeKB": "7.79",
+        "lines": 119,
+        "complexity": 15
+      },
+      {
+        "name": "October2025IntelligentObservabilityBanner.tsx",
+        "sizeKB": "7.79",
+        "lines": 142,
+        "complexity": 12
+      },
+      {
+        "name": "April2026ContentShowcaseBanner.tsx",
+        "sizeKB": "7.78",
+        "lines": 147,
+        "complexity": 15
+      },
+      {
+        "name": "October2025NewestContentMegaBanner2.tsx",
+        "sizeKB": "7.78",
+        "lines": 151,
+        "complexity": 11
+      },
+      {
+        "name": "January2025LatestInnovationBanner.tsx",
+        "sizeKB": "7.77",
+        "lines": 141,
+        "complexity": 11
+      },
+      {
+        "name": "AISecurityBanner.tsx",
+        "sizeKB": "7.75",
+        "lines": 159,
+        "complexity": 9
+      },
+      {
+        "name": "January2026MegaBreakthroughBanner.tsx",
+        "sizeKB": "7.75",
+        "lines": 131,
+        "complexity": 8
+      },
+      {
+        "name": "NewContentShowcaseBanner.tsx",
+        "sizeKB": "7.75",
+        "lines": 184,
+        "complexity": 14
+      },
+      {
+        "name": "October2025AutonomousEnterpriseMeshBanner.tsx",
+        "sizeKB": "7.75",
+        "lines": 135,
+        "complexity": 7
+      },
+      {
+        "name": "UltraIntelligentAutonomousSystems2026Banner.tsx",
+        "sizeKB": "7.73",
+        "lines": 129,
+        "complexity": 9
+      },
+      {
+        "name": "AI2027BreakthroughAdvertisingBanner.tsx",
+        "sizeKB": "7.71",
+        "lines": 135,
+        "complexity": 14
+      },
+      {
+        "name": "October2025NewContentShowcaseBanner2.tsx",
+        "sizeKB": "7.71",
+        "lines": 136,
+        "complexity": 13
+      },
+      {
+        "name": "Revolutionary2026QuantumMLBreakthroughBanner.tsx",
+        "sizeKB": "7.69",
+        "lines": 144,
+        "complexity": 5
+      },
+      {
+        "name": "October2025ConsciousEnterpriseIntelligenceBanner.tsx",
+        "sizeKB": "7.68",
+        "lines": 154,
+        "complexity": 7
+      },
+      {
+        "name": "October2025EnterpriseAITransformationPlatformBanner.tsx",
+        "sizeKB": "7.67",
+        "lines": 163,
+        "complexity": 21
+      },
+      {
+        "name": "AI2027AdvancedNeuralSuperintelligenceBreakthroughBanner.tsx",
+        "sizeKB": "7.65",
+        "lines": 138,
+        "complexity": 14
+      },
+      {
+        "name": "October2025AutonomousRealitySynthesisBanner.tsx",
+        "sizeKB": "7.65",
+        "lines": 124,
+        "complexity": 9
+      },
+      {
+        "name": "October2025CloudInfrastructureMegaBanner.tsx",
+        "sizeKB": "7.65",
+        "lines": 162,
+        "complexity": 10
+      },
+      {
+        "name": "QuantumEnhancedSuperintelligence2026Banner.tsx",
+        "sizeKB": "7.64",
+        "lines": 129,
+        "complexity": 11
+      },
+      {
+        "name": "NewServicesPromotionalBanner.tsx",
+        "sizeKB": "7.63",
+        "lines": 135,
+        "complexity": 8
+      },
+      {
+        "name": "October2025AgenticMarketplaceRevolutionBanner.tsx",
+        "sizeKB": "7.63",
+        "lines": 144,
+        "complexity": 9
+      },
+      {
+        "name": "NewContent2026MegaShowcaseBanner.tsx",
+        "sizeKB": "7.61",
+        "lines": 146,
+        "complexity": 13
+      },
+      {
+        "name": "January2026NeuralArchitectureRevolutionBanner.tsx",
+        "sizeKB": "7.59",
+        "lines": 122,
+        "complexity": 12
+      },
+      {
+        "name": "January2026UltimateContentShowcaseBanner.tsx",
+        "sizeKB": "7.59",
+        "lines": 124,
+        "complexity": 13
+      },
+      {
+        "name": "October2025AgenticSwarmsShowcase.tsx",
+        "sizeKB": "7.59",
+        "lines": 127,
+        "complexity": 12
+      },
+      {
+        "name": "October2025DistributedNeuralMeshBanner.tsx",
+        "sizeKB": "7.57",
+        "lines": 135,
+        "complexity": 17
+      },
+      {
+        "name": "September2025RetailSuccessBanner.tsx",
+        "sizeKB": "7.57",
+        "lines": 135,
+        "complexity": 15
+      },
+      {
+        "name": "January2026AutonomousBIBanner.tsx",
+        "sizeKB": "7.56",
+        "lines": 107,
+        "complexity": 9
+      },
+      {
+        "name": "January2026UltimateAutonomousEnterpriseBanner.tsx",
+        "sizeKB": "7.55",
+        "lines": 130,
+        "complexity": 9
+      },
+      {
+        "name": "LatestSeptember30ContentShowcase.tsx",
+        "sizeKB": "7.55",
+        "lines": 139,
+        "complexity": 14
+      },
+      {
+        "name": "October2025ComputerVisionBanner.tsx",
+        "sizeKB": "7.55",
+        "lines": 144,
+        "complexity": 8
+      },
+      {
+        "name": "January2027ConsciousnessSuccessBanner.tsx",
+        "sizeKB": "7.54",
+        "lines": 125,
+        "complexity": 10
+      },
+      {
+        "name": "October2025PrivacyFirstAIBanner.tsx",
+        "sizeKB": "7.54",
+        "lines": 124,
+        "complexity": 11
+      },
+      {
+        "name": "October2025AIFusionBreakthroughBanner.tsx",
+        "sizeKB": "7.53",
+        "lines": 172,
+        "complexity": 5
+      },
+      {
+        "name": "October2025ConversationalAIBanner.tsx",
+        "sizeKB": "7.53",
+        "lines": 135,
+        "complexity": 10
+      },
+      {
+        "name": "January2026RevolutionaryContentBanner.tsx",
+        "sizeKB": "7.52",
+        "lines": 144,
+        "complexity": 18
+      },
+      {
+        "name": "October2025DigitalTwinBreakthroughBanner.tsx",
+        "sizeKB": "7.51",
+        "lines": 131,
+        "complexity": 12
+      },
+      {
+        "name": "September30BreakthroughContentBanner.tsx",
+        "sizeKB": "7.51",
+        "lines": 153,
+        "complexity": 11
+      },
+      {
+        "name": "October2025AutonomousEnterpriseSymphonyBanner.tsx",
+        "sizeKB": "7.50",
+        "lines": 153,
+        "complexity": 9
+      },
+      {
+        "name": "October2025AdvancedRLBanner.tsx",
+        "sizeKB": "7.49",
+        "lines": 144,
+        "complexity": 7
+      },
+      {
+        "name": "March2026ServicesPromotionalBanner.tsx",
+        "sizeKB": "7.48",
+        "lines": 137,
+        "complexity": 9
+      },
+      {
+        "name": "AI2027ConsciousnessFusionRevolutionaryBanner.tsx",
+        "sizeKB": "7.47",
+        "lines": 138,
+        "complexity": 12
+      },
+      {
+        "name": "AIQuantumComputingBreakthroughBanner.tsx",
+        "sizeKB": "7.47",
+        "lines": 136,
+        "complexity": 4
+      },
+      {
+        "name": "July2026QuantumConsciousnessBanner.tsx",
+        "sizeKB": "7.46",
+        "lines": 128,
+        "complexity": 11
+      },
+      {
+        "name": "June2026MegaBreakthroughBanner.tsx",
+        "sizeKB": "7.45",
+        "lines": 128,
+        "complexity": 10
+      },
+      {
+        "name": "AI2031SingularityAchievementBanner.tsx",
+        "sizeKB": "7.44",
+        "lines": 132,
+        "complexity": 7
+      },
+      {
+        "name": "October2025AntifragileSupplyChainBanner.tsx",
+        "sizeKB": "7.44",
+        "lines": 130,
+        "complexity": 17
+      },
+      {
+        "name": "AI2027UniversalConsciousnessBanner.tsx",
+        "sizeKB": "7.43",
+        "lines": 123,
+        "complexity": 12
+      },
+      {
+        "name": "January2025AutonomousAgentsBanner.tsx",
+        "sizeKB": "7.43",
+        "lines": 133,
+        "complexity": 7
+      },
+      {
+        "name": "January2026ConsciousnessBreakthroughBanner.tsx",
+        "sizeKB": "7.43",
+        "lines": 126,
+        "complexity": 5
+      },
+      {
+        "name": "October2025KubernetesCostOptimizationBanner.tsx",
+        "sizeKB": "7.43",
+        "lines": 143,
+        "complexity": 8
+      },
+      {
+        "name": "October2025MLOpsSuccessBanner.tsx",
+        "sizeKB": "7.43",
+        "lines": 127,
+        "complexity": 17
+      },
+      {
+        "name": "September302025ContentBanner.tsx",
+        "sizeKB": "7.42",
+        "lines": 138,
+        "complexity": 13
+      },
+      {
+        "name": "Ultimate2027BreakthroughBanner.tsx",
+        "sizeKB": "7.42",
+        "lines": 133,
+        "complexity": 4
+      },
+      {
+        "name": "September2026AutonomousIntelligenceBanner.tsx",
+        "sizeKB": "7.39",
+        "lines": 134,
+        "complexity": 7
+      },
+      {
+        "name": "AI2026RevolutionaryAutonomousEnterpriseBanner.tsx",
+        "sizeKB": "7.38",
+        "lines": 121,
+        "complexity": 7
+      },
+      {
+        "name": "October2025CybersecurityMeshRevolutionBanner.tsx",
+        "sizeKB": "7.37",
+        "lines": 130,
+        "complexity": 11
+      },
+      {
+        "name": "ExplainableAIBanner.tsx",
+        "sizeKB": "7.36",
+        "lines": 167,
+        "complexity": 16
+      },
+      {
+        "name": "UltraIntelligentCognitiveRevolutionBanner.tsx",
+        "sizeKB": "7.36",
+        "lines": 109,
+        "complexity": 14
+      },
+      {
+        "name": "October2025RealTimeIntelligenceBanner.tsx",
+        "sizeKB": "7.35",
+        "lines": 167,
+        "complexity": 5
+      },
+      {
+        "name": "October2025MultiAgentOrchestrationMegaBanner.tsx",
+        "sizeKB": "7.34",
+        "lines": 144,
+        "complexity": 20
+      },
+      {
+        "name": "January2027MetaCognitiveSuperintelligenceBanner.tsx",
+        "sizeKB": "7.32",
+        "lines": 140,
+        "complexity": 6
+      },
+      {
+        "name": "February2026QuantumConsciousnessBIBanner.tsx",
+        "sizeKB": "7.31",
+        "lines": 125,
+        "complexity": 4
+      },
+      {
+        "name": "October2025EdgeIntelligencePlatformBanner.tsx",
+        "sizeKB": "7.30",
+        "lines": 127,
+        "complexity": 14
+      },
+      {
+        "name": "October2025HyperscaleCognitiveOrchestrationMegaBanner.tsx",
+        "sizeKB": "7.30",
+        "lines": 161,
+        "complexity": 9
+      },
+      {
+        "name": "October2025NewContentBanner.tsx",
+        "sizeKB": "7.30",
+        "lines": 166,
+        "complexity": 13
+      },
+      {
+        "name": "SyntheticConsciousnessBreakthroughBanner.tsx",
+        "sizeKB": "7.30",
+        "lines": 109,
+        "complexity": 11
+      },
+      {
+        "name": "QuantumNeuralSuperintelligenceUltimateBanner.tsx",
+        "sizeKB": "7.29",
+        "lines": 109,
+        "complexity": 12
+      },
+      {
+        "name": "AI2027TranscendentQuantumConsciousnessBanner.tsx",
+        "sizeKB": "7.28",
+        "lines": 122,
+        "complexity": 8
+      },
+      {
+        "name": "NewContent2026BreakthroughBanner.tsx",
+        "sizeKB": "7.28",
+        "lines": 143,
+        "complexity": 4
+      },
+      {
+        "name": "October2025AIReasoningBreakthroughBanner.tsx",
+        "sizeKB": "7.28",
+        "lines": 120,
+        "complexity": 6
+      },
+      {
+        "name": "January2026AutonomousProcessesRevolutionBanner.tsx",
+        "sizeKB": "7.27",
+        "lines": 128,
+        "complexity": 5
+      },
+      {
+        "name": "October2025QuantumFinancialModelingBanner.tsx",
+        "sizeKB": "7.27",
+        "lines": 125,
+        "complexity": 9
+      },
+      {
+        "name": "October2025RealTimeAutomationBanner.tsx",
+        "sizeKB": "7.27",
+        "lines": 119,
+        "complexity": 13
+      },
+      {
+        "name": "October2025QuantumOptimizationBanner.tsx",
+        "sizeKB": "7.26",
+        "lines": 149,
+        "complexity": 6
+      },
+      {
+        "name": "October2025SovereignAIBanner.tsx",
+        "sizeKB": "7.26",
+        "lines": 149,
+        "complexity": 6
+      },
+      {
+        "name": "RevolutionaryContent2026ShowcaseBanner.tsx",
+        "sizeKB": "7.26",
+        "lines": 133,
+        "complexity": 11
+      },
+      {
+        "name": "October2025NeuroplasticAIBanner.tsx",
+        "sizeKB": "7.25",
+        "lines": 149,
+        "complexity": 6
+      },
+      {
+        "name": "MetaCognitiveRevolutionBanner.tsx",
+        "sizeKB": "7.24",
+        "lines": 123,
+        "complexity": 7
+      },
+      {
+        "name": "October2025ComplianceAutomationBanner.tsx",
+        "sizeKB": "7.24",
+        "lines": 149,
+        "complexity": 5
+      },
+      {
+        "name": "October2025SupplyChainIntelligenceBanner.tsx",
+        "sizeKB": "7.24",
+        "lines": 149,
+        "complexity": 7
+      },
+      {
+        "name": "AutonomousOperations2026Banner.tsx",
+        "sizeKB": "7.22",
+        "lines": 119,
+        "complexity": 8
+      },
+      {
+        "name": "ConsensusIntelligence2027Banner.tsx",
+        "sizeKB": "7.21",
+        "lines": 124,
+        "complexity": 9
+      },
+      {
+        "name": "NeuralConsciousnessFusionBanner.tsx",
+        "sizeKB": "7.21",
+        "lines": 96,
+        "complexity": 10
+      },
+      {
+        "name": "PostSingularityEnterpriseTransformationBanner.tsx",
+        "sizeKB": "7.20",
+        "lines": 118,
+        "complexity": 13
+      },
+      {
+        "name": "October2025QuantumCybersecurityMeshBanner.tsx",
+        "sizeKB": "7.19",
+        "lines": 140,
+        "complexity": 12
+      },
+      {
+        "name": "January2026EdgeComputingRevolutionBanner.tsx",
+        "sizeKB": "7.18",
+        "lines": 128,
+        "complexity": 6
+      },
+      {
+        "name": "March2026UltimateBreakthroughBanner.tsx",
+        "sizeKB": "7.18",
+        "lines": 124,
+        "complexity": 9
+      },
+      {
+        "name": "NeuralSuperintelligence2026Banner.tsx",
+        "sizeKB": "7.18",
+        "lines": 119,
+        "complexity": 11
+      },
+      {
+        "name": "October2025EdgeQuantumIntelligenceBanner.tsx",
+        "sizeKB": "7.18",
+        "lines": 139,
+        "complexity": 6
+      },
+      {
+        "name": "January2026QuantumMLRevolutionBanner.tsx",
+        "sizeKB": "7.17",
+        "lines": 116,
+        "complexity": 6
+      },
+      {
+        "name": "October2025ClimateIntelligenceRevolutionBanner.tsx",
+        "sizeKB": "7.17",
+        "lines": 122,
+        "complexity": 17
+      },
+      {
+        "name": "October2025SelfHealingInfrastructureBanner.tsx",
+        "sizeKB": "7.17",
+        "lines": 133,
+        "complexity": 12
+      },
+      {
+        "name": "September2025NewContentBanner.tsx",
+        "sizeKB": "7.17",
+        "lines": 151,
+        "complexity": 16
+      },
+      {
+        "name": "March2026EdgeAIRevolutionBanner.tsx",
+        "sizeKB": "7.16",
+        "lines": 130,
+        "complexity": 4
+      },
+      {
+        "name": "October2025EnterpriseAIExcellenceBanner.tsx",
+        "sizeKB": "7.16",
+        "lines": 144,
+        "complexity": 4
+      },
+      {
+        "name": "October2025RAGandWorkflowMasteryBanner.tsx",
+        "sizeKB": "7.16",
+        "lines": 149,
+        "complexity": 7
+      },
+      {
+        "name": "ComprehensiveContentIntegrationBanner.tsx",
+        "sizeKB": "7.15",
+        "lines": 122,
+        "complexity": 9
+      },
+      {
+        "name": "December2025AutonomousAIConsciousnessRevolutionBanner.tsx",
+        "sizeKB": "7.14",
+        "lines": 144,
+        "complexity": 9
+      },
+      {
+        "name": "EdgeAI5GBanner.tsx",
+        "sizeKB": "7.14",
+        "lines": 158,
+        "complexity": 10
+      },
+      {
+        "name": "October2025NeuralQuantumFusionBanner.tsx",
+        "sizeKB": "7.14",
+        "lines": 133,
+        "complexity": 15
+      },
+      {
+        "name": "AI2027QuantumNeuralSuperintelligenceBanner.tsx",
+        "sizeKB": "7.13",
+        "lines": 115,
+        "complexity": 13
+      },
+      {
+        "name": "December2025AutonomousCodeGenerationRevolutionBanner.tsx",
+        "sizeKB": "7.13",
+        "lines": 130,
+        "complexity": 6
+      },
+      {
+        "name": "October2025CognitiveSupplyChainBanner.tsx",
+        "sizeKB": "7.12",
+        "lines": 133,
+        "complexity": 14
+      },
+      {
+        "name": "January2026QuantumAISecurityBreakthroughBanner.tsx",
+        "sizeKB": "7.11",
+        "lines": 130,
+        "complexity": 3
+      },
+      {
+        "name": "October2025EdgeIntelligenceRevolutionBanner.tsx",
+        "sizeKB": "7.11",
+        "lines": 130,
+        "complexity": 15
+      },
+      {
+        "name": "NeuralQuantumFusionBreakthroughBanner.tsx",
+        "sizeKB": "7.08",
+        "lines": 118,
+        "complexity": 7
+      },
+      {
+        "name": "Fortune500AI2030TranscendentSuccessBanner.tsx",
+        "sizeKB": "7.07",
+        "lines": 114,
+        "complexity": 9
+      },
+      {
+        "name": "AI2027TranscendentRealityBanner.tsx",
+        "sizeKB": "7.06",
+        "lines": 121,
+        "complexity": 6
+      },
+      {
+        "name": "February2026NextGenerationAutonomousSystemsBanner.tsx",
+        "sizeKB": "7.06",
+        "lines": 132,
+        "complexity": 4
+      },
+      {
+        "name": "October2025NeuralEvolutionBreakthroughBanner.tsx",
+        "sizeKB": "7.06",
+        "lines": 127,
+        "complexity": 8
+      },
+      {
+        "name": "AI2029QuantumConsciousnessSingularityBanner.tsx",
+        "sizeKB": "7.04",
+        "lines": 114,
+        "complexity": 6
+      },
+      {
+        "name": "NeuroSyntheticIntelligence2026Banner.tsx",
+        "sizeKB": "7.04",
+        "lines": 126,
+        "complexity": 9
+      },
+      {
+        "name": "AI2030TranscendentMetaIntelligenceBanner.tsx",
+        "sizeKB": "7.03",
+        "lines": 114,
+        "complexity": 6
+      },
+      {
+        "name": "October2025NeuralArchitectureSearchBanner.tsx",
+        "sizeKB": "7.03",
+        "lines": 140,
+        "complexity": 7
+      },
+      {
+        "name": "October2025NewContentMegaShowcase.tsx",
+        "sizeKB": "7.03",
+        "lines": 152,
+        "complexity": 6
+      },
+      {
+        "name": "January2026NeuralQuantumFusionBanner.tsx",
+        "sizeKB": "7.01",
+        "lines": 127,
+        "complexity": 4
+      },
+      {
+        "name": "June2026RevolutionaryBreakthroughBanner.tsx",
+        "sizeKB": "6.99",
+        "lines": 120,
+        "complexity": 9
+      },
+      {
+        "name": "February2026AutonomousSystemsBanner.tsx",
+        "sizeKB": "6.98",
+        "lines": 132,
+        "complexity": 6
+      },
+      {
+        "name": "January2026UltraAutonomousEnterpriseBanner.tsx",
+        "sizeKB": "6.98",
+        "lines": 127,
+        "complexity": 5
+      },
+      {
+        "name": "October2025DigitalTwinShowcaseBanner.tsx",
+        "sizeKB": "6.98",
+        "lines": 136,
+        "complexity": 14
+      },
+      {
+        "name": "October2025QuantumEdgeHighlightBanner.tsx",
+        "sizeKB": "6.98",
+        "lines": 125,
+        "complexity": 11
+      },
+      {
+        "name": "January2026NeuroSyntheticIntelligenceBanner.tsx",
+        "sizeKB": "6.97",
+        "lines": 126,
+        "complexity": 11
+      },
+      {
+        "name": "January2026QuantumConsciousnessBIBanner.tsx",
+        "sizeKB": "6.97",
+        "lines": 127,
+        "complexity": 4
+      },
+      {
+        "name": "October2025QuantumBlockchainShowcase.tsx",
+        "sizeKB": "6.97",
+        "lines": 131,
+        "complexity": 12
+      },
+      {
+        "name": "AI2028OmnipotentSuperintelligenceBanner.tsx",
+        "sizeKB": "6.96",
+        "lines": 114,
+        "complexity": 6
+      },
+      {
+        "name": "AIContentGenerationBanner.tsx",
+        "sizeKB": "6.96",
+        "lines": 143,
+        "complexity": 6
+      },
+      {
+        "name": "June2026SuperintelligenceBreakthroughBanner.tsx",
+        "sizeKB": "6.95",
+        "lines": 123,
+        "complexity": 10
+      },
+      {
+        "name": "October2025InsuranceSuccessMegaBanner.tsx",
+        "sizeKB": "6.94",
+        "lines": 138,
+        "complexity": 19
+      },
+      {
+        "name": "November2026RevolutionaryBreakthroughBanner.tsx",
+        "sizeKB": "6.93",
+        "lines": 113,
+        "complexity": 10
+      },
+      {
+        "name": "October2025CognitiveAutomationMasteryBanner.tsx",
+        "sizeKB": "6.93",
+        "lines": 158,
+        "complexity": 7
+      },
+      {
+        "name": "AI2027TranscendentIntelligenceRevolutionBanner.tsx",
+        "sizeKB": "6.92",
+        "lines": 145,
+        "complexity": 3
+      },
+      {
+        "name": "December2026MegaBreakthroughBanner.tsx",
+        "sizeKB": "6.91",
+        "lines": 115,
+        "complexity": 10
+      },
+      {
+        "name": "January2026AutonomousBIMegaBanner.tsx",
+        "sizeKB": "6.91",
+        "lines": 127,
+        "complexity": 11
+      },
+      {
+        "name": "PersonalizationTransformationBanner.tsx",
+        "sizeKB": "6.91",
+        "lines": 146,
+        "complexity": 13
+      },
+      {
+        "name": "NewContent2028RevolutionaryBanners.tsx",
+        "sizeKB": "6.89",
+        "lines": 216,
+        "complexity": 32
+      },
+      {
+        "name": "October2025SovereignAIRevolutionBanner.tsx",
+        "sizeKB": "6.88",
+        "lines": 124,
+        "complexity": 8
+      },
+      {
+        "name": "AI2026AutonomousCognitiveMeshBanner.tsx",
+        "sizeKB": "6.86",
+        "lines": 146,
+        "complexity": 6
+      },
+      {
+        "name": "October2025MultiAgentOrchestrationRevolutionBanner.tsx",
+        "sizeKB": "6.85",
+        "lines": 118,
+        "complexity": 17
+      },
+      {
+        "name": "October2025BreakthroughContentHub.tsx",
+        "sizeKB": "6.84",
+        "lines": 168,
+        "complexity": 10
+      },
+      {
+        "name": "October2025UltimateFutureAIRevolutionBanner.tsx",
+        "sizeKB": "6.84",
+        "lines": 134,
+        "complexity": 8
+      },
+      {
+        "name": "October2026TranscendentIntelligenceBanner.tsx",
+        "sizeKB": "6.83",
+        "lines": 117,
+        "complexity": 6
+      },
+      {
+        "name": "EdgeNativeIntelligence2026Banner.tsx",
+        "sizeKB": "6.82",
+        "lines": 114,
+        "complexity": 11
+      },
+      {
+        "name": "NeuralOptimizationRevolutionBanner.tsx",
+        "sizeKB": "6.82",
+        "lines": 116,
+        "complexity": 13
+      },
+      {
+        "name": "April2026RevolutionaryBreakthroughBanner.tsx",
+        "sizeKB": "6.81",
+        "lines": 113,
+        "complexity": 12
+      },
+      {
+        "name": "January2027ConsciousnessBreakthroughBanner.tsx",
+        "sizeKB": "6.80",
+        "lines": 113,
+        "complexity": 7
+      },
+      {
+        "name": "July2026AutomationBreakthroughBanner.tsx",
+        "sizeKB": "6.80",
+        "lines": 122,
+        "complexity": 7
+      },
+      {
+        "name": "AI2026AutonomousCloudOrchestrationBanner.tsx",
+        "sizeKB": "6.79",
+        "lines": 101,
+        "complexity": 7
+      },
+      {
+        "name": "LatestAIInnovations2026Banner.tsx",
+        "sizeKB": "6.79",
+        "lines": 146,
+        "complexity": 7
+      },
+      {
+        "name": "New2027ContentShowcaseBanner.tsx",
+        "sizeKB": "6.79",
+        "lines": 138,
+        "complexity": 10
+      },
+      {
+        "name": "October2025GenerativeAICodeGenerationBanner.tsx",
+        "sizeKB": "6.78",
+        "lines": 136,
+        "complexity": 20
+      },
+      {
+        "name": "October2025EnterpriseOrchestrationMegaBanner.tsx",
+        "sizeKB": "6.77",
+        "lines": 117,
+        "complexity": 17
+      },
+      {
+        "name": "ConsensusIntelligenceBreakthroughBanner.tsx",
+        "sizeKB": "6.75",
+        "lines": 115,
+        "complexity": 8
+      },
+      {
+        "name": "TranscendentIntelligence2027Banner.tsx",
+        "sizeKB": "6.75",
+        "lines": 115,
+        "complexity": 9
+      },
+      {
+        "name": "AI2026QuantumConsciousnessFusionBanner.tsx",
+        "sizeKB": "6.72",
+        "lines": 105,
+        "complexity": 8
+      },
+      {
+        "name": "August2026QuantumConsciousnessBanner.tsx",
+        "sizeKB": "6.71",
+        "lines": 111,
+        "complexity": 12
+      },
+      {
+        "name": "July2026MegaBreakthroughBanner.tsx",
+        "sizeKB": "6.71",
+        "lines": 111,
+        "complexity": 12
+      },
+      {
+        "name": "October1st2025NewContentBanner.tsx",
+        "sizeKB": "6.71",
+        "lines": 111,
+        "complexity": 11
+      },
+      {
+        "name": "AI2026TrendsShowcaseBanner.tsx",
+        "sizeKB": "6.70",
+        "lines": 135,
+        "complexity": 7
+      },
+      {
+        "name": "AI2026AdvancedNeuralArchitecturesBanner.tsx",
+        "sizeKB": "6.68",
+        "lines": 105,
+        "complexity": 15
+      },
+      {
+        "name": "October2025AISustainableOperationsBanner.tsx",
+        "sizeKB": "6.66",
+        "lines": 149,
+        "complexity": 10
+      },
+      {
+        "name": "AutonomousBusinessSystemsMegaBanner.tsx",
+        "sizeKB": "6.65",
+        "lines": 127,
+        "complexity": 10
+      },
+      {
+        "name": "July2026RevolutionaryBreakthroughBanner.tsx",
+        "sizeKB": "6.65",
+        "lines": 110,
+        "complexity": 6
+      },
+      {
+        "name": "October2025PredictiveAnalyticsRevolutionBanner.tsx",
+        "sizeKB": "6.64",
+        "lines": 149,
+        "complexity": 13
+      },
+      {
+        "name": "AI2026SustainableRevolutionBanner.tsx",
+        "sizeKB": "6.62",
+        "lines": 120,
+        "complexity": 9
+      },
+      {
+        "name": "January2025NextGenAutonomousSystemsBreakthroughBanner.tsx",
+        "sizeKB": "6.61",
+        "lines": 115,
+        "complexity": 8
+      },
+      {
+        "name": "March2026AutonomousAIEcosystemRevolutionBanner.tsx",
+        "sizeKB": "6.60",
+        "lines": 120,
+        "complexity": 10
+      },
+      {
+        "name": "October2025FreshInnovationsBanner.tsx",
+        "sizeKB": "6.60",
+        "lines": 131,
+        "complexity": 10
+      },
+      {
+        "name": "October2025PracticalAISystemsBanner.tsx",
+        "sizeKB": "6.60",
+        "lines": 120,
+        "complexity": 5
+      },
+      {
+        "name": "NewContent2026MegaSuccessBanner.tsx",
+        "sizeKB": "6.58",
+        "lines": 133,
+        "complexity": 7
+      },
+      {
+        "name": "October2025AutonomousSecurityOrchestrationBanner.tsx",
+        "sizeKB": "6.58",
+        "lines": 149,
+        "complexity": 9
+      },
+      {
+        "name": "UltimateAutonomousIntelligence2026Banner.tsx",
+        "sizeKB": "6.58",
+        "lines": 111,
+        "complexity": 12
+      },
+      {
+        "name": "October2025MultimodalRAGBanner.tsx",
+        "sizeKB": "6.57",
+        "lines": 117,
+        "complexity": 10
+      },
+      {
+        "name": "October2025HyperIntelligentAutomationBanner.tsx",
+        "sizeKB": "6.56",
+        "lines": 149,
+        "complexity": 11
+      },
+      {
+        "name": "September30NewBlogsBanner.tsx",
+        "sizeKB": "6.56",
+        "lines": 134,
+        "complexity": 4
+      },
+      {
+        "name": "October2025LatestContentBanner.tsx",
+        "sizeKB": "6.55",
+        "lines": 123,
+        "complexity": 19
+      },
+      {
+        "name": "August2026AutonomousIntelligenceBanner.tsx",
+        "sizeKB": "6.54",
+        "lines": 116,
+        "complexity": 7
+      },
+      {
+        "name": "January2027UltimateAITransformationBanner.tsx",
+        "sizeKB": "6.53",
+        "lines": 114,
+        "complexity": 12
+      },
+      {
+        "name": "October2025AITransformationShowcase.tsx",
+        "sizeKB": "6.53",
+        "lines": 121,
+        "complexity": 15
+      },
+      {
+        "name": "UniversalConsciousness2027Banner.tsx",
+        "sizeKB": "6.52",
+        "lines": 111,
+        "complexity": 10
+      },
+      {
+        "name": "Fortune500SuccessAdvertisingBanner.tsx",
+        "sizeKB": "6.51",
+        "lines": 107,
+        "complexity": 11
+      },
+      {
+        "name": "Revolutionary2027ContentMegaBanner.tsx",
+        "sizeKB": "6.51",
+        "lines": 128,
+        "complexity": 4
+      },
+      {
+        "name": "AI2027RevolutionaryBreakthroughBanner.tsx",
+        "sizeKB": "6.50",
+        "lines": 125,
+        "complexity": 6
+      },
+      {
+        "name": "October2025NewContentShowcaseMega.tsx",
+        "sizeKB": "6.47",
+        "lines": 123,
+        "complexity": 19
+      },
+      {
+        "name": "November2026QuantumConsciousnessSingularityBanner.tsx",
+        "sizeKB": "6.46",
+        "lines": 111,
+        "complexity": 7
+      },
+      {
+        "name": "October2025NewTechContentBanner.tsx",
+        "sizeKB": "6.45",
+        "lines": 102,
+        "complexity": 9
+      },
+      {
+        "name": "LatestAI2025InsightsBanner.tsx",
+        "sizeKB": "6.44",
+        "lines": 136,
+        "complexity": 11
+      },
+      {
+        "name": "UltimateContentShowcase2026Banner.tsx",
+        "sizeKB": "6.44",
+        "lines": 132,
+        "complexity": 10
+      },
+      {
+        "name": "QuantumConsciousness2027PromotionalBanner.tsx",
+        "sizeKB": "6.43",
+        "lines": 125,
+        "complexity": 10
+      },
+      {
+        "name": "AutonomousEnterpriseSystemsBanner.tsx",
+        "sizeKB": "6.40",
+        "lines": 104,
+        "complexity": 9
+      },
+      {
+        "name": "AI2027RevolutionaryBreakthroughShowcaseBanner.tsx",
+        "sizeKB": "6.38",
+        "lines": 105,
+        "complexity": 17
+      },
+      {
+        "name": "January2027UniversalIntelligenceRevolutionBanner.tsx",
+        "sizeKB": "6.38",
+        "lines": 111,
+        "complexity": 6
+      },
+      {
+        "name": "AI2026RevolutionaryBreakthroughAdvertisingBanner.tsx",
+        "sizeKB": "6.34",
+        "lines": 104,
+        "complexity": 9
+      },
+      {
+        "name": "January2026QuantumConsciousnessBanner.tsx",
+        "sizeKB": "6.34",
+        "lines": 111,
+        "complexity": 6
+      },
+      {
+        "name": "January2026NeuromorphicRevolutionBanner.tsx",
+        "sizeKB": "6.32",
+        "lines": 122,
+        "complexity": 12
+      },
+      {
+        "name": "February2027RevolutionaryContentBanner.tsx",
+        "sizeKB": "6.31",
+        "lines": 125,
+        "complexity": 7
+      },
+      {
+        "name": "October2025RealTimeAdaptiveMLBanner.tsx",
+        "sizeKB": "6.31",
+        "lines": 119,
+        "complexity": 15
+      },
+      {
+        "name": "December2026UltimateAutonomousRevolutionBanner.tsx",
+        "sizeKB": "6.30",
+        "lines": 111,
+        "complexity": 6
+      },
+      {
+        "name": "February2026TranscendentAutomationBanner.tsx",
+        "sizeKB": "6.30",
+        "lines": 105,
+        "complexity": 12
+      },
+      {
+        "name": "February2026BreakthroughMegaBanner.tsx",
+        "sizeKB": "6.29",
+        "lines": 114,
+        "complexity": 6
+      },
+      {
+        "name": "January2026UltimateBreakthroughBanner.tsx",
+        "sizeKB": "6.29",
+        "lines": 121,
+        "complexity": 4
+      },
+      {
+        "name": "October2025NeurosynapticCloudArchitectureBanner.tsx",
+        "sizeKB": "6.29",
+        "lines": 128,
+        "complexity": 7
+      },
+      {
+        "name": "January2026NeuralOptimizationRevolutionBanner.tsx",
+        "sizeKB": "6.28",
+        "lines": 116,
+        "complexity": 14
+      },
+      {
+        "name": "October2025DistributedIntelligenceNetworksBanner.tsx",
+        "sizeKB": "6.28",
+        "lines": 128,
+        "complexity": 6
+      },
+      {
+        "name": "January2026LatestInnovationBanner.tsx",
+        "sizeKB": "6.26",
+        "lines": 109,
+        "complexity": 9
+      },
+      {
+        "name": "April2026UltimateBreakthroughBanner.tsx",
+        "sizeKB": "6.25",
+        "lines": 102,
+        "complexity": 6
+      },
+      {
+        "name": "September2025NewTechContentBanner.tsx",
+        "sizeKB": "6.25",
+        "lines": 113,
+        "complexity": 15
+      },
+      {
+        "name": "AI2026RevolutionaryNeuralConsensusBanner.tsx",
+        "sizeKB": "6.24",
+        "lines": 111,
+        "complexity": 9
+      },
+      {
+        "name": "Ultimate2026BreakthroughAdvertisingBanner.tsx",
+        "sizeKB": "6.24",
+        "lines": 106,
+        "complexity": 9
+      },
+      {
+        "name": "June2026UltimateBreakthroughBanner.tsx",
+        "sizeKB": "6.22",
+        "lines": 102,
+        "complexity": 6
+      },
+      {
+        "name": "Ultimate2030ConsciousnessBanner.tsx",
+        "sizeKB": "6.22",
+        "lines": 100,
+        "complexity": 8
+      },
+      {
+        "name": "AI2027QuantumConsciousnessSingularityMegaBanner.tsx",
+        "sizeKB": "6.19",
+        "lines": 107,
+        "complexity": 6
+      },
+      {
+        "name": "EmotionAIRevolutionBanner.tsx",
+        "sizeKB": "6.19",
+        "lines": 130,
+        "complexity": 9
+      },
+      {
+        "name": "EnterpriseTransformation2027Banner.tsx",
+        "sizeKB": "6.19",
+        "lines": 105,
+        "complexity": 10
+      },
+      {
+        "name": "October2025AICybersecurityIntelligenceBanner.tsx",
+        "sizeKB": "6.18",
+        "lines": 125,
+        "complexity": 9
+      },
+      {
+        "name": "AI2026UltimateAutonomousEnterpriseBanner.tsx",
+        "sizeKB": "6.17",
+        "lines": 110,
+        "complexity": 11
+      },
+      {
+        "name": "January2026MetaCognitiveBreakthroughBanner.tsx",
+        "sizeKB": "6.16",
+        "lines": 125,
+        "complexity": 6
+      },
+      {
+        "name": "AI2026QuantumConsciousnessBIBanner.tsx",
+        "sizeKB": "6.15",
+        "lines": 110,
+        "complexity": 8
+      },
+      {
+        "name": "October2025SustainableAIInfrastructureBanner.tsx",
+        "sizeKB": "6.15",
+        "lines": 125,
+        "complexity": 10
+      },
+      {
+        "name": "AI2026HyperAutonomousEnterpriseAutomationBanner.tsx",
+        "sizeKB": "6.14",
+        "lines": 111,
+        "complexity": 8
+      },
+      {
+        "name": "October2025NeuromorphicBreakthroughBanner.tsx",
+        "sizeKB": "6.14",
+        "lines": 111,
+        "complexity": 5
+      },
+      {
+        "name": "Footer.tsx",
+        "sizeKB": "6.13",
+        "lines": 166,
+        "complexity": 2
+      },
+      {
+        "name": "October2025FraudDetectionShowcaseBanner.tsx",
+        "sizeKB": "6.11",
+        "lines": 103,
+        "complexity": 10
+      },
+      {
+        "name": "October2025LLMFineTuningSpotlight.tsx",
+        "sizeKB": "6.11",
+        "lines": 100,
+        "complexity": 7
+      },
+      {
+        "name": "QuantumNeuralSuperintelligence2027Banner.tsx",
+        "sizeKB": "6.11",
+        "lines": 107,
+        "complexity": 6
+      },
+      {
+        "name": "AI2027QuantumConsciousnessSingularityBanner.tsx",
+        "sizeKB": "6.09",
+        "lines": 127,
+        "complexity": 4
+      },
+      {
+        "name": "AutonomousEnterpriseOperationsBanner.tsx",
+        "sizeKB": "6.09",
+        "lines": 129,
+        "complexity": 5
+      },
+      {
+        "name": "AI2027TranscendentAutonomousEnterpriseMegaBanner.tsx",
+        "sizeKB": "6.08",
+        "lines": 107,
+        "complexity": 6
+      },
+      {
+        "name": "MLOpsTransformationBanner.tsx",
+        "sizeKB": "6.08",
+        "lines": 128,
+        "complexity": 16
+      },
+      {
+        "name": "March2026NeuralSynapticFusionBanner.tsx",
+        "sizeKB": "6.08",
+        "lines": 107,
+        "complexity": 9
+      },
+      {
+        "name": "October2025LatestEnterpriseAIBanner.tsx",
+        "sizeKB": "6.07",
+        "lines": 114,
+        "complexity": 7
+      },
+      {
+        "name": "January2026BreakthroughInnovationsBanner.tsx",
+        "sizeKB": "6.06",
+        "lines": 92,
+        "complexity": 8
+      },
+      {
+        "name": "October2025QuantumNeuralMeshRevolutionBanner.tsx",
+        "sizeKB": "6.06",
+        "lines": 120,
+        "complexity": 12
+      },
+      {
+        "name": "January2026RevolutionaryAutonomousOperationsBanner.tsx",
+        "sizeKB": "6.03",
+        "lines": 100,
+        "complexity": 9
+      },
+      {
+        "name": "October2025QuantumBlockchainMegaBanner.tsx",
+        "sizeKB": "6.03",
+        "lines": 89,
+        "complexity": 16
+      },
+      {
+        "name": "AI2026QuantumEnhancedBIBanner.tsx",
+        "sizeKB": "6.02",
+        "lines": 122,
+        "complexity": 6
+      },
+      {
+        "name": "February2026UltimateConsciousnessBreakthroughBanner.tsx",
+        "sizeKB": "6.02",
+        "lines": 102,
+        "complexity": 6
+      },
+      {
+        "name": "October2025PredictiveAnalyticsBanner.tsx",
+        "sizeKB": "6.02",
+        "lines": 111,
+        "complexity": 10
+      },
+      {
+        "name": "FederatedLearningBreakthroughBanner.tsx",
+        "sizeKB": "6.00",
+        "lines": 129,
+        "complexity": 6
+      },
+      {
+        "name": "October2025CuttingEdgeContentBanner2.tsx",
+        "sizeKB": "6.00",
+        "lines": 128,
+        "complexity": 7
+      },
+      {
+        "name": "BannerRegistry.tsx",
+        "sizeKB": "5.99",
+        "lines": 187,
+        "complexity": 21
+      },
+      {
+        "name": "December2026UltimateAutonomousBanner.tsx",
+        "sizeKB": "5.98",
+        "lines": 97,
+        "complexity": 9
+      },
+      {
+        "name": "LatestContent2026MegaBanner.tsx",
+        "sizeKB": "5.96",
+        "lines": 113,
+        "complexity": 6
+      },
+      {
+        "name": "January2026EdgeNativeAgentsBanner.tsx",
+        "sizeKB": "5.95",
+        "lines": 125,
+        "complexity": 6
+      },
+      {
+        "name": "October2025EnterpriseAITransformationSuiteBanner.tsx",
+        "sizeKB": "5.95",
+        "lines": 115,
+        "complexity": 17
+      },
+      {
+        "name": "January2026HyperAutomationRevolutionBanner.tsx",
+        "sizeKB": "5.94",
+        "lines": 114,
+        "complexity": 10
+      },
+      {
+        "name": "January2025GenerativeAITransformationBanner.tsx",
+        "sizeKB": "5.93",
+        "lines": 108,
+        "complexity": 12
+      },
+      {
+        "name": "March2026UltimateAutonomousRevolutionBanner.tsx",
+        "sizeKB": "5.93",
+        "lines": 102,
+        "complexity": 7
+      },
+      {
+        "name": "AutonomousAI2026RevolutionaryBanner.tsx",
+        "sizeKB": "5.92",
+        "lines": 109,
+        "complexity": 4
+      },
+      {
+        "name": "March2026AdvertisingMegaBanner.tsx",
+        "sizeKB": "5.92",
+        "lines": 100,
+        "complexity": 7
+      },
+      {
+        "name": "October2025EdgeMLGraphGNNBanner.tsx",
+        "sizeKB": "5.91",
+        "lines": 96,
+        "complexity": 4
+      },
+      {
+        "name": "October2025AutonomousCognitiveMeshBanner.tsx",
+        "sizeKB": "5.90",
+        "lines": 115,
+        "complexity": 7
+      },
+      {
+        "name": "October2025QuantumMLPlatformBanner.tsx",
+        "sizeKB": "5.90",
+        "lines": 115,
+        "complexity": 12
+      },
+      {
+        "name": "October2025AIAgenticInfrastructureBanner.tsx",
+        "sizeKB": "5.88",
+        "lines": 123,
+        "complexity": 9
+      },
+      {
+        "name": "October2025AutonomousOrchestrationBanner.tsx",
+        "sizeKB": "5.87",
+        "lines": 118,
+        "complexity": 3
+      },
+      {
+        "name": "AITrends2026AdvertisingBanner.tsx",
+        "sizeKB": "5.86",
+        "lines": 108,
+        "complexity": 7
+      },
+      {
+        "name": "October2025NeuralNetworkOptimizationBanner.tsx",
+        "sizeKB": "5.86",
+        "lines": 115,
+        "complexity": 9
+      },
+      {
+        "name": "October2025QuantumFinanceShowcaseBanner.tsx",
+        "sizeKB": "5.82",
+        "lines": 106,
+        "complexity": 14
+      },
+      {
+        "name": "March2027MetaCognitiveBanner.tsx",
+        "sizeKB": "5.81",
+        "lines": 105,
+        "complexity": 10
+      },
+      {
+        "name": "AI2026NextGenerationAutonomousSystemsBanner.tsx",
+        "sizeKB": "5.80",
+        "lines": 103,
+        "complexity": 5
+      },
+      {
+        "name": "October2025FreshContentLaunchBanner.tsx",
+        "sizeKB": "5.80",
+        "lines": 107,
+        "complexity": 7
+      },
+      {
+        "name": "RevolutionaryAI2026ContentBanner.tsx",
+        "sizeKB": "5.80",
+        "lines": 118,
+        "complexity": 10
+      },
+      {
+        "name": "February2027QuantumConsciousnessBanner.tsx",
+        "sizeKB": "5.78",
+        "lines": 105,
+        "complexity": 9
+      },
+      {
+        "name": "October2025QuantumEdgeShowcaseBanner.tsx",
+        "sizeKB": "5.76",
+        "lines": 106,
+        "complexity": 17
+      },
+      {
+        "name": "January2026QuantumNeuralSuperintelligenceBanner.tsx",
+        "sizeKB": "5.75",
+        "lines": 106,
+        "complexity": 8
+      },
+      {
+        "name": "October2025QuantumNeuralBanner.tsx",
+        "sizeKB": "5.75",
+        "lines": 102,
+        "complexity": 16
+      },
+      {
+        "name": "NewContent2026Banner.tsx",
+        "sizeKB": "5.74",
+        "lines": 119,
+        "complexity": 14
+      },
+      {
+        "name": "May2026UniversalConsciousnessBanner.tsx",
+        "sizeKB": "5.73",
+        "lines": 100,
+        "complexity": 8
+      },
+      {
+        "name": "LatestBreakthroughsBanner.tsx",
+        "sizeKB": "5.72",
+        "lines": 78,
+        "complexity": 13
+      },
+      {
+        "name": "AI2026BreakthroughInnovationsMegaSuccessBanner.tsx",
+        "sizeKB": "5.68",
+        "lines": 110,
+        "complexity": 3
+      },
+      {
+        "name": "October2025SustainableAIShowcase.tsx",
+        "sizeKB": "5.65",
+        "lines": 98,
+        "complexity": 10
+      },
+      {
+        "name": "October2025NewContentTrilogyBanner.tsx",
+        "sizeKB": "5.64",
+        "lines": 118,
+        "complexity": 8
+      },
+      {
+        "name": "April2026RevolutionaryContentBanner.tsx",
+        "sizeKB": "5.60",
+        "lines": 106,
+        "complexity": 5
+      },
+      {
+        "name": "October2025NeuralQuantumOrchestrationBanner.tsx",
+        "sizeKB": "5.59",
+        "lines": 108,
+        "complexity": 7
+      },
+      {
+        "name": "ProductionAgenticAIBanner.tsx",
+        "sizeKB": "5.55",
+        "lines": 116,
+        "complexity": 9
+      },
+      {
+        "name": "NewContent2026MegaBreakthroughBanner.tsx",
+        "sizeKB": "5.54",
+        "lines": 99,
+        "complexity": 8
+      },
+      {
+        "name": "AIEnterpriseAutomationRevolutionBanner.tsx",
+        "sizeKB": "5.53",
+        "lines": 103,
+        "complexity": 5
+      },
+      {
+        "name": "December2025RevolutionaryContentBanner.tsx",
+        "sizeKB": "5.52",
+        "lines": 92,
+        "complexity": 10
+      },
+      {
+        "name": "NewContent2025Banner.tsx",
+        "sizeKB": "5.52",
+        "lines": 117,
+        "complexity": 9
+      },
+      {
+        "name": "January2025CuttingEdgeTrendsBanner.tsx",
+        "sizeKB": "5.51",
+        "lines": 90,
+        "complexity": 8
+      },
+      {
+        "name": "GenerativeIntelligence2026Banner.tsx",
+        "sizeKB": "5.50",
+        "lines": 105,
+        "complexity": 4
+      },
+      {
+        "name": "October2025CodeGenerationRevolutionBanner.tsx",
+        "sizeKB": "5.50",
+        "lines": 126,
+        "complexity": 5
+      },
+      {
+        "name": "October2025UltimateAIBreakthroughBanner.tsx",
+        "sizeKB": "5.50",
+        "lines": 106,
+        "complexity": 8
+      },
+      {
+        "name": "Revolutionary2026ContentAdvertisingBanner.tsx",
+        "sizeKB": "5.49",
+        "lines": 89,
+        "complexity": 9
+      },
+      {
+        "name": "RevolutionaryAISuccessBanner.tsx",
+        "sizeKB": "5.49",
+        "lines": 113,
+        "complexity": 6
+      },
+      {
+        "name": "October2025AutonomousEdgeIntelligenceBanner.tsx",
+        "sizeKB": "5.47",
+        "lines": 127,
+        "complexity": 8
+      },
+      {
+        "name": "January2025AdvancedAIRevolutionBanner.tsx",
+        "sizeKB": "5.46",
+        "lines": 89,
+        "complexity": 9
+      },
+      {
+        "name": "February2026NewContentBanner.tsx",
+        "sizeKB": "5.44",
+        "lines": 97,
+        "complexity": 7
+      },
+      {
+        "name": "October2025NeuralSearchAndAutomationBanner.tsx",
+        "sizeKB": "5.44",
+        "lines": 106,
+        "complexity": 4
+      },
+      {
+        "name": "RevolutionaryQuantumAIBreakthroughBanner.tsx",
+        "sizeKB": "5.44",
+        "lines": 103,
+        "complexity": 6
+      },
+      {
+        "name": "Revolutionary2026ContentBanner.tsx",
+        "sizeKB": "5.42",
+        "lines": 104,
+        "complexity": 6
+      },
+      {
+        "name": "October2025NewContentLaunch3Banner.tsx",
+        "sizeKB": "5.41",
+        "lines": 113,
+        "complexity": 5
+      },
+      {
+        "name": "AIInnovationAdvertisingBanner.tsx",
+        "sizeKB": "5.35",
+        "lines": 93,
+        "complexity": 7
+      },
+      {
+        "name": "October2025NewAIContentMegaLaunchBanner.tsx",
+        "sizeKB": "5.33",
+        "lines": 109,
+        "complexity": 5
+      },
+      {
+        "name": "October2025CognitiveAIHighlightBanner.tsx",
+        "sizeKB": "5.32",
+        "lines": 97,
+        "complexity": 7
+      },
+      {
+        "name": "January2026AdaptiveNeuralArchitecturesBanner.tsx",
+        "sizeKB": "5.30",
+        "lines": 87,
+        "complexity": 10
+      },
+      {
+        "name": "January2026CognitiveAutomationBanner.tsx",
+        "sizeKB": "5.29",
+        "lines": 87,
+        "complexity": 8
+      },
+      {
+        "name": "AI2026RevolutionaryBreakthroughShowcaseBanner.tsx",
+        "sizeKB": "5.26",
+        "lines": 108,
+        "complexity": 8
+      },
+      {
+        "name": "Revolutionary2026BreakthroughBanner.tsx",
+        "sizeKB": "5.24",
+        "lines": 97,
+        "complexity": 5
+      },
+      {
+        "name": "QuantumComputingBanner.tsx",
+        "sizeKB": "5.22",
+        "lines": 97,
+        "complexity": 7
+      },
+      {
+        "name": "AI2027AutonomousEnterpriseBanner.tsx",
+        "sizeKB": "5.20",
+        "lines": 102,
+        "complexity": 5
+      },
+      {
+        "name": "NewContent2026MegaBanner.tsx",
+        "sizeKB": "5.19",
+        "lines": 108,
+        "complexity": 10
+      },
+      {
+        "name": "October2025UltimateAIRevolutionBanner.tsx",
+        "sizeKB": "5.19",
+        "lines": 91,
+        "complexity": 13
+      },
+      {
+        "name": "January2027RevolutionaryBreakthroughBanner.tsx",
+        "sizeKB": "5.16",
+        "lines": 89,
+        "complexity": 9
+      },
+      {
+        "name": "Revolutionary2029ContentMegaBanner.tsx",
+        "sizeKB": "5.14",
+        "lines": 83,
+        "complexity": 10
+      },
+      {
+        "name": "AutonomousEnterpriseAutomationAdvertisingBanner.tsx",
+        "sizeKB": "5.13",
+        "lines": 95,
+        "complexity": 6
+      },
+      {
+        "name": "EnterpriseAutomationBanner.tsx",
+        "sizeKB": "5.13",
+        "lines": 97,
+        "complexity": 7
+      },
+      {
+        "name": "NewRevolutionaryContent2026Banner.tsx",
+        "sizeKB": "5.08",
+        "lines": 114,
+        "complexity": 13
+      },
+      {
+        "name": "October2025NewContentMegaLaunchOct1Banner.tsx",
+        "sizeKB": "5.08",
+        "lines": 104,
+        "complexity": 6
+      },
+      {
+        "name": "October2026BreakthroughShowcaseBanner.tsx",
+        "sizeKB": "5.03",
+        "lines": 101,
+        "complexity": 15
+      },
+      {
+        "name": "NewContent2027AdvertisingBanner.tsx",
+        "sizeKB": "5.02",
+        "lines": 91,
+        "complexity": 8
+      },
+      {
+        "name": "September2026BreakthroughAdvertisingBanner.tsx",
+        "sizeKB": "5.02",
+        "lines": 95,
+        "complexity": 5
+      },
+      {
+        "name": "NewContentShowcaseOct2025.tsx",
+        "sizeKB": "4.98",
+        "lines": 122,
+        "complexity": 11
+      },
+      {
+        "name": "Fortune500SuccessShowcaseBanner.tsx",
+        "sizeKB": "4.97",
+        "lines": 90,
+        "complexity": 10
+      },
+      {
+        "name": "February2026QuantumConsciousnessBreakthroughBanner.tsx",
+        "sizeKB": "4.95",
+        "lines": 92,
+        "complexity": 8
+      },
+      {
+        "name": "October2025ProductionAIExcellenceBanner.tsx",
+        "sizeKB": "4.95",
+        "lines": 110,
+        "complexity": 4
+      },
+      {
+        "name": "October2025AdaptiveIntelligenceBanner.tsx",
+        "sizeKB": "4.94",
+        "lines": 106,
+        "complexity": 4
+      },
+      {
+        "name": "October2025AutonomousWorkflowsBanner.tsx",
+        "sizeKB": "4.94",
+        "lines": 102,
+        "complexity": 5
+      },
+      {
+        "name": "April2026QuantumNeuralSuperintelligenceBanner.tsx",
+        "sizeKB": "4.93",
+        "lines": 92,
+        "complexity": 4
+      },
+      {
+        "name": "ContentShowcase.tsx",
+        "sizeKB": "4.88",
+        "lines": 137,
+        "complexity": 7
+      },
+      {
+        "name": "March2026AutonomousSingularityBanner.tsx",
+        "sizeKB": "4.88",
+        "lines": 92,
+        "complexity": 5
+      },
+      {
+        "name": "October2025FreshContentHighlightBanner.tsx",
+        "sizeKB": "4.83",
+        "lines": 97,
+        "complexity": 9
+      },
+      {
+        "name": "September2025DeploymentMasteryBanner.tsx",
+        "sizeKB": "4.83",
+        "lines": 85,
+        "complexity": 5
+      },
+      {
+        "name": "Ultimate2027ContentShowcaseBanner.tsx",
+        "sizeKB": "4.83",
+        "lines": 99,
+        "complexity": 8
+      },
+      {
+        "name": "InteractiveAIDemo.tsx",
+        "sizeKB": "4.80",
+        "lines": 138,
+        "complexity": 14
+      },
+      {
+        "name": "NewContentShowcase2026Banner.tsx",
+        "sizeKB": "4.80",
+        "lines": 104,
+        "complexity": 8
+      },
+      {
+        "name": "February2026QuantumConsciousnessBanner.tsx",
+        "sizeKB": "4.79",
+        "lines": 83,
+        "complexity": 7
+      },
+      {
+        "name": "RevolutionaryAI2025Banner.tsx",
+        "sizeKB": "4.78",
+        "lines": 106,
+        "complexity": 3
+      },
+      {
+        "name": "January2026SyntheticDataRevolutionBanner.tsx",
+        "sizeKB": "4.71",
+        "lines": 95,
+        "complexity": 8
+      },
+      {
+        "name": "RevolutionarySpaceTech2026Banner.tsx",
+        "sizeKB": "4.70",
+        "lines": 93,
+        "complexity": 3
+      },
+      {
+        "name": "AICognitiveComputing2026Banner.tsx",
+        "sizeKB": "4.67",
+        "lines": 93,
+        "complexity": 2
+      },
+      {
+        "name": "March2026RevolutionaryBreakthroughBanner.tsx",
+        "sizeKB": "4.66",
+        "lines": 79,
+        "complexity": 6
+      },
+      {
+        "name": "AIAutonomousDevOps2026Banner.tsx",
+        "sizeKB": "4.63",
+        "lines": 93,
+        "complexity": 3
+      },
+      {
+        "name": "December2026UltraIntelligentBanner.tsx",
+        "sizeKB": "4.59",
+        "lines": 79,
+        "complexity": 9
+      },
+      {
+        "name": "January2026AutonomousCognitiveEnterpriseBanner.tsx",
+        "sizeKB": "4.54",
+        "lines": 85,
+        "complexity": 6
+      },
+      {
+        "name": "March2026ContentShowcaseBanner.tsx",
+        "sizeKB": "4.53",
+        "lines": 88,
+        "complexity": 6
+      },
+      {
+        "name": "NewContent2026PromotionalBanner.tsx",
+        "sizeKB": "4.49",
+        "lines": 84,
+        "complexity": 7
+      },
+      {
+        "name": "September2025PracticalAIBanner.tsx",
+        "sizeKB": "4.48",
+        "lines": 86,
+        "complexity": 8
+      },
+      {
+        "name": "April2026QuantumNeuralBanner.tsx",
+        "sizeKB": "4.46",
+        "lines": 78,
+        "complexity": 9
+      },
+      {
+        "name": "December2026RevolutionaryContentBanner.tsx",
+        "sizeKB": "4.34",
+        "lines": 82,
+        "complexity": 6
+      },
+      {
+        "name": "March2026MultimodalBreakthroughBanner.tsx",
+        "sizeKB": "4.31",
+        "lines": 75,
+        "complexity": 6
+      },
+      {
+        "name": "January2027UltimateBreakthroughBanner.tsx",
+        "sizeKB": "4.27",
+        "lines": 78,
+        "complexity": 9
+      },
+      {
+        "name": "March2027TranscendentAutomationBanner.tsx",
+        "sizeKB": "4.24",
+        "lines": 78,
+        "complexity": 7
+      },
+      {
+        "name": "July2026SuperintelligenceRevolutionBanner.tsx",
+        "sizeKB": "4.19",
+        "lines": 70,
+        "complexity": 6
+      },
+      {
+        "name": "January2026RevolutionaryBreakthroughsBanner.tsx",
+        "sizeKB": "4.18",
+        "lines": 81,
+        "complexity": 3
+      },
+      {
+        "name": "October2025SecurityDataBanner.tsx",
+        "sizeKB": "4.17",
+        "lines": 88,
+        "complexity": 5
+      },
+      {
+        "name": "October2025NeuromorphicSuccessBanner.tsx",
+        "sizeKB": "4.16",
+        "lines": 78,
+        "complexity": 6
+      },
+      {
+        "name": "NeuralArchitectureSearchBanner.tsx",
+        "sizeKB": "4.13",
+        "lines": 74,
+        "complexity": 6
+      },
+      {
+        "name": "October2025NeuralMeshConsciousnessBanner.tsx",
+        "sizeKB": "4.11",
+        "lines": 90,
+        "complexity": 3
+      },
+      {
+        "name": "January2026EdgeNativeIntelligenceBanner.tsx",
+        "sizeKB": "4.09",
+        "lines": 80,
+        "complexity": 8
+      },
+      {
+        "name": "November2025PredictiveMaintenanceBanner.tsx",
+        "sizeKB": "4.09",
+        "lines": 73,
+        "complexity": 8
+      },
+      {
+        "name": "NewContentNavigation.tsx",
+        "sizeKB": "4.05",
+        "lines": 96,
+        "complexity": 8
+      },
+      {
+        "name": "January2026SyntheticConsciousnessBanner.tsx",
+        "sizeKB": "4.04",
+        "lines": 77,
+        "complexity": 3
+      },
+      {
+        "name": "March2026BreakthroughBanner.tsx",
+        "sizeKB": "4.02",
+        "lines": 69,
+        "complexity": 6
+      },
+      {
+        "name": "January2026NextGenAutonomousSystemsBanner.tsx",
+        "sizeKB": "4.01",
+        "lines": 77,
+        "complexity": 3
+      },
+      {
+        "name": "October2025NewContentHighlight.tsx",
+        "sizeKB": "3.99",
+        "lines": 72,
+        "complexity": 6
+      },
+      {
+        "name": "January2026QuantumNeuralFusionBanner.tsx",
+        "sizeKB": "3.97",
+        "lines": 77,
+        "complexity": 5
+      },
+      {
+        "name": "AI2027QuantumAIBreakthroughAdvertisingBanner.tsx",
+        "sizeKB": "3.91",
+        "lines": 69,
+        "complexity": 9
+      },
+      {
+        "name": "QuantumTransformationBanner.tsx",
+        "sizeKB": "3.90",
+        "lines": 69,
+        "complexity": 13
+      },
+      {
+        "name": "NewContent2025PromotionalBanner.tsx",
+        "sizeKB": "3.85",
+        "lines": 80,
+        "complexity": 6
+      },
+      {
+        "name": "AI2027AutonomousOperationsAdvertisingBanner.tsx",
+        "sizeKB": "3.83",
+        "lines": 69,
+        "complexity": 4
+      },
+      {
+        "name": "April2026MegaSuccessBanner.tsx",
+        "sizeKB": "3.83",
+        "lines": 68,
+        "complexity": 11
+      },
+      {
+        "name": "HealthcareAITransformationBanner.tsx",
+        "sizeKB": "3.81",
+        "lines": 91,
+        "complexity": 14
+      },
+      {
+        "name": "ConversationalAIRevolutionBanner.tsx",
+        "sizeKB": "3.80",
+        "lines": 91,
+        "complexity": 9
+      },
+      {
+        "name": "June2026MegaAutomationBanner.tsx",
+        "sizeKB": "3.80",
+        "lines": 67,
+        "complexity": 9
+      },
+      {
+        "name": "May2026RevolutionaryBreakthroughBanner.tsx",
+        "sizeKB": "3.80",
+        "lines": 65,
+        "complexity": 8
+      },
+      {
+        "name": "ManufacturingEdgeAIBanner.tsx",
+        "sizeKB": "3.79",
+        "lines": 91,
+        "complexity": 11
+      },
+      {
+        "name": "EnterprisePlatformModernizationBanner.tsx",
+        "sizeKB": "3.78",
+        "lines": 91,
+        "complexity": 14
+      },
+      {
+        "name": "AI2030QuantumConsciousnessRevolutionBanner.tsx",
+        "sizeKB": "3.77",
+        "lines": 78,
+        "complexity": 5
+      },
+      {
+        "name": "AI2029MetaCognitiveSuperintelligenceBanner.tsx",
+        "sizeKB": "3.76",
+        "lines": 78,
+        "complexity": 5
+      },
+      {
+        "name": "December2025ContentShowcaseBanner.tsx",
+        "sizeKB": "3.73",
+        "lines": 60,
+        "complexity": 5
+      },
+      {
+        "name": "October2025GreenAIRevolutionBanner.tsx",
+        "sizeKB": "3.70",
+        "lines": 66,
+        "complexity": 8
+      },
+      {
+        "name": "May2026QuantumConsciousnessBanner.tsx",
+        "sizeKB": "3.69",
+        "lines": 67,
+        "complexity": 7
+      },
+      {
+        "name": "NewContent2027ShowcaseBanner.tsx",
+        "sizeKB": "3.63",
+        "lines": 83,
+        "complexity": 5
+      },
+      {
+        "name": "October2025KnowledgeGraphsBanner.tsx",
+        "sizeKB": "3.62",
+        "lines": 81,
+        "complexity": 4
+      },
+      {
+        "name": "October2025QuantumAutonomousMegaBanner.tsx",
+        "sizeKB": "3.62",
+        "lines": 80,
+        "complexity": 3
+      },
+      {
+        "name": "January2026NewContentSpotlight.tsx",
+        "sizeKB": "3.57",
+        "lines": 71,
+        "complexity": 3
+      },
+      {
+        "name": "October2025AIObservabilityBanner.tsx",
+        "sizeKB": "3.57",
+        "lines": 80,
+        "complexity": 7
+      },
+      {
+        "name": "June2026AutonomousEnterpriseBanner.tsx",
+        "sizeKB": "3.55",
+        "lines": 66,
+        "complexity": 6
+      },
+      {
+        "name": "UltimateAutonomousBI2026PromotionalBanner.tsx",
+        "sizeKB": "3.55",
+        "lines": 66,
+        "complexity": 4
+      },
+      {
+        "name": "February2026NeuralConsciousnessBanner.tsx",
+        "sizeKB": "3.50",
+        "lines": 71,
+        "complexity": 3
+      },
+      {
+        "name": "February2026QuantumAIBreakthroughBanner.tsx",
+        "sizeKB": "3.47",
+        "lines": 71,
+        "complexity": 6
+      },
+      {
+        "name": "AINeuromorphicRevolutionBanner.tsx",
+        "sizeKB": "3.44",
+        "lines": 76,
+        "complexity": 5
+      },
+      {
+        "name": "August2026MegaBreakthroughBanner.tsx",
+        "sizeKB": "3.44",
+        "lines": 63,
+        "complexity": 8
+      },
+      {
+        "name": "December2025RevolutionaryBreakthroughContentBanner.tsx",
+        "sizeKB": "3.44",
+        "lines": 74,
+        "complexity": 6
+      },
+      {
+        "name": "February2026SuccessStoryBanner.tsx",
+        "sizeKB": "3.43",
+        "lines": 71,
+        "complexity": 7
+      },
+      {
+        "name": "April2026ConsciousComputingBanner.tsx",
+        "sizeKB": "3.41",
+        "lines": 62,
+        "complexity": 5
+      },
+      {
+        "name": "October2025AdvancedReasoningBanner.tsx",
+        "sizeKB": "3.41",
+        "lines": 76,
+        "complexity": 5
+      },
+      {
+        "name": "AIMetaCognitiveRevolutionBanner.tsx",
+        "sizeKB": "3.37",
+        "lines": 76,
+        "complexity": 2
+      },
+      {
+        "name": "Ultimate2026ContentRevolutionBanner.tsx",
+        "sizeKB": "3.34",
+        "lines": 76,
+        "complexity": 3
+      },
+      {
+        "name": "October2025TechnicalExcellenceBanner.tsx",
+        "sizeKB": "3.31",
+        "lines": 71,
+        "complexity": 4
+      },
+      {
+        "name": "NewContent2026AutonomousOperationsBanner.tsx",
+        "sizeKB": "3.30",
+        "lines": 65,
+        "complexity": 5
+      },
+      {
+        "name": "October2025ProductionAIBanner.tsx",
+        "sizeKB": "3.28",
+        "lines": 66,
+        "complexity": 4
+      },
+      {
+        "name": "NewContentAnnouncementBanner.tsx",
+        "sizeKB": "3.24",
+        "lines": 63,
+        "complexity": 1
+      },
+      {
+        "name": "October1st2025EnterpriseTransformBanner.tsx",
+        "sizeKB": "3.22",
+        "lines": 64,
+        "complexity": 7
+      },
+      {
+        "name": "October2025NewEnterpriseContentBanner.tsx",
+        "sizeKB": "3.19",
+        "lines": 63,
+        "complexity": 6
+      },
+      {
+        "name": "December2025RevolutionaryContentShowcase.tsx",
+        "sizeKB": "3.18",
+        "lines": 67,
+        "complexity": 10
+      },
+      {
+        "name": "Header.tsx",
+        "sizeKB": "3.15",
+        "lines": 91,
+        "complexity": 1
+      },
+      {
+        "name": "October2025AutonomousCognitiveIntelligenceBanner.tsx",
+        "sizeKB": "3.10",
+        "lines": 59,
+        "complexity": 6
+      },
+      {
+        "name": "October2025EdgeAIMeshNetworksBanner.tsx",
+        "sizeKB": "3.09",
+        "lines": 59,
+        "complexity": 4
+      },
+      {
+        "name": "October2025QuantumMLAccelerationBanner.tsx",
+        "sizeKB": "3.09",
+        "lines": 59,
+        "complexity": 4
+      },
+      {
+        "name": "AI2027TranscendentMetaIntelligenceBreakthroughBanner.tsx",
+        "sizeKB": "3.07",
+        "lines": 65,
+        "complexity": 3
+      },
+      {
+        "name": "AI2028OmnipotentSuperintelligenceBreakthroughBanner.tsx",
+        "sizeKB": "3.05",
+        "lines": 65,
+        "complexity": 3
+      },
+      {
+        "name": "AI2026BreakthroughBanner.tsx",
+        "sizeKB": "3.01",
+        "lines": 57,
+        "complexity": 2
+      },
+      {
+        "name": "October2025PlatformModernizationBanner.tsx",
+        "sizeKB": "2.80",
+        "lines": 56,
+        "complexity": 9
+      },
+      {
+        "name": "Latest2026ContentMegaBanner.tsx",
+        "sizeKB": "2.78",
+        "lines": 70,
+        "complexity": 8
+      },
+      {
+        "name": "QuantumAI2027BreakthroughBanner.tsx",
+        "sizeKB": "2.77",
+        "lines": 67,
+        "complexity": 3
+      },
+      {
+        "name": "AutonomousBusinessIntelligence2026Banner.tsx",
+        "sizeKB": "2.75",
+        "lines": 68,
+        "complexity": 2
+      },
+      {
+        "name": "Revolutionary2026ContentBreakthroughBanner.tsx",
+        "sizeKB": "2.75",
+        "lines": 57,
+        "complexity": 4
+      },
+      {
+        "name": "October2025MeshIntelligenceBreakthroughBanner.tsx",
+        "sizeKB": "2.74",
+        "lines": 57,
+        "complexity": 5
+      },
+      {
+        "name": "August2026BreakthroughAdvertisingBanner.tsx",
+        "sizeKB": "2.55",
+        "lines": 43,
+        "complexity": 6
+      },
+      {
+        "name": "October2025QuantumNeuralSpotlight.tsx",
+        "sizeKB": "2.52",
+        "lines": 53,
+        "complexity": 4
+      },
+      {
+        "name": "AI2027QuantumBreakthroughBanner.tsx",
+        "sizeKB": "2.50",
+        "lines": 52,
+        "complexity": 4
+      },
+      {
+        "name": "Fortune500SuccessBanner.tsx",
+        "sizeKB": "2.49",
+        "lines": 50,
+        "complexity": 5
+      },
+      {
+        "name": "October2025FreshAIInsightsBanner.tsx",
+        "sizeKB": "2.49",
+        "lines": 56,
+        "complexity": 2
+      },
+      {
+        "name": "September30ContentPromo2025.tsx",
+        "sizeKB": "2.49",
+        "lines": 48,
+        "complexity": 5
+      },
+      {
+        "name": "BannerCarousel.tsx",
+        "sizeKB": "2.34",
+        "lines": 82,
+        "complexity": 8
+      },
+      {
+        "name": "April2026QuantumAIMegaBanner.tsx",
+        "sizeKB": "2.29",
+        "lines": 44,
+        "complexity": 5
+      },
+      {
+        "name": "BlogArticleLayout.tsx",
+        "sizeKB": "2.20",
+        "lines": 77,
+        "complexity": 1
+      },
+      {
+        "name": "FeaturedServiceCard.tsx",
+        "sizeKB": "2.17",
+        "lines": 62,
+        "complexity": 3
+      },
+      {
+        "name": "NewContentAdvertisingBanner.tsx",
+        "sizeKB": "2.15",
+        "lines": 46,
+        "complexity": 3
+      },
+      {
+        "name": "October2025AutonomousCodeIntelligenceBanner.tsx",
+        "sizeKB": "2.07",
+        "lines": 45,
+        "complexity": 3
+      },
+      {
+        "name": "LatestContent2026Banner.tsx",
+        "sizeKB": "2.03",
+        "lines": 45,
+        "complexity": 4
+      },
+      {
+        "name": "SuccessStory.tsx",
+        "sizeKB": "1.82",
+        "lines": 61,
+        "complexity": 3
+      },
+      {
+        "name": "October2025QuantumEdgeRevolutionBanner.tsx",
+        "sizeKB": "1.75",
+        "lines": 35,
+        "complexity": 4
+      },
+      {
+        "name": "PromoBanner.tsx",
+        "sizeKB": "1.70",
+        "lines": 41,
+        "complexity": 2
+      },
+      {
+        "name": "May2026ContentAdvertisingBanner.tsx",
+        "sizeKB": "1.27",
+        "lines": 28,
+        "complexity": 2
+      },
+      {
+        "name": "LazyBanner.tsx",
+        "sizeKB": "1.18",
+        "lines": 43,
+        "complexity": 6
+      },
+      {
+        "name": "EdgeNativeAgents2027Banner.tsx",
+        "sizeKB": "0.96",
+        "lines": 24,
+        "complexity": 3
+      },
+      {
+        "name": "April2026MegaBreakthroughBanner.tsx",
+        "sizeKB": "0.93",
+        "lines": 20,
+        "complexity": 3
+      },
+      {
+        "name": "January2026NeuralArchitectureSearchBanner.tsx",
+        "sizeKB": "0.47",
+        "lines": 14,
+        "complexity": 2
+      },
+      {
+        "name": "BreakthroughContent2026Banner.tsx",
+        "sizeKB": "0.44",
+        "lines": 12,
+        "complexity": 2
+      },
+      {
+        "name": "January2026NewServicesBanner.tsx",
+        "sizeKB": "0.44",
+        "lines": 14,
+        "complexity": 2
+      },
+      {
+        "name": "QuantumConsciousnessFusionBanner.tsx",
+        "sizeKB": "0.15",
+        "lines": 9,
+        "complexity": 2
+      }
+    ],
+    "similar": [
+      {
+        "pattern": "Banner",
+        "count": 840
+      },
+      {
+        "pattern": "Showcase",
+        "count": 45
+      },
+      {
+        "pattern": "2025",
+        "count": 420
+      },
+      {
+        "pattern": "2026",
+        "count": 338
+      },
+      {
+        "pattern": "2027",
+        "count": 78
+      },
+      {
+        "pattern": "Breakthrough",
+        "count": 145
+      },
+      {
+        "pattern": "Content",
+        "count": 250
+      }
+    ]
+  },
+  "recommendations": [
+    {
+      "priority": "MEDIUM",
+      "category": "Performance",
+      "issue": "High number of component imports (257)",
+      "recommendation": "Consider lazy loading or code splitting for banner components",
+      "impact": "High"
+    },
+    {
+      "priority": "LOW",
+      "category": "Code Organization",
+      "issue": "218 components exceed 10KB",
+      "recommendation": "Review large components for potential splitting",
+      "impact": "Low"
+    },
+    {
+      "priority": "MEDIUM",
+      "category": "Code Reuse",
+      "issue": "Multiple similar component groups found",
+      "recommendation": "Create base components to reduce code duplication",
+      "impact": "High"
+    }
+  ],
+  "summary": {
+    "totalImports": 261,
+    "totalComponents": 967,
+    "duplicateImports": 0,
+    "recommendationsCount": 3
+  }
+}

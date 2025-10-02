@@ -1,6 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { BookOpen, TrendingUp, Users, Star, ArrowRight, Sparkles, Award, Zap } from 'lucide-react';
 
 const January2025ContentShowcaseBanner: React.FC = () => {
   return (

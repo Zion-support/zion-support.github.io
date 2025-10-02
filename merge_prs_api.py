@@ -5,12 +5,16 @@ Handles merging open PRs without git command timeouts
 """
 
 import requests
+import os
 import json
 import sys
 from typing import List, Dict, Any
 
 # Configuration
-GITHUB_TOKEN = "ghs_YzSdSBDOxkyAULMYgQUYCzSMkOyMQP1zs0FA"
+GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN", "")
+if not GITHUB_TOKEN:
+    print("Error: GITHUB_TOKEN environment variable is not set.")
+    raise SystemExit(1)
 REPO_OWNER = "Zion-Holdings"
 REPO_NAME = "zion.app"
 REPO_FULL = f"{REPO_OWNER}/{REPO_NAME}"
