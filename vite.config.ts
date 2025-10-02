@@ -48,9 +48,6 @@ export default defineConfig({
             if (id.includes('clsx') || id.includes('tailwind-merge') || id.includes('axios')) {
               return 'vendor-utils';
             }
-            if (id.includes('axios')) {
-              return 'vendor-http';
-            }
             return 'vendor';
           }
           // App chunks
