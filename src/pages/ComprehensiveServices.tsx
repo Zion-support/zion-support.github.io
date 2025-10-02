@@ -4,7 +4,8 @@ import {
   Zap, Bot, BarChart3, Shield, Cloud, Database, 
   Smartphone, Globe, Cpu, Lock, Users, FileText,
   TrendingUp, Settings, Headphones, Code, 
-  Brain, Rocket, Target, CheckCircle, Star
+  Brain, Rocket, Target, CheckCircle, Star,
+  Mail, MessageCircle
 } from 'lucide-react';
 
 const ComprehensiveServices: React.FC = () => {
@@ -30,6 +31,16 @@ const ComprehensiveServices: React.FC = () => {
       link: '/services/smart-appointment-scheduler'
     },
     {
+      id: 'ai-email-marketing',
+      title: 'AI Email Marketing Platform',
+      description: 'Transform your email marketing with AI-powered personalization, automation, and analytics. 300% increase in open rates and 250% ROI improvement.',
+      features: ['AI content generation', 'Smart segmentation', 'Predictive analytics', 'Automated campaigns', 'Optimal timing'],
+      pricing: 'Starting at $79/month',
+      icon: Mail,
+      color: 'from-emerald-600 to-green-600',
+      link: '/services/ai-email-marketing'
+    },
+    {
       id: 'api-integration-hub',
       title: 'API Integration Hub',
       description: 'Connect your software with 500+ platforms and services. Pre-built connectors, custom integrations, and real-time data sync.',
@@ -48,6 +59,16 @@ const ComprehensiveServices: React.FC = () => {
       icon: Globe,
       color: 'from-purple-600 to-pink-600',
       link: '/services/remote-collaboration-suite'
+    },
+    {
+      id: 'smart-contract-audit',
+      title: 'Smart Contract Audit Service',
+      description: 'Professional smart contract auditing with 99.8% vulnerability detection rate. Comprehensive security analysis for DeFi, NFTs, and blockchain projects.',
+      features: ['99.8% vulnerability detection', '5-10 day delivery', '50+ audits completed', '100% compliance', 'Expert team'],
+      pricing: 'Starting at $2,500',
+      icon: Shield,
+      color: 'from-red-600 to-orange-600',
+      link: '/services/smart-contract-audit'
     }
   ];
 
@@ -73,6 +94,26 @@ const ComprehensiveServices: React.FC = () => {
       link: '/services/ai-virtual-assistant'
     },
     {
+      id: 'ai-predictive-analytics',
+      title: 'AI Predictive Analytics',
+      description: 'Transform your business with advanced AI predictive analytics that deliver 94% accuracy in forecasting, customer behavior prediction, and risk assessment.',
+      features: ['94% prediction accuracy', 'Real-time forecasting', 'Customer lifetime value', 'Revenue forecasting', 'Risk assessment'],
+      pricing: 'Starting at $299/month',
+      icon: BarChart3,
+      color: 'from-indigo-600 to-purple-600',
+      link: '/services/ai-predictive-analytics'
+    },
+    {
+      id: 'conversational-ai',
+      title: 'Conversational AI',
+      description: 'Deploy advanced conversational AI with 96% accuracy, 150+ language support, and multi-modal conversations for customer support, sales, and engagement.',
+      features: ['96% conversation accuracy', '150+ languages', 'Multi-modal support', 'Real-time processing', 'Enterprise security'],
+      pricing: 'Starting at $399/month',
+      icon: MessageCircle,
+      color: 'from-violet-600 to-pink-600',
+      link: '/services/conversational-ai'
+    },
+    {
       id: 'ai-data-analytics',
       title: 'AI Data Analytics Platform',
       description: 'Turn raw data into actionable insights with advanced machine learning, predictive analytics, and automated reporting.',
@@ -81,6 +122,16 @@ const ComprehensiveServices: React.FC = () => {
       icon: BarChart3,
       color: 'from-green-600 to-teal-600',
       link: '/services/ai-data-analytics'
+    },
+    {
+      id: 'edge-computing-ai',
+      title: 'Edge Computing AI',
+      description: 'Deploy AI at the edge for real-time processing with sub-10ms response times. Transform IoT, industrial, and smart city applications.',
+      features: ['Sub-10ms response times', 'Offline capability', '90% latency reduction', 'Unlimited scale', 'Real-time analytics'],
+      pricing: 'Starting at $1,999/month',
+      icon: Cpu,
+      color: 'from-teal-600 to-blue-600',
+      link: '/services/edge-computing-ai'
     },
     {
       id: 'ai-document-processing',
@@ -256,7 +307,7 @@ const ComprehensiveServices: React.FC = () => {
               Specialized software-as-a-service solutions designed for specific business needs with affordable pricing and quick deployment.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {microSaasServices.map((service) => (
               <ServiceCard key={service.id} service={service} />
             ))}
