@@ -45,6 +45,9 @@ export function Header() {
                 <Link href="/services/ai-content-optimization-platform" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
                   AI Content Optimization Platform
                 </Link>
+                <Link href="/services/micro-saas/ai-lead-scoring-api" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  AI Lead Scoring API
+                </Link>
                 <Link href="/services/ai-financial-forecasting-suite" className="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-600">
                   AI Financial Forecasting Suite
                 </Link>
@@ -87,6 +90,12 @@ export function Header() {
                 </Link>
                 <Link href="/services/ai-workflow-automation-platform" className="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-600">
                   AI Workflow Automation Platform
+                </Link>
+                <Link href="/services/it-services/ai-observability-platform" className="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600">
+                  AI Observability Platform
+                </Link>
+                <Link href="/services/ai-governance-risk-compliance" className="block px-4 py-2 text-sm text-gray-700 hover:bg-emerald-50 hover:text-emerald-600">
+                  AI Governance, Risk & Compliance
                 </Link>
                 <Link href="/services/ai-customer-insights-platform" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600">
                   AI Customer Insights Platform

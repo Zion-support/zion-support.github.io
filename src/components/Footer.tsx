@@ -56,7 +56,11 @@ const Footer: React.FC = () => {
             <div className="space-y-2 text-gray-400">
               <p>📞 +1 302 464 0950</p>
               <p>✉️ kleber@ziontechgroup.com</p>
-              <p>📍 364 E Main St STE 1008<br />Middletown DE 19709</p>
+              <p>
+                📍 364 E Main St STE 1008
+                <br />
+                Middletown DE 19709
+              </p>
             </div>
           </div>
         </div>

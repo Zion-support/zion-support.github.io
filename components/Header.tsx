@@ -12,15 +12,37 @@ const Header: React.FC = () => {
       href: '/services',
       submenu: [
         { name: 'All Services', href: '/services' },
+        { name: 'AI Services', href: '/ai-services' },
         { name: 'Micro SaaS', href: '/services/micro-saas' },
-        { name: 'IT Services (Comprehensive)', href: '/services/it-services-comprehensive' },
+        { name: 'IT Services', href: '/services/it-services-comprehensive' },
         { name: 'Blockchain Solutions', href: '/services/blockchain-solutions' },
-        { name: 'AI Quantum Computing', href: '/services/ai-quantum-computing-2026' }
+        { name: 'Quantum Computing', href: '/services/ai-quantum-computing-2026' },
+        { name: 'Additional Services', href: '/additional-services' },
+        { name: 'Comprehensive Services', href: '/comprehensive-services' }
       ]
     },
-    { name: 'Solutions', href: '/solutions' },
+    { 
+      name: 'Solutions', 
+      href: '/solutions',
+      submenu: [
+        { name: 'All Solutions', href: '/solutions' },
+        { name: 'Enterprise Solutions', href: '/enterprise' },
+        { name: 'Innovative IT Solutions', href: '/innovative-it-solutions' },
+        { name: 'Advanced AI Solutions', href: '/advanced-ai-solutions' }
+      ]
+    },
     { name: 'Case Studies', href: '/case-studies' },
     { name: 'Blog', href: '/blog' },
+    { 
+      name: 'Resources', 
+      href: '/resources',
+      submenu: [
+        { name: 'All Resources', href: '/resources' },
+        { name: 'Guides', href: '/guides' },
+        { name: 'Content Hub', href: '/content-hub' },
+        { name: 'Enhanced Services Catalog', href: '/enhanced-services-catalog' }
+      ]
+    },
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },
   ];
