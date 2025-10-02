@@ -264,8 +264,8 @@ const App: React.FC = () => {
           </div>
         )}
 
-        <NotificationSystem notifications={notifications} onRemove={handleRemoveNotification} />
-      </HelmetProvider>
+      <NotificationSystem notifications={notifications} onRemove={handleRemoveNotification} />
+    </HelmetProvider>
     </>
   );
 };
