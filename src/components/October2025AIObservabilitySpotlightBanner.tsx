@@ -1,7 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
 
-export default function October2025AIObservabilitySpotlightBanner() {
+export default function October2025AIObservabilitySpotlightBanner(): void {
   return (
     <div className="bg-gradient-to-br from-blue-950 via-indigo-900 to-blue-950 text-white py-12 px-4">
       <div className="max-w-6xl mx-auto">

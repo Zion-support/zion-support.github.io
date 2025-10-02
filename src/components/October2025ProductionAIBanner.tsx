@@ -1,7 +1,5 @@
-import { ArrowRight, CheckCircle, Rocket, Shield, TrendingUp } from "lucide-react";
-import { Link } from "react-router-dom";
 
-export default function October2025ProductionAIBanner() {
+export default function October2025ProductionAIBanner(): void {
   return (
     <section className="py-16 bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden">
       {/* Animated background elements */}

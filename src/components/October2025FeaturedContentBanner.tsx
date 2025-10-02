@@ -1,6 +1,3 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Sparkles, ArrowRight, TrendingUp, Package, Brain } from 'lucide-react';
 
 const October2025FeaturedContentBanner = () => {
   const featuredContent = [

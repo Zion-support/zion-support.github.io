@@ -1,6 +1,5 @@
-import React from 'react';
 
-export default function January2027ContentAdvertisingBanner() {
+export default function January2027ContentAdvertisingBanner(): void {
   return (
     <div className="bg-gradient-to-r from-violet-500/20 to-purple-500/20 backdrop-blur-sm rounded-2xl p-8 border border-violet-500/30 mb-12">
       <div className="text-center">
@@ -36,13 +35,13 @@ export default function January2027ContentAdvertisingBanner() {
               <p className="text-gray-300 text-sm mb-4">1000x energy efficiency, sub-microsecond latency, $2.3B savings</p>
             </div>
             <div className="space-y-2">
-              <a
+              <a title="Internal link"
                 href="/blog/ai-2027-neuromorphic-edge-computing-breakthrough"
                 className="block w-full bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300 text-center text-sm"
               >
                 Read Full Article →
               </a>
-              <a
+              <a title="Internal link"
                 href="/case-studies/fortune-500-neuromorphic-edge-computing-2-3-billion-success"
                 className="block w-full border border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-2 px-4 rounded-lg transition-all duration-300 text-center text-sm"
               >
@@ -58,13 +57,13 @@ export default function January2027ContentAdvertisingBanner() {
               <p className="text-gray-300 text-sm mb-4">Quantum-resistant AI, $847B protection, NIST-approved</p>
             </div>
             <div className="space-y-2">
-              <a
+              <a title="Internal link"
                 href="/blog/ai-2027-quantum-ai-security-revolution"
                 className="block w-full bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300 text-center text-sm"
               >
                 Read Full Article →
               </a>
-              <a
+              <a title="Internal link"
                 href="/services/quantum-ai-security"
                 className="block w-full border border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-2 px-4 rounded-lg transition-all duration-300 text-center text-sm"
               >
@@ -80,13 +79,13 @@ export default function January2027ContentAdvertisingBanner() {
               <p className="text-gray-300 text-sm mb-4">320 facilities, 78% downtime reduction, $2.3B savings</p>
             </div>
             <div className="space-y-2">
-              <a
+              <a title="Internal link"
                 href="/case-studies/fortune-500-neuromorphic-edge-computing-2-3-billion-success"
                 className="block w-full bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-400 hover:to-cyan-500 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300 text-center text-sm"
               >
                 View Full Case Study →
               </a>
-              <a
+              <a title="Internal link"
                 href="/contact"
                 className="block w-full border border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-2 px-4 rounded-lg transition-all duration-300 text-center text-sm"
               >
@@ -97,19 +96,19 @@ export default function January2027ContentAdvertisingBanner() {
         </div>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
+          <a title="Internal link"
             href="/contact"
             className="bg-gradient-to-r from-violet-500 to-purple-600 hover:from-violet-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-violet-500/50 transform hover:-translate-y-1"
           >
             Get Free Consultation →
           </a>
-          <a
+          <a title="Internal link"
             href="/blog"
             className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
           >
             Explore All Content →
           </a>
-          <a
+          <a title="Internal link"
             href="/case-studies"
             className="border-2 border-violet-500 text-violet-400 hover:bg-violet-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
           >

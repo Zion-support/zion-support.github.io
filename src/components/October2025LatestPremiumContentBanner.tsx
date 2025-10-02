@@ -1,5 +1,3 @@
-import { ArrowRight, Shield, Brain, Workflow, TrendingUp, CheckCircle } from "lucide-react";
-import { Link } from "react-router-dom";
 
 const October2025LatestPremiumContentBanner = () => {
   return (

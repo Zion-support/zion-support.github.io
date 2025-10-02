@@ -1,6 +1,3 @@
-import { ArrowRight, Zap, Database, Bot, TrendingUp } from "lucide-react";
-import { Link } from "react-router-dom";
-import { octoberLatestBreakthroughContent } from "../content/october-2025-latest-breakthrough-content";
 
 const October2025LatestBreakthroughBanner = () => {
   return (

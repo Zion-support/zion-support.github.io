@@ -1,6 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { ArrowRight, Sparkles, TrendingUp, Zap, Star, Rocket, Brain, Shield, Target, Award, Users, DollarSign } from 'lucide-react';
 
 const Ultimate2026ContentShowcase: React.FC = () => {
   const showcaseContent = [
@@ -306,14 +304,14 @@ const Ultimate2026ContentShowcase: React.FC = () => {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                <a
+                <a title="Internal link"
                   href="/contact"
                   className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-6 px-12 rounded-xl transition-all duration-300 shadow-xl hover:shadow-blue-500/50 flex items-center justify-center gap-3 text-lg"
                 >
                   <Rocket className="w-6 h-6" />
                   <span>Start Your Transformation</span>
                 </a>
-                <a
+                <a title="Internal link"
                   href="/blog"
                   className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-6 px-12 rounded-xl transition-all duration-300 flex items-center justify-center gap-3 text-lg"
                 >

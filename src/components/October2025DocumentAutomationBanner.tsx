@@ -1,5 +1,3 @@
-import { ArrowRight, FileText, Zap, Target, DollarSign, TrendingUp, CheckCircle } from "lucide-react";
-import { Link } from "react-router-dom";
 
 const October2025DocumentAutomationBanner = () => {
   return (

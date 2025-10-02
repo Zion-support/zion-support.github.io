@@ -1,6 +1,5 @@
-import React from 'react';
 
-export default function EnterpriseAIFall2025Banner() {
+export default function EnterpriseAIFall2025Banner(): void {
   return (
     <section className="bg-gradient-to-r from-slate-900 via-indigo-900 to-purple-900 text-white py-24 px-6 relative overflow-hidden">
       {/* Animated background elements */}

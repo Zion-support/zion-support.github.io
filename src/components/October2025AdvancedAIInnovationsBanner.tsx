@@ -1,6 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Brain, Database, Sparkles, Atom } from 'lucide-react';
 
 const October2025AdvancedAIInnovationsBanner = () => {
   return (

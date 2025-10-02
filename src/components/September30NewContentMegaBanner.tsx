@@ -1,5 +1,3 @@
-import { Sparkles, ArrowRight, Brain, Atom, Layers, GraduationCap, Zap } from "lucide-react";
-import { Link } from "react-router-dom";
 
 const September30NewContentMegaBanner = () => {
   const newArticles = [

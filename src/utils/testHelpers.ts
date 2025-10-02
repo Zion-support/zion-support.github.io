@@ -13,7 +13,6 @@
  * - Accessibility testing helpers
  */
 
-import { ReactElement } from 'react';
 
 export interface MockComponentProps {
   id?: string;

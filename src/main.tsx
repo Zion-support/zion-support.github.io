@@ -2,12 +2,15 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
+import App from "./AppOptimized";
+import "./index.css";
+
 // Fallback: simple passthrough provider while ThemeContext is absent
 const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return <>{children}</>;
 };
-import App from "./App";
-import "./index.css";
+
+export { ThemeProvider };
 
 // Register enhanced service worker
 if ("serviceWorker" in navigator) {
@@ -33,7 +36,7 @@ if ("serviceWorker" in navigator) {
           }
         });
       })
-      .catch((error) => {
+      .catch(() => {
         // console.error("❌ Service Worker registration failed:", error);
       });
   });

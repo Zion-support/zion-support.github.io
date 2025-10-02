@@ -1,6 +1,3 @@
-import { ArrowRight, Award, CheckCircle, Cloud, MessageSquare, Sparkles, TrendingUp, Zap } from "lucide-react";
-import { Link } from "react-router-dom";
-import { octoberUltimateEnterpriseContent } from "../content/october-2025-ultimate-enterprise-content";
 
 const October2025UltimateEnterpriseBanner = () => {
   const [multiCloudContent, conversationalAIContent] = octoberUltimateEnterpriseContent;

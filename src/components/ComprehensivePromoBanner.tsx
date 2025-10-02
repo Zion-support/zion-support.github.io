@@ -1,8 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Sparkles, Zap } from 'lucide-react';
-import { newArticles2025 } from '../content/new-articles-2025';
-import { newServices2026 } from '../content/new-services-2026';
 
 interface ComprehensivePromoBannerProps {
   variant?: 'hero' | 'compact' | 'featured';

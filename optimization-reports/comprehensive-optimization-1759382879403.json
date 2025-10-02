@@ -1,0 +1,78 @@
+{
+  "timestamp": "2025-10-02T05:27:57.424Z",
+  "optimizations": [
+    {
+      "timestamp": "2025-10-02T05:27:57.434Z",
+      "type": "info",
+      "message": "Starting comprehensive performance optimization..."
+    },
+    {
+      "timestamp": "2025-10-02T05:27:57.435Z",
+      "type": "info",
+      "message": "Starting bundle optimization..."
+    },
+    {
+      "timestamp": "2025-10-02T05:27:58.981Z",
+      "type": "error",
+      "message": "Bundle optimization failed: Command failed: pnpm run build:analyze\nsh: 1: vite: not found\n"
+    },
+    {
+      "timestamp": "2025-10-02T05:27:58.981Z",
+      "type": "info",
+      "message": "Starting image optimization..."
+    },
+    {
+      "timestamp": "2025-10-02T05:27:58.982Z",
+      "type": "info",
+      "message": "Analyzed 6 images"
+    },
+    {
+      "timestamp": "2025-10-02T05:27:58.983Z",
+      "type": "info",
+      "message": "Starting CSS optimization..."
+    },
+    {
+      "timestamp": "2025-10-02T05:27:59.399Z",
+      "type": "info",
+      "message": "CSS optimization analysis completed"
+    },
+    {
+      "timestamp": "2025-10-02T05:27:59.400Z",
+      "type": "info",
+      "message": "Starting caching optimization..."
+    },
+    {
+      "timestamp": "2025-10-02T05:27:59.401Z",
+      "type": "info",
+      "message": "Caching optimization analysis completed"
+    },
+    {
+      "timestamp": "2025-10-02T05:27:59.401Z",
+      "type": "info",
+      "message": "Starting SEO optimization..."
+    },
+    {
+      "timestamp": "2025-10-02T05:27:59.403Z",
+      "type": "info",
+      "message": "SEO optimization analysis completed"
+    },
+    {
+      "timestamp": "2025-10-02T05:27:59.403Z",
+      "type": "info",
+      "message": "Generating optimization report..."
+    }
+  ],
+  "metrics": {},
+  "recommendations": [
+    {
+      "type": "css-optimization",
+      "file": "src/index.css",
+      "unusedRules": 31,
+      "suggestion": "Consider removing unused CSS rules"
+    },
+    {
+      "type": "caching",
+      "suggestion": "Implement proper cache strategies in service worker"
+    }
+  ]
+}

@@ -1,5 +1,3 @@
-import React from "react";
-import { Link } from "react-router-dom";
 
 type NewServices2026BannerProps = {
   variant?: "showcase" | "hero" | "info";
@@ -11,7 +9,7 @@ export default function NewServices2026Banner({
   variant = "showcase",
   showCount = 6,
   className = "",
-}: NewServices2026BannerProps) {
+}: NewServices2026BannerProps): void {
   const services = [
     { title: "AI Autonomous Cloud Ops", link: "/services/ai-autonomous-infrastructure-platform", tag: "Cloud" },
     { title: "AI Cybersecurity Suite", link: "/services/ai-cybersecurity-suite", tag: "Security" },

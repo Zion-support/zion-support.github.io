@@ -1,6 +1,4 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Sparkles, Code2, Brain, Zap } from "lucide-react";
-import { motion } from "framer-motion";
 
 const October2025TechBannerNew = () => {
   const newArticles = [

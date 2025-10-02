@@ -1,11 +1,15 @@
 import React from 'react';
 import { Brain, Atom, Bot, ArrowRight, Sparkles, TrendingUp, Star, Zap, Rocket, CheckCircle } from 'lucide-react';
+<<<<<<< HEAD
 // Fallback: content module may be relocated; guard import
 let revolutionaryBreakthroughs2025: any[] = [];
 let breakthroughServices2025: any[] = [];
 let latestCaseStudies2025: any[] = [];
 // Content import disabled to avoid hard build failure if the source file moves.
 // Page gracefully renders with empty sections when content is unavailable.
+=======
+import { revolutionaryBreakthroughs2025, breakthroughServices2025, latestCaseStudies2025 } from '../../../../src/content/revolutionary-ai-breakthroughs-2025';
+>>>>>>> b19accb4ff3b (🚀 Add Revolutionary AI Breakthroughs 2025 Content & Frontend Updates)
 
 export default function RevolutionaryBreakthroughs2025() {
   const getIconComponent = (icon: string) => {

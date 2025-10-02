@@ -1,5 +1,3 @@
-import { ArrowRight, Lock, Shield, Zap, TrendingUp, Target, Award, Sparkles } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
 const October2025TechBreakthroughBanner = () => {
   return (

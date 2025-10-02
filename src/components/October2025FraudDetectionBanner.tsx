@@ -1,5 +1,3 @@
-import { Shield, TrendingUp, Zap, Target, AlertCircle, CheckCircle, ArrowRight, Brain, Network, Eye } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
 const October2025FraudDetectionBanner = () => {
   return (

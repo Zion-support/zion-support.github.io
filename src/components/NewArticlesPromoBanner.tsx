@@ -1,7 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, BookOpen, Sparkles, TrendingUp } from 'lucide-react';
-import { newArticles2025 } from '../content/new-articles-2025';
 
 interface NewArticlesPromoBannerProps {
   variant?: 'default' | 'premium' | 'featured' | 'compact';

@@ -1,7 +1,5 @@
-import { Link } from "react-router-dom";
-import { ArrowRight, Zap, Search, Target, Server } from "lucide-react";
 
-export default function October2025LatestAIBreakthroughsBanner() {
+export default function October2025LatestAIBreakthroughsBanner(): void {
   return (
     <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-rose-900 border-y border-white/10">
       <div className="container mx-auto px-4 py-12">

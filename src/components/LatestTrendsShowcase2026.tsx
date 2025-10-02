@@ -90,7 +90,7 @@ const LatestTrendsShowcase2026: React.FC = () => {
                   <span className="text-gray-300">Cognitive bias detection and correction</span>
                 </div>
               </div>
-              <a 
+              <a title="Internal link" 
                 href="/meta-cognitive-ai" 
                 className="inline-block bg-gradient-to-r from-yellow-500 to-orange-600 hover:from-yellow-400 hover:to-orange-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-yellow-500/50"
               >
@@ -157,13 +157,13 @@ const LatestTrendsShowcase2026: React.FC = () => {
             Join the elite group of enterprises already transforming their operations with our breakthrough AI technologies.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
+            <a title="Internal link" 
               href="/contact" 
               className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1"
             >
               Start Your AI Journey
             </a>
-            <a 
+            <a title="Internal link" 
               href="/trends-report" 
               className="border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
