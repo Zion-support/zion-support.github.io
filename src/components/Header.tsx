@@ -38,6 +38,7 @@ const ModernHeader: React.FC = () => {
       label: 'Services',
       path: '/services',
       dropdown: [
+        { label: 'Comprehensive Services Catalog', path: '/services/catalog' },
         { label: 'AI Content Generator Pro', path: '/services/ai-content-generator' },
         { label: 'Smart Appointment Scheduler', path: '/services/smart-appointment-scheduler' },
         { label: 'AI Workflow Automation', path: '/services/ai-workflow-automation' },

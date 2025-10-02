@@ -17,6 +17,7 @@ import NotificationSystem from './components/NotificationSystem';
 import HomePage from './pages/HomePage';
 import SolutionsPage from './pages/SolutionsPage';
 import ServicesPage from './pages/ServicesPage';
+import EnhancedServicesCatalog from '../enhanced-services-catalog';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import BlogPage from './pages/BlogPage';
@@ -78,6 +79,7 @@ const App: React.FC = () => {
                 <Route path="/" element={<HomePage />} />
                 <Route path="/solutions/*" element={<SolutionsPage />} />
                 <Route path="/services/*" element={<ServicesPage />} />
+                <Route path="/services/catalog" element={<EnhancedServicesCatalog />} />
                 <Route path="/about" element={<AboutPage />} />
                 <Route path="/contact" element={<ContactPage />} />
                 <Route path="/blog/*" element={<BlogPage />} />
