@@ -28,9 +28,13 @@ export default function HomePage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative bg-gradient-to-br from-blue-50 to-indigo-100 py-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-100 text-blue-800 text-sm font-medium mb-6">
+              🚀 Trusted by 500+ Enterprises Worldwide
+            </div>
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
               Leading AI & Technology Solutions
             </h1>
@@ -38,6 +42,11 @@ export default function HomePage() {
               Transform your business with cutting-edge AI, micro SaaS, and enterprise IT solutions. 
               Build faster, scale smarter, and achieve unprecedented results.
             </p>
+            <div className="flex flex-wrap justify-center gap-4 mb-8 text-sm text-gray-600">
+              <span className="flex items-center"><span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>99.9% Uptime SLA</span>
+              <span className="flex items-center"><span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>24/7 Support</span>
+              <span className="flex items-center"><span className="w-2 h-2 bg-purple-500 rounded-full mr-2"></span>Enterprise Security</span>
+            </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 href="/services" 
@@ -107,6 +116,55 @@ export default function HomePage() {
                 "Security & Compliance"
               ]}
             />
+          </div>
+        </div>
+      </section>
+
+      {/* Client Testimonials */}
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              What Our Clients Say
+            </h2>
+            <p className="text-xl text-blue-100 max-w-2xl mx-auto">
+              Trusted by industry leaders across multiple sectors
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20">
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center text-white font-bold text-lg">JD</div>
+                <div className="ml-4">
+                  <h4 className="text-white font-semibold">John Davis</h4>
+                  <p className="text-blue-100 text-sm">CTO, TechCorp</p>
+                </div>
+              </div>
+              <p className="text-white/90 italic">"Zion Tech Group's AI solutions reduced our operational costs by 40% while improving efficiency. Their team is exceptional."</p>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20">
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center text-white font-bold text-lg">SM</div>
+                <div className="ml-4">
+                  <h4 className="text-white font-semibold">Sarah Martinez</h4>
+                  <p className="text-blue-100 text-sm">VP Engineering, HealthTech</p>
+                </div>
+              </div>
+              <p className="text-white/90 italic">"The IoT platform implementation was seamless. We achieved 99.9% uptime and significant energy savings."</p>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20">
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center text-white font-bold text-lg">MR</div>
+                <div className="ml-4">
+                  <h4 className="text-white font-semibold">Michael Rodriguez</h4>
+                  <p className="text-blue-100 text-sm">CEO, FinTech Solutions</p>
+                </div>
+              </div>
+              <p className="text-white/90 italic">"Their blockchain solutions transformed our supply chain transparency. ROI exceeded 300% in the first year."</p>
+            </div>
           </div>
         </div>
       </section>
@@ -268,6 +326,59 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Technology Stack & Certifications */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Enterprise-Grade Technology Stack
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Built on industry-leading platforms and certified security standards
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center justify-items-center">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-3">
+                <span className="text-2xl">☁️</span>
+              </div>
+              <p className="text-sm font-medium text-gray-700">AWS Certified</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-3">
+                <span className="text-2xl">🔒</span>
+              </div>
+              <p className="text-sm font-medium text-gray-700">SOC 2 Type II</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-3">
+                <span className="text-2xl">🏥</span>
+              </div>
+              <p className="text-sm font-medium text-gray-700">HIPAA Compliant</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mx-auto mb-3">
+                <span className="text-2xl">🛡️</span>
+              </div>
+              <p className="text-sm font-medium text-gray-700">ISO 27001</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-red-100 rounded-lg flex items-center justify-center mx-auto mb-3">
+                <span className="text-2xl">⚡</span>
+              </div>
+              <p className="text-sm font-medium text-gray-700">99.9% SLA</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-indigo-100 rounded-lg flex items-center justify-center mx-auto mb-3">
+                <span className="text-2xl">🚀</span>
+              </div>
+              <p className="text-sm font-medium text-gray-700">24/7 Support</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-blue-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -277,10 +388,10 @@ export default function HomePage() {
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
             Join hundreds of enterprises already leveraging our AI and technology solutions.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <Link 
               href="/contact" 
-              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             >
               Start Your Project
             </Link>
@@ -290,6 +401,21 @@ export default function HomePage() {
             >
               View Case Studies
             </Link>
+          </div>
+          
+          <div className="flex flex-wrap justify-center gap-8 text-blue-100 text-sm">
+            <div className="flex items-center">
+              <span className="w-2 h-2 bg-green-400 rounded-full mr-2"></span>
+              Free Consultation
+            </div>
+            <div className="flex items-center">
+              <span className="w-2 h-2 bg-yellow-400 rounded-full mr-2"></span>
+              No Setup Fees
+            </div>
+            <div className="flex items-center">
+              <span className="w-2 h-2 bg-purple-400 rounded-full mr-2"></span>
+              30-Day Trial
+            </div>
           </div>
         </div>
       </section>
