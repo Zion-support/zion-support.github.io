@@ -48,12 +48,24 @@ import {
   CheckSquare,
   PieChart,
   Activity,
-  Zap as Lightning
+  Zap as Lightning,
+  Package,
+  Share2,
+  FileCheck,
+  GraduationCap,
+  Calendar,
+  Car,
+  FlaskConical,
+  Truck,
+  PenTool,
+  Scan,
+  CloudRain,
+  Bot
 } from 'lucide-react';
 
 export default function EnhancedServicesCatalog() {
   const title = 'Comprehensive Services Catalog — Zion Tech Group';
-  const description = 'Production-ready micro SaaS, AI, and IT solutions with transparent pricing, fast delivery, and proven ROI. Contact us for custom solutions.';
+  const description = 'Production-ready micro SaaS, AI, and IT solutions with transparent pricing, fast delivery, and proven ROI. Expert consulting, custom development, and innovative technology solutions. Contact us for personalized solutions.';
 
   const microSaaSServices = [
     {
@@ -169,6 +181,272 @@ export default function EnhancedServicesCatalog() {
       benefits: 'Improve team productivity by 30%, reduce communication overhead',
       marketPrice: '$500 - $8,000/month',
       link: '/services/micro-saas/team-collaboration'
+    },
+    {
+      name: 'AI-Powered Lead Scoring & Qualification',
+      description: 'Intelligent lead scoring with behavioral analysis and conversion prediction',
+      icon: Target,
+      features: [
+        'Behavioral scoring and lead qualification',
+        'Predictive conversion modeling',
+        'Multi-channel lead tracking',
+        'Automated follow-up sequences',
+        'CRM integration and synchronization',
+        'Real-time lead alerts and notifications'
+      ],
+      pricing: '$399 - $3,500/month',
+      delivery: '2-3 weeks',
+      category: 'Sales Automation',
+      benefits: 'Increase conversion rates by 45%, reduce sales cycle by 30%',
+      marketPrice: '$800 - $12,000/month',
+      link: '/services/micro-saas/lead-scoring'
+    },
+    {
+      name: 'Smart Inventory Management System',
+      description: 'AI-driven inventory optimization with demand forecasting and automated reordering',
+      icon: Package,
+      features: [
+        'Demand forecasting and trend analysis',
+        'Automated reorder point calculations',
+        'Multi-location inventory tracking',
+        'Supplier management and procurement',
+        'Real-time stock level monitoring',
+        'Integration with POS and e-commerce platforms'
+      ],
+      pricing: '$199 - $2,800/month',
+      delivery: '2-4 weeks',
+      category: 'Supply Chain',
+      benefits: 'Reduce stockouts by 60%, optimize inventory costs by 25%',
+      marketPrice: '$500 - $8,000/month',
+      link: '/services/micro-saas/inventory-management'
+    },
+    {
+      name: 'AI Social Media Management Suite',
+      description: 'Automated social media posting, engagement, and analytics with AI content generation',
+      icon: Share2,
+      features: [
+        'AI-generated content and captions',
+        'Optimal posting time recommendations',
+        'Multi-platform scheduling and publishing',
+        'Engagement tracking and analytics',
+        'Hashtag research and optimization',
+        'Competitor analysis and benchmarking'
+      ],
+      pricing: '$149 - $1,500/month',
+      delivery: '1-2 weeks',
+      category: 'Social Media',
+      benefits: 'Increase engagement by 50%, save 20 hours/week on content creation',
+      marketPrice: '$300 - $5,000/month',
+      link: '/services/micro-saas/social-media-management'
+    },
+    {
+      name: 'Automated Email Marketing Platform',
+      description: 'AI-powered email campaigns with personalization, A/B testing, and behavioral triggers',
+      icon: Mail,
+      features: [
+        'AI-driven email personalization',
+        'Behavioral trigger automation',
+        'A/B testing and optimization',
+        'Advanced segmentation and targeting',
+        'Deliverability optimization',
+        'Comprehensive analytics and reporting'
+      ],
+      pricing: '$99 - $1,200/month',
+      delivery: '1-2 weeks',
+      category: 'Email Marketing',
+      benefits: 'Increase open rates by 40%, boost click-through rates by 35%',
+      marketPrice: '$200 - $4,000/month',
+      link: '/services/micro-saas/email-marketing'
+    },
+    {
+      name: 'AI-Powered Document Management System',
+      description: 'Intelligent document organization, search, and workflow automation',
+      icon: FileText,
+      features: [
+        'AI-powered document classification',
+        'Advanced search with natural language',
+        'Automated workflow routing',
+        'Version control and collaboration',
+        'Compliance and audit trails',
+        'Integration with business applications'
+      ],
+      pricing: '$199 - $2,200/month',
+      delivery: '2-3 weeks',
+      category: 'Document Management',
+      benefits: 'Reduce document search time by 80%, improve compliance',
+      marketPrice: '$400 - $6,000/month',
+      link: '/services/micro-saas/document-management'
+    },
+    {
+      name: 'Smart Contract Management Platform',
+      description: 'AI-driven contract analysis, risk assessment, and automated compliance monitoring',
+      icon: FileCheck,
+      features: [
+        'Contract analysis and risk identification',
+        'Automated compliance monitoring',
+        'Renewal and expiration alerts',
+        'Contract performance tracking',
+        'Template library and generation',
+        'Integration with legal and procurement systems'
+      ],
+      pricing: '$499 - $4,500/month',
+      delivery: '3-5 weeks',
+      category: 'Legal Tech',
+      benefits: 'Reduce contract review time by 70%, minimize legal risks',
+      marketPrice: '$1,000 - $15,000/month',
+      link: '/services/micro-saas/contract-management'
+    },
+    {
+      name: 'AI Customer Feedback Analysis Platform',
+      description: 'Automated sentiment analysis, feedback categorization, and actionable insights',
+      icon: MessageSquare,
+      features: [
+        'Real-time sentiment analysis',
+        'Feedback categorization and tagging',
+        'Trend analysis and reporting',
+        'Competitor comparison insights',
+        'Automated response recommendations',
+        'Integration with review platforms'
+      ],
+      pricing: '$149 - $1,800/month',
+      delivery: '1-3 weeks',
+      category: 'Customer Intelligence',
+      benefits: 'Improve customer satisfaction by 25%, identify issues faster',
+      marketPrice: '$300 - $5,000/month',
+      link: '/services/micro-saas/feedback-analysis'
+    },
+    {
+      name: 'Automated HR Recruitment Platform',
+      description: 'AI-powered candidate screening, interview scheduling, and talent pipeline management',
+      icon: Users,
+      features: [
+        'AI resume screening and matching',
+        'Automated interview scheduling',
+        'Candidate pipeline management',
+        'Skills assessment and testing',
+        'Background check integration',
+        'Analytics and reporting dashboard'
+      ],
+      pricing: '$299 - $3,200/month',
+      delivery: '2-4 weeks',
+      category: 'HR Tech',
+      benefits: 'Reduce hiring time by 50%, improve candidate quality',
+      marketPrice: '$600 - $10,000/month',
+      link: '/services/micro-saas/hr-recruitment'
+    },
+    {
+      name: 'AI-Powered Financial Planning Tool',
+      description: 'Personalized financial advice, budgeting, and investment recommendations',
+      icon: DollarSign,
+      features: [
+        'Personalized financial planning',
+        'Automated budgeting and tracking',
+        'Investment recommendations',
+        'Goal setting and progress monitoring',
+        'Tax optimization strategies',
+        'Financial health scoring'
+      ],
+      pricing: '$99 - $899/month',
+      delivery: '2-3 weeks',
+      category: 'FinTech',
+      benefits: 'Help users save 20% more, improve financial literacy',
+      marketPrice: '$200 - $3,000/month',
+      link: '/services/micro-saas/financial-planning'
+    },
+    {
+      name: 'Smart Energy Management System',
+      description: 'AI-driven energy optimization for buildings with cost reduction and sustainability tracking',
+      icon: Zap,
+      features: [
+        'Real-time energy monitoring',
+        'Predictive maintenance alerts',
+        'Cost optimization recommendations',
+        'Sustainability reporting',
+        'Integration with smart devices',
+        'Carbon footprint tracking'
+      ],
+      pricing: '$199 - $2,500/month',
+      delivery: '2-4 weeks',
+      category: 'Energy Tech',
+      benefits: 'Reduce energy costs by 30%, improve sustainability metrics',
+      marketPrice: '$400 - $8,000/month',
+      link: '/services/micro-saas/energy-management'
+    },
+    {
+      name: 'AI-Powered Learning Management System',
+      description: 'Personalized learning paths, progress tracking, and automated assessment',
+      icon: GraduationCap,
+      features: [
+        'Personalized learning paths',
+        'Automated assessment and grading',
+        'Progress tracking and analytics',
+        'Content recommendation engine',
+        'Gamification and engagement tools',
+        'Integration with HR systems'
+      ],
+      pricing: '$299 - $2,800/month',
+      delivery: '3-5 weeks',
+      category: 'EdTech',
+      benefits: 'Improve learning outcomes by 40%, reduce training costs',
+      marketPrice: '$600 - $12,000/month',
+      link: '/services/micro-saas/learning-management'
+    },
+    {
+      name: 'Automated Compliance Monitoring Platform',
+      description: 'Real-time compliance tracking, risk assessment, and regulatory reporting',
+      icon: Shield,
+      features: [
+        'Real-time compliance monitoring',
+        'Risk assessment and scoring',
+        'Automated regulatory reporting',
+        'Policy management and updates',
+        'Audit trail and documentation',
+        'Integration with business systems'
+      ],
+      pricing: '$499 - $4,200/month',
+      delivery: '3-6 weeks',
+      category: 'Compliance',
+      benefits: 'Reduce compliance costs by 50%, minimize regulatory risks',
+      marketPrice: '$1,000 - $20,000/month',
+      link: '/services/micro-saas/compliance-monitoring'
+    },
+    {
+      name: 'AI-Powered Project Management Suite',
+      description: 'Intelligent project planning, resource allocation, and risk prediction',
+      icon: Calendar,
+      features: [
+        'AI-powered project planning',
+        'Resource allocation optimization',
+        'Risk prediction and mitigation',
+        'Progress tracking and reporting',
+        'Team collaboration tools',
+        'Integration with development tools'
+      ],
+      pricing: '$199 - $2,200/month',
+      delivery: '2-3 weeks',
+      category: 'Project Management',
+      benefits: 'Improve project success rate by 35%, reduce delays',
+      marketPrice: '$400 - $8,000/month',
+      link: '/services/micro-saas/project-management'
+    },
+    {
+      name: 'Smart Facility Management Platform',
+      description: 'IoT-integrated facility monitoring, maintenance scheduling, and space optimization',
+      icon: Building,
+      features: [
+        'IoT sensor integration',
+        'Predictive maintenance scheduling',
+        'Space utilization optimization',
+        'Energy consumption monitoring',
+        'Visitor management system',
+        'Maintenance cost tracking'
+      ],
+      pricing: '$399 - $3,500/month',
+      delivery: '3-5 weeks',
+      category: 'Facility Management',
+      benefits: 'Reduce maintenance costs by 25%, improve space efficiency',
+      marketPrice: '$800 - $15,000/month',
+      link: '/services/micro-saas/facility-management'
     }
   ];
 
@@ -286,6 +564,196 @@ export default function EnhancedServicesCatalog() {
       benefits: 'Process documents 10x faster, reduce errors by 95%',
       marketPrice: '$4,000 - $35,000/month',
       link: '/services/ai-services/document-processing'
+    },
+    {
+      name: 'AI-Powered Recommendation Engine',
+      description: 'Advanced recommendation systems for e-commerce, content, and personalized experiences',
+      icon: Target,
+      features: [
+        'Collaborative filtering algorithms',
+        'Content-based recommendations',
+        'Hybrid recommendation models',
+        'Real-time personalization',
+        'A/B testing and optimization',
+        'Multi-domain recommendation support'
+      ],
+      pricing: '$1,500 - $12,000/month',
+      delivery: '3-6 weeks',
+      category: 'Recommendation Systems',
+      benefits: 'Increase conversion rates by 35%, improve user engagement',
+      marketPrice: '$3,000 - $25,000/month',
+      link: '/services/ai-services/recommendation-engine'
+    },
+    {
+      name: 'Autonomous Vehicle AI Systems',
+      description: 'AI solutions for autonomous vehicles including perception, planning, and control',
+      icon: Car,
+      features: [
+        'Computer vision for object detection',
+        'Path planning and navigation',
+        'Sensor fusion and data processing',
+        'Real-time decision making',
+        'Safety monitoring and validation',
+        'Integration with vehicle systems'
+      ],
+      pricing: '$15,000 - $100,000/month',
+      delivery: '12-24 weeks',
+      category: 'Autonomous Systems',
+      benefits: 'Enable autonomous driving capabilities, improve safety',
+      marketPrice: '$25,000 - $200,000/month',
+      link: '/services/ai-services/autonomous-vehicles'
+    },
+    {
+      name: 'AI-Powered Drug Discovery Platform',
+      description: 'Machine learning for pharmaceutical research, molecular design, and drug development',
+      icon: FlaskConical,
+      features: [
+        'Molecular property prediction',
+        'Drug-target interaction modeling',
+        'Compound optimization algorithms',
+        'Clinical trial outcome prediction',
+        'Toxicity and safety assessment',
+        'Patent analysis and IP insights'
+      ],
+      pricing: '$8,000 - $50,000/month',
+      delivery: '8-16 weeks',
+      category: 'Healthcare AI',
+      benefits: 'Accelerate drug discovery by 40%, reduce R&D costs',
+      marketPrice: '$15,000 - $100,000/month',
+      link: '/services/ai-services/drug-discovery'
+    },
+    {
+      name: 'AI-Powered Supply Chain Optimization',
+      description: 'Intelligent supply chain management with demand forecasting and logistics optimization',
+      icon: Truck,
+      features: [
+        'Demand forecasting and planning',
+        'Inventory optimization algorithms',
+        'Route optimization and logistics',
+        'Supplier risk assessment',
+        'Real-time supply chain monitoring',
+        'Sustainability and carbon footprint tracking'
+      ],
+      pricing: '$3,000 - $20,000/month',
+      delivery: '4-8 weeks',
+      category: 'Supply Chain AI',
+      benefits: 'Reduce supply chain costs by 25%, improve efficiency',
+      marketPrice: '$6,000 - $40,000/month',
+      link: '/services/ai-services/supply-chain-optimization'
+    },
+    {
+      name: 'AI-Powered Cybersecurity Platform',
+      description: 'Advanced threat detection, behavioral analysis, and automated response systems',
+      icon: Shield,
+      features: [
+        'Behavioral anomaly detection',
+        'Threat intelligence and analysis',
+        'Automated incident response',
+        'Zero-day threat detection',
+        'Network traffic analysis',
+        'Security orchestration and automation'
+      ],
+      pricing: '$4,000 - $25,000/month',
+      delivery: '6-12 weeks',
+      category: 'Cybersecurity AI',
+      benefits: 'Detect threats 10x faster, reduce false positives by 80%',
+      marketPrice: '$8,000 - $50,000/month',
+      link: '/services/ai-services/cybersecurity-platform'
+    },
+    {
+      name: 'AI-Powered Content Generation Suite',
+      description: 'Advanced content creation including text, images, videos, and multimedia',
+      icon: PenTool,
+      features: [
+        'Natural language content generation',
+        'Image and video synthesis',
+        'Content personalization and adaptation',
+        'Brand voice and style consistency',
+        'Multi-language content creation',
+        'Content optimization and A/B testing'
+      ],
+      pricing: '$2,000 - $15,000/month',
+      delivery: '3-6 weeks',
+      category: 'Content AI',
+      benefits: 'Reduce content creation time by 70%, improve quality',
+      marketPrice: '$4,000 - $30,000/month',
+      link: '/services/ai-services/content-generation'
+    },
+    {
+      name: 'AI-Powered Medical Imaging Analysis',
+      description: 'Advanced medical image analysis for diagnosis, treatment planning, and research',
+      icon: Scan,
+      features: [
+        'Medical image classification and detection',
+        'Automated diagnosis assistance',
+        'Treatment planning optimization',
+        'Medical image enhancement',
+        'Integration with PACS systems',
+        'Regulatory compliance and validation'
+      ],
+      pricing: '$5,000 - $35,000/month',
+      delivery: '6-12 weeks',
+      category: 'Medical AI',
+      benefits: 'Improve diagnostic accuracy by 30%, reduce interpretation time',
+      marketPrice: '$10,000 - $70,000/month',
+      link: '/services/ai-services/medical-imaging'
+    },
+    {
+      name: 'AI-Powered Financial Trading Platform',
+      description: 'Algorithmic trading systems with market analysis, risk management, and execution',
+      icon: TrendingUp,
+      features: [
+        'Market data analysis and prediction',
+        'Algorithmic trading strategies',
+        'Risk management and portfolio optimization',
+        'Real-time execution and monitoring',
+        'Backtesting and strategy validation',
+        'Regulatory compliance and reporting'
+      ],
+      pricing: '$8,000 - $60,000/month',
+      delivery: '8-16 weeks',
+      category: 'FinTech AI',
+      benefits: 'Improve trading performance by 25%, reduce risk exposure',
+      marketPrice: '$15,000 - $120,000/month',
+      link: '/services/ai-services/financial-trading'
+    },
+    {
+      name: 'AI-Powered Climate Modeling System',
+      description: 'Advanced climate prediction, environmental monitoring, and sustainability analytics',
+      icon: CloudRain,
+      features: [
+        'Climate pattern prediction',
+        'Environmental impact assessment',
+        'Carbon footprint analysis',
+        'Renewable energy optimization',
+        'Weather forecasting and modeling',
+        'Sustainability reporting and insights'
+      ],
+      pricing: '$3,500 - $25,000/month',
+      delivery: '6-12 weeks',
+      category: 'Climate AI',
+      benefits: 'Improve climate predictions by 40%, optimize sustainability',
+      marketPrice: '$7,000 - $50,000/month',
+      link: '/services/ai-services/climate-modeling'
+    },
+    {
+      name: 'AI-Powered Autonomous Robotics Platform',
+      description: 'Intelligent robotics systems for manufacturing, logistics, and service applications',
+      icon: Bot,
+      features: [
+        'Autonomous navigation and control',
+        'Object recognition and manipulation',
+        'Human-robot interaction systems',
+        'Predictive maintenance and diagnostics',
+        'Multi-robot coordination',
+        'Safety monitoring and compliance'
+      ],
+      pricing: '$10,000 - $75,000/month',
+      delivery: '10-20 weeks',
+      category: 'Robotics AI',
+      benefits: 'Increase automation efficiency by 50%, reduce operational costs',
+      marketPrice: '$20,000 - $150,000/month',
+      link: '/services/ai-services/autonomous-robotics'
     }
   ];
 
@@ -403,6 +871,215 @@ export default function EnhancedServicesCatalog() {
       benefits: 'Reduce MTTR by 70%, improve system reliability',
       marketPrice: '$4,000 - $50,000/project',
       link: '/services/it-services/observability'
+    },
+    {
+      name: 'Enterprise Application Development',
+      description: 'Custom enterprise applications with modern architecture and scalable design',
+      icon: Code,
+      features: [
+        'Custom web and mobile applications',
+        'Microservices architecture',
+        'API development and integration',
+        'Database design and optimization',
+        'User experience and interface design',
+        'Performance optimization and scaling'
+      ],
+      pricing: '$15,000 - $150,000/project',
+      delivery: '12-32 weeks',
+      category: 'Application Development',
+      benefits: 'Streamline business processes, improve efficiency',
+      marketPrice: '$30,000 - $300,000/project',
+      link: '/services/it-services/enterprise-apps'
+    },
+    {
+      name: 'Digital Transformation Consulting',
+      description: 'Strategic digital transformation with technology roadmap and implementation',
+      icon: Rocket,
+      features: [
+        'Digital strategy and roadmap development',
+        'Technology assessment and recommendations',
+        'Change management and training',
+        'Process automation and optimization',
+        'Legacy system modernization',
+        'Digital culture transformation'
+      ],
+      pricing: '$25,000 - $200,000/project',
+      delivery: '16-40 weeks',
+      category: 'Digital Transformation',
+      benefits: 'Accelerate digital adoption, improve competitiveness',
+      marketPrice: '$50,000 - $400,000/project',
+      link: '/services/it-services/digital-transformation'
+    },
+    {
+      name: 'IT Infrastructure Management',
+      description: 'Comprehensive infrastructure management with proactive monitoring and optimization',
+      icon: Server,
+      features: [
+        'Infrastructure assessment and optimization',
+        'Proactive monitoring and maintenance',
+        'Capacity planning and scaling',
+        'Disaster recovery and backup solutions',
+        'Security hardening and compliance',
+        '24/7 support and incident response'
+      ],
+      pricing: '$5,000 - $40,000/month',
+      delivery: '2-6 weeks',
+      category: 'Infrastructure Management',
+      benefits: 'Reduce downtime by 80%, improve performance',
+      marketPrice: '$10,000 - $80,000/month',
+      link: '/services/it-services/infrastructure-management'
+    },
+    {
+      name: 'API Development & Integration',
+      description: 'RESTful and GraphQL APIs with comprehensive integration services',
+      icon: Network,
+      features: [
+        'RESTful and GraphQL API development',
+        'Third-party system integration',
+        'API gateway and management',
+        'Authentication and authorization',
+        'API documentation and testing',
+        'Performance optimization and caching'
+      ],
+      pricing: '$3,000 - $25,000/project',
+      delivery: '3-8 weeks',
+      category: 'API Services',
+      benefits: 'Enable seamless data flow, improve system connectivity',
+      marketPrice: '$6,000 - $50,000/project',
+      link: '/services/it-services/api-development'
+    },
+    {
+      name: 'Database Design & Optimization',
+      description: 'Database architecture, design, and performance optimization services',
+      icon: Database,
+      features: [
+        'Database architecture and design',
+        'Performance tuning and optimization',
+        'Data migration and transformation',
+        'Backup and recovery solutions',
+        'Security and access control',
+        'Scalability and high availability'
+      ],
+      pricing: '$4,000 - $35,000/project',
+      delivery: '4-12 weeks',
+      category: 'Database Services',
+      benefits: 'Improve query performance by 60%, ensure data integrity',
+      marketPrice: '$8,000 - $70,000/project',
+      link: '/services/it-services/database-optimization'
+    },
+    {
+      name: 'Mobile App Development',
+      description: 'Native and cross-platform mobile applications with modern UI/UX',
+      icon: Smartphone,
+      features: [
+        'Native iOS and Android development',
+        'Cross-platform solutions (React Native, Flutter)',
+        'Progressive Web Apps (PWA)',
+        'Mobile UI/UX design',
+        'App store optimization',
+        'Performance optimization and testing'
+      ],
+      pricing: '$8,000 - $75,000/project',
+      delivery: '8-20 weeks',
+      category: 'Mobile Development',
+      benefits: 'Expand market reach, improve customer engagement',
+      marketPrice: '$15,000 - $150,000/project',
+      link: '/services/it-services/mobile-development'
+    },
+    {
+      name: 'E-commerce Platform Development',
+      description: 'Custom e-commerce solutions with advanced features and integrations',
+      icon: ShoppingCart,
+      features: [
+        'Custom e-commerce platform development',
+        'Payment gateway integration',
+        'Inventory management systems',
+        'Customer relationship management',
+        'Analytics and reporting',
+        'SEO optimization and performance'
+      ],
+      pricing: '$12,000 - $100,000/project',
+      delivery: '10-24 weeks',
+      category: 'E-commerce Development',
+      benefits: 'Increase online sales, improve customer experience',
+      marketPrice: '$25,000 - $200,000/project',
+      link: '/services/it-services/ecommerce-development'
+    },
+    {
+      name: 'IT Support & Managed Services',
+      description: 'Comprehensive IT support with proactive monitoring and maintenance',
+      icon: Wrench,
+      features: [
+        '24/7 technical support',
+        'Proactive system monitoring',
+        'Software updates and patches',
+        'User training and documentation',
+        'Incident management and resolution',
+        'IT asset management'
+      ],
+      pricing: '$2,000 - $15,000/month',
+      delivery: '1-2 weeks',
+      category: 'Managed Services',
+      benefits: 'Reduce IT overhead, improve system reliability',
+      marketPrice: '$4,000 - $30,000/month',
+      link: '/services/it-services/managed-support'
+    },
+    {
+      name: 'Cloud Security & Compliance',
+      description: 'Comprehensive cloud security with compliance management and monitoring',
+      icon: Shield,
+      features: [
+        'Cloud security assessment',
+        'Compliance framework implementation',
+        'Security monitoring and alerting',
+        'Identity and access management',
+        'Data encryption and protection',
+        'Security incident response'
+      ],
+      pricing: '$5,000 - $40,000/project',
+      delivery: '4-12 weeks',
+      category: 'Cloud Security',
+      benefits: 'Ensure cloud security, maintain compliance',
+      marketPrice: '$10,000 - $80,000/project',
+      link: '/services/it-services/cloud-security'
+    },
+    {
+      name: 'Business Intelligence & Analytics',
+      description: 'Advanced analytics and business intelligence solutions with data visualization',
+      icon: BarChart3,
+      features: [
+        'Data warehouse design and implementation',
+        'ETL/ELT pipeline development',
+        'Business intelligence dashboards',
+        'Advanced analytics and reporting',
+        'Data visualization and storytelling',
+        'Predictive analytics and modeling'
+      ],
+      pricing: '$8,000 - $60,000/project',
+      delivery: '6-16 weeks',
+      category: 'Business Intelligence',
+      benefits: 'Enable data-driven decisions, improve business insights',
+      marketPrice: '$15,000 - $120,000/project',
+      link: '/services/it-services/business-intelligence'
+    },
+    {
+      name: 'Legacy System Modernization',
+      description: 'Modernize legacy systems with cloud migration and architecture updates',
+      icon: Settings,
+      features: [
+        'Legacy system assessment',
+        'Cloud migration planning',
+        'Architecture modernization',
+        'Data migration and transformation',
+        'Integration with modern systems',
+        'Performance optimization'
+      ],
+      pricing: '$20,000 - $150,000/project',
+      delivery: '16-40 weeks',
+      category: 'System Modernization',
+      benefits: 'Improve system performance, reduce maintenance costs',
+      marketPrice: '$40,000 - $300,000/project',
+      link: '/services/it-services/legacy-modernization'
     }
   ];
 
@@ -426,7 +1103,7 @@ export default function EnhancedServicesCatalog() {
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="canonical" href={`${contactInfo.website}/services`} />
+        <link rel="canonical" href="https://ziontechgroup.com/services" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       
@@ -489,7 +1166,8 @@ export default function EnhancedServicesCatalog() {
                 <h2 className="text-3xl font-bold text-gray-900">Micro SaaS Solutions</h2>
               </div>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Production-ready micro SaaS applications that solve real business problems with fast deployment and transparent pricing.
+                Production-ready micro SaaS applications that solve real business problems with fast deployment and transparent pricing. 
+                Each solution is designed for immediate implementation with proven ROI and comprehensive support.
               </p>
             </div>
             
@@ -552,7 +1230,8 @@ export default function EnhancedServicesCatalog() {
                 <h2 className="text-3xl font-bold text-gray-900">AI Services & Solutions</h2>
               </div>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Cutting-edge artificial intelligence solutions that drive real business results with proven ROI and fast implementation.
+                Cutting-edge artificial intelligence solutions that drive real business results with proven ROI and fast implementation. 
+                From computer vision to natural language processing, our AI services transform data into actionable insights and automated workflows.
               </p>
             </div>
             
@@ -615,7 +1294,8 @@ export default function EnhancedServicesCatalog() {
                 <h2 className="text-3xl font-bold text-gray-900">IT Services & Solutions</h2>
               </div>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Enterprise-grade IT services and infrastructure solutions with modern architecture and best practices.
+                Enterprise-grade IT services and infrastructure solutions with modern architecture and best practices. 
+                From cloud migration to digital transformation, we provide comprehensive technology solutions that scale with your business.
               </p>
             </div>
             
