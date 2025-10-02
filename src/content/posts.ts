@@ -1,14 +1,15 @@
 export interface BlogPost {
-slug: string;
+  slug: string;,
 title: string;
-description: string;
+description: string;,
 category: string;
-publishedAt: string;
+publishedAt: string;,
 featured?: boolean;
 readTime?: string;
+
 }
 
-export const posts: BlogPost[] = [
+export const posts: BlogPost[]  = [
   {
     slug: "ai-2027-operational-trust-blueprint",
     title: "AI 2027: Operational Trust Blueprint",
@@ -976,9 +977,8 @@ export const posts: BlogPost[] = [
   {
     slug: "cost-optimized-vector-search",
     title: "Cost‑Optimized Vector Search: Hybrid, Caching, and Freshness",
-    description:
-      "Design decisions to cut retrieval cost 40%+ while improving answer quality with hybrid search and freshness windows."
-    category: "Architecture",
+    description: "Design decisions to cut retrieval cost 40%+ while improving answer quality with hybrid search and freshness windows.",
+  category: "Architecture",
     publishedAt: "2025-09-29",
     featured: false,
     readTime: "6 min read"
@@ -1085,9 +1085,8 @@ export const posts: BlogPost[] = [
   {
     slug: "ai-roadmaps",
     title: "Designing High-Impact AI Roadmaps",
-    description:
-      "A practical framework to align AI investments with measurable business outcomes and reduce time-to-value."
-    category: "AI Strategy",
+    description: "A practical framework to align AI investments with measurable business outcomes and reduce time-to-value.",
+  category: "AI Strategy",
     publishedAt: "2025-09-15",
     featured: false,
     readTime: "6 min read"
@@ -1145,9 +1144,8 @@ export const posts: BlogPost[] = [
   {
     slug: "data-analytics-automation",
     title: "Automating Data Analytics: From Insight to Action",
-    description:
-      "How AI-powered analytics platforms are revolutionizing business intelligence and enabling real-time decision making."
-    category: "Data Science",
+    description: "How AI-powered analytics platforms are revolutionizing business intelligence and enabling real-time decision making.",
+  category: "Data Science",
     publishedAt: "2025-01-12",
     featured: false,
     readTime: "8 min read"
@@ -1587,7 +1585,6 @@ posts.push([
 
 // Sept 30, 2025 – New articles to expand catalog and promote on homepage
 posts.push(
-=======
   // Sept 30, 2025 – New articles to expand catalog and promote on homepage
   {
     slug: "ai-governance-action-scorecards-2026",

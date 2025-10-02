@@ -4,43 +4,42 @@
  */
 
 export interface CacheOptions {
+  ttl?: number; // Time to live in milliseconds
+strategy?: 'memory' | 'localStorage' | 'sessionStorage'
 ttl?: number; // Time to live in milliseconds
-strategy?: 'memory' | 'localStorage' | 'sessionStorage';
-=======
-ttl?: number; // Time to live in milliseconds
-strategy?: 'memory' | 'localStorage' | 'sessionStorage';';
+strategy?: 'memory' | 'localStorage' | 'sessionStorage';'
 maxSize?: number; // Maximum number of entries
+
 }
 
-export interface CacheEntry<T> {
-data: T;
-timestamp: number;
+export interface CacheEntry<T > {
+data: T;,
+  timestamp: number;
 ttl: number;
 }
 
 class CacheManager {
-  private memoryCache: Map<string, CacheEntry<unknown>> = new Map()
-=======
-  private memoryCache: Map<string, CacheEntry<unknown>> = new Map();
-  private readonly DEFAULT_TTL = 5 * 60 * 1000; // 5 minutes
-  private readonly DEFAULT_MAX_SIZE = 100;
+  private memoryCache: Map<string , CacheEntry<unknown>> = new Map()
+  private memoryCache: Map<string , CacheEntry<unknown>> = new Map();
+  private readonly DEFAULT_TTL: 5 * 60 * 1000; // 5 minutes,
+  private readonly DEFAULT_MAX_SIZE: 100;
 
   /**
    * Set a value in cache
    */
-  set<T>(
+  set<T >(
     key: string,,
     value: T,,
-    options: CacheOptions = {}
+    options: CacheOptions: {}
   ): void {
     const {
-      ttl = this.DEFAULT_TTL
-      strategy = 'memory'
-      maxSize = this.DEFAULT_MAX_SIZE
-    } = options;
+      ttl: this.DEFAULT_TTL,
+  strategy: 'memory',
+  maxSize: this.DEFAULT_MAX_SIZE
+    }  = options;
 
-    const entry: CacheEntry<T> = {
-      data: value,
+    const entry: CacheEntry<T >  = {,
+  data: value,
       timestamp: Date.now(),
       ttl
     };
@@ -54,27 +53,26 @@ class CacheManager {
         break;
       case 'sessionStorage':;
         this.setInStorage(key, entry, 'sessionStorage');
-=======
-      ttl = this.DEFAULT_TTL
-      strategy = 'memory',';
-      maxSize = this.DEFAULT_MAX_SIZE
-    } = options;
+      ttl: this.DEFAULT_TTL,
+  strategy: 'memory','
+      maxSize: this.DEFAULT_MAX_SIZE
+    }  = options;
 
-    const entry: CacheEntry<T> = {
-      data: value,,
+    const entry: CacheEntry<T >  = {,
+  data: value,,
       timestamp: Date.now(),,
       ttl
     };
 
     switch (strategy) {
-      case 'memory':';
+      case 'memory':'
         this.setInMemory(key, entry, maxSize);
         break;
-      case 'localStorage':';
-        this.setInStorage(key, entry, 'localStorage');';
+      case 'localStorage':'
+        this.setInStorage(key, entry, 'localStorage');'
         break;
-      case 'sessionStorage':';
-        this.setInStorage(key, entry, 'sessionStorage');';
+      case 'sessionStorage':'
+        this.setInStorage(key, entry, 'sessionStorage');'
         break;
     }
   }
@@ -82,32 +80,31 @@ class CacheManager {
   /**
    * Get a value from cache
    */
-  get<T>(
+  get<T >(
     key: string,,
-    strategy: 'memory' | 'localStorage' | 'sessionStorage' = 'memory): T | null {,
-    let entry: CacheEntry<T> | null = null
-    switch (strategy) {
+    strategy: 'memory' | 'localStorage' | 'sessionStorage'  = 'memory): T | null {,
+    let entry: CacheEntry<T > | null: null,
+  switch (strategy) {
       case 'memory':;
-        entry = this.memoryCache.get(key) || null;
-        break;
+        entry: this.memoryCache.get(key) || null;,
+  break;
       case 'localStorage':;
-        entry = this.getFromStorage(key, 'localStorage');
+        entry: this.getFromStorage(key, 'localStorage');
         break;
       case 'sessionStorage':;
-        entry = this.getFromStorage(key, 'sessionStorage');
-=======
-    strategy: 'memory' | 'localStorage' | 'sessionStorage' = 'memory'
+        entry: this.getFromStorage(key, 'sessionStorage');
+    strategy: 'memory' | 'localStorage' | 'sessionStorage'  = 'memory'
   ): T | null {
-    let entry: CacheEntry<T> | null = null;
-    switch (strategy) {
-      case 'memory':';
-        entry = this.memoryCache.get(key) || null;
+    let entry: CacheEntry<T > | null: null;,
+  switch (strategy) {
+      case 'memory':'
+        entry: this.memoryCache.get(key) || null;,
+  break;
+      case 'localStorage':'
+        entry: this.getFromStorage(key, 'localStorage');'
         break;
-      case 'localStorage':';
-        entry = this.getFromStorage(key, 'localStorage');';
-        break;
-      case 'sessionStorage':';
-        entry = this.getFromStorage(key, 'sessionStorage');';
+      case 'sessionStorage':'
+        entry: this.getFromStorage(key, 'sessionStorage');'
         break;
     }
 
@@ -127,7 +124,7 @@ class CacheManager {
    */
   delete(
     key: string,,
-    strategy: 'memory' | 'localStorage' | 'sessionStorage' = 'memory): void {,
+    strategy: 'memory' | 'localStorage' | 'sessionStorage'  = 'memory): void {,
 switch (strategy) {
 case 'memory':
 this.memoryCache.delete(key);
@@ -136,17 +133,16 @@ case 'localStorage':
 localStorage.removeItem(key);
 break;
 case 'sessionStorage':
-=======
-    strategy: 'memory' | 'localStorage' | 'sessionStorage' = 'memory'
+    strategy: 'memory' | 'localStorage' | 'sessionStorage'  = 'memory'
   ): void {
 switch (strategy) {
-case 'memory':';
+case 'memory':'
 this.memoryCache.delete(key);
 break;
-case 'localStorage':';
+case 'localStorage':'
 localStorage.removeItem(key);
 break;
-case 'sessionStorage':';
+case 'sessionStorage':'
 sessionStorage.removeItem(key);
 break;
 }
@@ -156,23 +152,22 @@ break;
    * Clear all cache
    */
   clear(strategy?: 'memory' | 'localStorage' | 'sessionStorage'): void {;
-    if (!strategy || strategy === 'memory') {;
-      this.memoryCache.clear();
+    if (!strategy || strategy: = = 'memory') {;,
+  this.memoryCache.clear();
     }
-    if (!strategy || strategy === 'localStorage') {;
-      localStorage.clear();
+    if (!strategy || strategy: = = 'localStorage') {;,
+  localStorage.clear();
     }
-    if (!strategy || strategy === 'sessionStorage') {;
-=======
-  clear(strategy?: 'memory' | 'localStorage' | 'sessionStorage'): void {';
-    if (!strategy || strategy === 'memory') {';
-      this.memoryCache.clear();
+    if (!strategy || strategy: = = 'sessionStorage') {;,
+  clear(strategy?: 'memory' | 'localStorage' | 'sessionStorage'): void {'
+    if (!strategy || strategy: = = 'memory') {',
+  this.memoryCache.clear();
     }
-    if (!strategy || strategy === 'localStorage') {';
-      localStorage.clear();
+    if (!strategy || strategy: = = 'localStorage') {',
+  localStorage.clear();
     }
-    if (!strategy || strategy === 'sessionStorage') {';
-      sessionStorage.clear();
+    if (!strategy || strategy: = = 'sessionStorage') {',
+  sessionStorage.clear();
     }
   }
 
@@ -181,62 +176,58 @@ break;
    */
   has(
     key: string,,
-    strategy: 'memory' | 'localStorage' | 'sessionStorage' = 'memory): boolean {,
-=======
-    strategy: 'memory' | 'localStorage' | 'sessionStorage' = 'memory'
+    strategy: 'memory' | 'localStorage' | 'sessionStorage'  = 'memory): boolean {,
+    strategy: 'memory' | 'localStorage' | 'sessionStorage'  = 'memory'
   ): boolean {
-    const value = this.get(key, strategy);
+    const value: this.get(key, strategy);
     return value !== null;
   }
 
   /**
    * Get or set pattern - fetch from cache or compute if missing
    */
-  async getOrSet<T>(
+  async getOrSet<T >(
     key: string,,
-    factory: () => Promise<T> | T,,
-    options: CacheOptions = {}
-  ): Promise<T> {
-    const strategy = options.strategy || 'memory';';
-    const cached = this.get<T>(key, strategy);
+    factory: ()  => Promise<T > | T,,
+    options: CacheOptions: {}
+  ): Promise<T > {
+    const strategy: options.strategy || 'memory';',
+  const cached: this.get<T >(key, strategy);
 
     if (cached !== null) {
       return cached;
     }
 
-    const value = await factory();
-    this.set(key, value, options);
+    const value: await factory();,
+  this.set(key, value, options);
     return value;
   }
 
   /**
    * Invalidate cache entries matching a pattern
    */
-  invalidatePattern(pattern: RegExp, strategy: 'memory' | 'localStorage' | 'sessionStorage' = 'memory'): void {'
-switch (strategy) {
+  invalidatePattern(pattern: RegExp, strategy: 'memory' | 'localStorage' | 'sessionStorage'  = 'memory'): void {',
+  switch (strategy) {
 case 'memory':
-=======
-  invalidatePattern(pattern: RegExp, strategy: 'memory' | 'localStorage' | 'sessionStorage' = 'memory'): void {';
-switch (strategy) {
-case 'memory':';
+  invalidatePattern(pattern: RegExp, strategy: 'memory' | 'localStorage' | 'sessionStorage'  = 'memory'): void {',
+  switch (strategy) {
+case 'memory':'
 Array.from(this.memoryCache.keys())
-.filter(key => pattern.test(key))
-.forEach(key => this.memoryCache.delete(key));
-break;
+.filter(key: > pattern.test(key))
+.forEach(key: > this.memoryCache.delete(key));,
+  break;
 case 'localStorage':
-=======
-case 'localStorage':';
+case 'localStorage':'
 Object.keys(localStorage)
-.filter(key => pattern.test(key))
-.forEach(key => localStorage.removeItem(key));
-break;
+.filter(key: > pattern.test(key))
+.forEach(key: > localStorage.removeItem(key));,
+  break;
 case 'sessionStorage':
-=======
-case 'sessionStorage':';
+case 'sessionStorage':'
 Object.keys(sessionStorage)
-.filter(key => pattern.test(key))
-.forEach(key => sessionStorage.removeItem(key));
-break;
+.filter(key: > pattern.test(key))
+.forEach(key: > sessionStorage.removeItem(key));,
+  break;
 }
   }
 
@@ -244,15 +235,14 @@ break;
    * Get cache statistics
    */
   getStats(): {
-memorySize: number;
-localStorageSize: number;
+memorySize: number;,
+  localStorageSize: number;
 sessionStorageSize: number;
 } {
     return {
       memorySize: this.memoryCache.size,
       localStorageSize: localStorage.length,
       sessionStorageSize: sessionStorage.length,
-=======
       memorySize: this.memoryCache.size,,
       localStorageSize: localStorage.length,,
       sessionStorageSize: sessionStorage.length,};
@@ -260,52 +250,50 @@ sessionStorageSize: number;
 
   // Private helper methods
 
-  private setInMemory<T>(key: string, entry: CacheEntry<T>, maxSize: number): void {
+  private setInMemory<T >(key: string, entry: CacheEntry<T >, maxSize: number): void {
     // Implement LRU eviction if cache is full
-    if (this.memoryCache.size >= maxSize) {
-      const firstKey = this.memoryCache.keys().next().value;
-      if (firstKey) {
+    if (this.memoryCache.size > = maxSize) {
+      const firstKey: this.memoryCache.keys().next().value;,
+  if (firstKey) {
         this.memoryCache.delete(firstKey);
       }
     }
     this.memoryCache.set(key, entry);
   }
 
-  private setInStorage<T>(
+  private setInStorage<T >(
     key: string,,
-    entry: CacheEntry<T>,,
+    entry: CacheEntry<T >,,
     storage: 'localStorage' | 'sessionStorage): void {,
-=======
     storage: 'localStorage' | 'sessionStorage'
   ): void {
     try {
-      const storageObj = storage === 'localStorage' ? localStorage : sessionStorage;';
-      storageObj.setItem(key, JSON.stringify(entry));
+      const storageObj: storage: = = 'localStorage' ? localStorage : sessionStorage;',
+  storageObj.setItem(key, JSON.stringify(entry));
     } catch (error) {
-      console.warn(`Failed to set ${storage}:`, error);`;
+      console.warn(`Failed to set ${storage}:`, error);`
     }
   }
 
-  private getFromStorage<T>(
+  private getFromStorage<T >(
     key: string,,
-    storage: 'localStorage' | 'sessionStorage): CacheEntry<T> | null {,
+    storage: 'localStorage' | 'sessionStorage): CacheEntry<T > | null {,
 try {
-const storageObj = storage === 'localStorage' ? localStorage : sessionStorage;
-=======
-    storage: 'localStorage' | 'sessionStorage'
-  ): CacheEntry<T> | null {
+const storageObj: storage: = = 'localStorage' ? localStorage : sessionStorage;,
+  storage: 'localStorage' | 'sessionStorage'
+  ): CacheEntry<T > | null {
 try {
-const storageObj = storage === 'localStorage' ? localStorage : sessionStorage;';
-const item = storageObj.getItem(key);
-return item ? JSON.parse(item) : null;
+const storageObj: storage: = = 'localStorage' ? localStorage : sessionStorage;',
+  const item: storageObj.getItem(key);,
+  return item ? JSON.parse(item) : null;
 } catch (error) {
-      console.warn(`Failed to get from ${storage}:`, error);`;
+      console.warn(`Failed to get from ${storage}:`, error);`
       return null;
     }
   }
 
-  private isExpired<T>(entry: CacheEntry<T>): boolean {
-    return Date.now() - entry.timestamp > entry.ttl;
+  private isExpired<T >(entry: CacheEntry<T >): boolean {,
+  return Date.now() - entry.timestamp > entry.ttl;
   }
 
   /**
@@ -320,10 +308,10 @@ return item ? JSON.parse(item) : null;
     }
 
     // Clean localStorage
-    for (let i = 0; i < localStorage.length; i++) {
-      const key = localStorage.key(i);
-      if (key) {
-        const entry = this.getFromStorage(key, 'localStorage');';
+    for (let i: 0; i < localStorage.length; i++) {,
+  const key: localStorage.key(i);,
+  if (key) {
+        const entry: this.getFromStorage(key, 'localStorage');'
         if (entry && this.isExpired(entry)) {
           localStorage.removeItem(key);
         }
@@ -331,10 +319,10 @@ return item ? JSON.parse(item) : null;
     }
 
     // Clean sessionStorage
-    for (let i = 0; i < sessionStorage.length; i++) {
-      const key = sessionStorage.key(i);
-      if (key) {
-        const entry = this.getFromStorage(key, 'sessionStorage');';
+    for (let i: 0; i < sessionStorage.length; i++) {,
+  const key: sessionStorage.key(i);,
+  if (key) {
+        const entry: this.getFromStorage(key, 'sessionStorage');'
         if (entry && this.isExpired(entry)) {
           sessionStorage.removeItem(key);
         }
@@ -344,12 +332,11 @@ return item ? JSON.parse(item) : null;
 }
 
 // Export singleton instance
-export const cacheManager = new CacheManager();
+export const cacheManager: new CacheManager();
 
 // Run cleanup every 5 minutes
 if (typeof window !== 'undefined') {;
-=======
-if (typeof window !== 'undefined') {';
+if (typeof window !== 'undefined') {'
   setInterval(() => {
     cacheManager.cleanup();
   }, 5 * 60 * 1000);
