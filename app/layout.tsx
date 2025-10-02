@@ -64,6 +64,20 @@ function Header() {
                   IT Services & Solutions
                 </Link>
                 <div className="border-t border-gray-100 my-2"></div>
+                <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide">Featured Solutions</div>
+                <Link href="/services/micro-saas/ai-appointment-scheduler" className="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-600">
+                  Healthcare Appointment Scheduler
+                </Link>
+                <Link href="/services/micro-saas/ai-content-localization" className="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-600">
+                  Content Localization Suite
+                </Link>
+                <Link href="/services/micro-saas/ai-fraud-detection" className="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600">
+                  AI Fraud Detection
+                </Link>
+                <Link href="/services/it-services/cloud-migration" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  Cloud Migration Services
+                </Link>
+                <div className="border-t border-gray-100 my-2"></div>
                 <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide">Specialized Solutions</div>
                 <Link href="/services/ai-autonomous-operations" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
                   Autonomous Operations
@@ -163,11 +177,17 @@ function Footer() {
               <Link href="/services/it-services" className="block text-gray-600 hover:text-blue-600 transition-colors">
                 IT Services & Solutions
               </Link>
-              <Link href="/services/ai-autonomous-operations" className="block text-gray-600 hover:text-blue-600 transition-colors">
-                Autonomous Operations
+              <Link href="/services/micro-saas/ai-appointment-scheduler" className="block text-gray-600 hover:text-green-600 transition-colors">
+                Healthcare Appointment Scheduler
               </Link>
-              <Link href="/services/ai-business-intelligence-2025" className="block text-gray-600 hover:text-blue-600 transition-colors">
-                Business Intelligence
+              <Link href="/services/micro-saas/ai-content-localization" className="block text-gray-600 hover:text-green-600 transition-colors">
+                Content Localization Suite
+              </Link>
+              <Link href="/services/micro-saas/ai-fraud-detection" className="block text-gray-600 hover:text-red-600 transition-colors">
+                AI Fraud Detection
+              </Link>
+              <Link href="/services/it-services/cloud-migration" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                Cloud Migration Services
               </Link>
               <Link href="/services" className="block text-gray-600 hover:text-blue-600 transition-colors font-medium">
                 All Services →

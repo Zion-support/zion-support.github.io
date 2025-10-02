@@ -106,31 +106,31 @@ export default function EnhancedServicesCatalog() {
         'Quality assurance and human review',
         'Analytics and performance tracking'
       ],
-      pricing: '$399 - $3,200/month',
+      pricing: '$299 - $1,999/month',
       delivery: '2-3 weeks',
       category: 'Globalization',
-      benefits: 'Reduce localization costs by 70%, faster time-to-market',
-      marketPrice: '$800 - $8,000/month',
-      link: '/services/micro-saas/content-localization'
+      benefits: 'Reduce localization costs by 60%, faster time-to-market',
+      marketPrice: '$500 - $3,500/month',
+      link: '/services/micro-saas/ai-content-localization'
     },
     {
-      name: 'Healthcare Appointment Scheduling System',
-      description: 'Smart scheduling with patient management, reminders, and telemedicine integration',
+      name: 'AI-Powered Healthcare Appointment Scheduler',
+      description: 'Revolutionary appointment scheduling platform with AI optimization and virtual consultations',
       icon: Heart,
       features: [
-        'Intelligent appointment scheduling',
-        'Patient portal and self-service options',
-        'Automated reminders and notifications',
-        'Telemedicine integration',
-        'Insurance verification',
-        'HIPAA compliance and security'
+        'AI-powered scheduling optimization',
+        'Patient management system with medical history',
+        'Virtual consultation platform',
+        'Multi-channel booking (web, mobile, phone)',
+        'Advanced analytics dashboard',
+        'Automated communication and reminders'
       ],
-      pricing: '$599 - $4,500/month',
-      delivery: '3-5 weeks',
+      pricing: '$199 - $1,299/month',
+      delivery: '2-4 weeks',
       category: 'Healthcare',
-      benefits: 'Reduce no-shows by 40%, improve patient satisfaction',
-      marketPrice: '$1,200 - $12,000/month',
-      link: '/services/micro-saas/healthcare-scheduling'
+      benefits: 'Reduce no-shows by 40%, increase revenue by 25%',
+      marketPrice: '$350 - $2,200/month',
+      link: '/services/micro-saas/ai-appointment-scheduler'
     },
     {
       name: 'E-commerce Analytics Dashboard',
@@ -173,6 +173,25 @@ export default function EnhancedServicesCatalog() {
   ];
 
   const aiServices = [
+    {
+      name: 'AI Fraud Detection & Prevention Platform',
+      description: 'Advanced AI-powered fraud detection with real-time monitoring and behavioral analysis',
+      icon: Shield,
+      features: [
+        'Real-time fraud detection with sub-second response',
+        'Behavioral analysis engine with ML models',
+        'Multi-channel protection (e-commerce, mobile, API)',
+        'Self-improving machine learning models',
+        'Risk management dashboard',
+        'Compliance and reporting features'
+      ],
+      pricing: '$499 - $2,999/month',
+      delivery: '2-4 weeks',
+      category: 'Security',
+      benefits: 'Reduce fraud losses by 85%, minimize false positives by 60%',
+      marketPrice: '$800 - $5,000/month',
+      link: '/services/micro-saas/ai-fraud-detection'
+    },
     {
       name: 'Computer Vision for Quality Control',
       description: 'AI-powered visual inspection for manufacturing, retail, and healthcare',
@@ -291,22 +310,22 @@ export default function EnhancedServicesCatalog() {
 
   const itServices = [
     {
-      name: 'Cloud Migration & Architecture',
-      description: 'Complete cloud transformation with modern architecture and best practices',
+      name: 'Cloud Migration Services',
+      description: 'Expert cloud migration for AWS, Azure, and GCP with zero downtime and cost optimization',
       icon: Cloud,
       features: [
-        'Multi-cloud strategy and architecture',
-        'Legacy system modernization',
-        'Container orchestration (Kubernetes)',
-        'Microservices architecture design',
-        'Performance optimization',
-        'Cost optimization and monitoring'
+        'Zero-downtime migration strategies',
+        'Multi-cloud expertise (AWS, Azure, GCP)',
+        'Infrastructure as Code implementation',
+        'Security and compliance setup',
+        'Cost optimization and monitoring',
+        'Performance optimization and scaling'
       ],
-      pricing: '$8,000 - $75,000/project',
-      delivery: '8-20 weeks',
+      pricing: '$2,500 - $25,000/project',
+      delivery: '2-8 weeks',
       category: 'Cloud Services',
       benefits: 'Reduce infrastructure costs by 40%, improve scalability',
-      marketPrice: '$15,000 - $150,000/project',
+      marketPrice: '$4,000 - $45,000/project',
       link: '/services/it-services/cloud-migration'
     },
     {
