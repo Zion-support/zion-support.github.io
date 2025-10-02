@@ -4,9 +4,15 @@
  */
 
 interface PerformanceMetric {
+<<<<<<< HEAD
+name: string,
+value: number,
+rating: 'good' | 'needs-improvement' | 'poor';',
+=======
 name: string;,
 value: number;,
 rating: 'good' | 'needs-improvement' | 'poor';';,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 timestamp: number;
 }
 
@@ -16,8 +22,13 @@ private observers: PerformanceObserver[] = [];
 /**
 * Initialize performance monitoring
 */
+<<<<<<< HEAD
+initialize(): void {
+if (typeof window === 'undefined') return;
+=======
 initialize(): void {,
 if (typeof window === 'undefined') return;';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 this.observeWebVitals();
 this.observeLongTasks();
 this.observeLayoutShifts();
@@ -80,8 +91,12 @@ this.observeLayoutShifts();
    * Observe long tasks (>50ms)
    */
   private observeLongTasks(): void {
+<<<<<<< HEAD
+    if (!('PerformanceObserver' in window)) return;
+=======
     if (!('PerformanceObserver' in window)) return;';
 
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     try {
       const longTaskObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
@@ -89,7 +104,11 @@ this.observeLayoutShifts();
           const duration = entry.duration;
           if (duration > 50) {
             console.warn(`Long task detected: ${duration.toFixed(2)}ms`, entry);`;
+<<<<<<< HEAD
+            this.recordMetric('Long Task', duration, this.getRating('longTask', duration));
+=======
             this.recordMetric('Long Task', duration, this.getRating('longTask', duration));';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           }
         });
       });
@@ -104,8 +123,12 @@ this.observeLayoutShifts();
    * Observe layout shifts
    */
   private observeLayoutShifts(): void {
+<<<<<<< HEAD
+    if (!('PerformanceObserver' in window)) return;
+=======
     if (!('PerformanceObserver' in window)) return;';
 
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     try {
       const layoutShiftObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
@@ -126,7 +149,11 @@ this.observeLayoutShifts();
   /**
    * Record a performance metric
    */
+<<<<<<< HEAD
+  private recordMetric(name: string, value: number, rating: 'good' | 'needs-improvement' | 'poor'): void {',
+=======
   private recordMetric(name: string, value: number, rating: 'good' | 'needs-improvement' | 'poor'): void {';,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     const metric: PerformanceMetric = {,
       name,
       value,
@@ -141,20 +168,31 @@ this.observeLayoutShifts();
   /**
    * Get rating for a metric
    */
+<<<<<<< HEAD
+  private getRating(metric: string, value: number): 'good' | 'needs-improvement' | 'poor' {',
+=======
   private getRating(metric: string, value: number): 'good' | 'needs-improvement' | 'poor' {';,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     const thresholds: Record<string, { good: number; poor: number }> = {
-      lcp: { good: 2500, poor: 4000 }
-      fid: { good: 100, poor: 300 }
-      cls: { good: 0.1, poor: 0.25 }
+      lcp: { good: 2500, poor: 4000 },
+      fid: { good: 100, poor: 300 },
+      cls: { good: 0.1, poor: 0.25 },
       longTask: { good: 50, poor: 100 }
     };
 
     const threshold = thresholds[metric];
+<<<<<<< HEAD
+    if (!threshold) return 'good';
+    if (value <= threshold.good) return 'good';
+    if (value <= threshold.poor) return 'needs-improvement';
+    return 'poor';
+=======
     if (!threshold) return 'good';';
 
     if (value <= threshold.good) return 'good';';
     if (value <= threshold.poor) return 'needs-improvement';';
     return 'poor';';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   }
 
   /**

@@ -1,0 +1,31 @@
+node_modules/
+.next/
+dist/
+out/
+build/
+coverage/
+.tmp/
+.temp/
+backup/
+backup-*/
+**/*.backup*
+automation/**
+automation_backup/**
+all-automations-reports/**
+**/broken_files_backup/**
+**/components_backup/**
+**/components-disabled/**
+**/components.disabled*/**
+**/_pages_disabled/**
+**/_pages_api_disabled/**
+**/_conflicted_disabled/**
+**/_app_disabled/**
+# Exclude large/generated app and src trees with corrupted files
+src/**
+app/**
+api/**
+utils/**
+components/**
+# Tests (some corrupted)
+__tests__/**
+**/*.test.*

@@ -1,5 +1,30 @@
 import React, { useState, useEffect } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
+import {
+
+} from 'framer-motion';
+
+<<<<<<< HEAD
+interface BannerData {
+id: string;
+title: string;
+subtitle?: string;
+description: string;
+ctaText: string;
+ctaLink: string;
+imageUrl?: string;
+category: string;
+priority: number;
+isActive: boolean;
+startDate?: string;
+endDate?: string;
+}
+
+interface BannerManagerProps {
+banners: BannerData[];
+rotationInterval?: number;
+maxVisibleBanners?: number;
+}
+=======
 interface Banner {
   id: string;
   title: string;
@@ -13,38 +38,36 @@ interface Banner {
 const BannerManager: React.FC = () => {
   const [currentBannerIndex, setCurrentBannerIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-ea70
 
   const banners: Banner[] = [
     {
       id: 'ai-solutions',
       title: '🚀 Revolutionary AI Solutions',
-      description:
-        'Transform your business with cutting-edge artificial intelligence and machine learning technologies.',
+      description: 'Transform your business with cutting-edge artificial intelligence and machine learning technologies.',
       type: 'promotion',
       ctaText: 'Learn More',
       ctaLink: '/services',
-      icon: '🤖',
+      icon: '🤖'
     },
     {
       id: 'cloud-migration',
       title: '☁️ Cloud Migration Services',
-      description:
-        'Seamlessly migrate to the cloud with our expert guidance and proven methodologies.',
+      description: 'Seamlessly migrate to the cloud with our expert guidance and proven methodologies.',
       type: 'info',
       ctaText: 'Get Started',
       ctaLink: '/contact',
-      icon: '☁️',
+      icon: '☁️'
     },
     {
       id: 'digital-transformation',
       title: '🚀 Digital Transformation',
-      description:
-        'Accelerate your digital journey with our comprehensive transformation strategies.',
+      description: 'Accelerate your digital journey with our comprehensive transformation strategies.',
       type: 'success',
       ctaText: 'Explore Solutions',
       ctaLink: '/services',
-      icon: '🚀',
-    },
+      icon: '🚀'
+    }
   ];
 
   useEffect(() => {
@@ -73,8 +96,7 @@ const BannerManager: React.FC = () => {
 
   return (
     <div className="relative overflow-hidden">
-      {isVisible && (
-        <AnimatePresence mode="wait">
+      <AnimatePresence mode="wait">
         <motion.div
           key={currentBanner.id}
           initial={{ opacity: 0, y: -50 }}
@@ -83,16 +105,16 @@ const BannerManager: React.FC = () => {
           transition={{ duration: 0.5 }}
           className={`${getBannerStyles(currentBanner.type)} py-4 px-6`}
         >
-          <div className="container mx-auto flex items-center justify-between">";
-            <div className="flex items-center space-x-4">";
-              <div className="text-2xl">{currentBanner.icon}</div>";
+          <div className="container mx-auto flex items-center justify-between">
+            <div className="flex items-center space-x-4">
+              <div className="text-2xl">{currentBanner.icon}</div>
               <div>
-                <h3 className="text-lg font-bold">{currentBanner.title}</h3>";
-                <p className="text-sm opacity-90">{currentBanner.description}</p>";
+                <h3 className="text-lg font-bold">{currentBanner.title}</h3>
+                <p className="text-sm opacity-90">{currentBanner.description}</p>
               </div>
             </div>
             
-            <div className="flex items-center space-x-4">";
+            <div className="flex items-center space-x-4">
               {currentBanner.ctaText && (
                 <button className="bg-white bg-opacity-20 hover:bg-opacity-30 px-4 py-2 rounded-lg transition-all duration-200">
                   {currentBanner.ctaText}
@@ -108,11 +130,10 @@ const BannerManager: React.FC = () => {
             </div>
           </div>
         </motion.div>
-        </AnimatePresence>
-      )}
+      </AnimatePresence>
 
       {/* Banner Indicators */}
-      <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-2">";
+      <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-2">
         {banners.map((_, index) => (
           <button
             key={index}

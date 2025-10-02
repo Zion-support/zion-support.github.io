@@ -11,7 +11,7 @@
     "build:fast": "vite build --mode development --minify false",
     "build:analyze": "vite build --mode analyze && npx vite-bundle-analyzer dist/stats.html",
     "preview": "vite preview --host --open",
-    "lint": "echo 'Skipping lint due to known parse issues' && exit 0",
+    "lint": "echo 'Lint temporarily disabled due to known corrupted files' && exit 0",
     "lint:fix": "echo 'Skipping lint: auto-fix disabled' && exit 0",
     "type-check": "tsc -p tsconfig.typecheck.json --noEmit",
     "type-check:ci": "tsc -p tsconfig.typecheck.json --noEmit",

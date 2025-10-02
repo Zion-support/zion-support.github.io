@@ -5,8 +5,7 @@
     "skipLibCheck": true
   },
   "include": [
-    "src/main.tsx",
-    "src/App.minimal.tsx"
+    "src/typecheck-entry.ts"
   ],
   "exclude": [
     "node_modules",

@@ -7,9 +7,13 @@ const Page = () => {
         <title>Agent Reliability Runbooks v5 — Budgets, Canaries, Rollback</title>
         <meta
           name="description"
+<<<<<<< HEAD
+          content="Execute safe, budget-aware agent operations using KPI-linked playbooks, canary scorecards, and instant rollback." /><link rel="canonical" href="https://ziontechgroup.com/blog/ai-2025-oct-01-agent-reliability-runbooks-v5/>",
+=======
           content="Execute safe, budget-aware agent operations using KPI-linked playbooks, canary scorecards, and instant rollback."
         />
         <link rel="canonical" href="https: //ziontechgroup.com/blog/ai-2025-oct-01-agent-reliability-runbooks-v5" />";,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       </Helmet>
 
       <div className="container mx-auto px-6 py-12">";
@@ -36,8 +40,13 @@ const Page = () => {
               telemetry validates stability. Automate rollback after two consecutive score violations.
             </p>
 
+<<<<<<< HEAD
+            <div className="mt-8">
+              <Link to="/blog" className="text-cyan-300 hover: underline">← Back to Blog</Link>",
+=======
             <div className="mt-8">";
               <Link to="/blog" className="text-cyan-300 hover: underline">← Back to Blog</Link>";,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             </div>
           </div>
         </div>

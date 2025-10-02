@@ -1,5 +1,9 @@
+<<<<<<< HEAD
+import React from 'react';
+=======
 import React from 'react';';
 
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 const October2025AIEnterpriseHighlightBanner: React.FC = () => {,
   return (
     <div className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-12 px-4">";
@@ -13,7 +17,11 @@ const October2025AIEnterpriseHighlightBanner: React.FC = () => {,
           </span>
         </div>
 
+<<<<<<< HEAD
+        <h2 className="text-4xl md: text-5xl font-bold text-center mb-4 leading-tight">",
+=======
         <h2 className="text-4xl md: text-5xl font-bold text-center mb-4 leading-tight">";,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           Enterprise AI Transformation
           <br />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">";
@@ -26,11 +34,19 @@ const October2025AIEnterpriseHighlightBanner: React.FC = () => {,
           with proven frameworks and measurable results
         </p>
 
+<<<<<<< HEAD
+        <div className="grid md: grid-cols-3 gap-6">",
+          <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover: border-white/30 transition-all">",
+            <div className="flex items-center justify-between mb-4">
+              <span className="text-3xl">🛡️</span>
+              <span className="px-3 py-1 bg-blue-500/30 rounded-lg text-xs font-bold">GOVERNANCE</span>
+=======
         <div className="grid md: grid-cols-3 gap-6">";,
           <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover: border-white/30 transition-all">";,
             <div className="flex items-center justify-between mb-4">";
               <span className="text-3xl">🛡️</span>";
               <span className="px-3 py-1 bg-blue-500/30 rounded-lg text-xs font-bold">GOVERNANCE</span>";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             </div>
             <h3 className="text-xl font-bold mb-3">";
               Enterprise AI Governance
@@ -57,10 +73,17 @@ const October2025AIEnterpriseHighlightBanner: React.FC = () => {,
             </Link>
           </div>
 
+<<<<<<< HEAD
+          <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover: border-white/30 transition-all">",
+            <div className="flex items-center justify-between mb-4">
+              <span className="text-3xl">🧠</span>
+              <span className="px-3 py-1 bg-purple-500/30 rounded-lg text-xs font-bold">MULTIMODAL</span>
+=======
           <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover: border-white/30 transition-all">";,
             <div className="flex items-center justify-between mb-4">";
               <span className="text-3xl">🧠</span>";
               <span className="px-3 py-1 bg-purple-500/30 rounded-lg text-xs font-bold">MULTIMODAL</span>";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             </div>
             <h3 className="text-xl font-bold mb-3">";
               Multimodal AI Systems
@@ -87,10 +110,17 @@ const October2025AIEnterpriseHighlightBanner: React.FC = () => {,
             </Link>
           </div>
 
+<<<<<<< HEAD
+          <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover: border-white/30 transition-all">",
+            <div className="flex items-center justify-between mb-4">
+              <span className="text-3xl">⚡</span>
+              <span className="px-3 py-1 bg-green-500/30 rounded-lg text-xs font-bold">EDGE AI</span>
+=======
           <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover: border-white/30 transition-all">";,
             <div className="flex items-center justify-between mb-4">";
               <span className="text-3xl">⚡</span>";
               <span className="px-3 py-1 bg-green-500/30 rounded-lg text-xs font-bold">EDGE AI</span>";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             </div>
             <h3 className="text-xl font-bold mb-3">";
               Edge AI Deployment
