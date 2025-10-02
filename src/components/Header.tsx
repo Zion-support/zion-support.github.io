@@ -58,11 +58,20 @@ export default function Header() {
                     <Link to="/services/ai-services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200">
                       AI Services
                     </Link>
+                    <Link to="/services/advanced-ai" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200">
+                      Advanced AI Solutions
+                    </Link>
                     <Link to="/services/it-services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200">
                       IT Services
                     </Link>
+                    <Link to="/services/comprehensive-it" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200">
+                      Comprehensive IT Solutions
+                    </Link>
                     <Link to="/services/micro-saas" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200">
                       Micro SaaS
+                    </Link>
+                    <Link to="/services/innovative-micro-saas" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200">
+                      Innovative Micro SaaS
                     </Link>
                     <Link to="/services/real-time-cognitive-automation" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200">
                       Cognitive Automation
@@ -111,6 +120,9 @@ export default function Header() {
 
             <Link to="/about" className="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200">
               About
+            </Link>
+            <Link to="/pricing" className="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200">
+              Pricing
             </Link>
             <Link to="/blog" className="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200">
               Blog
@@ -172,11 +184,20 @@ export default function Header() {
                     <Link to="/services/ai-services" className="block text-sm text-gray-600 hover:text-blue-600 transition-colors duration-200">
                       AI Services
                     </Link>
+                    <Link to="/services/advanced-ai" className="block text-sm text-gray-600 hover:text-blue-600 transition-colors duration-200">
+                      Advanced AI Solutions
+                    </Link>
                     <Link to="/services/it-services" className="block text-sm text-gray-600 hover:text-blue-600 transition-colors duration-200">
                       IT Services
                     </Link>
+                    <Link to="/services/comprehensive-it" className="block text-sm text-gray-600 hover:text-blue-600 transition-colors duration-200">
+                      Comprehensive IT Solutions
+                    </Link>
                     <Link to="/services/micro-saas" className="block text-sm text-gray-600 hover:text-blue-600 transition-colors duration-200">
                       Micro SaaS
+                    </Link>
+                    <Link to="/services/innovative-micro-saas" className="block text-sm text-gray-600 hover:text-blue-600 transition-colors duration-200">
+                      Innovative Micro SaaS
                     </Link>
                   </div>
                 )}
@@ -214,6 +235,13 @@ export default function Header() {
                 onClick={() => setIsMenuOpen(false)}
               >
                 About
+              </Link>
+              <Link 
+                to="/pricing" 
+                className="block text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Pricing
               </Link>
               <Link 
                 to="/blog" 

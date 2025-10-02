@@ -26,11 +26,15 @@ const SupportPage = React.lazy(() => import('./pages/Support'));
 const SitemapPage = React.lazy(() => import('./pages/Sitemap'));
 const CookiesPage = React.lazy(() => import('./pages/Cookies'));
 const AdditionalServicesPage = React.lazy(() => import('./pages/AdditionalServicesPage'));
+const PricingPage = React.lazy(() => import('./pages/PricingPage'));
 
 // Service-specific pages
 const AIServicesPage = React.lazy(() => import('./pages/services/AIServicesPage'));
 const MicroSAASPage = React.lazy(() => import('./pages/services/MicroSAASPage'));
 const ITServicesPage = React.lazy(() => import('./pages/services/ITServicesPage'));
+const AdvancedAIServices = React.lazy(() => import('./pages/services/AdvancedAIServices'));
+const InnovativeMicroSAAS = React.lazy(() => import('./pages/services/InnovativeMicroSAAS'));
+const ComprehensiveITServices = React.lazy(() => import('./pages/services/ComprehensiveITServices'));
 const RealTimeCognitiveAutomationPage = React.lazy(() => import('./pages/services/RealTimeCognitiveAutomationPage'));
 const QuantumComputingConsultingPage = React.lazy(() => import('./pages/services/QuantumComputingConsultingPage'));
 const CognitiveComputingTransformationPage = React.lazy(() => import('./pages/services/CognitiveComputingTransformationPage'));
@@ -87,6 +91,9 @@ const App: React.FC = () => {
                         <Route path="/services/ai-services" element={<AIServicesPage />} />
                         <Route path="/services/micro-saas" element={<MicroSAASPage />} />
                         <Route path="/services/it-services" element={<ITServicesPage />} />
+                        <Route path="/services/advanced-ai" element={<AdvancedAIServices />} />
+                        <Route path="/services/innovative-micro-saas" element={<InnovativeMicroSAAS />} />
+                        <Route path="/services/comprehensive-it" element={<ComprehensiveITServices />} />
                         <Route path="/services/real-time-cognitive-automation" element={<RealTimeCognitiveAutomationPage />} />
                         <Route path="/services/quantum-computing-consulting" element={<QuantumComputingConsultingPage />} />
                         <Route path="/services/cognitive-computing-transformation" element={<CognitiveComputingTransformationPage />} />
@@ -101,6 +108,7 @@ const App: React.FC = () => {
                         <Route path="/terms" element={<TermsPage />} />
                         <Route path="/cookies" element={<CookiesPage />} />
                         <Route path="/sitemap" element={<SitemapPage />} />
+                        <Route path="/pricing" element={<PricingPage />} />
                         
                         {/* Additional Services */}
                         <Route path="/additional-services" element={<AdditionalServicesPage />} />
