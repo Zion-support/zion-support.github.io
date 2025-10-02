@@ -10,6 +10,10 @@ export const metadata: Metadata = {
 };
 
 export default function ServicesPage() {
+  const phoneHref = "tel:+13024640950";
+  const emailHref = "mailto:kleber@ziontechgroup.com";
+  const websiteHref = "https://ziontechgroup.com";
+
   const services = [
     {
       title: 'AI Data Analytics',

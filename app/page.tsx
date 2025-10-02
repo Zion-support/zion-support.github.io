@@ -50,6 +50,24 @@ export default function HomePage() {
               >
                 View All Services →
               </a>
+              <a 
+                href="/enhanced-services-catalog" 
+                className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
+              >
+                Enhanced Catalog →
+              </a>
+              <a 
+                href="/advanced-ai-solutions" 
+                className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1"
+              >
+                Advanced AI →
+              </a>
+              <a 
+                href="/innovative-it-solutions" 
+                className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50 transform hover:-translate-y-1"
+              >
+                IT Solutions →
+              </a>
             </div>
             
             {/* Key Metrics */}
