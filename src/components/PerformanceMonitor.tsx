@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { measurePerformance } from '../utils/performance';
 
-export const PerformanceMonitor: React.FC = () => {
+const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
     const logPerformanceMetrics = () => {
       const metrics = measurePerformance();
@@ -40,3 +40,5 @@ export const PerformanceMonitor: React.FC = () => {
 
   return null;
 };
+
+export default PerformanceMonitor;

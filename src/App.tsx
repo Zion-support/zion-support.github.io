@@ -1,8 +1,17 @@
+<<<<<<< HEAD
 import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import './index.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import ModernHomepage from './components/LatestContentBanner2025';
+=======
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import { AppRouter } from './router';
+import './index.css';
+import ModernHeader from './components/Header';
+import ModernFooter from './components/Footer';
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-b747
 import SEOOptimizer from './components/SEOOptimizer';
 import AdvancedAnalytics from './components/AdvancedAnalytics';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
@@ -11,8 +20,11 @@ import { PerformanceMonitor } from './components/PerformanceMonitor';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import EnhancedSEOHead from './components/EnhancedSEOHead';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+<<<<<<< HEAD
 import { AppRouter } from './router';
 
+=======
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-b747
 // Types and interfaces
 interface Notification {
   id: string;
@@ -48,6 +60,10 @@ const initializePerformanceEnhancements = () => {
   // Performance enhancements initialized
 };
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-b747
 // Main App Component
 const App: React.FC = () => {
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
@@ -114,11 +130,19 @@ const App: React.FC = () => {
         <AdvancedAnalytics enableConversionTracking enablePerformanceTracking enableErrorTracking />
         <PerformanceMonitor enabled={true} showMetrics={process.env.NODE_ENV === 'development'} />
         <div className="min-h-screen bg-white">
+<<<<<<< HEAD
           <Header />
           <main>
             <AppRouter />
           </main>
           <Footer />
+=======
+          <ModernHeader />
+            <main>
+              <AppRouter />
+            </main>
+          <ModernFooter />
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-b747
         </div>
 
         {showPerformanceOptimizer && (
@@ -146,8 +170,13 @@ const App: React.FC = () => {
         )}
 
         <NotificationSystem notifications={notifications} onRemove={handleRemoveNotification} />
+<<<<<<< HEAD
       </EnhancedErrorBoundary>
     </AccessibilityEnhancer>
+=======
+      </AccessibilityEnhancer>
+    </EnhancedErrorBoundary>
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-b747
   );
 };
 
