@@ -65,7 +65,7 @@ for branch in $CURSOR_BRANCHES; do
     fi
     
     # Limit to prevent infinite loops
-    if [ $COUNT -ge 20 ]; then
+    if [ $COUNT -ge 50 ]; then
         echo "Reached limit of 20 branches processed. Stopping."
         break
     fi
