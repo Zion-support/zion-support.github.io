@@ -56,9 +56,13 @@ const ContactPage: React.FC = () => {
             <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Send us a Message</h2>
             {isSubmitted ? (
               <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-                <CheckCircle className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-                <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Message Sent!</h3>
-                <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Thank you for contacting us. We'll get back to you within 24 hours.</p>
+                <div className="flex items-center justify-center w-16 h-16 mx-auto mb-4 bg-green-100 rounded-full">
+                  <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-semibold text-center mb-2">Message Sent!</h3>
+                <p className="text-center">Thank you for contacting us. We'll get back to you within 24 hours.</p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
@@ -68,26 +72,28 @@ const ContactPage: React.FC = () => {
                       Full Name *
                     </label>
                     <input
-                      type="text
-                      id="name
-                      name="name
+                      type="text"
+                      id="name"
+                      name="name"
                       required
                       value={formData.name}
                       onChange={handleChange}
-                      className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                      className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    />
                   </div>
                   <div>
                     <label htmlFor="email" className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                       Email Address *
                     </label>
                     <input
-                      type="email
-                      id="email
-                      name="email
+                      type="email"
+                      id="email"
+                      name="email"
                       required
                       value={formData.email}
                       onChange={handleChange}
-                      className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                      className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    />
                   </div>
                 </div>
 
