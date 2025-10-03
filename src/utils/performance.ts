@@ -175,7 +175,7 @@ export class PerformanceMonitor {
             });
           }
         });
-      ');
+      });
       observer.observe({ entryTypes: ['resource'] });
       this.observers.push(observer);
     }
