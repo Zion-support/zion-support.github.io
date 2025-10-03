@@ -1,99 +1,74 @@
+import React from 'react';
 
 interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg';
-  text?: string;
+  size?: 'sm' | 'md' | 'lg' | 'xl';
   className?: string;
+  text?: string;
 }
 
-const LoadingSpinner = memo<LoadingSpinnerProps>(({ 
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
   size = 'md', 
-  text = 'Loading...', 
-  className = '' 
+  className = '',
+  text = 'Loading...'
 }) => {
   const sizeClasses = {
-    sm: 'w-6 h-6 border-2',
-    md: 'w-12 h-12 border-4',
-    lg: 'w-16 h-16 border-8'
+    sm: 'w-4 h-4',
+    md: 'w-8 h-8',
+    lg: 'w-12 h-12',
+    xl: 'w-16 h-16'
   };
 
   return (
-    <div className={`flex items-center justify-center h-full p-8 ${className}`} role="status" aria-label="Loading">
-      <div 
-        className={`${sizeClasses[size]} border-blue-500 border-t-transparent rounded-full animate-spin`}
-        aria-hidden="true" />
-      <span className="ml-4 text-lg text-gray-600 sr-only">{text}</span>
+    <div className={`flex flex-col items-center justify-center p-8 ${className}`}>
+      {/* Animated spinner */}
+      <div className={`${sizeClasses[size]} relative`}>
+        {/* Outer ring */}
+        <div className="absolute inset-0 rounded-full border-4 border-gray-700"></div>
+        
+        {/* Spinning ring */}
+        <div className={`${sizeClasses[size]} rounded-full border-4 border-transparent border-t-blue-500 animate-spin`}></div>
+        
+        {/* Inner pulsing dot */}
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
+        </div>
+      </div>
+      
+      {/* Loading text */}
+      {text && (
+        <p className="mt-4 text-gray-400 text-sm font-medium animate-pulse">
+          {text}
+        </p>
+      )}
+      
+      {/* Loading dots animation */}
+      <div className="flex space-x-1 mt-2">
+        <div className="w-1 h-1 bg-blue-500 rounded-full animate-bounce"></div>
+        <div className="w-1 h-1 bg-blue-500 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
+        <div className="w-1 h-1 bg-blue-500 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+      </div>
     </div>
   );
-});
+};
 
-LoadingSpinner.displayName = 'LoadingSpinner';
+// Full page loader component
+export const PageLoader: React.FC = () => (
+  <div className="min-h-screen bg-slate-950 flex items-center justify-center">
+    <LoadingSpinner size="xl" text="Loading page..." />
+  </div>
+);
 
-interface PageLoaderProps {
-  text?: string;
-  className?: string;
-}
+// Inline loader for smaller components
+export const InlineLoader: React.FC = () => (
+  <LoadingSpinner size="sm" text="Loading..." className="p-4" />
+);
 
-const PageLoader = memo<PageLoaderProps>(({ 
-  text = 'Loading content...', 
-  className = '' 
-}) => {
-  return (
-    <div className={`flex flex-col items-center justify-center min-h-screen bg-slate-950 text-white ${className}`} role="status" aria-label="Page loading">
-      <div 
-        className="w-16 h-16 border-8 border-blue-500 border-t-transparent rounded-full animate-spin mb-4"
-        aria-hidden="true" />
-      <p className="text-xl font-semibold">{text}</p>
-    </div>
-  );
-});
+// Button loader for form submissions
+export const ButtonLoader: React.FC = () => (
+  <div className="flex items-center space-x-2">
+    <LoadingSpinner size="sm" />
+    <span>Processing...</span>
+  </div>
+);
 
-PageLoader.displayName = 'PageLoader';
-
-// Optimized skeleton loader for better perceived performance
-interface SkeletonLoaderProps {
-  lines?: number;
-  className?: string;
-}
-
-const SkeletonLoader = memo<SkeletonLoaderProps>(({ lines = 3, className = '' }) => {
-  return (
-    <div className={`animate-pulse ${className}`} role="status" aria-label="Content loading">
-      {Array.from({ length: lines }).map((_, index) => (
-        <div
-          key={index}
-          className={`h-4 bg-gray-300 rounded mb-2 ${
-            index === lines - 1 ? 'w-3/4' : 'w-full'
-          }`}
-          aria-hidden="true" />
-      ))}
-      <span className="sr-only">Loading content...</span>
-    </div>
-  );
-});
-
-SkeletonLoader.displayName = 'SkeletonLoader';
-
-// Inline spinner for buttons and small components
-interface InlineSpinnerProps {
-  size?: 'xs' | 'sm';
-  className?: string;
-}
-
-const InlineSpinner = memo<InlineSpinnerProps>(({ size = 'sm', className = '' }) => {
-  const sizeClasses = {
-    xs: 'w-3 h-3 border',
-    sm: 'w-4 h-4 border-2'
-  };
-
-  return (
-    <div 
-      className={`${sizeClasses[size]} border-current border-t-transparent rounded-full animate-spin ${className}`}
-      role="status"
-      aria-label="Loading"
-      aria-hidden="true" />
-  );
-});
-
-InlineSpinner.displayName = 'InlineSpinner';
-
-export { LoadingSpinner, PageLoader, SkeletonLoader, InlineSpinner };
+export default LoadingSpinner;
