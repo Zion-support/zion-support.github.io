@@ -1,26 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, 
-  Shield, 
-  MapPin,
-  Briefcase,
-  Heart,
-  Lightbulb,
-  Coffee,
-  BookOpen,
-  DollarSign,
-  Mail,
-  Phone,
-  Users,
-  Rocket,
-  CheckCircle,
-  Home,
-  Award,
-  Tag,
-  Calendar,
-  Target
-} from 'lucide-react';
+import { ArrowRight, Shield, MapPin, Briefcase, Heart, Lightbulb, Coffee, BookOpen, DollarSign, Mail, Phone, Users, Rocket, CheckCircle, Home, Award, Tag, Calendar, Target } from 'lucide-react';
 
 export const metadata = {
   title: 'Careers - Zion Tech Group | Join Our AI Revolution Team',

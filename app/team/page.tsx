@@ -1,25 +1,5 @@
 import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, 
-  Users, 
-  Shield,
-  Cloud, 
-  Award,
-  Target,
-  Linkedin,
-  Twitter,
-  Mail,
-  Phone,
-  MapPin,
-  Brain,
-  Cpu,
-  Cloud,
-  GraduationCap,
-  Briefcase,
-  Lightbulb,
-  Brain,
-  Cpu
-} from 'lucide-react';
+import { ArrowRight, Users, Shield, Cloud, Award, Target, Linkedin, Twitter, Mail, Phone, MapPin, Brain, Cpu, GraduationCap, Briefcase, Lightbulb } from 'lucide-react';
 
 export const metadata = {
   title: 'Our Team - Zion Tech Group | AI Experts & Technology Leaders',

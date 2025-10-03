@@ -37,8 +37,8 @@ export class ErrorBoundary extends Component<Props, State> {
     }
 
     // Send error to monitoring service
-    if (typeof gtag !== 'undefined') {
-      gtag('event', 'exception', {
+    if (typeof window !== 'undefined' && typeof (window as unknown as { gtag?: unknown }).gtag !== 'undefined') {
+      ((window as unknown as { gtag: (event: string, action: string, params: Record<string, unknown>) => void }).gtag)('event', 'exception', {
         description: error.message,
         fatal: false,
         custom_map: {

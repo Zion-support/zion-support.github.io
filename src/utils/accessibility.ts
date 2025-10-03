@@ -1,40 +1,47 @@
-export const accessibilityUtils = {
-  // Add focus management
-  focusFirstElement: (container: HTMLElement) => {
-    const focusableElements = container.querySelectorAll(
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-    );
-    if (focusableElements.length > 0) {
-      (focusableElements[0] as HTMLElement).focus();
-    }
-  },
+import React, { useEffect } from 'react';
 
-  // Add keyboard navigation
-  handleKeyboardNavigation: (event: KeyboardEvent, elements: HTMLElement[]) => {
-    const { key } = event;
-    const currentIndex = elements.indexOf(document.activeElement as HTMLElement);
-    
-    if (key === 'ArrowDown' || key === 'ArrowRight') {
-      event.preventDefault();
-      const nextIndex = (currentIndex + 1) % elements.length;
-      elements[nextIndex].focus();
-    } else if (key === 'ArrowUp' || key === 'ArrowLeft') {
-      event.preventDefault();
-      const prevIndex = currentIndex === 0 ? elements.length - 1 : currentIndex - 1;
-      elements[prevIndex].focus();
-    }
-  },
+export const useAccessibility = () => {
+  useEffect(() => {
+    // Focus management
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Tab') {
+        document.body.classList.add('keyboard-navigation');
+      }
+    };
 
-  // Add ARIA labels
-  generateAriaLabel: (text: string, type: string) => {
-    return `${text} ${type}`;
-  },
+    const handleMouseDown = () => {
+      document.body.classList.remove('keyboard-navigation');
+    };
 
-  // Check color contrast
-  checkColorContrast: (foreground: string, background: string) => {
-    // Basic contrast checking logic
-    return true; // Simplified for demo
-  }
+    document.addEventListener('keydown', handleKeyDown);
+    document.addEventListener('mousedown', handleMouseDown);
+
+    // Skip to content link
+    const skipLink = document.createElement('a');
+    skipLink.href = '#main-content';
+    skipLink.textContent = 'Skip to main content';
+    skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white p-2 rounded z-50';
+    document.body.insertBefore(skipLink, document.body.firstChild);
+
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener('mousedown', handleMouseDown);
+      if (skipLink.parentNode) {
+        skipLink.parentNode.removeChild(skipLink);
+      }
+    };
+  }, []);
 };
 
-export default accessibilityUtils;
+export const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  useAccessibility();
+  
+  return (
+    <div>
+      {children}
+      <div id="main-content" />
+    </div>
+  );
+};
+
+export default AccessibilityEnhancer;

@@ -1,13 +1,6 @@
-// import React from 'react';
-import Link from 'next/link';
-import type { Metadata } from 'next';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { Brain, Shield, Database, Users, Target, Zap, Rocket, Globe, Phone, Mail, MapPin, ArrowRight, Server } from 'lucide-react';
-
-export const metadata: Metadata = {
-  title: 'Zion Tech Group - Revolutionary AI Solutions for Enterprise',
-  description: 'Transform your business with Meta-Cognitive AI, Quantum-Neural Networks, and Autonomous Operations. Experience 2000x processing speed and 99.9% automation rates.',
-  keywords: 'AI, Enterprise AI, Quantum Computing, Autonomous Operations, Meta-Cognitive AI, Zion Tech Group',
-};
 
 export default function HomePage() {
   return (
@@ -37,13 +30,13 @@ export default function HomePage() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link 
-                href="/contact" 
+                to="/contact" 
                 className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
               >
                 Get Started Today
               </Link>
               <Link 
-                href="/services" 
+                to="/services" 
                 className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
               >
                 Explore Our Services →
@@ -107,7 +100,7 @@ export default function HomePage() {
                 <li>• Quantum parallelism</li>
               </ul>
               <Link 
-                href="/blog/ai-2026-june-mega-breakthrough-revolution"
+                to="/blog/ai-2026-june-mega-breakthrough-revolution"
                 className="inline-block bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
               >
                 Learn More →
@@ -128,7 +121,7 @@ export default function HomePage() {
                 <li>• Complete enterprise autonomy</li>
               </ul>
               <Link 
-                href="/blog/ai-2026-quantum-consciousness-autonomous-enterprise"
+                to="/blog/ai-2026-quantum-consciousness-autonomous-enterprise"
                 className="inline-block bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
               >
                 Get Guide →
@@ -149,7 +142,7 @@ export default function HomePage() {
                 <li>• 4200% ROI</li>
               </ul>
               <Link 
-                href="/case-studies/fortune-500-ai-2026-mega-transformation-success"
+                to="/case-studies/fortune-500-ai-2026-mega-transformation-success"
                 className="inline-block bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
               >
                 View Case Study →
@@ -263,7 +256,7 @@ export default function HomePage() {
           {/* New Comprehensive Services Links */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
             <Link 
-              href="/services/comprehensive-micro-saas-solutions" 
+              to="/services/comprehensive-micro-saas-solutions" 
               className="bg-gradient-to-br from-cyan-50 to-blue-100 p-8 rounded-xl border border-cyan-200 hover:shadow-lg transition-all duration-300"
             >
               <div className="flex items-center mb-4">
@@ -288,7 +281,7 @@ export default function HomePage() {
             </Link>
 
             <Link 
-              href="/services/comprehensive-it-services" 
+              to="/services/comprehensive-it-services" 
               className="bg-gradient-to-br from-purple-50 to-indigo-100 p-8 rounded-xl border border-purple-200 hover:shadow-lg transition-all duration-300"
             >
               <div className="flex items-center mb-4">
@@ -326,14 +319,14 @@ export default function HomePage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
-              href="/contact" 
+              to="/contact" 
               className="inline-flex items-center justify-center px-6 md:px-8 py-3 md:py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 text-sm md:text-base"
             >
               Get Started Today
               <Rocket className="ml-2 w-4 md:w-5 h-4 md:h-5" />
             </Link>
             <Link 
-              href="/services" 
+              to="/services" 
               className="inline-flex items-center justify-center px-6 md:px-8 py-3 md:py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 text-sm md:text-base"
             >
               Explore Solutions
@@ -400,14 +393,14 @@ export default function HomePage() {
           <div className="text-center">
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                href="/contact" 
+                to="/contact" 
                 className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 shadow-lg"
               >
                 Get Free Consultation
                 <Rocket className="ml-2 w-5 h-5" />
               </Link>
               <Link 
-                href="/services" 
+                to="/services" 
                 className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300"
               >
                 Explore All Services
@@ -428,13 +421,13 @@ export default function HomePage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                href="/contact" 
+                to="/contact" 
                 className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
               >
                 Get Started Today
               </Link>
               <Link 
-                href="/services" 
+                to="/services" 
                 className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
               >
                 Explore Our Services →
@@ -468,7 +461,7 @@ export default function HomePage() {
                 <p>🌐 Website: <a href="https://ziontechgroup.com" className="text-blue-400 hover:underline">https://ziontechgroup.com</a></p>
                 <p className="text-xs text-gray-400">Available 24/7 for enterprise clients • Free consultation for projects over $10K</p>
               </div>
-              <Link href="/case-studies" className="text-blue-400 hover:underline">
+              <Link to="/case-studies" className="text-blue-400 hover:underline">
                 View $5.2B Success Story
               </Link>
             </div>
