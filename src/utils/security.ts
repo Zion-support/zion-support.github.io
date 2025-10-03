@@ -212,13 +212,13 @@ export class SecurityLogger {
       sessionStorage.setItem('security-session-id', sessionId);
     }
     return sessionId;
-  '
+  }
 
   private static generateToken(): string {
     const array = new Uint8Array(16);
     crypto.getRandomValues(array);
     return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
-  '
+  }
 
   private static async sendToMonitoringService(logEntry: any): Promise<void> {
     try {
@@ -228,7 +228,7 @@ export class SecurityLogger {
       existingLogs.unshift(logEntry);
       existingLogs.splice(100); // Keep only last 100 entries
       localStorage.setItem('security-logs', JSON.stringify(existingLogs));
-    ' catch (error) {
+    } catch (error) {
       console.error('Failed to log security event:', error);
     }
   }

@@ -124,11 +124,11 @@ export class PerformanceMonitor {
         entries.forEach(entry => {
           this.metrics.firstInputDelay = entry.processingStart - entry.startTime;
         });
-      ');
+      });
       observer.observe({ entryTypes: ['first-input'] });
       this.observers.push(observer);
     }
-  '
+  }
 
   private observeCLS(): void {
     if ('PerformanceObserver' in window) {
@@ -141,11 +141,11 @@ export class PerformanceMonitor {
           }
         });
         this.metrics.cumulativeLayoutShift = clsValue;
-      ');
+      });
       observer.observe({ entryTypes: ['layout-shift'] });
       this.observers.push(observer);
     }
-  '
+  }
 
   private observeFCP(): void {
     if ('PerformanceObserver' in window) {
@@ -155,11 +155,11 @@ export class PerformanceMonitor {
         if (fcpEntry) {
           this.metrics.firstContentfulPaint = fcpEntry.startTime;
         }
-      ');
+      });
       observer.observe({ entryTypes: ['paint'] });
       this.observers.push(observer);
     }
-  '
+  }
 
   private observeResources(): void {
     if ('PerformanceObserver' in window) {
@@ -175,7 +175,7 @@ export class PerformanceMonitor {
             });
           }
         });
-      ');
+      });
       observer.observe({ entryTypes: ['resource'] });
       this.observers.push(observer);
     }
