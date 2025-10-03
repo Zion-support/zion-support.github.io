@@ -1,15 +1,15 @@
 // import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  DocumentTextIcon, 
-  CheckCircleIcon, 
-  ClockIcon, 
-  CurrencyDollarIcon,
-  CogIcon,
-  ShieldCheckIcon,
-  ArrowRightIcon,
-  ChartBarIcon
-} from '@heroicons/react/24/outline';
+  FileText, 
+  CheckCircle, 
+  Clock, 
+  DollarSign,
+  Settings,
+  Shield,
+  ArrowRight,
+  BarChart3
+} from 'lucide-react';
 
 export const metadata = {
   title: 'Smart Invoice Processing | Zion Tech Group',

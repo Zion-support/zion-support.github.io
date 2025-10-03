@@ -1,6 +1,11 @@
 "use client"
 // import React from 'react';
-import { Metadata } from 'next';
+// Metadata interface for React Helmet
+interface Metadata {
+  title?: string;
+  description?: string;
+  keywords?: string;
+}
 import { Link } from 'react-router-dom';
 import { TrendingUp, CheckCircle, DollarSign, BarChart3, Server, Calendar, Phone, Mail, MapPin } from 'lucide-react';
 
