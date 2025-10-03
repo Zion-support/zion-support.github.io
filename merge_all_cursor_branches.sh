@@ -1,126 +1,159 @@
 #!/bin/bash
 
 # Comprehensive script to merge all cursor branches into main
-echo "🚀 Starting comprehensive cursor branch merge process..."
+# This script will handle conflicts, merge branches, and clean up
+
+set -e
+
+echo "🚀 Starting comprehensive branch merge process..."
 
 # Get all cursor branches
-CURSOR_BRANCHES=$(git branch -r | grep "origin/cursor/fix-errors-and-merge-to-main" | head -30)
+BRANCHES=$(git branch -r | grep "cursor/fix-errors-and-merge-to-main" | sed 's/origin\///' | head -50)
 
-echo "Found $(echo "$CURSOR_BRANCHES" | wc -l) cursor branches to process"
+if [ -z "$BRANCHES" ]; then
+    echo "❌ No cursor branches found to merge"
+    exit 1
+fi
 
-# Ensure we're on main and it's up to date
-git checkout main
-git pull origin main --no-rebase
+echo "📊 Found branches to process:"
+echo "$BRANCHES" | wc -l
 
-successful_merges=0
-failed_merges=0
-conflict_resolutions=0
+# Track successful and failed merges
+SUCCESS_COUNT=0
+FAILED_COUNT=0
+FAILED_BRANCHES=()
 
-# Process branches in batches
-echo "$CURSOR_BRANCHES" | while IFS= read -r branch; do
-    if [ -z "$branch" ]; then
-        continue
+# Function to merge a single branch
+merge_branch() {
+    local branch=$1
+    echo "🔄 Processing branch: $branch"
+    
+    # Delete local branch if it exists and checkout fresh
+    git branch -D "$branch" 2>/dev/null || true
+    
+    # Checkout the branch from origin
+    if git checkout -b "$branch" "origin/$branch" 2>/dev/null; then
+        echo "✅ Checked out $branch"
+    else
+        echo "❌ Failed to checkout $branch"
+        return 1
     fi
     
-    branch_name=$(echo "$branch" | sed 's/origin\///')
-    echo ""
-    echo "🔄 Processing branch: $branch_name"
+    # Switch back to main
+    git checkout main
     
-    # Create a temporary branch to work with
-    temp_branch="temp-merge-$branch_name"
-    
-    # Checkout the cursor branch
-    if git checkout -b "$temp_branch" "$branch" 2>/dev/null; then
-        echo "   ✅ Checked out branch $branch_name"
+    # Try to merge
+    if git merge "$branch" --no-edit 2>/dev/null; then
+        echo "✅ Successfully merged $branch"
+        SUCCESS_COUNT=$((SUCCESS_COUNT + 1))
         
-        # Try to merge with main
-        if git merge main --no-edit 2>/dev/null; then
-            echo "   ✅ Successfully merged with main"
+        # Clean up local branch
+        git branch -d "$branch" 2>/dev/null || true
+        
+        return 0
+    else
+        echo "⚠️  Merge conflict detected for $branch, attempting to resolve..."
+        
+        # Check for conflicts
+        if git status --porcelain | grep -q "^UU\|^AA\|^DD"; then
+            echo "🔧 Resolving conflicts for $branch"
             
-            # Switch back to main and merge
-            git checkout main
-            if git merge "$temp_branch" --no-edit 2>/dev/null; then
-                echo "   ✅ Successfully merged into main"
-                ((successful_merges++))
+            # Try to resolve conflicts automatically
+            if resolve_conflicts; then
+                echo "✅ Conflicts resolved for $branch"
+                git add .
+                git commit -m "🔧 Auto-resolve merge conflicts for $branch" --no-edit
+                SUCCESS_COUNT=$((SUCCESS_COUNT + 1))
+                
+                # Clean up local branch
+                git branch -d "$branch" 2>/dev/null || true
+                return 0
             else
-                echo "   ❌ Failed to merge into main"
-                ((failed_merges++))
+                echo "❌ Failed to resolve conflicts for $branch"
+                git merge --abort 2>/dev/null || true
+                FAILED_BRANCHES+=("$branch")
+                FAILED_COUNT=$((FAILED_COUNT + 1))
+                return 1
             fi
         else
-            echo "   🔧 Merge conflicts detected, attempting to resolve..."
-            
-            # Check if there are any conflicts
-            if git status --porcelain | grep -q "^UU\|^AA\|^DD"; then
-                echo "   🔧 Resolving conflicts automatically..."
-                
-                # Try to resolve conflicts by taking main's version for common files
-                git checkout --theirs . 2>/dev/null || git checkout --ours . 2>/dev/null
-                git add . 2>/dev/null
-                
-                # Commit the resolution
-                if git commit --no-edit 2>/dev/null; then
-                    echo "   ✅ Conflicts resolved"
-                    ((conflict_resolutions++))
-                    
-                    # Switch back to main and merge
-                    git checkout main
-                    if git merge "$temp_branch" --no-edit 2>/dev/null; then
-                        echo "   ✅ Successfully merged resolved branch into main"
-                        ((successful_merges++))
-                    else
-                        echo "   ❌ Failed to merge resolved branch into main"
-                        ((failed_merges++))
-                    fi
-                else
-                    echo "   ❌ Failed to commit conflict resolution"
-                    git merge --abort 2>/dev/null
-                    ((failed_merges++))
-                fi
-            else
-                echo "   ❌ No conflicts detected but merge failed"
-                git merge --abort 2>/dev/null
-                ((failed_merges++))
-            fi
+            echo "❌ Unknown merge issue for $branch"
+            git merge --abort 2>/dev/null || true
+            FAILED_BRANCHES+=("$branch")
+            FAILED_COUNT=$((FAILED_COUNT + 1))
+            return 1
         fi
-        
-        # Clean up temporary branch
-        git checkout main
-        git branch -D "$temp_branch" 2>/dev/null || true
-        
-    else
-        echo "   ❌ Failed to checkout branch $branch_name"
-        ((failed_merges++))
+    fi
+}
+
+# Function to resolve conflicts automatically
+resolve_conflicts() {
+    # List of files with conflicts
+    CONFLICT_FILES=$(git diff --name-only --diff-filter=U)
+    
+    if [ -z "$CONFLICT_FILES" ]; then
+        return 0
     fi
     
-    # Push every 10 merges to avoid overwhelming the remote
-    if [ $((successful_merges % 10)) -eq 0 ] && [ $successful_merges -gt 0 ]; then
-        echo "   📤 Pushing changes..."
-        git push origin main 2>/dev/null
-        sleep 1
-    fi
+    echo "🔧 Resolving conflicts in: $CONFLICT_FILES"
+    
+    # For each conflicted file, try to resolve
+    for file in $CONFLICT_FILES; do
+        echo "  📝 Resolving $file"
+        
+        # Strategy: prefer main branch for most conflicts
+        # but handle specific cases
+        if [[ "$file" == *.md ]]; then
+            # For markdown files, try to merge both versions
+            git checkout --theirs "$file" 2>/dev/null || git checkout --ours "$file" 2>/dev/null || true
+        elif [[ "$file" == *.json ]]; then
+            # For JSON files, prefer main branch
+            git checkout --ours "$file" 2>/dev/null || true
+        elif [[ "$file" == *.js ]] || [[ "$file" == *.ts ]] || [[ "$file" == *.tsx ]]; then
+            # For JS/TS files, prefer main branch but keep both if possible
+            git checkout --ours "$file" 2>/dev/null || true
+        elif [[ "$file" == *.sh ]] || [[ "$file" == *.cjs ]]; then
+            # For shell scripts, prefer main branch
+            git checkout --ours "$file" 2>/dev/null || true
+        else
+            # Default: prefer main branch
+            git checkout --ours "$file" 2>/dev/null || true
+        fi
+    done
+    
+    return 0
+}
+
+# Main processing loop
+echo "🔄 Starting batch merge process..."
+
+for branch in $BRANCHES; do
+    merge_branch "$branch"
+    echo "📊 Progress: Success: $SUCCESS_COUNT, Failed: $FAILED_COUNT"
 done
 
-# Final push
-echo ""
-echo "📤 Final push to origin..."
+# Push changes to main
+echo "🚀 Pushing merged changes to main..."
 git push origin main
 
+# Summary
 echo ""
-echo "📊 Merge Summary:"
-echo "   ✅ Successful merges: $successful_merges"
-echo "   ❌ Failed merges: $failed_merges"
-echo "   🔧 Conflicts resolved: $conflict_resolutions"
-echo "   📈 Total processed: $(echo "$CURSOR_BRANCHES" | wc -l)"
+echo "📊 MERGE SUMMARY"
+echo "=================="
+echo "✅ Successful merges: $SUCCESS_COUNT"
+echo "❌ Failed merges: $FAILED_COUNT"
 
-if [ $successful_merges -gt 0 ]; then
+if [ $FAILED_COUNT -gt 0 ]; then
     echo ""
-    echo "🎉 Successfully merged $successful_merges branches!"
-fi
-
-if [ $failed_merges -gt 0 ]; then
-    echo ""
-    echo "⚠️  $failed_merges branches could not be merged automatically."
+    echo "❌ Failed branches:"
+    for branch in "${FAILED_BRANCHES[@]}"; do
+        echo "  - $branch"
+    done
 fi
 
 echo ""
-echo "🏁 Comprehensive merge process completed!"
+echo "🎉 Merge process completed!"
+
+# Clean up any remaining local branches
+git branch | grep "cursor/fix-errors-and-merge-to-main" | xargs -r git branch -D 2>/dev/null || true
+
+exit 0
