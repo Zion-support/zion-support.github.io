@@ -6,6 +6,7 @@ import { HelmetProvider } from 'react-helmet-async';
 import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
+import Contact from './pages/Contact';
 
 // Simple Error Boundary
 class ErrorBoundary extends React.Component<
@@ -56,6 +57,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/services" element={<Services />} />
+              <Route path="/contact" element={<Contact />} />
               <Route path="*" element={
                 <div className="min-h-screen flex items-center justify-center">
                   <div className="text-center">
