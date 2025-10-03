@@ -77,12 +77,11 @@ const QuantumComputingConsultingPage: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-                  
                   <Link 
                     to="/contact" 
-                    className="text-purple-600 font-semibold hover:text-purple-800 transition-colors"
+                    className="inline-flex items-center px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors"
                   >
-                    Learn More →
+                    Learn More
                   </Link>
                 </div>
               ))}
@@ -90,8 +89,54 @@ const QuantumComputingConsultingPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Quantum Applications */}
+        {/* Benefits Section */}
         <section className="py-20 bg-white">
+          <div className="container mx-auto px-6">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Why Choose Our Quantum Consulting Services?
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Our team of quantum experts brings decades of experience in quantum computing research and practical implementation.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl">🧠</span>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Expert Knowledge</h3>
+                <p className="text-gray-600">
+                  Deep expertise in quantum algorithms, quantum hardware, and quantum software development.
+                </p>
+              </div>
+              
+              <div className="text-center">
+                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl">⚡</span>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Practical Implementation</h3>
+                <p className="text-gray-600">
+                  Real-world experience in deploying quantum solutions across various industries and use cases.
+                </p>
+              </div>
+              
+              <div className="text-center">
+                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl">🔬</span>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Research Excellence</h3>
+                <p className="text-gray-600">
+                  Active participation in cutting-edge quantum research and development projects.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Quantum Applications */}
+        <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Quantum Computing Applications</h2>
@@ -145,31 +190,34 @@ const QuantumComputingConsultingPage: React.FC = () => {
         </section>
 
         {/* Technology Partners */}
-        <section className="py-20 bg-gray-50">
+        <section className="py-20 bg-white">
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Quantum Technology Partners</h2>
               <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                We work with leading quantum computing platforms and technologies
+                We work with leading quantum computing providers and platforms
               </p>
             </div>
             
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
-              <div className="bg-white p-6 rounded-lg shadow-sm text-center">
-                <h4 className="font-semibold text-gray-900">IBM Quantum</h4>
-                <p className="text-sm text-gray-600">Quantum Cloud Platform</p>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              <div className="bg-gray-50 p-6 rounded-xl shadow-sm text-center">
+                <h3 className="text-lg font-bold text-gray-900 mb-2">IBM Quantum</h3>
+                <p className="text-gray-600">Qiskit Platform</p>
               </div>
-              <div className="bg-white p-6 rounded-lg shadow-sm text-center">
-                <h4 className="font-semibold text-gray-900">Google Quantum AI</h4>
-                <p className="text-sm text-gray-600">Cirq Framework</p>
+              
+              <div className="bg-gray-50 p-6 rounded-xl shadow-sm text-center">
+                <h3 className="text-lg font-bold text-gray-900 mb-2">Google Quantum AI</h3>
+                <p className="text-gray-600">Cirq Framework</p>
               </div>
-              <div className="bg-white p-6 rounded-lg shadow-sm text-center">
-                <h4 className="font-semibold text-gray-900">Microsoft Azure Quantum</h4>
-                <p className="text-sm text-gray-600">Q# Development Kit</p>
+              
+              <div className="bg-gray-50 p-6 rounded-xl shadow-sm text-center">
+                <h3 className="text-lg font-bold text-gray-900 mb-2">Microsoft Azure</h3>
+                <p className="text-gray-600">Quantum Development Kit</p>
               </div>
-              <div className="bg-white p-6 rounded-lg shadow-sm text-center">
-                <h4 className="font-semibold text-gray-900">Rigetti Computing</h4>
-                <p className="text-sm text-gray-600">Quantum Cloud Services</p>
+              
+              <div className="bg-gray-50 p-6 rounded-xl shadow-sm text-center">
+                <h3 className="text-lg font-bold text-gray-900 mb-2">Amazon Braket</h3>
+                <p className="text-gray-600">Quantum Computing Service</p>
               </div>
             </div>
           </div>
@@ -178,22 +226,24 @@ const QuantumComputingConsultingPage: React.FC = () => {
         {/* CTA Section */}
         <section className="py-20 bg-purple-600 text-white">
           <div className="container mx-auto px-6 text-center">
-            <h2 className="text-3xl font-bold mb-4">Ready to Explore Quantum Computing?</h2>
-            <p className="text-xl text-purple-100 max-w-2xl mx-auto mb-8">
-              Get started with our quantum consulting services and prepare your organization for the quantum revolution.
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Ready to Explore Quantum Computing?
+            </h2>
+            <p className="text-xl text-purple-100 max-w-3xl mx-auto mb-8">
+              Let our quantum experts help you understand how quantum computing can transform your business operations and create competitive advantages.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 to="/contact" 
-                className="inline-flex items-center px-8 py-3 rounded-lg bg-white text-purple-600 font-semibold hover:bg-gray-100 transition-colors"
+                className="inline-flex items-center px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
               >
-                Get Started Today
+                Schedule Consultation
               </Link>
               <Link 
-                to="/pricing" 
-                className="inline-flex items-center px-8 py-3 rounded-lg border-2 border-white text-white font-semibold hover:bg-white hover:text-purple-600 transition-colors"
+                to="/services" 
+                className="inline-flex items-center px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-purple-600 transition-colors font-semibold"
               >
-                View Pricing
+                View All Services
               </Link>
             </div>
           </div>
