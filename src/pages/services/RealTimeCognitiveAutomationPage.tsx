@@ -1,43 +1,43 @@
-import React from 'react'';
-import { Link } from 'react-router-dom'';
-import { Helmet } from 'react-helmet-async'';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 const RealTimeCognitiveAutomationPage: React.FC  = () => {
   const automationFeatures = [
     {
-      title: "Intelligent Process Automation","
-      description: "Automate complex business processes using AI-powered decision-making and real-time data analysis.","
-      icon: "🧠","
+      title: "Intelligent Process Automation",
+      description: "Automate complex business processes using AI-powered decision-making and real-time data analysis.",
+      icon: "🧠",
       features: ["Process Discovery", "Automated Decision Making", "Real-time Monitoring", "Exception Handling"]"
     },
     {
-      title: "Cognitive Document Processing","
-      description: "Extract insights and automate document workflows using advanced AI and machine learning.","
-      icon: "📄","
+      title: "Cognitive Document Processing",
+      description: "Extract insights and automate document workflows using advanced AI and machine learning.",
+      icon: "📄",
       features: ["Document Classification", "Data Extraction", "Content Analysis", "Workflow Automation"]"
     },
     {
-      title: "Predictive Analytics","
-      description: "Leverage real-time data to predict outcomes and automate proactive responses.","
-      icon: "📊","
+      title: "Predictive Analytics",
+      description: "Leverage real-time data to predict outcomes and automate proactive responses.",
+      icon: "📊",
       features: ["Real-time Predictions", "Trend Analysis", "Anomaly Detection", "Automated Alerts"]"
     },
     {
-      title: "Intelligent Workflows","
-      description: "Create self-optimizing workflows that adapt and improve based on performance data.","
-      icon: "🔄","
+      title: "Intelligent Workflows",
+      description: "Create self-optimizing workflows that adapt and improve based on performance data.",
+      icon: "🔄",
       features: ["Adaptive Workflows", "Performance Optimization", "Self-healing Processes", "Continuous Learning"]"
     },
     {
-      title: "Cognitive Integration","
-      description: "Seamlessly integrate cognitive automation across your existing systems and applications.","
-      icon: "🔗","
+      title: "Cognitive Integration",
+      description: "Seamlessly integrate cognitive automation across your existing systems and applications.",
+      icon: "🔗",
       features: ["System Integration", "API Automation", "Data Synchronization", "Legacy System Support"]"
     },
     {
-      title: "Real-time Monitoring","
-      description: "Monitor and manage automated processes with real-time dashboards and analytics.","
-      icon: "📈","
+      title: "Real-time Monitoring",
+      description: "Monitor and manage automated processes with real-time dashboards and analytics.",
+      icon: "📈",
       features: ["Live Dashboards", "Performance Metrics", "Alert Management", "Process Analytics"]"
     }
   ];
