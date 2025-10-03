@@ -82,13 +82,8 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
         errorId: ''
       });
 
-<<<<<<< HEAD
       // Track retry attempt
       analyticsUtils.trackEvent('error_boundary_retry', {
-=======
-      // Track retry attempt (placeholder)
-      console.log('Error boundary retry:', {
->>>>>>> b77d6e85dedf0119e2c452a12dd454b506696d80
         error_id: this.state.errorId,
         retry_count: this.retryCount
       });
@@ -109,13 +104,8 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
       url: window.location.href
     };
 
-<<<<<<< HEAD
     // Track error report
     analyticsUtils.trackEvent('error_boundary_report', {
-=======
-    // Track error report (placeholder)
-    console.log('Error boundary report:', {
->>>>>>> b77d6e85dedf0119e2c452a12dd454b506696d80
       error_id: errorId,
       reported: true
     });

@@ -64,9 +64,12 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
   if (!isVisible) return null;
 
   return (
-    <div className="performance-monitor">
-      <div className="monitor-content">
-        {/* Performance monitoring content */}
+    <div className="fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lg shadow-lg font-mono text-sm max-w-sm">
+      <div className="text-xs text-gray-400 mb-2">Performance Monitor (Dev)</div>
+      <div className="space-y-1">
+        {metrics.lcp && <div>LCP: {metrics.lcp.toFixed(2)}ms</div>}
+        {metrics.fid && <div>FID: {metrics.fid.toFixed(2)}ms</div>}
+        {metrics.cls && <div>CLS: {metrics.cls.toFixed(4)}</div>}
       </div>
     </div>
   );
