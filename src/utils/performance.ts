@@ -122,7 +122,8 @@ export class PerformanceMonitor {
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         entries.forEach(entry => {
-          this.metrics.firstInputDelay = entry.processingStart - entry.startTime;
+          const fidEntry = entry as any;
+          this.metrics.firstInputDelay = fidEntry.processingStart - fidEntry.startTime;
         });
       });
       observer.observe({ entryTypes: ['first-input'] });
