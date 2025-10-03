@@ -213,7 +213,7 @@ export const countSyllables = (word: string): number => {
   return Math.max(1, count);
 };
 
-export const generateStructuredData = (type: string, data: Record<string, unknown>): string => {
+export const generateStructuredData = (type: string, data: any): string => {
   const schema = {
     '@context': 'https://schema.org',
     '@type': type,
@@ -222,7 +222,6 @@ export const generateStructuredData = (type: string, data: Record<string, unknow
   
   return `<script type="application/ld+json">${JSON.stringify(schema, null, 2)}</script>`
 };
-
 export const optimizeImages = (images: string[]): string[] => {
   return images.map(image => {
     // Add WebP format suggestion

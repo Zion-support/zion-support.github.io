@@ -9,7 +9,7 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
   const content = [
     {
       id: 'ultimate-business-intelligence-revolution',
-      title= 'AI 2025: The Ultimate Business Intelligence Revolution - Ultimate Breakthrough Guide to 30,000% ROI',
+      title: 'AI 2025: The Ultimate Business Intelligence Revolution - Ultimate Breakthrough Guide to 30,000% ROI',
       description: 'Transform your enterprise with next-generation AI-powered business intelligence that delivers unprecedented insights and competitive advantage.',
       url: '/blog/ai-2025-ultimate-business-intelligence-revolution-ultimate-breakthrough',
       type: 'Blog Post',
@@ -26,7 +26,7 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
     },
     {
       id: 'fortune-500-business-intelligence-success',
-      title= 'Fortune 500 Ultimate Business Intelligence Success: $750B Annual Savings - 30,000% ROI Success Story',
+      title: 'Fortune 500 Ultimate Business Intelligence Success: $750B Annual Savings - 30,000% ROI Success Story',
       description: 'How a $15.2B manufacturing giant achieved unprecedented business intelligence transformation with AI-powered analytics and decision-making systems.',
       url: '/case-studies/fortune-500-ultimate-business-intelligence-30000-roi-success-story',
       type: 'Case Study',
@@ -43,7 +43,7 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
     },
     {
       id: 'business-intelligence-implementation-guide',
-      title= 'AI 2025 Ultimate Business Intelligence Implementation Guide: Complete Roadmap to 30,000% ROI',
+      title: 'AI 2025 Ultimate Business Intelligence Implementation Guide: Complete Roadmap to 30,000% ROI',
       description: 'The definitive guide to implementing revolutionary AI-powered business intelligence that delivers unprecedented competitive advantage and financial returns.',
       url: '/resources/ai-2025-ultimate-business-intelligence-implementation-guide',
       type: 'Implementation Guide',
@@ -72,45 +72,44 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
     : content.filter(item => item.category === activeFilter);
 
   return (
-    <section className="text-left">"
-      <div className="text-left">"
+    <section className="text-left">
+      <div className="text-left">
         {/* Header */}
-        <div className="text-left">"
-          <div className="text-left">"
-            <span className="text-left">🚀 ULTIMATE BREAKTHROUGH<"
+        <div className="text-left">
+          <div className="text-left">
+            <span className="text-left">🚀 ULTIMATE BREAKTHROUGH</span>
           </div>
-          <h2 className="text-left">"
+          <h2 className="text-left">
             AI 2025: Ultimate Business Intelligence Revolution
           </h2>
-          <p className="text-left">"
+          <p className="text-left">
             Discover the revolutionary AI-powered business intelligence that's delivering 
-            <span className="text-left"> 30,000% ROI< and "
-            <span className="text-left"> $750B+ in annual savings< across Fortune 500 companies."
+            <span className="text-left"> 30,000% ROI</span> and 
+            <span className="text-left"> $750B+ in annual savings</span> across Fortune 500 companies.
           </p>
         </div>
 
         {/* Success Metrics */}
-        <div className="text-left">"
-          <div className="text-left">"
+        <div className="text-left">
+          <div className="text-left">
             <div className="text-left">30,000%</div>"
             <div className="text-left">Average ROI</div>"
           </div>
-          <div className="text-left">"
+          <div className="text-left">
             <div className="text-left">$750B+</div>"
             <div className="text-left">Annual Savings</div>"
           </div>
-          <div className="text-left">"
+          <div className="text-left">
             <div className="text-left">99.99%</div>"
             <div className="text-left">Accuracy Rate</div>"
           </div>
-          <div className="text-left">"
+          <div className="text-left">
             <div className="text-left">5,000%</div>"
             <div className="text-left">Faster Decisions</div>"
           </div>
-        </div>
 
         {/* Filter Tabs */}
-        <div className="text-left">"
+        <div className="text-left">
           {filters.map((filter) => (
             <button
               key={filter.id}
@@ -127,108 +126,97 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
         </div>
 
         {/* Content Grid */}
-        <div className="text-left">"
+        <div className="text-left">
           {filteredContent.map((item) => (
             <div
               key={item.id}
-              className="text-left"
-            >
+              className="text-left">
               {/* Content Type Badge */}
-              <div className="text-left">"
-                <div className="text-left">"
+              <div className="text-left">
+                <div className="text-left">
                   <span className={`px-3 py-1 rounded-full text-sm font-medium ${
                     item.category === 'blog' ? 'bg-blue-100 text-blue-800' :
                     item.category === 'case-study' ? 'bg-green-100 text-green-800' :
                     'bg-purple-100 text-purple-800'
                   }`}>
                     {item.type}
-                  <
+                  </span>
                   {item.featured && (
-                    <span className="text-left">"
+                    <span className="text-left">
                       FEATURED
-                    <
+                    </span>
                   )}
                 </div>
-              </div>
 
               {/* Content */}
-              <div className="text-left">"
-                <h3 className="text-left">"
+              <div className="text-left">
+                <h3 className="text-left">
                   {item.title}
                 </h3>
-                <p className="text-left">"
+                <p className="text-left">
                   {item.description}
                 </p>
 
                 {/* Metrics */}
-                <div className="text-left">"
-                  <div className="text-left">"
+                <div className="text-left">
+                  <div className="text-left">
                     <div className="text-left">{item.metrics.roi}</div>"
                     <div className="text-left">ROI</div>"
                   </div>
-                  <div className="text-left">"
+                  <div className="text-left">
                     <div className="text-left">{item.metrics.savings}</div>"
                     <div className="text-left">Savings</div>"
                   </div>
-                </div>
 
                 {/* Tags */}
-                <div className="text-left">"
+                <div className="text-left">
                   {item.tags.slice(0, 3).map((tag) => (
                     <span
                       key={tag}
-                      className="text-left"
-                    >
+                      className="text-left">
                       {tag}
-                    <
+                    </span>
                   ))}
                 </div>
 
                 {/* Action Buttons */}
-                <div className="text-left">"
+                <div className="text-left">
                   <Link
                     href={item.url}
-                    className="text-left"
-                  >
+                    className="text-left">
                     Read {item.type}
                   </Link>
-                  <div className="text-left">"
-                    <span>{item.readingTime}<
-                    <span>•<
-                    <span>Ultimate Breakthrough<
+                  <div className="text-left">
+                    <span>{item.readingTime}</span>
+                    <span>•</span>
+                    <span>Ultimate Breakthrough</span>
                   </div>
-                </div>
               </div>
-            </div>
           ))}
         </div>
 
         {/* Call to Action */}
-        <div className="text-left">"
-          <div className="text-left">"
-            <h3 className="text-left">"
+        <div className="text-left">
+          <div className="text-left">
+            <h3 className="text-left">
               Ready to Achieve 30,000% ROI?
             </h3>
-            <p className="text-left">"
+            <p className="text-left">
               Join Fortune 500 companies transforming their business intelligence with AI-powered analytics.
             </p>
-            <div className="text-left">"
+            <div className="text-left">
               <Link
                 href="/contact"
-                className="text-left"
-              >
+                className="text-left">
                 Get Free Consultation
               </Link>
               <Link
                 href="/resources"
-                className="text-left"
-              >
+                className="text-left">
                 Download Guide
               </Link>
             </div>
-          </div>
         </div>
-      </div>
     </section>
   );
 };
