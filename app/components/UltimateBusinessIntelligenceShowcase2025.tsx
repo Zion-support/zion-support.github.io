@@ -9,7 +9,7 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
   const content = [
     {
       id: 'ultimate-business-intelligence-revolution',
-      title: 'AI 2025: The Ultimate Business Intelligence Revolution - Ultimate Breakthrough Guide to 30,000% ROI',
+      title= 'AI 2025: The Ultimate Business Intelligence Revolution - Ultimate Breakthrough Guide to 30,000% ROI',
       description: 'Transform your enterprise with next-generation AI-powered business intelligence that delivers unprecedented insights and competitive advantage.',
       url: '/blog/ai-2025-ultimate-business-intelligence-revolution-ultimate-breakthrough',
       type: 'Blog Post',
@@ -26,7 +26,7 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
     },
     {
       id: 'fortune-500-business-intelligence-success',
-      title: 'Fortune 500 Ultimate Business Intelligence Success: $750B Annual Savings - 30,000% ROI Success Story',
+      title= 'Fortune 500 Ultimate Business Intelligence Success: $750B Annual Savings - 30,000% ROI Success Story',
       description: 'How a $15.2B manufacturing giant achieved unprecedented business intelligence transformation with AI-powered analytics and decision-making systems.',
       url: '/case-studies/fortune-500-ultimate-business-intelligence-30000-roi-success-story',
       type: 'Case Study',
@@ -43,7 +43,7 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
     },
     {
       id: 'business-intelligence-implementation-guide',
-      title: 'AI 2025 Ultimate Business Intelligence Implementation Guide: Complete Roadmap to 30,000% ROI',
+      title= 'AI 2025 Ultimate Business Intelligence Implementation Guide: Complete Roadmap to 30,000% ROI',
       description: 'The definitive guide to implementing revolutionary AI-powered business intelligence that delivers unprecedented competitive advantage and financial returns.',
       url: '/resources/ai-2025-ultimate-business-intelligence-implementation-guide',
       type: 'Implementation Guide',

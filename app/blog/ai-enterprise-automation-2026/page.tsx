@@ -1,7 +1,7 @@
 import React from 'react';
 
 export const metadata = {
-  title: 'AI Enterprise Automation 2026: Complete Business Process Transformation | Zion Tech Group',
+  title= 'AI Enterprise Automation 2026: Complete Business Process Transformation | Zion Tech Group',
   description: 'Transform your enterprise with AI automation. 95% process efficiency, multimillion-dollar savings, and zero-touch operations across functions.',
   keywords: 'AI enterprise automation 2026, process automation, AI workflows, zero-touch operations, enterprise AI',
 };

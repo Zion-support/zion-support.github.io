@@ -46,7 +46,7 @@ const HomePage: React.FC = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">"
             {/* AI Services */}
-            <div className="bg-gradient-to-br from-blue-50 to-indigo-100 p-8 rounded-xl hover: shadow-lg transition-shadow">"
+            <div className="bg-gradient-to-br from-blue-50 to-indigo-100 p-8 rounded-xl hover:shadow-lg transition-shadow">"
               <div className="text-4xl mb-4">🤖</div>"
               <h3 className="text-2xl font-bold text-gray-900 mb-4">AI Services</h3>"
               <p className="text-gray-600 mb-6">"
@@ -56,13 +56,13 @@ const HomePage: React.FC = () => {
               <div className="space-y-2">"
                 <Link 
                   to="/services/ai-services"
-                  className="block text-blue-600 font-semibold hover: text-blue-800 transition-colors
+                  className="block text-blue-600 font-semibold hover:text-blue-800 transition-colors
                 >
                   AI Services →
                 </Link>
                 <Link "
                   to="/services/advanced-ai"
-                  className="block text-blue-600 font-semibold hover: text-blue-800 transition-colors text-sm
+                  className="block text-blue-600 font-semibold hover:text-blue-800 transition-colors text-sm
                 >
                   Advanced AI Solutions →
                 </Link>
@@ -70,7 +70,7 @@ const HomePage: React.FC = () => {
             </div>
 
             {/* Micro SaaS */}"
-            <div className="bg-gradient-to-br from-green-50 to-emerald-100 p-8 rounded-xl hover: shadow-lg transition-shadow">"
+            <div className="bg-gradient-to-br from-green-50 to-emerald-100 p-8 rounded-xl hover:shadow-lg transition-shadow">"
               <div className="text-4xl mb-4">⚡</div>"
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Micro SaaS</h3>"
               <p className="text-gray-600 mb-6">"
@@ -80,13 +80,13 @@ const HomePage: React.FC = () => {
               <div className="space-y-2">"
                 <Link 
                   to="/services/micro-saas"
-                  className="block text-green-600 font-semibold hover: text-green-800 transition-colors
+                  className="block text-green-600 font-semibold hover:text-green-800 transition-colors
                 >
                   Micro SaaS →
                 </Link>
                 <Link "
                   to="/services/innovative-micro-saas"
-                  className="block text-green-600 font-semibold hover: text-green-800 transition-colors text-sm
+                  className="block text-green-600 font-semibold hover:text-green-800 transition-colors text-sm
                 >
                   Innovative Micro SaaS →
                 </Link>
@@ -94,7 +94,7 @@ const HomePage: React.FC = () => {
             </div>
 
             {/* IT Services */}"
-            <div className="bg-gradient-to-br from-purple-50 to-violet-100 p-8 rounded-xl hover: shadow-lg transition-shadow">"
+            <div className="bg-gradient-to-br from-purple-50 to-violet-100 p-8 rounded-xl hover:shadow-lg transition-shadow">"
               <div className="text-4xl mb-4">🛠️</div>"
               <h3 className="text-2xl font-bold text-gray-900 mb-4">IT Services</h3>"
               <p className="text-gray-600 mb-6">"
@@ -104,13 +104,13 @@ const HomePage: React.FC = () => {
               <div className="space-y-2">"
                 <Link 
                   to="/services/it-services"
-                  className="block text-purple-600 font-semibold hover: text-purple-800 transition-colors
+                  className="block text-purple-600 font-semibold hover:text-purple-800 transition-colors
                 >
                   IT Services →
                 </Link>
                 <Link "
                   to="/services/comprehensive-it"
-                  className="block text-purple-600 font-semibold hover: text-purple-800 transition-colors text-sm
+                  className="block text-purple-600 font-semibold hover:text-purple-800 transition-colors text-sm
                 >
                   Comprehensive IT Solutions →
                 </Link>
@@ -131,40 +131,40 @@ const HomePage: React.FC = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">"
-            <div className="bg-white p-8 rounded-xl shadow-sm hover: shadow-md transition-shadow">"
+            <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">"
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Enterprise</h3>"
               <p className="text-gray-600 mb-6">"
                 Comprehensive solutions for large organizations with complex infrastructure needs.
               </p>
               <Link 
                 to="/solutions/enterprise"
-                className="text-blue-600 font-semibold hover: text-blue-800 transition-colors
+                className="text-blue-600 font-semibold hover:text-blue-800 transition-colors
               >
                 Enterprise Solutions →
               </Link>
             </div>
 "
-            <div className="bg-white p-8 rounded-xl shadow-sm hover: shadow-md transition-shadow">"
+            <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">"
               <h3 className="text-2xl font-bold text-gray-900 mb-4">SMB</h3>"
               <p className="text-gray-600 mb-6">"
                 Cost-effective solutions designed for small and medium businesses.
               </p>
               <Link 
                 to="/solutions/smb"
-                className="text-blue-600 font-semibold hover: text-blue-800 transition-colors
+                className="text-blue-600 font-semibold hover:text-blue-800 transition-colors
               >
                 SMB Solutions →
               </Link>
             </div>
 "
-            <div className="bg-white p-8 rounded-xl shadow-sm hover: shadow-md transition-shadow">"
+            <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">"
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Startup</h3>"
               <p className="text-gray-600 mb-6">"
                 Agile solutions to help startups scale quickly and efficiently.
               </p>
               <Link 
                 to="/solutions/startup"
-                className="text-blue-600 font-semibold hover: text-blue-800 transition-colors
+                className="text-blue-600 font-semibold hover:text-blue-800 transition-colors
               >
                 Startup Solutions →
               </Link>

@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Cognitive Computing Services - Next-Generation Intelligence',
+  title= 'AI Cognitive Computing Services - Next-Generation Intelligence',
   description: 'Transform your business with AI cognitive computing that mimics human reasoning, learns continuously, and achieves 300% productivity gains.',
   keywords: 'AI cognitive computing, artificial intelligence, machine learning, cognitive systems, AI reasoning',
 };

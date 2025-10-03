@@ -64,8 +64,8 @@ const AIIncidentResponsePlaybooks2025: React.FC = () => {
           </ul>
         </div>
 
-            <a title: "Internal link", href="/contact" className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover: bg-blue-700 transition-colors">Talk to an Expert</a>",
-            <a title: "Internal link", href="/services/ai-autonomous-operations" className ="border border-gray-600 text-white px-8 py-3 rounded-lg font-semibold hover: bg-gray-800 transition-colors">Explore Services</a>",
+            <a title= "Internal link", href="/contact" className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">Talk to an Expert</a>
+            <a title= "Internal link", href="/services/ai-autonomous-operations" className="border border-gray-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors">Explore Services</a>
           </div>
         </div>
       </div>

@@ -3,7 +3,7 @@
 const promoted = [
   {
     href: '/blog/ai-2026-hyperintelligence-breakthrough',
-    title: 'AI 2026: Hyperintelligence Breakthrough',
+    title= 'AI 2026: Hyperintelligence Breakthrough',
     desc: 'Revolutionary cognitive enhancement achieving 10,000x performance with sub-millisecond decision-making.',
     emoji: '🧠',
     pill: 'BREAKTHROUGH • Jan 25, 2026',
@@ -11,7 +11,7 @@ const promoted = [
   },
   {
     href: '/blog/ai-2025-edge-intelligence-revolution',
-    title: 'AI 2025: The Edge Intelligence Revolution',
+    title= 'AI 2025: The Edge Intelligence Revolution',
     desc: 'Real-time AI at planet scale: <10ms latency, 65% bandwidth savings, 45% SLA gains.',
     emoji: '🌐',
     pill: 'NEW • Oct 1, 2025',
@@ -19,7 +19,7 @@ const promoted = [
   },
   {
     href: '/case-studies/hyperintelligence-mega-success-2026',
-    title: 'Hyperintelligence Mega Success 2026',
+    title= 'Hyperintelligence Mega Success 2026',
     desc: 'How a Fortune 500 company achieved $3.2B ROI through revolutionary AI hyperintelligence transformation.',
     emoji: '🏆',
     pill: 'MEGA SUCCESS • Jan 26, 2026',
@@ -27,7 +27,7 @@ const promoted = [
   },
   {
     href: '/blog/ai-2026-neural-architecture-search-breakthrough',
-    title: 'Neural Architecture Search 2026',
+    title= 'Neural Architecture Search 2026',
     desc: 'Revolutionary NAS algorithms that design optimal neural architectures 1000x faster than humans.',
     emoji: '🔬',
     pill: 'New • Jan 15, 2026',
@@ -35,7 +35,7 @@ const promoted = [
   },
   {
     href: '/guides/ai-2025-executive-edge-ai-deployment-guide',
-    title: 'Executive Guide: Deploying Edge AI (90-Day Blueprint)',
+    title= 'Executive Guide: Deploying Edge AI (90-Day Blueprint)',
     desc: 'Phased plan for secure, low-latency edge AI with OTA, MLOps, and ROI tracking.',
     emoji: '📘',
     pill: 'GUIDE • Oct 1, 2025',
@@ -43,7 +43,7 @@ const promoted = [
   },
   {
     href: '/services/ai-2026-hyperintelligence-breakthrough',
-    title: 'AI Hyperintelligence Services',
+    title= 'AI Hyperintelligence Services',
     desc: 'Transform your enterprise with revolutionary AI achieving consciousness-level reasoning and autonomous operations.',
     emoji: '🚀',
     pill: 'NEW SERVICE • Jan 25, 2026',

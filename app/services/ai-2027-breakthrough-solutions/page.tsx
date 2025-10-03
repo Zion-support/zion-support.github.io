@@ -2,11 +2,11 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI 2027 Breakthrough Solutions - Revolutionary Enterprise AI Transformation',
+  title= 'AI 2027 Breakthrough Solutions - Revolutionary Enterprise AI Transformation',
   description: 'Transform your enterprise with breakthrough AI 2027 technologies. Achieve 500% ROI, 1000x faster processing, and 99.9% accuracy with neural quantum computing and autonomous decision systems.',
   keywords: 'AI 2027 breakthrough solutions, neural quantum computing, autonomous AI systems, enterprise AI transformation, AI ROI, quantum AI, neural interfaces',
   openGraph: {
-    title: 'AI 2027 Breakthrough Solutions - Revolutionary Enterprise AI Transformation',
+    title= 'AI 2027 Breakthrough Solutions - Revolutionary Enterprise AI Transformation',
     description: 'Transform your enterprise with breakthrough AI 2027 technologies. Achieve 500% ROI, 1000x faster processing, and 99.9% accuracy.',
     type: 'website',
     url: 'https://ziontechgroup.com/services/ai-2027-breakthrough-solutions',

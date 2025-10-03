@@ -6,9 +6,9 @@ const Page: () => {
         <title >GenAI Cost Optimization v5 — Tier Routing + Caches + Scorecards</title>
         <meta name: "description",;,"
   content: "Achieve 60–85% GenAI cost savings with economy/quality tier routing, semantic caches, KV stores, and KPI-linked eval scorecards.", /><link rel: "canonical", href="https://ziontechgroup.com/blog/genai-2025-oct-01-cost-optimization-v5/>",;,"
-  content: "Achieve 60–85% GenAI cost savings with economy/quality tier routing, semantic caches, KV stores, and KPI-linked eval scorecards.",
+  content: "Achieve 60–85% GenAI cost savings with economy/quality tier routing, semantic caches, KV stores, and KPI-linked eval scorecards.
         />
-        <link rel: "canonical", href ="https: //ziontechgroup.com/blog/genai-2025-oct-01-cost-optimization-v5" />",
+        <link rel: "canonical", href ="https: //ziontechgroup.com/blog/genai-2025-oct-01-cost-optimization-v5" />
       </Helmet>
 
   Tier routing, semantic caches, retrieval freshness windows, and KPI‑linked scorecards to cut GenAI costs by
@@ -25,7 +25,7 @@ const Page: () => {
               Record traces, costs, and quality metrics. Fail closed with rollbacks when scorecards dip below thresholds.
             </p>
 
-              <Link to: "/blog", className ="text-cyan-300 hover: underline">← Back to Blog</Link>",
+              <Link to: "/blog", className="text-cyan-300 hover:underline">← Back to Blog</Link>
             </div>
           </div>
         </div>

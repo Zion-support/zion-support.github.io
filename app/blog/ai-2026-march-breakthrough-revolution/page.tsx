@@ -2,11 +2,11 @@ import React from 'react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'March 2026 AI Breakthrough Revolution: The Next Frontier of Enterprise Intelligence',
+  title= 'March 2026 AI Breakthrough Revolution: The Next Frontier of Enterprise Intelligence',
   description: 'Discover the revolutionary AI breakthroughs of March 2026 that are transforming enterprise operations with unprecedented intelligence, automation, and value generation.',
   keywords: ['AI', 'Enterprise', 'Breakthrough', '2026', 'Revolution', 'Intelligence', 'Quantum', 'Neural Networks'],
   openGraph: {
-    title: 'March 2026 AI Breakthrough Revolution: The Next Frontier of Enterprise Intelligence',
+    title= 'March 2026 AI Breakthrough Revolution: The Next Frontier of Enterprise Intelligence',
     description: 'Discover the revolutionary AI breakthroughs of March 2026 that are transforming enterprise operations with unprecedented intelligence, automation, and value generation.',
     type: 'article',
     publishedTime: '2026-03-01T00:00:00.000Z',

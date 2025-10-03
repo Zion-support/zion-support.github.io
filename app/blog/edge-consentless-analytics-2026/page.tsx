@@ -3,7 +3,7 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Edge Analytics 2026: Consent‑Safe Insights — Zion Tech Group',
+  title= 'Edge Analytics 2026: Consent‑Safe Insights — Zion Tech Group',
   description: 'Scoped IDs, on‑device aggregation, and differential privacy for actionable insights without PII at <100ms.',
 };
 

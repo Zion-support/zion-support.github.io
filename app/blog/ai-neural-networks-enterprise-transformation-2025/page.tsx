@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Neural Networks Enterprise Transformation 2025 | Zion Tech Group',
+  title= 'AI Neural Networks Enterprise Transformation 2025 | Zion Tech Group',
   description:
     'Deploy advanced neural network architectures with enterprise guardrails, achieving 98.5% accuracy, 10x ROI, and 85% efficiency gains.',
 };

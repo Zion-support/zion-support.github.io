@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Cybersecurity Automation 2025: Autonomous Defense for the Enterprise',
+  title= 'AI Cybersecurity Automation 2025: Autonomous Defense for the Enterprise',
   description: 'Production patterns for autonomous cyber defense: detection, response, and hardening with 99.7% precision.',
   keywords: 'AI cybersecurity 2025, autonomous defense, SOAR, anomaly detection, zero trust',
 };
@@ -91,7 +91,7 @@ export default function AICybersecurityAutomation2025Page() {
   );
 }
 
-function RelatedArticleCard({ title, description, href }: { title: string; description: string; href: string }) {
+function RelatedArticleCard({ title, description, href }: { title= string; description: string; href: string }) {
   return (
     <Link href={href} className="block bg-white rounded-lg p-6 hover:shadow-lg transition-all duration-300">
       <h3 className="text-xl font-bold text-gray-900 mb-3">{title}</h3>

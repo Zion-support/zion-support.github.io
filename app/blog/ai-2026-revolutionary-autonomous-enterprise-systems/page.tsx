@@ -2,11 +2,11 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI 2026 Revolutionary Autonomous Enterprise Systems - Zion Tech Group',
+  title= 'AI 2026 Revolutionary Autonomous Enterprise Systems - Zion Tech Group',
   description: 'Discover the breakthrough in AI 2026 Revolutionary Autonomous Enterprise Systems that achieved 99.7% automation efficiency and $2.8B ROI for Fortune 500 companies.',
   keywords: 'AI 2026, autonomous enterprise, revolutionary systems, automation breakthrough, Fortune 500, ROI',
   openGraph: {
-    title: 'AI 2026 Revolutionary Autonomous Enterprise Systems - Zion Tech Group',
+    title= 'AI 2026 Revolutionary Autonomous Enterprise Systems - Zion Tech Group',
     description: 'Discover the breakthrough in AI 2026 Revolutionary Autonomous Enterprise Systems that achieved 99.7% automation efficiency and $2.8B ROI for Fortune 500 companies.',
     url: 'https://ziontechgroup.com/blog/ai-2026-revolutionary-autonomous-enterprise-systems',
     type: 'article',

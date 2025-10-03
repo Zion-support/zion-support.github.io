@@ -77,33 +77,33 @@ export default function AI2025OctoberEdgeMLDeploymentRevolution() {
           <div className="grid md:grid-cols-2 gap-6">
             {[
               {
-                title: "Model Quantization",
-                desc: "Reduce model size by 75% while maintaining 98%+ accuracy through INT8 quantization",
+                title: "Model Quantization
+                desc: "Reduce model size by 75% while maintaining 98%+ accuracy through INT8 quantization
                 metrics: ["75% Size Reduction", "98% Accuracy Maintained", "3x Faster Inference"]
               },
               {
-                title: "Neural Architecture Search",
-                desc: "Automatically discover optimal model architectures for specific edge hardware",
+                title: "Neural Architecture Search
+                desc: "Automatically discover optimal model architectures for specific edge hardware
                 metrics: ["40% Faster Models", "Auto-Optimization", "Hardware-Aware"]
               },
               {
-                title: "Federated Learning",
-                desc: "Train models across distributed edge devices while preserving data privacy",
+                title: "Federated Learning
+                desc: "Train models across distributed edge devices while preserving data privacy
                 metrics: ["Privacy-Preserving", "Distributed Training", "Global Model Updates"]
               },
               {
-                title: "Hardware Acceleration",
-                desc: "Leverage specialized edge AI chips for 100x performance improvements",
+                title: "Hardware Acceleration
+                desc: "Leverage specialized edge AI chips for 100x performance improvements
                 metrics: ["100x Performance", "NPU/TPU Support", "Low Power Consumption"]
               },
               {
-                title: "On-Device Training",
-                desc: "Enable continuous learning directly on edge devices without cloud connectivity",
+                title: "On-Device Training
+                desc: "Enable continuous learning directly on edge devices without cloud connectivity
                 metrics: ["Offline Learning", "Real-Time Adaptation", "No Cloud Dependency"]
               },
               {
-                title: "Model Compression",
-                desc: "Advanced pruning and distillation techniques for ultra-efficient models",
+                title: "Model Compression
+                desc: "Advanced pruning and distillation techniques for ultra-efficient models
                 metrics: ["90% Parameter Reduction", "Minimal Accuracy Loss", "Fast Deployment"]
               }
             ].map((tech, idx) => (

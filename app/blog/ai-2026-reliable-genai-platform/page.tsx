@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Reliable GenAI Platform 2026: Architecture, Guardrails, and ROI',
+  title= 'Reliable GenAI Platform 2026: Architecture, Guardrails, and ROI',
   description:
     'Design a reliable, cost‑efficient GenAI platform with routing, memory, evals, and policy guardrails. A pragmatic 2026 blueprint for enterprises.',
 };

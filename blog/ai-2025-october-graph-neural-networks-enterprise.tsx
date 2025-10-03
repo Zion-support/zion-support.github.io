@@ -78,33 +78,33 @@ export default function AI2025OctoberGraphNeuralNetworksEnterprise() {
           <div className="grid md:grid-cols-2 gap-6">
             {[
               {
-                title: "Graph Convolutional Networks (GCN)",
-                desc: "Generalize convolutions to irregular graph structures for node classification",
+                title: "Graph Convolutional Networks (GCN)
+                desc: "Generalize convolutions to irregular graph structures for node classification
                 metrics: ["Node Classification", "Semi-Supervised", "Spectral Methods"]
               },
               {
-                title: "Graph Attention Networks (GAT)",
-                desc: "Learn importance weights for neighboring nodes dynamically",
+                title: "Graph Attention Networks (GAT)
+                desc: "Learn importance weights for neighboring nodes dynamically
                 metrics: ["Attention Mechanism", "Dynamic Weighting", "Heterogeneous Graphs"]
               },
               {
-                title: "GraphSAGE",
-                desc: "Inductive learning framework for generating node embeddings at scale",
+                title: "GraphSAGE
+                desc: "Inductive learning framework for generating node embeddings at scale
                 metrics: ["Inductive Learning", "Billions of Nodes", "Real-Time Inference"]
               },
               {
-                title: "Temporal Graph Networks",
-                desc: "Model dynamic graphs that evolve over time with temporal dependencies",
+                title: "Temporal Graph Networks
+                desc: "Model dynamic graphs that evolve over time with temporal dependencies
                 metrics: ["Time-Series Graphs", "Evolution Tracking", "Event Prediction"]
               },
               {
-                title: "Heterogeneous GNNs",
-                desc: "Handle multiple node types and edge types in complex knowledge graphs",
+                title: "Heterogeneous GNNs
+                desc: "Handle multiple node types and edge types in complex knowledge graphs
                 metrics: ["Multi-Type Nodes", "Rich Semantics", "Enterprise Graphs"]
               },
               {
-                title: "Graph Transformers",
-                desc: "Combine transformer attention with graph structure for powerful reasoning",
+                title: "Graph Transformers
+                desc: "Combine transformer attention with graph structure for powerful reasoning
                 metrics: ["Global Context", "Long-Range Dependencies", "State-of-the-Art"]
               }
             ].map((arch, idx) => (
@@ -129,33 +129,33 @@ export default function AI2025OctoberGraphNeuralNetworksEnterprise() {
           <div className="space-y-6">
             {[
               {
-                title: "Fraud Detection & Prevention",
-                desc: "Detect complex fraud rings by analyzing transaction networks and identifying suspicious patterns across millions of entities",
+                title: "Fraud Detection & Prevention
+                desc: "Detect complex fraud rings by analyzing transaction networks and identifying suspicious patterns across millions of entities
                 results: ["99.3% Detection Rate", "63% Fewer False Positives", "$4.2B Fraud Prevented"]
               },
               {
-                title: "Recommendation Systems",
-                desc: "Build next-generation recommenders that understand user-item interactions in rich social and content graphs",
+                title: "Recommendation Systems
+                desc: "Build next-generation recommenders that understand user-item interactions in rich social and content graphs
                 results: ["47% Higher Engagement", "38% More Revenue", "12x Better Personalization"]
               },
               {
-                title: "Drug Discovery",
-                desc: "Accelerate molecular property prediction and drug-target interaction modeling using molecular graphs",
+                title: "Drug Discovery
+                desc: "Accelerate molecular property prediction and drug-target interaction modeling using molecular graphs
                 results: ["10x Faster Discovery", "92% Accuracy", "$800M Cost Savings"]
               },
               {
-                title: "Supply Chain Optimization",
-                desc: "Model entire supply networks to predict disruptions and optimize routing across global operations",
+                title: "Supply Chain Optimization
+                desc: "Model entire supply networks to predict disruptions and optimize routing across global operations
                 results: ["34% Cost Reduction", "98% On-Time Delivery", "Real-Time Optimization"]
               },
               {
-                title: "Knowledge Graph Reasoning",
-                desc: "Answer complex queries over enterprise knowledge graphs with multi-hop reasoning and inference",
+                title: "Knowledge Graph Reasoning
+                desc: "Answer complex queries over enterprise knowledge graphs with multi-hop reasoning and inference
                 results: ["23x Faster Queries", "96% Accuracy", "Automated Insights"]
               },
               {
-                title: "Social Network Analysis",
-                desc: "Understand community structures, influence propagation, and user behavior at massive scale",
+                title: "Social Network Analysis
+                desc: "Understand community structures, influence propagation, and user behavior at massive scale
                 results: ["Billion-Scale Graphs", "Real-Time Analysis", "Predictive Modeling"]
               }
             ].map((app, idx) => (

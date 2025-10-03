@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'December 2025 Advanced Autonomous Systems Revolution | Zion Tech Group',
+  title= 'December 2025 Advanced Autonomous Systems Revolution | Zion Tech Group',
   description: 'Discover the revolutionary breakthrough in autonomous systems achieving 99.99% automation, universal intelligence integration, and $500B+ enterprise value generation.',
   keywords: 'autonomous systems, AI automation, enterprise AI, December 2025, Zion Tech Group',
 };

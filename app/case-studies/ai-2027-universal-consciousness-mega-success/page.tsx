@@ -3,11 +3,11 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'AI 2027 Universal Consciousness Integration - $500B+ Mega Success - Zion Tech Group',
+  title= 'AI 2027 Universal Consciousness Integration - $500B+ Mega Success - Zion Tech Group',
   description: 'Fortune 500 enterprise achieves $500B+ value creation through universal consciousness AI integration, revolutionizing business operations and achieving unprecedented success.',
   keywords: 'AI success story, universal consciousness, enterprise AI, $500B success, Fortune 500, Zion Tech Group, 2027',
   openGraph: {
-    title: 'AI 2027 Universal Consciousness Integration - $500B+ Mega Success',
+    title= 'AI 2027 Universal Consciousness Integration - $500B+ Mega Success',
     description: 'Fortune 500 enterprise achieves $500B+ value creation through universal consciousness AI integration.',
     type: 'article',
     publishedTime: '2027-01-20T00:00:00Z',

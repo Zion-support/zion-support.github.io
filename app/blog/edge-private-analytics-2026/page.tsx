@@ -2,10 +2,10 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-	title: 'Edge Private Analytics 2026 | Zion Tech Group',
+	title= 'Edge Private Analytics 2026 | Zion Tech Group',
 	description: 'Scoped IDs, on‑device metrics, and DP noise for compliant analytics under <100ms.',
 	openGraph: {
-		title: 'Edge Private Analytics 2026',
+		title= 'Edge Private Analytics 2026',
 		description: 'Scoped IDs, on‑device metrics, and DP noise without PII.',
 		type: 'article'
 	}

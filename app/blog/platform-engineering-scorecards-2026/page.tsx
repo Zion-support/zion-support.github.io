@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Platform Engineering Scorecards 2026: Measure What Matters',
+  title= 'Platform Engineering Scorecards 2026: Measure What Matters',
   description: 'A practical, executive-ready scorecard framework for Platform Engineering in 2026: reliability, velocity, cost, and developer experience.',
   keywords: 'platform engineering, scorecards 2026, DORA, reliability, developer experience, platform KPIs',
 };
@@ -160,7 +160,7 @@ export default function PlatformEngineeringScorecards2026Page() {
   );
 }
 
-function RelatedArticleCard({ title, description, href }: { title: string; description: string; href: string }) {
+function RelatedArticleCard({ title, description, href }: { title= string; description: string; href: string }) {
   return (
     <Link href={href} className="block bg-white rounded-lg p-6 hover:shadow-lg transition-all duration-300">
       <h3 className="text-xl font-bold text-gray-900 mb-3">{title}</h3>

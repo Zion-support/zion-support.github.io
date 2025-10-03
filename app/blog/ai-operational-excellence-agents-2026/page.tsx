@@ -2,11 +2,11 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-	title: 'AI Operational Excellence 2026: Autonomous Agents Driving 10x Efficiency',
+	title= 'AI Operational Excellence 2026: Autonomous Agents Driving 10x Efficiency',
 	description:
 		'How production-grade agents orchestrate enterprise operations safely with guardrails, observability, and policy tests to deliver 10x efficiency.',
 	openGraph: {
-		title: 'AI Operational Excellence 2026',
+		title= 'AI Operational Excellence 2026',
 		description:
 			'Blueprint for operational excellence with autonomous agents, safety guardrails, and reliability engineering.',
 		url: 'https://ziontechgroup.com/blog/ai-operational-excellence-agents-2026',

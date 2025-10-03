@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Neuromorphic Enterprise Computing: Brain-Inspired Intelligence Revolution | Zion Tech Group',
+  title= 'AI Neuromorphic Enterprise Computing: Brain-Inspired Intelligence Revolution | Zion Tech Group',
   description: 'Discover how neuromorphic computing is revolutionizing enterprise AI with brain-inspired architectures that deliver 1000x energy efficiency and real-time processing.',
   keywords: 'neuromorphic computing, brain-inspired AI, enterprise computing, spiking neural networks, energy-efficient AI',
 };

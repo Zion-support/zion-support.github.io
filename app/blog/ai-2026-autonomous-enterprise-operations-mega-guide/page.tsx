@@ -2,7 +2,7 @@ import React from 'react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'AI 2026: Autonomous Enterprise Operations - Complete Mega Guide | Zion Tech Group',
+  title= 'AI 2026: Autonomous Enterprise Operations - Complete Mega Guide | Zion Tech Group',
   description: 'The definitive guide to achieving 98% automation with autonomous AI systems. Complete blueprint for enterprise transformation with proven results.',
   keywords: 'ai, automation, enterprise, autonomous-operations, guide, 2026',
 };

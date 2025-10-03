@@ -2,11 +2,11 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI 2027 Revolutionary Transformation: $500M ROI Mega Success Story - Fortune 100 Case Study',
+  title= 'AI 2027 Revolutionary Transformation: $500M ROI Mega Success Story - Fortune 100 Case Study',
   description: 'Discover how a Fortune 100 company achieved $500M ROI through revolutionary AI transformation using Advanced Autonomous Systems, Quantum-Enhanced ML, and Neuromorphic Computing.',
   keywords: 'AI transformation, $500M ROI, Fortune 100, autonomous systems, quantum AI, neuromorphic computing, enterprise success',
   openGraph: {
-    title: 'AI 2027 Revolutionary Transformation: $500M ROI Mega Success Story - Fortune 100 Case Study',
+    title= 'AI 2027 Revolutionary Transformation: $500M ROI Mega Success Story - Fortune 100 Case Study',
     description: 'Discover how a Fortune 100 company achieved $500M ROI through revolutionary AI transformation using cutting-edge technologies.',
     type: 'article',
   },

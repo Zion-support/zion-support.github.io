@@ -13,7 +13,7 @@ const Page: () => {
           <li >Scorecards correlating with business KPIs</li>
         </ul>
       </div>
-        <Link to: "/blog", className ="text-cyan-300 underline">Back to Blog</Link>",
+        <Link to: "/blog", className="text-cyan-300 underline">Back to Blog</Link>
       </div>
     </div>
   );

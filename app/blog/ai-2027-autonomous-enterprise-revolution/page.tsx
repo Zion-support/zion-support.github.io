@@ -3,11 +3,11 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'AI 2027 Autonomous Enterprise Revolution: Complete Business Autonomy - Zion Tech Group',
+  title= 'AI 2027 Autonomous Enterprise Revolution: Complete Business Autonomy - Zion Tech Group',
   description: 'Discover how AI 2027 Autonomous Enterprise Revolution delivers complete business autonomy with self-managing operations, autonomous decision-making, and self-evolving business processes.',
   keywords: 'autonomous enterprise, business autonomy, AI 2027, self-managing operations, autonomous business',
   openGraph: {
-    title: 'AI 2027 Autonomous Enterprise Revolution: Complete Business Autonomy',
+    title= 'AI 2027 Autonomous Enterprise Revolution: Complete Business Autonomy',
     description: 'Complete business autonomy with self-managing operations and autonomous decision-making.',
     type: 'article',
     publishedTime: '2027-03-20T00:00:00.000Z',

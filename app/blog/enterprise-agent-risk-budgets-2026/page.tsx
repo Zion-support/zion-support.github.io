@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-	title: 'Enterprise Agent Risk Budgets: Safe Autonomy at Scale',
+	title= 'Enterprise Agent Risk Budgets: Safe Autonomy at Scale',
 	description: 'Explicit budgets, approvals, and rollback triggers for agent actions across orgs.'
 };
 

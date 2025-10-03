@@ -1,5 +1,5 @@
 export const metadata = {
-  title: 'Cloud-Native AI Platform Excellence — October 2025 | Zion Tech Group',
+  title= 'Cloud-Native AI Platform Excellence — October 2025 | Zion Tech Group',
   description:
     'Engineering guide to build reliable, scalable cloud-native AI platforms with 99.99% uptime and breakthrough performance.',
 };

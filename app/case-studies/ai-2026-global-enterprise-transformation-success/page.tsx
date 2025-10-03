@@ -2,11 +2,11 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Global Enterprise AI Transformation: $500M ROI Success Story 2026',
+  title= 'Global Enterprise AI Transformation: $500M ROI Success Story 2026',
   description: 'Discover how a Fortune 100 global enterprise achieved $500M ROI through revolutionary AI transformation, including quantum-enhanced systems and autonomous operations.',
   keywords: 'AI transformation success, Fortune 100, $500M ROI, global enterprise, AI case study, quantum AI, autonomous operations',
   openGraph: {
-    title: 'Global Enterprise AI Transformation: $500M ROI Success Story 2026',
+    title= 'Global Enterprise AI Transformation: $500M ROI Success Story 2026',
     description: 'Revolutionary AI transformation delivering $500M ROI for global enterprise',
     type: 'article',
     publishedTime: '2026-01-25T00:00:00.000Z',

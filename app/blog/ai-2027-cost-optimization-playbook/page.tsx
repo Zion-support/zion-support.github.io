@@ -3,10 +3,10 @@ import Link from 'next/link';
 import { DollarSign } from 'lucide-react';
 
 export const metadata = {
-  title: 'AI 2027 Cost Optimization Playbook | Zion Tech Group',
+  title= 'AI 2027 Cost Optimization Playbook | Zion Tech Group',
   description: 'Cut AI spend 30–70% with routing, caching, quantization, and guardrails while maintaining quality.',
   openGraph: {
-    title: 'AI 2027 Cost Optimization Playbook',
+    title= 'AI 2027 Cost Optimization Playbook',
     description: 'Tier models, cache prompts, and enforce budgets with KPI-linked routes to sustain UX under cost constraints.',
     type: 'article',
     url: 'https://ziontechgroup.com/blog/ai-2027-cost-optimization-playbook',

@@ -2,12 +2,12 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI 2026 Quantum Consciousness Success: $2.5B ROI Achievement',
+  title= 'AI 2026 Quantum Consciousness Success: $2.5B ROI Achievement',
   description: 'Fortune 100 enterprise achieves $2.5B ROI through quantum consciousness AI implementation. Revolutionary results with 100,000x performance gains.',
   keywords: 'quantum AI success, $2.5B ROI, Fortune 100, consciousness breakthrough, enterprise transformation',
   authors: [{ name: 'Zion Tech Group' }],
   openGraph: {
-    title: 'AI 2026 Quantum Consciousness Success: $2.5B ROI Achievement',
+    title= 'AI 2026 Quantum Consciousness Success: $2.5B ROI Achievement',
     description: 'Fortune 100 enterprise achieves $2.5B ROI through quantum consciousness AI implementation.',
     url: 'https://ziontechgroup.com/case-studies/ai-2026-quantum-consciousness-mega-success',
     siteName: 'Zion Tech Group',
@@ -16,7 +16,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AI 2026 Quantum Consciousness Success: $2.5B ROI',
+    title= 'AI 2026 Quantum Consciousness Success: $2.5B ROI',
     description: 'Fortune 100 enterprise achieves $2.5B ROI through quantum consciousness AI implementation.',
   },
 };

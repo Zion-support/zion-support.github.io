@@ -2,11 +2,11 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Autonomous Enterprise Operations 2027: Complete Business Automation - Zion Tech Group',
+  title= 'Autonomous Enterprise Operations 2027: Complete Business Automation - Zion Tech Group',
   description: 'Discover how autonomous enterprise operations can achieve 99.9% automation rates, eliminate manual processes, and deliver unprecedented business efficiency with AI-driven systems.',
   keywords: 'Autonomous Enterprise, Business Automation, AI Operations, Enterprise AI, Process Automation, Business Intelligence',
   openGraph: {
-    title: 'Autonomous Enterprise Operations 2027: Complete Business Automation',
+    title= 'Autonomous Enterprise Operations 2027: Complete Business Automation',
     description: 'Achieve 99.9% automation rates with autonomous enterprise operations that eliminate manual processes',
     type: 'article',
     publishedTime: '2027-01-20T00:00:00.000Z',

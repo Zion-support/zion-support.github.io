@@ -6,9 +6,9 @@ const Page: () => {
         <title >Agent Reliability Runbooks v5 — Budgets, Canaries, Rollback</title>
         <meta name: "description",;,"
   content: "Execute safe, budget-aware agent operations using KPI-linked playbooks, canary scorecards, and instant rollback.", /><link rel: "canonical", href="https://ziontechgroup.com/blog/ai-2025-oct-01-agent-reliability-runbooks-v5/>",;,"
-  content: "Execute safe, budget-aware agent operations using KPI-linked playbooks, canary scorecards, and instant rollback.",
+  content: "Execute safe, budget-aware agent operations using KPI-linked playbooks, canary scorecards, and instant rollback.
         />
-        <link rel: "canonical", href ="https: //ziontechgroup.com/blog/ai-2025-oct-01-agent-reliability-runbooks-v5" />",
+        <link rel: "canonical", href ="https: //ziontechgroup.com/blog/ai-2025-oct-01-agent-reliability-runbooks-v5" />
       </Helmet>
 
   Practical runbooks for governing autonomous agents with budgeted actions, KPI‑linked canaries, and deterministic rollback
@@ -25,7 +25,7 @@ const Page: () => {
               telemetry validates stability. Automate rollback after two consecutive score violations.
             </p>
 
-              <Link to: "/blog", className ="text-cyan-300 hover: underline">← Back to Blog</Link>",
+              <Link to: "/blog", className="text-cyan-300 hover:underline">← Back to Blog</Link>
             </div>
           </div>
         </div>

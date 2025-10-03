@@ -6,25 +6,25 @@ import Link from 'next/link';
 export default function NotFound() {
   const popularPages = [
     {
-      title: 'AI Services',
+      title= 'AI Services',
       description: 'Explore our comprehensive AI and IT solutions',
       href: '/services',
       icon: '🤖',
     },
     {
-      title: 'Blog & Insights',
+      title= 'Blog & Insights',
       description: 'Read about latest AI trends and innovations',
       href: '/blog',
       icon: '📚',
     },
     {
-      title: 'Case Studies',
+      title= 'Case Studies',
       description: 'See our success stories and client results',
       href: '/case-studies',
       icon: '📊',
     },
     {
-      title: 'Contact Us',
+      title= 'Contact Us',
       description: 'Get in touch with our AI experts',
       href: '/contact',
       icon: '📞',

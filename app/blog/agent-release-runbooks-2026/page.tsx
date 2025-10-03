@@ -2,11 +2,11 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Agent Release Runbooks 2026: Approvals, Budgets, Instant Rollback',
+  title= 'Agent Release Runbooks 2026: Approvals, Budgets, Instant Rollback',
   description:
     'Operational playbooks for safe autonomous agent releases: approvals, budget guards, canary evals, and instant rollback.',
   openGraph: {
-    title: 'Agent Release Runbooks 2026',
+    title= 'Agent Release Runbooks 2026',
     description:
       'Approvals + budgets + KPI-linked canary evals with instant rollback for safe agent releases.',
     type: 'article',

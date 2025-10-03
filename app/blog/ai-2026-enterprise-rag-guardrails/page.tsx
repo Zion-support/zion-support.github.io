@@ -1,11 +1,11 @@
 import React from 'react';
 
 export const metadata = {
-  title: 'Enterprise RAG Guardrails 2026: Safe, Reliable, and Controllable AI',
+  title= 'Enterprise RAG Guardrails 2026: Safe, Reliable, and Controllable AI',
   description:
     'Design enterprise-grade RAG systems with policy guardrails, verifiable citations, and cost-aware routing. Prevent hallucinations and ensure compliance.',
   openGraph: {
-    title: 'Enterprise RAG Guardrails 2026',
+    title= 'Enterprise RAG Guardrails 2026',
     description:
       'Architect safe, reliable Retrieval-Augmented Generation with verifiable citations, policy enforcement, and observability.',
     type: 'article',

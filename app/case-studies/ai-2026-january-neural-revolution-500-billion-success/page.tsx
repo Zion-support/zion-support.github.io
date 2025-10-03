@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'January 2026: $500B Success Story - Ultimate Neural Revolution | Zion Tech Group',
+  title= 'January 2026: $500B Success Story - Ultimate Neural Revolution | Zion Tech Group',
   description: 'How a Fortune 100 global conglomerate achieved $500B ROI through the Ultimate Neural Revolution breakthrough, achieving 99.99% autonomous operations and universal intelligence.',
   keywords: 'Case Study, Success Story, AI, Neural Revolution, $500B, Fortune 100, ROI, Autonomous Operations',
 };

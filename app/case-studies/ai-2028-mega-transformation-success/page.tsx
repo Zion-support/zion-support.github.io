@@ -2,11 +2,11 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI 2028 Mega Transformation Success: $200M ROI Case Study - Zion Tech Group',
+  title= 'AI 2028 Mega Transformation Success: $200M ROI Case Study - Zion Tech Group',
   description: 'Discover how a Fortune 500 company achieved $200M ROI with AI 2028 transformation. Complete case study with implementation details, results, and lessons learned.',
   keywords: 'AI transformation, case study, ROI, Fortune 500, enterprise AI, success story, $200M ROI',
   openGraph: {
-    title: 'AI 2028 Mega Transformation Success: $200M ROI Case Study',
+    title= 'AI 2028 Mega Transformation Success: $200M ROI Case Study',
     description: 'Discover how a Fortune 500 company achieved $200M ROI with AI 2028 transformation. Complete case study with implementation details.',
     url: 'https://ziontechgroup.com/case-studies/ai-2028-mega-transformation-success',
     type: 'article',

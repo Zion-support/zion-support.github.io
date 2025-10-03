@@ -2,11 +2,11 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI 2027 Revolutionary Breakthrough Solutions | Zion Tech Group',
+  title= 'AI 2027 Revolutionary Breakthrough Solutions | Zion Tech Group',
   description: 'Transform your enterprise with our AI 2027 revolutionary breakthrough solutions. 95% automation, 1000x performance gains, 90% cost reduction. Limited availability.',
   keywords: 'AI 2027 solutions, revolutionary AI services, enterprise AI transformation, AI automation, quantum AI, neuromorphic computing',
   openGraph: {
-    title: 'AI 2027 Revolutionary Breakthrough Solutions',
+    title= 'AI 2027 Revolutionary Breakthrough Solutions',
     description: 'Transform your enterprise with our AI 2027 revolutionary breakthrough solutions. 95% automation, 1000x performance gains, 90% cost reduction.',
     type: 'website',
   },

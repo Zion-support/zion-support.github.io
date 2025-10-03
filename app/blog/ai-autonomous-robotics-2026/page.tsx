@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Clock, ArrowRight, Bot, Zap, Target, TrendingUp } from 'lucide-react';
 
 export const metadata = {
-  title: 'AI Autonomous Robotics 2026: The Future of Intelligent Automation',
+  title= 'AI Autonomous Robotics 2026: The Future of Intelligent Automation',
   description: 'Explore the revolutionary advances in AI autonomous robotics for 2026. Discover how intelligent robots are transforming industries and creating new possibilities for automation.',
   keywords: 'AI autonomous robotics, intelligent automation, robotic process automation, AI robots, autonomous systems 2026',
 };

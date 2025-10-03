@@ -1,11 +1,11 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Fortune 500 AI 2026 Quantum Consciousness: $100B Success Story',
+  title= 'Fortune 500 AI 2026 Quantum Consciousness: $100B Success Story',
   description: 'Discover how a Fortune 500 technology leader achieved $100B in value creation through quantum consciousness AI implementation, revolutionizing their operations and market position.',
   keywords: ['Fortune 500', 'AI 2026', 'quantum consciousness', 'success story', 'value creation', 'enterprise transformation'],
   openGraph: {
-    title: 'Fortune 500 AI 2026 Quantum Consciousness: $100B Success Story',
+    title= 'Fortune 500 AI 2026 Quantum Consciousness: $100B Success Story',
     description: 'Discover how a Fortune 500 technology leader achieved $100B in value creation through quantum consciousness AI implementation.',
     type: 'article',
     publishedTime: '2026-01-15T00:00:00Z',

@@ -3,12 +3,12 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'AI 2027 Quantum Revolution: Breakthrough Technologies & Implementation Guide',
+  title= 'AI 2027 Quantum Revolution: Breakthrough Technologies & Implementation Guide',
   description: 'Discover the revolutionary quantum-enhanced AI systems delivering 1000x performance improvements and unprecedented computational capabilities for enterprise applications.',
   keywords: 'quantum AI, quantum computing, AI revolution 2027, enterprise AI, quantum neural networks, breakthrough technologies',
   authors: [{ name: 'Zion Tech Group' }],
   openGraph: {
-    title: 'AI 2027 Quantum Revolution: Breakthrough Technologies & Implementation Guide',
+    title= 'AI 2027 Quantum Revolution: Breakthrough Technologies & Implementation Guide',
     description: 'Discover the revolutionary quantum-enhanced AI systems delivering 1000x performance improvements and unprecedented computational capabilities for enterprise applications.',
     url: 'https://ziontechgroup.com/blog/ai-2027-quantum-revolution',
     siteName: 'Zion Tech Group',
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AI 2027 Quantum Revolution: Breakthrough Technologies & Implementation Guide',
+    title= 'AI 2027 Quantum Revolution: Breakthrough Technologies & Implementation Guide',
     description: 'Discover the revolutionary quantum-enhanced AI systems delivering 1000x performance improvements and unprecedented computational capabilities for enterprise applications.',
   },
 };
@@ -56,9 +56,9 @@ export default function AI2027QuantumRevolution() {
             {/* Key Metrics */}
             <div className="grid md:grid-cols-3 gap-8 mb-12">
               {[
-                { value: '1000x', label: 'Performance Improvement', icon: '⚡' },
-                { value: '99.99%', label: 'Computational Accuracy', icon: '🎯' },
-                { value: '$500M+', label: 'Average ROI Achieved', icon: '💰' }
+                { value='1000x', label: 'Performance Improvement', icon: '⚡' },
+                { value='99.99%', label: 'Computational Accuracy', icon: '🎯' },
+                { value='$500M+', label: 'Average ROI Achieved', icon: '💰' }
               ].map((metric, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10">
                   <div className="text-5xl mb-3">{metric.icon}</div>

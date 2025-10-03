@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Consentless Edge Analytics Q4 2025: Private Metrics Under 100ms',
+  title= 'Consentless Edge Analytics Q4 2025: Private Metrics Under 100ms',
   description: 'Scoped IDs, on‑device aggregation, and differential privacy for compliant, low‑latency analytics with zero PII.'
 };
 

@@ -2,11 +2,11 @@ import React from 'react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Meta-Cognitive Superintelligence Success: $8.7B Enterprise Transformation',
+  title= 'Meta-Cognitive Superintelligence Success: $8.7B Enterprise Transformation',
   description: 'Discover how a Fortune 500 company achieved $8.7 billion in value through our meta-cognitive superintelligence platform, delivering 99.99% efficiency and 10,000x performance improvements.',
   keywords: ['Meta-Cognitive', 'Superintelligence', 'Enterprise', 'Success', 'Transformation'],
   openGraph: {
-    title: 'Meta-Cognitive Superintelligence Success: $8.7B Enterprise Transformation',
+    title= 'Meta-Cognitive Superintelligence Success: $8.7B Enterprise Transformation',
     description: 'Discover how a Fortune 500 company achieved $8.7 billion in value through our meta-cognitive superintelligence platform, delivering 99.99% efficiency and 10,000x performance improvements.',
     type: 'article',
     publishedTime: '2026-03-01T00:00:00.000Z',

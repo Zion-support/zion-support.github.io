@@ -2,11 +2,11 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI 2027: Neuromorphic Computing Enterprise Revolution - Brain-Inspired AI Systems',
+  title= 'AI 2027: Neuromorphic Computing Enterprise Revolution - Brain-Inspired AI Systems',
   description: 'Revolutionary neuromorphic computing technologies delivering 90% energy reduction, real-time learning, and brain-inspired AI architectures for enterprise applications with unprecedented efficiency.',
   keywords: 'neuromorphic computing, brain-inspired AI, spiking neural networks, neuromorphic chips, energy-efficient AI, real-time learning',
   openGraph: {
-    title: 'AI 2027: Neuromorphic Computing Enterprise Revolution - Brain-Inspired AI Systems',
+    title= 'AI 2027: Neuromorphic Computing Enterprise Revolution - Brain-Inspired AI Systems',
     description: 'Revolutionary neuromorphic computing technologies delivering 90% energy reduction and brain-inspired AI architectures.',
     type: 'article',
   },

@@ -7,7 +7,7 @@ export default function LLMSupplyChains2025(): React.JSX.Element {
         <title >Sept 30, 2025: AI Supply Chains — 99.5% Forecasts, 85% Inventory Cut</title>,,
         <meta name: "description",;,"
   content: "Blueprint for AI-driven supply chains with KPI-linked scorecards, freshness windows, and budget-aware actions.", /><link rel: "canonical",;,"
-  href="https://ziontechgroup.com/blog/ai-2025-sept-30-llm-supply-chains",
+  href="https://ziontechgroup.com/blog/ai-2025-sept-30-llm-supply-chains
         />
       </Helmet>
 

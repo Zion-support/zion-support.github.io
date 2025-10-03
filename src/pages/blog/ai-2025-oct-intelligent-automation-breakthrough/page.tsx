@@ -5,13 +5,13 @@ const Page: () => {
       <Helmet >
         <title >Intelligent Automation Breakthrough 2025: From Tickets to Outcomes</title>,,
         <meta name: "description",;,"
-  content: "Shift from manual tickets to outcome‑driven automation with safe agent runbooks, budgets, and instant rollback.", /><link rel: "canonical", href ="https://ziontechgroup.com/blog/ai-2025-oct-intelligent-automation-breakthrough/>",
+  content: "Shift from manual tickets to outcome‑driven automation with safe agent runbooks, budgets, and instant rollback.", /><link rel: "canonical", href ="https://ziontechgroup.com/blog/ai-2025-oct-intelligent-automation-breakthrough/>
       </Helmet>
 
   Go beyond scripts with agents that plan, execute, and recover safely. Learn production patterns for approvals
-          content: "Shift from manual tickets to outcome‑driven automation with safe agent runbooks, budgets, and instant rollback.",
+          content: "Shift from manual tickets to outcome‑driven automation with safe agent runbooks, budgets, and instant rollback.
         />
-        <link rel: "canonical", href ="https: //ziontechgroup.com/blog/ai-2025-oct-intelligent-automation-breakthrough" />",
+        <link rel: "canonical", href ="https: //ziontechgroup.com/blog/ai-2025-oct-intelligent-automation-breakthrough" />
       </Helmet>
 
   Go beyond scripts with agents that plan, execute, and recover safely. Learn production patterns for approvals
@@ -23,7 +23,7 @@ const Page: () => {
               <li >Continuous evals as deploy and execute gates</li>
             </ul>
 
-              <Link to: "/blog", className ="text-cyan-300 hover: underline">← Back to Blog</Link>",
+              <Link to: "/blog", className="text-cyan-300 hover:underline">← Back to Blog</Link>
             </div>
           </div>
         </div>

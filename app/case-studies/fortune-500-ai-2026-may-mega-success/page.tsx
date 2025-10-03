@@ -2,11 +2,11 @@ import React from 'react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Fortune 500 AI 2026 May Mega Success: $5B Value Generation with Meta-Cognitive Superintelligence',
+  title= 'Fortune 500 AI 2026 May Mega Success: $5B Value Generation with Meta-Cognitive Superintelligence',
   description: 'Discover how a Fortune 500 company achieved $5 billion in measurable value using Zion Tech Group\'s Meta-Cognitive Superintelligence AI system in just 3 months.',
   keywords: 'Fortune 500, AI success story, meta-cognitive AI, $5B value, enterprise AI transformation, case study',
   openGraph: {
-    title: 'Fortune 500 AI 2026 May Mega Success: $5B Value Generation',
+    title= 'Fortune 500 AI 2026 May Mega Success: $5B Value Generation',
     description: 'How a Fortune 500 company achieved $5 billion in value with Meta-Cognitive Superintelligence',
     type: 'article',
     publishedTime: '2026-05-01T00:00:00.000Z',

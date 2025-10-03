@@ -6,7 +6,7 @@ const September30NewContent2025Banner: React.FC = () => {
   const newArticles = [
     {
       id: 0,
-      title: 'AI-Accelerated Customer Experience 2025',
+      title= 'AI-Accelerated Customer Experience 2025',
       slug: 'ai-accelerated-customer-experience-2025',
       excerpt: 'Real-time intent detection and autonomous workflows delivering 95% CSAT and 40% cost reduction across channels.',
       category: 'Customer Experience',
@@ -17,7 +17,7 @@ const September30NewContent2025Banner: React.FC = () => {
     },
     {
       id: 1,
-      title: 'AI-Powered Autonomous Operations 2025',
+      title= 'AI-Powered Autonomous Operations 2025',
       slug: 'ai-autonomous-operations-2025',
       excerpt: 'Self-healing infrastructure achieving 99.99% uptime and 95% cost reduction. Discover how Fortune 500 enterprises achieve zero-touch IT operations.',
       category: 'Autonomous Operations',
@@ -28,7 +28,7 @@ const September30NewContent2025Banner: React.FC = () => {
     },
     {
       id: 2,
-      title: 'Generative AI for Enterprise Architecture 2025',
+      title= 'Generative AI for Enterprise Architecture 2025',
       slug: 'generative-ai-enterprise-architecture-2025',
       excerpt: 'Production-scale GenAI systems serving 100M+ daily requests. Master LLM orchestration, RAG pipelines, and deployment patterns at enterprise scale.',
       category: 'GenAI Architecture',
@@ -39,7 +39,7 @@ const September30NewContent2025Banner: React.FC = () => {
     },
     {
       id: 3,
-      title: 'Multimodal AI Agents Enterprise 2025',
+      title= 'Multimodal AI Agents Enterprise 2025',
       slug: 'multimodal-ai-agents-enterprise-2025',
       excerpt: 'Unified vision, language, and audio intelligence achieving 97% cross-modal accuracy. Transform operations with AI that truly sees, hears, and understands.',
       category: 'Multimodal AI',
@@ -50,7 +50,7 @@ const September30NewContent2025Banner: React.FC = () => {
     },
     {
       id: 4,
-      title: 'Quantum-Enhanced Machine Learning 2025',
+      title= 'Quantum-Enhanced Machine Learning 2025',
       slug: 'quantum-enhanced-machine-learning-2025',
       excerpt: '1000x performance breakthrough with quantum computing. Real quantum advantage demonstrated in optimization, drug discovery, and financial modeling.',
       category: 'Quantum ML',
@@ -61,7 +61,7 @@ const September30NewContent2025Banner: React.FC = () => {
     },
     {
       id: 5,
-      title: 'AI-Powered Cloud FinOps 2025',
+      title= 'AI-Powered Cloud FinOps 2025',
       slug: 'ai-powered-cloud-finops-2025',
       excerpt: '60% cloud cost reduction through autonomous optimization. $450M+ annual savings achieved with AI-driven resource management and predictive scaling.',
       category: 'Cloud FinOps',
@@ -263,10 +263,10 @@ const September30NewContent2025Banner: React.FC = () => {
         {/* Stats Section */}
         <div className="grid md:grid-cols-4 gap-8 mt-24">
           {[
-            { value: '500+', label: 'Enterprise Clients', icon: '🏢' },
-            { value: '$2.5B+', label: 'Value Delivered', icon: '💎' },
-            { value: '99.99%', label: 'System Reliability', icon: '⚡' },
-            { value: '1000x', label: 'Performance Gains', icon: '🚀' }
+            { value='500+', label: 'Enterprise Clients', icon: '🏢' },
+            { value='$2.5B+', label: 'Value Delivered', icon: '💎' },
+            { value='99.99%', label: 'System Reliability', icon: '⚡' },
+            { value='1000x', label: 'Performance Gains', icon: '🚀' }
           ].map((stat, index) => (
             <div key={index} className="text-center bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-cyan-500/50 transition-all duration-300">
               <div className="text-5xl mb-4">{stat.icon}</div>

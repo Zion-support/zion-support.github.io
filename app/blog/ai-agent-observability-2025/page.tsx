@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Agent Observability 2025: Metrics, Traces, and Safety Signals | Zion Tech Group',
+  title= 'AI Agent Observability 2025: Metrics, Traces, and Safety Signals | Zion Tech Group',
   description:
     'A practical guide to AI agent observability in 2025: telemetry for prompts, tools, episodes, safety budgets, reliability SLOs, and incident response.',
 };

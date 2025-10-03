@@ -3,11 +3,11 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI 2027 Quantum Consciousness Mega Success - $2.5B ROI Case Study',
+  title= 'AI 2027 Quantum Consciousness Mega Success - $2.5B ROI Case Study',
   description: 'How a Fortune 500 company achieved $2.5B ROI with quantum consciousness AI implementation.',
   keywords: 'quantum consciousness AI, AI case study, $2.5B ROI, Fortune 500 success, AI transformation',
   openGraph: {
-    title: 'AI 2027 Quantum Consciousness Mega Success - $2.5B ROI',
+    title= 'AI 2027 Quantum Consciousness Mega Success - $2.5B ROI',
     description: 'Revolutionary quantum consciousness AI delivering unprecedented business transformation.',
     url: 'https://ziontechgroup.com/case-studies/ai-2027-quantum-consciousness-mega-success',
     type: 'article',

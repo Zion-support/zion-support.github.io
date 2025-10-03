@@ -3,11 +3,11 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Value Stream Analytics 2026: Trace ROI from Token to Revenue',
+  title= 'AI Value Stream Analytics 2026: Trace ROI from Token to Revenue',
   description:
     'Tie AI cost, latency, and quality to business value with end-to-end tracing from model tokens to customer outcomes.',
   openGraph: {
-    title: 'AI Value Stream Analytics 2026',
+    title= 'AI Value Stream Analytics 2026',
     description:
       'End-to-end tracing that connects model spend to user value with actionable scorecards.',
     url: 'https://ziontechgroup.com/blog/ai-value-stream-analytics-2026',

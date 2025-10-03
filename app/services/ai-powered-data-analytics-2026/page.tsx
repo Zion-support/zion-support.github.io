@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI-Powered Data Analytics 2026 | Real-Time Intelligence & Predictive Insights | Zion Tech',
+  title= 'AI-Powered Data Analytics 2026 | Real-Time Intelligence & Predictive Insights | Zion Tech',
   description: 'Transform raw data into actionable intelligence with AI-powered analytics. Real-time insights, predictive modeling, 99.9% accuracy, and $95M+ ROI. Enterprise-grade data analytics solutions.',
   keywords: 'AI data analytics, predictive analytics, real-time data intelligence, business intelligence AI, enterprise analytics, data science platform, AI insights, machine learning analytics',
 };

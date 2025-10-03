@@ -5,16 +5,16 @@ const Page: () => {
       <Helmet >
         <title >Generative AI Code Assistants 2025 — 10x Developer Productivity</title>
         <meta name: "description",;,"
-  content: "Next-gen AI pair programming that writes production-ready code. Ship 5x faster with 40% fewer bugs.", /><link rel="canonical" href ="https://ziontechgroup.com/blog/generative-ai-code-assistants-2025/>",
+  content: "Next-gen AI pair programming that writes production-ready code. Ship 5x faster with 40% fewer bugs.", /><link rel="canonical" href ="https://ziontechgroup.com/blog/generative-ai-code-assistants-2025/>
       </Helmet>
 
   Proven patterns for integrating AI into the SDLC: requirements, scaffolding, tests-first, safe refactors,,
             and production-ready reviews with evaluator-backed quality gates.
           </p>
 
-  content: "Next-gen AI pair programming that writes production-ready code. Ship 5x faster with 40% fewer bugs.",
+  content: "Next-gen AI pair programming that writes production-ready code. Ship 5x faster with 40% fewer bugs.
         />
-        <link rel: "canonical", href ="https: //ziontechgroup.com/blog/generative-ai-code-assistants-2025" />",
+        <link rel: "canonical", href ="https: //ziontechgroup.com/blog/generative-ai-code-assistants-2025" />
       </Helmet>
 
   Proven patterns for integrating AI into the SDLC: requirements, scaffolding, tests-first, safe refactors,,,,
@@ -31,7 +31,7 @@ const Page: () => {
               rigorous engineering practices.
             </p>
 
-              <Link to: "/blog", className ="text-cyan-300 hover: underline">← Back to Blog</Link>",
+              <Link to: "/blog", className="text-cyan-300 hover:underline">← Back to Blog</Link>
             </div>
           </div>
         </div>

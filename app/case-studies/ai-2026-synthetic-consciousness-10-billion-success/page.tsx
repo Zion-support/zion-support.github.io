@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { ArrowRight, Brain, TrendingUp, DollarSign, Users, Target, Award } from 'lucide-react';
 
 export const metadata = {
-  title: 'AI Synthetic Consciousness: $10B ROI Success Story - Fortune 500 Transformation',
+  title= 'AI Synthetic Consciousness: $10B ROI Success Story - Fortune 500 Transformation',
   description: 'Discover how a Fortune 500 company achieved $10 billion in ROI through Zion Tech Group\'s synthetic consciousness AI implementation. Real results from real transformation.',
   keywords: 'AI ROI case study, synthetic consciousness success, Fortune 500 AI transformation, $10B ROI, conscious AI implementation',
 };

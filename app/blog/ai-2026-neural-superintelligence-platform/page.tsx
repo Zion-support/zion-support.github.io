@@ -24,10 +24,10 @@ export default function AINeuralSuperintelligencePlatform() {
         {/* Key Metrics */}
         <div className="grid md:grid-cols-4 gap-6 mb-12">
           {[
-            { value: '99.99%', label: 'Reasoning Accuracy', icon: '🧠' },
-            { value: '∞', label: 'Scalability', icon: '📈' },
-            { value: '100x', label: 'Human Intelligence', icon: '⚡' },
-            { value: '0.1ms', label: 'Response Time', icon: '⚡' }
+            { value='99.99%', label: 'Reasoning Accuracy', icon: '🧠' },
+            { value='∞', label: 'Scalability', icon: '📈' },
+            { value='100x', label: 'Human Intelligence', icon: '⚡' },
+            { value='0.1ms', label: 'Response Time', icon: '⚡' }
           ].map((metric, index) => (
             <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 text-center">
               <div className="text-4xl mb-3">{metric.icon}</div>

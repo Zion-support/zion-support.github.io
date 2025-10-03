@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-	title: 'AI Infrastructure Automation 2026 | Zion Tech Group',
+	title= 'AI Infrastructure Automation 2026 | Zion Tech Group',
 	description: 'Build self-healing, policy-tested infrastructure with 99.99% uptime and 70% cost reduction.'
 };
 

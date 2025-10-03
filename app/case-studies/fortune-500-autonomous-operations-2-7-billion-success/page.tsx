@@ -2,11 +2,11 @@ import React from 'react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Fortune 500 Autonomous Operations: $2.7B ROI Success Story | Zion Tech Group',
+  title= 'Fortune 500 Autonomous Operations: $2.7B ROI Success Story | Zion Tech Group',
   description: 'How a Fortune 100 company achieved 99.9% operational autonomy and $2.7B ROI through advanced AI-driven autonomous operations systems.',
   keywords: 'Fortune 500, autonomous operations, ROI success, AI automation, operational autonomy, case study',
   openGraph: {
-    title: 'Fortune 500 Autonomous Operations: $2.7B ROI Success Story',
+    title= 'Fortune 500 Autonomous Operations: $2.7B ROI Success Story',
     description: 'Discover how a Fortune 100 company achieved 99.9% operational autonomy and $2.7B ROI through revolutionary AI systems.',
     type: 'article',
     publishedTime: '2025-01-15T00:00:00Z',

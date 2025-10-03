@@ -2,11 +2,11 @@ import React from 'react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'AI Autonomous Operations Services | Zion Tech Group',
+  title= 'AI Autonomous Operations Services | Zion Tech Group',
   description: 'Transform your enterprise with fully autonomous AI operations. Achieve 95% automation rates and $2M+ annual savings with our cutting-edge solutions.',
   keywords: 'AI autonomous operations, enterprise automation, AI services, process automation, intelligent automation',
   openGraph: {
-    title: 'AI Autonomous Operations Services',
+    title= 'AI Autonomous Operations Services',
     description: 'Transform your enterprise with fully autonomous AI operations. Achieve 95% automation rates and $2M+ annual savings with our cutting-edge solutions.',
     type: 'article',
   },

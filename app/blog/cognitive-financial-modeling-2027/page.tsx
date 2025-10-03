@@ -2,7 +2,7 @@
 import React from 'react';
 
 export const metadata = {
-	title: 'AI Financial Modeling 2027: 95% Prediction Accuracy with Guardrails',
+	title= 'AI Financial Modeling 2027: 95% Prediction Accuracy with Guardrails',
 	description: 'Blueprint to build reliable, budget-aware AI financial models with KPIs, evals, and rollback.'
 };
 

@@ -3,7 +3,7 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Governed Agent Patterns v3 (2025) — Zion Tech Group',
+  title= 'Governed Agent Patterns v3 (2025) — Zion Tech Group',
   description: 'Production patterns for safe autonomy: budgeted actions, PR policy tests, and one-click recovery.',
 };
 

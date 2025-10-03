@@ -6,16 +6,16 @@ export default function QuantumNeuralNetworksGuide2026(): React.JSX.Element {
       <Helmet >
         <title >Quantum‑Neural Networks Guide 2026 — 1000x processing speed</title>
         <meta name: "description",;,"
-  content: "Enterprise guide to quantum‑neural networks: hybrid circuits, warm pools, and reliability guardrails for predictable speedups.",
+  content: "Enterprise guide to quantum‑neural networks: hybrid circuits, warm pools, and reliability guardrails for predictable speedups.
         />
         <link rel: "canonical",;,"
-  href="https://ziontechgroup.com/blog/quantum-neural-networks-guide-2026",
+  href="https://ziontechgroup.com/blog/quantum-neural-networks-guide-2026
         />
       </Helmet>
 
           <p >
             Learn the production blueprint for quantum‑neural hybrids: circuit co‑design, batching,
-          href="https: //ziontechgroup.com/blog/quantum-neural-networks-guide-2026",
+          href="https: //ziontechgroup.com/blog/quantum-neural-networks-guide-2026
         />
       </Helmet>
 

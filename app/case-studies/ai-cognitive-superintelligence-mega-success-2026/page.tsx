@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Clock, ArrowRight, Brain, TrendingUp, DollarSign, Users } from 'lucide-react';
 
 export const metadata = {
-  title: 'AI Cognitive Superintelligence Mega Success 2026: $750M ROI Case Study',
+  title= 'AI Cognitive Superintelligence Mega Success 2026: $750M ROI Case Study',
   description: 'Discover how a Fortune 500 company achieved $750M ROI with AI cognitive superintelligence implementation. Learn about the strategies, challenges, and results.',
   keywords: 'AI cognitive superintelligence case study, $750M ROI, Fortune 500 success, AI implementation, cognitive AI results',
 };

@@ -2,10 +2,10 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Agent Ops Observability 2026 | Zion Tech Group',
+  title= 'Agent Ops Observability 2026 | Zion Tech Group',
   description: 'Metrics, traces, evals, and guardrails for reliable autonomy at scale.',
   openGraph: {
-    title: 'Agent Ops Observability 2026',
+    title= 'Agent Ops Observability 2026',
     description: 'Instrument agents with traces, evaluations, KPIs, and guardrails to ensure reliability.',
     type: 'article',
     url: 'https://ziontechgroup.com/blog/ai-2026-agent-ops-observability',

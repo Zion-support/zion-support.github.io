@@ -6,7 +6,7 @@ const NewContentPromotionalBanner2026: React.FC = () => {
   const featuredContent = [
     {
       id: 1,
-      title: 'AI Autonomous Workflows 2026',
+      title= 'AI Autonomous Workflows 2026',
       slug: 'ai-autonomous-workflows-2026',
       excerpt: 'Transform operations with 95% automation, 400% ROI, and seamless multi-system orchestration',
       category: 'Enterprise Automation',
@@ -18,7 +18,7 @@ const NewContentPromotionalBanner2026: React.FC = () => {
     },
     {
       id: 2,
-      title: 'Enterprise AI Transformation Roadmap 2026',
+      title= 'Enterprise AI Transformation Roadmap 2026',
       slug: 'enterprise-ai-transformation-roadmap-2026',
       excerpt: 'Complete implementation guide delivering 300% ROI, 85% automation, and digital transformation',
       category: 'Strategic Guide',
@@ -30,7 +30,7 @@ const NewContentPromotionalBanner2026: React.FC = () => {
     },
     {
       id: 3,
-      title: 'AI-Powered Security Operations Center 2026',
+      title= 'AI-Powered Security Operations Center 2026',
       slug: 'ai-security-operations-center-2026',
       excerpt: '99.9% threat detection, 95% faster response, and autonomous security operations',
       category: 'Cybersecurity',

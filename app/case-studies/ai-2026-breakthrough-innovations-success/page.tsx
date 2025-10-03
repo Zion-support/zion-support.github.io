@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI 2026 Breakthrough Innovations Success: $10B+ ROI Transformation Story',
+  title= 'AI 2026 Breakthrough Innovations Success: $10B+ ROI Transformation Story',
   description: 'Discover how Fortune 500 companies achieved $10B+ ROI through revolutionary AI breakthrough innovations including quantum-enhanced neural networks and autonomous enterprise systems.',
   keywords: 'AI 2026, breakthrough innovations, success story, Fortune 500, ROI, quantum neural networks, autonomous systems',
 };

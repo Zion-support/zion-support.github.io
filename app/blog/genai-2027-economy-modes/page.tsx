@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-	title: 'GenAI 2027: Economy Modes — 50% Savings with Stable UX',
+	title= 'GenAI 2027: Economy Modes — 50% Savings with Stable UX',
 	description: 'Quality tiers, semantic caches, and token budgets that reduce spend while preserving UX and outcomes.',
 };
 

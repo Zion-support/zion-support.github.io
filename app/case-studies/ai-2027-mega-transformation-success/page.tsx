@@ -2,11 +2,11 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Case Study: $150M ROI Success Story - AI 2027 Mega Transformation',
+  title= 'Case Study: $150M ROI Success Story - AI 2027 Mega Transformation',
   description: 'Discover how a Fortune 500 company achieved $150M in ROI through our comprehensive AI 2027 transformation, revolutionizing their operations and market position.',
   keywords: 'AI transformation, ROI case study, enterprise success, AI 2027, business transformation, Fortune 500',
   openGraph: {
-    title: 'Case Study: $150M ROI Success Story - AI 2027 Mega Transformation',
+    title= 'Case Study: $150M ROI Success Story - AI 2027 Mega Transformation',
     description: 'Discover how a Fortune 500 company achieved $150M in ROI through our comprehensive AI 2027 transformation, revolutionizing their operations and market position.',
     type: 'article',
     publishedTime: '2027-03-15T00:00:00.000Z',

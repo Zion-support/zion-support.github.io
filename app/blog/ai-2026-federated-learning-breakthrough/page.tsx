@@ -2,11 +2,11 @@ import React from 'react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: '🔒 Federated Learning Breakthrough 2026: Privacy-First AI That Learns Without Sharing Data',
+  title= '🔒 Federated Learning Breakthrough 2026: Privacy-First AI That Learns Without Sharing Data',
   description: 'Discover the revolutionary federated learning breakthrough of 2026 that enables AI to learn across organizations while maintaining complete data privacy. Achieve 98% model accuracy with zero data exposure and 100% privacy compliance.',
   keywords: ['federated learning', 'privacy-preserving AI', 'distributed learning', 'data privacy', 'AI collaboration', 'enterprise AI security', 'federated ML'],
   openGraph: {
-    title: '🔒 Federated Learning Breakthrough 2026: Privacy-First AI That Learns Without Sharing Data',
+    title= '🔒 Federated Learning Breakthrough 2026: Privacy-First AI That Learns Without Sharing Data',
     description: 'Revolutionary federated learning breakthrough enabling AI collaboration with 100% data privacy and 98% model accuracy.',
     type: 'article',
     publishedTime: '2026-01-22T00:00:00.000Z',
@@ -110,37 +110,37 @@ export default function FederatedLearningBreakthrough2026() {
             {[
               {
                 icon: '🔒',
-                title: 'Zero Data Exposure',
+                title= 'Zero Data Exposure',
                 description: 'Train models across organizations without ever sharing or exposing raw data.',
                 features: ['Differential privacy', 'Secure aggregation', 'Homomorphic encryption']
               },
               {
                 icon: '🤝',
-                title: 'Collaborative Learning',
+                title= 'Collaborative Learning',
                 description: 'Multiple organizations contribute to shared knowledge while keeping data private.',
                 features: ['Multi-party computation', 'Consensus algorithms', 'Trustless collaboration']
               },
               {
                 icon: '⚡',
-                title: 'Real-Time Updates',
+                title= 'Real-Time Updates',
                 description: 'Models update continuously as new data becomes available across the network.',
                 features: ['Live model updates', 'Incremental learning', 'Adaptive optimization']
               },
               {
                 icon: '🛡️',
-                title: 'Privacy Guarantees',
+                title= 'Privacy Guarantees',
                 description: 'Mathematically proven privacy protection with formal verification.',
                 features: ['Formal verification', 'Privacy budgets', 'Audit trails']
               },
               {
                 icon: '📊',
-                title: 'Performance Analytics',
+                title= 'Performance Analytics',
                 description: 'Comprehensive metrics and insights without compromising data privacy.',
                 features: ['Privacy-preserving analytics', 'Model performance tracking', 'Collaboration metrics']
               },
               {
                 icon: '🔧',
-                title: 'Easy Integration',
+                title= 'Easy Integration',
                 description: 'Seamless integration with existing AI infrastructure and workflows.',
                 features: ['API compatibility', 'Framework support', 'Legacy system integration']
               }
@@ -179,17 +179,17 @@ export default function FederatedLearningBreakthrough2026() {
             <div className="space-y-8">
               {[
                 {
-                  title: 'Healthcare Collaboration',
+                  title= 'Healthcare Collaboration',
                   description: 'Hospitals collaborate on diagnostic models without sharing patient data.',
                   benefits: ['Patient privacy protection', 'Improved diagnostics', 'Regulatory compliance']
                 },
                 {
-                  title: 'Financial Risk Assessment',
+                  title= 'Financial Risk Assessment',
                   description: 'Banks share risk models while keeping customer data completely private.',
                   benefits: ['Fraud detection', 'Credit scoring', 'Regulatory compliance']
                 },
                 {
-                  title: 'Manufacturing Optimization',
+                  title= 'Manufacturing Optimization',
                   description: 'Companies optimize production processes using shared knowledge.',
                   benefits: ['Quality improvement', 'Cost reduction', 'Competitive advantage']
                 }
@@ -213,10 +213,10 @@ export default function FederatedLearningBreakthrough2026() {
               <h3 className="text-2xl font-bold mb-6 text-blue-400">🎯 Key Benefits</h3>
               <div className="space-y-6">
                 {[
-                  { benefit: 'Data Privacy', value: '100% protected', icon: '🔒' },
-                  { benefit: 'Model Accuracy', value: '98% precision', icon: '🎯' },
-                  { benefit: 'Collaboration Scale', value: '500+ organizations', icon: '🤝' },
-                  { benefit: 'Cost Savings', value: '$10M+ annually', icon: '💰' }
+                  { benefit: 'Data Privacy', value='100% protected', icon: '🔒' },
+                  { benefit: 'Model Accuracy', value='98% precision', icon: '🎯' },
+                  { benefit: 'Collaboration Scale', value='500+ organizations', icon: '🤝' },
+                  { benefit: 'Cost Savings', value='$10M+ annually', icon: '💰' }
                 ].map((benefit, index) => (
                   <div key={index} className="flex items-center justify-between p-4 bg-white/5 rounded-xl">
                     <div className="flex items-center gap-3">
@@ -248,22 +248,22 @@ export default function FederatedLearningBreakthrough2026() {
             {[
               {
                 icon: '🔐',
-                title: 'Secure Aggregation',
+                title= 'Secure Aggregation',
                 description: 'Cryptographic protocols that combine model updates without revealing individual contributions.'
               },
               {
                 icon: '🛡️',
-                title: 'Differential Privacy',
+                title= 'Differential Privacy',
                 description: 'Mathematical guarantees that prevent inference of individual data points.'
               },
               {
                 icon: '⚙️',
-                title: 'Homomorphic Encryption',
+                title= 'Homomorphic Encryption',
                 description: 'Compute on encrypted data without decrypting it during processing.'
               },
               {
                 icon: '🌐',
-                title: 'Distributed Coordination',
+                title= 'Distributed Coordination',
                 description: 'Robust consensus mechanisms for coordinating learning across participants.'
               }
             ].map((component, index) => (

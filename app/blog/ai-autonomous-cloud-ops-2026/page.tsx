@@ -2,11 +2,11 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Autonomous Cloud Operations 2026: Self-Healing Infrastructure Guide',
+  title= 'AI Autonomous Cloud Operations 2026: Self-Healing Infrastructure Guide',
   description: 'Master autonomous cloud operations with AI-driven self-healing infrastructure. Achieve 99.9% uptime, 90% cost reduction, and zero-touch operations.',
   keywords: 'AI autonomous cloud, self-healing infrastructure, cloud automation, AI ops, autonomous operations, cloud management',
   openGraph: {
-    title: 'AI Autonomous Cloud Operations 2026: Self-Healing Infrastructure Guide',
+    title= 'AI Autonomous Cloud Operations 2026: Self-Healing Infrastructure Guide',
     description: 'Master autonomous cloud operations with AI-driven self-healing infrastructure. Achieve 99.9% uptime, 90% cost reduction, and zero-touch operations.',
     type: 'article',
     publishedTime: '2026-01-20T10:00:00Z',

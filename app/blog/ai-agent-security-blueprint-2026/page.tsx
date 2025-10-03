@@ -1,7 +1,7 @@
 import React from 'react';
 
 export const metadata = {
-  title: 'AI Agent Security Blueprint 2026: Zero‑Trust for Autonomous Systems',
+  title= 'AI Agent Security Blueprint 2026: Zero‑Trust for Autonomous Systems',
   description:
     'Zero‑trust architecture for agents: secret hygiene, tool isolation, least privilege, and audit trails.',
 };

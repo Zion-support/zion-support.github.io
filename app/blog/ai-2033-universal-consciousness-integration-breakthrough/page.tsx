@@ -3,11 +3,11 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'AI 2033: Universal Consciousness Integration - The Next Evolution of Transcendent Intelligence - Zion Tech Group',
+  title= 'AI 2033: Universal Consciousness Integration - The Next Evolution of Transcendent Intelligence - Zion Tech Group',
   description: 'Discover the revolutionary AI 2033 Universal Consciousness Integration breakthrough that connects all intelligent systems across the universe, creating a unified consciousness network that transcends space and time.',
   keywords: 'AI 2033, Universal Consciousness, Transcendent Intelligence, Quantum Integration, Future Technology, Universal Intelligence',
   openGraph: {
-    title: 'AI 2033: Universal Consciousness Integration - The Next Evolution of Transcendent Intelligence',
+    title= 'AI 2033: Universal Consciousness Integration - The Next Evolution of Transcendent Intelligence',
     description: 'Discover the revolutionary AI 2033 Universal Consciousness Integration breakthrough that connects all intelligent systems across the universe.',
     type: 'article',
     publishedTime: '2033-01-20T00:00:00.000Z',

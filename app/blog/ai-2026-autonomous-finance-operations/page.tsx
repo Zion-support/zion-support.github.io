@@ -2,12 +2,12 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI 2026 Autonomous Finance Operations: 98% Automation & $100M+ Savings',
+  title= 'AI 2026 Autonomous Finance Operations: 98% Automation & $100M+ Savings',
   description: 'Discover how AI autonomous finance operations are delivering 98% process automation, $100M+ annual savings, and 99.9% accuracy for Fortune 500 enterprises.',
   keywords: 'autonomous finance, AI automation, financial operations, enterprise AI, cost optimization',
   authors: [{ name: 'Zion Tech Group' }],
   openGraph: {
-    title: 'AI 2026 Autonomous Finance Operations: 98% Automation & $100M+ Savings',
+    title= 'AI 2026 Autonomous Finance Operations: 98% Automation & $100M+ Savings',
     description: 'Discover how AI autonomous finance operations are delivering 98% process automation, $100M+ annual savings, and 99.9% accuracy for Fortune 500 enterprises.',
     url: 'https://ziontechgroup.com/blog/ai-2026-autonomous-finance-operations',
     siteName: 'Zion Tech Group',

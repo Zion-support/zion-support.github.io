@@ -2,11 +2,11 @@ import React from 'react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'AI 2026 April Mega Breakthrough: $10 Billion Success Story',
+  title= 'AI 2026 April Mega Breakthrough: $10 Billion Success Story',
   description: 'Discover how a Fortune 500 company achieved $10 billion in value through our April 2026 AI breakthrough, featuring Universal Intelligence Systems and 10,000x performance improvements.',
   keywords: 'AI Success Story, $10 Billion, Fortune 500, Universal Intelligence, AI 2026, Enterprise AI, AI Case Study',
   openGraph: {
-    title: 'AI 2026 April Mega Breakthrough: $10 Billion Success Story',
+    title= 'AI 2026 April Mega Breakthrough: $10 Billion Success Story',
     description: 'Fortune 500 company achieves $10 billion value with Universal Intelligence Systems and 10,000x performance improvements.',
     type: 'article',
     publishedTime: '2026-04-20T00:00:00.000Z',

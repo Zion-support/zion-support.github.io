@@ -18,11 +18,11 @@ const InteractiveContentShowcase2026 = dynamic(() => import('../components/Inter
 });
 
 export const metadata = {
-  title: 'Zion Tech Group — AI Enterprise Transformation & IT Services | 300% ROI Guaranteed',
+  title= 'Zion Tech Group — AI Enterprise Transformation & IT Services | 300% ROI Guaranteed',
   description: 'Transform your enterprise with AI-powered solutions. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains. Expert AI consulting, autonomous systems, and digital transformation services.',
   keywords: 'AI enterprise transformation, AI consulting, autonomous AI systems, enterprise AI services, digital transformation, AI implementation, AI ROI calculator, manufacturing AI, AI automation, AI strategy',
   openGraph: {
-    title: 'Zion Tech Group — AI Enterprise Transformation & IT Services',
+    title= 'Zion Tech Group — AI Enterprise Transformation & IT Services',
     description: 'Transform your enterprise with AI-powered solutions. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains.',
     type: 'website',
     url: 'https://ziontechgroup.com',
@@ -37,7 +37,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Zion Tech Group — AI Enterprise Transformation & IT Services',
+    title= 'Zion Tech Group — AI Enterprise Transformation & IT Services',
     description: 'Transform your enterprise with AI-powered solutions. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains.',
     images: ['/og-image.jpg'],
   },
@@ -56,36 +56,36 @@ export const metadata = {
 
 export default function HomePage() {
   const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Zion Tech Group",
-    "description": "Leading provider of AI-powered enterprise solutions and digital transformation services",
-    "url": "https://ziontechgroup.com",
-    "logo": "https://ziontechgroup.com/logo.png",
+    "@context": "https://schema.org
+    "@type": "Organization
+    "name": "Zion Tech Group
+    "description": "Leading provider of AI-powered enterprise solutions and digital transformation services
+    "url": "https://ziontechgroup.com
+    "logo": "https://ziontechgroup.com/logo.png
     "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+1-302-464-0950",
-      "contactType": "customer service",
+      "@type": "ContactPoint
+      "telephone": "+1-302-464-0950
+      "contactType": "customer service
       "email": "kleber@ziontechgroup.com"
     },
     "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "364 E Main St STE 1008",
-      "addressLocality": "Middletown",
-      "addressRegion": "DE",
-      "postalCode": "19709",
+      "@type": "PostalAddress
+      "streetAddress": "364 E Main St STE 1008
+      "addressLocality": "Middletown
+      "addressRegion": "DE
+      "postalCode": "19709
       "addressCountry": "US"
     },
     "sameAs": [
-      "https://linkedin.com/company/zion-tech-group",
+      "https://linkedin.com/company/zion-tech-group
       "https://twitter.com/ziontechgroup"
     ],
     "offers": {
-      "@type": "Offer",
-      "name": "AI Enterprise Transformation Services",
-      "description": "Transform your enterprise with AI-powered solutions achieving 300% ROI, 70% cost reduction, and 90% efficiency gains",
-      "price": "50000",
-      "priceCurrency": "USD",
+      "@type": "Offer
+      "name": "AI Enterprise Transformation Services
+      "description": "Transform your enterprise with AI-powered solutions achieving 300% ROI, 70% cost reduction, and 90% efficiency gains
+      "price": "50000
+      "priceCurrency": "USD
       "availability": "https://schema.org/InStock"
     }
   };

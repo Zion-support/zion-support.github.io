@@ -3,11 +3,11 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI September 30, 2025 — Enterprise Innovation Roadmap | Zion Tech Group',
+  title= 'AI September 30, 2025 — Enterprise Innovation Roadmap | Zion Tech Group',
   description: 'A practical roadmap for enterprise AI innovation: from pilot to platform, with governance, budgets, and measurable ROI.',
   keywords: 'enterprise AI roadmap, pilot to platform, AI governance, ROI framework, transformation',
   openGraph: {
-    title: 'Enterprise AI Innovation Roadmap (Sept 30, 2025)',
+    title= 'Enterprise AI Innovation Roadmap (Sept 30, 2025)',
     description: 'Methodical milestones to scale enterprise AI with control, safety, and outcomes.',
     type: 'article',
     publishedTime: '2025-09-30T00:00:00.000Z',

@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'AI 2026: Synthetic Intelligence Delivers $50B Enterprise Success | Zion Tech Group',
+  title= 'AI 2026: Synthetic Intelligence Delivers $50B Enterprise Success | Zion Tech Group',
   description: 'How a Fortune 500 company achieved $50 billion in value through synthetic intelligence implementation, revolutionizing their entire business operations.',
   keywords: 'synthetic intelligence case study, AI success story, enterprise AI, $50B ROI, business transformation',
 };

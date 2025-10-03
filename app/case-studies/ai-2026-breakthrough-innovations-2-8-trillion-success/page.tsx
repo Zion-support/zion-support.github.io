@@ -3,11 +3,11 @@ import Link from 'next/link';
 import { ArrowRight, TrendingUp, Brain, Zap, Target, Users, DollarSign, Award } from 'lucide-react';
 
 export const metadata = {
-  title: 'AI 2026 Breakthrough Innovations: $2.8 Trillion Success Case Study | Zion Tech Group',
+  title= 'AI 2026 Breakthrough Innovations: $2.8 Trillion Success Case Study | Zion Tech Group',
   description: 'Detailed case study of how Fortune 500 companies achieved $2.8 trillion in value through AI 2026 breakthrough innovations including quantum-neural fusion and autonomous enterprise systems.',
   keywords: 'AI 2026 case study, $2.8 trillion success, Fortune 500, breakthrough innovations, quantum AI, autonomous enterprise',
   openGraph: {
-    title: 'AI 2026 Breakthrough Innovations: $2.8 Trillion Success Case Study',
+    title= 'AI 2026 Breakthrough Innovations: $2.8 Trillion Success Case Study',
     description: 'Fortune 500 companies achieve unprecedented value through revolutionary AI innovations.',
     url: 'https://ziontechgroup.com/case-studies/ai-2026-breakthrough-innovations-2-8-trillion-success',
     siteName: 'Zion Tech Group',

@@ -4,11 +4,11 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'AI 2026 December Mega Breakthrough Consulting - Zion Tech Group',
+  title= 'AI 2026 December Mega Breakthrough Consulting - Zion Tech Group',
   description: 'Transform your enterprise with revolutionary AI technology delivering 15,000x performance improvements, 99.95% autonomous operations, and $50 billion in proven value generation.',
   keywords: 'AI consulting, December 2026 breakthrough, enterprise AI transformation, quantum consciousness, meta-cognitive AI',
   openGraph: {
-    title: 'AI 2026 December Mega Breakthrough Consulting - Zion Tech Group',
+    title= 'AI 2026 December Mega Breakthrough Consulting - Zion Tech Group',
     description: 'Revolutionary AI consulting service delivering 15,000x performance improvements, 99.95% autonomous operations, and $50 billion in proven value generation.',
     url: 'https://ziontechgroup.com/services/ai-2026-december-mega-breakthrough-consulting',
     siteName: 'Zion Tech Group',

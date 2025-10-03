@@ -25,10 +25,10 @@ export default function Fortune500SuperintelligentAutomationSuccess() {
         {/* Key Results */}
         <div className="grid md:grid-cols-4 gap-6 mb-12">
           {[
-            { value: '$2.5B', label: 'Total ROI Achieved', icon: '💰', color: 'from-green-400 to-green-600' },
-            { value: '99.9%', label: 'Automation Rate', icon: '🤖', color: 'from-blue-400 to-blue-600' },
-            { value: '18mo', label: 'Payback Period', icon: '⏱️', color: 'from-purple-400 to-purple-600' },
-            { value: '300%', label: 'Efficiency Gain', icon: '📈', color: 'from-cyan-400 to-cyan-600' }
+            { value='$2.5B', label: 'Total ROI Achieved', icon: '💰', color: 'from-green-400 to-green-600' },
+            { value='99.9%', label: 'Automation Rate', icon: '🤖', color: 'from-blue-400 to-blue-600' },
+            { value='18mo', label: 'Payback Period', icon: '⏱️', color: 'from-purple-400 to-purple-600' },
+            { value='300%', label: 'Efficiency Gain', icon: '📈', color: 'from-cyan-400 to-cyan-600' }
           ].map((result, index) => (
             <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 text-center">
               <div className="text-4xl mb-3">{result.icon}</div>

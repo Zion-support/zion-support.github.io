@@ -2,11 +2,11 @@ import React from 'react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'AI FinTech Transformation 2026: Complete Digital Banking Revolution',
+  title= 'AI FinTech Transformation 2026: Complete Digital Banking Revolution',
   description: 'Transform your financial services with AI-powered FinTech solutions. Achieve 95% automation, $5M+ savings, and digital banking revolution.',
   keywords: 'AI FinTech, digital banking, financial automation, AI finance, fintech transformation, banking AI',
   openGraph: {
-    title: 'AI FinTech Transformation 2026: Complete Digital Banking Revolution',
+    title= 'AI FinTech Transformation 2026: Complete Digital Banking Revolution',
     description: 'Transform your financial services with AI-powered FinTech solutions. Achieve 95% automation, $5M+ savings, and digital banking revolution.',
     type: 'article',
     publishedTime: '2026-01-20T10:00:00Z',

@@ -2,11 +2,11 @@ import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
 export const metadata: Metadata = {
-  title: 'AI 2026 Quantum-Neural Fusion: $75B Enterprise Transformation Success Story',
+  title= 'AI 2026 Quantum-Neural Fusion: $75B Enterprise Transformation Success Story',
   description: 'How a Fortune 100 global conglomerate achieved $75 billion in value creation through quantum-neural fusion implementation, revolutionizing operations across 47 business units.',
   keywords: 'Quantum AI, Enterprise Transformation, ROI Success, Case Study, 2026',
   openGraph: {
-    title: 'AI 2026 Quantum-Neural Fusion: $75B Success Story',
+    title= 'AI 2026 Quantum-Neural Fusion: $75B Success Story',
     description: 'Revolutionary quantum-neural fusion implementation delivering $75 billion in value creation across 47 business units.',
     type: 'article',
     publishedTime: '2026-01-20',

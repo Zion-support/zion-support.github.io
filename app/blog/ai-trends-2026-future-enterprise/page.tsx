@@ -1,11 +1,11 @@
 import React from 'react';
 
 export const metadata = {
-  title: 'AI Trends 2026: The Future of Enterprise Technology | Zion Tech Group',
+  title= 'AI Trends 2026: The Future of Enterprise Technology | Zion Tech Group',
   description: 'Discover the revolutionary AI trends shaping 2026. From autonomous enterprise systems to quantum-enhanced AI, explore how these breakthroughs are transforming business operations.',
   keywords: 'AI trends 2026, enterprise AI, autonomous systems, quantum AI, AI transformation, business automation, AI innovation 2026',
   openGraph: {
-    title: 'AI Trends 2026: The Future of Enterprise Technology',
+    title= 'AI Trends 2026: The Future of Enterprise Technology',
     description: 'Discover the revolutionary AI trends shaping 2026. From autonomous enterprise systems to quantum-enhanced AI, explore how these breakthroughs are transforming business operations.',
     type: 'article',
     url: 'https://ziontechgroup.com/blog/ai-trends-2026-future-enterprise',

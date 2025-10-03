@@ -2,11 +2,11 @@ import React from 'react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Meta-Cognitive AI Breakthrough 2026: AI That Thinks About Thinking',
+  title= 'Meta-Cognitive AI Breakthrough 2026: AI That Thinks About Thinking',
   description: 'Discover the revolutionary Meta-Cognitive AI breakthrough achieving 95% decision accuracy through AI that thinks about thinking. Learn how this technology is transforming enterprise operations.',
   keywords: 'meta-cognitive AI, artificial intelligence, AI breakthrough, enterprise AI, decision accuracy, cognitive reasoning',
   openGraph: {
-    title: 'Meta-Cognitive AI Breakthrough 2026: AI That Thinks About Thinking',
+    title= 'Meta-Cognitive AI Breakthrough 2026: AI That Thinks About Thinking',
     description: 'Revolutionary AI achieving 95% decision accuracy through meta-cognitive reasoning',
     type: 'article',
     publishedTime: '2026-01-15T00:00:00Z',
@@ -46,9 +46,9 @@ export default function MetaCognitiveAIBreakthrough2026() {
             {/* Key Stats */}
             <div className="grid md:grid-cols-3 gap-8 mb-12">
               {[
-                { value: '95%', label: 'Decision Accuracy', icon: '🎯', color: 'text-purple-400' },
-                { value: '1000x', label: 'Reasoning Speed', icon: '⚡', color: 'text-blue-400' },
-                { value: '98%', label: 'Learning Efficiency', icon: '🧠', color: 'text-green-400' }
+                { value='95%', label: 'Decision Accuracy', icon: '🎯', color: 'text-purple-400' },
+                { value='1000x', label: 'Reasoning Speed', icon: '⚡', color: 'text-blue-400' },
+                { value='98%', label: 'Learning Efficiency', icon: '🧠', color: 'text-green-400' }
               ].map((stat, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
                   <div className="text-4xl mb-3">{stat.icon}</div>
@@ -310,19 +310,19 @@ export default function MetaCognitiveAIBreakthrough2026() {
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                title: 'Quantum-Neural Networks: 1000x Processing Power',
+                title= 'Quantum-Neural Networks: 1000x Processing Power',
                 description: 'Revolutionary processing power combining quantum computing with neural networks.',
                 href: '/blog/quantum-neural-networks-2026',
                 icon: '⚛️'
               },
               {
-                title: 'Autonomous Operations: 98% Automation Success',
+                title= 'Autonomous Operations: 98% Automation Success',
                 description: 'Self-healing AI systems achieving unprecedented automation rates.',
                 href: '/blog/autonomous-operations-2026',
                 icon: '🤖'
               },
               {
-                title: 'Enterprise AI Transformation: $50M Savings',
+                title= 'Enterprise AI Transformation: $50M Savings',
                 description: 'Fortune 500 company achieves breakthrough results with AI transformation.',
                 href: '/blog/enterprise-transformation-2026',
                 icon: '💰'

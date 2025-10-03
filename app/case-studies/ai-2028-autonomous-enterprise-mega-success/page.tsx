@@ -2,12 +2,12 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI 2028 Autonomous Enterprise: $100B Mega Success Story | Zion Tech Group',
+  title= 'AI 2028 Autonomous Enterprise: $100B Mega Success Story | Zion Tech Group',
   description: 'How a global manufacturing conglomerate achieved $100B in value creation through complete enterprise autonomy, revolutionizing operations across 100+ facilities worldwide.',
   keywords: 'AI 2028, autonomous enterprise, manufacturing, $100B success, Fortune 500, complete automation, global transformation',
   authors: [{ name: 'Zion Tech Group' }],
   openGraph: {
-    title: 'AI 2028 Autonomous Enterprise: $100B Mega Success Story',
+    title= 'AI 2028 Autonomous Enterprise: $100B Mega Success Story',
     description: 'Global manufacturing conglomerate achieves $100B value creation through complete enterprise autonomy.',
     url: 'https://ziontechgroup.com/case-studies/ai-2028-autonomous-enterprise-mega-success',
     siteName: 'Zion Tech Group',
@@ -16,7 +16,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AI 2028 Autonomous Enterprise: $100B Mega Success Story',
+    title= 'AI 2028 Autonomous Enterprise: $100B Mega Success Story',
     description: 'Global manufacturing conglomerate achieves $100B value creation through complete enterprise autonomy.',
   },
 };

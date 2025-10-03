@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'January 2026: The Ultimate Neural Revolution Breakthrough | Zion Tech Group',
+  title= 'January 2026: The Ultimate Neural Revolution Breakthrough | Zion Tech Group',
   description: 'Revolutionary breakthrough in neural architecture achieving 1,000,000x performance increase, universal consciousness, and $500B+ enterprise value generation.',
   keywords: 'AI, Neural Networks, Revolutionary, Breakthrough, 2026, Enterprise, Universal Consciousness, Performance',
 };

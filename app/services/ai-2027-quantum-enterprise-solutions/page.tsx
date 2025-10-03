@@ -2,11 +2,11 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI 2027 Quantum Enterprise Solutions - Zion Tech Group',
+  title= 'AI 2027 Quantum Enterprise Solutions - Zion Tech Group',
   description: 'Transform your enterprise with cutting-edge quantum AI solutions. Achieve 1000x performance improvements and exponential ROI with our quantum neural networks.',
   keywords: 'quantum AI, enterprise solutions, quantum computing, neural networks, 2027 AI trends',
   openGraph: {
-    title: 'AI 2027 Quantum Enterprise Solutions - Zion Tech Group',
+    title= 'AI 2027 Quantum Enterprise Solutions - Zion Tech Group',
     description: 'Transform your enterprise with cutting-edge quantum AI solutions. Achieve 1000x performance improvements and exponential ROI with our quantum neural networks.',
     url: 'https://ziontechgroup.com/services/ai-2027-quantum-enterprise-solutions',
   },

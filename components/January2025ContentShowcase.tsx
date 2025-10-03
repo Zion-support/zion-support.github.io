@@ -3,45 +3,45 @@ import React from 'react';
 const January2025ContentShowcase: React.FC = () => {
   const contentItems = [
     {
-      title: "AI-Powered Customer Experience",
-      description: "Transform customer interactions with intelligent automation and personalized experiences that drive engagement and loyalty.",
+      title: "AI-Powered Customer Experience
+      description: "Transform customer interactions with intelligent automation and personalized experiences that drive engagement and loyalty.
       metrics: { accuracy: "96%", satisfaction: "94%", growth: "67%" },
-      category: "Customer Experience",
+      category: "Customer Experience
       link: "/blog/ai-customer-experience-2025"
     },
     {
-      title: "Autonomous Business Operations",
-      description: "Streamline operations with self-managing AI systems that optimize processes, reduce costs, and improve efficiency.",
+      title: "Autonomous Business Operations
+      description: "Streamline operations with self-managing AI systems that optimize processes, reduce costs, and improve efficiency.
       metrics: { automation: "89%", savings: "$2.3M", efficiency: "156%" },
-      category: "Business Operations",
+      category: "Business Operations
       link: "/blog/autonomous-business-operations"
     },
     {
-      title: "Predictive Analytics Mastery",
-      description: "Leverage advanced analytics to forecast trends, predict outcomes, and make data-driven decisions with confidence.",
+      title: "Predictive Analytics Mastery
+      description: "Leverage advanced analytics to forecast trends, predict outcomes, and make data-driven decisions with confidence.
       metrics: { accuracy: "92%", roi: "8.5x", insights: "47%" },
-      category: "Analytics & Insights",
+      category: "Analytics & Insights
       link: "/blog/predictive-analytics-mastery"
     },
     {
-      title: "Intelligent Security Framework",
-      description: "Protect your enterprise with AI-powered security systems that detect threats, prevent breaches, and ensure compliance.",
+      title: "Intelligent Security Framework
+      description: "Protect your enterprise with AI-powered security systems that detect threats, prevent breaches, and ensure compliance.
       metrics: { detection: "99.7%", response: "<2min", compliance: "100%" },
-      category: "Security & Compliance",
+      category: "Security & Compliance
       link: "/blog/intelligent-security-framework"
     },
     {
-      title: "Real-Time Decision Intelligence",
-      description: "Make instant, informed decisions with real-time AI processing that analyzes data streams and provides actionable insights.",
+      title: "Real-Time Decision Intelligence
+      description: "Make instant, informed decisions with real-time AI processing that analyzes data streams and provides actionable insights.
       metrics: { speed: "<1ms", accuracy: "99.8%", throughput: "1M+/sec" },
-      category: "Decision Intelligence",
+      category: "Decision Intelligence
       link: "/blog/real-time-decision-intelligence"
     },
     {
-      title: "Sustainable AI Solutions",
-      description: "Implement environmentally conscious AI solutions that reduce carbon footprint while delivering exceptional performance.",
+      title: "Sustainable AI Solutions
+      description: "Implement environmentally conscious AI solutions that reduce carbon footprint while delivering exceptional performance.
       metrics: { reduction: "78%", efficiency: "3.2x", savings: "$127M" },
-      category: "Sustainability",
+      category: "Sustainability
       link: "/blog/sustainable-ai-solutions"
     }
   ];

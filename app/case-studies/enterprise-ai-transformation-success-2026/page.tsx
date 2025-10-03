@@ -2,12 +2,12 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Enterprise AI Transformation Success: Fortune 500 Company Achieves 300% ROI',
+  title= 'Enterprise AI Transformation Success: Fortune 500 Company Achieves 300% ROI',
   description: 'How a Fortune 500 manufacturing company transformed operations with AI, achieving 300% ROI and $50M in annual savings.',
   keywords: 'AI transformation case study, enterprise AI, ROI, manufacturing AI, digital transformation',
   authors: [{ name: 'Zion Tech Group' }],
   openGraph: {
-    title: 'Enterprise AI Transformation Success: Fortune 500 Company Achieves 300% ROI',
+    title= 'Enterprise AI Transformation Success: Fortune 500 Company Achieves 300% ROI',
     description: 'How a Fortune 500 manufacturing company transformed operations with AI, achieving 300% ROI and $50M in annual savings.',
     url: 'https://ziontechgroup.com/case-studies/enterprise-ai-transformation-success-2026',
     siteName: 'Zion Tech Group',

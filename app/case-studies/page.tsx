@@ -1,14 +1,14 @@
 import React from 'react';
 
 export const metadata: Metadata = {
-  title: 'AI Success Stories & Case Studies | Zion Tech Group',
+  title= 'AI Success Stories & Case Studies | Zion Tech Group',
   description: 'Discover real-world AI transformation success stories. See how companies achieved $500M+ savings, 99% automation, and 600% ROI with our AI solutions.',
   keywords: 'AI case studies, success stories, AI transformation, enterprise AI, automation success, AI ROI, digital transformation',
 };
 
 const caseStudies = [
   {
-    title: 'AI Manufacturing Transformation: 90% Efficiency Gain',
+    title= 'AI Manufacturing Transformation: 90% Efficiency Gain',
     slug: 'ai-manufacturing-transformation-2026',
     excerpt: 'See how a Fortune 500 manufacturer achieved 90% efficiency gains and $50M annual savings through comprehensive AI transformation.',
     company: 'Global Manufacturing Corp',
@@ -23,7 +23,7 @@ const caseStudies = [
     color: 'green'
   },
   {
-    title: 'Fortune 500 AI Transformation: $50M+ Savings & 300% ROI',
+    title= 'Fortune 500 AI Transformation: $50M+ Savings & 300% ROI',
     slug: 'fortune-500-ai-transformation-2027',
     excerpt: 'See how a Fortune 500 company achieved $50M+ in savings and a 300% ROI through comprehensive AI transformation with Zion Tech Group.',
     company: 'Fortune 500 Manufacturing',
@@ -38,7 +38,7 @@ const caseStudies = [
     color: 'green'
   },
   {
-    title: 'AI FinTech Quantum Transformation 2026: $100M Revenue & 99.9% Security',
+    title= 'AI FinTech Quantum Transformation 2026: $100M Revenue & 99.9% Security',
     slug: 'ai-fintech-quantum-transformation-2026',
     excerpt: 'See how a leading FinTech achieved $100M revenue increase, 99.9% security improvement, and quantum-powered trading capabilities.',
     company: 'Leading FinTech Company',
@@ -53,7 +53,7 @@ const caseStudies = [
     color: 'indigo'
   },
   {
-    title: 'AI Mega Transformation Success 2026: $500M+ Savings Achieved',
+    title= 'AI Mega Transformation Success 2026: $500M+ Savings Achieved',
     slug: 'ai-mega-transformation-success-2026',
     excerpt: 'Discover how a Fortune 500 company achieved $500M+ annual savings and 99% process automation through comprehensive AI transformation.',
     company: 'Fortune 500 Manufacturing',
@@ -68,7 +68,7 @@ const caseStudies = [
     color: 'green'
   },
   {
-    title: 'AI Supply Chain Optimization: 60% Cost Reduction & 90% Efficiency Gain',
+    title= 'AI Supply Chain Optimization: 60% Cost Reduction & 90% Efficiency Gain',
     slug: 'ai-supply-chain-optimization-2025',
     excerpt: 'See how a global manufacturer achieved 60% cost reduction and 90% efficiency improvement, saving $12M annually.',
     company: 'Global Manufacturing Corp',
@@ -83,7 +83,7 @@ const caseStudies = [
     color: 'blue'
   },
   {
-    title: 'FinTech AI Risk Compliance: 70% Risk Reduction & $2.5M Savings',
+    title= 'FinTech AI Risk Compliance: 70% Risk Reduction & $2.5M Savings',
     slug: 'fintech-ai-risk-compliance-2025',
     excerpt: 'See how a leading fintech achieved 70% risk reduction with automated governance frameworks.',
     company: 'FinTech Solutions Inc',
@@ -98,7 +98,7 @@ const caseStudies = [
     color: 'purple'
   },
   {
-    title: 'TechCorp: 90% Efficiency Gain with AI',
+    title= 'TechCorp: 90% Efficiency Gain with AI',
     slug: 'techcorp-ai-transformation',
     excerpt: 'See how TechCorp achieved $500K annual savings and 90% efficiency improvement with AI transformation.',
     company: 'TechCorp Inc',
@@ -113,7 +113,7 @@ const caseStudies = [
     color: 'orange'
   },
   {
-    title: 'HealthTech Solutions: 80% Faster Response Time',
+    title= 'HealthTech Solutions: 80% Faster Response Time',
     slug: 'healthtech-ai-transformation',
     excerpt: 'Achieved 80% faster response time, 24/7 support, and 95% customer satisfaction with AI virtual assistant.',
     company: 'HealthTech Solutions',
@@ -128,7 +128,7 @@ const caseStudies = [
     color: 'teal'
   },
   {
-    title: 'RetailAI Corp: 150% Revenue Growth',
+    title= 'RetailAI Corp: 150% Revenue Growth',
     slug: 'retail-ai-transformation',
     excerpt: 'See how RetailAI Corp achieved 150% revenue growth and 80% cost reduction with AI transformation.',
     company: 'RetailAI Corp',
@@ -143,7 +143,7 @@ const caseStudies = [
     color: 'pink'
   },
   {
-    title: 'FinanceFlow Ltd: 75% Process Efficiency Improvement',
+    title= 'FinanceFlow Ltd: 75% Process Efficiency Improvement',
     slug: 'financeflow-ai-automation',
     excerpt: 'Achieved 75% process efficiency improvement and 300% ROI in 6 months with AI workflow automation.',
     company: 'FinanceFlow Ltd',
@@ -158,7 +158,7 @@ const caseStudies = [
     color: 'indigo'
   },
   {
-    title: 'Manufacturing Excellence: Zero-Defect Production',
+    title= 'Manufacturing Excellence: Zero-Defect Production',
     slug: 'ai-manufacturing-excellence-2026',
     excerpt: 'Achieved zero-defect manufacturing with 99.99% quality assurance and 60% increase in production efficiency.',
     company: 'Global Manufacturing Ltd',

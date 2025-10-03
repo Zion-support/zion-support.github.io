@@ -52,10 +52,10 @@ export default function AINextGenEnterpriseAutomation2026() {
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-4 gap-8 text-center">
             {[
-              { value: '98%', label: 'Automation Rate', icon: '🤖', color: 'from-blue-400 to-cyan-400' },
-              { value: '1000x', label: 'Processing Speed', icon: '⚡', color: 'from-purple-400 to-pink-400' },
-              { value: '$2.5B', label: 'Cost Savings', icon: '💰', color: 'from-green-400 to-emerald-400' },
-              { value: '99.9%', label: 'Accuracy Rate', icon: '🎯', color: 'from-yellow-400 to-orange-400' }
+              { value='98%', label: 'Automation Rate', icon: '🤖', color: 'from-blue-400 to-cyan-400' },
+              { value='1000x', label: 'Processing Speed', icon: '⚡', color: 'from-purple-400 to-pink-400' },
+              { value='$2.5B', label: 'Cost Savings', icon: '💰', color: 'from-green-400 to-emerald-400' },
+              { value='99.9%', label: 'Accuracy Rate', icon: '🎯', color: 'from-yellow-400 to-orange-400' }
             ].map((stat, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-blue-500/50 transition-all duration-300">
                 <div className="text-5xl mb-3">{stat.icon}</div>
@@ -169,10 +169,10 @@ export default function AINextGenEnterpriseAutomation2026() {
 
               <div className="space-y-4 mb-8">
                 {[
-                  { phase: "Phase 1", title: "Assessment & Strategy", duration: "2-4 weeks", description: "Comprehensive analysis of current operations and automation opportunities" },
-                  { phase: "Phase 2", title: "Pilot Implementation", duration: "4-8 weeks", description: "Deploy AI systems in select departments with measurable results" },
-                  { phase: "Phase 3", title: "Enterprise Rollout", duration: "8-16 weeks", description: "Scale automation across all business units with full integration" },
-                  { phase: "Phase 4", title: "Optimization & Evolution", duration: "Ongoing", description: "Continuous improvement and adaptation to achieve maximum efficiency" }
+                  { phase: "Phase 1", title= "Assessment & Strategy", duration: "2-4 weeks", description: "Comprehensive analysis of current operations and automation opportunities" },
+                  { phase: "Phase 2", title= "Pilot Implementation", duration: "4-8 weeks", description: "Deploy AI systems in select departments with measurable results" },
+                  { phase: "Phase 3", title= "Enterprise Rollout", duration: "8-16 weeks", description: "Scale automation across all business units with full integration" },
+                  { phase: "Phase 4", title= "Optimization & Evolution", duration: "Ongoing", description: "Continuous improvement and adaptation to achieve maximum efficiency" }
                 ].map((phase, index) => (
                   <div key={index} className="flex items-start gap-4 p-4 bg-white/5 rounded-xl border border-white/10">
                     <div className="bg-gradient-to-r from-blue-500 to-purple-500 text-white font-bold px-3 py-1 rounded-full text-sm">

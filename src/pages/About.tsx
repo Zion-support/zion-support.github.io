@@ -16,25 +16,25 @@ const About: React.FC = () => {
   const values: [,
     {
       icon: Target,,
-      title: 'Innovation First',';,';,
+      title= 'Innovation First',';,';,
       description: 'We stay ahead of technology trends to deliver solutions that give you a competitive edge in the market.',';,';,
       description: 'We stay ahead of technology trends to deliver solutions that give you a competitive edge in the market.',';,
     },
     {
       icon: Shield,,
-      title: 'Enterprise Security',';,';,
+      title= 'Enterprise Security',';,';,
       description: 'Bank-grade security measures protect your data and ensure compliance with industry standards.',';,';,
       description: 'Bank-grade security measures protect your data and ensure compliance with industry standards.',';,
     },
     {
       icon: TrendingUp,,
-      title: 'Measurable Results',';,';,
+      title= 'Measurable Results',';,';,
       description: 'We deliver quantifiable outcomes with average 75% cost reduction and 10x efficiency gains.',';,';,
       description: 'We deliver quantifiable outcomes with average 75% cost reduction and 10x efficiency gains.',';,
     },
     {
       icon: Globe,,
-      title: 'Global Reach',';,';,
+      title= 'Global Reach',';,';,
       description: 'Serving clients worldwide with 24/7 support and localized solutions for international markets.',';,
     }
       description: 'Serving clients worldwide with 24/7 support and localized solutions for international markets.',';,
@@ -224,7 +224,7 @@ const About: React.FC = () => {
                   <p className="text-blue-600 font-semibold mb-3">{member.role}</p>";"
                   <p className="text-gray-600 mb-4">{member.description}</p>";"
                   <a href={`mailto:${member.email}`}`;`;
-                    className="text-blue-600 hover:text-blue-700 transition-colors",
+                    className="text-blue-600 hover:text-blue-700 transition-colors
           <section className= "mb-16">
             <div className= "text-center mb-12">
               <h2 className= "text-3xl font-bold text-gray-900 mb-4">Meet Our Team</h2>"
@@ -242,7 +242,7 @@ const About: React.FC = () => {
                   <p className= "text-blue-600 font-semibold mb-3">{member.role}</p>";"
                   <p className= "text-gray-600 mb-4">{member.description}</p>";"
                   <a href={`mailto:${member.email}`}`;`;
-                    className= "text-blue-600 hover:text-blue-700 transition-colors",
+                    className= "text-blue-600 hover:text-blue-700 transition-colors
                   >
                     {member.email}
                   </a>
@@ -335,13 +335,13 @@ const About: React.FC = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center"
                 <a href="tel:+13024640950" ,"
-  className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center",
+  className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center
                 >
                   <Phone className="w-5 h-5 inline mr-2" />,"
   Call +1 302 464 0950
                 </a>
                 <a href="mailto:kleber@ziontechgroup.com" ,"
-  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors text-center",
+  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors text-center
                 >
                   <Mail className="w-5 h-5 inline mr-2" />,"
           <section className= "text-center">
@@ -352,13 +352,13 @@ const About: React.FC = () => {
               </p>
               <div className= "flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="tel:+13024640950" ,"
-  className= "bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center",
+  className= "bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center
                 >
                   <Phone className= "w-5 h-5 inline mr-2" />,"
   Call +1 302 464 0950
                 </a>
                 <a href="mailto:kleber@ziontechgroup.com" ,"
-  className= "border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors text-center",
+  className= "border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors text-center
                 >
                   <Mail className= "w-5 h-5 inline mr-2" />,"
   Email Us Today

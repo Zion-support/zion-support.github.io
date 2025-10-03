@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'AI 2026 February Transcendent Automation $300B Success Story - Fortune 100 Transformation',
+  title= 'AI 2026 February Transcendent Automation $300B Success Story - Fortune 100 Transformation',
   description: 'How a Fortune 100 enterprise achieved $300B ROI through February 2026 transcendent automation implementation with 100,000x performance improvement.',
   keywords: 'AI success story, $300B ROI, Fortune 100, transcendent automation, 100,000x performance, infinite scalability',
 };

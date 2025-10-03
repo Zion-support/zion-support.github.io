@@ -2,11 +2,11 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI 2025-2026 Mega Transformation Success: $3.2B ROI Breakthrough',
+  title= 'AI 2025-2026 Mega Transformation Success: $3.2B ROI Breakthrough',
   description: 'Discover how a Fortune 500 company achieved $3.2B ROI through revolutionary AI transformation using quantum-enhanced systems and autonomous operations.',
   keywords: 'AI transformation success, Fortune 500 ROI, quantum AI, autonomous operations, enterprise AI case study',
   openGraph: {
-    title: 'AI 2025-2026 Mega Transformation Success: $3.2B ROI Breakthrough',
+    title= 'AI 2025-2026 Mega Transformation Success: $3.2B ROI Breakthrough',
     description: 'Discover how a Fortune 500 company achieved $3.2B ROI through revolutionary AI transformation.',
     type: 'article',
   },

@@ -2,11 +2,11 @@ import React from 'react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'AI 2026 Neural Synaptic Fusion: $847B Enterprise Success Story | Zion Tech Group',
+  title= 'AI 2026 Neural Synaptic Fusion: $847B Enterprise Success Story | Zion Tech Group',
   description: 'Discover how Fortune 500 companies achieved $847B in value creation through Neural Synaptic Fusion AI implementation. 99.97% cognitive accuracy, 847x performance gains, and zero cognitive errors.',
   keywords: 'AI Success Story, Neural Synaptic Fusion, Enterprise AI, $847B Value Creation, Fortune 500 AI, Synthetic Consciousness, AI Case Study',
   openGraph: {
-    title: 'AI 2026 Neural Synaptic Fusion: $847B Enterprise Success Story',
+    title= 'AI 2026 Neural Synaptic Fusion: $847B Enterprise Success Story',
     description: 'Fortune 500 companies achieve unprecedented results with 99.97% cognitive accuracy and $847B value creation.',
     type: 'article',
     publishedTime: '2026-03-15T00:00:00Z',
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AI 2026 Neural Synaptic Fusion: $847B Success',
+    title= 'AI 2026 Neural Synaptic Fusion: $847B Success',
     description: 'Fortune 500 companies achieve 99.97% cognitive accuracy and $847B value creation.',
   },
   alternates: {

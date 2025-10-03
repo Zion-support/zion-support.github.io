@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 
 interface FeaturedServiceCardProps {
-  title: string;
+  title= string;
   description: string;
   price: string;
   features: string[];

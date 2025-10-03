@@ -2,11 +2,11 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Neural Interfaces 2026 Service | Direct Brain-Computer Integration | Zion Tech Group',
+  title= 'AI Neural Interfaces 2026 Service | Direct Brain-Computer Integration | Zion Tech Group',
   description: 'Transform your enterprise with AI neural interfaces. Achieve 99.7% accuracy, 10ms response time, and $12M ROI with direct brain-computer integration solutions.',
   keywords: 'AI neural interfaces service, brain-computer interface BCI, neural control systems, enterprise neural interfaces, direct neural control',
   openGraph: {
-    title: 'AI Neural Interfaces 2026 Service | Zion Tech Group',
+    title= 'AI Neural Interfaces 2026 Service | Zion Tech Group',
     description: 'Transform your enterprise with AI neural interfaces achieving 99.7% accuracy and 10ms response time.',
     type: 'website',
     url: 'https://ziontechgroup.com/services/ai-neural-interfaces-2026',

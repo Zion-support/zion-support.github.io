@@ -2,12 +2,12 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI 2028 Neuromorphic Superintelligence: $75B Transformation Success | Zion Tech Group',
+  title= 'AI 2028 Neuromorphic Superintelligence: $75B Transformation Success | Zion Tech Group',
   description: 'How a Fortune 500 technology company achieved $75B in value creation through neuromorphic superintelligence deployment, revolutionizing their entire business model.',
   keywords: 'AI 2028, neuromorphic computing, superintelligence, case study, Fortune 500, transformation, $75B value creation',
   authors: [{ name: 'Zion Tech Group' }],
   openGraph: {
-    title: 'AI 2028 Neuromorphic Superintelligence: $75B Transformation Success',
+    title= 'AI 2028 Neuromorphic Superintelligence: $75B Transformation Success',
     description: 'Fortune 500 technology company achieves $75B value creation through neuromorphic superintelligence deployment.',
     url: 'https://ziontechgroup.com/case-studies/ai-2028-neuromorphic-superintelligence-success',
     siteName: 'Zion Tech Group',
@@ -16,7 +16,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AI 2028 Neuromorphic Superintelligence: $75B Transformation Success',
+    title= 'AI 2028 Neuromorphic Superintelligence: $75B Transformation Success',
     description: 'Fortune 500 technology company achieves $75B value creation through neuromorphic superintelligence deployment.',
   },
 };

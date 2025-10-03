@@ -1,5 +1,5 @@
 export const metadata = {
-	title: 'Consentless Journeys Blueprint — Personalization <100ms, Zero‑PII',
+	title= 'Consentless Journeys Blueprint — Personalization <100ms, Zero‑PII',
 	description:
 		'Edge-native consentless analytics and feature flags for sub-100ms personalization without collecting PII.',
 };

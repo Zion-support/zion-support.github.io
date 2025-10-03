@@ -2,11 +2,11 @@ import React from 'react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'AI 2025: Advanced Autonomous Operations Revolution | Zion Tech Group',
+  title= 'AI 2025: Advanced Autonomous Operations Revolution | Zion Tech Group',
   description: 'Discover how Fortune 500 companies are achieving 99.9% operational autonomy with AI-driven autonomous operations. Learn about the $2.7B ROI success stories and implementation strategies.',
   keywords: 'autonomous operations, AI automation, Fortune 500, operational autonomy, AI-driven processes, enterprise automation',
   openGraph: {
-    title: 'AI 2025: Advanced Autonomous Operations Revolution',
+    title= 'AI 2025: Advanced Autonomous Operations Revolution',
     description: 'Revolutionary AI-driven autonomous operations delivering 99.9% operational autonomy and $2.7B ROI for Fortune 500 enterprises.',
     type: 'article',
     publishedTime: '2025-01-15T00:00:00Z',

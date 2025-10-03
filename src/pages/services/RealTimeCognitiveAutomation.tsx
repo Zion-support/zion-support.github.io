@@ -268,41 +268,41 @@ const RealTimeCognitiveAutomation: React.FC = () => {
             <div className="grid md:grid-cols-3 gap-6">
               {[
                 {
-                  name: "Business Starter",
-                  price: "$7,999",
-                  period: "per month",
+                  name: "Business Starter
+                  price: "$7,999
+                  period: "per month
                   features: [
-                    "Up to 10 automated processes",
-                    "Real-time cognitive engine",
-                    "Basic integrations",
-                    "24/7 support",
+                    "Up to 10 automated processes
+                    "Real-time cognitive engine
+                    "Basic integrations
+                    "24/7 support
                     "Training included"
                   ]
                 },
                 {
-                  name: "Professional",
-                  price: "$19,999",
-                  period: "per month",
+                  name: "Professional
+                  price: "$19,999
+                  period: "per month
                   popular: true,
                   features: [
-                    "Up to 50 automated processes",
-                    "Advanced AI capabilities",
-                    "Enterprise integrations",
-                    "Dedicated support",
-                    "Custom workflows",
+                    "Up to 50 automated processes
+                    "Advanced AI capabilities
+                    "Enterprise integrations
+                    "Dedicated support
+                    "Custom workflows
                     "Advanced analytics"
                   ]
                 },
                 {
-                  name: "Enterprise",
-                  price: "Custom",
-                  period: "pricing",
+                  name: "Enterprise
+                  price: "Custom
+                  period: "pricing
                   features: [
-                    "Unlimited processes",
-                    "Full cognitive suite",
-                    "Custom development",
-                    "White-label options",
-                    "On-premise deployment",
+                    "Unlimited processes
+                    "Full cognitive suite
+                    "Custom development
+                    "White-label options
+                    "On-premise deployment
                     "Dedicated team"
                   ]
                 }

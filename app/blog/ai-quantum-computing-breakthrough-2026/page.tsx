@@ -2,11 +2,11 @@ import React from 'react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'AI Quantum Computing Breakthrough 2026: The Future is Here | Zion Tech Group',
+  title= 'AI Quantum Computing Breakthrough 2026: The Future is Here | Zion Tech Group',
   description: 'Explore the revolutionary breakthrough in AI-powered quantum computing that is reshaping the future of technology. Discover quantum neural networks, quantum machine learning, and unprecedented computational power.',
   keywords: 'AI quantum computing, quantum neural networks, quantum machine learning, quantum breakthrough 2026, quantum AI, computational revolution',
   openGraph: {
-    title: 'AI Quantum Computing Breakthrough 2026: The Future is Here',
+    title= 'AI Quantum Computing Breakthrough 2026: The Future is Here',
     description: 'Revolutionary AI-powered quantum computing systems that solve complex problems in seconds, not years.',
     type: 'article',
     publishedTime: '2025-01-30T11:00:00Z',

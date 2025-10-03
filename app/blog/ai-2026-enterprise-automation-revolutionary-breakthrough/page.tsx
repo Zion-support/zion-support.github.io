@@ -2,11 +2,11 @@ import React from 'react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'AI 2026: Revolutionary Enterprise Automation Breakthrough | Zion Tech Group',
+  title= 'AI 2026: Revolutionary Enterprise Automation Breakthrough | Zion Tech Group',
   description: 'Discover the revolutionary AI automation breakthroughs transforming enterprises in 2026. Learn about autonomous systems, quantum-enhanced AI, and next-generation business intelligence.',
   keywords: 'AI 2026, enterprise automation, autonomous systems, quantum AI, business intelligence, AI breakthrough',
   openGraph: {
-    title: 'AI 2026: Revolutionary Enterprise Automation Breakthrough',
+    title= 'AI 2026: Revolutionary Enterprise Automation Breakthrough',
     description: 'The most comprehensive guide to AI automation breakthroughs transforming enterprises in 2026.',
     type: 'article',
     publishedTime: '2026-01-15T00:00:00Z',

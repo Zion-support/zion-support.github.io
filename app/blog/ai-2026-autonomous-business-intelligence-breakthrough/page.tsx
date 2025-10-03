@@ -2,12 +2,12 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI 2026 Autonomous Business Intelligence Breakthrough | Zion Tech Group',
+  title= 'AI 2026 Autonomous Business Intelligence Breakthrough | Zion Tech Group',
   description: 'Discover how autonomous business intelligence systems achieve 300% ROI improvements with self-optimizing analytics, predictive insights, and automated decision-making.',
   keywords: 'autonomous business intelligence, AI analytics, predictive insights, business automation, ROI optimization',
   authors: [{ name: 'Zion Tech Group' }],
   openGraph: {
-    title: 'AI 2026 Autonomous Business Intelligence Breakthrough',
+    title= 'AI 2026 Autonomous Business Intelligence Breakthrough',
     description: 'Revolutionary autonomous BI systems delivering 300% ROI improvements and automated decision-making.',
     url: 'https://ziontechgroup.com/blog/ai-2026-autonomous-business-intelligence-breakthrough',
     siteName: 'Zion Tech Group',
@@ -17,7 +17,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AI 2026 Autonomous Business Intelligence Breakthrough',
+    title= 'AI 2026 Autonomous Business Intelligence Breakthrough',
     description: 'Revolutionary autonomous BI systems delivering 300% ROI improvements and automated decision-making.',
   },
 };

@@ -1,11 +1,11 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Fortune 500 $2.8B AI Revolution Success: January 2025 Advanced Enterprise Transformation | Zion Tech Group',
+  title= 'Fortune 500 $2.8B AI Revolution Success: January 2025 Advanced Enterprise Transformation | Zion Tech Group',
   description: 'How a Fortune 500 company achieved $2.8B ROI with advanced AI revolution in January 2025. 99.9% operational autonomy, zero downtime, 847% efficiency gains.',
   keywords: 'Fortune 500 AI success, enterprise AI transformation, AI ROI, autonomous systems, quantum AI, business transformation',
   openGraph: {
-    title: 'Fortune 500 $2.8B AI Revolution Success: January 2025 Advanced Enterprise Transformation',
+    title= 'Fortune 500 $2.8B AI Revolution Success: January 2025 Advanced Enterprise Transformation',
     description: 'Real-world success story: $2.8B ROI, 99.9% operational autonomy, zero downtime achieved through advanced AI revolution.',
     type: 'article',
     publishedTime: '2025-01-15T00:00:00Z',

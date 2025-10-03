@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'AI 2026 January Breakthrough: $50B Manufacturing Success Story',
+  title= 'AI 2026 January Breakthrough: $50B Manufacturing Success Story',
   description: 'How a Fortune 5 manufacturing giant achieved $50B ROI with January 2026 AI breakthrough innovations. 500,000x performance improvements and 99.999% autonomous operations.',
   keywords: 'AI case study 2026, $50B success, manufacturing AI, breakthrough innovations, Fortune 5, autonomous systems',
 };

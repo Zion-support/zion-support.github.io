@@ -2,11 +2,11 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI 2027 Hyper‑Automation Blueprint | Zion Tech Group',
+  title= 'AI 2027 Hyper‑Automation Blueprint | Zion Tech Group',
   description:
     'A pragmatic blueprint to scale reliable AI hyper‑automation across the enterprise with guardrails, observability, and measurable ROI.',
   openGraph: {
-    title: 'AI 2027 Hyper‑Automation Blueprint',
+    title= 'AI 2027 Hyper‑Automation Blueprint',
     description:
       'Scale reliable AI hyper‑automation with policy gates, evals, and value stream analytics.',
     type: 'article'

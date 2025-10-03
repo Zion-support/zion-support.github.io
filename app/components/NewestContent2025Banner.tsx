@@ -270,10 +270,10 @@ const NewestContent2025Banner = () => {
         {/* Stats Section */}
         <div className="grid md:grid-cols-4 gap-8 mt-20">
           {[
-            { value: '500+', label: 'Enterprise Clients' },
-            { value: '10B+', label: 'Data Points Processed Daily' },
-            { value: '99.9%', label: 'System Uptime' },
-            { value: '5M+', label: 'Autonomous Operations Hours' }
+            { value='500+', label: 'Enterprise Clients' },
+            { value='10B+', label: 'Data Points Processed Daily' },
+            { value='99.9%', label: 'System Uptime' },
+            { value='5M+', label: 'Autonomous Operations Hours' }
           ].map((stat, index) => (
             <div key={index} className="text-center">
               <div className="text-5xl font-extrabold bg-gradient-to-r from-cyan-300 to-purple-300 bg-clip-text text-transparent mb-2">

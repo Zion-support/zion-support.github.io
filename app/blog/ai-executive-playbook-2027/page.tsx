@@ -2,11 +2,11 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Executive Playbook 2027 | Zion Tech Group',
+  title= 'AI Executive Playbook 2027 | Zion Tech Group',
   description:
     'A concise executive guide to plan, fund, and govern enterprise AI with measurable outcomes.',
   openGraph: {
-    title: 'AI Executive Playbook 2027',
+    title= 'AI Executive Playbook 2027',
     description:
       'Plan, fund, and govern reliable AI with measurable outcomes across the enterprise.',
     type: 'article'

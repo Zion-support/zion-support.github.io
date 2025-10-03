@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'GenAI Routing Quality Tiers Q4 2025: Predictable Cost, Stable UX',
+  title= 'GenAI Routing Quality Tiers Q4 2025: Predictable Cost, Stable UX',
   description: 'Tiered models, caching, and budget‑aware routes mapped to SLOs to keep quality high and costs predictable.'
 };
 

@@ -3,11 +3,11 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'AI 2026 Enterprise Transformation Services | Zion Tech Group',
+  title= 'AI 2026 Enterprise Transformation Services | Zion Tech Group',
   description: 'Transform your enterprise with cutting-edge AI 2026 technologies. Achieve 300%+ ROI, 95% efficiency gains, and $50M+ annual savings with our comprehensive AI transformation services.',
   keywords: 'AI 2026 enterprise transformation, AI implementation, enterprise AI services, AI ROI, AI automation, AI consulting',
   openGraph: {
-    title: 'AI 2026 Enterprise Transformation Services',
+    title= 'AI 2026 Enterprise Transformation Services',
     description: 'Comprehensive AI transformation services delivering 300%+ ROI and $50M+ annual savings',
     type: 'website',
   },

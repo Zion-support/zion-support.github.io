@@ -2,11 +2,11 @@ import React from 'react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'February 2025: Quantum AI Breakthrough - Enterprise Transformation Revolution | Zion Tech Group',
+  title= 'February 2025: Quantum AI Breakthrough - Enterprise Transformation Revolution | Zion Tech Group',
   description: 'Discover how Fortune 500 companies are achieving unprecedented results with quantum-enhanced AI systems, delivering 300% performance improvements and $50B in cost savings.',
   keywords: ['Quantum AI', 'Enterprise Transformation', 'Quantum Computing', 'AI Breakthrough', 'Fortune 500', 'Cost Savings'],
   openGraph: {
-    title: 'February 2025: Quantum AI Breakthrough - Enterprise Transformation Revolution',
+    title= 'February 2025: Quantum AI Breakthrough - Enterprise Transformation Revolution',
     description: 'Fortune 500 companies achieve 300% performance improvements and $50B in cost savings through quantum-enhanced AI systems.',
     type: 'article',
     publishedTime: '2025-02-15T00:00:00Z',

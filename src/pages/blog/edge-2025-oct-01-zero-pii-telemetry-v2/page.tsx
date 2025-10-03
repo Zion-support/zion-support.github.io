@@ -6,7 +6,7 @@ export default function ZeroPIITelemetryV2(): React.JSX.Element {
         <title >Zero‑PII Telemetry v2 — Sub‑100ms, Signed, Differentially Private</title>
         <meta name: "description",;,"
   content: "Scoped IDs, on‑device aggregation, DP noise, and attestations for privacy‑preserving metrics at the edge.", /><link rel: "canonical",;,"
-  href="https://ziontechgroup.com/blog/edge-2025-oct-01-zero-pii-telemetry-v2",
+  href="https://ziontechgroup.com/blog/edge-2025-oct-01-zero-pii-telemetry-v2
         />
       </Helmet>
 

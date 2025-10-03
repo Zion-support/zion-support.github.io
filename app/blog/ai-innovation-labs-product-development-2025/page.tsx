@@ -1,10 +1,10 @@
 import React from 'react';
 
 export const metadata = {
-	title: 'AI Innovation Labs: Product Development Revolution 2025 | Zion Tech Group',
+	title= 'AI Innovation Labs: Product Development Revolution 2025 | Zion Tech Group',
 	description: 'Discover how AI Innovation Labs are revolutionizing product development with 10x faster time-to-market, 85% cost reduction, and breakthrough innovation acceleration.',
 	openGraph: {
-		title: 'AI Innovation Labs: Product Development Revolution 2025',
+		title= 'AI Innovation Labs: Product Development Revolution 2025',
 		description: 'Revolutionary AI-powered product development achieving 10x faster time-to-market and 85% cost reduction.',
 		images: [{ url: '/og/ai-innovation-labs-2025.jpg' }]
 	}
@@ -92,23 +92,23 @@ export default function Page() {
 {`// AI Innovation Lab Architecture
 const InnovationLabFramework = {
   ideation: {
-    aiBrainstorming: "GPT-4 + Custom Innovation Models",
-    marketAnalysis: "Real-time Data Streams + ML Predictions",
+    aiBrainstorming: "GPT-4 + Custom Innovation Models
+    marketAnalysis: "Real-time Data Streams + ML Predictions
     conceptGeneration: "Generative AI + Design Thinking AI"
   },
   design: {
-    autonomousDesign: "AutoCAD AI + Generative Design",
-    simulation: "ANSYS AI + Digital Twin Technology",
+    autonomousDesign: "AutoCAD AI + Generative Design
+    simulation: "ANSYS AI + Digital Twin Technology
     optimization: "Genetic Algorithms + ML Optimization"
   },
   prototyping: {
-    rapidPrototyping: "3D Printing + AI Quality Control",
-    virtualTesting: "VR/AR + Physics Simulation AI",
+    rapidPrototyping: "3D Printing + AI Quality Control
+    virtualTesting: "VR/AR + Physics Simulation AI
     iteration: "Automated Feedback Loops + Learning Systems"
   },
   marketValidation: {
-    predictiveAnalytics: "Consumer Behavior AI + Market Modeling",
-    aTesting: "AI-Powered Experiments + Statistical Analysis",
+    predictiveAnalytics: "Consumer Behavior AI + Market Modeling
+    aTesting: "AI-Powered Experiments + Statistical Analysis
     feedback: "Sentiment Analysis + Social Media Intelligence"
   }
 };`}

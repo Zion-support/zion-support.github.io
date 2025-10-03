@@ -2,11 +2,11 @@ import React from 'react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Fortune 500 AI Transformation: Breakthrough Success Story 2026',
+  title= 'Fortune 500 AI Transformation: Breakthrough Success Story 2026',
   description: 'Discover how a leading Fortune 500 company achieved unprecedented success through AI transformation, implementing autonomous agent factories and quantum neural networks to drive 400% operational efficiency gains.',
   keywords: ['Fortune 500', 'AI transformation', 'case study', 'enterprise AI', 'autonomous agents', 'quantum computing', 'success story'],
   openGraph: {
-    title: 'Fortune 500 AI Transformation: Breakthrough Success Story 2026',
+    title= 'Fortune 500 AI Transformation: Breakthrough Success Story 2026',
     description: 'Discover how a leading Fortune 500 company achieved unprecedented success through AI transformation.',
     type: 'article',
     publishedTime: '2026-01-15T00:00:00.000Z',

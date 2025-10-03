@@ -2,11 +2,11 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI 2027: The Dawn of Fully Autonomous Enterprise Operations',
+  title= 'AI 2027: The Dawn of Fully Autonomous Enterprise Operations',
   description: 'Explore how AI-driven autonomous enterprise systems are transforming business operations, delivering unprecedented efficiency and decision-making capabilities without human intervention.',
   keywords: 'autonomous enterprise, AI 2027, self-managing systems, business automation, intelligent operations, enterprise AI',
   openGraph: {
-    title: 'AI 2027: The Dawn of Fully Autonomous Enterprise Operations',
+    title= 'AI 2027: The Dawn of Fully Autonomous Enterprise Operations',
     description: 'Explore how AI-driven autonomous enterprise systems are transforming business operations, delivering unprecedented efficiency and decision-making capabilities without human intervention.',
     type: 'article',
     publishedTime: '2027-02-20T00:00:00.000Z',

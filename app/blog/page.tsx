@@ -1,7 +1,7 @@
 
 const posts = [
   {
-    title: 'Enterprise AI Roadmap 2025: Scorecards, Guardrails, and Reliable Velocity',
+    title= 'Enterprise AI Roadmap 2025: Scorecards, Guardrails, and Reliable Velocity',
     description:
       'A practical roadmap to fund, govern, and ship AI with KPI‑linked scorecards and guardrails‑as‑code.',
     href: '/blog/ai-2025-oct-04-enterprise-ai-roadmap-scorecards',
@@ -10,7 +10,7 @@ const posts = [
     featured: true,
   },
   {
-    title: 'AI 2026: Quantum-Neural Fusion Revolutionary Breakthrough',
+    title= 'AI 2026: Quantum-Neural Fusion Revolutionary Breakthrough',
     description:
       'Explore the groundbreaking convergence of quantum computing and neural networks that\'s revolutionizing enterprise AI in 2026.',
     href: '/blog/ai-2026-quantum-neural-fusion-revolutionary-breakthrough',
@@ -19,7 +19,7 @@ const posts = [
     featured: true,
   },
   {
-    title: 'AI 2026: Synthetic Consciousness Enterprise Transformation',
+    title= 'AI 2026: Synthetic Consciousness Enterprise Transformation',
     description:
       'Discover how synthetic consciousness AI is revolutionizing enterprise operations with self-aware systems and autonomous decision-making.',
     href: '/blog/ai-2026-synthetic-consciousness-enterprise-transformation',
@@ -28,7 +28,7 @@ const posts = [
     featured: true,
   },
   {
-    title: 'AI 2026: Autonomous Enterprise Operations Revolution',
+    title= 'AI 2026: Autonomous Enterprise Operations Revolution',
     description:
       'Learn how autonomous AI systems are revolutionizing enterprise operations with self-managing, self-optimizing, and self-healing capabilities.',
     href: '/blog/ai-2026-autonomous-enterprise-operations-revolution',
@@ -37,7 +37,7 @@ const posts = [
     featured: true,
   },
   {
-    title: 'GenAI Security in 2025: Practical Controls That Actually Work',
+    title= 'GenAI Security in 2025: Practical Controls That Actually Work',
     description:
       'A pragmatic security blueprint for production GenAI: controls, gateways, and evals.',
     href: '/blog/genai-security-2025',
@@ -45,7 +45,7 @@ const posts = [
     tags: ['AI', 'Security', 'Governance'],
   },
   {
-    title: 'Secure RAG Architecture in 2025: Safety, Scale, and Speed',
+    title= 'Secure RAG Architecture in 2025: Safety, Scale, and Speed',
     description:
       'A pragmatic blueprint for multi-tenant, eval-driven RAG with strong isolation and uptime.',
     href: '/blog/secure-rag-architecture-2025',
@@ -53,7 +53,7 @@ const posts = [
     tags: ['RAG', 'Security', 'Architecture'],
   },
   {
-    title: 'AI Product Roadmaps That Actually Ship',
+    title= 'AI Product Roadmaps That Actually Ship',
     description:
       'Milestones, guardrails, and evals that keep AI features shipping on time with quality.',
     href: '/blog/ai-product-roadmaps-that-ship',
@@ -61,7 +61,7 @@ const posts = [
     tags: ['Product', 'AI', 'Strategy'],
   },
   {
-    title: 'Edge AI in Manufacturing 2025: Faster Decisions, Lower Costs',
+    title= 'Edge AI in Manufacturing 2025: Faster Decisions, Lower Costs',
     description:
       'Move inference to the edge for sub-100ms decisions, resilience, and bandwidth savings.',
     href: '/blog/edge-ai-in-manufacturing-2025',
@@ -69,7 +69,7 @@ const posts = [
     tags: ['Edge AI', 'Manufacturing', 'IoT'],
   },
   {
-    title: 'GenAI Evals in Production: What Actually Works',
+    title= 'GenAI Evals in Production: What Actually Works',
     description:
       'Build continuous eval loops with golden tasks, HITL audits, and drift-aware sampling.',
     href: '/blog/genai-evals-in-production',
@@ -77,7 +77,7 @@ const posts = [
     tags: ['GenAI', 'Evals', 'Quality'],
   },
   {
-    title: 'Startup Micro SaaS Playbook: From Idea to $10k MRR',
+    title= 'Startup Micro SaaS Playbook: From Idea to $10k MRR',
     description:
       'A pragmatic blueprint to launch and grow a Micro SaaS with capital efficiency.',
     href: '/blog/startup-micro-saas-playbook',
@@ -85,7 +85,7 @@ const posts = [
     tags: ['Startup', 'SaaS', 'Growth'],
   },
   {
-    title: 'AI Governance Operating Model: From Policy to Practice',
+    title= 'AI Governance Operating Model: From Policy to Practice',
     description:
       'Translate policy into day-to-day decisions with risk tiering, evals, and reviews.',
     href: '/blog/ai-governance-operating-model',
@@ -93,7 +93,7 @@ const posts = [
     tags: ['AI', 'Governance', 'Risk'],
   },
   {
-    title: 'Serverless for ML in 2025: Simple, Cost-Efficient, Production-Ready',
+    title= 'Serverless for ML in 2025: Simple, Cost-Efficient, Production-Ready',
     description:
       'Run ML and GenAI on serverless with predictable cost and strong reliability.',
     href: '/blog/serverless-for-ml-2025',
@@ -101,7 +101,7 @@ const posts = [
     tags: ['Serverless', 'ML', 'Cloud'],
   },
   {
-    title: 'Practical AI Agents for Small Businesses',
+    title= 'Practical AI Agents for Small Businesses',
     description:
       'How SMBs can deploy lightweight AI agents to automate support, sales outreach, and back-office tasks safely.',
     href: '/blog/ai-agents-for-smbs',
@@ -109,7 +109,7 @@ const posts = [
     tags: ['AI', 'Automation', 'Agents'],
   },
   {
-    title: 'Production-Grade AI Agents: Observability and Safety',
+    title= 'Production-Grade AI Agents: Observability and Safety',
     description:
       'How to harden agents for production with logging, evals, safety and cost controls.',
     href: '/blog/production-grade-ai-agents',
@@ -117,7 +117,7 @@ const posts = [
     tags: ['AI', 'Agents', 'MLOps'],
   },
   {
-    title: 'Cloud Cost Optimization in 2025: Proven Playbook',
+    title= 'Cloud Cost Optimization in 2025: Proven Playbook',
     description:
       'A tactical guide to cut 20–40% of cloud spend without sacrificing performance or velocity.',
     href: '/blog/cloud-cost-optimization-2025',
@@ -125,7 +125,7 @@ const posts = [
     tags: ['Cloud', 'FinOps', 'DevOps'],
   },
   {
-    title: 'Cloud FinOps Automation: 30% Savings With Guardrails',
+    title= 'Cloud FinOps Automation: 30% Savings With Guardrails',
     description:
       'Automation-first FinOps: waste sweeps, rightsizing approvals, commitments, and guardrails.',
     href: '/blog/cloud-finops-automation',
@@ -133,7 +133,7 @@ const posts = [
     tags: ['Cloud', 'FinOps', 'Automation'],
   },
   {
-    title: 'AI-Powered Customer Support Playbooks',
+    title= 'AI-Powered Customer Support Playbooks',
     description:
       'Production-ready patterns for self-serve assistants, case triage, agent copilots, and QA.',
     href: '/blog/ai-customer-support-playbooks',
@@ -141,7 +141,7 @@ const posts = [
     tags: ['AI', 'CX', 'Automation'],
   },
   {
-    title: 'AI Infrastructure Cost Controls That Actually Work',
+    title= 'AI Infrastructure Cost Controls That Actually Work',
     description:
       'A pragmatic framework to reduce inference costs while maintaining performance and velocity.',
     href: '/blog/ai-infra-cost-controls',
@@ -149,7 +149,7 @@ const posts = [
     tags: ['Cloud', 'FinOps', 'AI'],
   },
   {
-    title: 'Enterprise RAG Blueprint: From Pilot to Production',
+    title= 'Enterprise RAG Blueprint: From Pilot to Production',
     description:
       'Step-by-step architecture and rollout plan for RAG in regulated, multi-tenant environments.',
     href: '/blog/enterprise-rag-blueprint',
@@ -157,7 +157,7 @@ const posts = [
     tags: ['RAG', 'LLM', 'Architecture'],
   },
   {
-    title: 'The Modern Data Stack in 2025: Pragmatic Guide',
+    title= 'The Modern Data Stack in 2025: Pragmatic Guide',
     description:
       'Ingestion, lakehouse, transformations, metrics and activation that actually work at scale.',
     href: '/blog/modern-data-stack-2025',

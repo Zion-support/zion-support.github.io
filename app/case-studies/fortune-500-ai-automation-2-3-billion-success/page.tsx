@@ -1,11 +1,11 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Fortune 500 AI Automation Success: $2.3B Cost Savings & 95% Efficiency Gains',
+  title= 'Fortune 500 AI Automation Success: $2.3B Cost Savings & 95% Efficiency Gains',
   description: 'Discover how a Fortune 500 company achieved $2.3 billion in cost savings and 95% operational efficiency gains through comprehensive AI automation. Real-world implementation insights and proven results.',
   keywords: 'Fortune 500, AI automation, cost savings, operational efficiency, enterprise transformation, business intelligence, AI success story',
   openGraph: {
-    title: 'Fortune 500 AI Automation Success: $2.3B Cost Savings & 95% Efficiency Gains',
+    title= 'Fortune 500 AI Automation Success: $2.3B Cost Savings & 95% Efficiency Gains',
     description: 'Discover how a Fortune 500 company achieved $2.3 billion in cost savings and 95% operational efficiency gains through comprehensive AI automation.',
     type: 'article',
     publishedTime: '2025-01-20T00:00:00Z',

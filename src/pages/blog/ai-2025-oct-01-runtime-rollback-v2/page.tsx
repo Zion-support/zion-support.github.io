@@ -8,7 +8,7 @@ export default function RuntimeRollbackV2(): React.JSX.Element {
         <meta name: "description",;,"
   content: "Blueprint for instant rollback triggered by KPI‑linked canaries and policy tests.", /><link ,";,"
   rel: "canonical",;,"
-  href="https://ziontechgroup.com/blog/ai-2025-oct-01-runtime-rollback-v2",
+  href="https://ziontechgroup.com/blog/ai-2025-oct-01-runtime-rollback-v2
         />
       </Helmet>
 

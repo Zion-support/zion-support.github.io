@@ -6,7 +6,7 @@ export default function E2EAITracing2026(): React.JSX.Element {
         <title >E2E AI Tracing 2026: From Prompts to Outcomes</title>,,
         <meta name: "description",;,"
   content: "Instrument prompts, tools, calls, budgets, and KPIs with end‑to‑end traces to improve reliability and cost control.", /><link rel: "canonical",;,"
-  href="https://ziontechgroup.com/blog/ai-2026-e2e-ai-tracing",
+  href="https://ziontechgroup.com/blog/ai-2026-e2e-ai-tracing
         />
       </Helmet>
 

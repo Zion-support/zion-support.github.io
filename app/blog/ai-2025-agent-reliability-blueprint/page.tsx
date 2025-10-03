@@ -1,11 +1,11 @@
 import React from 'react';
 
 export const metadata = {
-  title: 'AI 2025 Agent Reliability Blueprint: Ship Trustworthy Autonomous Workflows',
+  title= 'AI 2025 Agent Reliability Blueprint: Ship Trustworthy Autonomous Workflows',
   description:
     'A practical blueprint to achieve reliable, observable, and governable autonomous agents in production with policy gates, evals, and rollback plans.',
   openGraph: {
-    title: 'AI 2025 Agent Reliability Blueprint',
+    title= 'AI 2025 Agent Reliability Blueprint',
     description:
       'Design and operate reliable autonomous agents with traces, scorecards, policy testing, and continuous verification.',
     type: 'article',

@@ -158,7 +158,7 @@ export default function October2025RealTimeIntelligenceBanner() {
         transition={{
           duration: 5,
           repeat: Infinity,
-          ease: "linear",
+          ease: "linear
         }}
       />
     </motion.div>

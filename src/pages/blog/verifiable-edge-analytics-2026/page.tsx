@@ -6,7 +6,7 @@ export default function VerifiableEdgeAnalytics2026(): React.JSX.Element {
         <title >Verifiable Edge Analytics 2026: Zero‑PII Insights with Attestations</title>,,
         <meta name: "description",;,"
   content: "Scoped IDs, on‑device aggregation, DP noise, and signed attestations for trustworthy insights under 100ms.", /><link rel: "canonical",;,"
-  href="https://ziontechgroup.com/blog/verifiable-edge-analytics-2026",
+  href="https://ziontechgroup.com/blog/verifiable-edge-analytics-2026
         />
       </Helmet>
 

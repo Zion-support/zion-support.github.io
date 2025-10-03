@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Future Workforce 2026: Human-AI Collaboration Revolution',
+  title= 'AI Future Workforce 2026: Human-AI Collaboration Revolution',
   description: 'Discover how AI is reshaping the workforce in 2026. Learn about human-AI collaboration, skill transformation, and the future of work.',
   keywords: 'AI workforce, human-AI collaboration, future of work, AI skills, workplace transformation',
 };

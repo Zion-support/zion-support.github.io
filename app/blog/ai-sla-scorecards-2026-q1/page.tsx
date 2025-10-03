@@ -3,17 +3,17 @@ import Link from 'next/link';
 import { Calendar, Clock, Gauge, ShieldCheck, Activity, ArrowRight } from 'lucide-react';
 
 export const metadata = {
-  title: 'AI SLA Scorecards 2026 Q1: KPIs, Budgets, Rollback | Zion Tech Group',
+  title= 'AI SLA Scorecards 2026 Q1: KPIs, Budgets, Rollback | Zion Tech Group',
   description: 'Design and ship AI SLA scorecards wired to business KPIs with budgets, canaries, and instant rollback. A practical 2026 Q1 playbook for reliable autonomy.',
   openGraph: {
-    title: 'AI SLA Scorecards 2026 Q1',
+    title= 'AI SLA Scorecards 2026 Q1',
     description: 'KPIs, budgets, and instant rollback wired to product outcomes.',
     type: 'article',
     url: 'https://ziontechgroup.com/blog/ai-sla-scorecards-2026-q1'
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AI SLA Scorecards 2026 Q1',
+    title= 'AI SLA Scorecards 2026 Q1',
     description: 'KPIs, budgets, and instant rollback wired to product outcomes.'
   }
 };

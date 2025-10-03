@@ -3,11 +3,11 @@ import Link from 'next/link';
 import { ArrowLeft, Clock, User, TrendingUp, Shield, Zap, CheckCircle, Star, DollarSign, Target } from 'lucide-react';
 
 export const metadata = {
-  title: 'AI Enterprise Automation Success: $2.3B Cost Savings & 99.97% Uptime | Zion Tech Group',
+  title= 'AI Enterprise Automation Success: $2.3B Cost Savings & 99.97% Uptime | Zion Tech Group',
   description: 'Discover how a Fortune 500 manufacturing giant achieved $2.3B cost savings, 99.97% uptime, and complete operational autonomy through AI enterprise automation in just 6 months.',
   keywords: 'AI automation case study, enterprise automation success, AI transformation, cost savings, operational efficiency, Fortune 500 AI',
   openGraph: {
-    title: 'AI Enterprise Automation Success: $2.3B Cost Savings & 99.97% Uptime',
+    title= 'AI Enterprise Automation Success: $2.3B Cost Savings & 99.97% Uptime',
     description: 'Discover how a Fortune 500 manufacturing giant achieved $2.3B cost savings, 99.97% uptime, and complete operational autonomy through AI enterprise automation in just 6 months.',
     type: 'article',
     url: 'https://ziontechgroup.com/case-studies/ai-enterprise-automation-success-2026',
@@ -22,7 +22,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AI Enterprise Automation Success: $2.3B Cost Savings & 99.97% Uptime',
+    title= 'AI Enterprise Automation Success: $2.3B Cost Savings & 99.97% Uptime',
     description: 'Discover how a Fortune 500 manufacturing giant achieved $2.3B cost savings, 99.97% uptime, and complete operational autonomy through AI enterprise automation in just 6 months.',
   },
 };

@@ -2,11 +2,11 @@ import React from 'react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: '🚀 Revolutionary AI Breakthroughs 2026: Meta-Cognitive, Quantum-Neural & Autonomous Operations',
+  title= '🚀 Revolutionary AI Breakthroughs 2026: Meta-Cognitive, Quantum-Neural & Autonomous Operations',
   description: 'Discover the most revolutionary AI breakthroughs of 2026: Meta-Cognitive AI achieving 95% decision accuracy, Quantum-Neural Networks with 1000x processing speed, and Autonomous Operations delivering 98% automation rates. Transform your enterprise with these game-changing technologies.',
   keywords: ['AI breakthroughs 2026', 'Meta-Cognitive AI', 'Quantum-Neural Networks', 'Autonomous Operations', 'Enterprise AI transformation', 'AI innovation', 'Machine learning breakthroughs'],
   openGraph: {
-    title: '🚀 Revolutionary AI Breakthroughs 2026: Meta-Cognitive, Quantum-Neural & Autonomous Operations',
+    title= '🚀 Revolutionary AI Breakthroughs 2026: Meta-Cognitive, Quantum-Neural & Autonomous Operations',
     description: 'Discover the most revolutionary AI breakthroughs of 2026 that are transforming enterprise operations with unprecedented accuracy and automation.',
     type: 'article',
     publishedTime: '2026-01-15T00:00:00.000Z',
@@ -240,19 +240,19 @@ export default function RevolutionaryBreakthroughAnnouncement2026() {
             <div className="grid md:grid-cols-3 gap-8 mb-16">
               {[
                 {
-                  title: 'Process Automation',
+                  title= 'Process Automation',
                   description: 'Complete automation of routine business processes with intelligent decision-making capabilities.',
                   metrics: '98%',
                   icon: '⚡'
                 },
                 {
-                  title: 'Self-Healing Systems',
+                  title= 'Self-Healing Systems',
                   description: 'Automated detection and resolution of issues without human intervention.',
                   metrics: '95%',
                   icon: '🔧'
                 },
                 {
-                  title: 'Predictive Maintenance',
+                  title= 'Predictive Maintenance',
                   description: 'Proactive identification and prevention of system failures before they occur.',
                   metrics: '92%',
                   icon: '🔮'
@@ -287,10 +287,10 @@ export default function RevolutionaryBreakthroughAnnouncement2026() {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
               {[
-                { value: '$50M+', label: 'Average Annual Savings', icon: '💰', color: 'text-green-400' },
-                { value: '300%', label: 'Average ROI Achieved', icon: '📈', color: 'text-blue-400' },
-                { value: '18mo', label: 'Average Payback Period', icon: '⏱️', color: 'text-purple-400' },
-                { value: '500+', label: 'Fortune 500 Clients', icon: '🏢', color: 'text-cyan-400' }
+                { value='$50M+', label: 'Average Annual Savings', icon: '💰', color: 'text-green-400' },
+                { value='300%', label: 'Average ROI Achieved', icon: '📈', color: 'text-blue-400' },
+                { value='18mo', label: 'Average Payback Period', icon: '⏱️', color: 'text-purple-400' },
+                { value='500+', label: 'Fortune 500 Clients', icon: '🏢', color: 'text-cyan-400' }
               ].map((metric, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-purple-500/50 transition-all duration-300 text-center">
                   <div className="text-6xl mb-4">{metric.icon}</div>

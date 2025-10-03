@@ -3,11 +3,11 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'AI 2026 Hyper-Autonomous Enterprise Automation: $300B Success Story - Fortune 500 Mega Transformation',
+  title= 'AI 2026 Hyper-Autonomous Enterprise Automation: $300B Success Story - Fortune 500 Mega Transformation',
   description: 'Discover how Fortune 500 companies achieved $300B in value generation through our hyper-autonomous enterprise automation breakthrough technology.',
   keywords: 'AI automation success story, $300B value, Fortune 500, hyper-autonomous, enterprise automation, mega ROI',
   openGraph: {
-    title: 'AI 2026 Hyper-Autonomous Enterprise Automation: $300B Success Story - Fortune 500 Mega Transformation',
+    title= 'AI 2026 Hyper-Autonomous Enterprise Automation: $300B Success Story - Fortune 500 Mega Transformation',
     description: 'Discover how Fortune 500 companies achieved $300B in value generation through our hyper-autonomous enterprise automation breakthrough technology.',
     type: 'article',
     publishedTime: '2026-01-15T00:00:00.000Z',

@@ -2,11 +2,11 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-	title: 'Intelligent Data Fabric 2026: Real-Time AI for Connected Enterprises',
+	title= 'Intelligent Data Fabric 2026: Real-Time AI for Connected Enterprises',
 	description:
 		'Unify batch, streaming, and unstructured data with an intelligent data fabric to power low-latency AI decisions across the enterprise.',
 	openGraph: {
-		title: 'Intelligent Data Fabric 2026',
+		title= 'Intelligent Data Fabric 2026',
 		description:
 			'Architecture patterns for a unified data fabric enabling real-time AI across domains.',
 		url: 'https://ziontechgroup.com/blog/ai-intelligent-data-fabric-2026',

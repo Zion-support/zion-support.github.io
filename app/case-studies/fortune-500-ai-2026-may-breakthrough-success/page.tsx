@@ -2,11 +2,11 @@ import React from 'react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Fortune 500 AI 2026 May Breakthrough Success: $5.2B Value Generated in 90 Days',
+  title= 'Fortune 500 AI 2026 May Breakthrough Success: $5.2B Value Generated in 90 Days',
   description: 'Discover how a Fortune 500 leader achieved unprecedented results with our May 2026 AI breakthrough, delivering $5.2B in measurable value and 99.9% operational efficiency.',
   keywords: 'Fortune 500 AI success, $5.2B value, AI breakthrough 2026, enterprise transformation, business results',
   openGraph: {
-    title: 'Fortune 500 AI 2026 May Breakthrough Success: $5.2B Value Generated in 90 Days',
+    title= 'Fortune 500 AI 2026 May Breakthrough Success: $5.2B Value Generated in 90 Days',
     description: 'Discover how a Fortune 500 leader achieved unprecedented results with our May 2026 AI breakthrough, delivering $5.2B in measurable value.',
     type: 'article',
     publishedTime: '2026-05-15T00:00:00.000Z',

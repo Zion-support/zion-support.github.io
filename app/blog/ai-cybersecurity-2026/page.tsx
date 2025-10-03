@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Cybersecurity 2026: Next-Generation Threat Protection',
+  title= 'AI Cybersecurity 2026: Next-Generation Threat Protection',
   description: 'Explore cutting-edge AI cybersecurity solutions for 2026. Advanced threat detection, autonomous response, and zero-trust architecture.',
   keywords: 'AI cybersecurity, threat detection, autonomous security, zero-trust, cyber defense',
 };

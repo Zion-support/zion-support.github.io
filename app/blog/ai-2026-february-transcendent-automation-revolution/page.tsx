@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'February 2026: Transcendent Automation Revolution - Beyond Human Intelligence | Zion Tech Group',
+  title= 'February 2026: Transcendent Automation Revolution - Beyond Human Intelligence | Zion Tech Group',
   description: 'Revolutionary breakthrough achieving transcendent automation with 10,000,000x performance, universal consciousness, and $1 trillion+ enterprise value generation.',
   keywords: 'AI, Automation, Transcendent, Revolution, 2026, Enterprise, Beyond Human Intelligence, Infinite Consciousness',
 };

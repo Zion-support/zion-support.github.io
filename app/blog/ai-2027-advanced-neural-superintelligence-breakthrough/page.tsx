@@ -2,12 +2,12 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI 2027 Advanced Neural Superintelligence Breakthrough - Zion Tech Group',
+  title= 'AI 2027 Advanced Neural Superintelligence Breakthrough - Zion Tech Group',
   description: 'Revolutionary AI 2027 breakthrough achieving 1,000,000x performance gains with advanced neural superintelligence architectures. $2.8T enterprise transformation success.',
   keywords: 'AI 2027, neural superintelligence, advanced AI, enterprise transformation, quantum computing, autonomous systems',
   authors: [{ name: 'Zion Tech Group AI Research Team' }],
   openGraph: {
-    title: 'AI 2027 Advanced Neural Superintelligence Breakthrough',
+    title= 'AI 2027 Advanced Neural Superintelligence Breakthrough',
     description: 'Revolutionary AI 2027 breakthrough achieving 1,000,000x performance gains with advanced neural superintelligence architectures.',
     url: 'https://ziontechgroup.com/blog/ai-2027-advanced-neural-superintelligence-breakthrough',
     type: 'article',

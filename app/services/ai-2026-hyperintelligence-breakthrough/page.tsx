@@ -2,7 +2,7 @@ import React from 'react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'AI 2026 Hyperintelligence Breakthrough Services - Zion Tech Group',
+  title= 'AI 2026 Hyperintelligence Breakthrough Services - Zion Tech Group',
   description: 'Transform your enterprise with revolutionary AI hyperintelligence breakthrough achieving 10,000x cognitive enhancement and autonomous operations.',
   keywords: ['AI hyperintelligence', 'enterprise AI transformation', 'autonomous systems', 'cognitive enhancement', 'AI services'],
 };

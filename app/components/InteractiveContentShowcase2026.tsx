@@ -10,7 +10,7 @@ export default function InteractiveContentShowcase2026() {
     articles: [
       {
         id: 1,
-        title: 'AI-Powered Autonomous Business Systems 2026',
+        title= 'AI-Powered Autonomous Business Systems 2026',
         description: 'Explore the revolutionary impact of AI-powered autonomous business systems in 2026, driving efficiency and innovation.',
         link: '/blog/ai-autonomous-business-systems-2026',
         category: 'Blog',
@@ -18,7 +18,7 @@ export default function InteractiveContentShowcase2026() {
       },
       {
         id: 2,
-        title: 'AI Quantum Computing Breakthroughs 2026',
+        title= 'AI Quantum Computing Breakthroughs 2026',
         description: 'Discover the latest AI quantum computing breakthroughs and their profound implications for enterprise capabilities.',
         link: '/blog/ai-quantum-computing-breakthrough-2026',
         category: 'Blog',
@@ -26,7 +26,7 @@ export default function InteractiveContentShowcase2026() {
       },
       {
         id: 3,
-        title: 'AI Enterprise Automation Revolution 2026',
+        title= 'AI Enterprise Automation Revolution 2026',
         description: 'Unlock 500% ROI with our next-gen autonomous AI systems. A complete guide to enterprise automation.',
         link: '/blog/ai-2026-enterprise-automation-revolution',
         category: 'Blog',
@@ -36,7 +36,7 @@ export default function InteractiveContentShowcase2026() {
     caseStudies: [
       {
         id: 1,
-        title: 'Manufacturing AI Mega Transformation Success 2026',
+        title= 'Manufacturing AI Mega Transformation Success 2026',
         description: 'See how a leading manufacturing giant achieved 500% ROI and 90% efficiency gains through AI-driven transformation.',
         link: '/case-studies/ai-manufacturing-transformation-mega-success-2026',
         category: 'Case Study',
@@ -45,7 +45,7 @@ export default function InteractiveContentShowcase2026() {
       },
       {
         id: 2,
-        title: 'AI Quantum Financial Optimization 2026',
+        title= 'AI Quantum Financial Optimization 2026',
         description: 'A financial institution leveraged quantum AI to optimize trading strategies, achieving unprecedented returns.',
         link: '/case-studies/ai-2026-quantum-financial-optimization',
         category: 'Case Study',
@@ -54,7 +54,7 @@ export default function InteractiveContentShowcase2026() {
       },
       {
         id: 3,
-        title: 'AI Autonomous Enterprise Transformation 2026',
+        title= 'AI Autonomous Enterprise Transformation 2026',
         description: 'A Fortune 500 company achieved full autonomous operations, reducing costs by 70% and boosting productivity.',
         link: '/case-studies/ai-autonomous-enterprise-transformation-2026',
         category: 'Case Study',

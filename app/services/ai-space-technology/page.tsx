@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Space Technology Services - Autonomous Space Operations',
+  title= 'AI Space Technology Services - Autonomous Space Operations',
   description: 'Transform your space operations with AI-powered autonomous satellites, intelligent mission planning, and 99.9% mission success rates.',
   keywords: 'AI space technology, autonomous satellites, space operations, mission planning, space AI services',
 };

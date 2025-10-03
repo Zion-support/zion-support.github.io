@@ -3,11 +3,11 @@ import Link from 'next/link';
 import { ArrowRight, Calendar, Clock, Users, TrendingUp, DollarSign, Target, CheckCircle } from 'lucide-react';
 
 export const metadata = {
-  title: 'AI Cost Optimization Breakthrough 2026: Cut AI Spending by 90% | Zion Tech Group',
+  title= 'AI Cost Optimization Breakthrough 2026: Cut AI Spending by 90% | Zion Tech Group',
   description: 'Revolutionary AI cost optimization strategies delivering 90% cost reduction, $200M+ savings, and 10x efficiency gains. Proven methods for Fortune 500 companies to maximize AI ROI.',
   keywords: 'AI cost optimization 2026, reduce AI costs 90%, AI spending optimization, enterprise AI cost reduction, AI ROI maximization, Fortune 500 AI savings',
   openGraph: {
-    title: 'AI Cost Optimization Breakthrough 2026: Cut AI Spending by 90%',
+    title= 'AI Cost Optimization Breakthrough 2026: Cut AI Spending by 90%',
     description: 'Revolutionary AI cost optimization strategies delivering 90% cost reduction, $200M+ savings, and 10x efficiency gains for Fortune 500 companies.',
     type: 'article',
     url: 'https://ziontechgroup.com/blog/ai-cost-optimization-breakthrough-2026',
@@ -22,7 +22,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AI Cost Optimization Breakthrough 2026: Cut AI Spending by 90%',
+    title= 'AI Cost Optimization Breakthrough 2026: Cut AI Spending by 90%',
     description: 'Revolutionary AI cost optimization strategies delivering 90% cost reduction, $200M+ savings, and 10x efficiency gains for Fortune 500 companies.',
     images: ['/og-ai-cost-optimization-2026.jpg'],
   },
@@ -78,10 +78,10 @@ export default function AICostOptimizationBreakthrough2026() {
             {/* Key Results Grid */}
             <div className="grid md:grid-cols-4 gap-6 mt-16">
               {[
-                { value: '90%', label: 'Cost Reduction', icon: '💰' },
-                { value: '$200M+', label: 'Annual Savings', icon: '📈' },
-                { value: '10x', label: 'Efficiency Gains', icon: '⚡' },
-                { value: '6', label: 'Months to Results', icon: '📅' }
+                { value='90%', label: 'Cost Reduction', icon: '💰' },
+                { value='$200M+', label: 'Annual Savings', icon: '📈' },
+                { value='10x', label: 'Efficiency Gains', icon: '⚡' },
+                { value='6', label: 'Months to Results', icon: '📅' }
               ].map((stat, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
                   <div className="text-4xl mb-3">{stat.icon}</div>

@@ -4,11 +4,11 @@ import { ArrowLeft, TrendingUp, CheckCircle, Target, Clock, Users, DollarSign, B
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Global Manufacturing Leader Achieves 85% Process Automation with AI | Zion Tech Group',
+  title= 'Global Manufacturing Leader Achieves 85% Process Automation with AI | Zion Tech Group',
   description: 'See how a Fortune 500 manufacturing corporation achieved 85% process automation, 60% cost reduction, and $75M annual savings with AI-powered autonomous business processes.',
   keywords: 'manufacturing automation, AI case study, process automation, cost reduction, enterprise transformation',
   openGraph: {
-    title: 'Global Manufacturing Leader Achieves 85% Process Automation with AI',
+    title= 'Global Manufacturing Leader Achieves 85% Process Automation with AI',
     description: 'See how a Fortune 500 manufacturing corporation achieved 85% process automation, 60% cost reduction, and $75M annual savings with AI-powered autonomous business processes.',
     type: 'article',
     publishedTime: '2026-01-15T00:00:00Z',

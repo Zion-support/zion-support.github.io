@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: '$15.2 Billion Success: Ultra-Intelligent Autonomous Systems Transform Global Manufacturing | Zion Tech Group',
+  title= '$15.2 Billion Success: Ultra-Intelligent Autonomous Systems Transform Global Manufacturing | Zion Tech Group',
   description: 'Fortune 50 global manufacturing conglomerate achieved $15.2 billion in value through Ultra-Intelligent Autonomous Systems with 99.99% operational autonomy.',
   keywords: 'ultra-intelligent AI success, autonomous systems ROI, manufacturing transformation, Fortune 50 success, 15.2 billion value, 533% ROI',
 };

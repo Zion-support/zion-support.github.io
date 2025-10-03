@@ -3,11 +3,11 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'January 2026 Quantum Neural Optimization Breakthrough | Zion Tech Group',
+  title= 'January 2026 Quantum Neural Optimization Breakthrough | Zion Tech Group',
   description: 'Revolutionary quantum-enhanced neural networks achieving unprecedented optimization capabilities for enterprise AI systems.',
   keywords: ['quantum AI', 'neural networks', 'optimization', 'quantum computing', 'enterprise AI'],
   openGraph: {
-    title: 'January 2026 Quantum Neural Optimization Breakthrough',
+    title= 'January 2026 Quantum Neural Optimization Breakthrough',
     description: 'Revolutionary quantum-enhanced neural networks achieving unprecedented optimization capabilities for enterprise AI systems.',
     type: 'article',
     publishedTime: '2026-01-20T00:00:00Z',

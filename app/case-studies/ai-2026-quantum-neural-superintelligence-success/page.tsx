@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Case Study: $5B ROI with AI 2026 Quantum Neural Superintelligence - Zion Tech Group',
+  title= 'Case Study: $5B ROI with AI 2026 Quantum Neural Superintelligence - Zion Tech Group',
   description: 'How a Fortune 500 company achieved $5B ROI and 99.9% autonomous operations using Zion Tech Group\'s revolutionary quantum neural superintelligence platform.',
   keywords: 'quantum AI case study, AI ROI, enterprise AI success, quantum neural networks, autonomous operations',
 };

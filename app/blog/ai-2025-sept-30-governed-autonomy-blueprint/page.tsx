@@ -3,7 +3,7 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Governed Autonomy Blueprint (2025): Safe, Reliable, Cost-Aware AI',
+  title= 'Governed Autonomy Blueprint (2025): Safe, Reliable, Cost-Aware AI',
   description:
     'A practical blueprint to ship governed autonomy: budgets, scorecards, guardrails, and live traces that connect SLIs to business KPIs.',
   keywords:

@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { ArrowLeft, Clock, User, Calendar, Share2, Bookmark } from 'lucide-react';
 
 export const metadata = {
-  title: 'AI Cognitive Computing Breakthrough 2026: Human-Level Reasoning Revolution | Zion Tech Group',
+  title= 'AI Cognitive Computing Breakthrough 2026: Human-Level Reasoning Revolution | Zion Tech Group',
   description: 'Discover the breakthrough in AI cognitive computing that achieves human-level reasoning, decision-making, and problem-solving capabilities. Achieve 98% accuracy and $25M+ value.',
   keywords: 'cognitive computing, human-level reasoning, AI breakthrough, decision making, problem solving, artificial intelligence',
 };

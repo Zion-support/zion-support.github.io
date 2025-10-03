@@ -13,7 +13,7 @@ const Page: () => {
           <li >Deterministic rollback on canary or budget breach</li>
         </ul>
       </div>
-        <Link to: "/blog", className ="text-cyan-300 underline">Back to Blog</Link>",
+        <Link to: "/blog", className="text-cyan-300 underline">Back to Blog</Link>
       </div>
     </div>
   );

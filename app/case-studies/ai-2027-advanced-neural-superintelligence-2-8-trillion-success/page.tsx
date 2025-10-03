@@ -2,12 +2,12 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI 2027 Advanced Neural Superintelligence $2.8T Success Story - Zion Tech Group',
+  title= 'AI 2027 Advanced Neural Superintelligence $2.8T Success Story - Zion Tech Group',
   description: 'Fortune 500 case study: How Zion Tech Group delivered $2.8T in enterprise value with AI 2027 Advanced Neural Superintelligence breakthrough.',
   keywords: 'AI case study, neural superintelligence success, enterprise AI transformation, $2.8T ROI, Fortune 500',
   authors: [{ name: 'Zion Tech Group Success Stories' }],
   openGraph: {
-    title: 'AI 2027 Advanced Neural Superintelligence $2.8T Success Story',
+    title= 'AI 2027 Advanced Neural Superintelligence $2.8T Success Story',
     description: 'Fortune 500 case study: How Zion Tech Group delivered $2.8T in enterprise value with AI 2027 breakthrough.',
     url: 'https://ziontechgroup.com/case-studies/ai-2027-advanced-neural-superintelligence-2-8-trillion-success',
     type: 'article',

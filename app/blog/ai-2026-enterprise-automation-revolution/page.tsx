@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Cog, Zap, TrendingUp, Shield, Users, BarChart3 } from 'lucide-react';
 
 export const metadata = {
-  title: 'AI 2026 Enterprise Automation Revolution: Transform Your Business Operations',
+  title= 'AI 2026 Enterprise Automation Revolution: Transform Your Business Operations',
   description: 'Discover how AI-powered automation is revolutionizing enterprise operations in 2026. Learn about autonomous workflows, intelligent process optimization, and the future of business automation.',
   keywords: 'AI automation, enterprise automation, business process automation, AI workflows, autonomous operations, 2026 automation',
 };

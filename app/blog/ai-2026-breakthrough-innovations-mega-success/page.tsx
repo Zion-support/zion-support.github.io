@@ -3,11 +3,11 @@ import Link from 'next/link';
 import { ArrowRight, TrendingUp, Brain, Zap, Target, Users } from 'lucide-react';
 
 export const metadata = {
-  title: 'AI 2026 Breakthrough Innovations: $2.8 Trillion Success Story | Zion Tech Group',
+  title= 'AI 2026 Breakthrough Innovations: $2.8 Trillion Success Story | Zion Tech Group',
   description: 'Discover how AI 2026 breakthrough innovations generated $2.8 trillion in value across Fortune 500 companies. Revolutionary quantum-neural fusion, autonomous enterprise systems, and consciousness-level AI.',
   keywords: 'AI 2026, breakthrough innovations, quantum AI, autonomous enterprise, $2.8 trillion success, Fortune 500, consciousness AI',
   openGraph: {
-    title: 'AI 2026 Breakthrough Innovations: $2.8 Trillion Success Story',
+    title= 'AI 2026 Breakthrough Innovations: $2.8 Trillion Success Story',
     description: 'Revolutionary AI breakthroughs generating unprecedented value across global enterprises.',
     url: 'https://ziontechgroup.com/blog/ai-2026-breakthrough-innovations-mega-success',
     siteName: 'Zion Tech Group',

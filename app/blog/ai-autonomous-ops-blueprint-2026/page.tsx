@@ -2,10 +2,10 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-	title: 'AI Autonomous Ops Blueprint 2026 | Zion Tech Group',
+	title= 'AI Autonomous Ops Blueprint 2026 | Zion Tech Group',
 	description: 'Budgets, live traces, and one‑click rollback for safe autonomy at scale.',
 	openGraph: {
-		title: 'AI Autonomous Ops Blueprint 2026',
+		title= 'AI Autonomous Ops Blueprint 2026',
 		description: 'Budgets, live traces, and one‑click rollback for safe autonomy at scale.',
 		type: 'article'
 	}

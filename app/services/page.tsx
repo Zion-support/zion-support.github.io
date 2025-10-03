@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'AI & IT Services | Zion Tech Group - Enterprise Solutions',
+  title= 'AI & IT Services | Zion Tech Group - Enterprise Solutions',
   description: 'Comprehensive AI services, micro SaaS solutions, and IT consulting. Transform your business with cutting-edge technology and automation.',
   keywords: 'AI services, micro SaaS, IT consulting, cloud migration, DevOps, enterprise software, automation',
 };
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   const services = [
     {
-      title: 'AI Data Analytics',
+      title= 'AI Data Analytics',
       description: 'Transform data into actionable insights with predictive modeling and real-time dashboards',
       icon: '📊',
       features: [
@@ -24,7 +24,7 @@ export default function ServicesPage() {
       href: '/services/ai-data-analytics'
     },
     {
-      title: 'AI Workflow Automation',
+      title= 'AI Workflow Automation',
       description: 'Automate business processes with intelligent workflow design and smart triggers',
       icon: '⚡',
       features: [
@@ -37,7 +37,7 @@ export default function ServicesPage() {
       href: '/services/ai-workflow-automation'
     },
     {
-      title: 'AI Virtual Assistant',
+      title= 'AI Virtual Assistant',
       description: '24/7 intelligent customer support with natural language processing',
       icon: '🤖',
       features: [
@@ -50,7 +50,7 @@ export default function ServicesPage() {
       href: '/services/ai-virtual-assistant'
     },
     {
-      title: 'Autonomous Business Operations',
+      title= 'Autonomous Business Operations',
       description: 'Self-managing AI systems that operate entire business processes autonomously',
       icon: '🧠',
       features: [
@@ -63,7 +63,7 @@ export default function ServicesPage() {
       href: '/services/autonomous-operations'
     },
     {
-      title: 'Generative AI Solutions',
+      title= 'Generative AI Solutions',
       description: 'Create, innovate, and generate novel solutions with cutting-edge generative intelligence',
       icon: '✨',
       features: [
@@ -76,7 +76,7 @@ export default function ServicesPage() {
       href: '/services/generative-ai'
     },
     {
-      title: 'Cloud Migration & DevOps',
+      title= 'Cloud Migration & DevOps',
       description: 'Seamless cloud transitions and optimized DevOps practices for modern infrastructure',
       icon: '☁️',
       features: [
@@ -89,7 +89,7 @@ export default function ServicesPage() {
       href: '/services/cloud-migration'
     },
     {
-      title: 'Micro SaaS Development',
+      title= 'Micro SaaS Development',
       description: 'Custom micro SaaS solutions designed for specific business needs and rapid deployment',
       icon: '🔧',
       features: [
@@ -102,7 +102,7 @@ export default function ServicesPage() {
       href: '/services/micro-saas'
     },
     {
-      title: 'Enterprise AI Consulting',
+      title= 'Enterprise AI Consulting',
       description: 'Strategic AI implementation guidance for enterprise-scale digital transformation',
       icon: '🎯',
       features: [
@@ -115,7 +115,7 @@ export default function ServicesPage() {
       href: '/services/ai-consulting'
     },
     {
-      title: 'Cybersecurity & AI Security',
+      title= 'Cybersecurity & AI Security',
       description: 'Advanced security solutions powered by AI for comprehensive threat protection',
       icon: '🛡️',
       features: [

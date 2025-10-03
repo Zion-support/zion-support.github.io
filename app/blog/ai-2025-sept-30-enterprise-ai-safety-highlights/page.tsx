@@ -1,11 +1,11 @@
 // Using React 17+ automatic runtime; no import needed
 
 export const metadata = {
-  title: 'Enterprise AI Safety Highlights (Sep 30, 2025) | Zion Tech Group',
+  title= 'Enterprise AI Safety Highlights (Sep 30, 2025) | Zion Tech Group',
   description:
     'Key safety advancements for enterprise AI in 2025: live guardrails, runtime scorecards, and verified data flows. Actionable, audited, and deployment-ready.',
   openGraph: {
-    title: 'Enterprise AI Safety Highlights (Sep 30, 2025)',
+    title= 'Enterprise AI Safety Highlights (Sep 30, 2025)',
     description:
       'Live guardrails, runtime scorecards, and verified data flows. Actionable and audited.',
     type: 'article',
@@ -16,7 +16,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Enterprise AI Safety Highlights (Sep 30, 2025)',
+    title= 'Enterprise AI Safety Highlights (Sep 30, 2025)',
     description:
       'Live guardrails, runtime scorecards, and verified data flows. Actionable and audited.',
     images: ['/og-enterprise-ai-safety-highlights-2025.jpg'],
@@ -51,10 +51,10 @@ export default function EnterpriseAISafetyHighlights2025() {
               <h2 className="text-4xl font-bold text-gray-900 mb-6">Top Highlights</h2>
               <div className="grid md:grid-cols-2 gap-6">
                 {[
-                  { icon: '🛡️', title: 'Runtime Guardrails', desc: 'Policy-to-code with zero-regret rollbacks' },
-                  { icon: '📊', title: 'Live Scorecards', desc: 'Operational trust metrics per workflow' },
-                  { icon: '🔐', title: 'Verified Data Flows', desc: 'Attested lineage and PII guarantees' },
-                  { icon: '⚙️', title: 'Failure Mode Libraries', desc: 'Prebuilt controls for top risks' },
+                  { icon: '🛡️', title= 'Runtime Guardrails', desc: 'Policy-to-code with zero-regret rollbacks' },
+                  { icon: '📊', title= 'Live Scorecards', desc: 'Operational trust metrics per workflow' },
+                  { icon: '🔐', title= 'Verified Data Flows', desc: 'Attested lineage and PII guarantees' },
+                  { icon: '⚙️', title= 'Failure Mode Libraries', desc: 'Prebuilt controls for top risks' },
                 ].map((f, i) => (
                   <div key={i} className="bg-white rounded-xl p-6 border border-gray-200">
                     <div className="text-2xl mb-2">{f.icon}</div>

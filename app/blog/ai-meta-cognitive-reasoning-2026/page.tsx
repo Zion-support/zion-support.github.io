@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Meta-Cognitive Reasoning: The Next Evolution in Enterprise Intelligence | Zion Tech Group',
+  title= 'AI Meta-Cognitive Reasoning: The Next Evolution in Enterprise Intelligence | Zion Tech Group',
   description: 'Explore how AI meta-cognitive reasoning is revolutionizing enterprise decision-making with self-aware AI systems that think about thinking.',
   keywords: 'AI meta-cognitive reasoning, self-aware AI, enterprise intelligence, cognitive computing, AI reasoning systems',
 };

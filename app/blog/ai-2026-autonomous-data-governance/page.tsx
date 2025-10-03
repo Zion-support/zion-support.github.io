@@ -2,11 +2,11 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI 2026 Autonomous Data Governance | Zion Tech Group',
+  title= 'AI 2026 Autonomous Data Governance | Zion Tech Group',
   description:
     'Blueprint for autonomous data governance: policies-as-code, lineage, consent, and continuous compliance with measurable controls.',
   openGraph: {
-    title: 'AI 2026 Autonomous Data Governance',
+    title= 'AI 2026 Autonomous Data Governance',
     description:
       'Policies-as-code, evaluation gates, and end-to-end lineage to automate compliance at scale.',
     type: 'article'

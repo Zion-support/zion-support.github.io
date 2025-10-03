@@ -1,10 +1,10 @@
 import React from 'react';
 
 export const metadata = {
-	title: 'AI Autonomous Enterprise Operations: Complete 2025 Implementation Guide | Zion Tech Group',
+	title= 'AI Autonomous Enterprise Operations: Complete 2025 Implementation Guide | Zion Tech Group',
 	description: 'Master autonomous AI operations with proven frameworks achieving 95% automation rates, $2M+ annual savings, and 99.99% uptime. Complete enterprise implementation guide.',
 	openGraph: {
-		title: 'AI Autonomous Enterprise Operations: Complete 2025 Implementation Guide',
+		title= 'AI Autonomous Enterprise Operations: Complete 2025 Implementation Guide',
 		description: 'Proven frameworks for 95% automation rates and $2M+ annual savings through autonomous AI operations.',
 		images: [{ url: '/og/ai-autonomous-operations-2025.jpg' }]
 	}
@@ -146,10 +146,10 @@ export default function Page() {
 						<pre className="text-sm overflow-x-auto">
 {`// Autonomous Operations Architecture
 const AutonomousOpsFramework = {
-  orchestration: "Kubernetes + Istio Service Mesh",
-  aiAgents: "LangChain + OpenAI GPT-4 + Custom Models",
-  monitoring: "Prometheus + Grafana + Jaeger Tracing",
-  governance: "Open Policy Agent (OPA) + Custom Rules",
+  orchestration: "Kubernetes + Istio Service Mesh
+  aiAgents: "LangChain + OpenAI GPT-4 + Custom Models
+  monitoring: "Prometheus + Grafana + Jaeger Tracing
+  governance: "Open Policy Agent (OPA) + Custom Rules
   dataLayer: "Apache Kafka + Apache Spark + Vector DBs"
 };
 

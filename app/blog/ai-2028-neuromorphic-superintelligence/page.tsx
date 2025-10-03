@@ -2,12 +2,12 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI 2028: Neuromorphic Superintelligence Breakthrough | Zion Tech Group',
+  title= 'AI 2028: Neuromorphic Superintelligence Breakthrough | Zion Tech Group',
   description: 'Revolutionary neuromorphic superintelligence achieving human-level cognitive abilities with 1,000x energy efficiency and unlimited scalability.',
   keywords: 'AI 2028, neuromorphic computing, superintelligence, cognitive AI, energy efficiency, brain-inspired computing',
   authors: [{ name: 'Zion Tech Group' }],
   openGraph: {
-    title: 'AI 2028: Neuromorphic Superintelligence Breakthrough',
+    title= 'AI 2028: Neuromorphic Superintelligence Breakthrough',
     description: 'Revolutionary neuromorphic superintelligence with human-level cognitive abilities and 1,000x energy efficiency.',
     url: 'https://ziontechgroup.com/blog/ai-2028-neuromorphic-superintelligence',
     siteName: 'Zion Tech Group',
@@ -16,7 +16,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AI 2028: Neuromorphic Superintelligence Breakthrough',
+    title= 'AI 2028: Neuromorphic Superintelligence Breakthrough',
     description: 'Revolutionary neuromorphic superintelligence with human-level cognitive abilities and 1,000x energy efficiency.',
   },
 };

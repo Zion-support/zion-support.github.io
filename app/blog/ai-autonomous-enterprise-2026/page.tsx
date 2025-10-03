@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Autonomous Enterprise 2026: Self-Managing Business Systems | Zion Tech Group',
+  title= 'AI Autonomous Enterprise 2026: Self-Managing Business Systems | Zion Tech Group',
   description: 'Transform your enterprise with autonomous AI systems that manage, optimize, and evolve business operations. $10M+ ROI guaranteed with our proven framework.',
   keywords: 'autonomous enterprise, AI automation, self-managing systems, enterprise AI, business automation, AI transformation',
 };

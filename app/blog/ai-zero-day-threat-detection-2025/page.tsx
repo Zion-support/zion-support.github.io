@@ -2,11 +2,11 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI-Powered Zero-Day Threat Detection: The Future of Cybersecurity in 2025',
+  title= 'AI-Powered Zero-Day Threat Detection: The Future of Cybersecurity in 2025',
   description: 'Discover how AI-powered zero-day threat detection systems are revolutionizing cybersecurity. Detect and neutralize threats 99.7% faster with autonomous security systems that protect enterprise infrastructure 24/7.',
   keywords: 'AI cybersecurity, zero-day threats, threat detection, AI security, enterprise security, autonomous security, cyber defense 2025, AI threat intelligence',
   openGraph: {
-    title: 'AI-Powered Zero-Day Threat Detection: The Future of Cybersecurity in 2025',
+    title= 'AI-Powered Zero-Day Threat Detection: The Future of Cybersecurity in 2025',
     description: 'Discover how AI-powered zero-day threat detection systems are revolutionizing cybersecurity with 99.7% faster threat neutralization.',
     type: 'article',
     url: 'https://ziontechgroup.com/blog/ai-zero-day-threat-detection-2025',

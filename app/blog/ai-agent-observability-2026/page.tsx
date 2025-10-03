@@ -2,11 +2,11 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Agent Observability 2026: Metrics, Traces, and Guardrails',
+  title= 'AI Agent Observability 2026: Metrics, Traces, and Guardrails',
   description:
     'Instrument agentic systems with metrics, traces, evals, and policy guardrails to ship reliable autonomy with measurable ROI.',
   openGraph: {
-    title: 'AI Agent Observability 2026',
+    title= 'AI Agent Observability 2026',
     description:
       'Traces, metrics, evals, and audits for safe, reliable, and debuggable autonomous agents.',
     type: 'article',

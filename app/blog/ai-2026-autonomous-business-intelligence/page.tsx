@@ -2,11 +2,11 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI 2026 Autonomous Business Intelligence: 300% ROI Revolution | Zion Tech Group',
+  title= 'AI 2026 Autonomous Business Intelligence: 300% ROI Revolution | Zion Tech Group',
   description: 'Revolutionary autonomous business intelligence achieving 300% ROI improvements. Discover self-evolving AI systems that transform enterprise decision-making.',
   keywords: 'autonomous business intelligence, AI automation, enterprise AI, business intelligence, AI ROI',
   openGraph: {
-    title: 'AI 2026 Autonomous Business Intelligence: 300% ROI Revolution',
+    title= 'AI 2026 Autonomous Business Intelligence: 300% ROI Revolution',
     description: 'Revolutionary autonomous business intelligence achieving 300% ROI improvements through self-evolving AI systems.',
     url: 'https://ziontechgroup.com/blog/ai-2026-autonomous-business-intelligence',
   },

@@ -3,7 +3,7 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-	title: 'AI 2027: Edge‑Native Agents — Real‑Time, Reliable, Low‑Latency',
+	title= 'AI 2027: Edge‑Native Agents — Real‑Time, Reliable, Low‑Latency',
 	description:
 		'Blueprint for deploying edge‑native AI agents with millisecond latency, reliability guardrails, and cost control.',
 };

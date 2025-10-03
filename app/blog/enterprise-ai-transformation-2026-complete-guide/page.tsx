@@ -73,7 +73,7 @@ export default function EnterpriseAITransformation2026CompleteGuide() {
             {[
               { 
                 phase: 'Phase 1', 
-                title: 'Strategic Assessment', 
+                title= 'Strategic Assessment', 
                 duration: 'Weeks 1-4',
                 description: 'Comprehensive AI readiness assessment, strategic planning, and stakeholder alignment.',
                 outcomes: ['AI Strategy Defined', 'Stakeholder Buy-in', 'Budget Approved'],
@@ -81,7 +81,7 @@ export default function EnterpriseAITransformation2026CompleteGuide() {
               },
               { 
                 phase: 'Phase 2', 
-                title: 'Infrastructure Setup', 
+                title= 'Infrastructure Setup', 
                 duration: 'Weeks 5-8',
                 description: 'Cloud infrastructure, data pipelines, and AI platform deployment.',
                 outcomes: ['Cloud Infrastructure', 'Data Pipelines', 'AI Platform Ready'],
@@ -89,7 +89,7 @@ export default function EnterpriseAITransformation2026CompleteGuide() {
               },
               { 
                 phase: 'Phase 3', 
-                title: 'Data Foundation', 
+                title= 'Data Foundation', 
                 duration: 'Weeks 9-12',
                 description: 'Data governance, quality assurance, and AI-ready data preparation.',
                 outcomes: ['Data Governance', 'Quality Assurance', 'AI-Ready Data'],
@@ -119,7 +119,7 @@ export default function EnterpriseAITransformation2026CompleteGuide() {
             {[
               { 
                 phase: 'Phase 4', 
-                title: 'AI Model Development', 
+                title= 'AI Model Development', 
                 duration: 'Weeks 13-20',
                 description: 'Custom AI model development, training, and validation for enterprise use cases.',
                 outcomes: ['Custom Models', 'Training Complete', 'Validation Passed'],
@@ -127,7 +127,7 @@ export default function EnterpriseAITransformation2026CompleteGuide() {
               },
               { 
                 phase: 'Phase 5', 
-                title: 'Integration & Testing', 
+                title= 'Integration & Testing', 
                 duration: 'Weeks 21-28',
                 description: 'System integration, comprehensive testing, and performance optimization.',
                 outcomes: ['System Integration', 'Testing Complete', 'Performance Optimized'],
@@ -135,7 +135,7 @@ export default function EnterpriseAITransformation2026CompleteGuide() {
               },
               { 
                 phase: 'Phase 6', 
-                title: 'Pilot Deployment', 
+                title= 'Pilot Deployment', 
                 duration: 'Weeks 29-32',
                 description: 'Controlled pilot deployment with select user groups and departments.',
                 outcomes: ['Pilot Deployed', 'User Feedback', 'Metrics Collected'],
@@ -165,7 +165,7 @@ export default function EnterpriseAITransformation2026CompleteGuide() {
             {[
               { 
                 phase: 'Phase 7', 
-                title: 'Full Deployment', 
+                title= 'Full Deployment', 
                 duration: 'Weeks 33-40',
                 description: 'Enterprise-wide deployment with comprehensive monitoring and support.',
                 outcomes: ['Full Deployment', 'Monitoring Active', 'Support Ready'],
@@ -173,7 +173,7 @@ export default function EnterpriseAITransformation2026CompleteGuide() {
               },
               { 
                 phase: 'Phase 8', 
-                title: 'Optimization', 
+                title= 'Optimization', 
                 duration: 'Weeks 41-48',
                 description: 'Performance optimization, cost reduction, and continuous improvement.',
                 outcomes: ['Performance Optimized', 'Costs Reduced', 'Continuous Improvement'],
@@ -181,7 +181,7 @@ export default function EnterpriseAITransformation2026CompleteGuide() {
               },
               { 
                 phase: 'Phase 9', 
-                title: 'Scale & Expand', 
+                title= 'Scale & Expand', 
                 duration: 'Weeks 49-52',
                 description: 'Scale successful implementations and expand to additional use cases.',
                 outcomes: ['Scaled Successfully', 'New Use Cases', 'ROI Maximized'],
@@ -222,10 +222,10 @@ export default function EnterpriseAITransformation2026CompleteGuide() {
 
           <div className="grid md:grid-cols-4 gap-8 mb-16">
             {[
-              { value: '$50M+', label: 'Average Annual Savings', icon: '💰', color: 'text-green-400' },
-              { value: '300%', label: 'Average ROI Achieved', icon: '📈', color: 'text-blue-400' },
-              { value: '95%', label: 'Process Automation Rate', icon: '⚡', color: 'text-purple-400' },
-              { value: '18mo', label: 'Average Payback Period', icon: '⏱️', color: 'text-orange-400' }
+              { value='$50M+', label: 'Average Annual Savings', icon: '💰', color: 'text-green-400' },
+              { value='300%', label: 'Average ROI Achieved', icon: '📈', color: 'text-blue-400' },
+              { value='95%', label: 'Process Automation Rate', icon: '⚡', color: 'text-purple-400' },
+              { value='18mo', label: 'Average Payback Period', icon: '⏱️', color: 'text-orange-400' }
             ].map((metric, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 text-center">
                 <div className="text-6xl mb-4">{metric.icon}</div>

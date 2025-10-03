@@ -2,11 +2,11 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI 2027: Quantum Neural Networks - The Next Computing Revolution - Zion Tech Group',
+  title= 'AI 2027: Quantum Neural Networks - The Next Computing Revolution - Zion Tech Group',
   description: 'Explore the revolutionary potential of quantum neural networks in 2027. Learn how quantum computing is transforming AI with exponential processing power.',
   keywords: 'quantum AI, neural networks, quantum computing, 2027 trends, AI breakthrough',
   openGraph: {
-    title: 'AI 2027: Quantum Neural Networks - The Next Computing Revolution',
+    title= 'AI 2027: Quantum Neural Networks - The Next Computing Revolution',
     description: 'Explore the revolutionary potential of quantum neural networks in 2027. Learn how quantum computing is transforming AI with exponential processing power.',
     url: 'https://ziontechgroup.com/blog/ai-2027-quantum-neural-networks',
   },

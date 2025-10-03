@@ -2,11 +2,11 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Edge Real‑Time Personalization 2026: Private <100ms Experiences',
+  title= 'Edge Real‑Time Personalization 2026: Private <100ms Experiences',
   description:
     'Deliver <100ms personalized experiences using scoped IDs, on‑device metrics, and DP noise—no PII required.',
   openGraph: {
-    title: 'Edge Real‑Time Personalization 2026',
+    title= 'Edge Real‑Time Personalization 2026',
     description:
       'Scoped IDs, device-side metrics, and differential privacy powering private real‑time personalization.',
     type: 'article',

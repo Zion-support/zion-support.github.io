@@ -2,11 +2,11 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Quantum Breakthrough Success 2026: $500M ROI Case Study | Zion Tech Group',
+  title= 'AI Quantum Breakthrough Success 2026: $500M ROI Case Study | Zion Tech Group',
   description: 'Discover how a Fortune 500 company achieved $500M ROI with quantum-enhanced AI systems. Revolutionary quantum computing integration transforms enterprise operations.',
   keywords: 'quantum AI ROI, quantum computing success story, enterprise quantum AI, AI transformation case study, quantum breakthrough 2026',
   openGraph: {
-    title: 'AI Quantum Breakthrough Success 2026: $500M ROI Case Study',
+    title= 'AI Quantum Breakthrough Success 2026: $500M ROI Case Study',
     description: 'Fortune 500 company achieves $500M ROI with revolutionary quantum-enhanced AI systems.',
     type: 'article',
     url: 'https://ziontechgroup.com/case-studies/ai-quantum-breakthrough-success-2026',

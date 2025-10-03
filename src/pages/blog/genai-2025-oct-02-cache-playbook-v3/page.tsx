@@ -7,7 +7,7 @@ export default function CachePlaybookV3(): React.JSX.Element {
         <meta name: "description",;,"
   content: "Blend semantic + tiered caches with eval‑gated fallbacks to cut spend 60–80% while preserving UX KPIs.", /><link ,";,"
   rel: "canonical",;,"
-  href="https://ziontechgroup.com/blog/genai-2025-oct-02-cache-playbook-v3",
+  href="https://ziontechgroup.com/blog/genai-2025-oct-02-cache-playbook-v3
         />
       </Helmet>
 
@@ -20,7 +20,7 @@ export default function CachePlaybookV3(): React.JSX.Element {
             hold quality under cost SLAs.
           </p>
         </div>
-          <Link to: "/blog", className ="text-cyan-300 hover: underline">← Back to Blog</Link>",
+          <Link to: "/blog", className="text-cyan-300 hover:underline">← Back to Blog</Link>
         </div>
       </div>
     </div>

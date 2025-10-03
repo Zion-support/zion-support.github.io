@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Quantum Security Protocols 2026 | Zion Tech Group',
+  title= 'AI Quantum Security Protocols 2026 | Zion Tech Group',
   description:
     'Protect AI systems with quantum‑resistant cryptography and verifiable guardrails. Achieve 99.99% security with sub‑millisecond overhead.',
 };

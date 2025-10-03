@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI 2026 Breakthrough Innovations: Revolutionary Technologies Reshaping Enterprise',
+  title= 'AI 2026 Breakthrough Innovations: Revolutionary Technologies Reshaping Enterprise',
   description: 'Discover the revolutionary AI breakthrough innovations of 2026 that are transforming enterprise operations with unprecedented performance improvements and $10B+ ROI.',
   keywords: 'AI 2026, breakthrough innovations, enterprise AI, revolutionary technology, quantum computing, neural networks, autonomous systems',
 };

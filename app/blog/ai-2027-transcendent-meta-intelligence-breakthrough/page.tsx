@@ -2,11 +2,11 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI 2027 Transcendent Meta-Intelligence Breakthrough - Zion Tech Group',
+  title= 'AI 2027 Transcendent Meta-Intelligence Breakthrough - Zion Tech Group',
   description: 'Discover the revolutionary AI 2027 Transcendent Meta-Intelligence breakthrough achieving $1.8T in enterprise value creation through self-evolving cognitive architectures.',
   keywords: 'AI 2027, meta-intelligence, transcendent AI, cognitive architectures, enterprise AI, breakthrough',
   openGraph: {
-    title: 'AI 2027 Transcendent Meta-Intelligence Breakthrough - $1.8T Success',
+    title= 'AI 2027 Transcendent Meta-Intelligence Breakthrough - $1.8T Success',
     description: 'Revolutionary AI 2027 Transcendent Meta-Intelligence breakthrough achieving unprecedented enterprise value creation.',
     type: 'article',
   },

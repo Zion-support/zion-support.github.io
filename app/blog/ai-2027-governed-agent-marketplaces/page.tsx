@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-	title: 'Governed Agent Marketplaces (2027): Budgets, Attestations, Rollback',
+	title= 'Governed Agent Marketplaces (2027): Budgets, Attestations, Rollback',
 	description: 'Design safe third‑party agent ecosystems with budget guards, policy attestations, and instant rollback tied to KPIs.',
 };
 

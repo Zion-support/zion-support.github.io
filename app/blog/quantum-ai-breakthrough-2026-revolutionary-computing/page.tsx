@@ -53,10 +53,10 @@ export default function QuantumAIBreakthrough2026() {
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-4 gap-8 text-center">
             {[
-              { value: '10^18', label: 'Quantum Operations/sec', icon: '⚛️', color: 'from-purple-400 to-violet-400' },
-              { value: '99.9%', label: 'Problem Solving Accuracy', icon: '🎯', color: 'from-blue-400 to-cyan-400' },
-              { value: '1000x', label: 'Faster Than Classical', icon: '⚡', color: 'from-green-400 to-emerald-400' },
-              { value: '$10B', label: 'Market Value Created', icon: '💰', color: 'from-yellow-400 to-orange-400' }
+              { value='10^18', label: 'Quantum Operations/sec', icon: '⚛️', color: 'from-purple-400 to-violet-400' },
+              { value='99.9%', label: 'Problem Solving Accuracy', icon: '🎯', color: 'from-blue-400 to-cyan-400' },
+              { value='1000x', label: 'Faster Than Classical', icon: '⚡', color: 'from-green-400 to-emerald-400' },
+              { value='$10B', label: 'Market Value Created', icon: '💰', color: 'from-yellow-400 to-orange-400' }
             ].map((stat, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300">
                 <div className="text-5xl mb-3">{stat.icon}</div>
@@ -188,10 +188,10 @@ export default function QuantumAIBreakthrough2026() {
 
               <div className="space-y-4 mb-8">
                 {[
-                  { phase: "Discovery", title: "Quantum AI Assessment", duration: "1-2 weeks", description: "Evaluate your specific use cases and quantum AI potential" },
-                  { phase: "Design", title: "Custom Quantum Architecture", duration: "2-4 weeks", description: "Design tailored quantum-neural solutions for your challenges" },
-                  { phase: "Development", title: "Quantum AI Implementation", duration: "4-8 weeks", description: "Build and deploy your custom quantum AI systems" },
-                  { phase: "Optimization", title: "Continuous Enhancement", duration: "Ongoing", description: "Evolve and optimize quantum AI performance continuously" }
+                  { phase: "Discovery", title= "Quantum AI Assessment", duration: "1-2 weeks", description: "Evaluate your specific use cases and quantum AI potential" },
+                  { phase: "Design", title= "Custom Quantum Architecture", duration: "2-4 weeks", description: "Design tailored quantum-neural solutions for your challenges" },
+                  { phase: "Development", title= "Quantum AI Implementation", duration: "4-8 weeks", description: "Build and deploy your custom quantum AI systems" },
+                  { phase: "Optimization", title= "Continuous Enhancement", duration: "Ongoing", description: "Evolve and optimize quantum AI performance continuously" }
                 ].map((phase, index) => (
                   <div key={index} className="flex items-start gap-4 p-4 bg-white/5 rounded-xl border border-white/10">
                     <div className="bg-gradient-to-r from-purple-500 to-blue-500 text-white font-bold px-3 py-1 rounded-full text-sm">

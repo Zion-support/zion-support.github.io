@@ -2,16 +2,16 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Verifiable Edge Analytics 2026 — Zero‑PII, Signed Attestations',
+  title= 'Verifiable Edge Analytics 2026 — Zero‑PII, Signed Attestations',
   description: 'Scoped IDs, on‑device aggregation, DP noise, and signed attestations for trustworthy insights under 100ms.',
   openGraph: {
-    title: 'Verifiable Edge Analytics 2026 — Zero‑PII, Signed Attestations',
+    title= 'Verifiable Edge Analytics 2026 — Zero‑PII, Signed Attestations',
     description: 'Scoped IDs, on‑device aggregation, DP noise, and signed attestations for trustworthy insights under 100ms.',
     type: 'article',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Verifiable Edge Analytics 2026',
+    title= 'Verifiable Edge Analytics 2026',
     description: 'Zero‑PII insights with signed attestations and <100ms SLAs.',
   },
 };

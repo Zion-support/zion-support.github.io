@@ -2,7 +2,7 @@
 import React from 'react';
 
 export const metadata = {
-  title: 'AI Agent Reliability Playbook 2026 | Zion Tech Group',
+  title= 'AI Agent Reliability Playbook 2026 | Zion Tech Group',
   description: 'A practical guide to ship reliable agentic systems with budgets, guardrails, canaries, and instant rollback.',
 };
 

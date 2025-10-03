@@ -3,11 +3,11 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Fortune 500 Quantum Hyper-Automation Success: $2.5B ROI in 12 Months',
+  title= 'Fortune 500 Quantum Hyper-Automation Success: $2.5B ROI in 12 Months',
   description: 'Discover how a Fortune 500 company achieved $2.5B ROI through quantum-powered hyper-automation, achieving 99.9% process automation and 1000x performance improvements.',
   keywords: 'Fortune 500, quantum automation, hyper-automation, ROI success, enterprise transformation, quantum AI',
   openGraph: {
-    title: 'Fortune 500 Quantum Hyper-Automation Success: $2.5B ROI in 12 Months',
+    title= 'Fortune 500 Quantum Hyper-Automation Success: $2.5B ROI in 12 Months',
     description: 'Discover how a Fortune 500 company achieved $2.5B ROI through quantum-powered hyper-automation.',
     url: 'https://ziontechgroup.com/case-studies/fortune-500-quantum-hyper-automation-success-2026',
     type: 'article',

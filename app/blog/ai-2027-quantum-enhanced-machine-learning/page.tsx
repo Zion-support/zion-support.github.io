@@ -2,11 +2,11 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI 2027: Quantum-Enhanced Machine Learning Breakthrough - Enterprise Implementation Guide',
+  title= 'AI 2027: Quantum-Enhanced Machine Learning Breakthrough - Enterprise Implementation Guide',
   description: 'Revolutionary quantum-enhanced machine learning technologies delivering 1000x performance improvements, 95% accuracy gains, and breakthrough capabilities for enterprise AI applications.',
   keywords: 'quantum AI, quantum machine learning, quantum computing, AI 2027, quantum algorithms, enterprise AI',
   openGraph: {
-    title: 'AI 2027: Quantum-Enhanced Machine Learning Breakthrough - Enterprise Implementation Guide',
+    title= 'AI 2027: Quantum-Enhanced Machine Learning Breakthrough - Enterprise Implementation Guide',
     description: 'Revolutionary quantum-enhanced machine learning technologies delivering 1000x performance improvements and breakthrough capabilities.',
     type: 'article',
   },

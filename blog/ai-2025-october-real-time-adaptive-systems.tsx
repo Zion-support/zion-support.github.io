@@ -1,10 +1,10 @@
 export const metadata = {
-  title: "Real-Time Adaptive AI Systems 2025 — Self-Learning Infrastructure (99.99% Uptime, 80% Auto-Remediation)",
-  description: "Build AI systems that learn and adapt in real-time. Complete guide to self-learning infrastructure with continuous optimization, automated remediation, and zero-downtime deployments.",
-  slug: "ai-2025-october-real-time-adaptive-systems",
-  publishedAt: "2025-10-01T10:00:00.000Z",
-  category: "AI Infrastructure",
-  author: "Zion Tech Group",
+  title: "Real-Time Adaptive AI Systems 2025 — Self-Learning Infrastructure (99.99% Uptime, 80% Auto-Remediation)
+  description: "Build AI systems that learn and adapt in real-time. Complete guide to self-learning infrastructure with continuous optimization, automated remediation, and zero-downtime deployments.
+  slug: "ai-2025-october-real-time-adaptive-systems
+  publishedAt: "2025-10-01T10:00:00.000Z
+  category: "AI Infrastructure
+  author: "Zion Tech Group
   featured: true,
   tags: ["AI Infrastructure", "Real-Time Systems", "Adaptive AI", "Self-Learning", "Auto-Remediation", "MLOps"],
   readTime: 18
@@ -109,7 +109,7 @@ class AdaptiveModelSystem:
         
         # Publish event for model update pipeline
         self.redis.publish("model_updates", json.dumps({
-            "model_id": "adaptive_classifier",
+            "model_id": "adaptive_classifier
             "current_accuracy": self.metric.get(),
             "timestamp": time.time()
         }))

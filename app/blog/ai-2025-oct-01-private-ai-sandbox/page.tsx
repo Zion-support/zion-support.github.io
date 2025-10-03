@@ -3,7 +3,7 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Private AI Sandbox (2025): Safe Enterprise Experimentation',
+  title= 'Private AI Sandbox (2025): Safe Enterprise Experimentation',
   description:
     'Stand up a governed, cost-capped AI sandbox to safely test models, prompts, and workflows without risking production.',
   keywords:

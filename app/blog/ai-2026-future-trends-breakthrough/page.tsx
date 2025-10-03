@@ -2,11 +2,11 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI 2026: Revolutionary Future Trends and Breakthrough Technologies',
+  title= 'AI 2026: Revolutionary Future Trends and Breakthrough Technologies',
   description: 'Explore the most revolutionary AI trends and breakthrough technologies that will transform industries in 2026, including quantum AI, neuromorphic computing, and autonomous systems.',
   keywords: 'AI 2026, AI trends, breakthrough technologies, quantum AI, neuromorphic computing, autonomous systems, future of AI',
   openGraph: {
-    title: 'AI 2026: Revolutionary Future Trends and Breakthrough Technologies',
+    title= 'AI 2026: Revolutionary Future Trends and Breakthrough Technologies',
     description: 'The complete guide to revolutionary AI trends and breakthrough technologies in 2026',
     type: 'article',
     publishedTime: '2026-01-20T00:00:00.000Z',

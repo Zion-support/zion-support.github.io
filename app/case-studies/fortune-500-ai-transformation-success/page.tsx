@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { ArrowLeft, Calendar, User, Clock, Tag, TrendingUp, DollarSign, Users, Target } from 'lucide-react';
 
 export const metadata = {
-  title: 'Fortune 500 AI Transformation Success: $52M+ Savings & 156% ROI - Zion Tech Group',
+  title= 'Fortune 500 AI Transformation Success: $52M+ Savings & 156% ROI - Zion Tech Group',
   description: 'Discover how a Fortune 500 manufacturing company achieved $50M+ in annual savings through comprehensive AI transformation. Learn the strategies, challenges, and results.',
   keywords: 'AI Transformation, Fortune 500, Enterprise Automation, Digital Transformation, ROI Success, Case Study',
 };

@@ -2,12 +2,12 @@ import React from 'react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'AI 2026 February Breakthrough Consulting Services',
+  title= 'AI 2026 February Breakthrough Consulting Services',
   description: 'Transform your business with Zion Tech Group\'s revolutionary AI 2026 February breakthrough consulting services. Meta-Cognitive AI, Quantum-Neural Fusion, and Autonomous Operations solutions.',
   keywords: ['Consulting', 'AI', 'Breakthrough', '2026', 'Meta-Cognitive', 'Quantum', 'Autonomous'],
   authors: [{ name: 'Zion Tech Group' }],
   openGraph: {
-    title: 'AI 2026 February Breakthrough Consulting Services',
+    title= 'AI 2026 February Breakthrough Consulting Services',
     description: 'Transform your business with Zion Tech Group\'s revolutionary AI 2026 February breakthrough consulting services.',
     type: 'article',
     publishedTime: '2026-02-15T00:00:00.000Z',

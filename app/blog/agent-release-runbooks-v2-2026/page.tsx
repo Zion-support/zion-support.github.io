@@ -3,17 +3,17 @@ import Link from 'next/link';
 import { Calendar, Clock, ListChecks, FileWarning, RefreshCw } from 'lucide-react';
 
 export const metadata = {
-  title: 'Agent Release Runbooks v2 (2026): Budgets, Canaries, Rollback | Zion',
+  title= 'Agent Release Runbooks v2 (2026): Budgets, Canaries, Rollback | Zion',
   description: 'Battle-tested runbooks for safe autonomous agent releases: budgets, KPI-linked canaries, approvals, and instant rollback.',
   openGraph: {
-    title: 'Agent Release Runbooks v2 (2026)',
+    title= 'Agent Release Runbooks v2 (2026)',
     description: 'Budgets, canaries, approvals, and instant rollback for safe autonomy.',
     type: 'article',
     url: 'https://ziontechgroup.com/blog/agent-release-runbooks-v2-2026'
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Agent Release Runbooks v2 (2026)',
+    title= 'Agent Release Runbooks v2 (2026)',
     description: 'Budgets, canaries, approvals, and instant rollback for safe autonomy.'
   }
 };

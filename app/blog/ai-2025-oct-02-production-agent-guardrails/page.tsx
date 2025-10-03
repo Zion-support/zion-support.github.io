@@ -2,10 +2,10 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Production Agent Guardrails — October 2, 2025 | Zion Tech Group',
+  title= 'Production Agent Guardrails — October 2, 2025 | Zion Tech Group',
   description: 'Practical blueprint to ship agentic systems safely: approvals, budgets, evals, rollback, and observability.',
   openGraph: {
-    title: 'Production Agent Guardrails — October 2, 2025',
+    title= 'Production Agent Guardrails — October 2, 2025',
     description: 'Approvals, verifiers, budgets, online evals, and rollback to ship safe autonomy.',
     type: 'article',
     url: 'https://ziontechgroup.com/blog/ai-2025-oct-02-production-agent-guardrails',

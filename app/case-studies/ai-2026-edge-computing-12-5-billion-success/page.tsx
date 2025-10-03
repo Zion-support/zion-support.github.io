@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI 2026 Edge Computing $12.5B Success Case Study | Zion Tech Group',
+  title= 'AI 2026 Edge Computing $12.5B Success Case Study | Zion Tech Group',
   description: 'Detailed case study of how Zion Tech Group delivered $12.5B in value through revolutionary edge computing AI solutions for Fortune 500 enterprises.',
   keywords: 'edge computing case study, $12.5B success, Fortune 500, AI implementation, ROI success story',
 };

@@ -2,11 +2,11 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI 2027: Quantum Computing Breakthrough for Enterprise - Zion Tech Group',
+  title= 'AI 2027: Quantum Computing Breakthrough for Enterprise - Zion Tech Group',
   description: 'Discover the quantum computing breakthrough that is revolutionizing enterprise AI, delivering 1000x performance improvements and unprecedented computational power.',
   keywords: 'AI 2027, quantum computing, quantum AI, enterprise AI, quantum breakthrough, AI performance',
   openGraph: {
-    title: 'AI 2027: Quantum Computing Breakthrough for Enterprise',
+    title= 'AI 2027: Quantum Computing Breakthrough for Enterprise',
     description: 'The quantum computing revolution is here. Learn how AI 2027 quantum systems are delivering 1000x performance improvements.',
     type: 'article',
   },

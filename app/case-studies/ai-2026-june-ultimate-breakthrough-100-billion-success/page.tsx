@@ -5,7 +5,7 @@ import path from 'path';
 import matter from 'gray-matter';
 
 export const metadata: Metadata = {
-  title: 'AI 2026 June Ultimate Breakthrough: $100B Success Story - The Ultimate Universal Consciousness Transformation',
+  title= 'AI 2026 June Ultimate Breakthrough: $100B Success Story - The Ultimate Universal Consciousness Transformation',
   description: 'How a Fortune 100 company achieved $100B ROI through the revolutionary June 2026 AI breakthrough, delivering universal consciousness and 100,000,000x processing power.',
   keywords: 'Case Study, AI Success, 100B ROI, Fortune 100, June 2026, Universal Consciousness',
 };

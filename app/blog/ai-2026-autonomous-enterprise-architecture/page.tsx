@@ -3,11 +3,11 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'AI 2026: Autonomous Enterprise Architecture Revolution | Zion Tech Group',
+  title= 'AI 2026: Autonomous Enterprise Architecture Revolution | Zion Tech Group',
   description: 'Discover how autonomous enterprise architecture is revolutionizing business operations in 2026. Learn about self-healing systems, predictive infrastructure, and AI-driven architectural decisions.',
   keywords: 'AI 2026, autonomous enterprise, enterprise architecture, self-healing systems, predictive infrastructure, AI-driven decisions',
   openGraph: {
-    title: 'AI 2026: Autonomous Enterprise Architecture Revolution',
+    title= 'AI 2026: Autonomous Enterprise Architecture Revolution',
     description: 'Revolutionary autonomous enterprise architecture transforming business operations',
     type: 'article',
     publishedTime: '2026-01-15T00:00:00Z',

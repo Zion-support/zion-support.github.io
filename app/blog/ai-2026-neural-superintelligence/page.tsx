@@ -2,10 +2,10 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI 2026 Neural Superintelligence: Enterprise Guide | Zion Tech Group',
+  title= 'AI 2026 Neural Superintelligence: Enterprise Guide | Zion Tech Group',
   description: 'Explore neural superintelligence architectures delivering 1000x performance and 99.99% reliability for mission‑critical enterprise workloads.',
   openGraph: {
-    title: 'AI 2026 Neural Superintelligence: Enterprise Guide',
+    title= 'AI 2026 Neural Superintelligence: Enterprise Guide',
     description: 'Architectures, guardrails, and rollout patterns to safely leverage neural superintelligence in the enterprise.',
     type: 'article',
     url: 'https://ziontechgroup.com/blog/ai-2026-neural-superintelligence',

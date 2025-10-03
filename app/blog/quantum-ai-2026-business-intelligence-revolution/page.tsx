@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { ArrowLeft, Calendar, User, Clock, Tag } from 'lucide-react';
 
 export const metadata = {
-  title: 'Quantum AI 2026: Business Intelligence Revolution - Zion Tech Group',
+  title= 'Quantum AI 2026: Business Intelligence Revolution - Zion Tech Group',
   description: 'Explore how quantum AI is revolutionizing business intelligence in 2026. Discover breakthrough technologies transforming raw data into strategic competitive advantages.',
   keywords: 'Quantum AI, Business Intelligence, Data Analytics, 2026 Innovation, Strategic Intelligence, Quantum Computing',
 };

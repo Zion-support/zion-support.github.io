@@ -2,17 +2,17 @@ import React from 'react';
 import { Calendar, Clock, Shield, Cpu } from 'lucide-react';
 
 export const metadata = {
-  title: 'Edge Private Insights v2 (2026): Scoped IDs + DP + On-device | Zion',
+  title= 'Edge Private Insights v2 (2026): Scoped IDs + DP + On-device | Zion',
   description: 'Build zero‑PII analytics at the edge with scoped IDs, differential privacy noise, and on‑device aggregation under 100ms.',
   openGraph: {
-    title: 'Edge Private Insights v2 (2026)',
+    title= 'Edge Private Insights v2 (2026)',
     description: 'Zero‑PII analytics with scoped IDs, DP, and on‑device aggregation.',
     type: 'article',
     url: 'https://ziontechgroup.com/blog/edge-private-insights-v2-2026'
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Edge Private Insights v2 (2026)',
+    title= 'Edge Private Insights v2 (2026)',
     description: 'Zero‑PII analytics with scoped IDs, DP, and on‑device aggregation.'
   }
 };
@@ -58,7 +58,7 @@ export default function Page() {
 
       <section className="py-12 bg-white">
         <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-6">
-          {[{ label: 'Latency p95', value: '< 100ms', color: 'text-cyan-600' }, { label: 'PII Collected', value: '0', color: 'text-emerald-600' }, { label: 'Coverage', value: 'Global', color: 'text-fuchsia-600' }].map((kpi, i) => (
+          {[{ label: 'Latency p95', value='< 100ms', color: 'text-cyan-600' }, { label: 'PII Collected', value='0', color: 'text-emerald-600' }, { label: 'Coverage', value='Global', color: 'text-fuchsia-600' }].map((kpi, i) => (
             <div key={i} className="rounded-xl border p-6">
               <div className={`text-3xl font-extrabold ${kpi.color}`}>{kpi.value}</div>
               <div className="text-slate-600">{kpi.label}</div>

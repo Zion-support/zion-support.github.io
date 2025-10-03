@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'AI 2026 Sustainable AI Revolution Breakthrough - Zion Tech Group',
+  title= 'AI 2026 Sustainable AI Revolution Breakthrough - Zion Tech Group',
   description: 'Discover the revolutionary sustainable AI breakthrough that achieved 99.9% energy efficiency and $2.5B ROI while reducing carbon footprint by 85%.',
   keywords: 'sustainable AI, green AI, energy efficiency, carbon footprint, AI revolution 2026, environmental AI',
 };

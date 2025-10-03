@@ -1,10 +1,10 @@
 import React from 'react';
 
 export const metadata = {
-	title: 'Fortune 500 AI Transformation: $50M Annual Savings Case Study | Zion Tech Group',
+	title= 'Fortune 500 AI Transformation: $50M Annual Savings Case Study | Zion Tech Group',
 	description: 'How we helped a Fortune 500 manufacturing company achieve $50M annual savings, 95% process automation, and 300% ROI through comprehensive AI transformation.',
 	openGraph: {
-		title: 'Fortune 500 AI Transformation: $50M Annual Savings Case Study',
+		title= 'Fortune 500 AI Transformation: $50M Annual Savings Case Study',
 		description: 'Comprehensive AI transformation delivering $50M annual savings and 95% process automation for Fortune 500 manufacturer.',
 		images: [{ url: '/og/fortune-500-ai-transformation.jpg' }]
 	}

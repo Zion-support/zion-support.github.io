@@ -2,11 +2,11 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: '$1.2B AI Revolutionary Breakthrough Success - Zion Tech Group',
+  title= '$1.2B AI Revolutionary Breakthrough Success - Zion Tech Group',
   description: 'Fortune 100 company achieves $1.2B ROI in 18 months through AI 2027 revolutionary breakthrough implementation, delivering 95% automation and complete enterprise transformation.',
   keywords: 'AI success story, $1.2B ROI, Fortune 100, AI breakthrough, enterprise transformation, AI case study',
   openGraph: {
-    title: '$1.2B AI Revolutionary Breakthrough Success',
+    title= '$1.2B AI Revolutionary Breakthrough Success',
     description: 'Fortune 100 company achieves $1.2B ROI in 18 months through AI 2027 revolutionary breakthrough implementation.',
     url: 'https://ziontechgroup.com/case-studies/ai-2027-revolutionary-breakthrough-success',
   },

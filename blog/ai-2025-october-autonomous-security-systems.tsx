@@ -1,10 +1,10 @@
 export const metadata = {
-  title: "Autonomous Security Systems 2025 — AI-Powered Threat Response (99.8% Detection, Sub-Second Response)",
-  description: "Deploy autonomous security that detects and responds to threats instantly. Complete guide to AI-powered security systems with predictive defense, automated remediation, and zero-trust architecture.",
-  slug: "ai-2025-october-autonomous-security-systems",
-  publishedAt: "2025-10-01T12:00:00.000Z",
-  category: "AI Security",
-  author: "Zion Tech Group",
+  title: "Autonomous Security Systems 2025 — AI-Powered Threat Response (99.8% Detection, Sub-Second Response)
+  description: "Deploy autonomous security that detects and responds to threats instantly. Complete guide to AI-powered security systems with predictive defense, automated remediation, and zero-trust architecture.
+  slug: "ai-2025-october-autonomous-security-systems
+  publishedAt: "2025-10-01T12:00:00.000Z
+  category: "AI Security
+  author: "Zion Tech Group
   featured: true,
   tags: ["AI Security", "Cybersecurity", "Autonomous Systems", "Threat Detection", "Zero Trust", "Security Automation"],
   readTime: 17

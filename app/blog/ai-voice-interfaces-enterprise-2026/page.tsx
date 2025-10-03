@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Voice Interfaces Enterprise 2026 | Zion Tech Group',
+  title= 'AI Voice Interfaces Enterprise 2026 | Zion Tech Group',
   description:
     'Enterprise voice interfaces with 98% accuracy, multilingual support, and governance. Patterns for STT, TTS, latency budgets, and privacy.',
 };

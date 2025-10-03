@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI 2026 Automation Platform $8.7B Success Case Study | Zion Tech Group',
+  title= 'AI 2026 Automation Platform $8.7B Success Case Study | Zion Tech Group',
   description: 'Detailed case study of how Zion Tech Group delivered $8.7B in value through next-generation automation platform with 99.8% autonomous operations.',
   keywords: 'automation platform case study, $8.7B success, autonomous operations, Fortune 500, AI implementation success',
 };

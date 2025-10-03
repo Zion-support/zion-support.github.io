@@ -4,8 +4,8 @@ const December2025ContentShowcaseInteractive: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'autonomous' | 'quantum'>('autonomous');
 
   const autonomousContent = {
-    title: "Revolutionary Autonomous Enterprise Systems",
-    subtitle: "Achieve 98.7% Operational Autonomy with $127M in Proven Savings",
+    title: "Revolutionary Autonomous Enterprise Systems
+    subtitle: "Achieve 98.7% Operational Autonomy with $127M in Proven Savings
     metrics: [
       { label: "Operational Autonomy", value: "98.7%", color: "blue" },
       { label: "Annual Savings", value: "$127M", color: "purple" },
@@ -13,18 +13,18 @@ const December2025ContentShowcaseInteractive: React.FC = () => {
       { label: "Payback Period", value: "4.4 months", color: "orange" }
     ],
     features: [
-      "Self-Governing Business Logic Engine",
-      "Cognitive Process Automation",
-      "Quantum-Enhanced Decision Matrix",
+      "Self-Governing Business Logic Engine
+      "Cognitive Process Automation
+      "Quantum-Enhanced Decision Matrix
       "Predictive Business Intelligence"
     ],
-    blogLink: "/blog/ai-2025-december-revolutionary-autonomous-enterprise-breakthrough",
+    blogLink: "/blog/ai-2025-december-revolutionary-autonomous-enterprise-breakthrough
     caseStudyLink: "/case-studies/ai-2025-december-autonomous-enterprise-127-million-success"
   };
 
   const quantumContent = {
-    title: "Quantum Business Intelligence Revolution",
-    subtitle: "Transform Enterprise Decision-Making with 99.4% Accuracy and $89M in Value Creation",
+    title: "Quantum Business Intelligence Revolution
+    subtitle: "Transform Enterprise Decision-Making with 99.4% Accuracy and $89M in Value Creation
     metrics: [
       { label: "Decision Accuracy", value: "99.4%", color: "blue" },
       { label: "Value Creation", value: "$89M", color: "purple" },
@@ -32,12 +32,12 @@ const December2025ContentShowcaseInteractive: React.FC = () => {
       { label: "Response Time", value: "<1ms", color: "orange" }
     ],
     features: [
-      "Quantum Decision Matrix Engine",
-      "Hyperdimensional Data Processing",
-      "Consciousness-Level Business Understanding",
+      "Quantum Decision Matrix Engine
+      "Hyperdimensional Data Processing
+      "Consciousness-Level Business Understanding
       "Real-Time Market Analysis"
     ],
-    blogLink: "/blog/ai-2025-december-quantum-business-intelligence-revolution",
+    blogLink: "/blog/ai-2025-december-quantum-business-intelligence-revolution
     caseStudyLink: "/case-studies/ai-2025-december-quantum-business-intelligence-89-million-success"
   };
 

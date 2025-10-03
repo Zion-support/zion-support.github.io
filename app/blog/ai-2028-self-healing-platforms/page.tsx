@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI 2028: Self‑Healing Platforms — 99.995% Uptime at Lower Cost',
+  title= 'AI 2028: Self‑Healing Platforms — 99.995% Uptime at Lower Cost',
   description:
     'Autonomous platform patterns: predictive scaling, budget guards, and one‑click rollback for extreme reliability.'
 };

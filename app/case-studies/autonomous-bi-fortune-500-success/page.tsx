@@ -2,12 +2,12 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Fortune 500 Autonomous BI Success: $50M ROI | Zion Tech Group',
+  title= 'Fortune 500 Autonomous BI Success: $50M ROI | Zion Tech Group',
   description: 'Discover how a Fortune 500 global enterprise achieved $50M ROI with autonomous business intelligence systems, 95% automation, and 300% performance improvements.',
   keywords: 'autonomous business intelligence, Fortune 500 success, ROI optimization, enterprise analytics, business automation',
   authors: [{ name: 'Zion Tech Group' }],
   openGraph: {
-    title: 'Fortune 500 Autonomous BI Success: $50M ROI',
+    title= 'Fortune 500 Autonomous BI Success: $50M ROI',
     description: 'See how a Fortune 500 enterprise achieved $50M ROI with autonomous business intelligence systems.',
     url: 'https://ziontechgroup.com/case-studies/autonomous-bi-fortune-500-success',
     siteName: 'Zion Tech Group',
@@ -17,7 +17,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Fortune 500 Autonomous BI Success: $50M ROI',
+    title= 'Fortune 500 Autonomous BI Success: $50M ROI',
     description: 'See how a Fortune 500 enterprise achieved $50M ROI with autonomous business intelligence systems.',
   },
 };

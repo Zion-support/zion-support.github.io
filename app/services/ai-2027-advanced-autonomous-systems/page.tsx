@@ -2,11 +2,11 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI 2027 Advanced Autonomous Systems - Enterprise Self-Governing AI Solutions',
+  title= 'AI 2027 Advanced Autonomous Systems - Enterprise Self-Governing AI Solutions',
   description: 'Revolutionary AI 2027 Advanced Autonomous Systems delivering 99.99% uptime, 95% process automation, and $50M+ annual savings through self-governing, self-healing, and self-optimizing AI architectures.',
   keywords: 'advanced autonomous systems, self-governing AI, self-healing systems, AI 2027, enterprise automation, autonomous operations',
   openGraph: {
-    title: 'AI 2027 Advanced Autonomous Systems - Enterprise Self-Governing AI Solutions',
+    title= 'AI 2027 Advanced Autonomous Systems - Enterprise Self-Governing AI Solutions',
     description: 'Revolutionary AI 2027 Advanced Autonomous Systems delivering 99.99% uptime and 95% process automation.',
     type: 'website',
   },

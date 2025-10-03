@@ -2,11 +2,11 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Real-Time Agent Routing 2026: Faster, Cheaper, More Reliable AI Ops',
+  title= 'Real-Time Agent Routing 2026: Faster, Cheaper, More Reliable AI Ops',
   description:
     'Design real-time routing for autonomous agents across models and tools. Cut cost 35–60% while improving quality and latency with policy-aware routing and semantic caching.',
   openGraph: {
-    title: 'Real-Time Agent Routing 2026',
+    title= 'Real-Time Agent Routing 2026',
     description:
       'Route across models/tools in real time with budgets, policies, and observability. Reduce spend and improve reliability.',
     type: 'article',

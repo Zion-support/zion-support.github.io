@@ -2,11 +2,11 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI 2028: Autonomous FinOps Scorecards | Zion Tech Group',
+  title= 'AI 2028: Autonomous FinOps Scorecards | Zion Tech Group',
   description:
     'Prevent cost regressions with live KPI-linked scorecards, budget-aware routing, and instant rollback for GenAI platforms.',
   openGraph: {
-    title: 'AI 2028: Autonomous FinOps Scorecards',
+    title= 'AI 2028: Autonomous FinOps Scorecards',
     description:
       'Prevent cost regressions with live KPI-linked scorecards, budget-aware routing, and instant rollback for GenAI platforms.',
     type: 'article',

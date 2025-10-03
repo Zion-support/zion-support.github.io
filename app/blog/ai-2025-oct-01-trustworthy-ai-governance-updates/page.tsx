@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-	title: 'Trustworthy AI Governance Updates — October 2025',
+	title= 'Trustworthy AI Governance Updates — October 2025',
 	description: 'Latest governance patterns for agentic systems: policy packs, evaluation pipelines, and risk budgets that scale.',
 	keywords: 'AI governance, risk budgets, evaluation pipelines, compliance',
 };

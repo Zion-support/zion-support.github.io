@@ -24,10 +24,10 @@ export default function AISuperintelligentAutomationBreakthrough() {
         {/* Key Metrics */}
         <div className="grid md:grid-cols-4 gap-6 mb-12">
           {[
-            { value: '99.9%', label: 'Automation Accuracy', icon: '🎯' },
-            { value: '$500M+', label: 'Annual Savings', icon: '💰' },
-            { value: '1000x', label: 'Processing Speed', icon: '⚡' },
-            { value: '24/7', label: 'Autonomous Operations', icon: '🤖' }
+            { value='99.9%', label: 'Automation Accuracy', icon: '🎯' },
+            { value='$500M+', label: 'Annual Savings', icon: '💰' },
+            { value='1000x', label: 'Processing Speed', icon: '⚡' },
+            { value='24/7', label: 'Autonomous Operations', icon: '🤖' }
           ].map((metric, index) => (
             <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 text-center">
               <div className="text-4xl mb-3">{metric.icon}</div>

@@ -2,11 +2,11 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Case Study: $750M Neuromorphic AI Breakthrough Success - Fortune 100 Transformation',
+  title= 'Case Study: $750M Neuromorphic AI Breakthrough Success - Fortune 100 Transformation',
   description: 'Discover how a Fortune 100 company achieved $750M in value creation through neuromorphic AI implementation, with detailed ROI analysis and transformation insights.',
   keywords: 'neuromorphic AI case study, AI transformation, Fortune 100 success, neuromorphic computing ROI',
   openGraph: {
-    title: 'Case Study: $750M Neuromorphic AI Breakthrough Success',
+    title= 'Case Study: $750M Neuromorphic AI Breakthrough Success',
     description: 'Fortune 100 company achieves breakthrough results with neuromorphic AI',
     type: 'article',
     publishedTime: '2027-01-25T00:00:00.000Z',

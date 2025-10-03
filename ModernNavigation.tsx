@@ -6,7 +6,7 @@ interface ModernNavigationProps {
 export default function ModernNavigation() {
 
 export default function ModernNavigation({
-  className = "",
+  className = "
 }: ModernNavigationProps) {
   return (
     <div className={className}>

@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { ArrowLeft, Calendar, User, Clock, Tag } from 'lucide-react';
 
 export const metadata = {
-  title: 'AI 2026: Enterprise Automation Breakthrough - Zion Tech Group',
+  title= 'AI 2026: Enterprise Automation Breakthrough - Zion Tech Group',
   description: 'Discover how AI-driven enterprise automation is revolutionizing business operations in 2026. From autonomous decision-making to self-healing systems, explore the breakthrough technologies transforming the corporate landscape.',
   keywords: 'AI, Enterprise Automation, Business Intelligence, 2026 Trends, Autonomous Operations, Fortune 500, ROI',
 };

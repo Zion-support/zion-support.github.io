@@ -3,12 +3,12 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'AI 2028 Omnipotent Superintelligence Breakthrough - Zion Tech Group',
+  title= 'AI 2028 Omnipotent Superintelligence Breakthrough - Zion Tech Group',
   description: 'Revolutionary breakthrough in AI 2028: Omnipotent Superintelligence achieves $3.2T in enterprise value creation with infinite cognitive capabilities and universal understanding.',
   keywords: 'AI 2028, omnipotent superintelligence, breakthrough, enterprise automation, universal AI, cognitive AI, superintelligence, $3.2T success',
   authors: [{ name: 'Zion Tech Group' }],
   openGraph: {
-    title: 'AI 2028 Omnipotent Superintelligence Breakthrough - Zion Tech Group',
+    title= 'AI 2028 Omnipotent Superintelligence Breakthrough - Zion Tech Group',
     description: 'Revolutionary breakthrough in AI 2028: Omnipotent Superintelligence achieves $3.2T in enterprise value creation with infinite cognitive capabilities.',
     url: 'https://ziontechgroup.com/blog/ai-2028-omnipotent-superintelligence-breakthrough',
     siteName: 'Zion Tech Group',
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AI 2028 Omnipotent Superintelligence Breakthrough',
+    title= 'AI 2028 Omnipotent Superintelligence Breakthrough',
     description: 'Revolutionary breakthrough in AI 2028: Omnipotent Superintelligence achieves $3.2T in enterprise value creation.',
   },
   robots: {

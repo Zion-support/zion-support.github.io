@@ -1,7 +1,7 @@
 import React from 'react';
 
 export const metadata = {
-  title: 'Edge Privacy Insights 2026 — Actionable Metrics Without PII',
+  title= 'Edge Privacy Insights 2026 — Actionable Metrics Without PII',
   description: 'Scoped IDs, on-device aggregation, and DP noise for trustworthy insights with zero PII collection.',
 };
 

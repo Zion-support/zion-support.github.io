@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Revolutionary Transformation 2026: $100M ROI Success Story',
+  title= 'AI Revolutionary Transformation 2026: $100M ROI Success Story',
   description: 'See how a Fortune 500 company achieved $100M ROI with revolutionary AI transformation. Complete case study with implementation details and results.',
   keywords: 'AI transformation, ROI case study, Fortune 500, AI success story, enterprise AI',
 };

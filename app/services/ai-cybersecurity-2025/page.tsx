@@ -3,11 +3,11 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'AI Cybersecurity Solutions 2025 | Zero-Trust Architecture | Zion Tech Group',
+  title= 'AI Cybersecurity Solutions 2025 | Zero-Trust Architecture | Zion Tech Group',
   description: 'Revolutionary AI-powered cybersecurity solutions with 99.99% threat detection, zero-trust architecture, and real-time protection. Prevent 100% of ransomware attacks with quantum-encrypted security.',
   keywords: 'AI cybersecurity 2025, zero-trust security, quantum encryption, threat detection AI, ransomware prevention, AI security solutions, enterprise cybersecurity',
   openGraph: {
-    title: 'AI Cybersecurity Solutions 2025 | Zero-Trust Architecture',
+    title= 'AI Cybersecurity Solutions 2025 | Zero-Trust Architecture',
     description: '99.99% threat detection with AI-powered security. Prevent ransomware attacks with quantum encryption and zero-trust architecture.',
     type: 'website',
   },

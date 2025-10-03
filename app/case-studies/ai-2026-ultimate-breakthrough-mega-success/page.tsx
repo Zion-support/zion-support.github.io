@@ -2,11 +2,11 @@ import React from 'react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'AI 2026 Ultimate Breakthrough: $10.2B Mega Success Story - Zion Tech Group',
+  title= 'AI 2026 Ultimate Breakthrough: $10.2B Mega Success Story - Zion Tech Group',
   description: 'Discover how a Fortune 100 company achieved $10.2B ROI with our AI 2026 Ultimate Breakthrough Suite, delivering 99.7% operational efficiency and 1.2 month payback period.',
   keywords: 'AI case study, Fortune 100, ROI success, enterprise transformation, AI breakthrough, business automation, quantum computing',
   openGraph: {
-    title: 'AI 2026 Ultimate Breakthrough: $10.2B Mega Success Story',
+    title= 'AI 2026 Ultimate Breakthrough: $10.2B Mega Success Story',
     description: 'Fortune 100 company achieves $10.2B ROI with revolutionary AI technologies, 99.7% efficiency, and 1.2 month payback.',
     type: 'article',
     publishedTime: '2026-01-15T00:00:00.000Z',

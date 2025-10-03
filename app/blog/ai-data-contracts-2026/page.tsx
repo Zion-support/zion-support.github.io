@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Data Contracts 2026: Shipping Reliable AI with Measurable Data Quality',
+  title= 'AI Data Contracts 2026: Shipping Reliable AI with Measurable Data Quality',
   description:
     'Design and enforce data contracts to cut incident rates, reduce drift, and ship reliable AI at scale.',
   keywords:
@@ -106,7 +106,7 @@ export default function AIDataContracts2026Page() {
   );
 }
 
-function RelatedArticleCard({ title, description, href }: { title: string; description: string; href: string }) {
+function RelatedArticleCard({ title, description, href }: { title= string; description: string; href: string }) {
   return (
     <Link href={href} className="block bg-white rounded-lg p-6 hover:shadow-lg transition-all duration-300">
       <h3 className="text-lg font-bold text-gray-900 mb-2">{title}</h3>

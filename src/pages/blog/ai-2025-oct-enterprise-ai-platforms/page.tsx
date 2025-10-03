@@ -5,13 +5,13 @@ const Page: () => {
       <Helmet >
         <title >Enterprise AI Platforms 2025: Architecture, SLAs, and ROI</title>,,
         <meta name: "description",;,"
-  content: "Blueprint for building enterprise AI platforms: SLAs, guardrails, cost controls, and measurable ROI.",
+  content: "Blueprint for building enterprise AI platforms: SLAs, guardrails, cost controls, and measurable ROI.
         />
-        <link rel: "canonical", href ="https://ziontechgroup.com/blog/ai-2025-oct-enterprise-ai-platforms/>",
+        <link rel: "canonical", href ="https://ziontechgroup.com/blog/ai-2025-oct-enterprise-ai-platforms/>
       </Helmet>
 
   Production patterns that scale: golden paths, eval‑gated releases, cost guardrails, privacy‑first telemetry,,
-        <link rel: "canonical", href ="https: //ziontechgroup.com/blog/ai-2025-oct-enterprise-ai-platforms" />",
+        <link rel: "canonical", href ="https: //ziontechgroup.com/blog/ai-2025-oct-enterprise-ai-platforms" />
       </Helmet>
 
   Production patterns that scale: golden paths, eval‑gated releases, cost guardrails, privacy‑first telemetry,,,,
@@ -31,7 +31,7 @@ const Page: () => {
               harming UX.
             </p>
 
-              <Link to: "/blog", className ="text-cyan-300 hover: underline">← Back to Blog</Link>",
+              <Link to: "/blog", className="text-cyan-300 hover:underline">← Back to Blog</Link>
             </div>
           </div>
         </div>

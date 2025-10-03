@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { ArrowLeft, Clock, User, Calendar, Share2, Bookmark, TrendingUp, DollarSign, Target } from 'lucide-react';
 
 export const metadata = {
-  title: 'AI Cognitive Computing Success 2026: $25M Value Creation Case Study | Zion Tech Group',
+  title= 'AI Cognitive Computing Success 2026: $25M Value Creation Case Study | Zion Tech Group',
   description: 'See how a Fortune 500 company achieved $25M value creation with AI cognitive computing systems that deliver human-level reasoning and decision-making capabilities.',
   keywords: 'cognitive computing case study, AI success story, value creation, Fortune 500, human-level reasoning, decision making',
 };

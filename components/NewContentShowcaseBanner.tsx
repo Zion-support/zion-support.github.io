@@ -5,35 +5,35 @@ import { Calendar, BookOpen, Award, Users, ArrowRight, Clock } from 'lucide-reac
 const NewContentShowcaseBanner: React.FC = () => {
   const newContent = [
     {
-      title: "Neuromorphic Computing Revolution",
-      excerpt: "Brain-inspired AI with 1000x energy efficiency and real-time learning capabilities",
-      category: "AI Innovation",
-      readTime: "8 min read",
-      href: "/blog/ai-2026-neuromorphic-computing-revolution",
+      title: "Neuromorphic Computing Revolution
+      excerpt: "Brain-inspired AI with 1000x energy efficiency and real-time learning capabilities
+      category: "AI Innovation
+      readTime: "8 min read
+      href: "/blog/ai-2026-neuromorphic-computing-revolution
       featured: true
     },
     {
-      title: "Autonomous Enterprise Operations",
-      excerpt: "Self-managing organizations achieving 300% ROI through AI transformation",
-      category: "Enterprise AI",
-      readTime: "10 min read",
-      href: "/blog/ai-2026-autonomous-enterprise-operations-breakthrough",
+      title: "Autonomous Enterprise Operations
+      excerpt: "Self-managing organizations achieving 300% ROI through AI transformation
+      category: "Enterprise AI
+      readTime: "10 min read
+      href: "/blog/ai-2026-autonomous-enterprise-operations-breakthrough
       featured: true
     },
     {
-      title: "Quantum Machine Learning Revolution",
-      excerpt: "Exponential performance gains with quantum-enhanced ML systems",
-      category: "Quantum AI",
-      readTime: "12 min read",
-      href: "/blog/ai-2026-quantum-machine-learning-revolution",
+      title: "Quantum Machine Learning Revolution
+      excerpt: "Exponential performance gains with quantum-enhanced ML systems
+      category: "Quantum AI
+      readTime: "12 min read
+      href: "/blog/ai-2026-quantum-machine-learning-revolution
       featured: true
     },
     {
-      title: "Fortune 500 AI Transformation Success",
-      excerpt: "How a Fortune 500 company achieved 300% ROI in 12 months",
-      category: "Case Study",
-      readTime: "15 min read",
-      href: "/case-studies/fortune-500-ai-transformation-success",
+      title: "Fortune 500 AI Transformation Success
+      excerpt: "How a Fortune 500 company achieved 300% ROI in 12 months
+      category: "Case Study
+      readTime: "15 min read
+      href: "/case-studies/fortune-500-ai-transformation-success
       featured: true
     }
   ];

@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { ArrowLeft, Calendar, User, Clock, Tag, TrendingUp, DollarSign, Users, Target, Brain, Zap, Shield, CheckCircle } from 'lucide-react';
 
 export const metadata = {
-  title: 'AI 2025 December Autonomous Revolution: $2.8B Success Story - Zion Tech Group',
+  title= 'AI 2025 December Autonomous Revolution: $2.8B Success Story - Zion Tech Group',
   description: 'Discover how a Fortune 100 company achieved $2.8B in cost savings through the revolutionary December 2025 AI autonomous enterprise transformation.',
   keywords: 'AI Success Story, $2.8B Savings, Autonomous Enterprise, December 2025, Fortune 100, AI Transformation, Case Study',
 };

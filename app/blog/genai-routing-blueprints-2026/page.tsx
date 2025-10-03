@@ -1,7 +1,7 @@
 import React from 'react';
 
 export const metadata = {
-  title: 'GenAI Routing Blueprints 2026: Quality Tiers Under Budget',
+  title= 'GenAI Routing Blueprints 2026: Quality Tiers Under Budget',
   description: 'Tier models, cache prompts, and route by SLA using eval signals and budgets.',
 };
 

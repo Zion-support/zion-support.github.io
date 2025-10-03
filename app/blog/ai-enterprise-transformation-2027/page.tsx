@@ -2,10 +2,10 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-	title: 'AI Enterprise Transformation 2027: Pragmatic Roadmap to Value',
+	title= 'AI Enterprise Transformation 2027: Pragmatic Roadmap to Value',
 	description: 'A practical 2027 roadmap to deliver AI value across CX, operations, and platforms with reliability, governance, and measurable ROI.',
 	openGraph: {
-		title: 'AI Enterprise Transformation 2027',
+		title= 'AI Enterprise Transformation 2027',
 		description: 'Blueprint for shipping reliable, cost‑effective AI with measurable outcomes.',
 		url: 'https://ziontechgroup.com/blog/ai-enterprise-transformation-2027',
 		images: [{ url: '/og/ai-enterprise-transformation-2027.jpg', width: 1200, height: 630 }],

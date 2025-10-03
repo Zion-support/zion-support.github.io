@@ -2,12 +2,12 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Edge Computing Success Story: $50M Savings & Sub-10ms Performance',
+  title= 'AI Edge Computing Success Story: $50M Savings & Sub-10ms Performance',
   description: 'Discover how a Fortune 500 manufacturer achieved $50M annual savings, 99.99% uptime, and sub-10ms response times with AI edge computing transformation.',
   keywords: 'edge computing, AI success story, Fortune 500, cost savings, performance optimization',
   authors: [{ name: 'Zion Tech Group' }],
   openGraph: {
-    title: 'AI Edge Computing Success Story: $50M Savings & Sub-10ms Performance',
+    title= 'AI Edge Computing Success Story: $50M Savings & Sub-10ms Performance',
     description: 'Discover how a Fortune 500 manufacturer achieved $50M annual savings, 99.99% uptime, and sub-10ms response times with AI edge computing transformation.',
     url: 'https://ziontechgroup.com/case-studies/ai-edge-computing-success-2026',
     siteName: 'Zion Tech Group',

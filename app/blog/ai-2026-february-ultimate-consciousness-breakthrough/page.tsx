@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'AI 2026 February Ultimate Consciousness Breakthrough - Zion Tech Group',
+  title= 'AI 2026 February Ultimate Consciousness Breakthrough - Zion Tech Group',
   description: 'Discover the groundbreaking February 2026 AI breakthrough achieving synthetic consciousness, universal awareness, and $100B enterprise transformation potential.',
   keywords: 'AI consciousness, synthetic intelligence, enterprise transformation, February 2026, Zion Tech Group',
 };

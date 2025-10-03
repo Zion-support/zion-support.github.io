@@ -53,10 +53,10 @@ export default function Fortune500QuantumAITransformation2026() {
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-4 gap-8 text-center">
             {[
-              { value: '$10B', label: 'Additional Revenue', icon: '💰', color: 'from-green-400 to-emerald-400' },
-              { value: '95%', label: 'Process Automation', icon: '🤖', color: 'from-blue-400 to-cyan-400' },
-              { value: '500%', label: 'Productivity Increase', icon: '⚡', color: 'from-purple-400 to-pink-400' },
-              { value: '99.9%', label: 'Quality Improvement', icon: '🎯', color: 'from-yellow-400 to-orange-400' }
+              { value='$10B', label: 'Additional Revenue', icon: '💰', color: 'from-green-400 to-emerald-400' },
+              { value='95%', label: 'Process Automation', icon: '🤖', color: 'from-blue-400 to-cyan-400' },
+              { value='500%', label: 'Productivity Increase', icon: '⚡', color: 'from-purple-400 to-pink-400' },
+              { value='99.9%', label: 'Quality Improvement', icon: '🎯', color: 'from-yellow-400 to-orange-400' }
             ].map((stat, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-green-500/50 transition-all duration-300">
                 <div className="text-5xl mb-3">{stat.icon}</div>
@@ -245,26 +245,26 @@ export default function Fortune500QuantumAITransformation2026() {
               {[
                 { 
                   phase: "Months 1-3", 
-                  title: "Assessment & Strategy", 
-                  description: "Comprehensive analysis of current operations and quantum AI implementation strategy",
+                  title= "Assessment & Strategy", 
+                  description: "Comprehensive analysis of current operations and quantum AI implementation strategy
                   results: "Identified $5B optimization potential"
                 },
                 { 
                   phase: "Months 4-6", 
-                  title: "Pilot Implementation", 
-                  description: "Deployed quantum AI systems in key manufacturing lines",
+                  title= "Pilot Implementation", 
+                  description: "Deployed quantum AI systems in key manufacturing lines
                   results: "50% improvement in pilot operations"
                 },
                 { 
                   phase: "Months 7-12", 
-                  title: "Enterprise Rollout", 
-                  description: "Scaled quantum AI across all manufacturing facilities globally",
+                  title= "Enterprise Rollout", 
+                  description: "Scaled quantum AI across all manufacturing facilities globally
                   results: "95% automation achieved"
                 },
                 { 
                   phase: "Months 13-18", 
-                  title: "Optimization & Growth", 
-                  description: "Fine-tuned systems and expanded capabilities for maximum impact",
+                  title= "Optimization & Growth", 
+                  description: "Fine-tuned systems and expanded capabilities for maximum impact
                   results: "$10B revenue impact realized"
                 }
               ].map((phase, index) => (

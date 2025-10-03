@@ -2,11 +2,11 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI 2025-2026 Mega Trends Breakthrough: Revolutionary Enterprise Transformation',
+  title= 'AI 2025-2026 Mega Trends Breakthrough: Revolutionary Enterprise Transformation',
   description: 'Discover the groundbreaking AI trends and breakthroughs that will revolutionize enterprise operations in 2025-2026. From quantum computing to autonomous operations.',
   keywords: 'AI trends 2025, AI breakthrough 2026, enterprise AI transformation, quantum computing, autonomous operations',
   openGraph: {
-    title: 'AI 2025-2026 Mega Trends Breakthrough: Revolutionary Enterprise Transformation',
+    title= 'AI 2025-2026 Mega Trends Breakthrough: Revolutionary Enterprise Transformation',
     description: 'Discover the groundbreaking AI trends and breakthroughs that will revolutionize enterprise operations in 2025-2026.',
     type: 'article',
   },

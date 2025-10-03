@@ -2,11 +2,11 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Sustainable AI: Green Computing Solutions for Enterprise 2025',
+  title= 'Sustainable AI: Green Computing Solutions for Enterprise 2025',
   description: 'Discover how sustainable AI and green computing solutions are reducing carbon footprints by 85% while improving performance. Achieve net-zero operations with AI systems that deliver $30M+ in cost savings and environmental impact.',
   keywords: 'sustainable AI, green computing, carbon neutral AI, eco-friendly technology, energy efficient AI, green data centers, sustainable enterprise, carbon footprint reduction',
   openGraph: {
-    title: 'Sustainable AI: Green Computing Solutions for Enterprise 2025',
+    title= 'Sustainable AI: Green Computing Solutions for Enterprise 2025',
     description: 'Reduce carbon footprints by 85% with sustainable AI and green computing solutions that deliver $30M+ in cost savings.',
     type: 'article',
     url: 'https://ziontechgroup.com/blog/sustainable-ai-green-computing-2025',

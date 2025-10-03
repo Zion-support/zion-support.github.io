@@ -1,10 +1,10 @@
 import React from 'react';
 
 export const metadata = {
-	title: 'AI Enterprise Transformation: $50M Annual Savings Blueprint | Zion Tech Group',
+	title= 'AI Enterprise Transformation: $50M Annual Savings Blueprint | Zion Tech Group',
 	description: 'Discover how Fortune 500 companies achieve $50M annual savings, 95% process automation, and 300% ROI through comprehensive AI transformation strategies.',
 	openGraph: {
-		title: 'AI Enterprise Transformation: $50M Annual Savings Blueprint',
+		title= 'AI Enterprise Transformation: $50M Annual Savings Blueprint',
 		description: 'Proven strategies for $50M annual savings and 95% process automation through AI transformation.',
 		images: [{ url: '/og/ai-enterprise-transformation-2025.jpg' }]
 	}
@@ -177,23 +177,23 @@ export default function Page() {
 {`// Enterprise AI Transformation Architecture
 const TransformationStack = {
   dataLayer: {
-    warehouses: "Snowflake + Databricks",
-    streaming: "Apache Kafka + Apache Pulsar",
+    warehouses: "Snowflake + Databricks
+    streaming: "Apache Kafka + Apache Pulsar
     storage: "AWS S3 + Azure Data Lake"
   },
   aiPlatform: {
-    mlOps: "MLflow + Kubeflow + Weights & Biases",
-    models: "TensorFlow + PyTorch + Hugging Face",
+    mlOps: "MLflow + Kubeflow + Weights & Biases
+    models: "TensorFlow + PyTorch + Hugging Face
     deployment: "Kubernetes + Docker + Istio"
   },
   automation: {
-    orchestration: "Apache Airflow + Prefect",
-    monitoring: "Prometheus + Grafana + ELK Stack",
+    orchestration: "Apache Airflow + Prefect
+    monitoring: "Prometheus + Grafana + ELK Stack
     governance: "Apache Atlas + Custom AI Governance"
   },
   infrastructure: {
-    cloud: "Multi-cloud (AWS + Azure + GCP)",
-    compute: "Kubernetes + Serverless Functions",
+    cloud: "Multi-cloud (AWS + Azure + GCP)
+    compute: "Kubernetes + Serverless Functions
     networking: "Istio Service Mesh + CDN"
   }
 };`}

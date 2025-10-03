@@ -2,10 +2,10 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Enterprise Autonomous Agents 2026 | Zion Tech Group',
+  title= 'AI Enterprise Autonomous Agents 2026 | Zion Tech Group',
   description: 'Deploy autonomous agents with provable guardrails to achieve 400% efficiency gains, 70% cost reduction, and 99.95% uptime across the enterprise.',
   openGraph: {
-    title: 'AI Enterprise Autonomous Agents 2026',
+    title= 'AI Enterprise Autonomous Agents 2026',
     description: 'Architecture, guardrails, and rollout patterns for enterprise‑grade autonomous agents with measurable ROI.',
     type: 'article',
     url: 'https://ziontechgroup.com/blog/ai-enterprise-autonomous-agents-2026',

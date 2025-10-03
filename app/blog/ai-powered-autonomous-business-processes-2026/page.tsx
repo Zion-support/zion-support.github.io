@@ -4,11 +4,11 @@ import { ArrowLeft, Clock, User, Tag, Share2, BookOpen, CheckCircle, TrendingUp,
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'AI-Powered Autonomous Business Processes: The 2026 Revolution | Zion Tech Group',
+  title= 'AI-Powered Autonomous Business Processes: The 2026 Revolution | Zion Tech Group',
   description: 'Discover how AI-powered autonomous business processes are revolutionizing enterprise operations in 2026, delivering unprecedented efficiency and strategic insights.',
   keywords: 'autonomous business processes, AI automation, enterprise transformation, business process optimization, AI agents',
   openGraph: {
-    title: 'AI-Powered Autonomous Business Processes: The 2026 Revolution',
+    title= 'AI-Powered Autonomous Business Processes: The 2026 Revolution',
     description: 'Discover how AI-powered autonomous business processes are revolutionizing enterprise operations in 2026, delivering unprecedented efficiency and strategic insights.',
     type: 'article',
     publishedTime: '2026-01-15T00:00:00Z',

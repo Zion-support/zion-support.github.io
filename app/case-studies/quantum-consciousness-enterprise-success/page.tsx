@@ -2,11 +2,11 @@ import React from 'react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Quantum Consciousness Enterprise Success: $3.2B Value Generation',
+  title= 'Quantum Consciousness Enterprise Success: $3.2B Value Generation',
   description: 'Discover how a Fortune 500 company achieved $3.2 billion in measurable value using quantum consciousness AI systems, revolutionizing their business operations.',
   keywords: 'quantum consciousness, enterprise success, $3.2B value, AI transformation, case study',
   openGraph: {
-    title: 'Quantum Consciousness Enterprise Success: $3.2B Value Generation',
+    title= 'Quantum Consciousness Enterprise Success: $3.2B Value Generation',
     description: 'How a Fortune 500 company achieved $3.2 billion in value with quantum consciousness AI systems',
     type: 'article',
     publishedTime: '2026-05-01T00:00:00.000Z',

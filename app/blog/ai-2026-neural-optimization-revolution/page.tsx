@@ -1,11 +1,11 @@
 import React from 'react';
 
 export const metadata = {
-  title: 'AI 2026: Neural Optimization Revolution — 1000x Performance, 90% Cost Down',
+  title= 'AI 2026: Neural Optimization Revolution — 1000x Performance, 90% Cost Down',
   description: 'How enterprises achieve 1000x inference performance and 90% cost reduction using graph-aware schedulers, predictive memory, and quantization-aware routing.',
   keywords: 'neural optimization, AI performance, cost optimization, inference acceleration, enterprise AI',
   openGraph: {
-    title: 'AI 2026: Neural Optimization Revolution',
+    title= 'AI 2026: Neural Optimization Revolution',
     description: '1000x performance and 90% cost reduction through next-gen optimization.',
     type: 'article',
     url: 'https://ziontechgroup.com/blog/ai-2026-neural-optimization-revolution',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-	title: 'Edge Private Feature Flags (2026): Zero‑PII, Sub‑100ms, Signed Configs',
+	title= 'Edge Private Feature Flags (2026): Zero‑PII, Sub‑100ms, Signed Configs',
 	description: 'Blueprint for privacy‑safe feature flags and experiments at the edge with scoped IDs and DP noise.',
 };
 

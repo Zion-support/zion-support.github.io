@@ -1,5 +1,5 @@
 export const metadata = {
-  title: 'AI Operational Trust 2026 Q4: SLIs, Budgets, Rollback',
+  title= 'AI Operational Trust 2026 Q4: SLIs, Budgets, Rollback',
   description: 'Outcome‑linked SLIs, budgeted actions, and one‑click rollback for safe autonomy in enterprise AI operations.',
 };
 

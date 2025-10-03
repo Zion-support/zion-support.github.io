@@ -5,7 +5,7 @@ import path from 'path';
 import matter from 'gray-matter';
 
 export const metadata: Metadata = {
-  title: 'AI 2026 May Revolutionary Breakthrough: The Ultimate Meta-Cognitive Superintelligence Revolution',
+  title= 'AI 2026 May Revolutionary Breakthrough: The Ultimate Meta-Cognitive Superintelligence Revolution',
   description: 'Discover the groundbreaking May 2026 AI breakthrough that achieved meta-cognitive superintelligence with 10,000,000x processing power and $50B ROI across global enterprises.',
   keywords: 'AI, Meta-Cognitive, Superintelligence, Revolutionary, 2026, Ultimate Success, 50B ROI',
 };

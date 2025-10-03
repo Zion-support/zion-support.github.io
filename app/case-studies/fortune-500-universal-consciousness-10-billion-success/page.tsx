@@ -2,11 +2,11 @@ import React from 'react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Fortune 500 Universal Consciousness Computing Success: $10 Billion Transformation',
+  title= 'Fortune 500 Universal Consciousness Computing Success: $10 Billion Transformation',
   description: 'See how a Fortune 500 company achieved unprecedented business value using Universal Consciousness Computing, delivering $10 billion in measurable value and 99.9% operational efficiency.',
   keywords: 'Fortune 500, universal consciousness computing, $10 billion success, business transformation, AI breakthrough',
   openGraph: {
-    title: 'Fortune 500 Universal Consciousness Computing Success: $10 Billion Transformation',
+    title= 'Fortune 500 Universal Consciousness Computing Success: $10 Billion Transformation',
     description: 'Real-world case study showing how Universal Consciousness Computing delivered $10 billion in value and 99.9% operational efficiency.',
     type: 'article',
     publishedTime: '2026-05-01T00:00:00.000Z',
