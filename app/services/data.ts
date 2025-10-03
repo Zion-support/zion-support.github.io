@@ -6,7 +6,7 @@ export interface Service {
   description: string;
   features: string[];
   benefits: string[];
-  pricing: 
+  pricing: {
     starting: string;
     enterprise: string;
     custom: string;
@@ -20,7 +20,7 @@ export interface Service {
 
 export const services: Service[] = [{
   // EXISTING SERVICES
-  
+  {
     slug: 'ai-data-analytics',
     name: 'AI Data Analytics',
     category: 'AI Services',
@@ -39,7 +39,7 @@ export const services: Service[] = [{
       'Improve forecast accuracy by 85%',
       'Enable real-time business insights'
     ],
-    pricing: 
+    pricing: {
       starting: '$2,999/month',
       enterprise: '$9,999/month',
       custom: 'Custom pricing available'
@@ -50,7 +50,7 @@ export const services: Service[] = [{
     icon: '📊',
     href: '/services/ai-data-analytics'
   },
-  
+  {
     slug: 'ai-workflow-automation',
     name: 'AI Workflow Automation',
     category: 'AI Services',
@@ -69,7 +69,7 @@ export const services: Service[] = [{
       'Eliminate human errors',
       '24/7 automated operations'
     ],
-    pricing: 
+    pricing: {
       starting: '$1,999/month',
       enterprise: '$7,999/month',
       custom: 'Custom pricing available'
@@ -80,7 +80,7 @@ export const services: Service[] = [{
     icon: '⚡',
     href: '/services/ai-workflow-automation'
   },
-  
+  {
     slug: 'ai-virtual-assistant',
     name: 'AI Virtual Assistant',
     category: 'AI Services',
@@ -99,7 +99,7 @@ export const services: Service[] = [{
       'Handle 80% of inquiries automatically',
       'Available 24/7 without breaks'
     ],
-    pricing: 
+    pricing: {
       starting: '$799/month',
       enterprise: '$3,999/month',
       custom: 'Custom pricing available'
@@ -112,7 +112,7 @@ export const services: Service[] = [{
   },
 
   // NEW MICRO SAAS SERVICES
-  
+  {
     slug: 'ai-workflow-automation-suite',
     name: 'AI Workflow Automation Suite',
     category: 'Micro SaaS',
@@ -133,7 +133,7 @@ export const services: Service[] = [{
       'Scale operations without additional staff',
       'Achieve 99.9% accuracy in automated tasks'
     ],
-    pricing: 
+    pricing: {
       starting: '$99/month',
       enterprise: '$799/month',
       custom: 'Custom enterprise pricing'
@@ -144,7 +144,7 @@ export const services: Service[] = [{
     icon: '🔄',
     href: '/services/ai-workflow-automation-suite'
   },
-  
+  {
     slug: 'smart-expense-management-saas',
     name: 'Smart Expense Management SaaS',
     category: 'Micro SaaS',
@@ -165,7 +165,7 @@ export const services: Service[] = [{
       'Eliminate manual data entry errors',
       'Provide real-time financial insights'
     ],
-    pricing: 
+    pricing: {
       starting: '$79/month',
       enterprise: '$499/month',
       custom: 'Custom enterprise pricing'
@@ -176,7 +176,7 @@ export const services: Service[] = [{
     icon: '💰',
     href: '/services/smart-expense-management-saas'
   },
-  
+  {
     slug: 'ai-inventory-optimizer',
     name: 'AI-Powered Inventory Optimizer',
     category: 'Micro SaaS',
@@ -197,7 +197,7 @@ export const services: Service[] = [{
       'Improve cash flow management',
       'Optimize supplier relationships'
     ],
-    pricing: 
+    pricing: {
       starting: '$149/month',
       enterprise: '$899/month',
       custom: 'Custom enterprise pricing'
@@ -229,7 +229,7 @@ export const services: Service[] = [{
       'Identify improvement opportunities faster',
       'Build stronger customer relationships'
     ],
-    pricing: 
+    pricing: {
       starting: '$79/month',
       enterprise: '$499/month',
       custom: 'Custom enterprise pricing'
@@ -261,7 +261,7 @@ export const services: Service[] = [{
       'Improve customer satisfaction',
       'Save 10+ hours per week on scheduling'
     ],
-    pricing: 
+    pricing: {
       starting: '$29/month',
       enterprise: '$299/month',
       custom: 'Custom enterprise pricing'
@@ -295,7 +295,7 @@ export const services: Service[] = [{
       'Enable secure cloud adoption',
       'Protect against advanced threats'
     ],
-    pricing: 
+    pricing: {
       starting: '$2,999/month',
       enterprise: '$12,999/month',
       custom: 'Custom enterprise pricing'
@@ -327,7 +327,7 @@ export const services: Service[] = [{
       'Minimize regulatory risks',
       'Increase data trust and reliability'
     ],
-    pricing: 
+    pricing: {
       starting: '$2,499/month',
       enterprise: '$9,999/month',
       custom: 'Custom enterprise pricing'
@@ -359,7 +359,7 @@ export const services: Service[] = [{
       'Enable faster time-to-market',
       'Increase system reliability'
     ],
-    pricing: 
+    pricing: {
       starting: '$1,999/month',
       enterprise: '$8,999/month',
       custom: 'Custom enterprise pricing'
@@ -391,7 +391,7 @@ export const services: Service[] = [{
       'Simplify system management',
       'Accelerate digital transformation'
     ],
-    pricing: 
+    pricing: {
       starting: '$1,499/month',
       enterprise: '$6,999/month',
       custom: 'Custom enterprise pricing'
@@ -423,7 +423,7 @@ export const services: Service[] = [{
       'Ensure business continuity',
       'Meet regulatory requirements'
     ],
-    pricing: 
+    pricing: {
       starting: '$999/month',
       enterprise: '$4,999/month',
       custom: 'Custom enterprise pricing'
@@ -457,7 +457,7 @@ export const services: Service[] = [{
       'Optimize business strategies',
       'Increase competitive advantage'
     ],
-    pricing: 
+    pricing: {
       starting: '$3,999/month',
       enterprise: '$15,999/month',
       custom: 'Custom enterprise pricing'
@@ -489,7 +489,7 @@ export const services: Service[] = [{
       'Automate text-based processes',
       'Enhance customer interactions'
     ],
-    pricing: 
+    pricing: {
       starting: '$2,499/month',
       enterprise: '$9,999/month',
       custom: 'Custom enterprise pricing'
@@ -521,7 +521,7 @@ export const services: Service[] = [{
       'Enable 24/7 monitoring',
       'Extract valuable insights from visual data'
     ],
-    pricing: 
+    pricing: {
       starting: '$1,999/month',
       enterprise: '$7,999/month',
       custom: 'Custom enterprise pricing'
@@ -553,7 +553,7 @@ export const services: Service[] = [{
       'Enhance customer satisfaction',
       'Optimize content delivery'
     ],
-    pricing: 
+    pricing: {
       starting: '$1,499/month',
       enterprise: '$5,999/month',
       custom: 'Custom enterprise pricing'
@@ -585,7 +585,7 @@ export const services: Service[] = [{
       'Enable real-time protection',
       'Comply with regulatory requirements'
     ],
-    pricing: 
+    pricing: {
       starting: '$2,999/month',
       enterprise: '$12,999/month',
       custom: 'Custom enterprise pricing'
@@ -598,14 +598,14 @@ export const services: Service[] = [{
   }
 ];
 
-export function getServiceBySlug(slug: string): Service | undefined 
+export function getServiceBySlug(slug: string): Service | undefined {
   return services.find(s => s.slug === slug);
 }
 
-export function getServicesByCategory(category: string): Service[] 
+export function getServicesByCategory(category: string): Service[] {
   return services.filter(s => s.category === category);
 }
 
-export function getAllCategories(): string[] 
+export function getAllCategories(): string[] {
   return [...new Set(services.map(s => s.category))];
 }
