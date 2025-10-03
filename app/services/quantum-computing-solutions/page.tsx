@@ -40,30 +40,8 @@ import {
   Activity,
   PieChart,
   LineChart,
-  RefreshCw,
-  Download,
-  Upload,
-  Play,
-  Pause,
-  Square,
-  Triangle,
-  Circle,
-  Hexagon,
-  Monitor,
-  Server,
-  HardDrive,
-  MemoryStick,
-  Router,
-  Terminal,
-  GitBranch,
-  Container,
-  Docker,
-  Key,
-  AlertTriangle,
-  Users,
-  MessageSquare,
-  TrendingUp,
-  Eye
+  Brain,
+  Cloud
 } from 'lucide-react';
 
 export const metadata: Metadata = {
