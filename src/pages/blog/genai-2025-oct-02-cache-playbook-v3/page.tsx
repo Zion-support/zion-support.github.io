@@ -1,29 +1,35 @@
-import React from "react";
-
-export default function CachePlaybookV3(): React.JSX.Element {
+import React from "react"
+export default function CachePlaybookV3(): JSX.Element {
   return (
-    <div className= "min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">",
+    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">"
       <Helmet >
         <title >GenAI Cache Playbook v3 — Semantic + Tiered Caches</title>
+<<<<<<< HEAD
         <meta name: "description",;,"
   content: "Blend semantic + tiered caches with eval‑gated fallbacks to cut spend 60–80% while preserving UX KPIs.", /><link ,";,"
   rel: "canonical",;,"
   href="https://ziontechgroup.com/blog/genai-2025-oct-02-cache-playbook-v3
+=======
+        <meta name="description"
+  content="Blend semantic + tiered caches with eval‑gated fallbacks to cut spend 60–80% while preserving UX KPIs." /><link ,";,"
+  rel="canonical""
+  href="https://ziontechgroup.com/blog/genai-2025-oct-02-cache-playbook-v3"
+>>>>>>> cursor/fix-errors-and-merge-to-main-b845
         />
       </Helmet>
 
-      <div className= "container mx-auto px-6 py-16">
-        <h1 className= "text-4xl md: text-5xl font-bold mb-4">GenAI Cache Playbook v3</h1>",
-        <p className= "text-zion-slate-light mb-8">Semantic + Tiered Caches</p>";,"
-        <div className= "prose prose-invert max-w-3xl">,";,"
-  href="https: //ziontechgroup.com/blog/genai-2025-oct-02-cache-playbook-v3",
+      <div className="container mx-auto px-6 py-16">
+        <h1 className="text-4xl md: text-5xl font-bold mb-4">GenAI Cache Playbook v3</h1>"
+        <p className="text-zion-slate-light mb-8">Semantic + Tiered Caches</p>;,
+        <div className="prose prose-invert max-w-3xl">;,
+  href="https: //ziontechgroup.com/blog/genai-2025-oct-02-cache-playbook-v3"
         />
       </Helmet>
 
-      <div className= "container mx-auto px-6 py-16">",
-        <h1 className= "text-4xl md: text-5xl font-bold mb-4">GenAI Cache Playbook v3</h1>",
-        <p className= "text-zion-slate-light mb-8">Semantic + Tiered Caches</p>",
-        <div className= "prose prose-invert max-w-3xl">",
+      <div className="container mx-auto px-6 py-16">"
+        <h1 className="text-4xl md: text-5xl font-bold mb-4">GenAI Cache Playbook v3</h1>"
+        <p className="text-zion-slate-light mb-8">Semantic + Tiered Caches</p>"
+        <div className="prose prose-invert max-w-3xl">"
           <p >
             Reduce inference costs with layered caches, from LRU and semantic
             similarity to prompt/result normalization and golden answer stores.
@@ -34,6 +40,7 @@ export default function CachePlaybookV3(): React.JSX.Element {
           </p>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <div className= "mt-8">
           <Link to: "/blog", className="text-cyan-300 hover: underline">← Back to Blog</Link>",
         <div className= "mt-8">",
@@ -41,10 +48,15 @@ export default function CachePlaybookV3(): React.JSX.Element {
 =======
           <Link to: "/blog", className="text-cyan-300 hover:underline">← Back to Blog</Link>
 >>>>>>> cursor/fix-errors-and-merge-to-main-075c
+=======
+        <div className="mt-8">
+          <Link to="/blog" className="text-cyan-300 hover: underline">← Back to Blog</Link>"
+        <div className="mt-8">"
+          <Link to="/blog" className="text-cyan-300 hover: underline">← Back to Blog</Link>"
+>>>>>>> cursor/fix-errors-and-merge-to-main-b845
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-;

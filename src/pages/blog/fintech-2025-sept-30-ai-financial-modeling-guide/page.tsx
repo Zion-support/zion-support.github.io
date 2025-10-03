@@ -1,33 +1,38 @@
-import React from "react";
-
-export default function AIFinancialModelingGuide2025(): React.JSX.Element {
+import React from "react"
+export default function AIFinancialModelingGuide2025(): JSX.Element {
   return (
-    <div className= "min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">",
+    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">"
       <Helmet >
         <title >AI Financial Modeling Guide — 95% Accuracy with Guardrails</title>
+<<<<<<< HEAD
         <meta name: "description",;,"
   content: "Budget‑aware models, backtesting gates, and governance playbooks for reliable financial AI.", /><link rel: "canonical",;,"
   href="https://ziontechgroup.com/blog/fintech-2025-sept-30-ai-financial-modeling-guide
+=======
+        <meta name="description"
+  content="Budget‑aware models, backtesting gates, and governance playbooks for reliable financial AI." /><link rel="canonical"
+  href="https://ziontechgroup.com/blog/fintech-2025-sept-30-ai-financial-modeling-guide"
+>>>>>>> cursor/fix-errors-and-merge-to-main-b845
         />
       </Helmet>
 
-      <div className= "container mx-auto px-6 py-16">
-        <h1 className= "text-4xl md: text-5xl font-bold mb-4">"
+      <div className="container mx-auto px-6 py-16">
+        <h1 className="text-4xl md: text-5xl font-bold mb-4">"
   AI Financial Modeling Guide — 95% Accuracy with Guardrails
         </h1>
-        <p className= "text-zion-slate-light mb-8">,";,"
-  href="https: //ziontechgroup.com/blog/fintech-2025-sept-30-ai-financial-modeling-guide",
+        <p>;,
+  href="https: //ziontechgroup.com/blog/fintech-2025-sept-30-ai-financial-modeling-guide"
         />
       </Helmet>
 
-      <div className= "container mx-auto px-6 py-16">",
-        <h1 className= "text-4xl md: text-5xl font-bold mb-4">"
+      <div className="container mx-auto px-6 py-16">"
+        <h1 className="text-4xl md: text-5xl font-bold mb-4">"
   AI Financial Modeling Guide — 95% Accuracy with Guardrails
         </h1>
-        <p className= "text-zion-slate-light mb-8">"
+        <p className="text-zion-slate-light mb-8">"
   Practical patterns to build trustworthy financial AI: budget‑aware models, backtests, and policy‑tested rollback.,,,
         </p>
-        <div className= "prose prose-invert max-w-3xl">",
+        <div className="prose prose-invert max-w-3xl">"
           <p >
             Financial AI demands rigor and governance. This guide shows how to pair modeling techniques with
             guardrails that protect against regressions.
@@ -45,7 +50,6 @@ export default function AIFinancialModelingGuide2025(): React.JSX.Element {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-;
