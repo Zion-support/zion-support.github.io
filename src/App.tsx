@@ -48,15 +48,15 @@ export default function App(): JSX.Element {
           <AutonomousEnterpriseBreakthroughBanner />
           
           <main className="min-h-screen">
-            <Suspense fallback="{<PageLoader /">}>
+            <Suspense fallback={<PageLoader />}>
               <Routes>
-                <Route path="/" element="{<LazyHomePage /">} />
-                <Route path="/solutions" element="{<LazySolutionsPage /">} />
-                <Route path="/resources" element="{<LazyResourcesPage /">} />
-                <Route path="/team" element="{<LazyTeamPage /">} />
-                <Route path="/news" element="{<LazyNewsPage /">} />
-                <Route path="/press" element="{<LazyPressPage /">} />
-                <Route path="/careers" element="{<LazyCareersPage /">} />
+                <Route path="/" element={<LazyHomePage />} />
+                <Route path="/solutions" element={<LazySolutionsPage />} />
+                <Route path="/resources" element={<LazyResourcesPage />} />
+                <Route path="/team" element={<LazyTeamPage />} />
+                <Route path="/news" element={<LazyNewsPage />} />
+                <Route path="/press" element={<LazyPressPage />} />
+                <Route path="/careers" element={<LazyCareersPage />} />
                 <Route path="/marketplace" element="{<LazyMarketplacePage /">} />
                 <Route path="/services" element="{<LazyServicesPage /">} />
                 <Route path="/services/ai-invoice-processing-saas" element="{<LazyAIInvoiceProcessingPage /">} />
