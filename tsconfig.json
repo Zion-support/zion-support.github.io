@@ -36,8 +36,6 @@
   "exclude": [
     "app/blog/**/*",
     "app/components/**/*",
-    "src/pages/blog/**/*",
-    "src/pages/case-studies/**/*",
     "app/contact/**/*",
     "app/enterprise/**/*",
     "app/guides/**/*",

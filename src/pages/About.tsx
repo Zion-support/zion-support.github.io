@@ -6,18 +6,35 @@ import {
   TrendingUp,
   Globe,
   Users,
+  MapPin,
+  Phone,
   Award,
-  CheckCircle,
-  ArrowRight
+  Mail
 } from 'lucide-react'
 
 const About: React.FC = () => {
   const stats = [
-    { value: '500+', label: 'Projects Delivered' },
-    { value: '150+', label: 'Happy Clients' },
-    { value: '99.9%', label: 'Uptime Guarantee' },
-    { value: '24/7', label: 'Support Available' }
-  ]
+    {
+      icon: Users,
+      value: '500+',
+      label: 'Projects Completed'
+    },
+    {
+      icon: Globe,
+      value: '50+',
+      label: 'Countries Served'
+    },
+    {
+      icon: TrendingUp,
+      value: '75%',
+      label: 'Average Cost Reduction'
+    },
+    {
+      icon: Shield,
+      value: '99.9%',
+      label: 'Uptime Guarantee'
+    }
+  ];
 
   const values = [
     {
@@ -40,7 +57,7 @@ const About: React.FC = () => {
       title: 'Global Reach',
       description: 'Serving clients worldwide with 24/7 support and localized solutions for international markets.'
     }
-  ]
+  ];
 
   const team = [
     {
@@ -56,176 +73,203 @@ const About: React.FC = () => {
       email: 'ai-team@ziontechgroup.com'
     },
     {
-      name: 'DevOps & Infrastructure Team',
-      role: 'Cloud Architecture Experts',
-      description: 'Specialists in scalable cloud infrastructure and deployment automation.',
+      name: 'DevOps Specialists',
+      role: 'Infrastructure Experts',
+      description: 'Cloud and DevOps professionals ensuring scalable and secure infrastructure solutions.',
       email: 'devops@ziontechgroup.com'
     }
-  ]
+  ];
 
   return (
     <>
       <Helmet>
-        <title>About Us - Zion Tech Group</title>
-        <meta name="description" content="Learn about Zion Tech Group's mission, values, and the team behind our AI-powered enterprise solutions." />
-        <meta name="keywords" content="about us, team, company, AI solutions, enterprise technology" />
+        <title>About Us - Zion Tech Group | Leading AI & Technology Solutions</title>
+        <meta name="description" content="Learn about Zion Tech Group's mission, team, and commitment to delivering cutting-edge AI and IT solutions that transform businesses worldwide." />
       </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-        {/* Hero Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-700 text-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-5xl font-bold mb-6">
-                About Zion Tech Group
-              </h1>
-              <p className="text-xl mb-8 text-blue-100">
-                We're revolutionizing enterprise technology through AI-powered solutions that drive real business results.
-              </p>
-              <div className="flex flex-wrap justify-center gap-8 mt-12">
-                {stats.map((stat, index) => (
-                  <div key={index} className="text-center">
-                    <div className="text-3xl font-bold text-yellow-300">{stat.value}</div>
-                    <div className="text-blue-100">{stat.label}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
+      
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+        <div className="container mx-auto px-4 py-12">
+          {/* Header */}
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              About <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Zion Tech Group</span>
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+              We are a leading provider of cutting-edge AI and IT solutions that transform businesses. 
+              Our mission is to empower organizations with innovative technology that drives growth and success.
+            </p>
           </div>
-        </section>
 
-        {/* Mission Section */}
-        <section className="py-16 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-4xl font-bold text-gray-900 mb-8">Our Mission</h2>
-              <p className="text-lg text-gray-600 mb-8">
-                To empower enterprises with cutting-edge AI solutions that transform operations, 
-                enhance productivity, and drive sustainable growth in the digital age.
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
-                <div className="text-left">
-                  <h3 className="text-2xl font-semibold text-gray-900 mb-4">What We Do</h3>
-                  <ul className="space-y-3">
-                    <li className="flex items-center">
-                      <CheckCircle className="text-green-500 mr-3" size={20} />
-                      <span>AI-powered automation solutions</span>
-                    </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="text-green-500 mr-3" size={20} />
-                      <span>Enterprise digital transformation</span>
-                    </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="text-green-500 mr-3" size={20} />
-                      <span>Custom machine learning models</span>
-                    </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="text-green-500 mr-3" size={20} />
-                      <span>Cloud infrastructure optimization</span>
-                    </li>
-                  </ul>
-                </div>
-                <div className="text-left">
-                  <h3 className="text-2xl font-semibold text-gray-900 mb-4">Why Choose Us</h3>
-                  <ul className="space-y-3">
-                    <li className="flex items-center">
-                      <CheckCircle className="text-green-500 mr-3" size={20} />
-                      <span>Proven track record of success</span>
-                    </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="text-green-500 mr-3" size={20} />
-                      <span>Expert team of AI specialists</span>
-                    </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="text-green-500 mr-3" size={20} />
-                      <span>24/7 dedicated support</span>
-                    </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="text-green-500 mr-3" size={20} />
-                      <span>Scalable and secure solutions</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Values Section */}
-        <section className="py-16 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              <h2 className="text-4xl font-bold text-gray-900 text-center mb-12">Our Core Values</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                {values.map((value, index) => (
-                  <div key={index} className="bg-white p-6 rounded-lg shadow-md text-center">
-                    <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">
-                      <value.icon className="w-8 h-8 text-blue-600" />
+          {/* Stats */}
+          <section className="mb-16">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              {stats.map((stat, index) => {
+                const Icon = stat.icon;
+                return (
+                  <div key={index} className="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <div className="bg-gradient-to-br from-blue-600 to-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <Icon className="w-8 h-8 text-white" />
                     </div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-3">{value.title}</h3>
+                    <div className="text-3xl font-bold text-gray-900 mb-2">{stat.value}</div>
+                    <div className="text-gray-600">{stat.label}</div>
+                  </div>
+                );
+              })}
+            </div>
+          </section>
+
+          {/* Mission & Vision */}
+          <section className="mb-16">
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="bg-white rounded-lg shadow-lg p-8">
+                <div className="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
+                  <Target className="w-6 h-6 text-blue-600" />
+                </div>
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h2>
+                <p className="text-gray-600">
+                  To democratize advanced AI and technology solutions, making them accessible and affordable 
+                  for businesses of all sizes. We believe that cutting-edge technology should be a catalyst 
+                  for growth, not a barrier to entry.
+                </p>
+              </div>
+              <div className="bg-white rounded-lg shadow-lg p-8">
+                <div className="bg-purple-100 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
+                  <Globe className="w-6 h-6 text-purple-600" />
+                </div>
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">Our Vision</h2>
+                <p className="text-gray-600">
+                  To be the global leader in AI-powered business transformation, creating a world where 
+                  every organization can leverage advanced technology to achieve unprecedented levels of 
+                  efficiency, innovation, and success.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* Values */}
+          <section className="mb-16">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Core Values</h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                These principles guide everything we do and shape our commitment to excellence.
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {values.map((value, index) => {
+                const Icon = value.icon;
+                return (
+                  <div key={index} className="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <div className="bg-gradient-to-br from-blue-600 to-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">{value.title}</h3>
                     <p className="text-gray-600">{value.description}</p>
                   </div>
-                ))}
-              </div>
+                );
+              })}
             </div>
-          </div>
-        </section>
+          </section>
 
-        {/* Team Section */}
-        <section className="py-16 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              <h2 className="text-4xl font-bold text-gray-900 text-center mb-12">Meet Our Team</h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {team.map((member, index) => (
-                  <div key={index} className="bg-gray-50 p-6 rounded-lg text-center">
-                    <div className="inline-flex items-center justify-center w-20 h-20 bg-blue-100 rounded-full mb-4">
-                      <Users className="w-10 h-10 text-blue-600" />
-                    </div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">{member.name}</h3>
-                    <p className="text-blue-600 font-medium mb-3">{member.role}</p>
-                    <p className="text-gray-600 mb-4">{member.description}</p>
-                    <a 
-                      href={`mailto:${member.email}`}
-                      className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors"
-                    >
-                      Contact <ArrowRight className="ml-1" size={16} />
-                    </a>
+          {/* Team */}
+          <section className="mb-16">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Meet Our Team</h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                Our diverse team of experts brings together decades of experience in AI, technology, and business transformation.
+              </p>
+            </div>
+            <div className="grid md:grid-cols-3 gap-8">
+              {team.map((member, index) => (
+                <div key={index} className="bg-white rounded-lg shadow-lg p-6 text-center">
+                  <div className="bg-gradient-to-br from-blue-600 to-purple-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Users className="w-10 h-10 text-white" />
                   </div>
-                ))}
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">{member.name}</h3>
+                  <p className="text-blue-600 font-semibold mb-3">{member.role}</p>
+                  <p className="text-gray-600 mb-4">{member.description}</p>
+                  <a href={`mailto:${member.email}`} className="text-blue-600 hover:text-blue-800 transition-colors">
+                    {member.email}
+                  </a>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* Company Info */}
+          <section className="mb-16">
+            <div className="bg-white rounded-xl shadow-lg p-8">
+              <div className="text-center mb-8">
+                <h2 className="text-3xl font-bold text-gray-900 mb-4">Company Information</h2>
+                <p className="text-lg text-gray-600">
+                  Zion Tech Group is headquartered in Delaware, USA, with a global presence serving clients worldwide.
+                </p>
+              </div>
+              <div className="grid md:grid-cols-3 gap-8">
+                <div className="text-center">
+                  <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <MapPin className="w-8 h-8 text-blue-600" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">Headquarters</h3>
+                  <p className="text-gray-600">
+                    364 E Main St STE 1008<br />
+                    Middletown, DE 19709<br />
+                    United States
+                  </p>
+                </div>
+                <div className="text-center">
+                  <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Phone className="w-8 h-8 text-green-600" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">Contact</h3>
+                  <p className="text-gray-600">
+                    Phone: +1 302 464 0950<br />
+                    Email: kleber@ziontechgroup.com<br />
+                    Available 24/7
+                  </p>
+                </div>
+                <div className="text-center">
+                  <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Award className="w-8 h-8 text-purple-600" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">Certifications</h3>
+                  <p className="text-gray-600">
+                    AWS Certified<br />
+                    Microsoft Partner<br />
+                    Google Cloud Partner<br />
+                    HIPAA Compliant
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        {/* CTA Section */}
-        <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-700 text-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
-              <p className="text-xl mb-8 text-blue-100">
-                Let's discuss how our AI solutions can drive your enterprise forward.
+          {/* Contact CTA */}
+          <section className="text-center">
+            <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-8 text-white">
+              <h2 className="text-3xl font-bold mb-4">Ready to Work With Us?</h2>
+              <p className="text-xl mb-8 opacity-90">
+                Let's discuss how our technology solutions can transform your business.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a 
-                  href="/contact" 
-                  className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center"
+                <a href="tel:+13024640950" 
+                  className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
                 >
-                  Get Started <ArrowRight className="ml-2" size={20} />
+                  <Phone className="w-5 h-5 inline mr-2" />
+                  Call +1 302 464 0950
                 </a>
-                <a 
-                  href="/services" 
-                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+                <a href="mailto:kleber@ziontechgroup.com" 
+                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors text-center"
                 >
-                  View Our Services
+                  <Mail className="w-5 h-5 inline mr-2" />
+                  Email Us Today
                 </a>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default About
+export default About;

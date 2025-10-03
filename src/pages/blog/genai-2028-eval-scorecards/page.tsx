@@ -1,46 +1,77 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
+import Header from "../../../components/Header";
 
-export default function GenAIEvalScorecards2028(): React.JSX.Element {
+export default function BlogPost(): React.JSX.Element {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-      <Helmet >
-        <title>GenAI 2028: Eval Scorecards — KPIs You Can Trust</title>,
-        <meta name="description" content="Signed attestations, golden tasks, and budget‑linked guardrails for reliable GenAI in production." /><link rel: "canonical", href="https://ziontechgroup.com/blog/genai-2028-eval-scorecards/>
-      </Helmet>
+    <>
+      <Header />
+      <div className="min-h-screen bg-gradient-to-br from-blue-600 via-blue-700 to-purple-800 text-white">
+        <Helmet>
+          <title>Genai 2028 Eval Scorecards - Zion Tech Group</title>
+          <meta name="description" content="Genai 2028 Eval Scorecards - Latest insights from Zion Tech Group" />
+        </Helmet>
+        
+        <div className="max-w-4xl mx-auto px-4 py-20">
+          <div className="mb-12">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+              Genai 2028 Eval Scorecards
+            </h1>
+            <div className="flex flex-wrap items-center gap-6 text-sm text-gray-300 mb-8">
+              <span>By Zion Tech Group Team</span>
+              <span>•</span>
+              <span>2025-10-03</span>
+              <span>•</span>
+              <span>5 min read</span>
+            </div>
+          </div>
 
-      <div className="container mx-auto px-6 py-16">
-        <h1 className="text-4xl md: text-5xl font-bold mb-4">GenAI 2028: Eval Scorecards</h1>
-        <p className="text-zion-slate-light mb-8">Signed Attestations • Golden Tasks • Budgeted Guardrails</p>"
-        <div className="prose prose-invert max-w-3xl">
-      <div className="container mx-auto px-6 py-16">
-        <h1 className="text-4xl md: text-5xl font-bold mb-4">GenAI 2028: Eval Scorecards</h1>
-        <p className="text-zion-slate-light mb-8">Signed Attestations • Golden Tasks • Budgeted Guardrails</p>"
-        <div className="prose prose-invert max-w-3xl">
-        <meta name="description", content ="Signed attestations, golden tasks, and budget‑linked guardrails for reliable GenAI in production." />
-        <p className="text-zion-slate-light mb-8">Signed Attestations • Golden Tasks • Budgeted Guardrails</p>
-        <div className="prose prose-invert max-w-3xl">
-        <meta name="description" content="Signed attestations, golden tasks, and budget‑linked guardrails for reliable GenAI in production." />
-        <link rel: "canonical", href ="https: //ziontechgroup.com/blog/genai-2028-eval-scorecards" />
-      </Helmet>
+          <div className="prose prose-lg prose-invert max-w-none">
+            <div className="text-gray-200 leading-relaxed">
+              <h2>Introduction</h2>
+              <p>This is a placeholder blog post. The content for "Genai 2028 Eval Scorecards" will be added here.</p>
+              
+              <h2>Main Content</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              
+              <h2>Conclusion</h2>
+              <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+          </div>
 
-      <div className="container mx-auto px-6 py-16">
-        <h1 className="text-4xl md: text-5xl font-bold mb-4">GenAI 2028: Eval Scorecards</h1>
-        <p className="text-zion-slate-light mb-8">Signed Attestations • Golden Tasks • Budgeted Guardrails</p>
-        <div className="prose prose-invert max-w-3xl">
-      <div className="container mx-auto px-6 py-16">
-        <h1 className="text-4xl md: text-5xl font-bold mb-4">GenAI 2028: Eval Scorecards</h1>
-        <p className="text-zion-slate-light mb-8">Signed Attestations • Golden Tasks • Budgeted Guardrails</p>
-        <div className="prose prose-invert max-w-3xl">
-          <p >
-            Connect evaluation to outcomes with KPI‑aligned scorecards. Use signed attestations, golden tasks, and
-            budget‑linked guardrails to keep GenAI fast, safe, and predictable in production.
-          </p>
-          <p >
-            We detail datasets, drift signals, and rollback strategies that maintain quality at scale.
-          </p>
+          <div className="mt-16 pt-8 border-t border-white border-opacity-20">
+            <div className="flex flex-col sm:flex-row justify-between items-center gap-6">
+              <div>
+                <h3 className="text-xl font-bold mb-2">Share this article</h3>
+                <div className="flex gap-4">
+                  <a 
+                    href={`https://twitter.com/intent/tweet?text=${encodeURIComponent("Genai 2028 Eval Scorecards")}&url=${encodeURIComponent(window.location.href)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-white bg-opacity-20 hover:bg-opacity-30 px-4 py-2 rounded-lg transition-colors"
+                  >
+                    Twitter
+                  </a>
+                  <a 
+                    href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(window.location.href)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-white bg-opacity-20 hover:bg-opacity-30 px-4 py-2 rounded-lg transition-colors"
+                  >
+                    LinkedIn
+                  </a>
+                </div>
+              </div>
+              <a 
+                href="/blog"
+                className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              >
+                Back to Blog
+              </a>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
-};
+}
