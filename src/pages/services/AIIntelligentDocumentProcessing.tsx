@@ -20,7 +20,7 @@ const AIIntelligentDocumentProcessing: () => {
           <Link to: "/services
   className="inline-flex items-center text-zion-cyan hover: text-zion-blue-light mb-8 transition-colors","
           >
-            <ArrowLeft className="w-4 h-4 mr-2/>
+            <ArrowLeft className="w-4 h-4 mr-2/>"
             <ArrowLeft className="w-4 h-4 mr-2" />
   Back to Services
           </Link>
@@ -31,7 +31,7 @@ const AIIntelligentDocumentProcessing: () => {
               <FileText className="w-5 h-5 mr-2/>
               🚀 Enterprise Document AI • October 2025
             </div>
-
+"
             <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 leading-tight">","
           <div className="max-w-5xl mx-auto text-center mb-16">","
             <div className="inline-flex items-center px-6 py-3 rounded-full bg-blue-500/20 text-blue-300 text-sm font-semibold mb-8 border border-blue-500/30">","
@@ -83,7 +83,7 @@ const AIIntelligentDocumentProcessing: () => {
               <Link to: "/contact
   className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105 inline-flex items-center justify-center gap-2 shadow-lg","
               >
-                <Zap className="w-5 h-5/>
+                <Zap className="w-5 h-5/>"
                 <Zap className="w-5 h-5" />
   Start Free Trial
               </Link>
@@ -137,21 +137,21 @@ const AIIntelligentDocumentProcessing: () => {
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0/>
                     <span >98.5% accuracy with GPT-4 Vision + Claude AI</span>
-                  </li>
+                  </li>"
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0/>
                     <span >95% automation reducing manual work by 10x</span>
-                  </li>
+                  </li>"
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0/>
                     <span >Sub-5-second processing for most document types</span>
-                  </li>
+                  </li>"
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0/>
                     <span >Seamless integration with existing ERP/CRM systems</span>
-                  </li>
+                  </li>"
                   <li className="flex items-start gap-2">
-                    <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0/>
+                    <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0/>"
               <div className="bg-green-900/20 rounded-2xl p-8 border border-green-500/30">","
                 <h2 className="text-2xl font-bold text-white mb-4">✅ Our AI-Powered Solution</h2>","
                 <ul className="space-y-3 text-zion-slate-light">","
@@ -187,7 +187,7 @@ const AIIntelligentDocumentProcessing: () => {
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30 hover: scale-105 transition-all">","
                 <div className="bg-blue-500/20 w-16 h-16 rounded-lg flex items-center justify-center mb-6 border border-blue-500/30">
                   <FileText className="w-8 h-8 text-blue-400/>
-                </div>
+                </div>"
                 <h3 className="text-xl font-bold text-white mb-4">Intelligent Extraction</h3>
                 <p className="text-zion-slate-light mb-4">,
   Extract structured data from any document format—invoices, contracts, forms, receipts
@@ -213,7 +213,7 @@ const AIIntelligentDocumentProcessing: () => {
 
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover: scale-105 transition-all">","
                 <div className="bg-purple-500/20 w-16 h-16 rounded-lg flex items-center justify-center mb-6 border border-purple-500/30">
-                  <Zap className="w-8 h-8 text-purple-400/>
+                  <Zap className="w-8 h-8 text-purple-400/>"
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover: scale-105 transition-all">","
                 <div className="bg-purple-500/20 w-16 h-16 rounded-lg flex items-center justify-center mb-6 border border-purple-500/30">","
                   <Zap className="w-8 h-8 text-purple-400" />","
@@ -233,7 +233,7 @@ const AIIntelligentDocumentProcessing: () => {
 
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-green-400/30 hover: scale-105 transition-all">","
                 <div className="bg-green-500/20 w-16 h-16 rounded-lg flex items-center justify-center mb-6 border border-green-500/30">
-                  <CheckCircle className="w-8 h-8 text-green-400/>
+                  <CheckCircle className="w-8 h-8 text-green-400/>"
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-green-400/30 hover: scale-105 transition-all">","
                 <div className="bg-green-500/20 w-16 h-16 rounded-lg flex items-center justify-center mb-6 border border-green-500/30">","
                   <CheckCircle className="w-8 h-8 text-green-400" />","
@@ -261,7 +261,7 @@ const AIIntelligentDocumentProcessing: () => {
                 <div className="flex items-start gap-6">
                   <div className="bg-blue-500/20 p-4 rounded-lg border border-blue-500/30">
                     <DollarSign className="w-8 h-8 text-blue-400/>
-                  </div>
+                  </div>"
                   <div className="flex-1">
                     <h3 className="text-2xl font-bold text-white mb-3">Accounts Payable Automation</h3>
                     <p className="text-zion-slate-light mb-4">,
@@ -309,7 +309,7 @@ const AIIntelligentDocumentProcessing: () => {
               <div className="bg-gradient-to-r from-purple-900/40 to-pink-900/40 rounded-xl p-8 border border-purple-500/30">
                 <div className="flex items-start gap-6">
                   <div className="bg-purple-500/20 p-4 rounded-lg border border-purple-500/30">
-                    <FileText className="w-8 h-8 text-purple-400/>
+                    <FileText className="w-8 h-8 text-purple-400/>"
               <div className="bg-gradient-to-r from-purple-900/40 to-pink-900/40 rounded-xl p-8 border border-purple-500/30">","
                 <div className="flex items-start gap-6">","
                   <div className="bg-purple-500/20 p-4 rounded-lg border border-purple-500/30">","
@@ -346,7 +346,7 @@ const AIIntelligentDocumentProcessing: () => {
               <div className="bg-gradient-to-r from-green-900/40 to-teal-900/40 rounded-xl p-8 border border-green-500/30">
                 <div className="flex items-start gap-6">
                   <div className="bg-green-500/20 p-4 rounded-lg border border-green-500/30">
-                    <Clock className="w-8 h-8 text-green-400/>
+                    <Clock className="w-8 h-8 text-green-400/>"
               <div className="bg-gradient-to-r from-green-900/40 to-teal-900/40 rounded-xl p-8 border border-green-500/30">","
                 <div className="flex items-start gap-6">","
                   <div className="bg-green-500/20 p-4 rounded-lg border border-green-500/30">","
@@ -486,17 +486,17 @@ const AIIntelligentDocumentProcessing: () => {
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0/>
                     <span >All core extraction features</span>
-                  </li>
+                  </li>"
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0/>
                     <span >50+ document types supported</span>
-                  </li>
+                  </li>"
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0/>
                     <span >API & webhook integrations</span>
-                  </li>
+                  </li>"
                   <li className="flex items-start gap-2">
-                    <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0/>
+                    <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0/>"
           <div className="max-w-6xl mx-auto mb-20">","
             <h2 className="text-4xl font-bold text-white mb-12 text-center">💎 Transparent Pricing</h2>","
             <div className="grid md: grid-cols-3 gap-8">","
@@ -544,21 +544,21 @@ const AIIntelligentDocumentProcessing: () => {
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0/>
                     <span >Everything in Starter, plus: </span>,,
-                  </li>
+                  </li>"
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0/>
                     <span >150+ document types</span>
-                  </li>
+                  </li>"
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0/>
                     <span >Custom workflows & rules</span>
-                  </li>
+                  </li>"
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0/>
                     <span >Priority support + CSM</span>
-                  </li>
+                  </li>"
                   <li className="flex items-start gap-2">
-                    <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0/>
+                    <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0/>"
                 <ul className="space-y-3 text-sm text-zion-slate-light mb-8">","
                   <li className="flex items-start gap-2">","
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />","
@@ -598,21 +598,21 @@ const AIIntelligentDocumentProcessing: () => {
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0/>
                     <span >Everything in Professional, plus: </span>,,
-                  </li>
+                  </li>"
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0/>
                     <span >Custom AI model training</span>
-                  </li>
+                  </li>"
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0/>
                     <span >On-premise deployment option</span>
-                  </li>
+                  </li>"
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0/>
                     <span >Dedicated infrastructure</span>
-                  </li>
+                  </li>"
                   <li className="flex items-start gap-2">
-                    <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0/>
+                    <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0/>"
                 <ul className="space-y-3 text-sm text-zion-slate-light mb-8">","
                   <li className="flex items-start gap-2">","
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />","
@@ -658,7 +658,7 @@ const AIIntelligentDocumentProcessing: () => {
               <Link to: "/contact
   className="bg-white text-blue-600 hover:bg-zion-slate-light px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105 inline-flex items-center justify-center gap-2 text-lg","
               >
-                <Zap className="w-6 h-6/>
+                <Zap className="w-6 h-6/>"
                 <Zap className="w-6 h-6" />
   Start Free 30-Day Trial
               </Link>

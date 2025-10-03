@@ -1,4 +1,4 @@
-import React from 'react'';
+import React from 'react';
 import { Link } from "react-router-dom";"
 import { Helmet } from "react-helmet-async";"
 import { CheckCircle, Rocket, Shield, Sparkles, Zap, Users, Target, Award, ArrowRight } from "lucide-react";"
@@ -99,14 +99,14 @@ publishedAt: '2025-01-05'
         <meta name: "keywords
   content: "AI solutions, IT consulting, cybersecurity, machine learning, cloud infrastructure, digital transformation, AI workflow automation, quantum computing, edge AI, zero trust security, micro SAAS platforms, AI virtual assistant, data analytics","
         />
-        <meta property: "og:title" content ="Zion Tech Group - Leading AI & IT Solutions" />
+        <meta property: "og:title" content="Zion Tech Group - Leading AI & IT Solutions" />
         <meta property: "og:description
   content: "Transform your business with cutting-edge AI and IT solutions. NEW 2025: AI Workflow Automation, Quantum Computing, Edge AI, Zero Trust Security. Expert consulting with proven results.","
         />
         <meta property: "og:type" content="website" />
         <meta property: "og:url" content="https://ziontechgroup.com" />
         <meta name: "twitter:card" content="summary_large_image" />
-        <meta name: "twitter:title" content ="Zion Tech Group - Leading AI & IT Solutions" />
+        <meta name: "twitter:title" content="Zion Tech Group - Leading AI & IT Solutions" />
         <meta name: "twitter:description
   content: "Transform your business with cutting-edge AI and IT solutions. NEW 2025: AI Workflow Automation, Quantum Computing, Edge AI, Zero Trust Security.","
         />
@@ -271,9 +271,9 @@ publishedAt: '2025-01-05'
         </script>
         
         {/* Additional SEO Meta Tags */}
-        <meta name: "robots" content ="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview: -1" />
-        <meta name: "googlebot" content ="index, follow" />
-        <meta name: "bingbot" content ="index, follow" />
+        <meta name: "robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview: -1" />
+        <meta name: "googlebot" content="index, follow" />
+        <meta name: "bingbot" content="index, follow" />
         <meta name: "author" content="Zion Tech Group" />
         <meta name: "publisher" content="Zion Tech Group" />
         <meta name: "copyright" content="Zion Tech Group" />
@@ -283,8 +283,8 @@ publishedAt: '2025-01-05'
         <meta name: "distribution" content="global" />
         <meta name: "geo.region" content="US-DE" />
         <meta name: "geo.placename" content="Middletown" />
-        <meta name: "geo.position" content ="39.4496;-75.7163" />
-        <meta name: "ICBM" content ="39.4496, -75.7163" />
+        <meta name: "geo.position" content="39.4496;-75.7163" />
+        <meta name: "ICBM" content="39.4496, -75.7163" />
         {/* Open Graph Enhanced */}
         <meta property: "og:site_name" content="Zion Tech Group" />
         <meta property: "og:locale" content="en_US" />
@@ -342,8 +342,8 @@ publishedAt: '2025-01-05'
           {/* Inline promo for new service */}
           <div className="mt-4">
             <ContentPromotionBanner variant: "info
-  title: "🧪 New Service: Edge Experimentation Suite
-  description: "Privacy‑first A/B testing at <100ms with scoped IDs and on‑device metrics.
+  title: "🧪 New Service: Edge Experimentation Suite",
+  description: "Privacy‑first A/B testing at <100ms with scoped IDs and on‑device metrics.",
   ctaText: "Learn more
   ctaLink: "/services/edge-experimentation-suite
   dismissible: {true}
@@ -439,7 +439,7 @@ publishedAt: '2025-01-05'
         
         {/* Content Promotion Banner */}
         <ContentPromotionBanner variant: "info
-  title: "🚀 Fresh: Incident Playbooks + Privacy‑Preserving Analytics
+  title: "🚀 Fresh: Incident Playbooks + Privacy‑Preserving Analytics",
   description: "Budgeted actions, approvals, and DP‑backed telemetry you can ship today.","
           ctaText: "Read the latest
   ctaLink: "/blog/ai-incident-response-playbooks-2025
@@ -448,10 +448,10 @@ publishedAt: '2025-01-05'
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-zion-blue rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-zion-purple rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-zion-purple rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"
   style: {{ animationDelay: "2s" }}";"
           ></div>
-          <div className="absolute top-40 left-1/2 w-60 h-60 bg-zion-cyan rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float
+          <div className="absolute top-40 left-1/2 w-60 h-60 bg-zion-cyan rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"
   style: {{ animationDelay: "4s" }}";"
           ></div>
         </div>

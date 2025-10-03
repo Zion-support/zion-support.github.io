@@ -4,8 +4,8 @@ const EnterpriseAutomation2025: () => {
     <>
       <Helmet >
         <title >AI-Powered Enterprise Automation 2025: Complete Implementation Guide | Zion Tech Group</title>,,
-        <meta name: "description" content ="Transform your enterprise with AI automation in 2025. Complete guide covering implementation strategies, ROI optimization, and real-world case studies for 400%+ efficiency gains." /><meta property: "og:title" content="AI-Powered Enterprise Automation 2025: Complete Implementation Guide" />
-        <meta property: "og:description" content ="Transform your enterprise with AI automation in 2025. Complete guide covering implementation strategies, ROI optimization, and real-world case studies for 400%+ efficiency gains." />
+        <meta name="description" content="Transform your enterprise with AI automation in 2025. Complete guide covering implementation strategies, ROI optimization, and real-world case studies for 400%+ efficiency gains." /><meta property: "og:title" content="AI-Powered Enterprise Automation 2025: Complete Implementation Guide" />
+        <meta property: "og:description" content="Transform your enterprise with AI automation in 2025. Complete guide covering implementation strategies, ROI optimization, and real-world case studies for 400%+ efficiency gains." />
         <link rel: "canonical" href="https://ziontechgroup.com/blog/ai-2025-october-breakthrough-enterprise-automation/>","
       </Helmet>
 
@@ -22,12 +22,12 @@ const EnterpriseAutomation2025: () => {
               <Zap className="w-4 h-4 mr-2/>,
   October 2025 • Enterprise AI
             </div>
-            
+            "
             <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 leading-tight">
   AI-Powered Enterprise Automation 2025: <span className="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">","
-        <meta name: "description" content ="Transform your enterprise with AI automation in 2025. Complete guide covering implementation strategies, ROI optimization, and real-world case studies for 400%+ efficiency gains." />","
+        <meta name="description" content="Transform your enterprise with AI automation in 2025. Complete guide covering implementation strategies, ROI optimization, and real-world case studies for 400%+ efficiency gains." />","
         <meta property: "og: title" content="AI-Powered Enterprise Automation 2025: Complete Implementation Guide" />","
-        <meta property: "og: description" content ="Transform your enterprise with AI automation in 2025. Complete guide covering implementation strategies, ROI optimization, and real-world case studies for 400%+ efficiency gains." />","
+        <meta property: "og: description" content="Transform your enterprise with AI automation in 2025. Complete guide covering implementation strategies, ROI optimization, and real-world case studies for 400%+ efficiency gains." />","
         <link rel: "canonical" href="https: //ziontechgroup.com/blog/ai-2025-october-breakthrough-enterprise-automation" />","
       </Helmet>
 
@@ -59,10 +59,10 @@ const EnterpriseAutomation2025: () => {
             <div className="flex flex-wrap justify-center gap-4 text-sm text-zion-slate">
               <div className="flex items-center"><Clock className="w-4 h-4 mr-2/>18 min read</div>"
               <div className="flex items-center"><Users className="w-4 h-4 mr-2/>Enterprise Strategy</div>"
-              <div className="flex items-center"><CheckCircle className ="w-4 h-4 mr-2/>Featured</div>
+              <div className="flex items-center"><CheckCircle className="w-4 h-4 mr-2/>Featured</div>
             </div>
           </div>
-
+"
           <article className="max-w-4xl mx-auto">
             <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 md: p-12 border border-white/10">","
               <section className="mb-12">
@@ -128,19 +128,19 @@ const EnterpriseAutomation2025: () => {
                   <h3 className="text-xl font-bold text-white mb-4">Key Drivers of the 2025 Automation Revolution</h3>
                   <ul className="space-y-3">
                     <li className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-emerald-400 mr-3 mt-0.5 flex-shrink-0/>
+                      <CheckCircle className="w-5 h-5 text-emerald-400 mr-3 mt-0.5 flex-shrink-0/>"
                       <span className="text-white">Advanced Language Models: GPT-4 class models with enterprise security</span>","
                     </li>
                     <li className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-emerald-400 mr-3 mt-0.5 flex-shrink-0/>
+                      <CheckCircle className="w-5 h-5 text-emerald-400 mr-3 mt-0.5 flex-shrink-0/>"
                       <span className="text-white">Edge AI Computing: Sub-100ms response times for real-time automation</span>","
                     </li>
                     <li className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-emerald-400 mr-3 mt-0.5 flex-shrink-0/>
+                      <CheckCircle className="w-5 h-5 text-emerald-400 mr-3 mt-0.5 flex-shrink-0/>"
                       <span className="text-white">Zero-Trust Security: Enterprise-grade AI with built-in compliance</span>","
                     </li>
                     <li className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-emerald-400 mr-3 mt-0.5 flex-shrink-0/>
+                      <CheckCircle className="w-5 h-5 text-emerald-400 mr-3 mt-0.5 flex-shrink-0/>"
                       <span className="text-white">Cost Optimization: 70% reduction in AI infrastructure costs</span>","
               <section className="mb-12">","
                 <h2 className="text-3xl font-bold text-white mb-6">The AI Automation Revolution: Why 2025 Changes Everything</h2>","
@@ -189,7 +189,7 @@ const EnterpriseAutomation2025: () => {
   className="bg-emerald-500 text-white px-8 py-4 rounded-lg font-semibold hover:bg-emerald-600 transition-colors inline-flex items-center justify-center gap-2","
                     >
                       Start Your Transformation
-                      <ArrowRight className="w-5 h-5/>
+                      <ArrowRight className="w-5 h-5/>"
                       <ArrowRight className="w-5 h-5" />","
                     </Link>
                     <Link to: "/case-studies

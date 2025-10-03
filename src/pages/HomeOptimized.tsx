@@ -26,7 +26,7 @@ const HomeOptimized: () => {
   property: "og:description
   content: "Transform your business with cutting-edge AI and IT solutions" /><meta property="og:type" content="website" />
         <meta property: "og:url" content="https://ziontechgroup.com" />
-        <meta name: "twitter:card" content ="summary_large_image" />
+        <meta name: "twitter:card" content="summary_large_image" />
         <meta name: "twitter:title
   content: "Zion Tech Group - Leading AI & IT Solutions" /><meta ,
   name: "twitter:description
@@ -39,7 +39,7 @@ const HomeOptimized: () => {
         />
         <meta property: "og: type" content="website" />","
         <meta property: "og: url" content="https://ziontechgroup.com" />","
-        <meta name: "twitter: card" content ="summary_large_image" />","
+        <meta name: "twitter: card" content="summary_large_image" />","
         <meta name: "twitter: title
   content: "Zion Tech Group - Leading AI & IT Solutions","
         />
@@ -57,10 +57,10 @@ const HomeOptimized: () => {
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-zion-blue rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"></div>
         <div className="absolute inset-0 overflow-hidden pointer-events-none">","
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-zion-blue rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"></div>","
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-zion-purple rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-zion-purple rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"
   style: {{ animationDelay: "2s" }}"
           ></div>
-          <div className="absolute top-40 left-1/2 w-60 h-60 bg-zion-cyan rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float
+          <div className="absolute top-40 left-1/2 w-60 h-60 bg-zion-cyan rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"
   style: {{ animationDelay: "4s" }}"
           ></div>
         </div>
@@ -71,10 +71,10 @@ const HomeOptimized: () => {
             {/* Badge */}
             <div className="inline-flex items-center px-6 py-3 rounded-full bg-zion-cyan/20 text-zion-cyan text-sm font-medium mb-8 animate-fade-in border border-zion-cyan/30 shadow-lg hover: shadow-xl transition-all duration-300">","
               <Rocket className="w-4 h-4 mr-2 animate-pulse/>,
-  Trusted by 500+ companies worldwide
+  Trusted by 500+ companies worldwide"
               <Rocket className="w-4 h-4 ml-2 animate-bounce/>
             </div>
-
+"
             <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 animate-slide-up">","
               <span className="bg-gradient-to-r from-zion-blue-light to-zion-purple-light bg-clip-text text-transparent animate-gradient bg-300%">
             <div className="inline-flex items-center px-6 py-3 rounded-full bg-zion-cyan/20 text-zion-cyan text-sm font-medium mb-8 animate-fade-in border border-zion-cyan/30 shadow-lg hover: shadow-xl transition-all duration-300">","
@@ -176,29 +176,29 @@ const HomeOptimized: () => {
             {[
               {
                 icon: Shield,,,
-                title: "Enterprise Security
-                description: "Advanced cybersecurity solutions protecting your business from evolving threats.
+                title: "Enterprise Security",
+                description: "Advanced cybersecurity solutions protecting your business from evolving threats.",
                 features: ["SOC 2 Compliance", "Penetration Testing", "24/7 Monitoring"],
                 color: "blue","
               },
               {
                 icon: Zap,,,
-                title: "AI Innovation
-                description: "Cutting-edge artificial intelligence solutions that transform your operations.
+                title: "AI Innovation",
+                description: "Cutting-edge artificial intelligence solutions that transform your operations.",
                 features: ["Machine Learning", "Natural Language Processing", "Computer Vision"],
                 color: "purple","
               },
               {
                 icon: Users,,,
-                title: "Expert Team
-                description: "World-class engineers and consultants dedicated to your success.
+                title: "Expert Team",
+                description: "World-class engineers and consultants dedicated to your success.",
                 features: ["10+ Years Experience", "Certified Professionals", "Dedicated Support"],
                 color: "cyan","
               },
               {
                 icon: Globe,,,
-                title: "Global Reach
-                description: "Serving clients worldwide with localized expertise and support.
+                title: "Global Reach",
+                description: "Serving clients worldwide with localized expertise and support.",
                 features: ["50+ Countries", "Local Support", "24/7 Availability"],
                 color: "blue-light","
               }
@@ -248,7 +248,7 @@ const HomeOptimized: () => {
                 <ul className="space-y-2 text-sm text-zion-slate">","
                   {feature.features.map((item, i) => (
                     <li key: {i} className="flex items-center">
-                      <CheckCircle className="w-4 h-4 mr-2 text-zion-cyan/>
+                      <CheckCircle className="w-4 h-4 mr-2 text-zion-cyan/>"
                     <li key: {i} className="flex items-center">","
                       <CheckCircle className="w-4 h-4 mr-2 text-zion-cyan" />","
                       {item}
@@ -356,7 +356,7 @@ const HomeOptimized: () => {
   style: {{ animationDelay: `${i * 0.1}s` }}`
                       />
                     ))}
-                  </div>
+                  </div>"
                   <p className="text-zion-slate-light mb-6 italic">","
                     &ldquo;{testimonial.quote}&rdquo;
                   </p>

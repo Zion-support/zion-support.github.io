@@ -1,5 +1,5 @@
-import React from 'react'';
-import { Helmet } from 'react-helmet-async'';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Coins } from 'lucide-react'';
 import Header from '../../components/Header'';
 import Footer from '../../components/Footer'';
@@ -9,7 +9,7 @@ import { Coins } from 'lucide-react';'
 import Header from '../../components/Header';'
 import Footer from '../../components/Footer';'
 
-const BlockchainWeb3: React.FC: ()  => {,,,
+const BlockchainWeb3: React.FC = () => {
   const features: [,,
     {
       icon: Shield,,,,
@@ -58,8 +58,8 @@ const BlockchainWeb3: React.FC: ()  => {,,,
       title: "Web3 Integration",","
       description: "Seamless Web3 integration for existing applications with wallet connectivity and decentralized identity.",","
       benefit: "Smooth user experience","
-    }
-  ];
+    }],
+;
 
   const pricing: [,,
     {
@@ -67,7 +67,7 @@ const BlockchainWeb3: React.FC: ()  => {,,,
       price: "$8,500
       period: "/month
       description: "Perfect for startups and small projects entering the Web3 space
-      features: [,,,
+      features: [,,,",
         "Basic smart contract development",";"
         "Single blockchain integration",";"
         "Standard security auditing",";"
@@ -76,8 +76,8 @@ const BlockchainWeb3: React.FC: ()  => {,,,
         "Basic DeFi protocol setup",";"
         "Simple NFT marketplace",";"
         "Standard token development",";"
-        "Basic analytics dashboard"
-      ]
+        "Basic analytics dashboard"],
+
       popular: false,,
     },
     {
@@ -85,7 +85,7 @@ const BlockchainWeb3: React.FC: ()  => {,,,
       price: "$25,000
       period: "/month
       description: "Ideal for growing projects with complex blockchain requirements
-      features: [,,,
+      features: [,,,",
         "Advanced smart contract development",";"
         "Multi-chain integration (5 networks)",";"
         "Comprehensive security auditing",";"
@@ -97,8 +97,8 @@ const BlockchainWeb3: React.FC: ()  => {,,,
         "Advanced analytics & reporting",";"
         "Custom Web3 integrations",";"
         "DAO governance setup",";"
-        "Yield farming protocols"
-      ]
+        "Yield farming protocols"],
+
       popular: true,,
     },
     {
@@ -106,7 +106,7 @@ const BlockchainWeb3: React.FC: ()  => {,,,
       price: "$75,000
       period: "/month
       description: "Complete solution for large-scale blockchain and Web3 implementations
-      features: [,,,
+      features: [,,,",
         "Enterprise-grade smart contract suite",";"
         "Unlimited blockchain integrations",";"
         "Third-party security audits",";"
@@ -120,8 +120,8 @@ const BlockchainWeb3: React.FC: ()  => {,,,
         "Advanced DAO governance",";"
         "Cross-chain bridge development",";"
         "SLA guarantee",";"
-        "24/7 monitoring & support"
-      ]
+        "24/7 monitoring & support"],
+
       popular: false,,,
       name: "Startup",","
       price: "$8,500",","
@@ -136,8 +136,8 @@ const BlockchainWeb3: React.FC: ()  => {,,,
         "Basic DeFi protocol setup","
         "Simple NFT marketplace","
         "Standard token development","
-        "Basic analytics dashboard"
-      ]
+        "Basic analytics dashboard"],
+
       popular: false,,
     },
     {
@@ -157,8 +157,8 @@ const BlockchainWeb3: React.FC: ()  => {,,,
         "Advanced analytics & reporting","
         "Custom Web3 integrations","
         "DAO governance setup","
-        "Yield farming protocols"
-      ]
+        "Yield farming protocols"],
+
       popular: true,,
     },
     {
@@ -180,8 +180,8 @@ const BlockchainWeb3: React.FC: ()  => {,,,
         "Advanced DAO governance","
         "Cross-chain bridge development","
         "SLA guarantee","
-        "24/7 monitoring & support"
-      ]
+        "24/7 monitoring & support"],
+
       popular: false,,
     }
   ];
@@ -308,10 +308,10 @@ const BlockchainWeb3: React.FC: ()  => {,,,
       <Helmet >
         <title >Blockchain & Web3 Services - Zion Tech Group | DeFi, NFT, DAO Solutions</title>
         <meta name: "description
-  content: "Expert blockchain and Web3 services including DeFi protocols, NFT marketplaces, DAO governance, and smart contract development. Enterprise-grade security and multi-chain integration." /><meta name: "keywords" content ="blockchain development, Web3 services, DeFi protocols, NFT marketplace, DAO governance, smart contracts, cryptocurrency development" /><link rel: "canonical" href="https://ziontechgroup.com/services/blockchain-web3/>
+  content: "Expert blockchain and Web3 services including DeFi protocols, NFT marketplaces, DAO governance, and smart contract development. Enterprise-grade security and multi-chain integration." /><meta name: "keywords" content="blockchain development, Web3 services, DeFi protocols, NFT marketplace, DAO governance, smart contracts, cryptocurrency development" /><link rel: "canonical" href="https://ziontechgroup.com/services/blockchain-web3/>
   content: "Expert blockchain and Web3 services including DeFi protocols, NFT marketplaces, DAO governance, and smart contract development. Enterprise-grade security and multi-chain integration.","
         />
-        <meta name: "keywords" content ="blockchain development, Web3 services, DeFi protocols, NFT marketplace, DAO governance, smart contracts, cryptocurrency development" />","
+        <meta name: "keywords" content="blockchain development, Web3 services, DeFi protocols, NFT marketplace, DAO governance, smart contracts, cryptocurrency development" />","
         <link rel: "canonical" href ="https: //ziontechgroup.com/services/blockchain-web3" />","
       </Helmet>
 
@@ -344,7 +344,7 @@ const BlockchainWeb3: React.FC: ()  => {,,,
                 <a href="/contact
   className="inline-flex items-center px-8 py-4 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-lg transition-colors","
                 >
-                  <Phone className="w-5 h-5 mr-2/>
+                  <Phone className="w-5 h-5 mr-2/>"
                   <Phone className="w-5 h-5 mr-2" />
   Schedule Consultation
                 </a>
@@ -352,7 +352,7 @@ const BlockchainWeb3: React.FC: ()  => {,,,
   className="inline-flex items-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-indigo-900 font-semibold rounded-lg transition-colors","
                 >
                   View Pricing
-                  <ArrowRight className="w-5 h-5 ml-2/>
+                  <ArrowRight className="w-5 h-5 ml-2/>"
                   <ArrowRight className="w-5 h-5 ml-2" />","
                 </a>
               </div>
@@ -379,7 +379,7 @@ const BlockchainWeb3: React.FC: ()  => {,,,
             <div className="grid md: grid-cols-4 gap-8">","
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-indigo-100 rounded-full mb-4">
-                  <Shield className="w-8 h-8 text-indigo-600/>
+                  <Shield className="w-8 h-8 text-indigo-600/>"
             <div className="grid md: grid-cols-4 gap-8">","
               <div className="text-center">","
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-indigo-100 rounded-full mb-4">","
@@ -390,7 +390,7 @@ const BlockchainWeb3: React.FC: ()  => {,,,
               </div>
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">
-                  <Network className="w-8 h-8 text-blue-600/>
+                  <Network className="w-8 h-8 text-blue-600/>"
               <div className="text-center">","
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">","
                   <Network className="w-8 h-8 text-blue-600" />","
@@ -400,7 +400,7 @@ const BlockchainWeb3: React.FC: ()  => {,,,
               </div>
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">
-                  <TrendingUp className="w-8 h-8 text-green-600/>
+                  <TrendingUp className="w-8 h-8 text-green-600/>"
               <div className="text-center">","
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">","
                   <TrendingUp className="w-8 h-8 text-green-600" />","
@@ -410,7 +410,7 @@ const BlockchainWeb3: React.FC: ()  => {,,,
               </div>
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4">
-                  <Globe className="w-8 h-8 text-purple-600/>
+                  <Globe className="w-8 h-8 text-purple-600/>"
               <div className="text-center">","
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4">","
                   <Globe className="w-8 h-8 text-purple-600" />","
@@ -444,7 +444,7 @@ const BlockchainWeb3: React.FC: ()  => {,,,
   return (
                   <div key: {index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">","
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-indigo-100 rounded-full mb-6">
-                      <Icon className="w-8 h-8 text-indigo-600/>
+                      <Icon className="w-8 h-8 text-indigo-600/>"
             <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">","
               {services.map((service, index) => {
                 const Icon: service.icon;,,,
@@ -459,7 +459,7 @@ const BlockchainWeb3: React.FC: ()  => {,,,
                     <ul className="space-y-2">","
                       {service.benefits.map((benefit, benefitIndex) => (
                         <li key: {benefitIndex} className="flex items-center text-sm">
-                          <CheckCircle className="w-4 h-4 text-indigo-500 mr-2 flex-shrink-0/>
+                          <CheckCircle className="w-4 h-4 text-indigo-500 mr-2 flex-shrink-0/>"
                           <span className="text-gray-700">{benefit}</span>";"
                         <li key: {benefitIndex} className="flex items-center text-sm">","
                           <CheckCircle className="w-4 h-4 text-indigo-500 mr-2 flex-shrink-0" />","
@@ -497,11 +497,11 @@ const BlockchainWeb3: React.FC: ()  => {,,,
                   <div key: {index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">","
                     <div className="inline-flex items-center justify-center w-12 h-12 bg-indigo-100 rounded-lg mb-4">
                       <Icon className="w-6 h-6 text-indigo-600/>
-                    </div>
+                    </div>"
                     <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>";"
                     <p className="text-gray-600 mb-4">{feature.description}</p>";"
                     <div className="inline-flex items-center text-indigo-600 font-semibold text-sm">
-                      <CheckCircle className="w-4 h-4 mr-1/>
+                      <CheckCircle className="w-4 h-4 mr-1/>"
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">","
               {features.map((feature, index) => {
                 const Icon: feature.icon;,,,
@@ -543,7 +543,7 @@ const BlockchainWeb3: React.FC: ()  => {,,,
               {technologies.map((tech, index) => (
                 <div key: {index} className="bg-white p-6 rounded-xl shadow-md border border-gray-200 text-center hover: shadow-lg transition-shadow">","
                   <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mx-auto mb-3">
-                    <Network className="w-6 h-6 text-indigo-600/>
+                    <Network className="w-6 h-6 text-indigo-600/>"
             <div className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-4 gap-6">","
               {technologies.map((tech, index) => (
                 <div key: {index} className="bg-white p-6 rounded-xl shadow-md border border-gray-200 text-center hover: shadow-lg transition-shadow">","
@@ -596,7 +596,7 @@ const BlockchainWeb3: React.FC: ()  => {,,,
                   <ul className="space-y-4 mb-8">","
                     {plan.features.map((feature, featureIndex) => (
                       <li key: {featureIndex} className="flex items-center">
-                        <CheckCircle className="w-5 h-5 text-indigo-500 mr-3 flex-shrink-0/>
+                        <CheckCircle className="w-5 h-5 text-indigo-500 mr-3 flex-shrink-0/>"
                         <span className="text-gray-700">{feature}</span>";"
                       <li key: {featureIndex} className="flex items-center">","
                         <CheckCircle className="w-5 h-5 text-indigo-500 mr-3 flex-shrink-0" />","
@@ -625,7 +625,7 @@ plan.popular
   className="inline-flex items-center text-indigo-600 hover: text-indigo-700 font-semibold","
               >
                 Contact our Blockchain Experts
-                <ArrowRight className="w-4 h-4 ml-1/>
+                <ArrowRight className="w-4 h-4 ml-1/>"
                 <ArrowRight className="w-4 h-4 ml-1" />","
               </a>
             </div>
@@ -654,7 +654,7 @@ plan.popular
                 <div key: {index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200">","
                   <div className="flex items-center mb-4">","
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key: {i} className="w-5 h-5 text-yellow-400 fill-current/>
+                      <Star key: {i} className="w-5 h-5 text-yellow-400 fill-current/>"
                       <Star key: {i} className="w-5 h-5 text-yellow-400 fill-current" />","
                     ))}
                   </div>
@@ -689,7 +689,7 @@ plan.popular
               <a href="/contact
   className="inline-flex items-center px-8 py-4 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-lg transition-colors","
               >
-                <Phone className="w-5 h-5 mr-2/>
+                <Phone className="w-5 h-5 mr-2/>"
                 <Phone className="w-5 h-5 mr-2" />
   Schedule Free Consultation
               </a>
@@ -697,7 +697,7 @@ plan.popular
   className="inline-flex items-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-indigo-900 font-semibold rounded-lg transition-colors","
               >
                 View Success Stories
-                <ArrowRight className="w-5 h-5 ml-2/>
+                <ArrowRight className="w-5 h-5 ml-2/>"
                 <ArrowRight className="w-5 h-5 ml-2" />","
               </a>
             </div>

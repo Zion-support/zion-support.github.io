@@ -1,13 +1,13 @@
-import React from 'react'';
+import React from 'react';
 import { Link } from 'react-router-dom'';
 import { Helmet } from 'react-helmet-async';
 ;
-const HomeLite: React.FC: ()  => {,,,
+const HomeLite: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
       <Helmet >
         <title >Zion Tech Group — AI, Micro SaaS, and IT Services</title>
-        <meta name: "description" content ="Enterprise-grade AI, micro SaaS, and IT solutions. Contact us at +1 302 464 0950 or kleber@ziontechgroup.com." />
+        <meta name="description" content="Enterprise-grade AI, micro SaaS, and IT solutions. Contact us at +1 302 464 0950 or kleber@ziontechgroup.com." />
         <link rel: "canonical" href ="https://ziontechgroup.com/" />
       </Helmet>
 

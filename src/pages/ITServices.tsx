@@ -19,8 +19,8 @@ export default function ITServices(): React.JSX.Element {
         "Security hardening and compliance setup",";"
         "Performance monitoring and optimization",";"
         "Disaster recovery and backup solutions",";"
-        "24/7 cloud operations support"
-      ]
+        "24/7 cloud operations support"],
+
       benefits: [,,,
         "50% reduction in infrastructure costs",";"
         "99.99% uptime guarantee",";"
@@ -46,8 +46,8 @@ export default function ITServices(): React.JSX.Element {
         "Security information and event management (SIEM)",";"
         "Multi-factor authentication (MFA) implementation",";"
         "Continuous security monitoring",";"
-        "Incident response automation"
-      ]
+        "Incident response automation"],
+
       benefits: [,,,
         "95% reduction in security incidents",";"
         "100% compliance with industry standards",";"
@@ -73,8 +73,8 @@ export default function ITServices(): React.JSX.Element {
         "Automated deployment and rollback",";"
         "Performance monitoring and alerting",";"
         "Security scanning and compliance checks",";"
-        "Developer productivity tools integration"
-      ]
+        "Developer productivity tools integration"],
+
       benefits: [,,,
         "10x faster deployment cycles",";"
         "80% reduction in deployment failures",";"
@@ -100,8 +100,8 @@ export default function ITServices(): React.JSX.Element {
         "Data quality monitoring and governance",";"
         "Machine learning pipeline integration",";"
         "Business intelligence dashboard creation",";"
-        "Data security and privacy compliance"
-      ]
+        "Data security and privacy compliance"],
+
       benefits: [,,,
         "5x faster data processing",";"
         "Real-time business insights",";"
@@ -127,8 +127,8 @@ export default function ITServices(): React.JSX.Element {
         "Network monitoring and performance analytics",";"
         "Wireless infrastructure setup",";"
         "VPN and remote access solutions",";"
-        "Disaster recovery network planning"
-      ]
+        "Disaster recovery network planning"],
+
       benefits: [,,,
         "60% improvement in network performance",";"
         "99.9% network uptime guarantee",";"
@@ -154,8 +154,8 @@ export default function ITServices(): React.JSX.Element {
         "Audit trail and evidence collection",";"
         "Employee training and awareness programs",";"
         "Incident response and breach notification",";"
-        "Regulatory change management"
-      ]
+        "Regulatory change management"],
+
       benefits: [,,,
         "90% reduction in compliance costs",";"
         "100% audit readiness",";"
@@ -171,25 +171,25 @@ export default function ITServices(): React.JSX.Element {
   const additionalITServices: [,,
     {
       name: "IT Infrastructure Assessment
-      description: "Comprehensive infrastructure audit and optimization recommendations
+      description: "Comprehensive infrastructure audit and optimization recommendations",
       price: "$1,500 - $5,000/month
       features: ["Performance analysis", "Security assessment", "Cost optimization", "Modernization roadmap"]
     },
     {
       name: "24/7 IT Support & Monitoring
-      description: "Round-the-clock IT support with proactive monitoring
+      description: "Round-the-clock IT support with proactive monitoring",
       price: "$800 - $3,000/month
       features: ["24/7 helpdesk", "Proactive monitoring", "Remote support", "SLA guarantees"]
     },
     {
       name: "Backup & Disaster Recovery
-      description: "Automated backup solutions with disaster recovery planning
+      description: "Automated backup solutions with disaster recovery planning",
       price: "$500 - $2,500/month
       features: ["Automated backups", "Disaster recovery", "Business continuity", "Data protection"]
     },
     {
       name: "IT Consulting & Strategy
-      description: "Strategic IT planning and digital transformation consulting
+      description: "Strategic IT planning and digital transformation consulting",
       price: "$200 - $500/hour
       features: ["Strategic planning", "Technology roadmap", "Vendor selection", "Implementation guidance"]
     }
@@ -226,10 +226,10 @@ export default function ITServices(): React.JSX.Element {
     <>
       <Helmet >
         <title >IT Services & Solutions - Zion Tech Group | Enterprise Technology Services</title>
-        <meta name: "description" ,
+        <meta name="description" ,
   content: "Comprehensive IT services including cloud migration, cybersecurity, DevOps automation, and data engineering. Enterprise-grade solutions with proven results." ,"
         />
-        <meta name: "keywords" content ="IT services, cloud migration, cybersecurity, DevOps, data engineering, network infrastructure, compliance" />
+        <meta name: "keywords" content="IT services, cloud migration, cybersecurity, DevOps, data engineering, network infrastructure, compliance" />
         <link rel: "canonical" href ="https://ziontechgroup.com/it-services" />
       </Helmet>
 

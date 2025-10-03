@@ -1,19 +1,19 @@
-import React from 'react'';
+import React from 'react';
 import React from 'react';'
 
-const QuantumConsciousnessAIConsulting: React.FC: ()  => {,,,
+const QuantumConsciousnessAIConsulting: React.FC = () => {
   return (
     <>
       <Helmet >
         <title >Quantum Consciousness AI Consulting | Zion Tech Group</title>
-        <meta name: "description" content="Transform your enterprise with quantum consciousness AI consulting. Achieve 99.9% decision accuracy and autonomous operations with AI that thinks and feels." /><meta name="keywords" content ="quantum AI, consciousness, enterprise consulting, business transformation, autonomous systems" /><meta property: "og:title" content="Quantum Consciousness AI Consulting | Zion Tech Group" />
+        <meta name="description" content="Transform your enterprise with quantum consciousness AI consulting. Achieve 99.9% decision accuracy and autonomous operations with AI that thinks and feels." /><meta name="keywords" content="quantum AI, consciousness, enterprise consulting, business transformation, autonomous systems" /><meta property: "og:title" content="Quantum Consciousness AI Consulting | Zion Tech Group" />
         <meta property: "og:description" content="The world's first quantum consciousness AI consulting service delivering unprecedented business value." />
         <meta property: "og:type" content="website" />
         <meta name: "twitter:card" content="summary_large_image" />
         <meta name: "twitter:title" content="Quantum Consciousness AI Consulting | Zion Tech Group" />
         <meta name: "twitter:description" content="Transform your enterprise with AI that truly thinks and feels." />
-        <meta name: "description" content="Transform your enterprise with quantum consciousness AI consulting. Achieve 99.9% decision accuracy and autonomous operations with AI that thinks and feels." />","
-        <meta name: "keywords" content ="quantum AI, consciousness, enterprise consulting, business transformation, autonomous systems" />","
+        <meta name="description" content="Transform your enterprise with quantum consciousness AI consulting. Achieve 99.9% decision accuracy and autonomous operations with AI that thinks and feels." />","
+        <meta name: "keywords" content="quantum AI, consciousness, enterprise consulting, business transformation, autonomous systems" />","
         <meta property: "og: title" content="Quantum Consciousness AI Consulting | Zion Tech Group" />","
         <meta property: "og: description" content="The world's first quantum consciousness AI consulting service delivering unprecedented business value." />","
         <meta property: "og: type" content="website" />","

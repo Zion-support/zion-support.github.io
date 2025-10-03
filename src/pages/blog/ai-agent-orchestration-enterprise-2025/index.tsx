@@ -33,7 +33,7 @@ const AIAgentOrchestrationEnterprise2025: () => {
             <Link to: "/blog
   className="inline-flex items-center text-white/90 hover: text-white mb-8 transition-colors","
             >
-              <ArrowLeft className="w-4 h-4 mr-2/>
+              <ArrowLeft className="w-4 h-4 mr-2/>"
               <ArrowLeft className="w-4 h-4 mr-2" />
   Back to Blog
             </Link>
@@ -59,13 +59,13 @@ const AIAgentOrchestrationEnterprise2025: () => {
                 <div className="flex items-center">
                   <Calendar className="w-5 h-5 mr-2/>
                   <span >October 1, 2025</span>
-                </div>
+                </div>"
                 <div className="flex items-center">
                   <Clock className="w-5 h-5 mr-2/>
                   <span >12 min read</span>
-                </div>
+                </div>"
                 <div className="flex items-center">
-                  <TrendingUp className="w-5 h-5 mr-2/>
+                  <TrendingUp className="w-5 h-5 mr-2/>"
               <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 leading-tight">
   Enterprise AI Agent Orchestration: The 2025 Implementation Blueprint,,
               </h1>
@@ -94,7 +94,7 @@ const AIAgentOrchestrationEnterprise2025: () => {
             {/* Executive Summary */}
             <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 border-l-4 border-blue-500 p-6 rounded-r-lg mb-12">
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
-                <Zap className="w-6 h-6 mr-2 text-yellow-400/>
+                <Zap className="w-6 h-6 mr-2 text-yellow-400/>"
             <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 border-l-4 border-blue-500 p-6 rounded-r-lg mb-12">","
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center">","
                 <Zap className="w-6 h-6 mr-2 text-yellow-400" />
@@ -110,7 +110,7 @@ const AIAgentOrchestrationEnterprise2025: () => {
             {/* Key Challenges */}
             <section className="mb-12">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center">
-                <Shield className="w-8 h-8 mr-3 text-red-400/>
+                <Shield className="w-8 h-8 mr-3 text-red-400/>"
             <section className="mb-12">","
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center">","
                 <Shield className="w-8 h-8 mr-3 text-red-400" />
@@ -189,7 +189,7 @@ const AIAgentOrchestrationEnterprise2025: () => {
                 <Network className="w-8 h-8 mr-3 text-purple-400/>,
   Production-Grade Architecture Patterns
               </h2>
-
+"
               <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-lg border border-slate-700 mb-6">
                 <h3 className="text-2xl font-semibold text-white mb-4">Hierarchical Orchestration Model</h3>
                 <p className="text-gray-300 mb-6">
@@ -267,7 +267,7 @@ const AIAgentOrchestrationEnterprise2025: () => {
                 <GitBranch className="w-8 h-8 mr-3 text-emerald-400/>,
   90-Day Implementation Blueprint
               </h2>
-
+"
               <div className="space-y-6">
                 <div className="bg-slate-800/50 p-6 rounded-lg border-l-4 border-emerald-500">
                   <h3 className="text-xl font-bold text-white mb-3">Phase 1: Foundation (Days 1-30)</h3>","
@@ -362,7 +362,7 @@ const AIAgentOrchestrationEnterprise2025: () => {
   className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors","
                 >
                   Schedule Architecture Review
-                  <ArrowLeft className="w-5 h-5 ml-2 rotate-180/>
+                  <ArrowLeft className="w-5 h-5 ml-2 rotate-180/>"
                   <ArrowLeft className="w-5 h-5 ml-2 rotate-180" />","
                 </Link>
               </div>

@@ -1,6 +1,6 @@
-import React from 'react'';
+import React from 'react';
 import { Link } from 'react-router-dom'';
-import { Helmet } from 'react-helmet-async'';
+import { Helmet } from 'react-helmet-async';
 
 const MicroSAASPage: React.FC  = () => {
   const microSAASServices = [
@@ -90,7 +90,7 @@ const MicroSAASPage: React.FC  = () => {
           </div>
         </section>
 
-        {/* Benefits Section */}
+        {/* Benefits Section */}"
         <section className="py-20 bg-white">"
           <div className="container mx-auto px-6">"
             <div className="text-center mb-16">"
@@ -176,7 +176,7 @@ const MicroSAASPage: React.FC  = () => {
               >
                 Start Your Project
               </Link>
-              <Link 
+              <Link "
                 to="/solutions" 
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors
               >
@@ -189,5 +189,5 @@ const MicroSAASPage: React.FC  = () => {
     </>
   );
 };
-
+"
 export default MicroSAASPage;

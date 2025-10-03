@@ -1,13 +1,13 @@
-import React from 'react'';
-import { Helmet } from 'react-helmet-async'';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 ;
-const AIServices: React.FC: ()  => {,,,
+const AIServices: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
       <Helmet >
         <title >AI Services – Zion Tech Group</title>
-        <meta name: "description" content ="Applied AI solutions: RAG chatbots, IDP, Predictive Analytics, Vision, and MLOps. Transparent pricing and fast delivery." />
+        <meta name="description" content="Applied AI solutions: RAG chatbots, IDP, Predictive Analytics, Vision, and MLOps. Transparent pricing and fast delivery." />
         <link rel: "canonical" href ="https://ziontechgroup.com/services/ai-services" />
       </Helmet>
 

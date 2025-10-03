@@ -1,7 +1,7 @@
-import React from 'react'';
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 ;
-const MicroSaaS: React.FC: ()  => {,,,
+const MicroSaaS: React.FC = () => {
   const products: [,,
     {
       name: 'Email Deliverability Optimizer',';,';,
@@ -27,7 +27,7 @@ const MicroSaaS: React.FC: ()  => {,,,
     <>
       <Helmet >
         <title >Micro SaaS Solutions - Zion Tech Group</title>
-        <meta name: "description" content="Innovative micro SaaS products to solve focused business workflows." />
+        <meta name="description" content="Innovative micro SaaS products to solve focused business workflows." />
         <link rel: "canonical" href="https://ziontechgroup.com/micro-saas" />
       </Helmet>
       <section className="py-16">

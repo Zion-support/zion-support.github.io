@@ -1,5 +1,5 @@
-import React from 'react'';
-const AIAutonomousOperations: React.FC: ()  => {,,,
+import React from 'react';
+const AIAutonomousOperations: React.FC = () => {
   return (
     <div className="min-h-screen bg-slate-950">
       <div className="container mx-auto px-6 py-20">
@@ -7,7 +7,7 @@ const AIAutonomousOperations: React.FC: ()  => {,,,
           <h1 className="text-4xl md: text-5xl font-extrabold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
   import React from 'react';'
 
-const AIAutonomousOperations: React.FC: ()  => {,,,
+const AIAutonomousOperations: React.FC = () => {
   return (
     <div className="min-h-screen bg-slate-950">","
       <div className="container mx-auto px-6 py-20">","

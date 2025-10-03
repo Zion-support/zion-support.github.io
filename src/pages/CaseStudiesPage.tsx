@@ -1,12 +1,12 @@
-import React from 'react'';
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 ;
-const CaseStudiesPage: React.FC: ()  => {,,,
+const CaseStudiesPage: React.FC = () => {
   return (
     <>
       <Helmet >
         <title >Case Studies - Zion Tech Group</title>
-        <meta name: "description" content ="Explore real-world examples of how we've helped businesses achieve their goals." />
+        <meta name="description" content="Explore real-world examples of how we've helped businesses achieve their goals." />
       </Helmet>
       
       <div className="py-20 px-4">

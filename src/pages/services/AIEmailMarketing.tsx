@@ -1,5 +1,5 @@
-import React from 'react'';
-import { Helmet } from 'react-helmet-async'';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { TrendingUp } from 'lucide-react'';
 import Header from '../../components/Header'';
 import Footer from '../../components/Footer'';
@@ -9,7 +9,7 @@ import { TrendingUp } from 'lucide-react';'
 import Header from '../../components/Header';'
 import Footer from '../../components/Footer';'
 
-const AIEmailMarketing: React.FC: ()  => {,,,
+const AIEmailMarketing: React.FC = () => {
   const features: [,,
     {
       icon: Brain,,,,
@@ -58,8 +58,8 @@ const AIEmailMarketing: React.FC: ()  => {,,,
       title: "Deliverability Optimization",","
       description: "Advanced algorithms ensure maximum inbox placement and compliance with email regulations.",","
       benefit: "98% deliverability rate","
-    }
-  ];
+    }],
+;
 
   const pricing: [,,
     {
@@ -67,7 +67,7 @@ const AIEmailMarketing: React.FC: ()  => {,,,
       price: "$79
       period: "/month
       description: "Perfect for small businesses starting with AI-powered email marketing
-      features: [,,,
+      features: [,,,",
         "Up to 10,000 subscribers",";"
         "Basic AI content generation",";"
         "Simple automation",";"
@@ -75,8 +75,8 @@ const AIEmailMarketing: React.FC: ()  => {,,,
         "Basic analytics",";"
         "Standard templates",";"
         "5 campaigns/month",";"
-        "Basic segmentation"
-      ]
+        "Basic segmentation"],
+
       popular: false,,
     },
     {
@@ -84,7 +84,7 @@ const AIEmailMarketing: React.FC: ()  => {,,,
       price: "$199
       period: "/month
       description: "Ideal for growing businesses with advanced email marketing needs
-      features: [,,,
+      features: [,,,",
         "Up to 50,000 subscribers",";"
         "Advanced AI content generation",";"
         "Smart automation workflows",";"
@@ -94,8 +94,8 @@ const AIEmailMarketing: React.FC: ()  => {,,,
         "Unlimited campaigns",";"
         "Advanced segmentation",";"
         "A/B testing",";"
-        "API access"
-      ]
+        "API access"],
+
       popular: true,,
     },
     {
@@ -103,7 +103,7 @@ const AIEmailMarketing: React.FC: ()  => {,,,
       price: "$599
       period: "/month
       description: "Complete solution for large organizations with enterprise requirements
-      features: [,,,
+      features: [,,,",
         "Unlimited subscribers",";"
         "Enterprise AI capabilities",";"
         "Complex automation workflows",";"
@@ -115,8 +115,8 @@ const AIEmailMarketing: React.FC: ()  => {,,,
         "Custom integrations",";"
         "Advanced security features",";"
         "SLA guarantee",";"
-        "Training & consultation"
-      ]
+        "Training & consultation"],
+
       popular: false,,,
       name: "Starter",","
       price: "$79",","
@@ -130,8 +130,8 @@ const AIEmailMarketing: React.FC: ()  => {,,,
         "Basic analytics","
         "Standard templates","
         "5 campaigns/month","
-        "Basic segmentation"
-      ]
+        "Basic segmentation"],
+
       popular: false,,
     },
     {
@@ -149,8 +149,8 @@ const AIEmailMarketing: React.FC: ()  => {,,,
         "Unlimited campaigns","
         "Advanced segmentation","
         "A/B testing","
-        "API access"
-      ]
+        "API access"],
+
       popular: true,,
     },
     {
@@ -170,8 +170,8 @@ const AIEmailMarketing: React.FC: ()  => {,,,
         "Custom integrations","
         "Advanced security features","
         "SLA guarantee","
-        "Training & consultation"
-      ]
+        "Training & consultation"],
+
       popular: false,,
     }
   ];
@@ -311,10 +311,10 @@ const AIEmailMarketing: React.FC: ()  => {,,,
       <Helmet >
         <title >AI Email Marketing - Zion Tech Group | Intelligent Email Automation</title>
         <meta name: "description
-  content: "Transform your email marketing with AI-powered personalization, automation, and analytics. 300% increase in open rates, 85% improvement in CTR, and 250% ROI improvement." /><meta name: "keywords" content ="AI email marketing, email automation, personalized emails, email analytics, marketing automation, email campaigns, AI content generation" /><link rel: "canonical" href="https://ziontechgroup.com/services/ai-email-marketing/>
+  content: "Transform your email marketing with AI-powered personalization, automation, and analytics. 300% increase in open rates, 85% improvement in CTR, and 250% ROI improvement." /><meta name: "keywords" content="AI email marketing, email automation, personalized emails, email analytics, marketing automation, email campaigns, AI content generation" /><link rel: "canonical" href="https://ziontechgroup.com/services/ai-email-marketing/>
   content: "Transform your email marketing with AI-powered personalization, automation, and analytics. 300% increase in open rates, 85% improvement in CTR, and 250% ROI improvement.","
         />
-        <meta name: "keywords" content ="AI email marketing, email automation, personalized emails, email analytics, marketing automation, email campaigns, AI content generation" />","
+        <meta name: "keywords" content="AI email marketing, email automation, personalized emails, email analytics, marketing automation, email campaigns, AI content generation" />","
         <link rel: "canonical" href ="https: //ziontechgroup.com/services/ai-email-marketing" />","
       </Helmet>
 
@@ -347,7 +347,7 @@ const AIEmailMarketing: React.FC: ()  => {,,,
                 <a href="/contact
   className="inline-flex items-center px-8 py-4 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-lg transition-colors","
                 >
-                  <Phone className="w-5 h-5 mr-2/>
+                  <Phone className="w-5 h-5 mr-2/>"
                   <Phone className="w-5 h-5 mr-2" />
   Schedule Demo
                 </a>
@@ -355,7 +355,7 @@ const AIEmailMarketing: React.FC: ()  => {,,,
   className="inline-flex items-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-emerald-900 font-semibold rounded-lg transition-colors","
                 >
                   View Pricing
-                  <ArrowRight className="w-5 h-5 ml-2/>
+                  <ArrowRight className="w-5 h-5 ml-2/>"
                   <ArrowRight className="w-5 h-5 ml-2" />","
                 </a>
               </div>
@@ -382,7 +382,7 @@ const AIEmailMarketing: React.FC: ()  => {,,,
             <div className="grid md: grid-cols-4 gap-8">","
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-emerald-100 rounded-full mb-4">
-                  <Target className="w-8 h-8 text-emerald-600/>
+                  <Target className="w-8 h-8 text-emerald-600/>"
             <div className="grid md: grid-cols-4 gap-8">","
               <div className="text-center">","
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-emerald-100 rounded-full mb-4">","
@@ -393,7 +393,7 @@ const AIEmailMarketing: React.FC: ()  => {,,,
               </div>
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">
-                  <BarChart3 className="w-8 h-8 text-green-600/>
+                  <BarChart3 className="w-8 h-8 text-green-600/>"
               <div className="text-center">","
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">","
                   <BarChart3 className="w-8 h-8 text-green-600" />","
@@ -403,7 +403,7 @@ const AIEmailMarketing: React.FC: ()  => {,,,
               </div>
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-teal-100 rounded-full mb-4">
-                  <Zap className="w-8 h-8 text-teal-600/>
+                  <Zap className="w-8 h-8 text-teal-600/>"
               <div className="text-center">","
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-teal-100 rounded-full mb-4">","
                   <Zap className="w-8 h-8 text-teal-600" />","
@@ -413,7 +413,7 @@ const AIEmailMarketing: React.FC: ()  => {,,,
               </div>
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">
-                  <Shield className="w-8 h-8 text-blue-600/>
+                  <Shield className="w-8 h-8 text-blue-600/>"
               <div className="text-center">","
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">","
                   <Shield className="w-8 h-8 text-blue-600" />","
@@ -447,7 +447,7 @@ const AIEmailMarketing: React.FC: ()  => {,,,
   return (
                   <div key: {index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">","
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-emerald-100 rounded-full mb-6">
-                      <Icon className="w-8 h-8 text-emerald-600/>
+                      <Icon className="w-8 h-8 text-emerald-600/>"
             <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">","
               {useCases.map((useCase, index) => {
                 const Icon: useCase.icon;,,,
@@ -461,7 +461,7 @@ const AIEmailMarketing: React.FC: ()  => {,,,
                     <ul className="space-y-2">","
                       {useCase.benefits.map((benefit, benefitIndex) => (
                         <li key: {benefitIndex} className="flex items-center text-sm">
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0/>
+                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0/>"
                           <span className="text-gray-700">{benefit}</span>";"
                         <li key: {benefitIndex} className="flex items-center text-sm">","
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />","
@@ -527,11 +527,11 @@ const AIEmailMarketing: React.FC: ()  => {,,,
                   <div key: {index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">","
                     <div className="inline-flex items-center justify-center w-12 h-12 bg-emerald-100 rounded-lg mb-4">
                       <Icon className="w-6 h-6 text-emerald-600/>
-                    </div>
+                    </div>"
                     <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>";"
                     <p className="text-gray-600 mb-4">{feature.description}</p>";"
                     <div className="inline-flex items-center text-green-600 font-semibold text-sm">
-                      <CheckCircle className="w-4 h-4 mr-1/>
+                      <CheckCircle className="w-4 h-4 mr-1/>"
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">","
               {features.map((feature, index) => {
                 const Icon: feature.icon;,,,
@@ -591,7 +591,7 @@ const AIEmailMarketing: React.FC: ()  => {,,,
                   <ul className="space-y-4 mb-8">","
                     {plan.features.map((feature, featureIndex) => (
                       <li key: {featureIndex} className="flex items-center">
-                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0/>
+                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0/>"
                         <span className="text-gray-700">{feature}</span>";"
                       <li key: {featureIndex} className="flex items-center">","
                         <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />","
@@ -620,7 +620,7 @@ plan.popular
   className="inline-flex items-center text-emerald-600 hover: text-emerald-700 font-semibold","
               >
                 Contact our Marketing Team
-                <ArrowRight className="w-4 h-4 ml-1/>
+                <ArrowRight className="w-4 h-4 ml-1/>"
                 <ArrowRight className="w-4 h-4 ml-1" />","
               </a>
             </div>
@@ -649,7 +649,7 @@ plan.popular
                 <div key: {index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200">","
                   <div className="flex items-center mb-4">","
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key: {i} className="w-5 h-5 text-yellow-400 fill-current/>
+                      <Star key: {i} className="w-5 h-5 text-yellow-400 fill-current/>"
                       <Star key: {i} className="w-5 h-5 text-yellow-400 fill-current" />","
                     ))}
                   </div>
@@ -684,7 +684,7 @@ plan.popular
               <a href="/contact
   className="inline-flex items-center px-8 py-4 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-lg transition-colors","
               >
-                <Phone className="w-5 h-5 mr-2/>
+                <Phone className="w-5 h-5 mr-2/>"
                 <Phone className="w-5 h-5 mr-2" />
   Schedule Demo
               </a>
@@ -692,7 +692,7 @@ plan.popular
   className="inline-flex items-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-emerald-900 font-semibold rounded-lg transition-colors","
               >
                 View Success Stories
-                <ArrowRight className="w-5 h-5 ml-2/>
+                <ArrowRight className="w-5 h-5 ml-2/>"
                 <ArrowRight className="w-5 h-5 ml-2" />","
               </a>
             </div>

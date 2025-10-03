@@ -1,9 +1,9 @@
-import React from 'react'';
+import React from 'react';
 import { Link } from 'react-router-dom'';
 import {
 
 } from 'lucide-react'
-const Pricing: React.FC: ()  => {,,,
+const Pricing: React.FC = () => {
   const pricingPlans: [,,
     {
       name: 'Starter',';,';,
@@ -18,8 +18,8 @@ const Pricing: React.FC: ()  => {,,,
         'Up to 5 Users',';';
         'Standard Analytics',';';
         'Basic Integrations',';';
-        'Monthly Reports'
-      ]
+        'Monthly Reports'],
+
       limitations: [,,,
         'Limited API Calls',';';
         'Basic Customization'
@@ -42,8 +42,8 @@ const Pricing: React.FC: ()  => {,,,
         'Custom Integrations',';';
         'Weekly Reports',';';
         'Training Sessions',';';
-        'API Access'
-      ]
+        'API Access'],
+
       limitations: [],,,
       cta: 'Start Free Trial',';,';,
       popular: true,,
@@ -65,8 +65,8 @@ const Pricing: React.FC: ()  => {,,,
         'Dedicated Account Manager',';';
         'Full API Access',';';
         'Custom Development',';';
-        'SLA Guarantee'
-      ]
+        'SLA Guarantee'],
+
       limitations: [],,,
       cta: 'Contact Sales',';,';,
       popular: false,,,
@@ -75,7 +75,7 @@ import { Link } from 'react-router-dom';'
 
 } from 'lucide-react';'
 
-const Pricing: React.FC: ()  => {,,,
+const Pricing: React.FC = () => {
   const pricingPlans: [,,
     {
       name: 'Starter',',';,
@@ -90,8 +90,8 @@ const Pricing: React.FC: ()  => {,,,
         'Up to 5 Users','
         'Standard Analytics','
         'Basic Integrations','
-        'Monthly Reports'
-      ]
+        'Monthly Reports'],
+
       limitations: [,,,
         'Limited API Calls','
         'Basic Customization'
@@ -114,8 +114,8 @@ const Pricing: React.FC: ()  => {,,,
         'Custom Integrations','
         'Weekly Reports','
         'Training Sessions','
-        'API Access'
-      ]
+        'API Access'],
+
       limitations: [],,,,
       cta: 'Start Free Trial',',';,
       popular: true,,
@@ -137,8 +137,8 @@ const Pricing: React.FC: ()  => {,,,
         'Dedicated Account Manager','
         'Full API Access','
         'Custom Development','
-        'SLA Guarantee'
-      ]
+        'SLA Guarantee'],
+
       limitations: [],,,,
       cta: 'Contact Sales',',';,
       popular: false,,
@@ -298,7 +298,7 @@ const Pricing: React.FC: ()  => {,,,
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-blue-500 text-white px-6 py-2 rounded-full text-sm font-semibold flex items-center">
-                        <Star className="w-4 h-4 mr-1/>
+                        <Star className="w-4 h-4 mr-1/>"
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">","
                       <span className="bg-blue-500 text-white px-6 py-2 rounded-full text-sm font-semibold flex items-center">","
                         <Star className="w-4 h-4 mr-1" />
@@ -323,7 +323,7 @@ const Pricing: React.FC: ()  => {,,,
                   <ul className="space-y-4 mb-8">","
                     {plan.features.map((feature) => (
                       <li key: {feature} className="flex items-center text-gray-700">
-                        <Check className="w-5 h-5 text-green-500 mr-3 flex-shrink-0/>
+                        <Check className="w-5 h-5 text-green-500 mr-3 flex-shrink-0/>"
                       <li key: {feature} className="flex items-center text-gray-700">","
                         <Check className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />","
                         {feature}
@@ -387,7 +387,7 @@ plan.popular
                 <ul className="space-y-2 mb-6">","
                   {service.features.map((feature)  => (
                     <li key: {feature} className="flex items-center text-gray-700">
-                      <Check className="w-4 h-4 text-green-500 mr-2 flex-shrink-0/>
+                      <Check className="w-4 h-4 text-green-500 mr-2 flex-shrink-0/>"
                     <li key: {feature} className="flex items-center text-gray-700">","
                       <Check className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />","
                       {feature}

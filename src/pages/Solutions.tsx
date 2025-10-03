@@ -1,9 +1,9 @@
-import React from 'react'';
+import React from 'react';
 import { Link } from 'react-router-dom'';
 import { ArrowRight, CheckCircle, Zap, Shield, Globe, Cpu, Database, Cloud } from 'lucide-react'';
 import { Helmet } from 'react-helmet-async';
 ;
-const Solutions: React.FC: ()  => {,,,
+const Solutions: React.FC = () => {
   const solutions: [,,
     {
       icon: Zap,,,
@@ -47,8 +47,8 @@ const Solutions: React.FC: ()  => {,,,
     <>
       <Helmet >
         <title >Solutions - Zion Tech Group</title>
-        <meta name: "description" content ="Comprehensive technology solutions for modern businesses. AI automation, cybersecurity, cloud infrastructure, and more." />
-        <meta name: "keywords" content ="AI solutions, cybersecurity, cloud infrastructure, data analytics, DevOps, technology solutions" />
+        <meta name="description" content="Comprehensive technology solutions for modern businesses. AI automation, cybersecurity, cloud infrastructure, and more." />
+        <meta name: "keywords" content="AI solutions, cybersecurity, cloud infrastructure, data analytics, DevOps, technology solutions" />
         <link rel: "canonical" href ="https://ziontechgroup.com/solutions" />
       </Helmet>
 

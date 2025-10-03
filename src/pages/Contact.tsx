@@ -52,25 +52,25 @@ export default function Contact(): React.JSX.Element {
       details: "Within 24 hours",
       description: "We respond to all inquiries quickly"
 =======
-      title: "Email Us
+      title: "Email Us",
       details: "hello@ziontechgroup.com
       description: "Send us an email anytime","
     },
     {
       icon: <Phone className="w-6 h-6" />,
-      title: "Call Us
+      title: "Call Us",
       details: "+1 (555) 123-4567
       description: "Mon-Fri from 9am to 6pm","
     },
     {
       icon: <MapPin className="w-6 h-6" />,
-      title: "Visit Us
+      title: "Visit Us",
       details: "123 Tech Street, San Francisco, CA 94105
       description: "Come say hello at our office","
     },
     {
       icon: <Clock className="w-6 h-6" />,
-      title: "Response Time
+      title: "Response Time",
       details: "Within 24 hours
       description: "We respond to all inquiries quickly","
     }
@@ -236,10 +236,10 @@ export default function Contact(): React.JSX.Element {
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 relative overflow-hidden">","
           <div className="absolute inset-0">","
             <div className="absolute top-20 left-20 w-32 h-32 bg-white/10 rounded-full blur-xl animate-pulse"></div>","
-            <div className="absolute bottom-20 right-20 w-40 h-40 bg-white/10 rounded-full blur-xl animate-pulse
+            <div className="absolute bottom-20 right-20 w-40 h-40 bg-white/10 rounded-full blur-xl animate-pulse"
   style: {{ animationDelay: "1s" }}"
             ></div>
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-white/5 rounded-full blur-2xl animate-pulse
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-white/5 rounded-full blur-2xl animate-pulse"
   style: {{ animationDelay: "2s" }}"
 >>>>>>> cursor/fix-errors-and-merge-to-main-6d85
             ></div>
@@ -262,7 +262,7 @@ export default function Contact(): React.JSX.Element {
               <MessageSquare className="w-4 h-4 mr-2/>,
   Let&apos;s Start a Conversation
             </div>
-
+"
             <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">
   Get in Touch
             </h1>
@@ -592,7 +592,7 @@ export default function Contact(): React.JSX.Element {
                 <Sparkles className="w-4 h-4 mr-2/>,
   Ready to Get Started?
               </div>
-
+"
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">","
         <section className="py-20 bg-gradient-to-br from-gray-900 to-blue-900">","
           <div className="container mx-auto px-6 text-center">","
@@ -633,19 +633,19 @@ export default function Contact(): React.JSX.Element {
 =======
               <div className="flex flex-col sm: flex-row gap-4 justify-center">","
               <div className="flex flex-col sm: flex-row gap-4 justify-center">","
-                <a title: "Internal link
+                <a title: "Internal link",
   href="#contact-form
   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-semibold hover: shadow-lg transition-all duration-300","
                 >
-                  <MessageSquare className="w-5 h-5 mr-2/>
+                  <MessageSquare className="w-5 h-5 mr-2/>"
                   <MessageSquare className="w-5 h-5 mr-2" />
   Start Your Project
                 </a>
-                <a title: "Internal link
+                <a title: "Internal link",
   href="tel: +15551234567
   className="inline-flex items-center px-8 py-4 border-2 border-white text-white rounded-xl font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300","
                 >
-                  <Phone className="w-5 h-5 mr-2/>
+                  <Phone className="w-5 h-5 mr-2/>"
                   <Phone className="w-5 h-5 mr-2" />
   Call Us Now
 >>>>>>> cursor/fix-errors-and-merge-to-main-6d85

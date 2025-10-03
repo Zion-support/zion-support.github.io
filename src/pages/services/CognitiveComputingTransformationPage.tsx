@@ -1,6 +1,6 @@
-import React from 'react'';
+import React from 'react';
 import { Link } from 'react-router-dom'';
-import { Helmet } from 'react-helmet-async'';
+import { Helmet } from 'react-helmet-async';
 
 const CognitiveComputingTransformationPage: React.FC  = () => {
   const transformationServices = [
@@ -90,7 +90,7 @@ const CognitiveComputingTransformationPage: React.FC  = () => {
           </div>
         </section>
 
-        {/* Cognitive Capabilities */}
+        {/* Cognitive Capabilities */}"
         <section className="py-20 bg-white">"
           <div className="container mx-auto px-6">"
             <div className="text-center mb-16">"
@@ -230,7 +230,7 @@ const CognitiveComputingTransformationPage: React.FC  = () => {
               >
                 Start Your Transformation
               </Link>
-              <Link 
+              <Link "
                 to="/services" 
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-teal-600 transition-colors
               >
@@ -243,5 +243,5 @@ const CognitiveComputingTransformationPage: React.FC  = () => {
     </>
   );
 };
-
+"
 export default CognitiveComputingTransformationPage;
