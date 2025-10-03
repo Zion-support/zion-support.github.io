@@ -102,12 +102,13 @@ export const generateArticleStructuredData = (article: {
       name: 'Zion Tech Group',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://ziontechgroup.com/logo.png'},
+        url: 'https://ziontechgroup.com/logo.png'
+      }
     }
   });
 };
 
-export const generateBreadcrumbStructuredData = (breadcrumbs: Array<{ name: string; url: string '>): string => {
+export const generateBreadcrumbStructuredData = (breadcrumbs: Array<{ name: string; url: string }>): string => {
   return generateStructuredData('BreadcrumbList', {
     itemListElement: breadcrumbs.map((crumb, index) => ({
       '@type': 'ListItem',
@@ -136,7 +137,7 @@ export const generateOrganizationStructuredData = (): string => {
   });
 };
 
-export const generateFAQStructuredData = (faqs: Array<{ question: string; answer: string '>): string => {
+export const generateFAQStructuredData = (faqs: Array<{ question: string; answer: string }>): string => {
   return generateStructuredData('FAQPage', {
     mainEntity: faqs.map((faq) => ({
       '@type': 'Question',
@@ -147,45 +148,45 @@ export const generateFAQStructuredData = (faqs: Array<{ question: string; answer
       }
     }))
   });
-';
+};
 
-export const generateSitemapXML = (urls: Array<{ loc: string; lastmod?: string; changefreq?: string; priority?: number `>): string => {
+export const generateSitemapXML = (urls: Array<{ loc: string; lastmod?: string; changefreq?: string; priority?: number }>): string => {
   const urlsXml = urls
     .map((url) => {
-      const lastmod = url.lastmod ? `<lastmod>${url.lastmod`</lastmod>` : ';
-      const changefreq = url.changefreq ? `<changefreq>${url.changefreq`</changefreq>` : ';
-      const priority = url.priority !== undefined ? `<priority>${url.priority`</priority>` : ';
-      return `<url>\n  <loc>${escapeHtml(url.loc)}</loc>\n  ${lastmod}\n  ${changefreq'\n  ${priority`\n</url>`;
-    `)
+      const lastmod = url.lastmod ? `<lastmod>${url.lastmod}</lastmod>` : '';
+      const changefreq = url.changefreq ? `<changefreq>${url.changefreq}</changefreq>` : '';
+      const priority = url.priority !== undefined ? `<priority>${url.priority}</priority>` : '';
+      return `<url>\n  <loc>${escapeHtml(url.loc)}</loc>\n  ${lastmod}\n  ${changefreq}\n  ${priority}\n</url>`;
+    })
     .join('\n');
     
-  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urlsXml`\n</urlset>`;
-';
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urlsXml}\n</urlset>`;
+};
 
 export const generateRobotsTxt = (config: {
   userAgent?: string;
   disallow?: string[];
   allow?: string[];
   sitemap?: string;
-`): string => {
+): string => {
   const lines: string[] = [];
-  lines.push(`User-agent: ${config.userAgent || '*'``);
+  lines.push(`User-agent: ${config.userAgent || '*'}`);
   
   if (config.disallow && config.disallow.length > 0) {
-    config.disallow.forEach((path) => lines.push(`Disallow: ${path``));
-  `
+    config.disallow.forEach((path) => lines.push(`Disallow: ${path}`));
+  }
   
   if (config.allow && config.allow.length > 0) {
-    config.allow.forEach((path) => lines.push(`Allow: ${path``));
-  `
+    config.allow.forEach((path) => lines.push(`Allow: ${path}`));
+  }
   
   if (config.sitemap) {
     lines.push('');
-    lines.push(`Sitemap: ${config.sitemap``);
-  };
+    lines.push(`Sitemap: ${config.sitemap}`);
+  }
   
   return lines.join('\n');
-';
+};
 
 /**
  * Optimize title for SEO
@@ -195,7 +196,7 @@ export const optimizeTitle = (title: string, maxLength: number = 60): string => 
   const truncated = title.substring(0, maxLength);
   const lastSpace = truncated.lastIndexOf(' ');
   return lastSpace > 0 ? truncated.substring(0, lastSpace) + '...' : truncated + '...';
-';
+};
 
 /**
  * Optimize description for SEO
@@ -238,7 +239,7 @@ export const generateSlug = (title: string): string => {
     .replace(/^-+|-+$/g, '');
 };
 
-export const validateSEOUrl = (url: string): { valid: boolean; issues: string[] ' => {
+export const validateSEOUrl = (url: string): { valid: boolean; issues: string[] } => {
   const issues: string[] = [];
   
   if (url.length > 100) {
@@ -276,8 +277,8 @@ function escapeHtml(text: string): string {
     '<': '&lt;',
     '>': '&gt;',
     '"': '&quot;',
-    '"': '&#039;};
-  ';
+    "'": '&#039;'
+  };
   return text.replace(/[&<>"']/g, (m) => map[m]);
 }
 

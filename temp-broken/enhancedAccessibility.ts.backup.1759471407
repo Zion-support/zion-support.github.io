@@ -164,9 +164,16 @@ class EnhancedAccessibility {
   private enhanceFormLabels(): void {
     const inputs = document.querySelectorAll('input, textarea, select});
     inputs.forEach((input) => {
+<<<<<<< HEAD:src/utils/enhancedAccessibility.ts
+      if (!input.getAttribute('aria-label') && !input.getAttribute('aria-labelledby')) {
+        const label = document.querySelector(`label[for="${input.id}"]`);
+<<<<<<< HEAD:temp-broken/enhancedAccessibility.ts
+=======
       if (!input.getAttribute('aria-label}) && !input.getAttribute('aria-labelledby})) {
         const label = document.querySelector(`label[for="${input.id}`]`);
+>>>>>>> 1f82812586e87d01bc7d493888f7cc2c39f43987:temp-broken/enhancedAccessibility.ts
 =======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3532:src/utils/enhancedAccessibility.ts
         if (label) {
           input.setAttribute('aria-labelledby', label.id || `label-${input.id}`);
         }
@@ -188,16 +195,28 @@ class EnhancedAccessibility {
     if (!this.config.enableHighContrast) return;
 
     // Check for high contrast mode preference
+<<<<<<< HEAD:temp-broken/enhancedAccessibility.ts
+    if (window.matchMedia('(prefers-contrast: high)}).matches) {
+      document.body.classList.add('high-contrast});
+    
+=======
     if (window.matchMedia('(prefers-contrast: high)').matches) {
       document.body.classList.add('high-contrast');
     }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3532:src/utils/enhancedAccessibility.ts
 
     // Listen for changes in contrast preference
     window.matchMedia('(prefers-contrast: high)}).addEventListener('change', (e) => {
       if (e.matches) {
+<<<<<<< HEAD:src/utils/enhancedAccessibility.ts
+        document.body.classList.add('high-contrast');
+      } else {
+        document.body.classList.remove('high-contrast');
+=======
         document.body.classList.add('high-contrast});
       } else {
         document.body.classList.remove('high-contrast});
+>>>>>>> 1f82812586e87d01bc7d493888f7cc2c39f43987:temp-broken/enhancedAccessibility.ts
       }
     });
   }
@@ -207,7 +226,11 @@ class EnhancedAccessibility {
 
     // Add focus indicators
     document.addEventListener('focusin', (event) => {
+<<<<<<< HEAD:src/utils/enhancedAccessibility.ts
+      (event.target as HTMLElement).classList.add('focus-visible');
+=======
       (event.target as HTMLElement).classList.add('focus-visible});
+>>>>>>> 1f82812586e87d01bc7d493888f7cc2c39f43987:temp-broken/enhancedAccessibility.ts
     });
 
     document.addEventListener('focusout', (event) => {
@@ -405,8 +428,13 @@ Enhanced Accessibility Report:
 - Alt Texts: ${metrics.altTexts}
 - Heading Structure: ${metrics.headingStructure}
 - Issues Found: ${metrics.issuesFound}
+<<<<<<< HEAD:temp-broken/enhancedAccessibility.ts
+- Score: ${metrics.score`%
+};
+=======
 - Score: ${metrics.score}%
 `;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3532:src/utils/enhancedAccessibility.ts
   }
 }
 
