@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function MetaCognitiveRevolutionaryBanner() {
   return (
@@ -52,20 +52,17 @@ export default function MetaCognitiveRevolutionaryBanner() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Link 
-              href="/blog/ai-2026-meta-cognitive-revolutionary-breakthrough" 
+            <Link to="/blog/ai-2026-meta-cognitive-revolutionary-breakthrough" 
               className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
             >
               Discover Meta-Cognitive AI →
             </Link>
-            <Link 
-              href="/case-studies/ai-2026-meta-cognitive-5-billion-success" 
+            <Link to="/case-studies/ai-2026-meta-cognitive-5-billion-success" 
               className="bg-gradient-to-r from-indigo-500 to-blue-600 hover:from-indigo-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1"
             >
               Read $5.2B Success Story →
             </Link>
-            <Link 
-              href="/contact" 
+            <Link to="/contact" 
               className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               Get Started Today
@@ -112,20 +109,17 @@ export default function MetaCognitiveRevolutionaryBanner() {
               <span className="bg-cyan-500/20 px-3 py-1 rounded-full text-cyan-300">99.8% Autonomous</span>
             </div>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link
-                href="/blog/ai-2026-meta-cognitive-revolutionary-breakthrough"
+              <Link to="/blog/ai-2026-meta-cognitive-revolutionary-breakthrough"
                 className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-2 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50"
               >
                 Meta-Cognitive Guide →
               </Link>
-              <Link
-                href="/case-studies/ai-2026-meta-cognitive-5-billion-success"
+              <Link to="/case-studies/ai-2026-meta-cognitive-5-billion-success"
                 className="bg-gradient-to-r from-indigo-500 to-blue-600 hover:from-indigo-400 hover:to-blue-500 text-white font-bold py-2 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50"
               >
                 $5.2B Success Story →
               </Link>
-              <Link
-                href="/contact"
+              <Link to="/contact"
                 className="bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-400 hover:to-cyan-500 text-white font-bold py-2 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50"
               >
                 Start Implementation →

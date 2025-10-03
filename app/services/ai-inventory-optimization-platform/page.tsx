@@ -1,6 +1,6 @@
 import React from 'react';
 import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata: Metadata = {
   title: 'AI Inventory Optimization Platform - Zion Tech Group',
@@ -167,7 +167,7 @@ export default function AIInventoryOptimization() {
               <li>• Email support</li>
               <li>• Monthly reports</li>
             </ul>
-            <Link href="/contact" className="w-full bg-orange-600 text-white py-2 px-4 rounded-lg hover:bg-orange-700 transition-colors text-center block">
+            <Link to="/contact" className="w-full bg-orange-600 text-white py-2 px-4 rounded-lg hover:bg-orange-700 transition-colors text-center block">
               Get Started
             </Link>
           </div>
@@ -183,7 +183,7 @@ export default function AIInventoryOptimization() {
               <li>• Real-time analytics</li>
               <li>• API access</li>
             </ul>
-            <Link href="/contact" className="w-full bg-orange-600 text-white py-2 px-4 rounded-lg hover:bg-orange-700 transition-colors text-center block">
+            <Link to="/contact" className="w-full bg-orange-600 text-white py-2 px-4 rounded-lg hover:bg-orange-700 transition-colors text-center block">
               Get Started
             </Link>
           </div>
@@ -198,7 +198,7 @@ export default function AIInventoryOptimization() {
               <li>• Custom integrations</li>
               <li>• SLA guarantee</li>
             </ul>
-            <Link href="/contact" className="w-full bg-orange-600 text-white py-2 px-4 rounded-lg hover:bg-orange-700 transition-colors text-center block">
+            <Link to="/contact" className="w-full bg-orange-600 text-white py-2 px-4 rounded-lg hover:bg-orange-700 transition-colors text-center block">
               Contact Sales
             </Link>
           </div>
@@ -273,10 +273,10 @@ export default function AIInventoryOptimization() {
           Join leading companies using our AI inventory optimization platform to reduce costs, improve efficiency, and maximize profitability.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link href="/contact" className="bg-orange-600 text-white py-3 px-8 rounded-lg hover:bg-orange-700 transition-colors">
+          <Link to="/contact" className="bg-orange-600 text-white py-3 px-8 rounded-lg hover:bg-orange-700 transition-colors">
             Schedule Demo
           </Link>
-          <Link href="tel:+13024640950" className="bg-green-600 text-white py-3 px-8 rounded-lg hover:bg-green-700 transition-colors">
+          <Link to="tel:+13024640950" className="bg-green-600 text-white py-3 px-8 rounded-lg hover:bg-green-700 transition-colors">
             Call +1 302 464 0950
           </Link>
         </div>

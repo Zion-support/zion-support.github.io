@@ -1,6 +1,6 @@
 import React from 'react';
 import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata: Metadata = {
   title: 'Remote Work Productivity Suite - Zion Tech Group',
@@ -148,14 +148,12 @@ export default function RemoteWorkProductivitySuite() {
           Join thousands of companies that have improved their remote work productivity with our comprehensive suite.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link 
-            href="/contact" 
+          <Link to="/contact" 
             className="bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
           >
             Start Free Trial
           </Link>
-          <Link 
-            href="https://ziontechgroup.com/services/remote-work-productivity-suite" 
+          <Link to="https://ziontechgroup.com/services/remote-work-productivity-suite" 
             className="border border-green-600 text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors"
           >
             Schedule Demo

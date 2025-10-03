@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -20,7 +20,7 @@ export default function AI2026EnterpriseTransformationPage() {
         {/* Header */}
         <div className="max-w-4xl mx-auto">
           <div className="mb-8">
-            <Link href="/services" className="text-blue-600 hover:text-blue-700 font-semibold mb-4 inline-block">
+            <Link to="/services" className="text-blue-600 hover:text-blue-700 font-semibold mb-4 inline-block">
               ← Back to Services
             </Link>
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -294,7 +294,7 @@ export default function AI2026EnterpriseTransformationPage() {
           <section>
             <h2 className="text-3xl font-bold text-gray-900 mb-8">Related AI Services</h2>
             <div className="grid md:grid-cols-3 gap-6">
-              <Link href="/services/ai-data-analytics" className="group">
+              <Link to="/services/ai-data-analytics" className="group">
                 <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow border border-gray-200">
                   <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
                     AI Data Analytics
@@ -305,7 +305,7 @@ export default function AI2026EnterpriseTransformationPage() {
                   <div className="text-blue-600 font-semibold">Learn More →</div>
                 </div>
               </Link>
-              <Link href="/services/ai-workflow-automation" className="group">
+              <Link to="/services/ai-workflow-automation" className="group">
                 <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow border border-gray-200">
                   <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
                     AI Workflow Automation
@@ -316,7 +316,7 @@ export default function AI2026EnterpriseTransformationPage() {
                   <div className="text-blue-600 font-semibold">Learn More →</div>
                 </div>
               </Link>
-              <Link href="/services/ai-virtual-assistant" className="group">
+              <Link to="/services/ai-virtual-assistant" className="group">
                 <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow border border-gray-200">
                   <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
                     AI Virtual Assistant

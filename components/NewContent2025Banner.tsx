@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function NewContent2025Banner() {
   return (
@@ -19,7 +19,7 @@ export default function NewContent2025Banner() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-          <Link href="/blog/ai-2025-enterprise-automation-revolution" className="group">
+          <Link to="/blog/ai-2025-enterprise-automation-revolution" className="group">
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 border border-white/20">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
@@ -43,7 +43,7 @@ export default function NewContent2025Banner() {
             </div>
           </Link>
 
-          <Link href="/blog/ai-2025-multimodal-integration-guide" className="group">
+          <Link to="/blog/ai-2025-multimodal-integration-guide" className="group">
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 border border-white/20">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
@@ -67,7 +67,7 @@ export default function NewContent2025Banner() {
             </div>
           </Link>
 
-          <Link href="/case-studies/ai-2025-enterprise-transformation-success" className="group">
+          <Link to="/case-studies/ai-2025-enterprise-transformation-success" className="group">
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 border border-white/20">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
@@ -94,14 +94,12 @@ export default function NewContent2025Banner() {
 
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/blog"
+            <Link to="/blog"
               className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors shadow-lg"
             >
               Explore All Content
             </Link>
-            <Link
-              href="/case-studies"
+            <Link to="/case-studies"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors"
             >
               View Success Stories

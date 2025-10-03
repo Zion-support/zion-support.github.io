@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function New2026ContentBreakthroughBanner() {
   return (
@@ -32,8 +32,7 @@ export default function New2026ContentBreakthroughBanner() {
               <div className="text-2xl font-extrabold text-purple-400">$50M+</div>
               <div className="text-gray-400 text-xs">Annual Savings</div>
             </div>
-            <Link 
-              href="/blog/ai-2026-advanced-autonomous-operations"
+            <Link to="/blog/ai-2026-advanced-autonomous-operations"
               className="block w-full bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300 text-center text-sm"
             >
               Read Article →
@@ -51,8 +50,7 @@ export default function New2026ContentBreakthroughBanner() {
               <div className="text-2xl font-extrabold text-cyan-400">1000x</div>
               <div className="text-gray-400 text-xs">Processing Speed</div>
             </div>
-            <Link 
-              href="/blog/ai-2026-quantum-computing-breakthrough"
+            <Link to="/blog/ai-2026-quantum-computing-breakthrough"
               className="block w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300 text-center text-sm"
             >
               Explore Quantum AI →
@@ -70,8 +68,7 @@ export default function New2026ContentBreakthroughBanner() {
               <div className="text-2xl font-extrabold text-green-400">300%</div>
               <div className="text-gray-400 text-xs">ROI Achieved</div>
             </div>
-            <Link 
-              href="/blog/ai-2026-enterprise-automation-revolution"
+            <Link to="/blog/ai-2026-enterprise-automation-revolution"
               className="block w-full bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-400 hover:to-blue-500 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300 text-center text-sm"
             >
               Learn More →
@@ -89,8 +86,7 @@ export default function New2026ContentBreakthroughBanner() {
               <div className="text-2xl font-extrabold text-orange-400">$75M</div>
               <div className="text-gray-400 text-xs">Annual Savings</div>
             </div>
-            <Link 
-              href="/case-studies/ai-2026-revolutionary-automation-success"
+            <Link to="/case-studies/ai-2026-revolutionary-automation-success"
               className="block w-full bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-400 hover:to-red-500 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300 text-center text-sm"
             >
               View Case Study →
@@ -122,14 +118,12 @@ export default function New2026ContentBreakthroughBanner() {
             </div>
           </div>
           <div className="text-center">
-            <Link 
-              href="/blog/ai-2026-advanced-autonomous-operations"
+            <Link to="/blog/ai-2026-advanced-autonomous-operations"
               className="inline-block bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 mr-4"
             >
               Read Full Article →
             </Link>
-            <Link 
-              href="/contact"
+            <Link to="/contact"
               className="inline-block border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-3 px-8 rounded-xl transition-all duration-300"
             >
               Get Free Assessment

@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 const January2026RevolutionaryBreakthroughsBanner = () => {
   return (
@@ -76,20 +76,17 @@ const January2026RevolutionaryBreakthroughsBanner = () => {
         {/* Call to Action */}
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link 
-              href="/content/blog/ai-2026-january-revolutionary-breakthroughs"
+            <Link to="/content/blog/ai-2026-january-revolutionary-breakthroughs"
               className="bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-black font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               📖 Read Full Article
             </Link>
-            <Link 
-              href="/content/case-studies/ai-2026-january-revolutionary-breakthroughs-5-billion-success"
+            <Link to="/content/case-studies/ai-2026-january-revolutionary-breakthroughs-5-billion-success"
               className="bg-gradient-to-r from-green-500 to-teal-500 hover:from-green-600 hover:to-teal-600 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               💼 View Case Study
             </Link>
-            <Link 
-              href="/contact"
+            <Link to="/contact"
               className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               🚀 Get Started

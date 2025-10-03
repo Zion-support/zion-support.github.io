@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function March2027QuantumSingularityBanner() {
   return (
@@ -71,14 +71,12 @@ export default function March2027QuantumSingularityBanner() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link 
-              href="/blog/ai-2027-march-quantum-singularity-breakthrough"
+            <Link to="/blog/ai-2027-march-quantum-singularity-breakthrough"
               className="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
             >
               Discover Quantum Singularity
             </Link>
-            <Link 
-              href="/case-studies/ai-2027-march-quantum-singularity-1-trillion-success"
+            <Link to="/case-studies/ai-2027-march-quantum-singularity-1-trillion-success"
               className="bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 transform hover:scale-105 backdrop-blur-sm border border-white/20"
             >
               View $1T Success Story

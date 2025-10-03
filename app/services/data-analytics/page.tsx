@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { 
   BarChart3, 
   PieChart, 
@@ -218,10 +218,10 @@ export default function DataAnalyticsPage() {
                 Transform your data into actionable insights with advanced analytics, predictive modeling, and business intelligence solutions
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="#services" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+                <Link to="#services" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
                   Explore Services
                 </Link>
-                <Link href="/contact" className="border border-white text-white hover:bg-white hover:text-blue-900 px-8 py-3 rounded-lg font-semibold transition-colors">
+                <Link to="/contact" className="border border-white text-white hover:bg-white hover:text-blue-900 px-8 py-3 rounded-lg font-semibold transition-colors">
                   Get Quote
                 </Link>
               </div>
@@ -315,7 +315,7 @@ export default function DataAnalyticsPage() {
                       </p>
                     </div>
 
-                    <Link href={service.link} className="mt-4 w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg font-semibold transition-colors flex items-center justify-center">
+                    <Link to={service.link} className="mt-4 w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg font-semibold transition-colors flex items-center justify-center">
                       Learn More
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </Link>
@@ -336,7 +336,7 @@ export default function DataAnalyticsPage() {
               Let our data experts help you unlock the full potential of your data with advanced analytics and business intelligence solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors">
+              <Link to="/contact" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors">
                 Start Your Analytics Project
               </Link>
               <a href="tel:+13024640950" className="border border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3 rounded-lg font-semibold transition-colors">

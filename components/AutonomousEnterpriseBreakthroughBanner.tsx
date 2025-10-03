@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { ArrowRight, Cpu, Brain, Zap, Target } from 'lucide-react';
 
 const AutonomousEnterpriseBreakthroughBanner: React.FC = () => {

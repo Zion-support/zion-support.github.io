@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function NewServicesHero() {
   return (
@@ -20,7 +20,7 @@ export default function NewServicesHero() {
             <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Content Optimization Suite</h3>
             <p className="text-gray-600 text-sm mb-4">Generate, optimize, and analyze content with AI-powered tools.</p>
             <div className="text-blue-600 font-semibold text-sm mb-3">Starting from $199/month</div>
-            <Link href="/services/ai-content-optimization-suite" className="text-blue-600 hover:text-blue-800 font-medium text-sm">
+            <Link to="/services/ai-content-optimization-suite" className="text-blue-600 hover:text-blue-800 font-medium text-sm">
               Learn More →
             </Link>
           </div>
@@ -32,7 +32,7 @@ export default function NewServicesHero() {
             <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Workflow Automation Platform</h3>
             <p className="text-gray-600 text-sm mb-4">Automate complex business processes with intelligent workflows.</p>
             <div className="text-green-600 font-semibold text-sm mb-3">Starting from $299/month</div>
-            <Link href="/services/ai-workflow-automation-platform" className="text-green-600 hover:text-green-800 font-medium text-sm">
+            <Link to="/services/ai-workflow-automation-platform" className="text-green-600 hover:text-green-800 font-medium text-sm">
               Learn More →
             </Link>
           </div>
@@ -44,7 +44,7 @@ export default function NewServicesHero() {
             <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Customer Insights Platform</h3>
             <p className="text-gray-600 text-sm mb-4">Transform customer data into actionable business insights.</p>
             <div className="text-purple-600 font-semibold text-sm mb-3">Starting from $399/month</div>
-            <Link href="/services/ai-customer-insights-platform" className="text-purple-600 hover:text-purple-800 font-medium text-sm">
+            <Link to="/services/ai-customer-insights-platform" className="text-purple-600 hover:text-purple-800 font-medium text-sm">
               Learn More →
             </Link>
           </div>
@@ -56,7 +56,7 @@ export default function NewServicesHero() {
             <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Financial Analysis Platform</h3>
             <p className="text-gray-600 text-sm mb-4">Advanced financial analysis and forecasting with AI.</p>
             <div className="text-orange-600 font-semibold text-sm mb-3">Starting from $599/month</div>
-            <Link href="/services/ai-financial-analysis-platform" className="text-orange-600 hover:text-orange-800 font-medium text-sm">
+            <Link to="/services/ai-financial-analysis-platform" className="text-orange-600 hover:text-orange-800 font-medium text-sm">
               Learn More →
             </Link>
           </div>

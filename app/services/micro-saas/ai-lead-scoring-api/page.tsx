@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'AI Lead Scoring API — Micro SaaS | Zion Tech Group',
@@ -78,7 +78,7 @@ export default function Page() {
       </div>
 
       <div className="flex flex-col sm:flex-row gap-3">
-        <Link href="/contact" className="inline-flex items-center justify-center px-5 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700">Request Demo</Link>
+        <Link to="/contact" className="inline-flex items-center justify-center px-5 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700">Request Demo</Link>
         <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center justify-center px-5 py-3 border rounded-md hover:bg-gray-50">Email: kleber@ziontechgroup.com</a>
         <a href="tel:+13024640950" className="inline-flex items-center justify-center px-5 py-3 border rounded-md hover:bg-gray-50">Call: +1 302 464 0950</a>
       </div>
@@ -104,7 +104,7 @@ export default function AILeadScoringAPIPage() {
             <span className="font-semibold text-blue-700">Pricing</span>: Starter $99/month (up to 100k events), Growth $499/month, Enterprise custom.
           </div>
           <div className="mt-6 flex gap-3">
-            <Link href="/contact" className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700">Book a Demo</Link>
+            <Link to="/contact" className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700">Book a Demo</Link>
             <a href="tel:+13024640950" className="border border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50">Call +1 302 464 0950</a>
           </div>
         </div>

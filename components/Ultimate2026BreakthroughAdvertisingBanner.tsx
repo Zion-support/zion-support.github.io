@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function Ultimate2026BreakthroughAdvertisingBanner() {
   return (
@@ -63,20 +63,17 @@ export default function Ultimate2026BreakthroughAdvertisingBanner() {
           
           {/* Call to Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/blog/ai-2026-ultimate-breakthrough-revolution"
+            <Link to="/blog/ai-2026-ultimate-breakthrough-revolution"
               className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
             >
               Read Full Breakthrough Guide →
             </Link>
-            <Link 
-              href="/case-studies/ai-2026-ultimate-breakthrough-mega-success"
+            <Link to="/case-studies/ai-2026-ultimate-breakthrough-mega-success"
               className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
             >
               View $10.2B Success Story →
             </Link>
-            <Link 
-              href="/contact"
+            <Link to="/contact"
               className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               Get Free Consultation

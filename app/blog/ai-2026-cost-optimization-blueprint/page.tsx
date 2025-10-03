@@ -1,5 +1,5 @@
 // @ts-nocheck
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'AI 2026 Cost Optimization Blueprint: 30–70% Savings without Quality Loss',

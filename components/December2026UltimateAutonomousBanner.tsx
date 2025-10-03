@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function December2026UltimateAutonomousBanner() {
   return (
@@ -52,20 +52,17 @@ export default function December2026UltimateAutonomousBanner() {
           
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Link 
-              href="/blog/ai-2026-december-ultimate-autonomous-revolution" 
+            <Link to="/blog/ai-2026-december-ultimate-autonomous-revolution" 
               className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
             >
               Read Revolution Details →
             </Link>
-            <Link 
-              href="/case-studies/ai-2026-december-ultimate-autonomous-1-trillion-success" 
+            <Link to="/case-studies/ai-2026-december-ultimate-autonomous-1-trillion-success" 
               className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
             >
               View $1T Success Story →
             </Link>
-            <Link 
-              href="/contact" 
+            <Link to="/contact" 
               className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               Start Transformation

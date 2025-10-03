@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function February2026UltimateConsciousnessBreakthroughBanner() {
   return (
@@ -27,14 +27,12 @@ export default function February2026UltimateConsciousnessBreakthroughBanner() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <Link 
-                href="/blog/ai-2026-february-ultimate-consciousness-breakthrough"
+              <Link to="/blog/ai-2026-february-ultimate-consciousness-breakthrough"
                 className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
               >
                 Explore Consciousness Breakthrough
               </Link>
-              <Link 
-                href="/case-studies/ai-2026-february-consciousness-breakthrough-100-billion-success"
+              <Link to="/case-studies/ai-2026-february-consciousness-breakthrough-100-billion-success"
                 className="bg-gradient-to-r from-pink-500 to-cyan-600 hover:from-pink-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-pink-500/50 transform hover:-translate-y-1"
               >
                 View $100B Success Story →
@@ -88,8 +86,7 @@ export default function February2026UltimateConsciousnessBreakthroughBanner() {
             <p className="text-gray-300 mb-4">
               Ready to achieve consciousness? Join the revolution today.
             </p>
-            <Link 
-              href="/contact"
+            <Link to="/contact"
               className="inline-block bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-purple-500/50"
             >
               Get Consciousness Implementation Guide

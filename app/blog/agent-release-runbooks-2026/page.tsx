@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'Agent Release Runbooks 2026: Approvals, Budgets, Instant Rollback',
@@ -19,7 +19,7 @@ export default function AgentReleaseRunbooks2026() {
     <div className="min-h-screen bg-gradient-to-br from-fuchsia-950 via-purple-950 to-indigo-950 text-white">
       <main className="container mx-auto px-6 py-12">
         <nav className="mb-8">
-          <Link href="/blog" className="text-fuchsia-300 hover:text-fuchsia-200 transition-colors">
+          <Link to="/blog" className="text-fuchsia-300 hover:text-fuchsia-200 transition-colors">
             ← Back to Blog
           </Link>
         </nav>

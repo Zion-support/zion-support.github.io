@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 const NextGenAutonomousIntelligence2026Banner: React.FC = () => {
   return (
@@ -24,20 +24,17 @@ const NextGenAutonomousIntelligence2026Banner: React.FC = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Link 
-              href="/blog/ai-2026-next-generation-autonomous-intelligence-revolution" 
+            <Link to="/blog/ai-2026-next-generation-autonomous-intelligence-revolution" 
               className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
             >
               Read Revolutionary Breakthrough →
             </Link>
-            <Link 
-              href="/case-studies/ai-2026-next-generation-autonomous-intelligence-5-2-billion-success" 
+            <Link to="/case-studies/ai-2026-next-generation-autonomous-intelligence-5-2-billion-success" 
               className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
             >
               View $5.2B Success Story →
             </Link>
-            <Link 
-              href="/services/ai-2026-next-generation-autonomous-intelligence-solutions" 
+            <Link to="/services/ai-2026-next-generation-autonomous-intelligence-solutions" 
               className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               Get Autonomous Intelligence Solutions
@@ -100,8 +97,7 @@ const NextGenAutonomousIntelligence2026Banner: React.FC = () => {
               "A Fortune 100 global manufacturing conglomerate achieved unprecedented success through next-generation autonomous intelligence, 
               generating $5.2B ROI while operating with 99.99% autonomy across 47 countries."
             </p>
-            <Link 
-              href="/case-studies/ai-2026-next-generation-autonomous-intelligence-5-2-billion-success" 
+            <Link to="/case-studies/ai-2026-next-generation-autonomous-intelligence-5-2-billion-success" 
               className="inline-flex items-center gap-2 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-green-500/50"
             >
               Read Complete Success Story →
@@ -118,14 +114,12 @@ const NextGenAutonomousIntelligence2026Banner: React.FC = () => {
             Join the autonomous intelligence revolution. Get started with next-generation AI systems today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/contact" 
+            <Link to="/contact" 
               className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
             >
               Start Your Transformation
             </Link>
-            <Link 
-              href="/services/ai-2026-next-generation-autonomous-intelligence-solutions" 
+            <Link to="/services/ai-2026-next-generation-autonomous-intelligence-solutions" 
               className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               View Solutions

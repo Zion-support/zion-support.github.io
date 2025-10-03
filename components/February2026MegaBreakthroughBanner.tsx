@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 const February2026MegaBreakthroughBanner = () => {
   return (
@@ -99,20 +99,17 @@ const February2026MegaBreakthroughBanner = () => {
         {/* Call to Action */}
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link 
-              href="/content/blog/ai-2026-february-mega-breakthrough-revolution"
+            <Link to="/content/blog/ai-2026-february-mega-breakthrough-revolution"
               className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               📖 Read Full Article
             </Link>
-            <Link 
-              href="/content/case-studies/ai-2026-february-mega-breakthrough-10-billion-success"
+            <Link to="/content/case-studies/ai-2026-february-mega-breakthrough-10-billion-success"
               className="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               💼 View Case Study
             </Link>
-            <Link 
-              href="/contact"
+            <Link to="/contact"
               className="bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               🌟 Join the Revolution

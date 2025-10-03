@@ -1,6 +1,6 @@
 import React from 'react';
 import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata: Metadata = {
   title: 'API Integration Platform | Zion Tech Group - Enterprise API Management Solutions',
@@ -213,14 +213,12 @@ export default function APIIntegrationPlatformPage() {
             Connect, manage, and monitor all your APIs from a single, powerful platform.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/contact" 
+            <Link to="/contact" 
               className="bg-indigo-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
             >
               Start Free Trial
             </Link>
-            <Link 
-              href="/pricing" 
+            <Link to="/pricing" 
               className="border border-indigo-600 text-indigo-600 px-8 py-4 rounded-lg font-semibold hover:bg-indigo-50 transition-colors"
             >
               View Pricing
@@ -265,8 +263,7 @@ export default function APIIntegrationPlatformPage() {
                 </div>
               </div>
               
-              <Link 
-                href="/contact"
+              <Link to="/contact"
                 className="inline-block w-full text-center bg-indigo-600 text-white py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
               >
                 Start Free Trial
@@ -356,8 +353,7 @@ export default function APIIntegrationPlatformPage() {
                     </li>
                   ))}
                 </ul>
-                <Link 
-                  href="/contact"
+                <Link to="/contact"
                   className={`block w-full text-center py-3 rounded-lg font-semibold transition-colors ${
                     plan.popular
                       ? 'bg-indigo-600 text-white hover:bg-indigo-700'

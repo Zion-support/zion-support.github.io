@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { ArrowRight, TrendingUp, Sparkles, Zap, Shield, Brain, Users, DollarSign, Clock, CheckCircle, Star } from 'lucide-react';
 
 // Revolutionary AI Enterprise Automation Banner
@@ -27,8 +27,7 @@ export function RevolutionaryAIEnterpriseAutomationBanner() {
             <p className="text-sm opacity-90 mb-4">
               Transform your operations with AI systems that work 24/7, making intelligent decisions and optimizing processes automatically.
             </p>
-            <Link
-              href="/blog/ai-2026-enterprise-automation-revolution"
+            <Link to="/blog/ai-2026-enterprise-automation-revolution"
               className="inline-flex items-center text-yellow-400 font-semibold hover:text-yellow-300 transition-colors"
             >
               Read Full Article →
@@ -41,8 +40,7 @@ export function RevolutionaryAIEnterpriseAutomationBanner() {
             <p className="text-sm opacity-90 mb-4">
               Achieve massive savings through intelligent automation that eliminates manual processes and optimizes resource utilization.
             </p>
-            <Link
-              href="/blog/ai-2026-enterprise-automation-revolution"
+            <Link to="/blog/ai-2026-enterprise-automation-revolution"
               className="inline-flex items-center text-yellow-400 font-semibold hover:text-yellow-300 transition-colors"
             >
               Learn Implementation →
@@ -55,8 +53,7 @@ export function RevolutionaryAIEnterpriseAutomationBanner() {
             <p className="text-sm opacity-90 mb-4">
               Self-healing AI systems that detect and resolve issues automatically, ensuring continuous operation and reliability.
             </p>
-            <Link
-              href="/blog/ai-2026-enterprise-automation-revolution"
+            <Link to="/blog/ai-2026-enterprise-automation-revolution"
               className="inline-flex items-center text-yellow-400 font-semibold hover:text-yellow-300 transition-colors"
             >
               View Case Studies →
@@ -65,8 +62,7 @@ export function RevolutionaryAIEnterpriseAutomationBanner() {
         </div>
         
         <div className="text-center">
-          <Link
-            href="/blog/ai-2026-enterprise-automation-revolution"
+          <Link to="/blog/ai-2026-enterprise-automation-revolution"
             className="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-bold py-4 px-8 rounded-xl hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 shadow-lg hover:shadow-yellow-500/50 transform hover:-translate-y-1"
           >
             <span>Explore the Revolution</span>
@@ -103,8 +99,7 @@ export function QuantumAIBreakthroughBanner() {
             <p className="text-sm opacity-90 mb-4">
               Quantum neural networks leverage superposition and entanglement to process information in ways classical computers cannot match.
             </p>
-            <Link
-              href="/blog/ai-2026-quantum-neural-networks"
+            <Link to="/blog/ai-2026-quantum-neural-networks"
               className="inline-flex items-center text-purple-300 font-semibold hover:text-purple-200 transition-colors"
             >
               Read Full Article →
@@ -117,8 +112,7 @@ export function QuantumAIBreakthroughBanner() {
             <p className="text-sm opacity-90 mb-4">
               Quantum error correction ensures reliable operation even in noisy environments, making quantum AI systems robust for enterprise applications.
             </p>
-            <Link
-              href="/blog/ai-2026-quantum-neural-networks"
+            <Link to="/blog/ai-2026-quantum-neural-networks"
               className="inline-flex items-center text-purple-300 font-semibold hover:text-purple-200 transition-colors"
             >
               Learn More →
@@ -131,8 +125,7 @@ export function QuantumAIBreakthroughBanner() {
             <p className="text-sm opacity-90 mb-4">
               Quantum systems can scale exponentially, handling complex problems that would be impossible for classical computers to solve.
             </p>
-            <Link
-              href="/blog/ai-2026-quantum-neural-networks"
+            <Link to="/blog/ai-2026-quantum-neural-networks"
               className="inline-flex items-center text-purple-300 font-semibold hover:text-purple-200 transition-colors"
             >
               Explore Applications →
@@ -141,8 +134,7 @@ export function QuantumAIBreakthroughBanner() {
         </div>
         
         <div className="text-center">
-          <Link
-            href="/blog/ai-2026-quantum-neural-networks"
+          <Link to="/blog/ai-2026-quantum-neural-networks"
             className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-indigo-600 text-white font-bold py-4 px-8 rounded-xl hover:from-purple-400 hover:to-indigo-500 transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
           >
             <span>Discover Quantum AI</span>
@@ -192,8 +184,7 @@ export function EnterpriseAutomationSuccessBanner() {
         </div>
         
         <div className="text-center">
-          <Link
-            href="/case-studies/ai-enterprise-automation-success-2026"
+          <Link to="/case-studies/ai-enterprise-automation-success-2026"
             className="inline-flex items-center gap-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-bold py-4 px-8 rounded-xl hover:from-green-400 hover:to-emerald-500 transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
           >
             <span>Read Full Case Study</span>

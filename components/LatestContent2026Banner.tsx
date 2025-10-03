@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function LatestContent2026Banner() {
   return (
@@ -10,30 +10,26 @@ export default function LatestContent2026Banner() {
             <span className="text-3xl animate-pulse">🚀</span>
             <span className="font-bold text-xl">BREAKTHROUGH 2026:</span>
             <div className="flex flex-wrap gap-3 items-center">
-              <Link 
-                href="/blog/ai-agent-swarms-enterprise-orchestration-2026" 
+              <Link to="/blog/ai-agent-swarms-enterprise-orchestration-2026" 
                 className="underline hover:text-yellow-200 font-bold text-sm bg-white/20 px-3 py-1 rounded-full"
               >
                 🐝 AI Agent Swarms: 10,000x Scale
               </Link>
               <span className="hidden md:inline text-white/60">•</span>
-              <Link 
-                href="/blog/quantum-enhanced-ai-enterprise-breakthrough-2026" 
+              <Link to="/blog/quantum-enhanced-ai-enterprise-breakthrough-2026" 
                 className="underline hover:text-yellow-200 font-bold text-sm bg-white/20 px-3 py-1 rounded-full"
               >
                 ⚛️ Quantum AI: 1000x Performance
               </Link>
               <span className="hidden md:inline text-white/60">•</span>
-              <Link 
-                href="/case-studies/ai-agent-swarms-manufacturing-success-2026" 
+              <Link to="/case-studies/ai-agent-swarms-manufacturing-success-2026" 
                 className="underline hover:text-yellow-200 text-sm bg-white/20 px-3 py-1 rounded-full"
               >
                 $2.5B Manufacturing Success
               </Link>
             </div>
           </div>
-          <Link
-            href="/content-hub"
+          <Link to="/content-hub"
             className="bg-white text-purple-700 hover:bg-yellow-400 hover:text-purple-900 px-6 py-3 rounded-full text-sm font-bold whitespace-nowrap transition-all shadow-lg"
           >
             Explore All Content →

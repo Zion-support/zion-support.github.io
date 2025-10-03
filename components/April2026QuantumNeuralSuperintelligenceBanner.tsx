@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 const April2026QuantumNeuralSuperintelligenceBanner = () => {
   return (
@@ -44,14 +44,12 @@ const April2026QuantumNeuralSuperintelligenceBanner = () => {
 
           {/* CTA buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/blog/ai-2026-april-quantum-neural-superintelligence"
+            <Link to="/blog/ai-2026-april-quantum-neural-superintelligence"
               className="bg-gradient-to-r from-pink-400 to-violet-500 text-black px-8 py-4 rounded-full font-bold text-lg hover:from-pink-300 hover:to-violet-400 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               Explore Superintelligence →
             </Link>
-            <Link 
-              href="/enterprise"
+            <Link to="/enterprise"
               className="bg-white/20 backdrop-blur-sm border-2 border-white/30 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/30 transition-all duration-300 transform hover:scale-105"
             >
               Unlock Superintelligence

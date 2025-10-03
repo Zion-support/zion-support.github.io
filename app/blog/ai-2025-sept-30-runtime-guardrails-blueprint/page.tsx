@@ -1,6 +1,6 @@
 // @ts-nocheck
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function RuntimeGuardrailsBlueprint2025() {
   return (
@@ -45,12 +45,12 @@ export default function RuntimeGuardrailsBlueprint2025() {
           <h3 className="text-xl font-bold text-emerald-300 mb-2">Related</h3>
           <ul className="list-disc pl-6 text-gray-300 space-y-1">
             <li>
-              <Link href="/blog/ai-2026-safe-autonomy-scorecards" className="text-emerald-300 hover:text-emerald-200">
+              <Link to="/blog/ai-2026-safe-autonomy-scorecards" className="text-emerald-300 hover:text-emerald-200">
                 AI 2026 Safe Autonomy Scorecards
               </Link>
             </li>
             <li>
-              <Link href="/blog/ai-governance-real-time-2026" className="text-emerald-300 hover:text-emerald-200">
+              <Link to="/blog/ai-governance-real-time-2026" className="text-emerald-300 hover:text-emerald-200">
                 Real‑Time AI Governance 2026
               </Link>
             </li>

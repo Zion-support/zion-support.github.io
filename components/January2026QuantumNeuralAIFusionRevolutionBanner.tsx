@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 const January2026QuantumNeuralAIFusionRevolutionBanner: React.FC = () => {
   return (
@@ -106,22 +106,19 @@ const January2026QuantumNeuralAIFusionRevolutionBanner: React.FC = () => {
         {/* Call to action */}
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link 
-              href="/content/blog/ai-2026-quantum-neural-fusion-breakthrough"
+            <Link to="/content/blog/ai-2026-quantum-neural-fusion-breakthrough"
               className="bg-gradient-to-r from-cyan-600 to-teal-600 hover:from-cyan-500 hover:to-teal-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               ⚛️ Read Quantum-Neural Guide
             </Link>
             
-            <Link 
-              href="/content/case-studies/ai-2026-global-tech-quantum-neural-127b-success"
+            <Link to="/content/case-studies/ai-2026-global-tech-quantum-neural-127b-success"
               className="bg-gradient-to-r from-teal-600 to-emerald-600 hover:from-teal-500 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               💎 View $127B Success Story
             </Link>
             
-            <Link 
-              href="/content/services/ai-2026-quantum-neural-fusion-consulting"
+            <Link to="/content/services/ai-2026-quantum-neural-fusion-consulting"
               className="bg-gradient-to-r from-emerald-600 to-cyan-600 hover:from-emerald-500 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               🚀 Start Quantum-Neural Transformation

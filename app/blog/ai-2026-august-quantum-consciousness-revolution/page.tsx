@@ -1,11 +1,11 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function AI2026AugustQuantumConsciousnessRevolution() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
       <div className="mb-8">
-        <Link href="/blog" className="text-blue-600 hover:text-blue-800 mb-4 inline-block">
+        <Link to="/blog" className="text-blue-600 hover:text-blue-800 mb-4 inline-block">
           ← Back to Blog
         </Link>
         <h1 className="text-4xl font-bold text-gray-900 mb-4">
@@ -94,8 +94,7 @@ export default function AI2026AugustQuantumConsciousnessRevolution() {
             Transform your enterprise with consciousness-driven AI solutions that deliver 
             unprecedented performance and value creation.
           </p>
-          <Link 
-            href="/contact" 
+          <Link to="/contact" 
             className="bg-white text-cyan-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block"
           >
             Start Your Transformation

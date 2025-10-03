@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 const March2027QuantumConsciousnessBanner: React.FC = () => {
   return (
@@ -142,8 +142,7 @@ const March2027QuantumConsciousnessBanner: React.FC = () => {
 
         {/* Call to Action */}
         <div className="text-center">
-          <Link 
-            href="/services/quantum-consciousness-singularity"
+          <Link to="/services/quantum-consciousness-singularity"
             className="inline-block px-16 py-6 bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-white font-bold text-2xl rounded-full hover:scale-110 transition-transform duration-300 shadow-2xl"
           >
             ⚛️ Experience Quantum Consciousness ⚛️

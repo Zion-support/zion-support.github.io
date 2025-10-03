@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { ArrowRight, Brain, Zap, TrendingUp, Star } from 'lucide-react';
 
 const Revolutionary2026ContentBanner: React.FC = () => {
@@ -59,16 +59,14 @@ const Revolutionary2026ContentBanner: React.FC = () => {
           
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/blog/ai-2026-neuromorphic-computing-revolution"
+            <Link to="/blog/ai-2026-neuromorphic-computing-revolution"
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               Explore Neuromorphic AI
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
             
-            <Link 
-              href="/blog/ai-2026-quantum-machine-learning-revolution"
+            <Link to="/blog/ai-2026-quantum-machine-learning-revolution"
               className="inline-flex items-center px-8 py-4 bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white font-semibold rounded-xl border border-white/30 transition-all duration-300 transform hover:scale-105"
             >
               Discover Quantum ML

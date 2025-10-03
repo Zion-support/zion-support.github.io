@@ -1,6 +1,6 @@
 import React from 'react';
 import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata: Metadata = {
   title: 'Healthcare AI Diagnostics Platform - Zion Tech Group',
@@ -167,7 +167,7 @@ export default function HealthcareAIDiagnostics() {
               <li>• Email support</li>
               <li>• Basic reporting</li>
             </ul>
-            <Link href="/contact" className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors text-center block">
+            <Link to="/contact" className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors text-center block">
               Get Started
             </Link>
           </div>
@@ -183,7 +183,7 @@ export default function HealthcareAIDiagnostics() {
               <li>• Advanced analytics</li>
               <li>• API access</li>
             </ul>
-            <Link href="/contact" className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors text-center block">
+            <Link to="/contact" className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors text-center block">
               Get Started
             </Link>
           </div>
@@ -198,7 +198,7 @@ export default function HealthcareAIDiagnostics() {
               <li>• Custom integrations</li>
               <li>• SLA guarantee</li>
             </ul>
-            <Link href="/contact" className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors text-center block">
+            <Link to="/contact" className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors text-center block">
               Contact Sales
             </Link>
           </div>
@@ -257,10 +257,10 @@ export default function HealthcareAIDiagnostics() {
           Join leading healthcare providers using our AI diagnostics platform to improve patient care, reduce costs, and enhance clinical outcomes.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link href="/contact" className="bg-blue-600 text-white py-3 px-8 rounded-lg hover:bg-blue-700 transition-colors">
+          <Link to="/contact" className="bg-blue-600 text-white py-3 px-8 rounded-lg hover:bg-blue-700 transition-colors">
             Schedule Demo
           </Link>
-          <Link href="tel:+13024640950" className="bg-green-600 text-white py-3 px-8 rounded-lg hover:bg-green-700 transition-colors">
+          <Link to="tel:+13024640950" className="bg-green-600 text-white py-3 px-8 rounded-lg hover:bg-green-700 transition-colors">
             Call +1 302 464 0950
           </Link>
         </div>
