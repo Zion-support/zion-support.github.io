@@ -11,7 +11,6 @@ export default function NeuralSuperintelligenceBreakthrough() {
   return (
     <div className="text-left"></div>
       {/* Hero Section */}</div>
-<<<<<<< HEAD
       <section className="text-left">
         <div className="text-left">
           <div className="text-left" style={{ animationDelay: '2s' }}></div>
@@ -29,7 +28,6 @@ export default function NeuralSuperintelligenceBreakthrough() {
               🧠 The Future of AI: 1000x Processing Speed, 95% Decision Accuracy
             </p>
             <p className="text-left">
-=======
       <section className="text-left"></section>
         <div className="text-left"></div>
           <div className="text-left"></div>"
@@ -53,7 +51,6 @@ export default function NeuralSuperintelligenceBreakthrough() {
             </p>
             
             <p className="text-left"></p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-cc0a
               Experience the most significant advancement in artificial intelligence since the advent of large language models. 
               Our revolutionary Neural Superintelligence Platform delivers unprecedented capabilities that are transforming enterprise operations worldwide.
             </p>
@@ -73,7 +70,6 @@ export default function NeuralSuperintelligenceBreakthrough() {
       </section>
 
       {/* Content Section */}
-<<<<<<< HEAD
       <section className="text-left">
         <div className="text-left">
             <h3 className="text-left">🚀 The Breakthrough Technology</h2>
@@ -81,7 +77,6 @@ export default function NeuralSuperintelligenceBreakthrough() {
                 <div></div>
                   <h3 className="text-left">Meta-Cognitive AI Architecture</h3>
                   <p className="text-left">
-=======
       <section className="text-left"></section>
         <div className="text-left"></div>
           <div className="text-left"></div>
@@ -91,7 +86,6 @@ export default function NeuralSuperintelligenceBreakthrough() {
                 <div></div>
                   <h3 className="text-left">Meta-Cognitive AI Architecture</h3>"
                   <p className="text-left"></p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-cc0a
                     Our proprietary Meta-Cognitive AI system doesn't just process information—it thinks about thinking. 
                     This revolutionary approach enables:
                   </p>
@@ -103,13 +97,10 @@ export default function NeuralSuperintelligenceBreakthrough() {
                 </div>
 
                 <div></div>
-<<<<<<< HEAD
                   <h3 className="text-left">Quantum-Neural Fusion Networks</h3>
                   <p className="text-left">
-=======
                   <h3 className="text-left">Quantum-Neural Fusion Networks</h3>"
                   <p className="text-left"></p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-cc0a
                     Combining quantum computing principles with neural network architectures, our system delivers:
                   </p>
                   <ul className="text-left"></ul>
@@ -120,13 +111,10 @@ export default function NeuralSuperintelligenceBreakthrough() {
                 </div>
 
                 <div></div>
-<<<<<<< HEAD
                   <h3 className="text-left">Autonomous Operations Engine</h3>
                   <p className="text-left">
-=======
                   <h3 className="text-left">Autonomous Operations Engine</h3>"
                   <p className="text-left"></p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-cc0a
                     Achieving true enterprise autonomy with:
                   </p>
                   <ul className="text-left"></ul>
@@ -153,14 +141,11 @@ export default function NeuralSuperintelligenceBreakthrough() {
               </div>
 
             {/* CTA Section */}
-<<<<<<< HEAD
             <h3 className="text-left">Ready to Experience Neural Superintelligence?</h3>
               <p className="text-left">
-=======
             <div className="text-left"></div>
               <h3 className="text-left">Ready to Experience Neural Superintelligence?</h3>"
               <p className="text-left"></p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-cc0a
                 Transform your enterprise with the most advanced AI technology ever created. 
                 Schedule a demo to see Neural Superintelligence in action with your data.
               </p>

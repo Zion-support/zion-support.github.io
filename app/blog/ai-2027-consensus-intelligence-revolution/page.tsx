@@ -11,7 +11,6 @@ export default function ConsensusIntelligenceRevolution() {
   return (
     <div className="text-left"></div>
       {/* Header */}</div>
-<<<<<<< HEAD
       <div className="text-left">
           <span className="text-left">
             🚀 AI 2027 Consensus Intelligence Revolution
@@ -21,7 +20,6 @@ export default function ConsensusIntelligenceRevolution() {
           AI 2027: Consensus Intelligence Revolution
         </h1>
         <p className="text-left">
-=======
       <div className="text-left"></div>
         <div className="text-left"></div>
           <span className="text-left"></span>
@@ -34,7 +32,6 @@ export default function ConsensusIntelligenceRevolution() {
         </h1>
         
         <p className="text-left"></p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-cc0a
           Revolutionary consensus intelligence AI delivering <strong>1,000,000x performance improvements</strong>, 
           <strong>universal decision-making</strong>, and <strong>$50B+ ROI</strong> across enterprises worldwide.
         </p>
@@ -54,16 +51,13 @@ export default function ConsensusIntelligenceRevolution() {
       </div>
 
       {/* Key Features */}
-<<<<<<< HEAD
       <div className="text-left">
           <h3 className="text-left">🌐 Universal Consensus Intelligence</h3>
           <p className="text-left">
-=======
       <div className="text-left"></div>
         <div className="text-left"></div>
           <h3 className="text-left">🌐 Universal Consensus Intelligence</h3>"
           <p className="text-left"></p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-cc0a
             Revolutionary AI system that achieves universal consensus across all decision-making processes with 99.999% accuracy.
           </p>
           <ul className="text-left"></ul>
@@ -73,15 +67,12 @@ export default function ConsensusIntelligenceRevolution() {
             <li>• Real-time consensus building</li>
           </ul>
         </div>
-<<<<<<< HEAD
         <h3 className="text-left">🧠 Quantum Consciousness Network</h3>
           <p className="text-left">
-=======
         
         <div className="text-left"></div>
           <h3 className="text-left">🧠 Quantum Consciousness Network</h3>"
           <p className="text-left"></p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-cc0a
             Advanced quantum consciousness networks enabling instant communication and decision synchronization across all AI systems.
           </p>
           <ul className="text-left"></ul>
@@ -134,14 +125,11 @@ export default function ConsensusIntelligenceRevolution() {
         </div>
 
       {/* Call to Action */}
-<<<<<<< HEAD
       <h3 className="text-left">Ready for Universal Consensus Intelligence?</h2>
         <p className="text-left">
-=======
       <div className="text-left"></div>
         <h2 className="text-left">Ready for Universal Consensus Intelligence?</h2>"
         <p className="text-left"></p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-cc0a
           Join Fortune 10 companies achieving $50B+ ROI with universal AI consensus
         </p>
         <div className="text-left"></div>

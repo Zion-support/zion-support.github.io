@@ -16,7 +16,6 @@ export const metadata: Metadata = {
 
 export default function QuantumAIComputingBreakthrough2026() {
   return (
-<<<<<<< HEAD
     <div className="text-left">
         {/* Hero Section */}</div>
         <div className="text-left">
@@ -28,7 +27,6 @@ export default function QuantumAIComputingBreakthrough2026() {
             Quantum AI Computing Revolution
           </h1>
           <p className="text-left">
-=======
     <div className="text-left"></div>
       <div className="text-left"></div>
         {/* Hero Section */}</div>
@@ -44,7 +42,6 @@ export default function QuantumAIComputingBreakthrough2026() {
           </h1>
           
           <p className="text-left"></p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-cc0a
             Experience the most significant computing breakthrough in history: Quantum-Neural Networks 
             delivering 1000x processing speed, quantum superposition computing, and exponential 
             problem-solving capabilities that redefine the boundaries of AI.
@@ -59,19 +56,16 @@ export default function QuantumAIComputingBreakthrough2026() {
           <h2 className="text-left"></h2>
             Revolutionary Quantum Technologies
           </h2>
-<<<<<<< HEAD
           <div className="text-left">
               <div className="text-left">⚛️</div>
               <h3 className="text-left">Quantum Superposition</h3>
               <p className="text-left">
-=======
           
           <div className="text-left"></div>
             <div className="text-left"></div>
               <div className="text-left">⚛️</div>"
               <h3 className="text-left">Quantum Superposition</h3>"
               <p className="text-left"></p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-cc0a
                 Revolutionary quantum superposition allows our AI systems to exist in multiple states simultaneously, 
                 processing infinite possibilities in parallel for unprecedented computational power.
               </p>
@@ -82,17 +76,14 @@ export default function QuantumAIComputingBreakthrough2026() {
                 <li>• Exponential problem-solving</li>
               </ul>
             </div>
-<<<<<<< HEAD
             <div className="text-left">🧠</div>
               <h3 className="text-left">Quantum-Neural Fusion</h3>
               <p className="text-left">
-=======
 
             <div className="text-left"></div>
               <div className="text-left">🧠</div>"
               <h3 className="text-left">Quantum-Neural Fusion</h3>"
               <p className="text-left"></p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-cc0a
                 Breakthrough fusion of quantum computing principles with neural networks, creating 
                 hybrid systems that leverage both quantum mechanics and machine learning.
               </p>
@@ -103,17 +94,14 @@ export default function QuantumAIComputingBreakthrough2026() {
                 <li>• Neural quantum states</li>
               </ul>
             </div>
-<<<<<<< HEAD
             <div className="text-left">🌀</div>
               <h3 className="text-left">Quantum Entanglement</h3>
               <p className="text-left">
-=======
 
             <div className="text-left"></div>
               <div className="text-left">🌀</div>"
               <h3 className="text-left">Quantum Entanglement</h3>"
               <p className="text-left"></p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-cc0a
                 Quantum entanglement enables instant communication between AI systems across 
                 any distance, creating a unified quantum computing network.
               </p>
@@ -127,13 +115,11 @@ export default function QuantumAIComputingBreakthrough2026() {
         </section>
 
         {/* Performance Metrics Section */}
-<<<<<<< HEAD
         <section className="text-left">
           <h3 className="text-left">Quantum Performance Metrics</h3>
             <div className="text-left">
                 <div className="text-left">1000x</div>
                 <div className="text-left">Processing Speed Improvement</div>
-=======
         <section className="text-left"></section>
           <div className="text-left"></div>
             <h3 className="text-left">Quantum Performance Metrics</h3>"
@@ -141,7 +127,6 @@ export default function QuantumAIComputingBreakthrough2026() {
               <div className="text-left"></div>
                 <div className="text-left">1000x</div>"
                 <div className="text-left">Processing Speed Improvement</div>"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-cc0a
               </div>
               <div className="text-left">∞</div>
                 <div className="text-left">Parallel Computations</div>
@@ -160,19 +145,16 @@ export default function QuantumAIComputingBreakthrough2026() {
           <h2 className="text-left"></h2>
             Quantum AI Applications
           </h2>
-<<<<<<< HEAD
           <div className="text-left">
               <h3 className="text-left">Scientific Computing</h3>
               <ul className="text-left">
                 <li className="text-left">
-=======
           
           <div className="text-left"></div>
             <div className="text-left"></div>
               <h3 className="text-left">Scientific Computing</h3>"
               <ul className="text-left"></ul>
                 <li className="text-left"></li>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-cc0a
                   <span className="text-left">⚛️>
                   <div></div>
                     <div className="text-left">Molecular Simulation</div>
@@ -196,16 +178,13 @@ export default function QuantumAIComputingBreakthrough2026() {
               </ul>
             </div>
 
-<<<<<<< HEAD
             <h3 className="text-left">Enterprise Solutions</h3>
               <ul className="text-left">
                 <li className="text-left">
-=======
             <div className="text-left"></div>
               <h3 className="text-left">Enterprise Solutions</h3>"
               <ul className="text-left"></ul>
                 <li className="text-left"></li>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-cc0a
                   <span className="text-left">💰>
                   <div></div>
                     <div className="text-left">Financial Modeling</div>
@@ -235,49 +214,40 @@ export default function QuantumAIComputingBreakthrough2026() {
           <h2 className="text-left"></h2>
             Quantum Computing Advantages
           </h2>
-<<<<<<< HEAD
           <div className="text-left">
               <div className="text-left">⚡</div>
               <h3 className="text-left">Exponential Speed</h3>
               <p className="text-left">
-=======
           
           <div className="text-left"></div>
             <div className="text-left"></div>
               <div className="text-left">⚡</div>"
               <h3 className="text-left">Exponential Speed</h3>"
               <p className="text-left"></p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-cc0a
                 Quantum computers solve problems that would take classical computers billions of years 
                 in a matter of seconds through quantum parallelism.
               </p>
             </div>
-<<<<<<< HEAD
             <div className="text-left">🔮</div>
               <h3 className="text-left">Quantum Advantage</h3>
               <p className="text-left">
-=======
 
             <div className="text-left"></div>
               <div className="text-left">🔮</div>"
               <h3 className="text-left">Quantum Advantage</h3>"
               <p className="text-left"></p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-cc0a
                 Achieve computational advantages impossible with classical systems through 
                 quantum interference and entanglement effects.
               </p>
             </div>
-<<<<<<< HEAD
             <div className="text-left">🌊</div>
               <h3 className="text-left">Quantum Interference</h3>
               <p className="text-left">
-=======
 
             <div className="text-left"></div>
               <div className="text-left">🌊</div>"
               <h3 className="text-left">Quantum Interference</h3>"
               <p className="text-left"></p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-cc0a
                 Leverage quantum interference patterns to amplify correct solutions and 
                 cancel out incorrect ones automatically.
               </p>
@@ -289,53 +259,44 @@ export default function QuantumAIComputingBreakthrough2026() {
           <h2 className="text-left"></h2>
             Quantum Implementation Roadmap
           </h2>
-<<<<<<< HEAD
           <div className="text-left">
               <div className="text-left">🚀</div>
               <h3 className="text-left">Phase 1: Foundation (Q1 2026)</h3>
               <ul className="text-left">
-=======
           
           <div className="text-left"></div>
             <div className="text-left"></div>
               <div className="text-left">🚀</div>"
               <h3 className="text-left">Phase 1: Foundation (Q1 2026)</h3>"
               <ul className="text-left"></ul>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-cc0a
                 <li>• Quantum hardware setup</li>
                 <li>• Quantum algorithm development</li>
                 <li>• Pilot quantum applications</li>
                 <li>• Initial performance testing</li>
               </ul>
             </div>
-<<<<<<< HEAD
             <div className="text-left">⚡</div>
               <h3 className="text-left">Phase 2: Scale (Q2-Q3 2026)</h3>
               <ul className="text-left">
-=======
 
             <div className="text-left"></div>
               <div className="text-left">⚡</div>"
               <h3 className="text-left">Phase 2: Scale (Q2-Q3 2026)</h3>"
               <ul className="text-left"></ul>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-cc0a
                 <li>• Quantum-neural integration</li>
                 <li>• Enterprise deployment</li>
                 <li>• Performance optimization</li>
                 <li>• Quantum error correction</li>
               </ul>
             </div>
-<<<<<<< HEAD
             <div className="text-left">🎯</div>
               <h3 className="text-left">Phase 3: Optimize (Q4 2026)</h3>
               <ul className="text-left">
-=======
 
             <div className="text-left"></div>
               <div className="text-left">🎯</div>"
               <h3 className="text-left">Phase 3: Optimize (Q4 2026)</h3>"
               <ul className="text-left"></ul>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-cc0a
                 <li>• Full quantum advantage</li>
                 <li>• Advanced applications</li>
                 <li>• Quantum network expansion</li>
@@ -345,14 +306,11 @@ export default function QuantumAIComputingBreakthrough2026() {
         </section>
 
         {/* Call to Action Section */}
-<<<<<<< HEAD
         <section className="text-left">
           <h3 className="text-left">
-=======
         <section className="text-left"></section>
           <div className="text-left"></div>
             <h2 className="text-left"></h2>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-cc0a
               Ready to Experience Quantum Computing?
             </h2>
             <p className="text-left"></p>

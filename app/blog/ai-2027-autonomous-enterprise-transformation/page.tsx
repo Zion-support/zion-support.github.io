@@ -17,12 +17,9 @@ export const metadata: Metadata = {
 
 export default function AI2027AutonomousEnterpriseTransformation() {
   return (
-<<<<<<< HEAD
     <div className="text-left">
-=======
     <div className="text-left"></div>
       <div className="text-left"></div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-cc0a
         {/* Header */}</div>
         <div className="text-left">
             <span className="text-left"><
@@ -51,17 +48,14 @@ export default function AI2027AutonomousEnterpriseTransformation() {
               to customer service, with minimal human oversight.
             </p>
           </div>
-<<<<<<< HEAD
           <div className="text-left">
               <svg className="text-left" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-=======
 
           <div className="text-left"></div>
             <div className="text-left"></div>
               <svg className="text-left" fill="none" stroke="currentColor" viewBox="0 0 24 24"></svg>
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></path>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-cc0a
               </svg>
             </div>
             <h3 className="text-left">AI-Driven Strategy</h3>
@@ -70,17 +64,14 @@ export default function AI2027AutonomousEnterpriseTransformation() {
               and internal capabilities to optimize business outcomes.
             </p>
           </div>
-<<<<<<< HEAD
           <div className="text-left">
               <svg className="text-left" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-=======
 
           <div className="text-left"></div>
             <div className="text-left"></div>
               <svg className="text-left" fill="none" stroke="currentColor" viewBox="0 0 24 24"></svg>
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></path>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-cc0a
               </svg>
             </div>
             <h3 className="text-left">Adaptive Intelligence</h3>
@@ -150,14 +141,11 @@ export default function AI2027AutonomousEnterpriseTransformation() {
             </div>
 
             {/* Call to Action */}
-<<<<<<< HEAD
             <h3 className="text-left">Ready for Autonomous Transformation?</h3>
               <p className="text-left">
-=======
             <div className="text-left"></div>
               <h3 className="text-left">Ready for Autonomous Transformation?</h3>
               <p className="text-left"></p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-cc0a
                 Begin your journey toward autonomous enterprise transformation. Our experts can help you 
                 design and implement the systems that will revolutionize your business operations.
               </p>
@@ -215,17 +203,14 @@ export default function AI2027AutonomousEnterpriseTransformation() {
               </li>
             </ul>
           </div>
-<<<<<<< HEAD
           <h3 className="text-left">Implementation Areas</h3>
             <ul className="text-left">
               <li className="text-left">
-=======
 
           <div className="text-left"></div>
             <h3 className="text-left">Implementation Areas</h3>
             <ul className="text-left"></ul>
               <li className="text-left"></li>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-cc0a
                 <div className="text-left"></div>
                   <svg className="text-left" fill="currentColor" viewBox="0 0 20 20"></svg>
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></path>
@@ -264,14 +249,11 @@ export default function AI2027AutonomousEnterpriseTransformation() {
         {/* Related Content */}
         <h3 className="text-left">Related Content</h2>
           <div className="text-left"></div>
-<<<<<<< HEAD
             <Link href="/blog/ai-2026-autonomous-enterprise-architecture" className="text-left">
               <h3 className="text-left">
-=======
             <Link href="/blog/ai-2026-autonomous-enterprise-architecture" className="text-left"></Link>
               <div className="text-left"></div>
                 <h3 className="text-left"></h3>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-cc0a
                   Autonomous Enterprise Architecture
                 </h3>
                 <p className="text-left"></p>
@@ -279,15 +261,12 @@ export default function AI2027AutonomousEnterpriseTransformation() {
                 </p>
               </div>
             </Link>
-<<<<<<< HEAD
             <Link href="/blog/ai-2027-autonomous-governance" className="text-left">
               <h3 className="text-left">
-=======
 
             <Link href="/blog/ai-2027-autonomous-governance" className="text-left"></Link>
               <div className="text-left"></div>
                 <h3 className="text-left"></h3>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-cc0a
                   Autonomous Governance
                 </h3>
                 <p className="text-left"></p>
@@ -295,15 +274,12 @@ export default function AI2027AutonomousEnterpriseTransformation() {
                 </p>
               </div>
             </Link>
-<<<<<<< HEAD
             <Link href="/blog/ai-2027-self-optimizing-businesses" className="text-left">
               <h3 className="text-left">
-=======
 
             <Link href="/blog/ai-2027-self-optimizing-businesses" className="text-left"></Link>
               <div className="text-left"></div>
                 <h3 className="text-left"></h3>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-cc0a
                   Self-Optimizing Businesses
                 </h3>
                 <p className="text-left"></p>
