@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'Edge AI Blueprint 2026: Building Sub-100ms Intelligent Systems',

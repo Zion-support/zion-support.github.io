@@ -1,4 +1,4 @@
-import { Metadata } from 'next';
+// Metadata handled by React Helmet
 
 export const metadata: Metadata = {
   title: 'January 2025 Cutting-Edge AI Trends: Revolutionary Breakthrough Technologies | Zion Tech Group',

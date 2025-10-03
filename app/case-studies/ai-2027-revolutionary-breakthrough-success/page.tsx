@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: '$1.2B AI Revolutionary Breakthrough Success - Zion Tech Group',

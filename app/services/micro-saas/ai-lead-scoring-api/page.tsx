@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'AI Lead Scoring API — Micro SaaS | Zion Tech Group',
@@ -88,7 +88,7 @@ export default function Page() {
 }
 
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function AILeadScoringAPIPage() {
   return (

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Metadata } from 'next';
+// Metadata handled by React Helmet
 
 export const metadata: Metadata = {
   title: '🤖 Autonomous Enterprise Operations 2026: Self-Managing AI Systems That Run Your Business',

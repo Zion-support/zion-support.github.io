@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'AI 2028 Mega Transformation Success: $200M ROI Case Study - Zion Tech Group',

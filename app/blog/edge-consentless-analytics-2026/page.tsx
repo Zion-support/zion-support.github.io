@@ -1,6 +1,6 @@
 // @ts-nocheck
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'Edge Analytics 2026: Consent‑Safe Insights — Zion Tech Group',

@@ -1,6 +1,6 @@
 import React from 'react';
-import Link from 'next/link';
-import { Metadata } from 'next';
+import { Link } from 'react-router-dom';
+// Metadata handled by React Helmet
 
 export const metadata: Metadata = {
   title: 'AI Business Intelligence 2025: Advanced Analytics & Insights Platform',

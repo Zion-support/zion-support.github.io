@@ -1,6 +1,6 @@
 import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'AI Agent Observability 2025: Metrics, Traces, and Safety Signals | Zion Tech Group',

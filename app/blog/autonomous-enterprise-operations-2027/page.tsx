@@ -1,5 +1,5 @@
-import { Metadata } from 'next';
-import Link from 'next/link';
+// Metadata handled by React Helmet
+import { Link } from 'react-router-dom';
 
 export const metadata: Metadata = {
   title: 'Autonomous Enterprise Operations 2027: Complete Business Automation - Zion Tech Group',

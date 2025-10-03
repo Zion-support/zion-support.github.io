@@ -1,6 +1,6 @@
 import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import { 
   Brain, Bot, Cpu, Eye, MessageSquare, FileText, 
   BarChart3, Shield, Zap, Target, Lightbulb, Rocket,

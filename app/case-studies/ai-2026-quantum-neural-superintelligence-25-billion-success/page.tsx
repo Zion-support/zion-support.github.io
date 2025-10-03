@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { ArrowRight, Zap, TrendingUp, DollarSign, Users, Target, Award, Brain } from 'lucide-react';
 
 export const metadata = {

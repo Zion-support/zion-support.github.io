@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'GenAI Routing v1 (2025): Tiered Models + Semantic Caches',

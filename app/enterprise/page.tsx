@@ -8,7 +8,7 @@ export default function EnterpriseSolutionsPage() {
 }
 
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'Enterprise Solutions - Zion Tech Group',

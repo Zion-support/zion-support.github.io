@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
 	title: 'Autonomous Infrastructure 2025: Self‑Healing, Self‑Optimizing, Self‑Scaling',

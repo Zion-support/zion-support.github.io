@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'GenAI Routing Quality Tiers Q4 2025: Predictable Cost, Stable UX',
