@@ -9,10 +9,10 @@ const DocumentationPage: React.FC  = () => {
       description: "Quick start guides and tutorials to help you get up and running with our solutions.","
       icon: "🚀","
       links: [,
-        { title: "Quick Start Guide", href: "/docs/quick-start" },"
-        { title: "Installation Guide", href: "/docs/installation" },"
-        { title: "First Steps Tutorial", href: "/docs/first-steps" },"
-        { title: "Basic Configuration", href: "/docs/configuration" }"
+        { title: "Quick Start Guide", href="/docs/quick-start" },"
+        { title: "Installation Guide", href="/docs/installation" },"
+        { title: "First Steps Tutorial", href="/docs/first-steps" },"
+        { title: "Basic Configuration", href="/docs/configuration" }"
       ]
     },
     {
@@ -20,10 +20,10 @@ const DocumentationPage: React.FC  = () => {
       description: "Comprehensive API reference and integration guides for developers.","
       icon: "🔌","
       links: [,
-        { title: "API Reference", href: "/docs/api-reference" },"
-        { title: "Authentication", href: "/docs/authentication" },"
-        { title: "Rate Limits", href: "/docs/rate-limits" },"
-        { title: "SDK Downloads", href: "/docs/sdk" }"
+        { title: "API Reference", href="/docs/api-reference" },"
+        { title: "Authentication", href="/docs/authentication" },"
+        { title: "Rate Limits", href="/docs/rate-limits" },"
+        { title: "SDK Downloads", href="/docs/sdk" }"
       ]
     },
     {
@@ -31,10 +31,10 @@ const DocumentationPage: React.FC  = () => {
       description: "Step-by-step guides for using our platform features and capabilities.","
       icon: "📖","
       links: [,
-        { title: "Dashboard Guide", href: "/docs/dashboard" },"
-        { title: "Analytics Setup", href: "/docs/analytics" },"
-        { title: "Automation Workflows", href: "/docs/workflows" },"
-        { title: "Integration Setup", href: "/docs/integrations" }"
+        { title: "Dashboard Guide", href="/docs/dashboard" },"
+        { title: "Analytics Setup", href="/docs/analytics" },"
+        { title: "Automation Workflows", href="/docs/workflows" },"
+        { title: "Integration Setup", href="/docs/integrations" }"
       ]
     },
     {
@@ -42,10 +42,10 @@ const DocumentationPage: React.FC  = () => {
       description: "Resources and tools for developers building with our platform.","
       icon: "👨‍💻","
       links: [,
-        { title: "Code Examples", href: "/docs/examples" },"
-        { title: "Best Practices", href: "/docs/best-practices" },"
-        { title: "Testing Guide", href: "/docs/testing" },"
-        { title: "Troubleshooting", href: "/docs/troubleshooting" }"
+        { title: "Code Examples", href="/docs/examples" },"
+        { title: "Best Practices", href="/docs/best-practices" },"
+        { title: "Testing Guide", href="/docs/testing" },"
+        { title: "Troubleshooting", href="/docs/troubleshooting" }"
       ]
     },
     {
@@ -53,10 +53,10 @@ const DocumentationPage: React.FC  = () => {
       description: "Security guidelines, compliance information, and best practices.","
       icon: "🔒","
       links: [,
-        { title: "Security Overview", href: "/docs/security" },"
-        { title: "Data Privacy", href: "/docs/privacy" },"
-        { title: "Compliance Guide", href: "/docs/compliance" },"
-        { title: "Security Best Practices", href: "/docs/security-best-practices" }"
+        { title: "Security Overview", href="/docs/security" },"
+        { title: "Data Privacy", href="/docs/privacy" },"
+        { title: "Compliance Guide", href="/docs/compliance" },"
+        { title: "Security Best Practices", href="/docs/security-best-practices" }"
       ]
     },
     {
@@ -64,10 +64,10 @@ const DocumentationPage: React.FC  = () => {
       description: "Get help, connect with the community, and find additional resources.","
       icon: "🤝","
       links: [,
-        { title: "Support Center", href: "/docs/support" },"
-        { title: "Community Forum", href: "/docs/community" },"
-        { title: "FAQ", href: "/docs/faq" },"
-        { title: "Contact Support", href: "/contact" }"
+        { title: "Support Center", href="/docs/support" },"
+        { title: "Community Forum", href="/docs/community" },"
+        { title: "FAQ", href="/docs/faq" },"
+        { title: "Contact Support", href="/contact" }"
       ]
     }
   ];

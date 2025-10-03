@@ -257,7 +257,7 @@ const AIWorkflowAutomation: React.FC: ()  => {,,,
       <Helmet >
         <title >AI Workflow Automation - Zion Tech Group | Transform Your Business Processes</title>
         <meta name: "description",";,"
-  content: "Revolutionary AI workflow automation that reduces costs by 75%, increases efficiency by 10x, and eliminates manual errors. Enterprise-grade security and 24/7 operations." /><meta name: "keywords" content ="AI workflow automation, business process automation, intelligent automation, workflow optimization, enterprise automation" /><link rel: "canonical" href: "https://ziontechgroup.com/services/ai-workflow-automation/>",";,"
+  content: "Revolutionary AI workflow automation that reduces costs by 75%, increases efficiency by 10x, and eliminates manual errors. Enterprise-grade security and 24/7 operations." /><meta name: "keywords" content ="AI workflow automation, business process automation, intelligent automation, workflow optimization, enterprise automation" /><link rel: "canonical" href="https://ziontechgroup.com/services/ai-workflow-automation/>",";,"
   content: "Revolutionary AI workflow automation that reduces costs by 75%, increases efficiency by 10x, and eliminates manual errors. Enterprise-grade security and 24/7 operations.","
         />
         <meta name: "keywords" content ="AI workflow automation, business process automation, intelligent automation, workflow optimization, enterprise automation" />","
@@ -266,43 +266,43 @@ const AIWorkflowAutomation: React.FC: ()  => {,,,
 
       <Header />
       
-      <main className: "min-h-screen bg-white">","
+      <main className="min-h-screen bg-white">","
         {/* Hero Section */}
-        <section className: "bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white py-20">";,"
-          <div className: "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
-            <div className: "text-center">";,"
-              <h1 className: "text-5xl md: text-7xl font-bold mb-6">",";,"
-  AI Workflow <span className: "bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Automation</span>";,"
+        <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white py-20"
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
+            <div className="text-center"
+              <h1 className="text-5xl md: text-7xl font-bold mb-6">",";,"
+  AI Workflow <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Automation</span>";,"
               </h1>
-              <p className: "text-xl md: text-2xl text-blue-100 max-w-4xl mx-auto mb-8">",";,"
+              <p className="text-xl md: text-2xl text-blue-100 max-w-4xl mx-auto mb-8">",";,"
   Transform your business processes with intelligent automation that reduces costs by 75%, 
                 increases efficiency by 10x, and eliminates manual errors.
               </p>
-              <div className: "flex flex-col sm: flex-row gap-4 justify-center">","
-        <section className: "bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white py-20">","
-          <div className: "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
-            <div className: "text-center">","
-              <h1 className: "text-5xl md: text-7xl font-bold mb-6">",";,"
-  AI Workflow <span className: "bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Automation</span>","
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">","
+        <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white py-20">","
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
+            <div className="text-center">","
+              <h1 className="text-5xl md: text-7xl font-bold mb-6">",";,"
+  AI Workflow <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Automation</span>","
               </h1>
-              <p className: "text-xl md: text-2xl text-blue-100 max-w-4xl mx-auto mb-8">",";,"
+              <p className="text-xl md: text-2xl text-blue-100 max-w-4xl mx-auto mb-8">",";,"
   Transform your business processes with intelligent automation that reduces costs by 75%, 
                 increases efficiency by 10x, and eliminates manual errors.
               </p>
-              <div className: "flex flex-col sm: flex-row gap-4 justify-center">","
-                <a href: "/contact",";,"
-  className: "inline-flex items-center px-8 py-4 bg-blue-600 hover: bg-blue-700 text-white font-semibold rounded-lg transition-colors","
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">","
+                <a href="/contact",";,"
+  className="inline-flex items-center px-8 py-4 bg-blue-600 hover: bg-blue-700 text-white font-semibold rounded-lg transition-colors","
                 >
-                  <Phone className: "w-5 h-5 mr-2/>";,"
-                  <Phone className: "w-5 h-5 mr-2" />",";,"
+                  <Phone className="w-5 h-5 mr-2/>";,"
+                  <Phone className="w-5 h-5 mr-2" />",";,"
   Schedule Demo
                 </a>
-                <a href: "#pricing",";,"
-  className: "inline-flex items-center px-8 py-4 border-2 border-white text-white hover: bg-white hover:text-blue-900 font-semibold rounded-lg transition-colors","
+                <a href="#pricing",";,"
+  className="inline-flex items-center px-8 py-4 border-2 border-white text-white hover: bg-white hover:text-blue-900 font-semibold rounded-lg transition-colors","
                 >
                   View Pricing
-                  <ArrowRight className: "w-5 h-5 ml-2/>";,"
-                  <ArrowRight className: "w-5 h-5 ml-2" />","
+                  <ArrowRight className="w-5 h-5 ml-2/>";,"
+                  <ArrowRight className="w-5 h-5 ml-2" />","
                 </a>
               </div>
             </div>
@@ -310,97 +310,97 @@ const AIWorkflowAutomation: React.FC: ()  => {,,,
         </section>
 
         {/* Key Benefits */}
-        <section className: "py-16 bg-gray-50">";,"
-          <div className: "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
-            <div className: "text-center mb-12">";,"
-              <h2 className: "text-4xl font-bold text-gray-900 mb-4">";,"
-        <section className: "py-16 bg-gray-50">","
-          <div className: "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
-            <div className: "text-center mb-12">","
-              <h2 className: "text-4xl font-bold text-gray-900 mb-4">",";,"
+        <section className="py-16 bg-gray-50"
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
+            <div className="text-center mb-12"
+              <h2 className="text-4xl font-bold text-gray-900 mb-4"
+        <section className="py-16 bg-gray-50">","
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
+            <div className="text-center mb-12">","
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">",";,"
   Why Choose Our AI Workflow Automation?
               </h2>
-              <p className: "text-xl text-gray-600 max-w-3xl mx-auto">",";,"
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">",";,"
   Our platform delivers measurable results through cutting-edge AI technology and proven methodologies.
               </p>
             </div>
 
-            <div className: "grid md: grid-cols-3 gap-8">","
-              <div className: "text-center">";,"
-                <div className: "inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">";,"
-                  <TrendingUp className: "w-8 h-8 text-blue-600/>";,"
-            <div className: "grid md: grid-cols-3 gap-8">","
-              <div className: "text-center">","
-                <div className: "inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">","
-                  <TrendingUp className: "w-8 h-8 text-blue-600" />","
+            <div className="grid md: grid-cols-3 gap-8">","
+              <div className="text-center"
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4"
+                  <TrendingUp className="w-8 h-8 text-blue-600/>";,"
+            <div className="grid md: grid-cols-3 gap-8">","
+              <div className="text-center">","
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">","
+                  <TrendingUp className="w-8 h-8 text-blue-600" />","
                 </div>
-                <h3 className: "text-2xl font-bold text-gray-900 mb-2">75% Cost Reduction</h3>","
-                <p className: "text-gray-600">Average operational cost savings across all implementations</p>","
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">75% Cost Reduction</h3>","
+                <p className="text-gray-600">Average operational cost savings across all implementations</p>","
               </div>
-              <div className: "text-center">";,"
-                <div className: "inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">";,"
-                  <Zap className: "w-8 h-8 text-green-600/>";,"
-              <div className: "text-center">","
-                <div className: "inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">","
-                  <Zap className: "w-8 h-8 text-green-600" />","
+              <div className="text-center"
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4"
+                  <Zap className="w-8 h-8 text-green-600/>";,"
+              <div className="text-center">","
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">","
+                  <Zap className="w-8 h-8 text-green-600" />","
                 </div>
-                <h3 className: "text-2xl font-bold text-gray-900 mb-2">10x Efficiency Gain</h3>","
-                <p className: "text-gray-600">Dramatic improvement in process speed and accuracy</p>","
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">10x Efficiency Gain</h3>","
+                <p className="text-gray-600">Dramatic improvement in process speed and accuracy</p>","
               </div>
-              <div className: "text-center">";,"
-                <div className: "inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4">";,"
-                  <Shield className: "w-8 h-8 text-purple-600/>";,"
-              <div className: "text-center">","
-                <div className: "inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4">","
-                  <Shield className: "w-8 h-8 text-purple-600" />","
+              <div className="text-center"
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4"
+                  <Shield className="w-8 h-8 text-purple-600/>";,"
+              <div className="text-center">","
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4">","
+                  <Shield className="w-8 h-8 text-purple-600" />","
                 </div>
-                <h3 className: "text-2xl font-bold text-gray-900 mb-2">99.9% Uptime</h3>","
-                <p className: "text-gray-600">Enterprise-grade reliability with guaranteed SLA</p>","
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">99.9% Uptime</h3>","
+                <p className="text-gray-600">Enterprise-grade reliability with guaranteed SLA</p>","
               </div>
             </div>
           </div>
         </section>
 
         {/* Features */}
-        <section className: "py-20">";,"
-          <div className: "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
-            <div className: "text-center mb-16">";,"
-              <h2 className: "text-4xl font-bold text-gray-900 mb-4">";,"
-        <section className: "py-20">","
-          <div className: "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
-            <div className: "text-center mb-16">","
-              <h2 className: "text-4xl font-bold text-gray-900 mb-4">",";,"
+        <section className="py-20"
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
+            <div className="text-center mb-16"
+              <h2 className="text-4xl font-bold text-gray-900 mb-4"
+        <section className="py-20">","
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
+            <div className="text-center mb-16">","
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">",";,"
   Powerful Features for Enterprise Success
               </h2>
-              <p className: "text-xl text-gray-600 max-w-3xl mx-auto">",";,"
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">",";,"
   Comprehensive AI-powered capabilities designed to transform your business operations.
               </p>
             </div>
 
-            <div className: "grid md: grid-cols-2 lg:grid-cols-3 gap-8">","
+            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">","
               {features.map((feature, index) => {
                 const Icon: feature.icon;,,,
   return (
-                  <div key: {index} className: "bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">","
-                    <div className: "inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-lg mb-4">";,"
-                      <Icon className: "w-6 h-6 text-blue-600/>";,"
+                  <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">","
+                    <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-lg mb-4"
+                      <Icon className="w-6 h-6 text-blue-600/>";,"
                     </div>
-                    <h3 className: "text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>";"
-                    <p className: "text-gray-600 mb-4">{feature.description}</p>";"
-                    <div className: "inline-flex items-center text-green-600 font-semibold text-sm">";,"
-                      <CheckCircle className: "w-4 h-4 mr-1/>";,"
-            <div className: "grid md: grid-cols-2 lg:grid-cols-3 gap-8">","
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>";"
+                    <p className="text-gray-600 mb-4">{feature.description}</p>";"
+                    <div className="inline-flex items-center text-green-600 font-semibold text-sm"
+                      <CheckCircle className="w-4 h-4 mr-1/>";,"
+            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">","
               {features.map((feature, index) => {
                 const Icon: feature.icon;,,,
   return (
-                  <div key: {index} className: "bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">","
-                    <div className: "inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-lg mb-4">","
-                      <Icon className: "w-6 h-6 text-blue-600" />","
+                  <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">","
+                    <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-lg mb-4">","
+                      <Icon className="w-6 h-6 text-blue-600" />","
                     </div>
-                    <h3 className: "text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>"
-                    <p className: "text-gray-600 mb-4">{feature.description}</p>"
-                    <div className: "inline-flex items-center text-green-600 font-semibold text-sm">","
-                      <CheckCircle className: "w-4 h-4 mr-1" />","
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>"
+                    <p className="text-gray-600 mb-4">{feature.description}</p>"
+                    <div className="inline-flex items-center text-green-600 font-semibold text-sm">","
+                      <CheckCircle className="w-4 h-4 mr-1" />","
                       {feature.benefit}
                     </div>
                   </div>
@@ -411,52 +411,52 @@ const AIWorkflowAutomation: React.FC: ()  => {,,,
         </section>
 
         {/* Pricing */}
-        <section id: "pricing" className="py-20 bg-gray-50">";,"
-          <div className: "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
-            <div className: "text-center mb-16">";,"
-              <h2 className: "text-4xl font-bold text-gray-900 mb-4">";,"
-        <section id: "pricing" className ="py-20 bg-gray-50">","
-          <div className: "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
-            <div className: "text-center mb-16">","
-              <h2 className: "text-4xl font-bold text-gray-900 mb-4">",";,"
+        <section id="pricing" className="py-20 bg-gray-50"
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
+            <div className="text-center mb-16"
+              <h2 className="text-4xl font-bold text-gray-900 mb-4"
+        <section id="pricing" className ="py-20 bg-gray-50">","
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
+            <div className="text-center mb-16">","
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">",";,"
   Transparent Pricing for Every Business Size
               </h2>
-              <p className: "text-xl text-gray-600 max-w-3xl mx-auto">",";,"
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">",";,"
   Choose the plan that fits your needs. All plans include our core AI automation features.
               </p>
             </div>
 
-            <div className: "grid md: grid-cols-3 gap-8">","
-            <div className: "grid md: grid-cols-3 gap-8">","
+            <div className="grid md: grid-cols-3 gap-8">","
+            <div className="grid md: grid-cols-3 gap-8">","
               {pricing.map((plan, index) => (
-                <div key: {index} className: {`bg-white rounded-2xl shadow-lg p-8 ${plan.popular ? 'ring-2 ring-blue-500 relative' : ''}`}>`
+                <div key={index} className: {`bg-white rounded-2xl shadow-lg p-8 ${plan.popular ? 'ring-2 ring-blue-500 relative' : ''}`}>`
                   {plan.popular && (
-                    <div className: "absolute -top-4 left-1/2 transform -translate-x-1/2">","
-                      <span className: "bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold">",";,"
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">","
+                      <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold">",";,"
   Most Popular
                       </span>
                     </div>
                   )}
-                  <div className: "text-center mb-8">","
-                    <h3 className: "text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>"
-                    <div className: "flex items-center justify-center mb-2">","
-                      <span className: "text-4xl font-bold text-gray-900">{plan.price}</span>"
-                      <span className: "text-gray-600 ml-1">{plan.period}</span>"
+                  <div className="text-center mb-8">","
+                    <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>"
+                    <div className="flex items-center justify-center mb-2">","
+                      <span className="text-4xl font-bold text-gray-900">{plan.price}</span>"
+                      <span className="text-gray-600 ml-1">{plan.period}</span>"
                     </div>
-                    <p className: "text-gray-600">{plan.description}</p>"
+                    <p className="text-gray-600">{plan.description}</p>"
                   </div>
-                  <ul className: "space-y-4 mb-8">","
+                  <ul className="space-y-4 mb-8">","
                     {plan.features.map((feature, featureIndex) => (
-                      <li key: {featureIndex} className: "flex items-center">";,"
-                        <CheckCircle className: "w-5 h-5 text-green-500 mr-3 flex-shrink-0/>";,"
-                        <span className: "text-gray-700">{feature}</span>";"
-                      <li key: {featureIndex} className: "flex items-center">","
-                        <CheckCircle className: "w-5 h-5 text-green-500 mr-3 flex-shrink-0" />","
-                        <span className: "text-gray-700">{feature}</span>"
+                      <li key={featureIndex} className="flex items-center"
+                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0/>";,"
+                        <span className="text-gray-700">{feature}</span>";"
+                      <li key={featureIndex} className="flex items-center">","
+                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />","
+                        <span className="text-gray-700">{feature}</span>"
                       </li>
                     ))}
                   </ul>
-                  <a href: "/contact",";,"
+                  <a href="/contact",";,"
   className: {,,
 `w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${`
 plan.popular
@@ -471,73 +471,73 @@ plan.popular
               ))}
             </div>
 
-            <div className: "text-center mt-12">","
-              <p className: "text-gray-600 mb-4">Need a custom solution?</p>","
-              <a href: "/contact",";,"
-  className: "inline-flex items-center text-blue-600 hover: text-blue-700 font-semibold","
+            <div className="text-center mt-12">","
+              <p className="text-gray-600 mb-4">Need a custom solution?</p>","
+              <a href="/contact",";,"
+  className="inline-flex items-center text-blue-600 hover: text-blue-700 font-semibold","
               >
                 Contact our Enterprise Team
-                <ArrowRight className: "w-4 h-4 ml-1/>";,"
-                <ArrowRight className: "w-4 h-4 ml-1" />","
+                <ArrowRight className="w-4 h-4 ml-1/>";,"
+                <ArrowRight className="w-4 h-4 ml-1" />","
               </a>
             </div>
           </div>
         </section>
 
         {/* Case Studies */}
-        <section className: "py-20">";,"
-          <div className: "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
-            <div className: "text-center mb-16">";,"
-              <h2 className: "text-4xl font-bold text-gray-900 mb-4">";,"
-        <section className: "py-20">","
-          <div className: "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
-            <div className: "text-center mb-16">","
-              <h2 className: "text-4xl font-bold text-gray-900 mb-4">",";,"
+        <section className="py-20"
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
+            <div className="text-center mb-16"
+              <h2 className="text-4xl font-bold text-gray-900 mb-4"
+        <section className="py-20">","
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
+            <div className="text-center mb-16">","
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">",";,"
   Real-World Success Stories
               </h2>
-              <p className: "text-xl text-gray-600 max-w-3xl mx-auto">",";,"
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">",";,"
   See how leading organizations have transformed their operations with our AI workflow automation.
               </p>
             </div>
 
-            <div className: "grid lg: grid-cols-3 gap-8">","
+            <div className="grid lg: grid-cols-3 gap-8">","
               {caseStudies.map((study, index) => (
-                <div key: {index} className: "bg-white p-8 rounded-xl shadow-lg border border-gray-200">";,"
-                  <h3 className: "text-xl font-bold text-gray-900 mb-4">{study.title}</h3>";"
-                  <div className: "mb-6">";,"
-                    <h4 className: "font-semibold text-gray-900 mb-2">Challenge: </h4>","
-                    <p className: "text-gray-600 text-sm">{study.challenge}</p>";"
+                <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200"
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">{study.title}</h3>";"
+                  <div className="mb-6"
+                    <h4 className="font-semibold text-gray-900 mb-2">Challenge: </h4>","
+                    <p className="text-gray-600 text-sm">{study.challenge}</p>";"
                   </div>
-                  <div className: "mb-6">";,"
-                    <h4 className: "font-semibold text-gray-900 mb-2">Solution: </h4>","
-                    <p className: "text-gray-600 text-sm">{study.solution}</p>";"
+                  <div className="mb-6"
+                    <h4 className="font-semibold text-gray-900 mb-2">Solution: </h4>","
+                    <p className="text-gray-600 text-sm">{study.solution}</p>";"
                   </div>
                   <div >
-                    <h4 className: "font-semibold text-gray-900 mb-2">Results: </h4>","
-                    <ul className: "space-y-1">";,"
+                    <h4 className="font-semibold text-gray-900 mb-2">Results: </h4>","
+                    <ul className="space-y-1"
                       {study.results.map((result, resultIndex) => (
-                        <li key: {resultIndex} className: "flex items-center text-sm">";,"
-                          <CheckCircle className: "w-4 h-4 text-green-500 mr-2 flex-shrink-0/>";,"
-                          <span className: "text-gray-700">{result}</span>";"
-            <div className: "grid lg: grid-cols-3 gap-8">","
+                        <li key={resultIndex} className="flex items-center text-sm"
+                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0/>";,"
+                          <span className="text-gray-700">{result}</span>";"
+            <div className="grid lg: grid-cols-3 gap-8">","
               {caseStudies.map((study, index) => (
-                <div key: {index} className: "bg-white p-8 rounded-xl shadow-lg border border-gray-200">","
-                  <h3 className: "text-xl font-bold text-gray-900 mb-4">{study.title}</h3>"
-                  <div className: "mb-6">","
-                    <h4 className: "font-semibold text-gray-900 mb-2">Challenge: </h4>","
-                    <p className: "text-gray-600 text-sm">{study.challenge}</p>"
+                <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200">","
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">{study.title}</h3>"
+                  <div className="mb-6">","
+                    <h4 className="font-semibold text-gray-900 mb-2">Challenge: </h4>","
+                    <p className="text-gray-600 text-sm">{study.challenge}</p>"
                   </div>
-                  <div className: "mb-6">","
-                    <h4 className: "font-semibold text-gray-900 mb-2">Solution: </h4>","
-                    <p className: "text-gray-600 text-sm">{study.solution}</p>"
+                  <div className="mb-6">","
+                    <h4 className="font-semibold text-gray-900 mb-2">Solution: </h4>","
+                    <p className="text-gray-600 text-sm">{study.solution}</p>"
                   </div>
                   <div >
-                    <h4 className: "font-semibold text-gray-900 mb-2">Results: </h4>","
-                    <ul className: "space-y-1">","
+                    <h4 className="font-semibold text-gray-900 mb-2">Results: </h4>","
+                    <ul className="space-y-1">","
                       {study.results.map((result, resultIndex) => (
-                        <li key: {resultIndex} className: "flex items-center text-sm">","
-                          <CheckCircle className: "w-4 h-4 text-green-500 mr-2 flex-shrink-0" />","
-                          <span className: "text-gray-700">{result}</span>"
+                        <li key={resultIndex} className="flex items-center text-sm">","
+                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />","
+                          <span className="text-gray-700">{result}</span>"
                         </li>
                       ))}
                     </ul>
@@ -549,38 +549,38 @@ plan.popular
         </section>
 
         {/* Testimonials */}
-        <section className: "py-20 bg-gray-50">";,"
-          <div className: "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
-            <div className: "text-center mb-16">";,"
-              <h2 className: "text-4xl font-bold text-gray-900 mb-4">";,"
-        <section className: "py-20 bg-gray-50">","
-          <div className: "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
-            <div className: "text-center mb-16">","
-              <h2 className: "text-4xl font-bold text-gray-900 mb-4">",";,"
+        <section className="py-20 bg-gray-50"
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
+            <div className="text-center mb-16"
+              <h2 className="text-4xl font-bold text-gray-900 mb-4"
+        <section className="py-20 bg-gray-50">","
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
+            <div className="text-center mb-16">","
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">",";,"
   What Our Clients Say
               </h2>
-              <p className: "text-xl text-gray-600 max-w-3xl mx-auto">",";,"
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">",";,"
   Join hundreds of satisfied customers who have transformed their operations with our AI solutions.
               </p>
             </div>
 
-            <div className: "grid md: grid-cols-3 gap-8">","
-            <div className: "grid md: grid-cols-3 gap-8">","
+            <div className="grid md: grid-cols-3 gap-8">","
+            <div className="grid md: grid-cols-3 gap-8">","
               {testimonials.map((testimonial, index) => (
-                <div key: {index} className: "bg-white p-8 rounded-xl shadow-lg border border-gray-200">","
-                  <div className: "flex items-center mb-4">","
+                <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200">","
+                  <div className="flex items-center mb-4">","
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key: {i} className: "w-5 h-5 text-yellow-400 fill-current/>";,"
-                      <Star key: {i} className: "w-5 h-5 text-yellow-400 fill-current" />","
+                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current/>";,"
+                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />","
                     ))}
                   </div>
-                  <blockquote className: "text-gray-700 mb-6 italic">","
+                  <blockquote className="text-gray-700 mb-6 italic">","
                     "{testimonial.content}"
                   </blockquote>
                   <div >
-                    <div className: "font-semibold text-gray-900">{testimonial.name}</div>"
-                    <div className: "text-gray-600 text-sm">{testimonial.role}</div>"
-                    <div className: "text-blue-600 text-sm font-medium">{testimonial.company}</div>"
+                    <div className="font-semibold text-gray-900">{testimonial.name}</div>"
+                    <div className="text-gray-600 text-sm">{testimonial.role}</div>"
+                    <div className="text-blue-600 text-sm font-medium">{testimonial.company}</div>"
                   </div>
                 </div>
               ))}
@@ -589,32 +589,32 @@ plan.popular
         </section>
 
         {/* CTA Section */}
-        <section className: "py-20 bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white">";,"
-          <div className: "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">","
-            <h2 className: "text-4xl font-bold mb-6">";,"
-        <section className: "py-20 bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white">","
-          <div className: "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">","
-            <h2 className: "text-4xl font-bold mb-6">",";,"
+        <section className="py-20 bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white"
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">","
+            <h2 className="text-4xl font-bold mb-6"
+        <section className="py-20 bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white">","
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">","
+            <h2 className="text-4xl font-bold mb-6">",";,"
   Ready to Transform Your Business Operations?
             </h2>
-            <p className: "text-xl text-blue-100 max-w-3xl mx-auto mb-8">",";,"
+            <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-8">",";,"
   Join hundreds of companies already using our AI workflow automation to achieve unprecedented efficiency and cost savings.
             </p>
-            <div className: "flex flex-col sm: flex-row gap-4 justify-center">","
-            <div className: "flex flex-col sm: flex-row gap-4 justify-center">","
-              <a href: "/contact",";,"
-  className: "inline-flex items-center px-8 py-4 bg-blue-600 hover: bg-blue-700 text-white font-semibold rounded-lg transition-colors","
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">","
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">","
+              <a href="/contact",";,"
+  className="inline-flex items-center px-8 py-4 bg-blue-600 hover: bg-blue-700 text-white font-semibold rounded-lg transition-colors","
               >
-                <Phone className: "w-5 h-5 mr-2/>";,"
-                <Phone className: "w-5 h-5 mr-2" />",";,"
+                <Phone className="w-5 h-5 mr-2/>";,"
+                <Phone className="w-5 h-5 mr-2" />",";,"
   Schedule Free Consultation
               </a>
-              <a href: "/case-studies",";,"
-  className: "inline-flex items-center px-8 py-4 border-2 border-white text-white hover: bg-white hover:text-blue-900 font-semibold rounded-lg transition-colors","
+              <a href="/case-studies",";,"
+  className="inline-flex items-center px-8 py-4 border-2 border-white text-white hover: bg-white hover:text-blue-900 font-semibold rounded-lg transition-colors","
               >
                 View Case Studies
-                <ArrowRight className: "w-5 h-5 ml-2/>";,"
-                <ArrowRight className: "w-5 h-5 ml-2" />","
+                <ArrowRight className="w-5 h-5 ml-2/>";,"
+                <ArrowRight className="w-5 h-5 ml-2" />","
               </a>
             </div>
           </div>
