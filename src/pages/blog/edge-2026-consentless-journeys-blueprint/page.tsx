@@ -1,27 +1,24 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
-export default function ConsentlessJourneysBlueprint2026(): React.JSX.Element {
+export default function ConsentlessJourneysBlueprint(): React.JSX.Element {
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
       <Helmet>
-        <title>Edge 2026: Consentless Journeys Blueprint</title>
-        <meta name="description" content="Production-ready consentless journeys blueprint with KPI-linked scorecards and rollback triggers." />
+        <title>2026: Consentless Journeys Blueprint</title>
+        <meta name="description" content="Blueprint for building consentless user journey analytics with privacy-first design." />
         <link rel="canonical" href="https://ziontechgroup.com/blog/edge-2026-consentless-journeys-blueprint" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Edge 2026: Consentless Journeys Blueprint</h1>
-          <p className="text-zion-slate-light mb-8">Production-ready consentless journeys blueprint with KPI-linked scorecards and rollback triggers.</p>
-          <div className="prose prose-invert max-w-3xl">
-            <p>
-              Design consentless journeys safely with production-ready blueprints featuring KPI-linked scorecards,
-              budgeted actions, and deterministic rollback mechanisms.
-            </p>
-          </div>
+      <div className="container mx-auto px-6 py-16">
+        <h1 className="text-4xl md:text-5xl font-bold mb-4">2026: Consentless Journeys Blueprint</h1>
+        <p className="text-zion-slate-light mb-8">Blueprint for building consentless user journey analytics with privacy-first design.</p>
+        <div className="prose prose-invert max-w-3xl">
+          <p>
+            Build comprehensive user journey analytics without compromising privacy, using advanced consentless tracking techniques.
+          </p>
         </div>
       </div>
-    </>
+    </div>
   );
 }
