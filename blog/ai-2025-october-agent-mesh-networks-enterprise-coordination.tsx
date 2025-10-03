@@ -322,14 +322,14 @@ spec:
             </p>
             <div className="flex flex-wrap gap-4">
               <a 
-                href="/contact" 
+                href="/contact"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-colors"
               >
                 Schedule Consultation
                 <span>→</span>
               </a>
               <a 
-                href="/services/ai-solutions" 
+                href="/services/ai-solutions"
                 className="inline-flex items-center gap-2 px-6 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-colors"
               >
                 Explore AI Services

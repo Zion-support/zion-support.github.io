@@ -385,13 +385,13 @@ export default function AI2025OctoberAutonomousSecurityOperationsCenter() {
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <a 
-              href="/contact" 
+              href="/contact"
               className="bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 text-white font-bold px-8 py-4 rounded-lg transition-all transform hover:scale-105"
             >
               Schedule Security Assessment
             </a>
             <a 
-              href="/services" 
+              href="/services"
               className="bg-slate-800 hover:bg-slate-700 text-red-400 font-bold px-8 py-4 rounded-lg border border-red-500/30 transition-all"
             >
               Explore Security Services

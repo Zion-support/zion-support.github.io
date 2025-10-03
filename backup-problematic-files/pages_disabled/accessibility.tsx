@@ -67,7 +67,6 @@ const Accessibility: React.FC<AccessibilityProps> = ({ className }) => {
           <div className="container mx-auto px-4">
             <motion.div
               className="text-center mb-16"
-
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -89,7 +88,6 @@ const Accessibility: React.FC<AccessibilityProps> = ({ className }) => {
                   <motion.div
                     key={index}
                     className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
-
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -130,7 +128,6 @@ const Accessibility: React.FC<AccessibilityProps> = ({ className }) => {
           <div className="container mx-auto px-4">
             <motion.div
               className="text-center mb-16"
-
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -152,7 +149,6 @@ const Accessibility: React.FC<AccessibilityProps> = ({ className }) => {
                   <motion.div
                     key={index}
                     className="bg-gray-50 p-6 rounded-xl text-center hover:shadow-lg transition-all duration-300"
-
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -189,7 +185,6 @@ const Accessibility: React.FC<AccessibilityProps> = ({ className }) => {
           <div className="container mx-auto px-4">
             <motion.div
               className="text-center mb-16"
-
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -243,7 +238,6 @@ const Accessibility: React.FC<AccessibilityProps> = ({ className }) => {
           <div className="container mx-auto px-4">
             <motion.div
               className="text-center mb-16"
-
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -263,7 +257,6 @@ const Accessibility: React.FC<AccessibilityProps> = ({ className }) => {
                 <motion.div
                   key={index}
                   className="bg-gray-50 p-6 rounded-xl hover:shadow-lg transition-all duration-300"
-
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -294,7 +287,6 @@ const Accessibility: React.FC<AccessibilityProps> = ({ className }) => {
             <div className="max-w-4xl mx-auto">
               <motion.div
                 className="bg-white p-8 rounded-xl shadow-lg"
-
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
@@ -404,7 +396,6 @@ const Accessibility: React.FC<AccessibilityProps> = ({ className }) => {
                     <div className="flex items-start space-x-4">"
                       <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">"
                         <IconComponent className="w-8 h-8 text-white" />"
-
                       <div className="flex-1">"
                         <h3 className="text-2xl font-bold text-gray-900 mb-3">"
 </h3>
@@ -416,7 +407,6 @@ const Accessibility: React.FC<AccessibilityProps> = ({ className }) => {
                             <li key={idx} className="flex items-center text-sm text-gray-600">"
 </li>"
                               <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />"
-
                             </li>
                         </ul>
                 );
@@ -425,7 +415,6 @@ const Accessibility: React.FC<AccessibilityProps> = ({ className }) => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">"
                     className="bg-gray-50 p-6 rounded-xl text-center hover:shadow-lg transition-all duration-300""
                     <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">"
-
                     <h3 className="text-lg font-bold text-gray-900 mb-2">"
                     <p className="text-gray-600 text-sm mb-4">"
                     <div className="space-y-2">"
@@ -437,7 +426,6 @@ const Accessibility: React.FC<AccessibilityProps> = ({ className }) => {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                     <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">"
                       <Zap className="w-6 h-6 text-white" />"
-
                       <div className="flex items-center justify-between mb-2">"
                         <h3 className="text-xl font-bold text-gray-900">"
                         <span className="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded">"
@@ -445,7 +433,6 @@ const Accessibility: React.FC<AccessibilityProps> = ({ className }) => {
               ))}
                   className="bg-gray-50 p-6 rounded-xl hover:shadow-lg transition-all duration-300""
                   <h3 className="text-lg font-bold text-gray-900 mb-4">"
-
             <div className="max-w-4xl mx-auto">"
                 className="bg-white p-8 rounded-xl shadow-lg""
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">"

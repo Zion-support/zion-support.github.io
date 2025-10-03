@@ -71,7 +71,7 @@ export default function SpaceTech2026() {
           
           <div className="bg-blue-50 border-l-4 border-blue-500 p-4 mb-6">
             <p className="text-blue-800 font-semibold">
-              "AI is not just enhancing space missions—it's fundamentally redefining what's possible in space exploration." 
+              "AI is not just enhancing space missions—it's fundamentally redefining what's possible in space exploration."
               - Dr. Maria Rodriguez, Space Systems AI Lab
             </p>
           </div>

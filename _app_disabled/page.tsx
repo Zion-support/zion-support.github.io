@@ -85,13 +85,13 @@ export default function HomePage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                href="/solutions" 
+                href="/solutions"
                 className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 px-8 rounded-lg text-lg transition-colors duration-300"
               >
                 Explore Solutions
               </Link>
               <Link 
-                href="/contact" 
+                href="/contact"
                 className="border-2 border-white hover:bg-white hover:text-blue-600 font-bold py-3 px-8 rounded-lg text-lg transition-colors duration-300"
               >
                 Get Started
@@ -174,13 +174,13 @@ export default function HomePage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
-              href="/contact" 
+              href="/contact"
               className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 px-8 rounded-lg text-lg transition-colors duration-300"
             >
               Start Your Project
             </Link>
             <Link 
-              href="/research" 
+              href="/research"
               className="border-2 border-white hover:bg-white hover:text-blue-600 font-bold py-3 px-8 rounded-lg text-lg transition-colors duration-300"
             >
               View Our Research

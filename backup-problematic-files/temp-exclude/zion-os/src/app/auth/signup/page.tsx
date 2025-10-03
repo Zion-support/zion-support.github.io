@@ -204,10 +204,10 @@ export default function SignUpPage() {;
 }className="w-full px-4 py-3 bg-zinc-700/50 border border-zinc-600/50 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Confirm your password" /> </div> <button type="submit" disabled= {
   isLoading 
 }className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-600/50 text-white font-semibold py-3 px-4 rounded-lg transition-colors duration-200" > {
-  isLoading ? "Creating Account..." : "Start Free Trial" 
+  isLoading ? "Creating Account..." : "Start Free Trial"
 }</button> </form> <div className="mt-6 text-center"> <p className="text-zinc-400 text-sm"> Already have an account? {
-  " " 
+  " "
 }<Link href="/auth/signin" className="text-blue-400 hover:text-blue-300 font-medium"> Sign in </Link> </p> </div> </div> <div className="text-center"> <p className="text-zinc-500 text-xs"> By signing up, you agree to our {
-  " " 
+  " "
 }<Link href="/terms" className="text-zinc-400 hover:text-zinc-300"> Terms of Service Privacy Policy </Link> </p> </div> </div> </div>) 
 }

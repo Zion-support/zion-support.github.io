@@ -209,13 +209,13 @@ export default function AIQuantumHybridComputing2025() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
-                href="/contact" 
+                href="/contact"
                 className="bg-gradient-to-r from-violet-500 to-fuchsia-600 hover:from-violet-400 hover:to-fuchsia-500 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300"
               >
                 Schedule Quantum Consultation
               </a>
               <a 
-                href="/blog" 
+                href="/blog"
                 className="border-2 border-violet-500 text-violet-400 hover:bg-violet-500 hover:text-white font-bold py-3 px-8 rounded-xl transition-all duration-300"
               >
                 Explore More AI Insights

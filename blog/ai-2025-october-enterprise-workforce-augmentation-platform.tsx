@@ -379,13 +379,13 @@ export default function AI2025OctoberEnterpriseWorkforceAugmentationPlatform() {
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <a 
-              href="/contact" 
+              href="/contact"
               className="bg-gradient-to-r from-violet-500 to-fuchsia-500 hover:from-violet-600 hover:to-fuchsia-600 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-violet-500/50"
             >
               Schedule Consultation
             </a>
             <a 
-              href="/services/workforce-augmentation" 
+              href="/services/workforce-augmentation"
               className="bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-xl border border-violet-500/30 transition-all duration-300"
             >
               Explore Services

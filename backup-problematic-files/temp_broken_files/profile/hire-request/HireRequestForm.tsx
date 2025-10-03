@@ -27,15 +27,11 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
 
         </div>;"
         <DialogFooter className="pt-4">;"
-
           <Button ;"
             type="button" ;""
             variant="outline" ;"
             onClick={onClose}"
             className="border-zion-purple text-zion-purple hover:bg-zion-purple/10";"
-
-
-
               'Submit Request';
 
 

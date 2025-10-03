@@ -64,13 +64,13 @@ export default function AIOrchestrationMegaAgentsPage() {
           
           <div className="flex flex-wrap gap-4">
             <Link 
-              href="/contact" 
+              href="/contact"
               className="bg-yellow-400 text-purple-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-300 transition-all transform hover:scale-105 shadow-xl"
             >
               🚀 Start Your Mega-Agent Transformation
             </Link>
             <Link 
-              href="/services/ai-business-intelligence-2025" 
+              href="/services/ai-business-intelligence-2025"
               className="bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/30 transition-all border-2 border-white"
             >
               Explore AI Services →
@@ -108,7 +108,7 @@ export default function AIOrchestrationMegaAgentsPage() {
           
           <div className="bg-white rounded-xl shadow-lg p-8 mb-6 border border-gray-200">
             <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              AI Orchestration Mega-Agents are advanced AI systems that function as "conductors" 
+              AI Orchestration Mega-Agents are advanced AI systems that function as "conductors"
               of agent orchestras — coordinating, managing, and optimizing the work of hundreds 
               or thousands of specialized AI agents to achieve complex business objectives.
             </p>
@@ -413,13 +413,13 @@ export default function AIOrchestrationMegaAgentsPage() {
 
             <div className="flex flex-wrap gap-4">
               <Link 
-                href="/contact" 
+                href="/contact"
                 className="bg-yellow-400 text-purple-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-300 transition-all transform hover:scale-105 shadow-xl"
               >
                 🚀 Schedule Strategy Session
               </Link>
               <Link 
-                href="/case-studies" 
+                href="/case-studies"
                 className="bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/30 transition-all border-2 border-white"
               >
                 View Success Stories →

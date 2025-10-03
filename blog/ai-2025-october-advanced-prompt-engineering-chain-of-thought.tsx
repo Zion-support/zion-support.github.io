@@ -292,13 +292,13 @@ export default function AdvancedPromptEngineeringCoT2025() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <a 
-                    href="/contact" 
+                    href="/contact"
                     className="px-8 py-4 bg-gradient-to-r from-violet-600 to-fuchsia-600 hover:from-violet-500 hover:to-fuchsia-500 text-white font-semibold rounded-lg transition-all shadow-lg hover:shadow-violet-500/50 text-center"
                   >
                     Schedule Prompt Engineering Consultation
                   </a>
                   <a 
-                    href="/services" 
+                    href="/services"
                     className="px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-lg transition-all border border-white/20 text-center"
                   >
                     Explore AI Services

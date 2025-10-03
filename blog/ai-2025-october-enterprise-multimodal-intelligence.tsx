@@ -238,13 +238,13 @@ export default function AIEnterpriseMultimodalIntelligence2025() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
-                href="/contact" 
+                href="/contact"
                 className="bg-gradient-to-r from-rose-500 to-orange-600 hover:from-rose-400 hover:to-orange-500 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300"
               >
                 Schedule Consultation
               </a>
               <a 
-                href="/case-studies" 
+                href="/case-studies"
                 className="border-2 border-rose-500 text-rose-400 hover:bg-rose-500 hover:text-white font-bold py-3 px-8 rounded-xl transition-all duration-300"
               >
                 View Success Stories

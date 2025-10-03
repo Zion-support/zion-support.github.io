@@ -313,13 +313,13 @@ export default function NeuromorphicAIBrainInspiredComputing2026() {
           </p>
           <div className="flex flex-wrap gap-4">
             <a 
-              href="/contact" 
+              href="/contact"
               className="bg-gradient-to-r from-teal-500 to-emerald-600 hover:from-teal-400 hover:to-emerald-500 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300 shadow-lg"
             >
               Discuss Neuromorphic Solutions
             </a>
             <a 
-              href="/services" 
+              href="/services"
               className="border-2 border-teal-500 text-teal-400 hover:bg-teal-500 hover:text-white font-bold py-3 px-8 rounded-xl transition-all duration-300"
             >
               Our AI Services

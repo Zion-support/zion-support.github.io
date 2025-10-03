@@ -147,7 +147,6 @@ export default function ComprehensiveServicesShowcase2025V2() {
           
           <motion.div 
             className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
-
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             className="grid md:grid - cols - 2 lg:grid - cols - 4 gap - 8";

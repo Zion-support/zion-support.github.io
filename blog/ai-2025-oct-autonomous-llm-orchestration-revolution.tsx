@@ -433,7 +433,7 @@ const AutonomousLLMOrchestrationRevolution: React.FC = () => {
             <li>✅ 90-day results guarantee</li>
           </ul>
           <a 
-            href="/contact" 
+            href="/contact"
             className="inline-block bg-white text-blue-600 px-8 py-3 rounded-lg font-bold hover:bg-blue-50 transition-colors"
           >
             Schedule Your Strategy Session →

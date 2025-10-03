@@ -62,7 +62,6 @@ onApprove?: (id: string) => Promise<void>;
 onReject?: (id: string) => Promise<void> ;
 </void>"
 case 'rejected': ;"}return (<Card> <CardHeader className="pb-2" > <div className="flex justify-between items-start" > <div> </p>) ;"
-
 }</div> isUnderDispute && disputeStatus && (<DisputeStatusBadge status= {;)"
   disputeStatus ;"}/>) ";"}</div> </div>  </div>  <CardFooter className="pt-2 flex justify-between" > <div> {';
 

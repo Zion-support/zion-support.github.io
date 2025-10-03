@@ -10,8 +10,8 @@ const RAGOptimizationMastery = () => {
       <Helmet>
         <title>RAG Optimization Mastery 2025 — Achieve 95% Answer Accuracy with Sub-100ms Latency</title>
         <meta 
-          name="description" 
-          content="Master RAG system optimization with proven techniques from production systems. Achieve 95% answer accuracy, sub-100ms retrieval latency, and 90% cost reduction. Complete guide with implementation patterns, benchmark results, and production strategies." 
+          name="description"
+          content="Master RAG system optimization with proven techniques from production systems. Achieve 95% answer accuracy, sub-100ms retrieval latency, and 90% cost reduction. Complete guide with implementation patterns, benchmark results, and production strategies."
         />
         <meta name="keywords" content="RAG optimization, retrieval augmented generation, vector search, LLM optimization, semantic search, knowledge retrieval, AI systems, production RAG" />
         <link rel="canonical" href="https://ziontechgroup.com/blog/ai-2025-oct-20-rag-optimization-mastery" />

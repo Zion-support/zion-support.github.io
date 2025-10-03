@@ -212,13 +212,13 @@ const AIAgentMeshNetworks2025: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a 
-                href="/contact" 
+                href="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 text-center"
               >
                 Schedule Architecture Consultation
               </a>
               <a 
-                href="/services/ai-agent-systems" 
+                href="/services/ai-agent-systems"
                 className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-cyan-900 font-bold py-4 px-8 rounded-lg transition-all duration-300 text-center"
               >
                 Explore Agent Mesh Solutions

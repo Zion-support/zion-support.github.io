@@ -65,7 +65,6 @@ export default function AIQuantumBreakthroughSuccess2026() {
         </div>
 
         <h2 className="text-3xl font-bold text-gray-900 mt-8 mb-4">Client Profile</h2>"
-        
         <div className="bg-gray-50 p-6 rounded-lg mb-8">"
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">"
             <div>
@@ -90,7 +89,6 @@ export default function AIQuantumBreakthroughSuccess2026() {
         </div>
 
         <h2 className="text-3xl font-bold text-gray-900 mt-8 mb-4">Quantum AI Implementation</h2>"
-        
         <h3 className="text-2xl font-semibold text-gray-800 mt-6 mb-3">Phase 1: Quantum Optimization Engine</h3>"
         <p className="text-gray-700 mb-4">"
           We implemented our proprietary quantum optimization engine to tackle the company's most complex supply chain 
@@ -121,7 +119,6 @@ export default function AIQuantumBreakthroughSuccess2026() {
         </p>
 
         <h2 className="text-3xl font-bold text-gray-900 mt-8 mb-4">Results & Impact</h2>"
-        
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">"
           <div className="bg-green-50 border border-green-200 p-6 rounded-lg">"
             <h3 className="text-xl font-semibold text-green-900 mb-4">Quantitative Results</h3>"
@@ -177,7 +174,6 @@ export default function AIQuantumBreakthroughSuccess2026() {
         </div>
 
         <h2 className="text-3xl font-bold text-gray-900 mt-8 mb-4">Specific Use Cases</h2>"
-        
         <div className="space-y-6 mb-8">"
           <div className="bg-gray-50 p-6 rounded-lg">"
             <h3 className="text-xl font-semibold text-gray-800 mb-3">Supply Chain Optimization</h3>"
@@ -233,7 +229,6 @@ export default function AIQuantumBreakthroughSuccess2026() {
         </div>
 
         <h2 className="text-3xl font-bold text-gray-900 mt-8 mb-4">Implementation Timeline</h2>"
-        
         <div className="bg-gray-50 p-6 rounded-lg mb-8">"
           <div className="space-y-4">"
             <div className="flex items-center">"
@@ -268,7 +263,6 @@ export default function AIQuantumBreakthroughSuccess2026() {
         </div>
 
         <h2 className="text-3xl font-bold text-gray-900 mt-8 mb-4">Client Testimonial</h2>"
-        
         <div className="bg-blue-50 border-l-4 border-blue-500 p-6 mb-8">"
           <blockquote className="text-lg text-blue-900 italic mb-4">"
             "Zion Tech Group's quantum AI systems have transformed our operations beyond recognition. The $500M ROI "
@@ -283,7 +277,6 @@ export default function AIQuantumBreakthroughSuccess2026() {
         </div>
 
         <h2 className="text-3xl font-bold text-gray-900 mt-8 mb-4">Future Expansion</h2>"
-        
         <p className="text-gray-700 mb-4">"
           Based on the success of this implementation, the client has committed to expanding quantum AI capabilities 
           to additional business functions, including R&D optimization, customer experience enhancement, and 
@@ -305,7 +298,6 @@ export default function AIQuantumBreakthroughSuccess2026() {
         </div>
 
         <h2 className="text-3xl font-bold text-gray-900 mt-8 mb-4">Related Case Studies</h2>"
-        
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">"
           <Link href="/case-studies/ai-autonomous-business-systems-success-2026" className="block bg-gray-50 hover:bg-gray-100 p-6 rounded-lg transition-colors">"
             <h3 className="text-lg font-semibold text-gray-900 mb-2">Autonomous Business Systems Success</h3>"

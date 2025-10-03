@@ -64,13 +64,13 @@ export default function AIEnterpriseSupergraphPage() {
           
           <div className="flex flex-wrap gap-4">
             <Link 
-              href="/contact" 
+              href="/contact"
               className="bg-cyan-400 text-blue-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-cyan-300 transition-all transform hover:scale-105 shadow-xl"
             >
               ⚡ Build Your Supergraph
             </Link>
             <Link 
-              href="/services/ai-2026-enterprise-transformation" 
+              href="/services/ai-2026-enterprise-transformation"
               className="bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/30 transition-all border-2 border-white"
             >
               Explore Solutions →
@@ -479,13 +479,13 @@ export default function AIEnterpriseSupergraphPage() {
 
             <div className="flex flex-wrap gap-4">
               <Link 
-                href="/contact" 
+                href="/contact"
                 className="bg-cyan-400 text-blue-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-cyan-300 transition-all transform hover:scale-105 shadow-xl"
               >
                 ⚡ Start Your Supergraph Journey
               </Link>
               <Link 
-                href="/case-studies" 
+                href="/case-studies"
                 className="bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/30 transition-all border-2 border-white"
               >
                 See Real-World Results →

@@ -300,13 +300,13 @@ const autonomousHealthSystem = {
                   </p>
                   <div className="flex gap-4 justify-center flex-wrap">
                     <a 
-                      href="/contact" 
+                      href="/contact"
                       className="px-8 py-3 bg-purple-500 hover:bg-purple-400 text-white font-semibold rounded-lg transition-colors"
                     >
                       Schedule Consultation
                     </a>
                     <a 
-                      href="/resources" 
+                      href="/resources"
                       className="px-8 py-3 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-lg border border-white/30 transition-colors"
                     >
                       View Case Studies

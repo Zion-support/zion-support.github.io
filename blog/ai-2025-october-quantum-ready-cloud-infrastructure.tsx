@@ -325,7 +325,7 @@ export default function QuantumReadyCloudInfrastructure2025() {
 
               <div className="text-center py-8">
                 <a 
-                  href="/contact" 
+                  href="/contact"
                   className="inline-block px-8 py-4 bg-gradient-to-r from-indigo-500 to-violet-500 hover:from-indigo-600 hover:to-violet-600 text-white font-bold rounded-xl shadow-lg hover:shadow-indigo-500/50 transition-all duration-300 transform hover:scale-105"
                 >
                   Start Your Quantum Readiness Journey →

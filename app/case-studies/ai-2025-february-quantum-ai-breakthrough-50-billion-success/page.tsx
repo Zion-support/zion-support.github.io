@@ -78,7 +78,6 @@ export default function February2025QuantumAIBreakthroughCaseStudyPage() {
       <section className="py-20">"
         <div className="container mx-auto px-6 max-w-6xl">"
           <div className="prose prose-lg prose-invert max-w-none">"
-            
             {/* Executive Summary */}
             <div className="bg-gradient-to-r from-indigo-500/10 to-purple-500/10 backdrop-blur-sm rounded-2xl p-8 border border-indigo-500/20 mb-12">"
               <h2 className="text-3xl font-bold text-white mb-6">Executive Summary</h2>"
@@ -113,7 +112,6 @@ export default function February2025QuantumAIBreakthroughCaseStudyPage() {
             {/* The Challenge */}
             <div className="bg-gradient-to-r from-red-500/10 to-orange-500/10 backdrop-blur-sm rounded-2xl p-8 border border-red-500/20 mb-12">"
               <h2 className="text-3xl font-bold text-white mb-6">The Challenge</h2>"
-              
               <div className="grid md:grid-cols-2 gap-8 mb-8">"
                 <div>
                   <h3 className="text-xl font-bold text-red-400 mb-4">Legacy System Limitations</h3>"
@@ -139,12 +137,10 @@ export default function February2025QuantumAIBreakthroughCaseStudyPage() {
             {/* Solution Implementation */}
             <div className="bg-gradient-to-r from-green-500/10 to-teal-500/10 backdrop-blur-sm rounded-2xl p-8 border border-green-500/20 mb-12">"
               <h2 className="text-3xl font-bold text-white mb-6">Solution Implementation</h2>"
-              
               <div className="space-y-8">"
                 <div className="bg-white/5 rounded-xl p-6 border border-white/10">"
                   <h3 className="text-xl font-bold text-white mb-4">Quantum AI Architecture</h3>"
                   <p className="text-gray-300 mb-4">Our team designed and deployed a hybrid quantum-classical AI system featuring:</p>"
-                  
                   <div className="grid md:grid-cols-3 gap-6">"
                     <div className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-lg p-4 border border-green-500/30">"
                       <h4 className="font-bold text-green-400 mb-2">Quantum Processing Units (QPUs)</h4>"
@@ -175,7 +171,6 @@ export default function February2025QuantumAIBreakthroughCaseStudyPage() {
 
                 <div className="bg-white/5 rounded-xl p-6 border border-white/10">"
                   <h3 className="text-xl font-bold text-white mb-4">Implementation Phases</h3>"
-                  
                   <div className="grid md:grid-cols-3 gap-6">"
                     <div className="bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-lg p-4 border border-indigo-500/30">"
                       <h4 className="font-bold text-indigo-400 mb-2">Phase 1: Foundation (Months 1-3)</h4>"
@@ -210,11 +205,9 @@ export default function February2025QuantumAIBreakthroughCaseStudyPage() {
             {/* Results and Impact */}
             <div className="bg-gradient-to-r from-emerald-500/10 to-green-500/10 backdrop-blur-sm rounded-2xl p-8 border border-emerald-500/20 mb-12">"
               <h2 className="text-3xl font-bold text-white mb-6">Results and Impact</h2>"
-              
               <div className="space-y-8">"
                 <div className="bg-white/5 rounded-xl p-6 border border-white/10">"
                   <h3 className="text-xl font-bold text-white mb-4">Financial Performance</h3>"
-                  
                   <div className="grid md:grid-cols-2 gap-8">"
                     <div>
                       <h4 className="text-lg font-bold text-emerald-400 mb-4">Cost Savings Breakdown</h4>"
@@ -243,7 +236,6 @@ export default function February2025QuantumAIBreakthroughCaseStudyPage() {
 
                 <div className="bg-white/5 rounded-xl p-6 border border-white/10">"
                   <h3 className="text-xl font-bold text-white mb-4">Performance Metrics</h3>"
-                  
                   <div className="grid md:grid-cols-2 gap-8">"
                     <div>
                       <h4 className="text-lg font-bold text-blue-400 mb-4">Processing Improvements</h4>"
@@ -271,7 +263,6 @@ export default function February2025QuantumAIBreakthroughCaseStudyPage() {
             {/* ROI Analysis */}
             <div className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/20 mb-12">"
               <h2 className="text-3xl font-bold text-white mb-6">ROI Analysis</h2>"
-              
               <div className="grid md:grid-cols-2 gap-8 mb-8">"
                 <div className="bg-white/5 rounded-xl p-6 border border-white/10">"
                   <h3 className="text-xl font-bold text-purple-400 mb-4">Investment Breakdown</h3>"
@@ -320,7 +311,6 @@ export default function February2025QuantumAIBreakthroughCaseStudyPage() {
             {/* Key Takeaways */}
             <div className="bg-gradient-to-r from-indigo-500/10 to-blue-500/10 backdrop-blur-sm rounded-2xl p-8 border border-indigo-500/20">"
               <h2 className="text-3xl font-bold text-white mb-6">Key Takeaways</h2>"
-              
               <div className="grid md:grid-cols-2 gap-8">"
                 <div>
                   <h3 className="text-xl font-bold text-indigo-400 mb-4">Success Factors</h3>"

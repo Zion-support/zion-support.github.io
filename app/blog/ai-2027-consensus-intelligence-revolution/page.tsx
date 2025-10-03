@@ -79,7 +79,6 @@ export default function ConsensusIntelligenceRevolution() {
       {/* Success Stories */}
       <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl p-8 border border-green-200 mb-12">"
         <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">🏆 Success Stories</h2>"
-        
         <div className="grid md:grid-cols-3 gap-6">"
           <div className="bg-white rounded-lg p-6 shadow-sm">"
             <div className="text-2xl font-extrabold text-green-600 mb-2">$25B</div>"
@@ -104,7 +103,6 @@ export default function ConsensusIntelligenceRevolution() {
       {/* Implementation Guide */}
       <div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-xl p-8 border border-indigo-200 mb-12">"
         <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">🚀 Implementation Roadmap</h2>"
-        
         <div className="space-y-6">"
           <div className="flex items-start gap-4">"
             <div className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm">1</div>"

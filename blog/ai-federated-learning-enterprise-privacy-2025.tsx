@@ -387,7 +387,7 @@ export default function AIFederatedLearningEnterprisePrivacy2025() {
                   design and implement privacy-preserving AI systems tailored to your compliance requirements.
                 </p>
                 <a 
-                  href="/contact" 
+                  href="/contact"
                   className="inline-block bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-bold px-8 py-4 rounded-xl hover:from-emerald-600 hover:to-teal-600 transition-all transform hover:scale-105"
                 >
                   Schedule Federated Learning Consultation →

@@ -115,7 +115,6 @@ export default function AIRevolutionaryTransformation2026() {
         <h2 className="text-3xl font-bold text-gray-900 mb-6">💡 The Solution</h2>"
         <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-xl p-8 mb-8">"
           <h3 className="text-2xl font-bold text-gray-900 mb-6">Comprehensive AI Transformation Strategy</h3>"
-          
           <div className="space-y-8">"
             <div className="bg-white rounded-lg p-6 shadow-sm">"
               <h4 className="text-xl font-bold text-gray-900 mb-4">🤖 Phase 1: Autonomous Operations (Months 1-6)</h4>"
@@ -195,7 +194,6 @@ export default function AIRevolutionaryTransformation2026() {
       {/* Results */}
       <section className="mb-16">"
         <h2 className="text-3xl font-bold text-gray-900 mb-6">📊 Results & Impact</h2>"
-        
         <div className="grid md:grid-cols-2 gap-8 mb-8">"
           <div className="bg-white border border-gray-200 rounded-xl p-8">"
             <h3 className="text-2xl font-bold text-gray-900 mb-6">💰 Financial Impact</h3>"

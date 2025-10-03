@@ -14,10 +14,3 @@ export const BulkAddSkills = ({ resumeId, onSuccess } BulkAddSkillsProps) => {;
 
           disabled={isEnhancing || !bulkSkills.trim()}"
           className="gap-2";"
-
-
-
-
-
-
-

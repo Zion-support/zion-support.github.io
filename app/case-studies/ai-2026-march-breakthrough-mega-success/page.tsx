@@ -60,7 +60,6 @@ export default function March2026BreakthroughMegaSuccessPage() {
             </p>
 
             <h2 className="text-4xl font-bold text-white mb-8">The Challenge</h2>"
-            
             <h3 className="text-3xl font-bold text-purple-400 mb-6">Complex Manufacturing Operations</h3>"
             <p className="text-xl text-gray-300 mb-6">"
               The client faced significant challenges across their global manufacturing operations:
@@ -93,7 +92,6 @@ export default function March2026BreakthroughMegaSuccessPage() {
             </div>
 
             <h2 className="text-4xl font-bold text-white mb-8">The Solution: March 2026 AI Breakthrough Suite</h2>"
-            
             <h3 className="text-3xl font-bold text-blue-400 mb-6">Meta-Cognitive Manufacturing Intelligence</h3>"
             <p className="text-xl text-gray-300 mb-6">"
               We deployed our revolutionary meta-cognitive AI system that self-optimizes, predicts failures, adapts in real-time, and learns from experience.
@@ -110,7 +108,6 @@ export default function March2026BreakthroughMegaSuccessPage() {
             </p>
 
             <h2 className="text-4xl font-bold text-white mb-8">The Results: Unprecedented Success</h2>"
-            
             <div className="grid md:grid-cols-2 gap-8 mb-12">"
               <div className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 backdrop-blur-sm rounded-xl p-6 border border-green-500/30">"
                 <h4 className="text-2xl font-bold text-white mb-4">Financial Impact</h4>"
@@ -136,7 +133,6 @@ export default function March2026BreakthroughMegaSuccessPage() {
             </div>
 
             <h2 className="text-4xl font-bold text-white mb-8">Implementation Timeline</h2>"
-            
             <div className="space-y-8 mb-12">"
               <div className="bg-gradient-to-r from-blue-500/20 to-purple-500/20 backdrop-blur-sm rounded-xl p-6 border border-blue-500/30">"
                 <h4 className="text-2xl font-bold text-white mb-4">Phase 1: Foundation (Months 1-2)</h4>"
@@ -170,7 +166,6 @@ export default function March2026BreakthroughMegaSuccessPage() {
             </div>
 
             <h2 className="text-4xl font-bold text-white mb-8">Key Success Factors</h2>"
-            
             <div className="grid md:grid-cols-3 gap-6 mb-12">"
               <div className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 backdrop-blur-sm rounded-xl p-6 border border-green-500/30">"
                 <h4 className="text-xl font-bold text-white mb-4">Leadership Commitment</h4>"

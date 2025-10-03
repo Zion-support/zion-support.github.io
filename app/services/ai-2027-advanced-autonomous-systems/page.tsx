@@ -66,7 +66,6 @@ export default function AI2027AdvancedAutonomousSystemsService() {
       {/* Core Features */}
       <section className="mb-16">"
         <h2 className="text-4xl font-bold text-gray-900 mb-8 text-center">Core Autonomous System Features</h2>"
-        
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">"
           <div className="bg-white border border-gray-200 rounded-xl p-8">"
             <div className="text-4xl mb-4">🧠</div>"
@@ -129,7 +128,6 @@ export default function AI2027AdvancedAutonomousSystemsService() {
       {/* Implementation Process */}
       <section className="mb-16">"
         <h2 className="text-4xl font-bold text-gray-900 mb-8 text-center">Implementation Process</h2>"
-        
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">"
           <div className="bg-blue-50 p-8 rounded-xl">"
             <div className="text-center mb-6">"
@@ -206,7 +204,6 @@ export default function AI2027AdvancedAutonomousSystemsService() {
       {/* Technology Stack */}
       <section className="mb-16">"
         <h2 className="text-4xl font-bold text-gray-900 mb-8 text-center">Technology Stack</h2>"
-        
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">"
           <div className="bg-gray-50 p-8 rounded-xl">"
             <h3 className="text-2xl font-bold text-gray-900 mb-6">Core Technologies</h3>"
@@ -257,7 +254,6 @@ export default function AI2027AdvancedAutonomousSystemsService() {
       {/* Pricing */}
       <section className="mb-16">"
         <h2 className="text-4xl font-bold text-gray-900 mb-8 text-center">Investment Options</h2>"
-        
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">"
           <div className="bg-white border border-gray-200 rounded-xl p-8">"
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Starter Package</h3>"

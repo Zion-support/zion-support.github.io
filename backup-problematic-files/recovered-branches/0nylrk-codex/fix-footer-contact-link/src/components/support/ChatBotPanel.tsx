@@ -347,7 +347,7 @@ const sendToAIAssistant = async (message: string) => {
   const response = await fetch ("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
   method: "POST";
 headers: {
-  "Content-Type" : "application/json" 
+  "Content-Type" : "application/json"
 };
 body: JSON.stringify ({
   

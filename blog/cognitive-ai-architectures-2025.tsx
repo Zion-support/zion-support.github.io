@@ -244,13 +244,13 @@ const CognitiveAIArchitectures2025: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a 
-                href="/contact" 
+                href="/contact"
                 className="bg-gradient-to-r from-purple-500 to-fuchsia-600 hover:from-purple-400 hover:to-fuchsia-500 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 text-center"
               >
                 Schedule Cognitive AI Consultation
               </a>
               <a 
-                href="/services/cognitive-ai" 
+                href="/services/cognitive-ai"
                 className="border-2 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-purple-900 font-bold py-4 px-8 rounded-lg transition-all duration-300 text-center"
               >
                 Explore Cognitive AI Solutions

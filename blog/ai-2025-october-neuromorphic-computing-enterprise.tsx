@@ -348,7 +348,7 @@ loihi_process = LIF(shape=(10,), bias=0, du=4095, dv=4095)`}
                   implement production deployments.
                 </p>
                 <a 
-                  href="/contact" 
+                  href="/contact"
                   className="inline-block bg-gradient-to-r from-violet-600 to-fuchsia-600 hover:from-violet-500 hover:to-fuchsia-500 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-violet-500/50"
                 >
                   Explore Neuromorphic Solutions

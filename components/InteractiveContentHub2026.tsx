@@ -182,9 +182,9 @@ const InteractiveContentHub2026: React.FC = () => {
               <div>
                 <label className="block text-gray-300 text-sm font-semibold mb-2">Annual Revenue</label>
                 <input 
-                  type="range" 
-                  min="1000000" 
-                  max="10000000000" 
+                  type="range"
+                  min="1000000"
+                  max="10000000000"
                   step="1000000"
                   className="w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer"
                 />
@@ -261,19 +261,19 @@ const InteractiveContentHub2026: React.FC = () => {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a 
-                href="/contact" 
+                href="/contact"
                 className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
               >
                 Get Free Consultation
               </a>
               <a 
-                href="/services" 
+                href="/services"
                 className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1"
               >
                 Explore Services
               </a>
               <a 
-                href="/blog" 
+                href="/blog"
                 className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
                 Read Latest Content

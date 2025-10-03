@@ -384,7 +384,7 @@ export default function AISafetyAlignmentEnterpriseDeployment2025() {
                   </li>
                 </ul>
                 <a 
-                  href="/contact" 
+                  href="/contact"
                   className="inline-block bg-gradient-to-r from-emerald-600 to-cyan-600 hover:from-emerald-700 hover:to-cyan-700 text-white font-bold py-3 px-8 rounded-lg transition-all transform hover:scale-105"
                 >
                   Schedule Your AI Safety Assessment →

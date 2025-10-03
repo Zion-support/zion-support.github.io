@@ -33,5 +33,6 @@
     }
   },
   "include": ["src", "app"],
+  "exclude": ["app/blog/**/*"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

@@ -368,7 +368,7 @@ export default function AIKubernetesIntelligentAutoScaling2025() {
                   <li>• Training and knowledge transfer for your DevOps teams</li>
                 </ul>
                 <a 
-                  href="/contact" 
+                  href="/contact"
                   className="inline-block bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-400 hover:to-indigo-500 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300"
                 >
                   Schedule Kubernetes Assessment →

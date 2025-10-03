@@ -349,13 +349,13 @@ export default function QuantumNeuralAIServices() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href="/contact" 
+              href="/contact"
               className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 text-center text-lg"
             >
               Schedule Free Consultation
             </a>
             <a 
-              href="/case-studies" 
+              href="/case-studies"
               className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 text-center text-lg"
             >
               View Case Studies

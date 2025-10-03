@@ -385,13 +385,13 @@ export default function AI2029QuantumConsciousnessSingularityBreakthrough() {
 
               <div className="text-center">
                 <a 
-                  href="/contact" 
+                  href="/contact"
                   className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1 mr-4"
                 >
                   Experience Consciousness AI
                 </a>
                 <a 
-                  href="/case-studies/ai-2029-quantum-consciousness-singularity-success" 
+                  href="/case-studies/ai-2029-quantum-consciousness-singularity-success"
                   className="border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
                 >
                   View Success Stories
@@ -410,13 +410,13 @@ export default function AI2029QuantumConsciousnessSingularityBreakthrough() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a 
-                  href="/contact" 
+                  href="/contact"
                   className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
                 >
                   Start Your Journey
                 </a>
                 <a 
-                  href="/blog" 
+                  href="/blog"
                   className="border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
                 >
                   Explore More Breakthroughs

@@ -179,7 +179,7 @@ export default function AIEdgeRevolutionPage() {
                   <div className="mt-4 p-4 bg-gray-50 rounded-lg">
                     <p className="text-sm text-gray-600 italic">
                       "Edge AI transformed our quality control from sampling-based to 100% inspection at full 
-                      production speed. We caught issues that would have cost millions in recalls." 
+                      production speed. We caught issues that would have cost millions in recalls."
                       <span className="font-semibold">— VP Manufacturing Operations</span>
                     </p>
                   </div>

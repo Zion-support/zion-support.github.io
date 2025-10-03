@@ -279,7 +279,6 @@ class AgentGovernanceEngine:
     
     async def validate_agent_action(self, agent_id: str, action: Dict):
         """Multi-stage governance validation"""
-        
         # 1. Policy Enforcement
         policy_result = self.policy_engine.evaluate({
             "agent": {"id": agent_id, "role": action.get("role")},
@@ -363,7 +362,6 @@ allow {
     input.agent.role == "finance_agent"
 }
 """
-
 # Deploy governance engine
 governance = AgentGovernanceEngine()
 await governance.validate_agent_action("agent-42", {

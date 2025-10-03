@@ -318,7 +318,6 @@ class DifferentiallyPrivateFederation:
     Implements secure multi-party computation for aggregation
     Based on Bonawitz et al. 2017 protocol
     """
-    
     def __init__(self, num_clients, threshold):
         self.num_clients = num_clients
         self.threshold = threshold  # Minimum clients for reconstruction
@@ -410,7 +409,6 @@ class FederatedLearningPlatform:
         
     async def run_training(self, num_rounds=100):
         """Execute federated training with monitoring"""
-        
         for round_num in range(num_rounds):
             start_time = time.time()
             
@@ -498,7 +496,6 @@ class FederatedLearningPlatform:
     """
     Strategies for non-IID federated learning:
     """
-    
     # Strategy 1: Personalization layers
     # Keep final layers personalized per client
     for client in clients:
@@ -530,7 +527,6 @@ class FederatedLearningPlatform:
         
     async def resilient_training_round(self, selected_clients):
         """Handle client failures and timeouts gracefully"""
-        
         # Set timeout for client responses
         tasks = [
             asyncio.wait_for(
@@ -639,13 +635,13 @@ class FederatedLearningPlatform:
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <a 
-                    href="/contact" 
+                    href="/contact"
                     className="bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-3 rounded-lg font-semibold text-center transition-colors"
                   >
                     Schedule Privacy-Preserving ML Consultation
                   </a>
                   <a 
-                    href="/services/enterprise-ai-solutions" 
+                    href="/services/enterprise-ai-solutions"
                     className="border border-emerald-400 text-emerald-300 hover:bg-emerald-500/10 px-6 py-3 rounded-lg font-semibold text-center transition-colors"
                   >
                     Explore Enterprise AI Services

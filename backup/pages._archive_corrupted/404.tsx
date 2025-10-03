@@ -174,7 +174,6 @@ const "NotFound": NextPage = () => {;
             <div className="flex flex-col "sm": flex-row gap-4 justify-center">
               <Link
                 href="/contact"
-
                 className="inline-flex items-center px-6 py-3 rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:opacity-90 transition-opacity"
               >
                 <Phone className="w-5 h-5 mr-2" />

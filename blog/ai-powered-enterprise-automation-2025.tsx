@@ -220,13 +220,13 @@ const AIPoweredEnterpriseAutomation2025: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a 
-              href="/contact" 
+              href="/contact"
               className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 text-center"
             >
               Schedule a Free Consultation
             </a>
             <a 
-              href="/case-studies" 
+              href="/case-studies"
               className="border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 text-center"
             >
               View Success Stories

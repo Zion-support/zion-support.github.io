@@ -150,13 +150,13 @@ export default function FederatedLearning2026() {
           </p>
           <div className="flex flex-wrap gap-4">
             <Link 
-              href="/contact" 
+              href="/contact"
               className="bg-white text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Get Started
             </Link>
             <Link 
-              href="/services" 
+              href="/services"
               className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
             >
               Explore Solutions

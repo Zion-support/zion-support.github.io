@@ -22,7 +22,6 @@ export default function AICostOptimizationPlaybook2027() {
       <Link href="/blog" className="text-blue-600 hover:text-blue-800 mb-6 inline-block">← Back to Blog</Link>"
       <h1 className="text-4xl font-bold text-gray-900 mb-3">AI 2027 Cost Optimization Playbook</h1>"
       <div className="text-gray-600 mb-8">Published: September 30, 2025 • 13 min read • Cost Optimization</div>"
-
       <div className="prose prose-lg max-w-none">"
         <p>
           This playbook provides pragmatic techniques to reduce AI costs by 30–70% while improving reliability.

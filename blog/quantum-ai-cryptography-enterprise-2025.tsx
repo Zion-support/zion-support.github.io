@@ -347,13 +347,13 @@ const federatedSystem = new SecureFederatedLearning({
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a 
-              href="/contact" 
+              href="/contact"
               className="bg-gradient-to-r from-indigo-500 to-violet-600 hover:from-indigo-400 hover:to-violet-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 text-center"
             >
               Schedule Quantum Security Assessment
             </a>
             <a 
-              href="/case-studies" 
+              href="/case-studies"
               className="border-2 border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 text-center"
             >
               View Security Case Studies

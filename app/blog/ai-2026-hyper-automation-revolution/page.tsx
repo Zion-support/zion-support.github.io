@@ -52,7 +52,6 @@ export default function AI2026HyperAutomationRevolution() {
         </div>
 
         <h2 className="text-3xl font-bold text-gray-900 mt-8 mb-4">The Hyper-Automation Breakthrough</h2>"
-        
         <p className="text-gray-700 mb-6">"
           Our hyper-automation platform represents the pinnacle of enterprise automation technology, 
           combining advanced AI, machine learning, and autonomous systems to deliver complete 
@@ -60,7 +59,6 @@ export default function AI2026HyperAutomationRevolution() {
         </p>
 
         <h3 className="text-2xl font-bold text-gray-900 mt-6 mb-4">Revolutionary Capabilities</h3>"
-        
         <div className="grid md:grid-cols-2 gap-6 mb-8">"
           <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">"
             <h4 className="text-lg font-bold text-red-900 mb-3">Complete Process Automation</h4>"
@@ -96,7 +94,6 @@ export default function AI2026HyperAutomationRevolution() {
         </div>
 
         <h3 className="text-2xl font-bold text-gray-900 mt-6 mb-4">Enterprise Impact</h3>"
-        
         <p className="text-gray-700 mb-6">"
           The hyper-automation revolution transforms every aspect of enterprise operations, 
           delivering unprecedented efficiency, cost savings, and competitive advantages.
@@ -115,7 +112,6 @@ export default function AI2026HyperAutomationRevolution() {
         </div>
 
         <h3 className="text-2xl font-bold text-gray-900 mt-6 mb-4">Industry Applications</h3>"
-        
         <div className="grid md:grid-cols-3 gap-6 mb-8">"
           <div className="bg-gradient-to-br from-blue-50 to-indigo-50 border border-blue-200 rounded-lg p-6">"
             <h4 className="text-lg font-bold text-blue-900 mb-3">Financial Services</h4>"
@@ -143,7 +139,6 @@ export default function AI2026HyperAutomationRevolution() {
         </div>
 
         <h3 className="text-2xl font-bold text-gray-900 mt-6 mb-4">Implementation Strategy</h3>"
-        
         <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-lg p-6 mb-8">"
           <h4 className="text-xl font-bold text-blue-900 mb-3">Deployment Phases</h4>"
           <div className="space-y-3 text-blue-800">"

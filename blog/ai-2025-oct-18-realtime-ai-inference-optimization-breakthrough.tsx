@@ -382,7 +382,7 @@ export default function RealtimeAIInferenceOptimization2025() {
                   </div>
                 </div>
                 <a 
-                  href="/contact" 
+                  href="/contact"
                   className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-teal-500 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-xl transition-all"
                 >
                   Schedule Your Performance Audit →

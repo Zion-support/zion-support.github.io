@@ -331,7 +331,6 @@ title="Finance Solutions - Zion Tech Group""
       description="Secure financial technology solutions for banks, fintech companies, and financial institutions. Regulatory compliant and secure.""
       keywords="finance solutions, fintech, banking technology, financial services, regulatory compliance, risk management">;"
       <div className="min-h-screen bg-white">;"
-
         {/* Hero Section */}
     >
       <div className="min-h-screen bg-white">"

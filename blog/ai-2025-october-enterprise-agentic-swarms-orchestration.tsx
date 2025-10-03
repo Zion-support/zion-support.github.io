@@ -279,13 +279,13 @@ export default function EnterpriseAgenticSwarmsOrchestration2025() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href="/contact" 
+              href="/contact"
               className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 text-center"
             >
               Schedule Demo & Pilot
             </a>
             <a 
-              href="/case-studies/agentic-swarms-manufacturing-success-2025" 
+              href="/case-studies/agentic-swarms-manufacturing-success-2025"
               className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 text-center"
             >
               Read Success Stories

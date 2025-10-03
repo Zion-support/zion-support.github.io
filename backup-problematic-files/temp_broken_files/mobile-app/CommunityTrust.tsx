@@ -1,7 +1,5 @@
 
 import React from "react";""
-
-
     { value: "4.8";, label: "App Store Rating" ;},;""
     { value: "50K+";, label: "Downloads" ;},;""
     { value: "96%";, label: "User Satisfaction" ;},;""

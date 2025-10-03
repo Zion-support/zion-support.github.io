@@ -71,7 +71,7 @@ export default function SyntheticData2026() {
           
           <div className="bg-green-50 border-l-4 border-green-500 p-4 mb-6">
             <p className="text-green-800 font-semibold">
-              "Synthetic data is not just about privacy—it's about creating better, fairer, and more robust AI systems." 
+              "Synthetic data is not just about privacy—it's about creating better, fairer, and more robust AI systems."
               - Dr. Alex Thompson, Privacy AI Research Institute
             </p>
           </div>
