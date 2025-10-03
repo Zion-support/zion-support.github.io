@@ -10,8 +10,7 @@ const HomePage: React.FC: () => {,
           <div className="flex flex-col sm:flex-row gap-4 justify-center">"
             <Link 
               to: "/contact",
-  className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-            >
+  className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
               Get Started Today
             </Link>
             >
@@ -31,8 +30,7 @@ const HomePage: React.FC: () => {,
               <div className="space-y-2">"
                 <Link 
                   to: "/services/ai-services",
-  className="block text-blue-600 font-semibold hover:text-blue-800 transition-colors"
-                >
+  className="block text-blue-600 font-semibold hover:text-blue-800 transition-colors">
                   AI Services →
                 </Link>
                 >
@@ -46,8 +44,7 @@ const HomePage: React.FC: () => {,
               <div className="space-y-2">"
                 <Link 
                   to: "/services/micro-saas",
-  className="block text-green-600 font-semibold hover:text-green-800 transition-colors"
-                >
+  className="block text-green-600 font-semibold hover:text-green-800 transition-colors">
                   Micro SaaS →
                 </Link>
                 >
@@ -61,8 +58,7 @@ const HomePage: React.FC: () => {,
               <div className="space-y-2">"
                 <Link 
                   to: "/services/it-services",
-  className="block text-purple-600 font-semibold hover:text-purple-800 transition-colors"
-                >
+  className="block text-purple-600 font-semibold hover:text-purple-800 transition-colors">
                   IT Services →
                 </Link>
                 >
@@ -77,24 +73,21 @@ const HomePage: React.FC: () => {,
               </p>
               <Link 
                 to: "/solutions/enterprise",
-  className="text-blue-600 font-semibold hover:text-blue-800 transition-colors"
-              >
+  className="text-blue-600 font-semibold hover:text-blue-800 transition-colors">
                 Enterprise Solutions →
               </Link>
             </div>
               </p>
               <Link 
                 to: "/solutions/smb",
-  className="text-blue-600 font-semibold hover:text-blue-800 transition-colors"
-              >
+  className="text-blue-600 font-semibold hover:text-blue-800 transition-colors">
                 SMB Solutions →
               </Link>
             </div>
               </p>
               <Link 
                 to: "/solutions/startup",
-  className="text-blue-600 font-semibold hover:text-blue-800 transition-colors"
-              >
+  className="text-blue-600 font-semibold hover:text-blue-800 transition-colors">
                 Startup Solutions →
               </Link>
             </div>
@@ -146,8 +139,7 @@ const HomePage: React.FC: () => {,
           <div className="flex flex-col sm:flex-row gap-4 justify-center">"
             <Link 
               to: "/contact",
-  className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-            >
+  className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
               Start Your Project
             </Link>
             >

@@ -24,9 +24,9 @@ import { Education } from '@/types/resume';
 
 
 )
-      <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-4">;"
+      <form onSubmit={form.handleSubmit(handleSubmit)} className="text-left">;"
 </form>"
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;"
+        <div className="text-left">;"
 </div>
           <FormField;
 

@@ -15,64 +15,64 @@ export const metadata = {
 
 export default function AIEdgeComputingTransformation2026() {
   return (
-    <article className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
+    <article className="text-left">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 via-cyan-600 to-teal-600 text-white py-20">
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="flex items-center gap-3 mb-6">
-            <span className="bg-white text-blue-600 px-6 py-2 rounded-full text-sm font-bold uppercase tracking-wide animate-pulse">
+      <section className="text-left">
+        <div className="text-left">
+          <div className="text-left">
+            <span className="text-left">
               🚀 NEW GUIDE — September 30, 2025
-            </span>
+            <
           </div>
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+          <h1 className="text-left">
             AI Edge Computing Transformation 2026
           </h1>
-          <p className="text-2xl text-blue-50 mb-8 leading-relaxed">
+          <p className="text-left">
             Deploy Distributed Intelligence for Real-Time Decision Making: Achieve 95% Latency Reduction, 
             85% Cost Savings, and Autonomous Edge Operations
           </p>
-          <div className="grid md:grid-cols-4 gap-6">
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <div className="text-4xl font-bold mb-2">95%</div>
-              <div className="text-blue-100">Latency Reduction</div>
+          <div className="text-left">
+            <div className="text-left">
+              <div className="text-left">95%</div>
+              <div className="text-left">Latency Reduction</div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <div className="text-4xl font-bold mb-2">85%</div>
-              <div className="text-blue-100">Cost Savings</div>
+            <div className="text-left">
+              <div className="text-left">85%</div>
+              <div className="text-left">Cost Savings</div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <div className="text-4xl font-bold mb-2">&lt;10ms</div>
-              <div className="text-blue-100">Response Time</div>
+            <div className="text-left">
+              <div className="text-left">&lt;10ms</div>
+              <div className="text-left">Response Time</div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <div className="text-4xl font-bold mb-2">99.9%</div>
-              <div className="text-blue-100">Availability</div>
+            <div className="text-left">
+              <div className="text-left">99.9%</div>
+              <div className="text-left">Availability</div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Main Content */}
-      <div className="max-w-4xl mx-auto px-6 py-16">
+      <div className="text-left">
         
         {/* Executive Summary */}
-        <section className="mb-16">
-          <div className="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-2xl p-8 border-2 border-blue-200">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">📊 Executive Summary</h2>
-            <div className="space-y-4 text-gray-700 text-lg leading-relaxed">
+        <section className="text-left">
+          <div className="text-left">
+            <h2 className="text-left">📊 Executive Summary</h2>
+            <div className="text-left">
               <p>
                 <strong>Edge computing combined with AI</strong> represents the next frontier in enterprise technology, 
                 enabling real-time decision-making where data is generated. Organizations implementing edge AI solutions 
                 are achieving unprecedented performance gains.
               </p>
-              <div className="grid md:grid-cols-2 gap-4 mt-6">
-                <div className="bg-white rounded-lg p-4 shadow-sm">
-                  <div className="text-2xl font-bold text-blue-600 mb-2">$45M+</div>
-                  <div className="text-sm text-gray-600">Average Annual Savings</div>
+              <div className="text-left">
+                <div className="text-left">
+                  <div className="text-left">$45M+</div>
+                  <div className="text-left">Average Annual Savings</div>
                 </div>
-                <div className="bg-white rounded-lg p-4 shadow-sm">
-                  <div className="text-2xl font-bold text-green-600 mb-2">12 weeks</div>
-                  <div className="text-sm text-gray-600">Initial Deployment Timeline</div>
+                <div className="text-left">
+                  <div className="text-left">12 weeks</div>
+                  <div className="text-left">Initial Deployment Timeline</div>
                 </div>
               </div>
             </div>
@@ -80,18 +80,18 @@ export default function AIEdgeComputingTransformation2026() {
         </section>
 
         {/* Why Edge AI Now */}
-        <section className="mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-8">Why Edge AI Is Critical in 2026</h2>
+        <section className="text-left">
+          <h2 className="text-left">Why Edge AI Is Critical in 2026</h2>
           
-          <div className="space-y-6">
-            <div className="bg-white rounded-xl shadow-lg p-8 border-l-4 border-blue-500">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">🚀 Real-Time Intelligence</h3>
-              <p className="text-gray-700 leading-relaxed mb-4">
+          <div className="text-left">
+            <div className="text-left">
+              <h3 className="text-left">🚀 Real-Time Intelligence</h3>
+              <p className="text-left">
                 Cloud-centric AI introduces latency that's unacceptable for time-critical applications. Edge AI 
                 processes data locally, enabling sub-10ms response times for autonomous vehicles, industrial automation, 
                 and AR/VR applications.
               </p>
-              <ul className="list-disc list-inside space-y-2 text-gray-700">
+              <ul className="text-left">
                 <li>Autonomous systems requiring instant decision-making</li>
                 <li>Manufacturing quality control and predictive maintenance</li>
                 <li>Healthcare patient monitoring and emergency response</li>
@@ -99,30 +99,30 @@ export default function AIEdgeComputingTransformation2026() {
               </ul>
             </div>
 
-            <div className="bg-white rounded-xl shadow-lg p-8 border-l-4 border-green-500">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">💰 Massive Cost Reduction</h3>
-              <p className="text-gray-700 leading-relaxed mb-4">
+            <div className="text-left">
+              <h3 className="text-left">💰 Massive Cost Reduction</h3>
+              <p className="text-left">
                 Processing data at the edge eliminates expensive cloud bandwidth and storage costs. Organizations 
                 with distributed operations are seeing 85% reductions in data transfer costs.
               </p>
-              <div className="bg-green-50 rounded-lg p-6 mt-4">
-                <p className="font-semibold text-green-900 mb-3">Cost Comparison Example:</p>
-                <div className="grid md:grid-cols-2 gap-4">
+              <div className="text-left">
+                <p className="text-left">Cost Comparison Example:</p>
+                <div className="text-left">
                   <div>
-                    <p className="text-sm text-gray-600 mb-2">Cloud-Only Architecture:</p>
-                    <p className="text-2xl font-bold text-red-600">$8.5M/year</p>
+                    <p className="text-left">Cloud-Only Architecture:</p>
+                    <p className="text-left">$8.5M/year</p>
                   </div>
                   <div>
-                    <p className="text-sm text-gray-600 mb-2">Edge AI Hybrid:</p>
-                    <p className="text-2xl font-bold text-green-600">$1.2M/year</p>
+                    <p className="text-left">Edge AI Hybrid:</p>
+                    <p className="text-left">$1.2M/year</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="bg-white rounded-xl shadow-lg p-8 border-l-4 border-purple-500">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">🔒 Enhanced Privacy & Security</h3>
-              <p className="text-gray-700 leading-relaxed">
+            <div className="text-left">
+              <h3 className="text-left">🔒 Enhanced Privacy & Security</h3>
+              <p className="text-left">
                 Sensitive data never leaves the premises. Edge processing ensures compliance with GDPR, HIPAA, 
                 and industry-specific regulations while reducing attack surface and data breach risks by 92%.
               </p>
@@ -131,43 +131,43 @@ export default function AIEdgeComputingTransformation2026() {
         </section>
 
         {/* Architecture */}
-        <section className="mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-8">Enterprise Edge AI Architecture</h2>
+        <section className="text-left">
+          <h2 className="text-left">Enterprise Edge AI Architecture</h2>
           
-          <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-8 text-white mb-8">
-            <h3 className="text-2xl font-bold mb-6">🏗️ Three-Tier Architecture</h3>
+          <div className="text-left">
+            <h3 className="text-left">🏗️ Three-Tier Architecture</h3>
             
-            <div className="space-y-6">
-              <div className="bg-white/10 rounded-xl p-6 border border-white/20">
-                <h4 className="text-xl font-bold mb-3 text-blue-300">Tier 1: Edge Devices</h4>
-                <p className="text-gray-300 mb-4">
+            <div className="text-left">
+              <div className="text-left">
+                <h4 className="text-left">Tier 1: Edge Devices</h4>
+                <p className="text-left">
                   IoT sensors, smart cameras, industrial controllers running lightweight inference models
                 </p>
-                <ul className="list-disc list-inside space-y-2 text-gray-300 text-sm">
+                <ul className="text-left">
                   <li>TinyML models (&lt;1MB) for ultra-low latency</li>
                   <li>Local preprocessing and anomaly detection</li>
                   <li>Offline operation capability</li>
                 </ul>
               </div>
 
-              <div className="bg-white/10 rounded-xl p-6 border border-white/20">
-                <h4 className="text-xl font-bold mb-3 text-green-300">Tier 2: Edge Gateways</h4>
-                <p className="text-gray-300 mb-4">
+              <div className="text-left">
+                <h4 className="text-left">Tier 2: Edge Gateways</h4>
+                <p className="text-left">
                   Powerful edge servers aggregating data from multiple devices
                 </p>
-                <ul className="list-disc list-inside space-y-2 text-gray-300 text-sm">
+                <ul className="text-left">
                   <li>Complex model inference (ResNet, BERT variants)</li>
                   <li>Data aggregation and federation</li>
                   <li>Local model training and updates</li>
                 </ul>
               </div>
 
-              <div className="bg-white/10 rounded-xl p-6 border border-white/20">
-                <h4 className="text-xl font-bold mb-3 text-purple-300">Tier 3: Cloud/Data Center</h4>
-                <p className="text-gray-300 mb-4">
+              <div className="text-left">
+                <h4 className="text-left">Tier 3: Cloud/Data Center</h4>
+                <p className="text-left">
                   Centralized orchestration, model training, and analytics
                 </p>
-                <ul className="list-disc list-inside space-y-2 text-gray-300 text-sm">
+                <ul className="text-left">
                   <li>Model development and validation</li>
                   <li>Federated learning coordination</li>
                   <li>Strategic analytics and reporting</li>
@@ -178,18 +178,18 @@ export default function AIEdgeComputingTransformation2026() {
         </section>
 
         {/* Implementation Roadmap */}
-        <section className="mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-8">12-Week Implementation Roadmap</h2>
+        <section className="text-left">
+          <h2 className="text-left">12-Week Implementation Roadmap</h2>
           
-          <div className="space-y-6">
-            <div className="bg-blue-50 rounded-xl p-6 border-l-4 border-blue-600">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg">
+          <div className="text-left">
+            <div className="text-left">
+              <div className="text-left">
+                <div className="text-left">
                   1-3
                 </div>
-                <h3 className="text-xl font-bold text-gray-900">Weeks 1-3: Assessment & Planning</h3>
+                <h3 className="text-left">Weeks 1-3: Assessment & Planning</h3>
               </div>
-              <ul className="list-disc list-inside space-y-2 text-gray-700 ml-16">
+              <ul className="text-left">
                 <li>Use case identification and prioritization</li>
                 <li>Edge infrastructure assessment</li>
                 <li>Network topology and bandwidth analysis</li>
@@ -197,14 +197,14 @@ export default function AIEdgeComputingTransformation2026() {
               </ul>
             </div>
 
-            <div className="bg-green-50 rounded-xl p-6 border-l-4 border-green-600">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="bg-green-600 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg">
+            <div className="text-left">
+              <div className="text-left">
+                <div className="text-left">
                   4-7
                 </div>
-                <h3 className="text-xl font-bold text-gray-900">Weeks 4-7: Pilot Deployment</h3>
+                <h3 className="text-left">Weeks 4-7: Pilot Deployment</h3>
               </div>
-              <ul className="list-disc list-inside space-y-2 text-gray-700 ml-16">
+              <ul className="text-left">
                 <li>Edge gateway deployment (3-5 locations)</li>
                 <li>Model optimization and quantization</li>
                 <li>Edge-to-cloud synchronization setup</li>
@@ -212,14 +212,14 @@ export default function AIEdgeComputingTransformation2026() {
               </ul>
             </div>
 
-            <div className="bg-purple-50 rounded-xl p-6 border-l-4 border-purple-600">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="bg-purple-600 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg">
+            <div className="text-left">
+              <div className="text-left">
+                <div className="text-left">
                   8-10
                 </div>
-                <h3 className="text-xl font-bold text-gray-900">Weeks 8-10: Optimization & Scaling</h3>
+                <h3 className="text-left">Weeks 8-10: Optimization & Scaling</h3>
               </div>
-              <ul className="list-disc list-inside space-y-2 text-gray-700 ml-16">
+              <ul className="text-left">
                 <li>Performance tuning and optimization</li>
                 <li>Federated learning implementation</li>
                 <li>Rollout to additional locations</li>
@@ -227,14 +227,14 @@ export default function AIEdgeComputingTransformation2026() {
               </ul>
             </div>
 
-            <div className="bg-orange-50 rounded-xl p-6 border-l-4 border-orange-600">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="bg-orange-600 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg">
+            <div className="text-left">
+              <div className="text-left">
+                <div className="text-left">
                   11-12
                 </div>
-                <h3 className="text-xl font-bold text-gray-900">Weeks 11-12: Full Production</h3>
+                <h3 className="text-left">Weeks 11-12: Full Production</h3>
               </div>
-              <ul className="list-disc list-inside space-y-2 text-gray-700 ml-16">
+              <ul className="text-left">
                 <li>Enterprise-wide deployment</li>
                 <li>Advanced analytics and reporting</li>
                 <li>Continuous model improvement pipeline</li>
@@ -245,19 +245,19 @@ export default function AIEdgeComputingTransformation2026() {
         </section>
 
         {/* Use Cases */}
-        <section className="mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-8">High-Impact Use Cases</h2>
+        <section className="text-left">
+          <h2 className="text-left">High-Impact Use Cases</h2>
           
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
-              <div className="text-4xl mb-4">🏭</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Smart Manufacturing</h3>
-              <p className="text-gray-700 mb-4">
+          <div className="text-left">
+            <div className="text-left">
+              <div className="text-left">🏭</div>
+              <h3 className="text-left">Smart Manufacturing</h3>
+              <p className="text-left">
                 Real-time quality inspection, predictive maintenance, and autonomous robotics
               </p>
-              <div className="bg-gray-50 rounded-lg p-4">
-                <p className="text-sm font-semibold text-gray-900 mb-2">Impact:</p>
-                <ul className="text-sm text-gray-700 space-y-1">
+              <div className="text-left">
+                <p className="text-left">Impact:</p>
+                <ul className="text-left">
                   <li>• 95% defect detection rate</li>
                   <li>• 80% reduction in downtime</li>
                   <li>• $12M annual savings</li>
@@ -265,15 +265,15 @@ export default function AIEdgeComputingTransformation2026() {
               </div>
             </div>
 
-            <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
-              <div className="text-4xl mb-4">🏥</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Healthcare IoMT</h3>
-              <p className="text-gray-700 mb-4">
+            <div className="text-left">
+              <div className="text-left">🏥</div>
+              <h3 className="text-left">Healthcare IoMT</h3>
+              <p className="text-left">
                 Patient monitoring, diagnostic imaging, and emergency response systems
               </p>
-              <div className="bg-gray-50 rounded-lg p-4">
-                <p className="text-sm font-semibold text-gray-900 mb-2">Impact:</p>
-                <ul className="text-sm text-gray-700 space-y-1">
+              <div className="text-left">
+                <p className="text-left">Impact:</p>
+                <ul className="text-left">
                   <li>• 98.5% diagnostic accuracy</li>
                   <li>• 70% faster response times</li>
                   <li>• 100% HIPAA compliance</li>
@@ -281,15 +281,15 @@ export default function AIEdgeComputingTransformation2026() {
               </div>
             </div>
 
-            <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
-              <div className="text-4xl mb-4">🏪</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Retail Intelligence</h3>
-              <p className="text-gray-700 mb-4">
+            <div className="text-left">
+              <div className="text-left">🏪</div>
+              <h3 className="text-left">Retail Intelligence</h3>
+              <p className="text-left">
                 Computer vision for inventory, customer analytics, and autonomous checkout
               </p>
-              <div className="bg-gray-50 rounded-lg p-4">
-                <p className="text-sm font-semibold text-gray-900 mb-2">Impact:</p>
-                <ul className="text-sm text-gray-700 space-y-1">
+              <div className="text-left">
+                <p className="text-left">Impact:</p>
+                <ul className="text-left">
                   <li>• 40% increase in sales</li>
                   <li>• 85% inventory accuracy</li>
                   <li>• 60% labor cost reduction</li>
@@ -297,15 +297,15 @@ export default function AIEdgeComputingTransformation2026() {
               </div>
             </div>
 
-            <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
-              <div className="text-4xl mb-4">🚗</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Autonomous Vehicles</h3>
-              <p className="text-gray-700 mb-4">
+            <div className="text-left">
+              <div className="text-left">🚗</div>
+              <h3 className="text-left">Autonomous Vehicles</h3>
+              <p className="text-left">
                 Real-time object detection, path planning, and safety systems
               </p>
-              <div className="bg-gray-50 rounded-lg p-4">
-                <p className="text-sm font-semibold text-gray-900 mb-2">Impact:</p>
-                <ul className="text-sm text-gray-700 space-y-1">
+              <div className="text-left">
+                <p className="text-left">Impact:</p>
+                <ul className="text-left">
                   <li>• &lt;5ms decision latency</li>
                   <li>• 99.99% reliability</li>
                   <li>• 90% accident reduction</li>
@@ -316,36 +316,36 @@ export default function AIEdgeComputingTransformation2026() {
         </section>
 
         {/* Technology Stack */}
-        <section className="mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-8">Recommended Technology Stack</h2>
+        <section className="text-left">
+          <h2 className="text-left">Recommended Technology Stack</h2>
           
-          <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-200">
-            <div className="space-y-6">
+          <div className="text-left">
+            <div className="text-left">
               <div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Edge Hardware</h3>
-                <p className="text-gray-700">
+                <h3 className="text-left">Edge Hardware</h3>
+                <p className="text-left">
                   NVIDIA Jetson (AGX Orin, Xavier NX), Google Coral TPU, Intel Movidius VPU, 
                   Qualcomm Cloud AI 100
                 </p>
               </div>
               
               <div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">ML Frameworks</h3>
-                <p className="text-gray-700">
+                <h3 className="text-left">ML Frameworks</h3>
+                <p className="text-left">
                   TensorFlow Lite, ONNX Runtime, PyTorch Mobile, Apache TVM, OpenVINO
                 </p>
               </div>
               
               <div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Edge Orchestration</h3>
-                <p className="text-gray-700">
+                <h3 className="text-left">Edge Orchestration</h3>
+                <p className="text-left">
                   K3s, KubeEdge, Azure IoT Edge, AWS IoT Greengrass, Google Cloud IoT Edge
                 </p>
               </div>
               
               <div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Model Optimization</h3>
-                <p className="text-gray-700">
+                <h3 className="text-left">Model Optimization</h3>
+                <p className="text-left">
                   TensorFlow Model Optimization Toolkit, ONNX Graph Optimization, Quantization-Aware Training
                 </p>
               </div>
@@ -354,23 +354,23 @@ export default function AIEdgeComputingTransformation2026() {
         </section>
 
         {/* CTA Section */}
-        <section className="mb-16">
-          <div className="bg-gradient-to-r from-blue-600 to-cyan-600 rounded-2xl p-10 text-white text-center">
-            <h2 className="text-3xl font-bold mb-4">Ready to Deploy Edge AI?</h2>
-            <p className="text-xl text-blue-50 mb-8 max-w-2xl mx-auto">
+        <section className="text-left">
+          <div className="text-left">
+            <h2 className="text-left">Ready to Deploy Edge AI?</h2>
+            <p className="text-left">
               Our edge AI experts will help you architect, deploy, and scale distributed intelligence 
               across your enterprise. Get started with a free consultation.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="text-left">
               <a
                 href="tel:+13024640950"
-                className="bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-50 transition-all hover:scale-105 shadow-lg"
+                className="text-left"
               >
                 📞 Call +1 302 464 0950
               </a>
               <a
                 href="mailto:kleber@ziontechgroup.com"
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-blue-600 transition-all hover:scale-105"
+                className="text-left"
               >
                 📧 Schedule Consultation
               </a>
@@ -379,24 +379,24 @@ export default function AIEdgeComputingTransformation2026() {
         </section>
 
         {/* Related Content */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Related Resources</h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            <Link href="/blog/ai-infrastructure-automation-2026" className="group">
-              <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-200 hover:border-blue-500 transition-all">
-                <h3 className="text-xl font-bold text-gray-900 group-hover:text-blue-600 mb-2">
+        <section className="text-left">
+          <h2 className="text-left">Related Resources</h2>
+          <div className="text-left">
+            <Link href="/blog/ai-infrastructure-automation-2026" className="text-left">
+              <div className="text-left">
+                <h3 className="text-left">
                   AI Infrastructure Automation 2026
                 </h3>
-                <p className="text-gray-600">Self-healing systems with 99.99% uptime</p>
+                <p className="text-left">Self-healing systems with 99.99% uptime</p>
               </div>
             </Link>
             
-            <Link href="/blog/ai-autonomous-cloud-native-2026" className="group">
-              <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-200 hover:border-blue-500 transition-all">
-                <h3 className="text-xl font-bold text-gray-900 group-hover:text-blue-600 mb-2">
+            <Link href="/blog/ai-autonomous-cloud-native-2026" className="text-left">
+              <div className="text-left">
+                <h3 className="text-left">
                   AI Autonomous Cloud-Native 2026
                 </h3>
-                <p className="text-gray-600">Zero-touch cloud operations at scale</p>
+                <p className="text-left">Zero-touch cloud operations at scale</p>
               </div>
             </Link>
           </div>

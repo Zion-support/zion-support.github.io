@@ -32,83 +32,83 @@ const Accessibility: React.FC<AccessibilityProps> = ({ className }) => {
       title="Accessibility - Zion Tech Group"
       description="Learn about Zion Tech Group's commitment to web accessibility and our compliance with WCAG 2.1, Section 508, and ADA standards."
     >
-      <div className="min-h-screen bg-gray-50">
-        <section className="bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white py-20">
+      <div className="text-left">
+        <section className="text-left">
 :pages_disabled/accessibility.tsx
-          <div className="container mx-auto px-4">
+          <div className="text-left">
         </section>
-          <div className="container mx-auto px-4">
+          <div className="text-left">
           </div>
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center max-w-4xl mx-auto"
+              className="text-left"
             >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+              <h1 className="text-left">
+                <span className="text-left">
 :pages_disabled/accessibility.tsx
                   Accessibility First
-                </span>
+                <
               </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8">
+              <p className="text-left">
                 Building inclusive digital experiences that work for everyone
                   Accessibility
-                </span>
+                <
               </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8">
+              <p className="text-left">
                 Making technology accessible to everyone
               </p>
             </motion.div>
           </div>
         </section>
 
-        <section className="py-20">
-          <div className="container mx-auto px-4">
+        <section className="text-left">
+          <div className="text-left">
             <motion.div
-              className="text-center mb-16"
+              className="text-left"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
 
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-left">
                 Our Accessibility Features
               </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              <p className="text-left">
                 We implement comprehensive accessibility features across all our digital products to ensure they are usable by everyone.
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="text-left">
               {accessibilityFeatures.map((feature, index) => {
                 const IconComponent = feature.icon;
                 return (
                   <motion.div
                     key={index}
-                    className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                    className="text-left"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: index * 0.1 }}
                     viewport={{ once: true }}
 
                   >
-                    <div className="flex items-start space-x-4">
-                      <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <IconComponent className="w-8 h-8 text-white" />
+                    <div className="text-left">
+                      <div className="text-left">
+                        <IconComponent className="text-left" />
                       </div>
-                      <div className="flex-1">
-                        <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                      <div className="text-left">
+                        <h3 className="text-left">
                           {feature.title}
                         </h3>
-                        <p className="text-gray-600 mb-6 leading-relaxed">
+                        <p className="text-left">
                           {feature.description}
                         </p>
-                        <ul className="space-y-2">
+                        <ul className="text-left">
                           {feature.features.map((item, idx) => (
-                            <li key={idx} className="flex items-center text-sm text-gray-600">
-                              <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                            <li key={idx} className="text-left">
+                              <CheckCircle className="text-left" />
 
                               {item}
                             </li>
@@ -124,53 +124,53 @@ const Accessibility: React.FC<AccessibilityProps> = ({ className }) => {
           </div>
         </section>
 
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-4">
+        <section className="text-left">
+          <div className="text-left">
             <motion.div
-              className="text-center mb-16"
+              className="text-left"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
 
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-left">
                 Standards Compliance
               </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              <p className="text-left">
                 We maintain compliance with international accessibility standards to ensure our products meet the highest requirements.
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-left">
               {standardsCompliance.map((standard, index) => {
                 const IconComponent = standard.icon;
                 return (
                   <motion.div
                     key={index}
-                    className="bg-gray-50 p-6 rounded-xl text-center hover:shadow-lg transition-all duration-300"
+                    className="text-left"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: index * 0.1 }}
                     viewport={{ once: true }}
 
                   >
-                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                      <IconComponent className="w-8 h-8 text-white" />
+                    <div className="text-left">
+                      <IconComponent className="text-left" />
                     </div>
-                    <h3 className="text-lg font-bold text-gray-900 mb-2">
+                    <h3 className="text-left">
                       {standard.standard}
                     </h3>
-                    <p className="text-gray-600 text-sm mb-4">
+                    <p className="text-left">
                       {standard.description}
                     </p>
-                    <div className="space-y-2">
+                    <div className="text-left">
                       <span className={`px-3 py-1 text-xs rounded-full ${
                         standard.status === 'Compliant' ? "bg-green-100 text-green-800" : 'bg-yellow-100 text-yellow-800'
                       }}>
                         {standard.status}
-                      </span>
-                      <div className="text-sm text-gray-500">
+                      <
+                      <div className="text-left">
                         Coverage: {standard.coverage}
                       </div>
                     </div>
@@ -181,47 +181,47 @@ const Accessibility: React.FC<AccessibilityProps> = ({ className }) => {
           </div>
         </section>
 
-        <section className="py-20">
-          <div className="container mx-auto px-4">
+        <section className="text-left">
+          <div className="text-left">
             <motion.div
-              className="text-center mb-16"
+              className="text-left"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
 
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-left">
                 Our Testing Process
               </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              <p className="text-left">
                 We employ a comprehensive testing methodology to ensure our products meet accessibility standards.
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="text-left">
               {accessibilityTools.map((tool, index) => (
                 <motion.div
                   key={index}
-                  className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                  className="text-left"
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                 >
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Zap className="w-6 h-6 text-white" />
+                  <div className="text-left">
+                    <div className="text-left">
+                      <Zap className="text-left" />
                     </div>
-                    <div className="flex-1">
-                      <div className="flex items-center justify-between mb-2">
-                        <h3 className="text-xl font-bold text-gray-900">
+                    <div className="text-left">
+                      <div className="text-left">
+                        <h3 className="text-left">
                           {tool.name}
                         </h3>
-                        <span className="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded">
+                        <span className="text-left">
                           {tool.frequency}
-                        </span>
+                        <
                       </div>
-                      <p className="text-gray-600">
+                      <p className="text-left">
 
                         {tool.description}
                       </p>
@@ -234,42 +234,42 @@ const Accessibility: React.FC<AccessibilityProps> = ({ className }) => {
           </div>
         </section>
 
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-4">
+        <section className="text-left">
+          <div className="text-left">
             <motion.div
-              className="text-center mb-16"
+              className="text-left"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
 
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-left">
                 Accessibility Guidelines
               </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              <p className="text-left">
                 We follow established guidelines to ensure consistent accessibility across all our products.
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-left">
               {accessibilityGuidelines.map((category, index) => (
                 <motion.div
                   key={index}
-                  className="bg-gray-50 p-6 rounded-xl hover:shadow-lg transition-all duration-300"
+                  className="text-left"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
 
                 >
-                  <h3 className="text-lg font-bold text-gray-900 mb-4">
+                  <h3 className="text-left">
                     {category.category}
                   </h3>
-                  <ul className="space-y-2">
+                  <ul className="text-left">
                     {category.guidelines.map((guideline, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-gray-600">
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                      <li key={idx} className="text-left">
+                        <CheckCircle className="text-left" />
 
                         {guideline}
                       </li>
@@ -282,28 +282,28 @@ const Accessibility: React.FC<AccessibilityProps> = ({ className }) => {
           </div>
         </section>
 
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
+        <section className="text-left">
+          <div className="text-left">
+            <div className="text-left">
               <motion.div
-                className="bg-white p-8 rounded-xl shadow-lg"
+                className="text-left"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
 
               >
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                <h2 className="text-left">
                   Our Commitment
                 </h2>
-                <div className="prose prose-lg max-w-none">
-                  <p className="text-gray-600 mb-6">
+                <div className="text-left">
+                  <p className="text-left">
                     At Zion Tech Group, we believe that technology should be accessible to everyone. Our commitment to accessibility goes beyond compliance  it's about creating inclusive digital experiences that empower all users.
                   </p>
-                  <p className="text-gray-600 mb-6">
+                  <p className="text-left">
                     We continuously work to improve our products and services, incorporating feedback from users with disabilities and staying up-to-date with the latest accessibility standards and best practices.
                   </p>
-                  <p className="text-gray-600 mb-6">
+                  <p className="text-left">
                     If you encounter any accessibility barriers or have suggestions for improvement, we want to hear from you. Your feedback helps us create better experiences for everyone.
                   </p>
 =
@@ -314,8 +314,8 @@ const Accessibility: React.FC<AccessibilityProps> = ({ className }) => {
           </div>
         </section>
 
-        <section className="py-20 bg-gradient-to-r from-purple-600 to-blue-600 text-white">
-          <div className="container mx-auto px-4 text-center">
+        <section className="text-left">
+          <div className="text-left">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -359,93 +359,93 @@ const Accessibility: React.FC<AccessibilityProps> = ({ className }) => {
       description="Learn about Zion Tech Group's commitment to web accessibility and our compliance with WCAG 2.1, Section 508, and ADA standards.""
     >
 "
-      <div className="min-h-screen bg-gray-50">"
+      <div className="text-left">"
 </div>"
-        <section className="bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white py-20">"
+        <section className="text-left">"
 </section>"
-          <div className="container mx-auto px-4">"
+          <div className="text-left">"
 </div>
             <motion.div;
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}"
-              className="text-center max-w-4xl mx-auto""
+              className="text-left""
 </motion>"
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">"
+              <h1 className="text-left">"
 </h1>"
-                <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">"
-</span>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8">"
+                <span className="text-left">"
+<
+              <p className="text-left">"
 </p>
             </motion.div>
         </section>
-        <section className="py-20">"
+        <section className="text-left">"
             <motion.div;"
-              className="text-center mb-16""
+              className="text-left""
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">"
+              <h2 className="text-left">"
 </h2>
               </h2>"
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">"
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">"
+              <p className="text-left">"
+            <div className="text-left">"
                     key={index}"
-                    className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300""
+                    className="text-left""
                     transition={{ duration: 0.8, delay: index * 0.1 }}
-                    <div className="flex items-start space-x-4">"
-                      <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">"
-                        <IconComponent className="w-8 h-8 text-white" />"
-                      <div className="flex-1">"
-                        <h3 className="text-2xl font-bold text-gray-900 mb-3">"
+                    <div className="text-left">"
+                      <div className="text-left">"
+                        <IconComponent className="text-left" />"
+                      <div className="text-left">"
+                        <h3 className="text-left">"
 </h3>
                         </h3>"
-                        <p className="text-gray-600 mb-6 leading-relaxed">"
+                        <p className="text-left">"
                         </p>"
-                        <ul className="space-y-2">"
+                        <ul className="text-left">"
 </ul>"
-                            <li key={idx} className="flex items-center text-sm text-gray-600">"
+                            <li key={idx} className="text-left">"
 </li>"
-                              <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />"
+                              <CheckCircle className="text-left" />"
                             </li>
                         </ul>
                 );
               })}
-        <section className="py-20 bg-white">"
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">"
-                    className="bg-gray-50 p-6 rounded-xl text-center hover:shadow-lg transition-all duration-300""
-                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">"
-                    <h3 className="text-lg font-bold text-gray-900 mb-2">"
-                    <p className="text-gray-600 text-sm mb-4">"
-                    <div className="space-y-2">"
+        <section className="text-left">"
+            <div className="text-left">"
+                    className="text-left""
+                    <div className="text-left">"
+                    <h3 className="text-left">"
+                    <p className="text-left">"
+                    <div className="text-left">"
                       <span className={`px-3 py-1 text-xs rounded-full ${"
                         standard.status === 'Compliant' ? "bg-green-100 text-green-800" : 'bg-yellow-100 text-yellow-800
                       }}>
-                      <div className="text-sm text-gray-500">"
-                  className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300""
+                      <div className="text-left">"
+                  className="text-left""
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                    <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">"
-                      <Zap className="w-6 h-6 text-white" />"
-                      <div className="flex items-center justify-between mb-2">"
-                        <h3 className="text-xl font-bold text-gray-900">"
-                        <span className="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded">"
-                      <p className="text-gray-600">"
+                    <div className="text-left">"
+                      <Zap className="text-left" />"
+                      <div className="text-left">"
+                        <h3 className="text-left">"
+                        <span className="text-left">"
+                      <p className="text-left">"
               ))}
-                  className="bg-gray-50 p-6 rounded-xl hover:shadow-lg transition-all duration-300""
-                  <h3 className="text-lg font-bold text-gray-900 mb-4">"
-            <div className="max-w-4xl mx-auto">"
-                className="bg-white p-8 rounded-xl shadow-lg""
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">"
-                <div className="prose prose-lg max-w-none">"
-                  <p className="text-gray-600 mb-6">"
-        <section className="py-20 bg-gradient-to-r from-purple-600 to-blue-600 text-white">"
-          <div className="container mx-auto px-4 text-center">"
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">"
-              <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">"
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">"
-                <a href="mailto:accessibility@ziontechgroup.com" className="px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold">"
+                  className="text-left""
+                  <h3 className="text-left">"
+            <div className="text-left">"
+                className="text-left""
+                <h2 className="text-left">"
+                <div className="text-left">"
+                  <p className="text-left">"
+        <section className="text-left">"
+          <div className="text-left">"
+              <h2 className="text-left">"
+              <p className="text-left">"
+              <div className="text-left">"
+                <a href="mailto:accessibility@ziontechgroup.com" className="text-left">"
 </a>
                 </a>"
-                <a href="/contact" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold">"
+                <a href="/contact" className="text-left">"
     "`;
 pr-12325

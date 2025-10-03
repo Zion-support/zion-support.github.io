@@ -28,9 +28,9 @@ export function CountrySelector({ onCountryChange, selectedCountry } CountrySele
   },;
 ;
   return (;
-    <div className="mb-6">;
-      <h3 className="text-xl font-semibold text-white mb-4 flex items-center">;
-        <Globe className="mr-2 h-5 w-5 text-zion-cyan" />;
+    <div className="text-left">;
+      <h3 className="text-left">;
+        <Globe className="text-left" />;
         {selectedCountry ? `IT Onsite Service in ${selectedCountry.country}` :"Select Country for IT Onsite Service"}
       </h3>;
       ;
@@ -38,23 +38,23 @@ export function CountrySelector({ onCountryChange, selectedCountry } CountrySele
         onValueChange={handleCountryChange} ;
         value={selectedCountry?.country}
       >;
-        <SelectTrigger className="bg-zion-blue border-zion-blue-light text-white">;
+        <SelectTrigger className="text-left">;
           <SelectValue placeholder="Select a country" />;
         </SelectTrigger>;
-        <SelectContent className="bg-zion-blue-dark border-zion-blue-light max-h-80">;
-          <div className="p-2 border-b border-zion-blue-light">;
-            <p className="text-sm text-zion-slate-light pb-1">Popular Countries</p>;
+        <SelectContent className="text-left">;
+          <div className="text-left">;
+            <p className="text-left">Popular Countries</p>;
             {topCountries.map((item) => (;
-              <SelectItem key={item.country} value={item.country} className="text-white">;                {item.country} - ${item.pricePerIncident.toFixed(2)}
+              <SelectItem key={item.country} value={item.country} className="text-left">;                {item.country} - ${item.pricePerIncident.toFixed(2)}
               </SelectItem>;
             ))}
           </div>;
-          <div className="p-2">;
-            <p className="text-sm text-zion-slate-light pb-1">All Countries</p>;
+          <div className="text-left">;
+            <p className="text-left">All Countries</p>;
             {onsiteServicePricing;
               .sort((a, b) => a.country.localeCompare(b.country));
               .map((item) => (;
-              <SelectItem key={item.country} value={item.country} className="text-white">;
+              <SelectItem key={item.country} value={item.country} className="text-left">;
                 {item.country} - ${item.pricePerIncident.toFixed(2)}
               </SelectItem>;
             ))}
@@ -78,15 +78,15 @@ setTopCountries (top)
   const country = onsiteServicePricing.find (item => item.country === countryName) || null;
 onCountryChange (country) 
 };
-return (<div className="mb-6" > <h3 className="text-xl font-semibold text-white mb-4 flex items-center" > <Globe className="mr-2 h-5 w-5 text-zion-cyan" /> {;
+return (<div className="text-left" > <h3 className="text-left" > <Globe className="text-left" /> {;
   selectedCountry ? `IT Onsite Service in $ {;"  selectedCountry.country ";"}` : "Select Country for IT Onsite Service" ;
 }handleCountryChange ;
 :temp_broken_files/services/CountrySelector.tsx
-}value= {;"  selectedCountry?.country ";"}> <SelectTrigger className="bg-zion-blue border-zion-blue-light text-white" > <SelectValue placeholder="Select a country" /> </SelectTrigger> </SelectItem>) ) ;
+}value= {;"  selectedCountry?.country ";"}> <SelectTrigger className="text-left" > <SelectValue placeholder="Select a country" /> </SelectTrigger> </SelectItem>) ) ;
 }</div> </SelectContent> </Select> </div>) ;"}"
 }value= {;
   selectedCountry?.country ";
-}> <SelectTrigger className="bg-zion-blue border-zion-blue-light text-white" > <SelectValue placeholder="Select a country" /> </SelectTrigger> </SelectItem>) ) ;
+}> <SelectTrigger className="text-left" > <SelectValue placeholder="Select a country" /> </SelectTrigger> </SelectItem>) ) ;
 }</div> </SelectContent> </Select> </div>) ;
 }"
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/services/CountrySelector.tsx

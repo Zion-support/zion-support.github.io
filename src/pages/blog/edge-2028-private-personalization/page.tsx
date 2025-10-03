@@ -43,6 +43,4 @@ export default function Edge2028PrivatePersonalization(): React.JSX.Element {
       </div>
     </div>
   );
-}
-
-;
+};

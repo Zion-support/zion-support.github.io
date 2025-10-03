@@ -12,12 +12,12 @@ export const metadata = {
 
 const IntelligentDataPipelines2025 = () => {
   return (
-    <article className="prose prose-lg max-w-4xl mx-auto">
+    <article className="text-left">
       <h1>Intelligent Data Pipelines 2025 — Self-Optimizing ETL That Gets Smarter</h1>
       
-      <div className="bg-gradient-to-r from-purple-50 to-pink-50 border-l-4 border-purple-600 p-6 my-8 rounded-r-lg">
-        <h3 className="text-purple-900 mt-0">🎯 Key Results</h3>
-        <ul className="text-purple-800 space-y-2 mb-0">
+      <div className="text-left">
+        <h3 className="text-left">🎯 Key Results</h3>
+        <ul className="text-left">
           <li>✅ <strong>10x Faster Processing:</strong> Intelligent parallelization and caching</li>
           <li>✅ <strong>90% Auto-Tuning:</strong> Pipelines optimize themselves automatically</li>
           <li>✅ <strong>75% Cost Reduction:</strong> Smart resource allocation and scheduling</li>
@@ -36,7 +36,7 @@ const IntelligentDataPipelines2025 = () => {
       <h2>🏗️ Architecture: Self-Optimizing Pipelines</h2>
       
       <h3>1. Intelligent Query Optimizer</h3>
-      <pre className="bg-gray-900 text-gray-100 p-6 rounded-lg overflow-x-auto">
+      <pre className="text-left">
 {`# AI-Powered Query Optimization
 import pandas as pd
 import numpy as np
@@ -202,7 +202,7 @@ class IntelligentCache:
       </pre>
 
       <h3>2. Predictive Scaling System</h3>
-      <pre className="bg-gray-900 text-gray-100 p-6 rounded-lg overflow-x-auto">
+      <pre className="text-left">
 {`# Predictive Resource Scaling
 from sklearn.ensemble import GradientBoostingRegressor
 import asyncio
@@ -346,9 +346,9 @@ class FailurePredictor:
 
       <h2>📊 Production Results</h2>
       
-      <div className="bg-green-50 border-l-4 border-green-600 p-6 my-8">
-        <h3 className="text-green-900 mt-0">Real-World Impact</h3>
-        <ul className="text-green-800 space-y-3">
+      <div className="text-left">
+        <h3 className="text-left">Real-World Impact</h3>
+        <ul className="text-left">
           <li><strong>Media Company:</strong> Reduced pipeline runtime from 8 hours to 45 minutes (10.7x faster)</li>
           <li><strong>Retail Platform:</strong> Cut data processing costs by $2.1M annually (78% reduction)</li>
           <li><strong>Financial Services:</strong> Prevented 95% of pipeline failures through prediction</li>
@@ -387,9 +387,9 @@ class FailurePredictor:
         before they impact your business.
       </p>
 
-      <div className="bg-purple-50 border-l-4 border-purple-600 p-6 my-8">
-        <h3 className="text-purple-900 mt-0">🎯 Ready to Transform Your Data Pipelines?</h3>
-        <p className="text-purple-800">
+      <div className="text-left">
+        <h3 className="text-left">🎯 Ready to Transform Your Data Pipelines?</h3>
+        <p className="text-left">
           Contact Zion Tech Group to build intelligent, self-optimizing data pipelines that 
           deliver 10x performance improvements. Our data engineering experts will help you 
           modernize your ETL infrastructure with AI-powered optimization.

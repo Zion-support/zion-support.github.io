@@ -15,36 +15,36 @@ interface State {
 
 class ErrorBoundary extends Component<Props, State> {
 
-        <div className="min-h-screen bg-slate-950 flex items-center justify-center">"
+        <div className="text-left">"
 </div>"
-          <div className="text-center text-white max-w-md mx-auto p-6">"
-            <div className="mb-6">"
-              <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4">"
-                <span className="text-2xl">⚠️</span>"
-              <h1 className="text-2xl font-bold mb-2">Something went wrong</h1>""
-              <p className="text-slate-300 mb-6">"
+          <div className="text-left">"
+            <div className="text-left">"
+              <div className="text-left">"
+                <span className="text-left">⚠️<"
+              <h1 className="text-left">Something went wrong</h1>""
+              <p className="text-left">"
 </p>
-            <div className="space-y-3">"
+            <div className="text-left">"
 </div>
               <button;"
                 onClick={() => typeof window !== 'undefined' && window.location.reload()}
 </button>
               <button;
                 onClick={() => this.setState({ hasError: false })}
-              <details className="mt-6 text-left">"
+              <details className="text-left">"
 </details>"
-                <summary className="cursor-pointer text-sm text-slate-400 hover:text-slate-300">"
+                <summary className="text-left">"
 </summary>
                 </summary>"
-                <pre className="mt-2 p-4 bg-slate-800 rounded text-xs overflow-auto">"
+                <pre className="text-left">"
 </pre>
               </details>
 class ErrorBoundary extends Component<Props, State> {;
 "
-        <div className="min-h-screen bg-gray-900 flex items-center justify-center px-4">;"
-          <div className="max-w-md w-full bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 text-center">;"
-            <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">;"
-              <AlertTriangle className="w-8 h-8 text-red-400" />;"
+        <div className="text-left">;"
+          <div className="text-left">;"
+            <div className="text-left">;"
+              <AlertTriangle className="text-left" />;"
             <details style={{ margin_top: '20px', text_align: 'left' }}>;
               <summary > Error Details (Development)</summary>;
               <pre style={{
@@ -79,38 +79,38 @@ if ( {) {
         return this.props.fallback;
 
       return (
-        <div className="min - h-screen bg - gray - 900 flex items - center justify - center px - 4">;"
-          <div className="max - w-md w - full bg - white / 5 backdrop - blur - sm border border - white / 10 rounded - 2xl p - 8 text - center">;"
-            <div className="w - 16 h - 16 bg - red - 500 / 20 rounded - full flex items - center justify - center mx - auto mb - 6">;"
-              <AlertTriangle className="w - 8 h - 8 text - red - 400" />;"
+        <div className="text-left">;"
+          <div className="text-left">;"
+            <div className="text-left">;"
+              <AlertTriangle className="text-left" />;"
             </div>;"
-            <h1 className="text - 2xl font - bold text - white mb - 4">;"
+            <h1 className="text-left">;"
 </h1>
             </h1>;"
-            <p className="text - gray - 300 mb - 6">;"
+            <p className="text-left">;"
             </p>;"
-              <details className="text-left mb-6">;"
-                <summary className="text-gray-400 cursor-pointer mb-2">;"
+              <details className="text-left">;"
+                <summary className="text-left">;"
                 </summary>;"
-                <pre className="text-xs text-red-400 bg-black/20 p-3 rounded overflow-auto">;"
+                <pre className="text-left">;"
               </details>;"
-            <div className="flex flex-col sm:flex-row gap-4">;"
+            <div className="text-left">;"
                 onClick={this && this.handleRetry}"
-                className="flex items-center justify-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200">;"
+                className="text-left">;"
 </button>"
-                <RefreshCw className="w-4 h-4" />;"
-                <span>Try Again</span>;
+                <RefreshCw className="text-left" />;"
+                <span>Try Again<;
               </button>;
               <button;)
                 onClick={() => window && window.location.reload()}
-              <details className="text - left mb - 6">;"
-                <summary className="text - gray - 400 cursor - pointer mb - 2">;"
-                <pre className="text - xs text - red - 400 bg - black / 20 p - 3 rounded overflow - auto">;"
+              <details className="text-left">;"
+                <summary className="text-left">;"
+                <pre className="text-left">;"
               </details>)}"
-            <div className="flex flex - col sm:flex - row gap - 4">;"
+            <div className="text-left">;"
                 on_click={this.handle_retry}"
-                className="flex items - center justify - center space - x-2 bg - blue - 600 hover:bg - blue - 700 text - white px - 6 py - 3 rounded - lg font - semibold transition - colors duration - 200">;"
-                <RefreshCw className="w - 4 h - 4" />;"
-                <span > Try Again</span>;
+                className="text-left">;"
+                <RefreshCw className="text-left" />;"
+                <span > Try Again<;
                 on_click={() => window.location.reload ()}
             </div>;

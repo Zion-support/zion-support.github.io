@@ -30,9 +30,9 @@ const ZeroTrustAISecurityFramework2025: () => {
         <div className="relative overflow-hidden bg-gradient-to-r from-red-600 to-orange-600 py-16">
           <div className="absolute inset-0 bg-black/20"></div>
           <div className="container mx-auto px-6 relative z-10">
-            <Link to="/blog
-  className="inline-flex items-center text-white/90 hover:text-white mb-8 transition-colors
-            >
+            <Link to="/blog">
+  className="inline-flex items-center text-white/90 hover:text-white mb-8 transition-colors"
+            >"
               <ArrowLeft className="w-4 h-4 mr-2 ">
               <ArrowLeft className="w-4 h-4 mr-2" />
               <ArrowLeft className="w-4 h-4 mr-2" />>
@@ -63,9 +63,9 @@ const ZeroTrustAISecurityFramework2025: () => {
         <div className="relative overflow-hidden bg-gradient-to-r from-red-600 to-orange-600 py-16">
           <div className="absolute inset-0 bg-black/20"></div>
           <div className="container mx-auto px-6 relative z-10">
-            <Link to="/blog
-  className="inline-flex items-center text-white/90 hover:text-white mb-8 transition-colors
-            >
+            <Link to="/blog">
+  className="inline-flex items-center text-white/90 hover:text-white mb-8 transition-colors"
+            >"
               <ArrowLeft className="w-4 h-4 mr-2 ">
               <ArrowLeft className="w-4 h-4 mr-2" />
   Back to Blog
@@ -91,11 +91,11 @@ const ZeroTrustAISecurityFramework2025: () => {
               <div className="flex flex-wrap items-center gap-6 text-white/90">
                 <div className="flex items-center">
                   <Calendar className="w-5 h-5 mr-2 ">
-                  <span>October 1, 2025</span>/span>
+                  <span>October 1, 2025</span>
                 </div>
                 <div className="flex items-center">
                   <Clock className="w-5 h-5 mr-2 ">
-                  <span>14 min read</span>/span>
+                  <span>14 min read</span>
                 </div>
                 <div className="flex items-center">
                   <TrendingUp className="w-5 h-5 mr-2 ">
@@ -103,8 +103,8 @@ const ZeroTrustAISecurityFramework2025: () => {
                 </div>
                 <div className="flex items-center">
                   <Clock className="w-5 h-5 mr-2/>
-                  <span>14 min read</span>/span>
-                </div>
+                  <span>14 min read</span>"
+                </div>"
                 <div className="flex items-center">
                   <TrendingUp className="w-5 h-5 mr-2/>">
               <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 leading-tight">
@@ -114,11 +114,11 @@ const ZeroTrustAISecurityFramework2025: () => {
               <div className="flex flex-wrap items-center gap-6 text-white/90">
                 <div className="flex items-center">
                   <Calendar className="w-5 h-5 mr-2" />
-                  <span>October 1, 2025</span>/span>
+                  <span>October 1, 2025</span>
                 </div>
                 <div className="flex items-center">
                   <Clock className="w-5 h-5 mr-2" />
-                  <span>14 min read</span>/span>
+                  <span>14 min read</span>
                 </div>
                 <div className="flex items-center">
                   <TrendingUp className="w-5 h-5 mr-2" />
@@ -129,11 +129,11 @@ const ZeroTrustAISecurityFramework2025: () => {
               <div className="flex flex-wrap items-center gap-6 text-white/90">
                 <div className="flex items-center">
                   <Calendar className="w-5 h-5 mr-2/>">
-                  <span>October 1, 2025</span>/span>
+                  <span>October 1, 2025</span>
                 </div>
                 <div className="flex items-center">
                   <Clock className="w-5 h-5 mr-2/>">
-                  <span>14 min read</span>/span>
+                  <span>14 min read</span>
                 </div>
                 <div className="flex items-center">
                   <TrendingUp className="w-5 h-5 mr-2/>">
@@ -144,15 +144,15 @@ const ZeroTrustAISecurityFramework2025: () => {
               <div className="flex flex-wrap items-center gap-6 text-white/90">
                 <div className="flex items-center">
                   <Calendar className="w-5 h-5 mr-2" />
-                  <span>October 1, 2025</span>/span>
+                  <span>October 1, 2025</span>
                 </div>
                 <div className="flex items-center">
                   <Clock className="w-5 h-5 mr-2" />
-                  <span>14 min read</span>/span>
+                  <span>14 min read</span>
                 </div>
                 <div className="flex items-center">
                   <TrendingUp className="w-5 h-5 mr-2" />
-                  <span>Mission Critical</span>/span>
+                  <span>Mission Critical</span>
                 </div>
               </div>
             </div>
@@ -407,14 +407,13 @@ const ZeroTrustAISecurityFramework2025: () => {
                     <div className="flex-shrink-0 w-16 h-16 bg-red-500/20 rounded-lg flex items-center justify-center mr-4">
                       <span className="text-3xl">🚪</span>"
 "
-              <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-lg border border-slate-700 mb-6">
                 <h3 className="text-2xl font-semibold text-white mb-6">Five-Layer Security Model</h3>
                 <div className="space-y-6">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 w-16 h-16 bg-red-500/20 rounded-lg flex items-center justify-center mr-4">
                       <span className="text-3xl">🚪</span>
                     </div>
-                    <div >
+                    <div>
                       <h4 className="text-lg font-semibold text-white mb-2">Layer 1: Identity & Access Management</h4>
                       <p className="text-gray-400 mb-2">,"
   Centralized identity provider (Okta, Auth0) with SSO, MFA, and adaptive authentication.
@@ -427,14 +426,13 @@ const ZeroTrustAISecurityFramework2025: () => {
   Reference Architecture
               </h2>
 
-              <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-lg border border-slate-700 mb-6">
                 <h3 className="text-2xl font-semibold text-white mb-6">Five-Layer Security Model</h3>
                 <div className="space-y-6">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 w-16 h-16 bg-red-500/20 rounded-lg flex items-center justify-center mr-4">
                       <span className="text-3xl">🚪</span>
                     </div>
-                    <div >
+                    <div>
                       <h4 className="text-lg font-semibold text-white mb-2">Layer 1: Identity & Access Management</h4>
                       <p className="text-gray-400 mb-2">
   Centralized identity provider (Okta, Auth0) with SSO, MFA, and adaptive authentication.
@@ -447,14 +445,13 @@ const ZeroTrustAISecurityFramework2025: () => {
   Reference Architecture
               </h2>
 
-              <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-lg border border-slate-700 mb-6">
                 <h3 className="text-2xl font-semibold text-white mb-6">Five-Layer Security Model</h3>
                 <div className="space-y-6">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 w-16 h-16 bg-red-500/20 rounded-lg flex items-center justify-center mr-4">
                       <span className="text-3xl">🚪</span>"
                     </div>
-                    <div >
+                    <div>
                       <h4 className="text-lg font-semibold text-white mb-2">Layer 1: Identity & Access Management</h4>
                       <p className="text-gray-400 mb-2">,"
   Centralized identity provider (Okta, Auth0) with SSO, MFA, and adaptive authentication.
@@ -467,14 +464,13 @@ const ZeroTrustAISecurityFramework2025: () => {
   Reference Architecture
               </h2>
 
-              <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-lg border border-slate-700 mb-6">
                 <h3 className="text-2xl font-semibold text-white mb-6">Five-Layer Security Model</h3>
                 <div className="space-y-6">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 w-16 h-16 bg-red-500/20 rounded-lg flex items-center justify-center mr-4">
                       <span className="text-3xl">🚪</span>
                     </div>
-                    <div >
+                    <div>
                       <h4 className="text-lg font-semibold text-white mb-2">Layer 1: Identity & Access Management</h4>
                       <p className="text-gray-400 mb-2">"
   Centralized identity provider (Okta, Auth0) with SSO, MFA, and adaptive authentication.
@@ -490,7 +486,7 @@ const ZeroTrustAISecurityFramework2025: () => {
                     <div className="flex-shrink-0 w-16 h-16 bg-orange-500/20 rounded-lg flex items-center justify-center mr-4">
                       <span className="text-3xl">🛡️</span>
                     </div>
-                    <div >
+                    <div>
                       <h4 className="text-lg font-semibold text-white mb-2">Layer 2: Network Security</h4>
                       <p className="text-gray-400 mb-2">,"
   Service mesh (Istio, Linkerd) with mTLS, traffic encryption, and zero-trust networking.
@@ -507,7 +503,7 @@ const ZeroTrustAISecurityFramework2025: () => {
                     <div className="flex-shrink-0 w-16 h-16 bg-orange-500/20 rounded-lg flex items-center justify-center mr-4">
                       <span className="text-3xl">🛡️</span>
                     </div>
-                    <div >
+                    <div>
                       <h4 className="text-lg font-semibold text-white mb-2">Layer 2: Network Security</h4>
                       <p className="text-gray-400 mb-2">,"
   Service mesh (Istio, Linkerd) with mTLS, traffic encryption, and zero-trust networking.
@@ -529,7 +525,7 @@ const ZeroTrustAISecurityFramework2025: () => {
                     <div className="flex-shrink-0 w-16 h-16 bg-yellow-500/20 rounded-lg flex items-center justify-center mr-4">
                       <span className="text-3xl">📋</span>
                     </div>
-                    <div >
+                    <div>
                       <h4 className="text-lg font-semibold text-white mb-2">Layer 3: Policy Enforcement</h4>
                       <p className="text-gray-400 mb-2">,"
   Declarative policies as code. API gateway enforces rate limits, quotas, and access controls.
@@ -546,7 +542,7 @@ const ZeroTrustAISecurityFramework2025: () => {
                     <div className="flex-shrink-0 w-16 h-16 bg-yellow-500/20 rounded-lg flex items-center justify-center mr-4">
                       <span className="text-3xl">📋</span>
                     </div>
-                    <div >
+                    <div>
                       <h4 className="text-lg font-semibold text-white mb-2">Layer 3: Policy Enforcement</h4>
                       <p className="text-gray-400 mb-2">,"
   Declarative policies as code. API gateway enforces rate limits, quotas, and access controls.
@@ -568,7 +564,7 @@ const ZeroTrustAISecurityFramework2025: () => {
                     <div className="flex-shrink-0 w-16 h-16 bg-green-500/20 rounded-lg flex items-center justify-center mr-4">
                       <span className="text-3xl">🔍</span>
                     </div>
-                    <div >
+                    <div>
                       <h4 className="text-lg font-semibold text-white mb-2">Layer 4: Monitoring & Detection</h4>
                       <p className="text-gray-400 mb-2">,"
   Continuous monitoring with behavioral baselines. ML-powered anomaly detection flags
@@ -585,7 +581,7 @@ const ZeroTrustAISecurityFramework2025: () => {
                     <div className="flex-shrink-0 w-16 h-16 bg-green-500/20 rounded-lg flex items-center justify-center mr-4">
                       <span className="text-3xl">🔍</span>
                     </div>
-                    <div >
+                    <div>
                       <h4 className="text-lg font-semibold text-white mb-2">Layer 4: Monitoring & Detection</h4>
                       <p className="text-gray-400 mb-2">,"
   Continuous monitoring with behavioral baselines. ML-powered anomaly detection flags
@@ -607,7 +603,7 @@ const ZeroTrustAISecurityFramework2025: () => {
                     <div className="flex-shrink-0 w-16 h-16 bg-purple-500/20 rounded-lg flex items-center justify-center mr-4">
                       <span className="text-3xl">📜</span>
                     </div>
-                    <div >
+                    <div>
                       <h4 className="text-lg font-semibold text-white mb-2">Layer 5: Audit & Compliance</h4>
                       <p className="text-gray-400 mb-2">,"
   Immutable audit logs for every model access, data query, and inference request.
@@ -624,7 +620,7 @@ const ZeroTrustAISecurityFramework2025: () => {
                     <div className="flex-shrink-0 w-16 h-16 bg-purple-500/20 rounded-lg flex items-center justify-center mr-4">
                       <span className="text-3xl">📜</span>
                     </div>
-                    <div >
+                    <div>
                       <h4 className="text-lg font-semibold text-white mb-2">Layer 5: Audit & Compliance</h4>
                       <p className="text-gray-400 mb-2">,"
   Immutable audit logs for every model access, data query, and inference request.
@@ -794,19 +790,19 @@ const ZeroTrustAISecurityFramework2025: () => {
               <div className="bg-gradient-to-r from-emerald-500/20 to-blue-500/20 p-8 rounded-lg border border-emerald-500/30">
                 <h2 className="text-3xl font-bold text-white mb-6">Security Posture Improvements</h2>
                 <div className="grid md:grid-cols-2 gap-6">
-                  <div >
+                  <div>
                     <p className="text-5xl font-bold text-emerald-400 mb-2">92%</p>
                     <p className="text-gray-300">Reduction in security incidents post-implementation</p>
                   </div>
-                  <div >
+                  <div>
                     <p className="text-5xl font-bold text-blue-400 mb-2">23 min</p>
                     <p className="text-gray-300">Mean time to detect (MTTD) security anomalies</p>
                   </div>
-                  <div >
+                  <div>
                     <p className="text-5xl font-bold text-purple-400 mb-2">100%</p>
                     <p className="text-gray-300">Compliance audit pass rate (SOC 2 Type II)</p>
                   </div>
-                  <div >
+                  <div>
                     <p className="text-5xl font-bold text-cyan-400 mb-2">$4.8M</p>
                     <p className="text-gray-300">Average prevented breach costs per year</p>
             <section className="mb-12">
@@ -817,19 +813,19 @@ const ZeroTrustAISecurityFramework2025: () => {
               <div className="bg-gradient-to-r from-emerald-500/20 to-blue-500/20 p-8 rounded-lg border border-emerald-500/30">
                 <h2 className="text-3xl font-bold text-white mb-6">Security Posture Improvements</h2>
                 <div className="grid md:grid-cols-2 gap-6">
-                  <div >
+                  <div>
                     <p className="text-5xl font-bold text-emerald-400 mb-2">92%</p>
                     <p className="text-gray-300">Reduction in security incidents post-implementation</p>
                   </div>
-                  <div >
+                  <div>
                     <p className="text-5xl font-bold text-blue-400 mb-2">23 min</p>
                     <p className="text-gray-300">Mean time to detect (MTTD) security anomalies</p>
                   </div>
-                  <div >
+                  <div>
                     <p className="text-5xl font-bold text-purple-400 mb-2">100%</p>
                     <p className="text-gray-300">Compliance audit pass rate (SOC 2 Type II)</p>
                   </div>
-                  <div >
+                  <div>
                     <p className="text-5xl font-bold text-cyan-400 mb-2">$4.8M</p>
                     <p className="text-gray-300">Average prevented breach costs per year</p>
                   </div>
@@ -848,8 +844,8 @@ const ZeroTrustAISecurityFramework2025: () => {
                 </p>
                 to="/contact"
   className="inline-flex items-center px-8 py-4 bg-white text-red-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors
-                >
-                  Request Security Assessment
+                >"
+                  Request Security Assessment"
                   <ArrowLeft className="w-5 h-5 ml-2 rotate-180 ">
                   <ArrowLeft className="w-5 h-5 ml-2 rotate-180/>">
                   <ArrowLeft className="w-5 h-5 ml-2 rotate-180" />
@@ -863,8 +859,8 @@ const ZeroTrustAISecurityFramework2025: () => {
                 </p>
                 to="/contact"
   className="inline-flex items-center px-8 py-4 bg-white text-red-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors
-                >
-                  Request Security Assessment
+                >"
+                  Request Security Assessment"
                   <ArrowLeft className="w-5 h-5 ml-2 rotate-180 ">
                   <ArrowLeft className="w-5 h-5 ml-2 rotate-180" />
                 </Link>
@@ -877,5 +873,4 @@ const ZeroTrustAISecurityFramework2025: () => {
   );
 };
 
-export default ZeroTrustAISecurityFramework2025;
-;
+export default ZeroTrustAISecurityFramework2025;;

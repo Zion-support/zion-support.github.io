@@ -123,30 +123,30 @@ URL.revokeObjectURL(url);
 
               />
             </label>
-            <label className="space-y-1">
-              <div className="text-xs uppercase opacity-60">Subtitle</div>
+            <label className="text-left">
+              <div className="text-left">Subtitle</div>
               <input
-                className="w-full border rounded px-3 py-2"
+                className="text-left"
                 value={project.meta.subtitle}
                 onChange={(e) => setProject({ ...project, meta: { ...project.meta, subtitle: e.target.value } })}
 
 
               />
             </label>
-            <label className="space-y-1">
-              <div className="text-xs uppercase opacity-60">Author</div>
+            <label className="text-left">
+              <div className="text-left">Author</div>
               <input
-                className="w-full border rounded px-3 py-2"
+                className="text-left"
                 value={project.meta.author}
                 onChange={(e) => setProject({ ...project, meta: { ...project.meta, author: e.target.value } })}
 
 
               />
             </label>
-            <label className="space-y-1">
-              <div className="text-xs uppercase opacity-60">ISBN (optional)</div>
+            <label className="text-left">
+              <div className="text-left">ISBN (optional)</div>
               <input
-                className="w-full border rounded px-3 py-2"
+                className="text-left"
                 placeholder="9781234567897"
             <div className='grid grid-cols-3 gap-2>
 
@@ -156,10 +156,10 @@ URL.revokeObjectURL(url);
 
 
 
-            <div key={idx} className="border rounded-lg p-4 space-y-2">
-              <div className="font-medium">{ch.title}</div>
+            <div key={idx} className="text-left">
+              <div className="text-left">{ch.title}</div>
               <textarea
-                className="w-full min-h-[160px] border rounded p-2"
+                className="text-left"
                 value={ch.content}
                 onChange={(e) => {
 
@@ -204,7 +204,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533:components/book/BookBuil
 
 
               <input
-                className="border rounded px-2 py-1"
+                className="text-left"
                 value={q.attribution ?? ''}
                 onChange={(e) => {
 

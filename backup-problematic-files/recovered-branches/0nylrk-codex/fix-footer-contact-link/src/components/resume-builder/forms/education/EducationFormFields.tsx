@@ -66,8 +66,8 @@ export function EducationFormFields({ ;
 ;
   return (;
     <Form {...form}>;
-      <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-4">;
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
+      <form onSubmit={form.handleSubmit(handleSubmit)} className="text-left">;
+        <div className="text-left">;
           <FormField;
             control={form.control}
             name="institution";
@@ -109,7 +109,7 @@ export function EducationFormFields({ ;
           )}
         />;
 ;
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
+        <div className="text-left">;
           <FormField;
             control={form.control}
             name="start_date";
@@ -128,19 +128,19 @@ export function EducationFormFields({ ;
             )}
           />;
 ;
-          <div className="space-y-4">;
+          <div className="text-left">;
             <FormField;
               control={form.control}
               name="is_current";
               render={({ field }) => (;
-                <FormItem className="flex flex-row items-start space-x-3 space-y-0 py-2">;
+                <FormItem className="text-left">;
                   <FormControl>;
                     <Checkbox;
                       checked={field.value}
                       onCheckedChange={field.onChange}
                     />;
                   </FormControl>;
-                  <div className="space-y-1 leading-none">;
+                  <div className="text-left">;
                     <FormLabel>I am currently studying here</FormLabel>;
                   </div>;
                 </FormItem>;
@@ -190,7 +190,7 @@ export function EducationFormFields({ ;
               <FormControl>;
                 <Textarea;
                   placeholder="Notable achievements, courses, activities...";
-                  className="min-h-[100px]";
+                  className="text-left";
                   {...field}
                 />;
               </FormControl>;
@@ -201,7 +201,7 @@ export function EducationFormFields({ ;
 ;
         {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
 ;
-        <div className="flex justify-between pt-2">;
+        <div className="text-left">;
           <Button;
             type="button";
             variant="outline";
@@ -211,7 +211,7 @@ export function EducationFormFields({ ;
           </Button>;
 ;
           <Button type="submit" disabled={isLoading}>;
-            {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+            {isLoading && <Loader2 className="text-left" />}
             {isEditing ? 'Update' :'Add'} Education;
           </Button>;
         </div>;
@@ -222,15 +222,15 @@ export function EducationFormFields({ ;
 </FormControl> <FormMessage /> </FormItem>) ;
 }/> <FormField </FormControl> <FormMessage /> </FormItem>) ;
 }/> </div> <FormField </FormControl> <FormMessage /> </FormItem>) ;
-}/> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField <FormItem> <FormLabel>Start Date</FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) ";"}/> <div className="space-y-4" > <FormField <FormControl> <Checkbox checked= {;
+}/> <div className="text-left" > <FormField <FormItem> <FormLabel>Start Date</FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) ";"}/> <div className="text-left" > <FormField <FormControl> <Checkbox checked= {;
   field.value ;
-}onCheckedChange= {;"  field.onChange ";"}/> </FormControl> <div className="space-y-1 leading-none" > <FormLabel>I am currently studying here</FormLabel> </div> </FormItem>) ;
+}onCheckedChange= {;"  field.onChange ";"}/> </FormControl> <div className="text-left" > <FormLabel>I am currently studying here</FormLabel> </div> </FormItem>) ;
 }/> {;
   !form.watch ('is current') && (<FormField control= {;
   form.control ;
 }<FormItem> <FormLabel>End Date</FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) ;
 }/>) ;
-}</div> </div> <FormField </FormControl> <FormMessage /> </FormItem>) ;"}/> <FormField <FormItem> <FormLabel>Description (Optional) </FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>) ";"}/> <div className="flex justify-between pt-2" > <Button >{';
+}</div> </div> <FormField </FormControl> <FormMessage /> </FormItem>) ;"}/> <FormField <FormItem> <FormLabel>Description (Optional) </FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>) ";"}/> <div className="text-left" > <Button >{';
   isEditing ? 'Cancel' : 'Back' ;
 :temp_broken_files/resume-builder/forms/education/EducationFormFields.tsx
 }</Button> </Button> </div> </form> </Form>) ;"}'"

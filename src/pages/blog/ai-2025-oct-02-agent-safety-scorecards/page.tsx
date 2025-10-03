@@ -41,6 +41,4 @@ export default function AgentSafetyScorecards(): React.JSX.Element {
       </div>
     </div>
   );
-}
-
-;
+};

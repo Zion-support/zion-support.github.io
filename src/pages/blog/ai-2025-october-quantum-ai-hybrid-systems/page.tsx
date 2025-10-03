@@ -88,16 +88,16 @@ const QuantumAIHybrid2025: () => {
             </p>
             
             <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-400">
-              <div className="flex items-center"><Clock className="w-4 h-4 mr-2/>15 min read</div>
-              <div className="flex items-center"><Users className="w-4 h-4 mr-2/>Quantum Computing</div>
+              <div className="flex items-center"><Clock className="w-4 h-4 mr-2/>15 min read</div>"
+              <div className="flex items-center"><Users className="w-4 h-4 mr-2/>Quantum Computing</div>"
               <div className="flex items-center"><CheckCircle className="w-4 h-4 mr-2/>Featured</div>
             </div>
           </div>
 
   Discover how quantum-AI hybrid systems are revolutionizing enterprise computing. Learn implementation strategies
               real-world applications, and ROI optimization for 1000x processing speed gains.
-            </p>
-            
+            </p>"
+            "
             <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-400">
               <div className="flex items-center"><Clock className="w-4 h-4 mr-2" />15 min read</div>
               <div className="flex items-center"><Users className="w-4 h-4 mr-2" />Quantum Computing</div>
@@ -293,14 +293,14 @@ const QuantumAIHybrid2025: () => {
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     to="/contact"
   className="bg-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:bg-purple-600 transition-colors inline-flex items-center justify-center gap-2
-                    >
-                      Explore Quantum-AI Solutions
-                      <ArrowRight className="w-5 h-5 ">
-                      <ArrowRight className="w-5 h-5/>">
+                    >"
+                      Explore Quantum-AI Solutions"
+                      <ArrowRight className="w-5 h-5 " />
+                      <ArrowRight className="w-5 h-5/>" />
                       <ArrowRight className="w-5 h-5" />
                     </Link>
-                    <Link to="/services/quantum-computing-consulting
-  className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-colors>
+                    <Link to="/services/quantum-computing-consulting">
+  className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-colors>"
               <section className="text-center">
                 <div className="bg-gradient-to-r from-purple-500/20 to-cyan-500/20 border border-purple-400/30 rounded-xl p-8">
                   <h2 className="text-2xl font-bold text-white mb-4">"
@@ -314,12 +314,12 @@ const QuantumAIHybrid2025: () => {
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     to="/contact"
   className="bg-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:bg-purple-600 transition-colors inline-flex items-center justify-center gap-2
-                    >
-                      Explore Quantum-AI Solutions
-                      <ArrowRight className="w-5 h-5 ">
+                    >"
+                      Explore Quantum-AI Solutions"
+                      <ArrowRight className="w-5 h-5 " />
                       <ArrowRight className="w-5 h-5" />
                     </Link>
-                    <Link to="/services/quantum-computing-consulting
+                    <Link to="/services/quantum-computing-consulting">
   className= "border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-colors
                     >
                       Learn More

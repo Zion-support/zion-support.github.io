@@ -40,6 +40,4 @@ export default function GenAIQualityTiersV4(): React.JSX.Element {
       </div>
     </div>
   );
-}
-
-;
+};

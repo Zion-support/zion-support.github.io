@@ -263,7 +263,7 @@ const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({
           <div className=flex items-center justify-between p-6 border-b border-gray-200">
             <div className="flex items-center>
               <div className=w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center">
-                <span className="text-white font-bold text-lg>Z</span>
+                <span className="text-white font-bold text-lg>Z<
               </div>
               <div className=ml-3">
                 <h1 className="text-xl font-bold text-gray-900>Zion Tech</h1>
@@ -295,7 +295,7 @@ const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({
                       </div>
                       <span className=font-semibold text-gray-900">
                         {section.title}
-                      </span>
+                      <
                     </div>
                     {expandedSections.includes(section.title) ? (
                       <ChevronDown className="w-5 h-5 text-gray-500 />
@@ -673,7 +673,7 @@ interface EnhancedSidebar2025Props {
           <div className=flex items-center justify-between p-6 border-b border-gray-200">
             <div className="flex items-center>
               <div className=w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center">
-                <span className="text-white font-bold text-lg>Z</span>
+                <span className="text-white font-bold text-lg>Z<
               </div>
               <div className=ml-3">
                 <h1 className="text-xl font-bold text-gray-900>Zion Tech</h1>
@@ -705,7 +705,7 @@ interface EnhancedSidebar2025Props {
                       </div>
                       <span className=font-semibold text-gray-900">
                         {section.title}
-                      </span>
+                      <
                     </div>
                     {expandedSections.includes(section.title) ? (
                       <ChevronDown className="w-5 h-5 text-gray-500 />

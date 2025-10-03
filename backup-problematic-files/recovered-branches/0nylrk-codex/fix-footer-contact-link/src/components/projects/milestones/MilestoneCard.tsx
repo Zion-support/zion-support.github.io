@@ -50,17 +50,17 @@ export function MilestoneCard({ ;
   ;
   return (;
     <Card>;
-      <CardHeader className="pb-2">;
-        <div className="flex justify-between items-start">;
+      <CardHeader className="text-left">;
+        <div className="text-left">;
           <div>;
-            <CardTitle className="text-xl">{title}</CardTitle>;
+            <CardTitle className="text-left">{title}</CardTitle>;
             {dueDate && (;
-              <p className="text-sm text-muted-foreground">;
+              <p className="text-left">;
                 Due:{format(new Date(dueDate), 'MMM d, yyyy')}
               </p>;
             )}
           </div>;
-          <div className="flex gap-2">;
+          <div className="text-left">;
             <Badge variant="outline" className={`capitalize ${getStatusBadgeColor()} text-white`}>;
               {status.replace('_ ')}
             </Badge>;
@@ -72,16 +72,16 @@ export function MilestoneCard({ ;
         </div>;
       </CardHeader>;
       ;
-      <CardContent className="pb-2">;
+      <CardContent className="text-left">;
         {description && (;
-          <p className="text-muted-foreground">{description}</p>;
+          <p className="text-left">{description}</p>;
         )}
-        <div className="mt-4">;
-          <p className="text-xl font-bold">${amount.toFixed(2)}</p>;
+        <div className="text-left">;
+          <p className="text-left">${amount.toFixed(2)}</p>;
         </div>;
       </CardContent>;
       ;
-      <CardFooter className="pt-2 flex justify-between">;
+      <CardFooter className="text-left">;
         <div>;
           {status !== 'completed' && status !== 'rejected' && (;
             <RaiseDisputeButton ;
@@ -93,16 +93,16 @@ export function MilestoneCard({ ;
           )}
         </div>;
         ;
-        <div className="flex gap-2">;
+        <div className="text-left">;
           {status === 'pending' && onReject && !isUnderDispute && (;
             <Button variant="outline" size="sm" onClick={() => onReject(id)}>;
-              <X className="h-4 w-4 mr-1" /> Reject;
+              <X className="text-left" /> Reject;
             </Button>;
           )}
           ;
           {status === 'pending' && onApprove && !isUnderDispute && (;
             <Button variant="default" size="sm" onClick={() => onApprove(id)}>;
-              <Check className="h-4 w-4 mr-1" /> Approve;
+              <Check className="text-left" /> Approve;
             </Button>;
           )}
           ;
@@ -143,9 +143,9 @@ switch (status) {';
   case 'completed': return 'bg-green-500';';
 case 'in progress': return 'bg-blue-500';';
 case 'pending': return 'bg-yellow-500';';
-case 'rejected': ;"}return (<Card> <CardHeader className="pb-2" > <div className="flex justify-between items-start" > <div> </p>) ;
+case 'rejected': ;"}return (<Card> <CardHeader className="text-left" > <div className="text-left" > <div> </p>) ;
 }</div> isUnderDispute && disputeStatus && (<DisputeStatusBadge status= {;
-  disputeStatus ;"}/>) ";"}</div> </div> </CardHeader> </div> </CardContent> <CardFooter className="pt-2 flex justify-between" > <div> {';
+  disputeStatus ;"}/>) ";"}</div> </div> </CardHeader> </div> </CardContent> <CardFooter className="text-left" > <div> {';
   status !== 'completed' && status !== 'rejected' && (<RaiseDisputeButton projectId= {;
   projectId ;
 }/>) ;

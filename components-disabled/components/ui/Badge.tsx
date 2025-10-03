@@ -82,7 +82,7 @@ const classes = `${baseClasses} ${variantClasses[variant]} ${className}`;
   return (
     <span className={classes}    />
       {children}
-    </span>
+    <
   );
 }
 export { Badge, badgeVariants }

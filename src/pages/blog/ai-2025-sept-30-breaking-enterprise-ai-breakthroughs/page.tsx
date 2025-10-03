@@ -43,6 +43,4 @@ export default function BreakingEnterpriseAIBreakthroughs2025(): React.JSX.Eleme
       </div>
     </div>
   );
-}
-
-;
+};

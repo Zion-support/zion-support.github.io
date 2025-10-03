@@ -11,16 +11,16 @@ export const metadata = {
 
 export default function BlogPost() {
   return (
-    <article className="prose prose-invert max-w-none">
+    <article className="text-left">
       <h1>🎨 Multimodal Enterprise Intelligence: Vision + Language + Action Models for 2025</h1>
       
-      <div className="bg-gradient-to-r from-orange-600/20 to-red-600/20 border border-orange-500/30 rounded-lg p-6 my-8">
-        <h3 className="text-2xl font-bold text-orange-300 mt-0">🚀 The Intelligence Revolution</h3>
-        <p className="text-lg">
-          <strong>Multimodal enterprise AI systems</strong> achieving <span className="text-green-400 font-bold">96% cross-modal accuracy</span>, 
-          <span className="text-green-400 font-bold"> 78% task automation</span>, and <span className="text-green-400 font-bold">unified intelligence</span> 
-          across text, images, video, audio, and sensor data. Transform your operations with AI that <span className="text-green-400 font-bold">sees, 
-          hears, reads, and acts</span> like humans—but at machine scale.
+      <div className="text-left">
+        <h3 className="text-left">🚀 The Intelligence Revolution</h3>
+        <p className="text-left">
+          <strong>Multimodal enterprise AI systems</strong> achieving <span className="text-left">96% cross-modal accuracy<, 
+          <span className="text-left"> 78% task automation<, and <span className="text-left">unified intelligence< 
+          across text, images, video, audio, and sensor data. Transform your operations with AI that <span className="text-left">sees, 
+          hears, reads, and acts< like humans—but at machine scale.
         </p>
       </div>
 
@@ -102,7 +102,7 @@ export default function BlogPost() {
       <h2>⚡ Technical Architecture</h2>
 
       <h3>Multimodal Intelligence Platform</h3>
-      <pre className="bg-black/50 p-4 rounded-lg overflow-x-auto">
+      <pre className="text-left">
 {`# Multimodal AI Architecture
 
 ┌─────────────────────────────────────────────┐
@@ -141,7 +141,7 @@ export default function BlogPost() {
       </pre>
 
       <h3>Example: Multimodal Customer Support</h3>
-      <pre className="bg-black/50 p-4 rounded-lg overflow-x-auto">
+      <pre className="text-left">
 {`Customer Issue: "My product doesn't work"
 ↓
 Multimodal Input Collection:
@@ -175,45 +175,45 @@ Result: Issue resolved in 4 minutes (vs. 28 min average)
 
       <h2>📊 Performance Benchmarks</h2>
 
-      <table className="min-w-full divide-y divide-gray-700">
+      <table className="text-left">
         <thead>
           <tr>
             <th className="text-left">Task</th>
-            <th className="text-right">Traditional AI</th>
-            <th className="text-right">Multimodal AI</th>
-            <th className="text-right">Improvement</th>
+            <th className="text-left">Traditional AI</th>
+            <th className="text-left">Multimodal AI</th>
+            <th className="text-left">Improvement</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td>Document Processing</td>
-            <td className="text-right">87% accuracy</td>
-            <td className="text-right text-green-400 font-bold">99.7% accuracy</td>
-            <td className="text-right text-green-400">+14.6%</td>
+            <td className="text-left">87% accuracy</td>
+            <td className="text-left">99.7% accuracy</td>
+            <td className="text-left">+14.6%</td>
           </tr>
           <tr>
             <td>Quality Inspection</td>
-            <td className="text-right">91% defect detection</td>
-            <td className="text-right text-green-400 font-bold">98.5% detection</td>
-            <td className="text-right text-green-400">+8.2%</td>
+            <td className="text-left">91% defect detection</td>
+            <td className="text-left">98.5% detection</td>
+            <td className="text-left">+8.2%</td>
           </tr>
           <tr>
             <td>Customer Support</td>
-            <td className="text-right">28 min avg resolution</td>
-            <td className="text-right text-green-400 font-bold">4 min resolution</td>
-            <td className="text-right text-green-400">7x faster</td>
+            <td className="text-left">28 min avg resolution</td>
+            <td className="text-left">4 min resolution</td>
+            <td className="text-left">7x faster</td>
           </tr>
           <tr>
             <td>Search Relevance</td>
-            <td className="text-right">72% precision</td>
-            <td className="text-right text-green-400 font-bold">94% precision</td>
-            <td className="text-right text-green-400">+30.6%</td>
+            <td className="text-left">72% precision</td>
+            <td className="text-left">94% precision</td>
+            <td className="text-left">+30.6%</td>
           </tr>
           <tr>
             <td>Automation Rate</td>
-            <td className="text-right">45%</td>
-            <td className="text-right text-green-400 font-bold">78%</td>
-            <td className="text-right text-green-400">+73%</td>
+            <td className="text-left">45%</td>
+            <td className="text-left">78%</td>
+            <td className="text-left">+73%</td>
           </tr>
         </tbody>
       </table>
@@ -260,7 +260,7 @@ Result: Issue resolved in 4 minutes (vs. 28 min average)
         <li><strong>Quality inspections:</strong> 10x throughput increase → $1.8M savings</li>
         <li><strong>Customer support:</strong> 7x faster resolutions → $3.2M savings</li>
         <li><strong>Document processing:</strong> 89% time reduction → $1.6M savings</li>
-        <li><strong>Total Annual Benefit:</strong> <span className="text-green-400 font-bold">$8.7M</span></li>
+        <li><strong>Total Annual Benefit:</strong> <span className="text-left">$8.7M<</li>
       </ul>
 
       <h3>Revenue Impact</h3>
@@ -268,7 +268,7 @@ Result: Issue resolved in 4 minutes (vs. 28 min average)
         <li><strong>Improved customer satisfaction:</strong> +15% retention → $4.2M additional revenue</li>
         <li><strong>Faster time to market:</strong> Product launches 3x faster → $2.8M revenue</li>
         <li><strong>New AI-powered services:</strong> Novel offerings → $1.9M new revenue stream</li>
-        <li><strong>Total Revenue Impact:</strong> <span className="text-green-400 font-bold">$8.9M</span></li>
+        <li><strong>Total Revenue Impact:</strong> <span className="text-left">$8.9M<</li>
       </ul>
 
       <h3>Investment Required</h3>
@@ -277,26 +277,26 @@ Result: Issue resolved in 4 minutes (vs. 28 min average)
         <li><strong>Software licensing:</strong> $240K annually</li>
         <li><strong>Implementation services:</strong> $290K one-time</li>
         <li><strong>Training & change management:</strong> $85K one-time</li>
-        <li><strong>Payback period:</strong> <span className="text-green-400 font-bold">3.2 months</span></li>
-        <li><strong>3-year ROI:</strong> <span className="text-green-400 font-bold">2,840%</span></li>
+        <li><strong>Payback period:</strong> <span className="text-left">3.2 months<</li>
+        <li><strong>3-year ROI:</strong> <span className="text-left">2,840%<</li>
       </ul>
 
       <h2>🏆 Success Stories</h2>
 
-      <div className="bg-gradient-to-r from-orange-600/10 to-red-600/10 border border-orange-500/30 rounded-lg p-6 my-6">
-        <h4 className="text-xl font-bold text-orange-300">Global Manufacturing Leader</h4>
+      <div className="text-left">
+        <h4 className="text-left">Global Manufacturing Leader</h4>
         <p>
           Deployed multimodal quality control across 47 production lines worldwide. 
-          <strong className="text-green-400"> Results:</strong> 98.5% defect detection (up from 91%), 
+          <strong className="text-left"> Results:</strong> 98.5% defect detection (up from 91%), 
           87% reduction in customer returns, $12.4M annual savings, zero product recalls in 18 months.
         </p>
       </div>
 
-      <div className="bg-gradient-to-r from-red-600/10 to-pink-600/10 border border-red-500/30 rounded-lg p-6 my-6">
-        <h4 className="text-xl font-bold text-red-300">Top 5 Insurance Company</h4>
+      <div className="text-left">
+        <h4 className="text-left">Top 5 Insurance Company</h4>
         <p>
           Implemented multimodal claims processing handling text, images, videos, and voice calls. 
-          <strong className="text-green-400"> Results:</strong> 78% of claims fully automated, 
+          <strong className="text-left"> Results:</strong> 78% of claims fully automated, 
           94% reduction in processing time (45 min → 3 min), $24M annual operational savings.
         </p>
       </div>
@@ -304,7 +304,7 @@ Result: Issue resolved in 4 minutes (vs. 28 min average)
       <h2>🚀 Quick Start: Your First Multimodal AI</h2>
 
       <h3>Deploy in 1 Hour with Pre-trained Models</h3>
-      <pre className="bg-black/50 p-4 rounded-lg overflow-x-auto">
+      <pre className="text-left">
 {`# Install multimodal AI SDK
 pip install ziontechgroup-multimodal-ai
 
@@ -387,13 +387,13 @@ print(response)
         <li><strong>Quantum-enhanced fusion:</strong> Process all modalities in superposition</li>
       </ul>
 
-      <div className="bg-gradient-to-r from-orange-600/20 to-red-600/20 border border-orange-500/30 rounded-lg p-6 my-8">
-        <h3 className="text-2xl font-bold text-orange-300">🎯 Transform Your Enterprise with Multimodal AI</h3>
-        <p className="text-lg">
+      <div className="text-left">
+        <h3 className="text-left">🎯 Transform Your Enterprise with Multimodal AI</h3>
+        <p className="text-left">
           The future of enterprise AI is multimodal. Companies deploying these systems today achieve 
           96% accuracy across data types, 78% task automation, and millions in operational savings. 
         </p>
-        <p className="text-lg mt-4">
+        <p className="text-left">
           <strong>Your competitors are already deploying this.</strong> Don't get left behind processing 
           text alone when the world is multimodal. Contact our team for a free assessment and custom 
           implementation roadmap.
@@ -402,10 +402,10 @@ print(response)
 
       <h2>📚 Related Resources</h2>
       <ul>
-        <li><a href="/blog/ai-2025-oct-2-context-aware-enterprise-agents" className="text-blue-400 hover:text-blue-300">Context-Aware Enterprise AI Agents</a></li>
-        <li><a href="/blog/ai-2025-multimodal-fusion-blueprint" className="text-blue-400 hover:text-blue-300">Multimodal AI Fusion Blueprint</a></li>
-        <li><a href="/blog/ai-vision-language-action-models-2026" className="text-blue-400 hover:text-blue-300">Vision-Language-Action Models Guide</a></li>
-        <li><a href="/contact" className="text-blue-400 hover:text-blue-300">Schedule Technical Consultation</a></li>
+        <li><a href="/blog/ai-2025-oct-2-context-aware-enterprise-agents" className="text-left">Context-Aware Enterprise AI Agents</a></li>
+        <li><a href="/blog/ai-2025-multimodal-fusion-blueprint" className="text-left">Multimodal AI Fusion Blueprint</a></li>
+        <li><a href="/blog/ai-vision-language-action-models-2026" className="text-left">Vision-Language-Action Models Guide</a></li>
+        <li><a href="/contact" className="text-left">Schedule Technical Consultation</a></li>
       </ul>
     </article>
   );

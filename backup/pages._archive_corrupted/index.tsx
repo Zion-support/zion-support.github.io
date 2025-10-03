@@ -34,20 +34,20 @@
               <div className=\"text-center\">
                 <div className=\"w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4\">
                   <Phone className=\"w-6 h-6 text-blue-600\"  />
-            <div className="grid grid-cols-1 md: gri d-cols-3 gap-8">
-              <div className="text-center">
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Phone className="w-6 h-6 text-blue-600"  />
+            <div className="text-left">
+              <div className="text-left">
+                <div className="text-left">
+                  <Phone className="text-left"  />
                 </div>
                 <h3 className=\"text-lg font-semibold text-gray-900 mb-2\">Phone</h3>
                 <a href=\"tel:+13024640950\" className=\"text-blue-600 hover: tex t-blue-700\">
 
-                  <Mail className="w-6 h-6 text-blue-600"  />
+                  <Mail className="text-left"  />
                 </div>
                 <h3 className=\"text-lg font-semibold text-gray-900 mb-2\">Email</h3>
                 <a href=\"mailto: klebe r@ziontechgroup.com\" className=\"text-blue-600 hover: tex t-blue-700\">
 
-                  <MapPin className="w-6 h-6 text-blue-600"  />
+                  <MapPin className="text-left"  />
                 </div>
                 <h3 className=\"text-lg font-semibold text-gray-900 mb-2\">Address</h3>
                 <p className=\"text-gray-600\">
@@ -55,7 +55,7 @@
 
                     <li key={featureIndex} className=\"flex items-center gap-x-2\">
                       <CheckCircle className=\"h-4 w-4 text-blue-600\"  />
-                      <span className=\"text-sm text-gray-700\">{feature}</span>
+                      <span className=\"text-sm text-gray-700\">{feature}<
                     </li>
                   ))}
                 </ul>
@@ -65,11 +65,11 @@
                 <div className=\"flex items-center justify-between mb-4\">
                   <div className=\"flex items-center space-x-2 text-sm text-gray-500\">
                     <Clock className=\"h-4 w-4\"  />
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center space-x-2 text-sm text-gray-500">
-                    <Clock className="h-4 w-4"  />
-                    <span>{service.delivery}</span>
-                    <Clock className="h-4 w-4"  />
+                <div className="text-left">
+                  <div className="text-left">
+                    <Clock className="text-left"  />
+                    <span>{service.delivery}<
+                    <Clock className="text-left"  />
 
                 </div>
               </p>
@@ -86,18 +86,18 @@
                 <div className=\"flex items-center justify-between mb-4\">
                   <div className=\"flex items-center space-x-2 text-sm text-gray-500\">
                     <Clock className=\"h-4 w-4\"  />
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center space-x-2 text-sm text-gray-500">
-                    <Clock className="h-4 w-4"  />
+                <div className="text-left">
+                  <div className="text-left">
+                    <Clock className="text-left"  />
 
                   {[...Array(5)].map((_, i) => (
-                <div className="flex items-center mb-4">
+                <div className="text-left">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className=\"w-5 h-5 text-yellow-400 fill-current\" />
 
 
 
-                <div className="flex items-center mb-4">
+                <div className="text-left">
 
 
                   {[...Array(5)].map((_, i) => (
@@ -112,7 +112,7 @@
 
 
                 </div>
-                  <Phone className="w-6 h-6 text-white" />
+                  <Phone className="text-left" />
                 </div>
                 <h3 className=\"text-xl font-semibold text-gray-900 mb-2\">Phone</h3>
                 <p className=\"text-gray-600 mb-4\">Call us for immediate assistance</p>
@@ -120,18 +120,18 @@
 
 
 
-                  <Mail className="w-6 h-6 text-white" />
+                  <Mail className="text-left" />
 
 
 
-                  <Mail className="w-6 h-6 text-white" />
+                  <Mail className="text-left" />
 
 
                 <h3 className=\"text-xl font-semibold text-gray-900 mb-2\>Email</h3>
                 <p className=\text-gray-600 mb-4\">Send us a message anytime</p>
                 <a href=\"mailto:kleber@ziontechgroup.com\ className=\text-blue-600 font-semibold hover:text-blue-700 transition-colors\">
 
-                  <MapPin className="w-6 h-6 text-white" />
+                  <MapPin className="text-left" />
 
                 <h3 className=\"text-xl font-semibold text-gray-900 mb-2\">Address</h3>
                 <p className=\"text-gray-600 mb-4\">Visit our headquarters</p>

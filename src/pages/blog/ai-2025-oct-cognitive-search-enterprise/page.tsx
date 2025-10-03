@@ -14,9 +14,9 @@ export default function CognitiveSearchEnterprise2025(): void {
 
       <article className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900 text-white">
         <div className="container mx-auto px-4 py-12 max-w-4xl">
-          <Link to="/blog
-  className="inline-flex items-center text-indigo-400 hover:text-indigo-300 mb-8 transition-colors
-          >
+          <Link to="/blog">
+  className="inline-flex items-center text-indigo-400 hover:text-indigo-300 mb-8 transition-colors"
+          >"
             <ArrowLeft className="mr-2 h-4 w-4 ">
             <ArrowLeft className="mr-2 h-4 w-4" />
             <ArrowLeft className="mr-2 h-4 w-4/>">
@@ -40,9 +40,9 @@ export default function CognitiveSearchEnterprise2025(): void {
             <p className="text-xl text-gray-300 leading-relaxed">
       <article className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900 text-white">
         <div className="container mx-auto px-4 py-12 max-w-4xl">
-          <Link to="/blog
-  className="inline-flex items-center text-indigo-400 hover:text-indigo-300 mb-8 transition-colors
-          >
+          <Link to="/blog">
+  className="inline-flex items-center text-indigo-400 hover:text-indigo-300 mb-8 transition-colors"
+          >"
             <ArrowLeft className="mr-2 h-4 w-4 ">
             <ArrowLeft className="mr-2 h-4 w-4" />
   Back to Blog
@@ -87,12 +87,12 @@ export default function CognitiveSearchEnterprise2025(): void {
               <ul className="space-y-4 text-lg">
                 <li className="flex items-start gap-3">
                   <Search className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0/>
-                  <span><strong>97% Answer Accuracy: </strong> AI understands context and delivers precise answers, not just documents</span>,
-                </li>
+                  <span><strong>97% Answer Accuracy: </strong> AI understands context and delivers precise answers, not just documents</span>,"
+                </li>"
                 <li className="flex items-start gap-3">
                   <Zap className="h-6 w-6 text-yellow-400 mt-1 flex-shrink-0/>
-                  <span><strong>12x Faster Discovery: </strong> Find critical information in seconds instead of hours</span>,
-                </li>
+                  <span><strong>12x Faster Discovery: </strong> Find critical information in seconds instead of hours</span>,"
+                </li>"
                 <li className="flex items-start gap-3">
                   <TrendingUp className="h-6 w-6 text-green-400 mt-1 flex-shrink-0/>">
           <div className="prose prose-invert prose-lg max-w-none">
@@ -271,19 +271,16 @@ export default function CognitiveSearchEnterprise2025(): void {
             <section className="mb-12">
               <h2 className="text-3xl font-bold mb-6 text-indigo-300">Enterprise Deployment Success</h2>
               <div className="grid md:grid-cols-2 gap-6 mb-8">
-                <div className="bg-gradient-to-br from-indigo-500/20 to-purple-500/20 rounded-xl p-6 border border-indigo-500/30">
                   <h3 className="text-2xl font-bold mb-4 text-indigo-300">Professional Services Firm</h3>
                   <ul className="space-y-3 text-gray-300">
             <section className="mb-12">
               <h2 className="text-3xl font-bold mb-6 text-indigo-300">Enterprise Deployment Success</h2>"
               <div className="grid md:grid-cols-2 gap-6 mb-8">
-                <div className="bg-gradient-to-br from-indigo-500/20 to-purple-500/20 rounded-xl p-6 border border-indigo-500/30">
                   <h3 className="text-2xl font-bold mb-4 text-indigo-300">Professional Services Firm</h3>
                   <ul className="space-y-3 text-gray-300">
             <section className="mb-12">
               <h2 className="text-3xl font-bold mb-6 text-indigo-300">Enterprise Deployment Success</h2>
               <div className="grid md:grid-cols-2 gap-6 mb-8">
-                <div className="bg-gradient-to-br from-indigo-500/20 to-purple-500/20 rounded-xl p-6 border border-indigo-500/30">
                   <h3 className="text-2xl font-bold mb-4 text-indigo-300">Professional Services Firm</h3>
                   <ul className="space-y-3 text-gray-300">
                     <li >• 89% reduction in time finding information</li>
@@ -295,7 +292,6 @@ export default function CognitiveSearchEnterprise2025(): void {
                 <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-xl p-6 border border-purple-500/30">
                   <h3 className="text-2xl font-bold mb-4 text-purple-300">Healthcare System</h3>
                   <ul className="space-y-3 text-gray-300">
-                <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-xl p-6 border border-purple-500/30">
                   <h3 className="text-2xl font-bold mb-4 text-purple-300">Healthcare System</h3>
                   <ul className="space-y-3 text-gray-300">
                     <li >• 94% accuracy in clinical knowledge retrieval</li>
@@ -380,8 +376,8 @@ export default function CognitiveSearchEnterprise2025(): void {
               </p>
               to="/contact"
   className="inline-flex items-center px-8 py-4 bg-white text-indigo-600 rounded-lg font-bold text-lg hover:bg-indigo-50 transition-colors
-              >
-                Start Your Knowledge Transformation
+              >"
+                Start Your Knowledge Transformation"
                 <Brain className="ml-2 h-5 w-5 ">
                 <Brain className="ml-2 h-5 w-5/>">
                 <Brain className="ml-2 h-5 w-5" />
@@ -392,8 +388,8 @@ export default function CognitiveSearchEnterprise2025(): void {
               </p>
               to="/contact"
   className="inline-flex items-center px-8 py-4 bg-white text-indigo-600 rounded-lg font-bold text-lg hover:bg-indigo-50 transition-colors
-              >
-                Start Your Knowledge Transformation
+              >"
+                Start Your Knowledge Transformation"
                 <Brain className="ml-2 h-5 w-5 ">
                 <Brain className="ml-2 h-5 w-5" />
               </Link>
@@ -403,5 +399,4 @@ export default function CognitiveSearchEnterprise2025(): void {
       </article>
     </>
   );
-}
-;
+};

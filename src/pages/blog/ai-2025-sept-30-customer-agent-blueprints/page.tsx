@@ -41,6 +41,4 @@ export default function CustomerAgentBlueprints(): React.JSX.Element {
       </div>
     </div>
   );
-}
-
-;
+};

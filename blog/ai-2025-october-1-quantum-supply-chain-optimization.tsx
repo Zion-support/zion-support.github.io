@@ -25,7 +25,7 @@ const QuantumSupplyChainOptimizationArticle = () => {
       >
         <section>
           <h2>🚀 The Quantum Leap in Supply Chain Intelligence</h2>
-          <p className="text-lg font-semibold text-blue-600 dark:text-blue-400 my-4">
+          <p className="text-left">
             $8.7B in Cost Savings | 97% Forecast Accuracy | 94% Inventory Optimization | 3,200% ROI
           </p>
           <p>
@@ -41,7 +41,7 @@ const QuantumSupplyChainOptimizationArticle = () => {
           <p>
             Global supply chains face unprecedented complexity in 2025:
           </p>
-          <ul className="list-disc pl-6 space-y-2 my-4">
+          <ul className="text-left">
             <li><strong>Multi-Echelon Networks:</strong> Managing 100,000+ SKUs across global distribution networks</li>
             <li><strong>Demand Volatility:</strong> Traditional forecasting struggles with rapid market changes</li>
             <li><strong>Inventory Costs:</strong> $2.4T globally locked in excess inventory</li>
@@ -59,28 +59,28 @@ const QuantumSupplyChainOptimizationArticle = () => {
             Quantum-enhanced AI combines quantum computing's unique properties—superposition and entanglement—with advanced machine learning to solve supply chain optimization problems that are intractable for classical systems.
           </p>
           
-          <h3 className="text-2xl font-bold mt-6 mb-3">Quantum Advantage for Supply Chains</h3>
-          <div className="bg-gradient-to-r from-purple-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700 p-6 rounded-lg my-6">
-            <ul className="space-y-3">
-              <li><strong className="text-purple-600 dark:text-purple-400">Quantum Annealing:</strong> Finds global optimum for network routing and facility location problems with 10,000+ variables</li>
-              <li><strong className="text-purple-600 dark:text-purple-400">Variational Algorithms:</strong> Portfolio optimization across suppliers with correlated risks</li>
-              <li><strong className="text-purple-600 dark:text-purple-400">Quantum Machine Learning:</strong> Enhanced pattern recognition for demand forecasting with 97% accuracy</li>
-              <li><strong className="text-purple-600 dark:text-purple-400">Hybrid Classical-Quantum:</strong> Seamless integration with existing systems for production deployment</li>
-              <li><strong className="text-purple-600 dark:text-purple-400">Real-Time Optimization:</strong> Continuous re-optimization as conditions change</li>
+          <h3 className="text-left">Quantum Advantage for Supply Chains</h3>
+          <div className="text-left">
+            <ul className="text-left">
+              <li><strong className="text-left">Quantum Annealing:</strong> Finds global optimum for network routing and facility location problems with 10,000+ variables</li>
+              <li><strong className="text-left">Variational Algorithms:</strong> Portfolio optimization across suppliers with correlated risks</li>
+              <li><strong className="text-left">Quantum Machine Learning:</strong> Enhanced pattern recognition for demand forecasting with 97% accuracy</li>
+              <li><strong className="text-left">Hybrid Classical-Quantum:</strong> Seamless integration with existing systems for production deployment</li>
+              <li><strong className="text-left">Real-Time Optimization:</strong> Continuous re-optimization as conditions change</li>
             </ul>
           </div>
         </section>
 
         <section>
           <h2>🏆 Real-World Success: Global Manufacturing Leader</h2>
-          <p className="text-lg font-semibold text-green-600 dark:text-green-400 my-4">
+          <p className="text-left">
             Fortune 50 Manufacturer Achieves $8.7B Savings with Quantum Supply Chain Optimization
           </p>
-          <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg my-6">
-            <p className="mb-4"><strong>Challenge:</strong> A Fortune 50 global manufacturer with 847 facilities across 67 countries faced $12B annually in supply chain inefficiencies: excess inventory ($4.7B), stockouts ($3.2B), suboptimal routing ($2.8B), and supplier issues ($1.3B).</p>
+          <div className="text-left">
+            <p className="text-left"><strong>Challenge:</strong> A Fortune 50 global manufacturer with 847 facilities across 67 countries faced $12B annually in supply chain inefficiencies: excess inventory ($4.7B), stockouts ($3.2B), suboptimal routing ($2.8B), and supplier issues ($1.3B).</p>
             
-            <p className="mb-4"><strong>Implementation:</strong> Deployed quantum-enhanced AI optimization platform:</p>
-            <ul className="list-disc pl-6 space-y-2 mb-4">
+            <p className="text-left"><strong>Implementation:</strong> Deployed quantum-enhanced AI optimization platform:</p>
+            <ul className="text-left">
               <li>Quantum annealing for multi-echelon inventory optimization across 120,000+ SKUs</li>
               <li>Hybrid quantum-classical demand forecasting with 847 market variables</li>
               <li>Quantum algorithms for supplier portfolio optimization with risk correlation analysis</li>
@@ -88,8 +88,8 @@ const QuantumSupplyChainOptimizationArticle = () => {
               <li>Integrated scenario planning with 10,000+ contingency strategies</li>
             </ul>
             
-            <p className="mb-4"><strong>Results (18 Months):</strong></p>
-            <ul className="list-disc pl-6 space-y-2 mb-4 text-green-600 dark:text-green-400 font-semibold">
+            <p className="text-left"><strong>Results (18 Months):</strong></p>
+            <ul className="text-left">
               <li>$8.7B in total supply chain cost savings</li>
               <li>$4.2B reduction in inventory holding costs (89% improvement)</li>
               <li>97% demand forecast accuracy (up from 74%)</li>
@@ -105,36 +105,36 @@ const QuantumSupplyChainOptimizationArticle = () => {
         <section>
           <h2>🔧 Technical Architecture: Quantum-Enhanced Supply Chain Platform</h2>
           
-          <h3 className="text-2xl font-bold mt-6 mb-3">1. Quantum Optimization Engine</h3>
+          <h3 className="text-left">1. Quantum Optimization Engine</h3>
           <p>Core quantum algorithms for combinatorial optimization:</p>
-          <ul className="list-disc pl-6 space-y-2 my-4">
+          <ul className="text-left">
             <li><strong>Quantum Annealing (D-Wave):</strong> Network design, facility location, inventory placement</li>
             <li><strong>QAOA (Gate-Based):</strong> Vehicle routing, workforce scheduling, resource allocation</li>
             <li><strong>VQE Algorithms:</strong> Portfolio optimization with risk correlations</li>
             <li><strong>Grover's Algorithm:</strong> Accelerated search for optimal supplier combinations</li>
           </ul>
 
-          <h3 className="text-2xl font-bold mt-6 mb-3">2. Hybrid AI/ML Layer</h3>
+          <h3 className="text-left">2. Hybrid AI/ML Layer</h3>
           <p>Classical AI enhanced with quantum advantages:</p>
-          <ul className="list-disc pl-6 space-y-2 my-4">
+          <ul className="text-left">
             <li><strong>Quantum Neural Networks:</strong> Enhanced feature extraction for demand signals</li>
             <li><strong>Quantum Kernel Methods:</strong> Superior pattern recognition in time-series data</li>
             <li><strong>Classical Ensemble Models:</strong> XGBoost, LightGBM for interpretable predictions</li>
             <li><strong>Reinforcement Learning:</strong> Policy optimization for dynamic decision-making</li>
           </ul>
 
-          <h3 className="text-2xl font-bold mt-6 mb-3">3. Real-Time Data Integration</h3>
+          <h3 className="text-left">3. Real-Time Data Integration</h3>
           <p>Unified data platform for optimization:</p>
-          <ul className="list-disc pl-6 space-y-2 my-4">
+          <ul className="text-left">
             <li><strong>IoT Telemetry:</strong> Real-time inventory, shipment tracking, facility status</li>
             <li><strong>Market Intelligence:</strong> Demand signals, pricing data, competitive dynamics</li>
             <li><strong>Supply Intelligence:</strong> Supplier capacity, lead times, quality metrics</li>
             <li><strong>External Factors:</strong> Weather, geopolitics, economic indicators</li>
           </ul>
 
-          <h3 className="text-2xl font-bold mt-6 mb-3">4. Decision Intelligence Platform</h3>
+          <h3 className="text-left">4. Decision Intelligence Platform</h3>
           <p>Actionable insights and autonomous execution:</p>
-          <ul className="list-disc pl-6 space-y-2 my-4">
+          <ul className="text-left">
             <li><strong>What-If Analysis:</strong> Scenario modeling with quantum speed</li>
             <li><strong>Automated Decision-Making:</strong> Execute optimizations within governance guardrails</li>
             <li><strong>Explainable AI:</strong> Human-understandable rationale for recommendations</li>
@@ -148,11 +148,11 @@ const QuantumSupplyChainOptimizationArticle = () => {
             One of the most powerful applications of quantum AI is multi-echelon inventory optimization—determining optimal inventory levels across every node in a complex distribution network.
           </p>
           
-          <h3 className="text-xl font-bold mt-4 mb-2">The Challenge</h3>
+          <h3 className="text-left">The Challenge</h3>
           <p>
             For a network with 847 facilities and 120,000 SKUs, calculating optimal inventory placement involves:
           </p>
-          <ul className="list-disc pl-6 space-y-2 my-4">
+          <ul className="text-left">
             <li>10+ billion possible inventory configurations</li>
             <li>Demand uncertainty across multiple time horizons</li>
             <li>Service level requirements for each customer segment</li>
@@ -160,20 +160,20 @@ const QuantumSupplyChainOptimizationArticle = () => {
             <li>Capacity constraints and lead time variability</li>
           </ul>
 
-          <h3 className="text-xl font-bold mt-4 mb-2">The Quantum Solution</h3>
+          <h3 className="text-left">The Quantum Solution</h3>
           <p>
             Quantum annealing formulates this as a Quadratic Unconstrained Binary Optimization (QUBO) problem that can be solved on D-Wave quantum computers:
           </p>
-          <ul className="list-disc pl-6 space-y-2 my-4">
+          <ul className="text-left">
             <li>Encodes inventory decisions as quantum bits (qubits)</li>
             <li>Leverages quantum tunneling to escape local optima</li>
             <li>Finds globally optimal solutions in minutes vs. days/weeks classically</li>
             <li>Re-optimizes continuously as demand patterns evolve</li>
           </ul>
 
-          <h3 className="text-xl font-bold mt-4 mb-2">The Results</h3>
-          <div className="bg-green-50 dark:bg-green-900/20 p-6 rounded-lg my-4">
-            <ul className="space-y-2 text-green-600 dark:text-green-400 font-semibold">
+          <h3 className="text-left">The Results</h3>
+          <div className="text-left">
+            <ul className="text-left">
               <li>• 89% reduction in excess inventory ($4.2B savings)</li>
               <li>• 94% reduction in stockouts</li>
               <li>• 99.2% service level achievement</li>
@@ -188,32 +188,32 @@ const QuantumSupplyChainOptimizationArticle = () => {
             Successful quantum AI supply chain deployment follows a structured approach:
           </p>
           
-          <h3 className="text-xl font-bold mt-4 mb-2">Phase 1: Assessment & Use Case Selection (Weeks 1-6)</h3>
-          <ul className="list-disc pl-6 space-y-2 my-4">
+          <h3 className="text-left">Phase 1: Assessment & Use Case Selection (Weeks 1-6)</h3>
+          <ul className="text-left">
             <li>Identify high-value optimization problems with quantum advantage</li>
             <li>Baseline current performance and quantify improvement opportunity</li>
             <li>Data readiness assessment and integration planning</li>
             <li>Quantum computing platform selection (gate-based vs. annealing)</li>
           </ul>
 
-          <h3 className="text-xl font-bold mt-4 mb-2">Phase 2: Pilot Deployment (Weeks 7-20)</h3>
-          <ul className="list-disc pl-6 space-y-2 my-4">
+          <h3 className="text-left">Phase 2: Pilot Deployment (Weeks 7-20)</h3>
+          <ul className="text-left">
             <li>Implement quantum algorithms for selected use case</li>
             <li>Build hybrid classical-quantum data pipeline</li>
             <li>Validate results against classical baselines</li>
             <li>Establish KPIs and success metrics</li>
           </ul>
 
-          <h3 className="text-xl font-bold mt-4 mb-2">Phase 3: Production Scale-Out (Weeks 21-40)</h3>
-          <ul className="list-disc pl-6 space-y-2 my-4">
+          <h3 className="text-left">Phase 3: Production Scale-Out (Weeks 21-40)</h3>
+          <ul className="text-left">
             <li>Expand to additional optimization domains</li>
             <li>Integrate with existing ERP, WMS, TMS systems</li>
             <li>Deploy real-time optimization capabilities</li>
             <li>Enable autonomous decision-making for routine optimizations</li>
           </ul>
 
-          <h3 className="text-xl font-bold mt-4 mb-2">Phase 4: Continuous Optimization (Ongoing)</h3>
-          <ul className="list-disc pl-6 space-y-2 my-4">
+          <h3 className="text-left">Phase 4: Continuous Optimization (Ongoing)</h3>
+          <ul className="text-left">
             <li>Model refinement and algorithm tuning</li>
             <li>Expansion to strategic planning and network design</li>
             <li>Advanced scenarios and edge cases</li>
@@ -224,10 +224,10 @@ const QuantumSupplyChainOptimizationArticle = () => {
         <section>
           <h2>🌍 Industry-Specific Applications</h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-            <div className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg">
-              <h3 className="text-xl font-bold text-blue-600 dark:text-blue-400 mb-3">Retail & E-Commerce</h3>
-              <ul className="space-y-2">
+          <div className="text-left">
+            <div className="text-left">
+              <h3 className="text-left">Retail & E-Commerce</h3>
+              <ul className="text-left">
                 <li>• Dynamic pricing optimization</li>
                 <li>• Last-mile delivery routing</li>
                 <li>• Promotional planning</li>
@@ -235,9 +235,9 @@ const QuantumSupplyChainOptimizationArticle = () => {
               </ul>
             </div>
             
-            <div className="bg-purple-50 dark:bg-purple-900/20 p-6 rounded-lg">
-              <h3 className="text-xl font-bold text-purple-600 dark:text-purple-400 mb-3">Manufacturing</h3>
-              <ul className="space-y-2">
+            <div className="text-left">
+              <h3 className="text-left">Manufacturing</h3>
+              <ul className="text-left">
                 <li>• Production scheduling</li>
                 <li>• Supplier diversification</li>
                 <li>• Multi-stage planning</li>
@@ -245,9 +245,9 @@ const QuantumSupplyChainOptimizationArticle = () => {
               </ul>
             </div>
             
-            <div className="bg-green-50 dark:bg-green-900/20 p-6 rounded-lg">
-              <h3 className="text-xl font-bold text-green-600 dark:text-green-400 mb-3">Pharmaceuticals</h3>
-              <ul className="space-y-2">
+            <div className="text-left">
+              <h3 className="text-left">Pharmaceuticals</h3>
+              <ul className="text-left">
                 <li>• Cold chain optimization</li>
                 <li>• Expiration management</li>
                 <li>• Regulatory compliance</li>
@@ -255,9 +255,9 @@ const QuantumSupplyChainOptimizationArticle = () => {
               </ul>
             </div>
             
-            <div className="bg-orange-50 dark:bg-orange-900/20 p-6 rounded-lg">
-              <h3 className="text-xl font-bold text-orange-600 dark:text-orange-400 mb-3">Automotive</h3>
-              <ul className="space-y-2">
+            <div className="text-left">
+              <h3 className="text-left">Automotive</h3>
+              <ul className="text-left">
                 <li>• Just-in-sequence delivery</li>
                 <li>• Part commonality optimization</li>
                 <li>• After-sales service parts</li>
@@ -272,7 +272,7 @@ const QuantumSupplyChainOptimizationArticle = () => {
           <p>
             As quantum computing matures, we'll see supply chains architected from the ground up for quantum optimization:
           </p>
-          <ul className="list-disc pl-6 space-y-2 my-4">
+          <ul className="text-left">
             <li><strong>Quantum-Enhanced Digital Twins:</strong> Real-time supply chain simulation with quantum speed</li>
             <li><strong>Federated Quantum Optimization:</strong> Multi-party optimization preserving proprietary data</li>
             <li><strong>Quantum Risk Modeling:</strong> Monte Carlo simulation with exponential speedup</li>
@@ -286,21 +286,21 @@ const QuantumSupplyChainOptimizationArticle = () => {
           <p>
             Zion Tech Group offers comprehensive quantum AI supply chain solutions:
           </p>
-          <ul className="list-disc pl-6 space-y-2 my-4">
+          <ul className="text-left">
             <li><strong>Quantum Readiness Assessment:</strong> Evaluate quantum advantage for your supply chain</li>
             <li><strong>Use Case Identification:</strong> Identify highest-value optimization opportunities</li>
             <li><strong>Pilot Implementation:</strong> Rapid proof-of-value for selected use cases</li>
             <li><strong>Platform Deployment:</strong> Full-scale quantum optimization infrastructure</li>
             <li><strong>Managed Services:</strong> Ongoing optimization and continuous improvement</li>
           </ul>
-          <p className="mt-6 text-lg font-semibold text-blue-600 dark:text-blue-400">
+          <p className="text-left">
             Contact our team to schedule a quantum supply chain assessment and discover your optimization potential.
           </p>
         </section>
 
-        <section className="bg-gradient-to-r from-purple-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700 p-8 rounded-lg mt-8">
+        <section className="text-left">
           <h2>💡 Key Takeaways</h2>
-          <ul className="space-y-3 mt-4">
+          <ul className="text-left">
             <li>✅ Quantum AI unlocks previously impossible supply chain optimizations</li>
             <li>✅ Fortune 50 manufacturer achieved $8.7B in savings with 3,200% ROI</li>
             <li>✅ 97% demand forecast accuracy and 94% reduction in stockouts</li>

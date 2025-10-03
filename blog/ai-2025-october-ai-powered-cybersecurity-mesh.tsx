@@ -11,20 +11,20 @@ export const metadata = {
 
 export default function BlogPost() {
   return (
-    <article className="prose prose-invert max-w-none">
+    <article className="text-left">
       <h1>🛡️ AI-Powered Cybersecurity Mesh 2025: Autonomous Threat Defense at Scale</h1>
       
-      <div className="bg-gradient-to-r from-red-600/20 to-orange-600/20 border border-red-500/30 rounded-lg p-6 my-8">
-        <h3 className="text-2xl font-bold text-red-300 mt-0">🚀 Revolutionary Breakthrough</h3>
-        <p className="text-lg">
-          <strong>AI-powered cybersecurity mesh</strong> achieving <span className="text-green-400 font-bold">99.9% threat detection accuracy</span>, 
-          <span className="text-green-400 font-bold"> sub-second response times</span>, and <span className="text-green-400 font-bold">87% reduction</span> in 
-          <span className="text-green-400 font-bold"> security incidents</span>. Transform enterprise security with autonomous AI agents that 
+      <div className="text-left">
+        <h3 className="text-left">🚀 Revolutionary Breakthrough</h3>
+        <p className="text-left">
+          <strong>AI-powered cybersecurity mesh</strong> achieving <span className="text-left">99.9% threat detection accuracy<, 
+          <span className="text-left"> sub-second response times<, and <span className="text-left">87% reduction< in 
+          <span className="text-left"> security incidents<. Transform enterprise security with autonomous AI agents that 
           detect, analyze, and neutralize threats 24/7 with zero human intervention.
         </p>
-        <div className="mt-4 p-4 bg-red-900/30 rounded">
-          <p className="text-xl font-bold text-green-400 mb-2">💰 Proven ROI: $8.2B Value Protection</p>
-          <p className="text-sm">Fortune 100 deployment: 87% incident reduction, 0.3s threat response, $8.2B in prevented breach costs</p>
+        <div className="text-left">
+          <p className="text-left">💰 Proven ROI: $8.2B Value Protection</p>
+          <p className="text-left">Fortune 100 deployment: 87% incident reduction, 0.3s threat response, $8.2B in prevented breach costs</p>
         </div>
       </div>
 
@@ -69,8 +69,8 @@ export default function BlogPost() {
         Unified security posture across AWS, Azure, GCP, and private clouds. AI agents monitor all cloud environments 
         simultaneously, detecting threats and enforcing policies consistently regardless of infrastructure.
       </p>
-      <div className="bg-blue-900/20 border border-blue-500/30 rounded p-4 my-4">
-        <p className="font-bold">Case Study: Global Financial Services</p>
+      <div className="text-left">
+        <p className="text-left">Case Study: Global Financial Services</p>
         <p>Deployed across 47 cloud regions protecting 10,000+ workloads. Achieved 99.9% threat detection with 
         87% reduction in security incidents and 0.3s mean time to response.</p>
       </div>
@@ -80,8 +80,8 @@ export default function BlogPost() {
         Implement comprehensive zero trust with AI-powered identity verification, device posture assessment, and 
         continuous authorization. Every access request verified by AI agents in real-time with microsecond latency.
       </p>
-      <div className="bg-blue-900/20 border border-blue-500/30 rounded p-4 my-4">
-        <p className="font-bold">Case Study: Fortune 500 Technology</p>
+      <div className="text-left">
+        <p className="text-left">Case Study: Fortune 500 Technology</p>
         <p>Zero trust deployment protecting 150,000 users and 50,000 devices. Blocked 1.2M unauthorized access 
         attempts in first 90 days with zero false positives impacting productivity.</p>
       </div>
@@ -91,16 +91,16 @@ export default function BlogPost() {
         AI agents aggregate threat intelligence from thousands of sources, correlating indicators, predicting attack 
         vectors, and proactively hardening defenses before threats materialize.
       </p>
-      <div className="bg-blue-900/20 border border-blue-500/30 rounded p-4 my-4">
-        <p className="font-bold">Case Study: Healthcare Network</p>
+      <div className="text-left">
+        <p className="text-left">Case Study: Healthcare Network</p>
         <p>Threat intelligence platform processing 100M indicators daily, predicting and preventing 247 ransomware 
         attacks with 100% success rate over 18 months.</p>
       </div>
 
       <h2>📊 Performance Metrics</h2>
-      <div className="bg-gradient-to-r from-green-900/20 to-blue-900/20 border border-green-500/30 rounded-lg p-6 my-6">
-        <h3 className="text-xl font-bold text-green-300 mt-0">Proven Results</h3>
-        <ul className="space-y-2">
+      <div className="text-left">
+        <h3 className="text-left">Proven Results</h3>
+        <ul className="text-left">
           <li>🎯 <strong>99.9% threat detection accuracy</strong> with minimal false positives</li>
           <li>⚡ <strong>0.3 second mean time to response</strong> for threat mitigation</li>
           <li>🛡️ <strong>87% reduction</strong> in security incidents year-over-year</li>
@@ -163,13 +163,13 @@ export default function BlogPost() {
       </ul>
 
       <h2>💼 Business Impact</h2>
-      <div className="bg-gradient-to-r from-yellow-900/20 to-orange-900/20 border border-yellow-500/30 rounded-lg p-6 my-6">
-        <h3 className="text-xl font-bold text-yellow-300 mt-0">Fortune 100 Technology Leader Success Story</h3>
-        <p className="text-lg mb-4">
+      <div className="text-left">
+        <h3 className="text-left">Fortune 100 Technology Leader Success Story</h3>
+        <p className="text-left">
           Global technology company deployed AI-powered cybersecurity mesh protecting 200,000 endpoints and 10,000 
           cloud workloads across 150 countries.
         </p>
-        <ul className="space-y-2">
+        <ul className="text-left">
           <li>💰 <strong>$8.2B value protection</strong> in prevented breach costs</li>
           <li>🎯 <strong>99.9% threat detection accuracy</strong> with AI behavioral analytics</li>
           <li>⚡ <strong>0.3 second mean time to response</strong> for automated threat mitigation</li>
@@ -266,19 +266,19 @@ export default function BlogPost() {
       </ul>
 
       <h2>📞 Get Started Today</h2>
-      <div className="bg-gradient-to-r from-red-600/20 to-orange-600/20 border border-red-500/30 rounded-lg p-6 my-8">
-        <h3 className="text-2xl font-bold text-red-300 mt-0">Transform Your Security Posture</h3>
-        <p className="text-lg mb-4">
+      <div className="text-left">
+        <h3 className="text-left">Transform Your Security Posture</h3>
+        <p className="text-left">
           Our cybersecurity experts will design and deploy an AI-powered security mesh tailored to your specific 
           infrastructure and threat landscape, delivering 99.9% detection accuracy and 87% incident reduction.
         </p>
-        <ul className="space-y-2">
+        <ul className="text-left">
           <li>✅ Free security posture assessment and threat analysis</li>
           <li>✅ Proof-of-concept deployment with real threat detection in 30 days</li>
           <li>✅ Full production deployment with 24/7 SOC support</li>
           <li>✅ Guaranteed breach cost reduction and compliance assurance</li>
         </ul>
-        <p className="mt-4 text-xl font-bold text-green-400">
+        <p className="text-left">
           Contact us today to deploy autonomous AI-powered cybersecurity!
         </p>
       </div>

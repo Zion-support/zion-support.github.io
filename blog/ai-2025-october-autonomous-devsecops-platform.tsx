@@ -11,15 +11,15 @@ export const metadata = {
 
 export default function BlogPost() {
   return (
-    <article className="prose prose-invert max-w-none">
+    <article className="text-left">
       <h1>🔒 Autonomous DevSecOps Platform 2025: AI-Powered Security Automation at Scale</h1>
       
-      <div className="bg-gradient-to-r from-red-600/20 to-purple-600/20 border border-red-500/30 rounded-lg p-6 my-8">
-        <h3 className="text-2xl font-bold text-red-300 mt-0">🚀 Revolutionary Security Breakthrough</h3>
-        <p className="text-lg">
-          <strong>Autonomous DevSecOps platform</strong> achieving <span className="text-green-400 font-bold">99.8% threat prevention</span>, 
-          <span className="text-green-400 font-bold"> 95% faster security patching</span>, and <span className="text-green-400 font-bold">$12.7M annual savings</span> through 
-          <span className="text-green-400 font-bold"> AI-driven continuous security automation</span>. Transform enterprise security with intelligent 
+      <div className="text-left">
+        <h3 className="text-left">🚀 Revolutionary Security Breakthrough</h3>
+        <p className="text-left">
+          <strong>Autonomous DevSecOps platform</strong> achieving <span className="text-left">99.8% threat prevention<, 
+          <span className="text-left"> 95% faster security patching<, and <span className="text-left">$12.7M annual savings< through 
+          <span className="text-left"> AI-driven continuous security automation<. Transform enterprise security with intelligent 
           threat detection, automated remediation, and zero-trust enforcement that operates autonomously 24/7.
         </p>
       </div>
@@ -78,8 +78,8 @@ export default function BlogPost() {
       </p>
 
       <h2>📊 Performance Metrics</h2>
-      <div className="bg-slate-800/50 rounded-lg p-6 my-6">
-        <ul className="space-y-2">
+      <div className="text-left">
+        <ul className="text-left">
           <li>✅ <strong>99.8% threat prevention rate</strong> with AI-powered detection</li>
           <li>✅ <strong>95% faster security patching</strong> through automation</li>
           <li>✅ <strong>$12.7M annual cost savings</strong> from reduced breach incidents</li>
@@ -112,7 +112,7 @@ export default function BlogPost() {
       <h2>🎓 Quick Start Guide</h2>
       
       <h3>Step 1: Deploy Security Platform</h3>
-      <pre className="bg-slate-900 p-4 rounded-lg overflow-x-auto">
+      <pre className="text-left">
         <code>{`# Install DevSecOps platform
 helm install autonomous-devsecops ziontech/devsecops \\
   --set ai.threatDetection=enabled \\
@@ -123,7 +123,7 @@ devsecops-cli security-score`}</code>
       </pre>
 
       <h3>Step 2: Configure CI/CD Integration</h3>
-      <pre className="bg-slate-900 p-4 rounded-lg overflow-x-auto">
+      <pre className="text-left">
         <code>{`# Add security scanning to pipeline
 - name: Security Scan
   uses: ziontech/devsecops-action@v2
@@ -134,7 +134,7 @@ devsecops-cli security-score`}</code>
       </pre>
 
       <h3>Step 3: Enable Zero-Trust</h3>
-      <pre className="bg-slate-900 p-4 rounded-lg overflow-x-auto">
+      <pre className="text-left">
         <code>{`# Configure zero-trust policies
 devsecops-cli policy apply --file zero-trust.yaml
 
@@ -164,7 +164,7 @@ devsecops-cli zero-trust enable --validate-interval 5m`}</code>
       </ul>
 
       <h2>🚀 Success Story: Fortune 500 Financial Services</h2>
-      <div className="bg-blue-900/30 border border-blue-500/30 rounded-lg p-6 my-6">
+      <div className="text-left">
         <p><strong>Challenge:</strong> Global bank struggling with security incidents (47 breaches/year) and compliance burden</p>
         <p><strong>Solution:</strong> Deployed autonomous DevSecOps platform with AI threat detection and zero-trust</p>
         <p><strong>Results:</strong></p>
@@ -198,8 +198,8 @@ devsecops-cli zero-trust enable --validate-interval 5m`}</code>
         <li><strong>AI red teaming:</strong> Automated adversarial testing</li>
       </ul>
 
-      <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 border border-purple-500/30 rounded-lg p-6 my-8">
-        <h3 className="text-xl font-bold text-purple-300 mt-0">🚀 Ready to Transform Your Security?</h3>
+      <div className="text-left">
+        <h3 className="text-left">🚀 Ready to Transform Your Security?</h3>
         <p>
           Deploy autonomous DevSecOps and achieve enterprise-grade security with AI-powered automation. 
           Contact Zion Tech Group to start your security transformation journey today.

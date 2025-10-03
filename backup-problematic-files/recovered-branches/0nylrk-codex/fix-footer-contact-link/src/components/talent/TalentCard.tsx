@@ -53,58 +53,58 @@ export function TalentCard({;
   const skills = talent.skills?.slice(0, 5) || [],;
 ;
   return (;
-    <Card className="overflow-hidden transition-all hover:shadow-lg border-zion-blue-light bg-zion-blue cursor-pointer" onClick={handleViewProfile}>;
-      <div className="p-6">;
-        <div className="flex items-start">;
+    <Card className="text-left" onClick={handleViewProfile}>;
+      <div className="text-left">;
+        <div className="text-left">;
           {/* Avatar */}
-          <div className="relative mr-4">;
-            <div className="w-16 h-16 rounded-full overflow-hidden bg-zion-blue-dark border border-zion-blue-light">;
+          <div className="text-left">;
+            <div className="text-left">;
               {talent.profile_picture_url ? (;
                 <img ;
                   src={talent.profile_picture_url} ;
                   alt={talent.full_name} ;
-                  className="w-full h-full object-cover" ;
+                  className="text-left" ;
                 />;
               ) :(;
-                <div className="w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold">;
+                <div className="text-left">;
                   {talent.full_name?.charAt(0) || "T"}
                 </div>;
               )}
             </div>;
             {talent.is_verified && (;
-              <div className="absolute -bottom-1 -right-1 bg-zion-blue p-0.5 rounded-full">;
-                <CheckCircle2 className="w-5 h-5 text-zion-cyan" />;
+              <div className="text-left">;
+                <CheckCircle2 className="text-left" />;
               </div>;            )}
           </div>;
           ;
           {/* Main Info */}
-          <div className="flex-1">;
-            <div className="flex justify-between items-start">;
-              <h3 className="text-lg font-bold text-white">{talent.full_name}</h3>;
+          <div className="text-left">;
+            <div className="text-left">;
+              <h3 className="text-left">{talent.full_name}</h3>;
               <Button;
                 variant="ghost";
                 size="sm";
-                className="p-1 h-auto text-zion-slate-light hover:text-zion-cyan";
+                className="text-left";
                 onClick={handleToggleSave}
               >;
                 <Star className={`h-5 w-5 ${isSaved ? "fill-yellow-400 text-yellow-400" :""}`} />;
-                <span className="sr-only">{isSaved ? "Saved" :"Save"}</span>;
+                <span className="text-left">{isSaved ? "Saved" :"Save"}<;
               </Button>;
             </div>;
-            <p className="text-zion-cyan font-medium">{talent.professional_title}</p>;
+            <p className="text-left">{talent.professional_title}</p>;
             ;
             {/* Location & Availability */}
-            <div className="mt-2 flex flex-wrap gap-3 text-sm">;
+            <div className="text-left">;
               {talent.location && (;
-                <div className="flex items-center text-zion-slate-light">;
-                  <MapPin className="h-4 w-4 mr-1" />;
-                  <span>{talent.location}</span>;
+                <div className="text-left">;
+                  <MapPin className="text-left" />;
+                  <span>{talent.location}<;
                 </div>;
               )}
               {talent.availability_type && (;
-                <div className="flex items-center text-zion-slate-light">;
-                  <Clock className="h-4 w-4 mr-1" />;
-                  <span>{talent.availability_type}</span>;
+                <div className="text-left">;
+                  <Clock className="text-left" />;
+                  <span>{talent.availability_type}<;
                 </div>;
               )}
             </div>;
@@ -113,43 +113,43 @@ export function TalentCard({;
         ;
         {/* Skills */}
         {skills.length > 0 && (;
-          <div className="mt-4">;
-            <div className="flex flex-wrap gap-2">;
+          <div className="text-left">;
+            <div className="text-left">;
               {skills.map((skill, index) => (;
                 <span ;
                   key={index}
-                  className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light";
+                  className="text-left";
                 >;                  {skill}
-                </span>;
+                <;
               ))}
               {(talent.skills?.length || 0) > 5 && (;
-                <span className="px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan">;
+                <span className="text-left">;
                   +{(talent.skills?.length || 0) - 5} more;
-                </span>;              )}
+                <;              )}
             </div>;
           </div>;
         )}
         ;
         {/* Hourly Rate & Actions */}
-        <div className="mt-5 flex items-center justify-between">;
+        <div className="text-left">;
           <div>;
             {talent.hourly_rate ? (;
-              <div className="text-white font-bold">;
+              <div className="text-left">;
                 ${talent.hourly_rate}
-                <span className="text-zion-slate-light font-normal">/hr</span>;
+                <span className="text-left">/hr<;
               </div>;
             ) :(;
-              <div className="text-zion-slate-light">Rate not specified</div>;
+              <div className="text-left">Rate not specified</div>;
             )}
           </div>;
           ;
-          <div className="flex items-center gap-2">;
+          <div className="text-left">;
             {isAuthenticated && (;
               <Button;
                 size="sm";
                 variant="secondary";
                 onClick={handleRequestHire}
-                className="bg-zion-purple hover:bg-zion-purple-light text-white";
+                className="text-left";
               >;
                 Hire;
               </Button>;
@@ -161,9 +161,9 @@ export function TalentCard({;
                 e.stopPropagation(),;
                 handleViewProfile(),;
               }}
-              className="text-zion-cyan hover:text-white hover:bg-zion-blue-light";
+              className="text-left";
             >;
-              View <ArrowRight className="ml-1 h-4 w-4" />;
+              View <ArrowRight className="text-left" />;
             </Button>;
           </div>;
         </div>;
@@ -192,25 +192,25 @@ isAuthenticated
 //Also call the onViewProfile callback if provided </div>) ;
 }</div> <span >{;
   talent.availability type ;
-}</span> </div>) ;
+}< </div>) ;
 }</div> </div> </div> <span key= {;
   index ;
-}className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light" >{;
+}className="text-left" >{;
   skill ;
-}</span>) ) ;
+}<) ) ;
 }+ {;
   (talent.skills?.length || 0) - 5 ;
-}more </span>) ;
+}more <) ;
 }</div> </div>) ;
 :temp_broken_files/talent/TalentCard.tsx
-}$ {;"  talent.hourly rate ";"}<span className="text-zion-slate-light font-normal" >/hr</span> </div>) : (<div className="text-zion-slate-light" >Rate not specified</div>) ";"}</div> <Button size="sm" variant="secondary" onClick={;"  handleRequestHire ";"}className="bg-zion-purple hover:bg-zion-purple-light text-white" > Hire </Button>) ";"}<Button ml-1 h-4 w-4" /> </Button> </div> </div> </div> </Card>) ;
+}$ {;"  talent.hourly rate ";"}<span className="text-left" >/hr< </div>) : (<div className="text-left" >Rate not specified</div>) ";"}</div> <Button size="sm" variant="secondary" onClick={;"  handleRequestHire ";"}className="text-left" > Hire </Button>) ";"}<Button ml-1 h-4 w-4" /> </Button> </div> </div> </div> </Card>) ;
 };""
 }$ {;
   talent.hourly rate ";
-}<span className="text-zion-slate-light font-normal" >/hr</span> </div>) : (<div className="text-zion-slate-light" >Rate not specified</div>) ";
+}<span className="text-left" >/hr< </div>) : (<div className="text-left" >Rate not specified</div>) ";
 }</div> <Button size="sm" variant="secondary" onClick={;
   handleRequestHire ";
-}className="bg-zion-purple hover:bg-zion-purple-light text-white" > Hire </Button>) ";
+}className="text-left" > Hire </Button>) ";
 }<Button ml-1 h-4 w-4" /> </Button> </div> </div> </div> </Card>) ;
 };
 "

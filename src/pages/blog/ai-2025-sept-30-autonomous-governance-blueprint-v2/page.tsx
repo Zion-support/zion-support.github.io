@@ -40,6 +40,4 @@ export default function AutonomousGovernanceBlueprintV2(): React.JSX.Element {
       </div>
     </div>
   );
-}
-
-;
+};

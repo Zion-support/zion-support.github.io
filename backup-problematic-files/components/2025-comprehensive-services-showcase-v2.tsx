@@ -2,13 +2,13 @@
           >;
             <a;
               href="#services";
-              className="px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white font - semibold rounded - lg hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 200 hover:scale - 105 shadow - lg";
+              className="text-left";
             >;
               Explore Services;
             </a>;
             <a;
               href="#contact";
-              className="px - 8 py - 4 border - 2 border - cyan - 500 text - cyan - 400 font - semibold rounded - lg hover:bg - cyan - 500 hover:text - white transition - all duration - 200";
+              className="text-left";
             >;
               Get Started;
             </a>;
@@ -16,8 +16,8 @@
         </div>;
       </section>;
       {/* Contact Information */}
-      <section id="contact" className="py - 16 px - 4 bg - black / 20">;
-        <div className="max - w-4xl mx - auto text - center">;
+      <section id="contact" className="text-left">;
+        <div className="text-left">;
           <motion.h2;
 
 // Import our new 2025 V2 innovative services
@@ -91,7 +91,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
   },
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="text-left">
       <SEO 
         title="2025 Comprehensive Services Showcase V2 | Zion Tech Group"
         description="Discover our comprehensive portfolio of innovative micro SAAS, IT infrastructure, AI services, industry solutions, and emerging technology breakthroughs. Transform your business with cutting-edge solutions."
@@ -99,10 +99,10 @@ export default function ComprehensiveServicesShowcase2025V2() {
       />
       
       {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden">
-        <div className="max-w-7xl mx-auto text-center">
+      <section className="text-left">
+        <div className="text-left">
           <motion.h1 
-            className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6"
+            className="text-left"
             initial={{ opacity: 0, y: 30}}
             animate={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8 }}
@@ -112,7 +112,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
             Services Showcase
           </motion.h1>
           <motion.p 
-            className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"
+            className="text-left"
             initial={{ opacity: 0, y: 20}}
             animate={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -121,7 +121,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
             IT infrastructure, AI services, industry solutions, and emerging technology breakthroughs.
           </motion.p>
           <motion.div 
-            className="flex flex-col sm:flex-row gap-4 justify-center"
+            className="text-left"
             initial={{ opacity: 0, y: 20}}
             animate={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -146,10 +146,10 @@ export default function ComprehensiveServicesShowcase2025V2() {
           </motion.h2>
           
           <motion.div 
-            className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
+            className="text-left"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="grid md:grid - cols - 2 lg:grid - cols - 4 gap - 8";
+            className="text-left";
             initial={{ opacity: 0, coordinate_y: 20 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             viewport={{ once: true }}
@@ -158,7 +158,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="text - 4xl md:text - 5xl font - bold text - white mb - 6";
+            className="text-left";
             initial={{ opacity: 0, coordinate_y: 20 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             viewport={{ once: true }}
@@ -167,10 +167,10 @@ export default function ComprehensiveServicesShowcase2025V2() {
             Ready to Lead the Future?
           </motion.h2>
           <motion.p 
-            className="text-xl text-gray-300 mb-8"
+            className="text-left"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="text - xl text - gray - 300 mb - 8";
+            className="text-left";
             initial={{ opacity: 0, coordinate_y: 20 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             viewport={{ once: true }}
@@ -179,7 +179,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="flex flex - col sm:flex - row gap - 4 justify - center";
+            className="text-left";
             initial={{ opacity: 0, coordinate_y: 20 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             viewport={{ once: true }}
@@ -190,7 +190,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
             Join thousands of businesses already transforming their operations with our cutting-edge solutions.
           </motion.p>
           <motion.div 
-            className="flex flex-col sm:flex-row gap-4 justify-center"
+            className="text-left"
             initial={{ opacity: 0, y: 20}}
             whileInView={{ opacity: 1, y: 0}}
             viewport={{ once: true}}
@@ -198,13 +198,13 @@ export default function ComprehensiveServicesShowcase2025V2() {
           >;
             <a;
               href={`mailto:${contactInfo.email}`}
-              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover: from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg"
+              className="text-left"
             >
               Contact Our Team
             </a>
             <a 
               href="https://ziontechgroup.com"
-              className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
+              className="text-left"
             >
               Visit Website
             </a>

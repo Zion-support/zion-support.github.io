@@ -45,6 +45,4 @@ export default function ConsentlessMetricsV3(): React.JSX.Element {
       </div>
     </div>
   );
-}
-
-;
+};

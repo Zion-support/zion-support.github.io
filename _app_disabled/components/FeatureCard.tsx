@@ -18,12 +18,12 @@ export default function FeatureCard({ icon, title, description, color = 'blue' }
   };
 
   return (
-    <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
+    <div className="text-left">
       <div className={`w-12 h-12 rounded-lg ${colorClasses[color]} flex items-center justify-center mb-4`}>
-        {typeof icon === 'string' ? <span className="text-2xl">{icon}</span> : icon}
+        {typeof icon === 'string' ? <span className="text-left">{icon}< : icon}
       </div>
-      <h3 className="text-xl font-semibold text-gray-900 mb-3">{title}</h3>
-      <p className="text-gray-600 leading-relaxed">{description}</p>
+      <h3 className="text-left">{title}</h3>
+      <p className="text-left">{description}</p>
     </div>
   );
 }

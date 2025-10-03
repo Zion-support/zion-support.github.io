@@ -6,84 +6,84 @@ export const metadata = {
 
 export default function FinancialServicesAITransformation2026() {
   return (
-    <article className="max-w-4xl mx-auto px-6 py-12">
+    <article className="text-left">
       {/* Header */}
-      <header className="mb-12">
-        <div className="flex items-center gap-3 mb-6">
-          <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-2 rounded-full text-sm font-bold">
+      <header className="text-left">
+        <div className="text-left">
+          <span className="text-left">
             🏆 SUCCESS STORY
-          </span>
-          <span className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-bold">
+          <
+          <span className="text-left">
             FINANCIAL SERVICES
-          </span>
+          <
         </div>
         
-        <h1 className="text-5xl font-bold text-gray-900 mb-6 leading-tight">
+        <h1 className="text-left">
           $250M ROI: Fortune 50 Bank's Complete AI Transformation in 14 Months
         </h1>
         
-        <p className="text-2xl text-gray-600 mb-8 leading-relaxed">
+        <p className="text-left">
           How a leading global financial institution achieved $250M in annual savings, 99.8% fraud detection accuracy, 
           85% operational cost reduction, and transformed customer experience through comprehensive AI deployment 
           across trading, risk management, and customer operations.
         </p>
         
-        <div className="flex items-center gap-6 text-gray-600 border-t border-b border-gray-200 py-4">
+        <div className="text-left">
           <div>
-            <span className="font-semibold">Industry:</span> Financial Services
+            <span className="text-left">Industry:< Financial Services
           </div>
           <div>
-            <span className="font-semibold">Company Size:</span> 85,000+ employees
+            <span className="text-left">Company Size:< 85,000+ employees
           </div>
           <div>
-            <span className="font-semibold">Timeline:</span> 14 months
+            <span className="text-left">Timeline:< 14 months
           </div>
         </div>
       </header>
 
       {/* Executive Summary */}
-      <section className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl p-8 mb-12">
-        <h2 className="text-3xl font-bold text-gray-900 mb-6">📊 Executive Summary</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div className="bg-white rounded-xl p-6 shadow-lg">
-            <div className="text-4xl font-bold text-green-600 mb-2">$250M</div>
-            <div className="text-gray-700 font-semibold">Annual ROI</div>
-            <div className="text-sm text-gray-600 mt-2">First-year savings & revenue</div>
+      <section className="text-left">
+        <h2 className="text-left">📊 Executive Summary</h2>
+        <div className="text-left">
+          <div className="text-left">
+            <div className="text-left">$250M</div>
+            <div className="text-left">Annual ROI</div>
+            <div className="text-left">First-year savings & revenue</div>
           </div>
-          <div className="bg-white rounded-xl p-6 shadow-lg">
-            <div className="text-4xl font-bold text-blue-600 mb-2">99.8%</div>
-            <div className="text-gray-700 font-semibold">Fraud Detection</div>
-            <div className="text-sm text-gray-600 mt-2">Up from 87% baseline</div>
+          <div className="text-left">
+            <div className="text-left">99.8%</div>
+            <div className="text-left">Fraud Detection</div>
+            <div className="text-left">Up from 87% baseline</div>
           </div>
-          <div className="bg-white rounded-xl p-6 shadow-lg">
-            <div className="text-4xl font-bold text-purple-600 mb-2">85%</div>
-            <div className="text-gray-700 font-semibold">Cost Reduction</div>
-            <div className="text-sm text-gray-600 mt-2">Operational efficiency gains</div>
+          <div className="text-left">
+            <div className="text-left">85%</div>
+            <div className="text-left">Cost Reduction</div>
+            <div className="text-left">Operational efficiency gains</div>
           </div>
-          <div className="bg-white rounded-xl p-6 shadow-lg">
-            <div className="text-4xl font-bold text-orange-600 mb-2">14 mo</div>
-            <div className="text-gray-700 font-semibold">Implementation</div>
-            <div className="text-sm text-gray-600 mt-2">From planning to full deployment</div>
+          <div className="text-left">
+            <div className="text-left">14 mo</div>
+            <div className="text-left">Implementation</div>
+            <div className="text-left">From planning to full deployment</div>
           </div>
         </div>
       </section>
 
       {/* Main Content */}
-      <div className="prose prose-lg max-w-none">
+      <div className="text-left">
         
-        <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">The Challenge: Legacy Systems Limiting Growth</h2>
+        <h2 className="text-left">The Challenge: Legacy Systems Limiting Growth</h2>
         
-        <h3 className="text-2xl font-bold text-gray-800 mt-8 mb-4">🏢 Company Background</h3>
-        <p className="text-gray-700 leading-relaxed mb-6">
+        <h3 className="text-left">🏢 Company Background</h3>
+        <p className="text-left">
           A Fortune 50 global financial institution with $2.5 trillion in assets under management, serving 50M+ 
           customers across 70 countries, was facing increasing competitive pressure from digital-native fintech 
           companies and mounting regulatory compliance costs. Their legacy systems, some dating back 30+ years, 
           were creating operational bottlenecks and limiting innovation.
         </p>
 
-        <h3 className="text-2xl font-bold text-gray-800 mt-8 mb-4">⚠️ Critical Pain Points</h3>
-        <div className="bg-red-50 border-l-4 border-red-600 p-6 mb-8">
-          <ul className="space-y-3 text-gray-700">
+        <h3 className="text-left">⚠️ Critical Pain Points</h3>
+        <div className="text-left">
+          <ul className="text-left">
             <li>
               <strong>Fraud Detection Gaps:</strong> 87% detection rate missing $2.3B annually in fraudulent transactions
             </li>
@@ -105,68 +105,68 @@ export default function FinancialServicesAITransformation2026() {
           </ul>
         </div>
 
-        <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">The Solution: Comprehensive AI Transformation</h2>
+        <h2 className="text-left">The Solution: Comprehensive AI Transformation</h2>
 
-        <h3 className="text-2xl font-bold text-gray-800 mt-8 mb-4">🎯 Strategic Implementation Approach</h3>
-        <p className="text-gray-700 leading-relaxed mb-6">
+        <h3 className="text-left">🎯 Strategic Implementation Approach</h3>
+        <p className="text-left">
           Zion Tech Group designed and executed a 14-month phased AI transformation targeting the highest-impact 
           use cases first. The implementation followed a "crawl-walk-run" methodology to minimize disruption while 
           delivering rapid wins.
         </p>
 
-        <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-8 mb-8">
-          <h4 className="text-xl font-bold text-gray-900 mb-4">Phase 1: Fraud Detection & Prevention (Months 1-4)</h4>
-          <p className="text-gray-700 leading-relaxed mb-4">
+        <div className="text-left">
+          <h4 className="text-left">Phase 1: Fraud Detection & Prevention (Months 1-4)</h4>
+          <p className="text-left">
             Deployed real-time AI fraud detection system analyzing 500M+ transactions daily using:
           </p>
-          <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-6">
+          <ul className="text-left">
             <li>Deep learning models trained on 10 years of transaction history</li>
             <li>Graph neural networks detecting complex fraud rings</li>
             <li>Behavioral biometrics for continuous authentication</li>
             <li>Natural language processing for email/SMS phishing detection</li>
           </ul>
-          <p className="text-gray-700 font-semibold">
+          <p className="text-left">
             ✅ Results: 99.8% fraud detection accuracy, $180M prevented fraud annually, 95% reduction in false positives
           </p>
         </div>
 
-        <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl p-8 mb-8">
-          <h4 className="text-xl font-bold text-gray-900 mb-4">Phase 2: Algorithmic Trading & Risk Management (Months 5-8)</h4>
-          <p className="text-gray-700 leading-relaxed mb-4">
+        <div className="text-left">
+          <h4 className="text-left">Phase 2: Algorithmic Trading & Risk Management (Months 5-8)</h4>
+          <p className="text-left">
             Implemented AI-powered trading systems and real-time risk assessment:
           </p>
-          <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-6">
+          <ul className="text-left">
             <li>Reinforcement learning for optimal trade execution strategies</li>
             <li>Predictive analytics for market risk modeling (VaR, CVaR)</li>
             <li>NLP sentiment analysis from news, social media, earnings calls</li>
             <li>Automated regulatory compliance checking and reporting</li>
           </ul>
-          <p className="text-gray-700 font-semibold">
+          <p className="text-left">
             ✅ Results: 22% improvement in trade execution prices, 87% faster risk assessment, $85M additional trading profits
           </p>
         </div>
 
-        <div className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl p-8 mb-8">
-          <h4 className="text-xl font-bold text-gray-900 mb-4">Phase 3: Customer Experience & Operations (Months 9-14)</h4>
-          <p className="text-gray-700 leading-relaxed mb-4">
+        <div className="text-left">
+          <h4 className="text-left">Phase 3: Customer Experience & Operations (Months 9-14)</h4>
+          <p className="text-left">
             Transformed customer-facing operations with intelligent automation:
           </p>
-          <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-6">
+          <ul className="text-left">
             <li>AI-powered chatbots handling 85% of customer inquiries</li>
             <li>Automated loan underwriting with 10-minute approval times</li>
             <li>Personalized product recommendations using collaborative filtering</li>
             <li>Intelligent document processing for account opening/KYC</li>
           </ul>
-          <p className="text-gray-700 font-semibold">
+          <p className="text-left">
             ✅ Results: 92% customer satisfaction, 15-minute loan approvals, 18.5% product conversion rates, 70% headcount efficiency gains
           </p>
         </div>
 
-        <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Technology Stack & Architecture</h2>
+        <h2 className="text-left">Technology Stack & Architecture</h2>
 
-        <h3 className="text-2xl font-bold text-gray-800 mt-8 mb-4">🏗️ Enterprise AI Platform</h3>
-        <div className="bg-gray-50 rounded-xl p-6 mb-8">
-          <ul className="space-y-4 text-gray-700">
+        <h3 className="text-left">🏗️ Enterprise AI Platform</h3>
+        <div className="text-left">
+          <ul className="text-left">
             <li>
               <strong>Cloud Infrastructure:</strong> Hybrid multi-cloud (AWS, Azure) with on-premises secure zones
             </li>
@@ -188,38 +188,38 @@ export default function FinancialServicesAITransformation2026() {
           </ul>
         </div>
 
-        <h3 className="text-2xl font-bold text-gray-800 mt-8 mb-4">🤖 AI/ML Models Deployed</h3>
-        <div className="grid md:grid-cols-2 gap-6 mb-8">
-          <div className="bg-blue-50 rounded-xl p-6">
-            <h4 className="font-bold text-gray-900 mb-3">Fraud Detection Suite</h4>
-            <ul className="list-disc pl-6 space-y-1 text-sm text-gray-700">
+        <h3 className="text-left">🤖 AI/ML Models Deployed</h3>
+        <div className="text-left">
+          <div className="text-left">
+            <h4 className="text-left">Fraud Detection Suite</h4>
+            <ul className="text-left">
               <li>Graph Neural Networks (GNN)</li>
               <li>Recurrent Neural Networks (LSTM)</li>
               <li>Isolation Forests for anomaly detection</li>
               <li>XGBoost for real-time scoring</li>
             </ul>
           </div>
-          <div className="bg-green-50 rounded-xl p-6">
-            <h4 className="font-bold text-gray-900 mb-3">Trading & Risk Models</h4>
-            <ul className="list-disc pl-6 space-y-1 text-sm text-gray-700">
+          <div className="text-left">
+            <h4 className="text-left">Trading & Risk Models</h4>
+            <ul className="text-left">
               <li>Deep Reinforcement Learning (DRL)</li>
               <li>Time Series Forecasting (Prophet, ARIMA)</li>
               <li>Transformer models for NLP sentiment</li>
               <li>Monte Carlo simulation engines</li>
             </ul>
           </div>
-          <div className="bg-purple-50 rounded-xl p-6">
-            <h4 className="font-bold text-gray-900 mb-3">Customer Intelligence</h4>
-            <ul className="list-disc pl-6 space-y-1 text-sm text-gray-700">
+          <div className="text-left">
+            <h4 className="text-left">Customer Intelligence</h4>
+            <ul className="text-left">
               <li>GPT-based conversational AI</li>
               <li>Collaborative filtering recommenders</li>
               <li>Computer vision for document OCR</li>
               <li>Churn prediction models</li>
             </ul>
           </div>
-          <div className="bg-orange-50 rounded-xl p-6">
-            <h4 className="font-bold text-gray-900 mb-3">Compliance & Ops</h4>
-            <ul className="list-disc pl-6 space-y-1 text-sm text-gray-700">
+          <div className="text-left">
+            <h4 className="text-left">Compliance & Ops</h4>
+            <ul className="text-left">
               <li>NLP for regulatory text analysis</li>
               <li>Automated report generation</li>
               <li>Process mining algorithms</li>
@@ -228,14 +228,14 @@ export default function FinancialServicesAITransformation2026() {
           </div>
         </div>
 
-        <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Measurable Business Impact</h2>
+        <h2 className="text-left">Measurable Business Impact</h2>
 
-        <h3 className="text-2xl font-bold text-gray-800 mt-8 mb-4">💰 Financial Results</h3>
-        <div className="bg-gradient-to-r from-green-100 to-emerald-100 rounded-xl p-8 mb-8">
-          <div className="grid md:grid-cols-2 gap-6">
+        <h3 className="text-left">💰 Financial Results</h3>
+        <div className="text-left">
+          <div className="text-left">
             <div>
-              <h4 className="font-bold text-gray-900 mb-3">Revenue Impact</h4>
-              <ul className="space-y-2 text-gray-700">
+              <h4 className="text-left">Revenue Impact</h4>
+              <ul className="text-left">
                 <li>✅ $85M additional trading profits</li>
                 <li>✅ $42M from improved product sales</li>
                 <li>✅ $28M from reduced customer churn</li>
@@ -243,8 +243,8 @@ export default function FinancialServicesAITransformation2026() {
               </ul>
             </div>
             <div>
-              <h4 className="font-bold text-gray-900 mb-3">Cost Savings</h4>
-              <ul className="space-y-2 text-gray-700">
+              <h4 className="text-left">Cost Savings</h4>
+              <ul className="text-left">
                 <li>✅ $180M prevented fraud losses</li>
                 <li>✅ $95M operational cost reduction</li>
                 <li>✅ $65M compliance cost savings</li>
@@ -252,80 +252,80 @@ export default function FinancialServicesAITransformation2026() {
               </ul>
             </div>
           </div>
-          <div className="mt-6 pt-6 border-t-2 border-green-300">
-            <p className="text-2xl font-bold text-gray-900">
+          <div className="text-left">
+            <p className="text-left">
               📊 Net Annual Impact: $250M (after $245M implementation costs amortized over 5 years)
             </p>
           </div>
         </div>
 
-        <h3 className="text-2xl font-bold text-gray-800 mt-8 mb-4">📈 Operational Metrics</h3>
-        <div className="grid md:grid-cols-3 gap-6 mb-8">
-          <div className="bg-blue-50 rounded-xl p-6 text-center">
-            <div className="text-4xl font-bold text-blue-600 mb-2">99.8%</div>
-            <div className="text-gray-700 font-semibold mb-2">Fraud Detection</div>
-            <div className="text-sm text-gray-600">↑ from 87% baseline</div>
+        <h3 className="text-left">📈 Operational Metrics</h3>
+        <div className="text-left">
+          <div className="text-left">
+            <div className="text-left">99.8%</div>
+            <div className="text-left">Fraud Detection</div>
+            <div className="text-left">↑ from 87% baseline</div>
           </div>
-          <div className="bg-green-50 rounded-xl p-6 text-center">
-            <div className="text-4xl font-bold text-green-600 mb-2">10 min</div>
-            <div className="text-gray-700 font-semibold mb-2">Loan Approval</div>
-            <div className="text-sm text-gray-600">↓ from 48 hours</div>
+          <div className="text-left">
+            <div className="text-left">10 min</div>
+            <div className="text-left">Loan Approval</div>
+            <div className="text-left">↓ from 48 hours</div>
           </div>
-          <div className="bg-purple-50 rounded-xl p-6 text-center">
-            <div className="text-4xl font-bold text-purple-600 mb-2">85%</div>
-            <div className="text-gray-700 font-semibold mb-2">Automation Rate</div>
-            <div className="text-sm text-gray-600">Customer service</div>
+          <div className="text-left">
+            <div className="text-left">85%</div>
+            <div className="text-left">Automation Rate</div>
+            <div className="text-left">Customer service</div>
           </div>
-          <div className="bg-orange-50 rounded-xl p-6 text-center">
-            <div className="text-4xl font-bold text-orange-600 mb-2">18.5%</div>
-            <div className="text-gray-700 font-semibold mb-2">Conversion Rate</div>
-            <div className="text-sm text-gray-600">↑ from 2.1%</div>
+          <div className="text-left">
+            <div className="text-left">18.5%</div>
+            <div className="text-left">Conversion Rate</div>
+            <div className="text-left">↑ from 2.1%</div>
           </div>
-          <div className="bg-cyan-50 rounded-xl p-6 text-center">
-            <div className="text-4xl font-bold text-cyan-600 mb-2">92%</div>
-            <div className="text-gray-700 font-semibold mb-2">Customer Satisfaction</div>
-            <div className="text-sm text-gray-600">↑ from 74%</div>
+          <div className="text-left">
+            <div className="text-left">92%</div>
+            <div className="text-left">Customer Satisfaction</div>
+            <div className="text-left">↑ from 74%</div>
           </div>
-          <div className="bg-red-50 rounded-xl p-6 text-center">
-            <div className="text-4xl font-bold text-red-600 mb-2">87%</div>
-            <div className="text-gray-700 font-semibold mb-2">Risk Assessment Speed</div>
-            <div className="text-sm text-gray-600">Faster processing</div>
+          <div className="text-left">
+            <div className="text-left">87%</div>
+            <div className="text-left">Risk Assessment Speed</div>
+            <div className="text-left">Faster processing</div>
           </div>
         </div>
 
-        <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Implementation Challenges & Solutions</h2>
+        <h2 className="text-left">Implementation Challenges & Solutions</h2>
 
-        <h3 className="text-2xl font-bold text-gray-800 mt-8 mb-4">🚧 Key Challenges Overcome</h3>
-        <div className="space-y-6 mb-8">
+        <h3 className="text-left">🚧 Key Challenges Overcome</h3>
+        <div className="text-left">
           
-          <div className="bg-yellow-50 border-l-4 border-yellow-600 p-6">
-            <h4 className="font-bold text-gray-900 mb-2">Challenge: Legacy System Integration</h4>
-            <p className="text-gray-700 mb-3">
+          <div className="text-left">
+            <h4 className="text-left">Challenge: Legacy System Integration</h4>
+            <p className="text-left">
               <strong>Issue:</strong> 200+ legacy mainframe systems with proprietary protocols and limited APIs.
             </p>
-            <p className="text-gray-700">
+            <p className="text-left">
               <strong>Solution:</strong> Built enterprise data fabric with API gateways, event streaming, and 
               change data capture (CDC) for real-time data sync without touching legacy code.
             </p>
           </div>
 
-          <div className="bg-yellow-50 border-l-4 border-yellow-600 p-6">
-            <h4 className="font-bold text-gray-900 mb-2">Challenge: Regulatory Compliance (SEC, FINRA, GDPR)</h4>
-            <p className="text-gray-700 mb-3">
+          <div className="text-left">
+            <h4 className="text-left">Challenge: Regulatory Compliance (SEC, FINRA, GDPR)</h4>
+            <p className="text-left">
               <strong>Issue:</strong> Strict requirements for model explainability, audit trails, and data privacy.
             </p>
-            <p className="text-gray-700">
+            <p className="text-left">
               <strong>Solution:</strong> Implemented LIME/SHAP for model explainability, comprehensive logging, 
               federated learning for privacy-preserving training, and automated regulatory reporting.
             </p>
           </div>
 
-          <div className="bg-yellow-50 border-l-4 border-yellow-600 p-6">
-            <h4 className="font-bold text-gray-900 mb-2">Challenge: Change Management & Adoption</h4>
-            <p className="text-gray-700 mb-3">
+          <div className="text-left">
+            <h4 className="text-left">Challenge: Change Management & Adoption</h4>
+            <p className="text-left">
               <strong>Issue:</strong> Resistance from 15,000+ employees concerned about AI replacing jobs.
             </p>
-            <p className="text-gray-700">
+            <p className="text-left">
               <strong>Solution:</strong> Comprehensive reskilling program training employees as "AI augmented workers,"
               transparent communication about job transitions (redeployment, not reduction), and demonstrating AI as 
               productivity multiplier rather than replacement.
@@ -334,9 +334,9 @@ export default function FinancialServicesAITransformation2026() {
 
         </div>
 
-        <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Lessons Learned & Best Practices</h2>
-        <div className="bg-indigo-50 rounded-xl p-8 mb-8">
-          <ol className="list-decimal pl-6 space-y-4 text-gray-700">
+        <h2 className="text-left">Lessons Learned & Best Practices</h2>
+        <div className="text-left">
+          <ol className="text-left">
             <li>
               <strong>Start with High-Impact, Low-Complexity Use Cases:</strong> Fraud detection delivered immediate 
               ROI and built momentum for larger initiatives.
@@ -364,12 +364,12 @@ export default function FinancialServicesAITransformation2026() {
           </ol>
         </div>
 
-        <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">The Road Ahead: 2026 and Beyond</h2>
-        <p className="text-gray-700 leading-relaxed mb-6">
+        <h2 className="text-left">The Road Ahead: 2026 and Beyond</h2>
+        <p className="text-left">
           Following the transformative success of this initial deployment, the financial institution is now expanding 
           AI capabilities across:
         </p>
-        <ul className="list-disc pl-6 mb-8 space-y-2 text-gray-700">
+        <ul className="text-left">
           <li><strong>Quantum-Enhanced Portfolio Optimization:</strong> Leveraging quantum computing for complex asset allocation</li>
           <li><strong>Decentralized Finance (DeFi) Integration:</strong> AI-powered smart contracts and automated market making</li>
           <li><strong>Climate Risk Modeling:</strong> ESG scoring and climate scenario analysis for sustainable investing</li>
@@ -377,16 +377,16 @@ export default function FinancialServicesAITransformation2026() {
           <li><strong>Autonomous Treasury Operations:</strong> Self-optimizing liquidity management and hedging strategies</li>
         </ul>
 
-        <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Client Testimonial</h2>
-        <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-white mb-8">
-          <p className="text-xl italic mb-6 leading-relaxed">
+        <h2 className="text-left">Client Testimonial</h2>
+        <div className="text-left">
+          <p className="text-left">
             "The AI transformation has been nothing short of revolutionary. We've not only achieved $250M in 
             quantifiable ROI but have fundamentally transformed how we operate. Our fraud detection capabilities 
             are world-class, our trading desk is more profitable than ever, and our customers are receiving 
             personalized experiences that rival any fintech startup. This wasn't just a technology project—it 
             was a complete business transformation."
           </p>
-          <p className="font-bold text-xl">
+          <p className="text-left">
             — Chief Technology Officer, Fortune 50 Financial Institution
           </p>
         </div>
@@ -394,22 +394,22 @@ export default function FinancialServicesAITransformation2026() {
       </div>
 
       {/* CTA Section */}
-      <section className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-10 text-white mt-16">
-        <h2 className="text-3xl font-bold mb-6">Ready to Transform Your Financial Institution with AI?</h2>
-        <p className="text-xl mb-8 opacity-95">
+      <section className="text-left">
+        <h2 className="text-left">Ready to Transform Your Financial Institution with AI?</h2>
+        <p className="text-left">
           Our financial services AI experts have delivered $250M+ ROI for leading institutions. Schedule a consultation 
           to discover how we can help you achieve similar transformative results.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4">
+        <div className="text-left">
           <a
             href="tel:+13024640950"
-            className="bg-white text-green-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors text-center shadow-lg"
+            className="text-left"
           >
             📞 Call +1 302 464 0950
           </a>
           <a
             href="mailto:kleber@ziontechgroup.com"
-            className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-green-600 transition-colors text-center"
+            className="text-left"
           >
             📧 Schedule Consultation
           </a>
@@ -417,20 +417,20 @@ export default function FinancialServicesAITransformation2026() {
       </section>
 
       {/* Related Content */}
-      <section className="mt-16 border-t pt-12">
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">Related Case Studies</h2>
-        <div className="grid md:grid-cols-3 gap-6">
-          <a href="/case-studies/retail-ai-transformation-2025" className="block p-6 bg-gray-50 rounded-xl hover:shadow-lg transition-shadow">
-            <h3 className="font-bold text-gray-900 mb-2">$80M Retail AI Success</h3>
-            <p className="text-sm text-gray-600">Fortune 100 retailer transformation</p>
+      <section className="text-left">
+        <h2 className="text-left">Related Case Studies</h2>
+        <div className="text-left">
+          <a href="/case-studies/retail-ai-transformation-2025" className="text-left">
+            <h3 className="text-left">$80M Retail AI Success</h3>
+            <p className="text-left">Fortune 100 retailer transformation</p>
           </a>
-          <a href="/case-studies/healthcare-ai-diagnostic-system-2025" className="block p-6 bg-gray-50 rounded-xl hover:shadow-lg transition-shadow">
-            <h3 className="font-bold text-gray-900 mb-2">12,000+ Lives Saved with AI</h3>
-            <p className="text-sm text-gray-600">Healthcare diagnostic breakthrough</p>
+          <a href="/case-studies/healthcare-ai-diagnostic-system-2025" className="text-left">
+            <h3 className="text-left">12,000+ Lives Saved with AI</h3>
+            <p className="text-left">Healthcare diagnostic breakthrough</p>
           </a>
-          <a href="/case-studies/manufacturing-ai-transformation-2026" className="block p-6 bg-gray-50 rounded-xl hover:shadow-lg transition-shadow">
-            <h3 className="font-bold text-gray-900 mb-2">$18M Manufacturing ROI</h3>
-            <p className="text-sm text-gray-600">Industrial AI transformation</p>
+          <a href="/case-studies/manufacturing-ai-transformation-2026" className="text-left">
+            <h3 className="text-left">$18M Manufacturing ROI</h3>
+            <p className="text-left">Industrial AI transformation</p>
           </a>
         </div>
       </section>

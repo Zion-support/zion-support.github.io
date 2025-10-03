@@ -2,71 +2,71 @@ import React from 'react';
 
 export default function AI2025OctoberProductionAIMonitoring() {
   return (
-    <article className="min-h-screen bg-slate-950 text-white">
-      <div className="container mx-auto px-6 py-20">
+    <article className="text-left">
+      <div className="text-left">
         {/* Hero Section */}
-        <header className="mb-16">
-          <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-amber-500/20 to-orange-500/20 border border-amber-500/30 mb-6">
-            <span className="text-amber-400 font-bold text-sm tracking-wider uppercase">
+        <header className="text-left">
+          <div className="text-left">
+            <span className="text-left">
               October 2025 • AI Observability
-            </span>
+            <
           </div>
           
-          <h1 className="text-5xl md:text-7xl font-extrabold mb-8 bg-gradient-to-r from-amber-400 via-orange-400 to-red-400 bg-clip-text text-transparent leading-tight">
+          <h1 className="text-left">
             Production AI Monitoring & Observability: Complete Enterprise Guide
           </h1>
           
-          <p className="text-2xl text-gray-300 mb-8 max-w-4xl">
+          <p className="text-left">
             Build comprehensive observability for production AI systems with real-time monitoring, 
             intelligent alerting, and automated incident response that ensures 99.9% uptime and 
             exceptional model performance.
           </p>
           
-          <div className="flex flex-wrap gap-3 mb-8">
-            <span className="bg-amber-500/20 px-4 py-2 rounded-full text-amber-300 text-sm">Observability</span>
-            <span className="bg-orange-500/20 px-4 py-2 rounded-full text-orange-300 text-sm">Monitoring</span>
-            <span className="bg-red-500/20 px-4 py-2 rounded-full text-red-300 text-sm">LLMOps</span>
-            <span className="bg-yellow-500/20 px-4 py-2 rounded-full text-yellow-300 text-sm">Production AI</span>
+          <div className="text-left">
+            <span className="text-left">Observability<
+            <span className="text-left">Monitoring<
+            <span className="text-left">LLMOps<
+            <span className="text-left">Production AI<
           </div>
         </header>
 
         {/* Key Metrics */}
-        <section className="mb-16">
-          <div className="grid md:grid-cols-4 gap-6">
-            <div className="bg-gradient-to-br from-amber-500/10 to-amber-600/10 backdrop-blur-sm rounded-xl p-6 border border-amber-500/30">
-              <div className="text-4xl font-extrabold text-amber-400 mb-2">99.95%</div>
-              <div className="text-amber-300">AI Uptime SLA</div>
+        <section className="text-left">
+          <div className="text-left">
+            <div className="text-left">
+              <div className="text-left">99.95%</div>
+              <div className="text-left">AI Uptime SLA</div>
             </div>
-            <div className="bg-gradient-to-br from-orange-500/10 to-orange-600/10 backdrop-blur-sm rounded-xl p-6 border border-orange-500/30">
-              <div className="text-4xl font-extrabold text-orange-400 mb-2">2.3min</div>
-              <div className="text-orange-300">MTTR</div>
+            <div className="text-left">
+              <div className="text-left">2.3min</div>
+              <div className="text-left">MTTR</div>
             </div>
-            <div className="bg-gradient-to-br from-red-500/10 to-red-600/10 backdrop-blur-sm rounded-xl p-6 border border-red-500/30">
-              <div className="text-4xl font-extrabold text-red-400 mb-2">98.5%</div>
-              <div className="text-red-300">Auto-Resolution</div>
+            <div className="text-left">
+              <div className="text-left">98.5%</div>
+              <div className="text-left">Auto-Resolution</div>
             </div>
-            <div className="bg-gradient-to-br from-yellow-500/10 to-yellow-600/10 backdrop-blur-sm rounded-xl p-6 border border-yellow-500/30">
-              <div className="text-4xl font-extrabold text-yellow-400 mb-2">&lt;100ms</div>
-              <div className="text-yellow-300">Alert Latency</div>
+            <div className="text-left">
+              <div className="text-left">&lt;100ms</div>
+              <div className="text-left">Alert Latency</div>
             </div>
           </div>
         </section>
 
         {/* Main Content */}
-        <section className="prose prose-invert prose-lg max-w-none mb-16">
-          <h2 className="text-4xl font-bold text-white mb-6">The AI Observability Stack</h2>
-          <p className="text-gray-300 text-lg mb-6">
+        <section className="text-left">
+          <h2 className="text-left">The AI Observability Stack</h2>
+          <p className="text-left">
             Production AI systems require specialized observability beyond traditional APM. You need to monitor 
             model performance, data drift, prompt effectiveness, token usage, cost per request, and user 
             satisfaction—all in real-time with intelligent alerting and automated remediation.
           </p>
 
-          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-amber-500/30 mb-8">
-            <h3 className="text-3xl font-bold text-amber-400 mb-4">🔭 Observability Layers</h3>
-            <div className="grid md:grid-cols-2 gap-6 mt-6">
+          <div className="text-left">
+            <h3 className="text-left">🔭 Observability Layers</h3>
+            <div className="text-left">
               <div>
-                <h4 className="text-xl font-bold text-amber-400 mb-3">Infrastructure Metrics</h4>
-                <ul className="space-y-2 text-gray-300">
+                <h4 className="text-left">Infrastructure Metrics</h4>
+                <ul className="text-left">
                   <li>• API response times & latency</li>
                   <li>• GPU utilization & memory</li>
                   <li>• Request rate & throughput</li>
@@ -75,8 +75,8 @@ export default function AI2025OctoberProductionAIMonitoring() {
                 </ul>
               </div>
               <div>
-                <h4 className="text-xl font-bold text-orange-400 mb-3">Model Performance</h4>
-                <ul className="space-y-2 text-gray-300">
+                <h4 className="text-left">Model Performance</h4>
+                <ul className="text-left">
                   <li>• Output quality scores</li>
                   <li>• Embedding drift detection</li>
                   <li>• Hallucination rate</li>
@@ -85,8 +85,8 @@ export default function AI2025OctoberProductionAIMonitoring() {
                 </ul>
               </div>
               <div>
-                <h4 className="text-xl font-bold text-red-400 mb-3">Business Metrics</h4>
-                <ul className="space-y-2 text-gray-300">
+                <h4 className="text-left">Business Metrics</h4>
+                <ul className="text-left">
                   <li>• Cost per request/user</li>
                   <li>• Token usage & trends</li>
                   <li>• User satisfaction (CSAT)</li>
@@ -95,8 +95,8 @@ export default function AI2025OctoberProductionAIMonitoring() {
                 </ul>
               </div>
               <div>
-                <h4 className="text-xl font-bold text-yellow-400 mb-3">Data Quality</h4>
-                <ul className="space-y-2 text-gray-300">
+                <h4 className="text-left">Data Quality</h4>
+                <ul className="text-left">
                   <li>• Input data distribution</li>
                   <li>• Schema validation</li>
                   <li>• Data freshness</li>
@@ -107,11 +107,11 @@ export default function AI2025OctoberProductionAIMonitoring() {
             </div>
           </div>
 
-          <h2 className="text-4xl font-bold text-white mb-6">Comprehensive Monitoring Implementation</h2>
-          <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-amber-500/30 mb-8">
-            <h3 className="text-2xl font-bold text-amber-400 mb-4">LLM Observability with OpenTelemetry</h3>
-            <pre className="bg-black/50 p-6 rounded-xl overflow-x-auto text-sm">
-              <code className="text-cyan-300">
+          <h2 className="text-left">Comprehensive Monitoring Implementation</h2>
+          <div className="text-left">
+            <h3 className="text-left">LLM Observability with OpenTelemetry</h3>
+            <pre className="text-left">
+              <code className="text-left">
 {`// Comprehensive LLM observability middleware
 import { trace, context, SpanStatusCode } from '@opentelemetry/api';
 import { SemanticAttributes } from '@opentelemetry/semantic-conventions';
@@ -270,10 +270,10 @@ export class ObservableLLM {
             </pre>
           </div>
 
-          <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-orange-500/30 mb-8">
-            <h3 className="text-2xl font-bold text-orange-400 mb-4">Real-Time Data Drift Detection</h3>
-            <pre className="bg-black/50 p-6 rounded-xl overflow-x-auto text-sm">
-              <code className="text-cyan-300">
+          <div className="text-left">
+            <h3 className="text-left">Real-Time Data Drift Detection</h3>
+            <pre className="text-left">
+              <code className="text-left">
 {`// Monitor embedding drift and data distribution shifts
 import { KolmogorovSmirnovTest } from 'statistics';
 
@@ -355,163 +355,163 @@ export class DriftMonitor {
             </pre>
           </div>
 
-          <h2 className="text-4xl font-bold text-white mb-6">Intelligent Alerting Strategy</h2>
-          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-red-500/30 mb-8">
-            <h3 className="text-3xl font-bold text-red-400 mb-4">🚨 Alert Configuration</h3>
-            <div className="space-y-6">
-              <div className="bg-gradient-to-r from-red-500/10 to-orange-500/10 rounded-xl p-6 border border-red-500/20">
-                <h4 className="text-xl font-bold text-red-400 mb-3">Critical Alerts (P0)</h4>
-                <ul className="space-y-2 text-gray-300">
+          <h2 className="text-left">Intelligent Alerting Strategy</h2>
+          <div className="text-left">
+            <h3 className="text-left">🚨 Alert Configuration</h3>
+            <div className="text-left">
+              <div className="text-left">
+                <h4 className="text-left">Critical Alerts (P0)</h4>
+                <ul className="text-left">
                   <li>• API error rate &gt; 5% for 2 minutes</li>
                   <li>• P95 latency &gt; 5000ms for 5 minutes</li>
                   <li>• Model hallucination rate &gt; 15%</li>
                   <li>• Cost spike &gt; 200% of baseline</li>
                   <li>• PII/sensitive data leakage detected</li>
                 </ul>
-                <div className="mt-4 text-sm text-red-300">
+                <div className="text-left">
                   <strong>Response:</strong> Page on-call engineer, auto-rollback if available
                 </div>
               </div>
 
-              <div className="bg-gradient-to-r from-orange-500/10 to-yellow-500/10 rounded-xl p-6 border border-orange-500/20">
-                <h4 className="text-xl font-bold text-orange-400 mb-3">Warning Alerts (P1)</h4>
-                <ul className="space-y-2 text-gray-300">
+              <div className="text-left">
+                <h4 className="text-left">Warning Alerts (P1)</h4>
+                <ul className="text-left">
                   <li>• Error rate &gt; 2% for 5 minutes</li>
                   <li>• Quality score drops below 0.7</li>
                   <li>• Cache hit rate &lt; 80%</li>
                   <li>• Embedding drift score &gt; 0.15</li>
                   <li>• Token usage increase &gt; 50%</li>
                 </ul>
-                <div className="mt-4 text-sm text-orange-300">
+                <div className="text-left">
                   <strong>Response:</strong> Slack notification, create ticket
                 </div>
               </div>
 
-              <div className="bg-gradient-to-r from-yellow-500/10 to-amber-500/10 rounded-xl p-6 border border-yellow-500/20">
-                <h4 className="text-xl font-bold text-yellow-400 mb-3">Info Alerts (P2)</h4>
-                <ul className="space-y-2 text-gray-300">
+              <div className="text-left">
+                <h4 className="text-left">Info Alerts (P2)</h4>
+                <ul className="text-left">
                   <li>• Daily cost summary</li>
                   <li>• Model performance trends</li>
                   <li>• Usage pattern changes</li>
                   <li>• Optimization opportunities</li>
                   <li>• Weekly health report</li>
                 </ul>
-                <div className="mt-4 text-sm text-yellow-300">
+                <div className="text-left">
                   <strong>Response:</strong> Email digest, dashboard update
                 </div>
               </div>
             </div>
           </div>
 
-          <h2 className="text-4xl font-bold text-white mb-6">Observability Dashboard</h2>
-          <div className="grid md:grid-cols-2 gap-6 mb-12">
-            <div className="bg-gradient-to-br from-amber-500/10 to-orange-500/10 backdrop-blur-sm rounded-xl p-8 border border-amber-500/30">
-              <h3 className="text-2xl font-bold text-amber-400 mb-6">Real-Time Metrics</h3>
-              <div className="space-y-4">
+          <h2 className="text-left">Observability Dashboard</h2>
+          <div className="text-left">
+            <div className="text-left">
+              <h3 className="text-left">Real-Time Metrics</h3>
+              <div className="text-left">
                 <div>
-                  <div className="flex justify-between mb-2">
-                    <span className="text-gray-300">Request Rate</span>
-                    <span className="text-2xl font-bold text-amber-400">1,247/sec</span>
+                  <div className="text-left">
+                    <span className="text-left">Request Rate<
+                    <span className="text-left">1,247/sec<
                   </div>
-                  <div className="text-sm text-gray-400">+12% from baseline</div>
+                  <div className="text-left">+12% from baseline</div>
                 </div>
                 <div>
-                  <div className="flex justify-between mb-2">
-                    <span className="text-gray-300">P95 Latency</span>
-                    <span className="text-2xl font-bold text-emerald-400">234ms</span>
+                  <div className="text-left">
+                    <span className="text-left">P95 Latency<
+                    <span className="text-left">234ms<
                   </div>
-                  <div className="text-sm text-gray-400">Within SLA target</div>
+                  <div className="text-left">Within SLA target</div>
                 </div>
                 <div>
-                  <div className="flex justify-between mb-2">
-                    <span className="text-gray-300">Error Rate</span>
-                    <span className="text-2xl font-bold text-emerald-400">0.12%</span>
+                  <div className="text-left">
+                    <span className="text-left">Error Rate<
+                    <span className="text-left">0.12%<
                   </div>
-                  <div className="text-sm text-gray-400">Normal range</div>
+                  <div className="text-left">Normal range</div>
                 </div>
                 <div>
-                  <div className="flex justify-between mb-2">
-                    <span className="text-gray-300">Quality Score</span>
-                    <span className="text-2xl font-bold text-amber-400">94.5%</span>
+                  <div className="text-left">
+                    <span className="text-left">Quality Score<
+                    <span className="text-left">94.5%<
                   </div>
-                  <div className="text-sm text-gray-400">Above threshold</div>
+                  <div className="text-left">Above threshold</div>
                 </div>
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-orange-500/10 to-red-500/10 backdrop-blur-sm rounded-xl p-8 border border-orange-500/30">
-              <h3 className="text-2xl font-bold text-orange-400 mb-6">Cost Analytics</h3>
-              <div className="space-y-4">
+            <div className="text-left">
+              <h3 className="text-left">Cost Analytics</h3>
+              <div className="text-left">
                 <div>
-                  <div className="flex justify-between mb-2">
-                    <span className="text-gray-300">Hourly Cost</span>
-                    <span className="text-2xl font-bold text-orange-400">$47.32</span>
+                  <div className="text-left">
+                    <span className="text-left">Hourly Cost<
+                    <span className="text-left">$47.32<
                   </div>
-                  <div className="text-sm text-gray-400">$35.2K monthly projection</div>
+                  <div className="text-left">$35.2K monthly projection</div>
                 </div>
                 <div>
-                  <div className="flex justify-between mb-2">
-                    <span className="text-gray-300">Cost per Request</span>
-                    <span className="text-2xl font-bold text-emerald-400">$0.0023</span>
+                  <div className="text-left">
+                    <span className="text-left">Cost per Request<
+                    <span className="text-left">$0.0023<
                   </div>
-                  <div className="text-sm text-gray-400">-45% vs last month</div>
+                  <div className="text-left">-45% vs last month</div>
                 </div>
                 <div>
-                  <div className="flex justify-between mb-2">
-                    <span className="text-gray-300">Cache Savings</span>
-                    <span className="text-2xl font-bold text-emerald-400">$12.8K</span>
+                  <div className="text-left">
+                    <span className="text-left">Cache Savings<
+                    <span className="text-left">$12.8K<
                   </div>
-                  <div className="text-sm text-gray-400">This month</div>
+                  <div className="text-left">This month</div>
                 </div>
                 <div>
-                  <div className="flex justify-between mb-2">
-                    <span className="text-gray-300">ROI</span>
-                    <span className="text-2xl font-bold text-orange-400">847%</span>
+                  <div className="text-left">
+                    <span className="text-left">ROI<
+                    <span className="text-left">847%<
                   </div>
-                  <div className="text-sm text-gray-400">vs traditional approaches</div>
+                  <div className="text-left">vs traditional approaches</div>
                 </div>
               </div>
             </div>
           </div>
 
-          <h2 className="text-4xl font-bold text-white mb-6">Recommended Tools & Platforms</h2>
-          <div className="grid md:grid-cols-3 gap-6 mb-12">
-            <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-amber-500/30">
-              <h4 className="text-xl font-bold text-amber-400 mb-3">LangSmith / LangFuse</h4>
-              <p className="text-gray-300 mb-4">
+          <h2 className="text-left">Recommended Tools & Platforms</h2>
+          <div className="text-left">
+            <div className="text-left">
+              <h4 className="text-left">LangSmith / LangFuse</h4>
+              <p className="text-left">
                 Purpose-built LLM observability with prompt versioning, trace analysis, and evaluation frameworks.
               </p>
-              <div className="text-sm text-emerald-400 font-semibold">Best for: LLM-first teams</div>
+              <div className="text-left">Best for: LLM-first teams</div>
             </div>
 
-            <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-orange-500/30">
-              <h4 className="text-xl font-bold text-orange-400 mb-3">Datadog / New Relic</h4>
-              <p className="text-gray-300 mb-4">
+            <div className="text-left">
+              <h4 className="text-left">Datadog / New Relic</h4>
+              <p className="text-left">
                 Enterprise APM with AI extensions for unified infrastructure and AI model monitoring.
               </p>
-              <div className="text-sm text-emerald-400 font-semibold">Best for: Large enterprises</div>
+              <div className="text-left">Best for: Large enterprises</div>
             </div>
 
-            <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-red-500/30">
-              <h4 className="text-xl font-bold text-red-400 mb-3">Prometheus + Grafana</h4>
-              <p className="text-gray-300 mb-4">
+            <div className="text-left">
+              <h4 className="text-left">Prometheus + Grafana</h4>
+              <p className="text-left">
                 Open-source stack with custom metrics for full control and cost efficiency.
               </p>
-              <div className="text-sm text-emerald-400 font-semibold">Best for: Cost-conscious teams</div>
+              <div className="text-left">Best for: Cost-conscious teams</div>
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="bg-gradient-to-r from-amber-500/10 to-orange-500/10 backdrop-blur-lg rounded-2xl p-12 border border-amber-500/30 text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">Build World-Class AI Observability</h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+        <section className="text-left">
+          <h2 className="text-left">Build World-Class AI Observability</h2>
+          <p className="text-left">
             Our AI infrastructure experts can design and implement comprehensive observability 
             solutions that ensure 99.9%+ uptime and exceptional model performance.
           </p>
           <a
             href="/contact"
-            className="inline-block bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-400 hover:to-orange-500 text-white font-bold py-4 px-12 rounded-xl transition-all duration-300 shadow-lg hover:shadow-amber-500/50 transform hover:scale-105"
+            className="text-left"
           >
             Schedule Observability Assessment
           </a>

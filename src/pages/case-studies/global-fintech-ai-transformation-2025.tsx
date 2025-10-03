@@ -314,8 +314,7 @@ const GlobalFinTechAITransformation = (): JSX.Element => {
               </p>
               <Link 
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-blue-500 text-white font-semibold rounded-lg hover:from-green-600 hover:to-blue-600 transition-all shadow-lg"
-              >
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-blue-500 text-white font-semibold rounded-lg hover:from-green-600 hover:to-blue-600 transition-all shadow-lg">
                 Start Your AI Transformation
                 <ArrowLeft className="ml-2 h-5 w-5 rotate-180" />
               </Link>

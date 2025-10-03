@@ -10,7 +10,7 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form ;}) => {;
 
   const addKeyword = (e:React.KeyboardEvent<HTMLInputElement>) => {;
 
-    <Card className="bg-zion-blue border-zion-purple/30">;
+    <Card className="text-left">;
 
 
 
@@ -48,9 +48,9 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form ;}) => {;
                 id="keywords";")"
                 placeholder="Add keywords (press Enter or comma to add)";"
                 onKeyDown={addKeyword}"
-                className="mb-2";"
-              <div className="flex flex-wrap gap-2 mt-2">;"
-                  <Badge key={index} className="bg-zion-purple/60 hover:bg-zion-purple">;"
+                className="text-left";"
+              <div className="text-left">;"
+                  <Badge key={index} className="text-left">;"
                     <button;"
                       type="button";"
                       onClick={() => removeKeyword(keyword)}

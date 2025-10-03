@@ -9,20 +9,20 @@ export default function AutonomousCognitiveIntelligencePlatform() {
         <meta name="description" content="Revolutionary autonomous cognitive intelligence platform achieving 99.98% accuracy with self-learning capabilities and zero-downtime operations. $8.4B enterprise success story." />
       </Helmet>
       
-      <article className="max-w-4xl mx-auto px-4 py-12">
-        <header className="mb-8">
-          <h1 className="text-4xl font-bold mb-4">Autonomous Cognitive Intelligence Platform: The Future of Enterprise AI</h1>
-          <p className="text-xl text-gray-600 dark:text-gray-400">
+      <article className="text-left">
+        <header className="text-left">
+          <h1 className="text-left">Autonomous Cognitive Intelligence Platform: The Future of Enterprise AI</h1>
+          <p className="text-left">
             Revolutionary platform achieving unprecedented autonomous intelligence with $8.4B proven enterprise value
           </p>
-          <div className="flex gap-4 mt-4 text-sm text-gray-500">
-            <span>October 1, 2025</span>
-            <span>•</span>
-            <span>Enterprise AI</span>
+          <div className="text-left">
+            <span>October 1, 2025<
+            <span>•<
+            <span>Enterprise AI<
           </div>
         </header>
 
-        <div className="prose prose-lg dark:prose-invert max-w-none">
+        <div className="text-left">
           <h2>Executive Summary</h2>
           <p>
             The Autonomous Cognitive Intelligence Platform represents a paradigm shift in enterprise AI, 

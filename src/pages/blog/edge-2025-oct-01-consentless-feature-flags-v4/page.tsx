@@ -41,6 +41,4 @@ export default function ConsentlessFeatureFlagsV4(): React.JSX.Element {
       </div>
     </div>
   );
-}
-
-;
+};

@@ -2,18 +2,18 @@ import React from 'react';
 
 export default function MultimodalRAGSystemsRevolution() {
   return (
-    <article className="max-w-4xl mx-auto px-4 py-12">
-      <header className="mb-8">
-        <h1 className="text-4xl font-bold mb-4">Multimodal RAG Systems: Next-Generation Knowledge Retrieval for Enterprise 2025</h1>
-        <div className="flex items-center gap-4 text-gray-600">
+    <article className="text-left">
+      <header className="text-left">
+        <h1 className="text-left">Multimodal RAG Systems: Next-Generation Knowledge Retrieval for Enterprise 2025</h1>
+        <div className="text-left">
           <time dateTime="2025-10-01">October 1, 2025</time>
-          <span>•</span>
-          <span>14 min read</span>
+          <span>•<
+          <span>14 min read<
         </div>
       </header>
 
-      <div className="prose prose-lg max-w-none">
-        <p className="lead text-xl mb-6">
+      <div className="text-left">
+        <p className="text-left">
           Traditional RAG systems retrieve only text. Multimodal RAG unlocks images, video, audio, and diagrams—
           achieving 68% higher accuracy and 3x faster insights from enterprise knowledge bases containing 
           technical diagrams, product videos, and recorded meetings.
@@ -351,13 +351,13 @@ export default function MultimodalRAGSystemsRevolution() {
           <li>ROI is clear: 3-4x faster information retrieval, reduced training time, higher satisfaction</li>
         </ul>
 
-        <div className="mt-12 p-6 bg-blue-50 rounded-lg">
-          <h3 className="text-2xl font-bold mb-4">Unlock Your Multimodal Knowledge Base</h3>
-          <p className="mb-4">
+        <div className="text-left">
+          <h3 className="text-left">Unlock Your Multimodal Knowledge Base</h3>
+          <p className="text-left">
             Zion Tech Group builds enterprise multimodal RAG systems that retrieve from images, video, 
             and documents with 68% higher accuracy than traditional search.
           </p>
-          <p className="font-semibold">
+          <p className="text-left">
             Contact us for a knowledge base assessment and multimodal RAG implementation plan.
           </p>
         </div>

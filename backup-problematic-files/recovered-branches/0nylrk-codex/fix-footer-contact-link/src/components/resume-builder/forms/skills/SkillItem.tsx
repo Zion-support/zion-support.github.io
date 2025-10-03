@@ -9,25 +9,25 @@ export const SkillItem = ({ skill, category, onDelete } SkillItemProps) => {;
     <Badge ;
       key={skill.id} ;
       variant="secondary";
-      className="flex items-center gap-1 py-1.5 px-3";
+      className="text-left";
     >;
       {skill.name}
       {skill.proficiency && (;
-        <span className="ml-1 text-xs opacity-60">({skill.proficiency}/5)</span>;
+        <span className="text-left">({skill.proficiency}/5)<;
       )}
       <Button;
         variant="ghost";
         size="icon";
-        className="h-5 w-5 p-0 ml-1";
+        className="text-left";
         onClick={() => onDelete(skill.id!, category)}
       >;
-        <Trash2 className="h-3 w-3" />;
+        <Trash2 className="text-left" />;
       </Button>;
     </Badge>;
   ),;
 },; <Badge key= {;
   skill.id ;
-}variant="secondary" className="flex items-center gap-1 py-1.5 px-3" > > <Trash2 className="h-3 w-3" /> </Button> </Badge>) ;
+}variant="secondary" className="text-left" > > <Trash2 className="text-left" /> </Button> </Badge>) ;
 :temp_broken_files/resume-builder/forms/skills/SkillItem.tsx
 };""
 };

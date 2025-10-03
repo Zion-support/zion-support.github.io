@@ -8,7 +8,7 @@ export const metadata = {
 
 export default function BlogPost() {
   return (
-    <article className="prose prose-invert max-w-none">
+    <article className="text-left">
       <h1>Agent Release Guardrails v3 (2026)</h1>
       <p>
         Standardize agent releases with guardrails that continuously validate safety,

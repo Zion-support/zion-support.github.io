@@ -11,15 +11,15 @@ export const metadata = {
 
 export default function BlogPost() {
   return (
-    <article className="prose prose-invert max-w-none">
+    <article className="text-left">
       <h1>⚡ Autonomous Edge Intelligence Revolution 2025: Distributed AI at the Edge</h1>
       
-      <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 border border-cyan-500/30 rounded-lg p-6 my-8">
-        <h3 className="text-2xl font-bold text-cyan-300 mt-0">🚀 Revolutionary Breakthrough</h3>
-        <p className="text-lg">
-          <strong>Autonomous edge intelligence systems</strong> achieving <span className="text-green-400 font-bold">99.9% uptime</span>, 
-          <span className="text-green-400 font-bold"> &lt;5ms latency</span>, and <span className="text-green-400 font-bold">94% cost reduction</span> through 
-          <span className="text-green-400 font-bold"> distributed AI processing</span>. Transform real-time decision-making with intelligence 
+      <div className="text-left">
+        <h3 className="text-left">🚀 Revolutionary Breakthrough</h3>
+        <p className="text-left">
+          <strong>Autonomous edge intelligence systems</strong> achieving <span className="text-left">99.9% uptime<, 
+          <span className="text-left"> &lt;5ms latency<, and <span className="text-left">94% cost reduction< through 
+          <span className="text-left"> distributed AI processing<. Transform real-time decision-making with intelligence 
           deployed directly at the edge, eliminating cloud dependencies.
         </p>
       </div>
@@ -90,9 +90,9 @@ export default function BlogPost() {
 
       <h2>📊 Performance Metrics</h2>
       
-      <div className="bg-slate-800/50 border border-slate-700 rounded-lg p-6 my-6">
-        <h3 className="text-xl font-bold text-cyan-300 mt-0">Real-World Results</h3>
-        <ul className="space-y-2">
+      <div className="text-left">
+        <h3 className="text-left">Real-World Results</h3>
+        <ul className="text-left">
           <li><strong>Latency Reduction:</strong> 96% faster than cloud-based processing</li>
           <li><strong>Cost Savings:</strong> 94% reduction in cloud and bandwidth costs</li>
           <li><strong>Uptime:</strong> 99.9% availability with offline capability</li>
@@ -138,8 +138,8 @@ export default function BlogPost() {
 
       <h2>💰 Business Impact</h2>
       
-      <div className="bg-gradient-to-r from-green-600/20 to-emerald-600/20 border border-green-500/30 rounded-lg p-6 my-8">
-        <h3 className="text-2xl font-bold text-green-300 mt-0">📈 ROI Analysis</h3>
+      <div className="text-left">
+        <h3 className="text-left">📈 ROI Analysis</h3>
         <ul>
           <li><strong>Infrastructure Cost Reduction:</strong> $8.4M annual savings from cloud elimination</li>
           <li><strong>Operational Efficiency:</strong> 847% improvement in response times</li>
@@ -193,8 +193,8 @@ export default function BlogPost() {
 
       <h2>🌟 Success Story</h2>
       
-      <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-lg p-6 my-8">
-        <h3 className="text-2xl font-bold text-purple-300 mt-0">🏆 Global Manufacturing Leader</h3>
+      <div className="text-left">
+        <h3 className="text-left">🏆 Global Manufacturing Leader</h3>
         <p>
           Fortune 100 manufacturing company deployed autonomous edge intelligence across 240 factories worldwide:
         </p>
@@ -223,9 +223,9 @@ export default function BlogPost() {
         <li>Planet-scale edge intelligence networks</li>
       </ul>
 
-      <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 border border-cyan-500/30 rounded-lg p-6 my-8">
-        <h3 className="text-2xl font-bold text-cyan-300 mt-0">🚀 Ready to Transform?</h3>
-        <p className="text-lg">
+      <div className="text-left">
+        <h3 className="text-left">🚀 Ready to Transform?</h3>
+        <p className="text-left">
           Join the autonomous edge intelligence revolution. Contact Zion Tech Group to deploy 
           cutting-edge AI systems that deliver real-time results with unprecedented reliability.
         </p>

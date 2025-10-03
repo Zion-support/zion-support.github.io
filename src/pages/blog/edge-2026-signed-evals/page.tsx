@@ -43,6 +43,4 @@ export default function EdgeSignedEvals2026(): React.JSX.Element {
       </div>
     </div>
   );
-}
-
-;
+};

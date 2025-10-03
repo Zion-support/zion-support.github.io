@@ -25,19 +25,19 @@ export function SignUpForm() {;
   const [showVerificationMessage, setShowVerificationMessage] = useState(false),;
   const handleInputChange = (e:React.ChangeEvent<HTMLInputElement>) => {;
 "
-    <div className="space-y-4 px-4">;"
+    <div className="text-left">;"
 </div>"
-      <h2 className="text-xl font-medium text-center">;"
+      <h2 className="text-left">;"
 </h2>
       </h2>;"
-      <div className="space-y-2">;"
+      <div className="text-left">;"
 </div>
         <Button ;"
           variant="outline" ;""
-          className="w-full py-6 relative";"
+          className="text-left";"
           onClick={handleGoogleLogin}
         >;
-          <svg viewBox="0 0 24 24" className="h-5 w-5 mr-2" xmlns="http://www.w3.org/2000/svg">;"
+          <svg viewBox="0 0 24 24" className="text-left" xmlns="http://www.w3.org/2000/svg">;"
 </svg>"
             <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4" />;"
 </path>"
@@ -48,18 +48,18 @@ export function SignUpForm() {;
           </svg>;
             <path d="M24 12.073c0-5.8-4.85-10.5-10.826-10.5-6.02 0-10.93 4.7-10.93 10.5 0 5.234 3.875 9.575 8.95 10.359v-7.318h-2.696v-3.041h2.696V9.898c0-2.586 1.581-4.016 4.003-4.016 1.159 0 2.37.204 2.37.204v2.543h-1.334c-1.316 0-1.727.8-1.727 1.622v1.95h2.938l-.47 3.04h-2.468v7.318C20.125 21.648 24 17.307 24 12.073z" fill="#1877F2" />;"
       </div>;"
-      <div className="relative flex items-center">;"
-        <div className="flex-grow border-t border-border"></div>;""
-        <span className="mx-2 text-xs text-muted-foreground">OR</span>;""
-        <div className="flex-grow border-t border-border"></div>;"
-        <Alert variant="destructive" className="mb-4">;"
-          <AlertCircle className="h-4 w-4" />;"
+      <div className="text-left">;"
+        <div className="text-left"></div>;""
+        <span className="text-left">OR<;""
+        <div className="text-left"></div>;"
+        <Alert variant="destructive" className="text-left">;"
+          <AlertCircle className="text-left" />;"
           <AlertDescription>{error};
         ;"
-        <Alert className="mb-4 border-blue-500 bg-blue-50">;"
+        <Alert className="text-left">;"
           <AlertDescription>;
 
-      <form onSubmit={handleSubmit} className="space-y-4">;"
+      <form onSubmit={handleSubmit} className="text-left">;"
 </form>"
             <Label htmlFor="name">Full name;"
             <Input;"
@@ -71,14 +71,14 @@ export function SignUpForm() {;
               aria-invalid={!!fieldErrors.name}"
               placeholder="Enter your full name";"
             />;
-              <p className="text-red-500 text-sm">{fieldErrors.name}</p>;            )}"
+              <p className="text-left">{fieldErrors.name}</p>;            )}"
           <Label htmlFor="email">Email address;"
             id="email";""
             name="email";""
             type="email";            value={formData.email}"
             aria-invalid={!!fieldErrors.email}"
             placeholder="Enter your email";"
-            <p className="text-red-500 text-sm">{fieldErrors.email}</p>;"
+            <p className="text-left">{fieldErrors.email}</p>;"
           <Label htmlFor="password">Password;"
             id="password";""
             name="password";""
@@ -86,38 +86,38 @@ export function SignUpForm() {;
             aria-invalid={!!fieldErrors.password}"
             placeholder="Create a password";"
           <PasswordStrengthMeter password={formData.password} />;
-            <p className="text-red-500 text-sm">{fieldErrors.password}</p>;"
+            <p className="text-left">{fieldErrors.password}</p>;"
         </div>;
         <Button;"
           type="submit";""
-          className="w-full py-6";"
+          className="text-left";"
           disabled={isLoading}
 
             <>;"
-              <LoadingSpinner size="sm" className="mr-2" />;"
+              <LoadingSpinner size="sm" className="text-left" />;"
             </>;
           ) :(;"
             signupMode ? "Create Account" :"Sign In";")
           )}
       </form>;"
-      <p className="text-center text-sm">;"
+      <p className="text-left">;"
 </p>
         <Link;"
           href="/login";""
-          className="p-0 h-auto text-zion-cyan hover:text-zion-cyan-light cursor-pointer";"
+          className="text-left";"
       </p>;
 
 
   error ;
 } ) ;"
-  /* Verification Message */ ;"}{";"  showVerificationMessage && (<Alert className="mb-4 border-blue-500 bg-blue-50"> <AlertCircle className="h-4 w-4" /> <AlertDescription> Please check your email and click the verification link before signing in.  ) ";"}<Input id="name" name="name" value= {;"
+  /* Verification Message */ ;"}{";"  showVerificationMessage && (<Alert className="text-left"> <AlertCircle className="text-left" /> <AlertDescription> Please check your email and click the verification link before signing in.  ) ";"}<Input id="name" name="name" value= {;"
   formData.name ;
 }onChange= {;"
-  handleInputChange ;"}required /> {";"  fieldErrors.name && (<p className="text-red-500 text-sm">{;"
+  handleInputChange ;"}required /> {";"  fieldErrors.name && (<p className="text-left">{;"
 </p>)"
-}</p>) ;"}</div>) ";"}<div className="space-y-2" > <Label htmlFor="email" >Email address <Input /> {";"  fieldErrors.email && (<p className="text-red-500 text-sm">{;"
+}</p>) ;"}</div>) ";"}<div className="text-left" > <Label htmlFor="email" >Email address <Input /> {";"  fieldErrors.email && (<p className="text-left">{;"
 </div>)"
-  fieldErrors.email ;"}</p>) ";"}</div> <div className="space-y-2" > <Label htmlFor="password" >Password <Input) ;"}</div> <Button >{";"  isLoading ? (<> <LoadingSpinner size="sm" className="mr-2" /> Please wait... </>) : (signupMode ? "Create Account" : "Sign In") ";"} </form> <Link href="/login" className="p-0 h-auto text-zion-cyan hover: text-zion-cyan-light cursor-pointer" > Sign In  </p> </div>) ;"}"""
+  fieldErrors.email ;"}</p>) ";"}</div> <div className="text-left" > <Label htmlFor="password" >Password <Input) ;"}</div> <Button >{";"  isLoading ? (<> <LoadingSpinner size="sm" className="text-left" /> Please wait... </>) : (signupMode ? "Create Account" : "Sign In") ";"} </form> <Link href="/login" className="text-left" > Sign In  </p> </div>) ;"}"""
 :temp_broken_files/mobile/components/onboarding/SignUpForm.tsx
 
 ursor/fix-lint-push-and-merge-to-main-e10e:src/mobile/components/onboarding/SignUpForm.tsx

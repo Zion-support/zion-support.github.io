@@ -43,6 +43,4 @@ export default function GenAIEvalScorecards2028(): React.JSX.Element {
       </div>
     </div>
   );
-}
-
-;
+};

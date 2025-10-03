@@ -481,216 +481,216 @@ import { Search, Filter, Star, Clock, DollarSign, Users, Zap, Brain, Cloud, Data
 
   const categories = ['all', 'Productivity', 'Finance', 'Marketing', 'CRM', 'Analytics', 'Scheduling', 'Content', 'Security', 'Media', 'Education', 'Sustainability', 'Legal', 'Healthcare', 'Events', 'Inventory', 'Development', 'Blockchain', 'IoT', 'Immersive Tech', 'AI', 'Infrastructure'];
   const pricingModels = ['all', 'Freemium', 'Subscription', 'One-time'];
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-black to-zion-blue-dark relative overflow-hidden">
+    <div className="text-left">
       {/* Animated Background */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/5 via-zion-purple/5 to-zion-cyan/5 animate-pulse"></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(0,229,255,0.1),transparent_50%)] animate-float"></div>
-        <div className="absolute top-1/4 right-0 w-96 h-96 bg-[radial-gradient(circle,rgba(168,85,247,0.1),transparent_70%)] animate-float delay-1000"></div>
+      <div className="text-left">
+        <div className="text-left"></div>
+        <div className="text-left"></div>
+        <div className="text-left"></div>
       </div>
 
-      <div className="relative container mx-auto px-4 py-8">
+      <div className="text-left">
         {/* Header */}
-        <div className="text-center mb-16">
-          <div className="mb-6">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-zion-cyan/10 border border-zion-cyan/20 rounded-full text-zion-cyan text-sm font-medium mb-4">
-              <Zap className="w-4 h-4" />
+        <div className="text-left">
+          <div className="text-left">
+            <div className="text-left">
+              <Zap className="text-left" />
               Innovation at Scale
             </div>
           </div>
-          <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-cyan bg-clip-text text-transparent mb-6 animate-neon-pulse">
+          <h1 className="text-left">
             Micro SAAS Services
           </h1>
-          <p className="text-xl md:text-2xl text-zion-slate-light max-w-4xl mx-auto leading-relaxed">
+          <p className="text-left">
             Revolutionary software solutions designed specifically for small businesses, startups, and entrepreneurs. 
-            <span className="text-zion-cyan font-semibold"> Affordable, powerful, and future-ready.</span>
+            <span className="text-left"> Affordable, powerful, and future-ready.<
           </p>
-          <div className="mt-8 flex flex-wrap justify-center gap-4 text-sm text-zion-slate-light">
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-zion-cyan rounded-full animate-pulse"></div>
-              <span>25+ Services Available</span>
+          <div className="text-left">
+            <div className="text-left">
+              <div className="text-left"></div>
+              <span>25+ Services Available<
             </div>
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-zion-purple rounded-full animate-pulse delay-500"></div>
-              <span>Starting from $15/month</span>
+            <div className="text-left">
+              <div className="text-left"></div>
+              <span>Starting from $15/month<
             </div>
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-zion-cyan rounded-full animate-pulse delay-1000"></div>
-              <span>24/7 Support</span>
+            <div className="text-left">
+              <div className="text-left"></div>
+              <span>24/7 Support<
         {/* Search and Filters */}
-        <div className="mb-12 space-y-6">
-          <div className="relative max-w-2xl mx-auto">
-            <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-cyan w-5 h-5" />
+        <div className="text-left">
+          <div className="text-left">
+            <Search className="text-left" />
             <input
               type="text"
               placeholder="Search for innovative micro SAAS solutions..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full pl-12 pr-4 py-4 bg-black/30 backdrop-blur-sm border border-zion-cyan/30 rounded-xl text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan/50 transition-all duration-300"
+              className="text-left"
             />
-            <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
-              <div className="px-3 py-1 bg-zion-cyan/20 border border-zion-cyan/30 rounded-lg text-xs text-zion-cyan">
+            <div className="text-left">
+              <div className="text-left">
                 {filteredServices.length} services found
               </div>
             </div>
           </div>
           
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="text-left">
             <select
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
-              className="px-6 py-3 bg-black/30 backdrop-blur-sm border border-zion-cyan/30 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan/50 transition-all duration-300 cursor-pointer"
+              className="text-left"
             >
               {categories.map(category => (
-                <option key={category} value={category} className="bg-black text-white">
+                <option key={category} value={category} className="text-left">
                   {category === 'all' ? '🌐 All Categories' : `📁 ${category}`}
-              className="px-6 py-3 bg-black/30 backdrop-blur-sm border border-zion-cyan/30 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan/50 transition-all duration-300 cursor-pointer"
+              className="text-left"
             >
               {pricingModels.map(pricing => (
-                <option key={pricing} value={pricing} className="bg-black text-white">
+                <option key={pricing} value={pricing} className="text-left">
                   {pricing === 'all' ? '💰 All Pricing Models' : `💳 ${pricing}`}
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="text-left">
           {filteredServices.map((service) => (
-            <div key={service.id} className="group bg-black/30 backdrop-blur-sm border border-zion-cyan/20 rounded-2xl p-8 hover:bg-black/50 hover:border-zion-cyan/40 transition-all duration-500 hover:shadow-2xl hover:shadow-zion-cyan/20 hover:-translate-y-2">
+            <div key={service.id} className="text-left">
               {/* Service Header */}
-              <div className="flex items-start justify-between mb-6">
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <div className="text-zion-cyan">
+              <div className="text-left">
+                <div className="text-left">
+                  <div className="text-left">
+                    <div className="text-left">
                       {getCategoryIcon(service.category)}
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white group-hover:text-zion-cyan transition-colors duration-300">
+                    <h3 className="text-left">
                       {service.name}
                     </h3>
-                    <div className="flex items-center gap-2 mt-1">
+                    <div className="text-left">
                       <span className={`px-3 py-1 text-xs font-semibold rounded-full ${getPricingColor(service.pricing)} bg-opacity-20 border border-current`}>
                         {service.pricing}
-                      </span>
-                      <span className="px-3 py-1 text-xs font-semibold rounded-full text-zion-purple bg-zion-purple/20 border border-zion-purple/30">
+                      <
+                      <span className="text-left">
                         {service.category}
-                      </span>
+                      <
                     </div>
                   </div>
                 </div>
               </div>
               
               {/* Description */}
-              <p className="text-zion-slate-light mb-6 leading-relaxed group-hover:text-white transition-colors duration-300">
+              <p className="text-left">
                 {service.description}
               </p>
               
               {/* Pricing */}
-              <div className="mb-6 p-4 bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 rounded-xl border border-zion-cyan/20">
-                <div className="text-3xl font-bold text-white mb-1">
+              <div className="text-left">
+                <div className="text-left">
                   {formatPrice(service.price, service.pricingModel)}
                 </div>
-                <div className="text-sm text-zion-cyan">{service.userLimit}</div>
+                <div className="text-left">{service.userLimit}</div>
               </div>
 
               {/* Features */}
-              <div className="mb-6">
-                <h4 className="text-sm font-semibold text-white mb-3 flex items-center gap-2">
-                  <Zap className="w-4 h-4 text-zion-cyan" />
+              <div className="text-left">
+                <h4 className="text-left">
+                  <Zap className="text-left" />
                   Key Features
                 </h4>
-                <div className="flex flex-wrap gap-2">
+                <div className="text-left">
                   {service.features.slice(0, 3).map((feature, index) => (
-                    <span key={index} className="px-3 py-1 text-xs bg-zion-cyan/20 text-zion-cyan rounded-lg border border-zion-cyan/30">
+                    <span key={index} className="text-left">
                       {feature}
-                    </span>
+                    <
                   ))}
                 </div>
               </div>
 
               {/* Target Audience */}
-              <div className="mb-6">
-                <h4 className="text-sm font-semibold text-white mb-3 flex items-center gap-2">
-                  <Users className="w-4 h-4 text-zion-purple" />
+              <div className="text-left">
+                <h4 className="text-left">
+                  <Users className="text-left" />
                   Perfect For
                 </h4>
-                <div className="flex flex-wrap gap-2">
+                <div className="text-left">
                   {service.targetAudience.slice(0, 2).map((audience, index) => (
-                    <span key={index} className="px-3 py-1 text-xs bg-zion-purple/20 text-zion-purple rounded-lg border border-zion-purple/30">
+                    <span key={index} className="text-left">
                       {audience}
-                    </span>
+                    <
                   ))}
                 </div>
               </div>
 
               {/* CTA */}
-              <div className="border-t border-zion-cyan/20 pt-6">
-                <div className="flex items-center justify-between">
-                  <span className="text-sm text-zion-slate-light">Ready to transform your business?</span>
+              <div className="text-left">
+                <div className="text-left">
+                  <span className="text-left">Ready to transform your business?<
                   <a 
                     href={service.contactInfo.website}
-                    className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium hover:from-zion-cyan/90 hover:to-zion-purple/90 transition-all duration-300 group-hover:scale-105"
+                    className="text-left"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     Get Started
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                    <ArrowRight className="text-left" />
                   </a>
         {/* Contact Information */}
-        <div className="mt-20 text-center">
-          <div className="relative bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-cyan/10 backdrop-blur-sm border border-zion-cyan/30 rounded-3xl p-12 overflow-hidden">
+        <div className="text-left">
+          <div className="text-left">
             {/* Background Elements */}
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,229,255,0.1),transparent_50%)] animate-pulse"></div>
+            <div className="text-left"></div>
             
-            <div className="relative">
-              <div className="mb-8">
-                <div className="inline-flex items-center gap-2 px-6 py-3 bg-zion-cyan/20 border border-zion-cyan/30 rounded-full text-zion-cyan text-sm font-medium mb-4">
-                  <Rocket className="w-4 h-4" />
+            <div className="text-left">
+              <div className="text-left">
+                <div className="text-left">
+                  <Rocket className="text-left" />
                   Ready to Transform Your Business?
                 </div>
               </div>
               
-              <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-cyan bg-clip-text text-transparent mb-6">
+              <h2 className="text-left">
                 Let's Build the Future Together
               </h2>
               
-              <p className="text-xl text-zion-slate-light mb-12 max-w-3xl mx-auto leading-relaxed">
+              <p className="text-left">
                 Our cutting-edge micro SAAS solutions are designed to scale with your business needs. 
-                <span className="text-zion-cyan font-semibold"> Start your digital transformation journey today.</span>
+                <span className="text-left"> Start your digital transformation journey today.<
               </p>
               
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center mb-12">
-                <div className="group">
-                  <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan/20 to-zion-cyan/30 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <Phone className="w-8 h-8 text-zion-cyan" />
+              <div className="text-left">
+                <div className="text-left">
+                  <div className="text-left">
+                    <Phone className="text-left" />
                   </div>
-                  <p className="text-white font-semibold text-lg mb-2">Phone</p>
-                  <p className="text-zion-slate-light">{microSaasServices[0].contactInfo.phone}</p>
+                  <p className="text-left">Phone</p>
+                  <p className="text-left">{microSaasServices[0].contactInfo.phone}</p>
                 </div>
-                <div className="group">
-                  <div className="w-16 h-16 bg-gradient-to-r from-zion-purple/20 to-zion-purple/30 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <Mail className="w-8 h-8 text-zion-purple" />
+                <div className="text-left">
+                  <div className="text-left">
+                    <Mail className="text-left" />
                   </div>
-                  <p className="text-white font-semibold text-lg mb-2">Email</p>
-                  <p className="text-zion-slate-light">{microSaasServices[0].contactInfo.email}</p>
+                  <p className="text-left">Email</p>
+                  <p className="text-left">{microSaasServices[0].contactInfo.email}</p>
                 </div>
-                <div className="group">
-                  <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan/20 to-zion-cyan/30 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <MapPin className="w-8 h-8 text-zion-cyan" />
+                <div className="text-left">
+                  <div className="text-left">
+                    <MapPin className="text-left" />
                   </div>
-                  <p className="text-white font-semibold text-lg mb-2">Address</p>
-                  <p className="text-zion-slate-light">364 E Main St STE 1008<br />Middletown DE 19709</p>
+                  <p className="text-left">Address</p>
+                  <p className="text-left">364 E Main St STE 1008<br />Middletown DE 19709</p>
                 </div>
               </div>
               
-              <div className="flex flex-wrap justify-center gap-4">
+              <div className="text-left">
                 <a 
                   href="mailto:kleber@ziontechgroup.com"
-                  className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold hover:from-zion-cyan/90 hover:to-zion-purple/90 transition-all duration-300 hover:scale-105 shadow-lg shadow-zion-cyan/25"
+                  className="text-left"
                 >
-                  <Mail className="w-5 h-5" />
+                  <Mail className="text-left" />
                   Get Started Today
                 </a>
                 <a 
                   href="tel:+13024640950"
-                  className="inline-flex items-center gap-3 px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-xl font-semibold hover:bg-zion-cyan hover:text-black transition-all duration-300 hover:scale-105"
+                  className="text-left"
                 >
-                  <Phone className="w-5 h-5" />
+                  <Phone className="text-left" />
                   Call Now

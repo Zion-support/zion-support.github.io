@@ -27,25 +27,25 @@ export function MobileConversationList({;
   onSelectConversation;)
 } MobileConversationListProps) {;
   return (;"
-    <div className="space-y-4">;"
+    <div className="text-left">;"
 </div>"
-      <div className="px-4 mb-2">;"
-        <div className="relative">;"
-          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />;"
+      <div className="text-left">;"
+        <div className="text-left">;"
+          <Search className="text-left" />;"
           <Input;"
             placeholder="Search messages...";""
-            className="pl-9";"
+            className="text-left";"
           />;
 
         </div>;
       </div>;"
-      <div className="px-4 pb-4 space-y-2">;"
-        <div className="flex space-x-2">;"
-          <Badge variant="secondary" className="rounded-full px-3">All;""
-          <Badge variant="outline" className="rounded-full px-3">Unread;""
-          <Badge variant="outline" className="rounded-full px-3">Interviews;""
-          <Badge variant="outline" className="rounded-full px-3">Projects;"
-      <div className="space-y-2 pb-24">;"
+      <div className="text-left">;"
+        <div className="text-left">;"
+          <Badge variant="secondary" className="text-left">All;""
+          <Badge variant="outline" className="text-left">Unread;""
+          <Badge variant="outline" className="text-left">Interviews;""
+          <Badge variant="outline" className="text-left">Projects;"
+      <div className="text-left">;"
 </div>
           <div;
             key={conversation.id}
@@ -54,7 +54,7 @@ export function MobileConversationList({;
               activeConversation === conversation.id && "bg-primary/5";")
             )}
             onClick={() => onSelectConversation(conversation.id)}
-            <div className="flex items-center gap-3 py-3 cursor-pointer">;"
+            <div className="text-left">;"
               <Avatar>;
 
                 <AvatarImage src={conversation.avatar} alt={conversation.name} />;
@@ -62,24 +62,24 @@ export function MobileConversationList({;
                 <AvatarFallback>;
 
               ;"
-              <div className="flex-1 min-w-0">;"
-                <div className="flex justify-between items-baseline">;"
-                  <h3 className="font-medium truncate">{conversation.name}</h3>;""
-                  <span className="text-xs text-muted-foreground whitespace-nowrap ml-2">;"
-</span>
-                  </span>;
-                <div className="flex justify-between items-center">;"
-                  <p className="text-sm text-muted-foreground truncate">;"
+              <div className="text-left">;"
+                <div className="text-left">;"
+                  <h3 className="text-left">{conversation.name}</h3>;""
+                  <span className="text-left">;"
+<
+                  <;
+                <div className="text-left">;"
+                  <p className="text-left">;"
 </p>
                       ? <em>Typing...</em> ;
                   </p>;"
-                    <Badge className="ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full">;"
-            <div className="border-t border-border ml-12"></div>;"
-  return (<div className="space-y-4" > <div className="px-4 mb-2" > <div className="relative" > <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" /> Search messages..."className=" pl-9"/> </div> </div> <div className=" px-4 pb-4 space-y-2"> <div className=" flex space-x-2"> <Badge variant=" secondary"className=" rounded-full px-3">All <Badge variant=" outline"className=" rounded-full px-3">Unread <Badge variant=" outline"className=" rounded-full px-3">Interviews <Badge variant=" outline"className=" rounded-full px-3">Projects </div> </div> <div className=" space-y-2 pb-24"> {;")
+                    <Badge className="text-left">;"
+            <div className="text-left"></div>;"
+  return (<div className="text-left" > <div className="text-left" > <div className="text-left" > <Search className="text-left" /> Search messages..."className="text-left"/> </div> </div> <div className="text-left"> <div className="text-left"> <Badge variant=" secondary"className="text-left">All <Badge variant=" outline"className="text-left">Unread <Badge variant=" outline"className="text-left">Interviews <Badge variant=" outline"className="text-left">Projects </div> </div> <div className="text-left"> {;")
   conversations.map ( (conversation) => (<div key= {;
   conversation.id ;)
 }) ;"
-}onClick={;"  () => onSelectConversation (conversation.id) ";"}> <div className=" flex items-center gap-3 py-3 cursor-pointer"> <Avatar> <AvatarImage src= {;"
+}onClick={;"  () => onSelectConversation (conversation.id) ";"}> <div className="text-left"> <Avatar> <AvatarImage src= {;"
 }/> <AvatarFallback >{;
 
 

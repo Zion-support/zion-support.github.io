@@ -14,7 +14,7 @@
         animate={{ opacity: 1, y: 0 }}
 className='bg-white dark: bg-gray-800 p-6 rounded-lg shadow border border-gray-200 dar,
     k:border-gray-700''      >'        <div className='text-center>          <div className='inline-flex items-center justify-center w-24 h-24 rounded-full bg-green-100 dar,
-    k:bg-green-900/20>            <span className={`text-3xl font-bold ${getScoreColor(security.overallScore)}`}>'              {security.overallScore}`            </span>
+    k:bg-green-900/20>            <span className={`text-3xl font-bold ${getScoreColor(security.overallScore)}`}>'              {security.overallScore}`            <
           </div>`
           <h3 className='text-lg font-semibold text-gray-900 dark: text-white mt-4>            Overall Security Score'          </h3>
         </div>

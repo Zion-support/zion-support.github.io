@@ -2,10 +2,10 @@ import React from 'react';
 
 export default function QuantumReinforcementLearningBreakthrough2025() {
   return (
-    <main className="prose lg:prose-xl max-w-4xl mx-auto py-12 px-4">
+    <main className="text-left">
       <h1>Quantum Reinforcement Learning: The 2025 Breakthrough in Adaptive Intelligence</h1>
       
-      <p className="lead text-xl text-gray-700 dark:text-gray-300">
+      <p className="text-left">
         Discover how quantum-enhanced reinforcement learning is revolutionizing decision-making systems,
         achieving 10,000x faster training times and 99.9% optimization accuracy for enterprise applications.
       </p>
@@ -61,9 +61,9 @@ export default function QuantumReinforcementLearningBreakthrough2025() {
       </ul>
 
       <h2>Implementation Results</h2>
-      <div className="bg-blue-50 dark:bg-blue-900 p-6 rounded-lg my-6">
-        <h3 className="mt-0">Proven Metrics Across 150+ Deployments:</h3>
-        <ul className="mb-0">
+      <div className="text-left">
+        <h3 className="text-left">Proven Metrics Across 150+ Deployments:</h3>
+        <ul className="text-left">
           <li>Average training time reduction: 9,847x</li>
           <li>Decision quality improvement: 94.7%</li>
           <li>Energy cost reduction: 95.3%</li>
@@ -102,9 +102,9 @@ export default function QuantumReinforcementLearningBreakthrough2025() {
         enabling even more complex problem-solving capabilities.
       </p>
 
-      <div className="bg-green-50 dark:bg-green-900 p-6 rounded-lg my-8">
-        <h3 className="mt-0">Ready to Transform Your Decision Systems?</h3>
-        <p className="mb-0">
+      <div className="text-left">
+        <h3 className="text-left">Ready to Transform Your Decision Systems?</h3>
+        <p className="text-left">
           Contact our quantum AI experts to explore how QRL can revolutionize your enterprise operations.
           Proof-of-concept deployments available in 2-3 weeks.
         </p>

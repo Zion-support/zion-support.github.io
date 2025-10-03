@@ -16,56 +16,52 @@ export default function May2026RevolutionaryBreakthroughPage() {
   const { data, content } = matter(fileContents);
 
   return (
-    <div className="min-h-screen bg-white">
-      <article className="max-w-4xl mx-auto px-6 py-12">
-        <header className="mb-12">
-          <div className="flex items-center gap-2 mb-4">
-            <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+    <div className="text-left"></div>
+      <article className="text-left">
+        <header className="text-left">
+          <div className="text-left"></div>
+            <span className="text-left">
               MAY 2026
             </span>
-            <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-sm font-semibold">
+            <span className="text-left">
               $50B ROI
             </span>
           </div>
-          <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6 leading-tight">
+          <h1 className="text-left">
             {data.title}
           </h1>
-          <p className="text-xl text-gray-600 mb-8">
+          <p className="text-left">
             {data.description}
           </p>
-          <div className="flex items-center gap-4 text-sm text-gray-500">
+          <div className="text-left"></div>
             <span>By {data.author}</span>
             <span>•</span>
             <span>{new Date(data.date).toLocaleDateString()}</span>
           </div>
         </header>
 
-        <div className="prose prose-lg max-w-none">
-          <div dangerouslySetInnerHTML={{ __html: content.replace(/\n/g, '<br />') }} />
+        <div className="text-left"></div>
+          <div dangerouslySetInnerHTML={{ __html: content.replace(/\n/g, '<br />') }} /></div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-gray-200">
-          <h3 className="text-2xl font-bold text-gray-900 mb-6">Get Started Today</h3>
-          <p className="text-gray-600 mb-6">
+        <div className="text-left"></div>
+          <h3 className="text-left">Get Started Today</h3>
+          <p className="text-left">
             Ready to transform your enterprise with the May 2026 AI breakthrough? Contact our team to schedule a consultation and discover how this revolutionary technology can deliver unprecedented value to your organization.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="text-left"></div>
             <a 
-              href="/[^"]*"
-              className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-green-500/50"
-            >
+              href="/"
+              className="text-left">
               Contact Us Today
             </a>
             <a 
-              href="/[^"]*"
-              className="border-2 border-green-500 text-green-600 hover:bg-green-500 hover:text-white font-bold py-3 px-6 rounded-lg transition-all duration-300"
-            >
+              href="/"
+              className="text-left">
               View $50B Success Story
             </a>
           </div>
-        </div>
       </article>
-    </div>
   );
 }
-</div>
+</div></div></div>

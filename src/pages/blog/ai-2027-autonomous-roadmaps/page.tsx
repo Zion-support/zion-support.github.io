@@ -43,6 +43,4 @@ export default function AIAutonomousRoadmaps2027(): React.JSX.Element {
       </div>
     </div>
   );
-}
-
-;
+};

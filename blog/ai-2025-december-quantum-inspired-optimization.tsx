@@ -15,61 +15,61 @@ export default function AIQuantumInspiredOptimization2025() {
         <link rel="canonical" href="https://ziontechgroup.com/blog/ai-2025-december-quantum-inspired-optimization" />
       </Helmet>
 
-      <article className="min-h-screen bg-gradient-to-br from-blue-50 via-cyan-50 to-teal-50">
-        <div className="container mx-auto px-6 py-12">
+      <article className="text-left">
+        <div className="text-left">
           {/* Back Button */}
           <Link
             to="/blog"
-            className="inline-flex items-center text-blue-600 hover:text-blue-800 mb-8 group"
+            className="text-left"
           >
-            <ArrowLeft className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" />
+            <ArrowLeft className="text-left" />
             Back to Blog
           </Link>
 
           {/* Article Header */}
-          <header className="max-w-4xl mx-auto mb-12">
-            <div className="flex flex-wrap gap-2 mb-6">
-              <span className="bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-semibold">
+          <header className="text-left">
+            <div className="text-left">
+              <span className="text-left">
                 Quantum Computing
-              </span>
-              <span className="bg-cyan-100 text-cyan-700 px-4 py-2 rounded-full text-sm font-semibold">
+              <
+              <span className="text-left">
                 AI Optimization
-              </span>
-              <span className="bg-teal-100 text-teal-700 px-4 py-2 rounded-full text-sm font-semibold">
+              <
+              <span className="text-left">
                 Advanced Algorithms
-              </span>
+              <
             </div>
 
-            <h1 className="text-5xl font-bold text-gray-900 mb-6 leading-tight">
+            <h1 className="text-left">
               Quantum-Inspired AI Optimization 2025 — Solve Complex Problems 1000x Faster with Classical Hardware
             </h1>
 
-            <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+            <p className="text-left">
               Revolutionary quantum-inspired algorithms achieving 1000x speedup on classical hardware for complex 
               optimization problems. Master techniques delivering breakthrough performance without quantum computers.
             </p>
 
-            <div className="flex flex-wrap items-center gap-6 text-gray-600">
-              <div className="flex items-center">
-                <Calendar className="w-5 h-5 mr-2" />
-                <span>December 1, 2025</span>
+            <div className="text-left">
+              <div className="text-left">
+                <Calendar className="text-left" />
+                <span>December 1, 2025<
               </div>
-              <div className="flex items-center">
-                <Clock className="w-5 h-5 mr-2" />
-                <span>20 min read</span>
+              <div className="text-left">
+                <Clock className="text-left" />
+                <span>20 min read<
               </div>
-              <div className="flex items-center">
-                <BookOpen className="w-5 h-5 mr-2" />
-                <span>Advanced Research</span>
+              <div className="text-left">
+                <BookOpen className="text-left" />
+                <span>Advanced Research<
               </div>
             </div>
           </header>
 
           {/* Article Content */}
-          <div className="max-w-4xl mx-auto prose prose-lg prose-blue">
-            <div className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white p-8 rounded-2xl mb-12">
-              <h2 className="text-3xl font-bold text-white mb-4">⚛️ Breakthrough Results</h2>
-              <ul className="space-y-3 text-lg">
+          <div className="text-left">
+            <div className="text-left">
+              <h2 className="text-left">⚛️ Breakthrough Results</h2>
+              <ul className="text-left">
                 <li>✅ <strong>1000x Speedup</strong> — Solve complex problems in minutes vs. days</li>
                 <li>✅ <strong>95% Optimality</strong> — Near-optimal solutions for NP-hard problems</li>
                 <li>✅ <strong>85% Cost Reduction</strong> — No quantum hardware required</li>
@@ -238,19 +238,19 @@ export default function AIQuantumInspiredOptimization2025() {
               <li>Continuously refine based on production feedback</li>
             </ul>
 
-            <div className="bg-cyan-50 border-l-4 border-cyan-500 p-6 my-8">
-              <h3 className="text-cyan-900 font-bold mb-2">⚡ Ready for Quantum-Inspired Optimization?</h3>
-              <p className="text-cyan-800 mb-4">
+            <div className="text-left">
+              <h3 className="text-left">⚡ Ready for Quantum-Inspired Optimization?</h3>
+              <p className="text-left">
                 Partner with Zion Tech Group to implement quantum-inspired algorithms that solve your 
                 most challenging optimization problems. Our experts will design, deploy, and optimize 
                 solutions delivering 1000x performance improvements on classical hardware.
               </p>
               <Link
                 to="/contact"
-                className="inline-flex items-center bg-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-cyan-700 transition-colors"
+                className="text-left"
               >
                 Schedule Optimization Consultation
-                <TrendingUp className="w-5 h-5 ml-2" />
+                <TrendingUp className="text-left" />
               </Link>
             </div>
 
@@ -277,11 +277,11 @@ export default function AIQuantumInspiredOptimization2025() {
           </div>
 
           {/* Social Share */}
-          <div className="max-w-4xl mx-auto mt-12 pt-8 border-t border-gray-200">
-            <div className="flex items-center justify-between">
-              <span className="text-gray-600 font-semibold">Share this article:</span>
-              <button className="flex items-center gap-2 text-blue-600 hover:text-blue-800">
-                <Share2 className="w-5 h-5" />
+          <div className="text-left">
+            <div className="text-left">
+              <span className="text-left">Share this article:<
+              <button className="text-left">
+                <Share2 className="text-left" />
                 Share
               </button>
             </div>

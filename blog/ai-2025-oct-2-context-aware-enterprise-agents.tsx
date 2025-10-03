@@ -11,15 +11,15 @@ export const metadata = {
 
 export default function BlogPost() {
   return (
-    <article className="prose prose-invert max-w-none">
+    <article className="text-left">
       <h1>🧠 Context-Aware Enterprise AI Agents: Revolutionary Memory Systems for 2025</h1>
       
-      <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-lg p-6 my-8">
-        <h3 className="text-2xl font-bold text-purple-300 mt-0">🚀 Game-Changing Innovation</h3>
-        <p className="text-lg">
-          <strong>Context-aware enterprise AI agents</strong> achieving <span className="text-green-400 font-bold">98.5% memory retention</span>, 
-          <span className="text-green-400 font-bold"> 92% cost reduction</span>, and <span className="text-green-400 font-bold">50x faster decision-making</span>. 
-          Transform your enterprise with agents that truly <span className="text-green-400 font-bold">remember, learn, and evolve</span> across every interaction.
+      <div className="text-left">
+        <h3 className="text-left">🚀 Game-Changing Innovation</h3>
+        <p className="text-left">
+          <strong>Context-aware enterprise AI agents</strong> achieving <span className="text-left">98.5% memory retention<, 
+          <span className="text-left"> 92% cost reduction<, and <span className="text-left">50x faster decision-making<. 
+          Transform your enterprise with agents that truly <span className="text-left">remember, learn, and evolve< across every interaction.
         </p>
       </div>
 
@@ -91,7 +91,7 @@ export default function BlogPost() {
       <h2>⚡ Technical Architecture</h2>
 
       <h3>Memory Storage Stack</h3>
-      <pre className="bg-black/50 p-4 rounded-lg overflow-x-auto">
+      <pre className="text-left">
 {`# Context-Aware Agent Architecture
 
 ┌─────────────────────────────────────────────┐
@@ -137,45 +137,45 @@ export default function BlogPost() {
 
       <h2>📊 Performance Metrics</h2>
 
-      <table className="min-w-full divide-y divide-gray-700">
+      <table className="text-left">
         <thead>
           <tr>
             <th className="text-left">Metric</th>
-            <th className="text-right">Traditional Agents</th>
-            <th className="text-right">Context-Aware Agents</th>
-            <th className="text-right">Improvement</th>
+            <th className="text-left">Traditional Agents</th>
+            <th className="text-left">Context-Aware Agents</th>
+            <th className="text-left">Improvement</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td>Decision Accuracy</td>
-            <td className="text-right">72%</td>
-            <td className="text-right text-green-400 font-bold">98.5%</td>
-            <td className="text-right text-green-400">+37%</td>
+            <td className="text-left">72%</td>
+            <td className="text-left">98.5%</td>
+            <td className="text-left">+37%</td>
           </tr>
           <tr>
             <td>Time to Resolution</td>
-            <td className="text-right">12 min</td>
-            <td className="text-right text-green-400 font-bold">45 sec</td>
-            <td className="text-right text-green-400">16x faster</td>
+            <td className="text-left">12 min</td>
+            <td className="text-left">45 sec</td>
+            <td className="text-left">16x faster</td>
           </tr>
           <tr>
             <td>API Cost per Query</td>
-            <td className="text-right">$0.12</td>
-            <td className="text-right text-green-400 font-bold">$0.01</td>
-            <td className="text-right text-green-400">92% reduction</td>
+            <td className="text-left">$0.12</td>
+            <td className="text-left">$0.01</td>
+            <td className="text-left">92% reduction</td>
           </tr>
           <tr>
             <td>Context Retention</td>
-            <td className="text-right">Single session</td>
-            <td className="text-right text-green-400 font-bold">Unlimited</td>
-            <td className="text-right text-green-400">∞</td>
+            <td className="text-left">Single session</td>
+            <td className="text-left">Unlimited</td>
+            <td className="text-left">∞</td>
           </tr>
           <tr>
             <td>User Satisfaction</td>
-            <td className="text-right">76%</td>
-            <td className="text-right text-green-400 font-bold">94%</td>
-            <td className="text-right text-green-400">+24%</td>
+            <td className="text-left">76%</td>
+            <td className="text-left">94%</td>
+            <td className="text-left">+24%</td>
           </tr>
         </tbody>
       </table>
@@ -223,7 +223,7 @@ export default function BlogPost() {
         <li><strong>Improved first-contact resolution:</strong> $1.2M savings (40% fewer escalations)</li>
         <li><strong>Reduced training costs:</strong> $450K savings (agents learn from collective memory)</li>
         <li><strong>Infrastructure optimization:</strong> $380K savings (efficient storage tiering)</li>
-        <li><strong>Total Annual Savings:</strong> <span className="text-green-400 font-bold">$6.23M</span></li>
+        <li><strong>Total Annual Savings:</strong> <span className="text-left">$6.23M<</li>
       </ul>
 
       <h3>Investment Required</h3>
@@ -231,26 +231,26 @@ export default function BlogPost() {
         <li><strong>Infrastructure setup:</strong> $120K one-time</li>
         <li><strong>Implementation services:</strong> $180K one-time</li>
         <li><strong>Annual infrastructure costs:</strong> $240K</li>
-        <li><strong>Payback period:</strong> <span className="text-green-400 font-bold">2.1 months</span></li>
-        <li><strong>3-year ROI:</strong> <span className="text-green-400 font-bold">3,680%</span></li>
+        <li><strong>Payback period:</strong> <span className="text-left">2.1 months<</li>
+        <li><strong>3-year ROI:</strong> <span className="text-left">3,680%<</li>
       </ul>
 
       <h2>🏆 Success Stories</h2>
 
-      <div className="bg-gradient-to-r from-blue-600/10 to-purple-600/10 border border-blue-500/30 rounded-lg p-6 my-6">
-        <h4 className="text-xl font-bold text-blue-300">Global Financial Services Leader</h4>
+      <div className="text-left">
+        <h4 className="text-left">Global Financial Services Leader</h4>
         <p>
           Deployed context-aware agents across 12,000 customer service interactions daily. 
-          <strong className="text-green-400"> Results:</strong> 91% customer satisfaction (up from 73%), 
+          <strong className="text-left"> Results:</strong> 91% customer satisfaction (up from 73%), 
           78% reduction in average handling time, $4.2M annual savings in just the first year.
         </p>
       </div>
 
-      <div className="bg-gradient-to-r from-green-600/10 to-blue-600/10 border border-green-500/30 rounded-lg p-6 my-6">
-        <h4 className="text-xl font-bold text-green-300">Fortune 100 Technology Company</h4>
+      <div className="text-left">
+        <h4 className="text-left">Fortune 100 Technology Company</h4>
         <p>
           Implemented memory-aware DevOps agents managing 5,000+ microservices. 
-          <strong className="text-green-400"> Results:</strong> 83% reduction in mean time to recovery, 
+          <strong className="text-left"> Results:</strong> 83% reduction in mean time to recovery, 
           95% of incidents auto-resolved without human intervention, zero production outages in 6 months.
         </p>
       </div>
@@ -314,14 +314,14 @@ export default function BlogPost() {
         <li>Self-optimizing memory systems requiring zero maintenance</li>
       </ul>
 
-      <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 border border-purple-500/30 rounded-lg p-6 my-8">
-        <h3 className="text-2xl font-bold text-purple-300">🎯 Ready to Transform Your Enterprise Agents?</h3>
-        <p className="text-lg">
+      <div className="text-left">
+        <h3 className="text-left">🎯 Ready to Transform Your Enterprise Agents?</h3>
+        <p className="text-left">
           Context-aware agents are not the future—they're the present competitive advantage. 
           Companies deploying these systems today are seeing 50x faster decisions, 92% cost reductions, 
           and customer satisfaction scores in the 90s. 
         </p>
-        <p className="text-lg mt-4">
+        <p className="text-left">
           <strong>Don't let your agents forget.</strong> Contact our team for a free architecture review 
           and custom implementation roadmap for your organization.
         </p>
@@ -329,10 +329,10 @@ export default function BlogPost() {
 
       <h2>📚 Additional Resources</h2>
       <ul>
-        <li><a href="/blog/ai-2025-oct-1-autonomous-llm-orchestration-revolution" className="text-blue-400 hover:text-blue-300">Autonomous LLM Orchestration Revolution</a></li>
-        <li><a href="/blog/ai-2025-oct-production-ready-ai-agents-framework" className="text-blue-400 hover:text-blue-300">Production-Ready AI Agents Framework</a></li>
-        <li><a href="/blog/agentic-ai-multi-agent-collaboration-2026" className="text-blue-400 hover:text-blue-300">Multi-Agent Collaboration Patterns</a></li>
-        <li><a href="/contact" className="text-blue-400 hover:text-blue-300">Schedule Enterprise Consultation</a></li>
+        <li><a href="/blog/ai-2025-oct-1-autonomous-llm-orchestration-revolution" className="text-left">Autonomous LLM Orchestration Revolution</a></li>
+        <li><a href="/blog/ai-2025-oct-production-ready-ai-agents-framework" className="text-left">Production-Ready AI Agents Framework</a></li>
+        <li><a href="/blog/agentic-ai-multi-agent-collaboration-2026" className="text-left">Multi-Agent Collaboration Patterns</a></li>
+        <li><a href="/contact" className="text-left">Schedule Enterprise Consultation</a></li>
       </ul>
     </article>
   );

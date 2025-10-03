@@ -18,17 +18,17 @@ export const CreateResumeForm = ({ ;
   },;
 ;
   return (;
-    <Card className="w-full max-w-2xl mx-auto">;
-      <CardContent className="py-8">;
-        <div className="text-center">;
-          <h2 className="text-2xl font-bold mb-2">Create New Resume</h2>;
-          <p className="text-muted-foreground mb-6">Give your resume a title to get started</p>;
+    <Card className="text-left">;
+      <CardContent className="text-left">;
+        <div className="text-left">;
+          <h2 className="text-left">Create New Resume</h2>;
+          <p className="text-left">Give your resume a title to get started</p>;
           ;
-          <div className="flex gap-2 max-w-md mx-auto">;
+          <div className="text-left">;
             <input;
               type="text";
               placeholder="Resume Title (e.g. 'AI Engineer Resume')";
-              className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm";
+              className="text-left";
               value={newResumeTitle}
               onChange={(e) => setNewResumeTitle(e.target.value)}
             />;
@@ -36,7 +36,7 @@ export const CreateResumeForm = ({ ;
               onClick={handleSubmit}
               disabled={!newResumeTitle.trim() || isLoading}
             >;
-              {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+              {isLoading && <Loader2 className="text-left" />}
               Create;
             </Button>;
           </div>;
@@ -44,7 +44,7 @@ export const CreateResumeForm = ({ ;
           <Button;
             variant="ghost";
             onClick={onCancel}
-            className="mt-4";
+            className="text-left";
           >;
             Cancel;
           </Button>;
@@ -62,7 +62,7 @@ const handleSubmit = async () => {
   if (!newResumeTitle.trim () ) return;
 await onCreateResume (newResumeTitle) 
 };
-w-full max-w-2xl mx-auto"> <CardContent className=" py-8"> <div className=" text-center"> <h2 className=" text-2xl font-bold mb-2">Create New Resume</h2> <p className=" text-muted-foreground mb-6">Give your resume a title to get started</p> <div className=" flex gap-2 max-w-md mx-auto" > <input /> <Button onClick={;
+w-full max-w-2xl mx-auto"> <CardContent className="text-left"> <div className="text-left"> <h2 className="text-left">Create New Resume</h2> <p className="text-left">Give your resume a title to get started</p> <div className="text-left" > <input /> <Button onClick={;
   handleSubmit ;
 }disabled= {;
   !newResumeTitle.trim () || isLoading ;

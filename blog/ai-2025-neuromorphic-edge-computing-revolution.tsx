@@ -2,10 +2,10 @@ import React from 'react';
 
 export default function NeuromorphicEdgeComputingRevolution2025() {
   return (
-    <main className="prose lg:prose-xl max-w-4xl mx-auto py-12 px-4">
+    <main className="text-left">
       <h1>Neuromorphic Edge Computing: The 2025 Revolution in Real-Time AI</h1>
       
-      <p className="lead text-xl text-gray-700 dark:text-gray-300">
+      <p className="text-left">
         Explore how brain-inspired neuromorphic processors are transforming edge AI, delivering 1,000x
         energy efficiency and sub-millisecond inference for mission-critical applications.
       </p>
@@ -74,9 +74,9 @@ export default function NeuromorphicEdgeComputingRevolution2025() {
       </ul>
 
       <h2>Performance Benchmarks</h2>
-      <div className="bg-blue-50 dark:bg-blue-900 p-6 rounded-lg my-6">
-        <h3 className="mt-0">Real-World Deployment Metrics:</h3>
-        <ul className="mb-0">
+      <div className="text-left">
+        <h3 className="text-left">Real-World Deployment Metrics:</h3>
+        <ul className="text-left">
           <li>Energy efficiency: 1,000x - 10,000x vs. traditional processors</li>
           <li>Inference latency: 0.1ms - 2ms (application dependent)</li>
           <li>Accuracy: 98.5% - 99.9%</li>
@@ -133,9 +133,9 @@ export default function NeuromorphicEdgeComputingRevolution2025() {
         <li>Integration with 6G communication standards</li>
       </ul>
 
-      <div className="bg-green-50 dark:bg-green-900 p-6 rounded-lg my-8">
-        <h3 className="mt-0">Transform Your Edge AI Infrastructure</h3>
-        <p className="mb-0">
+      <div className="text-left">
+        <h3 className="text-left">Transform Your Edge AI Infrastructure</h3>
+        <p className="text-left">
           Discover how neuromorphic edge computing can revolutionize your operations. Our experts
           can deploy a proof-of-concept in your environment within 2 weeks. Contact us today to
           explore the possibilities.

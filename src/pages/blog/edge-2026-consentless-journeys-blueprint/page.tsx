@@ -46,6 +46,4 @@ export default function EdgeConsentlessJourneysBlueprint2026(): React.JSX.Elemen
       </div>
     </div>
   );
-}
-
-;
+};

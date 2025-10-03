@@ -2,10 +2,10 @@ import React from 'react';
 
 export default function EnterpriseLLMSecurityFramework2025() {
   return (
-    <main className="prose lg:prose-xl max-w-4xl mx-auto py-12 px-6">
+    <main className="text-left">
       <h1>Enterprise LLM Security Framework (2025): Comprehensive Protection Strategy</h1>
       
-      <p className="text-xl font-semibold text-gray-700 dark:text-gray-300">
+      <p className="text-left">
         A battle-tested security framework for deploying Large Language Models in enterprise environments.
         Protect against prompt injection, data exfiltration, and model poisoning while maintaining
         compliance with SOC 2, HIPAA, and GDPR. Used by Fortune 100 companies processing 10B+ secure
@@ -258,8 +258,8 @@ export default function EnterpriseLLMSecurityFramework2025() {
         of AI while protecting sensitive data, maintaining compliance, and building customer trust.
       </p>
 
-      <div className="bg-red-50 dark:bg-red-900 p-6 rounded-lg mt-8">
-        <h3 className="text-xl font-bold mb-4">🛡️ Secure Your LLM Deployment Today</h3>
+      <div className="text-left">
+        <h3 className="text-left">🛡️ Secure Your LLM Deployment Today</h3>
         <p>
           Our security experts have protected billions of LLM interactions for Fortune 500 companies.
           Get a free security assessment and customized protection roadmap. Contact us now.

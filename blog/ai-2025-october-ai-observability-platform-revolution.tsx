@@ -11,14 +11,14 @@ export const metadata = {
 
 export default function BlogPost() {
   return (
-    <article className="prose prose-invert max-w-none">
+    <article className="text-left">
       <h1>🔍 AI Observability Platform 2025: Monitor, Debug & Optimize AI at Scale</h1>
       
-      <div className="bg-gradient-to-r from-blue-600/20 to-indigo-600/20 border border-blue-500/30 rounded-lg p-6 my-8">
-        <h3 className="text-2xl font-bold text-blue-300 mt-0">🚀 Revolutionary Breakthrough</h3>
-        <p className="text-lg">
-          <strong>AI observability platform</strong> achieving <span className="text-green-400 font-bold">99.7% model health detection</span>, 
-          <span className="text-green-400 font-bold"> 92% faster incident resolution</span>, and <span className="text-green-400 font-bold">$84M annual cost savings</span> 
+      <div className="text-left">
+        <h3 className="text-left">🚀 Revolutionary Breakthrough</h3>
+        <p className="text-left">
+          <strong>AI observability platform</strong> achieving <span className="text-left">99.7% model health detection<, 
+          <span className="text-left"> 92% faster incident resolution<, and <span className="text-left">$84M annual cost savings< 
           through intelligent monitoring, automated debugging, and continuous optimization. Never let a model fail silently again.
         </p>
       </div>
@@ -88,8 +88,8 @@ export default function BlogPost() {
       </p>
 
       <h2>📊 Performance Metrics</h2>
-      <div className="bg-slate-800/50 rounded-lg p-6 my-6">
-        <ul className="space-y-2">
+      <div className="text-left">
+        <ul className="text-left">
           <li>✅ <strong>99.7% model health detection rate</strong> before customer impact</li>
           <li>✅ <strong>92% faster incident resolution</strong> with automated root cause analysis</li>
           <li>✅ <strong>$84M annual cost savings</strong> from optimization recommendations</li>
@@ -102,7 +102,7 @@ export default function BlogPost() {
       <h2>🛠️ Implementation Architecture</h2>
       
       <h3>Technology Stack</h3>
-      <pre className="bg-slate-900 p-4 rounded-lg overflow-x-auto">
+      <pre className="text-left">
         <code>{`# AI Observability Platform Stack
 Metrics Collection: Prometheus + OpenTelemetry
 Model Monitoring: WhyLabs + Custom Metrics
@@ -127,7 +127,7 @@ Log Analysis: ELK Stack (Elasticsearch, Logstash, Kibana)`}</code>
       <h2>🎓 Quick Start Guide</h2>
       
       <h3>Step 1: Instrument Your Models</h3>
-      <pre className="bg-slate-900 p-4 rounded-lg overflow-x-auto">
+      <pre className="text-left">
         <code>{`# Add observability to your model
 from ai_observability import ModelMonitor
 
@@ -145,7 +145,7 @@ def predict(input_data):
       </pre>
 
       <h3>Step 2: Configure Alerts</h3>
-      <pre className="bg-slate-900 p-4 rounded-lg overflow-x-auto">
+      <pre className="text-left">
         <code>{`# Define alert rules
 alerts = {
     "accuracy_drop": {
@@ -162,7 +162,7 @@ alerts = {
       </pre>
 
       <h3>Step 3: Analyze & Optimize</h3>
-      <pre className="bg-slate-900 p-4 rounded-lg overflow-x-auto">
+      <pre className="text-left">
         <code>{`# Get optimization recommendations
 recommendations = monitor.analyze(time_range="7d")
 
@@ -183,9 +183,9 @@ recommendations = monitor.analyze(time_range="7d")
       </ul>
 
       <h2>💰 Cost Optimization Features</h2>
-      <div className="bg-gradient-to-r from-green-600/20 to-blue-600/20 border border-green-500/30 rounded-lg p-6 my-8">
-        <h3 className="text-xl font-bold text-green-300 mt-0">Intelligent Cost Management</h3>
-        <ul className="space-y-2">
+      <div className="text-left">
+        <h3 className="text-left">Intelligent Cost Management</h3>
+        <ul className="text-left">
           <li>💰 <strong>$84M average annual savings</strong> from compute optimization</li>
           <li>⚡ <strong>78% reduction in GPU costs</strong> through right-sizing</li>
           <li>🎯 <strong>67% reduction in API costs</strong> from intelligent caching</li>
@@ -237,12 +237,12 @@ recommendations = monitor.analyze(time_range="7d")
         <li>24/7 monitoring and support</li>
       </ul>
 
-      <div className="bg-blue-600/20 border border-blue-500 rounded-lg p-6 my-8">
-        <p className="text-lg font-bold mb-2">🚀 Never Let Another Model Fail Silently</p>
+      <div className="text-left">
+        <p className="text-left">🚀 Never Let Another Model Fail Silently</p>
         <p>Contact our AI observability specialists to see a demo and discuss your monitoring needs.</p>
-        <p className="mt-4">
+        <p className="text-left">
           <strong>Email:</strong> ai-observability@ziontechgroup.com<br/>
-          <strong>Schedule:</strong> <a href="/contact" className="text-blue-400 hover:text-blue-300">Book a consultation</a>
+          <strong>Schedule:</strong> <a href="/contact" className="text-left">Book a consultation</a>
         </p>
       </div>
     </article>

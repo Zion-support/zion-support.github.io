@@ -77,50 +77,50 @@ const PWARegistration: React.FC = () => {
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 100 }}
-          className="fixed bottom-4 left-4 right-4 md:left-auto md:right-4 md:max-w-sm z-50"
+          className="text-left"
         >
-          <div className="bg-white rounded-lg shadow-lg border border-gray-200 p-4">
-            <div className="flex items-start justify-between mb-3">
-              <div className="flex items-center">
-                <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center mr-3">
-                  <Download className="w-5 h-5 text-white" />
+          <div className="text-left">
+            <div className="text-left">
+              <div className="text-left">
+                <div className="text-left">
+                  <Download className="text-left" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-900">Install App</h3>
-                  <p className="text-sm text-gray-600">
+                  <h3 className="text-left">Install App</h3>
+                  <p className="text-left">
                     Get quick access to our platform
                   </p>
                 </div>
               </div>
               <button
                 onClick={handleDismiss}
-                className="text-gray-400 hover:text-gray-600 transition-colors"
+                className="text-left"
               >
-                <X className="w-5 h-5" />
+                <X className="text-left" />
               </button>
             </div>
 
-            <div className="flex items-center space-x-4 mb-4">
-              <div className="flex items-center text-sm text-gray-600">
-                <Smartphone className="w-4 h-4 mr-1" />
-                <span>Mobile</span>
+            <div className="text-left">
+              <div className="text-left">
+                <Smartphone className="text-left" />
+                <span>Mobile<
               </div>
-              <div className="flex items-center text-sm text-gray-600">
-                <Monitor className="w-4 h-4 mr-1" />
-                <span>Desktop</span>
+              <div className="text-left">
+                <Monitor className="text-left" />
+                <span>Desktop<
               </div>
             </div>
 
-            <div className="flex space-x-3">
+            <div className="text-left">
               <button
                 onClick={handleInstallClick}
-                className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 px-4 rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-200"
+                className="text-left"
               >
                 Install
               </button>
               <button
                 onClick={handleDismiss}
-                className="px-4 py-2 text-gray-600 hover:text-gray-800 transition-colors"
+                className="text-left"
               >
                 Not now
               </button>

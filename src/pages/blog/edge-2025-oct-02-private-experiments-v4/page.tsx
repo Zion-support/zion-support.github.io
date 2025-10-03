@@ -41,6 +41,4 @@ export default function PrivateExperimentsV4(): React.JSX.Element {
       </div>
     </div>
   );
-}
-
-;
+};

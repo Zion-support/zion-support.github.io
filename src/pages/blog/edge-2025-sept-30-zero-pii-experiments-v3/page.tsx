@@ -40,6 +40,4 @@ export default function ZeroPIIExperimentsV3(): React.JSX.Element {
       </div>
     </div>
   );
-}
-
-;
+};

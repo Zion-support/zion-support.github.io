@@ -25,7 +25,7 @@ const PredictiveMaintenanceAtScaleArticle = () => {
       >
         <section>
           <h2>🚀 Predictive Maintenance 3.0: From Reactive to Prescriptive Intelligence</h2>
-          <p className="text-lg font-semibold text-blue-600 dark:text-blue-400 my-4">
+          <p className="text-left">
             $3.7B in Maintenance Savings | 96.4% Failure Prediction Accuracy | 91% Downtime Reduction | 4,890% ROI
           </p>
           <p>
@@ -41,7 +41,7 @@ const PredictiveMaintenanceAtScaleArticle = () => {
           <p>
             Industrial enterprises globally spend $840 billion annually on maintenance, with 10% ($84 billion) wasted on:
           </p>
-          <ul className="list-disc pl-6 space-y-2 my-4">
+          <ul className="text-left">
             <li><strong>Reactive Failures:</strong> Unplanned downtime costs 5-20x more than planned maintenance</li>
             <li><strong>Over-Maintenance:</strong> Preventive maintenance replaces parts too early, wasting $31B annually</li>
             <li><strong>Knowledge Gaps:</strong> Expert technician shortage causing 40% longer repair times</li>
@@ -55,12 +55,12 @@ const PredictiveMaintenanceAtScaleArticle = () => {
 
         <section>
           <h2>🏗️ Enterprise Predictive Maintenance Architecture</h2>
-          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700 p-6 rounded-lg my-6">
-            <h3 className="text-xl font-bold mb-4">System Architecture:</h3>
-            <div className="space-y-4">
+          <div className="text-left">
+            <h3 className="text-left">System Architecture:</h3>
+            <div className="text-left">
               <div>
-                <h4 className="font-semibold text-blue-600 dark:text-blue-400">1. Data Collection Layer</h4>
-                <ul className="list-disc pl-6 mt-2">
+                <h4 className="text-left">1. Data Collection Layer</h4>
+                <ul className="text-left">
                   <li>847,000+ IoT sensors across 125,000 critical assets</li>
                   <li>Multi-modal sensing: vibration, thermal, acoustic, electrical, visual</li>
                   <li>Edge AI processing for real-time anomaly detection (&lt;100ms latency)</li>
@@ -68,8 +68,8 @@ const PredictiveMaintenanceAtScaleArticle = () => {
                 </ul>
               </div>
               <div>
-                <h4 className="font-semibold text-indigo-600 dark:text-indigo-400">2. AI Prediction Engine</h4>
-                <ul className="list-disc pl-6 mt-2">
+                <h4 className="text-left">2. AI Prediction Engine</h4>
+                <ul className="text-left">
                   <li>Ensemble ML models: Random Forests, XGBoost, LSTM neural networks</li>
                   <li>Transfer learning across similar asset types for faster model training</li>
                   <li>Physics-informed AI combining domain knowledge with data-driven insights</li>
@@ -77,8 +77,8 @@ const PredictiveMaintenanceAtScaleArticle = () => {
                 </ul>
               </div>
               <div>
-                <h4 className="font-semibold text-purple-600 dark:text-purple-400">3. Prescriptive Action System</h4>
-                <ul className="list-disc pl-6 mt-2">
+                <h4 className="text-left">3. Prescriptive Action System</h4>
+                <ul className="text-left">
                   <li>Automated work order generation with priority scheduling</li>
                   <li>Root cause analysis with 94% accuracy</li>
                   <li>AR-guided repair instructions reducing technician time by 67%</li>
@@ -91,12 +91,12 @@ const PredictiveMaintenanceAtScaleArticle = () => {
 
         <section>
           <h2>📊 Global Energy Company: $3.7B Success Story</h2>
-          <div className="bg-yellow-50 dark:bg-gray-800 border-l-4 border-yellow-500 p-6 my-6">
-            <h3 className="font-bold text-xl mb-3">Fortune 50 Energy Corporation: 125,000 Assets Transformed</h3>
-            <div className="grid md:grid-cols-2 gap-6">
+          <div className="text-left">
+            <h3 className="text-left">Fortune 50 Energy Corporation: 125,000 Assets Transformed</h3>
+            <div className="text-left">
               <div>
-                <h4 className="font-semibold mb-2">Challenge:</h4>
-                <ul className="list-disc pl-6 space-y-1 text-sm">
+                <h4 className="text-left">Challenge:</h4>
+                <ul className="text-left">
                   <li>125,000 critical assets across 2,400 facilities worldwide</li>
                   <li>$4.2B annual maintenance costs with poor predictability</li>
                   <li>Average 47 hours unplanned downtime per asset per year</li>
@@ -106,8 +106,8 @@ const PredictiveMaintenanceAtScaleArticle = () => {
                 </ul>
               </div>
               <div>
-                <h4 className="font-semibold mb-2">Results After 18 Months:</h4>
-                <ul className="list-disc pl-6 space-y-1 text-sm">
+                <h4 className="text-left">Results After 18 Months:</h4>
+                <ul className="text-left">
                   <li><strong>$3.7B total savings</strong> in maintenance and operations</li>
                   <li><strong>91% reduction</strong> in unplanned downtime (47h → 4.2h per asset/year)</li>
                   <li><strong>96.4% accuracy</strong> predicting failures 3-12 months in advance</li>
@@ -124,8 +124,8 @@ const PredictiveMaintenanceAtScaleArticle = () => {
         <section>
           <h2>🎯 Advanced Predictive Maintenance Capabilities</h2>
           
-          <h3 className="text-xl font-semibold mt-6 mb-3">1. Multi-Modal Failure Prediction</h3>
-          <ul className="list-disc pl-6 space-y-2">
+          <h3 className="text-left">1. Multi-Modal Failure Prediction</h3>
+          <ul className="text-left">
             <li><strong>Vibration Analysis:</strong> Detect bearing failures 6-9 months in advance</li>
             <li><strong>Thermal Imaging:</strong> Identify electrical hotspots before failures occur</li>
             <li><strong>Acoustic Monitoring:</strong> Detect leaks and mechanical wear patterns</li>
@@ -133,24 +133,24 @@ const PredictiveMaintenanceAtScaleArticle = () => {
             <li><strong>Visual AI Inspection:</strong> Computer vision detects corrosion, cracks, and wear</li>
           </ul>
 
-          <h3 className="text-xl font-semibold mt-6 mb-3">2. Remaining Useful Life (RUL) Prediction</h3>
-          <ul className="list-disc pl-6 space-y-2">
+          <h3 className="text-left">2. Remaining Useful Life (RUL) Prediction</h3>
+          <ul className="text-left">
             <li><strong>Component-Level RUL:</strong> Predict lifespan for 2,400+ component types</li>
             <li><strong>Confidence Intervals:</strong> Provide 90% confidence bands for maintenance planning</li>
             <li><strong>Operating Condition Adjustment:</strong> RUL adapts to actual usage patterns</li>
             <li><strong>Degradation Modeling:</strong> Track component health deterioration curves</li>
           </ul>
 
-          <h3 className="text-xl font-semibold mt-6 mb-3">3. Intelligent Work Order Management</h3>
-          <ul className="list-disc pl-6 space-y-2">
+          <h3 className="text-left">3. Intelligent Work Order Management</h3>
+          <ul className="text-left">
             <li><strong>Automated Scheduling:</strong> Optimize maintenance windows based on production schedules</li>
             <li><strong>Priority Intelligence:</strong> AI determines urgency based on business impact</li>
             <li><strong>Technician Matching:</strong> Assign work orders based on skills and location</li>
             <li><strong>Parts Pre-Positioning:</strong> Stage spare parts before maintenance windows</li>
           </ul>
 
-          <h3 className="text-xl font-semibold mt-6 mb-3">4. Root Cause Analysis & Resolution</h3>
-          <ul className="list-disc pl-6 space-y-2">
+          <h3 className="text-left">4. Root Cause Analysis & Resolution</h3>
+          <ul className="text-left">
             <li><strong>Automated RCA:</strong> AI identifies failure root causes with 94% accuracy</li>
             <li><strong>Historical Pattern Mining:</strong> Learn from 15+ years of maintenance records</li>
             <li><strong>Corrective Action Recommendations:</strong> Prescribe exact repair procedures</li>
@@ -161,8 +161,8 @@ const PredictiveMaintenanceAtScaleArticle = () => {
         <section>
           <h2>🔧 Implementation Roadmap</h2>
           
-          <h3 className="text-xl font-semibold mt-4 mb-3">Phase 1: Foundation & Pilot (Months 0-6)</h3>
-          <ul className="list-disc pl-6 space-y-2">
+          <h3 className="text-left">Phase 1: Foundation & Pilot (Months 0-6)</h3>
+          <ul className="text-left">
             <li>Deploy IoT sensors on 5,000 highest-criticality assets (Pareto 80/20 rule)</li>
             <li>Establish data lake and real-time streaming architecture</li>
             <li>Train initial ML models on historical failure data</li>
@@ -171,8 +171,8 @@ const PredictiveMaintenanceAtScaleArticle = () => {
             <li><strong>Investment:</strong> $18M | <strong>Expected Payback:</strong> 8 months</li>
           </ul>
 
-          <h3 className="text-xl font-semibold mt-4 mb-3">Phase 2: Scale & Optimize (Months 7-12)</h3>
-          <ul className="list-disc pl-6 space-y-2">
+          <h3 className="text-left">Phase 2: Scale & Optimize (Months 7-12)</h3>
+          <ul className="text-left">
             <li>Expand sensor deployment to 125,000 critical assets globally</li>
             <li>Deploy edge AI for real-time anomaly detection</li>
             <li>Implement automated work order generation and scheduling</li>
@@ -181,8 +181,8 @@ const PredictiveMaintenanceAtScaleArticle = () => {
             <li><strong>Investment:</strong> $57M | <strong>Cumulative Savings:</strong> $1.4B</li>
           </ul>
 
-          <h3 className="text-xl font-semibold mt-4 mb-3">Phase 3: Advanced Intelligence (Months 13-18)</h3>
-          <ul className="list-disc pl-6 space-y-2">
+          <h3 className="text-left">Phase 3: Advanced Intelligence (Months 13-18)</h3>
+          <ul className="text-left">
             <li>Achieve 96.4% prediction accuracy through continuous model improvement</li>
             <li>Enable prescriptive maintenance with automated root cause analysis</li>
             <li>Implement closed-loop optimization for asset performance</li>
@@ -194,11 +194,11 @@ const PredictiveMaintenanceAtScaleArticle = () => {
 
         <section>
           <h2>🛠️ Technology Stack</h2>
-          <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg my-6">
-            <div className="grid md:grid-cols-2 gap-6">
+          <div className="text-left">
+            <div className="text-left">
               <div>
-                <h4 className="font-semibold mb-3">IoT & Edge Computing</h4>
-                <ul className="space-y-1 text-sm">
+                <h4 className="text-left">IoT & Edge Computing</h4>
+                <ul className="text-left">
                   <li>• AWS IoT Core for device management (847K+ sensors)</li>
                   <li>• NVIDIA Jetson for edge AI inference</li>
                   <li>• Industrial IoT gateways (Siemens, Cisco)</li>
@@ -207,8 +207,8 @@ const PredictiveMaintenanceAtScaleArticle = () => {
                 </ul>
               </div>
               <div>
-                <h4 className="font-semibold mb-3">Machine Learning Platform</h4>
-                <ul className="space-y-1 text-sm">
+                <h4 className="text-left">Machine Learning Platform</h4>
+                <ul className="text-left">
                   <li>• Databricks ML for model development</li>
                   <li>• MLflow for model lifecycle management</li>
                   <li>• PyTorch & TensorFlow for deep learning</li>
@@ -217,8 +217,8 @@ const PredictiveMaintenanceAtScaleArticle = () => {
                 </ul>
               </div>
               <div>
-                <h4 className="font-semibold mb-3">Data Platform</h4>
-                <ul className="space-y-1 text-sm">
+                <h4 className="text-left">Data Platform</h4>
+                <ul className="text-left">
                   <li>• Azure Data Lake for historical data storage</li>
                   <li>• Apache Kafka for event streaming (28B events/day)</li>
                   <li>• InfluxDB for time-series sensor data</li>
@@ -227,8 +227,8 @@ const PredictiveMaintenanceAtScaleArticle = () => {
                 </ul>
               </div>
               <div>
-                <h4 className="font-semibold mb-3">Applications & Integration</h4>
-                <ul className="space-y-1 text-sm">
+                <h4 className="text-left">Applications & Integration</h4>
+                <ul className="text-left">
                   <li>• SAP EAM / IBM Maximo integration</li>
                   <li>• Microsoft HoloLens for AR maintenance</li>
                   <li>• PowerBI for executive dashboards</li>
@@ -242,56 +242,56 @@ const PredictiveMaintenanceAtScaleArticle = () => {
 
         <section>
           <h2>📈 Quantified Business Impact</h2>
-          <div className="grid md:grid-cols-3 gap-4 my-6">
-            <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg">
-              <div className="text-3xl font-bold text-blue-600 dark:text-blue-400">$3.7B</div>
-              <div className="text-sm mt-2">Total maintenance and operations savings</div>
+          <div className="text-left">
+            <div className="text-left">
+              <div className="text-left">$3.7B</div>
+              <div className="text-left">Total maintenance and operations savings</div>
             </div>
-            <div className="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg">
-              <div className="text-3xl font-bold text-green-600 dark:text-green-400">96.4%</div>
-              <div className="text-sm mt-2">Failure prediction accuracy (3-12 mo lead time)</div>
+            <div className="text-left">
+              <div className="text-left">96.4%</div>
+              <div className="text-left">Failure prediction accuracy (3-12 mo lead time)</div>
             </div>
-            <div className="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-lg">
-              <div className="text-3xl font-bold text-purple-600 dark:text-purple-400">91%</div>
-              <div className="text-sm mt-2">Reduction in unplanned downtime</div>
+            <div className="text-left">
+              <div className="text-left">91%</div>
+              <div className="text-left">Reduction in unplanned downtime</div>
             </div>
-            <div className="bg-orange-50 dark:bg-orange-900/20 p-4 rounded-lg">
-              <div className="text-3xl font-bold text-orange-600 dark:text-orange-400">83%</div>
-              <div className="text-sm mt-2">Spare parts inventory reduction ($740M freed)</div>
+            <div className="text-left">
+              <div className="text-left">83%</div>
+              <div className="text-left">Spare parts inventory reduction ($740M freed)</div>
             </div>
-            <div className="bg-teal-50 dark:bg-teal-900/20 p-4 rounded-lg">
-              <div className="text-3xl font-bold text-teal-600 dark:text-teal-400">67%</div>
-              <div className="text-sm mt-2">Faster repairs with AR-guided maintenance</div>
+            <div className="text-left">
+              <div className="text-left">67%</div>
+              <div className="text-left">Faster repairs with AR-guided maintenance</div>
             </div>
-            <div className="bg-red-50 dark:bg-red-900/20 p-4 rounded-lg">
-              <div className="text-3xl font-bold text-red-600 dark:text-red-400">4,890%</div>
-              <div className="text-sm mt-2">Return on investment in 18 months</div>
+            <div className="text-left">
+              <div className="text-left">4,890%</div>
+              <div className="text-left">Return on investment in 18 months</div>
             </div>
           </div>
         </section>
 
         <section>
           <h2>🎓 Key Success Factors</h2>
-          <div className="space-y-4 my-6">
-            <div className="border-l-4 border-blue-500 pl-4">
-              <h4 className="font-semibold">Sensor Quality Over Quantity</h4>
-              <p className="text-sm mt-1">Focus on high-fidelity sensors on critical assets rather than basic sensors everywhere</p>
+          <div className="text-left">
+            <div className="text-left">
+              <h4 className="text-left">Sensor Quality Over Quantity</h4>
+              <p className="text-left">Focus on high-fidelity sensors on critical assets rather than basic sensors everywhere</p>
             </div>
-            <div className="border-l-4 border-green-500 pl-4">
-              <h4 className="font-semibold">Physics-Informed AI</h4>
-              <p className="text-sm mt-1">Combine engineering knowledge with machine learning for better generalization</p>
+            <div className="text-left">
+              <h4 className="text-left">Physics-Informed AI</h4>
+              <p className="text-left">Combine engineering knowledge with machine learning for better generalization</p>
             </div>
-            <div className="border-l-4 border-purple-500 pl-4">
-              <h4 className="font-semibold">Continuous Model Improvement</h4>
-              <p className="text-sm mt-1">Retrain models monthly with new failure data to maintain 96%+ accuracy</p>
+            <div className="text-left">
+              <h4 className="text-left">Continuous Model Improvement</h4>
+              <p className="text-left">Retrain models monthly with new failure data to maintain 96%+ accuracy</p>
             </div>
-            <div className="border-l-4 border-orange-500 pl-4">
-              <h4 className="font-semibold">Change Management</h4>
-              <p className="text-sm mt-1">Win over skeptical technicians with AR tools and demonstrable early wins</p>
+            <div className="text-left">
+              <h4 className="text-left">Change Management</h4>
+              <p className="text-left">Win over skeptical technicians with AR tools and demonstrable early wins</p>
             </div>
-            <div className="border-l-4 border-teal-500 pl-4">
-              <h4 className="font-semibold">Integration First</h4>
-              <p className="text-sm mt-1">Seamless integration with existing CMMS/EAM systems is critical for adoption</p>
+            <div className="text-left">
+              <h4 className="text-left">Integration First</h4>
+              <p className="text-left">Seamless integration with existing CMMS/EAM systems is critical for adoption</p>
             </div>
           </div>
         </section>
@@ -299,7 +299,7 @@ const PredictiveMaintenanceAtScaleArticle = () => {
         <section>
           <h2>🔮 Emerging Trends</h2>
           <p>The future of predictive maintenance includes:</p>
-          <ul className="list-disc pl-6 space-y-2 my-4">
+          <ul className="text-left">
             <li><strong>Autonomous Maintenance:</strong> Self-repairing systems that perform simple fixes automatically</li>
             <li><strong>Swarm Robotics:</strong> Fleets of inspection drones performing continuous asset monitoring</li>
             <li><strong>Quantum Sensors:</strong> Ultra-precise sensing for detecting failures at molecular levels</li>
@@ -313,7 +313,7 @@ const PredictiveMaintenanceAtScaleArticle = () => {
           <p>
             Ready to eliminate unplanned downtime and achieve $3.7B+ in maintenance savings? Zion Tech Group can help you:
           </p>
-          <ul className="list-disc pl-6 space-y-2 my-4">
+          <ul className="text-left">
             <li>Assess asset criticality and identify high-ROI predictive maintenance opportunities</li>
             <li>Design IoT sensor architecture and edge AI infrastructure</li>
             <li>Develop custom ML models trained on your historical failure data</li>
@@ -321,10 +321,10 @@ const PredictiveMaintenanceAtScaleArticle = () => {
             <li>Integrate with your existing CMMS/EAM systems</li>
             <li>Train your maintenance teams on AI-powered tools and processes</li>
           </ul>
-          <div className="bg-gradient-to-r from-blue-500 to-purple-600 text-white p-6 rounded-lg my-6 text-center">
-            <h3 className="text-2xl font-bold mb-2">Transform Your Maintenance Operations</h3>
-            <p className="mb-4">Join Fortune 50 leaders achieving 96.4% prediction accuracy and 4,890% ROI</p>
-            <a href="/contact" className="inline-block bg-white text-blue-600 font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors">
+          <div className="text-left">
+            <h3 className="text-left">Transform Your Maintenance Operations</h3>
+            <p className="text-left">Join Fortune 50 leaders achieving 96.4% prediction accuracy and 4,890% ROI</p>
+            <a href="/contact" className="text-left">
               Schedule Consultation →
             </a>
           </div>
@@ -332,11 +332,11 @@ const PredictiveMaintenanceAtScaleArticle = () => {
 
         <section>
           <h2>📚 Related Content</h2>
-          <ul className="list-disc pl-6 space-y-2">
-            <li><a href="/blog/ai-2025-october-digital-twins-enterprise-operations" className="text-blue-600 hover:underline">AI-Powered Digital Twins for Enterprise Operations</a></li>
-            <li><a href="/blog/ai-2025-october-autonomous-enterprise-analytics" className="text-blue-600 hover:underline">Autonomous Enterprise Analytics Revolution</a></li>
-            <li><a href="/case-studies" className="text-blue-600 hover:underline">Predictive Maintenance Success Stories</a></li>
-            <li><a href="/services/ai-operations" className="text-blue-600 hover:underline">AI-Powered Operations Services</a></li>
+          <ul className="text-left">
+            <li><a href="/blog/ai-2025-october-digital-twins-enterprise-operations" className="text-left">AI-Powered Digital Twins for Enterprise Operations</a></li>
+            <li><a href="/blog/ai-2025-october-autonomous-enterprise-analytics" className="text-left">Autonomous Enterprise Analytics Revolution</a></li>
+            <li><a href="/case-studies" className="text-left">Predictive Maintenance Success Stories</a></li>
+            <li><a href="/services/ai-operations" className="text-left">AI-Powered Operations Services</a></li>
           </ul>
         </section>
       </BlogArticleLayout>

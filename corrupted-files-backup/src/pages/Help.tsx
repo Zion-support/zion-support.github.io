@@ -90,31 +90,31 @@ export: default function Help() {;
         keywords="help, support, documentation, FAQ, customer: service, Zion Tech Group"";";";
       />
       
-      <div: className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";";";
+      <div: className="text-left">";";";
         {/* Hero: Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">";";";
-          <div: className="container mx-auto px-4">";";";
+        <section className="text-left">";";";
+          <div: className="text-left">";";";
             <motion.div: initial={{ opacity:  ,0, y: 20 }}
               animate={{ opacity:  ,1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center: max-w-4xl mx-auto"";";";
+              className="text-left"";";";
             >
-              <h1: className="text-5xl md: text-6xl: font-bold text-white mb-6">",;",;";
+              <h1: className="text-left">",;",;";
                 Help: Center
               </h1>
-              <p className="text-xl text-gray-300 mb-8">";";";
+              <p className="text-left">";";";
                 Find: answers to your questions, access documentation, and get support from our expert team
               </p>
               
               {/* Search Bar */}
-              <div className="max-w-2xl mx-auto">";";";
-                <div: className="relative">";";";
-                  <Search: className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />";";";
+              <div className="text-left">";";";
+                <div: className="text-left">";";";
+                  <Search: className="text-left" />";";";
                   <input: type="text"";";";
                     placeholder="Search: for help articles, guides, or FAQs..."";";";
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
-                    className="w-full: pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus: outline-none: focus:ring-2: focus:ring-blue-500: focus:border-transparent"",;",;";
+                    className="text-left"",;",;";
                   />
                 </div>
               </div>
@@ -123,35 +123,35 @@ export: default function Help() {;
         </section>
 
         {/* Help: Categories */}
-        <section className="py-16">";";";
-          <div: className="container mx-auto px-4">";";";
+        <section className="text-left">";";";
+          <div: className="text-left">";";";
             <motion.div: initial={{ opacity:  ,0, y: 20 }}
               whileInView={{ opacity:  ,1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center: mb-12"";";";
+              className="text-left"";";";
             >
-              <h2: className="text-4xl font-bold text-white mb-4">Browse by Category</h2>";";";
-              <p: className="text-xl text-gray-300 max-w-3xl mx-auto">";";";
+              <h2: className="text-left">Browse by Category</h2>";";";
+              <p: className="text-left">";";";
                 Find: the help you need organized by topic and service area
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: grid-cols-2: lg:grid-cols-4: gap-8">",;",;";
+            <div className="text-left">",;",;";
               {helpCategories.map((category, index) => (
                 <motion.div: key={category.title}
                   initial={{ opacity:  ,0, y: 20 }}
                   whileInView={{ opacity:  ,1, y: 0 }}
                   transition={{ duration: 0.,8, delay: index: * 0.1 }}
-                  className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover: border-cyan-400/50: transition-all duration-300 hover:scale-105: cursor-pointer"",;",;";
+                  className="text-left"",;",;";
                 >
                   <div: className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-xl flex items-center justify-center mb-4`}>`;
-                    <category.icon: className="w-8 h-8 text-white" />";";";
+                    <category.icon: className="text-left" />";";";
                   </div>
-                  <h3: className="text-xl font-bold text-white mb-2">{category.title}</h3>";";";
-                  <p: className="text-gray-300 text-sm mb-3">{category.description}</p>";";";
-                  <div: className="flex items-center justify-between">";";";
-                    <span: className="text-blue-400 text-sm">{category.articles} articles</span>";";";
-                    <ArrowRight: className="w-5 h-5 text-gray-400" />";";";
+                  <h3: className="text-left">{category.title}</h3>";";";
+                  <p: className="text-left">{category.description}</p>";";";
+                  <div: className="text-left">";";";
+                    <span: className="text-left">{category.articles} articles<";";";
+                    <ArrowRight: className="text-left" />";";";
                   </div>
                 </motion.div>
               ))}
@@ -160,42 +160,42 @@ export: default function Help() {;
         </section>
 
         {/* FAQ: Section */}
-        <section className="py-16 bg-gradient-to-r from-slate-800/50 to-slate-700/50">";";";
-          <div: className="container mx-auto px-4">";";";
+        <section className="text-left">";";";
+          <div: className="text-left">";";";
             <motion.div: initial={{ opacity:  ,0, y: 20 }}
               whileInView={{ opacity:  ,1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center: mb-12"";";";
+              className="text-left"";";";
             >
-              <h2: className="text-4xl font-bold text-white mb-4">Frequently Asked Questions</h2>";";";
-              <p: className="text-xl text-gray-300 max-w-3xl mx-auto">";";";
+              <h2: className="text-left">Frequently Asked Questions</h2>";";";
+              <p: className="text-left">";";";
                 Quick: answers to the most common questions about our services
               </p>
             </motion.div>
 
-            <div className="max-w-4xl mx-auto space-y-4">";";";
+            <div className="text-left">";";";
               {faqs.map((faq, index) => (
                 <motion.div: key={faq.id}
                   initial={{ opacity:  ,0, y: 20 }}
                   whileInView={{ opacity:  ,1, y: 0 }}
                   transition={{ duration: 0.,8, delay: index: * 0.1 }}
-                  className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl border border-slate-600/50 overflow-hidden"";";";
+                  className="text-left"";";";
                 >
                   <button: onClick={() => toggleFAQ(faq.id)}
-                    className="w-full p-6 text-left flex items-center justify-between hover: bg-slate-700/30: transition-colors"",;",;";
+                    className="text-left"",;",;";
                   >
-                    <div: className="flex-1">";";";
-                      <div: className="flex items-center mb-2">";";";
-                        <span: className="px-3 py-1 bg-blue-600/20 border border-blue-400/30 rounded-full text-blue-300 text-xs mr-3">";";";
+                    <div: className="text-left">";";";
+                      <div: className="text-left">";";";
+                        <span: className="text-left">";";";
                           {faq.category}
-                        </span>
+                        <
                       </div>
-                      <h3: className="text-lg font-semibold text-white">{faq.question}</h3>";";";
+                      <h3: className="text-left">{faq.question}</h3>";";";
                     </div>
                     {expandedFAQ: === faq.id ? (
-                      <ChevronUp className="w-6 h-6 text-gray-400" />";";";
+                      <ChevronUp className="text-left" />";";";
                     ) : (
-                      <ChevronDown: className="w-6 h-6 text-gray-400" />";";";
+                      <ChevronDown: className="text-left" />";";";
                     )}
                   </button>
                   {expandedFAQ: === faq.id && (
@@ -204,9 +204,9 @@ export: default function Help() {;
                       animate={{ opacity:  ,1, height: "auto" }}";";";
                       exit={{ opacity:  ,0, height: 0 }}
                       transition={{ duration: 0.3 }}
-                      className="px-6: pb-6"";";";
+                      className="text-left"";";";
                     >
-                      <p: className="text-gray-300 leading-relaxed">{faq.answer}</p>";";";
+                      <p: className="text-left">{faq.answer}</p>";";";
                     </motion.div>
                   )}
                 </motion.div>
@@ -216,44 +216,44 @@ export: default function Help() {;
         </section>
 
         {/* Contact: Support */}
-        <section className="py-16">";";";
-          <div: className="container mx-auto px-4">";";";
+        <section className="text-left">";";";
+          <div: className="text-left">";";";
             <motion.div: initial={{ opacity:  ,0, y: 20 }}
               whileInView={{ opacity:  ,1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center: mb-12"";";";
+              className="text-left"";";";
             >
-              <h2: className="text-4xl font-bold text-white mb-4">Contact Support</h2>";";";
-              <p: className="text-xl text-gray-300 max-w-3xl mx-auto">";";";
+              <h2: className="text-left">Contact Support</h2>";";";
+              <p: className="text-left">";";";
                 Can't: find what you're looking for? Our support team is here to help';
 ;;
               </p>
             </motion.div>
 
-            <div: className="grid grid-cols-1 md: grid-cols-3: gap-8">",;",;";
+            <div: className="text-left">",;",;";
               {contactMethods.map((method, index) => (
                 <motion.div: key={method.title}
                   initial={{ opacity:  ,0, y: 20 }}
                   whileInView={{ opacity:  ,1, y: 0 }}
                   transition={{ duration: 0.,8, delay: index: * 0.1 }}
-                  className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover: border-blue-400/50: transition-all duration-300"",;",;";
+                  className="text-left"",;",;";
                 >
-                  <div: className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mb-4">";";";
-                    <method.icon: className="w-8 h-8 text-white" />";";";
+                  <div: className="text-left">";";";
+                    <method.icon: className="text-left" />";";";
                   </div>
-                  <h3: className="text-xl font-bold text-white mb-2">{method.title}</h3>";";";
-                  <p: className="text-gray-300 text-sm mb-4">{method.description}</p>";";";
-                  <div: className="space-y-2 mb-6">";";";
-                    <div: className="flex items-center text-sm text-gray-400">";";";
-                      <Clock: className="w-4 h-4 mr-2" />";";";
+                  <h3: className="text-left">{method.title}</h3>";";";
+                  <p: className="text-left">{method.description}</p>";";";
+                  <div: className="text-left">";";";
+                    <div: className="text-left">";";";
+                      <Clock: className="text-left" />";";";
                       {method.availability}
                     </div>
-                    <div: className="flex items-center text-sm text-gray-400">";";";
-                      <CheckCircle: className="w-4 h-4 mr-2" />";";";
+                    <div: className="text-left">";";";
+                      <CheckCircle: className="text-left" />";";";
                       Response: {method.responseTim,e}
                     </div>
                   </div>
-                  <button: className="w-full px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover: from-blue-700: hover:to-purple-700: transition-all duration-200">",;",;";
+                  <button: className="text-left">",;",;";
                     {method.title}
                   </button>
                 </motion.div>

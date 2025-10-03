@@ -25,7 +25,7 @@ const EdgeNativeQuantumIntelligenceArticle = () => {
       >
         <section>
           <h2>⚡ The Quantum Edge Revolution</h2>
-          <p className="text-lg font-semibold text-blue-600 dark:text-blue-400 my-4">
+          <p className="text-left">
             $8.9B Value Creation | &lt;1ms Latency | 99.99% Uptime | 5,200% Performance Gain | 847B Daily Inferences
           </p>
           <p>
@@ -41,7 +41,7 @@ const EdgeNativeQuantumIntelligenceArticle = () => {
           <p>
             The explosive growth of edge computing faces critical computational bottlenecks:
           </p>
-          <ul className="list-disc pl-6 space-y-2 my-4">
+          <ul className="text-left">
             <li><strong>Latency Requirements:</strong> Mission-critical applications demand sub-millisecond response times</li>
             <li><strong>Bandwidth Constraints:</strong> Sending terabytes to cloud for processing is impractical</li>
             <li><strong>Privacy & Sovereignty:</strong> Regulatory requirements mandate local data processing</li>
@@ -60,30 +60,30 @@ const EdgeNativeQuantumIntelligenceArticle = () => {
             Edge-native quantum intelligence deploys quantum computing capabilities directly at edge nodes, enabling quantum-accelerated AI inference and decision-making with sub-millisecond latency at massive scale.
           </p>
           
-          <h3 className="text-2xl font-bold mt-6 mb-3">Revolutionary Capabilities</h3>
-          <div className="bg-gradient-to-r from-purple-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700 p-6 rounded-lg my-6">
-            <ul className="space-y-3">
-              <li><strong className="text-purple-600 dark:text-purple-400">Quantum Edge Processors:</strong> Compact quantum chips delivering 10,000x performance vs. classical edge processors</li>
-              <li><strong className="text-purple-600 dark:text-purple-400">Distributed Quantum Mesh:</strong> Interconnected quantum edge nodes sharing computational resources</li>
-              <li><strong className="text-purple-600 dark:text-purple-400">Quantum-Accelerated Inference:</strong> Complex AI model inference in microseconds</li>
-              <li><strong className="text-purple-600 dark:text-purple-400">Real-Time Optimization:</strong> Quantum algorithms optimizing operations continuously</li>
-              <li><strong className="text-purple-600 dark:text-purple-400">Federated Quantum Learning:</strong> Collaborative model training across edge quantum nodes</li>
-              <li><strong className="text-purple-600 dark:text-purple-400">Autonomous Decision Systems:</strong> Edge devices making quantum-informed decisions independently</li>
-              <li><strong className="text-purple-600 dark:text-purple-400">Energy Efficiency:</strong> 95% reduction in power consumption vs. cloud-based processing</li>
+          <h3 className="text-left">Revolutionary Capabilities</h3>
+          <div className="text-left">
+            <ul className="text-left">
+              <li><strong className="text-left">Quantum Edge Processors:</strong> Compact quantum chips delivering 10,000x performance vs. classical edge processors</li>
+              <li><strong className="text-left">Distributed Quantum Mesh:</strong> Interconnected quantum edge nodes sharing computational resources</li>
+              <li><strong className="text-left">Quantum-Accelerated Inference:</strong> Complex AI model inference in microseconds</li>
+              <li><strong className="text-left">Real-Time Optimization:</strong> Quantum algorithms optimizing operations continuously</li>
+              <li><strong className="text-left">Federated Quantum Learning:</strong> Collaborative model training across edge quantum nodes</li>
+              <li><strong className="text-left">Autonomous Decision Systems:</strong> Edge devices making quantum-informed decisions independently</li>
+              <li><strong className="text-left">Energy Efficiency:</strong> 95% reduction in power consumption vs. cloud-based processing</li>
             </ul>
           </div>
         </section>
 
         <section>
           <h2>💎 Real-World Success: Global Manufacturing Leader</h2>
-          <p className="text-lg font-semibold text-green-600 dark:text-green-400 my-4">
+          <p className="text-left">
             Fortune 100 Manufacturer Achieves $8.9B Value Creation with Edge Quantum Intelligence
           </p>
-          <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg my-6">
-            <p className="mb-4"><strong>Challenge:</strong> A Fortune 100 global manufacturer operating 2,847 smart factories with 12.4 million connected sensors faced critical limitations: 847ms average decision latency, $4.2B annually in quality defects, $2.8B in unplanned downtime, and inability to implement real-time optimization due to cloud latency and bandwidth constraints.</p>
+          <div className="text-left">
+            <p className="text-left"><strong>Challenge:</strong> A Fortune 100 global manufacturer operating 2,847 smart factories with 12.4 million connected sensors faced critical limitations: 847ms average decision latency, $4.2B annually in quality defects, $2.8B in unplanned downtime, and inability to implement real-time optimization due to cloud latency and bandwidth constraints.</p>
             
-            <p className="mb-4"><strong>Implementation:</strong> Deployed edge-native quantum intelligence platform:</p>
-            <ul className="list-disc pl-6 space-y-2 mb-4">
+            <p className="text-left"><strong>Implementation:</strong> Deployed edge-native quantum intelligence platform:</p>
+            <ul className="text-left">
               <li>42,000 quantum edge processors deployed across manufacturing facilities</li>
               <li>Distributed quantum mesh enabling collaborative computation across edge nodes</li>
               <li>Quantum-accelerated AI models for quality control, predictive maintenance, and process optimization</li>
@@ -93,8 +93,8 @@ const EdgeNativeQuantumIntelligenceArticle = () => {
               <li>Edge-to-edge quantum communication for coordinated optimization</li>
             </ul>
             
-            <p className="mb-4"><strong>Results (18 Months):</strong></p>
-            <ul className="list-disc pl-6 space-y-2 mb-4 text-green-600 dark:text-green-400 font-semibold">
+            <p className="text-left"><strong>Results (18 Months):</strong></p>
+            <ul className="text-left">
               <li>$8.9B in total value creation (quality improvements, efficiency gains, cost reduction)</li>
               <li>0.7ms average decision latency (1,210x improvement)</li>
               <li>99.99% system uptime and availability</li>
@@ -111,12 +111,12 @@ const EdgeNativeQuantumIntelligenceArticle = () => {
 
         <section>
           <h2>🏗️ Edge-Native Quantum Intelligence Architecture</h2>
-          <h3 className="text-2xl font-bold mt-6 mb-3">Core Architecture Components</h3>
+          <h3 className="text-left">Core Architecture Components</h3>
           
-          <div className="space-y-6 my-6">
-            <div className="border-l-4 border-purple-500 pl-4">
-              <h4 className="text-xl font-bold mb-2">1. Quantum Edge Processors</h4>
-              <ul className="list-disc pl-6 space-y-1">
+          <div className="text-left">
+            <div className="text-left">
+              <h4 className="text-left">1. Quantum Edge Processors</h4>
+              <ul className="text-left">
                 <li>Compact quantum processing units optimized for edge deployment</li>
                 <li>50-100 qubit systems in ruggedized, temperature-controlled enclosures</li>
                 <li>Quantum-classical hybrid architecture for optimal performance</li>
@@ -124,9 +124,9 @@ const EdgeNativeQuantumIntelligenceArticle = () => {
               </ul>
             </div>
 
-            <div className="border-l-4 border-blue-500 pl-4">
-              <h4 className="text-xl font-bold mb-2">2. Distributed Quantum Mesh</h4>
-              <ul className="list-disc pl-6 space-y-1">
+            <div className="text-left">
+              <h4 className="text-left">2. Distributed Quantum Mesh</h4>
+              <ul className="text-left">
                 <li>Quantum communication protocols connecting edge nodes</li>
                 <li>Distributed quantum computing sharing workloads across nodes</li>
                 <li>Quantum entanglement for secure, instantaneous communication</li>
@@ -134,9 +134,9 @@ const EdgeNativeQuantumIntelligenceArticle = () => {
               </ul>
             </div>
 
-            <div className="border-l-4 border-green-500 pl-4">
-              <h4 className="text-xl font-bold mb-2">3. Quantum-Accelerated AI Engine</h4>
-              <ul className="list-disc pl-6 space-y-1">
+            <div className="text-left">
+              <h4 className="text-left">3. Quantum-Accelerated AI Engine</h4>
+              <ul className="text-left">
                 <li>Quantum machine learning models for inference and prediction</li>
                 <li>Quantum neural networks optimized for edge execution</li>
                 <li>Variational quantum algorithms for classification and regression</li>
@@ -144,9 +144,9 @@ const EdgeNativeQuantumIntelligenceArticle = () => {
               </ul>
             </div>
 
-            <div className="border-l-4 border-orange-500 pl-4">
-              <h4 className="text-xl font-bold mb-2">4. Federated Quantum Learning</h4>
-              <ul className="list-disc pl-6 space-y-1">
+            <div className="text-left">
+              <h4 className="text-left">4. Federated Quantum Learning</h4>
+              <ul className="text-left">
                 <li>Collaborative model training across distributed quantum nodes</li>
                 <li>Privacy-preserving quantum learning protocols</li>
                 <li>Quantum federated optimization algorithms</li>
@@ -154,9 +154,9 @@ const EdgeNativeQuantumIntelligenceArticle = () => {
               </ul>
             </div>
 
-            <div className="border-l-4 border-red-500 pl-4">
-              <h4 className="text-xl font-bold mb-2">5. Edge Orchestration Platform</h4>
-              <ul className="list-disc pl-6 space-y-1">
+            <div className="text-left">
+              <h4 className="text-left">5. Edge Orchestration Platform</h4>
+              <ul className="text-left">
                 <li>Centralized management of distributed quantum edge infrastructure</li>
                 <li>Model deployment and version control</li>
                 <li>Performance monitoring and optimization</li>
@@ -169,10 +169,10 @@ const EdgeNativeQuantumIntelligenceArticle = () => {
         <section>
           <h2>🎯 Industry Applications</h2>
           
-          <div className="grid md:grid-cols-2 gap-6 my-6">
-            <div className="bg-blue-50 dark:bg-gray-800 p-6 rounded-lg">
-              <h3 className="text-xl font-bold mb-3 text-blue-600 dark:text-blue-400">Autonomous Vehicles</h3>
-              <ul className="space-y-2 text-sm">
+          <div className="text-left">
+            <div className="text-left">
+              <h3 className="text-left">Autonomous Vehicles</h3>
+              <ul className="text-left">
                 <li>✓ Real-time path planning and obstacle avoidance</li>
                 <li>✓ Sensor fusion with quantum-enhanced processing</li>
                 <li>✓ Traffic optimization and vehicle-to-vehicle coordination</li>
@@ -181,9 +181,9 @@ const EdgeNativeQuantumIntelligenceArticle = () => {
               </ul>
             </div>
 
-            <div className="bg-green-50 dark:bg-gray-800 p-6 rounded-lg">
-              <h3 className="text-xl font-bold mb-3 text-green-600 dark:text-green-400">Smart Manufacturing</h3>
-              <ul className="space-y-2 text-sm">
+            <div className="text-left">
+              <h3 className="text-left">Smart Manufacturing</h3>
+              <ul className="text-left">
                 <li>✓ Real-time quality control and defect detection</li>
                 <li>✓ Predictive maintenance preventing equipment failures</li>
                 <li>✓ Process optimization and energy management</li>
@@ -192,9 +192,9 @@ const EdgeNativeQuantumIntelligenceArticle = () => {
               </ul>
             </div>
 
-            <div className="bg-purple-50 dark:bg-gray-800 p-6 rounded-lg">
-              <h3 className="text-xl font-bold mb-3 text-purple-600 dark:text-purple-400">Smart Cities</h3>
-              <ul className="space-y-2 text-sm">
+            <div className="text-left">
+              <h3 className="text-left">Smart Cities</h3>
+              <ul className="text-left">
                 <li>✓ Traffic management and congestion optimization</li>
                 <li>✓ Energy grid optimization and demand response</li>
                 <li>✓ Public safety and emergency response</li>
@@ -203,9 +203,9 @@ const EdgeNativeQuantumIntelligenceArticle = () => {
               </ul>
             </div>
 
-            <div className="bg-orange-50 dark:bg-gray-800 p-6 rounded-lg">
-              <h3 className="text-xl font-bold mb-3 text-orange-600 dark:text-orange-400">Healthcare & Life Sciences</h3>
-              <ul className="space-y-2 text-sm">
+            <div className="text-left">
+              <h3 className="text-left">Healthcare & Life Sciences</h3>
+              <ul className="text-left">
                 <li>✓ Real-time medical imaging analysis</li>
                 <li>✓ Point-of-care diagnostics with quantum AI</li>
                 <li>✓ Remote patient monitoring and predictive care</li>
@@ -214,9 +214,9 @@ const EdgeNativeQuantumIntelligenceArticle = () => {
               </ul>
             </div>
 
-            <div className="bg-red-50 dark:bg-gray-800 p-6 rounded-lg">
-              <h3 className="text-xl font-bold mb-3 text-red-600 dark:text-red-400">Telecommunications</h3>
-              <ul className="space-y-2 text-sm">
+            <div className="text-left">
+              <h3 className="text-left">Telecommunications</h3>
+              <ul className="text-left">
                 <li>✓ Network optimization and traffic management</li>
                 <li>✓ Predictive maintenance for infrastructure</li>
                 <li>✓ Security threat detection and mitigation</li>
@@ -225,9 +225,9 @@ const EdgeNativeQuantumIntelligenceArticle = () => {
               </ul>
             </div>
 
-            <div className="bg-yellow-50 dark:bg-gray-800 p-6 rounded-lg">
-              <h3 className="text-xl font-bold mb-3 text-yellow-600 dark:text-yellow-400">Retail & Commerce</h3>
-              <ul className="space-y-2 text-sm">
+            <div className="text-left">
+              <h3 className="text-left">Retail & Commerce</h3>
+              <ul className="text-left">
                 <li>✓ Real-time inventory optimization</li>
                 <li>✓ Personalized customer experiences</li>
                 <li>✓ Fraud detection and prevention</li>
@@ -240,9 +240,9 @@ const EdgeNativeQuantumIntelligenceArticle = () => {
 
         <section>
           <h2>📊 Implementation Roadmap</h2>
-          <div className="bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-gray-800 dark:to-gray-700 p-6 rounded-lg my-6">
-            <h3 className="text-xl font-bold mb-4">Phase 1: Foundation & Pilot (Months 1-4)</h3>
-            <ul className="list-disc pl-6 space-y-2">
+          <div className="text-left">
+            <h3 className="text-left">Phase 1: Foundation & Pilot (Months 1-4)</h3>
+            <ul className="text-left">
               <li>Edge infrastructure assessment and quantum readiness evaluation</li>
               <li>Use case prioritization and ROI modeling</li>
               <li>Pilot deployment with 100-500 quantum edge nodes</li>
@@ -250,8 +250,8 @@ const EdgeNativeQuantumIntelligenceArticle = () => {
               <li>Integration with existing edge and cloud infrastructure</li>
             </ul>
 
-            <h3 className="text-xl font-bold mb-4 mt-6">Phase 2: Scale & Optimize (Months 5-8)</h3>
-            <ul className="list-disc pl-6 space-y-2">
+            <h3 className="text-left">Phase 2: Scale & Optimize (Months 5-8)</h3>
+            <ul className="text-left">
               <li>Deployment scaling to thousands of edge nodes</li>
               <li>Distributed quantum mesh implementation</li>
               <li>Federated learning system activation</li>
@@ -259,8 +259,8 @@ const EdgeNativeQuantumIntelligenceArticle = () => {
               <li>Integration with enterprise systems and workflows</li>
             </ul>
 
-            <h3 className="text-xl font-bold mb-4 mt-6">Phase 3: Enterprise Rollout (Months 9-12)</h3>
-            <ul className="list-disc pl-6 space-y-2">
+            <h3 className="text-left">Phase 3: Enterprise Rollout (Months 9-12)</h3>
+            <ul className="text-left">
               <li>Full production deployment across all facilities</li>
               <li>Advanced use case implementation</li>
               <li>Autonomous decision system activation</li>
@@ -268,8 +268,8 @@ const EdgeNativeQuantumIntelligenceArticle = () => {
               <li>Training and knowledge transfer</li>
             </ul>
 
-            <h3 className="text-xl font-bold mb-4 mt-6">Phase 4: Innovation & Expansion (Months 13+)</h3>
-            <ul className="list-disc pl-6 space-y-2">
+            <h3 className="text-left">Phase 4: Innovation & Expansion (Months 13+)</h3>
+            <ul className="text-left">
               <li>New use case development</li>
               <li>Cross-facility optimization</li>
               <li>Partner and ecosystem integration</li>
@@ -280,8 +280,8 @@ const EdgeNativeQuantumIntelligenceArticle = () => {
 
         <section>
           <h2>💡 Critical Success Factors</h2>
-          <div className="bg-gradient-to-r from-yellow-50 to-orange-50 dark:from-gray-800 dark:to-gray-700 p-6 rounded-lg my-6">
-            <ul className="space-y-3">
+          <div className="text-left">
+            <ul className="text-left">
               <li><strong>Executive Vision:</strong> Leadership commitment to quantum edge transformation</li>
               <li><strong>Use Case Selection:</strong> Start with high-value, latency-sensitive applications</li>
               <li><strong>Infrastructure Readiness:</strong> Ensure edge infrastructure can support quantum processors</li>
@@ -298,7 +298,7 @@ const EdgeNativeQuantumIntelligenceArticle = () => {
           <p>
             Looking toward 2026 and beyond, edge-native quantum intelligence will reshape entire industries:
           </p>
-          <ul className="list-disc pl-6 space-y-2 my-4">
+          <ul className="text-left">
             <li><strong>Quantum IoT:</strong> Billions of quantum-enabled IoT devices forming planetary-scale intelligence</li>
             <li><strong>Autonomous Everything:</strong> Vehicles, factories, cities, and infrastructure operating autonomously</li>
             <li><strong>Real-Time Optimization:</strong> Continuous quantum optimization of all operational parameters</li>
@@ -312,22 +312,22 @@ const EdgeNativeQuantumIntelligenceArticle = () => {
           <p>
             Zion Tech Group is the global leader in edge-native quantum intelligence implementations. Our comprehensive approach includes:
           </p>
-          <ul className="list-disc pl-6 space-y-2 my-4">
+          <ul className="text-left">
             <li>Quantum edge readiness assessment and strategy development</li>
             <li>Custom quantum algorithm development for edge applications</li>
             <li>End-to-end deployment and integration</li>
             <li>Federated quantum learning platform implementation</li>
             <li>Ongoing optimization and support</li>
           </ul>
-          <div className="bg-purple-600 dark:bg-purple-700 text-white p-6 rounded-lg my-6">
-            <p className="text-xl font-bold mb-2">Ready to Harness Quantum Intelligence at the Edge?</p>
+          <div className="text-left">
+            <p className="text-left">Ready to Harness Quantum Intelligence at the Edge?</p>
             <p>Contact our quantum edge experts for a personalized assessment and ROI analysis.</p>
           </div>
         </section>
 
         <section>
           <h2>📚 Technical Resources</h2>
-          <ul className="list-disc pl-6 space-y-2">
+          <ul className="text-left">
             <li>Edge-Native Quantum Computing: Technical Architecture Guide</li>
             <li>Quantum Machine Learning for Edge Inference</li>
             <li>Federated Quantum Learning: Implementation Patterns</li>

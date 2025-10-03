@@ -40,6 +40,4 @@ Gate cache routes with evals and trigger rollback when KPIs regress.
 </div>
 </div>
 );
-}
-
-;
+};

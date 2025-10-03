@@ -11,14 +11,14 @@ export const metadata = {
 
 export default function BlogPost() {
   return (
-    <article className="prose prose-invert max-w-none">
+    <article className="text-left">
       <h1>🏛️ Sovereign AI Infrastructure 2025: National AI Autonomy Revolution</h1>
       
-      <div className="bg-gradient-to-r from-emerald-600/20 to-teal-600/20 border border-emerald-500/30 rounded-lg p-6 my-8">
-        <h3 className="text-2xl font-bold text-emerald-300 mt-0">🚀 Revolutionary Breakthrough</h3>
-        <p className="text-lg">
-          <strong>Sovereign AI infrastructure</strong> achieving <span className="text-green-400 font-bold">99.95% data sovereignty</span>, 
-          <span className="text-green-400 font-bold"> 100% regulatory compliance</span>, and <span className="text-green-400 font-bold">$2.4B cost savings</span>. 
+      <div className="text-left">
+        <h3 className="text-left">🚀 Revolutionary Breakthrough</h3>
+        <p className="text-left">
+          <strong>Sovereign AI infrastructure</strong> achieving <span className="text-left">99.95% data sovereignty<, 
+          <span className="text-left"> 100% regulatory compliance<, and <span className="text-left">$2.4B cost savings<. 
           Transform national AI capabilities with complete independence, control, and security for enterprise and government operations.
         </p>
       </div>
@@ -78,9 +78,9 @@ export default function BlogPost() {
 
       <h2>📊 Performance Metrics</h2>
       
-      <div className="bg-slate-800/50 border border-slate-700 rounded-lg p-6 my-8">
-        <h3 className="text-xl font-bold text-emerald-400 mt-0">Proven Results</h3>
-        <ul className="space-y-2">
+      <div className="text-left">
+        <h3 className="text-left">Proven Results</h3>
+        <ul className="text-left">
           <li>✅ <strong>99.95%</strong> data sovereignty compliance</li>
           <li>✅ <strong>100%</strong> regulatory adherence across 127 countries</li>
           <li>✅ <strong>$2.4B</strong> cost savings vs. cloud-dependent solutions</li>
@@ -119,8 +119,8 @@ export default function BlogPost() {
 
       <h2>💰 ROI Analysis</h2>
       
-      <div className="bg-emerald-900/30 border-l-4 border-emerald-500 p-6 my-8">
-        <h3 className="text-xl font-bold text-emerald-300 mt-0">Investment Returns</h3>
+      <div className="text-left">
+        <h3 className="text-left">Investment Returns</h3>
         <ul>
           <li><strong>Cost savings:</strong> $2.4B annually through technology independence</li>
           <li><strong>Risk reduction:</strong> $847M in avoided penalties and breaches</li>
@@ -188,14 +188,14 @@ export default function BlogPost() {
         <li><strong>Sovereign AI marketplaces:</strong> National AI model and data exchanges</li>
       </ul>
 
-      <div className="bg-gradient-to-r from-emerald-600/20 to-teal-600/20 border border-emerald-500/30 rounded-lg p-6 my-8">
-        <h3 className="text-2xl font-bold text-emerald-300 mt-0">🎯 Ready to Achieve AI Sovereignty?</h3>
-        <p className="text-lg">
+      <div className="text-left">
+        <h3 className="text-left">🎯 Ready to Achieve AI Sovereignty?</h3>
+        <p className="text-left">
           Join 1,847 organizations worldwide achieving complete data sovereignty, regulatory compliance, 
           and technological independence. Transform your AI capabilities with sovereign infrastructure 
           delivering $2.4B cost savings and world-class performance.
         </p>
-        <p className="text-emerald-300 font-semibold mb-0">
+        <p className="text-left">
           Contact Zion Tech Group today for a sovereign AI infrastructure assessment.
         </p>
       </div>

@@ -25,7 +25,7 @@ const ProductionRAGOptimizationBreakthroughArticle = () => {
       >
         <section>
           <h2>🚀 Revolutionary Breakthrough: Next-Generation RAG Systems at Scale</h2>
-          <p className="text-lg font-semibold text-blue-600 dark:text-blue-400 my-4">
+          <p className="text-left">
             $2.8B in Cost Savings | 97% Accuracy Achievement | 12x Response Speed | 1,847 Enterprise Deployments
           </p>
           <p>
@@ -41,7 +41,7 @@ const ProductionRAGOptimizationBreakthroughArticle = () => {
           <p>
             Global enterprises waste an estimated $87 billion annually due to inaccurate AI systems and hallucinations. Traditional RAG implementations face critical challenges:
           </p>
-          <ul className="list-disc pl-6 space-y-2 my-4">
+          <ul className="text-left">
             <li><strong>Hallucination Problems:</strong> 30-45% of responses contain fabricated information</li>
             <li><strong>Retrieval Failures:</strong> Naive vector search misses 40-60% of relevant context</li>
             <li><strong>Context Window Limits:</strong> Important information gets truncated or lost</li>
@@ -59,28 +59,28 @@ const ProductionRAGOptimizationBreakthroughArticle = () => {
             Production-grade RAG optimization represents a fundamental advancement in how enterprises deploy AI systems. These architectures combine multiple retrieval strategies, intelligent reranking, dynamic context management, and continuous improvement to deliver consistently accurate results.
           </p>
           
-          <h3 className="text-2xl font-bold mt-6 mb-3">Core Optimization Techniques</h3>
-          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700 p-6 rounded-lg my-6">
-            <ul className="space-y-3">
-              <li><strong className="text-blue-600 dark:text-blue-400">Hybrid Search Architecture:</strong> Combines dense vectors, sparse vectors, and keyword search for 40% better retrieval</li>
-              <li><strong className="text-blue-600 dark:text-blue-400">Intelligent Reranking:</strong> Cross-encoder models rescore results for 35% accuracy improvement</li>
-              <li><strong className="text-blue-600 dark:text-blue-400">Dynamic Context Management:</strong> Adaptive context windows optimize relevance vs. completeness</li>
-              <li><strong className="text-blue-600 dark:text-blue-400">Multi-Vector Representations:</strong> ColBERT-style late interaction for nuanced semantic matching</li>
-              <li><strong className="text-blue-600 dark:text-blue-400">Continuous Learning:</strong> Online learning from user feedback improves retrieval over time</li>
+          <h3 className="text-left">Core Optimization Techniques</h3>
+          <div className="text-left">
+            <ul className="text-left">
+              <li><strong className="text-left">Hybrid Search Architecture:</strong> Combines dense vectors, sparse vectors, and keyword search for 40% better retrieval</li>
+              <li><strong className="text-left">Intelligent Reranking:</strong> Cross-encoder models rescore results for 35% accuracy improvement</li>
+              <li><strong className="text-left">Dynamic Context Management:</strong> Adaptive context windows optimize relevance vs. completeness</li>
+              <li><strong className="text-left">Multi-Vector Representations:</strong> ColBERT-style late interaction for nuanced semantic matching</li>
+              <li><strong className="text-left">Continuous Learning:</strong> Online learning from user feedback improves retrieval over time</li>
             </ul>
           </div>
         </section>
 
         <section>
           <h2>🏆 Real-World Success: Fortune 500 Case Study</h2>
-          <p className="text-lg font-semibold text-green-600 dark:text-green-400 my-4">
+          <p className="text-left">
             Global Financial Services Leader Achieves 97% Accuracy with Optimized RAG
           </p>
-          <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg my-6">
-            <p className="mb-4"><strong>Challenge:</strong> A Fortune 100 financial services company with 2.4M documents across compliance, research, and client advisory struggled with a basic RAG system that produced hallucinations in 38% of responses, creating regulatory risk and client dissatisfaction.</p>
+          <div className="text-left">
+            <p className="text-left"><strong>Challenge:</strong> A Fortune 100 financial services company with 2.4M documents across compliance, research, and client advisory struggled with a basic RAG system that produced hallucinations in 38% of responses, creating regulatory risk and client dissatisfaction.</p>
             
-            <p className="mb-4"><strong>Implementation:</strong> Deployed advanced production RAG optimization:</p>
-            <ul className="list-disc pl-6 space-y-2 mb-4">
+            <p className="text-left"><strong>Implementation:</strong> Deployed advanced production RAG optimization:</p>
+            <ul className="text-left">
               <li>Hybrid retrieval combining dense (BGE-M3), sparse (SPLADE), and keyword search</li>
               <li>Two-stage reranking with cross-encoders and domain-specific models</li>
               <li>Dynamic context management with intelligent chunk selection</li>
@@ -88,8 +88,8 @@ const ProductionRAGOptimizationBreakthroughArticle = () => {
               <li>Continuous learning from 847K+ monthly user interactions</li>
             </ul>
             
-            <p className="mb-4"><strong>Results (12 Months):</strong></p>
-            <ul className="list-disc pl-6 space-y-2 mb-4 text-green-600 dark:text-green-400 font-semibold">
+            <p className="text-left"><strong>Results (12 Months):</strong></p>
+            <ul className="text-left">
               <li>$2.8B in operational efficiency gains</li>
               <li>97% accuracy (up from 62%)</li>
               <li>93% reduction in hallucinations</li>
@@ -103,36 +103,36 @@ const ProductionRAGOptimizationBreakthroughArticle = () => {
         <section>
           <h2>🔧 Technical Architecture: Building Production RAG Systems</h2>
           
-          <h3 className="text-2xl font-bold mt-6 mb-3">1. Advanced Retrieval Layer</h3>
+          <h3 className="text-left">1. Advanced Retrieval Layer</h3>
           <p>Multi-strategy retrieval for comprehensive coverage:</p>
-          <ul className="list-disc pl-6 space-y-2 my-4">
+          <ul className="text-left">
             <li><strong>Dense Vector Search:</strong> BGE-M3, E5-Mistral-7B, or custom embeddings for semantic matching</li>
             <li><strong>Sparse Vector Search:</strong> SPLADE for exact term matching and rare concept retrieval</li>
             <li><strong>Keyword Search:</strong> BM25 for precision on specific terminology</li>
             <li><strong>Graph Retrieval:</strong> Knowledge graph traversal for relationship-based queries</li>
           </ul>
 
-          <h3 className="text-2xl font-bold mt-6 mb-3">2. Intelligent Reranking Pipeline</h3>
+          <h3 className="text-left">2. Intelligent Reranking Pipeline</h3>
           <p>Multi-stage refinement for optimal relevance:</p>
-          <ul className="list-disc pl-6 space-y-2 my-4">
+          <ul className="text-left">
             <li><strong>First-Stage Reranking:</strong> Cross-encoder models (BGE-Reranker, Cohere Rerank) rescore top-K results</li>
             <li><strong>Diversity Optimization:</strong> Maximal Marginal Relevance (MMR) prevents redundancy</li>
             <li><strong>Domain-Specific Scoring:</strong> Custom models trained on domain data for specialized ranking</li>
             <li><strong>Metadata Filtering:</strong> Incorporates recency, authority, and user permissions</li>
           </ul>
 
-          <h3 className="text-2xl font-bold mt-6 mb-3">3. Context Optimization Engine</h3>
+          <h3 className="text-left">3. Context Optimization Engine</h3>
           <p>Intelligent context management for maximum effectiveness:</p>
-          <ul className="list-disc pl-6 space-y-2 my-4">
+          <ul className="text-left">
             <li><strong>Dynamic Chunking:</strong> Adaptive chunk sizes based on document structure and query type</li>
             <li><strong>Contextual Chunk Enrichment:</strong> Includes surrounding context and document metadata</li>
             <li><strong>Smart Context Packing:</strong> Optimizes token usage within LLM context windows</li>
             <li><strong>Multi-Document Fusion:</strong> Synthesizes information across multiple sources</li>
           </ul>
 
-          <h3 className="text-2xl font-bold mt-6 mb-3">4. Continuous Improvement Loop</h3>
+          <h3 className="text-left">4. Continuous Improvement Loop</h3>
           <p>Learning from production usage:</p>
-          <ul className="list-disc pl-6 space-y-2 my-4">
+          <ul className="text-left">
             <li><strong>User Feedback Collection:</strong> Explicit (thumbs up/down) and implicit (engagement) signals</li>
             <li><strong>Online Learning:</strong> Fine-tuning retrieval and ranking models from feedback</li>
             <li><strong>Query Analysis:</strong> Identifies failure patterns and retrieval gaps</li>
@@ -142,40 +142,40 @@ const ProductionRAGOptimizationBreakthroughArticle = () => {
 
         <section>
           <h2>📊 Advanced RAG Techniques: Performance Impact</h2>
-          <div className="overflow-x-auto my-6">
-            <table className="min-w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700">
-              <thead className="bg-gray-100 dark:bg-gray-700">
+          <div className="text-left">
+            <table className="text-left">
+              <thead className="text-left">
                 <tr>
-                  <th className="px-4 py-2 border">Technique</th>
-                  <th className="px-4 py-2 border">Accuracy Improvement</th>
-                  <th className="px-4 py-2 border">Latency Impact</th>
+                  <th className="text-left">Technique</th>
+                  <th className="text-left">Accuracy Improvement</th>
+                  <th className="text-left">Latency Impact</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td className="px-4 py-2 border">Hybrid Search (Dense + Sparse)</td>
-                  <td className="px-4 py-2 border text-green-600 dark:text-green-400">+25-40%</td>
-                  <td className="px-4 py-2 border text-yellow-600">+15-30ms</td>
+                  <td className="text-left">Hybrid Search (Dense + Sparse)</td>
+                  <td className="text-left">+25-40%</td>
+                  <td className="text-left">+15-30ms</td>
                 </tr>
                 <tr>
-                  <td className="px-4 py-2 border">Cross-Encoder Reranking</td>
-                  <td className="px-4 py-2 border text-green-600 dark:text-green-400">+30-45%</td>
-                  <td className="px-4 py-2 border text-yellow-600">+50-100ms</td>
+                  <td className="text-left">Cross-Encoder Reranking</td>
+                  <td className="text-left">+30-45%</td>
+                  <td className="text-left">+50-100ms</td>
                 </tr>
                 <tr>
-                  <td className="px-4 py-2 border">Multi-Vector Representations</td>
-                  <td className="px-4 py-2 border text-green-600 dark:text-green-400">+15-25%</td>
-                  <td className="px-4 py-2 border text-yellow-600">+20-40ms</td>
+                  <td className="text-left">Multi-Vector Representations</td>
+                  <td className="text-left">+15-25%</td>
+                  <td className="text-left">+20-40ms</td>
                 </tr>
                 <tr>
-                  <td className="px-4 py-2 border">Dynamic Context Management</td>
-                  <td className="px-4 py-2 border text-green-600 dark:text-green-400">+20-35%</td>
-                  <td className="px-4 py-2 border text-green-600 dark:text-green-400">-10-25ms</td>
+                  <td className="text-left">Dynamic Context Management</td>
+                  <td className="text-left">+20-35%</td>
+                  <td className="text-left">-10-25ms</td>
                 </tr>
                 <tr>
-                  <td className="px-4 py-2 border">Query Expansion</td>
-                  <td className="px-4 py-2 border text-green-600 dark:text-green-400">+10-20%</td>
-                  <td className="px-4 py-2 border text-yellow-600">+25-50ms</td>
+                  <td className="text-left">Query Expansion</td>
+                  <td className="text-left">+10-20%</td>
+                  <td className="text-left">+25-50ms</td>
                 </tr>
               </tbody>
             </table>
@@ -187,19 +187,19 @@ const ProductionRAGOptimizationBreakthroughArticle = () => {
           <p>
             Organizations implementing optimized production RAG systems report transformative results:
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-            <div className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg">
-              <h3 className="text-xl font-bold text-blue-600 dark:text-blue-400 mb-3">Accuracy & Quality</h3>
-              <ul className="space-y-2">
+          <div className="text-left">
+            <div className="text-left">
+              <h3 className="text-left">Accuracy & Quality</h3>
+              <ul className="text-left">
                 <li>• 92-97% accuracy rates</li>
                 <li>• 85-95% reduction in hallucinations</li>
                 <li>• 70-85% improvement in retrieval relevance</li>
                 <li>• 95-99% user satisfaction scores</li>
               </ul>
             </div>
-            <div className="bg-green-50 dark:bg-green-900/20 p-6 rounded-lg">
-              <h3 className="text-xl font-bold text-green-600 dark:text-green-400 mb-3">Performance & ROI</h3>
-              <ul className="space-y-2">
+            <div className="text-left">
+              <h3 className="text-left">Performance & ROI</h3>
+              <ul className="text-left">
                 <li>• 5-15x faster response times</li>
                 <li>• $1.5-4B operational savings</li>
                 <li>• 300-500% ROI</li>
@@ -212,24 +212,24 @@ const ProductionRAGOptimizationBreakthroughArticle = () => {
         <section>
           <h2>🎯 Implementation Best Practices</h2>
           
-          <h3 className="text-2xl font-bold mt-6 mb-3">Vector Database Selection</h3>
-          <ul className="list-disc pl-6 space-y-2 my-4">
+          <h3 className="text-left">Vector Database Selection</h3>
+          <ul className="text-left">
             <li><strong>Weaviate:</strong> Best for hybrid search and multi-tenancy</li>
             <li><strong>Qdrant:</strong> Superior performance for high-dimensional vectors</li>
             <li><strong>Pinecone:</strong> Managed service with excellent scalability</li>
             <li><strong>PostgreSQL + pgvector:</strong> Good for existing Postgres shops</li>
           </ul>
 
-          <h3 className="text-2xl font-bold mt-6 mb-3">Embedding Model Selection</h3>
-          <ul className="list-disc pl-6 space-y-2 my-4">
+          <h3 className="text-left">Embedding Model Selection</h3>
+          <ul className="text-left">
             <li><strong>BGE-M3:</strong> State-of-the-art multilingual embeddings</li>
             <li><strong>E5-Mistral-7B:</strong> Excellent for English, instruction-following</li>
             <li><strong>OpenAI text-embedding-3-large:</strong> Strong general-purpose option</li>
             <li><strong>Domain-Specific Fine-Tuning:</strong> 15-30% accuracy boost for specialized domains</li>
           </ul>
 
-          <h3 className="text-2xl font-bold mt-6 mb-3">Evaluation Framework</h3>
-          <ul className="list-disc pl-6 space-y-2 my-4">
+          <h3 className="text-left">Evaluation Framework</h3>
+          <ul className="text-left">
             <li><strong>Retrieval Metrics:</strong> Recall@K, MRR, NDCG for retrieval quality</li>
             <li><strong>Generation Metrics:</strong> RAGAS, answer relevancy, faithfulness scores</li>
             <li><strong>Latency Monitoring:</strong> P50, P95, P99 latency tracking</li>
@@ -242,7 +242,7 @@ const ProductionRAGOptimizationBreakthroughArticle = () => {
           <p>
             The next generation of RAG systems will incorporate:
           </p>
-          <ul className="list-disc pl-6 space-y-2 my-4">
+          <ul className="text-left">
             <li><strong>Agentic RAG:</strong> AI agents that plan multi-step retrieval strategies</li>
             <li><strong>Multimodal RAG:</strong> Retrieval across text, images, tables, and code</li>
             <li><strong>Self-Healing RAG:</strong> Systems that automatically detect and fix retrieval failures</li>
@@ -252,21 +252,21 @@ const ProductionRAGOptimizationBreakthroughArticle = () => {
 
         <section>
           <h2>🚀 Getting Started with Production RAG Optimization</h2>
-          <p className="mb-4">
+          <p className="text-left">
             Ready to transform your enterprise AI with optimized RAG systems? Zion Tech Group's experts can help you design, deploy, and optimize production-grade RAG architectures tailored to your business needs.
           </p>
-          <div className="bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-700 dark:to-indigo-700 p-8 rounded-lg text-white my-6">
-            <h3 className="text-2xl font-bold mb-4">Schedule Your RAG Optimization Assessment</h3>
-            <p className="mb-6">
+          <div className="text-left">
+            <h3 className="text-left">Schedule Your RAG Optimization Assessment</h3>
+            <p className="text-left">
               Our team will evaluate your current RAG implementation, identify optimization opportunities, and develop a roadmap for production-grade deployment.
             </p>
-            <ul className="space-y-2 mb-6">
+            <ul className="text-left">
               <li>✓ RAG architecture review and gap analysis</li>
               <li>✓ Retrieval performance benchmarking</li>
               <li>✓ Optimization strategy and technology recommendations</li>
               <li>✓ ROI modeling and implementation roadmap</li>
             </ul>
-            <p className="text-lg font-semibold">
+            <p className="text-left">
               Contact us today to begin your RAG optimization journey.
             </p>
           </div>
@@ -274,10 +274,10 @@ const ProductionRAGOptimizationBreakthroughArticle = () => {
 
         <section>
           <h2>📚 Related Resources</h2>
-          <ul className="list-disc pl-6 space-y-2 my-4">
-            <li><a href="/blog/ai-2025-october-enterprise-rag-implementation" className="text-blue-600 dark:text-blue-400 hover:underline">Enterprise RAG Implementation: Complete Guide</a></li>
-            <li><a href="/blog/ai-2025-october-multimodal-rag-enterprise-production-guide" className="text-blue-600 dark:text-blue-400 hover:underline">Multimodal RAG: Production Deployment Guide</a></li>
-            <li><a href="/blog/ai-2025-october-llm-fine-tuning-mastery" className="text-blue-600 dark:text-blue-400 hover:underline">LLM Fine-Tuning Mastery for Enterprise</a></li>
+          <ul className="text-left">
+            <li><a href="/blog/ai-2025-october-enterprise-rag-implementation" className="text-left">Enterprise RAG Implementation: Complete Guide</a></li>
+            <li><a href="/blog/ai-2025-october-multimodal-rag-enterprise-production-guide" className="text-left">Multimodal RAG: Production Deployment Guide</a></li>
+            <li><a href="/blog/ai-2025-october-llm-fine-tuning-mastery" className="text-left">LLM Fine-Tuning Mastery for Enterprise</a></li>
           </ul>
         </section>
       </BlogArticleLayout>

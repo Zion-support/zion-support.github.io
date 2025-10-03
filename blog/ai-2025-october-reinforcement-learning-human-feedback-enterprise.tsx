@@ -14,31 +14,31 @@ export const metadata = {
 
 export default function RLHFEnterpriseGuide() {
   return (
-    <article className="prose prose-lg max-w-4xl mx-auto px-4 py-12">
+    <article className="text-left">
       <h1>RLHF in Enterprise: Reinforcement Learning from Human Feedback Revolution 2025</h1>
       
-      <div className="text-sm text-gray-600 mb-8">
+      <div className="text-left">
         Published on {metadata.date} • {metadata.readTime} • By {metadata.author}
       </div>
 
-      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-lg mb-8 border-l-4 border-blue-500">
-        <h3 className="text-xl font-bold text-blue-900 mb-3">🚀 Fortune 500 Success Story</h3>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+      <div className="text-left">
+        <h3 className="text-left">🚀 Fortune 500 Success Story</h3>
+        <div className="text-left">
           <div>
-            <div className="text-3xl font-bold text-blue-700">$127M</div>
-            <div className="text-sm text-gray-700">Annual Value</div>
+            <div className="text-left">$127M</div>
+            <div className="text-left">Annual Value</div>
           </div>
           <div>
-            <div className="text-3xl font-bold text-green-700">94%</div>
-            <div className="text-sm text-gray-700">Accuracy Improvement</div>
+            <div className="text-left">94%</div>
+            <div className="text-left">Accuracy Improvement</div>
           </div>
           <div>
-            <div className="text-3xl font-bold text-purple-700">78%</div>
-            <div className="text-sm text-gray-700">Faster Training</div>
+            <div className="text-left">78%</div>
+            <div className="text-left">Faster Training</div>
           </div>
           <div>
-            <div className="text-3xl font-bold text-orange-700">847%</div>
-            <div className="text-sm text-gray-700">ROI</div>
+            <div className="text-left">847%</div>
+            <div className="text-left">ROI</div>
           </div>
         </div>
       </div>
@@ -72,9 +72,9 @@ export default function RLHFEnterpriseGuide() {
         A global telecommunications company implemented RLHF to revolutionize their customer service AI:
       </p>
 
-      <div className="bg-gray-50 p-6 rounded-lg my-6">
+      <div className="text-left">
         <h3>Implementation Results:</h3>
-        <ul className="space-y-2">
+        <ul className="text-left">
           <li><strong>$127M Annual Value:</strong> From improved customer satisfaction and reduced escalations</li>
           <li><strong>94% Accuracy Improvement:</strong> In understanding customer intent and providing relevant solutions</li>
           <li><strong>78% Faster Training:</strong> Compared to traditional supervised learning approaches</li>
@@ -149,7 +149,7 @@ export default function RLHFEnterpriseGuide() {
 
       <h2>Common Challenges & Solutions</h2>
 
-      <div className="bg-yellow-50 p-6 rounded-lg my-6 border-l-4 border-yellow-500">
+      <div className="text-left">
         <h3>Challenge: Reward Hacking</h3>
         <p>
           <strong>Problem:</strong> Models learn to exploit reward functions rather than genuinely improve.
@@ -160,7 +160,7 @@ export default function RLHFEnterpriseGuide() {
         </p>
       </div>
 
-      <div className="bg-blue-50 p-6 rounded-lg my-6 border-l-4 border-blue-500">
+      <div className="text-left">
         <h3>Challenge: Annotation Quality & Consistency</h3>
         <p>
           <strong>Problem:</strong> Inconsistent human feedback leads to unstable training.
@@ -176,7 +176,7 @@ export default function RLHFEnterpriseGuide() {
         Calculate expected ROI from RLHF implementation:
       </p>
 
-      <div className="bg-green-50 p-6 rounded-lg my-6">
+      <div className="text-left">
         <h3>Cost Components:</h3>
         <ul>
           <li>Compute infrastructure: $50K-200K/month</li>
@@ -216,12 +216,12 @@ export default function RLHFEnterpriseGuide() {
         <li><strong>Measure & Optimize:</strong> Continuously track ROI and refine your approach</li>
       </ol>
 
-      <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-8 rounded-lg my-8 border-l-4 border-purple-500">
+      <div className="text-left">
         <h2>Ready to Transform Your AI with RLHF?</h2>
-        <p className="text-lg mb-4">
+        <p className="text-left">
           Join the Fortune 500 companies already achieving 847% ROI with enterprise RLHF implementation.
         </p>
-        <p className="text-sm text-gray-600">
+        <p className="text-left">
           Contact Zion Tech Group for a customized RLHF strategy consultation and implementation roadmap.
         </p>
       </div>

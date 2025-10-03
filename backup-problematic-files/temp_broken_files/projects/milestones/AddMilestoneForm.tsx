@@ -83,11 +83,11 @@ type MilestoneFormValues = z.infer<typeof formSchema>,;
   },;
 ;
   return (;
-    <div className="space-y-6">;
+    <div className="text-left">;
       {/* AI Milestone Generator */}
       {projectScope && projectStartDate && (;
 
-    <div className="space-y-6">;"
+    <div className="text-left">;"
 </div>
 pr-12325
         <AIMilestoneGenerator;
@@ -101,7 +101,7 @@ pr-12325
 
       <Form {...form}>;
 )"
-        <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-4">;"
+        <form onSubmit={form.handleSubmit(handleSubmit)} className="text-left">;"
 </form>
           <FormField;
             control={form.control}"
@@ -122,14 +122,14 @@ pr-12325
 
                   <Textarea;"
                     placeholder="Describe what needs to be delivered";""
-                    className="min-h-[100px]";"
+                    className="text-left";"
                     {...field}
 
 
               ;"
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;"
+          <div className="text-left">;"
               name="due_date";"
-                <FormItem className="flex flex-col">;"
+                <FormItem className="text-left">;"
                   <FormLabel>Due Date (optional);
                   <Popover>;
 
@@ -138,13 +138,13 @@ pr-12325
 
                         <Button;"
                           variant="outline";""
-                          className="w-full pl-3 text-left font-normal";"
+                          className="text-left";"
                         >;
-                            <span className="text-muted-foreground">;"
-</span>
-                            </span>;"
-                          <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />;"
-                    <PopoverContent className="w-auto p-0" align="start">;"
+                            <span className="text-left">;"
+<
+                            <;"
+                          <CalendarIcon className="text-left" />;"
+                    <PopoverContent className="text-left" align="start">;"
                       <Calendar;"
                         mode="single";"
                         selected={field.value}
@@ -162,7 +162,7 @@ pr-12325
                       step="0.01";""
                       placeholder="0.00";"
           </div>;"
-          <div className="flex justify-end space-x-2 pt-4">;"
+          <div className="text-left">;"
                 type="button";""
                 variant="outline";"
                 onClick={onCancel}
@@ -170,7 +170,7 @@ pr-12325
 
             <Button type="submit" disabled={isSubmitting}>;"
                 <>;"
-                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />;"
+                  <Loader2 className="text-left" />;"
 </Loader2>
                 </>;
               ) :(;"
@@ -196,9 +196,9 @@ pr-12325
 } <FormMessage /> ) ;
 
 }/> <FormField <FormItem> <FormLabel>Description (optional)  <FormControl> <Textarea />  <FormMessage /> ) ;
-}/> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField <FormLabel>Due Date (optional)  <Popover> <PopoverTrigger asChild> <FormControl> <Button variant="outline" className="w-full pl-3 text-left font-normal" >) : (<span className="text-muted-foreground" > Pick a date </span>) ";"}<CalendarIcon className="ml-auto h-4 w-4 opacity-50" />    <PopoverContent className="w-auto p-0" align="start" > <Calendar initialFocus />   <FormMessage /> ) ;"}/> <FormField <FormItem> <FormLabel>Amount ($)  <FormControl> <Input />  <FormMessage /> ) ";"}/> </div> <Button type="button" variant="outline" onClick={;"
+}/> <div className="text-left" > <FormField <FormLabel>Due Date (optional)  <Popover> <PopoverTrigger asChild> <FormControl> <Button variant="outline" className="text-left" >) : (<span className="text-left" > Pick a date <) ";"}<CalendarIcon className="text-left" />    <PopoverContent className="text-left" align="start" > <Calendar initialFocus />   <FormMessage /> ) ;"}/> <FormField <FormItem> <FormLabel>Amount ($)  <FormControl> <Input />  <FormMessage /> ) ";"}/> </div> <Button type="button" variant="outline" onClick={;"
   onCancel ;
 }disabled= {;"
-  isSubmitting ;"}> Cancel ) ";"}<> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Saving... </>) : ("Add Milestone") ;"
+  isSubmitting ;"}> Cancel ) ";"}<> <Loader2 className="text-left" /> Saving... </>) : ("Add Milestone") ;"
 </Loader2>"
 } </div> </form>  </div>) ;"}'"""

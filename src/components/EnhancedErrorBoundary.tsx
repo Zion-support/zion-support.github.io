@@ -4,7 +4,6 @@
  */
 
 import React, { Component, ReactNode, ErrorInfo } from 'react';
-
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
@@ -25,7 +24,6 @@ const analyticsUtils = {
     console.log('Analytics Event:', event, data);
   }
 };
-
 class EnhancedErrorBoundary extends Component<Props, State> {
   private retryCount = 0;
   private maxRetries = 3;
@@ -53,7 +51,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     const { onError } = this.props;
-    const { errorId } = this.state;
 
     // Update state with error info
     this.setState({ errorInfo });
@@ -173,8 +170,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                 </button>
                 <button
                   onClick={this.handleReportError}
-                  className="w-full border-2 border-red-600 text-red-600 hover:bg-red-50 font-semibold py-3 px-6 rounded-lg transition-colors"
-                >
+                  className="w-full border-2 border-red-600 text-red-600 hover:bg-red-50 font-semibold py-3 px-6 rounded-lg transition-colors">
                   Report Error
                 </button>
               </div>

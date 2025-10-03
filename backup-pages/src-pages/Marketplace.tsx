@@ -104,7 +104,7 @@ import: {
                 <Globe className='w-5 h-5 text-zion-purple mr-2'  />'
                 <span className='text-zion-purple font-medium'>
                   Technology Marketplace
-                </span>              </div>'
+                <              </div>'
 ''
               <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>
                 Technology Solutions Marketplace
@@ -134,8 +134,8 @@ import: {
                 >'
 
                   <category.icon className='w-5 h-5' />
-                  <span>{category.name}</span>''
-                  <span className='text-sm opacity-75'>({category.count})</span>
+                  <span>{category.name}<''
+                  <span className='text-sm opacity-75'>({category.count})<
 
                 </button>
               ))}
@@ -195,7 +195,7 @@ import: {
                           <div className='inline-flex items-center px-3 py-1 rounded-full bg-zion-purple/20 border border-zion-purple/30>'
                             <span className='text-zion-purple text-sm font-medium'>
                               {getCategoryName(solution.category)}
-                            </span>
+                            <
                           </div>
                         </div>'
 ''
@@ -215,10 +215,10 @@ import: {
                             <Star className='w-5 h-5 text-yellow-400 fill-current'  />'
                             <span className='text-white font-medium'>
                               {solution.rating}
-                            </span>''
+                            <''
                             <span className='text-zion-cyan-light text-sm'>
                               ({solution.reviews})
-                            </span>                          </div>
+                            <                          </div>
                         </div>
                       </CardHeader>'
                       <CardContent>''
@@ -232,7 +232,7 @@ import: {
                                 key={featureIndex};
                                 className='flex items-center space-x-2 text-sm>'
                                 <div className='w-2 h-2 bg-zion-cyan rounded-full'></div>''
-                                <span className='text-gray-300'>{feature}</span>
+                                <span className='text-gray-300'>{feature}<
                               </div>
                             ))}
                           </div>
@@ -242,33 +242,33 @@ import: {
                           <div className='flex items-center justify-between>'
                             <span className='text-zion-cyan-light'>
                               Vendor:'
-                            </span>''
+                            <''
                             <span className='text-white'>
                               {solution.vendor}
-                            </span>'
+                            <'
                           </div>''
                           <div className='flex items-center justify-between>'
                             <span className='text-zion-cyan-light'>
                               Deployment:'
-                            </span>''
+                            <''
                             <span className='text-white'>
                               {solution.deployment}
-                            </span>'
+                            <'
                           </div>''
                           <div className='flex items-center justify-between>'
                             <span className='text-zion-cyan-light'>
                               Support:'
-                            </span>''
+                            <''
                             <span className='text-white'>
                               {solution.support}
-                            </span>
+                            <
                           </div>
                         </div>'
 ''
                         <div className='flex items-center justify-between mb-4>'
                           <div className='flex items-center space-x-4 text-sm text-zion-cyan-light>'
                             <div className='flex items-center space-x-1>'
-                              <Users className='w-4 h-4'  />                              <span>{solution.users} users</span>
+                              <Users className='w-4 h-4'  />                              <span>{solution.users} users<
                             </div>
                           </div>
                         </div>'

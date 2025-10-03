@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function AIOperationalScorecardsV4_2026(): JSX.Element {
   return (
-    <article className="prose max-w-3xl mx-auto py-12 px-6">
+    <article className="text-left">
       <h1>AI Operational Scorecards v4 (2026)</h1>
       <p>
         SLIs mapped to product KPIs with budgeted actions, KPI-linked canaries, and

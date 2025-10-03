@@ -65,19 +65,19 @@ export default function InteractiveContentShowcase2026() {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-100 to-blue-100">
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">
+    <section className="text-left">
+      <div className="text-left">
+        <div className="text-left">
+          <h2 className="text-left">
             Explore Our Latest 2026 AI Content
           </h2>
-          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+          <p className="text-left">
             Dive into cutting-edge articles and transformative case studies shaping the future of AI in enterprise.
           </p>
         </div>
 
-        <div className="flex justify-center mb-10">
-          <div className="bg-white p-2 rounded-full shadow-md flex space-x-2">
+        <div className="text-left">
+          <div className="text-left">
             <button
               onClick={() => setActiveTab('articles')}
               className={`px-6 py-3 rounded-full text-lg font-semibold transition-all duration-300 ${
@@ -97,21 +97,21 @@ export default function InteractiveContentShowcase2026() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="text-left">
           {activeTab === 'articles' &&
             content.articles.map((item) => (
-              <Link href={item.link} key={item.id} className="group block">
-                <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200 h-full flex flex-col">
-                  <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs font-semibold mb-3 self-start">
+              <Link href={item.link} key={item.id} className="text-left">
+                <div className="text-left">
+                  <span className="text-left">
                     {item.category}
-                  </span>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  <
+                  <h3 className="text-left">
                     {item.title}
                   </h3>
-                  <p className="text-gray-600 mb-4 flex-grow">{item.description}</p>
-                  <div className="flex items-center justify-between text-sm text-gray-500 mt-auto">
-                    <span>{item.date}</span>
-                    <span className="text-blue-600 group-hover:underline">Read More →</span>
+                  <p className="text-left">{item.description}</p>
+                  <div className="text-left">
+                    <span>{item.date}<
+                    <span className="text-left">Read More →<
                   </div>
                 </div>
               </Link>
@@ -119,18 +119,18 @@ export default function InteractiveContentShowcase2026() {
 
           {activeTab === 'caseStudies' &&
             content.caseStudies.map((item) => (
-              <Link href={item.link} key={item.id} className="group block">
-                <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200 h-full flex flex-col">
-                  <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-semibold mb-3 self-start">
+              <Link href={item.link} key={item.id} className="text-left">
+                <div className="text-left">
+                  <span className="text-left">
                     {item.category}
-                  </span>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  <
+                  <h3 className="text-left">
                     {item.title}
                   </h3>
-                  <p className="text-gray-600 mb-4 flex-grow">{item.description}</p>
-                  <div className="flex items-center justify-between text-sm text-gray-500 mt-auto">
-                    <span>ROI: {item.roi}</span>
-                    <span className="text-blue-600 group-hover:underline">View Case Study →</span>
+                  <p className="text-left">{item.description}</p>
+                  <div className="text-left">
+                    <span>ROI: {item.roi}<
+                    <span className="text-left">View Case Study →<
                   </div>
                 </div>
               </Link>

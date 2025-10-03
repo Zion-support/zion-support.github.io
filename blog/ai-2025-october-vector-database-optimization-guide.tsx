@@ -2,71 +2,71 @@ import React from 'react';
 
 export default function AI2025OctoberVectorDatabaseOptimization() {
   return (
-    <article className="min-h-screen bg-slate-950 text-white">
-      <div className="container mx-auto px-6 py-20">
+    <article className="text-left">
+      <div className="text-left">
         {/* Hero Section */}
-        <header className="mb-16">
-          <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 mb-6">
-            <span className="text-purple-400 font-bold text-sm tracking-wider uppercase">
+        <header className="text-left">
+          <div className="text-left">
+            <span className="text-left">
               October 2025 • Vector Database Engineering
-            </span>
+            <
           </div>
           
-          <h1 className="text-5xl md:text-7xl font-extrabold mb-8 bg-gradient-to-r from-purple-400 via-pink-400 to-rose-400 bg-clip-text text-transparent leading-tight">
+          <h1 className="text-left">
             Vector Database Optimization: Achieving Sub-10ms Query Latency at Scale
           </h1>
           
-          <p className="text-2xl text-gray-300 mb-8 max-w-4xl">
+          <p className="text-left">
             Master advanced techniques for optimizing vector database performance in production RAG systems. 
             Learn indexing strategies, query optimization, and scaling patterns that deliver blazing-fast 
             semantic search at enterprise scale.
           </p>
           
-          <div className="flex flex-wrap gap-3 mb-8">
-            <span className="bg-purple-500/20 px-4 py-2 rounded-full text-purple-300 text-sm">Vector Databases</span>
-            <span className="bg-pink-500/20 px-4 py-2 rounded-full text-pink-300 text-sm">RAG Systems</span>
-            <span className="bg-rose-500/20 px-4 py-2 rounded-full text-rose-300 text-sm">Performance</span>
-            <span className="bg-fuchsia-500/20 px-4 py-2 rounded-full text-fuchsia-300 text-sm">Semantic Search</span>
+          <div className="text-left">
+            <span className="text-left">Vector Databases<
+            <span className="text-left">RAG Systems<
+            <span className="text-left">Performance<
+            <span className="text-left">Semantic Search<
           </div>
         </header>
 
         {/* Key Metrics */}
-        <section className="mb-16">
-          <div className="grid md:grid-cols-4 gap-6">
-            <div className="bg-gradient-to-br from-purple-500/10 to-purple-600/10 backdrop-blur-sm rounded-xl p-6 border border-purple-500/30">
-              <div className="text-4xl font-extrabold text-purple-400 mb-2">&lt;8ms</div>
-              <div className="text-purple-300">Query Latency</div>
+        <section className="text-left">
+          <div className="text-left">
+            <div className="text-left">
+              <div className="text-left">&lt;8ms</div>
+              <div className="text-left">Query Latency</div>
             </div>
-            <div className="bg-gradient-to-br from-pink-500/10 to-pink-600/10 backdrop-blur-sm rounded-xl p-6 border border-pink-500/30">
-              <div className="text-4xl font-extrabold text-pink-400 mb-2">100M+</div>
-              <div className="text-pink-300">Vectors Indexed</div>
+            <div className="text-left">
+              <div className="text-left">100M+</div>
+              <div className="text-left">Vectors Indexed</div>
             </div>
-            <div className="bg-gradient-to-br from-rose-500/10 to-rose-600/10 backdrop-blur-sm rounded-xl p-6 border border-rose-500/30">
-              <div className="text-4xl font-extrabold text-rose-400 mb-2">99.9%</div>
-              <div className="text-rose-300">Recall Accuracy</div>
+            <div className="text-left">
+              <div className="text-left">99.9%</div>
+              <div className="text-left">Recall Accuracy</div>
             </div>
-            <div className="bg-gradient-to-br from-fuchsia-500/10 to-fuchsia-600/10 backdrop-blur-sm rounded-xl p-6 border border-fuchsia-500/30">
-              <div className="text-4xl font-extrabold text-fuchsia-400 mb-2">50K+</div>
-              <div className="text-fuchsia-300">QPS Capacity</div>
+            <div className="text-left">
+              <div className="text-left">50K+</div>
+              <div className="text-left">QPS Capacity</div>
             </div>
           </div>
         </section>
 
         {/* Main Content */}
-        <section className="prose prose-invert prose-lg max-w-none mb-16">
-          <h2 className="text-4xl font-bold text-white mb-6">The Vector Database Performance Challenge</h2>
-          <p className="text-gray-300 text-lg mb-6">
+        <section className="text-left">
+          <h2 className="text-left">The Vector Database Performance Challenge</h2>
+          <p className="text-left">
             As RAG systems scale to billions of embeddings and thousands of queries per second, vector 
             database performance becomes critical. This guide reveals production-tested strategies for 
             achieving sub-10ms latency while maintaining high recall accuracy and managing costs.
           </p>
 
-          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-purple-500/30 mb-8">
-            <h3 className="text-3xl font-bold text-purple-400 mb-4">🎯 Optimization Strategies</h3>
-            <div className="grid md:grid-cols-2 gap-6 mt-6">
+          <div className="text-left">
+            <h3 className="text-left">🎯 Optimization Strategies</h3>
+            <div className="text-left">
               <div>
-                <h4 className="text-xl font-bold text-purple-400 mb-3">Index Optimization</h4>
-                <ul className="space-y-2 text-gray-300">
+                <h4 className="text-left">Index Optimization</h4>
+                <ul className="text-left">
                   <li>• HNSW index tuning (M, efConstruction)</li>
                   <li>• IVF index configuration</li>
                   <li>• Product quantization (PQ)</li>
@@ -75,8 +75,8 @@ export default function AI2025OctoberVectorDatabaseOptimization() {
                 </ul>
               </div>
               <div>
-                <h4 className="text-xl font-bold text-pink-400 mb-3">Query Optimization</h4>
-                <ul className="space-y-2 text-gray-300">
+                <h4 className="text-left">Query Optimization</h4>
+                <ul className="text-left">
                   <li>• Dynamic ef parameter tuning</li>
                   <li>• Result caching layers</li>
                   <li>• Query batching</li>
@@ -85,8 +85,8 @@ export default function AI2025OctoberVectorDatabaseOptimization() {
                 </ul>
               </div>
               <div>
-                <h4 className="text-xl font-bold text-rose-400 mb-3">Scaling Patterns</h4>
-                <ul className="space-y-2 text-gray-300">
+                <h4 className="text-left">Scaling Patterns</h4>
+                <ul className="text-left">
                   <li>• Horizontal sharding</li>
                   <li>• Read replicas</li>
                   <li>• Multi-region deployment</li>
@@ -95,8 +95,8 @@ export default function AI2025OctoberVectorDatabaseOptimization() {
                 </ul>
               </div>
               <div>
-                <h4 className="text-xl font-bold text-fuchsia-400 mb-3">Data Management</h4>
-                <ul className="space-y-2 text-gray-300">
+                <h4 className="text-left">Data Management</h4>
+                <ul className="text-left">
                   <li>• Chunking strategies</li>
                   <li>• Metadata filtering</li>
                   <li>• Incremental updates</li>
@@ -107,11 +107,11 @@ export default function AI2025OctoberVectorDatabaseOptimization() {
             </div>
           </div>
 
-          <h2 className="text-4xl font-bold text-white mb-6">Production-Ready Architecture</h2>
-          <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-purple-500/30 mb-8">
-            <h3 className="text-2xl font-bold text-purple-400 mb-4">Optimized Pinecone Implementation</h3>
-            <pre className="bg-black/50 p-6 rounded-xl overflow-x-auto text-sm">
-              <code className="text-cyan-300">
+          <h2 className="text-left">Production-Ready Architecture</h2>
+          <div className="text-left">
+            <h3 className="text-left">Optimized Pinecone Implementation</h3>
+            <pre className="text-left">
+              <code className="text-left">
 {`// High-performance vector database client with caching
 import { Pinecone } from '@pinecone-database/pinecone';
 import { Redis } from 'ioredis';
@@ -230,10 +230,10 @@ class OptimizedVectorDB {
             </pre>
           </div>
 
-          <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-pink-500/30 mb-8">
-            <h3 className="text-2xl font-bold text-pink-400 mb-4">Advanced Indexing with HNSW Tuning</h3>
-            <pre className="bg-black/50 p-6 rounded-xl overflow-x-auto text-sm">
-              <code className="text-cyan-300">
+          <div className="text-left">
+            <h3 className="text-left">Advanced Indexing with HNSW Tuning</h3>
+            <pre className="text-left">
+              <code className="text-left">
 {`// Qdrant with optimized HNSW parameters
 import { QdrantClient } from '@qdrant/js-client-rest';
 
@@ -333,154 +333,154 @@ class QdrantOptimizer {
             </pre>
           </div>
 
-          <h2 className="text-4xl font-bold text-white mb-6">Performance Benchmarks</h2>
-          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-rose-500/30 mb-8">
-            <h3 className="text-3xl font-bold text-rose-400 mb-6">📊 Production Results</h3>
-            <div className="space-y-6">
+          <h2 className="text-left">Performance Benchmarks</h2>
+          <div className="text-left">
+            <h3 className="text-left">📊 Production Results</h3>
+            <div className="text-left">
               <div>
-                <div className="flex justify-between items-center mb-2">
-                  <span className="text-gray-300 text-lg">P50 Query Latency</span>
-                  <span className="text-2xl font-bold text-rose-400">6.2ms</span>
+                <div className="text-left">
+                  <span className="text-left">P50 Query Latency<
+                  <span className="text-left">6.2ms<
                 </div>
-                <div className="w-full bg-slate-800 rounded-full h-3">
-                  <div className="bg-gradient-to-r from-rose-500 to-pink-500 h-3 rounded-full" style={{width: '62%'}}></div>
+                <div className="text-left">
+                  <div className="text-left" style={{width: '62%'}}></div>
                 </div>
               </div>
               
               <div>
-                <div className="flex justify-between items-center mb-2">
-                  <span className="text-gray-300 text-lg">P95 Query Latency</span>
-                  <span className="text-2xl font-bold text-pink-400">12.8ms</span>
+                <div className="text-left">
+                  <span className="text-left">P95 Query Latency<
+                  <span className="text-left">12.8ms<
                 </div>
-                <div className="w-full bg-slate-800 rounded-full h-3">
-                  <div className="bg-gradient-to-r from-pink-500 to-purple-500 h-3 rounded-full" style={{width: '85%'}}></div>
-                </div>
-              </div>
-              
-              <div>
-                <div className="flex justify-between items-center mb-2">
-                  <span className="text-gray-300 text-lg">P99 Query Latency</span>
-                  <span className="text-2xl font-bold text-purple-400">18.5ms</span>
-                </div>
-                <div className="w-full bg-slate-800 rounded-full h-3">
-                  <div className="bg-gradient-to-r from-purple-500 to-fuchsia-500 h-3 rounded-full" style={{width: '95%'}}></div>
+                <div className="text-left">
+                  <div className="text-left" style={{width: '85%'}}></div>
                 </div>
               </div>
               
               <div>
-                <div className="flex justify-between items-center mb-2">
-                  <span className="text-gray-300 text-lg">Recall@10 Accuracy</span>
-                  <span className="text-2xl font-bold text-fuchsia-400">99.7%</span>
+                <div className="text-left">
+                  <span className="text-left">P99 Query Latency<
+                  <span className="text-left">18.5ms<
                 </div>
-                <div className="w-full bg-slate-800 rounded-full h-3">
-                  <div className="bg-gradient-to-r from-fuchsia-500 to-purple-500 h-3 rounded-full" style={{width: '99.7%'}}></div>
+                <div className="text-left">
+                  <div className="text-left" style={{width: '95%'}}></div>
+                </div>
+              </div>
+              
+              <div>
+                <div className="text-left">
+                  <span className="text-left">Recall@10 Accuracy<
+                  <span className="text-left">99.7%<
+                </div>
+                <div className="text-left">
+                  <div className="text-left" style={{width: '99.7%'}}></div>
                 </div>
               </div>
             </div>
           </div>
 
-          <h2 className="text-4xl font-bold text-white mb-6">Database Comparison Matrix</h2>
-          <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-fuchsia-500/30 mb-8 overflow-x-auto">
-            <table className="w-full text-left">
+          <h2 className="text-left">Database Comparison Matrix</h2>
+          <div className="text-left">
+            <table className="text-left">
               <thead>
-                <tr className="border-b border-fuchsia-500/30">
-                  <th className="pb-4 text-fuchsia-400 font-bold">Database</th>
-                  <th className="pb-4 text-fuchsia-400 font-bold">Latency (P95)</th>
-                  <th className="pb-4 text-fuchsia-400 font-bold">Throughput</th>
-                  <th className="pb-4 text-fuchsia-400 font-bold">Recall@10</th>
-                  <th className="pb-4 text-fuchsia-400 font-bold">Cost</th>
+                <tr className="text-left">
+                  <th className="text-left">Database</th>
+                  <th className="text-left">Latency (P95)</th>
+                  <th className="text-left">Throughput</th>
+                  <th className="text-left">Recall@10</th>
+                  <th className="text-left">Cost</th>
                 </tr>
               </thead>
-              <tbody className="text-gray-300">
-                <tr className="border-b border-slate-700">
-                  <td className="py-4 font-semibold">Pinecone (Optimized)</td>
-                  <td className="py-4 text-emerald-400">11ms</td>
-                  <td className="py-4 text-emerald-400">45K QPS</td>
-                  <td className="py-4">99.5%</td>
-                  <td className="py-4">$$</td>
+              <tbody className="text-left">
+                <tr className="text-left">
+                  <td className="text-left">Pinecone (Optimized)</td>
+                  <td className="text-left">11ms</td>
+                  <td className="text-left">45K QPS</td>
+                  <td className="text-left">99.5%</td>
+                  <td className="text-left">$$</td>
                 </tr>
-                <tr className="border-b border-slate-700">
-                  <td className="py-4 font-semibold">Qdrant (HNSW)</td>
-                  <td className="py-4 text-emerald-400">8ms</td>
-                  <td className="py-4 text-emerald-400">52K QPS</td>
-                  <td className="py-4">99.7%</td>
-                  <td className="py-4">$</td>
+                <tr className="text-left">
+                  <td className="text-left">Qdrant (HNSW)</td>
+                  <td className="text-left">8ms</td>
+                  <td className="text-left">52K QPS</td>
+                  <td className="text-left">99.7%</td>
+                  <td className="text-left">$</td>
                 </tr>
-                <tr className="border-b border-slate-700">
-                  <td className="py-4 font-semibold">Weaviate</td>
-                  <td className="py-4">15ms</td>
-                  <td className="py-4">38K QPS</td>
-                  <td className="py-4">99.3%</td>
-                  <td className="py-4">$$</td>
+                <tr className="text-left">
+                  <td className="text-left">Weaviate</td>
+                  <td className="text-left">15ms</td>
+                  <td className="text-left">38K QPS</td>
+                  <td className="text-left">99.3%</td>
+                  <td className="text-left">$$</td>
                 </tr>
-                <tr className="border-b border-slate-700">
-                  <td className="py-4 font-semibold">Milvus</td>
-                  <td className="py-4">12ms</td>
-                  <td className="py-4">42K QPS</td>
-                  <td className="py-4">99.6%</td>
-                  <td className="py-4">$</td>
+                <tr className="text-left">
+                  <td className="text-left">Milvus</td>
+                  <td className="text-left">12ms</td>
+                  <td className="text-left">42K QPS</td>
+                  <td className="text-left">99.6%</td>
+                  <td className="text-left">$</td>
                 </tr>
                 <tr>
-                  <td className="py-4 font-semibold">pgvector (PostgreSQL)</td>
-                  <td className="py-4 text-yellow-400">45ms</td>
-                  <td className="py-4 text-yellow-400">12K QPS</td>
-                  <td className="py-4">98.8%</td>
-                  <td className="py-4 text-emerald-400">$</td>
+                  <td className="text-left">pgvector (PostgreSQL)</td>
+                  <td className="text-left">45ms</td>
+                  <td className="text-left">12K QPS</td>
+                  <td className="text-left">98.8%</td>
+                  <td className="text-left">$</td>
                 </tr>
               </tbody>
             </table>
           </div>
 
-          <h2 className="text-4xl font-bold text-white mb-6">Best Practices Checklist</h2>
-          <div className="grid md:grid-cols-2 gap-6 mb-12">
-            <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-purple-500/30">
-              <h3 className="text-2xl font-bold text-purple-400 mb-4">✅ Performance Optimization</h3>
-              <ul className="space-y-3 text-gray-300">
-                <li className="flex items-start">
-                  <span className="text-purple-400 mr-3">•</span>
-                  <span>Tune HNSW parameters (M=16, ef_construct=200)</span>
+          <h2 className="text-left">Best Practices Checklist</h2>
+          <div className="text-left">
+            <div className="text-left">
+              <h3 className="text-left">✅ Performance Optimization</h3>
+              <ul className="text-left">
+                <li className="text-left">
+                  <span className="text-left">•<
+                  <span>Tune HNSW parameters (M=16, ef_construct=200)<
                 </li>
-                <li className="flex items-start">
-                  <span className="text-purple-400 mr-3">•</span>
-                  <span>Implement multi-tier caching (in-memory + Redis)</span>
+                <li className="text-left">
+                  <span className="text-left">•<
+                  <span>Implement multi-tier caching (in-memory + Redis)<
                 </li>
-                <li className="flex items-start">
-                  <span className="text-purple-400 mr-3">•</span>
-                  <span>Use batch queries for high-throughput scenarios</span>
+                <li className="text-left">
+                  <span className="text-left">•<
+                  <span>Use batch queries for high-throughput scenarios<
                 </li>
-                <li className="flex items-start">
-                  <span className="text-purple-400 mr-3">•</span>
-                  <span>Apply quantization for memory efficiency</span>
+                <li className="text-left">
+                  <span className="text-left">•<
+                  <span>Apply quantization for memory efficiency<
                 </li>
-                <li className="flex items-start">
-                  <span className="text-purple-400 mr-3">•</span>
-                  <span>Monitor and optimize query patterns</span>
+                <li className="text-left">
+                  <span className="text-left">•<
+                  <span>Monitor and optimize query patterns<
                 </li>
               </ul>
             </div>
 
-            <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-pink-500/30">
-              <h3 className="text-2xl font-bold text-pink-400 mb-4">🔄 Scaling Strategies</h3>
-              <ul className="space-y-3 text-gray-300">
-                <li className="flex items-start">
-                  <span className="text-pink-400 mr-3">•</span>
-                  <span>Implement horizontal sharding by category/tenant</span>
+            <div className="text-left">
+              <h3 className="text-left">🔄 Scaling Strategies</h3>
+              <ul className="text-left">
+                <li className="text-left">
+                  <span className="text-left">•<
+                  <span>Implement horizontal sharding by category/tenant<
                 </li>
-                <li className="flex items-start">
-                  <span className="text-pink-400 mr-3">•</span>
-                  <span>Deploy read replicas for query-heavy workloads</span>
+                <li className="text-left">
+                  <span className="text-left">•<
+                  <span>Deploy read replicas for query-heavy workloads<
                 </li>
-                <li className="flex items-start">
-                  <span className="text-pink-400 mr-3">•</span>
-                  <span>Use connection pooling and load balancing</span>
+                <li className="text-left">
+                  <span className="text-left">•<
+                  <span>Use connection pooling and load balancing<
                 </li>
-                <li className="flex items-start">
-                  <span className="text-pink-400 mr-3">•</span>
-                  <span>Plan for multi-region deployment</span>
+                <li className="text-left">
+                  <span className="text-left">•<
+                  <span>Plan for multi-region deployment<
                 </li>
-                <li className="flex items-start">
-                  <span className="text-pink-400 mr-3">•</span>
-                  <span>Implement gradual rollout strategies</span>
+                <li className="text-left">
+                  <span className="text-left">•<
+                  <span>Implement gradual rollout strategies<
                 </li>
               </ul>
             </div>
@@ -488,15 +488,15 @@ class QdrantOptimizer {
         </section>
 
         {/* CTA Section */}
-        <section className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 backdrop-blur-lg rounded-2xl p-12 border border-purple-500/30 text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">Need Help Optimizing Your Vector Database?</h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+        <section className="text-left">
+          <h2 className="text-left">Need Help Optimizing Your Vector Database?</h2>
+          <p className="text-left">
             Our AI infrastructure team specializes in building high-performance RAG systems with 
             sub-10ms query latency at scale. Let's optimize your vector database together.
           </p>
           <a
             href="/contact"
-            className="inline-block bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-12 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:scale-105"
+            className="text-left"
           >
             Schedule Architecture Review
           </a>
