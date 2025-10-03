@@ -87,5 +87,3 @@ export default function App(): JSX.Element {
     </ErrorBoundary>
   );
 };
-
-export default App;

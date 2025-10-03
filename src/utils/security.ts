@@ -55,7 +55,7 @@ export const defaultCSP: ContentSecurityPolicy = {
   'form-action': ["'self'"],
   'frame-ancestors': ["'none'"],
   'upgrade-insecure-requests': true
-';
+};
 
 /**
  * Default security headers
@@ -66,7 +66,7 @@ export const defaultSecurityHeaders: SecurityHeaders = {
   'X-XSS-Protection': '1; mode=block',
   'Referrer-Policy': 'strict-origin-when-cross-origin',
   'Permissions-Policy': 'camera=(), microphone=(), geolocation=(), payment=()',
-  'Strict-Transport-Security': 'max-age=31536000; includeSubDomains};
+  'Strict-Transport-Security': 'max-age=31536000; includeSubDomains'
 };
 
 /**
@@ -75,7 +75,7 @@ export const defaultSecurityHeaders: SecurityHeaders = {
 export const validationRules: ValidationRules = {
   email: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
   phone: /^[\+]?[1-9][\d]{0,15}$/,
-  url: /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6'\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)$/,
+  url: /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)$/,
   sanitize: (input: string): string => {
     return input
       .replace(/[<>]/g, '') // Remove potential HTML tags
@@ -83,7 +83,7 @@ export const validationRules: ValidationRules = {
       .replace(/on\w+\s*=/gi, '') // Remove event handlers
       .trim();
   }
-';
+}
 
 /**
  * Generate CSP header string
@@ -94,8 +94,8 @@ export function generateCSPHeader(csp: ContentSecurityPolicy): string {
       if (typeof value === 'boolean') {
         return value ? directive : '';
       }
-      return `${directive' ${value.join(' ')``;
-    ')
+      return `${directive} ${value.join(' ')}`;
+    })
     .filter(Boolean)
     .join('; ');
 }
