@@ -1,39 +1,19 @@
-// @ts-nocheck
-
-const Page: () => {
+export default function Page() {
   return (
-    <div className= "container mx-auto px-6 py-12 text-white">
-      <h1 className= "text-3xl font-bold mb-4">GenAI 2025: Economy Tiers Blueprint</h1>",
-      <p className= "text-zion-slate-light mb-6">
-    <div className= "container mx-auto px-6 py-12 text-white">",
-      <h1 className= "text-3xl font-bold mb-4">GenAI 2025: Economy Tiers Blueprint</h1>",
-      <p className= "text-zion-slate-light mb-6">"
-  Tier routing + semantic caches with eval gates to cut spend 40–70% while keeping UX stable.
-      </p>
-      <div className= "space-y-4 text-zion-slate-light">",
-        <p >
-          Route traffic by SLA with quality tiers and cache hot paths semantically. Add online eval
-          gates wired to KPIs to prevent regressions. Use budget‑aware routing to keep bills
-          predictable without hurting outcomes.
+    <div className="min-h-screen bg-gray-900 text-white">
+      <div className="max-w-7xl mx-auto p-6">
+        <h1 className="text-4xl font-bold mb-6">Page</h1>
+        <p className="text-gray-300 mb-8">
+          Content coming soon...
         </p>
-        <ul className= "list-disc pl-6 space-y-1">",
-          <li >Tiered model routing by latency, cost, and quality budgets</li>
-          <li >Semantic caches with freshness windows and warm pools</li>
-          <li >Eval gates that trigger deterministic rollback</li>
-          <li >Scorecards correlating with business KPIs</li>
-        </ul>
-      </div>
-<<<<<<< HEAD
-      <div className= "mt-8">",
-        <Link to: "/blog", className ="text-cyan-300 underline">Back to Blog</Link>",
 =======
-        <Link to: "/blog", className="text-cyan-300 underline">Back to Blog</Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-075c
+        <div className="text-center">
+          <a href="/blog" className="text-cyan-300 underline hover:text-cyan-200">
+            Back to Blog
+          </a>
+        </div>
+>>>>>>> fdf6fb27c01c84663705e6485b8449c06c236ccd
       </div>
     </div>
   );
-};
-
-export default Page;
-
-;
+}
