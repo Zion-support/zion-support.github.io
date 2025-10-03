@@ -245,16 +245,16 @@ export function initializeSecurity(): void {
       filename: event.filename,
       lineno: event.lineno,
       colno: event.colno
-    ', 'error');
-  ');
+    }, 'error');
+  });
 
   // Set up unhandled promise rejection handling
   window.addEventListener('unhandledrejection', (event) => {
     SecurityLogger.logSecurityEvent('unhandled-promise-rejection', {
       reason: event.reason?.toString(),
       promise: event.promise
-    ', 'error');
-  ');
+    }, 'error');
+  });
 
   // Log suspicious activity
   document.addEventListener('click', (event) => {
@@ -263,7 +263,7 @@ export function initializeSecurity(): void {
       SecurityLogger.logSecurityEvent('suspicious-link-click', {
         href: target.getAttribute('href'),
         text: target.textContent
-      ', 'warn');
+      }, 'warn');
     }
   });
 
@@ -284,4 +284,4 @@ export default {
   CSRFProtection,
   SecurityLogger,
   initializeSecurity
-`;
+};
