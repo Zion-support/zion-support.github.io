@@ -48,7 +48,10 @@ export default function EnterprisePage() {
         </div>
       </header>
 
-          </div>
+      {/* Footer */}
+      <footer className="bg-gray-900 py-12">
+        <div className="container mx-auto px-6 text-center">
+          <p className="text-gray-400">© 2025 Zion AI. All rights reserved.</p>
         </div>
       </footer>
     </div>

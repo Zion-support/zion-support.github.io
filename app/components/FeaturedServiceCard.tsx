@@ -35,10 +35,9 @@ export default function FeaturedServiceCard({
           <li key={index}>• {feature}</li>
         ))}
       </ul>
-        <Link href={href} className="text-blue-600 font-semibold hover:text-blue-700">
-          Learn More →
-        </Link>
-      </div>
+      <Link href={href} className="text-blue-600 font-semibold hover:text-blue-700">
+        Learn More →
+      </Link>
     </div>
   );
 }

@@ -14,6 +14,20 @@ export default function ContentHub() {
   ];
 
   return (
+    <div className="min-h-screen bg-gray-900 text-white">
+      <div className="container mx-auto px-6 py-12">
+        <h1 className="text-4xl font-bold mb-8">Content Hub</h1>
+        <div className="grid md:grid-cols-3 gap-6">
+          {featured.map((item, index) => (
+            <div key={index} className="bg-gray-800 p-6 rounded-lg">
+              <h3 className="text-xl font-semibold mb-4">{item.title}</h3>
+              <Link href={item.url} className="text-blue-400 hover:text-blue-300">
+                Read More →
+              </Link>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }

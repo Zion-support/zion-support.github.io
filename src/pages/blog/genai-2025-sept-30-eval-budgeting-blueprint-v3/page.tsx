@@ -1,4 +1,6 @@
 import React from 'react';
+import React from 'react';
+import React from 'react';
 
 const Page: React.FC = () => {
   return (
