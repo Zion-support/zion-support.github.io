@@ -13,7 +13,7 @@ export interface SEOMetadata {
   ogDescription?: string;
   ogImage?: string;
   ogType?: string;
-  twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player';
+  twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player;
   twitterTitle?: string;
   twitterDescription?: string;
   twitterImage?: string;
@@ -36,7 +36,7 @@ export const generateMetaTags = (metadata: SEOMetadata): string => {
   }
   
   if (metadata.canonicalUrl) {
-    tags.push(`<link rel="canonical" href="${escapeHtml(metadata.canonicalUrl)}" />`);
+    tags.push(`<link rel="canonical" href="${escapeHtml(metadata.canonicalUrl)}/>`);
   }
 
   // Open Graph tags
@@ -102,8 +102,7 @@ export const generateArticleStructuredData = (article: {
       name: 'Zion Tech Group',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://ziontechgroup.com/logo.png',
-      }
+        url: 'https://ziontechgroup.com/logo.png}
     }
   });
 };
@@ -128,14 +127,12 @@ export const generateOrganizationStructuredData = (): string => {
     sameAs: [
       'https://twitter.com/ziontechgroup',
       'https://linkedin.com/company/ziontechgroup',
-      'https://github.com/zion-holdings',
-    ],
+      'https://github.com/zion-holdings],
     contactPoint: {
       '@type': 'ContactPoint',
       telephone: '+1-800-ZION-TECH',
       contactType: 'Customer Service',
-      email: 'contact@ziontechgroup.com',
-    }
+      email: 'contact@ziontechgroup.com}
   });
 };
 
@@ -155,9 +152,9 @@ export const generateFAQStructuredData = (faqs: Array<{ question: string; answer
 export const generateSitemapXML = (urls: Array<{ loc: string; lastmod?: string; changefreq?: string; priority?: number }>): string => {
   const urlsXml = urls
     .map((url) => {
-      const lastmod = url.lastmod ? `<lastmod>${url.lastmod}</lastmod>` : '';
-      const changefreq = url.changefreq ? `<changefreq>${url.changefreq}</changefreq>` : '';
-      const priority = url.priority !== undefined ? `<priority>${url.priority}</priority>` : '';
+      const lastmod = url.lastmod ? `<lastmod>${url.lastmod}</lastmod>` : ';
+      const changefreq = url.changefreq ? `<changefreq>${url.changefreq}</changefreq>` : ';
+      const priority = url.priority !== undefined ? `<priority>${url.priority}</priority>` : ';
       return `<url>\n  <loc>${escapeHtml(url.loc)}</loc>\n  ${lastmod}\n  ${changefreq}\n  ${priority}\n</url>`;
     })
     .join('\n');
@@ -197,7 +194,7 @@ export const optimizeTitle = (title: string, maxLength: number = 60): string => 
   if (title.length <= maxLength) return title;
   const truncated = title.substring(0, maxLength);
   const lastSpace = truncated.lastIndexOf(' ');
-  return lastSpace > 0 ? truncated.substring(0, lastSpace) + '...' : truncated + '...';
+  return lastSpace > 0 ? truncated.substring(0, lastSpace) + '...' : truncated + '...;
 };
 
 /**
@@ -207,7 +204,7 @@ export const optimizeDescription = (description: string, maxLength: number = 160
   if (description.length <= maxLength) return description;
   const truncated = description.substring(0, maxLength);
   const lastSpace = truncated.lastIndexOf(' ');
-  return lastSpace > 0 ? truncated.substring(0, lastSpace) + '...' : truncated + '...';
+  return lastSpace > 0 ? truncated.substring(0, lastSpace) + '...' : truncated + '...;
 };
 
 /**
@@ -279,7 +276,7 @@ function escapeHtml(text: string): string {
     '<': '&lt;',
     '>': '&gt;',
     '"': '&quot;',
-    "'": '&#039;'
+    "'": '&#039;
   };
   return text.replace(/[&<>"']/g, (m) => map[m]);
 }

@@ -1,40 +1,50 @@
-import React from 'react';
 import { Link } from "react-router-dom";
 import Header from "../../components/Header";
 import { Helmet } from "react-helmet-async";
 import { ArrowLeft, TrendingUp, CheckCircle, DollarSign, Zap, Rocket, Brain } from "lucide-react";
 
-const RealTimeCognitiveAutomation: React.FC = () => {
+const RealTimeCognitiveAutomation = () => {
   return (
     <>
       <Helmet>
-        <title>Real-Time Cognitive Automation | Zion Tech Group</title>
-        <meta name="description" content="Transform your business with real-time cognitive automation. AI-powered decision engines that process data instantly and optimize workflows automatically." />
+        <title>Real-Time Cognitive Automation Platform | Transform Business Operations with AI | Zion Tech Group</title>
+        <meta name="description" content="Transform operations with Real-Time Cognitive Automation Platform. 94% accuracy, 85% cost reduction, 10x productivity gains. AI-powered workflows that learn and optimize autonomously." />
+        <meta name="keywords" content="cognitive automation, intelligent automation, RPA, AI workflows, process automation, business automation, hyperautomation" />
       </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
         <Header />
-        
-        <div className="container mx-auto px-4 py-8">
-          {/* Back Button */}
+
+        <article className="container mx-auto px-6 py-20">
+          {/* Back Link */}
           <Link 
-            to="/services" 
-            className="inline-flex items-center text-zion-cyan hover:text-white mb-8 transition-colors"
+            to="/services"
+            className="inline-flex items-center text-zion-cyan hover:text-zion-blue-light mb-8 transition-colors"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Services
           </Link>
 
           {/* Header */}
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-zion-cyan/20 rounded-full text-zion-cyan text-sm font-medium mb-6">
-              🤖 AI Automation
+          <div className="max-w-5xl mx-auto mb-16">
+            <div className="flex items-center gap-4 mb-6 flex-wrap">
+              <span className="px-4 py-2 bg-purple-500/20 text-purple-300 rounded-full text-sm font-semibold border border-purple-500/30">
+                🚀 NEW! October 2025
+              </span>
+              <span className="px-4 py-2 bg-green-500/20 text-green-300 rounded-full text-sm font-semibold border border-green-500/30">
+                🤖 AI Automation
+              </span>
+              <span className="text-zion-slate-light">Starting at $7,999/month</span>
             </div>
-            <h1 className="text-5xl font-bold text-white mb-4">
-              Real-Time Cognitive Automation
+
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
+              Real-Time Cognitive Automation Platform
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400 mt-2">
+                Transform Business Operations with Intelligent Automation
+              </span>
             </h1>
-            <p className="text-xl text-zion-slate-light mb-6 max-w-3xl mx-auto">
-              Transform your business with AI-powered decision engines that process data instantly and optimize workflows automatically.
+
+            <p className="text-xl text-zion-slate-light leading-relaxed mb-8">
+              Revolutionize your business operations with AI-powered workflows that deliver instant decision-making, self-learning automation, and 99.97% accuracy. Achieve 87% cost reduction and 10x productivity gains.
             </p>
 
             {/* Key Metrics Banner */}
@@ -322,7 +332,7 @@ const RealTimeCognitiveAutomation: React.FC = () => {
               </div>
             </section>
           </div>
-        </div>
+        </article>
       </div>
     </>
   );

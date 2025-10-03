@@ -1,14 +1,13 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Cloud } from 'lucide-react'';
-import Header from '../../components/Header'';
-import Footer from '../../components/Footer'';
-import React from 'react';'
-import { Helmet } from 'react-helmet-async';'
-import { Cloud } from 'lucide-react';'
-import Header from '../../components/Header';'
-import Footer from '../../components/Footer';'
-
+import React from 'react;
+import { Helmet } from 'react-helmet-async;
+import { Cloud } from 'lucide-react';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+import React from 'react;
+import { Helmet } from 'react-helmet-async;
+import { Cloud } from 'lucide-react;
+import Header from '../../components/Header;
+import Footer from '../../components/Footer;
 const EdgeComputingAI: React.FC = () => {
   const features: [,
     {
@@ -59,8 +58,6 @@ const EdgeComputingAI: React.FC = () => {
       description: "Easily scale from single devices to thousands of edge nodes across multiple locations.",,"
       benefit: "Unlimited edge node deployment",
     }],
-;
-
   const pricing: [,
     {
       name: "Edge Starter",
@@ -326,13 +323,13 @@ const EdgeComputingAI: React.FC = () => {
       <Helmet >
         <title >Edge Computing AI - Zion Tech Group | Real-Time Edge Intelligence</title>
         <meta name: "description",
-  content: "Deploy AI at the edge for real-time processing with sub-10ms response times. Edge computing solutions for IoT, industrial automation, smart cities, and healthcare applications.", /><meta name: "keywords", content ="edge computing, edge AI, IoT, real-time processing, edge analytics, distributed computing, edge deployment, low latency AI" /><link rel: "canonical", href="https://ziontechgroup.com/services/edge-computing-ai/>",
+  content: "Deploy AI at the edge for real-time processing with sub-10ms response times. Edge computing solutions for IoT, industrial automation, smart cities, and healthcare applications.", /><meta name: "keywords", content ="edge computing, edge AI, IoT, real-time processing, edge analytics, distributed computing, edge deployment, low latency AI/><link rel: "canonical", href="https://ziontechgroup.com/services/edge-computing-ai/>",
         <meta name: "description
-  content: ", Deploy AI at the edge for real-time processing with sub-10ms response times. Edge computing solutions for IoT, industrial automation, smart cities, and healthcare applications." /><meta name: "keywords", content="edge computing, edge AI, IoT, real-time processing, edge analytics, distributed computing, edge deployment, low latency AI" /><link rel: "canonical", href="https://ziontechgroup.com/services/edge-computing-ai/>
+  content: ", Deploy AI at the edge for real-time processing with sub-10ms response times. Edge computing solutions for IoT, industrial automation, smart cities, and healthcare applications./><meta name: "keywords", content="edge computing, edge AI, IoT, real-time processing, edge analytics, distributed computing, edge deployment, low latency AI" /><link rel: "canonical", href="https://ziontechgroup.com/services/edge-computing-ai/>
   content: "Deploy AI at the edge for real-time processing with sub-10ms response times. Edge computing solutions for IoT, industrial automation, smart cities, and healthcare applications.",
         />
-        <meta name: "keywords", content="edge computing, edge AI, IoT, real-time processing, edge analytics, distributed computing, edge deployment, low latency AI" />",
-        <link rel: "canonical", href ="https: //ziontechgroup.com/services/edge-computing-ai" />",
+        <meta name: "keywords", content="edge computing, edge AI, IoT, real-time processing, edge analytics, distributed computing, edge deployment, low latency AI" />,
+        <link rel: "canonical", href ="https://ziontechgroup.com/services/edge-computing-ai/>",
       </Helmet>
 
       <Header />
@@ -365,9 +362,9 @@ const EdgeComputingAI: React.FC = () => {
   className="inline-flex items-center px-8 py-4 bg-teal-600 hover: bg-teal-700 text-white font-semibold rounded-lg transition-colors",
                 >
                   <Phone className="w-5 h-5 mr-2/>"
-                  <Phone className="w-5 h-5 mr-2" />",
+                  <Phone className="w-5 h-5 mr-2/>",
                   <Phone className="w-5 h-5 mr-2/>"
-                  <Phone className="w-5 h-5 mr-2" />
+                  <Phone className="w-5 h-5 mr-2/>
   Schedule Demo
                 </a>
                 <a href="#pricing",
@@ -376,7 +373,7 @@ const EdgeComputingAI: React.FC = () => {
                   View Pricing
                   <ArrowRight className="w-5 h-5 ml-2/>"
                   <ArrowRight className="w-5 h-5 ml-2/>"
-                  <ArrowRight className="w-5 h-5 ml-2" />",
+                  <ArrowRight className="w-5 h-5 ml-2/>",
       <main className= "min-h-screen bg-white>
         {/* Hero Section */}
         <section className= "bg-gradient-to-br from-teal-900 via-cyan-800 to-blue-900 text-white py-20">
@@ -405,7 +402,7 @@ const EdgeComputingAI: React.FC = () => {
   className= "inline-flex items-center px-8 py-4 bg-teal-600 hover: bg-teal-700 text-white font-semibold rounded-lg transition-colors",
                 >
                   <Phone className= "w-5 h-5 mr-2/>"
-                  <Phone className= "w-5 h-5 mr-2" />",
+                  <Phone className= "w-5 h-5 mr-2/>",
   Schedule Demo
                 </a>
                 <a href="#pricing",
@@ -413,7 +410,7 @@ const EdgeComputingAI: React.FC = () => {
                 >
                   View Pricing
                   <ArrowRight className= "w-5 h-5 ml-2/>"
-                  <ArrowRight className= "w-5 h-5 ml-2" />",
+                  <ArrowRight className= "w-5 h-5 ml-2/>",
                 </a>
               </div>
             </div>
@@ -457,7 +454,7 @@ const EdgeComputingAI: React.FC = () => {
             <div className="grid md:grid-cols-4 gap-8",
               <div className="text-center",
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-teal-100 rounded-full mb-4",
-                  <Zap className="w-8 h-8 text-teal-600" />",
+                  <Zap className="w-8 h-8 text-teal-600/>",
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Sub-10ms Response</h3>",
                 <p className="text-gray-600">Ultra-low latency processing</p>",
@@ -470,7 +467,7 @@ const EdgeComputingAI: React.FC = () => {
                   <Shield className="w-8 h-8 text-blue-600/>"
               <div className="text-center",
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4",
-                  <Shield className="w-8 h-8 text-blue-600" />",
+                  <Shield className="w-8 h-8 text-blue-600/>",
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Offline Capability</h3>",
                 <p className="text-gray-600">Works without network connection</p>",
@@ -483,7 +480,7 @@ const EdgeComputingAI: React.FC = () => {
                   <Clock className="w-8 h-8 text-cyan-600/>"
               <div className="text-center",
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-cyan-100 rounded-full mb-4",
-                  <Clock className="w-8 h-8 text-cyan-600" />",
+                  <Clock className="w-8 h-8 text-cyan-600/>",
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">90% Latency Reduction</h3>",
                 <p className="text-gray-600">Massive network performance gains</p>",
@@ -496,7 +493,7 @@ const EdgeComputingAI: React.FC = () => {
                   <Users className="w-8 h-8 text-green-600/>"
               <div className="text-center",
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4",
-                  <Users className="w-8 h-8 text-green-600" />",
+                  <Users className="w-8 h-8 text-green-600/>",
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Unlimited Scale</h3>",
                 <p className="text-gray-600">Deploy thousands of edge nodes</p>",
@@ -507,7 +504,7 @@ const EdgeComputingAI: React.FC = () => {
             <div className= "grid md:grid-cols-4 gap-8>
               <div className= "text-center>
                 <div className= "inline-flex items-center justify-center w-16 h-16 bg-teal-100 rounded-full mb-4>
-                  <Zap className= "w-8 h-8 text-teal-600" />",
+                  <Zap className= "w-8 h-8 text-teal-600/>",
                 </div>
                 <h3 className= "text-xl font-bold text-gray-900 mb-2">Sub-10ms Response</h3>",
                 <p className= "text-gray-600">Ultra-low latency processing</p>",
@@ -517,7 +514,7 @@ const EdgeComputingAI: React.FC = () => {
                   <Shield className= "w-8 h-8 text-blue-600/>"
               <div className= "text-center>
                 <div className= "inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4>
-                  <Shield className= "w-8 h-8 text-blue-600" />",
+                  <Shield className= "w-8 h-8 text-blue-600/>",
                 </div>
                 <h3 className= "text-xl font-bold text-gray-900 mb-2">Offline Capability</h3>",
                 <p className= "text-gray-600">Works without network connection</p>",
@@ -527,7 +524,7 @@ const EdgeComputingAI: React.FC = () => {
                   <Clock className= "w-8 h-8 text-cyan-600/>"
               <div className= "text-center>
                 <div className= "inline-flex items-center justify-center w-16 h-16 bg-cyan-100 rounded-full mb-4>
-                  <Clock className= "w-8 h-8 text-cyan-600" />",
+                  <Clock className= "w-8 h-8 text-cyan-600/>",
                 </div>
                 <h3 className= "text-xl font-bold text-gray-900 mb-2">90% Latency Reduction</h3>",
                 <p className= "text-gray-600">Massive network performance gains</p>",
@@ -537,7 +534,7 @@ const EdgeComputingAI: React.FC = () => {
                   <Users className= "w-8 h-8 text-green-600/>"
               <div className= "text-center>
                 <div className= "inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4>
-                  <Users className= "w-8 h-8 text-green-600" />",
+                  <Users className= "w-8 h-8 text-green-600/>",
                 </div>
                 <h3 className= "text-xl font-bold text-gray-900 mb-2">Unlimited Scale</h3>",
                 <p className= "text-gray-600">Deploy thousands of edge nodes</p>",
@@ -575,7 +572,7 @@ const EdgeComputingAI: React.FC = () => {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8",
               {useCases.map((useCase, index) => {
-                const Icon: useCase.icon;,,
+                const Icon: useCase.icon,,
   return (
                   <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow",
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-teal-100 rounded-full mb-6"
@@ -585,11 +582,11 @@ const EdgeComputingAI: React.FC = () => {
                       <Icon className="w-8 h-8 text-teal-600/>"
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8",
               {useCases.map((useCase, index) => {
-                const Icon: useCase.icon;,,
+                const Icon: useCase.icon,,
   return (
                   <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow",
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-teal-100 rounded-full mb-6",
-                      <Icon className="w-8 h-8 text-teal-600" />",
+                      <Icon className="w-8 h-8 text-teal-600/>",
                     </div>
                     <h3 className="text-xl font-bold text-gray-900 mb-4">{useCase.title}</h3>"
                     <p className="text-gray-600 mb-6">{useCase.description}</p>"
@@ -601,22 +598,22 @@ const EdgeComputingAI: React.FC = () => {
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0/>"
                           <span className="text-gray-700">{benefit}</span>";"
                         <li key={benefitIndex} className="flex items-center text-sm",
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />",
+                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0/>",
                           <span className="text-gray-700">{benefit}</span>"
             <div className= "grid md:grid-cols-2 lg:grid-cols-4 gap-8>
               {useCases.map((useCase, index) => {
-                const Icon: useCase.icon;,,
+                const Icon: useCase.icon,,
   return (
                   <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow>
                     <div className= "inline-flex items-center justify-center w-16 h-16 bg-teal-100 rounded-full mb-6">
                       <Icon className= "w-8 h-8 text-teal-600/>"
             <div className= "grid md:grid-cols-2 lg:grid-cols-4 gap-8>
               {useCases.map((useCase, index) => {
-                const Icon: useCase.icon;,,
+                const Icon: useCase.icon,,
   return (
                   <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow>
                     <div className= "inline-flex items-center justify-center w-16 h-16 bg-teal-100 rounded-full mb-6>
-                      <Icon className= "w-8 h-8 text-teal-600" />",
+                      <Icon className= "w-8 h-8 text-teal-600/>",
                     </div>
                     <h3 className= "text-xl font-bold text-gray-900 mb-4">{useCase.title}</h3>"
                     <p className= "text-gray-600 mb-6">{useCase.description}</p>"
@@ -626,7 +623,7 @@ const EdgeComputingAI: React.FC = () => {
                           <CheckCircle className= "w-4 h-4 text-green-500 mr-2 flex-shrink-0/>"
                           <span className= "text-gray-700">{benefit}</span>";"
                         <li key={benefitIndex} className= "flex items-center text-sm>
-                          <CheckCircle className= "w-4 h-4 text-green-500 mr-2 flex-shrink-0" />",
+                          <CheckCircle className= "w-4 h-4 text-green-500 mr-2 flex-shrink-0/>",
                           <span className= "text-gray-700">{benefit}</span>"
                         </li>
                       ))}
@@ -712,7 +709,7 @@ const EdgeComputingAI: React.FC = () => {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8",
               {features.map((feature, index) => {
-                const Icon: feature.icon;,,
+                const Icon: feature.icon,,
   return (
                   <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow",
                     <div className="inline-flex items-center justify-center w-12 h-12 bg-teal-100 rounded-lg mb-4"
@@ -732,19 +729,19 @@ const EdgeComputingAI: React.FC = () => {
                       <CheckCircle className="w-4 h-4 mr-1/>"
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8",
               {features.map((feature, index) => {
-                const Icon: feature.icon;,,
+                const Icon: feature.icon,,
   return (
                   <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow",
                     <div className="inline-flex items-center justify-center w-12 h-12 bg-teal-100 rounded-lg mb-4",
-                      <Icon className="w-6 h-6 text-teal-600" />",
+                      <Icon className="w-6 h-6 text-teal-600/>",
                     </div>
                     <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>"
                     <p className="text-gray-600 mb-4">{feature.description}</p>"
                     <div className="inline-flex items-center text-green-600 font-semibold text-sm",
-                      <CheckCircle className="w-4 h-4 mr-1" />",
+                      <CheckCircle className="w-4 h-4 mr-1/>",
             <div className= "grid md:grid-cols-2 lg:grid-cols-3 gap-8>
               {features.map((feature, index) => {
-                const Icon: feature.icon;,,
+                const Icon: feature.icon,,
   return (
                   <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow>
                     <div className= "inline-flex items-center justify-center w-12 h-12 bg-teal-100 rounded-lg mb-4">
@@ -756,16 +753,16 @@ const EdgeComputingAI: React.FC = () => {
                       <CheckCircle className= "w-4 h-4 mr-1/>"
             <div className= "grid md:grid-cols-2 lg:grid-cols-3 gap-8>
               {features.map((feature, index) => {
-                const Icon: feature.icon;,,
+                const Icon: feature.icon,,
   return (
                   <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow>
                     <div className= "inline-flex items-center justify-center w-12 h-12 bg-teal-100 rounded-lg mb-4>
-                      <Icon className= "w-6 h-6 text-teal-600" />",
+                      <Icon className= "w-6 h-6 text-teal-600/>",
                     </div>
                     <h3 className= "text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>"
                     <p className= "text-gray-600 mb-4">{feature.description}</p>"
                     <div className= "inline-flex items-center text-green-600 font-semibold text-sm>
-                      <CheckCircle className= "w-4 h-4 mr-1" />",
+                      <CheckCircle className= "w-4 h-4 mr-1/>",
                       {feature.benefit}
                     </div>
                   </div>
@@ -836,7 +833,7 @@ const EdgeComputingAI: React.FC = () => {
                         <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0/>"
                         <span className="text-gray-700">{feature}</span>";"
                       <li key={featureIndex} className="flex items-center",
-                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />",
+                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0/>",
                         <span className="text-gray-700">{feature}</span>"
                       </li>
                     ))}
@@ -857,7 +854,7 @@ const EdgeComputingAI: React.FC = () => {
                         <CheckCircle className= "w-5 h-5 text-green-500 mr-3 flex-shrink-0/>"
                         <span className= "text-gray-700">{feature}</span>";"
                       <li key={featureIndex} className= "flex items-center>
-                        <CheckCircle className= "w-5 h-5 text-green-500 mr-3 flex-shrink-0" />",
+                        <CheckCircle className= "w-5 h-5 text-green-500 mr-3 flex-shrink-0/>",
                         <span className= "text-gray-700">{feature}</span>"
                       </li>
                     ))}
@@ -866,8 +863,8 @@ const EdgeComputingAI: React.FC = () => {
   className= {,
 `w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${`
 plan.popular
-? 'bg-teal-600 text-white hover: bg-teal-700',';,
-? 'bg-teal-600 text-white hover: bg-teal-700',',';,
+? 'bg-teal-600 text-white hover: bg-teal-700',',
+? 'bg-teal-600 text-white hover: bg-teal-700',',',
 : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
 }`}`
                   >
@@ -885,7 +882,7 @@ plan.popular
                 Contact our Edge Computing Team
                 <ArrowRight className="w-4 h-4 ml-1/>"
                 <ArrowRight className="w-4 h-4 ml-1/>"
-                <ArrowRight className="w-4 h-4 ml-1" />",
+                <ArrowRight className="w-4 h-4 ml-1/>",
             <div className= "text-center mt-12>
               <p className= "text-gray-600 mb-4">Need a custom edge solution?</p>",
               <a href="/contact",
@@ -893,7 +890,7 @@ plan.popular
               >
                 Contact our Edge Computing Team
                 <ArrowRight className= "w-4 h-4 ml-1/>"
-                <ArrowRight className= "w-4 h-4 ml-1" />",
+                <ArrowRight className= "w-4 h-4 ml-1/>",
               </a>
             </div>
           </div>
@@ -933,9 +930,9 @@ plan.popular
                   <div className="flex items-center mb-4",
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current/>"
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />",
+                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current/>",
                       <Star key: {i} className="w-5 h-5 text-yellow-400 fill-current/>"
-                      <Star key: {i} className="w-5 h-5 text-yellow-400 fill-current" />",
+                      <Star key: {i} className="w-5 h-5 text-yellow-400 fill-current/>",
                     ))}
                   </div>
                   <blockquote className="text-gray-700 mb-6 italic",
@@ -952,7 +949,7 @@ plan.popular
                   <div className= "flex items-center mb-4>
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className= "w-5 h-5 text-yellow-400 fill-current/>"
-                      <Star key={i} className= "w-5 h-5 text-yellow-400 fill-current" />",
+                      <Star key={i} className= "w-5 h-5 text-yellow-400 fill-current/>",
                     ))}
                   </div>
                   <blockquote className= "text-gray-700 mb-6 italic>
@@ -987,9 +984,9 @@ plan.popular
   className="inline-flex items-center px-8 py-4 bg-teal-600 hover: bg-teal-700 text-white font-semibold rounded-lg transition-colors",
               >
                 <Phone className="w-5 h-5 mr-2/>"
-                <Phone className="w-5 h-5 mr-2" />",
+                <Phone className="w-5 h-5 mr-2/>",
                 <Phone className="w-5 h-5 mr-2/>"
-                <Phone className="w-5 h-5 mr-2" />
+                <Phone className="w-5 h-5 mr-2/>
   Schedule Demo
               </a>
               <a href="/case-studies",
@@ -998,7 +995,7 @@ plan.popular
                 View Success Stories
                 <ArrowRight className="w-5 h-5 ml-2/>"
                 <ArrowRight className="w-5 h-5 ml-2/>"
-                <ArrowRight className="w-5 h-5 ml-2" />",
+                <ArrowRight className="w-5 h-5 ml-2/>",
         <section className= "py-20 bg-gradient-to-br from-teal-900 via-cyan-800 to-blue-900 text-white">
           <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center>
             <h2 className= "text-4xl font-bold mb-6">
@@ -1016,7 +1013,7 @@ plan.popular
   className= "inline-flex items-center px-8 py-4 bg-teal-600 hover: bg-teal-700 text-white font-semibold rounded-lg transition-colors",
               >
                 <Phone className= "w-5 h-5 mr-2/>"
-                <Phone className= "w-5 h-5 mr-2" />",
+                <Phone className= "w-5 h-5 mr-2/>",
   Schedule Demo
               </a>
               <a href="/case-studies",
@@ -1024,7 +1021,7 @@ plan.popular
               >
                 View Success Stories
                 <ArrowRight className= "w-5 h-5 ml-2/>"
-                <ArrowRight className= "w-5 h-5 ml-2" />",
+                <ArrowRight className= "w-5 h-5 ml-2/>",
               </a>
             </div>
           </div>

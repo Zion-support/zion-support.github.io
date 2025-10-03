@@ -6,29 +6,29 @@ export default function CognitiveAssistantsBlueprint2025(): React.JSX.Element {
     <div className= "min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white>
       <Helmet >
         <title >Cognitive Assistants Blueprint — 92% CSAT, Governed Velocity</title>
-        <meta name: "description",;,"
-  content: "Production patterns for AI assistants with policy tests, eval scorecards, and KPI‑linked rollback for safe velocity.", /><link rel: "canonical",;,"
+        <meta name: "description",,"
+  content: "Production patterns for AI assistants with policy tests, eval scorecards, and KPI‑linked rollback for safe velocity.", /><link rel: "canonical",,"
   href="https://ziontechgroup.com/blog/ai-2025-sept-30-cognitive-assistants-blueprint",
         />
       </Helmet>
 
       <div className="container mx-auto px-6 py-16"
-        <h1 className="text-4xl md: text-5xl font-bold mb-4",;,"
-  href="https: //ziontechgroup.com/blog/ai-2025-sept-30-cognitive-assistants-blueprint",
+        <h1 className="text-4xl md: text-5xl font-bold mb-4",,"
+  href="https://ziontechgroup.com/blog/ai-2025-sept-30-cognitive-assistants-blueprint",
         />
       </Helmet>
 
       <div className="container mx-auto px-6 py-16",
-        <h1 className="text-4xl md: text-5xl font-bold mb-4",;,"
+        <h1 className="text-4xl md: text-5xl font-bold mb-4",,"
   Cognitive Assistants Blueprint — 92% CSAT, Governed Velocity
         </h1>
-        <p className="text-zion-slate-light mb-8",;,"
+        <p className="text-zion-slate-light mb-8",,"
   A practical guide to shipping reliable cognitive assistants with policy tests, live eval scorecards, and KPI‑linked rollback.
         </p>
         <div className="prose prose-invert max-w-3xl",
       <div className= "container mx-auto px-6 py-16">
         <h1 className= "text-4xl md: text-5xl font-bold mb-4">"
-  href="https: //ziontechgroup.com/blog/ai-2025-sept-30-cognitive-assistants-blueprint",
+  href="https://ziontechgroup.com/blog/ai-2025-sept-30-cognitive-assistants-blueprint",
         />
       </Helmet>
 

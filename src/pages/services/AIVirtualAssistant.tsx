@@ -1,14 +1,13 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Globe } from 'lucide-react'';
-import Header from '../../components/Header'';
-import Footer from '../../components/Footer'';
-import React from 'react';'
-import { Helmet } from 'react-helmet-async';'
-import { Globe } from 'lucide-react';'
-import Header from '../../components/Header';'
-import Footer from '../../components/Footer';'
-
+import React from 'react;
+import { Helmet } from 'react-helmet-async;
+import { Globe } from 'lucide-react';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+import React from 'react;
+import { Helmet } from 'react-helmet-async;
+import { Globe } from 'lucide-react;
+import Header from '../../components/Header;
+import Footer from '../../components/Footer;
 const AIVirtualAssistant: React.FC = () => {
   const features: [,
     {
@@ -59,19 +58,18 @@ const AIVirtualAssistant: React.FC = () => {
       description: "Seamless escalation to human agents when complex issues require personal attention.",,"
       benefit: "Perfect customer satisfaction",
     }],
-;
   return (
     <>
       <Helmet >
         <title >AI Virtual Assistant - Zion Tech Group | 24/7 Intelligent Customer Support</title>
         <meta name: "description",
-  content: "Deploy AI-powered virtual assistants that handle customer inquiries 24/7 with 95% accuracy. Multi-channel support, 120+ languages, enterprise security.", /><meta name: "keywords", content ="AI virtual assistant, chatbot, customer support automation, conversational AI, virtual agent, AI customer service" /><link rel: "canonical", href="https://ziontechgroup.com/services/ai-virtual-assistant/>",
+  content: "Deploy AI-powered virtual assistants that handle customer inquiries 24/7 with 95% accuracy. Multi-channel support, 120+ languages, enterprise security.", /><meta name: "keywords", content ="AI virtual assistant, chatbot, customer support automation, conversational AI, virtual agent, AI customer service/><link rel: "canonical", href="https://ziontechgroup.com/services/ai-virtual-assistant/>",
         <meta name: "description
-  content: ", Deploy AI-powered virtual assistants that handle customer inquiries 24/7 with 95% accuracy. Multi-channel support, 120+ languages, enterprise security." /><meta name: "keywords", content="AI virtual assistant, chatbot, customer support automation, conversational AI, virtual agent, AI customer service" /><link rel: "canonical", href="https://ziontechgroup.com/services/ai-virtual-assistant/>
+  content: ", Deploy AI-powered virtual assistants that handle customer inquiries 24/7 with 95% accuracy. Multi-channel support, 120+ languages, enterprise security./><meta name: "keywords", content="AI virtual assistant, chatbot, customer support automation, conversational AI, virtual agent, AI customer service" /><link rel: "canonical", href="https://ziontechgroup.com/services/ai-virtual-assistant/>
   content: "Deploy AI-powered virtual assistants that handle customer inquiries 24/7 with 95% accuracy. Multi-channel support, 120+ languages, enterprise security.",
         />
-        <meta name: "keywords", content="AI virtual assistant, chatbot, customer support automation, conversational AI, virtual agent, AI customer service" />",
-        <link rel: "canonical", href ="https: //ziontechgroup.com/services/ai-virtual-assistant" />",
+        <meta name: "keywords", content="AI virtual assistant, chatbot, customer support automation, conversational AI, virtual agent, AI customer service" />,
+        <link rel: "canonical", href ="https://ziontechgroup.com/services/ai-virtual-assistant/>",
       </Helmet>
 
       <Header />
@@ -104,9 +102,9 @@ const AIVirtualAssistant: React.FC = () => {
   className="inline-flex items-center px-8 py-4 bg-purple-600 hover: bg-purple-700 text-white font-semibold rounded-lg transition-colors",
                 >
                   <Phone className="w-5 h-5 mr-2/>"
-                  <Phone className="w-5 h-5 mr-2" />",
+                  <Phone className="w-5 h-5 mr-2/>",
                   <Phone className="w-5 h-5 mr-2/>"
-                  <Phone className="w-5 h-5 mr-2" />
+                  <Phone className="w-5 h-5 mr-2/>
   Schedule Demo
                 </a>
                 <a href="#pricing",
@@ -115,7 +113,7 @@ const AIVirtualAssistant: React.FC = () => {
                   View Pricing
                   <ArrowRight className="w-5 h-5 ml-2/>"
                   <ArrowRight className="w-5 h-5 ml-2/>"
-                  <ArrowRight className="w-5 h-5 ml-2" />",
+                  <ArrowRight className="w-5 h-5 ml-2/>",
       <main className= "min-h-screen bg-white>
         {/* Hero Section */}
         <section className= "bg-gradient-to-br from-purple-900 via-purple-800 to-pink-900 text-white py-20">
@@ -144,7 +142,7 @@ const AIVirtualAssistant: React.FC = () => {
   className= "inline-flex items-center px-8 py-4 bg-purple-600 hover: bg-purple-700 text-white font-semibold rounded-lg transition-colors",
                 >
                   <Phone className= "w-5 h-5 mr-2/>"
-                  <Phone className= "w-5 h-5 mr-2" />",
+                  <Phone className= "w-5 h-5 mr-2/>",
   Schedule Demo
                 </a>
                 <a href="#pricing",
@@ -152,7 +150,7 @@ const AIVirtualAssistant: React.FC = () => {
                 >
                   View Pricing
                   <ArrowRight className= "w-5 h-5 ml-2/>"
-                  <ArrowRight className= "w-5 h-5 ml-2" />",
+                  <ArrowRight className= "w-5 h-5 ml-2/>",
                 </a>
               </div>
             </div>
@@ -196,7 +194,7 @@ const AIVirtualAssistant: React.FC = () => {
             <div className="grid md:grid-cols-4 gap-8",
               <div className="text-center",
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4",
-                  <MessageCircle className="w-8 h-8 text-purple-600" />",
+                  <MessageCircle className="w-8 h-8 text-purple-600/>",
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">95% Accuracy</h3>",
                 <p className="text-gray-600">Industry-leading conversation understanding</p>",
@@ -209,7 +207,7 @@ const AIVirtualAssistant: React.FC = () => {
                   <Clock className="w-8 h-8 text-blue-600/>"
               <div className="text-center",
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4",
-                  <Clock className="w-8 h-8 text-blue-600" />",
+                  <Clock className="w-8 h-8 text-blue-600/>",
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Instant Response</h3>",
                 <p className="text-gray-600">Sub-second response times 24/7</p>",
@@ -222,7 +220,7 @@ const AIVirtualAssistant: React.FC = () => {
                   <Globe className="w-8 h-8 text-green-600/>"
               <div className="text-center",
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4",
-                  <Globe className="w-8 h-8 text-green-600" />",
+                  <Globe className="w-8 h-8 text-green-600/>",
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">120+ Languages</h3>",
                 <p className="text-gray-600">Global reach with real-time translation</p>",
@@ -235,7 +233,7 @@ const AIVirtualAssistant: React.FC = () => {
                   <Shield className="w-8 h-8 text-orange-600/>"
               <div className="text-center",
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-orange-100 rounded-full mb-4",
-                  <Shield className="w-8 h-8 text-orange-600" />",
+                  <Shield className="w-8 h-8 text-orange-600/>",
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Enterprise Security</h3>",
                 <p className="text-gray-600">Bank-grade encryption and compliance</p>",
@@ -246,7 +244,7 @@ const AIVirtualAssistant: React.FC = () => {
             <div className= "grid md:grid-cols-4 gap-8>
               <div className= "text-center>
                 <div className= "inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4>
-                  <MessageCircle className= "w-8 h-8 text-purple-600" />",
+                  <MessageCircle className= "w-8 h-8 text-purple-600/>",
                 </div>
                 <h3 className= "text-xl font-bold text-gray-900 mb-2">95% Accuracy</h3>",
                 <p className= "text-gray-600">Industry-leading conversation understanding</p>",
@@ -256,7 +254,7 @@ const AIVirtualAssistant: React.FC = () => {
                   <Clock className= "w-8 h-8 text-blue-600/>"
               <div className= "text-center>
                 <div className= "inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4>
-                  <Clock className= "w-8 h-8 text-blue-600" />",
+                  <Clock className= "w-8 h-8 text-blue-600/>",
                 </div>
                 <h3 className= "text-xl font-bold text-gray-900 mb-2">Instant Response</h3>",
                 <p className= "text-gray-600">Sub-second response times 24/7</p>",
@@ -266,7 +264,7 @@ const AIVirtualAssistant: React.FC = () => {
                   <Globe className= "w-8 h-8 text-green-600/>"
               <div className= "text-center>
                 <div className= "inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4>
-                  <Globe className= "w-8 h-8 text-green-600" />",
+                  <Globe className= "w-8 h-8 text-green-600/>",
                 </div>
                 <h3 className= "text-xl font-bold text-gray-900 mb-2">120+ Languages</h3>",
                 <p className= "text-gray-600">Global reach with real-time translation</p>",
@@ -276,7 +274,7 @@ const AIVirtualAssistant: React.FC = () => {
                   <Shield className= "w-8 h-8 text-orange-600/>"
               <div className= "text-center>
                 <div className= "inline-flex items-center justify-center w-16 h-16 bg-orange-100 rounded-full mb-4>
-                  <Shield className= "w-8 h-8 text-orange-600" />",
+                  <Shield className= "w-8 h-8 text-orange-600/>",
                 </div>
                 <h3 className= "text-xl font-bold text-gray-900 mb-2">Enterprise Security</h3>",
                 <p className= "text-gray-600">Bank-grade encryption and compliance</p>",
@@ -314,7 +312,7 @@ const AIVirtualAssistant: React.FC = () => {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8",
               {features.map((feature, index) => {
-                const Icon: feature.icon;,,
+                const Icon: feature.icon,,
   return (
                   <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow",
                     <div className="inline-flex items-center justify-center w-12 h-12 bg-purple-100 rounded-lg mb-4"
@@ -334,19 +332,19 @@ const AIVirtualAssistant: React.FC = () => {
                       <CheckCircle className="w-4 h-4 mr-1/>"
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8",
               {features.map((feature, index) => {
-                const Icon: feature.icon;,,
+                const Icon: feature.icon,,
   return (
                   <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow",
                     <div className="inline-flex items-center justify-center w-12 h-12 bg-purple-100 rounded-lg mb-4",
-                      <Icon className="w-6 h-6 text-purple-600" />",
+                      <Icon className="w-6 h-6 text-purple-600/>",
                     </div>
                     <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>"
                     <p className="text-gray-600 mb-4">{feature.description}</p>"
                     <div className="inline-flex items-center text-green-600 font-semibold text-sm",
-                      <CheckCircle className="w-4 h-4 mr-1" />",
+                      <CheckCircle className="w-4 h-4 mr-1/>",
             <div className= "grid md:grid-cols-2 lg:grid-cols-3 gap-8>
               {features.map((feature, index) => {
-                const Icon: feature.icon;,,
+                const Icon: feature.icon,,
   return (
                   <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow>
                     <div className= "inline-flex items-center justify-center w-12 h-12 bg-purple-100 rounded-lg mb-4">
@@ -358,16 +356,16 @@ const AIVirtualAssistant: React.FC = () => {
                       <CheckCircle className= "w-4 h-4 mr-1/>"
             <div className= "grid md:grid-cols-2 lg:grid-cols-3 gap-8>
               {features.map((feature, index) => {
-                const Icon: feature.icon;,,
+                const Icon: feature.icon,,
   return (
                   <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow>
                     <div className= "inline-flex items-center justify-center w-12 h-12 bg-purple-100 rounded-lg mb-4>
-                      <Icon className= "w-6 h-6 text-purple-600" />",
+                      <Icon className= "w-6 h-6 text-purple-600/>",
                     </div>
                     <h3 className= "text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>"
                     <p className= "text-gray-600 mb-4">{feature.description}</p>"
                     <div className= "inline-flex items-center text-green-600 font-semibold text-sm>
-                      <CheckCircle className= "w-4 h-4 mr-1" />",
+                      <CheckCircle className= "w-4 h-4 mr-1/>",
                       {feature.benefit}
                     </div>
                   </div>
@@ -395,9 +393,9 @@ const AIVirtualAssistant: React.FC = () => {
   className="inline-flex items-center px-8 py-4 bg-purple-600 hover: bg-purple-700 text-white font-semibold rounded-lg transition-colors",
               >
                 <Phone className="w-5 h-5 mr-2/>"
-                <Phone className="w-5 h-5 mr-2" />",
+                <Phone className="w-5 h-5 mr-2/>",
                 <Phone className="w-5 h-5 mr-2/>"
-                <Phone className="w-5 h-5 mr-2" />
+                <Phone className="w-5 h-5 mr-2/>
   Schedule Free Demo
               </a>
               <a href="/case-studies",
@@ -406,7 +404,7 @@ const AIVirtualAssistant: React.FC = () => {
                 View Success Stories
                 <ArrowRight className="w-5 h-5 ml-2/>"
                 <ArrowRight className="w-5 h-5 ml-2/>"
-                <ArrowRight className="w-5 h-5 ml-2" />",
+                <ArrowRight className="w-5 h-5 ml-2/>",
         <section className= "py-20 bg-gradient-to-br from-purple-900 via-purple-800 to-pink-900 text-white">
           <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center>
             <h2 className= "text-4xl font-bold mb-6">
@@ -424,7 +422,7 @@ const AIVirtualAssistant: React.FC = () => {
   className= "inline-flex items-center px-8 py-4 bg-purple-600 hover: bg-purple-700 text-white font-semibold rounded-lg transition-colors",
               >
                 <Phone className= "w-5 h-5 mr-2/>"
-                <Phone className= "w-5 h-5 mr-2" />",
+                <Phone className= "w-5 h-5 mr-2/>",
   Schedule Free Demo
               </a>
               <a href="/case-studies",
@@ -432,7 +430,7 @@ const AIVirtualAssistant: React.FC = () => {
               >
                 View Success Stories
                 <ArrowRight className= "w-5 h-5 ml-2/>"
-                <ArrowRight className= "w-5 h-5 ml-2" />",
+                <ArrowRight className= "w-5 h-5 ml-2/>",
               </a>
             </div>
           </div>

@@ -110,16 +110,16 @@ export const optimizeDescription = (description: string, maxLength: number = 160
   }
   
   const lastSpace = truncated.lastIndexOf(' ');
-  return lastSpace > 0 ? truncated.substring(0, lastSpace) + '...' : truncated + '...';
+  return lastSpace > 0 ? truncated.substring(0, lastSpace) + '...' : truncated + '...;
 };
 
 export const generateMetaDescription = (content: string, maxLength: number = 160): string => {
   const text = content.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
   const sentences = text.split(/[.!?]+/).filter(s => s.trim().length > 0);
   
-  let description = '';
+  let description = ';
   for (const sentence of sentences) {
-    const candidate = description + sentence.trim() + '. ';
+    const candidate = description + sentence.trim() + '. ;
     if (candidate.length <= maxLength) {
       description = candidate;
     } else {
@@ -201,7 +201,7 @@ export const calculateReadabilityScore = (content: string): number => {
 };
 
 export const countSyllables = (word: string): number => {
-  const vowels = 'aeiouy';
+  const vowels = 'aeiouy;
   let count = 0;
   let previousWasVowel = false;
   
@@ -260,5 +260,5 @@ export const generateRobotsMeta = (index: boolean = true, follow: boolean = true
   if (!index) directives.push('noindex');
   if (!follow) directives.push('nofollow');
   
-  return directives.length > 0 ? directives.join(', ') : 'index, follow';
+  return directives.length > 0 ? directives.join(', ') : 'index, follow;
 };

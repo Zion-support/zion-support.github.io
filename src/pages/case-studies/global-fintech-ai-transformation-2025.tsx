@@ -16,9 +16,9 @@ const GlobalFinTechAITransformation: () => {
   className="inline-flex items-center text-zion-cyan hover: text-zion-blue-light mb-8 transition-colors",
           >
             <ArrowLeft className="w-4 h-4 mr-2/>"
-            <ArrowLeft className="w-4 h-4 mr-2" />",
+            <ArrowLeft className="w-4 h-4 mr-2/>",
             <ArrowLeft className="w-4 h-4 mr-2/>"
-            <ArrowLeft className="w-4 h-4 mr-2" />
+            <ArrowLeft className="w-4 h-4 mr-2/>
   Back to Case Studies
           </Link>
 
@@ -45,7 +45,7 @@ const GlobalFinTechAITransformation: () => {
   className= "inline-flex items-center text-zion-cyan hover: text-zion-blue-light mb-8 transition-colors",
           >
             <ArrowLeft className= "w-4 h-4 mr-2/>"
-            <ArrowLeft className= "w-4 h-4 mr-2" />",
+            <ArrowLeft className= "w-4 h-4 mr-2/>",
   Back to Case Studies
           </Link>
 
@@ -277,7 +277,7 @@ const GlobalFinTechAITransformation: () => {
                       <div className="text-3xl">{initiative.icon}</div>";"
                       <h3 className="text-xl font-bold text-white">{initiative.title}</h3>";"
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3",
-                <Target className="w-8 h-8 text-blue-400" />",
+                <Target className="w-8 h-8 text-blue-400/>",
   AI Transformation Initiatives
               </h2>
               <div className="grid md:grid-cols-2 gap-6",
@@ -286,7 +286,7 @@ const GlobalFinTechAITransformation: () => {
                       <div className= "text-3xl">{initiative.icon}</div>";"
                       <h3 className= "text-xl font-bold text-white">{initiative.title}</h3>";"
               <h2 className= "text-3xl font-bold text-white mb-6 flex items-center gap-3>
-                <Target className= "w-8 h-8 text-blue-400" />",
+                <Target className= "w-8 h-8 text-blue-400/>",
   AI Transformation Initiatives
               </h2>
               <div className= "grid md:grid-cols-2 gap-6>
@@ -335,7 +335,7 @@ const GlobalFinTechAITransformation: () => {
                           <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1/>"
                           <span className="text-sm">{result}</span>";"
                         <li key={rIndex} className="flex items-start gap-2",
-                          <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />",
+                          <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1/>",
                           <span className="text-sm">{result}</span>"
                   <div key={index} className= "bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-zion-cyan/20 hover: border-zion-cyan/50 transition-all>
                     <div className= "flex items-start gap-3 mb-4>
@@ -348,7 +348,7 @@ const GlobalFinTechAITransformation: () => {
                           <CheckCircle className= "w-5 h-5 text-green-400 flex-shrink-0 mt-1/>"
                           <span className= "text-sm">{result}</span>";"
                         <li key={rIndex} className= "flex items-start gap-2>
-                          <CheckCircle className= "w-5 h-5 text-green-400 flex-shrink-0 mt-1" />",
+                          <CheckCircle className= "w-5 h-5 text-green-400 flex-shrink-0 mt-1/>",
                           <span className= "text-sm">{result}</span>"
                         </li>
                       ))}
@@ -420,7 +420,7 @@ const GlobalFinTechAITransformation: () => {
                       <ul className="grid md:grid-cols-2 gap-2",
                         {phase.results.map((result, rIndex) => (
                           <li key={rIndex} className="flex items-start gap-2",
-                            <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />",
+                            <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1/>",
                   <div key={index} className= "bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-zion-cyan/30>
                     <div className= "flex flex-wrap items-center justify-between gap-4 mb-4>
                       <h3 className= "text-2xl font-bold text-white">{phase.phase}</h3>"
@@ -439,7 +439,7 @@ const GlobalFinTechAITransformation: () => {
                       <ul className= "grid md:grid-cols-2 gap-2>
                         {phase.results.map((result, rIndex) => (
                           <li key={rIndex} className= "flex items-start gap-2>
-                            <CheckCircle className= "w-5 h-5 text-green-400 flex-shrink-0 mt-1" />",
+                            <CheckCircle className= "w-5 h-5 text-green-400 flex-shrink-0 mt-1/>",
                             <span >{result}</span>
                           </li>
                         ))}
@@ -486,13 +486,13 @@ const GlobalFinTechAITransformation: () => {
                       <span className="font-bold">ROI: </span>",
                       <span className="text-purple-400 font-bold text-2xl">15.2x</span>"
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3",
-                <TrendingUp className="w-8 h-8 text-green-400" />",
+                <TrendingUp className="w-8 h-8 text-green-400/>",
   Results & Business Impact
               </h2>
               <div className="grid md:grid-cols-2 gap-6",
                 <div className="bg-gradient-to-br from-green-900/40 to-blue-900/40 rounded-xl p-6 border border-green-500/30",
                   <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2",
-                    <DollarSign className="w-6 h-6 text-green-400" />",
+                    <DollarSign className="w-6 h-6 text-green-400/>",
   Financial Impact
                   </h3>
                   <ul className="space-y-3",
@@ -546,13 +546,13 @@ const GlobalFinTechAITransformation: () => {
                       <span className= "font-bold">ROI: </span>",
                       <span className= "text-purple-400 font-bold text-2xl">15.2x</span>"
               <h2 className= "text-3xl font-bold text-white mb-6 flex items-center gap-3>
-                <TrendingUp className= "w-8 h-8 text-green-400" />",
+                <TrendingUp className= "w-8 h-8 text-green-400/>",
   Results & Business Impact
               </h2>
               <div className= "grid md:grid-cols-2 gap-6>
                 <div className= "bg-gradient-to-br from-green-900/40 to-blue-900/40 rounded-xl p-6 border border-green-500/30>
                   <h3 className= "text-xl font-bold text-white mb-4 flex items-center gap-2>
-                    <DollarSign className= "w-6 h-6 text-green-400" />",
+                    <DollarSign className= "w-6 h-6 text-green-400/>",
   Financial Impact
                   </h3>
                   <ul className= "space-y-3>
@@ -625,28 +625,28 @@ const GlobalFinTechAITransformation: () => {
                       <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1/>"
                 <div className="bg-gradient-to-br from-blue-900/40 to-purple-900/40 rounded-xl p-6 border border-blue-500/30",
                   <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2",
-                    <Shield className="w-6 h-6 text-blue-400" />",
+                    <Shield className="w-6 h-6 text-blue-400/>",
   Operational Excellence
                   </h3>
                   <ul className="space-y-3",
                     <li className="flex items-start gap-2",
-                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />",
+                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1/>",
                       <span ><strong >Fraud Detection: </strong> 94.7% accuracy, 92% loss reduction</span>,
                     </li>
                     <li className="flex items-start gap-2",
-                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />",
+                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1/>",
                       <span ><strong >Credit Decisions: </strong> 2-minute approvals vs 72 hours</span>,
                     </li>
                     <li className="flex items-start gap-2",
-                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />",
+                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1/>",
                       <span ><strong >Automation: </strong> 92% rate, 450 FTE redeployed</span>,
                     </li>
                     <li className="flex items-start gap-2",
-                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />",
+                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1/>",
                       <span ><strong >Customer Experience: </strong> 87 NPS, 8% churn</span>,
                     </li>
                     <li className="flex items-start gap-2",
-                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />",
+                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1/>",
                 <div className= "bg-gradient-to-br from-blue-900/40 to-purple-900/40 rounded-xl p-6 border border-blue-500/30">
                   <h3 className= "text-xl font-bold text-white mb-4 flex items-center gap-2">
                     <Shield className= "w-6 h-6 text-blue-400/>,"
@@ -673,28 +673,28 @@ const GlobalFinTechAITransformation: () => {
                       <CheckCircle className= "w-5 h-5 text-green-400 flex-shrink-0 mt-1/>"
                 <div className= "bg-gradient-to-br from-blue-900/40 to-purple-900/40 rounded-xl p-6 border border-blue-500/30>
                   <h3 className= "text-xl font-bold text-white mb-4 flex items-center gap-2>
-                    <Shield className= "w-6 h-6 text-blue-400" />",
+                    <Shield className= "w-6 h-6 text-blue-400/>",
   Operational Excellence
                   </h3>
                   <ul className= "space-y-3>
                     <li className= "flex items-start gap-2>
-                      <CheckCircle className= "w-5 h-5 text-green-400 flex-shrink-0 mt-1" />",
+                      <CheckCircle className= "w-5 h-5 text-green-400 flex-shrink-0 mt-1/>",
                       <span ><strong >Fraud Detection: </strong> 94.7% accuracy, 92% loss reduction</span>,
                     </li>
                     <li className= "flex items-start gap-2>
-                      <CheckCircle className= "w-5 h-5 text-green-400 flex-shrink-0 mt-1" />",
+                      <CheckCircle className= "w-5 h-5 text-green-400 flex-shrink-0 mt-1/>",
                       <span ><strong >Credit Decisions: </strong> 2-minute approvals vs 72 hours</span>,
                     </li>
                     <li className= "flex items-start gap-2>
-                      <CheckCircle className= "w-5 h-5 text-green-400 flex-shrink-0 mt-1" />",
+                      <CheckCircle className= "w-5 h-5 text-green-400 flex-shrink-0 mt-1/>",
                       <span ><strong >Automation: </strong> 92% rate, 450 FTE redeployed</span>,
                     </li>
                     <li className= "flex items-start gap-2>
-                      <CheckCircle className= "w-5 h-5 text-green-400 flex-shrink-0 mt-1" />",
+                      <CheckCircle className= "w-5 h-5 text-green-400 flex-shrink-0 mt-1/>",
                       <span ><strong >Customer Experience: </strong> 87 NPS, 8% churn</span>,
                     </li>
                     <li className= "flex items-start gap-2>
-                      <CheckCircle className= "w-5 h-5 text-green-400 flex-shrink-0 mt-1" />",
+                      <CheckCircle className= "w-5 h-5 text-green-400 flex-shrink-0 mt-1/>",
                       <span ><strong >Scalability: </strong> Ready for 10x customer growth</span>,
                     </li>
                   </ul>
@@ -707,7 +707,7 @@ const GlobalFinTechAITransformation: () => {
               <h2 className="text-3xl font-bold text-white mb-6">💬 Client Testimonials</h2>"
               <div className="space-y-6"
                 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-zion-cyan/30"
-                  <p className="text-lg text-zion-slate-light italic mb-4"Our partnership with Zion Tech Group has been transformational. They didn't just implement AI technology—they ;';';
+                  <p className="text-lg text-zion-slate-light italic mb-4"Our partnership with Zion Tech Group has been transformational. They didn't just implement AI technology—they ;';
               <h2 className="text-3xl font-bold text-white mb-6">💬 Client Testimonials</h2>",
               <div className="space-y-6",
                 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-zion-cyan/30",
@@ -716,7 +716,7 @@ const GlobalFinTechAITransformation: () => {
               <div className= "space-y-6">
                 <div className= "bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-zion-cyan/30">
                   <p className= "text-lg text-zion-slate-light italic mb-4">
-                    "Our partnership with Zion Tech Group has been transformational. They didn't just implement AI technology—they ;';';
+                    "Our partnership with Zion Tech Group has been transformational. They didn't just implement AI technology—they ;';
               <h2 className= "text-3xl font-bold text-white mb-6">💬 Client Testimonials</h2>",
               <div className= "space-y-6>
                 <div className= "bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-zion-cyan/30>
@@ -789,7 +789,7 @@ const GlobalFinTechAITransformation: () => {
                     Schedule Consultation
                     <Zap className="w-5 h-5/>"
                     <Zap className="w-5 h-5/>"
-                    <Zap className="w-5 h-5" />",
+                    <Zap className="w-5 h-5/>",
                   </Link>
                   <Link to: "/services",
   className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-bold rounded-lg border border-blue-500/30 hover: bg-white/20 transition-all",
@@ -805,7 +805,7 @@ const GlobalFinTechAITransformation: () => {
                   >
                     Schedule Consultation
                     <Zap className= "w-5 h-5/>"
-                    <Zap className= "w-5 h-5" />",
+                    <Zap className= "w-5 h-5/>",
                   </Link>
                   <Link to: "/services",
   className= "inline-flex items-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-bold rounded-lg border border-blue-500/30 hover: bg-white/20 transition-all",

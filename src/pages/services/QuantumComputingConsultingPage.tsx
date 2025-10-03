@@ -1,7 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
-
+import React from 'react;
+import { Link } from 'react-router-dom;
+import { Helmet } from 'react-helmet-async;
 const QuantumComputingConsultingPage: React.FC = () => {
   const quantumServices = [
     {
@@ -46,8 +45,7 @@ const QuantumComputingConsultingPage: React.FC = () => {
     <>
       <Helmet>
         <title>Quantum Computing Consulting - Zion Tech Group</title>
-        <meta name="description" content="Expert quantum computing consulting services including strategy, algorithm development, and quantum security solutions from Zion Tech Group." />"
-      </Helmet>
+        <meta name="description" content="Expert quantum computing consulting services including strategy, algorithm development, and quantum security solutions from Zion Tech Group." /></Helmet>
       
       <div className="min-h-screen bg-gray-50">"
         {/* Header */}
@@ -183,7 +181,7 @@ const QuantumComputingConsultingPage: React.FC = () => {
           <div className="container mx-auto px-6 text-center">"
             <h2 className="text-4xl font-bold mb-4">Ready to Explore Quantum Computing?</h2>"
             <p className="text-xl mb-8 text-purple-100 max-w-2xl mx-auto">"
-              Let's discuss how quantum computing can give your organization a competitive advantage.';
+              Let's discuss how quantum computing can give your organization a competitive advantage.;
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <Link 

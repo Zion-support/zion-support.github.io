@@ -1,6 +1,6 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import React from 'react;
+import { Helmet } from 'react-helmet-async;
+import { Link } from 'react-router-dom;
 ;
 const ITServices: React.FC = () => {
   return (
@@ -8,10 +8,9 @@ const ITServices: React.FC = () => {
     <div className= "min-h-screen bg-white">
       <Helmet >
         <title >IT Services – Zion Tech Group</title>
-        <meta name: "description", content ="Cloud migration, DevOps/SRE, cybersecurity, observability, and cost optimization with clear SLAs." />"
-        <link rel: "canonical", href ="https://ziontechgroup.com/services/it-services" />"
-        <meta name="description" content="Cloud migration, DevOps/SRE, cybersecurity, observability, and cost optimization with clear SLAs." />
-        <link rel: "canonical", href ="https://ziontechgroup.com/services/it-services" />
+        <meta name: "description", content ="Cloud migration, DevOps/SRE, cybersecurity, observability, and cost optimization with clear SLAs./>"
+        <link rel: "canonical", href ="https://ziontechgroup.com/services/it-services/>"
+        <meta name="description" content="Cloud migration, DevOps/SRE, cybersecurity, observability, and cost optimization with clear SLAs." /><link rel: "canonical", href ="https://ziontechgroup.com/services/it-services/>
       </Helmet>
 
       <section className="bg-gradient-to-br from-slate-50 to-gray-50 py-16"

@@ -7,19 +7,19 @@ export default function MetaCognitiveAIDeepDive2026(): React.JSX.Element {
     <div className= "min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white>
       <Helmet >
         <title >Meta-Cognitive AI Deep Dive 2026 — AI that thinks about thinking</title>
-        <meta name: "description",;,"
+        <meta name: "description",,"
   content: "A practical guide to meta-cognitive AI: introspective loops, verifier stacks, budgeted actions, and KPI-linked scorecards for production safety.",
         />
-        <link rel: "canonical",;,"
+        <link rel: "canonical",,"
   href="https://ziontechgroup.com/blog/meta-cognitive-ai-deep-dive-2026",
         />
       </Helmet>
 
       <div className="container mx-auto px-6 py-16"
         <h1 className="text-4xl md: text-5xl font-bold mb-4">Meta-Cognitive AI Deep Dive 2026</h1>",
-        <p className="text-zion-slate-light mb-8">AI that thinks about thinking</p>";,"
-        <div className="prose prose-invert max-w-3xl">,";,"
-  href="https: //ziontechgroup.com/blog/meta-cognitive-ai-deep-dive-2026",
+        <p className="text-zion-slate-light mb-8">AI that thinks about thinking</p>","
+        <div className="prose prose-invert max-w-3xl">,","
+  href="https://ziontechgroup.com/blog/meta-cognitive-ai-deep-dive-2026",
         />
       </Helmet>
 
@@ -29,9 +29,9 @@ export default function MetaCognitiveAIDeepDive2026(): React.JSX.Element {
         <div className="prose prose-invert max-w-3xl",
       <div className= "container mx-auto px-6 py-16">
         <h1 className= "text-4xl md: text-5xl font-bold mb-4">Meta-Cognitive AI Deep Dive 2026</h1>",
-        <p className= "text-zion-slate-light mb-8">AI that thinks about thinking</p>";,"
-        <div className= "prose prose-invert max-w-3xl">,";,"
-  href="https: //ziontechgroup.com/blog/meta-cognitive-ai-deep-dive-2026",
+        <p className= "text-zion-slate-light mb-8">AI that thinks about thinking</p>","
+        <div className= "prose prose-invert max-w-3xl">,","
+  href="https://ziontechgroup.com/blog/meta-cognitive-ai-deep-dive-2026",
         />
       </Helmet>
 

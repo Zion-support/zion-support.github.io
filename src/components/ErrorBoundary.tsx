@@ -1,5 +1,4 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-
+import React, { Component, ErrorInfo, ReactNode } from 'react;
 interface Props {
   children?: ReactNode;
   fallback?: ReactNode;
@@ -82,7 +81,7 @@ class ErrorBoundary extends Component<Props, State> {
 
       // Default error UI with better UX
       return (
-        <div className=", flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-red-50 to-red-100 p-4">
+        <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-red-50 to-red-100 p-4">
           <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6 text-center">
             <div className="text-red-500 text-6xl mb-4">⚠️</div>
             <h1 className="text-2xl font-bold text-gray-900 mb-2">
@@ -95,13 +94,13 @@ class ErrorBoundary extends Component<Props, State> {
             <div className="space-y-3">
               <button
                 className="w-full bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors"
-                onClick="{this.handleRetry}">
+                onClick={this.handleRetry}>
                 Try Again
               </button>
               
               <button
                 className="w-full bg-gray-200 text-gray-800 font-semibold py-2 px-4 rounded-lg hover:bg-gray-300 transition-colors"
-                onClick="{this.handleReload}">
+                onClick={this.handleReload}>
                 Refresh Page
               </button>
             </div>

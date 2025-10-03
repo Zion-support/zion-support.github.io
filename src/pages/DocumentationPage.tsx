@@ -1,7 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
-
+import React from 'react;
+import { Link } from 'react-router-dom;
+import { Helmet } from 'react-helmet-async;
 const DocumentationPage: React.FC = () => {
   const documentationSections = [
     {
@@ -76,8 +75,7 @@ const DocumentationPage: React.FC = () => {
     <>
       <Helmet>
         <title>Documentation - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive documentation, guides, and resources for Zion Tech Group's AI and technology solutions." />"
-      </Helmet>
+        <meta name="description" content="Comprehensive documentation, guides, and resources for Zion Tech Group's AI and technology solutions." /></Helmet>
       
       <div className="min-h-screen bg-gray-50">"
         {/* Header */}
@@ -102,7 +100,7 @@ const DocumentationPage: React.FC = () => {
                 />"
                 <div className="absolute left-4 top-3.5 text-gray-400">"
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">"
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />"
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z/>"
                   </svg>
                 </div>
               </div>
@@ -197,7 +195,7 @@ const DocumentationPage: React.FC = () => {
             <div className="text-center mb-16">"
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Need Help?</h2>"
               <p className="text-xl text-gray-600 max-w-2xl mx-auto">"
-                Can't find what you're looking for? Our support team is here to help.';
+                Can't find what you're looking for? Our support team is here to help.;
               </p>
             </div>
             
@@ -217,7 +215,7 @@ const DocumentationPage: React.FC = () => {
               <div className="bg-white p-8 rounded-xl shadow-sm text-center">"
                 <div className="text-4xl mb-4">📧</div>"
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Email Support</h3>"
-                <p className="text-gray-600 mb-4">Send us your questions and we'll respond quickly</p>';
+                <p className="text-gray-600 mb-4">Send us your questions and we'll respond quickly</p>;
                 <Link 
                   to="/contact" 
                   className="text-blue-600 font-semibold hover: text-blue-800 transition-colors

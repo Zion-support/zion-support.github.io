@@ -1,5 +1,5 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react;
+import { Helmet } from 'react-helmet-async;
 import { 
   Brain, 
   Code, 
@@ -270,12 +270,10 @@ import {
   BlueFootedBooby,
   PeruvianBooby,
   AbbottBooby
-} from 'lucide-react'';
-
+} from 'lucide-react';
 export default function NewServices2026() {
-  const title = 'New Services 2026 — Zion Tech Group';';
-  const description = 'Revolutionary micro SaaS, IT, and AI services for 2026. Cutting-edge solutions with proven ROI and fast implementation.';';
-
+  const title = 'New Services 2026 — Zion Tech Group';
+  const description = 'Revolutionary micro SaaS, IT, and AI services for 2026. Cutting-edge solutions with proven ROI and fast implementation.';
   const newServices = [
     // AI-Powered Micro SaaS Solutions
     {
@@ -306,8 +304,7 @@ export default function NewServices2026() {
           ],
           useCases: ['E-commerce brands', 'SaaS companies', 'Marketing agencies', 'Non-profits'],
           marketSize: '$7.5B email marketing market',
-          roi: '400% ROI within 3 months',
-        },
+          roi: '400% ROI within 3 months},
         {
           name: 'Smart Meeting Analytics Platform',
           description: 'AI-powered meeting insights, productivity tracking, and automated follow-up generation for remote teams.',
@@ -331,8 +328,7 @@ export default function NewServices2026() {
           ],
           useCases: ['Remote teams', 'Consulting firms', 'Sales organizations', 'Project managers'],
           marketSize: '$4.2B meeting software market',
-          roi: '300% ROI within 6 months',
-        },
+          roi: '300% ROI within 6 months},
         {
           name: 'AI Healthcare Appointment Intelligence',
           description: 'AI-driven appointment scheduling with patient preference learning, no-show prediction, and optimization.',
@@ -356,475 +352,455 @@ export default function NewServices2026() {
           ],
           useCases: ['Medical practices', 'Dental offices', 'Mental health providers', 'Specialty clinics'],
           marketSize: '$3.8B healthcare scheduling market',
-          roi: '250% ROI within 4 months',
-        },
+          roi: '250% ROI within 4 months},
         {
-          name: 'AI Content Localization Engine',';,
-          description: 'Automated content translation, cultural adaptation, and SEO optimization for global markets.',';,
-          price: '$149 - $799/month',';,
-          delivery: '2 weeks',';,
+          name: 'AI Content Localization Engine',',
+          description: 'Automated content translation, cultural adaptation, and SEO optimization for global markets.',',
+          price: '$149 - $799/month',',
+          delivery: '2 weeks',',
           features: [,
-            'Neural translation with cultural context understanding',';
-            'SEO optimization for target markets and languages',';
-            'Brand voice consistency across all languages',';
-            'Content approval workflows and quality control',';
-            'Performance tracking by market and language',';
-            'Integration with CMS platforms (WordPress, Drupal, Contentful)',';
-            'Multi-format support (web, mobile, documents)',';
+            'Neural translation with cultural context understanding',
+            'SEO optimization for target markets and languages',
+            'Brand voice consistency across all languages',
+            'Content approval workflows and quality control',
+            'Performance tracking by market and language',
+            'Integration with CMS platforms (WordPress, Drupal, Contentful)',
+            'Multi-format support (web, mobile, documents)',
             'Real-time translation updates and version control'],
 ,
           benefits: [,
-            '40% faster time-to-market globally',';
-            '60% reduction in translation costs',';
-            '85% improvement in international SEO rankings',';
+            '40% faster time-to-market globally',
+            '60% reduction in translation costs',
+            '85% improvement in international SEO rankings',
             'Automated workflows save 20+ hours weekly'
           ],
-          useCases: ['E-commerce brands', 'SaaS companies', 'Publishing houses', 'Global enterprises'],';,
-          marketSize: '$56B localization market',';,
-          roi: '500% ROI within 6 months',
-        },
+          useCases: ['E-commerce brands', 'SaaS companies', 'Publishing houses', 'Global enterprises'],',
+          marketSize: '$56B localization market',',
+          roi: '500% ROI within 6 months},
         {
-          name: 'Smart Inventory Forecasting Pro',';,
-          description: 'AI-powered demand forecasting, stock optimization, and automated reordering for e-commerce businesses.',';,
-          price: '$299 - $1,499/month',';,
-          delivery: '3 weeks',';,
+          name: 'Smart Inventory Forecasting Pro',',
+          description: 'AI-powered demand forecasting, stock optimization, and automated reordering for e-commerce businesses.',',
+          price: '$299 - $1,499/month',',
+          delivery: '3 weeks',',
           features: [,
-            'Demand forecasting with 95% accuracy using machine learning',';
-            'Automated reorder point calculations and alerts',';
-            'Seasonal trend analysis and holiday optimization',';
-            'Supplier performance tracking and optimization',';
-            'Integration with major e-commerce platforms (Shopify, WooCommerce, Magento)',';
-            'Cost optimization recommendations and supplier negotiation',';
-            'Multi-location inventory management',';
+            'Demand forecasting with 95% accuracy using machine learning',
+            'Automated reorder point calculations and alerts',
+            'Seasonal trend analysis and holiday optimization',
+            'Supplier performance tracking and optimization',
+            'Integration with major e-commerce platforms (Shopify, WooCommerce, Magento)',
+            'Cost optimization recommendations and supplier negotiation',
+            'Multi-location inventory management',
             'Real-time stock alerts and low inventory warnings'],
 ,
           benefits: [,
-            '25% reduction in stockouts',';
-            '20% reduction in inventory carrying costs',';
-            '35% improvement in cash flow',';
+            '25% reduction in stockouts',
+            '20% reduction in inventory carrying costs',
+            '35% improvement in cash flow',
             '50% reduction in manual inventory management'
           ],
-          useCases: ['E-commerce retailers', 'Wholesale distributors', 'Manufacturing companies', 'Multi-location businesses'],';,
-          marketSize: '$2.1B inventory management market',';,
-          roi: '400% ROI within 5 months',
-        }
+          useCases: ['E-commerce retailers', 'Wholesale distributors', 'Manufacturing companies', 'Multi-location businesses'],',
+          marketSize: '$2.1B inventory management market',',
+          roi: '400% ROI within 5 months}
       ]
     },
     // Advanced AI Services
     {
-      category: 'Advanced AI Services',';,
+      category: 'Advanced AI Services',',
       icon: Cpu,,
-      color: 'blue',';,
+      color: 'blue',',
       services: [,
         {
-          name: 'AI-Powered Compliance Monitor Pro',';,
-          description: 'Automated compliance monitoring, risk assessment, and regulatory reporting for financial services.',';,
-          price: '$999 - $4,999/month',';,
-          delivery: '4 weeks',';,
+          name: 'AI-Powered Compliance Monitor Pro',',
+          description: 'Automated compliance monitoring, risk assessment, and regulatory reporting for financial services.',',
+          price: '$999 - $4,999/month',',
+          delivery: '4 weeks',',
           features: [,
-            'Real-time compliance monitoring across all regulations',';
-            'Automated regulatory reporting and filing',';
-            'Risk assessment and scoring with machine learning',';
-            'Audit trail generation and documentation',';
-            'Integration with core banking systems and ERPs',';
-            'Regulatory change notifications and updates',';
-            'Multi-jurisdiction compliance support',';
+            'Real-time compliance monitoring across all regulations',
+            'Automated regulatory reporting and filing',
+            'Risk assessment and scoring with machine learning',
+            'Audit trail generation and documentation',
+            'Integration with core banking systems and ERPs',
+            'Regulatory change notifications and updates',
+            'Multi-jurisdiction compliance support',
             'Automated remediation workflows'],
 ,
           benefits: [,
-            '60% reduction in compliance costs',';
-            '90% reduction in regulatory violations',';
-            '50% faster audit preparation',';
+            '60% reduction in compliance costs',
+            '90% reduction in regulatory violations',
+            '50% faster audit preparation',
             'Automated reporting saves 40+ hours monthly'
           ],
-          useCases: ['Banks', 'Credit unions', 'Investment firms', 'Insurance companies'],';,
-          marketSize: '$12.3B compliance software market',';,
-          roi: '600% ROI within 8 months',
-        },
+          useCases: ['Banks', 'Credit unions', 'Investment firms', 'Insurance companies'],',
+          marketSize: '$12.3B compliance software market',',
+          roi: '600% ROI within 8 months},
         {
-          name: 'Smart Lead Scoring Platform',';,
-          description: 'AI-driven lead qualification, scoring, and nurturing automation for B2B sales teams.',';,
-          price: '$199 - $999/month',';,
-          delivery: '2 weeks',';,
+          name: 'Smart Lead Scoring Platform',',
+          description: 'AI-driven lead qualification, scoring, and nurturing automation for B2B sales teams.',',
+          price: '$199 - $999/month',',
+          delivery: '2 weeks',',
           features: [,
-            'Behavioral lead scoring with machine learning algorithms',';
-            'Predictive lead qualification and prioritization',';
-            'Automated nurturing campaigns and follow-ups',';
-            'CRM integration and synchronization (Salesforce, HubSpot, Pipedrive)',';
-            'Sales team performance analytics and coaching',';
-            'Custom scoring model training and optimization',';
-            'Multi-channel lead tracking and attribution',';
+            'Behavioral lead scoring with machine learning algorithms',
+            'Predictive lead qualification and prioritization',
+            'Automated nurturing campaigns and follow-ups',
+            'CRM integration and synchronization (Salesforce, HubSpot, Pipedrive)',
+            'Sales team performance analytics and coaching',
+            'Custom scoring model training and optimization',
+            'Multi-channel lead tracking and attribution',
             'Real-time lead alerts and notifications'],
 ,
           benefits: [,
-            '45% improvement in lead conversion rates',';
-            '30% reduction in sales cycle length',';
-            '50% increase in sales team productivity',';
+            '45% improvement in lead conversion rates',
+            '30% reduction in sales cycle length',
+            '50% increase in sales team productivity',
             'Automated nurturing saves 15+ hours weekly'
           ],
-          useCases: ['B2B sales teams', 'Marketing agencies', 'SaaS companies', 'Professional services'],';,
-          marketSize: '$6.8B sales automation market',';,
-          roi: '350% ROI within 4 months',
-        },
+          useCases: ['B2B sales teams', 'Marketing agencies', 'SaaS companies', 'Professional services'],',
+          marketSize: '$6.8B sales automation market',',
+          roi: '350% ROI within 4 months},
         {
-          name: 'AI-Powered Voice Analytics Platform',';,
-          description: 'Advanced voice analysis for customer service optimization, sentiment detection, and compliance monitoring.',';,
-          price: '$399 - $2,499/month',';,
-          delivery: '3-4 weeks',';,
+          name: 'AI-Powered Voice Analytics Platform',',
+          description: 'Advanced voice analysis for customer service optimization, sentiment detection, and compliance monitoring.',',
+          price: '$399 - $2,499/month',',
+          delivery: '3-4 weeks',',
           features: [,
-            'Real-time voice sentiment analysis and emotion detection',';
-            'Speaker identification and authentication',';
-            'Call quality monitoring and optimization recommendations',';
-            'Automated transcription with 99% accuracy scoring',';
-            'Customer emotion detection and escalation triggers',';
-            'Integration with call center and CRM systems',';
-            'Multi-language voice processing support',';
+            'Real-time voice sentiment analysis and emotion detection',
+            'Speaker identification and authentication',
+            'Call quality monitoring and optimization recommendations',
+            'Automated transcription with 99% accuracy scoring',
+            'Customer emotion detection and escalation triggers',
+            'Integration with call center and CRM systems',
+            'Multi-language voice processing support',
             'Compliance monitoring and automated reporting'],
 ,
           benefits: [,
-            '50% improvement in customer service quality scores',';
-            '35% reduction in customer complaints',';
-            '25% increase in customer satisfaction',';
+            '50% improvement in customer service quality scores',
+            '35% reduction in customer complaints',
+            '25% increase in customer satisfaction',
             'Automated analytics save 20+ hours weekly'
           ],
-          useCases: ['Call centers', 'Customer service teams', 'Sales organizations', 'Healthcare providers'],';,
-          marketSize: '$2.8B voice analytics market',';,
-          roi: '400% ROI within 6 months',
-        },
+          useCases: ['Call centers', 'Customer service teams', 'Sales organizations', 'Healthcare providers'],',
+          marketSize: '$2.8B voice analytics market',',
+          roi: '400% ROI within 6 months},
         {
-          name: 'AI-Powered Predictive Maintenance System',';,
-          description: 'IoT sensor data analysis for predictive equipment maintenance and failure prevention.',';,
-          price: '$1,200 - $6,000/month',';,
-          delivery: '4-8 weeks',';,
+          name: 'AI-Powered Predictive Maintenance System',',
+          description: 'IoT sensor data analysis for predictive equipment maintenance and failure prevention.',',
+          price: '$1,200 - $6,000/month',',
+          delivery: '4-8 weeks',',
           features: [,
-            'Real-time sensor data processing and analysis',';
-            'Machine learning failure prediction models',';
-            'Automated maintenance scheduling and alerts',';
-            'Equipment health scoring and trending analysis',';
-            'Cost optimization through proactive maintenance',';
-            'Integration with CMMS and ERP systems',';
-            'Multi-equipment monitoring and management',';
+            'Real-time sensor data processing and analysis',
+            'Machine learning failure prediction models',
+            'Automated maintenance scheduling and alerts',
+            'Equipment health scoring and trending analysis',
+            'Cost optimization through proactive maintenance',
+            'Integration with CMMS and ERP systems',
+            'Multi-equipment monitoring and management',
             'Predictive analytics dashboard and reporting'],
 ,
           benefits: [,
-            '40% reduction in unplanned downtime',';
-            '25% reduction in maintenance costs',';
-            '30% improvement in equipment lifespan',';
+            '40% reduction in unplanned downtime',
+            '25% reduction in maintenance costs',
+            '30% improvement in equipment lifespan',
             'Predictive insights prevent 80% of failures'
           ],
-          useCases: ['Manufacturing companies', 'Facilities management', 'Transportation', 'Utilities'],';,
-          marketSize: '$4.5B predictive maintenance market',';,
-          roi: '500% ROI within 12 months',
-        },
+          useCases: ['Manufacturing companies', 'Facilities management', 'Transportation', 'Utilities'],',
+          marketSize: '$4.5B predictive maintenance market',',
+          roi: '500% ROI within 12 months},
         {
-          name: 'AI-Powered Content Moderation Suite',';,
-          description: 'Automated content moderation with multi-modal AI for text, image, and video analysis.',';,
-          price: '$299 - $1,999/month',';,
-          delivery: '2-4 weeks',';,
+          name: 'AI-Powered Content Moderation Suite',',
+          description: 'Automated content moderation with multi-modal AI for text, image, and video analysis.',',
+          price: '$299 - $1,999/month',',
+          delivery: '2-4 weeks',',
           features: [,
-            'Multi-modal content analysis (text, image, video)',';
-            'Real-time moderation with customizable policies',';
-            'False positive reduction through ML feedback loops',';
-            'Multi-language support and cultural context understanding',';
-            'Integration with social media and content platforms',';
-            'Custom model training for specific use cases',';
-            'Automated escalation and human review workflows',';
+            'Multi-modal content analysis (text, image, video)',
+            'Real-time moderation with customizable policies',
+            'False positive reduction through ML feedback loops',
+            'Multi-language support and cultural context understanding',
+            'Integration with social media and content platforms',
+            'Custom model training for specific use cases',
+            'Automated escalation and human review workflows',
             'Compliance reporting and audit trails'],
 ,
           benefits: [,
-            '70% reduction in moderation costs',';
-            '90% improvement in content safety',';
-            '60% faster content review processes',';
+            '70% reduction in moderation costs',
+            '90% improvement in content safety',
+            '60% faster content review processes',
             'Automated moderation handles 95% of content'
           ],
-          useCases: ['Social media platforms', 'Online communities', 'E-commerce marketplaces', 'Content publishers'],';,
-          marketSize: '$3.2B content moderation market',';,
-          roi: '450% ROI within 5 months',
-        }
+          useCases: ['Social media platforms', 'Online communities', 'E-commerce marketplaces', 'Content publishers'],',
+          marketSize: '$3.2B content moderation market',',
+          roi: '450% ROI within 5 months}
       ]
     },
     // IT Infrastructure Services
     {
-      category: 'IT Infrastructure Services',';,
+      category: 'IT Infrastructure Services',',
       icon: Server,,
-      color: 'green',';,
+      color: 'green',',
       services: [,
         {
-          name: 'Zero Trust Security Architecture',';,
-          description: 'Comprehensive zero trust implementation with identity verification and micro-segmentation.',';,
-          price: '$4,500 - $22,000/month',';,
-          delivery: '6-12 weeks',';,
+          name: 'Zero Trust Security Architecture',',
+          description: 'Comprehensive zero trust implementation with identity verification and micro-segmentation.',',
+          price: '$4,500 - $22,000/month',',
+          delivery: '6-12 weeks',',
           features: [,
-            'Identity and access management (IAM) implementation',';
-            'Network micro-segmentation and policy enforcement',';
-            'Device trust and endpoint security management',';
-            'Continuous security monitoring and threat detection',';
-            'Multi-factor authentication and single sign-on',';
-            'API security and data protection',';
-            'Compliance reporting and audit support',';
+            'Identity and access management (IAM) implementation',
+            'Network micro-segmentation and policy enforcement',
+            'Device trust and endpoint security management',
+            'Continuous security monitoring and threat detection',
+            'Multi-factor authentication and single sign-on',
+            'API security and data protection',
+            'Compliance reporting and audit support',
             '24/7 security operations center (SOC) monitoring'],
 ,
           benefits: [,
-            '99.9% reduction in security breaches',';
-            '50% reduction in security management overhead',';
-            '100% compliance with industry standards',';
+            '99.9% reduction in security breaches',
+            '50% reduction in security management overhead',
+            '100% compliance with industry standards',
             'Automated security saves 30+ hours weekly'
           ],
-          useCases: ['Enterprise organizations', 'Financial institutions', 'Healthcare providers', 'Government agencies'],';,
-          marketSize: '$31.8B zero trust security market',';,
-          roi: '800% ROI within 18 months',
-        },
+          useCases: ['Enterprise organizations', 'Financial institutions', 'Healthcare providers', 'Government agencies'],',
+          marketSize: '$31.8B zero trust security market',',
+          roi: '800% ROI within 18 months},
         {
-          name: 'Cloud Migration & Modernization',';,
-          description: 'Complete cloud migration strategy with application modernization and optimization.',';,
-          price: '$8,000 - $45,000/month',';,
-          delivery: '8-16 weeks',';,
+          name: 'Cloud Migration & Modernization',',
+          description: 'Complete cloud migration strategy with application modernization and optimization.',',
+          price: '$8,000 - $45,000/month',',
+          delivery: '8-16 weeks',',
           features: [,
-            'Legacy application assessment and migration planning',';
-            'Containerization and microservices architecture',';
-            'Database migration and optimization',';
-            'Cost optimization and performance tuning',';
-            'Multi-cloud strategy implementation',';
-            'Disaster recovery and backup solutions',';
-            'Security and compliance implementation',';
+            'Legacy application assessment and migration planning',
+            'Containerization and microservices architecture',
+            'Database migration and optimization',
+            'Cost optimization and performance tuning',
+            'Multi-cloud strategy implementation',
+            'Disaster recovery and backup solutions',
+            'Security and compliance implementation',
             'Training and ongoing support'],
 ,
           benefits: [,
-            '40% reduction in infrastructure costs',';
-            '60% improvement in application performance',';
-            '99.9% uptime and reliability',';
+            '40% reduction in infrastructure costs',
+            '60% improvement in application performance',
+            '99.9% uptime and reliability',
             'Automated scaling saves 50+ hours monthly'
           ],
-          useCases: ['Enterprise IT departments', 'Growing businesses', 'Digital transformation initiatives', 'Legacy system modernization'],';,
-          marketSize: '$445B cloud computing market',';,
-          roi: '600% ROI within 24 months',
-        },
+          useCases: ['Enterprise IT departments', 'Growing businesses', 'Digital transformation initiatives', 'Legacy system modernization'],',
+          marketSize: '$445B cloud computing market',',
+          roi: '600% ROI within 24 months},
         {
-          name: 'DevSecOps Pipeline Implementation',';,
-          description: 'Secure CI/CD pipelines with automated security testing and compliance.',';,
-          price: '$3,200 - $15,000/month',';,
-          delivery: '4-8 weeks',';,
+          name: 'DevSecOps Pipeline Implementation',',
+          description: 'Secure CI/CD pipelines with automated security testing and compliance.',',
+          price: '$3,200 - $15,000/month',',
+          delivery: '4-8 weeks',',
           features: [,
-            'Automated security scanning and vulnerability management',';
-            'Infrastructure as Code (IaC) security validation',';
-            'Secrets management and secure deployment',';
-            'Compliance automation and reporting',';
-            'Container security and image scanning',';
-            'API security testing and monitoring',';
-            'Performance testing and optimization',';
+            'Automated security scanning and vulnerability management',
+            'Infrastructure as Code (IaC) security validation',
+            'Secrets management and secure deployment',
+            'Compliance automation and reporting',
+            'Container security and image scanning',
+            'API security testing and monitoring',
+            'Performance testing and optimization',
             'Training and best practices implementation'],
 ,
           benefits: [,
-            '80% reduction in security vulnerabilities',';
-            '70% faster deployment cycles',';
-            '90% reduction in security incidents',';
+            '80% reduction in security vulnerabilities',
+            '70% faster deployment cycles',
+            '90% reduction in security incidents',
             'Automated pipelines save 40+ hours weekly'
           ],
-          useCases: ['Software development teams', 'DevOps engineers', 'Security teams', 'IT operations'],';,
-          marketSize: '$7.8B DevSecOps market',';,
-          roi: '500% ROI within 12 months',
-        },
+          useCases: ['Software development teams', 'DevOps engineers', 'Security teams', 'IT operations'],',
+          marketSize: '$7.8B DevSecOps market',',
+          roi: '500% ROI within 12 months},
         {
-          name: 'Disaster Recovery & Business Continuity',';,
-          description: 'Comprehensive disaster recovery planning with automated failover and testing.',';,
-          price: '$2,800 - $18,000/month',';,
-          delivery: '6-10 weeks',';,
+          name: 'Disaster Recovery & Business Continuity',',
+          description: 'Comprehensive disaster recovery planning with automated failover and testing.',',
+          price: '$2,800 - $18,000/month',',
+          delivery: '6-10 weeks',',
           features: [,
-            'Multi-region backup and replication strategies',';
-            'Automated failover and recovery procedures',';
-            'Business continuity planning and testing',';
-            'RTO/RPO optimization and monitoring',';
-            'Data backup and recovery automation',';
-            'Network redundancy and load balancing',';
-            'Compliance and audit support',';
+            'Multi-region backup and replication strategies',
+            'Automated failover and recovery procedures',
+            'Business continuity planning and testing',
+            'RTO/RPO optimization and monitoring',
+            'Data backup and recovery automation',
+            'Network redundancy and load balancing',
+            'Compliance and audit support',
             'Regular testing and optimization'],
 ,
           benefits: [,
-            '99.99% business continuity assurance',';
-            '80% reduction in recovery time',';
-            '50% reduction in disaster costs',';
+            '99.99% business continuity assurance',
+            '80% reduction in recovery time',
+            '50% reduction in disaster costs',
             'Automated recovery saves critical time'
           ],
-          useCases: ['Enterprise organizations', 'Financial services', 'Healthcare providers', 'Government agencies'],';,
-          marketSize: '$12.4B disaster recovery market',';,
-          roi: '1000% ROI during disaster events',
-        },
+          useCases: ['Enterprise organizations', 'Financial services', 'Healthcare providers', 'Government agencies'],',
+          marketSize: '$12.4B disaster recovery market',',
+          roi: '1000% ROI during disaster events},
         {
-          name: 'API Gateway & Microservices Management',';,
-          description: 'Enterprise API management with security, monitoring, and developer portal.',';,
-          price: '$1,500 - $8,500/month',';,
-          delivery: '3-6 weeks',';,
+          name: 'API Gateway & Microservices Management',',
+          description: 'Enterprise API management with security, monitoring, and developer portal.',',
+          price: '$1,500 - $8,500/month',',
+          delivery: '3-6 weeks',',
           features: [,
-            'API gateway configuration and management',';
-            'Rate limiting, authentication, and authorization',';
-            'API analytics and performance monitoring',';
-            'Developer portal and documentation',';
-            'Microservices orchestration and management',';
-            'API versioning and lifecycle management',';
-            'Security policies and threat protection',';
+            'API gateway configuration and management',
+            'Rate limiting, authentication, and authorization',
+            'API analytics and performance monitoring',
+            'Developer portal and documentation',
+            'Microservices orchestration and management',
+            'API versioning and lifecycle management',
+            'Security policies and threat protection',
             'Integration with CI/CD pipelines'],
 ,
           benefits: [,
-            '60% improvement in API performance',';
-            '50% reduction in API management overhead',';
-            '90% improvement in developer productivity',';
+            '60% improvement in API performance',
+            '50% reduction in API management overhead',
+            '90% improvement in developer productivity',
             'Automated management saves 25+ hours weekly'
           ],
-          useCases: ['API-driven businesses', 'Microservices architectures', 'Developer teams', 'Enterprise integration'],';,
-          marketSize: '$4.1B API management market',';,
-          roi: '400% ROI within 8 months',
-        }
+          useCases: ['API-driven businesses', 'Microservices architectures', 'Developer teams', 'Enterprise integration'],',
+          marketSize: '$4.1B API management market',',
+          roi: '400% ROI within 8 months}
       ]
     },
     // Emerging Technology Services
     {
-      category: 'Emerging Technology Services',';,
+      category: 'Emerging Technology Services',',
       icon: Rocket,,
-      color: 'orange',';,
+      color: 'orange',',
       services: [,
         {
-          name: 'AI-Powered Video Content Creator Pro',';,
-          description: 'Automated video generation with AI avatars, voice synthesis, and multi-language support.',';,
-          price: '$299 - $1,999/month',';,
-          delivery: '3-4 weeks',';,
+          name: 'AI-Powered Video Content Creator Pro',',
+          description: 'Automated video generation with AI avatars, voice synthesis, and multi-language support.',',
+          price: '$299 - $1,999/month',',
+          delivery: '3-4 weeks',',
           features: [,
-            'AI avatar generation with custom branding',';
-            'Natural voice synthesis in 50+ languages',';
-            'Automated video editing and transitions',';
-            'Social media optimization and formatting',';
-            'Template library with industry-specific designs',';
-            'Real-time collaboration and approval workflows',';
-            'Multi-platform publishing and distribution',';
+            'AI avatar generation with custom branding',
+            'Natural voice synthesis in 50+ languages',
+            'Automated video editing and transitions',
+            'Social media optimization and formatting',
+            'Template library with industry-specific designs',
+            'Real-time collaboration and approval workflows',
+            'Multi-platform publishing and distribution',
             'Performance analytics and optimization'],
 ,
           benefits: [,
-            '70% reduction in video production costs',';
-            '90% faster video creation and deployment',';
-            '60% improvement in engagement rates',';
+            '70% reduction in video production costs',
+            '90% faster video creation and deployment',
+            '60% improvement in engagement rates',
             'Automated creation saves 40+ hours weekly'
           ],
-          useCases: ['Marketing agencies', 'E-learning platforms', 'Social media managers', 'Content creators'],';,
-          marketSize: '$15.7B video marketing market',';,
-          roi: '500% ROI within 6 months',
-        },
+          useCases: ['Marketing agencies', 'E-learning platforms', 'Social media managers', 'Content creators'],',
+          marketSize: '$15.7B video marketing market',',
+          roi: '500% ROI within 6 months},
         {
-          name: 'Smart Contract Analytics Platform',';,
-          description: 'Blockchain analytics and monitoring for DeFi protocols and smart contract interactions.',';,
-          price: '$499 - $2,999/month',';,
-          delivery: '3-5 weeks',';,
+          name: 'Smart Contract Analytics Platform',',
+          description: 'Blockchain analytics and monitoring for DeFi protocols and smart contract interactions.',',
+          price: '$499 - $2,999/month',',
+          delivery: '3-5 weeks',',
           features: [,
-            'Real-time smart contract monitoring and alerts',';
-            'Transaction flow analysis and visualization',';
-            'Risk assessment and vulnerability detection',';
-            'DeFi protocol performance analytics',';
-            'Custom dashboard and reporting tools',';
-            'Multi-blockchain support (Ethereum, Polygon, BSC)',';
-            'Automated compliance monitoring',';
+            'Real-time smart contract monitoring and alerts',
+            'Transaction flow analysis and visualization',
+            'Risk assessment and vulnerability detection',
+            'DeFi protocol performance analytics',
+            'Custom dashboard and reporting tools',
+            'Multi-blockchain support (Ethereum, Polygon, BSC)',
+            'Automated compliance monitoring',
             'Integration with trading and portfolio management'],
 ,
           benefits: [,
-            '80% reduction in smart contract risks',';
-            '60% improvement in DeFi performance',';
-            '90% faster risk assessment',';
+            '80% reduction in smart contract risks',
+            '60% improvement in DeFi performance',
+            '90% faster risk assessment',
             'Automated monitoring saves 30+ hours weekly'
           ],
-          useCases: ['DeFi protocols', 'Crypto exchanges', 'Investment firms', 'Blockchain developers'],';,
-          marketSize: '$2.1B blockchain analytics market',';,
-          roi: '600% ROI within 8 months',
-        },
+          useCases: ['DeFi protocols', 'Crypto exchanges', 'Investment firms', 'Blockchain developers'],',
+          marketSize: '$2.1B blockchain analytics market',',
+          roi: '600% ROI within 8 months},
         {
-          name: 'AI-Powered Energy Optimization Platform',';,
-          description: 'Smart energy management with predictive analytics and automated optimization.',';,
-          price: '$499 - $3,999/month',';,
-          delivery: '4-6 weeks',';,
+          name: 'AI-Powered Energy Optimization Platform',',
+          description: 'Smart energy management with predictive analytics and automated optimization.',',
+          price: '$499 - $3,999/month',',
+          delivery: '4-6 weeks',',
           features: [,
-            'Real-time energy consumption monitoring',';
-            'Predictive energy demand forecasting',';
-            'Automated load balancing and optimization',';
-            'Renewable energy integration and management',';
-            'Cost optimization through smart scheduling',';
-            'Integration with smart grid and IoT devices',';
-            'Carbon footprint tracking and reporting',';
+            'Real-time energy consumption monitoring',
+            'Predictive energy demand forecasting',
+            'Automated load balancing and optimization',
+            'Renewable energy integration and management',
+            'Cost optimization through smart scheduling',
+            'Integration with smart grid and IoT devices',
+            'Carbon footprint tracking and reporting',
             'Automated energy trading and arbitrage'],
 ,
           benefits: [,
-            '30% reduction in energy costs',';
-            '25% improvement in energy efficiency',';
-            '40% reduction in carbon footprint',';
+            '30% reduction in energy costs',
+            '25% improvement in energy efficiency',
+            '40% reduction in carbon footprint',
             'Automated optimization saves 20+ hours monthly'
           ],
-          useCases: ['Manufacturing facilities', 'Commercial buildings', 'Data centers', 'Utilities'],';,
-          marketSize: '$12.8B energy management market',';,
-          roi: '400% ROI within 12 months',
-        },
+          useCases: ['Manufacturing facilities', 'Commercial buildings', 'Data centers', 'Utilities'],',
+          marketSize: '$12.8B energy management market',',
+          roi: '400% ROI within 12 months},
         {
-          name: 'AI-Powered Legal Document Analyzer',';,
-          description: 'Intelligent legal document review with risk assessment and compliance checking.',';,
-          price: '$799 - $4,999/month',';,
-          delivery: '4-6 weeks',';,
+          name: 'AI-Powered Legal Document Analyzer',',
+          description: 'Intelligent legal document review with risk assessment and compliance checking.',',
+          price: '$799 - $4,999/month',',
+          delivery: '4-6 weeks',',
           features: [,
-            'Automated contract analysis and risk assessment',';
-            'Compliance checking and regulatory monitoring',';
-            'Document comparison and version control',';
-            'Legal research and precedent analysis',';
-            'Custom clause generation and templates',';
-            'Integration with legal practice management systems',';
-            'Multi-jurisdiction compliance support',';
+            'Automated contract analysis and risk assessment',
+            'Compliance checking and regulatory monitoring',
+            'Document comparison and version control',
+            'Legal research and precedent analysis',
+            'Custom clause generation and templates',
+            'Integration with legal practice management systems',
+            'Multi-jurisdiction compliance support',
             'Automated reporting and audit trails'],
 ,
           benefits: [,
-            '75% reduction in document review time',';
-            '90% improvement in risk detection accuracy',';
-            '60% reduction in legal costs',';
+            '75% reduction in document review time',
+            '90% improvement in risk detection accuracy',
+            '60% reduction in legal costs',
             'Automated analysis saves 50+ hours weekly'
           ],
-          useCases: ['Law firms', 'Corporate legal departments', 'Compliance teams', 'Contract management'],';,
-          marketSize: '$12.4B legal tech market',';,
-          roi: '700% ROI within 10 months',
-        },
+          useCases: ['Law firms', 'Corporate legal departments', 'Compliance teams', 'Contract management'],',
+          marketSize: '$12.4B legal tech market',',
+          roi: '700% ROI within 10 months},
         {
-          name: 'Smart Fleet Management Platform',';,
-          description: 'IoT-powered fleet tracking with predictive maintenance and route optimization.',';,
-          price: '$299 - $1,999/month',';,
-          delivery: '3-5 weeks',';,
+          name: 'Smart Fleet Management Platform',',
+          description: 'IoT-powered fleet tracking with predictive maintenance and route optimization.',',
+          price: '$299 - $1,999/month',',
+          delivery: '3-5 weeks',',
           features: [,
-            'Real-time GPS tracking and route optimization',';
-            'Predictive maintenance and vehicle health monitoring',';
-            'Driver behavior analysis and safety scoring',';
-            'Fuel consumption tracking and optimization',';
-            'Compliance monitoring and reporting',';
-            'Integration with dispatch and logistics systems',';
-            'Multi-vehicle fleet management',';
+            'Real-time GPS tracking and route optimization',
+            'Predictive maintenance and vehicle health monitoring',
+            'Driver behavior analysis and safety scoring',
+            'Fuel consumption tracking and optimization',
+            'Compliance monitoring and reporting',
+            'Integration with dispatch and logistics systems',
+            'Multi-vehicle fleet management',
             'Automated alerts and notifications'],
 ,
           benefits: [,
-            '25% reduction in fleet operating costs',';
-            '30% improvement in fuel efficiency',';
-            '40% reduction in maintenance costs',';
+            '25% reduction in fleet operating costs',
+            '30% improvement in fuel efficiency',
+            '40% reduction in maintenance costs',
             'Automated management saves 35+ hours weekly'
           ],
-          useCases: ['Transportation companies', 'Delivery services', 'Construction firms', 'Fleet operators'],';,
-          marketSize: '$5.8B fleet management market',';,
-          roi: '450% ROI within 12 months',
-        }
+          useCases: ['Transportation companies', 'Delivery services', 'Construction firms', 'Fleet operators'],',
+          marketSize: '$5.8B fleet management market',',
+          roi: '450% ROI within 12 months}
       ]
     }
   ];
 
   const contactInfo = {
-    phone: '+1 302 464 0950',';,
-    email: 'kleber@ziontechgroup.com',';,
-    website: 'https://ziontechgroup.com',';,
-    address: '364 E Main St STE 1008, Middletown DE 19709',
-  };
+    phone: '+1 302 464 0950',',
+    email: 'kleber@ziontechgroup.com',',
+    website: 'https://ziontechgroup.com',',
+    address: '364 E Main St STE 1008, Middletown DE 19709};
 
   return (
     <>
       <Helmet>
         <title>{title}</title>
         <meta name="description" content="{description} /">"
-        <meta name="keywords" content="micro SaaS, AI services, IT solutions, automation, cloud services, enterprise software, 2026" />"
-        <link rel="canonical" href="https: //ziontechgroup.com/new-services-2026" />"
+        <meta name="keywords" content="micro SaaS, AI services, IT solutions, automation, cloud services, enterprise software, 2026" /><link rel="canonical" href="https://ziontechgroup.com/new-services-2026/>"
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">"
@@ -832,7 +808,7 @@ export default function NewServices2026() {
         <section className="container mx-auto px-6 py-16">"
           <div className="text-center mb-16">"
             <div className="flex items-center justify-center mb-4">"
-              <Rocket className="h-8 w-8 text-cyan-400 mr-3" />"
+              <Rocket className="h-8 w-8 text-cyan-400 mr-3/>"
               <span className="text-lg font-semibold text-cyan-400">New Services 2026</span>"
             </div>
             <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">"
@@ -843,15 +819,15 @@ export default function NewServices2026() {
             </p>
             <div className="flex items-center justify-center gap-6 text-sm text-blue-200">"
               <div className="flex items-center">"
-                <CheckCircle className="h-4 w-4 text-green-400 mr-2" />"
+                <CheckCircle className="h-4 w-4 text-green-400 mr-2/>"
                 <span>Proven ROI</span>
               </div>
               <div className="flex items-center">"
-                <CheckCircle className="h-4 w-4 text-green-400 mr-2" />"
+                <CheckCircle className="h-4 w-4 text-green-400 mr-2/>"
                 <span>Fast Delivery</span>
               </div>
               <div className="flex items-center">"
-                <CheckCircle className="h-4 w-4 text-green-400 mr-2" />"
+                <CheckCircle className="h-4 w-4 text-green-400 mr-2/>"
                 <span>24/7 Support</span>
               </div>
             </div>
@@ -867,7 +843,7 @@ export default function NewServices2026() {
                 <div key={categoryIndex} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50">"
                   <div className="flex items-center gap-4 mb-8">"
                     <div className="{`w-16 h-16 bg-gradient-to-br from-${category.color}-500 to-${category.color}-600 rounded-xl flex items-center justify-center`}">`;
-                      <Icon className="w-8 h-8 text-white" />"
+                      <Icon className="w-8 h-8 text-white/>"
                     </div>
                     <div>
                       <h2 className="text-3xl font-bold text-white mb-2">{category.category}</h2>"
@@ -893,7 +869,7 @@ export default function NewServices2026() {
                             <ul className="space-y-1">"
                               {service.features.slice(0, 4).map((feature, idx) => (
                                 <li key={idx} className="flex items-center text-sm text-slate-300">"
-                                  <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />"
+                                  <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0/>"
                                   <span>{feature}</span>
                                 </li>
                               ))}
@@ -910,7 +886,7 @@ export default function NewServices2026() {
                             <ul className="space-y-1">"
                               {service.benefits.map((benefit, idx) => (
                                 <li key={idx} className="flex items-center text-sm text-slate-300">"
-                                  <TrendingUp className="w-3 h-3 text-fuchsia-400 mr-2 flex-shrink-0" />"
+                                  <TrendingUp className="w-3 h-3 text-fuchsia-400 mr-2 flex-shrink-0/>"
                                   <span>{benefit}</span>
                                 </li>
                               ))}
@@ -942,7 +918,7 @@ export default function NewServices2026() {
                             className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover: from-cyan-600 hover:to-blue-600 transition-all duration-300 w-full justify-center
                           >
                             Get Started"
-                            <ArrowRight className="w-4 h-4" />"
+                            <ArrowRight className="w-4 h-4/>"
                           </a>
                         </div>
                       </div>
@@ -967,21 +943,21 @@ export default function NewServices2026() {
             <div className="grid md:grid-cols-3 gap-6 text-center mb-8">"
               <div>
                 <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">"
-                  <Clock className="w-6 h-6 text-cyan-400" />"
+                  <Clock className="w-6 h-6 text-cyan-400/>"
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Fast Implementation</h3>"
                 <p className="text-sm text-slate-300">Deploy solutions in 1-8 weeks with our proven methodology</p>"
               </div>
               <div>
                 <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">"
-                  <DollarSign className="w-6 h-6 text-blue-400" />"
+                  <DollarSign className="w-6 h-6 text-blue-400/>"
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Proven ROI</h3>"
                 <p className="text-sm text-slate-300">Average 400-1000% ROI within first year of implementation</p>"
               </div>
               <div>
                 <div className="w-12 h-12 bg-fuchsia-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">"
-                  <Star className="w-6 h-6 text-fuchsia-400" />"
+                  <Star className="w-6 h-6 text-fuchsia-400/>"
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Expert Support</h3>"
                 <p className="text-sm text-slate-300">24/7 support from AI specialists and technical experts</p>"
@@ -994,14 +970,14 @@ export default function NewServices2026() {
                   href={`tel:${contactInfo.phone}`} `;
                   className="inline-flex items-center gap-2 bg-white text-slate-900 px-6 py-3 rounded-lg font-semibold hover:bg-slate-100 transition-colors
                 >"
-                  <Smartphone className="w-4 h-4" />"
+                  <Smartphone className="w-4 h-4/>"
                   {contactInfo.phone}
                 </a>
                 <a 
                   href={`mailto:${contactInfo.email}`} `;
                   className="inline-flex items-center gap-2 bg-slate-700 text-white px-6 py-3 rounded-lg font-semibold hover:bg-slate-600 transition-colors
                 >"
-                  <MessageSquare className="w-4 h-4" />"
+                  <MessageSquare className="w-4 h-4/>"
                   {contactInfo.email}
                 </a>
               </div>

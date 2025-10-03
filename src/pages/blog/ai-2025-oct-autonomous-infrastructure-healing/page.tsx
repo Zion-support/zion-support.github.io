@@ -9,7 +9,7 @@ export default function AutonomousInfrastructureHealing2025(): void {
   content: "autonomous infrastructure, self-healing systems, AI infrastructure, automated incident response, infrastructure automation, site reliability engineering, chaos engineering, infrastructure resilience", /><link rel: "canonical", href="https://ziontechgroup.com/blog/ai-2025-oct-autonomous-infrastructure-healing/>",
   content: "autonomous infrastructure, self-healing systems, AI infrastructure, automated incident response, infrastructure automation, site reliability engineering, chaos engineering, infrastructure resilience",
         />
-        <link rel: "canonical", href ="https: //ziontechgroup.com/blog/ai-2025-oct-autonomous-infrastructure-healing" />",
+        <link rel: "canonical", href ="https://ziontechgroup.com/blog/ai-2025-oct-autonomous-infrastructure-healing/>",
       </Helmet>
 
       <article className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white",
@@ -18,9 +18,9 @@ export default function AutonomousInfrastructureHealing2025(): void {
   className="inline-flex items-center text-purple-400 hover: text-purple-300 mb-8 transition-colors",
           >
             <ArrowLeft className="mr-2 h-4 w-4/>"
-            <ArrowLeft className="mr-2 h-4 w-4" />",
+            <ArrowLeft className="mr-2 h-4 w-4/>",
             <ArrowLeft className="mr-2 h-4 w-4/>"
-            <ArrowLeft className="mr-2 h-4 w-4" />
+            <ArrowLeft className="mr-2 h-4 w-4/>
   Back to Blog
           </Link>
 
@@ -44,7 +44,7 @@ export default function AutonomousInfrastructureHealing2025(): void {
   className= "inline-flex items-center text-purple-400 hover: text-purple-300 mb-8 transition-colors",
           >
             <ArrowLeft className= "mr-2 h-4 w-4/>"
-            <ArrowLeft className= "mr-2 h-4 w-4" />",
+            <ArrowLeft className= "mr-2 h-4 w-4/>",
   Back to Blog
           </Link>
 
@@ -98,20 +98,20 @@ export default function AutonomousInfrastructureHealing2025(): void {
           <div className="prose prose-invert prose-lg max-w-none",
             <div className="bg-gradient-to-r from-purple-500/10 to-blue-500/10 border border-purple-500/20 rounded-xl p-8 mb-12",
               <h2 className="text-3xl font-bold mb-6 flex items-center gap-3",
-                <Server className="h-8 w-8 text-purple-400" />",
+                <Server className="h-8 w-8 text-purple-400/>",
   Key Outcomes
               </h2>
               <ul className="space-y-4 text-lg",
                 <li className="flex items-start gap-3",
-                  <Zap className="h-6 w-6 text-yellow-400 mt-1 flex-shrink-0" />",
+                  <Zap className="h-6 w-6 text-yellow-400 mt-1 flex-shrink-0/>",
                   <span ><strong >99.97% Uptime: </strong> Autonomous healing resolves 94% of incidents before user impact</span>,
                 </li>
                 <li className="flex items-start gap-3",
-                  <Shield className="h-6 w-6 text-green-400 mt-1 flex-shrink-0" />",
+                  <Shield className="h-6 w-6 text-green-400 mt-1 flex-shrink-0/>",
                   <span ><strong >Sub-Second Response: </strong> AI detects and remediates issues in under 850ms average</span>,
                 </li>
                 <li className="flex items-start gap-3",
-                  <TrendingUp className="h-6 w-6 text-blue-400 mt-1 flex-shrink-0" />",
+                  <TrendingUp className="h-6 w-6 text-blue-400 mt-1 flex-shrink-0/>",
           <div className= "prose prose-invert prose-lg max-w-none">
             <div className= "bg-gradient-to-r from-purple-500/10 to-blue-500/10 border border-purple-500/20 rounded-xl p-8 mb-12">
               <h2 className= "text-3xl font-bold mb-6 flex items-center gap-3">
@@ -132,20 +132,20 @@ export default function AutonomousInfrastructureHealing2025(): void {
           <div className= "prose prose-invert prose-lg max-w-none>
             <div className= "bg-gradient-to-r from-purple-500/10 to-blue-500/10 border border-purple-500/20 rounded-xl p-8 mb-12>
               <h2 className= "text-3xl font-bold mb-6 flex items-center gap-3>
-                <Server className= "h-8 w-8 text-purple-400" />",
+                <Server className= "h-8 w-8 text-purple-400/>",
   Key Outcomes
               </h2>
               <ul className= "space-y-4 text-lg>
                 <li className= "flex items-start gap-3>
-                  <Zap className= "h-6 w-6 text-yellow-400 mt-1 flex-shrink-0" />",
+                  <Zap className= "h-6 w-6 text-yellow-400 mt-1 flex-shrink-0/>",
                   <span ><strong >99.97% Uptime: </strong> Autonomous healing resolves 94% of incidents before user impact</span>,
                 </li>
                 <li className= "flex items-start gap-3>
-                  <Shield className= "h-6 w-6 text-green-400 mt-1 flex-shrink-0" />",
+                  <Shield className= "h-6 w-6 text-green-400 mt-1 flex-shrink-0/>",
                   <span ><strong >Sub-Second Response: </strong> AI detects and remediates issues in under 850ms average</span>,
                 </li>
                 <li className= "flex items-start gap-3>
-                  <TrendingUp className= "h-6 w-6 text-blue-400 mt-1 flex-shrink-0" />",
+                  <TrendingUp className= "h-6 w-6 text-blue-400 mt-1 flex-shrink-0/>",
                   <span ><strong >$67M+ Annual Savings: </strong> Reduce operational costs by 78% through automation</span>,
                 </li>
               </ul>
@@ -353,14 +353,14 @@ export default function AutonomousInfrastructureHealing2025(): void {
             <section className="mb-12"
               <h2 className="text-3xl font-bold mb-6 text-purple-300">The Reliability Advantage</h2>"
               <p className="text-gray-300 mb-4 leading-relaxed">,"
-  Autonomous infrastructure self-healing isn't just about reducing downtime—it's about fundamentally transforming ;';';
+  Autonomous infrastructure self-healing isn't just about reducing downtime—it's about fundamentally transforming ;';
             <section className="mb-12",
               <h2 className="text-3xl font-bold mb-6 text-purple-300">The Reliability Advantage</h2>",
               <p className="text-gray-300 mb-4 leading-relaxed",
             <section className= "mb-12">
               <h2 className= "text-3xl font-bold mb-6 text-purple-300">The Reliability Advantage</h2>"
               <p className= "text-gray-300 mb-4 leading-relaxed">,"
-  Autonomous infrastructure self-healing isn't just about reducing downtime—it's about fundamentally transforming ;';';
+  Autonomous infrastructure self-healing isn't just about reducing downtime—it's about fundamentally transforming ;';
             <section className= "mb-12>
               <h2 className= "text-3xl font-bold mb-6 text-purple-300">The Reliability Advantage</h2>",
               <p className= "text-gray-300 mb-4 leading-relaxed">"
@@ -390,7 +390,7 @@ export default function AutonomousInfrastructureHealing2025(): void {
                 Start Your Reliability Transformation
                 <Zap className="ml-2 h-5 w-5/>"
                 <Zap className="ml-2 h-5 w-5/>"
-                <Zap className="ml-2 h-5 w-5" />",
+                <Zap className="ml-2 h-5 w-5/>",
             <div className= "bg-gradient-to-r from-purple-600 to-blue-600 rounded-xl p-8 text-center>
               <h2 className= "text-3xl font-bold mb-4">Ready to Transform Your Infrastructure Reliability?</h2>",
               <p className= "text-xl mb-6 text-purple-100">"
@@ -401,7 +401,7 @@ export default function AutonomousInfrastructureHealing2025(): void {
               >
                 Start Your Reliability Transformation
                 <Zap className= "ml-2 h-5 w-5/>"
-                <Zap className= "ml-2 h-5 w-5" />",
+                <Zap className= "ml-2 h-5 w-5/>",
               </Link>
             </div>
           </div>

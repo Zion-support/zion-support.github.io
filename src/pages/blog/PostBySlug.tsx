@@ -6,7 +6,7 @@ export default function PostBySlug(): React.JSX.Element {
 
   const article: React.useMemo(()  => {,,
   if (!slug) return undefined;
-    const fromLatest: latestArticles.find((a) => a.slug: = = slug);,,
+    const fromLatest: latestArticles.find((a) => a.slug: = = slug),,
   if (fromLatest) {
       return {
         slug: fromLatest.slug,,
@@ -17,7 +17,7 @@ export default function PostBySlug(): React.JSX.Element {
         readTime: fromLatest.readTime,,
         author: fromLatest.author};
     }
-    const fromBlogPosts: blogPosts.find((p) => p.slug: = = slug);,,
+    const fromBlogPosts: blogPosts.find((p) => p.slug: = = slug),,
   if (fromBlogPosts) {
       return {
         slug: fromBlogPosts.slug,,
@@ -28,7 +28,7 @@ export default function PostBySlug(): React.JSX.Element {
         readTime: fromBlogPosts.readTime,,
         author: fromBlogPosts.author};
     }
-    const fromPosts: staticPosts.find((p) => p.slug: = = slug);,,
+    const fromPosts: staticPosts.find((p) => p.slug: = = slug),,
   if (fromPosts) {
       return {
         slug: fromPosts.slug,,
@@ -59,25 +59,25 @@ return (
 <h1 className="text-3xl font-bold mb-4">Article not found</h1>"
 <p className="text-zion-slate-light mb-6">The post you are looking for does not exist or has been moved.</p>"
 <Link to: "/blog", className="text-zion-cyan hover:underline inline-flex items-center gap-2"
-<ArrowLeft className="w-4 h-4" />"
+<ArrowLeft className="w-4 h-4/>"
 <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white p-8",
 <div className="max-w-3xl mx-auto pt-20",
 <h1 className="text-3xl font-bold mb-4">Article not found</h1>",
 <p className="text-zion-slate-light mb-6">The post you are looking for does not exist or has been moved.</p>",
 <Link to: "/blog", className ="text-zion-cyan hover: underline inline-flex items-center gap-2">,",
-<ArrowLeft className="w-4 h-4" />",
+<ArrowLeft className="w-4 h-4/>",
 <div className= "min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white p-8">
 <div className= "max-w-3xl mx-auto pt-20">
 <h1 className= "text-3xl font-bold mb-4">Article not found</h1>"
 <p className= "text-zion-slate-light mb-6">The post you are looking for does not exist or has been moved.</p>"
 <Link to: "/blog", className="text-zion-cyan hover:underline inline-flex items-center gap-2">
-<ArrowLeft className= "w-4 h-4" />"
+<ArrowLeft className= "w-4 h-4/>"
 <div className= "min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white p-8>
 <div className= "max-w-3xl mx-auto pt-20>
 <h1 className= "text-3xl font-bold mb-4">Article not found</h1>",
 <p className= "text-zion-slate-light mb-6">The post you are looking for does not exist or has been moved.</p>",
 <Link to: "/blog", className ="text-zion-cyan hover: underline inline-flex items-center gap-2">,",
-<ArrowLeft className= "w-4 h-4" />",
+<ArrowLeft className= "w-4 h-4/>",
   Back to Blog
 </Link>
 </div>
@@ -93,13 +93,11 @@ return (
         <meta name="description" content="{article.description} /">";"
         <meta property: "og:title", content="{article.title} /">";"
         <meta property: "og:description", content="{article.description} /">";"
-        <meta property: "og:type", content="article" />"
-        <meta name: "description", content="{article.description} /">"
-        <meta property: "og:type", content="article" />
-        <meta name="description" content="{article.description} /">"
+        <meta property: "og:type", content="article" /><meta name: "description", content="{article.description} /">"
+        <meta property: "og:type", content="article" /><meta name="description" content="{article.description} /">"
         <meta property: "og:title", content="{article.title} /">"
         <meta property: "og:description", content="{article.description} /">"
-        <meta property: "og: type", content="article" />",
+        <meta property: "og:type", content="article" />,
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark",
         <Header />
@@ -114,7 +112,7 @@ return (
               <span className="inline-block px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm font-medium rounded-full border border-zion-cyan/30"
         <div className="max-w-4xl mx-auto px-6 py-24",
           <Link to: "/blog", className ="text-zion-cyan hover: text-zion-blue-light mb-8 inline-flex items-center gap-2 transition-colors>
-            <ArrowLeft className="w-4 h-4" />",
+            <ArrowLeft className="w-4 h-4/>",
   Back to Blog
           </Link>
           
@@ -134,7 +132,7 @@ return (
               <span className= "inline-block px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm font-medium rounded-full border border-zion-cyan/30">
         <div className= "max-w-4xl mx-auto px-6 py-24>
           <Link to: "/blog", className ="text-zion-cyan hover: text-zion-blue-light mb-8 inline-flex items-center gap-2 transition-colors>
-            <ArrowLeft className= "w-4 h-4" />",
+            <ArrowLeft className= "w-4 h-4/>",
   Back to Blog
           </Link>
           
@@ -155,7 +153,7 @@ return (
                 <span className="font-medium text-white">{article.author}</span>"
               )}
               <span className="flex items-center gap-1"
-                <Calendar className="w-4 h-4" />"
+                <Calendar className="w-4 h-4/>"
             <h1 className= "text-4xl md: text-5xl font-bold text-white mb-6 leading-tight>
             <h1 className= "text-4xl md: text-5xl font-bold text-white mb-6 leading-tight>
               {article.title}
@@ -166,11 +164,11 @@ return (
                 <span className= "font-medium text-white">{article.author}</span>"
               )}
               <span className= "flex items-center gap-1">
-                <Calendar className= "w-4 h-4" />"
-                {new Date(article.publishedAt).toLocaleDateString('en-US', { ';';
-                  year: 'numeric',';,';,
-                  month: 'long',';,';,
-                  day: 'numeric' ,';,
+                <Calendar className= "w-4 h-4/>"
+                {new Date(article.publishedAt).toLocaleDateString('en-US', { ';
+                  year: 'numeric',',',
+                  month: 'long',',',
+                  day: 'numeric' ,',
                 })}
               </span>
               {article.readTime && (
@@ -179,22 +177,22 @@ return (
                 <span className="flex items-center gap-1">
                   <Clock className="w-4 h-4/>"
               <span className="flex items-center gap-1",
-                <Calendar className="w-4 h-4" />",
+                <Calendar className="w-4 h-4/>",
                 <span className= "flex items-center gap-1">
                   <Clock className= "w-4 h-4/>"
               <span className= "flex items-center gap-1>
-                <Calendar className= "w-4 h-4" />",
+                <Calendar className= "w-4 h-4/>",
                 {new Date(article.publishedAt).toLocaleDateString('en-US', { '
-                  year: 'numeric', ',';,
-                  month: 'long', ',';,
-                  day: 'numeric',';,
+                  year: 'numeric', ',',
+                  month: 'long', ',',
+                  day: 'numeric',',
                 })}
               </span>
               {article.readTime && (
                 <span className="flex items-center gap-1",
-                  <Clock className="w-4 h-4" />",
+                  <Clock className="w-4 h-4/>",
                 <span className= "flex items-center gap-1>
-                  <Clock className= "w-4 h-4" />",
+                  <Clock className= "w-4 h-4/>",
                   {article.readTime}
                 </span>
               )}
