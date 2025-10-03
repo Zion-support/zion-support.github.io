@@ -20,7 +20,7 @@ export default function Page() {
         <li>DP‑hardened telemetry and KPI‑linked canaries for safe rollout</li>
       </ul>
       <p>
-        See also: <Link href="/blog/privacy-safe-feature-flags-2026">Privacy‑Safe Feature Flags (2026)</Link>.
+        See also: <Link to="/blog/privacy-safe-feature-flags-2026">Privacy‑Safe Feature Flags (2026)</Link>.
       </p>
     </main>
   );

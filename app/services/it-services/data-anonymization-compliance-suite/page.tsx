@@ -64,7 +64,7 @@ export default function Page() {
       </div>
 
       <div className="flex flex-col sm:flex-row gap-3">
-        <Link href="/contact" className="inline-flex items-center justify-center px-5 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700">Talk to Compliance Engineer</Link>
+        <Link to="/contact" className="inline-flex items-center justify-center px-5 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700">Talk to Compliance Engineer</Link>
         <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center justify-center px-5 py-3 border rounded-md hover:bg-gray-50">Email: kleber@ziontechgroup.com</a>
         <a href="tel:+13024640950" className="inline-flex items-center justify-center px-5 py-3 border rounded-md hover:bg-gray-50">Call: +1 302 464 0950</a>
       </div>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function InteractiveDecember2026Showcase() {
   const [activeTab, setActiveTab] = useState('breakthrough');
@@ -125,8 +125,7 @@ export default function InteractiveDecember2026Showcase() {
                   ))}
                 </div>
 
-                <Link
-                  href={content[activeTab as keyof typeof content].link}
+                <Link to={content[activeTab as keyof typeof content].link}
                   className="inline-block bg-gradient-to-r from-yellow-500 to-orange-600 hover:from-yellow-400 hover:to-orange-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-yellow-500/50 transform hover:-translate-y-1"
                 >
                   {content[activeTab as keyof typeof content].buttonText}
@@ -167,8 +166,7 @@ export default function InteractiveDecember2026Showcase() {
 
         {/* Additional Links */}
         <div className="grid md:grid-cols-4 gap-6">
-          <Link 
-            href="/blog/ai-2026-december-ultimate-breakthrough-announcement"
+          <Link to="/blog/ai-2026-december-ultimate-breakthrough-announcement"
             className="group bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-yellow-500/50 transition-all duration-300 hover:scale-105"
           >
             <div className="text-center">
@@ -178,8 +176,7 @@ export default function InteractiveDecember2026Showcase() {
             </div>
           </Link>
 
-          <Link 
-            href="/case-studies/ai-2026-december-ultimate-breakthrough-100-billion-success"
+          <Link to="/case-studies/ai-2026-december-ultimate-breakthrough-100-billion-success"
             className="group bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-green-500/50 transition-all duration-300 hover:scale-105"
           >
             <div className="text-center">
@@ -189,8 +186,7 @@ export default function InteractiveDecember2026Showcase() {
             </div>
           </Link>
 
-          <Link 
-            href="/services/ai-2026-december-quantum-superintelligence-consulting"
+          <Link to="/services/ai-2026-december-quantum-superintelligence-consulting"
             className="group bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-blue-500/50 transition-all duration-300 hover:scale-105"
           >
             <div className="text-center">
@@ -200,8 +196,7 @@ export default function InteractiveDecember2026Showcase() {
             </div>
           </Link>
 
-          <Link 
-            href="/blog/ai-2026-december-quantum-superintelligence-revolution"
+          <Link to="/blog/ai-2026-december-quantum-superintelligence-revolution"
             className="group bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300 hover:scale-105"
           >
             <div className="text-center">

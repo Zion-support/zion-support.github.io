@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function October2025AutonomousRealitySynthesisBanner() {
   return (
@@ -91,20 +91,17 @@ export default function October2025AutonomousRealitySynthesisBanner() {
         </div>
 
         <div className="flex flex-wrap gap-4 justify-center mt-8">
-          <Link
-            href="/blog/ai-2025-october-autonomous-reality-synthesis"
+          <Link to="/blog/ai-2025-october-autonomous-reality-synthesis"
             className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1"
           >
             Read Complete Guide →
           </Link>
-          <Link
-            href="/case-studies/autonomous-reality-synthesis-47-billion-success"
+          <Link to="/case-studies/autonomous-reality-synthesis-47-billion-success"
             className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
           >
             View $47.3B Success Story →
           </Link>
-          <Link
-            href="/contact"
+          <Link to="/contact"
             className="border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
           >
             Get Free ARS Assessment

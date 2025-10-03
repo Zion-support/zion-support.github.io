@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function AI2027TranscendentQuantumConsciousnessBreakthroughBanner() {
   return (
@@ -146,14 +146,12 @@ export default function AI2027TranscendentQuantumConsciousnessBreakthroughBanner
 
         <div className="text-center mt-8">
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link 
-              href="/blog/ai-2027-transcendent-quantum-consciousness-breakthrough"
+            <Link to="/blog/ai-2027-transcendent-quantum-consciousness-breakthrough"
               className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-purple-600 hover:to-indigo-600 transition-all transform hover:scale-105 shadow-lg"
             >
               🚀 Learn About the Breakthrough
             </Link>
-            <Link 
-              href="/case-studies/ai-2027-transcendent-quantum-consciousness-847-billion-success"
+            <Link to="/case-studies/ai-2027-transcendent-quantum-consciousness-847-billion-success"
               className="bg-white/10 backdrop-blur-sm border border-white/30 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/20 transition-all transform hover:scale-105"
             >
               💰 View $847B Success Story

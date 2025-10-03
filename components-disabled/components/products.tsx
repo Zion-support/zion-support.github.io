@@ -248,7 +248,7 @@ function Placeholder() {return (<main className=\"min - h-screen p - 8\" />;
 });}
 
 import Head from 'next/head';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function Placeholder() {return (<main className='min-h-screen p-8' />;
       <Head />;

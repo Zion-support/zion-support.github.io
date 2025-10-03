@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function AutonomousEnterpriseSystemsBanner() {
   return (
@@ -50,8 +50,7 @@ export default function AutonomousEnterpriseSystemsBanner() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
-            <Link
-              href="/blog/ai-2026-january-revolutionary-autonomous-enterprise-systems"
+            <Link to="/blog/ai-2026-january-revolutionary-autonomous-enterprise-systems"
               className="group bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               <span className="flex items-center gap-2">
@@ -61,8 +60,7 @@ export default function AutonomousEnterpriseSystemsBanner() {
                 </svg>
               </span>
             </Link>
-            <Link
-              href="/case-studies/autonomous-enterprise-2-billion-success"
+            <Link to="/case-studies/autonomous-enterprise-2-billion-success"
               className="group border-2 border-white/30 hover:border-white hover:bg-white/10 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 backdrop-blur-lg"
             >
               <span className="flex items-center gap-2">

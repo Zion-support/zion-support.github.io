@@ -1,5 +1,5 @@
 import React from 'react';
-// Metadata handled by React Helmet
+import { Metadata } from 'next';
 import { Link } from 'react-router-dom';
 import { 
   Atom, 
@@ -373,14 +373,12 @@ export default function QuantumComputingSolutionsPage() {
               and financial modeling. Experience exponential speedups and breakthrough results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/contact" 
+              <Link to="/contact" 
                 className="bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
               >
                 Explore Quantum Solutions
               </Link>
-              <Link 
-                href="#consultation" 
+              <Link to="#consultation" 
                 className="border border-indigo-600 text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors"
               >
                 Schedule Consultation
@@ -469,8 +467,7 @@ export default function QuantumComputingSolutionsPage() {
                   </p>
                 </div>
 
-                <Link
-                  href={service.link}
+                <Link to={service.link}
                   className="w-full block text-center bg-indigo-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
                 >
                   Learn More
@@ -519,8 +516,7 @@ export default function QuantumComputingSolutionsPage() {
                     </li>
                   ))}
                 </ul>
-                <Link
-                  href="/contact"
+                <Link to="/contact"
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
                     tier.popular
                       ? 'bg-indigo-600 text-white hover:bg-indigo-700'
@@ -582,14 +578,12 @@ export default function QuantumComputingSolutionsPage() {
             Join the quantum revolution and solve problems that were previously impossible
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/contact" 
+            <Link to="/contact" 
               className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Start Your Quantum Project
             </Link>
-            <Link 
-              href="mailto:kleber@ziontechgroup.com" 
+            <Link to="mailto:kleber@ziontechgroup.com" 
               className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
             >
               Email kleber@ziontechgroup.com

@@ -1,5 +1,5 @@
 import React from 'react';
-// Metadata handled by React Helmet
+import { Metadata } from 'next';
 import { Link } from 'react-router-dom';
 import { 
   Shield, 
@@ -239,14 +239,12 @@ export default function BlockchainEnterpriseSolutionsPage() {
               DeFi applications, and secure transaction processing for the modern enterprise.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/contact" 
+              <Link to="/contact" 
                 className="bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors"
               >
                 Get Started
               </Link>
-              <Link 
-                href="#demo" 
+              <Link to="#demo" 
                 className="border border-orange-600 text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-orange-50 transition-colors"
               >
                 Watch Demo
@@ -355,8 +353,7 @@ export default function BlockchainEnterpriseSolutionsPage() {
                   ))}
                 </ul>
                 
-                <Link
-                  href="/contact"
+                <Link to="/contact"
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
                     tier.popular
                       ? 'bg-orange-600 text-white hover:bg-orange-700'
@@ -419,14 +416,12 @@ export default function BlockchainEnterpriseSolutionsPage() {
             Join forward-thinking companies leveraging blockchain for competitive advantage.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/contact" 
+            <Link to="/contact" 
               className="bg-white text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Get Started
             </Link>
-            <Link 
-              href="/contact" 
+            <Link to="/contact" 
               className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-orange-600 transition-colors"
             >
               Schedule Consultation

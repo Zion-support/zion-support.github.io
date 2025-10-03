@@ -14,7 +14,7 @@ const LoadingSpinner = memo<LoadingSpinnerProps>(({
   const sizeClasses = {
     sm: 'w-6 h-6 border-2',
     md: 'w-12 h-12 border-4',
-    lg: 'w-16 h-16 border-8
+    lg: 'w-16 h-16 border-8'
   };
 
   return (
@@ -28,6 +28,7 @@ const LoadingSpinner = memo<LoadingSpinnerProps>(({
 });
 
 LoadingSpinner.displayName = 'LoadingSpinner';
+
 interface PageLoaderProps {
   text?: string;
   className?: string;
@@ -48,6 +49,7 @@ const PageLoader = memo<PageLoaderProps>(({
 });
 
 PageLoader.displayName = 'PageLoader';
+
 // Optimized skeleton loader for better perceived performance
 interface SkeletonLoaderProps {
   lines?: number;
@@ -61,7 +63,7 @@ const SkeletonLoader = memo<SkeletonLoaderProps>(({ lines = 3, className = '' })
         <div
           key={index}
           className={`h-4 bg-gray-300 rounded mb-2 ${
-            index === lines - 1 ? 'w-3/4' : 'w-full
+            index === lines - 1 ? 'w-3/4' : 'w-full'
           }`}
           aria-hidden="true" />
       ))}
@@ -71,6 +73,7 @@ const SkeletonLoader = memo<SkeletonLoaderProps>(({ lines = 3, className = '' })
 });
 
 SkeletonLoader.displayName = 'SkeletonLoader';
+
 // Inline spinner for buttons and small components
 interface InlineSpinnerProps {
   size?: 'xs' | 'sm';
@@ -80,7 +83,7 @@ interface InlineSpinnerProps {
 const InlineSpinner = memo<InlineSpinnerProps>(({ size = 'sm', className = '' }) => {
   const sizeClasses = {
     xs: 'w-3 h-3 border',
-    sm: 'w-4 h-4 border-2
+    sm: 'w-4 h-4 border-2'
   };
 
   return (
@@ -93,4 +96,5 @@ const InlineSpinner = memo<InlineSpinnerProps>(({ size = 'sm', className = '' })
 });
 
 InlineSpinner.displayName = 'InlineSpinner';
+
 export { LoadingSpinner, PageLoader, SkeletonLoader, InlineSpinner };

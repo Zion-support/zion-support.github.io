@@ -1,5 +1,5 @@
 import React from 'react';
-// Metadata handled by React Helmet
+import { Metadata } from 'next';
 import { Link } from 'react-router-dom';
 
 export const metadata: Metadata = {
@@ -226,14 +226,12 @@ export default function HabitTrackingWellnessPlatform() {
           Join thousands of users who have transformed their lives with our AI-powered habit tracking and wellness platform.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link 
-            href="/contact" 
+          <Link to="/contact" 
             className="bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
           >
             Start Free Trial
           </Link>
-          <Link 
-            href="https://ziontechgroup.com/services/habit-tracking-wellness-platform" 
+          <Link to="https://ziontechgroup.com/services/habit-tracking-wellness-platform" 
             className="border border-green-600 text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors"
           >
             View Features

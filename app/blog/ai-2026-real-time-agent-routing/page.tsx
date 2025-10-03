@@ -19,7 +19,7 @@ export default function RealTimeAgentRouting2026() {
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-indigo-950 text-white">
       <main className="container mx-auto px-6 py-12">
         <nav className="mb-8">
-          <Link href="/blog" className="text-indigo-300 hover:text-indigo-200 transition-colors">
+          <Link to="/blog" className="text-indigo-300 hover:text-indigo-200 transition-colors">
             ← Back to Blog
           </Link>
         </nav>

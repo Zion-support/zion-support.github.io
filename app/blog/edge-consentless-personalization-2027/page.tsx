@@ -1,5 +1,5 @@
 "use client"
-import Link from "next/link"
+import { Link } from "react-router-dom"
 export default function Page() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
@@ -27,10 +27,10 @@ export default function Page() {
           </p>
         </div>
         <div className="flex gap-3">
-          <Link href="/blog" className="text-emerald-700 font-semibold hover:underline">
+          <Link to="/blog" className="text-emerald-700 font-semibold hover:underline">
             ← Back to Blog
           </Link>
-          <Link href="/contact" className="text-emerald-700 font-semibold hover:underline">
+          <Link to="/contact" className="text-emerald-700 font-semibold hover:underline">
             Talk to an expert →
           </Link>
         </div>

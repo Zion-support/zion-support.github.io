@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { ArrowRight, Calendar, BookOpen, TrendingUp, Sparkles } from 'lucide-react';
 
 export default function October2025NewContentBanner() {
@@ -45,15 +45,13 @@ export default function October2025NewContentBanner() {
                   Production-ready ML at scale with automated deployment, monitoring, and retraining
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3">
-                  <Link
-                    href="/blog/ai-2025-oct-02-advanced-mlops-automation-platform"
+                  <Link to="/blog/ai-2025-oct-02-advanced-mlops-automation-platform"
                     className="inline-flex items-center text-sm font-semibold hover:text-white transition-colors"
                   >
                     <BookOpen className="w-4 h-4 mr-1" />
                     Read Guide
                   </Link>
-                  <Link
-                    href="/case-studies/ai-2025-oct-02-global-tech-mlops-transformation-340m-success"
+                  <Link to="/case-studies/ai-2025-oct-02-global-tech-mlops-transformation-340m-success"
                     className="inline-flex items-center text-sm font-semibold hover:text-white transition-colors"
                   >
                     <Sparkles className="w-4 h-4 mr-1" />
@@ -78,15 +76,13 @@ export default function October2025NewContentBanner() {
                   Next-gen customer experiences with sub-100ms AI decision making at massive scale
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3">
-                  <Link
-                    href="/blog/ai-2025-oct-02-real-time-personalization-engines"
+                  <Link to="/blog/ai-2025-oct-02-real-time-personalization-engines"
                     className="inline-flex items-center text-sm font-semibold hover:text-white transition-colors"
                   >
                     <BookOpen className="w-4 h-4 mr-1" />
                     Read Guide
                   </Link>
-                  <Link
-                    href="/case-studies/ai-2025-oct-02-retail-personalization-12-4-billion-success"
+                  <Link to="/case-studies/ai-2025-oct-02-retail-personalization-12-4-billion-success"
                     className="inline-flex items-center text-sm font-semibold hover:text-white transition-colors"
                   >
                     <Sparkles className="w-4 h-4 mr-1" />
@@ -118,8 +114,7 @@ export default function October2025NewContentBanner() {
 
         {/* CTA */}
         <div className="text-center mt-8">
-          <Link
-            href="/content-hub"
+          <Link to="/content-hub"
             className="inline-flex items-center px-6 py-3 bg-white text-emerald-700 font-bold rounded-lg hover:bg-emerald-50 transition-all duration-200 shadow-lg hover:shadow-xl"
           >
             Explore All Content
@@ -141,20 +136,19 @@ export function October2025NewContentCompactBanner() {
       </div>
       
       <div className="space-y-3 mb-4">
-        <Link href="/blog/ai-2025-oct-02-advanced-mlops-automation-platform" className="block">
+        <Link to="/blog/ai-2025-oct-02-advanced-mlops-automation-platform" className="block">
           <div className="text-sm font-semibold hover:text-emerald-100 transition-colors">
             → Advanced MLOps Automation Platform
           </div>
         </Link>
-        <Link href="/blog/ai-2025-oct-02-real-time-personalization-engines" className="block">
+        <Link to="/blog/ai-2025-oct-02-real-time-personalization-engines" className="block">
           <div className="text-sm font-semibold hover:text-emerald-100 transition-colors">
             → Real-Time AI Personalization Engines
           </div>
         </Link>
       </div>
       
-      <Link
-        href="/content-hub"
+      <Link to="/content-hub"
         className="inline-flex items-center text-sm font-semibold hover:text-emerald-100 transition-colors"
       >
         View All Content

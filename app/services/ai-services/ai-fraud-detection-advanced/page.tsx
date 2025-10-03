@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import Head from 'next/head';
 import { Link } from 'react-router-dom';
 import { 
   Shield, 
@@ -398,8 +398,7 @@ export default function AIFraudDetectionAdvancedPage() {
                     </div>
                   </div>
                   
-                  <Link 
-                    href="/contact"
+                  <Link to="/contact"
                     className="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors flex items-center justify-center"
                   >
                     Get Security Consultation

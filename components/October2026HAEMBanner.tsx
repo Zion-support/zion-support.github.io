@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { Sparkles, TrendingUp, Zap, Network } from 'lucide-react';
 
 export default function October2026HAEMBanner() {
@@ -71,16 +71,14 @@ export default function October2026HAEMBanner() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Link
-                href="/blog/ai-2026-october-hyperautonomous-enterprise-mesh-revolution"
+              <Link to="/blog/ai-2026-october-hyperautonomous-enterprise-mesh-revolution"
                 className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200"
               >
                 Read the Deep Dive
                 <Zap className="ml-2 w-5 h-5" />
               </Link>
 
-              <Link
-                href="/case-studies/ai-2026-october-telecom-hyperautonomous-mesh-18-4-billion-success"
+              <Link to="/case-studies/ai-2026-october-telecom-hyperautonomous-mesh-18-4-billion-success"
                 className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold bg-white/10 hover:bg-white/20 backdrop-blur-sm border-2 border-white/30 rounded-lg transition-all duration-200"
               >
                 $18.4B Case Study

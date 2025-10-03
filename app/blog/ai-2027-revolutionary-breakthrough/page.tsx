@@ -191,14 +191,12 @@ export default function AIRevolutionaryBreakthrough2027() {
             Our AI 2027 breakthrough is available now for select organizations.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Link 
-              href="/contact" 
+            <Link to="/contact" 
               className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
             >
               Schedule Consultation
             </Link>
-            <Link 
-              href="/case-studies/ai-2027-mega-transformation-success" 
+            <Link to="/case-studies/ai-2027-mega-transformation-success" 
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors text-center"
             >
               View Success Stories
@@ -220,7 +218,7 @@ export default function AIRevolutionaryBreakthrough2027() {
       <div className="mt-16">
         <h2 className="text-2xl font-bold text-gray-900 mb-6">Related Revolutionary Content</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <Link href="/blog/ai-2027-quantum-neural-networks" className="group">
+          <Link to="/blog/ai-2027-quantum-neural-networks" className="group">
             <div className="border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
               <div className="text-2xl mb-3">⚛️</div>
               <h3 className="font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
@@ -232,7 +230,7 @@ export default function AIRevolutionaryBreakthrough2027() {
             </div>
           </Link>
           
-          <Link href="/case-studies/ai-2027-mega-transformation-success" className="group">
+          <Link to="/case-studies/ai-2027-mega-transformation-success" className="group">
             <div className="border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
               <div className="text-2xl mb-3">🏆</div>
               <h3 className="font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
@@ -244,7 +242,7 @@ export default function AIRevolutionaryBreakthrough2027() {
             </div>
           </Link>
           
-          <Link href="/services/ai-2027-breakthrough-solutions" className="group">
+          <Link to="/services/ai-2027-breakthrough-solutions" className="group">
             <div className="border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
               <div className="text-2xl mb-3">🚀</div>
               <h3 className="font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">

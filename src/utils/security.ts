@@ -1,4 +1,87 @@
 // Enhanced security utilities
+export interface SecurityConfig {
+  csp: ContentSecurityPolicy;
+  headers: SecurityHeaders;
+  validation: ValidationRules;
+}
+
+export interface ContentSecurityPolicy {
+  'default-src': string[];
+  'script-src': string[];
+  'style-src': string[];
+  'img-src': string[];
+  'font-src': string[];
+  'connect-src': string[];
+  'frame-src': string[];
+  'object-src': string[];
+  'base-uri': string[];
+  'form-action': string[];
+  'frame-ancestors': string[];
+  'upgrade-insecure-requests': boolean;
+}
+
+export interface SecurityHeaders {
+  'X-Content-Type-Options': string;
+  'X-Frame-Options': string;
+  'X-XSS-Protection': string;
+  'Referrer-Policy': string;
+  'Permissions-Policy': string;
+  'Strict-Transport-Security': string;
+}
+
+export interface ValidationRules {
+  email: RegExp;
+  phone: RegExp;
+  url: RegExp;
+  sanitize: (input: string) => string;
+}
+
+/**
+ * Default Content Security Policy configuration
+ */
+export const defaultCSP: ContentSecurityPolicy = {
+  'default-src': ["'self'"],
+  'script-src': ["'self'", "'unsafe-inline'", "'unsafe-eval'"],
+  'style-src': ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"],
+  'img-src': ["'self'", "data:", "https:", "blob:"],
+  'font-src': ["'self'", "https://fonts.gstatic.com"],
+  'connect-src': ["'self'", "https:", "wss:"],
+  'frame-src': ["'none'"],
+  'object-src': ["'none'"],
+  'base-uri': ["'self'"],
+  'form-action': ["'self'"],
+  'frame-ancestors': ["'none'"],
+  'upgrade-insecure-requests': true
+};
+
+/**
+ * Default security headers
+ */
+export const defaultSecurityHeaders: SecurityHeaders = {
+  'X-Content-Type-Options': 'nosniff',
+  'X-Frame-Options': 'DENY',
+  'X-XSS-Protection': '1; mode=block',
+  'Referrer-Policy': 'strict-origin-when-cross-origin',
+  'Permissions-Policy': 'camera=(), microphone=(), geolocation=(), payment=()',
+  'Strict-Transport-Security': 'max-age=31536000; includeSubDomains'
+};
+
+/**
+ * Input validation rules
+ */
+export const validationRules: ValidationRules = {
+  email: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+  phone: /^[\+]?[1-9][\d]{0,15}$/,
+  url: /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)$/,
+  sanitize: (input: string): string => {
+    return input
+      .replace(/[<>]/g, '') // Remove potential HTML tags
+      .replace(/javascript:/gi, '') // Remove javascript: protocol
+      .replace(/on\w+\s*=/gi, '') // Remove event handlers
+      .trim();
+  }
+};
+
 export class SecurityManager {
   private static instance: SecurityManager;
   private sessionId: string;

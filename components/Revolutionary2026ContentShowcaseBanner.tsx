@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function Revolutionary2026ContentShowcaseBanner() {
   return (
@@ -50,14 +50,12 @@ export default function Revolutionary2026ContentShowcaseBanner() {
               <span className="bg-blue-500/20 text-blue-200 px-3 py-1 rounded-full text-xs">$500B Value</span>
             </div>
             <div className="flex gap-2">
-              <Link 
-                href="/blog/ai-2026-ultra-intelligent-autonomous-systems-breakthrough"
+              <Link to="/blog/ai-2026-ultra-intelligent-autonomous-systems-breakthrough"
                 className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:from-purple-400 hover:to-indigo-400 transition-colors"
               >
                 Read Breakthrough →
               </Link>
-              <Link 
-                href="/case-studies/ai-2026-ultra-intelligent-autonomous-systems-500-billion-success"
+              <Link to="/case-studies/ai-2026-ultra-intelligent-autonomous-systems-500-billion-success"
                 className="border border-purple-500 text-purple-300 px-4 py-2 rounded-lg text-sm font-semibold hover:bg-purple-500 hover:text-white transition-colors"
               >
                 View Success →
@@ -85,14 +83,12 @@ export default function Revolutionary2026ContentShowcaseBanner() {
               <span className="bg-pink-500/20 text-pink-200 px-3 py-1 rounded-full text-xs">$1T Value</span>
             </div>
             <div className="flex gap-2">
-              <Link 
-                href="/blog/ai-2026-quantum-consciousness-fusion-revolution"
+              <Link to="/blog/ai-2026-quantum-consciousness-fusion-revolution"
                 className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:from-indigo-400 hover:to-purple-400 transition-colors"
               >
                 Experience Revolution →
               </Link>
-              <Link 
-                href="/case-studies/ai-2026-quantum-consciousness-fusion-1-trillion-success"
+              <Link to="/case-studies/ai-2026-quantum-consciousness-fusion-1-trillion-success"
                 className="border border-indigo-500 text-indigo-300 px-4 py-2 rounded-lg text-sm font-semibold hover:bg-indigo-500 hover:text-white transition-colors"
               >
                 View $1T Success →
@@ -120,14 +116,12 @@ export default function Revolutionary2026ContentShowcaseBanner() {
               <span className="bg-purple-500/20 text-purple-200 px-3 py-1 rounded-full text-xs">Consciousness</span>
             </div>
             <div className="flex gap-2">
-              <Link 
-                href="/blog"
+              <Link to="/blog"
                 className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:from-cyan-400 hover:to-blue-400 transition-colors"
               >
                 Explore All Content →
               </Link>
-              <Link 
-                href="/case-studies"
+              <Link to="/case-studies"
                 className="border border-cyan-500 text-cyan-300 px-4 py-2 rounded-lg text-sm font-semibold hover:bg-cyan-500 hover:text-white transition-colors"
               >
                 View Success Stories →
@@ -166,20 +160,17 @@ export default function Revolutionary2026ContentShowcaseBanner() {
         {/* Call to Action */}
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Link 
-              href="/blog"
+            <Link to="/blog"
               className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
             >
               Explore All Breakthroughs →
             </Link>
-            <Link 
-              href="/case-studies"
+            <Link to="/case-studies"
               className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
             >
               View Success Stories →
             </Link>
-            <Link 
-              href="/contact"
+            <Link to="/contact"
               className="border-2 border-blue-500 text-blue-300 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               Start Your Transformation

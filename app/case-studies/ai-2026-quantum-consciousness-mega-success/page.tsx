@@ -265,8 +265,7 @@ export default function QuantumConsciousnessSuccess() {
             Join the Fortune 100 companies achieving breakthrough results with quantum consciousness AI
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/contact"
+            <Link to="/contact"
               className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Schedule Quantum Consultation
@@ -286,13 +285,13 @@ export default function QuantumConsciousnessSuccess() {
           <div>
             <h3 className="text-xl font-bold text-gray-900 mb-4">Related Success Stories</h3>
             <div className="space-y-3">
-              <Link href="/case-studies/ai-2026-global-enterprise-transformation-success" className="block text-blue-600 hover:text-blue-800 transition-colors">
+              <Link to="/case-studies/ai-2026-global-enterprise-transformation-success" className="block text-blue-600 hover:text-blue-800 transition-colors">
                 → Global Enterprise AI Transformation: $500M ROI Success
               </Link>
-              <Link href="/case-studies/fortune-500-ai-transformation-mega-success-2026" className="block text-blue-600 hover:text-blue-800 transition-colors">
+              <Link to="/case-studies/fortune-500-ai-transformation-mega-success-2026" className="block text-blue-600 hover:text-blue-800 transition-colors">
                 → Fortune 500 AI Transformation: $300M ROI Achievement
               </Link>
-              <Link href="/blog/ai-2026-quantum-consciousness-breakthrough" className="block text-blue-600 hover:text-blue-800 transition-colors">
+              <Link to="/blog/ai-2026-quantum-consciousness-breakthrough" className="block text-blue-600 hover:text-blue-800 transition-colors">
                 → AI 2026: Quantum Consciousness Breakthrough Technology
               </Link>
             </div>

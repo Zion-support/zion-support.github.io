@@ -21,7 +21,7 @@ export default function Page() {
         <li>Rollback playbooks tied to error budgets</li>
       </ul>
       <p>
-        Continue exploring our governance series in the <Link href="/blog">blog</Link>.
+        Continue exploring our governance series in the <Link to="/blog">blog</Link>.
       </p>
     </main>
   );

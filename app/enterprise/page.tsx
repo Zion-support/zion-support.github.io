@@ -186,8 +186,7 @@ export default function EnterprisePage() {
                       ))}
                     </ul>
                   </div>
-                  <Link 
-                    href={solution.link}
+                  <Link to={solution.link}
                     className="text-blue-600 hover:text-blue-800 font-medium text-sm flex items-center gap-1"
                   >
                     Learn More
@@ -296,14 +295,12 @@ export default function EnterprisePage() {
             Join the Fortune 500 companies that have achieved breakthrough results with our enterprise AI solutions
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/contact"
+            <Link to="/contact"
               className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200"
             >
               Start Enterprise Transformation
             </Link>
-            <Link 
-              href="/case-studies"
+            <Link to="/case-studies"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-200"
             >
               View Success Stories

@@ -24,7 +24,7 @@ export default function ReliableAgentEvals2025Page() {
 		<div className="min-h-screen bg-slate-950 text-white">
 			<main className="max-w-4xl mx-auto px-6 py-12">
 				<nav className="mb-8">
-					<Link href="/blog" className="text-blue-400 hover:text-blue-300 transition-colors">
+					<Link to="/blog" className="text-blue-400 hover:text-blue-300 transition-colors">
 						← Back to Blog
 					</Link>
 				</nav>
@@ -95,7 +95,7 @@ export default function ReliableAgentEvals2025Page() {
 					<footer className="mt-16 pt-8 border-t border-white/10">
 						<div className="flex items-center justify-between text-sm text-white/70">
 							<div>Written by Zion Tech Group</div>
-							<Link href="/contact" className="text-blue-400 hover:text-blue-300">Get in touch</Link>
+							<Link to="/contact" className="text-blue-400 hover:text-blue-300">Get in touch</Link>
 						</div>
 					</footer>
 				</article>

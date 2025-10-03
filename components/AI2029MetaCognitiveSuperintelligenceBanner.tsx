@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function AI2029MetaCognitiveSuperintelligenceBanner() {
   return (
@@ -27,14 +27,12 @@ export default function AI2029MetaCognitiveSuperintelligenceBanner() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/blog/ai-2029-meta-cognitive-superintelligence-breakthrough"
+            <Link to="/blog/ai-2029-meta-cognitive-superintelligence-breakthrough"
               className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-lg font-bold hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 transform hover:scale-105"
             >
               Discover Superintelligence →
             </Link>
-            <Link 
-              href="/services/ai-2029-meta-cognitive-superintelligence"
+            <Link to="/services/ai-2029-meta-cognitive-superintelligence"
               className="bg-white text-indigo-600 px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
             >
               Learn About Services

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// Metadata handled by React Helmet
+import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'AI 2026 Quantum Neural Networks: 1000x Performance Breakthrough',
@@ -353,8 +353,7 @@ export default function AIQuantumNeuralNetworks2026() {
             processing speeds and accuracy with cutting-edge quantum AI technology.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/services"
+            <Link to="/services"
               className="bg-white text-purple-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors shadow-lg"
             >
               Explore Quantum AI Services

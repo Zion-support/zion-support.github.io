@@ -23,7 +23,7 @@ export default function Page() {
         Gate changes with policy checks and online canaries tied to KPIs.
       </p>
       <p>
-        Continue exploring in our <Link href="/blog">Blog</Link>.
+        Continue exploring in our <Link to="/blog">Blog</Link>.
       </p>
     </main>
   );

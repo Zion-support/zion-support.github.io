@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import Head from 'next/head';
 import { Link } from 'react-router-dom';
 import { 
   Cloud, 
@@ -311,12 +311,12 @@ export default function CloudMigrationPage() {
         <div className="bg-white shadow-sm border-b">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center py-4">
-              <Link href="/" className="text-2xl font-bold text-gray-900">
+              <Link to="/" className="text-2xl font-bold text-gray-900">
                 <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                   Zion Tech Group
                 </span>
               </Link>
-              <Link href="/contact" className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+              <Link to="/contact" className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">
                 Get Started
               </Link>
             </div>
@@ -337,10 +337,10 @@ export default function CloudMigrationPage() {
               with zero downtime, cost optimization, and enhanced security.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors">
+              <Link to="/contact" className="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors">
                 Get Migration Quote
               </Link>
-              <Link href="#pricing" className="border border-blue-600 text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-50 transition-colors">
+              <Link to="#pricing" className="border border-blue-600 text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-50 transition-colors">
                 View Pricing
               </Link>
             </div>
@@ -464,7 +464,7 @@ export default function CloudMigrationPage() {
                       </li>
                     ))}
                   </ul>
-                  <Link href="/contact" className={`w-full block text-center py-3 px-4 rounded-lg font-semibold transition-colors ${
+                  <Link to="/contact" className={`w-full block text-center py-3 px-4 rounded-lg font-semibold transition-colors ${
                     tier.name === 'Small Business Migration'
                       ? 'bg-blue-600 text-white hover:bg-blue-700'
                       : 'border border-blue-600 text-blue-600 hover:bg-blue-50'
@@ -506,7 +506,7 @@ export default function CloudMigrationPage() {
               Join hundreds of businesses that have successfully migrated to the cloud with our expert services.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors">
+              <Link to="/contact" className="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors">
                 Get Migration Quote
               </Link>
               <a href="tel:+13024640950" className="border border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">

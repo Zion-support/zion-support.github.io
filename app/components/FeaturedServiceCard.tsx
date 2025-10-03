@@ -36,7 +36,7 @@ export default function FeaturedServiceCard({
         ))}
       </ul>
       <div className="flex justify-end">
-        <Link href={href} className="text-blue-600 font-semibold hover:text-blue-700">
+        <Link to={href} className="text-blue-600 font-semibold hover:text-blue-700">
           Learn More →
         </Link>
       </div>

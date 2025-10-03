@@ -1,6 +1,6 @@
 "use client";
 
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
 import { Rocket, Sparkles, TrendingUp, Award, Heart, Factory, MessageCircle, ArrowRight } from 'lucide-react';
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import Head from 'next/head';
 import { Link } from 'react-router-dom';
 import { Shield, CheckCircle, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
 
@@ -39,7 +39,7 @@ export default function SOC2ReadinessPage() {
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">SOC 2 Readiness Program</h1>
             <p className="text-gray-600 text-lg max-w-3xl">{description}</p>
             <div className="mt-6 flex gap-3">
-              <Link href="/contact" className="bg-slate-800 text-white px-6 py-3 rounded-lg font-semibold hover:bg-slate-900">Get Proposal</Link>
+              <Link to="/contact" className="bg-slate-800 text-white px-6 py-3 rounded-lg font-semibold hover:bg-slate-900">Get Proposal</Link>
               <a href="#pricing" className="border border-slate-800 text-slate-900 px-6 py-3 rounded-lg font-semibold hover:bg-slate-100">View Pricing</a>
             </div>
           </div>
@@ -71,7 +71,7 @@ export default function SOC2ReadinessPage() {
                       <li key={j} className="flex items-start text-sm"><CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-0.5" />{d}</li>
                     ))}
                   </ul>
-                  <Link href="/contact" className="w-full inline-flex items-center justify-center px-4 py-2 bg-slate-800 text-white rounded-lg font-semibold hover:bg-slate-900">
+                  <Link to="/contact" className="w-full inline-flex items-center justify-center px-4 py-2 bg-slate-800 text-white rounded-lg font-semibold hover:bg-slate-900">
                     Get Started <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
                 </div>

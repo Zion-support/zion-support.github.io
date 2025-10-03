@@ -56,7 +56,7 @@ export default function GenAIGovernanceBlueprint2025Page() {
 
           <p>
             See also: {' '}
-            <Link href="/blog/ai-2027-cost-optimization-playbook" className="text-cyan-300 hover:text-cyan-200">
+            <Link to="/blog/ai-2027-cost-optimization-playbook" className="text-cyan-300 hover:text-cyan-200">
               AI 2027 Cost Optimization Playbook
             </Link>
             .
@@ -64,7 +64,7 @@ export default function GenAIGovernanceBlueprint2025Page() {
         </div>
 
         <div className="mt-12">
-          <Link href="/blog" className="inline-block bg-white text-cyan-700 px-6 py-3 rounded-lg font-bold hover:bg-cyan-50">
+          <Link to="/blog" className="inline-block bg-white text-cyan-700 px-6 py-3 rounded-lg font-bold hover:bg-cyan-50">
             ← Back to Blog
           </Link>
         </div>

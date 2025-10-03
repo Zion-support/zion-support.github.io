@@ -1,5 +1,5 @@
 import React from 'react';
-// Metadata handled by React Helmet
+import { Metadata } from 'next';
 import { Link } from 'react-router-dom';
 
 export const metadata: Metadata = {
@@ -226,14 +226,12 @@ export default function AICybersecurityAutomation() {
           Protect your organization with our advanced AI-powered cybersecurity automation platform.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link 
-            href="/contact" 
+          <Link to="/contact" 
             className="bg-red-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors"
           >
             Request Security Assessment
           </Link>
-          <Link 
-            href="https://ziontechgroup.com/services/ai-cybersecurity-automation" 
+          <Link to="https://ziontechgroup.com/services/ai-cybersecurity-automation" 
             className="border border-red-600 text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-red-50 transition-colors"
           >
             View Demo

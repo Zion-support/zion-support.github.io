@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// Metadata handled by React Helmet
+import { Metadata } from 'next';
 import { 
   Brain, 
   Code, 
@@ -471,8 +471,7 @@ export default function NewServicesCatalogPage() {
                         </div>
 
                         {/* CTA */}
-                        <Link
-                          href={service.href}
+                        <Link to={service.href}
                           className={`inline-flex items-center justify-center w-full py-3 px-6 bg-${category.color}-600 text-white font-semibold rounded-lg hover:bg-${category.color}-700 transition-colors group`}
                         >
                           <span>Get Started</span>

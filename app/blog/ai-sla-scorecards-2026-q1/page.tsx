@@ -85,8 +85,8 @@ export default function Page() {
             <h3 className="text-2xl font-bold mb-2 flex items-center gap-2"><Activity className="w-5 h-5" /> Ship with Confidence</h3>
             <p className="text-white/90 mb-4">Use budgets and rollbacks to move fast without surprises. We implement this end‑to‑end in 6–8 weeks.</p>
             <div className="flex gap-3">
-              <Link href="/contact" className="bg-white text-indigo-700 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2">Talk to experts <ArrowRight className="w-4 h-4" /></Link>
-              <Link href="/blog/ai-governance-live-scorecards-2026" className="border border-white/50 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2">Read live scorecards</Link>
+              <Link to="/contact" className="bg-white text-indigo-700 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2">Talk to experts <ArrowRight className="w-4 h-4" /></Link>
+              <Link to="/blog/ai-governance-live-scorecards-2026" className="border border-white/50 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2">Read live scorecards</Link>
             </div>
           </div>
         </div>

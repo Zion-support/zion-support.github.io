@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function UltimateContentShowcase2026Banner() {
   return (
@@ -33,8 +33,7 @@ export default function UltimateContentShowcase2026Banner() {
             <p className="text-blue-100 text-sm mb-4">
               Revolutionary breakthroughs in artificial intelligence are reshaping enterprise operations and unlocking unprecedented business value.
             </p>
-            <Link 
-              href="/blog/ai-2026-next-generation-ai-revolution" 
+            <Link to="/blog/ai-2026-next-generation-ai-revolution" 
               className="inline-flex items-center text-yellow-400 font-semibold hover:text-yellow-300 transition-colors"
             >
               Read More →
@@ -55,8 +54,7 @@ export default function UltimateContentShowcase2026Banner() {
             <p className="text-blue-100 text-sm mb-4">
               How a Fortune 500 company achieved $250M in cost savings and 340% ROI through comprehensive AI transformation.
             </p>
-            <Link 
-              href="/case-studies/ai-enterprise-transformation-mega-success-2026" 
+            <Link to="/case-studies/ai-enterprise-transformation-mega-success-2026" 
               className="inline-flex items-center text-green-400 font-semibold hover:text-green-300 transition-colors"
             >
               View Case Study →
@@ -77,8 +75,7 @@ export default function UltimateContentShowcase2026Banner() {
             <p className="text-blue-100 text-sm mb-4">
               Calculate your potential ROI from AI transformation with our advanced interactive calculator.
             </p>
-            <Link 
-              href="/content-hub" 
+            <Link to="/content-hub" 
               className="inline-flex items-center text-purple-400 font-semibold hover:text-purple-300 transition-colors"
             >
               Try Calculator →
@@ -109,8 +106,7 @@ export default function UltimateContentShowcase2026Banner() {
         {/* Call to Action */}
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/content-hub"
+            <Link to="/content-hub"
               className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               🚀 Explore All Content

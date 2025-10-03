@@ -65,7 +65,7 @@ export default function AutonomousDataGovernance2026Page() {
 
           <p>
             Related reading: {' '}
-            <Link href="/blog/agentic-workflow-orchestration-2026" className="text-teal-300 hover:text-teal-200">
+            <Link to="/blog/agentic-workflow-orchestration-2026" className="text-teal-300 hover:text-teal-200">
               Agentic Workflow Orchestration 2026
             </Link>
             .
@@ -73,7 +73,7 @@ export default function AutonomousDataGovernance2026Page() {
         </div>
 
         <div className="mt-12">
-          <Link href="/blog" className="inline-block bg-white text-teal-700 px-6 py-3 rounded-lg font-bold hover:bg-teal-50">
+          <Link to="/blog" className="inline-block bg-white text-teal-700 px-6 py-3 rounded-lg font-bold hover:bg-teal-50">
             ← Back to Blog
           </Link>
         </div>

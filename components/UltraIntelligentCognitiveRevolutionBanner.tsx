@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function UltraIntelligentCognitiveRevolutionBanner() {
   return (
@@ -41,8 +41,7 @@ export default function UltraIntelligentCognitiveRevolutionBanner() {
         </div>
         
         <div className="grid md:grid-cols-3 gap-6 mb-8">
-          <Link 
-            href="/blog/ai-2026-ultra-intelligent-cognitive-revolution-breakthrough" 
+          <Link to="/blog/ai-2026-ultra-intelligent-cognitive-revolution-breakthrough" 
             className="group block rounded-xl border border-purple-500/20 bg-gradient-to-br from-purple-900/20 to-indigo-900/20 p-6 hover:border-purple-400/40 transition-all duration-300 hover:scale-105"
           >
             <div className="flex items-center gap-2 mb-3">
@@ -54,8 +53,7 @@ export default function UltraIntelligentCognitiveRevolutionBanner() {
             <div className="text-purple-300 text-sm font-semibold group-hover:text-purple-200">Read Revolutionary Details →</div>
           </Link>
           
-          <Link 
-            href="/case-studies/ai-2026-ultra-intelligent-cognitive-revolution-50-billion-success" 
+          <Link to="/case-studies/ai-2026-ultra-intelligent-cognitive-revolution-50-billion-success" 
             className="group block rounded-xl border border-green-500/20 bg-gradient-to-br from-green-900/20 to-emerald-900/20 p-6 hover:border-green-400/40 transition-all duration-300 hover:scale-105"
           >
             <div className="flex items-center gap-2 mb-3">
@@ -67,8 +65,7 @@ export default function UltraIntelligentCognitiveRevolutionBanner() {
             <div className="text-green-300 text-sm font-semibold group-hover:text-green-200">Read Success Story →</div>
           </Link>
           
-          <Link 
-            href="/services/ai-2026-ultra-intelligent-cognitive-revolution-solutions" 
+          <Link to="/services/ai-2026-ultra-intelligent-cognitive-revolution-solutions" 
             className="group block rounded-xl border border-blue-500/20 bg-gradient-to-br from-blue-900/20 to-cyan-900/20 p-6 hover:border-blue-400/40 transition-all duration-300 hover:scale-105"
           >
             <div className="flex items-center gap-2 mb-3">
@@ -83,20 +80,17 @@ export default function UltraIntelligentCognitiveRevolutionBanner() {
         
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/blog/ai-2026-ultra-intelligent-cognitive-revolution-breakthrough" 
+            <Link to="/blog/ai-2026-ultra-intelligent-cognitive-revolution-breakthrough" 
               className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
             >
               Read Ultra-Intelligent Revolution →
             </Link>
-            <Link 
-              href="/case-studies/ai-2026-ultra-intelligent-cognitive-revolution-50-billion-success" 
+            <Link to="/case-studies/ai-2026-ultra-intelligent-cognitive-revolution-50-billion-success" 
               className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
             >
               View $50B Success Story →
             </Link>
-            <Link 
-              href="/contact" 
+            <Link to="/contact" 
               className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               Get Ultra-Intelligent Solutions

@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function October2026NewContentMegaBanner() {
   return (
@@ -31,7 +31,7 @@ export default function October2026NewContentMegaBanner() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 mb-16">
           
           {/* Blog Post 1: Reinforcement Learning */}
-          <Link href="/blog/ai-reinforcement-learning-enterprise-2026" className="group">
+          <Link to="/blog/ai-reinforcement-learning-enterprise-2026" className="group">
             <div className="bg-white rounded-3xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all hover:scale-105 transform">
               <div className="bg-gradient-to-r from-indigo-600 to-purple-600 p-8 text-white">
                 <div className="flex items-center gap-2 mb-4">
@@ -73,7 +73,7 @@ export default function October2026NewContentMegaBanner() {
           </Link>
 
           {/* Blog Post 2: Generative Design */}
-          <Link href="/blog/ai-generative-design-enterprise-2026" className="group">
+          <Link to="/blog/ai-generative-design-enterprise-2026" className="group">
             <div className="bg-white rounded-3xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all hover:scale-105 transform">
               <div className="bg-gradient-to-r from-purple-600 to-pink-600 p-8 text-white">
                 <div className="flex items-center gap-2 mb-4">
@@ -115,7 +115,7 @@ export default function October2026NewContentMegaBanner() {
           </Link>
 
           {/* Blog Post 3: Conversational AI */}
-          <Link href="/blog/ai-conversational-intelligence-enterprise-2026" className="group">
+          <Link to="/blog/ai-conversational-intelligence-enterprise-2026" className="group">
             <div className="bg-white rounded-3xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all hover:scale-105 transform">
               <div className="bg-gradient-to-r from-green-600 to-teal-600 p-8 text-white">
                 <div className="flex items-center gap-2 mb-4">
@@ -157,7 +157,7 @@ export default function October2026NewContentMegaBanner() {
           </Link>
 
           {/* Case Study 1: Retail */}
-          <Link href="/case-studies/retail-giant-ai-transformation-2026" className="group">
+          <Link to="/case-studies/retail-giant-ai-transformation-2026" className="group">
             <div className="bg-white rounded-3xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all hover:scale-105 transform border-4 border-orange-300">
               <div className="bg-gradient-to-r from-orange-600 to-red-600 p-8 text-white">
                 <div className="flex items-center gap-2 mb-4">
@@ -199,7 +199,7 @@ export default function October2026NewContentMegaBanner() {
           </Link>
 
           {/* Case Study 2: Logistics */}
-          <Link href="/case-studies/logistics-ai-autonomous-operations-2026" className="group">
+          <Link to="/case-studies/logistics-ai-autonomous-operations-2026" className="group">
             <div className="bg-white rounded-3xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all hover:scale-105 transform border-4 border-indigo-300">
               <div className="bg-gradient-to-r from-indigo-600 to-cyan-600 p-8 text-white">
                 <div className="flex items-center gap-2 mb-4">

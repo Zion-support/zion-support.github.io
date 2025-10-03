@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 interface ContentItem {
   id: string;
@@ -185,8 +185,7 @@ export default function Interactive2027ContentDiscovery() {
                   </div>
                 )}
 
-                <Link
-                  href={item.href}
+                <Link to={item.href}
                   className="inline-flex items-center text-purple-600 font-semibold hover:text-purple-800 transition-colors"
                 >
                   {item.type === 'blog' ? 'Read Article' : item.type === 'case-study' ? 'View Case Study' : 'Learn More'}
@@ -215,14 +214,12 @@ export default function Interactive2027ContentDiscovery() {
               and achieve similar results for your organization.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
+              <Link to="/contact"
                 className="bg-white text-purple-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors"
               >
                 Get Started Today
               </Link>
-              <Link
-                href="/services"
+              <Link to="/services"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-purple-600 transition-colors"
               >
                 Explore Services

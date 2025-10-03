@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 const ContentNavigationHub = () => {
   return (
@@ -28,18 +28,18 @@ const ContentNavigationHub = () => {
               Revolutionary AI technologies and breakthrough innovations
             </p>
             <div className="space-y-2">
-              <Link href="/blog/ai-2026-july-ultimate-breakthrough-revolution" className="block text-purple-300 hover:text-purple-200 text-sm font-semibold">
+              <Link to="/blog/ai-2026-july-ultimate-breakthrough-revolution" className="block text-purple-300 hover:text-purple-200 text-sm font-semibold">
                 July 2026 Quantum Fusion →
               </Link>
-              <Link href="/blog/ai-2026-august-revolutionary-breakthrough-announcement" className="block text-purple-300 hover:text-purple-200 text-sm font-semibold">
+              <Link to="/blog/ai-2026-august-revolutionary-breakthrough-announcement" className="block text-purple-300 hover:text-purple-200 text-sm font-semibold">
                 August 2026 Consciousness →
               </Link>
-              <Link href="/blog/ai-2026-april-mega-breakthrough-revolution" className="block text-purple-300 hover:text-purple-200 text-sm font-semibold">
+              <Link to="/blog/ai-2026-april-mega-breakthrough-revolution" className="block text-purple-300 hover:text-purple-200 text-sm font-semibold">
                 April 2026 Mega Breakthrough →
               </Link>
             </div>
             <div className="mt-4">
-              <Link href="/blog" className="text-purple-400 font-semibold hover:text-purple-300 transition-colors">
+              <Link to="/blog" className="text-purple-400 font-semibold hover:text-purple-300 transition-colors">
                 View All Breakthroughs →
               </Link>
             </div>
@@ -57,18 +57,18 @@ const ContentNavigationHub = () => {
               Real-world success stories of AI transformation
             </p>
             <div className="space-y-2">
-              <Link href="/case-studies/ai-2026-july-ultimate-breakthrough-100-billion-success" className="block text-green-300 hover:text-green-200 text-sm font-semibold">
+              <Link to="/case-studies/ai-2026-july-ultimate-breakthrough-100-billion-success" className="block text-green-300 hover:text-green-200 text-sm font-semibold">
                 $100B Success Story →
               </Link>
-              <Link href="/case-studies/ai-2026-august-consciousness-integration-mega-success" className="block text-green-300 hover:text-green-200 text-sm font-semibold">
+              <Link to="/case-studies/ai-2026-august-consciousness-integration-mega-success" className="block text-green-300 hover:text-green-200 text-sm font-semibold">
                 $500B Consciousness Success →
               </Link>
-              <Link href="/case-studies/ai-2026-april-mega-breakthrough-15-billion-success" className="block text-green-300 hover:text-green-200 text-sm font-semibold">
+              <Link to="/case-studies/ai-2026-april-mega-breakthrough-15-billion-success" className="block text-green-300 hover:text-green-200 text-sm font-semibold">
                 $15.2B Success Story →
               </Link>
             </div>
             <div className="mt-4">
-              <Link href="/case-studies" className="text-green-400 font-semibold hover:text-green-300 transition-colors">
+              <Link to="/case-studies" className="text-green-400 font-semibold hover:text-green-300 transition-colors">
                 View All Success Stories →
               </Link>
             </div>
@@ -86,18 +86,18 @@ const ContentNavigationHub = () => {
               AI trends and predictions for the future
             </p>
             <div className="space-y-2">
-              <Link href="/blog/ai-2026-future-trends-breakthrough" className="block text-blue-300 hover:text-blue-200 text-sm font-semibold">
+              <Link to="/blog/ai-2026-future-trends-breakthrough" className="block text-blue-300 hover:text-blue-200 text-sm font-semibold">
                 2026 Future Trends →
               </Link>
-              <Link href="/blog/ai-2030-universal-consciousness-revolution" className="block text-blue-300 hover:text-blue-200 text-sm font-semibold">
+              <Link to="/blog/ai-2030-universal-consciousness-revolution" className="block text-blue-300 hover:text-blue-200 text-sm font-semibold">
                 2030 Universal Consciousness →
               </Link>
-              <Link href="/blog/ai-2026-revolutionary-autonomous-ai-systems-breakthrough" className="block text-blue-300 hover:text-blue-200 text-sm font-semibold">
+              <Link to="/blog/ai-2026-revolutionary-autonomous-ai-systems-breakthrough" className="block text-blue-300 hover:text-blue-200 text-sm font-semibold">
                 Autonomous AI Systems →
               </Link>
             </div>
             <div className="mt-4">
-              <Link href="/blog?category=future-trends" className="text-blue-400 font-semibold hover:text-blue-300 transition-colors">
+              <Link to="/blog?category=future-trends" className="text-blue-400 font-semibold hover:text-blue-300 transition-colors">
                 View All Future Trends →
               </Link>
             </div>
@@ -115,18 +115,18 @@ const ContentNavigationHub = () => {
               Comprehensive guides to AI technologies
             </p>
             <div className="space-y-2">
-              <Link href="/blog/ai-future-enterprise-2026" className="block text-orange-300 hover:text-orange-200 text-sm font-semibold">
+              <Link to="/blog/ai-future-enterprise-2026" className="block text-orange-300 hover:text-orange-200 text-sm font-semibold">
                 AI Future Enterprise →
               </Link>
-              <Link href="/blog/ai-next-generation-automation-2026" className="block text-orange-300 hover:text-orange-200 text-sm font-semibold">
+              <Link to="/blog/ai-next-generation-automation-2026" className="block text-orange-300 hover:text-orange-200 text-sm font-semibold">
                 Next-Gen Automation →
               </Link>
-              <Link href="/blog/ai-enterprise-automation-2026-mega-guide" className="block text-orange-300 hover:text-orange-200 text-sm font-semibold">
+              <Link to="/blog/ai-enterprise-automation-2026-mega-guide" className="block text-orange-300 hover:text-orange-200 text-sm font-semibold">
                 Enterprise Automation Guide →
               </Link>
             </div>
             <div className="mt-4">
-              <Link href="/blog?category=guides" className="text-orange-400 font-semibold hover:text-orange-300 transition-colors">
+              <Link to="/blog?category=guides" className="text-orange-400 font-semibold hover:text-orange-300 transition-colors">
                 View All Guides →
               </Link>
             </div>
@@ -141,16 +141,16 @@ const ContentNavigationHub = () => {
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <Link href="/blog?year=2026" className="bg-gradient-to-r from-purple-500/20 to-indigo-500/20 hover:from-purple-500/30 hover:to-indigo-500/30 text-purple-200 border border-purple-400/30 px-4 py-3 rounded-lg font-semibold text-center transition-all duration-300 hover:scale-105">
+            <Link to="/blog?year=2026" className="bg-gradient-to-r from-purple-500/20 to-indigo-500/20 hover:from-purple-500/30 hover:to-indigo-500/30 text-purple-200 border border-purple-400/30 px-4 py-3 rounded-lg font-semibold text-center transition-all duration-300 hover:scale-105">
               2026 Breakthroughs
             </Link>
-            <Link href="/case-studies?value=billion" className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 hover:from-green-500/30 hover:to-emerald-500/30 text-green-200 border border-green-400/30 px-4 py-3 rounded-lg font-semibold text-center transition-all duration-300 hover:scale-105">
+            <Link to="/case-studies?value=billion" className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 hover:from-green-500/30 hover:to-emerald-500/30 text-green-200 border border-green-400/30 px-4 py-3 rounded-lg font-semibold text-center transition-all duration-300 hover:scale-105">
               Billion Dollar Success
             </Link>
-            <Link href="/blog?category=quantum" className="bg-gradient-to-r from-blue-500/20 to-cyan-500/20 hover:from-blue-500/30 hover:to-cyan-500/30 text-blue-200 border border-blue-400/30 px-4 py-3 rounded-lg font-semibold text-center transition-all duration-300 hover:scale-105">
+            <Link to="/blog?category=quantum" className="bg-gradient-to-r from-blue-500/20 to-cyan-500/20 hover:from-blue-500/30 hover:to-cyan-500/30 text-blue-200 border border-blue-400/30 px-4 py-3 rounded-lg font-semibold text-center transition-all duration-300 hover:scale-105">
               Quantum AI
             </Link>
-            <Link href="/blog?category=consciousness" className="bg-gradient-to-r from-cyan-500/20 to-teal-500/20 hover:from-cyan-500/30 hover:to-teal-500/30 text-cyan-200 border border-cyan-400/30 px-4 py-3 rounded-lg font-semibold text-center transition-all duration-300 hover:scale-105">
+            <Link to="/blog?category=consciousness" className="bg-gradient-to-r from-cyan-500/20 to-teal-500/20 hover:from-cyan-500/30 hover:to-teal-500/30 text-cyan-200 border border-cyan-400/30 px-4 py-3 rounded-lg font-semibold text-center transition-all duration-300 hover:scale-105">
               AI Consciousness
             </Link>
           </div>

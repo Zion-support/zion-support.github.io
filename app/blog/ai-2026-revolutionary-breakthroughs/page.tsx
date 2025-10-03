@@ -332,7 +332,7 @@ export default function AI2026RevolutionaryBreakthroughs() {
           <div className="text-sm text-gray-500">
             <p>Published on January 20, 2026 by Zion Tech Group AI Research Team</p>
             <p className="mt-2">
-              <Link href="/blog" className="text-blue-600 hover:text-blue-700">
+              <Link to="/blog" className="text-blue-600 hover:text-blue-700">
                 ← Back to Blog
               </Link>
             </p>

@@ -1,5 +1,5 @@
 import React from 'react';
-// Metadata handled by React Helmet
+import { Metadata } from 'next';
 import { Link } from 'react-router-dom';
 
 export const metadata: Metadata = {
@@ -34,7 +34,7 @@ export default function ManufacturingAIPlatform() {
           <p className="text-gray-600 mb-4">
             Prevent equipment failures before they happen with AI-powered predictive maintenance algorithms.
           </p>
-          <Link href="/case-studies/ai-automation-manufacturing-success-2026" className="text-blue-600 hover:text-blue-800 font-medium">
+          <Link to="/case-studies/ai-automation-manufacturing-success-2026" className="text-blue-600 hover:text-blue-800 font-medium">
             Learn More →
           </Link>
         </div>
@@ -49,7 +49,7 @@ export default function ManufacturingAIPlatform() {
           <p className="text-gray-600 mb-4">
             Automated quality inspection and defect detection using computer vision and machine learning.
           </p>
-          <Link href="/case-studies/ai-manufacturing-excellence-2026" className="text-blue-600 hover:text-blue-800 font-medium">
+          <Link to="/case-studies/ai-manufacturing-excellence-2026" className="text-blue-600 hover:text-blue-800 font-medium">
             Learn More →
           </Link>
         </div>
@@ -64,7 +64,7 @@ export default function ManufacturingAIPlatform() {
           <p className="text-gray-600 mb-4">
             Optimize production processes in real-time with AI-driven decision making and automation.
           </p>
-          <Link href="/services/ai-autonomous-operations" className="text-blue-600 hover:text-blue-800 font-medium">
+          <Link to="/services/ai-autonomous-operations" className="text-blue-600 hover:text-blue-800 font-medium">
             Learn More →
           </Link>
         </div>
@@ -79,7 +79,7 @@ export default function ManufacturingAIPlatform() {
           <p className="text-gray-600 mb-4">
             Intelligent supply chain management with demand forecasting and inventory optimization.
           </p>
-          <Link href="/services/supply-chain-intelligence" className="text-blue-600 hover:text-blue-800 font-medium">
+          <Link to="/services/supply-chain-intelligence" className="text-blue-600 hover:text-blue-800 font-medium">
             Learn More →
           </Link>
         </div>
@@ -94,7 +94,7 @@ export default function ManufacturingAIPlatform() {
           <p className="text-gray-600 mb-4">
             Advanced visual inspection systems for real-time monitoring and quality assurance.
           </p>
-          <Link href="/services/ai-virtual-assistant" className="text-blue-600 hover:text-blue-800 font-medium">
+          <Link to="/services/ai-virtual-assistant" className="text-blue-600 hover:text-blue-800 font-medium">
             Learn More →
           </Link>
         </div>
@@ -109,7 +109,7 @@ export default function ManufacturingAIPlatform() {
           <p className="text-gray-600 mb-4">
             AI-powered safety systems to prevent accidents and ensure compliance with regulations.
           </p>
-          <Link href="/security" className="text-blue-600 hover:text-blue-800 font-medium">
+          <Link to="/security" className="text-blue-600 hover:text-blue-800 font-medium">
             Learn More →
           </Link>
         </div>
@@ -270,14 +270,12 @@ export default function ManufacturingAIPlatform() {
           Schedule a demo to see the platform in action.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link 
-            href="/contact" 
+          <Link to="/contact" 
             className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
           >
             Schedule Demo
           </Link>
-          <Link 
-            href="/case-studies/ai-automation-manufacturing-success-2026" 
+          <Link to="/case-studies/ai-automation-manufacturing-success-2026" 
             className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
           >
             View Manufacturing Case Studies

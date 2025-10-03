@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function January2026BreakthroughInnovationsBanner() {
   return (
@@ -50,14 +50,12 @@ export default function January2026BreakthroughInnovationsBanner() {
                 </div>
                 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                  <Link 
-                    href="/blog/ai-2026-january-breakthrough-innovations"
+                  <Link to="/blog/ai-2026-january-breakthrough-innovations"
                     className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
                   >
                     Explore Breakthroughs →
                   </Link>
-                  <Link 
-                    href="/contact"
+                  <Link to="/contact"
                     className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
                   >
                     Get Implementation Guide

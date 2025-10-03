@@ -6,7 +6,7 @@ export default function AIRevolutionaryAutomationSuccess2026() {
     <div className="min-h-screen bg-slate-950 text-white">
       <div className="container mx-auto px-6 py-12">
         <nav className="mb-8">
-          <Link href="/" className="text-blue-400 hover:text-blue-300 transition-colors">
+          <Link to="/" className="text-blue-400 hover:text-blue-300 transition-colors">
             ← Back to Home
           </Link>
         </nav>

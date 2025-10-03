@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { ArrowRight, Zap, Cpu, Globe, TrendingUp, Star, Factory, Wifi } from 'lucide-react';
 
 const March2026EdgeIntelligenceRevolutionBanner: React.FC = () => {
@@ -104,8 +104,7 @@ const March2026EdgeIntelligenceRevolutionBanner: React.FC = () => {
 
           {/* Call to Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link 
-              href="/content/blog/ai-2026-march-edge-intelligence-revolution-1000x-performance"
+            <Link to="/content/blog/ai-2026-march-edge-intelligence-revolution-1000x-performance"
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-teal-500 hover:from-green-600 hover:to-teal-600 text-white font-bold text-lg rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               <Cpu className="w-6 h-6 mr-3" />
@@ -113,8 +112,7 @@ const March2026EdgeIntelligenceRevolutionBanner: React.FC = () => {
               <ArrowRight className="w-6 h-6 ml-3" />
             </Link>
             
-            <Link 
-              href="/content/case-studies/ai-2026-march-edge-intelligence-global-manufacturing-85-billion-success"
+            <Link to="/content/case-studies/ai-2026-march-edge-intelligence-global-manufacturing-85-billion-success"
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white font-bold text-lg rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               <Factory className="w-6 h-6 mr-3" />

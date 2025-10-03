@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 const AIMarketplaces2025: NextPage = () => {,,,
   return (
     <div className="min-h-screen bg-white">";";";

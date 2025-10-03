@@ -25,7 +25,7 @@ export default function Page() {
         </ul>
         <p>
           See related operational runbooks in the{' '}
-          <Link href="/blog" className="text-blue-600 hover:underline">Blog</Link>.
+          <Link to="/blog" className="text-blue-600 hover:underline">Blog</Link>.
         </p>
       </section>
     </main>

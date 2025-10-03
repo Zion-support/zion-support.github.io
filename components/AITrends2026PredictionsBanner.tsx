@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function AITrends2026PredictionsBanner() {
   return (
@@ -80,15 +80,13 @@ export default function AITrends2026PredictionsBanner() {
               </p>
               
               <div className="space-y-4">
-                <Link
-                  href="/blog/ai-trends-2026-predictions"
+                <Link to="/blog/ai-trends-2026-predictions"
                   className="block w-full bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors text-center"
                 >
                   Read Full Predictions
                 </Link>
                 
-                <Link
-                  href="/blog/ai-enterprise-implementation-2026"
+                <Link to="/blog/ai-enterprise-implementation-2026"
                   className="block w-full border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-600 transition-colors text-center"
                 >
                   View Implementation Guide

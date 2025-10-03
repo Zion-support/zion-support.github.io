@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 interface ContentItem {
   id: string;
@@ -254,15 +254,13 @@ export default function UnifiedContentPromotion() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                href={activeContent.link}
+              <Link to={activeContent.link}
                 className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl text-center inline-flex items-center justify-center gap-2"
               >
                 Read Full Story
                 <span className="text-xl">→</span>
               </Link>
-              <Link
-                href="/blog"
+              <Link to="/blog"
                 className="border-2 border-white/50 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-300 text-center"
               >
                 Explore All Content
