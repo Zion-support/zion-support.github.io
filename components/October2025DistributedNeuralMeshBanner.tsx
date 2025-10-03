@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { Network, Zap, TrendingUp, Sparkles, Shield, Globe } from 'lucide-react';
 
 export default function October2025DistributedNeuralMeshBanner() {

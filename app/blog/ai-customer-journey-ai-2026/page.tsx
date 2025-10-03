@@ -1,6 +1,12 @@
-import React from 'react';
+// import React from 'react';
 import { Link } from 'react-router-dom';
+import { Metadata } from 'next';
 
+export const metadata: Metadata = {
+  title: 'AI Customer Journey 2026: Complete Personalization Guide',
+  description: 'Master AI-powered customer journey optimization in 2026. Learn how to create seamless, personalized experiences that increase conversion by 250% and customer satisfaction by 90%.',
+  keywords: 'AI customer journey, customer experience, personalization, journey mapping, CX optimization, 2026',
+};
 
 export default function AICustomerJourney2026Page() {
   return (
@@ -20,14 +26,12 @@ export default function AICustomerJourney2026Page() {
             250% conversion increase, 90% satisfaction improvement, and seamless experiences.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/contact"
+            <Link to="/contact"
               className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors shadow-lg hover:shadow-xl"
             >
               Get Implementation Help
             </Link>
-            <Link
-              href="/case-studies"
+            <Link to="/case-studies"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-green-600 transition-colors"
             >
               View Success Stories

@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 
 export const metadata = {
   title: 'Autonomous Mesh Orchestration 2025 — Self-Organizing AI Systems at Scale',

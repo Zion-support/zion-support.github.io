@@ -1,7 +1,20 @@
-import React from 'react';
+// import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Clock, User, Tag, Share2, BookOpen, CheckCircle, TrendingUp, Brain, Zap } from 'lucide-react';
+// Metadata handled by React Helmet
 
+export const metadata: Metadata = {
+  title: 'AI-Powered Autonomous Business Processes: The 2026 Revolution | Zion Tech Group',
+  description: 'Discover how AI-powered autonomous business processes are revolutionizing enterprise operations in 2026, delivering unprecedented efficiency and strategic insights.',
+  keywords: 'autonomous business processes, AI automation, enterprise transformation, business process optimization, AI agents',
+  openGraph: {
+    title: 'AI-Powered Autonomous Business Processes: The 2026 Revolution',
+    description: 'Discover how AI-powered autonomous business processes are revolutionizing enterprise operations in 2026, delivering unprecedented efficiency and strategic insights.',
+    type: 'article',
+    publishedTime: '2026-01-15T00:00:00Z',
+    authors: ['Zion Tech Group'],
+  },
+};
 
 export default function AutonomousBusinessProcessesBlog() {
   return (
@@ -9,7 +22,7 @@ export default function AutonomousBusinessProcessesBlog() {
       {/* Header */}
       <div className="bg-white shadow-sm border-b">
         <div className="max-w-4xl mx-auto px-4 py-8">
-          <Link href="/blog" className="inline-flex items-center text-blue-600 hover:text-blue-700 mb-6">
+          <Link to="/blog" className="inline-flex items-center text-blue-600 hover:text-blue-700 mb-6">
             <ArrowLeft className="w-5 h-5 mr-2" />
             Back to Blog
           </Link>
@@ -361,15 +374,13 @@ export default function AutonomousBusinessProcessesBlog() {
                 Discover how autonomous business processes can revolutionize your organization.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
-                  href="/contact"
+                <Link to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-bold rounded-xl hover:bg-gray-100 transition-colors"
                 >
                   Schedule Consultation
                   <ArrowLeft className="w-5 h-5 ml-2 rotate-180" />
                 </Link>
-                <Link 
-                  href="/guides/autonomous-business-processes-implementation-guide-2026"
+                <Link to="/guides/autonomous-business-processes-implementation-guide-2026"
                   className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-xl border border-white/30 hover:bg-white/20 transition-colors"
                 >
                   Get Implementation Guide
@@ -387,7 +398,7 @@ export default function AutonomousBusinessProcessesBlog() {
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-2xl font-bold text-gray-900 mb-8">Related Content</h2>
           <div className="grid md:grid-cols-2 gap-8">
-            <Link href="/case-studies/global-manufacturing-autonomous-transformation" className="group">
+            <Link to="/case-studies/global-manufacturing-autonomous-transformation" className="group">
               <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
                 <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-blue-600">Global Manufacturing Transformation</h3>
                 <p className="text-gray-600 mb-4">See how a Fortune 500 manufacturer achieved 85% process automation with our solution.</p>
@@ -398,7 +409,7 @@ export default function AutonomousBusinessProcessesBlog() {
               </div>
             </Link>
             
-            <Link href="/guides/autonomous-business-processes-implementation-guide-2026" className="group">
+            <Link to="/guides/autonomous-business-processes-implementation-guide-2026" className="group">
               <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
                 <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-blue-600">Implementation Guide</h3>
                 <p className="text-gray-600 mb-4">Complete step-by-step guide to implementing autonomous business processes.</p>

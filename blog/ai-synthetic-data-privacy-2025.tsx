@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 
 export const metadata = {
   title: 'AI Synthetic Data Generation: Privacy-First Machine Learning 2025 | Zion Tech',

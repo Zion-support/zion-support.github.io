@@ -1,5 +1,18 @@
-import React from 'react';
+// import React from 'react';
+// Metadata handled by React Helmet
 
+export const metadata: Metadata = {
+  title: 'AI Governance 2026: Enterprise Safety and Compliance Framework',
+  description: 'Comprehensive guide to AI governance, safety protocols, and compliance frameworks for enterprise organizations in 2026. Learn how to implement robust AI safety measures and ensure regulatory compliance.',
+  keywords: ['AI governance', 'AI safety', 'enterprise compliance', 'AI regulations', 'AI risk management', 'AI ethics', '2026'],
+  openGraph: {
+    title: 'AI Governance 2026: Enterprise Safety and Compliance Framework',
+    description: 'Comprehensive guide to AI governance, safety protocols, and compliance frameworks for enterprise organizations.',
+    type: 'article',
+    publishedTime: '2026-01-20T00:00:00.000Z',
+    authors: ['Zion Tech Group'],
+  },
+};
 
 export default function AIGovernance2026EnterpriseSafety() {
   return (

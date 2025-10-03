@@ -1,6 +1,21 @@
-import React from 'react';
+// import React from 'react';
+// Metadata interface for React Helmet
+interface Metadata {
+  title?: string;
+  description?: string;
+  keywords?: string;
+}
 import { Link } from 'react-router-dom';
 
+export const metadata: Metadata = {
+  title: 'AI-Powered CRM Automation - Zion Tech Group',
+  description: 'Transform your customer relationships with AI-powered CRM automation. Automate lead scoring, sales forecasting, and customer engagement with intelligent insights.',
+  keywords: 'AI CRM automation, sales automation, lead scoring, customer relationship management, sales AI',
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function AIPoweredCRMAutomation() {
   return (
@@ -241,14 +256,12 @@ export default function AIPoweredCRMAutomation() {
           Join 400+ sales teams using our AI-Powered CRM Automation to increase revenue and efficiency.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link 
-            href="/contact" 
+          <Link to="/contact" 
             className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
           >
             Start Free Trial
           </Link>
-          <Link 
-            href="tel:+13024640950" 
+          <Link to="tel:+13024640950" 
             className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold border border-purple-600 hover:bg-purple-50 transition-colors"
           >
             Call +1 302 464 0950

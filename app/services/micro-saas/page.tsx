@@ -1,10 +1,21 @@
-import React from 'react';
+// import React from 'react';
+// Metadata interface for React Helmet
+interface Metadata {
+  title?: string;
+  description?: string;
+  keywords?: string;
+}
 import { Link } from 'react-router-dom';
 import * as Lucide from 'lucide-react';
 const { 
   Cloud, Shield, BarChart3, Users, FileText, Zap, MessageSquare, CheckCircle, ArrowRight, DollarSign, Clock, Star, Activity, Mail, Phone, Calendar, Headphones, Code, Package, TrendingUp, Bot
 } = Lucide as any;
 
+export const metadata: Metadata = {
+  title: 'Micro SaaS Solutions | Zion Tech Group - Real Business Tools',
+  description: 'Production-ready micro SaaS applications for specific business needs. Cloud cost management, AI content creation, compliance automation, and more.',
+  keywords: 'micro SaaS, business software, cloud cost management, AI tools, compliance automation, productivity apps',
+};
 
 export default function MicroSAASPage() {
   const microSAASServices = [
@@ -876,8 +887,7 @@ export default function MicroSAASPage() {
                   </div>
 
                   <div className="flex gap-3">
-                    <Link 
-                      href={service.link}
+                    <Link to={service.link}
                       className="flex-1 inline-flex items-center justify-center px-4 py-2 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors text-sm"
                     >
                       Learn More

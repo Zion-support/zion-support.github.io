@@ -1,6 +1,12 @@
-import React from 'react';
+// import React from 'react';
+// Metadata handled by React Helmet
 import { FileText, CheckCircle, ArrowRight, DollarSign, Clock, Shield } from 'lucide-react';
 
+export const metadata: Metadata = {
+  title: 'AI Legal Contract Review | Zion Tech Group - Micro SaaS',
+  description: 'Automated contract analysis that flags risky clauses, extracts obligations and key dates, and drafts redlines aligned to your playbooks.',
+  keywords: 'AI contract review, legal AI, clause extraction, obligation extraction, redlining, CLM integration',
+};
 
 export default function AILegalContractReviewPage() {
   const contact = {

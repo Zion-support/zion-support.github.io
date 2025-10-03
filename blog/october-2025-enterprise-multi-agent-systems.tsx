@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 
 export const metadata = {
   title: 'October 2025: Enterprise Multi-Agent Systems Architecture',

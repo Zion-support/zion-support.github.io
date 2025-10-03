@@ -1,4 +1,10 @@
-import React from 'react';
+// import React from 'react';
+// Metadata interface for React Helmet
+interface Metadata {
+  title?: string;
+  description?: string;
+  keywords?: string;
+}
 import { Link } from 'react-router-dom';
 import { 
   Wifi, 
@@ -59,6 +65,11 @@ import {
   Calculator
 } from 'lucide-react';
 
+export const metadata: Metadata = {
+  title: 'IoT Smart Infrastructure Platform | Zion Tech Group - Connected Solutions',
+  description: 'Comprehensive IoT platform for smart cities, buildings, and infrastructure. Real-time monitoring, predictive maintenance, and intelligent automation.',
+  keywords: 'IoT platform, smart infrastructure, connected devices, predictive maintenance, smart cities, building automation, industrial IoT',
+};
 
 export default function IoTSmartInfrastructurePlatformPage() {
   const features = [
@@ -233,14 +244,12 @@ export default function IoTSmartInfrastructurePlatformPage() {
               your buildings, facilities, and cities with intelligent automation and predictive analytics.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/contact" 
+              <Link to="/contact" 
                 className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
               >
                 Start Free Trial
               </Link>
-              <Link 
-                href="#demo" 
+              <Link to="#demo" 
                 className="border border-purple-600 text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors"
               >
                 Watch Demo
@@ -349,8 +358,7 @@ export default function IoTSmartInfrastructurePlatformPage() {
                   ))}
                 </ul>
                 
-                <Link
-                  href={tier.name === 'City' ? '/contact' : '/contact'}
+                <Link to={tier.name === 'City' ? '/contact' : '/contact'}
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
                     tier.popular
                       ? 'bg-purple-600 text-white hover:bg-purple-700'
@@ -413,14 +421,12 @@ export default function IoTSmartInfrastructurePlatformPage() {
             Join leading organizations transforming their infrastructure with IoT technology.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/contact" 
+            <Link to="/contact" 
               className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Start Free Trial
             </Link>
-            <Link 
-              href="/contact" 
+            <Link to="/contact" 
               className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
             >
               Schedule Demo

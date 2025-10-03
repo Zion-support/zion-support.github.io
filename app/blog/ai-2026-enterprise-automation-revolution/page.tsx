@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { Link } from 'react-router-dom';
 import { Cog, Zap, TrendingUp, Shield, Users, BarChart3 } from 'lucide-react';
 

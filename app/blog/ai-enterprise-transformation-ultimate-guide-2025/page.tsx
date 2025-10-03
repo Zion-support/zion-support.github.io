@@ -1,6 +1,26 @@
-import React from 'react';
+// import React from 'react';
 import { Link } from 'react-router-dom';
+import { Metadata } from 'next';
 
+export const metadata: Metadata = {
+  title: 'AI Enterprise Transformation Ultimate Guide 2025: $2B+ ROI Strategies | Zion Tech Group',
+  description: 'Complete guide to AI enterprise transformation achieving $2B+ ROI. Learn autonomous operations, quantum AI, and multi-agent orchestration strategies from Fortune 500 success stories.',
+  keywords: 'AI enterprise transformation, autonomous operations, quantum AI, multi-agent orchestration, enterprise AI ROI, Fortune 500 AI success, AI strategy, enterprise automation',
+  openGraph: {
+    title: 'AI Enterprise Transformation Ultimate Guide 2025: $2B+ ROI Strategies',
+    description: 'Complete guide to AI enterprise transformation achieving $2B+ ROI. Learn autonomous operations, quantum AI, and multi-agent orchestration strategies.',
+    type: 'article',
+    url: 'https://ziontechgroup.com/blog/ai-enterprise-transformation-ultimate-guide-2025',
+    images: [
+      {
+        url: 'https://ziontechgroup.com/images/ai-enterprise-transformation-2025.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'AI Enterprise Transformation Ultimate Guide 2025'
+      }
+    ]
+  }
+};
 
 export default function AIEnterpriseTransformationUltimateGuide2025() {
   return (
@@ -192,14 +212,12 @@ export default function AIEnterpriseTransformationUltimateGuide2025() {
                 <p className="mb-6 opacity-90">
                   Get a personalized AI transformation strategy for your enterprise.
                 </p>
-                <Link 
-                  href="/services" 
+                <Link to="/services" 
                   className="block bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold text-center hover:bg-gray-100 transition-colors mb-4"
                 >
                   Get Free Consultation
                 </Link>
-                <Link 
-                  href="/case-studies" 
+                <Link to="/case-studies" 
                   className="block border-2 border-white/30 text-white px-6 py-3 rounded-lg font-semibold text-center hover:bg-white/10 transition-colors"
                 >
                   View Case Studies
@@ -210,15 +228,15 @@ export default function AIEnterpriseTransformationUltimateGuide2025() {
               <div className="bg-white rounded-2xl shadow-lg p-6">
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Related Articles</h3>
                 <div className="space-y-4">
-                  <Link href="/blog/autonomous-operations-2025" className="block hover:bg-gray-50 p-3 rounded-lg transition-colors">
+                  <Link to="/blog/autonomous-operations-2025" className="block hover:bg-gray-50 p-3 rounded-lg transition-colors">
                     <div className="font-semibold text-gray-900">Autonomous Operations 2025</div>
                     <div className="text-sm text-gray-600">Complete guide to autonomous business operations</div>
                   </Link>
-                  <Link href="/blog/quantum-ai-enterprise-2026" className="block hover:bg-gray-50 p-3 rounded-lg transition-colors">
+                  <Link to="/blog/quantum-ai-enterprise-2026" className="block hover:bg-gray-50 p-3 rounded-lg transition-colors">
                     <div className="font-semibold text-gray-900">Quantum AI Enterprise Guide</div>
                     <div className="text-sm text-gray-600">Implementing quantum computing in enterprise</div>
                   </Link>
-                  <Link href="/blog/multi-agent-orchestration-2025" className="block hover:bg-gray-50 p-3 rounded-lg transition-colors">
+                  <Link to="/blog/multi-agent-orchestration-2025" className="block hover:bg-gray-50 p-3 rounded-lg transition-colors">
                     <div className="font-semibold text-gray-900">Multi-Agent Orchestration</div>
                     <div className="text-sm text-gray-600">Scaling AI agents across enterprise systems</div>
                   </Link>

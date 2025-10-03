@@ -1,6 +1,12 @@
-import React from 'react';
+// import React from 'react';
+import { Metadata } from 'next';
 import { Link } from 'react-router-dom';
 
+export const metadata: Metadata = {
+  title: 'Pricing Plans | Zion Tech Group - Transparent Pricing for AI & IT Services',
+  description: 'Transparent pricing for AI services, micro SaaS development, and IT solutions. Choose the perfect plan for your business needs. Starting from $29/month.',
+  keywords: 'Zion Tech Group pricing, AI services pricing, micro SaaS pricing, IT services pricing, transparent pricing',
+};
 
 export default function PricingPage() {
   const serviceCategories = [
@@ -248,14 +254,12 @@ export default function PricingPage() {
             transparent pricing, no hidden fees, and flexible terms.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/contact" 
+            <Link to="/contact" 
               className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
             >
               Get Custom Quote
             </Link>
-            <Link 
-              href="/contact" 
+            <Link to="/contact" 
               className="border border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
             >
               Schedule Consultation
@@ -301,8 +305,7 @@ export default function PricingPage() {
                       </li>
                     ))}
                   </ul>
-                  <Link 
-                    href="/contact"
+                  <Link to="/contact"
                     className={`block w-full text-center py-3 rounded-lg font-semibold transition-colors ${
                       planIndex === 1
                         ? 'bg-blue-600 text-white hover:bg-blue-700'
@@ -342,8 +345,7 @@ export default function PricingPage() {
                     </li>
                   ))}
                 </ul>
-                <Link 
-                  href="/contact"
+                <Link to="/contact"
                   className="inline-block w-full text-center bg-blue-600 text-white py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
                 >
                   Get Quote

@@ -1,5 +1,18 @@
-import React from 'react';
+// import React from 'react';
+// Metadata handled by React Helmet
 
+export const metadata: Metadata = {
+  title: 'AI 2025: Cognitive Automation Breakthrough | Zion Tech Group',
+  description: 'Revolutionary cognitive automation systems delivering 95% accuracy, 87% faster decisions, and $95B success stories. Learn about the breakthrough in AI-driven cognitive processes.',
+  keywords: 'cognitive automation, AI breakthrough, decision automation, cognitive AI, enterprise automation, AI accuracy',
+  openGraph: {
+    title: 'AI 2025: Cognitive Automation Breakthrough',
+    description: 'Revolutionary cognitive automation systems delivering 95% accuracy, 87% faster decisions, and $95B success stories.',
+    type: 'article',
+    publishedTime: '2025-01-20T00:00:00Z',
+    authors: ['Zion Tech Group'],
+  },
+};
 
 export default function AI2025CognitiveAutomationBreakthrough() {
   return (

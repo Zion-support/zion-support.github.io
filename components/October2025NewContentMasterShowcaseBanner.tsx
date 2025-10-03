@@ -1,7 +1,6 @@
-import React from 'react';
+// import React from 'react';
 import { Link } from 'react-router-dom';
-import { Sparkles, TrendingUp, Factory, Award, ArrowRight, Zap } from 'lucide-react';
-
+import { Sparkles, TrendingUp, Award, ArrowRight, Zap } from 'lucide-react';
 const October2025NewContentMasterShowcaseBanner: React.FC = () => {
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white">

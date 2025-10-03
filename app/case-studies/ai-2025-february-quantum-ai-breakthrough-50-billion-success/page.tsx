@@ -1,5 +1,19 @@
-import React from 'react';
+// import React from 'react';
+// Metadata handled by React Helmet
 
+export const metadata: Metadata = {
+  title: 'February 2025: Quantum AI Breakthrough - $50 Billion Enterprise Transformation Success | Zion Tech Group',
+  description: 'How a Fortune 50 conglomerate achieved $50 billion in cost savings and 300% performance improvements through quantum AI implementation.',
+  keywords: ['Quantum AI Success Story', 'Enterprise Transformation', 'Cost Savings', 'Fortune 500', 'Quantum Computing'],
+  openGraph: {
+    title: 'February 2025: Quantum AI Breakthrough - $50 Billion Enterprise Transformation Success',
+    description: 'Fortune 50 conglomerate achieves $50 billion in cost savings and 300% performance improvements through quantum AI implementation.',
+    type: 'article',
+    publishedTime: '2025-02-15T00:00:00Z',
+    authors: ['Zion Tech Group Case Study Team'],
+    tags: ['Quantum Computing', 'Enterprise Transformation', 'Cost Savings', 'Performance'],
+  },
+};
 
 export default function February2025QuantumAIBreakthroughCaseStudyPage() {
   return (

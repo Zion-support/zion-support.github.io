@@ -1,5 +1,17 @@
-import React from 'react';
+// import React from 'react';
+// Metadata handled by React Helmet
 
+export const metadata: Metadata = {
+  title: 'Meta-Cognitive Reasoning: AI That Thinks About Thinking - Zion Tech Group',
+  description: 'Discover the breakthrough in AI reasoning capabilities. Meta-cognitive AI systems that can think about their own thinking processes, leading to unprecedented decision-making accuracy.',
+  keywords: 'meta-cognitive AI, AI reasoning, cognitive AI, self-aware AI, AI decision making, cognitive reasoning',
+  openGraph: {
+    title: 'Meta-Cognitive Reasoning: AI That Thinks About Thinking',
+    description: 'Discover the breakthrough in AI reasoning capabilities with meta-cognitive systems.',
+    type: 'article',
+    publishedTime: '2026-01-25T00:00:00.000Z',
+  },
+};
 
 export default function MetaCognitiveReasoning() {
   return (

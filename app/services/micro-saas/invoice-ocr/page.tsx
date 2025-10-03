@@ -1,7 +1,14 @@
 "use client"
-import React from 'react';
+// import React from 'react';
+// Metadata handled by React Helmet
 import { DollarSign, FileText, CheckCircle, Shield, BarChart3, Phone, Mail, MapPin } from 'lucide-react';
 
+export const metadata: Metadata = {
+  title: 'Invoice OCR & AP Automation | Zion Tech Group',
+  description: 'Accurate invoice capture, fraud checks, approvals, and ERP export. Cut AP costs by 60% with fast setup and transparent pricing.',
+  keywords: ['invoice OCR', 'AP automation', 'accounts payable', 'document AI'],
+  alternates: { canonical: 'https://ziontechgroup.com/services/micro-saas/invoice-ocr' },
+};
 
 export default function InvoiceOCRPage() {
   const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com' };
@@ -83,8 +90,8 @@ export default function InvoiceOCRPage() {
   );
 }
 
-import React from 'react';
-import Head from 'next/head';
+// import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { DollarSign, CheckCircle, Shield, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
 
@@ -124,7 +131,7 @@ export default function InvoiceOCRPage() {
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Invoice OCR & AP Automation</h1>
             <p className="text-gray-600 text-lg max-w-3xl">{description}</p>
             <div className="mt-6 flex gap-3">
-              <Link href="/contact" className="bg-yellow-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-yellow-700">Book a Demo</Link>
+              <Link to="/contact" className="bg-yellow-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-yellow-700">Book a Demo</Link>
               <a href="#pricing" className="border border-yellow-600 text-yellow-700 px-6 py-3 rounded-lg font-semibold hover:bg-yellow-50">View Pricing</a>
             </div>
           </div>
@@ -164,7 +171,7 @@ export default function InvoiceOCRPage() {
                       <li key={j} className="flex items-start text-sm"><CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-0.5" />{d}</li>
                     ))}
                   </ul>
-                  <Link href="/contact" className="w-full inline-flex items-center justify-center px-4 py-2 bg-yellow-600 text-white rounded-lg font-semibold hover:bg-yellow-700">
+                  <Link to="/contact" className="w-full inline-flex items-center justify-center px-4 py-2 bg-yellow-600 text-white rounded-lg font-semibold hover:bg-yellow-700">
                     Get Started <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
                 </div>

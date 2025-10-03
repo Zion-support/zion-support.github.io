@@ -1,4 +1,10 @@
-import React from 'react';
+// import React from 'react';
+// Metadata interface for React Helmet
+interface Metadata {
+  title?: string;
+  description?: string;
+  keywords?: string;
+}
 import { Link } from 'react-router-dom';
 import { 
   Brain, 
@@ -64,6 +70,11 @@ import {
   AlertTriangle
 } from 'lucide-react';
 
+export const metadata: Metadata = {
+  title: 'AI-Powered Customer Insights Platform | Zion Tech Group - Advanced Analytics',
+  description: 'Transform customer data into actionable insights with our AI-powered analytics platform. Real-time sentiment analysis, predictive behavior modeling, and automated customer journey optimization.',
+  keywords: 'customer insights, AI analytics, sentiment analysis, predictive modeling, customer journey, behavioral analytics, CRM automation',
+};
 
 export default function AICustomerInsightsPlatformPage() {
   const features = [
@@ -204,14 +215,12 @@ export default function AICustomerInsightsPlatformPage() {
               Predict behavior, optimize journeys, and drive growth with intelligent automation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/contact" 
+              <Link to="/contact" 
                 className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
               >
                 Start Free Trial
               </Link>
-              <Link 
-                href="#demo" 
+              <Link to="#demo" 
                 className="border border-purple-600 text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors"
               >
                 Watch Demo
@@ -293,8 +302,7 @@ export default function AICustomerInsightsPlatformPage() {
                     </li>
                   ))}
                 </ul>
-                <Link
-                  href="/contact"
+                <Link to="/contact"
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
                     tier.popular
                       ? 'bg-purple-600 text-white hover:bg-purple-700'
@@ -349,14 +357,12 @@ export default function AICustomerInsightsPlatformPage() {
             Join hundreds of companies already using AI to understand their customers better
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/contact" 
+            <Link to="/contact" 
               className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Start Your Free Trial
             </Link>
-            <Link 
-              href="tel:+13024640950" 
+            <Link to="tel:+13024640950" 
               className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
             >
               Call +1 302 464 0950

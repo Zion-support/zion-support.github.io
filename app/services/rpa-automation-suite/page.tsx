@@ -1,6 +1,11 @@
-import React from 'react';
+// import React from 'react';
 type Metadata = { title: string; description: string; keywords?: string[] };
 
+export const metadata: Metadata = {
+  title: 'RPA Automation Suite | Zion Tech Group',
+  description: 'Automate repetitive workflows with bots, human-in-the-loop, and analytics dashboards.',
+  keywords: ['RPA', 'robotic process automation', 'workflow automation', 'human in the loop'],
+};
 
 export default function RPAAutomationSuitePage() {
   const useCases = [

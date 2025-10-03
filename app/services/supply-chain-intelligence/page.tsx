@@ -1,6 +1,21 @@
-import React from 'react';
+// import React from 'react';
+// Metadata interface for React Helmet
+interface Metadata {
+  title?: string;
+  description?: string;
+  keywords?: string;
+}
 import { Link } from 'react-router-dom';
 
+export const metadata: Metadata = {
+  title: 'Supply Chain Intelligence - Zion Tech Group',
+  description: 'Advanced AI-powered supply chain optimization, demand forecasting, inventory management, and logistics intelligence solutions.',
+  keywords: 'supply chain AI, logistics optimization, demand forecasting, inventory management, supply chain intelligence',
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function SupplyChainIntelligence() {
   return (
@@ -24,7 +39,7 @@ export default function SupplyChainIntelligence() {
           <p className="text-gray-600 mb-4">
             Predict demand patterns with 95% accuracy using advanced machine learning algorithms and external data sources.
           </p>
-          <Link href="/case-studies/supply-chain-transformation-2026" className="text-blue-600 hover:text-blue-800 font-medium">
+          <Link to="/case-studies/supply-chain-transformation-2026" className="text-blue-600 hover:text-blue-800 font-medium">
             Learn More →
           </Link>
         </div>
@@ -39,7 +54,7 @@ export default function SupplyChainIntelligence() {
           <p className="text-gray-600 mb-4">
             Optimize inventory levels across your entire supply network with real-time demand and supply balancing.
           </p>
-          <Link href="/case-studies/ai-supply-chain-optimization-2026" className="text-blue-600 hover:text-blue-800 font-medium">
+          <Link to="/case-studies/ai-supply-chain-optimization-2026" className="text-blue-600 hover:text-blue-800 font-medium">
             Learn More →
           </Link>
         </div>
@@ -54,7 +69,7 @@ export default function SupplyChainIntelligence() {
           <p className="text-gray-600 mb-4">
             Minimize transportation costs and delivery times with AI-powered route planning and logistics optimization.
           </p>
-          <Link href="/services/ai-autonomous-operations" className="text-blue-600 hover:text-blue-800 font-medium">
+          <Link to="/services/ai-autonomous-operations" className="text-blue-600 hover:text-blue-800 font-medium">
             Learn More →
           </Link>
         </div>
@@ -69,7 +84,7 @@ export default function SupplyChainIntelligence() {
           <p className="text-gray-600 mb-4">
             Identify and mitigate supply chain risks with predictive analytics and scenario planning.
           </p>
-          <Link href="/services/ai-cybersecurity-2025" className="text-blue-600 hover:text-blue-800 font-medium">
+          <Link to="/services/ai-cybersecurity-2025" className="text-blue-600 hover:text-blue-800 font-medium">
             Learn More →
           </Link>
         </div>
@@ -84,7 +99,7 @@ export default function SupplyChainIntelligence() {
           <p className="text-gray-600 mb-4">
             Optimize vendor relationships and supplier performance with AI-driven analytics and scoring.
           </p>
-          <Link href="/services/ai-business-intelligence-2025" className="text-blue-600 hover:text-blue-800 font-medium">
+          <Link to="/services/ai-business-intelligence-2025" className="text-blue-600 hover:text-blue-800 font-medium">
             Learn More →
           </Link>
         </div>
@@ -99,7 +114,7 @@ export default function SupplyChainIntelligence() {
           <p className="text-gray-600 mb-4">
             Monitor supply chain performance in real-time with comprehensive dashboards and alerting systems.
           </p>
-          <Link href="/services/ai-data-analytics" className="text-blue-600 hover:text-blue-800 font-medium">
+          <Link to="/services/ai-data-analytics" className="text-blue-600 hover:text-blue-800 font-medium">
             Learn More →
           </Link>
         </div>
@@ -260,14 +275,12 @@ export default function SupplyChainIntelligence() {
           Get a personalized assessment of your supply chain optimization opportunities.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link 
-            href="/contact" 
+          <Link to="/contact" 
             className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
           >
             Get Supply Chain Assessment
           </Link>
-          <Link 
-            href="/case-studies/supply-chain-transformation-2026" 
+          <Link to="/case-studies/supply-chain-transformation-2026" 
             className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
           >
             View Supply Chain Case Studies

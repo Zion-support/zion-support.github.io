@@ -1,5 +1,17 @@
-import React from 'react';
+// import React from 'react';
+// Metadata handled by React Helmet
 
+export const metadata: Metadata = {
+  title: 'AI-Powered Quantum Computing Breakthroughs in 2026 | Zion Tech Group',
+  description: 'Explore the revolutionary intersection of AI and quantum computing, featuring breakthrough algorithms, quantum machine learning, and enterprise applications transforming industries.',
+  keywords: 'quantum computing, AI, machine learning, quantum algorithms, enterprise technology, 2026',
+  openGraph: {
+    title: 'AI-Powered Quantum Computing Breakthroughs in 2026',
+    description: 'Discover how AI and quantum computing are converging to solve previously impossible problems.',
+    type: 'article',
+    publishedTime: '2025-01-30T00:00:00.000Z',
+  },
+};
 
 export default function AIQuantumComputing2026() {
   return (

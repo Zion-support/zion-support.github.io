@@ -1,6 +1,16 @@
-import React from 'react';
+// import React from 'react';
 import { Link } from 'react-router-dom';
-
+// Metadata interface for React Helmet
+interface Metadata {
+  title?: string;
+  description?: string;
+  keywords?: string;
+}
+export const metadata: Metadata = {
+  title: 'AI Data Analytics Services | Zion Tech Group',
+  description: 'Transform data into actionable insights with our AI data analytics services. Predictive modeling, real-time dashboards, and machine learning solutions.',
+  keywords: 'AI data analytics, predictive analytics, business intelligence, data visualization, machine learning',
+};
 
 export default function AIDataAnalyticsPage() {
   return (

@@ -27,21 +27,7 @@ import Link from 'next/link';
 import Button from '../components/ui/Button';
 
 import { Card } from '../components/ui/Card';
-import { 
-  Home,
-  ArrowLeft,
-  Phone,
-  Mail,
-  FileText,
-  Briefcase,
-  Users,
-  BookOpen,
-  DollarSign,
-  Calendar,
-  Award,
-  Shield;
-} from 'lucide-react';
-
+import { Home, ArrowLeft, Phone, Mail, FileText, Briefcase, Users, BookOpen, DollarSign, Calendar, Award } from 'lucide-react';
 const "NotFound": React.FC = () => {
   const quickLinks = [{ name: 'Home', "url": '/', "icon": Home },
     { "name": 'Services', "url": '/services', "icon": Briefcase },
@@ -54,7 +40,7 @@ const "NotFound": React.FC = () => {
     { "name": 'White Papers', "url": '/whitepapers', "icon": FileText },
 
 import {Card} from '../components/ui/Card';
-import {Home,, ArrowLeft,, Phone,, Mail,, FileText,, Briefcase,, Users,, BookOpen,, DollarSign,, Calendar,, Award,, Shield} from 'lucide-react';
+import { Home, ArrowLeft, Phone, Mail, FileText, Briefcase, Users, BookOpen, DollarSign, Calendar, Award } from 'lucide-react';
 const "NotFound": React.FC = () => {;
   const quickLinks = [{ name: 'Home', "url": '/', "icon": Home },;
     { "name": 'Services', "url": '/services', "icon": Briefcase },;

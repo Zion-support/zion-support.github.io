@@ -1,9 +1,9 @@
-import React from 'react';
+// import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Globe } from 'lucide-react'';
 import Header from '../../components/Header'';
 import Footer from '../../components/Footer'';
-import React from 'react';
+// import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Globe } from 'lucide-react';
 import Header from '../../components/Header';

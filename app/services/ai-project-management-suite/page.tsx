@@ -1,5 +1,11 @@
-import React from 'react';
+// import React from 'react';
+// Metadata handled by React Helmet
 
+export const metadata: Metadata = {
+  title: 'AI Project Management Suite | Zion Tech Group',
+  description: 'Intelligent project management platform with AI-powered resource allocation, risk prediction, and automated workflow optimization.',
+  keywords: 'AI project management, resource allocation, risk prediction, workflow automation, project optimization, PMI certified',
+};
 
 export default function AIProjectManagementSuitePage() {
   return (

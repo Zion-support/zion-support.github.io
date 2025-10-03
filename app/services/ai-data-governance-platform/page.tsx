@@ -1,6 +1,11 @@
-import React from 'react';
+// import React from 'react';
 type Metadata = { title: string; description: string; keywords?: string[] };
 
+export const metadata: Metadata = {
+  title: 'AI Data Governance Platform | Zion Tech Group',
+  description: 'Unified data quality, lineage, catalog, and policy enforcement with AI-assisted remediation.',
+  keywords: ['data governance', 'data lineage', 'data catalog', 'policy enforcement', 'PII detection'],
+};
 
 export default function AIDataGovernancePlatformPage() {
   const features = [

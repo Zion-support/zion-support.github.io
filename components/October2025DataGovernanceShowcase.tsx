@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { motion } from 'framer-motion';
 import { Shield, Database, Brain, Lock, TrendingUp, CheckCircle, ArrowRight, Sparkles } from 'lucide-react';
 import { Link } from 'react-router-dom';

@@ -6,16 +6,16 @@
  * Wait for a condition to be true
  */
 export const waitFor = async (
-  condition: () => boolean,
+  condition: () => boolean | Promise<boolean>,
   timeout = 5000,
 ): Promise<void> => {
   const start = Date.now();
-  while (!condition() && Date.now() - start < timeout) {
+  while (Date.now() - start < timeout) {
+    const result = await condition();
+    if (result) return;
     await new Promise(resolve => setTimeout(resolve, 100));
   }
-  if (!condition()) {
-    throw new Error(`Timeout waiting for condition after ${timeout}ms`);
-  }
+  throw new Error(`Timeout waiting for condition after ${timeout}ms`);
 };
 
 /**
@@ -150,11 +150,13 @@ export const mockSessionStorage = (): void => {
  */
 export const mockLocation = (url: string): void => {
   delete (window as any).location;
-  (window as any).location = Object.assign(new URL(url), {
+  const mockLocation = Object.assign(new URL(url), {
     assign: jest.fn(),
     replace: jest.fn(),
     reload: jest.fn(),
+    ancestorOrigins: [] as any,
   });
+  window.location = mockLocation as any;
 };
 
 /**

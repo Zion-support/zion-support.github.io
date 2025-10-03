@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { ArrowRight, Calendar, Star, TrendingUp } from 'lucide-react';
 
 export default function December2025April2026NewContentShowcaseBanner() {

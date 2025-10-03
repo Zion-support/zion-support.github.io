@@ -1,6 +1,21 @@
-import React from 'react';
+// import React from 'react';
+// Metadata interface for React Helmet
+interface Metadata {
+  title?: string;
+  description?: string;
+  keywords?: string;
+}
 import { Link } from 'react-router-dom';
 
+export const metadata: Metadata = {
+  title: 'Smart Inventory Management SaaS - Zion Tech Group',
+  description: 'AI-powered inventory management platform for retail, e-commerce, and manufacturing. Optimize stock levels, reduce costs, and prevent stockouts with intelligent automation.',
+  keywords: 'inventory management SaaS, smart inventory, stock optimization, retail automation, supply chain AI',
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function SmartInventoryManagementSaaS() {
   return (
@@ -241,14 +256,12 @@ export default function SmartInventoryManagementSaaS() {
           Join 300+ businesses using our Smart Inventory Management SaaS to reduce costs and improve efficiency.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link 
-            href="/contact" 
+          <Link to="/contact" 
             className="bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors"
           >
             Start Free Trial
           </Link>
-          <Link 
-            href="tel:+13024640950" 
+          <Link to="tel:+13024640950" 
             className="bg-white text-orange-600 px-8 py-3 rounded-lg font-semibold border border-orange-600 hover:bg-orange-50 transition-colors"
           >
             Call +1 302 464 0950

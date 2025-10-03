@@ -1,4 +1,10 @@
-import React from 'react';
+// import React from 'react';
+// Metadata interface for React Helmet
+interface Metadata {
+  title?: string;
+  description?: string;
+  keywords?: string;
+}
 import { Link } from 'react-router-dom';
 import { 
   MessageSquare, 
@@ -15,6 +21,11 @@ import {
   Brain
 } from 'lucide-react';
 
+export const metadata: Metadata = {
+  title: 'AI-Powered Email Marketing Suite | Zion Tech Group',
+  description: 'Revolutionary AI email marketing platform with predictive analytics, automated personalization, and intelligent optimization. Increase open rates by 40% and reduce unsubscribe rates by 60%.',
+  keywords: 'AI email marketing, email automation, predictive analytics, email personalization, marketing automation',
+};
 
 export default function AIEmailMarketingPage() {
   const features = [

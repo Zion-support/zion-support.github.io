@@ -1,5 +1,18 @@
-import React from 'react';
+// import React from 'react';
+// Metadata handled by React Helmet
 
+export const metadata: Metadata = {
+  title: 'Fortune 500 AI Transformation: $75M Annual Savings with Meta-Cognitive AI | Zion Tech Group',
+  description: 'Discover how a Fortune 500 company achieved $75M annual savings and 95% operational efficiency through Meta-Cognitive AI implementation.',
+  keywords: 'fortune 500 AI transformation, enterprise AI case study, meta-cognitive AI results, AI ROI success story',
+  openGraph: {
+    title: 'Fortune 500 AI Transformation: $75M Annual Savings',
+    description: 'Revolutionary Meta-Cognitive AI implementation delivering unprecedented enterprise results.',
+    type: 'article',
+    publishedTime: '2026-01-15T00:00:00Z',
+    authors: ['Zion Tech Group'],
+  },
+};
 
 export default function Fortune500AITransformation() {
   return (

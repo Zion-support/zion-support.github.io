@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { Zap, Cpu, Factory, DollarSign, TrendingUp, ArrowRight } from 'lucide-react';
 
 const September30CognitiveAutomationBanner = () => {

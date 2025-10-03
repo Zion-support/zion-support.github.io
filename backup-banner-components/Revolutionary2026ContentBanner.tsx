@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import Link from 'next/link';
 import { ArrowRight, Zap, Brain, Cpu, Sparkles } from 'lucide-react';
 

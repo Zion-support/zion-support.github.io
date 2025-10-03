@@ -1,6 +1,19 @@
-import React from 'react';
+// import React from 'react';
 import { Link } from 'react-router-dom';
+import { Metadata } from 'next';
 
+export const metadata: Metadata = {
+  title: 'Fortune 500 AI Transformation: $2.3B Revenue Increase in 12 Months',
+  description: 'How a Fortune 500 company achieved unprecedented success with AI transformation, generating $2.3B in additional revenue and 450% ROI in just 12 months.',
+  keywords: 'Fortune 500 AI transformation, enterprise AI success, AI ROI case study, business transformation',
+  openGraph: {
+    title: 'Fortune 500 AI Transformation: $2.3B Revenue Increase in 12 Months',
+    description: 'How a Fortune 500 company achieved unprecedented success with AI transformation, generating $2.3B in additional revenue and 450% ROI in just 12 months.',
+    type: 'article',
+    publishedTime: '2025-01-30T00:00:00Z',
+    authors: ['Zion Tech Group'],
+  },
+};
 
 export default function Fortune500AITransformationMegaSuccess2026() {
   return (
@@ -411,14 +424,12 @@ export default function Fortune500AITransformationMegaSuccess2026() {
               Join the Fortune 500 companies already transforming their operations with AI and seeing unprecedented ROI.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/blog" 
+              <Link to="/blog" 
                 className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 Read More Success Stories
               </Link>
-              <Link 
-                href="/contact" 
+              <Link to="/contact" 
                 className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
               >
                 Start Your AI Transformation
@@ -431,7 +442,7 @@ export default function Fortune500AITransformationMegaSuccess2026() {
         <div className="max-w-4xl mx-auto mt-16">
           <h3 className="text-2xl font-bold text-white mb-8">More Success Stories</h3>
           <div className="grid md:grid-cols-2 gap-6">
-            <Link href="/case-studies/enterprise-ai-transformation-mega-success-2026" className="group">
+            <Link to="/case-studies/enterprise-ai-transformation-mega-success-2026" className="group">
               <div className="bg-gradient-to-br from-slate-800/50 to-gray-800/50 rounded-xl p-6 hover:from-slate-700/50 hover:to-gray-700/50 transition-all">
                 <h4 className="text-lg font-semibold text-white group-hover:text-green-400 mb-2">
                   Enterprise AI Transformation Mega Success
@@ -441,7 +452,7 @@ export default function Fortune500AITransformationMegaSuccess2026() {
                 </p>
               </div>
             </Link>
-            <Link href="/case-studies/ai-quantum-breakthrough-success-2026" className="group">
+            <Link to="/case-studies/ai-quantum-breakthrough-success-2026" className="group">
               <div className="bg-gradient-to-br from-slate-800/50 to-gray-800/50 rounded-xl p-6 hover:from-slate-700/50 hover:to-gray-700/50 transition-all">
                 <h4 className="text-lg font-semibold text-white group-hover:text-green-400 mb-2">
                   AI Quantum Breakthrough Success

@@ -1,7 +1,6 @@
-import React from 'react';
+// import React from 'react';
 import { motion } from 'framer-motion';
-import { Rocket, Zap, Globe, TrendingUp, Award, Star, Cpu, Bot, Shield } from 'lucide-react';
-
+import { Rocket, Globe, TrendingUp, Award, Star, Cpu, Shield } from 'lucide-react';
 const January2025FutureTechRevolutionBanner: React.FC = () => {
   return (
     <motion.div

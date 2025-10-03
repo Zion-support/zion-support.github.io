@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Zap, TrendingUp, Shield, DollarSign, CheckCircle, ArrowRight, Cpu } from "lucide-react";
-
+import { TrendingUp, CheckCircle, ArrowRight, Cpu } from 'lucide-react';
 export default function October2025IntelligentEdgeComputingRevolutionBanner() {
   return (
     <motion.section

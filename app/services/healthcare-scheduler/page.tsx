@@ -1,4 +1,10 @@
-import React from 'react';
+// import React from 'react';
+// Metadata interface for React Helmet
+interface Metadata {
+  title?: string;
+  description?: string;
+  keywords?: string;
+}
 import { Link } from 'react-router-dom';
 import { 
   Users, 
@@ -18,6 +24,11 @@ import {
   Smartphone
 } from 'lucide-react';
 
+export const metadata: Metadata = {
+  title: 'Healthcare Appointment AI Scheduler | Zion Tech Group',
+  description: 'Intelligent healthcare scheduling system with AI-powered optimization, patient preference learning, and HIPAA-compliant automation. Reduce no-show rates by 50%.',
+  keywords: 'healthcare scheduling, AI appointment system, medical scheduling, HIPAA compliant, patient management',
+};
 
 export default function HealthcareSchedulerPage() {
   const features = [
