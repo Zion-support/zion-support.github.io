@@ -39,7 +39,7 @@ function App(): JSX.Element {
   React.useEffect(() => {
     if (process.env.NODE_ENV === 'development') {
       logMetrics();
-      console.log(`🎯 Performance Score: ${performanceScore}/100`);
+      // Performance score logged via logMetrics function
     }
   }, [logMetrics, performanceScore]);
 
