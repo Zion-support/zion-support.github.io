@@ -65,14 +65,12 @@ export default function RevolutionaryBreakthroughAnnouncement2026() {
             <div className="text-left">
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Get Free Consultation
               </a>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 View Success Stories
               </a>
             </div>
@@ -302,14 +300,12 @@ export default function RevolutionaryBreakthroughAnnouncement2026() {
               <div className="text-left">
                 <a 
                   href="/"
-                  className="text-left"
-                >
+                  className="text-left">
                   Get Free Assessment
                 </a>
                 <a 
                   href="/"
-                  className="text-left"
-                >
+                  className="text-left">
                   View Success Stories
                 </a>
               </div>
@@ -328,14 +324,12 @@ export default function RevolutionaryBreakthroughAnnouncement2026() {
           <div className="text-left">
             <a 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               Schedule a Consultation
             </a>
             <a 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               Explore Our Services
             </a>
           </div>

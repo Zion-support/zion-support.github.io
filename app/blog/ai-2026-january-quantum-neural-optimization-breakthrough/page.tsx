@@ -195,14 +195,12 @@ result = optimizer.optimize(
                 <div className="text-left">
                   <Link 
                     href="/"
-                    className="text-left"
-                  >
+                    className="text-left">
                     Contact Quantum AI Specialists
                   </Link>
                   <Link 
                     href="/"
-                    className="text-left"
-                  >
+                    className="text-left">
                     View Services
                   </Link>
                 </div>
@@ -213,14 +211,12 @@ result = optimizer.optimize(
           <div className="text-left">
             <Link 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               ← Previous Article
             </Link>
             <Link 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               Next Article →
             </Link>
           </div>

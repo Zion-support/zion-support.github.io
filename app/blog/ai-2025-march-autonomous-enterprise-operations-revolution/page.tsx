@@ -58,14 +58,12 @@ export default function March2025AutonomousOperationsRevolutionPage() {
             <div className="text-left">
               <a 
                 href="/services/autonomous-operations-consultation"
-                className="text-left"
-              >
+                className="text-left">
                 Get Autonomous Operations Consultation →
               </a>
               <a 
                 href="/case-studies"
-                className="text-left"
-              >
+                className="text-left">
                 View Success Stories →
               </a>
             </div>
@@ -257,14 +255,12 @@ export default function March2025AutonomousOperationsRevolutionPage() {
               <div className="text-left">
                 <a 
                   href="/contact"
-                  className="text-left"
-                >
+                  className="text-left">
                   Schedule Consultation
                 </a>
                 <a 
                   href="/services/autonomous-operations-consultation"
-                  className="text-left"
-                >
+                  className="text-left">
                   Learn More About Our Services
                 </a>
               </div>
@@ -281,8 +277,7 @@ export default function March2025AutonomousOperationsRevolutionPage() {
               <p className="text-left">Fortune 500 companies achieve 300% performance improvements and $50B in cost savings through quantum-enhanced AI systems.</p>"
               <a 
                 href="/blog/ai-2025-february-quantum-ai-breakthrough-enterprise-transformation"
-                className="text-left"
-              >
+                className="text-left">
                 Read More →
               </a>
             </div>
@@ -291,8 +286,7 @@ export default function March2025AutonomousOperationsRevolutionPage() {
               <p className="text-left">Learn about the $2.3B cost savings and 95% efficiency gains achieved by Fortune 500 companies.</p>"
               <a 
                 href="/blog/ai-2025-january-enterprise-automation-breakthrough"
-                className="text-left"
-              >
+                className="text-left">
                 Read More →
               </a>
             </div>
@@ -301,8 +295,7 @@ export default function March2025AutonomousOperationsRevolutionPage() {
               <p className="text-left">Detailed analysis of how leading enterprises achieved unprecedented results with autonomous AI systems.</p>"
               <a 
                 href="/case-studies"
-                className="text-left"
-              >
+                className="text-left">
                 View Case Studies →
               </a>
             </div>

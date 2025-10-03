@@ -43,14 +43,12 @@ export default function AINeuralArchitectureRevolution2026() {
             <div className="text-left">
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Get Implementation Guide
               </a>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 View $2.3B Success Story →
               </a>
             </div>
@@ -179,14 +177,12 @@ export default function AINeuralArchitectureRevolution2026() {
             <div className="text-left">
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Get Free Consultation
               </a>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 View Success Stories →
               </a>
             </div>

@@ -212,20 +212,17 @@ export default function AINeuralInterfacesService() {
             <div className="text-left">
               <a
                 href="tel:+13024640950"
-                className="text-left"
-              >
+                className="text-left">
                 📞 Call +1 302 464 0950
               </a>
               <a
                 href="mailto:kleber@ziontechgroup.com"
-                className="text-left"
-              >
+                className="text-left">
                 📧 Schedule Demo
               </a>
               <Link
                 href="/case-studies/ai-neural-interface-success-2026"
-                className="text-left"
-              >
+                className="text-left">
                 View Success Stories →
               </Link>
             </div>
@@ -243,14 +240,12 @@ export default function AINeuralInterfacesService() {
           <div className="text-left">
             <a
               href="tel:+13024640950"
-              className="text-left"
-            >
+              className="text-left">
               📞 Call +1 302 464 0950
             </a>
             <a
               href="mailto:kleber@ziontechgroup.com"
-              className="text-left"
-            >
+              className="text-left">
               🧠 Schedule Neural Demo
             </a>
           </div>
@@ -302,14 +297,12 @@ export default function AINeuralInterfacesService() {
         <div className="text-left">
           <Link
             href="/services"
-            className="text-left"
-          >
+            className="text-left">
             View All Services →
           </Link>
           <Link
             href="/case-studies"
-            className="text-left"
-          >
+            className="text-left">
             View Success Stories →
           </Link>
         </div>

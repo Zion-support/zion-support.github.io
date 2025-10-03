@@ -44,14 +44,12 @@ export default function AI2026FutureTrendsMegaPredictions() {
             <div className="text-left">
               <a 
                 href="#trends-overview" "
-                className="text-left"
-              >
+                className="text-left">
                 Explore Trends →
               </a>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Get Strategic Consultation
               </a>
             </div>
@@ -256,14 +254,12 @@ export default function AI2026FutureTrendsMegaPredictions() {
             <div className="text-left">
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Get Strategic Consultation
               </a>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Learn About Current Breakthroughs →
               </a>
             </div>

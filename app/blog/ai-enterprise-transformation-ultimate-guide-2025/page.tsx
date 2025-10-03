@@ -213,14 +213,12 @@ export default function AIEnterpriseTransformationUltimateGuide2025() {
                 </p>
                 <Link 
                   href="/"
-                  className="text-left"
-                >
+                  className="text-left">
                   Get Free Consultation
                 </Link>
                 <Link 
                   href="/"
-                  className="text-left"
-                >
+                  className="text-left">
                   View Case Studies
                 </Link>
               </div>

@@ -43,20 +43,17 @@ export default function March2026BreakthroughPage() {
             <div className="text-left">
               <a 
                 href="#breakthroughs" "
-                className="text-left"
-              >
+                className="text-left">
                 Explore Breakthroughs
               </a>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 View $5B Success Story →
               </a>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Get Free Consultation
               </a>
             </div>
@@ -205,20 +202,17 @@ export default function March2026BreakthroughPage() {
                 <div className="text-left">
                   <a 
                     href="/"
-                    className="text-left"
-                  >
+                    className="text-left">
                     Get Free Consultation
                   </a>
                   <a 
                     href="/"
-                    className="text-left"
-                  >
+                    className="text-left">
                     View $5B Success Story →
                   </a>
                   <a 
                     href="/"
-                    className="text-left"
-                  >
+                    className="text-left">
                     Explore Services
                   </a>
                 </div>

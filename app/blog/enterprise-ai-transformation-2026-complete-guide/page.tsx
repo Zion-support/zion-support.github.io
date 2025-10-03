@@ -41,14 +41,12 @@ export default function EnterpriseAITransformation2026CompleteGuide() {
             <div className="text-left">
               <a 
                 href="#transformation-framework" "
-                className="text-left"
-              >
+                className="text-left">
                 Explore Framework →
               </a>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Get Implementation Support
               </a>
             </div>
@@ -241,14 +239,12 @@ export default function EnterpriseAITransformation2026CompleteGuide() {
             <div className="text-left">
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Get Free Assessment
               </a>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 View Success Stories
               </a>
             </div>
@@ -294,8 +290,7 @@ export default function EnterpriseAITransformation2026CompleteGuide() {
                 </div>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Read Full Case Study →
               </a>
             </div>
@@ -326,8 +321,7 @@ export default function EnterpriseAITransformation2026CompleteGuide() {
                 </div>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Read Full Case Study →
               </a>
             </div>
@@ -346,14 +340,12 @@ export default function EnterpriseAITransformation2026CompleteGuide() {
           <div className="text-left">
             <a 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               Start Transformation
             </a>
             <a 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               Explore More Guides
             </a>
           </div>

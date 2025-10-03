@@ -260,15 +260,13 @@ export default function AI2026FutureLandscapeMegaTrends() {
               <div className="text-left">
                 <Link 
                   href="/contact"
-                  className="text-left"
-                >
+                  className="text-left">
                   Get Started Today
                   <ArrowRight className="text-left" />
                 </Link>
                 <Link 
                   href="/services"
-                  className="text-left"
-                >
+                  className="text-left">
                   Explore Our Services
                   <ArrowRight className="text-left" />
                 </Link>

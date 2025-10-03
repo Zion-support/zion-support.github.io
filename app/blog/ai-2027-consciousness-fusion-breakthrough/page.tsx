@@ -146,14 +146,12 @@ export default function AIConsciousnessFusion2027() {
           <div className="text-left">
             <a 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               Contact Zion Tech Group
             </a>
             <a 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               Learn More About Services
             </a>
           </div>

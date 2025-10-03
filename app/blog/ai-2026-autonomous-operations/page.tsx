@@ -212,14 +212,12 @@ export default function AutonomousOperations() {
             <div className="text-left">
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Start Automation Assessment
               </a>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 View Automation Success Stories
               </a>
             </div>

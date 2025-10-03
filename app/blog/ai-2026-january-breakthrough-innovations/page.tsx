@@ -37,14 +37,12 @@ export default function AI2026JanuaryBreakthroughInnovations() {
             <div className="text-left">
               <a 
                 href="#breakthroughs" "
-                className="text-left"
-              >
+                className="text-left">
                 Explore Breakthroughs
               </a>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Get Implementation Guide →
               </a>
             </div>
@@ -252,14 +250,12 @@ export default function AI2026JanuaryBreakthroughInnovations() {
               <div className="text-left">
                 <a 
                   href="/"
-                  className="text-left"
-                >
+                  className="text-left">
                   Get Implementation Guide
                 </a>
                 <a 
                   href="/"
-                  className="text-left"
-                >
+                  className="text-left">
                   View Success Stories →
                 </a>
               </div>

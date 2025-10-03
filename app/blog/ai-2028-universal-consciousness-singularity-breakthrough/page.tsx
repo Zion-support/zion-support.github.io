@@ -193,14 +193,12 @@ export default function UniversalConsciousnessSingularityBreakthrough() {
           <div className="text-left">
             <Link 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               Explore Solutions
             </Link>
             <Link 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               View Success Story
             </Link>
           </div>

@@ -16,8 +16,7 @@ export default function QuantumAIBusinessIntelligence() {
         <div className="text-left">
           <Link 
             href="/"
-            className="text-left"
-          >
+            className="text-left">
             <ArrowLeft className="text-left" />
             Back to Home
           </Link>
@@ -298,14 +297,12 @@ export default function QuantumAIBusinessIntelligence() {
             <div className="text-left">
               <Link 
                 href="/guides/quantum-ai-implementation-roadmap-2026"
-                className="text-left"
-              >
+                className="text-left">
                 Get Quantum AI Roadmap
               </Link>
               <Link 
                 href="/case-studies/fortune-500-quantum-bi-transformation"
-                className="text-left"
-              >
+                className="text-left">
                 View Success Stories
               </Link>
             </div>

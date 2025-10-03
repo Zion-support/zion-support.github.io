@@ -37,14 +37,12 @@ export default function AI2025DecemberQuantumComputingBreakthrough() {
             <div className="text-left">
               <a 
                 href="#quantum-details" "
-                className="text-left"
-              >
+                className="text-left">
                 Explore Breakthrough
               </a>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 View $1B Success Story →
               </a>
             </div>
@@ -148,14 +146,12 @@ export default function AI2025DecemberQuantumComputingBreakthrough() {
             <div className="text-left">
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Get Quantum Access
               </a>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Explore Services →
               </a>
             </div>

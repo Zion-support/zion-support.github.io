@@ -31,15 +31,13 @@ export default function QuantumNeuralSuperintelligence2026() {
             <div className="text-left">
               <Link 
                 href="/case-studies/ai-2026-quantum-neural-superintelligence-25-billion-success"
-                className="text-left"
-              >
+                className="text-left">
                 View $25B Success Case Study
                 <ArrowRight className="text-left" />
               </Link>
               <Link 
                 href="/services/quantum-ai-development"
-                className="text-left"
-              >
+                className="text-left">
                 Implement Quantum AI
                 <Brain className="text-left" />
               </Link>
@@ -271,15 +269,13 @@ export default function QuantumNeuralSuperintelligence2026() {
           <div className="text-left">
             <Link 
               href="/contact"
-              className="text-left"
-            >
+              className="text-left">
               Schedule Quantum Consultation
               <ArrowRight className="text-left" />
             </Link>
             <Link 
               href="/services/quantum-ai-development"
-              className="text-left"
-            >
+              className="text-left">
               Explore Quantum Solutions
               <TrendingUp className="text-left" />
             </Link>

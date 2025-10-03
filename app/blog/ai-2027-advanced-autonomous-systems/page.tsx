@@ -202,14 +202,12 @@ export default function AI2027AdvancedAutonomousSystems() {
           <div className="text-left">
             <Link
               href="/services/ai-autonomous-operations-2026"
-              className="text-left"
-            >
+              className="text-left">
               Explore Our Services
             </Link>
             <a
               href="tel:+13024640950"
-              className="text-left"
-            >
+              className="text-left">
               Call +1 302 464 0950
             </a>
           </div>

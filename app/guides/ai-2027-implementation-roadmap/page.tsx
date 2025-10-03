@@ -325,8 +325,7 @@ export default function AI2027ImplementationRoadmap() {
         <div className="text-left">
           <Link 
             href="/"
-            className="text-left"
-          >
+            className="text-left">
             🚀 Get Your Custom Implementation Plan
           </Link>
         </div>

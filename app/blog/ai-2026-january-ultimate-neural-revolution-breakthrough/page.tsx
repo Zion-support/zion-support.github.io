@@ -168,20 +168,17 @@ export default function January2026UltimateNeuralRevolutionPage() {
             <div className="text-left">
               <Link
                 href="/contact"
-                className="text-left"
-              >
+                className="text-left">
                 Get Started Today
               </Link>
               <Link
                 href="/case-studies/ai-2026-january-neural-revolution-500-billion-success"
-                className="text-left"
-              >
+                className="text-left">
                 View Success Story →
               </Link>
               <Link
                 href="/services/ultimate-neural-revolution"
-                className="text-left"
-              >
+                className="text-left">
                 Learn More
               </Link>
             </div>

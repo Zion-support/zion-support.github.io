@@ -176,14 +176,12 @@ export default function NeuromorphicEdgeComputingBreakthrough() {
           <div className="text-left">
             <a 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               Get Started Today
             </a>
             <a 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               View More Case Studies
             </a>
           </div>

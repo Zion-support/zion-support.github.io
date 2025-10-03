@@ -177,14 +177,12 @@ export default function AI2025DecemberRevolutionaryAutonomousEnterprise() {
               <div className="text-left">
                 <a 
                   href="/"
-                  className="text-left"
-                >
+                  className="text-left">
                   Get Started Today
                 </a>
                 <a 
                   href="/"
-                  className="text-left"
-                >
+                  className="text-left">
                   View Success Stories
                 </a>
               </div>

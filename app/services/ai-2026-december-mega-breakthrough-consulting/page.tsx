@@ -46,20 +46,17 @@ export default function December2026MegaBreakthroughConsultingPage() {
             <div className="text-left">
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Get Free Consultation
               </a>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Read Full Breakthrough →
               </a>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 View $50B Success →
               </a>
             </div>
@@ -376,20 +373,17 @@ export default function December2026MegaBreakthroughConsultingPage() {
             <div className="text-left">
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Get Free Consultation
               </a>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Read Full Breakthrough →
               </a>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 View $50B Success →
               </a>
             </div>

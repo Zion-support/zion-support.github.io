@@ -272,14 +272,12 @@ export default function AutonomousEnterpriseRevolution() {
             <div className="text-left">
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Start Autonomy Journey
               </a>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Explore Autonomous Services
               </a>
             </div>

@@ -37,14 +37,12 @@ export default function SustainableAISolutionsPage() {
             <div className="text-left">
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Get Sustainable AI Solutions
               </a>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 View $2.5B Success Story →
               </a>
             </div>
@@ -113,8 +111,7 @@ export default function SustainableAISolutionsPage() {
               <div className="text-left">Starting at $50K/month</div>"
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Get Started
               </a>
             </div>
@@ -147,8 +144,7 @@ export default function SustainableAISolutionsPage() {
               <div className="text-left">Starting at $75K/month</div>"
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Get Started
               </a>
             </div>
@@ -181,8 +177,7 @@ export default function SustainableAISolutionsPage() {
               <div className="text-left">Starting at $100K/month</div>"
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Get Started
               </a>
             </div>
@@ -215,8 +210,7 @@ export default function SustainableAISolutionsPage() {
               <div className="text-left">Starting at $125K/month</div>"
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Get Started
               </a>
             </div>
@@ -249,8 +243,7 @@ export default function SustainableAISolutionsPage() {
               <div className="text-left">Starting at $40K/month</div>"
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Get Started
               </a>
             </div>
@@ -283,8 +276,7 @@ export default function SustainableAISolutionsPage() {
               <div className="text-left">Custom Pricing</div>"
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Get Started
               </a>
             </div>
@@ -395,14 +387,12 @@ export default function SustainableAISolutionsPage() {
             <div className="text-left">
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Get Sustainable AI Solutions
               </a>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 View Success Stories
               </a>
             </div>

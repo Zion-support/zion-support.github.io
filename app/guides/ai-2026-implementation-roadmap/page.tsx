@@ -16,8 +16,7 @@ export default function AI2026ImplementationRoadmap() {
         <div className="text-left">
           <Link 
             href="/"
-            className="text-left"
-          >
+            className="text-left">
             <ArrowLeft className="text-left" />
             Back to Home
           </Link>
@@ -387,14 +386,12 @@ export default function AI2026ImplementationRoadmap() {
             <div className="text-left">
               <Link 
                 href="/case-studies/fortune-500-ai-transformation-success"
-                className="text-left"
-              >
+                className="text-left">
                 View Success Stories
               </Link>
               <Link 
                 href="/tools/ai-roi-calculator"
-                className="text-left"
-              >
+                className="text-left">
                 Calculate Your ROI
               </Link>
             </div>

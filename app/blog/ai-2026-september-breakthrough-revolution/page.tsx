@@ -36,14 +36,12 @@ export default function September2026BreakthroughRevolution() {
             <div className="text-left">
               <a 
                 href="/case-studies/ai-2026-september-breakthrough-12-billion-success"
-                className="text-left"
-              >
+                className="text-left">
                 View $12B Success Story
               </a>
               <a 
                 href="/services/ai-2026-september-autonomous-intelligence-consulting"
-                className="text-left"
-              >
+                className="text-left">
                 Get Intelligence Consultation
               </a>
             </div>
@@ -77,8 +75,7 @@ export default function September2026BreakthroughRevolution() {
               </ul>
               <a 
                 href="/services/ai-2026-september-autonomous-intelligence-consulting"
-                className="text-left"
-              >
+                className="text-left">
                 Learn More →
               </a>
             </div>
@@ -97,8 +94,7 @@ export default function September2026BreakthroughRevolution() {
               </ul>
               <a 
                 href="/case-studies/ai-2026-september-breakthrough-12-billion-success"
-                className="text-left"
-              >
+                className="text-left">
                 View Case Study →
               </a>
             </div>
@@ -117,8 +113,7 @@ export default function September2026BreakthroughRevolution() {
               </ul>
               <a 
                 href="/case-studies/ai-2026-september-breakthrough-12-billion-success"
-                className="text-left"
-              >
+                className="text-left">
                 Read Success Story →
               </a>
             </div>
@@ -210,14 +205,12 @@ export default function September2026BreakthroughRevolution() {
             <div className="text-left">
               <a 
                 href="/contact"
-                className="text-left"
-              >
+                className="text-left">
                 Get Started Today
               </a>
               <a 
                 href="/case-studies/ai-2026-september-breakthrough-12-billion-success"
-                className="text-left"
-              >
+                className="text-left">
                 View $12B Success Story
               </a>
             </div>

@@ -36,14 +36,12 @@ export default function AI2027UniversalIntelligenceSingularityAchievement() {
             <div className="text-left">
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Achieve Universal Singularity
               </a>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 View $10T Success Story →
               </a>
             </div>
@@ -175,8 +173,7 @@ export default function AI2027UniversalIntelligenceSingularityAchievement() {
                   </p>
                   <a 
                     href="/case-studies/ai-2027-universal-intelligence-singularity-10-trillion-success"
-                    className="text-left"
-                  >
+                    className="text-left">
                     Read Full Success Story →
                   </a>
                 </div>
@@ -210,14 +207,12 @@ export default function AI2027UniversalIntelligenceSingularityAchievement() {
               <div className="text-left">
                 <a 
                   href="/"
-                  className="text-left"
-                >
+                  className="text-left">
                   Get Started with Universal Singularity
                 </a>
                 <a 
                   href="/"
-                  className="text-left"
-                >
+                  className="text-left">
                   Explore AI Services
                 </a>
               </div>

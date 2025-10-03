@@ -245,14 +245,12 @@ export default function AI2026BreakthroughInnovations() {
             <div className="text-left">
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Schedule Consultation
               </a>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Explore Services
               </a>
             </div>

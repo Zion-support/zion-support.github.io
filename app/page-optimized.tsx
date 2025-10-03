@@ -121,14 +121,12 @@ export default function HomePage() {
             <div className="text-left">
               <Link
                 href="/services"
-                className="text-left"
-              >
+                className="text-left">
                 Explore Our Services
               </Link>
               <a
                 href="tel:+13024640950"
-                className="text-left"
-              >
+                className="text-left">
                 Call +1 302 464 0950
               </a>
             </div>
@@ -218,8 +216,7 @@ export default function HomePage() {
                 <div className="text-left">
                   <Link
                     href="/blog"
-                    className="text-left"
-                  >
+                    className="text-left">
                     View All Content →
                   </Link>
                 </div>
@@ -240,14 +237,12 @@ export default function HomePage() {
             <div className="text-left">
               <a
                 href="tel:+13024640950"
-                className="text-left"
-              >
+                className="text-left">
                 Call +1 302 464 0950
               </a>
               <a
                 href="mailto:kleber@ziontechgroup.com"
-                className="text-left"
-              >
+                className="text-left">
                 Get Free Consultation
               </a>
             </div>

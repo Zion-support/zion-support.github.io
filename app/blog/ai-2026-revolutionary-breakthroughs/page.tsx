@@ -308,14 +308,12 @@ export default function AI2026RevolutionaryBreakthroughs() {
             <div className="text-left">
               <a
                 href="tel:+13024640950"
-                className="text-left"
-              >
+                className="text-left">
                 Call +1 302 464 0950
               </a>
               <a
                 href="mailto:kleber@ziontechgroup.com"
-                className="text-left"
-              >
+                className="text-left">
                 Get Free Consultation
               </a>
             </div>

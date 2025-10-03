@@ -256,14 +256,12 @@ export default function AI2026BreakthroughInnovationsPage() {
           <div className="text-left">
             <Link 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               Schedule Consultation
             </Link>
             <Link 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               View Success Stories
             </Link>
           </div>

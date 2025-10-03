@@ -63,14 +63,12 @@ export default function AICostOptimizationBreakthrough2026() {
             <div className="text-left">
               <a 
                 href="#optimization-strategies"
-                className="text-left"
-              >
+                className="text-left">
                 Explore Optimization Strategies
               </a>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Get Cost Optimization Audit
               </a>
             </div>
@@ -459,14 +457,12 @@ export default function AICostOptimizationBreakthrough2026() {
               <div className="text-left">
                 <a
                   href="tel:+13024640950"
-                  className="text-left"
-                >
+                  className="text-left">
                   📞 Call +1 302 464 0950
                 </a>
                 <a
                   href="/contact"
-                  className="text-left"
-                >
+                  className="text-left">
                   Get Free Cost Optimization Audit
                 </a>
               </div>

@@ -168,14 +168,12 @@ export default function AI2026EdgeComputingRevolution() {
           <div className="text-left">
             <Link
               href="/services/ai-edge-computing"
-              className="text-left"
-            >
+              className="text-left">
               Explore Edge AI Services
             </Link>
             <a
               href="tel:+13024640950"
-              className="text-left"
-            >
+              className="text-left">
               Call +1 302 464 0950
             </a>
           </div>

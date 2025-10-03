@@ -162,8 +162,7 @@ export default function HyperconsciousComputingPage() {
               </p>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Start Your Transformation
               </a>
             </div>

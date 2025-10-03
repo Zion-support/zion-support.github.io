@@ -187,8 +187,7 @@ export default function December2025AdvancedAutonomousSystems() {
               </p>
               <Link 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Get Started Today
               </Link>
             </div>
@@ -198,15 +197,13 @@ export default function December2025AdvancedAutonomousSystems() {
               <div className="text-left">
                 <Link 
                   href="/"
-                  className="text-left"
-                >
+                  className="text-left">
                   <div className="text-left">$500M Success Story</div>"
                   <div className="text-left">Fortune 100 company achieves massive ROI</div>"
                 </Link>
                 <Link 
                   href="/"
-                  className="text-left"
-                >
+                  className="text-left">
                   <div className="text-left">Quantum Computing Breakthrough</div>"
                   <div className="text-left">Next-generation computing capabilities</div>"
                 </Link>

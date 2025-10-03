@@ -239,20 +239,17 @@ export default function March2026BreakthroughConsultingPage() {
               <div className="text-left">
                 <a
                   href="/contact"
-                  className="text-left"
-                >
+                  className="text-left">
                   Get Free Consultation
                 </a>
                 <a
                   href="/case-studies/ai-2026-march-breakthrough-mega-success"
-                  className="text-left"
-                >
+                  className="text-left">
                   View $3.2B Success Story
                 </a>
                 <a
                   href="/blog/ai-2026-march-revolutionary-breakthroughs"
-                  className="text-left"
-                >
+                  className="text-left">
                   Read March Breakthroughs
                 </a>
               </div>

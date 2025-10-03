@@ -15,7 +15,7 @@ export default function RealtimePersonalizationEngine2025(): void {
       <article className="min-h-screen bg-gradient-to-br from-slate-900 via-rose-900 to-slate-900 text-white">
         <div className="container mx-auto px-4 py-12 max-w-4xl">
           <Link to="/blog">
-  className="inline-flex items-center text-rose-400 hover:text-rose-300 mb-8 transition-colors
+  className="inline-flex items-center text-rose-400 hover:text-rose-300 mb-8 transition-colors"
           >"
             <ArrowLeft className="mr-2 h-4 w-4 ">
             <ArrowLeft className="mr-2 h-4 w-4" />
@@ -41,7 +41,7 @@ export default function RealtimePersonalizationEngine2025(): void {
       <article className="min-h-screen bg-gradient-to-br from-slate-900 via-rose-900 to-slate-900 text-white">
         <div className="container mx-auto px-4 py-12 max-w-4xl">
           <Link to="/blog">
-  className="inline-flex items-center text-rose-400 hover:text-rose-300 mb-8 transition-colors
+  className="inline-flex items-center text-rose-400 hover:text-rose-300 mb-8 transition-colors"
           >"
             <ArrowLeft className="mr-2 h-4 w-4 ">
             <ArrowLeft className="mr-2 h-4 w-4" />
@@ -87,11 +87,11 @@ export default function RealtimePersonalizationEngine2025(): void {
               <ul className="space-y-4 text-lg">
                 <li className="flex items-start gap-3">
                   <Zap className="h-6 w-6 text-yellow-400 mt-1 flex-shrink-0/>
-                  <span><strong>98.4% Relevance: </strong> AI predicts user intent and preferences with near-perfect accuracy</span>,
+                  <span><strong>98.4% Relevance: </strong> AI predicts user intent and preferences with near-perfect accuracy</span>,"
                 </li>"
                 <li className="flex items-start gap-3">
                   <Users className="h-6 w-6 text-blue-400 mt-1 flex-shrink-0/>
-                  <span><strong>8.7x Conversion Lift: </strong> Personalized experiences drive dramatic engagement increases</span>,
+                  <span><strong>8.7x Conversion Lift: </strong> Personalized experiences drive dramatic engagement increases</span>,"
                 </li>"
                 <li className="flex items-start gap-3">
                   <DollarSign className="h-6 w-6 text-green-400 mt-1 flex-shrink-0/>">
@@ -367,7 +367,7 @@ export default function RealtimePersonalizationEngine2025(): void {
               </p>
               to="/contact"
   className="inline-flex items-center px-8 py-4 bg-white text-rose-600 rounded-lg font-bold text-lg hover:bg-rose-50 transition-colors
-              >
+              >"
                 Start Your Personalization Journey"
                 <Target className="ml-2 h-5 w-5 ">
                 <Target className="ml-2 h-5 w-5/>">
@@ -379,7 +379,7 @@ export default function RealtimePersonalizationEngine2025(): void {
               </p>
               to="/contact"
   className="inline-flex items-center px-8 py-4 bg-white text-rose-600 rounded-lg font-bold text-lg hover:bg-rose-50 transition-colors
-              >
+              >"
                 Start Your Personalization Journey"
                 <Target className="ml-2 h-5 w-5 ">
                 <Target className="ml-2 h-5 w-5" />

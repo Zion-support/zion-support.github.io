@@ -350,14 +350,12 @@ export default function AITrends2026FutureEnterpriseTransformation() {
           <div className="text-left">
             <a 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               Start Your AI Transformation
             </a>
             <a 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               Learn About Our Breakthrough
             </a>
           </div>

@@ -157,14 +157,12 @@ export default function AI2026HyperintelligenceBreakthrough() {
             <div className="text-left">
               <a 
                 href="/services/ai-2026-hyperintelligence-breakthrough"
-                className="text-left"
-              >
+                className="text-left">
                 Learn More About Our Services
               </a>
               <a 
                 href="/case-studies/hyperintelligence-mega-success-2026"
-                className="text-left"
-              >
+                className="text-left">
                 View Success Stories
               </a>
             </div>

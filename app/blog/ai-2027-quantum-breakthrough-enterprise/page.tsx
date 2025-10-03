@@ -260,20 +260,17 @@ export default function AI2027QuantumBreakthroughEnterprise() {
           <div className="text-left">
             <Link 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               Get Quantum AI Solutions
             </Link>
             <Link 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               View Success Stories
             </Link>
             <Link 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               Contact Quantum Experts
             </Link>
           </div>

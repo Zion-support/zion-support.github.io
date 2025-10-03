@@ -196,22 +196,19 @@ export default function AI2026BreakthroughInnovationsPage() {
         <div className="text-left">
           <Link 
             href="/"
-            className="text-left"
-          >
+            className="text-left">
             View Success Story
             <ArrowRight className="text-left" />
           </Link>
           <Link 
             href="/"
-            className="text-left"
-          >
+            className="text-left">
             Start Implementation
             <ArrowRight className="text-left" />
           </Link>
           <Link 
             href="/"
-            className="text-left"
-          >
+            className="text-left">
             Get Expert Consultation
             <ArrowRight className="text-left" />
           </Link>

@@ -240,14 +240,12 @@ export default function QuantumAIHybridSystems2027() {
             <div className="text-left">
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Schedule Quantum Consultation
               </a>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Explore Quantum-AI Solutions
               </a>
             </div>

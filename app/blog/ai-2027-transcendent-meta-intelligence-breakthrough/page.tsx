@@ -230,14 +230,12 @@ export default function AI2027TranscendentMetaIntelligenceBreakthrough() {
             <div className="text-left">
               <Link 
                 href="/case-studies/ai-2027-transcendent-meta-intelligence-1-8-trillion-success"
-                className="text-left"
-              >
+                className="text-left">
                 View Success Story
               </Link>
               <Link 
                 href="/services/ai-2027-transcendent-meta-intelligence-solutions"
-                className="text-left"
-              >
+                className="text-left">
                 Get Implementation Guide
               </Link>
             </div>

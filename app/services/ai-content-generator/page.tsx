@@ -23,14 +23,12 @@ export default function AIContentGeneratorPage() {
           <div className="text-left">
             <a
               href="tel:+13024640950"
-              className="text-left"
-            >
+              className="text-left">
               Call +1 302 464 0950
             </a>
             <a
               href="mailto:kleber@ziontechgroup.com?subject=AI Content Generator Inquiry"
-              className="text-left"
-            >
+              className="text-left">
               Get a Quote
             </a>
           </div>
@@ -184,8 +182,7 @@ export default function AIContentGeneratorPage() {
               </ul>
               <a
                 href="mailto:kleber@ziontechgroup.com?subject=AI Content Generator Basic Plan"
-                className="text-left"
-              >
+                className="text-left">
                 Get Started
               </a>
             </div>
@@ -234,8 +231,7 @@ export default function AIContentGeneratorPage() {
               </ul>
               <a
                 href="mailto:kleber@ziontechgroup.com?subject=AI Content Generator Professional Plan"
-                className="text-left"
-              >
+                className="text-left">
                 Get Started
               </a>
             </div>
@@ -281,8 +277,7 @@ export default function AIContentGeneratorPage() {
               </ul>
               <a
                 href="mailto:kleber@ziontechgroup.com?subject=AI Content Generator Enterprise Plan"
-                className="text-left"
-              >
+                className="text-left">
                 Contact Sales
               </a>
             </div>
@@ -309,14 +304,12 @@ export default function AIContentGeneratorPage() {
           <div className="text-left">
             <a
               href="tel:+13024640950"
-              className="text-left"
-            >
+              className="text-left">
               Call +1 302 464 0950
             </a>
             <a
               href="mailto:kleber@ziontechgroup.com?subject=AI Content Generator Inquiry"
-              className="text-left"
-            >
+              className="text-left">
               Get Started Today
             </a>
           </div>

@@ -222,8 +222,7 @@ export default function AI2027AdvancedNeuralSuperintelligenceBreakthrough() {
         <div className="text-left">
           <Link 
             href="/"
-            className="text-left"
-          >
+            className="text-left">
             🚀 Start Your AI 2027 Transformation Today
           </Link>
         </div>

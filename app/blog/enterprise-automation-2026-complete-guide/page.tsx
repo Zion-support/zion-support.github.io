@@ -43,14 +43,12 @@ export default function EnterpriseAutomation2026Guide() {
             <div className="text-left">
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Get Implementation Kit
               </a>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 View $2.3B Success Story →
               </a>
             </div>
@@ -249,14 +247,12 @@ export default function EnterpriseAutomation2026Guide() {
             <div className="text-left">
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Get Free Assessment
               </a>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 View Success Stories →
               </a>
             </div>

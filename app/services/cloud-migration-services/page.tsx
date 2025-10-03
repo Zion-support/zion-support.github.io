@@ -23,14 +23,12 @@ export default function CloudMigrationServicesPage() {
           <div className="text-left">
             <a
               href="tel:+13024640950"
-              className="text-left"
-            >
+              className="text-left">
               Call +1 302 464 0950
             </a>
             <a
               href="mailto:kleber@ziontechgroup.com?subject=Cloud Migration Services Inquiry"
-              className="text-left"
-            >
+              className="text-left">
               Get Migration Quote
             </a>
           </div>
@@ -267,8 +265,7 @@ export default function CloudMigrationServicesPage() {
               </ul>
               <a
                 href="mailto:kleber@ziontechgroup.com?subject=Small Business Cloud Migration"
-                className="text-left"
-              >
+                className="text-left">
                 Get Quote
               </a>
             </div>
@@ -317,8 +314,7 @@ export default function CloudMigrationServicesPage() {
               </ul>
               <a
                 href="mailto:kleber@ziontechgroup.com?subject=Enterprise Cloud Migration"
-                className="text-left"
-              >
+                className="text-left">
                 Get Quote
               </a>
             </div>
@@ -364,8 +360,7 @@ export default function CloudMigrationServicesPage() {
               </ul>
               <a
                 href="mailto:kleber@ziontechgroup.com?subject=Custom Cloud Migration Solution"
-                className="text-left"
-              >
+                className="text-left">
                 Contact Sales
               </a>
             </div>
@@ -392,14 +387,12 @@ export default function CloudMigrationServicesPage() {
           <div className="text-left">
             <a
               href="tel:+13024640950"
-              className="text-left"
-            >
+              className="text-left">
               Call +1 302 464 0950
             </a>
             <a
               href="mailto:kleber@ziontechgroup.com?subject=Cloud Migration Services Inquiry"
-              className="text-left"
-            >
+              className="text-left">
               Get Migration Quote
             </a>
           </div>

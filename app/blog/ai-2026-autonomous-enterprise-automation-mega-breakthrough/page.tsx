@@ -36,14 +36,12 @@ export default function AutonomousEnterpriseAutomationMegaBreakthrough() {
             <div className="text-left">
               <a 
                 href="/case-studies/ai-2026-autonomous-enterprise-automation-15-billion-success"
-                className="text-left"
-              >
+                className="text-left">
                 View $15B Success Story
               </a>
               <a 
                 href="/services/ai-2026-autonomous-enterprise-automation-consulting"
-                className="text-left"
-              >
+                className="text-left">
                 Get Automation Consultation
               </a>
             </div>
@@ -77,8 +75,7 @@ export default function AutonomousEnterpriseAutomationMegaBreakthrough() {
               </ul>
               <a 
                 href="/services/ai-2026-autonomous-enterprise-automation-consulting"
-                className="text-left"
-              >
+                className="text-left">
                 Learn More →
               </a>
             </div>
@@ -97,8 +94,7 @@ export default function AutonomousEnterpriseAutomationMegaBreakthrough() {
               </ul>
               <a 
                 href="/case-studies/ai-2026-autonomous-enterprise-automation-15-billion-success"
-                className="text-left"
-              >
+                className="text-left">
                 View Case Study →
               </a>
             </div>
@@ -117,8 +113,7 @@ export default function AutonomousEnterpriseAutomationMegaBreakthrough() {
               </ul>
               <a 
                 href="/case-studies/ai-2026-autonomous-enterprise-automation-15-billion-success"
-                className="text-left"
-              >
+                className="text-left">
                 Read Success Story →
               </a>
             </div>
@@ -273,14 +268,12 @@ export default function AutonomousEnterpriseAutomationMegaBreakthrough() {
             <div className="text-left">
               <a 
                 href="/contact"
-                className="text-left"
-              >
+                className="text-left">
                 Get Started Today
               </a>
               <a 
                 href="/case-studies/ai-2026-autonomous-enterprise-automation-15-billion-success"
-                className="text-left"
-              >
+                className="text-left">
                 View $15B Success Story
               </a>
             </div>

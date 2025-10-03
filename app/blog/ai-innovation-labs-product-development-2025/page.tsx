@@ -262,14 +262,12 @@ const InnovationLabFramework = {
 						<div className="text-left">
 							<a 
 								href="/"
-								className="text-left"
-							>
+								className="text-left">
 								Get Innovation Assessment
 							</a>
 							<a 
 								href="/"
-								className="text-left"
-							>
+								className="text-left">
 								Explore Innovation Labs
 							</a>
 						</div>

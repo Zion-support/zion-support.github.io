@@ -172,8 +172,7 @@ export default function AI2027RevolutionaryBreakthroughSolutions() {
             </ul>
             <Link 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               Get Started
             </Link>
           </div>
@@ -213,8 +212,7 @@ export default function AI2027RevolutionaryBreakthroughSolutions() {
             </ul>
             <Link 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               Transform Now
             </Link>
           </div>
@@ -249,8 +247,7 @@ export default function AI2027RevolutionaryBreakthroughSolutions() {
             </ul>
             <Link 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               Lead the Revolution
             </Link>
           </div>
@@ -367,14 +364,12 @@ export default function AI2027RevolutionaryBreakthroughSolutions() {
           <div className="text-left">
             <Link 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               Secure Your Position
             </Link>
             <Link 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               View Success Stories
             </Link>
           </div>

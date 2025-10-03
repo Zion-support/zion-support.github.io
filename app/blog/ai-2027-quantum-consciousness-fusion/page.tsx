@@ -227,8 +227,7 @@ export default function AI2027QuantumConsciousnessFusion() {
           <br />
           <Link 
             href="/"
-            className="text-left"
-          >
+            className="text-left">
             Secure Your Quantum Access
           </Link>
         </div>
@@ -249,14 +248,12 @@ export default function AI2027QuantumConsciousnessFusion() {
           <div className="text-left">
             <Link 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               Get Quantum Access
             </Link>
             <Link 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               View Success Stories
             </Link>
           </div>

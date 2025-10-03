@@ -204,8 +204,7 @@ export default function AIAutonomousBusinessSystems2026() {
           </p>
           <Link 
             href="/"
-            className="text-left"
-          >
+            className="text-left">
             Explore Autonomous Operations
           </Link>
         </div>

@@ -44,14 +44,12 @@ export default function AI2026HyperAutonomousEnterpriseAutomationBreakthrough() 
             <div className="text-left">
               <a 
                 href="#automation-details" "
-                className="text-left"
-              >
+                className="text-left">
                 Discover Automation
               </a>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 View $300B Success Story →
               </a>
             </div>
@@ -305,14 +303,12 @@ export default function AI2026HyperAutonomousEnterpriseAutomationBreakthrough() 
           <div className="text-left">
             <a 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               Start Your Automation Journey
             </a>
             <a 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               View Success Story
             </a>
           </div>

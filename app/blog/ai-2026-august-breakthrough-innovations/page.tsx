@@ -173,8 +173,7 @@ export default function AI2026AugustBreakthroughPage() {
                 </p>
                 <a 
                   href="/case-studies/ai-2026-august-breakthrough-8-5-billion-success"
-                  className="text-left"
-                >
+                  className="text-left">
                   View Full Success Story →
                 </a>
               </div>
@@ -240,20 +239,17 @@ export default function AI2026AugustBreakthroughPage() {
               <div className="text-left">
                 <a 
                   href="/"
-                  className="text-left"
-                >
+                  className="text-left">
                   Get Started Today
                 </a>
                 <a 
                   href="/"
-                  className="text-left"
-                >
+                  className="text-left">
                   View Success Story →
                 </a>
                 <a 
                   href="/"
-                  className="text-left"
-                >
+                  className="text-left">
                   Get Consultation
                 </a>
               </div>

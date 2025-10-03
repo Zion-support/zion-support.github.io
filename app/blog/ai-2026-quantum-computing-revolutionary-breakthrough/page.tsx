@@ -45,14 +45,12 @@ export default function AI2026QuantumComputingRevolutionaryBreakthrough() {
             <div className="text-left">
               <a 
                 href="#quantum-breakthrough" "
-                className="text-left"
-              >
+                className="text-left">
                 Explore Quantum Breakthrough →
               </a>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Get Quantum Access
               </a>
             </div>
@@ -272,20 +270,17 @@ export default function AI2026QuantumComputingRevolutionaryBreakthrough() {
             <div className="text-left">
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Get Quantum Access
               </a>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Learn About Meta-Cognitive AI →
               </a>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 View Success Stories
               </a>
             </div>

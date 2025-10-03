@@ -268,14 +268,12 @@ export default function AICognitiveComputingBreakthrough2026() {
             <div className="text-left">
               <Link
                 href="/services/ai-cognitive-computing"
-                className="text-left"
-              >
+                className="text-left">
                 Explore Cognitive AI Services
               </Link>
               <Link
                 href="/contact"
-                className="text-left"
-              >
+                className="text-left">
                 Schedule Consultation
               </Link>
             </div>

@@ -135,14 +135,12 @@ export default function AdvancedAIRevolution2025() {
                 <div className="text-left">
                   <a 
                     href="/"
-                    className="text-left"
-                  >
+                    className="text-left">
                     Start Your Transformation →
                   </a>
                   <a 
                     href="/"
-                    className="text-left"
-                  >
+                    className="text-left">
                     View Success Story
                   </a>
                 </div>

@@ -41,14 +41,12 @@ export default function AIAutonomousOperationsService() {
             <div className="text-left">
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Get Started Today
               </a>
               <a 
                 href="#features" "
-                className="text-left"
-              >
+                className="text-left">
                 Explore Features
               </a>
             </div>
@@ -225,8 +223,7 @@ export default function AIAutonomousOperationsService() {
                 </ul>
                 <a 
                   href="/"
-                  className="text-left"
-                >
+                  className="text-left">
                   Get Started
                 </a>
               </div>
@@ -261,8 +258,7 @@ export default function AIAutonomousOperationsService() {
                 </ul>
                 <a 
                   href="/"
-                  className="text-left"
-                >
+                  className="text-left">
                   Get Started
                 </a>
               </div>
@@ -294,8 +290,7 @@ export default function AIAutonomousOperationsService() {
                 </ul>
                 <a 
                   href="/"
-                  className="text-left"
-                >
+                  className="text-left">
                   Contact Sales
                 </a>
               </div>
@@ -310,14 +305,12 @@ export default function AIAutonomousOperationsService() {
             <div className="text-left">
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Get Free Consultation
               </a>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 View Case Studies
               </a>
             </div>

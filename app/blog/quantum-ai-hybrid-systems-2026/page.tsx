@@ -441,14 +441,12 @@ export default function QuantumAIHybridSystemsPage() {
               <div className="text-left">
                 <a 
                   href="/"
-                  className="text-left"
-                >
+                  className="text-left">
                   Schedule Quantum Consultation
                 </a>
                 <a 
                   href="/"
-                  className="text-left"
-                >
+                  className="text-left">
                   View Quantum Success Stories
                 </a>
               </div>

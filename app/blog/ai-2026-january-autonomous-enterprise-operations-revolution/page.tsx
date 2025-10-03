@@ -172,14 +172,12 @@ export default function January2026AutonomousEnterpriseOperationsRevolution() {
                 <div className="text-left">
                   <Link 
                     href="/"
-                    className="text-left"
-                  >
+                    className="text-left">
                     Schedule Consultation
                   </Link>
                   <Link 
                     href="/"
-                    className="text-left"
-                  >
+                    className="text-left">
                     View Services
                   </Link>
                 </div>
@@ -190,14 +188,12 @@ export default function January2026AutonomousEnterpriseOperationsRevolution() {
           <div className="text-left">
             <Link 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               ← Back to Blog
             </Link>
             <Link 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               Next Article →
             </Link>
           </div>

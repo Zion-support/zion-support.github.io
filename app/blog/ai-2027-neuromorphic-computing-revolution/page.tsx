@@ -219,14 +219,12 @@ export default function AI2027NeuromorphicComputingRevolution() {
             <div className="text-left">
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Schedule Consultation
               </a>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Explore Neuromorphic Solutions
               </a>
             </div>

@@ -187,8 +187,7 @@ export default function AIMegaTrends20252026() {
           </p>
           <Link 
             href="/contact"
-            className="text-left"
-          >
+            className="text-left">
             Start Your Transformation
           </Link>
         </div>
@@ -199,15 +198,13 @@ export default function AIMegaTrends20252026() {
         <div className="text-left">
           <Link 
             href="/services/quantum-analytics"
-            className="text-left"
-          >
+            className="text-left">
             <h4 className="text-left">Quantum Analytics 1000x Performance</h4>
             <p className="text-left">Discover how quantum computing revolutionizes data analytics</p>
           </Link>
           <Link 
             href="/case-studies/enterprise-success"
-            className="text-left"
-          >
+            className="text-left">
             <h4 className="text-left">$500M Global Enterprise Success</h4>
             <p className="text-left">Real-world transformation case study with massive ROI</p>
           </Link>

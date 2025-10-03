@@ -40,14 +40,12 @@ export default function April2026UltimateBreakthroughPage() {
             <div className="text-left">
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Experience Universal AI
               </a>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 View $50B Success Story →
               </a>
             </div>
@@ -197,14 +195,12 @@ export default function April2026UltimateBreakthroughPage() {
               <div className="text-left">
                 <a 
                   href="/"
-                  className="text-left"
-                >
+                  className="text-left">
                   Experience Universal AI
                 </a>
                 <a 
                   href="/"
-                  className="text-left"
-                >
+                  className="text-left">
                   Universal Intelligence Services
                 </a>
               </div>

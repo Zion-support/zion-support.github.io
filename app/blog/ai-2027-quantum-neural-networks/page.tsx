@@ -262,14 +262,12 @@ export default function AI2027QuantumNeuralNetworks() {
           <div className="text-left">
             <Link 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               Start Your Quantum Journey
             </Link>
             <Link 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               Explore Quantum Services
             </Link>
           </div>

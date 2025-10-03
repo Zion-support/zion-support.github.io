@@ -299,15 +299,13 @@ export default function QuantumComputing2026CommercialBreakthrough() {
               <div className="text-left">
                 <Link 
                   href="/contact"
-                  className="text-left"
-                >
+                  className="text-left">
                   Start Your Quantum Journey
                   <ArrowRight className="text-left" />
                 </Link>
                 <Link 
                   href="/services/quantum-computing"
-                  className="text-left"
-                >
+                  className="text-left">
                   Explore Quantum Services
                   <ArrowRight className="text-left" />
                 </Link>

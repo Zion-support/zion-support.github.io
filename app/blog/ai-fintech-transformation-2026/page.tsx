@@ -469,14 +469,12 @@ const riskAssessment = {
           <div className="text-left">
             <a
               href="/services/ai-finance-automation"
-              className="text-left"
-            >
+              className="text-left">
               Explore AI Finance Solutions
             </a>
             <a
               href="/contact"
-              className="text-left"
-            >
+              className="text-left">
               Get Free Consultation
             </a>
           </div>

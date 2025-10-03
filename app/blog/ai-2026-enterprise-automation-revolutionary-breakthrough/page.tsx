@@ -199,14 +199,12 @@ export default function AI2026EnterpriseAutomationRevolutionaryBreakthrough() {
             <div className="text-left">
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Start Your Transformation
               </a>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 View Success Stories
               </a>
             </div>

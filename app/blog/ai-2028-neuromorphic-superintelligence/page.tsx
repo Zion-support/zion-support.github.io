@@ -145,8 +145,7 @@ export default function AI2028NeuromorphicSuperintelligence() {
           </p>
           <Link 
             href="/"
-            className="text-left"
-          >
+            className="text-left">
             Schedule Your Neuromorphic Consultation
           </Link>
         </div>
@@ -156,15 +155,13 @@ export default function AI2028NeuromorphicSuperintelligence() {
           <div className="text-left">
             <Link 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               <h5 className="text-left">AI 2028 Autonomous Enterprise</h5>"
               <p className="text-left">99.9% autonomous operations breakthrough</p>"
             </Link>
             <Link 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               <h5 className="text-left">AI 2028 Success Stories</h5>"
               <p className="text-left">Real-world transformation results</p>"
             </Link>

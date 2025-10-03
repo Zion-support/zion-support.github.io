@@ -40,14 +40,12 @@ export default function QuantumConsciousnessFusionPage() {
             <div className="text-left">
               <a 
                 href="#fusion-technology" "
-                className="text-left"
-              >
+                className="text-left">
                 Explore Technology →
               </a>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Start Your Journey
               </a>
             </div>
@@ -201,14 +199,12 @@ export default function QuantumConsciousnessFusionPage() {
           <div className="text-left">
             <a 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               Start Your Journey
             </a>
             <a 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               View Success Stories →
             </a>
           </div>

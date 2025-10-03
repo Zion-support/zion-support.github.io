@@ -271,14 +271,12 @@ export default function MetaCognitiveAIBreakthrough2026() {
               <div className="text-left">
                 <a 
                   href="/"
-                  className="text-left"
-                >
+                  className="text-left">
                   Get Free Assessment
                 </a>
                 <a 
                   href="/"
-                  className="text-left"
-                >
+                  className="text-left">
                   View Success Stories
                 </a>
               </div>
@@ -317,8 +315,7 @@ export default function MetaCognitiveAIBreakthrough2026() {
               <a
                 key={index}
                 href={content.href}
-                className="text-left"
-              >
+                className="text-left">
                 <div className="text-left">{content.icon}</div>"
                 <h3 className="text-left">
                   {content.title}

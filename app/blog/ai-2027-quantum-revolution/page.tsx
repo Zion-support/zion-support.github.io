@@ -323,14 +323,12 @@ export default function AI2027QuantumRevolution() {
               <div className="text-left">
                 <Link 
                   href="/"
-                  className="text-left"
-                >
+                  className="text-left">
                   Start Quantum AI Transformation
                 </Link>
                 <Link 
                   href="/"
-                  className="text-left"
-                >
+                  className="text-left">
                   View Success Stories
                 </Link>
               </div>

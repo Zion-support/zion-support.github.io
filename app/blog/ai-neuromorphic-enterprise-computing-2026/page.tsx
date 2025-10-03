@@ -246,14 +246,12 @@ export default function AINeuromorphicEnterpriseComputing2026() {
           <div className="text-left">
             <Link 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               Start Neuromorphic Journey
             </Link>
             <Link 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               Explore AI Services
             </Link>
           </div>

@@ -40,14 +40,12 @@ export default function February2026BreakthroughPage() {
             <div className="text-left">
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Get Started Today
               </a>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 View $3.2B Success Story →
               </a>
             </div>
@@ -163,14 +161,12 @@ export default function February2026BreakthroughPage() {
               <div className="text-left">
                 <a 
                   href="/"
-                  className="text-left"
-                >
+                  className="text-left">
                   Get Free Consultation
                 </a>
                 <a 
                   href="/"
-                  className="text-left"
-                >
+                  className="text-left">
                   View Consulting Services
                 </a>
               </div>

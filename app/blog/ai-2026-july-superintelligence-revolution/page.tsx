@@ -190,14 +190,12 @@ export default function AI2026JulySuperintelligenceRevolution() {
               <div className="text-left">
                 <a 
                   href="/"
-                  className="text-left"
-                >
+                  className="text-left">
                   Get Your Free Consultation
                 </a>
                 <a 
                   href="/"
-                  className="text-left"
-                >
+                  className="text-left">
                   View Success Stories
                 </a>
               </div>

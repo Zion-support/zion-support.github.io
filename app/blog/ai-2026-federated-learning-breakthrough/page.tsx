@@ -79,14 +79,12 @@ export default function FederatedLearningBreakthrough2026() {
             <div className="text-left">
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Get Federated Learning Demo
               </a>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 View Success Stories
               </a>
             </div>
@@ -289,14 +287,12 @@ export default function FederatedLearningBreakthrough2026() {
           <div className="text-left">
             <a 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               Start Federated Learning
             </a>
             <a 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               View Case Studies
             </a>
           </div>

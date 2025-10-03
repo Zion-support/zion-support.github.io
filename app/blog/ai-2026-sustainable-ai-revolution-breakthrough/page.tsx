@@ -37,14 +37,12 @@ export default function SustainableAIRevolutionPage() {
             <div className="text-left">
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Get Sustainable AI Solutions
               </a>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 View $2.5B Success Story →
               </a>
             </div>
@@ -229,8 +227,7 @@ export default function SustainableAIRevolutionPage() {
               </p>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Get Started Today
               </a>
             </div>

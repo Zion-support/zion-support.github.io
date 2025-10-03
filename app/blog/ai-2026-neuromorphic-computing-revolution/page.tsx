@@ -79,14 +79,12 @@ export default function NeuromorphicComputingRevolution2026() {
             <div className="text-left">
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Get Neuromorphic Consultation
               </a>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 View Success Stories
               </a>
             </div>
@@ -244,14 +242,12 @@ export default function NeuromorphicComputingRevolution2026() {
           <div className="text-left">
             <a 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               Schedule Neuromorphic Demo
             </a>
             <a 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               View Case Studies
             </a>
           </div>

@@ -16,8 +16,7 @@ export default function AI2025DecemberUltimateAutonomousEnterpriseRevolution() {
         <div className="text-left">
           <Link 
             href="/"
-            className="text-left"
-          >
+            className="text-left">
             <ArrowLeft className="text-left" />
             Back to Home
           </Link>
@@ -271,8 +270,7 @@ export default function AI2025DecemberUltimateAutonomousEnterpriseRevolution() {
                 </p>
                 <Link 
                   href="/"
-                  className="text-left"
-                >
+                  className="text-left">
                   Schedule Consultation
                 </Link>
               </div>

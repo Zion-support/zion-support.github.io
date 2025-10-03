@@ -258,14 +258,12 @@ export default function AI2027AutonomousEnterprise() {
             <div className="text-left">
               <Link
                 href="/contact"
-                className="text-left"
-              >
+                className="text-left">
                 Start Autonomous Journey
               </Link>
               <Link
                 href="/services/ai-autonomous-operations"
-                className="text-left"
-              >
+                className="text-left">
                 Explore Services
               </Link>
             </div>

@@ -149,20 +149,17 @@ export default function AI2027QuantumConsciousnessFusionBreakthrough() {
             <div className="text-left">
               <Link 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Schedule Quantum Consultation
               </Link>
               <Link 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 View Quantum Success Stories
               </Link>
               <Link 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Explore Quantum Services
               </Link>
             </div>

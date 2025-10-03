@@ -210,14 +210,12 @@ export default function AIAutonomousEnterprise2026() {
             <div className="text-left">
               <Link
                 href="/contact"
-                className="text-left"
-              >
+                className="text-left">
                 Get Free Consultation
               </Link>
               <Link
                 href="/case-studies/ai-autonomous-enterprise-success-2026"
-                className="text-left"
-              >
+                className="text-left">
                 View Success Stories
               </Link>
             </div>

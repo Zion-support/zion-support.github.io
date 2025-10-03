@@ -182,14 +182,12 @@ export default function CuttingEdgeAITrends2025() {
                 <div className="text-left">
                   <a 
                     href="/"
-                    className="text-left"
-                  >
+                    className="text-left">
                     Start Your AI Journey →
                   </a>
                   <a 
                     href="/"
-                    className="text-left"
-                  >
+                    className="text-left">
                     View Implementation Success
                   </a>
                 </div>

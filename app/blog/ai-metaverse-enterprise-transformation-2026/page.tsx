@@ -356,14 +356,12 @@ export default function AIMetaverseEnterpriseTransformation2026() {
           <div className="text-left">
             <Link
               href="/contact"
-              className="text-left"
-            >
+              className="text-left">
               Schedule Consultation
             </Link>
             <Link
               href="/services/ai-metaverse-enterprise"
-              className="text-left"
-            >
+              className="text-left">
               Learn More
             </Link>
           </div>
