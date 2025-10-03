@@ -1,4 +1,5 @@
 import React from 'react';
+import dynamic from 'next/dynamic';
 import { UnifiedBanner, bannerConfigurations } from './components/UnifiedBannerSystem';
 import { LazyWrapper } from './components/LazyLoader';
 import { SEOOptimizer } from './components/SEOOptimizer';
@@ -7,19 +8,19 @@ import { PerformanceMonitor } from './components/PerformanceMonitor';
 
 // Lazy load heavy components
 const UnifiedContentPromotion = dynamic(() => import('../components/UnifiedContentPromotion'), {
-  loading: () => <div className="h-screen bg-gray-100 animate-pulse"></div>"
+  loading: () => <div className="h-screen bg-gray-100 animate-pulse"></div>
 });
 
 const InteractiveAIROICalculator = dynamic(() => import('../components/InteractiveAIROICalculator'), {
-  loading: () => <div className="h-96 bg-gray-100 animate-pulse"></div>"
+  loading: () => <div className="h-96 bg-gray-100 animate-pulse"></div>
 });
 
 const ContentShowcase = dynamic(() => import('../components/ContentShowcase'), {
-  loading: () => <div className="h-96 bg-gray-100 animate-pulse"></div>"
+  loading: () => <div className="h-96 bg-gray-100 animate-pulse"></div>
 });
 
 const InteractiveContentShowcase2026 = dynamic(() => import('../components/InteractiveContentShowcase2026'), {
-  loading: () => <div className="h-96 bg-gray-100 animate-pulse"></div>"
+  loading: () => <div className="h-96 bg-gray-100 animate-pulse"></div>
 });
 
 export const metadata = {

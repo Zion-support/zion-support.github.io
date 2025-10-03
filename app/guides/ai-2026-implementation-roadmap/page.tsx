@@ -3,56 +3,56 @@ import Link from 'next/link';
 import { ArrowLeft, Calendar, User, Clock, Tag, Target, CheckCircle, ArrowRight } from 'lucide-react';
 
 export const metadata = {
-  title= 'AI 2026 Implementation Roadmap: Complete Guide to Enterprise AI Transformation',
+  title: 'AI 2026 Implementation Roadmap: Complete Guide to Enterprise AI Transformation',
   description: 'Master the art of AI implementation with our comprehensive 2026 roadmap. From strategy development to full-scale deployment, learn how to successfully transform your enterprise.',
   keywords: 'AI Implementation, Enterprise AI, Digital Transformation, AI Strategy, 2026 Roadmap, Implementation Guide',
 };
 
 export default function AI2026ImplementationRoadmap() {
   return (
-    <div className="min-h-screen bg-white">"
+    <div className="min-h-screen bg-white">
       {/* Header */}
-      <header className="border-b border-gray-200 bg-white sticky top-0 z-50">"
-        <div className="max-w-4xl mx-auto px-4 py-4">"
+      <header className="border-b border-gray-200 bg-white sticky top-0 z-50">
+        <div className="max-w-4xl mx-auto px-4 py-4">
           <Link 
-            href="/[^"]*"
+            href="/"
             className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium">
-            <ArrowLeft className="w-4 h-4 mr-2" />"
+            <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Home
           </Link>
         </div>
       </header>
 
       {/* Article Content */}
-      <article className="max-w-4xl mx-auto px-4 py-8">"
+      <article className="max-w-4xl mx-auto px-4 py-8">
         {/* Article Header */}
-        <div className="mb-8">"
-          <div className="flex items-center gap-4 text-sm text-gray-600 mb-4">"
-            <div className="flex items-center gap-1">"
-              <Calendar className="w-4 h-4" />"
+        <div className="mb-8">
+          <div className="flex items-center gap-4 text-sm text-gray-600 mb-4">
+            <div className="flex items-center gap-1">
+              <Calendar className="w-4 h-4" />
               <span>January 22, 2026</span>
             </div>
-            <div className="flex items-center gap-1">"
-              <User className="w-4 h-4" />"
+            <div className="flex items-center gap-1">
+              <User className="w-4 h-4" />
               <span>Zion Tech Group</span>
             </div>
-            <div className="flex items-center gap-1">"
-              <Clock className="w-4 h-4" />"
+            <div className="flex items-center gap-1">
+              <Clock className="w-4 h-4" />
               <span>25 min read</span>
             </div>
           
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">"
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             AI 2026 Implementation Roadmap: Your Complete Guide to Enterprise AI Transformation
           </h1>
           
-          <p className="text-xl text-gray-600 mb-6">"
+          <p className="text-xl text-gray-600 mb-6">
             Master the art of AI implementation with our comprehensive 2026 roadmap. From strategy development to full-scale deployment, learn how to successfully transform your enterprise with AI technologies.
           </p>
           
-          <div className="flex flex-wrap gap-2">"
+          <div className="flex flex-wrap gap-2">
             {['AI Implementation', 'Enterprise AI', 'Digital Transformation', 'AI Strategy', '2026 Roadmap'].map((tag) => (
-              <span key={tag} className="inline-flex items-center gap-1 bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">"
-                <Tag className="w-3 h-3" />"
+              <span key={tag} className="inline-flex items-center gap-1 bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
+                <Tag className="w-3 h-3" />
                 {tag}
               </span>
             ))}
