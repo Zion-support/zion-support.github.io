@@ -1,6 +1,8 @@
+import React, { useState } from 'react';
+
 // Async error handling utilities
-export const asyncErrorHandler = (asyncFn) => {
-  return async (...args) => {
+export const asyncErrorHandler = (asyncFn: (...args: any[]) => Promise<any>) => {
+  return async (...args: any[]) => {
     try {
       return await asyncFn(...args);
     } catch (error) {
@@ -19,11 +21,11 @@ export const asyncErrorHandler = (asyncFn) => {
   };
 };
 
-export const withErrorHandling = (Component) => {
-  return (props) => {
-    const [error, setError] = React.useState(null);
+export const withErrorHandling = (Component: React.ComponentType<any>) => {
+  return (props: any) => {
+    const [error, setError] = useState(null);
     
-    const handleError = (error) => {
+    const handleError = (error: any) => {
       setError(error);
       console.error('Component error:', error);
     };
