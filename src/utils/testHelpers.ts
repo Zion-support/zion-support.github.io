@@ -14,7 +14,7 @@ export const waitFor = async (
     await new Promise(resolve => setTimeout(resolve, 100));
   }
   if (!condition()) {
-    throw new Error(`Timeout waiting for condition after ${timeout`ms`);
+    throw new Error(`Timeout waiting for condition after ${timeout}ms`);
   }
 };
 
@@ -49,7 +49,7 @@ export const simulateClick = (element: Element): void => {
     view: window,
   });
   element.dispatchEvent(event);
-';
+};
 
 /**
  * Simulate user input
@@ -76,7 +76,7 @@ export const mockFetch = (response: any, status = 200): void => {
  * Mock localStorage
  */
 export const mockLocalStorage = (): void => {
-  const store: { [key: string]: string } = {';
+  const store: { [key: string]: string } = {};
   
   Object.defineProperty(window, 'localStorage', {
     value: {
@@ -134,7 +134,7 @@ export const mockResizeObserver = (): void => {
     unobserve: jest.fn(),
     disconnect: jest.fn(),
   }));
-';
+};
 
 /**
  * Mock matchMedia
@@ -160,12 +160,12 @@ export const mockMatchMedia = (matches: boolean): void => {
  */
 export const waitForAsyncComponent = async (
   component: React.ComponentType<any>,
-  props: any = {`,
+  props: any = {},
   timeout = 5000,
 ): Promise<void> => {
   await waitFor(() => {
     try {
-      const element = document.querySelector(`[data-testid="${component.name`"]`);
+      const element = document.querySelector(`[data-testid="${component.name}"]`);
       return !!element;
     } catch {
       return false;
@@ -189,7 +189,7 @@ export const mockConsole = (): void => {
   afterEach(() => {
     Object.assign(console, originalConsole);
   });
-';
+};
 
 /**
  * Create mock router
@@ -205,12 +205,12 @@ export const createMockRouter = (pathname = '/', search = ''): any => ({
   forward: jest.fn(),
   reload: jest.fn(),
   prefetch: jest.fn(),
-');
+});
 
 /**
  * Mock Next.js router
  */
-export const mockNextRouter = (pathname = '/', query = {'): void => {
+export const mockNextRouter = (pathname = '/', query = {}): void => {
   const mockRouter = createMockRouter(pathname);
   mockRouter.query = query;
   
@@ -249,7 +249,7 @@ export const cleanupTestEnvironment = (): void => {
   if (window.location) {
     window.location = new URL('http://localhost:3000') as any;
   }
-';
+};
 
 /**
  * Create mock API response
@@ -381,4 +381,4 @@ export const runOnlyPendingTimers = (): void => {
  */
 export const clearAllTimers = (): void => {
   jest.clearAllTimers();
-`;
+};
