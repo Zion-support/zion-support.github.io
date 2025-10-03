@@ -1,4 +1,4 @@
-// import React from 'react';
+import React from 'react';
 
 export const metadata = {
   title: 'Financial Services AI Transformation: $150M ROI Success Story',

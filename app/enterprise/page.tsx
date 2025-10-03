@@ -7,8 +7,8 @@ export default function EnterpriseSolutionsPage() {
   );
 }
 
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'Enterprise Solutions - Zion Tech Group',
@@ -186,7 +186,8 @@ export default function EnterprisePage() {
                       ))}
                     </ul>
                   </div>
-                  <Link to={solution.link}
+                  <Link 
+                    href={solution.link}
                     className="text-blue-600 hover:text-blue-800 font-medium text-sm flex items-center gap-1"
                   >
                     Learn More
@@ -295,12 +296,14 @@ export default function EnterprisePage() {
             Join the Fortune 500 companies that have achieved breakthrough results with our enterprise AI solutions
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact"
+            <Link 
+              href="/contact"
               className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200"
             >
               Start Enterprise Transformation
             </Link>
-            <Link to="/case-studies"
+            <Link 
+              href="/case-studies"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-200"
             >
               View Success Stories

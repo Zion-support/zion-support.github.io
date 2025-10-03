@@ -1,11 +1,6 @@
-// import React from 'react';
-// Metadata interface for React Helmet
-interface Metadata {
-  title?: string;
-  description?: string;
-  keywords?: string;
-}
-import { Link } from 'react-router-dom';
+import React from 'react';
+import { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Healthcare Scheduling Platform - Zion Tech Group',
@@ -200,12 +195,14 @@ export default function HealthcareSchedulingPlatform() {
           Join thousands of healthcare providers who have streamlined their operations with our comprehensive platform.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link to="/contact" 
+          <Link 
+            href="/contact" 
             className="bg-red-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors"
           >
             Request Demo
           </Link>
-          <Link to="https://ziontechgroup.com/services/healthcare-scheduling-platform" 
+          <Link 
+            href="https://ziontechgroup.com/services/healthcare-scheduling-platform" 
             className="border border-red-600 text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-red-50 transition-colors"
           >
             View Pricing

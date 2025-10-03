@@ -1,27 +1,31 @@
-import React from "react
+import React from "react"
 ;
 const RequestQuote: React.FC = () => {
   return (
-        <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-            <h1 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Request a Quote</h1>";,
-            <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Tell us about your project and well provide a tailored proposal.</p>";,
-            <form className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">";,
-                <input className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">";,
-                <textarea className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">";
-                <button className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Submit</button>";,
-        <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-            <h1 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Request a Quote</h1>";,
-            <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Tell us about your project and well provide a tailored proposal.</p>";,
-            <form className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-                <input className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">";,
-                <input className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">";,
-                <textarea className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">";
-                <button className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Submit</button>";,
+<<<<<<< HEAD
+        <section className="min-h-[40vh]"
+            <h1 className="text-3xl font-bold mb-4">Request a Quote</h1>";,"
+            <p className="text-gray-700 mb-6">Tell us about your project and well provide a tailored proposal.</p>";,"
+            <form className="grid gap-4 max-w-xl"
+                <input className="border rounded-md px-3 py-2" placeholder="Name" />";,"
+                <input className="border rounded-md px-3 py-2" placeholder="Email" />";,"
+                <textarea className="border rounded-md px-3 py-2" placeholder="Project details" rows="{5} /">";"
+                <button className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700" type ="button">Submit</button>";,"
+=======
+        <section className= "min-h-[40vh]">
+            <h1 className= "text-3xl font-bold mb-4">Request a Quote</h1>";,"
+            <p className= "text-gray-700 mb-6">Tell us about your project and well provide a tailored proposal.</p>";,"
+            <form className= "grid gap-4 max-w-xl">
+                <input className= "border rounded-md px-3 py-2" placeholder="Name" />";,"
+                <input className= "border rounded-md px-3 py-2" placeholder="Email" />";,"
+                <textarea className= "border rounded-md px-3 py-2" placeholder="Project details" rows="{5} /">";"
+                <button className= "bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700" type ="button">Submit</button>";,"
+>>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
             </form>
         </section>
     );
 };
 
-export default Component;
+export default RequestQuote;
 
 ;

@@ -1,4 +1,4 @@
-// import React from 'react';
+import React from 'react';
 
 export const metadata = {
   title: 'AI Observability Platform | IT Services | Zion Tech Group',
@@ -90,8 +90,8 @@ export default function AIObservabilityPlatformPage() {
   );
 }
 
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import Link from 'next/link';
 
 export default function AIObservabilityPlatformPage() {
   return (
@@ -105,7 +105,7 @@ export default function AIObservabilityPlatformPage() {
           </p>
           <div className="mt-6 text-sm text-gray-600"><span className="font-semibold text-purple-700">Pricing</span>: Team $1,499/month, Scale $3,999/month, Enterprise custom.</div>
           <div className="mt-6 flex gap-3">
-            <Link to="/contact" className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700">Request a Demo</Link>
+            <Link href="/contact" className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700">Request a Demo</Link>
             <a href="https://ziontechgroup.com" className="border border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50">Visit ziontechgroup.com</a>
           </div>
         </div>

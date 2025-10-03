@@ -1,11 +1,6 @@
-// import React from 'react';
-// Metadata interface for React Helmet
-interface Metadata {
-  title?: string;
-  description?: string;
-  keywords?: string;
-}
-import { Link } from 'react-router-dom';
+import React from 'react';
+import { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'AI Customer Insights Platform | Zion Tech Group - Advanced Customer Analytics',
@@ -175,12 +170,14 @@ export default function AICustomerInsightsPlatformPage() {
             Understand behavior, predict trends, and optimize customer experiences with advanced machine learning.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact" 
+            <Link 
+              href="/contact" 
               className="bg-emerald-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-emerald-700 transition-colors"
             >
               Start Free Trial
             </Link>
-            <Link to="/pricing" 
+            <Link 
+              href="/pricing" 
               className="border border-emerald-600 text-emerald-600 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-50 transition-colors"
             >
               View Pricing
@@ -214,7 +211,8 @@ export default function AICustomerInsightsPlatformPage() {
                 </ul>
               </div>
               
-              <Link to="/contact"
+              <Link 
+                href="/contact"
                 className="inline-block w-full text-center bg-emerald-600 text-white py-3 rounded-lg font-semibold hover:bg-emerald-700 transition-colors"
               >
                 Start Free Trial
@@ -291,7 +289,8 @@ export default function AICustomerInsightsPlatformPage() {
                     </li>
                   ))}
                 </ul>
-                <Link to="/contact"
+                <Link 
+                  href="/contact"
                   className={`block w-full text-center py-3 rounded-lg font-semibold transition-colors ${
                     plan.popular
                       ? 'bg-emerald-600 text-white hover:bg-emerald-700'

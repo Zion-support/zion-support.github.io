@@ -1,11 +1,11 @@
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import Link from 'next/link';
 
 export default function AI2026NovemberQuantumSuperintelligence500BillionSuccess() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
       <div className="mb-8">
-        <Link to="/case-studies" className="text-blue-600 hover:text-blue-800 mb-4 inline-block">
+        <Link href="/case-studies" className="text-blue-600 hover:text-blue-800 mb-4 inline-block">
           ← Back to Case Studies
         </Link>
         <h1 className="text-4xl font-bold text-gray-900 mb-4">
@@ -124,7 +124,8 @@ export default function AI2026NovemberQuantumSuperintelligence500BillionSuccess(
             Transform your enterprise with our quantum superintelligence solutions and achieve 
             unprecedented value creation and operational excellence.
           </p>
-          <Link to="/contact" 
+          <Link 
+            href="/contact" 
             className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block"
           >
             Start Your Transformation

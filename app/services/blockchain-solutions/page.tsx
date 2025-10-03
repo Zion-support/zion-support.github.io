@@ -1,6 +1,6 @@
-// import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
 import { 
   Shield, 
   Link as LinkIcon, 
@@ -215,10 +215,10 @@ export default function BlockchainSolutionsPage() {
                 Enterprise-grade blockchain development with smart contracts, DeFi platforms, NFT marketplaces, and supply chain solutions
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link to="#services" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+                <Link href="#services" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
                   Explore Services
                 </Link>
-                <Link to="/contact" className="border border-white text-white hover:bg-white hover:text-purple-900 px-8 py-3 rounded-lg font-semibold transition-colors">
+                <Link href="/contact" className="border border-white text-white hover:bg-white hover:text-purple-900 px-8 py-3 rounded-lg font-semibold transition-colors">
                   Get Quote
                 </Link>
               </div>
@@ -312,7 +312,7 @@ export default function BlockchainSolutionsPage() {
                       </p>
                     </div>
 
-                    <Link to={service.link} className="mt-4 w-full bg-purple-600 hover:bg-purple-700 text-white py-2 px-4 rounded-lg font-semibold transition-colors flex items-center justify-center">
+                    <Link href={service.link} className="mt-4 w-full bg-purple-600 hover:bg-purple-700 text-white py-2 px-4 rounded-lg font-semibold transition-colors flex items-center justify-center">
                       Learn More
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </Link>
@@ -333,7 +333,7 @@ export default function BlockchainSolutionsPage() {
               Let's discuss your blockchain project and create a secure, scalable solution that drives real business value.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact" className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors">
+              <Link href="/contact" className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors">
                 Start Your Project
               </Link>
               <a href="tel:+13024640950" className="border border-white text-white hover:bg-white hover:text-purple-600 px-8 py-3 rounded-lg font-semibold transition-colors">

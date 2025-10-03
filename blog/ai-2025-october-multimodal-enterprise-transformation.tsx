@@ -1,4 +1,4 @@
-// import React from 'react';
+import React from 'react';
 
 export const metadata = {
   title: 'Multimodal AI: The Enterprise Transformation Blueprint for October 2025',

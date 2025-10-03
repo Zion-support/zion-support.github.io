@@ -2,91 +2,115 @@
 
 import fs from 'fs';
 import path from 'path';
-import { fileURLToPath } from 'url';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+// Create lazy loading wrapper component
+const lazyLoaderComponent = `import React, { Suspense, lazy } from 'react';
 
-console.log('🚀 Starting performance optimizations...\n');
+// Loading component
+const LoadingSpinner = () => (
+  <div className="flex items-center justify-center p-8">
+    <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+    <span className="ml-2 text-gray-600">Loading...</span>
+  </div>
+);
 
-// 1. Optimize package.json scripts
-function optimizePackageScripts() {
-  const packagePath = path.join(__dirname, '..', 'package.json');
-  const packageJson = JSON.parse(fs.readFileSync(packagePath, 'utf8'));
-  
-  // Add optimized build scripts
-  packageJson.scripts = {
-    ...packageJson.scripts,
-    'build:optimized': 'NODE_ENV=production vite build --minify terser --sourcemap false',
-    'build:production': 'NODE_ENV=production vite build --minify terser --sourcemap false --rollupOptions.external',
-    'analyze:bundle': 'vite-bundle-analyzer dist/stats.html',
-    'performance:audit': 'lighthouse http://localhost:4173 --output=html --output-path=./lighthouse-report.html',
-    'optimize:images': 'node scripts/optimize-images.js',
-    'optimize:css': 'node scripts/optimize-css.js',
-    'optimize:all': 'npm run optimize:images && npm run optimize:css && npm run build:optimized'
-  };
-  
-  fs.writeFileSync(packagePath, JSON.stringify(packageJson, null, 2));
-  console.log('✅ Optimized package.json scripts');
-}
+// Lazy load components
+export const LazyUnifiedBanner = lazy(() => import('../components/UnifiedBannerSystem'));
+export const LazyContentShowcase = lazy(() => import('../components/ContentShowcase'));
+export const LazyFeaturedServiceCard = lazy(() => import('../components/FeaturedServiceCard'));
+export const LazyNavigation = lazy(() => import('../components/Navigation'));
 
-// 2. Create performance monitoring component
-function createPerformanceMonitor() {
-  const monitorContent = `import React, { useEffect, useState } from 'react';
+// Higher-order component for lazy loading
+export const withLazyLoading = (Component, fallback = <LoadingSpinner />) => {
+  return (props) => (
+    <Suspense fallback={fallback}>
+      <Component {...props} />
+    </Suspense>
+  );
+};
+
+// Lazy loading wrapper
+export const LazyWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => (
+  <Suspense fallback={<LoadingSpinner />}>
+    {children}
+  </Suspense>
+);
+
+export default LazyWrapper;
+`;
+
+// Create performance monitoring component
+const performanceMonitorComponent = `import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
-  fcp: number;
-  lcp: number;
-  fid: number;
-  cls: number;
-  ttfb: number;
+  loadTime: number;
+  renderTime: number;
+  memoryUsage?: number;
+  errorCount: number;
 }
 
 export const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    loadTime: 0,
+    renderTime: 0,
+    errorCount: 0
+  });
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      // Web Vitals monitoring
-      import('web-vitals').then(({ onFCP, onLCP, onFID, onCLS, onTTFB }) => {
-        const performanceData: Partial<PerformanceMetrics> = {};
+    // Measure page load time
+    const loadTime = performance.now();
+    
+    // Measure render time
+    const renderStart = performance.now();
+    
+    // Simulate render completion
+    requestAnimationFrame(() => {
+      const renderTime = performance.now() - renderStart;
+      
+      setMetrics(prev => ({
+        ...prev,
+        loadTime,
+        renderTime
+      }));
+    });
 
-        onFCP((metric) => {
-          performanceData.fcp = metric.value;
-        });
-
-        onLCP((metric) => {
-          performanceData.lcp = metric.value;
-        });
-
-        onFID((metric) => {
-          performanceData.fid = metric.value;
-        });
-
-        onCLS((metric) => {
-          performanceData.cls = metric.value;
-        });
-
-        onTTFB((metric) => {
-          performanceData.ttfb = metric.value;
-          setMetrics(performanceData as PerformanceMetrics);
-        });
-      });
+    // Monitor memory usage if available
+    if ('memory' in performance) {
+      const memory = (performance as any).memory;
+      setMetrics(prev => ({
+        ...prev,
+        memoryUsage: memory.usedJSHeapSize / 1024 / 1024 // Convert to MB
+      }));
     }
+
+    // Error tracking
+    const errorHandler = () => {
+      setMetrics(prev => ({
+        ...prev,
+        errorCount: prev.errorCount + 1
+      }));
+    };
+
+    window.addEventListener('error', errorHandler);
+    window.addEventListener('unhandledrejection', errorHandler);
+
+    return () => {
+      window.removeEventListener('error', errorHandler);
+      window.removeEventListener('unhandledrejection', errorHandler);
+    };
   }, []);
 
-  if (!metrics || process.env.NODE_ENV === 'production') {
+  // Only show in development
+  if (process.env.NODE_ENV !== 'development') {
     return null;
   }
 
   return (
-    <div className="fixed bottom-4 right-4 bg-black bg-opacity-80 text-white p-4 rounded-lg text-xs font-mono">
-      <div className="mb-2 font-bold">Performance Metrics:</div>
-      <div>FCP: {metrics.fcp?.toFixed(0)}ms</div>
-      <div>LCP: {metrics.lcp?.toFixed(0)}ms</div>
-      <div>FID: {metrics.fid?.toFixed(0)}ms</div>
-      <div>CLS: {metrics.cls?.toFixed(3)}</div>
-      <div>TTFB: {metrics.ttfb?.toFixed(0)}ms</div>
+    <div className="fixed bottom-4 right-4 bg-black bg-opacity-75 text-white p-3 rounded-lg text-xs font-mono">
+      <div>Load: {metrics.loadTime.toFixed(2)}ms</div>
+      <div>Render: {metrics.renderTime.toFixed(2)}ms</div>
+      {metrics.memoryUsage && <div>Memory: {metrics.memoryUsage.toFixed(2)}MB</div>}
+      <div>Errors: {metrics.errorCount}</div>
     </div>
   );
 };
@@ -94,186 +118,143 @@ export const PerformanceMonitor: React.FC = () => {
 export default PerformanceMonitor;
 `;
 
-  const monitorPath = path.join(__dirname, '..', 'src/components/PerformanceMonitor.tsx');
-  fs.writeFileSync(monitorPath, monitorContent);
-  console.log('✅ Created PerformanceMonitor component');
-}
-
-// 3. Optimize Vite config
-function optimizeViteConfig() {
-  const viteConfigContent = `import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import { visualizer } from 'rollup-plugin-visualizer';
-
-export default defineConfig({
-  plugins: [
-    react({
-      babel: {
-        plugins: [
-          ['@babel/plugin-transform-react-jsx', { runtime: 'automatic' }],
-          ['@babel/plugin-proposal-decorators', { legacy: true }],
-        ],
-      },
-    }),
-    visualizer({
-      filename: 'dist/stats.html',
-      open: false,
-      gzipSize: true,
-    }),
-  ],
-  build: {
-    target: 'es2020',
-    minify: 'terser',
-    sourcemap: false,
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom'],
-          router: ['react-router-dom'],
-          icons: ['lucide-react'],
-          motion: ['framer-motion'],
-        },
-      },
-    },
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true,
-      },
-    },
-  },
-  optimizeDeps: {
-    include: ['react', 'react-dom', 'react-router-dom', 'lucide-react'],
-  },
-  server: {
-    hmr: {
-      overlay: false,
-    },
-  },
-});
-`;
-
-  const vitePath = path.join(__dirname, '..', 'vite.config.ts');
-  fs.writeFileSync(vitePath, viteConfigContent);
-  console.log('✅ Optimized Vite configuration');
-}
-
-// 4. Create SEO optimization component
-function createSEOOptimizer() {
-  const seoContent = `import React from 'react';
-import { Helmet } from 'react-helmet-async';
+// Create SEO optimization component
+const seoOptimizerComponent = `import React from 'react';
+import Head from 'next/head';
 
 interface SEOProps {
   title?: string;
   description?: string;
-  keywords?: string;
-  image?: string;
-  url?: string;
-  type?: string;
+  keywords?: string[];
+  ogImage?: string;
+  canonicalUrl?: string;
+  structuredData?: any;
 }
 
-export const SEO: React.FC<SEOProps> = ({
-  title = 'Zion Tech Group - Advanced AI and IT Solutions',
-  description = 'Leading provider of AI-powered solutions, cloud infrastructure, and digital transformation services.',
-  keywords = 'AI, artificial intelligence, cloud computing, IT solutions, digital transformation',
-  image = '/images/og-image.jpg',
-  url = 'https://zion.app',
-  type = 'website',
+export const SEOOptimizer: React.FC<SEOProps> = ({
+  title = 'Zion Tech Group - AI & IT Solutions',
+  description = 'Leading provider of AI-powered solutions, micro SaaS services, and comprehensive IT consulting. Transform your business with cutting-edge technology.',
+  keywords = ['AI solutions', 'micro SaaS', 'IT consulting', 'automation', 'cloud services'],
+  ogImage = '/images/og-image.jpg',
+  canonicalUrl,
+  structuredData
 }) => {
-  const fullTitle = title.includes('Zion') ? title : \`\${title} | Zion Tech Group\`;
+  const fullTitle = title.includes('Zion Tech Group') ? title : \`\${title} | Zion Tech Group\`;
 
   return (
-    <Helmet>
+    <Head>
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
+      <meta name="keywords" content={keywords.join(', ')} />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="robots" content="index, follow" />
+      
+      {/* Open Graph */}
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
-      <meta property="og:image" content={image} />
-      <meta property="og:url" content={url} />
-      <meta property="og:type" content={type} />
+      <meta property="og:image" content={ogImage} />
+      <meta property="og:type" content="website" />
+      <meta property="og:site_name" content="Zion Tech Group" />
+      
+      {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
-      <link rel="canonical" href={url} />
-    </Helmet>
+      <meta name="twitter:image" content={ogImage} />
+      
+      {/* Canonical URL */}
+      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+      
+      {/* Structured Data */}
+      {structuredData && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(structuredData)
+          }}
+        />
+      )}
+    </Head>
   );
 };
 
-export default SEO;
+export default SEOOptimizer;
 `;
 
-  const seoPath = path.join(__dirname, '..', 'src/components/SEO.tsx');
-  fs.writeFileSync(seoPath, seoContent);
-  console.log('✅ Created SEO optimization component');
-}
+// Create accessibility enhancer
+const accessibilityEnhancer = `import React, { useEffect } from 'react';
 
-// 5. Create accessibility enhancements
-function createAccessibilityEnhancements() {
-  const accessibilityContent = `import React, { useEffect } from 'react';
-
-export const useAccessibility = () => {
+export const AccessibilityEnhancer: React.FC = () => {
   useEffect(() => {
-    // Focus management
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === 'Tab') {
-        document.body.classList.add('keyboard-navigation');
-      }
-    };
-
-    const handleMouseDown = () => {
-      document.body.classList.remove('keyboard-navigation');
-    };
-
-    document.addEventListener('keydown', handleKeyDown);
-    document.addEventListener('mousedown', handleMouseDown);
-
-    // Skip to content link
+    // Add skip links
     const skipLink = document.createElement('a');
     skipLink.href = '#main-content';
     skipLink.textContent = 'Skip to main content';
-    skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white p-2 rounded z-50';
+    skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
     document.body.insertBefore(skipLink, document.body.firstChild);
 
+    // Add focus indicators
+    const style = document.createElement('style');
+    style.textContent = \`
+      *:focus {
+        outline: 2px solid #3b82f6;
+        outline-offset: 2px;
+      }
+      
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+    \`;
+    document.head.appendChild(style);
+
+    // Add ARIA labels to interactive elements
+    const buttons = document.querySelectorAll('button:not([aria-label]):not([aria-labelledby])');
+    buttons.forEach(button => {
+      if (!button.getAttribute('aria-label') && !button.textContent?.trim()) {
+        button.setAttribute('aria-label', 'Button');
+      }
+    });
+
+    // Add role attributes
+    const navs = document.querySelectorAll('nav:not([role])');
+    navs.forEach(nav => nav.setAttribute('role', 'navigation'));
+
+    const mains = document.querySelectorAll('main:not([role])');
+    mains.forEach(main => main.setAttribute('role', 'main'));
+
     return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-      document.removeEventListener('mousedown', handleMouseDown);
+      // Cleanup
       if (skipLink.parentNode) {
         skipLink.parentNode.removeChild(skipLink);
       }
+      if (style.parentNode) {
+        style.parentNode.removeChild(style);
+      }
     };
   }, []);
-};
 
-export const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  useAccessibility();
-  
-  return (
-    <div>
-      {children}
-      <div id="main-content" />
-    </div>
-  );
+  return null;
 };
 
 export default AccessibilityEnhancer;
 `;
 
-  const accessibilityPath = path.join(__dirname, '..', 'src/utils/accessibility.ts');
-  fs.writeFileSync(accessibilityPath, accessibilityContent);
-  console.log('✅ Created accessibility enhancements');
-}
+// Write all components to files
+fs.writeFileSync('/workspace/app/components/LazyLoader.tsx', lazyLoaderComponent);
+fs.writeFileSync('/workspace/app/components/PerformanceMonitor.tsx', performanceMonitorComponent);
+fs.writeFileSync('/workspace/app/components/SEOOptimizer.tsx', seoOptimizerComponent);
+fs.writeFileSync('/workspace/app/components/AccessibilityEnhancer.tsx', accessibilityEnhancer);
 
-// Run all optimizations
-optimizePackageScripts();
-createPerformanceMonitor();
-optimizeViteConfig();
-createSEOOptimizer();
-createAccessibilityEnhancements();
-
-console.log('\n✅ All performance optimizations completed!');
-console.log('\n📊 Next steps:');
-console.log('1. Run: npm run build:optimized');
-console.log('2. Run: npm run analyze:bundle');
-console.log('3. Run: npm run performance:audit');
+console.log('✅ Created performance optimization components:');
+console.log('📁 LazyLoader.tsx - Lazy loading wrapper');
+console.log('📁 PerformanceMonitor.tsx - Performance metrics');
+console.log('📁 SEOOptimizer.tsx - SEO optimization');
+console.log('📁 AccessibilityEnhancer.tsx - Accessibility improvements');

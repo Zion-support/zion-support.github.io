@@ -10,7 +10,7 @@ interface ErrorLog {
   level: 'error' | 'warn' | 'info' | 'debug';
   message: string;
   stack?: string;
-  context?: Record<string, unknown>;
+  context?: Record<string, any>;
   userAgent?: string;
   url?: string;
   sessionId?: string;
@@ -25,7 +25,7 @@ interface ErrorMetrics {
 
 const ERROR_LOG_KEY = 'zion_error_logs';
 const MAX_ERROR_LOGS = 100;
-// const ERROR_RATE_WINDOW = 60 * 1000; // 1 minute
+const ERROR_RATE_WINDOW = 60 * 1000; // 1 minute
 
 /**
  * Get session ID
@@ -87,7 +87,7 @@ const saveErrorLog = (log: ErrorLog) => {
  */
 export const logError = (
   error: Error | string,
-  context?: Record<string, unknown>,
+  context?: Record<string, any>,
   level: 'error' | 'warn' = 'error'
 ) => {
   const errorLog: ErrorLog = {
@@ -118,7 +118,7 @@ export const logError = (
 /**
  * Log info message
  */
-export const logInfo = (message: string, context?: Record<string, unknown>) => {
+export const logInfo = (message: string, context?: Record<string, any>) => {
   const errorLog: ErrorLog = {
     timestamp: Date.now(),
     level: 'info',
@@ -318,7 +318,7 @@ export const handleNetworkError = (error: Error, endpoint: string) => {
 /**
  * Try-catch wrapper with automatic error logging
  */
-export const withErrorHandling = <T extends (...args: unknown[]) => unknown>(
+export const withErrorHandling = <T extends (...args: any[]) => any>(
   fn: T,
   context?: string
 ): T => {

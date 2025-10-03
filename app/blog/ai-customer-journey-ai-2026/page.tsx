@@ -1,5 +1,5 @@
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import Link from 'next/link';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -26,12 +26,14 @@ export default function AICustomerJourney2026Page() {
             250% conversion increase, 90% satisfaction improvement, and seamless experiences.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact"
+            <Link
+              href="/contact"
               className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors shadow-lg hover:shadow-xl"
             >
               Get Implementation Help
             </Link>
-            <Link to="/case-studies"
+            <Link
+              href="/case-studies"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-green-600 transition-colors"
             >
               View Success Stories

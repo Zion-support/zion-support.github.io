@@ -1,5 +1,5 @@
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import Link from 'next/link';
 import { 
   UserGroupIcon, 
   CheckCircleIcon, 
@@ -32,13 +32,15 @@ export default function AILeadGenerationEngine() {
               Revolutionize your sales pipeline with AI-powered lead generation, qualification, and nurturing that delivers high-quality prospects.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact" 
+              <Link 
+                href="/contact" 
                 className="bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold hover:bg-indigo-50 transition-colors inline-flex items-center justify-center"
               >
                 Get Started Today
                 <ArrowRightIcon className="ml-2 w-5 h-5" />
               </Link>
-              <Link to="/portfolio" 
+              <Link 
+                href="/portfolio" 
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors inline-flex items-center justify-center"
               >
                 View Case Studies
@@ -267,13 +269,15 @@ export default function AILeadGenerationEngine() {
             Join leading companies already generating 3x more qualified leads with our AI-powered platform.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact" 
+            <Link 
+              href="/contact" 
               className="bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold hover:bg-indigo-50 transition-colors inline-flex items-center justify-center"
             >
               Start Your Free Trial
               <ArrowRightIcon className="ml-2 w-5 h-5" />
             </Link>
-            <Link to="/case-studies" 
+            <Link 
+              href="/case-studies" 
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors inline-flex items-center justify-center"
             >
               View Success Stories

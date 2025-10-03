@@ -1,6 +1,6 @@
 // @ts-nocheck
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import Link from 'next/link';
 
 export default function Page() {
   return (
@@ -24,7 +24,7 @@ export default function Page() {
           <p>Use this checklist to reduce time‑to‑value while preserving product quality and trust.</p>
 
           <div className="mt-10">
-            <Link to="/" className="text-emerald-300 hover:text-emerald-200 font-semibold">← Back to Home</Link>
+            <Link href="/" className="text-emerald-300 hover:text-emerald-200 font-semibold">← Back to Home</Link>
           </div>
         </div>
       </section>

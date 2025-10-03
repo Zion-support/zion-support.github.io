@@ -1,5 +1,5 @@
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import Link from 'next/link';
 import { getServiceBySlug } from '../data';
 
 type Params = { params: { slug: string } };
@@ -11,7 +11,7 @@ export default function ServiceDetailPage({ params }: Params) {
       <div className="max-w-3xl mx-auto px-6 py-16">
         <h1 className="text-2xl font-semibold mb-2">Service not found</h1>
         <p className="text-gray-600 mb-6">We couldn't find this service. Browse all services instead.</p>
-        <Link to="/services" className="text-blue-600 hover:underline">Back to Services</Link>
+        <Link href="/services" className="text-blue-600 hover:underline">Back to Services</Link>
       </div>
     );
   }
@@ -75,9 +75,9 @@ export default function ServiceDetailPage({ params }: Params) {
             <div className="border border-gray-200 rounded-xl p-4 bg-white">
               <div className="font-medium mb-2">Explore more</div>
               <ul className="text-sm space-y-2">
-                <li><Link to="/services" className="text-blue-600 hover:underline">All Services</Link></li>
-                <li><Link to="/case-studies" className="text-blue-600 hover:underline">Case Studies</Link></li>
-                <li><Link to="/blog" className="text-blue-600 hover:underline">Blog & Insights</Link></li>
+                <li><Link href="/services" className="text-blue-600 hover:underline">All Services</Link></li>
+                <li><Link href="/case-studies" className="text-blue-600 hover:underline">Case Studies</Link></li>
+                <li><Link href="/blog" className="text-blue-600 hover:underline">Blog & Insights</Link></li>
               </ul>
             </div>
           </div>

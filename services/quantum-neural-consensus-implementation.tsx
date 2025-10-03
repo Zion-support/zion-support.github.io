@@ -1,6 +1,6 @@
-// import React from 'react';
+import React from 'react';
 import { Metadata } from 'next';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Quantum Neural Consensus Implementation Services - Zion Tech Group',

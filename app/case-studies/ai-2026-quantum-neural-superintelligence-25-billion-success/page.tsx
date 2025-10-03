@@ -1,5 +1,5 @@
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import Link from 'next/link';
 import { ArrowRight, Zap, TrendingUp, DollarSign, Users, Target, Award, Brain } from 'lucide-react';
 
 export const metadata = {
@@ -29,13 +29,15 @@ export default function QuantumNeuralSuperintelligenceSuccessCaseStudy() {
               with Zion Tech Group's revolutionary quantum neural superintelligence platform.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/blog/ai-2026-quantum-neural-superintelligence"
+              <Link 
+                href="/blog/ai-2026-quantum-neural-superintelligence"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-green-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105"
               >
                 Read Technical Details
                 <ArrowRight className="w-5 h-5" />
               </Link>
-              <Link to="/services/quantum-ai-development"
+              <Link 
+                href="/services/quantum-ai-development"
                 className="inline-flex items-center gap-2 border border-green-500 text-green-300 px-8 py-4 rounded-lg font-semibold hover:bg-green-500/10 transition-all duration-300"
               >
                 Start Your Quantum Journey
@@ -380,13 +382,15 @@ export default function QuantumNeuralSuperintelligenceSuccessCaseStudy() {
             Join the quantum revolution and unlock infinite possibilities for your business.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact"
+            <Link 
+              href="/contact"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-green-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105"
             >
               Start Your Quantum Transformation
               <ArrowRight className="w-5 h-5" />
             </Link>
-            <Link to="/services/quantum-ai-development"
+            <Link 
+              href="/services/quantum-ai-development"
               className="inline-flex items-center gap-2 border border-green-500 text-green-300 px-8 py-4 rounded-lg font-semibold hover:bg-green-500/10 transition-all duration-300"
             >
               Explore Quantum Solutions

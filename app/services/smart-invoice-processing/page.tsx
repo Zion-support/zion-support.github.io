@@ -1,15 +1,15 @@
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import Link from 'next/link';
 import { 
-  FileText, 
-  CheckCircle, 
-  Clock, 
-  DollarSign,
-  Settings,
-  Shield,
-  ArrowRight,
-  BarChart3
-} from 'lucide-react';
+  DocumentTextIcon, 
+  CheckCircleIcon, 
+  ClockIcon, 
+  CurrencyDollarIcon,
+  CogIcon,
+  ShieldCheckIcon,
+  ArrowRightIcon,
+  ChartBarIcon
+} from '@heroicons/react/24/outline';
 
 export const metadata = {
   title: 'Smart Invoice Processing | Zion Tech Group',
@@ -32,13 +32,15 @@ export default function SmartInvoiceProcessing() {
               Automate your entire invoice processing workflow with AI-powered data extraction, validation, and approval routing.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact" 
+              <Link 
+                href="/contact" 
                 className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-green-50 transition-colors inline-flex items-center justify-center"
               >
                 Get Started Today
                 <ArrowRightIcon className="ml-2 w-5 h-5" />
               </Link>
-              <Link to="/portfolio" 
+              <Link 
+                href="/portfolio" 
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors inline-flex items-center justify-center"
               >
                 View Case Studies
@@ -267,13 +269,15 @@ export default function SmartInvoiceProcessing() {
             Join hundreds of companies already saving time and money with our smart invoice processing solution.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact" 
+            <Link 
+              href="/contact" 
               className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-green-50 transition-colors inline-flex items-center justify-center"
             >
               Start Your Free Trial
               <ArrowRightIcon className="ml-2 w-5 h-5" />
             </Link>
-            <Link to="/case-studies" 
+            <Link 
+              href="/case-studies" 
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors inline-flex items-center justify-center"
             >
               View Success Stories

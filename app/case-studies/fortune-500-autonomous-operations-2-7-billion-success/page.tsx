@@ -1,5 +1,5 @@
-// import React from 'react';
-// Metadata handled by React Helmet
+import React from 'react';
+import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Fortune 500 Autonomous Operations: $2.7B ROI Success Story | Zion Tech Group',

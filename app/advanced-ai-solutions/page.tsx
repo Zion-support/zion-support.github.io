@@ -1,6 +1,6 @@
-// import React from 'react';
+import React from 'react';
 import Head from 'next/head';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { 
   Brain, Bot, Cpu, Eye, MessageSquare, FileText, 
   BarChart3, Shield, Zap, Target, Lightbulb, Rocket,
@@ -407,7 +407,8 @@ export default function AdvancedAISolutions() {
                         <span className="text-lg font-semibold text-purple-600">{service.price}</span>
                         <span className="text-sm text-gray-500">{service.delivery}</span>
                       </div>
-                      <Link to={service.link}
+                      <Link 
+                        href={service.link}
                         className="w-full bg-purple-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-purple-700 transition-colors text-center block"
                       >
                         Learn More

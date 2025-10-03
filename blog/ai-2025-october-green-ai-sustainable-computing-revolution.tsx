@@ -1,4 +1,4 @@
-// import React from 'react';
+import React from 'react';
 
 export const metadata = {
   title: 'Green AI & Sustainable Computing 2025 — 89% Energy Reduction, Carbon-Neutral AI Operations',

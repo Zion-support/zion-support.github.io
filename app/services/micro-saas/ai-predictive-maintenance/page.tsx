@@ -1,6 +1,6 @@
-// import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
 import { 
   Wrench, 
   AlertTriangle, 
@@ -386,7 +386,8 @@ export default function AIPredictiveMaintenancePage() {
                     </div>
                   </div>
                   
-                  <Link to="/contact"
+                  <Link 
+                    href="/contact"
                     className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors flex items-center justify-center"
                   >
                     Get Free Demo

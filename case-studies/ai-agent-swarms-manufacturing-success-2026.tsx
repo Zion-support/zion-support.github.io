@@ -1,5 +1,5 @@
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'AI Agent Swarms Manufacturing Success 2026: $2.5B Savings with 50,000-Agent Deployment',

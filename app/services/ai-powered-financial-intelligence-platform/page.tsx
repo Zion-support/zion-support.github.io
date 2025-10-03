@@ -1,11 +1,6 @@
-// import React from 'react';
-// Metadata interface for React Helmet
-interface Metadata {
-  title?: string;
-  description?: string;
-  keywords?: string;
-}
-import { Link } from 'react-router-dom';
+import React from 'react';
+import { Metadata } from 'next';
+import Link from 'next/link';
 import { 
   BarChart3, 
   TrendingUp, 
@@ -307,12 +302,14 @@ export default function AIPoweredFinancialIntelligencePlatformPage() {
               fraud detection, and automated trading. Achieve unprecedented accuracy and efficiency.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact" 
+              <Link 
+                href="/contact" 
                 className="bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
               >
                 Start Free Trial
               </Link>
-              <Link to="#demo" 
+              <Link 
+                href="#demo" 
                 className="border border-green-600 text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors"
               >
                 Watch Demo
@@ -454,7 +451,8 @@ export default function AIPoweredFinancialIntelligencePlatformPage() {
                     </li>
                   ))}
                 </ul>
-                <Link to="/contact"
+                <Link
+                  href="/contact"
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
                     tier.popular
                       ? 'bg-green-600 text-white hover:bg-green-700'
@@ -522,12 +520,14 @@ export default function AIPoweredFinancialIntelligencePlatformPage() {
             Join leading financial institutions in achieving unprecedented accuracy and efficiency with AI
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact" 
+            <Link 
+              href="/contact" 
               className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Start Your Free Trial
             </Link>
-            <Link to="mailto:kleber@ziontechgroup.com" 
+            <Link 
+              href="mailto:kleber@ziontechgroup.com" 
               className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
             >
               Email kleber@ziontechgroup.com

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
 
 const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -38,96 +39,138 @@ const ContactPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+    <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-          <h1 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Get In Touch</h1>
-          <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+      <section className="bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-800 text-white py-20">
+        <div className="container mx-auto px-6 text-center">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6">Get In Touch</h1>
+          <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
             Ready to transform your business? Let's discuss how our AI-powered solutions can drive your success.
           </p>
         </div>
       </section>
 
-      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+      <div className="container mx-auto px-6 py-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Form */}
-          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-            <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Send us a Message</h2>
+          <div className="bg-white rounded-xl shadow-lg p-8">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Send us a Message</h2>
             {isSubmitted ? (
-              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-                <CheckCircle className="w-12 h-12 text-green-500 mb-4" />
-                <h3 className="text-xl font-semibold mb-2">Message Sent!</h3>
-                <p className="text-zion-blue-light">Thank you for contacting us. We'll get back to you within 24 hours.</p>
+              <div className="text-center py-8">
+                <CheckCircle className="h-16 w-16 text-green-500 mx-auto mb-4" />
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Message Sent!</h3>
+                <p className="text-gray-600">Thank you for contacting us. We'll get back to you within 24 hours.</p>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="name" className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                       Full Name *
                     </label>
                     <input
-                      type="text
-                      id="name
-                      name="name
+                      type="text"
+                      id="name"
+                      name="name"
                       required
                       value={formData.name}
                       onChange={handleChange}
-                      className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+<<<<<<< HEAD
+=======
+=======
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200
+>>>>>>> cursor/fix-errors-and-merge-to-main-6d85"
+>>>>>>> 488cb15bd61969d3b6299d682d1dbb55e5c5e5cc
+                      placeholder="Your full name"
+                    />
                   </div>
                   <div>
-                    <label htmlFor="email" className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                       Email Address *
                     </label>
                     <input
-                      type="email
-                      id="email
-                      name="email
+                      type="email"
+                      id="email"
+                      name="email"
                       required
                       value={formData.email}
                       onChange={handleChange}
-                      className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+<<<<<<< HEAD
+=======
+=======
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200
+>>>>>>> cursor/fix-errors-and-merge-to-main-6d85"
+>>>>>>> 488cb15bd61969d3b6299d682d1dbb55e5c5e5cc
+                      placeholder="your@email.com"
+                    />
                   </div>
                 </div>
 
-                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="company" className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
                       Company
                     </label>
                     <input
-                      type="text
-                      id="company
-                      name="company
+                      type="text"
+                      id="company"
+                      name="company"
                       value={formData.company}
                       onChange={handleChange}
-                      className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+<<<<<<< HEAD
+=======
+=======
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200
+>>>>>>> cursor/fix-errors-and-merge-to-main-6d85"
+>>>>>>> 488cb15bd61969d3b6299d682d1dbb55e5c5e5cc
+                      placeholder="Your company name"
+                    />
                   </div>
                   <div>
-                    <label htmlFor="phone" className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
                       Phone Number
                     </label>
                     <input
-                      type="tel
-                      id="phone
-                      name="phone
+                      type="tel"
+                      id="phone"
+                      name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+<<<<<<< HEAD
+=======
+=======
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200
+>>>>>>> cursor/fix-errors-and-merge-to-main-6d85"
+>>>>>>> 488cb15bd61969d3b6299d682d1dbb55e5c5e5cc
+                      placeholder="+1 (555) 123-4567"
+                    />
                   </div>
                 </div>
 
                 <div>
-                  <label htmlFor="service" className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
                     Service Interest
                   </label>
                   <select
-                    id="service
-                    name="service
+                    id="service"
+                    name="service"
                     value={formData.service}
                     onChange={handleChange}
-                    className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Select a service</option>
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+<<<<<<< HEAD
+                  >
+                    <option value=">Select a service</option>
+=======
+=======
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200
+>>>>>>> cursor/fix-errors-and-merge-to-main-6d85
+                  >"
+                    <option value=">Select a service</option>
+>>>>>>> 488cb15bd61969d3b6299d682d1dbb55e5c5e5cc
                     <option value="ai-services">AI Services</option>
                     <option value="it-services">IT Services</option>
                     <option value="micro-saas">Micro SaaS</option>
@@ -139,22 +182,39 @@ const ContactPage: React.FC = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                     Message *
                   </label>
                   <textarea
-                    id="message
-                    name="message
+                    id="message"
+                    name="message"
                     required
                     rows={6}
                     value={formData.message}
                     onChange={handleChange}
-                    className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+<<<<<<< HEAD
+=======
+=======
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200
+>>>>>>> cursor/fix-errors-and-merge-to-main-6d85"
+>>>>>>> 488cb15bd61969d3b6299d682d1dbb55e5c5e5cc
+                    placeholder="Tell us about your project and how we can help..."
+                  />
                 </div>
 
                 <button
-                  type="submit
-                  className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  type="submit"
+                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center"
+<<<<<<< HEAD
+                >
+=======
+=======
+                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover: from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center
+>>>>>>> cursor/fix-errors-and-merge-to-main-6d85
+                >"
+>>>>>>> 488cb15bd61969d3b6299d682d1dbb55e5c5e5cc
+                  <Send className="h-5 w-5 mr-2" />
                   Send Message
                 </button>
               </form>
@@ -162,33 +222,33 @@ const ContactPage: React.FC = () => {
           </div>
 
           {/* Contact Information */}
-          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-              <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Contact Information</h3>
-              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-                  <Mail className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="space-y-8">
+            <div className="bg-white rounded-xl shadow-lg p-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Contact Information</h3>
+              <div className="space-y-6">
+                <div className="flex items-start space-x-4">
+                  <Mail className="h-6 w-6 text-blue-600 mt-1" />
                   <div>
-                    <h4 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Email</h4>
-                    <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">contact@ziontechgroup.com</p>
-                    <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">support@ziontechgroup.com</p>
+                    <h4 className="font-semibold text-gray-900">Email</h4>
+                    <p className="text-gray-600">contact@ziontechgroup.com</p>
+                    <p className="text-gray-600">support@ziontechgroup.com</p>
                   </div>
                 </div>
                 
-                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-                  <Phone className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <div className="flex items-start space-x-4">
+                  <Phone className="h-6 w-6 text-blue-600 mt-1" />
                   <div>
-                    <h4 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Phone</h4>
-                    <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">+1 (555) 123-4567</p>
-                    <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">+1 (555) 987-6543</p>
+                    <h4 className="font-semibold text-gray-900">Phone</h4>
+                    <p className="text-gray-600">+1 (555) 123-4567</p>
+                    <p className="text-gray-600">+1 (555) 987-6543</p>
                   </div>
                 </div>
                 
-                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-                  <MapPin className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <div className="flex items-start space-x-4">
+                  <MapPin className="h-6 w-6 text-blue-600 mt-1" />
                   <div>
-                    <h4 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Address</h4>
-                    <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    <h4 className="font-semibold text-gray-900">Address</h4>
+                    <p className="text-gray-600">
                       123 Innovation Drive<br />
                       San Francisco, CA 94105<br />
                       United States
@@ -196,11 +256,11 @@ const ContactPage: React.FC = () => {
                   </div>
                 </div>
                 
-                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-                  <Clock className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <div className="flex items-start space-x-4">
+                  <Clock className="h-6 w-6 text-blue-600 mt-1" />
                   <div>
-                    <h4 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Business Hours</h4>
-                    <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    <h4 className="font-semibold text-gray-900">Business Hours</h4>
+                    <p className="text-gray-600">
                       Monday - Friday: 9:00 AM - 6:00 PM PST<br />
                       Saturday: 10:00 AM - 4:00 PM PST<br />
                       Sunday: Closed
@@ -210,28 +270,28 @@ const ContactPage: React.FC = () => {
               </div>
             </div>
 
-            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-              <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Why Choose Us?</h3>
-              <ul className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-                <li className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-                  <CheckCircle className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-                  <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">24/7 Support & Monitoring</span>
+            <div className="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-xl p-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Why Choose Us?</h3>
+              <ul className="space-y-3">
+                <li className="flex items-center space-x-3">
+                  <CheckCircle className="h-5 w-5 text-green-500" />
+                  <span className="text-gray-700">24/7 Support & Monitoring</span>
                 </li>
-                <li className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-                  <CheckCircle className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-                  <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Enterprise-Grade Security</span>
+                <li className="flex items-center space-x-3">
+                  <CheckCircle className="h-5 w-5 text-green-500" />
+                  <span className="text-gray-700">Enterprise-Grade Security</span>
                 </li>
-                <li className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-                  <CheckCircle className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-                  <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Scalable Solutions</span>
+                <li className="flex items-center space-x-3">
+                  <CheckCircle className="h-5 w-5 text-green-500" />
+                  <span className="text-gray-700">Scalable Solutions</span>
                 </li>
-                <li className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-                  <CheckCircle className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-                  <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Rapid Deployment</span>
+                <li className="flex items-center space-x-3">
+                  <CheckCircle className="h-5 w-5 text-green-500" />
+                  <span className="text-gray-700">Rapid Deployment</span>
                 </li>
-                <li className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-                  <CheckCircle className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-                  <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Custom Development</span>
+                <li className="flex items-center space-x-3">
+                  <CheckCircle className="h-5 w-5 text-green-500" />
+                  <span className="text-gray-700">Custom Development</span>
                 </li>
               </ul>
             </div>
@@ -242,4 +302,4 @@ const ContactPage: React.FC = () => {
   );
 };
 
-export default Component;
+export default ContactPage;

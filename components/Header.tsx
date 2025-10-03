@@ -1,8 +1,6 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
-import Sidebar from './Sidebar';
-import PromoBanner from './PromoBanner';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -252,7 +250,7 @@ export default function Header() {
           </div>
         )}
         </nav>
-      </header>
-    </>
+      </div>
+    </header>
   );
 }

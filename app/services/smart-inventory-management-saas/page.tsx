@@ -1,11 +1,6 @@
-// import React from 'react';
-// Metadata interface for React Helmet
-interface Metadata {
-  title?: string;
-  description?: string;
-  keywords?: string;
-}
-import { Link } from 'react-router-dom';
+import React from 'react';
+import { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Smart Inventory Management SaaS - Zion Tech Group',
@@ -256,12 +251,14 @@ export default function SmartInventoryManagementSaaS() {
           Join 300+ businesses using our Smart Inventory Management SaaS to reduce costs and improve efficiency.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link to="/contact" 
+          <Link 
+            href="/contact" 
             className="bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors"
           >
             Start Free Trial
           </Link>
-          <Link to="tel:+13024640950" 
+          <Link 
+            href="tel:+13024640950" 
             className="bg-white text-orange-600 px-8 py-3 rounded-lg font-semibold border border-orange-600 hover:bg-orange-50 transition-colors"
           >
             Call +1 302 464 0950

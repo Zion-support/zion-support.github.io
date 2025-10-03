@@ -1,0 +1,1305 @@
+=== Ultimate Merge Process Started at Fri Oct  3 03:02:14 PM UTC 2025 ===
+2025-10-03 15:02:14 - 🎯 Starting ultimate merge process...
+2025-10-03 15:02:15 - 🔄 Processing cursor branches...
+2025-10-03 15:02:15 - 📊 Found 1308 branches matching pattern: cursor/fix-errors-and-merge-to-main
+2025-10-03 15:02:15 - 🔄 Processing Batch 1 (branches 1 to 50)
+2025-10-03 15:02:15 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-004a
+2025-10-03 15:02:15 - ✅ Checked out cursor/fix-errors-and-merge-to-main-004a
+2025-10-03 15:02:16 - ✅ Successfully merged cursor/fix-errors-and-merge-to-main-004a
+2025-10-03 15:02:16 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-004c
+2025-10-03 15:02:19 - ✅ Checked out cursor/fix-errors-and-merge-to-main-004c
+2025-10-03 15:02:19 - ✅ Successfully merged cursor/fix-errors-and-merge-to-main-004c
+2025-10-03 15:02:19 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-007a
+2025-10-03 15:02:22 - ✅ Checked out cursor/fix-errors-and-merge-to-main-007a
+2025-10-03 15:02:22 - ✅ Successfully merged cursor/fix-errors-and-merge-to-main-007a
+2025-10-03 15:02:22 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-00fe
+2025-10-03 15:02:25 - ✅ Checked out cursor/fix-errors-and-merge-to-main-00fe
+2025-10-03 15:02:25 - ✅ Successfully merged cursor/fix-errors-and-merge-to-main-00fe
+2025-10-03 15:02:25 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-014d
+2025-10-03 15:02:28 - ✅ Checked out cursor/fix-errors-and-merge-to-main-014d
+2025-10-03 15:02:28 - ✅ Successfully merged cursor/fix-errors-and-merge-to-main-014d
+2025-10-03 15:02:28 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-0186
+2025-10-03 15:02:29 - ✅ Checked out cursor/fix-errors-and-merge-to-main-0186
+2025-10-03 15:02:29 - ✅ Successfully merged cursor/fix-errors-and-merge-to-main-0186
+2025-10-03 15:02:29 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-01f8
+2025-10-03 15:02:31 - ✅ Checked out cursor/fix-errors-and-merge-to-main-01f8
+2025-10-03 15:02:32 - ✅ Successfully merged cursor/fix-errors-and-merge-to-main-01f8
+2025-10-03 15:02:32 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-0226
+2025-10-03 15:02:32 - ✅ Checked out cursor/fix-errors-and-merge-to-main-0226
+2025-10-03 15:02:33 - ✅ Successfully merged cursor/fix-errors-and-merge-to-main-0226
+2025-10-03 15:02:33 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-024f
+2025-10-03 15:02:35 - ✅ Checked out cursor/fix-errors-and-merge-to-main-024f
+2025-10-03 15:02:36 - ✅ Successfully merged cursor/fix-errors-and-merge-to-main-024f
+2025-10-03 15:02:36 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-0258
+2025-10-03 15:02:36 - ✅ Checked out cursor/fix-errors-and-merge-to-main-0258
+2025-10-03 15:02:36 - ✅ Successfully merged cursor/fix-errors-and-merge-to-main-0258
+2025-10-03 15:02:36 - 📊 Progress: 10/1308 (✅ 10, ❌ 0)
+2025-10-03 15:02:36 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-027d
+2025-10-03 15:02:36 - ✅ Checked out cursor/fix-errors-and-merge-to-main-027d
+2025-10-03 15:02:36 - ✅ Successfully merged cursor/fix-errors-and-merge-to-main-027d
+2025-10-03 15:02:36 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-02b7
+2025-10-03 15:02:39 - ✅ Checked out cursor/fix-errors-and-merge-to-main-02b7
+2025-10-03 15:02:39 - ✅ Successfully merged cursor/fix-errors-and-merge-to-main-02b7
+2025-10-03 15:02:39 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-031e
+2025-10-03 15:02:42 - ✅ Checked out cursor/fix-errors-and-merge-to-main-031e
+2025-10-03 15:02:42 - ✅ Successfully merged cursor/fix-errors-and-merge-to-main-031e
+2025-10-03 15:02:42 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-032d
+2025-10-03 15:02:45 - ✅ Checked out cursor/fix-errors-and-merge-to-main-032d
+2025-10-03 15:02:46 - ✅ Successfully merged cursor/fix-errors-and-merge-to-main-032d
+2025-10-03 15:02:46 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-034d
+2025-10-03 15:02:48 - ✅ Checked out cursor/fix-errors-and-merge-to-main-034d
+2025-10-03 15:02:49 - ✅ Successfully merged cursor/fix-errors-and-merge-to-main-034d
+2025-10-03 15:02:49 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-0355
+2025-10-03 15:02:52 - ✅ Checked out cursor/fix-errors-and-merge-to-main-0355
+2025-10-03 15:02:52 - ✅ Successfully merged cursor/fix-errors-and-merge-to-main-0355
+2025-10-03 15:02:52 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-03ac
+2025-10-03 15:02:55 - ✅ Checked out cursor/fix-errors-and-merge-to-main-03ac
+2025-10-03 15:02:55 - ✅ Successfully merged cursor/fix-errors-and-merge-to-main-03ac
+2025-10-03 15:02:55 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-0434
+2025-10-03 15:02:58 - ✅ Checked out cursor/fix-errors-and-merge-to-main-0434
+2025-10-03 15:02:58 - ✅ Successfully merged cursor/fix-errors-and-merge-to-main-0434
+2025-10-03 15:02:58 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-0488
+2025-10-03 15:03:01 - ✅ Checked out cursor/fix-errors-and-merge-to-main-0488
+2025-10-03 15:03:01 - ✅ Successfully merged cursor/fix-errors-and-merge-to-main-0488
+2025-10-03 15:03:01 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-048f
+2025-10-03 15:03:04 - ✅ Checked out cursor/fix-errors-and-merge-to-main-048f
+2025-10-03 15:03:04 - ✅ Successfully merged cursor/fix-errors-and-merge-to-main-048f
+2025-10-03 15:03:04 - 📊 Progress: 20/1308 (✅ 20, ❌ 0)
+2025-10-03 15:03:04 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-0499
+2025-10-03 15:03:07 - ✅ Checked out cursor/fix-errors-and-merge-to-main-0499
+2025-10-03 15:03:07 - ✅ Successfully merged cursor/fix-errors-and-merge-to-main-0499
+2025-10-03 15:03:08 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-04da
+2025-10-03 15:03:10 - ✅ Checked out cursor/fix-errors-and-merge-to-main-04da
+2025-10-03 15:03:10 - ✅ Successfully merged cursor/fix-errors-and-merge-to-main-04da
+2025-10-03 15:03:10 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-04dc
+2025-10-03 15:03:13 - ✅ Checked out cursor/fix-errors-and-merge-to-main-04dc
+2025-10-03 15:03:13 - ✅ Successfully merged cursor/fix-errors-and-merge-to-main-04dc
+2025-10-03 15:03:13 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-055a
+2025-10-03 15:03:16 - ✅ Checked out cursor/fix-errors-and-merge-to-main-055a
+2025-10-03 15:03:16 - ✅ Successfully merged cursor/fix-errors-and-merge-to-main-055a
+2025-10-03 15:03:16 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-059b
+2025-10-03 15:03:17 - ✅ Checked out cursor/fix-errors-and-merge-to-main-059b
+2025-10-03 15:03:17 - ✅ Successfully merged cursor/fix-errors-and-merge-to-main-059b
+2025-10-03 15:03:17 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-05c1
+2025-10-03 15:03:19 - ✅ Checked out cursor/fix-errors-and-merge-to-main-05c1
+2025-10-03 15:03:20 - ✅ Successfully merged cursor/fix-errors-and-merge-to-main-05c1
+2025-10-03 15:03:20 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-062f
+2025-10-03 15:03:22 - ✅ Checked out cursor/fix-errors-and-merge-to-main-062f
+2025-10-03 15:03:23 - ✅ Successfully merged cursor/fix-errors-and-merge-to-main-062f
+2025-10-03 15:03:23 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-06a5
+2025-10-03 15:03:24 - ✅ Checked out cursor/fix-errors-and-merge-to-main-06a5
+2025-10-03 15:03:24 - ✅ Successfully merged cursor/fix-errors-and-merge-to-main-06a5
+2025-10-03 15:03:24 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-06cb
+2025-10-03 15:03:26 - ✅ Checked out cursor/fix-errors-and-merge-to-main-06cb
+2025-10-03 15:03:26 - ✅ Successfully merged cursor/fix-errors-and-merge-to-main-06cb
+2025-10-03 15:03:26 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-06e3
+2025-10-03 15:03:29 - ✅ Checked out cursor/fix-errors-and-merge-to-main-06e3
+2025-10-03 15:03:29 - ✅ Successfully merged cursor/fix-errors-and-merge-to-main-06e3
+2025-10-03 15:03:29 - 📊 Progress: 30/1308 (✅ 30, ❌ 0)
+2025-10-03 15:03:29 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-072d
+2025-10-03 15:03:32 - ✅ Checked out cursor/fix-errors-and-merge-to-main-072d
+2025-10-03 15:03:33 - ✅ Successfully merged cursor/fix-errors-and-merge-to-main-072d
+2025-10-03 15:03:33 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-0764
+2025-10-03 15:03:35 - ✅ Checked out cursor/fix-errors-and-merge-to-main-0764
+2025-10-03 15:03:36 - ✅ Successfully merged cursor/fix-errors-and-merge-to-main-0764
+2025-10-03 15:03:36 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-077e
+2025-10-03 15:03:38 - ✅ Checked out cursor/fix-errors-and-merge-to-main-077e
+2025-10-03 15:03:39 - ✅ Successfully merged cursor/fix-errors-and-merge-to-main-077e
+2025-10-03 15:03:39 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-081f
+2025-10-03 15:03:42 - ✅ Checked out cursor/fix-errors-and-merge-to-main-081f
+2025-10-03 15:03:42 - ✅ Successfully merged cursor/fix-errors-and-merge-to-main-081f
+2025-10-03 15:03:43 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-082a
+2025-10-03 15:03:45 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-082a (attempt 1)
+2025-10-03 15:03:45 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-082a (attempt 2)
+2025-10-03 15:03:45 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-082a (attempt 3)
+2025-10-03 15:03:45 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-082a after 3 attempts
+2025-10-03 15:03:45 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-0856
+2025-10-03 15:03:45 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0856 (attempt 1)
+2025-10-03 15:03:45 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0856 (attempt 2)
+2025-10-03 15:03:45 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0856 (attempt 3)
+2025-10-03 15:03:45 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-0856 after 3 attempts
+2025-10-03 15:03:45 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-0865
+2025-10-03 15:03:45 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0865 (attempt 1)
+2025-10-03 15:03:45 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0865 (attempt 2)
+2025-10-03 15:03:45 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0865 (attempt 3)
+2025-10-03 15:03:45 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-0865 after 3 attempts
+2025-10-03 15:03:45 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-08a9
+2025-10-03 15:03:46 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-08a9 (attempt 1)
+2025-10-03 15:03:46 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-08a9 (attempt 2)
+2025-10-03 15:03:46 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-08a9 (attempt 3)
+2025-10-03 15:03:46 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-08a9 after 3 attempts
+2025-10-03 15:03:46 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-08fa
+2025-10-03 15:03:46 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-08fa (attempt 1)
+2025-10-03 15:03:46 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-08fa (attempt 2)
+2025-10-03 15:03:46 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-08fa (attempt 3)
+2025-10-03 15:03:46 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-08fa after 3 attempts
+2025-10-03 15:03:46 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-08fe
+2025-10-03 15:03:46 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-08fe (attempt 1)
+2025-10-03 15:03:46 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-08fe (attempt 2)
+2025-10-03 15:03:46 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-08fe (attempt 3)
+2025-10-03 15:03:46 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-08fe after 3 attempts
+2025-10-03 15:03:46 - 📊 Progress: 40/1308 (✅ 34, ❌ 6)
+2025-10-03 15:03:46 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-0989
+2025-10-03 15:03:46 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0989 (attempt 1)
+2025-10-03 15:03:46 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0989 (attempt 2)
+2025-10-03 15:03:47 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0989 (attempt 3)
+2025-10-03 15:03:47 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-0989 after 3 attempts
+2025-10-03 15:03:47 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-09ab
+2025-10-03 15:03:47 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-09ab (attempt 1)
+2025-10-03 15:03:47 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-09ab (attempt 2)
+2025-10-03 15:03:47 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-09ab (attempt 3)
+2025-10-03 15:03:47 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-09ab after 3 attempts
+2025-10-03 15:03:47 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-09de
+2025-10-03 15:03:47 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-09de (attempt 1)
+2025-10-03 15:03:47 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-09de (attempt 2)
+2025-10-03 15:03:47 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-09de (attempt 3)
+2025-10-03 15:03:47 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-09de after 3 attempts
+2025-10-03 15:03:47 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-09ec
+2025-10-03 15:03:47 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-09ec (attempt 1)
+2025-10-03 15:03:47 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-09ec (attempt 2)
+2025-10-03 15:03:47 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-09ec (attempt 3)
+2025-10-03 15:03:47 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-09ec after 3 attempts
+2025-10-03 15:03:47 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-09f1
+2025-10-03 15:03:48 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-09f1 (attempt 1)
+2025-10-03 15:03:48 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-09f1 (attempt 2)
+2025-10-03 15:03:48 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-09f1 (attempt 3)
+2025-10-03 15:03:48 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-09f1 after 3 attempts
+2025-10-03 15:03:48 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-0a5a
+2025-10-03 15:03:48 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0a5a (attempt 1)
+2025-10-03 15:03:48 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0a5a (attempt 2)
+2025-10-03 15:03:48 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0a5a (attempt 3)
+2025-10-03 15:03:48 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-0a5a after 3 attempts
+2025-10-03 15:03:48 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-0ac8
+2025-10-03 15:03:48 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0ac8 (attempt 1)
+2025-10-03 15:03:48 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0ac8 (attempt 2)
+2025-10-03 15:03:48 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0ac8 (attempt 3)
+2025-10-03 15:03:48 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-0ac8 after 3 attempts
+2025-10-03 15:03:48 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-0aeb
+2025-10-03 15:03:48 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0aeb (attempt 1)
+2025-10-03 15:03:49 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0aeb (attempt 2)
+2025-10-03 15:03:49 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0aeb (attempt 3)
+2025-10-03 15:03:49 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-0aeb after 3 attempts
+2025-10-03 15:03:49 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-0b03
+2025-10-03 15:03:49 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0b03 (attempt 1)
+2025-10-03 15:03:49 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0b03 (attempt 2)
+2025-10-03 15:03:49 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0b03 (attempt 3)
+2025-10-03 15:03:49 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-0b03 after 3 attempts
+2025-10-03 15:03:49 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-0b21
+2025-10-03 15:03:49 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0b21 (attempt 1)
+2025-10-03 15:03:49 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0b21 (attempt 2)
+2025-10-03 15:03:49 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0b21 (attempt 3)
+2025-10-03 15:03:49 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-0b21 after 3 attempts
+2025-10-03 15:03:49 - 📊 Progress: 50/1308 (✅ 34, ❌ 16)
+2025-10-03 15:03:49 - 📊 Batch 1 Summary: ✅ 34 successful, ❌ 16 failed
+2025-10-03 15:03:49 - 🚀 Pushing changes to main...
+2025-10-03 15:03:49 - ⚠️  Pull failed for batch 1, continuing...
+2025-10-03 15:03:51 - 🔄 Processing Batch 2 (branches 51 to 100)
+2025-10-03 15:03:51 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-0b29
+2025-10-03 15:03:52 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0b29 (attempt 1)
+2025-10-03 15:03:52 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0b29 (attempt 2)
+2025-10-03 15:03:52 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0b29 (attempt 3)
+2025-10-03 15:03:52 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-0b29 after 3 attempts
+2025-10-03 15:03:52 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-0b59
+2025-10-03 15:03:52 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0b59 (attempt 1)
+2025-10-03 15:03:52 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0b59 (attempt 2)
+2025-10-03 15:03:52 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0b59 (attempt 3)
+2025-10-03 15:03:52 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-0b59 after 3 attempts
+2025-10-03 15:03:52 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-0b63
+2025-10-03 15:03:52 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0b63 (attempt 1)
+2025-10-03 15:03:52 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0b63 (attempt 2)
+2025-10-03 15:03:52 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0b63 (attempt 3)
+2025-10-03 15:03:52 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-0b63 after 3 attempts
+2025-10-03 15:03:52 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-0bba
+2025-10-03 15:03:52 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0bba (attempt 1)
+2025-10-03 15:03:53 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0bba (attempt 2)
+2025-10-03 15:03:53 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0bba (attempt 3)
+2025-10-03 15:03:53 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-0bba after 3 attempts
+2025-10-03 15:03:53 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-0bf2
+2025-10-03 15:03:53 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0bf2 (attempt 1)
+2025-10-03 15:03:53 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0bf2 (attempt 2)
+2025-10-03 15:03:53 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0bf2 (attempt 3)
+2025-10-03 15:03:53 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-0bf2 after 3 attempts
+2025-10-03 15:03:53 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-0c04
+2025-10-03 15:03:53 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0c04 (attempt 1)
+2025-10-03 15:03:53 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0c04 (attempt 2)
+2025-10-03 15:03:53 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0c04 (attempt 3)
+2025-10-03 15:03:53 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-0c04 after 3 attempts
+2025-10-03 15:03:53 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-0cad
+2025-10-03 15:03:53 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0cad (attempt 1)
+2025-10-03 15:03:53 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0cad (attempt 2)
+2025-10-03 15:03:53 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0cad (attempt 3)
+2025-10-03 15:03:53 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-0cad after 3 attempts
+2025-10-03 15:03:53 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-0cbe
+2025-10-03 15:03:53 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0cbe (attempt 1)
+2025-10-03 15:03:54 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0cbe (attempt 2)
+2025-10-03 15:03:54 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0cbe (attempt 3)
+2025-10-03 15:03:54 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-0cbe after 3 attempts
+2025-10-03 15:03:54 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-0ce9
+2025-10-03 15:03:54 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0ce9 (attempt 1)
+2025-10-03 15:03:54 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0ce9 (attempt 2)
+2025-10-03 15:03:54 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0ce9 (attempt 3)
+2025-10-03 15:03:54 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-0ce9 after 3 attempts
+2025-10-03 15:03:54 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-0cfd
+2025-10-03 15:03:54 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0cfd (attempt 1)
+2025-10-03 15:03:54 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0cfd (attempt 2)
+2025-10-03 15:03:54 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0cfd (attempt 3)
+2025-10-03 15:03:54 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-0cfd after 3 attempts
+2025-10-03 15:03:54 - 📊 Progress: 60/1308 (✅ 34, ❌ 26)
+2025-10-03 15:03:54 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-0d92
+2025-10-03 15:03:54 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0d92 (attempt 1)
+2025-10-03 15:03:54 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0d92 (attempt 2)
+2025-10-03 15:03:55 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0d92 (attempt 3)
+2025-10-03 15:03:55 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-0d92 after 3 attempts
+2025-10-03 15:03:55 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-0d9e
+2025-10-03 15:03:55 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0d9e (attempt 1)
+2025-10-03 15:03:55 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0d9e (attempt 2)
+2025-10-03 15:03:55 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0d9e (attempt 3)
+2025-10-03 15:03:55 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-0d9e after 3 attempts
+2025-10-03 15:03:55 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-0dbe
+2025-10-03 15:03:55 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0dbe (attempt 1)
+2025-10-03 15:03:55 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0dbe (attempt 2)
+2025-10-03 15:03:55 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0dbe (attempt 3)
+2025-10-03 15:03:55 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-0dbe after 3 attempts
+2025-10-03 15:03:55 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-0e26
+2025-10-03 15:03:55 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0e26 (attempt 1)
+2025-10-03 15:03:55 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0e26 (attempt 2)
+2025-10-03 15:03:55 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0e26 (attempt 3)
+2025-10-03 15:03:55 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-0e26 after 3 attempts
+2025-10-03 15:03:55 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-0e59
+2025-10-03 15:03:55 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0e59 (attempt 1)
+2025-10-03 15:03:55 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0e59 (attempt 2)
+2025-10-03 15:03:56 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0e59 (attempt 3)
+2025-10-03 15:03:56 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-0e59 after 3 attempts
+2025-10-03 15:03:56 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-0e7d
+2025-10-03 15:03:56 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0e7d (attempt 1)
+2025-10-03 15:03:56 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0e7d (attempt 2)
+2025-10-03 15:03:56 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0e7d (attempt 3)
+2025-10-03 15:03:56 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-0e7d after 3 attempts
+2025-10-03 15:03:56 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-0f23
+2025-10-03 15:03:56 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0f23 (attempt 1)
+2025-10-03 15:03:56 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0f23 (attempt 2)
+2025-10-03 15:03:56 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0f23 (attempt 3)
+2025-10-03 15:03:56 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-0f23 after 3 attempts
+2025-10-03 15:03:56 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-0f3d
+2025-10-03 15:03:56 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0f3d (attempt 1)
+2025-10-03 15:03:56 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0f3d (attempt 2)
+2025-10-03 15:03:57 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0f3d (attempt 3)
+2025-10-03 15:03:57 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-0f3d after 3 attempts
+2025-10-03 15:03:57 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-0f44
+2025-10-03 15:03:57 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0f44 (attempt 1)
+2025-10-03 15:03:57 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0f44 (attempt 2)
+2025-10-03 15:03:57 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0f44 (attempt 3)
+2025-10-03 15:03:57 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-0f44 after 3 attempts
+2025-10-03 15:03:57 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-0f84
+2025-10-03 15:03:57 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0f84 (attempt 1)
+2025-10-03 15:03:57 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0f84 (attempt 2)
+2025-10-03 15:03:57 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0f84 (attempt 3)
+2025-10-03 15:03:57 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-0f84 after 3 attempts
+2025-10-03 15:03:57 - 📊 Progress: 70/1308 (✅ 34, ❌ 36)
+2025-10-03 15:03:57 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-0fa0
+2025-10-03 15:03:57 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0fa0 (attempt 1)
+2025-10-03 15:03:57 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0fa0 (attempt 2)
+2025-10-03 15:03:57 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0fa0 (attempt 3)
+2025-10-03 15:03:57 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-0fa0 after 3 attempts
+2025-10-03 15:03:57 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-0faf
+2025-10-03 15:03:57 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0faf (attempt 1)
+2025-10-03 15:03:58 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0faf (attempt 2)
+2025-10-03 15:03:58 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0faf (attempt 3)
+2025-10-03 15:03:58 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-0faf after 3 attempts
+2025-10-03 15:03:58 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-0ff5
+2025-10-03 15:03:58 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0ff5 (attempt 1)
+2025-10-03 15:03:58 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0ff5 (attempt 2)
+2025-10-03 15:03:58 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-0ff5 (attempt 3)
+2025-10-03 15:03:58 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-0ff5 after 3 attempts
+2025-10-03 15:03:58 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-1021
+2025-10-03 15:03:58 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1021 (attempt 1)
+2025-10-03 15:03:58 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1021 (attempt 2)
+2025-10-03 15:03:58 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1021 (attempt 3)
+2025-10-03 15:03:58 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-1021 after 3 attempts
+2025-10-03 15:03:58 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-1044
+2025-10-03 15:03:58 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1044 (attempt 1)
+2025-10-03 15:03:58 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1044 (attempt 2)
+2025-10-03 15:03:58 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1044 (attempt 3)
+2025-10-03 15:03:58 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-1044 after 3 attempts
+2025-10-03 15:03:59 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-104a
+2025-10-03 15:03:59 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-104a (attempt 1)
+2025-10-03 15:03:59 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-104a (attempt 2)
+2025-10-03 15:03:59 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-104a (attempt 3)
+2025-10-03 15:03:59 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-104a after 3 attempts
+2025-10-03 15:03:59 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-1077
+2025-10-03 15:03:59 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1077 (attempt 1)
+2025-10-03 15:03:59 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1077 (attempt 2)
+2025-10-03 15:03:59 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1077 (attempt 3)
+2025-10-03 15:03:59 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-1077 after 3 attempts
+2025-10-03 15:03:59 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-10c2
+2025-10-03 15:03:59 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-10c2 (attempt 1)
+2025-10-03 15:03:59 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-10c2 (attempt 2)
+2025-10-03 15:03:59 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-10c2 (attempt 3)
+2025-10-03 15:03:59 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-10c2 after 3 attempts
+2025-10-03 15:03:59 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-10d1
+2025-10-03 15:03:59 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-10d1 (attempt 1)
+2025-10-03 15:04:00 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-10d1 (attempt 2)
+2025-10-03 15:04:00 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-10d1 (attempt 3)
+2025-10-03 15:04:00 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-10d1 after 3 attempts
+2025-10-03 15:04:00 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-10ea
+2025-10-03 15:04:00 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-10ea (attempt 1)
+2025-10-03 15:04:00 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-10ea (attempt 2)
+2025-10-03 15:04:00 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-10ea (attempt 3)
+2025-10-03 15:04:00 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-10ea after 3 attempts
+2025-10-03 15:04:00 - 📊 Progress: 80/1308 (✅ 34, ❌ 46)
+2025-10-03 15:04:00 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-1103
+2025-10-03 15:04:00 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1103 (attempt 1)
+2025-10-03 15:04:00 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1103 (attempt 2)
+2025-10-03 15:04:00 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1103 (attempt 3)
+2025-10-03 15:04:00 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-1103 after 3 attempts
+2025-10-03 15:04:00 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-1109
+2025-10-03 15:04:00 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1109 (attempt 1)
+2025-10-03 15:04:01 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1109 (attempt 2)
+2025-10-03 15:04:01 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1109 (attempt 3)
+2025-10-03 15:04:01 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-1109 after 3 attempts
+2025-10-03 15:04:01 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-110c
+2025-10-03 15:04:01 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-110c (attempt 1)
+2025-10-03 15:04:01 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-110c (attempt 2)
+2025-10-03 15:04:01 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-110c (attempt 3)
+2025-10-03 15:04:01 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-110c after 3 attempts
+2025-10-03 15:04:01 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-116e
+2025-10-03 15:04:01 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-116e (attempt 1)
+2025-10-03 15:04:01 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-116e (attempt 2)
+2025-10-03 15:04:01 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-116e (attempt 3)
+2025-10-03 15:04:01 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-116e after 3 attempts
+2025-10-03 15:04:01 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-1193
+2025-10-03 15:04:01 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1193 (attempt 1)
+2025-10-03 15:04:01 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1193 (attempt 2)
+2025-10-03 15:04:01 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1193 (attempt 3)
+2025-10-03 15:04:01 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-1193 after 3 attempts
+2025-10-03 15:04:01 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-11a3
+2025-10-03 15:04:01 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-11a3 (attempt 1)
+2025-10-03 15:04:01 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-11a3 (attempt 2)
+2025-10-03 15:04:01 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-11a3 (attempt 3)
+2025-10-03 15:04:01 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-11a3 after 3 attempts
+2025-10-03 15:04:01 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-11af
+2025-10-03 15:04:01 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-11af (attempt 1)
+2025-10-03 15:04:02 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-11af (attempt 2)
+2025-10-03 15:04:02 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-11af (attempt 3)
+2025-10-03 15:04:02 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-11af after 3 attempts
+2025-10-03 15:04:02 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-11bc
+2025-10-03 15:04:02 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-11bc (attempt 1)
+2025-10-03 15:04:02 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-11bc (attempt 2)
+2025-10-03 15:04:02 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-11bc (attempt 3)
+2025-10-03 15:04:02 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-11bc after 3 attempts
+2025-10-03 15:04:02 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-11d2
+2025-10-03 15:04:02 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-11d2 (attempt 1)
+2025-10-03 15:04:02 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-11d2 (attempt 2)
+2025-10-03 15:04:02 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-11d2 (attempt 3)
+2025-10-03 15:04:02 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-11d2 after 3 attempts
+2025-10-03 15:04:02 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-1227
+2025-10-03 15:04:02 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1227 (attempt 1)
+2025-10-03 15:04:02 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1227 (attempt 2)
+2025-10-03 15:04:03 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1227 (attempt 3)
+2025-10-03 15:04:03 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-1227 after 3 attempts
+2025-10-03 15:04:03 - 📊 Progress: 90/1308 (✅ 34, ❌ 56)
+2025-10-03 15:04:03 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-1267
+2025-10-03 15:04:03 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1267 (attempt 1)
+2025-10-03 15:04:03 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1267 (attempt 2)
+2025-10-03 15:04:03 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1267 (attempt 3)
+2025-10-03 15:04:03 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-1267 after 3 attempts
+2025-10-03 15:04:03 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-12a5
+2025-10-03 15:04:03 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-12a5 (attempt 1)
+2025-10-03 15:04:03 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-12a5 (attempt 2)
+2025-10-03 15:04:03 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-12a5 (attempt 3)
+2025-10-03 15:04:03 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-12a5 after 3 attempts
+2025-10-03 15:04:03 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-1308
+2025-10-03 15:04:03 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1308 (attempt 1)
+2025-10-03 15:04:03 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1308 (attempt 2)
+2025-10-03 15:04:03 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1308 (attempt 3)
+2025-10-03 15:04:03 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-1308 after 3 attempts
+2025-10-03 15:04:03 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-1360
+2025-10-03 15:04:04 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1360 (attempt 1)
+2025-10-03 15:04:04 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1360 (attempt 2)
+2025-10-03 15:04:04 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1360 (attempt 3)
+2025-10-03 15:04:04 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-1360 after 3 attempts
+2025-10-03 15:04:04 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-1361
+2025-10-03 15:04:04 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1361 (attempt 1)
+2025-10-03 15:04:04 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1361 (attempt 2)
+2025-10-03 15:04:04 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1361 (attempt 3)
+2025-10-03 15:04:04 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-1361 after 3 attempts
+2025-10-03 15:04:04 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-1364
+2025-10-03 15:04:04 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1364 (attempt 1)
+2025-10-03 15:04:04 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1364 (attempt 2)
+2025-10-03 15:04:04 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1364 (attempt 3)
+2025-10-03 15:04:04 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-1364 after 3 attempts
+2025-10-03 15:04:04 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-1379
+2025-10-03 15:04:04 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1379 (attempt 1)
+2025-10-03 15:04:05 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1379 (attempt 2)
+2025-10-03 15:04:05 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1379 (attempt 3)
+2025-10-03 15:04:05 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-1379 after 3 attempts
+2025-10-03 15:04:05 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-13ac
+2025-10-03 15:04:05 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-13ac (attempt 1)
+2025-10-03 15:04:05 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-13ac (attempt 2)
+2025-10-03 15:04:05 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-13ac (attempt 3)
+2025-10-03 15:04:05 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-13ac after 3 attempts
+2025-10-03 15:04:05 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-13cb
+2025-10-03 15:04:05 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-13cb (attempt 1)
+2025-10-03 15:04:05 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-13cb (attempt 2)
+2025-10-03 15:04:05 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-13cb (attempt 3)
+2025-10-03 15:04:05 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-13cb after 3 attempts
+2025-10-03 15:04:05 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-13f5
+2025-10-03 15:04:05 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-13f5 (attempt 1)
+2025-10-03 15:04:05 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-13f5 (attempt 2)
+2025-10-03 15:04:06 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-13f5 (attempt 3)
+2025-10-03 15:04:06 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-13f5 after 3 attempts
+2025-10-03 15:04:06 - 📊 Progress: 100/1308 (✅ 34, ❌ 66)
+2025-10-03 15:04:06 - 📊 Batch 2 Summary: ✅ 0 successful, ❌ 50 failed
+2025-10-03 15:04:06 - 🚀 Pushing changes to main...
+2025-10-03 15:04:06 - ⚠️  Pull failed for batch 2, continuing...
+2025-10-03 15:04:08 - 🔄 Processing Batch 3 (branches 101 to 150)
+2025-10-03 15:04:08 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-140a
+2025-10-03 15:04:08 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-140a (attempt 1)
+2025-10-03 15:04:08 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-140a (attempt 2)
+2025-10-03 15:04:08 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-140a (attempt 3)
+2025-10-03 15:04:08 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-140a after 3 attempts
+2025-10-03 15:04:08 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-1419
+2025-10-03 15:04:08 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1419 (attempt 1)
+2025-10-03 15:04:08 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1419 (attempt 2)
+2025-10-03 15:04:08 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1419 (attempt 3)
+2025-10-03 15:04:08 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-1419 after 3 attempts
+2025-10-03 15:04:08 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-1422
+2025-10-03 15:04:08 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1422 (attempt 1)
+2025-10-03 15:04:08 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1422 (attempt 2)
+2025-10-03 15:04:09 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1422 (attempt 3)
+2025-10-03 15:04:09 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-1422 after 3 attempts
+2025-10-03 15:04:09 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-1455
+2025-10-03 15:04:09 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1455 (attempt 1)
+2025-10-03 15:04:09 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1455 (attempt 2)
+2025-10-03 15:04:09 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1455 (attempt 3)
+2025-10-03 15:04:09 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-1455 after 3 attempts
+2025-10-03 15:04:09 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-1483
+2025-10-03 15:04:09 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1483 (attempt 1)
+2025-10-03 15:04:09 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1483 (attempt 2)
+2025-10-03 15:04:09 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1483 (attempt 3)
+2025-10-03 15:04:09 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-1483 after 3 attempts
+2025-10-03 15:04:09 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-14a9
+2025-10-03 15:04:09 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-14a9 (attempt 1)
+2025-10-03 15:04:09 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-14a9 (attempt 2)
+2025-10-03 15:04:09 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-14a9 (attempt 3)
+2025-10-03 15:04:09 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-14a9 after 3 attempts
+2025-10-03 15:04:09 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-14df
+2025-10-03 15:04:10 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-14df (attempt 1)
+2025-10-03 15:04:10 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-14df (attempt 2)
+2025-10-03 15:04:10 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-14df (attempt 3)
+2025-10-03 15:04:10 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-14df after 3 attempts
+2025-10-03 15:04:10 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-15ef
+2025-10-03 15:04:10 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-15ef (attempt 1)
+2025-10-03 15:04:10 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-15ef (attempt 2)
+2025-10-03 15:04:10 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-15ef (attempt 3)
+2025-10-03 15:04:10 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-15ef after 3 attempts
+2025-10-03 15:04:10 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-163a
+2025-10-03 15:04:10 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-163a (attempt 1)
+2025-10-03 15:04:10 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-163a (attempt 2)
+2025-10-03 15:04:10 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-163a (attempt 3)
+2025-10-03 15:04:10 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-163a after 3 attempts
+2025-10-03 15:04:10 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-16b9
+2025-10-03 15:04:11 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-16b9 (attempt 1)
+2025-10-03 15:04:11 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-16b9 (attempt 2)
+2025-10-03 15:04:11 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-16b9 (attempt 3)
+2025-10-03 15:04:11 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-16b9 after 3 attempts
+2025-10-03 15:04:11 - 📊 Progress: 110/1308 (✅ 34, ❌ 76)
+2025-10-03 15:04:11 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-16d2
+2025-10-03 15:04:11 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-16d2 (attempt 1)
+2025-10-03 15:04:11 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-16d2 (attempt 2)
+2025-10-03 15:04:11 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-16d2 (attempt 3)
+2025-10-03 15:04:11 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-16d2 after 3 attempts
+2025-10-03 15:04:11 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-17ab
+2025-10-03 15:04:11 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-17ab (attempt 1)
+2025-10-03 15:04:11 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-17ab (attempt 2)
+2025-10-03 15:04:11 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-17ab (attempt 3)
+2025-10-03 15:04:11 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-17ab after 3 attempts
+2025-10-03 15:04:11 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-17fd
+2025-10-03 15:04:11 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-17fd (attempt 1)
+2025-10-03 15:04:12 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-17fd (attempt 2)
+2025-10-03 15:04:12 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-17fd (attempt 3)
+2025-10-03 15:04:12 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-17fd after 3 attempts
+2025-10-03 15:04:12 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-183c
+2025-10-03 15:04:12 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-183c (attempt 1)
+2025-10-03 15:04:12 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-183c (attempt 2)
+2025-10-03 15:04:12 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-183c (attempt 3)
+2025-10-03 15:04:12 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-183c after 3 attempts
+2025-10-03 15:04:12 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-185b
+2025-10-03 15:04:12 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-185b (attempt 1)
+2025-10-03 15:04:12 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-185b (attempt 2)
+2025-10-03 15:04:12 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-185b (attempt 3)
+2025-10-03 15:04:12 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-185b after 3 attempts
+2025-10-03 15:04:12 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-1879
+2025-10-03 15:04:12 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1879 (attempt 1)
+2025-10-03 15:04:12 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1879 (attempt 2)
+2025-10-03 15:04:13 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1879 (attempt 3)
+2025-10-03 15:04:13 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-1879 after 3 attempts
+2025-10-03 15:04:13 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-1893
+2025-10-03 15:04:13 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1893 (attempt 1)
+2025-10-03 15:04:13 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1893 (attempt 2)
+2025-10-03 15:04:13 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1893 (attempt 3)
+2025-10-03 15:04:13 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-1893 after 3 attempts
+2025-10-03 15:04:13 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-18c5
+2025-10-03 15:04:13 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-18c5 (attempt 1)
+2025-10-03 15:04:13 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-18c5 (attempt 2)
+2025-10-03 15:04:13 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-18c5 (attempt 3)
+2025-10-03 15:04:13 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-18c5 after 3 attempts
+2025-10-03 15:04:13 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-18ef
+2025-10-03 15:04:13 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-18ef (attempt 1)
+2025-10-03 15:04:13 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-18ef (attempt 2)
+2025-10-03 15:04:13 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-18ef (attempt 3)
+2025-10-03 15:04:13 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-18ef after 3 attempts
+2025-10-03 15:04:13 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-1904
+2025-10-03 15:04:13 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1904 (attempt 1)
+2025-10-03 15:04:13 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1904 (attempt 2)
+2025-10-03 15:04:13 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1904 (attempt 3)
+2025-10-03 15:04:13 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-1904 after 3 attempts
+2025-10-03 15:04:13 - 📊 Progress: 120/1308 (✅ 34, ❌ 86)
+2025-10-03 15:04:14 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-1994
+2025-10-03 15:04:14 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1994 (attempt 1)
+2025-10-03 15:04:14 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1994 (attempt 2)
+2025-10-03 15:04:14 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1994 (attempt 3)
+2025-10-03 15:04:14 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-1994 after 3 attempts
+2025-10-03 15:04:14 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-199b
+2025-10-03 15:04:14 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-199b (attempt 1)
+2025-10-03 15:04:14 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-199b (attempt 2)
+2025-10-03 15:04:14 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-199b (attempt 3)
+2025-10-03 15:04:14 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-199b after 3 attempts
+2025-10-03 15:04:14 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-19ba
+2025-10-03 15:04:14 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-19ba (attempt 1)
+2025-10-03 15:04:14 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-19ba (attempt 2)
+2025-10-03 15:04:14 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-19ba (attempt 3)
+2025-10-03 15:04:14 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-19ba after 3 attempts
+2025-10-03 15:04:14 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-19bd
+2025-10-03 15:04:15 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-19bd (attempt 1)
+2025-10-03 15:04:15 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-19bd (attempt 2)
+2025-10-03 15:04:15 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-19bd (attempt 3)
+2025-10-03 15:04:15 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-19bd after 3 attempts
+2025-10-03 15:04:15 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-19f9
+2025-10-03 15:04:15 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-19f9 (attempt 1)
+2025-10-03 15:04:15 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-19f9 (attempt 2)
+2025-10-03 15:04:15 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-19f9 (attempt 3)
+2025-10-03 15:04:15 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-19f9 after 3 attempts
+2025-10-03 15:04:15 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-1a19
+2025-10-03 15:04:15 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1a19 (attempt 1)
+2025-10-03 15:04:15 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1a19 (attempt 2)
+2025-10-03 15:04:15 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1a19 (attempt 3)
+2025-10-03 15:04:15 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-1a19 after 3 attempts
+2025-10-03 15:04:15 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-1a54
+2025-10-03 15:04:15 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1a54 (attempt 1)
+2025-10-03 15:04:16 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1a54 (attempt 2)
+2025-10-03 15:04:16 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1a54 (attempt 3)
+2025-10-03 15:04:16 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-1a54 after 3 attempts
+2025-10-03 15:04:16 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-1aa1
+2025-10-03 15:04:16 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1aa1 (attempt 1)
+2025-10-03 15:04:16 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1aa1 (attempt 2)
+2025-10-03 15:04:16 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1aa1 (attempt 3)
+2025-10-03 15:04:16 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-1aa1 after 3 attempts
+2025-10-03 15:04:16 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-1aaf
+2025-10-03 15:04:16 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1aaf (attempt 1)
+2025-10-03 15:04:16 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1aaf (attempt 2)
+2025-10-03 15:04:16 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1aaf (attempt 3)
+2025-10-03 15:04:16 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-1aaf after 3 attempts
+2025-10-03 15:04:16 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-1ab9
+2025-10-03 15:04:16 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1ab9 (attempt 1)
+2025-10-03 15:04:16 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1ab9 (attempt 2)
+2025-10-03 15:04:17 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1ab9 (attempt 3)
+2025-10-03 15:04:17 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-1ab9 after 3 attempts
+2025-10-03 15:04:17 - 📊 Progress: 130/1308 (✅ 34, ❌ 96)
+2025-10-03 15:04:17 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-1b2c
+2025-10-03 15:04:17 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1b2c (attempt 1)
+2025-10-03 15:04:17 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1b2c (attempt 2)
+2025-10-03 15:04:17 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1b2c (attempt 3)
+2025-10-03 15:04:17 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-1b2c after 3 attempts
+2025-10-03 15:04:17 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-1b30
+2025-10-03 15:04:17 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1b30 (attempt 1)
+2025-10-03 15:04:17 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1b30 (attempt 2)
+2025-10-03 15:04:17 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1b30 (attempt 3)
+2025-10-03 15:04:17 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-1b30 after 3 attempts
+2025-10-03 15:04:17 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-1b4e
+2025-10-03 15:04:17 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1b4e (attempt 1)
+2025-10-03 15:04:17 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1b4e (attempt 2)
+2025-10-03 15:04:17 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1b4e (attempt 3)
+2025-10-03 15:04:17 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-1b4e after 3 attempts
+2025-10-03 15:04:17 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-1ba4
+2025-10-03 15:04:18 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1ba4 (attempt 1)
+2025-10-03 15:04:18 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1ba4 (attempt 2)
+2025-10-03 15:04:18 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1ba4 (attempt 3)
+2025-10-03 15:04:18 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-1ba4 after 3 attempts
+2025-10-03 15:04:18 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-1ba8
+2025-10-03 15:04:18 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1ba8 (attempt 1)
+2025-10-03 15:04:18 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1ba8 (attempt 2)
+2025-10-03 15:04:18 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1ba8 (attempt 3)
+2025-10-03 15:04:18 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-1ba8 after 3 attempts
+2025-10-03 15:04:18 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-1bb9
+2025-10-03 15:04:18 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1bb9 (attempt 1)
+2025-10-03 15:04:18 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1bb9 (attempt 2)
+2025-10-03 15:04:18 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1bb9 (attempt 3)
+2025-10-03 15:04:18 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-1bb9 after 3 attempts
+2025-10-03 15:04:18 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-1bc2
+2025-10-03 15:04:18 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1bc2 (attempt 1)
+2025-10-03 15:04:18 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1bc2 (attempt 2)
+2025-10-03 15:04:19 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1bc2 (attempt 3)
+2025-10-03 15:04:19 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-1bc2 after 3 attempts
+2025-10-03 15:04:19 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-1bc8
+2025-10-03 15:04:19 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1bc8 (attempt 1)
+2025-10-03 15:04:19 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1bc8 (attempt 2)
+2025-10-03 15:04:19 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1bc8 (attempt 3)
+2025-10-03 15:04:19 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-1bc8 after 3 attempts
+2025-10-03 15:04:19 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-1bd9
+2025-10-03 15:04:19 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1bd9 (attempt 1)
+2025-10-03 15:04:19 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1bd9 (attempt 2)
+2025-10-03 15:04:19 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1bd9 (attempt 3)
+2025-10-03 15:04:19 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-1bd9 after 3 attempts
+2025-10-03 15:04:19 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-1c17
+2025-10-03 15:04:19 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1c17 (attempt 1)
+2025-10-03 15:04:19 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1c17 (attempt 2)
+2025-10-03 15:04:19 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1c17 (attempt 3)
+2025-10-03 15:04:19 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-1c17 after 3 attempts
+2025-10-03 15:04:19 - 📊 Progress: 140/1308 (✅ 34, ❌ 106)
+2025-10-03 15:04:19 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-1c5e
+2025-10-03 15:04:20 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1c5e (attempt 1)
+2025-10-03 15:04:20 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1c5e (attempt 2)
+2025-10-03 15:04:20 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1c5e (attempt 3)
+2025-10-03 15:04:20 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-1c5e after 3 attempts
+2025-10-03 15:04:20 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-1ca4
+2025-10-03 15:04:20 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1ca4 (attempt 1)
+2025-10-03 15:04:20 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1ca4 (attempt 2)
+2025-10-03 15:04:20 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1ca4 (attempt 3)
+2025-10-03 15:04:20 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-1ca4 after 3 attempts
+2025-10-03 15:04:20 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-1cc1
+2025-10-03 15:04:20 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1cc1 (attempt 1)
+2025-10-03 15:04:20 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1cc1 (attempt 2)
+2025-10-03 15:04:20 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1cc1 (attempt 3)
+2025-10-03 15:04:20 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-1cc1 after 3 attempts
+2025-10-03 15:04:20 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-1cd1
+2025-10-03 15:04:20 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1cd1 (attempt 1)
+2025-10-03 15:04:21 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1cd1 (attempt 2)
+2025-10-03 15:04:21 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1cd1 (attempt 3)
+2025-10-03 15:04:21 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-1cd1 after 3 attempts
+2025-10-03 15:04:21 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-1cdc
+2025-10-03 15:04:21 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1cdc (attempt 1)
+2025-10-03 15:04:21 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1cdc (attempt 2)
+2025-10-03 15:04:21 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1cdc (attempt 3)
+2025-10-03 15:04:21 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-1cdc after 3 attempts
+2025-10-03 15:04:21 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-1ce3
+2025-10-03 15:04:21 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1ce3 (attempt 1)
+2025-10-03 15:04:21 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1ce3 (attempt 2)
+2025-10-03 15:04:21 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1ce3 (attempt 3)
+2025-10-03 15:04:21 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-1ce3 after 3 attempts
+2025-10-03 15:04:21 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-1ced
+2025-10-03 15:04:21 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1ced (attempt 1)
+2025-10-03 15:04:21 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1ced (attempt 2)
+2025-10-03 15:04:22 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1ced (attempt 3)
+2025-10-03 15:04:22 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-1ced after 3 attempts
+2025-10-03 15:04:22 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-1d07
+2025-10-03 15:04:22 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1d07 (attempt 1)
+2025-10-03 15:04:22 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1d07 (attempt 2)
+2025-10-03 15:04:22 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1d07 (attempt 3)
+2025-10-03 15:04:22 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-1d07 after 3 attempts
+2025-10-03 15:04:22 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-1d16
+2025-10-03 15:04:22 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1d16 (attempt 1)
+2025-10-03 15:04:22 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1d16 (attempt 2)
+2025-10-03 15:04:22 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1d16 (attempt 3)
+2025-10-03 15:04:22 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-1d16 after 3 attempts
+2025-10-03 15:04:22 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-1d54
+2025-10-03 15:04:22 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1d54 (attempt 1)
+2025-10-03 15:04:22 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1d54 (attempt 2)
+2025-10-03 15:04:22 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1d54 (attempt 3)
+2025-10-03 15:04:22 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-1d54 after 3 attempts
+2025-10-03 15:04:22 - 📊 Progress: 150/1308 (✅ 34, ❌ 116)
+2025-10-03 15:04:22 - 📊 Batch 3 Summary: ✅ 0 successful, ❌ 50 failed
+2025-10-03 15:04:22 - 🚀 Pushing changes to main...
+2025-10-03 15:04:23 - ⚠️  Pull failed for batch 3, continuing...
+2025-10-03 15:04:25 - 🔄 Processing Batch 4 (branches 151 to 200)
+2025-10-03 15:04:25 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-1d5e
+2025-10-03 15:04:25 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1d5e (attempt 1)
+2025-10-03 15:04:25 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1d5e (attempt 2)
+2025-10-03 15:04:25 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1d5e (attempt 3)
+2025-10-03 15:04:25 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-1d5e after 3 attempts
+2025-10-03 15:04:25 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-1d95
+2025-10-03 15:04:25 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1d95 (attempt 1)
+2025-10-03 15:04:25 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1d95 (attempt 2)
+2025-10-03 15:04:25 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1d95 (attempt 3)
+2025-10-03 15:04:25 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-1d95 after 3 attempts
+2025-10-03 15:04:25 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-1d97
+2025-10-03 15:04:25 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1d97 (attempt 1)
+2025-10-03 15:04:25 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1d97 (attempt 2)
+2025-10-03 15:04:25 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1d97 (attempt 3)
+2025-10-03 15:04:25 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-1d97 after 3 attempts
+2025-10-03 15:04:25 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-1df1
+2025-10-03 15:04:25 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1df1 (attempt 1)
+2025-10-03 15:04:25 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1df1 (attempt 2)
+2025-10-03 15:04:26 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1df1 (attempt 3)
+2025-10-03 15:04:26 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-1df1 after 3 attempts
+2025-10-03 15:04:26 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-1df9
+2025-10-03 15:04:26 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1df9 (attempt 1)
+2025-10-03 15:04:26 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1df9 (attempt 2)
+2025-10-03 15:04:26 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1df9 (attempt 3)
+2025-10-03 15:04:26 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-1df9 after 3 attempts
+2025-10-03 15:04:26 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-1e12
+2025-10-03 15:04:26 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1e12 (attempt 1)
+2025-10-03 15:04:26 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1e12 (attempt 2)
+2025-10-03 15:04:26 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1e12 (attempt 3)
+2025-10-03 15:04:26 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-1e12 after 3 attempts
+2025-10-03 15:04:26 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-1e6d
+2025-10-03 15:04:26 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1e6d (attempt 1)
+2025-10-03 15:04:26 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1e6d (attempt 2)
+2025-10-03 15:04:27 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1e6d (attempt 3)
+2025-10-03 15:04:27 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-1e6d after 3 attempts
+2025-10-03 15:04:27 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-1f76
+2025-10-03 15:04:27 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1f76 (attempt 1)
+2025-10-03 15:04:27 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1f76 (attempt 2)
+2025-10-03 15:04:27 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1f76 (attempt 3)
+2025-10-03 15:04:27 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-1f76 after 3 attempts
+2025-10-03 15:04:27 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-1fc2
+2025-10-03 15:04:27 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1fc2 (attempt 1)
+2025-10-03 15:04:27 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1fc2 (attempt 2)
+2025-10-03 15:04:27 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1fc2 (attempt 3)
+2025-10-03 15:04:27 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-1fc2 after 3 attempts
+2025-10-03 15:04:27 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-1fcd
+2025-10-03 15:04:27 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1fcd (attempt 1)
+2025-10-03 15:04:27 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1fcd (attempt 2)
+2025-10-03 15:04:27 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1fcd (attempt 3)
+2025-10-03 15:04:27 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-1fcd after 3 attempts
+2025-10-03 15:04:27 - 📊 Progress: 160/1308 (✅ 34, ❌ 126)
+2025-10-03 15:04:27 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-1fd1
+2025-10-03 15:04:28 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1fd1 (attempt 1)
+2025-10-03 15:04:28 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1fd1 (attempt 2)
+2025-10-03 15:04:28 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1fd1 (attempt 3)
+2025-10-03 15:04:28 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-1fd1 after 3 attempts
+2025-10-03 15:04:28 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-1ff8
+2025-10-03 15:04:28 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1ff8 (attempt 1)
+2025-10-03 15:04:28 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1ff8 (attempt 2)
+2025-10-03 15:04:28 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-1ff8 (attempt 3)
+2025-10-03 15:04:28 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-1ff8 after 3 attempts
+2025-10-03 15:04:28 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-2020
+2025-10-03 15:04:28 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2020 (attempt 1)
+2025-10-03 15:04:28 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2020 (attempt 2)
+2025-10-03 15:04:28 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2020 (attempt 3)
+2025-10-03 15:04:28 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-2020 after 3 attempts
+2025-10-03 15:04:28 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-203e
+2025-10-03 15:04:28 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-203e (attempt 1)
+2025-10-03 15:04:29 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-203e (attempt 2)
+2025-10-03 15:04:29 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-203e (attempt 3)
+2025-10-03 15:04:29 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-203e after 3 attempts
+2025-10-03 15:04:29 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-2041
+2025-10-03 15:04:29 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2041 (attempt 1)
+2025-10-03 15:04:29 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2041 (attempt 2)
+2025-10-03 15:04:29 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2041 (attempt 3)
+2025-10-03 15:04:29 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-2041 after 3 attempts
+2025-10-03 15:04:29 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-2075
+2025-10-03 15:04:29 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2075 (attempt 1)
+2025-10-03 15:04:29 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2075 (attempt 2)
+2025-10-03 15:04:29 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2075 (attempt 3)
+2025-10-03 15:04:29 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-2075 after 3 attempts
+2025-10-03 15:04:29 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-2087
+2025-10-03 15:04:29 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2087 (attempt 1)
+2025-10-03 15:04:29 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2087 (attempt 2)
+2025-10-03 15:04:30 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2087 (attempt 3)
+2025-10-03 15:04:30 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-2087 after 3 attempts
+2025-10-03 15:04:30 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-20bc
+2025-10-03 15:04:30 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-20bc (attempt 1)
+2025-10-03 15:04:30 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-20bc (attempt 2)
+2025-10-03 15:04:30 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-20bc (attempt 3)
+2025-10-03 15:04:30 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-20bc after 3 attempts
+2025-10-03 15:04:30 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-20c6
+2025-10-03 15:04:30 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-20c6 (attempt 1)
+2025-10-03 15:04:30 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-20c6 (attempt 2)
+2025-10-03 15:04:30 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-20c6 (attempt 3)
+2025-10-03 15:04:30 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-20c6 after 3 attempts
+2025-10-03 15:04:30 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-20cb
+2025-10-03 15:04:30 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-20cb (attempt 1)
+2025-10-03 15:04:30 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-20cb (attempt 2)
+2025-10-03 15:04:30 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-20cb (attempt 3)
+2025-10-03 15:04:30 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-20cb after 3 attempts
+2025-10-03 15:04:30 - 📊 Progress: 170/1308 (✅ 34, ❌ 136)
+2025-10-03 15:04:30 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-211e
+2025-10-03 15:04:30 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-211e (attempt 1)
+2025-10-03 15:04:30 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-211e (attempt 2)
+2025-10-03 15:04:31 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-211e (attempt 3)
+2025-10-03 15:04:31 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-211e after 3 attempts
+2025-10-03 15:04:31 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-214a
+2025-10-03 15:04:31 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-214a (attempt 1)
+2025-10-03 15:04:31 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-214a (attempt 2)
+2025-10-03 15:04:31 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-214a (attempt 3)
+2025-10-03 15:04:31 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-214a after 3 attempts
+2025-10-03 15:04:31 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-2227
+2025-10-03 15:04:31 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2227 (attempt 1)
+2025-10-03 15:04:31 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2227 (attempt 2)
+2025-10-03 15:04:31 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2227 (attempt 3)
+2025-10-03 15:04:31 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-2227 after 3 attempts
+2025-10-03 15:04:31 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-2230
+2025-10-03 15:04:31 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2230 (attempt 1)
+2025-10-03 15:04:31 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2230 (attempt 2)
+2025-10-03 15:04:31 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2230 (attempt 3)
+2025-10-03 15:04:31 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-2230 after 3 attempts
+2025-10-03 15:04:31 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-2234
+2025-10-03 15:04:32 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2234 (attempt 1)
+2025-10-03 15:04:32 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2234 (attempt 2)
+2025-10-03 15:04:32 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2234 (attempt 3)
+2025-10-03 15:04:32 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-2234 after 3 attempts
+2025-10-03 15:04:32 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-2303
+2025-10-03 15:04:32 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2303 (attempt 1)
+2025-10-03 15:04:32 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2303 (attempt 2)
+2025-10-03 15:04:32 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2303 (attempt 3)
+2025-10-03 15:04:32 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-2303 after 3 attempts
+2025-10-03 15:04:32 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-2323
+2025-10-03 15:04:32 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2323 (attempt 1)
+2025-10-03 15:04:32 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2323 (attempt 2)
+2025-10-03 15:04:32 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2323 (attempt 3)
+2025-10-03 15:04:32 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-2323 after 3 attempts
+2025-10-03 15:04:32 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-23a6
+2025-10-03 15:04:32 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-23a6 (attempt 1)
+2025-10-03 15:04:33 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-23a6 (attempt 2)
+2025-10-03 15:04:33 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-23a6 (attempt 3)
+2025-10-03 15:04:33 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-23a6 after 3 attempts
+2025-10-03 15:04:33 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-23b7
+2025-10-03 15:04:33 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-23b7 (attempt 1)
+2025-10-03 15:04:33 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-23b7 (attempt 2)
+2025-10-03 15:04:33 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-23b7 (attempt 3)
+2025-10-03 15:04:33 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-23b7 after 3 attempts
+2025-10-03 15:04:33 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-2403
+2025-10-03 15:04:33 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2403 (attempt 1)
+2025-10-03 15:04:33 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2403 (attempt 2)
+2025-10-03 15:04:33 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2403 (attempt 3)
+2025-10-03 15:04:33 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-2403 after 3 attempts
+2025-10-03 15:04:33 - 📊 Progress: 180/1308 (✅ 34, ❌ 146)
+2025-10-03 15:04:33 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-241c
+2025-10-03 15:04:33 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-241c (attempt 1)
+2025-10-03 15:04:33 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-241c (attempt 2)
+2025-10-03 15:04:34 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-241c (attempt 3)
+2025-10-03 15:04:34 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-241c after 3 attempts
+2025-10-03 15:04:34 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-2433
+2025-10-03 15:04:34 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2433 (attempt 1)
+2025-10-03 15:04:34 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2433 (attempt 2)
+2025-10-03 15:04:34 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2433 (attempt 3)
+2025-10-03 15:04:34 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-2433 after 3 attempts
+2025-10-03 15:04:34 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-2439
+2025-10-03 15:04:34 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2439 (attempt 1)
+2025-10-03 15:04:34 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2439 (attempt 2)
+2025-10-03 15:04:34 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2439 (attempt 3)
+2025-10-03 15:04:34 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-2439 after 3 attempts
+2025-10-03 15:04:34 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-2469
+2025-10-03 15:04:34 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2469 (attempt 1)
+2025-10-03 15:04:34 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2469 (attempt 2)
+2025-10-03 15:04:34 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2469 (attempt 3)
+2025-10-03 15:04:34 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-2469 after 3 attempts
+2025-10-03 15:04:34 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-24b0
+2025-10-03 15:04:34 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-24b0 (attempt 1)
+2025-10-03 15:04:34 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-24b0 (attempt 2)
+2025-10-03 15:04:35 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-24b0 (attempt 3)
+2025-10-03 15:04:35 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-24b0 after 3 attempts
+2025-10-03 15:04:35 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-24ff
+2025-10-03 15:04:35 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-24ff (attempt 1)
+2025-10-03 15:04:35 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-24ff (attempt 2)
+2025-10-03 15:04:35 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-24ff (attempt 3)
+2025-10-03 15:04:35 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-24ff after 3 attempts
+2025-10-03 15:04:35 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-2503
+2025-10-03 15:04:35 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2503 (attempt 1)
+2025-10-03 15:04:35 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2503 (attempt 2)
+2025-10-03 15:04:35 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2503 (attempt 3)
+2025-10-03 15:04:35 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-2503 after 3 attempts
+2025-10-03 15:04:35 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-256a
+2025-10-03 15:04:35 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-256a (attempt 1)
+2025-10-03 15:04:35 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-256a (attempt 2)
+2025-10-03 15:04:35 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-256a (attempt 3)
+2025-10-03 15:04:35 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-256a after 3 attempts
+2025-10-03 15:04:35 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-2578
+2025-10-03 15:04:35 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2578 (attempt 1)
+2025-10-03 15:04:35 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2578 (attempt 2)
+2025-10-03 15:04:36 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2578 (attempt 3)
+2025-10-03 15:04:36 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-2578 after 3 attempts
+2025-10-03 15:04:36 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-2584
+2025-10-03 15:04:36 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2584 (attempt 1)
+2025-10-03 15:04:36 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2584 (attempt 2)
+2025-10-03 15:04:36 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2584 (attempt 3)
+2025-10-03 15:04:36 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-2584 after 3 attempts
+2025-10-03 15:04:36 - 📊 Progress: 190/1308 (✅ 34, ❌ 156)
+2025-10-03 15:04:36 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-25b9
+2025-10-03 15:04:36 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-25b9 (attempt 1)
+2025-10-03 15:04:36 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-25b9 (attempt 2)
+2025-10-03 15:04:36 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-25b9 (attempt 3)
+2025-10-03 15:04:36 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-25b9 after 3 attempts
+2025-10-03 15:04:36 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-25bc
+2025-10-03 15:04:36 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-25bc (attempt 1)
+2025-10-03 15:04:36 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-25bc (attempt 2)
+2025-10-03 15:04:36 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-25bc (attempt 3)
+2025-10-03 15:04:36 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-25bc after 3 attempts
+2025-10-03 15:04:36 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-25f7
+2025-10-03 15:04:36 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-25f7 (attempt 1)
+2025-10-03 15:04:36 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-25f7 (attempt 2)
+2025-10-03 15:04:37 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-25f7 (attempt 3)
+2025-10-03 15:04:37 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-25f7 after 3 attempts
+2025-10-03 15:04:37 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-2623
+2025-10-03 15:04:37 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2623 (attempt 1)
+2025-10-03 15:04:37 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2623 (attempt 2)
+2025-10-03 15:04:37 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2623 (attempt 3)
+2025-10-03 15:04:37 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-2623 after 3 attempts
+2025-10-03 15:04:37 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-263e
+2025-10-03 15:04:37 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-263e (attempt 1)
+2025-10-03 15:04:37 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-263e (attempt 2)
+2025-10-03 15:04:37 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-263e (attempt 3)
+2025-10-03 15:04:37 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-263e after 3 attempts
+2025-10-03 15:04:37 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-2667
+2025-10-03 15:04:37 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2667 (attempt 1)
+2025-10-03 15:04:37 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2667 (attempt 2)
+2025-10-03 15:04:38 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2667 (attempt 3)
+2025-10-03 15:04:38 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-2667 after 3 attempts
+2025-10-03 15:04:38 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-2671
+2025-10-03 15:04:38 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2671 (attempt 1)
+2025-10-03 15:04:38 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2671 (attempt 2)
+2025-10-03 15:04:38 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2671 (attempt 3)
+2025-10-03 15:04:38 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-2671 after 3 attempts
+2025-10-03 15:04:38 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-26ae
+2025-10-03 15:04:38 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-26ae (attempt 1)
+2025-10-03 15:04:38 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-26ae (attempt 2)
+2025-10-03 15:04:38 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-26ae (attempt 3)
+2025-10-03 15:04:38 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-26ae after 3 attempts
+2025-10-03 15:04:38 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-26db
+2025-10-03 15:04:38 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-26db (attempt 1)
+2025-10-03 15:04:38 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-26db (attempt 2)
+2025-10-03 15:04:38 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-26db (attempt 3)
+2025-10-03 15:04:38 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-26db after 3 attempts
+2025-10-03 15:04:38 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-2708
+2025-10-03 15:04:38 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2708 (attempt 1)
+2025-10-03 15:04:38 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2708 (attempt 2)
+2025-10-03 15:04:39 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2708 (attempt 3)
+2025-10-03 15:04:39 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-2708 after 3 attempts
+2025-10-03 15:04:39 - 📊 Progress: 200/1308 (✅ 34, ❌ 166)
+2025-10-03 15:04:39 - 📊 Batch 4 Summary: ✅ 0 successful, ❌ 50 failed
+2025-10-03 15:04:39 - 🚀 Pushing changes to main...
+2025-10-03 15:04:39 - ⚠️  Pull failed for batch 4, continuing...
+2025-10-03 15:04:41 - 🔄 Processing Batch 5 (branches 201 to 250)
+2025-10-03 15:04:41 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-2713
+2025-10-03 15:04:41 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2713 (attempt 1)
+2025-10-03 15:04:41 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2713 (attempt 2)
+2025-10-03 15:04:41 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2713 (attempt 3)
+2025-10-03 15:04:41 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-2713 after 3 attempts
+2025-10-03 15:04:41 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-271f
+2025-10-03 15:04:41 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-271f (attempt 1)
+2025-10-03 15:04:41 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-271f (attempt 2)
+2025-10-03 15:04:41 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-271f (attempt 3)
+2025-10-03 15:04:41 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-271f after 3 attempts
+2025-10-03 15:04:41 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-2730
+2025-10-03 15:04:41 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2730 (attempt 1)
+2025-10-03 15:04:41 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2730 (attempt 2)
+2025-10-03 15:04:42 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2730 (attempt 3)
+2025-10-03 15:04:42 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-2730 after 3 attempts
+2025-10-03 15:04:42 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-282b
+2025-10-03 15:04:42 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-282b (attempt 1)
+2025-10-03 15:04:42 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-282b (attempt 2)
+2025-10-03 15:04:42 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-282b (attempt 3)
+2025-10-03 15:04:42 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-282b after 3 attempts
+2025-10-03 15:04:42 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-283a
+2025-10-03 15:04:42 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-283a (attempt 1)
+2025-10-03 15:04:42 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-283a (attempt 2)
+2025-10-03 15:04:42 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-283a (attempt 3)
+2025-10-03 15:04:42 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-283a after 3 attempts
+2025-10-03 15:04:42 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-2912
+2025-10-03 15:04:42 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2912 (attempt 1)
+2025-10-03 15:04:42 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2912 (attempt 2)
+2025-10-03 15:04:42 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2912 (attempt 3)
+2025-10-03 15:04:42 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-2912 after 3 attempts
+2025-10-03 15:04:42 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-2932
+2025-10-03 15:04:42 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2932 (attempt 1)
+2025-10-03 15:04:42 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2932 (attempt 2)
+2025-10-03 15:04:43 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2932 (attempt 3)
+2025-10-03 15:04:43 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-2932 after 3 attempts
+2025-10-03 15:04:43 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-293f
+2025-10-03 15:04:43 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-293f (attempt 1)
+2025-10-03 15:04:43 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-293f (attempt 2)
+2025-10-03 15:04:43 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-293f (attempt 3)
+2025-10-03 15:04:43 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-293f after 3 attempts
+2025-10-03 15:04:43 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-294b
+2025-10-03 15:04:43 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-294b (attempt 1)
+2025-10-03 15:04:43 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-294b (attempt 2)
+2025-10-03 15:04:43 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-294b (attempt 3)
+2025-10-03 15:04:43 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-294b after 3 attempts
+2025-10-03 15:04:43 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-2969
+2025-10-03 15:04:43 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2969 (attempt 1)
+2025-10-03 15:04:43 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2969 (attempt 2)
+2025-10-03 15:04:44 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2969 (attempt 3)
+2025-10-03 15:04:44 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-2969 after 3 attempts
+2025-10-03 15:04:44 - 📊 Progress: 210/1308 (✅ 34, ❌ 176)
+2025-10-03 15:04:44 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-2997
+2025-10-03 15:04:44 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2997 (attempt 1)
+2025-10-03 15:04:44 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2997 (attempt 2)
+2025-10-03 15:04:44 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2997 (attempt 3)
+2025-10-03 15:04:44 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-2997 after 3 attempts
+2025-10-03 15:04:44 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-299b
+2025-10-03 15:04:44 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-299b (attempt 1)
+2025-10-03 15:04:44 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-299b (attempt 2)
+2025-10-03 15:04:44 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-299b (attempt 3)
+2025-10-03 15:04:44 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-299b after 3 attempts
+2025-10-03 15:04:44 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-29b6
+2025-10-03 15:04:44 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-29b6 (attempt 1)
+2025-10-03 15:04:44 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-29b6 (attempt 2)
+2025-10-03 15:04:44 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-29b6 (attempt 3)
+2025-10-03 15:04:44 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-29b6 after 3 attempts
+2025-10-03 15:04:44 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-29c6
+2025-10-03 15:04:44 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-29c6 (attempt 1)
+2025-10-03 15:04:44 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-29c6 (attempt 2)
+2025-10-03 15:04:45 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-29c6 (attempt 3)
+2025-10-03 15:04:45 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-29c6 after 3 attempts
+2025-10-03 15:04:45 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-29e9
+2025-10-03 15:04:45 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-29e9 (attempt 1)
+2025-10-03 15:04:45 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-29e9 (attempt 2)
+2025-10-03 15:04:45 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-29e9 (attempt 3)
+2025-10-03 15:04:45 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-29e9 after 3 attempts
+2025-10-03 15:04:45 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-2a0c
+2025-10-03 15:04:45 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2a0c (attempt 1)
+2025-10-03 15:04:45 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2a0c (attempt 2)
+2025-10-03 15:04:45 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2a0c (attempt 3)
+2025-10-03 15:04:45 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-2a0c after 3 attempts
+2025-10-03 15:04:45 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-2a25
+2025-10-03 15:04:45 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2a25 (attempt 1)
+2025-10-03 15:04:45 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2a25 (attempt 2)
+2025-10-03 15:04:45 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2a25 (attempt 3)
+2025-10-03 15:04:45 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-2a25 after 3 attempts
+2025-10-03 15:04:45 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-2a2c
+2025-10-03 15:04:46 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2a2c (attempt 1)
+2025-10-03 15:04:46 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2a2c (attempt 2)
+2025-10-03 15:04:46 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2a2c (attempt 3)
+2025-10-03 15:04:46 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-2a2c after 3 attempts
+2025-10-03 15:04:46 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-2a30
+2025-10-03 15:04:46 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2a30 (attempt 1)
+2025-10-03 15:04:46 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2a30 (attempt 2)
+2025-10-03 15:04:46 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2a30 (attempt 3)
+2025-10-03 15:04:46 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-2a30 after 3 attempts
+2025-10-03 15:04:46 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-2a43
+2025-10-03 15:04:46 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2a43 (attempt 1)
+2025-10-03 15:04:46 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2a43 (attempt 2)
+2025-10-03 15:04:46 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2a43 (attempt 3)
+2025-10-03 15:04:46 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-2a43 after 3 attempts
+2025-10-03 15:04:46 - 📊 Progress: 220/1308 (✅ 34, ❌ 186)
+2025-10-03 15:04:46 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-2a67
+2025-10-03 15:04:46 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2a67 (attempt 1)
+2025-10-03 15:04:47 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2a67 (attempt 2)
+2025-10-03 15:04:47 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2a67 (attempt 3)
+2025-10-03 15:04:47 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-2a67 after 3 attempts
+2025-10-03 15:04:47 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-2a71
+2025-10-03 15:04:47 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2a71 (attempt 1)
+2025-10-03 15:04:47 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2a71 (attempt 2)
+2025-10-03 15:04:47 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2a71 (attempt 3)
+2025-10-03 15:04:47 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-2a71 after 3 attempts
+2025-10-03 15:04:47 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-2a79
+2025-10-03 15:04:47 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2a79 (attempt 1)
+2025-10-03 15:04:47 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2a79 (attempt 2)
+2025-10-03 15:04:47 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2a79 (attempt 3)
+2025-10-03 15:04:47 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-2a79 after 3 attempts
+2025-10-03 15:04:47 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-2a9a
+2025-10-03 15:04:47 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2a9a (attempt 1)
+2025-10-03 15:04:47 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2a9a (attempt 2)
+2025-10-03 15:04:47 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2a9a (attempt 3)
+2025-10-03 15:04:47 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-2a9a after 3 attempts
+2025-10-03 15:04:47 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-2ab3
+2025-10-03 15:04:47 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2ab3 (attempt 1)
+2025-10-03 15:04:48 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2ab3 (attempt 2)
+2025-10-03 15:04:48 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2ab3 (attempt 3)
+2025-10-03 15:04:48 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-2ab3 after 3 attempts
+2025-10-03 15:04:48 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-2b20
+2025-10-03 15:04:48 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2b20 (attempt 1)
+2025-10-03 15:04:48 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2b20 (attempt 2)
+2025-10-03 15:04:48 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2b20 (attempt 3)
+2025-10-03 15:04:48 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-2b20 after 3 attempts
+2025-10-03 15:04:48 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-2b2a
+2025-10-03 15:04:48 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2b2a (attempt 1)
+2025-10-03 15:04:48 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2b2a (attempt 2)
+2025-10-03 15:04:48 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2b2a (attempt 3)
+2025-10-03 15:04:48 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-2b2a after 3 attempts
+2025-10-03 15:04:48 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-2b59
+2025-10-03 15:04:48 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2b59 (attempt 1)
+2025-10-03 15:04:48 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2b59 (attempt 2)
+2025-10-03 15:04:49 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2b59 (attempt 3)
+2025-10-03 15:04:49 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-2b59 after 3 attempts
+2025-10-03 15:04:49 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-2bad
+2025-10-03 15:04:49 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2bad (attempt 1)
+2025-10-03 15:04:49 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2bad (attempt 2)
+2025-10-03 15:04:49 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2bad (attempt 3)
+2025-10-03 15:04:49 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-2bad after 3 attempts
+2025-10-03 15:04:49 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-2bae
+2025-10-03 15:04:49 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2bae (attempt 1)
+2025-10-03 15:04:49 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2bae (attempt 2)
+2025-10-03 15:04:49 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2bae (attempt 3)
+2025-10-03 15:04:49 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-2bae after 3 attempts
+2025-10-03 15:04:49 - 📊 Progress: 230/1308 (✅ 34, ❌ 196)
+2025-10-03 15:04:49 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-2bb9
+2025-10-03 15:04:49 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2bb9 (attempt 1)
+2025-10-03 15:04:49 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2bb9 (attempt 2)
+2025-10-03 15:04:49 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2bb9 (attempt 3)
+2025-10-03 15:04:49 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-2bb9 after 3 attempts
+2025-10-03 15:04:49 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-2bc1
+2025-10-03 15:04:49 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2bc1 (attempt 1)
+2025-10-03 15:04:49 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2bc1 (attempt 2)
+2025-10-03 15:04:50 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2bc1 (attempt 3)
+2025-10-03 15:04:50 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-2bc1 after 3 attempts
+2025-10-03 15:04:50 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-2c08
+2025-10-03 15:04:50 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2c08 (attempt 1)
+2025-10-03 15:04:50 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2c08 (attempt 2)
+2025-10-03 15:04:50 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2c08 (attempt 3)
+2025-10-03 15:04:50 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-2c08 after 3 attempts
+2025-10-03 15:04:50 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-2cae
+2025-10-03 15:04:50 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2cae (attempt 1)
+2025-10-03 15:04:50 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2cae (attempt 2)
+2025-10-03 15:04:50 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2cae (attempt 3)
+2025-10-03 15:04:50 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-2cae after 3 attempts
+2025-10-03 15:04:50 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-2cc0
+2025-10-03 15:04:50 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2cc0 (attempt 1)
+2025-10-03 15:04:50 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2cc0 (attempt 2)
+2025-10-03 15:04:50 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2cc0 (attempt 3)
+2025-10-03 15:04:50 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-2cc0 after 3 attempts
+2025-10-03 15:04:50 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-2cd1
+2025-10-03 15:04:50 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2cd1 (attempt 1)
+2025-10-03 15:04:50 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2cd1 (attempt 2)
+2025-10-03 15:04:51 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2cd1 (attempt 3)
+2025-10-03 15:04:51 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-2cd1 after 3 attempts
+2025-10-03 15:04:51 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-2cda
+2025-10-03 15:04:51 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2cda (attempt 1)
+2025-10-03 15:04:51 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2cda (attempt 2)
+2025-10-03 15:04:51 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2cda (attempt 3)
+2025-10-03 15:04:51 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-2cda after 3 attempts
+2025-10-03 15:04:51 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-2de5
+2025-10-03 15:04:51 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2de5 (attempt 1)
+2025-10-03 15:04:51 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2de5 (attempt 2)
+2025-10-03 15:04:51 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2de5 (attempt 3)
+2025-10-03 15:04:51 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-2de5 after 3 attempts
+2025-10-03 15:04:51 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-2de6
+2025-10-03 15:04:51 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2de6 (attempt 1)
+2025-10-03 15:04:51 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2de6 (attempt 2)
+2025-10-03 15:04:51 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2de6 (attempt 3)
+2025-10-03 15:04:51 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-2de6 after 3 attempts
+2025-10-03 15:04:51 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-2e6f
+2025-10-03 15:04:52 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2e6f (attempt 1)
+2025-10-03 15:04:52 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2e6f (attempt 2)
+2025-10-03 15:04:52 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2e6f (attempt 3)
+2025-10-03 15:04:52 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-2e6f after 3 attempts
+2025-10-03 15:04:52 - 📊 Progress: 240/1308 (✅ 34, ❌ 206)
+2025-10-03 15:04:52 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-2ea1
+2025-10-03 15:04:52 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2ea1 (attempt 1)
+2025-10-03 15:04:52 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2ea1 (attempt 2)
+2025-10-03 15:04:52 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2ea1 (attempt 3)
+2025-10-03 15:04:52 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-2ea1 after 3 attempts
+2025-10-03 15:04:52 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-2ebe
+2025-10-03 15:04:52 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2ebe (attempt 1)
+2025-10-03 15:04:52 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2ebe (attempt 2)
+2025-10-03 15:04:52 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2ebe (attempt 3)
+2025-10-03 15:04:52 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-2ebe after 3 attempts
+2025-10-03 15:04:52 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-2ecf
+2025-10-03 15:04:52 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2ecf (attempt 1)
+2025-10-03 15:04:52 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2ecf (attempt 2)
+2025-10-03 15:04:52 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2ecf (attempt 3)
+2025-10-03 15:04:52 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-2ecf after 3 attempts
+2025-10-03 15:04:52 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-2f0e
+2025-10-03 15:04:53 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2f0e (attempt 1)
+2025-10-03 15:04:53 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2f0e (attempt 2)
+2025-10-03 15:04:53 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2f0e (attempt 3)
+2025-10-03 15:04:53 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-2f0e after 3 attempts
+2025-10-03 15:04:53 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-2f9f
+2025-10-03 15:04:53 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2f9f (attempt 1)
+2025-10-03 15:04:53 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2f9f (attempt 2)
+2025-10-03 15:04:53 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2f9f (attempt 3)
+2025-10-03 15:04:53 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-2f9f after 3 attempts
+2025-10-03 15:04:53 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-2fd7
+2025-10-03 15:04:53 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2fd7 (attempt 1)
+2025-10-03 15:04:53 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2fd7 (attempt 2)
+2025-10-03 15:04:53 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2fd7 (attempt 3)
+2025-10-03 15:04:53 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-2fd7 after 3 attempts
+2025-10-03 15:04:53 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-2fdd
+2025-10-03 15:04:53 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2fdd (attempt 1)
+2025-10-03 15:04:53 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2fdd (attempt 2)
+2025-10-03 15:04:54 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-2fdd (attempt 3)
+2025-10-03 15:04:54 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-2fdd after 3 attempts
+2025-10-03 15:04:54 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-3044
+2025-10-03 15:04:54 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-3044 (attempt 1)
+2025-10-03 15:04:54 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-3044 (attempt 2)
+2025-10-03 15:04:54 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-3044 (attempt 3)
+2025-10-03 15:04:54 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-3044 after 3 attempts
+2025-10-03 15:04:54 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-30a3
+2025-10-03 15:04:54 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-30a3 (attempt 1)
+2025-10-03 15:04:54 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-30a3 (attempt 2)
+2025-10-03 15:04:54 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-30a3 (attempt 3)
+2025-10-03 15:04:54 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-30a3 after 3 attempts
+2025-10-03 15:04:54 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-30ff
+2025-10-03 15:04:54 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-30ff (attempt 1)
+2025-10-03 15:04:54 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-30ff (attempt 2)
+2025-10-03 15:04:54 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-30ff (attempt 3)
+2025-10-03 15:04:54 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-30ff after 3 attempts
+2025-10-03 15:04:54 - 📊 Progress: 250/1308 (✅ 34, ❌ 216)
+2025-10-03 15:04:54 - 📊 Batch 5 Summary: ✅ 0 successful, ❌ 50 failed
+2025-10-03 15:04:54 - 🚀 Pushing changes to main...
+2025-10-03 15:04:54 - ⚠️  Pull failed for batch 5, continuing...
+2025-10-03 15:04:56 - 🔄 Processing Batch 6 (branches 251 to 300)
+2025-10-03 15:04:56 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-315b
+2025-10-03 15:04:57 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-315b (attempt 1)
+2025-10-03 15:04:57 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-315b (attempt 2)
+2025-10-03 15:04:57 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-315b (attempt 3)
+2025-10-03 15:04:57 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-315b after 3 attempts
+2025-10-03 15:04:57 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-31b4
+2025-10-03 15:04:57 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-31b4 (attempt 1)
+2025-10-03 15:04:57 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-31b4 (attempt 2)
+2025-10-03 15:04:57 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-31b4 (attempt 3)
+2025-10-03 15:04:57 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-31b4 after 3 attempts
+2025-10-03 15:04:57 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-31be
+2025-10-03 15:04:57 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-31be (attempt 1)
+2025-10-03 15:04:57 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-31be (attempt 2)
+2025-10-03 15:04:57 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-31be (attempt 3)
+2025-10-03 15:04:57 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-31be after 3 attempts
+2025-10-03 15:04:57 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-31c1
+2025-10-03 15:04:57 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-31c1 (attempt 1)
+2025-10-03 15:04:57 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-31c1 (attempt 2)
+2025-10-03 15:04:57 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-31c1 (attempt 3)
+2025-10-03 15:04:57 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-31c1 after 3 attempts
+2025-10-03 15:04:58 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-31d2
+2025-10-03 15:04:58 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-31d2 (attempt 1)
+2025-10-03 15:04:58 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-31d2 (attempt 2)
+2025-10-03 15:04:58 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-31d2 (attempt 3)
+2025-10-03 15:04:58 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-31d2 after 3 attempts
+2025-10-03 15:04:58 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-31f1
+2025-10-03 15:04:58 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-31f1 (attempt 1)
+2025-10-03 15:04:58 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-31f1 (attempt 2)
+2025-10-03 15:04:58 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-31f1 (attempt 3)
+2025-10-03 15:04:58 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-31f1 after 3 attempts
+2025-10-03 15:04:58 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-3207
+2025-10-03 15:04:58 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-3207 (attempt 1)
+2025-10-03 15:04:58 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-3207 (attempt 2)
+2025-10-03 15:04:58 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-3207 (attempt 3)
+2025-10-03 15:04:58 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-3207 after 3 attempts
+2025-10-03 15:04:58 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-3211
+2025-10-03 15:04:58 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-3211 (attempt 1)
+2025-10-03 15:04:59 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-3211 (attempt 2)
+2025-10-03 15:04:59 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-3211 (attempt 3)
+2025-10-03 15:04:59 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-3211 after 3 attempts
+2025-10-03 15:04:59 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-3295
+2025-10-03 15:04:59 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-3295 (attempt 1)
+2025-10-03 15:04:59 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-3295 (attempt 2)
+2025-10-03 15:04:59 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-3295 (attempt 3)
+2025-10-03 15:04:59 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-3295 after 3 attempts
+2025-10-03 15:04:59 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-3354
+2025-10-03 15:04:59 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-3354 (attempt 1)
+2025-10-03 15:04:59 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-3354 (attempt 2)
+2025-10-03 15:04:59 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-3354 (attempt 3)
+2025-10-03 15:04:59 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-3354 after 3 attempts
+2025-10-03 15:04:59 - 📊 Progress: 260/1308 (✅ 34, ❌ 226)
+2025-10-03 15:04:59 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-3382
+2025-10-03 15:04:59 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-3382 (attempt 1)
+2025-10-03 15:05:00 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-3382 (attempt 2)
+2025-10-03 15:05:00 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-3382 (attempt 3)
+2025-10-03 15:05:00 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-3382 after 3 attempts
+2025-10-03 15:05:00 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-338e
+2025-10-03 15:05:00 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-338e (attempt 1)
+2025-10-03 15:05:00 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-338e (attempt 2)
+2025-10-03 15:05:00 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-338e (attempt 3)
+2025-10-03 15:05:00 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-338e after 3 attempts
+2025-10-03 15:05:00 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-340e
+2025-10-03 15:05:00 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-340e (attempt 1)
+2025-10-03 15:05:00 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-340e (attempt 2)
+2025-10-03 15:05:00 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-340e (attempt 3)
+2025-10-03 15:05:00 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-340e after 3 attempts
+2025-10-03 15:05:00 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-341b
+2025-10-03 15:05:00 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-341b (attempt 1)
+2025-10-03 15:05:00 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-341b (attempt 2)
+2025-10-03 15:05:00 - ❌ Failed to checkout cursor/fix-errors-and-merge-to-main-341b (attempt 3)
+2025-10-03 15:05:00 - ❌ Failed to merge cursor/fix-errors-and-merge-to-main-341b after 3 attempts
+2025-10-03 15:05:00 - 🔄 Processing branch: cursor/fix-errors-and-merge-to-main-34bc
+2025-10-03 15:05:01 - ❌ Script interrupted. Current status saved to /workspace/merge_log.txt

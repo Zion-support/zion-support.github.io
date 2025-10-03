@@ -1,12 +1,7 @@
 "use client"
-// import React from 'react';
-// Metadata interface for React Helmet
-interface Metadata {
-  title?: string;
-  description?: string;
-  keywords?: string;
-}
-import { Link } from 'react-router-dom';
+import React from 'react';
+import { Metadata } from 'next';
+import Link from 'next/link';
 import { TrendingUp, CheckCircle, DollarSign, BarChart3, Server, Calendar, Phone, Mail, MapPin } from 'lucide-react';
 
 export const metadata: Metadata = {

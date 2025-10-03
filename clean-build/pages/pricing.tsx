@@ -1,6 +1,6 @@
-// import React from 'react';
+import React from 'react';
 import Head from 'next/head';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 export default function Pricing() {
   const plans = [

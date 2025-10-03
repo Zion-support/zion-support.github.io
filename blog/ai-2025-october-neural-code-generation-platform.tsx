@@ -1,4 +1,4 @@
-// import React from 'react';
+import React from 'react';
 
 export const metadata = {
   title: 'Neural Code Generation Platform 2025 — AI-Powered Development at 10x Speed',

@@ -1,5 +1,5 @@
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'AI-Powered Supply Chain Resilience 2025: Predict Disruptions & Optimize in Real-Time | Zion Tech',

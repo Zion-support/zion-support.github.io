@@ -1,6 +1,6 @@
-// import React from 'react';
+import React from 'react';
 import { Metadata } from 'next';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { 
   Atom, 
   Cpu, 
@@ -27,10 +27,43 @@ import {
   Layers,
   Wifi,
   Camera,
+  Mic,
+  MapPin,
+  ShoppingCart,
   Package,
   Truck,
-  Brain,
-  Cloud
+  Building,
+  Home,
+  Car,
+  Plane,
+  Ship,
+  Activity,
+  PieChart,
+  LineChart,
+  RefreshCw,
+  Download,
+  Upload,
+  Play,
+  Pause,
+  Square,
+  Triangle,
+  Circle,
+  Hexagon,
+  Monitor,
+  Server,
+  HardDrive,
+  MemoryStick,
+  Router,
+  Terminal,
+  GitBranch,
+  Container,
+  Docker,
+  Key,
+  AlertTriangle,
+  Users,
+  MessageSquare,
+  TrendingUp,
+  Eye
 } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -340,12 +373,14 @@ export default function QuantumComputingSolutionsPage() {
               and financial modeling. Experience exponential speedups and breakthrough results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact" 
+              <Link 
+                href="/contact" 
                 className="bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
               >
                 Explore Quantum Solutions
               </Link>
-              <Link to="#consultation" 
+              <Link 
+                href="#consultation" 
                 className="border border-indigo-600 text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors"
               >
                 Schedule Consultation
@@ -434,7 +469,8 @@ export default function QuantumComputingSolutionsPage() {
                   </p>
                 </div>
 
-                <Link to={service.link}
+                <Link
+                  href={service.link}
                   className="w-full block text-center bg-indigo-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
                 >
                   Learn More
@@ -483,7 +519,8 @@ export default function QuantumComputingSolutionsPage() {
                     </li>
                   ))}
                 </ul>
-                <Link to="/contact"
+                <Link
+                  href="/contact"
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
                     tier.popular
                       ? 'bg-indigo-600 text-white hover:bg-indigo-700'
@@ -545,12 +582,14 @@ export default function QuantumComputingSolutionsPage() {
             Join the quantum revolution and solve problems that were previously impossible
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact" 
+            <Link 
+              href="/contact" 
               className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Start Your Quantum Project
             </Link>
-            <Link to="mailto:kleber@ziontechgroup.com" 
+            <Link 
+              href="mailto:kleber@ziontechgroup.com" 
               className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
             >
               Email kleber@ziontechgroup.com

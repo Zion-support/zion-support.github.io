@@ -1,4 +1,4 @@
-// import React from 'react';
+import React from 'react';
 
 export const metadata = {
   title: 'AI 2026: Autonomous Business Process Orchestration - 95% Automation Achieved',

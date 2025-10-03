@@ -1,5 +1,5 @@
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import Link from 'next/link';
 
 interface FeaturedServiceCardProps {
   title: string;
@@ -36,7 +36,7 @@ export default function FeaturedServiceCard({
         ))}
       </ul>
       <div className="flex justify-end">
-        <Link to={href} className="text-blue-600 font-semibold hover:text-blue-700">
+        <Link href={href} className="text-blue-600 font-semibold hover:text-blue-700">
           Learn More →
         </Link>
       </div>

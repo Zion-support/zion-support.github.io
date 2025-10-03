@@ -1,4 +1,4 @@
-// import React from 'react';
+import React from 'react';
 
 export const metadata = {
   title: 'Privacy‑First Experimentation 2026: Insights Without PII',

@@ -1,5 +1,5 @@
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import Link from 'next/link';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -25,12 +25,14 @@ export default function SupplyChainTransformation2026Page() {
             Fortune 500 Manufacturer: $8.2M Annual Savings with AI-Powered Supply Chain Intelligence
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact"
+            <Link
+              href="/contact"
               className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors shadow-lg hover:shadow-xl"
             >
               Get Similar Results
             </Link>
-            <Link to="/services"
+            <Link
+              href="/services"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-green-600 transition-colors"
             >
               Our Services

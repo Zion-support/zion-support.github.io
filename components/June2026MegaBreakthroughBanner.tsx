@@ -1,4 +1,4 @@
-import { JSX } from "react";
+import React, { JSX } from "react";
 
 export default function June2026MegaBreakthroughBanner(): JSX.Element {
   return (

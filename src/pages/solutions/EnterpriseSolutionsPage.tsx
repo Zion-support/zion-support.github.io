@@ -1,4 +1,7 @@
-// import React from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
+
 const EnterpriseSolutionsPage: React.FC = () => {
   const enterpriseSolutions = [
     {
@@ -35,7 +38,7 @@ const EnterpriseSolutionsPage: React.FC = () => {
       title: "Enterprise Support",
       description: "24/7 enterprise-grade support and maintenance services to ensure optimal system performance.",
       icon: "🛠️",
-      features: ["24/7 Support", "Proactive Monitoring", "Performance Optimization", "Technical Consulting"]
+      features: ["24/7 Support", "Proactive Monitoring", "Performance Optimization", "Disaster Recovery"],
     }
   ];
 
@@ -43,32 +46,34 @@ const EnterpriseSolutionsPage: React.FC = () => {
     <>
       <Helmet>
         <title>Enterprise Solutions - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive enterprise solutions designed for large-scale organizations including AI platforms, security, analytics, and integration services." /></Helmet>
+        <meta name="description" content="Comprehensive enterprise solutions including AI platforms, digital transformation, security, and analytics for large organizations." />
+      </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+      <div className="min-h-screen bg-gray-50">
         {/* Header */}
-        <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-            <h1 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Enterprise Solutions</h1>
-            <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-              Comprehensive technology solutions designed for large-scale enterprise deployment and digital transformation.
+        <section className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-16">
+          <div className="container mx-auto px-6 text-center">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">Enterprise Solutions</h1>
+            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+              Comprehensive enterprise-grade solutions designed for large organizations to drive digital transformation and business growth.
             </p>
           </div>
         </section>
 
         {/* Solutions Grid */}
-        <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+        <section className="py-20">
+          <div className="container mx-auto px-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {enterpriseSolutions.map((solution, index) => (
-                <div key={index} className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-                  <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">{solution.icon}</div>
-                  <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">{solution.title}</h3>
-                  <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">{solution.description}</p>
-                  <ul className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <div key={index} className="bg-white p-8 rounded-xl shadow-sm hover:shadow-lg transition-shadow">
+                  <div className="text-4xl mb-4">{solution.icon}</div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">{solution.title}</h3>
+                  <p className="text-gray-600 mb-6">{solution.description}</p>
+                  
+                  <ul className="space-y-2 mb-6">
                     {solution.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-                        <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white"></span>
+                      <li key={featureIndex} className="flex items-center text-sm text-gray-700">
+                        <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
                         {feature}
                       </li>
                     ))}
@@ -76,37 +81,148 @@ const EnterpriseSolutionsPage: React.FC = () => {
                   
                   <Link 
                     to="/contact" 
-                    className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-              <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Why Choose Our Enterprise Solutions?</h2>
-              <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-                Built for scale, security, and performance with enterprise-grade reliability
+                    className="text-blue-600 font-semibold hover:text-blue-800 transition-colors"
+                  >
+                    Learn More →
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Enterprise Benefits */}
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-6">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose Our Enterprise Solutions?</h2>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                Enterprise-grade solutions designed for scale, security, and performance
               </p>
             </div>
             
-            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">🏢</div>
-                <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Enterprise Scale</h3>
-                <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-                  Solutions designed to handle enterprise-level workloads and scale seamlessly with your organization.
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="text-4xl mb-4">🏢</div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Enterprise Scale</h3>
+                <p className="text-gray-600">
+                  Solutions designed to handle the complexity and scale of large enterprise environments.
                 </p>
               </div>
               
-              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">🔒</div>
-                <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Security First</h3>
-                <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-                  Built with enterprise-grade security, compliance, and data protection at the core of every solution.
+              <div className="text-center">
+                <div className="text-4xl mb-4">🔒</div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Security First</h3>
+                <p className="text-gray-600">
+                  Enterprise-grade security features and compliance capabilities built into every solution.
                 </p>
               </div>
               
-              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">⚡</div>
-                <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">24/7 Support</h3>
-                <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-                  Round-the-clock enterprise support with dedicated account management and rapid response times.
+              <div className="text-center">
+                <div className="text-4xl mb-4">⚡</div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Performance Optimized</h3>
+                <p className="text-gray-600">
+                  High-performance solutions optimized for enterprise workloads and requirements.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Enterprise Features */}
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-6">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Enterprise Features</h2>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                Advanced features designed specifically for enterprise environments
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="bg-white p-8 rounded-xl shadow-sm">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Scalable Architecture</h3>
+                <p className="text-gray-600 mb-4">
+                  Microservices-based architecture that scales horizontally to meet enterprise demands.
+                </p>
+                <ul className="space-y-2">
+                  <li className="flex items-center text-sm text-gray-700">
+                    <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                    Auto-scaling capabilities
+                  </li>
+                  <li className="flex items-center text-sm text-gray-700">
+                    <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                    Load balancing
+                  </li>
+                  <li className="flex items-center text-sm text-gray-700">
+                    <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                    High availability
+                  </li>
+                </ul>
+              </div>
+              
+              <div className="bg-white p-8 rounded-xl shadow-sm">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Enterprise Security</h3>
+                <p className="text-gray-600 mb-4">
+                  Comprehensive security features including encryption, access control, and compliance.
+                </p>
+                <ul className="space-y-2">
+                  <li className="flex items-center text-sm text-gray-700">
+                    <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                    End-to-end encryption
+                  </li>
+                  <li className="flex items-center text-sm text-gray-700">
+                    <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                    Role-based access control
+                  </li>
+                  <li className="flex items-center text-sm text-gray-700">
+                    <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                    Compliance reporting
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Enterprise Technology Stack */}
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-6">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Enterprise Technology Stack</h2>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                Proven technologies for enterprise-grade solutions
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl">☁️</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Cloud Infrastructure</h3>
+                <p className="text-gray-600 text-sm">
+                  AWS, Azure, and Google Cloud with enterprise-grade security and compliance.
+                </p>
+              </div>
+              
+              <div className="text-center">
+                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl">🤖</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">AI & Machine Learning</h3>
+                <p className="text-gray-600 text-sm">
+                  Advanced AI capabilities with enterprise-grade model management and deployment.
+                </p>
+              </div>
+              
+              <div className="text-center">
+                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl">🔧</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">DevOps & Automation</h3>
+                <p className="text-gray-600 text-sm">
+                  CI/CD pipelines, infrastructure as code, and automated deployment.
                 </p>
               </div>
             </div>
@@ -114,16 +230,23 @@ const EnterpriseSolutionsPage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-            <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Ready to Transform Your Enterprise?</h2>
-            <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+        <section className="py-20 bg-blue-600 text-white">
+          <div className="container mx-auto px-6 text-center">
+            <h2 className="text-4xl font-bold mb-4">Ready to Transform Your Enterprise?</h2>
+            <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
               Let's discuss how our enterprise solutions can drive your digital transformation and business growth.
             </p>
-            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-              <Link 
-                to="/contact" 
-                className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              >
+                Get Started Today
+              </Link>
+              <Link
+                to="/case-studies"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+              >
                 View Case Studies
               </Link>
             </div>
@@ -134,4 +257,4 @@ const EnterpriseSolutionsPage: React.FC = () => {
   );
 };
 
-export default Component;
+export default EnterpriseSolutionsPage;

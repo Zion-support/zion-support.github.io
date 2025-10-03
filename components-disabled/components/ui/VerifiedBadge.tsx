@@ -1,4 +1,4 @@
-// import React from 'react';
+import React from 'react';
 
     <div className='flex gap-2 items-center'>;
       {labels && labels.map(label => (;

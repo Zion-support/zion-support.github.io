@@ -1,11 +1,6 @@
-// import React from 'react';
-// Metadata interface for React Helmet
-interface Metadata {
-  title?: string;
-  description?: string;
-  keywords?: string;
-}
-import { Link } from 'react-router-dom';
+import React from 'react';
+import { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'AI DevOps Automation Platform - Zion Tech Group',
@@ -147,10 +142,10 @@ export default function AIDevOpsAutomation() {
             Accelerate deployments, reduce downtime, and optimize performance.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="#pricing" className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+            <Link href="#pricing" className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
               View Pricing
             </Link>
-            <Link to="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors">
+            <Link href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors">
               Start Free Trial
             </Link>
           </div>
@@ -244,7 +239,7 @@ export default function AIDevOpsAutomation() {
                     </li>
                   ))}
                 </ul>
-                <Link to="/contact" className={`w-full block text-center py-3 rounded-lg font-semibold transition-colors ${
+                <Link href="/contact" className={`w-full block text-center py-3 rounded-lg font-semibold transition-colors ${
                   plan.popular 
                     ? 'bg-indigo-600 text-white hover:bg-indigo-700' 
                     : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
@@ -296,10 +291,10 @@ export default function AIDevOpsAutomation() {
             Join thousands of teams already using AI to transform their DevOps operations. Start your free trial today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact" className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+            <Link href="/contact" className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
               Start Free Trial
             </Link>
-            <Link to="tel:+13024640950" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors">
+            <Link href="tel:+13024640950" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors">
               Call +1 302 464 0950
             </Link>
           </div>

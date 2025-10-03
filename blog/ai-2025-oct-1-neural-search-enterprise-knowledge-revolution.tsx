@@ -1,4 +1,4 @@
-// import React from 'react';
+import React from 'react';
 
 export const metadata = {
   title: 'Neural Search & Enterprise Knowledge Revolution 2025 — AI-Powered Discovery',

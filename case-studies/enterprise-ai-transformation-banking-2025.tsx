@@ -1,4 +1,4 @@
-// import React from 'react';
+import React from 'react';
 
 export const metadata = {
   title: 'Fortune 100 Banking AI Transformation: $5.2B Value Created | Zion Tech Group',

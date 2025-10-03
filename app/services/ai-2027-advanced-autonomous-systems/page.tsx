@@ -1,5 +1,5 @@
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'AI 2027 Advanced Autonomous Systems - Enterprise Self-Governing AI Solutions',
@@ -29,7 +29,8 @@ export default function AI2027AdvancedAutonomousSystemsService() {
           Revolutionary self-governing, self-healing, and self-optimizing AI architectures that achieve 99.99% uptime, 95% process automation, and $50M+ annual savings.
         </p>
         <div className="flex flex-col sm:flex-row gap-4">
-          <Link to="/contact"
+          <Link
+            href="/contact"
             className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
           >
             Get Started Today
@@ -268,7 +269,8 @@ export default function AI2027AdvancedAutonomousSystemsService() {
               <li>• 6-month implementation</li>
               <li>• Standard support</li>
             </ul>
-            <Link to="/contact"
+            <Link
+              href="/contact"
               className="block w-full bg-blue-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
             >
               Get Started
@@ -289,7 +291,8 @@ export default function AI2027AdvancedAutonomousSystemsService() {
               <li>• Premium support & training</li>
               <li>• Custom integration</li>
             </ul>
-            <Link to="/contact"
+            <Link
+              href="/contact"
               className="block w-full bg-purple-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
             >
               Get Started
@@ -307,7 +310,8 @@ export default function AI2027AdvancedAutonomousSystemsService() {
               <li>• Dedicated support team</li>
               <li>• White-label solutions</li>
             </ul>
-            <Link to="/contact"
+            <Link
+              href="/contact"
               className="block w-full bg-indigo-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
             >
               Contact Sales
@@ -323,7 +327,8 @@ export default function AI2027AdvancedAutonomousSystemsService() {
           Join the Fortune 100 companies already achieving breakthrough results with Advanced Autonomous Systems.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link to="/contact"
+          <Link
+            href="/contact"
             className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
           >
             Start Your Transformation

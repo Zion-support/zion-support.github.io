@@ -1,5 +1,5 @@
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'Neuromorphic Computing Enterprise 2026: 1000x Energy Efficiency for AI Workloads',

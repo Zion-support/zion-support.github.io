@@ -56,8 +56,7 @@ function sendToAnalytics(metric: Metric): void {
 
   // Log in development
   if (process.env.NODE_ENV === 'development') {
-    // Use proper logging instead of console.log
-    // logInfo('Performance Metric', { metric: performanceMetric });
+    console.log('Performance Metric:', performanceMetric);
   }
 
   // Send to analytics
@@ -82,10 +81,7 @@ function sendToAnalytics(metric: Metric): void {
         userAgent: navigator.userAgent,
       }),
       keepalive: true,
-    }).catch((error) => {
-      // Use proper error handling instead of console.error
-      // logError(error, { context: 'performance_reporting' });
-    });
+    }).catch((error) => console.error('Performance reporting error:', error));
   }
 }
 
@@ -103,8 +99,7 @@ export function initPerformanceMonitoring(): void {
     getLCP(sendToAnalytics);
     getTTFB(sendToAnalytics);
   } catch (error) {
-    // Use proper error handling instead of console.error
-    // logError(error as Error, { context: 'performance_monitoring_init' });
+    console.error('Error initializing performance monitoring:', error);
   }
 }
 
@@ -123,8 +118,7 @@ export function measurePerformance(name: string, startTime: number): number {
   }
 
   if (process.env.NODE_ENV === 'development') {
-    // Use proper logging instead of console.log
-    // logInfo(`Performance: ${name} took ${duration.toFixed(2)}ms`);
+    console.log(`Performance: ${name} took ${duration.toFixed(2)}ms`);
   }
 
   return duration;
@@ -139,8 +133,7 @@ export function markPerformance(name: string): void {
   try {
     performance.mark(name);
   } catch (error) {
-    // Use proper error handling instead of console.error
-    // logError(error as Error, { context: 'performance_marking' });
+    console.error('Error marking performance:', error);
   }
 }
 
@@ -155,8 +148,7 @@ export function measureBetween(name: string, startMark: string, endMark: string)
     const measure = performance.getEntriesByName(name)[0] as PerformanceEntry;
     return measure.duration;
   } catch (error) {
-    // Use proper error handling instead of console.error
-    // logError(error as Error, { context: 'performance_measuring' });
+    console.error('Error measuring between marks:', error);
     return 0;
   }
 }
@@ -197,8 +189,7 @@ export function getResourceTiming(): PerformanceResourceTiming[] {
   try {
     return performance.getEntriesByType('resource') as PerformanceResourceTiming[];
   } catch (error) {
-    // Use proper error handling instead of console.error
-    // logError(error as Error, { context: 'resource_timing' });
+    console.error('Error getting resource timing:', error);
     return [];
   }
 }
@@ -214,16 +205,10 @@ export function getSlowResources(threshold: number = 1000): PerformanceResourceT
 /**
  * Get memory usage (if available)
  */
-interface PerformanceMemory {
-  usedJSHeapSize: number;
-  totalJSHeapSize: number;
-  jsHeapSizeLimit: number;
-}
-
 export function getMemoryUsage(): Record<string, number> | null {
-  if (typeof performance === 'undefined' || !('memory' in performance)) return null;
+  if (typeof performance === 'undefined' || !(performance as any).memory) return null;
 
-  const memory = (performance as Performance & { memory: PerformanceMemory }).memory;
+  const memory = (performance as any).memory;
   return {
     usedJSHeapSize: memory.usedJSHeapSize,
     totalJSHeapSize: memory.totalJSHeapSize,
@@ -280,8 +265,7 @@ export function monitorLongTasks(callback: (entries: PerformanceEntry[]) => void
     observer.observe({ entryTypes: ['longtask'] });
     return observer;
   } catch (error) {
-    // Use proper error handling instead of console.error
-    // logError(error as Error, { context: 'long_task_monitoring' });
+    console.error('Error monitoring long tasks:', error);
     return null;
   }
 }
@@ -309,15 +293,10 @@ export function monitorLayoutShifts(callback: (entries: PerformanceEntry[]) => v
 /**
  * Check if connection is slow
  */
-interface NavigatorConnection {
-  effectiveType: string;
-  saveData: boolean;
-}
-
 export function isSlowConnection(): boolean {
-  if (typeof navigator === 'undefined' || !('connection' in navigator)) return false;
+  if (typeof navigator === 'undefined' || !(navigator as any).connection) return false;
 
-  const connection = (navigator as Navigator & { connection: NavigatorConnection }).connection;
+  const connection = (navigator as any).connection;
   const slowTypes = ['slow-2g', '2g'];
   
   return slowTypes.includes(connection.effectiveType) || connection.saveData === true;
@@ -327,9 +306,9 @@ export function isSlowConnection(): boolean {
  * Get connection type
  */
 export function getConnectionType(): string {
-  if (typeof navigator === 'undefined' || !('connection' in navigator)) return 'unknown';
+  if (typeof navigator === 'undefined' || !(navigator as any).connection) return 'unknown';
 
-  const connection = (navigator as Navigator & { connection: NavigatorConnection }).connection;
+  const connection = (navigator as any).connection;
   return connection.effectiveType || connection.type || 'unknown';
 }
 

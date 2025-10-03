@@ -1,92 +1,97 @@
-// import React from 'react';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 ;
 const AIServices: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+    <div className="min-h-screen bg-white"
+    <div className= "min-h-screen bg-white">
       <Helmet >
         <title >AI Services – Zion Tech Group</title>
-        <meta name="description", content ="Applied AI solutions: RAG chatbots, IDP, Predictive Analytics, Vision, and MLOps. Transparent pricing and fast delivery." />
-        <link rel="canonical", href ="https://ziontechgroup.com/services/ai-services" />
+        <meta name: "description", content ="Applied AI solutions: RAG chatbots, IDP, Predictive Analytics, Vision, and MLOps. Transparent pricing and fast delivery." />"
+        <link rel: "canonical", href ="https://ziontechgroup.com/services/ai-services" />"
         <meta name="description" content="Applied AI solutions: RAG chatbots, IDP, Predictive Analytics, Vision, and MLOps. Transparent pricing and fast delivery." />
-        <link rel="canonical", href ="https://ziontechgroup.com/services/ai-services" />
+        <link rel: "canonical", href ="https://ziontechgroup.com/services/ai-services" />
       </Helmet>
 
-      <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-          <h1 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">AI Services</h3>
-          <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Production-grade AI to automate workflows, enrich customer experiences, and unlock data-driven decisions.</h3>
-          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-            <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">RAG Chatbots</h3>
-            <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Intelligent Document Processing</h3>
-            <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Predictive Analytics</h3>
-            <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Computer Vision</h3>
-            <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">MLOps</h3>
+      <section className="bg-gradient-to-br from-blue-50 to-indigo-50 py-16"
+        <div className="max-w-7xl mx-auto px-6"
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">AI Services</h1>"
+          <p className="text-lg md:text-xl text-gray-600 max-w-3xl">Production-grade AI to automate workflows, enrich customer experiences, and unlock data-driven decisions.</p>"
+          <div className="mt-6 flex flex-wrap gap-3 text-sm text-gray-700"
+            <span className="px-3 py-1 rounded-full bg-white border">RAG Chatbots</span>"
+            <span className="px-3 py-1 rounded-full bg-white border">Intelligent Document Processing</span>"
+            <span className="px-3 py-1 rounded-full bg-white border">Predictive Analytics</span>"
+            <span className="px-3 py-1 rounded-full bg-white border">Computer Vision</span>"
+            <span className="px-3 py-1 rounded-full bg-white border">MLOps</span>"
           </div>
-          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-      <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-          <h1 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">AI Services</h3>
-          <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Production-grade AI to automate workflows, enrich customer experiences, and unlock data-driven decisions.</h3>
-          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-            <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">RAG Chatbots</h3>
-            <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Intelligent Document Processing</h3>
-            <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Predictive Analytics</h3>
-            <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Computer Vision</h3>
-            <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">MLOps</h3>
+          <div className="mt-8 flex gap-4"
+      <section className= "bg-gradient-to-br from-blue-50 to-indigo-50 py-16">
+        <div className= "max-w-7xl mx-auto px-6">
+          <h1 className= "text-4xl md:text-5xl font-bold text-gray-900 mb-4">AI Services</h1>"
+          <p className= "text-lg md:text-xl text-gray-600 max-w-3xl">Production-grade AI to automate workflows, enrich customer experiences, and unlock data-driven decisions.</p>"
+          <div className= "mt-6 flex flex-wrap gap-3 text-sm text-gray-700">
+            <span className= "px-3 py-1 rounded-full bg-white border">RAG Chatbots</span>"
+            <span className= "px-3 py-1 rounded-full bg-white border">Intelligent Document Processing</span>"
+            <span className= "px-3 py-1 rounded-full bg-white border">Predictive Analytics</span>"
+            <span className= "px-3 py-1 rounded-full bg-white border">Computer Vision</span>"
+            <span className= "px-3 py-1 rounded-full bg-white border">MLOps</span>"
           </div>
-          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-            <Link to="/contact", className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Book a consultation</h3>
-            <a href="tel:+13024640950" className ="inline-flex items-center px-6 py-3 rounded-lg bg-white border hover:bg-gray-50">Call +1 302 464 0950</h3>
+          <div className= "mt-8 flex gap-4">
+            <Link to: "/contact", className="inline-flex items-center px-6 py-3 rounded-lg bg-blue-600 text-white hover:bg-blue-700">Book a consultation</Link>"
+            <a href="tel:+13024640950" className ="inline-flex items-center px-6 py-3 rounded-lg bg-white border hover:bg-gray-50">Call +1 302 464 0950</a>"
           </div>
         </div>
       </section>
 
-      <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-          <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Packages & Pricing</h3>
-          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-              <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Starter</h3>
-              <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">POC chatbot or small IDP flow</h3>
-              <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">$3,000–$6,000</h3>
-              <ul className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-          <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Packages & Pricing</h3>
-          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-              <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Starter</h3>
-              <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">POC chatbot or small IDP flow</h3>
-              <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">$3,000–$6,000</h3>
-              <ul className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+      <section className="py-16"
+        <div className="max-w-7xl mx-auto px-6"
+          <h2 className="text-2xl md:text-3xl font-semibold text-gray-900 mb-6">Packages & Pricing</h2>"
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6"
+            <div className="border rounded-xl p-6"
+              <h3 className="text-xl font-semibold">Starter</h3>"
+              <p className="text-gray-600 mt-2">POC chatbot or small IDP flow</p>"
+              <p className="text-3xl font-bold mt-4">$3,000–$6,000</p>"
+              <ul className="mt-4 space-y-2 text-sm text-gray-700"
+      <section className= "py-16">
+        <div className= "max-w-7xl mx-auto px-6">
+          <h2 className= "text-2xl md:text-3xl font-semibold text-gray-900 mb-6">Packages & Pricing</h2>"
+          <div className= "grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className= "border rounded-xl p-6">
+              <h3 className= "text-xl font-semibold">Starter</h3>"
+              <p className= "text-gray-600 mt-2">POC chatbot or small IDP flow</p>"
+              <p className= "text-3xl font-bold mt-4">$3,000–$6,000</p>"
+              <ul className= "mt-4 space-y-2 text-sm text-gray-700">
                 <li >• 1 data connector (Google Drive/Notion/S3)</li>
                 <li >• Basic RAG, evals, guardrails</li>
                 <li >• 2 weeks delivery</li>
               </ul>
             </div>
-            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-              <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Growth</h3>
-              <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Multi-source AI assistant or IDP</h3>
-              <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">$8,000–$18,000</h3>
-              <ul className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-              <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Growth</h3>
-              <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Multi-source AI assistant or IDP</h3>
-              <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">$8,000–$18,000</h3>
-              <ul className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <div className="border rounded-xl p-6"
+              <h3 className="text-xl font-semibold">Growth</h3>"
+              <p className="text-gray-600 mt-2">Multi-source AI assistant or IDP</p>"
+              <p className="text-3xl font-bold mt-4">$8,000–$18,000</p>"
+              <ul className="mt-4 space-y-2 text-sm text-gray-700"
+            <div className= "border rounded-xl p-6">
+              <h3 className= "text-xl font-semibold">Growth</h3>"
+              <p className= "text-gray-600 mt-2">Multi-source AI assistant or IDP</p>"
+              <p className= "text-3xl font-bold mt-4">$8,000–$18,000</p>"
+              <ul className= "mt-4 space-y-2 text-sm text-gray-700">
                 <li >• 3–5 data connectors + analytics</li>
                 <li >• Fine-tuned prompts, monitoring</li>
                 <li >• 4–6 weeks delivery</li>
               </ul>
             </div>
-            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-              <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Enterprise</h3>
-              <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">End-to-end AI with MLOps</h3>
-              <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">$25,000+</h3>
-              <ul className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-              <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Enterprise</h3>
-              <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">End-to-end AI with MLOps</h3>
-              <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">$25,000+</h3>
-              <ul className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <div className="border rounded-xl p-6"
+              <h3 className="text-xl font-semibold">Enterprise</h3>"
+              <p className="text-gray-600 mt-2">End-to-end AI with MLOps</p>"
+              <p className="text-3xl font-bold mt-4">$25,000+</p>"
+              <ul className="mt-4 space-y-2 text-sm text-gray-700"
+            <div className= "border rounded-xl p-6">
+              <h3 className= "text-xl font-semibold">Enterprise</h3>"
+              <p className= "text-gray-600 mt-2">End-to-end AI with MLOps</p>"
+              <p className= "text-3xl font-bold mt-4">$25,000+</p>"
+              <ul className= "mt-4 space-y-2 text-sm text-gray-700">
                 <li >• SSO, RBAC, SLAs</li>
                 <li >• Eval harness, offline queues</li>
                 <li >• SOC2-ready deployment</li>
@@ -94,13 +99,14 @@ const AIServices: React.FC = () => {
             </div>
           </div>
 
-          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-              <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Capabilities</h3>
-              <ul className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-              <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Capabilities</h3>
-              <ul className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8"
+            <div className="bg-gray-50 rounded-xl p-6"
+              <h3 className="text-lg font-semibold">Capabilities</h3>"
+              <ul className="mt-4 space-y-2 text-gray-700"
+          <div className= "mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className= "bg-gray-50 rounded-xl p-6">
+              <h3 className= "text-lg font-semibold">Capabilities</h3>"
+              <ul className= "mt-4 space-y-2 text-gray-700">
                 <li >• Retrieval-Augmented Generation with vector stores</li>
                 <li >• Document intake, OCR, entity extraction, validation</li>
                 <li >• Forecasting, churn/CLV models, lead scoring</li>
@@ -108,19 +114,20 @@ const AIServices: React.FC = () => {
                 <li >• Observability: prompt evals, drift, PII filters</li>,
               </ul>
             </div>
-            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-              <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Useful Links</h3>
-              <ul className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">AI Services page</a></h3>
-                <li ><a className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Contact us</a></h3>
-                <li ><a className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Pricing</a></h3>
-                <li ><a className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">GitHub</a></h3>
-            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-              <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Useful Links</h3>
-              <ul className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-                <li ><a className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">AI Services page</a></h3>
-                <li ><a className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Contact us</a></h3>
-                <li ><a className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Pricing</a></h3>
-                <li ><a className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">GitHub</a></h3>
+            <div className="bg-gray-50 rounded-xl p-6"
+              <h3 className="text-lg font-semibold">Useful Links</h3>"
+              <ul className="mt-4 space-y-2 text-blue-700"
+                <li ><a className="hover:underline" href="https://ziontechgroup.com/services/ai-services">AI Services page</a></li>"
+                <li ><a className="hover:underline" href="https://ziontechgroup.com/contact">Contact us</a></li>"
+                <li ><a className="hover:underline" href="https://ziontechgroup.com/pricing">Pricing</a></li>"
+                <li ><a className="hover:underline" href ="https://github.com/ZionClouds">GitHub</a></li>"
+            <div className= "bg-gray-50 rounded-xl p-6">
+              <h3 className= "text-lg font-semibold">Useful Links</h3>"
+              <ul className= "mt-4 space-y-2 text-blue-700">
+                <li ><a className= "hover:underline" href="https://ziontechgroup.com/services/ai-services">AI Services page</a></li>"
+                <li ><a className= "hover:underline" href="https://ziontechgroup.com/contact">Contact us</a></li>"
+                <li ><a className= "hover:underline" href="https://ziontechgroup.com/pricing">Pricing</a></li>"
+                <li ><a className= "hover:underline" href ="https://github.com/ZionClouds">GitHub</a></li>"
               </ul>
             </div>
           </div>
@@ -130,6 +137,6 @@ const AIServices: React.FC = () => {
   );
 };
 
-export default Component;
+export default AIServices;
 
 ;

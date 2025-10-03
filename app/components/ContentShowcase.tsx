@@ -1,5 +1,5 @@
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import Link from 'next/link';
 
 export default function ContentShowcase() {
   return (
@@ -28,7 +28,8 @@ export default function ContentShowcase() {
             <div className="text-gray-300 mb-4">
               Cutting-edge AI technologies and implementations that are transforming industries.
             </div>
-            <Link to="/blog"
+            <Link 
+              href="/blog"
               className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 font-semibold transition-colors"
             >
               Explore AI Content
@@ -49,7 +50,8 @@ export default function ContentShowcase() {
             <div className="text-gray-300 mb-4">
               Real-world implementations and the measurable results achieved by our clients.
             </div>
-            <Link to="/case-studies"
+            <Link 
+              href="/case-studies"
               className="inline-flex items-center gap-2 text-emerald-400 hover:text-emerald-300 font-semibold transition-colors"
             >
               View Case Studies
@@ -70,7 +72,8 @@ export default function ContentShowcase() {
             <div className="text-gray-300 mb-4">
               Step-by-step guides and playbooks for implementing AI and automation solutions.
             </div>
-            <Link to="/guides"
+            <Link 
+              href="/guides"
               className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 font-semibold transition-colors"
             >
               Browse Guides
@@ -80,7 +83,8 @@ export default function ContentShowcase() {
         </div>
 
         <div className="text-center mt-12">
-          <Link to="/content"
+          <Link 
+            href="/content"
             className="group bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 transform hover:scale-105"
           >
             <span className="flex items-center gap-2">
