@@ -5,39 +5,6 @@ import { Helmet } from 'react-helmet-async';
 const SMBSolutionsPage: React.FC = () => {
   const smbSolutions = [
     {
-      title: "Business Process Automation"
-      description: "Streamline your business operations with cost-effective automation solutions designed for small and medium businesses."
-      icon: "⚙️"
-      features: ["Workflow Automation", "Document Processing", "Task Management", "Process Optimization"],
-    },
-    {
-      title: "Cloud Solutions"
-      description: "Affordable cloud solutions that provide enterprise-grade capabilities without the enterprise price tag."
-      icon: "☁️"
-      features: ["Cloud Migration", "Data Backup", "Remote Access", "Scalable Infrastructure"],
-    },
-    {
-      title: "Business Intelligence"
-      description: "Transform your data into actionable insights with user-friendly analytics and reporting tools."
-      icon: "📊"
-      features: ["Data Visualization", "Custom Reports", "Performance Dashboards", "Trend Analysis"],
-    },
-    {
-      title: "Customer Management"
-      description: "Enhance customer relationships with integrated CRM and customer service solutions."
-      icon: "👥"
-      features: ["CRM Integration", "Customer Analytics", "Service Automation", "Communication Tools"],
-    },
-    {
-      title: "Security Solutions"
-      description: "Protect your business with comprehensive security solutions tailored for SMB needs and budgets."
-      icon: "🔒"
-      features: ["Threat Protection", "Data Security", "Access Control", "Compliance Support"],
-    },
-    {
-      title: "IT Support"
-      description: "Reliable IT support and maintenance services to keep your systems running smoothly and efficiently."
-      icon: "🛠️"
       title: "Business Process Automation",
       description: "Streamline your business operations with cost-effective automation solutions designed for small and medium businesses.",
       icon: "⚙️",

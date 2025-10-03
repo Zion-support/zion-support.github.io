@@ -1,41 +1,29 @@
-import { Link } from "react-router-dom";"
-import Header from "../../components/Header";"
-import { Link } from "react-router-dom";"
-import Header from "../../components/Header";"
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
+import { ArrowLeft, CheckCircle, DollarSign, Rocket, Zap } from 'lucide-react';
+import Header from '../../components/Header';
 
-const RealTimeCognitiveAutomation: () => {
+const RealTimeCognitiveAutomation: React.FC = () => {
   return (
     <>
-      <Helmet >
-        <title >Real-Time Cognitive Automation Platform | Transform Business Operations with AI | Zion Tech Group</title>
-        <meta name: "description","
-  content: "Transform operations with Real-Time Cognitive Automation Platform. 94% accuracy, 85% cost reduction, 10x productivity gains. AI-powered workflows that learn and optimize autonomously." /><meta name: "keywords","
-  content: "cognitive automation, intelligent automation, RPA, AI workflows, process automation, business automation, hyperautomation" /></Helmet>"
-      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">","
+      <Helmet>
+        <title>Real-Time Cognitive Automation Platform | Transform Business Operations with AI | Zion Tech Group</title>
+        <meta name="description" content="Transform operations with Real-Time Cognitive Automation Platform. 94% accuracy, 85% cost reduction, 10x productivity gains. AI-powered workflows that learn and optimize autonomously." />
+        <meta name="keywords" content="cognitive automation, intelligent automation, RPA, AI workflows, process automation, business automation, hyperautomation" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
         <Header />
 
-        <article className="container mx-auto px-6 py-20"
-        <article className="container mx-auto px-6 py-20">","
-          {/* Back Link */};
-          <Link to: "/services","
-  className="inline-flex items-center text-zion-cyan hover: text-zion-blue-light mb-8 transition-colors","
+        <article className="container mx-auto px-6 py-20">
+          {/* Back Link */}
+          <Link 
+            to="/services" 
+            className="inline-flex items-center text-zion-cyan hover:text-zion-blue-light mb-8 transition-colors"
           >
-            <ArrowLeft className="w-4 h-4 mr-2/>"
-            <ArrowLeft className="w-4 h-4 mr-2" />","
-      <div className= "min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">","
-        <Header />
-
-        <article className= "container mx-auto px-6 py-20">
-        <article className= "container mx-auto px-6 py-20">","
-          {/* Back Link */};
-          <Link to: "/services","
-  className= "inline-flex items-center text-zion-cyan hover: text-zion-blue-light mb-8 transition-colors","
-          >
-            <ArrowLeft className= "w-4 h-4 mr-2/>"
-            <ArrowLeft className= "w-4 h-4 mr-2" />","
-            <ArrowLeft className="w-4 h-4 mr-2/>"
             <ArrowLeft className="w-4 h-4 mr-2" />
-  Back to Services
+            Back to Services
           </Link>
 
           {/* Header */}
