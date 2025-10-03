@@ -63,16 +63,14 @@ const SmartContractAudit: React.FC = () => {
       price: "$2,500",
       period: "one-time",
       description: "Perfect for simple smart contracts and token contracts",
-      features: [
-        "Static code analysis",
+      features: ["Static code analysis",
         "Manual code review",
         "Basic vulnerability scan",
         "Security report",
         "Email support",
         "1 revision included",
         "Standard compliance check",
-        "Up to 500 lines of code"
-      ],
+        "Up to 500 lines of code"],
       popular: false
     },
     {
@@ -80,8 +78,7 @@ const SmartContractAudit: React.FC = () => {
       price: "$8,500",
       period: "one-time",
       description: "Comprehensive audit for complex DeFi protocols and dApps",
-      features: [
-        "Full static & dynamic analysis",
+      features: ["Full static & dynamic analysis",
         "Comprehensive manual review",
         "Advanced vulnerability scanning",
         "Detailed security report",
@@ -90,8 +87,7 @@ const SmartContractAudit: React.FC = () => {
         "Full compliance verification",
         "Up to 2,000 lines of code",
         "Gas optimization analysis",
-        "Architecture review"
-      ],
+        "Architecture review"],
       popular: true
     },
     {
