@@ -29,10 +29,7 @@ export class AdvancedErrorBoundary extends Component<Props, State> {
     
     // Send to error tracking service
     if (typeof window !== 'undefined' && 'gtag' in window) {
-      interface WindowWithGtag extends Window {
-        gtag: (command: string, action: string, parameters: Record<string, unknown>) => void;
-      }
-      (window as WindowWithGtag).gtag('event', 'exception', {
+      (window as { gtag: Function }).gtag('event', 'exception', {
         description: error.toString(),
         fatal: false,
       });

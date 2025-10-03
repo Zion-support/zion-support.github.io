@@ -51,7 +51,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     const { onError } = this.props;
-    const { errorId } = this.state;
 
     // Update state with error info
     this.setState({ errorInfo });
