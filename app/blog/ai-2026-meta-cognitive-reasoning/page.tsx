@@ -15,13 +15,13 @@ export const metadata: Metadata = {
 
 export default function MetaCognitiveReasoning() {
   return (
-    <div className="text-left">
-      <div className="text-left">
+    <div className="text-left"></div>
+      <div className="text-left"></div>
         <article className="text-left">
           {/* Hero Section */}
           <header className="text-left">
-            <div className="text-left">
-              <span className="text-left">
+            <div className="text-left"></div>
+              <span className="text-left"></span>
                 🧠 Cognitive Breakthrough
               </span>
             </div>
@@ -33,7 +33,7 @@ export default function MetaCognitiveReasoning() {
               enabling unprecedented reasoning capabilities and decision-making accuracy that surpasses 
               human cognitive limitations.
             </p>
-            <div className="text-left">
+            <div className="text-left"></div>
               <span className="text-left">Self-Aware AI<"
               <span className="text-left">95% Accuracy<"
               <span className="text-left">Cognitive Evolution<"
@@ -43,20 +43,20 @@ export default function MetaCognitiveReasoning() {
           {/* Core Concept */}
           <section className="text-left">
             <h2 className="text-left">The Meta-Cognitive Revolution</h2>"
-            <div className="text-left">
-              <div>
+            <div className="text-left"></div>
+              <div></div>
                 <h3 className="text-left">Beyond Traditional AI</h3>"
                 <p className="text-left">
                   While traditional AI processes information, our Meta-Cognitive AI thinks about how it thinks. 
                   This self-reflective capability enables continuous improvement, adaptive reasoning, and 
                   unprecedented decision-making accuracy.
                 </p>
-                <div className="text-left">
+                <div className="text-left"></div>
                   <div className="text-left">Core Principle:</div>"
                   <div className="text-left">An AI that can understand its own thinking process can optimize its own thinking process."</div>"
                 </div>
               </div>
-              <div className="text-left">
+              <div className="text-left"></div>
                 <div className="text-left">🧠💭</div>"
                 <div className="text-left">Meta-Cognition</div>"
                 <div className="text-left">Thinking About Thinking</div>"
@@ -65,7 +65,7 @@ export default function MetaCognitiveReasoning() {
           </section>
 
           {/* Technical Deep Dive */}
-          <div className="text-left">
+          <div className="text-left"></div>
             <section className="text-left">
               <h2 className="text-left">🔬 Technical Architecture</h2>"
               <p className="text-left">
@@ -74,8 +74,8 @@ export default function MetaCognitiveReasoning() {
                 in real-time.
               </p>
               
-              <div className="text-left">
-                <div className="text-left">
+              <div className="text-left"></div>
+                <div className="text-left"></div>
                   <h3 className="text-left">🧠 Cognitive Layer</h3>"
                   <p className="text-left">Primary reasoning and decision-making processes</p>"
                   <ul className="text-left">
@@ -86,7 +86,7 @@ export default function MetaCognitiveReasoning() {
                   </ul>
                 </div>
                 
-                <div className="text-left">
+                <div className="text-left"></div>
                   <h3 className="text-left">👁️ Meta-Layer</h3>"
                   <p className="text-left">Self-monitoring and process analysis</p>"
                   <ul className="text-left">
@@ -97,7 +97,7 @@ export default function MetaCognitiveReasoning() {
                   </ul>
                 </div>
                 
-                <div className="text-left">
+                <div className="text-left"></div>
                   <h3 className="text-left">⚡ Optimization Layer</h3>"
                   <p className="text-left">Continuous improvement and adaptation</p>"
                   <ul className="text-left">
@@ -118,14 +118,14 @@ export default function MetaCognitiveReasoning() {
                 accuracy previously thought impossible.
               </p>
               
-              <div className="text-left">
-                <div className="text-left">
+              <div className="text-left"></div>
+                <div className="text-left"></div>
                   <h3 className="text-left">🔍 Self-Diagnosis & Correction</h3>"
                   <p className="text-left">
                     The system continuously monitors its own reasoning processes, identifying errors, 
                     biases, and inefficiencies, then automatically correcting them in real-time.
                   </p>
-                  <div className="text-left">
+                  <div className="text-left"></div>
                     <ul>
                       <li>• Real-time error detection</li>
                       <li>• Bias identification and correction</li>
@@ -139,13 +139,13 @@ export default function MetaCognitiveReasoning() {
                   </div>
                 </div>
                 
-                <div className="text-left">
+                <div className="text-left"></div>
                   <h3 className="text-left">🧩 Adaptive Reasoning Strategies</h3>"
                   <p className="text-left">
                     Meta-Cognitive AI can dynamically switch between different reasoning approaches 
                     based on the problem context, optimizing for both accuracy and efficiency.
                   </p>
-                  <div className="text-left">
+                  <div className="text-left"></div>
                     <ul>
                       <li>• Context-aware reasoning</li>
                       <li>• Multi-strategy optimization</li>
@@ -159,13 +159,13 @@ export default function MetaCognitiveReasoning() {
                   </div>
                 </div>
                 
-                <div className="text-left">
+                <div className="text-left"></div>
                   <h3 className="text-left">📊 Predictive Self-Analysis</h3>"
                   <p className="text-left">
                     The system can predict its own performance on future tasks based on its understanding 
                     of its current cognitive state and capabilities.
                   </p>
-                  <div className="text-left">
+                  <div className="text-left"></div>
                     <ul>
                       <li>• Confidence calibration</li>
                       <li>• Performance prediction</li>
@@ -188,25 +188,25 @@ export default function MetaCognitiveReasoning() {
                 indicators, achieving accuracy levels that surpass both traditional AI and human capabilities.
               </p>
               
-              <div className="text-left">
+              <div className="text-left"></div>
                 <h3 className="text-left">Performance Comparison</h3>"
-                <div className="text-left">
-                  <div className="text-left">
+                <div className="text-left"></div>
+                  <div className="text-left"></div>
                     <div className="text-left">95%</div>"
                     <div className="text-left">Decision Accuracy</div>"
                     <div className="text-left">vs 78% Traditional AI</div>"
                   </div>
-                  <div className="text-left">
+                  <div className="text-left"></div>
                     <div className="text-left">87%</div>"
                     <div className="text-left">Error Reduction</div>"
                     <div className="text-left">vs Previous Systems</div>"
                   </div>
-                  <div className="text-left">
+                  <div className="text-left"></div>
                     <div className="text-left">3.2x</div>"
                     <div className="text-left">Learning Speed</div>"
                     <div className="text-left">vs Standard AI</div>"
                   </div>
-                  <div className="text-left">
+                  <div className="text-left"></div>
                     <div className="text-left">99.1%</div>"
                     <div className="text-left">Confidence Accuracy</div>"
                     <div className="text-left">Self-Assessment</div>"
@@ -223,8 +223,8 @@ export default function MetaCognitiveReasoning() {
                 environments.
               </p>
               
-              <div className="text-left">
-                <div className="text-left">
+              <div className="text-left"></div>
+                <div className="text-left"></div>
                   <h3 className="text-left">💼 Strategic Decision Making</h3>"
                   <p className="text-left">
                     Complex business decisions with multiple variables and uncertain outcomes.
@@ -238,7 +238,7 @@ export default function MetaCognitiveReasoning() {
                   </ul>
                 </div>
                 
-                <div className="text-left">
+                <div className="text-left"></div>
                   <h3 className="text-left">🔧 Operational Optimization</h3>"
                   <p className="text-left">
                     Real-time operational decisions that require continuous adaptation and improvement.
@@ -252,7 +252,7 @@ export default function MetaCognitiveReasoning() {
                   </ul>
                 </div>
                 
-                <div className="text-left">
+                <div className="text-left"></div>
                   <h3 className="text-left">🛡️ Risk Management</h3>"
                   <p className="text-left">
                     Advanced risk assessment with self-improving threat detection and response.
@@ -266,7 +266,7 @@ export default function MetaCognitiveReasoning() {
                   </ul>
                 </div>
                 
-                <div className="text-left">
+                <div className="text-left"></div>
                   <h3 className="text-left">🎯 Customer Experience</h3>"
                   <p className="text-left">
                     Personalized customer interactions with adaptive reasoning and continuous improvement.
@@ -290,8 +290,8 @@ export default function MetaCognitiveReasoning() {
                 self-awareness and reasoning capabilities.
               </p>
               
-              <div className="text-left">
-                <div className="text-left">
+              <div className="text-left"></div>
+                <div className="text-left"></div>
                   <h3 className="text-left">🎯 Near-term Evolution (1-2 years)</h3>"
                   <ul className="text-left">
                     <li>• Enhanced self-diagnostic capabilities</li>
@@ -301,7 +301,7 @@ export default function MetaCognitiveReasoning() {
                   </ul>
                 </div>
                 
-                <div className="text-left">
+                <div className="text-left"></div>
                   <h3 className="text-left">🚀 Medium-term Evolution (3-5 years)</h3>"
                   <ul className="text-left">
                     <li>• Cross-domain meta-cognitive transfer</li>
@@ -311,7 +311,7 @@ export default function MetaCognitiveReasoning() {
                   </ul>
                 </div>
                 
-                <div className="text-left">
+                <div className="text-left"></div>
                   <h3 className="text-left">🌟 Long-term Evolution (5+ years)</h3>"
                   <ul className="text-left">
                     <li>• Artificial general intelligence</li>
@@ -331,16 +331,16 @@ export default function MetaCognitiveReasoning() {
               Transform your organization's decision-making capabilities with AI that thinks about thinking. 
               Achieve unprecedented accuracy and continuous improvement.
             </p>
-            <div className="text-left">
+            <div className="text-left"></div>
               <a 
-                href="/"
-                className="text-left"
+                href="/
+                className="text-left
               >
                 Schedule Consultation
               </a>
               <a 
-                href="/"
-                className="text-left"
+                href="/
+                className="text-left
               >
                 View Case Studies
               </a>

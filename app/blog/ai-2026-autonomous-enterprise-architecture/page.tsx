@@ -17,11 +17,11 @@ export const metadata: Metadata = {
 
 export default function AI2026AutonomousEnterpriseArchitecture() {
   return (
-    <div className="text-left">
-      <div className="text-left">
+    <div className="text-left"></div>
+      <div className="text-left"></div>
         {/* Header */}
-        <div className="text-left">
-          <div className="text-left">
+        <div className="text-left"></div>
+          <div className="text-left"></div>
             <span className="text-left"><
             Revolutionary AI Architecture
           </div>
@@ -36,9 +36,9 @@ export default function AI2026AutonomousEnterpriseArchitecture() {
         </div>
 
         {/* Key Features Grid */}
-        <div className="text-left">
-          <div className="text-left">
-            <div className="text-left">
+        <div className="text-left"></div>
+          <div className="text-left"></div>
+            <div className="text-left"></div>
               <svg className="text-left" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
@@ -50,8 +50,8 @@ export default function AI2026AutonomousEnterpriseArchitecture() {
             </p>
           </div>
 
-          <div className="text-left">
-            <div className="text-left">
+          <div className="text-left"></div>
+            <div className="text-left"></div>
               <svg className="text-left" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
               </svg>
@@ -63,8 +63,8 @@ export default function AI2026AutonomousEnterpriseArchitecture() {
             </p>
           </div>
 
-          <div className="text-left">
-            <div className="text-left">
+          <div className="text-left"></div>
+            <div className="text-left"></div>
               <svg className="text-left" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
               </svg>
@@ -77,8 +77,8 @@ export default function AI2026AutonomousEnterpriseArchitecture() {
           </div>
 
         {/* Main Content */}
-<div className="text-left">
-          <div className="text-left">
+<div className="text-left"></div>
+          <div className="text-left"></div>
             <h2 className="text-left">The Autonomous Architecture Revolution</h2>"
             <div className="text-left">origin/cursor/fix-errors-and-merge-to-main-0638
               <p>
@@ -110,22 +110,22 @@ export default function AI2026AutonomousEnterpriseArchitecture() {
             </div>
 
             {/* Call to Action */}
-            <div className="text-left">
+            <div className="text-left"></div>
               <h3 className="text-left">Ready to Transform Your Enterprise Architecture?</h3>
               <p className="text-left">
                 Discover how Zion Tech Group can help you implement autonomous enterprise architecture 
                 solutions that revolutionize your business operations.
               </p>
-              <div className="text-left">
+              <div className="text-left"></div>
                 <Link 
-                  href="/"
-                  className="text-left"
+                  href="/
+                  className="text-left
                 >
                   Get Started Today
                 </Link>
                 <Link 
-                  href="/"
-                  className="text-left"
+                  href="/
+                  className="text-left
                 >
                   Learn More
                 </Link>
@@ -133,11 +133,11 @@ export default function AI2026AutonomousEnterpriseArchitecture() {
           </div>
 
         {/* Related Content */}
-        <div className="text-left">
+        <div className="text-left"></div>
           <h2 className="text-left">Related Content</h2>
-          <div className="text-left">
+          <div className="text-left"></div>
             <Link href="/blog/ai-2026-autonomous-operations" className="text-left">
-              <div className="text-left">
+              <div className="text-left"></div>
                 <h3 className="text-left">
                   Autonomous Operations 2026
                 </h3>
@@ -148,7 +148,7 @@ export default function AI2026AutonomousEnterpriseArchitecture() {
             </Link>
 
             <Link href="/blog/ai-2026-predictive-infrastructure" className="text-left">
-              <div className="text-left">
+              <div className="text-left"></div>
                 <h3 className="text-left">
                   Predictive Infrastructure
                 </h3>
@@ -159,7 +159,7 @@ export default function AI2026AutonomousEnterpriseArchitecture() {
             </Link>
 
             <Link href="/blog/ai-2026-self-healing-systems" className="text-left">
-              <div className="text-left">
+              <div className="text-left"></div>
                 <h3 className="text-left">
                   Self-Healing Systems
                 </h3>
@@ -171,10 +171,10 @@ export default function AI2026AutonomousEnterpriseArchitecture() {
           </div>
 
         {/* Back to Blog */}
-        <div className="text-left">
+        <div className="text-left"></div>
           <Link 
-            href="/"
-            className="text-left"
+            href="/
+            className="text-left
           >
             <svg className="text-left" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />

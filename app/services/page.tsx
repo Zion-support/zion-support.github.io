@@ -364,10 +364,10 @@ export default function ServicesPage() {
   ];
 
   return (
-    <div className="text-left">
+    <div className="text-left"></div>
       {/* Hero Section */}
       <section className="text-left">
-        <div className="text-left">
+        <div className="text-left"></div>
           <h1 className="text-left">
             AI & IT Services
           </h1>
@@ -376,16 +376,16 @@ export default function ServicesPage() {
             and enterprise IT services that drive growth and innovation. From AI content generation 
             to autonomous business operations, we deliver comprehensive technology solutions.
           </p>
-          <div className="text-left">
+          <div className="text-left"></div>
             <a
-              href="tel:+13024640950"
-              className="text-left"
+              href="tel:+13024640950
+              className="text-left
             >
               Call +1 302 464 0950
             </a>
             <a
-              href="mailto:kleber@ziontechgroup.com"
-              className="text-left"
+              href="mailto:kleber@ziontechgroup.com
+              className="text-left
             >
               Get a Quote
             </a>
@@ -395,8 +395,8 @@ export default function ServicesPage() {
 
       {/* Services Grid */}
       <section className="text-left">
-        <div className="text-left">
-          <div className="text-left">
+        <div className="text-left"></div>
+          <div className="text-left"></div>
             <h2 className="text-left">
               Our Comprehensive Services
             </h2>
@@ -408,13 +408,13 @@ export default function ServicesPage() {
             </p>
           </div>
 
-          <div className="text-left">
+          <div className="text-left"></div>
             {services.map((service, index) => (
               <div
                 key={index}
-                className="text-left"
-              >
-                <div className="text-left">
+                className="text-left
+              ></div>
+                <div className="text-left"></div>
                   {service.icon}
                 </div>
                 <h3 className="text-left">
@@ -435,7 +435,7 @@ export default function ServicesPage() {
                 </ul>
                 <Link
                   href={service.href}
-                  className="text-left"
+                  className="text-left
                 >
                   <span>Learn More</span>
                   <svg className="text-left" fill="currentColor" viewBox="0 0 20 20">"
@@ -450,8 +450,8 @@ export default function ServicesPage() {
 
       {/* Success Metrics */}
       <section className="text-left">
-        <div className="text-left">
-          <div className="text-left">
+        <div className="text-left"></div>
+          <div className="text-left"></div>
             <h2 className="text-left">
               Proven Results
             </h2>
@@ -460,23 +460,23 @@ export default function ServicesPage() {
             </p>
           </div>
 
-          <div className="text-left">
-            <div className="text-left">
+          <div className="text-left"></div>
+            <div className="text-left"></div>
               <div className="text-left">89%</div>"
               <p className="text-left">Efficiency Improvement</p>"
               <p className="text-left">Average client performance boost</p>"
             </div>
-            <div className="text-left">
+            <div className="text-left"></div>
               <div className="text-left">$2.3B</div>"
               <p className="text-left">Cost Savings Generated</p>"
               <p className="text-left">Across all client implementations</p>"
             </div>
-            <div className="text-left">
+            <div className="text-left"></div>
               <div className="text-left">156%</div>"
               <p className="text-left">Average ROI</p>"
               <p className="text-left">Within first year of implementation</p>"
             </div>
-            <div className="text-left">
+            <div className="text-left"></div>
               <div className="text-left">500+</div>"
               <p className="text-left">Projects Delivered</p>"
               <p className="text-left">Successful implementations worldwide</p>"
@@ -487,8 +487,8 @@ export default function ServicesPage() {
 
       {/* Process Section */}
       <section className="text-left">
-        <div className="text-left">
-          <div className="text-left">
+        <div className="text-left"></div>
+          <div className="text-left"></div>
             <h2 className="text-left">
               Our Proven Process
             </h2>
@@ -497,23 +497,23 @@ export default function ServicesPage() {
             </p>
           </div>
 
-          <div className="text-left">
-            <div className="text-left">
+          <div className="text-left"></div>
+            <div className="text-left"></div>
               <div className="text-left">1</div>"
               <h3 className="text-left">Discovery & Analysis</h3>"
               <p className="text-left">Comprehensive assessment of your current systems, requirements, and opportunities for improvement.</p>"
             </div>
-            <div className="text-left">
+            <div className="text-left"></div>
               <div className="text-left">2</div>"
               <h3 className="text-left">Strategy & Design</h3>"
               <p className="text-left">Custom solution design and implementation strategy tailored to your specific business needs.</p>"
             </div>
-            <div className="text-left">
+            <div className="text-left"></div>
               <div className="text-left">3</div>"
               <h3 className="text-left">Implementation</h3>"
               <p className="text-left">Agile development and deployment with continuous testing and optimization throughout the process.</p>"
             </div>
-            <div className="text-left">
+            <div className="text-left"></div>
               <div className="text-left">4</div>"
               <h3 className="text-left">Optimization</h3>"
               <p className="text-left">Ongoing monitoring, support, and optimization to ensure continued performance and growth.</p>"
@@ -524,8 +524,8 @@ export default function ServicesPage() {
 
       {/* Pricing Section */}
       <section className="text-left">
-        <div className="text-left">
-          <div className="text-left">
+        <div className="text-left"></div>
+          <div className="text-left"></div>
             <h2 className="text-left">
               Transparent Pricing & Market Rates
             </h2>
@@ -534,10 +534,10 @@ export default function ServicesPage() {
             </p>
           </div>
 
-          <div className="text-left">
+          <div className="text-left"></div>
             {/* Starter Package */}
-            <div className="text-left">
-              <div className="text-left">
+            <div className="text-left"></div>
+              <div className="text-left"></div>
                 <h3 className="text-left">Starter Package</h3>
                 <div className="text-left">$2,499</div>
                 <p className="text-left">Perfect for small businesses</p>
@@ -569,19 +569,19 @@ export default function ServicesPage() {
                 </li>
               </ul>
               <a
-                href="mailto:kleber@ziontechgroup.com?subject=Starter Package Inquiry"
-                className="text-left"
+                href="mailto:kleber@ziontechgroup.com?subject=Starter Package Inquiry
+                className="text-left
               >
                 Get Started
               </a>
             </div>
 
             {/* Professional Package */}
-            <div className="text-left">
-              <div className="text-left">
+            <div className="text-left"></div>
+              <div className="text-left"></div>
                 <span className="text-left">Most Popular</span>
               </div>
-              <div className="text-left">
+              <div className="text-left"></div>
                 <h3 className="text-left">Professional Package</h3>
                 <div className="text-left">$7,999</div>
                 <p className="text-left">Ideal for growing businesses</p>
@@ -619,16 +619,16 @@ export default function ServicesPage() {
                 </li>
               </ul>
               <a
-                href="mailto:kleber@ziontechgroup.com?subject=Professional Package Inquiry"
-                className="text-left"
+                href="mailto:kleber@ziontechgroup.com?subject=Professional Package Inquiry
+                className="text-left
               >
                 Get Started
               </a>
             </div>
 
             {/* Enterprise Package */}
-            <div className="text-left">
-              <div className="text-left">
+            <div className="text-left"></div>
+              <div className="text-left"></div>
                 <h3 className="text-left">Enterprise Package</h3>
                 <div className="text-left">$19,999</div>
                 <p className="text-left">Complete business transformation</p>
@@ -666,15 +666,15 @@ export default function ServicesPage() {
                 </li>
               </ul>
               <a
-                href="mailto:kleber@ziontechgroup.com?subject=Enterprise Package Inquiry"
-                className="text-left"
+                href="mailto:kleber@ziontechgroup.com?subject=Enterprise Package Inquiry
+                className="text-left
               >
                 Contact Sales
               </a>
             </div>
           </div>
 
-          <div className="text-left">
+          <div className="text-left"></div>
             <p className="text-left">
               All packages include implementation, training, and 30-day money-back guarantee.
             </p>
@@ -688,7 +688,7 @@ export default function ServicesPage() {
 
       {/* CTA Section */}
       <section className="text-left">
-        <div className="text-left">
+        <div className="text-left"></div>
           <h2 className="text-left">
             Ready to Transform Your Business?
           </h2>
@@ -697,45 +697,45 @@ export default function ServicesPage() {
           </p>
           
           {/* Contact Information */}
-          <div className="text-left">
+          <div className="text-left"></div>
             <h3 className="text-left">Get in Touch</h3>
-            <div className="text-left">
-              <div className="text-left">
+            <div className="text-left"></div>
+              <div className="text-left"></div>
                 <svg className="text-left" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                 </svg>
                 <a href="tel:+13024640950" className="text-left">+1 302 464 0950</a>
               </div>
-              <div className="text-left">
+              <div className="text-left"></div>
                 <svg className="text-left" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
                   <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
                 </svg>
                 <a href="mailto:kleber@ziontechgroup.com" className="text-left">kleber@ziontechgroup.com</a>
               </div>
-              <div className="text-left">
+              <div className="text-left"></div>
                 <svg className="text-left" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
                 </svg>
                 364 E Main St STE 1008, Middletown DE 19709
               </div>
             </div>
-            <div className="text-left">
+            <div className="text-left"></div>
               <p className="text-left">
                 Visit us at: <a href="https://ziontechgroup.com" className="text-left">https://ziontechgroup.com</a>
               </p>
             </div>
           </div>
-          <div className="text-left">
+          <div className="text-left"></div>
             <a
-              href="tel:+13024640950"
-              className="text-left"
+              href="tel:+13024640950
+              className="text-left
             >
               Call +1 302 464 0950
             </a>
             <a
-              href="mailto:kleber@ziontechgroup.com"
-              className="text-left"
+              href="mailto:kleber@ziontechgroup.com
+              className="text-left
             >
               Email Us
             </a>

@@ -9,10 +9,10 @@ export const metadata = {
 
 export default function AICognitiveComputingServices() {
   return (
-    <div className="text-left">
-      <div className="text-left">
-        <div className="text-left">
-          <span className="text-left">
+    <div className="text-left"></div>
+      <div className="text-left"></div>
+        <div className="text-left"></div>
+          <span className="text-left"></span>
             🧠 Revolutionary Service
           </span>
           <span className="text-left">Cognitive AI<"
@@ -25,24 +25,24 @@ export default function AICognitiveComputingServices() {
           and makes intelligent decisions. Our cognitive AI systems deliver 300% productivity gains and 
           95% decision accuracy for organizations worldwide.
         </p>
-        <div className="text-left">
+        <div className="text-left"></div>
           <a
-            href="tel:+13024640950"
-            className="text-left"
+            href="tel:+13024640950
+            className="text-left
           >
             Call +1 302 464 0950
           </a>
           <a
-            href="mailto:kleber@ziontechgroup.com"
-            className="text-left"
+            href="mailto:kleber@ziontechgroup.com
+            className="text-left
           >
             Get Free Consultation
           </a>
         </div>
 
-      <div className="text-left">
-        <div className="text-left">
-          <div className="text-left">
+      <div className="text-left"></div>
+        <div className="text-left"></div>
+          <div className="text-left"></div>
             <span className="text-left">🧠<"
           </div>
           <h3 className="text-left">Advanced Reasoning Engine</h3>"
@@ -60,8 +60,8 @@ export default function AICognitiveComputingServices() {
           <div className="text-left">Per reasoning system</div>"
         </div>
 
-        <div className="text-left">
-          <div className="text-left">
+        <div className="text-left"></div>
+          <div className="text-left"></div>
             <span className="text-left">📚<"
           </div>
           <h3 className="text-left">Continuous Learning System</h3>"
@@ -79,8 +79,8 @@ export default function AICognitiveComputingServices() {
           <div className="text-left">Per learning system</div>"
         </div>
 
-        <div className="text-left">
-          <div className="text-left">
+        <div className="text-left"></div>
+          <div className="text-left"></div>
             <span className="text-left">💬<"
           </div>
           <h3 className="text-left">Natural Language Understanding</h3>"
@@ -98,89 +98,89 @@ export default function AICognitiveComputingServices() {
           <div className="text-left">Per NLP system</div>"
         </div>
 
-      <div className="text-left">
+      <div className="text-left"></div>
         <h2 className="text-left">Why Choose Our Cognitive AI?</h2>"
-        <div className="text-left">
-          <div className="text-left">
+        <div className="text-left"></div>
+          <div className="text-left"></div>
             <div className="text-left">300%</div>"
             <div className="text-left">Productivity Gains</div>"
           </div>
-          <div className="text-left">
+          <div className="text-left"></div>
             <div className="text-left">95%</div>"
             <div className="text-left">Decision Accuracy</div>"
           </div>
-          <div className="text-left">
+          <div className="text-left"></div>
             <div className="text-left">$15M+</div>"
             <div className="text-left">Annual Value</div>"
           </div>
-          <div className="text-left">
+          <div className="text-left"></div>
             <div className="text-left">24/7</div>"
             <div className="text-left">Intelligent Operations</div>"
           </div>
       </div>
 
-      <div className="text-left">
+      <div className="text-left"></div>
         <h2 className="text-left">Implementation Process</h2>"
-        <div className="text-left">
-          <div className="text-left">
+        <div className="text-left"></div>
+          <div className="text-left"></div>
             <div className="text-left">1</div>"
             <h3 className="text-left">Assessment</h3>"
             <p className="text-left">Evaluate current AI capabilities and identify cognitive opportunities</p>"
           </div>
-          <div className="text-left">
+          <div className="text-left"></div>
             <div className="text-left">2</div>"
             <h3 className="text-left">Design</h3>"
             <p className="text-left">Create custom cognitive AI solutions for your organization</p>"
           </div>
-          <div className="text-left">
+          <div className="text-left"></div>
             <div className="text-left">3</div>"
             <h3 className="text-left">Deploy</h3>"
             <p className="text-left">Implement cognitive systems with comprehensive testing</p>"
           </div>
-          <div className="text-left">
+          <div className="text-left"></div>
             <div className="text-left">4</div>"
             <h3 className="text-left">Optimize</h3>"
             <p className="text-left">Continuous learning and performance optimization</p>"
           </div>
       </div>
 
-      <div className="text-left">
+      <div className="text-left"></div>
         <h2 className="text-left">Success Story</h2>"
-        <div className="text-left">
-          <div className="text-left">
+        <div className="text-left"></div>
+          <div className="text-left"></div>
             <h3 className="text-left">MedTech Solutions: 300% Productivity Gains</h3>"
             <p className="text-left">
-              "Zion Tech Group's cognitive AI transformed our diagnostic capabilities. We achieved 300% productivity "
+              "Zion Tech Group's cognitive AI transformed our diagnostic capabilities. We achieved 300% productivity 
               gains and 95% decision accuracy in medical diagnosis. The system learns continuously and improves 
               its performance with every case."
             </p>
-            <div className="text-left">
-              <div className="text-left">
+            <div className="text-left"></div>
+              <div className="text-left"></div>
                 <span className="text-left">🧠<"
               </div>
-              <div>
+              <div></div>
                 <div className="text-left">Dr. Michael Rodriguez</div>"
                 <div className="text-left">Chief Medical Officer, MedTech Solutions</div>"
               </div>
           </div>
       </div>
 
-      <div className="text-left">
+      <div className="text-left"></div>
         <h2 className="text-left">Ready to Implement Cognitive AI?</h2>"
         <p className="text-left">
           Transform your organization with next-generation cognitive computing. Get expert guidance 
           and discover the full potential of AI intelligence.
         </p>
-        <div className="text-left">
+        <div className="text-left"></div>
           <a
-            href="tel:+13024640950"
-            className="text-left"
+            href="tel:+13024640950
+            className="text-left
           >
             Call +1 302 464 0950
           </a>
           <a
-            href="mailto:kleber@ziontechgroup.com"
-            className="text-left"
+            href="mailto:kleber@ziontechgroup.com
+            className="text-left
           >
             Get Free Consultation
           </a>

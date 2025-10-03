@@ -9,10 +9,10 @@ export const metadata: Metadata = {
 
 export default function CloudMigrationServicesPage() {
   return (
-    <div className="text-left">
+    <div className="text-left"></div>
       {/* Hero Section */}
       <section className="text-left">
-        <div className="text-left">
+        <div className="text-left"></div>
           <h1 className="text-left">
             Cloud Migration Services
           </h1>
@@ -20,16 +20,16 @@ export default function CloudMigrationServicesPage() {
             Seamlessly migrate your infrastructure to AWS, Azure, or Google Cloud with 
             zero downtime, cost optimization, and comprehensive support.
           </p>
-          <div className="text-left">
+          <div className="text-left"></div>
             <a
-              href="tel:+13024640950"
-              className="text-left"
+              href="tel:+13024640950
+              className="text-left
             >
               Call +1 302 464 0950
             </a>
             <a
-              href="mailto:kleber@ziontechgroup.com?subject=Cloud Migration Services Inquiry"
-              className="text-left"
+              href="mailto:kleber@ziontechgroup.com?subject=Cloud Migration Services Inquiry
+              className="text-left
             >
               Get Migration Quote
             </a>
@@ -38,8 +38,8 @@ export default function CloudMigrationServicesPage() {
 
       {/* Cloud Providers Section */}
       <section className="text-left">
-        <div className="text-left">
-          <div className="text-left">
+        <div className="text-left"></div>
+          <div className="text-left"></div>
             <h2 className="text-left">
               Expert Cloud Platform Migration
             </h2>
@@ -49,11 +49,11 @@ export default function CloudMigrationServicesPage() {
             </p>
           </div>
 
-          <div className="text-left">
+          <div className="text-left"></div>
             {/* AWS Migration */}
-            <div className="text-left">
-              <div className="text-left">
-                <div className="text-left">
+            <div className="text-left"></div>
+              <div className="text-left"></div>
+                <div className="text-left"></div>
                   <svg className="text-left" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
                   </svg>
@@ -87,14 +87,14 @@ export default function CloudMigrationServicesPage() {
                   CloudFormation & CDK
                 </li>
               </ul>
-              <div className="text-left">
+              <div className="text-left"></div>
                 <span className="text-left">Starting at $2,999</span>
               </div>
 
             {/* Azure Migration */}
-            <div className="text-left">
-              <div className="text-left">
-                <div className="text-left">
+            <div className="text-left"></div>
+              <div className="text-left"></div>
+                <div className="text-left"></div>
                   <svg className="text-left" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M11.4 24H0V12.6h11.4V24zM24 24H12.6V12.6H24V24zM11.4 11.4H0V0h11.4v11.4zM24 11.4H12.6V0H24v11.4z"/>
                   </svg>
@@ -128,14 +128,14 @@ export default function CloudMigrationServicesPage() {
                   ARM Templates & Bicep
                 </li>
               </ul>
-              <div className="text-left">
+              <div className="text-left"></div>
                 <span className="text-left">Starting at $3,499</span>
               </div>
 
             {/* Google Cloud Migration */}
-            <div className="text-left">
-              <div className="text-left">
-                <div className="text-left">
+            <div className="text-left"></div>
+              <div className="text-left"></div>
+                <div className="text-left"></div>
                   <svg className="text-left" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
                     <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
@@ -172,7 +172,7 @@ export default function CloudMigrationServicesPage() {
                   Cloud Functions & AI/ML
                 </li>
               </ul>
-              <div className="text-left">
+              <div className="text-left"></div>
                 <span className="text-left">Starting at $2,999</span>
               </div>
           </div>
@@ -180,8 +180,8 @@ export default function CloudMigrationServicesPage() {
 
       {/* Migration Process Section */}
       <section className="text-left">
-        <div className="text-left">
-          <div className="text-left">
+        <div className="text-left"></div>
+          <div className="text-left"></div>
             <h2 className="text-left">
               Our Proven Migration Process
             </h2>
@@ -190,28 +190,28 @@ export default function CloudMigrationServicesPage() {
             </p>
           </div>
 
-          <div className="text-left">
-            <div className="text-left">
+          <div className="text-left"></div>
+            <div className="text-left"></div>
               <div className="text-left">1</div>
               <h3 className="text-left">Assessment</h3>
               <p className="text-left">Comprehensive analysis of current infrastructure, applications, and dependencies.</p>
             </div>
-            <div className="text-left">
+            <div className="text-left"></div>
               <div className="text-left">2</div>
               <h3 className="text-left">Planning</h3>
               <p className="text-left">Detailed migration strategy, timeline, and cost optimization plan.</p>
             </div>
-            <div className="text-left">
+            <div className="text-left"></div>
               <div className="text-left">3</div>
               <h3 className="text-left">Testing</h3>
               <p className="text-left">Pilot migration and thorough testing in cloud environment.</p>
             </div>
-            <div className="text-left">
+            <div className="text-left"></div>
               <div className="text-left">4</div>
               <h3 className="text-left">Migration</h3>
               <p className="text-left">Zero-downtime migration with real-time monitoring and rollback capability.</p>
             </div>
-            <div className="text-left">
+            <div className="text-left"></div>
               <div className="text-left">5</div>
               <h3 className="text-left">Optimization</h3>
               <p className="text-left">Performance tuning, cost optimization, and ongoing support.</p>
@@ -221,8 +221,8 @@ export default function CloudMigrationServicesPage() {
 
       {/* Pricing Section */}
       <section className="text-left">
-        <div className="text-left">
-          <div className="text-left">
+        <div className="text-left"></div>
+          <div className="text-left"></div>
             <h2 className="text-left">
               Cloud Migration Pricing
             </h2>
@@ -231,10 +231,10 @@ export default function CloudMigrationServicesPage() {
             </p>
           </div>
 
-          <div className="text-left">
+          <div className="text-left"></div>
             {/* Small Business */}
-            <div className="text-left">
-              <div className="text-left">
+            <div className="text-left"></div>
+              <div className="text-left"></div>
                 <h3 className="text-left">Small Business</h3>
                 <div className="text-left">$2,999</div>
                 <p className="text-left">Up to 10 servers</p>
@@ -266,19 +266,19 @@ export default function CloudMigrationServicesPage() {
                 </li>
               </ul>
               <a
-                href="mailto:kleber@ziontechgroup.com?subject=Small Business Cloud Migration"
-                className="text-left"
+                href="mailto:kleber@ziontechgroup.com?subject=Small Business Cloud Migration
+                className="text-left
               >
                 Get Quote
               </a>
             </div>
 
             {/* Enterprise */}
-            <div className="text-left">
-              <div className="text-left">
+            <div className="text-left"></div>
+              <div className="text-left"></div>
                 <span className="text-left">Most Popular</span>
               </div>
-              <div className="text-left">
+              <div className="text-left"></div>
                 <h3 className="text-left">Enterprise</h3>
                 <div className="text-left">$9,999</div>
                 <p className="text-left">Up to 50 servers</p>
@@ -316,16 +316,16 @@ export default function CloudMigrationServicesPage() {
                 </li>
               </ul>
               <a
-                href="mailto:kleber@ziontechgroup.com?subject=Enterprise Cloud Migration"
-                className="text-left"
+                href="mailto:kleber@ziontechgroup.com?subject=Enterprise Cloud Migration
+                className="text-left
               >
                 Get Quote
               </a>
             </div>
 
             {/* Custom Solution */}
-            <div className="text-left">
-              <div className="text-left">
+            <div className="text-left"></div>
+              <div className="text-left"></div>
                 <h3 className="text-left">Custom Solution</h3>
                 <div className="text-left">$15,999+</div>
                 <p className="text-left">Large-scale enterprise</p>
@@ -363,14 +363,14 @@ export default function CloudMigrationServicesPage() {
                 </li>
               </ul>
               <a
-                href="mailto:kleber@ziontechgroup.com?subject=Custom Cloud Migration Solution"
-                className="text-left"
+                href="mailto:kleber@ziontechgroup.com?subject=Custom Cloud Migration Solution
+                className="text-left
               >
                 Contact Sales
               </a>
             </div>
 
-          <div className="text-left">
+          <div className="text-left"></div>
             <p className="text-left">
               All migrations include comprehensive testing, training, and documentation.
             </p>
@@ -382,23 +382,23 @@ export default function CloudMigrationServicesPage() {
 
       {/* CTA Section */}
       <section className="text-left">
-        <div className="text-left">
+        <div className="text-left"></div>
           <h2 className="text-left">
             Ready to Migrate to the Cloud?
           </h2>
           <p className="text-left">
             Let our experts help you migrate to the cloud with zero downtime and maximum efficiency
           </p>
-          <div className="text-left">
+          <div className="text-left"></div>
             <a
-              href="tel:+13024640950"
-              className="text-left"
+              href="tel:+13024640950
+              className="text-left
             >
               Call +1 302 464 0950
             </a>
             <a
-              href="mailto:kleber@ziontechgroup.com?subject=Cloud Migration Services Inquiry"
-              className="text-left"
+              href="mailto:kleber@ziontechgroup.com?subject=Cloud Migration Services Inquiry
+              className="text-left
             >
               Get Migration Quote
             </a>
