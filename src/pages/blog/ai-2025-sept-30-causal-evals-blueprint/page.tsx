@@ -3,6 +3,10 @@ export default function AICausalEvalsBlueprint2025(): JSX.Element {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">"
       <Helmet >
+        <title >AI 2025: Causal Evals Blueprint — KPIs, Budgets, Rollback</title>,
+        <meta name="description"
+  content="Design causal evaluation scorecards wired to KPIs with budgeted actions, live canaries, and instant rollback." /><link rel="canonical"
+  href="https://ziontechgroup.com/blog/ai-2025-sept-30-causal-evals-blueprint"
         />
       </Helmet>
 

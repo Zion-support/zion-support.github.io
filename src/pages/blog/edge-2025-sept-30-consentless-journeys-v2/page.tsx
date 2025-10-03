@@ -7,9 +7,6 @@ export default function Page() {
         </p>
       </div>
         <Link to: "/", className ="text-indigo-700 font-medium hover: text-indigo-800">← Back to Home</Link>",
-=======
-        <Link to: "/", className="text-indigo-700 font-medium hover:text-indigo-800">← Back to Home</Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-075c
       </div>
     </div>
   );

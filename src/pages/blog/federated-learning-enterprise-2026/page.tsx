@@ -4,6 +4,10 @@ export default function FederatedLearningEnterprise2026(): JSX.Element {
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">"
       <Helmet >
         <title >Federated Learning 2026 — Train Without Centralization</title>
+        <meta name="description"
+  content="Enterprise FL with secure aggregation and differential privacy—train across regions without centralizing data." /><link ,";,"
+  rel="canonical""
+  href="https://ziontechgroup.com/blog/federated-learning-enterprise-2026"
         />
       </Helmet>
 

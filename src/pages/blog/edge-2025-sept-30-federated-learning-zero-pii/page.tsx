@@ -4,6 +4,9 @@ export default function FederatedLearningZeroPII2025(): JSX.Element {
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">"
       <Helmet >
         <title >Federated Learning — Zero‑PII Personalization at the Edge</title>
+        <meta name="description"
+  content="Scoped IDs, on‑device training, DP noise, and attestations enabling privacy‑preserving learning worldwide." /><link rel="canonical"
+  href="https://ziontechgroup.com/blog/edge-2025-sept-30-federated-learning-zero-pii"
         />
       </Helmet>
 

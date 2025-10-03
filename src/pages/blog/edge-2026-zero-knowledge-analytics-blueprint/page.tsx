@@ -3,6 +3,10 @@ export default function EdgeZeroKnowledgeAnalyticsBlueprint2026(): JSX.Element {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">"
       <Helmet >
+        <title >Edge 2026: Zero‑Knowledge Analytics Blueprint</title>,
+        <meta name="description"
+  content="Consentless, privacy‑proof analytics using ZK proofs, scoped IDs, and on‑device aggregation." /><link rel="canonical"
+  href="https://ziontechgroup.com/blog/edge-2026-zero-knowledge-analytics-blueprint"
         />
       </Helmet>
 

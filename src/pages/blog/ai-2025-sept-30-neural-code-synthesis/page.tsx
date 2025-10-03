@@ -4,6 +4,11 @@ export default function NeuralCodeSynthesis2025(): JSX.Element {
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">"
       <Helmet >
         <title >Neural Code Synthesis 2025 — 95% Accuracy, 90% Faster Delivery</title>
+        <meta name="description"
+  content: "Production blueprint for neural code assistants: policy tests, eval scorecards, and instant rollback for safe velocity."
+        />
+        <link rel="canonical"
+  href="https://ziontechgroup.com/blog/ai-2025-sept-30-neural-code-synthesis"
         />
       </Helmet>
 

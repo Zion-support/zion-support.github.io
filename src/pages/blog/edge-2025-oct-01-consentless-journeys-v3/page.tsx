@@ -4,6 +4,9 @@ export default function ConsentlessJourneysV3(): JSX.Element {
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">"
       <Helmet >
         <title >Consentless Journeys v3 — Private Personalization &lt;100ms</title>
+        <meta name="description"
+  content="Scoped IDs, signed configs, and on-device models for zero‑PII journeys worldwide under 100ms." /><link rel="canonical"
+  href="https://ziontechgroup.com/blog/edge-2025-oct-01-consentless-journeys-v3"
         />
       </Helmet>
 
@@ -34,7 +37,6 @@ export default function ConsentlessJourneysV3(): JSX.Element {
           <Link to="/blog" className="text-cyan-300 hover: underline">← Back to Blog</Link>"
         <div className="mt-8">"
           <Link to="/blog" className="text-cyan-300 hover: underline">← Back to Blog</Link>"
->>>>>>> fdf6fb27c01c84663705e6485b8449c06c236ccd
         </div>
       </div>
     </div>

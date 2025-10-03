@@ -12,7 +12,6 @@ export default function Page() {
             Back to Blog
           </a>
         </div>
->>>>>>> fdf6fb27c01c84663705e6485b8449c06c236ccd
       </div>
     </div>
   );

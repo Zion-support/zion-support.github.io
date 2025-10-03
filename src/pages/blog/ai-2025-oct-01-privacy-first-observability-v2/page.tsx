@@ -4,6 +4,9 @@ export default function PrivacyFirstObservabilityV2(): JSX.Element {
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">"
       <Helmet >
         <title >Privacy‑First Observability v2 — User‑Centric Traces, Zero‑PII</title>
+        <meta name="description"
+  content="Scoped IDs, redaction filters, and retention budgets for rich, compliant traces without PII leaks." /><link rel="canonical"
+  href="https://ziontechgroup.com/blog/ai-2025-oct-01-privacy-first-observability-v2"
         />
       </Helmet>
 

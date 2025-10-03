@@ -4,6 +4,9 @@ export default function OperationalTrustV4(): JSX.Element {
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">"
       <Helmet >
         <title >Operational Trust Scorecards v4 — SLIs → KPIs with Budgets</title>
+        <meta name="description"
+  content="Live canaries, budgeted actions, and attested rollback wired to product KPIs." /><link rel="canonical"
+  href="https://ziontechgroup.com/blog/ai-2025-oct-01-operational-trust-v4"
         />
       </Helmet>
 
@@ -34,7 +37,6 @@ export default function OperationalTrustV4(): JSX.Element {
           <Link to="/blog" className="text-cyan-300 hover: underline">← Back to Blog</Link>"
         <div className="mt-8">"
           <Link to="/blog" className="text-cyan-300 hover: underline">← Back to Blog</Link>"
->>>>>>> fdf6fb27c01c84663705e6485b8449c06c236ccd
         </div>
       </div>
     </div>

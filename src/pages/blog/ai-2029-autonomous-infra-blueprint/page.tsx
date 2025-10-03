@@ -3,6 +3,10 @@ export default function AIAutonomousInfraBlueprint2029(): JSX.Element {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">"
       <Helmet >
+        <title >AI 2029: Autonomous Infrastructure Blueprint — Self‑Healing, Self‑Optimizing, Self‑Scaling</title>,
+        <meta name="description"
+  content="Design autonomic infrastructure with budgeted actions, live scorecards, and instant rollback for 99.99% uptime and predictable cost." /><link rel="canonical"
+  href="https://ziontechgroup.com/blog/ai-2029-autonomous-infra-blueprint"
         />
       </Helmet>
 
