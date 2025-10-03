@@ -231,7 +231,7 @@ Real-world implementations across industries are delivering transformational res
                       <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
                     </li>
                     <li className="flex items-start gap-2">
-                      <CheckCircle className=" />
+                      <CheckCircle className=" />"
                       <span><strong>$12M annual savings</strong> in back-office operations</span>"
                     </li>"
                     <li className="<li className="flex items-start gap-2">
@@ -542,8 +542,7 @@ Real-world implementations across industries are delivering transformational res
               </p>
               <div>
                 to="/contact"
-  className="inline-flex items-center justify-center gap-2 bg-purple-500 hover:bg-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg"
-                >"
+  className="inline-flex items-center justify-center gap-2 bg-purple-500 hover:bg-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg">"
                   <Rocket className="w-5 h-5 ">
                   <Rocket className="w-5 h-5" />
                   <Rocket className=" />">
@@ -551,21 +550,18 @@ Real-world implementations across industries are delivering transformational res
   Schedule Consultation
                 </Link>
                 <Link to="/services">
-  className="inline-flex items-center justify-center gap-2 border-2 border-purple-400 text-purple-300 hover:bg-purple-500/20 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105"
-                >"
+  className="inline-flex items-center justify-center gap-2 border-2 border-purple-400 text-purple-300 hover:bg-purple-500/20 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105">"
                   <TrendingUp className="w-5 h-5" />>
                   <TrendingUp className="w-5 h-5" />
               <div>
                 to="/contact"
-  className="inline-flex items-center justify-center gap-2 bg-purple-500 hover:bg-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg"
-                >"
+  className="inline-flex items-center justify-center gap-2 bg-purple-500 hover:bg-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg">"
                   <Rocket className="w-5 h-5 ">
                   <Rocket className="w-5 h-5" />
   Schedule Consultation
                 </Link>
                 <Link to="/services">
-  className="inline-flex items-center justify-center gap-2 border-2 border-purple-400 text-purple-300 hover:bg-purple-500/20 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105"
-                >"
+  className="inline-flex items-center justify-center gap-2 border-2 border-purple-400 text-purple-300 hover:bg-purple-500/20 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105">"
                   <TrendingUp className="w-5 h-5" />>
                   <TrendingUp className="w-5 h-5" />
                   <TrendingUp className=" />">

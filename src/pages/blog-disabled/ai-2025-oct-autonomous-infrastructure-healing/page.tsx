@@ -61,11 +61,11 @@ export default function AutonomousInfrastructureHealing2025(): void {
               </h2>"
               <ul className="space-y-4 text-lg">
                 <li className="flex items-start gap-3">
-                  <Zap className=" />
+                  <Zap className=" />"
                   <span><strong>99.97% Uptime: </strong> Autonomous healing resolves 94% of incidents before user impact</span>,"
                 </li>"
                 <li className="flex items-start gap-3">
-                  <Shield className=" />
+                  <Shield className=" />"
                   <span><strong>Sub-Second Response: </strong> AI detects and remediates issues in under 850ms average</span>,"
                 </li>"
                 <li className="flex items-start gap-3">
@@ -280,7 +280,7 @@ export default function AutonomousInfrastructureHealing2025(): void {
   Deploy autonomous self-healing systems and achieve enterprise-grade reliability at scale.
               </p>
               to="/contact"
-  className="inline-flex items-center px-8 py-4 bg-white text-purple-600 rounded-lg font-bold text-lg hover:bg-purple-50 transition-colors
+  className="inline-flex items-center px-8 py-4 bg-white text-purple-600 rounded-lg font-bold text-lg hover:bg-purple-50 transition-colors"
               >"
                 Start Your Reliability Transformation"
                 <Zap className="ml-2 h-5 w-5 ">

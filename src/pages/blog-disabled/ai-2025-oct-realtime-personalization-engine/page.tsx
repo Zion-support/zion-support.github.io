@@ -61,11 +61,11 @@ export default function RealtimePersonalizationEngine2025(): void {
               </h2>"
               <ul className="space-y-4 text-lg">
                 <li className="flex items-start gap-3">
-                  <Zap className=" />
+                  <Zap className=" />"
                   <span><strong>98.4% Relevance: </strong> AI predicts user intent and preferences with near-perfect accuracy</span>,"
                 </li>"
                 <li className="flex items-start gap-3">
-                  <Users className=" />
+                  <Users className=" />"
                   <span><strong>8.7x Conversion Lift: </strong> Personalized experiences drive dramatic engagement increases</span>,"
                 </li>"
                 <li className="flex items-start gap-3">
@@ -282,7 +282,7 @@ export default function RealtimePersonalizationEngine2025(): void {
   Deploy real-time personalization and transform every customer interaction into revenue opportunity.
               </p>
               to="/contact"
-  className="inline-flex items-center px-8 py-4 bg-white text-rose-600 rounded-lg font-bold text-lg hover:bg-rose-50 transition-colors
+  className="inline-flex items-center px-8 py-4 bg-white text-rose-600 rounded-lg font-bold text-lg hover:bg-rose-50 transition-colors"
               >"
                 Start Your Personalization Journey"
                 <Target className="ml-2 h-5 w-5 ">

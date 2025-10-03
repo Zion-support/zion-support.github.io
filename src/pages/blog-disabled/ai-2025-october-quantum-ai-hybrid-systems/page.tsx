@@ -57,7 +57,7 @@ const QuantumAIHybrid2025: () => {
   </div>
   </div>
   Discover how quantum-AI hybrid systems are revolutionizing enterprise computing. Learn implementation strategies
-              real-world applications, and ROI optimization for 1000x processing speed gains.
+              real-world applications, and ROI optimization for 1000x processing speed gains."
             </p>"
             "
             <div><Clock className="w-4 h-4 mr-2" />15 min read</div>
@@ -157,7 +157,7 @@ const QuantumAIHybrid2025: () => {
                   </p>
                   <div>
                     to="/contact"
-  className="bg-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:bg-purple-600 transition-colors inline-flex items-center justify-center gap-2
+  className="bg-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:bg-purple-600 transition-colors inline-flex items-center justify-center gap-2"
                     >"
                       Explore Quantum-AI Solutions"
                       <ArrowRight className="w-5 h-5 " />
@@ -170,7 +170,7 @@ const QuantumAIHybrid2025: () => {
                 <div>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     to="/contact"
-  className="bg-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:bg-purple-600 transition-colors inline-flex items-center justify-center gap-2
+  className="bg-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:bg-purple-600 transition-colors inline-flex items-center justify-center gap-2"
                     >"
                       Explore Quantum-AI Solutions"
                       <ArrowRight className="w-5 h-5 " />

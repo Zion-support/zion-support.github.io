@@ -266,7 +266,7 @@ const EnterpriseAITransformationSuccessStrategies: () => {
                 </p>
                 <div>
                   to="/contact"
-  className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-bold rounded-lg hover:from-purple-600 hover:to-cyan-600 transition-all
+  className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-bold rounded-lg hover:from-purple-600 hover:to-cyan-600 transition-all"
                   >"
                     Schedule AI Assessment"
                     <Rocket className="w-5 h-5 ">
@@ -286,7 +286,7 @@ const EnterpriseAITransformationSuccessStrategies: () => {
                 </p>
                 <div>
                   to="/contact"
-  className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-bold rounded-lg hover:from-purple-600 hover:to-cyan-600 transition-all
+  className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-bold rounded-lg hover:from-purple-600 hover:to-cyan-600 transition-all"
                   >"
                     Schedule AI Assessment"
                     <Rocket className="w-5 h-5 ">

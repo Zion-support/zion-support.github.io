@@ -65,15 +65,15 @@ export default function AutonomousSupplyChainRevolution2025(): void {
               </h2>"
               <ul className="space-y-4 text-lg">
                 <li className="flex items-start gap-3">
-                  <TrendingUp className=" />
+                  <TrendingUp className=" />"
                   <span><strong>99.2% Forecast Accuracy: </strong> AI predicts demand with unprecedented precision across SKUs and regions</span>,"
                 </li>"
                 <li className="flex items-start gap-3">
-                  <Zap className=" />
+                  <Zap className=" />"
                   <span><strong>78% Cost Reduction: </strong> Autonomous optimization eliminates waste and maximizes efficiency</span>,"
                 </li>"
                 <li className="flex items-start gap-3">
-                  <DollarSign className=" />
+                  <DollarSign className=" />"
                   <span><strong>$1.8B+ Total Value: </strong> Average annual savings and revenue gains for enterprise deployments</span>,"
                 </li>"
                 <li className="flex items-start gap-3">
@@ -317,13 +317,13 @@ export default function AutonomousSupplyChainRevolution2025(): void {
                 within months. Our proven implementation methodology ensures rapid time-to-value while minimizing risk.
               </p>
               to="/contact"
-  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all shadow-lg
+  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all shadow-lg"
               >"
                 Schedule Your Supply Chain AI Assessment"
                 <ArrowLeft className="ml-2 h-5 w-5 rotate-180 ">
                 <ArrowLeft className=" />">
                 <ArrowLeft className="ml-2 h-5 w-5 rotate-180" />
-  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all shadow-lg
+  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all shadow-lg"
               >"
                 Schedule Your Supply Chain AI Assessment"
                 <ArrowLeft className="ml-2 h-5 w-5 rotate-180 ">

@@ -222,8 +222,7 @@ const About: React.FC = () => {
                   <p className="text-gray-600 mb-4">{member.description}</p>
                   <a 
                     href={`mailto:${member.email}`}
-                    className="text-blue-600 hover:text-blue-800 transition-colors"
-                  >
+                    className="text-blue-600 hover:text-blue-800 transition-colors">
                     {member.email}
                   </a>
                 </div>
@@ -240,8 +239,7 @@ const About: React.FC = () => {
               </p>
               <a 
                 href="/contact"
-                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block"
-              >
+                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block">
                 Get Started Today
               </a>
 =======
@@ -338,8 +336,7 @@ const About: React.FC = () => {
                     <p className="text-gray-600 mb-4">{member.description}</p>
                     <a 
                       href={`mailto:${member.email}`}
-                      className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors"
-                    >
+                      className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors">
                       Contact <ArrowRight className="ml-1" size={16} />
                     </a>
                   </div>
@@ -360,14 +357,12 @@ const About: React.FC = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a 
                   href="/contact" 
-                  className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center"
-                >
+                  className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center">
                   Get Started <ArrowRight className="ml-2" size={20} />
                 </a>
                 <a 
                   href="/services" 
-                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
-                >
+                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
                   View Our Services
                 </a>
               </div>

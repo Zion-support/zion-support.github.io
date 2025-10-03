@@ -55,13 +55,13 @@ const EnterpriseAutomation2025: () => {
             <div><Clock className=" />18 min read</div>"
               <div><CheckCircle className=" />Featured</div>
   </div>
-  </div>
+  </div>"
 "
                     comprehensive AI automation strategies are seeing <strong >400-600% efficiency gains</strong>"
             <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
             <div><Clock className=" />18 min read</div>"
               <div><CheckCircle className=" />Featured</div>
-  </div>
+  </div>"
           </div>"
 "
           <article className=" />max-w-4xl mx-auto">
@@ -173,7 +173,7 @@ const EnterpriseAutomation2025: () => {
                   </p>
                   <div>
                     to="/contact"
-  className="bg-emerald-500 text-white px-8 py-4 rounded-lg font-semibold hover:bg-emerald-600 transition-colors inline-flex items-center justify-center gap-2
+  className="bg-emerald-500 text-white px-8 py-4 rounded-lg font-semibold hover:bg-emerald-600 transition-colors inline-flex items-center justify-center gap-2"
                     >"
                       Start Your Transformation"
                       <ArrowRight className="w-5 h-5 " />
@@ -186,7 +186,7 @@ const EnterpriseAutomation2025: () => {
                 <div>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     to="/contact"
-  className="bg-emerald-500 text-white px-8 py-4 rounded-lg font-semibold hover:bg-emerald-600 transition-colors inline-flex items-center justify-center gap-2
+  className="bg-emerald-500 text-white px-8 py-4 rounded-lg font-semibold hover:bg-emerald-600 transition-colors inline-flex items-center justify-center gap-2"
                     >"
                       Start Your Transformation"
                       <ArrowRight className="w-5 h-5 " />

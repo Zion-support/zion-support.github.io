@@ -48,24 +48,21 @@ export default function BlogPost(): React.JSX.Element {
                     href={`https://twitter.com/intent/tweet?text=${encodeURIComponent("Ai 2025 Sept 30 Customer Agent Blueprints")}&url=${encodeURIComponent(window.location.href)}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-white bg-opacity-20 hover:bg-opacity-30 px-4 py-2 rounded-lg transition-colors"
-                  >
+                    className="bg-white bg-opacity-20 hover:bg-opacity-30 px-4 py-2 rounded-lg transition-colors">
                     Twitter
                   </a>
                   <a 
                     href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(window.location.href)}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-white bg-opacity-20 hover:bg-opacity-30 px-4 py-2 rounded-lg transition-colors"
-                  >
+                    className="bg-white bg-opacity-20 hover:bg-opacity-30 px-4 py-2 rounded-lg transition-colors">
                     LinkedIn
                   </a>
                 </div>
               </div>
               <a 
                 href="/blog"
-                className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-              >
+                className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
                 Back to Blog
               </a>
             </div>

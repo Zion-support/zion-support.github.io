@@ -21,8 +21,7 @@ const ZeroTrustAISecurityFramework2025: () => {
       </Helmet>
 
             <Link to="/blog">
-  className="inline-flex items-center text-white/90 hover:text-white mb-8 transition-colors"
-            >"
+  className="inline-flex items-center text-white/90 hover:text-white mb-8 transition-colors">"
               <ArrowLeft className="w-4 h-4 mr-2 ">
               <ArrowLeft className="w-4 h-4 mr-2" />
               <ArrowLeft className="w-4 h-4 mr-2" />>
@@ -44,8 +43,7 @@ const ZeroTrustAISecurityFramework2025: () => {
       </Helmet>
 
             <Link to="/blog">
-  className="inline-flex items-center text-white/90 hover:text-white mb-8 transition-colors"
-            >"
+  className="inline-flex items-center text-white/90 hover:text-white mb-8 transition-colors">"
               <ArrowLeft className="w-4 h-4 mr-2 ">
               <ArrowLeft className="w-4 h-4 mr-2" />
   Back to Blog
@@ -491,7 +489,7 @@ const ZeroTrustAISecurityFramework2025: () => {
   Get a comprehensive security audit of your AI systems from our experts.
                 </p>
                 to="/contact"
-  className="inline-flex items-center px-8 py-4 bg-white text-red-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors
+  className="inline-flex items-center px-8 py-4 bg-white text-red-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors"
                 >"
                   Request Security Assessment"
                   <ArrowLeft className="w-5 h-5 ml-2 rotate-180 ">

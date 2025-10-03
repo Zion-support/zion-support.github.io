@@ -142,8 +142,7 @@ export default function PostBySlug(): React.JSX.Element {
             <p className="text-gray-600 mb-8">The article you're looking for doesn't exist.</p>
             <a 
               href="/blog" 
-              className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
-            >
+              className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
 =======
         <Helmet>
           <title>Post Not Found - Zion Tech Group</title>
@@ -155,8 +154,7 @@ export default function PostBySlug(): React.JSX.Element {
             <p className="text-gray-600 mb-8">The blog post you're looking for doesn't exist.</p>
             <a 
               href="/blog" 
-              className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors"
-            >
+              className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors">
               <ArrowLeft className="mr-2" size={20} />
 >>>>>>> main
               Back to Blog
@@ -192,8 +190,7 @@ export default function PostBySlug(): React.JSX.Element {
           <nav className="mb-8">
             <a 
               href="/blog" 
-              className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors"
-            >
+              className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors">
               <ArrowLeft className="mr-2" size={20} />
               Back to Blog
             </a>
@@ -268,8 +265,7 @@ export default function PostBySlug(): React.JSX.Element {
                   </p>
                   <a 
                     href={`/blog/${relatedArticle.slug}`}
-                    className="text-blue-600 hover:text-blue-800 font-medium"
-                  >
+                    className="text-blue-600 hover:text-blue-800 font-medium">
                     Read More →
                   </a>
                 </div>
@@ -380,14 +376,12 @@ export default function PostBySlug(): React.JSX.Element {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="/contact" 
-                className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-              >
+                className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
                 Get Consultation
               </a>
               <a 
                 href="/services" 
-                className="border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
-              >
+                className="border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors">
                 View Our Services
               </a>
             </div>

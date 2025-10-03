@@ -65,15 +65,15 @@ export default function HyperPersonalizedCustomerExperience2025(): void {
               </h2>"
               <ul className="space-y-4 text-lg">
                 <li className="flex items-start gap-3">
-                  <Sparkles className=" />
+                  <Sparkles className=" />"
                   <span><strong>97.8% Satisfaction: </strong> AI creates experiences so personalized they feel magical</span>,"
                 </li>"
                 <li className="flex items-start gap-3">
-                  <TrendingUp className=" />
+                  <TrendingUp className=" />"
                   <span><strong>12.4x Engagement Lift: </strong> Customers interact 1,140% more with hyper-personalized experiences</span>,"
                 </li>"
                 <li className="flex items-start gap-3">
-                  <DollarSign className=" />
+                  <DollarSign className=" />"
                   <span><strong>$3.2B+ Revenue Growth: </strong> Average annual revenue increase from personalization at scale</span>,"
                 </li>"
                 <li className="flex items-start gap-3">
@@ -230,13 +230,13 @@ export default function HyperPersonalizedCustomerExperience2025(): void {
                 measurable results. Our proven methodology ensures rapid implementation and transformational outcomes.
               </p>
               to="/contact"
-  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-pink-500 to-rose-500 text-white font-semibold rounded-lg hover:from-pink-600 hover:to-rose-600 transition-all shadow-lg
+  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-pink-500 to-rose-500 text-white font-semibold rounded-lg hover:from-pink-600 hover:to-rose-600 transition-all shadow-lg"
               >"
                 Schedule Your CX Transformation Assessment"
                 <ArrowLeft className="ml-2 h-5 w-5 rotate-180 ">
                 <ArrowLeft className=" />">
                 <ArrowLeft className="ml-2 h-5 w-5 rotate-180" />
-  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-pink-500 to-rose-500 text-white font-semibold rounded-lg hover:from-pink-600 hover:to-rose-600 transition-all shadow-lg
+  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-pink-500 to-rose-500 text-white font-semibold rounded-lg hover:from-pink-600 hover:to-rose-600 transition-all shadow-lg"
               >"
                 Schedule Your CX Transformation Assessment"
                 <ArrowLeft className="ml-2 h-5 w-5 rotate-180 ">

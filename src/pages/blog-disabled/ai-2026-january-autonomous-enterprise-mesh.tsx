@@ -51,8 +51,7 @@ const AutonomousEnterpriseMesh2026: React.FC = () => {
               initial: {{ opacity: 0, y: 20 }}
               animate: {{ opacity: 1, y: 0 }}
               transition: {{ duration: 0.8 }}
-              className="text-center"
-            >"
+              className="text-center">"
               <div>
                 <span className="mr-2">🚀</span>
   January 15, 2026 - Revolutionary Breakthrough
@@ -103,19 +102,19 @@ const AutonomousEnterpriseMesh2026: React.FC = () => {
   </div>
               <a title= "Internal link
   href="#content
-  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl
+  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
               >"
                 Read the Full Article"
                 <ArrowRight className="ml-2 w-5 h-5 " />
               <a title= "Internal link
   href="#content
-  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl
+  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
               >"
                 Read the Full Article"
                 <ArrowRight className="ml-2 w-5 h-5 " />
                 <ArrowRight className="ml-2 w-5 h-5" />
   href="#content
-  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl
+  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
               >"
                 Read the Full Article"
                 <ArrowRight className="ml-2 w-5 h-5 " />
@@ -129,10 +128,10 @@ const AutonomousEnterpriseMesh2026: React.FC = () => {
             initial: {{ opacity: 0, y: 20 }}
             animate: {{ opacity: 1, y: 0 }}
             transition: {{ delay: 0.2, duration: 0.8 }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-8
+            className="grid grid-cols-2 md:grid-cols-4 gap-8"
           >"
             {stats.map((stat, index) => ("
-            className="grid grid-cols-2 md:grid-cols-4 gap-8
+            className="grid grid-cols-2 md:grid-cols-4 gap-8"
           >"
             {stats.map((stat, index) => ("
                   {stat.label}
@@ -147,14 +146,12 @@ const AutonomousEnterpriseMesh2026: React.FC = () => {
             initial: {{ opacity: 0, y: 20 }}
             animate: {{ opacity: 1, y: 0 }}
             transition: {{ delay: 0.4, duration: 0.8 }}
-            className="prose prose-lg prose-invert max-w-none"
-          >"
+            className="prose prose-lg prose-invert max-w-none">"
             <h2 className="text-3xl font-bold text-white mb-6">The Dawn of Autonomous Enterprise Intelligence</h2>"
             <p className="text-gray-300 mb-6 leading-relaxed">
             <h2 className="text-3xl font-bold text-white mb-6">The Dawn of Autonomous Enterprise Intelligence</h2>
             <p className="text-gray-300 mb-6 leading-relaxed">
-            className="prose prose-lg prose-invert max-w-none"
-          >"
+            className="prose prose-lg prose-invert max-w-none">"
             <h2 className="text-3xl font-bold text-white mb-6">The Dawn of Autonomous Enterprise Intelligence</h2>"
             <p className="text-gray-300 mb-6 leading-relaxed">
             <h2 className="text-3xl font-bold text-white mb-6">The Dawn of Autonomous Enterprise Intelligence</h2>
@@ -186,7 +183,7 @@ const AutonomousEnterpriseMesh2026: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a title= "Internal link
   href="/services
-  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl
+  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
               >"
                 Explore Our Services"
                 <ArrowRight className="ml-2 w-5 h-5 " />
@@ -197,7 +194,7 @@ const AutonomousEnterpriseMesh2026: React.FC = () => {
   className="inline-flex items-center px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 hover:border-white/30 text-white font-semibold rounded-xl transition-all duration-300>"
               <a title= "Internal link
   href="/services
-  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl
+  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
               >"
                 Explore Our Services"
                 <ArrowRight className="ml-2 w-5 h-5 " />
@@ -207,7 +204,7 @@ const AutonomousEnterpriseMesh2026: React.FC = () => {
   href="/contact
   className=" />
   );
-};
+};"
 "
 export default AutonomousEnterpriseMesh2026;"
   </div>

@@ -61,11 +61,11 @@ export default function CognitiveSearchEnterprise2025(): void {
               </h2>"
               <ul className="space-y-4 text-lg">
                 <li className="flex items-start gap-3">
-                  <Search className=" />
+                  <Search className=" />"
                   <span><strong>97% Answer Accuracy: </strong> AI understands context and delivers precise answers, not just documents</span>,"
                 </li>"
                 <li className="flex items-start gap-3">
-                  <Zap className=" />
+                  <Zap className=" />"
                   <span><strong>12x Faster Discovery: </strong> Find critical information in seconds instead of hours</span>,"
                 </li>"
                 <li className="flex items-start gap-3">
@@ -290,7 +290,7 @@ export default function CognitiveSearchEnterprise2025(): void {
   Deploy cognitive search and transform how your organization discovers and leverages information.
               </p>
               to="/contact"
-  className="inline-flex items-center px-8 py-4 bg-white text-indigo-600 rounded-lg font-bold text-lg hover:bg-indigo-50 transition-colors
+  className="inline-flex items-center px-8 py-4 bg-white text-indigo-600 rounded-lg font-bold text-lg hover:bg-indigo-50 transition-colors"
               >"
                 Start Your Knowledge Transformation"
                 <Brain className="ml-2 h-5 w-5 ">
