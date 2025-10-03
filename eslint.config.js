@@ -104,21 +104,17 @@ export default [
       'all-automations-reports/**',
       'accessibility-reports/**',
       'backup-banner-components/**',
-<<<<<<< HEAD
       'blog/**',
       'app/blog/**',
       'app/services/**',
       'app/guides/**',
       'app/contact/**',
       'app/enterprise/**',
-=======
-      'app/blog/**',
       'app/components/NewContentPromotionalBanner2026.tsx',
       'app/components/NewestContent2025Banner.tsx',
       'app/components/September30NewContent2025Banner.tsx',
       'app/components/UltimateBusinessIntelligence2025Banner.tsx',
       'app/components/UltimateBusinessIntelligenceShowcase2025.tsx',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7443
       'apps/**',
       'api/**',
       'src/**',

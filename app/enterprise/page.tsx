@@ -83,13 +83,8 @@ export default function EnterprisePage() {
       </section>
 
       <footer className="text-left">
-<<<<<<< HEAD
         <div className="text-left">
           <p className="text-left">© 2025 Zion Tech Group. All rights reserved.</p>
-=======
-        <div className="text-left"></div>
-          <p className="text-left">© 2025 Zion Tech Group. All rights reserved.</p>"
->>>>>>> main
         </div>
       </footer>
     </div>

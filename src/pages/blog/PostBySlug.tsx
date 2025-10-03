@@ -1,203 +1,77 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 import Header from "../../components/Header";
 
-export default function PostBySlug(): React.JSX.Element {
-  const { slug } = useParams();
-
-  const article: React.useMemo(()  => {,,
-  if (!slug) return undefined;
-    const fromLatest: latestArticles.find((a) => a.slug: = = slug);,,
-  if (fromLatest) {
-      return {
-        slug: fromLatest.slug,,
-        title= fromLatest.title,,
-        description: fromLatest.description || fromLatest.excerpt,,
-        category: fromLatest.category,,
-        publishedAt: fromLatest.date,,
-        readTime: fromLatest.readTime,,
-        author: fromLatest.author};
-    }
-    const fromBlogPosts: blogPosts.find((p) => p.slug: = = slug);,,
-  if (fromBlogPosts) {
-      return {
-        slug: fromBlogPosts.slug,,
-        title= fromBlogPosts.title,,
-        description: fromBlogPosts.description,,
-        category: fromBlogPosts.category,,
-        publishedAt: fromBlogPosts.date,,
-        readTime: fromBlogPosts.readTime,,
-        author: fromBlogPosts.author};
-    }
-    const fromPosts: staticPosts.find((p) => p.slug: = = slug);,,
-  if (fromPosts) {
-      return {
-        slug: fromPosts.slug,,
-        title= fromPosts.title,,
-        description: fromPosts.description,,
-        category: fromPosts.category,,
-        publishedAt: fromPosts.publishedAt,,
-        readTime: fromPosts.readTime,,
-        author: "Zion Tech Group Team
-        slug: fromPosts.slug,,
-        title= fromPosts.title,,
-        description: fromPosts.description,,
-        category: fromPosts.category,,
-        publishedAt: fromPosts.publishedAt,,
-        readTime: fromPosts.readTime,,
-        author: "Zion Tech Group Team",,"
-      };
-    }
-    return undefined;
-  }, [slug]);
-
-  if (!article) {
-return (
-<>
-<Header />
-<div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white p-8">
-<div className="max-w-3xl mx-auto pt-20">
-<h1 className="text-3xl font-bold mb-4">Article not found</h1>"
-<p className="text-zion-slate-light mb-6">The post you are looking for does not exist or has been moved.</p>"
-<Link to="/blog", className="text-zion-cyan hover:underline inline-flex items-center gap-2">
-<ArrowLeft className="w-4 h-4" />"
-<div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white p-8">
-<div className="max-w-3xl mx-auto pt-20">
-<h1 className="text-3xl font-bold mb-4">Article not found</h1>
-<p className="text-zion-slate-light mb-6">The post you are looking for does not exist or has been moved.</p>
-<Link to="/blog", className="text-zion-cyan hover:underline inline-flex items-center gap-2">,
-<ArrowLeft className="w-4 h-4" />
-<div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white p-8">
-<div className="max-w-3xl mx-auto pt-20">
-<h1 className="text-3xl font-bold mb-4">Article not found</h1>"
-<p className="text-zion-slate-light mb-6">The post you are looking for does not exist or has been moved.</p>"
-<Link to="/blog", className="text-zion-cyan hover:underline inline-flex items-center gap-2">
-<ArrowLeft className="w-4 h-4" />"
-<div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white p-8">
-<div className="max-w-3xl mx-auto pt-20">
-<h1 className="text-3xl font-bold mb-4">Article not found</h1>
-<p className="text-zion-slate-light mb-6">The post you are looking for does not exist or has been moved.</p>
-<Link to="/blog", className="text-zion-cyan hover:underline inline-flex items-center gap-2">,
-<ArrowLeft className="w-4 h-4" />
-  Back to Blog
-</Link>
-</div>
-</div>
-</>
-);
-}
-
+export default function BlogPost(): React.JSX.Element {
   return (
     <>
-      <Helmet >
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
-        <Header />
-        <div className="max-w-4xl mx-auto px-6 py-24">
-          <Link to="/blog", className="text-zion-cyan hover:text-zion-blue-light mb-8 inline-flex items-center gap-2 transition-colors">
-            <ArrowLeft className="w-4 h-4/>,"
-  Back to Blog
-          </Link>
-          "
-          <article className="mt-8 bg-white/10 backdrop-blur-lg rounded-2xl p-8 md: p-12 border border-white/20">
-            <div className="mb-6">
-              <span className="inline-block px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm font-medium rounded-full border border-zion-cyan/30">
-        <div className="max-w-4xl mx-auto px-6 py-24">
-          <Link to="/blog", className="text-zion-cyan hover:text-zion-blue-light mb-8 inline-flex items-center gap-2 transition-colors">
-            <ArrowLeft className="w-4 h-4" />
-  Back to Blog
-          </Link>
-          
-          <article className="mt-8 bg-white/10 backdrop-blur-lg rounded-2xl p-8 md: p-12 border border-white/20">
-            <div className="mb-6">
-              <span className="inline-block px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm font-medium rounded-full border border-zion-cyan/30">
-      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
-        <Header />
-        <div className="max-w-4xl mx-auto px-6 py-24">
-          <Link to="/blog", className="text-zion-cyan hover:text-zion-blue-light mb-8 inline-flex items-center gap-2 transition-colors">
-            <ArrowLeft className="w-4 h-4/>,"
-  Back to Blog
-          </Link>
-          
-          <article className="mt-8 bg-white/10 backdrop-blur-lg rounded-2xl p-8 md: p-12 border border-white/20">
-            <div className="mb-6">
-              <span className="inline-block px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm font-medium rounded-full border border-zion-cyan/30">
-        <div className="max-w-4xl mx-auto px-6 py-24">
-          <Link to="/blog", className="text-zion-cyan hover:text-zion-blue-light mb-8 inline-flex items-center gap-2 transition-colors">
-            <ArrowLeft className="w-4 h-4" />
-  Back to Blog
-          </Link>
-          
-          <article className="mt-8 bg-white/10 backdrop-blur-lg rounded-2xl p-8 md: p-12 border border-white/20">
-            <div className="mb-6">
-              <span className="inline-block px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm font-medium rounded-full border border-zion-cyan/30">
-                {article.category}
-              </span>
-            </div>
-            
-            <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 leading-tight">
-            <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 leading-tight">
-              {article.title}
+      <Header />
+      <div className="min-h-screen bg-gradient-to-br from-blue-600 via-blue-700 to-purple-800 text-white">
+        <Helmet>
+          <title>PostBySlug - Zion Tech Group</title>
+          <meta name="description" content="PostBySlug - Latest insights from Zion Tech Group" />
+        </Helmet>
+        
+        <div className="max-w-4xl mx-auto px-4 py-20">
+          <div className="mb-12">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+              PostBySlug
             </h1>
-            
-            <div className="flex flex-wrap items-center gap-4 text-zion-slate-light text-sm mb-8 pb-8 border-b border-white/10">
-              {article.author && (
-                <span className="font-medium text-white">{article.author}</span>"
-              )}
-                })}
-              </span>
-              {article.readTime && (
-                <span className="flex items-center gap-1">
-                  <Clock className="w-4 h-4 ">
-                <span className="flex items-center gap-1">
-                  <Clock className="w-4 h-4/>">
-              <span className="flex items-center gap-1">
-                <Calendar className="w-4 h-4" />
-                <span className="flex items-center gap-1">
-                  <Clock className="w-4 h-4/>">
-              <span className="flex items-center gap-1">
-                <Calendar className="w-4 h-4" />
-                {new Date(article.publishedAt).toLocaleDateString('en-US', { '
-                  year: 'numeric', ',';,
-                  month: 'long', ',';,
-                  day: 'numeric',';,
-                })}
-              </span>
-              {article.readTime && (
-                <span className="flex items-center gap-1">
-                  <Clock className="w-4 h-4" />
-                <span className="flex items-center gap-1">
-                  <Clock className="w-4 h-4" />
-                  {article.readTime}
-                </span>
-              )}
+            <div className="flex flex-wrap items-center gap-6 text-sm text-gray-300 mb-8">
+              <span>By Zion Tech Group Team</span>
+              <span>•</span>
+              <span>2025-10-03</span>
+              <span>•</span>
+              <span>5 min read</span>
             </div>
-            
-            <div className="prose prose-invert prose-lg max-w-none">
-              <p className="text-xl leading-relaxed text-white/90 mb-6">
-                {article.description}
-              </p>
+          </div>
+
+          <div className="prose prose-lg prose-invert max-w-none">
+            <div className="text-gray-200 leading-relaxed">
+              <h2>Introduction</h2>
+              <p>This is a placeholder blog post. The content for "PostBySlug" will be added here.</p>
               
-              <div className="bg-zion-blue/20 border border-zion-blue/30 rounded-xl p-6 my-8">
-                <p className="text-zion-slate-light text-sm mb-0">
-              <div className="bg-zion-blue/20 border border-zion-blue/30 rounded-xl p-6 my-8">
-                <p className="text-zion-slate-light text-sm mb-0">
-            <div className="prose prose-invert prose-lg max-w-none">
-              <p className="text-xl leading-relaxed text-white/90 mb-6">
-                {article.description}
-              </p>
+              <h2>Main Content</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
               
-              <div className="bg-zion-blue/20 border border-zion-blue/30 rounded-xl p-6 my-8">
-                <p className="text-zion-slate-light text-sm mb-0">
-              <div className="bg-zion-blue/20 border border-zion-blue/30 rounded-xl p-6 my-8">
-                <p className="text-zion-slate-light text-sm mb-0">
-                  💡 <strong >Coming Soon: </strong> Full article content will be available shortly. ,,
-                  This preview shows the key insights and value proposition of this groundbreaking topic.
-                </p>
+              <h2>Conclusion</h2>
+              <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+          </div>
+
+          <div className="mt-16 pt-8 border-t border-white border-opacity-20">
+            <div className="flex flex-col sm:flex-row justify-between items-center gap-6">
+              <div>
+                <h3 className="text-xl font-bold mb-2">Share this article</h3>
+                <div className="flex gap-4">
+                  <a 
+                    href={`https://twitter.com/intent/tweet?text=${encodeURIComponent("PostBySlug")}&url=${encodeURIComponent(window.location.href)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-white bg-opacity-20 hover:bg-opacity-30 px-4 py-2 rounded-lg transition-colors"
+                  >
+                    Twitter
+                  </a>
+                  <a 
+                    href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(window.location.href)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-white bg-opacity-20 hover:bg-opacity-30 px-4 py-2 rounded-lg transition-colors"
+                  >
+                    LinkedIn
+                  </a>
+                </div>
               </div>
+              <a 
+                href="/blog"
+                className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              >
+                Back to Blog
+              </a>
             </div>
-          </article>
+          </div>
         </div>
       </div>
     </>
   );
-};
+}
