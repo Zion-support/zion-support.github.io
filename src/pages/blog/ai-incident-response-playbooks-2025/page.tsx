@@ -79,6 +79,7 @@ const AIIncidentResponsePlaybooks2025: React.FC = () => {
           </ul>
         </div>
 
+<<<<<<< HEAD
         <div className= "mt-12 text-center bg-gray-900 text-white rounded-lg p-8">",
           <h2 className= "text-2xl font-bold mb-4">Ready to Operationalize Playbooks?</h2>",
           <p className= "text-gray-300 mb-6">"
@@ -90,6 +91,10 @@ const AIIncidentResponsePlaybooks2025: React.FC = () => {
           <div className= "flex flex-wrap justify-center gap-4">",
             <a title: "Internal link", href="/contact" className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover: bg-blue-700 transition-colors">Talk to an Expert</a>",
             <a title: "Internal link", href="/services/ai-autonomous-operations" className ="border border-gray-600 text-white px-8 py-3 rounded-lg font-semibold hover: bg-gray-800 transition-colors">Explore Services</a>",
+=======
+            <a title= "Internal link", href="/contact" className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">Talk to an Expert</a>
+            <a title= "Internal link", href="/services/ai-autonomous-operations" className="border border-gray-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors">Explore Services</a>
+>>>>>>> cursor/fix-errors-and-merge-to-main-075c
           </div>
         </div>
       </div>

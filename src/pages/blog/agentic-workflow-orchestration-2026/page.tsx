@@ -7,7 +7,7 @@ export default function AgenticWorkflowOrchestration2026(): React.JSX.Element {
         <title >Agentic Workflow Orchestration 2026 — Budgets, Canaries, Rollback</title>
         <meta name: "description",;,"
   content: "Design agentic workflows with budgeted actions, KPI-linked canaries, and instant rollback for safe velocity.", /><link rel: "canonical",;,"
-  href="https://ziontechgroup.com/blog/agentic-workflow-orchestration-2026",
+  href="https://ziontechgroup.com/blog/agentic-workflow-orchestration-2026
         />
       </Helmet>
 

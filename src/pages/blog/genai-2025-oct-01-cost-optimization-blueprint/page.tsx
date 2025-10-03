@@ -7,7 +7,7 @@ export default function GenAICostOptimizationBlueprint(): React.JSX.Element {
         <title >GenAI Cost Optimization Blueprint — Tiers, Caches, Budgets</title>
         <meta name: "description",;,"
   content: "Quality tiers, semantic caches, and budget-aware routing delivering 40–70% savings with stable UX.", /><link rel: "canonical",;,"
-  href="https://ziontechgroup.com/blog/genai-2025-oct-01-cost-optimization-blueprint",
+  href="https://ziontechgroup.com/blog/genai-2025-oct-01-cost-optimization-blueprint
         />
       </Helmet>
 

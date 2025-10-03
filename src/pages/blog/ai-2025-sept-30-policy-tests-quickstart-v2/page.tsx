@@ -21,8 +21,12 @@ const Page: () => {
           Trigger instant rollback in seconds on budget breach.
         </p>
       </div>
+<<<<<<< HEAD
       <div className= "mt-8">",
         <Link to: "/blog", className ="text-cyan-300 underline">Back to Blog</Link>",
+=======
+        <Link to: "/blog", className="text-cyan-300 underline">Back to Blog</Link>
+>>>>>>> cursor/fix-errors-and-merge-to-main-075c
       </div>
     </div>
   );

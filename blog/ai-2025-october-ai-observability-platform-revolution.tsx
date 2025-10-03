@@ -132,7 +132,7 @@ Log Analysis: ELK Stack (Elasticsearch, Logstash, Kibana)`}</code>
 from ai_observability import ModelMonitor
 
 monitor = ModelMonitor(
-    model_name="recommendation_engine",
+    model_name="recommendation_engine
     baseline_data=training_data,
     drift_threshold=0.15,
     alert_channels=["slack", "pagerduty"]
@@ -149,13 +149,13 @@ def predict(input_data):
         <code>{`# Define alert rules
 alerts = {
     "accuracy_drop": {
-        "condition": "accuracy < 0.90",
-        "severity": "critical",
+        "condition": "accuracy < 0.90
+        "severity": "critical
         "action": "trigger_retraining"
     },
     "high_latency": {
-        "condition": "p99_latency > 500ms",
-        "severity": "warning",
+        "condition": "p99_latency > 500ms
+        "severity": "warning
         "action": "scale_up"
     }
 }`}</code>

@@ -8,7 +8,7 @@ export default function AutonomicDecisionEngines2025(): React.JSX.Element {
         <title >Autonomic Decision Engines — Sub‑100ms, KPI‑Linked Actions</title>
         <meta name: "description",;,"
   content: "Design decision engines with budgeted actions, live canaries, and rollback ready to contain incidents in seconds.", /><link rel: "canonical",;,"
-  href="https://ziontechgroup.com/blog/ai-2025-sept-30-autonomic-decision-engines",
+  href="https://ziontechgroup.com/blog/ai-2025-sept-30-autonomic-decision-engines
         />
       </Helmet>
 

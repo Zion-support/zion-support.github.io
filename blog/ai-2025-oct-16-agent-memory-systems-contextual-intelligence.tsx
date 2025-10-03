@@ -185,14 +185,14 @@ class LongTermMemory:
         
         # Store in time-ordered list
         self.redis.zadd(
-            f"{self.timeline_key}:{user_id}",
+            f"{self.timeline_key}:{user_id}
             {json.dumps(episode): time.time()}
         )
     
     def get_episode_sequence(self, user_id, start_time, end_time):
         # Retrieve events within time window
         episodes = self.redis.zrangebyscore(
-            f"{self.timeline_key}:{user_id}",
+            f"{self.timeline_key}:{user_id}
             start_time.timestamp(),
             end_time.timestamp()
         )
@@ -384,7 +384,7 @@ def prune_memory_store(vector_store, threshold=0.3):
         
         # Store summary with references to original memories
         consolidated_memory = {
-            "type": "consolidated",
+            "type": "consolidated
             "summary": summary,
             "original_ids": [m.id for m in cluster],
             "timestamp_range": (

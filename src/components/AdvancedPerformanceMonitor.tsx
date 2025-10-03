@@ -6,7 +6,7 @@ interface PerformanceEventTiming extends PerformanceEntry {
 }
 
 interface LayoutShift extends PerformanceEntry {
-  value: number;
+  value=number;
   hadRecentInput: boolean;
 }
 

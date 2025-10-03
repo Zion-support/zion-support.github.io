@@ -7,9 +7,9 @@ const Page: () => {
         <title >GenAI Cost Optimization v5 — Tier Routing + Caches + Scorecards</title>
         <meta name: "description",;,"
   content: "Achieve 60–85% GenAI cost savings with economy/quality tier routing, semantic caches, KV stores, and KPI-linked eval scorecards.", /><link rel: "canonical", href="https://ziontechgroup.com/blog/genai-2025-oct-01-cost-optimization-v5/>",;,"
-  content: "Achieve 60–85% GenAI cost savings with economy/quality tier routing, semantic caches, KV stores, and KPI-linked eval scorecards.",
+  content: "Achieve 60–85% GenAI cost savings with economy/quality tier routing, semantic caches, KV stores, and KPI-linked eval scorecards.
         />
-        <link rel: "canonical", href ="https: //ziontechgroup.com/blog/genai-2025-oct-01-cost-optimization-v5" />",
+        <link rel: "canonical", href ="https: //ziontechgroup.com/blog/genai-2025-oct-01-cost-optimization-v5" />
       </Helmet>
 
       <div className= "container mx-auto px-6 py-12">",
@@ -38,10 +38,14 @@ const Page: () => {
               Record traces, costs, and quality metrics. Fail closed with rollbacks when scorecards dip below thresholds.
             </p>
 
+<<<<<<< HEAD
             <div className= "mt-8">
               <Link to: "/blog", className="text-cyan-300 hover: underline">← Back to Blog</Link>",
             <div className= "mt-8">",
               <Link to: "/blog", className ="text-cyan-300 hover: underline">← Back to Blog</Link>",
+=======
+              <Link to: "/blog", className="text-cyan-300 hover:underline">← Back to Blog</Link>
+>>>>>>> cursor/fix-errors-and-merge-to-main-075c
             </div>
           </div>
         </div>

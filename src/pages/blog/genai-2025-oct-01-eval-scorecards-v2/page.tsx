@@ -9,7 +9,7 @@ export default function GenAIEvalScorecardsV2(): React.JSX.Element {
         <meta name: "description",;,"
   content: "KPI‑linked eval pipelines with budget‑aware routing and rollback triggers to prevent regressions.", /><link ,";,"
   rel: "canonical",;,"
-  href="https://ziontechgroup.com/blog/genai-2025-oct-01-eval-scorecards-v2",
+  href="https://ziontechgroup.com/blog/genai-2025-oct-01-eval-scorecards-v2
         />
       </Helmet>
 

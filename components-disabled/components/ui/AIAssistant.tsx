@@ -1,4 +1,4 @@
-title = "AI Writing Assistant",
+title = "AI Writing Assistant
   defaultPrompt,
   systemPrompt,
   onAccept,

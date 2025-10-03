@@ -256,23 +256,23 @@ class CrossModalAttention {
                 <div className="space-y-4">
                   {[
                     {
-                      title: "Intelligent Video Analytics",
-                      description: "Simultaneously analyze video, audio, and metadata streams for security monitoring, retail analytics, and quality control.",
+                      title: "Intelligent Video Analytics
+                      description: "Simultaneously analyze video, audio, and metadata streams for security monitoring, retail analytics, and quality control.
                       metrics: ["95% accuracy", "50ms latency", "1000+ streams"]
                     },
                     {
-                      title: "Enhanced Customer Experience",
-                      description: "Combine voice tone, facial expressions, and conversation text to understand customer sentiment and intent in real-time.",
+                      title: "Enhanced Customer Experience
+                      description: "Combine voice tone, facial expressions, and conversation text to understand customer sentiment and intent in real-time.
                       metrics: ["92% sentiment accuracy", "Real-time insights", "360° view"]
                     },
                     {
-                      title: "Autonomous Systems",
-                      description: "Fuse camera, lidar, radar, and GPS data for comprehensive environmental understanding in autonomous vehicles and robotics.",
+                      title: "Autonomous Systems
+                      description: "Fuse camera, lidar, radar, and GPS data for comprehensive environmental understanding in autonomous vehicles and robotics.
                       metrics: ["99.9% uptime", "Sub-10ms decisions", "Multi-sensor fusion"]
                     },
                     {
-                      title: "Medical Diagnostics",
-                      description: "Integrate medical images, patient history, genomic data, and clinical notes for comprehensive diagnostic support.",
+                      title: "Medical Diagnostics
+                      description: "Integrate medical images, patient history, genomic data, and clinical notes for comprehensive diagnostic support.
                       metrics: ["97% diagnostic accuracy", "2x faster diagnosis", "Holistic analysis"]
                     }
                   ].map((app, idx) => (
@@ -362,38 +362,38 @@ class CrossModalAttention {
               <div className="space-y-4">
                 {[
                   {
-                    phase: "Phase 1: Foundation (Weeks 1-3)",
+                    phase: "Phase 1: Foundation (Weeks 1-3)
                     items: [
-                      "Set up multimodal data ingestion pipeline",
-                      "Implement basic encoders for each modality",
-                      "Establish real-time processing infrastructure",
+                      "Set up multimodal data ingestion pipeline
+                      "Implement basic encoders for each modality
+                      "Establish real-time processing infrastructure
                       "Create initial fusion mechanisms"
                     ]
                   },
                   {
-                    phase: "Phase 2: Fusion & Integration (Weeks 4-6)",
+                    phase: "Phase 2: Fusion & Integration (Weeks 4-6)
                     items: [
-                      "Implement cross-modal attention layers",
-                      "Develop temporal alignment systems",
-                      "Optimize latency and throughput",
+                      "Implement cross-modal attention layers
+                      "Develop temporal alignment systems
+                      "Optimize latency and throughput
                       "Add monitoring and observability"
                     ]
                   },
                   {
-                    phase: "Phase 3: Production Deployment (Weeks 7-9)",
+                    phase: "Phase 3: Production Deployment (Weeks 7-9)
                     items: [
-                      "Deploy to edge and cloud infrastructure",
-                      "Implement auto-scaling and load balancing",
-                      "Add comprehensive error handling",
+                      "Deploy to edge and cloud infrastructure
+                      "Implement auto-scaling and load balancing
+                      "Add comprehensive error handling
                       "Conduct performance testing at scale"
                     ]
                   },
                   {
-                    phase: "Phase 4: Optimization & Refinement (Weeks 10-12)",
+                    phase: "Phase 4: Optimization & Refinement (Weeks 10-12)
                     items: [
-                      "Model compression and optimization",
-                      "Fine-tune for specific use cases",
-                      "Implement advanced fusion techniques",
+                      "Model compression and optimization
+                      "Fine-tune for specific use cases
+                      "Implement advanced fusion techniques
                       "Comprehensive documentation and training"
                     ]
                   }

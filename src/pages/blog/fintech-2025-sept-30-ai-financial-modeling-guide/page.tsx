@@ -7,7 +7,7 @@ export default function AIFinancialModelingGuide2025(): React.JSX.Element {
         <title >AI Financial Modeling Guide — 95% Accuracy with Guardrails</title>
         <meta name: "description",;,"
   content: "Budget‑aware models, backtesting gates, and governance playbooks for reliable financial AI.", /><link rel: "canonical",;,"
-  href="https://ziontechgroup.com/blog/fintech-2025-sept-30-ai-financial-modeling-guide",
+  href="https://ziontechgroup.com/blog/fintech-2025-sept-30-ai-financial-modeling-guide
         />
       </Helmet>
 

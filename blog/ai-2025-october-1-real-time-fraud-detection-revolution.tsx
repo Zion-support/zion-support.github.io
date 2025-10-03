@@ -147,10 +147,10 @@ export default function BlogPost() {
       <pre className="bg-slate-900 p-4 rounded-lg overflow-x-auto">
         <code>{`// Simple API integration
 const fraudCheck = await FraudDetector.analyze({
-  transactionId: "txn_123456",
+  transactionId: "txn_123456
   amount: 1299.99,
-  currency: "USD",
-  userId: "user_789",
+  currency: "USD
+  userId: "user_789
   deviceFingerprint: deviceId,
   ipAddress: req.ip,
   merchantId: "merchant_456"

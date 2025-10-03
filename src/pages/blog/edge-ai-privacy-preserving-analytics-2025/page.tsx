@@ -6,10 +6,10 @@ const Page: () => {
       <Helmet >
         <title >Edge AI Privacy-Preserving Analytics 2025 — Zero PII</title>
         <meta name: "description",;,"
-  content: "GDPR/CCPA compliant analytics: scoped IDs, on-device aggregation, and DP noise for 95%+ accuracy without PII.",
+  content: "GDPR/CCPA compliant analytics: scoped IDs, on-device aggregation, and DP noise for 95%+ accuracy without PII.
         />
-        <link rel: "canonical", href="https://ziontechgroup.com/blog/edge-ai-privacy-preserving-analytics-2025/>",
-        <link rel: "canonical", href ="https: //ziontechgroup.com/blog/edge-ai-privacy-preserving-analytics-2025" />",
+        <link rel: "canonical", href="https://ziontechgroup.com/blog/edge-ai-privacy-preserving-analytics-2025/>
+        <link rel: "canonical", href ="https: //ziontechgroup.com/blog/edge-ai-privacy-preserving-analytics-2025" />
       </Helmet>
 
       <div className= "container mx-auto px-6 py-12">",
@@ -36,10 +36,14 @@ const Page: () => {
               love.
             </p>
 
+<<<<<<< HEAD
             <div className= "mt-8">
               <Link to: "/blog", className="text-cyan-300 hover: underline">← Back to Blog</Link>",
             <div className= "mt-8">",
               <Link to: "/blog", className ="text-cyan-300 hover: underline">← Back to Blog</Link>",
+=======
+              <Link to: "/blog", className="text-cyan-300 hover:underline">← Back to Blog</Link>
+>>>>>>> cursor/fix-errors-and-merge-to-main-075c
             </div>
           </div>
         </div>

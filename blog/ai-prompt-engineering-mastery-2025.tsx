@@ -198,9 +198,9 @@ Job Posting: [job posting text]
 
 Return the following structure:
 {
-  "title": "Job title",
-  "company": "Company name",
-  "location": "City, State",
+  "title": "Job title
+  "company": "Company name
+  "location": "City, State
   "salary": {
     "min": 100000,
     "max": 150000,

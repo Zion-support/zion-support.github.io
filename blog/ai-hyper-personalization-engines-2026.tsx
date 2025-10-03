@@ -126,12 +126,12 @@ personalization_engine = HyperPersonalizationEngine()
 
 # Generate user embedding in real-time
 user_state = personalization_engine.encode_user(
-    user_id="u_12345",
+    user_id="u_12345
     recent_actions=current_session.actions,
     context={
-        "device": "mobile",
-        "time": "evening",
-        "location": "home",
+        "device": "mobile
+        "time": "evening
+        "location": "home
         "mood": "exploratory"
     }
 )
@@ -139,7 +139,7 @@ user_state = personalization_engine.encode_user(
 # Personalize entire experience
 experience = personalization_engine.generate(
     user_state=user_state,
-    optimization_target="engagement+conversion",
+    optimization_target="engagement+conversion
     constraints=["brand_safe", "diversity"]
 )
 

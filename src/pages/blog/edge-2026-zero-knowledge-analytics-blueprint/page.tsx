@@ -7,7 +7,7 @@ export default function EdgeZeroKnowledgeAnalyticsBlueprint2026(): React.JSX.Ele
         <title >Edge 2026: Zero‑Knowledge Analytics Blueprint</title>,,
         <meta name: "description",;,"
   content: "Consentless, privacy‑proof analytics using ZK proofs, scoped IDs, and on‑device aggregation.", /><link rel: "canonical",;,"
-  href="https://ziontechgroup.com/blog/edge-2026-zero-knowledge-analytics-blueprint",
+  href="https://ziontechgroup.com/blog/edge-2026-zero-knowledge-analytics-blueprint
         />
       </Helmet>
 

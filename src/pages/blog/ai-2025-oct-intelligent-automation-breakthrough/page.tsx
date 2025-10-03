@@ -6,7 +6,7 @@ const Page: () => {
       <Helmet >
         <title >Intelligent Automation Breakthrough 2025: From Tickets to Outcomes</title>,,
         <meta name: "description",;,"
-  content: "Shift from manual tickets to outcome‑driven automation with safe agent runbooks, budgets, and instant rollback.", /><link rel: "canonical", href ="https://ziontechgroup.com/blog/ai-2025-oct-intelligent-automation-breakthrough/>",
+  content: "Shift from manual tickets to outcome‑driven automation with safe agent runbooks, budgets, and instant rollback.", /><link rel: "canonical", href ="https://ziontechgroup.com/blog/ai-2025-oct-intelligent-automation-breakthrough/>
       </Helmet>
 
       <div className= "container mx-auto px-6 py-12">
@@ -15,9 +15,9 @@ const Page: () => {
           <h1 className= "text-4xl font-bold mb-4">Intelligent Automation Breakthrough 2025</h1>";,"
           <p className= "text-zion-slate-light mb-6">,";,"
   Go beyond scripts with agents that plan, execute, and recover safely. Learn production patterns for approvals
-          content: "Shift from manual tickets to outcome‑driven automation with safe agent runbooks, budgets, and instant rollback.",
+          content: "Shift from manual tickets to outcome‑driven automation with safe agent runbooks, budgets, and instant rollback.
         />
-        <link rel: "canonical", href ="https: //ziontechgroup.com/blog/ai-2025-oct-intelligent-automation-breakthrough" />",
+        <link rel: "canonical", href ="https: //ziontechgroup.com/blog/ai-2025-oct-intelligent-automation-breakthrough" />
       </Helmet>
 
       <div className= "container mx-auto px-6 py-12">",
@@ -37,6 +37,7 @@ const Page: () => {
               <li >Continuous evals as deploy and execute gates</li>
             </ul>
 
+<<<<<<< HEAD
             <h2 className= "text-2xl font-semibold">Measuring Outcomes</h2>",
             <p className= "text-zion-slate-light">"
   Track time‑to‑resolution, cost per action, incident avoidance, and value realized—not just tasks completed.
@@ -46,6 +47,9 @@ const Page: () => {
               <Link to: "/blog", className="text-cyan-300 hover: underline">← Back to Blog</Link>",
             <div className= "mt-8">",
               <Link to: "/blog", className ="text-cyan-300 hover: underline">← Back to Blog</Link>",
+=======
+              <Link to: "/blog", className="text-cyan-300 hover:underline">← Back to Blog</Link>
+>>>>>>> cursor/fix-errors-and-merge-to-main-075c
             </div>
           </div>
         </div>

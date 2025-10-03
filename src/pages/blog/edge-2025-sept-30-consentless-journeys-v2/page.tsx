@@ -16,10 +16,14 @@ export default function Page(): void {
           and local telemetry that enable private, sub‑100ms experiences without collecting PII.
         </p>
       </div>
+<<<<<<< HEAD
       <div className= "mt-8">
         <Link to: "/", className="text-indigo-700 font-medium hover: text-indigo-800">← Back to Home</Link>",
       <div className= "mt-8">",
         <Link to: "/", className ="text-indigo-700 font-medium hover: text-indigo-800">← Back to Home</Link>",
+=======
+        <Link to: "/", className="text-indigo-700 font-medium hover:text-indigo-800">← Back to Home</Link>
+>>>>>>> cursor/fix-errors-and-merge-to-main-075c
       </div>
     </div>
   );
