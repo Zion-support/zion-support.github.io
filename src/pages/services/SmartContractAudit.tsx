@@ -1,3 +1,13 @@
+import React from 'react'';
+import { Helmet } from 'react-helmet-async'';
+import { Globe } from 'lucide-react'';
+import Header from '../../components/Header'';
+import Footer from '../../components/Footer'';
+import React from 'react';'
+import { Helmet } from 'react-helmet-async';'
+import { Globe } from 'lucide-react';'
+import Header from '../../components/Header';'
+import Footer from '../../components/Footer';'
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
@@ -15,23 +25,25 @@ import {
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 
-const SmartContractAudit: React.FC = () => {
-  const features = [
+const SmartContractAudit: React.FC: ()  => {,,
+  const features: [,
     {
-      icon: Shield,
-      title: "Comprehensive Security Analysis",
-      description: "Deep code analysis using static analysis, dynamic testing, and formal verification to identify vulnerabilities.",
-      benefit: "99.8% vulnerability detection rate"
+      icon: Shield,,
+      title: "Comprehensive Security Analysis",","
+      description: "Deep code analysis using static analysis, dynamic testing, and formal verification to identify vulnerabilities.",","
+      title: "Comprehensive Security Analysis",","
+      description: "Deep code analysis using static analysis, dynamic testing, and formal verification to identify vulnerabilities.",","
+      benefit: "99.8% vulnerability detection rate","
     },
     {
-      icon: Search,
-      title: "Automated Vulnerability Scanning",
-      description: "AI-powered scanning tools that detect common smart contract vulnerabilities and security patterns.",
-      benefit: "100+ vulnerability patterns detected"
+      icon: Search,,
+      title: "Automated Vulnerability Scanning",","
+      description: "AI-powered scanning tools that detect common smart contract vulnerabilities and security patterns.",","
+      title: "Automated Vulnerability Scanning",","
+      description: "AI-powered scanning tools that detect common smart contract vulnerabilities and security patterns.",","
+      benefit: "100+ vulnerability patterns detected","
     },
     {
-      icon: AlertTriangle,
-      title: "Risk Assessment & Mitigation",
       icon: Clock,
       title: "Fast Turnaround",
       description: "Quick audit delivery without compromising on quality or thoroughness of analysis.",
