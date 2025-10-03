@@ -32,7 +32,6 @@ const CareersPage: React.FC = () => {
                 </p>
                 <span className="text-left">Full-time • Remote</span>
               </div>
-            </div>
           </div>
           <div className="text-left">
             <h3 className="text-left">Why Work With Us?</h3>
@@ -44,10 +43,8 @@ const CareersPage: React.FC = () => {
               <li>Cutting-edge technology stack</li>
             </ul>
           </div>
-        </div>
       </div>
-    </div>
   );
 };
 
-export default CareersPage;
+export default CareersPage;</div></div></div>

@@ -1,9 +1,367 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { services } from './data';
+import Link from 'next/link';
+import { Metadata } from 'next';
 
+export const metadata: Metadata = {
+  title: 'AI & IT Services | Zion Tech Group - Enterprise Solutions',
+  description: 'Comprehensive AI services, micro SaaS solutions, and IT consulting. Transform your business with cutting-edge technology and automation.',
+  keywords: 'AI services, micro SaaS, IT consulting, cloud migration, DevOps, enterprise software, automation',
+};
 
 export default function ServicesPage() {
+  const services = [
+    {
+      title: 'AI Data Analytics',
+      description: 'Transform data into actionable insights with predictive modeling and real-time dashboards',
+      icon: '📊',
+      features: [
+        'Predictive Analytics & Forecasting',
+        'Real-time Business Intelligence',
+        'Machine Learning Model Development',
+        'Data Visualization & Reporting',
+        'Custom Analytics Solutions'
+      ],
+      href: '/services/ai-data-analytics'
+    },
+    {
+      title: 'AI Workflow Automation',
+      description: 'Automate business processes with intelligent workflow design and smart triggers',
+      icon: '⚡',
+      features: [
+        'Process Automation Design',
+        'Intelligent Document Processing',
+        'Business Rule Engine Development',
+        'Workflow Optimization',
+        'Integration & Orchestration'
+      ],
+      href: '/services/ai-workflow-automation'
+    },
+    {
+      title: 'AI Virtual Assistant',
+      description: '24/7 intelligent customer support with natural language processing',
+      icon: '🤖',
+      features: [
+        'Natural Language Processing',
+        'Multi-channel Support',
+        'Intelligent Routing',
+        'Sentiment Analysis',
+        'Continuous Learning Systems'
+      ],
+      href: '/services/ai-virtual-assistant'
+    },
+    {
+      title: 'Autonomous Business Operations',
+      description: 'Self-managing AI systems that operate entire business processes autonomously',
+      icon: '🧠',
+      features: [
+        'Autonomous Process Management',
+        'Predictive Maintenance',
+        'Intelligent Resource Allocation',
+        'Self-healing Systems',
+        'Continuous Optimization'
+      ],
+      href: '/services/autonomous-operations'
+    },
+    {
+      title: 'Generative AI Solutions',
+      description: 'Create, innovate, and generate novel solutions with cutting-edge generative intelligence',
+      icon: '✨',
+      features: [
+        'Content Generation Systems',
+        'Creative AI Applications',
+        'Multimodal Generation',
+        'Adaptive Learning Systems',
+        'Innovation Automation'
+      ],
+      href: '/services/generative-ai'
+    },
+    {
+      title: 'Cloud Migration & DevOps',
+      description: 'Seamless cloud transitions and optimized DevOps practices for modern infrastructure',
+      icon: '☁️',
+      features: [
+        'Cloud Architecture Design',
+        'Migration Strategy & Execution',
+        'CI/CD Pipeline Development',
+        'Infrastructure as Code',
+        'Monitoring & Observability'
+      ],
+      href: '/services/cloud-migration'
+    },
+    {
+      title: 'Micro SaaS Development',
+      description: 'Custom micro SaaS solutions designed for specific business needs and rapid deployment',
+      icon: '🔧',
+      features: [
+        'Rapid Prototype Development',
+        'Scalable Architecture Design',
+        'API Development & Integration',
+        'User Experience Optimization',
+        'Performance Monitoring'
+      ],
+      href: '/services/micro-saas'
+    },
+    {
+      title: 'Enterprise AI Consulting',
+      description: 'Strategic AI implementation guidance for enterprise-scale digital transformation',
+      icon: '🎯',
+      features: [
+        'AI Strategy Development',
+        'Technology Roadmap Planning',
+        'Change Management',
+        'ROI Optimization',
+        'Compliance & Governance'
+      ],
+      href: '/services/ai-consulting'
+    },
+    {
+      title: 'Cybersecurity & AI Security',
+      description: 'Advanced security solutions powered by AI for comprehensive threat protection',
+      icon: '🛡️',
+      features: [
+        'AI-Powered Threat Detection',
+        'Security Orchestration',
+        'Vulnerability Assessment',
+        'Incident Response Automation',
+        'Compliance Management'
+      ],
+      href: '/services/ai-security'
+    },
+    {
+      title: 'AI Content Generator',
+      description: 'Automated content creation with GPT-4 powered systems for blogs, social media, and marketing',
+      icon: '✍️',
+      features: [
+        'Automated Blog Post Generation',
+        'Social Media Content Creation',
+        'SEO-Optimized Content',
+        'Multi-language Support',
+        'Content Strategy Automation'
+      ],
+      href: '/services/ai-content-generator'
+    },
+    {
+      title: 'AI Image Generator',
+      description: 'Custom image creation for marketing, branding, and content using advanced AI models',
+      icon: '🎨',
+      features: [
+        'Custom Brand Imagery',
+        'Marketing Visual Creation',
+        'Product Photography Enhancement',
+        'Social Media Graphics',
+        'Logo Design & Branding'
+      ],
+      href: '/services/ai-image-generator'
+    },
+    {
+      title: 'AI Voice Assistant',
+      description: 'Voice-activated business automation with natural language processing and speech recognition',
+      icon: '🎤',
+      features: [
+        'Voice Command Processing',
+        'Natural Language Understanding',
+        'Multi-language Support',
+        'Business Process Automation',
+        'Integration with Existing Systems'
+      ],
+      href: '/services/ai-voice-assistant'
+    },
+    {
+      title: 'AI Email Marketing',
+      description: 'Intelligent email campaigns with personalization, automation, and performance optimization',
+      icon: '📧',
+      features: [
+        'Automated Campaign Creation',
+        'Personalization Engine',
+        'A/B Testing & Optimization',
+        'Performance Analytics',
+        'Lead Generation Automation'
+      ],
+      href: '/services/ai-email-marketing'
+    },
+    {
+      title: 'Cloud Migration Services',
+      description: 'Seamless migration to AWS, Azure, or Google Cloud with zero downtime and cost optimization',
+      icon: '☁️',
+      features: [
+        'Zero-Downtime Migration',
+        'Cost Optimization Analysis',
+        'Security & Compliance Assessment',
+        'Performance Monitoring',
+        '24/7 Support & Maintenance'
+      ],
+      href: '/services/cloud-migration-services'
+    },
+    {
+      title: 'API Development',
+      description: 'Custom RESTful and GraphQL APIs with comprehensive documentation and testing',
+      icon: '🔌',
+      features: [
+        'RESTful API Development',
+        'GraphQL Implementation',
+        'API Documentation & Testing',
+        'Rate Limiting & Security',
+        'Performance Optimization'
+      ],
+      href: '/services/api-development'
+    },
+    {
+      title: 'Mobile App Development',
+      description: 'Native iOS and Android applications with modern frameworks and AI integration',
+      icon: '📱',
+      features: [
+        'iOS & Android Development',
+        'Cross-platform Solutions',
+        'AI Integration',
+        'Performance Optimization',
+        'App Store Deployment'
+      ],
+      href: '/services/mobile-app-development'
+    },
+    {
+      title: 'Database Optimization',
+      description: 'Database performance tuning, scaling, and optimization for enterprise applications',
+      icon: '🗄️',
+      features: [
+        'Performance Tuning',
+        'Query Optimization',
+        'Scaling Strategies',
+        'Backup & Recovery',
+        'Monitoring & Analytics'
+      ],
+      href: '/services/database-optimization'
+    },
+    {
+      title: 'Lead Generation Automation',
+      description: 'Automated lead capture, nurturing, and conversion optimization systems',
+      icon: '🎯',
+      features: [
+        'Automated Lead Capture',
+        'Lead Scoring & Qualification',
+        'Nurturing Campaigns',
+        'CRM Integration',
+        'Conversion Optimization'
+      ],
+      href: '/services/lead-generation'
+    },
+    {
+      title: 'Financial Analytics Platform',
+      description: 'Real-time financial analysis, forecasting, and business intelligence solutions',
+      icon: '💰',
+      features: [
+        'Real-time Financial Analysis',
+        'Predictive Forecasting',
+        'Risk Assessment',
+        'Compliance Reporting',
+        'Investment Optimization'
+      ],
+      href: '/services/financial-analytics'
+    },
+    {
+      title: 'Project Management AI',
+      description: 'AI-powered project management with predictive analytics and resource optimization',
+      icon: '📋',
+      features: [
+        'Predictive Project Analytics',
+        'Resource Optimization',
+        'Risk Assessment',
+        'Team Collaboration Tools',
+        'Performance Tracking'
+      ],
+      href: '/services/project-management-ai'
+    },
+    {
+      title: 'Inventory Management System',
+      description: 'Real-time inventory tracking with predictive analytics and automated reordering',
+      icon: '📦',
+      features: [
+        'Real-time Inventory Tracking',
+        'Predictive Demand Analysis',
+        'Automated Reordering',
+        'Supply Chain Optimization',
+        'Multi-location Management'
+      ],
+      href: '/services/inventory-management'
+    },
+    {
+      title: 'CRM Integration Services',
+      description: 'Seamless integration of customer relationship management systems with AI capabilities',
+      icon: '👥',
+      features: [
+        'CRM System Integration',
+        'Data Synchronization',
+        'AI-Powered Insights',
+        'Automation Workflows',
+        'Performance Analytics'
+      ],
+      href: '/services/crm-integration'
+    },
+    {
+      title: 'Workflow Automation',
+      description: 'Business process automation with intelligent workflows and smart triggers',
+      icon: '⚙️',
+      features: [
+        'Process Automation Design',
+        'Smart Trigger Systems',
+        'Workflow Optimization',
+        'Integration Management',
+        'Performance Monitoring'
+      ],
+      href: '/services/workflow-automation'
+    },
+    {
+      title: 'E-commerce Solutions',
+      description: 'Complete e-commerce platforms with AI-powered personalization and analytics',
+      icon: '🛒',
+      features: [
+        'E-commerce Platform Development',
+        'AI-Powered Personalization',
+        'Payment Gateway Integration',
+        'Inventory Management',
+        'Analytics & Reporting'
+      ],
+      href: '/services/ecommerce-solutions'
+    },
+    {
+      title: 'Business Intelligence Dashboard',
+      description: 'Comprehensive business intelligence with real-time dashboards and predictive analytics',
+      icon: '📊',
+      features: [
+        'Real-time Dashboards',
+        'Predictive Analytics',
+        'Custom Reporting',
+        'Data Visualization',
+        'Performance Metrics'
+      ],
+      href: '/services/business-intelligence'
+    },
+    {
+      title: 'DevOps Automation',
+      description: 'Complete DevOps automation with CI/CD pipelines and infrastructure management',
+      icon: '🚀',
+      features: [
+        'CI/CD Pipeline Development',
+        'Infrastructure as Code',
+        'Automated Testing',
+        'Deployment Automation',
+        'Monitoring & Alerting'
+      ],
+      href: '/services/devops-automation'
+    },
+    {
+      title: 'AI-Powered Analytics',
+      description: 'Advanced analytics solutions with machine learning and predictive modeling',
+      icon: '🔍',
+      features: [
+        'Machine Learning Models',
+        'Predictive Analytics',
+        'Data Mining & Insights',
+        'Real-time Processing',
+        'Custom Algorithm Development'
+      ],
+      href: '/services/ai-analytics'
+    }
+  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
@@ -60,7 +418,7 @@ export default function ServicesPage() {
                   {service.icon}
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                  {service.name}
+                  {service.title}
                 </h3>
                 <p className="text-gray-600 mb-6 leading-relaxed">
                   {service.description}
@@ -76,7 +434,7 @@ export default function ServicesPage() {
                   ))}
                 </ul>
                 <Link
-                  to={service.href}
+                  href={service.href}
                   className="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 group"
                 >
                   <span>Learn More</span>
