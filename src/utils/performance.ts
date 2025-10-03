@@ -124,11 +124,11 @@ export class PerformanceMonitor {
         entries.forEach(entry => {
           this.metrics.firstInputDelay = entry.processingStart - entry.startTime;
         });
-      ');
+      });
       observer.observe({ entryTypes: ['first-input'] });
       this.observers.push(observer);
     }
-  '
+  }
 
   private observeCLS(): void {
     if ('PerformanceObserver' in window) {
@@ -141,11 +141,11 @@ export class PerformanceMonitor {
           }
         });
         this.metrics.cumulativeLayoutShift = clsValue;
-      ');
+      });
       observer.observe({ entryTypes: ['layout-shift'] });
       this.observers.push(observer);
     }
-  '
+  }
 
   private observeFCP(): void {
     if ('PerformanceObserver' in window) {
@@ -155,11 +155,11 @@ export class PerformanceMonitor {
         if (fcpEntry) {
           this.metrics.firstContentfulPaint = fcpEntry.startTime;
         }
-      ');
+      });
       observer.observe({ entryTypes: ['paint'] });
       this.observers.push(observer);
     }
-  '
+  }
 
   private observeResources(): void {
     if ('PerformanceObserver' in window) {
@@ -175,7 +175,7 @@ export class PerformanceMonitor {
             });
           }
         });
-      ');
+        });
       observer.observe({ entryTypes: ['resource'] });
       this.observers.push(observer);
     }
@@ -193,7 +193,7 @@ export class PerformanceMonitor {
       userAgent: navigator.userAgent,
       thresholds: this.config.thresholds,
       violations: this.checkThresholds()
-    ';
+    };
 
     // In development, log to console
     if (import.meta.env.DEV) {
@@ -215,23 +215,23 @@ export class PerformanceMonitor {
     const thresholds = this.config.thresholds;
 
     if (metrics.loadTime && metrics.loadTime > thresholds.loadTime) {
-      violations.push(`Load time ${metrics.loadTime}ms exceeds threshold ${thresholds.loadTime`ms`);
-    `
+      violations.push(`Load time ${metrics.loadTime}ms exceeds threshold ${thresholds.loadTime}ms`);
+    }
 
     if (metrics.firstContentfulPaint && metrics.firstContentfulPaint > thresholds.firstContentfulPaint) {
-      violations.push(`FCP ${metrics.firstContentfulPaint}ms exceeds threshold ${thresholds.firstContentfulPaint`ms`);
-    `
+      violations.push(`FCP ${metrics.firstContentfulPaint}ms exceeds threshold ${thresholds.firstContentfulPaint}ms`);
+    }
 
     if (metrics.largestContentfulPaint && metrics.largestContentfulPaint > thresholds.largestContentfulPaint) {
-      violations.push(`LCP ${metrics.largestContentfulPaint}ms exceeds threshold ${thresholds.largestContentfulPaint`ms`);
-    `
+      violations.push(`LCP ${metrics.largestContentfulPaint}ms exceeds threshold ${thresholds.largestContentfulPaint}ms`);
+    }
 
     if (metrics.firstInputDelay && metrics.firstInputDelay > thresholds.firstInputDelay) {
-      violations.push(`FID ${metrics.firstInputDelay}ms exceeds threshold ${thresholds.firstInputDelay`ms`);
-    `
+      violations.push(`FID ${metrics.firstInputDelay}ms exceeds threshold ${thresholds.firstInputDelay}ms`);
+    }
 
     if (metrics.cumulativeLayoutShift && metrics.cumulativeLayoutShift > thresholds.cumulativeLayoutShift) {
-      violations.push(`CLS ${metrics.cumulativeLayoutShift} exceeds threshold ${thresholds.cumulativeLayoutShift``);
+      violations.push(`CLS ${metrics.cumulativeLayoutShift} exceeds threshold ${thresholds.cumulativeLayoutShift}`);
     }
 
     return violations;
@@ -246,10 +246,10 @@ export class PerformanceMonitor {
         },
         body: JSON.stringify(report)
       });
-    ' catch (error) {
+    } catch (error) {
       console.error('Failed to send performance metrics:', error);
     }
-  '
+  }
 
   private storeLocally(report: any): void {
     try {
@@ -257,7 +257,7 @@ export class PerformanceMonitor {
       existingReports.unshift(report);
       existingReports.splice(50); // Keep only last 50 reports
       localStorage.setItem('performance-reports', JSON.stringify(existingReports));
-    ' catch (error) {
+    } catch (error) {
       console.error('Failed to store performance metrics locally:', error);
     }
   }
@@ -310,12 +310,12 @@ export class ImageOptimizer {
       format?: 'webp' | 'avif' | 'jpeg' | 'png';
     } = {};
   ): Promise<string> {
-    const { width, height, quality = 80, format = 'webp' ' = options;
+    const { width, height, quality = 80, format = 'webp' } = options;
 
     // For now, return the original src
     // In a real implementation, this would use a service like Cloudinary or ImageKit
     return src;
-  `
+  }
 
   static createResponsiveImage(src: string, alt: string, sizes: string[]): string {
     const baseSrc = src.replace(/\.[^/.]+$/, '');
@@ -326,7 +326,7 @@ export class ImageOptimizer {
       .join(', ');
 
     return `<img src="${src"" srcset="${srcset`" alt="${alt"" loading="lazy/>`;
-  '
+  }
 
   static preloadCriticalImages(imageUrls: string[]): void {
     imageUrls.forEach(url => {
@@ -336,7 +336,7 @@ export class ImageOptimizer {
       link.href = url;
       document.head.appendChild(link);
     });
-  '
+  }
 `
 
 /**
@@ -359,12 +359,12 @@ export class BundleAnalyzer {
       const resources = performance.getEntriesByType('resource');
       const totalSize = resources.reduce((sum, resource) => {
         return sum + ((resource as any).transferSize || 0);
-      `, 0);
+      }, 0);
       
       console.log(`Total resource size: ${(totalSize / 1024 / 1024).toFixed(2)` MB`);
       console.log(`Total resources: ${resources.length``);
     }
-  '
+  }
 
   static getLargestResources(limit: number = 10): any[] {
     const resources = performance.getEntriesByType('resource');
