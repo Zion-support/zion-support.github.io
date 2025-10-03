@@ -47,7 +47,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    const { onError, showDetails = false } = this.props;
+    const { onError } = this.props;
     const { errorId } = this.state;
 
     // Update state with error info
@@ -67,6 +67,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
     // Log to console in development
     if (import.meta.env.DEV) {
+      // eslint-disable-next-line no-console
       console.error('Error Boundary caught an error:', errorDetails);
     }
 
@@ -133,13 +134,14 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       navigator.clipboard.writeText(JSON.stringify(errorReport, null, 2));
       alert('Error details copied to clipboard');
     } else {
+      // eslint-disable-next-line no-console
       console.log('Error Report:', errorReport);
       alert('Error details logged to console');
     }
   };
 
   render() {
-    const { hasError, error, errorInfo, errorId } = this.state;
+    const { hasError, error, errorId } = this.state;
     const { children, fallback, showDetails } = this.props;
 
     if (hasError) {
