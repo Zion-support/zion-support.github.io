@@ -1,6 +1,7 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App";
+
 async function reportWebVitals(): void {
   try {
     const { onCLS, onLCP, onFCP, onTTFB } = await import("web-vitals");
@@ -17,7 +18,7 @@ async function reportWebVitals(): void {
   } catch {
     // ignore in unsupported environments
   }
-};
+}
 
 // Optimized service worker registration
 const registerServiceWorker = () => {
