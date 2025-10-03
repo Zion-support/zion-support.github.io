@@ -9,6 +9,7 @@ import { Helmet } from 'react-helmet-async';
 export const seoUtils = {
   // Generate structured data for organization
   generateOrganizationSchema: () => ({
+<<<<<<< HEAD
     "@context": "https://schema.org","
     "@type": "Organization","
     "name": "Zion Tech Group","
@@ -26,32 +27,51 @@ export const seoUtils = {
     },
     "sameAs": ["
       "https://twitter.com/ziontech","
+=======
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Zion Tech Group",
+    "url": "https://zion.app",
+    "logo": "https://zion.app/logo.png",
+    "description": "Advanced AI and IT Solutions for Enterprise",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "US"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-XXX-XXX-XXXX",
+      "contactType": "customer service"
+    },
+    "sameAs": [
+      "https://twitter.com/ziontech",
+>>>>>>> cursor/fix-errors-and-merge-to-main-229c
       "https://linkedin.com/company/zion-tech"
     ]
   }),
 
   // Generate breadcrumb structured data
   generateBreadcrumbSchema: (items: Array<{name: string, url: string}>) => ({
-    "@context": "https://schema.org","
-    "@type": "BreadcrumbList","
-    "itemListElement": items.map((item, index) => ({"
-      "@type": "ListItem","
-      "position": index + 1,"
-      "name": item.name,"
-      "item": item.url"
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": items.map((item, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "name": item.name,
+      "item": item.url
     }))
   }),
 
   // Generate FAQ structured data
   generateFAQSchema: (faqs: Array<{question: string, answer: string}>) => ({
-    "@context": "https://schema.org","
-    "@type": "FAQPage","
-    "mainEntity": faqs.map(faq => ({"
-      "@type": "Question","
-      "name": faq.question,"
-      "acceptedAnswer": {"
-        "@type": "Answer","
-        "text": faq.answer"
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
       }
     }))
   }),
@@ -66,14 +86,15 @@ export const seoUtils = {
     image?: string;
     url: string;
   }) => ({
-    "@context": "https://schema.org","
-    "@type": "Article","
-    "headline": article.title,"
-    "description": article.description,"
-    "author": {"
-      "@type": "Person","
-      "name": article.author"
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": article.title,
+    "description": article.description,
+    "author": {
+      "@type": "Person",
+      "name": article.author
     },
+<<<<<<< HEAD
     "datePublished": article.datePublished,"
     "dateModified": article.dateModified,"
     "image": article.image,"
@@ -83,6 +104,17 @@ export const seoUtils = {
       "name": "Zion Tech Group","
       "logo": {"
         "@type": "ImageObject","
+=======
+    "datePublished": article.datePublished,
+    "dateModified": article.dateModified,
+    "image": article.image,
+    "url": article.url,
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "logo": {
+        "@type": "ImageObject",
+>>>>>>> cursor/fix-errors-and-merge-to-main-229c
         "url": "https://zion.app/logo.png"
       }
     }
@@ -323,7 +355,7 @@ export const initializeSEO = () => {
   
   // Set up meta tags
   if (typeof document !== 'undefined') {
-    const viewport = document.querySelector('meta[name="viewport"]');"
+    const viewport = document.querySelector('meta[name="viewport"]');
     if (!viewport) {
       const meta = document.createElement('meta');
       meta.name = 'viewport';

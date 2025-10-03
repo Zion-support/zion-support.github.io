@@ -278,10 +278,10 @@ function escapeHtml(text: string): string {
     '&': '&amp;',
     '<': '&lt;',
     '>': '&gt;',
-    '"': '&quot;',"
-    "'": '&#039;'"
+    '"': '&quot;',
+    "'": '&#039;'
   };
-  return text.replace(/[&<>"']/g, (m) => map[m]);"
+  return text.replace(/[&<>"']/g, (m) => map[m]);
 }
 
 /**
