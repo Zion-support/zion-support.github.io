@@ -14,7 +14,7 @@ class PerformanceMonitor {
   private metrics: PerformanceMetrics[] = [];
   private maxMetrics = 100;
 
-  public startMonitoring(componentName: string): { mountTime: number, renderCount: number } {
+  public startMonitoring(_componentName: string): { mountTime: number, renderCount: number } {
     const mountTime = Date.now();
     const renderCount = 0;
     return { mountTime, renderCount };
