@@ -1,5 +1,4 @@
 
-/* global document */
 // Accessibility utilities and components
 export const accessibilityUtils = {
   // Focus management

@@ -1,5 +1,4 @@
 
-/* global window, navigator */
 // Advanced analytics and monitoring
 export const analyticsUtils = {
   // Performance monitoring
