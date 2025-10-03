@@ -16,61 +16,49 @@ export const metadata: Metadata = {
 
 export default function ConsensusIntelligencePage() {
   return (
-    <div className="text-left"></div>
-      <div className="text-left">
+    <div className="text-left">
         {/* Header */}</div>
-        <div className="text-left"></div>
-          <div className="text-left"></div>
+        <div className="text-left">
             <span className="text-left">
               🚀 AI 2026 Breakthrough
             </span>
           </div>
-          
           <h1 className="text-left">
             Consensus Intelligence Breakthrough
           </h1>
-          
           <p className="text-left">
             Discover the revolutionary AI system that enables multiple agents to reach unanimous decisions through quantum-accelerated consensus protocols, delivering 99.9% accuracy in complex enterprise scenarios.
           </p>
-          
-          <div className="text-left"></div>
-            <span className="text-left">Consensus AI<
+          <span className="text-left">Consensus AI<
             <span className="text-left">Quantum Computing<
             <span className="text-left">Enterprise Ready<
             <span className="text-left">99.9% Accuracy>
           </div>
 
         {/* Key Metrics */}
-        <div className="text-left"></div>
-          <div className="text-left"></div>
-            <div className="text-left">99.9%</div>"
-            <div className="text-left">Consensus Accuracy</div>"
+        <div className="text-left">
+            <div className="text-left">99.9%</div>
+            <div className="text-left">Consensus Accuracy</div>
           </div>
-          <div className="text-left"></div>
-            <div className="text-left">1000x</div>"
-            <div className="text-left">Decision Speed</div>"
+          <div className="text-left">1000x</div>
+            <div className="text-left">Decision Speed</div>
           </div>
-          <div className="text-left"></div>
-            <div className="text-left">$5.2B</div>"
-            <div className="text-left">Enterprise Value</div>"
+          <div className="text-left">$5.2B</div>
+            <div className="text-left">Enterprise Value</div>
           </div>
-          <div className="text-left"></div>
-            <div className="text-left">0.3s</div>"
-            <div className="text-left">Consensus Time</div>"
+          <div className="text-left">0.3s</div>
+            <div className="text-left">Consensus Time</div>
           </div>
 
         {/* Main Content */}
         <article className="text-left">
-          <h2 className="text-left">Revolutionary Consensus Intelligence</h2>"
+          <h2 className="text-left">Revolutionary Consensus Intelligence</h2>
           <p className="text-left">
             The Consensus Intelligence Breakthrough represents a paradigm shift in artificial intelligence, enabling multiple AI agents to collaborate and reach unanimous decisions through advanced quantum-accelerated consensus protocols.
           </p>
-
-          <h3 className="text-left">How It Works</h3>"
-          <div className="text-left"></div>
-            <div className="text-left"></div>
-              <h4 className="text-left">Multi-Agent Collaboration</h4>"
+          <h3 className="text-left">How It Works</h3>
+          <div className="text-left">
+              <h4 className="text-left">Multi-Agent Collaboration</h4>
               <p className="text-left">
                 Our system coordinates between 1000+ specialized AI agents, each with expertise in different business domains, working together to reach consensus on complex decisions.
               </p>
@@ -81,9 +69,7 @@ export default function ConsensusIntelligencePage() {
                 <li>• Distributed reasoning</li>
               </ul>
             </div>
-            
-            <div className="text-left"></div>
-              <h4 className="text-left">Quantum Acceleration</h4>"
+            <h3 className="text-left">Quantum Acceleration</h4>
               <p className="text-left">
                 Quantum computing principles enable parallel processing of complex decision trees, achieving consensus in just 0.3 seconds with 99.9% accuracy.
               </p>
@@ -94,36 +80,28 @@ export default function ConsensusIntelligencePage() {
                 <li>• Multi-dimensional reasoning</li>
               </ul>
             </div>
-
-          <h3 className="text-left">Enterprise Impact</h3>"
+          <h3 className="text-left">Enterprise Impact</h3>
           <p className="text-left">
             Fortune 500 companies have already achieved unprecedented results with our Consensus Intelligence system, generating over $5.2 billion in measurable value.
           </p>
-
-          <div className="text-left"></div>
-            <h4 className="text-left">Real-World Success Metrics</h4>"
-            <div className="text-left"></div>
-              <div className="text-left"></div>
-                <div className="text-left">$5.2B</div>"
-                <div className="text-left">Total Value Generated</div>"
+          <h3 className="text-left">Real-World Success Metrics</h4>
+            <div className="text-left">
+                <div className="text-left">$5.2B</div>
+                <div className="text-left">Total Value Generated</div>
               </div>
-              <div className="text-left"></div>
-                <div className="text-left">99.9%</div>"
-                <div className="text-left">Decision Accuracy</div>"
+              <div className="text-left">99.9%</div>
+                <div className="text-left">Decision Accuracy</div>
               </div>
-              <div className="text-left"></div>
-                <div className="text-left">0.3s</div>"
-                <div className="text-left">Consensus Time</div>"
+              <div className="text-left">0.3s</div>
+                <div className="text-left">Consensus Time</div>
               </div>
           </div>
 
-          <h3 className="text-left">Getting Started</h3>"
+          <h3 className="text-left">Getting Started</h3>
           <p className="text-left">
             Ready to transform your enterprise with Consensus Intelligence? Our team of experts is standing by to help you implement this revolutionary technology and achieve unprecedented business results.
           </p>
-
-          <div className="text-left"></div>
-            <h4 className="text-left">Free Consultation Available</h4>"
+          <h3 className="text-left">Free Consultation Available</h4>
             <p className="text-left">
               Schedule a free consultation with our AI experts to discover how Consensus Intelligence can transform your business operations and deliver measurable value.
             </p>

@@ -14,8 +14,7 @@ export default function Page() {
 	return (
 		<div className="text-left"></div>
 			<article className="text-left">
-				<div className="text-left"></div>
-					<div className="text-left"></div>
+				<div className="text-left">
 						<span className="text-left">
 							💰 Success Story
 						</span>
@@ -28,36 +27,29 @@ export default function Page() {
 					</p>
 				</div>
 
-				<div className="text-left"></div>
-					<h2 className="text-left">🎯 Transformation Results</h2>"
+				<h3 className="text-left">🎯 Transformation Results</h2>
 					<p className="text-left">
 						This comprehensive case study reveals how a Fortune 500 company achieved <strong>$50M annual savings</strong>, 
 						<strong>95% process automation</strong>, and <strong>300% ROI</strong> through strategic AI transformation. 
 						Learn the exact frameworks, timelines, and implementation strategies that delivered these breakthrough results.
 					</p>
-					<div className="text-left"></div>
-						<div className="text-left"></div>
-							<div className="text-left">$50M</div>"
-							<div className="text-left">Annual Savings</div>"
+					<div className="text-left">
+							<div className="text-left">$50M</div>
+							<div className="text-left">Annual Savings</div>
 						</div>
-						<div className="text-left"></div>
-							<div className="text-left">95%</div>"
-							<div className="text-left">Process Automation</div>"
+						<div className="text-left">95%</div>
+							<div className="text-left">Process Automation</div>
 						</div>
-						<div className="text-left"></div>
-							<div className="text-left">300%</div>"
-							<div className="text-left">ROI</div>"
+						<div className="text-left">300%</div>
+							<div className="text-left">ROI</div>
 						</div>
-						<div className="text-left"></div>
-							<div className="text-left">18mo</div>"
-							<div className="text-left">Payback Period</div>"
+						<div className="text-left">18mo</div>
+							<div className="text-left">Payback Period</div>
 						</div>
 				</div>
 
-				<div className="text-left"></div>
-					<h2 className="text-left">🏢 Company Profile</h2>"
-					<div className="text-left"></div>
-						<h3 className="text-left">Fortune 500 Global Manufacturing</h3>"
+				<h3 className="text-left">🏢 Company Profile</h2>
+					<h3 className="text-left">Fortune 500 Global Manufacturing</h3>
 						<ul className="text-left">
 							<li className="text-left">
 								<span className="text-left">🏭>
@@ -77,16 +69,13 @@ export default function Page() {
 							</li>
 						</ul>
 					</div>
-
-					<h2 className="text-left">🎯 Transformation Strategy</h2>"
+					<h2 className="text-left">🎯 Transformation Strategy</h2>
 					<p className="text-left">
 						The transformation followed a comprehensive 6-phase approach, each phase building upon the previous to create 
 						exponential value. Here's the proven roadmap:
 					</p>
-
-					<div className="text-left"></div>
-						<div className="text-left"></div>
-							<h3 className="text-left">Phase 1: Foundation & Assessment (Months 1-3)</h3>"
+					<div className="text-left">
+							<h3 className="text-left">Phase 1: Foundation & Assessment (Months 1-3)</h3>
 							<ul className="text-left">
 								<li>• Comprehensive AI readiness assessment across all business units</li>
 								<li>• Legacy system audit and modernization roadmap</li>
@@ -96,9 +85,7 @@ export default function Page() {
 							<div className="text-left"></div>
 								<strong>Results:</strong> Identified $15M in immediate optimization opportunities
 							</div>
-
-						<div className="text-left"></div>
-							<h3 className="text-left">Phase 2: Quick Wins & Pilots (Months 4-8)</h3>"
+						<h3 className="text-left">Phase 2: Quick Wins & Pilots (Months 4-8)</h3>
 							<ul className="text-left">
 								<li>• Deployed AI-powered demand forecasting with 40% accuracy improvement</li>
 								<li>• Automated invoice processing reducing manual work by 80%</li>
@@ -108,9 +95,7 @@ export default function Page() {
 							<div className="text-left"></div>
 								<strong>Results:</strong> $8M in cost savings and 45% process automation achieved
 							</div>
-
-						<div className="text-left"></div>
-							<h3 className="text-left">Phase 3: Enterprise Scale (Months 9-15)</h3>"
+						<h3 className="text-left">Phase 3: Enterprise Scale (Months 9-15)</h3>
 							<ul className="text-left">
 								<li>• Rolled out autonomous supply chain optimization across all regions</li>
 								<li>• Implemented AI-driven quality control reducing defects by 85%</li>
@@ -120,9 +105,7 @@ export default function Page() {
 							<div className="text-left"></div>
 								<strong>Results:</strong> $25M in additional savings and 80% automation rate
 							</div>
-
-						<div className="text-left"></div>
-							<h3 className="text-left">Phase 4: Advanced AI (Months 16-24)</h3>"
+						<h3 className="text-left">Phase 4: Advanced AI (Months 16-24)</h3>
 							<ul className="text-left">
 								<li>• Deployed autonomous decision-making systems for real-time optimization</li>
 								<li>• Implemented self-healing infrastructure reducing IT costs by 70%</li>
@@ -133,15 +116,12 @@ export default function Page() {
 								<strong>Results:</strong> $17M final savings and 95% automation achievement
 							</div>
 					</div>
-
-					<h2 className="text-left">💰 Detailed ROI Analysis</h2>"
+					<h2 className="text-left">💰 Detailed ROI Analysis</h2>
 					<p className="text-left">
 						The transformation delivered measurable value across multiple dimensions. Here's the detailed breakdown:
 					</p>
-
-					<div className="text-left"></div>
-						<div className="text-left"></div>
-							<h3 className="text-left">Direct Cost Savings</h3>"
+					<div className="text-left">
+							<h3 className="text-left">Direct Cost Savings</h3>
 							<ul className="text-left">
 								<li>• <strong>$18M:</strong> Reduced manual labor and operational costs</li>
 								<li>• <strong>$12M:</strong> Optimized supply chain and inventory management</li>
@@ -150,8 +130,7 @@ export default function Page() {
 								<li>• <strong>$5M:</strong> Reduced compliance and audit costs</li>
 							</ul>
 						</div>
-						<div className="text-left"></div>
-							<h3 className="text-left">Revenue & Efficiency Gains</h3>"
+						<h3 className="text-left">Revenue & Efficiency Gains</h3>
 							<ul className="text-left">
 								<li>• <strong>$8M:</strong> Increased sales through better demand forecasting</li>
 								<li>• <strong>$5M:</strong> New revenue streams from AI-powered services</li>
@@ -160,14 +139,11 @@ export default function Page() {
 								<li>• <strong>$1M:</strong> Enhanced innovation and R&D efficiency</li>
 							</ul>
 						</div>
-
-					<h2 className="text-left">🛠️ Technology Stack & Architecture</h2>"
+					<h2 className="text-left">🛠️ Technology Stack & Architecture</h2>
 					<p className="text-left">
 						The transformation leveraged a modern, scalable technology stack designed for enterprise-grade performance:
 					</p>
-
-					<div className="text-left"></div>
-						<pre className="text-left">
+					<pre className="text-left">
 {`// Enterprise AI Transformation Architecture
 const TransformationStack = {
   dataLayer: {
@@ -194,56 +170,55 @@ const TransformationStack = {
 						</pre>
 					</div>
 
-					<h2 className="text-left">📊 Performance Metrics & KPIs</h2>"
+					<h2 className="text-left">📊 Performance Metrics & KPIs</h2>
 					<div className="text-left"></div>
 						<table className="text-left">
 							<thead>
 								<tr className="text-left">
-									<th className="text-left">Metric Category</th>"
-									<th className="text-left">Before AI</th>"
-									<th className="text-left">After AI</th>"
-									<th className="text-left">Improvement</th>"
+									<th className="text-left">Metric Category</th>
+									<th className="text-left">Before AI</th>
+									<th className="text-left">After AI</th>
+									<th className="text-left">Improvement</th>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td className="text-left">Process Automation Rate</td>"
-									<td className="text-left">15%</td>"
-									<td className="text-left">95%</td>"
-									<td className="text-left">533%</td>"
+									<td className="text-left">Process Automation Rate</td>
+									<td className="text-left">15%</td>
+									<td className="text-left">95%</td>
+									<td className="text-left">533%</td>
 								</tr>
 								<tr>
-									<td className="text-left">Operational Efficiency</td>"
-									<td className="text-left">65%</td>"
-									<td className="text-left">94%</td>"
-									<td className="text-left">45%</td>"
+									<td className="text-left">Operational Efficiency</td>
+									<td className="text-left">65%</td>
+									<td className="text-left">94%</td>
+									<td className="text-left">45%</td>
 								</tr>
 								<tr>
-									<td className="text-left">System Uptime</td>"
-									<td className="text-left">98.5%</td>"
-									<td className="text-left">99.97%</td>"
-									<td className="text-left">1.5%</td>"
+									<td className="text-left">System Uptime</td>
+									<td className="text-left">98.5%</td>
+									<td className="text-left">99.97%</td>
+									<td className="text-left">1.5%</td>
 								</tr>
 								<tr>
-									<td className="text-left">Decision Speed</td>"
-									<td className="text-left">48 hours</td>"
-									<td className="text-left">15 minutes</td>"
-									<td className="text-left">99.7%</td>"
+									<td className="text-left">Decision Speed</td>
+									<td className="text-left">48 hours</td>
+									<td className="text-left">15 minutes</td>
+									<td className="text-left">99.7%</td>
 								</tr>
 								<tr>
-									<td className="text-left">Customer Satisfaction</td>"
-									<td className="text-left">78%</td>"
-									<td className="text-left">96%</td>"
-									<td className="text-left">23%</td>"
+									<td className="text-left">Customer Satisfaction</td>
+									<td className="text-left">78%</td>
+									<td className="text-left">96%</td>
+									<td className="text-left">23%</td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
 
-					<h2 className="text-left">🎓 Lessons Learned & Best Practices</h2>"
-					<div className="text-left"></div>
-						<div className="text-left"></div>
-							<h3 className="text-left">✅ Critical Success Factors</h3>"
+					<h2 className="text-left">🎓 Lessons Learned & Best Practices</h2>
+					<div className="text-left">
+							<h3 className="text-left">✅ Critical Success Factors</h3>
 							<ul className="text-left">
 								<li>• <strong>Executive Sponsorship:</strong> C-level commitment is essential</li>
 								<li>• <strong>Change Management:</strong> Invest heavily in training and communication</li>
@@ -252,8 +227,7 @@ const TransformationStack = {
 								<li>• <strong>Governance:</strong> Establish AI ethics and compliance frameworks</li>
 							</ul>
 						</div>
-						<div className="text-left"></div>
-							<h3 className="text-left">⚠️ Common Pitfalls to Avoid</h3>"
+						<h3 className="text-left">⚠️ Common Pitfalls to Avoid</h3>
 							<ul className="text-left">
 								<li>• <strong>Technology First:</strong> Don't start with tools, start with problems</li>
 								<li>• <strong>Scope Creep:</strong> Avoid trying to transform everything at once</li>
@@ -262,15 +236,12 @@ const TransformationStack = {
 								<li>• <strong>ROI Expectations:</strong> Set realistic timelines for value realization</li>
 							</ul>
 						</div>
-
-					<h2 className="text-left">🚀 Getting Started with Your Transformation</h2>"
+					<h2 className="text-left">🚀 Getting Started with Your Transformation</h2>
 					<p className="text-left">
 						Ready to achieve similar results? Our expert team has guided 500+ organizations through successful AI transformations. 
 						Get started with a comprehensive assessment and personalized transformation roadmap.
 					</p>
-
-					<div className="text-left"></div>
-						<h3 className="text-left">Start Your $50M Transformation Today</h3>"
+					<h3 className="text-left">Start Your $50M Transformation Today</h3>
 						<p className="text-left">
 							Join Fortune 500 companies achieving breakthrough results through strategic AI transformation
 						</p>

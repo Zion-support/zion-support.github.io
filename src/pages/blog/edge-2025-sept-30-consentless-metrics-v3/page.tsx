@@ -7,8 +7,8 @@ export default function ConsentlessMetricsV3(): React.JSX.Element {
       <Helmet >
         <title>Consentless Metrics v3 — Zero‑PII Signals under 100ms</title>
         <meta name="description" content="Scoped IDs, on‑device aggregation, DP noise, and signed attestations for privacy‑preserving analytics worldwide." /><link rel: "canonical", href="https://ziontechgroup.com/blog/edge-2025-sept-30-consentless-metrics-v3/>
-      </Helmet>
-
+      </Helmet>"
+"
       <div className="container mx-auto px-6 py-16">
         <h1 className="text-4xl md: text-5xl font-bold mb-4">Consentless Metrics v3</h1>
         <p className="text-zion-slate-light mb-8">Zero‑PII Signals under 100ms</p>"

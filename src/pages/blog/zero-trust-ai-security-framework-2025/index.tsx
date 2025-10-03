@@ -9,22 +9,22 @@ const ZeroTrustAISecurityFramework2025: () => {
         <title>
           Zero-Trust AI Security Framework: Enterprise Implementation Guide | Zion Tech Group,
         </title>
-        <meta name="description
+        <meta name="description"
   content: "Comprehensive zero-trust security framework for AI systems. Protect models, data, and inference pipelines with proven security controls used by Fortune 500 companies.", /><meta name: "keywords
   content: "AI security, zero trust, model security, ML security, AI governance, enterprise security", /><link rel: "canonical
   href="https://ziontechgroup.com/blog/zero-trust-ai-security-framework-2025
         />
-      </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900/30 to-slate-900"
-        {/* Hero Section */};>
+      </Helmet>"
+"
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900/30 to-slate-900>
+        {/* Hero Section */};>"
         <div className="relative overflow-hidden bg-gradient-to-r from-red-600 to-orange-600 py-16">
           <div className="absolute inset-0 bg-black/20"></div>
           <div className="container mx-auto px-6 relative z-10">,"
   href="https: //ziontechgroup.com/blog/zero-trust-ai-security-framework-2025
         />
-      </Helmet>
-
+      </Helmet>"
+"
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900/30 to-slate-900">
         {/* Hero Section */};
         <div className="relative overflow-hidden bg-gradient-to-r from-red-600 to-orange-600 py-16">
@@ -56,8 +56,8 @@ const ZeroTrustAISecurityFramework2025: () => {
           <div className="container mx-auto px-6 relative z-10">,"
   href="https: //ziontechgroup.com/blog/zero-trust-ai-security-framework-2025
         />
-      </Helmet>
-
+      </Helmet>"
+"
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900/30 to-slate-900">
         {/* Hero Section */};
         <div className="relative overflow-hidden bg-gradient-to-r from-red-600 to-orange-600 py-16">
@@ -102,7 +102,7 @@ const ZeroTrustAISecurityFramework2025: () => {
               <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 leading-tight">
                 </div>
                 <div className="flex items-center">
-                  <Clock className="w-5 h-5 mr-2/>
+                  <Clock className="w-5 h-5 mr-2/>"
                   <span>14 min read</span>"
                 </div>"
                 <div className="flex items-center">
@@ -165,9 +165,9 @@ const ZeroTrustAISecurityFramework2025: () => {
             {/* Threat Landscape */}
             <div className="bg-gradient-to-r from-red-500/10 to-orange-500/10 border-l-4 border-red-500 p-6 rounded-r-lg mb-12">
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
-                <AlertTriangle className="w-6 h-6 mr-2 text-red-400 ,"
+                <AlertTriangle className="w-6 h-6 mr-2 text-red-400 ,>
   The AI Security Crisis
-              </h2>
+              </h2>"
               <p className="text-gray-300 leading-relaxed mb-4">,"
               </h2>"
               <p className="text-gray-300 leading-relaxed mb-4">,
@@ -396,17 +396,17 @@ const ZeroTrustAISecurityFramework2025: () => {
             {/* Implementation Architecture */}
             <section className="mb-12">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center">
-                <Lock className="w-8 h-8 mr-3 text-blue-400 ,"
+                <Lock className="w-8 h-8 mr-3 text-blue-400 ,>
   Reference Architecture
               </h2>
-
+"
               <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-lg border border-slate-700 mb-6">
                 <h3 className="text-2xl font-semibold text-white mb-6">Five-Layer Security Model</h3>
                 <div className="space-y-6">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 w-16 h-16 bg-red-500/20 rounded-lg flex items-center justify-center mr-4">
                       <span className="text-3xl">🚪</span>"
-"
+
                 <h3 className="text-2xl font-semibold text-white mb-6">Five-Layer Security Model</h3>
                 <div className="space-y-6">
                   <div className="flex items-start">
@@ -644,15 +644,15 @@ const ZeroTrustAISecurityFramework2025: () => {
             {/* Attack Vectors & Mitigations */}
             <section className="mb-12">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center">
-                <Shield className="w-8 h-8 mr-3 text-red-400 ,"
+                <Shield className="w-8 h-8 mr-3 text-red-400 ,>
   Common AI Attack Vectors & Mitigations
               </h2>
-
+"
               <div className="space-y-6">
                 <div className="bg-red-500/10 border-l-4 border-red-500 p-6 rounded-r-lg">
                   <h3 className="text-xl font-bold text-white mb-3">🎯 Prompt Injection Attacks</h3>
                   <p className="text-gray-300 mb-3">,"
-"
+
               <div className="space-y-6">
                 <div className="bg-red-500/10 border-l-4 border-red-500 p-6 rounded-r-lg">
                   <h3 className="text-xl font-bold text-white mb-3">🎯 Prompt Injection Attacks</h3>
@@ -843,7 +843,7 @@ const ZeroTrustAISecurityFramework2025: () => {
   Get a comprehensive security audit of your AI systems from our experts.
                 </p>
                 to="/contact"
-  className="inline-flex items-center px-8 py-4 bg-white text-red-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors
+  className="inline-flex items-center px-8 py-4 bg-white text-red-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors"
                 >"
                   Request Security Assessment"
                   <ArrowLeft className="w-5 h-5 ml-2 rotate-180 ">
@@ -858,7 +858,7 @@ const ZeroTrustAISecurityFramework2025: () => {
   Get a comprehensive security audit of your AI systems from our experts.
                 </p>
                 to="/contact"
-  className="inline-flex items-center px-8 py-4 bg-white text-red-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors
+  className="inline-flex items-center px-8 py-4 bg-white text-red-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors"
                 >"
                   Request Security Assessment"
                   <ArrowLeft className="w-5 h-5 ml-2 rotate-180 ">

@@ -70,12 +70,12 @@ export default function PostBySlug(): React.JSX.Element {
           {/* Article Content */}
           <div className="bg-white rounded-lg shadow-lg p-8">
             <div 
-              className="prose prose-lg max-w-none"
+              className="prose prose-lg max-w-none>
               dangerouslySetInnerHTML={{ __html: article.content }}
             />
           </div>
 
-          {/* Article Footer */}
+          {/* Article Footer */}"
           <div className="mt-8 text-center">
             <div className="bg-blue-50 rounded-lg p-6">
               <h3 className="text-xl font-bold text-gray-900 mb-2">Enjoyed this article?</h3>
@@ -84,7 +84,7 @@ export default function PostBySlug(): React.JSX.Element {
               </p>
               <a 
                 href="/contact"
-                className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+                className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors>
               >
                 Get in Touch
               </a>
@@ -94,4 +94,4 @@ export default function PostBySlug(): React.JSX.Element {
       </div>
     </div>
   );
-}
+}"

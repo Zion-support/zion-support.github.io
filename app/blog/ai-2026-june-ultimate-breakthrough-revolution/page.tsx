@@ -19,8 +19,7 @@ export default function June2026UltimateBreakthroughPage() {
     <div className="text-left"></div>
       <article className="text-left">
         <header className="text-left">
-          <div className="text-left"></div>
-            <span className="text-left">
+          <span className="text-left">
               JUNE 2026
             </span>
             <span className="text-left">
@@ -33,19 +32,15 @@ export default function June2026UltimateBreakthroughPage() {
           <p className="text-left">
             {data.description}
           </p>
-          <div className="text-left"></div>
-            <span>By {data.author}</span>
+          <span>By {data.author}</span>
             <span>•</span>
             <span>{new Date(data.date).toLocaleDateString()}</span>
           </div>
         </header>
-
         <div className="text-left"></div>
           <div dangerouslySetInnerHTML={{ __html: content.replace(/\n/g, '<br />') }} /></div>
         </div>
-
-        <div className="text-left"></div>
-          <h3 className="text-left">Get Started Today</h3>
+        <h3 className="text-left">Get Started Today</h3>
           <p className="text-left">
             Ready to transform your enterprise with the June 2026 AI breakthrough? Contact our team to schedule a consultation and discover how this revolutionary technology can deliver unprecedented value to your organization.
           </p>

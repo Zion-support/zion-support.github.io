@@ -5,26 +5,19 @@ export default function EnterpriseAITransformation2026CompleteGuide() {
   return (
     <div className="text-left">
       {/* Hero Section */}</div>
-      <div className="text-left"></div>
-        <div className="text-left"></div>"
-        <div className="text-left"></div>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
-              <span className="text-left">
+      <div className="text-left">
+        <div className="text-left">
+            <span className="text-left">
                 📚 COMPLETE GUIDE • January 30, 2026
               </span>
             </div>
-            
             <h1 className="text-left">
               Enterprise AI Transformation 2026: Complete Guide
             </h1>
-            
             <p className="text-left">
               The definitive roadmap for enterprise AI transformation, featuring proven strategies, implementation frameworks, and real-world case studies from Fortune 500 companies.
             </p>
-            
-            <div className="text-left"></div>
-              <span className="text-left">
+            <span className="text-left">
                 📈 Proven Strategies
               </span>
               <span className="text-left">
@@ -37,10 +30,9 @@ export default function EnterpriseAITransformation2026CompleteGuide() {
                 💰 ROI Optimization
               </span>
             </div>
-            
             <div className="text-left"></div>
               <a 
-                href="#transformation-framework" "
+                href="#transformation-framework" 
                 className="text-left">
                 Explore Framework →
               </a>
@@ -54,8 +46,7 @@ export default function EnterpriseAITransformation2026CompleteGuide() {
 
       {/* Transformation Framework Section */}
       <section id="transformation-framework" className="text-left">
-        <div className="text-left"></div>
-          <div className="text-left"></div>
+        <div className="text-left">
             <h2 className="text-left">
               Enterprise AI Transformation Framework
             </h2>
@@ -63,7 +54,6 @@ export default function EnterpriseAITransformation2026CompleteGuide() {
               A comprehensive 12-phase framework proven to deliver $50M+ annual savings and 300% ROI for enterprise organizations.
             </p>
           </div>
-
           <div className="text-left">
             {/* Phase 1-3 */}
             {[
@@ -93,11 +83,11 @@ export default function EnterpriseAITransformation2026CompleteGuide() {
               }
             ].map((phase, index) => (</div>
               <div key={index} className="text-left"></div>
-                <div className="text-left">{phase.icon}</div>"
-                <div className="text-left">{phase.phase}</div>"
-                <h3 className="text-left">{phase.title}</h3>"
-                <div className="text-left">{phase.duration}</div>"
-                <p className="text-left">{phase.description}</p>"
+                <div className="text-left">{phase.icon}</div>
+                <div className="text-left">{phase.phase}</div>
+                <h3 className="text-left">{phase.title}</h3>
+                <div className="text-left">{phase.duration}</div>
+                <p className="text-left">{phase.description}</p>
                 <div className="text-left">
                   {phase.outcomes.map((outcome, idx) => (</div>
                     <div key={idx} className="text-left"></div>
@@ -108,7 +98,6 @@ export default function EnterpriseAITransformation2026CompleteGuide() {
                 </div>
             ))}
           </div>
-
           <div className="text-left">
             {/* Phase 4-6 */}
             {[
@@ -138,11 +127,11 @@ export default function EnterpriseAITransformation2026CompleteGuide() {
               }
             ].map((phase, index) => (</div>
               <div key={index} className="text-left"></div>
-                <div className="text-left">{phase.icon}</div>"
-                <div className="text-left">{phase.phase}</div>"
-                <h3 className="text-left">{phase.title}</h3>"
-                <div className="text-left">{phase.duration}</div>"
-                <p className="text-left">{phase.description}</p>"
+                <div className="text-left">{phase.icon}</div>
+                <div className="text-left">{phase.phase}</div>
+                <h3 className="text-left">{phase.title}</h3>
+                <div className="text-left">{phase.duration}</div>
+                <p className="text-left">{phase.description}</p>
                 <div className="text-left">
                   {phase.outcomes.map((outcome, idx) => (</div>
                     <div key={idx} className="text-left"></div>
@@ -153,7 +142,6 @@ export default function EnterpriseAITransformation2026CompleteGuide() {
                 </div>
             ))}
           </div>
-
           <div className="text-left">
             {/* Phase 7-9 */}
             {[
@@ -183,11 +171,11 @@ export default function EnterpriseAITransformation2026CompleteGuide() {
               }
             ].map((phase, index) => (</div>
               <div key={index} className="text-left"></div>
-                <div className="text-left">{phase.icon}</div>"
-                <div className="text-left">{phase.phase}</div>"
-                <h3 className="text-left">{phase.title}</h3>"
-                <div className="text-left">{phase.duration}</div>"
-                <p className="text-left">{phase.description}</p>"
+                <div className="text-left">{phase.icon}</div>
+                <div className="text-left">{phase.phase}</div>
+                <h3 className="text-left">{phase.title}</h3>
+                <div className="text-left">{phase.duration}</div>
+                <p className="text-left">{phase.description}</p>
                 <div className="text-left">
                   {phase.outcomes.map((outcome, idx) => (</div>
                     <div key={idx} className="text-left"></div>
@@ -202,8 +190,7 @@ export default function EnterpriseAITransformation2026CompleteGuide() {
 
       {/* Success Metrics */}
       <section className="text-left">
-        <div className="text-left"></div>
-          <div className="text-left"></div>
+        <div className="text-left">
             <h2 className="text-left">
               Proven Results & Success Metrics
             </h2>
@@ -211,7 +198,6 @@ export default function EnterpriseAITransformation2026CompleteGuide() {
               Real-world results from enterprise AI transformations using our comprehensive framework.
             </p>
           </div>
-
           <div className="text-left">
             {[
               { value='$50M+', label: 'Average Annual Savings', icon: '💰', color: 'text-green-400' },
@@ -220,7 +206,7 @@ export default function EnterpriseAITransformation2026CompleteGuide() {
               { value='18mo', label: 'Average Payback Period', icon: '⏱️', color: 'text-orange-400' }
             ].map((metric, index) => (</div>
               <div key={index} className="text-left"></div>
-                <div className="text-left">{metric.icon}</div>"
+                <div className="text-left">{metric.icon}</div>
                 <div className={`text-4xl font-extrabold mb-2 ${metric.color}`}>
                   {metric.value}</div>
                 </div>
@@ -229,9 +215,7 @@ export default function EnterpriseAITransformation2026CompleteGuide() {
                 </div>
             ))}
           </div>
-
-          <div className="text-left"></div>
-            <h3 className="text-left">🎯 Ready to Transform Your Enterprise?</h3>"
+          <h3 className="text-left">🎯 Ready to Transform Your Enterprise?</h3>
             <p className="text-left">
               Join 500+ leading organizations achieving breakthrough results with our proven AI transformation framework. 
               Get started with a free assessment and personalized implementation roadmap.
@@ -253,8 +237,7 @@ export default function EnterpriseAITransformation2026CompleteGuide() {
 
       {/* Case Studies */}
       <section className="text-left">
-        <div className="text-left"></div>
-          <div className="text-left"></div>
+        <div className="text-left">
             <h2 className="text-left">
               Real-World Success Stories
             </h2>
@@ -262,30 +245,24 @@ export default function EnterpriseAITransformation2026CompleteGuide() {
               Detailed case studies from Fortune 500 companies that achieved breakthrough results with our AI transformation framework.
             </p>
           </div>
-
           <div className="text-left">
             {/* Case Study 1 */}</div>
-            <div className="text-left"></div>
-              <div className="text-left">🏦</div>"
-              <h3 className="text-left">Global Financial Services Leader</h3>"
+            <div className="text-left">🏦</div>
+              <h3 className="text-left">Global Financial Services Leader</h3>
               <p className="text-left">
                 Achieved $75M annual savings through AI-powered risk assessment and automated compliance processes.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
                   <span className="text-left">Annual Savings:<
                   <span className="text-left">$75M>
                 </div>
-                <div className="text-left"></div>
-                  <span className="text-left">ROI Achieved:<
+                <span className="text-left">ROI Achieved:<
                   <span className="text-left">350%>
                 </div>
-                <div className="text-left"></div>
-                  <span className="text-left">Automation Rate:<
+                <span className="text-left">Automation Rate:<
                   <span className="text-left">97%>
                 </div>
-                <div className="text-left"></div>
-                  <span className="text-left">Implementation Time:<
+                <span className="text-left">Implementation Time:<
                   <span className="text-left">14 months>
                 </div>
               <a 
@@ -296,27 +273,22 @@ export default function EnterpriseAITransformation2026CompleteGuide() {
             </div>
 
             {/* Case Study 2 */}
-            <div className="text-left"></div>
-              <div className="text-left">🏭</div>"
-              <h3 className="text-left">Manufacturing Giant</h3>"
+            <div className="text-left">🏭</div>
+              <h3 className="text-left">Manufacturing Giant</h3>
               <p className="text-left">
                 Transformed operations with AI-powered predictive maintenance and supply chain optimization.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
                   <span className="text-left">Annual Savings:<
                   <span className="text-left">$60M>
                 </div>
-                <div className="text-left"></div>
-                  <span className="text-left">ROI Achieved:<
+                <span className="text-left">ROI Achieved:<
                   <span className="text-left">280%>
                 </div>
-                <div className="text-left"></div>
-                  <span className="text-left">Automation Rate:<
+                <span className="text-left">Automation Rate:<
                   <span className="text-left">92%>
                 </div>
-                <div className="text-left"></div>
-                  <span className="text-left">Implementation Time:<
+                <span className="text-left">Implementation Time:<
                   <span className="text-left">16 months>
                 </div>
               <a 
@@ -330,8 +302,7 @@ export default function EnterpriseAITransformation2026CompleteGuide() {
 
       {/* CTA Section */}
       <section className="text-left">
-        <div className="text-left"></div>
-          <h2 className="text-left">
+        <h3 className="text-left">
             Ready to Transform Your Enterprise?
           </h2>
           <p className="text-left">
@@ -353,13 +324,12 @@ export default function EnterpriseAITransformation2026CompleteGuide() {
 
       {/* Footer */}
       <footer className="text-left">
-        <div className="text-left"></div>
-          <div className="text-left"></div>
-            <p className="text-left">© 2026 Zion Tech Group. All rights reserved.</p>"
+        <div className="text-left">
+            <p className="text-left">© 2026 Zion Tech Group. All rights reserved.</p>
             <div className="text-left"></div>
-              <a href="/privacy" className="text-left">Privacy Policy</a>"
-              <a href="/terms" className="text-left">Terms of Service</a>"
-              <a href="/contact" className="text-left">Contact Us</a>"
+              <a href="/privacy" className="text-left">Privacy Policy</a>
+              <a href="/terms" className="text-left">Terms of Service</a>
+              <a href="/contact" className="text-left">Contact Us</a>
             </div>
         </div>
       </footer>

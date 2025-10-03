@@ -7,8 +7,8 @@ export default function PlatformRoiScorecardsV2(): React.JSX.Element {
       <Helmet >
         <title>Platform ROI Scorecards v2 — Proving Value in Weeks</title>
         <meta name="description" content="KPI-linked developer scorecards, golden paths, and adoption funnels that quantify platform ROI in 4–8 weeks." /><link rel: "canonical", href="https://ziontechgroup.com/blog/ai-2025-sept-30-platform-roi-scorecards-v2/>
-      </Helmet>
-
+      </Helmet>"
+"
       <div className="container mx-auto px-6 py-16">
         <h1 className="text-4xl md: text-5xl font-bold mb-4">Platform ROI Scorecards v2</h1>
         <p className="text-zion-slate-light mb-8">Proving Value in Weeks</p>"
