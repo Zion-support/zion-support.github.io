@@ -1,7 +1,7 @@
-import React from 'react'';
-import { Link } from 'react-router-dom'';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-const HomePage: React.FC  = () => {
+const HomePage: React.FC = () => {
   return (
     <div className="min-h-screen">"
       {/* Hero Section */}
@@ -24,7 +24,7 @@ const HomePage: React.FC  = () => {
             >
               Get Started Today
             </Link>
-            <Link 
+            <Link "
               to="/solutions"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors
             >
@@ -34,7 +34,7 @@ const HomePage: React.FC  = () => {
         </div>
       </section>
 
-      {/* Services Section */}
+      {/* Services Section */}"
       <section className="py-20 bg-white">"
         <div className="container mx-auto px-6">"
           <div className="text-center mb-16">"
@@ -60,7 +60,7 @@ const HomePage: React.FC  = () => {
                 >
                   AI Services →
                 </Link>
-                <Link 
+                <Link "
                   to="/services/advanced-ai"
                   className="block text-blue-600 font-semibold hover: text-blue-800 transition-colors text-sm
                 >
@@ -69,7 +69,7 @@ const HomePage: React.FC  = () => {
               </div>
             </div>
 
-            {/* Micro SaaS */}
+            {/* Micro SaaS */}"
             <div className="bg-gradient-to-br from-green-50 to-emerald-100 p-8 rounded-xl hover: shadow-lg transition-shadow">"
               <div className="text-4xl mb-4">⚡</div>"
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Micro SaaS</h3>"
@@ -84,7 +84,7 @@ const HomePage: React.FC  = () => {
                 >
                   Micro SaaS →
                 </Link>
-                <Link 
+                <Link "
                   to="/services/innovative-micro-saas"
                   className="block text-green-600 font-semibold hover: text-green-800 transition-colors text-sm
                 >
@@ -93,7 +93,7 @@ const HomePage: React.FC  = () => {
               </div>
             </div>
 
-            {/* IT Services */}
+            {/* IT Services */}"
             <div className="bg-gradient-to-br from-purple-50 to-violet-100 p-8 rounded-xl hover: shadow-lg transition-shadow">"
               <div className="text-4xl mb-4">🛠️</div>"
               <h3 className="text-2xl font-bold text-gray-900 mb-4">IT Services</h3>"
@@ -108,7 +108,7 @@ const HomePage: React.FC  = () => {
                 >
                   IT Services →
                 </Link>
-                <Link 
+                <Link "
                   to="/services/comprehensive-it"
                   className="block text-purple-600 font-semibold hover: text-purple-800 transition-colors text-sm
                 >
@@ -120,7 +120,7 @@ const HomePage: React.FC  = () => {
         </div>
       </section>
 
-      {/* Solutions Section */}
+      {/* Solutions Section */}"
       <section className="py-20 bg-gray-50">"
         <div className="container mx-auto px-6">"
           <div className="text-center mb-16">"
@@ -143,7 +143,7 @@ const HomePage: React.FC  = () => {
                 Enterprise Solutions →
               </Link>
             </div>
-
+"
             <div className="bg-white p-8 rounded-xl shadow-sm hover: shadow-md transition-shadow">"
               <h3 className="text-2xl font-bold text-gray-900 mb-4">SMB</h3>"
               <p className="text-gray-600 mb-6">"
@@ -156,7 +156,7 @@ const HomePage: React.FC  = () => {
                 SMB Solutions →
               </Link>
             </div>
-
+"
             <div className="bg-white p-8 rounded-xl shadow-sm hover: shadow-md transition-shadow">"
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Startup</h3>"
               <p className="text-gray-600 mb-6">"
@@ -173,7 +173,7 @@ const HomePage: React.FC  = () => {
         </div>
       </section>
 
-      {/* Features Section */}
+      {/* Features Section */}"
       <section className="py-20 bg-white">"
         <div className="container mx-auto px-6">"
           <div className="text-center mb-16">"
@@ -233,7 +233,7 @@ const HomePage: React.FC  = () => {
             >
               Start Your Project
             </Link>
-            <Link 
+            <Link "
               to="/about"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors
             >
@@ -245,5 +245,5 @@ const HomePage: React.FC  = () => {
     </div>
   );
 };
-
+"
 export default HomePage;

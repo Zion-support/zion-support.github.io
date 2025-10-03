@@ -1,60 +1,60 @@
-import React from 'react'';
-import { Link } from 'react-router-dom'';
-import { Helmet } from 'react-helmet-async'';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { Check, Star } from 'lucide-react'';
 
-const PricingPage: React.FC  = () => {
+const PricingPage: React.FC = () => {
   const pricingTiers = [
     {
-      name: "Starter","
-      description: "Perfect for small businesses and startups","
-      price: "$299","
-      period: "/month","
+      name: "Starter",
+      description: "Perfect for small businesses and startups",
+      price: "$299",
+      period: "/month",
       features: [,
-        "Basic AI Services","
-        "Standard IT Support","
-        "Email Support","
-        "Basic Analytics","
-        "Up to 5 users","
-        "10GB Storage"
-      ],
+        "Basic AI Services",
+        "Standard IT Support",
+        "Email Support",
+        "Basic Analytics",
+        "Up to 5 users",
+        "10GB Storage"],
+,
       popular: false,,
       color: "blue
     },
     {
-      name: "Professional","
-      description: "Ideal for growing businesses","
-      price: "$799","
-      period: "/month","
+      name: "Professional",
+      description: "Ideal for growing businesses",
+      price: "$799",
+      period: "/month",
       features: [,
-        "Advanced AI Solutions","
-        "Comprehensive IT Services","
-        "Priority Support","
-        "Advanced Analytics","
-        "Up to 25 users","
-        "100GB Storage","
-        "API Access","
-        "Custom Integrations"
-      ],
+        "Advanced AI Solutions",
+        "Comprehensive IT Services",
+        "Priority Support",
+        "Advanced Analytics",
+        "Up to 25 users",
+        "100GB Storage",
+        "API Access",
+        "Custom Integrations"],
+,
       popular: true,,
       color: "purple
     },
     {
-      name: "Enterprise","
-      description: "For large organizations","
-      price: "$2,499","
-      period: "/month","
+      name: "Enterprise",
+      description: "For large organizations",
+      price: "$2,499",
+      period: "/month",
       features: [,
-        "Full AI Suite","
-        "Complete IT Infrastructure","
-        "24/7 Dedicated Support","
-        "Custom Analytics","
-        "Unlimited users","
-        "1TB Storage","
-        "White-label Solutions","
-        "Dedicated Account Manager","
-        "SLA Guarantees"
-      ],
+        "Full AI Suite",
+        "Complete IT Infrastructure",
+        "24/7 Dedicated Support",
+        "Custom Analytics",
+        "Unlimited users",
+        "1TB Storage",
+        "White-label Solutions",
+        "Dedicated Account Manager",
+        "SLA Guarantees"],
+,
       popular: false,,
       color: "green
     }
@@ -62,7 +62,7 @@ const PricingPage: React.FC  = () => {
 
   const servicePricing = [
     {
-      category: "AI Services","
+      category: "AI Services",
       services: [,
         { name: "AI Content Generation", price: "$2,500/month", description: "Automated content creation with 75% time reduction" },"
         { name: "Predictive Analytics", price: "$3,200/month", description: "Business intelligence with 25% improvement in decisions" },"
@@ -71,7 +71,7 @@ const PricingPage: React.FC  = () => {
       ]
     },
     {
-      category: "Micro SaaS Solutions","
+      category: "Micro SaaS Solutions",
       services: [,
         { name: "AI Lead Scoring API", price: "$299/month", description: "Intelligent lead scoring with 40% conversion increase" },"
         { name: "Smart Appointment Scheduler", price: "$199/month", description: "AI-driven scheduling with 80% conflict reduction" },"
@@ -80,7 +80,7 @@ const PricingPage: React.FC  = () => {
       ]
     },
     {
-      category: "IT Services","
+      category: "IT Services",
       services: [,
         { name: "Cloud Migration", price: "$5,000/month", description: "Complete cloud transformation with 40% cost reduction" },"
         { name: "DevOps Automation", price: "$3,500/month", description: "CI/CD pipelines with 80% faster deployments" },"
@@ -265,7 +265,7 @@ const PricingPage: React.FC  = () => {
           </div>
         </section>
 
-        {/* FAQ Section */}
+        {/* FAQ Section */}"
         <section className="py-20 bg-white">"
           <div className="container mx-auto px-6">"
             <div className="text-center mb-16">"
@@ -307,7 +307,7 @@ const PricingPage: React.FC  = () => {
               >
                 Contact Sales
               </Link>
-              <Link 
+              <Link "
                 to="/services" 
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors
               >
@@ -320,5 +320,5 @@ const PricingPage: React.FC  = () => {
     </>
   );
 };
-
+"
 export default PricingPage;

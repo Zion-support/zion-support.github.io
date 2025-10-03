@@ -1,43 +1,43 @@
-import React from 'react'';
-import { Link } from 'react-router-dom'';
-import { Helmet } from 'react-helmet-async'';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
-const CognitiveComputingTransformationPage: React.FC  = () => {
+const CognitiveComputingTransformationPage: React.FC = () => {
   const transformationServices = [
     {
-      title: "Cognitive Architecture Design","
-      description: "Design and implement cognitive computing architectures that mimic human thought processes and decision-making.","
-      icon: "🏗️","
+      title: "Cognitive Architecture Design",
+      description: "Design and implement cognitive computing architectures that mimic human thought processes and decision-making.",
+      icon: "🏗️",
       features: ["Architecture Planning", "System Design", "Integration Strategy", "Scalability Planning"]"
     },
     {
-      title: "Natural Language Understanding","
-      description: "Implement advanced NLP capabilities that enable systems to understand and process human language naturally.","
-      icon: "💬","
+      title: "Natural Language Understanding",
+      description: "Implement advanced NLP capabilities that enable systems to understand and process human language naturally.",
+      icon: "💬",
       features: ["Language Processing", "Intent Recognition", "Context Understanding", "Multi-language Support"]"
     },
     {
-      title: "Machine Learning Integration","
-      description: "Integrate advanced machine learning models that learn and adapt from data to improve cognitive capabilities.","
-      icon: "🧠","
+      title: "Machine Learning Integration",
+      description: "Integrate advanced machine learning models that learn and adapt from data to improve cognitive capabilities.",
+      icon: "🧠",
       features: ["Model Development", "Training & Optimization", "Continuous Learning", "Performance Monitoring"]"
     },
     {
-      title: "Knowledge Management Systems","
-      description: "Build intelligent knowledge management systems that capture, organize, and leverage organizational knowledge.","
-      icon: "📚","
+      title: "Knowledge Management Systems",
+      description: "Build intelligent knowledge management systems that capture, organize, and leverage organizational knowledge.",
+      icon: "📚",
       features: ["Knowledge Extraction", "Information Architecture", "Search & Retrieval", "Knowledge Graphs"]"
     },
     {
-      title: "Cognitive Process Automation","
-      description: "Automate complex cognitive processes that require reasoning, analysis, and decision-making capabilities.","
-      icon: "⚙️","
+      title: "Cognitive Process Automation",
+      description: "Automate complex cognitive processes that require reasoning, analysis, and decision-making capabilities.",
+      icon: "⚙️",
       features: ["Process Automation", "Decision Support", "Workflow Optimization", "Exception Handling"]"
     },
     {
-      title: "Cognitive Analytics","
-      description: "Implement advanced analytics that provide insights and recommendations based on cognitive analysis.","
-      icon: "📊","
+      title: "Cognitive Analytics",
+      description: "Implement advanced analytics that provide insights and recommendations based on cognitive analysis.",
+      icon: "📊",
       features: ["Predictive Analytics", "Pattern Recognition", "Insight Generation", "Recommendation Engines"]"
     }
   ];
@@ -90,7 +90,7 @@ const CognitiveComputingTransformationPage: React.FC  = () => {
           </div>
         </section>
 
-        {/* Cognitive Capabilities */}
+        {/* Cognitive Capabilities */}"
         <section className="py-20 bg-white">"
           <div className="container mx-auto px-6">"
             <div className="text-center mb-16">"
@@ -230,7 +230,7 @@ const CognitiveComputingTransformationPage: React.FC  = () => {
               >
                 Start Your Transformation
               </Link>
-              <Link 
+              <Link "
                 to="/services" 
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-teal-600 transition-colors
               >
@@ -243,5 +243,5 @@ const CognitiveComputingTransformationPage: React.FC  = () => {
     </>
   );
 };
-
+"
 export default CognitiveComputingTransformationPage;

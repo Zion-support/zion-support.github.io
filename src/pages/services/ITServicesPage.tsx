@@ -1,43 +1,43 @@
-import React from 'react'';
-import { Link } from 'react-router-dom'';
-import { Helmet } from 'react-helmet-async'';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
-const ITServicesPage: React.FC  = () => {
+const ITServicesPage: React.FC = () => {
   const itServices = [
     {
-      title: "Cloud Infrastructure","
-      description: "Complete cloud infrastructure setup, migration, and management services for optimal performance and scalability.","
-      icon: "☁️","
+      title: "Cloud Infrastructure",
+      description: "Complete cloud infrastructure setup, migration, and management services for optimal performance and scalability.",
+      icon: "☁️",
       features: ["Cloud Migration", "Infrastructure Setup", "Performance Optimization", "Cost Management"]"
     },
     {
-      title: "DevOps & Automation","
-      description: "Streamline your development and deployment processes with modern DevOps practices and automation tools.","
-      icon: "🔄","
+      title: "DevOps & Automation",
+      description: "Streamline your development and deployment processes with modern DevOps practices and automation tools.",
+      icon: "🔄",
       features: ["CI/CD Pipelines", "Infrastructure as Code", "Monitoring & Logging", "Automated Testing"]"
     },
     {
-      title: "Security Solutions","
-      description: "Comprehensive security services to protect your infrastructure, applications, and data from threats.","
-      icon: "🔒","
+      title: "Security Solutions",
+      description: "Comprehensive security services to protect your infrastructure, applications, and data from threats.",
+      icon: "🔒",
       features: ["Security Audits", "Threat Detection", "Compliance Management", "Incident Response"]"
     },
     {
-      title: "Network Management","
-      description: "Design, implement, and manage robust network infrastructure for optimal connectivity and performance.","
-      icon: "🌐","
+      title: "Network Management",
+      description: "Design, implement, and manage robust network infrastructure for optimal connectivity and performance.",
+      icon: "🌐",
       features: ["Network Design", "Performance Monitoring", "Troubleshooting", "Security Implementation"]"
     },
     {
-      title: "Database Management","
-      description: "Expert database design, optimization, and management services for improved performance and reliability.","
-      icon: "🗄️","
+      title: "Database Management",
+      description: "Expert database design, optimization, and management services for improved performance and reliability.",
+      icon: "🗄️",
       features: ["Database Design", "Performance Tuning", "Backup & Recovery", "Migration Services"]"
     },
     {
-      title: "IT Support & Maintenance","
-      description: "24/7 IT support and proactive maintenance to ensure your systems run smoothly and efficiently.","
-      icon: "🛠️","
+      title: "IT Support & Maintenance",
+      description: "24/7 IT support and proactive maintenance to ensure your systems run smoothly and efficiently.",
+      icon: "🛠️",
       features: ["24/7 Support", "Proactive Monitoring", "System Updates", "Performance Optimization"]"
     }
   ];
@@ -90,7 +90,7 @@ const ITServicesPage: React.FC  = () => {
           </div>
         </section>
 
-        {/* Benefits Section */}
+        {/* Benefits Section */}"
         <section className="py-20 bg-white">"
           <div className="container mx-auto px-6">"
             <div className="text-center mb-16">"
@@ -176,7 +176,7 @@ const ITServicesPage: React.FC  = () => {
               >
                 Get Started
               </Link>
-              <Link 
+              <Link "
                 to="/support" 
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors
               >
@@ -189,5 +189,5 @@ const ITServicesPage: React.FC  = () => {
     </>
   );
 };
-
+"
 export default ITServicesPage;

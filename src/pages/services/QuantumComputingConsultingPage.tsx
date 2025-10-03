@@ -1,43 +1,43 @@
-import React from 'react'';
-import { Link } from 'react-router-dom'';
-import { Helmet } from 'react-helmet-async'';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
-const QuantumComputingConsultingPage: React.FC  = () => {
+const QuantumComputingConsultingPage: React.FC = () => {
   const quantumServices = [
     {
-      title: "Quantum Strategy Consulting","
-      description: "Develop comprehensive quantum computing strategies aligned with your business objectives and technology roadmap.","
-      icon: "🎯","
+      title: "Quantum Strategy Consulting",
+      description: "Develop comprehensive quantum computing strategies aligned with your business objectives and technology roadmap.",
+      icon: "🎯",
       features: ["Strategic Planning", "Technology Assessment", "ROI Analysis", "Implementation Roadmap"]"
     },
     {
-      title: "Quantum Algorithm Development","
-      description: "Design and implement custom quantum algorithms to solve complex optimization and simulation problems.","
-      icon: "⚛️","
+      title: "Quantum Algorithm Development",
+      description: "Design and implement custom quantum algorithms to solve complex optimization and simulation problems.",
+      icon: "⚛️",
       features: ["Algorithm Design", "Quantum Circuit Optimization", "Performance Tuning", "Hybrid Solutions"]"
     },
     {
-      title: "Quantum Software Integration","
-      description: "Integrate quantum computing capabilities into your existing software infrastructure and workflows.","
-      icon: "🔗","
+      title: "Quantum Software Integration",
+      description: "Integrate quantum computing capabilities into your existing software infrastructure and workflows.",
+      icon: "🔗",
       features: ["API Development", "System Integration", "Legacy System Support", "Hybrid Computing"]"
     },
     {
-      title: "Quantum Security Solutions","
-      description: "Implement quantum-resistant cryptography and security measures to protect against future quantum threats.","
-      icon: "🔒","
+      title: "Quantum Security Solutions",
+      description: "Implement quantum-resistant cryptography and security measures to protect against future quantum threats.",
+      icon: "🔒",
       features: ["Post-Quantum Cryptography", "Security Audits", "Migration Planning", "Compliance Support"]"
     },
     {
-      title: "Quantum Training & Education","
-      description: "Comprehensive training programs to help your team understand and leverage quantum computing technologies.","
-      icon: "🎓","
+      title: "Quantum Training & Education",
+      description: "Comprehensive training programs to help your team understand and leverage quantum computing technologies.",
+      icon: "🎓",
       features: ["Team Training", "Technical Workshops", "Best Practices", "Knowledge Transfer"]"
     },
     {
-      title: "Quantum Research & Development","
-      description: "Collaborative R&D projects to explore quantum computing applications specific to your industry.","
-      icon: "🔬","
+      title: "Quantum Research & Development",
+      description: "Collaborative R&D projects to explore quantum computing applications specific to your industry.",
+      icon: "🔬",
       features: ["Research Partnerships", "Proof of Concepts", "Prototype Development", "Innovation Labs"]"
     }
   ];
@@ -90,7 +90,7 @@ const QuantumComputingConsultingPage: React.FC  = () => {
           </div>
         </section>
 
-        {/* Quantum Applications */}
+        {/* Quantum Applications */}"
         <section className="py-20 bg-white">"
           <div className="container mx-auto px-6">"
             <div className="text-center mb-16">"
@@ -192,7 +192,7 @@ const QuantumComputingConsultingPage: React.FC  = () => {
               >
                 Start Your Quantum Journey
               </Link>
-              <Link 
+              <Link "
                 to="/blog" 
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors
               >
@@ -205,5 +205,5 @@ const QuantumComputingConsultingPage: React.FC  = () => {
     </>
   );
 };
-
+"
 export default QuantumComputingConsultingPage;
