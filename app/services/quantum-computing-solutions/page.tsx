@@ -34,6 +34,14 @@ import {
   Camera,
   Package,
   Truck,
+  Building,
+  Home,
+  Car,
+  Plane,
+  Ship,
+  Activity,
+  PieChart,
+  LineChart,
   Brain,
   Cloud
 } from 'lucide-react';
