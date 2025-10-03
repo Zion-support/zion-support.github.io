@@ -99,15 +99,15 @@ const UltimateBusinessIntelligence2025Banner = () => {
             <div className="text-left">
               Ultimate Business Intelligence 2025
             </div>
-          </div>
+            </div>
           </div>
           <button
             onClick={handleDismiss}
             className="text-left"
             aria-label="Dismiss banner"
           >
-            <svg className="text-left" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            <svg className="text-left" fill="none" stroke="currentColor" viewBox="0 0 24 24">"
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />"
             </svg>
           </button>
         </div>
@@ -126,20 +126,20 @@ const UltimateBusinessIntelligence2025Banner = () => {
             {/* Success Metrics */}
             <div className="text-left"></div>
               <div className="text-left"></div>
-                <div className="text-left">{currentContent.metrics.roi}</div>
-                <div className="text-left">ROI</div>
+                <div className="text-left">{currentContent.metrics.roi}</div>"
+                <div className="text-left">ROI</div>"
               </div>
               <div className="text-left"></div>
-                <div className="text-left">{currentContent.metrics.savings}</div>
-                <div className="text-left">Annual Savings</div>
+                <div className="text-left">{currentContent.metrics.savings}</div>"
+                <div className="text-left">Annual Savings</div>"
               </div>
               <div className="text-left"></div>
-                <div className="text-left">{currentContent.metrics.accuracy}</div>
-                <div className="text-left">Accuracy</div>
+                <div className="text-left">{currentContent.metrics.accuracy}</div>"
+                <div className="text-left">Accuracy</div>"
               </div>
               <div className="text-left"></div>
-                <div className="text-left">{currentContent.metrics.speed || currentContent.metrics.timeline}</div>
-                <div className="text-left">{currentContent.metrics.speed ? 'Faster' : 'Timeline'}</div>
+                <div className="text-left">{currentContent.metrics.speed || currentContent.metrics.timeline}</div>"
+                <div className="text-left">{currentContent.metrics.speed ? 'Faster' : 'Timeline'}</div>"
               </div>
             </div>
 
@@ -175,7 +175,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
 
           {/* Content Preview Cards */}
           <div className="text-left"></div>
-            <h3 className="text-left">Featured Content</h3>
+            <h3 className="text-left">Featured Content</h3>"
             {content.map((item, index) => (
               <div
                 key={item.id}
@@ -186,7 +186,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
               ></div>
                 <div className="text-left"></div>
                   <div className="text-left"></div>
-                    <h4 className="text-left">{item.title}</h4>
+                    <h4 className="text-left">{item.title}</h4>"
                     <div className="text-left"></div>
                       <span>{item.type}</span>
                       <span>•</span>
@@ -194,8 +194,8 @@ const UltimateBusinessIntelligence2025Banner = () => {
                     </div>
                   </div>
                   <div className="text-left"></div>
-                    <div className="text-left">{item.metrics.roi}</div>
-                    <div className="text-left">ROI</div>
+                    <div className="text-left">{item.metrics.roi}</div>"
+                    <div className="text-left">ROI</div>"
                   </div>
                 </div>
               </div>
@@ -205,7 +205,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
 
         {/* Progress Indicators */}
         <div className="text-left">
-          {content.map((_, index) => (
+          {content.map((_, index) => (</div>
             <button
               key={index}
               onClick={() => setCurrentSlide(index)}

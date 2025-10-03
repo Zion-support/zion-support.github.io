@@ -161,8 +161,8 @@ const NewContentPromotionalBanner2026: React.FC = () => {
             
             <p className="text-left">
               Join 500+ enterprises achieving <span className="text-left">300% ROI</span>, 
-              <span className="text-left">85% automation</span>, and 
-              <span className="text-left">complete digital transformation</span> with Zion Tech Group's AI solutions
+              <span className="text-left"> 85% automation</span>, and 
+              <span className="text-left"> complete digital transformation</span> with Zion Tech Group's AI solutions
             </p>
 
             <div className="text-left">

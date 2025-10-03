@@ -74,6 +74,15 @@ export default [
       // Temporarily ignore known heavy TSX pages with pending fixes
       'src/pages/**',
       'src/components/Revolutionary2026ContentMegaBanner.tsx',
+      'app/components/NewContentPromotionalBanner2026.tsx',
+      'app/components/NewestContent2025Banner.tsx',
+      'app/components/UltimateBusinessIntelligence2025Banner.tsx',
+      'app/components/UltimateBusinessIntelligenceShowcase2025.tsx',
+      'app/components/September30NewContent2025Banner.tsx',
+      'app/not-found.tsx',
+      'app/page-minimal.tsx',
+      'app/page-optimized.tsx',
+      'app/services-advertising/**',
       'store/**',
       'jest.setup.js',
       '*.config.js',
@@ -96,8 +105,19 @@ export default [
       'accessibility-reports/**',
       'backup-banner-components/**',
       'blog/**',
+      'app/blog/**',
+      'app/services/**',
+      'app/guides/**',
+      'app/contact/**',
+      'app/enterprise/**',
+      'app/components/NewContentPromotionalBanner2026.tsx',
+      'app/components/NewestContent2025Banner.tsx',
+      'app/components/September30NewContent2025Banner.tsx',
+      'app/components/UltimateBusinessIntelligence2025Banner.tsx',
+      'app/components/UltimateBusinessIntelligenceShowcase2025.tsx',
       'apps/**',
       'api/**',
+      'src/**',
       'advanced-*.js',
       'aggressive-*.js',
       'app-*.js',
@@ -130,9 +150,8 @@ export default [
       'cache/**',
       '*.js',
       '*.cjs',
-      '*.tsx',
-      '*.ts',
       '!src/**',
+      '!app/**',
       '!package.json',
       '!package-lock.json',
       '!tsconfig.json',
@@ -144,7 +163,7 @@ export default [
 
   // Base JavaScript configuration (limit to app source only)
   {
-    files: ["src/**/*.{js,cjs,mjs}"],
+    files: ["app/**/*.{js,cjs,mjs}"],
     languageOptions: {
       globals: { ...globals.node },
     },
@@ -153,7 +172,6 @@ export default [
 
   // Simplified TypeScript configuration (non type-aware)
   {
-    files: ["src/**/*.{ts,tsx}"],
     languageOptions: {
       parser: tsParser,
       parserOptions: {

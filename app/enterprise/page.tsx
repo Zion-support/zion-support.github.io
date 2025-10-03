@@ -45,8 +45,9 @@ export default function EnterprisePage() {
                 Schedule Enterprise Demo
               </a>
               <a 
-                href="#solutions" "
-                className="text-left">
+                href="#solutions"
+                className="text-left"
+              >
                 View Solutions
               </a>
             </div>
@@ -82,10 +83,15 @@ export default function EnterprisePage() {
       </section>
 
       <footer className="text-left">
+<<<<<<< HEAD
+        <div className="text-left">
+          <p className="text-left">© 2025 Zion Tech Group. All rights reserved.</p>
+=======
         <div className="text-left"></div>
           <p className="text-left">© 2025 Zion Tech Group. All rights reserved.</p>"
+>>>>>>> main
         </div>
-      </div>
+      </footer>
     </div>
   );
 }
