@@ -46,13 +46,12 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     const { onError } = this.props;
-    const { errorId } = this.state;
 
     // Update state with error info
     this.setState({ errorInfo });
 
-    // Log error details
-    console.error('Error Boundary caught an error:', error, errorInfo);
+    // Log error details (including errorId for debugging)
+    console.error('Error Boundary caught an error:', error, errorInfo, { errorId: this.state.errorId });
 
     // Call custom error handler if provided
     if (onError) {
@@ -60,8 +59,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     }
 
     // Send to analytics (placeholder for analytics integration)
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'exception', {
+    if (typeof window !== 'undefined' && (window as { gtag?: (...args: unknown[]) => void }).gtag) {
+      (window as { gtag: (...args: unknown[]) => void }).gtag('event', 'exception', {
         description: error.toString(),
         fatal: false
       });
