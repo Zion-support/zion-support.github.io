@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
 	title: 'GenAI 2027: Economy Modes — 50% Savings with Stable UX',

@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 // AI Trends 2026 Revolutionary Banner
 export function NewContent2026MegaBanner() {

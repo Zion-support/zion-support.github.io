@@ -1,6 +1,6 @@
 import React from 'react';
 import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata: Metadata = {
   title: 'Fortune 500 Quantum Neural Consensus Implementation: $2.8B Enterprise Transformation Success',

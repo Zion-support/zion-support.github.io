@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { Atom, Brain, Zap, ArrowRight, Sparkles, Cpu, Network } from 'lucide-react';
 
 const December2025QuantumSyntheticConsciousnessRevolutionBanner: React.FC = () => {

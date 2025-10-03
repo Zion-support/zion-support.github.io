@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
 	title: 'AI 2026: Runtime Rollback Blueprint — Instant Recovery with KPI Canaries',

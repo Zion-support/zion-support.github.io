@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'AI Governance Framework for Enterprise 2025: Build Trust, Compliance & Innovation at Scale | Zion Tech Group',

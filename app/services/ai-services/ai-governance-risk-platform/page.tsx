@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { Shield, FileCheck2, Scale, CheckCircle, Phone, Mail, MapPin } from 'lucide-react';
 
 export default function AIGovernanceRiskPlatformPage() {

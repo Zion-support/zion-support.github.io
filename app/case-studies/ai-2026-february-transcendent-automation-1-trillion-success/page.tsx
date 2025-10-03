@@ -1,6 +1,6 @@
 import React from 'react';
 import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata: Metadata = {
   title: 'February 2026: $1 Trillion Success Story - Transcendent Automation Revolution | Zion Tech Group',

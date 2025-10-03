@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { ArrowRight, Zap, Brain, Globe, TrendingUp, Star } from 'lucide-react';
 
 const February2026MultimodalRevolutionBanner: React.FC = () => {

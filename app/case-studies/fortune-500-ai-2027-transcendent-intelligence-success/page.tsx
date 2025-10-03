@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata: Metadata = {
   title: 'Fortune 500 AI 2027 Success: $50B Value with Transcendent Intelligence - Zion Tech Group',

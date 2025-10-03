@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'AI Cost Optimization 2025: Cut LLM Spending by 80% Without Sacrificing Quality | Zion Tech Group',

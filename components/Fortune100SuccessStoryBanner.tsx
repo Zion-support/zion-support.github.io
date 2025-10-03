@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle, TrendingUp, DollarSign, Users, Clock } from 'lucide-react';
 
 const Fortune100SuccessStoryBanner: React.FC = () => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'Enterprise AI Transformation Success: Fortune 500 Company Achieves 300% ROI',

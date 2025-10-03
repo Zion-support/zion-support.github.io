@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { ArrowLeft, Clock, User, Calendar, Share2, Bookmark, TrendingUp, DollarSign, Target } from 'lucide-react';
 
 export const metadata = {

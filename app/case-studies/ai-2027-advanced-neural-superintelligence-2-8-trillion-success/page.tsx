@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'AI 2027 Advanced Neural Superintelligence $2.8T Success Story - Zion Tech Group',

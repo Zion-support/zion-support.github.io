@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { BookOpen, FileText, Award, ArrowRight, Sparkles, Brain, Atom, TrendingUp } from 'lucide-react';
 
 const December2025ContentShowcaseMegaBanner: React.FC = () => {

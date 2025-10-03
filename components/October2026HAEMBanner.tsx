@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { Sparkles, TrendingUp, Zap, Network } from 'lucide-react';
 
 export default function October2026HAEMBanner() {

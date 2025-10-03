@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { 
   Cloud, Shield, Server, Database, Network, Cpu, 
   Lock, Monitor, Zap, Settings, Globe, Smartphone,

@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function Revolutionary2027ContentBanner() {
   const [currentSlide, setCurrentSlide] = useState(0);
