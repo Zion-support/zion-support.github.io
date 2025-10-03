@@ -78,7 +78,7 @@ const Services: React.FC = () => {
                 <p className="text-gray-300 mb-6">{service.description}</p>"
                 <a 
                   href={service.href}
-                  className="inline-block bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105""
+                  className="inline-block bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
                 >
                   Learn More
                 </a>
