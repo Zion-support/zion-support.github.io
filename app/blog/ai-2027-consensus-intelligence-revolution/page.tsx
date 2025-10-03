@@ -44,7 +44,6 @@ export default function ConsensusIntelligenceRevolution() {
             <div className="text-2xl font-extrabold text-orange-400 mb-1">0.0001ms</div>"
             <div className="text-xs text-orange-300">Response Time</div>"
           </div>
-        </div>
       </div>
 
       {/* Key Features */}
@@ -74,7 +73,6 @@ export default function ConsensusIntelligenceRevolution() {
             <li>• Sub-millisecond synchronization</li>
           </ul>
         </div>
-      </div>
 
       {/* Success Stories */}
       <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl p-8 border border-green-200 mb-12">"
@@ -97,7 +95,6 @@ export default function ConsensusIntelligenceRevolution() {
             <div className="font-semibold text-gray-900 mb-2">Healthcare Network</div>"
             <div className="text-sm text-gray-600">Global hospital network achieved universal consensus in diagnostic accuracy and treatment protocols.</div>"
           </div>
-        </div>
       </div>
 
       {/* Implementation Guide */}
@@ -110,7 +107,6 @@ export default function ConsensusIntelligenceRevolution() {
               <h3 className="font-bold text-gray-900 mb-2">Consensus Infrastructure Setup</h3>"
               <p className="text-gray-600">Deploy universal consensus intelligence infrastructure with 99.999% reliability across all systems.</p>"
             </div>
-          </div>
           
           <div className="flex items-start gap-4">"
             <div className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm">2</div>"
@@ -118,7 +114,6 @@ export default function ConsensusIntelligenceRevolution() {
               <h3 className="font-bold text-gray-900 mb-2">Quantum Consciousness Integration</h3>"
               <p className="text-gray-600">Integrate quantum consciousness networks enabling instant decision synchronization and knowledge sharing.</p>"
             </div>
-          </div>
           
           <div className="flex items-start gap-4">"
             <div className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm">3</div>"
@@ -126,9 +121,7 @@ export default function ConsensusIntelligenceRevolution() {
               <h3 className="font-bold text-gray-900 mb-2">Universal Deployment</h3>"
               <p className="text-gray-600">Scale across entire enterprise achieving universal consensus with 1,000,000x performance improvements.</p>"
             </div>
-          </div>
         </div>
-      </div>
 
       {/* Call to Action */}
       <div className="text-center bg-gradient-to-r from-indigo-500 to-purple-600 rounded-xl p-8 text-white">"
@@ -148,7 +141,6 @@ export default function ConsensusIntelligenceRevolution() {
             View Success Stories
           </a>
         </div>
-      </div>
     </div>
   );
-}
+}</div></div></div></div></div></div></div></div>

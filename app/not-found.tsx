@@ -73,7 +73,6 @@ export default function NotFound() {
               Search
             </button>
           </div>
-        </div>
 
         {/* Popular Pages */}
         <div className="mb-12">"
@@ -96,7 +95,6 @@ export default function NotFound() {
               </Link>
             ))}
           </div>
-        </div>
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">"
@@ -133,7 +131,6 @@ export default function NotFound() {
               📞 Phone: +1 302 464 0950
             </a>
           </div>
-        </div>
 
         {/* Footer Note */}
         <div className="mt-8 text-sm text-gray-500">"
@@ -147,7 +144,6 @@ export default function NotFound() {
             </a>
           </p>
         </div>
-      </div>
     </div>
   );
-}
+}</div></div></div></div>

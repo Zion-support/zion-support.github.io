@@ -76,9 +76,7 @@ export default function March2026BreakthroughPage() {
                 <div className="text-2xl font-extrabold text-green-400 mb-1">500%</div>"
                 <div className="text-xs text-green-300">Average ROI</div>"
               </div>
-            </div>
           </div>
-        </div>
       </header>
 
       {/* Main Content */}
@@ -142,7 +140,6 @@ export default function March2026BreakthroughPage() {
                     <li>• Cost Reduction</li>
                   </ul>
                 </div>
-              </div>
             </section>
 
             {/* Real-World Impact */}
@@ -168,7 +165,6 @@ export default function March2026BreakthroughPage() {
                       <span className="text-gray-300">ROI:</span>"
                       <span className="text-cyan-400 font-bold text-xl">300%</span>"
                     </div>
-                  </div>
                 </div>
 
                 <div className="bg-gradient-to-r from-blue-500/10 to-cyan-500/10 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/20">"
@@ -190,9 +186,7 @@ export default function March2026BreakthroughPage() {
                       <span className="text-gray-300">Retail:</span>"
                       <span className="text-green-400 font-bold">85% satisfaction</span>"
                     </div>
-                  </div>
                 </div>
-              </div>
             </section>
 
             {/* Call to Action */}
@@ -222,11 +216,8 @@ export default function March2026BreakthroughPage() {
                     Explore Services
                   </a>
                 </div>
-              </div>
             </section>
-          </div>
-        </div>
       </main>
     </div>
   );
-}
+}</div></div></div></div></div></div></div></div></div>

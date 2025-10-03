@@ -32,7 +32,6 @@ export default function CloudMigrationServicesPage() {
               Get Migration Quote
             </a>
           </div>
-        </div>
       </section>
 
       {/* Cloud Providers Section */}
@@ -89,7 +88,6 @@ export default function CloudMigrationServicesPage() {
               <div className="text-center">
                 <span className="text-sm text-gray-500">Starting at $2,999</span>
               </div>
-            </div>
 
             {/* Azure Migration */}
             <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-200 hover:shadow-2xl transition-all duration-300">
@@ -131,7 +129,6 @@ export default function CloudMigrationServicesPage() {
               <div className="text-center">
                 <span className="text-sm text-gray-500">Starting at $3,499</span>
               </div>
-            </div>
 
             {/* Google Cloud Migration */}
             <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-200 hover:shadow-2xl transition-all duration-300">
@@ -176,9 +173,7 @@ export default function CloudMigrationServicesPage() {
               <div className="text-center">
                 <span className="text-sm text-gray-500">Starting at $2,999</span>
               </div>
-            </div>
           </div>
-        </div>
       </section>
 
       {/* Migration Process Section */}
@@ -219,7 +214,6 @@ export default function CloudMigrationServicesPage() {
               <h3 className="text-xl font-bold text-gray-900 mb-3">Optimization</h3>
               <p className="text-gray-600">Performance tuning, cost optimization, and ongoing support.</p>
             </div>
-          </div>
         </div>
       </section>
 
@@ -370,7 +364,6 @@ export default function CloudMigrationServicesPage() {
                 Contact Sales
               </a>
             </div>
-          </div>
 
           <div className="text-center mt-12">
             <p className="text-lg text-gray-600 mb-4">
@@ -380,7 +373,6 @@ export default function CloudMigrationServicesPage() {
               <strong>Market Average:</strong> Cloud migration services range from $2,999-15,999 based on complexity
             </p>
           </div>
-        </div>
       </section>
 
       {/* CTA Section */}
@@ -404,8 +396,6 @@ export default function CloudMigrationServicesPage() {
               Get Migration Quote
             </a>
           </div>
-        </div>
       </section>
-    </div>
   );
-}
+}</div></div></div></div></div></div></div></div></div></div>

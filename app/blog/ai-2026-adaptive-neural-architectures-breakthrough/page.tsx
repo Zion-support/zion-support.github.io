@@ -70,9 +70,7 @@ export default function AdaptiveNeuralArchitecturesPage() {
                 <div className="text-2xl font-extrabold text-purple-400 mb-1">Real-time</div>"
                 <div className="text-xs text-purple-300">Adaptation</div>"
               </div>
-            </div>
           </div>
-        </div>
       </header>
 
       {/* Article Content */}
@@ -138,7 +136,6 @@ export default function AdaptiveNeuralArchitecturesPage() {
                     <li>• $1.2B additional revenue generated</li>
                   </ul>
                 </div>
-              </div>
               
               <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-200">"
                 <h4 className="text-xl font-bold text-gray-900 mb-3">2. Autonomous Supply Chain Optimization</h4>"
@@ -153,7 +150,6 @@ export default function AdaptiveNeuralArchitecturesPage() {
                     <li>• $800M in operational savings</li>
                   </ul>
                 </div>
-              </div>
             </div>
             
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Technical Innovation</h3>"
@@ -193,10 +189,7 @@ export default function AdaptiveNeuralArchitecturesPage() {
                   View Success Stories
                 </a>
               </div>
-            </div>
           </div>
-        </div>
       </section>
-    </div>
   );
-}
+}</div></div></div></div></div></div></div>

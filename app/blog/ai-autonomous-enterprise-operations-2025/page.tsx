@@ -48,7 +48,6 @@ export default function Page() {
 							<div className="text-3xl font-bold text-green-600 mb-2">99.99%</div>"
 							<div className="text-sm text-gray-600">System Uptime</div>"
 						</div>
-					</div>
 				</div>
 
 				<div className="prose prose-lg max-w-none">"
@@ -115,7 +114,6 @@ export default function Page() {
 								<li>• Scale to enterprise-wide autonomous operations</li>
 							</ul>
 						</div>
-					</div>
 
 					<h2 className="text-3xl font-bold text-gray-900 mb-6 mt-12">💡 Success Stories & ROI</h2>"
 					<div className="grid md:grid-cols-2 gap-8 mb-8">"
@@ -135,7 +133,6 @@ export default function Page() {
 								<li>• <strong>300% ROI</strong> within 18 months of implementation</li>
 							</ul>
 						</div>
-					</div>
 
 					<h2 className="text-3xl font-bold text-gray-900 mb-6">🛠️ Technical Implementation</h2>"
 					<p className="text-lg text-gray-800 leading-relaxed mb-6">"
@@ -228,9 +225,7 @@ class AutonomousAgent {
 								View Success Stories
 							</a>
 						</div>
-					</div>
 				</div>
 			</article>
-		</div>
 	);
-}
+}</div></div></div></div></div>

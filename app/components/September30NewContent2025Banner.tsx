@@ -123,7 +123,6 @@ const September30NewContent2025Banner: React.FC = () => {
                       <TrendingUp className="w-4 h-4" />"
                       <span>NEW</span>
                     </div>
-                  </div>
                 </div>
 
                 {/* Category Tag */}
@@ -160,7 +159,6 @@ const September30NewContent2025Banner: React.FC = () => {
                   <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-2 transition-transform duration-300" />"
                 </Link>
               </div>
-            </div>
           ))}
         </div>
 
@@ -183,7 +181,6 @@ const September30NewContent2025Banner: React.FC = () => {
                       <Star className="w-4 h-4" />"
                       <span>FEATURED</span>
                     </div>
-                  </div>
                 </div>
 
                 {/* Category Tag */}
@@ -220,7 +217,6 @@ const September30NewContent2025Banner: React.FC = () => {
                   <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-2 transition-transform duration-300" />"
                 </Link>
               </div>
-            </div>
           ))}
         </div>
 
@@ -249,9 +245,7 @@ const September30NewContent2025Banner: React.FC = () => {
                   <ArrowRight className="w-6 h-6" />"
                 </Link>
               </div>
-            </div>
           </div>
-        </div>
 
         {/* Stats Section */}
         <div className="grid md:grid-cols-4 gap-8 mt-24">"
@@ -269,12 +263,10 @@ const September30NewContent2025Banner: React.FC = () => {
               <div className="text-gray-400 font-medium text-lg">"
                 {stat.label}
               </div>
-            </div>
           ))}
         </div>
-      </div>
     </div>
   );
 };
 
-export default September30NewContent2025Banner;
+export default September30NewContent2025Banner;</div></div></div></div></div></div></div></div>

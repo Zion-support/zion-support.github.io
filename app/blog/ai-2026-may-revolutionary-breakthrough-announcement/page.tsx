@@ -61,9 +61,7 @@ export default function May2026RevolutionaryBreakthroughPage() {
               View $50B Success Story
             </a>
           </div>
-        </div>
       </article>
-    </div>
   );
 }
-</div>
+</div></div></div>

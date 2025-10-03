@@ -42,9 +42,7 @@ export default function QuantumNeuralSuperintelligence2026() {
                 <Brain className="w-5 h-5" />
               </Link>
             </div>
-          </div>
         </div>
-      </div>
 
       {/* Key Features Section */}
       <div className="py-20 bg-black/20">
@@ -83,9 +81,7 @@ export default function QuantumNeuralSuperintelligence2026() {
                 centuries to process, delivering insights in milliseconds.
               </p>
             </div>
-          </div>
         </div>
-      </div>
 
       {/* Performance Metrics */}
       <div className="py-20">
@@ -100,30 +96,25 @@ export default function QuantumNeuralSuperintelligence2026() {
               </div>
               <div className="text-xl text-gray-300 mb-2">Speed Improvement</div>
               <div className="text-sm text-gray-400">Over classical AI systems</div>
-            </div>
             <div className="text-center">
               <div className="text-5xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">
                 99.9%
               </div>
               <div className="text-xl text-gray-300 mb-2">Problem Solving Accuracy</div>
               <div className="text-sm text-gray-400">Across all complexity levels</div>
-            </div>
             <div className="text-center">
               <div className="text-5xl font-bold bg-gradient-to-r from-pink-400 to-indigo-400 bg-clip-text text-transparent mb-2">
                 ∞
               </div>
               <div className="text-xl text-gray-300 mb-2">Parallel Processing</div>
               <div className="text-sm text-gray-400">Quantum superposition states</div>
-            </div>
             <div className="text-center">
               <div className="text-5xl font-bold bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent mb-2">
                 $25B
               </div>
               <div className="text-xl text-gray-300 mb-2">ROI Generated</div>
               <div className="text-sm text-gray-400">For enterprise clients</div>
-            </div>
           </div>
-        </div>
       </div>
 
       {/* Technical Architecture */}
@@ -165,41 +156,31 @@ export default function QuantumNeuralSuperintelligence2026() {
                   <div className="flex items-center gap-2">
                     <div className="w-24 h-2 bg-gray-700 rounded-full">
                       <div className="w-full h-2 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full"></div>
-                    </div>
                     <span className="text-indigo-400 font-semibold">∞</span>
                   </div>
-                </div>
                 <div className="flex justify-between items-center">
                   <span className="text-gray-300">Neural Complexity</span>
                   <div className="flex items-center gap-2">
                     <div className="w-24 h-2 bg-gray-700 rounded-full">
                       <div className="w-full h-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full"></div>
-                    </div>
                     <span className="text-purple-400 font-semibold">99%</span>
                   </div>
-                </div>
                 <div className="flex justify-between items-center">
                   <span className="text-gray-300">Solution Discovery</span>
                   <div className="flex items-center gap-2">
                     <div className="w-24 h-2 bg-gray-700 rounded-full">
                       <div className="w-full h-2 bg-gradient-to-r from-pink-500 to-indigo-500 rounded-full"></div>
-                    </div>
                     <span className="text-pink-400 font-semibold">100%</span>
                   </div>
-                </div>
                 <div className="flex justify-between items-center">
                   <span className="text-gray-300">Quantum Stability</span>
                   <div className="flex items-center gap-2">
                     <div className="w-24 h-2 bg-gray-700 rounded-full">
                       <div className="w-full h-2 bg-gradient-to-r from-indigo-500 to-cyan-500 rounded-full"></div>
-                    </div>
                     <span className="text-indigo-400 font-semibold">99.9%</span>
                   </div>
-                </div>
               </div>
-            </div>
           </div>
-        </div>
       </div>
 
       {/* Applications */}
@@ -250,9 +231,7 @@ export default function QuantumNeuralSuperintelligence2026() {
                 reducing costs and improving efficiency exponentially.
               </p>
             </div>
-          </div>
         </div>
-      </div>
 
       {/* CTA Section */}
       <div className="py-20">
@@ -278,9 +257,7 @@ export default function QuantumNeuralSuperintelligence2026() {
               <TrendingUp className="w-5 h-5" />
             </Link>
           </div>
-        </div>
       </div>
-    </div>
   );
 }
 </TrendingUp>
@@ -290,4 +267,4 @@ export default function QuantumNeuralSuperintelligence2026() {
 </Cpu>
 </Brain>
 </ArrowRight>
-</Zap>
+</Zap></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>

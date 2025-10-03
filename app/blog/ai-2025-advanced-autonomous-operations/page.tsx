@@ -52,7 +52,6 @@ export default function AI2025AdvancedAutonomousOperations() {
               <div className="text-3xl font-extrabold text-orange-400 mb-2">0.1%</div>"
               <div className="text-sm text-orange-300">Human Error Rate</div>"
             </div>
-          </div>
         </div>
 
         {/* Main Content */}
@@ -102,7 +101,6 @@ export default function AI2025AdvancedAutonomousOperations() {
                     <li>• Automated conflict resolution</li>
                   </ul>
                 </div>
-              </div>
 
               <div className="grid md:grid-cols-2 gap-8">"
                 <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">"
@@ -132,7 +130,6 @@ export default function AI2025AdvancedAutonomousOperations() {
                     <li>• Strategic recommendations</li>
                   </ul>
                 </div>
-              </div>
             </section>
 
             <section className="mb-12">"
@@ -152,7 +149,6 @@ export default function AI2025AdvancedAutonomousOperations() {
                     <div className="text-3xl font-extrabold text-green-400 mb-2">340%</div>"
                     <div className="text-sm text-green-300">Efficiency Improvement</div>"
                   </div>
-                </div>
                 <p className="text-gray-300">"
                   A Fortune 100 manufacturing company achieved complete operational autonomy across 15 facilities 
                   worldwide, eliminating manual processes and achieving unprecedented efficiency gains while 
@@ -175,7 +171,6 @@ export default function AI2025AdvancedAutonomousOperations() {
                     <div className="text-3xl font-extrabold text-blue-400 mb-2">67%</div>"
                     <div className="text-sm text-blue-300">Faster Processing</div>"
                   </div>
-                </div>
                 <p className="text-gray-300">"
                   A major financial services company implemented autonomous operations across all back-office 
                   functions, achieving near-perfect accuracy while dramatically reducing processing times 
@@ -198,7 +193,6 @@ export default function AI2025AdvancedAutonomousOperations() {
                     <div className="text-3xl font-extrabold text-purple-400 mb-2">45%</div>"
                     <div className="text-sm text-purple-300">Faster Service</div>"
                   </div>
-                </div>
                 <p className="text-gray-300">"
                   A major healthcare system achieved autonomous operations across administrative functions, 
                   patient management, and resource allocation, significantly improving patient care while 
@@ -242,7 +236,6 @@ export default function AI2025AdvancedAutonomousOperations() {
                     and enhancement of autonomous operations capabilities.
                   </p>
                 </div>
-              </div>
             </section>
 
             <section className="mb-12">"
@@ -278,10 +271,7 @@ export default function AI2025AdvancedAutonomousOperations() {
                   View Case Study
                 </a>
               </div>
-            </div>
           </div>
-        </div>
       </div>
-    </div>
   );
-}
+}</div></div></div></div></div></div></div></div></div></div>

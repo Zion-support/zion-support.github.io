@@ -64,8 +64,8 @@ export default function Page() {
             Schedule a Consultation
           </a>
         </section>
-      </div>
     </article>
   );
 }
 
+</div>

@@ -78,7 +78,6 @@ export default function AIMetaCognitiveReasoning2026() {
                 <li>• $30M+ annual savings</li>
               </ul>
             </div>
-          </div>
 
           <div className="bg-gradient-to-r from-yellow-50 to-orange-50 border border-yellow-200 rounded-lg p-6">"
             <h3 className="text-xl font-semibold text-gray-900 mb-3">📊 Real-World Impact</h3>"
@@ -95,7 +94,6 @@ export default function AIMetaCognitiveReasoning2026() {
                 <div className="text-3xl font-bold text-orange-600">95%</div>"
                 <div className="text-sm text-gray-600">Confidence in Predictions</div>"
               </div>
-            </div>
           </div>
         </section>
 
@@ -124,7 +122,6 @@ export default function AIMetaCognitiveReasoning2026() {
                 <h4 className="font-semibold text-gray-900">Confidence Calibrator</h4>"
                 <p className="text-gray-600">Provides accurate uncertainty estimates and reliability scores</p>"
               </div>
-            </div>
           </div>
         </section>
 
@@ -137,7 +134,6 @@ export default function AIMetaCognitiveReasoning2026() {
                 <h3 className="font-semibold text-gray-900">Assessment & Planning</h3>"
                 <p className="text-gray-600">Evaluate current AI systems and identify meta-cognitive opportunities</p>"
               </div>
-            </div>
             
             <div className="flex items-start gap-4 p-4 bg-white border border-gray-200 rounded-lg">"
               <div className="bg-green-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-semibold">2</div>"
@@ -145,7 +141,6 @@ export default function AIMetaCognitiveReasoning2026() {
                 <h3 className="font-semibold text-gray-900">Pilot Implementation</h3>"
                 <p className="text-gray-600">Deploy meta-cognitive reasoning in controlled environments</p>"
               </div>
-            </div>
             
             <div className="flex items-start gap-4 p-4 bg-white border border-gray-200 rounded-lg">"
               <div className="bg-purple-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-semibold">3</div>"
@@ -153,7 +148,6 @@ export default function AIMetaCognitiveReasoning2026() {
                 <h3 className="font-semibold text-gray-900">Scale & Optimize</h3>"
                 <p className="text-gray-600">Expand to enterprise-wide deployment with continuous optimization</p>"
               </div>
-            </div>
           </div>
         </section>
 
@@ -206,8 +200,6 @@ export default function AIMetaCognitiveReasoning2026() {
               <p className="text-gray-600 text-sm">Real-world implementation results</p>"
             </Link>
           </div>
-        </div>
       </article>
-    </div>
   );
-}
+}</div></div></div></div></div></div></div></div>

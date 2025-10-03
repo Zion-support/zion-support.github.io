@@ -90,7 +90,6 @@ const NewContentPromotionalBanner2026: React.FC = () => {
               <Target className="w-5 h-5 text-green-400" />"
               <span className="font-semibold">Proven Results</span>"
             </div>
-          </div>
         </div>
 
         {/* Featured Content Cards */}
@@ -113,7 +112,6 @@ const NewContentPromotionalBanner2026: React.FC = () => {
                   <div className={`px-4 py-2 rounded-full bg-gradient-to-r ${content.badgeColor} text-white text-sm font-bold shadow-lg`}>
                     {content.badge}
                   </div>
-                </div>
 
                 {/* Category */}
                 <div className="mb-4">"
@@ -144,7 +142,6 @@ const NewContentPromotionalBanner2026: React.FC = () => {
 
               {/* Corner accent */}
               <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${content.color} opacity-10 rounded-bl-full`}></div>
-            </div>
           ))}
         </div>
 
@@ -190,7 +187,6 @@ const NewContentPromotionalBanner2026: React.FC = () => {
                 <div className="text-gray-400 text-sm font-medium">"
                   Enterprise Clients
                 </div>
-              </div>
               <div className="text-center">"
                 <div className="text-4xl font-extrabold bg-gradient-to-r from-purple-400 to-fuchsia-400 bg-clip-text text-transparent mb-2">"
                   300%
@@ -198,7 +194,6 @@ const NewContentPromotionalBanner2026: React.FC = () => {
                 <div className="text-gray-400 text-sm font-medium">"
                   Average ROI
                 </div>
-              </div>
               <div className="text-center">"
                 <div className="text-4xl font-extrabold bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent mb-2">"
                   99.9%
@@ -206,7 +201,6 @@ const NewContentPromotionalBanner2026: React.FC = () => {
                 <div className="text-gray-400 text-sm font-medium">"
                   System Uptime
                 </div>
-              </div>
               <div className="text-center">"
                 <div className="text-4xl font-extrabold bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent mb-2">"
                   24/7
@@ -214,13 +208,10 @@ const NewContentPromotionalBanner2026: React.FC = () => {
                 <div className="text-gray-400 text-sm font-medium">"
                   Expert Support
                 </div>
-              </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
   );
 };
 
-export default NewContentPromotionalBanner2026;
+export default NewContentPromotionalBanner2026;</div></div></div></div></div></div></div></div></div>

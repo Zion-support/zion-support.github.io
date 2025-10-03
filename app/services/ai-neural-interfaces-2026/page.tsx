@@ -56,7 +56,6 @@ export default function AINeuralInterfacesService() {
                 <div className="text-3xl font-bold text-orange-600">500%</div>"
                 <div className="text-sm text-gray-600">Productivity Boost</div>"
               </div>
-            </div>
           </div>
 
           <div className="prose prose-lg max-w-none">"
@@ -97,7 +96,6 @@ export default function AINeuralInterfacesService() {
                   for comprehensive neural ecosystem management.
                 </p>
               </div>
-            </div>
 
             <h3 className="text-2xl font-bold text-gray-900 mb-4">🏢 Enterprise Applications</h3>"
             <div className="space-y-6 mb-8">"
@@ -129,7 +127,6 @@ export default function AINeuralInterfacesService() {
                   response times and more effective crisis management.
                 </p>
               </div>
-            </div>
 
             <h3 className="text-2xl font-bold text-gray-900 mb-4">🔬 Technical Implementation</h3>"
             <div className="space-y-4 mb-8">"
@@ -154,9 +151,7 @@ export default function AINeuralInterfacesService() {
                   comprehensive neural control of business operations and workflows.
                 </p>
               </div>
-            </div>
           </div>
-        </div>
 
         <div className="lg:col-span-1">"
           <div className="bg-white rounded-lg shadow-lg p-6 sticky top-8">"
@@ -179,7 +174,6 @@ export default function AINeuralInterfacesService() {
                 <div className="text-2xl font-bold text-green-600">12-18 months</div>"
                 <p className="text-sm text-gray-600">Average payback period</p>"
               </div>
-            </div>
 
             <div className="space-y-3 mb-6">"
               <h4 className="font-bold text-gray-900">Service Includes:</h4>"
@@ -226,9 +220,7 @@ export default function AINeuralInterfacesService() {
                 View Success Stories →
               </Link>
             </div>
-          </div>
         </div>
-      </div>
 
       <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white p-8 rounded-lg mb-8">"
         <div className="text-center">"
@@ -249,7 +241,6 @@ export default function AINeuralInterfacesService() {
               🧠 Schedule Neural Demo
             </a>
           </div>
-        </div>
       </div>
 
       <div className="grid md:grid-cols-3 gap-8 mb-8">"
@@ -277,7 +268,6 @@ export default function AINeuralInterfacesService() {
             security standards and privacy guarantees.
           </p>
         </div>
-      </div>
 
       <div className="border-t border-gray-200 pt-8">"
         <div className="flex items-center gap-4 mb-6">"
@@ -288,7 +278,6 @@ export default function AINeuralInterfacesService() {
             <h4 className="text-lg font-bold text-gray-900">Zion Tech Group</h4>"
             <p className="text-gray-600">Leading AI Neural Interface Innovation</p>"
           </div>
-        </div>
         <p className="text-gray-700 mb-4">"
           Zion Tech Group is at the forefront of AI neural interface development, working with Fortune 500 
           companies to implement cutting-edge brain-computer integration solutions that deliver measurable 
@@ -306,7 +295,6 @@ export default function AINeuralInterfacesService() {
             View Success Stories →
           </Link>
         </div>
-      </div>
     </div>
   );
-}
+}</div></div></div></div></div></div></div></div></div></div></div></div>

@@ -57,10 +57,8 @@ export default function AI2026RevolutionaryBreakthroughFebruary() {
                   <div className="text-gray-400 text-sm font-medium">"
                     {stat.label}
                   </div>
-                </div>
               ))}
             </div>
-          </div>
         </div>
       </header>
 
@@ -121,7 +119,6 @@ export default function AI2026RevolutionaryBreakthroughFebruary() {
                     </li>
                   </ul>
                 </div>
-              </div>
             </div>
           </section>
 
@@ -178,7 +175,6 @@ export default function AI2026RevolutionaryBreakthroughFebruary() {
                     </li>
                   </ul>
                 </div>
-              </div>
             </div>
           </section>
 
@@ -235,7 +231,6 @@ export default function AI2026RevolutionaryBreakthroughFebruary() {
                     </li>
                   </ul>
                 </div>
-              </div>
             </div>
           </section>
 
@@ -263,7 +258,6 @@ export default function AI2026RevolutionaryBreakthroughFebruary() {
                   </div>
                 ))}
               </div>
-            </div>
           </section>
 
           {/* CTA Section */}
@@ -287,10 +281,8 @@ export default function AI2026RevolutionaryBreakthroughFebruary() {
                   View Success Stories
                 </a>
               </div>
-            </div>
           </section>
-        </div>
       </main>
     </div>
   );
-}
+}</div></div></div></div></div></div></div></div>

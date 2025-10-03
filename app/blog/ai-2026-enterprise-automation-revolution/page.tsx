@@ -30,7 +30,6 @@ export default function AI2026EnterpriseAutomationRevolution() {
           <span>•</span>
           <span>Industry Leading</span>
         </div>
-      </div>
 
       {/* Hero Image Placeholder */}
       <div className="w-full h-64 md:h-96 bg-gradient-to-br from-orange-100 via-red-100 to-pink-100 rounded-2xl mb-12 flex items-center justify-center">
@@ -39,7 +38,6 @@ export default function AI2026EnterpriseAutomationRevolution() {
           <h3 className="text-2xl font-bold text-gray-800">Enterprise Automation Revolution</h3>
           <p className="text-gray-600">AI-powered transformation of business operations</p>
         </div>
-      </div>
 
       {/* Introduction */}
       <div className="prose prose-lg max-w-none mb-12">
@@ -59,23 +57,18 @@ export default function AI2026EnterpriseAutomationRevolution() {
         <div className="text-center bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl">
           <div className="text-3xl font-bold text-blue-600 mb-2">85%</div>
           <div className="text-sm text-gray-600">Process Automation</div>
-        </div>
         <div className="text-center bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl">
           <div className="text-3xl font-bold text-green-600 mb-2">300%</div>
           <div className="text-sm text-gray-600">Productivity Gain</div>
-        </div>
         <div className="text-center bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-xl">
           <div className="text-3xl font-bold text-purple-600 mb-2">$2.5M</div>
           <div className="text-sm text-gray-600">Average ROI</div>
-        </div>
         <div className="text-center bg-gradient-to-br from-orange-50 to-orange-100 p-6 rounded-xl">
           <div className="text-3xl font-bold text-orange-600 mb-2">24/7</div>
           <div className="text-sm text-gray-600">Autonomous Ops</div>
-        </div>
       </div>
 
       {/* Core Automation Technologies */}
-<<<<<<< HEAD
       <div className="space-y-8 mb-12">"
         <h2 className="text-3xl font-bold text-gray-900 mb-6">Core Automation Technologies</h2>"
         <div className="grid md:grid-cols-2 gap-8">"
@@ -83,7 +76,6 @@ export default function AI2026EnterpriseAutomationRevolution() {
             <div className="flex items-center gap-3 mb-4">"
               <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">"
                 <Zap className="w-6 h-6 text-white" />"
-=======
       <div className="space-y-8 mb-12">
         <h2 className="text-3xl font-bold text-gray-900 mb-6">Core Automation Technologies</h2>
         
@@ -91,7 +83,6 @@ export default function AI2026EnterpriseAutomationRevolution() {
             <div className="flex items-center gap-3 mb-4">
               <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
                 <Zap className="w-6 h-6 text-white" />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0638
               </div>
               <h3 className="text-2xl font-bold text-gray-900">Intelligent Process Automation</h3>
             </div>
@@ -163,7 +154,6 @@ export default function AI2026EnterpriseAutomationRevolution() {
               <li>• Zero-downtime operations</li>
             </ul>
           </div>
-        </div>
       </div>
 
       {/* Industry Applications */}
@@ -179,7 +169,6 @@ export default function AI2026EnterpriseAutomationRevolution() {
             <div className="text-sm text-green-600 font-semibold">
               Result: 40% cost reduction, 99.9% uptime
             </div>
-          </div>
           <div className="bg-white p-6 rounded-xl shadow-sm">
             <h3 className="text-xl font-semibold text-gray-900 mb-3">Financial Services</h3>
             <p className="text-gray-600 mb-4">
@@ -189,7 +178,6 @@ export default function AI2026EnterpriseAutomationRevolution() {
             <div className="text-sm text-green-600 font-semibold">
               Result: 90% faster processing, 99.8% accuracy
             </div>
-          </div>
           <div className="bg-white p-6 rounded-xl shadow-sm">
             <h3 className="text-xl font-semibold text-gray-900 mb-3">Healthcare</h3>
             <p className="text-gray-600 mb-4">
@@ -199,25 +187,20 @@ export default function AI2026EnterpriseAutomationRevolution() {
             <div className="text-sm text-green-600 font-semibold">
               Result: 35% faster diagnosis, 25% cost savings
             </div>
-          </div>
         </div>
-      </div>
 
       {/* Implementation Framework */}
-<<<<<<< HEAD
       <div className="space-y-8 mb-12">"
         <h2 className="text-3xl font-bold text-gray-900 mb-6">Implementation Framework</h2>"
         <div className="space-y-6">"
           <div className="flex gap-6 p-6 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl border border-blue-200">"
             <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0">"
-=======
       <div className="space-y-8 mb-12">
         <h2 className="text-3xl font-bold text-gray-900 mb-6">Implementation Framework</h2>
         
         <div className="space-y-6">
           <div className="flex gap-6 p-6 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl border border-blue-200">
             <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0638
               1
             </div>
             <div>
@@ -227,7 +210,6 @@ export default function AI2026EnterpriseAutomationRevolution() {
                 and development of a strategic roadmap aligned with business objectives.
               </p>
             </div>
-          </div>
 
           <div className="flex gap-6 p-6 bg-gradient-to-r from-green-50 to-teal-50 rounded-xl border border-green-200">
             <div className="w-12 h-12 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0">
@@ -240,7 +222,6 @@ export default function AI2026EnterpriseAutomationRevolution() {
                 confidence in AI automation capabilities.
               </p>
             </div>
-          </div>
 
           <div className="flex gap-6 p-6 bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl border border-purple-200">
             <div className="w-12 h-12 bg-purple-600 text-white rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0">
@@ -253,9 +234,7 @@ export default function AI2026EnterpriseAutomationRevolution() {
                 learning, and optimizing for maximum business impact.
               </p>
             </div>
-          </div>
         </div>
-      </div>
 
       {/* ROI Calculator */}
       <div className="bg-gradient-to-r from-gray-900 to-blue-900 text-white p-8 rounded-2xl mb-12">
@@ -300,9 +279,7 @@ export default function AI2026EnterpriseAutomationRevolution() {
                 <span>Payback Period:</span>
                 <span className="font-semibold">2.1 months</span>
               </div>
-            </div>
           </div>
-        </div>
       </div>
 
       {/* Call to Action */}
@@ -323,7 +300,6 @@ export default function AI2026EnterpriseAutomationRevolution() {
             Get Automation Assessment
           </a>
         </div>
-      </div>
 
       {/* Related Content */}
       <div className="mt-12 pt-8 border-t border-gray-200">
@@ -350,7 +326,6 @@ export default function AI2026EnterpriseAutomationRevolution() {
             </div>
           </Link>
         </div>
-      </div>
     </div>
   );
 }
@@ -363,4 +338,4 @@ export default function AI2026EnterpriseAutomationRevolution() {
 </Users>
 </Zap>
 </Cog>
-</Cog>
+</Cog></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>

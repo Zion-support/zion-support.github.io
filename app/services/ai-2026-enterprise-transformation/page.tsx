@@ -54,9 +54,7 @@ export default function AI2026EnterpriseTransformationPage() {
                   <div className="text-3xl font-bold">18</div>"
                   <div className="text-sm opacity-90">Months Payback</div>"
                 </div>
-              </div>
             </div>
-          </div>
 
           {/* Service Overview */}
           <section className="mb-12">"
@@ -126,7 +124,6 @@ export default function AI2026EnterpriseTransformationPage() {
                   </li>
                 </ul>
               </div>
-            </div>
           </section>
 
           {/* Technology Stack */}
@@ -162,7 +159,6 @@ export default function AI2026EnterpriseTransformationPage() {
                 </p>
                 <div className="text-green-600 font-semibold text-sm">98% automation rate</div>"
               </div>
-            </div>
           </section>
 
           {/* Implementation Process */}
@@ -179,7 +175,6 @@ export default function AI2026EnterpriseTransformationPage() {
                   </p>
                   <div className="text-sm text-blue-600 font-semibold">Timeline: 4-6 weeks</div>"
                 </div>
-              </div>
 
               <div className="flex items-start gap-6 p-6 bg-white rounded-xl shadow-md border border-gray-200">"
                 <div className="flex-shrink-0 w-12 h-12 bg-green-600 text-white rounded-full flex items-center justify-center font-bold">2</div>"
@@ -191,7 +186,6 @@ export default function AI2026EnterpriseTransformationPage() {
                   </p>
                   <div className="text-sm text-green-600 font-semibold">Timeline: 8-12 weeks</div>"
                 </div>
-              </div>
 
               <div className="flex items-start gap-6 p-6 bg-white rounded-xl shadow-md border border-gray-200">"
                 <div className="flex-shrink-0 w-12 h-12 bg-purple-600 text-white rounded-full flex items-center justify-center font-bold">3</div>"
@@ -203,7 +197,6 @@ export default function AI2026EnterpriseTransformationPage() {
                   </p>
                   <div className="text-sm text-purple-600 font-semibold">Timeline: 6-12 months</div>"
                 </div>
-              </div>
 
               <div className="flex items-start gap-6 p-6 bg-white rounded-xl shadow-md border border-gray-200">"
                 <div className="flex-shrink-0 w-12 h-12 bg-orange-600 text-white rounded-full flex items-center justify-center font-bold">4</div>"
@@ -215,7 +208,6 @@ export default function AI2026EnterpriseTransformationPage() {
                   </p>
                   <div className="text-sm text-orange-600 font-semibold">Ongoing support</div>"
                 </div>
-              </div>
             </div>
           </section>
 
@@ -239,7 +231,6 @@ export default function AI2026EnterpriseTransformationPage() {
                       <div className="font-semibold">John Smith</div>"
                       <div className="text-green-200 text-sm">CEO, Global Manufacturing Corp</div>"
                     </div>
-                  </div>
                 </div>
                 <div className="space-y-4">"
                   <div className="flex justify-between items-center p-4 bg-white/10 rounded-lg">"
@@ -258,9 +249,7 @@ export default function AI2026EnterpriseTransformationPage() {
                     <span className="font-semibold">Payback Period</span>"
                     <span className="text-2xl font-bold">18 months</span>"
                   </div>
-                </div>
               </div>
-            </div>
           </section>
 
           {/* Call to Action */}
@@ -285,7 +274,6 @@ export default function AI2026EnterpriseTransformationPage() {
                   Email Us
                 </a>
               </div>
-            </div>
           </section>
 
           {/* Related Services */}
@@ -327,8 +315,6 @@ export default function AI2026EnterpriseTransformationPage() {
               </Link>
             </div>
           </section>
-        </div>
-      </div>
     </div>
   );
-}
+}</div></div></div></div></div></div></div></div></div></div></div></div></div></div>

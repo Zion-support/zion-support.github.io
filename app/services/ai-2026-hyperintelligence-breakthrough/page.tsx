@@ -46,7 +46,6 @@ export default function AI2026HyperintelligenceBreakthroughService() {
             <h3 className="text-2xl font-bold mb-4 text-blue-300">Autonomous Learning</h3>"
             <p className="text-gray-300">Self-improving systems that continuously adapt and evolve without human intervention.</p>"
           </div>
-        </div>
 
         {/* Service Components */}
         <div className="mb-16">"
@@ -154,7 +153,6 @@ export default function AI2026HyperintelligenceBreakthroughService() {
                 </li>
               </ul>
             </div>
-          </div>
         </div>
 
         {/* Implementation Process */}
@@ -187,7 +185,6 @@ export default function AI2026HyperintelligenceBreakthroughService() {
               </p>
               <div className="text-sm text-gray-400">Duration: 12-24 weeks</div>"
             </div>
-          </div>
         </div>
 
         {/* ROI Calculator */}
@@ -210,7 +207,6 @@ export default function AI2026HyperintelligenceBreakthroughService() {
               <div className="text-4xl font-bold text-green-400 mb-2">12</div>"
               <div className="text-gray-300">Months to ROI</div>"
             </div>
-          </div>
         </div>
 
         {/* Pricing */}
@@ -313,7 +309,6 @@ export default function AI2026HyperintelligenceBreakthroughService() {
                 Contact Sales
               </a>
             </div>
-          </div>
         </div>
 
         {/* Call to Action */}
@@ -334,8 +329,6 @@ export default function AI2026HyperintelligenceBreakthroughService() {
               View Success Stories
             </a>
           </div>
-        </div>
       </div>
-    </div>
   );
-}
+}</div></div></div>

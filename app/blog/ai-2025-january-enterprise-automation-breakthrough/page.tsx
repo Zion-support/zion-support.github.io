@@ -59,7 +59,6 @@ export default function AI2025EnterpriseAutomationBreakthrough() {
               <div className="text-3xl font-extrabold text-orange-400 mb-2">12.5x</div>"
               <div className="text-sm text-orange-300">ROI</div>"
             </div>
-          </div>
         </div>
 
         {/* Content */}
@@ -164,7 +163,6 @@ export default function AI2025EnterpriseAutomationBreakthrough() {
                 <li>• User training and adoption</li>
               </ul>
             </div>
-          </div>
 
           <h2 className="text-3xl font-bold text-white mt-12 mb-6">📊 Measurable Business Impact</h2>"
           <p className="text-gray-300 mb-6">"
@@ -250,7 +248,6 @@ export default function AI2025EnterpriseAutomationBreakthrough() {
                 View Success Stories
               </a>
             </div>
-          </div>
         </div>
 
         {/* Footer */}
@@ -260,6 +257,5 @@ export default function AI2025EnterpriseAutomationBreakthrough() {
           </div>
         </footer>
       </article>
-    </div>
   );
-}
+}</div></div></div></div>

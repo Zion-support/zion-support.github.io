@@ -55,7 +55,6 @@ export default function Fortune500AITransformationCaseStudy() {
                 <div className="text-2xl font-extrabold text-orange-400 mb-1">18mo</div>"
                 <div className="text-xs text-orange-300">Payback Period</div>"
               </div>
-            </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <a 
@@ -69,7 +68,6 @@ export default function Fortune500AITransformationCaseStudy() {
                 Read Implementation Guide
               </a>
             </div>
-          </div>
         </div>
       </section>
 
@@ -98,7 +96,6 @@ export default function Fortune500AITransformationCaseStudy() {
                     <li><strong className="text-white">Legacy Systems:</strong> Outdated technology stack</li>"
                   </ul>
                 </div>
-              </div>
             </div>
 
             {/* Financial Impact */}
@@ -132,7 +129,6 @@ export default function Fortune500AITransformationCaseStudy() {
                         <li>• 85% improvement in equipment lifespan</li>
                       </ul>
                     </div>
-                  </div>
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-blue-400 mb-4">Revenue Enhancement: $500M</h3>"
@@ -161,9 +157,7 @@ export default function Fortune500AITransformationCaseStudy() {
                         <li>• Automated quality assurance</li>
                       </ul>
                     </div>
-                  </div>
                 </div>
-              </div>
 
               {/* ROI Calculation */}
               <div className="mt-8 bg-gradient-to-r from-green-500/10 to-blue-500/10 border border-green-500/30 rounded-xl p-6">"
@@ -185,9 +179,7 @@ export default function Fortune500AITransformationCaseStudy() {
                     <div className="text-2xl font-extrabold text-orange-400">8.2mo</div>"
                     <div className="text-gray-300 text-sm">Payback Period</div>"
                   </div>
-                </div>
               </div>
-            </div>
 
             {/* Key Results */}
             <div className="mt-12 bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">"
@@ -220,7 +212,6 @@ export default function Fortune500AITransformationCaseStudy() {
                     <li><strong className="text-white">Cash Flow:</strong> $1.2B improvement</li>"
                   </ul>
                 </div>
-              </div>
             </div>
 
             {/* Client Testimonial */}
@@ -232,7 +223,6 @@ export default function Fortune500AITransformationCaseStudy() {
               <div className="text-green-400 font-semibold">"
                 — CEO, Fortune 500 Manufacturing Company
               </div>
-            </div>
 
             {/* CTA Section */}
             <div className="mt-12 bg-gradient-to-r from-green-500/10 to-blue-500/10 border border-green-500/30 rounded-2xl p-8 text-center">"
@@ -253,10 +243,7 @@ export default function Fortune500AITransformationCaseStudy() {
                   Learn About Neural Superintelligence
                 </a>
               </div>
-            </div>
           </div>
-        </div>
       </section>
-    </div>
   );
-}
+}</div></div></div></div></div></div></div></div></div></div></div></div></div>

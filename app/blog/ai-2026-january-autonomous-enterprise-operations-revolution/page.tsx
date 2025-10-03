@@ -36,7 +36,6 @@ export default function January2026AutonomousEnterpriseOperationsRevolution() {
             <span>⏱️ 8 min read</span>
             <span>🏷️ Enterprise AI</span>
           </div>
-        </div>
 
         {/* Content */}
         <div className="max-w-4xl mx-auto">"
@@ -106,7 +105,6 @@ export default function January2026AutonomousEnterpriseOperationsRevolution() {
                     </li>
                   </ul>
                 </div>
-              </div>
             </section>
 
             {/* Results */}
@@ -132,7 +130,6 @@ export default function January2026AutonomousEnterpriseOperationsRevolution() {
                   <div className="text-4xl font-bold text-white mb-2">95%</div>"
                   <div className="text-gray-300">improvement in resource utilization</div>"
                 </div>
-              </div>
             </section>
 
             {/* Implementation Roadmap */}
@@ -163,7 +160,6 @@ export default function January2026AutonomousEnterpriseOperationsRevolution() {
                     <li>• Continuous improvement systems</li>
                   </ul>
                 </div>
-              </div>
             </section>
 
             {/* CTA */}
@@ -185,11 +181,7 @@ export default function January2026AutonomousEnterpriseOperationsRevolution() {
                     View Services
                   </Link>
                 </div>
-              </div>
             </section>
-
-          </div>
-        </div>
 
         {/* Navigation */}
         <div className="max-w-4xl mx-auto mt-12">"
@@ -205,8 +197,6 @@ export default function January2026AutonomousEnterpriseOperationsRevolution() {
               Next Article →
             </Link>
           </div>
-        </div>
       </div>
-    </div>
   );
-}
+}</div></div></div></div></div></div></div></div></div>

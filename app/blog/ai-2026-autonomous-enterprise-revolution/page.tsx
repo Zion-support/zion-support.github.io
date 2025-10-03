@@ -50,7 +50,6 @@ export default function AI2026AutonomousEnterpriseRevolution() {
               <div className="text-xs text-purple-300">Operations</div>"
             </span>
           </div>
-        </div>
 
         {/* Introduction */}
         <section className="mb-16">"
@@ -130,7 +129,6 @@ export default function AI2026AutonomousEnterpriseRevolution() {
                 <li>• Ecosystem-wide optimization</li>
               </ul>
             </div>
-          </div>
         </section>
 
         {/* Business Impact */}
@@ -188,7 +186,6 @@ export default function AI2026AutonomousEnterpriseRevolution() {
                 </li>
               </ul>
             </div>
-          </div>
         </section>
 
         {/* Implementation Strategy */}
@@ -227,7 +224,6 @@ export default function AI2026AutonomousEnterpriseRevolution() {
                 <li>• Future roadmap planning and expansion</li>
               </ul>
             </div>
-          </div>
         </section>
 
         {/* Success Metrics */}
@@ -249,7 +245,6 @@ export default function AI2026AutonomousEnterpriseRevolution() {
               <div className="text-purple-300 text-sm mb-2">ROI Achieved</div>"
               <div className="text-gray-400 text-xs">Within 12 months</div>"
             </div>
-          </div>
         </section>
 
         {/* Call to Action */}
@@ -272,9 +267,6 @@ export default function AI2026AutonomousEnterpriseRevolution() {
                 View Success Stories →
               </a>
             </div>
-          </div>
         </section>
-      </div>
-    </div>
   );
-}
+}</div></div></div></div></div></div></div></div>

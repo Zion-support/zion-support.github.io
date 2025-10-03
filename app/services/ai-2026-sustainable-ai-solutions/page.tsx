@@ -65,9 +65,7 @@ export default function SustainableAISolutionsPage() {
                 <div className="text-2xl font-extrabold text-blue-400 mb-1">500+</div>"
                 <div className="text-xs text-blue-300">Companies Served</div>"
               </div>
-            </div>
           </div>
-        </div>
       </header>
 
       {/* Main Content */}
@@ -282,7 +280,6 @@ export default function SustainableAISolutionsPage() {
                 Get Started
               </a>
             </div>
-          </div>
         </section>
 
         {/* Implementation Process */}
@@ -336,7 +333,6 @@ export default function SustainableAISolutionsPage() {
                 Continuous monitoring, optimization, and support to ensure maximum sustainability and performance.
               </p>
             </div>
-          </div>
         </section>
 
         {/* Success Metrics */}
@@ -375,7 +371,6 @@ export default function SustainableAISolutionsPage() {
                 <div className="text-gray-300 mb-2">Companies Transformed</div>"
                 <div className="text-sm text-gray-400">Global enterprises</div>"
               </div>
-            </div>
           </div>
         </section>
 
@@ -401,9 +396,8 @@ export default function SustainableAISolutionsPage() {
                 View Success Stories
               </a>
             </div>
-          </div>
         </section>
       </main>
     </div>
   );
-}
+}</div></div></div></div></div></div>

@@ -55,7 +55,6 @@ export default function FederatedLearningBreakthrough2026() {
                 <div className="text-gray-400 text-sm font-medium">"
                   Data Privacy Protection
                 </div>
-              </div>
               <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-green-500/50 transition-all duration-300">"
                 <div className="text-5xl mb-4">🎯</div>"
                 <div className="text-4xl font-extrabold bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent mb-2">"
@@ -64,7 +63,6 @@ export default function FederatedLearningBreakthrough2026() {
                 <div className="text-gray-400 text-sm font-medium">"
                   Model Accuracy
                 </div>
-              </div>
               <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300">"
                 <div className="text-5xl mb-4">🤝</div>"
                 <div className="text-4xl font-extrabold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">"
@@ -73,7 +71,6 @@ export default function FederatedLearningBreakthrough2026() {
                 <div className="text-gray-400 text-sm font-medium">"
                   Organizations Collaborating
                 </div>
-              </div>
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
@@ -88,7 +85,6 @@ export default function FederatedLearningBreakthrough2026() {
                 View Success Stories
               </a>
             </div>
-          </div>
         </div>
       </section>
 
@@ -158,7 +154,6 @@ export default function FederatedLearningBreakthrough2026() {
               </div>
             ))}
           </div>
-        </div>
       </section>
 
       {/* Use Cases Section */}
@@ -225,9 +220,7 @@ export default function FederatedLearningBreakthrough2026() {
                   </div>
                 ))}
               </div>
-            </div>
           </div>
-        </div>
       </section>
 
       {/* Technical Architecture Section */}
@@ -272,7 +265,6 @@ export default function FederatedLearningBreakthrough2026() {
               </div>
             ))}
           </div>
-        </div>
       </section>
 
       {/* CTA Section */}
@@ -296,8 +288,6 @@ export default function FederatedLearningBreakthrough2026() {
               View Case Studies
             </a>
           </div>
-        </div>
       </section>
-    </div>
   );
-}
+}</div></div></div></div></div></div></div></div></div></div>

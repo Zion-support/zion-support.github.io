@@ -41,7 +41,6 @@ export default function QuantumAIComputingBreakthrough2026() {
             <span className="bg-purple-500/20 px-4 py-2 rounded-full text-purple-300">Quantum Superposition</span>"
             <span className="bg-blue-500/20 px-4 py-2 rounded-full text-blue-300">Exponential Computing</span>"
           </div>
-        </div>
 
         {/* Quantum Technologies Section */}
         <section className="mb-16">"
@@ -94,7 +93,6 @@ export default function QuantumAIComputingBreakthrough2026() {
                 <li>• Quantum teleportation</li>
               </ul>
             </div>
-          </div>
         </section>
 
         {/* Performance Metrics Section */}
@@ -118,7 +116,6 @@ export default function QuantumAIComputingBreakthrough2026() {
                 <div className="text-4xl font-extrabold text-green-400 mb-2">99.9%</div>"
                 <div className="text-gray-300 text-sm">Quantum Error Correction</div>"
               </div>
-            </div>
           </div>
         </section>
 
@@ -182,7 +179,6 @@ export default function QuantumAIComputingBreakthrough2026() {
                 </li>
               </ul>
             </div>
-          </div>
         </section>
 
         {/* Quantum Advantages Section */}
@@ -218,7 +214,6 @@ export default function QuantumAIComputingBreakthrough2026() {
                 cancel out incorrect ones automatically.
               </p>
             </div>
-          </div>
         </section>
 
         {/* Implementation Timeline Section */}
@@ -257,7 +252,6 @@ export default function QuantumAIComputingBreakthrough2026() {
                 <li>• Next-gen quantum systems</li>
               </ul>
             </div>
-          </div>
         </section>
 
         {/* Call to Action Section */}
@@ -282,9 +276,6 @@ export default function QuantumAIComputingBreakthrough2026() {
                 View Quantum Success Stories
               </a>
             </div>
-          </div>
         </section>
-      </div>
-    </div>
   );
-}
+}</div></div></div></div></div></div>

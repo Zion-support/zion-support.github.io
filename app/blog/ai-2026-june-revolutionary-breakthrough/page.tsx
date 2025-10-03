@@ -58,7 +58,6 @@ export default function AI2026JuneRevolutionaryBreakthrough() {
               <h3 className="text-lg font-bold text-orange-400 mb-3">$2.3B Proven Value</h3>"
               <p className="text-gray-300 text-sm">Fortune 500 implementations show measurable ROI within 1.4 months of deployment.</p>"
             </div>
-          </div>
         </section>
 
         {/* Main Content */}
@@ -156,7 +155,6 @@ export default function AI2026JuneRevolutionaryBreakthrough() {
                 View Success Stories →
               </a>
             </div>
-          </div>
         </section>
 
         {/* Related Content */}
@@ -178,6 +176,5 @@ export default function AI2026JuneRevolutionaryBreakthrough() {
           </div>
         </section>
       </article>
-    </div>
   );
-}
+}</div></div></div>

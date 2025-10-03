@@ -73,7 +73,6 @@ export default function AINeuralArchitectureBreakthrough() {
                     <div className="text-3xl font-extrabold text-cyan-400 mb-2">10x</div>"
                     <div className="text-cyan-300 text-sm">Faster Training</div>"
                   </div>
-                </div>
               </div>
             </section>
 
@@ -99,7 +98,6 @@ export default function AINeuralArchitectureBreakthrough() {
                     data in parallel, achieving the 1000x speed improvement.
                   </p>
                 </div>
-              </div>
             </section>
 
             <section className="mb-12">"
@@ -122,7 +120,6 @@ export default function AINeuralArchitectureBreakthrough() {
                     <li>• 300% return on investment</li>
                   </ul>
                 </div>
-              </div>
             </section>
 
             <section className="mb-12">"
@@ -140,7 +137,6 @@ export default function AINeuralArchitectureBreakthrough() {
                   <p><strong>Neural Fusion Module:</strong> Combines information from all modalities intelligently</p>
                   <p><strong>Adaptive Output Layer:</strong> Generates contextually appropriate responses</p>
                 </div>
-              </div>
             </section>
 
             <section className="mb-12">"
@@ -169,7 +165,6 @@ export default function AINeuralArchitectureBreakthrough() {
                     Advanced forecasting capabilities that predict future trends with high accuracy.
                   </p>
                 </div>
-              </div>
             </section>
 
             <section className="mb-12">"
@@ -192,9 +187,6 @@ export default function AINeuralArchitectureBreakthrough() {
                 </a>
               </div>
             </section>
-          </div>
         </article>
-      </div>
-    </div>
   );
-}
+}</div></div></div></div></div></div></div></div>

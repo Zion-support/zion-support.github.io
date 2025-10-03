@@ -65,9 +65,7 @@ export default function AI2026JanuaryBreakthroughInnovations() {
                 <div className="text-2xl font-extrabold text-orange-400 mb-1">0.001ms</div>"
                 <div className="text-xs text-orange-300">Response Time</div>"
               </div>
-            </div>
           </div>
-        </div>
       </header>
 
       {/* Main Content */}
@@ -122,7 +120,6 @@ export default function AI2026JanuaryBreakthroughInnovations() {
                     <li>• Zero downtime maintenance</li>
                   </ul>
                 </div>
-              </div>
             </div>
           </section>
 
@@ -159,7 +156,6 @@ export default function AI2026JanuaryBreakthroughInnovations() {
                     <li>• Hybrid quantum-classical systems</li>
                   </ul>
                 </div>
-              </div>
             </div>
           </section>
 
@@ -196,7 +192,6 @@ export default function AI2026JanuaryBreakthroughInnovations() {
                     <li>• Future-proof scalability</li>
                   </ul>
                 </div>
-              </div>
             </div>
           </section>
 
@@ -241,7 +236,6 @@ export default function AI2026JanuaryBreakthroughInnovations() {
                     <li>• Innovation pipeline</li>
                   </ul>
                 </div>
-              </div>
             </div>
           </section>
 
@@ -265,9 +259,7 @@ export default function AI2026JanuaryBreakthroughInnovations() {
                   View Success Stories →
                 </a>
               </div>
-            </div>
           </section>
-        </div>
       </main>
 
       {/* Footer */}
@@ -286,9 +278,8 @@ export default function AI2026JanuaryBreakthroughInnovations() {
                 All AI Content →
               </Link>
             </div>
-          </div>
         </div>
       </footer>
     </div>
   );
-}
+}</div></div></div></div></div></div></div></div></div>

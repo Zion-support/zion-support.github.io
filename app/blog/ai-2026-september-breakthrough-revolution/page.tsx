@@ -45,7 +45,6 @@ export default function September2026BreakthroughRevolution() {
                 Get Intelligence Consultation
               </a>
             </div>
-          </div>
         </div>
       </section>
 
@@ -118,7 +117,6 @@ export default function September2026BreakthroughRevolution() {
                 Read Success Story →
               </a>
             </div>
-          </div>
         </div>
       </section>
 
@@ -169,9 +167,7 @@ export default function September2026BreakthroughRevolution() {
                   <li>• Self-healing systems</li>
                 </ul>
               </div>
-            </div>
           </div>
-        </div>
       </section>
 
       {/* Call to Action */}
@@ -205,7 +201,6 @@ export default function September2026BreakthroughRevolution() {
                 <div className="text-3xl font-extrabold text-teal-400 mb-2">4,500%</div>"
                 <div className="text-teal-300 text-sm">Average ROI</div>"
               </div>
-            </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <a 
@@ -219,9 +214,7 @@ export default function September2026BreakthroughRevolution() {
                 View $12B Success Story
               </a>
             </div>
-          </div>
         </div>
       </section>
-    </div>
   );
-}
+}</div></div></div></div></div></div></div>

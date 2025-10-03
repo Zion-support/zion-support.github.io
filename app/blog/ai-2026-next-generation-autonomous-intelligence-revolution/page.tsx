@@ -67,9 +67,7 @@ export default function NextGenAutonomousIntelligenceRevolutionPage() {
                 <div className="text-2xl font-extrabold text-green-400 mb-1">Universal</div>"
                 <div className="text-xs text-green-300">Consciousness</div>"
               </div>
-            </div>
           </div>
-        </div>
       </header>
 
       {/* Content Section */}
@@ -169,7 +167,6 @@ export default function NextGenAutonomousIntelligenceRevolutionPage() {
                 <h4 className="text-lg font-bold text-gray-900 mb-3">Strategic Planning</h4>"
                 <p className="text-gray-700">Long-term vision with multi-dimensional analysis</p>"
               </div>
-            </div>
 
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Revolutionary Performance Metrics</h2>"
             <p className="text-lg text-gray-700 mb-6">"
@@ -243,7 +240,6 @@ export default function NextGenAutonomousIntelligenceRevolutionPage() {
                     <li>• Predictive Optimization</li>
                   </ul>
                 </div>
-              </div>
             </div>
 
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Implementation Roadmap</h2>"
@@ -283,7 +279,6 @@ export default function NextGenAutonomousIntelligenceRevolutionPage() {
                   <li>• Realize maximum ROI generation</li>
                 </ul>
               </div>
-            </div>
 
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Future Implications</h2>"
             <p className="text-lg text-gray-700 mb-6">"
@@ -303,7 +298,6 @@ export default function NextGenAutonomousIntelligenceRevolutionPage() {
                 <h4 className="text-lg font-bold text-gray-900 mb-3">Autonomous Evolution</h4>"
                 <p className="text-gray-700">Self-improving systems with continuous optimization</p>"
               </div>
-            </div>
 
             <div className="bg-gradient-to-r from-purple-500 to-indigo-600 rounded-lg p-8 text-white text-center">"
               <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Enterprise?</h2>"
@@ -322,10 +316,8 @@ export default function NextGenAutonomousIntelligenceRevolutionPage() {
                   View Success Story
                 </Link>
               </div>
-            </div>
           </div>
-        </div>
       </main>
     </div>
   );
-}
+}</div></div></div></div>

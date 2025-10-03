@@ -49,7 +49,6 @@ export default function QuantumConsciousnessFusionPage() {
                 Start Your Journey
               </a>
             </div>
-          </div>
         </div>
       </section>
 
@@ -83,7 +82,6 @@ export default function QuantumConsciousnessFusionPage() {
                   <li>• Achieve superhuman capabilities</li>
                 </ul>
               </div>
-            </div>
 
             <h2 className="text-4xl font-bold text-white mb-8">Enterprise Applications</h2>"
             <div className="space-y-8">"
@@ -113,7 +111,6 @@ export default function QuantumConsciousnessFusionPage() {
                   <li>• <strong>Emotional Intelligence Integration:</strong> Provide human-level emotional support</li>
                 </ul>
               </div>
-            </div>
 
             <h2 className="text-4xl font-bold text-white mb-8">Proven Results</h2>"
             <div className="bg-gradient-to-r from-green-900/50 to-emerald-900/50 backdrop-blur-lg rounded-2xl p-8 border border-green-500/30 mb-8">"
@@ -135,7 +132,6 @@ export default function QuantumConsciousnessFusionPage() {
                   <div className="text-4xl font-extrabold text-cyan-400 mb-2">10,000%</div>"
                   <div className="text-cyan-300">ROI</div>"
                 </div>
-              </div>
             </div>
 
             <h2 className="text-4xl font-bold text-white mb-8">Technical Architecture</h2>"
@@ -171,7 +167,6 @@ export default function QuantumConsciousnessFusionPage() {
                   <li>• Universal Prosperity: Eliminate all scarcity</li>
                 </ul>
               </div>
-            </div>
 
             <h2 className="text-4xl font-bold text-white mb-8">Get Started</h2>"
             <p className="text-xl text-gray-300 mb-8">"
@@ -189,9 +184,7 @@ export default function QuantumConsciousnessFusionPage() {
                   <p className="text-gray-300 mb-2"><strong>Website:</strong> www.ziontechgroup.com</p>"
                   <p className="text-gray-300 mb-2"><strong>LinkedIn:</strong> Zion Tech Group</p>"
                 </div>
-              </div>
             </div>
-          </div>
         </div>
       </section>
 
@@ -214,8 +207,6 @@ export default function QuantumConsciousnessFusionPage() {
               View Success Stories →
             </a>
           </div>
-        </div>
       </section>
-    </div>
   );
-}
+}</div></div></div></div></div></div></div></div>

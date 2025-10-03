@@ -10,7 +10,6 @@ export default function AINextGenEnterpriseAutomation2026() {
         <div className="absolute inset-0 overflow-hidden opacity-20">
           <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
           <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
-        </div>
         
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
@@ -43,7 +42,6 @@ export default function AINextGenEnterpriseAutomation2026() {
               </span>
               <span>15 min read</span>
             </div>
-          </div>
         </div>
       </section>
 
@@ -65,27 +63,22 @@ export default function AINextGenEnterpriseAutomation2026() {
                 <div className="text-gray-400 text-sm font-medium">
                   {stat.label}
                 </div>
-              </div>
             ))}
           </div>
-        </div>
       </section>
 
       {/* Main Content */}
-<<<<<<< HEAD
       <section className="py-20">"
         <div className="container mx-auto px-6">"
           <div className="max-w-4xl mx-auto">"
             <div className="prose prose-invert prose-lg max-w-none">"
               <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">"
-=======
       <section className="py-20">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <div className="prose prose-invert prose-lg max-w-none">
               
               <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0638
                 The Enterprise Automation Revolution is Here
               </h2>
               
@@ -142,7 +135,6 @@ export default function AINextGenEnterpriseAutomation2026() {
                     <li>• 50% faster decision making</li>
                   </ul>
                 </div>
-              </div>
 
               <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                 The Technology Behind the Revolution
@@ -169,7 +161,6 @@ export default function AINextGenEnterpriseAutomation2026() {
                     Our autonomous operations engine achieves 98% automation rates by implementing self-healing systems, predictive maintenance, and intelligent workflow orchestration. The system continuously learns and adapts, ensuring optimal performance without human intervention.
                   </p>
                 </div>
-              </div>
 
               <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
                 Implementation Roadmap: Your Path to 98% Automation
@@ -177,17 +168,14 @@ export default function AINextGenEnterpriseAutomation2026() {
 
               <div className="space-y-4 mb-8">
                 {[
-<<<<<<< HEAD
                   { phase: "Phase 1> title= "Assessment & Strategy> duration: "2-4 weeks> description: "Comprehensive analysis of current operations and automation opportunities" },"
                   { phase: "Phase 2> title= "Pilot Implementation> duration: "4-8 weeks> description: "Deploy AI systems in select departments with measurable results" },"
                   { phase: "Phase 3> title= "Enterprise Rollout> duration: "8-16 weeks> description: "Scale automation across all business units with full integration" },"
                   { phase: "Phase 4> title= "Optimization & Evolution> duration: "Ongoing> description: "Continuous improvement and adaptation to achieve maximum efficiency" }"
-=======
                   { phase: "Phase 1", title: "Assessment & Strategy", duration: "2-4 weeks", description: "Comprehensive analysis of current operations and automation opportunities" },"
                   { phase: "Phase 2", title: "Pilot Implementation", duration: "4-8 weeks", description: "Deploy AI systems in select departments with measurable results" },"
                   { phase: "Phase 3", title: "Enterprise Rollout", duration: "8-16 weeks", description: "Scale automation across all business units with full integration" },"
                   { phase: "Phase 4", title: "Optimization & Evolution", duration: "Ongoing", description: "Continuous improvement and adaptation to achieve maximum efficiency" }"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0638
                 ].map((phase, index) => (
                   <div key={index} className="flex items-start gap-4 p-4 bg-white/5 rounded-xl border border-white/10">
                     <div className="bg-gradient-to-r from-blue-500 to-purple-500 text-white font-bold px-3 py-1 rounded-full text-sm">
@@ -198,13 +186,9 @@ export default function AINextGenEnterpriseAutomation2026() {
                       <p className="text-gray-400 text-sm mb-2">{phase.duration}</p>
                       <p className="text-gray-300">{phase.description}</p>
                     </div>
-                  </div>
                 ))}
               </div>
-
-            </div>
           </div>
-        </div>
       </section>
 
       {/* CTA Section */}
@@ -228,7 +212,6 @@ export default function AINextGenEnterpriseAutomation2026() {
               View Success Stories
             </Link>
           </div>
-        </div>
       </section>
 
       {/* Navigation */}
@@ -249,10 +232,8 @@ export default function AINextGenEnterpriseAutomation2026() {
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
-          </div>
         </div>
       </section>
-    </div>
   );
 }
 </ArrowRight>
@@ -263,4 +244,4 @@ export default function AINextGenEnterpriseAutomation2026() {
 </CheckCircle>
 </Brain>
 </Zap>
-</Users>
+</Users></section></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>

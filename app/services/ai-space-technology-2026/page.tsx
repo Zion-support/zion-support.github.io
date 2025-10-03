@@ -57,7 +57,6 @@ export default function AISpaceTechnologyService() {
                 <div className="text-3xl font-bold text-orange-600">24/7</div>"
                 <div className="text-sm text-gray-600">Continuous Operations</div>"
               </div>
-            </div>
           </div>
 
           <div className="prose prose-lg max-w-none">"
@@ -98,7 +97,6 @@ export default function AISpaceTechnologyService() {
                   anomalies before transmitting critical insights to Earth.
                 </p>
               </div>
-            </div>
 
             <h3 className="text-2xl font-bold text-gray-900 mb-4">🚀 Space Applications</h3>"
             <div className="space-y-6 mb-8">"
@@ -130,7 +128,6 @@ export default function AISpaceTechnologyService() {
                   conditions and optimize trajectories for maximum scientific returns.
                 </p>
               </div>
-            </div>
 
             <h3 className="text-2xl font-bold text-gray-900 mb-4">🔬 Technical Architecture</h3>"
             <div className="space-y-4 mb-8">"
@@ -155,9 +152,7 @@ export default function AISpaceTechnologyService() {
                   optimizes orbital space usage and prevents collisions with 99.9% accuracy.
                 </p>
               </div>
-            </div>
           </div>
-        </div>
 
         <div className="lg:col-span-1">"
           <div className="bg-white rounded-lg shadow-lg p-6 sticky top-8">"
@@ -180,7 +175,6 @@ export default function AISpaceTechnologyService() {
                 <div className="text-2xl font-bold text-green-600">18-36 months</div>"
                 <p className="text-sm text-gray-600">Average payback period</p>"
               </div>
-            </div>
 
             <div className="space-y-3 mb-6">"
               <h4 className="font-bold text-gray-900">Service Includes:</h4>"
@@ -227,9 +221,7 @@ export default function AISpaceTechnologyService() {
                 View Success Stories →
               </Link>
             </div>
-          </div>
         </div>
-      </div>
 
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-8 rounded-lg mb-8">"
         <div className="text-center">"
@@ -250,7 +242,6 @@ export default function AISpaceTechnologyService() {
               🚀 Schedule Space AI Demo
             </a>
           </div>
-        </div>
       </div>
 
       <div className="grid md:grid-cols-3 gap-8 mb-8">"
@@ -278,7 +269,6 @@ export default function AISpaceTechnologyService() {
             AI-driven navigation and scientific discovery capabilities.
           </p>
         </div>
-      </div>
 
       <div className="border-t border-gray-200 pt-8">"
         <div className="flex items-center gap-4 mb-6">"
@@ -289,7 +279,6 @@ export default function AISpaceTechnologyService() {
             <h4 className="text-lg font-bold text-gray-900">Zion Tech Group</h4>"
             <p className="text-gray-600">Pioneering AI Space Technology</p>"
           </div>
-        </div>
         <p className="text-gray-700 mb-4">"
           Zion Tech Group is leading the space AI revolution, developing cutting-edge technologies 
           that are transforming space exploration, satellite operations, and orbital management 
@@ -307,7 +296,6 @@ export default function AISpaceTechnologyService() {
             View Success Stories →
           </Link>
         </div>
-      </div>
     </div>
   );
-}
+}</div></div></div></div></div></div></div></div></div></div></div></div>

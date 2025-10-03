@@ -39,7 +39,6 @@ export default function RevolutionaryBreakthroughs2025() {
                 <Star className="w-4 h-4 text-purple-400" />"
                 <span className="text-sm font-bold text-purple-300">LIMITED EARLY ACCESS</span>"
               </div>
-            </div>
 
             <h1 className="text-6xl md:text-7xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 via-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent leading-tight">"
               Revolutionary AI Breakthroughs 2025
@@ -75,7 +74,6 @@ export default function RevolutionaryBreakthroughs2025() {
                 <ArrowRight className="w-5 h-5" />"
               </a>
             </div>
-          </div>
         </div>
       </section>
 
@@ -120,7 +118,6 @@ export default function RevolutionaryBreakthroughs2025() {
                         BREAKTHROUGH
                       </span>
                     </div>
-                  </div>
 
                   {/* Category */}
                   <div className="mb-4">"
@@ -149,7 +146,6 @@ export default function RevolutionaryBreakthroughs2025() {
                       <div className="text-lg font-bold text-blue-400">{breakthrough.savings}</div>"
                       <div className="text-xs text-gray-400">Savings</div>"
                     </div>
-                  </div>
 
                   {/* CTA Button */}
                   <a
@@ -163,7 +159,6 @@ export default function RevolutionaryBreakthroughs2025() {
               );
             })}
           </div>
-        </div>
       </section>
 
       {/* Services Section */}
@@ -243,7 +238,6 @@ export default function RevolutionaryBreakthroughs2025() {
               );
             })}
           </div>
-        </div>
       </section>
 
       {/* Case Studies */}
@@ -283,7 +277,6 @@ export default function RevolutionaryBreakthroughs2025() {
                       {caseStudy.description}
                     </p>
                   </div>
-                </div>
 
                 <div className="grid grid-cols-2 gap-4 mb-6">"
                   <div className="bg-white/5 rounded-xl p-4 text-center">"
@@ -294,7 +287,6 @@ export default function RevolutionaryBreakthroughs2025() {
                     <div className="text-2xl font-bold text-blue-400">{caseStudy.roi}</div>"
                     <div className="text-xs text-gray-400">ROI</div>"
                   </div>
-                </div>
 
                 <div className="mb-6">"
                   <h4 className="text-lg font-semibold text-white mb-3">Key Results:</h4>"
@@ -317,7 +309,6 @@ export default function RevolutionaryBreakthroughs2025() {
               </div>
             ))}
           </div>
-        </div>
       </section>
 
       {/* Call-to-Action */}
@@ -347,9 +338,7 @@ export default function RevolutionaryBreakthroughs2025() {
                     <ArrowRight className="w-5 h-5" />"
                   </a>
                 </div>
-              </div>
             </div>
-          </div>
         </div>
       </section>
 
@@ -363,9 +352,8 @@ export default function RevolutionaryBreakthroughs2025() {
               <a href="/terms" className="hover:text-blue-400 transition-colors">Terms of Service</a>"
               <a href="/contact" className="hover:text-blue-400 transition-colors">Contact Us</a>"
             </div>
-          </div>
         </div>
       </footer>
     </div>
   );
-}
+}</div></div></div></div></div></div></div></div></div></div></div></div>

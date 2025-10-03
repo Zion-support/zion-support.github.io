@@ -50,7 +50,6 @@ export default function AIAutonomousOperationsService() {
                 Explore Features
               </a>
             </div>
-          </div>
         </div>
       </section>
 
@@ -76,7 +75,6 @@ export default function AIAutonomousOperationsService() {
                 <div className="text-3xl font-bold text-green-400">300%</div>"
                 <div className="text-sm text-gray-400">ROI</div>"
               </div>
-            </div>
           </div>
 
           {/* Key Features */}
@@ -130,7 +128,6 @@ export default function AIAutonomousOperationsService() {
                   Automated systems that detect and resolve issues without human intervention, ensuring 99.9% uptime.
                 </p>
               </div>
-            </div>
           </section>
 
           {/* Implementation Process */}
@@ -151,7 +148,6 @@ export default function AIAutonomousOperationsService() {
                     <li>• Strategic roadmap development</li>
                   </ul>
                 </div>
-              </div>
               
               <div className="flex items-start gap-6 p-6 bg-white/5 rounded-xl border border-white/10">"
                 <div className="bg-blue-500 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg">2</div>"
@@ -167,7 +163,6 @@ export default function AIAutonomousOperationsService() {
                     <li>• Security and compliance design</li>
                   </ul>
                 </div>
-              </div>
               
               <div className="flex items-start gap-6 p-6 bg-white/5 rounded-xl border border-white/10">"
                 <div className="bg-green-500 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg">3</div>"
@@ -183,7 +178,6 @@ export default function AIAutonomousOperationsService() {
                     <li>• Solution refinement</li>
                   </ul>
                 </div>
-              </div>
               
               <div className="flex items-start gap-6 p-6 bg-white/5 rounded-xl border border-white/10">"
                 <div className="bg-orange-500 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg">4</div>"
@@ -199,7 +193,6 @@ export default function AIAutonomousOperationsService() {
                     <li>• Ongoing maintenance</li>
                   </ul>
                 </div>
-              </div>
             </div>
           </section>
 
@@ -301,7 +294,6 @@ export default function AIAutonomousOperationsService() {
                   Contact Sales
                 </a>
               </div>
-            </div>
           </section>
 
           {/* CTA Section */}
@@ -323,7 +315,6 @@ export default function AIAutonomousOperationsService() {
               </a>
             </div>
           </section>
-        </div>
       </article>
 
       {/* Footer */}
@@ -335,8 +326,7 @@ export default function AIAutonomousOperationsService() {
             <a href="/terms" className="hover:text-blue-400 transition-colors">Terms of Service</a>"
             <a href="/contact" className="hover:text-blue-400 transition-colors">Contact Us</a>"
           </div>
-        </div>
       </footer>
     </div>
   );
-}
+}</div></div></div></div></div></div></div></div></div></div>

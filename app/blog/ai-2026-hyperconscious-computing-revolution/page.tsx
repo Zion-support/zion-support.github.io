@@ -47,7 +47,6 @@ export default function HyperconsciousComputingPage() {
             <div className="text-gray-400 text-sm">"
               Published: January 15, 2026 • 12 min read • Dr. Sarah Chen, Chief AI Scientist
             </div>
-          </div>
         </div>
       </header>
 
@@ -102,7 +101,6 @@ export default function HyperconsciousComputingPage() {
                   Advanced emotional processing capabilities that enable AI to understand and respond to human emotional states with 98.7% accuracy.
                 </p>
               </div>
-            </div>
 
             <h3 className="text-2xl font-bold text-white mb-4">Enterprise Applications</h3>"
             <div className="bg-gradient-to-r from-green-900/20 to-emerald-900/20 backdrop-blur-sm rounded-xl p-8 border border-green-500/30 mb-8">"
@@ -151,7 +149,6 @@ export default function HyperconsciousComputingPage() {
                 <div className="text-3xl font-extrabold text-purple-400 mb-2">99.999%</div>"
                 <div className="text-gray-300">operational accuracy</div>"
               </div>
-            </div>
 
             <h3 className="text-2xl font-bold text-white mb-4">The Future is Now</h3>"
             <p className="text-gray-300 text-lg leading-relaxed mb-8">"
@@ -169,9 +166,8 @@ export default function HyperconsciousComputingPage() {
                 Start Your Transformation
               </a>
             </div>
-          </div>
         </article>
       </main>
     </div>
   );
-}
+}</div></div></div></div>

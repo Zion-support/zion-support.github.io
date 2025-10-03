@@ -24,7 +24,6 @@ export default function HomePage() {
               <Link href="/case-studies" className="text-gray-700 hover:text-blue-600 transition-colors">Case Studies</Link>"
             </nav>
           </div>
-        </div>
       </header>
 
       <main>
@@ -52,7 +51,6 @@ export default function HomePage() {
                 Call +1 302 464 0950
               </a>
             </div>
-          </div>
         </section>
 
         <section className="py-20 bg-white">"
@@ -84,7 +82,6 @@ export default function HomePage() {
                   <div className="flex items-center text-blue-600 font-semibold">"
                     Read Article →
                   </div>
-                </div>
               </Link>
 
               <Link href="/blog/ai-autonomous-systems-2026" className="group">"
@@ -104,7 +101,6 @@ export default function HomePage() {
                   <div className="flex items-center text-purple-600 font-semibold">"
                     Read Article →
                   </div>
-                </div>
               </Link>
 
               <Link href="/case-studies/manufacturing-ai-transformation-2026" className="group">"
@@ -124,10 +120,8 @@ export default function HomePage() {
                   <div className="flex items-center text-green-600 font-semibold">"
                     View Case Study →
                   </div>
-                </div>
               </Link>
             </div>
-          </div>
         </section>
       </main>
 
@@ -161,12 +155,10 @@ export default function HomePage() {
                 Get in touch for your AI transformation needs.
               </p>
             </div>
-          </div>
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">"
             <p>&copy; 2026 Zion Tech Group. All rights reserved.</p>
           </div>
-        </div>
       </footer>
     </div>
   );
-}
+}</div></div></div></div></div></div></div></div>

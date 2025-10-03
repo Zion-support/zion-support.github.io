@@ -33,7 +33,6 @@ export default function QuantumAIHybridSystems2027() {
             <span>•</span>
             <span>Quantum Computing</span>
           </div>
-        </div>
 
         {/* Content */}
         <div className="max-w-4xl mx-auto prose prose-lg prose-invert">"
@@ -104,7 +103,6 @@ export default function QuantumAIHybridSystems2027() {
                   <li>• Quantum advantage in feature selection</li>
                 </ul>
               </div>
-            </div>
           </section>
 
           <section className="mb-12">"
@@ -171,7 +169,6 @@ export default function QuantumAIHybridSystems2027() {
                   <li>• Secure multi-party computation protocols</li>
                 </ul>
               </div>
-            </div>
           </section>
 
           <section className="mb-12">"
@@ -198,7 +195,6 @@ export default function QuantumAIHybridSystems2027() {
                     <h4 className="font-semibold text-purple-300 mb-2">Integration Layer</h4>"
                     <p className="text-gray-300">Quantum-classical interface and orchestration</p>"
                   </div>
-                </div>
               </div>
 
               <div className="bg-gradient-to-r from-blue-600/20 to-indigo-600/20 rounded-lg p-6">"
@@ -211,7 +207,6 @@ export default function QuantumAIHybridSystems2027() {
                   <li>• Classical post-processing and validation systems</li>
                 </ul>
               </div>
-            </div>
           </section>
 
           <section className="mb-12">"
@@ -254,9 +249,7 @@ export default function QuantumAIHybridSystems2027() {
                 Explore Quantum-AI Solutions
               </a>
             </div>
-          </div>
         </div>
-      </div>
     </div>
   );
-}
+}</div></div></div></div></div></div></div>

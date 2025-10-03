@@ -51,7 +51,6 @@ export default function ServicesAdvertisingPage() {
                 View Our Services
               </a>
             </div>
-          </div>
         </div>
       </header>
 
@@ -83,7 +82,6 @@ export default function ServicesAdvertisingPage() {
                 <Link href="/services/it-services-comprehensive" className="block text-gray-300 hover:text-purple-400">IT Services</Link>"
                 <Link href="/services" className="block text-gray-300 hover:text-blue-400">All Services</Link>"
               </div>
-            </div>
             <div>
               <h4 className="text-lg font-semibold mb-4">Company</h4>"
               <div className="space-y-2">"
@@ -92,7 +90,6 @@ export default function ServicesAdvertisingPage() {
                 <Link href="/case-studies" className="block text-gray-300 hover:text-blue-400">Case Studies</Link>"
                 <Link href="/blog" className="block text-gray-300 hover:text-blue-400">Blog</Link>"
               </div>
-            </div>
             <div>
               <h4 className="text-lg font-semibold mb-4">Contact Info</h4>"
               <div className="space-y-2 text-gray-300">"
@@ -100,14 +97,12 @@ export default function ServicesAdvertisingPage() {
                 <p>✉️ kleber@ziontechgroup.com</p>
                 <p>📍 364 E Main St STE 1008<br />Middletown, DE 19709</p>
               </div>
-            </div>
           </div>
           <div className="border-t border-gray-700 mt-8 pt-4 text-center text-gray-400">"
             © {new Date().getFullYear()} Zion Tech Group. All rights reserved. | 
             <Link href="https://ziontechgroup.com" className="hover:text-white ml-1">ziontechgroup.com</Link>"
           </div>
-        </div>
       </footer>
     </div>
   );
-}
+}</div></div></div></div></div>

@@ -55,8 +55,8 @@ export default function Page() {
             Talk to Security Experts
           </a>
         </section>
-      </div>
     </article>
   );
 }
 
+</div>

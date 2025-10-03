@@ -84,7 +84,6 @@ export default function SustainableAIGreenComputing() {
               <div className="text-gray-600">Annual Energy Costs</div>"
               <div className="text-xs text-gray-500 mt-1">Per Enterprise</div>"
             </div>
-          </div>
         </div>
 
         <h2 className="text-3xl font-bold text-gray-900 mb-6">🌱 Green Computing Solutions</h2>"
@@ -109,7 +108,6 @@ export default function SustainableAIGreenComputing() {
                 <div className="text-2xl font-bold text-green-600 mb-1">Same</div>"
                 <div className="text-sm text-gray-600">Performance Level</div>"
               </div>
-            </div>
           </div>
 
           <div className="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl p-6 border border-blue-200">"
@@ -127,7 +125,6 @@ export default function SustainableAIGreenComputing() {
                 <div className="text-2xl font-bold text-blue-600 mb-1">40%</div>"
                 <div className="text-sm text-gray-600">Cost Reduction</div>"
               </div>
-            </div>
           </div>
 
           <div className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl p-6 border border-purple-200">"
@@ -145,9 +142,7 @@ export default function SustainableAIGreenComputing() {
                 <div className="text-2xl font-bold text-purple-600 mb-1">100%</div>"
                 <div className="text-sm text-gray-600">Resource Optimization</div>"
               </div>
-            </div>
           </div>
-        </div>
 
         <h2 className="text-3xl font-bold text-gray-900 mb-6">📊 Real-World Success Stories</h2>"
         <blockquote className="border-l-4 border-green-500 pl-6 py-4 bg-green-50 rounded-r-xl mb-8">"
@@ -192,7 +187,6 @@ export default function SustainableAIGreenComputing() {
               </div>
               <p className="text-sm text-gray-500">Achieved within 18 months</p>"
             </div>
-          </div>
         </div>
 
         <h2 className="text-3xl font-bold text-gray-900 mb-6">🔬 Advanced Green Technologies</h2>"
@@ -208,7 +202,6 @@ export default function SustainableAIGreenComputing() {
                 <span className="text-green-600 font-semibold">40% Energy Savings</span>"
                 <span className="text-green-600 font-semibold">50% More Compute Density</span>"
               </div>
-            </div>
             <div>
               <h4 className="font-semibold text-gray-900 mb-2">♻️ Waste Heat Recovery</h4>"
               <p className="text-gray-600 mb-2">"
@@ -219,7 +212,6 @@ export default function SustainableAIGreenComputing() {
                 <span className="text-green-600 font-semibold">90% Heat Recovery</span>"
                 <span className="text-green-600 font-semibold">Additional Revenue Stream</span>"
               </div>
-            </div>
             <div>
               <h4 className="font-semibold text-gray-900 mb-2">🌞 Renewable Energy Integration</h4>"
               <p className="text-gray-600 mb-2">"
@@ -230,9 +222,7 @@ export default function SustainableAIGreenComputing() {
                 <span className="text-green-600 font-semibold">95% Renewable Energy</span>"
                 <span className="text-green-600 font-semibold">35% Cost Reduction</span>"
               </div>
-            </div>
           </div>
-        </div>
 
         <h2 className="text-3xl font-bold text-gray-900 mb-6">💼 Business Benefits Beyond Sustainability</h2>"
         <div className="grid md:grid-cols-2 gap-8 mb-8">"
@@ -286,7 +276,6 @@ export default function SustainableAIGreenComputing() {
               </li>
             </ul>
           </div>
-        </div>
 
         <h2 className="text-3xl font-bold text-gray-900 mb-6">🚀 Implementation Roadmap</h2>"
         <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-8 mb-8 border border-blue-200">"
@@ -297,30 +286,25 @@ export default function SustainableAIGreenComputing() {
                 <h4 className="font-semibold text-gray-900">Sustainability Assessment</h4>"
                 <p className="text-gray-600 text-sm">Comprehensive analysis of current energy consumption and carbon footprint</p>"
               </div>
-            </div>
             <div className="flex items-start gap-4">"
               <div className="w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-sm shrink-0">2</div>"
               <div>
                 <h4 className="font-semibold text-gray-900">Green Architecture Design</h4>"
                 <p className="text-gray-600 text-sm">Custom sustainable AI architecture optimized for your specific workloads</p>"
               </div>
-            </div>
             <div className="flex items-start gap-4">"
               <div className="w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-sm shrink-0">3</div>"
               <div>
                 <h4 className="font-semibold text-gray-900">Phased Migration</h4>"
                 <p className="text-gray-600 text-sm">Gradual transition to sustainable systems with zero disruption to operations</p>"
               </div>
-            </div>
             <div className="flex items-start gap-4">"
               <div className="w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-sm shrink-0">4</div>"
               <div>
                 <h4 className="font-semibold text-gray-900">Continuous Optimization</h4>"
                 <p className="text-gray-600 text-sm">Ongoing monitoring and improvement to maximize sustainability and performance</p>"
               </div>
-            </div>
           </div>
-        </div>
 
         <div className="bg-gradient-to-r from-green-600 to-emerald-600 text-white rounded-xl p-8 text-center">"
           <h3 className="text-2xl font-bold mb-4">Transform Your Business Sustainably</h3>"
@@ -340,8 +324,6 @@ export default function SustainableAIGreenComputing() {
               Call +1 302 464 0950
             </a>
           </div>
-        </div>
       </div>
-    </div>
   );
-}
+}</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>

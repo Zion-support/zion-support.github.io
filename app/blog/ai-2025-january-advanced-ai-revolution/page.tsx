@@ -57,9 +57,7 @@ export default function AdvancedAIRevolution2025() {
                 <div className="text-2xl font-extrabold text-orange-400 mb-1">847%</div>"
                 <div className="text-xs text-orange-300">Efficiency</div>"
               </div>
-            </div>
           </div>
-        </div>
       </section>
 
       {/* Content Sections */}
@@ -91,7 +89,6 @@ export default function AdvancedAIRevolution2025() {
                     <h4 className="text-xl font-semibold text-white mb-3">🔒 Zero-Trust AI Security</h4>"
                     <p className="text-gray-300">Advanced security frameworks ensuring 99.97% threat detection and prevention.</p>"
                   </div>
-                </div>
               </div>
 
               <h3 className="text-3xl font-bold text-white mb-6">Revolutionary Implementation Results</h3>"
@@ -110,7 +107,6 @@ export default function AdvancedAIRevolution2025() {
                     <div className="text-3xl font-extrabold text-green-400 mb-2">0%</div>"
                     <div className="text-sm text-green-300">System Downtime</div>"
                   </div>
-                </div>
               </div>
 
               <h3 className="text-3xl font-bold text-white mb-6">Implementation Framework</h3>"
@@ -129,7 +125,6 @@ export default function AdvancedAIRevolution2025() {
                   <h4 className="text-xl font-semibold text-white mb-3">Phase 3: Autonomous Deployment</h4>"
                   <p className="text-gray-300">Full deployment of autonomous AI systems with continuous monitoring and optimization.</p>"
                 </div>
-              </div>
 
               <div className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/20 mb-12">"
                 <h3 className="text-2xl font-bold text-purple-400 mb-6">Ready to Transform Your Enterprise?</h3>"
@@ -149,11 +144,8 @@ export default function AdvancedAIRevolution2025() {
                     View Success Story
                   </a>
                 </div>
-              </div>
             </div>
-          </div>
         </div>
       </section>
-    </div>
   );
-}
+}</div></div></div></div></div></div></div></div>

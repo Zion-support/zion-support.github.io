@@ -33,7 +33,6 @@ export default function AI2026BreakthroughInnovations() {
             <span>•</span>
             <span>Enterprise AI</span>
           </div>
-        </div>
 
         {/* Content */}
         <div className="max-w-4xl mx-auto prose prose-lg prose-invert">"
@@ -103,7 +102,6 @@ export default function AI2026BreakthroughInnovations() {
                   <li>• Cybersecurity threat detection</li>
                 </ul>
               </div>
-            </div>
 
             <p className="text-gray-300 leading-relaxed">"
               Organizations implementing quantum neural networks have achieved breakthrough results 
@@ -137,7 +135,6 @@ export default function AI2026BreakthroughInnovations() {
                   <h4 className="font-semibold text-yellow-300 mb-2">Context Awareness</h4>"
                   <p className="text-gray-300">Understanding of situational factors in decision-making</p>"
                 </div>
-              </div>
             </div>
 
             <p className="text-gray-300 leading-relaxed">"
@@ -176,7 +173,6 @@ export default function AI2026BreakthroughInnovations() {
                   <h4 className="font-semibold text-cyan-300 mb-2">Performance Optimization</h4>"
                   <p className="text-gray-300 text-sm">Continuous monitoring and optimization of routing algorithms</p>"
                 </div>
-              </div>
             </div>
           </section>
 
@@ -218,7 +214,6 @@ export default function AI2026BreakthroughInnovations() {
                   <li>• Develop advanced AI capabilities for competitive advantage</li>
                 </ul>
               </div>
-            </div>
           </section>
 
           <section className="mb-12">"
@@ -259,9 +254,7 @@ export default function AI2026BreakthroughInnovations() {
                 Explore Services
               </a>
             </div>
-          </div>
         </div>
-      </div>
     </div>
   );
-}
+}</div></div></div></div></div></div></div>

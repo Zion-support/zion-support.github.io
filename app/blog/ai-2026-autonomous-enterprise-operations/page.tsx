@@ -55,7 +55,6 @@ export default function AutonomousEnterpriseOperations2026() {
                 <div className="text-gray-400 text-sm font-medium">"
                   Automation Rate
                 </div>
-              </div>
               <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-blue-500/50 transition-all duration-300">"
                 <div className="text-5xl mb-4">💰</div>"
                 <div className="text-4xl font-extrabold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-2">"
@@ -64,7 +63,6 @@ export default function AutonomousEnterpriseOperations2026() {
                 <div className="text-gray-400 text-sm font-medium">"
                   Annual Savings
                 </div>
-              </div>
               <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300">"
                 <div className="text-5xl mb-4">⚡</div>"
                 <div className="text-4xl font-extrabold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">"
@@ -73,7 +71,6 @@ export default function AutonomousEnterpriseOperations2026() {
                 <div className="text-gray-400 text-sm font-medium">"
                   Autonomous Operations
                 </div>
-              </div>
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
@@ -88,7 +85,6 @@ export default function AutonomousEnterpriseOperations2026() {
                 View Success Stories
               </a>
             </div>
-          </div>
         </div>
       </section>
 
@@ -158,7 +154,6 @@ export default function AutonomousEnterpriseOperations2026() {
               </div>
             ))}
           </div>
-        </div>
       </section>
 
       {/* Enterprise Applications Section */}
@@ -225,9 +220,7 @@ export default function AutonomousEnterpriseOperations2026() {
                   </div>
                 ))}
               </div>
-            </div>
           </div>
-        </div>
       </section>
 
       {/* Implementation Timeline Section */}
@@ -284,7 +277,6 @@ export default function AutonomousEnterpriseOperations2026() {
               </div>
             ))}
           </div>
-        </div>
       </section>
 
       {/* CTA Section */}
@@ -308,8 +300,6 @@ export default function AutonomousEnterpriseOperations2026() {
               View Case Studies
             </a>
           </div>
-        </div>
       </section>
-    </div>
   );
-}
+}</div></div></div></div></div></div></div></div></div></div>

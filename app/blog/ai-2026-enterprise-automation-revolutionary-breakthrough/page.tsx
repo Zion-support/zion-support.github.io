@@ -47,7 +47,6 @@ export default function AI2026EnterpriseAutomationRevolutionaryBreakthrough() {
               <div className="text-lg font-bold text-green-400">$2.5T</div>"
               <div className="text-sm text-green-300">Market Impact</div>"
             </div>
-          </div>
         </div>
 
         {/* Content Sections */}
@@ -125,7 +124,6 @@ export default function AI2026EnterpriseAutomationRevolutionaryBreakthrough() {
                   <li>• Risk mitigation</li>
                 </ul>
               </div>
-            </div>
           </section>
 
           {/* Implementation Guide */}
@@ -164,7 +162,6 @@ export default function AI2026EnterpriseAutomationRevolutionaryBreakthrough() {
                   <li>• ROI measurement and reporting</li>
                 </ul>
               </div>
-            </div>
           </section>
 
           {/* Success Metrics */}
@@ -189,7 +186,6 @@ export default function AI2026EnterpriseAutomationRevolutionaryBreakthrough() {
                 <div className="text-gray-300">Market Impact</div>"
                 <div className="text-sm text-gray-400 mt-2">global economic value</div>"
               </div>
-            </div>
           </section>
 
           {/* Call to Action */}
@@ -213,8 +209,6 @@ export default function AI2026EnterpriseAutomationRevolutionaryBreakthrough() {
               </a>
             </div>
           </section>
-        </div>
-      </div>
     </div>
   );
-}
+}</div></div></div></div></div></div>

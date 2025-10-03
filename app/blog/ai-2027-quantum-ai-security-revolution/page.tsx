@@ -51,7 +51,6 @@ export default function QuantumAISecurityRevolution() {
               <div className="text-2xl font-extrabold text-cyan-400 mb-1">3-5yr</div>"
               <div className="text-xs text-cyan-300">Timeline</div>"
             </div>
-          </div>
         </div>
 
         {/* Article Content */}
@@ -80,7 +79,6 @@ export default function QuantumAISecurityRevolution() {
                 <li>• <strong>Automated Response:</strong> Instant threat mitigation and incident response</li>
               </ul>
             </div>
-          </div>
 
           <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 mb-8">"
             <h2 className="text-3xl font-bold text-white mb-6">Enterprise Security Transformation</h2>"
@@ -106,7 +104,6 @@ export default function QuantumAISecurityRevolution() {
                   <li>• 67% cost reduction</li>
                 </ul>
               </div>
-            </div>
           </div>
 
           <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 mb-8">"
@@ -121,7 +118,6 @@ export default function QuantumAISecurityRevolution() {
                 <div className="text-sm text-blue-300">"
                   <strong>Results:</strong> $127B protected, 99.98% prevention, 94% incident reduction
                 </div>
-              </div>
               
               <div className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-xl p-6 border border-purple-500/20">"
                 <h3 className="text-xl font-bold text-purple-400 mb-3">Healthcare System</h3>"
@@ -132,7 +128,6 @@ export default function QuantumAISecurityRevolution() {
                 <div className="text-sm text-purple-300">"
                   <strong>Results:</strong> 2,500 facilities secured, 100% compliance, zero breaches
                 </div>
-              </div>
               
               <div className="bg-gradient-to-r from-pink-500/10 to-red-500/10 rounded-xl p-6 border border-pink-500/20">"
                 <h3 className="text-xl font-bold text-pink-400 mb-3">Government Agency</h3>"
@@ -143,9 +138,7 @@ export default function QuantumAISecurityRevolution() {
                 <div className="text-sm text-pink-300">"
                   <strong>Results:</strong> 99.99% detection, 847 attacks prevented, zero compromises
                 </div>
-              </div>
             </div>
-          </div>
 
           <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 mb-8">"
             <h2 className="text-3xl font-bold text-white mb-6">Implementation Roadmap</h2>"
@@ -188,7 +181,6 @@ export default function QuantumAISecurityRevolution() {
                   <li>• Staff training and certification</li>
                 </ul>
               </div>
-            </div>
           </div>
 
           <div className="bg-gradient-to-r from-purple-500/20 to-indigo-500/20 backdrop-blur-lg rounded-2xl p-8 border border-purple-500/30 mb-8">"
@@ -211,7 +203,6 @@ export default function QuantumAISecurityRevolution() {
                 <div className="text-2xl font-bold text-blue-400 mb-2">2030</div>"
                 <div className="text-sm text-gray-300">Self-healing security systems</div>"
               </div>
-            </div>
           </div>
         </article>
 
@@ -234,8 +225,6 @@ export default function QuantumAISecurityRevolution() {
               View Security Services
             </a>
           </div>
-        </div>
       </div>
-    </div>
   );
-}
+}</div></div></div></div></div></div></div></div></div></div></div>

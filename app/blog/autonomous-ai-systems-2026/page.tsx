@@ -48,14 +48,12 @@ export default function AutonomousAISystems2026() {
                     <h3 className="font-semibold text-white">Self-Healing Infrastructure</h3>"
                     <p className="text-gray-300 text-sm">Automatically detects and resolves system issues</p>"
                   </div>
-                </div>
                 <div className="flex items-start">"
                   <span className="text-blue-400 mr-3">📊</span>"
                   <div>
                     <h3 className="font-semibold text-white">Intelligent Optimization</h3>"
                     <p className="text-gray-300 text-sm">Continuously optimizes performance and resource usage</p>"
                   </div>
-                </div>
               </div>
               <div className="space-y-4">"
                 <div className="flex items-start">"
@@ -64,16 +62,13 @@ export default function AutonomousAISystems2026() {
                     <h3 className="font-semibold text-white">Predictive Analytics</h3>"
                     <p className="text-gray-300 text-sm">Anticipates problems before they occur</p>"
                   </div>
-                </div>
                 <div className="flex items-start">"
                   <span className="text-blue-400 mr-3">⚡</span>"
                   <div>
                     <h3 className="font-semibold text-white">Autonomous Decision Making</h3>"
                     <p className="text-gray-300 text-sm">Makes complex decisions without human intervention</p>"
                   </div>
-                </div>
               </div>
-            </div>
           </div>
 
           <div className="prose prose-lg prose-invert max-w-none">"
@@ -140,7 +135,5 @@ export default function AutonomousAISystems2026() {
             </a>
           </div>
         </article>
-      </div>
-    </div>
   );
-}
+}</div></div></div></div></div></div></div>

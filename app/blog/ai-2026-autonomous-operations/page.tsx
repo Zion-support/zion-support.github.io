@@ -64,7 +64,6 @@ export default function AutonomousOperations() {
               <div className="text-4xl font-extrabold text-cyan-400 mb-2">85%</div>"
               <div className="text-gray-300 text-sm">Cost Reduction</div>"
             </div>
-          </div>
         </div>
 
         {/* Main Content */}
@@ -137,7 +136,6 @@ export default function AutonomousOperations() {
                 <li>• 90% reduction in manual processes</li>
               </ul>
             </div>
-          </div>
 
           <h3 className="text-2xl font-bold text-white mb-4 mt-8">Key Technologies & Capabilities</h3>"
           <p className="text-gray-300 mb-6 leading-relaxed">"
@@ -189,7 +187,6 @@ export default function AutonomousOperations() {
                 <h4 className="font-bold text-white mb-2">Operational Assessment</h4>"
                 <p className="text-gray-300">Analyze current processes and identify high-impact automation opportunities across your enterprise operations.</p>"
               </div>
-            </div>
             
             <div className="flex items-start gap-4 p-4 bg-slate-800/50 rounded-xl">"
               <div className="bg-blue-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm">2</div>"
@@ -197,7 +194,6 @@ export default function AutonomousOperations() {
                 <h4 className="font-bold text-white mb-2">Autonomous System Design</h4>"
                 <p className="text-gray-300">Design self-healing, adaptive systems that can operate independently while maintaining oversight and control.</p>"
               </div>
-            </div>
             
             <div className="flex items-start gap-4 p-4 bg-slate-800/50 rounded-xl">"
               <div className="bg-purple-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm">3</div>"
@@ -205,7 +201,6 @@ export default function AutonomousOperations() {
                 <h4 className="font-bold text-white mb-2">Gradual Deployment</h4>"
                 <p className="text-gray-300">Implement autonomous capabilities incrementally, starting with low-risk processes and expanding to critical operations.</p>"
               </div>
-            </div>
           </div>
 
           <div className="bg-gradient-to-r from-green-500/10 to-blue-500/10 border border-green-500/30 rounded-2xl p-8 mb-8">"
@@ -226,7 +221,6 @@ export default function AutonomousOperations() {
                 View Automation Success Stories
               </a>
             </div>
-          </div>
         </div>
 
         {/* Related Content */}
@@ -253,6 +247,5 @@ export default function AutonomousOperations() {
           </div>
         </aside>
       </article>
-    </div>
   );
-}
+}</div></div></div></div></div></div></div>

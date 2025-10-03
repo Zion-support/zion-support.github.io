@@ -55,7 +55,6 @@ export default function AutonomousEnterpriseOperationsGuide() {
                 <div className="text-2xl font-extrabold text-orange-400 mb-1">18mo</div>"
                 <div className="text-xs text-orange-300">Payback</div>"
               </div>
-            </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <a 
@@ -69,7 +68,6 @@ export default function AutonomousEnterpriseOperationsGuide() {
                 View $2.3B Success Story
               </a>
             </div>
-          </div>
         </div>
       </section>
 
@@ -101,7 +99,6 @@ export default function AutonomousEnterpriseOperationsGuide() {
                         <li>Data governance establishment</li>
                       </ul>
                     </div>
-                  </div>
                 </div>
 
                 <div>
@@ -125,7 +122,6 @@ export default function AutonomousEnterpriseOperationsGuide() {
                         <li>Performance monitoring & optimization</li>
                       </ul>
                     </div>
-                  </div>
                 </div>
 
                 <div>
@@ -149,9 +145,7 @@ export default function AutonomousEnterpriseOperationsGuide() {
                         <li>1000x processing improvements</li>
                       </ul>
                     </div>
-                  </div>
                 </div>
-              </div>
             </div>
 
             {/* Implementation Checklist */}
@@ -221,7 +215,6 @@ export default function AutonomousEnterpriseOperationsGuide() {
                     </li>
                   </ul>
                 </div>
-              </div>
             </div>
 
             {/* CTA Section */}
@@ -243,10 +236,7 @@ export default function AutonomousEnterpriseOperationsGuide() {
                   Learn About Neural Superintelligence
                 </a>
               </div>
-            </div>
           </div>
-        </div>
       </section>
-    </div>
   );
-}
+}</div></div></div></div></div></div></div></div></div></div>

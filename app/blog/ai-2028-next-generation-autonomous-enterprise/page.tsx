@@ -106,7 +106,6 @@ export default function AI2028NextGenerationAutonomousEnterprise() {
               Generated $8B in additional revenue through autonomous trading algorithms and risk management systems.
             </p>
           </div>
-        </div>
 
         <h3 className="text-2xl font-bold text-gray-900 mt-6 mb-4">"
           🔮 The Future of Enterprise Operations
@@ -148,8 +147,6 @@ export default function AI2028NextGenerationAutonomousEnterprise() {
               <p className="text-sm text-gray-600">Real-world transformation results</p>"
             </Link>
           </div>
-        </div>
       </div>
-    </div>
   );
-}
+}</div></div></div>

@@ -52,7 +52,6 @@ export default function Page() {
 							<div className="text-3xl font-bold text-orange-600 mb-2">18mo</div>"
 							<div className="text-sm text-gray-600">Payback Period</div>"
 						</div>
-					</div>
 				</div>
 
 				<div className="prose prose-lg max-w-none">"
@@ -97,7 +96,6 @@ export default function Page() {
 							<div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-lg">"
 								<strong>Results:</strong> Identified $15M in immediate optimization opportunities
 							</div>
-						</div>
 
 						<div className="border-l-4 border-blue-500 pl-6">"
 							<h3 className="text-xl font-bold text-gray-900 mb-3">Phase 2: Quick Wins & Pilots (Months 4-8)</h3>"
@@ -110,7 +108,6 @@ export default function Page() {
 							<div className="mt-4 p-4 bg-blue-50 border border-blue-200 rounded-lg">"
 								<strong>Results:</strong> $8M in cost savings and 45% process automation achieved
 							</div>
-						</div>
 
 						<div className="border-l-4 border-purple-500 pl-6">"
 							<h3 className="text-xl font-bold text-gray-900 mb-3">Phase 3: Enterprise Scale (Months 9-15)</h3>"
@@ -123,7 +120,6 @@ export default function Page() {
 							<div className="mt-4 p-4 bg-purple-50 border border-purple-200 rounded-lg">"
 								<strong>Results:</strong> $25M in additional savings and 80% automation rate
 							</div>
-						</div>
 
 						<div className="border-l-4 border-orange-500 pl-6">"
 							<h3 className="text-xl font-bold text-gray-900 mb-3">Phase 4: Advanced AI (Months 16-24)</h3>"
@@ -136,7 +132,6 @@ export default function Page() {
 							<div className="mt-4 p-4 bg-orange-50 border border-orange-200 rounded-lg">"
 								<strong>Results:</strong> $17M final savings and 95% automation achievement
 							</div>
-						</div>
 					</div>
 
 					<h2 className="text-3xl font-bold text-gray-900 mb-6 mt-12">💰 Detailed ROI Analysis</h2>"
@@ -165,7 +160,6 @@ export default function Page() {
 								<li>• <strong>$1M:</strong> Enhanced innovation and R&D efficiency</li>
 							</ul>
 						</div>
-					</div>
 
 					<h2 className="text-3xl font-bold text-gray-900 mb-6">🛠️ Technology Stack & Architecture</h2>"
 					<p className="text-lg text-gray-800 leading-relaxed mb-6">"
@@ -268,7 +262,6 @@ const TransformationStack = {
 								<li>• <strong>ROI Expectations:</strong> Set realistic timelines for value realization</li>
 							</ul>
 						</div>
-					</div>
 
 					<h2 className="text-3xl font-bold text-gray-900 mb-6">🚀 Getting Started with Your Transformation</h2>"
 					<p className="text-lg text-gray-800 leading-relaxed mb-8">"
@@ -293,9 +286,7 @@ const TransformationStack = {
 								Explore AI Services
 							</a>
 						</div>
-					</div>
 				</div>
 			</article>
-		</div>
 	);
-}
+}</div></div></div></div></div></div></div></div></div>

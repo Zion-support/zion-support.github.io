@@ -95,7 +95,6 @@ export default function AIQuantumComputingServices2026() {
                       <h3 className="text-xl font-bold text-gray-900 mb-1">{service.name}</h3>"
                       <span className="text-sm text-purple-600 font-medium">{service.category}</span>"
                     </div>
-                  </div>
                   
                   <p className="text-gray-600 mb-6">{service.description}</p>"
                   <div className="space-y-3 mb-6">"
@@ -123,7 +122,6 @@ export default function AIQuantumComputingServices2026() {
                     <div className="text-sm text-green-700 font-medium">"
                       <strong>Benefits:</strong> {service.benefits}
                     </div>
-                  </div>
                   
                   <div className="mb-6">"
                     <h4 className="text-sm font-semibold text-gray-900 mb-2">Use Cases:</h4>"
@@ -134,7 +132,6 @@ export default function AIQuantumComputingServices2026() {
                         </span>
                       ))}
                     </div>
-                  </div>
                   
                   <Link 
                     href="/contact"
@@ -145,7 +142,6 @@ export default function AIQuantumComputingServices2026() {
                 </div>
               ))}
             </div>
-          </div>
         </section>
 
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-purple-500/30">"
@@ -177,7 +173,6 @@ export default function AIQuantumComputingServices2026() {
                 <li>• Fraud detection systems</li>
               </ul>
             </div>
-          </div>
 
           <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-2xl p-8 mb-16">"
             <h2 className="text-3xl font-bold text-white mb-6 text-center">Implementation Process</h2>"
@@ -210,7 +205,6 @@ export default function AIQuantumComputingServices2026() {
                 <h3 className="font-bold text-white mb-2">Optimization</h3>"
                 <p className="text-gray-300 text-sm">Continuously improve and scale solutions</p>"
               </div>
-            </div>
           </div>
 
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 mb-16">"
@@ -225,7 +219,6 @@ export default function AIQuantumComputingServices2026() {
                   <span className="font-semibold">Result:</span>"
                   <span className="ml-2">$2.3B in accelerated revenue</span>"
                 </div>
-              </div>
               <div>
                 <h3 className="text-xl font-bold text-white mb-3">Fortune 500 Financial Institution</h3>"
                 <p className="text-gray-300 mb-4">"
@@ -235,9 +228,7 @@ export default function AIQuantumComputingServices2026() {
                   <span className="font-semibold">Result:</span>"
                   <span className="ml-2">$850M additional portfolio value</span>"
                 </div>
-              </div>
             </div>
-          </div>
 
           <div className="text-center">"
             <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-8">"
@@ -257,10 +248,7 @@ export default function AIQuantumComputingServices2026() {
                   Learn More
                 </a>
               </div>
-            </div>
           </div>
-        </div>
       </div>
-    </div>
   );
-}
+}</div></div></div></div></div></div></div></div></div></div></div>

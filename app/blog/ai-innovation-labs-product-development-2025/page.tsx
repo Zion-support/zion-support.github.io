@@ -48,7 +48,6 @@ export default function Page() {
 							<div className="text-3xl font-bold text-indigo-600 mb-2">300%</div>"
 							<div className="text-sm text-gray-600">Innovation Acceleration</div>"
 						</div>
-					</div>
 				</div>
 
 				<div className="prose prose-lg max-w-none">"
@@ -135,7 +134,6 @@ const InnovationLabFramework = {
 								<li>• <strong>5% → 25%:</strong> Profit margins increased significantly</li>
 							</ul>
 						</div>
-					</div>
 
 					<h2 className="text-3xl font-bold text-gray-900 mb-6">🛠️ Implementation Roadmap</h2>"
 					<p className="text-lg text-gray-800 leading-relaxed mb-6">"
@@ -154,7 +152,6 @@ const InnovationLabFramework = {
 							<div className="mt-4 p-4 bg-purple-50 border border-purple-200 rounded-lg">"
 								<strong>Investment:</strong> $500K - $1M | <strong>Expected ROI:</strong> 200% within 12 months
 							</div>
-						</div>
 
 						<div className="border-l-4 border-pink-500 pl-6">"
 							<h3 className="text-xl font-bold text-gray-900 mb-3">Phase 2: Advanced AI (Months 4-8)</h3>"
@@ -167,7 +164,6 @@ const InnovationLabFramework = {
 							<div className="mt-4 p-4 bg-pink-50 border border-pink-200 rounded-lg">"
 								<strong>Investment:</strong> $1M - $2M | <strong>Expected ROI:</strong> 400% within 18 months
 							</div>
-						</div>
 
 						<div className="border-l-4 border-indigo-500 pl-6">"
 							<h3 className="text-xl font-bold text-gray-900 mb-3">Phase 3: Full Automation (Months 9-12)</h3>"
@@ -180,7 +176,6 @@ const InnovationLabFramework = {
 							<div className="mt-4 p-4 bg-indigo-50 border border-indigo-200 rounded-lg">"
 								<strong>Investment:</strong> $2M - $5M | <strong>Expected ROI:</strong> 600% within 24 months
 							</div>
-						</div>
 					</div>
 
 					<h2 className="text-3xl font-bold text-gray-900 mb-6 mt-12">💡 Key Technologies & Tools</h2>"
@@ -212,7 +207,6 @@ const InnovationLabFramework = {
 								<li>• Competitive Intelligence Systems</li>
 							</ul>
 						</div>
-					</div>
 
 					<h2 className="text-3xl font-bold text-gray-900 mb-6">📊 Performance Metrics & Benchmarks</h2>"
 					<div className="overflow-x-auto mb-8">"
@@ -277,9 +271,7 @@ const InnovationLabFramework = {
 								Explore Innovation Labs
 							</a>
 						</div>
-					</div>
 				</div>
 			</article>
-		</div>
 	);
-}
+}</div></div></div></div></div></div></div></div>

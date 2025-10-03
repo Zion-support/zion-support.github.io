@@ -63,7 +63,6 @@ export default function QuantumNeuralFusion() {
                 <div className="text-2xl font-bold text-cyan-400 mb-2">Fusion Technology</div>"
                 <div className="text-gray-300">Quantum + Neural = Infinite Possibilities</div>"
               </div>
-            </div>
           </section>
 
           {/* Technical Deep Dive */}
@@ -97,7 +96,6 @@ export default function QuantumNeuralFusion() {
                     <li>• Attention mechanisms in quantum space</li>
                   </ul>
                 </div>
-              </div>
             </section>
 
             <section className="mb-12">"
@@ -126,7 +124,6 @@ export default function QuantumNeuralFusion() {
                     <div className="text-gray-300 mb-2">Accuracy Rate</div>"
                     <div className="text-sm text-gray-400">Complex Problem Solving</div>"
                   </div>
-                </div>
               </div>
             </section>
 
@@ -179,7 +176,6 @@ export default function QuantumNeuralFusion() {
                     <li>• Resource allocation</li>
                   </ul>
                 </div>
-              </div>
             </section>
 
             <section className="mb-12">"
@@ -237,7 +233,6 @@ export default function QuantumNeuralFusion() {
                     <li>• Continuous improvement</li>
                   </ul>
                 </div>
-              </div>
             </section>
 
             <section className="mb-12">"
@@ -267,9 +262,7 @@ export default function QuantumNeuralFusion() {
                     <li>• Human-AI symbiosis</li>
                   </ul>
                 </div>
-              </div>
             </section>
-          </div>
 
           {/* CTA Section */}
           <section className="mt-16 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/30 rounded-2xl p-8 text-center">"
@@ -292,7 +285,5 @@ export default function QuantumNeuralFusion() {
             </div>
           </section>
         </article>
-      </div>
-    </div>
   );
-}
+}</div></div></div></div></div></div></div></div></div>

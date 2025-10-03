@@ -70,7 +70,6 @@ export default function QuantumNeuralSuperintelligencePage() {
                   <div className="text-3xl font-extrabold text-green-400 mb-2">24/7</div>"
                   <div className="text-green-300 text-sm">Continuous Operation</div>"
                 </div>
-              </div>
             </div>
 
             <h2 className="text-3xl font-bold text-white mb-6">Core Technologies</h2>"
@@ -117,7 +116,6 @@ export default function QuantumNeuralSuperintelligencePage() {
                     <li>• Entanglement-based communication</li>
                   </ul>
                 </div>
-              </div>
               <div className="space-y-6">"
                 <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">"
                   <h4 className="text-xl font-bold text-white mb-3">🎯 Superintelligent Analysis</h4>"
@@ -137,7 +135,6 @@ export default function QuantumNeuralSuperintelligencePage() {
                     <li>• Enterprise security compliance</li>
                   </ul>
                 </div>
-              </div>
             </div>
 
             <h3 className="text-2xl font-bold text-white mb-4">Real-World Applications</h3>"
@@ -162,7 +159,6 @@ export default function QuantumNeuralSuperintelligencePage() {
                     <div className="text-2xl font-bold text-pink-400 mb-1">1000x</div>"
                     <div className="text-pink-300 text-sm">Faster Data Analysis</div>"
                   </div>
-                </div>
               </div>
 
               <div className="bg-gradient-to-r from-green-900/20 to-teal-900/20 rounded-2xl p-8 border border-green-500/30">"
@@ -185,9 +181,7 @@ export default function QuantumNeuralSuperintelligencePage() {
                     <div className="text-2xl font-bold text-cyan-400 mb-1">$10B+</div>"
                     <div className="text-cyan-300 text-sm">Value Generated</div>"
                   </div>
-                </div>
               </div>
-            </div>
 
             <h3 className="text-2xl font-bold text-white mb-4">Implementation Roadmap</h3>"
             <div className="bg-gradient-to-r from-purple-900/30 to-pink-900/30 rounded-2xl p-8 mb-12 border border-purple-500/30">"
@@ -207,7 +201,6 @@ export default function QuantumNeuralSuperintelligencePage() {
                   <h4 className="text-xl font-bold text-white mb-3">Optimization</h4>"
                   <p className="text-gray-300">Continuous optimization and performance enhancement.</p>"
                 </div>
-              </div>
             </div>
 
             <div className="bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2xl p-8 text-center">"
@@ -228,10 +221,7 @@ export default function QuantumNeuralSuperintelligencePage() {
                   View Success Stories
                 </a>
               </div>
-            </div>
           </div>
         </article>
-      </div>
-    </div>
   );
-}
+}</div></div></div></div></div></div></div></div></div></div>

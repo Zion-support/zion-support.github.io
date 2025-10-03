@@ -52,7 +52,6 @@ export default function EnterpriseAutomation2026Guide() {
                 View $2.3B Success Story →
               </a>
             </div>
-          </div>
         </div>
       </header>
 
@@ -79,7 +78,6 @@ export default function EnterpriseAutomation2026Guide() {
                 <div className="text-3xl font-extrabold text-teal-400 mb-2">$2.3B</div>"
                 <div className="text-teal-300 text-sm">Value Generated</div>"
               </div>
-            </div>
           </div>
 
           <section className="mb-12">"
@@ -169,7 +167,6 @@ export default function EnterpriseAutomation2026Guide() {
                   <li>• Strategy optimization</li>
                 </ul>
               </div>
-            </div>
           </section>
 
           <section className="mb-12">"
@@ -209,7 +206,6 @@ export default function EnterpriseAutomation2026Guide() {
                   <li>• Achieve 98% automation targets</li>
                 </ul>
               </div>
-            </div>
           </section>
 
           <section className="mb-12">"
@@ -240,7 +236,6 @@ export default function EnterpriseAutomation2026Guide() {
                     <li>• Customer service operations</li>
                   </ul>
                 </div>
-              </div>
             </div>
           </section>
 
@@ -261,9 +256,8 @@ export default function EnterpriseAutomation2026Guide() {
                 View Success Stories →
               </a>
             </div>
-          </div>
         </article>
       </main>
     </div>
   );
-}
+}</div></div></div></div></div></div>

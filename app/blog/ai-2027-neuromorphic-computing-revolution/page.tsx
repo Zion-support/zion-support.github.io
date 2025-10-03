@@ -33,7 +33,6 @@ export default function AI2027NeuromorphicComputingRevolution() {
             <span>•</span>
             <span>Neuromorphic Computing</span>
           </div>
-        </div>
 
         {/* Content */}
         <div className="max-w-4xl mx-auto prose prose-lg prose-invert">"
@@ -101,7 +100,6 @@ export default function AI2027NeuromorphicComputingRevolution() {
                   <li>• Robust fault tolerance</li>
                 </ul>
               </div>
-            </div>
           </section>
 
           <section className="mb-12">"
@@ -150,7 +148,6 @@ export default function AI2027NeuromorphicComputingRevolution() {
                   <li>• Dynamic supply chain adaptation</li>
                 </ul>
               </div>
-            </div>
           </section>
 
           <section className="mb-12">"
@@ -190,7 +187,6 @@ export default function AI2027NeuromorphicComputingRevolution() {
                   <li>• Develop advanced neuromorphic capabilities for competitive advantage</li>
                 </ul>
               </div>
-            </div>
           </section>
 
           <section className="mb-12">"
@@ -232,9 +228,7 @@ export default function AI2027NeuromorphicComputingRevolution() {
                 Explore Neuromorphic Solutions
               </a>
             </div>
-          </div>
         </div>
-      </div>
     </div>
   );
-}
+}</div></div></div></div></div></div>

@@ -70,9 +70,7 @@ export default function AI2026MarchUltimateAutonomousRevolution() {
                 <div className="text-2xl font-extrabold text-orange-400 mb-1">24/7</div>"
                 <div className="text-xs text-orange-300">Self-Optimization</div>"
               </div>
-            </div>
           </div>
-        </div>
       </section>
 
       {/* Autonomous Details */}
@@ -116,7 +114,6 @@ export default function AI2026MarchUltimateAutonomousRevolution() {
                   <li>• Independent strategic planning and execution</li>
                 </ul>
               </div>
-            </div>
 
             <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 mb-16">"
               <h3 className="text-3xl font-bold text-white mb-6 text-center">Revolutionary Autonomous Capabilities</h3>"
@@ -136,9 +133,7 @@ export default function AI2026MarchUltimateAutonomousRevolution() {
                   <h4 className="text-xl font-bold text-white mb-2">Self-Scaling Resources</h4>"
                   <p className="text-gray-300 text-sm">Automatic resource allocation and scaling based on demand</p>"
                 </div>
-              </div>
             </div>
-          </div>
         </div>
       </section>
 
@@ -203,9 +198,7 @@ export default function AI2026MarchUltimateAutonomousRevolution() {
                   <li>• Self-managing enterprise optimization</li>
                 </ul>
               </div>
-            </div>
           </div>
-        </div>
       </section>
 
       {/* Success Stories */}
@@ -240,7 +233,6 @@ export default function AI2026MarchUltimateAutonomousRevolution() {
                     <div className="text-blue-400 font-bold">600% Growth</div>"
                     <div className="text-gray-400">Revenue increase</div>"
                   </div>
-                </div>
               </div>
 
               <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">"
@@ -261,11 +253,8 @@ export default function AI2026MarchUltimateAutonomousRevolution() {
                     <div className="text-green-400 font-bold">99.99% Uptime</div>"
                     <div className="text-gray-400">System availability</div>"
                   </div>
-                </div>
               </div>
-            </div>
           </div>
-        </div>
       </section>
 
       {/* Call to Action */}
@@ -295,7 +284,6 @@ export default function AI2026MarchUltimateAutonomousRevolution() {
                 Explore Services
               </a>
             </div>
-          </div>
         </div>
       </section>
 
@@ -323,9 +311,7 @@ export default function AI2026MarchUltimateAutonomousRevolution() {
                 <div className="text-green-300 text-sm font-semibold group-hover:text-green-200">View Case Study →</div>"
               </Link>
             </div>
-          </div>
         </div>
       </section>
-    </div>
   );
-}
+}</div></div></div></div></div></div></div></div></div></div></div></div></div></div>

@@ -35,7 +35,6 @@ export default function AI2027ImplementationRoadmap() {
             $2.8T PROVEN
           </span>
         </div>
-      </div>
 
       <div className="prose prose-lg max-w-none">"
         <div className="bg-yellow-50 border-l-4 border-yellow-400 p-6 mb-8">"
@@ -72,7 +71,6 @@ export default function AI2027ImplementationRoadmap() {
                 <li>• Success metrics definition</li>
               </ul>
             </div>
-          </div>
         </div>
 
         <h2 className="text-3xl font-bold mb-6 text-gray-900">🚀 Phase 1: Assessment & Planning (Months 1-2)</h2>"
@@ -98,7 +96,6 @@ export default function AI2027ImplementationRoadmap() {
                   <li>• Success criteria definition</li>
                 </ul>
               </div>
-            </div>
           </div>
           
           <div className="bg-white border-l-4 border-green-500 p-6 rounded-lg shadow-sm">"
@@ -122,9 +119,7 @@ export default function AI2027ImplementationRoadmap() {
                   <li>• Milestone definition</li>
                 </ul>
               </div>
-            </div>
           </div>
-        </div>
 
         <h2 className="text-3xl font-bold mb-6 text-gray-900">🔧 Phase 2: Development & Integration (Months 3-6)</h2>"
         <div className="space-y-6 mb-8">"
@@ -160,7 +155,6 @@ export default function AI2027ImplementationRoadmap() {
                   <li>• Security auditing</li>
                 </ul>
               </div>
-            </div>
           </div>
           
           <div className="bg-gray-50 p-6 rounded-lg">"
@@ -187,9 +181,7 @@ export default function AI2027ImplementationRoadmap() {
                   Implement self-evolving algorithms that continuously optimize performance without human intervention.
                 </p>
               </div>
-            </div>
           </div>
-        </div>
 
         <h2 className="text-3xl font-bold mb-6 text-gray-900">📈 Phase 3: Optimization & Scale (Months 7-12)</h2>"
         <div className="space-y-6 mb-8">"
@@ -215,7 +207,6 @@ export default function AI2027ImplementationRoadmap() {
                   <li>• Advanced capabilities</li>
                 </ul>
               </div>
-            </div>
           </div>
           
           <div className="bg-gradient-to-br from-yellow-50 to-orange-100 p-8 rounded-lg">"
@@ -227,7 +218,6 @@ export default function AI2027ImplementationRoadmap() {
                   <h4 className="font-bold text-blue-800">Month 3: Initial Performance Gains</h4>"
                   <p className="text-gray-600">10,000x performance improvement, 95% accuracy</p>"
                 </div>
-              </div>
               
               <div className="flex items-center space-x-4 p-4 bg-white rounded-lg">"
                 <div className="bg-green-500 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">6</div>"
@@ -235,7 +225,6 @@ export default function AI2027ImplementationRoadmap() {
                   <h4 className="font-bold text-green-800">Month 6: Advanced Capabilities</h4>"
                   <p className="text-gray-600">100,000x performance, 99.9% accuracy, autonomous optimization</p>"
                 </div>
-              </div>
               
               <div className="flex items-center space-x-4 p-4 bg-white rounded-lg">"
                 <div className="bg-purple-500 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">12</div>"
@@ -243,9 +232,7 @@ export default function AI2027ImplementationRoadmap() {
                   <h4 className="font-bold text-purple-800">Month 12: Full Potential</h4>"
                   <p className="text-gray-600">1,000,000x performance, 99.999% accuracy, self-evolving AI</p>"
                 </div>
-              </div>
             </div>
-          </div>
         </div>
 
         <h2 className="text-3xl font-bold mb-6 text-gray-900">💰 ROI & Success Metrics</h2>"
@@ -268,7 +255,6 @@ export default function AI2027ImplementationRoadmap() {
               <div className="text-4xl font-bold text-yellow-400 mb-2">12</div>"
               <div className="text-green-100">Months to Full ROI</div>"
             </div>
-          </div>
         </div>
 
         <h2 className="text-3xl font-bold mb-6 text-gray-900">⚠️ Risk Mitigation</h2>"
@@ -294,7 +280,6 @@ export default function AI2027ImplementationRoadmap() {
               <li>• Flexible budget planning</li>
             </ul>
           </div>
-        </div>
 
         <div className="bg-gradient-to-r from-red-500 to-pink-500 text-white p-8 rounded-lg mb-8">"
           <h2 className="text-2xl font-bold mb-4">🎯 Success Factors</h2>"
@@ -319,7 +304,6 @@ export default function AI2027ImplementationRoadmap() {
                 <li>• Success guarantee program</li>
               </ul>
             </div>
-          </div>
         </div>
 
         <div className="text-center mb-8">"
@@ -345,9 +329,7 @@ export default function AI2027ImplementationRoadmap() {
               <strong>Address:</strong> 364 E Main St STE 1008<br/>
               Middletown DE 19709
             </div>
-          </div>
         </div>
-      </div>
     </div>
   );
-}
+}</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>

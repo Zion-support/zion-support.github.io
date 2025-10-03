@@ -50,9 +50,7 @@ export default function AI2026MegaBreakthroughRevolution() {
                 Get Implementation Guide
               </a>
             </div>
-          </div>
         </div>
-      </div>
 
       {/* Revolutionary Breakthroughs Section */}
       <section id="revolutionary-breakthroughs" className="py-20 bg-slate-900/50">"
@@ -150,7 +148,6 @@ export default function AI2026MegaBreakthroughRevolution() {
                 Learn More →
               </a>
             </div>
-          </div>
         </div>
       </section>
 
@@ -181,7 +178,6 @@ export default function AI2026MegaBreakthroughRevolution() {
                 <div className="text-gray-400 text-sm font-medium">"
                   {metric.label}
                 </div>
-              </div>
             ))}
           </div>
 
@@ -203,7 +199,6 @@ export default function AI2026MegaBreakthroughRevolution() {
                 View Success Stories
               </a>
             </div>
-          </div>
         </div>
       </section>
 
@@ -234,7 +229,6 @@ export default function AI2026MegaBreakthroughRevolution() {
               </div>
             ))}
           </div>
-        </div>
       </section>
 
       {/* CTA Section */}
@@ -258,7 +252,6 @@ export default function AI2026MegaBreakthroughRevolution() {
               Explore More Content
             </a>
           </div>
-        </div>
       </section>
 
       {/* Footer */}
@@ -271,9 +264,8 @@ export default function AI2026MegaBreakthroughRevolution() {
               <a href="/terms" className="hover:text-purple-400 transition-colors">Terms of Service</a>"
               <a href="/contact" className="hover:text-purple-400 transition-colors">Contact Us</a>"
             </div>
-          </div>
         </div>
       </footer>
     </div>
   );
-}
+}</div></div></div></div></div></div></div></div>

@@ -40,7 +40,6 @@ export default function ConsensusIntelligencePage() {
             <span className="bg-cyan-500/20 px-4 py-2 rounded-full text-cyan-300">Enterprise Ready</span>"
             <span className="bg-green-500/20 px-4 py-2 rounded-full text-green-300">99.9% Accuracy</span>"
           </div>
-        </div>
 
         {/* Key Metrics */}
         <div className="grid md:grid-cols-4 gap-6 mb-12">"
@@ -60,7 +59,6 @@ export default function ConsensusIntelligencePage() {
             <div className="text-3xl font-extrabold text-orange-400 mb-2">0.3s</div>"
             <div className="text-sm text-orange-300">Consensus Time</div>"
           </div>
-        </div>
 
         {/* Main Content */}
         <article className="prose prose-lg prose-invert max-w-none">"
@@ -96,7 +94,6 @@ export default function ConsensusIntelligencePage() {
                 <li>• Multi-dimensional reasoning</li>
               </ul>
             </div>
-          </div>
 
           <h3 className="text-2xl font-bold text-white mb-4 mt-8">Enterprise Impact</h3>"
           <p className="text-lg text-gray-300 mb-6 leading-relaxed">"
@@ -118,7 +115,6 @@ export default function ConsensusIntelligencePage() {
                 <div className="text-4xl font-extrabold text-teal-400 mb-2">0.3s</div>"
                 <div className="text-teal-300 text-sm">Consensus Time</div>"
               </div>
-            </div>
           </div>
 
           <h3 className="text-2xl font-bold text-white mb-4 mt-8">Getting Started</h3>"
@@ -143,9 +139,6 @@ export default function ConsensusIntelligencePage() {
                 View Success Stories
               </a>
             </div>
-          </div>
         </article>
-      </div>
-    </div>
   );
-}
+}</div></div></div></div></div></div></div>

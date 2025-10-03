@@ -54,9 +54,7 @@ export default function AICybersecurity2025Page() {
                   <div className="text-3xl font-bold">$80M+</div>"
                   <div className="text-sm opacity-90">Breach Cost Saved</div>"
                 </div>
-              </div>
             </div>
-          </div>
 
           {/* Service Overview */}
           <section className="mb-12">"
@@ -126,7 +124,6 @@ export default function AICybersecurity2025Page() {
                   </li>
                 </ul>
               </div>
-            </div>
           </section>
 
           {/* Technology Stack */}
@@ -162,7 +159,6 @@ export default function AICybersecurity2025Page() {
                 </p>
                 <div className="text-blue-600 font-semibold text-sm">Complete access control</div>"
               </div>
-            </div>
           </section>
 
           {/* Threat Protection */}
@@ -179,7 +175,6 @@ export default function AICybersecurity2025Page() {
                   </p>
                   <div className="text-sm text-red-600 font-semibold">100% prevention rate</div>"
                 </div>
-              </div>
 
               <div className="flex items-start gap-6 p-6 bg-white rounded-xl shadow-md border border-gray-200">"
                 <div className="flex-shrink-0 w-12 h-12 bg-orange-600 text-white rounded-full flex items-center justify-center font-bold text-xl">🎣</div>"
@@ -191,7 +186,6 @@ export default function AICybersecurity2025Page() {
                   </p>
                   <div className="text-sm text-orange-600 font-semibold">99.98% detection accuracy</div>"
                 </div>
-              </div>
 
               <div className="flex items-start gap-6 p-6 bg-white rounded-xl shadow-md border border-gray-200">"
                 <div className="flex-shrink-0 w-12 h-12 bg-purple-600 text-white rounded-full flex items-center justify-center font-bold text-xl">🔍</div>"
@@ -203,7 +197,6 @@ export default function AICybersecurity2025Page() {
                   </p>
                   <div className="text-sm text-purple-600 font-semibold">Real-time monitoring</div>"
                 </div>
-              </div>
 
               <div className="flex items-start gap-6 p-6 bg-white rounded-xl shadow-md border border-gray-200">"
                 <div className="flex-shrink-0 w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-xl">⚡</div>"
@@ -215,7 +208,6 @@ export default function AICybersecurity2025Page() {
                   </p>
                   <div className="text-sm text-blue-600 font-semibold">99.99% uptime guaranteed</div>"
                 </div>
-              </div>
             </div>
           </section>
 
@@ -240,7 +232,6 @@ export default function AICybersecurity2025Page() {
                       <div className="font-semibold">Michael Johnson</div>"
                       <div className="text-red-200 text-sm">CISO, GlobalBank Financial</div>"
                     </div>
-                  </div>
                 </div>
                 <div className="space-y-4">"
                   <div className="flex justify-between items-center p-4 bg-white/10 rounded-lg">"
@@ -259,9 +250,7 @@ export default function AICybersecurity2025Page() {
                     <span className="font-semibold">Response Time</span>"
                     <span className="text-2xl font-bold">&lt;10ms</span>"
                   </div>
-                </div>
               </div>
-            </div>
           </section>
 
           {/* Call to Action */}
@@ -286,7 +275,6 @@ export default function AICybersecurity2025Page() {
                   Email Us
                 </a>
               </div>
-            </div>
           </section>
 
           {/* Related Services */}
@@ -328,8 +316,6 @@ export default function AICybersecurity2025Page() {
               </Link>
             </div>
           </section>
-        </div>
-      </div>
     </div>
   );
-}
+}</div></div></div></div></div></div></div></div></div></div></div></div></div></div>

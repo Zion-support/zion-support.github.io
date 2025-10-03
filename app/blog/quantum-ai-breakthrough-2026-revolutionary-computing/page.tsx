@@ -11,7 +11,6 @@ export default function QuantumAIBreakthrough2026() {
           <div className="absolute top-0 left-1/3 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
           <div className="absolute bottom-0 right-1/3 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '3s' }}></div>
           <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '1.5s' }}></div>
-        </div>
         
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
@@ -44,7 +43,6 @@ export default function QuantumAIBreakthrough2026() {
               </span>
               <span>18 min read</span>
             </div>
-          </div>
         </div>
       </section>
 
@@ -66,27 +64,22 @@ export default function QuantumAIBreakthrough2026() {
                 <div className="text-gray-400 text-sm font-medium">
                   {stat.label}
                 </div>
-              </div>
             ))}
           </div>
-        </div>
       </section>
 
       {/* Main Content */}
-<<<<<<< HEAD
       <section className="py-20">"
         <div className="container mx-auto px-6">"
           <div className="max-w-4xl mx-auto">"
             <div className="prose prose-invert prose-lg max-w-none">"
               <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">"
-=======
       <section className="py-20">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <div className="prose prose-invert prose-lg max-w-none">
               
               <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0638
                 The Quantum-Neural Revolution Begins
               </h2>
               
@@ -161,7 +154,6 @@ export default function QuantumAIBreakthrough2026() {
                     <li>• $10B+ in cost savings</li>
                   </ul>
                 </div>
-              </div>
 
               <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
                 The Science Behind the Breakthrough
@@ -188,7 +180,6 @@ export default function QuantumAIBreakthrough2026() {
                     Our advanced quantum error correction protocols ensure computational stability even in noisy quantum environments. This breakthrough makes quantum AI systems commercially viable for enterprise applications with 99.99% reliability.
                   </p>
                 </div>
-              </div>
 
               <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">
                 Implementation Timeline: Your Quantum AI Journey
@@ -196,17 +187,14 @@ export default function QuantumAIBreakthrough2026() {
 
               <div className="space-y-4 mb-8">
                 {[
-<<<<<<< HEAD
                   { phase: "Discovery> title= "Quantum AI Assessment> duration: "1-2 weeks> description: "Evaluate your specific use cases and quantum AI potential" },"
                   { phase: "Design> title= "Custom Quantum Architecture> duration: "2-4 weeks> description: "Design tailored quantum-neural solutions for your challenges" },"
                   { phase: "Development> title= "Quantum AI Implementation> duration: "4-8 weeks> description: "Build and deploy your custom quantum AI systems" },"
                   { phase: "Optimization> title= "Continuous Enhancement> duration: "Ongoing> description: "Evolve and optimize quantum AI performance continuously" }"
-=======
                   { phase: "Discovery", title: "Quantum AI Assessment", duration: "1-2 weeks", description: "Evaluate your specific use cases and quantum AI potential" },"
                   { phase: "Design", title: "Custom Quantum Architecture", duration: "2-4 weeks", description: "Design tailored quantum-neural solutions for your challenges" },"
                   { phase: "Development", title: "Quantum AI Implementation", duration: "4-8 weeks", description: "Build and deploy your custom quantum AI systems" },"
                   { phase: "Optimization", title: "Continuous Enhancement", duration: "Ongoing", description: "Evolve and optimize quantum AI performance continuously" }"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0638
                 ].map((phase, index) => (
                   <div key={index} className="flex items-start gap-4 p-4 bg-white/5 rounded-xl border border-white/10">
                     <div className="bg-gradient-to-r from-purple-500 to-blue-500 text-white font-bold px-3 py-1 rounded-full text-sm">
@@ -217,7 +205,6 @@ export default function QuantumAIBreakthrough2026() {
                       <p className="text-gray-400 text-sm mb-2">{phase.duration}</p>
                       <p className="text-gray-300">{phase.description}</p>
                     </div>
-                  </div>
                 ))}
               </div>
 
@@ -232,10 +219,8 @@ export default function QuantumAIBreakthrough2026() {
                   <span className="bg-green-500/20 text-green-300 px-3 py-1 rounded-full text-sm">Dedicated Support</span>
                   <span className="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-sm">Special Pricing</span>
                 </div>
-              </div>
 
             </div>
-          </div>
         </div>
       </section>
 
@@ -260,7 +245,6 @@ export default function QuantumAIBreakthrough2026() {
               View Quantum Success Stories
             </Link>
           </div>
-        </div>
       </section>
 
       {/* Navigation */}
@@ -281,10 +265,8 @@ export default function QuantumAIBreakthrough2026() {
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
-          </div>
         </div>
       </section>
-    </div>
   );
 }
 </ArrowRight>
@@ -295,4 +277,4 @@ export default function QuantumAIBreakthrough2026() {
 </CheckCircle>
 </Zap>
 </Brain>
-</Atom>
+</Atom></section></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>

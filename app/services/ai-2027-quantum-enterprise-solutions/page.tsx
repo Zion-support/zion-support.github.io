@@ -31,7 +31,6 @@ export default function AI2027QuantumEnterpriseSolutions() {
             <span>💰 500% ROI Guaranteed</span>
             <span>⚡ Quantum-Powered AI</span>
           </div>
-        </div>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">"
@@ -102,7 +101,6 @@ export default function AI2027QuantumEnterpriseSolutions() {
                   <li>• Secure quantum communication</li>
                 </ul>
               </div>
-            </div>
 
             <h2 className="text-3xl font-bold mt-12 mb-6">📊 Proven Results & ROI</h2>"
             <div className="bg-gradient-to-r from-green-50 to-blue-50 p-6 rounded-lg mb-8">"
@@ -117,7 +115,6 @@ export default function AI2027QuantumEnterpriseSolutions() {
                     <div className="text-3xl font-bold text-blue-600">1000x</div>"
                     <div className="text-sm text-blue-700">Processing Speed Increase</div>"
                   </div>
-                </div>
                 <div className="space-y-4">"
                   <div className="bg-white p-4 rounded-lg">"
                     <div className="text-3xl font-bold text-purple-600">99.9%</div>"
@@ -127,9 +124,7 @@ export default function AI2027QuantumEnterpriseSolutions() {
                     <div className="text-3xl font-bold text-orange-600">95%</div>"
                     <div className="text-sm text-orange-700">Energy Reduction</div>"
                   </div>
-                </div>
               </div>
-            </div>
 
             <h2 className="text-3xl font-bold mt-12 mb-6">🏭 Industry Applications</h2>"
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">"
@@ -172,7 +167,6 @@ export default function AI2027QuantumEnterpriseSolutions() {
                   <li>• Software testing automation</li>
                 </ul>
               </div>
-            </div>
 
             <h2 className="text-3xl font-bold mt-12 mb-6">🔧 Implementation Approach</h2>"
             <div className="space-y-6 mb-8">"
@@ -182,7 +176,6 @@ export default function AI2027QuantumEnterpriseSolutions() {
                   <h3 className="font-bold text-lg">Quantum Readiness Assessment</h3>"
                   <p className="text-gray-700">Comprehensive evaluation of your infrastructure and identify quantum-ready applications</p>"
                 </div>
-              </div>
               
               <div className="flex items-start gap-4">"
                 <div className="bg-green-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm">2</div>"
@@ -190,7 +183,6 @@ export default function AI2027QuantumEnterpriseSolutions() {
                   <h3 className="font-bold text-lg">Pilot Implementation</h3>"
                   <p className="text-gray-700">Start with a focused pilot project to demonstrate quantum AI capabilities</p>"
                 </div>
-              </div>
               
               <div className="flex items-start gap-4">"
                 <div className="bg-purple-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm">3</div>"
@@ -198,7 +190,6 @@ export default function AI2027QuantumEnterpriseSolutions() {
                   <h3 className="font-bold text-lg">Scale & Optimize</h3>"
                   <p className="text-gray-700">Expand successful pilots and optimize quantum-classical hybrid systems</p>"
                 </div>
-              </div>
               
               <div className="flex items-start gap-4">"
                 <div className="bg-orange-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm">4</div>"
@@ -206,9 +197,7 @@ export default function AI2027QuantumEnterpriseSolutions() {
                   <h3 className="font-bold text-lg">Enterprise Integration</h3>"
                   <p className="text-gray-700">Full-scale deployment across your organization with ongoing support</p>"
                 </div>
-              </div>
             </div>
-          </div>
         </div>
 
         <div className="lg:col-span-1">"
@@ -231,7 +220,6 @@ export default function AI2027QuantumEnterpriseSolutions() {
                   View Success Story
                 </Link>
               </div>
-            </div>
 
             <div className="bg-white border border-gray-200 p-6 rounded-lg mb-6">"
               <h3 className="text-xl font-bold mb-4">📞 Contact Information</h3>"
@@ -249,7 +237,6 @@ export default function AI2027QuantumEnterpriseSolutions() {
                   364 E Main St STE 1008<br />
                   Middletown DE 19709
                 </div>
-              </div>
             </div>
 
             <div className="bg-blue-50 border border-blue-200 p-6 rounded-lg">"
@@ -277,9 +264,7 @@ export default function AI2027QuantumEnterpriseSolutions() {
                 </li>
               </ul>
             </div>
-          </div>
         </div>
-      </div>
 
       <div className="mt-12 bg-gradient-to-r from-gray-50 to-blue-50 p-8 rounded-lg">"
         <h2 className="text-3xl font-bold text-center mb-8">Related Services</h2>"
@@ -299,7 +284,6 @@ export default function AI2027QuantumEnterpriseSolutions() {
             <p className="text-gray-600 text-sm">Next-generation AI solutions for enterprise</p>"
           </Link>
         </div>
-      </div>
     </div>
   );
-}
+}</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>

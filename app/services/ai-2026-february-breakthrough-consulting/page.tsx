@@ -54,9 +54,7 @@ export default function February2026ConsultingPage() {
                 <div className="text-2xl font-extrabold text-green-400 mb-1">Fortune 100</div>"
                 <div className="text-xs text-green-300">Clients</div>"
               </div>
-            </div>
           </div>
-        </div>
       </section>
 
       {/* Content Section */}
@@ -193,7 +191,6 @@ export default function February2026ConsultingPage() {
                   <li><strong>300%</strong> increase in research efficiency</li>
                 </ul>
               </div>
-            </div>
 
             <h3 className="text-3xl font-bold text-white mb-4">Getting Started</h3>"
             <div className="bg-gradient-to-r from-purple-500/20 to-blue-500/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/30">"
@@ -218,10 +215,7 @@ export default function February2026ConsultingPage() {
                   Read Full Guide
                 </a>
               </div>
-            </div>
           </div>
-        </div>
       </section>
-    </div>
   );
-}
+}</div></div></div></div></div></div>

@@ -72,9 +72,7 @@ export default function AI2026FutureTrendsMegaPredictions() {
                 <div className="text-2xl font-extrabold text-cyan-400 mb-1">99.9%</div>"
                 <div className="text-xs text-cyan-300">Accuracy Rate</div>"
               </div>
-            </div>
           </div>
-        </div>
       </section>
 
       {/* Trends Overview */}
@@ -145,7 +143,6 @@ export default function AI2026FutureTrendsMegaPredictions() {
                   </li>
                 </ul>
               </div>
-            </div>
 
             <div className="grid md:grid-cols-3 gap-8 mb-16">"
               <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">"
@@ -189,9 +186,7 @@ export default function AI2026FutureTrendsMegaPredictions() {
                   <li>• Strategic foresight</li>
                 </ul>
               </div>
-            </div>
           </div>
-        </div>
       </section>
 
       {/* Market Impact */}
@@ -224,7 +219,6 @@ export default function AI2026FutureTrendsMegaPredictions() {
                     <span className="text-gray-300">Productivity Gain</span>"
                     <span className="text-cyan-400 font-bold text-xl">300%</span>"
                   </div>
-                </div>
               </div>
 
               <div className="bg-gradient-to-r from-indigo-900/50 via-purple-900/50 to-pink-900/50 rounded-2xl p-8 border border-indigo-500/30">"
@@ -242,11 +236,8 @@ export default function AI2026FutureTrendsMegaPredictions() {
                     <h4 className="text-white font-bold mb-2">Manufacturing</h4>"
                     <p className="text-gray-300 text-sm">Fully autonomous production lines and predictive maintenance</p>"
                   </div>
-                </div>
               </div>
-            </div>
           </div>
-        </div>
       </section>
 
       {/* Call to Action */}
@@ -272,9 +263,7 @@ export default function AI2026FutureTrendsMegaPredictions() {
                 Learn About Current Breakthroughs →
               </a>
             </div>
-          </div>
         </div>
       </section>
-    </div>
   );
-}
+}</div></div></div></div></div></div></div></div></div></div></div>

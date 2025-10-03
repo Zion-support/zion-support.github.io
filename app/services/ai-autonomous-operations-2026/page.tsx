@@ -75,7 +75,6 @@ export default function AIAutonomousOperationsServices2026() {
                 <li>• Performance forecasting</li>
               </ul>
             </div>
-          </div>
 
           <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 border border-blue-500/30 rounded-2xl p-8 mb-16">"
             <h2 className="text-3xl font-bold text-white mb-6 text-center">Autonomous Capabilities</h2>"
@@ -122,7 +121,6 @@ export default function AIAutonomousOperationsServices2026() {
                   </li>
                 </ul>
               </div>
-            </div>
           </div>
 
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 mb-16">"
@@ -149,7 +147,6 @@ export default function AIAutonomousOperationsServices2026() {
                 <h3 className="text-xl font-bold text-white mb-2">Cost Reduction</h3>"
                 <p className="text-gray-300 text-sm">Average operational cost savings achieved</p>"
               </div>
-            </div>
           </div>
 
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 mb-16">"
@@ -165,7 +162,6 @@ export default function AIAutonomousOperationsServices2026() {
                   <span className="font-semibold">Results:</span>"
                   <span className="ml-2">$2.3M annual savings, 70% fewer manual interventions</span>"
                 </div>
-              </div>
               <div>
                 <h3 className="text-xl font-bold text-white mb-3">Manufacturing Enterprise</h3>"
                 <p className="text-gray-300 mb-4">"
@@ -176,9 +172,7 @@ export default function AIAutonomousOperationsServices2026() {
                   <span className="font-semibold">Results:</span>"
                   <span className="ml-2">45% efficiency gain, 80% reduction in defects</span>"
                 </div>
-              </div>
             </div>
-          </div>
 
           <div className="text-center">"
             <div className="bg-gradient-to-r from-blue-600 to-cyan-600 rounded-2xl p-8">"
@@ -199,10 +193,7 @@ export default function AIAutonomousOperationsServices2026() {
                   Learn More
                 </a>
               </div>
-            </div>
           </div>
-        </div>
       </div>
-    </div>
   );
-}
+}</div></div></div></div></div></div></div></div></div>

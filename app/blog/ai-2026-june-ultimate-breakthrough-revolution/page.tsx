@@ -61,9 +61,7 @@ export default function June2026UltimateBreakthroughPage() {
               View $100B Success Story
             </a>
           </div>
-        </div>
       </article>
-    </div>
   );
 }
-</div>
+</div></div></div>

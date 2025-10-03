@@ -39,7 +39,6 @@ export default function AI2026HyperAutomationRevolution() {
           <span>•</span>
           <span>By Zion Tech Group Automation Team</span>
         </div>
-      </div>
 
       <div className="prose prose-lg max-w-none">"
         <div className="bg-gradient-to-r from-red-50 to-orange-50 border-l-4 border-red-500 p-6 mb-8">"
@@ -91,7 +90,6 @@ export default function AI2026HyperAutomationRevolution() {
               business conditions and optimize operations in real-time.
             </p>
           </div>
-        </div>
 
         <h3 className="text-2xl font-bold text-gray-900 mt-6 mb-4">Enterprise Impact</h3>"
         <p className="text-gray-700 mb-6">"
@@ -136,7 +134,6 @@ export default function AI2026HyperAutomationRevolution() {
               and administrative processes with enhanced accuracy and efficiency.
             </p>
           </div>
-        </div>
 
         <h3 className="text-2xl font-bold text-gray-900 mt-6 mb-4">Implementation Strategy</h3>"
         <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-lg p-6 mb-8">"
@@ -158,7 +155,6 @@ export default function AI2026HyperAutomationRevolution() {
               <span className="bg-blue-500 text-white px-2 py-1 rounded text-sm font-bold">Phase 4</span>"
               <span>Advanced optimization and scaling (ongoing)</span>
             </div>
-          </div>
         </div>
 
         <div className="bg-gradient-to-r from-purple-50 to-pink-50 border border-purple-200 rounded-lg p-6 mb-8">"
@@ -179,7 +175,6 @@ export default function AI2026HyperAutomationRevolution() {
               View Success Stories
             </Link>
           </div>
-        </div>
       </div>
 
       <div className="mt-12 pt-8 border-t border-gray-200">"
@@ -209,7 +204,6 @@ export default function AI2026HyperAutomationRevolution() {
             </div>
           </Link>
         </div>
-      </div>
     </div>
   );
-}
+}</div></div></div></div></div></div>

@@ -89,7 +89,6 @@ export default function AIBusinessIntelligence2025() {
             <div className="text-3xl font-bold text-orange-600 mb-2">80%</div>"
             <div className="text-gray-600">Faster Decisions</div>"
           </div>
-        </div>
       </div>
 
       {/* Features Overview */}
@@ -191,7 +190,6 @@ export default function AIBusinessIntelligence2025() {
               <li>• Compliance reporting</li>
             </ul>
           </div>
-        </div>
       </section>
 
       {/* Use Cases */}
@@ -301,7 +299,6 @@ export default function AIBusinessIntelligence2025() {
               </li>
             </ul>
           </div>
-        </div>
       </section>
 
       {/* Pricing */}
@@ -433,7 +430,6 @@ export default function AIBusinessIntelligence2025() {
               Contact Sales
             </Link>
           </div>
-        </div>
       </section>
 
       {/* Implementation Process */}
@@ -457,7 +453,6 @@ export default function AIBusinessIntelligence2025() {
                 <li>• Timeline and resource planning</li>
               </ul>
             </div>
-          </div>
 
           <div className="flex items-start gap-6">"
             <div className="flex-shrink-0 w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">"
@@ -476,7 +471,6 @@ export default function AIBusinessIntelligence2025() {
                 <li>• Security setup</li>
               </ul>
             </div>
-          </div>
 
           <div className="flex items-start gap-6">"
             <div className="flex-shrink-0 w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">"
@@ -495,7 +489,6 @@ export default function AIBusinessIntelligence2025() {
                 <li>• User training materials</li>
               </ul>
             </div>
-          </div>
 
           <div className="flex items-start gap-6">"
             <div className="flex-shrink-0 w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">"
@@ -514,7 +507,6 @@ export default function AIBusinessIntelligence2025() {
                 <li>• Ongoing optimization</li>
               </ul>
             </div>
-          </div>
         </div>
       </section>
 
@@ -539,7 +531,6 @@ export default function AIBusinessIntelligence2025() {
               <div className="text-4xl font-bold mb-2">6-12</div>"
               <div className="text-blue-100">Months to Break Even</div>"
             </div>
-          </div>
           
           <div className="text-center mt-8">"
             <Link
@@ -548,7 +539,6 @@ export default function AIBusinessIntelligence2025() {
               Get Your Custom ROI Analysis
             </Link>
           </div>
-        </div>
       </section>
 
       {/* CTA Section */}
@@ -597,6 +587,5 @@ export default function AIBusinessIntelligence2025() {
           </Link>
         </div>
       </section>
-    </div>
   );
-}
+}</div></div></div></div></div></div></div></div></div></div></div>

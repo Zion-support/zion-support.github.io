@@ -58,10 +58,8 @@ export default function AIEnterpriseAutomation2026MegaGuide() {
                   <div className="text-gray-400 text-sm font-medium">"
                     {stat.label}
                   </div>
-                </div>
               ))}
             </div>
-          </div>
         </div>
       </header>
 
@@ -117,7 +115,6 @@ export default function AIEnterpriseAutomation2026MegaGuide() {
                     </li>
                   </ul>
                 </div>
-              </div>
             </div>
           </section>
 
@@ -183,9 +180,7 @@ export default function AIEnterpriseAutomation2026MegaGuide() {
                       </li>
                     </ul>
                   </div>
-                </div>
               </div>
-            </div>
           </section>
 
           {/* Intelligent Workflow Design */}
@@ -259,7 +254,6 @@ export default function AIEnterpriseAutomation2026MegaGuide() {
                     </li>
                   </ul>
                 </div>
-              </div>
             </div>
           </section>
 
@@ -333,9 +327,7 @@ export default function AIEnterpriseAutomation2026MegaGuide() {
                       </li>
                     </ul>
                   </div>
-                </div>
               </div>
-            </div>
           </section>
 
           {/* Success Metrics & ROI */}
@@ -395,9 +387,7 @@ export default function AIEnterpriseAutomation2026MegaGuide() {
                       <div className="text-sm text-gray-400 mb-1">ROI Timeline</div>"
                       <div className="text-2xl font-bold text-blue-400">6-18 months</div>"
                     </div>
-                  </div>
                 </div>
-              </div>
             </div>
           </section>
 
@@ -422,10 +412,8 @@ export default function AIEnterpriseAutomation2026MegaGuide() {
                   View Success Stories
                 </a>
               </div>
-            </div>
           </section>
-        </div>
       </main>
     </div>
   );
-}
+}</div></div></div></div></div></div></div></div></div></div></div></div>

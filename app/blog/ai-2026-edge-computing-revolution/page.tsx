@@ -38,7 +38,6 @@ export default function AI2026EdgeComputingRevolution() {
             <span>⏱️ 18 min read</span>
             <span>👥 Enterprise AI</span>
           </div>
-        </div>
 
         {/* Key Metrics */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">"
@@ -58,7 +57,6 @@ export default function AI2026EdgeComputingRevolution() {
             <div className="text-3xl font-bold text-orange-600 mb-2">500+</div>"
             <div className="text-sm text-gray-600">Deployments</div>"
           </div>
-        </div>
 
         {/* Content */}
         <div className="prose prose-lg max-w-none">"
@@ -96,7 +94,6 @@ export default function AI2026EdgeComputingRevolution() {
                 <h4 className="text-xl font-bold text-orange-900 mb-3">Retail Analytics</h4>"
                 <p className="text-gray-700">Customer behavior analysis and personalized recommendations in real-time.</p>"
               </div>
-            </div>
 
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Implementation Blueprint</h3>"
             <div className="bg-gray-50 rounded-lg p-6 mb-6">"
@@ -150,14 +147,11 @@ export default function AI2026EdgeComputingRevolution() {
                     <li>• Competitive advantage: $10M/year</li>
                   </ul>
                 </div>
-              </div>
               <div className="mt-6 text-center">"
                 <div className="text-3xl font-bold text-green-600 mb-2">Total ROI: 450%</div>"
                 <div className="text-lg text-gray-600">Payback period: 8 months</div>"
               </div>
-            </div>
           </div>
-        </div>
 
         {/* CTA Section */}
         <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-8 text-white text-center">"
@@ -177,7 +171,6 @@ export default function AI2026EdgeComputingRevolution() {
               Call +1 302 464 0950
             </a>
           </div>
-        </div>
 
         {/* Related Content */}
         <div className="mt-12">"
@@ -200,8 +193,6 @@ export default function AI2026EdgeComputingRevolution() {
               </div>
             </Link>
           </div>
-        </div>
       </div>
-    </div>
   );
-}
+}</div></div></div></div></div></div></div></div></div>

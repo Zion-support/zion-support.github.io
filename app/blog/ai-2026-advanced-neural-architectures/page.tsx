@@ -44,7 +44,6 @@ export default function AI2026AdvancedNeuralArchitectures() {
                 <div className="text-gray-400 text-sm font-medium">"
                   {metric.label}
                 </div>
-              </div>
             ))}
           </div>
 
@@ -106,7 +105,6 @@ export default function AI2026AdvancedNeuralArchitectures() {
                     <li>• Multi-modal processing</li>
                   </ul>
                 </div>
-              </div>
             </section>
 
             <section className="mb-12">"
@@ -130,7 +128,6 @@ export default function AI2026AdvancedNeuralArchitectures() {
                     <div className="text-4xl font-extrabold text-purple-400 mb-2">300%</div>"
                     <div className="text-gray-300">ROI Improvement</div>"
                   </div>
-                </div>
               </div>
             </section>
 
@@ -154,9 +151,7 @@ export default function AI2026AdvancedNeuralArchitectures() {
                   <h3 className="text-xl font-bold mb-3 text-blue-400">2030: Autonomous Enterprise</h3>"
                   <p className="text-gray-300">Complete enterprise autonomy with self-managing, self-optimizing operations</p>"
                 </div>
-              </div>
             </section>
-          </div>
 
           {/* CTA Section */}
           <div className="mt-16 bg-gradient-to-r from-purple-500/20 to-blue-500/20 border border-purple-500/30 rounded-2xl p-8 text-center">"
@@ -177,9 +172,7 @@ export default function AI2026AdvancedNeuralArchitectures() {
                 View Success Stories
               </a>
             </div>
-          </div>
         </div>
-      </div>
     </main>
   );
-}
+}</div></div></div></div></div></div></div>

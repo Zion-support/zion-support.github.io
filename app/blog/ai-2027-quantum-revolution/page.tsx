@@ -68,10 +68,8 @@ export default function AI2027QuantumRevolution() {
                   <div className="text-gray-400 text-sm font-medium">"
                     {metric.label}
                   </div>
-                </div>
               ))}
             </div>
-          </div>
         </div>
       </section>
 
@@ -150,7 +148,6 @@ export default function AI2027QuantumRevolution() {
                     <li>• Quantum-enhanced pattern recognition</li>
                   </ul>
                 </div>
-              </div>
             </div>
 
             {/* Implementation Framework */}
@@ -178,7 +175,6 @@ export default function AI2027QuantumRevolution() {
                       and define implementation roadmap for maximum ROI and minimal risk.
                     </p>
                   </div>
-                </div>
               </div>
 
               <div className="bg-gradient-to-r from-blue-500/10 to-indigo-500/10 border border-blue-500/30 rounded-2xl p-8 mb-8">"
@@ -200,7 +196,6 @@ export default function AI2027QuantumRevolution() {
                       to ensure breakthrough performance and enterprise-grade reliability.
                     </p>
                   </div>
-                </div>
               </div>
 
               <div className="bg-gradient-to-r from-indigo-500/10 to-purple-500/10 border border-indigo-500/30 rounded-2xl p-8">"
@@ -222,9 +217,7 @@ export default function AI2027QuantumRevolution() {
                       maximum performance gains and ensure sustainable long-term success.
                     </p>
                   </div>
-                </div>
               </div>
-            </div>
 
             {/* Success Stories */}
             <div className="mb-16">"
@@ -240,7 +233,6 @@ export default function AI2027QuantumRevolution() {
                       <h3 className="text-2xl font-bold text-white">Global Financial Services Giant</h3>"
                       <p className="text-green-400 font-semibold">Fortune 100 • $2.5B Annual Revenue</p>"
                     </div>
-                  </div>
                   <div className="space-y-4 mb-6">"
                     <div>
                       <h4 className="text-lg font-semibold text-green-400 mb-2">Challenge</h4>"
@@ -254,7 +246,6 @@ export default function AI2027QuantumRevolution() {
                       <h4 className="text-lg font-semibold text-green-400 mb-2">Results</h4>"
                       <p className="text-gray-300">Achieved 1000x faster processing, 99.99% accuracy, and $500M annual savings through improved fraud prevention and risk optimization.</p>"
                     </div>
-                  </div>
                   <div className="grid grid-cols-3 gap-4 text-center">"
                     <div>
                       <div className="text-2xl font-bold text-green-400">1000x</div>"
@@ -268,7 +259,6 @@ export default function AI2027QuantumRevolution() {
                       <div className="text-2xl font-bold text-blue-400">99.99%</div>"
                       <div className="text-xs text-gray-400">Accuracy</div>"
                     </div>
-                  </div>
                 </div>
 
                 <div className="bg-gradient-to-br from-blue-500/10 to-cyan-500/10 border border-blue-500/30 rounded-2xl p-8">"
@@ -278,7 +268,6 @@ export default function AI2027QuantumRevolution() {
                       <h3 className="text-2xl font-bold text-white">Manufacturing Industry Leader</h3>"
                       <p className="text-blue-400 font-semibold">Global Operations • 50+ Facilities</p>"
                     </div>
-                  </div>
                   <div className="space-y-4 mb-6">"
                     <div>
                       <h4 className="text-lg font-semibold text-blue-400 mb-2">Challenge</h4>"
@@ -292,7 +281,6 @@ export default function AI2027QuantumRevolution() {
                       <h4 className="text-lg font-semibold text-blue-400 mb-2">Results</h4>"
                       <p className="text-gray-300">Achieved 95% efficiency improvement, 80% cost reduction, and $300M annual savings through optimized operations and predictive maintenance.</p>"
                     </div>
-                  </div>
                   <div className="grid grid-cols-3 gap-4 text-center">"
                     <div>
                       <div className="text-2xl font-bold text-blue-400">95%</div>"
@@ -306,9 +294,7 @@ export default function AI2027QuantumRevolution() {
                       <div className="text-2xl font-bold text-green-400">80%</div>"
                       <div className="text-xs text-gray-400">Cost ↓</div>"
                     </div>
-                  </div>
                 </div>
-              </div>
             </div>
 
             {/* Call to Action */}
@@ -332,9 +318,7 @@ export default function AI2027QuantumRevolution() {
                   View Success Stories
                 </Link>
               </div>
-            </div>
           </div>
-        </div>
       </section>
 
       {/* Related Content */}
@@ -376,9 +360,7 @@ export default function AI2027QuantumRevolution() {
                 </div>
               </Link>
             </div>
-          </div>
         </div>
       </section>
-    </div>
   );
-}
+}</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>

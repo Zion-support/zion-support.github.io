@@ -44,7 +44,6 @@ export default function ImplementationGuide() {
               <Clock className="w-4 h-4 mr-1" />"
               6-12 months
             </div>
-          </div>
           
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">"
             Complete Guide to Implementing
@@ -75,9 +74,7 @@ export default function ImplementationGuide() {
               <div className="text-2xl font-bold text-orange-600 mb-2">50%</div>"
               <div className="text-gray-600">Faster Time-to-Market</div>"
             </div>
-          </div>
         </div>
-      </div>
 
       {/* Content */}
       <div className="max-w-4xl mx-auto px-4 py-12">"
@@ -131,7 +128,6 @@ export default function ImplementationGuide() {
                 </li>
               </ol>
             </div>
-          </div>
         </section>
 
         {/* Introduction */}
@@ -249,7 +245,6 @@ export default function ImplementationGuide() {
                 </li>
               </ul>
             </div>
-          </div>
 
           <div className="bg-gradient-to-r from-yellow-50 to-orange-50 rounded-xl p-6 border border-yellow-200">"
             <h3 className="text-xl font-bold text-gray-800 mb-4">Readiness Assessment Framework</h3>"
@@ -269,11 +264,9 @@ export default function ImplementationGuide() {
                 <div className="font-semibold text-gray-800 mb-2">Data Quality (20% weight)</div>"
                 <div className="text-gray-600">Clean, consistent, and accessible data</div>"
               </div>
-            </div>
             <div className="mt-4 p-4 bg-white rounded-lg border border-yellow-200">"
               <div className="font-semibold text-gray-800">Minimum Score for Success: 70/100</div>"
             </div>
-          </div>
         </section>
 
         {/* Implementation Methodology */}
@@ -316,7 +309,6 @@ export default function ImplementationGuide() {
                 <li>• ROI measurement and reporting</li>
               </ul>
             </div>
-          </div>
         </section>
 
         {/* Best Practices */}
@@ -370,7 +362,6 @@ export default function ImplementationGuide() {
                 </li>
               </ul>
             </div>
-          </div>
         </section>
 
         {/* Call to Action */}
@@ -395,10 +386,7 @@ export default function ImplementationGuide() {
                 <BookOpen className="w-5 h-5 ml-2" />"
               </Link>
             </div>
-          </div>
         </section>
-
-      </div>
 
       {/* Related Content */}
       <div className="bg-gray-50 py-12">"
@@ -413,7 +401,6 @@ export default function ImplementationGuide() {
                   <span className="mr-2">Read article</span>"
                   <ArrowLeft className="w-4 h-4 rotate-180 group-hover:translate-x-1 transition-transform" />"
                 </div>
-              </div>
             </Link>
             
             <Link href="/case-studies/global-manufacturing-autonomous-transformation" className="group">"
@@ -424,11 +411,8 @@ export default function ImplementationGuide() {
                   <span className="mr-2">View case study</span>"
                   <ArrowLeft className="w-4 h-4 rotate-180 group-hover:translate-x-1 transition-transform" />"
                 </div>
-              </div>
             </Link>
           </div>
-        </div>
       </div>
-    </div>
   );
-}
+}</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>

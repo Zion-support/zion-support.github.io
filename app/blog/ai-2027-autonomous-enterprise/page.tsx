@@ -77,7 +77,6 @@ export default function AI2027AutonomousEnterprise() {
                   <li>• <strong>Strategic Planning:</strong> Long-term business optimization</li>
                 </ul>
               </div>
-            </div>
           </section>
 
           <section>
@@ -116,7 +115,6 @@ export default function AI2027AutonomousEnterprise() {
                     and evolve the system's capabilities over time.
                   </p>
                 </div>
-              </div>
             </div>
           </section>
 
@@ -142,7 +140,6 @@ export default function AI2027AutonomousEnterprise() {
                     <div className="text-xl font-bold text-purple-600">3x</div>"
                     <div className="text-sm text-gray-600">Faster Innovation</div>"
                   </div>
-                </div>
               </div>
               
               <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-lg">"
@@ -164,7 +161,6 @@ export default function AI2027AutonomousEnterprise() {
                     <div className="text-xl font-bold text-purple-600">95%</div>"
                     <div className="text-sm text-gray-600">Accuracy Rate</div>"
                   </div>
-                </div>
               </div>
               
               <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-6 rounded-lg">"
@@ -186,9 +182,7 @@ export default function AI2027AutonomousEnterprise() {
                     <div className="text-xl font-bold text-purple-600">$500M</div>"
                     <div className="text-sm text-gray-600">Cost Savings</div>"
                   </div>
-                </div>
               </div>
-            </div>
           </section>
 
           <section>
@@ -229,7 +223,6 @@ export default function AI2027AutonomousEnterprise() {
                   <li>• Achieve 95%+ operational autonomy</li>
                 </ul>
               </div>
-            </div>
           </section>
 
           <section>
@@ -253,7 +246,6 @@ export default function AI2027AutonomousEnterprise() {
                   <div className="text-2xl font-bold text-orange-600 mb-1">90%</div>"
                   <div className="text-sm text-gray-600">Error Reduction</div>"
                 </div>
-              </div>
             </div>
           </section>
 
@@ -276,8 +268,6 @@ export default function AI2027AutonomousEnterprise() {
               </Link>
             </div>
           </section>
-        </div>
       </article>
-    </div>
   );
-}
+}</div></div></div></div></div></div></div></div></div></div>

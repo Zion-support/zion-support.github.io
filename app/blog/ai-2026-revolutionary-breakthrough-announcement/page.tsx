@@ -61,7 +61,6 @@ export default function RevolutionaryBreakthroughAnnouncement2026() {
                 <div className="text-4xl font-extrabold bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent mb-2">98%</div>"
                 <div className="text-gray-400 text-sm font-medium">Autonomous Operations Rate</div>"
               </div>
-            </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <a 
@@ -75,7 +74,6 @@ export default function RevolutionaryBreakthroughAnnouncement2026() {
                 View Success Stories
               </a>
             </div>
-          </div>
         </div>
       </section>
 
@@ -141,11 +139,8 @@ export default function RevolutionaryBreakthroughAnnouncement2026() {
                     <span className="text-gray-300">Trust Score</span>"
                     <span className="text-purple-400 font-bold text-xl">9.4/10</span>"
                   </div>
-                </div>
               </div>
-            </div>
           </div>
-        </div>
       </section>
 
       {/* Quantum-Neural Networks Section */}
@@ -186,7 +181,6 @@ export default function RevolutionaryBreakthroughAnnouncement2026() {
                     <span className="text-gray-300">Error Correction</span>"
                     <span className="text-blue-400 font-bold text-xl">99.9%</span>"
                   </div>
-                </div>
               </div>
               <div>
                 <h3 className="text-3xl font-bold mb-6 text-white">Quantum-Neural Architecture</h3>"
@@ -212,9 +206,7 @@ export default function RevolutionaryBreakthroughAnnouncement2026() {
                   </li>
                 </ul>
               </div>
-            </div>
           </div>
-        </div>
       </section>
 
       {/* Autonomous Operations Section */}
@@ -263,10 +255,8 @@ export default function RevolutionaryBreakthroughAnnouncement2026() {
                   <div className="text-4xl font-extrabold bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">"
                     {feature.metrics}
                   </div>
-                </div>
               ))}
             </div>
-          </div>
         </div>
       </section>
 
@@ -298,7 +288,6 @@ export default function RevolutionaryBreakthroughAnnouncement2026() {
                   <div className="text-gray-400 text-sm font-medium">"
                     {metric.label}
                   </div>
-                </div>
               ))}
             </div>
 
@@ -320,9 +309,7 @@ export default function RevolutionaryBreakthroughAnnouncement2026() {
                   View Success Stories
                 </a>
               </div>
-            </div>
           </div>
-        </div>
       </section>
 
       {/* CTA Section */}
@@ -346,8 +333,6 @@ export default function RevolutionaryBreakthroughAnnouncement2026() {
               Explore Our Services
             </a>
           </div>
-        </div>
       </section>
-    </div>
   );
-}
+}</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>

@@ -62,12 +62,9 @@ const ContactPage: React.FC = () => {
                   Innovation City, IC 12345
                 </p>
               </div>
-            </div>
           </div>
-        </div>
       </div>
-    </div>
   );
 };
 
-export default ContactPage;
+export default ContactPage;</div></div></div>

@@ -41,7 +41,6 @@ export default function AI2026MegaBreakthroughPage() {
               <span className="bg-cyan-500/20 px-4 py-2 rounded-full text-cyan-300">1000x Processing Speed</span>"
               <span className="bg-green-500/20 px-4 py-2 rounded-full text-green-300">98% Automation Rate</span>"
             </div>
-          </div>
         </div>
       </section>
 
@@ -78,7 +77,6 @@ export default function AI2026MegaBreakthroughPage() {
                     intervention for enterprise operations.
                   </p>
                 </div>
-              </div>
 
               <h2 className="text-3xl font-bold mb-6 text-blue-400">Enterprise Impact & Results</h2>"
               <div className="bg-gradient-to-r from-green-500/10 to-blue-500/10 border border-green-500/30 rounded-2xl p-8 mb-8">"
@@ -128,7 +126,6 @@ export default function AI2026MegaBreakthroughPage() {
                     with continuous monitoring and optimization.
                   </p>
                 </div>
-              </div>
 
               <div className="mt-12 text-center">"
                 <h2 className="text-3xl font-bold mb-6 text-white">Ready to Transform Your Enterprise?</h2>"
@@ -147,11 +144,8 @@ export default function AI2026MegaBreakthroughPage() {
                     View Success Stories
                   </a>
                 </div>
-              </div>
             </div>
-          </div>
         </div>
       </section>
-    </div>
   );
-}
+}</div></div></div></div></div></div>

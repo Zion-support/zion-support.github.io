@@ -44,7 +44,6 @@ export default function AI2026JulyRevolutionaryBreakthrough() {
               <span className="bg-green-500/20 px-4 py-2 rounded-full text-green-300">Zero Human Intervention</span>"
               <span className="bg-cyan-500/20 px-4 py-2 rounded-full text-cyan-300">Self-Evolving Architecture</span>"
             </div>
-          </div>
         </div>
       </section>
 
@@ -68,7 +67,6 @@ export default function AI2026JulyRevolutionaryBreakthrough() {
               <div className="text-4xl font-extrabold text-cyan-400 mb-2">0.3s</div>"
               <div className="text-cyan-300 text-sm">Response Time</div>"
             </div>
-          </div>
         </div>
       </section>
 
@@ -130,7 +128,6 @@ export default function AI2026JulyRevolutionaryBreakthrough() {
                     <li>• Complete automation of trading</li>
                   </ul>
                 </div>
-              </div>
 
               <h3 className="text-3xl font-bold text-white mb-6">Technical Architecture</h3>"
               <p className="text-lg text-gray-300 mb-6">"
@@ -156,7 +153,6 @@ export default function AI2026JulyRevolutionaryBreakthrough() {
                     <h5 className="font-bold text-white mb-2">Real-Time Adaptation</h5>"
                     <p className="text-gray-300 text-sm">Instant adaptation to changing business conditions and requirements.</p>"
                   </div>
-                </div>
               </div>
 
               <h3 className="text-3xl font-bold text-white mb-6">Business Applications</h3>"
@@ -173,9 +169,7 @@ export default function AI2026JulyRevolutionaryBreakthrough() {
                   <h4 className="text-xl font-bold text-white mb-3">Customer Experience</h4>"
                   <p className="text-gray-300">Personalized customer interactions that evolve and improve based on individual preferences and behavior.</p>"
                 </div>
-              </div>
             </div>
-          </div>
         </div>
       </section>
 
@@ -209,9 +203,7 @@ export default function AI2026JulyRevolutionaryBreakthrough() {
                 Learn More
               </a>
             </div>
-          </div>
         </div>
       </section>
-    </div>
   );
-}
+}</div></div></div></div></div></div></div></div>

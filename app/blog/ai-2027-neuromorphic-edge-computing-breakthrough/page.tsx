@@ -51,7 +51,6 @@ export default function NeuromorphicEdgeComputingBreakthrough() {
               <div className="text-2xl font-extrabold text-blue-400 mb-1">99.99%</div>"
               <div className="text-xs text-blue-300">Reliability</div>"
             </div>
-          </div>
         </div>
 
         {/* Article Content */}
@@ -79,7 +78,6 @@ export default function NeuromorphicEdgeComputingBreakthrough() {
                 <li>• <strong>Edge-Native Architecture:</strong> Optimized for distributed edge deployments</li>
               </ul>
             </div>
-          </div>
 
           <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 mb-8">"
             <h2 className="text-3xl font-bold text-white mb-6">Fortune 500 Success Stories</h2>"
@@ -93,7 +91,6 @@ export default function NeuromorphicEdgeComputingBreakthrough() {
                 <div className="text-sm text-blue-300">"
                   <strong>Results:</strong> 78% downtime reduction, $47.8M savings, 99.8% quality accuracy
                 </div>
-              </div>
               
               <div className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-xl p-6 border border-purple-500/20">"
                 <h3 className="text-xl font-bold text-purple-400 mb-3">Healthcare Leader</h3>"
@@ -104,9 +101,7 @@ export default function NeuromorphicEdgeComputingBreakthrough() {
                 <div className="text-sm text-purple-300">"
                   <strong>Results:</strong> 95% faster response, 67% better outcomes, $127M savings
                 </div>
-              </div>
             </div>
-          </div>
 
           <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 mb-8">"
             <h2 className="text-3xl font-bold text-white mb-6">Implementation Blueprint</h2>"
@@ -146,7 +141,6 @@ export default function NeuromorphicEdgeComputingBreakthrough() {
                   <li>• Continuous optimization</li>
                 </ul>
               </div>
-            </div>
           </div>
 
           <div className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 backdrop-blur-lg rounded-2xl p-8 border border-green-500/30 mb-8">"
@@ -169,7 +163,6 @@ export default function NeuromorphicEdgeComputingBreakthrough() {
                 <div className="text-2xl font-bold text-cyan-400 mb-2">2030</div>"
                 <div className="text-sm text-gray-300">Conscious edge intelligence</div>"
               </div>
-            </div>
           </div>
         </article>
 
@@ -192,8 +185,6 @@ export default function NeuromorphicEdgeComputingBreakthrough() {
               View More Case Studies
             </a>
           </div>
-        </div>
       </div>
-    </div>
   );
-}
+}</div></div></div></div></div></div></div></div></div>

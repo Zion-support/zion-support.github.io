@@ -54,9 +54,7 @@ export default function AIBlockchainIntegration2025Page() {
                   <div className="text-3xl font-bold">85%</div>"
                   <div className="text-sm opacity-90">Cost Reduction</div>"
                 </div>
-              </div>
             </div>
-          </div>
 
           {/* Service Overview */}
           <section className="mb-12">"
@@ -127,7 +125,6 @@ export default function AIBlockchainIntegration2025Page() {
                   </li>
                 </ul>
               </div>
-            </div>
           </section>
 
           {/* Technology Stack */}
@@ -163,7 +160,6 @@ export default function AIBlockchainIntegration2025Page() {
                 </p>
                 <div className="text-yellow-600 font-semibold text-sm">Universal interoperability</div>"
               </div>
-            </div>
           </section>
 
           {/* Use Cases */}
@@ -180,7 +176,6 @@ export default function AIBlockchainIntegration2025Page() {
                   </p>
                   <div className="text-sm text-amber-600 font-semibold">95% reduction in fraud</div>"
                 </div>
-              </div>
 
               <div className="flex items-start gap-6 p-6 bg-white rounded-xl shadow-md border border-gray-200">"
                 <div className="flex-shrink-0 w-12 h-12 bg-orange-600 text-white rounded-full flex items-center justify-center font-bold text-xl">🏦</div>"
@@ -192,7 +187,6 @@ export default function AIBlockchainIntegration2025Page() {
                   </p>
                   <div className="text-sm text-orange-600 font-semibold">40% higher yields vs traditional</div>"
                 </div>
-              </div>
 
               <div className="flex items-start gap-6 p-6 bg-white rounded-xl shadow-md border border-gray-200">"
                 <div className="flex-shrink-0 w-12 h-12 bg-red-600 text-white rounded-full flex items-center justify-center font-bold text-xl">📜</div>"
@@ -204,7 +198,6 @@ export default function AIBlockchainIntegration2025Page() {
                   </p>
                   <div className="text-sm text-red-600 font-semibold">$100B+ assets tokenized</div>"
                 </div>
-              </div>
 
               <div className="flex items-start gap-6 p-6 bg-white rounded-xl shadow-md border border-gray-200">"
                 <div className="flex-shrink-0 w-12 h-12 bg-purple-600 text-white rounded-full flex items-center justify-center font-bold text-xl">🔐</div>"
@@ -216,7 +209,6 @@ export default function AIBlockchainIntegration2025Page() {
                   </p>
                   <div className="text-sm text-purple-600 font-semibold">99.99% fraud prevention</div>"
                 </div>
-              </div>
             </div>
           </section>
 
@@ -241,7 +233,6 @@ export default function AIBlockchainIntegration2025Page() {
                       <div className="font-semibold">Robert Lee</div>"
                       <div className="text-amber-200 text-sm">COO, GlobalTrade Logistics</div>"
                     </div>
-                  </div>
                 </div>
                 <div className="space-y-4">"
                   <div className="flex justify-between items-center p-4 bg-white/10 rounded-lg">"
@@ -260,9 +251,7 @@ export default function AIBlockchainIntegration2025Page() {
                     <span className="font-semibold">Transaction Speed</span>"
                     <span className="text-2xl font-bold">10,000 TPS</span>"
                   </div>
-                </div>
               </div>
-            </div>
           </section>
 
           {/* Call to Action */}
@@ -287,7 +276,6 @@ export default function AIBlockchainIntegration2025Page() {
                   Email Us
                 </a>
               </div>
-            </div>
           </section>
 
           {/* Related Services */}
@@ -329,8 +317,6 @@ export default function AIBlockchainIntegration2025Page() {
               </Link>
             </div>
           </section>
-        </div>
-      </div>
     </div>
   );
-}
+}</div></div></div></div></div></div></div></div></div></div></div></div></div></div>

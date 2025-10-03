@@ -34,7 +34,6 @@ export default function BlogPost() {
           <span>•</span>
           <span>Advanced</span>
         </div>
-      </div>
 
       <div className="prose prose-lg prose-invert max-w-none">"
         <div className="bg-gradient-to-r from-purple-900/20 to-indigo-900/20 border border-purple-500/30 rounded-xl p-6 mb-8">"
@@ -87,7 +86,6 @@ export default function BlogPost() {
                 <li>• Accuracy: 95.1% (improved)</li>
               </ul>
             </div>
-          </div>
         </div>
 
         <h3 className="text-2xl font-bold text-white mb-4">2. Adaptive Neural Architecture Search (ANAS)</h3>"
@@ -144,7 +142,6 @@ export default function BlogPost() {
             <div className="text-3xl font-bold text-purple-400 mb-2">99.9%</div>"
             <p className="text-gray-300 text-sm">Accuracy maintained after optimization</p>"
           </div>
-        </div>
 
         <h2 className="text-3xl font-bold text-white mb-6">🔮 Future Roadmap</h2>"
         <p className="text-gray-300 mb-6">"
@@ -176,7 +173,6 @@ export default function BlogPost() {
               View Success Stories
             </Link>
           </div>
-        </div>
 
         <div className="border-t border-gray-700 pt-8 mt-12">"
           <h3 className="text-xl font-bold text-white mb-4">Related Content</h3>"
@@ -190,8 +186,6 @@ export default function BlogPost() {
               <p className="text-gray-400 text-sm">Real-world case study of massive ROI achievement</p>"
             </Link>
           </div>
-        </div>
       </div>
-    </div>
   );
-}
+}</div></div></div></div></div></div>

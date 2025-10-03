@@ -47,7 +47,6 @@ export default function AutonomousEnterpriseOperations2027() {
               View Automation Services
             </Link>
           </div>
-        </div>
 
         {/* Key Metrics */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">"
@@ -67,7 +66,6 @@ export default function AutonomousEnterpriseOperations2027() {
             <div className="text-3xl font-extrabold text-orange-400 mb-2">$100M</div>"
             <div className="text-sm text-orange-300">Average Savings</div>"
           </div>
-        </div>
 
         {/* Main Content */}
         <article className="prose prose-lg prose-invert max-w-none">"
@@ -114,7 +112,6 @@ export default function AutonomousEnterpriseOperations2027() {
                   to achieve better outcomes.
                 </p>
               </div>
-            </div>
           </div>
 
           <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 mb-8">"
@@ -178,7 +175,6 @@ export default function AutonomousEnterpriseOperations2027() {
                     <span className="text-gray-300">Error Rate Reduction</span>"
                     <span className="text-orange-400 font-bold">99.7%</span>"
                   </div>
-                </div>
               </div>
               <div>
                 <h3 className="text-xl font-bold text-white mb-4">Financial Impact</h3>"
@@ -199,9 +195,7 @@ export default function AutonomousEnterpriseOperations2027() {
                     <span className="text-gray-300">Revenue Growth</span>"
                     <span className="text-orange-400 font-bold">40%</span>"
                   </div>
-                </div>
               </div>
-            </div>
           </div>
 
           <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 mb-8">"
@@ -251,7 +245,6 @@ export default function AutonomousEnterpriseOperations2027() {
                   <li>• Continuous optimization</li>
                 </ul>
               </div>
-            </div>
           </div>
 
           <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 mb-8">"
@@ -276,7 +269,6 @@ export default function AutonomousEnterpriseOperations2027() {
                 View Automation Services
               </Link>
             </div>
-          </div>
         </article>
 
         {/* Related Content */}
@@ -319,8 +311,6 @@ export default function AutonomousEnterpriseOperations2027() {
               </div>
             </Link>
           </div>
-        </div>
       </div>
-    </div>
   );
-}
+}</div></div></div></div></div></div></div></div></div></div>

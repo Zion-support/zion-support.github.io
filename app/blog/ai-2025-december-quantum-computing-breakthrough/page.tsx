@@ -65,9 +65,7 @@ export default function AI2025DecemberQuantumComputingBreakthrough() {
                 <div className="text-2xl font-extrabold text-green-400 mb-1">24/7</div>"
                 <div className="text-xs text-green-300">Operation</div>"
               </div>
-            </div>
           </div>
-        </div>
       </section>
 
       {/* Quantum Details */}
@@ -111,7 +109,6 @@ export default function AI2025DecemberQuantumComputingBreakthrough() {
                   <li>• Predictive analytics</li>
                 </ul>
               </div>
-            </div>
 
             {/* Applications */}
             <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 mb-16">"
@@ -132,9 +129,7 @@ export default function AI2025DecemberQuantumComputingBreakthrough() {
                   <h4 className="text-xl font-bold text-white mb-2">Financial Modeling</h4>"
                   <p className="text-gray-300 text-sm">Advanced risk analysis and portfolio optimization at unprecedented scale</p>"
                 </div>
-              </div>
             </div>
-          </div>
         </div>
       </section>
 
@@ -160,9 +155,7 @@ export default function AI2025DecemberQuantumComputingBreakthrough() {
                 Explore Services →
               </a>
             </div>
-          </div>
         </div>
       </section>
-    </div>
   );
-}
+}</div></div></div></div></div></div></div>

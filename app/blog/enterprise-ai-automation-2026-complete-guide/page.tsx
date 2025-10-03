@@ -92,7 +92,6 @@ export default function EnterpriseAIAutomationGuide() {
                     <div className="text-2xl font-extrabold text-cyan-400 mb-2">24/7</div>"
                     <div className="text-cyan-300 text-sm">Operation</div>"
                   </div>
-                </div>
               </div>
             </section>
 
@@ -118,7 +117,6 @@ export default function EnterpriseAIAutomationGuide() {
                     its strategies and approaches based on changing business conditions.
                   </p>
                 </div>
-              </div>
             </section>
 
             <section id="autonomous-ops" className="mb-12">"
@@ -167,7 +165,6 @@ export default function EnterpriseAIAutomationGuide() {
                     <li>• Staff training and support</li>
                   </ul>
                 </div>
-              </div>
             </section>
 
             <section id="case-studies" className="mb-12">"
@@ -196,9 +193,7 @@ export default function EnterpriseAIAutomationGuide() {
                       <div className="text-2xl font-extrabold text-teal-400 mb-1">1.4</div>"
                       <div className="text-teal-300 text-sm">Month Payback</div>"
                     </div>
-                  </div>
                 </div>
-              </div>
             </section>
 
             <section id="best-practices" className="mb-12">"
@@ -228,7 +223,6 @@ export default function EnterpriseAIAutomationGuide() {
                     <li>• Neglecting security considerations</li>
                   </ul>
                 </div>
-              </div>
             </section>
 
             <section id="future-trends" className="mb-12">"
@@ -257,7 +251,6 @@ export default function EnterpriseAIAutomationGuide() {
                     Complete business operations will be managed by AI systems with minimal human intervention.
                   </p>
                 </div>
-              </div>
             </section>
 
             <section className="mb-12">"
@@ -280,9 +273,6 @@ export default function EnterpriseAIAutomationGuide() {
                 </a>
               </div>
             </section>
-          </div>
         </article>
-      </div>
-    </div>
   );
-}
+}</div></div></div></div></div></div></div></div></div></div>

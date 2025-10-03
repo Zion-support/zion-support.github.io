@@ -54,7 +54,6 @@ export default function March2025AutonomousOperationsRevolutionPage() {
                 <div className="text-2xl font-extrabold text-blue-400 mb-1">15%</div>"
                 <div className="text-xs text-blue-300">Monthly Improvement</div>"
               </div>
-            </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <a 
@@ -68,7 +67,6 @@ export default function March2025AutonomousOperationsRevolutionPage() {
                 View Success Stories →
               </a>
             </div>
-          </div>
         </div>
       </section>
 
@@ -104,7 +102,6 @@ export default function March2025AutonomousOperationsRevolutionPage() {
                     <li>• <strong>Scalability Gains</strong>: $4 billion saved through dynamic resource allocation</li>
                   </ul>
                 </div>
-              </div>
             </div>
 
             <div className="bg-gradient-to-r from-blue-500/10 to-cyan-500/10 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/20 mb-12">"
@@ -139,7 +136,6 @@ export default function March2025AutonomousOperationsRevolutionPage() {
                     <li>• <strong>Strategic Planning</strong>: Long-term operational planning with automated execution</li>
                   </ul>
                 </div>
-              </div>
             </div>
 
             <div className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/20 mb-12">"
@@ -167,7 +163,6 @@ export default function March2025AutonomousOperationsRevolutionPage() {
                         <li>• Client portfolio optimization</li>
                       </ul>
                     </div>
-                  </div>
                 </div>
 
                 <div className="bg-white/5 rounded-xl p-6 border border-white/10">"
@@ -192,7 +187,6 @@ export default function March2025AutonomousOperationsRevolutionPage() {
                         <li>• Predictive maintenance scheduling</li>
                       </ul>
                     </div>
-                  </div>
                 </div>
 
                 <div className="bg-white/5 rounded-xl p-6 border border-white/10">"
@@ -217,9 +211,7 @@ export default function March2025AutonomousOperationsRevolutionPage() {
                         <li>• Insurance and billing automation</li>
                       </ul>
                     </div>
-                  </div>
                 </div>
-              </div>
             </div>
 
             <div className="bg-gradient-to-r from-indigo-500/10 to-purple-500/10 backdrop-blur-sm rounded-2xl p-8 border border-indigo-500/20 mb-12">"
@@ -252,7 +244,6 @@ export default function March2025AutonomousOperationsRevolutionPage() {
                     <li>• Innovation and growth</li>
                   </ul>
                 </div>
-              </div>
             </div>
 
             <div className="bg-gradient-to-r from-emerald-500/10 to-teal-500/10 backdrop-blur-sm rounded-2xl p-8 border border-emerald-500/20">"
@@ -273,9 +264,7 @@ export default function March2025AutonomousOperationsRevolutionPage() {
                   Learn More About Our Services
                 </a>
               </div>
-            </div>
           </div>
-        </div>
       </section>
 
       {/* Related Articles */}
@@ -310,9 +299,7 @@ export default function March2025AutonomousOperationsRevolutionPage() {
                 View Case Studies →
               </a>
             </div>
-          </div>
         </div>
       </section>
-    </div>
   );
-}
+}</div></div></div></div></div></div></div></div></div></div></div></div></div>

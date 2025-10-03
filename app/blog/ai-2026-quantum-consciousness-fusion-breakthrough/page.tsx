@@ -72,9 +72,7 @@ export default function AI2026QuantumConsciousnessFusionBreakthrough() {
                 <div className="text-2xl font-extrabold text-cyan-400 mb-1">$3B</div>"
                 <div className="text-xs text-cyan-300">Client Value</div>"
               </div>
-            </div>
           </div>
-        </div>
       </section>
 
       {/* Revolutionary Breakthrough Details */}
@@ -135,7 +133,6 @@ export default function AI2026QuantumConsciousnessFusionBreakthrough() {
                 <li>• Autonomous business operations</li>
               </ul>
             </div>
-          </div>
         </div>
       </section>
 
@@ -171,7 +168,6 @@ export default function AI2026QuantumConsciousnessFusionBreakthrough() {
                 <div className="text-3xl font-extrabold text-rose-400 mb-2">0.5</div>"
                 <div className="text-rose-300 text-sm">Month Payback Period</div>"
               </div>
-            </div>
             
             <a 
               href="/case-studies/fortune-500-quantum-consciousness-mega-success"
@@ -179,7 +175,6 @@ export default function AI2026QuantumConsciousnessFusionBreakthrough() {
               Read Full Case Study →
             </a>
           </div>
-        </div>
       </section>
 
       {/* Technical Implementation */}
@@ -219,7 +214,6 @@ export default function AI2026QuantumConsciousnessFusionBreakthrough() {
                 <li>• Zero downtime operations</li>
               </ul>
             </div>
-          </div>
         </div>
       </section>
 
@@ -246,9 +240,7 @@ export default function AI2026QuantumConsciousnessFusionBreakthrough() {
                 View $3B Success Story →
               </a>
             </div>
-          </div>
         </div>
       </section>
-    </div>
   );
-}
+}</div></div></div></div></div></div></div></div>

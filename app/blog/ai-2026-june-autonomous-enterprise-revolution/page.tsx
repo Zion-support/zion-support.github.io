@@ -64,7 +64,6 @@ export default function AI2026JuneAutonomousEnterpriseRevolution() {
               <div className="text-2xl font-extrabold text-cyan-400 mb-1">24/7</div>"
               <div className="text-xs text-cyan-300">Autonomous</div>"
             </div>
-          </div>
         </div>
 
         {/* Revolution Details */}
@@ -124,7 +123,6 @@ export default function AI2026JuneAutonomousEnterpriseRevolution() {
                 <li>• 24/7 autonomous operation</li>
               </ul>
             </div>
-          </div>
         </section>
 
         {/* Call to Action */}
@@ -146,8 +144,6 @@ export default function AI2026JuneAutonomousEnterpriseRevolution() {
               Learn More
             </a>
           </div>
-        </div>
       </div>
-    </div>
   );
-}
+}</div></div></div></div>

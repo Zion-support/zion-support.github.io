@@ -45,7 +45,6 @@ export default function AI2026MayRevolutionaryBreakthrough() {
                 Learn More
               </a>
             </div>
-          </div>
         </div>
       </section>
       
@@ -60,8 +59,6 @@ export default function AI2026MayRevolutionaryBreakthrough() {
               Discover the groundbreaking May 2026 AI breakthrough featuring quantum consciousness fusion and autonomous enterprise transformation.
             </p>
           </div>
-        </div>
       </section>
-    </div>
   );
-}
+}</div></div></div>

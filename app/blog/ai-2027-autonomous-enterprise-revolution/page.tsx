@@ -63,7 +63,6 @@ export default function AutonomousEnterpriseRevolution() {
                 <div className="text-2xl font-bold text-emerald-400 mb-2">Autonomous Enterprise</div>"
                 <div className="text-gray-300">Complete Business Independence</div>"
               </div>
-            </div>
           </section>
 
           {/* Technical Deep Dive */}
@@ -97,7 +96,6 @@ export default function AutonomousEnterpriseRevolution() {
                     <li>• Self-optimizing supply chain management</li>
                   </ul>
                 </div>
-              </div>
             </section>
 
             <section className="mb-12">"
@@ -125,7 +123,6 @@ export default function AutonomousEnterpriseRevolution() {
                     <div className="text-gray-300 mb-2">Self-Evolution</div>"
                     <div className="text-sm text-gray-400">Continuous Improvement</div>"
                   </div>
-                </div>
               </div>
             </section>
 
@@ -178,7 +175,6 @@ export default function AutonomousEnterpriseRevolution() {
                     <li>• Self-evolving healthcare delivery</li>
                   </ul>
                 </div>
-              </div>
             </section>
 
             <section className="mb-12">"
@@ -236,7 +232,6 @@ export default function AutonomousEnterpriseRevolution() {
                     <li>• Continuous autonomy evolution</li>
                   </ul>
                 </div>
-              </div>
             </section>
 
             <section className="mb-12">"
@@ -265,9 +260,7 @@ export default function AutonomousEnterpriseRevolution() {
                     <li>• Infinite growth potential</li>
                   </ul>
                 </div>
-              </div>
             </section>
-          </div>
 
           {/* CTA Section */}
           <section className="mt-16 bg-gradient-to-r from-emerald-500/10 to-teal-500/10 border border-emerald-500/30 rounded-2xl p-8 text-center">"
@@ -290,7 +283,5 @@ export default function AutonomousEnterpriseRevolution() {
             </div>
           </section>
         </article>
-      </div>
-    </div>
   );
-}
+}</div></div></div></div></div></div></div></div></div>

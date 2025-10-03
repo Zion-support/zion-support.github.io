@@ -73,9 +73,7 @@ export default function AI2026QuantumComputingRevolutionaryBreakthrough() {
                 <div className="text-2xl font-extrabold text-cyan-400 mb-1">100%</div>"
                 <div className="text-xs text-cyan-300">Quantum Coherence</div>"
               </div>
-            </div>
           </div>
-        </div>
       </section>
 
       {/* Quantum Breakthrough Details */}
@@ -136,7 +134,6 @@ export default function AI2026QuantumComputingRevolutionaryBreakthrough() {
                 <li>• Instant pattern recognition</li>
               </ul>
             </div>
-          </div>
         </div>
       </section>
 
@@ -173,7 +170,6 @@ export default function AI2026QuantumComputingRevolutionaryBreakthrough() {
                   <span className="text-gray-300">Error Rate</span>"
                   <span className="text-cyan-400 font-bold">0.01%</span>"
                 </div>
-              </div>
             </div>
 
             <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">"
@@ -195,9 +191,7 @@ export default function AI2026QuantumComputingRevolutionaryBreakthrough() {
                   <span className="text-gray-300">Learning Rate</span>"
                   <span className="text-cyan-400 font-bold">Adaptive</span>"
                 </div>
-              </div>
             </div>
-          </div>
         </div>
       </section>
 
@@ -259,7 +253,6 @@ export default function AI2026QuantumComputingRevolutionaryBreakthrough() {
                 <li>• Quality control</li>
               </ul>
             </div>
-          </div>
         </div>
       </section>
 
@@ -291,9 +284,7 @@ export default function AI2026QuantumComputingRevolutionaryBreakthrough() {
                 View Success Stories
               </a>
             </div>
-          </div>
         </div>
       </section>
-    </div>
   );
-}
+}</div></div></div></div></div></div></div></div></div>

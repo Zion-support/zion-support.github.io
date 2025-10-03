@@ -48,7 +48,6 @@ export default function UltimateNeuralFusionConsulting() {
                 <div className="text-4xl font-bold text-yellow-400 mb-2">$100B+</div>"
                 <div className="text-gray-300 font-semibold">ROI Potential</div>"
               </div>
-            </div>
           </section>
 
           {/* What is Ultimate Neural Fusion */}
@@ -105,7 +104,6 @@ export default function UltimateNeuralFusionConsulting() {
                     </li>
                   </ul>
                 </div>
-              </div>
             </div>
           </section>
 
@@ -151,7 +149,6 @@ export default function UltimateNeuralFusionConsulting() {
                   <li>• ROI Maximization</li>
                 </ul>
               </div>
-            </div>
           </section>
 
           {/* Success Stories */}
@@ -170,7 +167,6 @@ export default function UltimateNeuralFusionConsulting() {
                     Read Full Case Study
                     <span className="text-xl group-hover:translate-x-1 transition-transform">→</span>"
                   </div>
-                </div>
               </Link>
 
               <div className="bg-gradient-to-br from-blue-900/30 to-indigo-900/30 rounded-2xl p-8 border border-blue-500/20">"
@@ -189,9 +185,7 @@ export default function UltimateNeuralFusionConsulting() {
                     <div className="text-2xl font-bold text-blue-400">99.99%</div>"
                     <div className="text-gray-400 text-sm">Autonomous</div>"
                   </div>
-                </div>
               </div>
-            </div>
           </section>
 
           {/* Pricing */}
@@ -287,7 +281,6 @@ export default function UltimateNeuralFusionConsulting() {
                   Go Quantum
                 </Link>
               </div>
-            </div>
           </section>
 
           {/* CTA Section */}
@@ -312,10 +305,7 @@ export default function UltimateNeuralFusionConsulting() {
                   View Success Stories
                 </Link>
               </div>
-            </div>
           </section>
         </article>
-      </div>
-    </div>
   );
-}
+}</div></div></div></div></div></div>

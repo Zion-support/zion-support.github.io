@@ -99,7 +99,6 @@ const UltimateBusinessIntelligence2025Banner = () => {
             <div className="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium">"
               Ultimate Business Intelligence 2025
             </div>
-          </div>
           <button
             onClick={handleDismiss}
             className="text-white/70 hover:text-white transition-colors p-2"
@@ -140,7 +139,6 @@ const UltimateBusinessIntelligence2025Banner = () => {
                 <div className="text-2xl font-bold text-purple-400">{currentContent.metrics.speed || currentContent.metrics.timeline}</div>"
                 <div className="text-sm text-white/80">{currentContent.metrics.speed ? 'Faster' : 'Timeline'}</div>"
               </div>
-            </div>
 
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">"
@@ -170,7 +168,6 @@ const UltimateBusinessIntelligence2025Banner = () => {
                 </span>
               )}
             </div>
-          </div>
 
           {/* Content Preview Cards */}
           <div className="space-y-4">"
@@ -191,16 +188,13 @@ const UltimateBusinessIntelligence2025Banner = () => {
                       <span>•</span>
                       <span>{item.readingTime}</span>
                     </div>
-                  </div>
                   <div className="ml-4">"
                     <div className="text-lg font-bold text-yellow-400">{item.metrics.roi}</div>"
                     <div className="text-xs text-white/70">ROI</div>"
                   </div>
-                </div>
               </div>
             ))}
           </div>
-        </div>
 
         {/* Progress Indicators */}
         <div className="flex justify-center space-x-2 mt-8">"
@@ -215,9 +209,8 @@ const UltimateBusinessIntelligence2025Banner = () => {
             />
           ))}
         </div>
-      </div>
     </div>
   );
 };
 
-export default UltimateBusinessIntelligence2025Banner;
+export default UltimateBusinessIntelligence2025Banner;</div></div></div></div></div></div></div>

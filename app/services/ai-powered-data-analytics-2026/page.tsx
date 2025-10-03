@@ -50,7 +50,6 @@ export default function AIPoweredDataAnalytics2026() {
               <div className="text-gray-700 font-semibold text-lg">Monitoring</div>"
               <div className="text-sm text-gray-600 mt-2">Always-on intelligence</div>"
             </div>
-          </div>
         </div>
       </section>
 
@@ -156,7 +155,6 @@ export default function AIPoweredDataAnalytics2026() {
                 </li>
               </ul>
             </div>
-          </div>
         </div>
       </section>
 
@@ -240,7 +238,6 @@ export default function AIPoweredDataAnalytics2026() {
                 <li><strong>ROI:</strong> 92% satisfaction score, 28% churn reduction</li>
               </ul>
             </div>
-          </div>
         </div>
       </section>
 
@@ -299,9 +296,7 @@ export default function AIPoweredDataAnalytics2026() {
                   <li>✓ <strong>Audit Logging:</strong> Complete audit trail for all data access</li>
                 </ul>
               </div>
-            </div>
           </div>
-        </div>
       </section>
 
       {/* Implementation Timeline */}
@@ -336,7 +331,6 @@ export default function AIPoweredDataAnalytics2026() {
               <h3 className="text-xl font-bold text-gray-900 mb-3">Weeks 9-10: Production Launch</h3>"
               <p className="text-gray-700">User training, production deployment, monitoring setup, performance optimization, documentation</p>"
             </div>
-          </div>
         </div>
       </section>
 
@@ -365,7 +359,6 @@ export default function AIPoweredDataAnalytics2026() {
                 <div className="text-5xl font-bold mb-2">99.9%</div>"
                 <div className="text-lg opacity-90">Model accuracy</div>"
               </div>
-            </div>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center">"
@@ -405,8 +398,6 @@ export default function AIPoweredDataAnalytics2026() {
               <p className="text-sm text-gray-600">10,000 TPS with intelligent smart contracts</p>"
             </Link>
           </div>
-        </div>
       </section>
-    </div>
   );
-}
+}</div></div></div></div></div></div></div></div></div>

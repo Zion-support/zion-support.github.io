@@ -52,7 +52,6 @@ export default function AI2025CognitiveAutomationBreakthrough() {
               <div className="text-3xl font-extrabold text-green-400 mb-2">15x</div>"
               <div className="text-sm text-green-300">Performance Gain</div>"
             </div>
-          </div>
         </div>
 
         {/* Main Content */}
@@ -102,7 +101,6 @@ export default function AI2025CognitiveAutomationBreakthrough() {
                     <li>• Continuous learning</li>
                   </ul>
                 </div>
-              </div>
 
               <div className="grid md:grid-cols-2 gap-8">"
                 <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">"
@@ -132,7 +130,6 @@ export default function AI2025CognitiveAutomationBreakthrough() {
                     <li>• Continuous optimization</li>
                   </ul>
                 </div>
-              </div>
             </section>
 
             <section className="mb-12">"
@@ -152,7 +149,6 @@ export default function AI2025CognitiveAutomationBreakthrough() {
                     <div className="text-3xl font-extrabold text-purple-400 mb-2">87%</div>"
                     <div className="text-sm text-purple-300">Faster Processing</div>"
                   </div>
-                </div>
                 <p className="text-gray-300">"
                   A leading financial institution implemented cognitive automation across all trading operations, 
                   achieving unprecedented decision accuracy while dramatically reducing processing times and 
@@ -175,7 +171,6 @@ export default function AI2025CognitiveAutomationBreakthrough() {
                     <div className="text-3xl font-extrabold text-blue-400 mb-2">99.8%</div>"
                     <div className="text-sm text-blue-300">Quality Score</div>"
                   </div>
-                </div>
                 <p className="text-gray-300">"
                   A Fortune 100 manufacturing company deployed cognitive automation across production planning 
                   and quality control, achieving 15x performance improvements while maintaining near-perfect 
@@ -198,7 +193,6 @@ export default function AI2025CognitiveAutomationBreakthrough() {
                     <div className="text-3xl font-extrabold text-green-400 mb-2">$2.3B</div>"
                     <div className="text-sm text-green-300">Cost Savings</div>"
                   </div>
-                </div>
                 <p className="text-gray-300">"
                   A major healthcare system implemented cognitive automation for diagnostic processes, 
                   achieving 78% faster diagnosis times with 96% accuracy while reducing operational costs by $2.3B.
@@ -241,7 +235,6 @@ export default function AI2025CognitiveAutomationBreakthrough() {
                     maximum performance, accuracy, and value generation.
                   </p>
                 </div>
-              </div>
             </section>
 
             <section className="mb-12">"
@@ -277,10 +270,7 @@ export default function AI2025CognitiveAutomationBreakthrough() {
                   View Services
                 </a>
               </div>
-            </div>
           </div>
-        </div>
       </div>
-    </div>
   );
-}
+}</div></div></div></div></div></div></div></div></div></div>

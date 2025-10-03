@@ -75,7 +75,6 @@ export default function AI2026AutonomousEnterpriseArchitecture() {
               business priorities, and optimization goals.
             </p>
           </div>
-        </div>
 
         {/* Main Content */}
 <div className="max-w-4xl mx-auto">"
@@ -129,9 +128,7 @@ export default function AI2026AutonomousEnterpriseArchitecture() {
                   Learn More
                 </Link>
               </div>
-            </div>
           </div>
-        </div>
 
         {/* Related Content */}
         <div className="mt-16">
@@ -167,7 +164,6 @@ export default function AI2026AutonomousEnterpriseArchitecture() {
               </div>
             </Link>
           </div>
-        </div>
 
         {/* Back to Blog */}
         <div className="text-center mt-16">
@@ -180,11 +176,10 @@ export default function AI2026AutonomousEnterpriseArchitecture() {
             Back to Blog
           </Link>
         </div>
-      </div>
     </div>
   );
 }
 </path>
 </path>
 </path>
-</path>
+</path></div></div>

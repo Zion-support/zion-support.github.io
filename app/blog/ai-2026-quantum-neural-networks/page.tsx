@@ -45,9 +45,7 @@ export default function AIQuantumNeuralNetworks2026() {
                 <div className="text-4xl font-bold text-blue-400 mb-2">0.1ms</div>"
                 <div className="text-purple-100">Response Time</div>"
               </div>
-            </div>
           </div>
-        </div>
       </section>
 
       {/* Introduction */}
@@ -65,7 +63,6 @@ export default function AIQuantumNeuralNetworks2026() {
               and scientific research.
             </p>
           </div>
-        </div>
       </section>
 
       {/* Quantum Advantages */}
@@ -123,7 +120,6 @@ export default function AIQuantumNeuralNetworks2026() {
                 problems that are impossible for classical computers.
               </p>
             </div>
-          </div>
         </div>
       </section>
 
@@ -183,7 +179,6 @@ export default function AIQuantumNeuralNetworks2026() {
               </tbody>
             </table>
           </div>
-        </div>
       </section>
 
       {/* Enterprise Applications */}
@@ -277,7 +272,6 @@ export default function AIQuantumNeuralNetworks2026() {
                 </li>
               </ul>
             </div>
-          </div>
         </div>
       </section>
 
@@ -297,7 +291,6 @@ export default function AIQuantumNeuralNetworks2026() {
                   Assess data compatibility and prepare quantum-ready datasets.
                 </p>
               </div>
-            </div>
             <div className="flex gap-6 items-start">"
               <div className="bg-indigo-600 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg flex-shrink-0">2</div>"
               <div>
@@ -307,7 +300,6 @@ export default function AIQuantumNeuralNetworks2026() {
                   use cases. Develop quantum circuit optimizations for maximum efficiency.
                 </p>
               </div>
-            </div>
             <div className="flex gap-6 items-start">"
               <div className="bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg flex-shrink-0">3</div>"
               <div>
@@ -317,7 +309,6 @@ export default function AIQuantumNeuralNetworks2026() {
                   seamless data flow and result interpretation mechanisms.
                 </p>
               </div>
-            </div>
             <div className="flex gap-6 items-start">"
               <div className="bg-cyan-600 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg flex-shrink-0">4</div>"
               <div>
@@ -327,7 +318,6 @@ export default function AIQuantumNeuralNetworks2026() {
                   comprehensive testing and validation of quantum neural network outputs.
                 </p>
               </div>
-            </div>
             <div className="flex gap-6 items-start">"
               <div className="bg-green-600 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg flex-shrink-0">5</div>"
               <div>
@@ -337,9 +327,7 @@ export default function AIQuantumNeuralNetworks2026() {
                   and maintenance protocols. Train operations teams on quantum system management.
                 </p>
               </div>
-            </div>
           </div>
-        </div>
       </section>
 
       {/* CTA Section */}
@@ -364,8 +352,6 @@ export default function AIQuantumNeuralNetworks2026() {
               Call +1 302 464 0950
             </a>
           </div>
-        </div>
       </section>
-    </div>
   );
-}
+}</div></div></div></div></div></div></div></div></div></div></div></div></div></div>

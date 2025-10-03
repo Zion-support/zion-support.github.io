@@ -388,7 +388,6 @@ export default function ServicesPage() {
               Get a Quote
             </a>
           </div>
-        </div>
       </section>
 
       {/* Services Grid */}
@@ -441,7 +440,6 @@ export default function ServicesPage() {
               </div>
             ))}
           </div>
-        </div>
       </section>
 
       {/* Success Metrics */}
@@ -477,7 +475,6 @@ export default function ServicesPage() {
               <p className="text-gray-700 font-semibold">Projects Delivered</p>"
               <p className="text-sm text-gray-600 mt-2">Successful implementations worldwide</p>"
             </div>
-          </div>
         </div>
       </section>
 
@@ -514,7 +511,6 @@ export default function ServicesPage() {
               <h3 className="text-xl font-bold text-gray-900 mb-3">Optimization</h3>"
               <p className="text-gray-600">Ongoing monitoring, support, and optimization to ensure continued performance and growth.</p>"
             </div>
-          </div>
         </div>
       </section>
 
@@ -665,7 +661,6 @@ export default function ServicesPage() {
                 Contact Sales
               </a>
             </div>
-          </div>
 
           <div className="text-center mt-12">
             <p className="text-lg text-gray-600 mb-4">
@@ -676,7 +671,6 @@ export default function ServicesPage() {
               Cloud Migration: $2,999-15,999 | Custom Development: $150-300/hour
             </p>
           </div>
-        </div>
       </section>
 
       {/* CTA Section */}
@@ -712,13 +706,11 @@ export default function ServicesPage() {
                 </svg>
                 364 E Main St STE 1008, Middletown DE 19709
               </div>
-            </div>
             <div className="mt-4 text-center">
               <p className="text-sm text-blue-100">
                 Visit us at: <a href="https://ziontechgroup.com" className="underline hover:text-white">https://ziontechgroup.com</a>
               </p>
             </div>
-          </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:+13024640950"
@@ -731,8 +723,6 @@ export default function ServicesPage() {
               Email Us
             </a>
           </div>
-        </div>
       </section>
-    </div>
   );
-}
+}</div></div></div></div></div></div></div></div></div></div>

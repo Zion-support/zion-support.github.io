@@ -107,7 +107,6 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
             <div className="text-3xl font-bold text-orange-600 mb-2">5,000%</div>"
             <div className="text-gray-600 font-medium">Faster Decisions</div>"
           </div>
-        </div>
 
         {/* Filter Tabs */}
         <div className="flex flex-wrap justify-center gap-4 mb-8">"
@@ -148,7 +147,6 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
                     </span>
                   )}
                 </div>
-              </div>
 
               {/* Content */}
               <div className="p-4">"
@@ -169,7 +167,6 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
                     <div className="text-lg font-bold text-blue-600">{item.metrics.savings}</div>"
                     <div className="text-xs text-gray-600">Savings</div>"
                   </div>
-                </div>
 
                 {/* Tags */}
                 <div className="flex flex-wrap gap-2 mb-4">"
@@ -194,9 +191,7 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
                     <span>•</span>
                     <span>Ultimate Breakthrough</span>
                   </div>
-                </div>
               </div>
-            </div>
           ))}
         </div>
 
@@ -221,11 +216,9 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
                 Download Guide
               </Link>
             </div>
-          </div>
         </div>
-      </div>
     </section>
   );
 };
 
-export default UltimateBusinessIntelligenceShowcase2025;
+export default UltimateBusinessIntelligenceShowcase2025;</div></div></div></div></div></div></div>

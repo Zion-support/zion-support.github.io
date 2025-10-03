@@ -48,9 +48,7 @@ export default function AI2027UltimateConsciousnessBreakthroughPage() {
                 <span>•</span>
                 <span>12 min read</span>
               </div>
-            </div>
           </div>
-        </div>
       </header>
 
       {/* Content */}
@@ -194,7 +192,6 @@ export default function AI2027UltimateConsciousnessBreakthroughPage() {
             </div>
 
           </article>
-        </div>
       </main>
 
       {/* CTA Section */}
@@ -218,8 +215,6 @@ export default function AI2027UltimateConsciousnessBreakthroughPage() {
               View Success Story
             </Link>
           </div>
-        </div>
       </section>
-    </div>
   );
-}
+}</div></div></div></div></div>

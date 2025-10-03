@@ -54,9 +54,7 @@ export default function AICloudInfrastructure2025Page() {
                   <div className="text-3xl font-bold">5x</div>"
                   <div className="text-sm opacity-90">Faster Deployment</div>"
                 </div>
-              </div>
             </div>
-          </div>
 
           {/* Service Overview */}
           <section className="mb-12">"
@@ -127,7 +125,6 @@ export default function AICloudInfrastructure2025Page() {
                   </li>
                 </ul>
               </div>
-            </div>
           </section>
 
           {/* Technology Stack */}
@@ -163,7 +160,6 @@ export default function AICloudInfrastructure2025Page() {
                 </p>
                 <div className="text-purple-600 font-semibold text-sm">3x faster performance</div>"
               </div>
-            </div>
           </section>
 
           {/* Features Deep Dive */}
@@ -180,7 +176,6 @@ export default function AICloudInfrastructure2025Page() {
                   </p>
                   <div className="text-sm text-cyan-600 font-semibold">90% reduction in manual tasks</div>"
                 </div>
-              </div>
 
               <div className="flex items-start gap-6 p-6 bg-white rounded-xl shadow-md border border-gray-200">"
                 <div className="flex-shrink-0 w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-xl">💰</div>"
@@ -192,7 +187,6 @@ export default function AICloudInfrastructure2025Page() {
                   </p>
                   <div className="text-sm text-blue-600 font-semibold">70% average cost reduction</div>"
                 </div>
-              </div>
 
               <div className="flex items-start gap-6 p-6 bg-white rounded-xl shadow-md border border-gray-200">"
                 <div className="flex-shrink-0 w-12 h-12 bg-purple-600 text-white rounded-full flex items-center justify-center font-bold text-xl">🌐</div>"
@@ -204,7 +198,6 @@ export default function AICloudInfrastructure2025Page() {
                   </p>
                   <div className="text-sm text-purple-600 font-semibold">Unified multi-cloud management</div>"
                 </div>
-              </div>
 
               <div className="flex items-start gap-6 p-6 bg-white rounded-xl shadow-md border border-gray-200">"
                 <div className="flex-shrink-0 w-12 h-12 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-xl">🛡️</div>"
@@ -216,7 +209,6 @@ export default function AICloudInfrastructure2025Page() {
                   </p>
                   <div className="text-sm text-green-600 font-semibold">100% compliance maintained</div>"
                 </div>
-              </div>
             </div>
           </section>
 
@@ -241,7 +233,6 @@ export default function AICloudInfrastructure2025Page() {
                       <div className="font-semibold">Sarah Chen</div>"
                       <div className="text-cyan-200 text-sm">CTO, GlobalShop E-Commerce</div>"
                     </div>
-                  </div>
                 </div>
                 <div className="space-y-4">"
                   <div className="flex justify-between items-center p-4 bg-white/10 rounded-lg">"
@@ -260,9 +251,7 @@ export default function AICloudInfrastructure2025Page() {
                     <span className="font-semibold">Deployment Speed</span>"
                     <span className="text-2xl font-bold">5x Faster</span>"
                   </div>
-                </div>
               </div>
-            </div>
           </section>
 
           {/* Call to Action */}
@@ -287,7 +276,6 @@ export default function AICloudInfrastructure2025Page() {
                   Email Us
                 </a>
               </div>
-            </div>
           </section>
 
           {/* Related Services */}
@@ -329,8 +317,6 @@ export default function AICloudInfrastructure2025Page() {
               </Link>
             </div>
           </section>
-        </div>
-      </div>
     </div>
   );
-}
+}</div></div></div></div></div></div></div></div></div></div></div></div></div></div>

@@ -65,9 +65,7 @@ export default function SustainableAIRevolutionPage() {
                 <div className="text-2xl font-extrabold text-blue-400 mb-1">500+</div>"
                 <div className="text-xs text-blue-300">Companies</div>"
               </div>
-            </div>
           </div>
-        </div>
       </header>
 
       {/* Main Content */}
@@ -147,7 +145,6 @@ export default function SustainableAIRevolutionPage() {
                     Continuous environmental impact tracking and automatic optimization for maximum sustainability.
                   </p>
                 </div>
-              </div>
             </section>
 
             {/* Technical Implementation */}
@@ -179,7 +176,6 @@ export default function SustainableAIRevolutionPage() {
                 </ul>
               </div>
             </section>
-          </div>
 
           {/* Sidebar */}
           <aside className="space-y-8">"
@@ -202,7 +198,6 @@ export default function SustainableAIRevolutionPage() {
                   <span className="text-gray-300">Companies Transformed</span>"
                   <span className="text-blue-400 font-bold">500+</span>"
                 </div>
-              </div>
             </div>
 
             {/* Related Content */}
@@ -222,7 +217,6 @@ export default function SustainableAIRevolutionPage() {
                   <div className="text-sm text-gray-400">Fortune 100 Transformation</div>"
                 </Link>
               </div>
-            </div>
 
             {/* CTA */}
             <div className="bg-gradient-to-br from-purple-900/20 to-indigo-900/20 rounded-xl p-6 border border-purple-500/20 text-center">"
@@ -241,4 +235,4 @@ export default function SustainableAIRevolutionPage() {
       </main>
     </div>
   );
-}
+}</div></div></div></div></div>

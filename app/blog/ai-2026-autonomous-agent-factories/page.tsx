@@ -96,7 +96,6 @@ export default function AI2026AutonomousAgentFactoriesPage() {
                 Real-time analytics and optimization systems that continuously improve agent performance and automatically retire underperforming agents.
               </p>
             </div>
-          </div>
 
           <h3 className="text-2xl font-bold mb-4 text-purple-400">Enterprise Impact & ROI</h3>"
           <div className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/30 rounded-2xl p-8 mb-8">"
@@ -114,7 +113,6 @@ export default function AI2026AutonomousAgentFactoriesPage() {
                 <div className="text-4xl font-extrabold text-blue-400 mb-2">300%</div>"
                 <div className="text-gray-300 text-sm">ROI in First Year</div>"
               </div>
-            </div>
           </div>
 
           <h3 className="text-2xl font-bold mb-4 text-cyan-400">Implementation Roadmap</h3>"
@@ -127,7 +125,6 @@ export default function AI2026AutonomousAgentFactoriesPage() {
                 <h4 className="text-xl font-bold mb-2 text-white">Assessment & Planning</h4>"
                 <p className="text-gray-300">Comprehensive analysis of current processes and identification of automation opportunities across your organization.</p>"
               </div>
-            </div>
             
             <div className="flex gap-4">"
               <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center font-bold text-white">"
@@ -137,7 +134,6 @@ export default function AI2026AutonomousAgentFactoriesPage() {
                 <h4 className="text-xl font-bold mb-2 text-white">Pilot Agent Factory</h4>"
                 <p className="text-gray-300">Deploy a small-scale agent factory to demonstrate capabilities and refine the approach for your specific use case.</p>"
               </div>
-            </div>
             
             <div className="flex gap-4">"
               <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center font-bold text-white">"
@@ -147,7 +143,6 @@ export default function AI2026AutonomousAgentFactoriesPage() {
                 <h4 className="text-xl font-bold mb-2 text-white">Full-Scale Deployment</h4>"
                 <p className="text-gray-300">Roll out the complete agent factory ecosystem with self-replicating capabilities and autonomous management.</p>"
               </div>
-            </div>
           </div>
 
           <h3 className="text-2xl font-bold mb-4 text-green-400">Security & Governance</h3>"
@@ -212,7 +207,5 @@ export default function AI2026AutonomousAgentFactoriesPage() {
             </a>
           </div>
         </section>
-      </div>
-    </div>
   );
-}
+}</div></div></div></div></div></div></div>

@@ -85,7 +85,6 @@ export default function AI2027QuantumBreakthrough() {
                 <div className="text-sm text-green-600 font-semibold">"
                   Result: 35% cost reduction, 60% faster delivery times
                 </div>
-              </div>
               
               <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">"
                 <h3 className="text-xl font-bold text-gray-900 mb-3">🔒 Advanced Security</h3>"
@@ -96,7 +95,6 @@ export default function AI2027QuantumBreakthrough() {
                 <div className="text-sm text-green-600 font-semibold">"
                   Result: 99.9% threat detection accuracy, zero quantum-vulnerable breaches
                 </div>
-              </div>
               
               <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">"
                 <h3 className="text-xl font-bold text-gray-900 mb-3">🧠 Drug Discovery</h3>"
@@ -107,7 +105,6 @@ export default function AI2027QuantumBreakthrough() {
                 <div className="text-sm text-green-600 font-semibold">"
                   Result: 80% faster drug development, 50% higher success rates
                 </div>
-              </div>
               
               <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">"
                 <h3 className="text-xl font-bold text-gray-900 mb-3">📊 Financial Modeling</h3>"
@@ -118,7 +115,6 @@ export default function AI2027QuantumBreakthrough() {
                 <div className="text-sm text-green-600 font-semibold">"
                   Result: 25% higher returns, 90% risk reduction
                 </div>
-              </div>
             </div>
           </section>
 
@@ -143,7 +139,6 @@ export default function AI2027QuantumBreakthrough() {
                   <div className="text-2xl font-bold text-purple-600">98%</div>"
                   <div className="text-sm text-gray-600">Customer Satisfaction</div>"
                 </div>
-              </div>
             </div>
           </section>
 
@@ -173,7 +168,6 @@ export default function AI2027QuantumBreakthrough() {
                   for enterprise teams, with 95% success rates.
                 </p>
               </div>
-            </div>
           </section>
 
           <section>
@@ -210,8 +204,6 @@ export default function AI2027QuantumBreakthrough() {
               </Link>
             </div>
           </section>
-        </div>
       </article>
-    </div>
   );
-}
+}</div></div></div></div></div></div></div></div>

@@ -55,13 +55,11 @@ export default function MetaCognitiveReasoning() {
                   <div className="text-lg font-bold text-purple-300 mb-2">Core Principle:</div>"
                   <div className="text-gray-300">"An AI that can understand its own thinking process can optimize its own thinking process."</div>"
                 </div>
-              </div>
               <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-xl p-6 text-center">"
                 <div className="text-6xl mb-4">🧠💭</div>"
                 <div className="text-2xl font-bold text-purple-400 mb-2">Meta-Cognition</div>"
                 <div className="text-gray-300">Thinking About Thinking</div>"
               </div>
-            </div>
           </section>
 
           {/* Technical Deep Dive */}
@@ -107,7 +105,6 @@ export default function MetaCognitiveReasoning() {
                     <li>• Adaptive reasoning</li>
                   </ul>
                 </div>
-              </div>
             </section>
 
             <section className="mb-12">"
@@ -137,7 +134,6 @@ export default function MetaCognitiveReasoning() {
                       <li>• Performance monitoring</li>
                     </ul>
                   </div>
-                </div>
                 
                 <div className="bg-purple-500/10 border border-purple-500/30 rounded-xl p-6">"
                   <h3 className="text-xl font-bold mb-4 text-purple-300">🧩 Adaptive Reasoning Strategies</h3>"
@@ -157,7 +153,6 @@ export default function MetaCognitiveReasoning() {
                       <li>• Performance-based adaptation</li>
                     </ul>
                   </div>
-                </div>
                 
                 <div className="bg-blue-500/10 border border-blue-500/30 rounded-xl p-6">"
                   <h3 className="text-xl font-bold mb-4 text-blue-300">📊 Predictive Self-Analysis</h3>"
@@ -177,7 +172,6 @@ export default function MetaCognitiveReasoning() {
                       <li>• Task prioritization</li>
                     </ul>
                   </div>
-                </div>
               </div>
             </section>
 
@@ -211,7 +205,6 @@ export default function MetaCognitiveReasoning() {
                     <div className="text-gray-300 mb-2">Confidence Accuracy</div>"
                     <div className="text-sm text-gray-400">Self-Assessment</div>"
                   </div>
-                </div>
               </div>
             </section>
 
@@ -279,7 +272,6 @@ export default function MetaCognitiveReasoning() {
                     <li>• Churn prediction and prevention</li>
                   </ul>
                 </div>
-              </div>
             </section>
 
             <section className="mb-12">"
@@ -320,9 +312,7 @@ export default function MetaCognitiveReasoning() {
                     <li>• Human-AI cognitive symbiosis</li>
                   </ul>
                 </div>
-              </div>
             </section>
-          </div>
 
           {/* CTA Section */}
           <section className="mt-16 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/30 rounded-2xl p-8 text-center">"
@@ -345,7 +335,5 @@ export default function MetaCognitiveReasoning() {
             </div>
           </section>
         </article>
-      </div>
-    </div>
   );
-}
+}</div></div></div></div></div></div></div></div></div></div></div></div>

@@ -31,7 +31,6 @@ export default function AICybersecurity2026() {
           <span>⏱️ 28 min read</span>
           <span>👤 Zion Tech Group</span>
         </div>
-      </div>
 
       <div className="prose prose-lg max-w-none">"
         <div className="bg-gradient-to-r from-red-50 to-orange-50 p-6 rounded-xl mb-8">"
@@ -70,7 +69,6 @@ export default function AICybersecurity2026() {
               <li>• Predictive threat modeling</li>
             </ul>
           </div>
-        </div>
 
         <h3 className="text-2xl font-bold text-gray-900 mb-4">Zero-Trust Architecture</h3>"
         <div className="bg-gray-50 p-6 rounded-lg mb-8">"
@@ -88,7 +86,6 @@ export default function AICybersecurity2026() {
               <h5 className="font-bold text-purple-600 mb-2">Micro-segmentation</h5>"
               <p className="text-sm text-gray-600">Network isolation and granular access controls</p>"
             </div>
-          </div>
         </div>
 
         <h2 className="text-3xl font-bold text-gray-900 mb-6">AI-Powered Security Solutions</h2>"
@@ -114,7 +111,6 @@ export default function AICybersecurity2026() {
               and restore systems. Reduces incident response time by 85%.
             </p>
           </div>
-        </div>
 
         <h2 className="text-3xl font-bold text-gray-900 mb-6">Implementation Strategies</h2>"
         <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-xl mb-8">"
@@ -148,7 +144,6 @@ export default function AICybersecurity2026() {
               <li>• 24/7 autonomous monitoring</li>
             </ul>
           </div>
-        </div>
 
         <h2 className="text-3xl font-bold text-gray-900 mb-6">Future Security Landscape</h2>"
         <p className="text-gray-700 mb-6">"
@@ -175,7 +170,6 @@ export default function AICybersecurity2026() {
               View Security Services
             </Link>
           </div>
-        </div>
       </div>
 
       <div className="border-t border-gray-200 pt-8 mt-8">"
@@ -202,7 +196,6 @@ export default function AICybersecurity2026() {
             </div>
           </Link>
         </div>
-      </div>
     </div>
   );
-}
+}</div></div></div></div></div></div></div>

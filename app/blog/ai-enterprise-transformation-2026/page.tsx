@@ -62,7 +62,6 @@ export default function AIEnterpriseTransformation2026() {
                 <h3 className="font-semibold text-white mb-2">Optimization</h3>"
                 <p className="text-gray-300 text-sm">Maximize ROI and performance</p>"
               </div>
-            </div>
           </div>
 
           <div className="prose prose-lg prose-invert max-w-none">"
@@ -137,7 +136,5 @@ export default function AIEnterpriseTransformation2026() {
             </a>
           </div>
         </article>
-      </div>
-    </div>
   );
-}
+}</div></div></div>

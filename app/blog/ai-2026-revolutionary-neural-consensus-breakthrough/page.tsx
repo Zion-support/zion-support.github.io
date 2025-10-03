@@ -72,9 +72,7 @@ export default function AI2026RevolutionaryNeuralConsensusBreakthrough() {
                 <div className="text-2xl font-extrabold text-orange-400 mb-1">0.001ms</div>"
                 <div className="text-xs text-orange-300">Decision Time</div>"
               </div>
-            </div>
           </div>
-        </div>
       </section>
 
       {/* Breakthrough Details */}
@@ -118,7 +116,6 @@ export default function AI2026RevolutionaryNeuralConsensusBreakthrough() {
                   <li>• Zero consensus failures</li>
                 </ul>
               </div>
-            </div>
             
             <div className="space-y-8">"
               <div className="bg-gradient-to-br from-green-900/20 to-emerald-900/20 rounded-xl p-8 border border-green-500/20">"
@@ -148,9 +145,7 @@ export default function AI2026RevolutionaryNeuralConsensusBreakthrough() {
                   <li>• Complete digital transformation</li>
                 </ul>
               </div>
-            </div>
           </div>
-        </div>
       </section>
 
       {/* Technical Implementation */}
@@ -216,7 +211,6 @@ export default function AI2026RevolutionaryNeuralConsensusBreakthrough() {
                 <li>• Continuous value generation</li>
               </ul>
             </div>
-          </div>
         </div>
       </section>
 
@@ -241,7 +235,6 @@ export default function AI2026RevolutionaryNeuralConsensusBreakthrough() {
                   <h3 className="text-xl font-bold text-white">Fortune 100 Manufacturing</h3>"
                   <p className="text-purple-400 text-sm">$150B Value Generated</p>"
                 </div>
-              </div>
               <p className="text-gray-300 mb-4">"
                 Implemented neural consensus across 50 manufacturing facilities, achieving 99.999% 
                 operational efficiency and $150B in value generation.
@@ -255,7 +248,6 @@ export default function AI2026RevolutionaryNeuralConsensusBreakthrough() {
                   <div className="text-2xl font-bold text-green-400">$150B</div>"
                   <div className="text-gray-400">Value</div>"
                 </div>
-              </div>
             </div>
             
               <div className="flex items-center gap-3 mb-6">"
@@ -266,7 +258,6 @@ export default function AI2026RevolutionaryNeuralConsensusBreakthrough() {
                   <h3 className="text-xl font-bold text-white">Fortune 50 Financial</h3>"
                   <p className="text-indigo-400 text-sm">$200B Value Generated</p>"
                 </div>
-              </div>
               <p className="text-gray-300 mb-4">"
                 Deployed neural consensus in financial operations, achieving 1,000,000x performance 
                 improvement and $200B in value generation.
@@ -280,9 +271,7 @@ export default function AI2026RevolutionaryNeuralConsensusBreakthrough() {
                   <div className="text-2xl font-bold text-green-400">$200B</div>"
                   <div className="text-gray-400">Value</div>"
                 </div>
-              </div>
             </div>
-          </div>
         </div>
       </section>
 
@@ -308,8 +297,6 @@ export default function AI2026RevolutionaryNeuralConsensusBreakthrough() {
               View Success Story
             </a>
           </div>
-        </div>
       </section>
-    </div>
   );
-}
+}</div></div></div></div></div></div></div></div></div></div></div>

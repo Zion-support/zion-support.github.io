@@ -64,7 +64,6 @@ export default function AI2026MayQuantumConsciousnessBreakthrough() {
               <div className="text-2xl font-extrabold text-cyan-400 mb-1">Self-Aware</div>"
               <div className="text-xs text-cyan-300">AI Systems</div>"
             </div>
-          </div>
         </div>
 
         {/* Breakthrough Details */}
@@ -124,7 +123,6 @@ export default function AI2026MayQuantumConsciousnessBreakthrough() {
                 <li>• Self-improving capabilities</li>
               </ul>
             </div>
-          </div>
         </section>
 
         {/* Call to Action */}
@@ -146,8 +144,6 @@ export default function AI2026MayQuantumConsciousnessBreakthrough() {
               Learn More
             </a>
           </div>
-        </div>
       </div>
-    </div>
   );
-}
+}</div></div></div></div>

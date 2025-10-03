@@ -37,7 +37,6 @@ export default function AISpaceTechnologyServices() {
             Get Free Consultation
           </a>
         </div>
-      </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">"
         <div className="bg-white border border-gray-200 rounded-xl p-8 shadow-lg">"
@@ -96,7 +95,6 @@ export default function AISpaceTechnologyServices() {
           <div className="text-2xl font-bold text-blue-600 mb-2">$15K/month</div>"
           <div className="text-sm text-gray-500">Per observation system</div>"
         </div>
-      </div>
 
       <div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-2xl p-8 mb-16">"
         <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Why Choose Our AI Space Technology?</h2>"
@@ -117,7 +115,6 @@ export default function AISpaceTechnologyServices() {
             <div className="text-4xl font-bold text-green-600 mb-2">24/7</div>"
             <div className="text-gray-600">Autonomous Monitoring</div>"
           </div>
-        </div>
       </div>
 
       <div className="mb-16">"
@@ -143,7 +140,6 @@ export default function AISpaceTechnologyServices() {
             <h3 className="text-lg font-bold text-gray-900 mb-2">Optimize</h3>"
             <p className="text-gray-600 text-sm">Continuous monitoring and performance optimization</p>"
           </div>
-        </div>
       </div>
 
       <div className="bg-gray-50 rounded-2xl p-8 mb-16">"
@@ -164,9 +160,7 @@ export default function AISpaceTechnologyServices() {
                 <div className="font-semibold text-gray-900">Dr. Sarah Chen</div>"
                 <div className="text-sm text-gray-600">CTO, SpaceTech Global</div>"
               </div>
-            </div>
           </div>
-        </div>
       </div>
 
       <div className="text-center">"
@@ -187,7 +181,6 @@ export default function AISpaceTechnologyServices() {
             Get Free Consultation
           </a>
         </div>
-      </div>
     </div>
   );
-}
+}</div></div></div></div></div></div></div>

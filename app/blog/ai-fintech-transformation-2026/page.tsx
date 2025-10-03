@@ -38,7 +38,6 @@ export default function AIFinTechTransformation2026() {
             <span>•</span>
             <span>Zion Tech Group</span>
           </div>
-        </div>
 
         {/* Table of Contents */}
         <div className="bg-gray-50 rounded-lg p-6 mb-8">"
@@ -114,7 +113,6 @@ export default function AIFinTechTransformation2026() {
                   <li>• Automated bill payments</li>
                 </ul>
               </div>
-            </div>
 
             <h3 className="text-2xl font-semibold text-gray-900 mb-4">Digital Banking Architecture</h3>"
             <div className="bg-gray-900 text-green-400 p-6 rounded-lg mb-6">"
@@ -139,7 +137,6 @@ const digitalBankingAI = {
 };`}
               </pre>
             </div>
-          </div>
         </section>
 
         {/* AI Automation Section */}
@@ -172,7 +169,6 @@ const digitalBankingAI = {
                     <li>• Investment management</li>
                   </ul>
                 </div>
-              </div>
             </div>
 
             <h3 className="text-2xl font-semibold text-gray-900 mb-4">Automation Benefits</h3>"
@@ -208,7 +204,6 @@ const digitalBankingAI = {
                 </tbody>
               </table>
             </div>
-          </div>
         </section>
 
         {/* Risk Management Section */}
@@ -250,7 +245,6 @@ const digitalBankingAI = {
                     <li>• Hedging strategies</li>
                   </ul>
                 </div>
-              </div>
             </div>
 
             <h3 className="text-2xl font-semibold text-gray-900 mb-4">AI Risk Assessment Model</h3>"
@@ -279,7 +273,6 @@ const riskAssessment = {
 };`}
               </pre>
             </div>
-          </div>
         </section>
 
         {/* Customer Experience Section */}
@@ -313,7 +306,6 @@ const riskAssessment = {
                   <li>• Seamless multi-channel experience</li>
                 </ul>
               </div>
-            </div>
 
             <h3 className="text-2xl font-semibold text-gray-900 mb-4">Customer Experience Metrics</h3>"
             <div className="grid md:grid-cols-3 gap-6">"
@@ -329,7 +321,6 @@ const riskAssessment = {
                 <div className="text-3xl font-bold text-green-600 mb-2">75%</div>"
                 <div className="text-green-800 font-semibold">Increase in Engagement</div>"
               </div>
-            </div>
           </div>
         </section>
 
@@ -363,7 +354,6 @@ const riskAssessment = {
                     <li>• Regulatory updates</li>
                   </ul>
                 </div>
-              </div>
             </div>
 
             <h3 className="text-2xl font-semibold text-gray-900 mb-4">Compliance Benefits</h3>"
@@ -386,7 +376,6 @@ const riskAssessment = {
                   <li>• Competitive advantage</li>
                 </ul>
               </div>
-            </div>
           </div>
         </section>
 
@@ -410,7 +399,6 @@ const riskAssessment = {
                     <li><strong>4. Security Framework:</strong> Implement robust cybersecurity measures</li>
                   </ul>
                 </div>
-              </div>
 
               <div>
                 <h3 className="text-2xl font-semibold text-gray-900 mb-4">Phase 2: AI Integration</h3>"
@@ -422,7 +410,6 @@ const riskAssessment = {
                     <li><strong>4. Compliance Review:</strong> Ensure regulatory compliance for all AI systems</li>
                   </ul>
                 </div>
-              </div>
 
               <div>
                 <h3 className="text-2xl font-semibold text-gray-900 mb-4">Phase 3: Deployment</h3>"
@@ -434,9 +421,7 @@ const riskAssessment = {
                     <li><strong>4. Continuous Improvement:</strong> Optimize based on real-world usage data</li>
                   </ul>
                 </div>
-              </div>
             </div>
-          </div>
         </section>
 
         {/* Case Studies */}
@@ -457,7 +442,6 @@ const riskAssessment = {
                     <li>• 99.9% system uptime</li>
                   </ul>
                 </div>
-              </div>
 
               <div className="bg-white border border-gray-200 rounded-lg p-6">"
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Regional Credit Union</h3>"
@@ -472,9 +456,7 @@ const riskAssessment = {
                     <li>• $2M in prevented fraud losses</li>
                   </ul>
                 </div>
-              </div>
             </div>
-          </div>
         </section>
 
         {/* Call to Action */}
@@ -525,7 +507,5 @@ const riskAssessment = {
             </a>
           </div>
         </section>
-      </div>
-    </div>
   );
-}
+}</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>

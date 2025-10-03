@@ -34,7 +34,6 @@ export default function March2026RevolutionaryBreakthroughsPage() {
               <span className="bg-cyan-500/20 px-4 py-2 rounded-full text-cyan-300 font-semibold">Autonomous Operations</span>"
               <span className="bg-green-500/20 px-4 py-2 rounded-full text-green-300 font-semibold">$3.2B Success Story</span>"
             </div>
-          </div>
         </div>
       </section>
 
@@ -129,7 +128,6 @@ export default function March2026RevolutionaryBreakthroughsPage() {
                   <li>• <strong>99.7%</strong> system reliability</li>
                 </ul>
               </div>
-            </div>
 
             <h2 className="text-4xl font-bold text-white mb-8">🔮 The Future is Now</h2>"
             <p className="text-xl text-gray-300 mb-8">"
@@ -158,10 +156,7 @@ export default function March2026RevolutionaryBreakthroughsPage() {
                   Get Consulting Services
                 </a>
               </div>
-            </div>
           </div>
-        </div>
       </section>
-    </div>
   );
-}
+}</div></div></div></div></div>

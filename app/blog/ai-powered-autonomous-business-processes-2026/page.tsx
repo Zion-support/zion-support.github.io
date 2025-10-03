@@ -40,7 +40,6 @@ export default function AutonomousBusinessProcessesBlog() {
               <Tag className="w-4 h-4 mr-1" />
               AI Innovation
             </div>
-          </div>
           
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
             AI-Powered Autonomous Business Processes:
@@ -63,19 +62,14 @@ export default function AutonomousBusinessProcessesBlog() {
               <BookOpen className="w-4 h-4 inline mr-1" />
               12 min read
             </div>
-          </div>
         </div>
-      </div>
 
       {/* Content */}
-<<<<<<< HEAD
       <div className="max-w-4xl mx-auto px-4 py-12">"
         <div className="prose prose-lg max-w-none">"
-=======
       <div className="max-w-4xl mx-auto px-4 py-12">
         <div className="prose prose-lg max-w-none">
           
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0638
           {/* Introduction */}
           <div className="bg-gradient-to-r from-purple-50 to-blue-50 rounded-2xl p-8 mb-12 border border-purple-100">
             <p className="text-xl text-gray-700 leading-relaxed mb-6">
@@ -87,17 +81,13 @@ export default function AutonomousBusinessProcessesBlog() {
               <div className="text-center">
                 <div className="text-3xl font-bold text-purple-600 mb-2">85%</div>
                 <div className="text-gray-600">Process Automation</div>
-              </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-blue-600 mb-2">60%</div>
                 <div className="text-gray-600">Cost Reduction</div>
-              </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-green-600 mb-2">95%</div>
                 <div className="text-gray-600">Quality Improvement</div>
-              </div>
             </div>
-          </div>
 
           {/* The Autonomous Business Ecosystem */}
           <section className="mb-12">
@@ -210,7 +200,6 @@ export default function AutonomousBusinessProcessesBlog() {
                   </li>
                 </ul>
               </div>
-            </div>
           </section>
 
           {/* The Technology Stack */}
@@ -250,7 +239,6 @@ export default function AutonomousBusinessProcessesBlog() {
           </section>
 
           {/* Implementation Roadmap */}
-<<<<<<< HEAD
           <section className="mb-12">"
             <h2 className="text-3xl font-bold text-gray-900 mb-8">Implementation Roadmap</h2>"
             <div className="grid md:grid-cols-3 gap-8">"
@@ -258,7 +246,6 @@ export default function AutonomousBusinessProcessesBlog() {
                 <div className="w-12 h-12 bg-blue-500 text-white rounded-xl flex items-center justify-center font-bold text-xl mb-4">1</div>"
                 <h3 className="text-xl font-bold text-gray-800 mb-3">Foundation (Months 1-3)</h3>"
                 <ul className="space-y-2 text-gray-700">"
-=======
           <section className="mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-8">Implementation Roadmap</h2>
             
@@ -267,7 +254,6 @@ export default function AutonomousBusinessProcessesBlog() {
                 <div className="w-12 h-12 bg-blue-500 text-white rounded-xl flex items-center justify-center font-bold text-xl mb-4">1</div>
                 <h3 className="text-xl font-bold text-gray-800 mb-3">Foundation (Months 1-3)</h3>
                 <ul className="space-y-2 text-gray-700">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0638
                   <li>• Process discovery and mapping</li>
                   <li>• Technology infrastructure setup</li>
                   <li>• Pilot process selection</li>
@@ -296,24 +282,20 @@ export default function AutonomousBusinessProcessesBlog() {
                   <li>• ROI measurement and reporting</li>
                 </ul>
               </div>
-            </div>
           </section>
 
           {/* ROI and Business Impact */}
-<<<<<<< HEAD
           <section className="mb-12">"
             <h2 className="text-3xl font-bold text-gray-900 mb-8">ROI and Business Impact</h2>"
             <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-2xl p-8 mb-8">"
               <h3 className="text-2xl font-semibold text-gray-800 mb-6">Quantifiable Benefits</h3>"
               <div className="grid md:grid-cols-2 gap-8">"
-=======
           <section className="mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-8">ROI and Business Impact</h2>
             
             <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-2xl p-8 mb-8">
               <h3 className="text-2xl font-semibold text-gray-800 mb-6">Quantifiable Benefits</h3>
               <div className="grid md:grid-cols-2 gap-8">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0638
                 <div>
                   <h4 className="text-lg font-semibold text-gray-800 mb-3">Operational Efficiency</h4>
                   <ul className="space-y-2">
@@ -356,7 +338,6 @@ export default function AutonomousBusinessProcessesBlog() {
                     </li>
                   </ul>
                 </div>
-              </div>
             </div>
           </section>
 
@@ -410,11 +391,7 @@ export default function AutonomousBusinessProcessesBlog() {
                   <BookOpen className="w-5 h-5 ml-2" />
                 </Link>
               </div>
-            </div>
           </section>
-
-        </div>
-      </div>
 
       {/* Related Content */}
       <div className="bg-gray-50 py-12">
@@ -429,7 +406,6 @@ export default function AutonomousBusinessProcessesBlog() {
                   <span className="mr-2">Read case study</span>
                   <ArrowLeft className="w-4 h-4 rotate-180 group-hover:translate-x-1 transition-transform" />
                 </div>
-              </div>
             </Link>
             
             <Link href="/guides/autonomous-business-processes-implementation-guide-2026" className="group">
@@ -440,12 +416,9 @@ export default function AutonomousBusinessProcessesBlog() {
                   <span className="mr-2">Get the guide</span>
                   <ArrowLeft className="w-4 h-4 rotate-180 group-hover:translate-x-1 transition-transform" />
                 </div>
-              </div>
             </Link>
           </div>
-        </div>
       </div>
-    </div>
   );
 }
 </ArrowLeft>
@@ -480,4 +453,4 @@ export default function AutonomousBusinessProcessesBlog() {
 </Tag>
 </User>
 </Clock>
-</ArrowLeft>
+</ArrowLeft></section></section></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>

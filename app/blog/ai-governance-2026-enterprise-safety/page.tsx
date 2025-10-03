@@ -33,7 +33,6 @@ export default function AIGovernance2026EnterpriseSafety() {
             <span>•</span>
             <span>AI Governance</span>
           </div>
-        </div>
 
         {/* Content */}
         <div className="max-w-4xl mx-auto prose prose-lg prose-invert">"
@@ -77,7 +76,6 @@ export default function AIGovernance2026EnterpriseSafety() {
                     <li>• International data transfer restrictions</li>
                   </ul>
                 </div>
-              </div>
             </div>
 
             <p className="text-gray-300 leading-relaxed">"
@@ -131,7 +129,6 @@ export default function AIGovernance2026EnterpriseSafety() {
                       <li>• Risk quantification frameworks</li>
                     </ul>
                   </div>
-                </div>
               </div>
 
               <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-lg p-6">"
@@ -161,7 +158,6 @@ export default function AIGovernance2026EnterpriseSafety() {
                       <li>• Documentation and version control</li>
                     </ul>
                   </div>
-                </div>
               </div>
 
               <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-lg p-6">"
@@ -199,9 +195,7 @@ export default function AIGovernance2026EnterpriseSafety() {
                     </div>
                     <p className="text-gray-300 text-xs">Data protection and security</p>"
                   </div>
-                </div>
               </div>
-            </div>
           </section>
 
           <section className="mb-12">"
@@ -233,7 +227,6 @@ export default function AIGovernance2026EnterpriseSafety() {
                     <li>• AI safety certification standards</li>
                   </ul>
                 </div>
-              </div>
             </div>
 
             <div className="space-y-6">"
@@ -267,9 +260,7 @@ export default function AIGovernance2026EnterpriseSafety() {
                       <li>• Continuous improvement</li>
                     </ul>
                   </div>
-                </div>
               </div>
-            </div>
           </section>
 
           <section className="mb-12">"
@@ -302,9 +293,7 @@ export default function AIGovernance2026EnterpriseSafety() {
                       <li>• Compliance Team (regulatory adherence)</li>
                     </ul>
                   </div>
-                </div>
               </div>
-            </div>
 
             <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-lg p-6">"
               <h3 className="text-2xl font-semibold text-cyan-400 mb-4">Decision-Making Framework</h3>"
@@ -327,7 +316,6 @@ export default function AIGovernance2026EnterpriseSafety() {
                     <li>• Post-incident review processes</li>
                   </ul>
                 </div>
-              </div>
             </div>
           </section>
 
@@ -363,7 +351,6 @@ export default function AIGovernance2026EnterpriseSafety() {
                     <h4 className="font-semibold text-purple-300 mb-2">Optimize</h4>"
                     <p className="text-gray-300 text-sm">Continuous improvement and refinement</p>"
                   </div>
-                </div>
               </div>
 
               <div className="bg-gradient-to-r from-blue-600/20 to-indigo-600/20 rounded-lg p-6">"
@@ -396,9 +383,7 @@ export default function AIGovernance2026EnterpriseSafety() {
                       <li>• Compliance reporting tools</li>
                     </ul>
                   </div>
-                </div>
               </div>
-            </div>
           </section>
 
           <section className="mb-12">"
@@ -430,7 +415,6 @@ export default function AIGovernance2026EnterpriseSafety() {
                     <li>• Cross-border AI operation guidelines</li>
                   </ul>
                 </div>
-              </div>
             </div>
           </section>
 
@@ -453,9 +437,7 @@ export default function AIGovernance2026EnterpriseSafety() {
                 Explore Governance Services
               </a>
             </div>
-          </div>
         </div>
-      </div>
     </div>
   );
-}
+}</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>

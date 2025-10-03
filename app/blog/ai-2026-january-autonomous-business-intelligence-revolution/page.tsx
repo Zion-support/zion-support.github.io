@@ -36,7 +36,6 @@ export default function January2026AutonomousBusinessIntelligenceRevolution() {
             <span>⏱️ 9 min read</span>
             <span>🏷️ Business Intelligence</span>
           </div>
-        </div>
 
         {/* Content */}
         <div className="max-w-4xl mx-auto">"
@@ -119,7 +118,6 @@ export default function January2026AutonomousBusinessIntelligenceRevolution() {
                     </li>
                   </ul>
                 </div>
-              </div>
             </section>
 
             {/* Performance Improvements */}
@@ -145,7 +143,6 @@ export default function January2026AutonomousBusinessIntelligenceRevolution() {
                   <div className="text-3xl font-bold text-white mb-2">90%</div>"
                   <div className="text-gray-300 text-sm">Decrease in Manual Reporting Time</div>"
                 </div>
-              </div>
             </section>
 
             {/* Enterprise Use Cases */}
@@ -181,7 +178,6 @@ export default function January2026AutonomousBusinessIntelligenceRevolution() {
                     <li>• Real-time product recommendations and personalized marketing campaigns</li>
                   </ul>
                 </div>
-              </div>
             </section>
 
             {/* ROI Section */}
@@ -225,9 +221,7 @@ export default function January2026AutonomousBusinessIntelligenceRevolution() {
                         <div className="text-white font-semibold">Phase 3: Autonomy</div>"
                         <div className="text-gray-300 text-sm">Full autonomous operation with continuous learning</div>"
                       </div>
-                    </div>
                   </div>
-                </div>
               </div>
             </section>
 
@@ -250,11 +244,7 @@ export default function January2026AutonomousBusinessIntelligenceRevolution() {
                     Schedule Demo
                   </Link>
                 </div>
-              </div>
             </section>
-
-          </div>
-        </div>
 
         {/* Navigation */}
         <div className="max-w-4xl mx-auto mt-12">"
@@ -270,8 +260,6 @@ export default function January2026AutonomousBusinessIntelligenceRevolution() {
               Back to Blog →
             </Link>
           </div>
-        </div>
       </div>
-    </div>
   );
-}
+}</div></div></div></div></div></div></div></div></div></div></div>

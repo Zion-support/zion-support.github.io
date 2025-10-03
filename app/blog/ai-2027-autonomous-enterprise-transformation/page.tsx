@@ -75,7 +75,6 @@ export default function AI2027AutonomousEnterpriseTransformation() {
               market conditions, and customer preferences in real-time.
             </p>
           </div>
-        </div>
 
         {/* Main Content */}
 <div className="max-w-4xl mx-auto">"
@@ -121,7 +120,6 @@ export default function AI2027AutonomousEnterpriseTransformation() {
                       <h4 className="text-lg font-semibold text-white">Foundation Phase</h4>
                       <p className="text-gray-300">Implement AI-driven operational systems and data infrastructure</p>
                     </div>
-                  </div>
                   <div className="flex items-center space-x-4">
                     <div className="w-8 h-8 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-full flex items-center justify-center">
                       <span className="text-white font-bold text-sm">2</span>
@@ -130,7 +128,6 @@ export default function AI2027AutonomousEnterpriseTransformation() {
                       <h4 className="text-lg font-semibold text-white">Integration Phase</h4>
                       <p className="text-gray-300">Connect all business systems with autonomous decision-making capabilities</p>
                     </div>
-                  </div>
                   <div className="flex items-center space-x-4">
                     <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center">
                       <span className="text-white font-bold text-sm">3</span>
@@ -139,9 +136,7 @@ export default function AI2027AutonomousEnterpriseTransformation() {
                       <h4 className="text-lg font-semibold text-white">Autonomy Phase</h4>
                       <p className="text-gray-300">Achieve full operational autonomy with minimal human oversight</p>
                     </div>
-                  </div>
                 </div>
-              </div>
             </div>
 
             {/* Call to Action */}
@@ -163,9 +158,7 @@ export default function AI2027AutonomousEnterpriseTransformation() {
                   Learn More
                 </Link>
               </div>
-            </div>
           </div>
-        </div>
 
         {/* Benefits Section */}
         <div className="mt-16 grid md:grid-cols-2 gap-8">
@@ -242,7 +235,6 @@ export default function AI2027AutonomousEnterpriseTransformation() {
               </li>
             </ul>
           </div>
-        </div>
 
         {/* Related Content */}
         <div className="mt-16">
@@ -278,7 +270,6 @@ export default function AI2027AutonomousEnterpriseTransformation() {
               </div>
             </Link>
           </div>
-        </div>
 
         {/* Back to Blog */}
         <div className="text-center mt-16">
@@ -291,7 +282,6 @@ export default function AI2027AutonomousEnterpriseTransformation() {
             Back to Blog
           </Link>
         </div>
-      </div>
     </div>
   );
 }
@@ -306,4 +296,4 @@ export default function AI2027AutonomousEnterpriseTransformation() {
 </path>
 </path>
 </path>
-</path>
+</path></div></div></div></div></div>

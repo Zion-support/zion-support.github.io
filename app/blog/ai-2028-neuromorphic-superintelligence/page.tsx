@@ -125,7 +125,6 @@ export default function AI2028NeuromorphicSuperintelligence() {
               Continuously learn and adapt to new situations without forgetting previous knowledge.
             </p>
           </div>
-        </div>
 
         <h3 className="text-2xl font-bold text-gray-900 mt-6 mb-4">"
           🔬 Scientific Breakthrough Details
@@ -167,8 +166,6 @@ export default function AI2028NeuromorphicSuperintelligence() {
               <p className="text-sm text-gray-600">Real-world transformation results</p>"
             </Link>
           </div>
-        </div>
       </div>
-    </div>
   );
-}
+}</div></div></div>

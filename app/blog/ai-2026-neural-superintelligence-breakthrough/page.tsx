@@ -50,7 +50,6 @@ export default function NeuralSuperintelligenceBreakthrough() {
                 View Success Stories
               </a>
             </div>
-          </div>
         </div>
       </section>
 
@@ -97,7 +96,6 @@ export default function NeuralSuperintelligenceBreakthrough() {
                     <li><strong className="text-green-400">Predictive Maintenance</strong>: Preventing issues before they occur</li>"
                   </ul>
                 </div>
-              </div>
             </div>
 
             {/* Stats Section */}
@@ -117,7 +115,6 @@ export default function NeuralSuperintelligenceBreakthrough() {
                 <div className="text-3xl font-extrabold text-green-400 mb-2">98%</div>"
                 <div className="text-gray-300 text-sm">Automation Rate</div>"
               </div>
-            </div>
 
             {/* CTA Section */}
             <div className="mt-12 bg-gradient-to-r from-purple-500/10 to-blue-500/10 border border-purple-500/30 rounded-2xl p-8 text-center">"
@@ -138,10 +135,7 @@ export default function NeuralSuperintelligenceBreakthrough() {
                   Read Complete Guide
                 </a>
               </div>
-            </div>
           </div>
-        </div>
       </section>
-    </div>
   );
-}
+}</div></div></div></div></div></div>

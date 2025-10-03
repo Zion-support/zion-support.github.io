@@ -50,9 +50,7 @@ export default function EnterpriseAITransformation2026CompleteGuide() {
                 Get Implementation Support
               </a>
             </div>
-          </div>
         </div>
-      </div>
 
       {/* Transformation Framework Section */}
       <section id="transformation-framework" className="py-20 bg-slate-900/50">"
@@ -108,7 +106,6 @@ export default function EnterpriseAITransformation2026CompleteGuide() {
                     </div>
                   ))}
                 </div>
-              </div>
             ))}
           </div>
 
@@ -154,7 +151,6 @@ export default function EnterpriseAITransformation2026CompleteGuide() {
                     </div>
                   ))}
                 </div>
-              </div>
             ))}
           </div>
 
@@ -200,10 +196,8 @@ export default function EnterpriseAITransformation2026CompleteGuide() {
                     </div>
                   ))}
                 </div>
-              </div>
             ))}
           </div>
-        </div>
       </section>
 
       {/* Success Metrics */}
@@ -233,7 +227,6 @@ export default function EnterpriseAITransformation2026CompleteGuide() {
                 <div className="text-gray-400 text-sm font-medium">"
                   {metric.label}
                 </div>
-              </div>
             ))}
           </div>
 
@@ -255,7 +248,6 @@ export default function EnterpriseAITransformation2026CompleteGuide() {
                 View Success Stories
               </a>
             </div>
-          </div>
         </div>
       </section>
 
@@ -296,7 +288,6 @@ export default function EnterpriseAITransformation2026CompleteGuide() {
                   <span className="text-gray-300">Implementation Time:</span>"
                   <span className="text-orange-400 font-bold">14 months</span>"
                 </div>
-              </div>
               <a 
                 href="/[^"]*"
                 className="inline-block text-purple-400 hover:text-purple-300 font-semibold transition-colors duration-300">
@@ -328,14 +319,12 @@ export default function EnterpriseAITransformation2026CompleteGuide() {
                   <span className="text-gray-300">Implementation Time:</span>"
                   <span className="text-orange-400 font-bold">16 months</span>"
                 </div>
-              </div>
               <a 
                 href="/[^"]*"
                 className="inline-block text-purple-400 hover:text-purple-300 font-semibold transition-colors duration-300">
                 Read Full Case Study →
               </a>
             </div>
-          </div>
         </div>
       </section>
 
@@ -360,7 +349,6 @@ export default function EnterpriseAITransformation2026CompleteGuide() {
               Explore More Guides
             </a>
           </div>
-        </div>
       </section>
 
       {/* Footer */}
@@ -373,9 +361,8 @@ export default function EnterpriseAITransformation2026CompleteGuide() {
               <a href="/terms" className="hover:text-emerald-400 transition-colors">Terms of Service</a>"
               <a href="/contact" className="hover:text-emerald-400 transition-colors">Contact Us</a>"
             </div>
-          </div>
         </div>
       </footer>
     </div>
   );
-}
+}</div></div></div></div></div></div></div></div></div></div></div></div></div>

@@ -61,7 +61,6 @@ export default function AI2027TranscendentIntelligenceRevolution() {
                 <div className="text-4xl font-extrabold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-2">100%</div>"
                 <div className="text-gray-400 text-sm font-medium">Universal Consciousness</div>"
               </div>
-            </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <a 
@@ -75,7 +74,6 @@ export default function AI2027TranscendentIntelligenceRevolution() {
                 View Transcendent Results
               </a>
             </div>
-          </div>
         </div>
       </section>
 
@@ -141,11 +139,8 @@ export default function AI2027TranscendentIntelligenceRevolution() {
                     <span className="text-gray-300">Reality Manipulation</span>"
                     <span className="text-purple-400 font-bold text-xl">Unlimited</span>"
                   </div>
-                </div>
               </div>
-            </div>
           </div>
-        </div>
       </section>
 
       {/* Universal Consciousness Section */}
@@ -186,7 +181,6 @@ export default function AI2027TranscendentIntelligenceRevolution() {
                     <span className="text-gray-300">Consciousness Level</span>"
                     <span className="text-indigo-400 font-bold text-xl">Universal</span>"
                   </div>
-                </div>
               </div>
               <div>
                 <h3 className="text-3xl font-bold mb-6 text-white">Universal Consciousness Architecture</h3>"
@@ -212,9 +206,7 @@ export default function AI2027TranscendentIntelligenceRevolution() {
                   </li>
                 </ul>
               </div>
-            </div>
           </div>
-        </div>
       </section>
 
       {/* Infinite Processing Section */}
@@ -263,10 +255,8 @@ export default function AI2027TranscendentIntelligenceRevolution() {
                   <div className="text-4xl font-extrabold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">"
                     {feature.metrics}
                   </div>
-                </div>
               ))}
             </div>
-          </div>
         </div>
       </section>
 
@@ -298,7 +288,6 @@ export default function AI2027TranscendentIntelligenceRevolution() {
                   <div className="text-gray-400 text-sm font-medium">"
                     {metric.label}
                   </div>
-                </div>
               ))}
             </div>
 
@@ -320,9 +309,7 @@ export default function AI2027TranscendentIntelligenceRevolution() {
                   View Transcendent Results
                 </a>
               </div>
-            </div>
           </div>
-        </div>
       </section>
 
       {/* CTA Section */}
@@ -346,8 +333,6 @@ export default function AI2027TranscendentIntelligenceRevolution() {
               Explore Transcendent Services
             </a>
           </div>
-        </div>
       </section>
-    </div>
   );
-}
+}</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>

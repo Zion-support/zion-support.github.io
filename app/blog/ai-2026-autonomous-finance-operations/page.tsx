@@ -38,7 +38,6 @@ export default function AI2026AutonomousFinanceOperations() {
             <span>⏱️ 22 min read</span>
             <span>💰 Finance & AI</span>
           </div>
-        </div>
 
         {/* Key Metrics */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">"
@@ -58,7 +57,6 @@ export default function AI2026AutonomousFinanceOperations() {
             <div className="text-3xl font-bold text-purple-600 mb-2">75%</div>"
             <div className="text-sm text-gray-600">Time Reduction</div>"
           </div>
-        </div>
 
         {/* Content */}
         <div className="prose prose-lg max-w-none">"
@@ -117,7 +115,6 @@ export default function AI2026AutonomousFinanceOperations() {
                   <li>• Liquidity management</li>
                 </ul>
               </div>
-            </div>
 
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Implementation Blueprint</h3>"
             <div className="bg-gray-50 rounded-lg p-6 mb-6">"
@@ -170,7 +167,6 @@ export default function AI2026AutonomousFinanceOperations() {
                   <li>• <strong>Blockchain:</strong> Immutable audit trails</li>
                 </ul>
               </div>
-            </div>
 
             <h3 className="text-2xl font-bold text-gray-900 mb-4">ROI Calculation</h3>"
             <div className="bg-gradient-to-r from-emerald-50 to-cyan-50 rounded-lg p-6 border border-emerald-200">"
@@ -194,12 +190,10 @@ export default function AI2026AutonomousFinanceOperations() {
                     <li>• Competitive advantage: $8M/year</li>
                   </ul>
                 </div>
-              </div>
               <div className="mt-6 text-center">"
                 <div className="text-3xl font-bold text-emerald-600 mb-2">Total ROI: 580%</div>"
                 <div className="text-lg text-gray-600">Payback period: 6 months</div>"
               </div>
-            </div>
 
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Success Metrics</h3>"
             <div className="grid md:grid-cols-3 gap-6 mb-8">"
@@ -230,9 +224,7 @@ export default function AI2026AutonomousFinanceOperations() {
                   <li>• Automated reporting</li>
                 </ul>
               </div>
-            </div>
           </div>
-        </div>
 
         {/* CTA Section */}
         <div className="bg-gradient-to-r from-emerald-600 to-cyan-600 rounded-xl p-8 text-white text-center">"
@@ -252,7 +244,6 @@ export default function AI2026AutonomousFinanceOperations() {
               Call +1 302 464 0950
             </a>
           </div>
-        </div>
 
         {/* Related Content */}
         <div className="mt-12">"
@@ -275,8 +266,6 @@ export default function AI2026AutonomousFinanceOperations() {
               </div>
             </Link>
           </div>
-        </div>
       </div>
-    </div>
   );
-}
+}</div></div></div></div></div></div></div></div></div></div></div>

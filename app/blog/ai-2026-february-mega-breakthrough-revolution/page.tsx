@@ -49,7 +49,6 @@ export default function February2026BreakthroughPage() {
                 View $3.2B Success Story →
               </a>
             </div>
-          </div>
         </div>
       </section>
 
@@ -171,10 +170,7 @@ export default function February2026BreakthroughPage() {
                   View Consulting Services
                 </a>
               </div>
-            </div>
           </div>
-        </div>
       </section>
-    </div>
   );
-}
+}</div></div></div></div>

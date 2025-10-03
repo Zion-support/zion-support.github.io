@@ -53,7 +53,6 @@ const NewestContent2025Banner = () => {
                       NEW TODAY
                     </span>
                   </div>
-                </div>
 
                 {/* Category Tag */}
                 <div className="mb-4">"
@@ -87,7 +86,6 @@ const NewestContent2025Banner = () => {
                     <div className="text-2xl font-bold text-green-300">87%</div>"
                     <div className="text-xs text-gray-400">Cost ↓</div>"
                   </div>
-                </div>
 
                 {/* Meta Info */}
                 <div className="flex items-center justify-between text-sm text-gray-400 mb-6 pb-6 border-b border-white/20">"
@@ -100,7 +98,6 @@ const NewestContent2025Banner = () => {
                   <span>Read Full Article</span>
                   <span className="text-xl group-hover/btn:translate-x-1 transition-transform duration-300">→</span>"
                 </div>
-              </div>
             </div>
           </Link>
 
@@ -122,7 +119,6 @@ const NewestContent2025Banner = () => {
                       NEW TODAY
                     </span>
                   </div>
-                </div>
 
                 <div className="mb-4">"
                   <span className="inline-block px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/30 to-pink-500/30 text-purple-200 text-sm font-bold border border-purple-400/50">"
@@ -152,7 +148,6 @@ const NewestContent2025Banner = () => {
                     <div className="text-2xl font-bold text-green-300">85%</div>"
                     <div className="text-xs text-gray-400">Efficiency</div>"
                   </div>
-                </div>
 
                 <div className="flex items-center justify-between text-sm text-gray-400 mb-6 pb-6 border-b border-white/20">"
                   <span>⏱️ 40 min read</span>
@@ -163,7 +158,6 @@ const NewestContent2025Banner = () => {
                   <span>Read Full Article</span>
                   <span className="text-xl group-hover/btn:translate-x-1 transition-transform duration-300">→</span>"
                 </div>
-              </div>
             </div>
           </Link>
 
@@ -185,7 +179,6 @@ const NewestContent2025Banner = () => {
                       NEW TODAY
                     </span>
                   </div>
-                </div>
 
                 <div className="mb-4">"
                   <span className="inline-block px-4 py-2 rounded-full bg-gradient-to-r from-indigo-500/30 to-purple-500/30 text-indigo-200 text-sm font-bold border border-indigo-400/50">"
@@ -215,7 +208,6 @@ const NewestContent2025Banner = () => {
                     <div className="text-2xl font-bold text-green-300">Zero</div>"
                     <div className="text-xs text-gray-400">Breaches</div>"
                   </div>
-                </div>
 
                 <div className="flex items-center justify-between text-sm text-gray-400 mb-6 pb-6 border-b border-white/20">"
                   <span>⏱️ 45 min read</span>
@@ -226,7 +218,6 @@ const NewestContent2025Banner = () => {
                   <span>Read Full Article</span>
                   <span className="text-xl group-hover/btn:translate-x-1 transition-transform duration-300">→</span>"
                 </div>
-              </div>
             </div>
           </Link>
 
@@ -257,9 +248,7 @@ const NewestContent2025Banner = () => {
                   <span>Get Expert Consultation</span>
                 </a>
               </div>
-            </div>
           </div>
-        </div>
 
         {/* Stats Section */}
         <div className="grid md:grid-cols-4 gap-8 mt-20">"
@@ -276,12 +265,10 @@ const NewestContent2025Banner = () => {
               <div className="text-gray-300 text-sm font-medium">"
                 {stat.label}
               </div>
-            </div>
           ))}
         </div>
-      </div>
     </section>
   );
 };
 
-export default NewestContent2025Banner;
+export default NewestContent2025Banner;</div></div></div></div></div></div></div></div></div></div></div></div></div>

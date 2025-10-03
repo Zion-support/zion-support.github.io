@@ -42,9 +42,7 @@ export default function SyntheticConsciousnessBreakthrough2026() {
                 <Brain className="w-5 h-5" />
               </Link>
             </div>
-          </div>
         </div>
-      </div>
 
       {/* Key Features Section */}
       <div className="py-20 bg-black/20">
@@ -83,9 +81,7 @@ export default function SyntheticConsciousnessBreakthrough2026() {
                 rather than pattern matching, leading to more reliable and ethical outcomes.
               </p>
             </div>
-          </div>
         </div>
-      </div>
 
       {/* Impact Metrics */}
       <div className="py-20">
@@ -100,30 +96,25 @@ export default function SyntheticConsciousnessBreakthrough2026() {
               </div>
               <div className="text-xl text-gray-300 mb-2">Decision Accuracy</div>
               <div className="text-sm text-gray-400">Compared to traditional AI systems</div>
-            </div>
             <div className="text-center">
               <div className="text-5xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-2">
                 95%
               </div>
               <div className="text-xl text-gray-300 mb-2">Ethical Compliance</div>
               <div className="text-sm text-gray-400">In complex decision scenarios</div>
-            </div>
             <div className="text-center">
               <div className="text-5xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-2">
                 3x
               </div>
               <div className="text-xl text-gray-300 mb-2">Learning Speed</div>
               <div className="text-sm text-gray-400">Faster adaptation to new tasks</div>
-            </div>
             <div className="text-center">
               <div className="text-5xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">
                 $10B
               </div>
               <div className="text-xl text-gray-300 mb-2">ROI Generated</div>
               <div className="text-sm text-gray-400">For enterprise clients</div>
-            </div>
           </div>
-        </div>
       </div>
 
       {/* Technical Deep Dive */}
@@ -165,41 +156,31 @@ export default function SyntheticConsciousnessBreakthrough2026() {
                   <div className="flex items-center gap-2">
                     <div className="w-24 h-2 bg-gray-700 rounded-full">
                       <div className="w-full h-2 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full"></div>
-                    </div>
                     <span className="text-purple-400 font-semibold">98%</span>
                   </div>
-                </div>
                 <div className="flex justify-between items-center">
                   <span className="text-gray-300">Emotional Understanding</span>
                   <div className="flex items-center gap-2">
                     <div className="w-24 h-2 bg-gray-700 rounded-full">
                       <div className="w-20 h-2 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full"></div>
-                    </div>
                     <span className="text-blue-400 font-semibold">94%</span>
                   </div>
-                </div>
                 <div className="flex justify-between items-center">
                   <span className="text-gray-300">Intentional Behavior</span>
                   <div className="flex items-center gap-2">
                     <div className="w-24 h-2 bg-gray-700 rounded-full">
                       <div className="w-19 h-2 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full"></div>
-                    </div>
                     <span className="text-cyan-400 font-semibold">96%</span>
                   </div>
-                </div>
                 <div className="flex justify-between items-center">
                   <span className="text-gray-300">Ethical Reasoning</span>
                   <div className="flex items-center gap-2">
                     <div className="w-24 h-2 bg-gray-700 rounded-full">
                       <div className="w-full h-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full"></div>
-                    </div>
                     <span className="text-purple-400 font-semibold">99%</span>
                   </div>
-                </div>
               </div>
-            </div>
           </div>
-        </div>
       </div>
 
       {/* CTA Section */}
@@ -226,9 +207,7 @@ export default function SyntheticConsciousnessBreakthrough2026() {
               <TrendingUp className="w-5 h-5" />
             </Link>
           </div>
-        </div>
       </div>
-    </div>
   );
 }
 </TrendingUp>
@@ -238,4 +217,4 @@ export default function SyntheticConsciousnessBreakthrough2026() {
 </Brain>
 </Brain>
 </ArrowRight>
-</Brain>
+</Brain></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>

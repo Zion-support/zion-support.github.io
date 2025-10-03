@@ -42,9 +42,7 @@ export default function AITrends2026Page() {
               <span>🏷️ AI Trends</span>
               <span>👥 Enterprise AI</span>
             </div>
-          </div>
         </div>
-      </div>
 
       {/* Navigation Breadcrumb */}
       <div className="bg-white border-b">"
@@ -57,7 +55,6 @@ export default function AITrends2026Page() {
             <span className="text-gray-600">AI 2026 Mega Trends</span>"
           </nav>
         </div>
-      </div>
 
       {/* Main Content */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">"
@@ -113,7 +110,6 @@ export default function AITrends2026Page() {
               </p>
               <div className="text-sm text-blue-600 font-medium">Read More →</div>"
             </div>
-          </div>
 
           {/* Call to Action */}
           <div className="bg-gradient-to-r from-green-500 to-blue-600 rounded-xl p-8 text-white text-center">"
@@ -134,9 +130,6 @@ export default function AITrends2026Page() {
                 View Case Studies
               </Link>
             </div>
-          </div>
         </article>
-      </div>
-    </div>
   );
-}
+}</div></div></div></div></div></div></div>

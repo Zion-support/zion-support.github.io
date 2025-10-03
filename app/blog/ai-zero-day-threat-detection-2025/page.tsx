@@ -81,7 +81,6 @@ export default function AIZeroDayThreatDetection() {
               <div className="text-3xl font-bold text-red-600 mb-2">80%</div>"
               <div className="text-gray-600">Data Breach Rate</div>"
             </div>
-          </div>
         </div>
 
         <h2 className="text-3xl font-bold text-gray-900 mb-6">🤖 AI-Powered Detection Systems</h2>"
@@ -121,7 +120,6 @@ export default function AIZeroDayThreatDetection() {
                 systems, and deploy patches—all within milliseconds.
               </p>
             </div>
-          </div>
         </div>
 
         <h2 className="text-3xl font-bold text-gray-900 mb-6">📊 Real-World Success Stories</h2>"
@@ -167,7 +165,6 @@ export default function AIZeroDayThreatDetection() {
               </div>
               <p className="text-sm text-gray-500">Per year for enterprise clients</p>"
             </div>
-          </div>
         </div>
 
         <h2 className="text-3xl font-bold text-gray-900 mb-6">🔮 Advanced Capabilities</h2>"
@@ -196,7 +193,6 @@ export default function AIZeroDayThreatDetection() {
               patterns with other protected organizations to create a collective defense ecosystem.
             </p>
           </div>
-        </div>
 
         <h2 className="text-3xl font-bold text-gray-900 mb-6">💰 ROI and Business Impact</h2>"
         <div className="grid md:grid-cols-2 gap-8 mb-8">"
@@ -242,7 +238,6 @@ export default function AIZeroDayThreatDetection() {
               </li>
             </ul>
           </div>
-        </div>
 
         <h2 className="text-3xl font-bold text-gray-900 mb-6">🚀 Implementation Strategy</h2>"
         <div className="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl p-8 mb-8 border border-blue-200">"
@@ -253,30 +248,25 @@ export default function AIZeroDayThreatDetection() {
                 <h4 className="font-semibold text-gray-900">Security Assessment</h4>"
                 <p className="text-gray-600 text-sm">Comprehensive analysis of current security posture and vulnerability landscape</p>"
               </div>
-            </div>
             <div className="flex items-start gap-4">"
               <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-sm shrink-0">2</div>"
               <div>
                 <h4 className="font-semibold text-gray-900">AI Training & Deployment</h4>"
                 <p className="text-gray-600 text-sm">Custom AI models trained on your specific infrastructure and threat profile</p>"
               </div>
-            </div>
             <div className="flex items-start gap-4">"
               <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-sm shrink-0">3</div>"
               <div>
                 <h4 className="font-semibold text-gray-900">Integration & Testing</h4>"
                 <p className="text-gray-600 text-sm">Seamless integration with existing security infrastructure and rigorous testing</p>"
               </div>
-            </div>
             <div className="flex items-start gap-4">"
               <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-sm shrink-0">4</div>"
               <div>
                 <h4 className="font-semibold text-gray-900">Continuous Optimization</h4>"
                 <p className="text-gray-600 text-sm">Ongoing AI evolution and performance tuning for maximum protection</p>"
               </div>
-            </div>
           </div>
-        </div>
 
         <div className="bg-gradient-to-r from-red-600 to-orange-600 text-white rounded-xl p-8 text-center">"
           <h3 className="text-2xl font-bold mb-4">Protect Your Enterprise Today</h3>"
@@ -296,8 +286,6 @@ export default function AIZeroDayThreatDetection() {
               Call +1 302 464 0950
             </a>
           </div>
-        </div>
       </div>
-    </div>
   );
-}
+}</div></div></div></div></div></div></div></div></div></div></div></div>
