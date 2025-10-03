@@ -4,41 +4,41 @@ import Link from 'next/link';
 const NewContentNavigationHub: React.FC = () => {
   const newContent = [
     {
-      title: "Next-Generation AI Systems Revolution",
-      description: "Revolutionary breakthrough in AI systems with 99.9% automation accuracy and $2.8B proven ROI",
-      href: "/blog/ai-2025-january-next-generation-ai-systems-revolution",
-      category: "AI Innovation",
-      readTime: "12 min read",
+      title: "Next-Generation AI Systems Revolution
+      description: "Revolutionary breakthrough in AI systems with 99.9% automation accuracy and $2.8B proven ROI
+      href: "/blog/ai-2025-january-next-generation-ai-systems-revolution
+      category: "AI Innovation
+      readTime: "12 min read
       featured: true,
       metrics: {
-        accuracy: "99.9%",
-        roi: "$2.8B",
+        accuracy: "99.9%
+        roi: "$2.8B
         costReduction: "87%"
       }
     },
     {
-      title: "Autonomous Business Intelligence Revolution",
-      description: "Transform business intelligence with 95% decision accuracy and $1.2B value creation",
-      href: "/blog/ai-2025-january-autonomous-business-intelligence-revolution",
-      category: "Business Intelligence",
-      readTime: "15 min read",
+      title: "Autonomous Business Intelligence Revolution
+      description: "Transform business intelligence with 95% decision accuracy and $1.2B value creation
+      href: "/blog/ai-2025-january-autonomous-business-intelligence-revolution
+      category: "Business Intelligence
+      readTime: "15 min read
       featured: true,
       metrics: {
-        accuracy: "95%",
-        roi: "$1.2B",
+        accuracy: "95%
+        roi: "$1.2B
         insights: "Real-time"
       }
     },
     {
-      title: "$2.8B Fortune 100 Success Story",
-      description: "How a Fortune 100 manufacturing conglomerate achieved unprecedented results with next-gen AI",
-      href: "/case-studies/ai-2025-january-next-generation-ai-systems-2-8-billion-success",
-      category: "Case Studies",
-      readTime: "18 min read",
+      title: "$2.8B Fortune 100 Success Story
+      description: "How a Fortune 100 manufacturing conglomerate achieved unprecedented results with next-gen AI
+      href: "/case-studies/ai-2025-january-next-generation-ai-systems-2-8-billion-success
+      category: "Case Studies
+      readTime: "18 min read
       featured: true,
       metrics: {
-        companies: "47 Countries",
-        employees: "2.3M",
+        companies: "47 Countries
+        employees: "2.3M
         roi: "$2.8B"
       }
     }

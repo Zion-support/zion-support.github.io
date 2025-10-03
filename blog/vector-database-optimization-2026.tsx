@@ -143,7 +143,7 @@ const VectorDatabaseOptimization2026 = () => {
   "efConstruction": 200,
   "efSearch": 100,
   "quantization": {
-    "type": "product",
+    "type": "product
     "m": 64,
     "nbits": 8
   },

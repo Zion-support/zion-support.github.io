@@ -71,8 +71,8 @@ const October2025AutonomousEdgeIntelligenceBanner: React.FC = () => {
         {/* Features */}
         <div className="grid md:grid-cols-3 gap-4 mb-8">
           {[
-            "Neuromorphic Edge Processors",
-            "Federated Learning at the Edge",
+            "Neuromorphic Edge Processors
+            "Federated Learning at the Edge
             "Quantum-Enhanced Edge AI"
           ].map((feature, index) => (
             <motion.div

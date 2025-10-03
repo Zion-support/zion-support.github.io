@@ -12,67 +12,67 @@ export default function InteractiveContentDiscovery2026() {
   const content = [
     {
       id: 1,
-      title: "Ultimate Autonomous Revolution",
-      category: "breakthrough",
-      roi: "100b",
-      type: "blog",
-      url: "/blog/ai-2026-ultimate-autonomous-revolution",
-      description: "99.99% autonomous operations with 1 million times performance boost",
+      title: "Ultimate Autonomous Revolution
+      category: "breakthrough
+      roi: "100b
+      type: "blog
+      url: "/blog/ai-2026-ultimate-autonomous-revolution
+      description: "99.99% autonomous operations with 1 million times performance boost
       metrics: { autonomy: "99.99%", performance: "1Mx", value: "$100B" },
       featured: true
     },
     {
       id: 2,
-      title: "$100B Success Story",
-      category: "success",
-      roi: "100b",
-      type: "case-study",
-      url: "/case-studies/ai-2026-ultimate-autonomous-revolution-100-billion-success",
-      description: "How Fortune 100 companies achieved $100 billion ROI",
+      title: "$100B Success Story
+      category: "success
+      roi: "100b
+      type: "case-study
+      url: "/case-studies/ai-2026-ultimate-autonomous-revolution-100-billion-success
+      description: "How Fortune 100 companies achieved $100 billion ROI
       metrics: { companies: "15", roi: "$100B", timeline: "6 months" },
       featured: true
     },
     {
       id: 3,
-      title: "Ultra-Intelligent AI Systems",
-      category: "breakthrough",
-      roi: "50b",
-      type: "blog",
-      url: "/blog/ai-2026-ultra-intelligent-autonomous-systems-breakthrough",
-      description: "Revolutionary AI systems achieving 99.99% automation",
+      title: "Ultra-Intelligent AI Systems
+      category: "breakthrough
+      roi: "50b
+      type: "blog
+      url: "/blog/ai-2026-ultra-intelligent-autonomous-systems-breakthrough
+      description: "Revolutionary AI systems achieving 99.99% automation
       metrics: { automation: "99.99%", roi: "$50B", performance: "100Kx" },
       featured: true
     },
     {
       id: 4,
-      title: "Quantum Neural Superintelligence",
-      category: "breakthrough",
-      roi: "25b",
-      type: "blog",
-      url: "/blog/ai-2026-quantum-neural-superintelligence-breakthrough",
-      description: "Revolutionary cognitive AI with universal consciousness",
+      title: "Quantum Neural Superintelligence
+      category: "breakthrough
+      roi: "25b
+      type: "blog
+      url: "/blog/ai-2026-quantum-neural-superintelligence-breakthrough
+      description: "Revolutionary cognitive AI with universal consciousness
       metrics: { consciousness: "99.9999%", value: "$25B", speed: "100Kx" },
       featured: true
     },
     {
       id: 5,
-      title: "Adaptive Neural Architectures",
-      category: "breakthrough",
-      roi: "15b",
-      type: "blog",
-      url: "/blog/ai-2026-adaptive-neural-architectures-breakthrough",
-      description: "100,000x performance boost with adaptive neural systems",
+      title: "Adaptive Neural Architectures
+      category: "breakthrough
+      roi: "15b
+      type: "blog
+      url: "/blog/ai-2026-adaptive-neural-architectures-breakthrough
+      description: "100,000x performance boost with adaptive neural systems
       metrics: { performance: "100Kx", roi: "$15.2B", adaptation: "Real-time" },
       featured: false
     },
     {
       id: 6,
-      title: "Cognitive Automation Revolution",
-      category: "automation",
-      roi: "25b",
-      type: "blog",
-      url: "/blog/ai-2026-cognitive-automation-revolution",
-      description: "99.9% autonomous business process automation",
+      title: "Cognitive Automation Revolution
+      category: "automation
+      roi: "25b
+      type: "blog
+      url: "/blog/ai-2026-cognitive-automation-revolution
+      description: "99.9% autonomous business process automation
       metrics: { automation: "99.9%", roi: "$25.3B", processes: "1000+" },
       featured: false
     }

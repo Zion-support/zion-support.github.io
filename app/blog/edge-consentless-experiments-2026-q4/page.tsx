@@ -1,13 +1,13 @@
 export const metadata = {
-  title: 'Edge Consentless Experiments 2026 Q4: <100ms A/B Without PII',
+  title= 'Edge Consentless Experiments 2026 Q4: <100ms A/B Without PII',
   description: 'Scoped IDs, on‑device metrics, and differential privacy enable global A/B testing without collecting PII.',
 };
 
 export default function Page() {
   return (
-    <article className="prose prose-invert max-w-3xl mx-auto py-10">
+    <article className="prose prose-invert max-w-3xl mx-auto py-10">"
       <h1>Edge Consentless Experiments 2026 Q4: &lt;100ms A/B Without PII</h1>
-      <p className="text-sm opacity-70">Published: 2025-09-30 • Category: Analytics • 6 min read</p>
+      <p className="text-sm opacity-70">Published: 2025-09-30 • Category: Analytics • 6 min read</p>"
 
       <p>
         Run privacy‑preserving experiments at the edge using scoped identifiers, signed configs, and on‑device
@@ -33,7 +33,7 @@ export default function Page() {
         safe rollbacks globally.
       </p>
 
-      <p className="mt-8">
+      <p className="mt-8">"
         Explore our implementation templates and related posts on edge analytics and privacy‑first telemetry.
       </p>
     </article>

@@ -1,38 +1,29 @@
 import React from "react";
-import {
-createRoot
-} from "react-dom/client";
-import App from "./App";
+import { createRoot } from "react-dom/client";
+import App from "./App.tsx";
+import "./index.css";
 
-// Report web vitals to help monitor performance in production
 async function reportWebVitals() {
   try {
-    const { onCLS, onFID, onLCP, onFCP, onTTFB, onINP } = await import('web-vitals');
+    const { onCLS, onLCP, onFCP, onTTFB } = await import("web-vitals");
     const log = (metric: { name: string; value: number }) => {
-      // Replace with analytics endpoint if available
-      console.log(`[WebVitals] ${metric.name}:`, Math.round(metric.value));
+      if (import.meta.env.PROD) {
+        console.log(`[WebVitals] ${metric.name}:`, Math.round(metric.value));
+      }
     };
     onCLS(log);
-    onFID(log);
     onLCP(log);
     onFCP(log);
     onTTFB(log);
-    // @ts-ignore web-vitals v4 also exports onINP
-    if (onINP) onINP(log);
   } catch {
-    // no-op in dev or if unsupported
+    // ignore in unsupported environments
   }
-}
+};
 
-const container = document.getElementById('root');
-if (container) {
-	const root = createRoot(container);
-	root.render(
-		<React.StrictMode>
-			<App />
-		</React.StrictMode>
-	);
-  if (import.meta.env.PROD) {
-    void reportWebVitals();
-  }
-}
+createRoot(document.getElementById('root')!).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+)
+
+reportWebVitals();

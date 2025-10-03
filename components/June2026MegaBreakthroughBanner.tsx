@@ -1,5 +1,4 @@
-import React from 'react';
-import Link from 'next/link';
+import React, { JSX } from "react";
 
 export default function June2026MegaBreakthroughBanner() {
   return (

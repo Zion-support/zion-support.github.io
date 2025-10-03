@@ -2,10 +2,10 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-	title: 'Agentic Workflow Orchestration 2026: Reliable AI Workflows',
+	title= 'Agentic Workflow Orchestration 2026: Reliable AI Workflows',
 	description: 'Design multi-step agentic workflows with guardrails, reviews, and observability for measurable ROI.',
 	openGraph: {
-		title: 'Agentic Workflow Orchestration 2026',
+		title= 'Agentic Workflow Orchestration 2026',
 		description: 'Guardrails, approvals, and tracing to ship reliable multi-agent workflows.',
 		url: 'https://ziontechgroup.com/blog/agentic-workflow-orchestration-2026',
 		images: [{ url: '/og/agentic-workflow-orchestration-2026.jpg', width: 1200, height: 630 }],
@@ -14,18 +14,18 @@ export const metadata = {
 
 export default function Page() {
 	return (
-		<div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
-			<div className="max-w-3xl mx-auto px-4 py-12">
-				<div className="mb-8 text-sm text-blue-700">September 30, 2025 • 16 min read</div>
-				<h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+		<div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">"
+			<div className="max-w-3xl mx-auto px-4 py-12">"
+				<div className="mb-8 text-sm text-blue-700">September 30, 2025 • 16 min read</div>"
+				<h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">"
 					Agentic Workflow Orchestration 2026: Reliable AI Workflows
 				</h1>
-				<p className="text-xl text-gray-700 mb-8">
+				<p className="text-xl text-gray-700 mb-8">"
 					Orchestrate multi-step agents with policy gates, human approvals, and rich observability.
 					Ship reliable autonomy with measurable outcomes and fast rollbacks.
 				</p>
 
-				<div className="prose prose-lg max-w-none">
+				<div className="prose prose-lg max-w-none">"
 					<h2>Architecture</h2>
 					<ul>
 						<li>Declarative workflow graph with typed contracts</li>
@@ -49,14 +49,14 @@ export default function Page() {
 					</ol>
 				</div>
 
-				<div className="mt-10 p-6 bg-white rounded-xl border border-gray-200">
-					<h3 className="text-xl font-semibold mb-2">Next up</h3>
-					<ul className="list-disc pl-6 text-blue-700">
+				<div className="mt-10 p-6 bg-white rounded-xl border border-gray-200">"
+					<h3 className="text-xl font-semibold mb-2">Next up</h3>"
+					<ul className="list-disc pl-6 text-blue-700">"
 						<li>
-							<Link href="/content-hub">Explore the Content Hub</Link>
+							<Link href="/content-hub">Explore the Content Hub</Link>"
 						</li>
 						<li>
-							<Link href="/blog/ai-operational-resilience-2026">AI Operational Resilience 2026</Link>
+							<Link href="/blog/ai-operational-resilience-2026">AI Operational Resilience 2026</Link>"
 						</li>
 					</ul>
 				</div>

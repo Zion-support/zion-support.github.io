@@ -5,47 +5,47 @@ import { Link } from 'react-router-dom';
 const October2025NewContentAIEthicsShowcase = () => {
   const contentItems = [
     {
-      type: "Comprehensive Guide",
+      type: "Comprehensive Guide
       icon: Shield,
-      title: "Enterprise AI Ethics & Governance Framework 2025",
-      description: "Complete 7-pillar framework for implementing ethical AI at scale. Proven at 240+ Fortune 500 companies.",
-      link: "/blog/ai-2025-oct-01-generative-ai-ethics-governance-framework",
-      color: "from-purple-500 to-indigo-600",
-      badge: "18 MIN READ",
+      title: "Enterprise AI Ethics & Governance Framework 2025
+      description: "Complete 7-pillar framework for implementing ethical AI at scale. Proven at 240+ Fortune 500 companies.
+      link: "/blog/ai-2025-oct-01-generative-ai-ethics-governance-framework
+      color: "from-purple-500 to-indigo-600
+      badge: "18 MIN READ
       highlights: [
-        "99.8% compliance achievement",
-        "$247M avg. savings in fines",
-        "2.8x faster deployments",
+        "99.8% compliance achievement
+        "$247M avg. savings in fines
+        "2.8x faster deployments
         "Complete tech stack"
       ]
     },
     {
-      type: "Case Study",
+      type: "Case Study
       icon: TrendingUp,
-      title: "Fortune 50 Retail: $8.7B AI Ethics Success",
-      description: "How a global retailer transformed 12,847 AI models to achieve industry-leading ethics compliance and massive ROI.",
-      link: "/case-studies/ai-2025-oct-01-global-retail-ai-ethics-governance-8-7-billion-success",
-      color: "from-emerald-500 to-green-600",
-      badge: "SUCCESS STORY",
+      title: "Fortune 50 Retail: $8.7B AI Ethics Success
+      description: "How a global retailer transformed 12,847 AI models to achieve industry-leading ethics compliance and massive ROI.
+      link: "/case-studies/ai-2025-oct-01-global-retail-ai-ethics-governance-8-7-billion-success
+      color: "from-emerald-500 to-green-600
+      badge: "SUCCESS STORY
       highlights: [
-        "$8.7B total value",
-        "18,400% ROI in 24 months",
-        "12,847 models transformed",
+        "$8.7B total value
+        "18,400% ROI in 24 months
+        "12,847 models transformed
         "Zero compliance violations"
       ]
     },
     {
-      type: "Quick Start Guide",
+      type: "Quick Start Guide
       icon: Sparkles,
-      title: "30-Day AI Ethics Implementation Guide",
-      description: "Practical, step-by-step guide to implementing enterprise AI ethics. From zero to operational in 30 days.",
-      link: "/guides/ai-ethics-implementation-quick-start-guide-2025",
-      color: "from-blue-500 to-cyan-600",
-      badge: "ACTIONABLE",
+      title: "30-Day AI Ethics Implementation Guide
+      description: "Practical, step-by-step guide to implementing enterprise AI ethics. From zero to operational in 30 days.
+      link: "/guides/ai-ethics-implementation-quick-start-guide-2025
+      color: "from-blue-500 to-cyan-600
+      badge: "ACTIONABLE
       highlights: [
-        "Week-by-week roadmap",
-        "Free tools & templates",
-        "Real-world examples",
+        "Week-by-week roadmap
+        "Free tools & templates
+        "Real-world examples
         "Zero to operational"
       ]
     }

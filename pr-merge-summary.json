@@ -1,8 +1,18 @@
 {
-  "timestamp": "2025-10-02T06:01:40.106Z",
-  "totalPRs": 1,
+  "timestamp": "2025-10-03T17:30:16.430Z",
+  "processed": 2,
   "merged": 0,
-  "failed": 0,
-  "mergedPRs": [],
-  "failedPRs": []
+  "failed": 2,
+  "prs": [
+    {
+      "number": 24750,
+      "title": "Fix web vitals import error during build",
+      "processed": true
+    },
+    {
+      "number": 24749,
+      "title": "Fix errors and merge to main",
+      "processed": true
+    }
+  ]
 }

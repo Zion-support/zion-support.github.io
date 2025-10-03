@@ -1,59 +1,20 @@
 /**
- * Testing Helpers and Utilities
- * 
- * Comprehensive testing utilities for React components, hooks
- * and integration tests with support for async operations.
- * 
- * Features: * - Component rendering helpers,
- * - Mock data generators
- * - Async testing utilities
- * - DOM testing helpers
- * - Performance testing utilities
- * - Accessibility testing helpers
+ * Test utilities and helpers for the application
  */
 
-
-export interface MockComponentProps {
-id?: string;,
-className?: string;,
-children?: React.ReactNode;,
-[key: string]: any;
-}
-
-export interface TestSetupOptions {
-mockLocalStorage?: boolean;,
-mockSessionStorage?: boolean;,
-mockFetch?: boolean;,
-mockConsole?: boolean;
-}
-
 /**
- * Wait for specified milliseconds
- */
-export const wait = (ms: number): Promise<void> => {,
-  return new Promise(resolve => setTimeout(resolve, ms));
-};
-
-/**
- * Wait for condition to be true
+ * Wait for a condition to be true
  */
 export const waitFor = async (
-<<<<<<< HEAD
-  condition: () => boolean | Promise<boolean>,
-  timeout = 5000
-=======
-  condition: () => boolean | Promise<boolean>,,
+  condition: () => boolean,
   timeout = 5000,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
-  interval = 50
 ): Promise<void> => {
-  const startTime = Date.now();
-  
-  while (!(await Promise.resolve(condition()))) {
-    if (Date.now() - startTime > timeout) {
-      throw new Error(`Timeout waiting for condition after ${timeout}ms`);`;
-    }
-    await wait(interval);
+  const start = Date.now();
+  while (!condition() && Date.now() - start < timeout) {
+    await new Promise(resolve => setTimeout(resolve, 100));
+  }
+  if (!condition()) {
+    throw new Error(`Timeout waiting for condition after ${timeout}ms`);
   }
 };
 
@@ -61,8 +22,8 @@ export const waitFor = async (
  * Wait for element to appear in DOM
  */
 export const waitForElement = async (
-  selector: string,,
-  timeout = 5000
+  selector: string,
+  timeout = 5000,
 ): Promise<Element> => {
   await waitFor(() => !!document.querySelector(selector), timeout);
   return document.querySelector(selector)!;
@@ -72,8 +33,8 @@ export const waitForElement = async (
  * Wait for element to disappear from DOM
  */
 export const waitForElementToBeRemoved = async (
-  selector: string,,
-  timeout = 5000
+  selector: string,
+  timeout = 5000,
 ): Promise<void> => {
   await waitFor(() => !document.querySelector(selector), timeout);
 };
@@ -81,490 +42,346 @@ export const waitForElementToBeRemoved = async (
 /**
  * Simulate user click
  */
-<<<<<<< HEAD
-export const click = (element: Element): void => {
-  const clickEvent = new MouseEvent('click', {
+export const simulateClick = (element: Element): void => {
+  const event = new MouseEvent('click', {
     bubbles: true,
     cancelable: true,
-    view: window
-=======
-export const click = (element: Element): void => {,
-  const clickEvent = new MouseEvent('click', {';
-    bubbles: true,,
-    cancelable: true,,
-    view: window,,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
+    view: window,
   });
-  element.dispatchEvent(clickEvent);
+  element.dispatchEvent(event);
 };
 
 /**
- * Simulate user typing
+ * Simulate user input
  */
-export const type = (element: HTMLInputElement | HTMLTextAreaElement, text: string): void => {,
-  element.focus();
-  element.value = text;
-  
-<<<<<<< HEAD
-  const inputEvent = new Event('input', {
-    bubbles: true,
-    cancelable: true
-  });
-  element.dispatchEvent(inputEvent);
-  
-  const changeEvent = new Event('change', {
-    bubbles: true,
-    cancelable: true
-=======
-  const inputEvent = new Event('input', {';
-    bubbles: true,,
-    cancelable: true,,
-  });
-  element.dispatchEvent(inputEvent);
-  
-  const changeEvent = new Event('change', {';
-    bubbles: true,,
-    cancelable: true,,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
-  });
-  element.dispatchEvent(changeEvent);
-};
-
-/**
- * Clear input value
- */
-export const clear = (element: HTMLInputElement | HTMLTextAreaElement): void => {,
-<<<<<<< HEAD
-  element.value = '';
-  const changeEvent = new Event('change', {
-    bubbles: true,
-    cancelable: true
-=======
-  element.value = '';';
-  const changeEvent = new Event('change', {';
-    bubbles: true,,
-    cancelable: true,,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
-  });
-  element.dispatchEvent(changeEvent);
-};
-
-/**
- * Select option in select element
- */
-export const selectOption = (element: HTMLSelectElement, value: string): void => {,
+export const simulateInput = (element: HTMLInputElement, value: string): void => {
   element.value = value;
-<<<<<<< HEAD
-  const changeEvent = new Event('change', {
-    bubbles: true,
-    cancelable: true
-=======
-  const changeEvent = new Event('change', {';
-    bubbles: true,,
-    cancelable: true,,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
-  });
-  element.dispatchEvent(changeEvent);
+  const event = new Event('input', { bubbles: true });
+  element.dispatchEvent(event);
 };
 
 /**
- * Mock fetch API
+ * Mock fetch response
  */
-export class FetchMock {
-<<<<<<< HEAD
-  private responses: Map<string, any> = new Map(),
-  private originalFetch: typeof fetch,
-=======
-  private responses: Map<string, any> = new Map();,
-  private originalFetch: typeof fetch;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
-
-  constructor() {
-    this.originalFetch = globalThis.fetch;
-  }
-
-  mockResponse(url: string, response: any, options?: {,
-    status?: number;
-    statusText?: string;
-    headers?: Record<string, string>;
-  }): void {
-    this.responses.set(url, {
-      response,
-<<<<<<< HEAD
-      status: options?.status || 200,
-      statusText: options?.statusText || 'OK',
-      headers: options?.headers || {}
-=======
-      status: options?.status || 200,,
-      statusText: options?.statusText || 'OK',';,
-      headers: options?.headers || {},
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
-    });
-  }
-
-  mockResponseOnce(url: string, response: any, options?: {,
-    status?: number;
-    statusText?: string;
-    headers?: Record<string, string>;
-  }): void {
-    this.mockResponse(url, response, options);
-    
-    // Remove after first call
-    const original = this.responses.get(url);
-    if (original) {
-      this.responses.set(url, {
-<<<<<<< HEAD
-        ...original
-        once: true
-=======
-        ...original,
-        once: true,,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
-      });
-    }
-  }
-
-  install(): void {
-    globalThis.fetch = async (input: RequestInfo | URL, init?: RequestInit): Promise<Response> => {,
-<<<<<<< HEAD
-      const url = typeof input === 'string' ? input : input.toString();
-=======
-      const url = typeof input === 'string' ? input : input.toString();';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
-      const mockData = this.responses.get(url);
-
-      if (mockData) {
-        if (mockData.once) {
-          this.responses.delete(url);
-        }
-
-        return new Response(JSON.stringify(mockData.response), {
-<<<<<<< HEAD
-          status: mockData.status,
-          statusText: mockData.statusText,
-          headers: mockData.headers
-=======
-          status: mockData.status,,
-          statusText: mockData.statusText,,
-          headers: mockData.headers,,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
-        });
-      }
-
-      return this.originalFetch(input, init);
-    };
-  }
-
-  restore(): void {
-    globalThis.fetch = this.originalFetch;
-    this.responses.clear();
-  }
-}
+export const mockFetch = (response: any, status = 200): void => {
+  global.fetch = jest.fn().mockResolvedValue({
+    ok: status >= 200 && status < 300,
+    status,
+    json: () => Promise.resolve(response),
+    text: () => Promise.resolve(JSON.stringify(response)),
+  });
+};
 
 /**
  * Mock localStorage
  */
-export class LocalStorageMock {
-  private store: Record<string, string> = {};
-
-  getItem(key: string): string | null {,
-    return this.store[key] || null;
-  }
-
-  setItem(key: string, value: string): void {,
-    this.store[key] = value;
-  }
-
-  removeItem(key: string): void {,
-    delete this.store[key];
-  }
-
-  clear(): void {
-    this.store = {};
-  }
-
-  get length(): number {
-    return Object.keys(this.store).length;
-  }
-
-  key(index: number): string | null {,
-    const keys = Object.keys(this.store);
-    return keys[index] || null;
-  }
-}
+export const mockLocalStorage = (): void => {
+  const store: { [key: string]: string } = {};
+  
+  Object.defineProperty(window, 'localStorage', {
+    value: {
+      getItem: (key: string) => store[key] || null,
+      setItem: (key: string, value: string) => {
+        store[key] = value;
+      },
+      removeItem: (key: string) => {
+        delete store[key];
+      },
+      clear: () => {
+        Object.keys(store).forEach(key => delete store[key]);
+      },
+    },
+    writable: true,
+  });
+};
 
 /**
- * Mock console methods
+ * Mock window.location
  */
-export class ConsoleMock {
-private originalConsole: typeof console;
-logs: any[] = [];
-warnings: any[] = [];
-errors: any[] = [];
-constructor() {
-this.originalConsole = console;
-}
-
-  install(): void {
-console.log = (...args: any[]) => this.logs.push(args);
-console.warn = (...args: any[]) => this.warnings.push(args);
-console.error = (...args: any[]) => this.errors.push(args);
-}
-
-  restore(): void {
-    console.log = this.originalConsole.log;
-    console.warn = this.originalConsole.warn;
-    console.error = this.originalConsole.error;
-  }
-
-  clear(): void {
-    this.logs = [];
-    this.warnings = [];
-    this.errors = [];
-  }
-}
+export const mockLocation = (url: string): void => {
+  delete (window as any).location;
+  window.location = new URL(url) as any;
+};
 
 /**
- * Generate mock data
+ * Create mock element
  */
-export const generateMockData = {
-  string: (length = 10): string => {,
-    return Math.random().toString(36).substring(2, 2 + length);
-<<<<<<< HEAD
-  }
-  number: (min = 0, max = 100): number => {,
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
-  boolean: (): boolean => {,
-    return Math.random() > 0.5;
-  }
-  email: (): string => {,
-    return `test${generateMockData.number()}@example.com`;
-  }
-  url: (): string => {,
-    return `https://example.com/${generateMockData.string()}`;
-  }
-  date: (): Date => {,
-    return new Date(Date.now() - generateMockData.number(0, 365) * 24 * 60 * 60 * 1000);
-  }
-=======
-  },
+export const createMockElement = (tagName: string, attributes: Record<string, string> = {}): HTMLElement => {
+  const element = document.createElement(tagName);
+  Object.entries(attributes).forEach(([key, value]) => {
+    element.setAttribute(key, value);
+  });
+  return element;
+};
 
-  number: (min = 0, max = 100): number => {,
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  },
+/**
+ * Mock IntersectionObserver
+ */
+export const mockIntersectionObserver = (): void => {
+  global.IntersectionObserver = jest.fn().mockImplementation(() => ({
+    observe: jest.fn(),
+    unobserve: jest.fn(),
+    disconnect: jest.fn(),
+  }));
+};
 
-  boolean: (): boolean => {,
-    return Math.random() > 0.5;
-  },
+/**
+ * Mock ResizeObserver
+ */
+export const mockResizeObserver = (): void => {
+  global.ResizeObserver = jest.fn().mockImplementation(() => ({
+    observe: jest.fn(),
+    unobserve: jest.fn(),
+    disconnect: jest.fn(),
+  }));
+};
 
-  email: (): string => {,
-    return `test${generateMockData.number()}@example.com`;`;
-  },
+/**
+ * Mock matchMedia
+ */
+export const mockMatchMedia = (matches: boolean): void => {
+  Object.defineProperty(window, 'matchMedia', {
+    writable: true,
+    value: jest.fn().mockImplementation(query => ({
+      matches,
+      media: query,
+      onchange: null,
+      addListener: jest.fn(),
+      removeListener: jest.fn(),
+      addEventListener: jest.fn(),
+      removeEventListener: jest.fn(),
+      dispatchEvent: jest.fn(),
+    })),
+  });
+};
 
-  url: (): string => {,
-    return `https://example.com/${generateMockData.string()}`;`;
-  },
+/**
+ * Wait for async component to render
+ */
+export const waitForAsyncComponent = async (
+  component: React.ComponentType<any>,
+  _props: any = {},
+  timeout = 5000,
+): Promise<void> => {
+  await waitFor(() => {
+    try {
+      const element = document.querySelector(`[data-testid="${component.name}"]`);"
+      return !!element;
+    } catch {
+      return false;
+    }
+  }, timeout);
+};
 
-  date: (): Date => {,
-    return new Date(Date.now() - generateMockData.number(0, 365) * 24 * 60 * 60 * 1000);
-  },
+/**
+ * Mock console methods for testing
+ */
+export const mockConsole = (): void => {
+  const originalConsole = { ...console };
+  
+  beforeEach(() => {
+    console.log = jest.fn();
+    console.error = jest.fn();
+    console.warn = jest.fn();
+    console.info = jest.fn();
+  });
+  
+  afterEach(() => {
+    Object.assign(console, originalConsole);
+  });
+};
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
-  array: <T>(generator: () => T, length = 5): T[] => {,
-    return Array.from({ length }, generator);
+/**
+ * Create mock router
+ */
+export const createMockRouter = (pathname = '/', search = ''): any => ({
+  pathname,
+  search,
+  hash: '',
+  query: {},
+  push: jest.fn(),
+  replace: jest.fn(),
+  back: jest.fn(),
+  forward: jest.fn(),
+  reload: jest.fn(),
+  prefetch: jest.fn(),
+});
+
+/**
+ * Mock Next.js router
+ */
+export const mockNextRouter = (pathname = '/', query = {}): void => {
+  const mockRouter = createMockRouter(pathname);
+  mockRouter.query = query;
+  
+  jest.mock('next/router', () => ({
+    useRouter: () => mockRouter,
+    withRouter: (Component: any) => Component,
+  }));
+};
+
+/**
+ * Create test environment setup
+ */
+export const setupTestEnvironment = (): void => {
+  mockLocalStorage();
+  mockIntersectionObserver();
+  mockResizeObserver();
+  mockMatchMedia(true);
+  mockConsole();
+};
+
+/**
+ * Clean up test environment
+ */
+export const cleanupTestEnvironment = (): void => {
+  // Clean up any global mocks
+  if (typeof global.fetch !== 'undefined') {
+    // delete global.fetch;
   }
-  object: <T extends Record<string, any>>(schema: { [K in keyof T]: () => T[K] }): T => {,
-    const result = {} as T;
-    Object.keys(schema).forEach(key => {
-      result[key as keyof T] = schema[key as keyof T]();
-    });
-    return result;
+  
+  // Clear localStorage
+  if (window.localStorage) {
+    window.localStorage.clear();
+  }
+  
+  // Reset window.location
+  if (window.location) {
+    window.location = new URL('http://localhost:3000') as any;
   }
 };
 
 /**
- * Performance testing helper
+ * Create mock API response
  */
-export class PerformanceTester {
-<<<<<<< HEAD
-  private startTime: number = 0,
-  private measurements: Map<string, number[]> = new Map(),
-=======
-  private startTime: number = 0;,
-  private measurements: Map<string, number[]> = new Map();,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
-
-  start(label: string): void {,
-    this.startTime = performance.now();
-    performance.mark(`${label}-start`);`;
-  }
-
-  end(label: string): number {,
-    performance.mark(`${label}-end`);`;
-    performance.measure(label, `${label}-start`, `${label}-end`);`;
-    
-    const duration = performance.now() - this.startTime;
-    
-    if (!this.measurements.has(label)) {
-      this.measurements.set(label, []);
-    }
-    this.measurements.get(label)!.push(duration);
-    
-    return duration;
-  }
-
-  getAverage(label: string): number {,
-    const measurements = this.measurements.get(label) || [];
-    if (measurements.length === 0) return 0;
-    
-    const sum = measurements.reduce((acc, val) => acc + val, 0);
-    return sum / measurements.length;
-  }
-
-  getMedian(label: string): number {,
-    const measurements = this.measurements.get(label) || [];
-    if (measurements.length === 0) return 0;
-    
-    const sorted = [...measurements].sort((a, b) => a - b);
-    const mid = Math.floor(sorted.length / 2);
-    
-    if (sorted.length % 2 === 0) {
-      return (sorted[mid - 1] + sorted[mid]) / 2;
-    }
-    return sorted[mid];
-  }
-
-  clear(): void {
-    this.measurements.clear();
-    performance.clearMarks();
-    performance.clearMeasures();
-  }
-}
+export const createMockApiResponse = <T>(data: T, status = 200): Response => ({
+  ok: status >= 200 && status < 300,
+  status,
+  statusText: status === 200 ? 'OK' : 'Error',
+  headers: new Headers(),
+  body: null,
+  bodyUsed: false,
+  redirected: false,
+  type: 'basic' as ResponseType,
+  url: '',
+  arrayBuffer: () => Promise.resolve(new ArrayBuffer(0)),
+  blob: () => Promise.resolve(new Blob()),
+  formData: () => Promise.resolve(new FormData()),
+  json: () => Promise.resolve(data),
+  text: () => Promise.resolve(JSON.stringify(data)),
+  clone: () => createMockApiResponse(data, status),
+} as Response);
 
 /**
- * Accessibility testing helper
+ * Mock fetch with different responses
  */
-export const checkAccessibility = {
-hasAriaLabel: (element: Element): boolean => {,,
-<<<<<<< HEAD
-return element.hasAttribute('aria-label') || element.hasAttribute('aria-labelledby');
-}
-  hasRole: (element: Element, role: string): boolean => {,
-    return element.getAttribute('role') === role;
-  }
-  isFocusable: (element: Element): boolean => {,
-    const tabindex = element.getAttribute('tabindex');
-    return tabindex !== '-1' && (element as HTMLElement).tabIndex >= 0;
-  }
-  hasAltText: (img: HTMLImageElement): boolean => {,
-    return Boolean(img.alt && img.alt.trim().length > 0);
-  }
-=======
-return element.hasAttribute('aria-label') || element.hasAttribute('aria-labelledby');';
-},
-
-  hasRole: (element: Element, role: string): boolean => {,
-    return element.getAttribute('role') === role;';
-  },
-
-  isFocusable: (element: Element): boolean => {,
-    const tabindex = element.getAttribute('tabindex');';
-    return tabindex !== '-1' && (element as HTMLElement).tabIndex >= 0;';
-  },
-
-  hasAltText: (img: HTMLImageElement): boolean => {,
-    return Boolean(img.alt && img.alt.trim().length > 0);
-  },
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
-  hasValidContrast: (element: Element): boolean => {,
-    const computed = window.getComputedStyle(element);
-    const color = computed.color;
-    const background = computed.backgroundColor;
-    
-    // This is a simplified check - real implementation would calculate contrast ratio
-    return color !== background;
-  }
+export const mockFetchResponses = (responses: Array<{ url: string; response: any; status?: number }>): void => {
+  global.fetch = jest.fn().mockImplementation((url: string) => {
+    const match = responses.find(r => url.includes(r.url));
+    if (match) {
+      return Promise.resolve(createMockApiResponse(match.response, match.status));
+    }
+    return Promise.resolve(createMockApiResponse({}, 404));
+  });
 };
 
 /**
- * Setup test environment
+ * Wait for network requests to complete
  */
-export const setupTestEnvironment = (options: TestSetupOptions = {}): {
-cleanup: () => void;
-fetchMock: FetchMock;
-consoleMock: ConsoleMock;
-} => {
-  const fetchMock = new FetchMock();
-  const consoleMock = new ConsoleMock();
-  const localStorageMock = new LocalStorageMock();
+export const waitForNetworkRequests = async (timeout = 5000): Promise<void> => {
+  await waitFor(() => {
+    // Check if there are any pending fetch requests
+    return !(global.fetch as any)?.mock?.calls?.some((call: any) => !call[1]?.resolved);
+  }, timeout);
+};
 
-  if (options.mockFetch) {
-    fetchMock.install();
-  }
-
-  if (options.mockConsole) {
-    consoleMock.install();
-  }
-
-  if (options.mockLocalStorage) {
-<<<<<<< HEAD
-    Object.defineProperty(window, 'localStorage', {
-      value: localStorageMock,
-      writable: true
-=======
-    Object.defineProperty(window, 'localStorage', {';
-      value: localStorageMock,,
-      writable: true,,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
-    });
-  }
-
-  if (options.mockSessionStorage) {
-<<<<<<< HEAD
-    Object.defineProperty(window, 'sessionStorage', {
-      value: new LocalStorageMock(),
-      writable: true
-=======
-    Object.defineProperty(window, 'sessionStorage', {';
-      value: new LocalStorageMock(),,
-      writable: true,,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
-    });
-  }
-
-  const cleanup = () => {
-    if (options.mockFetch) {
-      fetchMock.restore();
-    };
-    if (options.mockConsole) {
-      consoleMock.restore();
-    }
+/**
+ * Create mock error
+ */
+export const createMockError = (message: string, status = 500): Error => {
+  const error = new Error(message) as any;
+  error.status = status;
+  error.response = {
+    status,
+    statusText: 'Internal Server Error',
+    data: { message },
   };
-
-  return {
-    cleanup,
-    fetchMock,
-    consoleMock
-  };
+  return error;
 };
 
-export default {
-  wait,
-  waitFor,
-  waitForElement,
-  waitForElementToBeRemoved,
-  click,
-  type,
-  clear,
-  selectOption,
-  FetchMock,
-  LocalStorageMock,
-  ConsoleMock,
-  generateMockData,
-  PerformanceTester,
-  checkAccessibility,
-  setupTestEnvironment
+/**
+ * Mock window.scrollTo
+ */
+export const mockScrollTo = (): void => {
+  Object.defineProperty(window, 'scrollTo', {
+    writable: true,
+    value: jest.fn(),
+  });
 };
-;
+
+/**
+ * Mock window.getComputedStyle
+ */
+export const mockGetComputedStyle = (styles: Record<string, string> = {}): void => {
+  Object.defineProperty(window, 'getComputedStyle', {
+    writable: true,
+    value: jest.fn().mockImplementation(() => ({
+      getPropertyValue: (prop: string) => styles[prop] || '',
+      ...styles,
+    })),
+  });
+};
+
+/**
+ * Create mock event
+ */
+export const createMockEvent = (type: string, options: any = {}): Event => {
+  const event = new Event(type, {
+    bubbles: true,
+    cancelable: true,
+    ...options,
+  });
+  return event;
+};
+
+/**
+ * Mock setTimeout and setInterval
+ */
+export const mockTimers = (): void => {
+  jest.useFakeTimers();
+};
+
+/**
+ * Restore real timers
+ */
+export const restoreTimers = (): void => {
+  jest.useRealTimers();
+};
+
+/**
+ * Advance timers by specified time
+ */
+export const advanceTimers = (ms: number): void => {
+  jest.advanceTimersByTime(ms);
+};
+
+/**
+ * Run all pending timers
+ */
+export const runAllTimers = (): void => {
+  jest.runAllTimers();
+};
+
+/**
+ * Run only pending timers
+ */
+export const runOnlyPendingTimers = (): void => {
+  jest.runOnlyPendingTimers();
+};
+
+/**
+ * Clear all timers
+ */
+export const clearAllTimers = (): void => {
+  jest.clearAllTimers();
+};

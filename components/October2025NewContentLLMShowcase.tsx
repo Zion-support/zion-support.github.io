@@ -6,61 +6,61 @@ const October2025NewContentLLMShowcase = () => {
   const content = [
     {
       icon: BookOpen,
-      title: "Enterprise LLM Orchestration Revolution",
-      type: "Technical Article",
-      description: "Deep dive into multi-model AI strategy achieving 450% productivity gains and $2.3B in value creation",
-      link: "/blog/ai-2025-oct-01-enterprise-llm-orchestration-revolution",
-      readTime: "12 min",
+      title: "Enterprise LLM Orchestration Revolution
+      type: "Technical Article
+      description: "Deep dive into multi-model AI strategy achieving 450% productivity gains and $2.3B in value creation
+      link: "/blog/ai-2025-oct-01-enterprise-llm-orchestration-revolution
+      readTime: "12 min
       tags: ["LLM", "Cost Optimization", "Multi-Model"],
-      color: "from-blue-500 to-cyan-500",
+      color: "from-blue-500 to-cyan-500
       highlights: [
-        "73% cost reduction strategies",
-        "Intelligent model routing explained",
+        "73% cost reduction strategies
+        "Intelligent model routing explained
         "Real-world implementation patterns"
       ]
     },
     {
       icon: Briefcase,
-      title: "$8.2B Fortune 100 Retail Transformation",
-      type: "Case Study",
-      description: "How a global retailer achieved 1,840% ROI through enterprise LLM orchestration",
-      link: "/case-studies/ai-2025-oct-01-fortune-100-retail-llm-orchestration-8-2-billion-success",
-      readTime: "15 min",
+      title: "$8.2B Fortune 100 Retail Transformation
+      type: "Case Study
+      description: "How a global retailer achieved 1,840% ROI through enterprise LLM orchestration
+      link: "/case-studies/ai-2025-oct-01-fortune-100-retail-llm-orchestration-8-2-billion-success
+      readTime: "15 min
       tags: ["Retail", "ROI", "Fortune 100"],
-      color: "from-green-500 to-emerald-500",
+      color: "from-green-500 to-emerald-500
       highlights: [
-        "$7.9M monthly cost savings",
-        "520% productivity improvement",
+        "$7.9M monthly cost savings
+        "520% productivity improvement
         "42,000 AI agents orchestrated"
       ]
     },
     {
       icon: Wrench,
-      title: "Complete Implementation Guide 2025",
-      type: "Technical Guide",
-      description: "Step-by-step roadmap with code examples, architecture patterns, and best practices",
-      link: "/guides/enterprise-llm-orchestration-implementation-guide-2025",
-      readTime: "45 min",
+      title: "Complete Implementation Guide 2025
+      type: "Technical Guide
+      description: "Step-by-step roadmap with code examples, architecture patterns, and best practices
+      link: "/guides/enterprise-llm-orchestration-implementation-guide-2025
+      readTime: "45 min
       tags: ["Implementation", "DevOps", "Architecture"],
-      color: "from-purple-500 to-pink-500",
+      color: "from-purple-500 to-pink-500
       highlights: [
-        "6-month deployment timeline",
-        "Production-ready code examples",
+        "6-month deployment timeline
+        "Production-ready code examples
         "Security & compliance framework"
       ]
     },
     {
       icon: Rocket,
-      title: "Enterprise Orchestration Platform",
-      type: "Service Offering",
-      description: "Turnkey platform delivering 10-20x Year 1 ROI with proven Fortune 500 results",
-      link: "/services/ai-2025-october-enterprise-llm-orchestration-platform",
-      readTime: "10 min",
+      title: "Enterprise Orchestration Platform
+      type: "Service Offering
+      description: "Turnkey platform delivering 10-20x Year 1 ROI with proven Fortune 500 results
+      link: "/services/ai-2025-october-enterprise-llm-orchestration-platform
+      readTime: "10 min
       tags: ["Platform", "Services", "Implementation"],
-      color: "from-orange-500 to-red-500",
+      color: "from-orange-500 to-red-500
       highlights: [
-        "Complimentary assessment available",
-        "$128,500 limited-time bonus",
+        "Complimentary assessment available
+        "$128,500 limited-time bonus
         "99.97% platform reliability"
       ]
     }

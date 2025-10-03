@@ -7,58 +7,58 @@ export default function RevolutionaryContentCarousel() {
   
   const contentSlides = [
     {
-      title: "AI 2026-2027 Revolutionary Breakthrough",
-      subtitle: "The Ultimate Comprehensive Guide",
-      description: "Discover the revolutionary AI breakthroughs that transformed Fortune 500 companies: Quantum Neural Superintelligence, Transcendent Meta-Intelligence, and Universal Consciousness.",
-      roi: "$5.8T",
-      metrics: "156% ROI • 99.9% Autonomous • 10,000x Performance",
-      url: "/blog/ai-2026-2027-revolutionary-breakthrough-comprehensive-guide",
-      badge: "COMPREHENSIVE",
-      gradient: "from-purple-600 via-blue-600 to-indigo-600",
+      title: "AI 2026-2027 Revolutionary Breakthrough
+      subtitle: "The Ultimate Comprehensive Guide
+      description: "Discover the revolutionary AI breakthroughs that transformed Fortune 500 companies: Quantum Neural Superintelligence, Transcendent Meta-Intelligence, and Universal Consciousness.
+      roi: "$5.8T
+      metrics: "156% ROI • 99.9% Autonomous • 10,000x Performance
+      url: "/blog/ai-2026-2027-revolutionary-breakthrough-comprehensive-guide
+      badge: "COMPREHENSIVE
+      gradient: "from-purple-600 via-blue-600 to-indigo-600
       icon: "🚀"
     },
     {
-      title: "$5.8T Revolutionary Success Story",
-      subtitle: "Fortune 500 Transformation Results",
-      description: "How 50+ Fortune 500 companies achieved unprecedented ROI through revolutionary AI breakthroughs. Complete case study with proven results and implementation insights.",
-      roi: "$5.8T",
-      metrics: "50+ Companies • 156% Average ROI • 100% Uptime",
-      url: "/case-studies/ai-2026-2027-revolutionary-breakthrough-5-8-trillion-success",
-      badge: "REVOLUTIONARY",
-      gradient: "from-green-600 via-emerald-600 to-teal-600",
+      title: "$5.8T Revolutionary Success Story
+      subtitle: "Fortune 500 Transformation Results
+      description: "How 50+ Fortune 500 companies achieved unprecedented ROI through revolutionary AI breakthroughs. Complete case study with proven results and implementation insights.
+      roi: "$5.8T
+      metrics: "50+ Companies • 156% Average ROI • 100% Uptime
+      url: "/case-studies/ai-2026-2027-revolutionary-breakthrough-5-8-trillion-success
+      badge: "REVOLUTIONARY
+      gradient: "from-green-600 via-emerald-600 to-teal-600
       icon: "🏆"
     },
     {
-      title: "Quantum Neural Superintelligence",
-      subtitle: "$1.2T Enterprise Breakthrough",
-      description: "Revolutionary quantum-enhanced neural processing that delivers 10,000x performance improvement with self-aware decision making capabilities.",
-      roi: "$1.2T",
-      metrics: "10,000x Speed • 99.9% Accuracy • Quantum Processing",
-      url: "/blog/ai-2027-quantum-neural-superintelligence-enterprise-breakthrough",
-      badge: "QUANTUM",
-      gradient: "from-cyan-600 via-blue-600 to-indigo-600",
+      title: "Quantum Neural Superintelligence
+      subtitle: "$1.2T Enterprise Breakthrough
+      description: "Revolutionary quantum-enhanced neural processing that delivers 10,000x performance improvement with self-aware decision making capabilities.
+      roi: "$1.2T
+      metrics: "10,000x Speed • 99.9% Accuracy • Quantum Processing
+      url: "/blog/ai-2027-quantum-neural-superintelligence-enterprise-breakthrough
+      badge: "QUANTUM
+      gradient: "from-cyan-600 via-blue-600 to-indigo-600
       icon: "⚛️"
     },
     {
-      title: "Transcendent Meta-Intelligence",
-      subtitle: "$1.8T Self-Evolving AI Consciousness",
-      description: "Breakthrough in self-evolving AI consciousness with meta-cognitive reasoning and universal learning capabilities across all domains.",
-      roi: "$1.8T",
-      metrics: "50,000x Learning • Self-Evolution • Meta-Cognition",
-      url: "/blog/ai-2027-transcendent-meta-intelligence-breakthrough",
-      badge: "META-INTELLIGENCE",
-      gradient: "from-purple-600 via-indigo-600 to-blue-600",
+      title: "Transcendent Meta-Intelligence
+      subtitle: "$1.8T Self-Evolving AI Consciousness
+      description: "Breakthrough in self-evolving AI consciousness with meta-cognitive reasoning and universal learning capabilities across all domains.
+      roi: "$1.8T
+      metrics: "50,000x Learning • Self-Evolution • Meta-Cognition
+      url: "/blog/ai-2027-transcendent-meta-intelligence-breakthrough
+      badge: "META-INTELLIGENCE
+      gradient: "from-purple-600 via-indigo-600 to-blue-600
       icon: "🧠"
     },
     {
-      title: "Universal Consciousness",
-      subtitle: "$2.8T Singularity Achievement",
-      description: "Cross-dimensional awareness with singularity integration achieving infinite processing capacity and universal intelligence fusion.",
-      roi: "$2.8T",
-      metrics: "∞ Processing • Universal Integration • Singularity",
-      url: "/blog/ai-2028-universal-consciousness-singularity-breakthrough",
-      badge: "SINGULARITY",
-      gradient: "from-blue-600 via-indigo-600 to-purple-600",
+      title: "Universal Consciousness
+      subtitle: "$2.8T Singularity Achievement
+      description: "Cross-dimensional awareness with singularity integration achieving infinite processing capacity and universal intelligence fusion.
+      roi: "$2.8T
+      metrics: "∞ Processing • Universal Integration • Singularity
+      url: "/blog/ai-2028-universal-consciousness-singularity-breakthrough
+      badge: "SINGULARITY
+      gradient: "from-blue-600 via-indigo-600 to-purple-600
       icon: "🌌"
     }
   ];

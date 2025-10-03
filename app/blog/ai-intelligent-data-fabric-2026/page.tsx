@@ -2,11 +2,11 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-	title: 'Intelligent Data Fabric 2026: Real-Time AI for Connected Enterprises',
+	title= 'Intelligent Data Fabric 2026: Real-Time AI for Connected Enterprises',
 	description:
 		'Unify batch, streaming, and unstructured data with an intelligent data fabric to power low-latency AI decisions across the enterprise.',
 	openGraph: {
-		title: 'Intelligent Data Fabric 2026',
+		title= 'Intelligent Data Fabric 2026',
 		description:
 			'Architecture patterns for a unified data fabric enabling real-time AI across domains.',
 		url: 'https://ziontechgroup.com/blog/ai-intelligent-data-fabric-2026',
@@ -16,19 +16,19 @@ export const metadata = {
 
 export default function Page() {
 	return (
-		<div className="min-h-screen bg-gradient-to-br from-gray-50 to-amber-50">
-			<div className="max-w-3xl mx-auto px-4 py-12">
-				<div className="mb-8 text-sm text-amber-700">September 30, 2025 • 15 min read</div>
-				<h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+		<div className="min-h-screen bg-gradient-to-br from-gray-50 to-amber-50">"
+			<div className="max-w-3xl mx-auto px-4 py-12">"
+				<div className="mb-8 text-sm text-amber-700">September 30, 2025 • 15 min read</div>"
+				<h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">"
 					Intelligent Data Fabric 2026: Real-Time AI for Connected Enterprises
 				</h1>
-				<p className="text-xl text-gray-700 mb-8">
+				<p className="text-xl text-gray-700 mb-8">"
 					A modern data fabric connects batch, streaming, vector, and graph systems into one logical layer
 					for AI. Learn how to build low-latency pipelines with quality signals, lineage, and governance
 					for reliable AI products.
 				</p>
 
-				<div className="prose prose-lg max-w-none">
+				<div className="prose prose-lg max-w-none">"
 					<h2>Core Capabilities</h2>
 					<ul>
 						<li>Unified catalog with lineage and policy enforcement</li>
@@ -53,14 +53,14 @@ export default function Page() {
 					</ul>
 				</div>
 
-				<div className="mt-10 p-6 bg-white rounded-xl border border-gray-200">
-					<h3 className="text-xl font-semibold mb-2">Next up</h3>
-					<ul className="list-disc pl-6 text-amber-700">
+				<div className="mt-10 p-6 bg-white rounded-xl border border-gray-200">"
+					<h3 className="text-xl font-semibold mb-2">Next up</h3>"
+					<ul className="list-disc pl-6 text-amber-700">"
 						<li>
-							<Link href="/blog/ai-operational-resilience-2026">AI Operational Resilience 2026</Link>
+							<Link href="/blog/ai-operational-resilience-2026">AI Operational Resilience 2026</Link>"
 						</li>
 						<li>
-							<Link href="/content-hub">Explore the Content Hub</Link>
+							<Link href="/content-hub">Explore the Content Hub</Link>"
 						</li>
 					</ul>
 				</div>

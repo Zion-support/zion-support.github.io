@@ -77,33 +77,33 @@ export default function AI2025OctoberLLMFineTuningMastery() {
           <div className="grid md:grid-cols-2 gap-6">
             {[
               {
-                title: "LoRA (Low-Rank Adaptation)",
-                desc: "Update only 0.1% of parameters while achieving full fine-tuning quality",
+                title: "LoRA (Low-Rank Adaptation)
+                desc: "Update only 0.1% of parameters while achieving full fine-tuning quality
                 metrics: ["99.9% Parameter Freeze", "Comparable Quality", "Fast Training"]
               },
               {
-                title: "QLoRA (Quantized LoRA)",
-                desc: "Fine-tune 70B models on single GPU with 4-bit quantization",
+                title: "QLoRA (Quantized LoRA)
+                desc: "Fine-tune 70B models on single GPU with 4-bit quantization
                 metrics: ["4-bit Quantization", "1 GPU Training", "65B+ Models"]
               },
               {
-                title: "Prefix Tuning",
-                desc: "Learn continuous task-specific vectors prepended to model inputs",
+                title: "Prefix Tuning
+                desc: "Learn continuous task-specific vectors prepended to model inputs
                 metrics: ["Minimal Storage", "Multi-Task", "Fast Switching"]
               },
               {
-                title: "P-Tuning v2",
-                desc: "Add trainable prompts across all layers for improved performance",
+                title: "P-Tuning v2
+                desc: "Add trainable prompts across all layers for improved performance
                 metrics: ["Deep Prompts", "Better Accuracy", "Efficient"]
               },
               {
-                title: "Adapter Layers",
-                desc: "Insert small trainable modules between transformer layers",
+                title: "Adapter Layers
+                desc: "Insert small trainable modules between transformer layers
                 metrics: ["Modular Design", "Task-Specific", "Composable"]
               },
               {
-                title: "Full Fine-Tuning",
-                desc: "Update all model parameters for maximum customization",
+                title: "Full Fine-Tuning
+                desc: "Update all model parameters for maximum customization
                 metrics: ["Maximum Quality", "Full Control", "Higher Cost"]
               }
             ].map((technique, idx) => (
@@ -129,28 +129,28 @@ export default function AI2025OctoberLLMFineTuningMastery() {
             <div className="space-y-6">
               {[
                 {
-                  step: "Data Collection",
-                  desc: "Gather high-quality, domain-specific examples that represent your use case",
+                  step: "Data Collection
+                  desc: "Gather high-quality, domain-specific examples that represent your use case
                   tips: ["10K+ examples ideal", "Diversity matters", "Quality over quantity"]
                 },
                 {
-                  step: "Data Cleaning",
-                  desc: "Remove noise, duplicates, and problematic examples that could harm performance",
+                  step: "Data Cleaning
+                  desc: "Remove noise, duplicates, and problematic examples that could harm performance
                   tips: ["Deduplication", "Outlier removal", "Format standardization"]
                 },
                 {
-                  step: "Prompt Formatting",
-                  desc: "Structure data into instruction-following format with clear inputs and outputs",
+                  step: "Prompt Formatting
+                  desc: "Structure data into instruction-following format with clear inputs and outputs
                   tips: ["Consistent templates", "Clear instructions", "Few-shot examples"]
                 },
                 {
-                  step: "Train/Val Split",
-                  desc: "Reserve 10-20% for validation to monitor overfitting and generalization",
+                  step: "Train/Val Split
+                  desc: "Reserve 10-20% for validation to monitor overfitting and generalization
                   tips: ["Stratified sampling", "Representative split", "Held-out test set"]
                 },
                 {
-                  step: "Augmentation",
-                  desc: "Expand training data with paraphrasing, back-translation, and synthetic generation",
+                  step: "Augmentation
+                  desc: "Expand training data with paraphrasing, back-translation, and synthetic generation
                   tips: ["Paraphrasing", "Synthetic data", "Difficulty balancing"]
                 }
               ].map((item, idx) => (
@@ -181,32 +181,32 @@ export default function AI2025OctoberLLMFineTuningMastery() {
           <div className="grid md:grid-cols-3 gap-6">
             {[
               {
-                category: "Hyperparameters",
+                category: "Hyperparameters
                 params: [
-                  "Learning Rate: 1e-4 to 5e-5",
-                  "Batch Size: 4-16 per GPU",
-                  "Epochs: 3-10 typically",
-                  "Warmup: 5-10% of steps",
+                  "Learning Rate: 1e-4 to 5e-5
+                  "Batch Size: 4-16 per GPU
+                  "Epochs: 3-10 typically
+                  "Warmup: 5-10% of steps
                   "Weight Decay: 0.01-0.1"
                 ]
               },
               {
-                category: "Hardware Setup",
+                category: "Hardware Setup
                 params: [
-                  "GPU: A100 80GB ideal",
-                  "Multi-GPU: DeepSpeed ZeRO",
-                  "Mixed Precision: bfloat16",
-                  "Gradient Checkpointing",
+                  "GPU: A100 80GB ideal
+                  "Multi-GPU: DeepSpeed ZeRO
+                  "Mixed Precision: bfloat16
+                  "Gradient Checkpointing
                   "Flash Attention 2"
                 ]
               },
               {
-                category: "Optimization",
+                category: "Optimization
                 params: [
-                  "Optimizer: AdamW",
-                  "Scheduler: Cosine annealing",
-                  "Gradient Clipping: 1.0",
-                  "Early Stopping",
+                  "Optimizer: AdamW
+                  "Scheduler: Cosine annealing
+                  "Gradient Clipping: 1.0
+                  "Early Stopping
                   "Checkpoint Best Model"
                 ]
               }
@@ -232,27 +232,27 @@ export default function AI2025OctoberLLMFineTuningMastery() {
           <div className="space-y-6">
             {[
               {
-                company: "Global Financial Services",
-                useCase: "Financial Document Analysis",
-                result: "95% accuracy on complex financial reports, 10x faster than manual review",
+                company: "Global Financial Services
+                useCase: "Financial Document Analysis
+                result: "95% accuracy on complex financial reports, 10x faster than manual review
                 savings: "$47M annual savings"
               },
               {
-                company: "Healthcare Provider",
-                useCase: "Medical Record Summarization",
-                result: "98% clinical accuracy, reduced physician documentation time by 73%",
+                company: "Healthcare Provider
+                useCase: "Medical Record Summarization
+                result: "98% clinical accuracy, reduced physician documentation time by 73%
                 savings: "500+ hours saved per physician/year"
               },
               {
-                company: "Legal Tech Firm",
-                useCase: "Contract Review & Generation",
-                result: "92% accuracy on specialized contracts, 15x faster contract review",
+                company: "Legal Tech Firm
+                useCase: "Contract Review & Generation
+                result: "92% accuracy on specialized contracts, 15x faster contract review
                 savings: "$23M in legal fees saved"
               },
               {
-                company: "E-Commerce Platform",
-                useCase: "Customer Support Automation",
-                result: "89% resolution rate without escalation, 24/7 multilingual support",
+                company: "E-Commerce Platform
+                useCase: "Customer Support Automation
+                result: "89% resolution rate without escalation, 24/7 multilingual support
                 savings: "67% reduction in support costs"
               }
             ].map((story, idx) => (

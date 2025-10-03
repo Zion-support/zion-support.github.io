@@ -124,12 +124,12 @@ export default function October2025IntelligentEdgeComputingRevolutionBanner() {
           className="grid md:grid-cols-2 gap-4 mb-10"
         >
           {[
-            "Ultra-low latency processing (<1ms response times)",
-            "75% reduction in cloud bandwidth costs",
-            "Enhanced privacy & regulatory compliance",
-            "99.99% uptime with edge redundancy",
-            "Real-time AI inference at the edge",
-            "Zero-trust security architecture",
+            "Ultra-low latency processing (<1ms response times)
+            "75% reduction in cloud bandwidth costs
+            "Enhanced privacy & regulatory compliance
+            "99.99% uptime with edge redundancy
+            "Real-time AI inference at the edge
+            "Zero-trust security architecture
           ].map((feature, index) => (
             <div key={index} className="flex items-start gap-3 bg-white/5 backdrop-blur rounded-xl p-4 hover:bg-white/10 transition-all">
               <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-0.5" />

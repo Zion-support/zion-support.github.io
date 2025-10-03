@@ -5,34 +5,34 @@ const September30CognitiveAutomationBanner = () => {
   const newContent = [
     {
       icon: Cpu,
-      title: "Cognitive Automation Platform Revolution",
-      description: "Breaking news: Revolutionary AI platform with 97% accuracy, 500x performance, and unprecedented ROI",
-      link: "/blog/ai-2025-september-30-cognitive-automation-platform-revolution",
-      tag: "🚀 BREAKING NEWS",
+      title: "Cognitive Automation Platform Revolution
+      description: "Breaking news: Revolutionary AI platform with 97% accuracy, 500x performance, and unprecedented ROI
+      link: "/blog/ai-2025-september-30-cognitive-automation-platform-revolution
+      tag: "🚀 BREAKING NEWS
       color: "from-cyan-600 to-blue-600"
     },
     {
       icon: Factory,
-      title: "$18B Manufacturing Success Story",
-      description: "Fortune 50 company achieves 2,400% ROI and transforms global operations in 6 months",
-      link: "/case-studies/ai-2025-september-30-global-manufacturing-cognitive-automation-18-billion-success",
-      tag: "💰 CASE STUDY",
+      title: "$18B Manufacturing Success Story
+      description: "Fortune 50 company achieves 2,400% ROI and transforms global operations in 6 months
+      link: "/case-studies/ai-2025-september-30-global-manufacturing-cognitive-automation-18-billion-success
+      tag: "💰 CASE STUDY
       color: "from-green-600 to-emerald-600"
     },
     {
       icon: Zap,
-      title: "500x Performance Improvement",
-      description: "Discover how cognitive automation delivers unprecedented speed and accuracy at scale",
-      link: "/blog/ai-2025-september-30-cognitive-automation-platform-revolution#performance-metrics",
-      tag: "⚡ TECH DEEP DIVE",
+      title: "500x Performance Improvement
+      description: "Discover how cognitive automation delivers unprecedented speed and accuracy at scale
+      link: "/blog/ai-2025-september-30-cognitive-automation-platform-revolution#performance-metrics
+      tag: "⚡ TECH DEEP DIVE
       color: "from-purple-600 to-pink-600"
     },
     {
       icon: DollarSign,
-      title: "ROI Calculator & Implementation",
-      description: "Calculate your potential returns and see the 90-day transformation roadmap",
-      link: "/blog/ai-2025-september-30-cognitive-automation-platform-revolution#investment-roi",
-      tag: "📊 TOOLS",
+      title: "ROI Calculator & Implementation
+      description: "Calculate your potential returns and see the 90-day transformation roadmap
+      link: "/blog/ai-2025-september-30-cognitive-automation-platform-revolution#investment-roi
+      tag: "📊 TOOLS
       color: "from-orange-600 to-red-600"
     }
   ];

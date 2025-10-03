@@ -7,70 +7,70 @@ const InteractiveContentHub2026: React.FC = () => {
   const content = {
     breakthroughs: [
       {
-        title: "March 2026 AI Breakthrough Revolution",
-        description: "Revolutionary AI breakthroughs delivering 1000x processing speed and 99.7% decision accuracy",
+        title: "March 2026 AI Breakthrough Revolution
+        description: "Revolutionary AI breakthroughs delivering 1000x processing speed and 99.7% decision accuracy
         metrics: { speed: "1000x", accuracy: "99.7%", value: "$5B+" },
-        link: "/blog/ai-2026-march-breakthrough-revolution",
+        link: "/blog/ai-2026-march-breakthrough-revolution
         icon: "🚀"
       },
       {
-        title: "Quantum-Neural Fusion Technology",
-        description: "Advanced AI combining quantum computing with neural networks for unprecedented performance",
+        title: "Quantum-Neural Fusion Technology
+        description: "Advanced AI combining quantum computing with neural networks for unprecedented performance
         metrics: { speed: "500x", accuracy: "98%", value: "$2B+" },
-        link: "/blog/ai-2026-quantum-neural-fusion",
+        link: "/blog/ai-2026-quantum-neural-fusion
         icon: "⚛️"
       },
       {
-        title: "Meta-Cognitive Superintelligence",
-        description: "Self-aware AI systems with advanced reasoning and autonomous decision-making capabilities",
+        title: "Meta-Cognitive Superintelligence
+        description: "Self-aware AI systems with advanced reasoning and autonomous decision-making capabilities
         metrics: { speed: "300x", accuracy: "97%", value: "$3B+" },
-        link: "/blog/ai-2026-meta-cognitive-breakthrough",
+        link: "/blog/ai-2026-meta-cognitive-breakthrough
         icon: "🧠"
       }
     ],
     caseStudies: [
       {
-        title: "$5.2B Manufacturing Success",
-        description: "Global manufacturing leader achieves $5.2 billion in value with 500% ROI in 6 months",
+        title: "$5.2B Manufacturing Success
+        description: "Global manufacturing leader achieves $5.2 billion in value with 500% ROI in 6 months
         metrics: { roi: "500%", value: "$5.2B", payback: "1.2 months" },
-        link: "/case-studies/ai-2026-march-breakthrough-5-billion-success",
+        link: "/case-studies/ai-2026-march-breakthrough-5-billion-success
         icon: "💰"
       },
       {
-        title: "Fortune 500 Healthcare Transformation",
-        description: "Healthcare leader achieves 95% diagnostic accuracy improvement and $2.1B in savings",
+        title: "Fortune 500 Healthcare Transformation
+        description: "Healthcare leader achieves 95% diagnostic accuracy improvement and $2.1B in savings
         metrics: { accuracy: "95%", savings: "$2.1B", efficiency: "85%" },
-        link: "/case-studies/fortune-500-ai-2026-breakthrough-mega-success",
+        link: "/case-studies/fortune-500-ai-2026-breakthrough-mega-success
         icon: "🏥"
       },
       {
-        title: "Financial Services Revolution",
-        description: "Leading bank achieves 80% fraud detection improvement and 70% cost reduction",
+        title: "Financial Services Revolution
+        description: "Leading bank achieves 80% fraud detection improvement and 70% cost reduction
         metrics: { detection: "80%", savings: "70%", growth: "40%" },
-        link: "/case-studies/ai-2026-financial-services-success",
+        link: "/case-studies/ai-2026-financial-services-success
         icon: "🏦"
       }
     ],
     services: [
       {
-        title: "AI Strategy Consulting",
-        description: "Comprehensive AI transformation strategy and roadmap development",
+        title: "AI Strategy Consulting
+        description: "Comprehensive AI transformation strategy and roadmap development
         metrics: { roi: "300%", duration: "3-6 months", success: "99%" },
-        link: "/services/ai-2026-march-breakthrough-consulting",
+        link: "/services/ai-2026-march-breakthrough-consulting
         icon: "🎯"
       },
       {
-        title: "Implementation Services",
-        description: "End-to-end AI system deployment and integration support",
+        title: "Implementation Services
+        description: "End-to-end AI system deployment and integration support
         metrics: { automation: "98%", efficiency: "99%", support: "24/7" },
-        link: "/services/ai-implementation-services",
+        link: "/services/ai-implementation-services
         icon: "⚙️"
       },
       {
-        title: "Ongoing Optimization",
-        description: "Continuous improvement and performance optimization services",
+        title: "Ongoing Optimization
+        description: "Continuous improvement and performance optimization services
         metrics: { improvement: "50%", uptime: "99.9%", value: "200%" },
-        link: "/services/ai-optimization-services",
+        link: "/services/ai-optimization-services
         icon: "📈"
       }
     ]
