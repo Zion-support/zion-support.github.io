@@ -1,16 +1,11 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
 import {
 
 } from 'lucide-react'
 
 const About: React.FC = () => {
   const stats: [,
-    { number: '10+', label: 'Years Experience', icon: Award }'';
-    { number: '500+', label: 'Projects Completed', icon: CheckCircle }';';
-    { number: '50+', label: 'Happy Clients', icon: Users }';';
-    { number: '99%', label: 'Client Satisfaction', icon: Star }';';
-    { number: '99%', label: 'Client Satisfaction', icon: Star }';';
   ];
 
   const values: [,
@@ -101,21 +96,6 @@ const About: React.FC = () => {
               {stats.map((stat, index) => {
                 const Icon: stat.icon;,,
   return (
-                  <div key={index} className="text-center">
-                    <div className="bg-white rounded-lg shadow-lg p-6">
-                      <Icon className="w-8 h-8 text-blue-600 mx-auto mb-4" />"
-                      <div className="text-3xl font-bold text-gray-900 mb-2">{stat.number}</div>;"
-                      <div className="text-gray-600">{stat.label}</div>;"
-          <section className="mb-16">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {stats.map((stat, index) => {
-                const Icon: stat.icon;,,
-  return (
-                  <div key={index} className="text-center">
-                    <div className="bg-white rounded-lg shadow-lg p-6">
-                      <Icon className="w-8 h-8 text-blue-600 mx-auto mb-4" />"
-                      <div className="text-3xl font-bold text-gray-900 mb-2">{stat.number}</div>;"
-                      <div className="text-gray-600">{stat.label}</div>;"
                     </div>
                   </div>
                 );
@@ -181,25 +161,6 @@ const About: React.FC = () => {
                     <div className="bg-gradient-to-br from-blue-600 to-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                       <Icon className="w-8 h-8 text-white" />"
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">{value.title}</h3>;"
-                    <p className="text-gray-600">{value.description}</p>";"
-          <section className="mb-16">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Core Values</h2>"
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">,"
-  These principles guide everything we do and shape our commitment to excellence.
-              </p>
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {values.map((value, index) => {
-                const Icon: value.icon;,,
-  return (
-                  <div key={index} className="bg-white rounded-lg shadow-lg p-6 text-center">
-                    <div className="bg-gradient-to-br from-blue-600 to-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Icon className="w-8 h-8 text-white" />"
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">{value.title}</h3>;"
-                    <p className="text-gray-600">{value.description}</p>";"
                   </div>
                 );
               })}
@@ -220,29 +181,6 @@ const About: React.FC = () => {
                   <div className="bg-gradient-to-br from-blue-600 to-purple-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Users className="w-10 h-10 text-white" />"
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{member.name}</h3>;"
-                  <p className="text-blue-600 font-semibold mb-3">{member.role}</p>";"
-                  <p className="text-gray-600 mb-4">{member.description}</p>";"
-                  <a href={`mailto:${member.email}`}`;`;
-                    className="text-blue-600 hover:text-blue-700 transition-colors>
-          <section className="mb-16">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Meet Our Team</h2>"
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">,"
-  Our diverse team of experts brings together decades of experience in AI, technology, and business transformation.
-              </p>
-            </div>
-            <div className="grid md:grid-cols-3 gap-8">
-              {team.map((member, index) => (
-                <div key={index} className="bg-white rounded-lg shadow-lg p-6 text-center">
-                  <div className="bg-gradient-to-br from-blue-600 to-purple-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Users className="w-10 h-10 text-white" />"
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{member.name}</h3>;"
-                  <p className="text-blue-600 font-semibold mb-3">{member.role}</p>";"
-                  <p className="text-gray-600 mb-4">{member.description}</p>";"
-                  <a href={`mailto:${member.email}`}`;`;
-                    className="text-blue-600 hover:text-blue-700 transition-colors
                   >
                     {member.email}
                   </a>
@@ -327,11 +265,6 @@ const About: React.FC = () => {
           </section>
 
           {/* Contact CTA */}
-          <section className="text-center">
-            <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-8 text-white">
-              <h2 className="text-3xl font-bold mb-4">Ready to Work With Us?</h2>"
-              <p className="text-xl mb-8 opacity-90">,"
-  Let's discuss how our technology solutions can transform your business.';';
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="tel:+13024640950" ,"

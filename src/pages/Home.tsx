@@ -1,28 +1,7 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
 
 const Home: React.FC = () => {
   return (
     <>
-      <Helmet>
-        <title>Zion Tech Group - AI-Powered Enterprise Solutions</title>
-        <meta name="description" content="Leading provider of AI-powered enterprise solutions, quantum computing consulting, and autonomous business operations." />
-        <meta name="keywords" content="AI, enterprise solutions, quantum computing, autonomous operations, business transformation" />
-        <meta property="og:title" content="Zion Tech Group - AI-Powered Enterprise Solutions" />
-        <meta property="og:description" content="Transform your business with cutting-edge AI and quantum technologies." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://zion.app" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-950 via-purple-900 to-slate-950">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Zion Tech Group
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Leading the future of enterprise AI with quantum consciousness computing, 
-              autonomous business operations, and revolutionary technology solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 

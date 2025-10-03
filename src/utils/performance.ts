@@ -28,38 +28,9 @@ class PerformanceMonitor {
 
   private initializeWebVitals() {
     // Core Web Vitals
-    onCLS((metric) => {
-      this.metrics.cls = metric.value;
-      this.reportMetric('CLS', metric.value);
-    });
-
-    onFCP((metric) => {
-      this.metrics.fcp = metric.value;
-      this.reportMetric('FCP', metric.value);
-    });
-
-    onLCP((metric) => {
-      this.metrics.lcp = metric.value;
-      this.reportMetric('LCP', metric.value);
-    });
-
-    onTTFB((metric) => {
-      this.metrics.ttfb = metric.value;
-      this.reportMetric('TTFB', metric.value);
-    });
-  }
-
-  private initializePerformanceObserver() {
-    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {
-      return;
     }
 
     // Long Task Observer
-    try {
-      const longTaskObserver = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.duration > 50) {
-            this.reportMetric('Long Task', entry.duration);
           }
         }
       });
@@ -69,13 +40,6 @@ class PerformanceMonitor {
       console.warn('Long Task Observer not supported:', error);
     }
 
-    // Layout Shift Observer
-    try {
-      const layoutShiftObserver = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (!(entry as any).hadRecentInput) {
-            this.reportMetric('Layout Shift', (entry as any).value);
-          }
         }
       });
       layoutShiftObserver.observe({ entryTypes: ['layout-shift'] });
@@ -84,44 +48,6 @@ class PerformanceMonitor {
       console.warn('Layout Shift Observer not supported:', error);
     }
 
-    // Navigation Observer
-    try {
-      const navigationObserver = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          const navEntry = entry as PerformanceNavigationTiming;
-          this.reportMetric('DOM Content Loaded', navEntry.domContentLoadedEventEnd - navEntry.domContentLoadedEventStart);
-          this.reportMetric('Load Complete', navEntry.loadEventEnd - navEntry.loadEventStart);
-        }
-      });
-      navigationObserver.observe({ entryTypes: ['navigation'] });
-      this.observers.push(navigationObserver);
-    } catch (error) {
-      console.warn('Navigation Observer not supported:', error);
-    }
-  }
-
-  private reportMetric(name: string, value: number) {
-    // Log in development
-    if (process.env.NODE_ENV === 'development') {
-      console.log(`Performance Metric - ${name}:`, value);
-    }
-
-    // Send to analytics in production
-    if (process.env.NODE_ENV === 'production') {
-      this.sendToAnalytics(name, value);
-    }
-
-    // Update metrics
-    this.metrics.timestamp = new Date().toISOString();
-  }
-
-  private async sendToAnalytics(name: string, value: number) {
-    try {
-      // Here you would send to your analytics service
-      // For now, we'll just log it
-      console.log('Sending to analytics:', { name, value, timestamp: this.metrics.timestamp });
-    } catch (error) {
-      console.error('Failed to send analytics:', error);
     }
   }
 
@@ -178,5 +104,3 @@ class PerformanceMonitor {
 // Export singleton instance
 export const performanceMonitor = new PerformanceMonitor();
 
-// Export the class for testing
-export { PerformanceMonitor };
