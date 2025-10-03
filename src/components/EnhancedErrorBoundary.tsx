@@ -4,7 +4,6 @@
  */
 
 import React, { Component, ReactNode, ErrorInfo } from 'react';
-
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
@@ -25,7 +24,6 @@ const analyticsUtils = {
     console.log('Analytics Event:', event, data);
   }
 };
-
 class EnhancedErrorBoundary extends Component<Props, State> {
   private retryCount = 0;
   private maxRetries = 3;
