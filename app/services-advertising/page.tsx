@@ -1,12 +1,4 @@
 import React from 'react';
-import Link from 'next/link';
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: 'Services Advertising & Pricing | Zion Tech Group',
-  description: 'Comprehensive overview of all Zion Tech Group services with competitive pricing, market comparisons, and ROI benefits. Contact us for custom quotes.',
-  keywords: 'AI services pricing, micro SaaS pricing, IT services cost, technology consulting rates, enterprise solutions pricing',
-};
 
 export default function ServicesAdvertisingPage() {
   return (
@@ -77,36 +69,6 @@ export default function ServicesAdvertisingPage() {
               <a href="/terms" className="hover:text-purple-400 transition-colors">Terms of Service</a>
               <a href="/contact" className="hover:text-purple-400 transition-colors">Contact Us</a>
             </div>
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Services</h4>
-              <div className="space-y-2">
-                <Link href="/services/ai-services-comprehensive" className="block text-gray-300 hover:text-blue-400">AI Services</Link>
-                <Link href="/services/advanced-micro-saas-solutions" className="block text-gray-300 hover:text-green-400">Micro SaaS</Link>
-                <Link href="/services/it-services-comprehensive" className="block text-gray-300 hover:text-purple-400">IT Services</Link>
-                <Link href="/services" className="block text-gray-300 hover:text-blue-400">All Services</Link>
-              </div>
-            </div>
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Company</h4>
-              <div className="space-y-2">
-                <Link href="/about" className="block text-gray-300 hover:text-blue-400">About Us</Link>
-                <Link href="/contact" className="block text-gray-300 hover:text-blue-400">Contact</Link>
-                <Link href="/case-studies" className="block text-gray-300 hover:text-blue-400">Case Studies</Link>
-                <Link href="/blog" className="block text-gray-300 hover:text-blue-400">Blog</Link>
-              </div>
-            </div>
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
-              <div className="space-y-2 text-gray-300">
-                <p>📞 +1 302 464 0950</p>
-                <p>✉️ kleber@ziontechgroup.com</p>
-                <p>📍 364 E Main St STE 1008<br />Middletown, DE 19709</p>
-              </div>
-            </div>
-          </div>
-          <div className="border-t border-gray-700 mt-8 pt-4 text-center text-gray-400">
-            © {new Date().getFullYear()} Zion Tech Group. All rights reserved. | 
-            <Link href="https://ziontechgroup.com" className="hover:text-white ml-1">ziontechgroup.com</Link>
           </div>
         </div>
       </footer>

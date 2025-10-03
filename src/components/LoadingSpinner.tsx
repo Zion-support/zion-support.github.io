@@ -3,13 +3,11 @@ import React from 'react';
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';
   message?: string;
-  className?: string;
 }
 
-export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
   size = 'md', 
-  message = 'Loading...',
-  className = ''
+  message = 'Loading...' 
 }) => {
   const sizeClasses = {
     sm: 'w-8 h-8',
@@ -18,7 +16,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   };
 
   return (
-    <div className={`flex flex-col items-center justify-center min-h-[200px] ${className}`}>
+    <div className="flex flex-col items-center justify-center min-h-[200px]">
       <div className={`${sizeClasses[size]} animate-spin`}>
         <svg className="w-full h-full" viewBox="0 0 24 24">
           <circle

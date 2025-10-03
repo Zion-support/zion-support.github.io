@@ -1,11 +1,4 @@
 <<<<<<< HEAD
-import Ultimate2025ContentShowcaseBanner from '../components/Ultimate2025ContentShowcaseBanner';
-
-export const metadata = {
-  title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
-  description: 'Enterprise-grade AI, micro SaaS, and IT solutions. Transform your business with cutting-edge technology and automation.',
-  keywords: 'AI services, micro SaaS, IT services, cloud migration, DevOps, SRE, enterprise software, automation',
-=======
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
@@ -15,21 +8,13 @@ export const metadata: Metadata = {
   title: 'Zion Tech Group - Revolutionary AI Solutions for Enterprise',
   description: 'Transform your business with Meta-Cognitive AI, Quantum-Neural Networks, and Autonomous Operations. Experience 2000x processing speed and 99.9% automation rates.',
   keywords: 'AI, Enterprise AI, Quantum Computing, Autonomous Operations, Meta-Cognitive AI, Zion Tech Group',
->>>>>>> b0266c0c1be3ec9050e7ba803edc6a65b0904e57
+=======
+>>>>>>> f624f5904fa4f9d3588dd0bd9ba73cf75b3e7238
 };
 
 export default function HomePage() {
   return (
 <<<<<<< HEAD
-    <div className="max-w-5xl mx-auto px-4 py-12">
-      <h1 className="text-4xl font-bold mb-4">Zion Tech Group</h1>
-      <p className="text-lg text-gray-600 mb-6">
-        Enterprise-grade AI, micro SaaS, and IT solutions.
-      </p>
-      <a href="/blog" className="text-blue-600 underline">
-        Read the latest
-      </a>
-=======
     <div className="min-h-screen bg-slate-950">
       {/* Hero Section */}
       <header className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-20">
@@ -494,7 +479,8 @@ export default function HomePage() {
           </div>
         </div>
       </footer>
->>>>>>> b0266c0c1be3ec9050e7ba803edc6a65b0904e57
+=======
+>>>>>>> f624f5904fa4f9d3588dd0bd9ba73cf75b3e7238
     </div>
   );
 }

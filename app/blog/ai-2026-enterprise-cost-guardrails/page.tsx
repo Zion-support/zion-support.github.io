@@ -25,9 +25,3 @@ export default function Page() {
       </p>
     </main>
   );
-}
-
-// @ts-nocheck
-import React from 'react';
-
-

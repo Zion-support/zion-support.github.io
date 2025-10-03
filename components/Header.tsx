@@ -15,8 +15,6 @@ const Header: React.FC = () => {
 
   return (
     <header className="bg-white shadow-lg sticky top-0 z-50">
-      <PromoBanner />
-      
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
@@ -83,8 +81,7 @@ const Header: React.FC = () => {
             </div>
           </div>
         )}
-        </nav>
-      </div>
+      </nav>
     </header>
   );
 };

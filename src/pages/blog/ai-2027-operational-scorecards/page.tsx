@@ -2,7 +2,6 @@ import React from "react";
 
 export default function AIOperationalScorecards2027(): React.JSX.Element {
   return (
-    <div className= "min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">",
       <Helmet >
         <title >Operational AI Scorecards 2027 — KPIs, Budgets, Rollback</title>
         <meta name: "description",;,"
@@ -12,20 +11,6 @@ export default function AIOperationalScorecards2027(): React.JSX.Element {
         />
       </Helmet>
 
-      <div className= "container mx-auto px-6 py-16">
-        <h1 className= "text-4xl md: text-5xl font-bold mb-4">"
-  href="https: //ziontechgroup.com/blog/ai-2027-operational-scorecards",
-        />
-      </Helmet>
-
-      <div className= "container mx-auto px-6 py-16">",
-        <h1 className= "text-4xl md: text-5xl font-bold mb-4">"
-  Operational AI Scorecards 2027 — KPIs, Budgets, Rollback
-        </h1>
-        <p className= "text-zion-slate-light mb-8">"
-  SLIs → KPIs • Budgeted Actions • Instant Rollback
-        </p>
-        <div className= "prose prose-invert max-w-3xl">",
           <p >
             Ship faster with safety by wiring service-level indicators (SLIs) to
             real business KPIs. Define budgets, trigger canaries, and apply

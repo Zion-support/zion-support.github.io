@@ -1,18 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, 
-  CheckCircle, 
-  Star, 
-  Users, 
-  Zap, 
-  TrendingUp,
-  Award,
-  Target,
-  Rocket,
-  DollarSign,
-  Percent
-} from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'AI Success Stories & Case Studies | Zion Tech Group',

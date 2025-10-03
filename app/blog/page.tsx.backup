@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-// @ts-nocheck
-=======
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
@@ -14,7 +12,8 @@ import {
   Zap,
   Rocket
 } from 'lucide-react';
->>>>>>> b0266c0c1be3ec9050e7ba803edc6a65b0904e57
+=======
+>>>>>>> f624f5904fa4f9d3588dd0bd9ba73cf75b3e7238
 
 const posts = [
   {

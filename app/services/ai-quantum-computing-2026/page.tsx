@@ -1,43 +1,4 @@
 import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { 
-  Cpu, 
-  Zap, 
-  Shield, 
-  Brain, 
-  CheckCircle, 
-  ArrowRight, 
-  DollarSign,
-  Clock,
-  Star,
-  Target,
-  Phone,
-  Mail,
-  MapPin,
-  Lock,
-  Database,
-  BarChart3,
-  Globe,
-  Users,
-  Award,
-  Rocket,
-  TrendingUp,
-  Activity,
-  AlertTriangle,
-  Key,
-  FileText,
-  Eye,
-  Mic,
-  Network,
-  Server,
-  HardDrive,
-  Wifi,
-  Building,
-  Heart,
-  ShoppingCart,
-  CreditCard
-} from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'AI-Powered Quantum Computing Services 2026 | Zion Tech Group',
@@ -83,72 +44,6 @@ export default function AIQuantumComputingServices2026() {
                 <li>• Hybrid quantum-classical models</li>
               </ul>
             </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {quantumServices.map((service, index) => (
-                <div key={index} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow p-8 border border-gray-100">
-                  <div className="flex items-center mb-6">
-                    <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-indigo-500 rounded-xl flex items-center justify-center mr-4">
-                      <service.icon className="w-8 h-8 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold text-gray-900 mb-1">{service.name}</h3>
-                      <span className="text-sm text-purple-600 font-medium">{service.category}</span>
-                    </div>
-                  </div>
-                  
-                  <p className="text-gray-600 mb-6">{service.description}</p>
-                  
-                  <div className="space-y-3 mb-6">
-                    {service.features.slice(0, 4).map((feature, idx) => (
-                      <div key={idx} className="flex items-start">
-                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                        <span className="text-sm text-gray-700">{feature}</span>
-                      </div>
-                    ))}
-                    {service.features.length > 4 && (
-                      <div className="text-sm text-purple-600 font-medium">
-                        +{service.features.length - 4} more features
-                      </div>
-                    )}
-                  </div>
-                  
-                  <div className="bg-purple-50 rounded-lg p-4 mb-6">
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="text-lg font-bold text-purple-600">{service.pricing}</span>
-                      <span className="text-sm text-gray-500">{service.delivery}</span>
-                    </div>
-                    <div className="text-sm text-gray-600 mb-2">
-                      <strong>Market Price:</strong> {service.marketPrice}
-                    </div>
-                    <div className="text-sm text-green-700 font-medium">
-                      <strong>Benefits:</strong> {service.benefits}
-                    </div>
-                  </div>
-                  
-                  <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-gray-900 mb-2">Use Cases:</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {service.useCases.map((useCase, idx) => (
-                        <span key={idx} className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded">
-                          {useCase}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                  
-                  <Link 
-                    href="/contact"
-                    className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors flex items-center justify-center"
-                  >
-                    Get Quantum Consultation
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Link>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
 
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-purple-500/30">
               <div className="text-4xl mb-4">🔬</div>

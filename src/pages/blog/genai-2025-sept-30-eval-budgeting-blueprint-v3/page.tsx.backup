@@ -1,24 +1,8 @@
-// @ts-nocheck
+import React from 'react';
 
-export default function Page(): void {
+const Page: React.FC = () => {
   return (
 <<<<<<< HEAD
-    <main className="min-h-screen bg-white text-gray-900"
-      <section className="container mx-auto px-6 py-16"
-        <div className="max-w-3xl"
-          <h1 className="text-3xl md: text-4xl font-bold mb-4">",
-    <main className="min-h-screen bg-white text-gray-900">",
-      <section className="container mx-auto px-6 py-16">",
-        <div className="max-w-3xl">",
-          <h1 className="text-3xl md: text-4xl font-bold mb-4">",;,"
-  Eval Budgeting Blueprint v3 — 60–85% Savings, Stable UX
-          </h1>
-          <p className="text-gray-600 mb-6">",;,"
-  Cut eval and inference spend with KPI‑linked budgets, cached golden answers, and
-            online policy gates—without sacrificing quality or developer velocity.
-          </p>
-          <div className="prose prose-indigo">",
-=======
     <main className= "min-h-screen bg-white text-gray-900">
       <section className= "container mx-auto px-6 py-16">
         <div className= "max-w-3xl">
@@ -34,7 +18,6 @@ export default function Page(): void {
             online policy gates—without sacrificing quality or developer velocity.
           </p>
           <div className= "prose prose-indigo">",
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
             <h2 >What You Will Learn</h2>
             <ul >
               <li >Right‑size offline suites to what predicts outcomes</li>
@@ -53,7 +36,22 @@ export default function Page(): void {
         </div>
       </section>
     </main>
+=======
+    <div className="container mx-auto px-6 py-12 text-white">
+      <h1 className="text-3xl font-bold mb-4">GenAI Evaluation Budgeting Blueprint v3</h1>
+      <p className="text-zion-slate-light mb-6">
+        Comprehensive framework for evaluating and budgeting Generative AI systems
+        with cost optimization and performance metrics.
+      </p>
+      <ul className="list-disc pl-6 text-zion-slate-light space-y-2">
+        <li>Cost-effective evaluation strategies</li>
+        <li>Performance benchmarking</li>
+        <li>Budget allocation optimization</li>
+        <li>ROI measurement frameworks</li>
+      </ul>
+    </div>
+>>>>>>> f624f5904fa4f9d3588dd0bd9ba73cf75b3e7238
   );
-}
+};
 
-;
+export default Page;
