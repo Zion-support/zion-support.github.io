@@ -32,7 +32,6 @@ class EnhancedPerformanceMonitor {
   private metrics: PerformanceMetrics[] = [];
   private alerts: PerformanceAlert[] = [];
   private observers: PerformanceObserver[] = [];
-  private isMonitoring = false;
 
   constructor() {
     this.initializeObservers();
@@ -63,7 +62,7 @@ class EnhancedPerformanceMonitor {
   private processNavigationTiming(entry: PerformanceNavigationTiming): void {
     const metrics: Partial<PerformanceMetrics> = {
       loadTime: entry.loadEventEnd - entry.loadEventStart,
-      timeToInteractive: entry.domInteractive - entry.navigationStart,
+      timeToInteractive: entry.domInteractive - entry.fetchStart,
       timestamp: Date.now()
     };
 
@@ -122,12 +121,10 @@ class EnhancedPerformanceMonitor {
   }
 
   public startMonitoring(): void {
-    this.isMonitoring = true;
     console.log('Enhanced performance monitoring started');
   }
 
   public stopMonitoring(): void {
-    this.isMonitoring = false;
     this.observers.forEach(observer => observer.disconnect());
     this.observers = [];
     console.log('Enhanced performance monitoring stopped');
