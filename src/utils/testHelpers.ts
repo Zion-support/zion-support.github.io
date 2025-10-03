@@ -2,18 +2,45 @@
  * Test utilities and helpers for the application
  */
 
+export const waitForCondition = async (
+  condition: () => boolean,
   timeout = 5000,
 ): Promise<void> => {
-  }
+  return new Promise((resolve, reject) => {
+    const startTime = Date.now();
+    const check = () => {
+      if (condition()) {
+        resolve();
+      } else if (Date.now() - startTime > timeout) {
+        reject(new Error('Timeout waiting for condition'));
+      } else {
+        setTimeout(check, 100);
+      }
+    };
+    check();
+  });
 };
 
 /**
  * Wait for element to appear in DOM
  */
-export const waitForElement: async (,
+export const waitForElement = async (
   selector: string,
   timeout = 5000,
 ): Promise<Element> => {
+  return new Promise((resolve, reject) => {
+    const startTime = Date.now();
+    const check = () => {
+      const element = document.querySelector(selector);
+      if (element) {
+        resolve(element);
+      } else if (Date.now() - startTime > timeout) {
+        reject(new Error(`Timeout waiting for element: ${selector}`));
+      } else {
+        setTimeout(check, 100);
+      }
+    };
+    check();
   });
 };
 

@@ -9,6 +9,13 @@ import { Helmet } from 'react-helmet-async';
 export const seoUtils = {
   // Generate structured data for organization
   generateOrganizationSchema: () => ({
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Zion Tech Group",
+    "url": "https://ziontechgroup.com",
+    "logo": "https://ziontechgroup.com/logo.png",
+    "description": "Advanced AI and IT Solutions",
+    "sameAs": [
       "https://linkedin.com/company/zion-tech"
     ]
   }),
@@ -57,9 +64,10 @@ export const seoUtils = {
       "@type": "Person",
       "name": article.author
     },
-        "url": "https://zion.app/logo.png"
-      }
-    }
+    "datePublished": article.datePublished,
+    "dateModified": article.dateModified,
+    "image": article.image || "https://zion.app/logo.png",
+    "url": article.url
   })
 };
 
