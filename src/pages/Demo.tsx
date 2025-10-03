@@ -1,34 +1,35 @@
-import React, { useState } from 'react;
-import { Link } from 'react-router-dom;
-import { Calendar, Clock, User, Mail, Phone, CheckCircle, Star, Play } from 'lucide-react;
-;
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { Calendar, Clock, User, Mail, Phone, CheckCircle, Star, Play } from 'lucide-react';
 const Demo: React.FC = () => {
   const [formData, setFormData] = useState({
-    firstName: '',',',
-    lastName: '',',',
-    email: '',',',
-    company: '',',',
-    phone: '',',',
-    jobTitle: '',',',
-    companySize: '',',',
-    useCase: '',',',
-    preferredDate: '',',',
-    preferredTime: '',',',
-    timeZone: '',',',
-    message: '});
+    firstName: '',
+    lastName: '',
+    email: '',
+    company: '',
+    phone: '',
+    jobTitle: '',
+    companySize: '',
+    useCase: '',
+    preferredDate: '',
+    preferredTime: '',
+    timeZone: '',
+    message: ''
+  });
 
-  const handleInputChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>)  => {,,
-  setFormData({
-      ...formData
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setFormData({
+      ...formData,
       [e.target.name]: e.target.value
     });
   };
 
-  const handleSubmit: (e: React.FormEvent)  => {,,
-  e.preventDefault();
-    console.log('Form submitted: ', formData);};
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log('Form submitted: ', formData);
+  };
 
-  const demoFeatures: [,
+  const demoFeatures = [
     {
       title: 'AI-Powered Automation',',',
       description: 'See how our AI can automate your repetitive tasks and workflows',',',
@@ -598,14 +599,14 @@ const Demo: React.FC = () => {
 
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleInputChange: (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>)  => {,,
+  const handleInputChange: (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>)  => {,
   const { name, value } = e.target;
     setFormData(prev: > ({ ...prev
       [name]: value
     }));
   };
 
-  const handleSubmit: (e: React.FormEvent)  => {,,
+  const handleSubmit: (e: React.FormEvent)  => {,
   e.preventDefault();
     // Handle form submission here
     console.log('Demo request submitted: ', formData);',',

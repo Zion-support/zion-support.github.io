@@ -435,9 +435,9 @@ default: return "text-gray-400 bg-gray-500/10 border-gray-500/30";"
       <Helmet >
         <title >Blog & Insights - Zion Tech Group | AI & Technology Expertise</title>
         <meta name: "description",
-  content: "Stay updated with the latest insights on AI, technology trends, case studies, and industry best practices from Zion Tech Group experts.", /><meta property: "og:title", content ="Blog & Insights - Zion Tech Group/>"
+  content: "Stay updated with the latest insights on AI, technology trends, case studies, and industry best practices from Zion Tech Group experts.", /><meta property: "og:title", content ="Blog & Insights - Zion Tech Group" />
         <meta property: "og:description",
-  content: "Latest insights on AI and technology trends", /><meta property="og:type" content="website" /><meta property: "og:url", content="https://ziontechgroup.com/blog" /><meta name: "twitter:card", content="summary_large_image" /><meta name: "twitter:title", content ="Blog & Insights - Zion Tech Group/>"
+  content: "Latest insights on AI and technology trends", /><meta property="og:type" content="website" /><meta property: "og:url", content="https://ziontechgroup.com/blog" /><meta name: "twitter:card", content="summary_large_image" /><meta name: "twitter:title", content ="Blog & Insights - Zion Tech Group" />
         <meta name: "twitter:description",
   content: "Latest insights on AI and technology trends", /><link rel: "canonical", href ="https://ziontechgroup.com/blog/>",
   content: "Stay updated with the latest insights on AI, technology trends, case studies, and industry best practices from Zion Tech Group experts.",
@@ -582,13 +582,13 @@ default: return "text-gray-400 bg-gray-500/10 border-gray-500/30";"
           <div className="max-w-4xl mx-auto mb-12"
             <div className="flex flex-col md: flex-row gap-4 mb-8",
               <div className="relative flex-1"
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5/>"
+                <Search className="[^"]*" />
               <div className="relative flex-1">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5/>"
+                <Search className="[^"]*" />
           <div className="max-w-4xl mx-auto mb-12",
             <div className="flex flex-col md: flex-row gap-4 mb-8",
               <div className="relative flex-1",
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5/>",
+                <Search className="[^"]*" />,
                 <input type="text",
   placeholder="Search articles...",
   value="{searchTerm}
@@ -604,11 +604,11 @@ default: return "text-gray-400 bg-gray-500/10 border-gray-500/30";"
           <div className= "max-w-4xl mx-auto mb-12">
             <div className= "flex flex-col md: flex-row gap-4 mb-8>
               <div className= "relative flex-1">
-                <Search className= "absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5/>"
+                <Search className= "absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
           <div className= "max-w-4xl mx-auto mb-12>
             <div className= "flex flex-col md: flex-row gap-4 mb-8>
               <div className= "relative flex-1>
-                <Search className= "absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5/>",
+                <Search className= "absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />,
                 <input type="text",
   placeholder="Search articles...",
   value="{searchTerm}
@@ -659,30 +659,30 @@ const CategoryIcon: getCategoryIcon(post.category),,
                     >
                       <div className="flex items-center justify-between mb-4"
                         <div className="{`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium border ${categoryColor}`}">`
-                          <CategoryIcon className="w-3 h-3 mr-1/>"
+                          <CategoryIcon className="[^"]*" />
                           {post.category}
                         </div>
                         <div className="flex items-center text-zion-slate-light text-sm"
-                          <TrendingUp className="w-4 h-4 mr-1/>"
+                          <TrendingUp className="[^"]*" />
                         </div>"
                         <div className="flex items-center text-zion-slate-light text-sm">
-                          <TrendingUp className="w-4 h-4 mr-1/>"
+                          <TrendingUp className="[^"]*" />
                       <div className="flex items-center justify-between mb-4",
                         <div className="{`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium border ${categoryColor}`}">`
-                          <CategoryIcon className="w-3 h-3 mr-1/>",
+                          <CategoryIcon className="[^"]*" />,
                           {post.category}
                         </div>
                         <div className="flex items-center text-zion-slate-light text-sm",
-                          <TrendingUp className="w-4 h-4 mr-1/>",
+                          <TrendingUp className="[^"]*" />,
                       className= "bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover: bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl group",
                     >
                       <div className= "flex items-center justify-between mb-4">
                         <div className= {`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium border ${categoryColor}`}>`
-                          <CategoryIcon className= "w-3 h-3 mr-1/>"
+                          <CategoryIcon className= "w-3 h-3 mr-1" />
                           {post.category}
                         </div>
                         <div className= "flex items-center text-zion-slate-light text-sm">
-                          <TrendingUp className= "w-4 h-4 mr-1/>"
+                          <TrendingUp className= "w-4 h-4 mr-1" />
                       <div className= "flex items-center justify-between mb-4>
                         <div className= {`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium border ${categoryColor}`}>`
                           <CategoryIcon className= "w-3 h-3 mr-1/>",
@@ -727,15 +727,15 @@ const CategoryIcon: getCategoryIcon(post.category),,
                       <div className="flex items-center justify-between"
                         <div className="flex items-center space-x-4 text-sm text-zion-slate-light"
                           <div className="flex items-center"
-                            <User className="w-4 h-4 mr-1/>"
+                            <User className="[^"]*" />
                             {post.author}
                           </div>
                           <div className="flex items-center"
-                            <Calendar className="w-4 h-4 mr-1/>"
+                            <Calendar className="[^"]*" />
                             {new Date(post.date).toLocaleDateString()}
                           </div>
                           <div className="flex items-center"
-                            <Clock className="w-4 h-4 mr-1/>"
+                            <Clock className="[^"]*" />
                             {post.readTime}
                           </div>
                         </div>
@@ -752,37 +752,37 @@ const CategoryIcon: getCategoryIcon(post.category),,
                         </div>"
                         <button className="text-zion-cyan hover: text-zion-blue-light transition-colors flex items-center group">
   Read More
-                          <ArrowRight className="w-4 h-4 ml-1 group-hover: translate-x-1 transition-transform/>",
+                          <ArrowRight className="[^"]*" />,
                       <div className="flex items-center justify-between",
                         <div className="flex items-center space-x-4 text-sm text-zion-slate-light",
                           <div className="flex items-center",
-                            <User className="w-4 h-4 mr-1/>",
+                            <User className="[^"]*" />,
                             {post.author}
                           </div>
                           <div className="flex items-center",
-                            <Calendar className="w-4 h-4 mr-1/>",
+                            <Calendar className="[^"]*" />,
                             {new Date(post.date).toLocaleDateString()}
                           </div>
                           <div className="flex items-center",
-                            <Clock className="w-4 h-4 mr-1/>",
+                            <Clock className="[^"]*" />,
                             {post.readTime}
                           </div>
                         </div>
                         <button className="text-zion-cyan hover: text-zion-blue-light transition-colors flex items-center group",
   Read More
-                          <ArrowRight className="w-4 h-4 ml-1 group-hover: translate-x-1 transition-transform/>",
+                          <ArrowRight className="[^"]*" />,
                       <div className= "flex items-center justify-between">
                         <div className= "flex items-center space-x-4 text-sm text-zion-slate-light">
                           <div className= "flex items-center">
-                            <User className= "w-4 h-4 mr-1/>"
+                            <User className= "w-4 h-4 mr-1" />
                             {post.author}
                           </div>
                           <div className= "flex items-center">
-                            <Calendar className= "w-4 h-4 mr-1/>"
+                            <Calendar className= "w-4 h-4 mr-1" />
                             {new Date(post.date).toLocaleDateString()}
                           </div>
                           <div className= "flex items-center">
-                            <Clock className= "w-4 h-4 mr-1/>"
+                            <Clock className= "w-4 h-4 mr-1" />
                             {post.readTime}
                           </div>
                         </div>
@@ -843,31 +843,31 @@ const CategoryIcon: getCategoryIcon(post.category),,
                   >
                     <div className="flex items-center justify-between mb-4"
                       <div className="{`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium border ${categoryColor}`}">`
-                        <CategoryIcon className="w-3 h-3 mr-1/>"
+                        <CategoryIcon className="[^"]*" />
                         {post.category}
                       </div>
                       <div className="flex items-center text-zion-slate-light text-xs"
-                        <TrendingUp className="w-3 h-3 mr-1/>"
+                        <TrendingUp className="[^"]*" />
                       </div>"
                       <div className="flex items-center text-zion-slate-light text-xs">
-                        <TrendingUp className="w-3 h-3 mr-1/>"
+                        <TrendingUp className="[^"]*" />
                     <div className="flex items-center justify-between mb-4",
                       <div className="{`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium border ${categoryColor}`}">`
-                        <CategoryIcon className="w-3 h-3 mr-1/>",
+                        <CategoryIcon className="[^"]*" />,
                         {post.category}
                       </div>
                       <div className="flex items-center text-zion-slate-light text-xs",
-                        <TrendingUp className="w-3 h-3 mr-1/>",
+                        <TrendingUp className="[^"]*" />,
                   <article key={post.id}
                     className= "bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover: bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl group",
                   >
                     <div className= "flex items-center justify-between mb-4">
                       <div className= {`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium border ${categoryColor}`}>`
-                        <CategoryIcon className= "w-3 h-3 mr-1/>"
+                        <CategoryIcon className= "w-3 h-3 mr-1" />
                         {post.category}
                       </div>
                       <div className= "flex items-center text-zion-slate-light text-xs">
-                        <TrendingUp className= "w-3 h-3 mr-1/>"
+                        <TrendingUp className= "w-3 h-3 mr-1" />
                     <div className= "flex items-center justify-between mb-4>
                       <div className= {`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium border ${categoryColor}`}>`
                         <CategoryIcon className= "w-3 h-3 mr-1/>",
@@ -917,28 +917,28 @@ const CategoryIcon: getCategoryIcon(post.category),,
 
                     <div className="flex items-center justify-between text-xs text-zion-slate-light"
                       <div className="flex items-center"
-                        <User className="w-3 h-3 mr-1/>"
+                        <User className="[^"]*" />
                         {post.author}
                       </div>
                       <div className="flex items-center"
-                        <Clock className="w-3 h-3 mr-1/>"
+                        <Clock className="[^"]*" />
                       </div>"
                       <div className="flex items-center">
-                        <Clock className="w-3 h-3 mr-1/>"
+                        <Clock className="[^"]*" />
                     <div className="flex items-center justify-between text-xs text-zion-slate-light",
                       <div className="flex items-center",
-                        <User className="w-3 h-3 mr-1/>",
+                        <User className="[^"]*" />,
                         {post.author}
                       </div>
                       <div className="flex items-center",
-                        <Clock className="w-3 h-3 mr-1/>",
+                        <Clock className="[^"]*" />,
                     <div className= "flex items-center justify-between text-xs text-zion-slate-light">
                       <div className= "flex items-center">
-                        <User className= "w-3 h-3 mr-1/>"
+                        <User className= "w-3 h-3 mr-1" />
                         {post.author}
                       </div>
                       <div className= "flex items-center">
-                        <Clock className= "w-3 h-3 mr-1/>"
+                        <Clock className= "w-3 h-3 mr-1" />
                     <div className= "flex items-center justify-between text-xs text-zion-slate-light>
                       <div className= "flex items-center>
                         <User className= "w-3 h-3 mr-1/>",
@@ -952,10 +952,10 @@ const CategoryIcon: getCategoryIcon(post.category),,
 
                     <button className="w-full mt-4 text-zion-cyan hover: text-zion-blue-light transition-colors flex items-center justify-center group/btn text-sm",
   Read Article
-                      <ArrowRight className="w-4 h-4 ml-1 group-hover/btn: translate-x-1 transition-transform/>",
+                      <ArrowRight className="[^"]*" />,
                     <button className="w-full mt-4 text-zion-cyan hover: text-zion-blue-light transition-colors flex items-center justify-center group/btn text-sm",
   Read Article
-                      <ArrowRight className="w-4 h-4 ml-1 group-hover/btn: translate-x-1 transition-transform/>",
+                      <ArrowRight className="[^"]*" />,
                     <button className= "w-full mt-4 text-zion-cyan hover: text-zion-blue-light transition-colors flex items-center justify-center group/btn text-sm">"
   Read Article
                       <ArrowRight className= "w-4 h-4 ml-1 group-hover/btn: translate-x-1 transition-transform/>",
