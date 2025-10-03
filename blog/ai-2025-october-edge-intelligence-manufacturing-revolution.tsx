@@ -340,13 +340,13 @@ export default function AI2025OctoberEdgeIntelligenceManufacturingRevolution() {
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <a 
-              href="/contact" 
+              href="/contact"
               className="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white font-bold px-8 py-4 rounded-lg transition-all transform hover:scale-105"
             >
               Schedule Consultation
             </a>
             <a 
-              href="/services" 
+              href="/services"
               className="bg-slate-800 hover:bg-slate-700 text-emerald-400 font-bold px-8 py-4 rounded-lg border border-emerald-500/30 transition-all"
             >
               Explore Edge AI Services

@@ -135,7 +135,7 @@ const AutonomousSecurityAIAgents2025: React.FC = () => {
                 Deploy autonomous security agents that protect your organization 24/7 with superhuman precision.
               </p>
               <a 
-                href="/contact" 
+                href="/contact"
                 className="inline-block bg-white text-red-600 font-bold py-4 px-8 rounded-xl hover:bg-gray-100 transition-all duration-300 shadow-lg"
               >
                 Get Security Assessment

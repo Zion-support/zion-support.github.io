@@ -9,20 +9,19 @@ import { Helmet } from 'react-helmet-async';
 export const seoUtils = {
   // Generate structured data for organization
   generateOrganizationSchema: () => ({
-<<<<<<< HEAD
-    "@context": "https://schema.org","
-    "@type": "Organization","
-    "name": "Zion Tech Group","
-    "url": "https://zion.app","
-    "logo": "https://zion.app/logo.png","
-    "description": "Advanced AI and IT Solutions for Enterprise","
-    "address": {"
-      "@type": "PostalAddress","
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Zion Tech Group",
+    "url": "https://zion.app",
+    "logo": "https://zion.app/logo.png",
+    "description": "Advanced AI and IT Solutions for Enterprise",
+    "address": {
+      "@type": "PostalAddress",
       "addressCountry": "US"
     },
-    "contactPoint": {"
-      "@type": "ContactPoint","
-      "telephone": "+1-XXX-XXX-XXXX","
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-XXX-XXX-XXXX",
       "contactType": "customer service"
     },
     "sameAs": [
@@ -289,7 +288,6 @@ export const SEOComponent = ({
       <meta name="description" content={description} />"
       <meta name="keywords" content={keywords} />"
       <link rel="canonical" href={fullUrl} />"
-      
       {/* Open Graph */}
       <meta property="og:type" content={type} />"
       <meta property="og:title" content={fullTitle} />"
@@ -297,13 +295,11 @@ export const SEOComponent = ({
       <meta property="og:url" content={fullUrl} />"
       <meta property="og:image" content={fullImage} />"
       <meta property="og:site_name" content={siteName} />"
-      
       {/* Twitter Card */}
       <meta name="twitter:card" content="summary_large_image" />"
       <meta name="twitter:title" content={fullTitle} />"
       <meta name="twitter:description" content={description} />"
       <meta name="twitter:image" content={fullImage} />"
-      
       {/* Structured Data */}
       {structuredData && (
         <script type="application/ld+json">"

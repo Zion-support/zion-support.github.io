@@ -50,10 +50,6 @@ export const TalentRateRecommender:React.FC<TalentRateRecommenderProps> = ({;
           >;
 "
             <Sparkles className="h-4 w-4 mr-2" /> Optimize Rate with AI;"
-
-
-
-
       </div>;
 
 

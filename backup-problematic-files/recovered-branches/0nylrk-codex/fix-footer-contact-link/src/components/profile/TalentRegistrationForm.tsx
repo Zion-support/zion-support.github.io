@@ -263,13 +263,11 @@ pr-12325
           </div>;"
     <div className="max-w-4xl mx-auto p-4 md:p-6">;"
       <Card className="bg-zion-blue-dark border-zion-blue-light">;"
-
 pr-12325
         <CardHeader>;
 "
           <CardTitle className="text-2xl text-white">Create Your Talent Profile;""
           <CardDescription className="text-zion-slate">;"
-
         <Form {...form}>;
 
           <form onSubmit={form.handleSubmit(onSubmit)}>;
@@ -290,7 +288,6 @@ pr-12325
                           <FormControl>;
                             <div className="relative">;"
                               <UserRound className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;"
-
                               <Input;"
                                 className="pl-10 bg-zion-blue border-zion-blue-light text-white";""
                                 placeholder="Your full name";"
@@ -299,23 +296,16 @@ pr-12325
 
                           ;"
                           <FormMessage className="text-red-400" />;"
-
                       name="title";")
 
                           <FormLabel className="text-zion-slate-light">Professional Title;"
                               <Briefcase className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;"
-
                                 placeholder="e.g., Senior Software Developer";"
-
-
                       name="location";")
 
                           <FormLabel className="text-zion-slate-light">Location;"
                               <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;"
-
                                 placeholder="City, State/Province, Country";"
-
-
                       name="hourlyRate";")
 
 )"
@@ -323,8 +313,6 @@ pr-12325
                               <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate">$</span>;"
                                 className="pl-8 bg-zion-blue border-zion-blue-light text-white";""
                                 placeholder="e.g., 85";"
-
-
                 <div className="space-y-2">;"
                   <FormLabel className="text-zion-slate-light">Profile Picture;""
                   <div className="flex items-center gap-6">;"
@@ -338,11 +326,9 @@ pr-12325
 </img>
                         <div className="flex items-center justify-center h-full">;"
                           <UserRound className="h-10 w-10 text-zion-slate opacity-50" />;"
-
                     <label className="flex items-center justify-center px-4 py-2 rounded-md bg-zion-purple hover:bg-zion-purple-dark text-white cursor-pointer transition-colors">;"
 </label>"
                       <Upload className="mr-2 h-4 w-4" />;"
-
                       <span>Upload Photo</span>;
                       <input;"
                         type="file";""
@@ -357,29 +343,21 @@ pr-12325
               <Separator className="bg-zion-blue-light/50" />;"
                 <h3 className="text-lg font-medium text-white">Professional Bio</h3>;"
                   name="bio";"
-
                       <FormLabel className="text-zion-slate-light">About Yourself;"
-
                         <Textarea;"
                           className="h-32 min-h-[128px] bg-zion-blue border-zion-blue-light text-white";""
                           placeholder="Describe your professional background, expertise, and the value you bring to clients...";"
-
                       <FormDescription className="text-zion-slate">;"
-
                   name="enhancedProfile";")
                     <FormItem className="flex flex-row items-center justify-between p-3 border border-zion-blue-light bg-zion-blue/30 rounded-md">;"
                       <div className="space-y-0.5">;"
                         <FormLabel className="text-white flex items-center">;"
                           <Sparkles className="w-4 h-4 mr-2 text-zion-purple" />;"
-
                         <FormDescription className="text-zion-slate-light">;"
-
-
                         <Switch;
                           checked={field.value}
                           onCheckedChange={field.onChange}"
                           className="data-[state=checked]:bg-zion-purple";"
-
                   <div className="flex justify-end">;"
                     <Button;"
                       type="button";""
@@ -389,7 +367,6 @@ pr-12325
                       disabled={isGenerating}
                     >;
                       <Sparkles className="mr-2 h-4 w-4" />;"
-
                   <div className="bg-zion-blue-light/20 border border-zion-blue-light rounded-md p-4">;"
                     <div className="flex items-center justify-between mb-3">;"
                       <h4 className="text-white font-medium flex items-center">;"
@@ -400,7 +377,6 @@ pr-12325
                         className="bg-zion-purple hover:bg-zion-purple-dark text-white";"
                         onClick={applyGeneratedContent}
                         <Check className="mr-1 h-3 w-3" /> Apply;"
-
                       <div>;
                         <h5 className="text-zion-slate-light text-sm mb-1">Professional Summary</h5>;""
                         <p className="text-zion-slate italic">{generatedContent.summary}</p>;"
@@ -419,27 +395,20 @@ pr-12325
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;"
                   <h3 className="text-lg font-medium text-white">Skills & Expertise</h3>;"
                     name="skills";"
-
                         <FormLabel className="text-zion-slate-light">Skills;""
                         <div className="flex gap-2">;"
-
                               className="flex-1 bg-zion-blue border-zion-blue-light text-white";""
                               placeholder="Add a skill...";"
                               onKeyDown={handleSkillKeyPress}
 
                             className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white";                            onClick={handleAddSkill}"
-
-
-
                   <div className="flex flex-wrap gap-2 mt-2">;"
                         className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none pl-2 pr-1 py-1.5 flex items-center gap-1";"
-
                         <button;"
                           type="button";")
                           onClick={() => handleRemoveSkill(skill)}
 </button>"
                           <X className="h-3 w-3" />;"
-
                         </button>;
                       ;                    ))}"
                       <p className="text-zion-slate text-sm italic">No skills added yet</p>;"
@@ -468,17 +437,14 @@ pr-12325
                                 onChange={() => field.onChange("unavailable")}"
                               <label htmlFor="unavailable" className="text-white flex items-center gap-2">;"
                                 <div className="h-2 w-2 rounded-full bg-red-500"></div>;"
-
                   <div className="pt-2">;"
                     <FormLabel className="text-zion-slate-light">Availability Message;"
                       placeholder="Describe your availability, working hours, or when you'll be available next...";""
                       className="mt-1.5 bg-zion-blue border-zion-blue-light text-white";"
                     <FormDescription className="text-zion-slate mt-1.5 text-sm">;"
-
             <CardFooter className="border-t border-zion-blue-light pt-6">;"
               <div className="flex flex-col sm:flex-row gap-4 w-full sm:justify-between">;"
                   className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white";"
-
                 <Button ;"
                   type="submit";""
                   className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white";"
@@ -515,7 +481,6 @@ return (<div className="max-w-4xl mx-auto p-4 md: p-6"> <Card className="bg-zion
 }>  </div>) "
   generatedContent && (<div className="bg-zion-blue-light/20 border border-zion-blue-light rounded-md p-4"> <div className="flex items-center justify-between mb-3"> <h4 className="text-white font-medium flex items-center"> <Sparkles className="w-4 h-4 mr-2 text-zion-purple" /> AI-Generated Content </h4> <Button type="button" size="sm" className="bg-zion-purple hover: bg-zion-purple-dark text-white" onClick= {";
 }> <Check className="mr-1 h-3 w-3" /> Apply  </div> <div className="space-y-4"> <div> <h5 className="text-zion-slate-light text-sm mb-1">Professional Summary</h5> <p className="text-zion-slate italic"> {"
-
 }</p> </div> {"
   generatedContent.categorizedSkills && (<div> <h5 className="text-zion-slate-light text-sm mb-1">Categorized Skills</h5> <div className="flex flex-wrap gap-2 mt-1"> {"
 </div>)

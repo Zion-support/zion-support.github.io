@@ -349,13 +349,13 @@ export default function AutonomousCodeReviewSystems2025() {
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <a 
-                    href="/contact" 
+                    href="/contact"
                     className="px-8 py-4 bg-gradient-to-r from-violet-500 to-fuchsia-500 text-white font-bold rounded-xl hover:from-violet-600 hover:to-fuchsia-600 transition-all transform hover:scale-105"
                   >
                     Request AI Code Review Demo
                   </a>
                   <a 
-                    href="/case-studies" 
+                    href="/case-studies"
                     className="px-8 py-4 bg-white/10 text-white font-bold rounded-xl hover:bg-white/20 transition-all backdrop-blur-sm"
                   >
                     View DevOps Success Stories

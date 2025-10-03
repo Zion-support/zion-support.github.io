@@ -198,13 +198,13 @@ export default function AISeptember302025GenerativeAIEnterpriseAdoption() {
             </p>
             <div className="flex flex-wrap gap-4">
               <a 
-                href="/contact" 
+                href="/contact"
                 className="inline-block bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
               >
                 Schedule Consultation →
               </a>
               <a 
-                href="/case-studies" 
+                href="/case-studies"
                 className="inline-block border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
                 View Case Studies

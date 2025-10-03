@@ -146,7 +146,6 @@ export default function QuantumAIHybridSystemsPage() {
 
           <section className="mb-12">"
             <h2 className="text-3xl font-bold mb-6 text-white">🏭 Enterprise Applications & Use Cases</h2>"
-            
             <div className="space-y-8">"
               <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/30 rounded-2xl p-8">"
                 <h3 className="text-2xl font-bold mb-4 text-cyan-400">Financial Services: Risk Modeling & Portfolio Optimization</h3>"

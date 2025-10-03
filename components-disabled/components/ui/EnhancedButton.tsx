@@ -6,10 +6,8 @@ export type EnhancedButtonProps =;
   React && React.ButtonHTMLAttributes<HTMLButtonElement> & {;
 "
 const sizeStyles: Record<NonNullable<EnhancedButtonProps["size"]>, string> = {;"
-
 const variantStyles: Record<;"
   NonNullable<EnhancedButtonProps["variant"]>,;"
-
     <button;
       className={clsx("
 
@@ -23,10 +21,8 @@ const variantStyles: Record<NonNullable<EnhancedButtonProps['variant']>, string>
   React.ButtonHTMLAttributes<HTMLButtonElement> & {;
 
 const sizeStyles: Record<NonNullable<EnhancedButtonProps["size"]>, string> = {"
-
 const variantStyles: Record<"
   NonNullable<EnhancedButtonProps["variant"]>"
-
 className={clsx(
         baseStyles;
         sizeStyles[size]

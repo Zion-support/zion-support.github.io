@@ -70,7 +70,6 @@ export default function AutonomousBusinessProcessesBlog() {
       {/* Content */}
       <div className="max-w-4xl mx-auto px-4 py-12">"
         <div className="prose prose-lg max-w-none">"
-          
           {/* Introduction */}
           <div className="bg-gradient-to-r from-purple-50 to-blue-50 rounded-2xl p-8 mb-12 border border-purple-100">"
             <p className="text-xl text-gray-700 leading-relaxed mb-6">"
@@ -247,7 +246,6 @@ export default function AutonomousBusinessProcessesBlog() {
           {/* Implementation Roadmap */}
           <section className="mb-12">"
             <h2 className="text-3xl font-bold text-gray-900 mb-8">Implementation Roadmap</h2>"
-            
             <div className="grid md:grid-cols-3 gap-8">"
               <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl p-6 border border-blue-100">"
                 <div className="w-12 h-12 bg-blue-500 text-white rounded-xl flex items-center justify-center font-bold text-xl mb-4">1</div>"
@@ -287,7 +285,6 @@ export default function AutonomousBusinessProcessesBlog() {
           {/* ROI and Business Impact */}
           <section className="mb-12">"
             <h2 className="text-3xl font-bold text-gray-900 mb-8">ROI and Business Impact</h2>"
-            
             <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-2xl p-8 mb-8">"
               <h3 className="text-2xl font-semibold text-gray-800 mb-6">Quantifiable Benefits</h3>"
               <div className="grid md:grid-cols-2 gap-8">"

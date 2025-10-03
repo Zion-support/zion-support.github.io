@@ -298,7 +298,7 @@ export default function AIQuantumComputingIntegration2025() {
                   identify high-value use cases and build production-ready hybrid quantum-classical systems.
                 </p>
                 <a 
-                  href="/contact" 
+                  href="/contact"
                   className="inline-block bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-bold px-8 py-4 rounded-xl hover:from-purple-600 hover:to-indigo-600 transition-all transform hover:scale-105"
                 >
                   Schedule Quantum AI Consultation →

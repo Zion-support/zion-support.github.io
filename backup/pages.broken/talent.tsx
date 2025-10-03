@@ -138,7 +138,6 @@ export default function TalentPage() {
               viewport={{ "once": true }}"
             <motion.div;"
               className="text-center mb-16""
-
                     <div className="text-blue-600 mb-4 mx-auto w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center">;
                       <IconComponent className="w-8 h-8" />;
                     </div>;
@@ -230,7 +229,6 @@ export default function TalentPage() {
                     <CheckCircle className="w-6 h-6 text-green-500 mr-3 flex-shrink-0" />;"
 </CheckCircle>"
                     <span className="text-gray-900 font-medium">{value}</span>;"
-
                   </div>;
                 </motion && motion.div>;
               ))}

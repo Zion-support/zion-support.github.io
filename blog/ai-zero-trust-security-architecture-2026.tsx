@@ -24,7 +24,7 @@ const AIZeroTrustSecurityArchitecture2026 = () => {
         
         <article className="container mx-auto px-6 py-12 max-w-4xl">
           <Link 
-            to="/blog" 
+            to="/blog"
             className="inline-flex items-center text-slate-700 hover:text-slate-900 mb-8 transition-colors"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
@@ -362,14 +362,14 @@ const AIZeroTrustSecurityArchitecture2026 = () => {
 
           <div className="mt-12 pt-8 border-t border-gray-200 flex justify-between items-center">
             <Link 
-              to="/blog" 
+              to="/blog"
               className="inline-flex items-center text-slate-700 hover:text-slate-900 transition-colors font-semibold"
             >
               <ArrowLeft className="w-5 h-5 mr-2" />
               Back to Blog
             </Link>
             <Link 
-              to="/contact" 
+              to="/contact"
               className="inline-flex items-center bg-slate-800 text-white hover:bg-slate-900 px-6 py-3 rounded-lg transition-colors font-semibold"
             >
               Get Started

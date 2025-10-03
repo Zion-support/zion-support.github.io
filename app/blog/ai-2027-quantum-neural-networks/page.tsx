@@ -44,7 +44,6 @@ export default function AI2027QuantumNeuralNetworks() {
         </div>
 
         <h2 className="text-3xl font-bold mt-12 mb-6">🔬 Understanding Quantum Neural Networks</h2>"
-        
         <p className="text-lg mb-6">"
           Traditional neural networks process information sequentially, but quantum neural networks leverage 
           quantum superposition and entanglement to process vast amounts of data simultaneously:
@@ -91,7 +90,6 @@ export default function AI2027QuantumNeuralNetworks() {
         </div>
 
         <h2 className="text-3xl font-bold mt-12 mb-6">🏭 Real-World Applications</h2>"
-        
         <div className="space-y-8 mb-8">"
           <div className="bg-white border border-gray-200 p-6 rounded-lg shadow-sm">"
             <h3 className="text-xl font-bold mb-3 text-blue-700">🏥 Healthcare & Drug Discovery</h3>"
@@ -134,7 +132,6 @@ export default function AI2027QuantumNeuralNetworks() {
         </div>
 
         <h2 className="text-3xl font-bold mt-12 mb-6">🔧 Technical Architecture</h2>"
-        
         <p className="text-lg mb-6">"
           Quantum neural networks require specialized hardware and software architectures:
         </p>
@@ -162,7 +159,6 @@ export default function AI2027QuantumNeuralNetworks() {
         </div>
 
         <h2 className="text-3xl font-bold mt-12 mb-6">📈 Implementation Roadmap</h2>"
-        
         <div className="space-y-6 mb-8">"
           <div className="flex items-start gap-4">"
             <div className="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm">1</div>"
@@ -195,7 +191,6 @@ export default function AI2027QuantumNeuralNetworks() {
         </div>
 
         <h2 className="text-3xl font-bold mt-12 mb-6">💰 ROI & Business Impact</h2>"
-        
         <div className="overflow-x-auto mb-8">"
           <table className="w-full border-collapse border border-gray-300">"
             <thead>
@@ -230,7 +225,6 @@ export default function AI2027QuantumNeuralNetworks() {
         </div>
 
         <h2 className="text-3xl font-bold mt-12 mb-6">🔮 Future Outlook: Beyond 2027</h2>"
-        
         <div className="bg-gradient-to-r from-indigo-100 to-purple-100 p-6 rounded-lg mb-8">"
           <h3 className="text-xl font-bold mb-4 text-indigo-800">Next-Generation Capabilities</h3>"
           <ul className="space-y-3">"

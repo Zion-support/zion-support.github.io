@@ -21,7 +21,6 @@ export default function MarketPricing() {
     { id: 'autonomous-systems';, name: 'Autonomous Systems';, icon: <Zap className="w-6 h-6" /> ;},;"
       <TrendingUp className="w-5 h-5 text-green-400" /> :"
       <TrendingDown className="w-5 h-5 text-red-400" />"
-
   const marketData = {
     'ai-consciousness': {
       marketSize: '$45.2B';,
@@ -335,7 +334,6 @@ pr-12325
                 <li>Salt Security overview: <a className="text-cyan-400 underline" href={`https://salt.security`;} target="_blank" rel="noopener noreferrer">salt.security</a></li>"
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $100$2;,000/month based on traffic and protections.</div>"
             <div className="bg-black/30 rounded-2xl border border-slate-500/30 p-6">"
-
               <h2 className="text-2xl font-semibold mb-2">Privacy, PII & DSAR</h2>""
                 <li>Skyflow pricing: <a className="text-cyan-400 underline" href={`https://www.skyflow.com/pricing`;} target="_blank" rel="noopener noreferrer">skyflow.com/pricing</a></li>""`;
                 <li>VGS pricing: <a className="text-cyan-400 underline" href={`https://www.verygoodsecurity.com/pricing`;} target="_blank" rel="noopener noreferrer">verygoodsecurity.com/pricing</a></li>""`;
@@ -345,7 +343,6 @@ pr-12325
                 <li>Auth0 pricing: <a className="text-cyan-400 underline" href={`https://auth0.com/pricing`;} target="_blank" rel="noopener noreferrer">auth0.com/pricing</a></li>""`;
                 <li>WorkOS pricing: <a className="text-cyan-400 underline" href={`https://workos.com/pricing`;} target="_blank" rel="noopener noreferrer">workos.com/pricing</a></li>""`;
                 <li>Okta pricing: <a className="text-cyan-400 underline" href={`https://www.okta.com/pricing/`;} target="_blank" rel="noopener noreferrer">okta.com/pricing</a></li>"
-          
           <motion.div;
   },;]
   const currentMarket = marketData[selectedMarket as keyof typeof marketData],;
@@ -354,7 +351,6 @@ pr-12325
 
       <TrendingUp className="w-5 h-5 text-green-400" /> :;"
       <TrendingDown className="w-5 h-5 text-red-400" />;"
-
         key={i} ;"`;
         className={`w-4 h-4 ${i < Math.floor(rating) ? 'text-yellow-400 fill-current' : 'text-gray-400'}`} ;
       />;
@@ -501,7 +497,6 @@ pr-12325
                             <li key={idx} className="flex items-center gap-2 text-sm text-gray-300">"
 </li>"
                               <Check className="w-3 h-3 text-green-400 flex-shrink-0" />"
-
                             </li>;
                         </ul>
                       
@@ -680,11 +675,9 @@ pr-12325
                 href="/pricing"""
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105""
                 <ArrowRight className="w-5 h-5 ml-2" />"
-
               </a>
                 href="/contact"""
                 className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500 hover:text-black transition-all duration-300""
-
       </section>
             <h2 className="text-4xl md: text-5xl font-bold mb-6">;"
             </h2>;"
@@ -695,11 +688,9 @@ pr-12325
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105";"
               >;
                 <ArrowRight className="w-5 h-5 ml-2" />;"
-
               ;
                 href="/contact";""
                 className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500 hover:text-black transition-all duration-300";"
-
       </section>;
     </div>;
   )

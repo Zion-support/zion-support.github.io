@@ -84,7 +84,6 @@ export default function AI2026AugustBreakthroughPage() {
           {/* Key Breakthroughs */}
           <section className="mb-16">"
             <h2 className="text-4xl font-bold text-white mb-8 text-center">Revolutionary Breakthrough Technologies</h2>"
-            
             <div className="grid md:grid-cols-2 gap-8 mb-12">"
               <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-purple-500/50 transition-all duration-300">"
                 <div className="text-6xl mb-6">🧠</div>"
@@ -152,7 +151,6 @@ export default function AI2026AugustBreakthroughPage() {
           <section className="mb-16">"
             <div className="bg-gradient-to-r from-green-500/10 to-emerald-500/10 backdrop-blur-sm rounded-2xl p-8 border border-green-500/30">"
               <h2 className="text-3xl font-bold text-white mb-8 text-center">Proven Success Metrics</h2>"
-              
               <div className="grid md:grid-cols-4 gap-6 mb-8">"
                 <div className="text-center">"
                   <div className="text-4xl font-extrabold text-green-400 mb-2">$8.5B</div>"
@@ -190,7 +188,6 @@ export default function AI2026AugustBreakthroughPage() {
           {/* Implementation Guide */}
           <section className="mb-16">"
             <h2 className="text-4xl font-bold text-white mb-8 text-center">Implementation Roadmap</h2>"
-            
             <div className="space-y-6">"
               <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">"
                 <div className="flex items-center gap-4 mb-4">"

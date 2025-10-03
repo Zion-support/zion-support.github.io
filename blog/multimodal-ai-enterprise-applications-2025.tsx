@@ -308,7 +308,7 @@ export default function MultimodalAIEnterpriseApplications2025() {
                   <li>✓ Governance, security, and compliance implementation</li>
                 </ul>
                 <a 
-                  href="/contact" 
+                  href="/contact"
                   className="inline-block px-8 py-4 bg-gradient-to-r from-rose-500 to-orange-500 text-white font-bold rounded-lg hover:from-rose-600 hover:to-orange-600 transition-all transform hover:scale-105"
                 >
                   Launch Your Multimodal AI Initiative →

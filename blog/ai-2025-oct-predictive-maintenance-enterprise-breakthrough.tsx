@@ -275,7 +275,7 @@ const AI2025OctPredictiveMaintenanceEnterpriseBreakthrough = () => {
               Join industry leaders who are achieving 99.6% prediction accuracy and saving billions with AI-powered predictive maintenance.
             </p>
             <a 
-              href="/contact" 
+              href="/contact"
               className="inline-block bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-bold px-8 py-4 rounded-lg hover:from-emerald-600 hover:to-teal-600 transition-all duration-300 shadow-lg hover:shadow-emerald-500/50"
             >
               Schedule Your Consultation

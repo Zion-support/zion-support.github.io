@@ -87,19 +87,19 @@ const AI2026BreakthroughInnovationsBanner = () => {
           {/* Call to Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <Link 
-              href="/blog/ai-2026-breakthrough-innovations-mega-guide" 
+              href="/blog/ai-2026-breakthrough-innovations-mega-guide"
               className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
             >
               Read Complete Guide →
             </Link>
             <Link 
-              href="/case-studies/ai-2026-breakthrough-innovations-15-billion-success" 
+              href="/case-studies/ai-2026-breakthrough-innovations-15-billion-success"
               className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
             >
               View $15B Success Story →
             </Link>
             <Link 
-              href="/contact" 
+              href="/contact"
               className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               Get Started Today

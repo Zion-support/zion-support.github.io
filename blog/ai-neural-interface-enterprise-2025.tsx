@@ -243,13 +243,13 @@ enterpriseNeuralSystem.on('cognitiveIntent', async (intent) => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a 
-              href="/contact" 
+              href="/contact"
               className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 text-center"
             >
               Schedule Neural Interface Consultation
             </a>
             <a 
-              href="/case-studies" 
+              href="/case-studies"
               className="border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 text-center"
             >
               View Success Stories

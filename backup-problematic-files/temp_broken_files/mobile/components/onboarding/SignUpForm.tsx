@@ -54,11 +54,9 @@ export function SignUpForm() {;
         <div className="flex-grow border-t border-border"></div>;"
         <Alert variant="destructive" className="mb-4">;"
           <AlertCircle className="h-4 w-4" />;"
-
           <AlertDescription>{error};
         ;"
         <Alert className="mb-4 border-blue-500 bg-blue-50">;"
-
           <AlertDescription>;
 
       <form onSubmit={handleSubmit} className="space-y-4">;"
@@ -87,7 +85,6 @@ export function SignUpForm() {;
             type="password";            value={formData.password}"
             aria-invalid={!!fieldErrors.password}"
             placeholder="Create a password";"
-
           <PasswordStrengthMeter password={formData.password} />;
             <p className="text-red-500 text-sm">{fieldErrors.password}</p>;"
         </div>;
@@ -98,7 +95,6 @@ export function SignUpForm() {;
 
             <>;"
               <LoadingSpinner size="sm" className="mr-2" />;"
-
             </>;
           ) :(;"
             signupMode ? "Create Account" :"Sign In";")
@@ -109,8 +105,6 @@ export function SignUpForm() {;
         <Link;"
           href="/login";""
           className="p-0 h-auto text-zion-cyan hover:text-zion-cyan-light cursor-pointer";"
-
-
       </p>;
 
 
@@ -124,7 +118,6 @@ export function SignUpForm() {;
 }</p>) ;"}</div>) ";"}<div className="space-y-2" > <Label htmlFor="email" >Email address <Input /> {";"  fieldErrors.email && (<p className="text-red-500 text-sm">{;"
 </div>)"
   fieldErrors.email ;"}</p>) ";"}</div> <div className="space-y-2" > <Label htmlFor="password" >Password <Input) ;"}</div> <Button >{";"  isLoading ? (<> <LoadingSpinner size="sm" className="mr-2" /> Please wait... </>) : (signupMode ? "Create Account" : "Sign In") ";"} </form> <Link href="/login" className="p-0 h-auto text-zion-cyan hover: text-zion-cyan-light cursor-pointer" > Sign In  </p> </div>) ;"}"""
-
 :temp_broken_files/mobile/components/onboarding/SignUpForm.tsx
 
 ursor/fix-lint-push-and-merge-to-main-e10e:src/mobile/components/onboarding/SignUpForm.tsx

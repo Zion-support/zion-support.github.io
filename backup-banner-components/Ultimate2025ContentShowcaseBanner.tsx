@@ -42,7 +42,7 @@ export default function Ultimate2025ContentShowcaseBanner() {
               </div>
             </div>
             <Link 
-              href="/blog/ai-agent-orchestration-2025" 
+              href="/blog/ai-agent-orchestration-2025"
               className="inline-block bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               Explore Guide →
@@ -70,7 +70,7 @@ export default function Ultimate2025ContentShowcaseBanner() {
               </div>
             </div>
             <Link 
-              href="/blog/quantum-neural-networks-2026" 
+              href="/blog/quantum-neural-networks-2026"
               className="inline-block bg-gradient-to-r from-purple-500 to-pink-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               Learn More →
@@ -98,7 +98,7 @@ export default function Ultimate2025ContentShowcaseBanner() {
               </div>
             </div>
             <Link 
-              href="/blog/autonomous-enterprise-operations-2025" 
+              href="/blog/autonomous-enterprise-operations-2025"
               className="inline-block bg-gradient-to-r from-green-500 to-emerald-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-green-600 hover:to-emerald-700 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               Get Started →
@@ -114,13 +114,13 @@ export default function Ultimate2025ContentShowcaseBanner() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                href="/services" 
+                href="/services"
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl"
               >
                 Explore All Services
               </Link>
               <Link 
-                href="/case-studies" 
+                href="/case-studies"
                 className="border-2 border-white/30 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-300"
               >
                 View Success Stories

@@ -95,7 +95,6 @@ export default function AIBusinessIntelligence2025() {
       {/* Features Overview */}
       <section className="mb-16">"
         <h2 className="text-3xl font-bold text-gray-900 mb-8">Platform Features</h2>"
-        
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">"
           <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">"
             <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">"
@@ -198,7 +197,6 @@ export default function AIBusinessIntelligence2025() {
       {/* Use Cases */}
       <section className="mb-16">"
         <h2 className="text-3xl font-bold text-gray-900 mb-8">Use Cases</h2>"
-        
         <div className="grid md:grid-cols-2 gap-8">"
           <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg p-6">"
             <h3 className="text-xl font-bold text-gray-900 mb-4">Sales & Marketing</h3>"
@@ -309,7 +307,6 @@ export default function AIBusinessIntelligence2025() {
       {/* Pricing */}
       <section className="mb-16">"
         <h2 className="text-3xl font-bold text-gray-900 mb-8">Pricing Plans</h2>"
-        
         <div className="grid md:grid-cols-3 gap-8">"
           <div className="bg-white border border-gray-200 rounded-lg p-8">"
             <div className="text-center mb-6">"
@@ -445,7 +442,6 @@ export default function AIBusinessIntelligence2025() {
       {/* Implementation Process */}
       <section className="mb-16">"
         <h2 className="text-3xl font-bold text-gray-900 mb-8">Implementation Process</h2>"
-        
         <div className="space-y-8">"
           <div className="flex items-start gap-6">"
             <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">"

@@ -35,13 +35,13 @@ export default function AIAutonomousEnterpriseOperations2026() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
-                href="#autonomous-revolution" 
+                href="#autonomous-revolution"
                 className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
               >
                 Explore Autonomous AI
               </a>
               <a 
-                href="/contact" 
+                href="/contact"
                 className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
                 Get Implementation Guide
@@ -247,14 +247,14 @@ export default function AIAutonomousEnterpriseOperations2026() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href="/contact" 
+              href="/contact"
               className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 flex items-center justify-center gap-2"
             >
               <Bot className="w-5 h-5" />
               <span>Get Implementation Guide</span>
             </a>
             <a 
-              href="/case-studies" 
+              href="/case-studies"
               className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2"
             >
               <span>View Success Stories</span>

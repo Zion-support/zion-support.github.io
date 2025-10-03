@@ -79,7 +79,6 @@ export default function Fortune500AI2026TransformationPage() {
         {/* Main Content */}
         <article className="prose prose-lg prose-invert max-w-none">"
           <h2 className="text-3xl font-bold mb-6 text-white">The Challenge</h2>"
-          
           <p className="text-gray-300 mb-6 leading-relaxed">"
             Our Fortune 500 client, a global manufacturing leader with operations in 47 countries, faced mounting pressure from 
             competitors and market volatility. With traditional automation approaches reaching their limits, they needed a 
@@ -111,17 +110,14 @@ export default function Fortune500AI2026TransformationPage() {
           </div>
 
           <h2 className="text-3xl font-bold mb-6 text-white">The Solution</h2>"
-          
           <p className="text-gray-300 mb-6 leading-relaxed">"
             We implemented a comprehensive AI 2026 transformation strategy leveraging three breakthrough technologies in a 
             coordinated, phased approach designed to maximize impact while minimizing disruption to ongoing operations.
           </p>
 
           <h3 className="text-2xl font-bold mb-4 text-cyan-400">Phase 1: Autonomous Agent Factories</h3>"
-          
           <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/30 rounded-2xl p-8 mb-8">"
             <h4 className="text-2xl font-bold mb-4 text-cyan-400">🤖 Self-Replicating AI Workforce</h4>"
-            
             <div className="grid md:grid-cols-2 gap-8">"
               <div>
                 <h5 className="text-lg font-bold mb-3 text-white">Implementation</h5>"
@@ -146,10 +142,8 @@ export default function Fortune500AI2026TransformationPage() {
           </div>
 
           <h3 className="text-2xl font-bold mb-4 text-purple-400">Phase 2: Quantum Neural Optimization</h3>"
-          
           <div className="bg-gradient-to-r from-purple-500/10 to-cyan-500/10 border border-purple-500/30 rounded-2xl p-8 mb-8">"
             <h4 className="text-2xl font-bold mb-4 text-purple-400">⚛️ Revolutionary Performance Enhancement</h4>"
-            
             <div className="grid md:grid-cols-2 gap-8">"
               <div>
                 <h5 className="text-lg font-bold mb-3 text-white">Implementation</h5>"
@@ -174,10 +168,8 @@ export default function Fortune500AI2026TransformationPage() {
           </div>
 
           <h3 className="text-2xl font-bold mb-4 text-indigo-400">Phase 3: Meta-Cognitive Reasoning</h3>"
-          
           <div className="bg-gradient-to-r from-indigo-500/10 to-purple-500/10 border border-indigo-500/30 rounded-2xl p-8 mb-8">"
             <h4 className="text-2xl font-bold mb-4 text-indigo-400">🧠 Self-Aware Decision Making</h4>"
-            
             <div className="grid md:grid-cols-2 gap-8">"
               <div>
                 <h5 className="text-lg font-bold mb-3 text-white">Implementation</h5>"
@@ -202,7 +194,6 @@ export default function Fortune500AI2026TransformationPage() {
           </div>
 
           <h2 className="text-3xl font-bold mb-6 text-white">The Results</h2>"
-          
           <div className="grid md:grid-cols-2 gap-8 mb-8">"
             <div className="bg-gradient-to-r from-green-500/10 to-blue-500/10 border border-green-500/30 rounded-2xl p-8">"
               <h4 className="text-2xl font-bold mb-4 text-green-400">💰 Financial Impact</h4>"
@@ -250,7 +241,6 @@ export default function Fortune500AI2026TransformationPage() {
           </div>
 
           <h2 className="text-3xl font-bold mb-6 text-white">Key Success Factors</h2>"
-          
           <div className="space-y-6 mb-8">"
             <div className="flex gap-4">"
               <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-green-500 to-blue-500 rounded-full flex items-center justify-center font-bold text-white">"
@@ -294,10 +284,8 @@ export default function Fortune500AI2026TransformationPage() {
           </div>
 
           <h2 className="text-3xl font-bold mb-6 text-white">Lessons Learned</h2>"
-          
           <div className="bg-gradient-to-r from-yellow-500/10 to-orange-500/10 border border-yellow-500/30 rounded-2xl p-8 mb-8">"
             <h4 className="text-2xl font-bold mb-4 text-yellow-400">🎓 Key Insights</h4>"
-            
             <div className="grid md:grid-cols-2 gap-6">"
               <div>
                 <h5 className="text-lg font-bold mb-3 text-white">Critical Success Factors</h5>"
@@ -322,7 +310,6 @@ export default function Fortune500AI2026TransformationPage() {
           </div>
 
           <h2 className="text-3xl font-bold mb-6 text-white">Future Roadmap</h2>"
-          
           <p className="text-gray-300 mb-6 leading-relaxed">"
             Building on this success, the client is now expanding AI 2026 technologies to additional business units and 
             exploring next-generation capabilities including AGI integration and quantum-enhanced decision making.

@@ -75,7 +75,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className="absolute inset-0 bg-black/50" onClick={onClose} />"
           <div className="relative z-10 w-full max-w-2xl rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black shadow-xl">"
             <div className="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-gray-800">"
-
               <h3 className="text-base font-semibold">{title}</h3>
       {isOpen && (;"
         <div className="fixed inset-0 z-50 flex items-center justify-center">;"

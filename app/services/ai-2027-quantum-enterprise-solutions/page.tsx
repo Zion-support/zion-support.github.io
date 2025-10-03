@@ -46,7 +46,6 @@ export default function AI2027QuantumEnterpriseSolutions() {
             </div>
 
             <h2 className="text-3xl font-bold mt-12 mb-6">🚀 Core Quantum AI Capabilities</h2>"
-            
             <div className="space-y-6 mb-8">"
               <div className="bg-white border border-gray-200 p-6 rounded-lg shadow-sm">"
                 <h3 className="text-2xl font-bold mb-3 text-indigo-700">🧠 Quantum Neural Networks</h3>"
@@ -106,7 +105,6 @@ export default function AI2027QuantumEnterpriseSolutions() {
             </div>
 
             <h2 className="text-3xl font-bold mt-12 mb-6">📊 Proven Results & ROI</h2>"
-            
             <div className="bg-gradient-to-r from-green-50 to-blue-50 p-6 rounded-lg mb-8">"
               <h3 className="text-2xl font-bold mb-4 text-green-800">Real-World Success Metrics</h3>"
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">"
@@ -134,7 +132,6 @@ export default function AI2027QuantumEnterpriseSolutions() {
             </div>
 
             <h2 className="text-3xl font-bold mt-12 mb-6">🏭 Industry Applications</h2>"
-            
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">"
               <div className="bg-white border border-gray-200 p-6 rounded-lg">"
                 <h3 className="text-xl font-bold mb-3 text-blue-700">🏥 Healthcare & Pharmaceuticals</h3>"
@@ -178,7 +175,6 @@ export default function AI2027QuantumEnterpriseSolutions() {
             </div>
 
             <h2 className="text-3xl font-bold mt-12 mb-6">🔧 Implementation Approach</h2>"
-            
             <div className="space-y-6 mb-8">"
               <div className="flex items-start gap-4">"
                 <div className="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm">1</div>"

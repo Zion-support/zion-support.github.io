@@ -148,7 +148,6 @@ const "Blog": NextPage = () => {
     "Cybersecurity",
     "IoT",
     "Industry Insights"
-
 class ErrorBoundary extends React.Component {
   Tag;'
 } from 'lucide-react';''
@@ -546,12 +545,10 @@ const "Blog": NextPage = () => {;
     "Cybersecurity",
     "IoT",
     "Industry Insights"
-
   ];
   return (
     <Layout;
       title="Blog - Zion Tech Group"
-
       description="Stay updated with the latest technology trends, insights, and best practices from Zion Tech Group's expert team."
     >
       {/* Hero Section */}"
@@ -782,7 +779,6 @@ const "Blog": NextPage = () => {;
             >
 </Link>"
               Visit our website <span aria-hidden="true">→</span>"
-
             </Link>
           </div>
         </div>
@@ -1014,7 +1010,6 @@ import * as React from 'react'; import Head from 'next/head'; import Link from '
               className="text-sm font-semibold leading-6 text-white hover: tex t-blue-300 transition-colors">;"
 </Link>"
               Visit our website <span aria-hidden="true">→</span>;"
-
             </Link>;
           </div>;
         </div>;
@@ -1029,7 +1024,6 @@ export default Blog;
 
 
       description="Stay updated with the latest technology trends, insights, and best practices from Zion Tech Group's expert team."
-
     >
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
@@ -1255,7 +1249,6 @@ import React from 'react'; import Head from 'next/head'; import Link from 'next/
             >
 </Link>"
               Visit our website <span aria-hidden="true">→</span>"
-
             </Link>
           </div>
         </div>

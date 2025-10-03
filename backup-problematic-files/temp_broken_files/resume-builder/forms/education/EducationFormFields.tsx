@@ -33,7 +33,6 @@ import { Education } from '@/types/resume';
                 <FormControl>;
 "
                   <Input placeholder="University of California, MIT, etc." {...field} />;"
-
                 <FormMessage />;
 
 

@@ -162,7 +162,6 @@ export default function CategoryDetail() {;
       icon:<BarChart className="w-6 h-6" />;"
       icon:<Eye className="w-6 h-6" />;"
       icon:<Mic className="w-6 h-6" />;"
-
 pr-12325
     <>;
       <Header />;
@@ -177,7 +176,6 @@ pr-12325
 
               </div>;
             <GradientHeading className="text-4xl md:text-5xl font-bold mb-4">;"
-
             ;"
             <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">;"
 </p>

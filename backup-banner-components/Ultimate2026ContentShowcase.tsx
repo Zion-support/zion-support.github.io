@@ -111,7 +111,7 @@ export default function Ultimate2026ContentShowcase() {
                 <span className="bg-green-500/20 text-green-300 px-2 py-1 rounded text-xs">340% ROI</span>
               </div>
               <a 
-                href="/case-studies/ai-automation-enterprise-success-story" 
+                href="/case-studies/ai-automation-enterprise-success-story"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-4 py-2 rounded-lg font-bold hover:from-yellow-400 hover:to-orange-400 transition-all duration-300"
               >
                 Read Full Story →
@@ -139,7 +139,7 @@ export default function Ultimate2026ContentShowcase() {
                 <span className="bg-purple-500/20 text-purple-300 px-2 py-1 rounded text-xs">6-12 Month ROI</span>
               </div>
               <a 
-                href="/services/ai-automation-consulting" 
+                href="/services/ai-automation-consulting"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-4 py-2 rounded-lg font-bold hover:from-indigo-400 hover:to-purple-400 transition-all duration-300"
               >
                 Explore Services →
@@ -179,13 +179,13 @@ export default function Ultimate2026ContentShowcase() {
             </div>
             <div className="flex flex-col sm:flex-row gap-3">
               <a 
-                href="/contact" 
+                href="/contact"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-green-500 to-emerald-500 text-white px-6 py-3 rounded-lg font-bold hover:from-green-400 hover:to-emerald-400 transition-all duration-300"
               >
                 Get Started Today →
               </a>
               <a 
-                href="/services/ai-automation-consulting" 
+                href="/services/ai-automation-consulting"
                 className="inline-flex items-center gap-2 border border-white/20 text-white px-6 py-3 rounded-lg font-bold hover:bg-white/10 transition-all duration-300"
               >
                 Learn More

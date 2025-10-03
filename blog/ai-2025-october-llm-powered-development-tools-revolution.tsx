@@ -341,7 +341,7 @@ export default function LLMPoweredDevelopmentToolsRevolution2025() {
                   </li>
                 </ul>
                 <a 
-                  href="/contact" 
+                  href="/contact"
                   className="inline-block bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-bold py-3 px-8 rounded-lg transition-all transform hover:scale-105"
                 >
                   Schedule Your AI Development Consultation →

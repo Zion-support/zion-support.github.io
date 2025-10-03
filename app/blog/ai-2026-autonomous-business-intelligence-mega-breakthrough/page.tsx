@@ -53,7 +53,6 @@ export default function BlogPost() {
         </div>
 
         <h2 className="text-3xl font-bold text-white mb-6">🧠 The Autonomous BI Revolution</h2>"
-        
         <p className="text-gray-300 mb-6">"
           Traditional business intelligence systems require extensive human intervention, manual data preparation, 
           and constant monitoring. Our autonomous BI breakthrough eliminates these bottlenecks through advanced 
@@ -116,7 +115,6 @@ export default function BlogPost() {
         </p>
 
         <h2 className="text-3xl font-bold text-white mb-6">💼 Enterprise Implementation Strategy</h2>"
-        
         <h3 className="text-2xl font-bold text-white mb-4">Phase 1: Foundation Setup (Week 1-4)</h3>"
         <ol className="text-gray-300 space-y-3 mb-8">"
           <li><strong className="text-white">1. Data Assessment:</strong> Catalog all data sources and assess quality</li>"
@@ -142,7 +140,6 @@ export default function BlogPost() {
         </ol>
 
         <h2 className="text-3xl font-bold text-white mb-6">📊 Performance Metrics & ROI</h2>"
-        
         <div className="grid md:grid-cols-2 gap-6 mb-8">"
           <div className="bg-gradient-to-br from-green-900/20 to-emerald-900/20 border border-green-500/30 rounded-xl p-6">"
             <h4 className="text-xl font-bold text-white mb-4">Automation Achievements</h4>"
@@ -190,7 +187,6 @@ export default function BlogPost() {
         </div>
 
         <h2 className="text-3xl font-bold text-white mb-6">🔮 Future Autonomous BI Capabilities</h2>"
-        
         <div className="grid md:grid-cols-2 gap-6 mb-8">"
           <div className="bg-gradient-to-br from-purple-900/20 to-indigo-900/20 border border-purple-500/30 rounded-xl p-6">"
             <h4 className="text-xl font-bold text-white mb-4">Q2 2026: Predictive Business Planning</h4>"

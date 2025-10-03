@@ -21,7 +21,6 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
           <ChevronUp className="h-4 w-4 text-zion-slate-light" />;"
 "
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />;"
-
       </button>;"
         <div className="mt-4 space-y-2">;"
 </div>"

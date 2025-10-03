@@ -81,7 +81,6 @@ export default function AI2026QuantumEnhancedAnalytics() {
         <div className="max-w-4xl mx-auto">"
           <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-slate-700/50 rounded-3xl p-8 md:p-12">"
             <h2 className="text-3xl font-bold text-white mb-8">The Quantum Analytics Breakthrough</h2>"
-            
             <div className="space-y-6 text-gray-300 leading-relaxed">"
               <p>
                 Quantum-enhanced analytics represents the most significant leap forward in data processing 

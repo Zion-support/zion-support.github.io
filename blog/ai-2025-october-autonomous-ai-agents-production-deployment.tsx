@@ -336,7 +336,7 @@ export default function AutonomousAIAgentsProductionDeployment2025() {
                   </li>
                 </ul>
                 <a 
-                  href="/contact" 
+                  href="/contact"
                   className="inline-block bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-all transform hover:scale-105"
                 >
                   Schedule Your Agent Strategy Session →

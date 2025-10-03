@@ -12,8 +12,8 @@ const RealTimeEmbeddingOptimization2025 = () => {
       </div>
 
       <img 
-        src="/images/real-time-embedding-optimization-2025.jpg" 
-        alt="Real-Time Embedding Optimization" 
+        src="/images/real-time-embedding-optimization-2025.jpg"
+        alt="Real-Time Embedding Optimization"
         className="w-full rounded-lg shadow-lg mb-8"
       />
 

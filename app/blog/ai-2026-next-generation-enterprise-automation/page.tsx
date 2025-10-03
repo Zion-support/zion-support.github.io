@@ -76,7 +76,6 @@ export default function AINextGenEnterpriseAutomation2026() {
         <div className="container mx-auto px-6">"
           <div className="max-w-4xl mx-auto">"
             <div className="prose prose-invert prose-lg max-w-none">"
-              
               <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">"
                 The Enterprise Automation Revolution is Here
               </h2>

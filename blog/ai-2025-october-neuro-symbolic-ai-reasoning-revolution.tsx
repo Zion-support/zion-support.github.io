@@ -351,14 +351,14 @@ perception_model.train(
             </p>
             <div className="flex flex-wrap gap-4">
               <a 
-                href="/contact" 
+                href="/contact"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-colors"
               >
                 Schedule Consultation
                 <span>→</span>
               </a>
               <a 
-                href="/services/ai-solutions" 
+                href="/services/ai-solutions"
                 className="inline-flex items-center gap-2 px-6 py-3 border border-purple-500 text-purple-400 font-semibold rounded-lg hover:bg-purple-500/10 transition-colors"
               >
                 Explore AI Services

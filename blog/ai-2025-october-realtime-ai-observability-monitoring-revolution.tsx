@@ -309,7 +309,7 @@ export default function RealTimeAIObservabilityRevolution2025() {
                   that predict incidents, accelerate resolution, and enable autonomous operations.
                 </p>
                 <a 
-                  href="/contact" 
+                  href="/contact"
                   className="inline-block px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-bold rounded-lg hover:from-orange-600 hover:to-red-600 transition-all transform hover:scale-105"
                 >
                   Schedule an Observability Assessment →

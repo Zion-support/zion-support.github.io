@@ -67,7 +67,6 @@ export default function AI2026FutureTrendsBreakthrough() {
         </div>
 
         <h2 className="text-3xl font-bold text-gray-900 mb-6">🌟 Revolutionary AI Trends Transforming Industries</h2>"
-
         <div className="grid md:grid-cols-2 gap-6 mb-8">"
           <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">"
             <h3 className="text-xl font-bold text-gray-900 mb-3">🧠 Quantum Neural Networks</h3>"
@@ -95,7 +94,6 @@ export default function AI2026FutureTrendsBreakthrough() {
         </div>
 
         <h2 className="text-3xl font-bold text-gray-900 mb-6">🏢 Autonomous Enterprise Revolution</h2>"
-
         <div className="bg-gradient-to-r from-purple-50 to-indigo-50 p-6 rounded-lg mb-8">"
           <h3 className="text-2xl font-bold text-gray-900 mb-4">The 95% Automation Breakthrough</h3>"
           <p className="text-gray-700 mb-4">"
@@ -119,7 +117,6 @@ export default function AI2026FutureTrendsBreakthrough() {
         </div>
 
         <h2 className="text-3xl font-bold text-gray-900 mb-6">🔮 Future-Proofing Your Business</h2>"
-
         <div className="bg-white border border-gray-200 rounded-lg p-6 mb-8">"
           <h3 className="text-2xl font-bold text-gray-900 mb-4">Implementation Roadmap</h3>"
           <ol className="list-decimal list-inside space-y-4 text-gray-700">"

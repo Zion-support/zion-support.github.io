@@ -9,8 +9,8 @@ const AIAgentsProductionDeployment2025: React.FC = () => {
       <Helmet>
         <title>AI Agents Production Deployment 2025: Ship Reliable Autonomous Systems | Zion Tech Group</title>
         <meta 
-          name="description" 
-          content="Master production deployment of AI agents with battle-tested patterns for reliability, safety, and scale. Learn canary releases, rollback strategies, and monitoring for autonomous systems that teams trust." 
+          name="description"
+          content="Master production deployment of AI agents with battle-tested patterns for reliability, safety, and scale. Learn canary releases, rollback strategies, and monitoring for autonomous systems that teams trust."
         />
         <meta name="keywords" content="AI Agents, Production Deployment, Autonomous Systems, AI Reliability, Agent Monitoring, MLOps, AI Safety" />
         <link rel="canonical" href="https://ziontechgroup.com/blog/ai-agents-production-deployment-2025" />

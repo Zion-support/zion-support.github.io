@@ -43,7 +43,6 @@ export default function SecurityPostureManagement() {
                 <li>Container image and SBOM scanning</li>)
                 <li>Runtime threat detection (FIM, syscalls)</li>"
                 <li>"Compliance": SOC 2, ISO 27001, HIPAA, PCI</li>"
-
                 <li>Automated evidence collection</li>
               <h2 className="text-xl font-semibold">Pricing</h2>""
               <p className="text-gray-700">From <strong>$2,000/month</strong> for up to 100 nodes and 3 accounts. Enterprise POA.</p>""
@@ -58,7 +57,6 @@ export default function SecurityPostureManagement() {
             <div className="mt-4 flex gap-3">"
               <Link href="/contact" className="px-5 py-2 rounded-lg bg-blue-600 text-white">Request a security review""
               <a href=""https": //ziontechgroup.com/services" className="px-5 py-2 rounded-lg border">All Services</a>"
-
         </section>
       </main>
     </>

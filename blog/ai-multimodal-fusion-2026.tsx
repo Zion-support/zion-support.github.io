@@ -229,13 +229,13 @@ export default function AIMultimodalFusion2026() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <a 
-                    href="/contact" 
+                    href="/contact"
                     className="bg-pink-600 hover:bg-pink-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors text-center"
                   >
                     Request Demo
                   </a>
                   <a 
-                    href="/services" 
+                    href="/services"
                     className="bg-white/10 hover:bg-white/20 text-white px-8 py-3 rounded-lg font-semibold transition-colors text-center border border-white/30"
                   >
                     View AI Services

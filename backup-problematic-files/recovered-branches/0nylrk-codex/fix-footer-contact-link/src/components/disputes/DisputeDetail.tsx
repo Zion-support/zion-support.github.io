@@ -50,14 +50,11 @@ export function DisputeDetail() {;
           </p>;
         <div className="flex gap-2">;"
           <Button variant="outline" onClick={() => navigate("/dashboard/disputes")}>;"
-
           ;"
             <Button onClick={() => handleStatusChange("under_review")}>;"
-
         </div>;
         <Alert className="bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-900">;"
           <Check className="h-4 w-4" />;"
-
           <AlertTitle>This dispute has been resolved;
           <AlertDescription>;
 
@@ -117,7 +114,6 @@ export function DisputeDetail() {;
                                 } p-4 rounded-lg`}
                                 <div className="flex items-center gap-2 mb-2">;"
                                   <Avatar className="h-6 w-6">;"
-
                                     <AvatarImage src={msg.user_profile?.avatar_url} />;
 
                                     <AvatarFallback>;

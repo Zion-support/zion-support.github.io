@@ -335,13 +335,13 @@ export default function EnterpriseCognitiveIntelligencePlatform2025() {
                   </p>
                   <div className="flex flex-wrap gap-4 justify-center">
                     <a 
-                      href="/contact" 
+                      href="/contact"
                       className="px-8 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold rounded-lg hover:shadow-lg hover:shadow-purple-500/50 transition-all"
                     >
                       Get Started Today
                     </a>
                     <a 
-                      href="/services" 
+                      href="/services"
                       className="px-8 py-3 bg-white/10 text-white font-bold rounded-lg border border-white/30 hover:bg-white/20 transition-all"
                     >
                       View Solutions

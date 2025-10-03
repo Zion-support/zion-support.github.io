@@ -312,7 +312,7 @@ export default function AdaptiveLearningSystemsPersonalization2025() {
                   </div>
                   <div className="text-center">
                     <a 
-                      href="/contact" 
+                      href="/contact"
                       className="inline-block bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-3 px-8 rounded-lg transition-colors"
                     >
                       Launch Your Adaptive AI System

@@ -93,13 +93,11 @@ export default function AIAutonomousRobotics2026() {
       {/* Main Content */}
       <div className="prose prose-lg max-w-none">"
         <h2 className="text-3xl font-bold text-gray-900 mb-6 mt-12">The Autonomous Robotics Revolution</h2>"
-        
         <p className="text-lg text-gray-700 leading-relaxed mb-6">"
           AI autonomous robotics represents the convergence of artificial intelligence, machine learning, and advanced robotics technologies. These systems can perceive their environment, make intelligent decisions, and execute complex tasks with minimal human intervention, opening up unprecedented possibilities for automation and efficiency.
         </p>
 
         <h3 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Core Technologies</h3>"
-        
         <div className="bg-gray-50 p-6 rounded-xl mb-8">"
           <h4 className="text-xl font-semibold text-gray-900 mb-4">1. Advanced Perception Systems</h4>"
           <p className="text-gray-700 mb-4">"
@@ -140,7 +138,6 @@ export default function AIAutonomousRobotics2026() {
         </div>
 
         <h3 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Industry Applications</h3>"
-
         <div className="grid md:grid-cols-2 gap-8 mb-12">"
           <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">"
             <div className="flex items-center gap-3 mb-4">"
@@ -204,7 +201,6 @@ export default function AIAutonomousRobotics2026() {
         </div>
 
         <h3 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Implementation Framework</h3>"
-
         <div className="bg-gradient-to-r from-green-50 to-blue-50 p-8 rounded-xl mb-8">"
           <h4 className="text-xl font-semibold text-gray-900 mb-6">Phase 1: Assessment & Planning (Months 1-3)</h4>"
           <div className="grid md:grid-cols-3 gap-6">"
@@ -260,7 +256,6 @@ export default function AIAutonomousRobotics2026() {
         </div>
 
         <h3 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Success Stories</h3>"
-
         <div className="bg-gradient-to-r from-indigo-50 to-purple-50 p-8 rounded-xl mb-8">"
           <h4 className="text-xl font-semibold text-gray-900 mb-4">Global Automotive Manufacturer</h4>"
           <p className="text-gray-700 mb-4">"
@@ -283,7 +278,6 @@ export default function AIAutonomousRobotics2026() {
         </div>
 
         <h3 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Future Trends</h3>"
-
         <p className="text-lg text-gray-700 leading-relaxed mb-6">"
           The future of AI autonomous robotics is incredibly promising, with several key trends shaping the industry:
         </p>
@@ -298,7 +292,6 @@ export default function AIAutonomousRobotics2026() {
         </ul>
 
         <h3 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Getting Started</h3>"
-
         <p className="text-lg text-gray-700 leading-relaxed mb-6">"
           Ready to transform your operations with AI autonomous robotics? Our team of experts can help you identify opportunities, develop implementation strategies, and deploy cutting-edge robotic solutions tailored to your specific needs.
         </p>

@@ -188,13 +188,13 @@ export default function AIAutonomousAgentsEnterprise2026() {
           </p>
           <div className="flex flex-wrap gap-4">
             <a 
-              href="/contact" 
+              href="/contact"
               className="bg-gradient-to-r from-emerald-500 to-cyan-600 hover:from-emerald-400 hover:to-cyan-500 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300 shadow-lg"
             >
               Schedule Consultation
             </a>
             <a 
-              href="/services" 
+              href="/services"
               className="border-2 border-emerald-500 text-emerald-400 hover:bg-emerald-500 hover:text-white font-bold py-3 px-8 rounded-xl transition-all duration-300"
             >
               Explore Our Solutions

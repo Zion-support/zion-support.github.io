@@ -76,7 +76,7 @@ export default function December2025ContentShowcaseBanner() {
             </div>
             
             <Link 
-              href="/blog/ai-2025-december-advanced-autonomous-systems" 
+              href="/blog/ai-2025-december-advanced-autonomous-systems"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-400 hover:to-cyan-400 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50"
             >
               Read Full Article
@@ -111,7 +111,7 @@ export default function December2025ContentShowcaseBanner() {
             </div>
             
             <Link 
-              href="/case-studies/ai-2025-december-autonomous-systems-500-million-success" 
+              href="/case-studies/ai-2025-december-autonomous-systems-500-million-success"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-400 hover:to-emerald-400 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50"
             >
               View Success Story
@@ -133,13 +133,13 @@ export default function December2025ContentShowcaseBanner() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                href="/contact" 
+                href="/contact"
                 className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1"
               >
                 Get Started Today
               </Link>
               <Link 
-                href="/blog" 
+                href="/blog"
                 className="border-2 border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
                 Explore All Content

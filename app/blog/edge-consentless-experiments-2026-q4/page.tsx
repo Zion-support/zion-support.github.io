@@ -8,7 +8,6 @@ export default function Page() {
     <article className="prose prose-invert max-w-3xl mx-auto py-10">"
       <h1>Edge Consentless Experiments 2026 Q4: &lt;100ms A/B Without PII</h1>
       <p className="text-sm opacity-70">Published: 2025-09-30 • Category: Analytics • 6 min read</p>"
-
       <p>
         Run privacy‑preserving experiments at the edge using scoped identifiers, signed configs, and on‑device
         metrics aggregation. Achieve &lt;100ms decision latency while maintaining zero collection of personally

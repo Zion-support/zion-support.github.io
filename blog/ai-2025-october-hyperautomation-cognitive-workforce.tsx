@@ -150,7 +150,7 @@ export default function HyperautomationCognitiveWorkforce2025() {
               </div>
               <p className="text-gray-300 mt-4 italic">
                 "Our finance team now focuses on strategic analysis and business partnership instead 
-                of manual data entry. Employee satisfaction increased 62% while we saved $1.8B annually." 
+                of manual data entry. Employee satisfaction increased 62% while we saved $1.8B annually."
                 — CFO, Global Financial Services Firm
               </p>
             </div>
@@ -177,7 +177,7 @@ export default function HyperautomationCognitiveWorkforce2025() {
               </div>
               <p className="text-gray-300 mt-4 italic">
                 "Cognitive workers handle routine inquiries instantly, allowing our human agents to focus 
-                on building relationships and solving complex problems. Response times dropped by 92%." 
+                on building relationships and solving complex problems. Response times dropped by 92%."
                 — VP Customer Experience, Global Retailer
               </p>
             </div>
@@ -287,13 +287,13 @@ export default function HyperautomationCognitiveWorkforce2025() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href="/contact" 
+              href="/contact"
               className="bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-400 hover:to-red-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 text-center"
             >
               Start Free 30-Day Trial
             </a>
             <a 
-              href="/case-studies/cognitive-workforce-financial-services-2025" 
+              href="/case-studies/cognitive-workforce-financial-services-2025"
               className="border-2 border-orange-500 text-orange-400 hover:bg-orange-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 text-center"
             >
               View Success Stories

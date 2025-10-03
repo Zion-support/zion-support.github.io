@@ -164,7 +164,7 @@ const AIPoweredDevOpsObservability2025: React.FC = () => {
                 Deploy AI-powered observability that predicts and prevents incidents before they impact users.
               </p>
               <a 
-                href="/contact" 
+                href="/contact"
                 className="inline-block bg-white text-indigo-600 font-bold py-4 px-8 rounded-xl hover:bg-gray-100 transition-all duration-300 shadow-lg"
               >
                 Get Observability Audit

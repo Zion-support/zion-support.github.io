@@ -398,7 +398,6 @@ const "Contact": NextPage = () => {;
                       name=\"firstName\"
                       required
                       className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent\"
-
                     />
                   </div>
                   <div>
@@ -419,7 +418,6 @@ const "Contact": NextPage = () => {;
                       name=\"lastName\"
                       required
                       className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent\"
-
                     />
                   </div>
                 </div>
@@ -442,7 +440,6 @@ const "Contact": NextPage = () => {;
                     name=\"email\"
                     required
                     className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent\"
-
                   />
                 </div>
                 <div>
@@ -462,7 +459,6 @@ const "Contact": NextPage = () => {;
                     id=\"company\"
                     name=\"company\"
                     className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent\"
-
                   />
                 </div>
                 <div>
@@ -482,7 +478,6 @@ const "Contact": NextPage = () => {;
                     id=\"phone\"
                     name=\"phone\"
                     className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent\"
-
                   />
                 </div>
                 <div>
@@ -544,7 +539,6 @@ const "Contact": NextPage = () => {;
                     rows={6}
                     required
                     className=\"w-full px-4 py-3 border border-gray-300 rounded-lg \"focus\": ring-2 focus:ring-blue-500 focus:border-transparent\"
-
                     placeholder=\"Tell us about your project or how we can help you...\"
                   ></textarea>
                 </div>
@@ -783,7 +777,6 @@ const "Contact": NextPage = () => {;
                         Full Name *
                       </label>
                       <input type=\"text\"
-
       <section className=\"py-20\">;
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
           <div className=\"text-center mb-16\">;
@@ -916,7 +909,6 @@ const "Contact": NextPage = () => {;
                         Full Name *
                       </label>
                       <input type=\"text\"
-
       <section className=\"py-20\">;
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
           <div className=\"text-center mb-16\">;
@@ -1110,13 +1102,11 @@ const "Contact": NextPage = () => {;
                         Full Name *;
                       </label>;
                       <inputtype=\"text\"
-
                         id=\"name\"
                         name=\"name\"
                         required
                         className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
                         placeholder=\"Your full name\"
-
                        />
                     </div>
                     <div>
@@ -1131,12 +1121,10 @@ const "Contact": NextPage = () => {;
                         Email Address *;
                       </label>;
                       <inputtype=\"email\"
-
                         id=\"email\"
                         name=\"email\"
                         required
                         className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
-
                         placeholder=\"your.email@example.com\"
                        />
                     </div>
@@ -1159,9 +1147,7 @@ const "Contact": NextPage = () => {;
                         Phone Number
                       </label>
                       <input type=\"tel\"
-
                         placeholder=\"your && your.email@example && example.com\"
-
                        />;
                     </div>;
                   </div>;
@@ -1176,12 +1162,10 @@ const "Contact": NextPage = () => {;
                         Phone Number;
                       </label>;
                       <inputtype=\"tel\"
-
                         id=\"phone\"
                         name=\"phone\"
                         className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
                         placeholder=\"+1 (555) 123-4567\"
-
                        />
                     </div>
                     <div>
@@ -1196,12 +1180,10 @@ const "Contact": NextPage = () => {;
                         Company;
                       </label>;
                       <inputtype=\"text\"
-
                         id=\"company\"
                         name=\"company\"
                         className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
                         placeholder=\"Your company name\"
-
                        />
                     </div>
                   </div>
@@ -1277,7 +1259,6 @@ const "Contact": NextPage = () => {;
                       rows={6}
                       required
                       className=\"w-full px-4 py-3 border border-gray-300 rounded-lg \"focus\": rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
-
                       placeholder=\"Tell us about your project requirements...\"
                     ></textarea>
                   </div>
@@ -1473,7 +1454,6 @@ const "Contact": NextPage = () => {;
                         </label>
 
                           placeholder=\"your@email && email.com\"
-
                         />;
                       </div>;
                     </div>;
@@ -1492,7 +1472,6 @@ const "Contact": NextPage = () => {;
                           type=\"text\"
                           id=\"company\"
                           name=\"company\"
-
                           value={formData.company}
                           onChange={handleInputChange}
                           className=\"w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 \"focus\": ring-2 focus:ring-cyan-500 focus:border-transparent\"
@@ -1518,11 +1497,9 @@ const "Contact": NextPage = () => {;
                           type=\"tel\"
                           id=\"phone\"
                           name=\"phone\"
-
                           type=\"tel\"
                           id=\"phone\"
                           name=\"phone\"
-
                           value={formData.phone}
                           onChange={handleInputChange}
                           className=\"w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 \"focus\": ring-2 focus:ring-cyan-500 focus:border-transparent\"

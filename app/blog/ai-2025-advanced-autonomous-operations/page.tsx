@@ -58,7 +58,6 @@ export default function AI2025AdvancedAutonomousOperations() {
         {/* Main Content */}
         <div className="max-w-4xl mx-auto">"
           <div className="prose prose-lg prose-invert max-w-none">"
-            
             <section className="mb-12">"
               <h2 className="text-3xl font-bold text-white mb-6">The Autonomous Operations Breakthrough</h2>"
               <p className="text-xl text-gray-300 mb-6">"
@@ -75,7 +74,6 @@ export default function AI2025AdvancedAutonomousOperations() {
 
             <section className="mb-12">"
               <h2 className="text-3xl font-bold text-white mb-6">Revolutionary Technology Stack</h2>"
-              
               <div className="grid md:grid-cols-2 gap-8 mb-8">"
                 <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">"
                   <h3 className="text-2xl font-bold text-white mb-4">🧠 Cognitive Process Automation</h3>"
@@ -139,7 +137,6 @@ export default function AI2025AdvancedAutonomousOperations() {
 
             <section className="mb-12">"
               <h2 className="text-3xl font-bold text-white mb-6">Fortune 500 Success Stories</h2>"
-              
               <div className="bg-gradient-to-r from-green-500/10 to-emerald-500/10 backdrop-blur-lg rounded-2xl p-8 border border-green-500/20 mb-8">"
                 <h3 className="text-2xl font-bold text-green-400 mb-4">🏢 Global Manufacturing Giant</h3>"
                 <div className="grid md:grid-cols-3 gap-6 mb-6">"
@@ -212,7 +209,6 @@ export default function AI2025AdvancedAutonomousOperations() {
 
             <section className="mb-12">"
               <h2 className="text-3xl font-bold text-white mb-6">Implementation Roadmap</h2>"
-              
               <div className="space-y-6">"
                 <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">"
                   <div className="flex items-center gap-4 mb-4">"

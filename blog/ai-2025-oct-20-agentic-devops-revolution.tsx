@@ -10,8 +10,8 @@ const AgenticDevOpsRevolution = () => {
       <Helmet>
         <title>Agentic DevOps Revolution 2025 — Autonomous CI/CD Agents Reduce Deployment Time 90%</title>
         <meta 
-          name="description" 
-          content="Master the future of DevOps with autonomous AI agents. Deploy 10x faster with 99.9% reliability, automate incident response in under 30 seconds, and cut operational costs by 75%. Complete implementation guide with production-ready patterns." 
+          name="description"
+          content="Master the future of DevOps with autonomous AI agents. Deploy 10x faster with 99.9% reliability, automate incident response in under 30 seconds, and cut operational costs by 75%. Complete implementation guide with production-ready patterns."
         />
         <meta name="keywords" content="AI DevOps, autonomous agents, CI/CD automation, intelligent pipelines, DevOps AI, deployment automation, incident response, infrastructure automation" />
         <link rel="canonical" href="https://ziontechgroup.com/blog/ai-2025-oct-20-agentic-devops-revolution" />

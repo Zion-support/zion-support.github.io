@@ -99,7 +99,7 @@ export default function LLMReasoningBreakthroughO3_2025() {
                   <div className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 p-6 rounded-lg border border-purple-400/20">
                     <h3 className="text-xl font-semibold mb-3 text-purple-400">Deliberative Alignment</h3>
                     <p className="text-white/80">
-                      Rather than rushing to conclusions, O3 has been trained to "think before it speaks." 
+                      Rather than rushing to conclusions, O3 has been trained to "think before it speaks."
                       The model evaluates multiple hypotheses, considers counter-evidence, and refines its 
                       reasoning before committing to an answer. This metacognitive capability is unprecedented 
                       in AI systems.

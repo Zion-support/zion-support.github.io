@@ -71,7 +71,6 @@ export default function AI2025EnterpriseAutomationBreakthrough() {
           </p>
 
           <h2 className="text-3xl font-bold text-white mt-12 mb-6">🚀 The Automation Revolution</h2>"
-          
           <p className="text-gray-300 mb-6">"
             Traditional business processes are being completely reimagined through intelligent automation. 
             Leading enterprises report 95% operational efficiency improvements, with some achieving near-complete 
@@ -87,7 +86,6 @@ export default function AI2025EnterpriseAutomationBreakthrough() {
           </blockquote>
 
           <h2 className="text-3xl font-bold text-white mt-12 mb-6">🏗️ Enterprise Architecture Transformation</h2>"
-          
           <p className="text-gray-300 mb-6">"
             The new generation of enterprise AI systems operates on a fundamentally different architecture:
           </p>
@@ -112,7 +110,6 @@ export default function AI2025EnterpriseAutomationBreakthrough() {
           </ul>
 
           <h2 className="text-3xl font-bold text-white mt-12 mb-6">💼 Real-World Implementation Success</h2>"
-          
           <p className="text-gray-300 mb-6">"
             Leading enterprises have implemented these systems with remarkable results:
           </p>
@@ -144,7 +141,6 @@ export default function AI2025EnterpriseAutomationBreakthrough() {
           </div>
 
           <h2 className="text-3xl font-bold text-white mt-12 mb-6">🔧 Implementation Framework</h2>"
-          
           <p className="text-gray-300 mb-6">"
             Successful enterprise AI automation follows a proven framework:
           </p>
@@ -171,7 +167,6 @@ export default function AI2025EnterpriseAutomationBreakthrough() {
           </div>
 
           <h2 className="text-3xl font-bold text-white mt-12 mb-6">📊 Measurable Business Impact</h2>"
-          
           <p className="text-gray-300 mb-6">"
             The business impact of enterprise AI automation is measurable and substantial:
           </p>
@@ -216,7 +211,6 @@ export default function AI2025EnterpriseAutomationBreakthrough() {
           </div>
 
           <h2 className="text-3xl font-bold text-white mt-12 mb-6">🎯 Future Outlook</h2>"
-          
           <p className="text-gray-300 mb-6">"
             The enterprise automation revolution is just beginning. Companies that adopt these technologies 
             today will have significant competitive advantages in the coming years. The next phase includes:

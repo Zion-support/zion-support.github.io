@@ -16,7 +16,6 @@ const categories = [{ "id": 'all', "name": 'All Security', "color": 'from-blue-5
   ];
 
 const "data": any[] = [];"
-
 const filteredServices = data.filter((service) => {
    ;
   }

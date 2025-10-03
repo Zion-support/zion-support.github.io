@@ -53,7 +53,6 @@ export function InvoiceHistory() {;
         <h3 className="text-xl font-medium">Invoice History</h3>;""
         <div className="relative">;"
           <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />;"
-
           <Input;"
             type="search";""
             placeholder="Search invoices...";""
@@ -93,7 +92,6 @@ export function InvoiceHistory() {;
                       className="h-8 gap-1";"
                       onClick={() => handleDownloadInvoice(invoice.id)}
                       <Download className="h-3.5 w-3.5" />;"
-
                     >;
                       <Download className="h-3.5 w-3.5" />;
                       PDF;

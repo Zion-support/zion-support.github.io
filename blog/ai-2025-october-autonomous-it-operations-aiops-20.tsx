@@ -369,7 +369,7 @@ export default function AutonomousITOperationsAIOps202025() {
 
               <div className="text-center py-8">
                 <a 
-                  href="/contact" 
+                  href="/contact"
                   className="inline-block px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white font-bold rounded-xl shadow-lg hover:shadow-emerald-500/50 transition-all duration-300 transform hover:scale-105"
                 >
                   Start Your AIOps Transformation →

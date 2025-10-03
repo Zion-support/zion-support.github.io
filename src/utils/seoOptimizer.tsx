@@ -51,7 +51,7 @@ export const generateMetaTags = (metadata: SEOMetadata): string => {
   if (metadata.canonicalUrl) {
     tags.push(`<meta property="og:url" content="${escapeHtml(metadata.canonicalUrl)}" />`);
   }
-
+  
   // Twitter Card tags
   tags.push(`<meta name="twitter:card" content="${metadata.twitterCard || 'summary_large_image'}" />`);
   tags.push(`<meta name="twitter:title" content="${escapeHtml(metadata.twitterTitle || metadata.title)}" />`);

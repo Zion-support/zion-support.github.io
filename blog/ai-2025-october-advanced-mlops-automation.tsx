@@ -243,13 +243,13 @@ export default function AdvancedMLOpsAutomation2025() {
                   
                   <div className="flex flex-wrap gap-4">
                     <a 
-                      href="/contact" 
+                      href="/contact"
                       className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-400 transition-all shadow-lg hover:shadow-cyan-500/50"
                     >
                       Schedule Consultation
                     </a>
                     <a 
-                      href="/services/mlops" 
+                      href="/services/mlops"
                       className="px-6 py-3 bg-white/10 border border-cyan-400/30 text-white font-semibold rounded-lg hover:bg-white/20 transition-all"
                     >
                       Explore MLOps Services

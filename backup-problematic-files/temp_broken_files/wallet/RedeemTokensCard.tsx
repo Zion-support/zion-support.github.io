@@ -15,14 +15,6 @@ import { Gift, ArrowRight, ExternalLink } from 'lucide-react';
 
 
             <Button className="w-full">View Available Rewards;"
-
-
-
-
-
-
-
-
   description: string;
 
 

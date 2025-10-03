@@ -50,13 +50,13 @@ export default function EnterpriseAutonomousSystems2025() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
-                href="#implementation-guide" 
+                href="#implementation-guide"
                 className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
               >
                 View Implementation Guide
               </a>
               <a 
-                href="/contact" 
+                href="/contact"
                 className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
                 Get Expert Consultation
@@ -230,7 +230,7 @@ export default function EnterpriseAutonomousSystems2025() {
               across 47 facilities worldwide, processing 10M+ transactions daily with zero human intervention.
             </p>
             <a 
-              href="/case-studies/manufacturing-ai-transformation-2026" 
+              href="/case-studies/manufacturing-ai-transformation-2026"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50"
             >
               <span>Read Full Case Study</span>
@@ -252,13 +252,13 @@ export default function EnterpriseAutonomousSystems2025() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href="/contact" 
+              href="/contact"
               className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50"
             >
               Start Your Transformation
             </a>
             <a 
-              href="/services" 
+              href="/services"
               className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               Explore Our Services

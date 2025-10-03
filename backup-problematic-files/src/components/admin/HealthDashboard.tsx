@@ -49,7 +49,6 @@ const HealthDashboard:React.FC = () => {;
         return <XCircle className="w-5 h-5 text-red-500" />,;"
         return <Activity className="w-5 h-5 text-gray-500" />;"
       <Badge variant={variant} className="ml-2">;"
-
       ;"
       <div className="flex items-center justify-center p-8">;"
 </div>"
@@ -59,10 +58,8 @@ const HealthDashboard:React.FC = () => {;
         <CardContent className="p-6">;"
           <div className="flex items-center text-red-600">;"
             <XCircle className="w-5 h-5 mr-2" />;"
-
             <span>Failed to load health data: {error;}</span>;
           <Button onClick={fetchHealthData} className="mt-4">;"
-
     <div className="space-y-6">;"
       <div className="flex items-center justify-between">;"
         <div className="flex items-center">;"
@@ -102,7 +99,6 @@ const HealthDashboard:React.FC = () => {;
           <TabsTrigger value="recommendations">Recommendations;"
         <TabsContent value="overview" className="space-y-4">;"
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">;"
-
               <CardHeader>;
 
                 <CardTitle>System Information;
