@@ -10,16 +10,16 @@ export const metadata = {
 export default function EnterprisePage() {
   return (
     <div className="text-left">
-      {/* Hero Section */}
+      {/* Hero Section */}</div>
       <header className="text-left">
-        <div className="text-left">
+        <div className="text-left"></div>
           <div className="text-left"></div>"
           <div className="text-left" style={{ animationDelay: '2s' }}></div>"
         </div>
         
-        <div className="text-left">
-          <div className="text-left">
-            <div className="text-left">
+        <div className="text-left"></div>
+          <div className="text-left"></div>
+            <div className="text-left"></div>
               <span className="text-left">
                 🏢 Enterprise AI Solutions
               </span>
@@ -38,11 +38,10 @@ export default function EnterprisePage() {
               500% productivity gains, and 99.9% system uptime with enterprise-grade security and compliance.
             </p>
             
-            <div className="text-left">
+            <div className="text-left"></div>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Schedule Enterprise Demo
               </a>
               <a 
@@ -58,24 +57,24 @@ export default function EnterprisePage() {
 
       {/* Solutions Section */}
       <section id="solutions" className="text-left">
-        <div className="text-left">
-          <div className="text-left">
+        <div className="text-left"></div>
+          <div className="text-left"></div>
             <h2 className="text-left">Enterprise Solutions</h2>"
             <p className="text-left">Comprehensive AI solutions for enterprise needs</p>"
           </div>
           
-          <div className="text-left">
-            <div className="text-left">
+          <div className="text-left"></div>
+            <div className="text-left"></div>
               <h3 className="text-left">AI Automation</h3>"
               <p className="text-left">Automate complex business processes with AI</p>"
             </div>
             
-            <div className="text-left">
+            <div className="text-left"></div>
               <h3 className="text-left">Data Analytics</h3>"
               <p className="text-left">Advanced analytics and insights for decision making</p>"
             </div>
             
-            <div className="text-left">
+            <div className="text-left"></div>
               <h3 className="text-left">Security</h3>"
               <p className="text-left">Enterprise-grade security and compliance</p>"
             </div>
@@ -84,8 +83,13 @@ export default function EnterprisePage() {
       </section>
 
       <footer className="text-left">
+<<<<<<< HEAD
         <div className="text-left">
           <p className="text-left">© 2025 Zion Tech Group. All rights reserved.</p>
+=======
+        <div className="text-left"></div>
+          <p className="text-left">© 2025 Zion Tech Group. All rights reserved.</p>"
+>>>>>>> main
         </div>
       </footer>
     </div>

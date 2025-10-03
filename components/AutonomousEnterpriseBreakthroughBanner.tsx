@@ -2,8 +2,8 @@ import React from 'react';
 
 const AutonomousEnterpriseBreakthroughBanner: React.FC = () => {
   return (
-    <div className="text-left">
-      <div className="text-left">
+    <div className="text-left"></div>
+      <div className="text-left"></div>
         <h2 className="text-left">
           🚀 Autonomous Enterprise Breakthrough
         </h2>

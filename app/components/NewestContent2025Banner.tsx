@@ -255,10 +255,10 @@ const NewestContent2025Banner = () => {
         {/* Stats Section */}
         <div className="text-left">
           {[
-            { value='500+', label: 'Enterprise Clients' },
-            { value='10B+', label: 'Data Points Processed Daily' },
-            { value='99.9%', label: 'System Uptime' },
-            { value='5M+', label: 'Autonomous Operations Hours' }
+            { value: '500+', label: 'Enterprise Clients' },
+            { value: '10B+', label: 'Data Points Processed Daily' },
+            { value: '99.9%', label: 'System Uptime' },
+            { value: '5M+', label: 'Autonomous Operations Hours' }
           ].map((stat, index) => (
             <div key={index} className="text-left">
               <div className="text-left">
@@ -267,6 +267,7 @@ const NewestContent2025Banner = () => {
               <div className="text-left">
                 {stat.label}
               </div>
+            </div>
           ))}
         </div>
     </section>

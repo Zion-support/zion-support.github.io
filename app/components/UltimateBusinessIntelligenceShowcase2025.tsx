@@ -130,8 +130,7 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
           {filteredContent.map((item) => (
             <div
               key={item.id}
-              className="text-left"
-            >
+              className="text-left">
               {/* Content Type Badge */}
               <div className="text-left">
                 <div className="text-left">
@@ -174,8 +173,7 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
                   {item.tags.slice(0, 3).map((tag) => (
                     <span
                       key={tag}
-                      className="text-left"
-                    >
+                      className="text-left">
                       {tag}
                     </span>
                   ))}
@@ -185,8 +183,7 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
                 <div className="text-left">
                   <Link
                     href={item.url}
-                    className="text-left"
-                  >
+                    className="text-left">
                     Read {item.type}
                   </Link>
                   <div className="text-left">
@@ -210,14 +207,12 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
             <div className="text-left">
               <Link
                 href="/contact"
-                className="text-left"
-              >
+                className="text-left">
                 Get Free Consultation
               </Link>
               <Link
                 href="/resources"
-                className="text-left"
-              >
+                className="text-left">
                 Download Guide
               </Link>
             </div>

@@ -15,11 +15,11 @@ export const metadata: Metadata = {
 
 export default function AICybersecurity2025Page() {
   return (
-    <div className="text-left">
+    <div className="text-left"></div>
       <div className="text-left">
-        {/* Header */}
-        <div className="text-left">
-          <div className="text-left">
+        {/* Header */}</div>
+        <div className="text-left"></div>
+          <div className="text-left"></div>
             <Link href="/services" className="text-left">
               ← Back to Services
             </Link>
@@ -34,23 +34,23 @@ export default function AICybersecurity2025Page() {
           </div>
 
           {/* Success Metrics */}
-          <div className="text-left">
-            <div className="text-left">
+          <div className="text-left"></div>
+            <div className="text-left"></div>
               <h2 className="text-left">Security Performance</h2>"
-              <div className="text-left">
-                <div>
+              <div className="text-left"></div>
+                <div></div>
                   <div className="text-left">99.99%</div>"
                   <div className="text-left">Threat Detection</div>"
                 </div>
-                <div>
+                <div></div>
                   <div className="text-left">100%</div>"
                   <div className="text-left">Ransomware Prevention</div>"
                 </div>
-                <div>
+                <div></div>
                   <div className="text-left">&lt;10ms</div>"
                   <div className="text-left">Response Time</div>"
                 </div>
-                <div>
+                <div></div>
                   <div className="text-left">$80M+</div>"
                   <div className="text-left">Breach Cost Saved</div>"
                 </div>
@@ -64,62 +64,62 @@ export default function AICybersecurity2025Page() {
               and zero-trust architecture to create an impenetrable defense against modern cyber threats.
             </p>
             
-            <div className="text-left">
-              <div className="text-left">
+            <div className="text-left"></div>
+              <div className="text-left"></div>
                 <h3 className="text-left">Security Features</h3>"
                 <ul className="text-left">
                   <li className="text-left">
-                    <span className="text-left">✓<"
+                    <span className="text-left">✓>
                     <span>AI-powered threat detection & prevention</span>
                   </li>
                   <li className="text-left">
-                    <span className="text-left">✓<"
+                    <span className="text-left">✓>
                     <span>Quantum encryption protocols</span>
                   </li>
                   <li className="text-left">
-                    <span className="text-left">✓<"
+                    <span className="text-left">✓>
                     <span>Zero-trust architecture implementation</span>
                   </li>
                   <li className="text-left">
-                    <span className="text-left">✓<"
+                    <span className="text-left">✓>
                     <span>Real-time vulnerability scanning</span>
                   </li>
                   <li className="text-left">
-                    <span className="text-left">✓<"
+                    <span className="text-left">✓>
                     <span>Behavioral anomaly detection</span>
                   </li>
                   <li className="text-left">
-                    <span className="text-left">✓<"
+                    <span className="text-left">✓>
                     <span>Automated incident response</span>
                   </li>
                 </ul>
               </div>
 
-              <div className="text-left">
+              <div className="text-left"></div>
                 <h3 className="text-left">Business Protection</h3>"
                 <ul className="text-left">
                   <li className="text-left">
-                    <span className="text-left">→<"
+                    <span className="text-left">→>
                     <span>99.99% threat detection accuracy</span>
                   </li>
                   <li className="text-left">
-                    <span className="text-left">→<"
+                    <span className="text-left">→>
                     <span>100% ransomware attack prevention</span>
                   </li>
                   <li className="text-left">
-                    <span className="text-left">→<"
+                    <span className="text-left">→>
                     <span>$80M+ in breach cost savings</span>
                   </li>
                   <li className="text-left">
-                    <span className="text-left">→<"
+                    <span className="text-left">→>
                     <span>&lt;10ms real-time response time</span>
                   </li>
                   <li className="text-left">
-                    <span className="text-left">→<"
+                    <span className="text-left">→>
                     <span>24/7 AI security monitoring</span>
                   </li>
                   <li className="text-left">
-                    <span className="text-left">→<"
+                    <span className="text-left">→>
                     <span>Compliance certification support</span>
                   </li>
                 </ul>
@@ -129,8 +129,8 @@ export default function AICybersecurity2025Page() {
           {/* Technology Stack */}
           <section className="text-left">
             <h2 className="text-left">Advanced Security Technologies</h2>"
-            <div className="text-left">
-              <div className="text-left">
+            <div className="text-left"></div>
+              <div className="text-left"></div>
                 <div className="text-left">🛡️</div>"
                 <h3 className="text-left">AI Threat Intelligence</h3>"
                 <p className="text-left">
@@ -140,7 +140,7 @@ export default function AICybersecurity2025Page() {
                 <div className="text-left">99.99% detection rate</div>"
               </div>
 
-              <div className="text-left">
+              <div className="text-left"></div>
                 <div className="text-left">🔐</div>"
                 <h3 className="text-left">Quantum Encryption</h3>"
                 <p className="text-left">
@@ -150,7 +150,7 @@ export default function AICybersecurity2025Page() {
                 <div className="text-left">Military-grade security</div>"
               </div>
 
-              <div className="text-left">
+              <div className="text-left"></div>
                 <div className="text-left">⚡</div>"
                 <h3 className="text-left">Zero-Trust Architecture</h3>"
                 <p className="text-left">
@@ -164,10 +164,10 @@ export default function AICybersecurity2025Page() {
           {/* Threat Protection */}
           <section className="text-left">
             <h2 className="text-left">Comprehensive Threat Protection</h2>"
-            <div className="text-left">
-              <div className="text-left">
+            <div className="text-left"></div>
+              <div className="text-left"></div>
                 <div className="text-left">🦠</div>"
-                <div>
+                <div></div>
                   <h3 className="text-left">Ransomware Defense</h3>"
                   <p className="text-left">
                     AI-powered behavioral analysis detects and blocks ransomware before encryption begins. 
@@ -176,9 +176,9 @@ export default function AICybersecurity2025Page() {
                   <div className="text-left">100% prevention rate</div>"
                 </div>
 
-              <div className="text-left">
+              <div className="text-left"></div>
                 <div className="text-left">🎣</div>"
-                <div>
+                <div></div>
                   <h3 className="text-left">Advanced Phishing Protection</h3>"
                   <p className="text-left">
                     Machine learning models analyze email patterns, URLs, and attachments to identify 
@@ -187,9 +187,9 @@ export default function AICybersecurity2025Page() {
                   <div className="text-left">99.98% detection accuracy</div>"
                 </div>
 
-              <div className="text-left">
+              <div className="text-left"></div>
                 <div className="text-left">🔍</div>"
-                <div>
+                <div></div>
                   <h3 className="text-left">Insider Threat Detection</h3>"
                   <p className="text-left">
                     Behavioral analytics continuously monitor user activities to detect anomalous patterns 
@@ -198,9 +198,9 @@ export default function AICybersecurity2025Page() {
                   <div className="text-left">Real-time monitoring</div>"
                 </div>
 
-              <div className="text-left">
+              <div className="text-left"></div>
                 <div className="text-left">⚡</div>"
-                <div>
+                <div></div>
                   <h3 className="text-left">DDoS Mitigation</h3>"
                   <p className="text-left">
                     AI-powered traffic analysis and filtering systems neutralize distributed denial-of-service 
@@ -214,9 +214,9 @@ export default function AICybersecurity2025Page() {
           {/* Success Story */}
           <section className="text-left">
             <h2 className="text-left">Client Success Story</h2>"
-            <div className="text-left">
-              <div className="text-left">
-                <div>
+            <div className="text-left"></div>
+              <div className="text-left"></div>
+                <div></div>
                   <h3 className="text-left">Global Financial Institution Protected</h3>"
                   <p className="text-left">
                     "After implementing Zion's AI Cybersecurity Solutions, we've blocked over 50,000 "
@@ -224,38 +224,38 @@ export default function AICybersecurity2025Page() {
                     three major ransomware attempts that could have cost us $200M+. This technology 
                     is absolutely game-changing."
                   </p>
-                  <div className="text-left">
-                    <div className="text-left">
-                      <span className="text-left">MJ<"
+                  <div className="text-left"></div>
+                    <div className="text-left"></div>
+                      <span className="text-left">MJ>
                     </div>
-                    <div>
+                    <div></div>
                       <div className="text-left">Michael Johnson</div>"
                       <div className="text-left">CISO, GlobalBank Financial</div>"
                     </div>
                 </div>
-                <div className="text-left">
-                  <div className="text-left">
-                    <span className="text-left">Attacks Blocked<"
-                    <span className="text-left">50,000+<"
+                <div className="text-left"></div>
+                  <div className="text-left"></div>
+                    <span className="text-left">Attacks Blocked<
+                    <span className="text-left">50,000+>
                   </div>
-                  <div className="text-left">
-                    <span className="text-left">Breach Cost Saved<"
-                    <span className="text-left">$200M+<"
+                  <div className="text-left"></div>
+                    <span className="text-left">Breach Cost Saved<
+                    <span className="text-left">$200M+>
                   </div>
-                  <div className="text-left">
-                    <span className="text-left">Detection Rate<"
-                    <span className="text-left">99.99%<"
+                  <div className="text-left"></div>
+                    <span className="text-left">Detection Rate<
+                    <span className="text-left">99.99%>
                   </div>
-                  <div className="text-left">
-                    <span className="text-left">Response Time<"
-                    <span className="text-left">&lt;10ms<"
+                  <div className="text-left"></div>
+                    <span className="text-left">Response Time<
+                    <span className="text-left">&lt;10ms>
                   </div>
               </div>
           </section>
 
           {/* Call to Action */}
           <section className="text-left">
-            <div className="text-left">
+            <div className="text-left"></div>
               <h2 className="text-left">
                 Protect Your Enterprise Today
               </h2>
@@ -263,17 +263,15 @@ export default function AICybersecurity2025Page() {
                 Don't wait for a breach. Deploy AI-powered cybersecurity solutions that prevent 
                 threats before they impact your business.
               </p>
-              <div className="text-left">
+              <div className="text-left"></div>
                 <a
                   href="tel:+13024640950"
-                  className="text-left"
-                >
+                  className="text-left">
                   Call +1 302 464 0950
                 </a>
                 <a
                   href="mailto:kleber@ziontechgroup.com"
-                  className="text-left"
-                >
+                  className="text-left">
                   Email Us
                 </a>
               </div>
@@ -282,9 +280,9 @@ export default function AICybersecurity2025Page() {
           {/* Related Services */}
           <section>
             <h2 className="text-left">Related Security Services</h2>"
-            <div className="text-left">
+            <div className="text-left"></div>
               <Link href="/services/ai-2026-enterprise-transformation" className="text-left">
-                <div className="text-left">
+                <div className="text-left"></div>
                   <h3 className="text-left">
                     AI Enterprise Transformation
                   </h3>
@@ -295,7 +293,7 @@ export default function AICybersecurity2025Page() {
                 </div>
               </Link>
               <Link href="/services/cloud-security" className="text-left">
-                <div className="text-left">
+                <div className="text-left"></div>
                   <h3 className="text-left">
                     Cloud Security Solutions
                   </h3>
@@ -306,7 +304,7 @@ export default function AICybersecurity2025Page() {
                 </div>
               </Link>
               <Link href="/services/ai-compliance" className="text-left">
-                <div className="text-left">
+                <div className="text-left"></div>
                   <h3 className="text-left">
                     AI Compliance Solutions
                   </h3>
