@@ -693,32 +693,26 @@ plan.popular
         </section>
 
         {/* CTA Section */}
-        <section className: "py-20 bg-gradient-to-br from-red-900 via-orange-800 to-yellow-900 text-white">";,"
-          <div className: "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">","
-            <h2 className: "text-4xl font-bold mb-6">";,"
-        <section className: "py-20 bg-gradient-to-br from-red-900 via-orange-800 to-yellow-900 text-white">","
-          <div className: "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">","
-            <h2 className: "text-4xl font-bold mb-6">",";,"
-  Ready to Secure Your Smart Contracts?
+        <section className="py-20 bg-gradient-to-br from-red-900 via-orange-800 to-yellow-900 text-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-4xl font-bold mb-6">
+              Ready to Secure Your Smart Contracts?
             </h2>
-            <p className: "text-xl text-red-100 max-w-3xl mx-auto mb-8">",";,"
+            <p className="text-xl text-red-100 max-w-3xl mx-auto mb-8">
   Protect your blockchain project with professional smart contract auditing from certified security experts.
             </p>
-            <div className: "flex flex-col sm: flex-row gap-4 justify-center">","
-            <div className: "flex flex-col sm: flex-row gap-4 justify-center">","
-              <a href: "/contact",";,"
-  className: "inline-flex items-center px-8 py-4 bg-red-600 hover: bg-red-700 text-white font-semibold rounded-lg transition-colors","
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="/contact"
+                className="inline-flex items-center px-8 py-4 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-lg transition-colors"
               >
-                <Phone className: "w-5 h-5 mr-2/>";,"
-                <Phone className: "w-5 h-5 mr-2" />",";,"
-  Request Free Quote
+                <Phone className="w-5 h-5 mr-2" />
+                Request Free Quote
               </a>
-              <a href: "/case-studies",";,"
-  className: "inline-flex items-center px-8 py-4 border-2 border-white text-white hover: bg-white hover:text-red-900 font-semibold rounded-lg transition-colors","
+              <a href="/case-studies"
+                className="inline-flex items-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-red-900 font-semibold rounded-lg transition-colors"
               >
                 View Audit Reports
-                <ArrowRight className: "w-5 h-5 ml-2/>";,"
-                <ArrowRight className: "w-5 h-5 ml-2" />","
+                <ArrowRight className="w-5 h-5 ml-2" />
               </a>
             </div>
           </div>
