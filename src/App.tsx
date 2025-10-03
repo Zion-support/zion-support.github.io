@@ -23,37 +23,7 @@ function App(): React.JSX.Element {
               <Route path="/contact" element={<LazyContactPage />} />
               <Route path="/services" element={<LazyServicesPage />} />
               
-              {/* Service-specific routes */}
-              <Route path="/services/quantum-consciousness-ai-consulting" element={
-                React.createElement(React.lazy(() => import('./pages/services/QuantumConsciousnessAIConsulting')))
-              } />
-              <Route path="/services/ai-workflow-automation" element={
-                React.createElement(React.lazy(() => import('./pages/services/AIWorkflowAutomation')))
-              } />
-              <Route path="/services/ai-virtual-assistant" element={
-                React.createElement(React.lazy(() => import('./pages/services/AIVirtualAssistant')))
-              } />
-              <Route path="/services/ai-mlops-automation" element={
-                React.createElement(React.lazy(() => import('./pages/services/AIMLOpsAutomation')))
-              } />
-              <Route path="/services/ai-intelligent-document-processing" element={
-                React.createElement(React.lazy(() => import('./pages/services/AIIntelligentDocumentProcessing')))
-              } />
-              <Route path="/services/advanced-cybersecurity-ai" element={
-                React.createElement(React.lazy(() => import('./pages/services/AdvancedCybersecurityAI')))
-              } />
-              <Route path="/services/autonomous-business-operations" element={
-                React.createElement(React.lazy(() => import('./pages/services/AutonomousBusinessOperations')))
-              } />
-              <Route path="/services/real-time-cognitive-automation" element={
-                React.createElement(React.lazy(() => import('./pages/services/RealTimeCognitiveAutomation')))
-              } />
-              <Route path="/services/ai-data-analytics" element={
-                React.createElement(React.lazy(() => import('./pages/services/AIDataAnalytics')))
-              } />
-              <Route path="/services/enterprise-ai-solutions" element={
-                React.createElement(React.lazy(() => import('./pages/EnterpriseAISolutions')))
-              } />
+              {/* Service-specific routes removed - files deleted */}
               
               {/* 404 fallback */}
               <Route path="*" element={

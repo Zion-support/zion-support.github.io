@@ -47,7 +47,7 @@ export default function InteractiveAIROICalculator() {
 
   const results = calculateROI();
 
-  const handleInputChange = (field: string, value=number) => {
+  const handleInputChange = (field: string, value: number) => {
     setInputs(prev => ({
       ...prev,
       [field]: value

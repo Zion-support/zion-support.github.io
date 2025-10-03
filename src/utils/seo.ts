@@ -54,7 +54,7 @@ export const generateStructuredData = (data: {
     url?: string;
   };
 }) => {
-  const baseData = {
+  const baseData: any = {
     '@context': 'https://schema.org',
     '@type': data.type,
     name: data.name,
