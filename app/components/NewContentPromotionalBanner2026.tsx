@@ -2,9 +2,8 @@ import React from 'react';
 import Link from 'next/link';
 import { Sparkles, TrendingUp, Rocket, Shield, Target, ArrowRight, Zap } from 'lucide-react';
 
-const NewContentPromotionalBanner2026: React.FC = () => 
-  const featuredContent = [
-    
+const NewContentPromotionalBanner2026: React.FC = () => {
+  const featuredContent = [{
       id: 1,
       title: 'AI Autonomous Workflows 2026',
       slug: 'ai-autonomous-workflows-2026',

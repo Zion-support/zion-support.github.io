@@ -31,8 +31,7 @@ export const metadata = {
     description: 'Transform your enterprise with AI-powered solutions. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains.',
     type: 'website',
     url: 'https://ziontechgroup.com',
-    images: [
-      
+    images: [{
         url: '/og-image.jpg',
         width: 1200,
         height: 630,

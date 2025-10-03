@@ -255,7 +255,7 @@ const NewestContent2025Banner = () => {
 
         {/* Stats Section */}
         <div className="text-left">
-          {[
+          {[{
             { value: '500+', label: 'Enterprise Clients' },
             { value: '10B+', label: 'Data Points Processed Daily' },
             { value: '99.9%', label: 'System Uptime' },

@@ -6,8 +6,7 @@ import Link from 'next/link';
 const UltimateBusinessIntelligenceShowcase2025 = () => 
   const [activeFilter, setActiveFilter] = useState('all');
 
-  const content = [
-    
+  const content = [{
       id: 'ultimate-business-intelligence-revolution',
       title: 'AI 2025: The Ultimate Business Intelligence Revolution - Ultimate Breakthrough Guide to 30,000% ROI',
       description: 'Transform your enterprise with next-generation AI-powered business intelligence that delivers unprecedented insights and competitive advantage.',
@@ -60,7 +59,7 @@ const UltimateBusinessIntelligenceShowcase2025 = () =>
     }
   ];
 
-  const filters = [
+  const filters = [{
     { id: 'all', label: 'All Content', count: content.length },
     { id: 'blog', label: 'Blog Posts', count: content.filter(item => item.category === 'blog').length },
     { id: 'case-study', label: 'Case Studies', count: content.filter(item => item.category === 'case-study').length },
