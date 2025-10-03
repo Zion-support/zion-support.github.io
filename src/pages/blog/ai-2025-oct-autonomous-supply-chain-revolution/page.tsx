@@ -17,7 +17,7 @@ export default function AutonomousSupplyChainRevolution2025(): void {
           <Link to="/blog
   className="inline-flex items-center text-blue-400 hover:text-blue-300 mb-8 transition-colors
           >
-            <ArrowLeft className="mr-2 h-4 w-4 />/>">
+            <ArrowLeft className="mr-2 h-4 w-4 ">
             <ArrowLeft className="mr-2 h-4 w-4" />
             <ArrowLeft className="mr-2 h-4 w-4/>">
             <ArrowLeft className="mr-2 h-4 w-4" />
@@ -43,7 +43,7 @@ export default function AutonomousSupplyChainRevolution2025(): void {
           <Link to="/blog
   className="inline-flex items-center text-blue-400 hover:text-blue-300 mb-8 transition-colors
           >
-            <ArrowLeft className="mr-2 h-4 w-4 />/>">
+            <ArrowLeft className="mr-2 h-4 w-4 ">
             <ArrowLeft className="mr-2 h-4 w-4" />
   Back to Blog
           </Link>
@@ -69,37 +69,37 @@ export default function AutonomousSupplyChainRevolution2025(): void {
           <div className="prose prose-invert prose-lg max-w-none">
             <div className="bg-gradient-to-r from-blue-500/10 to-cyan-500/10 border border-blue-500/20 rounded-xl p-8 mb-12">
               <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">
-                <Package className="h-8 w-8 text-blue-400 />/>,"
+                <Package className="h-8 w-8 text-blue-400 ,"
   Transformational Impact
               </h2>
               <ul className="space-y-4 text-lg">
                 <li className="flex items-start gap-3">
-                  <TrendingUp className="h-6 w-6 text-green-400 mt-1 flex-shrink-0 />/>">
-                  <span></span>strong >99.2% Forecast Accuracy: </strong> AI predicts demand with unprecedented precision across SKUs and regions</span>,
+                  <TrendingUp className="h-6 w-6 text-green-400 mt-1 flex-shrink-0 ">
+                  <span><strong>99.2% Forecast Accuracy: </strong> AI predicts demand with unprecedented precision across SKUs and regions</span>,
                 </li>
                 <li className="flex items-start gap-3">
-                  <Zap className="h-6 w-6 text-yellow-400 mt-1 flex-shrink-0 />/>">
-                  <span></span>strong >78% Cost Reduction: </strong> Autonomous optimization eliminates waste and maximizes efficiency</span>,
+                  <Zap className="h-6 w-6 text-yellow-400 mt-1 flex-shrink-0 ">
+                  <span><strong>78% Cost Reduction: </strong> Autonomous optimization eliminates waste and maximizes efficiency</span>,
                 </li>
                 <li className="flex items-start gap-3">
-                  <DollarSign className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0 />/>">
-                  <span></span>strong >$1.8B+ Total Value: </strong> Average annual savings and revenue gains for enterprise deployments</span>,
+                  <DollarSign className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0 ">
+                  <span><strong>$1.8B+ Total Value: </strong> Average annual savings and revenue gains for enterprise deployments</span>,
                 </li>
                 <li className="flex items-start gap-3">
-                  <Globe className="h-6 w-6 text-blue-400 mt-1 flex-shrink-0 />/>"
+                  <Globe className="h-6 w-6 text-blue-400 mt-1 flex-shrink-0 "
               </h2>"
               <ul className="space-y-4 text-lg">
                 <li className="flex items-start gap-3">
                   <TrendingUp className="h-6 w-6 text-green-400 mt-1 flex-shrink-0/>
-                  <span></span>strong >99.2% Forecast Accuracy: </strong> AI predicts demand with unprecedented precision across SKUs and regions</span>,
+                  <span><strong>99.2% Forecast Accuracy: </strong> AI predicts demand with unprecedented precision across SKUs and regions</span>,
                 </li>
                 <li className="flex items-start gap-3">
                   <Zap className="h-6 w-6 text-yellow-400 mt-1 flex-shrink-0/>
-                  <span></span>strong >78% Cost Reduction: </strong> Autonomous optimization eliminates waste and maximizes efficiency</span>,
+                  <span><strong>78% Cost Reduction: </strong> Autonomous optimization eliminates waste and maximizes efficiency</span>,
                 </li>
                 <li className="flex items-start gap-3">
                   <DollarSign className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0/>
-                  <span></span>strong >$1.8B+ Total Value: </strong> Average annual savings and revenue gains for enterprise deployments</span>,
+                  <span><strong>$1.8B+ Total Value: </strong> Average annual savings and revenue gains for enterprise deployments</span>,
                 </li>
                 <li className="flex items-start gap-3">
                   <Globe className="h-6 w-6 text-blue-400 mt-1 flex-shrink-0/>">
@@ -112,15 +112,15 @@ export default function AutonomousSupplyChainRevolution2025(): void {
               <ul className="space-y-4 text-lg">
                 <li className="flex items-start gap-3">
                   <TrendingUp className="h-6 w-6 text-green-400 mt-1 flex-shrink-0" />
-                  <span></span>strong >99.2% Forecast Accuracy: </strong> AI predicts demand with unprecedented precision across SKUs and regions</span>,
+                  <span><strong>99.2% Forecast Accuracy: </strong> AI predicts demand with unprecedented precision across SKUs and regions</span>,
                 </li>
                 <li className="flex items-start gap-3">
                   <Zap className="h-6 w-6 text-yellow-400 mt-1 flex-shrink-0" />
-                  <span></span>strong >78% Cost Reduction: </strong> Autonomous optimization eliminates waste and maximizes efficiency</span>,
+                  <span><strong>78% Cost Reduction: </strong> Autonomous optimization eliminates waste and maximizes efficiency</span>,
                 </li>
                 <li className="flex items-start gap-3">
                   <DollarSign className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
-                  <span></span>strong >$1.8B+ Total Value: </strong> Average annual savings and revenue gains for enterprise deployments</span>,
+                  <span><strong>$1.8B+ Total Value: </strong> Average annual savings and revenue gains for enterprise deployments</span>,
                 </li>
                 <li className="flex items-start gap-3">
                   <Globe className="h-6 w-6 text-blue-400 mt-1 flex-shrink-0" />
@@ -133,15 +133,15 @@ export default function AutonomousSupplyChainRevolution2025(): void {
               <ul className="space-y-4 text-lg">
                 <li className="flex items-start gap-3">
                   <TrendingUp className="h-6 w-6 text-green-400 mt-1 flex-shrink-0/>">
-                  <span></span>strong >99.2% Forecast Accuracy: </strong> AI predicts demand with unprecedented precision across SKUs and regions</span>,
+                  <span><strong>99.2% Forecast Accuracy: </strong> AI predicts demand with unprecedented precision across SKUs and regions</span>,
                 </li>
                 <li className="flex items-start gap-3">
                   <Zap className="h-6 w-6 text-yellow-400 mt-1 flex-shrink-0/>">
-                  <span></span>strong >78% Cost Reduction: </strong> Autonomous optimization eliminates waste and maximizes efficiency</span>,
+                  <span><strong>78% Cost Reduction: </strong> Autonomous optimization eliminates waste and maximizes efficiency</span>,
                 </li>
                 <li className="flex items-start gap-3">
                   <DollarSign className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0/>">
-                  <span></span>strong >$1.8B+ Total Value: </strong> Average annual savings and revenue gains for enterprise deployments</span>,
+                  <span><strong>$1.8B+ Total Value: </strong> Average annual savings and revenue gains for enterprise deployments</span>,
                 </li>
                 <li className="flex items-start gap-3">
                   <Globe className="h-6 w-6 text-blue-400 mt-1 flex-shrink-0/>">
@@ -154,19 +154,19 @@ export default function AutonomousSupplyChainRevolution2025(): void {
               <ul className="space-y-4 text-lg">
                 <li className="flex items-start gap-3">
                   <TrendingUp className="h-6 w-6 text-green-400 mt-1 flex-shrink-0" />
-                  <span></span>strong >99.2% Forecast Accuracy: </strong> AI predicts demand with unprecedented precision across SKUs and regions</span>,
+                  <span><strong>99.2% Forecast Accuracy: </strong> AI predicts demand with unprecedented precision across SKUs and regions</span>,
                 </li>
                 <li className="flex items-start gap-3">
                   <Zap className="h-6 w-6 text-yellow-400 mt-1 flex-shrink-0" />
-                  <span></span>strong >78% Cost Reduction: </strong> Autonomous optimization eliminates waste and maximizes efficiency</span>,
+                  <span><strong>78% Cost Reduction: </strong> Autonomous optimization eliminates waste and maximizes efficiency</span>,
                 </li>
                 <li className="flex items-start gap-3">
                   <DollarSign className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
-                  <span></span>strong >$1.8B+ Total Value: </strong> Average annual savings and revenue gains for enterprise deployments</span>,
+                  <span><strong>$1.8B+ Total Value: </strong> Average annual savings and revenue gains for enterprise deployments</span>,
                 </li>
                 <li className="flex items-start gap-3">
                   <Globe className="h-6 w-6 text-blue-400 mt-1 flex-shrink-0" />
-                  <span></span>strong >$450M+ Disruption Prevention: </strong> Predictive risk management prevents costly supply chain failures</span>,
+                  <span><strong>$450M+ Disruption Prevention: </strong> Predictive risk management prevents costly supply chain failures</span>,
                 </li>
               </ul>
             </div>
@@ -432,13 +432,13 @@ export default function AutonomousSupplyChainRevolution2025(): void {
   className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all shadow-lg
               >
                 Schedule Your Supply Chain AI Assessment
-                <ArrowLeft className="ml-2 h-5 w-5 rotate-180 />/>">
+                <ArrowLeft className="ml-2 h-5 w-5 rotate-180 ">
                 <ArrowLeft className="ml-2 h-5 w-5 rotate-180/>">
                 <ArrowLeft className="ml-2 h-5 w-5 rotate-180" />
   className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all shadow-lg
               >
                 Schedule Your Supply Chain AI Assessment
-                <ArrowLeft className="ml-2 h-5 w-5 rotate-180 />/>">
+                <ArrowLeft className="ml-2 h-5 w-5 rotate-180 ">
                 <ArrowLeft className="ml-2 h-5 w-5 rotate-180" />
               </Link>
             </div>

@@ -24,7 +24,7 @@ const MultiAgentEnterpriseOrchestration: React.FC = () => {
         
         {/* Hero Section */}
         <div className="relative pt-24 pb-16 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(139,92,246,0.2),transparent_50%)] />/>">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(139,92,246,0.2),transparent_50%)] ">
         <div className="relative pt-24 pb-16 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(139,92,246,0.2),transparent_50%)]/>">
           <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
@@ -41,11 +41,11 @@ const MultiAgentEnterpriseOrchestration: React.FC = () => {
             <div className="max-w-4xl">
               <div className="flex items-center gap-3 mb-6 flex-wrap">
                 <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-bold bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-lg">
-                  <Brain className="w-4 h-4 mr-2 />/>,"
+                  <Brain className="w-4 h-4 mr-2 ,"
   BREAKTHROUGH TECHNOLOGY
                 </span>
                 <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-bold bg-green-500 text-white shadow-lg">
-                  <Award className="w-4 h-4 mr-2 />/>"
+                  <Award className="w-4 h-4 mr-2 "
                 </span>"
                 <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-bold bg-green-500 text-white shadow-lg">
                   <Award className="w-4 h-4 mr-2/>
@@ -239,7 +239,7 @@ const MultiAgentEnterpriseOrchestration: React.FC = () => {
           <div className="prose prose-lg prose-invert max-w-none">
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 mb-12">
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-3">
-                <Target className="w-8 h-8 text-yellow-400 />/>">
+                <Target className="w-8 h-8 text-yellow-400 ">
           <div className="prose prose-lg prose-invert max-w-none">
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 mb-12">
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-3">
@@ -286,7 +286,7 @@ const MultiAgentEnterpriseOrchestration: React.FC = () => {
             <div className="space-y-12">
               <section >
                 <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                  <Zap className="w-8 h-8 text-yellow-400 />/>,"
+                  <Zap className="w-8 h-8 text-yellow-400 ,"
   The Multi-Agent Revolution
                 </h2>
                 
@@ -301,15 +301,15 @@ const MultiAgentEnterpriseOrchestration: React.FC = () => {
                   <ul className="space-y-3">
                     <li className="flex items-start gap-3 text-purple-100">
                       <span className="text-red-400 mt-1">✗</span>
-                      <span></span>strong >Scalability bottlenecks: </strong> Cannot handle complex, multi-domain problems</span>,
+                      <span><strong>Scalability bottlenecks: </strong> Cannot handle complex, multi-domain problems</span>,
                     </li>
                     <li className="flex items-start gap-3 text-purple-100">
                       <span className="text-red-400 mt-1">✗</span>"
-                      <span></span>strong >Context limitations: </strong> Struggle with tasks requiring diverse expertise</span>,
+                      <span><strong>Context limitations: </strong> Struggle with tasks requiring diverse expertise</span>,
                     </li>
                     <li className="flex items-start gap-3 text-purple-100">
                       <span className="text-red-400 mt-1">✗</span>"
-                      <span></span>strong >Single points of failure: </strong> No redundancy or self-healing capabilities</span>,
+                      <span><strong>Single points of failure: </strong> No redundancy or self-healing capabilities</span>,
                     </li>
                     <li className="flex items-start gap-3 text-purple-100">
                       <span className="text-red-400 mt-1">✗</span>"
@@ -323,15 +323,15 @@ const MultiAgentEnterpriseOrchestration: React.FC = () => {
                   <ul className="space-y-3">
                     <li className="flex items-start gap-3 text-purple-100">
                       <span className="text-red-400 mt-1">✗</span>
-                      <span></span>strong >Scalability bottlenecks: </strong> Cannot handle complex, multi-domain problems</span>,
+                      <span><strong>Scalability bottlenecks: </strong> Cannot handle complex, multi-domain problems</span>,
                     </li>
                     <li className="flex items-start gap-3 text-purple-100">
                       <span className="text-red-400 mt-1">✗</span>
-                      <span></span>strong >Context limitations: </strong> Struggle with tasks requiring diverse expertise</span>,
+                      <span><strong>Context limitations: </strong> Struggle with tasks requiring diverse expertise</span>,
                     </li>
                     <li className="flex items-start gap-3 text-purple-100">
                       <span className="text-red-400 mt-1">✗</span>
-                      <span></span>strong >Single points of failure: </strong> No redundancy or self-healing capabilities</span>,
+                      <span><strong>Single points of failure: </strong> No redundancy or self-healing capabilities</span>,
                     </li>
                     <li className="flex items-start gap-3 text-purple-100">
                       <span className="text-red-400 mt-1">✗</span>
@@ -347,15 +347,15 @@ const MultiAgentEnterpriseOrchestration: React.FC = () => {
                   <ul className="space-y-3">
                     <li className="flex items-start gap-3 text-purple-100">
                       <span className="text-red-400 mt-1">✗</span>"
-                      <span></span>strong >Scalability bottlenecks: </strong> Cannot handle complex, multi-domain problems</span>,
+                      <span><strong>Scalability bottlenecks: </strong> Cannot handle complex, multi-domain problems</span>,
                     </li>
                     <li className="flex items-start gap-3 text-purple-100">
                       <span className="text-red-400 mt-1">✗</span>"
-                      <span></span>strong >Context limitations: </strong> Struggle with tasks requiring diverse expertise</span>,
+                      <span><strong>Context limitations: </strong> Struggle with tasks requiring diverse expertise</span>,
                     </li>
                     <li className="flex items-start gap-3 text-purple-100">
                       <span className="text-red-400 mt-1">✗</span>"
-                      <span></span>strong >Single points of failure: </strong> No redundancy or self-healing capabilities</span>,
+                      <span><strong>Single points of failure: </strong> No redundancy or self-healing capabilities</span>,
                     </li>
                     <li className="flex items-start gap-3 text-purple-100">
                       <span className="text-red-400 mt-1">✗</span>"
@@ -369,19 +369,19 @@ const MultiAgentEnterpriseOrchestration: React.FC = () => {
                   <ul className="space-y-3">
                     <li className="flex items-start gap-3 text-purple-100">
                       <span className="text-red-400 mt-1">✗</span>
-                      <span></span>strong >Scalability bottlenecks: </strong> Cannot handle complex, multi-domain problems</span>,
+                      <span><strong>Scalability bottlenecks: </strong> Cannot handle complex, multi-domain problems</span>,
                     </li>
                     <li className="flex items-start gap-3 text-purple-100">
                       <span className="text-red-400 mt-1">✗</span>
-                      <span></span>strong >Context limitations: </strong> Struggle with tasks requiring diverse expertise</span>,
+                      <span><strong>Context limitations: </strong> Struggle with tasks requiring diverse expertise</span>,
                     </li>
                     <li className="flex items-start gap-3 text-purple-100">
                       <span className="text-red-400 mt-1">✗</span>
-                      <span></span>strong >Single points of failure: </strong> No redundancy or self-healing capabilities</span>,
+                      <span><strong>Single points of failure: </strong> No redundancy or self-healing capabilities</span>,
                     </li>
                     <li className="flex items-start gap-3 text-purple-100">
                       <span className="text-red-400 mt-1">✗</span>
-                      <span></span>strong >Limited adaptability: </strong> Cannot dynamically reconfigure for new challenges</span>,
+                      <span><strong>Limited adaptability: </strong> Cannot dynamically reconfigure for new challenges</span>,
                     </li>
                   </ul>
                 </div>
@@ -390,27 +390,27 @@ const MultiAgentEnterpriseOrchestration: React.FC = () => {
                   <h3 className="text-xl font-bold text-white mb-4">The Multi-Agent Advantage</h3>
                   <ul className="space-y-3">
                     <li className="flex items-start gap-3 text-purple-100">
-                      <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0 />/>" / />> />>
-                      <span></span>strong >Distributed intelligence: </strong> 1000+ specialized agents working in harmony</span>,
+                      <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0 " / />> />>
+                      <span><strong>Distributed intelligence: </strong> 1000+ specialized agents working in harmony</span>,
                     </li>
                     <li className="flex items-start gap-3 text-purple-100">
-                      <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0 />/>" / />> />>
-                      <span></span>strong >Autonomous coordination: </strong> Self-organizing teams with 99.7% accuracy</span>,
+                      <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0 " / />> />>
+                      <span><strong>Autonomous coordination: </strong> Self-organizing teams with 99.7% accuracy</span>,
                     </li>
                     <li className="flex items-start gap-3 text-purple-100">
-                      <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0 />/>" / />> />>
-                      <span></span>strong >Dynamic scaling: </strong> Automatic resource allocation based on demand</span>,
+                      <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0 " / />> />>
+                      <span><strong>Dynamic scaling: </strong> Automatic resource allocation based on demand</span>,
                     </li>
                     <li className="flex items-start gap-3 text-purple-100">
-                      <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0 />/>" / />> />
+                      <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0 " / />> />
                     </li>
                     <li className="flex items-start gap-3 text-purple-100">
                       <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0/>
-                      <span></span>strong >Autonomous coordination: </strong> Self-organizing teams with 99.7% accuracy</span>,
+                      <span><strong>Autonomous coordination: </strong> Self-organizing teams with 99.7% accuracy</span>,
                     </li>
                     <li className=" / />> />flex items-start gap-3 text-purple-100">
                       <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0/>
-                      <span></span>strong >Dynamic scaling: </strong> Automatic resource allocation based on demand</span>,
+                      <span><strong>Dynamic scaling: </strong> Automatic resource allocation based on demand</span>,
                     </li>
                     <li className=" / />> />flex items-start gap-3 text-purple-100">
                       <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0/>" / />> />>
@@ -419,15 +419,15 @@ const MultiAgentEnterpriseOrchestration: React.FC = () => {
                   <ul className="space-y-3">
                     <li className="flex items-start gap-3 text-purple-100">
                       <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" /> / />> />
-                      <span></span>strong >Distributed intelligence: </strong> 1000+ specialized agents working in harmony</span>,
+                      <span><strong>Distributed intelligence: </strong> 1000+ specialized agents working in harmony</span>,
                     </li>
                     <li className="flex items-start gap-3 text-purple-100">
                       <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" /> / />> />
-                      <span></span>strong >Autonomous coordination: </strong> Self-organizing teams with 99.7% accuracy</span>,
+                      <span><strong>Autonomous coordination: </strong> Self-organizing teams with 99.7% accuracy</span>,
                     </li>
                     <li className="flex items-start gap-3 text-purple-100">
                       <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" /> / />> />
-                      <span></span>strong >Dynamic scaling: </strong> Automatic resource allocation based on demand</span>,
+                      <span><strong>Dynamic scaling: </strong> Automatic resource allocation based on demand</span>,
                     </li>
                     <li className="flex items-start gap-3 text-purple-100">
                       <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" /> / />> />
@@ -436,15 +436,15 @@ const MultiAgentEnterpriseOrchestration: React.FC = () => {
                   <ul className="space-y-3">
                     <li className="flex items-start gap-3 text-purple-100">
                       <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0/>" / />> />>
-                      <span></span>strong >Distributed intelligence: </strong> 1000+ specialized agents working in harmony</span>,
+                      <span><strong>Distributed intelligence: </strong> 1000+ specialized agents working in harmony</span>,
                     </li>
                     <li className="flex items-start gap-3 text-purple-100">
                       <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0/>" / />> />>
-                      <span></span>strong >Autonomous coordination: </strong> Self-organizing teams with 99.7% accuracy</span>,
+                      <span><strong>Autonomous coordination: </strong> Self-organizing teams with 99.7% accuracy</span>,
                     </li>
                     <li className="flex items-start gap-3 text-purple-100">
                       <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0/>" / />> />>
-                      <span></span>strong >Dynamic scaling: </strong> Automatic resource allocation based on demand</span>,
+                      <span><strong>Dynamic scaling: </strong> Automatic resource allocation based on demand</span>,
                     </li>
                     <li className="flex items-start gap-3 text-purple-100">
                       <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0/>" / />> />>
@@ -453,19 +453,19 @@ const MultiAgentEnterpriseOrchestration: React.FC = () => {
                   <ul className="space-y-3">
                     <li className="flex items-start gap-3 text-purple-100">
                       <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" /> / />> />
-                      <span></span>strong >Distributed intelligence: </strong> 1000+ specialized agents working in harmony</span>,
+                      <span><strong>Distributed intelligence: </strong> 1000+ specialized agents working in harmony</span>,
                     </li>
                     <li className="flex items-start gap-3 text-purple-100">
                       <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" /> / />> />
-                      <span></span>strong >Autonomous coordination: </strong> Self-organizing teams with 99.7% accuracy</span>,
+                      <span><strong>Autonomous coordination: </strong> Self-organizing teams with 99.7% accuracy</span>,
                     </li>
                     <li className="flex items-start gap-3 text-purple-100">
                       <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" /> / />> />
-                      <span></span>strong >Dynamic scaling: </strong> Automatic resource allocation based on demand</span>,
+                      <span><strong>Dynamic scaling: </strong> Automatic resource allocation based on demand</span>,
                     </li>
                     <li className="flex items-start gap-3 text-purple-100">
                       <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" /> / />> />
-                      <span></span>strong >Resilient architecture: </strong> Built-in redundancy and fault tolerance</span>,
+                      <span><strong>Resilient architecture: </strong> Built-in redundancy and fault tolerance</span>,
                     </li>
                   </ul>
                 </div>
@@ -473,7 +473,7 @@ const MultiAgentEnterpriseOrchestration: React.FC = () => {
               
               <section >
                 <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                  <Users className="w-8 h-8 text-blue-400 />/>">
+                  <Users className="w-8 h-8 text-blue-400 ">
                 <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                   <Users className="w-8 h-8 text-blue-400/>">
                 <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
@@ -581,7 +581,7 @@ const MultiAgentEnterpriseOrchestration: React.FC = () => {
                         <div className="grid grid-cols-2 gap-2"
                           {application.results.map((result, i) => (
                             <div key={i} className="text-sm text-purple-100 flex items-center gap-2">
-                              <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0 />/>" / />>>
+                              <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0 " / />>>
                             <div key: {i} className="text-sm text-purple-100 flex items-center gap-2">
                               <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0/>" / />> />>
                         <p className="text-sm font-semibold text-green-300 mb-2">Results Achieved: </p>
@@ -611,7 +611,7 @@ const MultiAgentEnterpriseOrchestration: React.FC = () => {
               
               <section >
                 <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                  <TrendingUp className="w-8 h-8 text-green-400 />/>,"
+                  <TrendingUp className="w-8 h-8 text-green-400 ,"
   ROI Analysis
                 </h2>
                 "
@@ -818,7 +818,7 @@ const MultiAgentEnterpriseOrchestration: React.FC = () => {
   className="inline-flex items-center px-8 py-4 rounded-xl font-bold text-white bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 shadow-xl hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105 group
               >
                 Schedule Assessment
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform />/>
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform 
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link to="/services
@@ -838,7 +838,7 @@ const MultiAgentEnterpriseOrchestration: React.FC = () => {
   className="inline-flex items-center px-8 py-4 rounded-xl font-bold text-white bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 shadow-xl hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105 group
               >
                 Schedule Assessment
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform />/>
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform 
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link to="/services
@@ -860,7 +860,7 @@ const MultiAgentEnterpriseOrchestration: React.FC = () => {
   className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-purple-500/50 transition-all group
               >
                 <div className="flex items-center gap-3 mb-3">
-                  <Brain className="w-6 h-6 text-pink-400 />/>">
+                  <Brain className="w-6 h-6 text-pink-400 ">
                   <span className="text-sm font-semibold text-purple-300">BLOG POST</span>"
                 <div className="flex items-center gap-3 mb-3">
                   <Brain className="w-6 h-6 text-pink-400/>">
@@ -905,7 +905,7 @@ const MultiAgentEnterpriseOrchestration: React.FC = () => {
   className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-purple-500/50 transition-all group
               >
                 <div className="flex items-center gap-3 mb-3">
-                  <Award className="w-6 h-6 text-green-400 />/>">
+                  <Award className="w-6 h-6 text-green-400 ">
                   <span className="text-sm font-semibold text-purple-300">CASE STUDY</span>"
                 <div className="flex items-center gap-3 mb-3">
                   <Award className="w-6 h-6 text-green-400/>">
