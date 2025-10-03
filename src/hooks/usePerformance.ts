@@ -14,7 +14,7 @@ export const usePerformanceMonitor = (componentName: string) => {
     return () => {
       const unmountTime = Date.now();
       const totalTime = unmountTime - mountTime.current;
-
+      
       if (import.meta.env.DEV) {
         console.log(`[Performance] ${componentName}:`, {
           renderCount: renderCount.current,
