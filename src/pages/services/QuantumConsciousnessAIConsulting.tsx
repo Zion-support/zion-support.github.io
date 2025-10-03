@@ -397,10 +397,8 @@ const QuantumConsciousnessAIConsulting: React.FC = () => {
                   <li >• Capability enhancements</li>
                   <li >• 24/7 expert support</li>
                 </ul>
-                <a title: "Internal link", href="#consultation" className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center">",
-                <a title: "Internal link", href="#consultation" className ="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center">",
-                <a title: "Internal link", href="#consultation" className ="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center">"
-  Get Started
+                <a title="Internal link" href="#consultation" className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center">
+                  Get Started
                 </a>
               </div>
             </div>
@@ -408,197 +406,80 @@ const QuantumConsciousnessAIConsulting: React.FC = () => {
         </section>
 
         {/* Consultation Form */}
-        <section id="consultation" className="py-20 bg-slate-900"
-          <div className="container mx-auto px-6"
-            <div className="max-w-4xl mx-auto"
-              <div className="text-center mb-12"
-                <h2 className="text-4xl md: text-5xl font-extrabold mb-6 bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">",
-        <section id="consultation" className ="py-20 bg-slate-900">",
-          <div className="container mx-auto px-6">",
-            <div className="max-w-4xl mx-auto">",
-              <div className="text-center mb-12">",
-                <h2 className="text-4xl md: text-5xl font-extrabold mb-6 bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">",
-  Get Your Free Consultation
-                </h2>
-                <p className="text-xl text-gray-300 max-w-3xl mx-auto">",
         <section id="consultation" className="py-20 bg-slate-900">
-          <div className= "container mx-auto px-6">
-            <div className= "max-w-4xl mx-auto">
-              <div className= "text-center mb-12">
-                <h2 className= "text-4xl md: text-5xl font-extrabold mb-6 bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">",
-        <section id="consultation" className ="py-20 bg-slate-900">",
-          <div className= "container mx-auto px-6">",
-            <div className= "max-w-4xl mx-auto">",
-              <div className= "text-center mb-12">",
-                <h2 className= "text-4xl md: text-5xl font-extrabold mb-6 bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">"
-  Get Your Free Consultation
+          <div className="container mx-auto px-6">
+            <div className="max-w-4xl mx-auto">
+              <div className="text-center mb-12">
+                <h2 className="text-4xl md:text-5xl font-extrabold mb-6 bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                  Get Your Free Consultation
                 </h2>
-                <p className= "text-xl text-gray-300 max-w-3xl mx-auto">"
-  Schedule a complimentary consultation with our quantum consciousness experts
+                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                  Schedule a complimentary consultation with our quantum consciousness experts
                 </p>
               </div>
 
-              <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10"
-                <div className="grid md:grid-cols-2 gap-8">",
-                  <div >
-                    <h3 className="text-2xl font-bold text-white mb-6">What You'll Get: </h3>',';,
-                    <ul className="space-y-4 text-gray-300"
-                      <li className="flex items-start gap-3"
-                        <span className="text-indigo-400 font-bold">✓</span>"
-              <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">",
-                <div className="grid md:grid-cols-2 gap-8">",
-                  <div >
-                    <h3 className="text-2xl font-bold text-white mb-6">What You'll Get: </h3>',';,
-                    <ul className="space-y-4 text-gray-300">",
-                      <li className="flex items-start gap-3">",
-                        <span className="text-indigo-400 font-bold">✓</span>",
-                        <span >Current AI capability assessment</span>
+              <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div>
+                    <h3 className="text-2xl font-bold text-white mb-6">What You'll Get:</h3>
+                    <ul className="space-y-4 text-gray-300">
+                      <li className="flex items-start gap-3">
+                        <span className="text-indigo-400 font-bold">✓</span>
+                        <span>Current AI capability assessment</span>
                       </li>
-                      <li className="flex items-start gap-3">",
-                        <span className="text-indigo-400 font-bold">✓</span>",
-                        <span >Quantum consciousness readiness evaluation</span>
+                      <li className="flex items-start gap-3">
+                        <span className="text-indigo-400 font-bold">✓</span>
+                        <span>Quantum consciousness readiness evaluation</span>
                       </li>
-                      <li className="flex items-start gap-3">",
-                        <span className="text-indigo-400 font-bold">✓</span>",
-                        <span >Custom transformation roadmap</span>
+                      <li className="flex items-start gap-3">
+                        <span className="text-indigo-400 font-bold">✓</span>
+                        <span>Custom transformation roadmap</span>
                       </li>
-                      <li className="flex items-start gap-3">",
-                        <span className="text-indigo-400 font-bold">✓</span>",
-                        <span >ROI projections and business case</span>
+                      <li className="flex items-start gap-3">
+                        <span className="text-indigo-400 font-bold">✓</span>
+                        <span>ROI projections and business case</span>
                       </li>
-                      <li className="flex items-start gap-3">",
-                        <span className="text-indigo-400 font-bold">✓</span>",
-              <div className= "bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
-                <div className= "grid md:grid-cols-2 gap-8">",
-                  <div >
-                    <h3 className= "text-2xl font-bold text-white mb-6">What You'll Get: </h3>',';,
-                    <ul className= "space-y-4 text-gray-300">
-                      <li className= "flex items-start gap-3">
-                        <span className= "text-indigo-400 font-bold">✓</span>"
-              <div className= "bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">",
-                <div className= "grid md:grid-cols-2 gap-8">",
-                  <div >
-                    <h3 className= "text-2xl font-bold text-white mb-6">What You'll Get: </h3>',';,
-                    <ul className= "space-y-4 text-gray-300">",
-                      <li className= "flex items-start gap-3">",
-                        <span className= "text-indigo-400 font-bold">✓</span>",
-                        <span >Current AI capability assessment</span>
-                      </li>
-                      <li className= "flex items-start gap-3">",
-                        <span className= "text-indigo-400 font-bold">✓</span>",
-                        <span >Quantum consciousness readiness evaluation</span>
-                      </li>
-                      <li className= "flex items-start gap-3">",
-                        <span className= "text-indigo-400 font-bold">✓</span>",
-                        <span >Custom transformation roadmap</span>
-                      </li>
-                      <li className= "flex items-start gap-3">",
-                        <span className= "text-indigo-400 font-bold">✓</span>",
-                        <span >ROI projections and business case</span>
-                      </li>
-                      <li className= "flex items-start gap-3">",
-                        <span className= "text-indigo-400 font-bold">✓</span>",
-                        <span >Implementation timeline and resources</span>
+                      <li className="flex items-start gap-3">
+                        <span className="text-indigo-400 font-bold">✓</span>
+                        <span>Implementation timeline and resources</span>
                       </li>
                     </ul>
                   </div>
 
-                  <div >
-                    <form className="space-y-6">",
-                      <div >
-                        <label className="block text-white font-bold mb-2">Company Name</label>"
-                        <input type="text" className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus: outline-none focus:border-indigo-500" placeholder="Your Company/>",
+                  <div>
+                    <form className="space-y-6">
+                      <div>
+                        <label className="block text-white font-bold mb-2">Company Name</label>
+                        <input type="text" className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-indigo-500" placeholder="Your Company" />
                       </div>
-                      <div >
-                        <label className="block text-white font-bold mb-2">Your Name</label>"
-                        <input type="text" className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus: outline-none focus:border-indigo-500" placeholder="Your Name/>",
+                      <div>
+                        <label className="block text-white font-bold mb-2">Your Name</label>
+                        <input type="text" className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-indigo-500" placeholder="Your Name" />
                       </div>
-                      <div >
-                        <label className="block text-white font-bold mb-2">Email</label>"
-                        <input type="email" className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus: outline-none focus:border-indigo-500" placeholder="your@email.com/>",
+                      <div>
+                        <label className="block text-white font-bold mb-2">Email</label>
+                        <input type="email" className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-indigo-500" placeholder="your@email.com" />
                       </div>
-                      <div >
-                        <label className="block text-white font-bold mb-2">Phone</label>"
-                        <input type="tel" className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus: outline-none focus:border-indigo-500" placeholder="+1 (555) 123-4567/>",
+                      <div>
+                        <label className="block text-white font-bold mb-2">Phone</label>
+                        <input type="tel" className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-indigo-500" placeholder="+1 (555) 123-4567" />
                       </div>
-                      <div >
-                        <label className="block text-white font-bold mb-2">Company Size</label>"
-                        <select className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus: outline-none focus:border-indigo-500">",
-                          <option value: ">Select Company Size</option>", <form className= "space-y-6">",
-                      <div >
-                        <label className= "block text-white font-bold mb-2">Company Name</label>"
-                        <input type="text" className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus: outline-none focus:border-indigo-500" placeholder="Your Company/>",
-                      </div>
-                      <div >
-                        <label className= "block text-white font-bold mb-2">Your Name</label>"
-                        <input type="text" className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus: outline-none focus:border-indigo-500" placeholder="Your Name/>",
-                      </div>
-                      <div >
-                        <label className= "block text-white font-bold mb-2">Email</label>"
-                        <input type="email" className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus: outline-none focus:border-indigo-500" placeholder="your@email.com/>",
-                      </div>
-                      <div >
-                        <label className= "block text-white font-bold mb-2">Phone</label>"
-                        <input type="tel" className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus: outline-none focus:border-indigo-500" placeholder="+1 (555) 123-4567/>",
-                      </div>
-                      <div >
-                        <label className= "block text-white font-bold mb-2">Company Size</label>"
-                        <select className= "w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus: outline-none focus:border-indigo-500">",
-                          <option value: ">Select Company Size</option>", <option value: "startup", >Startup (1-50 employees)</option>"
-                          <option value: "mid", >Mid-size (51-500 employees)</option>"
-                          <option value: "enterprise", >Enterprise (500+ employees)</option>"
-                          <option value: "fortune500", >Fortune 500</option>"
+                      <div>
+                        <label className="block text-white font-bold mb-2">Company Size</label>
+                        <select className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:border-indigo-500">
+                          <option value="">Select Company Size</option>
+                          <option value="startup">Startup (1-50 employees)</option>
+                          <option value="mid">Mid-size (51-500 employees)</option>
+                          <option value="enterprise">Enterprise (500+ employees)</option>
+                          <option value="fortune500">Fortune 500</option>
                         </select>
                       </div>
-                      <button type="submit" className="w-full bg-gradient-to-r from-indigo-500 to-purple-600 hover: from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50">",
-                        <label className="block text-white font-bold mb-2">Company Name</label>",
-                        <input type="text" className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus: outline-none focus:border-indigo-500" placeholder="Your Company" />",
+                      <div>
+                        <label className="block text-white font-bold mb-2">Project Description</label>
+                        <textarea rows={4} className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-indigo-500" placeholder="Tell us about your quantum consciousness AI goals..."></textarea>
                       </div>
-                      <div >
-                        <label className="block text-white font-bold mb-2">Your Name</label>",
-                        <input type="text" className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus: outline-none focus:border-indigo-500" placeholder="Your Name" />",
-                      </div>
-                      <div >
-                        <label className="block text-white font-bold mb-2">Email</label>",
-                        <input type="email" className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus: outline-none focus:border-indigo-500" placeholder="your@email.com" />",
-                      </div>
-                      <div >
-                        <label className="block text-white font-bold mb-2">Phone</label>",
-                        <input type="tel" className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus: outline-none focus:border-indigo-500" placeholder ="+1 (555) 123-4567" />",
-                      </div>
-                      <div >
-                        <label className="block text-white font-bold mb-2">Company Size</label>",
-                        <select className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus: outline-none focus:border-indigo-500">",
-                          <option value: ">Select Company Size</option>",
-                      <button type="submit" className="w-full bg-gradient-to-r from-indigo-500 to-purple-600 hover: from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50">",
-                        <label className= "block text-white font-bold mb-2">Company Name</label>",
-                        <input type="text" className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus: outline-none focus:border-indigo-500" placeholder="Your Company" />",
-                      </div>
-                      <div >
-                        <label className= "block text-white font-bold mb-2">Your Name</label>",
-                        <input type="text" className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus: outline-none focus:border-indigo-500" placeholder="Your Name" />",
-                      </div>
-                      <div >
-                        <label className= "block text-white font-bold mb-2">Email</label>",
-                        <input type="email" className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus: outline-none focus:border-indigo-500" placeholder="your@email.com" />",
-                      </div>
-                      <div >
-                        <label className= "block text-white font-bold mb-2">Phone</label>",
-                        <input type="tel" className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus: outline-none focus:border-indigo-500" placeholder ="+1 (555) 123-4567" />",
-                      </div>
-                      <div >
-                        <label className= "block text-white font-bold mb-2">Company Size</label>",
-                        <select className= "w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus: outline-none focus:border-indigo-500">",
-                          <option value: ">Select Company Size</option>",
-                          <option value: "startup", >Startup (1-50 employees)</option>",
-                          <option value: "mid", >Mid-size (51-500 employees)</option>",
-                          <option value: "enterprise", >Enterprise (500+ employees)</option>",
-                          <option value: "fortune500", >Fortune 500</option>",
-                        </select>
-                      </div>
-                      <button type="submit" className="w-full bg-gradient-to-r from-indigo-500 to-purple-600 hover: from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50">",
-                      <button type="submit" className= "w-full bg-gradient-to-r from-indigo-500 to-purple-600 hover: from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50">"
-  Schedule Free Consultation
+                      <button type="submit" className="w-full bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50">
+                        Schedule Free Consultation
                       </button>
                     </form>
                   </div>
@@ -608,48 +489,25 @@ const QuantumConsciousnessAIConsulting: React.FC = () => {
           </div>
         </section>
 
-        {/* Contact Info */}
-        <section className="py-16 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900"
-          <div className="container mx-auto px-6 text-center"
-            <h2 className="text-3xl font-bold text-white mb-8">Ready to Transform Your Enterprise?</h2>"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">",
-        <section className= "py-16 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
-          <div className= "container mx-auto px-6 text-center">
-            <h2 className= "text-3xl font-bold text-white mb-8">Ready to Transform Your Enterprise?</h2>"
-            <div className= "flex flex-col sm:flex-row gap-4 justify-center mb-8">",
-              <a title: "Internal link", href="tel: 1-800-QUANTUM-AI" className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300">",
-                📞 1-800-QUANTUM-AI
-              </a>
-              <a title: "Internal link", href="mailto: consciousness@ziontechgroup.com" className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300">",
-                ✉️ consciousness@ziontechgroup.com
-              </a>
-            </div>
-            <p className="text-gray-300 text-lg"
-        <section className="py-16 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">",
-          <div className="container mx-auto px-6 text-center">",
-            <h2 className="text-3xl font-bold text-white mb-8">Ready to Transform Your Enterprise?</h2>",
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">",
-            <p className= "text-gray-300 text-lg">
-        <section className= "py-16 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">",
-          <div className= "container mx-auto px-6 text-center">",
-            <h2 className= "text-3xl font-bold text-white mb-8">Ready to Transform Your Enterprise?</h2>",
-            <div className= "flex flex-col sm:flex-row gap-4 justify-center mb-8">",
-              <a title: "Internal link", href="tel: 1-800-QUANTUM-AI" className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300">",
-                📞 1-800-QUANTUM-AI
-              </a>
-              <a title: "Internal link", href="mailto: consciousness@ziontechgroup.com" className ="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300">",
-                ✉️ consciousness@ziontechgroup.com
-              </a>
-            </div>
-            <p className="text-gray-300 text-lg">",
-            <p className= "text-gray-300 text-lg">"
-  Limited Availability: Only 25 enterprise implementations available for 2027,
+        {/* CTA Section */}
+        <section className="py-16 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
+          <div className="container mx-auto px-6 text-center">
+            <h2 className="text-3xl font-bold text-white mb-8">Ready to Transform Your Enterprise?</h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Join the quantum consciousness revolution and unlock unprecedented AI capabilities for your business.
             </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a title="Internal link" href="tel:1-800-QUANTUM-AI" className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300">
+                Call Now: 1-800-QUANTUM-AI
+              </a>
+              <a title="Internal link" href="mailto:consciousness@ziontechgroup.com" className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300">
+                Email Us
+              </a>
+            </div>
           </div>
         </section>
-      </div>
-    </>
-  );
-};
+      </>
+    );
+  };
 
-export default QuantumConsciousnessAIConsulting;
+  export default QuantumConsciousnessAIConsulting;
