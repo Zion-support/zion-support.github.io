@@ -1,6 +1,4 @@
-import React from 'react';
-import { ArrowRight, Calendar, Star, TrendingUp } from 'lucide-react';
-
+import { ArrowRight, Calendar, TrendingUp } from 'lucide-react';
 export default function December2025April2026NewContentShowcaseBanner() {
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-gray-900 to-black text-white">

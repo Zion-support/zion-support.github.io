@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function October2025FraudDetectionShowcaseBanner() {
   return (
     <section className="bg-gradient-to-br from-slate-900 via-red-900/20 to-slate-900 py-16 border-b border-red-500/10">

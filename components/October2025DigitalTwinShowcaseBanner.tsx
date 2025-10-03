@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function October2025DigitalTwinShowcaseBanner() {
   return (
     <section className="py-12 bg-gradient-to-r from-blue-900/20 via-indigo-900/20 to-purple-900/20 backdrop-blur-sm border-y border-blue-500/20">

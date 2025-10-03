@@ -1,4 +1,3 @@
-import React from 'react';
 import { Code, Zap, TrendingUp, Shield, Sparkles } from 'lucide-react';
 
 const October2025GenerativeAICodeGenerationBanner = () => {

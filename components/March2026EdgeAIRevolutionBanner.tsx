@@ -1,4 +1,3 @@
-import React from 'react';
 import { Zap, Cpu, Network, ArrowRight } from 'lucide-react';
 
 export default function March2026EdgeAIRevolutionBanner() {

@@ -1,8 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { Calendar, Clock, User, ArrowRight, TrendingUp, DollarSign, Target, Zap, Shield, Users, Award, CheckCircle } from 'lucide-react';
-
-
+import { Calendar, Clock, User, ArrowRight, TrendingUp, Target, Zap, Award, CheckCircle } from 'lucide-react';
 export default function Fortune500AITransformation12BROI() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">

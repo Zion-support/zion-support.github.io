@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Workflow, Rocket, Award, ArrowRight, CheckCircle2, Target } from 'lucide-react';
 

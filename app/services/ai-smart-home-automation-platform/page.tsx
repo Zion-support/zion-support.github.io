@@ -1,25 +1,4 @@
-import React from 'react';
-import { 
-  Home, 
-  Smartphone, 
-  Zap, 
-  Shield, 
-  Brain, 
-  CheckCircle, 
-  Star,
-  Calendar,
-  MessageSquare,
-  FileText,
-  BarChart3,
-  Clock,
-  Bell,
-  Users,
-  Award,
-  TrendingUp,
-  DollarSign
-} from 'lucide-react';
-
-
+import { Home, CheckCircle, Users, Award, TrendingUp } from 'lucide-react';
 export default function AISmartHomeAutomationPlatform() {
   const features = [
     {

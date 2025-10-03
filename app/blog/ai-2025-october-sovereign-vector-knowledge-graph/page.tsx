@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const metadata = {
   title: 'Sovereign Vector Knowledge Graph — October 2025',
   description: 'Design a zero-trust, sovereign vector KG with verifiable provenance, PII minimization, and tiered access.',

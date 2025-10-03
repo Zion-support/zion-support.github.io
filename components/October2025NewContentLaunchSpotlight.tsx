@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function October2025NewContentLaunchSpotlight() {
   return (
     <section className="relative bg-gradient-to-r from-violet-950 via-purple-950 to-indigo-950 py-16 border-y border-violet-500/20">

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { Zap, Brain, TrendingUp, Shield } from 'lucide-react';
 

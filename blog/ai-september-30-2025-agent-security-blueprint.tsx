@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function AgentSecurityBlueprintSept302025() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-teal-50 to-emerald-50">

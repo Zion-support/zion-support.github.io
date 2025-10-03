@@ -1,6 +1,3 @@
-import React from 'react';
-
-
 export default function AIConsciousnessFusion2027() {
   return (
     <article className="max-w-4xl mx-auto px-4 py-8">

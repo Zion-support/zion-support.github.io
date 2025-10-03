@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const metadata = {
   title: 'Autonomous Compliance Automation 2025 — AI-Powered Regulatory Excellence Revolution',
   description: 'Deploy autonomous compliance systems achieving 99.94% regulatory accuracy, 87% cost reduction, and $2.7B savings. Transform compliance operations with self-learning AI that adapts to evolving regulations instantly.',

@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const metadata = {
   title: 'AI Safety and Alignment: Enterprise Risk Management 2025 | Zion Tech',
   description: 'Comprehensive guide to AI safety, alignment, and enterprise risk management. Learn frameworks, best practices, and governance strategies for responsible AI deployment.',

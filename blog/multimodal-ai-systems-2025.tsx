@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function MultimodalAISystems2025() {
   return (
     <main className="prose lg:prose-xl max-w-4xl mx-auto py-12 px-6">

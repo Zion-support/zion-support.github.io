@@ -1,5 +1,3 @@
-import React from 'react';
-
 const October2025QuantumAutonomousMegaBanner = () => {
   return (
     <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 text-white py-16 px-6">

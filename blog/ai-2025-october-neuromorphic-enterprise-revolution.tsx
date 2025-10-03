@@ -1,8 +1,6 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { Brain, Cpu, Zap, TrendingUp, Check, ArrowRight, Activity } from 'lucide-react';
-
+import { Brain, Cpu, Zap, Check, ArrowRight, Activity } from 'lucide-react';
 export default function NeuromorphicEnterpriseRevolution2025() {
   return (
     <>

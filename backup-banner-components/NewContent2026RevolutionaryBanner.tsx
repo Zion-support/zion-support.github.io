@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 import { ArrowRight, Brain, Zap, Star, TrendingUp } from 'lucide-react';
 

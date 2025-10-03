@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const metadata = {
   title: 'Cut Generative AI Costs by 85%: The Definitive Enterprise Cost Optimization Guide',
   description: 'Proven strategies to reduce LLM and GenAI spending by 85% without sacrificing quality. Real case studies showing $2.1M to $315K monthly cost reduction.',

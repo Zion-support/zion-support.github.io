@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 import { MessageCircle, CheckCircle, ArrowRight, DollarSign, Clock } from 'lucide-react';
 }

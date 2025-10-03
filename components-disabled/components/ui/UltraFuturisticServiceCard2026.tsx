@@ -1,6 +1,4 @@
-import React from 'react';
-
-    monthly?: number;
+monthly?: number;
     yearly?: number;
     currency?: string;
 

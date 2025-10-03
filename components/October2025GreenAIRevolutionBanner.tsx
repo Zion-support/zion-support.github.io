@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function October2025GreenAIRevolutionBanner() {
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-emerald-900/30 via-green-900/30 to-lime-900/30 backdrop-blur-sm py-12 border-b border-emerald-500/20">

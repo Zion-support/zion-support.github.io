@@ -1,4 +1,3 @@
-import React from 'react';
 import { TruckIcon, Target, TrendingUp, Sparkles, DollarSign, Globe } from 'lucide-react';
 
 export default function October2025CognitiveSupplyChainBanner() {

@@ -1,21 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, 
-  CheckCircle, 
-  Star, 
-  DollarSign,
-  Shield,
-  Zap,
-  Clock,
-  BarChart3,
-  Users,
-  Phone,
-  Mail,
-  MapPin,
-  Rocket
-} from 'lucide-react';
-
+import { ArrowRight, CheckCircle, DollarSign, Shield, Zap, Clock, BarChart3, Users, Phone, Mail, MapPin, Rocket } from 'lucide-react';
 export default function AIInvoiceProcessingPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">

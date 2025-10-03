@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function September2025ContentShowcaseBanner() {
   return (
     <section className="py-16 bg-gradient-to-br from-violet-900 via-fuchsia-900 to-pink-900">

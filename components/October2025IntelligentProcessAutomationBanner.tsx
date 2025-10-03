@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function October2025IntelligentProcessAutomationBanner() {
   return (
     <section className="py-16 bg-gradient-to-r from-amber-900/50 via-orange-900/50 to-rose-900/50 border-y border-amber-500/30">

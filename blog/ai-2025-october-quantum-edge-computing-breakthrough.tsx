@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function QuantumEdgeComputingBreakthrough2025() {
   return (
     <article className="max-w-4xl mx-auto px-6 py-12">

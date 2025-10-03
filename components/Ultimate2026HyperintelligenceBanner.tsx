@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function Ultimate2026HyperintelligenceBanner() {
   return (
     <section className="py-16 bg-gradient-to-br from-slate-950 via-purple-950 to-slate-950 relative overflow-hidden">

@@ -1,23 +1,4 @@
-import React from 'react';
-import { 
-  Video, 
-  Brain, 
-  BarChart3, 
-  Users, 
-  Clock, 
-  CheckCircle, 
-  Zap, 
-  DollarSign,
-  Star,
-  TrendingUp,
-  Smartphone,
-  Calendar,
-  MessageSquare,
-  FileText,
-  Shield
-} from 'lucide-react';
-
-
+import { CheckCircle } from 'lucide-react';
 export default function AIMeetingIntelligencePlatform() {
   const features = [
     {

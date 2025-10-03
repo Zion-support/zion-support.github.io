@@ -1,8 +1,6 @@
-import React from 'react';
 import Head from 'next/head';
 import { Link } from 'react-router-dom';
-import { Boxes, Wrench, Activity, CheckCircle, Phone, Mail, MapPin } from 'lucide-react';
-
+import { Boxes, Wrench, Activity, CheckCircle, MapPin } from 'lucide-react';
 export default function ManagedKubernetesPage() {
   const title = 'Managed Kubernetes (EKS/AKS/GKE) — Zion Tech Group';
   const description = 'Production-grade Kubernetes design, provisioning, upgrades, security hardening, cost optimization, and 24/7 SRE.';

@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const metadata = {
   title: 'Agentic Procurement & Supply Chain Revolution 2025 — 99.1% Forecast Accuracy, 82% Cost Reduction',
   description: 'Deploy autonomous AI agents for procurement and supply chain achieving 99.1% demand forecast accuracy, 82% cost reduction, and 96% on-time delivery. Transform supply chain operations with intelligent agents.',

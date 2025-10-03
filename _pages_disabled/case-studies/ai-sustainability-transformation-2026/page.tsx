@@ -1,7 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { Clock, ArrowRight, Leaf, TrendingUp, DollarSign, Target } from 'lucide-react';
-
+import { Clock, Leaf, TrendingUp, DollarSign, Target } from 'lucide-react';
 export const metadata = {
   title: 'AI Sustainability Transformation 2026: $10M ROI Case Study',
   description: 'See how a Fortune 500 company achieved carbon neutrality and $10M ROI with comprehensive AI sustainability transformation.',

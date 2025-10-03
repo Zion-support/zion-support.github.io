@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const metadata = {
   title: 'Reliable Agent Evals 2025: Measure and Guardrail Autonomy | Zion Tech Group',
   description: 'A practical enterprise guide to evaluate autonomous agents with budgets, metrics, and policy gates. Ship safe, reliable autonomy with measurable guardrails.',

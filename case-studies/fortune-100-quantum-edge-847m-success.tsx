@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function Fortune100QuantumEdgeSuccess() {
   return (
     <article className="max-w-5xl mx-auto px-6 py-12">

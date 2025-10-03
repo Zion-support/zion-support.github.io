@@ -1,34 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, 
-  CheckCircle, 
-  Star, 
-  Users, 
-  Zap, 
-  Shield, 
-  Globe, 
-  BarChart3,
-  Brain,
-  Cpu,
-  Cloud,
-  Database,
-  Lock,
-  TrendingUp,
-  Award,
-  Target,
-  Rocket,
-  Phone,
-  Mail,
-  MapPin,
-  Clock,
-  DollarSign,
-  Headphones,
-  ExternalLink,
-  Download,
-  Play
-} from 'lucide-react';
-
+import { ArrowRight, CheckCircle, Brain, Cpu, TrendingUp, Target, Rocket, Phone, Mail, MapPin, ExternalLink, Play } from 'lucide-react';
 export const metadata = {
   title: 'AI Content Optimization Suite — Zion Tech Group | $199/month',
   description: 'Revolutionary AI-powered content optimization platform that increases engagement by 60% and improves SEO rankings by 40%. Transform your content with AI that understands your audience.',

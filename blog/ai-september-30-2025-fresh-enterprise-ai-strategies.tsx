@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const metadata = {
   title: 'September 30, 2025: Fresh Enterprise AI Strategies for 2026',
   description:

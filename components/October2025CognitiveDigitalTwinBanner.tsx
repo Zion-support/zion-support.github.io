@@ -1,4 +1,3 @@
-import React from 'react';
 import { Cpu, Eye, BarChart, Sparkles } from 'lucide-react';
 
 export default function October2025CognitiveDigitalTwinBanner() {

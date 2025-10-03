@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const metadata = {
   title: 'Telecom Giant Achieves $215M Annual Savings with AI-Powered Network Intelligence',
   description: 'How a Fortune 100 telecommunications company deployed sovereign AI for real-time network optimization, achieving 99.999% uptime and transforming customer experience.',

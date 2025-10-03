@@ -1,6 +1,3 @@
-import React from 'react';
-
-
 export default function February2025QuantumAIBreakthroughCaseStudyPage() {
   return (
     <div className="min-h-screen bg-slate-950">

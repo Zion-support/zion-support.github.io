@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const metadata = {
   title: 'Neuro-Symbolic AI Enterprise Breakthrough 2025 — 99.7% Reasoning Accuracy with Explainability',
   description: 'Deploy hybrid neuro-symbolic AI systems achieving 99.7% reasoning accuracy, 96% explainability, and 89% reduction in hallucinations. Combine neural networks with symbolic logic for enterprise-grade intelligence.',

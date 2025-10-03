@@ -1,6 +1,5 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Scale, Shield, FileText, Brain, AlertTriangle, CheckCircle, ArrowRight } from 'lucide-react';
+import { Shield, FileText, Brain, AlertTriangle, CheckCircle, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const GenAILegalCompliance = () => {

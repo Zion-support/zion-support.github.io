@@ -1,25 +1,4 @@
-import React from 'react';
-import { 
-  Laptop, 
-  Users, 
-  Clock, 
-  Target, 
-  Brain, 
-  CheckCircle, 
-  Star,
-  Calendar,
-  MessageSquare,
-  FileText,
-  BarChart3,
-  Bell,
-  Award,
-  TrendingUp,
-  DollarSign,
-  Shield,
-  Zap
-} from 'lucide-react';
-
-
+import { CheckCircle, Award, TrendingUp, Shield, Zap } from 'lucide-react';
 export default function AIRemoteWorkProductivitySuite() {
   const features = [
     {

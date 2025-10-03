@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const metadata = {
   title: 'RAG at Scale: Building Production-Ready Retrieval-Augmented Generation Systems',
   description: 'Master the architecture, implementation, and optimization of RAG systems for enterprise applications with advanced chunking, embedding, and retrieval strategies.',

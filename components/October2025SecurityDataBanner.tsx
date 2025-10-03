@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function October2025SecurityDataBanner() {
   return (
     <div className="bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 text-white py-10 px-6 mb-10 rounded-xl shadow-xl border border-purple-500/30">

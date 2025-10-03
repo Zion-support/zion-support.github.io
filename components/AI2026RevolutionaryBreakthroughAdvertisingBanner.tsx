@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function AI2026RevolutionaryBreakthroughAdvertisingBanner() {
   return (
     <section className="relative overflow-hidden bg-gradient-to-r from-blue-900 via-purple-900 to-cyan-900 py-16">

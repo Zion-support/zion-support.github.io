@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function MultimodalFusionBlueprint2025() {
   return (
     <main className="container mx-auto px-6 py-12">

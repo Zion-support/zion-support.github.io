@@ -1,4 +1,3 @@
-import React from 'react';
 import { ArrowRight, Building2, TrendingUp, Target, Award, Users } from 'lucide-react';
 
 export default function January2026Fortune500AutonomousTransformationBanner() {

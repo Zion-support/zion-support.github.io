@@ -1,6 +1,5 @@
 import React from 'react';
-import { ArrowLeft, Calendar, Clock, User, Share2, BookmarkPlus, TrendingUp } from 'lucide-react';
-
+import { ArrowLeft, Calendar, Clock, User, TrendingUp } from 'lucide-react';
 const AutonomousSecurityAIAgents2025: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

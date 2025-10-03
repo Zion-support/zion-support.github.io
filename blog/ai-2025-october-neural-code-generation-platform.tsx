@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const metadata = {
   title: 'Neural Code Generation Platform 2025 — AI-Powered Development at 10x Speed',
   description: 'Deploy neural code generation achieving 10x development velocity, 98.7% code accuracy, and $8.4M annual productivity gains through AI-powered autonomous coding. Revolutionary AI pair programming for enterprise development teams.',

@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function FederatedLearningEnterpriseBreakthrough() {
   return (
     <main className="min-h-screen bg-slate-950 text-white">

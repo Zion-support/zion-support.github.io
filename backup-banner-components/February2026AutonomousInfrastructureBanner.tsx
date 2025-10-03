@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Cpu, Shield, Zap, TrendingUp, Brain } from 'lucide-react';
-
+import { ArrowRight, Shield, Zap, TrendingUp, Brain } from 'lucide-react';
 const February2026AutonomousInfrastructureBanner: React.FC = () => {
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">

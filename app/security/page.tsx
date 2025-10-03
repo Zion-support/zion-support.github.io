@@ -7,9 +7,6 @@ export default function SecurityPage() {
   );
 }
 
-import React from 'react';
-
-
 export default function SecurityPage() {
   const securityFeatures = [
     {

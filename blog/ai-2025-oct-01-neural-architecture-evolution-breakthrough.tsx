@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const metadata = {
   title: 'Neural Architecture Evolution 2025 — Self-Designing AI Models Breakthrough',
   description: 'Revolutionary neural architecture search achieving 10,000x faster model design, 97% accuracy improvement, and $25M annual savings through autonomous AI model evolution and optimization.',

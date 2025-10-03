@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const metadata = {
   title: 'AI Governance Framework 2025: Build Trust, Compliance & Innovation at Enterprise Scale',
   description: 'Complete governance framework for responsible AI deployment. Navigate EU AI Act, NIST RMF, ethical considerations, and risk management while maintaining innovation velocity.',

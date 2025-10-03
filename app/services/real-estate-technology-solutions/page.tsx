@@ -1,13 +1,6 @@
-import React from 'react';
 import Head from 'next/head';
 import { Link } from 'react-router-dom';
-import { 
-  Home, MapPin, Users, BarChart3, Camera, 
-  FileText, Clock, CheckCircle, ArrowRight, Phone, 
-  Mail, ExternalLink, Zap, Target, Award, 
-  Globe, Smartphone, Brain, Monitor, Shield, Search
-} from 'lucide-react';
-
+import { MapPin, CheckCircle, Phone, Mail, ExternalLink, Brain } from 'lucide-react';
 export const metadata = {
   title: 'Real Estate Technology Solutions — Zion Tech Group',
   description: 'Comprehensive real estate micro SaaS solutions including property management, lead generation, CRM, and virtual tours.',

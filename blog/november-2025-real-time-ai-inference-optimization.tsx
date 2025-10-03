@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const metadata = {
   title: 'November 2025: Real-Time AI Inference Optimization',
   description:

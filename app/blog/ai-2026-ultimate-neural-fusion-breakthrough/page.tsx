@@ -1,6 +1,3 @@
-import React from 'react';
-
-
 export default function UltimateNeuralFusionBreakthrough() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-purple-900 to-slate-950">

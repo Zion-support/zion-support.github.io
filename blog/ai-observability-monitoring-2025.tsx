@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const metadata = {
   title: 'AI Observability: Monitoring and Debugging LLM Applications in Production',
   description: 'Master the art of observing AI systems in production with comprehensive monitoring, tracing, and debugging strategies for LLM applications.',

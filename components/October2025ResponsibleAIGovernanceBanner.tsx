@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Shield, Scale, Eye, Lock, CheckCircle, ArrowRight, Award } from 'lucide-react';
-
+import { Shield, Scale, CheckCircle, ArrowRight, Award } from 'lucide-react';
 const October2025ResponsibleAIGovernanceBanner: React.FC = () => {
   return (
     <section className="relative bg-gradient-to-br from-slate-950 via-blue-950 to-cyan-950 py-24 overflow-hidden">

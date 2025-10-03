@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const metadata = {
   title: 'AI Governance Runtime Guardrails 2026 — Inline Policies Without Friction',
   description: 'Run-time policy checks, KPI-linked canaries, and instant rollback that keep teams fast and compliant.',

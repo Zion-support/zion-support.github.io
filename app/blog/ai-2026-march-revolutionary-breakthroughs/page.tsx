@@ -1,6 +1,3 @@
-import React from 'react';
-
-
 export default function March2026RevolutionaryBreakthroughsPage() {
   return (
     <div className="min-h-screen bg-slate-950">

@@ -1,8 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, BookOpen, CheckCircle, Clock, Target, Users, Zap, TrendingUp } from 'lucide-react';
-
-
+import { ArrowLeft, BookOpen, CheckCircle, Clock, Target, Zap, TrendingUp } from 'lucide-react';
 export default function ImplementationGuide() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">

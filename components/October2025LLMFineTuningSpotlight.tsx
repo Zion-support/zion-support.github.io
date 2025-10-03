@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function October2025LLMFineTuningSpotlight() {
   return (
     <section className="relative overflow-hidden bg-gradient-to-r from-amber-900/40 via-orange-900/40 to-red-900/40 backdrop-blur-sm py-16 border-y border-amber-500/30">

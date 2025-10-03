@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function October1st2025QuantumEdgeBanner() {
   return (
     <section className="py-16 bg-gradient-to-br from-blue-950 via-indigo-950 to-purple-950 border-b border-blue-500/30 relative overflow-hidden">

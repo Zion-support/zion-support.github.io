@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function October2025CognitiveAIRevolutionBanner() {
   return (
     <section className="relative overflow-hidden bg-gradient-to-r from-cyan-900/40 via-blue-900/40 to-purple-900/40 backdrop-blur-sm py-16 border-y border-cyan-500/30">

@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const metadata = {
   title: 'Enterprise RAG & GenAI Platform | Zion Tech Group',
   description: 'Production-ready GenAI with retrieval augmented generation, evaluations, guardrails, and observability.',

@@ -1,5 +1,3 @@
-import React from 'react';
-
 const October2025QuantumEdgeAIBanner = () => {
   return (
     <section className="relative py-16 bg-gradient-to-br from-cyan-900 via-blue-950 to-indigo-950 overflow-hidden border-b border-cyan-500/30">

@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function October2025NeuralQuantumConvergenceBanner() {
   return (
     <section className="py-16 bg-gradient-to-r from-purple-900/50 via-pink-900/50 to-indigo-900/50 border-y border-purple-500/30">

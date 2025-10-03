@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function October2025AutonomousSOCBanner() {
   return (
     <section className="py-16 bg-gradient-to-r from-red-900/40 via-orange-900/40 to-amber-900/40 backdrop-blur-sm border-y border-red-500/30">

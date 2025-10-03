@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function December2025RevolutionaryContentShowcase() {
   return (
     <section className="py-16 bg-gradient-to-r from-indigo-900/30 via-purple-900/30 to-pink-900/30">

@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const metadata = {
   title: 'FinOps Cloud Cost Optimizer | Zion Tech Group',
   description: 'Reduce cloud spend 20–40% with rightsizing, commitment planning, anomaly alerts, and governance.',

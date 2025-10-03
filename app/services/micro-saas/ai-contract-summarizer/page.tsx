@@ -1,8 +1,6 @@
-import React from 'react';
 import Head from 'next/head';
 import { Link } from 'react-router-dom';
-import { FileText, CheckCircle, Shield, ArrowRight, DollarSign, Phone, Mail, MapPin } from 'lucide-react';
-
+import { FileText, CheckCircle, Shield, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
 export default function AIContractSummarizerPage() {
   const title = 'AI Contract Summarizer for SMBs — Zion Tech Group';
   const description = 'Summarize contracts instantly, extract key clauses, deadlines, and risks. Reduce review time and legal costs with AI.';

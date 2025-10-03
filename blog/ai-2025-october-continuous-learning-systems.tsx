@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const metadata = {
   title: 'Continuous Learning Systems 2025 — AI That Never Stops Improving',
   description: 'Deploy self-improving AI systems with 99.8% uptime during learning, 94% accuracy improvement over time, and zero-downtime model updates. Build AI that gets smarter with every interaction while maintaining production stability.',

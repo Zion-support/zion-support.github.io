@@ -1,28 +1,4 @@
-import React from 'react';
-import { 
-  BarChart3, 
-  TrendingUp, 
-  Database, 
-  PieChart, 
-  CheckCircle, 
-  ArrowRight,
-  Clock,
-  DollarSign,
-  Target,
-  Users,
-  Globe,
-  Smartphone,
-  Settings,
-  Monitor,
-  Code,
-  FileText,
-  Network,
-  Brain,
-  Search,
-  Eye,
-  Zap
-} from 'lucide-react';
-
+import { CheckCircle } from 'lucide-react';
 export default function DataAnalyticsBusinessIntelligence() {
   const title = 'Data Analytics & Business Intelligence — Zion Tech Group';
   const description = 'Transform your data into actionable insights with advanced analytics and business intelligence solutions.';

@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const metadata = {
   title: 'AI Synthetic Data Generation: Privacy-First Machine Learning 2025 | Zion Tech',
   description: 'Discover how privacy-preserving synthetic data generation is revolutionizing ML training with 100% compliance, 92% model accuracy, and zero privacy risks.',

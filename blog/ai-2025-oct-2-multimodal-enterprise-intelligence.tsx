@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const metadata = {
   title: 'Multimodal Enterprise Intelligence — Vision + Language + Action Models for 2025',
   description: 'Deploy multimodal AI systems processing text, images, video, and audio with 96% accuracy, achieving 78% automation and revolutionizing enterprise operations with unified intelligence.',

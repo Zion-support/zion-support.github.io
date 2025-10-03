@@ -1,28 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  CheckCircle, 
-  Star, 
-  DollarSign, 
-  Clock,
-  Phone,
-  Mail,
-  MapPin,
-  Zap,
-  Shield,
-  TrendingUp,
-  Users,
-  Globe,
-  Heart,
-  Video,
-  FileText,
-  Calendar,
-  CreditCard,
-  Smartphone,
-  Stethoscope
-} from 'lucide-react';
-
-
+import { CheckCircle, Star, Phone, Mail, MapPin, Zap, Globe, Heart, Calendar, Stethoscope } from 'lucide-react';
 export default function TelemedicinePlatform() {
   const contactInfo = {
     phone: '+1 302 464 0950',

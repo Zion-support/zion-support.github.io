@@ -1,21 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  MessageSquare, 
-  BarChart3, 
-  Users, 
-  Zap, 
-  CheckCircle, 
-  ArrowRight, 
-  Star,
-  Target,
-  TrendingUp,
-  Clock,
-  Shield,
-  Brain
-} from 'lucide-react';
-
-
+import { CheckCircle, ArrowRight, Star } from 'lucide-react';
 export default function AIEmailMarketingPage() {
   const features = [
     {

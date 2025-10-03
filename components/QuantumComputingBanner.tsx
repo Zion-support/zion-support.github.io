@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function QuantumComputingBanner() {
   return (
     <section className="py-16 bg-gradient-to-r from-cyan-900/50 via-purple-900/50 to-blue-900/50 border-b border-cyan-500/30">

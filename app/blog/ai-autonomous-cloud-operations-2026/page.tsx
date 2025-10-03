@@ -1,6 +1,3 @@
-import React from 'react';
-
-
 export default function AIAutonomousCloudOps2026() {
   return (
     <div className="min-h-screen bg-white">

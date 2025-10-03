@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Calendar, Clock, Users, TrendingUp, DollarSign, Target, CheckCircle } from 'lucide-react';
 

@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const metadata = {
   title: 'Intelligent Supply Chain Revolution 2025 — Autonomous Logistics at Scale',
   description: 'Deploy autonomous supply chain intelligence achieving 99.6% forecast accuracy, 94% cost reduction, and $24.8M annual savings through AI-powered logistics automation. Revolutionary supply chain optimization for global enterprises.',

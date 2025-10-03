@@ -1,9 +1,6 @@
 "use client"
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { Phone, Mail, CheckCircle, MessageSquare, Brain, Shield, BarChart3, Globe, Users, Star, ArrowRight, MapPin } from 'lucide-react';
-
-
+import { Phone, Mail, CheckCircle, MessageSquare, Star, MapPin } from 'lucide-react';
 export default function AICustomerSupportPage() {
   const contact = {
     phone: '+1 302 464 0950',

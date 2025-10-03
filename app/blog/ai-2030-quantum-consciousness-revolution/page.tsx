@@ -1,6 +1,3 @@
-import React from 'react';
-
-
 export default function AIQuantumConsciousnessRevolution2030() {
   return (
     <article className="max-w-4xl mx-auto px-4 py-8">

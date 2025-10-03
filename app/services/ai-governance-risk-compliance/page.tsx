@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const metadata = {
   title: 'AI Governance, Risk & Compliance | Zion Tech Group',
   description: 'Operationalize responsible AI with policies, model inventory, evaluations, evidence automation, and compliance mapping.',
@@ -73,7 +71,6 @@ export default function AIGRCPage() {
   );
 }
 
-import React from 'react';
 import { Link } from 'react-router-dom';
 
 export default function AIGovernanceRiskCompliancePage() {

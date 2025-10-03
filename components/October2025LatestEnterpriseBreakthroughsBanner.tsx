@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function October2025LatestEnterpriseBreakthroughsBanner() {
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-purple-900/40 via-indigo-900/40 to-blue-900/40 backdrop-blur-sm py-20 border-y border-purple-500/20">

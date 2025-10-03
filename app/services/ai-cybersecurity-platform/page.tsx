@@ -1,27 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  CheckCircle, 
-  Star, 
-  DollarSign, 
-  Clock,
-  Phone,
-  Mail,
-  MapPin,
-  Zap,
-  Shield,
-  TrendingUp,
-  Users,
-  Globe,
-  Lock,
-  Eye,
-  AlertTriangle,
-  Activity,
-  Database,
-  Server
-} from 'lucide-react';
-
-
+import { CheckCircle, Star, Phone, Mail, MapPin, Zap, Shield, Lock } from 'lucide-react';
 export default function AICybersecurityPlatform() {
   const contactInfo = {
     phone: '+1 302 464 0950',

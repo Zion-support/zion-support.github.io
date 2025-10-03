@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { BookOpen, FileText, TrendingUp, Target, Award, Lightbulb } from 'lucide-react';
 

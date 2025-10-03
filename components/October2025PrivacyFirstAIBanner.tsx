@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function October2025PrivacyFirstAIBanner() {
   return (
     <section className="py-16 bg-gradient-to-r from-cyan-900/30 via-blue-900/30 to-indigo-900/30 backdrop-blur-sm border-b border-cyan-500/20">

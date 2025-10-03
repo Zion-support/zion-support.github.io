@@ -1,6 +1,3 @@
-import React from 'react';
-
-
 export default function AI2027UniversalIntelligenceSingularity10TrillionSuccess() {
   return (
     <div className="min-h-screen bg-slate-950 text-white">

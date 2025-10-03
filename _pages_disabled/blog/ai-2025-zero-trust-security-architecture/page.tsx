@@ -1,4 +1,3 @@
-import React from 'react';
 import { Metadata } from 'next';
 import { Shield, Lock, Eye, AlertTriangle, CheckCircle, Users, Zap } from 'lucide-react';
 

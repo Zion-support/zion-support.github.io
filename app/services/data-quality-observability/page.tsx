@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const metadata = {
   title: 'Data Quality & Observability | Zion Tech Group',
   description: 'Unified data quality, lineage, and observability platform for analytics and AI.',

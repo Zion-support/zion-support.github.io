@@ -1,6 +1,5 @@
 import React from 'react';
-import { ArrowRight, Sparkles, TrendingUp, Zap, Target, DollarSign, Users, BarChart3 } from 'lucide-react';
-
+import { ArrowRight, Sparkles, TrendingUp, Zap, Target, DollarSign, BarChart3 } from 'lucide-react';
 const ServicesAdvertisingPromo: React.FC = () => {
   const advertisingServices = [
     {

@@ -1,17 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, 
-  Calendar, 
-  Clock, 
-  User, 
-  Tag,
-  TrendingUp,
-  Brain,
-  Zap,
-  Rocket
-} from 'lucide-react';
-
+import { ArrowRight, Calendar, Clock, User, TrendingUp, Brain, Zap, Rocket } from 'lucide-react';
 export const metadata = {
   title: 'Blog — Zion Tech Group AI Insights & Technology Trends',
   description: 'Latest AI insights, technology trends, and revolutionary breakthroughs from Zion Tech Group. Stay ahead with cutting-edge AI knowledge and industry expertise.',

@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function LatestSeptember30ContentShowcase() {
   return (
     <section className="py-16 bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900">

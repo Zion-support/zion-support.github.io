@@ -1,7 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { Clock, ArrowRight, Brain, TrendingUp, DollarSign, Users } from 'lucide-react';
-
+import { Clock, Brain, TrendingUp, Users } from 'lucide-react';
 export const metadata = {
   title: 'AI Cognitive Superintelligence Mega Success 2026: $750M ROI Case Study',
   description: 'Discover how a Fortune 500 company achieved $750M ROI with AI cognitive superintelligence implementation. Learn about the strategies, challenges, and results.',

@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function October2025AgenticSwarmsShowcase() {
   return (
     <section className="py-16 bg-gradient-to-br from-green-900/40 via-emerald-900/40 to-teal-900/40 backdrop-blur-sm border-b border-green-500/20">

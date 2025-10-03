@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function NextGenAIObservabilityPlatform() {
   return (
     <article className="max-w-4xl mx-auto px-4 py-12">

@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function October2025NeuralQuantumOrchestrationBanner() {
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 py-16 sm:py-24">

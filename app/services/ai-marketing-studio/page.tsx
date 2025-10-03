@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const metadata = {
   title: 'AI Marketing Studio | Zion Tech Group',
   description: 'End-to-end AI marketing suite: audience insights, creative generation, multivariate tests, and attribution.',

@@ -1,8 +1,5 @@
 "use client"
-import React from 'react';
-import { DollarSign, FileText, CheckCircle, Shield, BarChart3, Phone, Mail, MapPin } from 'lucide-react';
-
-
+import { DollarSign, CheckCircle, Shield, BarChart3, Phone, Mail, MapPin } from 'lucide-react';
 export default function InvoiceOCRPage() {
   const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com' };
   const features = [
@@ -83,11 +80,9 @@ export default function InvoiceOCRPage() {
   );
 }
 
-import React from 'react';
 import Head from 'next/head';
 import { Link } from 'react-router-dom';
-import { DollarSign, CheckCircle, Shield, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
-
+import { DollarSign, CheckCircle, Shield, BarChart3, Phone, Mail, MapPin } from 'lucide-react';
 export default function InvoiceOCRPage() {
   const title = 'Invoice OCR & AP Automation — Zion Tech Group';
   const description = 'Accurate invoice data capture, validation, and approval workflows with ERP exports and audit trails.';

@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function September30NewContentMegaBanner() {
   return (
     <section className="py-20 bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900 border-t-4 border-cyan-400">

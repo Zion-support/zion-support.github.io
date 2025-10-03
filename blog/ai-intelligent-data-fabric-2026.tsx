@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const metadata = {
   title: 'Intelligent Data Fabric 2026: Real-Time AI for Connected Enterprises',
   description:

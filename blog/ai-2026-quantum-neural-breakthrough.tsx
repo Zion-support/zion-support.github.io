@@ -1,4 +1,3 @@
-import React from 'react';
 import { ArrowRight, Atom, Brain, Zap, Target, TrendingUp, Shield, Cpu } from 'lucide-react';
 
 export default function AIQuantumNeuralBreakthrough2026() {

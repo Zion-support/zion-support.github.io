@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function October2025FraudDetectionBreakthroughBanner() {
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-red-900/30 via-orange-900/30 to-yellow-900/30 backdrop-blur-sm py-20 border-b border-red-500/20">

@@ -1,13 +1,6 @@
-import React from 'react';
 import Head from 'next/head';
 import { Link } from 'react-router-dom';
-import { 
-  Cloud, Shield, Server, Database, Network, Cpu, 
-  Lock, Monitor, Zap, Settings, Globe, Smartphone,
-  CheckCircle, ArrowRight, Star, Award, Phone, Mail, MapPin,
-  Brain, Code, BarChart3, Workflow, Layers, Activity
-} from 'lucide-react';
-
+import { Cloud, Shield, Network, Zap, CheckCircle, Star, Award, Phone, Mail, MapPin, Code, BarChart3 } from 'lucide-react';
 export const metadata = {
   title: 'Innovative IT Solutions — Zion Tech Group | Enterprise Infrastructure & Security',
   description: 'Cutting-edge IT solutions including cloud architecture, cybersecurity, DevOps automation, and enterprise infrastructure services.',

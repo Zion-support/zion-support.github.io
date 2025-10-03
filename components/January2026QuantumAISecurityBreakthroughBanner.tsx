@@ -1,4 +1,3 @@
-import React from 'react';
 import { Shield, Lock, Eye, ArrowRight } from 'lucide-react';
 
 export default function January2026QuantumAISecurityBreakthroughBanner() {

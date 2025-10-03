@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const metadata = {
   title: 'Fortune 500 Autonomous Operations Transformation: $200M ROI in 12 Months',
   description: 'How a Fortune 500 manufacturing giant achieved complete autonomous operations with $200M ROI, 95% automation, and 99.9% uptime through AI transformation.',

@@ -1,8 +1,6 @@
-import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { Award,Cloud,High,Server,Shield,Today,Users,Zap,} from 'lucide-react';
-
+import { Award, Cloud, High, Server, Shield, Users, Zap,  } from 'lucide-react';
 export default function CloudServices() {return (<>;
       <Head />;
         <title />Cloud Services - Zion Tech Group</title>;

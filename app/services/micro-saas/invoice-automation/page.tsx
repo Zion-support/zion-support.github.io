@@ -1,8 +1,6 @@
-import React from 'react';
 import Head from 'next/head';
 import { Link } from 'react-router-dom';
-import { FileText, Wallet, Sparkles, CheckCircle, Phone, Mail, MapPin } from 'lucide-react';
-
+import { FileText, Wallet, Sparkles, CheckCircle, MapPin } from 'lucide-react';
 export default function InvoiceAutomationSaaSPage() {
   const title = 'Invoice Automation SaaS — Zion Tech Group';
   const description = 'Automate invoice capture, 3-way match, approvals, and sync to your ERP with AI-powered extraction and fraud checks.';

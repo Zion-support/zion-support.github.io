@@ -1,55 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Cloud, 
-  Shield, 
-  BarChart3, 
-  Zap, 
-  CheckCircle, 
-  ArrowRight, 
-  DollarSign,
-  Clock,
-  Star,
-  TrendingUp,
-  Settings,
-  AlertTriangle,
-  Target,
-  Users,
-  Database,
-  Server,
-  Monitor,
-  Globe,
-  Smartphone,
-  Mail,
-  Phone,
-  Calendar,
-  FileText,
-  PieChart,
-  LineChart,
-  Activity,
-  CreditCard,
-  Lock,
-  Eye,
-  Bell,
-  Download,
-  Upload,
-  RefreshCw,
-  Play,
-  Pause,
-  Square,
-  Triangle,
-  Circle,
-  Hexagon,
-  Layers,
-  Wifi,
-  Building,
-  Home,
-  Car,
-  Plane,
-  Ship
-} from 'lucide-react';
-
-
+import { Cloud, CheckCircle, ArrowRight, Mail, Phone, Circle } from 'lucide-react';
 export default function CloudCostGuardPage() {
   const features = [
     {

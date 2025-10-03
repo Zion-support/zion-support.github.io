@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function October2025CuttingEdgeContentBanner() {
   return (
     <section className="py-20 bg-gradient-to-r from-cyan-900/50 via-blue-900/50 to-purple-900/50 backdrop-blur-sm border-y border-cyan-500/40">

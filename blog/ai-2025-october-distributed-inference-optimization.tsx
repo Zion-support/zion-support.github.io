@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const metadata = {
   title: 'Distributed Inference Optimization 2025 — Serving AI at Internet Scale',
   description: 'Achieve 10M+ inferences per second with sub-20ms latency, 95% cost reduction, and global deployment. Master distributed AI serving with edge computing, model parallelism, and intelligent caching for internet-scale applications.',

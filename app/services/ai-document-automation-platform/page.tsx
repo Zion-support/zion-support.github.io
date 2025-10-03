@@ -1,27 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  FileText, 
-  Upload, 
-  Download, 
-  Brain, 
-  Zap, 
-  Shield, 
-  CheckCircle, 
-  ArrowRight,
-  Clock,
-  DollarSign,
-  Users,
-  BarChart3,
-  Phone,
-  Mail,
-  MapPin,
-  FileCheck,
-  Search,
-  Edit3
-} from 'lucide-react';
-
-
+import { FileText, Upload, Brain, Zap, Shield, CheckCircle, ArrowRight, Clock, DollarSign, Users, BarChart3, Phone, Mail, MapPin, FileCheck, Search, Edit3 } from 'lucide-react';
 export default function AIDocumentAutomationPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-blue-50">

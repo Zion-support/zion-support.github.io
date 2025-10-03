@@ -1,8 +1,6 @@
-import React from 'react';
 import Head from 'next/head';
 import { Link } from 'react-router-dom';
-import { BarChart3, CheckCircle, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
-
+import { BarChart3, CheckCircle, ArrowRight, MapPin } from 'lucide-react';
 export default function DataPlatformModernizationPage() {
   const title = 'Data Platform Modernization (dbt + Snowflake) — Zion Tech Group';
   const description = 'Modern ELT with dbt, Snowflake/BigQuery, and governed metrics layer for reliable BI and lower costs.';

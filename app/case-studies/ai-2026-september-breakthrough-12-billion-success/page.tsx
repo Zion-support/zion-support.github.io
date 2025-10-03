@@ -1,6 +1,3 @@
-import React from 'react';
-
-
 export default function September2026BreakthroughSuccess() {
   return (
     <div className="min-h-screen bg-slate-950 text-white">

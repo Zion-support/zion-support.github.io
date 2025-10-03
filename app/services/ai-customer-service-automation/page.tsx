@@ -1,25 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  CheckCircle, 
-  Star, 
-  DollarSign, 
-  Clock,
-  Phone,
-  Mail,
-  MapPin,
-  Zap,
-  Shield,
-  TrendingUp,
-  Users,
-  Globe,
-  Brain,
-  MessageSquare,
-  BarChart3,
-  Settings
-} from 'lucide-react';
-
-
+import { CheckCircle, Star, Phone, Mail, MapPin, Zap, Brain, MessageSquare } from 'lucide-react';
 export default function AICustomerServiceAutomation() {
   const contactInfo = {
     phone: '+1 302 464 0950',

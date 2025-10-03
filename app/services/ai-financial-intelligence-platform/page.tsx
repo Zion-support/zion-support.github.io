@@ -1,25 +1,4 @@
-import React from 'react';
-import { 
-  DollarSign, 
-  TrendingUp, 
-  PieChart, 
-  Shield, 
-  Target, 
-  CheckCircle, 
-  Zap, 
-  Star,
-  Smartphone,
-  Calendar,
-  MessageSquare,
-  FileText,
-  BarChart3,
-  Clock,
-  Bell,
-  Users,
-  Award
-} from 'lucide-react';
-
-
+import { TrendingUp, Shield, CheckCircle, Users } from 'lucide-react';
 export default function AIFinancialIntelligencePlatform() {
   const features = [
     {

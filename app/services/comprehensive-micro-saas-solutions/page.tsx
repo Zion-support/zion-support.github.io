@@ -1,44 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Mic, 
-  FileText, 
-  BarChart3, 
-  Brain, 
-  Zap, 
-  Shield, 
-  Globe, 
-  Users, 
-  CheckCircle, 
-  ArrowRight,
-  Clock,
-  DollarSign,
-  Phone,
-  Mail,
-  MapPin,
-  Star,
-  TrendingUp,
-  Target,
-  Database,
-  Eye,
-  Search,
-  Edit3,
-  Upload,
-  Download,
-  PieChart,
-  LineChart,
-  AlertTriangle,
-  Cpu,
-  Cloud,
-  Lock,
-  Settings,
-  Monitor,
-  Smartphone,
-  Tablet,
-  Laptop
-} from 'lucide-react';
-
-
+import { Mic, FileText, BarChart3, Brain, Globe, Users, CheckCircle, ArrowRight, DollarSign, Phone, Mail, MapPin, Star, TrendingUp, Target, Edit3, Settings, Monitor } from 'lucide-react';
 export default function ComprehensiveMicroSaaSSolutionsPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">

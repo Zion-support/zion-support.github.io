@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const metadata = {
 	title: 'Enterprise GenAI Agent Platform: Blueprint for 2026 Adoption',
 	description:

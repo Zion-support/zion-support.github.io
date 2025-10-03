@@ -1,7 +1,8 @@
 import React from "react" ;
 import Link from 'next/link' ;
 import { motion } from 'framer-motion' ;
-import { Brain, Network, Cloud, ArrowRight, CheckCircle, Star, Users, Award, Phone, Mail, MapPin } from 'lucide-react' ;
+import { Cloud, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
+;
 import Layout from '../components/Layout' ;
 ;
 const stats = [

@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function January2026LatestTrendsBanner() {
   return (
     <section className="py-16 bg-gradient-to-br from-indigo-900/50 via-purple-900/50 to-pink-900/50 border-b border-indigo-500/30">

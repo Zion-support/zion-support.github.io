@@ -1,6 +1,4 @@
 // @ts-nocheck
-import React from 'react';
-
 export const metadata = {
   title: 'AI Executive Scorecards 2027: Proving ROI with Live KPIs',
   description: 'Design executive-ready AI scorecards that tie model spend to business KPIs. Ship guardrails, monitor SLIs, and demonstrate ROI continuously.'

@@ -1,6 +1,4 @@
 // @ts-nocheck
-import React from 'react';
-
 export default function ArticlePage() {
   return (
     <main className="min-h-screen bg-white">

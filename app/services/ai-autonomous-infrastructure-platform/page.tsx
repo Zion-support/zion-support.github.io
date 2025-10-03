@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function AIAutonomousInfrastructurePlatform() {
   return (
     <main className="min-h-screen bg-slate-950 text-white">

@@ -1,7 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Atom, Zap, Shield, Brain, TrendingUp, Target, CheckCircle } from 'lucide-react';
-
+import { ArrowRight, Atom, Zap, Brain, CheckCircle } from 'lucide-react';
 export default function QuantumAIBreakthrough2026() {
   return (
     <div className="min-h-screen bg-slate-950 text-white">

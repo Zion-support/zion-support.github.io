@@ -1,7 +1,5 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, BarChart3, TrendingUp, DollarSign, Clock, Shield, Database, Zap, Users, Target } from 'lucide-react';
-
+import { CheckCircle, BarChart3, TrendingUp, DollarSign, Shield, Database, Zap, Users, Target } from 'lucide-react';
 export default function AIBusinessIntelligencePlatform() {
   return (
     <>

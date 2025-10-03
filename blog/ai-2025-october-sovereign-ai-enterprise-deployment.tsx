@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const metadata = {
   title: 'Sovereign AI: The Enterprise Deployment Revolution of October 2025',
   description: 'Comprehensive guide to deploying sovereign AI systems with full data control, compliance, and enterprise-grade security. Real-world implementation strategies and $180M success story.',

@@ -1,6 +1,3 @@
-import React from 'react';
-
-
 export default function AIEnterpriseTransformation2026() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">

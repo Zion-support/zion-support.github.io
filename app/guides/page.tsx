@@ -7,9 +7,6 @@ export default function GuidesPage() {
   );
 }
 
-import React from 'react';
-
-
 export default function GuidesPage() {
   const guides = [
     {

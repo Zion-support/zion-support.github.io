@@ -1,4 +1,3 @@
-import React from 'react';
 import { Atom, Zap, TrendingUp, Sparkles, DollarSign, Award } from 'lucide-react';
 
 export default function October2025NeuralQuantumFusionBanner() {

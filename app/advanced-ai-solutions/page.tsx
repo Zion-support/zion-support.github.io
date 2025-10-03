@@ -1,14 +1,6 @@
-import React from 'react';
 import Head from 'next/head';
 import { Link } from 'react-router-dom';
-import { 
-  Brain, Bot, Cpu, Eye, MessageSquare, FileText, 
-  BarChart3, Shield, Zap, Target, Lightbulb, Rocket,
-  CheckCircle, ArrowRight, Star, Award, Phone, Mail, MapPin,
-  Network, Database, Globe, Users, Settings, Activity,
-  Microscope, Layers, Workflow, Monitor, Lock, TrendingUp
-} from 'lucide-react';
-
+import { Brain, Eye, Shield, Rocket, CheckCircle, Star, Phone, Mail, MapPin } from 'lucide-react';
 export const metadata = {
   title: 'Advanced AI Solutions — Zion Tech Group | Next-Generation Artificial Intelligence',
   description: 'Revolutionary AI solutions including autonomous systems, quantum AI, neural networks, and advanced machine learning for enterprise transformation.',

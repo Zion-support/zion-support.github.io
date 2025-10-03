@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const metadata = {
   title: 'Intelligent Automation Platform Revolution 2025 — End-to-End AI-Powered Automation',
   description: 'Deploy intelligent automation platforms achieving 98% process automation, 76% cost reduction, and 99.5% accuracy. Transform enterprise operations with AI that automates everything from simple tasks to complex workflows.',

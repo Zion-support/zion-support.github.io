@@ -1,6 +1,3 @@
-import React from 'react';
-
-
 export default function Fortune500AI2026JuneMegaSuccess() {
   return (
     <div className="min-h-screen bg-slate-950 text-white">

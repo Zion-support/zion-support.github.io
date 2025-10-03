@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const metadata = {
   title: 'Privacy-Preserving AI: Enterprise Deployment Guide 2025',
   description: 'Deploy AI while protecting sensitive data with federated learning, differential privacy, and secure computation. Achieve 100% data privacy compliance, 99.9% model accuracy, and unlock $4.7B in previously inaccessible AI applications.',

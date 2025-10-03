@@ -1,5 +1,3 @@
-import React from 'react';
-type Metadata = { title: string; description: string; keywords?: string[] };
 
 
 export default function AIDataGovernancePlatformPage() {

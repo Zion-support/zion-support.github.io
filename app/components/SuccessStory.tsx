@@ -1,5 +1,3 @@
-import React from 'react';
-
 interface SuccessStoryProps {
   title: string;
   description: string;

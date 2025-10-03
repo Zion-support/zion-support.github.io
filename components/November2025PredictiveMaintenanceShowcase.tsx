@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function November2025PredictiveMaintenanceShowcase() {
   return (
     <section className="py-16 bg-gradient-to-br from-slate-900 via-blue-900/30 to-cyan-900/30 border-y border-cyan-500/20">

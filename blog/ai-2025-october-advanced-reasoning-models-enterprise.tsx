@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const metadata = {
   title: 'Advanced Reasoning Models for Enterprise 2025 — Chain-of-Thought at Scale',
   description: 'Deploy advanced reasoning AI models achieving 97% accuracy on complex enterprise problems. Implement chain-of-thought, step-by-step reasoning, and multi-hop inference for mission-critical decision-making with $47M proven ROI.',

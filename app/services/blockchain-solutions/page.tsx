@@ -1,61 +1,6 @@
-import React from 'react';
 import Head from 'next/head';
 import { Link } from 'react-router-dom';
-import { 
-  Shield, 
-  Link as LinkIcon, 
-  Coins, 
-  Lock, 
-  CheckCircle, 
-  ArrowRight, 
-  DollarSign,
-  Clock,
-  Star,
-  Target,
-  Phone,
-  Mail,
-  MapPin,
-  Zap,
-  Rocket,
-  Award,
-  Building,
-  CreditCard,
-  Database,
-  BarChart3,
-  FileText,
-  Smartphone,
-  Laptop,
-  Monitor,
-  Settings,
-  PieChart,
-  Activity,
-  Eye,
-  Mic,
-  Network,
-  Cpu,
-  HardDrive,
-  Wifi,
-  Key,
-  AlertTriangle,
-  CheckSquare,
-  Globe,
-  Users,
-  TrendingUp,
-  Heart,
-  ShoppingCart,
-  Brain,
-  Code,
-  Cloud,
-  Server,
-  Layers,
-  GitBranch,
-  Container,
-  MessageSquare,
-  Search,
-  Camera,
-  Layers as Stack
-} from 'lucide-react';
-
+import { Link as LinkIcon, CheckCircle, ArrowRight, Phone, Mail, MapPin, Key, Layers, Layers as Stack } from 'lucide-react';
 export default function BlockchainSolutionsPage() {
   const title = 'Blockchain Solutions & Services — Zion Tech Group';
   const description = 'Enterprise blockchain solutions including smart contracts, DeFi platforms, NFT marketplaces, supply chain tracking, and digital identity verification. Production-ready with enterprise security.';

@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Building2, Brain, Sparkles, ArrowRight, Shield, Globe } from 'lucide-react';
 

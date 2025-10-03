@@ -1,4 +1,3 @@
-import React from 'react';
 import { TrendingUp, DollarSign, Shield, Zap, Award, Globe } from 'lucide-react';
 
 export default function October2025AutonomousFinancialIntelligenceRevolutionBanner() {

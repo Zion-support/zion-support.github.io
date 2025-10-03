@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function LatestTrendsShowcase2026() {
   return (
     <section className="py-20 bg-gradient-to-br from-indigo-900/30 via-purple-900/30 to-pink-900/30">

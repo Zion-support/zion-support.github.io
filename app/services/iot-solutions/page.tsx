@@ -1,60 +1,6 @@
-import React from 'react';
 import Head from 'next/head';
 import { Link } from 'react-router-dom';
-import { 
-  Wifi, 
-  Cpu, 
-  Smartphone, 
-  Shield, 
-  BarChart3, 
-  CheckCircle, 
-  ArrowRight, 
-  DollarSign,
-  Clock,
-  Star,
-  Target,
-  Phone,
-  Mail,
-  MapPin,
-  Zap,
-  Rocket,
-  Award,
-  Building,
-  CreditCard,
-  Database,
-  FileText,
-  Laptop,
-  Monitor,
-  Settings,
-  PieChart,
-  Activity,
-  Eye,
-  Mic,
-  Network,
-  HardDrive,
-  Key,
-  AlertTriangle,
-  CheckSquare,
-  Globe,
-  Users,
-  TrendingUp,
-  Heart,
-  ShoppingCart,
-  Brain,
-  Code,
-  Cloud,
-  Server,
-  Layers,
-  GitBranch,
-  Container,
-  MessageSquare,
-  Search,
-  Camera,
-  Thermometer,
-  Gauge,
-  MapPin as Location
-} from 'lucide-react';
-
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Building, Key, Cloud, MapPin as Location } from 'lucide-react';
 export default function IoTSolutionsPage() {
   const title = 'IoT Solutions & Services — Zion Tech Group';
   const description = 'Enterprise IoT solutions including smart sensors, edge computing, real-time monitoring, predictive maintenance, and industrial automation. Production-ready with enterprise security.';

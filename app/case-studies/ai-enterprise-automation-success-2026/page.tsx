@@ -1,7 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, Clock, User, TrendingUp, Shield, Zap, CheckCircle, Star, DollarSign, Target } from 'lucide-react';
-
+import { Clock, User, CheckCircle, DollarSign, Target } from 'lucide-react';
 export const metadata = {
   title: 'AI Enterprise Automation Success: $2.3B Cost Savings & 99.97% Uptime | Zion Tech Group',
   description: 'Discover how a Fortune 500 manufacturing giant achieved $2.3B cost savings, 99.97% uptime, and complete operational autonomy through AI enterprise automation in just 6 months.',

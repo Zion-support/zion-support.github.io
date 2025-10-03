@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function AIInnovationLabsSept302025() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-fuchsia-50 to-pink-50">

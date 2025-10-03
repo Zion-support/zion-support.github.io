@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function April2026MegaSuccessBanner() {
   return (
     <section className="py-16 bg-gradient-to-r from-green-900/50 via-emerald-900/50 to-teal-900/50 border-b border-green-500/30">

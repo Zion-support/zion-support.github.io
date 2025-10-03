@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const metadata = {
 	title: 'AI Autonomous Enterprise Operations: Complete 2025 Implementation Guide | Zion Tech Group',
 	description: 'Master autonomous AI operations with proven frameworks achieving 95% automation rates, $2M+ annual savings, and 99.99% uptime. Complete enterprise implementation guide.',

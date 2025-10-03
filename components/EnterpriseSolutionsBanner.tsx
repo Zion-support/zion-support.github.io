@@ -1,6 +1,5 @@
 import React from 'react';
-import { ArrowRight, Sparkles, Shield, Zap, Building2, Users, Globe, Lock } from 'lucide-react';
-
+import { ArrowRight, Shield, Zap, Building2, Users, Globe, Lock } from 'lucide-react';
 const EnterpriseSolutionsBanner: React.FC = () => {
   const enterpriseSolutions = [
     {

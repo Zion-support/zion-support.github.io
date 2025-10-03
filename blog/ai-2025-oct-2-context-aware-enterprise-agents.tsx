@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const metadata = {
   title: 'Context-Aware Enterprise AI Agents — Revolutionary Memory Systems for 2025',
   description: 'Deploy context-aware AI agents with 98.5% memory retention, achieving 92% cost reduction and 50x faster decision-making. Revolutionary persistent memory architecture transforming enterprise automation.',

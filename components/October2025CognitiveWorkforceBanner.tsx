@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function October2025CognitiveWorkforceBanner() {
   return (
     <section className="py-16 bg-gradient-to-br from-orange-900/40 via-red-900/40 to-pink-900/40 backdrop-blur-sm border-b border-orange-500/20">

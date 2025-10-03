@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function InteractiveContentShowcase2026Advanced() {
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-indigo-900 to-purple-900">

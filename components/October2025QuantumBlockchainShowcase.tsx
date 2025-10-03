@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function October2025QuantumBlockchainShowcase() {
   return (
     <section className="py-12 bg-gradient-to-br from-slate-950 via-purple-950 to-slate-950 border-y border-purple-500/20">

@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Cpu, Zap, Globe, TrendingUp, Award, Star, Brain, Shield, Target } from 'lucide-react';
-
+import { Cpu, Globe, TrendingUp, Award, Star, Brain, Shield, Target } from 'lucide-react';
 const January2025HyperIntelligentSystemsBanner: React.FC = () => {
   return (
     <motion.div

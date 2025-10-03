@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Sparkles, TrendingUp, Zap, DollarSign, Target, Users, Globe, Award, ArrowRight } from 'lucide-react';
-
+import { Sparkles, ArrowRight } from 'lucide-react';
 const October2025RealTimeAnalyticsShowcase: React.FC = () => {
   const features = [
     {

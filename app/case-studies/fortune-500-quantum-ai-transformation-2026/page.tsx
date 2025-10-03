@@ -1,7 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, TrendingUp, Target, Users, DollarSign, Zap, Shield, CheckCircle } from 'lucide-react';
-
+import { ArrowRight, TrendingUp, Users, DollarSign, CheckCircle } from 'lucide-react';
 export default function Fortune500QuantumAITransformation2026() {
   return (
     <div className="min-h-screen bg-slate-950 text-white">

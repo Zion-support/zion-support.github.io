@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function October2025EnterpriseMetaverseSyntheticRealityBanner() {
   return (
     <section className="py-16 bg-gradient-to-r from-violet-900/50 via-fuchsia-900/50 to-purple-900/50 border-y border-violet-500/30">

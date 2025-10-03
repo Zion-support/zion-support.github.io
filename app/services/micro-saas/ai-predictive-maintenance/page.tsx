@@ -1,52 +1,6 @@
-import React from 'react';
 import Head from 'next/head';
 import { Link } from 'react-router-dom';
-import { 
-  Wrench, 
-  AlertTriangle, 
-  BarChart3, 
-  CheckCircle, 
-  ArrowRight, 
-  DollarSign,
-  Clock,
-  Star,
-  Target,
-  Phone,
-  Mail,
-  MapPin,
-  Lock,
-  Database,
-  Globe,
-  Users,
-  Award,
-  Rocket,
-  TrendingUp,
-  Activity,
-  Shield,
-  Key,
-  FileText,
-  Eye,
-  Mic,
-  Network,
-  Server,
-  HardDrive,
-  Wifi,
-  Building,
-  Heart,
-  ShoppingCart,
-  CreditCard,
-  Cpu,
-  Monitor,
-  PieChart,
-  Layers,
-  GitBranch,
-  Container,
-  Zap,
-  Brain,
-  Calendar,
-  Smartphone
-} from 'lucide-react';
-
+import { Wrench, CheckCircle, ArrowRight, DollarSign, Target, Phone, Mail, MapPin, Award, TrendingUp } from 'lucide-react';
 export default function AIPredictiveMaintenancePage() {
   const title = 'AI Predictive Maintenance Platform — Zion Tech Group';
   const description = 'Intelligent predictive maintenance platform using AI and IoT sensors to prevent equipment failures, reduce downtime, and optimize maintenance schedules. Save millions in unplanned downtime costs.';

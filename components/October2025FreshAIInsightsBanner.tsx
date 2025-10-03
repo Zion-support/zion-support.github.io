@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function October2025FreshAIInsightsBanner() {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-indigo-900/40 via-purple-900/40 to-pink-900/40 border border-indigo-500/30 rounded-2xl p-6 mb-6">

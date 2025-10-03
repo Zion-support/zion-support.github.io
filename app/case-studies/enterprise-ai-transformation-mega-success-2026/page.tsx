@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const metadata = {
   title: 'Enterprise AI Transformation: $150M ROI Success Story | Zion Tech Group',
   description: 'Discover how a Fortune 500 company achieved $150M ROI through comprehensive AI transformation. Learn about autonomous systems, quantum computing, and enterprise automation strategies.',

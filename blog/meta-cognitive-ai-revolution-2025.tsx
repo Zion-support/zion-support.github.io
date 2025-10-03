@@ -1,6 +1,4 @@
-import React from 'react';
-import { Brain, TrendingUp, Zap, Star, ArrowRight, Sparkles, Atom, Bot } from 'lucide-react';
-
+import { Brain, TrendingUp, Star, ArrowRight, Sparkles, Bot } from 'lucide-react';
 export default function MetaCognitiveAIRevolution2025() {
   return (
     <div className="min-h-screen bg-slate-950">

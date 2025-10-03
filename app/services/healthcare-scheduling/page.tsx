@@ -1,31 +1,6 @@
-import React from 'react';
 import Head from 'next/head';
 import { Link } from 'react-router-dom';
-import { 
-  Heart, 
-  Calendar, 
-  Video, 
-  Shield, 
-  Bell, 
-  CreditCard, 
-  CheckCircle, 
-  ArrowRight, 
-  Phone,
-  Mail,
-  MapPin,
-  Star,
-  Users,
-  Clock,
-  FileText,
-  Database,
-  Smartphone,
-  Globe,
-  Lock,
-  Zap,
-  Target,
-  Award
-} from 'lucide-react';
-
+import { Heart, Calendar, CheckCircle, Phone, Mail, MapPin } from 'lucide-react';
 export default function HealthcareSchedulingPage() {
   const title = 'Healthcare Appointment Scheduling Platform — Zion Tech Group';
   const description = 'Complete appointment management system with telemedicine integration, patient portal, and HIPAA-compliant security. Reduce no-shows by 40% and improve patient satisfaction.';

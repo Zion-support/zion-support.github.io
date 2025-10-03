@@ -1,4 +1,3 @@
-import React from 'react';
 import { Sparkles, Globe, Award, CheckCircle, ArrowRight, Briefcase } from 'lucide-react';
 
 export default function October2025CognitiveAutomationMegaShowcase() {

@@ -1,4 +1,3 @@
-import React from 'react';
 import { BarChart3, CheckCircle, ArrowRight, DollarSign, Clock } from 'lucide-react';
 
 

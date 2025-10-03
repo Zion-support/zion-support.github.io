@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Clock, User, Tag, Share2, BookOpen, CheckCircle, TrendingUp, Brain, Zap } from 'lucide-react';
 

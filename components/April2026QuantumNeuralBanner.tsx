@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function April2026QuantumNeuralBanner() {
   return (
     <section className="py-12 bg-gradient-to-r from-cyan-900/50 via-blue-900/50 to-indigo-900/50 border-b border-cyan-500/30">

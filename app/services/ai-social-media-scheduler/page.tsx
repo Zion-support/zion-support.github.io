@@ -1,23 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Calendar, 
-  Users, 
-  TrendingUp, 
-  Zap, 
-  CheckCircle, 
-  Star,
-  ArrowRight,
-  Clock,
-  Target,
-  BarChart3,
-  Share2,
-  MessageSquare,
-  Image,
-  Video,
-  Hash
-} from 'lucide-react';
-
+import { Calendar, Users, TrendingUp, Zap, CheckCircle, ArrowRight, Clock, Target, BarChart3, Share2, MessageSquare, Image, Video } from 'lucide-react';
 export const metadata = {
   title: 'AI Social Media Scheduler | Zion Tech Group',
   description: 'Revolutionary AI-powered social media scheduling platform that automates content distribution across all platforms with intelligent optimization.',

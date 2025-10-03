@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const metadata = {
   title: 'Multimodal AI: The Enterprise Transformation Blueprint for October 2025',
   description: 'Master multimodal AI systems that process text, images, video, audio, and sensor data simultaneously. Implementation guide with proven strategies delivering 340% ROI.',

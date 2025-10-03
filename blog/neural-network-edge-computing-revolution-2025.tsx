@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const metadata = {
   title: 'Neural Network Edge Computing Revolution 2025 — Real-Time Intelligence Everywhere',
   description: 'Deploy neural networks at the edge achieving sub-10ms inference, 99.9% uptime, and 95% bandwidth reduction. Revolutionary edge AI enabling real-time intelligence for autonomous vehicles, IoT, and smart cities.',

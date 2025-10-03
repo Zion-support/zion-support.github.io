@@ -1,43 +1,6 @@
-import React from 'react';
 import Head from 'next/head';
 import { Link } from 'react-router-dom';
-import { 
-  Calendar, 
-  Clock, 
-  Users, 
-  CheckCircle, 
-  ArrowRight, 
-  DollarSign,
-  Star,
-  Target,
-  Phone,
-  Mail,
-  MapPin,
-  Zap,
-  Shield,
-  BarChart3,
-  FileText,
-  Smartphone,
-  Heart,
-  Building,
-  CreditCard,
-  Database,
-  Globe,
-  MessageSquare,
-  TrendingUp,
-  Settings,
-  Bell,
-  Video,
-  Camera,
-  Mic,
-  Eye,
-  Lock,
-  Activity,
-  PieChart,
-  Award,
-  Rocket
-} from 'lucide-react';
-
+import { CheckCircle } from 'lucide-react';
 export default function AIAppointmentSchedulerPage() {
   const title = 'AI-Powered Healthcare Appointment Scheduler — Zion Tech Group';
   const description = 'Revolutionary appointment scheduling platform for healthcare providers with AI-powered optimization, patient management, and virtual consultation capabilities.';

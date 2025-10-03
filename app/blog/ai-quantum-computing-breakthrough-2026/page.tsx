@@ -1,6 +1,3 @@
-import React from 'react';
-
-
 export default function AIQuantumComputingBreakthrough2026() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">

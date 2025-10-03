@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Atom, Brain, Zap, ArrowRight, Sparkles, Cpu, Network } from 'lucide-react';
-
+import { Atom, Brain, ArrowRight, Sparkles, Cpu, Network } from 'lucide-react';
 const December2025QuantumSyntheticConsciousnessRevolutionBanner: React.FC = () => {
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 rounded-2xl p-8 mb-8 shadow-2xl">

@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function October2025AutonomousIntelligenceMegaBanner() {
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-indigo-950 via-purple-900 to-blue-950 py-20 border-y border-indigo-500/30">

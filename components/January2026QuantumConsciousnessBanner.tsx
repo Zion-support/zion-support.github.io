@@ -1,7 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Brain, Zap, TrendingUp, Star } from 'lucide-react';
-
+import { ArrowRight, Brain, Zap, Star } from 'lucide-react';
 export default function January2026QuantumConsciousnessBanner() {
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">

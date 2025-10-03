@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function October2025AutonomousDataOpsBanner() {
   return (
     <section className="py-16 bg-gradient-to-r from-emerald-900/30 via-teal-900/30 to-cyan-900/30 backdrop-blur-sm border-b border-emerald-500/20">

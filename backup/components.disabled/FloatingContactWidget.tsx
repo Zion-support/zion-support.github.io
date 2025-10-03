@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MessageCircle, X, Mail, Phone, Calendar, Send } from 'lucide-react';
+import { MessageCircle, X, Send } from 'lucide-react';
 const 'FloatingContactWidget': React.FC = () => {'
   const [isOpen, setIsOpen] = useState(false);
   const contactOptions = [{'

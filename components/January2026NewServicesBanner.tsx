@@ -1,6 +1,4 @@
 // @ts-nocheck
-import React from 'react';
-
 export default function January2026NewServicesBanner() {
   return (
     <div className="rounded-xl border border-white/10 bg-white/5 p-6 text-white">

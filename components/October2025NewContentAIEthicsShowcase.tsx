@@ -1,5 +1,4 @@
-import React from 'react';
-import { Shield, Sparkles, CheckCircle2, TrendingUp, ArrowRight, Star } from 'lucide-react';
+import { Sparkles, CheckCircle2, ArrowRight, Star } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const October2025NewContentAIEthicsShowcase = () => {

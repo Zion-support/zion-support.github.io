@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const metadata = {
   title: 'Enterprise Vector Database Optimization — October 2025',
   description: 'Practical strategies to optimize vector databases for RAG, hybrid search, and enterprise-scale latency/SLA targets.',

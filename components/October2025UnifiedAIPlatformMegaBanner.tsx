@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Layers, TrendingUp, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';
-
+import { Layers, Shield, CheckCircle, ArrowRight } from 'lucide-react';
 const October2025UnifiedAIPlatformMegaBanner: React.FC = () => {
   return (
     <section className="relative bg-gradient-to-br from-indigo-950 via-purple-900 to-blue-950 py-24 overflow-hidden">

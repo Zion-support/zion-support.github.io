@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function October2025UltimateAIInnovationsBanner() {
   return (
     <section className="py-20 bg-gradient-to-r from-purple-900/50 via-rose-900/50 to-emerald-900/50 backdrop-blur-sm border-y-4 border-purple-500/50">

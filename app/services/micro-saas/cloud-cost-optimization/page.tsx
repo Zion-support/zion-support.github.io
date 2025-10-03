@@ -1,9 +1,6 @@
 "use client"
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { TrendingUp, CheckCircle, DollarSign, BarChart3, Server, Calendar, Phone, Mail, MapPin } from 'lucide-react';
-
-
+import { TrendingUp, CheckCircle, BarChart3, Phone, Mail, MapPin } from 'lucide-react';
 export default function CloudCostOptimizationPage() {
   const contact = {
     phone: '+1 302 464 0950',

@@ -1,7 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
-import { FileText, Rocket, CheckCircle, ArrowRight, Database } from "lucide-react";
-
+import { CheckCircle, ArrowRight, Database } from 'lucide-react';
 const AIMicroSAAS: React.FC = () => {
   const services = [
     {

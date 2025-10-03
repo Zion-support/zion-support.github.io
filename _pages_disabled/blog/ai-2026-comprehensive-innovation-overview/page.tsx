@@ -1,8 +1,6 @@
-import React from 'react';
 import { Metadata } from 'next';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Clock, Users, TrendingUp, Shield, Zap, Brain, Rocket } from 'lucide-react';
-
+import { ArrowRight, Users, TrendingUp, Shield, Zap, Brain, Rocket } from 'lucide-react';
 export const metadata: Metadata = {
   title: 'AI 2026: Comprehensive Innovation Overview - The Future of Enterprise Intelligence',
   description: 'Explore the complete landscape of AI innovations in 2026, from autonomous systems to quantum computing. Discover how these technologies are transforming enterprise operations and delivering unprecedented ROI.',

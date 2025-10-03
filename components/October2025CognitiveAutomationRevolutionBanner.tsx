@@ -1,4 +1,3 @@
-import React from 'react';
 import { Bot, TrendingUp, Zap, ArrowRight, DollarSign, Target, Brain } from 'lucide-react';
 
 export default function October2025CognitiveAutomationRevolutionBanner() {

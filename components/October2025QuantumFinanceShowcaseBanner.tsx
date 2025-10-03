@@ -1,5 +1,3 @@
-import React from 'react';
-
 const October2025QuantumFinanceShowcaseBanner = () => {
   return (
     <section className="py-12 bg-gradient-to-r from-cyan-900/30 via-emerald-900/30 to-blue-900/30 backdrop-blur-sm border-b border-cyan-500/20">

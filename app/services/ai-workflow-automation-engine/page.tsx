@@ -1,29 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Zap, 
-  Workflow, 
-  Settings, 
-  Target, 
-  Brain, 
-  BarChart3, 
-  Clock, 
-  CheckCircle,
-  DollarSign,
-  Star,
-  ArrowRight,
-  Users,
-  FileText,
-  Calendar,
-  Shield,
-  Globe,
-  Activity,
-  TrendingUp,
-  Cpu,
-  Database
-} from 'lucide-react';
-
-
+import { Zap, Workflow, Brain, BarChart3, Clock, CheckCircle, DollarSign, Star, Users, FileText, Calendar, Shield, Activity, TrendingUp, Cpu, Database } from 'lucide-react';
 export default function AIWorkflowAutomationEngine() {
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">

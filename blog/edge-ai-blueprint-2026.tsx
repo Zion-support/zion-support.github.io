@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const metadata = {
 	title: 'Edge AI Blueprint 2026',
 	description: 'Private &lt;100ms personalization and analytics with scoped IDs, on-device models, and DP.'

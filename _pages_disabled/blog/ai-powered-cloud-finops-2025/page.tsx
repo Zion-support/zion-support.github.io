@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, DollarSign, TrendingDown, BarChart3, Zap, Cloud, LineChart } from 'lucide-react';
 

@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const metadata = {
   title: 'AI Sales Copilot | Zion Tech Group',
   description: 'AI copilot for SDRs and AEs: lead research, outreach drafting, objection handling, deal insights, and CRM updates.',

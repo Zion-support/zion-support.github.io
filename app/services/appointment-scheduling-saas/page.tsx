@@ -1,26 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  CheckCircle, 
-  Star, 
-  DollarSign, 
-  Clock,
-  Phone,
-  Mail,
-  MapPin,
-  Zap,
-  Shield,
-  TrendingUp,
-  Users,
-  Globe,
-  Calendar,
-  Clock3,
-  CreditCard,
-  BarChart3,
-  Smartphone
-} from 'lucide-react';
-
-
+import { CheckCircle, Star, Clock, Phone, Mail, MapPin, Zap, Globe, Calendar, Clock3 } from 'lucide-react';
 export default function AppointmentSchedulingSaaS() {
   const contactInfo = {
     phone: '+1 302 464 0950',

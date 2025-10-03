@@ -1,8 +1,6 @@
-import React from 'react';
 import Head from 'next/head';
 import { Link } from 'react-router-dom';
-import { Image as ImageIcon, Video, Mic, Search, CheckCircle, Phone, Mail, MapPin } from 'lucide-react';
-
+import { Image as ImageIcon, Video, Mic, Search, CheckCircle, MapPin } from 'lucide-react';
 export default function MultimodalSearchPlatformPage() {
   const title = 'Multimodal Search & Insights Platform — Zion Tech Group';
   const description = 'Unify text, image, audio, and video search with vector/hybrid retrieval, real-time analytics, and secure enterprise controls.';

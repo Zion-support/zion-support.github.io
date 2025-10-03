@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const metadata = {
   title: 'Autonomous Mesh Orchestration 2025 — Self-Organizing AI Systems at Scale',
   description: 'Deploy self-organizing AI mesh networks achieving 99.7% autonomous coordination, 89% cost reduction, and 1000x scalability with zero human intervention. Revolutionary distributed intelligence for enterprise operations.',

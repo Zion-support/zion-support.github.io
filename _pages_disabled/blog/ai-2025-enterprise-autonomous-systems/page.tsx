@@ -1,4 +1,3 @@
-import React from 'react';
 import { Metadata } from 'next';
 import { ArrowRight, TrendingUp, Zap, Shield, Brain, Users } from 'lucide-react';
 

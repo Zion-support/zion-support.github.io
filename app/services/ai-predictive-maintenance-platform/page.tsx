@@ -1,30 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Wrench, 
-  AlertTriangle, 
-  TrendingUp, 
-  Target, 
-  Brain, 
-  BarChart3, 
-  Clock, 
-  CheckCircle,
-  DollarSign,
-  Star,
-  ArrowRight,
-  Settings,
-  FileText,
-  Calendar,
-  Shield,
-  Globe,
-  Activity,
-  Zap,
-  Cpu,
-  Database,
-  Eye
-} from 'lucide-react';
-
-
+import { Wrench, AlertTriangle, TrendingUp, Target, Brain, BarChart3, CheckCircle, DollarSign, Star, Settings, Shield, Activity, Zap, Cpu, Database, Eye } from 'lucide-react';
 export default function AIPredictiveMaintenancePlatform() {
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">

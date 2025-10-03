@@ -1,7 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, CheckCircle2, TrendingUp, Zap, Shield, Cloud, Database } from 'lucide-react';
-
+import { ArrowLeft, CheckCircle2, TrendingUp, Zap, Shield, Database } from 'lucide-react';
 export const metadata = {
   title: 'AI-Powered Autonomous Operations 2025: Self-Healing Infrastructure & Zero-Touch IT | Zion Tech Group',
   description: 'Master autonomous operations with AI-driven self-healing systems achieving 99.99% uptime, 95% cost reduction, and complete infrastructure automation. Real-world implementations across Fortune 500 enterprises.',

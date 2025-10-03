@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const metadata = {
   title: 'Advanced Neural Architecture Search 2025 — AI Designing AI Systems',
   description: 'Discover how automated neural architecture search (NAS) is revolutionizing AI development. Achieve 10x faster model design, 95% accuracy improvement, and $3.4B in development cost savings through AI-designed architectures.',

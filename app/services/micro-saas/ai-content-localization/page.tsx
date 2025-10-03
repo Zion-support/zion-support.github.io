@@ -1,8 +1,5 @@
 "use client"
-import React from 'react';
-import { Globe, CheckCircle, Languages, FileText, BarChart3, Phone, Mail, MapPin } from 'lucide-react';
-
-
+import { Globe, CheckCircle, Languages, BarChart3, Phone, Mail, MapPin } from 'lucide-react';
 export default function AIContentLocalizationPage() {
   const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com' };
   const features = [
@@ -87,55 +84,9 @@ export default function AIContentLocalizationPage() {
   );
 }
 
-import React from 'react';
 import Head from 'next/head';
 import { Link } from 'react-router-dom';
-import { 
-  Globe, 
-  Languages, 
-  Search, 
-  CheckCircle, 
-  ArrowRight, 
-  DollarSign,
-  Star,
-  Target,
-  Phone,
-  Mail,
-  MapPin,
-  Zap,
-  Shield,
-  BarChart3,
-  FileText,
-  Smartphone,
-  Heart,
-  Building,
-  CreditCard,
-  Database,
-  MessageSquare,
-  TrendingUp,
-  Settings,
-  Bell,
-  Video,
-  Camera,
-  Mic,
-  Eye,
-  Lock,
-  Activity,
-  PieChart,
-  Award,
-  Rocket,
-  Brain,
-  Code,
-  Cloud,
-  Network,
-  Server,
-  Monitor,
-  Users,
-  Cpu,
-  AlertTriangle,
-  CheckSquare
-} from 'lucide-react';
-
+import { Globe, CheckCircle, Languages, BarChart3, Phone, Mail, MapPin } from 'lucide-react';
 export default function AIContentLocalizationPage() {
   const title = 'AI Content Localization Suite — Zion Tech Group';
   const description = 'Automated translation, localization, and SEO optimization platform for global markets. Expand your business worldwide with AI-powered content adaptation.';

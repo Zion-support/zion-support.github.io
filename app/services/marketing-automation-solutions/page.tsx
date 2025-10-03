@@ -1,13 +1,6 @@
-import React from 'react';
 import Head from 'next/head';
 import { Link } from 'react-router-dom';
-import { 
-  Mail, MessageSquare, BarChart3, Users, Target, 
-  Clock, CheckCircle, ArrowRight, Phone, 
-  ExternalLink, Zap, Award, Globe, Smartphone, 
-  Brain, Monitor, Shield, TrendingUp, Share2
-} from 'lucide-react';
-
+import { Mail, CheckCircle, Phone, ExternalLink, Brain } from 'lucide-react';
 export const metadata = {
   title: 'Marketing Automation Solutions — Zion Tech Group',
   description: 'Comprehensive marketing automation micro SaaS solutions including email campaigns, social media, lead nurturing, and analytics.',

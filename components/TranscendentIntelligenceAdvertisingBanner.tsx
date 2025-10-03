@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function TranscendentIntelligenceAdvertisingBanner() {
   return (
     <section className="py-16 bg-gradient-to-r from-purple-900/50 via-indigo-900/50 to-cyan-900/50 border-b border-purple-500/30">

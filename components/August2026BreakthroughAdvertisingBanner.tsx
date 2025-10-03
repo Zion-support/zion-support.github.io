@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function August2026BreakthroughAdvertisingBanner() {
   return (
     <div className="bg-gradient-to-r from-purple-500/20 to-indigo-500/20 backdrop-blur-sm rounded-2xl p-6 border border-purple-500/30 mb-12">

@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const metadata = {
   title: 'What\'s New in October 2025 — Zion Tech Group',
   description: 'Roundup of our latest AI content published in October 2025: enterprise cost optimization, agentic workflow orchestration, and more.',

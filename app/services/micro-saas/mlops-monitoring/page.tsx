@@ -1,4 +1,3 @@
-import React from 'react';
 import * as Lucide from 'lucide-react';
 const { Activity, Bell, Database, BarChart3, Shield, CheckCircle, Mail, Phone, ArrowRight } = Lucide as any;
 

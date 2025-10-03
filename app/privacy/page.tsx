@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const metadata = {
   title: 'Privacy Policy - Zion Tech Group',
   description: 'Learn about how Zion Tech Group collects, uses, and protects your personal information in accordance with privacy laws.',

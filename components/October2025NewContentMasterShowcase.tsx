@@ -1,7 +1,5 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import { Rocket, FileText, TrendingUp, Settings, ArrowRight, Sparkles } from 'lucide-react';
-
+import { ArrowRight, Sparkles } from 'lucide-react';
 const October2025NewContentMasterShowcase = () => {
   const contentPieces = [
     {

@@ -1,7 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Brain, Zap, Shield, TrendingUp, Users, Target, CheckCircle } from 'lucide-react';
-
+import { ArrowRight, Brain, Zap, Users, CheckCircle } from 'lucide-react';
 export default function AINextGenEnterpriseAutomation2026() {
   return (
     <div className="min-h-screen bg-slate-950 text-white">

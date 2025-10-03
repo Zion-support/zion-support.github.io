@@ -1,5 +1,3 @@
-import React from 'react';
-
 const MultiAgentOrchestrationPlatforms2025 = () => {
   return (
     <article className="prose prose-lg max-w-4xl mx-auto px-4 py-8">

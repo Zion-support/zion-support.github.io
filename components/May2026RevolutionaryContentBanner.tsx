@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function May2026RevolutionaryContentBanner() {
   return (
     <section className="py-16 bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 relative overflow-hidden">

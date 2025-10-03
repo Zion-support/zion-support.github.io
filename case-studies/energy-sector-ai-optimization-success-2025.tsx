@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const metadata = {
   title: 'Energy Sector AI Optimization: $180M Savings & 88% Efficiency Gains',
   description: 'How a global energy company achieved $180M annual savings, 88% efficiency gains, and 92% carbon reduction through AI-powered grid optimization and predictive maintenance.',

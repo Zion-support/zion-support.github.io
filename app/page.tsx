@@ -1,8 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { Brain, TrendingUp, Shield, Cloud, BarChart3, Database, Users, Target, Zap, Rocket, Globe, Phone, Mail, MapPin, ArrowRight, Server } from 'lucide-react';
-
-
+import { Brain, Shield, Database, Users, Target, Zap, Rocket, Globe, Phone, Mail, MapPin, ArrowRight, Server } from 'lucide-react';
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-slate-950">

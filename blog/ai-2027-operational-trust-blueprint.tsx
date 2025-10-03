@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function AI2027OperationalTrustBlueprint(): JSX.Element {
   return (
     <article className="prose prose-invert max-w-3xl mx-auto py-16 px-6">

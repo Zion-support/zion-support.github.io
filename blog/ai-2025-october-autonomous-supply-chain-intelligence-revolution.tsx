@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const metadata = {
   title: 'Autonomous Supply Chain Intelligence 2025 — Multi-Agent Coordination Revolution',
   description: 'Deploy autonomous multi-agent supply chain systems achieving 99.2% on-time delivery, 58% cost reduction, and $4.2B value creation. Transform logistics with self-coordinating AI agents managing global networks autonomously.',

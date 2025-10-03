@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const metadata = {
   title: 'Intelligent Automation Orchestration 2025 — Enterprise Process Revolution',
   description: 'Revolutionary AI-powered automation platform achieving 98% process automation, 85% cost reduction, and $67M annual savings through intelligent orchestration of enterprise workflows.',

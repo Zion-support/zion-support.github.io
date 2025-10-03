@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function October2025CybersecurityEvolutionBanner() {
   return (
     <section className="relative py-16 bg-gradient-to-br from-red-950 via-orange-950 to-yellow-950 overflow-hidden border-y border-red-500/30">

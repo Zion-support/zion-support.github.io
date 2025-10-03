@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function July2026SuperintelligenceRevolutionBanner() {
   return (
     <section className="py-16 bg-gradient-to-br from-cyan-900 via-blue-900 to-purple-900 relative overflow-hidden">

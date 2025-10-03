@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function BreakthroughContent2026Banner() {
   return (
     <div className="py-16 bg-gradient-to-r from-blue-900 to-purple-900 text-white text-center">

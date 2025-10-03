@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function January2025CuttingEdgeTrendsBanner() {
   return (
     <section className="py-16 bg-gradient-to-r from-indigo-900/30 via-purple-900/30 to-pink-900/30 backdrop-blur-sm border-b border-indigo-500/20">

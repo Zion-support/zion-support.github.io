@@ -1,25 +1,4 @@
-import React from 'react';
-import { 
-  Heart, 
-  Target, 
-  TrendingUp, 
-  Users, 
-  Award, 
-  CheckCircle, 
-  Zap, 
-  DollarSign,
-  Star,
-  Smartphone,
-  Calendar,
-  MessageSquare,
-  FileText,
-  Shield,
-  BarChart3,
-  Clock,
-  Bell
-} from 'lucide-react';
-
-
+import { TrendingUp, Award, CheckCircle } from 'lucide-react';
 export default function AIHabitTrackingWellnessPlatform() {
   const features = [
     {

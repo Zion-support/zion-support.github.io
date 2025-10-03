@@ -1,5 +1,3 @@
-import React from 'react';
-
 const AIEnterpriseAdoptionPlaybook2025 = () => {
   return (
     <div className="container mx-auto px-6 py-16">

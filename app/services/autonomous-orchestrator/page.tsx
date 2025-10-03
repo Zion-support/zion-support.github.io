@@ -1,24 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Cpu, 
-  Brain, 
-  Zap, 
-  BarChart3, 
-  Shield, 
-  CheckCircle, 
-  ArrowRight, 
-  Star,
-  Activity,
-  Target,
-  TrendingUp,
-  Clock,
-  Users,
-  Database,
-  Globe
-} from 'lucide-react';
-
-
+import { Shield, CheckCircle, ArrowRight, Star, Database, Globe } from 'lucide-react';
 export default function AutonomousOrchestratorPage() {
   const features = [
     {

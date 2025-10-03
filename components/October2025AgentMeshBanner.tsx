@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function October2025AgentMeshBanner() {
   return (
     <section className="py-16 bg-gradient-to-br from-blue-900/40 via-cyan-900/40 to-teal-900/40 backdrop-blur-sm border-y border-cyan-500/30">

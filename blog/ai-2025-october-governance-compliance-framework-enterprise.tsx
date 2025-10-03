@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const metadata = {
   title: 'AI Governance & Compliance Framework 2025 — Enterprise-Grade Risk Management',
   description: 'Deploy comprehensive AI governance frameworks achieving 99.9% regulatory compliance, 94% risk reduction, and $186M+ liability protection. Revolutionary AI safety and compliance automation for regulated industries.',

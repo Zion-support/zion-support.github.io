@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { Sparkles, TrendingUp, Zap, Network } from 'lucide-react';
 

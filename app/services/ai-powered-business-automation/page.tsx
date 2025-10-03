@@ -1,26 +1,4 @@
-import React from 'react';
-import { 
-  Bot, 
-  Workflow, 
-  BarChart3, 
-  Zap, 
-  CheckCircle, 
-  ArrowRight,
-  Clock,
-  DollarSign,
-  Target,
-  Users,
-  Database,
-  Shield,
-  Brain,
-  MessageSquare,
-  FileText,
-  Calendar,
-  Mail,
-  Phone,
-  Globe
-} from 'lucide-react';
-
+import { Workflow, CheckCircle } from 'lucide-react';
 export default function AIPoweredBusinessAutomation() {
   const title = 'AI-Powered Business Automation — Zion Tech Group';
   const description = 'Transform your business operations with intelligent automation solutions. Reduce costs, increase efficiency, and scale your operations.';

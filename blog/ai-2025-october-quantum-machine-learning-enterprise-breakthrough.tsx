@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const metadata = {
   title: 'Quantum Machine Learning Enterprise Breakthrough 2025: Practical Implementation Guide',
   description: 'Complete guide to quantum machine learning for enterprise applications. $427M proven value, 10,000x speedup, and production-ready quantum-enhanced AI frameworks.',

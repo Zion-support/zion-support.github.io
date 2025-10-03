@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const metadata = {
   title: 'Autonomous DevSecOps Platform 2025 — AI-Powered Security Automation at Scale',
   description: 'Deploy autonomous DevSecOps achieving 99.8% threat prevention, 95% faster security patching, and $12.7M annual savings through AI-driven continuous security automation. Revolutionary security intelligence for modern enterprises.',

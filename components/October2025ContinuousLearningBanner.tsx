@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function October2025ContinuousLearningBanner() {
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-rose-900 via-pink-900 to-red-900 py-16 sm:py-24">

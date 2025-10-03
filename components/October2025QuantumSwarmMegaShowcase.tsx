@@ -1,4 +1,3 @@
-import React from 'react';
 import { Cpu, Layers, Network, Sparkles, Zap, TrendingUp } from 'lucide-react';
 
 export default function October2025QuantumSwarmMegaShowcase() {

@@ -1,7 +1,5 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Code, Shield, Users, DollarSign, Clock, BarChart3, Database, Zap, Globe } from 'lucide-react';
-
+import { CheckCircle, Code, Shield, BarChart3, Database, Zap, Globe } from 'lucide-react';
 export default function APIDevelopmentService() {
   return (
     <>

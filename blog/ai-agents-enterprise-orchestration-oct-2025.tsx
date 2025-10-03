@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const metadata = {
   title: 'AI Agent Orchestration: Enterprise Multi-Agent Systems 2025 | Zion Tech',
   description: 'Discover how enterprise AI agent orchestration is transforming business operations with coordinated multi-agent systems, achieving 89% automation and $45M cost savings.',

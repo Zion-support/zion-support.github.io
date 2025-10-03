@@ -1,4 +1,3 @@
-import React from 'react';
 import { Brain, Zap, TrendingUp, Sparkles } from 'lucide-react';
 
 export default function October2025QuantumSwarmCognitiveNetworksBanner() {

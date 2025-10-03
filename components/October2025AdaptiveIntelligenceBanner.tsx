@@ -1,5 +1,3 @@
-import React from 'react';
-
 const October2025AdaptiveIntelligenceBanner = () => {
   return (
     <div className="bg-gradient-to-r from-green-900 via-teal-900 to-blue-900 text-white py-16 px-6">

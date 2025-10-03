@@ -1,53 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Server, 
-  Shield, 
-  Cloud, 
-  Database, 
-  Users, 
-  CheckCircle, 
-  ArrowRight,
-  Clock,
-  DollarSign,
-  Phone,
-  Mail,
-  MapPin,
-  Star,
-  TrendingUp,
-  Target,
-  Eye,
-  Search,
-  Edit3,
-  Upload,
-  Download,
-  PieChart,
-  LineChart,
-  AlertTriangle,
-  Cpu,
-  Lock,
-  Settings,
-  Monitor,
-  Smartphone,
-  Tablet,
-  Laptop,
-  Globe,
-  Zap,
-  Brain,
-  BarChart3,
-  FileText,
-  Mic,
-  Building,
-  Briefcase,
-  Home,
-  Heart,
-  Factory,
-  ShoppingCart,
-  GraduationCap,
-  Truck
-} from 'lucide-react';
-
-
+import { Server, Shield, Cloud, CheckCircle, ArrowRight, Phone, Mail, MapPin, Cpu, Zap, BarChart3 } from 'lucide-react';
 export default function ComprehensiveITServicesPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50">

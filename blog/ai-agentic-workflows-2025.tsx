@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const metadata = {
   title: 'AI Agentic Workflows: The Future of Autonomous Business Operations',
   description: 'Explore how AI agents are revolutionizing business workflows with autonomous decision-making, multi-agent collaboration, and intelligent task orchestration.',

@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function AutonomousEnterpriseOperationsBanner() {
   return (
     <section className="py-20 bg-gradient-to-br from-green-900/40 via-emerald-900/40 to-teal-900/40 border-y border-green-500/30 relative overflow-hidden">

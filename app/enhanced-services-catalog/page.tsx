@@ -1,17 +1,6 @@
-import React from 'react';
 import Head from 'next/head';
 import { Link } from 'react-router-dom';
-import { 
-  Brain, Code, Cloud, Shield, Network, Server, BarChart3, Settings, 
-  Zap, Monitor, Search, MessageSquare, CheckCircle, ArrowRight, 
-  DollarSign, Clock, Users, Globe, Smartphone, Database, 
-  Lock, TrendingUp, Target, Lightbulb, Rocket, Cpu, 
-  Wifi, Eye, Headphones, FileText, Calendar, Mail,
-  Phone, MapPin, ExternalLink, Star, Award, Bot, 
-  Database as DbIcon, ShieldCheck, Activity, Layers,
-  Workflow, BrainCircuit, Microscope, Cog, Globe2
-} from 'lucide-react';
-
+import { Brain, Code, Cloud, Network, CheckCircle, Database, Mail, Phone, MapPin, Star, Database as DbIcon } from 'lucide-react';
 export const metadata = {
   title: 'Enhanced Services Catalog — Zion Tech Group | Micro SaaS, AI & IT Solutions',
   description: 'Comprehensive catalog of innovative micro SaaS, AI services, and IT solutions. Transform your business with cutting-edge technology and automation.',

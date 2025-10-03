@@ -1,25 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Mic, 
-  Volume2, 
-  Brain, 
-  Zap, 
-  Shield, 
-  Globe, 
-  Users, 
-  BarChart3,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Clock,
-  DollarSign,
-  Phone,
-  Mail,
-  MapPin
-} from 'lucide-react';
-
-
+import { Mic, Brain, Zap, Shield, Globe, Users, BarChart3, CheckCircle, ArrowRight, Clock, DollarSign, Phone, Mail, MapPin } from 'lucide-react';
 export default function AIVoiceAssistantPlatformPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">

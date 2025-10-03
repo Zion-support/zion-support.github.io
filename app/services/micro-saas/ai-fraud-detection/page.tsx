@@ -1,52 +1,6 @@
-import React from 'react';
 import Head from 'next/head';
 import { Link } from 'react-router-dom';
-import { 
-  Shield, 
-  AlertTriangle, 
-  Eye, 
-  CheckCircle, 
-  ArrowRight, 
-  DollarSign,
-  Star,
-  Target,
-  Phone,
-  Mail,
-  MapPin,
-  Zap,
-  BarChart3,
-  FileText,
-  Smartphone,
-  Heart,
-  Building,
-  CreditCard,
-  Database,
-  Globe,
-  MessageSquare,
-  TrendingUp,
-  Settings,
-  Bell,
-  Video,
-  Camera,
-  Mic,
-  Lock,
-  Activity,
-  PieChart,
-  Award,
-  Rocket,
-  Brain,
-  Code,
-  Cloud,
-  Network,
-  Server,
-  Monitor,
-  Users,
-  Cpu,
-  CheckSquare,
-  Search,
-  Clock
-} from 'lucide-react';
-
+import { CheckCircle } from 'lucide-react';
 export default function AIFraudDetectionPage() {
   const title = 'AI Fraud Detection & Prevention Platform — Zion Tech Group';
   const description = 'Advanced AI-powered fraud detection system with real-time monitoring, behavioral analysis, and automated prevention. Protect your business from financial losses.';

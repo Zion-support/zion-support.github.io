@@ -1,17 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, 
-  Search, 
-  Globe,
-  FileText,
-  Users,
-  Settings,
-  BookOpen,
-  Briefcase,
-  Mail
-} from 'lucide-react';
-
+import { ArrowRight, Search, FileText, Settings, BookOpen, Mail } from 'lucide-react';
 export const metadata = {
   title: 'Sitemap — Zion Tech Group Website Navigation',
   description: 'Complete sitemap of Zion Tech Group website. Find all pages, services, and resources organized for easy navigation.',

@@ -1,24 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Users, 
-  Clock, 
-  Calendar, 
-  Shield, 
-  Brain, 
-  CheckCircle, 
-  ArrowRight, 
-  Star,
-  Phone,
-  Mail,
-  MapPin,
-  Activity,
-  Heart,
-  AlertCircle,
-  Smartphone
-} from 'lucide-react';
-
-
+import { Shield, CheckCircle, ArrowRight, Star, Activity, AlertCircle } from 'lucide-react';
 export default function HealthcareSchedulerPage() {
   const features = [
     {

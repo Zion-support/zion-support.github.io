@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function October2025ManufacturingAISuccessBanner() {
   return (
     <section className="relative py-16 bg-gradient-to-br from-emerald-950 via-green-950 to-teal-950 overflow-hidden border-y border-emerald-500/30">

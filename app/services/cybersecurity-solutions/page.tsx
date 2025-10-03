@@ -1,13 +1,6 @@
-import React from 'react';
 import Head from 'next/head';
 import { Link } from 'react-router-dom';
-import { 
-  Shield, Eye, Lock, AlertTriangle, BarChart3, 
-  Clock, CheckCircle, ArrowRight, Phone, 
-  Mail, ExternalLink, Zap, Target, Award, 
-  Globe, Smartphone, Brain, Monitor, Search, Network
-} from 'lucide-react';
-
+import { CheckCircle, Phone, Mail, ExternalLink, Brain } from 'lucide-react';
 export const metadata = {
   title: 'Cybersecurity Solutions — Zion Tech Group',
   description: 'Comprehensive cybersecurity micro SaaS solutions including threat detection, vulnerability scanning, compliance, and security monitoring.',

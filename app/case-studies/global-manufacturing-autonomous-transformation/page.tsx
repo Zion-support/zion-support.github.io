@@ -1,8 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, TrendingUp, CheckCircle, Target, Clock, Users, DollarSign, BarChart3, Award, Zap } from 'lucide-react';
-
-
+import { ArrowLeft, TrendingUp, CheckCircle, Target, Clock, Users, BarChart3, Award, Zap } from 'lucide-react';
 export default function GlobalManufacturingCaseStudy() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">

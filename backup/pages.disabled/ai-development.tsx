@@ -1,8 +1,6 @@
-import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { Award,Brain,Cloud,Globe,Image,Target,Today,Users,Zap,} from 'lucide-react';
-
+import { Award, Brain, Cloud, Globe, Image, Target, Users, Zap,  } from 'lucide-react';
 export default function AIDevelopment() {return (<>;
       <Head />;
         <title />AI Development Services - Zion Tech Group</title>;

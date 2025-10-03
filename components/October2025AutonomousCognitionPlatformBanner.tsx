@@ -1,7 +1,5 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import { Brain, Rocket, Shield, BarChart3, CheckCircle } from 'lucide-react';
-
+import { Brain, Rocket, CheckCircle } from 'lucide-react';
 const October2025AutonomousCognitionPlatformBanner = () => {
   return (
     <motion.div

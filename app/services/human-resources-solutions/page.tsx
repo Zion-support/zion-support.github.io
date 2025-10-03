@@ -1,13 +1,6 @@
-import React from 'react';
 import Head from 'next/head';
 import { Link } from 'react-router-dom';
-import { 
-  Users, UserCheck, FileText, BarChart3, Calendar, 
-  DollarSign, Clock, CheckCircle, ArrowRight, Phone, 
-  Mail, MapPin, ExternalLink, Zap, Target, Award, 
-  Globe, Smartphone, Brain, Monitor, Shield, Briefcase
-} from 'lucide-react';
-
+import { CheckCircle, Phone, Mail, MapPin, ExternalLink, Brain } from 'lucide-react';
 export const metadata = {
   title: 'Human Resources Solutions — Zion Tech Group',
   description: 'Comprehensive HR micro SaaS solutions including recruitment, performance management, payroll, and employee analytics.',

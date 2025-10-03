@@ -1,13 +1,6 @@
-import React from 'react';
 import Head from 'next/head';
 import { Link } from 'react-router-dom';
-import { 
-  Heart, Stethoscope, Users, FileText, Shield, 
-  Calendar, BarChart3, Clock, CheckCircle, 
-  ArrowRight, Phone, Mail, MapPin, ExternalLink,
-  Zap, Target, Award, Globe, Smartphone, Activity
-} from 'lucide-react';
-
+import { CheckCircle, Phone, Mail, MapPin, ExternalLink, Activity } from 'lucide-react';
 export const metadata = {
   title: 'Healthcare Technology Solutions — Zion Tech Group',
   description: 'Comprehensive healthcare micro SaaS solutions including telemedicine, patient management, medical billing, and health analytics.',

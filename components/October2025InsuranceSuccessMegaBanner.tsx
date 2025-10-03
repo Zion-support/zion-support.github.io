@@ -1,4 +1,3 @@
-import React from 'react';
 import { Shield, DollarSign, Users, CheckCircle, Trophy, Sparkles } from 'lucide-react';
 
 const October2025InsuranceSuccessMegaBanner = () => {

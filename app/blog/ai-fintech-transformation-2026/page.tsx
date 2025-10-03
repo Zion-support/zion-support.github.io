@@ -1,6 +1,3 @@
-import React from 'react';
-
-
 export default function AIFinTechTransformation2026() {
   return (
     <div className="min-h-screen bg-white">

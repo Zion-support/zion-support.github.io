@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function AIEdgeComputing5GIntegration2025() {
   return (
     <article className="min-h-screen bg-slate-950 text-white">

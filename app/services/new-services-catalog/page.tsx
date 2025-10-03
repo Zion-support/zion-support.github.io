@@ -1,29 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Code, 
-  Cloud, 
-  Shield, 
-  Zap, 
-  BarChart3, 
-  Users, 
-  MessageSquare, 
-  FileText, 
-  Smartphone, 
-  Globe, 
-  Lock, 
-  Monitor, 
-  Database, 
-  Cpu,
-  CheckCircle,
-  ArrowRight,
-  DollarSign,
-  Clock,
-  Star
-} from 'lucide-react';
-
-
+import { Cloud, CheckCircle, ArrowRight, DollarSign, Clock, Star } from 'lucide-react';
 export default function NewServicesCatalogPage() {
   const serviceCategories = [
     {

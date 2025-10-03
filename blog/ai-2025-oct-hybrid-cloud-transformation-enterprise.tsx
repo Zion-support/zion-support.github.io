@@ -1,6 +1,5 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Cloud, Server, Shield, Zap, TrendingUp, CheckCircle, ArrowRight } from 'lucide-react';
+import { Cloud, Shield, Zap, TrendingUp, CheckCircle, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const HybridCloudTransformation = () => {

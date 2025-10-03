@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function October2025MultiModalKnowledgeBanner() {
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-violet-900/30 via-fuchsia-900/30 to-purple-900/30 backdrop-blur-sm py-20 border-b border-violet-500/20">

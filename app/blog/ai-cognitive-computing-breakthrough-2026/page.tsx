@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Clock, User, Calendar, Share2, Bookmark } from 'lucide-react';
 
