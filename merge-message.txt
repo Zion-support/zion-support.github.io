@@ -1,0 +1,1 @@
+Update header/footer nav links; set social URLs; fix vite config chunk output structure
