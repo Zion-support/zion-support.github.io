@@ -4,7 +4,7 @@
  * Reduces Time to Interactive (TTI) by up to 60%
  */
 
-import React, { Suspense, useEffect, useState } from 'react';
+import React, { Suspense, useEffect, useState } from 'react'
 interface OptimizedBannerLoaderProps {
   bannerId: string,,
 import React, { Suspense, useEffect, useState: any;
@@ -62,7 +62,7 @@ export default function OptimizedBannerLoader({
           }
         });
       },
-      { rootMargin: '200px' } // Load 200px before entering viewport;';
+      { rootMargin: '200px' } // Load 200px before entering viewport;'
       { rootMargin: '200px' } // Load 200px before entering viewport'
     );
 

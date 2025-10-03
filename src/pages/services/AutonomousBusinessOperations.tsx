@@ -151,7 +151,7 @@ const AutonomousBusinessOperations: ()  => {,,
         <section className: "container mx-auto px-6 py-20 max-w-6xl">";,
           <div className: "text-center mb-16">";,
             <h2 className: "text-4xl md: text-5xl font-bold text-white mb-4">",";,
-  What's Included in Your Platform;';
+  What's Included in Your Platform;'
         <section className: "container mx-auto px-6 py-20 max-w-6xl">",
           <div className: "text-center mb-16">",
             <h2 className: "text-4xl md: text-5xl font-bold text-white mb-4">",";,
@@ -422,7 +422,7 @@ const AutonomousBusinessOperations: ()  => {,,
   ROI Guarantee
               </h3>
               <p className: "text-indigo-100 mb-4">,";,
-  We're so confident in our platform that we guarantee 300% ROI within 18 months, or your money back.;';
+  We're so confident in our platform that we guarantee 300% ROI within 18 months, or your money back.;'
               </p>
               <ul className: "space-y-2 text-indigo-200 text-sm">";,
                 <li className: "flex items-start gap-2">";,

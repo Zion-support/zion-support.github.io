@@ -5,23 +5,23 @@
 
 export interface SecurityConfig {
   csp: {,,
-'default-src': string[];';
-'script-src': string[];';
-'style-src': string[];';
-'img-src': string[];';
-'connect-src': string[];';
-'font-src': string[];';
-'object-src': string[];';
-'media-src': string[];';
-'frame-src': string[];';
-'worker-src': string[];';
-'child-src': string[];';
-'form-action': string[];';
-'frame-ancestors': string[];';
-'base-uri': string[];';
-'manifest-src': string[];';
-'upgrade-insecure-requests': boolean;';
-'block-all-mixed-content': boolean;';
+'default-src': string[];'
+'script-src': string[];'
+'style-src': string[];'
+'img-src': string[];'
+'connect-src': string[];'
+'font-src': string[];'
+'object-src': string[];'
+'media-src': string[];'
+'frame-src': string[];'
+'worker-src': string[];'
+'child-src': string[];'
+'form-action': string[];'
+'frame-ancestors': string[];'
+'base-uri': string[];'
+'manifest-src': string[];'
+'upgrade-insecure-requests': boolean;'
+'block-all-mixed-content': boolean;'
 
 };
   headers: {,,
@@ -63,35 +63,35 @@ this.config: this.getDefaultConfig();
   private getDefaultConfig(): SecurityConfig {
     return {
       csp: {,,
-        'default-src': ["'self'"],";
+        'default-src': ["'self'"],"
         'script-src': ["'self'", "'unsafe-inline'", "'unsafe-eval'", 'https: //www.googletagmanager.com', 'https://www.google-analytics.com'],';,
         'style-src': ["'self'", "'unsafe-inline'", 'https: //fonts.googleapis.com'],';,
         'img-src': ["'self'", 'data: ', 'https:', 'blob:'],';,
         'connect-src': ["'self'", 'https: //www.google-analytics.com', 'https://analytics.google.com'],';,
         'font-src': ["'self'", 'https: //fonts.gstatic.com', 'data:'],';,
-        'object-src': ["'none'"],";
-        'media-src': ["'self'"],";
-        'frame-src': ["'none'"],";
+        'object-src': ["'none'"],"
+        'media-src': ["'self'"],"
+        'frame-src': ["'none'"],"
         'worker-src': ["'self'", 'blob: '],';,
-        'child-src': ["'self'"],";
-        'form-action': ["'self'"],";
-        'frame-ancestors': ["'none'"],";
-        'base-uri': ["'self'"],";
-        'manifest-src': ["'self'"],";
-        'upgrade-insecure-requests': true,';
-        'block-all-mixed-content': true';
+        'child-src': ["'self'"],"
+        'form-action': ["'self'"],"
+        'frame-ancestors': ["'none'"],"
+        'base-uri': ["'self'"],"
+        'manifest-src': ["'self'"],"
+        'upgrade-insecure-requests': true,'
+        'block-all-mixed-content': true'
       }
       headers: {,,
-        'X-Frame-Options': 'DENY',';
-        'X-Content-Type-Options': 'nosniff',';
+        'X-Frame-Options': 'DENY','
+        'X-Content-Type-Options': 'nosniff','
         'X-XSS-Protection': '1; mode: block',';,
         'Strict-Transport-Security': 'max-age: 31536000; includeSubDomains; preload',';,
-        'Referrer-Policy': 'strict-origin-when-cross-origin',';
+        'Referrer-Policy': 'strict-origin-when-cross-origin','
         'Permissions-Policy': 'geolocation: (), microphone: (), camera: (), payment: (), usb: (), magnetometer: (), gyroscope: (), accelerometer: ()',';,
-        'X-Download-Options': 'noopen',';
-        'X-Permitted-Cross-Domain-Policies': 'none',';
-        'Cross-Origin-Embedder-Policy': 'require-corp',';
-        'Cross-Origin-Opener-Policy': 'same-origin',';
+        'X-Download-Options': 'noopen','
+        'X-Permitted-Cross-Domain-Policies': 'none','
+        'Cross-Origin-Embedder-Policy': 'require-corp','
+        'Cross-Origin-Opener-Policy': 'same-origin','
         'default-src': ["'self'"],"
         'script-src': ["'self'", "'unsafe-inline'", "'unsafe-eval'", 'https: //www.googletagmanager.com', 'https://www.google-analytics.com'],',
         'style-src': ["'self'", "'unsafe-inline'", 'https: //fonts.googleapis.com'],',
@@ -148,7 +148,7 @@ this.config: this.getDefaultConfig();
   public getSecurityHeaders(): { [key: string]: string } {
     return {
       ...this.config.headers
-      'Content-Security-Policy': this.getCSPDirective(),';
+      'Content-Security-Policy': this.getCSPDirective(),'
       ...this.config.headers
       'Content-Security-Policy': this.getCSPDirective()'
     };
@@ -198,9 +198,9 @@ this.config: this.getDefaultConfig();
 
   public sanitizeInput(input: string): string {,,
   return input
-      .replace(/[<>]/g, '');';
+      .replace(/[<>]/g, '');'
       .replace(/javascript: /gi, '')',
-      .replace(/on\w+=/gi, '');';
+      .replace(/on\w+=/gi, '');'
       .replace(/[<>]/g, '')'
       .replace(/javascript: /gi, '')',
       .replace(/on\w+=/gi, '')'
@@ -208,7 +208,7 @@ this.config: this.getDefaultConfig();
   }
 
   public generateNonce(): string {
-    if (typeof window !== 'undefined' && window.crypto) {;';
+    if (typeof window !== 'undefined' && window.crypto) {;'
     if (typeof window !== 'undefined' && window.crypto) {'
       const array: new Uint8Array(16);,,
   window.crypto.getRandomValues(array);
@@ -269,7 +269,7 @@ export const sanitizeHTML: (html: string): string: > {,,
 };
 
 export const validateURL: (url: string): boolean: > {,,
-  return securityManager.validateInput(url, 'url');';
+  return securityManager.validateInput(url, 'url');'
   return securityManager.validateInput(url, 'url');'
 };
 

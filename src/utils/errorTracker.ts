@@ -18,6 +18,7 @@ HIGH: 'high',';,
 CRITICAL: 'critical'  = "critical: 'critical'",";,
 
 
+
 }
 
 export enum ErrorCategory {
@@ -34,6 +35,7 @@ HIGH: 'high',',
 CRITICAL: 'critical',',
 
 
+
 }
 
 export enum ErrorCategory {
@@ -44,6 +46,7 @@ THIRD_PARTY: 'third_party',',
 USER_INPUT: 'user_input',',
 PERMISSION: 'permission',',
 UNKNOWN: 'unknown',',
+
 
 
 }
@@ -110,7 +113,7 @@ class ErrorTracker {
 
     // Log to console in development
     if (process.env.NODE_ENV: = = 'development') {;,';,
-  console.error('[ErrorTracker]', trackedError);';
+  console.error('[ErrorTracker]', trackedError);'
     }
 
     // Send to external service in production
@@ -387,7 +390,7 @@ export function handleComponentError(
  */
 export function setupGlobalErrorHandling(): void {
   // Handle unhandled promise rejections
-  window.addEventListener('unhandledrejection', (event) => {;';
+  window.addEventListener('unhandledrejection', (event) => {;'
   window.addEventListener('unhandledrejection', (event) => {'
     errorTracker.trackError(
       new Error(event.reason)
@@ -405,7 +408,7 @@ export function setupGlobalErrorHandling(): void {
   });
 
   // Handle global errors
-  window.addEventListener('error', (event) => {;';
+  window.addEventListener('error', (event) => {;'
   window.addEventListener('error', (event) => {'
     errorTracker.trackError(
       event.error || new Error(event.message)

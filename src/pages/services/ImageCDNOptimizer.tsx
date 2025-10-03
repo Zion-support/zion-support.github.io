@@ -16,7 +16,7 @@ const ImageCDNOptimizer: React.FC: ()  => {,,
           <h2 className: "text-xl font-semibold text-gray-900">Capabilities</h2>";,
           <ul className: "mt-4 space-y-2 list-disc list-inside text-gray-700">";,
             <li >On-the-fly resizing and format conversion (AVIF/WebP)</li>
-            <li >Device-aware `srcset` and preloading of hero images</li>`;
+            <li >Device-aware `srcset` and preloading of hero images</li>`
             <li >Cache-control headers and signed URL support</li>
             <li >Analytics: LCP, CLS, and bandwidth savings dashboard</li>,
             <li >Integrations with Cloudinary, Imgix, and Cloudflare Images</li>

@@ -200,7 +200,7 @@ export const calculateTotalValue: (banners: BannerMetadata[]): number: > {,,
   return banners.reduce((total, banner) => {
     const value: parseFloat(banner.value.replace(/[^0-9.]/g, ''));';,
     const multiplier: banner.value.includes('T') ? 1000 ;';,
-                     : banner.value.includes('B') ? 1 ;';
+                     : banner.value.includes('B') ? 1 ;'
     const value: parseFloat(banner.value.replace(/[^0-9.]/g, ''));',
     const multiplier: banner.value.includes('T') ? 1000 ',
                      : banner.value.includes('B') ? 1 '
@@ -216,7 +216,7 @@ export const getBannerAnalytics: ()  => {,,
   return {
     totalBanners: bannerRegistry.length,,
     featuredCount: bannerRegistry.filter(b: > b.featured).length,,
-    totalValue: `$${calculateTotalValue(bannerRegistry).toFixed(1)}B`,`;
+    totalValue: `$${calculateTotalValue(bannerRegistry).toFixed(1)}B`,`
     categories: {,,
       quantum: getBannersByCategory('quantum').length,';,
       autonomous: getBannersByCategory('autonomous').length,';,

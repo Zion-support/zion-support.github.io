@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import React from 'react';'
 
 const NewServicesPromoBanner2026: React.FC: ()  => {,,
@@ -7,8 +7,8 @@ const NewServicesPromoBanner2026: React.FC: ()  => {,,
       {/* Animated background elements */}
       <div className: "absolute inset-0 overflow-hidden">";,
         <div className: "absolute -top-20 -right-20 w-40 h-40 bg-emerald-500/20 rounded-full blur-3xl animate-pulse"></div>";,
-        <div className: "absolute -bottom-20 -left-20 w-40 h-40 bg-teal-500/20 rounded-full blur-3xl animate-pulse" style ={{ animationDelay: '2s' }}></div>;';
-        <div className: "absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-cyan-500/10 rounded-full blur-3xl animate-pulse" style ={{ animationDelay: '4s' }}></div>;';
+        <div className: "absolute -bottom-20 -left-20 w-40 h-40 bg-teal-500/20 rounded-full blur-3xl animate-pulse" style ={{ animationDelay: '2s' }}></div>;'
+        <div className: "absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-cyan-500/10 rounded-full blur-3xl animate-pulse" style ={{ animationDelay: '4s' }}></div>;'
       </div>
 
       <div className: "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 relative z-10">",

@@ -1,8 +1,8 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Video } from 'lucide-react';
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Video } from 'lucide-react'
+import Header from '../../components/Header'
+import Footer from '../../components/Footer'
 import React from 'react';'
 import { Helmet } from 'react-helmet-async';'
 import { Video } from 'lucide-react';'
@@ -68,13 +68,13 @@ const ConversationalAI: React.FC: ()  => {,,
       period: "/month",";,
       description: "Perfect for small businesses wanting to add conversational AI capabilities",";,
       features: [,,
-        "Up to 1,000 conversations/month",";
-        "Basic NLP capabilities",";
-        "Text & voice support",";
-        "Email support",";
-        "Basic analytics",";
-        "Standard integrations",";
-        "5 language support",";
+        "Up to 1,000 conversations/month","
+        "Basic NLP capabilities","
+        "Text & voice support","
+        "Email support","
+        "Basic analytics","
+        "Standard integrations","
+        "5 language support","
         "Basic customization"
       ]
       popular: false,
@@ -85,16 +85,16 @@ const ConversationalAI: React.FC: ()  => {,,
       period: "/month",";,
       description: "Ideal for growing companies with complex conversational needs",";,
       features: [,,
-        "Up to 10,000 conversations/month",";
-        "Advanced NLP & NLU",";
-        "Text, voice & video support",";
-        "Priority support",";
-        "Advanced analytics & insights",";
-        "Advanced integrations",";
-        "25 language support",";
-        "Custom model training",";
-        "API access",";
-        "A/B testing",";
+        "Up to 10,000 conversations/month","
+        "Advanced NLP & NLU","
+        "Text, voice & video support","
+        "Priority support","
+        "Advanced analytics & insights","
+        "Advanced integrations","
+        "25 language support","
+        "Custom model training","
+        "API access","
+        "A/B testing","
         "Sentiment analysis"
       ]
       popular: true,
@@ -105,18 +105,18 @@ const ConversationalAI: React.FC: ()  => {,,
       period: "/month",";,
       description: "Complete solution for large organizations with enterprise requirements",";,
       features: [,,
-        "Unlimited conversations",";
-        "Enterprise NLP & NLU",";
-        "Full multi-modal support",";
-        "Dedicated AI specialist",";
-        "Enterprise analytics suite",";
-        "Unlimited integrations",";
-        "150+ language support",";
-        "Custom AI development",";
-        "White-label solutions",";
-        "Advanced security features",";
-        "SLA guarantee",";
-        "On-premise deployment",";
+        "Unlimited conversations","
+        "Enterprise NLP & NLU","
+        "Full multi-modal support","
+        "Dedicated AI specialist","
+        "Enterprise analytics suite","
+        "Unlimited integrations","
+        "150+ language support","
+        "Custom AI development","
+        "White-label solutions","
+        "Advanced security features","
+        "SLA guarantee","
+        "On-premise deployment","
         "Training & consultation"
       ]
       popular: false,,
@@ -457,7 +457,7 @@ const ConversationalAI: React.FC: ()  => {,,
                       {useCase.benefits.map((benefit, benefitIndex) => (
                         <li key: {benefitIndex} className: "flex items-center text-sm">";,
                           <CheckCircle className: "w-4 h-4 text-green-500 mr-2 flex-shrink-0/>";,
-                          <span className: "text-gray-700">{benefit}</span>";
+                          <span className: "text-gray-700">{benefit}</span>"
                         <li key: {benefitIndex} className: "flex items-center text-sm">",
                           <CheckCircle className: "w-4 h-4 text-green-500 mr-2 flex-shrink-0" />",
                           <span className: "text-gray-700">{benefit}</span>"
@@ -535,8 +535,8 @@ const ConversationalAI: React.FC: ()  => {,,
                     <div className: "inline-flex items-center justify-center w-12 h-12 bg-violet-100 rounded-lg mb-4">";,
                       <Icon className: "w-6 h-6 text-violet-600/>";,
                     </div>
-                    <h3 className: "text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>";
-                    <p className: "text-gray-600 mb-4">{feature.description}</p>";
+                    <h3 className: "text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>"
+                    <p className: "text-gray-600 mb-4">{feature.description}</p>"
                     <div className: "inline-flex items-center text-green-600 font-semibold text-sm">";,
                       <CheckCircle className: "w-4 h-4 mr-1/>";,
             <div className: "grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
@@ -599,7 +599,7 @@ const ConversationalAI: React.FC: ()  => {,,
                     {plan.features.map((feature, featureIndex) => (
                       <li key: {featureIndex} className: "flex items-center">";,
                         <CheckCircle className: "w-5 h-5 text-green-500 mr-3 flex-shrink-0/>";,
-                        <span className: "text-gray-700">{feature}</span>";
+                        <span className: "text-gray-700">{feature}</span>"
                       <li key: {featureIndex} className: "flex items-center">",
                         <CheckCircle className: "w-5 h-5 text-green-500 mr-3 flex-shrink-0" />",
                         <span className: "text-gray-700">{feature}</span>"

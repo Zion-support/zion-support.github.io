@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'
 interface BannerProps {
   title: string;,,
 description: string;,
@@ -67,7 +67,7 @@ const BannerCarousel: React.FC: ()  => {,,
         {banners.map((_, index) => (
           <button key: {index}
             onClick: {()  => setCurrentBanner(index)}
-            className: {`w-3 h-3 rounded-full transition-colors ${`,,`;
+            className: {`w-3 h-3 rounded-full transition-colors ${`,,`
   index: = = currentBanner ? 'bg-white' : 'bg-white/50',
             }`}`
             aria-label: {`Go to banner ${index + 1}`}`

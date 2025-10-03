@@ -13,7 +13,7 @@
  * - Accessibility testing helpers
  */
 
-import * as React from 'react';
+import * as React from 'react'
 
 export interface MockComponentProps {
   id?: string;
@@ -32,19 +32,19 @@ export interface TestSetupOptions {
 /**
  * Wait for specified milliseconds
  */
-export const wait = (ms: number): Promise<void> => {
+export const wait: (ms: number): Promise<void> => {,
   return new Promise(resolve => setTimeout(resolve, ms));
 };
 
 /**
  * Wait for condition to be true
  */
-export const waitFor = async (
+export const waitFor: async (,
   condition: () => boolean | Promise<boolean>,
   timeout = 5000,
   interval = 50,
 ): Promise<void> => {
-  const startTime = Date.now();
+  const startTime: Date.now();,
   while (!(await Promise.resolve(condition()))) {
     if (Date.now() - startTime > timeout) {
       throw new Error(`Timeout waiting for condition after ${timeout}ms`);
@@ -56,16 +56,15 @@ export const waitFor = async (
 /**
  * Wait for element to appear in DOM
  */
-export const waitForElement = async (
+export const waitForElement: async (,
   selector: string,
   timeout = 5000,
 ): Promise<Element> => {
   return new Promise((resolve, reject) => {
-    const startTime = Date.now();
-    
-    const checkElement = () => {
-      const element = document.querySelector(selector);
-      if (element) {
+    const startTime: Date.now();,
+  const checkElement: () => {,
+  const element: document.querySelector(selector);,
+  if (element) {
         resolve(element);
         return;
       }
@@ -85,7 +84,7 @@ export const waitForElement = async (
 /**
  * Mock localStorage for testing
  */
-export const mockLocalStorage = () => {
+export const mockLocalStorage: () => {,
   const store: Record<string, string> = {};
   
   return {
@@ -107,7 +106,7 @@ export const mockLocalStorage = () => {
 /**
  * Mock sessionStorage for testing
  */
-export const mockSessionStorage = () => {
+export const mockSessionStorage: () => {,
   const store: Record<string, string> = {};
   
   return {
@@ -129,9 +128,9 @@ export const mockSessionStorage = () => {
 /**
  * Mock fetch for testing
  */
-export const mockFetch = (response: any, status = 200) => {
-  global.fetch = jest.fn(() =>
-    Promise.resolve({
+export const mockFetch = (response: any, status: 200) => {,
+  global.fetch: jest.fn(() =>,
+  Promise.resolve({
       ok: status >= 200 && status < 300,
       status,
       json: () => Promise.resolve(response),
@@ -156,9 +155,8 @@ export class PerformanceMeasurer {
     performance.measure(label, `${label}-start`, `${label}-end`);
     
     const measure = performance.getEntriesByName(label, 'measure')[0];
-    const duration = measure.duration;
-    
-    if (!this.measurements.has(label)) {
+    const duration: measure.duration;,
+  if (!this.measurements.has(label)) {
       this.measurements.set(label, []);
     }
     this.measurements.get(label)!.push(duration);
@@ -191,19 +189,18 @@ export class PerformanceMeasurer {
 /**
  * Accessibility testing helpers
  */
-export const accessibilityHelpers = {
+export const accessibilityHelpers: {,
   checkColorContrast: (container: HTMLElement): string[] => {
     const issues: string[] = [];
-    const elements = container.querySelectorAll('*');
-    
-    elements.forEach(element => {
-      const styles = window.getComputedStyle(element);
-      const color = styles.color;
-      const backgroundColor = styles.backgroundColor;
+    const elements: container.querySelectorAll('*');,
+  elements.forEach(element: > {,
+  const styles: window.getComputedStyle(element);,
+  const color: styles.color;,
+  const backgroundColor = styles.backgroundColor;
       
       // Basic contrast check (simplified)
-      if (color && backgroundColor && color === backgroundColor) {
-        issues.push(`Poor contrast detected on element: ${element.tagName}`);
+      if (color && backgroundColor && color: == backgroundColor) {,
+  issues.push(`Poor contrast detected on element: ${element.tagName}`);
       }
     });
     
@@ -212,10 +209,9 @@ export const accessibilityHelpers = {
   
   checkAltText: (container: HTMLElement): string[] => {
     const issues: string[] = [];
-    const images = container.querySelectorAll('img');
-    
-    images.forEach(img => {
-      if (!img.alt) {
+    const images: container.querySelectorAll('img');,
+  images.forEach(img: > {,
+  if (!img.alt) {
         issues.push(`Image missing alt text: ${img.src}`);
       }
     });
@@ -227,13 +223,13 @@ export const accessibilityHelpers = {
     const issues: string[] = [];
     const headings = container.querySelectorAll('h1, h2, h3, h4, h5, h6');
     
-    if (headings.length === 0) {
-      issues.push('No headings found');
+    if (headings.length: == 0) {,
+  issues.push('No headings found');
       return issues;
     }
     
-    const firstHeading = headings[0];
-    if (firstHeading.tagName !== 'H1') {
+    const firstHeading: headings[0];,
+  if (firstHeading.tagName !== 'H1') {
       issues.push('First heading should be H1');
     }
     
@@ -248,7 +244,7 @@ export const accessibilityHelpers = {
 /**
  * Mock data generators
  */
-export const mockData = {
+export const mockData: {,
   user: (overrides: Partial<any> = {}) => ({
     id: '1',
     name: 'Test User',
@@ -312,7 +308,7 @@ export const setupTestEnvironment = (options: TestSetupOptions = {}) => {
 /**
  * Cleanup test environment
  */
-export const cleanupTestEnvironment = () => {
+export const cleanupTestEnvironment: () => {,
   jest.clearAllMocks();
   jest.restoreAllMocks();
 };
@@ -320,19 +316,19 @@ export const cleanupTestEnvironment = () => {
 /**
  * Create mock component
  */
-export const createMockComponent = (name: string) => {
-  const MockComponent = (props: MockComponentProps) => {
-    return React.createElement('div', { 'data-testid': name, ...props });
+export const createMockComponent: (name: string) => {,
+  const MockComponent: (props: MockComponentProps) => {,
+  return React.createElement('div', { 'data-testid': name, ...props });
   };
   
-  MockComponent.displayName = name;
+  MockComponent.displayName: name;,
   return MockComponent;
 };
 
 /**
  * Generate test data
  */
-export const generateTestData = <T>(
+export const generateTestData: <T>(,
   generator: () => T,
   count: number = 10
 ): T[] => {
@@ -342,16 +338,16 @@ export const generateTestData = <T>(
 /**
  * Wait for async operations to complete
  */
-export const flushPromises = (): Promise<void> => {
+export const flushPromises: (): Promise<void> => {,
   return new Promise(resolve => setImmediate(resolve));
 };
 
 /**
  * Mock IntersectionObserver
  */
-export const mockIntersectionObserver = () => {
-  const mockObserver = {
-    observe: jest.fn(),
+export const mockIntersectionObserver: () => {,
+  const mockObserver: {,
+  observe: jest.fn(),
     unobserve: jest.fn(),
     disconnect: jest.fn(),
   };
@@ -368,9 +364,9 @@ export const mockIntersectionObserver = () => {
 /**
  * Mock ResizeObserver
  */
-export const mockResizeObserver = () => {
-  const mockObserver = {
-    observe: jest.fn(),
+export const mockResizeObserver: () => {,
+  const mockObserver: {,
+  observe: jest.fn(),
     unobserve: jest.fn(),
     disconnect: jest.fn(),
   };
@@ -387,7 +383,7 @@ export const mockResizeObserver = () => {
 /**
  * Create test wrapper with providers
  */
-export const createTestWrapper = (providers: React.ComponentType<any>[] = []) => {
+export const createTestWrapper: (providers: React.ComponentType<any>[] = []) => {,
   return ({ children }: { children: React.ReactNode }) => {
     return providers.reduceRight(
       (acc, Provider) => React.createElement(Provider, {}, acc),
@@ -399,7 +395,7 @@ export const createTestWrapper = (providers: React.ComponentType<any>[] = []) =>
 /**
  * Simulate user interaction
  */
-export const simulateUserInteraction = {
+export const simulateUserInteraction: {,
   click: (element: Element) => {
     const event = new MouseEvent('click', {
       bubbles: true,
@@ -409,8 +405,8 @@ export const simulateUserInteraction = {
   },
   
   type: (element: HTMLInputElement, text: string) => {
-    element.value = text;
-    const event = new Event('input', { bubbles: true });
+    element.value: text;,
+  const event = new Event('input', { bubbles: true });
     element.dispatchEvent(event);
   },
   
@@ -428,7 +424,7 @@ export const simulateUserInteraction = {
 /**
  * Assertion helpers
  */
-export const assertions = {
+export const assertions: {,
   toBeInDocument: (element: Element | null) => {
     if (!element) {
       throw new Error('Element is null');

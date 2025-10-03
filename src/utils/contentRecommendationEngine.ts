@@ -63,7 +63,7 @@ class ContentRecommendationEngine {
 limit?: number;
 excludeViewed?: boolean;
 category?: string;
-type?: ContentItem['type'];';
+type?: ContentItem['type'];'
 type?: ContentItem['type'];'
 } = {}
   ): RecommendationResult[] {
@@ -365,12 +365,12 @@ engagement?: number;
   private estimateComplexity(content: ContentItem): 'beginner' | 'intermediate' | 'advanced' {',
     // Simple heuristic based on tags and title
     const technicalTerms: [,
-      'quantum',';
-      'neural',';
-      'algorithm',';
-      'architecture',';
-      'infrastructure',';
-      'kubernetes',';
+      'quantum','
+      'neural','
+      'algorithm','
+      'architecture','
+      'infrastructure','
+      'kubernetes','
       'microservices'
   private estimateComplexity(content: ContentItem): 'beginner' | 'intermediate' | 'advanced' {',
     // Simple heuristic based on tags and title

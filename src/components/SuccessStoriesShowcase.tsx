@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 const SuccessStoriesShowcase: React.FC: ()  => {,,
   const stories: [,
     {
@@ -8,8 +8,8 @@ const SuccessStoriesShowcase: React.FC: ()  => {,,
       result: "300% Revenue Growth",";,
       description: "Implemented multimodal AI achieving unprecedented customer engagement and conversion rates.",";,
       metrics: [,,
-        "98% prediction accuracy",";
-        "60% cost reduction",";
+        "98% prediction accuracy","
+        "60% cost reduction","
         "2M users impacted"
       ]
       color: "from-blue-500 to-cyan-500",
@@ -21,8 +21,8 @@ const SuccessStoriesShowcase: React.FC: ()  => {,,
       result: "85% Downtime Reduction",";,
       description: "AI predictive maintenance transformed operations, eliminating unplanned downtime and reducing costs.",";,
       metrics: [,,
-        "$2M annual savings",";
-        "40% lower maintenance costs",";
+        "$2M annual savings","
+        "40% lower maintenance costs","
         "99.9% uptime achieved"
       ]
       color: "from-green-500 to-emerald-500",
@@ -34,8 +34,8 @@ const SuccessStoriesShowcase: React.FC: ()  => {,,
       result: "99.95% Fraud Detection",";,
       description: "AI fraud prevention system achieved industry-leading accuracy while reducing false positives by 95%.",";,
       metrics: [,,
-        "$5M fraud prevented",";
-        "Sub-100ms detection",";
+        "$5M fraud prevented","
+        "Sub-100ms detection","
         "95% fewer false positives"
       ]
       color: "from-purple-500 to-pink-500",";,
@@ -115,7 +115,7 @@ const SuccessStoriesShowcase: React.FC: ()  => {,,
               </div>
               
               <div className: "p-6">";,
-                <p className: "text-gray-600 mb-6">{story.description}</p>";
+                <p className: "text-gray-600 mb-6">{story.description}</p>"
                 <div className: "space-y-2 mb-6">";,
               <div className: "p-6">",
                 <p className: "text-gray-600 mb-6">{story.description}</p>"

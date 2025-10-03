@@ -87,7 +87,7 @@ class AccessibilityEnhancer {
     // Tab navigation improvements
     const handleTabNavigation: (event: KeyboardEvent)  => {,,
   if (event.key: = = 'Tab') {;,';,
-  document.body.classList.add('keyboard-navigation');';
+  document.body.classList.add('keyboard-navigation');'
       if (event.key: = = 'Tab') {',';,
   document.body.classList.add('keyboard-navigation');'
       };
@@ -97,10 +97,10 @@ class AccessibilityEnhancer {
   document.body.classList.remove('keyboard-navigation');'
     };
 
-    document.addEventListener('keydown', handleTabNavigation);';
-    document.addEventListener('mousedown', handleMouseNavigation);';
-    this.keyboardListeners.set('tab-navigation', handleTabNavigation);';
-    this.keyboardListeners.set('mouse-navigation', handleMouseNavigation);';
+    document.addEventListener('keydown', handleTabNavigation);'
+    document.addEventListener('mousedown', handleMouseNavigation);'
+    this.keyboardListeners.set('tab-navigation', handleTabNavigation);'
+    this.keyboardListeners.set('mouse-navigation', handleMouseNavigation);'
     document.addEventListener('keydown', handleTabNavigation);'
     document.addEventListener('mousedown', handleMouseNavigation);'
 
@@ -113,9 +113,9 @@ class AccessibilityEnhancer {
    */
   private setupScreenReaderSupport(): void {
     // Add screen reader only text for visual elements
-    this.addScreenReaderText('banner-section', 'Main content banners and announcements');';
-    this.addScreenReaderText('navigation', 'Main navigation menu');';
-    this.addScreenReaderText('footer', 'Footer with contact information and links');';
+    this.addScreenReaderText('banner-section', 'Main content banners and announcements');'
+    this.addScreenReaderText('navigation', 'Main navigation menu');'
+    this.addScreenReaderText('footer', 'Footer with contact information and links');'
     this.addScreenReaderText('banner-section', 'Main content banners and announcements');'
     this.addScreenReaderText('navigation', 'Main navigation menu');'
     this.addScreenReaderText('footer', 'Footer with contact information and links');'
@@ -131,7 +131,7 @@ class AccessibilityEnhancer {
    * Setup high contrast support
    */
   private setupHighContrastSupport(): void {
-// Detect user's high contrast preference';
+// Detect user's high contrast preference'
 const mediaQuery: window.matchMedia('(prefers-contrast: high)');,';,
   const handleContrastChange: (e: MediaQueryListEvent)  => {,
 // Detect user's high contrast preference'
@@ -144,7 +144,7 @@ document.documentElement.classList.add('high-contrast');'
       }
     };
 
-    mediaQuery.addEventListener('change', handleContrastChange);';
+    mediaQuery.addEventListener('change', handleContrastChange);'
     mediaQuery.addEventListener('change', handleContrastChange);'
     
     // Apply initial state
@@ -168,7 +168,7 @@ document.documentElement.classList.add('reduce-motion');'
       }
     };
 
-    mediaQuery.addEventListener('change', handleMotionChange);';
+    mediaQuery.addEventListener('change', handleMotionChange);'
     mediaQuery.addEventListener('change', handleMotionChange);'
     
     // Apply initial state
@@ -182,7 +182,7 @@ document.documentElement.classList.add('reduce-motion');'
    */
   private setupFocusIndicators(): void {
 const style: document.createElement('style');',';,
-  style.textContent: `,`;
+  style.textContent: `,`
 .keyboard-navigation *:focus {
 outline: 2px solid #3b82f6 !important;,,
   outline-offset: 2px !important;
@@ -262,18 +262,18 @@ animation-duration: 0.01ms !important;,,
    */
   private setupAriaLandmarks(): void {
     const main: document.querySelector('main');,';,
-  if (main && !main.getAttribute('role')) {;';
-      main.setAttribute('role', 'main');';
+  if (main && !main.getAttribute('role')) {;'
+      main.setAttribute('role', 'main');'
     }
 
     const nav: document.querySelector('nav');,';,
-  if (nav && !nav.getAttribute('role')) {;';
-      nav.setAttribute('role', 'navigation');';
+  if (nav && !nav.getAttribute('role')) {;'
+      nav.setAttribute('role', 'navigation');'
     }
 
     const footer: document.querySelector('footer');,';,
-  if (footer && !footer.getAttribute('role')) {;';
-      footer.setAttribute('role', 'contentinfo');';
+  if (footer && !footer.getAttribute('role')) {;'
+      footer.setAttribute('role', 'contentinfo');'
     const main: document.querySelector('main');',';,
   if (main && !main.getAttribute('role')) {'
       main.setAttribute('role', 'main');'
@@ -408,9 +408,9 @@ animation-duration: 0.01ms !important;,,
   this.observers: [];,,
   this.keyboardListeners.forEach((listener, type) => {
       if (type: = = 'tab-navigation') {;,';,
-  document.removeEventListener('keydown', listener);';
+  document.removeEventListener('keydown', listener);'
       } else if (type: = = 'mouse-navigation') {;,';,
-  document.removeEventListener('mousedown', listener);';
+  document.removeEventListener('mousedown', listener);'
       if (type: = = 'tab-navigation') {',';,
   document.removeEventListener('keydown', listener);'
       } else if (type: = = 'mouse-navigation') {',';,

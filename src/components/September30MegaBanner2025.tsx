@@ -169,7 +169,7 @@ const September30MegaBanner2025: ()  => {,,
             className: "inline-flex items-center gap-3 mb-8",
           >
             <div className: "flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 rounded-full shadow-2xl animate-pulse">";,
-              <Sparkles className: "w-6 h-6 text-white animate-spin" style ={{ animationDuration: "3s" }} />";
+              <Sparkles className: "w-6 h-6 text-white animate-spin" style ={{ animationDuration: "3s" }} />"
               <span className: "text-white font-black text-base tracking-wide">SEPTEMBER 30, 2025 — 8 REVOLUTIONARY BREAKTHROUGHS</span>";,
               <Rocket className: "w-6 h-6 text-white animate-bounce/>";,
             </div>
@@ -370,17 +370,17 @@ const September30MegaBanner2025: ()  => {,,
           <p className: "text-center text-cyan-200 text-sm mb-4 font-bold uppercase tracking-wider">BREAKTHROUGH TOPICS: </p>",
           <div className: "flex flex-wrap gap-3 justify-center">";,
             {[
-              "Real-Time AI",";
-              "Neural Code Synthesis",";
-              "Multimodal Fusion",";
-              "Supply Chain Optimization",";
-              "Cognitive Assistants",";
-              "Zero-Trust Security",";
-              "Federated Learning",";
-              "Financial Modeling",";
-              "<1ms Latency",";
-              "95%+ Accuracy",";
-              "10,000x Performance",";
+              "Real-Time AI","
+              "Neural Code Synthesis","
+              "Multimodal Fusion","
+              "Supply Chain Optimization","
+              "Cognitive Assistants","
+              "Zero-Trust Security","
+              "Federated Learning","
+              "Financial Modeling","
+              "<1ms Latency","
+              "95%+ Accuracy","
+              "10,000x Performance","
               "Enterprise Scale"
             ].map((topic) => (
               <span key: {topic} className: "px-5 py-2.5 bg-white/15 backdrop-blur-md rounded-full text-sm font-bold text-white border-2 border-white/30 hover: bg-white/25 hover:scale-105 transition-all cursor-pointer shadow-lg">",

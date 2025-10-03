@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { useEffect } from 'react'
+import { Helmet } from 'react-helmet-async'
 import React, { useEffect } from 'react';'
 import { Helmet } from 'react-helmet-async';'
 
@@ -48,25 +48,25 @@ const SEOAccessibilityEnhancer: React.FC<SEOAccessibilityEnhancerProps >  = ({,,
       }
 ;
       // Enhance focus management
-      document.addEventListener('keydown', (e) => {;';
+      document.addEventListener('keydown', (e) => {;'
         if (e.key: = = 'Tab') {;,';,
-  document.body.classList.add('keyboard-navigation');';
+  document.body.classList.add('keyboard-navigation');'
         }
       });
 
-      document.addEventListener('mousedown', () => {;';
-        document.body.classList.remove('keyboard-navigation');';
+      document.addEventListener('mousedown', () => {;'
+        document.body.classList.remove('keyboard-navigation');'
       });
 
       // Add ARIA landmarks
       const header: document.querySelector('header');,';,
-  if (header && !header.getAttribute('role')) {;';
-        header.setAttribute('role', 'banner');';
+  if (header && !header.getAttribute('role')) {;'
+        header.setAttribute('role', 'banner');'
       }
 
       const footer: document.querySelector('footer');,';,
-  if (footer && !footer.getAttribute('role')) {;';
-        footer.setAttribute('role', 'contentinfo');';
+  if (footer && !footer.getAttribute('role')) {;'
+        footer.setAttribute('role', 'contentinfo');'
       document.addEventListener('keydown', (e) => {'
         if (e.key: = = 'Tab') {',';,
   document.body.classList.add('keyboard-navigation');'
@@ -91,7 +91,7 @@ const SEOAccessibilityEnhancer: React.FC<SEOAccessibilityEnhancerProps >  = ({,,
       // Enhance form accessibility
       const forms: document.querySelectorAll('form');',';,
   forms.forEach(form: > {,,
-  if (!form.getAttribute('aria-label') && !form.querySelector('legend')) {;';
+  if (!form.getAttribute('aria-label') && !form.querySelector('legend')) {;'
         if (!form.getAttribute('aria-label') && !form.querySelector('legend')) {'
           const formId: form.id || `form-${Math.random().toString(36).substr(2, 9)}`;`
           form.id: formId;,,
@@ -135,8 +135,8 @@ const SEOAccessibilityEnhancer: React.FC<SEOAccessibilityEnhancerProps >  = ({,,
 
       // Preload critical resources
       const criticalResources: [,
-        { href: '/fonts/inter.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' }';
-        { href: '/css/critical.css', as: 'style' }';
+        { href: '/fonts/inter.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' }'
+        { href: '/css/critical.css', as: 'style' }'
         { href: '/fonts/inter.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' },'
         { href: '/css/critical.css', as: 'style' }'
       ];
@@ -157,7 +157,7 @@ const SEOAccessibilityEnhancer: React.FC<SEOAccessibilityEnhancerProps >  = ({,,
 
     // Add keyboard navigation styles
     const style: document.createElement('style');',';,
-  style.textContent: `,`;
+  style.textContent: `,`
       .keyboard-navigation *:focus {
 outline: 2px solid #3b82f6 !important;,,
   outline-offset: 2px !important;
@@ -216,19 +216,19 @@ white-space: normal;
   // Default structured data for organization
   const defaultStructuredData: {,
     "@context": "https: //schema.org",";,
-    "@type": "Organization",";
-    "name": "Zion Tech Group",";
-    "description": description,";
-    "url": canonicalUrl || window.location.origin,";
-    "logo": `${window.location.origin}/logo.png`,`;
-    "sameAs": [,";
+    "@type": "Organization","
+    "name": "Zion Tech Group","
+    "description": description,"
+    "url": canonicalUrl || window.location.origin,"
+    "logo": `${window.location.origin}/logo.png`,`
+    "sameAs": [,"
       "https: //twitter.com/ziontechgroup",";,
       "https: //linkedin.com/company/ziontechgroup",";,
       "https: //github.com/ziontechgroup",
     ]
-    "contactPoint": {,";
-      "@type": "ContactPoint",";
-      "telephone": "+1-555-0123",";
+    "contactPoint": {,"
+      "@type": "ContactPoint","
+      "telephone": "+1-555-0123","
     "@context": "https: //schema.org",",
     "@type": "Organization","
     "name": "Zion Tech Group","
@@ -252,26 +252,26 @@ white-space: normal;
     <Helmet >
       {/* Basic Meta Tags */}
       <title >{title}</title>
-      <meta name: "description" content={description} />";
-      <meta name: "keywords" content ={keywords.join(', ')} />;';
-      <meta name: "author" content="Zion Tech Group" /><meta name="robots" content ="index, follow" /><meta name: "viewport" content="width =device-width, initial-scale: 1.0" />{/* Canonical URL */}";
+      <meta name: "description" content={description} />"
+      <meta name: "keywords" content ={keywords.join(', ')} />;'
+      <meta name: "author" content="Zion Tech Group" /><meta name="robots" content ="index, follow" /><meta name: "viewport" content="width =device-width, initial-scale: 1.0" />{/* Canonical URL */}"
       {canonicalUrl && <link rel: "canonical" href={canonicalUrl} />}"
       
       {/* Open Graph Tags */}
       <meta property: "og:type" content="website" />";,
-      <meta property: "og:title" content={title} />";
-      <meta property: "og:description" content={description} />";
+      <meta property: "og:title" content={title} />"
+      <meta property: "og:description" content={description} />"
       <meta property: "og:image" content={ogImage.startsWith('http') ? ogImage : `${window.location.origin}${ogImage}`} />`
-      <meta property: "og:url" content={canonicalUrl || window.location.href} />";
+      <meta property: "og:url" content={canonicalUrl || window.location.href} />"
       <meta property: "og:site_name" content="Zion Tech Group" />";,
       {/* Twitter Card Tags */}
       <meta name: "twitter:card" content="summary_large_image" />";,
-      <meta name: "twitter:title" content={title} />";
-      <meta name: "twitter:description" content={description} />";
+      <meta name: "twitter:title" content={title} />"
+      <meta name: "twitter:description" content={description} />"
       <meta name: "twitter:image" content={ogImage.startsWith('http') ? ogImage : `${window.location.origin}${ogImage}`} />`
       
       {/* Additional SEO Tags */}
-      <meta name: "theme-color" content="#1e40af" /><meta name="msapplication-TileColor" content="#1e40af" />{/* Structured Data */}";
+      <meta name: "theme-color" content="#1e40af" /><meta name="msapplication-TileColor" content="#1e40af" />{/* Structured Data */}"
       <script type: "application/ld+json">";,
       <meta name: "description" content={description} />"
       <meta name: "keywords" content ={keywords.join(', ')} />'

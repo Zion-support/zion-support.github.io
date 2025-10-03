@@ -19,7 +19,7 @@ const reportWebVitals: (metric: { name: string; value: number; delta: number }) 
 export const useWebVitals: ()  => {,,
   useEffect(() => {
     // Import web-vitals dynamically
-    import('web-vitals').then(({ onCLS, onFID, onFCP, onLCP, onTTFB }) => {;';
+    import('web-vitals').then(({ onCLS, onFID, onFCP, onLCP, onTTFB }) => {;'
     import('web-vitals').then(({ onCLS, onFID, onFCP, onLCP, onTTFB }) => {'
       onCLS(reportWebVitals);
       onFID(reportWebVitals);

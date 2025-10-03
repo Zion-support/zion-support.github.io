@@ -1,8 +1,8 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Cloud } from 'lucide-react';
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Cloud } from 'lucide-react'
+import Header from '../../components/Header'
+import Footer from '../../components/Footer'
 import React from 'react';'
 import { Helmet } from 'react-helmet-async';'
 import { Cloud } from 'lucide-react';'
@@ -68,13 +68,13 @@ const EdgeComputingAI: React.FC: ()  => {,,
       period: "/month",";,
       description: "Perfect for small-scale edge deployments and proof of concepts",";,
       features: [,,
-        "Up to 10 edge devices",";
-        "Basic AI model deployment",";
-        "Standard monitoring",";
-        "Email support",";
-        "Monthly analytics reports",";
-        "Basic security features",";
-        "Standard protocols",";
+        "Up to 10 edge devices","
+        "Basic AI model deployment","
+        "Standard monitoring","
+        "Email support","
+        "Monthly analytics reports","
+        "Basic security features","
+        "Standard protocols","
         "Cloud backup integration"
       ]
       popular: false,
@@ -85,15 +85,15 @@ const EdgeComputingAI: React.FC: ()  => {,,
       period: "/month",";,
       description: "Ideal for medium-scale deployments with advanced requirements",";,
       features: [,,
-        "Up to 100 edge devices",";
-        "Advanced AI model deployment",";
-        "Real-time monitoring & alerting",";
-        "Priority support",";
-        "Custom analytics dashboards",";
-        "Advanced security & encryption",";
-        "Optimized protocols",";
-        "Hybrid cloud integration",";
-        "Custom model training",";
+        "Up to 100 edge devices","
+        "Advanced AI model deployment","
+        "Real-time monitoring & alerting","
+        "Priority support","
+        "Custom analytics dashboards","
+        "Advanced security & encryption","
+        "Optimized protocols","
+        "Hybrid cloud integration","
+        "Custom model training","
         "API access"
       ]
       popular: true,
@@ -104,17 +104,17 @@ const EdgeComputingAI: React.FC: ()  => {,,
       period: "/month",";,
       description: "Complete solution for large-scale enterprise edge deployments",";,
       features: [,,
-        "Unlimited edge devices",";
-        "Custom AI model development",";
-        "Enterprise monitoring suite",";
-        "Dedicated edge specialist",";
-        "Custom analytics & reporting",";
-        "Enterprise security suite",";
-        "Custom protocol development",";
-        "Multi-cloud integration",";
-        "On-premise deployment",";
-        "24/7 monitoring & support",";
-        "SLA guarantee",";
+        "Unlimited edge devices","
+        "Custom AI model development","
+        "Enterprise monitoring suite","
+        "Dedicated edge specialist","
+        "Custom analytics & reporting","
+        "Enterprise security suite","
+        "Custom protocol development","
+        "Multi-cloud integration","
+        "On-premise deployment","
+        "24/7 monitoring & support","
+        "SLA guarantee","
         "Training & consultation"
       ]
       popular: false,,
@@ -462,7 +462,7 @@ const EdgeComputingAI: React.FC: ()  => {,,
                       {useCase.benefits.map((benefit, benefitIndex) => (
                         <li key: {benefitIndex} className: "flex items-center text-sm">";,
                           <CheckCircle className: "w-4 h-4 text-green-500 mr-2 flex-shrink-0/>";,
-                          <span className: "text-gray-700">{benefit}</span>";
+                          <span className: "text-gray-700">{benefit}</span>"
                         <li key: {benefitIndex} className: "flex items-center text-sm">",
                           <CheckCircle className: "w-4 h-4 text-green-500 mr-2 flex-shrink-0" />",
                           <span className: "text-gray-700">{benefit}</span>"
@@ -528,8 +528,8 @@ const EdgeComputingAI: React.FC: ()  => {,,
                     <div className: "inline-flex items-center justify-center w-12 h-12 bg-teal-100 rounded-lg mb-4">";,
                       <Icon className: "w-6 h-6 text-teal-600/>";,
                     </div>
-                    <h3 className: "text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>";
-                    <p className: "text-gray-600 mb-4">{feature.description}</p>";
+                    <h3 className: "text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>"
+                    <p className: "text-gray-600 mb-4">{feature.description}</p>"
                     <div className: "inline-flex items-center text-green-600 font-semibold text-sm">";,
                       <CheckCircle className: "w-4 h-4 mr-1/>";,
             <div className: "grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
@@ -592,7 +592,7 @@ const EdgeComputingAI: React.FC: ()  => {,,
                     {plan.features.map((feature, featureIndex) => (
                       <li key: {featureIndex} className: "flex items-center">";,
                         <CheckCircle className: "w-5 h-5 text-green-500 mr-3 flex-shrink-0/>";,
-                        <span className: "text-gray-700">{feature}</span>";
+                        <span className: "text-gray-700">{feature}</span>"
                       <li key: {featureIndex} className: "flex items-center">",
                         <CheckCircle className: "w-5 h-5 text-green-500 mr-3 flex-shrink-0" />",
                         <span className: "text-gray-700">{feature}</span>"

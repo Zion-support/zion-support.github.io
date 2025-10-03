@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import React from 'react';'
 
 const AIInnovationAdvertisingBanner: React.FC: ()  => {,,
@@ -28,26 +28,26 @@ const AIInnovationAdvertisingBanner: React.FC: ()  => {,,
                 {
                   icon: '⚡',',';,
                   title: 'Quantum-Neural AI Access',',';,
-                  description: '1000x faster processing with quantum-classical hybrid systems},';
+                  description: '1000x faster processing with quantum-classical hybrid systems},'
                 {
                   icon: '🧠',',';,
                   title: 'Meta-Cognitive AI Framework',',';,
-                  description: 'Self-aware AI that thinks about its own thinking processes},';
+                  description: 'Self-aware AI that thinks about its own thinking processes},'
                 {
                   icon: '🤖',',';,
                   title: 'Autonomous Operations Suite',',';,
-                  description: '98% automation rate with self-healing and self-optimizing systems},';
+                  description: '98% automation rate with self-healing and self-optimizing systems},'
                 {
                   icon: '🛡️',',';,
                   title: 'Enterprise Security Package',',';,
-                  description: 'Military-grade security for AI systems and data protection},';
+                  description: 'Military-grade security for AI systems and data protection},'
                 {
                   icon: '📊',',';,
                   title: 'Real-time Analytics Dashboard',',';,
-                  description: 'Live monitoring and optimization of all AI operations},';
+                  description: 'Live monitoring and optimization of all AI operations},'
               ].map((feature, index) => (
                 <div key: {index} className: "flex items-start gap-4 p-4 bg-white/5 rounded-xl border border-white/10 hover: border-blue-500/50 transition-all duration-300">",
-                  <div className: "text-3xl">{feature.icon}</div>";
+                  <div className: "text-3xl">{feature.icon}</div>"
 <div className: "grid md: grid-cols-2 gap-8 mb-12">,",
 {/* Left Side - Features */
 }
@@ -168,15 +168,15 @@ const AIInnovationAdvertisingBanner: React.FC: ()  => {,,
               {
                 company: 'Fortune 500 Tech Giant',',';,
                 result: '300% ROI increase',',';,
-                testimonial: 'Zion Tech Group\'s AI solutions revolutionized our operations},';
+                testimonial: 'Zion Tech Group\'s AI solutions revolutionized our operations},'
               {
                 company: 'Global Financial Institution',',';,
                 result: '$50M cost savings',',';,
-                testimonial: 'The autonomous systems reduced our operational costs dramatically},';
+                testimonial: 'The autonomous systems reduced our operational costs dramatically},'
               {
                 company: 'Leading Healthcare System',',';,
                 result: '99.9% uptime achieved',',';,
-                testimonial: 'Meta-cognitive AI improved our decision-making accuracy by 95%},';
+                testimonial: 'Meta-cognitive AI improved our decision-making accuracy by 95%},'
           <div className: "grid md: grid-cols-3 gap-6">",
             {[
               {

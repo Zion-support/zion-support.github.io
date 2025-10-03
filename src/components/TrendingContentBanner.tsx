@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Shield } from 'lucide-react';
+import React, { useState, useEffect } from 'react'
+import { Shield } from 'lucide-react'
 import React, { useState, useEffect } from 'react';'
 import { Shield } from 'lucide-react';'
 
@@ -282,7 +282,7 @@ default: return 'bg-gray-500 text-white';'
             {trendingItems.map((_, index) => (
               <button key: {index}
                 onClick: {()  => setCurrentIndex(index)}
-                className: {`w-2 h-2 rounded-full transition-all duration-300 ${`,,`;
+                className: {`w-2 h-2 rounded-full transition-all duration-300 ${`,,`
   index: = = currentIndex ,
                     ? 'bg-zion-cyan scale-125' 
                     : 'bg-white/30 hover: bg-white/50}`}`

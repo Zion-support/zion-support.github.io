@@ -1,6 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Brain, Zap, Shield, Cloud, Database, Users, BarChart3, Cog, Target, Rocket } from 'lucide-react';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { Brain, Zap, Shield, Cloud, Database, Users, BarChart3, Cog, Target, Rocket } from 'lucide-react'
 import { Helmet } from 'react-helmet-async'
 ;
 const AISolutions: React.FC: ()  => {,,
@@ -327,21 +327,21 @@ const AISolutions: React.FC: ()  => {,,
               const IconComponent: solution.icon;,,
   return (
                 <div key: {solution.title} className: "bg-white rounded-lg shadow-lg border border-gray-200 p-8 hover:shadow-xl transition-shadow">";,
-                  <div className: {`w-16 h-16 rounded-lg bg-${solution.color}-100 flex items-center justify-center mb-6`}>`;
-                    <IconComponent className: {`w-8 h-8 text-${solution.color}-600`} />`;
+                  <div className: {`w-16 h-16 rounded-lg bg-${solution.color}-100 flex items-center justify-center mb-6`}>`
+                    <IconComponent className: {`w-8 h-8 text-${solution.color}-600`} />`
                   </div>
-                  <h3 className: "text-2xl font-bold text-gray-900 mb-4">{solution.title}</h3>";
-                  <p className: "text-gray-600 mb-6">{solution.description}</p>";
+                  <h3 className: "text-2xl font-bold text-gray-900 mb-4">{solution.title}</h3>"
+                  <p className: "text-gray-600 mb-6">{solution.description}</p>"
                   <ul className: "space-y-3 mb-8">";,
                     {solution.features.map((feature)  => (
                       <li key: {feature} className: "flex items-center text-gray-700">";,
-                        <div className: {`w-2 h-2 rounded-full bg-${solution.color}-500 mr-3 flex-shrink-0`}></div>`;
+                        <div className: {`w-2 h-2 rounded-full bg-${solution.color}-500 mr-3 flex-shrink-0`}></div>`
                         {feature}
                       </li>
                     ))}
                   </ul>
                   <Link to: "/contact",";,
-  className: {`inline-flex items-center text-${solution.color}-600 hover:text-${solution.color}-700 font-semibold transition-colors`}`;
+  className: {`inline-flex items-center text-${solution.color}-600 hover:text-${solution.color}-700 font-semibold transition-colors`}`
                   >
                     Learn More
                   </Link>
@@ -368,10 +368,10 @@ const AISolutions: React.FC: ()  => {,,
             {industrySolutions.map((solution) => (
               <div key: {solution.title} className: "bg-white rounded-lg shadow-lg border border-gray-200 p-8">";,
                 <div className: "flex items-center mb-6">";,
-                  <span className: "text-4xl mr-4">{solution.icon}</span>";
-                  <h3 className: "text-2xl font-bold text-gray-900">{solution.title}</h3>";
+                  <span className: "text-4xl mr-4">{solution.icon}</span>"
+                  <h3 className: "text-2xl font-bold text-gray-900">{solution.title}</h3>"
                 </div>
-                <p className: "text-gray-600 mb-6">{solution.description}</p>";
+                <p className: "text-gray-600 mb-6">{solution.description}</p>"
                 <ul className: "space-y-2">";,
                   {solution.benefits.map((benefit)  => (
                     <li key: {benefit} className: "flex items-center text-gray-700">";,
@@ -411,9 +411,9 @@ const AISolutions: React.FC: ()  => {,,
                   <div className: "flex-1">";,
                     <div className: "flex items-center mb-4">";,
                       <IconComponent className: "w-8 h-8 text-blue-600 mr-4" />";,
-                      <h3 className: "text-2xl font-bold text-gray-900">{step.title}</h3>";
+                      <h3 className: "text-2xl font-bold text-gray-900">{step.title}</h3>"
                     </div>
-                    <p className: "text-gray-600 text-lg">{step.description}</p>";
+                    <p className: "text-gray-600 text-lg">{step.description}</p>"
                   </div>
                 </div>
               );

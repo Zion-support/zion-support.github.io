@@ -1,8 +1,8 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { TrendingUp } from 'lucide-react';
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { TrendingUp } from 'lucide-react'
+import Header from '../../components/Header'
+import Footer from '../../components/Footer'
 import React from 'react';'
 import { Helmet } from 'react-helmet-async';'
 import { TrendingUp } from 'lucide-react';'
@@ -68,13 +68,13 @@ const AIEmailMarketing: React.FC: ()  => {,,
       period: "/month",";,
       description: "Perfect for small businesses starting with AI-powered email marketing",";,
       features: [,,
-        "Up to 10,000 subscribers",";
-        "Basic AI content generation",";
-        "Simple automation",";
-        "Email support",";
-        "Basic analytics",";
-        "Standard templates",";
-        "5 campaigns/month",";
+        "Up to 10,000 subscribers","
+        "Basic AI content generation","
+        "Simple automation","
+        "Email support","
+        "Basic analytics","
+        "Standard templates","
+        "5 campaigns/month","
         "Basic segmentation"
       ]
       popular: false,
@@ -85,15 +85,15 @@ const AIEmailMarketing: React.FC: ()  => {,,
       period: "/month",";,
       description: "Ideal for growing businesses with advanced email marketing needs",";,
       features: [,,
-        "Up to 50,000 subscribers",";
-        "Advanced AI content generation",";
-        "Smart automation workflows",";
-        "Priority support",";
-        "Advanced analytics & insights",";
-        "Custom templates",";
-        "Unlimited campaigns",";
-        "Advanced segmentation",";
-        "A/B testing",";
+        "Up to 50,000 subscribers","
+        "Advanced AI content generation","
+        "Smart automation workflows","
+        "Priority support","
+        "Advanced analytics & insights","
+        "Custom templates","
+        "Unlimited campaigns","
+        "Advanced segmentation","
+        "A/B testing","
         "API access"
       ]
       popular: true,
@@ -104,17 +104,17 @@ const AIEmailMarketing: React.FC: ()  => {,,
       period: "/month",";,
       description: "Complete solution for large organizations with enterprise requirements",";,
       features: [,,
-        "Unlimited subscribers",";
-        "Enterprise AI capabilities",";
-        "Complex automation workflows",";
-        "Dedicated account manager",";
-        "Enterprise analytics suite",";
-        "White-label templates",";
-        "Unlimited campaigns",";
-        "Advanced AI segmentation",";
-        "Custom integrations",";
-        "Advanced security features",";
-        "SLA guarantee",";
+        "Unlimited subscribers","
+        "Enterprise AI capabilities","
+        "Complex automation workflows","
+        "Dedicated account manager","
+        "Enterprise analytics suite","
+        "White-label templates","
+        "Unlimited campaigns","
+        "Advanced AI segmentation","
+        "Custom integrations","
+        "Advanced security features","
+        "SLA guarantee","
         "Training & consultation"
       ]
       popular: false,,
@@ -462,7 +462,7 @@ const AIEmailMarketing: React.FC: ()  => {,,
                       {useCase.benefits.map((benefit, benefitIndex) => (
                         <li key: {benefitIndex} className: "flex items-center text-sm">";,
                           <CheckCircle className: "w-4 h-4 text-green-500 mr-2 flex-shrink-0/>";,
-                          <span className: "text-gray-700">{benefit}</span>";
+                          <span className: "text-gray-700">{benefit}</span>"
                         <li key: {benefitIndex} className: "flex items-center text-sm">",
                           <CheckCircle className: "w-4 h-4 text-green-500 mr-2 flex-shrink-0" />",
                           <span className: "text-gray-700">{benefit}</span>"
@@ -528,8 +528,8 @@ const AIEmailMarketing: React.FC: ()  => {,,
                     <div className: "inline-flex items-center justify-center w-12 h-12 bg-emerald-100 rounded-lg mb-4">";,
                       <Icon className: "w-6 h-6 text-emerald-600/>";,
                     </div>
-                    <h3 className: "text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>";
-                    <p className: "text-gray-600 mb-4">{feature.description}</p>";
+                    <h3 className: "text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>"
+                    <p className: "text-gray-600 mb-4">{feature.description}</p>"
                     <div className: "inline-flex items-center text-green-600 font-semibold text-sm">";,
                       <CheckCircle className: "w-4 h-4 mr-1/>";,
             <div className: "grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
@@ -592,7 +592,7 @@ const AIEmailMarketing: React.FC: ()  => {,,
                     {plan.features.map((feature, featureIndex) => (
                       <li key: {featureIndex} className: "flex items-center">";,
                         <CheckCircle className: "w-5 h-5 text-green-500 mr-3 flex-shrink-0/>";,
-                        <span className: "text-gray-700">{feature}</span>";
+                        <span className: "text-gray-700">{feature}</span>"
                       <li key: {featureIndex} className: "flex items-center">",
                         <CheckCircle className: "w-5 h-5 text-green-500 mr-3 flex-shrink-0" />",
                         <span className: "text-gray-700">{feature}</span>"

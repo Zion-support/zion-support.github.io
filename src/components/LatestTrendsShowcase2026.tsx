@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import React from 'react';'
 
 const LatestTrendsShowcase2026: React.FC: ()  => {,,
@@ -94,7 +94,7 @@ const LatestTrendsShowcase2026: React.FC: ()  => {,,
   Meta-Cognitive AI Framework
               </h3>
               <p className: "text-xl text-gray-300 mb-6 leading-relaxed">,";,
-  The world's first AI system that thinks about thinking. Our Meta-Cognitive AI can reason about its own reasoning processes';
+  The world's first AI system that thinks about thinking. Our Meta-Cognitive AI can reason about its own reasoning processes'
               <p className: "text-xl text-gray-300 mb-6 leading-relaxed">",";,
   The world's first AI system that thinks about thinking. Our Meta-Cognitive AI can reason about its own reasoning processes, '
                 identify knowledge gaps, and autonomously improve its decision-making capabilities.

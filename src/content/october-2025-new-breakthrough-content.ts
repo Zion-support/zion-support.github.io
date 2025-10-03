@@ -15,10 +15,10 @@ export const octoberNewBreakthroughContent: [,
     urgent: true,,
     tags: ["AI Orchestration", "MLOps", "Enterprise AI", "Cost Optimization", "Automation"],";,
     highlights: [,,
-      "95% reduction in manual AI operations overhead",";
-      "$847M average value creation in first 12 months",";
-      "10x faster deployment of new AI models",";
-      "99.99% uptime for mission-critical AI services",";
+      "95% reduction in manual AI operations overhead","
+      "$847M average value creation in first 12 months","
+      "10x faster deployment of new AI models","
+      "99.99% uptime for mission-critical AI services","
       "75% lower infrastructure costs"
     ]
     metrics: {,,
@@ -45,10 +45,10 @@ export const octoberNewBreakthroughContent: [,
     urgent: true,,
     tags: ["Real-Time Analytics", "Business Intelligence", "AI", "Decision Intelligence", "Data Engineering"],";,
     highlights: [,,
-      "1000x faster insights - from hours to milliseconds",";
-      "$627M average value creation in 18 months",";
-      "94% prediction accuracy for business outcomes",";
-      "85% reduction in decision-making time",";
+      "1000x faster insights - from hours to milliseconds","
+      "$627M average value creation in 18 months","
+      "94% prediction accuracy for business outcomes","
+      "85% reduction in decision-making time","
       "43% increase in revenue from faster market response"
     ]
     metrics: {,,
@@ -75,10 +75,10 @@ export const octoberNewBreakthroughContent: [,
     urgent: true,,
     tags: ["Case Study", "Retail", "Real-Time BI", "Success Story", "ROI"],";,
     highlights: [,,
-      "$627M total value creation in 18 months",";
-      "4.7% revenue increase through dynamic pricing",";
-      "37% reduction in stockouts saving $147M",";
-      "4,200% ROI achieved",";
+      "$627M total value creation in 18 months","
+      "4.7% revenue increase through dynamic pricing","
+      "37% reduction in stockouts saving $147M","
+      "4,200% ROI achieved","
       "1000x faster insights delivery"
     ]
     metrics: {,,

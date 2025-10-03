@@ -90,7 +90,7 @@ export default function AutonomousSupplyChainRevolution2025(): void {
             <section className: "mb-12">";,
               <h2 className: "text-3xl font-bold mb-6 text-blue-300">The Supply Chain Crisis</h2>";,
               <p className: "text-gray-300 mb-4 leading-relaxed">,";,
-  Global supply chains face unprecedented complexity and volatility. Traditional manual planning can't keep pace with ;';
+  Global supply chains face unprecedented complexity and volatility. Traditional manual planning can't keep pace with ;'
             <section className: "mb-12">",
               <h2 className: "text-3xl font-bold mb-6 text-blue-300">The Supply Chain Crisis</h2>",
               <p className: "text-gray-300 mb-4 leading-relaxed">",";,

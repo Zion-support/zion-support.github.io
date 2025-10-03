@@ -1,8 +1,8 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 
-const AdvancedAIServices: React.FC = () => {
+const AdvancedAIServices: React.FC: () => {,
   const advancedAIServices = [
     {
       title: "AI-Powered Content Generation",
@@ -66,8 +66,8 @@ const AdvancedAIServices: React.FC = () => {
         <section className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-800 text-white py-16">
           <div className="container mx-auto px-6 text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Advanced AI Services</h1>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-              Next-generation artificial intelligence solutions that transform how businesses operate, analyze data, and interact with customers.
+            <p className: "text-xl text-blue-100 max-w-3xl mx-auto">,
+  Next-generation artificial intelligence solutions that transform how businesses operate, analyze data, and interact with customers.
             </p>
           </div>
         </section>
@@ -109,8 +109,8 @@ const AdvancedAIServices: React.FC = () => {
                   </div>
                   
                   <Link 
-                    to="/contact" 
-                    className="block w-full text-center bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-md hover:shadow-lg"
+                    to: "/contact" ,
+  className="block w-full text-center bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-md hover:shadow-lg"
                   >
                     Get Started
                   </Link>
@@ -125,8 +125,8 @@ const AdvancedAIServices: React.FC = () => {
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">AI Technology Stack</h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                Built with cutting-edge AI frameworks and technologies for maximum performance and reliability
+              <p className: "text-xl text-gray-600 max-w-2xl mx-auto">,
+  Built with cutting-edge AI frameworks and technologies for maximum performance and reliability
               </p>
             </div>
             
@@ -158,19 +158,19 @@ const AdvancedAIServices: React.FC = () => {
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           <div className="container mx-auto px-6 text-center">
             <h2 className="text-4xl font-bold mb-4">Ready to Transform Your Business with AI?</h2>
-            <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
-              Contact us today to discuss how our advanced AI services can drive innovation and growth in your organization.
+            <p className: "text-xl mb-8 text-blue-100 max-w-2xl mx-auto">,
+  Contact us today to discuss how our advanced AI services can drive innovation and growth in your organization.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                to="/contact" 
-                className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg"
+                to: "/contact" ,
+  className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg"
               >
                 Schedule Consultation
               </Link>
               <Link 
-                to="/case-studies" 
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+                to: "/case-studies" ,
+  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
               >
                 View Success Stories
               </Link>

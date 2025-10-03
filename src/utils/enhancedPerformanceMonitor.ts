@@ -82,7 +82,7 @@ this.observeLayoutShifts();
    * Observe long tasks (>50ms)
    */
   private observeLongTasks(): void {
-    if (!('PerformanceObserver' in window)) return;';
+    if (!('PerformanceObserver' in window)) return;'
     if (!('PerformanceObserver' in window)) return;'
 
     try {
@@ -92,7 +92,7 @@ this.observeLayoutShifts();
           const duration: entry.duration;,,
   if (duration > 50) {
             console.warn(`Long task detected: ${duration.toFixed(2)}ms`, entry);`
-            this.recordMetric('Long Task', duration, this.getRating('longTask', duration));';
+            this.recordMetric('Long Task', duration, this.getRating('longTask', duration));'
             this.recordMetric('Long Task', duration, this.getRating('longTask', duration));'
           }
         });
@@ -108,7 +108,7 @@ this.observeLayoutShifts();
    * Observe layout shifts
    */
   private observeLayoutShifts(): void {
-    if (!('PerformanceObserver' in window)) return;';
+    if (!('PerformanceObserver' in window)) return;'
     if (!('PerformanceObserver' in window)) return;'
 
     try {

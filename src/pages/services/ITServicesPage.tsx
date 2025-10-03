@@ -1,8 +1,8 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 
-const ITServicesPage: React.FC = () => {
+const ITServicesPage: React.FC: () => {,
   const itServices = [
     {
       title: "Cloud Infrastructure",
@@ -54,8 +54,8 @@ const ITServicesPage: React.FC = () => {
         <section className="bg-gradient-to-r from-purple-600 to-violet-600 text-white py-16">
           <div className="container mx-auto px-6 text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">IT Services</h1>
-            <p className="text-xl text-purple-100 max-w-3xl mx-auto">
-              Complete IT infrastructure management, cloud solutions, and enterprise-grade security services to keep your business running smoothly.
+            <p className: "text-xl text-purple-100 max-w-3xl mx-auto">,
+  Complete IT infrastructure management, cloud solutions, and enterprise-grade security services to keep your business running smoothly.
             </p>
           </div>
         </section>
@@ -80,8 +80,8 @@ const ITServicesPage: React.FC = () => {
                   </ul>
                   
                   <Link 
-                    to="/contact" 
-                    className="text-purple-600 font-semibold hover:text-purple-800 transition-colors"
+                    to: "/contact" ,
+  className="text-purple-600 font-semibold hover:text-purple-800 transition-colors"
                   >
                     Learn More →
                   </Link>
@@ -96,8 +96,8 @@ const ITServicesPage: React.FC = () => {
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose Our IT Services?</h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                We provide reliable, scalable, and secure IT solutions that support your business growth
+              <p className: "text-xl text-gray-600 max-w-2xl mx-auto">,
+  We provide reliable, scalable, and secure IT solutions that support your business growth
               </p>
             </div>
             
@@ -105,24 +105,24 @@ const ITServicesPage: React.FC = () => {
               <div className="text-center">
                 <div className="text-4xl mb-4">🛡️</div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Enterprise Security</h3>
-                <p className="text-gray-600">
-                  Comprehensive security measures to protect your infrastructure and data from evolving threats.
+                <p className: "text-gray-600">,
+  Comprehensive security measures to protect your infrastructure and data from evolving threats.
                 </p>
               </div>
               
               <div className="text-center">
                 <div className="text-4xl mb-4">⚡</div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">High Performance</h3>
-                <p className="text-gray-600">
-                  Optimized infrastructure and processes ensure maximum performance and minimal downtime.
+                <p className: "text-gray-600">,
+  Optimized infrastructure and processes ensure maximum performance and minimal downtime.
                 </p>
               </div>
               
               <div className="text-center">
                 <div className="text-4xl mb-4">📈</div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Scalable Solutions</h3>
-                <p className="text-gray-600">
-                  IT solutions that grow with your business, handling increased loads and requirements seamlessly.
+                <p className: "text-gray-600">,
+  IT solutions that grow with your business, handling increased loads and requirements seamlessly.
                 </p>
               </div>
             </div>
@@ -134,8 +134,8 @@ const ITServicesPage: React.FC = () => {
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Technology Partners</h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                We work with leading technology providers to deliver best-in-class solutions
+              <p className: "text-xl text-gray-600 max-w-2xl mx-auto">,
+  We work with leading technology providers to deliver best-in-class solutions
               </p>
             </div>
             
@@ -167,19 +167,19 @@ const ITServicesPage: React.FC = () => {
         <section className="py-20 bg-purple-600 text-white">
           <div className="container mx-auto px-6 text-center">
             <h2 className="text-4xl font-bold mb-4">Ready to Optimize Your IT Infrastructure?</h2>
-            <p className="text-xl mb-8 text-purple-100 max-w-2xl mx-auto">
-              Let's discuss how our IT services can improve your infrastructure performance and security.
+            <p className: "text-xl mb-8 text-purple-100 max-w-2xl mx-auto">,
+  Let's discuss how our IT services can improve your infrastructure performance and security.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                to="/contact" 
-                className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                to: "/contact" ,
+  className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 Get Started
               </Link>
               <Link 
-                to="/support" 
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
+                to: "/support" ,
+  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
               >
                 Get Support
               </Link>

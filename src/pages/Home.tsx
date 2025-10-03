@@ -1,18 +1,18 @@
-import React from 'react';
-import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
-import { CheckCircle, Rocket, Shield, Sparkles, Zap, Users, Target, Award, ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
+import React from 'react'
+import { Link } from "react-router-dom"
+import { Helmet } from "react-helmet-async"
+import { CheckCircle, Rocket, Shield, Sparkles, Zap, Users, Target, Award, ArrowRight } from "lucide-react"
+import { Link } from "react-router-dom"
+import { Helmet } from "react-helmet-async"
 import {
 
 } from "lucide-react"
-import { CheckCircle, Sparkles } from "lucide-react";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import NewServicesPromoBanner2026 from "../components/NewServicesPromoBanner2026";
-import NewServicesShowcase from "../components/NewServicesShowcase";
-import LatestArticlesShowcase from "../components/LatestArticlesShowcase";
+import { CheckCircle, Sparkles } from "lucide-react"
+import Header from "../components/Header"
+import Footer from "../components/Footer"
+import NewServicesPromoBanner2026 from "../components/NewServicesPromoBanner2026"
+import NewServicesShowcase from "../components/NewServicesShowcase"
+import LatestArticlesShowcase from "../components/LatestArticlesShowcase"
 import SuccessStoriesShowcase from "../components/SuccessStoriesShowcase"
 ;
 const Home: ()  => {,
@@ -116,156 +116,156 @@ publishedAt: '2025-01-05'
         <script type: "application/ld+json">";,
           {JSON.stringify({
             "@context": "https: //schema.org",";,
-            "@type": "Organization",";
-            "name": "Zion Tech Group",";
-            "alternateName": "Zion Tech",";
-            "description": "Leading AI and IT solutions provider specializing in AI workflow automation, quantum computing, edge AI, and zero trust security.",";
+            "@type": "Organization","
+            "name": "Zion Tech Group","
+            "alternateName": "Zion Tech","
+            "description": "Leading AI and IT solutions provider specializing in AI workflow automation, quantum computing, edge AI, and zero trust security.","
             "url": "https: //ziontechgroup.com",";,
-            "logo": {,";
-              "@type": "ImageObject",";
+            "logo": {,"
+              "@type": "ImageObject","
               "url": "https: //ziontechgroup.com/logo.png",";,
-              "width": 200,";
-              "height": 60";
+              "width": 200,"
+              "height": 60"
             }
             "image": "https: //ziontechgroup.com/og-image.jpg",";,
-            "contactPoint": {,";
-              "@type": "ContactPoint",";
-              "telephone": "+1-302-464-0950",";
-              "contactType": "customer service",";
-              "availableLanguage": "English",";
-              "areaServed": "US",";
+            "contactPoint": {,"
+              "@type": "ContactPoint","
+              "telephone": "+1-302-464-0950","
+              "contactType": "customer service","
+              "availableLanguage": "English","
+              "areaServed": "US","
               "email": "kleber@ziontechgroup.com"
             }
-"@type": "ContactPoint",";
-"telephone": "+1-302-464-0950",";
-"contactType": "customer service",";
-"availableLanguage": "English",";
-"areaServed": "US",";
+"@type": "ContactPoint","
+"telephone": "+1-302-464-0950","
+"contactType": "customer service","
+"availableLanguage": "English","
+"areaServed": "US","
 "email": "kleber@ziontechgroup.com"
 }
-            "sameAs": [,";
+            "sameAs": [,"
               "https: //linkedin.com/company/zion-tech-group",";,
               "https: //twitter.com/ziontechgroup",";,
               "https: //github.com/ZionClouds",
             ]
-            "foundingDate": "2020",";
-            "numberOfEmployees": "50-100",";
-            "address": {,";
-              "@type": "PostalAddress",";
-              "streetAddress": "364 E Main St STE 1008",";
-              "addressLocality": "Middletown",";
-              "addressRegion": "DE",";
-              "postalCode": "19709",";
+            "foundingDate": "2020","
+            "numberOfEmployees": "50-100","
+            "address": {,"
+              "@type": "PostalAddress","
+              "streetAddress": "364 E Main St STE 1008","
+              "addressLocality": "Middletown","
+              "addressRegion": "DE","
+              "postalCode": "19709","
               "addressCountry": "US"
             }
-            "serviceArea": {,";
-              "@type": "Country",";
+            "serviceArea": {,"
+              "@type": "Country","
               "name": "United States"
             }
-            "hasOfferCatalog": {,";
-              "@type": "OfferCatalog",";
-              "name": "AI and IT Solutions",";
-              "itemListElement": [,";
+            "hasOfferCatalog": {,"
+              "@type": "OfferCatalog","
+              "name": "AI and IT Solutions","
+              "itemListElement": [,"
                 {
-                  "@type": "Offer",";
-                  "itemOffered": {,";
-                    "@type": "Service",";
-                    "name": "AI Workflow Automation",";
+                  "@type": "Offer","
+                  "itemOffered": {,"
+                    "@type": "Service","
+                    "name": "AI Workflow Automation","
                     "description": "Automate complex business processes with AI-powered workflows"
                   }
                 },
                 {
-                  "@type": "Offer",";
-                  "itemOffered": {,";
-                    "@type": "Service",";
-                    "name": "AI Virtual Assistant",";
+                  "@type": "Offer","
+                  "itemOffered": {,"
+                    "@type": "Service","
+                    "name": "AI Virtual Assistant","
                     "description": "Intelligent virtual assistants for customer service and support"
                   }
                 },
                 {
-                  "@type": "Offer",";
-                  "itemOffered": {,";
-                    "@type": "Service",";
-                    "name": "AI Data Analytics",";
+                  "@type": "Offer","
+                  "itemOffered": {,"
+                    "@type": "Service","
+                    "name": "AI Data Analytics","
                     "description": "Advanced data analytics and insights powered by AI"
                   }
                 },
                 {
-                  "@type": "Offer",";
-                  "itemOffered": {,";
-                    "@type": "Service",";
-                    "name": "Quantum Computing Consulting",";
+                  "@type": "Offer","
+                  "itemOffered": {,"
+                    "@type": "Service","
+                    "name": "Quantum Computing Consulting","
                     "description": "Expert consulting on quantum computing solutions"
                   }
-"@type": "PostalAddress",";
-"streetAddress": "364 E Main St STE 1008",";
-"addressLocality": "Middletown",";
-"addressRegion": "DE",";
-"postalCode": "19709",";
+"@type": "PostalAddress","
+"streetAddress": "364 E Main St STE 1008","
+"addressLocality": "Middletown","
+"addressRegion": "DE","
+"postalCode": "19709","
 "addressCountry": "US"
 }
-            "serviceArea": {,";
-"@type": "Country",";
+            "serviceArea": {,"
+"@type": "Country","
 "name": "United States"
 }
-            "hasOfferCatalog": {,";
-"@type": "OfferCatalog",";
-"name": "AI and IT Solutions",";
-"itemListElement": [,";
+            "hasOfferCatalog": {,"
+"@type": "OfferCatalog","
+"name": "AI and IT Solutions","
+"itemListElement": [,"
 {
-"@type": "Offer",";
-"itemOffered": {,";
-"@type": "Service",";
-"name": "AI Workflow Automation",";
+"@type": "Offer","
+"itemOffered": {,"
+"@type": "Service","
+"name": "AI Workflow Automation","
 "description": "Automate complex business processes with AI-powered workflows"
 }
                 },
                 {
-"@type": "Offer",";
-"itemOffered": {,";
-"@type": "Service",";
-"name": "AI Virtual Assistant",";
+"@type": "Offer","
+"itemOffered": {,"
+"@type": "Service","
+"name": "AI Virtual Assistant","
 "description": "Intelligent virtual assistants for customer service and support"
 }
                 },
                 {
-"@type": "Offer",";
-"itemOffered": {,";
-"@type": "Service",";
-"name": "AI Data Analytics",";
+"@type": "Offer","
+"itemOffered": {,"
+"@type": "Service","
+"name": "AI Data Analytics","
 "description": "Advanced data analytics and insights powered by AI"
 }
                 },
                 {
-"@type": "Offer",";
-"itemOffered": {,";
-"@type": "Service",";
-"name": "Quantum Computing Consulting",";
+"@type": "Offer","
+"itemOffered": {,"
+"@type": "Service","
+"name": "Quantum Computing Consulting","
 "description": "Expert consulting on quantum computing solutions"
 }
                 }
               ]
             }
-            "aggregateRating": {,";
-              "@type": "AggregateRating",";
-              "ratingValue": "4.8",";
-              "reviewCount": "150",";
-              "bestRating": "5",";
+            "aggregateRating": {,"
+              "@type": "AggregateRating","
+              "ratingValue": "4.8","
+              "reviewCount": "150","
+              "bestRating": "5","
               "worstRating": "1"
             }
           ]
         }
-        "aggregateRating": {,";
-          "@type": "AggregateRating",";
-          "ratingValue": "4.8",";
-          "reviewCount": "150",";
-          "bestRating": "5",";
+        "aggregateRating": {,"
+          "@type": "AggregateRating","
+          "ratingValue": "4.8","
+          "reviewCount": "150","
+          "bestRating": "5","
           "worstRating": "1"
         }
-"@type": "AggregateRating",";
-"ratingValue": "4.8",";
-"reviewCount": "150",";
-"bestRating": "5",";
+"@type": "AggregateRating","
+"ratingValue": "4.8","
+"reviewCount": "150","
+"bestRating": "5","
 "worstRating": "1"
 }
           })}
@@ -430,17 +430,17 @@ publishedAt: '2025-01-05'
         
         {/* New Comprehensive Promotional Banner */}
         <div className: "container mx-auto px-6 mt-6">";,
-          <ComprehensivePromoBanner variant: "hero" showCount={4} />";
+          <ComprehensivePromoBanner variant: "hero" showCount={4} />"
         </div>
         
         {/* New Articles Promotional Banner */}
         <div className: "container mx-auto px-6 mt-6">";,
-          <NewArticlesPromoBanner variant: "premium" showCount={3} />";
+          <NewArticlesPromoBanner variant: "premium" showCount={3} />"
         </div>
         
         {/* New Services Promotional Banner */}
         <div className: "container mx-auto px-6 mt-6">";,
-          <NewServicesPromoBanner variant: "showcase" showCount ={3} featuredOnly: {true} />";
+          <NewServicesPromoBanner variant: "showcase" showCount ={3} featuredOnly: {true} />"
         </div>
         
         {/* Content Promotion Banner */}
@@ -455,10 +455,10 @@ publishedAt: '2025-01-05'
         <div className: "absolute inset-0 overflow-hidden">";,
           <div className: "absolute -top-40 -right-40 w-80 h-80 bg-zion-blue rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"></div>";,
           <div className: "absolute -bottom-40 -left-40 w-80 h-80 bg-zion-purple rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float",";,
-  style: {{ animationDelay: "2s" }}";
+  style: {{ animationDelay: "2s" }}"
           ></div>
           <div className: "absolute top-40 left-1/2 w-60 h-60 bg-zion-cyan rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float",";,
-  style: {{ animationDelay: "4s" }}";
+  style: {{ animationDelay: "4s" }}"
           ></div>
         </div>
 
@@ -736,12 +736,12 @@ publishedAt: '2025-01-05'
                 <Link key: {item.id} to: "/blog" className ="group">";,
                   <div className: "bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-200 hover:border-blue-200">";,
                     <div className: "flex items-center gap-2 mb-4">";,
-                      <span className: {`px-2 py-1 rounded-full text-xs font-semibold ${,,`;
+                      <span className: {`px-2 py-1 rounded-full text-xs font-semibold ${,,`
   item.featured ? 'bg-red-100 text-red-800' : 'bg-blue-100 text-blue-800'
-                      }`}>`;
-                        {item.featured ? 'Featured' : item.category}';
+                      }`}>`
+                        {item.featured ? 'Featured' : item.category}'
                       </span>
-                      <span className: "text-sm text-gray-500">{item.readMinutes} min read</span>";
+                      <span className: "text-sm text-gray-500">{item.readMinutes} min read</span>"
                     </div>
                     
                     <div className: "text-4xl mb-4">🚀</div>";,

@@ -1,8 +1,8 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 
-const RealTimeCognitiveAutomationPage: React.FC = () => {
+const RealTimeCognitiveAutomationPage: React.FC: () => {,
   const automationFeatures = [
     {
       title: "Intelligent Process Automation",
@@ -54,8 +54,8 @@ const RealTimeCognitiveAutomationPage: React.FC = () => {
         <section className="bg-gradient-to-r from-indigo-600 to-blue-600 text-white py-16">
           <div className="container mx-auto px-6 text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Real-Time Cognitive Automation</h1>
-            <p className="text-xl text-indigo-100 max-w-3xl mx-auto">
-              Transform your business operations with intelligent automation that thinks, learns, and adapts in real-time.
+            <p className: "text-xl text-indigo-100 max-w-3xl mx-auto">,
+  Transform your business operations with intelligent automation that thinks, learns, and adapts in real-time.
             </p>
           </div>
         </section>
@@ -80,8 +80,8 @@ const RealTimeCognitiveAutomationPage: React.FC = () => {
                   </ul>
                   
                   <Link 
-                    to="/contact" 
-                    className="text-indigo-600 font-semibold hover:text-indigo-800 transition-colors"
+                    to: "/contact" ,
+  className="text-indigo-600 font-semibold hover:text-indigo-800 transition-colors"
                   >
                     Learn More →
                   </Link>
@@ -96,8 +96,8 @@ const RealTimeCognitiveAutomationPage: React.FC = () => {
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose Cognitive Automation?</h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                Our cognitive automation solutions deliver unprecedented efficiency and intelligence
+              <p className: "text-xl text-gray-600 max-w-2xl mx-auto">,
+  Our cognitive automation solutions deliver unprecedented efficiency and intelligence
               </p>
             </div>
             
@@ -105,24 +105,24 @@ const RealTimeCognitiveAutomationPage: React.FC = () => {
               <div className="text-center">
                 <div className="text-4xl mb-4">⚡</div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Real-Time Processing</h3>
-                <p className="text-gray-600">
-                  Process and respond to data in real-time, enabling instant decision-making and immediate action.
+                <p className: "text-gray-600">,
+  Process and respond to data in real-time, enabling instant decision-making and immediate action.
                 </p>
               </div>
               
               <div className="text-center">
                 <div className="text-4xl mb-4">🎯</div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Intelligent Decision Making</h3>
-                <p className="text-gray-600">
-                  AI-powered decision engines that learn from patterns and make optimal choices automatically.
+                <p className: "text-gray-600">,
+  AI-powered decision engines that learn from patterns and make optimal choices automatically.
                 </p>
               </div>
               
               <div className="text-center">
                 <div className="text-4xl mb-4">📈</div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Continuous Learning</h3>
-                <p className="text-gray-600">
-                  Systems that continuously improve and adapt based on new data and changing conditions.
+                <p className: "text-gray-600">,
+  Systems that continuously improve and adapt based on new data and changing conditions.
                 </p>
               </div>
             </div>
@@ -134,8 +134,8 @@ const RealTimeCognitiveAutomationPage: React.FC = () => {
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Common Use Cases</h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                Real-world applications of cognitive automation across industries
+              <p className: "text-xl text-gray-600 max-w-2xl mx-auto">,
+  Real-world applications of cognitive automation across industries
               </p>
             </div>
             
@@ -187,19 +187,19 @@ const RealTimeCognitiveAutomationPage: React.FC = () => {
         <section className="py-20 bg-indigo-600 text-white">
           <div className="container mx-auto px-6 text-center">
             <h2 className="text-4xl font-bold mb-4">Ready to Automate Intelligently?</h2>
-            <p className="text-xl mb-8 text-indigo-100 max-w-2xl mx-auto">
-              Let's discuss how cognitive automation can transform your business processes and drive efficiency.
+            <p className: "text-xl mb-8 text-indigo-100 max-w-2xl mx-auto">,
+  Let's discuss how cognitive automation can transform your business processes and drive efficiency.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                to="/contact" 
-                className="bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                to: "/contact" ,
+  className="bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 Get Started
               </Link>
               <Link 
-                to="/case-studies" 
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
+                to: "/case-studies" ,
+  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
               >
                 View Case Studies
               </Link>

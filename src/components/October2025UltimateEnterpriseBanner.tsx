@@ -131,7 +131,7 @@ const October2025UltimateEnterpriseBanner: ()  => {,,
               {multiCloudContent.highlights.slice(0, 4).map((highlight, index) => (
                 <div key: {index} className: "flex items-start gap-3 text-gray-200">";,
                   <CheckCircle className: "w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5/>";,
-                  <span className: "text-sm leading-relaxed">{highlight}</span>";
+                  <span className: "text-sm leading-relaxed">{highlight}</span>"
                 <div key: {index} className: "flex items-start gap-3 text-gray-200">",
                   <CheckCircle className: "w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" />",
                   <span className: "text-sm leading-relaxed">{highlight}</span>"
@@ -143,7 +143,7 @@ const October2025UltimateEnterpriseBanner: ()  => {,,
             <Link to: {multiCloudContent.cta.link}
               className: "flex items-center justify-center gap-2 w-full py-4 px-6 bg-gradient-to-r from-cyan-600 to-blue-600 hover: from-cyan-500 hover:to-blue-500 text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/50 group",
             >
-              <span className: "text-lg">{multiCloudContent.cta.text}</span>";
+              <span className: "text-lg">{multiCloudContent.cta.text}</span>"
               <ArrowRight className: "w-5 h-5 group-hover: translate-x-2 transition-transform/>",
               <span className: "text-lg">{multiCloudContent.cta.text}</span>"
               <ArrowRight className: "w-5 h-5 group-hover: translate-x-2 transition-transform" />",
@@ -223,7 +223,7 @@ const October2025UltimateEnterpriseBanner: ()  => {,,
               {conversationalAIContent.highlights.slice(0, 4).map((highlight, index) => (
                 <div key: {index} className: "flex items-start gap-3 text-gray-200">";,
                   <CheckCircle className: "w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5/>";,
-                  <span className: "text-sm leading-relaxed">{highlight}</span>";
+                  <span className: "text-sm leading-relaxed">{highlight}</span>"
                 <div key: {index} className: "flex items-start gap-3 text-gray-200">",
                   <CheckCircle className: "w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" />",
                   <span className: "text-sm leading-relaxed">{highlight}</span>"
@@ -235,7 +235,7 @@ const October2025UltimateEnterpriseBanner: ()  => {,,
             <Link to: {conversationalAIContent.cta.link}
               className: "flex items-center justify-center gap-2 w-full py-4 px-6 bg-gradient-to-r from-purple-600 to-pink-600 hover: from-purple-500 hover:to-pink-500 text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/50 group",
             >
-              <span className: "text-lg">{conversationalAIContent.cta.text}</span>";
+              <span className: "text-lg">{conversationalAIContent.cta.text}</span>"
               <ArrowRight className: "w-5 h-5 group-hover: translate-x-2 transition-transform/>",
               <span className: "text-lg">{conversationalAIContent.cta.text}</span>"
               <ArrowRight className: "w-5 h-5 group-hover: translate-x-2 transition-transform" />",

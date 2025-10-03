@@ -63,27 +63,27 @@ const NotificationSystem: React.FC<NotificationSystemProps >  = ({,,
 
   const getIcon: (type: Notification['type'])  => {',';,
   switch (type) {
-case 'success':';
+case 'success':'
 return <CheckCircle className: "w-5 h-5 text-green-600" />;,";,
-  case 'error':';
+  case 'error':'
 return <XCircle className: "w-5 h-5 text-red-600" />;,";,
-  case 'warning':';
+  case 'warning':'
 return <AlertTriangle className: "w-5 h-5 text-yellow-600" />;,";,
-  case 'info':';
+  case 'info':'
 default:
-return <Info className: "w-5 h-5 text-blue-600" />;";
+return <Info className: "w-5 h-5 text-blue-600" />;"
 }
   };
 
   const getStyles: (type: Notification['type'])  => {',';,
   switch (type) {
-case 'success':';
+case 'success':'
 return 'bg-green-50 border-green-200 text-green-800'
-case 'error':';
+case 'error':'
 return 'bg-red-50 border-red-200 text-red-800'
-case 'warning':';
+case 'warning':'
 return 'bg-yellow-50 border-yellow-200 text-yellow-800'
-case 'info':';
+case 'info':'
 default: return 'bg-blue-50 border-blue-200 text-blue-800',';,
   const getIcon: (type: Notification['type'])  => {',';,
   switch (type) {
@@ -115,17 +115,17 @@ return 'bg-blue-50 border-blue-200 text-blue-800';'
 
   const getPositionClasses: ()  => {,,
   switch (position) {
-case 'top-left':';
+case 'top-left':'
 return 'top-4 left-4'
-case 'top-center':';
+case 'top-center':'
 return 'top-4 left-1/2 transform -translate-x-1/2'
-case 'bottom-left':';
+case 'bottom-left':'
 return 'bottom-4 left-4'
-case 'bottom-center':';
+case 'bottom-center':'
 return 'bottom-4 left-1/2 transform -translate-x-1/2'
-case 'bottom-right':';
+case 'bottom-right':'
 return 'bottom-4 right-4'
-case 'top-right':';
+case 'top-right':'
 default: return 'top-4 right-4',';,
   case 'top-left':'
 return 'top-4 left-4';'
@@ -146,7 +146,7 @@ return 'top-4 right-4';'
   const notificationVariants: {,,
   initial: {,,
       opacity: 0,,
-      y: position.includes('top') ? -50 : 50,';
+      y: position.includes('top') ? -50 : 50,'
       scale: 0.8,
     }
     animate: {,,
@@ -161,7 +161,7 @@ return 'top-4 right-4';'
     }
     exit: {,,
       opacity: 0,,
-      y: position.includes('top') ? -50 : 50,';
+      y: position.includes('top') ? -50 : 50,'
       scale: 0.8,,
       transition: {,,
         duration: 0.2,,
@@ -204,7 +204,7 @@ return 'top-4 right-4';'
   animate: "animate",";,
   exit: "exit",";,
   layout
-            className: {`,,`;
+            className: {`,,`
   relative p-4 rounded-lg border shadow-lg backdrop-blur-sm
               ${getStyles(notification.type)}
               transform transition-all duration-300
@@ -264,9 +264,9 @@ ${action.variant: = = 'primary',
               <div className: "absolute bottom-0 left-0 right-0 h-1 bg-black bg-opacity-10 rounded-b-lg overflow-hidden">",
                 <motion .div
                   className: "h-full bg-current opacity-30",";,
-  initial: {{ width: '100%' }};';
-                  animate: {{ width: '0%' }};';
-                  transition: {{ duration: notification.duration / 1000, ease: 'linear' }};';
+  initial: {{ width: '100%' }};'
+                  animate: {{ width: '0%' }};'
+                  transition: {{ duration: notification.duration / 1000, ease: 'linear' }};'
                   initial: {{ width: '100%' }}'
                   animate: {{ width: '0%' }}'
                   transition: {{ duration: notification.duration / 1000, ease: 'linear' }}'

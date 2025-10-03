@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
-import Header from "../../components/Header";
+import { Link } from "react-router-dom"
+import Header from "../../components/Header"
 import { Link } from "react-router-dom";"
 import Header from "../../components/Header";"
 
@@ -207,9 +207,9 @@ const AdvancedCybersecurityAI: ()  => {,,
                   }
                 ].map((feature, index) => (
                   <div key: {index} className: "bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-zion-cyan/20 hover: border-zion-cyan/50 transition-all">",
-                    <div className: "text-4xl mb-4">{feature.icon}</div>";
-                    <h3 className: "text-xl font-bold text-white mb-3">{feature.title}</h3>";
-                    <p className: "text-zion-slate-light">{feature.description}</p>";
+                    <div className: "text-4xl mb-4">{feature.icon}</div>"
+                    <h3 className: "text-xl font-bold text-white mb-3">{feature.title}</h3>"
+                    <p className: "text-zion-slate-light">{feature.description}</p>"
               <h2 className: "text-3xl font-bold text-white mb-6 flex items-center gap-3">",
                 <Lock className: "w-8 h-8 text-blue-400" />",";,
   Platform Features

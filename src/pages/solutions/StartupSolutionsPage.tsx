@@ -1,8 +1,8 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 
-const StartupSolutionsPage: React.FC = () => {
+const StartupSolutionsPage: React.FC: () => {,
   const startupSolutions = [
     {
       title: "MVP Development",
@@ -54,8 +54,8 @@ const StartupSolutionsPage: React.FC = () => {
         <section className="bg-gradient-to-r from-orange-600 to-red-600 text-white py-16">
           <div className="container mx-auto px-6 text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Startup Solutions</h1>
-            <p className="text-xl text-orange-100 max-w-3xl mx-auto">
-              Agile solutions to help startups scale quickly and efficiently from idea to market leader.
+            <p className: "text-xl text-orange-100 max-w-3xl mx-auto">,
+  Agile solutions to help startups scale quickly and efficiently from idea to market leader.
             </p>
           </div>
         </section>
@@ -80,8 +80,8 @@ const StartupSolutionsPage: React.FC = () => {
                   </ul>
                   
                   <Link 
-                    to="/contact" 
-                    className="text-orange-600 font-semibold hover:text-orange-800 transition-colors"
+                    to: "/contact" ,
+  className="text-orange-600 font-semibold hover:text-orange-800 transition-colors"
                   >
                     Learn More →
                   </Link>
@@ -96,8 +96,8 @@ const StartupSolutionsPage: React.FC = () => {
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose Our Startup Solutions?</h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                Solutions designed specifically for startup needs and constraints
+              <p className: "text-xl text-gray-600 max-w-2xl mx-auto">,
+  Solutions designed specifically for startup needs and constraints
               </p>
             </div>
             
@@ -105,24 +105,24 @@ const StartupSolutionsPage: React.FC = () => {
               <div className="text-center">
                 <div className="text-4xl mb-4">⚡</div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Speed to Market</h3>
-                <p className="text-gray-600">
-                  Rapid development and deployment to get your product to market faster than competitors.
+                <p className: "text-gray-600">,
+  Rapid development and deployment to get your product to market faster than competitors.
                 </p>
               </div>
               
               <div className="text-center">
                 <div className="text-4xl mb-4">💡</div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Innovation Focus</h3>
-                <p className="text-gray-600">
-                  Cutting-edge technologies and approaches to help you build innovative and differentiated products.
+                <p className: "text-gray-600">,
+  Cutting-edge technologies and approaches to help you build innovative and differentiated products.
                 </p>
               </div>
               
               <div className="text-center">
                 <div className="text-4xl mb-4">🎯</div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Startup-Friendly Pricing</h3>
-                <p className="text-gray-600">
-                  Flexible pricing models designed for startup budgets and growth stages.
+                <p className: "text-gray-600">,
+  Flexible pricing models designed for startup budgets and growth stages.
                 </p>
               </div>
             </div>
@@ -134,8 +134,8 @@ const StartupSolutionsPage: React.FC = () => {
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Your Startup Journey</h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                We support you at every stage of your startup's growth
+              <p className: "text-xl text-gray-600 max-w-2xl mx-auto">,
+  We support you at every stage of your startup's growth
               </p>
             </div>
             
@@ -172,8 +172,8 @@ const StartupSolutionsPage: React.FC = () => {
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Startup Technology Stack</h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                Modern technologies perfect for startup development
+              <p className: "text-xl text-gray-600 max-w-2xl mx-auto">,
+  Modern technologies perfect for startup development
               </p>
             </div>
             
@@ -206,8 +206,8 @@ const StartupSolutionsPage: React.FC = () => {
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Startup Success Metrics</h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                Real results from startups using our solutions
+              <p className: "text-xl text-gray-600 max-w-2xl mx-auto">,
+  Real results from startups using our solutions
               </p>
             </div>
             
@@ -237,19 +237,19 @@ const StartupSolutionsPage: React.FC = () => {
         <section className="py-20 bg-orange-600 text-white">
           <div className="container mx-auto px-6 text-center">
             <h2 className="text-4xl font-bold mb-4">Ready to Build Your Startup?</h2>
-            <p className="text-xl mb-8 text-orange-100 max-w-2xl mx-auto">
-              Let's discuss how our startup solutions can help you build, launch, and scale your product.
+            <p className: "text-xl mb-8 text-orange-100 max-w-2xl mx-auto">,
+  Let's discuss how our startup solutions can help you build, launch, and scale your product.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                to="/contact" 
-                className="bg-white text-orange-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                to: "/contact" ,
+  className="bg-white text-orange-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 Start Building
               </Link>
               <Link 
-                to="/services" 
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-orange-600 transition-colors"
+                to: "/services" ,
+  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-orange-600 transition-colors"
               >
                 Explore Services
               </Link>

@@ -16,7 +16,7 @@ const AICostOptimizationBanner: React.FC: ()  => {,,
       readTime: '22 min',',';,
       trending: true,,,
       icon: '💰',',';,
-      metrics: { value: '90%', label: 'Cost Reduction' };';
+      metrics: { value: '90%', label: 'Cost Reduction' };'
     },
     {
       id: 2,,,
@@ -28,7 +28,7 @@ const AICostOptimizationBanner: React.FC: ()  => {,,
       readTime: '18 min',',';,
       trending: true,,,
       icon: '🧠',',';,
-      metrics: { value: '85%', label: 'GenAI Savings' };';
+      metrics: { value: '85%', label: 'GenAI Savings' };'
     },
     {
       id: 3,,,
@@ -40,7 +40,7 @@ const AICostOptimizationBanner: React.FC: ()  => {,,
       readTime: '25 min',',';,
       trending: true,,,
       icon: '⚡',',';,
-      metrics: { value: '70%', label: 'Infra Cost Cut' };';
+      metrics: { value: '70%', label: 'Infra Cost Cut' };'
     },
     {
       id: 4,,,
@@ -52,7 +52,7 @@ const AICostOptimizationBanner: React.FC: ()  => {,,
       readTime: '30 min',',';,
       trending: true,,,
       icon: '📊',',';,
-      metrics: { value: '$500M+', label: 'Total Savings' };';
+      metrics: { value: '$500M+', label: 'Total Savings' };'
       title: 'AI Cost Optimization Breakthrough: Cut Spending by 90%',',
       slug: 'ai-cost-optimization-breakthrough-2026',',
       excerpt: 'Revolutionary AI cost optimization strategies delivering 90% cost reduction, $200M+ savings, and 10x efficiency gains for Fortune 500 companies.',',
@@ -106,8 +106,8 @@ const AICostOptimizationBanner: React.FC: ()  => {,,
       {/* Animated background effects */}
       <div className: "absolute inset-0 overflow-hidden opacity-30">";,
         <div className: "absolute top-0 left-1/4 w-96 h-96 bg-green-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>";,
-        <div className: "absolute bottom-0 right-1/4 w-96 h-96 bg-emerald-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style ={{ animationDelay: '2s' }}></div>;';
-        <div className: "absolute top-1/2 left-1/2 w-64 h-64 bg-teal-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style ={{ animationDelay: '4s' }}></div>;';
+        <div className: "absolute bottom-0 right-1/4 w-96 h-96 bg-emerald-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style ={{ animationDelay: '2s' }}></div>;'
+        <div className: "absolute top-1/2 left-1/2 w-64 h-64 bg-teal-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style ={{ animationDelay: '4s' }}></div>;'
       <div className: "absolute inset-0 overflow-hidden opacity-30">",
         <div className: "absolute top-0 left-1/4 w-96 h-96 bg-green-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>",
         <div className: "absolute bottom-0 right-1/4 w-96 h-96 bg-emerald-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>'
@@ -147,13 +147,13 @@ const AICostOptimizationBanner: React.FC: ()  => {,,
           {/* Key Stats */}
           <div className: "grid md: grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">",
             {[
-              { value: '90%', label: 'Cost Reduction', icon: '💰' }';
-              { value: '$500M+', label: 'Total Savings', icon: '📈' }';
-              { value: '10x', label: 'Efficiency Gains', icon: '⚡' }';
-              { value: '6', label: 'Months to Results', icon: '📅' }';
+              { value: '90%', label: 'Cost Reduction', icon: '💰' }'
+              { value: '$500M+', label: 'Total Savings', icon: '📈' }'
+              { value: '10x', label: 'Efficiency Gains', icon: '⚡' }'
+              { value: '6', label: 'Months to Results', icon: '📅' }'
             ].map((stat, index) => (
               <div key: {index} className: "bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover: border-green-500/50 transition-all duration-300">",
-                <div className: "text-4xl mb-3">{stat.icon}</div>";
+                <div className: "text-4xl mb-3">{stat.icon}</div>"
                 <div className: "text-3xl font-extrabold bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent mb-2">";,
           <div className: "grid md: grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">",
             {[
@@ -247,7 +247,7 @@ const AICostOptimizationBanner: React.FC: ()  => {,,
                     <Zap className: "w-4 h-4 text-green-400/>";,
                     {content.readTime}
                   </span>
-                  <span >{new Date(content.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}</span>;';
+                  <span >{new Date(content.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}</span>;'
                 <div className: "flex items-center justify-between text-sm text-gray-500 mb-6 pb-6 border-b border-white/10">",
                   <span className: "flex items-center gap-2">",
                     <Zap className: "w-4 h-4 text-green-400" />",
@@ -306,10 +306,10 @@ const AICostOptimizationBanner: React.FC: ()  => {,,
         {/* Success Indicators */}
         <div className: "grid md: grid-cols-4 gap-8 mt-20">",
           {[
-            { value: '$2B+', label: 'Total Client Savings' }';
-            { value: '500+', label: 'Companies Optimized' }';
-            { value: '90%', label: 'Average Cost Reduction' }';
-            { value: '99.9%', label: 'Accuracy Maintained' }';
+            { value: '$2B+', label: 'Total Client Savings' }'
+            { value: '500+', label: 'Companies Optimized' }'
+            { value: '90%', label: 'Average Cost Reduction' }'
+            { value: '99.9%', label: 'Accuracy Maintained' }'
         <div className: "grid md: grid-cols-4 gap-8 mt-20">",
           {[
             { value: '$2B+', label: 'Total Client Savings' },'

@@ -50,8 +50,8 @@ headings: { h1: number; h2: number; h3: number; h4: number; h5: number; h6: numb
 const SEOAuditDashboard: React.FC: ()  => {,,
   const [report, setReport] = useState<SEOReport | null>(null);
   const [isRunning, setIsRunning] = useState(false);
-  const [selectedCategory, setSelectedCategory] = useState<string >('all');';
-  const [selectedImpact, setSelectedImpact] = useState<string >('all');';
+  const [selectedCategory, setSelectedCategory] = useState<string >('all');'
+  const [selectedImpact, setSelectedImpact] = useState<string >('all');'
   const commonSEOIssues: SEOIssue[]  = [,,
     {
       id: 'title-length',';,
@@ -314,12 +314,12 @@ const SEOAuditDashboard: React.FC: ()  => {,,
 
   const getIssueIcon: (type: string)  => {,,
   switch (type) {
-case 'error':';
+case 'error':'
 return <XCircle className: "w-5 h-5 text-red-600" />;,";,
-  case 'warning':';
+  case 'warning':'
 return <AlertTriangle className: "w-5 h-5 text-yellow-600" />;,";,
   default:
-return <CheckCircle className: "w-5 h-5 text-blue-600" />;";
+return <CheckCircle className: "w-5 h-5 text-blue-600" />;"
 }
 case 'error':'
 return <XCircle className: "w-5 h-5 text-red-600" />;",";,
@@ -332,9 +332,9 @@ return <CheckCircle className: "w-5 h-5 text-blue-600" />;"
 
   const getImpactColor: (impact: string)  => {,,
   switch (impact) {
-case 'high':';
+case 'high':'
 return 'bg-red-100 text-red-800 border-red-200'
-case 'medium':';
+case 'medium':'
 return 'bg-yellow-100 text-yellow-800 border-yellow-200'
 default: return 'bg-blue-100 text-blue-800 border-blue-200',';,
   case 'high':'
@@ -348,14 +348,14 @@ return 'bg-blue-100 text-blue-800 border-blue-200';'
 
   const getCategoryIcon: (category: string)  => {,,
   switch (category) {
-case 'content':';
+case 'content':'
 return <Search className: "w-4 h-4" />;,";,
-  case 'mobile':';
+  case 'mobile':'
 return <Smartphone className: "w-4 h-4" />;,";,
-  case 'performance':';
+  case 'performance':'
 return <Zap className: "w-4 h-4" />;,";,
   default:
-return <Globe className: "w-4 h-4" />;";
+return <Globe className: "w-4 h-4" />;"
 }
   };
 
@@ -409,7 +409,7 @@ return <Globe className: "w-4 h-4" />;"
         </div>
         <button onClick: {runSEOAudit}
           disabled: {isRunning}
-          className: {`px-6 py-2 rounded-lg font-medium transition-colors flex items-center gap-2 ${`,,`;
+          className: {`px-6 py-2 rounded-lg font-medium transition-colors flex items-center gap-2 ${`,,`
   isRunning
               ? 'bg-gray-400 text-white cursor-not-allowed'
               : 'bg-blue-600 text-white hover: bg-blue-700}`}`
@@ -494,7 +494,7 @@ isRunning ? (
                 <div className: "space-y-1 text-sm">";,
                   <div className: "flex justify-between">";,
                     <span >Word Count: </span>,
-                    <span className: "font-medium">{report.metrics.wordCount.toLocaleString()}</span>";
+                    <span className: "font-medium">{report.metrics.wordCount.toLocaleString()}</span>"
                   </div>
                   <div className: "flex justify-between">";,
           <div className: "bg-gray-50 rounded-lg p-4 mb-6">",
@@ -521,7 +521,7 @@ isRunning ? (
                 <div className: "space-y-1 text-sm">";,
                   <div className: "flex justify-between">";,
                     <span >H1 Tags: </span>,
-                    <span className: "font-medium">{report.metrics.headings.h1}</span>";
+                    <span className: "font-medium">{report.metrics.headings.h1}</span>"
                   </div>
                   <div className: "flex justify-between">";,
                     <span >Total Headings: </span>,
@@ -546,11 +546,11 @@ isRunning ? (
                 <div className: "space-y-1 text-sm">";,
                   <div className: "flex justify-between">";,
                     <span >Images: </span>,
-                    <span className: "font-medium">{report.metrics.images.total}</span>";
+                    <span className: "font-medium">{report.metrics.images.total}</span>"
                   </div>
                   <div className: "flex justify-between">";,
                     <span >Missing Alt Text: </span>,
-                    <span className: "font-medium text-red-600">{report.metrics.images.withoutAlt}</span>";
+                    <span className: "font-medium text-red-600">{report.metrics.images.withoutAlt}</span>"
                 <h4 className: "font-medium text-gray-700 mb-2">Media & Links</h4>",
                 <div className: "space-y-1 text-sm">",
                   <div className: "flex justify-between">",
@@ -614,7 +614,7 @@ isRunning ? (
                       {getIssueIcon(issue.type)}
                       <div className: "flex-1">";,
                         <div className: "flex items-center gap-2 mb-1">";,
-                          <h4 className: "font-semibold text-gray-900">{issue.title}</h4>";
+                          <h4 className: "font-semibold text-gray-900">{issue.title}</h4>"
                       <div className: "flex-1">",
                         <div className: "flex items-center gap-2 mb-1">",
                           <h4 className: "font-semibold text-gray-900">{issue.title}</h4>"
@@ -629,10 +629,10 @@ isRunning ? (
                             {issue.score}/100
                           </span>
                         </div>
-                        <p className: "text-gray-600 text-sm mb-2">{issue.description}</p>";
+                        <p className: "text-gray-600 text-sm mb-2">{issue.description}</p>"
                         <div className: "bg-green-50 border border-green-200 rounded-lg p-3">";,
                           <p className: "text-green-800 text-sm font-medium">How to Fix: </p>",
-                          <p className: "text-green-700 text-sm">{issue.fix}</p>";
+                          <p className: "text-green-700 text-sm">{issue.fix}</p>"
                         <p className: "text-gray-600 text-sm mb-2">{issue.description}</p>"
                         <div className: "bg-green-50 border border-green-200 rounded-lg p-3">",
                           <p className: "text-green-800 text-sm font-medium">How to Fix: </p>",

@@ -35,7 +35,7 @@ export class BundleOptimizer {
     };
 
     // Analysis logic would integrate with webpack/vite bundle analyzer
-    console.log('Bundle analysis initiated...');';
+    console.log('Bundle analysis initiated...');'
     console.log('Bundle analysis initiated...');'
     
     // Simulate component size analysis
@@ -130,11 +130,11 @@ recommendations.push(
   private getComponentSizes(): Array<{ name: string; size: number }> {
     // In production, this would integrate with actual build tools
     return [
-      { name: 'App.tsx', size: 450 * 1024 }';
-      { name: 'Home.tsx', size: 280 * 1024 }';
-      { name: 'BannerComponents', size: 650 * 1024 }';
-      { name: 'BlogComponents', size: 320 * 1024 }';
-      { name: 'UtilityFunctions', size: 180 * 1024 }';
+      { name: 'App.tsx', size: 450 * 1024 }'
+      { name: 'Home.tsx', size: 280 * 1024 }'
+      { name: 'BannerComponents', size: 650 * 1024 }'
+      { name: 'BlogComponents', size: 320 * 1024 }'
+      { name: 'UtilityFunctions', size: 180 * 1024 }'
       { name: 'App.tsx', size: 450 * 1024 },'
       { name: 'Home.tsx', size: 280 * 1024 },'
       { name: 'BannerComponents', size: 650 * 1024 },'
@@ -150,7 +150,7 @@ recommendations.push(
 unusedExports: string[];,,
   potentialSavings: number;
 } {
-    console.log('Analyzing unused exports...');';
+    console.log('Analyzing unused exports...');'
     console.log('Analyzing unused exports...');'
     
     // Mock implementation
@@ -176,7 +176,7 @@ strategy: string;,,
 } {
     return {
       strategy: 'vendor-async-pages',',';,
-      expectedImprovement: '40-50% reduction in initial bundle size};';
+      expectedImprovement: '40-50% reduction in initial bundle size};'
       strategy: 'vendor-async-pages',',
       expectedImprovement: '40-50% reduction in initial bundle size',
     };
@@ -199,7 +199,7 @@ strategy: string;,,
 - **Largest Components**:
 ${analysis.largestComponents.map(c: > ,
   `  - ${c.name}: ${(c.size / 1024).toFixed(2)} KB`
-).join('\n')};';
+).join('\n')};'
 ).join('\n')}'
 
 ## Optimization Results

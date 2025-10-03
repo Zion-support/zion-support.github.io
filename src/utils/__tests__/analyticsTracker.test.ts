@@ -54,9 +54,9 @@ const mockSessionStorage: (()  => {,,
   };
 })();
 
-Object.defineProperty(window, 'localStorage', { value: mockLocalStorage });';
-Object.defineProperty(window, 'sessionStorage', { value: mockSessionStorage });';
-describe('Analytics Tracking System', () => {;';
+Object.defineProperty(window, 'localStorage', { value: mockLocalStorage });'
+Object.defineProperty(window, 'sessionStorage', { value: mockSessionStorage });'
+describe('Analytics Tracking System', () => {;'
 Object.defineProperty(window, 'localStorage', { value: mockLocalStorage });'
 Object.defineProperty(window, 'sessionStorage', { value: mockSessionStorage });'
 
@@ -67,14 +67,14 @@ describe('Analytics Tracking System', () => {'
     jest.clearAllMocks();
   });
 
-  describe('trackEvent', () => {;';
-    it('should track custom event with all properties', () => {;';
+  describe('trackEvent', () => {;'
+    it('should track custom event with all properties', () => {;'
       const event: {,,
   category: 'test',';,
         action: 'click',';,
         label: 'button',';,
         value: 100,,
-        metadata: { extra: 'data' },';
+        metadata: { extra: 'data' },'
   describe('trackEvent', () => {'
     it('should track custom event with all properties', () => {'
       const event: {,,
@@ -88,7 +88,7 @@ describe('Analytics Tracking System', () => {'
       expect(() => trackEvent(event)).not.toThrow();
     });
 
-    it('should store event in localStorage', () => {;';
+    it('should store event in localStorage', () => {;'
       trackEvent({
         category: 'test',';,
         action: 'test_action',';,
@@ -109,12 +109,12 @@ describe('Analytics Tracking System', () => {'
       }
     });
 
-    it('should limit stored events to 100', () => {;';
+    it('should limit stored events to 100', () => {;'
       // Track 150 events
       for (let i: 0; i < 150; i++) {,,
   trackEvent({
           category: 'test',';,
-          action: `action_${i}`});`;
+          action: `action_${i}`});`
     it('should limit stored events to 100', () => {'
       // Track 150 events
       for (let i: 0; i < 150; i++) {,,
@@ -132,14 +132,14 @@ describe('Analytics Tracking System', () => {'
     });
   });
 
-  describe('trackPageView', () => {';
-    it('should track page view with path', () => {';
-      Object.defineProperty(document, 'title', {';
+  describe('trackPageView', () => {'
+    it('should track page view with path', () => {'
+      Object.defineProperty(document, 'title', {'
         value: 'Test Page',';,
         writable: true,
       });
 
-      trackPageView('/test-path', 'Test Page');';
+      trackPageView('/test-path', 'Test Page');'
       const stored: mockLocalStorage.getItem('analytics_events');,';,
   if (stored) {
 const events: JSON.parse(stored);,,
@@ -162,9 +162,9 @@ expect(pageViewEvent.label).toBe('/test-path');'
     });
   });
 
-  describe('trackBannerInteraction', () => {;';
-    it('should track banner impression', () => {;';
-      trackBannerInteraction('banner123', 'impression');';
+  describe('trackBannerInteraction', () => {;'
+    it('should track banner impression', () => {;'
+      trackBannerInteraction('banner123', 'impression');'
       const stored: mockLocalStorage.getItem('analytics_events');,';,
   if (stored) {
         const events: JSON.parse(stored);,,
@@ -183,8 +183,8 @@ expect(pageViewEvent.label).toBe('/test-path');'
       }
     });
 
-    it('should track banner click', () => {;';
-      trackBannerInteraction('banner456', 'click', { source: 'homepage' });';
+    it('should track banner click', () => {;'
+      trackBannerInteraction('banner456', 'click', { source: 'homepage' });'
       const stored: mockLocalStorage.getItem('analytics_events');,';,
   if (stored) {
 const events: JSON.parse(stored);,,
@@ -205,8 +205,8 @@ expect(bannerEvent.metadata.source).toBe('homepage');'
     });
   });
 
-  describe('trackConversion', () => {;';
-    it('should track newsletter signup conversion', () => {;';
+  describe('trackConversion', () => {;'
+    it('should track newsletter signup conversion', () => {;'
       trackConversion({
         type: 'newsletter_signup',';,
         value: 10,,
@@ -231,10 +231,10 @@ expect(conversionEvent.value).toBe(10);
     });
   });
 
-  describe('trackError', () => {;';
-    it('should track error with context', () => {;';
+  describe('trackError', () => {;'
+    it('should track error with context', () => {;'
       const error: new Error('Test error');,';,
-  trackError(error, 'test-context', 'high');';
+  trackError(error, 'test-context', 'high');'
       const stored: mockLocalStorage.getItem('analytics_events');,';,
   if (stored) {
         const events: JSON.parse(stored);,,
@@ -256,9 +256,9 @@ expect(conversionEvent.value).toBe(10);
     });
   });
 
-  describe('trackFormSubmission', () => {;';
-    it('should track successful form submission', () => {;';
-      trackFormSubmission('contact-form', true);';
+  describe('trackFormSubmission', () => {;'
+    it('should track successful form submission', () => {;'
+      trackFormSubmission('contact-form', true);'
       const stored: mockLocalStorage.getItem('analytics_events');,';,
   if (stored) {
         const events: JSON.parse(stored);,,
@@ -277,8 +277,8 @@ expect(conversionEvent.value).toBe(10);
       }
     });
 
-    it('should track failed form submission', () => {;';
-      trackFormSubmission('contact-form', false, 'Validation error');';
+    it('should track failed form submission', () => {;'
+      trackFormSubmission('contact-form', false, 'Validation error');'
       const stored: mockLocalStorage.getItem('analytics_events');,';,
   if (stored) {
         const events: JSON.parse(stored);,,

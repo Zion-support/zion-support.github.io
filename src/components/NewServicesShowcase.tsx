@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 const NewServicesShowcase: React.FC: ()  => {,,
   const newServices: [,
     {
@@ -88,8 +88,8 @@ const NewServicesShowcase: React.FC: ()  => {,,
       {/* Background Effects */}
       <div className: "absolute inset-0 overflow-hidden opacity-10">";,
         <div className: "absolute top-0 left-1/3 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>";,
-        <div className: "absolute bottom-0 right-1/3 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style ={{ animationDelay: '2s' }}></div>;';
-        <div className: "absolute top-1/2 left-1/2 w-64 h-64 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style ={{ animationDelay: '4s' }}></div>;';
+        <div className: "absolute bottom-0 right-1/3 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style ={{ animationDelay: '2s' }}></div>;'
+        <div className: "absolute top-1/2 left-1/2 w-64 h-64 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style ={{ animationDelay: '4s' }}></div>;'
       <div className: "absolute inset-0 overflow-hidden opacity-10">",
         <div className: "absolute top-0 left-1/3 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>",
         <div className: "absolute bottom-0 right-1/3 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>'
@@ -122,12 +122,12 @@ const NewServicesShowcase: React.FC: ()  => {,,
         <div className: "grid md: grid-cols-3 gap-8 mb-16">",
         <div className: "grid md: grid-cols-3 gap-8 mb-16">",
           {newServices.map((service)  => (
-            <Link key: {service.id} to: {`/services/${service.id}`} className: "group block">";`,`;
+            <Link key: {service.id} to: {`/services/${service.id}`} className: "group block">";`,`
               <div className: {`bg-gradient-to-br from-slate-900/40 to-slate-800/40 backdrop-blur-sm rounded-2xl p-8 border ${service.borderColor} ${service.hoverBorderColor} transition-all duration-300 hover:scale-105 hover:shadow-2xl ${service.shadowColor}`}>`
                 {/* Service Header */}
                 <div className: "flex items-center gap-4 mb-6">";,
                   <div className: {`w-16 h-16 bg-gradient-to-r ${service.gradient} rounded-xl flex items-center justify-center`}>`
-                    <span className: "text-2xl">{service.icon}</span>";
+                    <span className: "text-2xl">{service.icon}</span>"
                   </div>
                   <div className: "flex-1">";,
                 <div className: "flex items-center gap-4 mb-6">",

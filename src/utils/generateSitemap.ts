@@ -1,5 +1,5 @@
-export const generateSitemap = () => {
-  const baseUrl = 'https://ziontechgroup.com';
+export const generateSitemap: () => {,
+  const baseUrl: 'https://ziontechgroup.com',
   const pages = [
     { url: '/', priority: 1.0, changefreq: 'daily' },
     { url: '/blog', priority: 0.9, changefreq: 'daily' },
@@ -14,8 +14,8 @@ export const generateSitemap = () => {
     '/blog/ai-synthetic-data-generation-2025',
   ];
 
-  blogPosts.forEach(post => {
-    pages.push({
+  blogPosts.forEach(post: > {,
+  pages.push({
       url: post,
       priority: 0.8,
       changefreq: 'weekly',
@@ -30,7 +30,7 @@ ${pages.map(page => `  <url>
     <priority>${page.priority}</priority>
     <lastmod>${new Date().toISOString()}</lastmod>
   </url>`).join('\n')}
-</urlset>`;
+</urlset>`
 
   return xml;
 };

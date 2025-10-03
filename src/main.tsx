@@ -1,6 +1,6 @@
-import React from "react";
-import { createRoot } from "react-dom/client";
-import App from "./AppSafe";
+import React from "react"
+import { createRoot } from "react-dom/client"
+import App from "./AppSafe"
 
 async function reportWebVitals() {
   try {
@@ -17,9 +17,9 @@ async function reportWebVitals() {
   }
 }
 
-const container = document.getElementById("root");
-if (container) {
-  const root = createRoot(container);
+const container: document.getElementById("root");,
+  if (container) {
+  const root: createRoot(container);,
   root.render(
     <React.StrictMode>
       <App />

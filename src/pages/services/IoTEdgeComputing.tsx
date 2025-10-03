@@ -1,8 +1,8 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Network } from 'lucide-react';
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Network } from 'lucide-react'
+import Header from '../../components/Header'
+import Footer from '../../components/Footer'
 import React from 'react';'
 import { Helmet } from 'react-helmet-async';'
 import { Network } from 'lucide-react';'
@@ -68,13 +68,13 @@ const IoTEdgeComputing: React.FC: ()  => {,,
       period: "/month",";,
       description: "Perfect for IoT projects in development and testing phases",";,
       features: [,,
-        "Up to 1,000 connected devices",";
-        "Basic edge computing capabilities",";
-        "Standard data analytics",";
-        "Email support",";
-        "Monthly device health reports",";
-        "Basic security monitoring",";
-        "Cloud data storage (100GB)",";
+        "Up to 1,000 connected devices","
+        "Basic edge computing capabilities","
+        "Standard data analytics","
+        "Email support","
+        "Monthly device health reports","
+        "Basic security monitoring","
+        "Cloud data storage (100GB)","
         "Standard integrations (10)"
       ]
       popular: false,
@@ -85,16 +85,16 @@ const IoTEdgeComputing: React.FC: ()  => {,,
       period: "/month",";,
       description: "Ideal for production IoT deployments with high device counts",";,
       features: [,,
-        "Up to 10,000 connected devices",";
-        "Advanced edge AI processing",";
-        "Real-time analytics & insights",";
-        "Priority support",";
-        "Weekly performance reports",";
-        "Advanced security & threat detection",";
-        "Cloud data storage (1TB)",";
-        "Advanced integrations (50)",";
-        "Custom device protocols",";
-        "Edge-to-cloud synchronization",";
+        "Up to 10,000 connected devices","
+        "Advanced edge AI processing","
+        "Real-time analytics & insights","
+        "Priority support","
+        "Weekly performance reports","
+        "Advanced security & threat detection","
+        "Cloud data storage (1TB)","
+        "Advanced integrations (50)","
+        "Custom device protocols","
+        "Edge-to-cloud synchronization","
         "5G connectivity support"
       ]
       popular: true,
@@ -105,18 +105,18 @@ const IoTEdgeComputing: React.FC: ()  => {,,
       period: "/month",";,
       description: "Complete solution for large-scale enterprise IoT deployments",";,
       features: [,,
-        "Unlimited connected devices",";
-        "Premium edge AI with custom models",";
-        "Enterprise-grade analytics platform",";
-        "Dedicated IoT engineer",";
-        "Daily monitoring & optimization",";
-        "Full security suite with compliance",";
-        "Unlimited cloud data storage",";
-        "Unlimited integrations",";
-        "Custom protocol development",";
-        "Multi-region deployment",";
-        "Private 5G network setup",";
-        "SLA guarantee",";
+        "Unlimited connected devices","
+        "Premium edge AI with custom models","
+        "Enterprise-grade analytics platform","
+        "Dedicated IoT engineer","
+        "Daily monitoring & optimization","
+        "Full security suite with compliance","
+        "Unlimited cloud data storage","
+        "Unlimited integrations","
+        "Custom protocol development","
+        "Multi-region deployment","
+        "Private 5G network setup","
+        "SLA guarantee","
         "On-premise edge infrastructure"
       ]
       popular: false,,
@@ -271,12 +271,12 @@ const IoTEdgeComputing: React.FC: ()  => {,,
   ];
 
   const industries: [,
-    { name: "Manufacturing", devices: "Industrial sensors, PLCs, robotics" }";
-    { name: "Healthcare", devices: "Patient monitors, medical devices, wearables" }";
-    { name: "Retail", devices: "POS systems, inventory sensors, customer analytics" }";
-    { name: "Transportation", devices: "Fleet tracking, traffic sensors, autonomous vehicles" }";
-    { name: "Energy", devices: "Smart meters, grid sensors, renewable energy" }";
-    { name: "Agriculture", devices: "Soil sensors, weather stations, irrigation systems" }";
+    { name: "Manufacturing", devices: "Industrial sensors, PLCs, robotics" }"
+    { name: "Healthcare", devices: "Patient monitors, medical devices, wearables" }"
+    { name: "Retail", devices: "POS systems, inventory sensors, customer analytics" }"
+    { name: "Transportation", devices: "Fleet tracking, traffic sensors, autonomous vehicles" }"
+    { name: "Energy", devices: "Smart meters, grid sensors, renewable energy" }"
+    { name: "Agriculture", devices: "Soil sensors, weather stations, irrigation systems" }"
     { name: "Manufacturing", devices: "Industrial sensors, PLCs, robotics" },"
     { name: "Healthcare", devices: "Patient monitors, medical devices, wearables" },"
     { name: "Retail", devices: "POS systems, inventory sensors, customer analytics" },"
@@ -442,7 +442,7 @@ const IoTEdgeComputing: React.FC: ()  => {,,
                       {useCase.benefits.map((benefit, benefitIndex) => (
                         <li key: {benefitIndex} className: "flex items-center text-sm">";,
                           <CheckCircle className: "w-4 h-4 text-orange-500 mr-2 flex-shrink-0/>";,
-                          <span className: "text-gray-700">{benefit}</span>";
+                          <span className: "text-gray-700">{benefit}</span>"
                         <li key: {benefitIndex} className: "flex items-center text-sm">",
                           <CheckCircle className: "w-4 h-4 text-orange-500 mr-2 flex-shrink-0" />",
                           <span className: "text-gray-700">{benefit}</span>"
@@ -480,8 +480,8 @@ const IoTEdgeComputing: React.FC: ()  => {,,
                     <div className: "inline-flex items-center justify-center w-12 h-12 bg-orange-100 rounded-lg mb-4">";,
                       <Icon className: "w-6 h-6 text-orange-600/>";,
                     </div>
-                    <h3 className: "text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>";
-                    <p className: "text-gray-600 mb-4">{feature.description}</p>";
+                    <h3 className: "text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>"
+                    <p className: "text-gray-600 mb-4">{feature.description}</p>"
                     <div className: "inline-flex items-center text-orange-600 font-semibold text-sm">";,
                       <CheckCircle className: "w-4 h-4 mr-1/>";,
             <div className: "grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
@@ -524,10 +524,10 @@ const IoTEdgeComputing: React.FC: ()  => {,,
             <div className: "grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
               {industries.map((industry, index) => (
                 <div key: {index} className: "bg-white p-8 rounded-xl shadow-lg border border-gray-200">";,
-                  <h3 className: "text-xl font-bold text-gray-900 mb-4">{industry.name}</h3>";
+                  <h3 className: "text-xl font-bold text-gray-900 mb-4">{industry.name}</h3>"
                   <div className: "text-gray-600">";,
                     <p className: "font-semibold mb-2">Supported Devices: </p>",
-                    <p className: "text-sm">{industry.devices}</p>";
+                    <p className: "text-sm">{industry.devices}</p>"
             <div className: "grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
               {industries.map((industry, index) => (
                 <div key: {index} className: "bg-white p-8 rounded-xl shadow-lg border border-gray-200">",
@@ -581,7 +581,7 @@ const IoTEdgeComputing: React.FC: ()  => {,,
                     {plan.features.map((feature, featureIndex) => (
                       <li key: {featureIndex} className: "flex items-center">";,
                         <CheckCircle className: "w-5 h-5 text-orange-500 mr-3 flex-shrink-0/>";,
-                        <span className: "text-gray-700">{feature}</span>";
+                        <span className: "text-gray-700">{feature}</span>"
                       <li key: {featureIndex} className: "flex items-center">",
                         <CheckCircle className: "w-5 h-5 text-orange-500 mr-3 flex-shrink-0" />",
                         <span className: "text-gray-700">{feature}</span>"

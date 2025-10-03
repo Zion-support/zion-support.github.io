@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from 'react'
 import React, { useEffect } from 'react';'
 
 interface AdvancedAnalyticsProps {
@@ -19,8 +19,8 @@ const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps >  = ({,,
   useEffect(() => {
     // Initialize Google Analytics 4
     const initGA4: ()  => {,,
-  if (typeof window !== 'undefined' && window.gtag) {';
-        window.gtag('config', 'G-XXXXXXXXXX', {';
+  if (typeof window !== 'undefined' && window.gtag) {'
+        window.gtag('config', 'G-XXXXXXXXXX', {'
           page_title: document.title,,
           page_location: window.location.href,,
           custom_map: {,,
@@ -41,8 +41,8 @@ const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps >  = ({,,
 
     // Performance tracking
     const trackPerformance: ()  => {,,
-  if (enablePerformanceTracking && 'performance' in window) {;';
-        window.addEventListener('load', () => {;';
+  if (enablePerformanceTracking && 'performance' in window) {;'
+        window.addEventListener('load', () => {;'
       if (enablePerformanceTracking && 'performance' in window) {'
         window.addEventListener('load', () => {'
           setTimeout(() => {
@@ -58,7 +58,7 @@ const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps >  = ({,,
 
             // Send to analytics
             if (window.gtag) {
-              window.gtag('event', 'page_performance', {;';
+              window.gtag('event', 'page_performance', {;'
                 event_category: 'Performance',',';,
                 event_label: 'Page Load Metrics',',';,
               window.gtag('event', 'page_performance', {'
@@ -75,21 +75,21 @@ const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps >  = ({,,
     // Error tracking
     const trackErrors: ()  => {,,
   if (enableErrorTracking) {
-        window.addEventListener('error', (event) => {;';
+        window.addEventListener('error', (event) => {;'
           if (window.gtag) {
-            window.gtag('event', 'exception', {;';
+            window.gtag('event', 'exception', {;'
               description: event.error?.message || 'Unknown error',',';,
               fatal: false,,,
-              event_category: 'Error Tracking});';
+              event_category: 'Error Tracking});'
           }
         });
 
-        window.addEventListener('unhandledrejection', (event) => {;';
+        window.addEventListener('unhandledrejection', (event) => {;'
           if (window.gtag) {
-            window.gtag('event', 'exception', {;';
+            window.gtag('event', 'exception', {;'
               description: event.reason?.message || 'Unhandled promise rejection',',';,
               fatal: false,,,
-              event_category: 'Error Tracking});';
+              event_category: 'Error Tracking});'
         window.addEventListener('error', (event) => {'
           if (window.gtag) {
             window.gtag('event', 'exception', {'
@@ -118,11 +118,11 @@ const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps >  = ({,,
         // Track form submissions
         const forms: document.querySelectorAll('form');',';,
   forms.forEach(form: > {,,
-  form.addEventListener('submit', () => {;';
+  form.addEventListener('submit', () => {;'
             if (window.gtag) {
-              window.gtag('event', 'conversion', {;';
+              window.gtag('event', 'conversion', {;'
                 event_category: 'Lead Generation',',';,
-                event_label: 'Contact Form Submission});';
+                event_label: 'Contact Form Submission});'
           form.addEventListener('submit', () => {'
             if (window.gtag) {
               window.gtag('event', 'conversion', {'
@@ -136,11 +136,11 @@ const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps >  = ({,,
         // Track button clicks
         const ctaButtons: document.querySelectorAll('[data-cta]');',';,
   ctaButtons.forEach(button: > {,,
-  button.addEventListener('click', () => {;';
+  button.addEventListener('click', () => {;'
             if (window.gtag) {
-              window.gtag('event', 'click', {;';
+              window.gtag('event', 'click', {;'
                 event_category: 'CTA',',';,
-                event_label: button.getAttribute('data-cta') || 'Unknown CTA});';
+                event_label: button.getAttribute('data-cta') || 'Unknown CTA});'
           button.addEventListener('click', () => {'
             if (window.gtag) {
               window.gtag('event', 'click', {'
@@ -165,7 +165,7 @@ const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps >  = ({,,
     };
   }, [enableConversionTracking, enablePerformanceTracking, enableErrorTracking]);
 
-  return null; // This component doesn't render anything;';
+  return null; // This component doesn't render anything;'
   return null; // This component doesn't render anything'
 };
 

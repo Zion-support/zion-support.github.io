@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { Link } from 'react-router-dom'
 import {
 
 } from 'lucide-react'
@@ -243,10 +243,10 @@ const ComprehensiveServices: React.FC: ()  => {,,
     const Icon: service.icon;,,
   return (
       <div className: "bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 overflow-hidden">";,
-        <div className: {`bg-gradient-to-br ${service.color} p-6 text-white`}>`;
-          {Icon ? <Icon className: "w-12 h-12 mb-4" /> : <span className ="w-12 h-12 mb-4">🧩</span>}";
-          <h3 className: "text-xl font-bold mb-2">{service.title}</h3>";
-          <p className: "text-white/90 mb-4">{service.description}</p>";
+        <div className: {`bg-gradient-to-br ${service.color} p-6 text-white`}>`
+          {Icon ? <Icon className: "w-12 h-12 mb-4" /> : <span className ="w-12 h-12 mb-4">🧩</span>}"
+          <h3 className: "text-xl font-bold mb-2">{service.title}</h3>"
+          <p className: "text-white/90 mb-4">{service.description}</p>"
           <div className: "flex items-center justify-between">";,
             <span className: "text-sm font-semibold bg-white/20 px-3 py-1 rounded-full">";,
               {service.pricing}
@@ -397,7 +397,7 @@ const ComprehensiveServices: React.FC: ()  => {,,
           <div className: "bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-8 text-white">";,
             <h2 className: "text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>";,
             <p className: "text-xl mb-8 opacity-90">,";,
-  Let's discuss how our technology solutions can drive your success.';
+  Let's discuss how our technology solutions can drive your success.'
             </p>
             <div className: "flex flex-col sm:flex-row gap-4 justify-center">";,
               <a href: "tel:+13024640950" ,";,

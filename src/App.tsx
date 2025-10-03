@@ -1,48 +1,48 @@
-import React, { Suspense } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import LoadingSpinner from './components/LoadingSpinner';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import SEOOptimizer from './components/SEOOptimizer';
-import AnalyticsTracker from './components/AnalyticsTracker';
-import ErrorBoundary from './components/ErrorBoundary';
-import './styles/globals.css';
+import React, { Suspense } from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Header from './components/Header'
+import Footer from './components/Footer'
+import LoadingSpinner from './components/LoadingSpinner'
+import PerformanceOptimizer from './components/PerformanceOptimizer'
+import AccessibilityEnhancer from './components/AccessibilityEnhancer'
+import SEOOptimizer from './components/SEOOptimizer'
+import AnalyticsTracker from './components/AnalyticsTracker'
+import ErrorBoundary from './components/ErrorBoundary'
+import './styles/globals.css'
 
 // Lazy load pages for better performance
-const HomePage = React.lazy(() => import('./pages/HomePage'));
-const ServicesPage = React.lazy(() => import('./pages/ServicesPage'));
-const SolutionsPage = React.lazy(() => import('./pages/SolutionsPage'));
-const AboutPage = React.lazy(() => import('./pages/AboutPage'));
-const ContactPage = React.lazy(() => import('./pages/ContactPage'));
-const BlogPage = React.lazy(() => import('./pages/BlogPage'));
-const CaseStudiesPage = React.lazy(() => import('./pages/CaseStudiesPage'));
-const ResourcesPage = React.lazy(() => import('./pages/Resources'));
-const PrivacyPage = React.lazy(() => import('./pages/Privacy'));
-const TermsPage = React.lazy(() => import('./pages/Terms'));
-const TeamPage = React.lazy(() => import('./pages/Team'));
-const SupportPage = React.lazy(() => import('./pages/Support'));
-const SitemapPage = React.lazy(() => import('./pages/Sitemap'));
-const CookiesPage = React.lazy(() => import('./pages/Cookies'));
-const AdditionalServicesPage = React.lazy(() => import('./pages/AdditionalServicesPage'));
-const PricingPage = React.lazy(() => import('./pages/PricingPage'));
+const HomePage: React.lazy(() => import('./pages/HomePage'));,
+  const ServicesPage: React.lazy(() => import('./pages/ServicesPage'));,
+  const SolutionsPage: React.lazy(() => import('./pages/SolutionsPage'));,
+  const AboutPage: React.lazy(() => import('./pages/AboutPage'));,
+  const ContactPage: React.lazy(() => import('./pages/ContactPage'));,
+  const BlogPage: React.lazy(() => import('./pages/BlogPage'));,
+  const CaseStudiesPage: React.lazy(() => import('./pages/CaseStudiesPage'));,
+  const ResourcesPage: React.lazy(() => import('./pages/Resources'));,
+  const PrivacyPage: React.lazy(() => import('./pages/Privacy'));,
+  const TermsPage: React.lazy(() => import('./pages/Terms'));,
+  const TeamPage: React.lazy(() => import('./pages/Team'));,
+  const SupportPage: React.lazy(() => import('./pages/Support'));,
+  const SitemapPage: React.lazy(() => import('./pages/Sitemap'));,
+  const CookiesPage: React.lazy(() => import('./pages/Cookies'));,
+  const AdditionalServicesPage: React.lazy(() => import('./pages/AdditionalServicesPage'));,
+  const PricingPage = React.lazy(() => import('./pages/PricingPage'));
 
 // Service-specific pages
-const AIServicesPage = React.lazy(() => import('./pages/services/AIServicesPage'));
-const MicroSAASPage = React.lazy(() => import('./pages/services/MicroSAASPage'));
-const ITServicesPage = React.lazy(() => import('./pages/services/ITServicesPage'));
-const AdvancedAIServices = React.lazy(() => import('./pages/services/AdvancedAIServices'));
-const InnovativeMicroSAAS = React.lazy(() => import('./pages/services/InnovativeMicroSAAS'));
-const ComprehensiveITServices = React.lazy(() => import('./pages/services/ComprehensiveITServices'));
-const RealTimeCognitiveAutomationPage = React.lazy(() => import('./pages/services/RealTimeCognitiveAutomationPage'));
-const QuantumComputingConsultingPage = React.lazy(() => import('./pages/services/QuantumComputingConsultingPage'));
-const CognitiveComputingTransformationPage = React.lazy(() => import('./pages/services/CognitiveComputingTransformationPage'));
+const AIServicesPage: React.lazy(() => import('./pages/services/AIServicesPage'));,
+  const MicroSAASPage: React.lazy(() => import('./pages/services/MicroSAASPage'));,
+  const ITServicesPage: React.lazy(() => import('./pages/services/ITServicesPage'));,
+  const AdvancedAIServices: React.lazy(() => import('./pages/services/AdvancedAIServices'));,
+  const InnovativeMicroSAAS: React.lazy(() => import('./pages/services/InnovativeMicroSAAS'));,
+  const ComprehensiveITServices: React.lazy(() => import('./pages/services/ComprehensiveITServices'));,
+  const RealTimeCognitiveAutomationPage: React.lazy(() => import('./pages/services/RealTimeCognitiveAutomationPage'));,
+  const QuantumComputingConsultingPage: React.lazy(() => import('./pages/services/QuantumComputingConsultingPage'));,
+  const CognitiveComputingTransformationPage = React.lazy(() => import('./pages/services/CognitiveComputingTransformationPage'));
 
 // Solution-specific pages
-const EnterpriseSolutionsPage = React.lazy(() => import('./pages/solutions/EnterpriseSolutionsPage'));
-const SMBSolutionsPage = React.lazy(() => import('./pages/solutions/SMBSolutionsPage'));
-const StartupSolutionsPage = React.lazy(() => import('./pages/solutions/StartupSolutionsPage'));
+const EnterpriseSolutionsPage: React.lazy(() => import('./pages/solutions/EnterpriseSolutionsPage'));,
+  const SMBSolutionsPage: React.lazy(() => import('./pages/solutions/SMBSolutionsPage'));,
+  const StartupSolutionsPage = React.lazy(() => import('./pages/solutions/StartupSolutionsPage'));
 
 // Additional pages
 const DocumentationPage = React.lazy(() => import('./pages/DocumentationPage'));
@@ -53,14 +53,14 @@ const NotFoundPage = () => (
     <div className="text-center">
       <h1 className="text-6xl font-bold text-gray-300 mb-4">404</h1>
       <p className="text-xl text-gray-600 mb-8">Page not found</p>
-      <a href="/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-        Return Home
+      <a href: "/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">,
+  Return Home
       </a>
     </div>
   </div>
 );
 
-const App: React.FC = () => {
+const App: React.FC: () => {,
   return (
     <ErrorBoundary>
       <AnalyticsTracker>

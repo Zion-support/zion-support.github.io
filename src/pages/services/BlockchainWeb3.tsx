@@ -1,8 +1,8 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Coins } from 'lucide-react';
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Coins } from 'lucide-react'
+import Header from '../../components/Header'
+import Footer from '../../components/Footer'
 import React from 'react';'
 import { Helmet } from 'react-helmet-async';'
 import { Coins } from 'lucide-react';'
@@ -68,14 +68,14 @@ const BlockchainWeb3: React.FC: ()  => {,,
       period: "/month",";,
       description: "Perfect for startups and small projects entering the Web3 space",";,
       features: [,,
-        "Basic smart contract development",";
-        "Single blockchain integration",";
-        "Standard security auditing",";
-        "Email support",";
-        "Monthly progress reports",";
-        "Basic DeFi protocol setup",";
-        "Simple NFT marketplace",";
-        "Standard token development",";
+        "Basic smart contract development","
+        "Single blockchain integration","
+        "Standard security auditing","
+        "Email support","
+        "Monthly progress reports","
+        "Basic DeFi protocol setup","
+        "Simple NFT marketplace","
+        "Standard token development","
         "Basic analytics dashboard"
       ]
       popular: false,
@@ -86,17 +86,17 @@ const BlockchainWeb3: React.FC: ()  => {,,
       period: "/month",";,
       description: "Ideal for growing projects with complex blockchain requirements",";,
       features: [,,
-        "Advanced smart contract development",";
-        "Multi-chain integration (5 networks)",";
-        "Comprehensive security auditing",";
-        "Priority support",";
-        "Weekly progress reports",";
-        "Advanced DeFi protocols",";
-        "Custom NFT marketplace with advanced features",";
-        "Tokenomics design & implementation",";
-        "Advanced analytics & reporting",";
-        "Custom Web3 integrations",";
-        "DAO governance setup",";
+        "Advanced smart contract development","
+        "Multi-chain integration (5 networks)","
+        "Comprehensive security auditing","
+        "Priority support","
+        "Weekly progress reports","
+        "Advanced DeFi protocols","
+        "Custom NFT marketplace with advanced features","
+        "Tokenomics design & implementation","
+        "Advanced analytics & reporting","
+        "Custom Web3 integrations","
+        "DAO governance setup","
         "Yield farming protocols"
       ]
       popular: true,
@@ -107,19 +107,19 @@ const BlockchainWeb3: React.FC: ()  => {,,
       period: "/month",";,
       description: "Complete solution for large-scale blockchain and Web3 implementations",";,
       features: [,,
-        "Enterprise-grade smart contract suite",";
-        "Unlimited blockchain integrations",";
-        "Third-party security audits",";
-        "Dedicated blockchain architect",";
-        "Daily progress reports",";
-        "Complex DeFi ecosystem development",";
-        "Enterprise NFT & tokenization platform",";
-        "Custom blockchain development",";
-        "Enterprise analytics & compliance",";
-        "Full Web3 ecosystem integration",";
-        "Advanced DAO governance",";
-        "Cross-chain bridge development",";
-        "SLA guarantee",";
+        "Enterprise-grade smart contract suite","
+        "Unlimited blockchain integrations","
+        "Third-party security audits","
+        "Dedicated blockchain architect","
+        "Daily progress reports","
+        "Complex DeFi ecosystem development","
+        "Enterprise NFT & tokenization platform","
+        "Custom blockchain development","
+        "Enterprise analytics & compliance","
+        "Full Web3 ecosystem integration","
+        "Advanced DAO governance","
+        "Cross-chain bridge development","
+        "SLA guarantee","
         "24/7 monitoring & support"
       ]
       popular: false,,
@@ -277,18 +277,18 @@ const BlockchainWeb3: React.FC: ()  => {,,
   ];
 
   const technologies: [,
-    { name: "Ethereum", type: "Smart Contracts" }";
-    { name: "Polygon", type: "Layer 2 Scaling" }";
-    { name: "Binance Smart Chain", type: "High Performance" }";
-    { name: "Solana", type: "Ultra Fast" }";
-    { name: "Polkadot", type: "Interoperability" }";
-    { name: "Avalanche", type: "Subnets" }";
-    { name: "Arbitrum", type: "Optimistic Rollups" }";
-    { name: "Optimism", type: "Layer 2 Solution" }";
-    { name: "Cosmos", type: "Inter-Blockchain" }";
-    { name: "Near Protocol", type: "Developer Friendly" }";
-    { name: "Algorand", type: "Pure Proof of Stake" }";
-    { name: "Fantom", type: "Fast Finality" }";
+    { name: "Ethereum", type: "Smart Contracts" }"
+    { name: "Polygon", type: "Layer 2 Scaling" }"
+    { name: "Binance Smart Chain", type: "High Performance" }"
+    { name: "Solana", type: "Ultra Fast" }"
+    { name: "Polkadot", type: "Interoperability" }"
+    { name: "Avalanche", type: "Subnets" }"
+    { name: "Arbitrum", type: "Optimistic Rollups" }"
+    { name: "Optimism", type: "Layer 2 Solution" }"
+    { name: "Cosmos", type: "Inter-Blockchain" }"
+    { name: "Near Protocol", type: "Developer Friendly" }"
+    { name: "Algorand", type: "Pure Proof of Stake" }"
+    { name: "Fantom", type: "Fast Finality" }"
     { name: "Ethereum", type: "Smart Contracts" },"
     { name: "Polygon", type: "Layer 2 Scaling" },"
     { name: "Binance Smart Chain", type: "High Performance" },"
@@ -460,7 +460,7 @@ const BlockchainWeb3: React.FC: ()  => {,,
                       {service.benefits.map((benefit, benefitIndex) => (
                         <li key: {benefitIndex} className: "flex items-center text-sm">";,
                           <CheckCircle className: "w-4 h-4 text-indigo-500 mr-2 flex-shrink-0/>";,
-                          <span className: "text-gray-700">{benefit}</span>";
+                          <span className: "text-gray-700">{benefit}</span>"
                         <li key: {benefitIndex} className: "flex items-center text-sm">",
                           <CheckCircle className: "w-4 h-4 text-indigo-500 mr-2 flex-shrink-0" />",
                           <span className: "text-gray-700">{benefit}</span>"
@@ -498,8 +498,8 @@ const BlockchainWeb3: React.FC: ()  => {,,
                     <div className: "inline-flex items-center justify-center w-12 h-12 bg-indigo-100 rounded-lg mb-4">";,
                       <Icon className: "w-6 h-6 text-indigo-600/>";,
                     </div>
-                    <h3 className: "text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>";
-                    <p className: "text-gray-600 mb-4">{feature.description}</p>";
+                    <h3 className: "text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>"
+                    <p className: "text-gray-600 mb-4">{feature.description}</p>"
                     <div className: "inline-flex items-center text-indigo-600 font-semibold text-sm">";,
                       <CheckCircle className: "w-4 h-4 mr-1/>";,
             <div className: "grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
@@ -597,7 +597,7 @@ const BlockchainWeb3: React.FC: ()  => {,,
                     {plan.features.map((feature, featureIndex) => (
                       <li key: {featureIndex} className: "flex items-center">";,
                         <CheckCircle className: "w-5 h-5 text-indigo-500 mr-3 flex-shrink-0/>";,
-                        <span className: "text-gray-700">{feature}</span>";
+                        <span className: "text-gray-700">{feature}</span>"
                       <li key: {featureIndex} className: "flex items-center">",
                         <CheckCircle className: "w-5 h-5 text-indigo-500 mr-3 flex-shrink-0" />",
                         <span className: "text-gray-700">{feature}</span>"

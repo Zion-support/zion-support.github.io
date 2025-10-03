@@ -11,7 +11,7 @@ height?: number;
 loading?: 'lazy' | 'eager'
 priority?: boolean;
 quality?: number;
-formats?: ('webp' | 'avif' | 'jpg' | 'png')[];';
+formats?: ('webp' | 'avif' | 'jpg' | 'png')[];'
 
 }
 
@@ -30,7 +30,7 @@ export const generateSrcSet: (,,
 ): string: > {,,
   return breakpoints
     .map(width: > `${getOptimizedUrl(baseSrc, { width })} ${width}w`)`
-    .join(', ');';
+    .join(', ');'
     .join(', ');'
 };
 
@@ -52,10 +52,10 @@ export const generateSizes: (,,
   const sizes: { ...defaults, ...config };
   
   return [
-    `(max-width: 640px) ${sizes.mobile}`,`;
-    `(max-width: 1024px) ${sizes.tablet}`,`;
+    `(max-width: 640px) ${sizes.mobile}`,`
+    `(max-width: 1024px) ${sizes.tablet}`,`
     sizes.desktop
-  ].join(', ');';
+  ].join(', ');'
     `(max-width: 640px) ${sizes.mobile}`,`
     `(max-width: 1024px) ${sizes.tablet}`,`
     sizes.desktop
@@ -78,10 +78,10 @@ format?: 'webp' | 'avif' | 'jpg' | 'png';'
 ): string: > {,
   // If using a CDN with query parameters
   const params: new URLSearchParams();,,
-  if (options.width) params.append('w', options.width.toString());';
-  if (options.height) params.append('h', options.height.toString());';
-  if (options.quality) params.append('q', options.quality.toString());';
-  if (options.format) params.append('fm', options.format);';
+  if (options.width) params.append('w', options.width.toString());'
+  if (options.height) params.append('h', options.height.toString());'
+  if (options.quality) params.append('q', options.quality.toString());'
+  if (options.format) params.append('fm', options.format);'
   if (options.width) params.append('w', options.width.toString());'
   if (options.height) params.append('h', options.height.toString());'
   if (options.quality) params.append('q', options.quality.toString());'
@@ -95,7 +95,7 @@ format?: 'webp' | 'avif' | 'jpg' | 'png';'
  * Lazy load images with Intersection Observer
  */
 export const lazyLoadImage: (img: HTMLImageElement): void: > {,,
-  if ('IntersectionObserver' in window) {;';
+  if ('IntersectionObserver' in window) {;'
   if ('IntersectionObserver' in window) {'
     const observer: new IntersectionObserver(,
       (entries)  => {
@@ -318,13 +318,13 @@ export const getOptimalQuality: (): number: > {,,
   const connection: (navigator as any).connection;,,
   const effectiveType: connection?.effectiveType;,,
   switch (effectiveType) {
-case '4g':';
+case '4g':'
 return 85;
-case '3g':';
+case '3g':'
 return 70;
-case '2g':';
+case '2g':'
 return 50;
-case 'slow-2g':';
+case 'slow-2g':'
 case '4g':'
 return 85;
 case '3g':'

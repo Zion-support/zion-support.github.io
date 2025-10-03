@@ -1,8 +1,8 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Globe } from 'lucide-react';
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Globe } from 'lucide-react'
+import Header from '../../components/Header'
+import Footer from '../../components/Footer'
 import React from 'react';'
 import { Helmet } from 'react-helmet-async';'
 import { Globe } from 'lucide-react';'
@@ -68,13 +68,13 @@ const SmartContractAudit: React.FC: ()  => {,,
       period: "one-time",";,
       description: "Perfect for simple smart contracts and token contracts",";,
       features: [,,
-        "Static code analysis",";
-        "Manual code review",";
-        "Basic vulnerability scan",";
-        "Security report",";
-        "Email support",";
-        "1 revision included",";
-        "Standard compliance check",";
+        "Static code analysis","
+        "Manual code review","
+        "Basic vulnerability scan","
+        "Security report","
+        "Email support","
+        "1 revision included","
+        "Standard compliance check","
         "Up to 500 lines of code"
       ]
       popular: false,
@@ -85,15 +85,15 @@ const SmartContractAudit: React.FC: ()  => {,,
       period: "one-time",";,
       description: "Comprehensive audit for complex DeFi protocols and dApps",";,
       features: [,,
-        "Full static & dynamic analysis",";
-        "Comprehensive manual review",";
-        "Advanced vulnerability scanning",";
-        "Detailed security report",";
-        "Priority support",";
-        "3 revisions included",";
-        "Full compliance verification",";
-        "Up to 2,000 lines of code",";
-        "Gas optimization analysis",";
+        "Full static & dynamic analysis","
+        "Comprehensive manual review","
+        "Advanced vulnerability scanning","
+        "Detailed security report","
+        "Priority support","
+        "3 revisions included","
+        "Full compliance verification","
+        "Up to 2,000 lines of code","
+        "Gas optimization analysis","
         "Architecture review"
       ]
       popular: true,
@@ -104,17 +104,17 @@ const SmartContractAudit: React.FC: ()  => {,,
       period: "one-time",";,
       description: "Complete audit solution for enterprise blockchain projects",";,
       features: [,,
-        "End-to-end security analysis",";
-        "Multi-contract system review",";
-        "Formal verification",";
-        "Executive summary report",";
-        "Dedicated security consultant",";
-        "Unlimited revisions",";
-        "Full regulatory compliance",";
-        "Unlimited lines of code",";
-        "Performance optimization",";
-        "Architecture & design review",";
-        "Post-deployment monitoring",";
+        "End-to-end security analysis","
+        "Multi-contract system review","
+        "Formal verification","
+        "Executive summary report","
+        "Dedicated security consultant","
+        "Unlimited revisions","
+        "Full regulatory compliance","
+        "Unlimited lines of code","
+        "Performance optimization","
+        "Architecture & design review","
+        "Post-deployment monitoring","
         "Security training included"
       ]
       popular: false,,
@@ -461,15 +461,15 @@ const SmartContractAudit: React.FC: ()  => {,,
                     <div className: "inline-flex items-center justify-center w-16 h-16 bg-red-100 rounded-full mb-6">";,
                       <Icon className: "w-8 h-8 text-red-600/>";,
                     </div>
-                    <h3 className: "text-xl font-bold text-gray-900 mb-4">{audit.title}</h3>";
-                    <p className: "text-gray-600 mb-6">{audit.description}</p>";
+                    <h3 className: "text-xl font-bold text-gray-900 mb-4">{audit.title}</h3>"
+                    <p className: "text-gray-600 mb-6">{audit.description}</p>"
                     <div className: "mb-4">";,
                       <h4 className: "font-semibold text-gray-900 mb-2">Common Vulnerabilities: </h4>",
                       <ul className: "space-y-1">";,
                         {audit.vulnerabilities.map((vuln, vulnIndex) => (
                           <li key: {vulnIndex} className: "flex items-center text-sm">";,
                             <AlertTriangle className: "w-4 h-4 text-orange-500 mr-2 flex-shrink-0/>";,
-                            <span className: "text-gray-700">{vuln}</span>";
+                            <span className: "text-gray-700">{vuln}</span>"
             <div className: "grid md: grid-cols-2 lg:grid-cols-4 gap-8">",
               {auditTypes.map((audit, index) => {
                 const Icon: audit.icon;,,
@@ -553,8 +553,8 @@ const SmartContractAudit: React.FC: ()  => {,,
                     <div className: "inline-flex items-center justify-center w-12 h-12 bg-red-100 rounded-lg mb-4">";,
                       <Icon className: "w-6 h-6 text-red-600/>";,
                     </div>
-                    <h3 className: "text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>";
-                    <p className: "text-gray-600 mb-4">{feature.description}</p>";
+                    <h3 className: "text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>"
+                    <p className: "text-gray-600 mb-4">{feature.description}</p>"
                     <div className: "inline-flex items-center text-green-600 font-semibold text-sm">";,
                       <CheckCircle className: "w-4 h-4 mr-1/>";,
             <div className: "grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
@@ -617,7 +617,7 @@ const SmartContractAudit: React.FC: ()  => {,,
                     {plan.features.map((feature, featureIndex) => (
                       <li key: {featureIndex} className: "flex items-center">";,
                         <CheckCircle className: "w-5 h-5 text-green-500 mr-3 flex-shrink-0/>";,
-                        <span className: "text-gray-700">{feature}</span>";
+                        <span className: "text-gray-700">{feature}</span>"
                       <li key: {featureIndex} className: "flex items-center">",
                         <CheckCircle className: "w-5 h-5 text-green-500 mr-3 flex-shrink-0" />",
                         <span className: "text-gray-700">{feature}</span>"

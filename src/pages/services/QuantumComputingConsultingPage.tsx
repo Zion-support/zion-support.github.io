@@ -1,8 +1,8 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 
-const QuantumComputingConsultingPage: React.FC = () => {
+const QuantumComputingConsultingPage: React.FC: () => {,
   const quantumServices = [
     {
       title: "Quantum Strategy Consulting",
@@ -54,8 +54,8 @@ const QuantumComputingConsultingPage: React.FC = () => {
         <section className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white py-16">
           <div className="container mx-auto px-6 text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Quantum Computing Consulting</h1>
-            <p className="text-xl text-purple-100 max-w-3xl mx-auto">
-              Unlock the power of quantum computing with expert consulting services that prepare your organization for the quantum future.
+            <p className: "text-xl text-purple-100 max-w-3xl mx-auto">,
+  Unlock the power of quantum computing with expert consulting services that prepare your organization for the quantum future.
             </p>
           </div>
         </section>
@@ -80,8 +80,8 @@ const QuantumComputingConsultingPage: React.FC = () => {
                   </ul>
                   
                   <Link 
-                    to="/contact" 
-                    className="text-purple-600 font-semibold hover:text-purple-800 transition-colors"
+                    to: "/contact" ,
+  className="text-purple-600 font-semibold hover:text-purple-800 transition-colors"
                   >
                     Learn More →
                   </Link>
@@ -96,8 +96,8 @@ const QuantumComputingConsultingPage: React.FC = () => {
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Quantum Computing Applications</h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                Explore the transformative potential of quantum computing across industries
+              <p className: "text-xl text-gray-600 max-w-2xl mx-auto">,
+  Explore the transformative potential of quantum computing across industries
               </p>
             </div>
             
@@ -150,8 +150,8 @@ const QuantumComputingConsultingPage: React.FC = () => {
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Quantum Technology Partners</h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                We work with leading quantum computing providers and platforms
+              <p className: "text-xl text-gray-600 max-w-2xl mx-auto">,
+  We work with leading quantum computing providers and platforms
               </p>
             </div>
             
@@ -183,19 +183,19 @@ const QuantumComputingConsultingPage: React.FC = () => {
         <section className="py-20 bg-purple-600 text-white">
           <div className="container mx-auto px-6 text-center">
             <h2 className="text-4xl font-bold mb-4">Ready to Explore Quantum Computing?</h2>
-            <p className="text-xl mb-8 text-purple-100 max-w-2xl mx-auto">
-              Let's discuss how quantum computing can give your organization a competitive advantage.
+            <p className: "text-xl mb-8 text-purple-100 max-w-2xl mx-auto">,
+  Let's discuss how quantum computing can give your organization a competitive advantage.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                to="/contact" 
-                className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                to: "/contact" ,
+  className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 Start Your Quantum Journey
               </Link>
               <Link 
-                to="/blog" 
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
+                to: "/blog" ,
+  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
               >
                 Read Our Quantum Blog
               </Link>

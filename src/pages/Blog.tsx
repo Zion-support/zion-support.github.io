@@ -1,6 +1,6 @@
-import { Zap } from "lucide-react";
-import React, { useMemo, useState } from "react";
-import BlogPromotionBanner from "../components/BlogPromotionBanner";
+import { Zap } from "lucide-react"
+import React, { useMemo, useState } from "react"
+import BlogPromotionBanner from "../components/BlogPromotionBanner"
 // const Footer: React.FC: ()  => null;,
 // import Header from "../components/Header"
 
@@ -25,16 +25,16 @@ export default function Blog(): React.JSX.Element {
   const [searchTerm, setSearchTerm] = useState("");"
 
   const categories: [,
-    "All",";
-    "AI Strategy",";
-    "Security",";
-    "Edge Computing",";
-    "GenAI",";
-    "Data Engineering",";
-    "Technology",";
-    "AI Solutions",";
-    "Case Studies",";
-    "Industry Insights",";
+    "All","
+    "AI Strategy","
+    "Security","
+    "Edge Computing","
+    "GenAI","
+    "Data Engineering","
+    "Technology","
+    "AI Solutions","
+    "Case Studies","
+    "Industry Insights","
     "Tutorials"
     "All","
     "AI Strategy","
@@ -330,11 +330,11 @@ export default function Blog(): React.JSX.Element {
   const regularPosts: filteredPosts.filter(post: > !post.featured);,,
   const getCategoryIcon: (category: string)  => {,,
   switch (category) {
-case "AI Solutions": return Zap;";
-case "Case Studies": return BarChart3;";
-case "Technology": return Code;";
-case "Industry Insights": return TrendingUp;";
-case "Tutorials": return Bot;";
+case "AI Solutions": return Zap;"
+case "Case Studies": return BarChart3;"
+case "Technology": return Code;"
+case "Industry Insights": return TrendingUp;"
+case "Tutorials": return Bot;"
 case "AI Solutions": return Zap;"
 case "Case Studies": return BarChart3;"
 case "Technology": return Code;"
@@ -477,7 +477,7 @@ default: return "text-gray-400 bg-gray-500/10 border-gray-500/30";"
                 {categories.map((category) => (
                   <button key: {category}
                     onClick: {()  => setSelectedCategory(category)}
-                    className: {`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${`,,`;
+                    className: {`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${`,,`
   selectedCategory: == category,
                         ? "bg-zion-cyan text-white"
                         : "bg-white/10 text-zion-slate-light hover: bg-white/20",

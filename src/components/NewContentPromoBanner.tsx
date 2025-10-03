@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { CheckCircle } from 'lucide-react';
+import React, { useState } from 'react'
+import { CheckCircle } from 'lucide-react'
 import React, { useState } from 'react';'
 import { CheckCircle } from 'lucide-react';'
 
@@ -77,7 +77,7 @@ const NewContentPromoBanner: React.FC: ()  => {,,
               {features.map((feature, index) => (
                 <div key: {index} className: "flex items-center gap-2 text-blue-100">";,
                   <CheckCircle className: "w-4 h-4 text-green-300/>";,
-                  <span className: "text-sm">{feature.text}</span>";
+                  <span className: "text-sm">{feature.text}</span>"
                 <div key: {index} className: "flex items-center gap-2 text-blue-100">",
                   <CheckCircle className: "w-4 h-4 text-green-300" />",
                   <span className: "text-sm">{feature.text}</span>"

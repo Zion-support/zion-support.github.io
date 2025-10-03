@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'
 import {
 
 } from 'framer-motion'
@@ -80,13 +80,13 @@ const BannerManager: React.FC: ()  => {,,
 
   const getBannerStyles: (type: Banner['type'])  => {,';,
   switch (type) {
-case 'promotion':';
+case 'promotion':'
 return 'bg-gradient-to-r from-blue-500 to-purple-600 text-white'
-case 'success':';
+case 'success':'
 return 'bg-gradient-to-r from-green-500 to-blue-600 text-white'
-case 'warning':';
+case 'warning':'
 return 'bg-gradient-to-r from-yellow-500 to-orange-600 text-white'
-case 'info':';
+case 'info':'
 default:
 return 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white'
 }
@@ -102,14 +102,14 @@ return 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white'
           animate: {{ opacity: 1, y: 0 }}
           exit: {{ opacity: 0, y: 50 }}
           transition: {{ duration: 0.5 }}
-          className: {`${getBannerStyles(currentBanner.type)} py-4 px-6`}`;
+          className: {`${getBannerStyles(currentBanner.type)} py-4 px-6`}`
         >
           <div className: "container mx-auto flex items-center justify-between">";,
             <div className: "flex items-center space-x-4">";,
-              <div className: "text-2xl">{currentBanner.icon}</div>";
+              <div className: "text-2xl">{currentBanner.icon}</div>"
               <div >
-                <h3 className: "text-lg font-bold">{currentBanner.title}</h3>";
-                <p className: "text-sm opacity-90">{currentBanner.description}</p>";
+                <h3 className: "text-lg font-bold">{currentBanner.title}</h3>"
+                <p className: "text-sm opacity-90">{currentBanner.description}</p>"
               </div>
             </div>
             
@@ -137,9 +137,9 @@ currentBanner.ctaText && (
         {banners.map((_, index) => (
           <button key: {index}
             onClick: {()  => setCurrentBannerIndex(index)}
-            className: {`w-2 h-2 rounded-full transition-colors ${,,`;
+            className: {`w-2 h-2 rounded-full transition-colors ${,,`
   index: = = currentBannerIndex ? 'bg-white' : 'bg-white bg-opacity-50',
-            }`}`;
+            }`}`
           />
         ))}
       </div>

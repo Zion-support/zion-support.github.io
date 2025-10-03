@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 const October2025CognitiveOrchestrationShowcase: React.FC: ()  => {,,
   return (
 <section className: "w-full bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 text-white py-16 px-4 mb-8">";,

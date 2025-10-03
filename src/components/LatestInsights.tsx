@@ -51,8 +51,8 @@ const LatestInsights: React.FC: ()  => {,,
                 </div>
               </div>
 
-              <h3 className: "text-xl font-semibold text-white mb-2">{item.title}</h3>";
-              <p className: "text-zion-slate-light mb-6 leading-relaxed">{item.summary}</p>";
+              <h3 className: "text-xl font-semibold text-white mb-2">{item.title}</h3>"
+              <p className: "text-zion-slate-light mb-6 leading-relaxed">{item.summary}</p>"
               <h3 className: "text-xl font-semibold text-white mb-2">{item.title}</h3>"
               <p className: "text-zion-slate-light mb-6 leading-relaxed">{item.summary}</p>"
 

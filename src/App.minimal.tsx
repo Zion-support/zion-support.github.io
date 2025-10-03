@@ -1,40 +1,40 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import AdditionalServicesPage from './pages/AdditionalServicesPage';
-import Home from './pages/Home';
-import About from './pages/About';
-import Contact from './pages/Contact';
-import Blog from './pages/Blog';
-import CaseStudies from './pages/CaseStudies';
-import Services from './pages/Services';
-import ITServices from './pages/ITServices';
-import AIMicroSAAS from './pages/AIMicroSAAS';
-import MicroSaaS from './pages/MicroSaaS';
-import Marketplace from './pages/Marketplace';
-import MarketplaceProducts from './pages/MarketplaceProducts';
-import MarketplaceTalent from './pages/MarketplaceTalent';
-import MarketplaceEquipment from './pages/MarketplaceEquipment';
-import Partners from './pages/Partners';
-import Team from './pages/Team';
-import Privacy from './pages/Privacy';
-import Terms from './pages/Terms';
-import Sitemap from './pages/Sitemap';
-import Status from './pages/Status';
-import RequestQuote from './pages/RequestQuote';
-import ResearchDevelopment from './pages/ResearchDevelopment';
-import GreenIT from './pages/GreenIT';
-import ITOnsiteServices from './pages/Support';
-import Login from './pages/Login';
-import Signup from './pages/Signup';
-import Resources from './pages/Resources';
-import News from './pages/News';
-import Careers from './pages/Careers';
-import Help from './pages/Help';
-import Security from './pages/Security';
-import ServicesCatalog from './pages/ServicesCatalog';
-import Consulting from './pages/services/Consulting';
+import React from 'react'
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
+import AdditionalServicesPage from './pages/AdditionalServicesPage'
+import Home from './pages/Home'
+import About from './pages/About'
+import Contact from './pages/Contact'
+import Blog from './pages/Blog'
+import CaseStudies from './pages/CaseStudies'
+import Services from './pages/Services'
+import ITServices from './pages/ITServices'
+import AIMicroSAAS from './pages/AIMicroSAAS'
+import MicroSaaS from './pages/MicroSaaS'
+import Marketplace from './pages/Marketplace'
+import MarketplaceProducts from './pages/MarketplaceProducts'
+import MarketplaceTalent from './pages/MarketplaceTalent'
+import MarketplaceEquipment from './pages/MarketplaceEquipment'
+import Partners from './pages/Partners'
+import Team from './pages/Team'
+import Privacy from './pages/Privacy'
+import Terms from './pages/Terms'
+import Sitemap from './pages/Sitemap'
+import Status from './pages/Status'
+import RequestQuote from './pages/RequestQuote'
+import ResearchDevelopment from './pages/ResearchDevelopment'
+import GreenIT from './pages/GreenIT'
+import ITOnsiteServices from './pages/Support'
+import Login from './pages/Login'
+import Signup from './pages/Signup'
+import Resources from './pages/Resources'
+import News from './pages/News'
+import Careers from './pages/Careers'
+import Help from './pages/Help'
+import Security from './pages/Security'
+import ServicesCatalog from './pages/ServicesCatalog'
+import Consulting from './pages/services/Consulting'
 
-const AppMinimal: React.FC = () => {
+const AppMinimal: React.FC: () => {,
   return (
     <Router >
       <Routes >

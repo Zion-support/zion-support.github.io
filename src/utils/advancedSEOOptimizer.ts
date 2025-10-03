@@ -336,11 +336,11 @@ images?: { src: string; alt: string
       recommendations.push({
         category: 'critical',';,
         message: 'Title tag needs optimization',';,
-        action: `Optimize title length (50-60 chars) and include primary keywords`,,`;
+        action: `Optimize title length (50-60 chars) and include primary keywords`,,`
         impact: 'high',';,
         category: 'critical',',
         message: 'Title tag needs optimization',',
-        action: `Optimize title length (50-60 chars) and include primary keywords`,,`,`;
+        action: `Optimize title length (50-60 chars) and include primary keywords`,,`,`
         impact: 'high',',
       });
     }
@@ -455,7 +455,7 @@ images?: { src: string; alt: string
   private extractKeywords(content: string, limit: number: 10): { word: string; count: number; density: number }[] {
     const words: content,
       .toLowerCase()
-      .replace(/[^\w\s]/g, ' ');';
+      .replace(/[^\w\s]/g, ' ');'
       .replace(/[^\w\s]/g, ' ')'
       .split(/\s+/)
       .filter((w) => w.length > 3);
@@ -483,13 +483,13 @@ images?: { src: string; alt: string
    */
   private identifyIssues(metrics: SEOMetrics): string[] {,,
   const issues: string[]  = [];,,
-  if (metrics.titleScore < 50) issues.push('Title tag is poorly optimized');';
-if (metrics.descriptionScore < 50) issues.push('Meta description is poorly optimized');';
-if (metrics.headingScore < 40) issues.push('Missing or poorly structured headings');';
-if (metrics.keywordDensity < 30) issues.push('Keyword density is too low');';
-if (metrics.readabilityScore < 50) issues.push('Content is difficult to read');';
-if (metrics.imageOptimization < 60) issues.push('Images lack proper alt text');';
-if (metrics.linkScore < 40) issues.push('Weak internal linking structure');';
+  if (metrics.titleScore < 50) issues.push('Title tag is poorly optimized');'
+if (metrics.descriptionScore < 50) issues.push('Meta description is poorly optimized');'
+if (metrics.headingScore < 40) issues.push('Missing or poorly structured headings');'
+if (metrics.keywordDensity < 30) issues.push('Keyword density is too low');'
+if (metrics.readabilityScore < 50) issues.push('Content is difficult to read');'
+if (metrics.imageOptimization < 60) issues.push('Images lack proper alt text');'
+if (metrics.linkScore < 40) issues.push('Weak internal linking structure');'
   private identifyIssues(metrics: SEOMetrics): string[] {,,
   const issues: string[]  = [];,,
   if (metrics.titleScore < 50) issues.push('Title tag is poorly optimized');'
@@ -507,13 +507,13 @@ return issues;
    */
   private identifyStrengths(metrics: SEOMetrics): string[] {,,
   const strengths: string[]  = [];,,
-  if (metrics.titleScore >= 80) strengths.push('Excellent title tag optimization');';
-if (metrics.descriptionScore >= 80) strengths.push('Well-optimized meta description');';
-if (metrics.headingScore >= 80) strengths.push('Strong heading structure');';
-if (metrics.keywordDensity >= 80) strengths.push('Optimal keyword density');';
-if (metrics.readabilityScore >= 70) strengths.push('Highly readable content');';
-if (metrics.imageOptimization >= 80) strengths.push('Well-optimized images');';
-if (metrics.linkScore >= 70) strengths.push('Good internal linking');';
+  if (metrics.titleScore >= 80) strengths.push('Excellent title tag optimization');'
+if (metrics.descriptionScore >= 80) strengths.push('Well-optimized meta description');'
+if (metrics.headingScore >= 80) strengths.push('Strong heading structure');'
+if (metrics.keywordDensity >= 80) strengths.push('Optimal keyword density');'
+if (metrics.readabilityScore >= 70) strengths.push('Highly readable content');'
+if (metrics.imageOptimization >= 80) strengths.push('Well-optimized images');'
+if (metrics.linkScore >= 70) strengths.push('Good internal linking');'
   private identifyStrengths(metrics: SEOMetrics): string[] {,,
   const strengths: string[]  = [];,,
   if (metrics.titleScore >= 80) strengths.push('Excellent title tag optimization');'
@@ -532,7 +532,7 @@ return strengths;
   generateStructuredData(type: 'Article' | 'Product' | 'Service', data: any): string {',';,
   const baseSchema: {,
       '@context': 'https: //schema.org',';,
-      '@type': type,';
+      '@type': type,'
   generateStructuredData(type: 'Article' | 'Product' | 'Service', data: any): string {',';,
   const baseSchema: {,
       '@context': 'https: //schema.org',',

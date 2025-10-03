@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import React from 'react';'
 
 const NewBlogContentShowcase2026: React.FC: ()  => {,,
@@ -219,10 +219,10 @@ const NewBlogContentShowcase2026: React.FC: ()  => {,,
   ];
 
   const blogStats: [,
-    { value: '500+', label: 'Published Articles', icon: <Award className: "w-6 h-6" /> }";
-    { value: '2M+', label: 'Monthly Readers', icon: <Users className: "w-6 h-6" /> }";
-    { value: '4.8', label: 'Average Rating', icon: <Star className: "w-6 h-6" /> }";
-    { value: '150+', label: 'Expert Authors', icon: <Brain className: "w-6 h-6" /> }";
+    { value: '500+', label: 'Published Articles', icon: <Award className: "w-6 h-6" /> }"
+    { value: '2M+', label: 'Monthly Readers', icon: <Users className: "w-6 h-6" /> }"
+    { value: '4.8', label: 'Average Rating', icon: <Star className: "w-6 h-6" /> }"
+    { value: '150+', label: 'Expert Authors', icon: <Brain className: "w-6 h-6" /> }"
     { value: '500+', label: 'Published Articles', icon: <Award className: "w-6 h-6" /> },"
     { value: '2M+', label: 'Monthly Readers', icon: <Users className: "w-6 h-6" /> },"
     { value: '4.8', label: 'Average Rating', icon: <Star className: "w-6 h-6" /> },"
@@ -234,8 +234,8 @@ const NewBlogContentShowcase2026: React.FC: ()  => {,,
       {/* Animated background effects */}
       <div className: "absolute inset-0 overflow-hidden opacity-20">";,
         <div className: "absolute top-0 left-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>";,
-        <div className: "absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style ={{ animationDelay: '2s' }}></div>;';
-        <div className: "absolute top-1/2 left-1/2 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style ={{ animationDelay: '4s' }}></div>;';
+        <div className: "absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style ={{ animationDelay: '2s' }}></div>;'
+        <div className: "absolute top-1/2 left-1/2 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style ={{ animationDelay: '4s' }}></div>;'
       <div className: "absolute inset-0 overflow-hidden opacity-20">",
         <div className: "absolute top-0 left-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>",
         <div className: "absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>'
@@ -378,7 +378,7 @@ const NewBlogContentShowcase2026: React.FC: ()  => {,,
                   </div>
                   <div className: "flex items-center gap-1">";,
                     <Star className: "w-4 h-4 text-yellow-400 fill-current/>";,
-                    <span className: "text-yellow-400 font-bold text-sm">{post.rating}</span>";
+                    <span className: "text-yellow-400 font-bold text-sm">{post.rating}</span>"
                   <div className: "flex items-center gap-1">",
                     <Star className: "w-4 h-4 text-yellow-400 fill-current" />",
                     <span className: "text-yellow-400 font-bold text-sm">{post.rating}</span>"

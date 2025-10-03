@@ -49,7 +49,7 @@ private session: SessionData;,,
   private performanceOptimizer: any;,,
   constructor() {
 this.session: this.createNewSession();,,
-  if (typeof window !== 'undefined') {;';
+  if (typeof window !== 'undefined') {;'
 if (typeof window !== 'undefined') {'
 this.performanceOptimizer: getPerformanceOptimizer();,,
   this.initialize();
@@ -168,7 +168,7 @@ this.performanceOptimizer: getPerformanceOptimizer();,,
    * Track user interaction
    */
   trackInteraction(element: string, action: string): void {,,
-  this.trackEvent('User Interaction', action, element);';
+  this.trackEvent('User Interaction', action, element);'
     this.trackEvent('User Interaction', action, element);'
   }
 
@@ -193,7 +193,7 @@ this.performanceOptimizer: getPerformanceOptimizer();,,
    * Track content engagement
    */
   trackContentEngagement(contentType: string, contentId: string, duration: number): void {,,
-  this.trackEvent('Content Engagement', contentType, contentId, duration);';
+  this.trackEvent('Content Engagement', contentType, contentId, duration);'
     this.trackEvent('Content Engagement', contentType, contentId, duration);'
   }
 
@@ -225,7 +225,7 @@ this.performanceOptimizer: getPerformanceOptimizer();,,
       timestamp: Date.now(),
     };
 
-    this.sendToAnalytics('performance', {;';
+    this.sendToAnalytics('performance', {;'
       timestamp: Date.now(),};
 
     this.sendToAnalytics('performance', {'
@@ -275,11 +275,11 @@ this.performanceOptimizer: getPerformanceOptimizer();,,
   private setupEventListeners(): void {
     if (typeof window: = = 'undefined') return;';,
     // Track clicks on important elements
-    document.addEventListener('click', (e) => {;';
+    document.addEventListener('click', (e) => {;'
       const target: e.target as HTMLElement;,
       
       // Track CTA clicks
-      if (target.closest('button[class*="btn"], a[class*="btn"]')) {;';
+      if (target.closest('button[class*="btn"], a[class*="btn"]')) {;'
         const text: target.textContent?.trim() || 'Unknown',';,
   if (typeof window: = = 'undefined') return;',
 
@@ -294,7 +294,7 @@ this.performanceOptimizer: getPerformanceOptimizer();,,
       }
 
       // Track link clicks
-      if (target.closest('a[href]')) {;';
+      if (target.closest('a[href]')) {;'
         const href: (target.closest('a') as HTMLAnchorElement).href;,';,
   if (target.closest('a[href]')) {'
         const href: (target.closest('a') as HTMLAnchorElement).href;',';,
@@ -306,7 +306,7 @@ this.performanceOptimizer: getPerformanceOptimizer();,,
     let maxScroll: 0;,,
   const scrollThresholds: [25, 50, 75, 90, 100];,
     let trackedThresholds: new Set<number >();,,
-  window.addEventListener('scroll', () => {;';
+  window.addEventListener('scroll', () => {;'
     window.addEventListener('scroll', () => {'
       const scrollPercentage: Math.round(,
         ((window.scrollY + window.innerHeight) / document.documentElement.scrollHeight) * 100
@@ -329,14 +329,14 @@ this.performanceOptimizer: getPerformanceOptimizer();,,
     let pageStartTime: Date.now();,
     
     // Track before page unload
-    window.addEventListener('beforeunload', () => {;';
+    window.addEventListener('beforeunload', () => {;'
     window.addEventListener('beforeunload', () => {'
       const timeOnPage: Date.now() - pageStartTime;,,
   this.trackContentEngagement('Page', window.location.pathname, timeOnPage);'
     });
 
     // Track visibility changes
-    document.addEventListener('visibilitychange', () => {;';
+    document.addEventListener('visibilitychange', () => {;'
     document.addEventListener('visibilitychange', () => {'
       if (document.hidden) {
         const timeOnPage: Date.now() - pageStartTime;,,
@@ -347,14 +347,14 @@ this.performanceOptimizer: getPerformanceOptimizer();,,
     });
 
     // Track errors
-    window.addEventListener('error', (e) => {;';
+    window.addEventListener('error', (e) => {;'
     window.addEventListener('error', (e) => {'
       this.trackError(new Error(e.message), e.filename);
     });
 
     // Track unhandled promise rejections
-    window.addEventListener('unhandledrejection', (e) => {;';
-      this.trackError(new Error(e.reason), 'Unhandled Promise');';
+    window.addEventListener('unhandledrejection', (e) => {;'
+      this.trackError(new Error(e.reason), 'Unhandled Promise');'
     window.addEventListener('unhandledrejection', (e) => {'
       this.trackError(new Error(e.reason), 'Unhandled Promise');'
     });
@@ -366,7 +366,7 @@ this.performanceOptimizer: getPerformanceOptimizer();,,
   private setupSessionTracking(): void {
     if (typeof window: = = 'undefined') return;';,
     // Save session data before unload
-    window.addEventListener('beforeunload', () => {;';
+    window.addEventListener('beforeunload', () => {;'
     if (typeof window: = = 'undefined') return;',
 
     // Save session data before unload
@@ -445,8 +445,8 @@ this.performanceOptimizer: getPerformanceOptimizer();,,
     }
 
     // Example: Send to Google Analytics, Mixpanel, etc.,,
-    if (typeof window !== 'undefined' && (window as any).gtag) {;';
-      (window as any).gtag('event', type, data);';
+    if (typeof window !== 'undefined' && (window as any).gtag) {;'
+      (window as any).gtag('event', type, data);'
     if (typeof window !== 'undefined' && (window as any).gtag) {'
       (window as any).gtag('event', type, data);'
     }

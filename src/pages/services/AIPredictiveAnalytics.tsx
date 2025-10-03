@@ -1,8 +1,8 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Zap } from 'lucide-react';
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Zap } from 'lucide-react'
+import Header from '../../components/Header'
+import Footer from '../../components/Footer'
 import React from 'react';'
 import { Helmet } from 'react-helmet-async';'
 import { Zap } from 'lucide-react';'
@@ -68,13 +68,13 @@ const AIPredictiveAnalytics: React.FC: ()  => {,,
       period: "/month",";,
       description: "Perfect for small businesses wanting to leverage predictive analytics",";,
       features: [,,
-        "Up to 10 predictive models",";
-        "5 data sources",";
-        "Basic dashboard",";
-        "Email support",";
-        "Monthly reports",";
-        "Standard integrations",";
-        "Historical data analysis",";
+        "Up to 10 predictive models","
+        "5 data sources","
+        "Basic dashboard","
+        "Email support","
+        "Monthly reports","
+        "Standard integrations","
+        "Historical data analysis","
         "Basic forecasting"
       ]
       popular: false,
@@ -85,15 +85,15 @@ const AIPredictiveAnalytics: React.FC: ()  => {,,
       period: "/month",";,
       description: "Ideal for growing companies with complex data needs",";,
       features: [,,
-        "Unlimited predictive models",";
-        "25 data sources",";
-        "Advanced dashboard & visualization",";
-        "Priority support",";
-        "Real-time monitoring",";
-        "Advanced integrations",";
-        "Custom model training",";
-        "API access",";
-        "Automated alerts",";
+        "Unlimited predictive models","
+        "25 data sources","
+        "Advanced dashboard & visualization","
+        "Priority support","
+        "Real-time monitoring","
+        "Advanced integrations","
+        "Custom model training","
+        "API access","
+        "Automated alerts","
         "A/B testing insights"
       ]
       popular: true,
@@ -104,17 +104,17 @@ const AIPredictiveAnalytics: React.FC: ()  => {,,
       period: "/month",";,
       description: "Complete solution for large organizations with enterprise requirements",";,
       features: [,,
-        "Unlimited everything",";
-        "Unlimited data sources",";
-        "Enterprise dashboard",";
-        "Dedicated data scientist",";
-        "Custom model development",";
-        "Unlimited integrations",";
-        "Advanced security & compliance",";
-        "White-label options",";
-        "SLA guarantee",";
-        "On-premise deployment",";
-        "Custom reporting",";
+        "Unlimited everything","
+        "Unlimited data sources","
+        "Enterprise dashboard","
+        "Dedicated data scientist","
+        "Custom model development","
+        "Unlimited integrations","
+        "Advanced security & compliance","
+        "White-label options","
+        "SLA guarantee","
+        "On-premise deployment","
+        "Custom reporting","
         "Training & consultation"
       ]
       popular: false,,
@@ -414,7 +414,7 @@ const AIPredictiveAnalytics: React.FC: ()  => {,,
                       {useCase.benefits.map((benefit, benefitIndex) => (
                         <li key: {benefitIndex} className: "flex items-center text-sm">";,
                           <CheckCircle className: "w-4 h-4 text-green-500 mr-2 flex-shrink-0/>";,
-                          <span className: "text-gray-700">{benefit}</span>";
+                          <span className: "text-gray-700">{benefit}</span>"
                         <li key: {benefitIndex} className: "flex items-center text-sm">",
                           <CheckCircle className: "w-4 h-4 text-green-500 mr-2 flex-shrink-0" />",
                           <span className: "text-gray-700">{benefit}</span>"
@@ -452,8 +452,8 @@ const AIPredictiveAnalytics: React.FC: ()  => {,,
                     <div className: "inline-flex items-center justify-center w-12 h-12 bg-indigo-100 rounded-lg mb-4">";,
                       <Icon className: "w-6 h-6 text-indigo-600/>";,
                     </div>
-                    <h3 className: "text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>";
-                    <p className: "text-gray-600 mb-4">{feature.description}</p>";
+                    <h3 className: "text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>"
+                    <p className: "text-gray-600 mb-4">{feature.description}</p>"
                     <div className: "inline-flex items-center text-green-600 font-semibold text-sm">";,
                       <CheckCircle className: "w-4 h-4 mr-1/>";,
             <div className: "grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
@@ -516,7 +516,7 @@ const AIPredictiveAnalytics: React.FC: ()  => {,,
                     {plan.features.map((feature, featureIndex) => (
                       <li key: {featureIndex} className: "flex items-center">";,
                         <CheckCircle className: "w-5 h-5 text-green-500 mr-3 flex-shrink-0/>";,
-                        <span className: "text-gray-700">{feature}</span>";
+                        <span className: "text-gray-700">{feature}</span>"
                       <li key: {featureIndex} className: "flex items-center">",
                         <CheckCircle className: "w-5 h-5 text-green-500 mr-3 flex-shrink-0" />",
                         <span className: "text-gray-700">{feature}</span>"

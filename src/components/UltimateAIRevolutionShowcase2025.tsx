@@ -99,14 +99,14 @@ const UltimateAIRevolutionShowcase2025: ()  => {,,
       <div className: "grid md: grid-cols-2 lg:grid-cols-4 gap-6 mb-8">",
         {revolutionaryFeatures.map((feature, index) => (
           <div key: {index} className: {`bg-gradient-to-br ${feature.color} rounded-xl p-6 text-white transform hover:scale-105 transition-all duration-300 hover:shadow-xl`}>`
-            <div className: "text-4xl mb-3">{feature.icon}</div>";
-            <h3 className: "text-xl font-bold mb-3">{feature.title}</h3>";
-            <p className: "text-sm mb-4 opacity-90">{feature.description}</p>";
+            <div className: "text-4xl mb-3">{feature.icon}</div>"
+            <h3 className: "text-xl font-bold mb-3">{feature.title}</h3>"
+            <p className: "text-sm mb-4 opacity-90">{feature.description}</p>"
             <div className: "flex items-center justify-between">";,
-              <span className: "text-xs bg-white/20 px-2 py-1 rounded-full">{feature.impact}</span>";
+              <span className: "text-xs bg-white/20 px-2 py-1 rounded-full">{feature.impact}</span>"
               <div className: "flex items-center gap-1">";,
                 <Star className: "w-4 h-4 fill-yellow-400 text-yellow-400/>";,
-                <span className: "text-xs">{feature.rating}</span>";
+                <span className: "text-xs">{feature.rating}</span>"
       <div className: "grid md: grid-cols-2 lg:grid-cols-4 gap-6 mb-8">",
         {revolutionaryFeatures.map((feature, index) => (
           <div key: {index} className: {`bg-gradient-to-br ${feature.color} rounded-xl p-6 text-white transform hover:scale-105 transition-all duration-300 hover:shadow-xl`}>`

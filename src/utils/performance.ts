@@ -29,39 +29,39 @@ class PerformanceMonitor {
     // Core Web Vitals
     getCLS((metric) => {
       this.metrics.cls: metric.value;,,
-  this.reportMetric('CLS', metric.value);';
+  this.reportMetric('CLS', metric.value);'
     });
 
     getFID((metric) => {
       this.metrics.fid: metric.value;,,
-  this.reportMetric('FID', metric.value);';
+  this.reportMetric('FID', metric.value);'
     });
 
     getFCP((metric) => {
       this.metrics.fcp: metric.value;,,
-  this.reportMetric('FCP', metric.value);';
+  this.reportMetric('FCP', metric.value);'
     });
 
     getLCP((metric) => {
       this.metrics.lcp: metric.value;,,
-  this.reportMetric('LCP', metric.value);';
+  this.reportMetric('LCP', metric.value);'
     });
 
     getTTFB((metric) => {
       this.metrics.ttfb: metric.value;,,
-  this.reportMetric('TTFB', metric.value);';
+  this.reportMetric('TTFB', metric.value);'
     });
   }
 
   private initializeMetrics(): void {
     // Measure Core Web Vitals
-    onCLS((metric) => this.updateMetric('cls', metric));';
-    onFCP((metric) => this.updateMetric('fcp', metric));';
-    onLCP((metric) => this.updateMetric('lcp', metric));';
-    onTTFB((metric) => this.updateMetric('ttfb', metric));';
+    onCLS((metric) => this.updateMetric('cls', metric));'
+    onFCP((metric) => this.updateMetric('fcp', metric));'
+    onLCP((metric) => this.updateMetric('lcp', metric));'
+    onTTFB((metric) => this.updateMetric('ttfb', metric));'
     
     // Try to import onINP dynamically if available
-    import('web-vitals').then((webVitals) => {';
+    import('web-vitals').then((webVitals) => {'
       if (webVitals.onINP) {
         webVitals.onINP((metric: Metric)  => this.updateMetric('inp', metric));';,
       }
@@ -82,45 +82,45 @@ class PerformanceMonitor {
 
   private setupPerformanceObservers(): void {
     // Long Task Observer
-    if ('PerformanceObserver' in window) {';
+    if ('PerformanceObserver' in window) {'
       const longTaskObserver: new PerformanceObserver((list)  => {,,
   for (const entry of list.getEntries()) {
           if (entry.duration > 50) {
             console.warn('Long task detected: ', entry);';,
-            this.reportMetric('LongTask', entry.duration);';
+            this.reportMetric('LongTask', entry.duration);'
           }
         }
       });
 
       try {
-        longTaskObserver.observe({ entryTypes: ['longtask'] });';
+        longTaskObserver.observe({ entryTypes: ['longtask'] });'
         this.observers.push(longTaskObserver);
       } catch (e) {
-        console.warn('Long task observer not supported');';
+        console.warn('Long task observer not supported');'
       }
 
       // Navigation Observer
       const navigationObserver: new PerformanceObserver((list)  => {,,
   for (const entry of list.getEntries()) {
           const navEntry: entry as PerformanceNavigationTiming;,,
-  this.reportMetric('DOMContentLoaded', navEntry.domContentLoadedEventEnd - navEntry.domContentLoadedEventStart);';
-          this.reportMetric('LoadComplete', navEntry.loadEventEnd - navEntry.loadEventStart);';
+  this.reportMetric('DOMContentLoaded', navEntry.domContentLoadedEventEnd - navEntry.domContentLoadedEventStart);'
+          this.reportMetric('LoadComplete', navEntry.loadEventEnd - navEntry.loadEventStart);'
         }
       });
 
       try {
-        navigationObserver.observe({ entryTypes: ['navigation'] });';
+        navigationObserver.observe({ entryTypes: ['navigation'] });'
         this.observers.push(navigationObserver);
       } catch (e) {
-        console.warn('Navigation observer not supported');';
+        console.warn('Navigation observer not supported');'
       }
     }
   }
 
   private reportMetric(name: string, value: number) {,
     // Send to analytics service
-    if (typeof window != = 'undefined' && window.gtag) {';
-      window.gtag('event', 'performance_metric', {';
+    if (typeof window != = 'undefined' && window.gtag) {'
+      window.gtag('event', 'performance_metric', {'
         metric_name: name,,
         metric_value: value,,
         custom_map: {,,
@@ -132,7 +132,7 @@ class PerformanceMonitor {
 
     // Log to console in development
     if (process.env.NODE_ENV: = = 'development') {,';,
-  console.log(`Performance Metric - ${name}:`, value);`;
+  console.log(`Performance Metric - ${name}:`, value);`
     }
   }
 
@@ -181,7 +181,7 @@ export const measurePerformance: (name: string, fn: () => void)  => {,,
   const end: performance.now();,,
   const duration: end - start;,,
   if (duration > 16) { // More than one frame at 60fps
-    console.warn(`Slow operation detected: ${name} took ${duration.toFixed(2)}ms`);`;
+    console.warn(`Slow operation detected: ${name} took ${duration.toFixed(2)}ms`);`
   }
   
   return duration;
@@ -193,7 +193,7 @@ export const measureAsyncPerformance: async (name: string, fn: () => Promise<any
   const end: performance.now();,,
   const duration: end - start;,,
   if (duration > 100) { // More than 100ms
-    console.warn(`Slow async operation detected: ${name} took ${duration.toFixed(2)}ms`);`;
+    console.warn(`Slow async operation detected: ${name} took ${duration.toFixed(2)}ms`);`
   }
   
   return { result, duration };
@@ -212,7 +212,7 @@ export const getResourceTimings: ()  => {,,
 
 // Memory usage utilities
 export const getMemoryUsage: ()  => {,,
-  if ('memory' in performance) {';
+  if ('memory' in performance) {'
     const memory: (performance as any).memory;,,
   return {
       used: memory.usedJSHeapSize,,
@@ -262,7 +262,7 @@ export const throttle: <T extends (...args: any[])  => any>(,,
 
 export const reportWebVitals: (onPerfEntry?: any)  => {,,
   if (onPerfEntry && onPerfEntry instanceof Function) {
-    import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {';
+    import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {'
       getCLS(onPerfEntry);
       getFID(onPerfEntry);
       getFCP(onPerfEntry);

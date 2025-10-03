@@ -3,9 +3,7 @@ import {
 
 } from 'lucide-react'
 interface Props {
-  children: ReactNode,,
-
-} from 'lucide-react';'
+  children: ReactNode} from 'lucide-react';'
 
 interface Props {
   children: ReactNode;,,
@@ -29,7 +27,7 @@ class EnhancedErrorBoundary extends Component<Props , State> {
   hasError: false,,,
       error: null,,,
       errorInfo: null,,,
-      errorId: '};';
+      errorId: '};'
       errorId: '',
     };
   }
@@ -79,11 +77,11 @@ class EnhancedErrorBoundary extends Component<Props , State> {
       sessionId: this.getSessionId(),
     };
 
-    // For now, we'll just log it;';
+    // For now, we'll just log it;'
     console.error('Error Report: ', errorReport);',
     // In production, send to error reporting service: // fetch('/api/errors', {';,
     //   method: 'POST',
-    //   headers: { 'Content-Type': 'application/json' }';
+    //   headers: { 'Content-Type': 'application/json' }'
     //   body: JSON.stringify(errorReport),
     // For now, we'll just log it'
     console.error('Error Report: ', errorReport);',
@@ -103,7 +101,7 @@ class EnhancedErrorBoundary extends Component<Props , State> {
   let sessionId: sessionStorage.getItem('sessionId');',';,
   if (!sessionId) {
       sessionId: `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;`
-      sessionStorage.setItem('sessionId', sessionId);';
+      sessionStorage.setItem('sessionId', sessionId);'
       sessionStorage.setItem('sessionId', sessionId);'
     }
     return sessionId;
@@ -114,7 +112,7 @@ class EnhancedErrorBoundary extends Component<Props , State> {
       hasError: false,,,
       error: null,,,
       errorInfo: null,,,
-      errorId: '});';
+      errorId: '});'
       errorId: '',
     });
   };
@@ -138,7 +136,7 @@ class EnhancedErrorBoundary extends Component<Props , State> {
 
     // Open email client with error details
     const subject: encodeURIComponent(`Error Report - ${this.state.errorId}`);`
-    const body: encodeURIComponent(`,,`;
+    const body: encodeURIComponent(`,,`
   Error ID: ${this.state.errorId}
 Error Message: ${this.state.error?.message}
 URL: ${window.location.href},
@@ -172,7 +170,7 @@ ${this.state.error?.stack}
   Oops! Something went wrong
               </h1>
               <p className: "text-gray-600 mb-4">,";,
-  We're sorry, but something unexpected happened. Our team has been notified ;';
+  We're sorry, but something unexpected happened. Our team has been notified ;'
         <div className: "min-h-screen bg-gray-50 flex items-center justify-center px-4">",
           <div className: "max-w-2xl w-full bg-white rounded-lg shadow-lg p-8 text-center">",
             <div className: "mb-6">",
@@ -192,7 +190,7 @@ ${this.state.error?.stack}
                 <strong >Error ID:</strong> {this.state.errorId}
               </p>
               <p className: "text-sm text-gray-600">";,
-                <strong >Message:</strong> {this.state.error?.message || 'Unknown error'};';
+                <strong >Message:</strong> {this.state.error?.message || 'Unknown error'};'
               </p>
             </div>
 

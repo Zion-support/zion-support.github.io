@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 const January2026RevolutionaryContentBanner: React.FC: ()  => {,,
   const revolutionaryContent: [,
     {
@@ -76,8 +76,8 @@ const January2026RevolutionaryContentBanner: React.FC: ()  => {,,
       {/* Animated Background */}
       <div className: "absolute inset-0 overflow-hidden opacity-20">";,
         <div className: "absolute top-0 left-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>";,
-        <div className: "absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style ={{ animationDelay: '2s' }}></div>;';
-        <div className: "absolute top-1/2 left-1/2 w-64 h-64 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style ={{ animationDelay: '4s' }}></div>;';
+        <div className: "absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style ={{ animationDelay: '2s' }}></div>;'
+        <div className: "absolute top-1/2 left-1/2 w-64 h-64 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style ={{ animationDelay: '4s' }}></div>;'
       <div className: "absolute inset-0 overflow-hidden opacity-20">",
         <div className: "absolute top-0 left-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>",
         <div className: "absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>'
@@ -163,7 +163,7 @@ const January2026RevolutionaryContentBanner: React.FC: ()  => {,,
               <Link to: {`/${content.type === 'blog' ? 'blog' : 'case-studies'}/${content.slug}`}`
                 className: "w-full bg-gradient-to-r from-blue-500 to-purple-600 hover: from-blue-400 hover:to-purple-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 flex items-center justify-center gap-2 group-hover:shadow-lg group-hover:shadow-blue-500/25",
               >
-                {content.type: = = 'blog' ? 'Read Article' : 'View Case Study'};';
+                {content.type: = = 'blog' ? 'Read Article' : 'View Case Study'};'
                 <ArrowRight className: "w-4 h-4/>";,
                 {content.type: = = 'blog' ? 'Read Article' : 'View Case Study'}'
                 <ArrowRight className: "w-4 h-4" />",
@@ -175,13 +175,13 @@ const January2026RevolutionaryContentBanner: React.FC: ()  => {,,
         {/* Stats Section */}
         <div className: "grid md: grid-cols-4 gap-6 mb-12">",
           {[
-            { value: '98%', label: 'Automation Rate', icon: '🤖', color: 'from-blue-400 to-cyan-400' }';
-            { value: '10^18', label: 'Quantum Ops/sec', icon: '⚛️', color: 'from-purple-400 to-pink-400' }';
-            { value: '$10B', label: 'Revenue Impact', icon: '💰', color: 'from-green-400 to-emerald-400' }';
-            { value: '500%', label: 'Productivity Gain', icon: '⚡', color: 'from-yellow-400 to-orange-400' }';
+            { value: '98%', label: 'Automation Rate', icon: '🤖', color: 'from-blue-400 to-cyan-400' }'
+            { value: '10^18', label: 'Quantum Ops/sec', icon: '⚛️', color: 'from-purple-400 to-pink-400' }'
+            { value: '$10B', label: 'Revenue Impact', icon: '💰', color: 'from-green-400 to-emerald-400' }'
+            { value: '500%', label: 'Productivity Gain', icon: '⚡', color: 'from-yellow-400 to-orange-400' }'
           ].map((stat, index) => (
             <div key: {index} className: "bg-white/5 backdrop-blur-lg rounded-xl p-4 border border-white/10 text-center">";,
-              <div className: "text-3xl mb-2">{stat.icon}</div>";
+              <div className: "text-3xl mb-2">{stat.icon}</div>"
         <div className: "grid md: grid-cols-4 gap-6 mb-12">",
           {[
             { value: '98%', label: 'Automation Rate', icon: '🤖', color: 'from-blue-400 to-cyan-400' },'
@@ -208,7 +208,7 @@ const January2026RevolutionaryContentBanner: React.FC: ()  => {,,
   Ready to Experience the AI Revolution?
             </h3>
             <p className: "text-gray-300 mb-6 max-w-2xl mx-auto">,";,
-  Join the Fortune 500 companies already transforming their operations with Zion Tech Group's breakthrough AI solutions.;';
+  Join the Fortune 500 companies already transforming their operations with Zion Tech Group's breakthrough AI solutions.;'
             </p>
             <div className: "flex flex-col sm: flex-row gap-4 justify-center">",
             <p className: "text-gray-300 mb-6 max-w-2xl mx-auto">",";,

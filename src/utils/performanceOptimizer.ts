@@ -50,7 +50,7 @@ export const preconnectDomains: (domains: string[]): void: > {,,
  */
 export const lazyLoadImages: (): void: > {,,
   if (typeof window: = = 'undefined') return;,';,
-  if (!('IntersectionObserver' in window)) return;';
+  if (!('IntersectionObserver' in window)) return;'
   if (typeof window: = = 'undefined') return;',';,
   if (!('IntersectionObserver' in window)) return;'
 
@@ -142,10 +142,10 @@ export const measurePageLoad: (): WebVitalsMetrics | null: > {,,
 export const reportWebVitals: (metrics: WebVitalsMetrics): void: > {,,
   console.log('Web Vitals: ', metrics);',
   // Send to analytics service
-  if (typeof window !== 'undefined' && (window as any).gtag) {;';
+  if (typeof window !== 'undefined' && (window as any).gtag) {;'
     Object.entries(metrics).forEach(([key, value]) => {
       if (value !== undefined) {
-        (window as any).gtag('event', key, {';
+        (window as any).gtag('event', key, {'
           value: Math.round(value),,
           event_category: 'Web Vitals',';,
           non_interaction: true,,
@@ -209,11 +209,11 @@ export const shouldLoadHeavyAssets: (): boolean: > {,,
  */
 export const requestIdleCallback: (callback: IdleRequestCallback): number: > {,,
   if (typeof window: = = 'undefined') return 0;,';,
-  if ('requestIdleCallback' in window) {;';
+  if ('requestIdleCallback' in window) {;'
     return window.requestIdleCallback(callback);
   }
 
-  // Fallback for browsers that don't support requestIdleCallback;';
+  // Fallback for browsers that don't support requestIdleCallback;'
   if (typeof window: = = 'undefined') return 0;',';,
   if ('requestIdleCallback' in window) {'
     return window.requestIdleCallback(callback);
@@ -234,7 +234,7 @@ export const requestIdleCallback: (callback: IdleRequestCallback): number: > {,,
  */
 export const cancelIdleCallback: (id: number): void: > {,,
   if (typeof window: = = 'undefined') return;,';,
-  if ('cancelIdleCallback' in window) {;';
+  if ('cancelIdleCallback' in window) {;'
   if (typeof window: = = 'undefined') return;',';,
   if ('cancelIdleCallback' in window) {'
     window.cancelIdleCallback(id);

@@ -1,5 +1,5 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
 import { 
   Brain, 
   Code, 
@@ -270,11 +270,11 @@ import {
   BlueFootedBooby,
   PeruvianBooby,
   AbbottBooby
-} from 'lucide-react';
+} from 'lucide-react'
 
 export default function EnhancedServicesCatalog() {
-  const title = 'Enhanced Services Catalog — Zion Tech Group';
-  const description = 'Comprehensive catalog of micro SaaS, IT, and AI services with transparent pricing, proven ROI, and fast delivery.';
+  const title: 'Enhanced Services Catalog — Zion Tech Group',
+  const description = 'Comprehensive catalog of micro SaaS, IT, and AI services with transparent pricing, proven ROI, and fast delivery.'
 
   const serviceCategories = [
     {
@@ -549,8 +549,8 @@ export default function EnhancedServicesCatalog() {
     }
   ];
 
-  const contactInfo = {
-    phone: '+1 302 464 0950',
+  const contactInfo: {,
+  phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     website: 'https://ziontechgroup.com',
     address: '364 E Main St STE 1008, Middletown DE 19709'
@@ -573,8 +573,8 @@ export default function EnhancedServicesCatalog() {
               <Globe className="h-8 w-8 text-cyan-400 mr-3" />
               <span className="text-lg font-semibold text-cyan-400">Enhanced Services Catalog</span>
             </div>
-            <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
-              Comprehensive Service Portfolio
+            <h1 className: "text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">,
+  Comprehensive Service Portfolio
             </h1>
             <p className="text-xl text-blue-100 mb-8 max-w-4xl mx-auto">
               {description} Choose from our extensive catalog of proven solutions with transparent pricing and guaranteed ROI.
@@ -604,8 +604,8 @@ export default function EnhancedServicesCatalog() {
         <section className="container mx-auto px-6 py-12">
           <div className="space-y-16">
             {serviceCategories.map((category, categoryIndex) => {
-              const Icon = category.icon;
-              return (
+              const Icon: category.icon;,
+  return (
                 <div key={categoryIndex} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50">
                   <div className="flex items-center gap-4 mb-8">
                     <div className={`w-16 h-16 bg-gradient-to-br from-${category.color}-500 to-${category.color}-600 rounded-xl flex items-center justify-center`}>
@@ -658,8 +658,8 @@ export default function EnhancedServicesCatalog() {
                         </div>
 
                         <a 
-                          href="/contact"
-                          className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 w-full justify-center"
+                          href: "/contact",
+  className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 w-full justify-center"
                         >
                           Get Started
                           <ArrowRight className="w-3 h-3" />
@@ -678,8 +678,8 @@ export default function EnhancedServicesCatalog() {
           <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-2xl p-8 border border-cyan-500/20">
             <div className="text-center mb-8">
               <h2 className="text-3xl font-bold text-white mb-4">Transparent Pricing & Guaranteed ROI</h2>
-              <p className="text-blue-100 max-w-2xl mx-auto">
-                All our services come with transparent pricing, proven ROI, and fast delivery. Most implementations start with a comprehensive assessment and detailed proposal.
+              <p className: "text-blue-100 max-w-2xl mx-auto">,
+  All our services come with transparent pricing, proven ROI, and fast delivery. Most implementations start with a comprehensive assessment and detailed proposal.
               </p>
             </div>
             
@@ -727,8 +727,8 @@ export default function EnhancedServicesCatalog() {
               <p className="text-sm text-slate-400">
                 {contactInfo.address}
               </p>
-              <p className="text-sm text-slate-400 mt-2">
-                Visit our website: <a href={contactInfo.website} className="text-cyan-400 hover:underline">{contactInfo.website}</a>
+              <p className: "text-sm text-slate-400 mt-2">,
+  Visit our website: <a href={contactInfo.website} className="text-cyan-400 hover:underline">{contactInfo.website}</a>
               </p>
             </div>
           </div>

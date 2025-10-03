@@ -1,8 +1,8 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { TrendingUp } from 'lucide-react';
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { TrendingUp } from 'lucide-react'
+import Header from '../../components/Header'
+import Footer from '../../components/Footer'
 import React from 'react';'
 import { Helmet } from 'react-helmet-async';'
 import { TrendingUp } from 'lucide-react';'
@@ -68,11 +68,11 @@ const AIWorkflowAutomation: React.FC: ()  => {,,
       period: "/month",";,
       description: "Perfect for small businesses getting started with automation",";,
       features: [,,
-        "Up to 10 automated workflows",";
-        "5 user accounts",";
-        "Basic analytics dashboard",";
-        "Email support",";
-        "Standard integrations (5)",";
+        "Up to 10 automated workflows","
+        "5 user accounts","
+        "Basic analytics dashboard","
+        "Email support","
+        "Standard integrations (5)","
         "Monthly reporting"
       ]
       popular: false,
@@ -83,13 +83,13 @@ const AIWorkflowAutomation: React.FC: ()  => {,,
       period: "/month",";,
       description: "Ideal for growing businesses with complex workflows",";,
       features: [,,
-        "Unlimited automated workflows",";
-        "25 user accounts",";
-        "Advanced analytics & AI insights",";
-        "Priority support",";
-        "Advanced integrations (25)",";
-        "Real-time monitoring",";
-        "Custom workflow templates",";
+        "Unlimited automated workflows","
+        "25 user accounts","
+        "Advanced analytics & AI insights","
+        "Priority support","
+        "Advanced integrations (25)","
+        "Real-time monitoring","
+        "Custom workflow templates","
         "API access"
       ]
       popular: true,
@@ -100,14 +100,14 @@ const AIWorkflowAutomation: React.FC: ()  => {,,
       period: "/month",";,
       description: "Complete solution for large organizations",";,
       features: [,,
-        "Unlimited everything",";
-        "Unlimited user accounts",";
-        "Enterprise-grade analytics",";
-        "Dedicated success manager",";
-        "Unlimited integrations",";
-        "Advanced security features",";
-        "Custom development",";
-        "SLA guarantee",";
+        "Unlimited everything","
+        "Unlimited user accounts","
+        "Enterprise-grade analytics","
+        "Dedicated success manager","
+        "Unlimited integrations","
+        "Advanced security features","
+        "Custom development","
+        "SLA guarantee","
         "On-premise deployment option"
       ]
       popular: false,,
@@ -201,8 +201,8 @@ const AIWorkflowAutomation: React.FC: ()  => {,,
       challenge: "Manual workflow processes causing delays and errors",";,
       solution: "Implemented AI-driven automation for supply chain management",";,
       results: [,,
-        "85% reduction in processing time",";
-        "99.7% accuracy improvement",";
+        "85% reduction in processing time","
+        "99.7% accuracy improvement","
         "$15M annual cost savings"
       title: "Fortune 500 Manufacturing",",
       challenge: "Manual workflow processes causing delays and errors",",
@@ -219,8 +219,8 @@ const AIWorkflowAutomation: React.FC: ()  => {,,
       challenge: "Complex compliance workflows requiring manual oversight",";,
       solution: "Deployed intelligent automation with real-time monitoring",";,
       results: [,,
-        "90% faster compliance reporting",";
-        "100% audit compliance rate",";
+        "90% faster compliance reporting","
+        "100% audit compliance rate","
         "$8M operational savings"
       title: "Global Financial Services",",
       challenge: "Complex compliance workflows requiring manual oversight",",
@@ -237,8 +237,8 @@ const AIWorkflowAutomation: React.FC: ()  => {,,
       challenge: "Patient data processing bottlenecks",";,
       solution: "Automated patient intake and data processing workflows",";,
       results: [,,
-        "75% faster patient processing",";
-        "95% reduction in data entry errors",";
+        "75% faster patient processing","
+        "95% reduction in data entry errors","
         "40% improvement in patient satisfaction"
       title: "Healthcare System",",
       challenge: "Patient data processing bottlenecks",",
@@ -385,8 +385,8 @@ const AIWorkflowAutomation: React.FC: ()  => {,,
                     <div className: "inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-lg mb-4">";,
                       <Icon className: "w-6 h-6 text-blue-600/>";,
                     </div>
-                    <h3 className: "text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>";
-                    <p className: "text-gray-600 mb-4">{feature.description}</p>";
+                    <h3 className: "text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>"
+                    <p className: "text-gray-600 mb-4">{feature.description}</p>"
                     <div className: "inline-flex items-center text-green-600 font-semibold text-sm">";,
                       <CheckCircle className: "w-4 h-4 mr-1/>";,
             <div className: "grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
@@ -449,7 +449,7 @@ const AIWorkflowAutomation: React.FC: ()  => {,,
                     {plan.features.map((feature, featureIndex) => (
                       <li key: {featureIndex} className: "flex items-center">";,
                         <CheckCircle className: "w-5 h-5 text-green-500 mr-3 flex-shrink-0/>";,
-                        <span className: "text-gray-700">{feature}</span>";
+                        <span className: "text-gray-700">{feature}</span>"
                       <li key: {featureIndex} className: "flex items-center">",
                         <CheckCircle className: "w-5 h-5 text-green-500 mr-3 flex-shrink-0" />",
                         <span className: "text-gray-700">{feature}</span>"
@@ -503,14 +503,14 @@ plan.popular
             <div className: "grid lg: grid-cols-3 gap-8">",
               {caseStudies.map((study, index) => (
                 <div key: {index} className: "bg-white p-8 rounded-xl shadow-lg border border-gray-200">";,
-                  <h3 className: "text-xl font-bold text-gray-900 mb-4">{study.title}</h3>";
+                  <h3 className: "text-xl font-bold text-gray-900 mb-4">{study.title}</h3>"
                   <div className: "mb-6">";,
                     <h4 className: "font-semibold text-gray-900 mb-2">Challenge: </h4>",
-                    <p className: "text-gray-600 text-sm">{study.challenge}</p>";
+                    <p className: "text-gray-600 text-sm">{study.challenge}</p>"
                   </div>
                   <div className: "mb-6">";,
                     <h4 className: "font-semibold text-gray-900 mb-2">Solution: </h4>",
-                    <p className: "text-gray-600 text-sm">{study.solution}</p>";
+                    <p className: "text-gray-600 text-sm">{study.solution}</p>"
                   </div>
                   <div >
                     <h4 className: "font-semibold text-gray-900 mb-2">Results: </h4>",
@@ -518,7 +518,7 @@ plan.popular
                       {study.results.map((result, resultIndex) => (
                         <li key: {resultIndex} className: "flex items-center text-sm">";,
                           <CheckCircle className: "w-4 h-4 text-green-500 mr-2 flex-shrink-0/>";,
-                          <span className: "text-gray-700">{result}</span>";
+                          <span className: "text-gray-700">{result}</span>"
             <div className: "grid lg: grid-cols-3 gap-8">",
               {caseStudies.map((study, index) => (
                 <div key: {index} className: "bg-white p-8 rounded-xl shadow-lg border border-gray-200">",

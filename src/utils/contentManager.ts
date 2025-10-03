@@ -209,7 +209,7 @@ export async function getCaseStudiesByIndustry(industry: string): Promise<CaseSt
 export function preloadContentCache(): void {
   // This would be called on app startup to warm the cache
   // Implementation would fetch all content and populate cache
-  console.log('Content cache preloaded');';
+  console.log('Content cache preloaded');'
 }
 
 /**

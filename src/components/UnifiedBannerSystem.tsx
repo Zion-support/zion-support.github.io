@@ -65,8 +65,8 @@ const UnifiedBannerSystem: React.FC<UnifiedBannerSystemProps >  = ({,,
 
   const handleBannerClick: (banner: BannerConfig) => {,
     // Analytics tracking
-    if (typeof window != = 'undefined' && window.gtag) {;';
-      window.gtag('event', 'banner_click', {;';
+    if (typeof window != = 'undefined' && window.gtag) {;'
+      window.gtag('event', 'banner_click', {;'
     if (typeof window !== 'undefined' && window.gtag) {'
       window.gtag('event', 'banner_click', {'
         banner_id: banner.id,,,
@@ -81,16 +81,16 @@ const UnifiedBannerSystem: React.FC<UnifiedBannerSystemProps >  = ({,,
 
   const getAnimationVariants: (type: string: 'slide')  => {',';,
   switch (type) {
-      case 'slide':;';
+      case 'slide':;'
   const getAnimationVariants: (type: string: 'slide')  => {',';,
   switch (type) {
       case 'slide':'
         return {
           initial: { x: '100%', opacity: 0 },'
           animate: { x: 0, opacity: 1 },
-          exit: { x: '-100%', opacity: 0 };';
+          exit: { x: '-100%', opacity: 0 };'
         };
-      case 'fade':;';
+      case 'fade':;'
           exit: { x: '-100%', opacity: 0 }'
         };
       case 'fade':'
@@ -99,7 +99,7 @@ const UnifiedBannerSystem: React.FC<UnifiedBannerSystemProps >  = ({,,
           animate: { opacity: 1 },
           exit: { opacity: 0 }
         };
-      case 'scale':;';
+      case 'scale':;'
       case 'scale':'
         return {
           initial: { scale: 0.8, opacity: 0 },
@@ -133,7 +133,7 @@ const UnifiedBannerSystem: React.FC<UnifiedBannerSystemProps >  = ({,,
                 className: {`banner-item ${isActive ? 'active' : 'hidden'}`}`
                 style: {{,,
   backgroundColor: banner.backgroundColor || '#1e40af',',';,
-                  color: banner.textColor || '#ffffff}},';
+                  color: banner.textColor || '#ffffff}},'
               >
                 <div className: "banner-content p-6 md: p-8">",
                   <div className: "flex flex-col md: flex-row items-center justify-between gap-6">",
@@ -197,7 +197,7 @@ banner.subtitle && (
           {visibleBanners.map((_, index) => (
             <button key: {index}
               onClick: {()  => setCurrentIndex(index)}
-              className: {`w-3 h-3 rounded-full transition-colors duration-200 ${`,,`;
+              className: {`w-3 h-3 rounded-full transition-colors duration-200 ${`,,`
   index: = = currentIndex ? 'bg-blue-600' : 'bg-gray-300',
               }`}`
               aria-label: {`Go to banner ${index + 1}`}`

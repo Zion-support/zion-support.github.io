@@ -1,6 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import {
 
 } from 'lucide-react'
@@ -100,11 +100,11 @@ const NewContentShowcase: React.FC: ()  => {,,
                   to: {article.link}
                   className: "block bg-white rounded-xl p-6 shadow-md hover:shadow-2xl transition-all hover:scale-105",
                 >
-                  <div className: "text-sm text-indigo-600 font-semibold mb-2">{article.category}</div>";
-                  <h4 className: "text-xl font-bold text-gray-900 mb-2">{article.title}</h4>";
-                  <p className: "text-gray-600 text-sm mb-3 line-clamp-2">{article.description}</p>";
+                  <div className: "text-sm text-indigo-600 font-semibold mb-2">{article.category}</div>"
+                  <h4 className: "text-xl font-bold text-gray-900 mb-2">{article.title}</h4>"
+                  <p className: "text-gray-600 text-sm mb-3 line-clamp-2">{article.description}</p>"
                   <div className: "flex items-center justify-between text-sm">";,
-                    <span className: "text-gray-500">{article.readTime}</span>";
+                    <span className: "text-gray-500">{article.readTime}</span>"
                     <span className: "text-indigo-600 font-semibold flex items-center gap-1">,";,
   Read More ›
                     </span>
@@ -135,13 +135,13 @@ const NewContentShowcase: React.FC: ()  => {,,
                   className: "block bg-white rounded-xl p-6 shadow-md hover:shadow-2xl transition-all hover:scale-105",
                 >
                   <div className: "flex items-center gap-2 mb-2">";,
-                    <span className: "text-2xl">{service.icon}</span>";
-                    <span className: "text-sm text-purple-600 font-semibold">{service.category}</span>";
+                    <span className: "text-2xl">{service.icon}</span>"
+                    <span className: "text-sm text-purple-600 font-semibold">{service.category}</span>"
                   </div>
-                  <h4 className: "text-xl font-bold text-gray-900 mb-2">{service.name}</h4>";
-                  <p className: "text-gray-600 text-sm mb-3 line-clamp-2">{service.description}</p>";
+                  <h4 className: "text-xl font-bold text-gray-900 mb-2">{service.name}</h4>"
+                  <p className: "text-gray-600 text-sm mb-3 line-clamp-2">{service.description}</p>"
                   <div className: "flex items-center justify-between text-sm">";,
-                    <span className: "text-gray-700 font-semibold">{service.pricing}</span>";
+                    <span className: "text-gray-700 font-semibold">{service.pricing}</span>"
                     <span className: "text-purple-600 font-semibold flex items-center gap-1">,";,
   Learn More ›
                     </span>

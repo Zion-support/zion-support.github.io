@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 const ContentShowcase: React.FC: ()  => {,,
   const contentItems: [,
     {
@@ -52,10 +52,10 @@ const ContentShowcase: React.FC: ()  => {,,
                 {item.category}
               </span>
             </div>
-            <h3 className: "text-xl font-bold mb-3">{item.title}</h3>";
-            <p className: "text-gray-600 mb-4">{item.description}</p>";
+            <h3 className: "text-xl font-bold mb-3">{item.title}</h3>"
+            <p className: "text-gray-600 mb-4">{item.description}</p>"
             <div className: "flex justify-between items-center">";,
-              <span className: "text-sm text-gray-500">{item.readTime}</span>";
+              <span className: "text-sm text-gray-500">{item.readTime}</span>"
               <a href: "/blog" className ="text-blue-600 hover: text-blue-800 font-semibold">",
       <h2 className: "text-3xl font-bold mb-8 text-center">Featured Content</h2>",
       <div className: "grid grid-cols-1 md: grid-cols-3 gap-6">",

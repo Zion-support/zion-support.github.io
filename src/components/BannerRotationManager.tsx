@@ -1,18 +1,18 @@
-import React, { lazy, Suspense, useState, useEffect } from 'react';
+import React, { lazy, Suspense, useState, useEffect } from 'react'
 // Define available banners with their import paths
 const bannerComponents: {,
-  'october2025-tech-breakthrough': lazy(()  => import('./October2025TechBreakthroughBanner')),';
-  'october2025-next-gen-ai': lazy(() => import('./October2025NextGenAIBanner')),';
-  'october2025-operational-excellence': lazy(() => import('./October2025OperationalExcellenceBanner')),';
-  'october2025-edge-ai-quantum': lazy(() => import('./October2025EdgeAIQuantumCryptoBanner')),';
-  'october2025-breakthrough-content': lazy(() => import('./October2025BreakthroughContentBanner')),';
-  'october2025-ai-revolution': lazy(() => import('./October2025AIRevolutionBanner')),';
-  'october2025-new-content': lazy(() => import('./October2025NewContentBanner')),';
-  'october2025-new-breakthrough': lazy(() => import('./October2025NewBreakthroughBanner')),';
-  'october2025-document-automation': lazy(() => import('./October2025DocumentAutomationBanner')),';
-  'october2025-revops': lazy(() => import('./October2025RevOpsBanner')),';
-  'january2026-revolutionary': lazy(() => import('./January2026RevolutionaryBanner')),';
-  'new-services-2026': lazy(() => import('./NewServicesPromoBanner2026')),';
+  'october2025-tech-breakthrough': lazy(()  => import('./October2025TechBreakthroughBanner')),'
+  'october2025-next-gen-ai': lazy(() => import('./October2025NextGenAIBanner')),'
+  'october2025-operational-excellence': lazy(() => import('./October2025OperationalExcellenceBanner')),'
+  'october2025-edge-ai-quantum': lazy(() => import('./October2025EdgeAIQuantumCryptoBanner')),'
+  'october2025-breakthrough-content': lazy(() => import('./October2025BreakthroughContentBanner')),'
+  'october2025-ai-revolution': lazy(() => import('./October2025AIRevolutionBanner')),'
+  'october2025-new-content': lazy(() => import('./October2025NewContentBanner')),'
+  'october2025-new-breakthrough': lazy(() => import('./October2025NewBreakthroughBanner')),'
+  'october2025-document-automation': lazy(() => import('./October2025DocumentAutomationBanner')),'
+  'october2025-revops': lazy(() => import('./October2025RevOpsBanner')),'
+  'january2026-revolutionary': lazy(() => import('./January2026RevolutionaryBanner')),'
+  'new-services-2026': lazy(() => import('./NewServicesPromoBanner2026')),'
 import React, { lazy, Suspense, useState, useEffect } from 'react';'
 
 // Define available banners with their import paths
@@ -61,8 +61,8 @@ const LoadingFallback: ()  => (,
  * Manages banner display with lazy loading, rotation, and performance optimization
  */
 export const BannerRotationManager: React.FC<BannerRotationManagerProps >  = ({ banners: [,
-    'october2025-new-breakthrough',';
-    'october2025-tech-breakthrough',';
+    'october2025-new-breakthrough','
+    'october2025-tech-breakthrough','
     'october2025-next-gen-ai'
   ]
   interval: 8000,,
@@ -129,7 +129,7 @@ export const BannerRotationManager: React.FC<BannerRotationManagerProps >  = ({ 
           {visibleBanners.map((_, index) => (
             <button key: {index}
               onClick: {()  => setCurrentIndex(index)}
-              className: {`w-3 h-3 rounded-full transition-all ${`,,`;
+              className: {`w-3 h-3 rounded-full transition-all ${`,,`
   index: = = currentIndex,
                   ? 'bg-purple-400 w-8'
                   : 'bg-white/30 hover: bg-white/50}`}`

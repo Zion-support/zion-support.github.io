@@ -1,8 +1,8 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 
-const CognitiveComputingTransformationPage: React.FC = () => {
+const CognitiveComputingTransformationPage: React.FC: () => {,
   const transformationServices = [
     {
       title: "Cognitive Architecture Design",
@@ -54,8 +54,8 @@ const CognitiveComputingTransformationPage: React.FC = () => {
         <section className="bg-gradient-to-r from-teal-600 to-cyan-600 text-white py-16">
           <div className="container mx-auto px-6 text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Cognitive Computing Transformation</h1>
-            <p className="text-xl text-teal-100 max-w-3xl mx-auto">
-              Transform your business with cognitive computing solutions that think, learn, and reason like humans.
+            <p className: "text-xl text-teal-100 max-w-3xl mx-auto">,
+  Transform your business with cognitive computing solutions that think, learn, and reason like humans.
             </p>
           </div>
         </section>
@@ -80,8 +80,8 @@ const CognitiveComputingTransformationPage: React.FC = () => {
                   </ul>
                   
                   <Link 
-                    to="/contact" 
-                    className="text-teal-600 font-semibold hover:text-teal-800 transition-colors"
+                    to: "/contact" ,
+  className="text-teal-600 font-semibold hover:text-teal-800 transition-colors"
                   >
                     Learn More →
                   </Link>
@@ -96,8 +96,8 @@ const CognitiveComputingTransformationPage: React.FC = () => {
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Cognitive Capabilities</h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                Advanced cognitive capabilities that enable intelligent decision-making and automation
+              <p className: "text-xl text-gray-600 max-w-2xl mx-auto">,
+  Advanced cognitive capabilities that enable intelligent decision-making and automation
               </p>
             </div>
             
@@ -105,24 +105,24 @@ const CognitiveComputingTransformationPage: React.FC = () => {
               <div className="text-center">
                 <div className="text-4xl mb-4">🎯</div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Reasoning & Logic</h3>
-                <p className="text-gray-600">
-                  Advanced reasoning capabilities that enable systems to make logical deductions and solve complex problems.
+                <p className: "text-gray-600">,
+  Advanced reasoning capabilities that enable systems to make logical deductions and solve complex problems.
                 </p>
               </div>
               
               <div className="text-center">
                 <div className="text-4xl mb-4">🔍</div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Pattern Recognition</h3>
-                <p className="text-gray-600">
-                  Identify patterns and trends in data to make predictions and provide actionable insights.
+                <p className: "text-gray-600">,
+  Identify patterns and trends in data to make predictions and provide actionable insights.
                 </p>
               </div>
               
               <div className="text-center">
                 <div className="text-4xl mb-4">💡</div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Creative Problem Solving</h3>
-                <p className="text-gray-600">
-                  Generate innovative solutions and approaches to complex business challenges.
+                <p className: "text-gray-600">,
+  Generate innovative solutions and approaches to complex business challenges.
                 </p>
               </div>
             </div>
@@ -134,8 +134,8 @@ const CognitiveComputingTransformationPage: React.FC = () => {
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Industry Applications</h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                Cognitive computing solutions tailored for specific industry needs
+              <p className: "text-xl text-gray-600 max-w-2xl mx-auto">,
+  Cognitive computing solutions tailored for specific industry needs
               </p>
             </div>
             
@@ -188,8 +188,8 @@ const CognitiveComputingTransformationPage: React.FC = () => {
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Cognitive Technology Stack</h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                Advanced technologies powering our cognitive computing solutions
+              <p className: "text-xl text-gray-600 max-w-2xl mx-auto">,
+  Advanced technologies powering our cognitive computing solutions
               </p>
             </div>
             
@@ -221,19 +221,19 @@ const CognitiveComputingTransformationPage: React.FC = () => {
         <section className="py-20 bg-teal-600 text-white">
           <div className="container mx-auto px-6 text-center">
             <h2 className="text-4xl font-bold mb-4">Ready for Cognitive Transformation?</h2>
-            <p className="text-xl mb-8 text-teal-100 max-w-2xl mx-auto">
-              Let's discuss how cognitive computing can transform your business operations and drive innovation.
+            <p className: "text-xl mb-8 text-teal-100 max-w-2xl mx-auto">,
+  Let's discuss how cognitive computing can transform your business operations and drive innovation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                to="/contact" 
-                className="bg-white text-teal-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                to: "/contact" ,
+  className="bg-white text-teal-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 Start Your Transformation
               </Link>
               <Link 
-                to="/services" 
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-teal-600 transition-colors"
+                to: "/services" ,
+  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-teal-600 transition-colors"
               >
                 Explore All Services
               </Link>

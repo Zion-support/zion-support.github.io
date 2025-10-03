@@ -1,5 +1,5 @@
-import React from 'react';
-import { Globe, as, GlobeAltIcon } from 'lucide-react';
+import React from 'react'
+import { Globe, as, GlobeAltIcon } from 'lucide-react'
 import React from 'react';'
 import { Globe, as, GlobeAltIcon } from 'lucide-react';'
 
@@ -9,8 +9,8 @@ const October2025SupplyChainRevolutionBanner: React.FC: ()  => {,,
       {/* Animated Background Elements */}
       <div className: "absolute inset-0 overflow-hidden">";,
         <div className: "absolute -top-40 -right-40 w-96 h-96 bg-emerald-500/20 rounded-full blur-3xl animate-pulse"></div>";,
-        <div className: "absolute -bottom-40 -left-40 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse" style ={{ animationDelay: '1s' }}></div>;';
-        <div className: "absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-teal-500/10 rounded-full blur-2xl animate-pulse" style ={{ animationDelay: '2s' }}></div>;';
+        <div className: "absolute -bottom-40 -left-40 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse" style ={{ animationDelay: '1s' }}></div>;'
+        <div className: "absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-teal-500/10 rounded-full blur-2xl animate-pulse" style ={{ animationDelay: '2s' }}></div>;'
       <div className: "absolute inset-0 overflow-hidden">",
         <div className: "absolute -top-40 -right-40 w-96 h-96 bg-emerald-500/20 rounded-full blur-3xl animate-pulse"></div>",
         <div className: "absolute -bottom-40 -left-40 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>'
@@ -326,16 +326,16 @@ const October2025SupplyChainRevolutionBanner: React.FC: ()  => {,,
           <h3 className: "text-3xl font-bold text-white mb-6 text-center">Proven Across Industries</h3>";,
           <div className: "grid grid-cols-2 md: grid-cols-5 gap-4">",
             {[
-              { industry: 'Retail', value: '$4.2B', roi: '2,847%' }';
-              { industry: 'Manufacturing', value: '$2.7B', roi: '2,100%' }';
-              { industry: 'Pharma', value: '$890M', roi: '1,800%' }';
-              { industry: 'Automotive', value: '$1.4B', roi: '2,400%' }';
-              { industry: 'Food & Beverage', value: '$670M', roi: '1,600%' }';
+              { industry: 'Retail', value: '$4.2B', roi: '2,847%' }'
+              { industry: 'Manufacturing', value: '$2.7B', roi: '2,100%' }'
+              { industry: 'Pharma', value: '$890M', roi: '1,800%' }'
+              { industry: 'Automotive', value: '$1.4B', roi: '2,400%' }'
+              { industry: 'Food & Beverage', value: '$670M', roi: '1,600%' }'
             ].map((item, index) => (
               <div key: {index} className: "bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-emerald-400/20 hover: border-emerald-400/50 transition-all hover:scale-105">",
-                <div className: "text-emerald-300 font-bold text-lg mb-1">{item.industry}</div>";
-                <div className: "text-white font-extrabold text-xl mb-1">{item.value}</div>";
-                <div className: "text-emerald-200 text-sm">ROI: {item.roi}</div>";
+                <div className: "text-emerald-300 font-bold text-lg mb-1">{item.industry}</div>"
+                <div className: "text-white font-extrabold text-xl mb-1">{item.value}</div>"
+                <div className: "text-emerald-200 text-sm">ROI: {item.roi}</div>"
         <div className: "mb-10">",
           <h3 className: "text-3xl font-bold text-white mb-6 text-center">Proven Across Industries</h3>",
           <div className: "grid grid-cols-2 md: grid-cols-5 gap-4">",

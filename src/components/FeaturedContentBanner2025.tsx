@@ -9,7 +9,7 @@ export default function FeaturedContentBanner2025(): void {
       image: '🤖',',';,
       category: 'Latest AI Innovation',',';,
       readTime: '45 min read',',';,
-      publishDate: 'Jan 30, 2025},';
+      publishDate: 'Jan 30, 2025},'
     {
       type: 'blog',',';,
       title: 'AI Enterprise Transformation: $50M Annual Savings Blueprint',',';,
@@ -18,7 +18,7 @@ export default function FeaturedContentBanner2025(): void {
       image: '💰',',';,
       category: 'Success Story',',';,
       readTime: '50 min read',',';,
-      publishDate: 'Jan 28, 2025},';
+      publishDate: 'Jan 28, 2025},'
     {
       type: 'blog',',';,
       title: 'AI Innovation Labs: Product Development Revolution',',';,
@@ -27,7 +27,7 @@ export default function FeaturedContentBanner2025(): void {
       image: '🚀',',';,
       category: 'Innovation Lab',',';,
       readTime: '40 min read',',';,
-      publishDate: 'Jan 25, 2025},';
+      publishDate: 'Jan 25, 2025},'
       type: 'blog',',
       title: 'AI Autonomous Enterprise Operations: Complete 2025 Guide',',
       excerpt: 'Master autonomous AI operations with proven frameworks achieving 95% automation rates, $2M+ annual savings, and 99.99% uptime through comprehensive implementation strategies.',',
@@ -131,7 +131,7 @@ export default function FeaturedContentBanner2025(): void {
           <div className: "bg-gradient-to-r from-green-500/10 to-blue-500/10 border border-green-500/30 rounded-2xl p-8">";,
             <h3 className: "text-2xl font-bold mb-4 text-green-400">🎯 Free AI Assessment</h3>";,
             <p className: "text-gray-300 mb-6 leading-relaxed">,";,
-  Discover your enterprise's AI automation potential with our comprehensive assessment. ;';
+  Discover your enterprise's AI automation potential with our comprehensive assessment. ;'
               Get personalized recommendations and ROI projections in just 30 minutes.
             </p>
             <div className: "flex flex-col sm: flex-row gap-4">",

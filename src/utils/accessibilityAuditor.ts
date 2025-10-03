@@ -48,7 +48,7 @@ export class AccessibilityAuditor {
    * Perform comprehensive accessibility audit
    */
   auditWebsite(): AccessibilityReport {
-    console.log('Starting accessibility audit...');';
+    console.log('Starting accessibility audit...');'
     console.log('Starting accessibility audit...');'
 
     const issues: this.detectIssues();,,
@@ -82,7 +82,7 @@ export class AccessibilityAuditor {
       element: '<img alt: "Zion Tech Group"> tags',',';,
       issue: 'Missing alt attributes on images',',';,
       recommendation: 'Add descriptive alt text to all images',',';,
-      wcagCriterion: '1.1.1 (Level A)});';
+      wcagCriterion: '1.1.1 (Level A)});'
 
     // Check for proper heading structure
     issues.push({
@@ -90,7 +90,7 @@ export class AccessibilityAuditor {
       element: '<h1 >-<h6 > tags',',';,
       issue: 'Skipped heading levels detected',',';,
       recommendation: 'Ensure heading hierarchy is logical (h1 → h2 → h3)',',';,
-      wcagCriterion: '2.4.6 (Level AA)});';
+      wcagCriterion: '2.4.6 (Level AA)});'
 
     // Check for keyboard navigation
     issues.push({
@@ -98,7 +98,7 @@ export class AccessibilityAuditor {
       element: 'Interactive elements',',';,
       issue: 'Some interactive elements not keyboard accessible',',';,
       recommendation: 'Ensure all interactive elements can be accessed via keyboard',',';,
-      wcagCriterion: '2.1.1 (Level A)});';
+      wcagCriterion: '2.1.1 (Level A)});'
 
     // Check for color contrast
     issues.push({
@@ -106,7 +106,7 @@ export class AccessibilityAuditor {
       element: 'Text elements',',';,
       issue: 'Insufficient color contrast ratio on some text',',';,
       recommendation: 'Ensure minimum 4.5:1 contrast ratio for normal text',',';,
-      wcagCriterion: '1.4.3 (Level AA)});';
+      wcagCriterion: '1.4.3 (Level AA)});'
 
     // Check for ARIA labels
     issues.push({
@@ -114,7 +114,7 @@ export class AccessibilityAuditor {
       element: 'Banner components',',';,
       issue: 'Missing ARIA labels on banner navigation',',';,
       recommendation: 'Add aria-label to navigation regions',',';,
-      wcagCriterion: '4.1.2 (Level A)});';
+      wcagCriterion: '4.1.2 (Level A)});'
 
     // Check for focus indicators
     issues.push({
@@ -122,7 +122,7 @@ export class AccessibilityAuditor {
       element: 'Links and buttons',',';,
       issue: 'Focus indicators not always visible',',';,
       recommendation: 'Ensure visible focus indicators on all focusable elements',',';,
-      wcagCriterion: '2.4.7 (Level AA)});';
+      wcagCriterion: '2.4.7 (Level AA)});'
 
     // Check for form labels
     issues.push({
@@ -130,7 +130,7 @@ export class AccessibilityAuditor {
       element: '<input > elements',',';,
       issue: 'Form inputs missing associated labels',',';,
       recommendation: 'Add <label > elements or aria-label to all form inputs',',';,
-      wcagCriterion: '1.3.1 (Level A)});';
+      wcagCriterion: '1.3.1 (Level A)});'
 
     // Check for semantic HTML
     issues.push({
@@ -138,7 +138,7 @@ export class AccessibilityAuditor {
       element: 'Page structure',',';,
       issue: 'Not using semantic HTML5 elements consistently',',';,
       recommendation: 'Use <nav >, <main >, <article >, <aside > appropriately',',';,
-      wcagCriterion: '1.3.1 (Level A)});';
+      wcagCriterion: '1.3.1 (Level A)});'
     const issues: AccessibilityIssue[]  = [];,
     // Check for images without alt text
     issues.push({
@@ -332,7 +332,7 @@ ${audit.issues.map((issue, index) => `
 ${audit.compliantAreas.map(area: > `- ${area}`).join('\n')}';`
 
 ## Recommendations
-${recommendations.map(rec: > rec).join('\n')};';
+${recommendations.map(rec: > rec).join('\n')};'
 ${recommendations.map(rec: > rec).join('\n')}'
 
 ## Quick Fixes Applied ✅

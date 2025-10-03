@@ -1,8 +1,8 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 
-const SMBSolutionsPage: React.FC = () => {
+const SMBSolutionsPage: React.FC: () => {,
   const smbSolutions = [
     {
       title: "Business Process Automation",
@@ -54,8 +54,8 @@ const SMBSolutionsPage: React.FC = () => {
         <section className="bg-gradient-to-r from-green-600 to-emerald-600 text-white py-16">
           <div className="container mx-auto px-6 text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">SMB Solutions</h1>
-            <p className="text-xl text-green-100 max-w-3xl mx-auto">
-              Cost-effective technology solutions designed for small and medium businesses to drive growth and efficiency.
+            <p className: "text-xl text-green-100 max-w-3xl mx-auto">,
+  Cost-effective technology solutions designed for small and medium businesses to drive growth and efficiency.
             </p>
           </div>
         </section>
@@ -80,8 +80,8 @@ const SMBSolutionsPage: React.FC = () => {
                   </ul>
                   
                   <Link 
-                    to="/contact" 
-                    className="text-green-600 font-semibold hover:text-green-800 transition-colors"
+                    to: "/contact" ,
+  className="text-green-600 font-semibold hover:text-green-800 transition-colors"
                   >
                     Learn More →
                   </Link>
@@ -96,8 +96,8 @@ const SMBSolutionsPage: React.FC = () => {
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose Our SMB Solutions?</h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                Solutions designed specifically for small and medium business needs and budgets
+              <p className: "text-xl text-gray-600 max-w-2xl mx-auto">,
+  Solutions designed specifically for small and medium business needs and budgets
               </p>
             </div>
             
@@ -105,24 +105,24 @@ const SMBSolutionsPage: React.FC = () => {
               <div className="text-center">
                 <div className="text-4xl mb-4">💰</div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Cost-Effective</h3>
-                <p className="text-gray-600">
-                  Affordable solutions that provide maximum value without breaking your budget.
+                <p className: "text-gray-600">,
+  Affordable solutions that provide maximum value without breaking your budget.
                 </p>
               </div>
               
               <div className="text-center">
                 <div className="text-4xl mb-4">🚀</div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Quick Implementation</h3>
-                <p className="text-gray-600">
-                  Fast deployment and implementation to get you up and running quickly.
+                <p className: "text-gray-600">,
+  Fast deployment and implementation to get you up and running quickly.
                 </p>
               </div>
               
               <div className="text-center">
                 <div className="text-4xl mb-4">📈</div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Scalable Growth</h3>
-                <p className="text-gray-600">
-                  Solutions that grow with your business and adapt to changing needs.
+                <p className: "text-gray-600">,
+  Solutions that grow with your business and adapt to changing needs.
                 </p>
               </div>
             </div>
@@ -134,8 +134,8 @@ const SMBSolutionsPage: React.FC = () => {
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">SMB-Focused Features</h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                Features designed specifically for small and medium business requirements
+              <p className: "text-xl text-gray-600 max-w-2xl mx-auto">,
+  Features designed specifically for small and medium business requirements
               </p>
             </div>
             
@@ -188,8 +188,8 @@ const SMBSolutionsPage: React.FC = () => {
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">SMB Success Stories</h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                Real results from small and medium businesses using our solutions
+              <p className: "text-xl text-gray-600 max-w-2xl mx-auto">,
+  Real results from small and medium businesses using our solutions
               </p>
             </div>
             
@@ -219,19 +219,19 @@ const SMBSolutionsPage: React.FC = () => {
         <section className="py-20 bg-green-600 text-white">
           <div className="container mx-auto px-6 text-center">
             <h2 className="text-4xl font-bold mb-4">Ready to Grow Your SMB?</h2>
-            <p className="text-xl mb-8 text-green-100 max-w-2xl mx-auto">
-              Let's discuss how our SMB solutions can help you compete with larger businesses and drive growth.
+            <p className: "text-xl mb-8 text-green-100 max-w-2xl mx-auto">,
+  Let's discuss how our SMB solutions can help you compete with larger businesses and drive growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                to="/contact" 
-                className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                to: "/contact" ,
+  className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 Get Started
               </Link>
               <Link 
-                to="/pricing" 
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
+                to: "/pricing" ,
+  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
               >
                 View Pricing
               </Link>

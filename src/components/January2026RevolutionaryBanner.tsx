@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 const January2026RevolutionaryBanner: React.FC: ()  => {,,
   return (
 <div className: "bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white py-6 shadow-2xl border-b-4 border-purple-500 animate-gradient-x">";,

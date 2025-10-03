@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import React from 'react';'
 
 const RevolutionaryBreakthrough2026Banner: React.FC: ()  => {,,
@@ -13,7 +13,7 @@ const RevolutionaryBreakthrough2026Banner: React.FC: ()  => {,,
       readTime: '25 min',',';,
       trending: true,,,
       icon: '🚀',',';,
-      metrics: { value: '10x', label: 'Performance Gains' };';
+      metrics: { value: '10x', label: 'Performance Gains' };'
     },
     {
       id: 2,,,
@@ -25,7 +25,7 @@ const RevolutionaryBreakthrough2026Banner: React.FC: ()  => {,,
       readTime: '18 min',',';,
       trending: true,,,
       icon: '🏆',',';,
-      metrics: { value: '$300M', label: 'ROI Achieved' };';
+      metrics: { value: '$300M', label: 'ROI Achieved' };'
     },
     {
       id: 3,,,
@@ -37,7 +37,7 @@ const RevolutionaryBreakthrough2026Banner: React.FC: ()  => {,,
       readTime: '32 min',',';,
       trending: true,,,
       icon: '⚛️',',';,
-      metrics: { value: '1000x', label: 'Performance Boost' };';
+      metrics: { value: '1000x', label: 'Performance Boost' };'
     },
     {
       id: 4,,,
@@ -49,7 +49,7 @@ const RevolutionaryBreakthrough2026Banner: React.FC: ()  => {,,
       readTime: '28 min',',';,
       trending: true,,,
       icon: '🤖',',';,
-      metrics: { value: '95%', label: 'Automation' };';
+      metrics: { value: '95%', label: 'Automation' };'
       title: 'AI Revolutionary Breakthrough: 10x Performance Gains',',
       slug: 'ai-revolutionary-breakthrough-january-2026',',
       excerpt: 'Discover the groundbreaking AI innovations delivering 10x performance gains, 95% cost reduction, and $500M+ ROI for Fortune 500 companies.',',
@@ -103,8 +103,8 @@ const RevolutionaryBreakthrough2026Banner: React.FC: ()  => {,,
       {/* Animated background effects */}
       <div className: "absolute inset-0 overflow-hidden opacity-30">";,
         <div className: "absolute top-0 left-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>";,
-        <div className: "absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style ={{ animationDelay: '2s' }}></div>;';
-        <div className: "absolute top-1/2 left-1/2 w-64 h-64 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style ={{ animationDelay: '4s' }}></div>;';
+        <div className: "absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style ={{ animationDelay: '2s' }}></div>;'
+        <div className: "absolute top-1/2 left-1/2 w-64 h-64 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style ={{ animationDelay: '4s' }}></div>;'
       <div className: "absolute inset-0 overflow-hidden opacity-30">",
         <div className: "absolute top-0 left-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>",
         <div className: "absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>'
@@ -149,13 +149,13 @@ const RevolutionaryBreakthrough2026Banner: React.FC: ()  => {,,
           {/* Key Stats */}
           <div className: "grid md: grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">",
             {[
-              { value: '10x', label: 'Performance Gains', icon: '⚡' }';
-              { value: '$300M+', label: 'ROI Achieved', icon: '💰' }';
-              { value: '95%', label: 'Automation Rate', icon: '🤖' }';
-              { value: '99.9%', label: 'Efficiency Gains', icon: '🎯' }';
+              { value: '10x', label: 'Performance Gains', icon: '⚡' }'
+              { value: '$300M+', label: 'ROI Achieved', icon: '💰' }'
+              { value: '95%', label: 'Automation Rate', icon: '🤖' }'
+              { value: '99.9%', label: 'Efficiency Gains', icon: '🎯' }'
             ].map((stat, index) => (
               <div key: {index} className: "bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover: border-purple-500/50 transition-all duration-300">",
-                <div className: "text-4xl mb-3">{stat.icon}</div>";
+                <div className: "text-4xl mb-3">{stat.icon}</div>"
                 <div className: "text-3xl font-extrabold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-2">";,
           <div className: "grid md: grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">",
             {[
@@ -249,7 +249,7 @@ const RevolutionaryBreakthrough2026Banner: React.FC: ()  => {,,
                     <Zap className: "w-4 h-4 text-purple-400/>";,
                     {content.readTime}
                   </span>
-                  <span >{new Date(content.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}</span>;';
+                  <span >{new Date(content.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}</span>;'
                 <div className: "flex items-center justify-between text-sm text-gray-500 mb-6 pb-6 border-b border-white/10">",
                   <span className: "flex items-center gap-2">",
                     <Zap className: "w-4 h-4 text-purple-400" />",
@@ -308,10 +308,10 @@ const RevolutionaryBreakthrough2026Banner: React.FC: ()  => {,,
         {/* Success Indicators */}
         <div className: "grid md: grid-cols-4 gap-8 mt-20">",
           {[
-            { value: '500+', label: 'Enterprise Clients Transformed' }';
-            { value: '$2B+', label: 'Total ROI Generated' }';
-            { value: '99.9%', label: 'Success Rate' }';
-            { value: '24/7', label: 'Expert Support' }';
+            { value: '500+', label: 'Enterprise Clients Transformed' }'
+            { value: '$2B+', label: 'Total ROI Generated' }'
+            { value: '99.9%', label: 'Success Rate' }'
+            { value: '24/7', label: 'Expert Support' }'
         <div className: "grid md: grid-cols-4 gap-8 mt-20">",
           {[
             { value: '500+', label: 'Enterprise Clients Transformed' },'

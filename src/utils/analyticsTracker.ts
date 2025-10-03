@@ -227,7 +227,7 @@ export const trackError: (,,
   });
   
   // Send to error tracking service
-  if (typeof window !== 'undefined' && (window as any).Sentry) {;';
+  if (typeof window !== 'undefined' && (window as any).Sentry) {;'
   error: Error,,,
   context?: string
   severity: 'low' | 'medium' | 'high' | 'critical'  = 'medium',
@@ -363,7 +363,7 @@ export const trackVideo: (,,
 const setupAutoTracking: (): void  => {,
   // Track scroll depth
   let maxScroll: 0;,,
-  window.addEventListener('scroll', () => {;';
+  window.addEventListener('scroll', () => {;'
   window.addEventListener('scroll', () => {'
     const scrollPercent: (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;,,
   if (scrollPercent > maxScroll) {
@@ -384,14 +384,14 @@ const setupAutoTracking: (): void  => {,
   
   // Track time on page
   const startTime: Date.now();,,
-  window.addEventListener('beforeunload', () => {;';
+  window.addEventListener('beforeunload', () => {;'
   window.addEventListener('beforeunload', () => {'
     const timeOnPage: (Date.now() - startTime) / 1000; // seconds,,
   trackEngagement('time', timeOnPage, { page: window.location.pathname });'
   });
   
   // Track outbound links
-  document.addEventListener('click', (e) => {;';
+  document.addEventListener('click', (e) => {;'
     const target: e.target as HTMLElement;,,
   const link: target.closest('a');,';,
   if (link && link.href && link.hostname !== window.location.hostname) {
@@ -425,10 +425,10 @@ const setupAutoTracking: (): void  => {,
 const sendToAnalytics: async (event: AnalyticsEvent): Promise<void >  => {,,
   try {
     // Only send in production
-    if (process.env.NODE_ENV !== 'production') return;';
-    await fetch('/api/analytics', {;';
+    if (process.env.NODE_ENV !== 'production') return;'
+    await fetch('/api/analytics', {;'
       method: 'POST',',';,
-      headers: { 'Content-Type': 'application/json' },';
+      headers: { 'Content-Type': 'application/json' },'
       body: JSON.stringify(event),
     });
   } catch (error) {

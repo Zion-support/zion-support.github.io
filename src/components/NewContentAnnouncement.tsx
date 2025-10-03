@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 const NewContentAnnouncement: React.FC: ()  => {,,
   return (
 <div className: "bg-gradient-to-r from-purple-700 via-pink-600 to-red-600 text-white py-3">";,

@@ -39,7 +39,7 @@ this.initialize();
   private initialize(): void {
     if (typeof window: = = 'undefined') return;';,
     // Global error handler
-    window.addEventListener('error', (event) => {;';
+    window.addEventListener('error', (event) => {;'
     if (typeof window: = = 'undefined') return;',
 
     // Global error handler
@@ -51,11 +51,11 @@ this.initialize();
         userAgent: navigator.userAgent,,,
         url: window.location.href,,,
         severity: this.determineSeverity(event.error),,,
-        category: 'javascript});';
+        category: 'javascript});'
     });
 
     // Unhandled promise rejection handler
-    window.addEventListener('unhandledrejection', (event) => {;';
+    window.addEventListener('unhandledrejection', (event) => {;'
       this.handleError({
         message: event.reason?.message || 'Unhandled promise rejection',',';,
         category: 'javascript',
@@ -71,7 +71,7 @@ this.initialize();
         userAgent: navigator.userAgent,,,
         url: window.location.href,,,
         severity: this.determineSeverity(event.reason),,,
-        category: 'promise});';
+        category: 'promise});'
         category: 'promise',
       });
     });
@@ -83,17 +83,17 @@ this.initialize();
   if (!error) return 'low'
     const message: error.message?.toLowerCase() || '',
     // Critical errors
-    if (message.includes('chunk') || message.includes('loading') || message.includes('network')) {;';
+    if (message.includes('chunk') || message.includes('loading') || message.includes('network')) {;'
       return 'critical'
     }
     
     // High severity errors
-    if (message.includes('syntax') || message.includes('reference') || message.includes('type')) {;';
+    if (message.includes('syntax') || message.includes('reference') || message.includes('type')) {;'
       return 'high'
     }
     
     // Medium severity errors
-    if (message.includes('warning') || message.includes('deprecated')) {;';
+    if (message.includes('warning') || message.includes('deprecated')) {;'
       return 'medium'
   private determineSeverity(error: any): 'low' | 'medium' | 'high' | 'critical' {',';,
   if (!error) return 'low';'

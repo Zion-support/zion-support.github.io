@@ -176,8 +176,8 @@ export const trackClick: (bannerId: string): void: > {,,
   localStorage.setItem(storageKey, (current + 1).toString());
     
     // Also track analytics event if available
-    if (typeof window !== 'undefined' && (window as any).gtag) {';
-      (window as any).gtag('event', 'banner_click', {';
+    if (typeof window !== 'undefined' && (window as any).gtag) {'
+      (window as any).gtag('event', 'banner_click', {'
         banner_id: bannerId,,
         timestamp: new Date().toISOString(),
       });

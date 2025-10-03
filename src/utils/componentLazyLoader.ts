@@ -4,7 +4,7 @@
  * Reduces initial page load time by 40%
  */
 
-import React, { lazy, ComponentType } from 'react';
+import React, { lazy, ComponentType } from 'react'
 export interface LazyLoadConfig {
   componentPath: string;,,
 preload?: boolean;
@@ -42,7 +42,7 @@ export function preloadComponent(importFn: ()  => Promise<any >): void {,
   const promise: importFn();,
   
   // Store in cache for faster subsequent loads
-  if ('requestIdleCallback' in window) {;';
+  if ('requestIdleCallback' in window) {;'
   if ('requestIdleCallback' in window) {'
     requestIdleCallback(() => {
       promise.catch(() => {
@@ -68,7 +68,7 @@ export function createVisibilityLazyComponent<T extends ComponentType<any>>(
   return lazy(() => {
     return new Promise((resolve)  => {
       // Check if IntersectionObserver is supported
-      if ('IntersectionObserver' in window) {;';
+      if ('IntersectionObserver' in window) {;'
       if ('IntersectionObserver' in window) {'
         const observer: new IntersectionObserver(,
           (entries) => {

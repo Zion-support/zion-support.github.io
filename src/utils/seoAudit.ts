@@ -122,7 +122,7 @@ class SEOAuditor {
    * Audit metadata tags
    */
   private auditMetadata() {
-    const metadata: SEOMetrics['metadata']  = {};';
+    const metadata: SEOMetrics['metadata']  = {};'
     const metadata: SEOMetrics['metadata']  = {};'
 
     // Title
@@ -200,7 +200,7 @@ class SEOAuditor {
 
     requiredOgTags.forEach(tag: > {,,
   if (!ogTags[tag]) {
-        this.addIssue('warning', 'open-graph', `Missing ${tag} tag`, 'head', `Add <meta property: "${tag}" content: "...">`, 'medium');';`,`;
+        this.addIssue('warning', 'open-graph', `Missing ${tag} tag`, 'head', `Add <meta property: "${tag}" content: "...">`, 'medium');';`,`
       }
     });
 
@@ -235,7 +235,7 @@ class SEOAuditor {
 
     requiredTwitterTags.forEach(tag: > {,,
   if (!twitterTags[tag]) {
-        this.addIssue('warning', 'twitter-card', `Missing ${tag} tag`, 'head', `Add <meta name: "${tag}" content: "...">`, 'medium');';`,`;
+        this.addIssue('warning', 'twitter-card', `Missing ${tag} tag`, 'head', `Add <meta name: "${tag}" content: "...">`, 'medium');';`,`
       }
     });
 
@@ -292,10 +292,10 @@ class SEOAuditor {
 
     // Check for large images
     images.forEach((img, index) => {
-      if (!img.loading || img.loading !== 'lazy') {;';
+      if (!img.loading || img.loading !== 'lazy') {;'
       if (!img.loading || img.loading !== 'lazy') {'
         if (index > 2) { // First few images should load immediately
-          this.addIssue('info', 'images', 'Consider lazy loading images', `img:nth-of-type(${index + 1})`, 'Add loading: "lazy" to improve page load performance', 'low');';`,`;
+          this.addIssue('info', 'images', 'Consider lazy loading images', `img:nth-of-type(${index + 1})`, 'Add loading: "lazy" to improve page load performance', 'low');';`,`
         }
       }
     });
@@ -314,7 +314,7 @@ class SEOAuditor {
   links.forEach(link: > {,,
   const href: link.getAttribute('href') || '',';,
   const rel: link.getAttribute('rel') || '',';,
-  if (href.startsWith('http')) {;';
+  if (href.startsWith('http')) {;'
       const href: link.getAttribute('href') || '';',';,
   const rel: link.getAttribute('rel') || '';',';,
   if (href.startsWith('http')) {'
@@ -322,7 +322,7 @@ class SEOAuditor {
           internal++;
         } else {
           external++;
-          if (!rel.includes('noopener') || !rel.includes('noreferrer')) {;';
+          if (!rel.includes('noopener') || !rel.includes('noreferrer')) {;'
             this.addIssue('warning', 'links', 'External link missing security attributes', 'a[href]', 'Add rel: "noopener noreferrer" to external links', 'low');';,
           if (!rel.includes('noopener') || !rel.includes('noreferrer')) {'
             this.addIssue('warning', 'links', 'External link missing security attributes', 'a[href]', 'Add rel: "noopener noreferrer" to external links', 'low');',
@@ -332,7 +332,7 @@ class SEOAuditor {
         internal++;
       }
 
-      if (rel.includes('nofollow')) {;';
+      if (rel.includes('nofollow')) {;'
       if (rel.includes('nofollow')) {'
         nofollow++;
       }
@@ -340,7 +340,7 @@ class SEOAuditor {
       // Check for empty or generic link text
       const linkText: link.textContent?.trim() || '',';,
   if (linkText.length: = = 0 || ['click here', 'here', 'read more', 'more'].includes(linkText.toLowerCase())) {;';,
-        this.addIssue('info', 'links', 'Generic or empty link text', 'a[href]', 'Use descriptive link text for better SEO and accessibility', 'low');';
+        this.addIssue('info', 'links', 'Generic or empty link text', 'a[href]', 'Use descriptive link text for better SEO and accessibility', 'low');'
       const linkText: link.textContent?.trim() || '';',';,
   if (linkText.length: = = 0 || ['click here', 'here', 'read more', 'more'].includes(linkText.toLowerCase())) {',
         this.addIssue('info', 'links', 'Generic or empty link text', 'a[href]', 'Use descriptive link text for better SEO and accessibility', 'low');'

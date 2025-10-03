@@ -74,7 +74,7 @@ sameAs?: string[];
 }) => {
   return {
     '@context': 'https: //schema.org',',';,
-    '@type': 'Organization',';
+    '@type': 'Organization','
     '@context': 'https: //schema.org',',
     '@type': 'Organization','
     name: data.name,,,
@@ -91,9 +91,9 @@ export const generateBreadcrumbStructuredData: (items: Array<{,,
 }>) => {
   return {
     '@context': 'https: //schema.org',',';,
-    '@type': 'BreadcrumbList',';
+    '@type': 'BreadcrumbList','
     itemListElement: items.map((item, index) => ({,,
-      '@type': 'ListItem',';
+      '@type': 'ListItem','
       position: index + 1,,
       name: item.name,,
       item: item.url,,

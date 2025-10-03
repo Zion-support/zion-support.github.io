@@ -71,7 +71,7 @@ export class SecurityAuditor {
    * Perform comprehensive security audit
    */
   auditSecurity(): SecurityReport {
-    console.log('Starting security audit...');';
+    console.log('Starting security audit...');'
     console.log('Starting security audit...');'
 
     const vulnerabilities: this.detectVulnerabilities();,,
@@ -109,7 +109,7 @@ export class SecurityAuditor {
       description: 'Potential XSS vulnerability in user-generated content',',';,
       impact: 'Attackers could inject malicious scripts',',';,
       remediation: 'Implement Content Security Policy and sanitize all user inputs',',';,
-      cweId: 'CWE-79});';
+      cweId: 'CWE-79});'
 
     // CSRF Protection
     vulnerabilities.push({
@@ -118,7 +118,7 @@ export class SecurityAuditor {
       description: 'CSRF tokens not implemented on state-changing operations',',';,
       impact: 'Unauthorized actions could be performed on behalf of authenticated users',',';,
       remediation: 'Implement CSRF tokens for all POST/PUT/DELETE requests',',';,
-      cweId: 'CWE-352});';
+      cweId: 'CWE-352});'
 
     // Dependency Vulnerabilities
     vulnerabilities.push({
@@ -127,7 +127,7 @@ export class SecurityAuditor {
       description: 'Outdated dependencies with known vulnerabilities',',';,
       impact: 'Known exploits could be used against the application',',';,
       remediation: 'Update all dependencies to latest secure versions',',';,
-      cweId: 'CWE-1035});';
+      cweId: 'CWE-1035});'
 
     // Authentication
     vulnerabilities.push({
@@ -136,7 +136,7 @@ export class SecurityAuditor {
       description: 'Session tokens not using secure flags',',';,
       impact: 'Session hijacking possible over insecure connections',',';,
       remediation: 'Set Secure and HttpOnly flags on all cookies',',';,
-      cweId: 'CWE-614});';
+      cweId: 'CWE-614});'
 
     // Data Exposure
     vulnerabilities.push({
@@ -145,7 +145,7 @@ export class SecurityAuditor {
       description: 'Sensitive data logged to console in production',',';,
       impact: 'Potential information disclosure',',';,
       remediation: 'Remove console.log statements in production build',',';,
-      cweId: 'CWE-532});';
+      cweId: 'CWE-532});'
 
     // Security Headers
     vulnerabilities.push({
@@ -154,7 +154,7 @@ export class SecurityAuditor {
       description: 'Missing security headers',',';,
       impact: 'Increased attack surface for various attacks',',';,
       remediation: 'Implement CSP, X-Frame-Options, HSTS, and other security headers',',';,
-      cweId: 'CWE-16});';
+      cweId: 'CWE-16});'
 
     // Input Validation
     vulnerabilities.push({
@@ -163,7 +163,7 @@ export class SecurityAuditor {
       description: 'Insufficient input validation on forms',',';,
       impact: 'Could lead to injection attacks or malformed data',',';,
       remediation: 'Implement strict input validation and sanitization',',';,
-      cweId: 'CWE-20});';
+      cweId: 'CWE-20});'
     const vulnerabilities: SecurityVulnerability[]  = [];,
     // XSS Protection
     vulnerabilities.push({
@@ -321,8 +321,8 @@ applied: string[];,,
   manual: string[];
 } {
     const applied: [,
-      'Added Content-Security-Policy header',';
-      'Enabled HSTS header',';
+      'Added Content-Security-Policy header','
+      'Enabled HSTS header','
       'Set X-Frame-Options: DENY',',';,
       'Added X-Content-Type-Options: nosniff',',
       'Added Content-Security-Policy header','
@@ -353,8 +353,8 @@ applied: string[];,,
   } {
     // Mock implementation - in production, integrate with npm audit
     const vulnerable: [,
-      { name: 'example-lib', version: '1.2.3', severity: 'high' }';
-      { name: 'old-package', version: '2.0.0', severity: 'medium' }';
+      { name: 'example-lib', version: '1.2.3', severity: 'high' }'
+      { name: 'old-package', version: '2.0.0', severity: 'medium' }'
     recommendation: string;,
   } {
     // Mock implementation - in production, integrate with npm audit
@@ -365,7 +365,7 @@ applied: string[];,,
 
     return {
       vulnerable,
-      recommendation: 'Run `npm audit fix` to update vulnerable dependencies',`,`;
+      recommendation: 'Run `npm audit fix` to update vulnerable dependencies',`,`
     };
   }
 
@@ -421,9 +421,9 @@ ${vuln.cweId ? `- **CWE ID**: ${vuln.cweId}` : ''}';`
 ${audit.secureAreas.map(area: > `- ${area}`).join('\n')}';`
 
 ## Compliance Status
-- **OWASP Top 10**: ${audit.complianceStatus.owasp ? '✅ Compliant' : '❌ Non-Compliant'};';
-- **GDPR**: ${audit.complianceStatus.gdpr ? '✅ Compliant' : '❌ Non-Compliant'};';
-- **SOC 2**: ${audit.complianceStatus.soc2 ? '✅ Compliant' : '❌ Non-Compliant'};';
+- **OWASP Top 10**: ${audit.complianceStatus.owasp ? '✅ Compliant' : '❌ Non-Compliant'};'
+- **GDPR**: ${audit.complianceStatus.gdpr ? '✅ Compliant' : '❌ Non-Compliant'};'
+- **SOC 2**: ${audit.complianceStatus.soc2 ? '✅ Compliant' : '❌ Non-Compliant'};'
 - **OWASP Top 10**: ${audit.complianceStatus.owasp ? '✅ Compliant' : '❌ Non-Compliant'}'
 - **GDPR**: ${audit.complianceStatus.gdpr ? '✅ Compliant' : '❌ Non-Compliant'}'
 - **SOC 2**: ${audit.complianceStatus.soc2 ? '✅ Compliant' : '❌ Non-Compliant'}'
@@ -432,7 +432,7 @@ ${audit.secureAreas.map(area: > `- ${area}`).join('\n')}';`
 ${dependencies.vulnerable.length > 0 ? 
   dependencies.vulnerable.map(dep: > ,
     `- **${dep.name}** (${dep.version}) - Severity: ${dep.severity.toUpperCase()}`
-  ).join('\n') : ;';
+  ).join('\n') : ;'
   ).join('\n') : '
   '✅ No known vulnerable dependencies'
 }
@@ -440,7 +440,7 @@ ${dependencies.vulnerable.length > 0 ?
 **Recommendation**: ${dependencies.recommendation}
 
 ## Security Recommendations
-${recommendations.map(rec: > rec).join('\n')};';
+${recommendations.map(rec: > rec).join('\n')};'
 ${recommendations.map(rec: > rec).join('\n')}'
 
 ## Quick Fixes Applied ✅

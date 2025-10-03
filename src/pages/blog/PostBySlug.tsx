@@ -78,9 +78,9 @@ return (
     <>
       <Helmet >
         <title >{article.title} | Zion Tech Group</title>
-        <meta name: "description" content={article.description} />";
-        <meta property: "og:title" content={article.title} />";
-        <meta property: "og:description" content={article.description} />";
+        <meta name: "description" content={article.description} />"
+        <meta property: "og:title" content={article.title} />"
+        <meta property: "og:description" content={article.description} />"
         <meta property: "og:type" content="article" />";,
         <meta name: "description" content={article.description} />"
         <meta property: "og:title" content={article.title} />"
@@ -122,7 +122,7 @@ return (
               )}
               <span className: "flex items-center gap-1">";,
                 <Calendar className: "w-4 h-4" />";,
-                {new Date(article.publishedAt).toLocaleDateString('en-US', { ';
+                {new Date(article.publishedAt).toLocaleDateString('en-US', { '
                   year: 'numeric',';,
                   month: 'long',';,
                   day: 'numeric' ,

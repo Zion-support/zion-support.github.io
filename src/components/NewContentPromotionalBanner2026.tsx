@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 const NewContentPromotionalBanner2026: ()  => {,,
   const newContent: [,
     {
@@ -7,21 +7,21 @@ const NewContentPromotionalBanner2026: ()  => {,,
       impact: '$2.3B Enterprise Value',',';,
       readers: '500K+',',';,
       icon: '🧠',',';,
-      color: 'from-violet-500 to-purple-500},';
+      color: 'from-violet-500 to-purple-500},'
     {
       title: 'Autonomous Neural Networks',',';,
       date: 'February 2026',',';,
       impact: '99.97% Accuracy',',';,
       readers: '180K+',',';,
       icon: '⚡',',';,
-      color: 'from-emerald-500 to-teal-500},';
+      color: 'from-emerald-500 to-teal-500},'
     {
       title: 'Neural-Synaptic Fusion AI',',';,
       date: 'March 2026',',';,
       impact: '500% Cognitive Enhancement',',';,
       readers: '203K+',',';,
       icon: '🚀',',';,
-      color: 'from-blue-500 to-cyan-500},';
+      color: 'from-blue-500 to-cyan-500},'
 import React from 'react';'
 
 const NewContentPromotionalBanner2026: ()  => {,,
@@ -57,8 +57,8 @@ const NewContentPromotionalBanner2026: ()  => {,,
       {/* Animated background effects */}
       <div className: "absolute inset-0 overflow-hidden opacity-20">";,
         <div className: "absolute top-0 left-1/4 w-96 h-96 bg-violet-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>";,
-        <div className: "absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style ={{ animationDelay: '2s' }}></div>;';
-        <div className: "absolute top-1/2 left-1/2 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style ={{ animationDelay: '4s' }}></div>;';
+        <div className: "absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style ={{ animationDelay: '2s' }}></div>;'
+        <div className: "absolute top-1/2 left-1/2 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style ={{ animationDelay: '4s' }}></div>;'
       <div className: "absolute inset-0 overflow-hidden opacity-20">",
         <div className: "absolute top-0 left-1/4 w-96 h-96 bg-violet-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>",
         <div className: "absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>'
@@ -139,7 +139,7 @@ const NewContentPromotionalBanner2026: ()  => {,,
                 <div className: "text-center mb-6">";,
                   <div className: "flex items-center justify-center gap-2 text-gray-400">";,
                     <Users className: "w-4 h-4/>";,
-                    <span className: "text-sm">{content.readers} readers</span>";
+                    <span className: "text-sm">{content.readers} readers</span>"
                 <div className: "text-center mb-6">",
                   <div className: "flex items-center justify-center gap-2 text-gray-400">",
                     <Users className: "w-4 h-4" />",
@@ -173,10 +173,10 @@ const NewContentPromotionalBanner2026: ()  => {,,
 
           <div className: "grid grid-cols-2 md: grid-cols-4 gap-8">",
             {[
-              { value: '2.5M+', label: 'Global Readers', icon: <Users className: "w-8 h-8" />, color: 'text-violet-400' }';
-              { value: '$15B+', label: 'Value Created', icon: <TrendingUp className: "w-8 h-8" />, color: 'text-purple-400' }';
-              { value: '99.9%', label: 'Content Accuracy', icon: <Star className: "w-8 h-8" />, color: 'text-blue-400' }';
-              { value: '150+', label: 'Countries Reached', icon: <Globe className: "w-8 h-8" />, color: 'text-emerald-400' }';
+              { value: '2.5M+', label: 'Global Readers', icon: <Users className: "w-8 h-8" />, color: 'text-violet-400' }'
+              { value: '$15B+', label: 'Value Created', icon: <TrendingUp className: "w-8 h-8" />, color: 'text-purple-400' }'
+              { value: '99.9%', label: 'Content Accuracy', icon: <Star className: "w-8 h-8" />, color: 'text-blue-400' }'
+              { value: '150+', label: 'Countries Reached', icon: <Globe className: "w-8 h-8" />, color: 'text-emerald-400' }'
             ].map((stat, index) => (
               <div key: {index} className: "text-center">";,
           <div className: "grid grid-cols-2 md: grid-cols-4 gap-8">",

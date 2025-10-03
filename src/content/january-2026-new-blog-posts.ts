@@ -19,12 +19,12 @@ export const newJanuary2026BlogPosts: BlogPost[]  = [,,
     id: "ai-2026-january-hyperautomation-platform",";,
     title: "⚙️ AI Hyperautomation Platform 2026: End-to-End Business Automation",";,
     excerpt: "Complete business process automation achieving 95% automation rates with 10x efficiency improvements and $2.8B success stories.",";,
-    content: `,,`;
+    content: `,,`
 # AI Hyperautomation Platform 2026: End-to-End Business Automation,,
   id: "ai-2026-january-hyperautomation-platform",",
     title: "⚙️ AI Hyperautomation Platform 2026: End-to-End Business Automation",",
     excerpt: "Complete business process automation achieving 95% automation rates with 10x efficiency improvements and $2.8B success stories.",",
-    content: `,`,`;
+    content: `,`,`
 # AI Hyperautomation Platform 2026: End-to-End Business Automation,,
   The future of business operations is here. Our AI Hyperautomation Platform represents the most comprehensive automation solution ever developed, achieving unprecedented levels of business process automation across every industry vertical.
 
@@ -139,7 +139,7 @@ Ready to revolutionize your business operations? Our hyperautomation specialists
 3. **Full Deployment**: Enterprise-wide automation rollout
 4. **Continuous Optimization**: Ongoing improvement and enhancement
 
-The age of hyperautomation has begun. The question isn't whether to automate - it's how quickly you can transform your business.;';
+The age of hyperautomation has begun. The question isn't whether to automate - it's how quickly you can transform your business.;'
 *"We're not just automating tasks; we're transforming entire business ecosystems."* - Sarah Johnson, Chief Automation Officer"
     `,`
     author: "Sarah Johnson, Chief Automation Officer",",";,
@@ -163,21 +163,21 @@ The age of hyperautomation has begun. The question isn't whether to automate - i
     id: "ai-2026-january-quantum-security-breakthrough",";,
     title: "🔐 Quantum-Safe Security 2026: Unbreakable Enterprise Protection",";,
     excerpt: "Quantum-resistant security systems protecting $2.8B in assets with 99.99% threat prevention and zero security breaches across enterprise networks.",";,
-    content: `,,`;
+    content: `,,`
 # Quantum-Safe Security 2026: Unbreakable Enterprise Protection,,
   id: "ai-2026-january-quantum-security-breakthrough",",
     title: "🔐 Quantum-Safe Security 2026: Unbreakable Enterprise Protection",",
     excerpt: "Quantum-resistant security systems protecting $2.8B in assets with 99.99% threat prevention and zero security breaches across enterprise networks.",",
-    content: `,`,`;
+    content: `,`,`
 # Quantum-Safe Security 2026: Unbreakable Enterprise Protection,,
   As quantum computing advances, traditional encryption methods become vulnerable. Our Quantum-Safe Security platform provides the ultimate protection against both current and future threats, ensuring your enterprise remains secure in the quantum era.
 
 ## The Quantum Threat
 
 Quantum computers will eventually break current encryption standards: ### Current Vulnerabilities,
-- **RSA Encryption**: Vulnerable to Shor's algorithm;';
+- **RSA Encryption**: Vulnerable to Shor's algorithm;'
 - **Elliptic Curve Cryptography**: Quantum attack susceptible
-- **Symmetric Key Systems**: Grover's algorithm reduces security;';
+- **Symmetric Key Systems**: Grover's algorithm reduces security;'
 - **RSA Encryption**: Vulnerable to Shor's algorithm'
 - **Elliptic Curve Cryptography**: Quantum attack susceptible
 - **Symmetric Key Systems**: Grover's algorithm reduces security'
@@ -303,7 +303,7 @@ Ready to secure your enterprise for the quantum future? Our quantum security spe
 3. **Custom Security Design**: Tailored protection strategy
 4. **Implementation Planning**: Phased deployment roadmap
 
-The quantum era is coming. The question isn't whether your security will be compromised - it's whether you'll be ready.;';
+The quantum era is coming. The question isn't whether your security will be compromised - it's whether you'll be ready.;'
 *"In the quantum era, security isn't just about protecting today's data; it's about securing tomorrow's secrets."* - Dr. Michael Chen, Chief Security Officer"
     `,`
     author: "Dr. Michael Chen, Chief Security Officer",",";,
@@ -327,12 +327,12 @@ The quantum era is coming. The question isn't whether your security will be comp
     id: "ai-2026-january-blockchain-integration",";,
     title: "⛓️ Blockchain-AI Integration 2026: Trustless Intelligence Revolution",";,
     excerpt: "Revolutionary integration of blockchain and AI creating trustless intelligence systems with decentralized governance and $1.2B enterprise value creation.",";,
-    content: `,,`;
+    content: `,,`
 # Blockchain-AI Integration 2026: Trustless Intelligence Revolution,,
   id: "ai-2026-january-blockchain-integration",",
     title: "⛓️ Blockchain-AI Integration 2026: Trustless Intelligence Revolution",",
     excerpt: "Revolutionary integration of blockchain and AI creating trustless intelligence systems with decentralized governance and $1.2B enterprise value creation.",",
-    content: `,`,`;
+    content: `,`,`
 # Blockchain-AI Integration 2026: Trustless Intelligence Revolution,,
   The convergence of blockchain and artificial intelligence represents the most significant technological advancement since the internet. Our Blockchain-AI Integration platform creates trustless intelligence systems that operate with complete transparency, security, and decentralized governance.
 

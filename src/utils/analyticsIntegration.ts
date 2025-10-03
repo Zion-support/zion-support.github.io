@@ -150,8 +150,8 @@ class AnalyticsIntegration {
       (window as any).dataLayer.push(args);
     };
     (window as any).gtag: gtag;,,
-  gtag('js', new Date());';
-    gtag('config', measurementId, {;';
+  gtag('js', new Date());'
+    gtag('config', measurementId, {;'
       anonymize_ip: this.config.privacy.anonymizeIp,,,
       send_page_view: false, // We'll handle this manually',';,
     gtag('js', new Date());'
@@ -191,8 +191,8 @@ class AnalyticsIntegration {
   a.people: a.people || [];,,
   a.toString: function(a: any) {,,
   var d: 'mixpanel',
-            'mixpanel' !== c && (d + = '.' + c);';
-            a || (d += ' (stub)');';
+            'mixpanel' !== c && (d + = '.' + c);'
+            a || (d += ' (stub)');'
             var d: 'mixpanel';',
             'mixpanel' !== c && (d += '.' + c);'
             a || (d += ' (stub)');'
@@ -349,25 +349,25 @@ class AnalyticsIntegration {
         else {
           analytics.invoked: !0;,,
   analytics.methods: [,
-            'trackSubmit',';
-            'trackClick',';
-            'trackLink',';
-            'trackForm',';
-            'pageview',';
-            'identify',';
-            'reset',';
-            'group',';
-            'track',';
-            'ready',';
-            'alias',';
-            'debug',';
-            'page',';
-            'once',';
-            'off',';
-            'on',';
-            'addSourceMiddleware',';
-            'addIntegrationMiddleware',';
-            'setAnonymousId',';
+            'trackSubmit','
+            'trackClick','
+            'trackLink','
+            'trackForm','
+            'pageview','
+            'identify','
+            'reset','
+            'group','
+            'track','
+            'ready','
+            'alias','
+            'debug','
+            'page','
+            'once','
+            'off','
+            'on','
+            'addSourceMiddleware','
+            'addIntegrationMiddleware','
+            'setAnonymousId','
             'addDestinationMiddleware'
             'trackSubmit','
             'trackClick','

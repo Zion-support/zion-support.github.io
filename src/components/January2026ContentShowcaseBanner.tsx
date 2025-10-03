@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import React from 'react';'
 
 const January2026ContentShowcaseBanner: React.FC: ()  => {,,
@@ -14,7 +14,7 @@ const January2026ContentShowcaseBanner: React.FC: ()  => {,,
       trending: true,,,
       icon: '🤖',',';,
       featured: true,,,
-      gradient: 'from-cyan-500 to-blue-600},';
+      gradient: 'from-cyan-500 to-blue-600},'
     {
       id: 2,,,
       title: 'AI 2026: Quantum Neural Optimization - Revolutionary AI Performance Breakthrough',',';,
@@ -26,7 +26,7 @@ const January2026ContentShowcaseBanner: React.FC: ()  => {,,
       trending: true,,,
       icon: '⚛️',',';,
       featured: true,,,
-      gradient: 'from-purple-500 to-cyan-600},';
+      gradient: 'from-purple-500 to-cyan-600},'
     {
       id: 3,,,
       title: 'AI 2026: Meta-Cognitive Reasoning - The Next Frontier of Artificial Intelligence',',';,
@@ -38,7 +38,7 @@ const January2026ContentShowcaseBanner: React.FC: ()  => {,,
       trending: true,,,
       icon: '🧠',',';,
       featured: true,,,
-      gradient: 'from-indigo-500 to-purple-600},';
+      gradient: 'from-indigo-500 to-purple-600},'
       title: 'AI 2026: Autonomous Agent Factories - The Future of Enterprise Automation',',
       slug: 'ai-2026-autonomous-agent-factories',',
       excerpt: 'Discover how autonomous agent factories are revolutionizing enterprise automation in 2026. Learn about self-replicating AI systems, agent orchestration, and achieving 95% automation rates with breakthrough agent factory architectures.',',
@@ -83,8 +83,8 @@ const January2026ContentShowcaseBanner: React.FC: ()  => {,,
       {/* Animated background effects */}
       <div className: "absolute inset-0 overflow-hidden opacity-30">";,
         <div className: "absolute top-0 left-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>";,
-        <div className: "absolute bottom-0 right-1/4 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style ={{ animationDelay: '2s' }}></div>;';
-        <div className: "absolute top-1/2 left-1/2 w-64 h-64 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style ={{ animationDelay: '4s' }}></div>;';
+        <div className: "absolute bottom-0 right-1/4 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style ={{ animationDelay: '2s' }}></div>;'
+        <div className: "absolute top-1/2 left-1/2 w-64 h-64 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style ={{ animationDelay: '4s' }}></div>;'
       <div className: "absolute inset-0 overflow-hidden opacity-30">",
         <div className: "absolute top-0 left-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>",
         <div className: "absolute bottom-0 right-1/4 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>'
@@ -224,7 +224,7 @@ const January2026ContentShowcaseBanner: React.FC: ()  => {,,
                     <Zap className: "w-4 h-4 text-purple-400/>";,
                     {article.readTime}
                   </span>
-                  <span >{new Date(article.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>;';
+                  <span >{new Date(article.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>;'
                 <div className: "flex items-center justify-between text-sm text-gray-500 mb-6 pb-6 border-b border-white/10">",
                   <span className: "flex items-center gap-2">",
                     <Zap className: "w-4 h-4 text-purple-400" />",

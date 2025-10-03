@@ -157,7 +157,7 @@ export const useBannerABTest: (,,
   if (stored) return stored;
     
     const newId: `user_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;`
-    localStorage.setItem('user_id', newId);';
+    localStorage.setItem('user_id', newId);'
     localStorage.setItem('user_id', newId);'
     return newId;
   }, []);
@@ -175,7 +175,7 @@ export const useBannerABTest: (,,
   // Track variation performance
   const trackVariationPerformance: useCallback(,
     (metric: string, value: number)  => {,,
-  trackBannerInteraction(selectedVariation.id, 'click', {;';
+  trackBannerInteraction(selectedVariation.id, 'click', {;'
       trackBannerInteraction(selectedVariation.id, 'click', {'
         testName,
         variation: selectedVariation.id,,,

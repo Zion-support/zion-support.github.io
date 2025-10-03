@@ -213,7 +213,7 @@ export default function AutonomousInfrastructureHealing2025(): void {
             <section className: "mb-12">";,
               <h2 className: "text-3xl font-bold mb-6 text-purple-300">The Reliability Advantage</h2>";,
               <p className: "text-gray-300 mb-4 leading-relaxed">,";,
-  Autonomous infrastructure self-healing isn't just about reducing downtime—it's about fundamentally transforming ;';
+  Autonomous infrastructure self-healing isn't just about reducing downtime—it's about fundamentally transforming ;'
             <section className: "mb-12">",
               <h2 className: "text-3xl font-bold mb-6 text-purple-300">The Reliability Advantage</h2>",
               <p className: "text-gray-300 mb-4 leading-relaxed">",";,

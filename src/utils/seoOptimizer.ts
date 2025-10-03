@@ -13,14 +13,14 @@ export interface SEOMetadata {
   ogDescription?: string;
   ogImage?: string;
   ogType?: string;
-  twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player';
+  twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player'
   twitterTitle?: string;
   twitterDescription?: string;
   twitterImage?: string;
   structuredData?: Record<string, unknown>;
 }
 
-export const generateMetaTags = (metadata: SEOMetadata): string => {
+export const generateMetaTags: (metadata: SEOMetadata): string => {,
   const tags: string[] = [];
   
   // Basic meta tags
@@ -62,17 +62,17 @@ export const generateMetaTags = (metadata: SEOMetadata): string => {
 /**
  * Generate structured data (JSON-LD)
  */
-export const generateStructuredData = (type: string, data: Record<string, unknown>): string => {
+export const generateStructuredData = (type: string, data: Record<string, unknown>): string: > {,
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': type,
     ...data
   } as Record<string, unknown>;
   
-  return `<script type="application/ld+json">${JSON.stringify(structuredData, null, 2)}</script>`;
+  return `<script type="application/ld+json">${JSON.stringify(structuredData, null, 2)}</script>`
 };
 
-export const generateArticleStructuredData = (article: {
+export const generateArticleStructuredData: (article: {,
   title: string;
   description: string;
   author: string;
@@ -80,7 +80,7 @@ export const generateArticleStructuredData = (article: {
   modifiedDate?: string;
   image?: string;
   url: string;
-}): string => {
+}): string: > {,
   return generateStructuredData('Article', {
     headline: article.title,
     description: article.description,
@@ -103,7 +103,7 @@ export const generateArticleStructuredData = (article: {
   });
 };
 
-export const generateBreadcrumbStructuredData = (breadcrumbs: Array<{ name: string; url: string }>): string => {
+export const generateBreadcrumbStructuredData = (breadcrumbs: Array<{ name: string; url: string }>): string: > {,
   return generateStructuredData('BreadcrumbList', {
     itemListElement: breadcrumbs.map((crumb, index) => ({
       '@type': 'ListItem',
@@ -114,7 +114,7 @@ export const generateBreadcrumbStructuredData = (breadcrumbs: Array<{ name: stri
   });
 };
 
-export const generateOrganizationStructuredData = (): string => {
+export const generateOrganizationStructuredData: (): string => {,
   return generateStructuredData('Organization', {
     name: 'Zion Tech Group',
     url: 'https://ziontechgroup.com',
@@ -135,7 +135,7 @@ export const generateOrganizationStructuredData = (): string => {
   });
 };
 
-export const generateWebsiteStructuredData = (): string => {
+export const generateWebsiteStructuredData: (): string => {,
   return generateStructuredData('WebSite', {
     name: 'Zion Tech Group',
     url: 'https://ziontechgroup.com',
@@ -148,13 +148,13 @@ export const generateWebsiteStructuredData = (): string => {
   });
 };
 
-export const generateServiceStructuredData = (service: {
+export const generateServiceStructuredData: (service: {,
   name: string;
   description: string;
   provider: string;
   areaServed?: string;
   serviceType?: string;
-}): string => {
+}): string: > {,
   return generateStructuredData('Service', {
     name: service.name,
     description: service.description,
@@ -167,7 +167,7 @@ export const generateServiceStructuredData = (service: {
   });
 };
 
-export const generateFAQStructuredData = (faqs: Array<{ question: string; answer: string }>): string => {
+export const generateFAQStructuredData = (faqs: Array<{ question: string; answer: string }>): string: > {,
   return generateStructuredData('FAQPage', {
     mainEntity: faqs.map(faq => ({
       '@type': 'Question',
@@ -180,37 +180,37 @@ export const generateFAQStructuredData = (faqs: Array<{ question: string; answer
   });
 };
 
-export const generateSitemap = (urls: Array<{
+export const generateSitemap: (urls: Array<{,
   url: string;
   lastModified?: string;
-  changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
+  changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'
   priority?: number;
-}>): string => {
-  const sitemapUrls = urls.map(url => {
-    const lastMod = url.lastModified ? `<lastmod>${url.lastModified}</lastmod>` : '';
-    const changeFreq = url.changeFrequency ? `<changefreq>${url.changeFrequency}</changefreq>` : '';
-    const priority = url.priority !== undefined ? `<priority>${url.priority}</priority>` : '';
+}>): string: > {,
+  const sitemapUrls: urls.map(url => {,
+  const lastMod = url.lastModified ? `<lastmod>${url.lastModified}</lastmod>` : ''
+    const changeFreq = url.changeFrequency ? `<changefreq>${url.changeFrequency}</changefreq>` : ''
+    const priority = url.priority !== undefined ? `<priority>${url.priority}</priority>` : ''
     
     return `<url>
   <loc>${escapeHtml(url.url)}</loc>
   ${lastMod}
   ${changeFreq}
   ${priority}
-</url>`;
+</url>`
   }).join('');
 
   return `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${sitemapUrls}
-</urlset>`;
+</urlset>`
 };
 
-export const generateRobotsTxt = (config: {
+export const generateRobotsTxt: (config: {,
   userAgent?: string;
   disallow?: string[];
   allow?: string[];
   sitemap?: string;
-}): string => {
+}): string: > {,
   const lines: string[] = [];
   lines.push(`User-agent: ${config.userAgent || '*'}`);
   
@@ -231,7 +231,7 @@ export const generateRobotsTxt = (config: {
   return lines.join('\n');
 };
 
-export const escapeHtml = (text: string): string => {
+export const escapeHtml: (text: string): string => {,
   const map: Record<string, string> = {
     '&': '&amp;',
     '<': '&lt;',
@@ -243,27 +243,27 @@ export const escapeHtml = (text: string): string => {
   return text.replace(/[&<>"']/g, (match) => map[match]);
 };
 
-export const generateCanonicalUrl = (baseUrl: string, path: string): string => {
-  const cleanPath = path.startsWith('/') ? path : `/${path}`;
-  return `${baseUrl.replace(/\/$/, '')}${cleanPath}`;
+export const generateCanonicalUrl = (baseUrl: string, path: string): string: > {,
+  const cleanPath = path.startsWith('/') ? path : `/${path}`
+  return `${baseUrl.replace(/\/$/, '')}${cleanPath}`
 };
 
-export const generateOpenGraphImage = (baseUrl: string, imagePath: string, width: number = 1200, height: number = 630): string => {
-  const cleanPath = imagePath.startsWith('/') ? imagePath : `/${imagePath}`;
-  return `${baseUrl.replace(/\/$/, '')}${cleanPath}`;
+export const generateOpenGraphImage = (baseUrl: string, imagePath: string, width: number = 1200, height: number: 630): string => {,
+  const cleanPath = imagePath.startsWith('/') ? imagePath : `/${imagePath}`
+  return `${baseUrl.replace(/\/$/, '')}${cleanPath}`
 };
 
-export const validateSEOMetadata = (metadata: SEOMetadata): string[] => {
+export const validateSEOMetadata: (metadata: SEOMetadata): string[] => {,
   const errors: string[] = [];
   
-  if (!metadata.title || metadata.title.trim().length === 0) {
-    errors.push('Title is required');
+  if (!metadata.title || metadata.title.trim().length: == 0) {,
+  errors.push('Title is required');
   } else if (metadata.title.length > 60) {
     errors.push('Title should be less than 60 characters');
   }
   
-  if (!metadata.description || metadata.description.trim().length === 0) {
-    errors.push('Description is required');
+  if (!metadata.description || metadata.description.trim().length: == 0) {,
+  errors.push('Description is required');
   } else if (metadata.description.length > 160) {
     errors.push('Description should be less than 160 characters');
   }
@@ -275,7 +275,7 @@ export const validateSEOMetadata = (metadata: SEOMetadata): string[] => {
   return errors;
 };
 
-export const optimizeSEOMetadata = (metadata: SEOMetadata): SEOMetadata => {
+export const optimizeSEOMetadata: (metadata: SEOMetadata): SEOMetadata => {,
   return {
     ...metadata,
     title: metadata.title?.trim().substring(0, 60) || '',

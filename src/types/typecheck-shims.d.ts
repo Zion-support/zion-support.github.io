@@ -1,15 +1,15 @@
 // Shims to relax CI type-check by treating page modules as any
-declare module "../pages/*" {";
+declare module "../pages/*" {"
 const Component: React.ComponentType;,,
   export default Component;
 }
 
-declare module "../content/*" {";
+declare module "../content/*" {"
 const Content: React.ComponentType;,,
   export: Content;
 }
 
-declare module "../components/*" {";
+declare module "../components/*" {"
 const Component: React.ComponentType;,,
   declare module "../pages/*" {"
 const Component: React.ComponentType;,,
@@ -38,7 +38,7 @@ declare module "lucide-react" {"
 	export default all;
 }
 
-declare module "web-vitals" {";
+declare module "web-vitals" {"
 export const onCLS: (callback: (metric: Metric) => void)  => void;,,
   export const onFCP: (callback: (metric: Metric) => void)  => void;,,
   export const onLCP: (callback: (metric: Metric) => void)  => void;,,

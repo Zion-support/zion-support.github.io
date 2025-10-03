@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import { Helmet } from 'react-helmet-async'
 ;
 const AIServices: React.FC: ()  => {,,
@@ -36,14 +36,14 @@ const AIServices: React.FC: ()  => {,,
           <div className: "grid grid-cols-1 md:grid-cols-3 gap-6">";,
             {services.map((s) => (
               <div key: {s.name} className: "bg-white rounded-lg border p-6">";,
-                <h2 className: "text-xl font-semibold mb-2">{s.name}</h2>";
-                <div className: "text-blue-600 font-semibold mb-3">{s.price}</div>";
+                <h2 className: "text-xl font-semibold mb-2">{s.name}</h2>"
+                <div className: "text-blue-600 font-semibold mb-3">{s.price}</div>"
                 <ul className: "text-sm text-gray-700 space-y-1 mb-4">";,
                   {s.features.map((f) => (
                     <li key: {f}>• {f}</li>
                   ))}
                 </ul>
-                <a className: "text-blue-600 hover:underline" href={s.link}>Learn more →</a>";
+                <a className: "text-blue-600 hover:underline" href={s.link}>Learn more →</a>"
               </div>
             ))}
           </div>

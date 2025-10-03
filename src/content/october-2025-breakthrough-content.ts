@@ -15,9 +15,9 @@ export const octoberBreakthroughContent: [,
     featured: true,,
     tags: ["Neuro-Symbolic AI", "Hybrid Systems", "Explainability", "Enterprise AI"],";,
     highlights: [,,
-      "10x better model explainability",";
-      "5x improved accuracy on reasoning tasks",";
-      "60% reduction in training data requirements",";
+      "10x better model explainability","
+      "5x improved accuracy on reasoning tasks","
+      "60% reduction in training data requirements","
       "Production-ready frameworks and tooling"
     ]
     metrics: {,,
@@ -39,9 +39,9 @@ export const octoberBreakthroughContent: [,
     featured: true,,
     tags: ["DevOps", "CI/CD", "Autonomous Systems", "MLOps"],";,
     highlights: [,,
-      "85% reduction in deployment failures",";
-      "3x faster rollback and recovery",";
-      "Predictive failure detection with 95% accuracy",";
+      "85% reduction in deployment failures","
+      "3x faster rollback and recovery","
+      "Predictive failure detection with 95% accuracy","
       "Self-optimizing pipeline configurations"
     ]
     metrics: {,,
@@ -63,9 +63,9 @@ export const octoberBreakthroughContent: [,
     featured: true,,
     tags: ["Federated Learning", "Privacy", "GDPR", "Distributed ML"],";,
     highlights: [,,
-      "100% data privacy compliance",";
-      "Train on 1000+ edge devices simultaneously",";
-      "90% reduction in data transfer costs",";
+      "100% data privacy compliance","
+      "Train on 1000+ edge devices simultaneously","
+      "90% reduction in data transfer costs","
       "GDPR, HIPAA, and SOC 2 compliant"
     ]
     metrics: {,,
@@ -87,9 +87,9 @@ export const octoberBreakthroughContent: [,
     featured: true,,
     tags: ["LLM", "Performance", "Streaming", "Edge Computing"],";,
     highlights: [,,
-      "Sub-100ms time to first token",";
-      "80% reduction in latency",";
-      "Edge-optimized inference",";
+      "Sub-100ms time to first token","
+      "80% reduction in latency","
+      "Edge-optimized inference","
       "Real-world benchmarks and case studies"
     ]
     metrics: {,,
@@ -111,9 +111,9 @@ export const octoberBreakthroughContent: [,
     featured: true,,
     tags: ["AI Ethics", "Governance", "Fairness", "Compliance"],";,
     highlights: [,,
-      "Comprehensive bias detection toolkit",";
-      "Automated fairness monitoring",";
-      "Production-ready ethical guidelines",";
+      "Comprehensive bias detection toolkit","
+      "Automated fairness monitoring","
+      "Production-ready ethical guidelines","
       "Real-world implementation examples"
     ]
     metrics: {,,
@@ -135,9 +135,9 @@ export const octoberBreakthroughContent: [,
     featured: false,,
     tags: ["Multi-Cloud", "Cost Optimization", "Orchestration", "Kubernetes"],";,
     highlights: [,,
-      "50% reduction in cloud costs",";
-      "Zero vendor lock-in",";
-      "Automated workload optimization",";
+      "50% reduction in cloud costs","
+      "Zero vendor lock-in","
+      "Automated workload optimization","
       "Unified management across clouds"
     ]
     metrics: {,,
@@ -159,9 +159,9 @@ export const octoberBreakthroughContent: [,
     featured: false,,
     tags: ["Conversational AI", "NLP", "Chatbots", "Customer Experience"],";,
     highlights: [,,
-      "95% user satisfaction scores",";
-      "Cross-session context retention",";
-      "Multi-language support (50+ languages)",";
+      "95% user satisfaction scores","
+      "Cross-session context retention","
+      "Multi-language support (50+ languages)","
       "Enterprise-grade security"
     ]
     metrics: {,,

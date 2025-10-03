@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 
-const AppSafe: React.FC = () => {
+const AppSafe: React.FC: () => {,
   return (
     <div className="min-h-screen flex items-center justify-center bg-white text-gray-900">
       <div className="text-center p-8">

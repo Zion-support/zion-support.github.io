@@ -16,12 +16,12 @@
     new: true,,
     tags: ["Multi-Cloud", "FinOps", "Cloud Operations", "Cost Optimization", "AI Automation"],";,
     highlights: [,,
-      "156% ROI within 18 months",";
-      "$89M annual savings (Fortune 100 case study)",";
-      "91% cost waste elimination",";
-      "4.5x operational efficiency improvement",";
-      "99.7% cloud uptime guarantee",";
-      "67% reduction in cloud management complexity",";
+      "156% ROI within 18 months","
+      "$89M annual savings (Fortune 100 case study)","
+      "91% cost waste elimination","
+      "4.5x operational efficiency improvement","
+      "99.7% cloud uptime guarantee","
+      "67% reduction in cloud management complexity","
       "3.8x faster resource provisioning"
     ]
     metrics: {,,
@@ -53,12 +53,12 @@
     new: true,,
     tags: ["Conversational AI", "Customer Experience", "NLP", "Virtual Assistants", "Omnichannel"],";,
     highlights: [,,
-      "184% ROI within 14 months",";
-      "94% customer satisfaction (CSAT)",";
-      "5.7x productivity improvement for support teams",";
-      "$173M annual cost savings",";
-      "78% automation rate for routine inquiries",";
-      "2.3 minutes average response time (vs 14 min)",";
+      "184% ROI within 14 months","
+      "94% customer satisfaction (CSAT)","
+      "5.7x productivity improvement for support teams","
+      "$173M annual cost savings","
+      "78% automation rate for routine inquiries","
+      "2.3 minutes average response time (vs 14 min)","
       "97 languages, 12 integrated channels"
     ]
     metrics: {,,

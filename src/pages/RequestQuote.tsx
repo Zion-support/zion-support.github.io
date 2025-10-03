@@ -8,7 +8,7 @@ const RequestQuote: React.FC: ()  => {,,
             <form className: "grid gap-4 max-w-xl">";,
                 <input className: "border rounded-md px-3 py-2" placeholder="Name" />";,
                 <input className: "border rounded-md px-3 py-2" placeholder="Email" />";,
-                <textarea className: "border rounded-md px-3 py-2" placeholder="Project details" rows={5} />";
+                <textarea className: "border rounded-md px-3 py-2" placeholder="Project details" rows={5} />"
                 <button className: "bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700" type ="button">Submit</button>";,
             </form>
         </section>

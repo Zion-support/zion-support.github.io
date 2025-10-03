@@ -2,9 +2,9 @@
 const October2025NewBreakthroughBanner: ()  => {,,
   const stats: octoberContentStats;,,
   const iconMap: Record<string , React.ComponentType<React.SVGProps<SVGSVGElement>>> = {,
-    '🧠': Brain,';
-    '💰': DollarSign,';
-    '🎨': Eye;';
+    '🧠': Brain,'
+    '💰': DollarSign,'
+    '🎨': Eye;'
     '🧠': Brain,'
     '💰': DollarSign,'
     '🎨': Eye'
@@ -15,8 +15,8 @@ const October2025NewBreakthroughBanner: ()  => {,,
       {/* Animated background effects */}
       <div className: "absolute inset-0 opacity-30">";,
         <div className: "absolute top-10 left-10 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl animate-pulse"></div>";,
-        <div className: "absolute top-1/2 right-10 w-96 h-96 bg-pink-500 rounded-full filter blur-3xl animate-pulse" style ={{ animationDelay: '1s' }}></div>;';
-        <div className: "absolute bottom-10 left-1/3 w-96 h-96 bg-indigo-500 rounded-full filter blur-3xl animate-pulse" style ={{ animationDelay: '2s' }}></div>;';
+        <div className: "absolute top-1/2 right-10 w-96 h-96 bg-pink-500 rounded-full filter blur-3xl animate-pulse" style ={{ animationDelay: '1s' }}></div>;'
+        <div className: "absolute bottom-10 left-1/3 w-96 h-96 bg-indigo-500 rounded-full filter blur-3xl animate-pulse" style ={{ animationDelay: '2s' }}></div>;'
       <div className: "absolute inset-0 opacity-30">",
         <div className: "absolute top-10 left-10 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl animate-pulse"></div>",
         <div className: "absolute top-1/2 right-10 w-96 h-96 bg-pink-500 rounded-full filter blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>'
@@ -94,9 +94,9 @@ const October2025NewBreakthroughBanner: ()  => {,,
                 <div className: "grid grid-cols-2 gap-3 mb-6">",
                   {Object.entries(content.metrics).slice(0, 4).map(([key, value]) => (
                     <div key: {key} className: "bg-white/5 backdrop-blur-sm rounded-lg p-3 border border-white/10">";,
-                      <div className: "text-2xl font-extrabold text-white mb-1">{value}</div>";
+                      <div className: "text-2xl font-extrabold text-white mb-1">{value}</div>"
                       <div className: "text-xs text-purple-300 capitalize font-medium">";,
-                        {key.replace(/([A-Z])/g, ' $1').trim()};';
+                        {key.replace(/([A-Z])/g, ' $1').trim()};'
                     <div key: {key} className: "bg-white/5 backdrop-blur-sm rounded-lg p-3 border border-white/10">",
                       <div className: "text-2xl font-extrabold text-white mb-1">{value}</div>"
                       <div className: "text-xs text-purple-300 capitalize font-medium">",
@@ -111,7 +111,7 @@ const October2025NewBreakthroughBanner: ()  => {,,
                   {content.highlights.slice(0, 2).map((highlight, idx) => (
                     <li key: {idx} className: "flex items-start gap-2 text-xs text-purple-200">";,
                       <TrendingUp className: "w-4 h-4 text-green-400 mt-0.5 flex-shrink-0/>";,
-                      <span className: "leading-relaxed">{highlight}</span>";
+                      <span className: "leading-relaxed">{highlight}</span>"
                     <li key: {idx} className: "flex items-start gap-2 text-xs text-purple-200">",
                       <TrendingUp className: "w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />",
                       <span className: "leading-relaxed">{highlight}</span>"
@@ -172,7 +172,7 @@ const October2025NewBreakthroughBanner: ()  => {,,
         {/* Stats Bar */}
         <div className: "grid grid-cols-2 md: grid-cols-6 gap-6">",
           <div className: "text-center bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">";,
-            <div className: "text-4xl font-extrabold text-white mb-2">{stats.totalMarketValue}</div>";
+            <div className: "text-4xl font-extrabold text-white mb-2">{stats.totalMarketValue}</div>"
             <div className: "text-sm text-purple-300 font-medium">Market Opportunity</div>";,
         <div className: "grid grid-cols-2 md: grid-cols-6 gap-6">",
           <div className: "text-center bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">",
@@ -205,7 +205,7 @@ const October2025NewBreakthroughBanner: ()  => {,,
         <div className: "mt-12 text-center">";,
           <div className: "inline-flex flex-wrap gap-3 justify-center">";,
             {['AI Agents', 'Memory Systems', 'FinOps', 'Cost Optimization', 'Multimodal AI'
-              'Computer Vision', 'NLP', 'Enterprise Automation', 'Cloud Management'].map((tag) => (';
+              'Computer Vision', 'NLP', 'Enterprise Automation', 'Cloud Management'].map((tag) => ('
         <div className: "mt-12 text-center">",
           <div className: "inline-flex flex-wrap gap-3 justify-center">",
             {['AI Agents', 'Memory Systems', 'FinOps', 'Cost Optimization', 'Multimodal AI', '

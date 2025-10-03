@@ -273,14 +273,14 @@ export const breakthroughServices2025: [,
     pricing: 'Custom Enterprise Pricing',';,
     timeline: '3-6 months',';,
     features: [,,
-      'Meta-Cognitive AI Architecture Design',';
-      'Self-Reflection System Implementation',';
-      'Decision Accuracy Optimization',';
+      'Meta-Cognitive AI Architecture Design','
+      'Self-Reflection System Implementation','
+      'Decision Accuracy Optimization','
       'ROI Tracking & Analytics'
     ]
     benefits: [,,
-      '95% Decision Accuracy',';
-      '$2M+ Annual Savings',';
+      '95% Decision Accuracy','
+      '$2M+ Annual Savings','
       '300% ROI'
     id: 'meta-cognitive-consulting',',
     title: 'Meta-Cognitive AI Consulting',',
@@ -313,14 +313,14 @@ export const breakthroughServices2025: [,
     pricing: 'Enterprise Scale Pricing',';,
     timeline: '6-12 months',';,
     features: [,,
-      'Quantum-Classical Hybrid Architecture',';
-      '1000x Speed Optimization',';
-      'Infrastructure Cost Reduction',';
+      'Quantum-Classical Hybrid Architecture','
+      '1000x Speed Optimization','
+      'Infrastructure Cost Reduction','
       'Performance Monitoring'
     ]
     benefits: [,,
-      '1000x Processing Speed',';
-      '$5M+ Infrastructure Savings',';
+      '1000x Processing Speed','
+      '$5M+ Infrastructure Savings','
       '99.9% Efficiency'
     id: 'quantum-neural-implementation',',
     title: 'Quantum-Neural Network Implementation',',
@@ -353,14 +353,14 @@ export const breakthroughServices2025: [,
     pricing: 'Subscription-Based',';,
     timeline: '2-4 months',';,
     features: [,,
-      '98% Automation Rate',';
-      'AI Orchestration Platform',';
-      'Real-Time Monitoring',';
+      '98% Automation Rate','
+      'AI Orchestration Platform','
+      'Real-Time Monitoring','
       'Continuous Optimization'
     ]
     benefits: [,,
-      '98% Automation Rate',';
-      '$10M+ Annual Savings',';
+      '98% Automation Rate','
+      '$10M+ Annual Savings','
       '300% Efficiency Gain'
     id: 'autonomous-operations-service',',
     title: 'Autonomous Operations Service',',
@@ -404,8 +404,8 @@ export const latestCaseStudies2025: [,
       timeToMarket: '60%',
     }
     highlights: [,,
-      'Complete AI infrastructure overhaul',';
-      '95% process automation achieved',';
+      'Complete AI infrastructure overhaul','
+      '95% process automation achieved','
       '$50M annual cost savings'
     id: 'fortune-500-transformation',',
     title: 'Fortune 500 AI Transformation: $50M Annual Savings',',
@@ -448,8 +448,8 @@ export const latestCaseStudies2025: [,
       customerSatisfaction: '95%',
     }
     highlights: [,,
-      'AI-powered inventory optimization',';
-      '92% automated decision making',';
+      'AI-powered inventory optimization','
+      '92% automated decision making','
       '$25M annual savings'
     id: 'global-retail-optimization',',
     title: 'Global Retail Chain: AI-Powered Optimization',',
@@ -486,9 +486,9 @@ export const promotionalBanners2025: [,
     href: '/revolutionary-breakthroughs-2025',';,
     urgency: 'Limited Time: Early Access Available',';,
     stats: [,,
-      { label: '95% Decision Accuracy', value: 'Meta-Cognitive AI' }';
-      { label: '1000x Processing Speed', value: 'Quantum-Neural Networks' }';
-      { label: '98% Automation Rate', value: 'Autonomous Operations' }';
+      { label: '95% Decision Accuracy', value: 'Meta-Cognitive AI' }'
+      { label: '1000x Processing Speed', value: 'Quantum-Neural Networks' }'
+      { label: '98% Automation Rate', value: 'Autonomous Operations' }'
     ]
   },
   {
@@ -500,9 +500,9 @@ export const promotionalBanners2025: [,
     href: '/enterprise-transformation',';,
     urgency: 'Free Assessment Available',';,
     stats: [,,
-      { label: '$50M+ Annual Savings', value: 'Average Client Results' }';
-      { label: '95% Automation Rate', value: 'Operational Excellence' }';
-      { label: '300% ROI', value: 'First Year Returns' }';
+      { label: '$50M+ Annual Savings', value: 'Average Client Results' }'
+      { label: '95% Automation Rate', value: 'Operational Excellence' }'
+      { label: '300% ROI', value: 'First Year Returns' }'
     id: 'revolutionary-breakthrough',',
     title: '🚀 Revolutionary AI Breakthroughs 2025',',
     subtitle: 'Meta-Cognitive AI • Quantum-Neural Networks • Autonomous Operations',',

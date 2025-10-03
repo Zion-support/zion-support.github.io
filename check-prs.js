@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-const https = require('https');
+import https from 'https';
 
 const options = {
   hostname: 'api.github.com',

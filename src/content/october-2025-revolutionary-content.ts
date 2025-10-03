@@ -46,9 +46,9 @@ export const october2025RevolutionaryContent: RevolutionaryContent[]  = [,,
     featured: true,,
     tags: ["Consciousness AI", "Enterprise Intelligence", "Cognitive Computing", "Neural Networks"],";,
     highlights: [,,
-      "Human-level reasoning with 99.8% accuracy",";
-      "78% operational cost reduction",";
-      "$450M+ average enterprise value delivered",";
+      "Human-level reasoning with 99.8% accuracy","
+      "78% operational cost reduction","
+      "$450M+ average enterprise value delivered","
       "Real-time contextual awareness and adaptation"
     ]
     metrics: {,,
@@ -71,9 +71,9 @@ export const october2025RevolutionaryContent: RevolutionaryContent[]  = [,,
     featured: true,,
     tags: ["Quantum Computing", "Hybrid AI", "Performance Optimization", "Enterprise Scale"],";,
     highlights: [,,
-      "10,000x performance improvement over classical",";
-      "Sub-second optimization of billion-parameter models",";
-      "95% reduction in energy consumption",";
+      "10,000x performance improvement over classical","
+      "Sub-second optimization of billion-parameter models","
+      "95% reduction in energy consumption","
       "$800M+ market opportunity by 2026"
     ]
     metrics: {,,
@@ -96,9 +96,9 @@ export const october2025RevolutionaryContent: RevolutionaryContent[]  = [,,
     featured: true,,
     tags: ["Zero Trust", "AI Security", "Autonomous Defense", "Threat Prevention"],";,
     highlights: [,,
-      "99.99% threat prevention rate",";
-      "Sub-millisecond threat detection and response",";
-      "Zero false positives with adaptive learning",";
+      "99.99% threat prevention rate","
+      "Sub-millisecond threat detection and response","
+      "Zero false positives with adaptive learning","
       "$280M+ in prevented breach costs"
     ]
     metrics: {,,
@@ -121,9 +121,9 @@ export const october2025RevolutionaryContent: RevolutionaryContent[]  = [,,
     featured: true,,
     tags: ["Collaboration AI", "Productivity", "Team Augmentation", "Hybrid Intelligence"],";,
     highlights: [,,
-      "500% productivity improvement documented",";
-      "92% faster strategic decision-making",";
-      "Real-time knowledge synthesis across teams",";
+      "500% productivity improvement documented","
+      "92% faster strategic decision-making","
+      "Real-time knowledge synthesis across teams","
       "$156M+ average value per deployment"
     ]
     metrics: {,,
@@ -146,9 +146,9 @@ export const october2025RevolutionaryContent: RevolutionaryContent[]  = [,,
     featured: true,,
     tags: ["Predictive Analytics", "Business Intelligence", "Forecasting", "Strategic Planning"],";,
     highlights: [,,
-      "96% accuracy at 6-month forecast horizon",";
-      "Identify opportunities 4-6 weeks before competitors",";
-      "83% improvement in strategic planning",";
+      "96% accuracy at 6-month forecast horizon","
+      "Identify opportunities 4-6 weeks before competitors","
+      "83% improvement in strategic planning","
       "$340M+ in captured market opportunities"
     ]
     metrics: {,,
@@ -171,9 +171,9 @@ export const october2025RevolutionaryContent: RevolutionaryContent[]  = [,,
     featured: true,,
     tags: ["Emotional AI", "Customer Experience", "Sentiment Analysis", "Personalization"],";,
     highlights: [,,
-      "98% customer satisfaction scores achieved",";
-      "156% increase in customer lifetime value",";
-      "Real-time emotional intelligence and adaptation",";
+      "98% customer satisfaction scores achieved","
+      "156% increase in customer lifetime value","
+      "Real-time emotional intelligence and adaptation","
       "$230M+ in enhanced revenue per client"
     ]
     metrics: {,,
@@ -349,9 +349,9 @@ export const october2025Services: [,
     price: "$24,999/mo",";,
     savings: "$450M+ enterprise value",";,
     features: [,,
-      "99.8% reasoning accuracy",";
-      "Real-time context awareness",";
-      "Autonomous decision-making",";
+      "99.8% reasoning accuracy","
+      "Real-time context awareness","
+      "Autonomous decision-making","
       "Enterprise integration suite"
     ]
     slug: "consciousness-ai-platform",
@@ -363,9 +363,9 @@ export const october2025Services: [,
     price: "$49,999/mo",";,
     savings: "10,000x performance gain",";,
     features: [,,
-      "Quantum-enhanced optimization",";
-      "Sub-second model training",";
-      "95% energy reduction",";
+      "Quantum-enhanced optimization","
+      "Sub-second model training","
+      "95% energy reduction","
       "Dedicated quantum resources"
     ]
     slug: "quantum-ai-accelerator",
@@ -377,9 +377,9 @@ export const october2025Services: [,
     price: "$14,999/mo",";,
     savings: "$280M+ breach prevention",";,
     features: [,,
-      "99.99% threat prevention",";
-      "Sub-ms response time",";
-      "Zero false positives",";
+      "99.99% threat prevention","
+      "Sub-ms response time","
+      "Zero false positives","
       "24/7 autonomous protection"
     ]
     slug: "autonomous-security-mesh",";,

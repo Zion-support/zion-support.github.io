@@ -6,19 +6,19 @@ const March2026InnovationSpotlightBanner: ()  => {,,
       description: 'Revolutionary brain-computer interface achieving 99.98% neural accuracy',',';,
       impact: '500% cognitive enhancement',',';,
       icon: '🧠',',';,
-      color: 'from-purple-500 to-indigo-500},';
+      color: 'from-purple-500 to-indigo-500},'
     {
       title: 'Quantum Temporal Computing',',';,
       description: 'Processing information across multiple time dimensions simultaneously',',';,
       impact: '1000x temporal efficiency',',';,
       icon: '⏰',',';,
-      color: 'from-blue-500 to-cyan-500},';
+      color: 'from-blue-500 to-cyan-500},'
     {
       title: 'Autonomous Reality Synthesis',',';,
       description: 'AI systems that create and manage parallel digital realities',',';,
       impact: '$5.2B market creation',',';,
       icon: '🌌',',';,
-      color: 'from-emerald-500 to-teal-500},';
+      color: 'from-emerald-500 to-teal-500},'
       title: 'Neural-Synaptic Fusion AI',',
       description: 'Revolutionary brain-computer interface achieving 99.98% neural accuracy',',
       impact: '500% cognitive enhancement',',
@@ -46,8 +46,8 @@ const March2026InnovationSpotlightBanner: ()  => {,,
       {/* Animated background effects */}
       <div className: "absolute inset-0 overflow-hidden opacity-20">";,
         <div className: "absolute top-0 left-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>";,
-        <div className: "absolute bottom-0 right-1/4 w-96 h-96 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style ={{ animationDelay: '2s' }}></div>;';
-        <div className: "absolute top-1/2 left-1/2 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style ={{ animationDelay: '4s' }}></div>;';
+        <div className: "absolute bottom-0 right-1/4 w-96 h-96 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style ={{ animationDelay: '2s' }}></div>;'
+        <div className: "absolute top-1/2 left-1/2 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style ={{ animationDelay: '4s' }}></div>;'
       <div className: "absolute inset-0 overflow-hidden opacity-20">",
         <div className: "absolute top-0 left-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>",
         <div className: "absolute bottom-0 right-1/4 w-96 h-96 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>'
@@ -87,10 +87,10 @@ const March2026InnovationSpotlightBanner: ()  => {,,
           {/* Innovation Stats */}
           <div className: "grid grid-cols-2 md: grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">",
             {[
-              { value: '99.98%', label: 'Neural Accuracy', icon: '🧠', color: 'text-purple-400' }';
-              { value: '1000x', label: 'Processing Speed', icon: '⚡', color: 'text-indigo-400' }';
-              { value: '$5.2B', label: 'Market Creation', icon: '💰', color: 'text-blue-400' }';
-              { value: '500%', label: 'Enhancement', icon: '📈', color: 'text-emerald-400' }';
+              { value: '99.98%', label: 'Neural Accuracy', icon: '🧠', color: 'text-purple-400' }'
+              { value: '1000x', label: 'Processing Speed', icon: '⚡', color: 'text-indigo-400' }'
+              { value: '$5.2B', label: 'Market Creation', icon: '💰', color: 'text-blue-400' }'
+              { value: '500%', label: 'Enhancement', icon: '📈', color: 'text-emerald-400' }'
           <div className: "grid grid-cols-2 md: grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">",
             {[
               { value: '99.98%', label: 'Neural Accuracy', icon: '🧠', color: 'text-purple-400' },'
@@ -142,7 +142,7 @@ const March2026InnovationSpotlightBanner: ()  => {,,
 
                 {/* Impact */}
                 <div className: "text-center mb-6">";,
-                  <div className: {`inline-block px-4 py-2 rounded-full bg-gradient-to-r ${innovation.color} text-white text-sm font-bold`}>`;
+                  <div className: {`inline-block px-4 py-2 rounded-full bg-gradient-to-r ${innovation.color} text-white text-sm font-bold`}>`
                     Impact: {innovation.impact},
                 <div className: "text-center mb-6">",
                   <div className: {`inline-block px-4 py-2 rounded-full bg-gradient-to-r ${innovation.color} text-white text-sm font-bold`}>`

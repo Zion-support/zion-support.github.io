@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import React from 'react';'
 
 const AITrendsInsightsBanner2026: React.FC: ()  => {,,
@@ -147,10 +147,10 @@ const AITrendsInsightsBanner2026: React.FC: ()  => {,,
   ];
 
   const marketInsights: [,
-    { value: '$2.5T', label: 'Global AI Market Size', icon: <TrendingUp className: "w-6 h-6" /> }";
-    { value: '85%', label: 'Enterprise AI Adoption', icon: <Users className: "w-6 h-6" /> }";
-    { value: '500M+', label: 'AI-Powered Devices', icon: <Globe className: "w-6 h-6" /> }";
-    { value: '2.3M', label: 'AI Job Openings', icon: <Award className: "w-6 h-6" /> }";
+    { value: '$2.5T', label: 'Global AI Market Size', icon: <TrendingUp className: "w-6 h-6" /> }"
+    { value: '85%', label: 'Enterprise AI Adoption', icon: <Users className: "w-6 h-6" /> }"
+    { value: '500M+', label: 'AI-Powered Devices', icon: <Globe className: "w-6 h-6" /> }"
+    { value: '2.3M', label: 'AI Job Openings', icon: <Award className: "w-6 h-6" /> }"
     { value: '$2.5T', label: 'Global AI Market Size', icon: <TrendingUp className: "w-6 h-6" /> },"
     { value: '85%', label: 'Enterprise AI Adoption', icon: <Users className: "w-6 h-6" /> },"
     { value: '500M+', label: 'AI-Powered Devices', icon: <Globe className: "w-6 h-6" /> },"
@@ -162,8 +162,8 @@ const AITrendsInsightsBanner2026: React.FC: ()  => {,,
       {/* Animated background effects */}
       <div className: "absolute inset-0 overflow-hidden opacity-20">";,
         <div className: "absolute top-0 left-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>";,
-        <div className: "absolute bottom-0 right-1/4 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style ={{ animationDelay: '2s' }}></div>;';
-        <div className: "absolute top-1/2 left-1/2 w-96 h-96 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style ={{ animationDelay: '4s' }}></div>;';
+        <div className: "absolute bottom-0 right-1/4 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style ={{ animationDelay: '2s' }}></div>;'
+        <div className: "absolute top-1/2 left-1/2 w-96 h-96 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style ={{ animationDelay: '4s' }}></div>;'
       <div className: "absolute inset-0 overflow-hidden opacity-20">",
         <div className: "absolute top-0 left-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>",
         <div className: "absolute bottom-0 right-1/4 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>'
@@ -197,7 +197,7 @@ const AITrendsInsightsBanner2026: React.FC: ()  => {,,
           
           <p className: "text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">",";,
   Stay ahead of the curve with the latest AI trends, market insights, and breakthrough technologies. 
-            Discover what's shaping the future of artificial intelligence and how it impacts your business.;';
+            Discover what's shaping the future of artificial intelligence and how it impacts your business.;'
           </p>
 
           {/* Market Insights */}
@@ -359,7 +359,7 @@ const AITrendsInsightsBanner2026: React.FC: ()  => {,,
   Lead the AI Revolution
               </h3>
               <p className: "text-gray-400 mb-8 max-w-2xl mx-auto">,";,
-  Don't just follow trends – create them. Get exclusive access to our AI insights';
+  Don't just follow trends – create them. Get exclusive access to our AI insights'
                 early technology previews, and strategic guidance for your organization.
               </p>
               <div className: "flex flex-col sm: flex-row gap-4 justify-center">",

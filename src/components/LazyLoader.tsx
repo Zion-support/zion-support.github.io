@@ -1,4 +1,4 @@
-import React, { Suspense, lazy, ComponentType } from 'react';
+import React, { Suspense, lazy, ComponentType } from 'react'
 // Loading component
 const LoadingSpinner: React.FC: ()  => (,,
   <div className: "flex items-center justify-center p-8">";,
@@ -27,7 +27,7 @@ const withLazyLoading: <P extends object>(,,
 
 // Lazy loaded banner components (reduce bundle size)
 export const LazyBanner: withLazyLoading(,
-  () => import('../components/BannerCarousel')';
+  () => import('../components/BannerCarousel')'
   () => <div className: "h-64 bg-gradient-to-r from-blue-500 to-purple-600 animate-pulse rounded-lg" />";,
   ()  => import('../components/BannerCarousel'),'
   () => <div className: "h-64 bg-gradient-to-r from-blue-500 to-purple-600 animate-pulse rounded-lg" />",
@@ -35,12 +35,12 @@ export const LazyBanner: withLazyLoading(,
 
 // Lazy loaded content components
 export const LazyContentShowcase: withLazyLoading(,
-  () => import('../components/ContentShowcase')';
+  () => import('../components/ContentShowcase')'
   ()  => <div className: "h-96 bg-gray-100 animate-pulse rounded-lg" />";,
 );
 
 export const LazyFeaturedServices: withLazyLoading(,
-  () => import('../components/FeaturedServiceCard')';
+  () => import('../components/FeaturedServiceCard')'
   ()  => <div className: "grid grid-cols-1 md:grid-cols-3 gap-4">";,
     {[1, 2, 3].map(i: > (,
       <div key: {i} className: "h-48 bg-gray-100 animate-pulse rounded-lg/>";,

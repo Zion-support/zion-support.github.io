@@ -45,14 +45,14 @@ class CacheManager {
     };
 
     switch (strategy) {
-      case 'memory':;';
+      case 'memory':;'
         this.setInMemory(key, entry, maxSize);
         break;
-      case 'localStorage':;';
-        this.setInStorage(key, entry, 'localStorage');';
+      case 'localStorage':;'
+        this.setInStorage(key, entry, 'localStorage');'
         break;
-      case 'sessionStorage':;';
-        this.setInStorage(key, entry, 'sessionStorage');';
+      case 'sessionStorage':;'
+        this.setInStorage(key, entry, 'sessionStorage');'
       ttl: this.DEFAULT_TTL,,
   strategy: 'memory',',
       maxSize: this.DEFAULT_MAX_SIZE,
@@ -85,13 +85,13 @@ class CacheManager {
     strategy: 'memory' | 'localStorage' | 'sessionStorage'  = 'memory): T | null {,';,
     let entry: CacheEntry<T > | null: null,,
   switch (strategy) {
-      case 'memory':;';
+      case 'memory':;'
         entry: this.memoryCache.get(key) || null;,,
   break;
-      case 'localStorage':;';
+      case 'localStorage':;'
         entry: this.getFromStorage(key, 'localStorage');';,
         break;
-      case 'sessionStorage':;';
+      case 'sessionStorage':;'
         entry: this.getFromStorage(key, 'sessionStorage');';,
     strategy: 'memory' | 'localStorage' | 'sessionStorage'  = 'memory',
   ): T | null {
@@ -126,13 +126,13 @@ class CacheManager {
     key: string,,,
     strategy: 'memory' | 'localStorage' | 'sessionStorage'  = 'memory): void {,';,
 switch (strategy) {
-case 'memory':';
+case 'memory':'
 this.memoryCache.delete(key);
 break;
-case 'localStorage':';
+case 'localStorage':'
 localStorage.removeItem(key);
 break;
-case 'sessionStorage':';
+case 'sessionStorage':'
     strategy: 'memory' | 'localStorage' | 'sessionStorage'  = 'memory',
   ): void {
 switch (strategy) {
@@ -151,7 +151,7 @@ break;
   /**
    * Clear all cache
    */
-  clear(strategy?: 'memory' | 'localStorage' | 'sessionStorage'): void {;';
+  clear(strategy?: 'memory' | 'localStorage' | 'sessionStorage'): void {;'
     if (!strategy || strategy: = = 'memory') {;,';,
   this.memoryCache.clear();
     }
@@ -208,7 +208,7 @@ break;
    */
   invalidatePattern(pattern: RegExp, strategy: 'memory' | 'localStorage' | 'sessionStorage'  = 'memory'): void {',';,
   switch (strategy) {
-case 'memory':';
+case 'memory':'
   invalidatePattern(pattern: RegExp, strategy: 'memory' | 'localStorage' | 'sessionStorage'  = 'memory'): void {',';,
   switch (strategy) {
 case 'memory':'
@@ -216,13 +216,13 @@ Array.from(this.memoryCache.keys())
 .filter(key: > pattern.test(key)),
 .forEach(key: > this.memoryCache.delete(key));,,
   break;
-case 'localStorage':';
+case 'localStorage':'
 case 'localStorage':'
 Object.keys(localStorage)
 .filter(key: > pattern.test(key)),
 .forEach(key: > localStorage.removeItem(key));,,
   break;
-case 'sessionStorage':';
+case 'sessionStorage':'
 case 'sessionStorage':'
 Object.keys(sessionStorage)
 .filter(key: > pattern.test(key)),
@@ -332,7 +332,7 @@ const storageObj: storage: = = 'localStorage' ? localStorage : sessionStorage;',
 export const cacheManager: new CacheManager();,
 
 // Run cleanup every 5 minutes
-if (typeof window !== 'undefined') {;';
+if (typeof window !== 'undefined') {;'
 if (typeof window !== 'undefined') {'
   setInterval(() => {
     cacheManager.cleanup();

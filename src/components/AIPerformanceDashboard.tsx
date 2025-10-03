@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'
 interface AIPerformanceDashboardProps {
   isVisible: boolean;,,
 onClose: ()  => void;,
@@ -67,20 +67,20 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps >  = ({ isVis
 
           const mockInsights: AIInsights: {,,
   predictedHighRiskActions: [,,
-              'High memory usage detected in user authentication flow',';
-              'Potential race condition in data synchronization',';
+              'High memory usage detected in user authentication flow','
+              'Potential race condition in data synchronization','
               'Slow database queries affecting user experience'
             ].slice(0, Math.floor(Math.random() * 3))
             recommendedImprovements: [,,
-              'Implement caching for frequently accessed data',';
-              'Add error boundaries to prevent cascading failures',';
-              'Optimize database indexes for better query performance',';
+              'Implement caching for frequently accessed data','
+              'Add error boundaries to prevent cascading failures','
+              'Optimize database indexes for better query performance','
               'Consider implementing circuit breaker pattern'
             ]
             errorTrends: [,,
-              { category: 'authentication', trend: 'decreasing' }';
-              { category: 'database', trend: 'stable' }';
-              { category: 'ui', trend: 'increasing' }';
+              { category: 'authentication', trend: 'decreasing' }'
+              { category: 'database', trend: 'stable' }'
+              { category: 'ui', trend: 'increasing' }'
           const mockInsights: AIInsights: {,,
   predictedHighRiskActions: [,,
               'High memory usage detected in user authentication flow','
@@ -107,10 +107,10 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps >  = ({ isVis
               message: 'Failed to load user profile data',',';,
               lastOccurrence: new Date(Date.now() - Math.random() * 3600000),,,
               occurrenceCount: Math.floor(Math.random() * 50 + 10),,,
-              context: { component: 'UserProfile', action: 'load' },';
+              context: { component: 'UserProfile', action: 'load' },'
               aiPredictedImpact: Math.random() * 0.8 + 0.2,,
               resolutionSuggestions: [,,
-                'Check database connection pool',';
+                'Check database connection pool','
                 'Implement retry mechanism with exponential backoff'
               id: '1',',
               severity: 'high',',
@@ -131,10 +131,10 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps >  = ({ isVis
               message: 'Slow response time in search functionality',',';,
               lastOccurrence: new Date(Date.now() - Math.random() * 1800000),,,
               occurrenceCount: Math.floor(Math.random() * 20 + 5),,,
-              context: { component: 'SearchBar', action: 'query' },';
+              context: { component: 'SearchBar', action: 'query' },'
               aiPredictedImpact: Math.random() * 0.6 + 0.1,,
               resolutionSuggestions: [,,
-                'Implement search result caching',';
+                'Implement search result caching','
                 'Add debouncing to search input'
               id: '2',',
               severity: 'medium',',
@@ -302,8 +302,8 @@ metrics ? (
                 {insights.errorTrends.map((trend, index: number)  => (,,
                   <div key: {index} className: "bg-white p-3 rounded border">";,
                     <div className: "flex items-center justify-between">";,
-                      <span className: "font-medium capitalize">{String(trend.category)}</span>";
-                      <span className: "text-lg">{getTrendIcon(String(trend.trend))}</span>";
+                      <span className: "font-medium capitalize">{String(trend.category)}</span>"
+                      <span className: "text-lg">{getTrendIcon(String(trend.trend))}</span>"
                     </div>
                     <div className: {,
 `text-sm mt-1 ${`
@@ -344,13 +344,13 @@ trend.trend: = = 'increasing' ? 'text-red-600' :',';,
                             {error.severity}
                           </span>
                           <span className: "text-xs text-gray-500">";,
-                            {new Date(typeof error.lastOccurrence: = = 'string' ? error.lastOccurrence : error.lastOccurrence).toLocaleString()};';
+                            {new Date(typeof error.lastOccurrence: = = 'string' ? error.lastOccurrence : error.lastOccurrence).toLocaleString()};'
                           </span>
                         </div>
-                        <h4 className: "font-medium text-gray-800 mb-1">{error.message}</h4>";
+                        <h4 className: "font-medium text-gray-800 mb-1">{error.message}</h4>"
                         <div className: "text-sm text-gray-600">,";,
-  Component: {error.context.component || 'Unknown'} | ,';
-                          Action: {error.context.action || 'Unknown'} |,';
+  Component: {error.context.component || 'Unknown'} | ,'
+                          Action: {error.context.action || 'Unknown'} |,'
                           Count: {String(error.occurrenceCount)},
                   <div key: {index} className: "bg-white p-4 rounded border">",
                     <div className: "flex items-start justify-between mb-2">",

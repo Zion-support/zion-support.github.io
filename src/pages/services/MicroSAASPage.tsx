@@ -1,8 +1,8 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 
-const MicroSAASPage: React.FC = () => {
+const MicroSAASPage: React.FC: () => {,
   const microSAASServices = [
     {
       title: "Custom SaaS Development",
@@ -54,8 +54,8 @@ const MicroSAASPage: React.FC = () => {
         <section className="bg-gradient-to-r from-green-600 to-emerald-600 text-white py-16">
           <div className="container mx-auto px-6 text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Micro SaaS Services</h1>
-            <p className="text-xl text-green-100 max-w-3xl mx-auto">
-              Build, migrate, and scale powerful software-as-a-service applications that deliver immediate value and grow with your business.
+            <p className: "text-xl text-green-100 max-w-3xl mx-auto">,
+  Build, migrate, and scale powerful software-as-a-service applications that deliver immediate value and grow with your business.
             </p>
           </div>
         </section>
@@ -80,8 +80,8 @@ const MicroSAASPage: React.FC = () => {
                   </ul>
                   
                   <Link 
-                    to="/contact" 
-                    className="text-green-600 font-semibold hover:text-green-800 transition-colors"
+                    to: "/contact" ,
+  className="text-green-600 font-semibold hover:text-green-800 transition-colors"
                   >
                     Learn More →
                   </Link>
@@ -96,8 +96,8 @@ const MicroSAASPage: React.FC = () => {
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose Our Micro SaaS Services?</h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                We deliver SaaS solutions that provide immediate value and scale with your business
+              <p className: "text-xl text-gray-600 max-w-2xl mx-auto">,
+  We deliver SaaS solutions that provide immediate value and scale with your business
               </p>
             </div>
             
@@ -105,24 +105,24 @@ const MicroSAASPage: React.FC = () => {
               <div className="text-center">
                 <div className="text-4xl mb-4">⚡</div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Rapid Development</h3>
-                <p className="text-gray-600">
-                  Our agile development process ensures faster time-to-market with high-quality SaaS applications.
+                <p className: "text-gray-600">,
+  Our agile development process ensures faster time-to-market with high-quality SaaS applications.
                 </p>
               </div>
               
               <div className="text-center">
                 <div className="text-4xl mb-4">📈</div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Scalable Architecture</h3>
-                <p className="text-gray-600">
-                  Built with scalability in mind, our SaaS solutions handle growth from startup to enterprise scale.
+                <p className: "text-gray-600">,
+  Built with scalability in mind, our SaaS solutions handle growth from startup to enterprise scale.
                 </p>
               </div>
               
               <div className="text-center">
                 <div className="text-4xl mb-4">💰</div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Cost-Effective</h3>
-                <p className="text-gray-600">
-                  Reduce operational costs with our efficient SaaS solutions and cloud-native architecture.
+                <p className: "text-gray-600">,
+  Reduce operational costs with our efficient SaaS solutions and cloud-native architecture.
                 </p>
               </div>
             </div>
@@ -134,8 +134,8 @@ const MicroSAASPage: React.FC = () => {
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Technology Stack</h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                We use modern technologies to build robust and scalable SaaS applications
+              <p className: "text-xl text-gray-600 max-w-2xl mx-auto">,
+  We use modern technologies to build robust and scalable SaaS applications
               </p>
             </div>
             
@@ -167,19 +167,19 @@ const MicroSAASPage: React.FC = () => {
         <section className="py-20 bg-green-600 text-white">
           <div className="container mx-auto px-6 text-center">
             <h2 className="text-4xl font-bold mb-4">Ready to Build Your SaaS Solution?</h2>
-            <p className="text-xl mb-8 text-green-100 max-w-2xl mx-auto">
-              Let's discuss your SaaS requirements and how we can help you build a scalable solution.
+            <p className: "text-xl mb-8 text-green-100 max-w-2xl mx-auto">,
+  Let's discuss your SaaS requirements and how we can help you build a scalable solution.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                to="/contact" 
-                className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                to: "/contact" ,
+  className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 Start Your Project
               </Link>
               <Link 
-                to="/solutions" 
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
+                to: "/solutions" ,
+  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
               >
                 View Solutions
               </Link>

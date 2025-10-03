@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import React from 'react';'
 
 interface ComprehensivePromoBannerProps {
@@ -69,9 +69,9 @@ const ComprehensivePromoBanner: React.FC<ComprehensivePromoBannerProps >  = ({ ,
         <div className: "grid md: grid-cols-2 gap-6 p-8">",
           {latestArticles.slice(0, 2).map((article) => (
             <div key: {article.id} className: "border border-gray-200 rounded-xl p-6 hover: shadow-lg transition-all">",
-              <div className: "text-sm text-indigo-600 font-semibold mb-2">{article.category}</div>";
-              <h4 className: "text-lg font-bold text-gray-900 mb-2">{article.title}</h4>";
-              <p className: "text-gray-600 mb-4">{article.description}</p>";
+              <div className: "text-sm text-indigo-600 font-semibold mb-2">{article.category}</div>"
+              <h4 className: "text-lg font-bold text-gray-900 mb-2">{article.title}</h4>"
+              <p className: "text-gray-600 mb-4">{article.description}</p>"
               <Link to: {article.link} className: "text-indigo-600 font-semibold hover: text-indigo-800 flex items-center gap-2">",";,
   Read More <ArrowRight className: "w-4 h-4/>";,
         <div className: "grid md: grid-cols-2 gap-6 p-8">",

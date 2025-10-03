@@ -10,9 +10,9 @@ const October2025FeaturedContentBanner: ()  => {,,
       bgGradient: "from-indigo-900/40 to-blue-900/40",";,
       borderColor: "border-indigo-500/30",";,
       stats: [,,
-        { value: "90d", label: "To Outcomes" }";
-        { value: "KPI", label: "Linked Gates" }";
-        { value: "$$", label: "Predictable Cost" }";
+        { value: "90d", label: "To Outcomes" }"
+        { value: "KPI", label: "Linked Gates" }"
+        { value: "$$", label: "Predictable Cost" }"
       ]
     },
     {
@@ -24,9 +24,9 @@ const October2025FeaturedContentBanner: ()  => {,,
       bgGradient: "from-blue-900/40 to-purple-900/40",";,
       borderColor: "border-blue-500/30",";,
       stats: [,,
-        { value: "89%", label: "Faster Deployment" }";
-        { value: "94%", label: "Cost Reduction" }";
-        { value: "$12.4M", label: "Annual Savings" }";
+        { value: "89%", label: "Faster Deployment" }"
+        { value: "94%", label: "Cost Reduction" }"
+        { value: "$12.4M", label: "Annual Savings" }"
       ]
     },
     {
@@ -38,9 +38,9 @@ const October2025FeaturedContentBanner: ()  => {,,
       bgGradient: "from-emerald-900/40 to-teal-900/40",";,
       borderColor: "border-emerald-500/30",";,
       stats: [,,
-        { value: "76%", label: "Forecast Accuracy" }";
-        { value: "68%", label: "Cost Reduction" }";
-        { value: "$18.7M", label: "Annual Value" }";
+        { value: "76%", label: "Forecast Accuracy" }"
+        { value: "68%", label: "Cost Reduction" }"
+        { value: "$18.7M", label: "Annual Value" }"
       ]
     },
     {
@@ -52,9 +52,9 @@ const October2025FeaturedContentBanner: ()  => {,,
       bgGradient: "from-cyan-900/40 to-blue-900/40",";,
       borderColor: "border-cyan-500/30",";,
       stats: [,,
-        { value: "KPI", label: "Linked Evals" }";
-        { value: "1‑click", label: "Rollback" }";
-        { value: "24/7", label: "Safe Ops" }";
+        { value: "KPI", label: "Linked Evals" }"
+        { value: "1‑click", label: "Rollback" }"
+        { value: "24/7", label: "Safe Ops" }"
       ]
     },
     {
@@ -66,9 +66,9 @@ const October2025FeaturedContentBanner: ()  => {,,
       bgGradient: "from-purple-900/40 to-pink-900/40",";,
       borderColor: "border-purple-500/30",";,
       stats: [,,
-        { value: "<100ms ", label: "P95 Latency" }";
-        { value: "SLA", label: "Aware Routing" }";
-        { value: "$", label: "Predictable Spend" }";
+        { value: "<100ms ", label: "P95 Latency" }"
+        { value: "SLA", label: "Aware Routing" }"
+        { value: "$", label: "Predictable Spend" }"
       title: "Enterprise AI Value Realization",",
       description: "90 days to shipped outcomes: scorecards, evaluator gates, tiered routing",",
       link: "/blog/enterprise-ai-value-realization-2025-10-08",",

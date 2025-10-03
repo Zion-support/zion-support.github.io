@@ -1,6 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, Linkedin, Twitter, Github } from 'lucide-react';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { Mail, Phone, MapPin, Linkedin, Twitter, Github } from 'lucide-react'
 
 export default function Footer() {
   return (
@@ -9,11 +9,11 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              Zion Tech Group
+            <h3 className: "text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">,
+  Zion Tech Group
             </h3>
-            <p className="text-gray-300 text-sm leading-relaxed">
-              Leading provider of AI-powered solutions, micro SaaS platforms, and enterprise IT services. 
+            <p className: "text-gray-300 text-sm leading-relaxed">,
+  Leading provider of AI-powered solutions, micro SaaS platforms, and enterprise IT services. 
               Transforming businesses through innovative technology.
             </p>
             <div className="flex space-x-4">
@@ -34,43 +34,43 @@ export default function Footer() {
             <h4 className="text-lg font-semibold text-white">Services</h4>
             <ul className="space-y-2">
               <li>
-                <Link to="/services/ai-services" className="text-gray-300 hover:text-blue-400 transition-colors duration-200 text-sm">
-                  AI Services
+                <Link to: "/services/ai-services" className="text-gray-300 hover:text-blue-400 transition-colors duration-200 text-sm">,
+  AI Services
                 </Link>
               </li>
               <li>
-                <Link to="/services/advanced-ai" className="text-gray-300 hover:text-blue-400 transition-colors duration-200 text-sm">
-                  Advanced AI Solutions
+                <Link to: "/services/advanced-ai" className="text-gray-300 hover:text-blue-400 transition-colors duration-200 text-sm">,
+  Advanced AI Solutions
                 </Link>
               </li>
               <li>
-                <Link to="/services/it-services" className="text-gray-300 hover:text-blue-400 transition-colors duration-200 text-sm">
-                  IT Services
+                <Link to: "/services/it-services" className="text-gray-300 hover:text-blue-400 transition-colors duration-200 text-sm">,
+  IT Services
                 </Link>
               </li>
               <li>
-                <Link to="/services/comprehensive-it" className="text-gray-300 hover:text-blue-400 transition-colors duration-200 text-sm">
-                  Comprehensive IT Solutions
+                <Link to: "/services/comprehensive-it" className="text-gray-300 hover:text-blue-400 transition-colors duration-200 text-sm">,
+  Comprehensive IT Solutions
                 </Link>
               </li>
               <li>
-                <Link to="/services/micro-saas" className="text-gray-300 hover:text-blue-400 transition-colors duration-200 text-sm">
-                  Micro SaaS
+                <Link to: "/services/micro-saas" className="text-gray-300 hover:text-blue-400 transition-colors duration-200 text-sm">,
+  Micro SaaS
                 </Link>
               </li>
               <li>
-                <Link to="/services/innovative-micro-saas" className="text-gray-300 hover:text-blue-400 transition-colors duration-200 text-sm">
-                  Innovative Micro SaaS
+                <Link to: "/services/innovative-micro-saas" className="text-gray-300 hover:text-blue-400 transition-colors duration-200 text-sm">,
+  Innovative Micro SaaS
                 </Link>
               </li>
               <li>
-                <Link to="/services/real-time-cognitive-automation" className="text-gray-300 hover:text-blue-400 transition-colors duration-200 text-sm">
-                  Cognitive Automation
+                <Link to: "/services/real-time-cognitive-automation" className="text-gray-300 hover:text-blue-400 transition-colors duration-200 text-sm">,
+  Cognitive Automation
                 </Link>
               </li>
               <li>
-                <Link to="/services/quantum-computing-consulting" className="text-gray-300 hover:text-blue-400 transition-colors duration-200 text-sm">
-                  Quantum Computing
+                <Link to: "/services/quantum-computing-consulting" className="text-gray-300 hover:text-blue-400 transition-colors duration-200 text-sm">,
+  Quantum Computing
                 </Link>
               </li>
             </ul>
@@ -81,28 +81,28 @@ export default function Footer() {
             <h4 className="text-lg font-semibold text-white">Solutions</h4>
             <ul className="space-y-2">
               <li>
-                <Link to="/solutions/enterprise" className="text-gray-300 hover:text-blue-400 transition-colors duration-200 text-sm">
-                  Enterprise Solutions
+                <Link to: "/solutions/enterprise" className="text-gray-300 hover:text-blue-400 transition-colors duration-200 text-sm">,
+  Enterprise Solutions
                 </Link>
               </li>
               <li>
-                <Link to="/solutions/smb" className="text-gray-300 hover:text-blue-400 transition-colors duration-200 text-sm">
-                  SMB Solutions
+                <Link to: "/solutions/smb" className="text-gray-300 hover:text-blue-400 transition-colors duration-200 text-sm">,
+  SMB Solutions
                 </Link>
               </li>
               <li>
-                <Link to="/solutions/startup" className="text-gray-300 hover:text-blue-400 transition-colors duration-200 text-sm">
-                  Startup Solutions
+                <Link to: "/solutions/startup" className="text-gray-300 hover:text-blue-400 transition-colors duration-200 text-sm">,
+  Startup Solutions
                 </Link>
               </li>
               <li>
-                <Link to="/case-studies" className="text-gray-300 hover:text-blue-400 transition-colors duration-200 text-sm">
-                  Case Studies
+                <Link to: "/case-studies" className="text-gray-300 hover:text-blue-400 transition-colors duration-200 text-sm">,
+  Case Studies
                 </Link>
               </li>
               <li>
-                <Link to="/resources" className="text-gray-300 hover:text-blue-400 transition-colors duration-200 text-sm">
-                  Resources
+                <Link to: "/resources" className="text-gray-300 hover:text-blue-400 transition-colors duration-200 text-sm">,
+  Resources
                 </Link>
               </li>
             </ul>
@@ -135,14 +135,14 @@ export default function Footer() {
               © 2024 Zion Tech Group. All rights reserved.
             </div>
             <div className="flex space-x-6">
-              <Link to="/privacy" className="text-gray-400 hover:text-blue-400 transition-colors duration-200 text-sm">
-                Privacy Policy
+              <Link to: "/privacy" className="text-gray-400 hover:text-blue-400 transition-colors duration-200 text-sm">,
+  Privacy Policy
               </Link>
-              <Link to="/terms" className="text-gray-400 hover:text-blue-400 transition-colors duration-200 text-sm">
-                Terms of Service
+              <Link to: "/terms" className="text-gray-400 hover:text-blue-400 transition-colors duration-200 text-sm">,
+  Terms of Service
               </Link>
-              <Link to="/cookies" className="text-gray-400 hover:text-blue-400 transition-colors duration-200 text-sm">
-                Cookie Policy
+              <Link to: "/cookies" className="text-gray-400 hover:text-blue-400 transition-colors duration-200 text-sm">,
+  Cookie Policy
               </Link>
             </div>
           </div>

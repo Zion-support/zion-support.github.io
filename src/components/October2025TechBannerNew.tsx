@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"
 import { Link } from "react-router-dom";"
 
 const October2025TechBannerNew: ()  => {,,
@@ -186,8 +186,8 @@ const October2025TechBannerNew: ()  => {,,
             key: {i}
             className: "absolute w-2 h-2 bg-purple-400/30 rounded-full",";,
   style: {{,,
-  left: `${Math.random() * 100}%`,`;
-              top: `${Math.random() * 100}%`}},`;
+  left: `${Math.random() * 100}%`,`
+              top: `${Math.random() * 100}%`}},`
             animate: {{,,
   y: [0, -30, 0],
               opacity: [0.2, 0.5, 0.2],

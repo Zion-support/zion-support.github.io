@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 interface FeaturedContent {
   id: number;,,
 title: string;,
@@ -25,7 +25,7 @@ const NewContentAdvertisingBanner: React.FC: ()  => {,,
       badge: 'NEW',',';,
       gradient: 'from-pink-500 to-red-500',',';,
       icon: <Sparkles className: "w-6 h-6/>,",";,
-      link: '/blog/ai-2025-oct-03-governed-agent-rollbacks},';
+      link: '/blog/ai-2025-oct-03-governed-agent-rollbacks},'
     {
       id: 7,,,
       title: 'Consentless Personalization (Edge)',',';,
@@ -36,7 +36,7 @@ const NewContentAdvertisingBanner: React.FC: ()  => {,,
       badge: 'FEATURED',',';,
       gradient: 'from-teal-500 to-cyan-500',',';,
       icon: <TrendingUp className: "w-6 h-6/>,",";,
-      link: '/blog/edge-2025-oct-02-consentless-personalization-blueprint},';
+      link: '/blog/edge-2025-oct-02-consentless-personalization-blueprint},'
     {
       id: 1,,,
       title: 'AI 2027: Operational Trust Blueprint',',';,
@@ -47,7 +47,7 @@ const NewContentAdvertisingBanner: React.FC: ()  => {,,
       badge: 'NEW',',';,
       gradient: 'from-blue-500 to-purple-500',',';,
       icon: <Star className: "w-6 h-6/>,",";,
-      link: '/blog/ai-2027-operational-trust-blueprint},';
+      link: '/blog/ai-2027-operational-trust-blueprint},'
     {
       id: 2,,,
       title: 'Edge 2026: Private Feature Flags',',';,
@@ -58,7 +58,7 @@ const NewContentAdvertisingBanner: React.FC: ()  => {,,
       badge: 'TRENDING',',';,
       gradient: 'from-cyan-500 to-blue-500',',';,
       icon: <TrendingUp className: "w-6 h-6/>,",";,
-      link: '/blog/edge-2026-private-feature-flags},';
+      link: '/blog/edge-2026-private-feature-flags},'
     {
       id: 3,,,
       title: 'GenAI Quality Tiers v2 (2026)',',';,
@@ -69,14 +69,14 @@ const NewContentAdvertisingBanner: React.FC: ()  => {,,
       badge: 'FEATURED',',';,
       gradient: 'from-green-500 to-emerald-500',',';,
       icon: <Award className: "w-6 h-6/>,",";,
-      link: '/blog/genai-quality-tiers-v2-2026},';
+      link: '/blog/genai-quality-tiers-v2-2026},'
   ];
 
   const achievements: [,
-    { value: '500K+', label: 'Monthly Readers', icon: <Users className: "w-8 h-8" /> }";
-    { value: '98%', label: 'Customer Satisfaction', icon: <Star className: "w-8 h-8" /> }";
-    { value: '200+', label: 'Expert Articles', icon: <Award className: "w-8 h-8" /> }";
-    { value: '50+', label: 'Industry Awards', icon: <Target className: "w-8 h-8" /> }";
+    { value: '500K+', label: 'Monthly Readers', icon: <Users className: "w-8 h-8" /> }"
+    { value: '98%', label: 'Customer Satisfaction', icon: <Star className: "w-8 h-8" /> }"
+    { value: '200+', label: 'Expert Articles', icon: <Award className: "w-8 h-8" /> }"
+    { value: '50+', label: 'Industry Awards', icon: <Target className: "w-8 h-8" /> }"
       title: 'Governed Agent Rollbacks',',
       category: 'AI Operations',',
       readTime: '7 min',',
@@ -149,8 +149,8 @@ const NewContentAdvertisingBanner: React.FC: ()  => {,,
       {/* Animated background effects */}
       <div className: "absolute inset-0 overflow-hidden opacity-20">";,
         <div className: "absolute top-0 left-1/4 w-96 h-96 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>";,
-        <div className: "absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style ={{ animationDelay: '2s' }}></div>;';
-        <div className: "absolute top-1/2 left-1/2 w-96 h-96 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style ={{ animationDelay: '4s' }}></div>;';
+        <div className: "absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style ={{ animationDelay: '2s' }}></div>;'
+        <div className: "absolute top-1/2 left-1/2 w-96 h-96 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style ={{ animationDelay: '4s' }}></div>;'
       <div className: "absolute inset-0 overflow-hidden opacity-20">",
         <div className: "absolute top-0 left-1/4 w-96 h-96 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>",
         <div className: "absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>'
@@ -264,7 +264,7 @@ const NewContentAdvertisingBanner: React.FC: ()  => {,,
                 <div className: "mb-6">";,
                   <div className: "flex items-center gap-2 text-gray-400">";,
                     <Users className: "w-4 h-4/>";,
-                    <span className: "text-sm">{content.readers} readers</span>";
+                    <span className: "text-sm">{content.readers} readers</span>"
                 <div className: "mb-6">",
                   <div className: "flex items-center gap-2 text-gray-400">",
                     <Users className: "w-4 h-4" />",
@@ -273,7 +273,7 @@ const NewContentAdvertisingBanner: React.FC: ()  => {,,
                 </div>
 
                 {/* CTA Button */}
-                <a href: {content.link || '/blog'};';
+                <a href: {content.link || '/blog'};'
                   className: {`group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r ${content.gradient} hover:opacity-90 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1`}`
                 >
                   <span >Read Now</span>

@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 import { Link, NavLink } from "react-router-dom"
 ;
 const navLinkClass: ({ isActive }: { isActive: boolean })  => isActive
@@ -14,28 +14,28 @@ const navLinkClass: ({ isActive }: { isActive: boolean })  => isActive
 						<span className: "text-xl font-bold text-gray-900">Zion Tech Group</span>";,
 					</Link>
 					<nav className: "hidden md:flex items-center gap-6" aria-label="Main navigation">";,
-						<NavLink to: "/services" className={navLinkClass}>";
+						<NavLink to: "/services" className={navLinkClass}>"
 							Services
 						</NavLink>
-						<NavLink to: "/solutions" className={navLinkClass}>";
+						<NavLink to: "/solutions" className={navLinkClass}>"
 							Solutions
 						</NavLink>
-						<NavLink to: "/marketplace" className={navLinkClass}>";
+						<NavLink to: "/marketplace" className={navLinkClass}>"
 							Marketplace
 						</NavLink>
-						<NavLink to: "/case-studies" className={navLinkClass}>";
+						<NavLink to: "/case-studies" className={navLinkClass}>"
 							Case Studies
 						</NavLink>
-						<NavLink to: "/blog" className={navLinkClass}>";
+						<NavLink to: "/blog" className={navLinkClass}>"
 							Blog
 						</NavLink>
-						<NavLink to: "/resources" className={navLinkClass}>";
+						<NavLink to: "/resources" className={navLinkClass}>"
 							Resources
 						</NavLink>
-						<NavLink to: "/about" className={navLinkClass}>";
+						<NavLink to: "/about" className={navLinkClass}>"
 							About
 						</NavLink>
-						<NavLink to: "/careers" className ={navLinkClass}>";
+						<NavLink to: "/careers" className ={navLinkClass}>"
 							Careers
 						</NavLink>
 						<Link to: "/contact" className: "bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors">,";,

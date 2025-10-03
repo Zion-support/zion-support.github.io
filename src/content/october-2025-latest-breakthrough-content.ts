@@ -14,9 +14,9 @@
     featured: true,,
     tags: ["Digital Twins", "AI", "Enterprise", "IoT", "Predictive Analytics"],";,
     highlights: [,,
-      "$850M success story from Fortune 100 energy company",";
-      "99.2% accuracy in failure prediction",";
-      "89% reduction in unplanned downtime",";
+      "$850M success story from Fortune 100 energy company","
+      "99.2% accuracy in failure prediction","
+      "89% reduction in unplanned downtime","
       "$47B in aggregate business value created"
     ]
     metrics: {,,
@@ -39,9 +39,9 @@
     featured: true,,
     tags: ["LLM Orchestration", "Multi-Model AI", "Cost Optimization", "Enterprise AI"],";,
     highlights: [,,
-      "60% cost reduction through intelligent model routing",";
-      "10x performance gain with multi-model systems",";
-      "95% accuracy in autonomous routing decisions",";
+      "60% cost reduction through intelligent model routing","
+      "10x performance gain with multi-model systems","
+      "95% accuracy in autonomous routing decisions","
       "$180B market by 2027"
     ]
     metrics: {,,
@@ -64,9 +64,9 @@
     featured: true,,
     tags: ["Vector Databases", "RAG", "Performance Optimization", "Semantic Search"],";,
     highlights: [,,
-      "Sub-10ms queries at billion-vector scale",";
-      "70% infrastructure cost reduction",";
-      "99.9% recall accuracy maintained",";
+      "Sub-10ms queries at billion-vector scale","
+      "70% infrastructure cost reduction","
+      "99.9% recall accuracy maintained","
       "100x performance vs naive implementations"
     ]
     metrics: {,,
@@ -89,9 +89,9 @@
     featured: true,,
     tags: ["AI Agents", "Production AI", "Reliability Engineering", "Enterprise Architecture"],";,
     highlights: [,,
-      "99.9% uptime for autonomous systems",";
-      "85% cost savings vs manual operations",";
-      "10x productivity through automation",";
+      "99.9% uptime for autonomous systems","
+      "85% cost savings vs manual operations","
+      "10x productivity through automation","
       "100% audit compliance"
     ]
     metrics: {,,

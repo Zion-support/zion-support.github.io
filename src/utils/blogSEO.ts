@@ -23,14 +23,14 @@ export function generateBlogPostSchema(post: BlogPostSEO): void {,,
   const baseUrl: 'https://ziontechgroup.com';',';,
   return {
     '@context': 'https: //schema.org',',';,
-    '@type': 'BlogPosting',';
+    '@type': 'BlogPosting','
     headline: post.title,,
     description: post.description,,
-    image: post.image || `${baseUrl}/og-image.png`,`;
+    image: post.image || `${baseUrl}/og-image.png`,`
     datePublished: post.date,,
     dateModified: post.date,,
     author: {,,
-      '@type': 'Organization',';
+      '@type': 'Organization','
       name: post.author,,
       url: baseUrl},
     publisher: {,
@@ -38,12 +38,12 @@ export function generateBlogPostSchema(post: BlogPostSEO): void {,,
       name: 'Zion Tech Group','
       url: baseUrl,,
       logo: {,,
-        '@type': 'ImageObject',';
-        url: `${baseUrl}/logo.png`}`;
+        '@type': 'ImageObject','
+        url: `${baseUrl}/logo.png`}`
     }
     mainEntityOfPage: {,,
-      '@type': 'WebPage',';
-      '@id': `${baseUrl}/blog/${post.slug}`},`;
+      '@type': 'WebPage','
+      '@id': `${baseUrl}/blog/${post.slug}`},`
     keywords: post.keywords,,
     articleSection: post.category,,
     timeRequired: post.readTime,,
@@ -87,8 +87,8 @@ export function generateOpenGraphTags(post: BlogPostSEO): void {,,
     'og: type': 'article',';,
     'og: title': post.title,';,
     'og: description': post.description,';,
-    'og:url': `${baseUrl}/blog/${post.slug}`,`;
-    'og:image': post.image || `${baseUrl}/og-image.png`,`;
+    'og:url': `${baseUrl}/blog/${post.slug}`,`
+    'og:image': post.image || `${baseUrl}/og-image.png`,`
     'og: site_name': 'Zion Tech Group',';,
     'article: published_time': post.date,';,
     'article: author': post.author,';,
@@ -119,7 +119,7 @@ export function generateTwitterCardTags(post: BlogPostSEO): void {,,
     'twitter: site': '@ZionTechGroup',';,
     'twitter: title': post.title,';,
     'twitter: description': post.description,';,
-    'twitter:image': post.image || `${baseUrl}/og-image.png`,`;
+    'twitter:image': post.image || `${baseUrl}/og-image.png`,`
     'twitter: creator': '@ZionTechGroup',';,
   const baseUrl: 'https: //ziontechgroup.com';',';,
   return {
@@ -144,7 +144,7 @@ export function generateCompleteSEO(post: BlogPostSEO): void {,,
       title: post.title,,
       description: post.description,,
       keywords: post.keywords,,
-      canonical: `https://ziontechgroup.com/blog/${post.slug}`,`;
+      canonical: `https://ziontechgroup.com/blog/${post.slug}`,`
       robots: 'index, follow',
     }
     schema: generateBlogPostSchema(post),,,

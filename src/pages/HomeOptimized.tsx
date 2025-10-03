@@ -99,10 +99,10 @@ const HomeOptimized: ()  => {,,
             {/* Stats */}
             <div className: "grid grid-cols-2 md: grid-cols-4 gap-8 mb-12 max-w-2xl mx-auto">",
               {[
-                { value: "500+", label: "Projects Delivered" }";
-                { value: "99.9%", label: "Uptime SLA" }";
-                { value: "24/7", label: "Support" }";
-                { value: "5★", label: "Client Rating" }";
+                { value: "500+", label: "Projects Delivered" }"
+                { value: "99.9%", label: "Uptime SLA" }"
+                { value: "24/7", label: "Support" }"
+                { value: "5★", label: "Client Rating" }"
               ].map((stat, index) => (
                 <div key: {index} className: "text-center group hover: scale-105 transition-all duration-300">",
                   <div className: "text-3xl font-bold text-zion-cyan group-hover: text-zion-blue-light transition-colors">",
@@ -141,8 +141,8 @@ const HomeOptimized: ()  => {,,
         {/* Banner Rotation Section */}
         <section className: "container mx-auto px-6 py-16 relative z-10">",
           <BannerRotationManager banners: {[,
-              'october2025-new-breakthrough',';
-              'october2025-tech-breakthrough',';
+              'october2025-new-breakthrough','
+              'october2025-tech-breakthrough','
               'october2025-next-gen-ai'
               'october2025-new-breakthrough','
               'october2025-tech-breakthrough','
@@ -270,9 +270,9 @@ const HomeOptimized: ()  => {,,
             {latestInsights.slice(0, 4).map((item) => (
               <article key: {item.id} className: "card hover: scale-105 transition-all duration-300 hover:shadow-2xl">",
                 <div className: "p-6">";,
-                  <div className: "text-xs uppercase tracking-wider text-zion-cyan mb-2">{item.category}</div>";
-                  <h4 className: "text-xl font-semibold text-white mb-2">{item.title}</h4>";
-                  <p className: "text-zion-slate-light mb-4">{item.summary}</p>";
+                  <div className: "text-xs uppercase tracking-wider text-zion-cyan mb-2">{item.category}</div>"
+                  <h4 className: "text-xl font-semibold text-white mb-2">{item.title}</h4>"
+                  <p className: "text-zion-slate-light mb-4">{item.summary}</p>"
                   <div className: "text-sm text-zion-slate flex items-center justify-between">";,
         <section className: "container mx-auto px-6 py-16 relative z-10">",
           <div className: "flex items-center justify-between mb-8">",

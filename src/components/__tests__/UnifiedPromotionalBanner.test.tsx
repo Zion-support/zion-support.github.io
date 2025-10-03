@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 import '@testing-library/jest-dom'
-import UnifiedPromotionalBanner from '../UnifiedPromotionalBanner';
+import UnifiedPromotionalBanner from '../UnifiedPromotionalBanner'
 import React from 'react';'
 import '@testing-library/jest-dom';'
 import UnifiedPromotionalBanner from '../UnifiedPromotionalBanner';'
@@ -10,15 +10,15 @@ const RouterWrapper: React.FC<{ children: React.ReactNode }> = ({ children })  =
   <BrowserRouter >{children}</BrowserRouter>
 );
 
-describe('UnifiedPromotionalBanner', () => {;';
+describe('UnifiedPromotionalBanner', () => {;'
   const defaultProps: UnifiedPromotionalBannerProps: {,,
   title: 'Test Banner Title',',';,
     description: 'Test banner description',',';,
     ctaText: 'Click Here',',';,
-    ctaLink: '/test-link};';
+    ctaLink: '/test-link};'
 
-  describe('Core Functionality', () => {;';
-    it('renders with required props', () => {;';
+  describe('Core Functionality', () => {;'
+    it('renders with required props', () => {;'
 describe('UnifiedPromotionalBanner', () => {'
   const defaultProps: UnifiedPromotionalBannerProps: {,,
   title: 'Test Banner Title',',
@@ -40,7 +40,7 @@ describe('UnifiedPromotionalBanner', () => {'
       expect(screen.getByText('Click Here')).toBeInTheDocument();'
     });
 
-    it('renders CTA button with correct link', () => {;';
+    it('renders CTA button with correct link', () => {;'
     it('renders CTA button with correct link', () => {'
       render(
         <RouterWrapper >
@@ -52,7 +52,7 @@ describe('UnifiedPromotionalBanner', () => {'
   expect(ctaButton).toHaveAttribute('href', '/test-link');'
     });
 
-    it('applies custom className', () => {;';
+    it('applies custom className', () => {;'
       const { container } = render(
         <RouterWrapper >
           <UnifiedPromotionalBanner {...defaultProps} className: "custom-class/>,";,
@@ -68,8 +68,8 @@ describe('UnifiedPromotionalBanner', () => {'
     });
   });
 
-  describe('Variants', () => {;';
-    it('renders default variant correctly', () => {;';
+  describe('Variants', () => {;'
+    it('renders default variant correctly', () => {;'
       const { container } = render(
         <RouterWrapper >
           <UnifiedPromotionalBanner {...defaultProps} variant: "default/>,";,
@@ -85,7 +85,7 @@ describe('UnifiedPromotionalBanner', () => {'
   expect(banner).toHaveClass('py-8', 'px-6');'
     });
 
-    it('renders compact variant correctly', () => {;';
+    it('renders compact variant correctly', () => {;'
       const { container } = render(
         <RouterWrapper >
           <UnifiedPromotionalBanner {...defaultProps} variant: "compact/>,";,
@@ -100,7 +100,7 @@ describe('UnifiedPromotionalBanner', () => {'
   expect(banner).toHaveClass('py-6', 'px-4');'
     });
 
-    it('renders premium variant correctly', () => {;';
+    it('renders premium variant correctly', () => {;'
       const { container } = render(
         <RouterWrapper >
           <UnifiedPromotionalBanner {...defaultProps} variant: "premium/>,";,
@@ -115,7 +115,7 @@ describe('UnifiedPromotionalBanner', () => {'
   expect(banner).toHaveClass('py-12', 'px-8');'
     });
 
-    it('renders hero variant correctly', () => {;';
+    it('renders hero variant correctly', () => {;'
       const { container } = render(
         <RouterWrapper >
           <UnifiedPromotionalBanner {...defaultProps} variant: "hero/>,";,
@@ -130,7 +130,7 @@ describe('UnifiedPromotionalBanner', () => {'
   expect(banner).toHaveClass('py-16', 'px-10');'
     });
 
-    it('renders mega variant correctly', () => {;';
+    it('renders mega variant correctly', () => {;'
       const { container } = render(
         <RouterWrapper >
           <UnifiedPromotionalBanner {...defaultProps} variant: "mega/>,";,
@@ -146,7 +146,7 @@ describe('UnifiedPromotionalBanner', () => {'
     });
   });
 
-  describe('Themes', () => {;';
+  describe('Themes', () => {;'
     const themes: ['blue', 'purple', 'green', 'orange', 'red', 'cyan', 'gradient'] as const;';,
   describe('Themes', () => {'
     const themes: ['blue', 'purple', 'green', 'orange', 'red', 'cyan', 'gradient'] as const;',
@@ -165,24 +165,24 @@ describe('UnifiedPromotionalBanner', () => {'
     });
   });
 
-  describe('Featured Items', () => {;';
+  describe('Featured Items', () => {;'
     const featuredItems: [,
       {
         title: 'Item 1',',';,
         category: 'Category 1',',';,
         link: '/item-1',',';,
-        metrics: '99% success},';
+        metrics: '99% success},'
       {
         title: 'Item 2',',';,
         category: 'Category 2',',';,
-        link: '/item-2},';
+        link: '/item-2},'
       {
         title: 'Item 3',',';,
         category: 'Category 3',',';,
-        link: '/item-3},';
+        link: '/item-3},'
     ];
 
-    it('renders featured items when provided', () => {;';
+    it('renders featured items when provided', () => {;'
   describe('Featured Items', () => {'
     const featuredItems: [,
       {
@@ -215,7 +215,7 @@ describe('UnifiedPromotionalBanner', () => {'
       expect(screen.getByText('Item 3')).toBeInTheDocument();'
     });
 
-    it('respects showCount prop', () => {;';
+    it('respects showCount prop', () => {;'
     it('respects showCount prop', () => {'
       render(
         <RouterWrapper >
@@ -231,7 +231,7 @@ describe('UnifiedPromotionalBanner', () => {'
       expect(screen.queryByText('Item 3')).not.toBeInTheDocument();'
     });
 
-    it('displays "more items" link when items exceed showCount', () => {;';
+    it('displays "more items" link when items exceed showCount', () => {;'
     it('displays "more items" link when items exceed showCount', () => {'
       render(
         <RouterWrapper >
@@ -245,7 +245,7 @@ describe('UnifiedPromotionalBanner', () => {'
       expect(screen.getByText('+1 more breakthrough')).toBeInTheDocument();'
     });
 
-    it('renders metrics when provided', () => {;';
+    it('renders metrics when provided', () => {;'
     it('renders metrics when provided', () => {'
       render(
         <RouterWrapper >
@@ -256,7 +256,7 @@ describe('UnifiedPromotionalBanner', () => {'
       expect(screen.getByText('99% success')).toBeInTheDocument();'
     });
 
-    it('renders categories in uppercase', () => {;';
+    it('renders categories in uppercase', () => {;'
     it('renders categories in uppercase', () => {'
       render(
         <RouterWrapper >
@@ -268,8 +268,8 @@ describe('UnifiedPromotionalBanner', () => {'
     });
   });
 
-  describe('Badge and Date', () => {;';
-    it('renders badge when provided', () => {;';
+  describe('Badge and Date', () => {;'
+    it('renders badge when provided', () => {;'
       render(
         <RouterWrapper >
           <UnifiedPromotionalBanner {...defaultProps} badge: "NEW/>,";,
@@ -284,7 +284,7 @@ describe('UnifiedPromotionalBanner', () => {'
       expect(screen.getByText('NEW')).toBeInTheDocument();'
     });
 
-    it('renders date when provided', () => {;';
+    it('renders date when provided', () => {;'
       render(
         <RouterWrapper >
           <UnifiedPromotionalBanner {...defaultProps} date: "October 1, 2025/>";,
@@ -298,7 +298,7 @@ describe('UnifiedPromotionalBanner', () => {'
       expect(screen.getByText('October 1, 2025')).toBeInTheDocument();'
     });
 
-    it('renders both badge and date when provided', () => {;';
+    it('renders both badge and date when provided', () => {;'
     it('renders both badge and date when provided', () => {'
       render(
         <RouterWrapper >
@@ -313,8 +313,8 @@ describe('UnifiedPromotionalBanner', () => {'
     });
   });
 
-  describe('Icons', () => {;';
-    it('renders sparkles icon', () => {;';
+  describe('Icons', () => {;'
+    it('renders sparkles icon', () => {;'
       const { container } = render(
         <RouterWrapper >
           <UnifiedPromotionalBanner {...defaultProps} badge: "Test" icon: "sparkles/>,";,
@@ -331,7 +331,7 @@ describe('UnifiedPromotionalBanner', () => {'
   expect(icons.length).toBeGreaterThan(0);
     });
 
-    it('renders zap icon', () => {;';
+    it('renders zap icon', () => {;'
       const { container } = render(
         <RouterWrapper >
           <UnifiedPromotionalBanner {...defaultProps} badge: "Test" icon: "zap/>,";,
@@ -346,7 +346,7 @@ describe('UnifiedPromotionalBanner', () => {'
   expect(icons.length).toBeGreaterThan(0);
     });
 
-    it('does not render icon when set to none', () => {;';
+    it('does not render icon when set to none', () => {;'
       const { container } = render(
         <RouterWrapper >
           <UnifiedPromotionalBanner {...defaultProps} badge: "Test" icon: "none/>,";,
@@ -363,8 +363,8 @@ describe('UnifiedPromotionalBanner', () => {'
     });
   });
 
-  describe('Animation', () => {;';
-    it('applies animation classes by default', () => {;';
+  describe('Animation', () => {;'
+    it('applies animation classes by default', () => {;'
   describe('Animation', () => {'
     it('applies animation classes by default', () => {'
       const { container } = render(
@@ -377,7 +377,7 @@ describe('UnifiedPromotionalBanner', () => {'
   expect(banner).toHaveClass('transition-all', 'duration-300');'
     });
 
-    it('removes animation classes when animated is false', () => {;';
+    it('removes animation classes when animated is false', () => {;'
     it('removes animation classes when animated is false', () => {'
       const { container } = render(
         <RouterWrapper >
@@ -390,8 +390,8 @@ describe('UnifiedPromotionalBanner', () => {'
     });
   });
 
-  describe('Accessibility', () => {;';
-    it('has accessible links', () => {;';
+  describe('Accessibility', () => {;'
+    it('has accessible links', () => {;'
       expect(banner).not.toHaveClass('hover: scale-[1.01]');',
     });
   });
@@ -408,12 +408,12 @@ describe('UnifiedPromotionalBanner', () => {'
   expect(ctaLink).toHaveAttribute('href');'
     });
 
-    it('featured item links are accessible', () => {;';
+    it('featured item links are accessible', () => {;'
       const featuredItems: [,
         {
           title: 'Test Item',',';,
           category: 'Test Category',',';,
-          link: '/test},';
+          link: '/test},'
     it('featured item links are accessible', () => {'
       const featuredItems: [,
         {
@@ -434,8 +434,8 @@ describe('UnifiedPromotionalBanner', () => {'
     });
   });
 
-  describe('Edge Cases', () => {;';
-    it('handles empty featured items array', () => {;';
+  describe('Edge Cases', () => {;'
+    it('handles empty featured items array', () => {;'
   describe('Edge Cases', () => {'
     it('handles empty featured items array', () => {'
       render(
@@ -447,12 +447,12 @@ describe('UnifiedPromotionalBanner', () => {'
       expect(screen.getByText('Test Banner Title')).toBeInTheDocument();'
     });
 
-    it('handles showCount greater than items length', () => {;';
+    it('handles showCount greater than items length', () => {;'
       const featuredItems: [,
         {
           title: 'Item 1',',';,
           category: 'Category 1',',';,
-          link: '/item-1},';
+          link: '/item-1},'
     it('handles showCount greater than items length', () => {'
       const featuredItems: [,
         {
@@ -475,7 +475,7 @@ describe('UnifiedPromotionalBanner', () => {'
       expect(screen.queryByText(/more breakthrough/)).not.toBeInTheDocument();
     });
 
-    it('handles very long titles gracefully', () => {;';
+    it('handles very long titles gracefully', () => {;'
       const longTitle: 'A'.repeat(200);,';,
   it('handles very long titles gracefully', () => {'
       const longTitle: 'A'.repeat(200);',';,
@@ -488,7 +488,7 @@ describe('UnifiedPromotionalBanner', () => {'
       expect(screen.getByText(longTitle)).toBeInTheDocument();
     });
 
-    it('handles missing optional props', () => {;';
+    it('handles missing optional props', () => {;'
     it('handles missing optional props', () => {'
       const { container } = render(
         <RouterWrapper >

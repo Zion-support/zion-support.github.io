@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 const AdvertisingBanner: React.FC: ()  => {,,
   return (
     <div className: "bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white py-3 shadow-lg animate-gradient-x">";,

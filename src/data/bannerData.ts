@@ -26,7 +26,7 @@ export const bannerData: BannerData[]  = [,,
     priority: 100,,,
     isActive: true,,,
     startDate: '2026-01-01',',';,
-    endDate: '2026-12-31},';
+    endDate: '2026-12-31},'
   {
     id: 'october-2025-llm-orchestration',',';,
     title: 'Enterprise LLM Orchestration Revolution',',';,
@@ -38,7 +38,7 @@ export const bannerData: BannerData[]  = [,,
     priority: 95,,,
     isActive: true,,,
     startDate: '2025-10-01',',';,
-    endDate: '2026-03-31},';
+    endDate: '2026-03-31},'
   {
     id: 'cognitive-orchestration',',';,
     title: 'Cognitive Orchestration Platform',',';,
@@ -50,7 +50,7 @@ export const bannerData: BannerData[]  = [,,
     priority: 90,,,
     isActive: true,,,
     startDate: '2025-10-01',',';,
-    endDate: '2026-06-30},';
+    endDate: '2026-06-30},'
   {
     id: 'ai-ethics-governance',',';,
     title: 'AI Ethics & Governance Framework',',';,
@@ -62,7 +62,7 @@ export const bannerData: BannerData[]  = [,,
     priority: 85,,,
     isActive: true,,,
     startDate: '2025-10-01',',';,
-    endDate: '2026-12-31},';
+    endDate: '2026-12-31},'
   {
     id: 'real-time-intelligence-mesh',',';,
     title: 'Real-Time Intelligence Mesh',',';,
@@ -74,7 +74,7 @@ export const bannerData: BannerData[]  = [,,
     priority: 80,,,
     isActive: true,,,
     startDate: '2025-10-01',',';,
-    endDate: '2026-09-30},';
+    endDate: '2026-09-30},'
   {
     id: 'edge-ai-5g-revolution',',';,
     title: 'Edge AI + 5G Revolution',',';,
@@ -86,7 +86,7 @@ export const bannerData: BannerData[]  = [,,
     priority: 75,,,
     isActive: true,,,
     startDate: '2025-10-01',',';,
-    endDate: '2026-08-31},';
+    endDate: '2026-08-31},'
   {
     id: 'generative-ai-code-generation',',';,
     title: 'Generative AI Code Generation',',';,
@@ -98,7 +98,7 @@ export const bannerData: BannerData[]  = [,,
     priority: 70,,,
     isActive: true,,,
     startDate: '2025-10-01',',';,
-    endDate: '2026-07-31},';
+    endDate: '2026-07-31},'
   {
     id: 'quantum-edge-computing',',';,
     title: 'Quantum-Enhanced Edge Computing',',';,
@@ -110,7 +110,7 @@ export const bannerData: BannerData[]  = [,,
     priority: 65,,,
     isActive: true,,,
     startDate: '2025-10-01',',';,
-    endDate: '2026-10-31},';
+    endDate: '2026-10-31},'
     id: 'january-2026-ai-breakthroughs',',
     title: 'Revolutionary AI Breakthroughs - January 2026',',
     subtitle: 'Ultra-Autonomous Enterprise + Quantum Consciousness BI',',

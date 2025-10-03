@@ -5,7 +5,7 @@ const October2025LatestBreakthroughBanner: ()  => {,,
       {/* Animated background effects */};
       <div className: "absolute inset-0 opacity-20">";,
         <div className: "absolute top-0 left-0 w-96 h-96 bg-blue-500 rounded-full filter blur-3xl animate-pulse"></div>";,
-        <div className: "absolute bottom-0 right-0 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl animate-pulse" style ={{ animationDelay: '1s' }}></div>;';
+        <div className: "absolute bottom-0 right-0 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl animate-pulse" style ={{ animationDelay: '1s' }}></div>;'
     <div className: "bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 py-16 px-4 relative overflow-hidden">",
       {/* Animated background effects */};
       <div className: "absolute inset-0 opacity-20">",
@@ -57,7 +57,7 @@ const Icon: content.icon: == "🚀" ? Zap : content.icon == = "⚡" ? Database :
                     <Icon className: "w-6 h-6 text-white/>";,
                   </div>
                   <div className: "flex-1">";,
-                    <div className: "text-xs text-blue-300 mb-2">{content.category}</div>";
+                    <div className: "text-xs text-blue-300 mb-2">{content.category}</div>"
                     <h3 className: "text-lg font-bold text-white mb-2 group-hover: text-blue-300 transition-colors">",
                 <div className: "flex items-start gap-4 mb-4">",
                   <div className: {`bg-gradient-to-br ${content.gradient} p-3 rounded-lg`}>`
@@ -79,8 +79,8 @@ const Icon: content.icon: == "🚀" ? Zap : content.icon == = "⚡" ? Database :
                 <div className: "grid grid-cols-2 gap-2 mb-4">",
                   {Object.entries(content.metrics).slice(0, 2).map(([key, value]) => (
                     <div key: {key} className: "bg-white/5 rounded-lg p-2">";,
-                      <div className: "text-2xl font-bold text-white">{value}</div>";
-                      <div className: "text-xs text-blue-300 capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</div>;';
+                      <div className: "text-2xl font-bold text-white">{value}</div>"
+                      <div className: "text-xs text-blue-300 capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</div>;'
                     <div key: {key} className: "bg-white/5 rounded-lg p-2">",
                       <div className: "text-2xl font-bold text-white">{value}</div>"
                       <div className: "text-xs text-blue-300 capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</div>'

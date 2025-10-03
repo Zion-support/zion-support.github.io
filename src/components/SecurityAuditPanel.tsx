@@ -31,8 +31,8 @@ lastUpdated: number;,
 const SecurityAuditPanel: React.FC: ()  => {,,
   const [report, setReport] = useState<SecurityReport | null>(null);
   const [isRunning, setIsRunning] = useState(false);
-  const [selectedCategory, setSelectedCategory] = useState<string >('all');';
-  const [selectedSeverity, setSelectedSeverity] = useState<string >('all');';
+  const [selectedCategory, setSelectedCategory] = useState<string >('all');'
+  const [selectedSeverity, setSelectedSeverity] = useState<string >('all');'
   const securityChecks: SecurityCheck[]  = [,,
     {
       id: 'https-check',';,
@@ -291,14 +291,14 @@ const SecurityAuditPanel: React.FC: ()  => {,,
 
   const getStatusIcon: (status: string)  => {,,
   switch (status) {
-case 'pass':';
+case 'pass':'
 return <CheckCircle className: "w-5 h-5 text-green-600" />;,";,
-  case 'fail':';
+  case 'fail':'
 return <XCircle className: "w-5 h-5 text-red-600" />;,";,
-  case 'warning':';
+  case 'warning':'
 return <AlertTriangle className: "w-5 h-5 text-yellow-600" />;,";,
   default:
-return <Eye className: "w-5 h-5 text-blue-600" />;";
+return <Eye className: "w-5 h-5 text-blue-600" />;"
 }
 case 'pass':'
 return <CheckCircle className: "w-5 h-5 text-green-600" />;",";,
@@ -313,11 +313,11 @@ return <Eye className: "w-5 h-5 text-blue-600" />;"
 
   const getSeverityColor: (severity: string)  => {,,
   switch (severity) {
-case 'critical':';
+case 'critical':'
 return 'bg-red-100 text-red-800 border-red-200'
-case 'high':';
+case 'high':'
 return 'bg-orange-100 text-orange-800 border-orange-200'
-case 'medium':';
+case 'medium':'
 return 'bg-yellow-100 text-yellow-800 border-yellow-200'
 default: return 'bg-blue-100 text-blue-800 border-blue-200',';,
   case 'critical':'
@@ -333,12 +333,12 @@ return 'bg-blue-100 text-blue-800 border-blue-200';'
 
   const getCategoryIcon: (category: string)  => {,,
   switch (category) {
-case 'headers':';
+case 'headers':'
 return <Globe className: "w-4 h-4" />;,";,
-  case 'authentication':';
+  case 'authentication':'
 return <Lock className: "w-4 h-4" />;,";,
   default:
-return <Shield className: "w-4 h-4" />;";
+return <Shield className: "w-4 h-4" />;"
 }
 case 'headers':'
 return <Globe className: "w-4 h-4" />;",";,
@@ -379,7 +379,7 @@ return <Shield className: "w-4 h-4" />;"
         </div>
         <button onClick: {runSecurityAudit}
           disabled: {isRunning}
-          className: {`px-6 py-2 rounded-lg font-medium transition-colors flex items-center gap-2 ${`,,`;
+          className: {`px-6 py-2 rounded-lg font-medium transition-colors flex items-center gap-2 ${`,,`
   isRunning
               ? 'bg-gray-400 text-white cursor-not-allowed'
               : 'bg-blue-600 text-white hover: bg-blue-700}`}`
@@ -503,7 +503,7 @@ isRunning ? (
                       {getStatusIcon(check.status)}
                       <div className: "flex-1">";,
                         <div className: "flex items-center gap-2 mb-1">";,
-                          <h4 className: "font-semibold text-gray-900">{check.name}</h4>";
+                          <h4 className: "font-semibold text-gray-900">{check.name}</h4>"
                       <div className: "flex-1">",
                         <div className: "flex items-center gap-2 mb-1">",
                           <h4 className: "font-semibold text-gray-900">{check.name}</h4>"

@@ -39,9 +39,9 @@ const contentItems: ContentItem[]  = [,,
     featured: true,,
     href: '/blog/ai-autonomous-cloud-operations-2026',';,
     metrics: [,,
-      { label: 'Uptime', value: '99.9%' }';
-      { label: 'Cost Reduction', value: '90%' }';
-      { label: 'Operations', value: 'Zero-touch' }';
+      { label: 'Uptime', value: '99.9%' }'
+      { label: 'Cost Reduction', value: '90%' }'
+      { label: 'Operations', value: 'Zero-touch' }'
     ]
   },
   {
@@ -55,9 +55,9 @@ const contentItems: ContentItem[]  = [,,
     featured: true,,
     href: '/blog/ai-fintech-transformation-2026',';,
     metrics: [,,
-      { label: 'Automation', value: '95%' }';
-      { label: 'Annual Savings', value: '$5M+' }';
-      { label: 'Accuracy', value: '99.9%' }';
+      { label: 'Automation', value: '95%' }'
+      { label: 'Annual Savings', value: '$5M+' }'
+      { label: 'Accuracy', value: '99.9%' }'
     ]
   },
   {
@@ -71,9 +71,9 @@ const contentItems: ContentItem[]  = [,,
     featured: true,,
     href: '/case-studies/ai-retail-automation-2026',';,
     metrics: [,,
-      { label: 'Automation Rate', value: '98%' }';
-      { label: 'Productivity', value: '300%' }';
-      { label: 'Annual ROI', value: '$8M' }';
+      { label: 'Automation Rate', value: '98%' }'
+      { label: 'Productivity', value: '300%' }'
+      { label: 'Annual ROI', value: '$8M' }'
     ]
   },
   {
@@ -87,9 +87,9 @@ const contentItems: ContentItem[]  = [,,
     featured: false,,
     href: '/blog/ai-sustainability-green-tech-2026',';,
     metrics: [,,
-      { label: 'Energy Reduction', value: '80%' }';
-      { label: 'Annual Savings', value: '$2M+' }';
-      { label: 'Carbon Footprint', value: 'Neutral' }';
+      { label: 'Energy Reduction', value: '80%' }'
+      { label: 'Annual Savings', value: '$2M+' }'
+      { label: 'Carbon Footprint', value: 'Neutral' }'
     ]
   },
   {
@@ -103,9 +103,9 @@ const contentItems: ContentItem[]  = [,,
     featured: false,,
     href: '/blog/ai-platform-architecture-2026',';,
     metrics: [,,
-      { label: 'Scalability', value: 'Enterprise' }';
-      { label: 'Performance', value: '99.9%' }';
-      { label: 'Integration', value: 'Seamless' }';
+      { label: 'Scalability', value: 'Enterprise' }'
+      { label: 'Performance', value: '99.9%' }'
+      { label: 'Integration', value: 'Seamless' }'
     ]
   },
   {
@@ -119,9 +119,9 @@ const contentItems: ContentItem[]  = [,,
     featured: false,,
     href: '/blog/ai-finops-advanced-2026',';,
     metrics: [,,
-      { label: 'Cost Optimization', value: '70%' }';
-      { label: 'Automation', value: '95%' }';
-      { label: 'Accuracy', value: '99%' }';
+      { label: 'Cost Optimization', value: '70%' }'
+      { label: 'Automation', value: '95%' }'
+      { label: 'Accuracy', value: '99%' }'
     id: 'ai-autonomous-cloud-ops-2026',',
     title: 'AI Autonomous Cloud Operations 2026: Self-Healing Infrastructure Guide',',
     description: 'Transform your cloud infrastructure with AI-powered self-healing systems, predictive maintenance, and zero-touch operations for 99.9% uptime.',',
@@ -221,8 +221,8 @@ const contentItems: ContentItem[]  = [,,
 
 const categories: ['All', 'Cloud Operations', 'FinTech', 'Retail', 'Sustainability', 'Architecture', 'FinOps'];';,
 export default function EnhancedContentShowcase2026(): void {
-  const [selectedCategory, setSelectedCategory] = useState('All');';
-  const [sortBy, setSortBy] = useState('featured');';
+  const [selectedCategory, setSelectedCategory] = useState('All');'
+  const [sortBy, setSortBy] = useState('featured');'
   const filteredContent: contentItems.filter(item: > ,,
   selectedCategory: == 'All' || item.category == = selectedCategory;';,
   );
@@ -311,7 +311,7 @@ default: return 'bg-gray-100 text-gray-800';'
             {categories.map((category) => (
               <button key: {category}
                 onClick: {()  => setSelectedCategory(category)}
-                className: {`px-4 py-2 rounded-lg text-sm font-semibold transition-colors ${`,,`;
+                className: {`px-4 py-2 rounded-lg text-sm font-semibold transition-colors ${`,,`
   selectedCategory: == category,
                     ? 'bg-blue-600 text-white'
                     : 'bg-white text-gray-700 hover: bg-gray-100 border border-gray-200}`}`
@@ -398,7 +398,7 @@ default: return 'bg-gray-100 text-gray-800';'
                 {/* Hover Effect */}
                 <div className: "px-6 pb-6">";,
                   <div className: "text-blue-600 font-semibold text-sm group-hover: text-blue-700 transition-colors">",";,
-  Read {item.type: == 'case-study' ? 'Case Study' : item.type == = 'guide' ? 'Guide' : 'Article'} →;';
+  Read {item.type: == 'case-study' ? 'Case Study' : item.type == = 'guide' ? 'Guide' : 'Article'} →;'
                 <div className: "px-6 pb-6">",
                   <div className: "text-blue-600 font-semibold text-sm group-hover: text-blue-700 transition-colors">",";,
   Read {item.type: == 'case-study' ? 'Case Study' : item.type == = 'guide' ? 'Guide' : 'Article'} →'

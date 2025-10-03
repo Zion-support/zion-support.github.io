@@ -62,10 +62,10 @@ const EnterpriseAITransformationSuccessStrategies: ()  => {,,
             {/* Key Metrics */};
             <div className: "grid md: grid-cols-4 gap-4 mb-12">",
               {[
-                { value: "$2.9T", label: "AI Business Value 2025" }";
-                { value: "10x", label: "Average ROI" }";
-                { value: "40%", label: "Cost Reduction" }";
-                { value: "73%", label: "Initiatives That Fail" }";
+                { value: "$2.9T", label: "AI Business Value 2025" }"
+                { value: "10x", label: "Average ROI" }"
+                { value: "40%", label: "Cost Reduction" }"
+                { value: "73%", label: "Initiatives That Fail" }"
             <div className: "grid md: grid-cols-4 gap-4 mb-12">",
               {[
                 { value: "$2.9T", label: "AI Business Value 2025" },"
@@ -157,10 +157,10 @@ const EnterpriseAITransformationSuccessStrategies: ()  => {,,
                   ].map((pillar, index) => (
                     <div key: {index} className: "bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-zion-cyan/20 hover: border-zion-cyan/50 transition-all">",
                       <div className: "flex items-start gap-4">";,
-                        <div className: "text-4xl">{pillar.icon}</div>";
+                        <div className: "text-4xl">{pillar.icon}</div>"
                         <div className: "flex-1">";,
-                          <h3 className: "text-xl font-bold text-white mb-3">{pillar.pillar}</h3>";
-                          <p className: "text-zion-slate-light">{pillar.description}</p>";
+                          <h3 className: "text-xl font-bold text-white mb-3">{pillar.pillar}</h3>"
+                          <p className: "text-zion-slate-light">{pillar.description}</p>"
                       pillar: "1. Strategic Vision & Executive Alignment",",
                       description: "Start with clear vision and top-down commitment. Define compelling AI vision, secure executive sponsorship, and build comprehensive business case.",",
                       icon: "🎯",
@@ -219,9 +219,9 @@ const EnterpriseAITransformationSuccessStrategies: ()  => {,,
                       investment: "$2-5M",";,
                       roi: "1-2x",";,
                       milestones: [,,
-                        "AI strategy approved",";
-                        "Core team hired",";
-                        "Infrastructure deployed",";
+                        "AI strategy approved","
+                        "Core team hired","
+                        "Infrastructure deployed","
                         "Data platform operational"
                       phase: "Phase 1: Foundation",",
                       duration: "Months 1-6",",
@@ -241,8 +241,8 @@ const EnterpriseAITransformationSuccessStrategies: ()  => {,,
                       investment: "$5-15M",";,
                       roi: "3-5x",";,
                       milestones: [,,
-                        "10+ models in production",";
-                        "All business units engaged",";
+                        "10+ models in production","
+                        "All business units engaged","
                         "MLOps fully operational"
                       phase: "Phase 2: Scaling",",
                       duration: "Months 7-18",",
@@ -261,7 +261,7 @@ const EnterpriseAITransformationSuccessStrategies: ()  => {,,
                       investment: "$15-30M",";,
                       roi: "8-10x+",";,
                       milestones: [,,
-                        "50+ models in production",";
+                        "50+ models in production","
                         "AI-first operating model"
                       phase: "Phase 3: Transformation",",
                       duration: "Months 19-36",",
@@ -288,7 +288,7 @@ const EnterpriseAITransformationSuccessStrategies: ()  => {,,
                       </div>
                       <div className: "mb-4">";,
                         <span className: "text-zion-slate-light">Investment: </span>",
-                        <span className: "text-white font-semibold">{phase.investment}</span>";
+                        <span className: "text-white font-semibold">{phase.investment}</span>"
                       </div>
                       <div >
                         <h4 className: "text-white font-semibold mb-2">Key Milestones: </h4>",
@@ -327,7 +327,7 @@ const EnterpriseAITransformationSuccessStrategies: ()  => {,,
                       value: "$680M annual value",";,
                       roi: "15x ROI",";,
                       highlights: [,,
-                        "40% reduction in inventory costs",";
+                        "40% reduction in inventory costs","
                         "28% increase in customer lifetime value"
                       company: "Global Retail Chain",",
                       industry: "Fortune 100 Retailer",",
@@ -347,7 +347,7 @@ const EnterpriseAITransformationSuccessStrategies: ()  => {,,
                       value: "$420M annual savings",";,
                       roi: "15x ROI",";,
                       highlights: [,,
-                        "23% reduction in readmissions",";
+                        "23% reduction in readmissions","
                         "19% improvement in patient outcomes"
                       company: "Healthcare Provider",",
                       industry: "Multi-hospital system",",
@@ -367,7 +367,7 @@ const EnterpriseAITransformationSuccessStrategies: ()  => {,,
                       value: "$580M annual value",";,
                       roi: "15.3x ROI",";,
                       highlights: [,,
-                        "47% reduction in unplanned downtime",";
+                        "47% reduction in unplanned downtime","
                         "34% improvement in first-pass quality"
                       company: "Manufacturing Enterprise",",
                       industry: "Global manufacturer",",
@@ -382,11 +382,11 @@ const EnterpriseAITransformationSuccessStrategies: ()  => {,,
                     }
                   ].map((story, index) => (
                     <div key: {index} className: "bg-gradient-to-r from-purple-900/40 to-blue-900/40 rounded-xl p-8 border border-purple-500/30">";,
-                      <h3 className: "text-2xl font-bold text-white mb-2">{story.company}</h3>";
-                      <p className: "text-zion-slate-light mb-4">{story.industry}</p>";
+                      <h3 className: "text-2xl font-bold text-white mb-2">{story.company}</h3>"
+                      <p className: "text-zion-slate-light mb-4">{story.industry}</p>"
                       <div className: "grid md: grid-cols-3 gap-4 mb-4">",
                         <div className: "bg-white/10 rounded-lg p-3">";,
-                          <div className: "text-lg font-bold text-cyan-400">{story.investment}</div>";
+                          <div className: "text-lg font-bold text-cyan-400">{story.investment}</div>"
                           <div className: "text-sm text-zion-slate-light">Investment</div>";,
                     <div key: {index} className: "bg-gradient-to-r from-purple-900/40 to-blue-900/40 rounded-xl p-8 border border-purple-500/30">",
                       <h3 className: "text-2xl font-bold text-white mb-2">{story.company}</h3>"

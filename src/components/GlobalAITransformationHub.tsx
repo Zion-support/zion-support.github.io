@@ -1,7 +1,7 @@
 
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Sparkles } from 'lucide-react';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { Sparkles } from 'lucide-react'
 import React from 'react';'
 import { Link } from 'react-router-dom';'
 import { Sparkles } from 'lucide-react';'
@@ -14,35 +14,35 @@ const GlobalAITransformationHub: ()  => {,,
       value: '$2.3B',',';,
       icon: <Target className: "w-8 h-8/>,",";,
       color: 'from-blue-500 to-cyan-500',',';,
-      link: '/services/enterprise-automation-transformation},';
+      link: '/services/enterprise-automation-transformation},'
     {
       title: 'Quantum Consciousness AI',',';,
       description: 'Revolutionary AI consciousness integration with infinite scalability',',';,
       value: '$500B',',';,
       icon: <Brain className: "w-8 h-8/>,",";,
       color: 'from-purple-500 to-violet-500',',';,
-      link: '/services/quantum-consciousness-ai-services},';
+      link: '/services/quantum-consciousness-ai-services},'
     {
       title: 'Autonomous Operations',',';,
       description: 'Self-managing systems with 99.99% uptime and zero human intervention',',';,
       value: '$150B',',';,
       icon: <Zap className: "w-8 h-8/>,",";,
       color: 'from-emerald-500 to-teal-500',',';,
-      link: '/services/autonomous-operations-platform},';
+      link: '/services/autonomous-operations-platform},'
     {
       title: 'Neural Security',',';,
       description: 'Advanced AI-powered security with 99.7% threat prevention',',';,
       value: '$87B',',';,
       icon: <Shield className: "w-8 h-8/>,",";,
       color: 'from-orange-500 to-red-500',',';,
-      link: '/services/neural-security-framework},';
+      link: '/services/neural-security-framework},'
   ];
 
   const successMetrics: [,
-    { metric: '2.5M+', label: 'Global Users' }';
-    { metric: '$15B+', label: 'Value Created' }';
-    { metric: '99.99%', label: 'Success Rate' }';
-    { metric: '500K+', label: 'Enterprise Clients' }';
+    { metric: '2.5M+', label: 'Global Users' }'
+    { metric: '$15B+', label: 'Value Created' }'
+    { metric: '99.99%', label: 'Success Rate' }'
+    { metric: '500K+', label: 'Enterprise Clients' }'
   ];
 
   return (
@@ -117,11 +117,11 @@ const GlobalAITransformationHub: ()  => {,,
             to: {area.link}
             className: {`bg-gradient-to-br ${area.color} rounded-xl p-6 text-white transform hover:scale-105 transition-all duration-300 hover:shadow-xl group`}`
           >
-            <div className: "mb-4">{area.icon}</div>";
-            <h3 className: "text-xl font-bold mb-3 group-hover:text-yellow-300 transition-colors">{area.title}</h3>";
-            <p className: "text-sm mb-4 opacity-90">{area.description}</p>";
+            <div className: "mb-4">{area.icon}</div>"
+            <h3 className: "text-xl font-bold mb-3 group-hover:text-yellow-300 transition-colors">{area.title}</h3>"
+            <p className: "text-sm mb-4 opacity-90">{area.description}</p>"
             <div className: "flex items-center justify-between">";,
-              <span className: "text-lg font-bold bg-white/20 px-3 py-1 rounded-full">{area.value}</span>";
+              <span className: "text-lg font-bold bg-white/20 px-3 py-1 rounded-full">{area.value}</span>"
               <ArrowRight className: "w-5 h-5 group-hover: translate-x-1 transition-transform/>",
             <div className: "mb-4">{area.icon}</div>"
             <h3 className: "text-xl font-bold mb-3 group-hover:text-yellow-300 transition-colors">{area.title}</h3>"

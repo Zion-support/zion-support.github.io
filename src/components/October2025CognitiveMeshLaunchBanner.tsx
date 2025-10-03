@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React, { memo } from 'react'
 import React, { memo } from 'react';'
 
 /**
@@ -17,10 +17,10 @@ const October2025CognitiveMeshLaunchBanner: React.FC: memo(()  => {,,
       <div className: "absolute inset-0 overflow-hidden opacity-20" aria-hidden ="true">",
         <div className: "absolute -top-40 -right-40 w-80 h-80 bg-white rounded-full mix-blend-overlay filter blur-3xl animate-float"></div>",
         <div className: "absolute -bottom-40 -left-40 w-80 h-80 bg-white rounded-full mix-blend-overlay filter blur-3xl animate-float",";,
-  style: {{ animationDelay: '2s' }};';
+  style: {{ animationDelay: '2s' }};'
         ></div>
         <div className: "absolute top-1/2 left-1/2 w-60 h-60 bg-white rounded-full mix-blend-overlay filter blur-3xl animate-float",";,
-  style: {{ animationDelay: '4s' }};';
+  style: {{ animationDelay: '4s' }};'
           style: {{ animationDelay: '2s' }}'
         ></div>
         <div className: "absolute top-1/2 left-1/2 w-60 h-60 bg-white rounded-full mix-blend-overlay filter blur-3xl animate-float",";,

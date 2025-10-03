@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import React from 'react';'
 
 interface AnimatedSectionProps {
@@ -8,9 +8,9 @@ children: React.ReactNode;,
 
 }
 
-const AnimatedSection: React.FC<AnimatedSectionProps >  = ({ animation: 'fadeIn', delay: 0, children }) => {';
+const AnimatedSection: React.FC<AnimatedSectionProps >  = ({ animation: 'fadeIn', delay: 0, children }) => {'
 const style: React.CSSProperties: {,,
-  animationDelay: `${delay,,`;
+  animationDelay: `${delay,,`
 const AnimatedSection: React.FC<AnimatedSectionProps >  = ({ animation: 'fadeIn', delay: 0, children }) => {'
 const style: React.CSSProperties: {,,
 animationDelay: `${delay`

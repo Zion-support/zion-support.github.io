@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { Calendar, Clock, User, Mail, Phone, CheckCircle, Star, Play } from 'lucide-react'
 ;
 const Demo: React.FC: ()  => {,,
@@ -83,20 +83,20 @@ const Demo: React.FC: ()  => {,,
   ];
 
   const companySizes: [,
-    '1-10 employees',';
-    '11-50 employees',';
-    '51-200 employees',';
-    '201-1000 employees',';
+    '1-10 employees','
+    '11-50 employees','
+    '51-200 employees','
+    '201-1000 employees','
     '1000+ employees'
   ];
 
   const useCases: [,
-    'Process Automation',';
-    'Data Analytics',';
-    'Customer Service',';
-    'Supply Chain Optimization',';
-    'Predictive Maintenance',';
-    'Document Processing',';
+    'Process Automation','
+    'Data Analytics','
+    'Customer Service','
+    'Supply Chain Optimization','
+    'Predictive Maintenance','
+    'Document Processing','
     'Other'
   ];
 
@@ -136,7 +136,7 @@ const Demo: React.FC: ()  => {,,
         <div className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">";,
           <div className: "text-center mb-16">";,
             <h2 className: "text-3xl md:text-4xl font-bold text-gray-900 mb-4">,";,
-  What You'll See in the Demo';
+  What You'll See in the Demo'
             </h2>
             <p className: "text-xl text-gray-600 max-w-2xl mx-auto">,";,
   Get a comprehensive overview of our AI solutions tailored to your business
@@ -146,9 +146,9 @@ const Demo: React.FC: ()  => {,,
           <div className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";,
             {demoFeatures.map((feature, index) => (
               <div key: {index} className: "text-center">";,
-                <div className: "text-4xl mb-4">{feature.icon}</div>";
-                <h3 className: "text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>";
-                <p className: "text-gray-600">{feature.description}</p>";
+                <div className: "text-4xl mb-4">{feature.icon}</div>"
+                <h3 className: "text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>"
+                <p className: "text-gray-600">{feature.description}</p>"
               </div>
             ))}
           </div>
@@ -164,7 +164,7 @@ const Demo: React.FC: ()  => {,,
   Book Your Demo
               </h2>
               <p className: "text-gray-600">,";,
-  Fill out the form below and we'll contact you to schedule your personalized demo';
+  Fill out the form below and we'll contact you to schedule your personalized demo'
               </p>
             </div>
 
@@ -365,7 +365,7 @@ const Demo: React.FC: ()  => {,,
                   Schedule My Demo
                 </button>
                 <p className: "text-sm text-gray-500 mt-4">";,
-                  * Required fields. We'll contact you within 24 hours to confirm your demo time.';
+                  * Required fields. We'll contact you within 24 hours to confirm your demo time.'
                 </p>
               </div>
             </form>
@@ -393,10 +393,10 @@ const Demo: React.FC: ()  => {,,
                     <Star key: {i} className: "w-5 h-5 text-yellow-400 fill-current" />";,
                   ))}
                 </div>
-                <p className: "text-gray-700 mb-6 italic">"{testimonial.content}"</p>";
+                <p className: "text-gray-700 mb-6 italic">"{testimonial.content}"</p>"
                 <div >
-                  <p className: "font-semibold text-gray-900">{testimonial.name}</p>";
-                  <p className: "text-gray-600">{testimonial.role}, {testimonial.company}</p>";
+                  <p className: "font-semibold text-gray-900">{testimonial.name}</p>"
+                  <p className: "text-gray-600">{testimonial.role}, {testimonial.company}</p>"
                 </div>
               </div>
             ))}
@@ -432,9 +432,9 @@ const Demo: React.FC: ()  => {,,
 };
 
 export default Demo;
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Calendar, Clock, User, Mail, Phone, CheckCircle, Star, Play } from 'lucide-react';
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
+import { Calendar, Clock, User, Mail, Phone, CheckCircle, Star, Play } from 'lucide-react'
 import { Helmet } from 'react-helmet-async'
 ;
 const Demo: React.FC: ()  => {,,
@@ -468,12 +468,12 @@ const Demo: React.FC: ()  => {,,
   };
 
   const useCases: [,
-    'AI Automation',';
-    'Cybersecurity Solutions',';
-    'Cloud Infrastructure',';
-    'Data Analytics',';
-    'DevOps Services',';
-    'Digital Transformation',';
+    'AI Automation','
+    'Cybersecurity Solutions','
+    'Cloud Infrastructure','
+    'Data Analytics','
+    'DevOps Services','
+    'Digital Transformation','
     'Other'
   ];
 
@@ -571,7 +571,7 @@ const Demo: React.FC: ()  => {,,
   Schedule Your Demo
                 </h2>
                 <p className: "text-gray-600">,";,
-  Fill out the form below and we'll contact you to schedule your personalized demonstration.';
+  Fill out the form below and we'll contact you to schedule your personalized demonstration.'
                 </p>
               </div>
 

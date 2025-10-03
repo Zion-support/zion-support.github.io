@@ -552,7 +552,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[]  = [,,
     icon: '🚀',',';,
     featured: true,,,
     priority: 0,,,
-    startDate: '2025-10-30},';
+    startDate: '2025-10-30},'
   {
     id: 'oct-01-2025-mega-breakthrough-launch',',';,
     title: '🎉 MEGA LAUNCH: 6 Revolutionary AI Breakthroughs Released Today!',',';,
@@ -563,7 +563,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[]  = [,,
     icon: '🎉',',';,
     featured: true,,,
     priority: 0,,,
-    startDate: '2025-10-01},';
+    startDate: '2025-10-01},'
   {
     id: 'autonomous-devops-oct-01-2025',',';,
     title: '⚡ NEW: Autonomous DevOps - 80% Faster Releases with Zero Downtime',',';,
@@ -574,7 +574,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[]  = [,,
     icon: '⚡',',';,
     featured: true,,,
     priority: 1,,,
-    startDate: '2025-10-01},';
+    startDate: '2025-10-01},'
   {
     id: 'ai-incident-response-oct-01-2025',',';,
     title: '🚨 NEW: AI Incident Response - Resolve Issues in Under 60 Seconds',',';,
@@ -585,7 +585,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[]  = [,,
     icon: '🚨',',';,
     featured: true,,,
     priority: 2,,,
-    startDate: '2025-10-01},';
+    startDate: '2025-10-01},'
   {
     id: 'enterprise-llm-fine-tuning-oct-01-2025',',';,
     title: '🧠 NEW: Enterprise LLM Fine-Tuning - 10x Better Performance',',';,
@@ -596,7 +596,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[]  = [,,
     icon: '🧠',',';,
     featured: true,,,
     priority: 3,,,
-    startDate: '2025-10-01},';
+    startDate: '2025-10-01},'
   {
     id: 'intelligent-cost-optimization-oct-01-2025',',';,
     title: '💰 NEW: AI Cost Optimization - Save 40-65% on Cloud Spend',',';,
@@ -607,7 +607,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[]  = [,,
     icon: '💰',',';,
     featured: true,,,
     priority: 4,,,
-    startDate: '2025-10-01},';
+    startDate: '2025-10-01},'
   {
     id: 'zero-latency-edge-oct-01-2025',',';,
     title: '⚡ NEW: Zero-Latency Edge Computing - Sub-Millisecond Global Processing',',';,
@@ -618,7 +618,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[]  = [,,
     icon: '⚡',',';,
     featured: true,,,
     priority: 5,,,
-    startDate: '2025-10-01},';
+    startDate: '2025-10-01},'
   {
     id: 'conversational-ai-oct-01-2025',';,
     title: '💬 NEW: Conversational AI Platforms - Human-Level Interactions',';,
@@ -641,7 +641,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[]  = [,,
     icon: '⚡',',';,
     featured: true,,,
     priority: 0,,,
-    startDate: '2025-10-03},';
+    startDate: '2025-10-03},'
   {
     id: 'oct-03-autonomous-cloud-security-2025',',';,
     title: '🛡️ NEW: Autonomous Cloud Security — Neutralize Threats in <5s',',';,
@@ -652,7 +652,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[]  = [,,
     icon: '🛡️',',';,
     featured: true,,,
     priority: 1,,,
-    startDate: '2025-10-03},';
+    startDate: '2025-10-03},'
   {
     id: 'oct-03-quantum-supply-chain-2025',',';,
     title: '🧮 NEW: Quantum Supply Chain — Solve in Minutes, Not Days',',';,
@@ -663,7 +663,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[]  = [,,
     icon: '🧮',',';,
     featured: true,,,
     priority: 2,,,
-    startDate: '2025-10-03},';
+    startDate: '2025-10-03},'
     id: 'oct-01-autonomous-business-ops-2025',',
     title: '🚀 JUST RELEASED: Autonomous Business Operations Platform — $650M Value Creation, 85% Cost Reduction in 90 Days!',',
     description: 'Revolutionary AI platform eliminating manual processes across 40+ workflows. Fortune 100 achieved $650M annual value, 99.7% accuracy, 10x faster operations. 50% OFF through December + FREE 30-day proof of concept!',',
@@ -1337,7 +1337,7 @@ enhancedPromotionalBanners.unshift(
     icon: '🚀',',';,
     featured: true,,,
     priority: 0,,,
-    startDate: '2025-10-08},';
+    startDate: '2025-10-08},'
   {
     id: 'ai-self-healing-infra-banner-2025',',';,
     title: '🔄 NEW: AI Self-Healing Infrastructure — 99.99% Uptime',',';,
@@ -1348,7 +1348,7 @@ enhancedPromotionalBanners.unshift(
     icon: '🔄',',';,
     featured: true,,,
     priority: 0,,,
-    startDate: '2025-10-01},';
+    startDate: '2025-10-01},'
   {
     id: 'genai-code-assistants-banner-2025',',';,
     title: '💻 NEW: Generative AI Code Assistants — 10x Productivity',',';,
@@ -1359,7 +1359,7 @@ enhancedPromotionalBanners.unshift(
     icon: '💻',',';,
     featured: true,,,
     priority: 1,,,
-    startDate: '2025-10-01},';
+    startDate: '2025-10-01},'
   {
     id: 'edge-privacy-analytics-banner-2025',',';,
     title: '🔐 NEW: Edge Privacy‑Preserving Analytics — Zero PII',',';,
@@ -1370,7 +1370,7 @@ enhancedPromotionalBanners.unshift(
     icon: '🔐',',';,
     featured: true,,,
     priority: 2,,,
-    startDate: '2025-10-01},';
+    startDate: '2025-10-01},'
     id: 'oct-08-value-realization-2025',',
     title: '🚀 NEW TODAY: Enterprise AI Value Realization — 90 Days to Outcomes',',
     description: 'KPI scorecards, evaluator gates, tiered routing + caches, and rollback-first ops.',',
@@ -1432,7 +1432,7 @@ enhancedPromotionalBanners.unshift(
     icon: '🚀',',';,
     featured: true,,,
     priority: 0,,,
-    startDate: '2025-10-08},';
+    startDate: '2025-10-08},'
   {
     id: 'oct-08-governed-multiagent-platforms',',';,
     title: '🛡️ Governed Multi‑Agent Platforms — Budgets, SLIs, Rollback',',';,
@@ -1443,7 +1443,7 @@ enhancedPromotionalBanners.unshift(
     icon: '🛡️',',';,
     featured: true,,,
     priority: 1,,,
-    startDate: '2025-10-08},';
+    startDate: '2025-10-08},'
   {
     id: 'oct-08-edge-private-analytics-v4',',';,
     title: '🔐 Edge Private Analytics v4 — Zero‑PII, <100ms',',';,
@@ -1454,7 +1454,7 @@ enhancedPromotionalBanners.unshift(
     icon: '🔐',',';,
     featured: true,,,
     priority: 2,,,
-    startDate: '2025-10-08},';
+    startDate: '2025-10-08},'
   {
     id: 'oct-08-cache-strata-v5',',';,
     title: '⚡ Cache Strata v5 — Features → Chunks → Answers',',';,
@@ -1465,7 +1465,7 @@ enhancedPromotionalBanners.unshift(
     icon: '⚡',',';,
     featured: true,,,
     priority: 3,,,
-    startDate: '2025-10-08},';
+    startDate: '2025-10-08},'
     id: 'oct-08-2025-new-content-drop',',
     title: '🚀 NEW TODAY (Oct 8): Governed Agents, Edge Private Analytics, Cache Strata v5',',
     description: 'Budgets + SLIs for 10k+ agents, zero‑PII analytics under 100ms, and cache tiers that cut cost 60–85%.',',
@@ -1527,7 +1527,7 @@ enhancedPromotionalBanners.unshift(
     icon: '🚀',',';,
     featured: true,,,
     priority: 0,,,
-    startDate: '2025-10-07},';
+    startDate: '2025-10-07},'
   {
     id: 'oct-07-evaluator-pipelines-blueprint',',';,
     title: '🛡️ NEW: Evaluator Pipelines — Predict Production, Gate Risk',',';,
@@ -1538,7 +1538,7 @@ enhancedPromotionalBanners.unshift(
     icon: '🛡️',',';,
     featured: true,,,
     priority: 1,,,
-    startDate: '2025-10-07},';
+    startDate: '2025-10-07},'
     id: 'oct-07-autonomous-platforms-roi',',
     title: '🚀 NEW TODAY: Autonomous Platforms — 3–6x ROI in 90 Days',',
     description: 'Budgets, approvals, canary scorecards, and instant rollback. Ship autonomy safely with measurable value in weeks.',',
@@ -1875,7 +1875,7 @@ enhancedPromotionalBanners.unshift(
     icon: '🚀',',';,
     featured: true,,,
     priority: 0,,,
-    startDate: '2025-10-06},';
+    startDate: '2025-10-06},'
   {
     id: 'oct-06-feature-stores-2025',',';,
     title: '⚡ Real-Time Feature Stores — Sub-10ms Reads at 10M+ RPS',',';,
@@ -1886,7 +1886,7 @@ enhancedPromotionalBanners.unshift(
     icon: '⚡',',';,
     featured: true,,,
     priority: 1,,,
-    startDate: '2025-10-06},';
+    startDate: '2025-10-06},'
   {
     id: 'oct-06-policy-tests-v3-2025',',';,
     title: '🛡️ Policy Tests v3 — Change Gates That Predict Production',',';,
@@ -1897,7 +1897,7 @@ enhancedPromotionalBanners.unshift(
     icon: '🛡️',',';,
     featured: true,,,
     priority: 2,,,
-    startDate: '2025-10-06},';
+    startDate: '2025-10-06},'
   {
     id: 'oct-06-evaluator-gates-2025',',';,
     title: '✅ Evaluator-Driven Release Gates — Ship Faster, Fewer Regressions',',';,
@@ -1908,7 +1908,7 @@ enhancedPromotionalBanners.unshift(
     icon: '✅',',';,
     featured: true,,,
     priority: 3,,,
-    startDate: '2025-10-06},';
+    startDate: '2025-10-06},'
     id: 'oct-06-2025-new-content-drop',',
     title: '🚀 NEW TODAY (Oct 6): Feature Stores, Policy Tests v3, Evaluator Gates',',
     description: 'Millisecond features at 10M+ RPS, production-predictive policy tests, and evaluator-driven releases.',',

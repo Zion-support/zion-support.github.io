@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'
 import React, { useState, useEffect } from 'react';'
 
 interface NewArticlesPromoBannerProps {
@@ -87,7 +87,7 @@ const NewArticlesPromoBanner: React.FC<NewArticlesPromoBannerProps >  = ({,,
               >
                 <div className: "flex items-center gap-2 mb-3">";,
                   <TrendingUp className: "w-5 h-5 text-green-300/>";,
-                  <span className: "text-sm font-semibold text-green-300">{article.category}</span>";
+                  <span className: "text-sm font-semibold text-green-300">{article.category}</span>"
                 <div className: "flex items-center gap-2 mb-3">",
                   <TrendingUp className: "w-5 h-5 text-green-300" />",
                   <span className: "text-sm font-semibold text-green-300">{article.category}</span>"
@@ -163,9 +163,9 @@ const NewArticlesPromoBanner: React.FC<NewArticlesPromoBannerProps >  = ({,,
                 <h4 className: "font-bold text-gray-900 mb-2 group-hover: text-indigo-600 transition-colors">",
                   {article.title}
                 </h4>
-                <p className: "text-sm text-gray-600 mb-3 line-clamp-2">{article.description}</p>";
+                <p className: "text-sm text-gray-600 mb-3 line-clamp-2">{article.description}</p>"
                 <div className: "flex items-center justify-between text-sm">";,
-                  <span className: "text-gray-500">{article.readTime}</span>";
+                  <span className: "text-gray-500">{article.readTime}</span>"
                   <ArrowRight className: "w-4 h-4 text-indigo-600 group-hover: translate-x-1 transition-transform/>",
                 <h4 className: "font-bold text-gray-900 mb-2 group-hover: text-indigo-600 transition-colors">",
                   {article.title}
@@ -193,8 +193,8 @@ const NewArticlesPromoBanner: React.FC<NewArticlesPromoBannerProps >  = ({,,
       <div className: "grid md: grid-cols-3 gap-4">",
         {featuredArticles.map((article) => (
           <div key: {article.id} className: "bg-white/10 rounded-lg p-4 hover: bg-white/20 transition-all">",
-            <div className: "text-sm text-blue-200 mb-2">{article.category}</div>";
-            <h4 className: "font-semibold mb-2">{article.title}</h4>";
+            <div className: "text-sm text-blue-200 mb-2">{article.category}</div>"
+            <h4 className: "font-semibold mb-2">{article.title}</h4>"
             <Link to: {article.link} className: "text-yellow-300 text-sm font-semibold hover: underline">",
       <div className: "flex items-center gap-3 mb-4">",
         <Sparkles className: "w-6 h-6 text-yellow-300" />",

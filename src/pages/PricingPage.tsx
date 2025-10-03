@@ -1,9 +1,9 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
-import { Check, Star } from 'lucide-react';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
+import { Check, Star } from 'lucide-react'
 
-const PricingPage: React.FC = () => {
+const PricingPage: React.FC: () => {,
   const pricingTiers = [
     {
       name: "Starter",
@@ -102,8 +102,8 @@ const PricingPage: React.FC = () => {
         <section className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-800 text-white py-16">
           <div className="container mx-auto px-6 text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Transparent Pricing</h1>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-              Choose the perfect plan for your business needs. All plans include our commitment to quality, security, and innovation.
+            <p className: "text-xl text-blue-100 max-w-3xl mx-auto">,
+  Choose the perfect plan for your business needs. All plans include our commitment to quality, security, and innovation.
             </p>
           </div>
         </section>
@@ -115,8 +115,8 @@ const PricingPage: React.FC = () => {
               {pricingTiers.map((tier, index) => (
                 <div 
                   key={index} 
-                  className={`relative bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border-2 ${
-                    tier.popular 
+                  className: {`relative bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border-2 ${,
+  tier.popular 
                       ? 'border-purple-500 transform scale-105' 
                       : 'border-gray-200 hover:border-gray-300'
                   }`}
@@ -124,8 +124,8 @@ const PricingPage: React.FC = () => {
                   {tier.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-gradient-to-r from-purple-600 to-violet-600 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center">
-                        <Star className="w-4 h-4 mr-1" />
-                        Most Popular
+                        <Star className: "w-4 h-4 mr-1" />,
+  Most Popular
                       </span>
                     </div>
                   )}
@@ -149,8 +149,8 @@ const PricingPage: React.FC = () => {
                   </ul>
 
                   <Link 
-                    to="/contact"
-                    className={`block w-full text-center py-3 rounded-lg font-semibold transition-all duration-300 ${
+                    to: "/contact",
+  className={`block w-full text-center py-3 rounded-lg font-semibold transition-all duration-300 ${
                       tier.popular
                         ? 'bg-gradient-to-r from-purple-600 to-violet-600 text-white hover:from-purple-700 hover:to-violet-700 shadow-lg'
                         : 'bg-gray-900 text-white hover:bg-gray-800'
@@ -169,8 +169,8 @@ const PricingPage: React.FC = () => {
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Service-Specific Pricing</h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                Detailed pricing for individual services. Custom packages available for enterprise clients.
+              <p className: "text-xl text-gray-600 max-w-2xl mx-auto">,
+  Detailed pricing for individual services. Custom packages available for enterprise clients.
               </p>
             </div>
 
@@ -198,8 +198,8 @@ const PricingPage: React.FC = () => {
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Enterprise Solutions</h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                Custom solutions for large organizations with specific requirements and compliance needs.
+              <p className: "text-xl text-gray-600 max-w-2xl mx-auto">,
+  Custom solutions for large organizations with specific requirements and compliance needs.
               </p>
             </div>
 
@@ -236,8 +236,8 @@ const PricingPage: React.FC = () => {
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">Contact Sales</h3>
-                  <p className="text-gray-600 mb-6">
-                    Get a custom quote tailored to your organization's specific needs and requirements.
+                  <p className: "text-gray-600 mb-6">,
+  Get a custom quote tailored to your organization's specific needs and requirements.
                   </p>
                   <div className="space-y-4">
                     <div className="flex items-center">
@@ -254,8 +254,8 @@ const PricingPage: React.FC = () => {
                     </div>
                   </div>
                   <Link 
-                    to="/contact"
-                    className="mt-6 block w-full text-center bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
+                    to: "/contact",
+  className="mt-6 block w-full text-center bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
                   >
                     Contact Sales Team
                   </Link>
@@ -297,19 +297,19 @@ const PricingPage: React.FC = () => {
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           <div className="container mx-auto px-6 text-center">
             <h2 className="text-4xl font-bold mb-4">Ready to Get Started?</h2>
-            <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
-              Choose the perfect plan for your business or contact us for a custom solution.
+            <p className: "text-xl mb-8 text-blue-100 max-w-2xl mx-auto">,
+  Choose the perfect plan for your business or contact us for a custom solution.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                to="/contact" 
-                className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg"
+                to: "/contact" ,
+  className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg"
               >
                 Contact Sales
               </Link>
               <Link 
-                to="/services" 
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+                to: "/services" ,
+  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
               >
                 Explore Services
               </Link>

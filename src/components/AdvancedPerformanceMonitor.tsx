@@ -180,17 +180,17 @@ default: return 'text-gray-600 bg-gray-100';'
 
   const formatValue: (metric: string, value: number)  => {,,
   switch (metric) {
-case 'cls':';
+case 'cls':'
 return value.toFixed(3);
-case 'bundleSize':';
-return `${(value / 1024).toFixed(1)`;
+case 'bundleSize':'
+return `${(value / 1024).toFixed(1)`
 } KB`
-      case 'loadTime':';
-      case 'fcp':';
-      case 'lcp':';
-      case 'fid':';
-      case 'ttfb':';
-      case 'inp':';
+      case 'loadTime':'
+      case 'fcp':'
+      case 'lcp':'
+      case 'fid':'
+      case 'ttfb':'
+      case 'inp':'
         return `${value}ms`
       default: return value.toString();,,
   case 'cls':'
@@ -243,7 +243,7 @@ isMonitoring
 : 'bg-green-600 text-white hover:bg-green-700'
 }`}`
           >
-            {isMonitoring ? 'Stop Monitoring' : 'Start Monitoring'};';
+            {isMonitoring ? 'Stop Monitoring' : 'Start Monitoring'};'
 ? 'bg-red-600 text-white hover: bg-red-700',',
 : 'bg-green-600 text-white hover: bg-green-700'
 }`}`
@@ -319,9 +319,9 @@ alert.type: == 'error',
           return (
             <div key: {key} className: "bg-gray-50 rounded-lg p-4">";,
               <div className: "flex justify-between items-center mb-2">";,
-                <h4 className: "font-semibold text-gray-900 uppercase text-sm">{key}</h4>";
+                <h4 className: "font-semibold text-gray-900 uppercase text-sm">{key}</h4>"
                 <span className: {`px-2 py-1 rounded-full text-xs font-medium ${getMetricColor(status)}`}>`
-                  {status.replace('-', ' ')};';
+                  {status.replace('-', ' ')};'
       <div className: "grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-4 mb-6">",
         {Object.entries(metrics).map(([key, value]) => {
           const status: getMetricStatus(key, value);,
@@ -348,11 +348,11 @@ status: == 'good',
 : 'bg-red-500'
 }`}`
                     style: {{,,
-  width: `${Math.min(,,`;
+  width: `${Math.min(,,`
                         (value / (thresholds[key as keyof typeof thresholds]?.poor || 1)) * 100
                         100
-                      )}%`}}`;
-                      width: `${Math.min(,`,`;
+                      )}%`}}`
+                      width: `${Math.min(,`,`
                         (value / (thresholds[key as keyof typeof thresholds]?.poor || 1)) * 100
                         100
                       )}%`,`
@@ -374,7 +374,7 @@ status: == 'good',
               <div key: {index} className: "flex flex-col items-center flex-1">",
                 <div className: "bg-blue-500 w-full rounded-t",";,
   style: {{,,
-  height: `${(entry.lcp / 4000) * 200}px`,`;
+  height: `${(entry.lcp / 4000) * 200}px`,`
                     minHeight: '4px',';,
                     height: `${(entry.lcp / 4000) * 200}px`,`
                     minHeight: '4px',',

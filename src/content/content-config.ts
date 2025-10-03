@@ -356,17 +356,17 @@ export const services: Service[]  = [,,
       popular: true,
     }
     features: [,,
-      'Predictive Analytics',';
-      'Real-time Dashboards',';
-      'Data Integration',';
-      'Automated Reporting',';
-      'Machine Learning Models',';
+      'Predictive Analytics','
+      'Real-time Dashboards','
+      'Data Integration','
+      'Automated Reporting','
+      'Machine Learning Models','
       'Custom Visualizations'
     ]
     metrics: [,,
-      { value: '85%', label: 'Faster Decision Making' }';
-      { value: '98%', label: 'Prediction Accuracy' }';
-      { value: '300%', label: 'ROI Improvement' }';
+      { value: '85%', label: 'Faster Decision Making' }'
+      { value: '98%', label: 'Prediction Accuracy' }'
+      { value: '300%', label: 'ROI Improvement' }'
     ]
     testimonial: {,,
       quote: 'The AI Analytics Platform transformed how we make decisions. We can now predict trends and optimize operations like never before.',';,
@@ -391,17 +391,17 @@ export const services: Service[]  = [,,
       starting: '$149/month',
     }
     features: [,,
-      'Process Automation',';
-      'Smart Triggers',';
-      'Performance Monitoring',';
-      'Exception Handling',';
-      'Integration APIs',';
+      'Process Automation','
+      'Smart Triggers','
+      'Performance Monitoring','
+      'Exception Handling','
+      'Integration APIs','
       'Custom Workflows'
     ]
     metrics: [,,
-      { value: '75%', label: 'Process Efficiency' }';
-      { value: '60%', label: 'Time Savings' }';
-      { value: '90%', label: 'Error Reduction' }';
+      { value: '75%', label: 'Process Efficiency' }'
+      { value: '60%', label: 'Time Savings' }'
+      { value: '90%', label: 'Error Reduction' }'
     ]
     cta: {,,
       primary: 'Get Started',';,
@@ -421,17 +421,17 @@ export const services: Service[]  = [,,
       starting: '$99/month',
     }
     features: [,,
-      '24/7 Support',';
-      'Multi-channel',';
-      'Personalized Responses',';
-      'Natural Language Processing',';
-      'Sentiment Analysis',';
+      '24/7 Support','
+      'Multi-channel','
+      'Personalized Responses','
+      'Natural Language Processing','
+      'Sentiment Analysis','
       'Escalation Management'
     ]
     metrics: [,,
-      { value: '95%', label: 'Customer Satisfaction' }';
-      { value: '80%', label: 'Faster Response' }';
-      { value: '50%', label: 'Cost Reduction' }';
+      { value: '95%', label: 'Customer Satisfaction' }'
+      { value: '80%', label: 'Faster Response' }'
+      { value: '50%', label: 'Cost Reduction' }'
     ]
     cta: {,,
       primary: 'Try Demo',';,
@@ -451,11 +451,11 @@ export const services: Service[]  = [,,
       starting: '$2,999',
     }
     features: [,,
-      'Zero Downtime',';
-      'Security Compliance',';
-      'Cost Optimization',';
-      'Performance Monitoring',';
-      'Disaster Recovery',';
+      'Zero Downtime','
+      'Security Compliance','
+      'Cost Optimization','
+      'Performance Monitoring','
+      'Disaster Recovery','
       'Scalability Planning'
     ]
     cta: {,,
@@ -476,11 +476,11 @@ export const services: Service[]  = [,,
       starting: '$399/month',
     }
     features: [,,
-      'CI/CD Pipelines',';
-      'Infrastructure as Code',';
-      'Auto-scaling',';
-      'Monitoring & Alerting',';
-      'Security Scanning',';
+      'CI/CD Pipelines','
+      'Infrastructure as Code','
+      'Auto-scaling','
+      'Monitoring & Alerting','
+      'Security Scanning','
       'Performance Optimization'
     ]
     cta: {,,
@@ -501,11 +501,11 @@ export const services: Service[]  = [,,
       starting: '$599/month',
     }
     features: [,,
-      'Threat Detection',';
-      'Zero-trust Architecture',';
-      'Compliance',';
-      'Security Audits',';
-      'Incident Response',';
+      'Threat Detection','
+      'Zero-trust Architecture','
+      'Compliance','
+      'Security Audits','
+      'Incident Response','
       'Security Training'
     ]
     cta: {,,
@@ -964,9 +964,9 @@ export const getContentByTag: (tag: string)  => {,,
 
 export const getRecentContent: (limit: number: 3)  => {,,
   const allContent: [,
-    ...blogPosts.map(post: > ({ ...post, type: 'blog' as const }))';
-    ...caseStudies.map(study: > ({ ...study, type: 'case-study' as const }))';
-    ...services.map(service: > ({ ...service, type: 'service' as const }))';
+    ...blogPosts.map(post: > ({ ...post, type: 'blog' as const }))'
+    ...caseStudies.map(study: > ({ ...study, type: 'case-study' as const }))'
+    ...services.map(service: > ({ ...service, type: 'service' as const }))'
     ...blogPosts.map(post: > ({ ...post, type: 'blog' as const })),'
     ...caseStudies.map(study: > ({ ...study, type: 'case-study' as const })),'
     ...services.map(service: > ({ ...service, type: 'service' as const }))'

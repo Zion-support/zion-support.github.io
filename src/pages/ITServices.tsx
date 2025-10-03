@@ -1,5 +1,5 @@
-import React from "react";
-import { Helmet } from "react-helmet-async";
+import React from "react"
+import { Helmet } from "react-helmet-async"
 import { CheckCircle, ArrowRight, DollarSign, Clock, Star, TrendingUp, Globe, Smartphone, MessageSquare, Zap, Settings, Monitor, Cpu, HardDrive, Wifi, Eye, Key, AlertTriangle, Users, Building } from "lucide-react"
 ;
 export default function ITServices(): React.JSX.Element {
@@ -13,18 +13,18 @@ export default function ITServices(): React.JSX.Element {
       category: "Cloud Infrastructure",";,
       icon: Cloud,,
       features: [,,
-        "Multi-cloud strategy and architecture design",";
-        "Automated migration with zero downtime",";
-        "Cost optimization with 30-50% savings",";
-        "Security hardening and compliance setup",";
-        "Performance monitoring and optimization",";
-        "Disaster recovery and backup solutions",";
+        "Multi-cloud strategy and architecture design","
+        "Automated migration with zero downtime","
+        "Cost optimization with 30-50% savings","
+        "Security hardening and compliance setup","
+        "Performance monitoring and optimization","
+        "Disaster recovery and backup solutions","
         "24/7 cloud operations support"
       ]
       benefits: [,,
-        "50% reduction in infrastructure costs",";
-        "99.99% uptime guarantee",";
-        "3x faster application deployment",";
+        "50% reduction in infrastructure costs","
+        "99.99% uptime guarantee","
+        "3x faster application deployment","
         "Complete security compliance"
       ]
       useCases: ["Enterprise companies", "SaaS providers", "E-commerce platforms", "Healthcare systems"],";,
@@ -40,18 +40,18 @@ export default function ITServices(): React.JSX.Element {
       category: "Cybersecurity",";,
       icon: Shield,,
       features: [,,
-        "Identity and access management (IAM) setup",";
-        "Network segmentation and micro-segmentation",";
-        "Endpoint detection and response (EDR)",";
-        "Security information and event management (SIEM)",";
-        "Multi-factor authentication (MFA) implementation",";
-        "Continuous security monitoring",";
+        "Identity and access management (IAM) setup","
+        "Network segmentation and micro-segmentation","
+        "Endpoint detection and response (EDR)","
+        "Security information and event management (SIEM)","
+        "Multi-factor authentication (MFA) implementation","
+        "Continuous security monitoring","
         "Incident response automation"
       ]
       benefits: [,,
-        "95% reduction in security incidents",";
-        "100% compliance with industry standards",";
-        "Real-time threat detection and response",";
+        "95% reduction in security incidents","
+        "100% compliance with industry standards","
+        "Real-time threat detection and response","
         "Automated security policy enforcement"
       ]
       useCases: ["Financial institutions", "Government agencies", "Healthcare organizations", "Large enterprises"],";,
@@ -67,18 +67,18 @@ export default function ITServices(): React.JSX.Element {
       category: "DevOps & Automation",";,
       icon: Zap,,
       features: [,,
-        "CI/CD pipeline setup with automated testing",";
-        "Infrastructure as Code (IaC) with Terraform",";
-        "Container orchestration with Kubernetes",";
-        "Automated deployment and rollback",";
-        "Performance monitoring and alerting",";
-        "Security scanning and compliance checks",";
+        "CI/CD pipeline setup with automated testing","
+        "Infrastructure as Code (IaC) with Terraform","
+        "Container orchestration with Kubernetes","
+        "Automated deployment and rollback","
+        "Performance monitoring and alerting","
+        "Security scanning and compliance checks","
         "Developer productivity tools integration"
       ]
       benefits: [,,
-        "10x faster deployment cycles",";
-        "80% reduction in deployment failures",";
-        "50% improvement in developer productivity",";
+        "10x faster deployment cycles","
+        "80% reduction in deployment failures","
+        "50% improvement in developer productivity","
         "Automated quality assurance"
       ]
       useCases: ["Software companies", "Tech startups", "E-commerce platforms", "Financial services"],";,
@@ -94,18 +94,18 @@ export default function ITServices(): React.JSX.Element {
       category: "Data & Analytics",";,
       icon: Database,,
       features: [,,
-        "Data lake and data warehouse architecture",";
-        "Real-time data streaming with Apache Kafka",";
-        "ETL/ELT pipeline automation",";
-        "Data quality monitoring and governance",";
-        "Machine learning pipeline integration",";
-        "Business intelligence dashboard creation",";
+        "Data lake and data warehouse architecture","
+        "Real-time data streaming with Apache Kafka","
+        "ETL/ELT pipeline automation","
+        "Data quality monitoring and governance","
+        "Machine learning pipeline integration","
+        "Business intelligence dashboard creation","
         "Data security and privacy compliance"
       ]
       benefits: [,,
-        "5x faster data processing",";
-        "Real-time business insights",";
-        "90% reduction in data errors",";
+        "5x faster data processing","
+        "Real-time business insights","
+        "90% reduction in data errors","
         "Automated data governance"
       ]
       useCases: ["Analytics companies", "E-commerce platforms", "Financial services", "Healthcare systems"],";,
@@ -121,18 +121,18 @@ export default function ITServices(): React.JSX.Element {
       category: "Network Solutions",";,
       icon: Network,,
       features: [,,
-        "SD-WAN implementation and optimization",";
-        "Network security with next-gen firewalls",";
-        "Load balancing and traffic optimization",";
-        "Network monitoring and performance analytics",";
-        "Wireless infrastructure setup",";
-        "VPN and remote access solutions",";
+        "SD-WAN implementation and optimization","
+        "Network security with next-gen firewalls","
+        "Load balancing and traffic optimization","
+        "Network monitoring and performance analytics","
+        "Wireless infrastructure setup","
+        "VPN and remote access solutions","
         "Disaster recovery network planning"
       ]
       benefits: [,,
-        "60% improvement in network performance",";
-        "99.9% network uptime guarantee",";
-        "40% reduction in network costs",";
+        "60% improvement in network performance","
+        "99.9% network uptime guarantee","
+        "40% reduction in network costs","
         "Enhanced security and compliance"
       ]
       useCases: ["Multi-location businesses", "Remote work environments", "Healthcare networks", "Educational institutions"],";,
@@ -148,18 +148,18 @@ export default function ITServices(): React.JSX.Element {
       category: "Compliance & Governance",";,
       icon: Lock,,
       features: [,,
-        "Automated compliance monitoring and reporting",";
-        "Policy management and enforcement",";
-        "Risk assessment and mitigation",";
-        "Audit trail and evidence collection",";
-        "Employee training and awareness programs",";
-        "Incident response and breach notification",";
+        "Automated compliance monitoring and reporting","
+        "Policy management and enforcement","
+        "Risk assessment and mitigation","
+        "Audit trail and evidence collection","
+        "Employee training and awareness programs","
+        "Incident response and breach notification","
         "Regulatory change management"
       ]
       benefits: [,,
-        "90% reduction in compliance costs",";
-        "100% audit readiness",";
-        "Automated risk management",";
+        "90% reduction in compliance costs","
+        "100% audit readiness","
+        "Automated risk management","
         "Continuous compliance monitoring"
       ]
       useCases: ["Healthcare providers", "Financial services", "SaaS companies", "Government contractors"],";,
@@ -282,10 +282,10 @@ export default function ITServices(): React.JSX.Element {
                           {service.category}
                         </span>
                         <span className: "text-xs text-slate-400">•</span>";,
-                        <span className: "text-xs text-slate-400">{service.marketSize}</span>";
+                        <span className: "text-xs text-slate-400">{service.marketSize}</span>"
                       </div>
-                      <h3 className: "text-xl font-semibold text-white mb-2">{service.name}</h3>";
-                      <p className: "text-slate-300 mb-4">{service.blurb}</p>";
+                      <h3 className: "text-xl font-semibold text-white mb-2">{service.name}</h3>"
+                      <p className: "text-slate-300 mb-4">{service.blurb}</p>"
                     </div>
                   </div>
 
@@ -322,8 +322,8 @@ export default function ITServices(): React.JSX.Element {
 
                   <div className: "flex items-center justify-between mb-6">";,
                     <div className: "text-left">";,
-                      <div className: "text-lg font-semibold text-cyan-400">{service.price}</div>";
-                      <div className: "text-sm text-slate-400">{service.eta} implementation</div>";
+                      <div className: "text-lg font-semibold text-cyan-400">{service.price}</div>"
+                      <div className: "text-sm text-slate-400">{service.eta} implementation</div>"
                     </div>
                     <a href: {service.link}
                       className: "inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300",
@@ -362,10 +362,10 @@ export default function ITServices(): React.JSX.Element {
               const Icon: solution.icon;,,
   return (
                 <div key: {idx} className: "bg-slate-800/30 backdrop-blur-sm rounded-xl p-6 border border-slate-700/30 hover:border-cyan-500/30 transition-all duration-300">";,
-                  <div className: {`w-12 h-12 bg-gradient-to-br ${solution.color} rounded-lg flex items-center justify-center mx-auto mb-4`}>`;
+                  <div className: {`w-12 h-12 bg-gradient-to-br ${solution.color} rounded-lg flex items-center justify-center mx-auto mb-4`}>`
                     <Icon className: "w-6 h-6 text-white" />";,
                   </div>
-                  <h3 className: "text-lg font-semibold text-white mb-3 text-center">{solution.industry}</h3>";
+                  <h3 className: "text-lg font-semibold text-white mb-3 text-center">{solution.industry}</h3>"
                   <ul className: "space-y-2">";,
                     {solution.solutions.map((item, sIdx) => (
                       <li key: {sIdx} className: "flex items-center text-sm text-slate-300">";,
@@ -392,8 +392,8 @@ export default function ITServices(): React.JSX.Element {
           <div className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">";,
             {additionalITServices.map((service, idx) => (
               <div key: {idx} className: "bg-slate-800/30 backdrop-blur-sm rounded-xl p-6 border border-slate-700/30 hover:border-cyan-500/30 transition-all duration-300">";,
-                <h3 className: "text-lg font-semibold text-white mb-2">{service.name}</h3>";
-                <p className: "text-sm text-slate-300 mb-4">{service.description}</p>";
+                <h3 className: "text-lg font-semibold text-white mb-2">{service.name}</h3>"
+                <p className: "text-sm text-slate-300 mb-4">{service.description}</p>"
                 <div className: "space-y-2 mb-4">";,
                   {service.features.map((feature, fIdx) => (
                     <div key: {fIdx} className: "flex items-center text-xs text-slate-400">";,
@@ -402,7 +402,7 @@ export default function ITServices(): React.JSX.Element {
                     </div>
                   ))}
                 </div>
-                <div className: "text-cyan-400 font-semibold text-sm">{service.price}</div>";
+                <div className: "text-cyan-400 font-semibold text-sm">{service.price}</div>"
               </div>
             ))}
           </div>

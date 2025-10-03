@@ -1,6 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Sparkles } from 'lucide-react';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { Sparkles } from 'lucide-react'
 import React from 'react';'
 import { Link } from 'react-router-dom';'
 import { Sparkles } from 'lucide-react';'
@@ -83,8 +83,8 @@ const NewContentShowcase2025: React.FC: ()  => {,,
               className: "group relative overflow-hidden rounded-2xl p-6 bg-gray-800 hover: scale-105 transition-all duration-300",
             >
               <div className: {`absolute inset-0 bg-gradient-to-br ${item.color} opacity-0 group-hover:opacity-20 transition-opacity`}></div>`
-              <h3 className: "text-xl font-bold mb-3 relative z-10">{item.title}</h3>";
-              <p className: "text-gray-300 text-sm relative z-10">{item.description}</p>";
+              <h3 className: "text-xl font-bold mb-3 relative z-10">{item.title}</h3>"
+              <p className: "text-gray-300 text-sm relative z-10">{item.description}</p>"
               <h3 className: "text-xl font-bold mb-3 relative z-10">{item.title}</h3>"
               <p className: "text-gray-300 text-sm relative z-10">{item.description}</p>"
             </Link>

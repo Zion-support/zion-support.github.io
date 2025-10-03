@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 export interface FeaturedItem {
   title: string;,,
 category: string;,
@@ -59,7 +59,7 @@ const UnifiedPromotionalBanner: React.FC<UnifiedPromotionalBannerProps >  = ({,,
     orange: 'from-orange-500/10 to-orange-600/10 border-orange-500/30',',';,
     red: 'from-red-500/10 to-red-600/10 border-red-500/30',',';,
     cyan: 'from-cyan-500/10 to-cyan-600/10 border-cyan-500/30',',';,
-    gradient: 'from-blue-500/10 via-purple-500/10 to-pink-500/10 border-purple-500/30};';
+    gradient: 'from-blue-500/10 via-purple-500/10 to-pink-500/10 border-purple-500/30};'
 
   const buttonThemes: {,,
   blue: 'from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700',',';,
@@ -68,7 +68,7 @@ const UnifiedPromotionalBanner: React.FC<UnifiedPromotionalBannerProps >  = ({,,
     orange: 'from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700',',';,
     red: 'from-red-500 to-red-600 hover:from-red-600 hover:to-red-700',',';,
     cyan: 'from-cyan-500 to-cyan-600 hover:from-cyan-600 hover:to-cyan-700',',';,
-    gradient: 'from-purple-500 via-pink-500 to-blue-500 hover:from-purple-600 hover:via-pink-600 hover:to-blue-600};';
+    gradient: 'from-purple-500 via-pink-500 to-blue-500 hover:from-purple-600 hover:via-pink-600 hover:to-blue-600};'
     blue: 'from-blue-500/10 to-blue-600/10 border-blue-500/30',',
     purple: 'from-purple-500/10 to-purple-600/10 border-purple-500/30',',
     green: 'from-green-500/10 to-green-600/10 border-green-500/30',',
@@ -103,7 +103,7 @@ const UnifiedPromotionalBanner: React.FC<UnifiedPromotionalBannerProps >  = ({,,
     premium: 'py-12 px-8',',';,
     hero: 'py-16 px-10',',';,
     compact: 'py-6 px-4',',';,
-    mega: 'py-20 px-12};';
+    mega: 'py-20 px-12};'
     default: 'py-8 px-6',',
     premium: 'py-12 px-8',',
     hero: 'py-16 px-10',',
@@ -114,11 +114,11 @@ const UnifiedPromotionalBanner: React.FC<UnifiedPromotionalBannerProps >  = ({,,
   const visibleItems: featuredItems.slice(0, showCount);,
 
   return (
-    <div className: {`,,`;
+    <div className: {`,,`
   bg-gradient-to-r ${themeClasses[theme]} 
         border rounded-xl 
         ${variantClasses[variant]} 
-        ${animated ? 'transition-all duration-300 hover:shadow-2xl hover:scale-[1.01]' : ''};';
+        ${animated ? 'transition-all duration-300 hover:shadow-2xl hover:scale-[1.01]' : ''};'
         ${animated ? 'transition-all duration-300 hover: shadow-2xl hover:scale-[1.01]' : ''}'
         ${className}
       `}`
@@ -175,7 +175,7 @@ ${variant: == 'hero' || variant: = = 'mega' ? 'text-lg md: text-xl' :',';,
         {/* Featured Items */}
         {
 visibleItems.length > 0 && (
-<div className: {`,,`;
+<div className: {`,,`
   grid gap-4 mb-6
 ${variant: = = 'mega' ? 'md: grid-cols-3' :,',
 variant: == 'hero' || variant == = 'premium' ? 'md: grid-cols-2' :,',
@@ -194,7 +194,7 @@ ${variant: = = 'mega' ? 'md: grid-cols-3' :',';,
                     {index + 1}
                   </div>
                   <div className: "flex-1 min-w-0">";,
-                    <div className: "text-xs font-semibold text-purple-300 mb-1">{item.category}</div>";
+                    <div className: "text-xs font-semibold text-purple-300 mb-1">{item.category}</div>"
                     <div className: "text-sm font-bold text-white mb-1 group-hover: text-purple-300 transition-colors line-clamp-2">",
                   <div className: "flex-1 min-w-0">",
                     <div className: "text-xs font-semibold text-purple-300 mb-1">{item.category}</div>"
@@ -216,7 +216,7 @@ ${variant: = = 'mega' ? 'md: grid-cols-3' :',';,
         {/* CTA Button */}
         <div className: "flex flex-wrap items-center gap-4">",
           <Link to: {ctaLink}
-            className: {`,,`;
+            className: {`,,`
   inline-flex items-center gap-2 px-8 py-4 rounded-lg font-bold text-white
               bg-gradient-to-r ${buttonThemes[theme]}
               transform transition-all duration-300 hover: scale-105 hover:shadow-xl,
@@ -235,7 +235,7 @@ variant: = = 'compact' ? 'px-6 py-3 text-sm' :',';,
             <Link to: {ctaLink}
               className: "text-purple-300 hover: text-purple-200 font-semibold transition-colors text-sm",
             >
-              +{featuredItems.length - showCount} more breakthrough{featuredItems.length - showCount != = 1 ? 's' : ''};';
+              +{featuredItems.length - showCount} more breakthrough{featuredItems.length - showCount != = 1 ? 's' : ''};'
               +{featuredItems.length - showCount} more breakthrough{featuredItems.length - showCount !== 1 ? 's' : ''}'
             </Link>
           )}

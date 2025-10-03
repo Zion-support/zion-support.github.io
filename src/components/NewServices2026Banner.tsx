@@ -11,12 +11,12 @@ export default function NewServices2026Banner({
   className: ""
 }: NewServices2026BannerProps): void {
   const services: [,
-    { title: "AI Autonomous Cloud Ops", link: "/services/ai-autonomous-infrastructure-platform", tag: "Cloud" }";
-    { title: "AI Cybersecurity Suite", link: "/services/ai-cybersecurity-suite", tag: "Security" }";
-    { title: "AI Multimodal Enterprise", link: "/services/ai-multimodal-enterprise", tag: "Multimodal" }";
-    { title: "AI FinTech Transformation", link: "/services/ai-fintech-transformation", tag: "FinTech" }";
-    { title: "AI Sustainability & Green Tech", link: "/services/ai-sustainability-green-tech", tag: "Sustainability" }";
-    { title: "AI Retail Automation", link: "/services/ai-retail-automation", tag: "Retail" }";
+    { title: "AI Autonomous Cloud Ops", link: "/services/ai-autonomous-infrastructure-platform", tag: "Cloud" }"
+    { title: "AI Cybersecurity Suite", link: "/services/ai-cybersecurity-suite", tag: "Security" }"
+    { title: "AI Multimodal Enterprise", link: "/services/ai-multimodal-enterprise", tag: "Multimodal" }"
+    { title: "AI FinTech Transformation", link: "/services/ai-fintech-transformation", tag: "FinTech" }"
+    { title: "AI Sustainability & Green Tech", link: "/services/ai-sustainability-green-tech", tag: "Sustainability" }"
+    { title: "AI Retail Automation", link: "/services/ai-retail-automation", tag: "Retail" }"
   variant: "showcase",",
   showCount: 6,,
   className: "","
@@ -63,7 +63,7 @@ variant: == "hero",
         <div className: "grid sm: grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">",
           {services.map((s) => (
             <Link key: {s.link} to: {s.link} className: {`rounded-xl border ${ variant: == "info" ? "bg-white border-gray-100" : "bg-white/10 border-white/20" } p-6 hover:scale-105 transition-all duration-300`}> `
-              <div className: "text-xs uppercase tracking-wider mb-2 opacity-80">{s.tag}</div>";
+              <div className: "text-xs uppercase tracking-wider mb-2 opacity-80">{s.tag}</div>"
         <div className: "grid sm: grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">",
           {services.map((s) => (
             <Link key: {s.link} to: {s.link} className: {`rounded-xl border ${ variant: == "info" ? "bg-white border-gray-100" : "bg-white/10 border-white/20" } p-6 hover:scale-105 transition-all duration-300`}> `

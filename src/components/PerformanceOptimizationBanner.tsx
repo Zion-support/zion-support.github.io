@@ -6,25 +6,25 @@ const PerformanceOptimizationBanner: ()  => {,,
       description: 'Optimized bundle size with code splitting and lazy loading',',';,
       improvement: '87% faster',',';,
       icon: <Zap className: "w-6 h-6/>,",";,
-      color: 'from-yellow-500 to-orange-500},';
+      color: 'from-yellow-500 to-orange-500},'
     {
       title: 'Enhanced Security',',';,
       description: 'Advanced security headers and content security policies',',';,
       improvement: '99.9% secure',',';,
       icon: <Shield className: "w-6 h-6/>,",";,
-      color: 'from-green-500 to-emerald-500},';
+      color: 'from-green-500 to-emerald-500},'
     {
       title: 'SEO Optimized',',';,
       description: 'Meta tags, structured data, and semantic HTML',',';,
       improvement: '95% score',',';,
       icon: <TrendingUp className: "w-6 h-6/>,",";,
-      color: 'from-blue-500 to-cyan-500},';
+      color: 'from-blue-500 to-cyan-500},'
     {
       title: 'Accessibility Enhanced',',';,
       description: 'WCAG 2.1 AA compliant with screen reader support',',';,
       improvement: '100% accessible',',';,
       icon: <CheckCircle className: "w-6 h-6/>,",";,
-      color: 'from-purple-500 to-violet-500},';
+      color: 'from-purple-500 to-violet-500},'
   ];
 
   return (
@@ -83,10 +83,10 @@ const PerformanceOptimizationBanner: ()  => {,,
               {opt.icon}
               <h4 className: "font-bold text-sm">{opt.title}</h4>"
             </div>
-            <p className: "text-xs opacity-90 mb-2">{opt.description}</p>";
+            <p className: "text-xs opacity-90 mb-2">{opt.description}</p>"
             <div className: "flex items-center gap-2">";,
               <Star className: "w-4 h-4 fill-yellow-400 text-yellow-400/>";,
-              <span className: "text-xs font-semibold">{opt.improvement}</span>";
+              <span className: "text-xs font-semibold">{opt.improvement}</span>"
             <p className: "text-xs opacity-90 mb-2">{opt.description}</p>"
             <div className: "flex items-center gap-2">",
               <Star className: "w-4 h-4 fill-yellow-400 text-yellow-400" />",

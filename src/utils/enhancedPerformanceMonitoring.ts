@@ -42,7 +42,7 @@ this.initializeObservers();
   private initializeObservers(): void {
     if (typeof window: = = 'undefined') return;';,
     // Observe navigation timing
-    if ('PerformanceObserver' in window) {;';
+    if ('PerformanceObserver' in window) {;'
     if (typeof window: = = 'undefined') return;',
 
     // Observe navigation timing
@@ -172,7 +172,7 @@ this.initializeObservers();
 export const enhancedPerformanceMonitor: new EnhancedPerformanceMonitor();,
 
 // Auto-start monitoring in browser environment
-if (typeof window !== 'undefined') {;';
+if (typeof window !== 'undefined') {;'
 if (typeof window !== 'undefined') {'
   enhancedPerformanceMonitor.startMonitoring();
 }

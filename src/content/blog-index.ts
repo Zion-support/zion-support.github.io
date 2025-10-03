@@ -28,11 +28,11 @@ export const october2025Breakthroughs: BlogPost[]  = [,,
     date: '2025-10-01',';,
     readTime: '25 min',';,
     tags: [,,
-      'neural architecture search',';
-      'AutoML',';
-      'model optimization',';
-      'AI evolution',';
-      'machine learning',';
+      'neural architecture search','
+      'AutoML','
+      'model optimization','
+      'AI evolution','
+      'machine learning','
       'enterprise AI'
     ]
     featured: true,,
@@ -46,11 +46,11 @@ export const october2025Breakthroughs: BlogPost[]  = [,,
     date: '2025-10-01',';,
     readTime: '22 min',';,
     tags: [,,
-      'quantum optimization',';
-      'quantum computing',';
-      'enterprise optimization',';
-      'quantum algorithms',';
-      'supply chain',';
+      'quantum optimization','
+      'quantum computing','
+      'enterprise optimization','
+      'quantum algorithms','
+      'supply chain','
       'portfolio optimization'
     ]
     featured: true,,
@@ -64,11 +64,11 @@ export const october2025Breakthroughs: BlogPost[]  = [,,
     date: '2025-10-01',';,
     readTime: '28 min',';,
     tags: [,,
-      'intelligent automation',';
-      'process automation',';
-      'RPA',';
-      'AI orchestration',';
-      'workflow automation',';
+      'intelligent automation','
+      'process automation','
+      'RPA','
+      'AI orchestration','
+      'workflow automation','
       'digital transformation'
     ]
     featured: true,,
@@ -83,7 +83,7 @@ export const october2025Breakthroughs: BlogPost[]  = [,,
     readTime: '10 min',',';,
     tags: ['streaming', 'decisioning', 'feature store', 'KPIs'],',';,
     featured: true,,,
-    valueProposition: '$215M annual value},';
+    valueProposition: '$215M annual value},'
   {
     slug: 'ai-2025-oct-03-autonomous-cloud-security',',';,
     title: 'Autonomous Cloud Security 2025',',';,
@@ -93,7 +93,7 @@ export const october2025Breakthroughs: BlogPost[]  = [,,
     readTime: '9 min',',';,
     tags: ['security', 'zero trust', 'automation', 'rollback'],',';,
     featured: true,,,
-    valueProposition: '$42M annual savings},';
+    valueProposition: '$42M annual savings},'
   {
     slug: 'ai-2025-oct-03-quantum-supply-chain-optimization',';,
     title: 'Quantum Supply Chain 2025',';,
@@ -208,7 +208,7 @@ export const allBlogPosts: BlogPost[]  = [,
     readTime: '8 min',',';,
     tags: ['Feature Flags', 'Privacy', 'Edge', 'A/B', 'DP'],',';,
     featured: true,,,
-    valueProposition: 'Zero PII, <100ms at edge},';
+    valueProposition: 'Zero PII, <100ms at edge},'
   {
     slug: 'ai-2025-oct-01-runtime-rollback-guardrails',';,
     title: 'Runtime Rollback Guardrails: Ship Faster With Reversible Changes',';,
@@ -230,7 +230,7 @@ export const allBlogPosts: BlogPost[]  = [,
     readTime: '9 min',',';,
     tags: ['Privacy', 'Telemetry', 'Edge', 'DP'],',';,
     featured: true,,,
-    valueProposition: '$8M+ savings via safe analytics},';
+    valueProposition: '$8M+ savings via safe analytics},'
   {
     slug: 'genai-2025-oct-01-eval-scorecards-live-canaries',';,
     title: 'Live Evals & Scorecards: Ship GenAI Fast Without Regressions',';,
@@ -252,7 +252,7 @@ export const allBlogPosts: BlogPost[]  = [,
     readTime: '10 min',',';,
     tags: ['Privacy', 'Edge', 'Experiments', 'Feature Flags'],',';,
     featured: true,,,
-    valueProposition: 'Zero‑PII experiments at the edge},';
+    valueProposition: 'Zero‑PII experiments at the edge},'
   {
     slug: 'ai-2025-oct-02-rollback-guardrails-blueprint',';,
     title: 'Runtime Rollback Guardrails Blueprint',';,

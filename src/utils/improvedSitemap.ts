@@ -51,7 +51,7 @@ this.config: config;
     this.config.routes.forEach(route: > {,,
   if (!route.dynamic) {
         this.addURL({
-          loc: `${this.config.baseUrl}${route.path}`,`;
+          loc: `${this.config.baseUrl}${route.path}`,`
           lastmod: new Date().toISOString(),,
           changefreq: route.changefreq || 'weekly',';,
           priority: route.priority || 0.5,,
@@ -66,8 +66,8 @@ this.config: config;
   public addBlogPosts(posts: Array<{ slug: string; date: string; images?: string[] }>): void {
 posts.forEach(post: > {,,
   const url: SitemapURL: {,,
-  loc: `${this.config.baseUrl`;
-}/blog/${post.slug}`,`;
+  loc: `${this.config.baseUrl`
+}/blog/${post.slug}`,`
         lastmod: post.date,,
         changefreq: 'monthly',';,
         priority: 0.8,,
@@ -80,7 +80,7 @@ loc: `${this.config.baseUrl`
 
       if (post.images && post.images.length > 0) {
         url.images: post.images.map(img: > ({,,
-  loc: `${this.config.baseUrl}${img}`}));`;
+  loc: `${this.config.baseUrl}${img}`}));`
           loc: `${this.config.baseUrl}${img}`,`
         }));
       }
@@ -92,7 +92,7 @@ loc: `${this.config.baseUrl`
   public addCaseStudies(caseStudies: Array<{ slug: string; date: string }>): void {
     caseStudies.forEach(study: > {,,
   this.addURL({
-        loc: `${this.config.baseUrl}/case-studies/${study.slug}`,`;
+        loc: `${this.config.baseUrl}/case-studies/${study.slug}`,`
         lastmod: study.date,,
         changefreq: 'monthly',';,
         priority: 0.7,,
@@ -106,7 +106,7 @@ loc: `${this.config.baseUrl`
   public addServices(services: Array<{ slug: string }>): void {
     services.forEach(service: > {,,
   this.addURL({
-        loc: `${this.config.baseUrl}/services/${service.slug}`,`;
+        loc: `${this.config.baseUrl}/services/${service.slug}`,`
         lastmod: new Date().toISOString(),,
         changefreq: 'monthly',';,
         priority: 0.9,,
@@ -145,24 +145,24 @@ xml += `    <loc >${this.escapeXML(url.loc)`
 
       if (url.images && url.images.length > 0) {
 url.images.forEach(image: > {,,
-  xml += '    <image : image>\n',';
-  xml += `      <image :loc>${this.escapeXML(image.loc)`;
-}</image: loc>\n`,,`;
+  xml += '    <image : image>\n','
+  xml += `      <image :loc>${this.escapeXML(image.loc)`
+}</image: loc>\n`,,`
   if (image.caption) {
-            xml += `      <image :caption>${this.escapeXML(image.caption)}</image: caption>\n`,`,`;
+            xml += `      <image :caption>${this.escapeXML(image.caption)}</image: caption>\n`,`,`
           }
           if (image.title) {
-            xml += `      <image :title>${this.escapeXML(image.title)}</image: title>\n`,`,`;
+            xml += `      <image :title>${this.escapeXML(image.title)}</image: title>\n`,`,`
           }
           xml += '    </image: image>\n';',';,
-  xml += '    <image : image>\n';',';
+  xml += '    <image : image>\n';','
   xml += `      <image :loc>${this.escapeXML(image.loc)`
-}</image: loc>\n`;,`,`;
+}</image: loc>\n`;,`,`
           if (image.caption) {
-            xml += `      <image :caption>${this.escapeXML(image.caption)}</image: caption>\n`;,`,`;
+            xml += `      <image :caption>${this.escapeXML(image.caption)}</image: caption>\n`;,`,`
           }
           if (image.title) {
-            xml += `      <image :title>${this.escapeXML(image.title)}</image: title>\n`;,`,`;
+            xml += `      <image :title>${this.escapeXML(image.title)}</image: title>\n`;,`,`
           }
           xml += '    </image: image>\n';',
         });
@@ -198,11 +198,11 @@ xml += `    <loc >${this.escapeXML(sitemap.loc)`
 
   private escapeXML(str: string): string {,,
   return str
-      .replace(/&/g, '&amp;');';
-      .replace(/</g, '&lt;');';
-      .replace(/>/g, '&gt;');';
-      .replace(/"/g, '&quot;');';
-      .replace(/'/g, '&apos;');';
+      .replace(/&/g, '&amp;');'
+      .replace(/</g, '&lt;');'
+      .replace(/>/g, '&gt;');'
+      .replace(/"/g, '&quot;');'
+      .replace(/'/g, '&apos;');'
       .replace(/&/g, '&amp;')'
       .replace(/</g, '&lt;')'
       .replace(/>/g, '&gt;')'
@@ -224,12 +224,12 @@ export const createSitemapGenerator: (baseUrl: string): ImprovedSitemapGenerator
   const config: SitemapConfig: {,,
   baseUrl,
     routes: [,,
-      { path: '/', priority: 1.0, changefreq: 'daily' }';
-      { path: '/about', priority: 0.8, changefreq: 'monthly' }';
-      { path: '/contact', priority: 0.9, changefreq: 'monthly' }';
-      { path: '/blog', priority: 0.9, changefreq: 'daily' }';
-      { path: '/case-studies', priority: 0.8, changefreq: 'weekly' }';
-      { path: '/services', priority: 0.9, changefreq: 'monthly' }';
+      { path: '/', priority: 1.0, changefreq: 'daily' }'
+      { path: '/about', priority: 0.8, changefreq: 'monthly' }'
+      { path: '/contact', priority: 0.9, changefreq: 'monthly' }'
+      { path: '/blog', priority: 0.9, changefreq: 'daily' }'
+      { path: '/case-studies', priority: 0.8, changefreq: 'weekly' }'
+      { path: '/services', priority: 0.9, changefreq: 'monthly' }'
     ]
       { path: '/', priority: 1.0, changefreq: 'daily' },'
       { path: '/about', priority: 0.8, changefreq: 'monthly' },'

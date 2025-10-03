@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
+import React, { useState } from 'react'
+import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from 'lucide-react'
 
-const ContactPage: React.FC = () => {
+const ContactPage: React.FC: () => {,
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -12,15 +12,15 @@ const ContactPage: React.FC = () => {
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({
+  const handleChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {,
+  setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleSubmit: (e: React.FormEvent) => {,
+  e.preventDefault();
     // Here you would typically send the form data to your backend
     console.log('Form submitted:', formData);
     setIsSubmitted(true);
@@ -44,8 +44,8 @@ const ContactPage: React.FC = () => {
       <section className="bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-800 text-white py-20">
         <div className="container mx-auto px-6 text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">Get In Touch</h1>
-          <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
-            Ready to transform your business? Let's discuss how our AI-powered solutions can drive your success.
+          <p className: "text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">,
+  Ready to transform your business? Let's discuss how our AI-powered solutions can drive your success.
           </p>
         </div>
       </section>
@@ -66,75 +66,75 @@ const ContactPage: React.FC = () => {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                      Full Name *
+                    <label htmlFor: "name" className="block text-sm font-medium text-gray-700 mb-2">,
+  Full Name *
                     </label>
                     <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      required
+                      type: "text",
+  id="name"
+                      name: "name",
+  required
                       value={formData.name}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
-                      placeholder="Your full name"
+                      className: "w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200",
+  placeholder="Your full name"
                     />
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                      Email Address *
+                    <label htmlFor: "email" className="block text-sm font-medium text-gray-700 mb-2">,
+  Email Address *
                     </label>
                     <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      required
+                      type: "email",
+  id="email"
+                      name: "email",
+  required
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
-                      placeholder="your@email.com"
+                      className: "w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200",
+  placeholder="your@email.com"
                     />
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
-                      Company
+                    <label htmlFor: "company" className="block text-sm font-medium text-gray-700 mb-2">,
+  Company
                     </label>
                     <input
-                      type="text"
-                      id="company"
-                      name="company"
-                      value={formData.company}
+                      type: "text",
+  id="company"
+                      name: "company",
+  value={formData.company}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
-                      placeholder="Your company name"
+                      className: "w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200",
+  placeholder="Your company name"
                     />
                   </div>
                   <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                      Phone Number
+                    <label htmlFor: "phone" className="block text-sm font-medium text-gray-700 mb-2">,
+  Phone Number
                     </label>
                     <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      value={formData.phone}
+                      type: "tel",
+  id="phone"
+                      name: "phone",
+  value={formData.phone}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
-                      placeholder="+1 (555) 123-4567"
+                      className: "w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200",
+  placeholder="+1 (555) 123-4567"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
-                    Service Interest
+                  <label htmlFor: "service" className="block text-sm font-medium text-gray-700 mb-2">,
+  Service Interest
                   </label>
                   <select
-                    id="service"
-                    name="service"
+                    id: "service",
+  name="service"
                     value={formData.service}
                     onChange={handleChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
@@ -151,27 +151,27 @@ const ContactPage: React.FC = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                    Message *
+                  <label htmlFor: "message" className="block text-sm font-medium text-gray-700 mb-2">,
+  Message *
                   </label>
                   <textarea
-                    id="message"
-                    name="message"
+                    id: "message",
+  name="message"
                     required
                     rows={6}
                     value={formData.message}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
-                    placeholder="Tell us about your project and how we can help..."
+                    className: "w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200",
+  placeholder="Tell us about your project and how we can help..."
                   />
                 </div>
 
                 <button
-                  type="submit"
-                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center"
+                  type: "submit",
+  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center"
                 >
-                  <Send className="h-5 w-5 mr-2" />
-                  Send Message
+                  <Send className: "h-5 w-5 mr-2" />,
+  Send Message
                 </button>
               </form>
             )}
@@ -204,8 +204,8 @@ const ContactPage: React.FC = () => {
                   <MapPin className="h-6 w-6 text-blue-600 mt-1" />
                   <div>
                     <h4 className="font-semibold text-gray-900">Address</h4>
-                    <p className="text-gray-600">
-                      123 Innovation Drive<br />
+                    <p className: "text-gray-600">,
+  123 Innovation Drive<br />
                       San Francisco, CA 94105<br />
                       United States
                     </p>
@@ -216,8 +216,8 @@ const ContactPage: React.FC = () => {
                   <Clock className="h-6 w-6 text-blue-600 mt-1" />
                   <div>
                     <h4 className="font-semibold text-gray-900">Business Hours</h4>
-                    <p className="text-gray-600">
-                      Monday - Friday: 9:00 AM - 6:00 PM PST<br />
+                    <p className: "text-gray-600">,
+  Monday - Friday: 9:00 AM - 6:00 PM PST<br />
                       Saturday: 10:00 AM - 4:00 PM PST<br />
                       Sunday: Closed
                     </p>

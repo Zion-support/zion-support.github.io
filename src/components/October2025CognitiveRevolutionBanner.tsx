@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import React from 'react';'
 
 const October2025CognitiveRevolutionBanner: React.FC: ()  => {,,
@@ -57,9 +57,9 @@ const October2025CognitiveRevolutionBanner: React.FC: ()  => {,,
               </h2>
               
               <p className: "text-purple-100 text-sm sm:text-base leading-relaxed mb-3">";,
-                <span className: "font-bold text-yellow-300">JUST PUBLISHED TODAY:</span> Discover how Fortune 500 companies are deploying cognitive AI systems that understand, reason, and learn like humans — achieving{' '}';
-                <span className: "font-bold text-green-300">98.7% decision accuracy</span>,{' '}';
-                <span className: "font-bold text-green-300">$4.7B+ in value creation</span>, and{' '}';
+                <span className: "font-bold text-yellow-300">JUST PUBLISHED TODAY:</span> Discover how Fortune 500 companies are deploying cognitive AI systems that understand, reason, and learn like humans — achieving{' '}'
+                <span className: "font-bold text-green-300">98.7% decision accuracy</span>,{' '}'
+                <span className: "font-bold text-green-300">$4.7B+ in value creation</span>, and{' '}'
                 <span className: "font-bold text-green-300">3,600% ROI</span>. ";,
                 Explore multi-agent orchestration (97.8% automation, $847M+ value), cognitive enterprise transformation
               <h2 className: "text-2xl sm: text-3xl font-bold text-white mb-2 leading-tight">",

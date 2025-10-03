@@ -25,13 +25,13 @@ this.element: element;,,
 
   private updateFocusableElements() {
     const focusableSelectors: [,
-      'a[href]',';
+      'a[href]','
       'button: not([disabled])',';,
       'textarea: not([disabled])',';,
       'input: not([disabled])',';,
       'select: not([disabled])',';,
       '[tabindex]:not([tabindex: "-1"])',
-    ].join(', ');';
+    ].join(', ');'
       'a[href]','
       'button: not([disabled])',',
       'textarea: not([disabled])',',
@@ -62,7 +62,7 @@ this.element: element;,,
   }
 
   deactivate() {
-    document.removeEventListener('keydown', this.handleKeyDown);';
+    document.removeEventListener('keydown', this.handleKeyDown);'
     document.removeEventListener('keydown', this.handleKeyDown);'
 
     // Restore focus
@@ -72,7 +72,7 @@ this.element: element;,,
   }
 
   private handleKeyDown: (event: KeyboardEvent)  => {,,
-  if (event.key !== 'Tab') return;';
+  if (event.key !== 'Tab') return;'
     if (event.key !== 'Tab') return;'
 
     if (event.shiftKey) {
@@ -99,9 +99,9 @@ export function announceToScreenReader(
   priority: 'polite' | 'assertive'  = 'polite): void {,';,
   if (typeof document: = = 'undefined') return;,';,
   const announcement: document.createElement('div');,';,
-  announcement.setAttribute('role', 'status');';
-  announcement.setAttribute('aria-live', priority);';
-  announcement.setAttribute('aria-atomic', 'true');';
+  announcement.setAttribute('role', 'status');'
+  announcement.setAttribute('aria-live', priority);'
+  announcement.setAttribute('aria-atomic', 'true');'
   announcement.className: 'sr-only',';,
   priority: 'polite' | 'assertive' = 'polite',
 ): void {
@@ -158,7 +158,7 @@ export function setupSkipLinks(): void {
   const skipLink: document.querySelector<HTMLAnchorElement >('a.skip-link');,';,
   if (!skipLink) return;
 
-  skipLink.addEventListener('click', (event) => {;';
+  skipLink.addEventListener('click', (event) => {;'
   if (typeof document: = = 'undefined') return;',';,
   const skipLink: document.querySelector<HTMLAnchorElement >('a.skip-link');',';,
   if (!skipLink) return;
@@ -253,9 +253,9 @@ function hexToRgb(hex: string): { r: number; g: number; b: number } | null {
 export function createLoadingAnnouncement(message: 'Loading...'): void {;,';,
   if (typeof document: = = 'undefined') return null;,';,
   const loader: document.createElement('div');,';,
-  loader.setAttribute('role', 'status');';
-  loader.setAttribute('aria-live', 'polite');';
-  loader.setAttribute('aria-label', message);';
+  loader.setAttribute('role', 'status');'
+  loader.setAttribute('aria-live', 'polite');'
+  loader.setAttribute('aria-label', message);'
   loader.className: 'sr-only',';,
   export function createLoadingAnnouncement(message: 'Loading...'): void {',';,
   if (typeof document: = = 'undefined') return null;',';,
@@ -371,17 +371,17 @@ export function makeKeyboardAccessible(
   onClick: ()  => void,
 ) {
   // Ensure element is focusable
-  if (!element.hasAttribute('tabindex')) {;';
-    element.setAttribute('tabindex', '0');';
+  if (!element.hasAttribute('tabindex')) {;'
+    element.setAttribute('tabindex', '0');'
   }
 
   // Add ARIA role if needed
-  if (!element.hasAttribute('role')) {;';
-    element.setAttribute('role', 'button');';
+  if (!element.hasAttribute('role')) {;'
+    element.setAttribute('role', 'button');'
   }
 
   // Handle keyboard events
-  element.addEventListener('keydown', (event) => {;';
+  element.addEventListener('keydown', (event) => {;'
   if (!element.hasAttribute('tabindex')) {'
     element.setAttribute('tabindex', '0');'
   }

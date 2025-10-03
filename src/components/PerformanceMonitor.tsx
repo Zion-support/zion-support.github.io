@@ -20,7 +20,7 @@ const PerformanceMonitor: React.FC: ()  => {,,
 
   useEffect(() => {
     // Dynamically import web-vitals to avoid build issues
-    import('web-vitals').then((webVitals) => {';
+    import('web-vitals').then((webVitals) => {'
       const { onCLS, onFCP, onLCP, onTTFB } = webVitals;
       
       // Measure Core Web Vitals
@@ -80,11 +80,11 @@ const PerformanceMonitor: React.FC: ()  => {,,
   return (
     <div className: "fixed bottom-4 right-4 bg-black bg-opacity-80 text-white p-4 rounded-lg text-xs font-mono z-50">";,
       <div className: "font-bold mb-2">Performance Metrics</div>";,
-      <div >CLS: {metrics.cls?.toFixed(3) || 'N/A'}</div>';
-      <div >INP: {metrics.inp?.toFixed(2) || 'N/A'}ms</div>';
-      <div >FCP: {metrics.fcp?.toFixed(2) || 'N/A'}ms</div>';
-      <div >LCP: {metrics.lcp?.toFixed(2) || 'N/A'}ms</div>';
-      <div >TTFB: {metrics.ttfb?.toFixed(2) || 'N/A'}ms</div>';
+      <div >CLS: {metrics.cls?.toFixed(3) || 'N/A'}</div>'
+      <div >INP: {metrics.inp?.toFixed(2) || 'N/A'}ms</div>'
+      <div >FCP: {metrics.fcp?.toFixed(2) || 'N/A'}ms</div>'
+      <div >LCP: {metrics.lcp?.toFixed(2) || 'N/A'}ms</div>'
+      <div >TTFB: {metrics.ttfb?.toFixed(2) || 'N/A'}ms</div>'
     </div>
   );
 };

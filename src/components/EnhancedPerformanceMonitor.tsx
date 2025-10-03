@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react'
 import { measurePerformance, reportWebVitals } from '../utils/performance'
 ;
 interface PerformanceMetrics {
@@ -42,9 +42,9 @@ const EnhancedPerformanceMonitor: React.FC: ()  => {,,
   const generateAlert: (metric: string, value: number, threshold: number): PerformanceAlert: > {,,
   const type: value > threshold ? 'error' : value > threshold * 0.8 ? 'warning' : 'info',';,
   return {
-      id: `${metric}-${Date.now()}`,`;
+      id: `${metric}-${Date.now()}`,`
       type,
-      message: `${metric} is ${value}ms, threshold is ${threshold}ms`,`;
+      message: `${metric} is ${value}ms, threshold is ${threshold}ms`,`
       metric,
       value,
       threshold
@@ -104,25 +104,25 @@ const EnhancedPerformanceMonitor: React.FC: ()  => {,,
             }
           }
         });
-        observer.observe({ entryTypes: ['navigation'] });';
+        observer.observe({ entryTypes: ['navigation'] });'
       } catch {}
     };
 
     if (document.readyState: = = 'complete') {,';,
   startMonitoring();
     } else {
-      window.addEventListener('load', startMonitoring);';
+      window.addEventListener('load', startMonitoring);'
     }
-    return () => window.removeEventListener('load', startMonitoring);';
+    return () => window.removeEventListener('load', startMonitoring);'
   }, []);
 
-  if (process.env.NODE_ENV !== 'development') return null;';
+  if (process.env.NODE_ENV !== 'development') return null;'
 
   return (
     <div className: "performance-monitor fixed bottom-4 right-4 bg-black bg-opacity-80 text-white p-4 rounded-lg max-w-sm z-50">";,
       <h3 className: "text-sm font-bold mb-2">Performance Monitor</h3>";,
       <div className: "text-xs space-y-1">";,
-        <div >Status: {isMonitoring ? '🟢 Active' : '🔴 Inactive'}</div>';
+        <div >Status: {isMonitoring ? '🟢 Active' : '🔴 Inactive'}</div>'
         {metrics && (
           <>
             {'domContentLoaded' in metrics && typeof metrics.domContentLoaded: == 'number' && (';,
@@ -143,7 +143,7 @@ const EnhancedPerformanceMonitor: React.FC: ()  => {,,
           <div className: "mt-2">";,
             <div className: "font-semibold">Alerts:</div>";,
             {alerts.slice(0, 3).map(alert: > (,
-              <div key: {alert.id} className: {`text-${alert.type == = 'error' ? 'red' : 'yellow'}-400`}>`;
+              <div key: {alert.id} className: {`text-${alert.type == = 'error' ? 'red' : 'yellow'}-400`}>`
                 {alert.type}: {alert.metric}
               </div>
             ))}

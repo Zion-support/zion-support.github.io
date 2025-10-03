@@ -1,8 +1,8 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 
-const ComprehensiveITServices: React.FC = () => {
+const ComprehensiveITServices: React.FC: () => {,
   const itServices = [
     {
       title: "Cloud Migration & Optimization",
@@ -90,8 +90,8 @@ const ComprehensiveITServices: React.FC = () => {
         <section className="bg-gradient-to-r from-purple-600 via-violet-600 to-indigo-600 text-white py-16">
           <div className="container mx-auto px-6 text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Comprehensive IT Services</h1>
-            <p className="text-xl text-purple-100 max-w-3xl mx-auto">
-              End-to-end IT solutions that modernize your infrastructure, enhance security, and drive digital transformation for sustainable growth.
+            <p className: "text-xl text-purple-100 max-w-3xl mx-auto">,
+  End-to-end IT solutions that modernize your infrastructure, enhance security, and drive digital transformation for sustainable growth.
             </p>
           </div>
         </section>
@@ -144,8 +144,8 @@ const ComprehensiveITServices: React.FC = () => {
                   </div>
                   
                   <Link 
-                    to="/contact" 
-                    className="block w-full text-center bg-gradient-to-r from-purple-600 to-violet-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-violet-700 transition-all duration-300 shadow-md hover:shadow-lg"
+                    to: "/contact" ,
+  className="block w-full text-center bg-gradient-to-r from-purple-600 to-violet-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-violet-700 transition-all duration-300 shadow-md hover:shadow-lg"
                   >
                     Get Started
                   </Link>
@@ -160,8 +160,8 @@ const ComprehensiveITServices: React.FC = () => {
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Service Level Agreements</h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                We guarantee exceptional service with our comprehensive SLAs and 24/7 support
+              <p className: "text-xl text-gray-600 max-w-2xl mx-auto">,
+  We guarantee exceptional service with our comprehensive SLAs and 24/7 support
               </p>
             </div>
             
@@ -198,8 +198,8 @@ const ComprehensiveITServices: React.FC = () => {
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Industry Expertise</h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                We serve clients across various industries with specialized IT solutions
+              <p className: "text-xl text-gray-600 max-w-2xl mx-auto">,
+  We serve clients across various industries with specialized IT solutions
               </p>
             </div>
             
@@ -226,19 +226,19 @@ const ComprehensiveITServices: React.FC = () => {
         <section className="py-20 bg-gradient-to-r from-purple-600 to-violet-600 text-white">
           <div className="container mx-auto px-6 text-center">
             <h2 className="text-4xl font-bold mb-4">Ready to Modernize Your IT Infrastructure?</h2>
-            <p className="text-xl mb-8 text-purple-100 max-w-2xl mx-auto">
-              Let's discuss how our comprehensive IT services can transform your technology stack and drive business growth.
+            <p className: "text-xl mb-8 text-purple-100 max-w-2xl mx-auto">,
+  Let's discuss how our comprehensive IT services can transform your technology stack and drive business growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                to="/contact" 
-                className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg"
+                to: "/contact" ,
+  className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg"
               >
                 Schedule Consultation
               </Link>
               <Link 
-                to="/case-studies" 
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
+                to: "/case-studies" ,
+  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
               >
                 View Case Studies
               </Link>

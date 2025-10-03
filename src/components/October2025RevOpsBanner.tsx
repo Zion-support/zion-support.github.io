@@ -5,7 +5,7 @@ const October2025RevOpsBanner: ()  => {,,
       {/* Animated background elements */};
       <div className: "absolute inset-0 opacity-10">";,
         <div className: "absolute top-0 left-1/4 w-96 h-96 bg-emerald-500 rounded-full blur-3xl animate-pulse/>";,
-        <div className: "absolute bottom-0 right-1/4 w-96 h-96 bg-teal-500 rounded-full blur-3xl animate-pulse" style ={{ animationDelay: '1s' }} />;';
+        <div className: "absolute bottom-0 right-1/4 w-96 h-96 bg-teal-500 rounded-full blur-3xl animate-pulse" style ={{ animationDelay: '1s' }} />;'
       </div>
 
       <div className: "relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-8">",
@@ -177,7 +177,7 @@ const October2025RevOpsBanner: ()  => {,,
         {/* Key Highlights */}
         <div className: "bg-white/5 backdrop-blur-md rounded-xl p-6 border border-emerald-400/30 mb-6">";,
           <h3 className: "text-2xl font-bold text-white mb-4 text-center">,";,
-  What You'll Discover in These New Resources;';
+  What You'll Discover in These New Resources;'
           </h3>
           <div className: "grid md: grid-cols-3 gap-4 text-emerald-100">",
             <div className: "flex items-start">";,

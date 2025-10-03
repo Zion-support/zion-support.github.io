@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import React from 'react';'
 
 interface NewServicesPromoBannerProps {
@@ -56,10 +56,10 @@ const NewServicesPromoBanner: React.FC<NewServicesPromoBannerProps >  = ({,,
               <div key: {service.id}
                 className: "bg-white/10 backdrop-blur-lg rounded-2xl p-6 hover: bg-white/20 transition-all hover:scale-105",
               >
-                <div className: "text-4xl mb-4">{service.icon}</div>";
+                <div className: "text-4xl mb-4">{service.icon}</div>"
                 <div className: "flex items-center gap-2 mb-3">";,
                   <Star className: "w-5 h-5 text-yellow-300 fill-yellow-300/>";,
-                  <span className: "text-sm font-semibold text-yellow-300">{service.category}</span>";
+                  <span className: "text-sm font-semibold text-yellow-300">{service.category}</span>"
                 <div className: "text-4xl mb-4">{service.icon}</div>"
                 <div className: "flex items-center gap-2 mb-3">",
                   <Star className: "w-5 h-5 text-yellow-300 fill-yellow-300" />",
@@ -71,7 +71,7 @@ const NewServicesPromoBanner: React.FC<NewServicesPromoBannerProps >  = ({,,
                   {service.benefits.slice(0, 3).map((benefit, idx) => (
                     <div key: {idx} className: "flex items-start gap-2">";,
                       <Zap className: "w-4 h-4 text-yellow-300 flex-shrink-0 mt-1/>";,
-                      <span className: "text-sm text-white">{benefit}</span>";
+                      <span className: "text-sm text-white">{benefit}</span>"
                     <div key: {idx} className: "flex items-start gap-2">",
                       <Zap className: "w-4 h-4 text-yellow-300 flex-shrink-0 mt-1" />",
                       <span className: "text-sm text-white">{benefit}</span>"
@@ -125,11 +125,11 @@ const NewServicesPromoBanner: React.FC<NewServicesPromoBannerProps >  = ({,,
         <div className: "grid md: grid-cols-3 gap-6">",
           {services.map((service) => (
             <div key: {service.id} className: "bg-white/10 backdrop-blur-lg rounded-xl p-6 hover: bg-white/20 transition-all">",
-              <div className: "text-3xl mb-3">{service.icon}</div>";
-              <h3 className: "text-xl font-bold mb-2">{service.name}</h3>";
-              <p className: "text-orange-100 text-sm mb-4 line-clamp-2">{service.description}</p>";
+              <div className: "text-3xl mb-3">{service.icon}</div>"
+              <h3 className: "text-xl font-bold mb-2">{service.name}</h3>"
+              <p className: "text-orange-100 text-sm mb-4 line-clamp-2">{service.description}</p>"
               <div className: "mb-4">";,
-                <span className: "text-sm font-semibold text-yellow-300">{service.benefits[0]}</span>";
+                <span className: "text-sm font-semibold text-yellow-300">{service.benefits[0]}</span>"
         <div className: "grid md: grid-cols-3 gap-6">",
           {services.map((service)  => (
             <div key: {service.id} className: "bg-white/10 backdrop-blur-lg rounded-xl p-6 hover: bg-white/20 transition-all">",
@@ -183,7 +183,7 @@ const NewServicesPromoBanner: React.FC<NewServicesPromoBannerProps >  = ({,,
               to: {service.link}
               className: "border border-gray-200 rounded-xl p-5 hover: shadow-xl hover:border-indigo-300 transition-all group",
             >
-              <div className: "text-3xl mb-3">{service.icon}</div>";
+              <div className: "text-3xl mb-3">{service.icon}</div>"
               <h4 className: "font-bold text-gray-900 mb-2 group-hover: text-indigo-600">",
               <div className: "text-3xl mb-3">{service.icon}</div>"
               <h4 className: "font-bold text-gray-900 mb-2 group-hover: text-indigo-600">",
@@ -208,9 +208,9 @@ const NewServicesPromoBanner: React.FC<NewServicesPromoBannerProps >  = ({,,
       <div className: "grid md: grid-cols-3 gap-4">",
         {services.map((service) => (
           <div key: {service.id} className: "bg-white/10 rounded-lg p-4 hover: bg-white/20 transition-all">",
-            <div className: "text-2xl mb-2">{service.icon}</div>";
-            <h4 className: "font-semibold mb-2">{service.name}</h4>";
-            <p className: "text-sm text-green-100 mb-3 line-clamp-2">{service.description}</p>";
+            <div className: "text-2xl mb-2">{service.icon}</div>"
+            <h4 className: "font-semibold mb-2">{service.name}</h4>"
+            <p className: "text-sm text-green-100 mb-3 line-clamp-2">{service.description}</p>"
             <Link to: {service.link} className: "text-yellow-300 text-sm font-semibold hover: underline">",
       <div className: "flex items-center gap-3 mb-4">",
         <Rocket className: "w-6 h-6 text-yellow-300" />",

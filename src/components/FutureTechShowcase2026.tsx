@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import React from 'react';'
 
 const FutureTechShowcase2026: React.FC: ()  => {,,
@@ -15,7 +15,7 @@ const FutureTechShowcase2026: React.FC: ()  => {,,
       icon: <Atom className: "w-8 h-8/>,",";,
       gradient: 'from-cyan-500 to-blue-500',',';,
       badge: 'QUANTUM AI',',';,
-      stats: '10,000x Speed Boost},';
+      stats: '10,000x Speed Boost},'
     {
       id: 2,,,
       title: 'Self-Evolving AI Ecosystems',',';,
@@ -28,7 +28,7 @@ const FutureTechShowcase2026: React.FC: ()  => {,,
       icon: <Brain className: "w-8 h-8/>,",";,
       gradient: 'from-purple-500 to-pink-500',',';,
       badge: 'SELF-EVOLVING',',';,
-      stats: '99.7% Auto-Improvement},';
+      stats: '99.7% Auto-Improvement},'
     {
       id: 3,,,
       title: 'Predictive Reality Modeling',',';,
@@ -41,7 +41,7 @@ const FutureTechShowcase2026: React.FC: ()  => {,,
       icon: <Target className: "w-8 h-8/>,",";,
       gradient: 'from-green-500 to-emerald-500',',';,
       badge: 'PREDICTIVE',',';,
-      stats: '99.9% Accuracy},';
+      stats: '99.9% Accuracy},'
     {
       id: 4,,,
       title: 'Immersive AI Workspaces',',';,
@@ -54,7 +54,7 @@ const FutureTechShowcase2026: React.FC: ()  => {,,
       icon: <Rocket className: "w-8 h-8/>,",";,
       gradient: 'from-orange-500 to-red-500',',';,
       badge: 'IMMERSIVE',',';,
-      stats: '100% Integration},';
+      stats: '100% Integration},'
     {
       id: 5,,,
       title: 'Quantum-Secure AI Networks',',';,
@@ -67,7 +67,7 @@ const FutureTechShowcase2026: React.FC: ()  => {,,
       icon: <Shield className: "w-8 h-8/>,",";,
       gradient: 'from-indigo-500 to-purple-500',',';,
       badge: 'QUANTUM-SECURE',',';,
-      stats: 'Unbreakable Security},';
+      stats: 'Unbreakable Security},'
     {
       id: 6,,,
       title: 'Meta-Cognitive AI Orchestration',',';,
@@ -80,7 +80,7 @@ const FutureTechShowcase2026: React.FC: ()  => {,,
       icon: <Bot className: "w-8 h-8/>,",";,
       gradient: 'from-teal-500 to-cyan-500',',';,
       badge: 'META-COGNITIVE',',';,
-      stats: 'Autonomous Orchestration},';
+      stats: 'Autonomous Orchestration},'
       title: 'Neural-Quantum Hybrid Computing',',
       slug: 'neural-quantum-hybrid-2026',',
       excerpt: 'Breakthrough fusion of quantum computing and neural networks achieving unprecedented processing speeds. Experience 10,000x faster AI inference with quantum-enhanced deep learning.',',
@@ -170,8 +170,8 @@ const FutureTechShowcase2026: React.FC: ()  => {,,
       {/* Animated background effects */}
       <div className: "absolute inset-0 overflow-hidden opacity-20">";,
         <div className: "absolute top-0 left-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>";,
-        <div className: "absolute bottom-0 right-1/4 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style ={{ animationDelay: '2s' }}></div>;';
-        <div className: "absolute top-1/2 left-1/2 w-96 h-96 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style ={{ animationDelay: '4s' }}></div>;';
+        <div className: "absolute bottom-0 right-1/4 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style ={{ animationDelay: '2s' }}></div>;'
+        <div className: "absolute top-1/2 left-1/2 w-96 h-96 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style ={{ animationDelay: '4s' }}></div>;'
       <div className: "absolute inset-0 overflow-hidden opacity-20">",
         <div className: "absolute top-0 left-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>",
         <div className: "absolute bottom-0 right-1/4 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>'
@@ -281,7 +281,7 @@ const FutureTechShowcase2026: React.FC: ()  => {,,
                     <Zap className: "w-4 h-4 text-purple-400/>";,
                     {article.readTime}
                   </span>
-                  <span >{new Date(article.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>;';
+                  <span >{new Date(article.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>;'
                 <div className: "flex items-center justify-between text-sm text-gray-500 mb-6 pb-6 border-b border-white/10">",
                   <span className: "flex items-center gap-2">",
                     <Zap className: "w-4 h-4 text-purple-400" />",
@@ -306,10 +306,10 @@ const FutureTechShowcase2026: React.FC: ()  => {,,
         {/* Revolutionary Stats Section */}
         <div className: "grid md: grid-cols-4 gap-8 mb-16">",
           {[
-            { value: '10,000x', label: 'Quantum Processing Speed', icon: '⚛️' }';
-            { value: '99.7%', label: 'Auto-Improvement Rate', icon: '🧠' }';
-            { value: '99.9%', label: 'Predictive Accuracy', icon: '🎯' }';
-            { value: '$1B+', label: 'Enterprise Value Created', icon: '💰' }';
+            { value: '10,000x', label: 'Quantum Processing Speed', icon: '⚛️' }'
+            { value: '99.7%', label: 'Auto-Improvement Rate', icon: '🧠' }'
+            { value: '99.9%', label: 'Predictive Accuracy', icon: '🎯' }'
+            { value: '$1B+', label: 'Enterprise Value Created', icon: '💰' }'
         <div className: "grid md: grid-cols-4 gap-8 mb-16">",
           {[
             { value: '10,000x', label: 'Quantum Processing Speed', icon: '⚛️' },'

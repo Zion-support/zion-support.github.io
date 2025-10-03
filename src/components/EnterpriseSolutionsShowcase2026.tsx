@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import React from 'react';'
 
 const EnterpriseSolutionsShowcase2026: React.FC: ()  => {,,
@@ -171,10 +171,10 @@ const EnterpriseSolutionsShowcase2026: React.FC: ()  => {,,
   ];
 
   const successMetrics: [,
-    { value: '500+', label: 'Enterprise Clients', icon: <Building className: "w-8 h-8" /> }";
-    { value: '$2B+', label: 'Cost Savings Generated', icon: <DollarSign className: "w-8 h-8" /> }";
-    { value: '98%', label: 'Client Satisfaction', icon: <Award className: "w-8 h-8" /> }";
-    { value: '24/7', label: 'Enterprise Support', icon: <Users className: "w-8 h-8" /> }";
+    { value: '500+', label: 'Enterprise Clients', icon: <Building className: "w-8 h-8" /> }"
+    { value: '$2B+', label: 'Cost Savings Generated', icon: <DollarSign className: "w-8 h-8" /> }"
+    { value: '98%', label: 'Client Satisfaction', icon: <Award className: "w-8 h-8" /> }"
+    { value: '24/7', label: 'Enterprise Support', icon: <Users className: "w-8 h-8" /> }"
     { value: '500+', label: 'Enterprise Clients', icon: <Building className: "w-8 h-8" /> },"
     { value: '$2B+', label: 'Cost Savings Generated', icon: <DollarSign className: "w-8 h-8" /> },"
     { value: '98%', label: 'Client Satisfaction', icon: <Award className: "w-8 h-8" /> },"
@@ -186,8 +186,8 @@ const EnterpriseSolutionsShowcase2026: React.FC: ()  => {,,
       {/* Animated background effects */}
       <div className: "absolute inset-0 overflow-hidden opacity-20">";,
         <div className: "absolute top-0 left-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>";,
-        <div className: "absolute bottom-0 right-1/4 w-96 h-96 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style ={{ animationDelay: '2s' }}></div>;';
-        <div className: "absolute top-1/2 left-1/2 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style ={{ animationDelay: '4s' }}></div>;';
+        <div className: "absolute bottom-0 right-1/4 w-96 h-96 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style ={{ animationDelay: '2s' }}></div>;'
+        <div className: "absolute top-1/2 left-1/2 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style ={{ animationDelay: '4s' }}></div>;'
       <div className: "absolute inset-0 overflow-hidden opacity-20">",
         <div className: "absolute top-0 left-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>",
         <div className: "absolute bottom-0 right-1/4 w-96 h-96 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>'

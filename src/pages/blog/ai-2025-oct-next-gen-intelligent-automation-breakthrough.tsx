@@ -66,10 +66,10 @@ const NextGenIntelligentAutomationBreakthrough: ()  => {,,
             {/* Key Metrics */};
             <div className: "grid md: grid-cols-4 gap-4 mb-12">",
               {[
-                { value: "$3.2T", label: "Automation Market 2025" }";
-                { value: "85%", label: "Cost Reduction" }";
-                { value: "94%", label: "Accuracy Rate" }";
-                { value: "10x", label: "Productivity Gain" }";
+                { value: "$3.2T", label: "Automation Market 2025" }"
+                { value: "85%", label: "Cost Reduction" }"
+                { value: "94%", label: "Accuracy Rate" }"
+                { value: "10x", label: "Productivity Gain" }"
             <div className: "grid md: grid-cols-4 gap-4 mb-12">",
               {[
                 { value: "$3.2T", label: "Automation Market 2025" },"
@@ -195,10 +195,10 @@ const NextGenIntelligentAutomationBreakthrough: ()  => {,,
                   ].map((capability, index) => (
                     <div key: {index} className: "bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-zion-cyan/20 hover: border-zion-cyan/50 transition-all">",
                       <div className: "flex items-start gap-4">";,
-                        <div className: "text-4xl">{capability.icon}</div>";
+                        <div className: "text-4xl">{capability.icon}</div>"
                         <div className: "flex-1">";,
-                          <h3 className: "text-xl font-bold text-white mb-3">{capability.title}</h3>";
-                          <p className: "text-zion-slate-light">{capability.description}</p>";
+                          <h3 className: "text-xl font-bold text-white mb-3">{capability.title}</h3>"
+                          <p className: "text-zion-slate-light">{capability.description}</p>"
                       title: "Cognitive Process Automation",",
                       description: "AI systems that understand, learn, and make decisions like humans. 99.8% accuracy in document processing across any format.",",
                       icon: "🧠",

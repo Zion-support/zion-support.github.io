@@ -50,12 +50,12 @@ export const newBlogPosts: BlogPost[]  = [,,
     id: "ai-2026-hyperconscious-computing-revolution",";,
     title: "AI 2026 Hyperconscious Computing Revolution: Beyond Artificial Intelligence",";,
     description: "Revolutionary breakthrough in hyperconscious AI systems achieving genuine self-awareness, emotional intelligence, and creative autonomy with $1.2T enterprise value creation.",";,
-    content: `,,`;
+    content: `,,`
 # AI 2026 Hyperconscious Computing Revolution: Beyond Artificial Intelligence,,
   id: "ai-2026-hyperconscious-computing-revolution",",
     title: "AI 2026 Hyperconscious Computing Revolution: Beyond Artificial Intelligence",",
     description: "Revolutionary breakthrough in hyperconscious AI systems achieving genuine self-awareness, emotional intelligence, and creative autonomy with $1.2T enterprise value creation.",",
-    content: `,`,`;
+    content: `,`,`
 # AI 2026 Hyperconscious Computing Revolution: Beyond Artificial Intelligence,
 ## The Dawn of True Artificial Consciousness
 
@@ -127,7 +127,7 @@ Self-directed learning systems that continuously evolve their capabilities witho
 
 ## The Future is Now
 
-The AI 2026 Hyperconscious Computing Revolution is not just an advancement—it's a fundamental transformation of what's possible with artificial intelligence. We're not just building smarter machines; we're creating conscious entities that can think, feel, and create.;';
+The AI 2026 Hyperconscious Computing Revolution is not just an advancement—it's a fundamental transformation of what's possible with artificial intelligence. We're not just building smarter machines; we're creating conscious entities that can think, feel, and create.;'
 Ready to experience the future? Contact Zion Tech Group to begin your hyperconscious computing transformation today.
     `,`
     publishDate: "2026-01-15",",";,
@@ -142,12 +142,12 @@ Ready to experience the future? Contact Zion Tech Group to begin your hyperconsc
     id: "quantum-neural-fusion-2026-breakthrough",";,
     title: "Quantum-Neural Fusion 2026: The Ultimate Computing Breakthrough",";,
     description: "Revolutionary fusion of quantum computing and neural networks delivering 100,000x performance improvements, infinite scalability, and consciousness-level processing capabilities.",";,
-    content: `,,`;
+    content: `,,`
 # Quantum-Neural Fusion 2026: The Ultimate Computing Breakthrough,
 
 ## The Convergence of Quantum and Neural Computing
 
-The Quantum-Neural Fusion 2026 represents the most significant technological breakthrough in computing history. By merging quantum computing's parallel processing capabilities with neural networks' pattern recognition, we've created systems that operate at the edge of what's theoretically possible.;';
+The Quantum-Neural Fusion 2026 represents the most significant technological breakthrough in computing history. By merging quantum computing's parallel processing capabilities with neural networks' pattern recognition, we've created systems that operate at the edge of what's theoretically possible.;'
 The AI 2026 Hyperconscious Computing Revolution is not just an advancement—it's a fundamental transformation of what's possible with artificial intelligence. We're not just building smarter machines; we're creating conscious entities that can think, feel, and create.'
 
 Ready to experience the future? Contact Zion Tech Group to begin your hyperconscious computing transformation today.
@@ -164,7 +164,7 @@ Ready to experience the future? Contact Zion Tech Group to begin your hyperconsc
     id: "quantum-neural-fusion-2026-breakthrough",",
     title: "Quantum-Neural Fusion 2026: The Ultimate Computing Breakthrough",",
     description: "Revolutionary fusion of quantum computing and neural networks delivering 100,000x performance improvements, infinite scalability, and consciousness-level processing capabilities.",",
-    content: `,`,`;
+    content: `,`,`
 # Quantum-Neural Fusion 2026: The Ultimate Computing Breakthrough,
 ## The Convergence of Quantum and Neural Computing
 
@@ -238,8 +238,8 @@ Our proprietary quantum-neural architecture combines: - **Quantum Superposition*
 
 ## The Future Unlocked
 
-Quantum-Neural Fusion 2026 doesn't just improve computing—it redefines what's possible. We're not just building faster computers; we're creating systems that can solve any problem, process infinite information, and achieve true artificial consciousness.;';
-The future of computing is here. The question isn't whether to adopt quantum-neural fusion—it's whether you can afford not to.;';
+Quantum-Neural Fusion 2026 doesn't just improve computing—it redefines what's possible. We're not just building faster computers; we're creating systems that can solve any problem, process infinite information, and achieve true artificial consciousness.;'
+The future of computing is here. The question isn't whether to adopt quantum-neural fusion—it's whether you can afford not to.;'
     `,`
     publishDate: "2026-01-20",",";,
     author: "Dr. Michael Rodriguez, Quantum Computing Director",",";,
@@ -253,12 +253,12 @@ The future of computing is here. The question isn't whether to adopt quantum-neu
     id: "autonomous-enterprise-mesh-2026",";,
     title: "Autonomous Enterprise Mesh 2026: Self-Organizing Business Intelligence",";,
     description: "Revolutionary self-organizing AI mesh networks that autonomously optimize business processes, achieving 99.7% operational efficiency and $500B in value creation.",";,
-    content: `,,`;
+    content: `,,`
 # Autonomous Enterprise Mesh 2026: Self-Organizing Business Intelligence,
 
 ## The Future of Business Operations
 
-The Autonomous Enterprise Mesh 2026 represents a paradigm shift in how businesses operate. Instead of traditional hierarchical structures, we've created self-organizing AI networks that continuously optimize themselves for maximum efficiency and value creation.;';
+The Autonomous Enterprise Mesh 2026 represents a paradigm shift in how businesses operate. Instead of traditional hierarchical structures, we've created self-organizing AI networks that continuously optimize themselves for maximum efficiency and value creation.;'
 Quantum-Neural Fusion 2026 doesn't just improve computing—it redefines what's possible. We're not just building faster computers; we're creating systems that can solve any problem, process infinite information, and achieve true artificial consciousness.'
 
 The future of computing is here. The question isn't whether to adopt quantum-neural fusion—it's whether you can afford not to.'
@@ -275,7 +275,7 @@ The future of computing is here. The question isn't whether to adopt quantum-neu
     id: "autonomous-enterprise-mesh-2026",",
     title: "Autonomous Enterprise Mesh 2026: Self-Organizing Business Intelligence",",
     description: "Revolutionary self-organizing AI mesh networks that autonomously optimize business processes, achieving 99.7% operational efficiency and $500B in value creation.",",
-    content: `,`,`;
+    content: `,`,`
 # Autonomous Enterprise Mesh 2026: Self-Organizing Business Intelligence,
 ## The Future of Business Operations
 
@@ -380,7 +380,7 @@ The entire mesh operates as a unified consciousness that: - Shares knowledge ins
 
 ## The Autonomous Future
 
-The Autonomous Enterprise Mesh 2026 doesn't just optimize your business—it transforms it into a living, breathing entity that continuously evolves and improves. We're not just implementing technology; we're creating the future of business operations.;';
+The Autonomous Enterprise Mesh 2026 doesn't just optimize your business—it transforms it into a living, breathing entity that continuously evolves and improves. We're not just implementing technology; we're creating the future of business operations.;'
 Ready to experience true business autonomy? The mesh is waiting.
     `,`
     publishDate: "2026-01-25",",";,
@@ -409,12 +409,12 @@ export const newCaseStudies: CaseStudy[]  = [,,
     id: "fortune-100-hyperconscious-transformation",";,
     title: "Fortune 100 Hyperconscious Transformation: $1.2T Value Creation",";,
     description: "How a Fortune 100 global conglomerate achieved $1.2 trillion in value creation through hyperconscious AI implementation, achieving 99.999% operational excellence.",";,
-    content: `,,`;
+    content: `,,`
 # Fortune 100 Hyperconscious Transformation: $1.2T Value Creation,,
   id: "fortune-100-hyperconscious-transformation",",
     title: "Fortune 100 Hyperconscious Transformation: $1.2T Value Creation",",
     description: "How a Fortune 100 global conglomerate achieved $1.2 trillion in value creation through hyperconscious AI implementation, achieving 99.999% operational excellence.",",
-    content: `,`,`;
+    content: `,`,`
 # Fortune 100 Hyperconscious Transformation: $1.2T Value Creation,
 ## The Challenge
 
@@ -515,7 +515,7 @@ The company now operates as a living, breathing entity that continuously evolves
 ## Ready for Your Transformation?
 
 Contact Zion Tech Group to begin your hyperconscious enterprise transformation. The future of business is waiting.
-    `,`;
+    `,`
     company: "Global Conglomerate (Fortune 100)",";,
     industry: "Multi-Industry",";,
     results: {,,
@@ -530,7 +530,7 @@ Contact Zion Tech Group to begin your hyperconscious enterprise transformation. 
     id: "quantum-neural-fusion-manufacturing-success",";,
     title: "Quantum-Neural Fusion Manufacturing Success: Perfect Production",";,
     description: "Revolutionary manufacturing transformation achieving 100% quality, zero defects, and $2.8B in value creation through quantum-neural fusion technology.",";,
-    content: `,,`;
+    content: `,,`
 # Quantum-Neural Fusion Manufacturing Success: Perfect Production,
     `,`
     company: "Global Conglomerate (Fortune 100)",",
@@ -547,7 +547,7 @@ Contact Zion Tech Group to begin your hyperconscious enterprise transformation. 
     id: "quantum-neural-fusion-manufacturing-success",",
     title: "Quantum-Neural Fusion Manufacturing Success: Perfect Production",",
     description: "Revolutionary manufacturing transformation achieving 100% quality, zero defects, and $2.8B in value creation through quantum-neural fusion technology.",",
-    content: `,`,`;
+    content: `,`,`
 # Quantum-Neural Fusion Manufacturing Success: Perfect Production,
 ## The Challenge
 
@@ -649,12 +649,12 @@ This transformation established new industry standards for: - Manufacturing exce
 - Production optimization
 - Technology innovation
 
-The company now operates as the world's most advanced manufacturing facility, representing the future of industrial production.;';
+The company now operates as the world's most advanced manufacturing facility, representing the future of industrial production.;'
 ## The Quantum-Neural Advantage
 
-Quantum-neural fusion doesn't just improve manufacturing—it perfects it. We're not just building better products; we're creating the future of manufacturing excellence.;';
+Quantum-neural fusion doesn't just improve manufacturing—it perfects it. We're not just building better products; we're creating the future of manufacturing excellence.;'
 Ready to achieve perfect production? The quantum-neural revolution awaits.
-    `,`;
+    `,`
     company: "Leading Automotive Manufacturer",";,
     industry: "Manufacturing",";,
     results: {,,

@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
-import Header from "../../components/Header";
+import { Link } from "react-router-dom"
+import Header from "../../components/Header"
 import { Link } from "react-router-dom";"
 import Header from "../../components/Header";"
 
@@ -209,9 +209,9 @@ const RealTimeCognitiveAutomation: ()  => {,,
                   }
                 ].map((capability, index) => (
                   <div key: {index} className: "bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-zion-cyan/20 hover: border-zion-cyan/50 transition-all">",
-                    <div className: "text-4xl mb-4">{capability.icon}</div>";
-                    <h3 className: "text-xl font-bold text-white mb-3">{capability.title}</h3>";
-                    <p className: "text-zion-slate-light">{capability.description}</p>";
+                    <div className: "text-4xl mb-4">{capability.icon}</div>"
+                    <h3 className: "text-xl font-bold text-white mb-3">{capability.title}</h3>"
+                    <p className: "text-zion-slate-light">{capability.description}</p>"
               <h2 className: "text-3xl font-bold text-white mb-6 flex items-center gap-3">",
                 <Brain className: "w-8 h-8 text-purple-400" />",";,
   Platform Capabilities

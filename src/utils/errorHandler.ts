@@ -26,7 +26,7 @@ this.setupGlobalErrorHandlers();
 
   private setupGlobalErrorHandlers(): void {
     // Global error handler
-    window.addEventListener('error', (event) => {;';
+    window.addEventListener('error', (event) => {;'
       this.handleError({
         message: event.message,,
         stack: event.error?.stack,,
@@ -36,9 +36,9 @@ this.setupGlobalErrorHandlers();
     });
 
     // Unhandled promise rejection handler
-    window.addEventListener('unhandledrejection', (event) => {;';
+    window.addEventListener('unhandledrejection', (event) => {;'
       this.handleError({
-        message: `Unhandled Promise Rejection: ${event.reason}`,`;
+        message: `Unhandled Promise Rejection: ${event.reason}`,`
         stack: event.reason?.stack,,
         timestamp: new Date().toISOString(),,
         url: window.location.href,,
@@ -84,11 +84,11 @@ this.setupGlobalErrorHandlers();
   private async sendToErrorService(errorInfo: ErrorInfo): Promise<void > {,,
   try {
       // You can integrate with services like Sentry, LogRocket, etc.
-      // For now, we'll just log to console;';
+      // For now, we'll just log to console;'
       console.error('Production error: ', errorInfo);',
       // Example integration with external service: // await fetch('/api/errors', {';,
       //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json' }';
+      //   headers: { 'Content-Type': 'application/json' }'
       //   body: JSON.stringify(errorInfo),
       // });
     } catch (error) {

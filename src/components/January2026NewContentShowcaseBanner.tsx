@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react'
 const January2026NewContentShowcaseBanner: React.FC: ()  => {,,
   const features: [,
-    { icon: Brain, title: "Synthetic Consciousness", desc: "True AI awareness" }";
-    { icon: Zap, title: "Quantum Edge Processing", desc: "Sub-millisecond speed" }";
-    { icon: Network, title: "Autonomous Mesh", desc: "Self-organizing systems" }";
-    { icon: Shield, title: "Quantum Security", desc: "Unbreakable protection" }";
-    { icon: Cpu, title: "Neuromorphic AI", desc: "Brain-inspired computing" }";
+    { icon: Brain, title: "Synthetic Consciousness", desc: "True AI awareness" }"
+    { icon: Zap, title: "Quantum Edge Processing", desc: "Sub-millisecond speed" }"
+    { icon: Network, title: "Autonomous Mesh", desc: "Self-organizing systems" }"
+    { icon: Shield, title: "Quantum Security", desc: "Unbreakable protection" }"
+    { icon: Cpu, title: "Neuromorphic AI", desc: "Brain-inspired computing" }"
 import React from 'react';'
 
 const January2026NewContentShowcaseBanner: React.FC: ()  => {,,
@@ -74,8 +74,8 @@ const January2026NewContentShowcaseBanner: React.FC: ()  => {,,
               className: "bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center hover: bg-white/20 transition-all duration-300",
             >
               <feature .icon className: "w-8 h-8 mx-auto mb-3 text-purple-300/>";,
-              <h3 className: "font-semibold text-white mb-1">{feature.title}</h3>";
-              <p className: "text-sm text-blue-200">{feature.desc}</p>";
+              <h3 className: "font-semibold text-white mb-1">{feature.title}</h3>"
+              <p className: "text-sm text-blue-200">{feature.desc}</p>"
               <feature .icon className: "w-8 h-8 mx-auto mb-3 text-purple-300" />",
               <h3 className: "font-semibold text-white mb-1">{feature.title}</h3>"
               <p className: "text-sm text-blue-200">{feature.desc}</p>"

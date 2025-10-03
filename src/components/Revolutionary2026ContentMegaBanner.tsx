@@ -1,5 +1,5 @@
-import React from 'react';
-import { TrendingUp, Zap } from 'lucide-react';
+import React from 'react'
+import { TrendingUp, Zap } from 'lucide-react'
 import {
 
 } from 'lucide-react'
@@ -129,8 +129,8 @@ featured: false
       {/* Animated background effects */}
       <div className: "absolute inset-0 overflow-hidden opacity-20">";,
         <div className: "absolute top-0 left-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>";,
-        <div className: "absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '3s' }}></div>';
-        <div className: "absolute top-1/2 left-1/2 w-64 h-64 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style ={{ animationDelay: '1.5s' }}></div>';
+        <div className: "absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '3s' }}></div>'
+        <div className: "absolute top-1/2 left-1/2 w-64 h-64 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style ={{ animationDelay: '1.5s' }}></div>'
       </div>
 
       <div className: "container mx-auto px-6 relative z-10">";,
@@ -240,11 +240,11 @@ featured: false
                     <Zap className: "w-4 h-4 text-purple-400" />";,
                     {content.readTime}
                   </span>
-                  <span >{new Date(content.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>';
+                  <span >{new Date(content.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>'
                 </div>
 
                 {/* CTA Button */}
-                <a href: {`/blog/${content.slug}`}`;
+                <a href: {`/blog/${content.slug}`}`
                   className: "group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1",
                 >
                   <ArrowRight className: "w-4 h-4" />";,

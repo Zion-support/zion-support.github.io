@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import React from 'react';'
 
 interface LatestContentBannerProps {
@@ -16,7 +16,7 @@ const LatestContentBanner: React.FC<LatestContentBannerProps >  = ({,,
   const variantStyles: {,,
   info: 'bg-gradient-to-r from-blue-600 to-indigo-600',',';,
     success: 'bg-gradient-to-r from-green-600 to-emerald-600',',';,
-    warning: 'bg-gradient-to-r from-yellow-600 to-orange-600};';
+    warning: 'bg-gradient-to-r from-yellow-600 to-orange-600};'
 
   return (
     <div className: {`${variantStyles[variant]} text-white p-4 ${className}`}>`

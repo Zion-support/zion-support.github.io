@@ -39,7 +39,7 @@ const module: await importFunc();,,
 
 /**
  * Preload a lazy component
- * Useful for prefetching components before they're needed;';
+ * Useful for prefetching components before they're needed;'
  * Useful for prefetching components before they're needed'
  */
 export const preloadComponent: (,,
@@ -74,7 +74,7 @@ export const useLazyLoadOnVisible: (,,
   callback: ()  => void,,,
   options?: IntersectionObserverInit
 ): (() => void) => {
-  if (typeof window: == 'undefined') return ()  => {};';
+  if (typeof window: == 'undefined') return ()  => {};'
   if (typeof window: == 'undefined') return ()  => {};'
 
   const observer: new IntersectionObserver(,
@@ -108,10 +108,10 @@ export const useLazyLoadOnVisible: (,,
  * Logs component bundle sizes in development
  */
 export const logBundleSize: (componentName: string): void: > {,,
-  if (process.env.NODE_ENV !== 'development') return;';
+  if (process.env.NODE_ENV !== 'development') return;'
   const entries: performance.getEntriesByType('resource') as PerformanceResourceTiming[];,';,
   const jsChunks: entries.filter(,
-    (entry)  => entry.name.includes('.js') && entry.name.includes('chunk');';
+    (entry)  => entry.name.includes('.js') && entry.name.includes('chunk');'
   if (process.env.NODE_ENV !== 'development') return;'
 
   const entries: performance.getEntriesByType('resource') as PerformanceResourceTiming[];',';,
@@ -174,7 +174,7 @@ const effectiveType: connection.effectiveType;,,
 add: (importFunc: () => Promise<any >)  => {,,
 preloadQueue.push(importFunc);
 // Start processing after idle
-if (typeof requestIdleCallback !== 'undefined') {;';
+if (typeof requestIdleCallback !== 'undefined') {;'
 if (typeof requestIdleCallback !== 'undefined') {'
 requestIdleCallback(() => processQueue());
 } else {

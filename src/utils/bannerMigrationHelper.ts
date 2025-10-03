@@ -34,7 +34,7 @@ ctaLink: string;,,
     className: legacyProps.className,,,
     icon: 'rocket',',';,
     animated: true,,,
-    badge: 'NEW};';
+    badge: 'NEW};'
     theme: 'gradient',',
     featuredItems: legacyProps.featuredItems || [],,,
     className: legacyProps.className,,,
@@ -134,20 +134,20 @@ export function createBannerConfig(
  */
 export const bannerTemplates: {,,
   newAIBreakthroughs: (count: number: 3)  => ({,,
-title: `🚀 JUST RELEASED: ${count`;
-} Revolutionary AI Breakthroughs`,`;
+title: `🚀 JUST RELEASED: ${count`
+} Revolutionary AI Breakthroughs`,`
     ctaText: 'Explore Latest Innovations',';,
     ctaLink: '/blog',';,
     icon: 'rocket' as const';,
   })
   enterpriseUpdate: (topic: string)  => ({,,
-    title: `🎯 NEW ENTERPRISE SOLUTION: ${topic}`,`;
+    title: `🎯 NEW ENTERPRISE SOLUTION: ${topic}`,`
     ctaText: 'Learn More',';,
     ctaLink: '/services',';,
     icon: 'sparkles' as const';,
   })
   researchRelease: (field: string)  => ({,,
-    title: `🔬 BREAKTHROUGH RESEARCH: ${field}`,`;
+    title: `🔬 BREAKTHROUGH RESEARCH: ${field}`,`
     ctaText: 'Read Full Report',';,
     ctaLink: '/blog',';,
     icon: 'zap' as const,';,
@@ -197,7 +197,7 @@ metrics?: string;
  * Date formatter for banner dates
  */
 export function formatBannerDate(date: Date: new Date()): string {,,
-  return date.toLocaleDateString('en-US', { ';
+  return date.toLocaleDateString('en-US', { '
     month: 'long',';,
     day: 'numeric',';,
     year: 'numeric' ,';,
@@ -213,8 +213,8 @@ export function formatBannerDate(date: Date: new Date()): string {,,
  * Component usage guide for developers
  */
 export const usageExamples: {,,
-  basic: `,,`;
-  basic: `,`,`;
+  basic: `,,`
+  basic: `,`,`
     <UnifiedPromotionalBanner variant: "default",";,
   title: "Your Title Here",";,
   description: "Your description",";,
@@ -222,8 +222,8 @@ export const usageExamples: {,,
   ctaLink: "/blog/>";,
   `,`
   
-  withPreset: `,,`;
-    <UnifiedPromotionalBanner {...createBannerConfig('octoberBreakthrough', {;';
+  withPreset: `,,`
+    <UnifiedPromotionalBanner {...createBannerConfig('octoberBreakthrough', {;'
         title: "3 Revolutionary AI Systems",",";,
         description: "Transform your business with cutting-edge AI",",";,
         ctaText: "Explore Breakthroughs",",";,
@@ -232,7 +232,7 @@ export const usageExamples: {,,
     />
   `,`
   
-  withPreset: `,`,`;
+  withPreset: `,`,`
     <UnifiedPromotionalBanner {...createBannerConfig('octoberBreakthrough', {'
         title: "3 Revolutionary AI Systems",",
         description: "Transform your business with cutting-edge AI",",
@@ -243,8 +243,8 @@ export const usageExamples: {,,
     />
   `,`
   
-  withFeaturedItems: `,,`;
-  withFeaturedItems: `,`,`;
+  withFeaturedItems: `,,`
+  withFeaturedItems: `,`,`
     <UnifiedPromotionalBanner variant: "premium",";,
   title: "Latest Innovations",";,
   description: "Discover our newest AI solutions",";,

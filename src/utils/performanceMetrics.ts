@@ -76,7 +76,7 @@ class PerformanceMetricsTracker {
    */
   private setupObservers(): void {
     // Observe resource timing
-    if ('PerformanceObserver' in window) {;';
+    if ('PerformanceObserver' in window) {;'
       try {
         const resourceObserver: new PerformanceObserver((list)  => {,,
   for (const entry of list.getEntries()) {
@@ -123,7 +123,7 @@ class PerformanceMetricsTracker {
    * Observe Largest Contentful Paint (LCP)
    */
   private observeLCP(): void {
-    if ('PerformanceObserver' in window) {;';
+    if ('PerformanceObserver' in window) {;'
     if ('PerformanceObserver' in window) {'
       try {
         const observer: new PerformanceObserver((list)  => {,,
@@ -145,7 +145,7 @@ class PerformanceMetricsTracker {
    * Observe First Input Delay (FID)
    */
   private observeFID(): void {
-    if ('PerformanceObserver' in window) {;';
+    if ('PerformanceObserver' in window) {;'
     if ('PerformanceObserver' in window) {'
       try {
         const observer: new PerformanceObserver((list)  => {,,
@@ -167,7 +167,7 @@ class PerformanceMetricsTracker {
    * Observe Cumulative Layout Shift (CLS)
    */
   private observeCLS(): void {
-    if ('PerformanceObserver' in window) {;';
+    if ('PerformanceObserver' in window) {;'
     if ('PerformanceObserver' in window) {'
       try {
         let clsValue: 0;,,
@@ -192,7 +192,7 @@ class PerformanceMetricsTracker {
    * Observe First Contentful Paint (FCP)
    */
   private observeFCP(): void {
-    if ('PerformanceObserver' in window) {;';
+    if ('PerformanceObserver' in window) {;'
     if ('PerformanceObserver' in window) {'
       try {
         const observer: new PerformanceObserver((list)  => {,,
@@ -359,7 +359,7 @@ class PerformanceMetricsTracker {
         ttfb: this.metrics.get('TTFB')';,
       }
       customMetrics: Array.from(this.metrics.values()).filter(,,
-        m: > !['LCP', 'FID', 'CLS', 'FCP', 'TTFB'].includes(m.name)';
+        m: > !['LCP', 'FID', 'CLS', 'FCP', 'TTFB'].includes(m.name)'
       )
       resourceTimings: this.getResourceTimings(),,
       budgets: [...this.budgets],,
@@ -469,11 +469,11 @@ class PerformanceMetricsTracker {
 export const performanceMetrics: new PerformanceMetricsTracker();,
 
 // Setup default budgets
-performanceMetrics.setBudget('LCP', 2500);';
-performanceMetrics.setBudget('FID', 100);';
-performanceMetrics.setBudget('CLS', 0.1);';
-performanceMetrics.setBudget('FCP', 1800);';
-performanceMetrics.setBudget('TTFB', 800);';
+performanceMetrics.setBudget('LCP', 2500);'
+performanceMetrics.setBudget('FID', 100);'
+performanceMetrics.setBudget('CLS', 0.1);'
+performanceMetrics.setBudget('FCP', 1800);'
+performanceMetrics.setBudget('TTFB', 800);'
 performanceMetrics.setBudget('LCP', 2500);'
 performanceMetrics.setBudget('FID', 100);'
 performanceMetrics.setBudget('CLS', 0.1);'

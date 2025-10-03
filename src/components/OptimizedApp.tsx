@@ -1,6 +1,6 @@
-import React, { Suspense, lazy, useState, useEffect } from 'react';
-import { ErrorBoundary } from 'react-error-boundary';
-import { motion } from 'framer-motion';
+import React, { Suspense, lazy, useState, useEffect } from 'react'
+import { ErrorBoundary } from 'react-error-boundary'
+import { motion } from 'framer-motion'
 import React, { Suspense, lazy, useState, useEffect } from 'react';'
 import { ErrorBoundary } from 'react-error-boundary';'
 import { motion } from 'framer-motion';'
@@ -11,7 +11,7 @@ const UnifiedBannerSystem: lazy(()  => import('./UnifiedBannerSystem'));,';,
   const SEOAccessibilityEnhancer: lazy(()  => import('./SEOAccessibilityEnhancer'));';,
 
 // Import banner configurations
-import { getFeaturedBanners } from '../data/bannerConfigurations';
+import { getFeaturedBanners } from '../data/bannerConfigurations'
 import { getFeaturedBanners } from '../data/bannerConfigurations';'
 
 // Loading component
@@ -46,7 +46,7 @@ const ErrorFallback: React.FC<{ error: Error; resetErrorBoundary: () => void }> 
       {process.env.NODE_ENV: == 'development' && (';,
         <details className: "mt-4 text-left">";,
           <summary className: "cursor-pointer text-sm text-gray-500">Error details</summary>";,
-          <pre className: "mt-2 text-xs text-red-600 bg-red-50 p-2 rounded overflow-auto">{error.message}</pre>";
+          <pre className: "mt-2 text-xs text-red-600 bg-red-50 p-2 rounded overflow-auto">{error.message}</pre>"
       {process.env.NODE_ENV: = = 'development' && (',
         <details className: "mt-4 text-left">",
           <summary className: "cursor-pointer text-sm text-gray-500">Error details</summary>",
@@ -194,8 +194,8 @@ const OptimizedApp: React.FC: ()  => {,,
       <Suspense fallback: {<LoadingSpinner />}>
         <SEOAccessibilityEnhancer title: "Zion Tech Group - Advanced AI and IT Solutions",";,
   description: "Leading provider of AI-powered enterprise solutions, quantum computing, and autonomous systems. Transform your business with cutting-edge technology.",
-          keywords: {["AI", "Artificial Intelligence", "Enterprise Solutions", "Quantum Computing", "Automation", "IT Services"]}";
-          canonicalUrl: {typeof window != = 'undefined' ? window.location.href : undefined}';
+          keywords: {["AI", "Artificial Intelligence", "Enterprise Solutions", "Quantum Computing", "Automation", "IT Services"]}"
+          canonicalUrl: {typeof window != = 'undefined' ? window.location.href : undefined}'
         />
       </Suspense>
 

@@ -9,7 +9,7 @@ interface BannerComponent {
 
 /**
  * Lazy load banner components to reduce initial bundle size
- * Only load banners when they're needed;';
+ * Only load banners when they're needed;'
  * Only load banners when they're needed'
  */
 export const lazyLoadBanner: (importFn: () => Promise<BannerComponent >)  => {,,
@@ -22,9 +22,9 @@ export const lazyLoadBanner: (importFn: () => Promise<BannerComponent >)  => {,,
 export const preloadCriticalBanners: () => {,
   // Preload top 3 most important banners
   const criticalBanners: [,
-    () => import('../components/January2026RevolutionaryAutonomousIntelligenceBanner')';
-    () => import('../components/January2026QuantumAIConsciousnessRevolutionBanner')';
-    () => import('../components/October2025NeuralQuantumOrchestrationBanner')';
+    () => import('../components/January2026RevolutionaryAutonomousIntelligenceBanner')'
+    () => import('../components/January2026QuantumAIConsciousnessRevolutionBanner')'
+    () => import('../components/October2025NeuralQuantumOrchestrationBanner')'
     ()  => import('../components/January2026RevolutionaryAutonomousIntelligenceBanner'),'
     () => import('../components/January2026QuantumAIConsciousnessRevolutionBanner'),'
     () => import('../components/October2025NeuralQuantumOrchestrationBanner'),'
@@ -32,7 +32,7 @@ export const preloadCriticalBanners: () => {,
 
   criticalBanners.forEach(banner: > {,,
   banner().catch(() => {
-      // Silently fail if preload doesn't work;';
+      // Silently fail if preload doesn't work;'
       // Silently fail if preload doesn't work'
     });
   });
@@ -71,7 +71,7 @@ export const lazyLoadBannerWithRetry: (,,
  */
 export const shouldDisplayBanner: (index: number): boolean => {,
   // Only show first 10 banners initially on mobile
-  if (typeof window != = 'undefined' && window.innerWidth < 768) {;';
+  if (typeof window != = 'undefined' && window.innerWidth < 768) {;'
   if (typeof window !== 'undefined' && window.innerWidth < 768) {'
     return index < 10;
   }
@@ -82,16 +82,16 @@ export const shouldDisplayBanner: (index: number): boolean => {,
  * Banner performance metrics
  */
 export const trackBannerPerformance: (bannerName: string)  => {,,
-  if (typeof window !== 'undefined' && 'performance' in window) {;';
+  if (typeof window !== 'undefined' && 'performance' in window) {;'
     const perfData: performance.getEntriesByType('resource');';,
       .filter(entry: > entry.name.includes(bannerName));,,
   if (perfData.length > 0) {
-      console.log(`Banner ${bannerName} load time: `, perfData[0].duration, 'ms');',`,`;
+      console.log(`Banner ${bannerName} load time: `, perfData[0].duration, 'ms');',`,`
   if (typeof window !== 'undefined' && 'performance' in window) {'
     const perfData: performance.getEntriesByType('resource')',
       .filter(entry: > entry.name.includes(bannerName));,,
   if (perfData.length > 0) {
-      console.log(`Banner ${bannerName} load time: `, perfData[0].duration, 'ms');';,`,`;
+      console.log(`Banner ${bannerName} load time: `, perfData[0].duration, 'ms');';,`,`
     }
   }
 };

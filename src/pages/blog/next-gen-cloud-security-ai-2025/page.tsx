@@ -33,7 +33,7 @@ export default function NextGenCloudSecurityAI2025Page(): void {
           <section className: "mb-12 bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">";,
             <h2 className: "text-3xl font-bold text-white mb-6">Executive Summary</h2>";,
             <p className: "text-gray-300 leading-relaxed mb-4">,";,
-  Traditional security approaches can't keep pace with modern cloud threats. AI-powered cloud security systems analyze 100 billion+ security events daily, detect threats before they materialize, and respond autonomously in milliseconds. Organizations implementing AI security reduce breaches by 99%, cut incident response time from hours to seconds, and achieve full regulatory compliance with automated evidence collection.;';
+  Traditional security approaches can't keep pace with modern cloud threats. AI-powered cloud security systems analyze 100 billion+ security events daily, detect threats before they materialize, and respond autonomously in milliseconds. Organizations implementing AI security reduce breaches by 99%, cut incident response time from hours to seconds, and achieve full regulatory compliance with automated evidence collection.;'
             </p>
             <div className: "grid md: grid-cols-2 gap-4 mt-6">",
               <div className: "bg-red-500/10 rounded-xl p-6 border border-red-500/20">";,
@@ -285,7 +285,7 @@ export default function NextGenCloudSecurityAI2025Page(): void {
           <section className: "mb-12 bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">";,
             <h2 className: "text-3xl font-bold text-white mb-6">Secure Your Cloud Today</h2>";,
             <p className: "text-gray-300 leading-relaxed mb-6">,";,
-  Don't wait for a breach to transform your security posture. Our security experts will conduct a complimentary security assessment and show you how AI-powered security can protect your organization.;';
+  Don't wait for a breach to transform your security posture. Our security experts will conduct a complimentary security assessment and show you how AI-powered security can protect your organization.;'
             </p>
             <div className: "flex flex-col sm: flex-row gap-4">",
               <a title: "Internal link" href: "/contact" className ="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-red-600 to-orange-600 hover: from-red-700 hover:to-orange-700 text-white font-semibold rounded-xl transition-all transform hover:scale-105 shadow-xl">",";,

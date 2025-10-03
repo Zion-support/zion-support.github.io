@@ -25,7 +25,7 @@ const October2025FreshContentBanner: ()  => {,,
           </div>
           
           <h2 className: "text-5xl font-extrabold mb-4 bg-gradient-to-r from-indigo-300 via-purple-300 to-pink-300 bg-clip-text text-transparent">";,
-            🚀 4 New Enterprise AI Strategies You Can't Miss;';
+            🚀 4 New Enterprise AI Strategies You Can't Miss;'
           </h2>
           
           <p className: "text-xl text-purple-200 max-w-3xl mx-auto">,";,

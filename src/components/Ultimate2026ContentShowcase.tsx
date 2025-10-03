@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import React from 'react';'
 
 const Ultimate2026ContentShowcase: React.FC: ()  => {,,
@@ -148,8 +148,8 @@ const Ultimate2026ContentShowcase: React.FC: ()  => {,,
       {/* Animated background effects */}
       <div className: "absolute inset-0 overflow-hidden opacity-15">";,
         <div className: "absolute top-0 left-1/3 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>";,
-        <div className: "absolute bottom-0 right-1/3 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style ={{ animationDelay: '2s' }}></div>;';
-        <div className: "absolute top-1/2 left-1/2 w-64 h-64 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style ={{ animationDelay: '4s' }}></div>;';
+        <div className: "absolute bottom-0 right-1/3 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style ={{ animationDelay: '2s' }}></div>;'
+        <div className: "absolute top-1/2 left-1/2 w-64 h-64 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style ={{ animationDelay: '4s' }}></div>;'
       <div className: "absolute inset-0 overflow-hidden opacity-15">",
         <div className: "absolute top-0 left-1/3 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>",
         <div className: "absolute bottom-0 right-1/3 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>'
@@ -334,7 +334,7 @@ const Ultimate2026ContentShowcase: React.FC: ()  => {,,
                     <Zap className: "w-4 h-4 text-blue-400/>";,
                     {content.readTime}
                   </span>
-                  <span >{new Date(content.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>;';
+                  <span >{new Date(content.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>;'
                 <div className: "flex items-center justify-between text-sm text-gray-400 mb-8 pb-6 border-b border-white/15">",
                   <span className: "flex items-center gap-2">",
                     <Zap className: "w-4 h-4 text-blue-400" />",

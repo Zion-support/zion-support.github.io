@@ -14,9 +14,9 @@ export const octoberCuttingEdgeInnovations: [,
       reduction: '90%',
     }
     highlights: [,,
-      'Post-quantum cryptography with CRYSTALS-Kyber and Dilithium',';
-      'Quantum key distribution (QKD) for unhackable communication',';
-      'AI-powered threat detection with real-time anomaly analysis',';
+      'Post-quantum cryptography with CRYSTALS-Kyber and Dilithium','
+      'Quantum key distribution (QKD) for unhackable communication','
+      'AI-powered threat detection with real-time anomaly analysis','
       'Zero-trust architecture with microsegmentation'
     id: 'quantum-security-networks',',
     slug: 'ai-2025-october-quantum-security-networks-enterprise',',
@@ -54,9 +54,9 @@ export const octoberCuttingEdgeInnovations: [,
       costReduction: '95%',
     }
     highlights: [,,
-      'Spiking neural networks (SNNs) with biological realism',';
-      'Intel Loihi 2 and BrainChip Akida deployment guides',';
-      'Event-driven sensors for ultra-low power consumption',';
+      'Spiking neural networks (SNNs) with biological realism','
+      'Intel Loihi 2 and BrainChip Akida deployment guides','
+      'Event-driven sensors for ultra-low power consumption','
       'Real-time edge AI for autonomous systems'
     id: 'neuromorphic-computing',',
     slug: 'ai-2025-october-neuromorphic-enterprise-revolution',',
@@ -94,9 +94,9 @@ export const octoberCuttingEdgeInnovations: [,
       riskReduction: '78%',
     }
     highlights: [,,
-      'Policy-as-code with Open Policy Agent (OPA)',';
-      'Multi-layered safety guardrails and circuit breakers',';
-      'Human-in-the-loop (HITL) intelligent escalation',';
+      'Policy-as-code with Open Policy Agent (OPA)','
+      'Multi-layered safety guardrails and circuit breakers','
+      'Human-in-the-loop (HITL) intelligent escalation','
       'GDPR, HIPAA, SOC 2 compliance automation'
     id: 'multi-agent-governance',',
     slug: 'ai-2025-october-autonomous-multi-agent-governance',',

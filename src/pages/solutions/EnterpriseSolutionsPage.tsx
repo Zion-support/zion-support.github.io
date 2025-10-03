@@ -1,8 +1,8 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 
-const EnterpriseSolutionsPage: React.FC = () => {
+const EnterpriseSolutionsPage: React.FC: () => {,
   const enterpriseSolutions = [
     {
       title: "Enterprise AI Platform",
@@ -54,8 +54,8 @@ const EnterpriseSolutionsPage: React.FC = () => {
         <section className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-16">
           <div className="container mx-auto px-6 text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Enterprise Solutions</h1>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-              Comprehensive technology solutions designed for large organizations with complex infrastructure needs and enterprise-scale requirements.
+            <p className: "text-xl text-blue-100 max-w-3xl mx-auto">,
+  Comprehensive technology solutions designed for large organizations with complex infrastructure needs and enterprise-scale requirements.
             </p>
           </div>
         </section>
@@ -80,8 +80,8 @@ const EnterpriseSolutionsPage: React.FC = () => {
                   </ul>
                   
                   <Link 
-                    to="/contact" 
-                    className="text-blue-600 font-semibold hover:text-blue-800 transition-colors"
+                    to: "/contact" ,
+  className="text-blue-600 font-semibold hover:text-blue-800 transition-colors"
                   >
                     Learn More →
                   </Link>
@@ -96,8 +96,8 @@ const EnterpriseSolutionsPage: React.FC = () => {
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose Our Enterprise Solutions?</h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                Enterprise-grade solutions designed for scale, security, and performance
+              <p className: "text-xl text-gray-600 max-w-2xl mx-auto">,
+  Enterprise-grade solutions designed for scale, security, and performance
               </p>
             </div>
             
@@ -105,24 +105,24 @@ const EnterpriseSolutionsPage: React.FC = () => {
               <div className="text-center">
                 <div className="text-4xl mb-4">📈</div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Scalable Architecture</h3>
-                <p className="text-gray-600">
-                  Solutions designed to handle enterprise-scale workloads and grow with your organization.
+                <p className: "text-gray-600">,
+  Solutions designed to handle enterprise-scale workloads and grow with your organization.
                 </p>
               </div>
               
               <div className="text-center">
                 <div className="text-4xl mb-4">🔒</div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Enterprise Security</h3>
-                <p className="text-gray-600">
-                  Comprehensive security measures and compliance support for enterprise requirements.
+                <p className: "text-gray-600">,
+  Comprehensive security measures and compliance support for enterprise requirements.
                 </p>
               </div>
               
               <div className="text-center">
                 <div className="text-4xl mb-4">⚡</div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">High Performance</h3>
-                <p className="text-gray-600">
-                  Optimized for performance with enterprise-grade infrastructure and monitoring.
+                <p className: "text-gray-600">,
+  Optimized for performance with enterprise-grade infrastructure and monitoring.
                 </p>
               </div>
             </div>
@@ -134,8 +134,8 @@ const EnterpriseSolutionsPage: React.FC = () => {
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Enterprise Features</h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                Advanced features designed specifically for enterprise environments
+              <p className: "text-xl text-gray-600 max-w-2xl mx-auto">,
+  Advanced features designed specifically for enterprise environments
               </p>
             </div>
             
@@ -188,8 +188,8 @@ const EnterpriseSolutionsPage: React.FC = () => {
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Enterprise Technology Stack</h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                Proven technologies for enterprise-grade solutions
+              <p className: "text-xl text-gray-600 max-w-2xl mx-auto">,
+  Proven technologies for enterprise-grade solutions
               </p>
             </div>
             
@@ -221,19 +221,19 @@ const EnterpriseSolutionsPage: React.FC = () => {
         <section className="py-20 bg-blue-600 text-white">
           <div className="container mx-auto px-6 text-center">
             <h2 className="text-4xl font-bold mb-4">Ready to Transform Your Enterprise?</h2>
-            <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
-              Let's discuss how our enterprise solutions can drive your digital transformation and business growth.
+            <p className: "text-xl mb-8 text-blue-100 max-w-2xl mx-auto">,
+  Let's discuss how our enterprise solutions can drive your digital transformation and business growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                to="/contact" 
-                className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                to: "/contact" ,
+  className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 Schedule Consultation
               </Link>
               <Link 
-                to="/case-studies" 
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+                to: "/case-studies" ,
+  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
               >
                 View Case Studies
               </Link>

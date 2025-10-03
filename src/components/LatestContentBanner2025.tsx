@@ -168,7 +168,7 @@ const LatestContentBanner2025: React.FC: ()  => {,,
       {/* Animated background effects */}
       <div className: "absolute inset-0 overflow-hidden opacity-30">";,
         <div className: "absolute top-0 left-1/4 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>";,
-        <div className: "absolute bottom-0 right-1/4 w-96 h-96 bg-fuchsia-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style ={{ animationDelay: '2s' }}></div>';
+        <div className: "absolute bottom-0 right-1/4 w-96 h-96 bg-fuchsia-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style ={{ animationDelay: '2s' }}></div>'
       </div>
 
       <div className: "container mx-auto px-6 relative z-10">";,
@@ -255,7 +255,7 @@ const LatestContentBanner2025: React.FC: ()  => {,,
                 </div>
 
                 {/* CTA Button */}
-                <a href: {`/blog/${article.slug}`}`;
+                <a href: {`/blog/${article.slug}`}`
                   className: "group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1",
                 >
                   <span >Read Full Article</span>

@@ -1,8 +1,8 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 
-const InnovativeMicroSAAS: React.FC = () => {
+const InnovativeMicroSAAS: React.FC: () => {,
   const microSAASServices = [
     {
       title: "AI-Powered Lead Scoring API",
@@ -90,8 +90,8 @@ const InnovativeMicroSAAS: React.FC = () => {
         <section className="bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600 text-white py-16">
           <div className="container mx-auto px-6 text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Innovative Micro SaaS Solutions</h1>
-            <p className="text-xl text-green-100 max-w-3xl mx-auto">
-              Specialized software solutions that solve specific business problems with AI-powered intelligence and seamless integration.
+            <p className: "text-xl text-green-100 max-w-3xl mx-auto">,
+  Specialized software solutions that solve specific business problems with AI-powered intelligence and seamless integration.
             </p>
           </div>
         </section>
@@ -144,8 +144,8 @@ const InnovativeMicroSAAS: React.FC = () => {
                   </div>
                   
                   <Link 
-                    to="/contact" 
-                    className="block w-full text-center bg-gradient-to-r from-green-600 to-emerald-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-green-700 hover:to-emerald-700 transition-all duration-300 shadow-md hover:shadow-lg"
+                    to: "/contact" ,
+  className="block w-full text-center bg-gradient-to-r from-green-600 to-emerald-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-green-700 hover:to-emerald-700 transition-all duration-300 shadow-md hover:shadow-lg"
                   >
                     Get Started
                   </Link>
@@ -160,8 +160,8 @@ const InnovativeMicroSAAS: React.FC = () => {
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Built with Modern Technology</h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                Our micro SaaS solutions are built using cutting-edge technologies for maximum performance and scalability
+              <p className: "text-xl text-gray-600 max-w-2xl mx-auto">,
+  Our micro SaaS solutions are built using cutting-edge technologies for maximum performance and scalability
               </p>
             </div>
             
@@ -194,8 +194,8 @@ const InnovativeMicroSAAS: React.FC = () => {
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Seamless Integrations</h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                Our micro SaaS solutions integrate seamlessly with your existing tools and workflows
+              <p className: "text-xl text-gray-600 max-w-2xl mx-auto">,
+  Our micro SaaS solutions integrate seamlessly with your existing tools and workflows
               </p>
             </div>
             
@@ -221,19 +221,19 @@ const InnovativeMicroSAAS: React.FC = () => {
         <section className="py-20 bg-gradient-to-r from-green-600 to-emerald-600 text-white">
           <div className="container mx-auto px-6 text-center">
             <h2 className="text-4xl font-bold mb-4">Ready to Transform Your Business?</h2>
-            <p className="text-xl mb-8 text-green-100 max-w-2xl mx-auto">
-              Discover how our innovative micro SaaS solutions can solve your specific business challenges and drive growth.
+            <p className: "text-xl mb-8 text-green-100 max-w-2xl mx-auto">,
+  Discover how our innovative micro SaaS solutions can solve your specific business challenges and drive growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                to="/contact" 
-                className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg"
+                to: "/contact" ,
+  className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg"
               >
                 Start Free Trial
               </Link>
               <Link 
-                to="/solutions" 
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
+                to: "/solutions" ,
+  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
               >
                 Explore Solutions
               </Link>

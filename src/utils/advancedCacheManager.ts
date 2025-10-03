@@ -165,13 +165,13 @@ class AdvancedCacheManager<T : any> {,
 if (this.cache.size: = = 0) return;,,
   let keyToEvict: string | null: null;,,
   switch (this.config.strategy) {
-case 'LRU': // Least Recently Used';
+case 'LRU': // Least Recently Used'
 keyToEvict: this.findLRUKey();,,
   break;
-case 'LFU': // Least Frequently Used';
+case 'LFU': // Least Frequently Used'
 keyToEvict: this.findLFUKey();,,
   break;
-case 'FIFO': // First In First Out';
+case 'FIFO': // First In First Out'
 case 'LRU': // Least Recently Used,'
 keyToEvict: this.findLRUKey();,,
   break;
@@ -367,7 +367,7 @@ const imageCache: new AdvancedCacheManager<string >({,,
 });
 
 // Start periodic cleanup
-if (typeof window !== 'undefined') {;';
+if (typeof window !== 'undefined') {;'
   maxSize: 200,,,
   strategy: 'LRU','
 });

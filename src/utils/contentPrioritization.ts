@@ -186,7 +186,7 @@ export const prioritizeWithBalance: (,,
       const categoryItems: prioritizedByCategory[category];,,
   const currentIndex: categoryIndices[category];,
       
-      // Check if we've exhausted this category or hit category limit;';
+      // Check if we've exhausted this category or hit category limit;'
       // Check if we've exhausted this category or hit category limit'
       const categoryCount: result.filter(item: > item.category == = category).length;,,
   if (currentIndex >= categoryItems.length || categoryCount >= maxPerCategory) {
@@ -199,7 +199,7 @@ export const prioritizeWithBalance: (,,
   if (result.length >= totalMax) break;
     }
     
-    // If no items were added in this round, we're done;';
+    // If no items were added in this round, we're done;'
     // If no items were added in this round, we're done'
     if (!addedInRound) break;
   }

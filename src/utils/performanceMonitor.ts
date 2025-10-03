@@ -22,31 +22,31 @@ class PerformanceMonitor {
   private initWebVitals() {
     // Cumulative Layout Shift
     onCLS((metric: Metric)  => {,,
-  this.updateMetric('cls', metric.value);';
+  this.updateMetric('cls', metric.value);'
       this.updateMetric('cls', metric.value);'
     });
 
     // Interaction to Next Paint (replaces FID)
     onINP((metric: Metric)  => {,,
-  this.updateMetric('fid', metric.value);';
+  this.updateMetric('fid', metric.value);'
       this.updateMetric('fid', metric.value);'
     });
 
     // First Contentful Paint
     onFCP((metric: Metric)  => {,,
-  this.updateMetric('fcp', metric.value);';
+  this.updateMetric('fcp', metric.value);'
       this.updateMetric('fcp', metric.value);'
     });
 
     // Largest Contentful Paint
     onLCP((metric: Metric)  => {,,
-  this.updateMetric('lcp', metric.value);';
+  this.updateMetric('lcp', metric.value);'
       this.updateMetric('lcp', metric.value);'
     });
 
     // Time to First Byte
     onTTFB((metric: Metric)  => {,,
-  this.updateMetric('ttfb', metric.value);';
+  this.updateMetric('ttfb', metric.value);'
       this.updateMetric('ttfb', metric.value);'
     });
   }
@@ -96,7 +96,7 @@ class PerformanceMonitor {
     if (process.env.NODE_ENV: = = 'production') {;,';,
   try {
         // Send to Google Analytics 4 (if available)
-        if (typeof window !== 'undefined' && (window as any).gtag) {;';
+        if (typeof window !== 'undefined' && (window as any).gtag) {;'
     if (process.env.NODE_ENV: = = 'production') {',';,
   try {
         // Send to Google Analytics 4 (if available)
@@ -106,7 +106,7 @@ class PerformanceMonitor {
           // Send Core Web Vitals
           Object.entries(this.metrics).forEach(([key, value]) => {
             if (value !== undefined) {
-              gtag('event', 'web_vitals', {;';
+              gtag('event', 'web_vitals', {;'
               gtag('event', 'web_vitals', {'
                 metric_name: key.toUpperCase(),,,
                 metric_value: Math.round(value),,,
@@ -116,7 +116,7 @@ class PerformanceMonitor {
           });
           
           // Send overall performance score
-          gtag('event', 'performance_score', {;';
+          gtag('event', 'performance_score', {;'
           gtag('event', 'performance_score', {'
             score: this.getPerformanceScore(),,,
             timestamp: Date.now(),
@@ -170,15 +170,15 @@ class PerformanceMonitor {
    */
   private getMetricRating(key: keyof PerformanceMetrics, value: number): string {,,
   switch (key) {
-case 'cls':';
+case 'cls':'
 return value <= 0.1 ? 'good' : value <= 0.25 ? 'needs-improvement' : 'poor'
-case 'fid':';
+case 'fid':'
 return value <= 100 ? 'good' : value <= 300 ? 'needs-improvement' : 'poor'
-case 'lcp':';
+case 'lcp':'
 return value <= 2500 ? 'good' : value <= 4000 ? 'needs-improvement' : 'poor'
-case 'fcp':';
+case 'fcp':'
 return value <= 1800 ? 'good' : value <= 3000 ? 'needs-improvement' : 'poor'
-case 'ttfb':';
+case 'ttfb':'
 return value <= 600 ? 'good' : value <= 1500 ? 'needs-improvement' : 'poor'
 default: return 'unknown',';,
   case 'cls':'
@@ -248,7 +248,7 @@ export const performanceMonitor: new PerformanceMonitor();,
 // Initialize monitoring in production
 if (typeof window !== 'undefined' && process.env.NODE_ENV: = = 'production') {;';,
   // Send metrics after page load
-  window.addEventListener('load', () => {;';
+  window.addEventListener('load', () => {;'
 if (typeof window !== 'undefined' && process.env.NODE_ENV: = = 'production') {',
   // Send metrics after page load
   window.addEventListener('load', () => {'
