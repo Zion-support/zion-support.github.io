@@ -1157,21 +1157,18 @@ const SmartContractAudit: React.FC: ()  => {,,
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className= "flex items-center">
                         <CheckCircle className= "w-5 h-5 text-green-500 mr-3 flex-shrink-0/>"
-                        <span className= "text-gray-700">{feature}</span>";"
-                      <li key={featureIndex} className= "flex items-center">","
-                        <CheckCircle className= "w-5 h-5 text-green-500 mr-3 flex-shrink-0" />","
-                        <span className= "text-gray-700">{feature}</span>"
+                        <span className="text-gray-700">{feature}</span>
                       </li>
                     ))}
                   </ul>
-                  <a href="/contact","
-  className= {,
-`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${`
-plan.popular
-? 'bg-red-600 text-white hover: bg-red-700',';,
-? 'bg-red-600 text-white hover: bg-red-700',',';,
-: 'bg-gray-100 text-gray-900 hover:bg-gray-200'
-}`}`
+                  <a 
+                    href="/contact"
+                    className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
+                      plan.popular
+                        ? 'bg-red-600 text-white hover:bg-red-700'
+                        : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
+                    }`}
+                  >
         {/* Features */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1257,22 +1254,6 @@ plan.popular
               ))}
             </div>
 
-            <div className="text-center mt-12">","
-              <p className="text-gray-600 mb-4">Need a custom audit solution?</p>","
-              <a href="/contact","
-  className="inline-flex items-center text-red-600 hover: text-red-700 font-semibold","
-              >
-                Contact our Security Team
-                <ArrowRight className="w-4 h-4 ml-1/>"
-                <ArrowRight className="w-4 h-4 ml-1" />","
-            <div className= "text-center mt-12">","
-              <p className= "text-gray-600 mb-4">Need a custom audit solution?</p>","
-              <a href="/contact","
-  className= "inline-flex items-center text-red-600 hover: text-red-700 font-semibold","
-              >
-                Contact our Security Team
-                <ArrowRight className= "w-4 h-4 ml-1/>"
-                <ArrowRight className= "w-4 h-4 ml-1" />","
             <div className="text-center mt-12">
               <p className="text-gray-600 mb-4">Need a custom audit solution?</p>
               <a 
@@ -1287,66 +1268,6 @@ plan.popular
         </section>
 
         {/* Testimonials */}
-        <section className="py-20"
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
-            <div className="text-center mb-16"
-              <h2 className="text-4xl font-bold text-gray-900 mb-4"
-        <section className="py-20">","
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
-            <div className="text-center mb-16">","
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">","
-  What Our Clients Say
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">","
-        <section className= "py-20">
-          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
-            <div className= "text-center mb-16">
-              <h2 className= "text-4xl font-bold text-gray-900 mb-4">
-        <section className= "py-20">","
-          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
-            <div className= "text-center mb-16">","
-              <h2 className= "text-4xl font-bold text-gray-900 mb-4">"
-  What Our Clients Say
-              </h2>
-              <p className= "text-xl text-gray-600 max-w-3xl mx-auto">"
-  Join dozens of successful blockchain projects that trust our security expertise.
-              </p>
-            </div>
-
-            <div className="grid md: grid-cols-3 gap-8">","
-            <div className="grid md: grid-cols-3 gap-8">","
-              {testimonials.map((testimonial, index) => (
-                <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200">","
-                  <div className="flex items-center mb-4">","
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current/>"
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />","
-                    ))}
-                  </div>
-                  <blockquote className="text-gray-700 mb-6 italic">","
-                    "{testimonial.content}"
-                  </blockquote>
-                  <div >
-                    <div className="font-semibold text-gray-900">{testimonial.name}</div>"
-                    <div className="text-gray-600 text-sm">{testimonial.role}</div>"
-                    <div className="text-red-600 text-sm font-medium">{testimonial.company}</div>"
-            <div className= "grid md: grid-cols-3 gap-8">","
-            <div className= "grid md: grid-cols-3 gap-8">","
-              {testimonials.map((testimonial, index) => (
-                <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200">","
-                  <div className= "flex items-center mb-4">","
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className= "w-5 h-5 text-yellow-400 fill-current/>"
-                      <Star key={i} className= "w-5 h-5 text-yellow-400 fill-current" />","
-                    ))}
-                  </div>
-                  <blockquote className= "text-gray-700 mb-6 italic">","
-                    "{testimonial.content}"
-                  </blockquote>
-                  <div >
-                    <div className= "font-semibold text-gray-900">{testimonial.name}</div>"
-                    <div className= "text-gray-600 text-sm">{testimonial.role}</div>"
-                    <div className= "text-red-600 text-sm font-medium">{testimonial.company}</div>"
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
@@ -1381,65 +1302,28 @@ plan.popular
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-br from-red-900 via-orange-800 to-yellow-900 text-white"
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">","
-            <h2 className="text-4xl font-bold mb-6"
-        <section className="py-20 bg-gradient-to-br from-red-900 via-orange-800 to-yellow-900 text-white">","
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">","
-            <h2 className="text-4xl font-bold mb-6">","
-  Ready to Secure Your Smart Contracts?
+        <section className="py-20 bg-gradient-to-br from-red-900 via-orange-800 to-yellow-900 text-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-4xl font-bold mb-6">
+              Ready to Secure Your Smart Contracts?
             </h2>
-            <p className="text-xl text-red-100 max-w-3xl mx-auto mb-8">","
-  Protect your blockchain project with professional smart contract auditing from certified security experts.
+            <p className="text-xl text-red-100 max-w-3xl mx-auto mb-8">
+              Protect your blockchain project with professional smart contract auditing from certified security experts.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">","
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">","
-              <a href="/contact","
-  className="inline-flex items-center px-8 py-4 bg-red-600 hover: bg-red-700 text-white font-semibold rounded-lg transition-colors","
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="/contact"
                 className="inline-flex items-center px-8 py-4 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-lg transition-colors"
               >
-                <Phone className="w-5 h-5 mr-2/>"
-                <Phone className="w-5 h-5 mr-2" />","
-  Request Free Quote
+                <Phone className="w-5 h-5 mr-2" />
+                Request Free Quote
               </a>
-              <a href="/case-studies","
-  className="inline-flex items-center px-8 py-4 border-2 border-white text-white hover: bg-white hover:text-red-900 font-semibold rounded-lg transition-colors","
               <a 
                 href="/case-studies"
                 className="inline-flex items-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-red-900 font-semibold rounded-lg transition-colors"
               >
                 View Audit Reports
-                <ArrowRight className="w-5 h-5 ml-2/>"
-                <ArrowRight className="w-5 h-5 ml-2" />","
-        <section className= "py-20 bg-gradient-to-br from-red-900 via-orange-800 to-yellow-900 text-white">
-          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">","
-            <h2 className= "text-4xl font-bold mb-6">
-        <section className= "py-20 bg-gradient-to-br from-red-900 via-orange-800 to-yellow-900 text-white">","
-          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">","
-            <h2 className= "text-4xl font-bold mb-6">"
-  Ready to Secure Your Smart Contracts?
-            </h2>
-            <p className= "text-xl text-red-100 max-w-3xl mx-auto mb-8">"
-  Protect your blockchain project with professional smart contract auditing from certified security experts.
-            </p>
-            <div className= "flex flex-col sm: flex-row gap-4 justify-center">","
-            <div className= "flex flex-col sm: flex-row gap-4 justify-center">","
-              <a href="/contact","
-  className= "inline-flex items-center px-8 py-4 bg-red-600 hover: bg-red-700 text-white font-semibold rounded-lg transition-colors","
-              >
-                <Phone className= "w-5 h-5 mr-2/>"
-                <Phone className= "w-5 h-5 mr-2" />","
-  Request Free Quote
-              </a>
-              <a href="/case-studies","
-  className= "inline-flex items-center px-8 py-4 border-2 border-white text-white hover: bg-white hover:text-red-900 font-semibold rounded-lg transition-colors","
-              >
-                View Audit Reports
-                <ArrowRight className= "w-5 h-5 ml-2/>"
-                <ArrowRight className= "w-5 h-5 ml-2" />","
+                <ArrowRight className="w-5 h-5 ml-2" />
               </a>
             </div>
           </div>
