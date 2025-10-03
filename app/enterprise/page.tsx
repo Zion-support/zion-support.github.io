@@ -1,3 +1,11 @@
+import React from 'react';
+import Link from 'next/link';
+
+export const metadata = {
+  title: 'Enterprise Solutions - Zion Tech Group',
+  description: 'Comprehensive enterprise AI and IT solutions designed for Fortune 500 companies. Transform your business with our advanced autonomous systems and quantum computing solutions.',
+  keywords: 'enterprise AI, Fortune 500, autonomous systems, quantum computing, enterprise transformation, business intelligence',
+};
 
 export default function EnterprisePage() {
   return (
@@ -79,7 +87,7 @@ export default function EnterprisePage() {
         <div className="container mx-auto px-6 text-center">"
           <p className="text-gray-400">© 2025 Zion Tech Group. All rights reserved.</p>"
         </div>
-      </footer>
+      </div>
     </div>
   );
 }
