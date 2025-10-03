@@ -14,14 +14,14 @@ export const metadata = {
 
 export default function AIMegaTrends20252026() {
   return (
-    <div className="text-left">
-      <div className="text-left">
-        <h1 className="text-left">AI 2025-2026 Mega Trends Breakthrough</h1>
-        <p className="text-left">Revolutionary Enterprise Transformation Guide</p>
-        <div className="text-left"></div>
-          <span className="text-left">BREAKTHROUGH</span>
-          <span className="text-left">2025-2026</span>
-          <span className="text-left">REVOLUTIONARY</span>
+    <div className="min-h-screen bg-gray-50">
+      <div className="max-w-4xl mx-auto px-4 py-8">
+        <h1 className="text-4xl font-bold text-gray-900 mb-4">AI 2025-2026 Mega Trends Breakthrough</h1>
+        <p className="text-xl text-gray-600 mb-8">Revolutionary Enterprise Transformation Guide</p>
+        <div className="flex gap-2 mb-8">
+          <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">BREAKTHROUGH</span>
+          <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">2025-2026</span>
+          <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">REVOLUTIONARY</span>
         </div>
       </div>
 
