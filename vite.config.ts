@@ -4,12 +4,12 @@ import { resolve } from 'path'
 import { visualizer } from 'rollup-plugin-visualizer'
 
 // Optimized Vite configuration for better performance and smaller bundle size
-export default defineConfig({/* content */}
+export default defineConfig({
   plugins: [
-    react({/* content */}
+    react({
       jsxRuntime: 'automatic'
     }),
-    visualizer({/* content */}
+    visualizer({
       filename: 'dist/stats.html',
       open: false,
       gzipSize: true,
@@ -17,95 +17,95 @@ export default defineConfig({/* content */}
   ],
   root: '.',
   publicDir: 'public',
-  resolve: {/* content */}
-    alias: {/* content */}
+  resolve: {
+    alias: {
       '@': resolve(__dirname, 'src'),
       '@components': resolve(__dirname, 'components'),
       '@app': resolve(__dirname, 'app'),
     },
   },
-  build: {/* content */}
+  build: {
     sourcemap: false,
     minify: 'terser',
     cssMinify: true,
     target: 'es2020',
     reportCompressedSize: false,
-    rollupOptions: {/* content */}
-      treeshake: {/* content */}
+    rollupOptions: {
+      treeshake: {
         moduleSideEffects: false,
         propertyReadSideEffects: false,
         tryCatchDeoptimization: false,
         preset: 'smallest'
       },
-      output: {/* content */}
-        manualChunks: (id) => {/* content */}
+      output: {
+        manualChunks: (id) => {
           // Vendor chunks - more granular splitting
-          if (id.includes('node_modules')) {/* content */}
+          if (id.includes('node_modules')) {
             // React core
-            if (id.includes('react') || id.includes('react-dom')) {/* content */}
+            if (id.includes('react') || id.includes('react-dom')) {
               return 'vendor-react';
             }
             // Router
-            if (id.includes('react-router')) {/* content */}
+            if (id.includes('react-router')) {
               return 'vendor-router';
             }
             // UI libraries
-            if (id.includes('framer-motion')) {/* content */}
+            if (id.includes('framer-motion')) {
               return 'vendor-animations';
             }
-            if (id.includes('lucide-react')) {/* content */}
+            if (id.includes('lucide-react')) {
               return 'vendor-icons';
             }
             // Utility libraries
-            if (id.includes('clsx') || id.includes('tailwind-merge')) {/* content */}
+            if (id.includes('clsx') || id.includes('tailwind-merge')) {
               return 'vendor-styling';
             }
-            if (id.includes('axios')) {/* content */}
+            if (id.includes('axios')) {
               return 'vendor-http';
             }
             // SEO and analytics
-            if (id.includes('react-helmet') || id.includes('web-vitals')) {/* content */}
+            if (id.includes('react-helmet') || id.includes('web-vitals')) {
               return 'vendor-seo';
             }
             return 'vendor-misc';
           }
           // App chunks - lazy load pages
-          if (id.includes('src/pages/')) {/* content */}
+          if (id.includes('src/pages/')) {
             // Split large page bundles
-            if (id.includes('services/')) {/* content */}
+            if (id.includes('services/')) {
               return 'pages-services';
             }
-            if (id.includes('case-studies/')) {/* content */}
+            if (id.includes('case-studies/')) {
               return 'pages-case-studies';
             }
-            if (id.includes('blog/')) {/* content */}
+            if (id.includes('blog/')) {
               return 'pages-blog';
             }
             return 'pages-core';
           }
           // Component chunks
-          if (id.includes('src/components/')) {/* content */}
-            if (id.includes('banner') || id.includes('Banner')) {/* content */}
+          if (id.includes('src/components/')) {
+            if (id.includes('banner') || id.includes('Banner')) {
               return 'components-banners';
             }
             return 'components-core';
           }
           // Charts and data visualization
-          if (id.includes('recharts') || id.includes('d3')) {/* content */}
+          if (id.includes('recharts') || id.includes('d3')) {
             return 'vendor-charts';
           }
           // Large libraries
-          if (id.includes('lodash') || id.includes('moment')) {/* content */}
+          if (id.includes('lodash') || id.includes('moment')) {
             return 'vendor-large';
           }
           return 'vendor';
         },
         chunkFileNames: 'assets/js/[name]-[hash].js',
         entryFileNames: 'assets/js/main-[hash].js',
-        assetFileNames: (assetInfo) => {/* content */}
+        assetFileNames: (assetInfo) => {
           const info = assetInfo.name.split('.');
           const ext = info[info.length - 1];
-          if (/\.(css)$/.test(assetInfo.name)) {/* content */}
+          if (/\.(css)$/.test(assetInfo.name)) {
             return `assets/css/[name]-[hash].${ext}`;
           }
           return `assets/[name]-[hash].${ext}`;
@@ -113,8 +113,8 @@ export default defineConfig({/* content */}
       },
     },
     chunkSizeWarningLimit: 1000,
-    terserOptions: {/* content */}
-      compress: {/* content */}
+    terserOptions: {
+      compress: {
         drop_console: true,
         drop_debugger: true,
         pure_funcs: ['console.log', 'console.info', 'console.debug'],
@@ -123,29 +123,29 @@ export default defineConfig({/* content */}
         dead_code: true,
         unused: true,
       },
-      mangle: {/* content */}
+      mangle: {
         safari10: true,
         toplevel: true,
       },
-      format: {/* content */}
+      format: {
         comments: false,
         ascii_only: true,
       },
     },
   },
-  server: {/* content */}
+  server: {
     port: 3000,
     open: true,
     cors: true,
     host: true,
   },
-  preview: {/* content */}
+  preview: {
     port: 3000,
     open: true,
     cors: true,
     host: true,
   },
-  optimizeDeps: {/* content */}
+  optimizeDeps: {
     include: [
       'react',
       'react-dom',
@@ -159,10 +159,10 @@ export default defineConfig({/* content */}
     exclude: ['@vite/client', '@vite/env'],
   },
   assetsInclude: ['**/*.html', '**/*.new'],
-  define: {/* content */}
+  define: {
     global: 'globalThis',
   },
-  esbuild: {/* content */}
+  esbuild: {
     target: 'es2020',
     format: 'esm',
     treeShaking: true,

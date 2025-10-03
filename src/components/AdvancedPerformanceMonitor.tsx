@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-interface PerformanceMetrics {/* content */}
+interface PerformanceMetrics {
   lcp?: number;
   fid?: number;
   cls?: number;
@@ -9,67 +9,85 @@ interface PerformanceMetrics {/* content */}
   inp?: number;
 }
 
-export const AdvancedPerformanceMonitor: React.FC = () => {/* content */}
+export const AdvancedPerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({});
   const [isVisible, setIsVisible] = useState(false);
 
-  useEffect(() => {/* content */}
+  useEffect(() => {
     // Only run in development
     if (process.env.NODE_ENV !== 'development') return;
 
-    const observer = new PerformanceObserver((list) => {/* content */}
-      const entries = list.getEntries();
-      entries.forEach((entry) => {/* content */}
-        if (entry.entryType === 'largest-contentful-paint') {/* content */}
+    const observer = new PerformanceObserver((list) => {
+      list.getEntries().forEach((entry) => {
+        if (entry.entryType === 'largest-contentful-paint') {
           setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
-        } else if (entry.entryType === 'first-input') {/* content */}
-          setMetrics(prev => ({ ...prev, fid: (entry as any).processingStart - entry.startTime }));
-        } else if (entry.entryType === 'layout-shift' && !(entry as any).hadRecentInput) {/* content */}
-          setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + (entry as any).value }));
+        } else if (entry.entryType === 'first-input') {
+          setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));
+        } else if (entry.entryType === 'layout-shift') {
+          setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + entry.value }));
+        } else if (entry.entryType === 'paint') {
+          if (entry.name === 'first-contentful-paint') {
+            setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
+          }
         }
       });
     });
 
-    observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
+    observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift', 'paint'] });
 
-    // Toggle visibility with Ctrl+Shift+P
-    const handleKeyPress = (e: KeyboardEvent) => {/* content */}
-      if (e.ctrlKey && e.shiftKey && e.key === 'P') {/* content */}
-        setIsVisible(prev => !prev);
-      }
-    };
-
-    window.addEventListener('keydown', handleKeyPress);
-
-    return () => {/* content */}
-      observer.disconnect();
-      window.removeEventListener('keydown', handleKeyPress);
-    };
+    return () => observer.disconnect();
   }, []);
 
-  if (!isVisible) return null;
+  if (process.env.NODE_ENV !== 'development') return null;
 
   return (
-  <div></div>
-    <div style={{/* content */}
-      position: 'fixed',
-      top: '10px',
-      right: '10px',
-      background: 'rgba(0, 0, 0, 0.8)',
-      color: 'white',
-      padding: '10px',
-      borderRadius: '5px',
-      fontSize: '12px',
-      zIndex: 9999,
-      fontFamily: 'monospace',
-    }}></div>
-      <h4>Performance Metrics</h4>
-      <div>LCP: {metrics.lcp ? metrics.lcp.toFixed(2) + 'ms' : 'N/A'}</div>
-      <div>FID: {metrics.fid ? metrics.fid.toFixed(2) + 'ms' : 'N/A'}</div>
-      <div>CLS: {metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}</div>
-      <div style={{ marginTop: '10px', fontSize: '10px' }}></div>
-        Press Ctrl+Shift+P to toggle
+    <div className="fixed bottom-4 right-4 bg-white border border-gray-300 rounded-lg shadow-lg p-4 max-w-xs">
+      <div className="flex items-center justify-between mb-2">
+        <h3 className="text-sm font-semibold text-gray-800">Performance Monitor</h3>
+        <button
+          onClick={() => setIsVisible(!isVisible)}
+          className="text-xs text-gray-500 hover:text-gray-700"
+        >
+          {isVisible ? 'Hide' : 'Show'}
+        </button>
       </div>
+      
+      {isVisible && (
+        <div className="space-y-2 text-xs">
+          {metrics.lcp && (
+            <div className="flex justify-between">
+              <span className="text-gray-600">LCP:</span>
+              <span className={metrics.lcp < 2500 ? 'text-green-600' : 'text-red-600'}>
+                {metrics.lcp.toFixed(0)}ms
+              </span>
+            </div>
+          )}
+          {metrics.fid && (
+            <div className="flex justify-between">
+              <span className="text-gray-600">FID:</span>
+              <span className={metrics.fid < 100 ? 'text-green-600' : 'text-red-600'}>
+                {metrics.fid.toFixed(0)}ms
+              </span>
+            </div>
+          )}
+          {metrics.cls && (
+            <div className="flex justify-between">
+              <span className="text-gray-600">CLS:</span>
+              <span className={metrics.cls < 0.1 ? 'text-green-600' : 'text-red-600'}>
+                {metrics.cls.toFixed(3)}
+              </span>
+            </div>
+          )}
+          {metrics.fcp && (
+            <div className="flex justify-between">
+              <span className="text-gray-600">FCP:</span>
+              <span className={metrics.fcp < 1800 ? 'text-green-600' : 'text-red-600'}>
+                {metrics.fcp.toFixed(0)}ms
+              </span>
+            </div>
+          )}
+        </div>
+      )}
     </div>
   );
 };

@@ -11,31 +11,32 @@ import Services from './pages/Services';
 class ErrorBoundary extends React.Component<
   { children: React.ReactNode; fallback?: React.ReactNode },
   { hasError: boolean }
-> {/* content */}
-  constructor(props: any) {/* content */}
+> {
+  constructor(props: any) {
     super(props);
     this.state = { hasError: false };
   }
 
-  static getDerivedStateFromError(error: Error) {/* content */}
+  static getDerivedStateFromError(error: Error) {
     return { hasError: true };
   }
 
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {/* content */}
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
 
-  render() {/* content */}
-    if (this.state.hasError) {/* content */}
+  render() {
+    if (this.state.hasError) {
       return this.props.fallback || (
-        <div className="min-h-screen flex items-center justify-center bg-gray-50"></div>
-          <div className="text-center"></div>
+        <div className="min-h-screen flex items-center justify-center bg-gray-50">
+          <div className="text-center">
             <h1 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong</h1>
-            <button
-              onClick={() => this.setState({ hasError: false })}
-              className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+            <p className="text-gray-600 mb-4">We're sorry, but something unexpected happened.</p>
+            <button 
+              onClick={() => window.location.reload()}
+              className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"
             >
-              Try again
+              Reload Page
             </button>
           </div>
         </div>
@@ -46,30 +47,16 @@ class ErrorBoundary extends React.Component<
   }
 }
 
-function App() {/* content */}
+function App() {
   return (
-  <div></div>
     <HelmetProvider>
       <ErrorBoundary>
         <Router>
-          <div className="min-h-screen bg-gray-50"></div>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/services" element={<Services />} />
-              <Route path="*" element={/* content */}
-                <div className="min-h-screen flex items-center justify-center"></div>
-                  <div className="text-center"></div>
-                    <h1 className="text-4xl font-bold text-gray-900 mb-4">404</h1>
-                    <p className="text-gray-600 mb-8">Page not found</p>
-                    <a href="/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"></a>
-                      Go Home
-                    </a>
-                  </div>
-                </div>
-              } />
-            </Routes>
-          </div>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/services" element={<Services />} />
+          </Routes>
         </Router>
       </ErrorBoundary>
     </HelmetProvider>

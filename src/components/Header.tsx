@@ -1,12 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Header: React.FC = () => {/* content */}
+const Header: React.FC = () => {
   return (
-  <div></div>
     <header className="bg-slate-900 border-b border-slate-800">
-      <div className="container mx-auto px-4 py-4"></div>
-        <div className="flex items-center justify-between"></div>
+      <div className="container mx-auto px-4 py-4">
+        <div className="flex items-center justify-between">
           <Link to="/" className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
             Zion Tech Group
           </Link>
@@ -30,27 +29,14 @@ const Header: React.FC = () => {/* content */}
             >
               Services
             </Link>
-            <Link 
-              to="/blog" 
-              className="text-gray-300 hover:text-white transition-colors"
-            >
-              Blog
-            </Link>
-            <Link 
-              to="/contact" 
-              className="text-gray-300 hover:text-white transition-colors"
-            >
-              Contact
-            </Link>
           </nav>
-
-          <div className="flex items-center space-x-4"></div>
-            <a 
-              href="/contact" 
-              className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300"
-            ></a>
-              Get Started
-            </a>
+          
+          <div className="md:hidden">
+            <button className="text-gray-300 hover:text-white">
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
           </div>
         </div>
       </div>
