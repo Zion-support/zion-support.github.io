@@ -49,12 +49,35 @@ const RealTimeCognitiveAutomationPage: React.FC = () => {
         <meta name="description" content="Advanced real-time cognitive automation solutions that combine AI, machine learning, and intelligent workflows for maximum business efficiency." />
       </Helmet>
       
-              Transform your business operations with intelligent automation that thinks, learns, and adapts in real-time.
-            </p>
+      <div className="min-h-screen bg-white">
+        {/* Hero Section */}
+        <section className="py-20 bg-gradient-to-r from-indigo-600 to-purple-700 text-white">
+          <div className="container mx-auto px-6">
+            <div className="text-center">
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                Real-Time Cognitive Automation
+              </h1>
+              <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+                Transform your business operations with intelligent automation that thinks, learns, and adapts in real-time.
+              </p>
+            </div>
           </div>
         </section>
 
         {/* Features Grid */}
+        <section className="py-20">
+          <div className="container mx-auto px-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {automationFeatures.map((feature, index) => (
+                <div key={index} className="bg-white rounded-lg shadow-lg p-6 border border-gray-200 hover:shadow-xl transition-shadow">
+                  <div className="text-4xl mb-4">{feature.icon}</div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
+                  <p className="text-gray-600 mb-4">{feature.description}</p>
+                  
+                  <ul className="space-y-2 mb-6">
+                    {feature.features.map((item, idx) => (
+                      <li key={idx} className="flex items-center text-gray-700">
+                        <span className="w-2 h-2 bg-indigo-600 rounded-full mr-3"></span>
                         {item}
                       </li>
                     ))}
@@ -72,18 +95,37 @@ const RealTimeCognitiveAutomationPage: React.FC = () => {
           </div>
         </section>
 
+        {/* Key Benefits */}
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-6">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose Our Solution</h2>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
                 Our cognitive automation solutions deliver unprecedented efficiency and intelligence
               </p>
             </div>
             
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="text-5xl mb-4">⚡</div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Real-Time Processing</h3>
+                <p className="text-gray-600">
                   Process and respond to data in real-time, enabling instant decision-making and immediate action.
                 </p>
               </div>
               
+              <div className="text-center">
+                <div className="text-5xl mb-4">🧠</div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Cognitive Intelligence</h3>
+                <p className="text-gray-600">
                   AI-powered decision engines that learn from patterns and make optimal choices automatically.
                 </p>
               </div>
               
+              <div className="text-center">
+                <div className="text-5xl mb-4">🔄</div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Adaptive Learning</h3>
+                <p className="text-gray-600">
                   Systems that continuously improve and adapt based on new data and changing conditions.
                 </p>
               </div>
@@ -97,48 +139,68 @@ const RealTimeCognitiveAutomationPage: React.FC = () => {
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Common Use Cases</h2>
               <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                Real-world applications of cognitive automation across industries
+                Discover how real-time cognitive automation can transform your specific business challenges
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-white p-8 rounded-xl shadow-sm">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Financial Services</h3>
-                <ul className="space-y-2 text-gray-600">
-                  <li>• Real-time fraud detection and prevention</li>
-                  <li>• Automated loan processing and approval</li>
-                  <li>• Intelligent risk assessment and management</li>
-                  <li>• Automated compliance monitoring</li>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-white rounded-lg shadow-lg p-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Customer Service</h3>
+                <p className="text-gray-600 mb-4">Automate customer inquiries with intelligent chatbots and real-time response optimization.</p>
+                <ul className="space-y-2 text-sm text-gray-700">
+                  <li>• Instant response to common queries</li>
+                  <li>• Intelligent ticket routing</li>
+                  <li>• Predictive issue resolution</li>
                 </ul>
               </div>
               
-              <div className="bg-white p-8 rounded-xl shadow-sm">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Healthcare</h3>
-                <ul className="space-y-2 text-gray-600">
-                  <li>• Patient data analysis and diagnosis support</li>
-                  <li>• Automated appointment scheduling</li>
-                  <li>• Real-time monitoring and alerting</li>
-                  <li>• Intelligent treatment recommendations</li>
+              <div className="bg-white rounded-lg shadow-lg p-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Supply Chain</h3>
+                <p className="text-gray-600 mb-4">Optimize inventory and logistics with predictive analytics and automated decision-making.</p>
+                <ul className="space-y-2 text-sm text-gray-700">
+                  <li>• Demand forecasting</li>
+                  <li>• Automated reordering</li>
+                  <li>• Route optimization</li>
                 </ul>
               </div>
               
-              <div className="bg-white p-8 rounded-xl shadow-sm">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Manufacturing</h3>
-                <ul className="space-y-2 text-gray-600">
-                  <li>• Predictive maintenance and quality control</li>
-                  <li>• Supply chain optimization</li>
-                  <li>• Automated production planning</li>
-                  <li>• Real-time performance monitoring</li>
+              <div className="bg-white rounded-lg shadow-lg p-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Financial Services</h3>
+                <p className="text-gray-600 mb-4">Streamline financial processes with real-time fraud detection and automated compliance.</p>
+                <ul className="space-y-2 text-sm text-gray-700">
+                  <li>• Real-time fraud detection</li>
+                  <li>• Automated compliance reporting</li>
+                  <li>• Risk assessment</li>
                 </ul>
               </div>
               
-              <div className="bg-white p-8 rounded-xl shadow-sm">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Retail & E-commerce</h3>
-                <ul className="space-y-2 text-gray-600">
-                  <li>• Dynamic pricing and inventory management</li>
-                  <li>• Personalized customer experiences</li>
-                  <li>• Automated customer service</li>
-                  <li>• Real-time demand forecasting</li>
+              <div className="bg-white rounded-lg shadow-lg p-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Manufacturing</h3>
+                <p className="text-gray-600 mb-4">Enhance production efficiency with predictive maintenance and quality control automation.</p>
+                <ul className="space-y-2 text-sm text-gray-700">
+                  <li>• Predictive maintenance</li>
+                  <li>• Quality control automation</li>
+                  <li>• Production optimization</li>
+                </ul>
+              </div>
+              
+              <div className="bg-white rounded-lg shadow-lg p-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Healthcare</h3>
+                <p className="text-gray-600 mb-4">Improve patient care with intelligent diagnostics and automated workflow management.</p>
+                <ul className="space-y-2 text-sm text-gray-700">
+                  <li>• Automated diagnostics</li>
+                  <li>• Patient flow optimization</li>
+                  <li>• Treatment recommendations</li>
+                </ul>
+              </div>
+              
+              <div className="bg-white rounded-lg shadow-lg p-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">E-commerce</h3>
+                <p className="text-gray-600 mb-4">Personalize customer experiences with real-time recommendation engines and dynamic pricing.</p>
+                <ul className="space-y-2 text-sm text-gray-700">
+                  <li>• Real-time recommendations</li>
+                  <li>• Dynamic pricing optimization</li>
+                  <li>• Inventory management</li>
                 </ul>
               </div>
             </div>
@@ -148,22 +210,22 @@ const RealTimeCognitiveAutomationPage: React.FC = () => {
         {/* CTA Section */}
         <section className="py-20 bg-indigo-600 text-white">
           <div className="container mx-auto px-6 text-center">
-            <h2 className="text-4xl font-bold mb-4">Ready to Automate Intelligently?</h2>
-            <p className="text-xl mb-8 text-indigo-100 max-w-2xl mx-auto">
-              Let's discuss how cognitive automation can transform your business processes and drive efficiency.
+            <h2 className="text-3xl font-bold mb-6">Ready to Transform Your Business?</h2>
+            <p className="text-xl mb-8 max-w-2xl mx-auto">
+              Join leading enterprises that have already transformed their operations with our real-time cognitive automation solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                to="/contact" 
-                className="bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                to="/contact"
+                className="inline-flex items-center justify-center px-8 py-4 bg-white text-indigo-600 font-bold rounded-lg hover:bg-gray-100 transition-colors"
               >
-                Get Started
+                Get Started Today
               </Link>
               <Link 
-                to="/case-studies" 
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
+                to="/demo"
+                className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-indigo-600 transition-colors"
               >
-                View Case Studies
+                Schedule a Demo
               </Link>
             </div>
           </div>
