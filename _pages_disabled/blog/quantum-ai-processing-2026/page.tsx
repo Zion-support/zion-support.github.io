@@ -1,5 +1,5 @@
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'Quantum AI Processing 2026: Revolutionary Computing Technology | Zion Tech Group',

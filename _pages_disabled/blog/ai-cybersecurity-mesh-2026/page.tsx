@@ -1,5 +1,5 @@
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'AI Cybersecurity Mesh Architecture 2026: Zero-Trust Security at Scale',

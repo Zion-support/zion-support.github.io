@@ -1,4 +1,4 @@
-// import React from 'react';
+import React from 'react';
 
 export const metadata = {
   title: 'AI-Powered Cybersecurity Mesh 2025 — Autonomous Threat Defense at Scale',

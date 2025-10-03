@@ -1,5 +1,5 @@
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'Logistics AI Transformation: $420M Savings, 96% On-Time Delivery | Zion Tech Group Case Study',

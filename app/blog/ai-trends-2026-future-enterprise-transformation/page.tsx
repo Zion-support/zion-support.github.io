@@ -1,5 +1,5 @@
-// import React from 'react';
-// Metadata handled by React Helmet
+import React from 'react';
+import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'AI Trends 2026: Future Enterprise Transformation with Quantum Intelligence',

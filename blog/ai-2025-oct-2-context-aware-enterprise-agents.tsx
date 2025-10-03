@@ -1,4 +1,4 @@
-// import React from 'react';
+import React from 'react';
 
 export const metadata = {
   title: 'Context-Aware Enterprise AI Agents — Revolutionary Memory Systems for 2025',

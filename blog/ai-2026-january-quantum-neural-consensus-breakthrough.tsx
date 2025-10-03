@@ -1,6 +1,6 @@
-// import React from 'react';
+import React from 'react';
 import { Metadata } from 'next';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'AI 2026: Quantum Neural Consensus Breakthrough - Revolutionary Multi-Agent Intelligence',

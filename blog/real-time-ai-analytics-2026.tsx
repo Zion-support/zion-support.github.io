@@ -1,5 +1,5 @@
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'Real-Time AI Analytics 2026: Instant Insights from Streaming Data',

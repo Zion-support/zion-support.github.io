@@ -1,5 +1,5 @@
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import Link from 'next/link';
 import { ArrowRight, Calendar, Clock, TrendingUp, Users, Zap } from 'lucide-react';
 
 export const metadata = {
@@ -388,7 +388,7 @@ export default function AIRevolutionaryBreakthrough2026() {
               Related Breakthrough Technologies
             </h2>
             <div className="grid md:grid-cols-3 gap-8">
-              <Link to="/blog/ai-quantum-computing-breakthrough-2026" className="group">
+              <Link href="/blog/ai-quantum-computing-breakthrough-2026" className="group">
                 <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all hover:scale-105">
                   <div className="p-8">
                     <div className="text-4xl mb-4">⚛️</div>
@@ -406,7 +406,7 @@ export default function AIRevolutionaryBreakthrough2026() {
                 </div>
               </Link>
               
-              <Link to="/blog/ai-autonomous-enterprise-2026" className="group">
+              <Link href="/blog/ai-autonomous-enterprise-2026" className="group">
                 <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all hover:scale-105">
                   <div className="p-8">
                     <div className="text-4xl mb-4">🏢</div>
@@ -424,7 +424,7 @@ export default function AIRevolutionaryBreakthrough2026() {
                 </div>
               </Link>
               
-              <Link to="/case-studies/ai-mega-transformation-success-2026" className="group">
+              <Link href="/case-studies/ai-mega-transformation-success-2026" className="group">
                 <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all hover:scale-105">
                   <div className="p-8">
                     <div className="text-4xl mb-4">🏆</div>

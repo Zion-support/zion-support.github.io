@@ -1,4 +1,4 @@
-// import React from 'react';
+import React from 'react';
 
 export const metadata = {
   title: 'Agentic Procurement & Supply Chain Revolution 2025 — 99.1% Forecast Accuracy, 82% Cost Reduction',

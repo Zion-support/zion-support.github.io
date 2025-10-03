@@ -1,5 +1,5 @@
-// import React from 'react';
-// Metadata handled by React Helmet
+import React from 'react';
+import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: '🔒 Federated Learning Breakthrough 2026: Privacy-First AI That Learns Without Sharing Data',

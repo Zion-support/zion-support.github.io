@@ -1,4 +1,4 @@
-// import React from 'react';
+import React from 'react';
 
 export const metadata = {
   title: 'Quantum-Enhanced AI Systems 2025 — Hybrid Classical-Quantum Intelligence',

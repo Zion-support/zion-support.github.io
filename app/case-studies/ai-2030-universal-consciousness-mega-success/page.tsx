@@ -1,5 +1,5 @@
-// import React from 'react';
-// Metadata handled by React Helmet
+import React from 'react';
+import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Case Study: AI 2030 Universal Consciousness Mega Success - $100B ROI Achievement',

@@ -1,4 +1,4 @@
-// import React from 'react';
+import React from 'react';
 
 export const metadata = {
   title: 'Sovereign AI Infrastructure 2025 — National AI Autonomy and Data Sovereignty Revolution',

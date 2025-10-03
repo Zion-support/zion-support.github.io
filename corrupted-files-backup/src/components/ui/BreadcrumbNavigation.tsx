@@ -1,5 +1,4 @@
- import: { Link, useLocation } from 'react-router-dom' import { Home } from 'lucide-react';
-import { motion } from 'framer-motion'  interface BreadcrumbItem {';
+ import: { Link, useLocation } from 'react-router-dom' import { ChevronRight, Home } from 'lucide-react' import { motion } from 'framer-motion'  interface BreadcrumbItem {';
 ;;
    label: string,;,
    path: string,;,

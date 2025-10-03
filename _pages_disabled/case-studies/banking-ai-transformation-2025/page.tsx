@@ -1,5 +1,5 @@
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'Banking AI Transformation: $250M ROI & 99.8% Fraud Detection | Zion Tech Group Success Story',

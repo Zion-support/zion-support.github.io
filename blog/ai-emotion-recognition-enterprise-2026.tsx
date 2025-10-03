@@ -1,5 +1,5 @@
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'AI Emotion Recognition Enterprise 2026: Transforming Customer Experience & Employee Well-being | Zion Tech Group',

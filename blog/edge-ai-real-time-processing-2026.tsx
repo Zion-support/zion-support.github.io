@@ -1,4 +1,4 @@
-// import React from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Smartphone, Zap, TrendingUp, Wifi, Clock, Target } from 'lucide-react';
 

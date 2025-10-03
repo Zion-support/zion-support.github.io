@@ -1,4 +1,4 @@
-// import React from 'react';
+import React from 'react';
 
 export const metadata = {
   title: 'AI Observability: Monitoring and Debugging LLM Applications in Production',

@@ -1,10 +1,10 @@
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 export default function AIProductRoadmapsThatShipPage() {
 	return (
 		<div className='min-h-screen'>
 			<nav className='mb-6'>
-				<Link to='/blog' className='text-blue-600 hover:underline'>
+				<Link href='/blog' className='text-blue-600 hover:underline'>
 					← Back to Blog
 				</Link>
 			</nav>
@@ -31,7 +31,7 @@ export default function AIProductRoadmapsThatShipPage() {
 				</ul>
 				<p>
 					Want a roadmap tailored to your product?{' '}
-					<Link to='/contact' className='text-blue-600 hover:underline'>Talk to us</Link>.
+					<Link href='/contact' className='text-blue-600 hover:underline'>Talk to us</Link>.
 				</p>
 			</article>
 		</div>

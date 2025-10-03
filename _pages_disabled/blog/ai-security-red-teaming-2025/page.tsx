@@ -1,5 +1,5 @@
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'AI Security Red Teaming 2025: Proactive Defense Against Prompt Injection & Model Attacks | Zion Tech Group',

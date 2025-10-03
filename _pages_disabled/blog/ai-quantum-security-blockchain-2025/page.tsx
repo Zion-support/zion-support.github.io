@@ -1,5 +1,5 @@
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'AI Quantum Security Blockchain 2025: Protecting $1T+ Enterprise Assets | Zion Tech Group',

@@ -1,4 +1,4 @@
-// import React from 'react';
+import React from 'react';
 
 export const metadata = {
   title: 'Privacy-Preserving AI: Enterprise Deployment Guide 2025',
