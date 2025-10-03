@@ -3,6 +3,8 @@
  * Comprehensive error handling with performance monitoring and user feedback
  */
 
+import React, { Component, ReactNode, ErrorInfo } from 'react';
+import { AlertTriangle } from 'lucide-react';
 
 interface Props {
   children: ReactNode;
@@ -18,6 +20,14 @@ interface State {
   errorId: string;
 }
 
+class EnhancedErrorBoundary extends Component<Props, State> {
+  constructor(props: Props) {
+    super(props);
+    this.state = {
+      hasError: false,
+      error: null,
+      errorInfo: null,
+      errorId: ''
     };
   }
 
@@ -34,26 +44,17 @@ interface State {
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     const { onError } = this.props;
-    const { errorId } = this.state;
 
     // Update state with error info
     this.setState({ errorInfo });
 
-      timestamp: new Date().toISOString(),
-      userAgent: navigator.userAgent,
-      url: window.location.href,
-      retryCount: this.retryCount
-    };
+    // Call custom error handler if provided
+    if (onError) {
+      onError(error, errorInfo);
+    }
 
-
-    // Send to analytics
-    analyticsUtils.trackEvent('error_boundary_caught', {
-      error_id: errorId,
-      error_message: error.message,
-      error_stack: error.stack?.substring(0, 500), // Truncate for analytics
-      component_stack: errorInfo.componentStack?.substring(0, 500) || '',
-      retry_count: this.retryCount
-    });
+    // Log error for debugging
+    console.error('Enhanced Error Boundary caught an error:', error, errorInfo);
 
     // Log security event if suspicious
     // if (securityMonitoring.detectSuspiciousActivity(errorDetails)) {
@@ -115,8 +116,8 @@ interface State {
   };
 
   render() {
-    const { hasError, error, errorId } = this.state;
-    const { children, fallback, showDetails } = this.props;
+    const { hasError } = this.state;
+    const { children, fallback } = this.props;
 
     if (hasError) {
       // Use custom fallback if provided
@@ -126,6 +127,32 @@ interface State {
 
       // Default error UI
       return (
+        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-red-50 to-orange-50">
+          <div className="max-w-md w-full mx-4">
+            <div className="bg-white rounded-2xl shadow-xl p-8 text-center">
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-red-100 mb-4">
+                <AlertTriangle className="w-8 h-8 text-red-600" />
+              </div>
+              <h1 className="text-2xl font-bold text-gray-900 mb-2">
+                Oops! Something went wrong
+              </h1>
+              <p className="text-gray-600 mb-6">
+                We're sorry for the inconvenience. Please try refreshing the page.
+              </p>
+              <div className="space-y-3">
+                <button
+                  onClick={() => window.location.reload()}
+                  className="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
+                >
+                  Refresh Page
+                </button>
+                <a
+                  href="/"
+                  className="block w-full border-2 border-red-600 text-red-600 hover:bg-red-50 font-semibold py-3 px-6 rounded-lg transition-colors"
+                >
+                  Go to Homepage
+                </a>
+              </div>
             </div>
           </div>
         </div>
