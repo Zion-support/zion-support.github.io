@@ -10,7 +10,7 @@ import {
   ArrowUp
 } from 'lucide-react';
 
-const Footer: React.FC = () => {
+const Footer: React.FC = React.memo(() => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -210,4 +210,4 @@ const Footer: React.FC = () => {
   );
 };
 
-export default Footer;
+export default Footer);

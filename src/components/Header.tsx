@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
 
-const Header: React.FC = () => {
+const Header: React.FC = React.memo(() => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -190,4 +190,4 @@ const Header: React.FC = () => {
   );
 };
 
-export default Header;
+export default Header);
