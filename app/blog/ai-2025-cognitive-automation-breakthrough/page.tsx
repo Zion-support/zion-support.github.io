@@ -268,14 +268,12 @@ export default function AI2025CognitiveAutomationBreakthrough() {
               <div className="text-left">
                 <a 
                   href="/contact"
-                  className="text-left"
-                >
+                  className="text-left">
                   Get Started Today
                 </a>
                 <a 
                   href="/services"
-                  className="text-left"
-                >
+                  className="text-left">
                   View Services
                 </a>
               </div>

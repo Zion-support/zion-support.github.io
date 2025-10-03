@@ -184,14 +184,12 @@ export default function AIAutonomousOperationsServices2026() {
               <div className="text-left">
                 <a 
                   href="/"
-                  className="text-left"
-                >
+                  className="text-left">
                   Start Your Transformation
                 </a>
                 <a 
                   href="/"
-                  className="text-left"
-                >
+                  className="text-left">
                   Learn More
                 </a>
               </div>

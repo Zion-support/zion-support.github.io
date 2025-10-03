@@ -63,14 +63,12 @@ export default function AIRevolutionaryBreakthrough2026() {
             <div className="text-left">
               <a 
                 href="#breakthrough-details"
-                className="text-left"
-              >
+                className="text-left">
                 Explore Breakthrough Details
               </a>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Schedule Implementation Call
               </a>
             </div>
@@ -363,14 +361,12 @@ export default function AIRevolutionaryBreakthrough2026() {
               <div className="text-left">
                 <a
                   href="tel:+13024640950"
-                  className="text-left"
-                >
+                  className="text-left">
                   📞 Call +1 302 464 0950
                 </a>
                 <a
                   href="/contact"
-                  className="text-left"
-                >
+                  className="text-left">
                   Schedule Implementation Consultation
                 </a>
               </div>

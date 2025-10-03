@@ -42,14 +42,12 @@ export default function QuantumEnhancedNeuralNetworksRevolution() {
             <div className="text-left">
               <Link 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Get Quantum Neural AI →
               </Link>
               <Link 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 View $75B Success Story →
               </Link>
             </div>
@@ -169,8 +167,7 @@ export default function QuantumEnhancedNeuralNetworksRevolution() {
             <div className="text-left">
               <Link 
                 href="/contact"
-                className="text-left"
-              >
+                className="text-left">
                 Implement Quantum Neural AI →
               </Link>
             </div>

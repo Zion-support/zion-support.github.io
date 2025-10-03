@@ -42,14 +42,12 @@ export default function NeuralConsciousnessFusionBreakthrough() {
             <div className="text-left">
               <Link 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Get Neural Consciousness AI →
               </Link>
               <Link 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 View $100B Success Story →
               </Link>
             </div>
@@ -169,8 +167,7 @@ export default function NeuralConsciousnessFusionBreakthrough() {
             <div className="text-left">
               <Link 
                 href="/contact"
-                className="text-left"
-              >
+                className="text-left">
                 Implement Neural Consciousness AI →
               </Link>
             </div>

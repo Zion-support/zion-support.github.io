@@ -161,14 +161,12 @@ export default function AICybersecurity2026() {
           <div className="text-left">
             <Link
               href="/contact"
-              className="text-left"
-            >
+              className="text-left">
               Get Security Assessment
             </Link>
             <Link
               href="/services/cybersecurity-consulting"
-              className="text-left"
-            >
+              className="text-left">
               View Security Services
             </Link>
           </div>

@@ -355,14 +355,12 @@ export default function AIQuantumNeuralNetworks2026() {
           <div className="text-left">
             <Link
               href="/services"
-              className="text-left"
-            >
+              className="text-left">
               Explore Quantum AI Services
             </Link>
             <a
               href="tel:+13024640950"
-              className="text-left"
-            >
+              className="text-left">
               Call +1 302 464 0950
             </a>
           </div>

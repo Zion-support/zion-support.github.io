@@ -41,14 +41,12 @@ export default function NeuralSuperintelligenceBreakthrough() {
             <div className="text-left">
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Get Started Today
               </a>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 View Success Stories
               </a>
             </div>
@@ -128,14 +126,12 @@ export default function NeuralSuperintelligenceBreakthrough() {
               <div className="text-left">
                 <a 
                   href="/"
-                  className="text-left"
-                >
+                  className="text-left">
                   Schedule Demo
                 </a>
                 <a 
                   href="/"
-                  className="text-left"
-                >
+                  className="text-left">
                   Read Complete Guide
                 </a>
               </div>

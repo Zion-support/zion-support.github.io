@@ -126,8 +126,7 @@ export default function AI2028NextGenerationAutonomousEnterprise() {
           </p>
           <Link 
             href="/"
-            className="text-left"
-          >
+            className="text-left">
             Schedule Your Transformation Consultation
           </Link>
         </div>
@@ -137,15 +136,13 @@ export default function AI2028NextGenerationAutonomousEnterprise() {
           <div className="text-left">
             <Link 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               <h5 className="text-left">AI 2027 Quantum Breakthrough</h5>"
               <p className="text-left">Discover our quantum AI revolution</p>"
             </Link>
             <Link 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               <h5 className="text-left">$1.2B Success Story</h5>"
               <p className="text-left">Real-world transformation results</p>"
             </Link>

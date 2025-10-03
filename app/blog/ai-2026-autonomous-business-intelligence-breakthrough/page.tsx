@@ -171,14 +171,12 @@ export default function AutonomousBusinessIntelligenceBreakthrough() {
           <div className="text-left">
             <Link
               href="/services/ai-autonomous-business-intelligence"
-              className="text-left"
-            >
+              className="text-left">
               Explore Our Solutions
             </Link>
             <a
               href="tel:+13024640950"
-              className="text-left"
-            >
+              className="text-left">
               Call +1 302 464 0950
             </a>
           </div>

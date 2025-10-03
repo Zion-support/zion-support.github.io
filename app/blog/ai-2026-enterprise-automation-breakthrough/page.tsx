@@ -16,8 +16,7 @@ export default function EnterpriseAutomationBreakthrough() {
         <div className="text-left">
           <Link 
             href="/"
-            className="text-left"
-          >
+            className="text-left">
             <ArrowLeft className="text-left" />
             Back to Home
           </Link>
@@ -249,14 +248,12 @@ export default function EnterpriseAutomationBreakthrough() {
             <div className="text-left">
               <Link 
                 href="/guides/ai-2026-implementation-roadmap"
-                className="text-left"
-              >
+                className="text-left">
                 Get Implementation Guide
               </Link>
               <Link 
                 href="/case-studies/fortune-500-ai-transformation-success"
-                className="text-left"
-              >
+                className="text-left">
                 View Success Stories
               </Link>
             </div>

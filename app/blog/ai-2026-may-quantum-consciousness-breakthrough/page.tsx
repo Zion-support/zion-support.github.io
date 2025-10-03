@@ -36,14 +36,12 @@ export default function AI2026MayQuantumConsciousnessBreakthrough() {
           <div className="text-left">
             <a 
               href="#breakthrough-details" "
-              className="text-left"
-            >
+              className="text-left">
               Explore Breakthrough →
             </a>
             <a 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               Get Started
             </a>
           </div>
@@ -137,14 +135,12 @@ export default function AI2026MayQuantumConsciousnessBreakthrough() {
           <div className="text-left">
             <a 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               Experience the Future
             </a>
             <a 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               Learn More
             </a>
           </div>

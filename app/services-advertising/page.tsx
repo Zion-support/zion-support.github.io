@@ -42,14 +42,12 @@ export default function ServicesAdvertisingPage() {
             <div className="text-left">
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Start Free Consultation
               </a>
               <a 
                 href="#services" "
-                className="text-left"
-              >
+                className="text-left">
                 View Our Services
               </a>
             </div>

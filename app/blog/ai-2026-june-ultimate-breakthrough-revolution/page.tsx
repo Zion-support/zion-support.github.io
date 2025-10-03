@@ -52,14 +52,12 @@ export default function June2026UltimateBreakthroughPage() {
           <div className="text-left">
             <a 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               Contact Us Today
             </a>
             <a 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               View $100B Success Story
             </a>
           </div>

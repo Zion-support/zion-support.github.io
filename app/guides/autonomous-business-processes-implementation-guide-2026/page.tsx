@@ -384,15 +384,13 @@ export default function ImplementationGuide() {
             <div className="text-left">
               <Link 
                 href="/contact"
-                className="text-left"
-              >
+                className="text-left">
                 Schedule Consultation
                 <ArrowLeft className="text-left" />
               </Link>
               <Link 
                 href="/blog/ai-powered-autonomous-business-processes-2026"
-                className="text-left"
-              >
+                className="text-left">
                 Read Full Article
                 <BookOpen className="text-left" />
               </Link>

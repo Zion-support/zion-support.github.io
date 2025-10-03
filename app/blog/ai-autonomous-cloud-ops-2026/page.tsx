@@ -185,14 +185,12 @@ export default function AIAutonomousCloudOps2026() {
             <div className="text-left">
               <Link
                 href="/services/ai-autonomous-cloud-ops"
-                className="text-left"
-              >
+                className="text-left">
                 Explore Our Services
               </Link>
               <a
                 href="tel:+13024640950"
-                className="text-left"
-              >
+                className="text-left">
                 Call +1 302 464 0950
               </a>
             </div>

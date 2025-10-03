@@ -41,14 +41,12 @@ export default function EnterprisePage() {
             <div className="text-left">
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Schedule Enterprise Demo
               </a>
               <a 
                 href="#solutions" "
-                className="text-left"
-              >
+                className="text-left">
                 View Solutions
               </a>
             </div>

@@ -270,14 +270,12 @@ export default function QuantumAIComputingBreakthrough2026() {
             <div className="text-left">
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Start Quantum Journey
               </a>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 View Quantum Success Stories
               </a>
             </div>

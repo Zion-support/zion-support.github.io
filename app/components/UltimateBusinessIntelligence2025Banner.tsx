@@ -146,14 +146,12 @@ const UltimateBusinessIntelligence2025Banner = () => {
             <div className="text-left">
               <Link
                 href={currentContent.url}
-                className="text-left"
-              >
+                className="text-left">
                 Read {currentContent.type}
               </Link>
               <Link
                 href="/contact"
-                className="text-left"
-              >
+                className="text-left">
                 Get Consultation
               </Link>
             </div>

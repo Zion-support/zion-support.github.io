@@ -335,8 +335,7 @@ export default function AIBusinessIntelligence2025() {
             </ul>
             <Link
               href="/contact"
-              className="text-left"
-            >
+              className="text-left">
               Get Started
             </Link>
           </div>
@@ -384,8 +383,7 @@ export default function AIBusinessIntelligence2025() {
             </ul>
             <Link
               href="/contact"
-              className="text-left"
-            >
+              className="text-left">
               Get Started
             </Link>
           </div>
@@ -428,8 +426,7 @@ export default function AIBusinessIntelligence2025() {
             </ul>
             <Link
               href="/contact"
-              className="text-left"
-            >
+              className="text-left">
               Contact Sales
             </Link>
           </div>
@@ -538,8 +535,7 @@ export default function AIBusinessIntelligence2025() {
           <div className="text-left">
             <Link
               href="/contact"
-              className="text-left"
-            >
+              className="text-left">
               Get Your Custom ROI Analysis
             </Link>
           </div>
@@ -554,14 +550,12 @@ export default function AIBusinessIntelligence2025() {
         <div className="text-left">
           <Link
             href="/contact"
-            className="text-left"
-          >
+            className="text-left">
             Get Free Consultation
           </Link>
           <a
             href="tel:+13024640950"
-            className="text-left"
-          >
+            className="text-left">
             Call +1 302 464 0950
           </a>
         </div>

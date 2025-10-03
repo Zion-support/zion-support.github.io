@@ -421,14 +421,12 @@ export default function AIAutomation2026CompleteGuide() {
             <div className="text-left">
               <Link 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 View Automation Success Stories
               </Link>
               <Link 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Start Your Automation Journey
               </Link>
             </div>

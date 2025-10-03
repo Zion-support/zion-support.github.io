@@ -59,14 +59,12 @@ export default function Fortune500AITransformationCaseStudy() {
             <div className="text-left">
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Achieve Similar Results
               </a>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Read Implementation Guide
               </a>
             </div>
@@ -236,14 +234,12 @@ export default function Fortune500AITransformationCaseStudy() {
               <div className="text-left">
                 <a 
                   href="/"
-                  className="text-left"
-                >
+                  className="text-left">
                   Start Your Transformation
                 </a>
                 <a 
                   href="/"
-                  className="text-left"
-                >
+                  className="text-left">
                   Learn About Neural Superintelligence
                 </a>
               </div>

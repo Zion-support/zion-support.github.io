@@ -166,14 +166,12 @@ export default function AI2026HyperAutomationRevolution() {
           <div className="text-left">
             <Link 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               Start Transformation
             </Link>
             <Link 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               View Success Stories
             </Link>
           </div>

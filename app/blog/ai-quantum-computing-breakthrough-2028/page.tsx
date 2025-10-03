@@ -229,14 +229,12 @@ export default function AIQuantumComputingBreakthrough2028() {
           <div className="text-left">
             <Link 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               Get Quantum AI Consultation
             </Link>
             <Link 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               Explore Quantum Services
             </Link>
           </div>

@@ -178,14 +178,12 @@ export default function AI2026JanuaryQuantumConsciousnessBreakthrough() {
               <div className="text-left">
                 <a 
                   href="/"
-                  className="text-left"
-                >
+                  className="text-left">
                   Explore Consciousness AI
                 </a>
                 <a 
                   href="/"
-                  className="text-left"
-                >
+                  className="text-left">
                   View Breakthrough Results
                 </a>
               </div>

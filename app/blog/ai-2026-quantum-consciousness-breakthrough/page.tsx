@@ -341,14 +341,12 @@ export default function QuantumConsciousnessBreakthrough2026() {
             <div className="text-left">
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Explore Conscious AI Solutions
               </a>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Learn About Our Research
               </a>
             </div>

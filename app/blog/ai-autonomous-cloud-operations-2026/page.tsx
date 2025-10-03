@@ -450,14 +450,12 @@ const autonomousConfig = {
           <div className="text-left">
             <a
               href="/services/ai-autonomous-operations"
-              className="text-left"
-            >
+              className="text-left">
               Explore Our Services
             </a>
             <a
               href="/contact"
-              className="text-left"
-            >
+              className="text-left">
               Get Free Consultation
             </a>
           </div>

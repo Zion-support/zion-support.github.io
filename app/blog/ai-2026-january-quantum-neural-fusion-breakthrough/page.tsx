@@ -170,20 +170,17 @@ export default function QuantumNeuralFusionBreakthroughPage() {
           <div className="text-left">
             <a 
               href="/contact"
-              className="text-left"
-            >
+              className="text-left">
               Get Started Today
             </a>
             <a 
               href="/case-studies/ai-2026-january-quantum-neural-fusion-75-billion-success"
-              className="text-left"
-            >
+              className="text-left">
               View Success Story
             </a>
             <a 
               href="/blog"
-              className="text-left"
-            >
+              className="text-left">
               More Articles
             </a>
           </div>

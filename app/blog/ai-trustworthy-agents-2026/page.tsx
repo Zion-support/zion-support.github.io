@@ -60,8 +60,7 @@ export default function Page() {
         <section className="text-left">
           <a
             href="/contact"
-            className="text-left"
-          >
+            className="text-left">
             Schedule a Consultation
           </a>
         </section>

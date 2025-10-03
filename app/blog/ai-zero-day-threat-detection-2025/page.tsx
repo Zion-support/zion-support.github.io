@@ -287,14 +287,12 @@ export default function AIZeroDayThreatDetection() {
           <div className="text-left">
             <Link
               href="/services/ai-cybersecurity"
-              className="text-left"
-            >
+              className="text-left">
               Explore Security Solutions
             </Link>
             <a
               href="tel:+13024640950"
-              className="text-left"
-            >
+              className="text-left">
               Call +1 302 464 0950
             </a>
           </div>

@@ -219,14 +219,12 @@ export default function AINextGenEnterpriseAutomation2026() {
           <div className="text-left">
             <Link 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               Start Your Transformation
             </Link>
             <Link 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               View Success Stories
             </Link>
           </div>
@@ -240,15 +238,13 @@ export default function AINextGenEnterpriseAutomation2026() {
             <div className="text-left">
               <Link 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 <ArrowRight className="text-left" />
                 Back to Blog
               </Link>
               <Link 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Explore Our Services
                 <ArrowRight className="text-left" />
               </Link>

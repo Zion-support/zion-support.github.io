@@ -37,14 +37,12 @@ export default function January2026UltimateBreakthroughRevolution() {
             <div className="text-left">
               <Link 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Transform Your Business Today
               </Link>
               <Link 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 View $500B Success Story →
               </Link>
             </div>
@@ -158,8 +156,7 @@ export default function January2026UltimateBreakthroughRevolution() {
             <div className="text-left">
               <Link
                 href="/contact"
-                className="text-left"
-              >
+                className="text-left">
                 Transform Your Enterprise Today
               </Link>
             </div>

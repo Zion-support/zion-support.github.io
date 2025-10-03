@@ -428,14 +428,12 @@ export default function AIGovernance2026EnterpriseSafety() {
             <div className="text-left">
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Get Governance Assessment
               </a>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Explore Governance Services
               </a>
             </div>

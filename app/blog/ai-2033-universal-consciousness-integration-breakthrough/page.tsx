@@ -275,14 +275,12 @@ export default function AI2033UniversalConsciousnessIntegration() {
             <div className="text-left">
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Schedule Universal Demo
               </a>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 View $1 Quadrillion Success
               </a>
             </div>

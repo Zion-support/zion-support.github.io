@@ -245,14 +245,12 @@ export default function AI2026MegaBreakthroughs() {
         <div className="text-left">
           <Link
             href="/case-studies/ai-2026-mega-transformation-success"
-            className="text-left"
-          >
+            className="text-left">
             View Success Stories
           </Link>
           <a
             href="tel:+13024640950"
-            className="text-left"
-          >
+            className="text-left">
             Call +1 302 464 0950
           </a>
         </div>

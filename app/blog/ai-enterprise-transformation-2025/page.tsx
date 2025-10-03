@@ -277,14 +277,12 @@ const TransformationStack = {
 						<div className="text-left">
 							<a 
 								href="/"
-								className="text-left"
-							>
+								className="text-left">
 								Get Transformation Assessment
 							</a>
 							<a 
 								href="/"
-								className="text-left"
-							>
+								className="text-left">
 								Explore AI Services
 							</a>
 						</div>

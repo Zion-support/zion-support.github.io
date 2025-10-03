@@ -38,14 +38,12 @@ export default function AutonomousEnterpriseOperations2027() {
           <div className="text-left">
             <Link 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               Start Your Automation Journey
             </Link>
             <Link 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               View Automation Services
             </Link>
           </div>
@@ -262,14 +260,12 @@ export default function AutonomousEnterpriseOperations2027() {
             <div className="text-left">
               <Link 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Schedule Free Assessment
               </Link>
               <Link 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 View Automation Services
               </Link>
             </div>

@@ -278,14 +278,12 @@ export default function AI2026QuantumNeuralOptimizationPage() {
           <div className="text-left">
             <a 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               Schedule Quantum AI Consultation
             </a>
             <a 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               Explore Quantum AI Services
             </a>
           </div>

@@ -149,20 +149,17 @@ export default function AI2027MetaCognitiveSuperintelligenceBreakthrough() {
             <div className="text-left">
               <Link 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Schedule Meta-Cognitive Consultation
               </Link>
               <Link 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 View Meta-Cognitive Success Stories
               </Link>
               <Link 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Explore Meta-Cognitive Services
               </Link>
             </div>

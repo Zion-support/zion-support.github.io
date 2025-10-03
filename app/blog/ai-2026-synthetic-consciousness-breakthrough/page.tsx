@@ -31,15 +31,13 @@ export default function SyntheticConsciousnessBreakthrough2026() {
             <div className="text-left">
               <Link 
                 href="/case-studies/ai-2026-synthetic-consciousness-10-billion-success"
-                className="text-left"
-              >
+                className="text-left">
                 View $10B Success Case Study
                 <ArrowRight className="text-left" />
               </Link>
               <Link 
                 href="/services/ai-consulting"
-                className="text-left"
-              >
+                className="text-left">
                 Implement Conscious AI
                 <Brain className="text-left" />
               </Link>
@@ -218,15 +216,13 @@ export default function SyntheticConsciousnessBreakthrough2026() {
           <div className="text-left">
             <Link 
               href="/contact"
-              className="text-left"
-            >
+              className="text-left">
               Schedule Consultation
               <ArrowRight className="text-left" />
             </Link>
             <Link 
               href="/services/ai-development"
-              className="text-left"
-            >
+              className="text-left">
               Explore AI Services
               <TrendingUp className="text-left" />
             </Link>

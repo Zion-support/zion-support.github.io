@@ -214,14 +214,12 @@ export default function RevolutionaryAIBreakthroughJanuary2026() {
             <div className="text-left">
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Schedule Consultation
               </a>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 View Case Studies
               </a>
             </div>

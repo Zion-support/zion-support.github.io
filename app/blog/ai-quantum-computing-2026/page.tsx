@@ -111,8 +111,7 @@ export default function AIQuantumComputing2026() {
             </p>
             <a 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               Explore Quantum-AI Services
             </a>
           </div>

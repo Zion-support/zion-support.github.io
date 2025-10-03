@@ -208,14 +208,12 @@ export default function AIAutonomousBusinessIntelligence2026() {
           <div className="text-left">
             <Link
               href="/services/autonomous-business-intelligence"
-              className="text-left"
-            >
+              className="text-left">
               Explore Autonomous Solutions
             </Link>
             <a
               href="tel:+13024640950"
-              className="text-left"
-            >
+              className="text-left">
               Call +1 302 464 0950
             </a>
           </div>

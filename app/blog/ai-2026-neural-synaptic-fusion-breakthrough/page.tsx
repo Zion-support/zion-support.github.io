@@ -52,14 +52,12 @@ export default function NeuralSynapticFusionBreakthrough2026() {
             <div className="text-left">
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 View $847B Success Story
               </a>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Explore AI Services
               </a>
             </div>
@@ -226,20 +224,17 @@ export default function NeuralSynapticFusionBreakthrough2026() {
             <div className="text-left">
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Get Started Today
               </a>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 View Success Story
               </a>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Explore Services
               </a>
             </div>

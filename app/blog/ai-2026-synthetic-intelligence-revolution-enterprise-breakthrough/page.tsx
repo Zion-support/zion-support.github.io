@@ -37,20 +37,17 @@ export default function SyntheticIntelligenceRevolutionPage() {
             <div className="text-left">
               <a 
                 href="#content" "
-                className="text-left"
-              >
+                className="text-left">
                 Read Full Article
               </a>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 View $50B Success Story →
               </a>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Get Started Today
               </a>
             </div>
@@ -167,14 +164,12 @@ export default function SyntheticIntelligenceRevolutionPage() {
               <div className="text-left">
                 <a 
                   href="/"
-                  className="text-left"
-                >
+                  className="text-left">
                   Contact Our AI Specialists
                 </a>
                 <a 
                   href="/"
-                  className="text-left"
-                >
+                  className="text-left">
                   View Success Stories
                 </a>
               </div>

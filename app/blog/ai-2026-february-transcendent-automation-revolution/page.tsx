@@ -206,20 +206,17 @@ export default function February2026TranscendentAutomationRevolutionPage() {
             <div className="text-left">
               <Link
                 href="/contact"
-                className="text-left"
-              >
+                className="text-left">
                 Get Started Today
               </Link>
               <Link
                 href="/case-studies/ai-2026-february-transcendent-automation-1-trillion-success"
-                className="text-left"
-              >
+                className="text-left">
                 View $1 Trillion Success →
               </Link>
               <Link
                 href="/services/transcendent-automation"
-                className="text-left"
-              >
+                className="text-left">
                 Learn More
               </Link>
             </div>

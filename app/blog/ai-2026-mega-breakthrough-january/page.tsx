@@ -135,14 +135,12 @@ export default function AI2026MegaBreakthroughPage() {
                 <div className="text-left">
                   <a 
                     href="/"
-                    className="text-left"
-                  >
+                    className="text-left">
                     Get Free Assessment
                   </a>
                   <a 
                     href="/"
-                    className="text-left"
-                  >
+                    className="text-left">
                     View Success Stories
                   </a>
                 </div>

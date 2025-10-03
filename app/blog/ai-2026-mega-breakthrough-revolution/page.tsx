@@ -41,14 +41,12 @@ export default function AI2026MegaBreakthroughRevolution() {
             <div className="text-left">
               <a 
                 href="#revolutionary-breakthroughs" "
-                className="text-left"
-              >
+                className="text-left">
                 Explore Revolutionary Content →
               </a>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Get Implementation Guide
               </a>
             </div>
@@ -90,8 +88,7 @@ export default function AI2026MegaBreakthroughRevolution() {
               </ul>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Learn More →
               </a>
             </div>
@@ -119,8 +116,7 @@ export default function AI2026MegaBreakthroughRevolution() {
               </ul>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Learn More →
               </a>
             </div>
@@ -148,8 +144,7 @@ export default function AI2026MegaBreakthroughRevolution() {
               </ul>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Learn More →
               </a>
             </div>
@@ -195,14 +190,12 @@ export default function AI2026MegaBreakthroughRevolution() {
             <div className="text-left">
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Get Free Assessment
               </a>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 View Success Stories
               </a>
             </div>
@@ -250,14 +243,12 @@ export default function AI2026MegaBreakthroughRevolution() {
           <div className="text-left">
             <a 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               Schedule Consultation
             </a>
             <a 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               Explore More Content
             </a>
           </div>

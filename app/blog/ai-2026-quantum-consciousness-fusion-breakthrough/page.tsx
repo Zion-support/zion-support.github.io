@@ -44,14 +44,12 @@ export default function AI2026QuantumConsciousnessFusionBreakthrough() {
             <div className="text-left">
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Get Free Consultation
               </a>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 View $3B Success Story →
               </a>
             </div>
@@ -173,8 +171,7 @@ export default function AI2026QuantumConsciousnessFusionBreakthrough() {
             
             <a 
               href="/case-studies/fortune-500-quantum-consciousness-mega-success"
-              className="text-left"
-            >
+              className="text-left">
               Read Full Case Study →
             </a>
           </div>
@@ -234,14 +231,12 @@ export default function AI2026QuantumConsciousnessFusionBreakthrough() {
             <div className="text-left">
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Get Free Consultation
               </a>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 View $3B Success Story →
               </a>
             </div>

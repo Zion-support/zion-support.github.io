@@ -45,14 +45,12 @@ export default function AI2027UniversalConsciousnessRevolution() {
             <div className="text-left">
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Start Your Revolution
               </a>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 View $500B Success Story →
               </a>
             </div>
@@ -214,14 +212,12 @@ export default function AI2027UniversalConsciousnessRevolution() {
               <div className="text-left">
                 <a 
                   href="/"
-                  className="text-left"
-                >
+                  className="text-left">
                   Start Your Universal Revolution
                 </a>
                 <a 
                   href="/"
-                  className="text-left"
-                >
+                  className="text-left">
                   View Success Stories
                 </a>
               </div>

@@ -192,14 +192,12 @@ export default function UltimateNeuralFusionBreakthrough() {
               <div className="text-left">
                 <a 
                   href="/"
-                  className="text-left"
-                >
+                  className="text-left">
                   Implement Neural Fusion →
                 </a>
                 <a 
                   href="/"
-                  className="text-left"
-                >
+                  className="text-left">
                   View $100B Success Story
                 </a>
               </div>

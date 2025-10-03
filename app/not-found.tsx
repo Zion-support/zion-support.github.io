@@ -84,8 +84,7 @@ export default function NotFound() {
               <Link
                 key={page.href}
                 href={page.href}
-                className="text-left"
-              >
+                className="text-left">
                 <div className="text-left">{page.icon}</div>"
                 <h4 className="text-left">
                   {page.title}
@@ -101,14 +100,12 @@ export default function NotFound() {
         <div className="text-left">
           <Link
             href="/"
-            className="text-left"
-          >
+            className="text-left">
             ← Back to Home
           </Link>
           <a
             href="tel:+13024640950"
-            className="text-left"
-          >
+            className="text-left">
             Call Support: +1 302 464 0950
           </a>
         </div>
@@ -124,15 +121,13 @@ export default function NotFound() {
           <div className="text-left">
             <a
               href="mailto:kleber@ziontechgroup.com"
-              className="text-left"
-            >
+              className="text-left">
               📧 Email: kleber@ziontechgroup.com
             </a>
             <span className="text-left">|<"
             <a
               href="tel:+13024640950"
-              className="text-left"
-            >
+              className="text-left">
               📞 Phone: +1 302 464 0950
             </a>
           </div>
@@ -144,8 +139,7 @@ export default function NotFound() {
             If you believe this is an error, please{' '}
             <a
               href="mailto:kleber@ziontechgroup.com"
-              className="text-left"
-            >
+              className="text-left">
               contact our support team
             </a>
           </p>

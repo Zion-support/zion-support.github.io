@@ -109,14 +109,12 @@ export default function AI2026AprilMegaBreakthroughSolutions() {
             <div className="text-left">
               <Link 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Get Started Today
               </Link>
               <Link 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 View Success Stories
               </Link>
             </div>
@@ -159,8 +157,7 @@ export default function AI2026AprilMegaBreakthroughSolutions() {
             
             <Link 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               Start Transformation
             </Link>
           </div>
@@ -210,8 +207,7 @@ export default function AI2026AprilMegaBreakthroughSolutions() {
               
               <Link 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Choose Enterprise
               </Link>
             </div>
@@ -260,8 +256,7 @@ export default function AI2026AprilMegaBreakthroughSolutions() {
               
               <Link 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Choose Advanced
               </Link>
             </div>
@@ -304,8 +299,7 @@ export default function AI2026AprilMegaBreakthroughSolutions() {
               
               <Link 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Choose Ultimate
               </Link>
             </div>
@@ -370,14 +364,12 @@ export default function AI2026AprilMegaBreakthroughSolutions() {
           <div className="text-left">
             <Link 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               Start Your Transformation
             </Link>
             <Link 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               View Success Stories
             </Link>
           </div>

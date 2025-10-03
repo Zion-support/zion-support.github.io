@@ -258,14 +258,12 @@ export default function AI2026AutonomousEnterpriseRevolution() {
             <div className="text-left">
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Start Your Autonomous Journey
               </a>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 View Success Stories →
               </a>
             </div>

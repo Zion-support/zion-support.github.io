@@ -399,15 +399,13 @@ export default function AutonomousBusinessProcessesBlog() {
               <div className="text-left">
                 <Link 
                   href="/contact"
-                  className="text-left"
-                >
+                  className="text-left">
                   Schedule Consultation
                   <ArrowLeft className="text-left" />
                 </Link>
                 <Link 
                   href="/guides/autonomous-business-processes-implementation-guide-2026"
-                  className="text-left"
-                >
+                  className="text-left">
                   Get Implementation Guide
                   <BookOpen className="text-left" />
                 </Link>

@@ -39,14 +39,12 @@ export default function NextGenAutonomousIntelligenceRevolutionPage() {
             <div className="text-left">
               <Link 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 View $5.2B Success Story →
               </Link>
               <Link 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Get Started Today
               </Link>
             </div>
@@ -313,14 +311,12 @@ export default function NextGenAutonomousIntelligenceRevolutionPage() {
               <div className="text-left">
                 <Link 
                   href="/"
-                  className="text-left"
-                >
+                  className="text-left">
                   Start Your Transformation
                 </Link>
                 <Link 
                   href="/"
-                  className="text-left"
-                >
+                  className="text-left">
                   View Success Story
                 </Link>
               </div>

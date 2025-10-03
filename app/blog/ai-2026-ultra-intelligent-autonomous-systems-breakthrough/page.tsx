@@ -37,14 +37,12 @@ export default function UltraIntelligentAutonomousSystemsPage() {
             <div className="text-left">
               <Link 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 View $15.2B Success Story →
               </Link>
               <Link 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Get Started Today
               </Link>
             </div>
@@ -219,14 +217,12 @@ export default function UltraIntelligentAutonomousSystemsPage() {
             <div className="text-left">
               <Link 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Schedule Consultation
               </Link>
               <Link 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 View Success Story
               </Link>
             </div>
@@ -244,14 +240,12 @@ export default function UltraIntelligentAutonomousSystemsPage() {
           <div className="text-left">
             <Link 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               Get Started Today
             </Link>
             <a 
               href="tel:+13024640950" "
-              className="text-left"
-            >
+              className="text-left">
               Call +1 302 464 0950
             </a>
           </div>

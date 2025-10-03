@@ -51,8 +51,7 @@ export default function Page() {
         <section className="text-left">
           <a
             href="/contact"
-            className="text-left"
-          >
+            className="text-left">
             Talk to Security Experts
           </a>
         </section>

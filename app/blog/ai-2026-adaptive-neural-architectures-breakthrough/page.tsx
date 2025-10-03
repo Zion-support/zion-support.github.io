@@ -37,20 +37,17 @@ export default function AdaptiveNeuralArchitecturesPage() {
             <div className="text-left">
               <a 
                 href="#content" "
-                className="text-left"
-              >
+                className="text-left">
                 Read Full Article
               </a>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 View $25B Success Story →
               </a>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Start Your Evolution
               </a>
             </div>
@@ -183,14 +180,12 @@ export default function AdaptiveNeuralArchitecturesPage() {
               <div className="text-left">
                 <a 
                   href="/"
-                  className="text-left"
-                >
+                  className="text-left">
                   Contact Our AI Specialists
                 </a>
                 <a 
                   href="/"
-                  className="text-left"
-                >
+                  className="text-left">
                   View Success Stories
                 </a>
               </div>

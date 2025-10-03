@@ -135,8 +135,7 @@ export default function AutonomousAISystems2026() {
             </p>
             <a 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               Explore Autonomous AI Solutions
             </a>
           </div>

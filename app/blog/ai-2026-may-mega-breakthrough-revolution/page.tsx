@@ -37,14 +37,12 @@ export default function AI2026MayMegaBreakthroughRevolution() {
           <div className="text-left">
             <a 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               Get Your Free Consultation
             </a>
             <a 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               View $10B Success Story →
             </a>
           </div>
@@ -211,14 +209,12 @@ export default function AI2026MayMegaBreakthroughRevolution() {
               <div className="text-left">
                 <a 
                   href="/"
-                  className="text-left"
-                >
+                  className="text-left">
                   Get Your Free Consultation
                 </a>
                 <a 
                   href="/"
-                  className="text-left"
-                >
+                  className="text-left">
                   View Success Stories →
                 </a>
               </div>

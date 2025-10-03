@@ -131,8 +131,7 @@ export default function AIEnterpriseTransformation2026() {
             </p>
             <a 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               Begin AI Transformation
             </a>
           </div>

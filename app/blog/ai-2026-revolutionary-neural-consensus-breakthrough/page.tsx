@@ -44,14 +44,12 @@ export default function AI2026RevolutionaryNeuralConsensusBreakthrough() {
             <div className="text-left">
               <a 
                 href="#breakthrough-details" "
-                className="text-left"
-              >
+                className="text-left">
                 Discover Breakthrough
               </a>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 View $500B Success Story →
               </a>
             </div>
@@ -303,14 +301,12 @@ export default function AI2026RevolutionaryNeuralConsensusBreakthrough() {
           <div className="text-left">
             <a 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               Get Started Today
             </a>
             <a 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               View Success Story
             </a>
           </div>

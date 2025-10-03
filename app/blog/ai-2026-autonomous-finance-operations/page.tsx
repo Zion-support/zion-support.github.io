@@ -243,14 +243,12 @@ export default function AI2026AutonomousFinanceOperations() {
           <div className="text-left">
             <Link
               href="/services/ai-finance-automation"
-              className="text-left"
-            >
+              className="text-left">
               Explore Finance AI Services
             </Link>
             <a
               href="tel:+13024640950"
-              className="text-left"
-            >
+              className="text-left">
               Call +1 302 464 0950
             </a>
           </div>

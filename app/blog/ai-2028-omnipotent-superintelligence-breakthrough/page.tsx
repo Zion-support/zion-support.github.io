@@ -368,14 +368,12 @@ export default function AI2028OmnipotentSuperintelligenceBreakthrough() {
           <div className="text-left">
             <Link 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               Schedule Universal Consultation
             </Link>
             <Link 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               View Universal Success Story
             </Link>
           </div>

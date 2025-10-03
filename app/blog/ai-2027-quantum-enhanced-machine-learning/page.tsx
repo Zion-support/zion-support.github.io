@@ -241,14 +241,12 @@ export default function AI2027QuantumEnhancedMachineLearning() {
           <div className="text-left">
             <Link
               href="/services/ai-quantum-computing"
-              className="text-left"
-            >
+              className="text-left">
               Explore Quantum AI Services
             </Link>
             <a
               href="tel:+13024640950"
-              className="text-left"
-            >
+              className="text-left">
               Call +1 302 464 0950
             </a>
           </div>

@@ -331,14 +331,12 @@ export default function SustainableAIGreenComputing() {
           <div className="text-left">
             <Link
               href="/services/sustainable-ai"
-              className="text-left"
-            >
+              className="text-left">
               Explore Green Solutions
             </Link>
             <a
               href="tel:+13024640950"
-              className="text-left"
-            >
+              className="text-left">
               Call +1 302 464 0950
             </a>
           </div>

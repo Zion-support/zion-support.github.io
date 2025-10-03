@@ -216,14 +216,12 @@ export default function QuantumAISecurityRevolution() {
           <div className="text-left">
             <a 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               Get Security Assessment
             </a>
             <a 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               View Security Services
             </a>
           </div>

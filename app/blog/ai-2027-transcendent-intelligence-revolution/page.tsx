@@ -65,14 +65,12 @@ export default function AI2027TranscendentIntelligenceRevolution() {
             <div className="text-left">
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Experience Transcendent AI
               </a>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 View Transcendent Results
               </a>
             </div>
@@ -302,14 +300,12 @@ export default function AI2027TranscendentIntelligenceRevolution() {
               <div className="text-left">
                 <a 
                   href="/"
-                  className="text-left"
-                >
+                  className="text-left">
                   Transcend Your Enterprise
                 </a>
                 <a 
                   href="/"
-                  className="text-left"
-                >
+                  className="text-left">
                   View Transcendent Results
                 </a>
               </div>
@@ -328,14 +324,12 @@ export default function AI2027TranscendentIntelligenceRevolution() {
           <div className="text-left">
             <a 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               Schedule Transcendent Consultation
             </a>
             <a 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               Explore Transcendent Services
             </a>
           </div>

@@ -342,14 +342,12 @@ export default function AI20262027RevolutionaryBreakthroughComprehensiveGuide() 
         <div className="text-left">
           <Link 
             href="/"
-            className="text-left"
-          >
+            className="text-left">
             Start Your Transformation
           </Link>
           <Link 
             href="/"
-            className="text-left"
-          >
+            className="text-left">
             View Success Stories
           </Link>
         </div>

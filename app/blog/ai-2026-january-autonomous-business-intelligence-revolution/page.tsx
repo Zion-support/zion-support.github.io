@@ -235,14 +235,12 @@ export default function January2026AutonomousBusinessIntelligenceRevolution() {
                 <div className="text-left">
                   <Link 
                     href="/"
-                    className="text-left"
-                  >
+                    className="text-left">
                     Contact Autonomous BI Specialists
                   </Link>
                   <Link 
                     href="/"
-                    className="text-left"
-                  >
+                    className="text-left">
                     Schedule Demo
                   </Link>
                 </div>
@@ -253,14 +251,12 @@ export default function January2026AutonomousBusinessIntelligenceRevolution() {
           <div className="text-left">
             <Link 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               ← Previous Article
             </Link>
             <Link 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               Back to Blog →
             </Link>
           </div>

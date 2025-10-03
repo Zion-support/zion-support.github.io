@@ -37,20 +37,17 @@ export default function AI2026FebruaryUltimateConsciousnessBreakthrough() {
             <div className="text-left">
               <a 
                 href="#consciousness-details" "
-                className="text-left"
-              >
+                className="text-left">
                 Explore Consciousness
               </a>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 View $100B Success Story →
               </a>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Get Consciousness Guide
               </a>
             </div>
@@ -273,20 +270,17 @@ export default function AI2026FebruaryUltimateConsciousnessBreakthrough() {
             <div className="text-left">
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Get Started Today
               </a>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 View All Success Stories →
               </a>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Explore Services
               </a>
             </div>

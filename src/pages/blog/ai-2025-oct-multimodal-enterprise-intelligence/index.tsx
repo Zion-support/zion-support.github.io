@@ -776,7 +776,7 @@ const MultimodalEnterpriseIntelligence: () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 to="/contact"
-  className="bg-white text-purple-600 hover:bg-zion-slate-light px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105 inline-flex items-center justify-center gap-2
+  className="bg-white text-purple-600 hover:bg-zion-slate-light px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105 inline-flex items-center justify-center gap-2"
                 >"
                   <TrendingUp className="w-5 h-5" />>
                   <TrendingUp className="w-5 h-5" />
@@ -797,7 +797,7 @@ const MultimodalEnterpriseIntelligence: () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 to="/contact"
-  className="bg-white text-purple-600 hover:bg-zion-slate-light px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105 inline-flex items-center justify-center gap-2
+  className="bg-white text-purple-600 hover:bg-zion-slate-light px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105 inline-flex items-center justify-center gap-2"
                 >"
                   <TrendingUp className="w-5 h-5" />>
                   <TrendingUp className="w-5 h-5" />

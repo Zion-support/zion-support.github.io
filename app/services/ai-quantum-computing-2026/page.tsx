@@ -135,8 +135,7 @@ export default function AIQuantumComputingServices2026() {
                   
                   <Link 
                     href="/contact"
-                    className="text-left"
-                  >
+                    className="text-left">
                     Get Quantum Consultation
                     <ArrowRight className="text-left" />
                   </Link>
@@ -240,14 +239,12 @@ export default function AIQuantumComputingServices2026() {
               <div className="text-left">
                 <a 
                   href="/"
-                  className="text-left"
-                >
+                  className="text-left">
                   Get Started Today
                 </a>
                 <a 
                   href="/"
-                  className="text-left"
-                >
+                  className="text-left">
                   Learn More
                 </a>
               </div>

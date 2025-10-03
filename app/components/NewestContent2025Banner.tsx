@@ -237,15 +237,13 @@ const NewestContent2025Banner = () => {
               <div className="text-left">
                 <a
                   href="tel:+13024640950"
-                  className="text-left"
-                >
+                  className="text-left">
                   <span className="text-left">📞<"
                   <span>Call +1 302 464 0950</span>
                 </a>
                 <a
                   href="mailto:kleber@ziontechgroup.com"
-                  className="text-left"
-                >
+                  className="text-left">
                   <span className="text-left">📧<"
                   <span>Get Expert Consultation</span>
                 </a>

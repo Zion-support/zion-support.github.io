@@ -31,14 +31,12 @@ export default function AI2027AdvancedAutonomousSystemsService() {
         <div className="text-left">
           <Link
             href="/contact"
-            className="text-left"
-          >
+            className="text-left">
             Get Started Today
           </Link>
           <a
             href="tel:+13024640950"
-            className="text-left"
-          >
+            className="text-left">
             Call +1 302 464 0950
           </a>
         </div>
@@ -267,8 +265,7 @@ export default function AI2027AdvancedAutonomousSystemsService() {
             </ul>
             <Link
               href="/contact"
-              className="text-left"
-            >
+              className="text-left">
               Get Started
             </Link>
           </div>
@@ -289,8 +286,7 @@ export default function AI2027AdvancedAutonomousSystemsService() {
             </ul>
             <Link
               href="/contact"
-              className="text-left"
-            >
+              className="text-left">
               Get Started
             </Link>
           </div>
@@ -308,8 +304,7 @@ export default function AI2027AdvancedAutonomousSystemsService() {
             </ul>
             <Link
               href="/contact"
-              className="text-left"
-            >
+              className="text-left">
               Contact Sales
             </Link>
           </div>
@@ -325,14 +320,12 @@ export default function AI2027AdvancedAutonomousSystemsService() {
         <div className="text-left">
           <Link
             href="/contact"
-            className="text-left"
-          >
+            className="text-left">
             Start Your Transformation
           </Link>
           <a
             href="tel:+13024640950"
-            className="text-left"
-          >
+            className="text-left">
             Call +1 302 464 0950
           </a>
         </div>

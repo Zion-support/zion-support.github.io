@@ -36,14 +36,12 @@ export default function AI2026JuneAutonomousEnterpriseRevolution() {
           <div className="text-left">
             <a 
               href="#revolution-details" "
-              className="text-left"
-            >
+              className="text-left">
               Explore Revolution →
             </a>
             <a 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               Get Started
             </a>
           </div>
@@ -137,14 +135,12 @@ export default function AI2026JuneAutonomousEnterpriseRevolution() {
           <div className="text-left">
             <a 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               Start Your Transformation
             </a>
             <a 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               Learn More
             </a>
           </div>

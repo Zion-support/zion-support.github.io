@@ -315,14 +315,12 @@ export default function AI2026EnterpriseAutomationRevolution() {
         <div className="text-left">
           <Link
             href="/case-studies/ai-enterprise-automation-success-2026"
-            className="text-left"
-          >
+            className="text-left">
             View Success Stories
           </Link>
           <a
             href="tel:+13024640950"
-            className="text-left"
-          >
+            className="text-left">
             Get Automation Assessment
           </a>
         </div>

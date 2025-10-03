@@ -269,14 +269,12 @@ export default function AI2025AdvancedAutonomousOperations() {
               <div className="text-left">
                 <a 
                   href="/contact"
-                  className="text-left"
-                >
+                  className="text-left">
                   Get Started Today
                 </a>
                 <a 
                   href="/case-studies/autonomous-operations"
-                  className="text-left"
-                >
+                  className="text-left">
                   View Case Study
                 </a>
               </div>

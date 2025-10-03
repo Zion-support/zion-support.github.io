@@ -187,20 +187,17 @@ export default function AI2026FutureTrendsBreakthrough() {
           <div className="text-left">
             <Link 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               Explore AI Services
             </Link>
             <Link 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               View Success Stories
             </Link>
             <Link 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               Start Your Transformation
             </Link>
           </div>

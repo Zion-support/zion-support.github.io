@@ -79,14 +79,12 @@ export default function AutonomousEnterpriseOperations2026() {
             <div className="text-left">
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Get Autonomous Operations Demo
               </a>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 View Success Stories
               </a>
             </div>
@@ -301,14 +299,12 @@ export default function AutonomousEnterpriseOperations2026() {
           <div className="text-left">
             <a 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               Start Autonomous Journey
             </a>
             <a 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               View Case Studies
             </a>
           </div>

@@ -37,20 +37,17 @@ export default function AI2026MarchUltimateAutonomousRevolution() {
             <div className="text-left">
               <a 
                 href="#autonomous-details" "
-                className="text-left"
-              >
+                className="text-left">
                 Explore Autonomy
               </a>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 View $150B Success Story →
               </a>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Get Autonomy Guide
               </a>
             </div>
@@ -273,20 +270,17 @@ export default function AI2026MarchUltimateAutonomousRevolution() {
             <div className="text-left">
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Get Started Today
               </a>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 View All Success Stories →
               </a>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Explore Services
               </a>
             </div>

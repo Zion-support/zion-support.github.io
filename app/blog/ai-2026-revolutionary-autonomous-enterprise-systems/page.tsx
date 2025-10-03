@@ -174,14 +174,12 @@ export default function AI2026RevolutionaryAutonomousEnterpriseSystems() {
           <div className="text-left">
             <Link 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               Get Revolutionary Solutions
             </Link>
             <Link 
               href="/"
-              className="text-left"
-            >
+              className="text-left">
               View Success Stories
             </Link>
           </div>

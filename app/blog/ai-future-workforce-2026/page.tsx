@@ -140,14 +140,12 @@ export default function AIFutureWorkforce2026() {
           <div className="text-left">
             <Link
               href="/contact"
-              className="text-left"
-            >
+              className="text-left">
               Get AI Workforce Consultation
             </Link>
             <Link
               href="/services"
-              className="text-left"
-            >
+              className="text-left">
               View AI Services
             </Link>
           </div>

@@ -238,8 +238,7 @@ export default function AI2026HyperintelligenceBreakthroughService() {
               </ul>
               <a 
                 href="/contact"
-                className="text-left"
-              >
+                className="text-left">
                 Get Started
               </a>
             </div>
@@ -277,8 +276,7 @@ export default function AI2026HyperintelligenceBreakthroughService() {
               </ul>
               <a 
                 href="/contact"
-                className="text-left"
-              >
+                className="text-left">
                 Get Started
               </a>
             </div>
@@ -311,8 +309,7 @@ export default function AI2026HyperintelligenceBreakthroughService() {
               </ul>
               <a 
                 href="/contact"
-                className="text-left"
-              >
+                className="text-left">
                 Contact Sales
               </a>
             </div>
@@ -327,14 +324,12 @@ export default function AI2026HyperintelligenceBreakthroughService() {
           <div className="text-left">
             <a 
               href="/contact"
-              className="text-left"
-            >
+              className="text-left">
               Schedule Consultation
             </a>
             <a 
               href="/case-studies/hyperintelligence-mega-success-2026"
-              className="text-left"
-            >
+              className="text-left">
               View Success Stories
             </a>
           </div>

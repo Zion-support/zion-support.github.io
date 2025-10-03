@@ -360,14 +360,12 @@ export default function AIAutonomousRobotics2026() {
           <div className="text-left">
             <Link
               href="/contact"
-              className="text-left"
-            >
+              className="text-left">
               Schedule Consultation
             </Link>
             <Link
               href="/services/ai-autonomous-robotics"
-              className="text-left"
-            >
+              className="text-left">
               Learn More
             </Link>
           </div>
