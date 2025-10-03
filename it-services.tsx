@@ -5,14 +5,10 @@ import {
   Shield,
   Cloud,
   Database,
-  Network,
   Wrench,
   Zap,
   CheckCircle,
   ArrowRight,
-  DollarSign,
-  Clock,
-  Star,
   Smartphone,
   BookOpen
 } from 'lucide-react';
