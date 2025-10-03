@@ -19,5 +19,5 @@ module.exports = {
     "changefreq": true,
     "lastmod": true
   },
-  "timestamp": "2025-10-03T14:45:25.365Z"
+  "timestamp": "2025-10-03T14:56:25.332Z"
 };
