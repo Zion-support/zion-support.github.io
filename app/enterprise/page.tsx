@@ -46,8 +46,6 @@ export default function EnterprisePage() {
               <a 
                 href="#solutions"
                 className="text-left">
-                href="#solutions"
-                className="text-left">
                 View Solutions
               </a>
             </div>
@@ -82,7 +80,9 @@ export default function EnterprisePage() {
         <div className="text-left">
           <p className="text-left">© 2025 Zion Tech Group. All rights reserved.</p>
         <div className="text-left"></div>
-          <p className="text-left">© 2025 Zion Tech Group. All rights reserved.</p></div>
+          <p className="text-left">© 2025 Zion Tech Group. All rights reserved.</p>"
+>>>>>>> main
+        </div>
       </footer>
     </div>
   );

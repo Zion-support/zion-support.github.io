@@ -1,5 +1,6 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
+<<<<<<< HEAD
 import {
   Target,
   Shield,
@@ -16,6 +17,16 @@ const About: React.FC = () => {
     { value: '10B+', label: 'Data Points Processed Daily' },
     { value: '99.9%', label: 'System Uptime' },
     { value: '5M+', label: 'Autonomous Operations Hours' }
+=======
+import { Target, Shield, TrendingUp, Globe } from 'lucide-react'
+
+const About: React.FC = () => {
+  const stats = [
+    { label: 'Years of Experience', value: '15+' },
+    { label: 'Projects Delivered', value: '500+' },
+    { label: 'Client Satisfaction', value: '99%' },
+    { label: 'Countries Served', value: '25+' }
+>>>>>>> main
   ];
 
   const values = [
@@ -87,12 +98,17 @@ const About: React.FC = () => {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
+<<<<<<< HEAD
                   <div className="text-3xl font-bold text-blue-600 mb-2">
                     {stat.value}
                   </div>
                   <div className="text-gray-600">
                     {stat.label}
                   </div>
+=======
+                  <div className="text-3xl font-bold text-blue-600 mb-2">{stat.value}</div>
+                  <div className="text-gray-600">{stat.label}</div>
+>>>>>>> main
                 </div>
               ))}
             </div>
@@ -105,22 +121,36 @@ const About: React.FC = () => {
                 <div className="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
                   <Target className="w-6 h-6 text-blue-600" />
                 </div>
+<<<<<<< HEAD
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h2>
                 <p className="text-gray-600">
                   To democratize advanced AI and technology solutions, making them accessible and affordable 
                   for businesses of all sizes. We believe that cutting-edge technology should be a catalyst 
                   for growth, not a barrier to entry.
+=======
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
+                <p className="text-gray-600">
+                  To revolutionize business operations through innovative AI and technology solutions, 
+                  empowering organizations to achieve unprecedented growth and efficiency.
+>>>>>>> main
                 </p>
               </div>
               <div className="bg-white rounded-lg shadow-lg p-8">
                 <div className="bg-purple-100 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
                   <Globe className="w-6 h-6 text-purple-600" />
                 </div>
+<<<<<<< HEAD
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">Our Vision</h2>
                 <p className="text-gray-600">
                   To be the global leader in AI-powered business transformation, creating a world where 
                   every organization can leverage advanced technology to achieve unprecedented levels of 
                   efficiency, innovation, and success.
+=======
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Vision</h3>
+                <p className="text-gray-600">
+                  To be the global leader in AI-driven business transformation, creating a world 
+                  where technology seamlessly enhances human potential and business success.
+>>>>>>> main
                 </p>
               </div>
             </div>
@@ -128,12 +158,16 @@ const About: React.FC = () => {
 
           {/* Core Values */}
           <section className="mb-16">
+<<<<<<< HEAD
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Core Values</h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
                 These principles guide everything we do and shape our commitment to excellence.
               </p>
             </div>
+=======
+            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Our Core Values</h2>
+>>>>>>> main
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {values.map((value, index) => (
                 <div key={index} className="bg-white rounded-lg shadow-lg p-6 text-center">
@@ -149,6 +183,7 @@ const About: React.FC = () => {
 
           {/* Team */}
           <section className="mb-16">
+<<<<<<< HEAD
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Meet Our Team</h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
@@ -160,6 +195,16 @@ const About: React.FC = () => {
                 <div key={index} className="bg-white rounded-lg shadow-lg p-6 text-center">
                   <div className="bg-gradient-to-r from-blue-500 to-purple-500 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Users className="w-10 h-10 text-white" />
+=======
+            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Meet Our Team</h2>
+            <div className="grid md:grid-cols-3 gap-8">
+              {team.map((member, index) => (
+                <div key={index} className="bg-white rounded-lg shadow-lg p-6 text-center">
+                  <div className="bg-gradient-to-r from-blue-500 to-purple-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-white text-2xl font-bold">
+                      {member.name.split(' ').map(n => n[0]).join('')}
+                    </span>
+>>>>>>> main
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-2">{member.name}</h3>
                   <p className="text-blue-600 font-semibold mb-3">{member.role}</p>
@@ -175,6 +220,7 @@ const About: React.FC = () => {
             </div>
           </section>
 
+<<<<<<< HEAD
           {/* Why Choose Us */}
           <section className="mb-16">
             <div className="text-center mb-12">
@@ -235,6 +281,21 @@ const About: React.FC = () => {
                   Explore Solutions
                 </a>
               </div>
+=======
+          {/* Call to Action */}
+          <section className="text-center">
+            <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-8 text-white">
+              <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>
+              <p className="text-xl mb-6">
+                Let's discuss how our AI and technology solutions can drive your success.
+              </p>
+              <a 
+                href="/contact"
+                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block"
+              >
+                Get Started Today
+              </a>
+>>>>>>> main
             </div>
           </section>
         </div>

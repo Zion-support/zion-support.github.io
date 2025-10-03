@@ -6,10 +6,9 @@ const NewestContent2025Banner = () => {
     <section className="text-left">
       {/* Animated Background Effects */}
       <div className="text-left">
-        <div className="text-left"></div>
-        <div className="text-left" style={{ animationDelay: '2s' }}></div>
-        <div className="text-left" style={{ animationDelay: '1s' }}></div>
-      </div>
+        <div className="text-left"></div>"
+        <div className="text-left" style={{ animationDelay: '2s' }}></div>"
+        <div className="text-left" style={{ animationDelay: '1s' }}></div></div>
 
       <div className="text-left">
         {/* Header */}
@@ -229,13 +228,11 @@ const NewestContent2025Banner = () => {
                 <a
                   href="tel:+13024640950"
                   className="text-left">
-                  className="text-left">
                   <span className="text-left">📞</span>/span>/span>/span>
                   <span>Call +1 302 464 0950</span>
                 </a>
                 <a
                   href="mailto:kleber@ziontechgroup.com"
-                  className="text-left">
                   className="text-left">
                   <span className="text-left">📧</span>/span>/span>/span>
                   <span>Get Expert Consultation</span>
@@ -246,10 +243,10 @@ const NewestContent2025Banner = () => {
         {/* Stats Section */}
         <div className="text-left">
           {[
-            { value='500+', label: 'Enterprise Clients' },
-            { value='10B+', label: 'Data Points Processed Daily' },
-            { value='99.9%', label: 'System Uptime' },
-            { value='5M+', label: 'Autonomous Operations Hours' }
+            { value: '500+', label: 'Enterprise Clients' },
+            { value: '10B+', label: 'Data Points Processed Daily' },
+            { value: '99.9%', label: 'System Uptime' },
+            { value: '5M+', label: 'Autonomous Operations Hours' }
           ].map((stat, index) => (
             <div key={index} className="text-left">
               <div className="text-left">
@@ -258,6 +255,7 @@ const NewestContent2025Banner = () => {
               <div className="text-left">
                 {stat.label}
               </div>
+            </div>
           ))}
         </div>
     </section>

@@ -55,6 +55,9 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     // Update state with error info
     this.setState({ errorInfo });
 
+    // Generate unique error ID
+    const errorId = `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+
     // Create error details object for potential future use
     const _errorDetails = {
       errorId,
