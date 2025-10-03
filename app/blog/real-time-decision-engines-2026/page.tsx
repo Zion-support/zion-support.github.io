@@ -1,5 +1,5 @@
 // @ts-nocheck
-import React from 'react';
+// import React from 'react';
 
 export const metadata = {
 	title: 'Real-Time Decision Engines 2026: 10M decisions/sec under 1ms',

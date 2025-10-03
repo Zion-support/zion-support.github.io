@@ -1,5 +1,5 @@
-import React from 'react';
-import { Metadata } from 'next';
+// import React from 'react';
+// Metadata handled by React Helmet
 
 export const metadata: Metadata = {
   title: 'AI Governance 2026: Enterprise Safety and Compliance Framework',

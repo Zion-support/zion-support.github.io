@@ -1,6 +1,6 @@
-import React from 'react';
+// import React from 'react';
 import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata: Metadata = {
   title: '$8.5 Billion Success: Quantum Consciousness Fusion Revolutionizes Healthcare | Zion Tech Group',
@@ -35,14 +35,12 @@ export default function QuantumConsciousnessFusionSuccessPage() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link 
-                href="/blog/ai-2026-quantum-consciousness-fusion-breakthrough" 
+              <Link to="/blog/ai-2026-quantum-consciousness-fusion-breakthrough" 
                 className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1"
               >
                 Read Full Breakthrough →
               </Link>
-              <Link 
-                href="/contact" 
+              <Link to="/contact" 
                 className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
               >
                 Experience Consciousness
@@ -365,14 +363,12 @@ export default function QuantumConsciousnessFusionSuccessPage() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/contact" 
+              <Link to="/contact" 
                 className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1"
               >
                 Transform Healthcare
               </Link>
-              <Link 
-                href="/blog/ai-2026-quantum-consciousness-fusion-breakthrough" 
+              <Link to="/blog/ai-2026-quantum-consciousness-fusion-breakthrough" 
                 className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
               >
                 Read Full Breakthrough
@@ -391,8 +387,7 @@ export default function QuantumConsciousnessFusionSuccessPage() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/contact" 
+            <Link to="/contact" 
               className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1"
             >
               Experience the Future

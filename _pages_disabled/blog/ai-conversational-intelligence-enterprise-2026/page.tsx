@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
+// import React from 'react';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'AI Conversational Intelligence for Enterprise 2026: 97% Accuracy & $180M Savings | Zion Tech Group',

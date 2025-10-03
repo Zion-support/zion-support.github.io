@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
+// import React from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowRight, Calendar, Clock, Users, TrendingUp, DollarSign, Target, CheckCircle } from 'lucide-react';
 
 export const metadata = {
@@ -484,7 +484,7 @@ export default function AICostOptimizationBreakthrough2026() {
               Related Cost Optimization Resources
             </h2>
             <div className="grid md:grid-cols-3 gap-8">
-              <Link href="/blog/generative-ai-cost-breakthrough-2025" className="group">
+              <Link to="/blog/generative-ai-cost-breakthrough-2025" className="group">
                 <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all hover:scale-105">
                   <div className="p-8">
                     <div className="text-4xl mb-4">💰</div>
@@ -502,7 +502,7 @@ export default function AICostOptimizationBreakthrough2026() {
                 </div>
               </Link>
               
-              <Link href="/blog/ai-infrastructure-automation-2026" className="group">
+              <Link to="/blog/ai-infrastructure-automation-2026" className="group">
                 <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all hover:scale-105">
                   <div className="p-8">
                     <div className="text-4xl mb-4">⚡</div>
@@ -520,7 +520,7 @@ export default function AICostOptimizationBreakthrough2026() {
                 </div>
               </Link>
               
-              <Link href="/case-studies/fortune-500-ai-transformation-mega-success-2026" className="group">
+              <Link to="/case-studies/fortune-500-ai-transformation-mega-success-2026" className="group">
                 <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all hover:scale-105">
                   <div className="p-8">
                     <div className="text-4xl mb-4">🏆</div>

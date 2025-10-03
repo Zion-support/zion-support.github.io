@@ -1,21 +1,17 @@
-import React from 'react';
+// import React from 'react';
 
 interface SuccessStoryProps {
-  company: string;
+  title: string;
+  description: string;
+  metrics: Array<{ label: string; value: string }>;
   industry: string;
-  challenge: string;
-  solution: string;
-  result: string;
-  metric: string;
 }
 
 export default function SuccessStory({ 
-  company, 
-  industry, 
-  challenge, 
-  solution, 
-  result, 
-  metric 
+  title, 
+  description, 
+  metrics, 
+  industry 
 }: SuccessStoryProps) {
   return (
     <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-200">
@@ -24,30 +20,21 @@ export default function SuccessStory({
           <span className="text-2xl">🏆</span>
         </div>
         <div>
-          <h3 className="text-xl font-bold text-gray-900">{company}</h3>
+          <h3 className="text-xl font-bold text-gray-900">{title}</h3>
           <p className="text-sm text-gray-500">{industry}</p>
         </div>
       </div>
       
       <div className="space-y-4">
-        <div>
-          <h4 className="font-semibold text-gray-900 mb-2">Challenge:</h4>
-          <p className="text-gray-600 text-sm">{challenge}</p>
-        </div>
+        <p className="text-gray-600">{description}</p>
         
-        <div>
-          <h4 className="font-semibold text-gray-900 mb-2">Solution:</h4>
-          <p className="text-gray-600 text-sm">{solution}</p>
-        </div>
-        
-        <div>
-          <h4 className="font-semibold text-gray-900 mb-2">Result:</h4>
-          <p className="text-gray-600 text-sm">{result}</p>
-        </div>
-        
-        <div className="bg-gradient-to-r from-green-50 to-teal-50 rounded-lg p-4 border border-green-200">
-          <div className="text-2xl font-bold text-green-600 mb-1">{metric}</div>
-          <div className="text-sm text-gray-600">Key Achievement</div>
+        <div className="grid grid-cols-1 gap-4">
+          {metrics.map((metric, index) => (
+            <div key={index} className="bg-gradient-to-r from-green-50 to-teal-50 rounded-lg p-4 border border-green-200">
+              <div className="text-2xl font-bold text-green-600 mb-1">{metric.value}</div>
+              <div className="text-sm text-gray-600">{metric.label}</div>
+            </div>
+          ))}
         </div>
       </div>
     </div>

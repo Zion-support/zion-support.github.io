@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { ArrowRight, Bot, Zap, Target, TrendingUp, Users, Shield, Settings } from 'lucide-react';
 
 export default function AIAutonomousEnterpriseOperations2026() {

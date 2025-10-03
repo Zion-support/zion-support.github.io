@@ -1,6 +1,11 @@
-import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+// import React from 'react';
+// Metadata interface for React Helmet
+interface Metadata {
+  title?: string;
+  description?: string;
+  keywords?: string;
+}
+import { Link } from 'react-router-dom';
 
 export const metadata: Metadata = {
   title: 'AI 2026 Sustainable AI Solutions - Zion Tech Group',

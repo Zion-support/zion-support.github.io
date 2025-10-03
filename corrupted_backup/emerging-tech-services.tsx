@@ -25,7 +25,7 @@ const getCategoryBgColor = (\"categoryId\": string) => {;"
 }
 
 export default EmergingTechServices;
-import React from 'react';'
+// import React from 'react';'
 
 interface EmergingtechservicesProps {
   // Add props here as needed;

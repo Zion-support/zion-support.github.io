@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
+// import React from 'react';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
 	title: 'Trustless Evaluation Blueprint (2026) | Zion Tech Group',
@@ -82,12 +82,12 @@ export default function TrustlessEvaluationBlueprint2026Page() {
 
 					<p>
 						For related practices, explore our guide on{' '}
-						<Link href="/blog/agentic-workflow-orchestration-2026" className="text-purple-300 hover:text-purple-200">Agentic Workflow Orchestration 2026</Link>.
+						<Link to="/blog/agentic-workflow-orchestration-2026" className="text-purple-300 hover:text-purple-200">Agentic Workflow Orchestration 2026</Link>.
 					</p>
 				</div>
 
 				<div className="mt-12">
-					<Link href="/blog" className="inline-block bg-white text-purple-700 px-6 py-3 rounded-lg font-bold hover:bg-purple-50">
+					<Link to="/blog" className="inline-block bg-white text-purple-700 px-6 py-3 rounded-lg font-bold hover:bg-purple-50">
 						← Back to Blog
 					</Link>
 				</div>

@@ -1,18 +1,4 @@
-import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'January 2025 Advanced AI Revolution: Next-Generation Enterprise Transformation | Zion Tech Group',
-  description: 'Discover the revolutionary AI breakthroughs transforming enterprise operations in January 2025. Advanced autonomous systems, quantum-enhanced intelligence, and $2.8B proven ROI.',
-  keywords: 'AI revolution 2025, enterprise AI transformation, autonomous systems, quantum AI, machine learning, artificial intelligence, business automation',
-  openGraph: {
-    title: 'January 2025 Advanced AI Revolution: Next-Generation Enterprise Transformation',
-    description: 'Revolutionary AI breakthroughs with $2.8B proven ROI, 99.9% operational autonomy, and zero downtime.',
-    type: 'article',
-    publishedTime: '2025-01-15T00:00:00Z',
-    authors: ['Zion Tech Group'],
-    tags: ['AI Revolution', 'Enterprise Transformation', 'Autonomous Systems', 'Quantum AI'],
-  },
-};
 
 export default function AdvancedAIRevolution2025() {
   return (

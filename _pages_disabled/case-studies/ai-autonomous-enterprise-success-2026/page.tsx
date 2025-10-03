@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
+// import React from 'react';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: '$25M ROI: Fortune 500 Autonomous Enterprise Transformation | Zion Tech Group',
