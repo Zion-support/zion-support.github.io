@@ -6,16 +6,34 @@ import {
   TrendingUp,
   Globe,
   Users,
+  MapPin,
+  Phone,
   Award,
-  CheckCircle
+  Mail
 } from 'lucide-react'
 
 const About: React.FC = () => {
   const stats = [
-    { value: '500+', label: 'Enterprise Clients' },
-    { value: '10B+', label: 'Data Points Processed Daily' },
-    { value: '99.9%', label: 'System Uptime' },
-    { value: '5M+', label: 'Autonomous Operations Hours' }
+    {
+      icon: Users,
+      value: '500+',
+      label: 'Projects Completed'
+    },
+    {
+      icon: Globe,
+      value: '50+',
+      label: 'Countries Served'
+    },
+    {
+      icon: TrendingUp,
+      value: '75%',
+      label: 'Average Cost Reduction'
+    },
+    {
+      icon: Shield,
+      value: '99.9%',
+      label: 'Uptime Guarantee'
+    }
   ];
 
   const values = [
@@ -85,16 +103,18 @@ const About: React.FC = () => {
           {/* Stats */}
           <section className="mb-16">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {stats.map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className="text-3xl font-bold text-blue-600 mb-2">
-                    {stat.value}
+              {stats.map((stat, index) => {
+                const Icon = stat.icon;
+                return (
+                  <div key={index} className="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <div className="bg-gradient-to-br from-blue-600 to-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <div className="text-3xl font-bold text-gray-900 mb-2">{stat.value}</div>
+                    <div className="text-gray-600">{stat.label}</div>
                   </div>
-                  <div className="text-gray-600">
-                    {stat.label}
-                  </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </section>
 
@@ -126,24 +146,27 @@ const About: React.FC = () => {
             </div>
           </section>
 
-          {/* Core Values */}
+          {/* Values */}
           <section className="mb-16">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Core Values</h2>
-              <p className="text-gray-600 max-w-2xl mx-auto">
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                 These principles guide everything we do and shape our commitment to excellence.
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {values.map((value, index) => (
-                <div key={index} className="bg-white rounded-lg shadow-lg p-6 text-center">
-                  <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <value.icon className="w-8 h-8 text-blue-600" />
+              {values.map((value, index) => {
+                const Icon = value.icon;
+                return (
+                  <div key={index} className="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <div className="bg-gradient-to-br from-blue-600 to-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">{value.title}</h3>
+                    <p className="text-gray-600">{value.description}</p>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">{value.title}</h3>
-                  <p className="text-gray-600">{value.description}</p>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </section>
 
@@ -151,23 +174,20 @@ const About: React.FC = () => {
           <section className="mb-16">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Meet Our Team</h2>
-              <p className="text-gray-600 max-w-2xl mx-auto">
-                Our diverse team of experts brings together decades of experience in AI, technology, and business innovation.
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                Our diverse team of experts brings together decades of experience in AI, technology, and business transformation.
               </p>
             </div>
             <div className="grid md:grid-cols-3 gap-8">
               {team.map((member, index) => (
                 <div key={index} className="bg-white rounded-lg shadow-lg p-6 text-center">
-                  <div className="bg-gradient-to-r from-blue-500 to-purple-500 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="bg-gradient-to-br from-blue-600 to-purple-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Users className="w-10 h-10 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-2">{member.name}</h3>
                   <p className="text-blue-600 font-semibold mb-3">{member.role}</p>
                   <p className="text-gray-600 mb-4">{member.description}</p>
-                  <a 
-                    href={`mailto:${member.email}`}
-                    className="text-blue-600 hover:text-blue-800 transition-colors"
-                  >
+                  <a href={`mailto:${member.email}`} className="text-blue-600 hover:text-blue-800 transition-colors">
                     {member.email}
                   </a>
                 </div>
@@ -175,64 +195,73 @@ const About: React.FC = () => {
             </div>
           </section>
 
-          {/* Why Choose Us */}
+          {/* Company Info */}
           <section className="mb-16">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose Zion Tech Group?</h2>
-              <p className="text-gray-600 max-w-2xl mx-auto">
-                We combine cutting-edge technology with deep industry expertise to deliver solutions that truly transform your business.
-              </p>
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-white rounded-lg shadow-lg p-6">
-                <div className="flex items-center mb-4">
-                  <CheckCircle className="w-6 h-6 text-green-600 mr-3" />
-                  <h3 className="text-xl font-bold text-gray-900">Proven Track Record</h3>
-                </div>
-                <p className="text-gray-600">
-                  Over 500 successful implementations with measurable ROI improvements across various industries.
+            <div className="bg-white rounded-xl shadow-lg p-8">
+              <div className="text-center mb-8">
+                <h2 className="text-3xl font-bold text-gray-900 mb-4">Company Information</h2>
+                <p className="text-lg text-gray-600">
+                  Zion Tech Group is headquartered in Delaware, USA, with a global presence serving clients worldwide.
                 </p>
               </div>
-              <div className="bg-white rounded-lg shadow-lg p-6">
-                <div className="flex items-center mb-4">
-                  <CheckCircle className="w-6 h-6 text-green-600 mr-3" />
-                  <h3 className="text-xl font-bold text-gray-900">24/7 Support</h3>
+              <div className="grid md:grid-cols-3 gap-8">
+                <div className="text-center">
+                  <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <MapPin className="w-8 h-8 text-blue-600" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">Headquarters</h3>
+                  <p className="text-gray-600">
+                    364 E Main St STE 1008<br />
+                    Middletown, DE 19709<br />
+                    United States
+                  </p>
                 </div>
-                <p className="text-gray-600">
-                  Round-the-clock technical support and monitoring to ensure your systems run smoothly.
-                </p>
-              </div>
-              <div className="bg-white rounded-lg shadow-lg p-6">
-                <div className="flex items-center mb-4">
-                  <CheckCircle className="w-6 h-6 text-green-600 mr-3" />
-                  <h3 className="text-xl font-bold text-gray-900">Scalable Solutions</h3>
+                <div className="text-center">
+                  <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Phone className="w-8 h-8 text-green-600" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">Contact</h3>
+                  <p className="text-gray-600">
+                    Phone: +1 302 464 0950<br />
+                    Email: kleber@ziontechgroup.com<br />
+                    Available 24/7
+                  </p>
                 </div>
-                <p className="text-gray-600">
-                  Technology that grows with your business, from startup to enterprise scale.
-                </p>
+                <div className="text-center">
+                  <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Award className="w-8 h-8 text-purple-600" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">Certifications</h3>
+                  <p className="text-gray-600">
+                    AWS Certified<br />
+                    Microsoft Partner<br />
+                    Google Cloud Partner<br />
+                    HIPAA Compliant
+                  </p>
+                </div>
               </div>
             </div>
           </section>
 
-          {/* CTA */}
+          {/* Contact CTA */}
           <section className="text-center">
-            <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-8 text-white">
-              <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>
-              <p className="text-xl mb-6 opacity-90">
-                Let's discuss how our AI and technology solutions can drive your success.
+            <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-8 text-white">
+              <h2 className="text-3xl font-bold mb-4">Ready to Work With Us?</h2>
+              <p className="text-xl mb-8 opacity-90">
+                Let's discuss how our technology solutions can transform your business.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a 
-                  href="/contact"
-                  className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                <a href="tel:+13024640950" 
+                  className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
                 >
-                  Get Started Today
+                  <Phone className="w-5 h-5 inline mr-2" />
+                  Call +1 302 464 0950
                 </a>
-                <a 
-                  href="/services"
-                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+                <a href="mailto:kleber@ziontechgroup.com" 
+                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors text-center"
                 >
-                  Explore Solutions
+                  <Mail className="w-5 h-5 inline mr-2" />
+                  Email Us Today
                 </a>
               </div>
             </div>

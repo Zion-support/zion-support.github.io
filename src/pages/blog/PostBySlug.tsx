@@ -1,134 +1,77 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import Header from "../../components/Header";
 
-export default function PostBySlug(): React.JSX.Element {
-  const { slug } = useParams();
-
-  const article = React.useMemo(() => {
-    if (!slug) return undefined;
-    
-    // Mock data for demonstration
-    const mockArticle = {
-      slug: slug,
-      title: "Sample Article Title",
-      description: "This is a sample article description that provides an overview of the content.",
-      category: "AI & Technology",
-      publishedAt: "2025-01-01",
-      readTime: "5 min read",
-      author: "Zion Tech Group Team",
-      content: `
-        <h2>Introduction</h2>
-        <p>This is a sample article content. In a real implementation, this would be loaded from a CMS or markdown files.</p>
-        
-        <h2>Main Content</h2>
-        <p>Here you would have the main content of the article, including detailed information about the topic.</p>
-        
-        <h2>Conclusion</h2>
-        <p>This would be the conclusion of the article, summarizing the key points and providing next steps.</p>
-      `
-    };
-    
-    return mockArticle;
-  }, [slug]);
-
-  if (!article) {
-    return (
-      <div className="min-h-screen bg-gray-50">
-        <Header />
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">Article Not Found</h1>
-            <p className="text-gray-600 mb-8">The article you're looking for doesn't exist.</p>
-            <a 
-              href="/blog"
-              className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-            >
-              Back to Blog
-            </a>
-          </div>
-        </div>
-      </div>
-    );
-  }
-
+export default function BlogPost(): React.JSX.Element {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <>
       <Header />
-      <div className="container mx-auto px-4 py-16">
-        <div className="max-w-4xl mx-auto">
-          {/* Article Header */}
-          <div className="mb-8">
-            <div className="text-sm text-blue-600 font-semibold mb-2">
-              {article.category}
-            </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              {article.title}
+      <div className="min-h-screen bg-gradient-to-br from-blue-600 via-blue-700 to-purple-800 text-white">
+        <Helmet>
+          <title>PostBySlug - Zion Tech Group</title>
+          <meta name="description" content="PostBySlug - Latest insights from Zion Tech Group" />
+        </Helmet>
+        
+        <div className="max-w-4xl mx-auto px-4 py-20">
+          <div className="mb-12">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+              PostBySlug
             </h1>
-            <p className="text-xl text-gray-600 mb-6">
-              {article.description}
-            </p>
-            <div className="flex items-center text-sm text-gray-500 mb-8">
-              <span className="mr-4">By {article.author}</span>
-              <span className="mr-4">{article.publishedAt}</span>
-              <span>{article.readTime}</span>
+            <div className="flex flex-wrap items-center gap-6 text-sm text-gray-300 mb-8">
+              <span>By Zion Tech Group Team</span>
+              <span>•</span>
+              <span>2025-10-03</span>
+              <span>•</span>
+              <span>5 min read</span>
             </div>
           </div>
 
-          {/* Article Content */}
-          <div className="bg-white rounded-lg shadow-lg p-8">
-            <div 
-              className="prose prose-lg max-w-none"
-              dangerouslySetInnerHTML={{ __html: article.content }}
-            />
-          </div>
-
-          {/* Related Articles */}
-          <div className="mt-12">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Related Articles</h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-white rounded-lg shadow-lg p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-2">
-                  AI Revolution in Business
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Discover how artificial intelligence is transforming modern business operations.
-                </p>
-                <a 
-                  href="/blog/ai-revolution"
-                  className="text-blue-600 font-semibold hover:text-blue-800 transition-colors"
-                >
-                  Read More →
-                </a>
-              </div>
-              <div className="bg-white rounded-lg shadow-lg p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-2">
-                  Future of Technology
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Explore the latest trends and innovations shaping the future of technology.
-                </p>
-                <a 
-                  href="/blog/future-technology"
-                  className="text-blue-600 font-semibold hover:text-blue-800 transition-colors"
-                >
-                  Read More →
-                </a>
-              </div>
+          <div className="prose prose-lg prose-invert max-w-none">
+            <div className="text-gray-200 leading-relaxed">
+              <h2>Introduction</h2>
+              <p>This is a placeholder blog post. The content for "PostBySlug" will be added here.</p>
+              
+              <h2>Main Content</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              
+              <h2>Conclusion</h2>
+              <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             </div>
           </div>
 
-          {/* Back to Blog */}
-          <div className="mt-12 text-center">
-            <a 
-              href="/blog"
-              className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-            >
-              Back to Blog
-            </a>
+          <div className="mt-16 pt-8 border-t border-white border-opacity-20">
+            <div className="flex flex-col sm:flex-row justify-between items-center gap-6">
+              <div>
+                <h3 className="text-xl font-bold mb-2">Share this article</h3>
+                <div className="flex gap-4">
+                  <a 
+                    href={`https://twitter.com/intent/tweet?text=${encodeURIComponent("PostBySlug")}&url=${encodeURIComponent(window.location.href)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-white bg-opacity-20 hover:bg-opacity-30 px-4 py-2 rounded-lg transition-colors"
+                  >
+                    Twitter
+                  </a>
+                  <a 
+                    href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(window.location.href)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-white bg-opacity-20 hover:bg-opacity-30 px-4 py-2 rounded-lg transition-colors"
+                  >
+                    LinkedIn
+                  </a>
+                </div>
+              </div>
+              <a 
+                href="/blog"
+                className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              >
+                Back to Blog
+              </a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
