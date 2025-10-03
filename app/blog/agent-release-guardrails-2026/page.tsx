@@ -3,19 +3,19 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title= 'Agent Release Guardrails 2026: Budgets, Approvals, and Instant Rollback',
+  title: 'Agent Release Guardrails 2026: Budgets, Approvals, and Instant Rollback',
   description: 'Battle-tested checklists for safe agent updates with budgeted actions, approvals, and one-click rollback.',
 };
 
 export default function Page() {
   return (
-    <main className="text-left">"
-      <section className="text-left">"
-        <div className="text-left">"
-          <h1 className="text-left">"
+    <main className="text-left">
+      <section className="text-left">
+        <div className="text-left">
+          <h1 className="text-left">
             Agent Release Guardrails 2026: <span className="text-left">Budgets, Approvals, and Instant Rollback<"
           </h1>
-          <p className="text-left">"
+          <p className="text-left">
             Ship reliable agent updates using <strong>budgeted actions</strong>, <strong>human approvals</strong>, CI policy tests,
             and <strong>one‑click rollback</strong> wired to outcome KPIs.
           </p>
@@ -23,8 +23,8 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="text-left">"
-        <div className="text-left">"
+      <section className="text-left">
+        <div className="text-left">
           <h2>Release Checklist</h2>
           <ul>
             <li>Policy tests and evals passed in CI</li>
@@ -40,8 +40,8 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="text-left">"
-        <div className="text-left">"
+      <section className="text-left">
+        <div className="text-left">
           <Link href="/blog" className="text-left">← Back to Blog</Link>"
           <Link href="/blog/edge-consentless-experiments-2026-q4" className="text-left">Next: Consentless Experiments →</Link>"
         </div>

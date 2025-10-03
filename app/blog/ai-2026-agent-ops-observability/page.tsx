@@ -2,10 +2,10 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title= 'Agent Ops Observability 2026 | Zion Tech Group',
+  title: 'Agent Ops Observability 2026 | Zion Tech Group',
   description: 'Metrics, traces, evals, and guardrails for reliable autonomy at scale.',
   openGraph: {
-    title= 'Agent Ops Observability 2026',
+    title: 'Agent Ops Observability 2026',
     description: 'Instrument agents with traces, evaluations, KPIs, and guardrails to ensure reliability.',
     type: 'article',
     url: 'https://ziontechgroup.com/blog/ai-2026-agent-ops-observability',
@@ -17,11 +17,11 @@ export const metadata = {
 
 export default function AgentOpsObservability2026Page() {
   return (
-    <div className="text-left">"
+    <div className="text-left">
       <Link href="/blog" className="text-left">← Back to Blog</Link>"
       <h1 className="text-left">Agent Ops Observability 2026</h1>"
       <div className="text-left">Published: September 30, 2025 • 12 min read • AI Reliability</div>"
-      <div className="text-left">"
+      <div className="text-left">
         <p>
           Reliable autonomy requires deep visibility. This guide covers metrics, traces, evaluations, and
           guardrails to monitor and control agent behavior across environments.
@@ -42,7 +42,7 @@ export default function AgentOpsObservability2026Page() {
           <li>Automate eval canaries in CI and production</li>
         </ul>
 
-        <div className="text-left">"
+        <div className="text-left">
           <h3 className="text-left">Need help instrumenting?</h3>"
           <p className="text-left">We deploy observability foundations with policy gates and value stream analytics.</p>"
           <Link href="/services" className="text-left">Explore Services</Link>"

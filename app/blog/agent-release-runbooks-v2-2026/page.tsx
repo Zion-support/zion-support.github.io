@@ -25,7 +25,7 @@ export default function Page() {
         <div className="text-left">
           <div className="text-left">
             <ListChecks className="text-left" />
-            <span className="text-left">Agent Ops • 2026<
+            <span className="text-left">Agent Ops • 2026</span>
           </div>
           <h1 className="text-left">Agent Release Runbooks v2 (2026)</h1>
           <p className="text-left">Ship autonomous agents with budgeted actions, KPI canaries, approvals, and one‑click rollback.</p>

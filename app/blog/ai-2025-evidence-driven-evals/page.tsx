@@ -2,16 +2,16 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title= 'Evidence‑Driven Evals 2025: Traceable Quality Linked to KPIs',
+  title: 'Evidence‑Driven Evals 2025: Traceable Quality Linked to KPIs',
   description: 'Design evals that tie model behavior to product KPIs with traces, scorecards, and budgeted guardrails.',
 };
 
 export default function Page() {
   return (
-    <main className="text-left">"
+    <main className="text-left">
       <h1 className="text-left">Evidence‑Driven Evals 2025</h1>"
       <p className="text-left">Traceable quality linked to KPIs with end‑to‑end evidence and budgeted guardrails.</p>"
-      <div className="text-left">"
+      <div className="text-left">
         <p>
           This guide shows how to make evaluations first‑class: each eval links to business KPIs, with traces from
           prompt to outcome, budget controls, and policy tests that run in CI to prevent regressions.

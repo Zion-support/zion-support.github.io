@@ -1,11 +1,11 @@
 export const metadata = {
-  title= 'Edge Consentless Experiments 2026 Q4: <100ms A/B Without PII',
+  title: 'Edge Consentless Experiments 2026 Q4: <100ms A/B Without PII',
   description: 'Scoped IDs, on‑device metrics, and differential privacy enable global A/B testing without collecting PII.',
 };
 
 export default function Page() {
   return (
-    <article className="text-left">"
+    <article className="text-left">
       <h1>Edge Consentless Experiments 2026 Q4: &lt;100ms A/B Without PII</h1>
       <p className="text-left">Published: 2025-09-30 • Category: Analytics • 6 min read</p>"
       <p>
@@ -32,7 +32,7 @@ export default function Page() {
         safe rollbacks globally.
       </p>
 
-      <p className="text-left">"
+      <p className="text-left">
         Explore our implementation templates and related posts on edge analytics and privacy‑first telemetry.
       </p>
     </article>

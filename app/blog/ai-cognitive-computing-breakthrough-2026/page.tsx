@@ -73,16 +73,16 @@ export default function AICognitiveComputingBreakthrough2026() {
 
         {/* Main Content */}
 <<<<<<< HEAD
-        <div className="text-left">"
+        <div className="text-left">
           <h2 className="text-left">The Cognitive Computing Revolution</h2>"
-          <p className="text-left">"
+          <p className="text-left">
             Cognitive computing represents a paradigm shift from traditional rule-based AI to systems that can think, reason, and learn like humans. The breakthrough in 2026 has enabled AI systems to understand context, process abstract concepts, and make sophisticated decisions that were previously impossible for machines.
           </p>
 
           <h3 className="text-left">Core Components of Human-Level Reasoning</h3>"
-          <div className="text-left">"
+          <div className="text-left">
             <h4 className="text-left">1. Contextual Understanding</h4>"
-            <p className="text-left">"
+            <p className="text-left">
 =======
         <div className="text-left">
           <h2 className="text-left">The Cognitive Computing Revolution</h2>
@@ -118,7 +118,7 @@ export default function AICognitiveComputingBreakthrough2026() {
 
 <<<<<<< HEAD
           <h3 className="text-left">Real-World Applications and Success Stories</h3>"
-          <p className="text-left">"
+          <p className="text-left">
 =======
           <h3 className="text-left">Real-World Applications and Success Stories</h3>
           
@@ -136,10 +136,10 @@ export default function AICognitiveComputingBreakthrough2026() {
 
 <<<<<<< HEAD
           <h3 className="text-left">Industry Transformations</h3>"
-          <div className="text-left">"
-            <div className="text-left">"
+          <div className="text-left">
+            <div className="text-left">
               <h4 className="text-left">Healthcare Revolution</h4>"
-              <p className="text-left">"
+              <p className="text-left">
 =======
           <h3 className="text-left">Industry Transformations</h3>
           
@@ -172,7 +172,7 @@ export default function AICognitiveComputingBreakthrough2026() {
 
 <<<<<<< HEAD
           <h3 className="text-left">Technical Architecture</h3>"
-          <p className="text-left">"
+          <p className="text-left">
 =======
           <h3 className="text-left">Technical Architecture</h3>
           
@@ -200,7 +200,7 @@ export default function AICognitiveComputingBreakthrough2026() {
 
 <<<<<<< HEAD
           <h3 className="text-left">Implementation Strategy</h3>"
-          <p className="text-left">"
+          <p className="text-left">
 =======
           <h3 className="text-left">Implementation Strategy</h3>
           
@@ -243,7 +243,7 @@ export default function AICognitiveComputingBreakthrough2026() {
 
 <<<<<<< HEAD
           <h3 className="text-left">Future Implications</h3>"
-          <p className="text-left">"
+          <p className="text-left">
 =======
           <h3 className="text-left">Future Implications</h3>
           

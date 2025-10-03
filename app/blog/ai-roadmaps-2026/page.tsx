@@ -3,11 +3,11 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title= 'AI Roadmaps 2026: What to Build Next and Why',
+  title: 'AI Roadmaps 2026: What to Build Next and Why',
   description:
     'A pragmatic roadmap for 2026 across CX, operations, and platforms with high-ROI bets and measurable outcomes.',
   openGraph: {
-    title= 'AI Roadmaps 2026',
+    title: 'AI Roadmaps 2026',
     description:
       'Sequenced initiatives across customer experience, operations, and platforms with reliability, cost, and value metrics.',
     url: 'https://ziontechgroup.com/blog/ai-roadmaps-2026',
@@ -17,16 +17,16 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <div className="text-left">"
-      <div className="text-left">"
+    <div className="text-left">
+      <div className="text-left">
         <div className="text-left">September 30, 2025 • 10 min read</div>"
         <h1 className="text-left">AI Roadmaps 2026</h1>"
-        <p className="text-left">"
+        <p className="text-left">
           A pragmatic roadmap for 2026 across customer experience, operations, and platforms—sequenced to maximize
           ROI with reliability, governance, and measurable outcomes.
         </p>
 
-        <div className="text-left">"
+        <div className="text-left">
           <h2>Sequenced Portfolio</h2>
           <ol>
             <li>Stabilize: observability, guardrails, FinOps scorecards</li>
@@ -49,9 +49,9 @@ export default function Page() {
           </ul>
         </div>
 
-        <div className="text-left">"
+        <div className="text-left">
           <h3 className="text-left">Next up</h3>"
-          <ul className="text-left">"
+          <ul className="text-left">
             <li>
               <Link href="/content-hub">Explore the Content Hub</Link>"
             </li>

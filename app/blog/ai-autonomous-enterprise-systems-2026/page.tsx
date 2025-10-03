@@ -73,16 +73,16 @@ export default function AIAutonomousEnterpriseSystems2026() {
 
         {/* Main Content */}
 <<<<<<< HEAD
-        <div className="text-left">"
+        <div className="text-left">
           <h2 className="text-left">The Autonomous Intelligence Revolution</h2>"
-          <p className="text-left">"
+          <p className="text-left">
             Autonomous AI systems represent the pinnacle of artificial intelligence evolution. Unlike traditional AI that requires constant human oversight and manual optimization, autonomous systems possess the remarkable ability to self-improve, self-adapt, and self-optimize in real-time. This paradigm shift is transforming how enterprises operate, compete, and innovate.
           </p>
 
           <h3 className="text-left">Core Components of Autonomous Systems</h3>"
-          <div className="text-left">"
+          <div className="text-left">
             <h4 className="text-left">1. Self-Learning Neural Networks</h4>"
-            <p className="text-left">"
+            <p className="text-left">
 =======
         <div className="text-left">
           <h2 className="text-left">The Autonomous Intelligence Revolution</h2>
@@ -113,7 +113,7 @@ export default function AIAutonomousEnterpriseSystems2026() {
 
 <<<<<<< HEAD
           <h3 className="text-left">Real-World Implementation Success</h3>"
-          <p className="text-left">"
+          <p className="text-left">
 =======
           <h3 className="text-left">Real-World Implementation Success</h3>
           
@@ -131,7 +131,7 @@ export default function AIAutonomousEnterpriseSystems2026() {
 
 <<<<<<< HEAD
           <h3 className="text-left">The Evolution of Self-Improving Intelligence</h3>"
-          <p className="text-left">"
+          <p className="text-left">
 =======
           <h3 className="text-left">The Evolution of Self-Improving Intelligence</h3>
           
@@ -157,7 +157,7 @@ export default function AIAutonomousEnterpriseSystems2026() {
 
 <<<<<<< HEAD
           <h3 className="text-left">Implementation Roadmap</h3>"
-          <p className="text-left">"
+          <p className="text-left">
 =======
           <h3 className="text-left">Implementation Roadmap</h3>
           
@@ -191,7 +191,7 @@ export default function AIAutonomousEnterpriseSystems2026() {
 
 <<<<<<< HEAD
           <h3 className="text-left">Future Outlook</h3>"
-          <p className="text-left">"
+          <p className="text-left">
 =======
           <h3 className="text-left">Future Outlook</h3>
           

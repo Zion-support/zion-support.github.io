@@ -1,23 +1,23 @@
 export const metadata = {
-  title= 'Cloud-Native AI Platform Excellence — October 2025 | Zion Tech Group',
+  title: 'Cloud-Native AI Platform Excellence — October 2025 | Zion Tech Group',
   description:
     'Engineering guide to build reliable, scalable cloud-native AI platforms with 99.99% uptime and breakthrough performance.',
 };
 
 export default function CloudNativeAIPlatformExcellencePage() {
   return (
-    <main className="text-left">"
-      <article className="text-left">"
-        <header className="text-left">"
+    <main className="text-left">
+      <article className="text-left">
+        <header className="text-left">
           <p className="text-left">Published Oct 1, 2025</p>"
           <h1 className="text-left">Cloud-Native AI Platform Excellence — October 2025</h1>"
-          <p className="text-left">"
+          <p className="text-left">
             Build a production-grade AI platform with workload isolation, cost-aware routing, SLOs, and guardrails-by-default —
             enabling 450% performance gains and enterprise-wide reuse.
           </p>
         </header>
 
-        <section className="text-left">"
+        <section className="text-left">
           <h2>Reference architecture</h2>
           <ul>
             <li>Event-driven backbone with durable queues and idempotent processors.</li>

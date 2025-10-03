@@ -24,11 +24,11 @@ export default function AI2026MegaBreakthroughs() {
           The Revolutionary Technologies Reshaping Enterprise and Redefining What's Possible
         </p>
         <div className="text-left">
-          <span>Published: January 2026<
-          <span>•<
-          <span>15 min read<
-          <span>•<
-          <span>Updated daily<
+          <span>Published: January 2026</span>
+          <span>•</span>
+          <span>15 min read</span>
+          <span>•</span>
+          <span>Updated daily</span>
         </div>
       </div>
 

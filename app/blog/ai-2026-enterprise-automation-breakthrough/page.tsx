@@ -15,7 +15,7 @@ export default function EnterpriseAutomationBreakthrough() {
       <header className="text-left">
         <div className="text-left">
           <Link 
-            href="/[^"]*"
+            href="/"
             className="text-left"
           >
             <ArrowLeft className="text-left" />
@@ -31,15 +31,15 @@ export default function EnterpriseAutomationBreakthrough() {
           <div className="text-left">
             <div className="text-left">
               <Calendar className="text-left" />
-              <span>January 15, 2026<
+              <span>January 15, 2026</span>
             </div>
             <div className="text-left">
               <User className="text-left" />
-              <span>Zion Tech Group<
+              <span>Zion Tech Group</span>
             </div>
             <div className="text-left">
               <Clock className="text-left" />
-              <span>12 min read<
+              <span>12 min read</span>
             </div>
           </div>
           

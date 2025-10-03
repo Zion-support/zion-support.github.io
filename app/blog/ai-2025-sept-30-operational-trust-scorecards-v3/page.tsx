@@ -2,10 +2,10 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title= 'Operational Trust Scorecards v3 (Sep 30, 2025) | Zion Tech Group',
+  title: 'Operational Trust Scorecards v3 (Sep 30, 2025) | Zion Tech Group',
   description: 'Practical blueprint to measure and improve operational trust for AI systems with live scorecards, budgets, and guardrails.',
   openGraph: {
-    title= 'Operational Trust Scorecards v3',
+    title: 'Operational Trust Scorecards v3',
     description: 'Measure reliability, cost, safety, and value with live AI scorecards.',
     type: 'article'
   }
@@ -13,10 +13,10 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <main className="text-left">"
-      <section className="text-left">"
-        <div className="text-left">"
-          <div className="text-left">"
+    <main className="text-left">
+      <section className="text-left">
+        <div className="text-left">
+          <div className="text-left">
             <span className="text-left">GUIDE<"
             <span className="text-left">Sep 30, 2025<"
           </div>
@@ -25,8 +25,8 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="text-left">"
-        <div className="text-left">"
+      <section className="text-left">
+        <div className="text-left">
           <div>
             <h2 className="text-left">Why Operational Trust</h2>"
             <p className="text-left">Enterprise AI fails without measurable trust. Scorecards unify KPIs across reliability (accuracy, grounding, latency), safety (policy adherence), cost (per task, per user), and value (business outcomes) so leaders can make tradeoffs responsibly.</p>"
@@ -34,7 +34,7 @@ export default function Page() {
 
           <div>
             <h2 className="text-left">Scorecard Structure</h2>"
-            <ul className="text-left">"
+            <ul className="text-left">
               <li><strong className="text-left">Reliability:</strong> pass rates, hallucination rate, grounding success, latency SLO.</li>"
               <li><strong className="text-left">Safety:</strong> policy blocks, red‑team strikes, jailbreak resistance, PII leaks.</li>"
               <li><strong className="text-left">Cost:</strong> per‑task spend, model tier mix, cache hit rate, budget headroom.</li>"
@@ -47,9 +47,9 @@ export default function Page() {
             <p className="text-left">Tie each KPI to budgets and routing rules. If reliability falls, route to safer tier; if cost spikes, enable cache or quantized model; if safety flags rise, block risky tools and trigger review.</p>"
           </div>
 
-          <div className="text-left">"
+          <div className="text-left">
             <h3 className="text-left">Example KPI Thresholds</h3>"
-            <div className="text-left">"
+            <div className="text-left">
               <div>
                 <div className="text-left">Grounded Answer Rate</div>"
                 <div>≥ 98% (weekly)</div>
@@ -71,7 +71,7 @@ export default function Page() {
 
           <div>
             <h2 className="text-left">Rollout Playbook</h2>"
-            <ol className="text-left">"
+            <ol className="text-left">
               <li>Instrument end‑to‑end traces for prompts, tools, and outcomes.</li>
               <li>Define budgets per journey; route by risk and cost tiers.</li>
               <li>Add online evals and safety tests to CI/CD.</li>
@@ -79,7 +79,7 @@ export default function Page() {
             </ol>
           </div>
 
-          <div className="text-left">"
+          <div className="text-left">
             <Link href="/content-hub" className="text-left">← Back to Content Hub</Link>"
             <Link href="/blog/ai-2027-cost-optimization-playbook" className="text-left">Next: Cost Optimization Playbook →</Link>"
           </div>

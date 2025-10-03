@@ -15,7 +15,7 @@ export default function AI2025DecemberUltimateAutonomousEnterpriseRevolution() {
       <header className="text-left">
         <div className="text-left">
           <Link 
-            href="/[^"]*"
+            href="/"
             className="text-left"
           >
             <ArrowLeft className="text-left" />
@@ -31,15 +31,15 @@ export default function AI2025DecemberUltimateAutonomousEnterpriseRevolution() {
           <div className="text-left">
             <div className="text-left">
               <Calendar className="text-left" />
-              <span>December 15, 2025<
+              <span>December 15, 2025</span>
             </div>
             <div className="text-left">
               <User className="text-left" />
-              <span>Zion Tech Group<
+              <span>Zion Tech Group</span>
             </div>
             <div className="text-left">
               <Clock className="text-left" />
-              <span>22 min read<
+              <span>22 min read</span>
             </div>
           </div>
           
@@ -270,7 +270,7 @@ export default function AI2025DecemberUltimateAutonomousEnterpriseRevolution() {
                   Schedule a free consultation with our AI experts to discuss your autonomous transformation goals.
                 </p>
                 <Link 
-                  href="/[^"]*"
+                  href="/"
                   className="text-left"
                 >
                   Schedule Consultation

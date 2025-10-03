@@ -24,7 +24,7 @@ export default function Page() {
         <div className="text-left">
           <div className="text-left">
             <Shield className="text-left" />
-            <span className="text-left">Privacy • Edge • 2026<
+            <span className="text-left">Privacy • Edge • 2026</span>
           </div>
           <h1 className="text-left">Edge Private Insights v2 (2026)</h1>
           <p className="text-left">Deliver actionable metrics without PII using scoped identifiers, differential privacy, and on-device aggregation—all under 100ms.</p>

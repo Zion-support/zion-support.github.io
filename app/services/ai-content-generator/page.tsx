@@ -195,7 +195,7 @@ export default function AIContentGeneratorPage() {
             {/* Professional Plan */}
             <div className="text-left">
               <div className="text-left">
-                <span className="text-left">Most Popular<
+                <span className="text-left">Most Popular</span>
               </div>
               <div className="text-left">
                 <h3 className="text-left">Professional</h3>

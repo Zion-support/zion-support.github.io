@@ -23,11 +23,11 @@ const InteractiveContentShowcase2026 = dynamic(() => import('../components/Inter
 });
 
 export const metadata = {
-  title= 'Zion Tech Group — AI Enterprise Transformation & IT Services | 300% ROI Guaranteed',
+  title: 'Zion Tech Group — AI Enterprise Transformation & IT Services | 300% ROI Guaranteed',
   description: 'Transform your enterprise with AI-powered solutions. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains. Expert AI consulting, autonomous systems, and digital transformation services.',
   keywords: 'AI enterprise transformation, AI consulting, autonomous AI systems, enterprise AI services, digital transformation, AI implementation, AI ROI calculator, manufacturing AI, AI automation, AI strategy',
   openGraph: {
-    title= 'Zion Tech Group — AI Enterprise Transformation & IT Services',
+    title: 'Zion Tech Group — AI Enterprise Transformation & IT Services',
     description: 'Transform your enterprise with AI-powered solutions. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains.',
     type: 'website',
     url: 'https://ziontechgroup.com',
@@ -42,7 +42,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title= 'Zion Tech Group — AI Enterprise Transformation & IT Services',
+    title: 'Zion Tech Group — AI Enterprise Transformation & IT Services',
     description: 'Transform your enterprise with AI-powered solutions. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains.',
     images: ['/og-image.jpg'],
   },
@@ -101,24 +101,24 @@ export default function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      <div className="text-left">"
+      <div className="text-left">
         {/* Unified Content Promotion - Replaces multiple redundant banners */}
         <UnifiedContentPromotion />
 
         {/* Hero Section */}
-        <section className="text-left">"
-          <div className="text-left">"
-            <h1 className="text-left">"
+        <section className="text-left">
+          <div className="text-left">
+            <h1 className="text-left">
               Transform Your Business with
-              <span className="text-left">"
+              <span className="text-left">
                 {' '}AI-Powered Solutions
-              <
+              </span>
             </h1>
-            <p className="text-left">"
+            <p className="text-left">
               Zion Tech Group delivers cutting-edge AI micro SaaS services, cloud automation, 
               and enterprise IT solutions that drive growth, efficiency, and innovation.
             </p>
-            <div className="text-left">"
+            <div className="text-left">
               <Link
                 href="/services"
                 className="text-left"
@@ -132,7 +132,7 @@ export default function HomePage() {
                 Call +1 302 464 0950
               </a>
             </div>
-            <div className="text-left">"
+            <div className="text-left">
               <div>
                 <div className="text-left">500+</div>"
                 <div className="text-left">Projects Delivered</div>"
@@ -163,51 +163,51 @@ export default function HomePage() {
         <InteractiveContentShowcase2026 />
 
         {/* Enhanced Newsletter Signup */}
-        <section className="text-left">"
-          <div className="text-left">"
-            <div className="text-left">"
+        <section className="text-left">
+          <div className="text-left">
+            <div className="text-left">
               {/* Newsletter Signup */}
-              <div className="text-left">"
-                <h2 className="text-left">"
+              <div className="text-left">
+                <h2 className="text-left">
                   Stay Ahead with AI & Tech Insights
                 </h2>
-                <p className="text-left">"
+                <p className="text-left">
                   Get weekly updates on AI trends, tech innovations, and exclusive service offers
                 </p>
-                <div className="text-left">"
+                <div className="text-left">
                   <input
                     type="email"
                     placeholder="Enter your email"
                     className="text-left"
                   />
-                  <button className="text-left">"
+                  <button className="text-left">
                     Subscribe
                   </button>
                 </div>
-                <p className="text-left">"
+                <p className="text-left">
                   Join 10,000+ professionals. Unsubscribe anytime.
                 </p>
               </div>
 
               {/* Content Highlights */}
-              <div className="text-left">"
+              <div className="text-left">
                 <h3 className="text-left">Latest Content Highlights</h3>"
-                <div className="text-left">"
-                  <a href="/blog/ai-2026-enterprise-rag-guardrails" className="text-left">"
+                <div className="text-left">
+                  <a href="/blog/ai-2026-enterprise-rag-guardrails" className="text-left">
                     <div className="text-left">🛡️</div>"
                     <div>
                       <h4 className="text-left">Enterprise RAG Guardrails 2026</h4>"
                       <p className="text-left">Safe, reliable RAG with verifiable citations</p>"
                     </div>
                   </a>
-                  <a href="/blog/ai-2026-autonomous-enterprise-operations" className="text-left">"
+                  <a href="/blog/ai-2026-autonomous-enterprise-operations" className="text-left">
                     <div className="text-left">🏭</div>"
                     <div>
                       <h4 className="text-left">Autonomous Enterprise Operations 2026</h4>"
                       <p className="text-left">90% efficiency, 300% ROI with guardrailed agents</p>"
                     </div>
                   </a>
-                  <a href="/blog/ai-cloud-cost-optimization-2025" className="text-left">"
+                  <a href="/blog/ai-cloud-cost-optimization-2025" className="text-left">
                     <div className="text-left">💸</div>"
                     <div>
                       <h4 className="text-left">AI Cloud Cost Optimization</h4>"
@@ -215,7 +215,7 @@ export default function HomePage() {
                     </div>
                   </a>
                 </div>
-                <div className="text-left">"
+                <div className="text-left">
                   <Link
                     href="/blog"
                     className="text-left"
@@ -229,15 +229,15 @@ export default function HomePage() {
         </section>
 
         {/* CTA Section */}
-        <section className="text-left">"
-          <div className="text-left">"
-            <h2 className="text-left">"
+        <section className="text-left">
+          <div className="text-left">
+            <h2 className="text-left">
               Ready to Transform Your Business?
             </h2>
-            <p className="text-left">"
+            <p className="text-left">
               Let's discuss how our AI and IT solutions can drive your success
             </p>
-            <div className="text-left">"
+            <div className="text-left">
               <a
                 href="tel:+13024640950"
                 className="text-left"
@@ -251,7 +251,7 @@ export default function HomePage() {
                 Get Free Consultation
               </a>
             </div>
-            <div className="text-left">"
+            <div className="text-left">
               <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
               <p>📧 kleber@ziontechgroup.com | 📞 +1 302 464 0950</p>
             </div>

@@ -2,11 +2,11 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title= 'Generative AI Governance Blueprint 2025 | Zion Tech Group',
+  title: 'Generative AI Governance Blueprint 2025 | Zion Tech Group',
   description:
     'Executive blueprint for governing generative AI: risk controls, policy gates, evals, and value scorecards to scale safely.',
   openGraph: {
-    title= 'Generative AI Governance Blueprint 2025',
+    title: 'Generative AI Governance Blueprint 2025',
     description: 'Guardrails, red-teaming, and continuous evaluations to manage risk and ROI.',
     type: 'article'
   }
@@ -14,16 +14,16 @@ export const metadata = {
 
 export default function GenAIGovernanceBlueprint2025Page() {
   return (
-    <div className="text-left">"
-      <main className="text-left">"
-        <div className="text-left">"
+    <div className="text-left">
+      <main className="text-left">
+        <div className="text-left">
           <div className="text-left">New • September 2025</div>"
           <h1 className="text-left">Generative AI Governance Blueprint 2025</h1>"
           <p className="text-left">A pragmatic, outcome-driven governance model for enterprise generative AI programs.</p>"
           <div className="text-left">13 min read • Category: Executive Strategy</div>"
         </div>
 
-        <div className="text-left">"
+        <div className="text-left">
           <h2>Objectives</h2>
           <ul>
             <li>Reduce risk while accelerating value delivery</li>
@@ -56,15 +56,15 @@ export default function GenAIGovernanceBlueprint2025Page() {
 
           <p>
             See also: {' '}
-            <Link href="/blog/ai-2027-cost-optimization-playbook" className="text-left">"
+            <Link href="/blog/ai-2027-cost-optimization-playbook" className="text-left">
               AI 2027 Cost Optimization Playbook
             </Link>
             .
           </p>
         </div>
 
-        <div className="text-left">"
-          <Link href="/blog" className="text-left">"
+        <div className="text-left">
+          <Link href="/blog" className="text-left">
             ← Back to Blog
           </Link>
         </div>

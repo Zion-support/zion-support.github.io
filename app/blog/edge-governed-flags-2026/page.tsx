@@ -1,13 +1,13 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title= 'Edge‑Governed Feature Flags (2026): Private control at <100ms',
+  title: 'Edge‑Governed Feature Flags (2026): Private control at <100ms',
   description: 'Patterns for consent‑aware, policy‑checked feature flags with scoped IDs and on‑device enforcement.',
 };
 
 export default function Page() {
   return (
-    <main className="text-left">"
+    <main className="text-left">
       <h1>Edge‑Governed Feature Flags (2026)</h1>
       <p>
         Run feature flags at the edge with policy checks and privacy guarantees. Enforce org policy,

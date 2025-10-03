@@ -1,26 +1,26 @@
 import React from 'react';
 
 export const metadata = {
-  title= 'Autonomous FinOps 2025: Cut AI Spend 50–85% Safely',
+  title: 'Autonomous FinOps 2025: Cut AI Spend 50–85% Safely',
   description: 'Blueprint for autonomous FinOps: routing tiers, semantic caches, eval scorecards, and policy budgets to slash AI costs without hurting quality.'
 };
 
 export default function AutonomousFinOpsBlueprint2025Page() {
   return (
-    <div className="text-left">"
-      <header className="text-left">"
-        <div className="text-left">"
+    <div className="text-left">
+      <header className="text-left">
+        <div className="text-left">
           <div className="text-left">Playbook • FinOps</div>"
           <h1 className="text-left">Autonomous FinOps 2025</h1>"
-          <p className="text-left">"
+          <p className="text-left">
             Cut AI spend 50–85% with tiered routing, semantic caches, quantization, and KPI‑linked budgets.
           </p>
           <div className="text-left">September 30, 2025 • 14 min read</div>"
         </div>
       </header>
 
-      <main className="text-left">"
-        <section className="text-left">"
+      <main className="text-left">
+        <section className="text-left">
           <h2>Executive Summary</h2>
           <p>
             Enterprises can achieve immediate and durable AI cost reductions while improving reliability by
@@ -65,9 +65,9 @@ export default function AutonomousFinOpsBlueprint2025Page() {
           </p>
         </section>
 
-        <aside className="text-left">"
+        <aside className="text-left">
           <h3 className="text-left">Next Up</h3>"
-          <ul className="text-left">"
+          <ul className="text-left">
             <li>Agent Ops Observability 2026</li>
             <li>Autonomous Governance Blueprint 2027</li>
             <li>GenAI Routing & Caching v2 (2026)</li>

@@ -14,7 +14,7 @@ export default function PlatformEngineeringScorecards2026Page() {
       <section className="text-left">
         <div className="text-left">
           <div className="text-left">
-            <span className="text-left">New Article<
+            <span className="text-left">New Article</span>
           </div>
           <h1 className="text-left">
             Platform Engineering Scorecards 2026: Measure What Matters
@@ -24,9 +24,9 @@ export default function PlatformEngineeringScorecards2026Page() {
             cost efficiency, and developer experience. Drive the right conversations and investments.
           </p>
           <div className="text-left">
-            <span>📅 September 29, 2025<
-            <span>⏱️ 10 min read<
-            <span>👤 Zion Tech Group Team<
+            <span>📅 September 29, 2025</span>
+            <span>⏱️ 10 min read</span>
+            <span>👤 Zion Tech Group Team</span>
           </div>
         </div>
       </section>
@@ -160,12 +160,12 @@ export default function PlatformEngineeringScorecards2026Page() {
   );
 }
 
-function RelatedArticleCard({ title, description, href }: { title= string; description: string; href: string }) {
+function RelatedArticleCard({ title, description, href }: { title: string; description: string; href: string }) {
   return (
     <Link href={href} className="text-left">
       <h3 className="text-left">{title}</h3>
       <p className="text-left">{description}</p>
-      <span className="text-left">Read More →<
+      <span className="text-left">Read More →</span>
     </Link>
   );
 }

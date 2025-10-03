@@ -3,11 +3,11 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title= 'AI Value Stream Analytics 2026: Trace ROI from Token to Revenue',
+  title: 'AI Value Stream Analytics 2026: Trace ROI from Token to Revenue',
   description:
     'Tie AI cost, latency, and quality to business value with end-to-end tracing from model tokens to customer outcomes.',
   openGraph: {
-    title= 'AI Value Stream Analytics 2026',
+    title: 'AI Value Stream Analytics 2026',
     description:
       'End-to-end tracing that connects model spend to user value with actionable scorecards.',
     url: 'https://ziontechgroup.com/blog/ai-value-stream-analytics-2026',
@@ -17,16 +17,16 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <div className="text-left">"
-      <div className="text-left">"
+    <div className="text-left">
+      <div className="text-left">
         <div className="text-left">September 30, 2025 • 9 min read</div>"
         <h1 className="text-left">AI Value Stream Analytics 2026</h1>"
-        <p className="text-left">"
+        <p className="text-left">
           Connect the dots from tokens and dollars to user outcomes. Instrument your AI stack to track reliability,
           latency, cost, and quality—and tie those to business value per scenario.
         </p>
 
-        <div className="text-left">"
+        <div className="text-left">
           <h2>Metrics That Matter</h2>
           <ul>
             <li>Cost per successful task and cost per customer session</li>
@@ -49,9 +49,9 @@ export default function Page() {
           </ol>
         </div>
 
-        <div className="text-left">"
+        <div className="text-left">
           <h3 className="text-left">Next up</h3>"
-          <ul className="text-left">"
+          <ul className="text-left">
             <li>
               <Link href="/content-hub">Explore the Content Hub</Link>"
             </li>

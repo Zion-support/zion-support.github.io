@@ -1,11 +1,11 @@
 export const metadata = {
-  title= 'AI Operational Trust 2026 Q4: SLIs, Budgets, Rollback',
+  title: 'AI Operational Trust 2026 Q4: SLIs, Budgets, Rollback',
   description: 'Outcome‑linked SLIs, budgeted actions, and one‑click rollback for safe autonomy in enterprise AI operations.',
 };
 
 export default function Page() {
   return (
-    <article className="text-left">"
+    <article className="text-left">
       <h1>AI Operational Trust 2026 Q4: SLIs, Budgets, Rollback</h1>
       <p className="text-left">Published: 2025-09-30 • Category: AI Operations • 7 min read</p>"
       <p>
@@ -32,7 +32,7 @@ export default function Page() {
         evaluations and live scorecards so teams can iterate weekly without regressions.
       </p>
 
-      <p className="text-left">"
+      <p className="text-left">
         Continue reading in our Content Hub or explore related articles on governance, observability, and cost
         optimization.
       </p>

@@ -2,11 +2,11 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-	title= 'AI Operational Excellence 2026: Autonomous Agents Driving 10x Efficiency',
+	title: 'AI Operational Excellence 2026: Autonomous Agents Driving 10x Efficiency',
 	description:
 		'How production-grade agents orchestrate enterprise operations safely with guardrails, observability, and policy tests to deliver 10x efficiency.',
 	openGraph: {
-		title= 'AI Operational Excellence 2026',
+		title: 'AI Operational Excellence 2026',
 		description:
 			'Blueprint for operational excellence with autonomous agents, safety guardrails, and reliability engineering.',
 		url: 'https://ziontechgroup.com/blog/ai-operational-excellence-agents-2026',
@@ -16,19 +16,19 @@ export const metadata = {
 
 export default function Page() {
 	return (
-		<div className="text-left">"
-			<div className="text-left">"
+		<div className="text-left">
+			<div className="text-left">
 				<div className="text-left">September 30, 2025 • 14 min read</div>"
-				<h1 className="text-left">"
+				<h1 className="text-left">
 					AI Operational Excellence 2026: Autonomous Agents Driving 10x Efficiency
 				</h1>
-				<p className="text-left">"
+				<p className="text-left">
 					Production-grade agentic systems can orchestrate complex workflows safely when paired with
 					guardrails, observability, and policy-as-code. This guide shows how to achieve operational
 					excellence with measurable reliability and ROI.
 				</p>
 
-				<div className="text-left">"
+				<div className="text-left">
 					<h2>Operating Model</h2>
 					<ul>
 						<li>Goal-driven agents with bounded tools and explicit safety budgets</li>
@@ -53,9 +53,9 @@ export default function Page() {
 					</ul>
 				</div>
 
-				<div className="text-left">"
+				<div className="text-left">
 					<h3 className="text-left">Next up</h3>"
-					<ul className="text-left">"
+					<ul className="text-left">
 						<li>
 							<Link href="/blog/ai-agent-observability-2026">AI Agent Observability 2026</Link>"
 						</li>

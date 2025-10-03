@@ -17,7 +17,7 @@ export default function AINextGenEnterpriseAutomation2026() {
             <div className="text-left">
               <span className="text-left">
                 🚀 January 2026 • Enterprise AI Revolution
-              <
+              </span>
             </div>
             
             <h1 className="text-left">
@@ -41,7 +41,7 @@ export default function AINextGenEnterpriseAutomation2026() {
                 <Brain className="text-left" />
                 Meta-Cognitive AI
               <
-              <span>15 min read<
+              <span>15 min read</span>
             </div>
           </div>
         </div>
@@ -73,11 +73,11 @@ export default function AINextGenEnterpriseAutomation2026() {
 
       {/* Main Content */}
 <<<<<<< HEAD
-      <section className="text-left">"
-        <div className="text-left">"
-          <div className="text-left">"
-            <div className="text-left">"
-              <h2 className="text-left">"
+      <section className="text-left">
+        <div className="text-left">
+          <div className="text-left">
+            <div className="text-left">
+              <h2 className="text-left">
 =======
       <section className="text-left">
         <div className="text-left">
@@ -178,10 +178,10 @@ export default function AINextGenEnterpriseAutomation2026() {
               <div className="text-left">
                 {[
 <<<<<<< HEAD
-                  { phase: "Phase 1> title= "Assessment & Strategy> duration: "2-4 weeks> description: "Comprehensive analysis of current operations and automation opportunities" },"
-                  { phase: "Phase 2> title= "Pilot Implementation> duration: "4-8 weeks> description: "Deploy AI systems in select departments with measurable results" },"
-                  { phase: "Phase 3> title= "Enterprise Rollout> duration: "8-16 weeks> description: "Scale automation across all business units with full integration" },"
-                  { phase: "Phase 4> title= "Optimization & Evolution> duration: "Ongoing> description: "Continuous improvement and adaptation to achieve maximum efficiency" }"
+                  { phase: "Phase 1> title: "Assessment & Strategy> duration: "2-4 weeks> description: "Comprehensive analysis of current operations and automation opportunities" },"
+                  { phase: "Phase 2> title: "Pilot Implementation> duration: "4-8 weeks> description: "Deploy AI systems in select departments with measurable results" },"
+                  { phase: "Phase 3> title: "Enterprise Rollout> duration: "8-16 weeks> description: "Scale automation across all business units with full integration" },"
+                  { phase: "Phase 4> title: "Optimization & Evolution> duration: "Ongoing> description: "Continuous improvement and adaptation to achieve maximum efficiency" }"
 =======
                   { phase: "Phase 1", title: "Assessment & Strategy", duration: "2-4 weeks", description: "Comprehensive analysis of current operations and automation opportunities" },"
                   { phase: "Phase 2", title: "Pilot Implementation", duration: "4-8 weeks", description: "Deploy AI systems in select departments with measurable results" },"
@@ -218,13 +218,13 @@ export default function AINextGenEnterpriseAutomation2026() {
           </p>
           <div className="text-left">
             <Link 
-              href="/[^"]*"
+              href="/"
               className="text-left"
             >
               Start Your Transformation
             </Link>
             <Link 
-              href="/[^"]*"
+              href="/"
               className="text-left"
             >
               View Success Stories
@@ -239,14 +239,14 @@ export default function AINextGenEnterpriseAutomation2026() {
           <div className="text-left">
             <div className="text-left">
               <Link 
-                href="/[^"]*"
+                href="/"
                 className="text-left"
               >
                 <ArrowRight className="text-left" />
                 Back to Blog
               </Link>
               <Link 
-                href="/[^"]*"
+                href="/"
                 className="text-left"
               >
                 Explore Our Services

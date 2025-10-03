@@ -13,7 +13,7 @@ export default function AICybersecurityAutomation2025Page() {
       <section className="text-left">
         <div className="text-left">
           <div className="text-left">
-            <span className="text-left">New Article<
+            <span className="text-left">New Article</span>
           </div>
           <h1 className="text-left">AI Cybersecurity Automation 2025</h1>
           <p className="text-left">
@@ -21,9 +21,9 @@ export default function AICybersecurityAutomation2025Page() {
             Reduce MTTD/MTTR by an order of magnitude without adding headcount.
           </p>
           <div className="text-left">
-            <span>📅 September 29, 2025<
-            <span>⏱️ 11 min read<
-            <span>👤 Zion Tech Group Team<
+            <span>📅 September 29, 2025</span>
+            <span>⏱️ 11 min read</span>
+            <span>👤 Zion Tech Group Team</span>
           </div>
         </div>
       </section>
@@ -91,12 +91,12 @@ export default function AICybersecurityAutomation2025Page() {
   );
 }
 
-function RelatedArticleCard({ title, description, href }: { title= string; description: string; href: string }) {
+function RelatedArticleCard({ title, description, href }: { title: string; description: string; href: string }) {
   return (
     <Link href={href} className="text-left">
       <h3 className="text-left">{title}</h3>
       <p className="text-left">{description}</p>
-      <span className="text-left">Read More →<
+      <span className="text-left">Read More →</span>
     </Link>
   );
 }

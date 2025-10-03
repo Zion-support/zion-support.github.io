@@ -2,11 +2,11 @@
 import React from 'react';
 
 export const metadata = {
-	title= 'AI 2025: Enterprise AI Safety Blueprint — KPIs, Budgets, Rollback',
+	title: 'AI 2025: Enterprise AI Safety Blueprint — KPIs, Budgets, Rollback',
 	description:
 		'Practical guardrails that teams adopt: KPI-linked scorecards, policy tests in CI, live canaries, and instant rollback for safe velocity.',
 	openGraph: {
-		title= 'AI 2025: Enterprise AI Safety Blueprint',
+		title: 'AI 2025: Enterprise AI Safety Blueprint',
 		description:
 			'KPI-linked scorecards, CI policy tests, canaries, and instant rollback to ship fast without regressions.'
 	}
@@ -14,7 +14,7 @@ export const metadata = {
 
 export default function Page() {
 	return (
-		<article className="text-left">"
+		<article className="text-left">
 			<h1>AI 2025: Enterprise AI Safety Blueprint</h1>
 			<p>
 				Ship AI features weekly without regressions using KPI-linked scorecards, lightweight policy tests in CI,

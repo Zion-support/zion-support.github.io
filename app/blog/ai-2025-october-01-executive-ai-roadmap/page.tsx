@@ -1,23 +1,23 @@
 export const metadata = {
-  title= 'Executive AI Roadmap — October 2025 | Zion Tech Group',
+  title: 'Executive AI Roadmap — October 2025 | Zion Tech Group',
   description:
     'A pragmatic 90‑day enterprise roadmap to ship reliable AI with guardrails, live scorecards, budgets, and measurable ROI.',
 };
 
 export default function ExecutiveAIRoadmapPage() {
   return (
-    <main className="text-left">"
-      <article className="text-left">"
-        <header className="text-left">"
+    <main className="text-left">
+      <article className="text-left">
+        <header className="text-left">
           <p className="text-left">Published Oct 1, 2025</p>"
           <h1 className="text-left">Executive AI Roadmap — October 2025</h1>"
-          <p className="text-left">"
+          <p className="text-left">
             A pragmatic 90‑day enterprise roadmap to ship reliable AI with guardrails, live
             scorecards, budgets, and measurable ROI.
           </p>
         </header>
 
-        <section className="text-left">"
+        <section className="text-left">
           <h2>Why now</h2>
           <p>
             Enterprises are past pilot purgatory. The winners are operationalizing AI with

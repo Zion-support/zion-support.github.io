@@ -1,13 +1,13 @@
 import Link from 'next/link';
 
 export const metadata = {
-	title= 'Autonomous Infrastructure 2025: Self‑Healing, Self‑Optimizing, Self‑Scaling',
+	title: 'Autonomous Infrastructure 2025: Self‑Healing, Self‑Optimizing, Self‑Scaling',
 	description: 'Blueprint for KPI‑linked, policy‑guarded autonomous infrastructure with predictable reliability and cost.',
 };
 
 export default function Page() {
 	return (
-		<main className="text-left">"
+		<main className="text-left">
 			<h1>Autonomous Infrastructure 2025</h1>
 			<p>
 				Design production infrastructure that provisions, heals, and scales automatically with

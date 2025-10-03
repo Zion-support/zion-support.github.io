@@ -55,24 +55,24 @@ export default function InteractiveAIROICalculator() {
   };
 
   return (
-    <div className="text-left">"
-      <div className="text-left">"
-        <div className="text-left">"
-          <div className="text-left">"
-            <Calculator className="text-left" />"
+    <div className="text-left">
+      <div className="text-left">
+        <div className="text-left">
+          <div className="text-left">
+            <Calculator className="text-left" />
             <h2 className="text-left">AI ROI Calculator</h2>"
           </div>
-          <p className="text-left">"
+          <p className="text-left">
             Calculate the potential return on investment for AI implementation in your organization
           </p>
         </div>
 
-        <div className="text-left">"
+        <div className="text-left">
           {/* Input Section */}
-          <div className="text-left">"
+          <div className="text-left">
             <h3 className="text-left">Organization Details</h3>"
             <div>
-              <label className="text-left">"
+              <label className="text-left">
                 Number of Employees
               </label>
               <input
@@ -85,7 +85,7 @@ export default function InteractiveAIROICalculator() {
             </div>
 
             <div>
-              <label className="text-left">"
+              <label className="text-left">
                 Average Annual Salary ($)
               </label>
               <input
@@ -99,7 +99,7 @@ export default function InteractiveAIROICalculator() {
             </div>
 
             <div>
-              <label className="text-left">"
+              <label className="text-left">
                 Current Productivity Level (%)
               </label>
               <input
@@ -113,7 +113,7 @@ export default function InteractiveAIROICalculator() {
             </div>
 
             <div>
-              <label className="text-left">"
+              <label className="text-left">
                 AI Implementation Cost ($)
               </label>
               <input
@@ -127,7 +127,7 @@ export default function InteractiveAIROICalculator() {
             </div>
 
             <div>
-              <label className="text-left">"
+              <label className="text-left">
                 Implementation Timeline (months)
               </label>
               <input
@@ -142,60 +142,60 @@ export default function InteractiveAIROICalculator() {
           </div>
 
           {/* Results Section */}
-          <div className="text-left">"
+          <div className="text-left">
             <h3 className="text-left">Projected Results</h3>"
             {/* ROI */}
-            <div className="text-left">"
-              <div className="text-left">"
-                <TrendingUp className="text-left" />"
+            <div className="text-left">
+              <div className="text-left">
+                <TrendingUp className="text-left" />
                 <h4 className="text-left">ROI</h4>"
               </div>
-              <div className="text-left">"
+              <div className="text-left">
                 {results.roi.toFixed(1)}%
               </div>
-              <p className="text-left">"
+              <p className="text-left">
                 Return on investment after first year
               </p>
             </div>
 
             {/* Payback Period */}
-            <div className="text-left">"
-              <div className="text-left">"
-                <Clock className="text-left" />"
+            <div className="text-left">
+              <div className="text-left">
+                <Clock className="text-left" />
                 <h4 className="text-left">Payback Period</h4>"
               </div>
-              <div className="text-left">"
+              <div className="text-left">
                 {results.paybackPeriod.toFixed(1)} years
               </div>
-              <p className="text-left">"
+              <p className="text-left">
                 Time to recover implementation costs
               </p>
             </div>
 
             {/* Annual Savings */}
-            <div className="text-left">"
-              <div className="text-left">"
-                <DollarSign className="text-left" />"
+            <div className="text-left">
+              <div className="text-left">
+                <DollarSign className="text-left" />
                 <h4 className="text-left">Annual Savings</h4>"
               </div>
-              <div className="text-left">"
+              <div className="text-left">
                 ${results.totalAnnualSavings.toLocaleString()}
               </div>
-              <p className="text-left">"
+              <p className="text-left">
                 Total annual cost savings
               </p>
             </div>
 
             {/* Productivity Gain */}
-            <div className="text-left">"
-              <div className="text-left">"
-                <Users className="text-left" />"
+            <div className="text-left">
+              <div className="text-left">
+                <Users className="text-left" />
                 <h4 className="text-left">Productivity Gain</h4>"
               </div>
-              <div className="text-left">"
+              <div className="text-left">
                 {((results.newProductivity - inputs.currentProductivity) / inputs.currentProductivity * 100).toFixed(1)}%
               </div>
-              <p className="text-left">"
+              <p className="text-left">
                 Increase in productivity levels
               </p>
             </div>
@@ -203,18 +203,18 @@ export default function InteractiveAIROICalculator() {
         </div>
 
         {/* Breakdown */}
-        <div className="text-left">"
+        <div className="text-left">
           <h4 className="text-left">Savings Breakdown</h4>"
-          <div className="text-left">"
+          <div className="text-left">
             <div>
               <div className="text-left">Productivity Savings</div>"
-              <div className="text-left">"
+              <div className="text-left">
                 ${results.productivitySavings.toLocaleString()}
               </div>
             </div>
             <div>
               <div className="text-left">Additional Benefits</div>"
-              <div className="text-left">"
+              <div className="text-left">
                 ${results.additionalBenefits.toLocaleString()}
               </div>
             </div>
@@ -222,8 +222,8 @@ export default function InteractiveAIROICalculator() {
         </div>
 
         {/* Disclaimer */}
-        <div className="text-left">"
-          <p className="text-left">"
+        <div className="text-left">
+          <p className="text-left">
             <strong>Disclaimer:</strong> This calculator provides estimates based on industry averages. 
             Actual results may vary based on implementation quality, industry specifics, and organizational factors. 
             Consult with our AI experts for a detailed analysis tailored to your organization.

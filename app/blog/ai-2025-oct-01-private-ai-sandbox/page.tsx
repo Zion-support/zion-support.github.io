@@ -16,7 +16,7 @@ export default function PrivateAISandbox2025Page() {
       <section className="text-left">
         <div className="text-left">
           <div className="text-left">
-            <span className="text-left">New Article<
+            <span className="text-left">New Article</span>
           </div>
           <h1 className="text-left">Private AI Sandbox (2025)</h1>
           <p className="text-left">
@@ -24,9 +24,9 @@ export default function PrivateAISandbox2025Page() {
             checks. Learn how to standardize prompts, track costs, and ship results to production with confidence.
           </p>
           <div className="text-left">
-            <span>📅 September 30, 2025<
-            <span>⏱️ 10 min read<
-            <span>👤 Zion Tech Group Team<
+            <span>📅 September 30, 2025</span>
+            <span>⏱️ 10 min read</span>
+            <span>👤 Zion Tech Group Team</span>
           </div>
         </div>
       </section>
@@ -99,7 +99,7 @@ function RelatedArticleCard({ title, description, href }: { title: string; descr
     <Link href={href} className="text-left">
       <h3 className="text-left">{title}</h3>
       <p className="text-left">{description}</p>
-      <span className="text-left">Read More →<
+      <span className="text-left">Read More →</span>
     </Link>
   );
 }

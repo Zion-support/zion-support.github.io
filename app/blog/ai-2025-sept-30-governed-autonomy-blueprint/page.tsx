@@ -16,7 +16,7 @@ export default function GovernedAutonomyBlueprint2025() {
       <header className="text-left">
         <div className="text-left">
           <div className="text-left">
-            <span className="text-left">New Article<
+            <span className="text-left">New Article</span>
           </div>
           <h1 className="text-left">Governed Autonomy Blueprint (2025)</h1>
           <p className="text-left">
@@ -24,9 +24,9 @@ export default function GovernedAutonomyBlueprint2025() {
             scorecards to ship measurable business outcomes—safely, predictably, and cost‑effectively.
           </p>
           <div className="text-left">
-            <span>📅 September 30, 2025<
-            <span>⏱️ 12 min read<
-            <span>👤 Zion Tech Group Team<
+            <span>📅 September 30, 2025</span>
+            <span>⏱️ 12 min read</span>
+            <span>👤 Zion Tech Group Team</span>
           </div>
         </div>
       </header>
@@ -107,7 +107,7 @@ function RelatedCard({ title, href, color }: { title: string; href: string; colo
   return (
     <Link href={href} className="text-left">
       <h3 className={`text-xl font-bold mb-2 ${color}`}>{title}</h3>
-      <span className="text-left">Read More →<
+      <span className="text-left">Read More →</span>
     </Link>
   );
 }
@@ -117,7 +117,7 @@ function NextUpCard({ title, description, href }: { title: string; description: 
     <a href={href} className="text-left">
       <h3 className="text-left">{title}</h3>
       <p className="text-left">{description}</p>
-      <span className="text-left">Explore →<
+      <span className="text-left">Explore →</span>
     </a>
   );
 }

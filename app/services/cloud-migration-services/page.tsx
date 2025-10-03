@@ -89,7 +89,7 @@ export default function CloudMigrationServicesPage() {
                 </li>
               </ul>
               <div className="text-left">
-                <span className="text-left">Starting at $2,999<
+                <span className="text-left">Starting at $2,999</span>
               </div>
             </div>
 
@@ -131,7 +131,7 @@ export default function CloudMigrationServicesPage() {
                 </li>
               </ul>
               <div className="text-left">
-                <span className="text-left">Starting at $3,499<
+                <span className="text-left">Starting at $3,499</span>
               </div>
             </div>
 
@@ -176,7 +176,7 @@ export default function CloudMigrationServicesPage() {
                 </li>
               </ul>
               <div className="text-left">
-                <span className="text-left">Starting at $2,999<
+                <span className="text-left">Starting at $2,999</span>
               </div>
             </div>
           </div>
@@ -282,7 +282,7 @@ export default function CloudMigrationServicesPage() {
             {/* Enterprise */}
             <div className="text-left">
               <div className="text-left">
-                <span className="text-left">Most Popular<
+                <span className="text-left">Most Popular</span>
               </div>
               <div className="text-left">
                 <h3 className="text-left">Enterprise</h3>

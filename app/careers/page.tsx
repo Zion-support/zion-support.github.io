@@ -16,21 +16,21 @@ const CareersPage: React.FC = () => {
                 <p className="text-left">
                   Join our AI team to develop cutting-edge machine learning solutions.
                 </p>
-                <span className="text-left">Full-time • Remote<
+                <span className="text-left">Full-time • Remote</span>
               </div>
               <div className="text-left">
                 <h4 className="text-left">DevOps Engineer</h4>
                 <p className="text-left">
                   Help us build and maintain our cloud infrastructure and automation systems.
                 </p>
-                <span className="text-left">Full-time • Hybrid<
+                <span className="text-left">Full-time • Hybrid</span>
               </div>
               <div className="text-left">
                 <h4 className="text-left">Frontend Developer</h4>
                 <p className="text-left">
                   Create beautiful and responsive user interfaces for our products.
                 </p>
-                <span className="text-left">Full-time • Remote<
+                <span className="text-left">Full-time • Remote</span>
               </div>
             </div>
           </div>

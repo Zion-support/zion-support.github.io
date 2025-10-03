@@ -2,10 +2,10 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title= 'Production Agent Guardrails — October 2, 2025 | Zion Tech Group',
+  title: 'Production Agent Guardrails — October 2, 2025 | Zion Tech Group',
   description: 'Practical blueprint to ship agentic systems safely: approvals, budgets, evals, rollback, and observability.',
   openGraph: {
-    title= 'Production Agent Guardrails — October 2, 2025',
+    title: 'Production Agent Guardrails — October 2, 2025',
     description: 'Approvals, verifiers, budgets, online evals, and rollback to ship safe autonomy.',
     type: 'article',
     url: 'https://ziontechgroup.com/blog/ai-2025-oct-02-production-agent-guardrails',
@@ -17,11 +17,11 @@ export const metadata = {
 
 export default function ProductionAgentGuardrailsPage() {
   return (
-    <div className="text-left">"
+    <div className="text-left">
       <Link href="/blog" className="text-left">← Back to Blog</Link>"
       <h1 className="text-left">Production Agent Guardrails — October 2, 2025</h1>"
       <div className="text-left">Published: October 2, 2025 • 15 min read • Implementation Guide</div>"
-      <div className="text-left">"
+      <div className="text-left">
         <p>
           Ship agentic workflows with confidence. This guide distills battle‑tested patterns for approvals, verifiers,
           budgets, online evaluations, and instant rollback—so autonomy improves outcomes without increasing risk or cost.
@@ -51,7 +51,7 @@ export default function ProductionAgentGuardrailsPage() {
           <li>Scale by domain with shared policy, logging, and budgets</li>
         </ol>
 
-        <div className="text-left">"
+        <div className="text-left">
           <h3 className="text-left">Need production‑grade guardrails?</h3>"
           <p className="text-left">We implement approvals, verifiers, routing, and tracing tailored to your KPIs.</p>"
           <Link href="/services" className="text-left">Explore Services</Link>"

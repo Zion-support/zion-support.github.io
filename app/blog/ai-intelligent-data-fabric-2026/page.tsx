@@ -2,11 +2,11 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-	title= 'Intelligent Data Fabric 2026: Real-Time AI for Connected Enterprises',
+	title: 'Intelligent Data Fabric 2026: Real-Time AI for Connected Enterprises',
 	description:
 		'Unify batch, streaming, and unstructured data with an intelligent data fabric to power low-latency AI decisions across the enterprise.',
 	openGraph: {
-		title= 'Intelligent Data Fabric 2026',
+		title: 'Intelligent Data Fabric 2026',
 		description:
 			'Architecture patterns for a unified data fabric enabling real-time AI across domains.',
 		url: 'https://ziontechgroup.com/blog/ai-intelligent-data-fabric-2026',
@@ -16,19 +16,19 @@ export const metadata = {
 
 export default function Page() {
 	return (
-		<div className="text-left">"
-			<div className="text-left">"
+		<div className="text-left">
+			<div className="text-left">
 				<div className="text-left">September 30, 2025 • 15 min read</div>"
-				<h1 className="text-left">"
+				<h1 className="text-left">
 					Intelligent Data Fabric 2026: Real-Time AI for Connected Enterprises
 				</h1>
-				<p className="text-left">"
+				<p className="text-left">
 					A modern data fabric connects batch, streaming, vector, and graph systems into one logical layer
 					for AI. Learn how to build low-latency pipelines with quality signals, lineage, and governance
 					for reliable AI products.
 				</p>
 
-				<div className="text-left">"
+				<div className="text-left">
 					<h2>Core Capabilities</h2>
 					<ul>
 						<li>Unified catalog with lineage and policy enforcement</li>
@@ -53,9 +53,9 @@ export default function Page() {
 					</ul>
 				</div>
 
-				<div className="text-left">"
+				<div className="text-left">
 					<h3 className="text-left">Next up</h3>"
-					<ul className="text-left">"
+					<ul className="text-left">
 						<li>
 							<Link href="/blog/ai-operational-resilience-2026">AI Operational Resilience 2026</Link>"
 						</li>

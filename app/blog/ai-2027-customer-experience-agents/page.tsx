@@ -2,18 +2,18 @@
 import React from 'react';
 
 export const metadata = {
-  title= 'AI 2027: Customer Experience Agents — 24/7 Autonomous CX',
+  title: 'AI 2027: Customer Experience Agents — 24/7 Autonomous CX',
   description: 'Deploy trusted CX agents with budgets, live KPIs, evals, and instant rollback that resolve 80% of tickets autonomously.',
 };
 
 export default function Page() {
   return (
-    <main className="text-left">"
-      <section className="text-left">"
-        <div className="text-left">"
+    <main className="text-left">
+      <section className="text-left">
+        <div className="text-left">
           <h1 className="text-left">AI 2027: Customer Experience Agents — 24/7 Autonomous CX</h1>"
           <p className="text-left">Budgets, KPI‑linked scorecards, evals, and instant rollback to ship safe CX autonomy.</p>"
-          <div className="text-left">"
+          <div className="text-left">
             <p>
               This guide shows how to stand up autonomous CX agents with guardrails: budgeted actions, KPI‑linked canaries,
               and one‑click recovery. Organizations are resolving up to 80% of tickets autonomously with higher CSAT and

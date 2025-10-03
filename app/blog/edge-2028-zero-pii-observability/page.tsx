@@ -2,17 +2,17 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title= 'Edge 2028: Zero‑PII Observability — <100ms Insights',
+  title: 'Edge 2028: Zero‑PII Observability — <100ms Insights',
   description:
     'Scoped IDs, on‑device aggregation, and DP noise for privacy‑safe, real‑time analytics without personal data.'
 };
 
 export default function Page() {
   return (
-    <article className="text-left">"
-      <div className="text-left">"
-        <header className="text-left">"
-          <div className="text-left">"
+    <article className="text-left">
+      <div className="text-left">
+        <header className="text-left">
+          <div className="text-left">
             <span className="text-left">NEW 2028 GUIDE<"
             <span className="text-left">8 min read<"
           </div>
@@ -20,7 +20,7 @@ export default function Page() {
           <p className="text-left">Sub‑100ms insights without personal data using scoped IDs, on‑device aggregation, and DP noise.</p>"
         </header>
 
-        <section className="text-left">"
+        <section className="text-left">
           <h2>Private Analytics Architecture</h2>
           <ul>
             <li>Scoped identifiers + rotating salts</li>
@@ -35,7 +35,7 @@ export default function Page() {
           </ul>
         </section>
 
-        <footer className="text-left">"
+        <footer className="text-left">
           <Link href="/blog" className="text-left">← Back to Blog</Link>"
           <Link href="/content-hub" className="text-left">Explore All Content →</Link>"
         </footer>

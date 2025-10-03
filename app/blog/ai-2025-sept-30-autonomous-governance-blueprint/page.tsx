@@ -2,26 +2,26 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-	title= 'Autonomous Governance Blueprint (2025) — Zion Tech Group',
+	title: 'Autonomous Governance Blueprint (2025) — Zion Tech Group',
 	description: 'A pragmatic blueprint for autonomous governance: policy-driven agents, verifiable controls, and operational trust at enterprise scale.'
 };
 
 export default function AutonomousGovernanceBlueprint2025() {
 	return (
-		<main className="text-left">"
-			<section className="text-left">"
-				<div className="text-left">"
-					<div className="text-left">"
-						<span>NEW<
-						<span>September 30, 2025<
+		<main className="text-left">
+			<section className="text-left">
+				<div className="text-left">
+					<div className="text-left">
+						<span>NEW</span>
+						<span>September 30, 2025</span>
 					</div>
 					<h1 className="text-left">Autonomous Governance Blueprint (2025)</h1>"
 					<p className="text-left">Policy-driven autonomy with verifiable controls, safety scorecards, and zero-regret rollbacks.</p>"
 				</div>
 			</section>
 
-			<section className="text-left">"
-				<div className="text-left">"
+			<section className="text-left">
+				<div className="text-left">
 					<h2>Executive Summary</h2>
 					<p>
 						This blueprint operationalizes autonomous governance across mission-critical AI workflows. It combines
@@ -44,9 +44,9 @@ export default function AutonomousGovernanceBlueprint2025() {
 						<li>Continuous compliance with verifiable attestations</li>
 					</ul>
 
-					<div className="text-left">"
+					<div className="text-left">
 						<div className="text-left">Related guides</div>"
-						<div className="text-left">"
+						<div className="text-left">
 							<Link href="/blog/ai-2025-oct-02-production-agent-guardrails" className="text-left">Production Agent Guardrails →</Link>"
 							<Link href="/blog/ai-2025-oct-01-operational-trust-v3" className="text-left">Operational Trust v3 →</Link>"
 						</div>

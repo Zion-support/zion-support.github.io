@@ -1,13 +1,13 @@
 import Link from 'next/link';
 
 export const metadata = {
-	title= 'Edge 2026: Attested Analytics — Zero‑PII Insights with Signed Proofs',
+	title: 'Edge 2026: Attested Analytics — Zero‑PII Insights with Signed Proofs',
 	description: 'Scoped IDs, on‑device aggregation, DP noise, and signed attestations for trustworthy insights at <100ms.',
 };
 
 export default function Page() {
 	return (
-		<main className="text-left">"
+		<main className="text-left">
 			<h1>Edge 2026: Attested Analytics</h1>
 			<p>
 				Deliver decision‑grade analytics without PII. Use scoped identifiers, device‑side aggregation,

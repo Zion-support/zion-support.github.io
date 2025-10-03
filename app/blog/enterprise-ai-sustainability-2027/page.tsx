@@ -2,17 +2,17 @@
 import React from 'react';
 
 export const metadata = {
-  title= 'Enterprise AI Sustainability 2027',
+  title: 'Enterprise AI Sustainability 2027',
   description: 'Cut AI spend and carbon 70% with quality tiers, green routing, and workload shifting.'
 };
 
 export default function Page() {
   return (
-    <div className="text-left">"
-      <main className="text-left">"
+    <div className="text-left">
+      <main className="text-left">
         <h1 className="text-left">Enterprise AI Sustainability 2027</h1>"
         <p className="text-left">Cut AI spend and carbon 70% with quality tiers, green routing, and workload shifting.</p>"
-        <article className="text-left">"
+        <article className="text-left">
           <p>
             Apply sustainability scorecards to GenAI workloads. Route by carbon intensity and cost, leverage
             quantization and tiered models, and shift non-urgent jobs to green windows.

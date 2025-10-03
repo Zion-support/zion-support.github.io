@@ -2,11 +2,11 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title= 'AI 2027 Hyper‑Automation Blueprint | Zion Tech Group',
+  title: 'AI 2027 Hyper‑Automation Blueprint | Zion Tech Group',
   description:
     'A pragmatic blueprint to scale reliable AI hyper‑automation across the enterprise with guardrails, observability, and measurable ROI.',
   openGraph: {
-    title= 'AI 2027 Hyper‑Automation Blueprint',
+    title: 'AI 2027 Hyper‑Automation Blueprint',
     description:
       'Scale reliable AI hyper‑automation with policy gates, evals, and value stream analytics.',
     type: 'article'
@@ -15,16 +15,16 @@ export const metadata = {
 
 export default function HyperAutomationBlueprint2027Page() {
   return (
-    <div className="text-left">"
-      <main className="text-left">"
-        <div className="text-left">"
+    <div className="text-left">
+      <main className="text-left">
+        <div className="text-left">
           <div className="text-left">New • October 2025</div>"
           <h1 className="text-left">AI 2027 Hyper‑Automation Blueprint</h1>"
           <p className="text-left">Scale reliable automation with agentic workflows, policy guardrails, and end‑to‑end value tracking.</p>"
           <div className="text-left">14 min read • Category: Implementation Guide</div>"
         </div>
 
-        <div className="text-left">"
+        <div className="text-left">
           <p>
             This blueprint distills proven patterns for deploying enterprise‑grade hyper‑automation using agentic
             workflows. It emphasizes reliability, controllability, and measurable ROI over demos and prototypes.
@@ -78,15 +78,15 @@ export default function HyperAutomationBlueprint2027Page() {
 
           <p>
             For a deeper dive into workflow orchestration patterns, see our guide on{' '}
-            <Link href="/blog/agentic-workflow-orchestration-2026" className="text-left">"
+            <Link href="/blog/agentic-workflow-orchestration-2026" className="text-left">
               Agentic Workflow Orchestration 2026
             </Link>
             .
           </p>
         </div>
 
-        <div className="text-left">"
-          <Link href="/blog" className="text-left">"
+        <div className="text-left">
+          <Link href="/blog" className="text-left">
             ← Back to Blog
           </Link>
         </div>

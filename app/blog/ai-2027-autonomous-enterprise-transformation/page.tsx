@@ -27,7 +27,7 @@ export default function AI2027AutonomousEnterpriseTransformation() {
           </div>
           <h1 className="text-left">
             AI 2027: Autonomous Enterprise
-            <span className="text-left"> Transformation<
+            <span className="text-left"> Transformation</span>
           </h1>
           <p className="text-left">
             The future of business is autonomous. Self-governing enterprises that make intelligent decisions, 
@@ -78,10 +78,10 @@ export default function AI2027AutonomousEnterpriseTransformation() {
         </div>
 
         {/* Main Content */}
-<div className="text-left">"
-          <div className="text-left">"
+<div className="text-left">
+          <div className="text-left">
             <h2 className="text-left">The Autonomous Enterprise Revolution</h2>"
-            <div className="text-left">"origin/cursor/fix-errors-and-merge-to-main-0638
+            <div className="text-left">origin/cursor/fix-errors-and-merge-to-main-0638
               <p>
                 By 2027, we envision a world where enterprises operate with unprecedented autonomy. 
                 These self-governing organizations leverage advanced AI systems to make complex decisions, 
@@ -115,7 +115,7 @@ export default function AI2027AutonomousEnterpriseTransformation() {
                 <div className="text-left">
                   <div className="text-left">
                     <div className="text-left">
-                      <span className="text-left">1<
+                      <span className="text-left">1</span>
                     </div>
                     <div>
                       <h4 className="text-left">Foundation Phase</h4>
@@ -124,7 +124,7 @@ export default function AI2027AutonomousEnterpriseTransformation() {
                   </div>
                   <div className="text-left">
                     <div className="text-left">
-                      <span className="text-left">2<
+                      <span className="text-left">2</span>
                     </div>
                     <div>
                       <h4 className="text-left">Integration Phase</h4>
@@ -133,7 +133,7 @@ export default function AI2027AutonomousEnterpriseTransformation() {
                   </div>
                   <div className="text-left">
                     <div className="text-left">
-                      <span className="text-left">3<
+                      <span className="text-left">3</span>
                     </div>
                     <div>
                       <h4 className="text-left">Autonomy Phase</h4>
@@ -153,13 +153,13 @@ export default function AI2027AutonomousEnterpriseTransformation() {
               </p>
               <div className="text-left">
                 <Link 
-                  href="/[^"]*"
+                  href="/"
                   className="text-left"
                 >
                   Start Transformation
                 </Link>
                 <Link 
-                  href="/[^"]*"
+                  href="/"
                   className="text-left"
                 >
                   Learn More
@@ -180,7 +180,7 @@ export default function AI2027AutonomousEnterpriseTransformation() {
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                 </div>
-                <span className="text-left">24/7 operational optimization<
+                <span className="text-left">24/7 operational optimization</span>
               </li>
               <li className="text-left">
                 <div className="text-left">
@@ -188,7 +188,7 @@ export default function AI2027AutonomousEnterpriseTransformation() {
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                 </div>
-                <span className="text-left">Predictive market adaptation<
+                <span className="text-left">Predictive market adaptation</span>
               </li>
               <li className="text-left">
                 <div className="text-left">
@@ -196,7 +196,7 @@ export default function AI2027AutonomousEnterpriseTransformation() {
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                 </div>
-                <span className="text-left">Reduced operational costs<
+                <span className="text-left">Reduced operational costs</span>
               </li>
               <li className="text-left">
                 <div className="text-left">
@@ -204,7 +204,7 @@ export default function AI2027AutonomousEnterpriseTransformation() {
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                 </div>
-                <span className="text-left">Enhanced decision accuracy<
+                <span className="text-left">Enhanced decision accuracy</span>
               </li>
             </ul>
           </div>
@@ -218,7 +218,7 @@ export default function AI2027AutonomousEnterpriseTransformation() {
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                 </div>
-                <span className="text-left">Supply chain optimization<
+                <span className="text-left">Supply chain optimization</span>
               </li>
               <li className="text-left">
                 <div className="text-left">
@@ -226,7 +226,7 @@ export default function AI2027AutonomousEnterpriseTransformation() {
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                 </div>
-                <span className="text-left">Customer service automation<
+                <span className="text-left">Customer service automation</span>
               </li>
               <li className="text-left">
                 <div className="text-left">
@@ -234,7 +234,7 @@ export default function AI2027AutonomousEnterpriseTransformation() {
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                 </div>
-                <span className="text-left">Financial decision making<
+                <span className="text-left">Financial decision making</span>
               </li>
               <li className="text-left">
                 <div className="text-left">
@@ -242,7 +242,7 @@ export default function AI2027AutonomousEnterpriseTransformation() {
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                 </div>
-                <span className="text-left">Strategic planning<
+                <span className="text-left">Strategic planning</span>
               </li>
             </ul>
           </div>
@@ -290,7 +290,7 @@ export default function AI2027AutonomousEnterpriseTransformation() {
         {/* Back to Blog */}
         <div className="text-left">
           <Link 
-            href="/[^"]*"
+            href="/"
             className="text-left"
           >
             <svg className="text-left" fill="none" stroke="currentColor" viewBox="0 0 24 24">

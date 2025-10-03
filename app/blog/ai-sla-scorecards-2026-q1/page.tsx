@@ -25,7 +25,7 @@ export default function Page() {
         <div className="text-left">
           <div className="text-left">
             <Gauge className="text-left" />
-            <span className="text-left">SLA Scorecards • 2026 Q1<
+            <span className="text-left">SLA Scorecards • 2026 Q1</span>
           </div>
           <h1 className="text-left">AI SLA Scorecards 2026 Q1</h1>
           <p className="text-left">Wire SLAs to business KPIs with budgets, live canaries, and instant rollback so teams ship fast without blowing up reliability or cost.</p>

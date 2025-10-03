@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title= 'AI & IT Services | Zion Tech Group - Enterprise Solutions',
+  title: 'AI & IT Services | Zion Tech Group - Enterprise Solutions',
   description: 'Comprehensive AI services, micro SaaS solutions, and IT consulting. Transform your business with cutting-edge technology and automation.',
   keywords: 'AI services, micro SaaS, IT consulting, cloud migration, DevOps, enterprise software, automation',
 };
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   const services = [
     {
-      title= 'AI Data Analytics',
+      title: 'AI Data Analytics',
       description: 'Transform data into actionable insights with predictive modeling and real-time dashboards',
       icon: '📊',
       features: [
@@ -24,7 +24,7 @@ export default function ServicesPage() {
       href: '/services/ai-data-analytics'
     },
     {
-      title= 'AI Workflow Automation',
+      title: 'AI Workflow Automation',
       description: 'Automate business processes with intelligent workflow design and smart triggers',
       icon: '⚡',
       features: [
@@ -37,7 +37,7 @@ export default function ServicesPage() {
       href: '/services/ai-workflow-automation'
     },
     {
-      title= 'AI Virtual Assistant',
+      title: 'AI Virtual Assistant',
       description: '24/7 intelligent customer support with natural language processing',
       icon: '🤖',
       features: [
@@ -50,7 +50,7 @@ export default function ServicesPage() {
       href: '/services/ai-virtual-assistant'
     },
     {
-      title= 'Autonomous Business Operations',
+      title: 'Autonomous Business Operations',
       description: 'Self-managing AI systems that operate entire business processes autonomously',
       icon: '🧠',
       features: [
@@ -63,7 +63,7 @@ export default function ServicesPage() {
       href: '/services/autonomous-operations'
     },
     {
-      title= 'Generative AI Solutions',
+      title: 'Generative AI Solutions',
       description: 'Create, innovate, and generate novel solutions with cutting-edge generative intelligence',
       icon: '✨',
       features: [
@@ -76,7 +76,7 @@ export default function ServicesPage() {
       href: '/services/generative-ai'
     },
     {
-      title= 'Cloud Migration & DevOps',
+      title: 'Cloud Migration & DevOps',
       description: 'Seamless cloud transitions and optimized DevOps practices for modern infrastructure',
       icon: '☁️',
       features: [
@@ -89,7 +89,7 @@ export default function ServicesPage() {
       href: '/services/cloud-migration'
     },
     {
-      title= 'Micro SaaS Development',
+      title: 'Micro SaaS Development',
       description: 'Custom micro SaaS solutions designed for specific business needs and rapid deployment',
       icon: '🔧',
       features: [
@@ -102,7 +102,7 @@ export default function ServicesPage() {
       href: '/services/micro-saas'
     },
     {
-      title= 'Enterprise AI Consulting',
+      title: 'Enterprise AI Consulting',
       description: 'Strategic AI implementation guidance for enterprise-scale digital transformation',
       icon: '🎯',
       features: [
@@ -115,7 +115,7 @@ export default function ServicesPage() {
       href: '/services/ai-consulting'
     },
     {
-      title= 'Cybersecurity & AI Security',
+      title: 'Cybersecurity & AI Security',
       description: 'Advanced security solutions powered by AI for comprehensive threat protection',
       icon: '🛡️',
       features: [
@@ -364,11 +364,11 @@ export default function ServicesPage() {
   ];
 
   return (
-    <div className="text-left">"
+    <div className="text-left">
       {/* Hero Section */}
-      <section className="text-left">"
-        <div className="text-left">"
-          <h1 className="text-left">"
+      <section className="text-left">
+        <div className="text-left">
+          <h1 className="text-left">
             AI & IT Services
           </h1>
           <p className="text-left">
@@ -376,7 +376,7 @@ export default function ServicesPage() {
             and enterprise IT services that drive growth and innovation. From AI content generation 
             to autonomous business operations, we deliver comprehensive technology solutions.
           </p>
-          <div className="text-left">"
+          <div className="text-left">
             <a
               href="tel:+13024640950"
               className="text-left"
@@ -394,13 +394,13 @@ export default function ServicesPage() {
       </section>
 
       {/* Services Grid */}
-      <section className="text-left">"
-        <div className="text-left">"
-          <div className="text-left">"
-            <h2 className="text-left">"
+      <section className="text-left">
+        <div className="text-left">
+          <div className="text-left">
+            <h2 className="text-left">
               Our Comprehensive Services
             </h2>
-            <p className="text-left">"
+            <p className="text-left">
               From AI-powered analytics to autonomous business operations, we provide 
               27+ comprehensive technology solutions that deliver measurable results. 
               Our innovative micro SaaS platforms and enterprise AI systems transform 
@@ -408,24 +408,24 @@ export default function ServicesPage() {
             </p>
           </div>
 
-          <div className="text-left">"
+          <div className="text-left">
             {services.map((service, index) => (
               <div
                 key={index}
                 className="text-left"
               >
-                <div className="text-left">"
+                <div className="text-left">
                   {service.icon}
                 </div>
-                <h3 className="text-left">"
+                <h3 className="text-left">
                   {service.title}
                 </h3>
-                <p className="text-left">"
+                <p className="text-left">
                   {service.description}
                 </p>
-                <ul className="text-left">"
+                <ul className="text-left">
                   {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="text-left">"
+                    <li key={featureIndex} className="text-left">
                       <svg className="text-left" fill="currentColor" viewBox="0 0 20 20">"
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />"
                       </svg>
@@ -437,7 +437,7 @@ export default function ServicesPage() {
                   href={service.href}
                   className="text-left"
                 >
-                  <span>Learn More<
+                  <span>Learn More</span>
                   <svg className="text-left" fill="currentColor" viewBox="0 0 20 20">"
                     <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />"
                   </svg>
@@ -449,34 +449,34 @@ export default function ServicesPage() {
       </section>
 
       {/* Success Metrics */}
-      <section className="text-left">"
-        <div className="text-left">"
-          <div className="text-left">"
-            <h2 className="text-left">"
+      <section className="text-left">
+        <div className="text-left">
+          <div className="text-left">
+            <h2 className="text-left">
               Proven Results
             </h2>
-            <p className="text-left">"
+            <p className="text-left">
               Our clients achieve remarkable improvements across key business metrics
             </p>
           </div>
 
-          <div className="text-left">"
-            <div className="text-left">"
+          <div className="text-left">
+            <div className="text-left">
               <div className="text-left">89%</div>"
               <p className="text-left">Efficiency Improvement</p>"
               <p className="text-left">Average client performance boost</p>"
             </div>
-            <div className="text-left">"
+            <div className="text-left">
               <div className="text-left">$2.3B</div>"
               <p className="text-left">Cost Savings Generated</p>"
               <p className="text-left">Across all client implementations</p>"
             </div>
-            <div className="text-left">"
+            <div className="text-left">
               <div className="text-left">156%</div>"
               <p className="text-left">Average ROI</p>"
               <p className="text-left">Within first year of implementation</p>"
             </div>
-            <div className="text-left">"
+            <div className="text-left">
               <div className="text-left">500+</div>"
               <p className="text-left">Projects Delivered</p>"
               <p className="text-left">Successful implementations worldwide</p>"
@@ -486,34 +486,34 @@ export default function ServicesPage() {
       </section>
 
       {/* Process Section */}
-      <section className="text-left">"
-        <div className="text-left">"
-          <div className="text-left">"
-            <h2 className="text-left">"
+      <section className="text-left">
+        <div className="text-left">
+          <div className="text-left">
+            <h2 className="text-left">
               Our Proven Process
             </h2>
-            <p className="text-left">"
+            <p className="text-left">
               We follow a systematic approach to ensure successful project delivery and maximum ROI
             </p>
           </div>
 
-          <div className="text-left">"
-            <div className="text-left">"
+          <div className="text-left">
+            <div className="text-left">
               <div className="text-left">1</div>"
               <h3 className="text-left">Discovery & Analysis</h3>"
               <p className="text-left">Comprehensive assessment of your current systems, requirements, and opportunities for improvement.</p>"
             </div>
-            <div className="text-left">"
+            <div className="text-left">
               <div className="text-left">2</div>"
               <h3 className="text-left">Strategy & Design</h3>"
               <p className="text-left">Custom solution design and implementation strategy tailored to your specific business needs.</p>"
             </div>
-            <div className="text-left">"
+            <div className="text-left">
               <div className="text-left">3</div>"
               <h3 className="text-left">Implementation</h3>"
               <p className="text-left">Agile development and deployment with continuous testing and optimization throughout the process.</p>"
             </div>
-            <div className="text-left">"
+            <div className="text-left">
               <div className="text-left">4</div>"
               <h3 className="text-left">Optimization</h3>"
               <p className="text-left">Ongoing monitoring, support, and optimization to ensure continued performance and growth.</p>"
@@ -579,7 +579,7 @@ export default function ServicesPage() {
             {/* Professional Package */}
             <div className="text-left">
               <div className="text-left">
-                <span className="text-left">Most Popular<
+                <span className="text-left">Most Popular</span>
               </div>
               <div className="text-left">
                 <h3 className="text-left">Professional Package</h3>
@@ -687,12 +687,12 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="text-left">"
-        <div className="text-left">"
-          <h2 className="text-left">"
+      <section className="text-left">
+        <div className="text-left">
+          <h2 className="text-left">
             Ready to Transform Your Business?
           </h2>
-          <p className="text-left">"
+          <p className="text-left">
             Let's discuss how our AI and technology solutions can accelerate your growth and drive innovation
           </p>
           

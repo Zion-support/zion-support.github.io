@@ -2,18 +2,18 @@
 import React from 'react';
 
 export const metadata = {
-  title= 'Edge 2027: Real‑Time Feature Flags — <100ms, Zero‑PII Rollouts',
+  title: 'Edge 2027: Real‑Time Feature Flags — <100ms, Zero‑PII Rollouts',
   description: 'Signed configs, scoped IDs, and on‑device telemetry for safe, private rollouts at global edge latency.',
 };
 
 export default function Page() {
   return (
-    <main className="text-left">"
-      <section className="text-left">"
-        <div className="text-left">"
+    <main className="text-left">
+      <section className="text-left">
+        <div className="text-left">
           <h1 className="text-left">Edge 2027: Real‑Time Feature Flags</h1>"
           <p className="text-left">Private, sub‑100ms rollouts using signed configs, scoped identifiers, and on‑device metrics.</p>"
-          <div className="text-left">"
+          <div className="text-left">
             <p>
               Deliver safe experimentation globally without PII. This blueprint covers sig‑verified configs, scoped IDs,
               device‑local aggregation, and DP noise to meet compliance while keeping rollouts fast.

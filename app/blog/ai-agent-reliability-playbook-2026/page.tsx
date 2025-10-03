@@ -2,23 +2,23 @@
 import React from 'react';
 
 export const metadata = {
-  title= 'AI Agent Reliability Playbook 2026 | Zion Tech Group',
+  title: 'AI Agent Reliability Playbook 2026 | Zion Tech Group',
   description: 'A practical guide to ship reliable agentic systems with budgets, guardrails, canaries, and instant rollback.',
 };
 
 export default function AIAgentReliabilityPlaybook2026() {
   return (
-    <main className="text-left">"
-      <section className="text-left">"
-        <div className="text-left">"
+    <main className="text-left">
+      <section className="text-left">
+        <div className="text-left">
           <h1 className="text-left">AI Agent Reliability Playbook 2026</h1>"
           <p className="text-left">Budgets, policy gates, eval canaries, and rollback patterns for dependable autonomous systems.</p>"
           <div className="text-left">18 min • Oct 2025</div>"
         </div>
       </section>
 
-      <section className="text-left">"
-        <div className="text-left">"
+      <section className="text-left">
+        <div className="text-left">
           <h2>Overview</h2>
           <p>
             This playbook outlines architecture and operating practices to achieve high reliability in agentic

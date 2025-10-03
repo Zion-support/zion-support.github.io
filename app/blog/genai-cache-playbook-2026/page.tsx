@@ -1,13 +1,13 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title= 'GenAI Cache Playbook (2026): Cut cost 50%+ with semantic caches',
+  title: 'GenAI Cache Playbook (2026): Cut cost 50%+ with semantic caches',
   description: 'A practical guide to tiered, semantic, and program‑aware caches for stable UX under strict budgets.',
 };
 
 export default function Page() {
   return (
-    <main className="text-left">"
+    <main className="text-left">
       <h1>GenAI Cache Playbook (2026)</h1>
       <p>
         Reduce inference spend while keeping quality high. Use multi‑layer caches (prompt, embedding,

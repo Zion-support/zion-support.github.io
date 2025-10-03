@@ -2,11 +2,11 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title= 'AI Executive Playbook 2027 | Zion Tech Group',
+  title: 'AI Executive Playbook 2027 | Zion Tech Group',
   description:
     'A concise executive guide to plan, fund, and govern enterprise AI with measurable outcomes.',
   openGraph: {
-    title= 'AI Executive Playbook 2027',
+    title: 'AI Executive Playbook 2027',
     description:
       'Plan, fund, and govern reliable AI with measurable outcomes across the enterprise.',
     type: 'article'
@@ -15,16 +15,16 @@ export const metadata = {
 
 export default function AIExecutivePlaybook2027Page() {
   return (
-    <div className="text-left">"
-      <main className="text-left">"
-        <div className="text-left">"
+    <div className="text-left">
+      <main className="text-left">
+        <div className="text-left">
           <div className="text-left">New • Oct 2025</div>"
           <h1 className="text-left">AI Executive Playbook 2027</h1>"
           <p className="text-left">Pragmatic roadmap to ship reliable, cost‑effective AI with measurable outcomes across CX, ops, and platforms.</p>"
           <div className="text-left">12 min read • Category: Executive Strategy</div>"
         </div>
 
-        <div className="text-left">"
+        <div className="text-left">
           <h2>What Executives Need</h2>
           <ul>
             <li>Clear outcomes tied to KPIs and value stream analytics</li>
@@ -48,8 +48,8 @@ export default function AIExecutivePlaybook2027Page() {
           <p>For related operational guidance, see our <Link href="/blog/ai-2027-cost-optimization-playbook" className="text-left">Cost Optimization Playbook 2027</Link>.</p>"
         </div>
 
-        <div className="text-left">"
-          <Link href="/blog" className="text-left">"
+        <div className="text-left">
+          <Link href="/blog" className="text-left">
             ← Back to Blog
           </Link>
         </div>

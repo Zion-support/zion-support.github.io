@@ -16,10 +16,10 @@ export default function AICognitiveSuperintelligence2026() {
         <div className="text-left">
           <span className="text-left">
             NEW 2026
-          <
+          </span>
           <span className="text-left">
             BREAKTHROUGH
-          <
+          </span>
         </div>
         <h1 className="text-left">
           AI Cognitive Superintelligence 2026: The Next Frontier of Human-AI Collaboration
@@ -27,15 +27,15 @@ export default function AICognitiveSuperintelligence2026() {
         <div className="text-left">
           <div className="text-left">
             <Clock className="text-left" />
-            <span>35 min read<
+            <span>35 min read</span>
           </div>
           <div className="text-left">
             <Brain className="text-left" />
-            <span>Cognitive AI<
+            <span>Cognitive AI</span>
           </div>
           <div className="text-left">
             <TrendingUp className="text-left" />
-            <span>Advanced Research<
+            <span>Advanced Research</span>
           </div>
         </div>
       </div>
@@ -92,16 +92,16 @@ export default function AICognitiveSuperintelligence2026() {
 
       {/* Main Content */}
 <<<<<<< HEAD
-      <div className="text-left">"
+      <div className="text-left">
         <h2 className="text-left">The Foundation of Cognitive Superintelligence</h2>"
-        <p className="text-left">"
+        <p className="text-left">
           Cognitive superintelligence represents the pinnacle of AI development, combining advanced neural architectures, symbolic reasoning, and meta-cognitive capabilities. These systems can not only process information but understand context, reason about abstract concepts, and generate novel solutions to complex problems.
         </p>
 
         <h3 className="text-left">Core Technical Components</h3>"
-        <div className="text-left">"
+        <div className="text-left">
           <h4 className="text-left">1. Multi-Modal Neural Architectures</h4>"
-          <p className="text-left">"
+          <p className="text-left">
 =======
       <div className="text-left">
         <h2 className="text-left">The Foundation of Cognitive Superintelligence</h2>
@@ -151,11 +151,11 @@ export default function AICognitiveSuperintelligence2026() {
 
 <<<<<<< HEAD
         <h3 className="text-left">Revolutionary Applications</h3>"
-        <div className="text-left">"
-          <div className="text-left">"
-            <div className="text-left">"
-              <div className="text-left">"
-                <Brain className="text-left" />"
+        <div className="text-left">
+          <div className="text-left">
+            <div className="text-left">
+              <div className="text-left">
+                <Brain className="text-left" />
 =======
         <h3 className="text-left">Revolutionary Applications</h3>
 
@@ -224,10 +224,10 @@ export default function AICognitiveSuperintelligence2026() {
 
 <<<<<<< HEAD
         <h3 className="text-left">Implementation Roadmap</h3>"
-        <div className="text-left">"
+        <div className="text-left">
           <h4 className="text-left">Phase 1: Foundation (Months 1-6)</h4>"
-          <div className="text-left">"
-            <div className="text-left">"
+          <div className="text-left">
+            <div className="text-left">
               <h5 className="text-left">Data Integration</h5>"
               <p className="text-left">Establish multi-modal data pipelines and knowledge bases</p>"
 =======
@@ -290,9 +290,9 @@ export default function AICognitiveSuperintelligence2026() {
 
 <<<<<<< HEAD
         <h3 className="text-left">Real-World Success Stories</h3>"
-        <div className="text-left">"
+        <div className="text-left">
           <h4 className="text-left">Fortune 500 Pharmaceutical Company</h4>"
-          <p className="text-left">"
+          <p className="text-left">
 =======
         <h3 className="text-left">Real-World Success Stories</h3>
 
@@ -320,7 +320,7 @@ export default function AICognitiveSuperintelligence2026() {
 
 <<<<<<< HEAD
         <h3 className="text-left">Future Implications</h3>"
-        <p className="text-left">"
+        <p className="text-left">
 =======
         <h3 className="text-left">Future Implications</h3>
 
@@ -339,7 +339,7 @@ export default function AICognitiveSuperintelligence2026() {
 
 <<<<<<< HEAD
         <h3 className="text-left">Getting Started</h3>"
-        <p className="text-left">"
+        <p className="text-left">
 =======
         <h3 className="text-left">Getting Started</h3>
 

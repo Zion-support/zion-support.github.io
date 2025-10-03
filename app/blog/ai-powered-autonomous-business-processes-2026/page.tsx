@@ -46,7 +46,7 @@ export default function AutonomousBusinessProcessesBlog() {
             AI-Powered Autonomous Business Processes:
             <span className="text-left">
               The 2026 Revolution
-            <
+            </span>
           </h1>
           
           <p className="text-left">
@@ -69,8 +69,8 @@ export default function AutonomousBusinessProcessesBlog() {
 
       {/* Content */}
 <<<<<<< HEAD
-      <div className="text-left">"
-        <div className="text-left">"
+      <div className="text-left">
+        <div className="text-left">
 =======
       <div className="text-left">
         <div className="text-left">
@@ -169,19 +169,19 @@ export default function AutonomousBusinessProcessesBlog() {
                 <ul className="text-left">
                   <li className="text-left">
                     <CheckCircle className="text-left" />
-                    <span className="text-left">Analyze applicant data in real-time<
+                    <span className="text-left">Analyze applicant data in real-time</span>
                   </li>
                   <li className="text-left">
                     <CheckCircle className="text-left" />
-                    <span className="text-left">Make credit decisions within seconds<
+                    <span className="text-left">Make credit decisions within seconds</span>
                   </li>
                   <li className="text-left">
                     <CheckCircle className="text-left" />
-                    <span className="text-left">Automatically adjust risk parameters<
+                    <span className="text-left">Automatically adjust risk parameters</span>
                   </li>
                   <li className="text-left">
                     <CheckCircle className="text-left" />
-                    <span className="text-left">Reduce processing time by 85%<
+                    <span className="text-left">Reduce processing time by 85%</span>
                   </li>
                 </ul>
               </div>
@@ -194,19 +194,19 @@ export default function AutonomousBusinessProcessesBlog() {
                 <ul className="text-left">
                   <li className="text-left">
                     <CheckCircle className="text-left" />
-                    <span className="text-left">Predicts demand fluctuations with 95% accuracy<
+                    <span className="text-left">Predicts demand fluctuations with 95% accuracy</span>
                   </li>
                   <li className="text-left">
                     <CheckCircle className="text-left" />
-                    <span className="text-left">Automatically adjusts inventory levels<
+                    <span className="text-left">Automatically adjusts inventory levels</span>
                   </li>
                   <li className="text-left">
                     <CheckCircle className="text-left" />
-                    <span className="text-left">Optimizes logistics routes in real-time<
+                    <span className="text-left">Optimizes logistics routes in real-time</span>
                   </li>
                   <li className="text-left">
                     <CheckCircle className="text-left" />
-                    <span className="text-left">Reduces costs by an average of 30%<
+                    <span className="text-left">Reduces costs by an average of 30%</span>
                   </li>
                 </ul>
               </div>
@@ -251,13 +251,13 @@ export default function AutonomousBusinessProcessesBlog() {
 
           {/* Implementation Roadmap */}
 <<<<<<< HEAD
-          <section className="text-left">"
+          <section className="text-left">
             <h2 className="text-left">Implementation Roadmap</h2>"
-            <div className="text-left">"
-              <div className="text-left">"
+            <div className="text-left">
+              <div className="text-left">
                 <div className="text-left">1</div>"
                 <h3 className="text-left">Foundation (Months 1-3)</h3>"
-                <ul className="text-left">"
+                <ul className="text-left">
 =======
           <section className="text-left">
             <h2 className="text-left">Implementation Roadmap</h2>
@@ -301,11 +301,11 @@ export default function AutonomousBusinessProcessesBlog() {
 
           {/* ROI and Business Impact */}
 <<<<<<< HEAD
-          <section className="text-left">"
+          <section className="text-left">
             <h2 className="text-left">ROI and Business Impact</h2>"
-            <div className="text-left">"
+            <div className="text-left">
               <h3 className="text-left">Quantifiable Benefits</h3>"
-              <div className="text-left">"
+              <div className="text-left">
 =======
           <section className="text-left">
             <h2 className="text-left">ROI and Business Impact</h2>
@@ -318,20 +318,20 @@ export default function AutonomousBusinessProcessesBlog() {
                   <h4 className="text-left">Operational Efficiency</h4>
                   <ul className="text-left">
                     <li className="text-left">
-                      <span className="text-left">Process execution time reduction:<
-                      <span className="text-left">60-80%<
+                      <span className="text-left">Process execution time reduction:</span>
+                      <span className="text-left">60-80%</span>
                     </li>
                     <li className="text-left">
-                      <span className="text-left">Operational cost decrease:<
-                      <span className="text-left">40-50%<
+                      <span className="text-left">Operational cost decrease:</span>
+                      <span className="text-left">40-50%</span>
                     </li>
                     <li className="text-left">
-                      <span className="text-left">Automated decision accuracy:<
-                      <span className="text-left">95%+<
+                      <span className="text-left">Automated decision accuracy:</span>
+                      <span className="text-left">95%+</span>
                     </li>
                     <li className="text-left">
-                      <span className="text-left">Operation availability:<
-                      <span className="text-left">24/7<
+                      <span className="text-left">Operation availability:</span>
+                      <span className="text-left">24/7</span>
                     </li>
                   </ul>
                 </div>
@@ -340,19 +340,19 @@ export default function AutonomousBusinessProcessesBlog() {
                   <ul className="text-left">
                     <li className="text-left">
                       <CheckCircle className="text-left" />
-                      <span className="text-left">Enhanced scalability for business growth<
+                      <span className="text-left">Enhanced scalability for business growth</span>
                     </li>
                     <li className="text-left">
                       <CheckCircle className="text-left" />
-                      <span className="text-left">Improved compliance through consistent execution<
+                      <span className="text-left">Improved compliance through consistent execution</span>
                     </li>
                     <li className="text-left">
                       <CheckCircle className="text-left" />
-                      <span className="text-left">Faster innovation cycles with automated testing<
+                      <span className="text-left">Faster innovation cycles with automated testing</span>
                     </li>
                     <li className="text-left">
                       <CheckCircle className="text-left" />
-                      <span className="text-left">Competitive differentiation through superior efficiency<
+                      <span className="text-left">Competitive differentiation through superior efficiency</span>
                     </li>
                   </ul>
                 </div>
@@ -428,7 +428,7 @@ export default function AutonomousBusinessProcessesBlog() {
                 <h3 className="text-left">Global Manufacturing Transformation</h3>
                 <p className="text-left">See how a Fortune 500 manufacturer achieved 85% process automation with our solution.</p>
                 <div className="text-left">
-                  <span className="text-left">Read case study<
+                  <span className="text-left">Read case study</span>
                   <ArrowLeft className="text-left" />
                 </div>
               </div>
@@ -439,7 +439,7 @@ export default function AutonomousBusinessProcessesBlog() {
                 <h3 className="text-left">Implementation Guide</h3>
                 <p className="text-left">Complete step-by-step guide to implementing autonomous business processes.</p>
                 <div className="text-left">
-                  <span className="text-left">Get the guide<
+                  <span className="text-left">Get the guide</span>
                   <ArrowLeft className="text-left" />
                 </div>
               </div>

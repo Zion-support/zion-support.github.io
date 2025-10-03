@@ -2,10 +2,10 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title= 'AI 2026 Neural Superintelligence: Enterprise Guide | Zion Tech Group',
+  title: 'AI 2026 Neural Superintelligence: Enterprise Guide | Zion Tech Group',
   description: 'Explore neural superintelligence architectures delivering 1000x performance and 99.99% reliability for mission‑critical enterprise workloads.',
   openGraph: {
-    title= 'AI 2026 Neural Superintelligence: Enterprise Guide',
+    title: 'AI 2026 Neural Superintelligence: Enterprise Guide',
     description: 'Architectures, guardrails, and rollout patterns to safely leverage neural superintelligence in the enterprise.',
     type: 'article',
     url: 'https://ziontechgroup.com/blog/ai-2026-neural-superintelligence',
@@ -17,11 +17,11 @@ export const metadata = {
 
 export default function AI2026NeuralSuperintelligencePage() {
   return (
-    <div className="text-left">"
+    <div className="text-left">
       <Link href="/blog" className="text-left">← Back to Blog</Link>"
       <h1 className="text-left">AI 2026 Neural Superintelligence</h1>"
       <div className="text-left">Published: January 20, 2026 • 18 min read • Breakthrough Technology</div>"
-      <div className="text-left">"
+      <div className="text-left">
         <p>
           Neural superintelligence systems combine meta‑cognitive control, self‑verification, and multi‑modal reasoning to deliver
           unprecedented accuracy, speed, and reliability. This guide details architectures, safety guardrails, and rollout
@@ -52,7 +52,7 @@ export default function AI2026NeuralSuperintelligencePage() {
           <li>Scale horizontally with scorecards tied to cost, quality, and latency</li>
         </ol>
 
-        <div className="text-left">"
+        <div className="text-left">
           <h3 className="text-left">Plan a safe, measurable rollout</h3>"
           <p className="text-left">We implement guardrails, online evals, and value stream analytics to unlock ROI fast.</p>"
           <Link href="/services" className="text-left">Explore Services</Link>"

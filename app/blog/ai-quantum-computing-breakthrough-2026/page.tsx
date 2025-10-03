@@ -27,7 +27,7 @@ export default function AIQuantumComputingBreakthrough2026() {
           </div>
           <h1 className="text-left">
             AI Quantum Computing 
-            <span className="text-left"> Breakthrough 2026<
+            <span className="text-left"> Breakthrough 2026</span>
           </h1>
           <p className="text-left">
             Revolutionary AI-powered quantum computing systems that solve complex problems in seconds, 
@@ -118,7 +118,7 @@ export default function AIQuantumComputingBreakthrough2026() {
             <div className="text-left">
               <div className="text-left">
                 <div className="text-left">
-                  <span className="text-left">1<
+                  <span className="text-left">1</span>
                 </div>
                 <div>
                   <h4 className="text-left">Drug Discovery Acceleration</h4>
@@ -130,7 +130,7 @@ export default function AIQuantumComputingBreakthrough2026() {
               </div>
               <div className="text-left">
                 <div className="text-left">
-                  <span className="text-left">2<
+                  <span className="text-left">2</span>
                 </div>
                 <div>
                   <h4 className="text-left">Financial Risk Modeling</h4>
@@ -142,7 +142,7 @@ export default function AIQuantumComputingBreakthrough2026() {
               </div>
               <div className="text-left">
                 <div className="text-left">
-                  <span className="text-left">3<
+                  <span className="text-left">3</span>
                 </div>
                 <div>
                   <h4 className="text-left">Climate Change Solutions</h4>

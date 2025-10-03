@@ -13,21 +13,21 @@ const NewsPage: React.FC = () => {
             <p className="text-left">
               Our latest AI solution achieves 99% accuracy in business process automation.
             </p>
-            <span className="text-left">December 2024<
+            <span className="text-left">December 2024</span>
           </div>
           <div className="text-left">
             <h3 className="text-left">Cloud Migration</h3>
             <p className="text-left">
               Successfully migrated 100+ enterprise clients to our cloud platform.
             </p>
-            <span className="text-left">November 2024<
+            <span className="text-left">November 2024</span>
           </div>
           <div className="text-left">
             <h3 className="text-left">Partnership</h3>
             <p className="text-left">
               Announcing strategic partnership with leading technology providers.
             </p>
-            <span className="text-left">October 2024<
+            <span className="text-left">October 2024</span>
           </div>
         </div>
       </div>

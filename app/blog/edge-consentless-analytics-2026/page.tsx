@@ -3,24 +3,24 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title= 'Edge Analytics 2026: Consent‑Safe Insights — Zion Tech Group',
+  title: 'Edge Analytics 2026: Consent‑Safe Insights — Zion Tech Group',
   description: 'Scoped IDs, on‑device aggregation, and differential privacy for actionable insights without PII at <100ms.',
 };
 
 export default function Page() {
   return (
-    <main className="text-left">"
-      <div className="text-left">"
+    <main className="text-left">
+      <div className="text-left">
         <span className="text-left">Analytics<"
         <span className="text-left">2026<"
       </div>
       <h1 className="text-left">Edge Analytics 2026: Consent‑Safe Insights</h1>"
-      <p className="text-left">"
+      <p className="text-left">
         Build privacy‑first analytics using scoped identifiers, on‑device aggregation, and DP noise. Unlock
         product insights globally without collecting PII—delivering sub‑100ms experiences.
       </p>
 
-      <div className="text-left">"
+      <div className="text-left">
         <h2>Architecture Overview</h2>
         <ul>
           <li>Scoped IDs derived from device secrets and per‑app salts</li>
@@ -42,7 +42,7 @@ export default function Page() {
         </ul>
       </div>
 
-      <div className="text-left">"
+      <div className="text-left">
         <Link href="/blog" className="text-left">Explore More Articles</Link>"
         <Link href="/contact" className="text-left">Talk to an Expert</Link>"
       </div>

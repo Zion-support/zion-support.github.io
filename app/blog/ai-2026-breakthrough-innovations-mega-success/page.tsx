@@ -24,16 +24,16 @@ export default function AI2026BreakthroughInnovationsPage() {
         <div className="text-left">
           <span className="text-left">
             BREAKTHROUGH 2026
-          <
+          </span>
           <span className="text-left">
             $2.8T SUCCESS
-          <
+          </span>
         </div>
         <h1 className="text-left">
           AI 2026 Breakthrough Innovations: 
           <span className="text-left">
             {' '}$2.8 Trillion Success Story
-          <
+          </span>
         </h1>
         <p className="text-left">
           Revolutionary quantum-neural fusion, autonomous enterprise systems, and consciousness-level AI 
@@ -42,15 +42,15 @@ export default function AI2026BreakthroughInnovationsPage() {
         <div className="text-left">
           <div className="text-left">
             <TrendingUp className="text-left" />
-            <span className="text-left">2,800% ROI Average<
+            <span className="text-left">2,800% ROI Average</span>
           </div>
           <div className="text-left">
             <Users className="text-left" />
-            <span className="text-left">500+ Fortune 500 Companies<
+            <span className="text-left">500+ Fortune 500 Companies</span>
           </div>
           <div className="text-left">
             <Brain className="text-left" />
-            <span className="text-left">99.9% Automation Rate<
+            <span className="text-left">99.9% Automation Rate</span>
           </div>
         </div>
       </div>
@@ -72,7 +72,7 @@ export default function AI2026BreakthroughInnovationsPage() {
             </p>
             <div className="text-left">
               <Zap className="text-left" />
-              <span>1,000,000x Performance Boost<
+              <span>1,000,000x Performance Boost</span>
             </div>
           </div>
 
@@ -89,7 +89,7 @@ export default function AI2026BreakthroughInnovationsPage() {
             </p>
             <div className="text-left">
               <Zap className="text-left" />
-              <span>99.9% Autonomous Operations<
+              <span>99.9% Autonomous Operations</span>
             </div>
           </div>
 
@@ -106,7 +106,7 @@ export default function AI2026BreakthroughInnovationsPage() {
             </p>
             <div className="text-left">
               <Zap className="text-left" />
-              <span>100,000x Faster Decisions<
+              <span>100,000x Faster Decisions</span>
             </div>
           </div>
 
@@ -123,7 +123,7 @@ export default function AI2026BreakthroughInnovationsPage() {
             </p>
             <div className="text-left">
               <Zap className="text-left" />
-              <span>99.999% Self-Aware<
+              <span>99.999% Self-Aware</span>
             </div>
           </div>
         </div>
@@ -195,21 +195,21 @@ export default function AI2026BreakthroughInnovationsPage() {
         </p>
         <div className="text-left">
           <Link 
-            href="/[^"]*"
+            href="/"
             className="text-left"
           >
             View Success Story
             <ArrowRight className="text-left" />
           </Link>
           <Link 
-            href="/[^"]*"
+            href="/"
             className="text-left"
           >
             Start Implementation
             <ArrowRight className="text-left" />
           </Link>
           <Link 
-            href="/[^"]*"
+            href="/"
             className="text-left"
           >
             Get Expert Consultation
@@ -224,16 +224,16 @@ export default function AI2026BreakthroughInnovationsPage() {
         <div className="text-left">
           <Link href="/blog/ai-2026-quantum-consciousness-breakthrough" className="text-left">
             <div className="text-left">
-              <span className="text-left">BREAKTHROUGH<
-              <span className="text-left">$847B SUCCESS<
+              <span className="text-left">BREAKTHROUGH</span>
+              <span className="text-left">$847B SUCCESS</span>
             </div>
             <h3 className="text-left">AI 2026 Quantum Consciousness Breakthrough</h3>
             <p className="text-left">Revolutionary quantum consciousness achieving 99.999% awareness levels.</p>
           </Link>
           <Link href="/case-studies/fortune-500-ai-2026-breakthrough-2-8-trillion-success" className="text-left">
             <div className="text-left">
-              <span className="text-left">FORTUNE 500<
-              <span className="text-left">$2.8T ROI<
+              <span className="text-left">FORTUNE 500</span>
+              <span className="text-left">$2.8T ROI</span>
             </div>
             <h3 className="text-left">Fortune 500 $2.8 Trillion Success Story</h3>
             <p className="text-left">How leading enterprises achieved unprecedented value with AI breakthrough innovations.</p>

@@ -2,11 +2,11 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-	title= 'Trustless Evaluation Blueprint (2026) | Zion Tech Group',
+	title: 'Trustless Evaluation Blueprint (2026) | Zion Tech Group',
 	description:
 		'Implement verifiable, tamper‑evident AI evaluations with signed datasets, attestations, and reproducible scoring.',
 	openGraph: {
-		title= 'Trustless Evaluation Blueprint (2026)',
+		title: 'Trustless Evaluation Blueprint (2026)',
 		description:
 			'How to build signed, reproducible, and policy‑aligned evals for reliable AI at scale.',
 		type: 'article'
@@ -15,10 +15,10 @@ export const metadata = {
 
 export default function TrustlessEvaluationBlueprint2026Page() {
 	return (
-		<div className="text-left">"
-			<main className="text-left">"
-				<header className="text-left">"
-					<div className="text-left">"
+		<div className="text-left">
+			<main className="text-left">
+				<header className="text-left">
+					<div className="text-left">
 						New • 2026
 					</div>
 					<h1 className="text-left">Trustless Evaluation Blueprint (2026)</h1>"
@@ -26,7 +26,7 @@ export default function TrustlessEvaluationBlueprint2026Page() {
 					<div className="text-left">16 min read • Category: Reliability & Governance</div>"
 				</header>
 
-				<div className="text-left">"
+				<div className="text-left">
 					<p>
 						This blueprint provides a practical approach to make AI evaluations tamper‑evident and reproducible across
 						teams and environments. It covers dataset signing, containerized runners, deterministic scoring, and end‑to‑end
@@ -86,8 +86,8 @@ export default function TrustlessEvaluationBlueprint2026Page() {
 					</p>
 				</div>
 
-				<div className="text-left">"
-					<Link href="/blog" className="text-left">"
+				<div className="text-left">
+					<Link href="/blog" className="text-left">
 						← Back to Blog
 					</Link>
 				</div>

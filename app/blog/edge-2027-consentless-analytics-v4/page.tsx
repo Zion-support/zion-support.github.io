@@ -3,10 +3,10 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title= 'Edge 2027: Consentless Analytics v4 — Zero‑PII, <100ms | Zion Tech Group',
+  title: 'Edge 2027: Consentless Analytics v4 — Zero‑PII, <100ms | Zion Tech Group',
   description: 'Design zero‑PII analytics at the edge with scoped IDs, on‑device aggregation, and DP noise — actionable insights under 100ms.',
   openGraph: {
-    title= 'Edge 2027: Consentless Analytics v4',
+    title: 'Edge 2027: Consentless Analytics v4',
     description: 'Scoped IDs, edge aggregation, and DP noise for compliant, actionable analytics.',
     type: 'article'
   }
@@ -14,21 +14,21 @@ export const metadata = {
 
 export default function Edge2027ConsentlessAnalyticsV4Page() {
   return (
-    <div className="text-left">"
-      <div className="text-left">"
-        <div className="text-left">"
+    <div className="text-left">
+      <div className="text-left">
+        <div className="text-left">
           ⚡ Edge Analytics
         </div>
-        <h1 className="text-left">"
+        <h1 className="text-left">
           Edge 2027: Consentless Analytics v4
         </h1>
-        <p className="text-left">"
+        <p className="text-left">
           Actionable insights without PII using scoped identifiers, on‑device aggregation, and
           differential privacy — all under 100ms.
         </p>
       </div>
 
-      <article className="text-left">"
+      <article className="text-left">
         <h2>Privacy by Design</h2>
         <p>
           Replace identities with scoped identifiers, aggregate on device, and add calibrated
@@ -49,7 +49,7 @@ export default function Edge2027ConsentlessAnalyticsV4Page() {
           Canary guardrails ensure changes don’t regress KPIs.
         </p>
 
-        <div className="text-left">"
+        <div className="text-left">
           <strong>Outcome:</strong> Decision‑grade analytics without PII risk or consent bottlenecks.
         </div>
 
@@ -61,10 +61,10 @@ export default function Edge2027ConsentlessAnalyticsV4Page() {
         </ul>
       </article>
 
-      <div className="text-left">"
+      <div className="text-left">
         <h3 className="text-left">Ready to modernize analytics?</h3>"
         <p className="text-left">We deploy zero‑PII analytics with sub‑100ms global performance.</p>"
-        <div className="text-left">"
+        <div className="text-left">
           <Link href="/contact" className="text-left">Talk to an expert</Link>"
           <Link href="/services/ai-innovation-lab" className="text-left">Explore services</Link>"
         </div>

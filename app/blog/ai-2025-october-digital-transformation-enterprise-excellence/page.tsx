@@ -1,23 +1,23 @@
 export const metadata = {
-  title= 'Digital Transformation Excellence — October 2025 | Zion Tech Group',
+  title: 'Digital Transformation Excellence — October 2025 | Zion Tech Group',
   description:
     'A comprehensive enterprise guide to AI-powered digital transformation delivering multi-billion dollar value with measurable outcomes.',
 };
 
 export default function DigitalTransformationExcellencePage() {
   return (
-    <main className="text-left">"
-      <article className="text-left">"
-        <header className="text-left">"
+    <main className="text-left">
+      <article className="text-left">
+        <header className="text-left">
           <p className="text-left">Published Oct 1, 2025</p>"
           <h1 className="text-left">Digital Transformation Excellence — October 2025</h1>"
-          <p className="text-left">"
+          <p className="text-left">
             A practical blueprint to unlock enterprise-scale value through AI-first operating models, platform modernization,
             and governed acceleration — from strategy to measurable outcomes.
           </p>
         </header>
 
-        <section className="text-left">"
+        <section className="text-left">
           <h2>Executive summary</h2>
           <p>
             Leaders are moving beyond pilots to durable business impact. This guide outlines how to instrument value, modernize

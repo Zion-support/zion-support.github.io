@@ -2,11 +2,11 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title= 'AI 2028: Autonomous FinOps Scorecards | Zion Tech Group',
+  title: 'AI 2028: Autonomous FinOps Scorecards | Zion Tech Group',
   description:
     'Prevent cost regressions with live KPI-linked scorecards, budget-aware routing, and instant rollback for GenAI platforms.',
   openGraph: {
-    title= 'AI 2028: Autonomous FinOps Scorecards',
+    title: 'AI 2028: Autonomous FinOps Scorecards',
     description:
       'Prevent cost regressions with live KPI-linked scorecards, budget-aware routing, and instant rollback for GenAI platforms.',
     type: 'article',
@@ -16,14 +16,14 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <div className="text-left">"
-      <section className="text-left">"
-        <div className="text-left">"
+    <div className="text-left">
+      <section className="text-left">
+        <div className="text-left">
           <div className="text-left">FinOps • Autonomous Platforms</div>"
-          <h1 className="text-left">"
+          <h1 className="text-left">
             AI 2028: Autonomous FinOps Scorecards
           </h1>
-          <p className="text-left">"
+          <p className="text-left">
             Prevent spend regressions with KPI-linked action scorecards, budget-aware routing, tiered quality, and
             instant rollback — all without hurting user experience.
           </p>
@@ -31,7 +31,7 @@ export default function Page() {
         </div>
       </section>
 
-      <article className="text-left">"
+      <article className="text-left">
         <h2>Why Autonomous FinOps Now</h2>
         <p>
           GenAI costs can spike 3–10x with prompt drift, retrieval variance, and traffic surges. Traditional dashboards are
@@ -66,13 +66,13 @@ export default function Page() {
           <li>Automate rollback and alerting via scorecard triggers.</li>
         </ol>
 
-        <div className="text-left">"
+        <div className="text-left">
           <div className="text-left">Next up</div>"
-          <div className="text-left">"
-            <Link href="/blog/ai-2027-cost-optimization-playbook" className="text-left">"
+          <div className="text-left">
+            <Link href="/blog/ai-2027-cost-optimization-playbook" className="text-left">
               Cost Optimization Playbook 2027 →
             </Link>
-            <Link href="/blog/genai-quality-tiers-v2-2026" className="text-left">"
+            <Link href="/blog/genai-quality-tiers-v2-2026" className="text-left">
               GenAI Quality Tiers v2 →
             </Link>
           </div>

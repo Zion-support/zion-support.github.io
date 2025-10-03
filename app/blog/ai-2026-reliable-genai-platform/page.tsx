@@ -2,34 +2,34 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title= 'Reliable GenAI Platform 2026: Architecture, Guardrails, and ROI',
+  title: 'Reliable GenAI Platform 2026: Architecture, Guardrails, and ROI',
   description:
     'Design a reliable, cost‑efficient GenAI platform with routing, memory, evals, and policy guardrails. A pragmatic 2026 blueprint for enterprises.',
 };
 
 export default function ReliableGenAIPlatform2026Page() {
   return (
-    <div className="text-left">"
-      <main className="text-left">"
-        <div className="text-left">"
+    <div className="text-left">
+      <main className="text-left">
+        <div className="text-left">
           <Link href="/blog" className="text-left">← Back to Blog</Link>"
         </div>
-        <header className="text-left">"
-          <div className="text-left">"
+        <header className="text-left">
+          <div className="text-left">
             <span className="text-left">Implementation Guide<"
-            <span>January 2026<
-            <span>18 min read<
+            <span>January 2026</span>
+            <span>18 min read</span>
           </div>
-          <h1 className="text-left">"
+          <h1 className="text-left">
             Reliable GenAI Platform 2026: Architecture, Guardrails, and ROI
           </h1>
-          <p className="text-left">"
+          <p className="text-left">
             A pragmatic blueprint to ship a reliable, governed, and cost‑efficient GenAI platform
             with policy guardrails, evaluations, and cost‑aware routing.
           </p>
         </header>
 
-        <article className="text-left">"
+        <article className="text-left">
           <h2>Why Reliability First</h2>
           <p>
             Production GenAI requires deterministic behavior under constraints. Reliability comes from
@@ -73,7 +73,7 @@ export default function ReliableGenAIPlatform2026Page() {
           </ul>
         </article>
 
-        <footer className="text-left">"
+        <footer className="text-left">
           <p>
             Continue exploring:
             {' '}

@@ -16,10 +16,10 @@ export default function AIMetaverseEnterpriseTransformation2026() {
         <div className="text-left">
           <span className="text-left">
             NEW 2026
-          <
+          </span>
           <span className="text-left">
             REVOLUTION
-          <
+          </span>
         </div>
         <h1 className="text-left">
           AI Metaverse Enterprise Transformation 2026: The Future of Virtual Business Operations
@@ -27,15 +27,15 @@ export default function AIMetaverseEnterpriseTransformation2026() {
         <div className="text-left">
           <div className="text-left">
             <Clock className="text-left" />
-            <span>28 min read<
+            <span>28 min read</span>
           </div>
           <div className="text-left">
             <Globe className="text-left" />
-            <span>Metaverse<
+            <span>Metaverse</span>
           </div>
           <div className="text-left">
             <Users className="text-left" />
-            <span>Enterprise<
+            <span>Enterprise</span>
           </div>
         </div>
       </div>
@@ -92,16 +92,16 @@ export default function AIMetaverseEnterpriseTransformation2026() {
 
       {/* Main Content */}
 <<<<<<< HEAD
-      <div className="text-left">"
+      <div className="text-left">
         <h2 className="text-left">The AI Metaverse Revolution</h2>"
-        <p className="text-left">"
+        <p className="text-left">
           The convergence of AI and metaverse technologies is creating unprecedented opportunities for enterprise transformation. AI-powered virtual environments enable organizations to transcend physical limitations, create immersive experiences, and unlock new levels of collaboration and innovation.
         </p>
 
         <h3 className="text-left">Core Technologies</h3>"
-        <div className="text-left">"
+        <div className="text-left">
           <h4 className="text-left">1. AI-Powered Virtual Environments</h4>"
-          <p className="text-left">"
+          <p className="text-left">
 =======
       <div className="text-left">
         <h2 className="text-left">The AI Metaverse Revolution</h2>
@@ -151,11 +151,11 @@ export default function AIMetaverseEnterpriseTransformation2026() {
 
 <<<<<<< HEAD
         <h3 className="text-left">Transformative Applications</h3>"
-        <div className="text-left">"
-          <div className="text-left">"
-            <div className="text-left">"
-              <div className="text-left">"
-                <Users className="text-left" />"
+        <div className="text-left">
+          <div className="text-left">
+            <div className="text-left">
+              <div className="text-left">
+                <Users className="text-left" />
 =======
         <h3 className="text-left">Transformative Applications</h3>
 
@@ -224,10 +224,10 @@ export default function AIMetaverseEnterpriseTransformation2026() {
 
 <<<<<<< HEAD
         <h3 className="text-left">Implementation Strategy</h3>"
-        <div className="text-left">"
+        <div className="text-left">
           <h4 className="text-left">Phase 1: Foundation (Months 1-4)</h4>"
-          <div className="text-left">"
-            <div className="text-left">"
+          <div className="text-left">
+            <div className="text-left">
               <h5 className="text-left">Infrastructure Setup</h5>"
               <p className="text-left">Deploy VR/AR hardware and software platforms</p>"
 =======
@@ -290,9 +290,9 @@ export default function AIMetaverseEnterpriseTransformation2026() {
 
 <<<<<<< HEAD
         <h3 className="text-left">Success Stories</h3>"
-        <div className="text-left">"
+        <div className="text-left">
           <h4 className="text-left">Global Manufacturing Company</h4>"
-          <p className="text-left">"
+          <p className="text-left">
 =======
         <h3 className="text-left">Success Stories</h3>
 
@@ -320,7 +320,7 @@ export default function AIMetaverseEnterpriseTransformation2026() {
 
 <<<<<<< HEAD
         <h3 className="text-left">Future Outlook</h3>"
-        <p className="text-left">"
+        <p className="text-left">
 =======
         <h3 className="text-left">Future Outlook</h3>
 
@@ -339,7 +339,7 @@ export default function AIMetaverseEnterpriseTransformation2026() {
 
 <<<<<<< HEAD
         <h3 className="text-left">Getting Started</h3>"
-        <p className="text-left">"
+        <p className="text-left">
 =======
         <h3 className="text-left">Getting Started</h3>
 

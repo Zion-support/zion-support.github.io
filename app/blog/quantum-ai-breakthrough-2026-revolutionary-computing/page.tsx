@@ -18,7 +18,7 @@ export default function QuantumAIBreakthrough2026() {
             <div className="text-left">
               <span className="text-left">
                 ⚛️ January 2026 • Quantum AI Revolution
-              <
+              </span>
             </div>
             
             <h1 className="text-left">
@@ -42,7 +42,7 @@ export default function QuantumAIBreakthrough2026() {
                 <Zap className="text-left" />
                 Breakthrough Technology
               <
-              <span>18 min read<
+              <span>18 min read</span>
             </div>
           </div>
         </div>
@@ -74,11 +74,11 @@ export default function QuantumAIBreakthrough2026() {
 
       {/* Main Content */}
 <<<<<<< HEAD
-      <section className="text-left">"
-        <div className="text-left">"
-          <div className="text-left">"
-            <div className="text-left">"
-              <h2 className="text-left">"
+      <section className="text-left">
+        <div className="text-left">
+          <div className="text-left">
+            <div className="text-left">
+              <h2 className="text-left">
 =======
       <section className="text-left">
         <div className="text-left">
@@ -197,10 +197,10 @@ export default function QuantumAIBreakthrough2026() {
               <div className="text-left">
                 {[
 <<<<<<< HEAD
-                  { phase: "Discovery> title= "Quantum AI Assessment> duration: "1-2 weeks> description: "Evaluate your specific use cases and quantum AI potential" },"
-                  { phase: "Design> title= "Custom Quantum Architecture> duration: "2-4 weeks> description: "Design tailored quantum-neural solutions for your challenges" },"
-                  { phase: "Development> title= "Quantum AI Implementation> duration: "4-8 weeks> description: "Build and deploy your custom quantum AI systems" },"
-                  { phase: "Optimization> title= "Continuous Enhancement> duration: "Ongoing> description: "Evolve and optimize quantum AI performance continuously" }"
+                  { phase: "Discovery> title: "Quantum AI Assessment> duration: "1-2 weeks> description: "Evaluate your specific use cases and quantum AI potential" },"
+                  { phase: "Design> title: "Custom Quantum Architecture> duration: "2-4 weeks> description: "Design tailored quantum-neural solutions for your challenges" },"
+                  { phase: "Development> title: "Quantum AI Implementation> duration: "4-8 weeks> description: "Build and deploy your custom quantum AI systems" },"
+                  { phase: "Optimization> title: "Continuous Enhancement> duration: "Ongoing> description: "Evolve and optimize quantum AI performance continuously" }"
 =======
                   { phase: "Discovery", title: "Quantum AI Assessment", duration: "1-2 weeks", description: "Evaluate your specific use cases and quantum AI potential" },"
                   { phase: "Design", title: "Custom Quantum Architecture", duration: "2-4 weeks", description: "Design tailored quantum-neural solutions for your challenges" },"
@@ -227,10 +227,10 @@ export default function QuantumAIBreakthrough2026() {
                   Be among the first enterprises to experience quantum AI computing. Our exclusive early access program provides priority implementation, dedicated support, and special pricing for pioneering organizations.
                 </p>
                 <div className="text-left">
-                  <span className="text-left">Limited to 50 Enterprises<
-                  <span className="text-left">Priority Implementation<
-                  <span className="text-left">Dedicated Support<
-                  <span className="text-left">Special Pricing<
+                  <span className="text-left">Limited to 50 Enterprises</span>
+                  <span className="text-left">Priority Implementation</span>
+                  <span className="text-left">Dedicated Support</span>
+                  <span className="text-left">Special Pricing</span>
                 </div>
               </div>
 
@@ -250,13 +250,13 @@ export default function QuantumAIBreakthrough2026() {
           </p>
           <div className="text-left">
             <Link 
-              href="/[^"]*"
+              href="/"
               className="text-left"
             >
               Join Early Access Program
             </Link>
             <Link 
-              href="/[^"]*"
+              href="/"
               className="text-left"
             >
               View Quantum Success Stories
@@ -271,14 +271,14 @@ export default function QuantumAIBreakthrough2026() {
           <div className="text-left">
             <div className="text-left">
               <Link 
-                href="/[^"]*"
+                href="/"
                 className="text-left"
               >
                 <ArrowRight className="text-left" />
                 Back to Blog
               </Link>
               <Link 
-                href="/[^"]*"
+                href="/"
                 className="text-left"
               >
                 Explore Quantum AI Services

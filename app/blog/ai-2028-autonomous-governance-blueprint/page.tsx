@@ -18,11 +18,11 @@ export const metadata = {
 
 export default function AutonomousGovernanceBlueprint2028() {
   return (
-<div className="text-left">"
+<div className="text-left">
       <Link href="/blog" className="text-left">← Back to Blog</Link>"
       <h1 className="text-left">AI 2028: Autonomous Governance Blueprint</h1>"
       <div className="text-left">Published: September 30, 2025 • 12 min read • AI Governance</div>"
-      <div className="text-left">"origin/cursor/fix-errors-and-merge-to-main-0638
+      <div className="text-left">origin/cursor/fix-errors-and-merge-to-main-0638
         <p>
           This blueprint operationalizes enterprise autonomy with guardrails that make outcomes measurable and safe.
           It details KPI‑linked scorecards, budget gates, PR policy tests, and instant rollback backed by live canaries.

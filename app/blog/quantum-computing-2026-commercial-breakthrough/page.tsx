@@ -39,15 +39,15 @@ export default function QuantumComputing2026CommercialBreakthrough() {
         <div className="text-left">
           <div className="text-left">
             <User className="text-left" />
-            <span>Zion Tech Group<
+            <span>Zion Tech Group</span>
           </div>
           <div className="text-left">
             <Calendar className="text-left" />
-            <span>January 15, 2026<
+            <span>January 15, 2026</span>
           </div>
           <div className="text-left">
             <Clock className="text-left" />
-            <span>15 min read<
+            <span>15 min read</span>
           </div>
         </div>
 
@@ -62,8 +62,8 @@ export default function QuantumComputing2026CommercialBreakthrough() {
         </div>
 
         {/* Main Content */}
-<div className="text-left">"
-          <div className="text-left">"origin/cursor/fix-errors-and-merge-to-main-0638
+<div className="text-left">
+          <div className="text-left">origin/cursor/fix-errors-and-merge-to-main-0638
             {/* Executive Summary */}
             <div className="text-left">
               <h2 className="text-left">
@@ -249,20 +249,20 @@ export default function QuantumComputing2026CommercialBreakthrough() {
                     <h4 className="text-left">Market Size Growth</h4>
                     <div className="text-left">
                       <div className="text-left">
-                        <span className="text-left">2026<
-                        <span className="text-left">$47.3B<
+                        <span className="text-left">2026</span>
+                        <span className="text-left">$47.3B</span>
                       </div>
                       <div className="text-left">
-                        <span className="text-left">2027<
-                        <span className="text-left">$89.7B<
+                        <span className="text-left">2027</span>
+                        <span className="text-left">$89.7B</span>
                       </div>
                       <div className="text-left">
-                        <span className="text-left">2028<
-                        <span className="text-left">$156.2B<
+                        <span className="text-left">2028</span>
+                        <span className="text-left">$156.2B</span>
                       </div>
                       <div className="text-left">
-                        <span className="text-left">2029<
-                        <span className="text-left">$267.8B<
+                        <span className="text-left">2029</span>
+                        <span className="text-left">$267.8B</span>
                       </div>
                     </div>
                   </div>
@@ -270,16 +270,16 @@ export default function QuantumComputing2026CommercialBreakthrough() {
                     <h4 className="text-left">Key Market Segments</h4>
                     <div className="text-left">
                       <div className="text-left">
-                        <span className="text-left">Quantum Hardware<
-                        <span className="text-left">$18.9B<
+                        <span className="text-left">Quantum Hardware</span>
+                        <span className="text-left">$18.9B</span>
                       </div>
                       <div className="text-left">
-                        <span className="text-left">Quantum Software<
-                        <span className="text-left">$12.4B<
+                        <span className="text-left">Quantum Software</span>
+                        <span className="text-left">$12.4B</span>
                       </div>
                       <div className="text-left">
-                        <span className="text-left">Quantum Services<
-                        <span className="text-left">$16.0B<
+                        <span className="text-left">Quantum Services</span>
+                        <span className="text-left">$16.0B</span>
                       </div>
                     </div>
                   </div>

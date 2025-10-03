@@ -10,7 +10,7 @@ export default function InteractiveContentShowcase2026() {
     articles: [
       {
         id: 1,
-        title= 'AI-Powered Autonomous Business Systems 2026',
+        title: 'AI-Powered Autonomous Business Systems 2026',
         description: 'Explore the revolutionary impact of AI-powered autonomous business systems in 2026, driving efficiency and innovation.',
         link: '/blog/ai-autonomous-business-systems-2026',
         category: 'Blog',
@@ -18,7 +18,7 @@ export default function InteractiveContentShowcase2026() {
       },
       {
         id: 2,
-        title= 'AI Quantum Computing Breakthroughs 2026',
+        title: 'AI Quantum Computing Breakthroughs 2026',
         description: 'Discover the latest AI quantum computing breakthroughs and their profound implications for enterprise capabilities.',
         link: '/blog/ai-quantum-computing-breakthrough-2026',
         category: 'Blog',
@@ -26,7 +26,7 @@ export default function InteractiveContentShowcase2026() {
       },
       {
         id: 3,
-        title= 'AI Enterprise Automation Revolution 2026',
+        title: 'AI Enterprise Automation Revolution 2026',
         description: 'Unlock 500% ROI with our next-gen autonomous AI systems. A complete guide to enterprise automation.',
         link: '/blog/ai-2026-enterprise-automation-revolution',
         category: 'Blog',
@@ -36,7 +36,7 @@ export default function InteractiveContentShowcase2026() {
     caseStudies: [
       {
         id: 1,
-        title= 'Manufacturing AI Mega Transformation Success 2026',
+        title: 'Manufacturing AI Mega Transformation Success 2026',
         description: 'See how a leading manufacturing giant achieved 500% ROI and 90% efficiency gains through AI-driven transformation.',
         link: '/case-studies/ai-manufacturing-transformation-mega-success-2026',
         category: 'Case Study',
@@ -45,7 +45,7 @@ export default function InteractiveContentShowcase2026() {
       },
       {
         id: 2,
-        title= 'AI Quantum Financial Optimization 2026',
+        title: 'AI Quantum Financial Optimization 2026',
         description: 'A financial institution leveraged quantum AI to optimize trading strategies, achieving unprecedented returns.',
         link: '/case-studies/ai-2026-quantum-financial-optimization',
         category: 'Case Study',
@@ -54,7 +54,7 @@ export default function InteractiveContentShowcase2026() {
       },
       {
         id: 3,
-        title= 'AI Autonomous Enterprise Transformation 2026',
+        title: 'AI Autonomous Enterprise Transformation 2026',
         description: 'A Fortune 500 company achieved full autonomous operations, reducing costs by 70% and boosting productivity.',
         link: '/case-studies/ai-autonomous-enterprise-transformation-2026',
         category: 'Case Study',
@@ -65,19 +65,19 @@ export default function InteractiveContentShowcase2026() {
   };
 
   return (
-    <section className="text-left">"
-      <div className="text-left">"
-        <div className="text-left">"
-          <h2 className="text-left">"
+    <section className="text-left">
+      <div className="text-left">
+        <div className="text-left">
+          <h2 className="text-left">
             Explore Our Latest 2026 AI Content
           </h2>
-          <p className="text-left">"
+          <p className="text-left">
             Dive into cutting-edge articles and transformative case studies shaping the future of AI in enterprise.
           </p>
         </div>
 
-        <div className="text-left">"
-          <div className="text-left">"
+        <div className="text-left">
+          <div className="text-left">
             <button
               onClick={() => setActiveTab('articles')}
               className={`px-6 py-3 rounded-full text-lg font-semibold transition-all duration-300 ${
@@ -97,20 +97,20 @@ export default function InteractiveContentShowcase2026() {
           </div>
         </div>
 
-        <div className="text-left">"
+        <div className="text-left">
           {activeTab === 'articles' &&
             content.articles.map((item) => (
-              <Link href={item.link} key={item.id} className="text-left">"
-                <div className="text-left">"
-                  <span className="text-left">"
+              <Link href={item.link} key={item.id} className="text-left">
+                <div className="text-left">
+                  <span className="text-left">
                     {item.category}
-                  <
-                  <h3 className="text-left">"
+                  </span>
+                  <h3 className="text-left">
                     {item.title}
                   </h3>
                   <p className="text-left">{item.description}</p>"
-                  <div className="text-left">"
-                    <span>{item.date}<
+                  <div className="text-left">
+                    <span>{item.date}</span>
                     <span className="text-left">Read More →<"
                   </div>
                 </div>
@@ -119,17 +119,17 @@ export default function InteractiveContentShowcase2026() {
 
           {activeTab === 'caseStudies' &&
             content.caseStudies.map((item) => (
-              <Link href={item.link} key={item.id} className="text-left">"
-                <div className="text-left">"
-                  <span className="text-left">"
+              <Link href={item.link} key={item.id} className="text-left">
+                <div className="text-left">
+                  <span className="text-left">
                     {item.category}
-                  <
-                  <h3 className="text-left">"
+                  </span>
+                  <h3 className="text-left">
                     {item.title}
                   </h3>
                   <p className="text-left">{item.description}</p>"
-                  <div className="text-left">"
-                    <span>ROI: {item.roi}<
+                  <div className="text-left">
+                    <span>ROI: {item.roi}</span>
                     <span className="text-left">View Case Study →<"
                   </div>
                 </div>

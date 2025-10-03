@@ -1,13 +1,13 @@
 import Link from 'next/link';
 
 export const metadata = {
-	title= 'AI 2026: Runtime Rollback Blueprint — Instant Recovery with KPI Canaries',
+	title: 'AI 2026: Runtime Rollback Blueprint — Instant Recovery with KPI Canaries',
 	description: 'Design instant rollback with KPI‑linked canaries, budgets, and guardrails to keep autonomy safe without slowing teams.',
 };
 
 export default function Page() {
 	return (
-		<main className="text-left">"
+		<main className="text-left">
 			<h1>AI 2026: Runtime Rollback Blueprint</h1>
 			<p>
 				Ship faster with safety budgets and deterministic rollback triggers wired to live KPIs. This

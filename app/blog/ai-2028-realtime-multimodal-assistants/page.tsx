@@ -1,13 +1,13 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title= 'Real‑Time Multimodal Assistants (2028): Voice + Vision + Touch',
+  title: 'Real‑Time Multimodal Assistants (2028): Voice + Vision + Touch',
   description: 'Production patterns for assistants that see, hear, and act with <150ms latency.',
 };
 
 export default function Page() {
   return (
-    <main className="text-left">"
+    <main className="text-left">
       <h1>Real‑Time Multimodal Assistants (2028): Voice + Vision + Touch</h1>
       <p>
         Build assistants that see, hear, and act in real time. This guide covers unified embeddings,

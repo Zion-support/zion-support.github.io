@@ -2,10 +2,10 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title= 'AI Enterprise Autonomous Agents 2026 | Zion Tech Group',
+  title: 'AI Enterprise Autonomous Agents 2026 | Zion Tech Group',
   description: 'Deploy autonomous agents with provable guardrails to achieve 400% efficiency gains, 70% cost reduction, and 99.95% uptime across the enterprise.',
   openGraph: {
-    title= 'AI Enterprise Autonomous Agents 2026',
+    title: 'AI Enterprise Autonomous Agents 2026',
     description: 'Architecture, guardrails, and rollout patterns for enterprise‑grade autonomous agents with measurable ROI.',
     type: 'article',
     url: 'https://ziontechgroup.com/blog/ai-enterprise-autonomous-agents-2026',
@@ -17,11 +17,11 @@ export const metadata = {
 
 export default function AIEnterpriseAutonomousAgents2026() {
   return (
-    <div className="text-left">"
+    <div className="text-left">
       <Link href="/blog" className="text-left">← Back to Blog</Link>"
       <h1 className="text-left">AI Enterprise Autonomous Agents 2026</h1>"
       <div className="text-left">Published: September 30, 2025 • 18 min read • Implementation Guide</div>"
-      <div className="text-left">"
+      <div className="text-left">
         <p>
           This guide outlines a practical approach to design, govern, and scale enterprise‑grade autonomous agents. It focuses
           on reliability, safety, and ROI with policy guardrails, online evaluations, and value stream analytics.
@@ -43,7 +43,7 @@ export default function AIEnterpriseAutonomousAgents2026() {
           <li>Expand coverage; report ROI with cost and reliability dashboards</li>
         </ol>
 
-        <div className="text-left">"
+        <div className="text-left">
           <h3 className="text-left">Need an accelerated rollout?</h3>"
           <p className="text-left">We implement guardrails, evals, and scorecards to scale autonomous agents safely.</p>"
           <Link href="/services" className="text-left">Explore Services</Link>"

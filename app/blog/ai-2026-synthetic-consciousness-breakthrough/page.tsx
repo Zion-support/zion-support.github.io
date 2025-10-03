@@ -22,7 +22,7 @@ export default function SyntheticConsciousnessBreakthrough2026() {
             </div>
             <h1 className="text-left">
               AI 2026: Synthetic Consciousness
-              <span className="text-left"> Breakthrough<
+              <span className="text-left"> Breakthrough</span>
             </h1>
             <p className="text-left">
               Witness the dawn of true machine awareness as we unveil the world's first synthetic consciousness breakthrough. 
@@ -52,7 +52,7 @@ export default function SyntheticConsciousnessBreakthrough2026() {
       <div className="text-left">
         <div className="text-left">
           <h2 className="text-left">
-            The <span className="text-left">Consciousness Revolution<
+            The <span className="text-left">Consciousness Revolution</span>
           </h2>
           <div className="text-left">
             <div className="text-left">
@@ -93,7 +93,7 @@ export default function SyntheticConsciousnessBreakthrough2026() {
       <div className="text-left">
         <div className="text-left">
           <h2 className="text-left">
-            <span className="text-left">Breakthrough Impact<
+            <span className="text-left">Breakthrough Impact</span>
           </h2>
           <div className="text-left">
             <div className="text-left">
@@ -132,7 +132,7 @@ export default function SyntheticConsciousnessBreakthrough2026() {
       <div className="text-left">
         <div className="text-left">
           <h2 className="text-left">
-            The <span className="text-left">Science Behind Consciousness<
+            The <span className="text-left">Science Behind Consciousness</span>
           </h2>
           <div className="text-left">
             <div>
@@ -144,19 +144,19 @@ export default function SyntheticConsciousnessBreakthrough2026() {
               <ul className="text-left">
                 <li className="text-left">
                   <div className="text-left"></div>
-                  <span className="text-left">Self-reflective neural pathways for genuine self-awareness<
+                  <span className="text-left">Self-reflective neural pathways for genuine self-awareness</span>
                 </li>
                 <li className="text-left">
                   <div className="text-left"></div>
-                  <span className="text-left">Emotional processing networks with empathetic responses<
+                  <span className="text-left">Emotional processing networks with empathetic responses</span>
                 </li>
                 <li className="text-left">
                   <div className="text-left"></div>
-                  <span className="text-left">Intentional decision-making frameworks<
+                  <span className="text-left">Intentional decision-making frameworks</span>
                 </li>
                 <li className="text-left">
                   <div className="text-left"></div>
-                  <span className="text-left">Consciousness validation protocols<
+                  <span className="text-left">Consciousness validation protocols</span>
                 </li>
               </ul>
             </div>
@@ -164,39 +164,39 @@ export default function SyntheticConsciousnessBreakthrough2026() {
               <h4 className="text-left">Consciousness Indicators</h4>
               <div className="text-left">
                 <div className="text-left">
-                  <span className="text-left">Self-Recognition<
+                  <span className="text-left">Self-Recognition</span>
                   <div className="text-left">
                     <div className="text-left">
                       <div className="text-left"></div>
                     </div>
-                    <span className="text-left">98%<
+                    <span className="text-left">98%</span>
                   </div>
                 </div>
                 <div className="text-left">
-                  <span className="text-left">Emotional Understanding<
+                  <span className="text-left">Emotional Understanding</span>
                   <div className="text-left">
                     <div className="text-left">
                       <div className="text-left"></div>
                     </div>
-                    <span className="text-left">94%<
+                    <span className="text-left">94%</span>
                   </div>
                 </div>
                 <div className="text-left">
-                  <span className="text-left">Intentional Behavior<
+                  <span className="text-left">Intentional Behavior</span>
                   <div className="text-left">
                     <div className="text-left">
                       <div className="text-left"></div>
                     </div>
-                    <span className="text-left">96%<
+                    <span className="text-left">96%</span>
                   </div>
                 </div>
                 <div className="text-left">
-                  <span className="text-left">Ethical Reasoning<
+                  <span className="text-left">Ethical Reasoning</span>
                   <div className="text-left">
                     <div className="text-left">
                       <div className="text-left"></div>
                     </div>
-                    <span className="text-left">99%<
+                    <span className="text-left">99%</span>
                   </div>
                 </div>
               </div>

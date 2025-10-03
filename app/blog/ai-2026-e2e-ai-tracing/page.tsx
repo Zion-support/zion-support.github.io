@@ -2,22 +2,22 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title= 'E2E AI Tracing 2026: From Prompts to Outcomes | Zion Tech Group',
+  title: 'E2E AI Tracing 2026: From Prompts to Outcomes | Zion Tech Group',
   description: 'Blueprint for end-to-end AI tracing: prompts, tools, calls, SLAs, and KPI‑linked scorecards for reliable AI at scale.',
 };
 
 export default function Page() {
   return (
-    <div className="text-left">"
-      <div className="text-left">"
+    <div className="text-left">
+      <div className="text-left">
         <div className="text-left">AI Operations • 12 min read • Jan 30, 2026</div>"
         <h1 className="text-left">E2E AI Tracing 2026: From Prompts to Outcomes</h1>"
-        <p className="text-left">"
+        <p className="text-left">
           Instrument every step of AI workflows with end‑to‑end traces: prompts, tools, external calls, budgets, and outcomes.
           Wire traces to KPI‑linked scorecards, approvals, and rollback for reliable autonomy.
         </p>
 
-        <div className="text-left">"
+        <div className="text-left">
           <h2>Why E2E Tracing</h2>
           <p>
             Teams ship faster when they can see exactly how prompts, tools, and models interact with systems and users. Tracing
@@ -46,7 +46,7 @@ export default function Page() {
           </p>
         </div>
 
-        <div className="text-left">"
+        <div className="text-left">
           <Link href="/blog" className="text-left">Back to Blog</Link>"
           <Link href="/content-hub" className="text-left">Explore Content Hub</Link>"
         </div>

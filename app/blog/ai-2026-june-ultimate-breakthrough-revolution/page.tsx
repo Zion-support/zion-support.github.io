@@ -22,10 +22,10 @@ export default function June2026UltimateBreakthroughPage() {
           <div className="text-left">
             <span className="text-left">
               JUNE 2026
-            <
+            </span>
             <span className="text-left">
               $100B ROI
-            <
+            </span>
           </div>
           <h1 className="text-left">
             {data.title}
@@ -34,9 +34,9 @@ export default function June2026UltimateBreakthroughPage() {
             {data.description}
           </p>
           <div className="text-left">
-            <span>By {data.author}<
-            <span>•<
-            <span>{new Date(data.date).toLocaleDateString()}<
+            <span>By {data.author}</span>
+            <span>•</span>
+            <span>{new Date(data.date).toLocaleDateString()}</span>
           </div>
         </header>
 
@@ -51,13 +51,13 @@ export default function June2026UltimateBreakthroughPage() {
           </p>
           <div className="text-left">
             <a 
-              href="/[^"]*"
+              href="/"
               className="text-left"
             >
               Contact Us Today
             </a>
             <a 
-              href="/[^"]*"
+              href="/"
               className="text-left"
             >
               View $100B Success Story
