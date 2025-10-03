@@ -6,7 +6,7 @@ export default function PostBySlug(): React.JSX.Element {
   const { slug } = useParams();
 
   // Mock data - in a real app, this would come from an API or CMS
-  const latestArticles = [
+  const latestArticles = React.useMemo(() => [
     {
       slug: "ai-autonomous-workflows-2026",
       title: "AI Autonomous Workflows 2026",
@@ -17,9 +17,9 @@ export default function PostBySlug(): React.JSX.Element {
       readTime: "8 min read",
       author: "Zion Tech Group Team"
     }
-  ];
+  ], []);
 
-  const blogPosts = [
+  const blogPosts = React.useMemo(() => [
     {
       slug: "enterprise-ai-transformation-roadmap-2026",
       title: "Enterprise AI Transformation Roadmap 2026",
@@ -29,9 +29,9 @@ export default function PostBySlug(): React.JSX.Element {
       readTime: "12 min read",
       author: "Zion Tech Group Team"
     }
-  ];
+  ], []);
 
-  const staticPosts = [
+  const staticPosts = React.useMemo(() => [
     {
       slug: "ai-governance-framework-enterprise-2025",
       title: "AI Governance Framework for Enterprise 2025",
@@ -40,7 +40,7 @@ export default function PostBySlug(): React.JSX.Element {
       publishedAt: "2025-12-20",
       readTime: "10 min read"
     }
-  ];
+  ], []);
 
   const article = React.useMemo(() => {
     if (!slug) return undefined;
@@ -85,7 +85,7 @@ export default function PostBySlug(): React.JSX.Element {
     }
     
     return undefined;
-  }, [slug]);
+  }, [slug, blogPosts, latestArticles, staticPosts]);
 
   if (!article) {
     return (
