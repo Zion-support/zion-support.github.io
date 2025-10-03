@@ -51,10 +51,10 @@ class EnhancedPerformanceMonitor {
               this.processNavigationTiming(entry as PerformanceNavigationTiming);
             }
           });
-        ');
+        });
         navObserver.observe({ entryTypes: ['navigation'] });
         this.observers.push(navObserver);
-      ' catch (error) {
+      } catch (error) {
         console.warn('Navigation timing observer failed:', error);
       }
     }

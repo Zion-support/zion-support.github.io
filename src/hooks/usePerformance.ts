@@ -15,10 +15,10 @@ export const usePerformanceMonitor = (componentName: string) => {
       const totalTime = unmountTime - mountTime.current;
       
       if (import.meta.env.DEV) {
-        console.log(`[Performance] ${componentName`:`, {
+        console.log(`[Performance] ${componentName}:`, {
           renderCount: renderCount.current,
-          totalTime: `${totalTime`ms`,
-          avgRenderTime: `${totalTime / renderCount.current`ms`
+          totalTime: `${totalTime}ms`,
+          avgRenderTime: `${totalTime / renderCount.current}ms`
         });
       }
     };
@@ -107,7 +107,7 @@ export const useIntersectionObserver = (
     const observer = new IntersectionObserver(
       ([entry]) => {
         setIsIntersecting(entry.isIntersecting);
-      ',
+      },
       {
         threshold: 0.1,
         rootMargin: '50px',
@@ -144,7 +144,7 @@ export const useVisibility = () => {
   }, []);
 
   return isVisible;
-';
+};
 
 /**
  * Hook for managing network status
@@ -167,7 +167,7 @@ export const useNetworkStatus = () => {
       
       const handleConnectionChange = () => {
         setConnectionType(connection.effectiveType || 'unknown');
-      ';
+      };
 
       connection.addEventListener('change', handleConnectionChange);
 

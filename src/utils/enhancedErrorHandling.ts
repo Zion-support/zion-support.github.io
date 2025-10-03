@@ -47,9 +47,9 @@ class EnhancedErrorHandler {
         userAgent: navigator.userAgent,
         url: window.location.href,
         severity: this.determineSeverity(event.error),
-        category: 'javascript
+        category: 'javascript'
       });
-    ');
+    });
 
     // Unhandled promise rejection handler
     window.addEventListener('unhandledrejection', (event) => {
@@ -60,7 +60,7 @@ class EnhancedErrorHandler {
         userAgent: navigator.userAgent,
         url: window.location.href,
         severity: this.determineSeverity(event.reason),
-        category: 'promise
+        category: 'promise'
       });
     });
 
@@ -69,7 +69,7 @@ class EnhancedErrorHandler {
 
   private determineSeverity(error: any): 'low' | 'medium' | 'high' | 'critical' {
     if (!error) return 'low';
-    const message = error.message?.toLowerCase() || ';
+    const message = error.message?.toLowerCase() || '';
     // Critical errors
     if (message.includes('chunk') || message.includes('loading') || message.includes('network')) {
       return 'critical';

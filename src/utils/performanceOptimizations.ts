@@ -9,7 +9,7 @@ export const preloadCriticalResources = () => {
   const criticalResources = [
     '/fonts/inter-var.woff2',
     '/images/hero-bg.webp',
-    '/images/logo.svg
+    '/images/logo.svg'
   ];
 
   criticalResources.forEach(resource => {
@@ -22,7 +22,7 @@ export const preloadCriticalResources = () => {
     }
     document.head.appendChild(link);
   });
-';
+};
 
 // Optimize images with lazy loading
 export const optimizeImages = () => {
@@ -107,17 +107,17 @@ export const performanceMonitor = {
     if (typeof window !== 'undefined' && 'performance' in window) {
       performance.mark(name);
     }
-  ',
+  },
 
   measure: (name: string, startMark: string, endMark?: string) => {
     if (typeof window !== 'undefined' && 'performance' in window) {
       try {
         performance.measure(name, startMark, endMark);
       } catch (error) {
-        console.warn(`Performance measure failed for ${name`:`, error);
+        console.warn(`Performance measure failed for ${name}:`, error);
       }
     }
-  ',
+  },
 
   getEntries: (type?: string) => {
     if (typeof window !== 'undefined' && 'performance' in window) {
