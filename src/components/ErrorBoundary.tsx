@@ -21,9 +21,8 @@ export class ErrorBoundary extends Component<Props, State> {
     return { hasError: true, error };
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    // eslint-disable-next-line no-console
-    console.error('Error caught by boundary:', error, errorInfo);
+  componentDidCatch(error: Error, _errorInfo: ErrorInfo) {
+      // Error caught by boundary - logged to monitoring system
     
     // Send error to monitoring service
     if (typeof gtag !== 'undefined') {
