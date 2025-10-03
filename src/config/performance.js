@@ -1,18 +1,21 @@
-
-export const performanceConfig = {
-  monitoring: {
-    enabled: true,
-    sampleRate: 0.1
+module.exports = {
+  "cacheStrategies": {
+    "staticAssets": "1 year",
+    "apiResponses": "5 minutes",
+    "dynamicContent": "1 hour"
   },
-  optimization: {
-    lazyLoading: true,
-    imageOptimization: true,
-    bundleSplitting: true
+  "bundleOptimization": {
+    "codeSplitting": true,
+    "treeShaking": true,
+    "compression": "gzip, brotli",
+    "lazyLoading": true
   },
-  metrics: {
-    targetLoadTime: 2000,
-    targetFCP: 1500,
-    targetLCP: 2500,
-    targetCLS: 0.1
-  }
+  "imageOptimization": {
+    "webp": true,
+    "avif": true,
+    "lazyLoading": true,
+    "responsiveImages": true,
+    "qualityOptimization": 85
+  },
+  "timestamp": "2025-10-03T14:45:25.364Z"
 };

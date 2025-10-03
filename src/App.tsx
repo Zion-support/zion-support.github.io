@@ -1,7 +1,7 @@
 import React, { JSX, Suspense } from "react";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import '../app/globals.css';
-import ErrorBoundary from './components/ErrorBoundary';
+import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import { PageLoader } from './components/LoadingSpinner';
@@ -40,7 +40,7 @@ function App(): JSX.Element {
   }, [logMetrics, performanceScore]);
 
   return (
-    <ErrorBoundary>
+    <EnhancedErrorBoundary>
       <Router>
         <div className="min-h-screen bg-slate-950">
           <Header />
@@ -81,7 +81,7 @@ function App(): JSX.Element {
           <Footer />
         </div>
       </Router>
-    </ErrorBoundary>
+    </EnhancedErrorBoundary>
   );
 };
 

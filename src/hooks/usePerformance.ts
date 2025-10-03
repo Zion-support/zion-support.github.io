@@ -39,24 +39,24 @@ export const usePerformance = () => {
 
       // Collect Web Vitals if available
       if ('web-vitals' in window) {
-        import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-          getCLS((metric) => {
+        import('web-vitals').then(({ onCLS, onFID, onFCP, onLCP, onTTFB }) => {
+          onCLS((metric: any) => {
             setMetrics(prev => prev ? { ...prev, cumulativeLayoutShift: metric.value } : null);
           });
 
-          getFID((metric) => {
+          onFID((metric: any) => {
             setMetrics(prev => prev ? { ...prev, firstInputDelay: metric.value } : null);
           });
 
-          getFCP((metric) => {
+          onFCP((metric: any) => {
             setMetrics(prev => prev ? { ...prev, firstContentfulPaint: metric.value } : null);
           });
 
-          getLCP((metric) => {
+          onLCP((metric: any) => {
             setMetrics(prev => prev ? { ...prev, largestContentfulPaint: metric.value } : null);
           });
 
-          getTTFB((metric) => {
+          onTTFB((metric: any) => {
             setMetrics(prev => prev ? { ...prev, timeToInteractive: metric.value } : null);
           });
         });
