@@ -1,11 +1,16 @@
-const logMetric = (metric: { name: string; value: number }) => {
-  console.log(`Performance metric: ${metric.name} = ${metric.value}ms`);
+interface MetricData {
+  name: string;
+  value: number;
+}
+
+const logMetric = (metric: MetricData) => {
+  console.log(`Performance Metric: ${metric.name} = ${metric.value}ms`);
 };
 
 export const measurePerformance = (): void => {
   if (typeof window === 'undefined') return;
 
-  // First Contentful Paint
+  // Web Vitals monitoring
   if ('PerformanceObserver' in window) {
     try {
       const observer = new PerformanceObserver((list) => {

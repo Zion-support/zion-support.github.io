@@ -3,10 +3,10 @@ import Link from 'next/link';
 import { Shield } from 'lucide-react';
 
 export const metadata = {
-  title= 'AI 2028: Autonomous Governance Blueprint | Zion Tech Group',
+  title: 'AI 2028: Autonomous Governance Blueprint | Zion Tech Group',
   description: 'Budgets, live scorecards, PR policy tests, and rollback playbooks that enable safe, enterprise-scale autonomy.',
   openGraph: {
-    title= 'AI 2028: Autonomous Governance Blueprint',
+    title: 'AI 2028: Autonomous Governance Blueprint',
     description: 'KPI‑linked scorecards, budget gates, and live canaries hardwired into delivery for safe autonomy.',
     type: 'article',
     url: 'https://ziontechgroup.com/blog/ai-2028-autonomous-governance-blueprint',
@@ -18,11 +18,11 @@ export const metadata = {
 
 export default function AutonomousGovernanceBlueprint2028() {
   return (
-    <div className="max-w-4xl mx-auto px-4 py-8">"
+<div className="max-w-4xl mx-auto px-4 py-8">"
       <Link href="/blog" className="text-blue-600 hover:text-blue-800 mb-6 inline-block">← Back to Blog</Link>"
       <h1 className="text-4xl font-bold text-gray-900 mb-3">AI 2028: Autonomous Governance Blueprint</h1>"
       <div className="text-gray-600 mb-8">Published: September 30, 2025 • 12 min read • AI Governance</div>"
-      <div className="prose prose-lg max-w-none">"
+      <div className="prose prose-lg max-w-none">"origin/cursor/fix-errors-and-merge-to-main-0638
         <p>
           This blueprint operationalizes enterprise autonomy with guardrails that make outcomes measurable and safe.
           It details KPI‑linked scorecards, budget gates, PR policy tests, and instant rollback backed by live canaries.
@@ -43,13 +43,15 @@ export default function AutonomousGovernanceBlueprint2028() {
           <li>Automate rollbacks and approvals with blast‑radius limits</li>
         </ul>
 
-        <div className="bg-blue-50 border-l-4 border-blue-500 p-6 rounded">"
-          <h3 className="m-0 flex items-center gap-2"><Shield className="w-5 h-5" />Need a safe rollout?</h3>"
-          <p className="m-0">We implement governance gates, scorecards, and recovery playbooks in weeks.</p>"
-          <Link href="/services" className="inline-block mt-3 bg-blue-600 hover:bg-blue-700 text-white px-5 py-3 rounded">Explore Services</Link>"
+        <div className="bg-blue-50 border-l-4 border-blue-500 p-6 rounded">
+          <h3 className="m-0 flex items-center gap-2"><Shield className="w-5 h-5" />Need a safe rollout?</h3>
+          <p className="m-0">We implement governance gates, scorecards, and recovery playbooks in weeks.</p>
+          <Link href="/services" className="inline-block mt-3 bg-blue-600 hover:bg-blue-700 text-white px-5 py-3 rounded">Explore Services</Link>
         </div>
       </div>
     </div>
   );
 }
 
+
+</Shield>

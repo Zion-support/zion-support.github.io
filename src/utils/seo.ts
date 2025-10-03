@@ -78,6 +78,6 @@ export const generateSitemapEntry = (url: string, lastmod?: string, changefreq?:
     url,
     lastmod: lastmod || new Date().toISOString().split('T')[0],
     changefreq: changefreq || 'weekly',
-    priority: priority || '0.5'
+    priority: priority || '0.5',
   };
 };

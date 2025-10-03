@@ -72,7 +72,7 @@ class EnhancedErrorHandler {
     const message = error.message?.toLowerCase() || '';
     
     // Critical errors
-    if (message.includes('script error') || message.includes('syntax error')) {
+    if (message.includes('chunk') || message.includes('loading') || message.includes('script error') || message.includes('syntax error')) {
       return 'critical';
     }
     
@@ -82,7 +82,7 @@ class EnhancedErrorHandler {
     }
     
     // Medium severity errors
-    if (message.includes('warning') || message.includes('deprecated')) {
+    if (message.includes('warning') || message.includes('deprecated') || message.includes('render') || message.includes('component')) {
       return 'medium';
     }
     
