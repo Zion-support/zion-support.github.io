@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
   loadTime: number;
