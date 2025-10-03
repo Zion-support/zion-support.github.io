@@ -1,4 +1,4 @@
-// import React from 'react';
+import React from 'react';
 
 export const metadata = {
   title: 'Edge Private Insights 2026: Consentless Metrics Blueprint',

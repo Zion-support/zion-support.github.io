@@ -1,5 +1,5 @@
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'AI Future Workforce 2026: Human-AI Collaboration Revolution',
@@ -148,12 +148,14 @@ export default function AIFutureWorkforce2026() {
             training, implementation, and support services.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Link to="/contact"
+            <Link
+              href="/contact"
               className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
             >
               Get AI Workforce Consultation
             </Link>
-            <Link to="/services"
+            <Link
+              href="/services"
               className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors text-center"
             >
               View AI Services
@@ -165,7 +167,7 @@ export default function AIFutureWorkforce2026() {
       <div className="border-t border-gray-200 pt-8 mt-8">
         <h3 className="text-2xl font-bold text-gray-900 mb-6">Related Articles</h3>
         <div className="grid md:grid-cols-2 gap-6">
-          <Link to="/blog/ai-enterprise-automation-2026" className="group">
+          <Link href="/blog/ai-enterprise-automation-2026" className="group">
             <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
               <h4 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
                 AI Enterprise Automation 2026
@@ -175,7 +177,7 @@ export default function AIFutureWorkforce2026() {
               </p>
             </div>
           </Link>
-          <Link to="/blog/ai-sustainability-green-tech-2026" className="group">
+          <Link href="/blog/ai-sustainability-green-tech-2026" className="group">
             <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
               <h4 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
                 AI Sustainability & Green Tech 2026

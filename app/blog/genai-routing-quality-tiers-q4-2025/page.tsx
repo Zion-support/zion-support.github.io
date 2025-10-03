@@ -1,5 +1,5 @@
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'GenAI Routing Quality Tiers Q4 2025: Predictable Cost, Stable UX',
@@ -11,7 +11,7 @@ export default function GenAIRoutingQualityTiersQ42025Page() {
     <div className="min-h-screen bg-slate-950 text-white">
       <main className="max-w-3xl mx-auto px-6 py-16">
         <div className="mb-8">
-          <Link to="/blog" className="text-fuchsia-300 hover:text-fuchsia-200">← Back to Blog</Link>
+          <Link href="/blog" className="text-fuchsia-300 hover:text-fuchsia-200">← Back to Blog</Link>
         </div>
         <header className="mb-6">
           <div className="flex items-center gap-3 text-sm text-white/60 mb-3">
@@ -46,9 +46,9 @@ export default function GenAIRoutingQualityTiersQ42025Page() {
         <footer className="mt-12 pt-6 border-t border-white/10 text-white/70">
           <p>
             Continue exploring: {' '}
-            <Link to="/blog/ai-operational-trust-q4-2025" className="text-emerald-300 hover:text-emerald-200">AI Operational Trust</Link>
+            <Link href="/blog/ai-operational-trust-q4-2025" className="text-emerald-300 hover:text-emerald-200">AI Operational Trust</Link>
             {' '}•{' '}
-            <Link to="/blog/edge-consentless-analytics-q4-2025" className="text-cyan-300 hover:text-cyan-200">Consentless Edge Analytics</Link>
+            <Link href="/blog/edge-consentless-analytics-q4-2025" className="text-cyan-300 hover:text-cyan-200">Consentless Edge Analytics</Link>
           </p>
         </footer>
       </main>

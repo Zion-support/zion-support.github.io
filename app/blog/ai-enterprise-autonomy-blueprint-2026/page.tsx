@@ -1,5 +1,5 @@
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'AI Enterprise Autonomy Blueprint 2026 | Zion Tech Group',
@@ -12,7 +12,7 @@ export default function AIEnterpriseAutonomyBlueprint2026Page() {
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-blue-950 to-emerald-950 text-white">
       <main className="container mx-auto px-6 py-12">
         <nav className="mb-8">
-          <Link to="/blog" className="text-emerald-300 hover:text-emerald-200 transition-colors">
+          <Link href="/blog" className="text-emerald-300 hover:text-emerald-200 transition-colors">
             ← Back to Blog
           </Link>
         </nav>
@@ -64,7 +64,7 @@ export default function AIEnterpriseAutonomyBlueprint2026Page() {
           <div className="mt-12 bg-white/5 border border-white/10 rounded-xl p-6">
             <h3 className="text-xl font-bold mb-2">Want the blueprint implemented?</h3>
             <p className="text-white/80 mb-4">We design and deploy safe, autonomous enterprise workflows with measurable ROI.</p>
-            <Link to="/contact" className="text-emerald-300 hover:text-emerald-200 font-semibold">Talk to experts →</Link>
+            <Link href="/contact" className="text-emerald-300 hover:text-emerald-200 font-semibold">Talk to experts →</Link>
           </div>
         </article>
       </main>

@@ -1,5 +1,5 @@
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'Generative AI Cost Breakthrough 2025: Cut Spend by 85% Without Sacrificing Quality | Zion Tech Group',

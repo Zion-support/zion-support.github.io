@@ -1,6 +1,6 @@
 // @ts-nocheck
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import Link from 'next/link';
 
 export default function AttestedEdgeAnalyticsV2() {
   return (
@@ -39,12 +39,12 @@ export default function AttestedEdgeAnalyticsV2() {
           <h3 className="text-xl font-bold text-indigo-300 mb-2">Related</h3>
           <ul className="list-disc pl-6 text-gray-300 space-y-1">
             <li>
-              <Link to="/blog/edge-2026-zero-pii-analytics" className="text-indigo-300 hover:text-indigo-200">
+              <Link href="/blog/edge-2026-zero-pii-analytics" className="text-indigo-300 hover:text-indigo-200">
                 Edge 2026 Zero‑PII Analytics
               </Link>
             </li>
             <li>
-              <Link to="/blog/edge-consentless-experiments-2026-q4" className="text-indigo-300 hover:text-indigo-200">
+              <Link href="/blog/edge-consentless-experiments-2026-q4" className="text-indigo-300 hover:text-indigo-200">
                 Consentless Experiments 2026 Q4
               </Link>
             </li>

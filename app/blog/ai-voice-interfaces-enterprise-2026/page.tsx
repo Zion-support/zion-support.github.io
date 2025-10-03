@@ -1,5 +1,5 @@
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'AI Voice Interfaces Enterprise 2026 | Zion Tech Group',
@@ -12,7 +12,7 @@ export default function AIVoiceInterfacesEnterprise2026Page() {
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-blue-950 to-indigo-950 text-white">
       <main className="container mx-auto px-6 py-12">
         <nav className="mb-8">
-          <Link to="/blog" className="text-indigo-300 hover:text-indigo-200 transition-colors">
+          <Link href="/blog" className="text-indigo-300 hover:text-indigo-200 transition-colors">
             ← Back to Blog
           </Link>
         </nav>
@@ -76,7 +76,7 @@ export default function AIVoiceInterfacesEnterprise2026Page() {
           <div className="mt-12 bg-white/5 border border-white/10 rounded-xl p-6">
             <h3 className="text-xl font-bold mb-2">We can help</h3>
             <p className="text-white/80 mb-4">From pilot to global rollout, we harden voice AI with reliability and privacy.</p>
-            <Link to="/contact" className="text-indigo-300 hover:text-indigo-200 font-semibold">Talk to experts →</Link>
+            <Link href="/contact" className="text-indigo-300 hover:text-indigo-200 font-semibold">Talk to experts →</Link>
           </div>
         </article>
       </main>

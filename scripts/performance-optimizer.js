@@ -1,235 +1,166 @@
 #!/usr/bin/env node
 
-/**
- * Advanced Performance Optimizer for Zion Website
- * Optimizes bundle size, implements code splitting, and enhances performance
- */
-
 import fs from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
 
-console.log('🚀 Starting Advanced Performance Optimization...');
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-// 1. Bundle Analysis and Optimization
-function optimizeBundle() {
-  console.log('📦 Optimizing bundle configuration...');
+console.log('🚀 Starting performance optimizations...\n');
+
+// 1. Optimize package.json scripts
+function optimizePackageScripts() {
+  const packagePath = path.join(__dirname, '..', 'package.json');
+  const packageJson = JSON.parse(fs.readFileSync(packagePath, 'utf8'));
   
-  const viteConfig = {
-    build: {
-      rollupOptions: {
-        output: {
-          manualChunks: {
-            vendor: ['react', 'react-dom'],
-            router: ['react-router-dom'],
-            ui: ['framer-motion', 'lucide-react'],
-            charts: ['recharts']
-          }
-        }
-      },
-      chunkSizeWarningLimit: 1000,
-      sourcemap: false,
-      minify: 'terser',
-      terserOptions: {
-        compress: {
-          drop_console: true,
-          drop_debugger: true
-        }
-      }
-    }
+  // Add optimized build scripts
+  packageJson.scripts = {
+    ...packageJson.scripts,
+    'build:optimized': 'NODE_ENV=production vite build --minify terser --sourcemap false',
+    'build:production': 'NODE_ENV=production vite build --minify terser --sourcemap false --rollupOptions.external',
+    'analyze:bundle': 'vite-bundle-analyzer dist/stats.html',
+    'performance:audit': 'lighthouse http://localhost:4173 --output=html --output-path=./lighthouse-report.html',
+    'optimize:images': 'node scripts/optimize-images.js',
+    'optimize:css': 'node scripts/optimize-css.js',
+    'optimize:all': 'npm run optimize:images && npm run optimize:css && npm run build:optimized'
   };
-
-  fs.writeFileSync('vite.config.optimized.js', 
-    `import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-
-export default defineConfig({
-  plugins: [react()],
-  ${JSON.stringify(viteConfig, null, 2).replace(/^{|}$/g, '').slice(1, -1)}
-})`);
   
-  console.log('✅ Bundle optimization configuration created');
+  fs.writeFileSync(packagePath, JSON.stringify(packageJson, null, 2));
+  console.log('✅ Optimized package.json scripts');
 }
 
-// 2. Image Optimization
-function optimizeImages() {
-  console.log('🖼️ Setting up image optimization...');
-  
-  const imageOptimizer = `
-// Image optimization utilities
-export const optimizeImage = (src, width, quality = 80) => {
-  if (src.includes('placeholder.com')) return src;
-  
-  const params = new URLSearchParams({
-    w: width.toString(),
-    q: quality.toString(),
-    f: 'auto'
-  });
-  
-  return \`\${src}?\${params.toString()}\`;
-};
+// 2. Create performance monitoring component
+function createPerformanceMonitor() {
+  const monitorContent = `import React, { useEffect, useState } from 'react';
 
-export const getResponsiveImage = (src, sizes = [320, 640, 1024, 1920]) => {
-  return sizes.map(size => ({
-    src: optimizeImage(src, size),
-    width: size
-  }));
-};
-`;
-
-  fs.writeFileSync('src/utils/imageOptimization.ts', imageOptimizer);
-  console.log('✅ Image optimization utilities created');
+interface PerformanceMetrics {
+  fcp: number;
+  lcp: number;
+  fid: number;
+  cls: number;
+  ttfb: number;
 }
 
-// 3. Performance Monitoring
-function setupPerformanceMonitoring() {
-  console.log('📊 Setting up performance monitoring...');
-  
-  const performanceMonitor = `
-import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
+export const PerformanceMonitor: React.FC = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
 
-class PerformanceMonitor {
-  private metrics: Map<string, number> = new Map();
-  
-  init() {
-    getCLS(this.handleMetric.bind(this));
-    getFID(this.handleMetric.bind(this));
-    getFCP(this.handleMetric.bind(this));
-    getLCP(this.handleMetric.bind(this));
-    getTTFB(this.handleMetric.bind(this));
-  }
-  
-  private handleMetric(metric: any) {
-    this.metrics.set(metric.name, metric.value);
-    
-    // Send to analytics
-    if (typeof gtag !== 'undefined') {
-      gtag('event', metric.name, {
-        value: Math.round(metric.value),
-        event_category: 'Web Vitals'
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      // Web Vitals monitoring
+      import('web-vitals').then(({ onFCP, onLCP, onFID, onCLS, onTTFB }) => {
+        const performanceData: Partial<PerformanceMetrics> = {};
+
+        onFCP((metric) => {
+          performanceData.fcp = metric.value;
+        });
+
+        onLCP((metric) => {
+          performanceData.lcp = metric.value;
+        });
+
+        onFID((metric) => {
+          performanceData.fid = metric.value;
+        });
+
+        onCLS((metric) => {
+          performanceData.cls = metric.value;
+        });
+
+        onTTFB((metric) => {
+          performanceData.ttfb = metric.value;
+          setMetrics(performanceData as PerformanceMetrics);
+        });
       });
     }
-    
-    console.log(\`📊 \${metric.name}: \${metric.value}\`);
+  }, []);
+
+  if (!metrics || process.env.NODE_ENV === 'production') {
+    return null;
   }
-  
-  getMetrics() {
-    return Object.fromEntries(this.metrics);
-  }
-}
 
-export const performanceMonitor = new PerformanceMonitor();
-`;
-
-  fs.writeFileSync('src/utils/performanceMonitor.ts', performanceMonitor);
-  console.log('✅ Performance monitoring setup complete');
-}
-
-// 4. Code Splitting Implementation
-function implementCodeSplitting() {
-  console.log('🔀 Implementing code splitting...');
-  
-  const lazyLoader = `
-import { lazy, Suspense, ComponentType } from 'react';
-
-// Lazy loading wrapper with loading state
-export const lazyLoad = <T extends ComponentType<any>>(
-  importFunc: () => Promise<{ default: T }>,
-  fallback?: React.ReactNode
-) => {
-  const LazyComponent = lazy(importFunc);
-  
-  return (props: React.ComponentProps<T>) => (
-    <Suspense fallback={fallback || <div>Loading...</div>}>
-      <LazyComponent {...props} />
-    </Suspense>
+  return (
+    <div className="fixed bottom-4 right-4 bg-black bg-opacity-80 text-white p-4 rounded-lg text-xs font-mono">
+      <div className="mb-2 font-bold">Performance Metrics:</div>
+      <div>FCP: {metrics.fcp?.toFixed(0)}ms</div>
+      <div>LCP: {metrics.lcp?.toFixed(0)}ms</div>
+      <div>FID: {metrics.fid?.toFixed(0)}ms</div>
+      <div>CLS: {metrics.cls?.toFixed(3)}</div>
+      <div>TTFB: {metrics.ttfb?.toFixed(0)}ms</div>
+    </div>
   );
 };
 
-// Preload components for better UX
-export const preloadComponent = (importFunc: () => Promise<any>) => {
-  return () => {
-    importFunc();
-    return null;
-  };
-};
+export default PerformanceMonitor;
 `;
 
-  fs.writeFileSync('src/utils/lazyLoader.ts', lazyLoader);
-  console.log('✅ Code splitting implementation complete');
+  const monitorPath = path.join(__dirname, '..', 'src/components/PerformanceMonitor.tsx');
+  fs.writeFileSync(monitorPath, monitorContent);
+  console.log('✅ Created PerformanceMonitor component');
 }
 
-// 5. Error Boundary
-function createErrorBoundary() {
-  console.log('🛡️ Creating error boundary...');
-  
-  const errorBoundary = `
-import React, { Component, ErrorInfo, ReactNode } from 'react';
+// 3. Optimize Vite config
+function optimizeViteConfig() {
+  const viteConfigContent = `import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import { visualizer } from 'rollup-plugin-visualizer';
 
-interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
-}
-
-interface State {
-  hasError: boolean;
-  error?: Error;
-}
-
-export class ErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-
-  static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
-  }
-
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-    
-    // Send error to monitoring service
-    if (typeof gtag !== 'undefined') {
-      gtag('event', 'exception', {
-        description: error.message,
-        fatal: false
-      });
-    }
-  }
-
-  render() {
-    if (this.state.hasError) {
-      return this.props.fallback || (
-        <div className="min-h-screen flex items-center justify-center">
-          <div className="text-center">
-            <h2 className="text-2xl font-bold text-red-600 mb-4">
-              Something went wrong
-            </h2>
-            <button
-              onClick={() => this.setState({ hasError: false })}
-              className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
-            >
-              Try again
-            </button>
-          </div>
-        </div>
-      );
-    }
-
-    return this.props.children;
-  }
-}
+export default defineConfig({
+  plugins: [
+    react({
+      babel: {
+        plugins: [
+          ['@babel/plugin-transform-react-jsx', { runtime: 'automatic' }],
+          ['@babel/plugin-proposal-decorators', { legacy: true }],
+        ],
+      },
+    }),
+    visualizer({
+      filename: 'dist/stats.html',
+      open: false,
+      gzipSize: true,
+    }),
+  ],
+  build: {
+    target: 'es2020',
+    minify: 'terser',
+    sourcemap: false,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom'],
+          router: ['react-router-dom'],
+          icons: ['lucide-react'],
+          motion: ['framer-motion'],
+        },
+      },
+    },
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+      },
+    },
+  },
+  optimizeDeps: {
+    include: ['react', 'react-dom', 'react-router-dom', 'lucide-react'],
+  },
+  server: {
+    hmr: {
+      overlay: false,
+    },
+  },
+});
 `;
 
-  fs.writeFileSync('src/components/ErrorBoundary.tsx', errorBoundary);
-  console.log('✅ Error boundary created');
+  const vitePath = path.join(__dirname, '..', 'vite.config.ts');
+  fs.writeFileSync(vitePath, viteConfigContent);
+  console.log('✅ Optimized Vite configuration');
 }
 
-// 6. SEO Optimization
-function optimizeSEO() {
-  console.log('🔍 Setting up SEO optimization...');
-  
-  const seoOptimizer = `
+// 4. Create SEO optimization component
+function createSEOOptimizer() {
+  const seoContent = `import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOProps {
@@ -246,164 +177,103 @@ export const SEO: React.FC<SEOProps> = ({
   description = 'Leading provider of AI-powered solutions, cloud infrastructure, and digital transformation services.',
   keywords = 'AI, artificial intelligence, cloud computing, IT solutions, digital transformation',
   image = '/images/og-image.jpg',
-  url = window.location.href,
-  type = 'website'
+  url = 'https://zion.app',
+  type = 'website',
 }) => {
+  const fullTitle = title.includes('Zion') ? title : \`\${title} | Zion Tech Group\`;
+
   return (
     <Helmet>
-      <title>{title}</title>
+      <title>{fullTitle}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
-      <meta property="og:title" content={title} />
+      <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
       <meta property="og:url" content={url} />
       <meta property="og:type" content={type} />
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
+      <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
       <link rel="canonical" href={url} />
     </Helmet>
   );
 };
+
+export default SEO;
 `;
 
-  fs.writeFileSync('src/components/SEO.tsx', seoOptimizer);
-  console.log('✅ SEO optimization setup complete');
+  const seoPath = path.join(__dirname, '..', 'src/components/SEO.tsx');
+  fs.writeFileSync(seoPath, seoContent);
+  console.log('✅ Created SEO optimization component');
 }
 
-// 7. Security Enhancements
-function enhanceSecurity() {
-  console.log('🔒 Implementing security enhancements...');
-  
-  const securityUtils = `
-// Security utilities
-export const sanitizeInput = (input: string): string => {
-  return input
-    .replace(/[<>]/g, '')
-    .replace(/javascript:/gi, '')
-    .replace(/on\w+=/gi, '');
-};
+// 5. Create accessibility enhancements
+function createAccessibilityEnhancements() {
+  const accessibilityContent = `import React, { useEffect } from 'react';
 
-export const validateEmail = (email: string): boolean => {
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return emailRegex.test(email);
-};
-
-export const generateCSRFToken = (): string => {
-  return Math.random().toString(36).substring(2, 15) + 
-         Math.random().toString(36).substring(2, 15);
-};
-
-// Content Security Policy headers
-export const getCSPHeaders = () => ({
-  'Content-Security-Policy': [
-    "default-src 'self'",
-    "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com",
-    "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
-    "font-src 'self' https://fonts.gstatic.com",
-    "img-src 'self' data: https:",
-    "connect-src 'self' https://api.zion.tech"
-  ].join('; ')
-});
-`;
-
-  fs.writeFileSync('src/utils/security.ts', securityUtils);
-  console.log('✅ Security enhancements implemented');
-}
-
-// 8. Accessibility Improvements
-function improveAccessibility() {
-  console.log('♿ Implementing accessibility improvements...');
-  
-  const accessibilityUtils = `
-// Accessibility utilities
-export const announceToScreenReader = (message: string) => {
-  const announcement = document.createElement('div');
-  announcement.setAttribute('aria-live', 'polite');
-  announcement.setAttribute('aria-atomic', 'true');
-  announcement.className = 'sr-only';
-  announcement.textContent = message;
-  
-  document.body.appendChild(announcement);
-  
-  setTimeout(() => {
-    document.body.removeChild(announcement);
-  }, 1000);
-};
-
-export const trapFocus = (element: HTMLElement) => {
-  const focusableElements = element.querySelectorAll(
-    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-  );
-  
-  const firstElement = focusableElements[0] as HTMLElement;
-  const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
-  
-  const handleTabKey = (e: KeyboardEvent) => {
-    if (e.key === 'Tab') {
-      if (e.shiftKey) {
-        if (document.activeElement === firstElement) {
-          lastElement.focus();
-          e.preventDefault();
-        }
-      } else {
-        if (document.activeElement === lastElement) {
-          firstElement.focus();
-          e.preventDefault();
-        }
+export const useAccessibility = () => {
+  useEffect(() => {
+    // Focus management
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Tab') {
+        document.body.classList.add('keyboard-navigation');
       }
-    }
-  };
-  
-  element.addEventListener('keydown', handleTabKey);
-  
-  return () => element.removeEventListener('keydown', handleTabKey);
+    };
+
+    const handleMouseDown = () => {
+      document.body.classList.remove('keyboard-navigation');
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    document.addEventListener('mousedown', handleMouseDown);
+
+    // Skip to content link
+    const skipLink = document.createElement('a');
+    skipLink.href = '#main-content';
+    skipLink.textContent = 'Skip to main content';
+    skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white p-2 rounded z-50';
+    document.body.insertBefore(skipLink, document.body.firstChild);
+
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener('mousedown', handleMouseDown);
+      if (skipLink.parentNode) {
+        skipLink.parentNode.removeChild(skipLink);
+      }
+    };
+  }, []);
 };
 
-// High contrast mode detection
-export const isHighContrastMode = (): boolean => {
-  return window.matchMedia('(prefers-contrast: high)').matches;
+export const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  useAccessibility();
+  
+  return (
+    <div>
+      {children}
+      <div id="main-content" />
+    </div>
+  );
 };
 
-// Reduced motion detection
-export const prefersReducedMotion = (): boolean => {
-  return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-};
+export default AccessibilityEnhancer;
 `;
 
-  fs.writeFileSync('src/utils/accessibility.ts', accessibilityUtils);
-  console.log('✅ Accessibility improvements implemented');
+  const accessibilityPath = path.join(__dirname, '..', 'src/utils/accessibility.ts');
+  fs.writeFileSync(accessibilityPath, accessibilityContent);
+  console.log('✅ Created accessibility enhancements');
 }
 
 // Run all optimizations
-async function runOptimizations() {
-  try {
-    optimizeBundle();
-    optimizeImages();
-    setupPerformanceMonitoring();
-    implementCodeSplitting();
-    createErrorBoundary();
-    optimizeSEO();
-    enhanceSecurity();
-    improveAccessibility();
-    
-    console.log('\\n🎉 All optimizations completed successfully!');
-    console.log('📈 Performance improvements:');
-    console.log('   • Bundle size optimization');
-    console.log('   • Code splitting implementation');
-    console.log('   • Image optimization');
-    console.log('   • Performance monitoring');
-    console.log('   • Error boundaries');
-    console.log('   • SEO optimization');
-    console.log('   • Security enhancements');
-    console.log('   • Accessibility improvements');
-    
-  } catch (error) {
-    console.error('❌ Optimization failed:', error);
-    process.exit(1);
-  }
-}
+optimizePackageScripts();
+createPerformanceMonitor();
+optimizeViteConfig();
+createSEOOptimizer();
+createAccessibilityEnhancements();
 
-runOptimizations();
+console.log('\n✅ All performance optimizations completed!');
+console.log('\n📊 Next steps:');
+console.log('1. Run: npm run build:optimized');
+console.log('2. Run: npm run analyze:bundle');
+console.log('3. Run: npm run performance:audit');

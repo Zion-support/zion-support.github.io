@@ -1,5 +1,5 @@
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'AI Data Contracts 2026: Shipping Reliable AI with Measurable Data Quality',
@@ -108,7 +108,7 @@ export default function AIDataContracts2026Page() {
 
 function RelatedArticleCard({ title, description, href }: { title: string; description: string; href: string }) {
   return (
-    <Link to={href} className="block bg-white rounded-lg p-6 hover:shadow-lg transition-all duration-300">
+    <Link href={href} className="block bg-white rounded-lg p-6 hover:shadow-lg transition-all duration-300">
       <h3 className="text-lg font-bold text-gray-900 mb-2">{title}</h3>
       <p className="text-gray-600 mb-3">{description}</p>
       <span className="text-indigo-600 font-semibold">Read More →</span>

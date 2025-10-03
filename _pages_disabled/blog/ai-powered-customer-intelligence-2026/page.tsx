@@ -1,5 +1,5 @@
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'AI-Powered Customer Intelligence 2026: 360° Customer Understanding & 45% Revenue Growth | Zion Tech Group',

@@ -1,5 +1,5 @@
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'Global Retailer AI Transformation: $420M Revenue Growth with Edge AI | Zion Tech Group Case Study',

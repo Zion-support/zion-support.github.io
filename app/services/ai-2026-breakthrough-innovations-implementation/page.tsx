@@ -1,5 +1,5 @@
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import Link from 'next/link';
 import { ArrowRight, CheckCircle, Brain, Zap, Target, Users, DollarSign, TrendingUp } from 'lucide-react';
 
 export const metadata = {
@@ -271,19 +271,22 @@ export default function AI2026BreakthroughInnovationsImplementationPage() {
           Join the Fortune 500 companies already generating unprecedented value with our breakthrough innovations implementation service.
         </p>
         <div className="flex flex-wrap gap-4 justify-center">
-          <Link to="/contact" 
+          <Link 
+            href="/contact" 
             className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-green-600 hover:to-emerald-600 transition-all flex items-center gap-2"
           >
             Start Implementation
             <ArrowRight className="w-5 h-5" />
           </Link>
-          <Link to="/case-studies/ai-2026-breakthrough-innovations-2-8-trillion-success" 
+          <Link 
+            href="/case-studies/ai-2026-breakthrough-innovations-2-8-trillion-success" 
             className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all flex items-center gap-2"
           >
             View Success Stories
             <ArrowRight className="w-5 h-5" />
           </Link>
-          <Link to="/blog/ai-2026-breakthrough-innovations-mega-success" 
+          <Link 
+            href="/blog/ai-2026-breakthrough-innovations-mega-success" 
             className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-indigo-600 transition-all flex items-center gap-2"
           >
             Read Full Analysis
@@ -296,7 +299,7 @@ export default function AI2026BreakthroughInnovationsImplementationPage() {
       <section className="mt-12">
         <h2 className="text-2xl font-bold mb-6 text-gray-900">Related Services</h2>
         <div className="grid md:grid-cols-2 gap-6">
-          <Link to="/services/ai-2026-quantum-consciousness-implementation" className="block p-6 bg-gradient-to-br from-purple-50 to-blue-50 rounded-xl border border-purple-200 hover:shadow-lg transition-all">
+          <Link href="/services/ai-2026-quantum-consciousness-implementation" className="block p-6 bg-gradient-to-br from-purple-50 to-blue-50 rounded-xl border border-purple-200 hover:shadow-lg transition-all">
             <div className="flex items-center gap-2 mb-3">
               <span className="bg-purple-500 text-white px-2 py-1 rounded text-xs font-semibold">QUANTUM AI</span>
               <span className="bg-green-500 text-white px-2 py-1 rounded text-xs font-semibold">$847B SUCCESS</span>
@@ -304,7 +307,7 @@ export default function AI2026BreakthroughInnovationsImplementationPage() {
             <h3 className="font-bold text-lg text-gray-900 mb-2">Quantum Consciousness Implementation</h3>
             <p className="text-gray-700">Deploy quantum-enhanced consciousness achieving 99.999% awareness levels.</p>
           </Link>
-          <Link to="/services/ai-2026-autonomous-enterprise-systems" className="block p-6 bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl border border-green-200 hover:shadow-lg transition-all">
+          <Link href="/services/ai-2026-autonomous-enterprise-systems" className="block p-6 bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl border border-green-200 hover:shadow-lg transition-all">
             <div className="flex items-center gap-2 mb-3">
               <span className="bg-green-500 text-white px-2 py-1 rounded text-xs font-semibold">AUTONOMOUS</span>
               <span className="bg-blue-500 text-white px-2 py-1 rounded text-xs font-semibold">$1.2T SAVINGS</span>

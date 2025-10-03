@@ -1,5 +1,5 @@
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import Link from 'next/link';
 import { ArrowLeft, Calendar, User, Clock, Tag, TrendingUp, DollarSign, Users, Target, Brain, Zap, Shield, CheckCircle } from 'lucide-react';
 
 export const metadata = {
@@ -14,7 +14,8 @@ export default function AI2025DecemberAutonomousRevolution28BillionSuccess() {
       {/* Header */}
       <header className="border-b border-gray-200 bg-white sticky top-0 z-50">
         <div className="max-w-4xl mx-auto px-4 py-4">
-          <Link to="/" 
+          <Link 
+            href="/" 
             className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
@@ -391,7 +392,8 @@ export default function AI2025DecemberAutonomousRevolution28BillionSuccess() {
                 <p className="text-blue-700 mb-4">
                   Learn how Zion Tech Group can help your organization achieve similar results with our revolutionary AI autonomous enterprise platform.
                 </p>
-                <Link to="/contact" 
+                <Link 
+                  href="/contact" 
                   className="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors"
                 >
                   Schedule Consultation

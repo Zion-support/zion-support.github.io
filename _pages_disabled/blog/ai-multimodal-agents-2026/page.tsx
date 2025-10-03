@@ -1,5 +1,5 @@
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'Multimodal AI Agents 2026: Text, Image, Video & Audio Integration | Zion Tech Group',

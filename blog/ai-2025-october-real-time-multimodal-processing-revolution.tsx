@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Zap, Video, Cpu, TrendingUp } from 'lucide-react';
+import { ArrowLeft, Zap, Video, Mic, Image, FileText, Cpu, TrendingUp } from "lucide-react";
+
 const RealTimeMultimodalProcessingRevolution = () => {
   return (
     <>

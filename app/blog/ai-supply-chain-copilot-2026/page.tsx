@@ -1,5 +1,5 @@
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import Link from 'next/link';
 
 export const metadata = {
 	title: 'AI Supply Chain Copilot 2026: OTIF Wins Under Budget',
@@ -27,7 +27,7 @@ export default function Page() {
 				then scale via golden paths and shared components.
 			</p>
 			<div className="mt-10">
-				<Link to="/blog" className="text-indigo-600 font-semibold">← Back to Blog</Link>
+				<Link href="/blog" className="text-indigo-600 font-semibold">← Back to Blog</Link>
 			</div>
 		</div>
 	);
