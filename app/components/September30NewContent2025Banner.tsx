@@ -2,9 +2,9 @@ import React from 'react';
 import Link from 'next/link';
 import { Sparkles, TrendingUp, ArrowRight, Zap, Rocket, Star } from 'lucide-react';
 
-const September30NewContent2025Banner: React.FC = () => 
+const September30NewContent2025Banner: React.FC = () => {
   const newArticles = [
-    
+    {
       id: 0,
       title: 'AI-Accelerated Customer Experience 2025',
       slug: 'ai-accelerated-customer-experience-2025',
@@ -15,7 +15,7 @@ const September30NewContent2025Banner: React.FC = () =>
       icon: '✨',
       gradient: 'from-cyan-600 to-blue-700'
     },
-    
+    {
       id: 1,
       title: 'AI-Powered Autonomous Operations 2025',
       slug: 'ai-autonomous-operations-2025',
@@ -26,7 +26,7 @@ const September30NewContent2025Banner: React.FC = () =>
       icon: '🤖',
       gradient: 'from-cyan-500 to-blue-600'
     },
-    
+    {
       id: 2,
       title: 'Generative AI for Enterprise Architecture 2025',
       slug: 'generative-ai-enterprise-architecture-2025',
@@ -37,7 +37,7 @@ const September30NewContent2025Banner: React.FC = () =>
       icon: '🎨',
       gradient: 'from-purple-500 to-fuchsia-600'
     },
-    
+    {
       id: 3,
       title: 'Multimodal AI Agents Enterprise 2025',
       slug: 'multimodal-ai-agents-enterprise-2025',
@@ -48,7 +48,7 @@ const September30NewContent2025Banner: React.FC = () =>
       icon: '👁️',
       gradient: 'from-emerald-500 to-teal-600'
     },
-    
+    {
       id: 4,
       title: 'Quantum-Enhanced Machine Learning 2025',
       slug: 'quantum-enhanced-machine-learning-2025',
@@ -59,7 +59,7 @@ const September30NewContent2025Banner: React.FC = () =>
       icon: '⚛️',
       gradient: 'from-indigo-500 to-purple-600'
     },
-    
+    {
       id: 5,
       title: 'AI-Powered Cloud FinOps 2025',
       slug: 'ai-powered-cloud-finops-2025',
@@ -73,21 +73,20 @@ const September30NewContent2025Banner: React.FC = () =>
   ];
 
   return (
-  <div></div>
-    <div className="text-left"></div>
+    <div className="text-left">
       {/* Animated background effects */}
-      <div className="text-left"></div>
+      <div className="text-left">
         <div className="text-left"></div>
         <div className="text-left" style={{ animationDelay: '2s' }}></div>
         <div className="text-left" style={{ animationDelay: '4s' }}></div>
       </div>
 
-      <div className="text-left"></div>
+      <div className="text-left">
         {/* Header Section */}
-        <div className="text-left"></div>
-          <div className="text-left"></div>
+        <div className="text-left">
+          <div className="text-left">
             <Rocket className="text-left" />
-            <span className="text-left"></span>
+            <span className="text-left">
               🔥 5 BREAKTHROUGH ARTICLES RELEASED • SEPTEMBER 30, 2025
             </span>
             <Sparkles className="text-left" />
@@ -97,38 +96,38 @@ const September30NewContent2025Banner: React.FC = () =>
             Latest AI Breakthroughs & Innovations
           </h2>
           
-          <p className="text-left"></p>
+          <p className="text-left">
             Cutting-edge research, enterprise implementations, and breakthrough technologies that are 
             revolutionizing AI operations, quantum computing, and cloud economics.
           </p>
         </div>
 
         {/* Articles Grid */}
-        <div className="text-left"></div>
+        <div className="text-left">
           {newArticles.slice(0, 3).map((article, index) => (
             <div 
               key={article.id}
               className="text-left"
               style={{ animationDelay: `${index * 150}ms` }}
-            ></div>
+            >
               {/* Card glow effect */}
               <div className="text-left"></div>
-              <div className="text-left"></div>
+              <div className="text-left">
                 {/* Icon & Badge */}
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+                  <div className="text-left">
                     {article.icon}
                   </div>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+                    <div className="text-left">
                       <TrendingUp className="text-left" />
                       <span>NEW</span>
                     </div>
                 </div>
 
                 {/* Category Tag */}
-                <div className="text-left"></div>
-                  <span className={`inline-block px-4 py-2 rounded-full bg-gradient-to-r ${article.gradient} text-white text-sm font-semibold shadow-lg`}></span>
+                <div className="text-left">
+                  <span className={`inline-block px-4 py-2 rounded-full bg-gradient-to-r ${article.gradient} text-white text-sm font-semibold shadow-lg`}>
                     {article.category}
                   </span>
                 </div>
@@ -139,13 +138,13 @@ const September30NewContent2025Banner: React.FC = () =>
                 </h3>
 
                 {/* Excerpt */}
-                <p className="text-left"></p>
+                <p className="text-left">
                   {article.excerpt}
                 </p>
 
                 {/* Meta Info */}
-                <div className="text-left"></div>
-                  <span className="text-left"></span>
+                <div className="text-left">
+                  <span className="text-left">
                     <Zap className="text-left" />
                     {article.readTime}
                   </span>
@@ -161,33 +160,33 @@ const September30NewContent2025Banner: React.FC = () =>
                 </Link>
               </div>
             </div>
-          ))}
+            ))}
         </div>
 
         {/* Second Row */}
-        <div className="text-left"></div>
+        <div className="text-left">
           {newArticles.slice(3).map((article, index) => (
             <div 
               key={article.id}
-              className="text-left"></div>
+              className="text-left">
               {/* Card glow effect */}
               <div className="text-left"></div>
-              <div className="text-left"></div>
+              <div className="text-left">
                 {/* Icon & Badge */}
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+                  <div className="text-left">
                     {article.icon}
                   </div>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+                    <div className="text-left">
                       <Star className="text-left" />
                       <span>FEATURED</span>
                     </div>
                 </div>
 
                 {/* Category Tag */}
-                <div className="text-left"></div>
-                  <span className={`inline-block px-4 py-2 rounded-full bg-gradient-to-r ${article.gradient} text-white text-sm font-semibold shadow-lg`}></span>
+                <div className="text-left">
+                  <span className={`inline-block px-4 py-2 rounded-full bg-gradient-to-r ${article.gradient} text-white text-sm font-semibold shadow-lg`}>
                     {article.category}
                   </span>
                 </div>
@@ -198,13 +197,13 @@ const September30NewContent2025Banner: React.FC = () =>
                 </h3>
 
                 {/* Excerpt */}
-                <p className="text-left"></p>
+                <p className="text-left">
                   {article.excerpt}
                 </p>
 
                 {/* Meta Info */}
-                <div className="text-left"></div>
-                  <span className="text-left"></span>
+                <div className="text-left">
+                  <span className="text-left">
                     <Zap className="text-left" />
                     {article.readTime}
                   </span>
@@ -220,21 +219,21 @@ const September30NewContent2025Banner: React.FC = () =>
                 </Link>
               </div>
             </div>
-          ))}
+            ))}
         </div>
 
         {/* Call-to-Action Section */}
-        <div className="text-left"></div>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+        <div className="text-left">
+          <div className="text-left">
+            <div className="text-left">
               <h3 className="text-left">
                 Transform Your Enterprise with AI
               </h3>
-              <p className="text-left"></p>
+              <p className="text-left">
                 Join 500+ Fortune 500 enterprises achieving breakthrough results with AI-powered operations, 
                 quantum computing, and autonomous systems. Get expert guidance from our team.
               </p>
-              <div className="text-left"></div>
+              <div className="text-left">
                 <Link
                   href="/blog"
                   className="text-left">
@@ -248,29 +247,27 @@ const September30NewContent2025Banner: React.FC = () =>
                   <ArrowRight className="text-left" />
                 </Link>
               </div>
-            </div>
           </div>
 
         {/* Stats Section */}
-        <div className="text-left"></div>
+        <div className="text-left">
           {[
             { value='500+', label: 'Enterprise Clients', icon: '🏢' },
             { value='$2.5B+', label: 'Value Delivered', icon: '💎' },
             { value='99.99%', label: 'System Reliability', icon: '⚡' },
             { value='1000x', label: 'Performance Gains', icon: '🚀' }
           ].map((stat, index) => (
-            <div key={index} className="text-left"></div>
-              <div className="text-left">{stat.icon}</div>
-              <div className="text-left"></div>
+            <div key={index} className="text-left">
+              <div className="text-left">{stat.icon}</div>"
+              <div className="text-left">
                 {stat.value}
               </div>
-              <div className="text-left"></div>
+              <div className="text-left">
                 {stat.label}
               </div>
             </div>
-          ))}
+            ))}
         </div>
-      </div>
     </div>
   );
 };
