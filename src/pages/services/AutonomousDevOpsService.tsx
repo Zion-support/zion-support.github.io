@@ -969,32 +969,13 @@ const AutonomousDevOpsService: React.FC = () => {
                   >
                     Start Your Autonomous DevOps Journey
                     <ArrowRight className="w-5 h-5" />
-=======
-                <div className="text-center">
-                  <Link to: "/contact
-  className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg font-semibold hover:shadow-lg hover:shadow-blue-500/50 transition-all duration-300
-                  >
-                    Schedule Consultation
-                    <ArrowRight className="w-5 h-5/>"
-                    <ArrowRight className="w-5 h-5/>"
-                    <ArrowRight className="w-5 h-5" />
-                <div className= "text-center">
-                  <Link to: "/contact
-  className= "inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg font-semibold hover:shadow-lg hover:shadow-blue-500/50 transition-all duration-300
-                  >
-                    Schedule Consultation
-                    <ArrowRight className= "w-5 h-5/>"
-                    <ArrowRight className= "w-5 h-5" />
->>>>>>> cursor/fix-errors-and-merge-to-main-075c
-                  </Link>
-                </div>
+                </Link>
               </div>
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -1014,51 +995,6 @@ const AutonomousDevOpsService: React.FC = () => {
               <Link 
                 to="/case-studies"
                 className="px-8 py-4 bg-white/10 backdrop-blur-sm rounded-lg font-semibold hover:bg-white/20 transition-all duration-300"
-=======
-        <section className="py-20 px-4"
-          <div className="max-w-4xl mx-auto text-center"
-            <h2 className="text-4xl md: text-5xl font-bold mb-6">
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md: text-5xl font-bold mb-6">
-  Ready to Transform Your DevOps?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-  Join leading enterprises achieving 80% faster releases with autonomous DevOps
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link to: "/contact
-  className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg font-semibold hover:shadow-lg hover:shadow-blue-500/50 transition-all duration-300 flex items-center gap-2
-              >
-                Get Started Today
-                <ArrowRight className="w-5 h-5/>"
-                <ArrowRight className="w-5 h-5/>"
-                <ArrowRight className="w-5 h-5" />
-              </Link>
-              <Link to: "/case-studies
-  className="px-8 py-4 bg-white/10 backdrop-blur-sm rounded-lg font-semibold hover:bg-white/20 transition-all duration-300
-        <section className= "py-20 px-4">
-          <div className= "max-w-4xl mx-auto text-center">
-            <h2 className= "text-4xl md: text-5xl font-bold mb-6">
-        <section className= "py-20 px-4">
-          <div className= "max-w-4xl mx-auto text-center">
-            <h2 className= "text-4xl md: text-5xl font-bold mb-6">"
-  Ready to Transform Your DevOps?
-            </h2>
-            <p className= "text-xl text-gray-300 mb-8">"
-  Join leading enterprises achieving 80% faster releases with autonomous DevOps
-            </p>
-            <div className= "flex flex-wrap justify-center gap-4">
-              <Link to: "/contact
-  className= "px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg font-semibold hover:shadow-lg hover:shadow-blue-500/50 transition-all duration-300 flex items-center gap-2
-              >
-                Get Started Today
-                <ArrowRight className= "w-5 h-5/>"
-                <ArrowRight className= "w-5 h-5" />
-              </Link>
-              <Link to: "/case-studies
-  className= "px-8 py-4 bg-white/10 backdrop-blur-sm rounded-lg font-semibold hover:bg-white/20 transition-all duration-300
->>>>>>> cursor/fix-errors-and-merge-to-main-075c
               >
                 View Case Studies
               </Link>

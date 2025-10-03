@@ -4,7 +4,7 @@
  */
 
 export interface SEOMetadata {
-  title= string;
+  title: string;
   description: string;
   keywords?: string[];
   author?: string;
@@ -78,7 +78,7 @@ export const generateStructuredData = (type: string, data: Record<string, unknow
 };
 
 export const generateArticleStructuredData = (article: {
-  title= string;
+  title: string;
   description: string;
   author: string;
   publishDate: string;
