@@ -10,19 +10,9 @@ export default function Page() {
   return (
     <article className="text-left">
       <header className="text-left">
-        <div className="text-left">January 2026 • 14 min read</div>"
-        <h1 className="text-left">
-          AI Agent Security Blueprint 2026
-        </h1>
-        <p className="text-left">
-          A practical zero‑trust approach for autonomous agents: scoped secrets, sandboxed tools, granular policies,
-          continuous monitoring, and tamper‑evident auditability.
-        </p>
-      </header>
-
-      <div className="text-left"></div>
+        <div></div>
         <section className="text-left">
-          <h2 className="text-left">Threat Model</h2>"
+          <h2 className="text-left">Threat Model</h2>" />
           <p className="text-left">
             Consider prompt injection, tool misuse, data exfiltration, privilege escalation, and supply‑chain risks.
             Design controls assuming compromise and focus on blast‑radius reduction.
@@ -58,5 +48,7 @@ export default function Page() {
     </article>
   );
 }
+  </div>
+</header>
 
-</div>
+</a>

@@ -17,94 +17,27 @@ export const metadata: Metadata = {
 
 export default function NeuromorphicComputingRevolution2026() {
   return (
-    <div className="text-left">
-      {/* Hero Section */}</div>
-      <section className="text-left">
-        <div className="text-left"></div>
-          <div className="text-left"></div>"
-          <div className="text-left" style={{ animationDelay: '2s' }}></div>"
-        </div>
-        
-        <div className="text-left"></div>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
-              <span className="text-left">
-                🧠 REVOLUTIONARY: Neuromorphic Computing 2026
-              </span>
-            </div>
-            
-            <h1 className="text-left">
-              Neuromorphic Computing Revolution 2026
-            </h1>
-            
-            <p className="text-left">
-              Brain-Inspired AI • 99.7% Neural Efficiency • 1000x Processing Speed
-            </p>
-            
-            <p className="text-left">
-              Experience the most revolutionary neuromorphic computing breakthrough that mimics human brain architecture. 
-              Our brain-inspired AI achieves unprecedented neural efficiency and processing power while consuming 99% less energy than traditional computing.
-            </p>
-
-            <div className="text-left"></div>
-              <div className="text-left"></div>
-                <div className="text-left">🧠</div>"
-                <div className="text-left">
-                  99.7%</div>
-                </div>
-                <div className="text-left">
+    <div></div>
+          <div></div>"
+  </div>
+              <div>🧠</div>"
+                <div>
                   Neural Efficiency Rate</div>
-                </div>
-              </div>
-              <div className="text-left"></div>
-                <div className="text-left">⚡</div>"
-                <div className="text-left">
-                  1000x</div>
-                </div>
-                <div className="text-left">
+  </div>
+  </div>
+              <div>⚡</div>"
+                <div>
                   Processing Speed</div>
-                </div>
-              </div>
-              <div className="text-left"></div>
-                <div className="text-left">🔋</div>"
-                <div className="text-left">
-                  99%</div>
-                </div>
-                <div className="text-left">
+  </div>
+  </div>
+              <div>🔋</div>"
+                <div>
                   Energy Reduction</div>
-                </div>
-              </div>
-            </div>
-            
-            <div className="text-left"></div>
-              <a 
-                href="/"
-                className="text-left">
-                Get Neuromorphic Consultation
-              </a>
-              <a 
-                href="/"
-                className="text-left">
-                View Success Stories
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Key Features Section */}
-      <section className="text-left">
-        <div className="text-left"></div>
-          <div className="text-left"></div>
-            <h2 className="text-left">
-              Revolutionary Neuromorphic Features
-            </h2>
-            <p className="text-left">
-              Brain-inspired computing architecture that revolutionizes how AI processes information, learns, and adapts.
-            </p>
-          </div>
-
-          <div className="text-left">
+  </div>
+  </div>
+  </div>
+            <div></div>
+          <div>
             {[
               {
                 icon: '🧠',
@@ -143,8 +76,7 @@ export default function NeuromorphicComputingRevolution2026() {
                 features: ['Lifelong learning', 'Knowledge retention', 'Experience integration']
               }
             ].map((feature, index) => (</div>
-              <div key={index} className="text-left"></div>
-                <div className="text-left">{feature.icon}</div>"
+              <div>{feature.icon}</div>"
                 <h3 className="text-left">{feature.title}</h3>"
                 <p className="text-left">{feature.description}</p>"
                 <ul className="text-left">
@@ -155,26 +87,23 @@ export default function NeuromorphicComputingRevolution2026() {
                     </li>
                   ))}
                 </ul>
-              </div>
+  </div>
             ))}
-          </div>
-        </div>
+  </div>
+  </div>
       </section>
 
       {/* Enterprise Applications Section */}
       <section className="text-left">
-        <div className="text-left"></div>
-          <div className="text-left"></div>
+        <div></div>
             <h2 className="text-left">
               Enterprise Applications
             </h2>
             <p className="text-left">
               Transform your enterprise operations with brain-inspired AI that delivers unprecedented performance and efficiency.
             </p>
-          </div>
-
-          <div className="text-left"></div>
-            <div className="text-left">
+  </div>
+          <div>
               {[
                 {
                   title: 'Real-Time Decision Making',
@@ -192,47 +121,8 @@ export default function NeuromorphicComputingRevolution2026() {
                   benefits: ['Self-healing systems', 'Dynamic optimization', 'Continuous improvement']
                 }
               ].map((app, index) => (</div>
-                <div key={index} className="text-left"></div>
-                  <h3 className="text-left">{app.title}</h3>"
-                  <p className="text-left">{app.description}</p>"
-                  <ul className="text-left">
-                    {app.benefits.map((benefit, idx) => (
-                      <li key={idx} className="text-left">
-                        <span className="text-left">→>
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-            
-            <div className="text-left"></div>
+                <div></div>
               <h3 className="text-left">🎯 Performance Metrics</h3>"
-              <div className="text-left">
-                {[
-                  { metric: 'Processing Speed', value='1000x faster', icon: '⚡' },
-                  { metric: 'Energy Efficiency', value='99% reduction', icon: '🔋' },
-                  { metric: 'Memory Usage', value='95% optimized', icon: '💾' },
-                  { metric: 'Accuracy Rate', value='99.7% precision', icon: '🎯' }
-                ].map((metric, index) => (</div>
-                  <div key={index} className="text-left"></div>
-                    <div className="text-left"></div>
-                      <span className="text-left">{metric.icon}<
-                      <span className="text-left">{metric.metric}>
-                    </div>
-                    <span className="text-left">{metric.value}>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="text-left">
-        <div className="text-left"></div>
           <h2 className="text-left">
             Ready to Experience Brain-Inspired AI?
           </h2>
@@ -250,9 +140,10 @@ export default function NeuromorphicComputingRevolution2026() {
               className="text-left">
               View Case Studies
             </a>
-          </div>
-        </div>
+  </div>
+  </div>
       </section>
-    </div>
+  </div>
   );
 }
+</span>

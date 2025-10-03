@@ -10,17 +10,7 @@ export default function Page() {
   return (
     <article className="text-left">
       <header className="text-left">
-        <div className="text-left">January 2026 • 16 min read</div>"
-        <h1 className="text-left">
-          Trustworthy Autonomous Agents 2026
-        </h1>
-        <p className="text-left">
-          A practical blueprint to ship reliable autonomy: layered policy gates, budgeted actions, live evals, and
-          measurable outcomes with human approval where it matters.
-        </p>
-      </header>
-
-      <div className="text-left"></div>
+        <div></div>
         <section className="text-left">
           <h2 className="text-left">Why Trust Matters</h2>"
           <p className="text-left">
@@ -67,5 +57,7 @@ export default function Page() {
     </article>
   );
 }
+  </div>
+</header>
 
-</div>
+</a>
