@@ -150,12 +150,12 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
       // Default error UI
       return (
-        <div className="min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">"
-          <div className="sm:mx-auto sm:w-full sm:max-w-md">"
-            <div className="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">"
-              <div className="text-center">"
-                <div className="mx-auto h-12 w-12 text-red-600">"
-                  <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">"
+        <div className="min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
+          <div className="sm:mx-auto sm:w-full sm:max-w-md">
+            <div className="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
+              <div className="text-center">
+                <div className="mx-auto h-12 w-12 text-red-600">
+                  <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
@@ -164,22 +164,22 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                     />
                   </svg>
                 </div>
-                <h2 className="mt-4 text-2xl font-bold text-gray-900">"
+                <h2 className="mt-4 text-2xl font-bold text-gray-900">
                   Something went wrong
                 </h2>
-                <p className="mt-2 text-sm text-gray-600">"
+                <p className="mt-2 text-sm text-gray-600">
                   We're sorry, but something unexpected happened. Our team has been notified.
                 </p>
                 
                 {showDetails && error && (
-                  <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-md">"
-                    <h3 className="text-sm font-medium text-red-800">Error Details</h3>"
-                    <p className="mt-1 text-sm text-red-700">Error ID: {errorId}</p>"
-                    <p className="mt-1 text-sm text-red-700">Message: {error.message}</p>"
+                  <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-md">
+                    <h3 className="text-sm font-medium text-red-800">Error Details</h3>
+                    <p className="mt-1 text-sm text-red-700">Error ID: {errorId}</p>
+                    <p className="mt-1 text-sm text-red-700">Message: {error.message}</p>
                   </div>
                 )}
 
-                <div className="mt-6 space-y-3">"
+                <div className="mt-6 space-y-3">
                   {this.retryCount < this.maxRetries && (
                     <button
                       onClick={this.handleRetry}
