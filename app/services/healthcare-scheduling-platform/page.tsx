@@ -1,16 +1,6 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
-export const metadata: Metadata = {
-  title: 'Healthcare Scheduling Platform - Zion Tech Group',
-  description: 'Comprehensive healthcare scheduling SaaS for hospitals and clinics. Manage appointments, patient data, and virtual consultations with HIPAA compliance.',
-  keywords: 'healthcare scheduling, hospital management, patient appointments, virtual consultations, HIPAA compliance, medical software',
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
 
 export default function HealthcareSchedulingPlatform() {
   return (

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Metadata } from 'next';
 import { 
   Video, 
   Brain, 
@@ -18,11 +17,6 @@ import {
   Shield
 } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: 'AI Meeting Intelligence Platform | Zion Tech Group - Smart Meeting Analytics',
-  description: 'Transform meetings with AI-powered insights, automatic transcription, action item extraction, and real-time analytics. Boost productivity and decision-making.',
-  keywords: 'AI meeting platform, meeting analytics, transcription, action items, meeting intelligence, productivity tools',
-};
 
 export default function AIMeetingIntelligencePlatform() {
   const features = [

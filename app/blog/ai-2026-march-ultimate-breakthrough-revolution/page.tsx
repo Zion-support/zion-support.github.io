@@ -1,11 +1,5 @@
 import React from 'react';
-import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'AI 2026: March Ultimate Breakthrough Revolution - 100,000x Performance',
-  description: 'Revolutionary AI breakthrough delivering 100,000x performance improvements, 99.99% autonomous operations, and $15B+ ROI across enterprises.',
-  keywords: 'AI breakthrough, 100,000x performance, autonomous AI, March 2026, revolutionary technology',
-};
 
 export default function MarchUltimateBreakthroughRevolution() {
   return (

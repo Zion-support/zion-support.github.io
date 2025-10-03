@@ -1,12 +1,6 @@
 import React from 'react';
-import { Metadata } from 'next';
 import { Shield, CheckCircle, ArrowRight, DollarSign, Clock } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: 'Vendor Risk Scoring API | Zion Tech Group - Micro SaaS',
-  description: 'Continuous vendor monitoring with cyber hygiene, breach intelligence, and questionnaire parsing into unified risk scores.',
-  keywords: 'vendor risk, third-party risk, GRC, security ratings, SIG, CAIQ, compliance automation',
-};
 
 export default function VendorRiskScoringPage() {
   const contact = {

@@ -1,12 +1,6 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
-export const metadata: Metadata = {
-  title: 'AI 2026 January Ultimate Breakthrough $500B Success Story - Fortune 100 Transformation',
-  description: 'How a Fortune 100 global conglomerate achieved $500B ROI through January 2026 ultimate breakthrough implementation with 1,000,000x performance improvement.',
-  keywords: 'AI success story, $500B ROI, Fortune 100, ultimate breakthrough, 1 million x performance, enterprise transformation',
-};
 
 export default function January2026UltimateBreakthrough500BSuccess() {
   return (

@@ -1,12 +1,6 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
-export const metadata: Metadata = {
-  title: 'AI Customer Insights Platform | Zion Tech Group - Advanced Customer Analytics',
-  description: 'AI-powered customer insights platform for behavioral analysis, sentiment tracking, and predictive analytics. Transform customer data into actionable business intelligence.',
-  keywords: 'AI customer insights, behavioral analytics, sentiment analysis, predictive analytics, customer intelligence, business intelligence',
-};
 
 export default function AICustomerInsightsPlatformPage() {
   const features = [

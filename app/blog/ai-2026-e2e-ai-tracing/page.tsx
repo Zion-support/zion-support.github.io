@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'E2E AI Tracing 2026: From Prompts to Outcomes | Zion Tech Group',

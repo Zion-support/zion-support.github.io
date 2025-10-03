@@ -1,16 +1,6 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
-export const metadata: Metadata = {
-  title: 'AI Content Optimization Platform - Zion Tech Group',
-  description: 'Transform your content strategy with AI-powered optimization. Boost SEO rankings, engagement rates, and conversion with intelligent content analysis and recommendations.',
-  keywords: 'AI content optimization, SEO automation, content marketing AI, content analysis, marketing automation',
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
 
 export default function AIContentOptimizationPlatform() {
   return (

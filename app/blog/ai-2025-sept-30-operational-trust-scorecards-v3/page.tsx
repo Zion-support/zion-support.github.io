@@ -1,5 +1,5 @@
 // @ts-nocheck
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'Operational Trust Scorecards v3 (Sep 30, 2025) | Zion Tech Group',

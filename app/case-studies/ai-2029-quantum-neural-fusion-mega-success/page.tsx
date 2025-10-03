@@ -1,19 +1,5 @@
 import React from 'react';
-import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Case Study: AI 2029 Quantum Neural Fusion Mega Success - $10B ROI Achievement',
-  description: 'How a global technology mega-corporation achieved $10B annual ROI through 1,000,000x performance improvements and revolutionary conscious AI capabilities.',
-  keywords: ['AI case study', 'quantum neural fusion', '$10B ROI', 'conscious AI', 'technology transformation', 'AI success story'],
-  openGraph: {
-    title: 'Case Study: AI 2029 Quantum Neural Fusion Mega Success - $10B ROI Achievement',
-    description: 'How a global technology mega-corporation achieved $10B annual ROI through 1,000,000x performance improvements and revolutionary conscious AI capabilities.',
-    type: 'article',
-    publishedTime: '2029-01-01T00:00:00.000Z',
-    authors: ['Zion Tech Group'],
-    tags: ['Case Study', 'AI', 'ROI', 'Quantum Computing', 'Success Story'],
-  },
-};
 
 export default function AI2029QuantumNeuralFusionMegaSuccess() {
   return (

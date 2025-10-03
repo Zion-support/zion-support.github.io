@@ -1,6 +1,5 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { 
   CheckCircle, 
   Star, 
@@ -22,15 +21,6 @@ import {
   Activity
 } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: 'AI Business Intelligence Platform - Zion Tech Group',
-  description: 'Transform data into actionable insights with AI. Advanced business intelligence platform with predictive analytics and automated reporting.',
-  keywords: 'AI business intelligence, predictive analytics, data visualization, automated reporting, business insights',
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
 
 export default function AIBusinessIntelligence() {
   const contactInfo = {

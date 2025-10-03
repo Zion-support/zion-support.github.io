@@ -1,16 +1,6 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
-export const metadata: Metadata = {
-  title: 'AI Social Media Automation Platform - Zion Tech Group',
-  description: 'Automate your social media presence with AI-powered content creation, scheduling, and engagement. Boost your online presence with intelligent social media management.',
-  keywords: 'social media automation, AI content creation, social media management, automated posting, social media analytics',
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
 
 export default function AISocialMediaAutomation() {
   const features = [

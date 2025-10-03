@@ -2,11 +2,6 @@ import React from 'react';
 type Metadata = { title: string; description: string; keywords?: string[] };
 import { Link } from 'react-router-dom';
 
-export const metadata: Metadata = {
-  title: 'Support | Zion Tech Group',
-  description: 'Get help fast. 24/7 priority support, SLAs, incident response, and knowledge base.',
-  keywords: ['support', 'SLA', 'incident response', 'help desk', 'Zion Tech Group'],
-};
 
 export default function SupportPage() {
   const faqs = [

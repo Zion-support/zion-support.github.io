@@ -1,16 +1,6 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
-export const metadata: Metadata = {
-  title: 'AI Cybersecurity Automation Suite - Zion Tech Group',
-  description: 'Advanced AI-powered cybersecurity automation platform. Detect threats, automate responses, and protect your infrastructure with machine learning security solutions.',
-  keywords: 'AI cybersecurity, threat detection, security automation, cybersecurity AI, threat response automation',
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
 
 export default function AICybersecurityAutomationSuite() {
   return (

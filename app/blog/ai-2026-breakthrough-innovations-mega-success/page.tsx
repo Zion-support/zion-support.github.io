@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { ArrowRight, TrendingUp, Brain, Zap, Target, Users } from 'lucide-react';
 
 export const metadata = {

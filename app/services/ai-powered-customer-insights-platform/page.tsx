@@ -1,6 +1,5 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { 
   Brain, 
   Users, 
@@ -65,11 +64,6 @@ import {
   AlertTriangle
 } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: 'AI-Powered Customer Insights Platform | Zion Tech Group - Advanced Analytics',
-  description: 'Transform customer data into actionable insights with our AI-powered analytics platform. Real-time sentiment analysis, predictive behavior modeling, and automated customer journey optimization.',
-  keywords: 'customer insights, AI analytics, sentiment analysis, predictive modeling, customer journey, behavioral analytics, CRM automation',
-};
 
 export default function AICustomerInsightsPlatformPage() {
   const features = [

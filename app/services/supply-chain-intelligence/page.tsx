@@ -1,16 +1,6 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
-export const metadata: Metadata = {
-  title: 'Supply Chain Intelligence - Zion Tech Group',
-  description: 'Advanced AI-powered supply chain optimization, demand forecasting, inventory management, and logistics intelligence solutions.',
-  keywords: 'supply chain AI, logistics optimization, demand forecasting, inventory management, supply chain intelligence',
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
 
 export default function SupplyChainIntelligence() {
   return (

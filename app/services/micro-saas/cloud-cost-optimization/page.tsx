@@ -1,16 +1,8 @@
 "use client"
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { TrendingUp, CheckCircle, DollarSign, BarChart3, Server, Calendar, Phone, Mail, MapPin } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: 'Cloud Cost Optimization Platform | Zion Tech Group',
-  description: 'Automated cloud savings: rightsizing, anomaly detection, RI/SP planning, and FinOps dashboards. Average 25–45% cost reduction across AWS, Azure, and GCP.',
-  keywords: ['FinOps', 'cloud cost optimization', 'AWS savings', 'Azure optimization', 'GCP cost'],
-  alternates: { canonical: 'https://ziontechgroup.com/services/micro-saas/cloud-cost-optimization' },
-  robots: { index: true, follow: true },
-};
 
 export default function CloudCostOptimizationPage() {
   const contact = {

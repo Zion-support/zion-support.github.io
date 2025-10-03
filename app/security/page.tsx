@@ -8,19 +8,7 @@ export default function SecurityPage() {
 }
 
 import React from 'react';
-import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Security | Zion Tech Group',
-  description: 'Our comprehensive security framework and commitment to protecting your data and systems with enterprise-grade security measures.',
-  keywords: 'security, data protection, cybersecurity, information security, zion tech group',
-  openGraph: {
-    title: 'Security | Zion Tech Group',
-    description: 'Our comprehensive security framework and commitment to protecting your data and systems with enterprise-grade security measures.',
-    url: 'https://ziontechgroup.com/security',
-    type: 'website',
-  },
-};
 
 export default function SecurityPage() {
   const securityFeatures = [

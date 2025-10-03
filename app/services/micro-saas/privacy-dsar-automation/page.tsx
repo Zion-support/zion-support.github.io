@@ -1,13 +1,7 @@
 import React from 'react';
-import { Metadata } from 'next';
 import * as Lucide from 'lucide-react';
 const { Shield, Lock, FileText, CheckCircle, Mail, Phone, ArrowRight } = Lucide as any;
 
-export const metadata: Metadata = {
-  title: 'Privacy DSAR Automation | Zion Tech Group',
-  description: 'Automate GDPR/CCPA data subject access requests with intake, identity verification, PII discovery, redaction, and delivery.',
-  keywords: 'DSAR, GDPR, CCPA, privacy automation, PII discovery, redaction',
-};
 
 export default function PrivacyDSARAutomationPage() {
   const contactInfo = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com' };

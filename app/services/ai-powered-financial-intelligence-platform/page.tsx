@@ -1,6 +1,5 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { 
   BarChart3, 
   TrendingUp, 
@@ -66,11 +65,6 @@ import {
   Zap
 } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: 'AI-Powered Financial Intelligence Platform | Zion Tech Group - Advanced Analytics',
-  description: 'Revolutionary AI platform for financial analysis, risk assessment, fraud detection, and automated trading. Transform your financial operations with intelligent automation.',
-  keywords: 'financial AI, risk assessment, fraud detection, automated trading, financial analytics, fintech AI, investment analysis',
-};
 
 export default function AIPoweredFinancialIntelligencePlatformPage() {
   const financialModules = [

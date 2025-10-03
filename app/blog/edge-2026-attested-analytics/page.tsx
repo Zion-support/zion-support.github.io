@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
 	title: 'Edge 2026: Attested Analytics — Zero‑PII Insights with Signed Proofs',

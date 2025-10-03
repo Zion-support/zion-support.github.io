@@ -1,6 +1,5 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { 
   Atom, 
   Cpu, 
@@ -66,11 +65,6 @@ import {
   Eye
 } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: 'Quantum Computing Solutions | Zion Tech Group - Next-Gen Computing',
-  description: 'Revolutionary quantum computing solutions for optimization, cryptography, drug discovery, and financial modeling. Harness quantum advantage for breakthrough results.',
-  keywords: 'quantum computing, quantum algorithms, quantum cryptography, optimization, drug discovery, financial modeling, quantum advantage',
-};
 
 export default function QuantumComputingSolutionsPage() {
   const quantumServices = [

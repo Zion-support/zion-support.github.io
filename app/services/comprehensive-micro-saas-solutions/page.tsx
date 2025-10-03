@@ -1,6 +1,5 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { 
   Mic, 
   FileText, 
@@ -39,11 +38,6 @@ import {
   Laptop
 } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: 'Comprehensive Micro SaaS Solutions - Zion Tech Group | 50+ AI-Powered Micro SaaS',
-  description: 'Revolutionary micro SaaS solutions across AI automation, data analytics, cybersecurity, cloud infrastructure, e-commerce, healthcare, fintech, education, real estate, and logistics with proven ROI.',
-  keywords: 'micro SaaS, AI automation, data analytics, cybersecurity, cloud infrastructure, e-commerce SaaS, healthcare tech, fintech solutions, education technology, real estate tech, logistics solutions',
-};
 
 export default function ComprehensiveMicroSaaSSolutionsPage() {
   return (

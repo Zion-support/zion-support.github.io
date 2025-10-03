@@ -1,12 +1,6 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
-export const metadata: Metadata = {
-  title: 'Remote Collaboration Suite | Zion Tech Group - Enterprise Remote Work Solutions',
-  description: 'Comprehensive remote work platform integrating video conferencing, messaging, project management, and team collaboration tools for distributed teams.',
-  keywords: 'remote collaboration, video conferencing, project management, team collaboration, distributed teams, remote work tools',
-};
 
 export default function RemoteCollaborationSuitePage() {
   const tools = [

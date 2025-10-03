@@ -1,12 +1,6 @@
 import React from 'react';
-import Link from 'next/link';
-import { Metadata } from 'next';
+import { Link } from 'react-router-dom';
 
-export const metadata: Metadata = {
-  title: 'AI Customer Data Platforms 2026: Complete Implementation Guide',
-  description: 'Master AI-powered customer data platforms in 2026. Learn how to build unified customer profiles, real-time analytics, and personalized experiences with 95% accuracy.',
-  keywords: 'AI customer data platforms, CDP, customer analytics, personalization, data unification, 2026',
-};
 
 export default function AICustomerDataPlatforms2026Page() {
   return (

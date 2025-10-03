@@ -1,12 +1,6 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
-export const metadata: Metadata = {
-  title: 'API Integration Platform | Zion Tech Group - Enterprise API Management Solutions',
-  description: 'Comprehensive API integration platform for seamless software system connectivity. Features API management, data synchronization, webhook automation, and enterprise security.',
-  keywords: 'API integration, API management, data synchronization, webhook automation, enterprise APIs, system integration',
-};
 
 export default function APIIntegrationPlatformPage() {
   const services = [

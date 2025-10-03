@@ -1,17 +1,6 @@
 import React from 'react';
-import Link from 'next/link';
-import { Metadata } from 'next';
+import { Link } from 'react-router-dom';
 
-export const metadata: Metadata = {
-  title: 'AI Cloud Infrastructure 2025 | Self-Healing Systems | Zion Tech Group',
-  description: 'Next-generation AI-powered cloud infrastructure with self-healing capabilities, 99.999% uptime, and 70% cost reduction. Transform your cloud operations with intelligent automation.',
-  keywords: 'AI cloud infrastructure 2025, self-healing cloud, cloud automation, intelligent cloud management, cloud cost optimization, enterprise cloud solutions',
-  openGraph: {
-    title: 'AI Cloud Infrastructure 2025 | Self-Healing Systems',
-    description: 'Self-healing cloud infrastructure with 99.999% uptime and 70% cost reduction through AI automation.',
-    type: 'website',
-  },
-};
 
 export default function AICloudInfrastructure2025Page() {
   return (

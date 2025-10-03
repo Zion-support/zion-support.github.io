@@ -1,16 +1,6 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
-export const metadata: Metadata = {
-  title: 'Habit Tracking & Wellness Platform - Zion Tech Group',
-  description: 'AI-powered habit tracking and wellness platform for personal development. Build consistent routines, track progress, and achieve your goals with intelligent insights.',
-  keywords: 'habit tracking, wellness platform, personal development, goal setting, routine building, health monitoring',
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
 
 export default function HabitTrackingWellnessPlatform() {
   return (

@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { 
   Brain, Code, Cloud, Shield, Network, Server, BarChart3, Settings, 
   Zap, Monitor, Search, MessageSquare, CheckCircle, ArrowRight, 

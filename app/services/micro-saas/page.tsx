@@ -1,16 +1,10 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import * as Lucide from 'lucide-react';
 const { 
   Cloud, Shield, BarChart3, Users, FileText, Zap, MessageSquare, CheckCircle, ArrowRight, DollarSign, Clock, Star, Activity, Mail, Phone, Calendar, Headphones, Code, Package, TrendingUp, Bot
 } = Lucide as any;
 
-export const metadata: Metadata = {
-  title: 'Micro SaaS Solutions | Zion Tech Group - Real Business Tools',
-  description: 'Production-ready micro SaaS applications for specific business needs. Cloud cost management, AI content creation, compliance automation, and more.',
-  keywords: 'micro SaaS, business software, cloud cost management, AI tools, compliance automation, productivity apps',
-};
 
 export default function MicroSAASPage() {
   const microSAASServices = [

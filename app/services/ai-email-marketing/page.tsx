@@ -1,6 +1,5 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { 
   MessageSquare, 
   BarChart3, 
@@ -16,11 +15,6 @@ import {
   Brain
 } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: 'AI-Powered Email Marketing Suite | Zion Tech Group',
-  description: 'Revolutionary AI email marketing platform with predictive analytics, automated personalization, and intelligent optimization. Increase open rates by 40% and reduce unsubscribe rates by 60%.',
-  keywords: 'AI email marketing, email automation, predictive analytics, email personalization, marketing automation',
-};
 
 export default function AIEmailMarketingPage() {
   const features = [

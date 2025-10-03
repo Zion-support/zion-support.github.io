@@ -1,18 +1,4 @@
-import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Fortune 500 Neuromorphic Edge Computing Success: $2.3B Savings Case Study',
-  description: 'Discover how a Fortune 500 manufacturing company achieved $2.3B in savings using neuromorphic edge computing across 320 facilities, with 78% downtime reduction and 99.8% quality accuracy.',
-  keywords: 'Fortune 500, neuromorphic computing, edge computing, manufacturing, case study, $2.3B savings, downtime reduction',
-  openGraph: {
-    title: 'Fortune 500 Neuromorphic Edge Computing Success: $2.3B Savings',
-    description: '320 facilities, 78% downtime reduction, $2.3B savings with neuromorphic edge computing',
-    type: 'article',
-    publishedTime: '2027-01-25T00:00:00Z',
-    authors: ['Zion Tech Group'],
-    tags: ['Case Study', 'Neuromorphic Computing', 'Manufacturing', 'Fortune 500'],
-  },
-};
 
 export default function Fortune500NeuromorphicEdgeComputingSuccess() {
   return (

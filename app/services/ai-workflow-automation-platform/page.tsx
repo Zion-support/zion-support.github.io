@@ -1,16 +1,6 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
-export const metadata: Metadata = {
-  title: 'AI Workflow Automation Platform - Zion Tech Group',
-  description: 'Automate complex business workflows with AI-powered automation. Reduce manual tasks, increase efficiency, and scale operations.',
-  keywords: 'workflow automation, AI automation, business process automation, RPA, intelligent automation',
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
 
 export default function AIWorkflowAutomationPlatform() {
   return (

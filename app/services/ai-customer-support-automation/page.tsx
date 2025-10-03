@@ -1,11 +1,5 @@
 import React from 'react';
-import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'AI Customer Support Automation | Zion Tech Group',
-  description: 'Revolutionary AI-powered customer support automation with intelligent routing, sentiment analysis, and 24/7 multilingual support.',
-  keywords: 'AI customer support, chatbot automation, sentiment analysis, multilingual support, customer service AI',
-};
 
 export default function AICustomerSupportAutomationPage() {
   return (

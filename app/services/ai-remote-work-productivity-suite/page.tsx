@@ -1,5 +1,4 @@
 import React from 'react';
-import { Metadata } from 'next';
 import { 
   Laptop, 
   Users, 
@@ -20,11 +19,6 @@ import {
   Zap
 } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: 'AI Remote Work Productivity Suite | Zion Tech Group - Smart Work Optimization',
-  description: 'Boost remote team productivity with AI-powered collaboration tools, intelligent scheduling, and automated workflow optimization. Perfect for distributed teams.',
-  keywords: 'AI remote work, productivity suite, team collaboration, workflow automation, remote team management, productivity AI',
-};
 
 export default function AIRemoteWorkProductivitySuite() {
   const features = [

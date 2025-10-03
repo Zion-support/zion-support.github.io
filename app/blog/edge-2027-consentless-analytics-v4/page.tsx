@@ -1,6 +1,6 @@
 // @ts-nocheck
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'Edge 2027: Consentless Analytics v4 — Zero‑PII, <100ms | Zion Tech Group',

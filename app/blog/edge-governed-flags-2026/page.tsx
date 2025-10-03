@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'Edge‑Governed Feature Flags (2026): Private control at <100ms',

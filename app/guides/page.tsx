@@ -8,19 +8,7 @@ export default function GuidesPage() {
 }
 
 import React from 'react';
-import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Guides | Zion Tech Group',
-  description: 'Step-by-step guides and tutorials to help you implement and optimize technology solutions for your business.',
-  keywords: 'technology guides, tutorials, implementation guides, zion tech group, business technology',
-  openGraph: {
-    title: 'Guides | Zion Tech Group',
-    description: 'Step-by-step guides and tutorials to help you implement and optimize technology solutions for your business.',
-    url: 'https://ziontechgroup.com/guides',
-    type: 'website',
-  },
-};
 
 export default function GuidesPage() {
   const guides = [

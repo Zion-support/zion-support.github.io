@@ -1,20 +1,5 @@
 import React from 'react';
-import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'April 2026 Universal Intelligence Success: $50B Transformation at Global Manufacturing Giant',
-  description: 'Discover how a Fortune 10 manufacturing company achieved $50 billion in value generation using Universal Intelligence AI systems. Complete autonomous operations with 1,000,000x performance improvements.',
-  keywords: ['AI', 'Success Story', 'Universal Intelligence', 'Manufacturing', 'Autonomous', 'Fortune 10', '50 Billion'],
-  authors: [{ name: 'Zion Tech Group' }],
-  openGraph: {
-    title: 'April 2026 Universal Intelligence Success: $50B Transformation at Global Manufacturing Giant',
-    description: 'Discover how a Fortune 10 manufacturing company achieved $50 billion in value generation using Universal Intelligence AI systems.',
-    type: 'article',
-    publishedTime: '2026-04-20T00:00:00.000Z',
-    authors: ['Zion Tech Group'],
-    tags: ['AI', 'Success Story', 'Universal Intelligence', 'Manufacturing', 'Autonomous'],
-  },
-};
 
 export default function April2026UniversalIntelligenceSuccessPage() {
   return (

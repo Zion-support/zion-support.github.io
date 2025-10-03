@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'Case Study: $750M Neuromorphic AI Breakthrough Success - Fortune 100 Transformation',

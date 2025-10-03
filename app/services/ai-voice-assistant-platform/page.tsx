@@ -1,6 +1,5 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { 
   Mic, 
   Volume2, 
@@ -20,11 +19,6 @@ import {
   MapPin
 } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: 'AI Voice Assistant Platform - Zion Tech Group | Enterprise Voice AI Solutions',
-  description: 'Revolutionary AI voice assistant platform with 99.9% accuracy, multilingual support, and enterprise-grade security. Transform customer interactions with advanced voice AI technology.',
-  keywords: 'AI voice assistant, voice AI platform, enterprise voice solutions, multilingual AI, voice automation, customer service AI',
-};
 
 export default function AIVoiceAssistantPlatformPage() {
   return (

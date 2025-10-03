@@ -1,16 +1,6 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
-export const metadata: Metadata = {
-  title: 'AI DevOps Automation Platform - Zion Tech Group',
-  description: 'Revolutionize your DevOps with AI-powered automation, intelligent monitoring, and predictive maintenance. Accelerate deployments and reduce downtime.',
-  keywords: 'DevOps automation, AI monitoring, CI/CD automation, infrastructure automation, predictive maintenance',
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
 
 export default function AIDevOpsAutomation() {
   const features = [

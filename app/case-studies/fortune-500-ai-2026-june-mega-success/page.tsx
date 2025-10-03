@@ -1,11 +1,5 @@
 import React from 'react';
-import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Fortune 500 AI 2026 June Mega Success: $3.2B Transformation Story',
-  description: 'How a Fortune 500 company achieved $3.2 billion in measurable value using AI 2026 breakthrough technologies in just 6 months.',
-  keywords: ['Fortune 500', 'AI transformation', 'business value', 'ROI', 'enterprise AI', 'case study', 'success story'],
-};
 
 export default function Fortune500AI2026JuneMegaSuccess() {
   return (

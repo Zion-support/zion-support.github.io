@@ -1,16 +1,6 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
-export const metadata: Metadata = {
-  title: 'Cloud-Native DevOps Platform - Zion Tech Group',
-  description: 'Enterprise-grade cloud-native DevOps platform with CI/CD automation, infrastructure as code, and advanced monitoring. Accelerate your development lifecycle.',
-  keywords: 'cloud-native DevOps, CI/CD automation, infrastructure as code, Kubernetes, container orchestration',
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
 
 export default function CloudNativeDevOpsPlatform() {
   return (

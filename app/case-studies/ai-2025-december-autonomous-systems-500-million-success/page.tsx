@@ -1,12 +1,6 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
-export const metadata: Metadata = {
-  title: '$500M Success: December 2025 Autonomous Systems Implementation | Zion Tech Group',
-  description: 'How a Fortune 100 global conglomerate achieved $500M ROI through December 2025 autonomous systems with 99.99% automation and universal intelligence.',
-  keywords: 'autonomous systems success, $500M ROI, Fortune 100, December 2025, Zion Tech Group',
-};
 
 export default function December2025AutonomousSystems500MSuccess() {
   return (

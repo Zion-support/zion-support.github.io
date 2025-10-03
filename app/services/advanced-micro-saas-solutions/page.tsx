@@ -1,12 +1,6 @@
 import React from 'react';
-import Link from 'next/link';
-import { Metadata } from 'next';
+import { Link } from 'react-router-dom';
 
-export const metadata: Metadata = {
-  title: 'Advanced Micro SaaS Solutions | Zion Tech Group',
-  description: 'Cutting-edge micro SaaS platforms for modern businesses. AI-powered tools, automation suites, and specialized business applications.',
-  keywords: 'micro SaaS, business automation, AI tools, specialized software, subscription platforms',
-};
 
 export default function AdvancedMicroSaaSSolutionsPage() {
   const microSaaSServices = [

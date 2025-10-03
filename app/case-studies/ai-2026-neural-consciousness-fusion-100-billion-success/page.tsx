@@ -1,17 +1,6 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
-export const metadata: Metadata = {
-  title: 'AI 2026 Neural Consciousness Fusion: $100B Success Story | Zion Tech Group',
-  description: 'How a Fortune 50 manufacturing conglomerate achieved $100B ROI through neural consciousness fusion AI implementation with 99.9999% consciousness accuracy and 1,000,000x performance.',
-  keywords: 'AI success story, neural consciousness fusion, $100B ROI, Fortune 50, enterprise AI transformation, consciousness AI, neural networks',
-  openGraph: {
-    title: 'AI 2026 Neural Consciousness Fusion: $100B Success Story',
-    description: 'Fortune 50 company achieves $100B ROI through revolutionary neural consciousness fusion AI.',
-    type: 'article',
-  },
-};
 
 export default function NeuralConsciousnessFusionSuccess() {
   return (

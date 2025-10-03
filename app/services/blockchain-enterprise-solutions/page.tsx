@@ -1,6 +1,5 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { 
   Shield, 
   Lock, 
@@ -60,11 +59,6 @@ import {
   Code
 } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: 'Blockchain Enterprise Solutions | Zion Tech Group - Secure & Transparent',
-  description: 'Enterprise-grade blockchain solutions for supply chain, finance, and data integrity. Smart contracts, DeFi, and secure transaction processing.',
-  keywords: 'blockchain solutions, smart contracts, DeFi, supply chain blockchain, enterprise blockchain, cryptocurrency, distributed ledger',
-};
 
 export default function BlockchainEnterpriseSolutionsPage() {
   const features = [

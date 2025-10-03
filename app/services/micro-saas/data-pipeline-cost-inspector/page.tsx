@@ -1,12 +1,6 @@
 import React from 'react';
-import { Metadata } from 'next';
 import { BarChart3, CheckCircle, ArrowRight, DollarSign, Clock } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: 'Data Pipeline Cost Inspector | Zion Tech Group - Micro SaaS',
-  description: 'Analyze warehouse queries and orchestration runs to identify costly patterns, propose fixes, and auto-open PRs for optimization.',
-  keywords: 'data pipeline costs, warehouse optimization, dbt, Airflow, Dagster, BigQuery, Snowflake, ETL cost, query optimization',
-};
 
 export default function DataPipelineCostInspectorPage() {
   const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com' } as const;

@@ -1,12 +1,6 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
-export const metadata: Metadata = {
-  title: 'Cybersecurity Risk Assessment | Zion Tech Group - Comprehensive Security Evaluation',
-  description: 'Professional cybersecurity risk assessment services with vulnerability scanning, compliance checks, and detailed security recommendations.',
-  keywords: 'cybersecurity assessment, security audit, vulnerability scanning, compliance, risk management, IT security',
-};
 
 export default function CybersecurityRiskAssessmentPage() {
   return (

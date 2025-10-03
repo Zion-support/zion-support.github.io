@@ -1,6 +1,5 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { 
   Wifi, 
   Smartphone, 
@@ -60,11 +59,6 @@ import {
   Calculator
 } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: 'IoT Smart Infrastructure Platform | Zion Tech Group - Connected Solutions',
-  description: 'Comprehensive IoT platform for smart cities, buildings, and infrastructure. Real-time monitoring, predictive maintenance, and intelligent automation.',
-  keywords: 'IoT platform, smart infrastructure, connected devices, predictive maintenance, smart cities, building automation, industrial IoT',
-};
 
 export default function IoTSmartInfrastructurePlatformPage() {
   const features = [

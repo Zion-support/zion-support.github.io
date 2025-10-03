@@ -1,12 +1,6 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
-export const metadata: Metadata = {
-  title: 'Telemedicine Platform | Zion Tech Group - Healthcare SaaS Solutions',
-  description: 'Comprehensive telemedicine platform for hospitals and clinics. Features online appointments, virtual consultations, secure patient data management, and HIPAA compliance.',
-  keywords: 'telemedicine platform, healthcare SaaS, virtual consultations, online appointments, HIPAA compliance, patient management',
-};
 
 export default function TelemedicinePlatformPage() {
   const features = [

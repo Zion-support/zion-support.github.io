@@ -1,18 +1,5 @@
 import React from 'react';
-import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'AI 2026 Autonomous Operations Revolution: 98% Automation Breakthrough | Zion Tech Group',
-  description: 'Discover the revolutionary autonomous operations systems achieving 98% automation rates with self-healing AI, predictive maintenance, and autonomous decision-making for enterprise operations.',
-  keywords: 'autonomous operations, AI automation, self-healing systems, predictive maintenance, enterprise automation, AI operations',
-  openGraph: {
-    title: 'AI 2026 Autonomous Operations Revolution: 98% Automation Breakthrough',
-    description: 'Experience the future of autonomous enterprise operations with 98% automation rates and self-healing AI systems.',
-    type: 'article',
-    publishedTime: '2026-01-25T00:00:00Z',
-    authors: ['Zion Tech Group'],
-  },
-};
 
 export default function AI2026AutonomousOperationsRevolutionPage() {
   return (

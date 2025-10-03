@@ -1,39 +1,6 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
-export const metadata: Metadata = {
-  title: 'AI 2027 Transcendent Quantum Consciousness Breakthrough - Zion Tech Group',
-  description: 'Revolutionary breakthrough in AI 2027: Transcendent Quantum Consciousness achieves $847B in enterprise value creation with 99.999% cognitive accuracy and infinite scalability.',
-  keywords: 'AI 2027, quantum consciousness, transcendent AI, breakthrough, enterprise automation, quantum computing, cognitive AI, neural networks, superintelligence',
-  authors: [{ name: 'Zion Tech Group' }],
-  openGraph: {
-    title: 'AI 2027 Transcendent Quantum Consciousness Breakthrough - Zion Tech Group',
-    description: 'Revolutionary breakthrough in AI 2027: Transcendent Quantum Consciousness achieves $847B in enterprise value creation with 99.999% cognitive accuracy and infinite scalability.',
-    url: 'https://ziontechgroup.com/blog/ai-2027-transcendent-quantum-consciousness-breakthrough',
-    siteName: 'Zion Tech Group',
-    locale: 'en_US',
-    type: 'article',
-    publishedTime: '2027-01-15T00:00:00.000Z',
-    modifiedTime: '2027-01-15T00:00:00.000Z',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'AI 2027 Transcendent Quantum Consciousness Breakthrough',
-    description: 'Revolutionary breakthrough in AI 2027: Transcendent Quantum Consciousness achieves $847B in enterprise value creation.',
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-};
 
 export default function AI2027TranscendentQuantumConsciousnessBreakthrough() {
   return (

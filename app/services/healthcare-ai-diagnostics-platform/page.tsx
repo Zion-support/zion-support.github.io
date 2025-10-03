@@ -1,16 +1,6 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
-export const metadata: Metadata = {
-  title: 'Healthcare AI Diagnostics Platform - Zion Tech Group',
-  description: 'Revolutionary AI-powered diagnostic platform for healthcare providers. Improve accuracy, reduce diagnosis time, and enhance patient outcomes.',
-  keywords: 'healthcare AI, medical diagnostics, AI diagnostics, medical imaging, healthcare automation, clinical decision support',
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
 
 export default function HealthcareAIDiagnostics() {
   return (

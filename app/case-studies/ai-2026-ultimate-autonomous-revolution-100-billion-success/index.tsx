@@ -1,18 +1,7 @@
 // @ts-nocheck
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
-export const metadata: Metadata = {
-  title: 'AI 2026 Ultimate Autonomous Revolution - $100 Billion Success Story',
-  description: 'How Fortune 100 companies achieved $100 billion ROI through revolutionary 99.99% autonomous AI systems with 1 million times performance boost.',
-  keywords: 'AI success story, $100B ROI, Fortune 100, autonomous systems, 99.99% automation, enterprise transformation',
-  openGraph: {
-    title: 'AI 2026 Ultimate Autonomous Revolution - $100 Billion Success Story',
-    description: 'Fortune 100 companies achieved $100 billion ROI through 99.99% autonomous AI systems.',
-    type: 'article',
-  },
-};
 
 export default function AI2026UltimateAutonomousRevolution100BillionSuccess() {
   return (

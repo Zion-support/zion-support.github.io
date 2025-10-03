@@ -1,12 +1,6 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
-export const metadata: Metadata = {
-  title: 'Pricing Plans | Zion Tech Group - Transparent Pricing for AI & IT Services',
-  description: 'Transparent pricing for AI services, micro SaaS development, and IT solutions. Choose the perfect plan for your business needs. Starting from $29/month.',
-  keywords: 'Zion Tech Group pricing, AI services pricing, micro SaaS pricing, IT services pricing, transparent pricing',
-};
 
 export default function PricingPage() {
   const serviceCategories = [

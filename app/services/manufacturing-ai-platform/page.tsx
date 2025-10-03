@@ -1,16 +1,6 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
-export const metadata: Metadata = {
-  title: 'Manufacturing AI Platform - Zion Tech Group',
-  description: 'Revolutionary AI platform for manufacturing optimization, predictive maintenance, quality control, and autonomous operations.',
-  keywords: 'manufacturing AI, industrial AI, predictive maintenance, quality control, smart manufacturing',
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
 
 export default function ManufacturingAIPlatform() {
   return (

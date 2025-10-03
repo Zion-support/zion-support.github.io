@@ -1,14 +1,7 @@
 "use client"
 import React from 'react';
-import { Metadata } from 'next';
 import { Globe, CheckCircle, Languages, FileText, BarChart3, Phone, Mail, MapPin } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: 'AI Content Localization Suite | Zion Tech Group',
-  description: 'Launch globally with neural translation, cultural adaptation, and SEO localization. Faster time-to-market with analytics and QA workflows.',
-  keywords: ['localization', 'AI translation', 'global SEO', 'internationalization', 'i18n'],
-  alternates: { canonical: 'https://ziontechgroup.com/services/micro-saas/ai-content-localization' },
-};
 
 export default function AIContentLocalizationPage() {
   const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com' };
@@ -96,7 +89,7 @@ export default function AIContentLocalizationPage() {
 
 import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { 
   Globe, 
   Languages, 

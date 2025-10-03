@@ -1,20 +1,7 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { ArrowLeft, TrendingUp, CheckCircle, Target, Clock, Users, DollarSign, BarChart3, Award, Zap } from 'lucide-react';
-import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Global Manufacturing Leader Achieves 85% Process Automation with AI | Zion Tech Group',
-  description: 'See how a Fortune 500 manufacturing corporation achieved 85% process automation, 60% cost reduction, and $75M annual savings with AI-powered autonomous business processes.',
-  keywords: 'manufacturing automation, AI case study, process automation, cost reduction, enterprise transformation',
-  openGraph: {
-    title: 'Global Manufacturing Leader Achieves 85% Process Automation with AI',
-    description: 'See how a Fortune 500 manufacturing corporation achieved 85% process automation, 60% cost reduction, and $75M annual savings with AI-powered autonomous business processes.',
-    type: 'article',
-    publishedTime: '2026-01-15T00:00:00Z',
-    authors: ['Zion Tech Group'],
-  },
-};
 
 export default function GlobalManufacturingCaseStudy() {
   return (

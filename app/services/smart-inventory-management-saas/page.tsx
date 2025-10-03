@@ -1,16 +1,6 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
-export const metadata: Metadata = {
-  title: 'Smart Inventory Management SaaS - Zion Tech Group',
-  description: 'AI-powered inventory management platform for retail, e-commerce, and manufacturing. Optimize stock levels, reduce costs, and prevent stockouts with intelligent automation.',
-  keywords: 'inventory management SaaS, smart inventory, stock optimization, retail automation, supply chain AI',
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
 
 export default function SmartInventoryManagementSaaS() {
   return (

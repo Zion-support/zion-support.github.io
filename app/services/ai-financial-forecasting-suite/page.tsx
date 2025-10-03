@@ -1,6 +1,5 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { 
   TrendingUp, 
   BarChart3, 
@@ -60,11 +59,6 @@ import {
   Eye
 } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: 'AI Financial Forecasting Suite | Zion Tech Group - Predictive Finance',
-  description: 'Advanced AI-powered financial forecasting and analysis platform. Real-time market predictions, risk assessment, and automated financial planning for businesses.',
-  keywords: 'AI financial forecasting, predictive finance, financial analytics, risk assessment, market predictions, automated financial planning',
-};
 
 export default function AIFinancialForecastingSuitePage() {
   const features = [

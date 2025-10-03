@@ -1,6 +1,5 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { 
   FileText, 
   Upload, 
@@ -22,11 +21,6 @@ import {
   Edit3
 } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: 'AI Document Automation Platform - Zion Tech Group | Intelligent Document Processing',
-  description: 'Revolutionary AI document automation platform with 99.8% accuracy, OCR, data extraction, and workflow automation. Transform your document processing with intelligent automation.',
-  keywords: 'AI document automation, document processing, OCR, data extraction, workflow automation, intelligent documents',
-};
 
 export default function AIDocumentAutomationPage() {
   return (

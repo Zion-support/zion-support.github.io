@@ -1,6 +1,5 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { 
   Bot, 
   Settings, 
@@ -66,11 +65,6 @@ import {
   Brain
 } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: 'AI Autonomous DevOps Platform | Zion Tech Group - Self-Healing Infrastructure',
-  description: 'Revolutionary AI-powered DevOps platform with autonomous incident response, predictive scaling, and self-healing infrastructure. Reduce downtime by 95%.',
-  keywords: 'autonomous DevOps, AI DevOps, self-healing infrastructure, predictive scaling, incident response, infrastructure automation, DevOps AI',
-};
 
 export default function AIAutonomousDevOpsPlatformPage() {
   const autonomousFeatures = [

@@ -1,16 +1,6 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
-export const metadata: Metadata = {
-  title: 'FinTech AI Risk Management Platform - Zion Tech Group',
-  description: 'Advanced AI-powered risk management platform for financial institutions. Detect fraud, assess credit risk, and ensure regulatory compliance.',
-  keywords: 'fintech AI, risk management, fraud detection, credit risk, financial compliance, AI banking, fintech solutions',
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
 
 export default function FinTechAIRiskManagement() {
   return (

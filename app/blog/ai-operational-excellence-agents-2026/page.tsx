@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
 	title: 'AI Operational Excellence 2026: Autonomous Agents Driving 10x Efficiency',

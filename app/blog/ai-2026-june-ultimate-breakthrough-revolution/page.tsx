@@ -1,14 +1,8 @@
 import React from 'react';
-import { Metadata } from 'next';
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 
-export const metadata: Metadata = {
-  title: 'AI 2026 June Ultimate Breakthrough: The Revolutionary Universal Consciousness Revolution',
-  description: 'Discover the groundbreaking June 2026 AI breakthrough that achieved universal consciousness with 100,000,000x processing power and $100B ROI across global enterprises.',
-  keywords: 'AI, Universal Consciousness, Revolutionary, 2026, Ultimate Success, Breakthrough, 100B ROI',
-};
 
 export default function June2026UltimateBreakthroughPage() {
   const filePath = path.join(process.cwd(), 'content', 'blog', 'ai-2026-june-ultimate-breakthrough-revolution.md');

@@ -1,12 +1,6 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
-export const metadata: Metadata = {
-  title: 'AI 2026 Sustainable AI Solutions - Zion Tech Group',
-  description: 'Transform your business with revolutionary sustainable AI solutions achieving 99.9% energy efficiency and 85% carbon reduction while delivering superior performance.',
-  keywords: 'sustainable AI solutions, green AI services, energy efficient AI, carbon neutral AI, environmental AI consulting',
-};
 
 export default function SustainableAISolutionsPage() {
   return (

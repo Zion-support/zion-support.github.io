@@ -1,17 +1,5 @@
 import React from 'react';
-import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Revolutionary AI Breakthrough: January 2026 - Zion Tech Group',
-  description: 'Discover the groundbreaking AI innovations revolutionizing enterprise operations in January 2026. Meta-cognitive reasoning, quantum-neural networks, and autonomous systems delivering unprecedented results.',
-  keywords: 'AI breakthrough 2026, meta-cognitive AI, quantum neural networks, autonomous operations, enterprise AI transformation',
-  openGraph: {
-    title: 'Revolutionary AI Breakthrough: January 2026',
-    description: 'Discover the groundbreaking AI innovations revolutionizing enterprise operations in January 2026.',
-    type: 'article',
-    publishedTime: '2026-01-15T00:00:00.000Z',
-  },
-};
 
 export default function RevolutionaryAIBreakthroughJanuary2026() {
   return (

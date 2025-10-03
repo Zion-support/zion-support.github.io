@@ -1,21 +1,7 @@
 // @ts-nocheck
 import React from 'react';
-import Link from 'next/link';
-import { Metadata } from 'next';
+import { Link } from 'react-router-dom';
 
-export const metadata: Metadata = {
-  title: 'AI 2026 December Mega Breakthrough: $50 Billion Success Story - Zion Tech Group',
-  description: 'Discover how 50 Fortune 500 enterprises achieved $50 billion in value generation with our December 2026 AI Mega Breakthrough technology.',
-  keywords: 'AI success story, $50 billion ROI, Fortune 500, December 2026 breakthrough, enterprise AI transformation',
-  openGraph: {
-    title: 'AI 2026 December Mega Breakthrough: $50 Billion Success Story - Zion Tech Group',
-    description: 'Real-world success story of $50 billion value generation across 50 Fortune 500 enterprises using revolutionary AI technology.',
-    url: 'https://ziontechgroup.com/case-studies/ai-2026-december-mega-breakthrough-50-billion-success',
-    siteName: 'Zion Tech Group',
-    locale: 'en_US',
-    type: 'article',
-  },
-};
 
 export default function December2026MegaBreakthroughSuccessPage() {
   return (

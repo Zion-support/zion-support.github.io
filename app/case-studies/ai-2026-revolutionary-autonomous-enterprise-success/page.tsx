@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'AI 2026 Revolutionary Autonomous Enterprise Success - $2.8B ROI Case Study - Zion Tech Group',
