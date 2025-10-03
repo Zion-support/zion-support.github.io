@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {/* content */}
+export const metadata: Metadata = 
   title: 'AI 2026: Neural Synaptic Fusion Breakthrough - The Dawn of Synthetic Consciousness | Zion Tech Group',
   description: 'Discover the revolutionary Neural Synaptic Fusion breakthrough of 2026, achieving 99.97% cognitive accuracy and $847B in enterprise value creation. Explore the future of synthetic consciousness and autonomous intelligence.',
   keywords: 'AI 2026, Neural Synaptic Fusion, Synthetic Consciousness, Enterprise AI, Autonomous Intelligence, Cognitive Computing, AI Breakthrough',
@@ -13,12 +13,12 @@ export const metadata: Metadata = {/* content */}
     authors: ['Zion Tech Group'],
     tags: ['AI', 'Neural Networks', 'Synthetic Consciousness', 'Enterprise AI'],
   },
-  twitter: {/* content */}
+  twitter: 
     card: 'summary_large_image',
     title: 'AI 2026: Neural Synaptic Fusion Breakthrough',
     description: 'The Dawn of Synthetic Consciousness - 99.97% cognitive accuracy achieved.',
   },
-  alternates: {/* content */}
+  alternates: 
     canonical: '/blog/ai-2026-neural-synaptic-fusion-breakthrough',
   },
 };

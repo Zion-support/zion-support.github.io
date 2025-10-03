@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {/* content */}
+export const metadata: Metadata = 
   title: 'AI Governance 2026: Enterprise Safety and Compliance Framework',
   description: 'Comprehensive guide to AI governance, safety protocols, and compliance frameworks for enterprise organizations in 2026. Learn how to implement robust AI safety measures and ensure regulatory compliance.',
   keywords: ['AI governance', 'AI safety', 'enterprise compliance', 'AI regulations', 'AI risk management', 'AI ethics', '2026'],

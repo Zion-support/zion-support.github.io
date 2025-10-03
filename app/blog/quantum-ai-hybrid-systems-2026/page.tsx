@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {/* content */}
+export const metadata: Metadata = 
   title: 'Quantum-AI Hybrid Systems: The Next Frontier in Enterprise Computing | Zion Tech Group',
   description: 'Explore how quantum-AI hybrid systems are revolutionizing enterprise computing with unprecedented processing power and optimization capabilities.',
   keywords: 'Quantum AI, Hybrid Systems, Enterprise Computing, Quantum Computing, AI Optimization, Quantum Neural Networks',

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-interface PerformanceMetrics {/* content */}
+interface PerformanceMetrics {
   lcp?: number;
   fid?: number;
   cls?: number;
@@ -9,22 +9,22 @@ interface PerformanceMetrics {/* content */}
   inp?: number;
 }
 
-export const AdvancedPerformanceMonitor: React.FC = () => {/* content */}
+export const AdvancedPerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({});
   const [isVisible, setIsVisible] = useState(false);
 
-  useEffect(() => {/* content */}
+  useEffect(() => {
     // Only run in development
     if (process.env.NODE_ENV !== 'development') return;
 
-    const observer = new PerformanceObserver((list) => {/* content */}
+    const observer = new PerformanceObserver((list) => {
       const entries = list.getEntries();
-      entries.forEach((entry) => {/* content */}
-        if (entry.entryType === 'largest-contentful-paint') {/* content */}
+      entries.forEach((entry) => {
+        if (entry.entryType === 'largest-contentful-paint') {
           setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
-        } else if (entry.entryType === 'first-input') {/* content */}
+        } else if (entry.entryType === 'first-input') {
           setMetrics(prev => ({ ...prev, fid: (entry as any).processingStart - entry.startTime }));
-        } else if (entry.entryType === 'layout-shift' && !(entry as any).hadRecentInput) {/* content */}
+        } else if (entry.entryType === 'layout-shift' && !(entry as any).hadRecentInput) {
           setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + (entry as any).value }));
         }
       });
@@ -33,15 +33,15 @@ export const AdvancedPerformanceMonitor: React.FC = () => {/* content */}
     observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
 
     // Toggle visibility with Ctrl+Shift+P
-    const handleKeyPress = (e: KeyboardEvent) => {/* content */}
-      if (e.ctrlKey && e.shiftKey && e.key === 'P') {/* content */}
+    const handleKeyPress = (e: KeyboardEvent) => {
+      if (e.ctrlKey && e.shiftKey && e.key === 'P') {
         setIsVisible(prev => !prev);
       }
     };
 
     window.addEventListener('keydown', handleKeyPress);
 
-    return () => {/* content */}
+    return () => {
       observer.disconnect();
       window.removeEventListener('keydown', handleKeyPress);
     };
@@ -50,8 +50,7 @@ export const AdvancedPerformanceMonitor: React.FC = () => {/* content */}
   if (!isVisible) return null;
 
   return (
-  <div></div>
-    <div style={{/* content */}
+    <div style={{
       position: 'fixed',
       top: '10px',
       right: '10px',
@@ -62,12 +61,12 @@ export const AdvancedPerformanceMonitor: React.FC = () => {/* content */}
       fontSize: '12px',
       zIndex: 9999,
       fontFamily: 'monospace',
-    }}></div>
+    }}>
       <h4>Performance Metrics</h4>
       <div>LCP: {metrics.lcp ? metrics.lcp.toFixed(2) + 'ms' : 'N/A'}</div>
       <div>FID: {metrics.fid ? metrics.fid.toFixed(2) + 'ms' : 'N/A'}</div>
       <div>CLS: {metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}</div>
-      <div style={{ marginTop: '10px', fontSize: '10px' }}></div>
+      <div style={{ marginTop: '10px', fontSize: '10px' }}>
         Press Ctrl+Shift+P to toggle
       </div>
     </div>

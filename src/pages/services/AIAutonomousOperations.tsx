@@ -1,5 +1,5 @@
 
-const AIAutonomousOperations: React.FC = () => {/* content */}
+const AIAutonomousOperations: React.FC = () => 
   return (
   <div></div>
     <div className="min-h-screen bg-slate-950"></div>

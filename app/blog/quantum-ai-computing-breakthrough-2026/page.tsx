@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {/* content */}
+export const metadata: Metadata = 
   title: 'Quantum AI Computing Breakthrough 2026: 1000x Processing Speed | Zion Tech Group',
   description: 'Discover the revolutionary Quantum AI Computing Breakthrough delivering 1000x processing speed, quantum-neural fusion, and exponential problem-solving capabilities.',
   keywords: 'quantum computing, quantum AI, quantum neural networks, quantum breakthrough, enterprise quantum computing, Zion Tech Group',

@@ -217,23 +217,23 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
 						<pre className="text-left"></pre>
 origin/cursor/fix-errors-and-merge-to-main-cc0a
 {`// Enterprise AI Transformation Architecture
-const TransformationStack = {/* content */}
-  dataLayer: {/* content */}
+const TransformationStack = 
+  dataLayer: 
     warehouses: "Snowflake + Databricks"
     streaming: "Apache Kafka + Apache Pulsar"
     storage: "AWS S3 + Azure Data Lake"
   },
-  aiPlatform: {/* content */}
+  aiPlatform: 
     mlOps: "MLflow + Kubeflow + Weights & Biases"
     models: "TensorFlow + PyTorch + Hugging Face"
     deployment: "Kubernetes + Docker + Istio"
   },
-  automation: {/* content */}
+  automation: 
     orchestration: "Apache Airflow + Prefect"
     monitoring: "Prometheus + Grafana + ELK Stack"
     governance: "Apache Atlas + Custom AI Governance"
   },
-  infrastructure: {/* content */}
+  infrastructure: 
     cloud: "Multi-cloud (AWS + Azure + GCP)"
     compute: "Kubernetes + Serverless Functions"
     networking: "Istio Service Mesh + CDN"

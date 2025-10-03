@@ -1,5 +1,5 @@
 
-const AIPlatformArchitecture: React.FC = () => {/* content */}
+const AIPlatformArchitecture: React.FC = () => 
   return (
   <div></div>
     <div className="min-h-screen bg-slate-950"></div>

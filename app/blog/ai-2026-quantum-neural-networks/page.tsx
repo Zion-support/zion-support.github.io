@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {/* content */}
+export const metadata: Metadata = 
   title: 'AI 2026 Quantum Neural Networks: 1000x Performance Breakthrough',
   description: 'Discover how quantum neural networks achieve 1000x performance improvements in AI processing, enabling real-time complex decision making and revolutionary computational capabilities.',
   keywords: 'quantum neural networks, quantum AI, quantum computing, AI performance, quantum machine learning, enterprise AI',

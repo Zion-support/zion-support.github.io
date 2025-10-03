@@ -188,7 +188,7 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
 						<pre className="text-left"></pre>
 origin/cursor/fix-errors-and-merge-to-main-cc0a
 {`// Autonomous Operations Architecture
-const AutonomousOpsFramework = {/* content */}
+const AutonomousOpsFramework = 
   orchestration: "Kubernetes + Istio Service Mesh"
   aiAgents: "LangChain + OpenAI GPT-4 + Custom Models"
   monitoring: "Prometheus + Grafana + Jaeger Tracing"
@@ -197,8 +197,8 @@ const AutonomousOpsFramework = {/* content */}
 };
 
 // Implementation Pattern
-class AutonomousAgent {/* content */}
-  async executeWorkflow(workflow: WorkflowConfig) {/* content */}
+class AutonomousAgent 
+  async executeWorkflow(workflow: WorkflowConfig) 
     const context = await this.gatherContext();
     const decision = await this.makeAutonomousDecision(context);
     const result = await this.executeWithMonitoring(decision);

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {/* content */}
+export const metadata: Metadata = 
   title: 'AI 2025: Cognitive Automation Breakthrough | Zion Tech Group',
   description: 'Revolutionary cognitive automation systems delivering 95% accuracy, 87% faster decisions, and $95B success stories. Learn about the breakthrough in AI-driven cognitive processes.',
   keywords: 'cognitive automation, AI breakthrough, decision automation, cognitive AI, enterprise automation, AI accuracy',

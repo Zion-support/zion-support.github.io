@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { Calendar, Clock, User, ArrowRight, Zap, Cpu, Shield, TrendingUp, Target, Brain } from 'lucide-react';
 
-export const metadata: Metadata = {/* content */}
+export const metadata: Metadata = 
   title: 'Quantum Computing 2026: Commercial Breakthrough & Enterprise Implementation | Zion Tech Group',
   description: 'Discover how quantum computing has achieved commercial viability in 2026. Learn about quantum advantage, enterprise implementations, and the $47B quantum economy transforming industries.',
   keywords: 'quantum computing 2026, quantum advantage, quantum enterprise, quantum breakthrough, quantum economy, quantum implementation, quantum AI, quantum algorithms',

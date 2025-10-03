@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {/* content */}
+export const metadata: Metadata = 
   title: 'AI Enterprise Automation 2026: Complete Mega Guide | Zion Tech Group',
   description: 'Comprehensive guide to AI enterprise automation in 2026: Autonomous operations, intelligent workflows, and breakthrough automation technologies delivering 98% automation rates.',
   keywords: 'AI automation, Enterprise automation, Autonomous operations, AI workflows, Enterprise AI, Automation guide',

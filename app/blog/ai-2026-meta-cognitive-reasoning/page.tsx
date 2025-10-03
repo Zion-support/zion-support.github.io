@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {/* content */}
+export const metadata: Metadata = 
   title: 'Meta-Cognitive Reasoning: AI That Thinks About Thinking - Zion Tech Group',
   description: 'Discover the breakthrough in AI reasoning capabilities. Meta-cognitive AI systems that can think about their own thinking processes, leading to unprecedented decision-making accuracy.',
   keywords: 'meta-cognitive AI, AI reasoning, cognitive AI, self-aware AI, AI decision making, cognitive reasoning',

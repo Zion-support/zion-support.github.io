@@ -1,12 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Header: React.FC = () => {/* content */}
+const Header: React.FC = () => {
   return (
-  <div></div>
     <header className="bg-slate-900 border-b border-slate-800">
-      <div className="container mx-auto px-4 py-4"></div>
-        <div className="flex items-center justify-between"></div>
+      <div className="container mx-auto px-4 py-4">
+        <div className="flex items-center justify-between">
           <Link to="/" className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
             Zion Tech Group
           </Link>
@@ -44,11 +43,11 @@ const Header: React.FC = () => {/* content */}
             </Link>
           </nav>
 
-          <div className="flex items-center space-x-4"></div>
+          <div className="flex items-center space-x-4">
             <a 
               href="/contact" 
               className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300"
-            ></a>
+            >
               Get Started
             </a>
           </div>

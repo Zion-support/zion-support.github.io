@@ -2,7 +2,7 @@ import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 
-export const metadata: Metadata = {/* content */}
+export const metadata: Metadata = 
   title: 'AI 2027 Quantum Revolution: Breakthrough Technologies & Implementation Guide',
   description: 'Discover the revolutionary quantum-enhanced AI systems delivering 1000x performance improvements and unprecedented computational capabilities for enterprise applications.',
   keywords: 'quantum AI, quantum computing, AI revolution 2027, enterprise AI, quantum neural networks, breakthrough technologies',
@@ -15,7 +15,7 @@ export const metadata: Metadata = {/* content */}
     locale: 'en_US',
     type: 'article',
   },
-  twitter: {/* content */}
+  twitter: 
     card: 'summary_large_image',
     title: 'AI 2027 Quantum Revolution: Breakthrough Technologies & Implementation Guide',
     description: 'Discover the revolutionary quantum-enhanced AI systems delivering 1000x performance improvements and unprecedented computational capabilities for enterprise applications.',

@@ -2,12 +2,12 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import Header from "../../components/Header";
 
-export default function PostBySlug(): React.JSX.Element {/* content */}
+export default function PostBySlug(): React.JSX.Element 
   const { slug } = useParams();
 
   // Mock data - in a real app, this would come from an API or CMS
   const latestArticles = [
-    {/* content */}
+    
       slug: "ai-autonomous-workflows-2026",
       title: "AI Autonomous Workflows 2026",
       description: "Transform operations with 95% automation, 400% ROI, and seamless multi-system orchestration",
@@ -20,7 +20,7 @@ export default function PostBySlug(): React.JSX.Element {/* content */}
   ];
 
   const blogPosts = [
-    {/* content */}
+    
       slug: "enterprise-ai-transformation-roadmap-2026",
       title: "Enterprise AI Transformation Roadmap 2026",
       description: "Complete implementation guide delivering 300% ROI, 85% automation, and digital transformation",
@@ -32,7 +32,7 @@ export default function PostBySlug(): React.JSX.Element {/* content */}
   ];
 
   const staticPosts = [
-    {/* content */}
+    
       slug: "ai-governance-framework-enterprise-2025",
       title: "AI Governance Framework for Enterprise 2025",
       description: "Comprehensive framework for implementing AI governance in enterprise environments",
@@ -42,12 +42,12 @@ export default function PostBySlug(): React.JSX.Element {/* content */}
     }
   ];
 
-  const article = React.useMemo(() => {/* content */}
+  const article = React.useMemo(() => 
     if (!slug) return undefined;
     
     const fromLatest = latestArticles.find((a) => a.slug === slug);
-    if (fromLatest) {/* content */}
-      return {/* content */}
+    if (fromLatest) 
+      return 
         slug: fromLatest.slug,
         title: fromLatest.title,
         description: fromLatest.description || fromLatest.excerpt,
@@ -59,8 +59,8 @@ export default function PostBySlug(): React.JSX.Element {/* content */}
     }
     
     const fromBlogPosts = blogPosts.find((p) => p.slug === slug);
-    if (fromBlogPosts) {/* content */}
-      return {/* content */}
+    if (fromBlogPosts) 
+      return 
         slug: fromBlogPosts.slug,
         title: fromBlogPosts.title,
         description: fromBlogPosts.description,
@@ -72,8 +72,8 @@ export default function PostBySlug(): React.JSX.Element {/* content */}
     }
     
     const fromPosts = staticPosts.find((p) => p.slug === slug);
-    if (fromPosts) {/* content */}
-      return {/* content */}
+    if (fromPosts) 
+      return 
         slug: fromPosts.slug,
         title: fromPosts.title,
         description: fromPosts.description,
@@ -85,11 +85,11 @@ export default function PostBySlug(): React.JSX.Element {/* content */}
     }
     
     return undefined;
-  const article = React.useMemo(() => {/* content */}
+  const article = React.useMemo(() => 
     if (!slug) return undefined;
     
     // Mock article data - replace with actual data fetching logic
-    const mockArticle = {/* content */}
+    const mockArticle = 
       slug: slug,
       title: "Sample Article Title",
       description: "This is a sample article description that provides an overview of the content.",
@@ -112,7 +112,7 @@ export default function PostBySlug(): React.JSX.Element {/* content */}
     return mockArticle;
   }, [slug]);
 
-  if (!article) {/* content */}
+  if (!article) 
     return (
     <div>
       <div></div>

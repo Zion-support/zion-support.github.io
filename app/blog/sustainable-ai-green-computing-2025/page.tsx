@@ -11,7 +11,7 @@ export const metadata = {
     type: 'article',
     url: 'https://ziontechgroup.com/blog/sustainable-ai-green-computing-2025',
     images: [
-      {/* content */}
+      
         url: '/og-sustainable-ai-2025.jpg',
         width: 1200,
         height: 630,

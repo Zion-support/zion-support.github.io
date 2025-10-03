@@ -2,7 +2,7 @@ import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 
-export const metadata: Metadata = {/* content */}
+export const metadata: Metadata = 
   title: 'AI 2026 Neural Consciousness Fusion: Revolutionary Breakthrough | Zion Tech Group',
   description: 'Discover the revolutionary AI 2026 Neural Consciousness Fusion breakthrough achieving 1,000,000x performance, universal consciousness, and $100B+ enterprise value generation.',
   keywords: 'AI 2026, neural consciousness fusion, artificial intelligence, consciousness AI, neural networks, breakthrough, enterprise AI, quantum consciousness',

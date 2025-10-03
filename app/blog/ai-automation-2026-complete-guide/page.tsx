@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {/* content */}
+export const metadata: Metadata = 
   title: 'AI Automation 2026: Complete Guide to Enterprise Process Automation',
   description: 'Master AI automation in 2026 with our comprehensive guide covering autonomous agents, intelligent workflows, and enterprise transformation strategies.',
   keywords: 'AI automation, enterprise automation, autonomous agents, intelligent workflows, business process automation',

@@ -1,53 +1,54 @@
 import React, { Component, ReactNode, ErrorInfo } from 'react';
 import { AlertTriangle } from 'lucide-react';
 
-interface Props {/* content */}
+interface Props {
   children: ReactNode;
 }
 
-interface State {/* content */}
+interface State {
   hasError: boolean;
   error?: Error;
 }
 
-class ErrorBoundary extends Component<Props, State> {/* content */}
-  public state: State = {/* content */}
+class ErrorBoundary extends Component<Props, State> {
+  public state: State = {
     hasError: false
   };
 
-  public static getDerivedStateFromError(error: Error): State {/* content */}
+  public static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error };
   }
 
-  public componentDidCatch(error: Error, errorInfo: ErrorInfo) {/* content */}
+  public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('Uncaught error:', error, errorInfo);
   }
 
-  public render() {/* content */}
-    if (this.state.hasError) {/* content */}
+  public render() {
+    if (this.state.hasError) {
       return (
-  <div></div>
-        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-red-50 to-orange-50"></div>
-          <div className="max-w-md w-full mx-4"></div>
-            <div className="bg-white rounded-2xl shadow-xl p-8 text-center"></div>
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-red-100 mb-4"></div>
+        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-red-50 to-orange-50">
+          <div className="max-w-md w-full mx-4">
+            <div className="bg-white rounded-2xl shadow-xl p-8 text-center">
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-red-100 mb-4">
                 <AlertTriangle className="w-8 h-8 text-red-600" />
               </div>
               <h1 className="text-2xl font-bold text-gray-900 mb-2">
                 Oops! Something went wrong
               </h1>
-              <p className="text-gray-600 mb-6"></p>
+              <p className="text-gray-600 mb-6">
                 We're sorry for the inconvenience. Please try refreshing the page.
               </p>
-              <div className="space-y-3"></div>
+              <div className="space-y-3">
                 <button
                   onClick={() => window.location.reload()}
-                  className="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors">
+                  className="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
+                >
                   Refresh Page
                 </button>
                 <a
                   href="/"
-                  className="block w-full border-2 border-red-600 text-red-600 hover:bg-red-50 font-semibold py-3 px-6 rounded-lg transition-colors"></a>
+                  className="block w-full border-2 border-red-600 text-red-600 hover:bg-red-50 font-semibold py-3 px-6 rounded-lg transition-colors"
+                >
                   Go to Homepage
                 </a>
               </div>

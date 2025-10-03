@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {/* content */}
+export const metadata: Metadata = 
   title: 'AI 2027 Autonomous Enterprise Revolution: Complete Business Autonomy - Zion Tech Group',
   description: 'Discover how AI 2027 Autonomous Enterprise Revolution delivers complete business autonomy with self-managing operations, autonomous decision-making, and self-evolving business processes.',
   keywords: 'autonomous enterprise, business autonomy, AI 2027, self-managing operations, autonomous business',
