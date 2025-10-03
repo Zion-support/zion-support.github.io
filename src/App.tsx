@@ -1,89 +1,78 @@
-import React, { JSX, Suspense } from "react"
+import React, { Suspense } from "react";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Header, Footer } from './app/components/Navigation';
-import ErrorBoundary from './src/components/ErrorBoundary';
-import { PageLoader } from './src/components/LoadingSpinner';
-import './app/globals.css';
-import ConsensusIntelligenceBreakthroughBanner from "./components/ConsensusIntelligenceBreakthroughBanner"
-import AutonomousEnterpriseBreakthroughBanner from "./components/AutonomousEnterpriseBreakthroughBanner"
-import June2026MegaBreakthroughBanner from "./components/June2026MegaBreakthroughBanner"
-import QuantumConsciousnessRevolutionBanner from "./components/QuantumConsciousnessRevolutionBanner"
-// Lazy load pages for better performance
-const LazyHomePage = React.lazy(() => import('./app/page'));
-const LazySolutionsPage = React.lazy(() => import('./app/solutions/page'));
-const LazyResourcesPage = React.lazy(() => import('./app/resources/page'));
-const LazyTeamPage = React.lazy(() => import('./app/team/page'));
-const LazyNewsPage = React.lazy(() => import('./app/news/page'));
-const LazyPressPage = React.lazy(() => import('./app/press/page'));
-const LazyCareersPage = React.lazy(() => import('./app/careers/page'));
-const LazyMarketplacePage = React.lazy(() => import('./app/marketplace/page'));
-const LazyServicesPage = React.lazy(() => import('./app/services/page'));
-const LazyAIInvoiceProcessingPage = React.lazy(() => import('./app/services/ai-invoice-processing-saas/page'));
-const LazyComprehensiveITServicesPage = React.lazy(() => import('./app/services/comprehensive-it-services/page'));
-const LazyAISocialMediaContentGenerator = React.lazy(() => import('./app/services/ai-social-media-content-generator/page'));
-const LazyAIEmailMarketingAutomation = React.lazy(() => import('./app/services/ai-email-marketing-automation/page'));
-const LazyAIBusinessIntelligencePlatform = React.lazy(() => import('./app/services/ai-business-intelligence-platform/page'));
-const LazyCloudMigrationService = React.lazy(() => import('./app/services/cloud-migration-service/page'));
-const LazyDevOpsAutomationService = React.lazy(() => import('./app/services/devops-automation-service/page'));
-const LazyAPIDevelopmentService = React.lazy(() => import('./app/services/api-development-service/page'));
-const LazyAIChatbotBuilder = React.lazy(() => import('./app/services/ai-chatbot-builder/page'));
-const LazyContactPage = React.lazy(() => import('./app/contact/page'));
-const LazyAboutPage = React.lazy(() => import('./app/about/page'));
+import ErrorBoundary from './components/ErrorBoundary';
+import { PageLoader } from './components/LoadingSpinner';
 
-export default function App(): JSX.Element {
+// Lazy load pages for better performance
+const LazyHomePage = React.lazy(() => import('./pages/Home'));
+const LazyBlogPage = React.lazy(() => import('./pages/Blog'));
+const LazyCaseStudiesPage = React.lazy(() => import('./pages/CaseStudies'));
+const LazyContactPage = React.lazy(() => import('./pages/Contact'));
+const LazyServicesPage = React.lazy(() => import('./pages/Services'));
+
+function App(): React.JSX.Element {
   return (
     <ErrorBoundary>
       <Router>
-        <div className="min-h-screen bg-slate-950">
-          <Header />
-          
-          {/* NEW: June 2026 Mega Breakthrough Banner - Most Prominent */}
-          <June2026MegaBreakthroughBanner />
-
-          {/* NEW: Quantum Consciousness Revolution Banner - Revolutionary Technology */}
-          <QuantumConsciousnessRevolutionBanner />
-
-          {/* Existing Banners and Sections */}
-          <ConsensusIntelligenceBreakthroughBanner />
-          <AutonomousEnterpriseBreakthroughBanner />
-          
-          <main className="min-h-screen">
-            <Suspense fallback={<PageLoader />}>
-              <Routes>
-                <Route path="/" element={<LazyHomePage />} />
-                <Route path="/solutions" element={<LazySolutionsPage />} />
-                <Route path="/resources" element={<LazyResourcesPage />} />
-                <Route path="/team" element={<LazyTeamPage />} />
-                <Route path="/news" element={<LazyNewsPage />} />
-                <Route path="/press" element={<LazyPressPage />} />
-                <Route path="/careers" element={<LazyCareersPage />} />
-                <Route path="/marketplace" element={<LazyMarketplacePage />} />
-                <Route path="/services" element={<LazyServicesPage />} />
-                <Route path="/services/ai-invoice-processing-saas" element={<LazyAIInvoiceProcessingPage />} />
-                <Route path="/services/comprehensive-it-services" element={<LazyComprehensiveITServicesPage />} />
-                <Route path="/services/ai-social-media-content-generator" element={<LazyAISocialMediaContentGenerator />} />
-                <Route path="/services/ai-email-marketing-automation" element={<LazyAIEmailMarketingAutomation />} />
-                <Route path="/services/ai-business-intelligence-platform" element={<LazyAIBusinessIntelligencePlatform />} />
-                <Route path="/services/cloud-migration-service" element={<LazyCloudMigrationService />} />
-                <Route path="/services/devops-automation-service" element={<LazyDevOpsAutomationService />} />
-                <Route path="/services/api-development-service" element={<LazyAPIDevelopmentService />} />
-                <Route path="/services/ai-chatbot-builder" element={<LazyAIChatbotBuilder />} />
-                <Route path="/services/comprehensive-micro-saas-solutions" element={<div className="py-20 px-4"><h1 className="text-4xl font-bold text-center text-white">Comprehensive Micro SaaS Solutions</h1></div>} />
-                <Route path="/services/ai-voice-assistant-platform" element={<div className="py-20 px-4"><h1 className="text-4xl font-bold text-center text-white">AI Voice Assistant Platform</h1></div>} />
-                <Route path="/services/ai-document-automation-platform" element={<div className="py-20 px-4"><h1 className="text-4xl font-bold text-center text-white">AI Document Automation Platform</h1></div>} />
-                <Route path="/comprehensive-micro-saas-services" element={<LazyServicesPage />} />
-                <Route path="/comprehensive-it-services" element={<LazyComprehensiveITServicesPage />} />
-                <Route path="/case-studies" element={<div className="py-20 px-4"><h1 className="text-4xl font-bold text-center text-white">Case Studies</h1></div>} />
-                <Route path="/contact" element={<LazyContactPage />} />
-                <Route path="/about" element={<LazyAboutPage />} />
-                <Route path="*" element={<div className="py-20 px-4"><h1 className="text-4xl font-bold text-center text-white">404 - Page Not Found</h1></div>} />
-              </Routes>
-            </Suspense>
-          </main>
-          
-          <Footer />
+        <div className="min-h-screen bg-slate-950 text-white">
+          <Suspense fallback={><PageLoader />}>
+            <Routes>
+              <Route path="/" element={><LazyHomePage />} />
+              <Route path="/blog" element={><LazyBlogPage />} />
+              <Route path="/case-studies" element={><LazyCaseStudiesPage />} />
+              <Route path="/contact" element={><LazyContactPage />} />
+              <Route path="/services" element={><LazyServicesPage />} />
+              
+              {/* Service-specific routes */}
+              <Route path="/services/quantum-consciousness-ai-consulting" element={
+                React.createElement(React.lazy(() => import('./pages/services/QuantumConsciousnessAIConsulting')))
+              } />
+              <Route path="/services/ai-workflow-automation" element={
+                React.createElement(React.lazy(() => import('./pages/services/AIWorkflowAutomation')))
+              } />
+              <Route path="/services/ai-virtual-assistant" element={
+                React.createElement(React.lazy(() => import('./pages/services/AIVirtualAssistant')))
+              } />
+              <Route path="/services/ai-mlops-automation" element={
+                React.createElement(React.lazy(() => import('./pages/services/AIMLOpsAutomation')))
+              } />
+              <Route path="/services/ai-intelligent-document-processing" element={
+                React.createElement(React.lazy(() => import('./pages/services/AIIntelligentDocumentProcessing')))
+              } />
+              <Route path="/services/advanced-cybersecurity-ai" element={
+                React.createElement(React.lazy(() => import('./pages/services/AdvancedCybersecurityAI')))
+              } />
+              <Route path="/services/autonomous-business-operations" element={
+                React.createElement(React.lazy(() => import('./pages/services/AutonomousBusinessOperations')))
+              } />
+              <Route path="/services/real-time-cognitive-automation" element={
+                React.createElement(React.lazy(() => import('./pages/services/RealTimeCognitiveAutomation')))
+              } />
+              <Route path="/services/ai-data-analytics" element={
+                React.createElement(React.lazy(() => import('./pages/services/AIDataAnalytics')))
+              } />
+              <Route path="/services/enterprise-ai-solutions" element={
+                React.createElement(React.lazy(() => import('./pages/EnterpriseAISolutions')))
+              } />
+              
+              {/* 404 fallback */}
+              <Route path="*" element={>
+                <div className="min-h-screen flex items-center justify-center">
+                  <div className="text-center">
+                    <h1 className="text-4xl font-bold mb-4">404 - Page Not Found</h1>
+                    <p className="text-gray-400 mb-8">The page you're looking for doesn't exist.</p>
+                    <a href="/" className="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg transition-colors">
+                      Go Home
+                    </a>
+                  </div>
+                </div>
+              } />
+            </Routes>
+          </Suspense>
         </div>
       </Router>
     </ErrorBoundary>
   );
 }
+
+export default App;

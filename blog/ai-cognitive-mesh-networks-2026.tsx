@@ -151,8 +151,8 @@ const AICognitiveMeshNetworks2026 = () => {
 {`# Example: Traffic Management System
 network_state = {
   "total_nodes": 1000,
-  "decision_latency": "8ms",
-  "consensus_accuracy": "99.94%",
+  "decision_latency": "8ms
+  "consensus_accuracy": "99.94%
   "actions_per_second": 50000
 }
 

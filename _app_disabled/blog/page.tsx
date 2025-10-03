@@ -12,7 +12,7 @@ const blogPosts = [
   {
     id: 1,
     title: 'The Future of AI in Enterprise: 2024 Trends and Predictions',
-    excerpt: "Explore the latest trends in artificial intelligence and how they're transforming enterprise operations.",
+    excerpt: "Explore the latest trends in artificial intelligence and how they're transforming enterprise operations.
     author: 'Dr. Sarah Chen',
     date: '2024-01-15',
     readTime: '5 min read',

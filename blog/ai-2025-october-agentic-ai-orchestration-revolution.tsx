@@ -122,10 +122,10 @@ export default function AgenticAIOrchestrationRevolution2025() {
                     <code>
                       {`// Agent capability registration
 agentRegistry.register({
-  agentId: "fraud-detector-v2.3",
+  agentId: "fraud-detector-v2.3
   capabilities: ["transaction-analysis", "anomaly-detection"],
   throughput: 50000,  // transactions/sec
-  latency: "15ms",
+  latency: "15ms
   reliability: 0.997
 });`}
                     </code>
@@ -156,10 +156,10 @@ agentRegistry.register({
                     <code>
                       {`// Agent-to-agent coordination
 await coordinationBus.negotiate({
-  initiator: "customer-service-agent-42",
-  request: "escalation-approval",
-  target: "supervisor-agent-team-A",
-  priority: "high",
+  initiator: "customer-service-agent-42
+  request: "escalation-approval
+  target: "supervisor-agent-team-A
+  priority: "high
   context: { customerId, issueType, urgency }
 });`}
                     </code>

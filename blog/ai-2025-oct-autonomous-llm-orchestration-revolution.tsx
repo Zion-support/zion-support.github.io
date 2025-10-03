@@ -1,14 +1,14 @@
 import React from "react";
 
 export const metadata = {
-  title: "Autonomous LLM Orchestration: Multi-Model AI Systems for Enterprise Scale | October 2025",
-  description: "Discover how autonomous LLM orchestration is transforming enterprise AI. Learn about multi-model systems, intelligent routing, and achieving 10x performance improvements with 60% cost reduction through advanced AI orchestration.",
-  date: "2025-10-01",
-  author: "Zion Tech Group",
-  category: "LLM Infrastructure",
+  title: "Autonomous LLM Orchestration: Multi-Model AI Systems for Enterprise Scale | October 2025
+  description: "Discover how autonomous LLM orchestration is transforming enterprise AI. Learn about multi-model systems, intelligent routing, and achieving 10x performance improvements with 60% cost reduction through advanced AI orchestration.
+  date: "2025-10-01
+  author: "Zion Tech Group
+  category: "LLM Infrastructure
   tags: ["LLM Orchestration", "Multi-Model AI", "Enterprise AI", "Cost Optimization", "AI Infrastructure"],
   featured: true,
-  readTime: "16 min read",
+  readTime: "16 min read
 };
 
 const AutonomousLLMOrchestrationRevolution: React.FC = () => {

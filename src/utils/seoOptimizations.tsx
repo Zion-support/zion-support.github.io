@@ -204,8 +204,8 @@ export const performanceSEO = {
 export const analyticsUtils = {
   // Track page views
   trackPageView: (url: string, title: string) => {
-    if (typeof window !== 'undefined' && (window as Window & { gtag?: Function }).gtag) {
-      (window as Window & { gtag: Function }).gtag('config', 'GA_MEASUREMENT_ID', {
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
         page_title: title,
         page_location: url
       });
@@ -224,7 +224,7 @@ export const analyticsUtils = {
     if (typeof window !== 'undefined' && (window as any).gtag) {
       (window as any).gtag('event', 'conversion', {
         send_to: conversionId,
-        value: value
+        value=value
       });
     }
   }
@@ -239,7 +239,7 @@ export const coreWebVitals = {
     const trackMetric = (metric: any) => {
       analyticsUtils.trackEvent('core_web_vitals', {
         metric_name: metric.name,
-        metric_value: Math.round(metric.value),
+        metric_value=Math.round(metric.value),
         metric_id: metric.id,
         metric_delta: metric.delta
       });

@@ -29,24 +29,24 @@ export const metadata = {
 
 export default function AI2026EnterpriseAutonomousSystems() {
   const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "AI 2026 Enterprise Autonomous Systems: The Future of Business Automation",
-    "description": "Discover how AI 2026 autonomous systems are revolutionizing enterprise operations with 400% efficiency gains, 70% cost reduction, and complete business process automation.",
+    "@context": "https://schema.org
+    "@type": "Article
+    "headline": "AI 2026 Enterprise Autonomous Systems: The Future of Business Automation
+    "description": "Discover how AI 2026 autonomous systems are revolutionizing enterprise operations with 400% efficiency gains, 70% cost reduction, and complete business process automation.
     "author": {
-      "@type": "Organization",
+      "@type": "Organization
       "name": "Zion Tech Group"
     },
     "publisher": {
-      "@type": "Organization",
-      "name": "Zion Tech Group",
+      "@type": "Organization
+      "name": "Zion Tech Group
       "logo": {
-        "@type": "ImageObject",
+        "@type": "ImageObject
         "url": "https://ziontechgroup.com/logo.png"
       }
     },
-    "datePublished": "2026-01-20",
-    "dateModified": "2026-01-20",
+    "datePublished": "2026-01-20
+    "dateModified": "2026-01-20
     "image": "https://ziontechgroup.com/og-ai-autonomous-systems-2026.jpg"
   };
 

@@ -148,15 +148,15 @@ creativity_engine = SyntheticCreativityEngine()
 
 # Learn from style examples
 creativity_engine.learn_style([
-    "van_gogh_starry_night.jpg",
-    "monet_water_lilies.jpg",
+    "van_gogh_starry_night.jpg
+    "monet_water_lilies.jpg
     "modern_abstract_collection/"
 ])
 
 # Generate original art
 artwork = creativity_engine.create(
-    prompt="Sunset over futuristic city",
-    style="impressionist_cyberpunk_fusion",
+    prompt="Sunset over futuristic city
+    style="impressionist_cyberpunk_fusion
     originality_threshold=0.95,
     emotional_tone="hopeful_wonder"
 )

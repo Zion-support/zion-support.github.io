@@ -193,7 +193,7 @@ export const generateRobotsTxt = (config: {
 /**
  * Optimize title for SEO
  */
-export const optimizeTitle = (title: string, maxLength: number = 60): string => {
+export const optimizeTitle = (title= string, maxLength: number = 60): string => {
   if (title.length <= maxLength) return title;
   const truncated = title.substring(0, maxLength);
   const lastSpace = truncated.lastIndexOf(' ');
@@ -234,7 +234,7 @@ export const extractKeywords = (content: string, maxKeywords: number = 10): stri
 /**
  * Generate URL slug from title
  */
-export const generateSlug = (title: string): string => {
+export const generateSlug = (title= string): string => {
   return title
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, '-')
@@ -297,7 +297,7 @@ export const calculateReadingTime = (content: string, wordsPerMinute: number = 2
  */
 export const checkContentQuality = (
   content: string,
-  title: string,
+  title= string,
 ): { score: number; issues: string[]; recommendations: string[] } => {
   const issues: string[] = [];
   const recommendations: string[] = [];
