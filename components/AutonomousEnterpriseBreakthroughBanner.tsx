@@ -12,8 +12,7 @@ const AutonomousEnterpriseBreakthroughBanner: React.FC = () => {
           while maintaining human oversight and control.
         </p>
       </div>
-    </div>
   );
 };
 
-export default AutonomousEnterpriseBreakthroughBanner;
+export default AutonomousEnterpriseBreakthroughBanner;</div>
