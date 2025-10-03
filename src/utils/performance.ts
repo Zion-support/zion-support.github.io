@@ -87,7 +87,7 @@ export class PerformanceMonitor {
     if (navigation) {
       this.metrics.loadTime = navigation.loadEventEnd - navigation.fetchStart;
       this.metrics.timeToInteractive = navigation.domInteractive - navigation.fetchStart;
-    '
+    }
 
     // Measure bundle size
     const scripts = document.querySelectorAll('script[src]');
@@ -98,12 +98,12 @@ export class PerformanceMonitor {
         // Estimate size based on common patterns
         totalSize += 50000; // Average chunk size
       }
-    ');
+    });
     this.metrics.bundleSize = totalSize;
     this.metrics.resourceCount = performance.getEntriesByType('resource').length;
 
     this.reportMetrics();
-  '
+  }
 
   private observeLCP(): void {
     if ('PerformanceObserver' in window) {
@@ -111,11 +111,11 @@ export class PerformanceMonitor {
         const entries = list.getEntries();
         const lastEntry = entries[entries.length - 1];
         this.metrics.largestContentfulPaint = lastEntry.startTime;
-      ');
+      });
       observer.observe({ entryTypes: ['largest-contentful-paint'] });
       this.observers.push(observer);
     }
-  '
+  }
 
   private observeFID(): void {
     if ('PerformanceObserver' in window) {
@@ -124,11 +124,11 @@ export class PerformanceMonitor {
         entries.forEach(entry => {
           this.metrics.firstInputDelay = entry.processingStart - entry.startTime;
         });
-      ');
+      });
       observer.observe({ entryTypes: ['first-input'] });
       this.observers.push(observer);
     }
-  '
+  }
 
   private observeCLS(): void {
     if ('PerformanceObserver' in window) {
