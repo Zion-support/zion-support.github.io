@@ -85,6 +85,7 @@ export default function PostBySlug(): React.JSX.Element {
     }
     
     return undefined;
+<<<<<<< HEAD
   const article = React.useMemo(() => {
     if (!slug) return undefined;
     
@@ -110,6 +111,8 @@ export default function PostBySlug(): React.JSX.Element {
     };
     
     return mockArticle;
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-3097
   }, [slug]);
 
   if (!article) {
@@ -211,65 +214,23 @@ export default function PostBySlug(): React.JSX.Element {
                 </div>
               ))}
             </div>
+<<<<<<< HEAD
       <div className="min-h-screen bg-gray-50">
         <Header />
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-gray-900 mb-4">Article Not Found</h1>
             <p className="text-xl text-gray-600">The article you're looking for doesn't exist.</p>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-3097
           </div>
         </div>
       </div>
-    );
-  }
-
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <Header />
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="max-w-4xl mx-auto">
-          {/* Article Header */}
-          <div className="mb-8">
-            <div className="text-sm text-blue-600 font-semibold mb-2">{article.category}</div>
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">{article.title}</h1>
-            <p className="text-xl text-gray-600 mb-6">{article.description}</p>
-            
-            <div className="flex items-center text-sm text-gray-500 mb-8">
-              <span>By {article.author}</span>
-              <span className="mx-2">•</span>
-              <span>{new Date(article.publishedAt).toLocaleDateString()}</span>
-              <span className="mx-2">•</span>
-              <span>{article.readTime}</span>
-            </div>
-          </div>
-
-          {/* Article Content */}
-          <div className="bg-white rounded-lg shadow-lg p-8">
-            <div 
-              className="prose prose-lg max-w-none>
-              dangerouslySetInnerHTML={{ __html: article.content }}
-            />
-          </div>
-
-          {/* Article Footer */}"
-          <div className="mt-8 text-center">
-            <div className="bg-blue-50 rounded-lg p-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Enjoyed this article?</h3>
-              <p className="text-gray-600 mb-4">
-                Stay updated with our latest insights and technology solutions.
-              </p>
-              <a 
-                href="/contact"
-                className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors>
-              >
-                Get in Touch
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    </>
   );
+<<<<<<< HEAD
 }
 }"
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-3097
