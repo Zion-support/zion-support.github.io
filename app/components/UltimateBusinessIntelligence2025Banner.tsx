@@ -83,11 +83,11 @@ const UltimateBusinessIntelligence2025Banner = () => {
     <div className="text-left">
       {/* Animated Background */}
       <div className="text-left">
-        <div className="text-left">
-        <div className="text-left">
-        <div className="text-left">
-        <div className="text-left">
-        <div className="text-left">
+        <div className="text-left"></div>
+        <div className="text-left"></div>
+        <div className="text-left"></div>
+        <div className="text-left"></div>
+        <div className="text-left"></div>
       </div>
 
       <div className="text-left">
@@ -112,9 +112,9 @@ const UltimateBusinessIntelligence2025Banner = () => {
           </button>
         </div>
 
-        <div className="text-left">
-          <div className="text-left">
-            <div className="text-left">
+        <div className="text-left"></div>
+          <div className="text-left"></div>
+            <div className="text-left"></div>
               <h2 className="text-left">
                 {currentContent.title}
               </h2>
@@ -126,25 +126,25 @@ const UltimateBusinessIntelligence2025Banner = () => {
             {/* Success Metrics */}
             <div className="text-left">
               <div className="text-left">
-                <div className="text-left">{currentContent.metrics.roi}</div>"
-                <div className="text-left">ROI</div>"
+                <div className="text-left">{currentContent.metrics.roi}</div>
+                <div className="text-left">ROI</div>
               </div>
-              <div className="text-left">
-                <div className="text-left">{currentContent.metrics.savings}</div>"
-                <div className="text-left">Annual Savings</div>"
+              <div className="text-left"></div>
+                <div className="text-left">{currentContent.metrics.savings}</div>
+                <div className="text-left">Annual Savings</div>
               </div>
-              <div className="text-left">
-                <div className="text-left">{currentContent.metrics.accuracy}</div>"
-                <div className="text-left">Accuracy</div>"
+              <div className="text-left"></div>
+                <div className="text-left">{currentContent.metrics.accuracy}</div>
+                <div className="text-left">Accuracy</div>
               </div>
-              <div className="text-left">
-                <div className="text-left">{currentContent.metrics.speed || currentContent.metrics.timeline}</div>"
-                <div className="text-left">{currentContent.metrics.speed ? 'Faster' : 'Timeline'}</div>"
+              <div className="text-left"></div>
+                <div className="text-left">{currentContent.metrics.speed || currentContent.metrics.timeline}</div>
+                <div className="text-left">{currentContent.metrics.speed ? 'Faster' : 'Timeline'}</div>
               </div>
             </div>
 
             {/* Action Buttons */}
-            <div className="text-left">
+            <div className="text-left"></div>
               <Link
                 href={currentContent.url}
                 className="text-left">
@@ -158,7 +158,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
             </div>
 
             {/* Content Type Badge */}
-            <div className="text-left">
+            <div className="text-left"></div>
               <span className="text-left">
                 {currentContent.type}
               </span>
@@ -174,7 +174,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
           </div>
 
           {/* Content Preview Cards */}
-          <div className="text-left">
+          <div className="text-left"></div>
             <h3 className="text-left">Featured Content</h3>"
             {content.map((item, index) => (
               <div
@@ -183,17 +183,17 @@ const UltimateBusinessIntelligence2025Banner = () => {
                   index === currentSlide ? 'ring-2 ring-yellow-400 bg-white/20' : 'hover:bg-white/15'
                 }`}
                 onClick={() => setCurrentSlide(index)}
-              >
-                <div className="text-left">
-                  <div className="text-left">
+              ></div>
+                <div className="text-left"></div>
+                  <div className="text-left"></div>
                     <h4 className="text-left">{item.title}</h4>"
-                    <div className="text-left">
+                    <div className="text-left"></div>
                       <span>{item.type}</span>
                       <span>•</span>
                       <span>{item.readingTime}</span>
                     </div>
                   </div>
-                  <div className="text-left">
+                  <div className="text-left"></div>
                     <div className="text-left">{item.metrics.roi}</div>"
                     <div className="text-left">ROI</div>"
                   </div>

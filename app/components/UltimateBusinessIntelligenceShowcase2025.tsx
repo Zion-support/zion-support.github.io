@@ -122,7 +122,7 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
             >
               {filter.label} ({filter.count})
             </button>
-          ))}
+            ))}
         </div>
 
         {/* Content Grid */}
@@ -176,7 +176,7 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
                       className="text-left">
                       {tag}
                     </span>
-                  ))}
+                    ))}
                 </div>
 
                 {/* Action Buttons */}
@@ -192,7 +192,7 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
                     <span>Ultimate Breakthrough</span>
                   </div>
               </div>
-          ))}
+            ))}
         </div>
 
         {/* Call to Action */}
