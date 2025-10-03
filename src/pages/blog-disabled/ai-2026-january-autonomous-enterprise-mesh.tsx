@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react''
 import React from 'react';'
 
 const AutonomousEnterpriseMesh2026: React.FC = () => {
@@ -31,6 +31,7 @@ const AutonomousEnterpriseMesh2026: React.FC = () => {
   ];
 
   return (
+    <>
     <>
       <Helmet >
         <title>Autonomous Enterprise Mesh 2026: Self-Organizing Business Intelligence | Zion Tech Group</title>,
@@ -196,6 +197,7 @@ const AutonomousEnterpriseMesh2026: React.FC = () => {
               <div key={index} className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10">
                 <div className="{`text-4xl font-bold ${stat.color} mb-2`}">`
                   {stat.value}
+    </>
                 </div>
                 <div className="text-sm text-gray-300">
             className="grid grid-cols-2 md:grid-cols-4 gap-8"
@@ -304,7 +306,7 @@ const AutonomousEnterpriseMesh2026: React.FC = () => {
               </ul>
             </div>
 
-  The Autonomous Enterprise Mesh represents more than just technological advancement—it's a fundamental reimagining '
+  The Autonomous Enterprise Mesh represents more than just technological advancement—it's a fundamental reimagining ''
               of how businesses operate. As we move forward, organizations that embrace this autonomous intelligence will gain 
               unprecedented competitive advantages, while those that resist will find themselves increasingly obsolete.
             </p>
@@ -312,8 +314,8 @@ const AutonomousEnterpriseMesh2026: React.FC = () => {
             <p className="text-gray-300 mb-8 leading-relaxed">
             <p className="text-gray-300 mb-8 leading-relaxed">"
   The era of human-dependent business operations is ending. The future belongs to self-organizing, intelligent systems 
-              that can adapt, learn, and optimize in real-time. The Autonomous Enterprise Mesh is not just the future—it's the present, '
-              and it's transforming businesses today.'
+              that can adapt, learn, and optimize in real-time. The Autonomous Enterprise Mesh is not just the future—it's the present, ''
+              and it's transforming businesses today.''
             </p>
           </motion.div>
         </div>
@@ -388,3 +390,4 @@ const AutonomousEnterpriseMesh2026: React.FC = () => {
 };
 "
 export default AutonomousEnterpriseMesh2026;"
+  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>

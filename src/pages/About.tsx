@@ -125,7 +125,7 @@ const About: React.FC = () => {
                 <div className="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
                   <Target className="w-6 h-6 text-blue-600" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h2>
                 <p className="text-gray-600">
                   To democratize advanced AI and technology solutions, making them accessible and affordable 
                   for businesses of all sizes. We believe that cutting-edge technology should be a catalyst 
@@ -136,7 +136,7 @@ const About: React.FC = () => {
                 <div className="bg-purple-100 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
                   <Globe className="w-6 h-6 text-purple-600" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Vision</h3>
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">Our Vision</h2>
                 <p className="text-gray-600">
                   To be the global leader in AI-powered business transformation, creating a world where 
                   every organization can leverage advanced technology to achieve unprecedented levels of 
