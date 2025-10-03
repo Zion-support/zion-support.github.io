@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { ArrowRight, Calendar, BookOpen, Brain, Zap, TrendingUp, Star, Sparkles } from 'lucide-react';
 
 export default function January2025NewContentShowcaseBanner() {

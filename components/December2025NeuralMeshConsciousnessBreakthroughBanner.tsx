@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { Brain, Zap, Network, ArrowRight, Sparkles, Globe } from 'lucide-react';
 
 const December2025NeuralMeshConsciousnessBreakthroughBanner: React.FC = () => {

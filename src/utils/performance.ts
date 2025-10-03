@@ -325,7 +325,7 @@ export class ImageOptimizer {
       .map(size => `${baseSrc}-${size}w.${extension} ${size}w`)
       .join(', ');
 
-    return `<img src="${src}" srcset="${srcset}" alt="${alt}" loading="lazy/>`;
+    return `<img src="${src}" srcset="${srcset}" alt="${alt}" loading="lazy" />`;
   }
 
   static preloadCriticalImages(imageUrls: string[]): void {

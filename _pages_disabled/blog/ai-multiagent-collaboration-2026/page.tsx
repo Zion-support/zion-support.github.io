@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'AI Multiagent Collaboration Systems 2026: Orchestrating Intelligent Agents at Scale',

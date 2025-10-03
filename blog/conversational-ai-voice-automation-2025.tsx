@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'Conversational AI & Voice Automation 2025: 98% Accuracy, 80% Cost Reduction | Zion Tech Group',

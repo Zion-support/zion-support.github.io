@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 const AdvancedContentDiscoveryHub: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('all');

@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { ArrowRight, Zap, Cpu, Globe, TrendingUp, Star, Factory, Wifi } from 'lucide-react';
 
 const March2026EdgeIntelligenceRevolutionBanner: React.FC = () => {

@@ -95,7 +95,7 @@ export default function AIContentLocalizationPage() {
 }
 
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import Head from 'next/head';
 import { Link } from 'react-router-dom';
 import { 
   Globe, 

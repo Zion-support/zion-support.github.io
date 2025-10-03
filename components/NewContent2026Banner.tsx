@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { ArrowRight, Star, TrendingUp, Users, Zap } from 'lucide-react';
 
 export default function NewContent2026Banner() {

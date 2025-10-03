@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { Heart, TrendingUp, ArrowRight, Sparkles } from 'lucide-react';
 
 const EmotionAIRevolutionBanner = () => {

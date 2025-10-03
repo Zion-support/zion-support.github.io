@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { Calendar, User, ArrowRight, Brain, Zap, Shield, TrendingUp } from 'lucide-react';
 
 export default function AI2025JanuaryAutonomousEnterpriseRevolution() {

@@ -1,5 +1,5 @@
 import React { useState } from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
 
 const Navigation: React.FC = () => {
