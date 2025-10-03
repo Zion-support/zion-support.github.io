@@ -85,7 +85,7 @@ export const generateArticleStructuredData = (article: {
   modifiedDate?: string;
   image?: string;
   url: string;
-): string => {
+}): string => {
   return generateStructuredData('Article', {
     headline: article.title,
     description: article.description,
@@ -117,7 +117,7 @@ export const generateBreadcrumbStructuredData = (breadcrumbs: Array<{ name: stri
       item: crumb.url,
     }))
   });
-';
+};
 
 export const generateOrganizationStructuredData = (): string => {
   return generateStructuredData('Organization', {
@@ -128,12 +128,14 @@ export const generateOrganizationStructuredData = (): string => {
     sameAs: [
       'https://twitter.com/ziontechgroup',
       'https://linkedin.com/company/ziontechgroup',
-      'https://github.com/zion-holdings'],
+      'https://github.com/zion-holdings'
+    ],
     contactPoint: {
       '@type': 'ContactPoint',
       telephone: '+1-800-ZION-TECH',
       contactType: 'Customer Service',
-      email: 'contact@ziontechgroup.com'}
+      email: 'contact@ziontechgroup.com'
+    }
   });
 };
 
@@ -168,7 +170,7 @@ export const generateRobotsTxt = (config: {
   disallow?: string[];
   allow?: string[];
   sitemap?: string;
-): string => {
+}): string => {
   const lines: string[] = [];
   lines.push(`User-agent: ${config.userAgent || '*'}`);
   
@@ -206,7 +208,7 @@ export const optimizeDescription = (description: string, maxLength: number = 160
   const truncated = description.substring(0, maxLength);
   const lastSpace = truncated.lastIndexOf(' ');
   return lastSpace > 0 ? truncated.substring(0, lastSpace) + '...' : truncated + '...';
-';
+};
 
 /**
  * Extract keywords from content
@@ -227,7 +229,7 @@ export const extractKeywords = (content: string, maxKeywords: number = 10): stri
     .sort((a, b) => b[1] - a[1])
     .slice(0, maxKeywords)
     .map(([word]) => word);
-';
+};
 
 /**
  * Generate URL slug from title
@@ -244,19 +246,19 @@ export const validateSEOUrl = (url: string): { valid: boolean; issues: string[] 
   
   if (url.length > 100) {
     issues.push('URL is too long (>100 characters)');
-  
+  }
   
   if (url.includes('_')) {
     issues.push('URL contains underscores (use hyphens instead)');
-  
+  }
   
   if (/[A-Z]/.test(url)) {
     issues.push('URL contains uppercase letters');
-  
+  }
   
   if (/\s/.test(url)) {
     issues.push('URL contains spaces');
-  
+  }
   
   if (url.split('/').filter(Boolean).length > 5) {
     issues.push('URL has too many path segments (>5)');
@@ -266,7 +268,7 @@ export const validateSEOUrl = (url: string): { valid: boolean; issues: string[] 
     valid: issues.length === 0,
     issues
   };
-';
+};
 
 /**
  * Escape HTML for safe meta tag generation
@@ -296,7 +298,7 @@ export const calculateReadingTime = (content: string, wordsPerMinute: number = 2
 export const checkContentQuality = (
   content: string,
   title: string,
-): { score: number; issues: string[]; recommendations: string[] ' => {
+): { score: number; issues: string[]; recommendations: string[] } => {
   const issues: string[] = [];
   const recommendations: string[] = [];
   let score = 100;
@@ -306,7 +308,7 @@ export const checkContentQuality = (
   if (wordCount < 300) {
     issues.push('Content is too short (<300 words)');
     score -= 20;
-  
+  }
   
   // Keyword density check (title in content)
   const titleWords = title.toLowerCase().split(/\s+/);
@@ -315,13 +317,13 @@ export const checkContentQuality = (
   if (!titleInContent) {
     issues.push('Title keywords not found in content');
     score -= 15;
-  
+  }
   
   // Heading check
   if (!content.includes('#') && !content.includes('<h')) {
     recommendations.push('Add headings to improve content structure');
     score -= 10;
-  
+  }
   
   // Link check
   if (!content.includes('http') && !content.includes('[') && !content.includes('<a')) {
@@ -330,7 +332,7 @@ export const checkContentQuality = (
   }
   
   return { score: Math.max(0, score), issues, recommendations };
-';
+};
 
 export default {
   generateMetaTags,
@@ -348,4 +350,4 @@ export default {
   validateSEOUrl,
   calculateReadingTime,
   checkContentQuality
-`;
+};
