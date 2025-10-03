@@ -1,6 +1,6 @@
 // @ts-nocheck
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'AI 2027 Quantum Consciousness Mega Success - $2.5B ROI Case Study',

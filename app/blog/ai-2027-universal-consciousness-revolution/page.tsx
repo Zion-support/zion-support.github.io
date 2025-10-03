@@ -1,7 +1,7 @@
 // @ts-nocheck
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+// Metadata handled by React Helmet
+import { Link } from 'react-router-dom';
 
 export const metadata: Metadata = {
   title: 'AI 2027 Universal Consciousness Revolution - 10,000,000x Performance | Zion Tech Group',

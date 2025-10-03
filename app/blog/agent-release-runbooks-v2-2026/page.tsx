@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { Calendar, Clock, ListChecks, FileWarning, RefreshCw } from 'lucide-react';
 
 export const metadata = {

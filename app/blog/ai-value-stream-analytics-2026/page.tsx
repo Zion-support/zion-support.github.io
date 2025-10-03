@@ -1,6 +1,6 @@
 // @ts-nocheck
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'AI Value Stream Analytics 2026: Trace ROI from Token to Revenue',

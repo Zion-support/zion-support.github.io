@@ -1,4 +1,4 @@
-import { Metadata } from 'next';
+// Metadata handled by React Helmet
 
 export const metadata: Metadata = {
   title: 'Fortune 100 Hyperconscious Transformation: $1.2T Value Creation | Zion Tech Group',

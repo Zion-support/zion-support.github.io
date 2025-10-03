@@ -1,6 +1,6 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+// Metadata handled by React Helmet
+import { Link } from 'react-router-dom';
 
 export const metadata: Metadata = {
   title: 'AI Workflow Automation Platform - Zion Tech Group',

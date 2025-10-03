@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'AI-Powered Data Analytics 2026 | Real-Time Intelligence & Predictive Insights | Zion Tech',

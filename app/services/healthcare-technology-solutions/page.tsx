@@ -1,6 +1,6 @@
 import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import { 
   Heart, Stethoscope, Users, FileText, Shield, 
   Calendar, BarChart3, Clock, CheckCircle, 

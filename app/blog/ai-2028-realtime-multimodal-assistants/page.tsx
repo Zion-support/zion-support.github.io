@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'Real‑Time Multimodal Assistants (2028): Voice + Vision + Touch',

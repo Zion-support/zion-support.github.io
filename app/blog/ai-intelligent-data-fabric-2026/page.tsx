@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
 	title: 'Intelligent Data Fabric 2026: Real-Time AI for Connected Enterprises',

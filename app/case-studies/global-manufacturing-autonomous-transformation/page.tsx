@@ -1,7 +1,7 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { ArrowLeft, TrendingUp, CheckCircle, Target, Clock, Users, DollarSign, BarChart3, Award, Zap } from 'lucide-react';
-import { Metadata } from 'next';
+// Metadata handled by React Helmet
 
 export const metadata: Metadata = {
   title: 'Global Manufacturing Leader Achieves 85% Process Automation with AI | Zion Tech Group',

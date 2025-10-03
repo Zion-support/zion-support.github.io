@@ -1,7 +1,7 @@
 // @ts-nocheck
 import React from 'react';
-import Link from 'next/link';
-import { Metadata } from 'next';
+import { Link } from 'react-router-dom';
+// Metadata handled by React Helmet
 
 export const metadata: Metadata = {
   title: 'AI 2026 December Mega Breakthrough Consulting - Zion Tech Group',
