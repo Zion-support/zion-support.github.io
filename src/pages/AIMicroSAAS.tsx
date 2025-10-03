@@ -1,51 +1,32 @@
-import React from "react";"
-import { Helmet } from "react-helmet-async";"
-import { Users, CheckCircle, ArrowRight, DollarSign, Clock, Star, TrendingUp, Lock, Smartphone, Cloud, Database, Cpu, Target, Rocket } from "lucide-react"
-;
+import React from "react";
+import { Helmet } from "react-helmet-async";
+import { Users, CheckCircle, ArrowRight, DollarSign, Clock, Star, TrendingUp, Lock, Smartphone, Cloud, Database, Cpu, Target, Rocket, FileText } from "lucide-react";
+
 export default function AIMicroSAAS(): React.JSX.Element {
-  const microSaaSServices: [,
+  const microSaaSServices = [
     {
-      id="ai-content-optimizer",
-      name: "AI Content Optimizer Pro",
-      blurb: "AI-powered content creation and optimization platform for marketing teams",
-      price: "$299 - $1,499/month",
-      eta: "1-2 weeks",
-      category: "Content AI",
-      icon: undefined,,
-      icon: FileText,,
-      features: [,,
-        "AI-generated blog posts, social media content, and email campaigns",;"
-        "SEO optimization with real-time keyword analysis",;"
-        "Brand voice consistency across all content",;"
-        "A/B testing and performance analytics",;"
-        "Multi-language content generation with cultural adaptation",;"
-        "Content calendar automation and scheduling"
-      ]
-      benefits: [,,
-        "10x faster content creation",;"
-        "40% improvement in engagement rates",;"
-        "60% reduction in content production costs",;"
       id: "ai-content-optimizer",
       name: "AI Content Optimizer Pro",
       blurb: "AI-powered content creation and optimization platform for marketing teams",
       price: "$299 - $1,499/month",
       eta: "1-2 weeks",
       category: "Content AI",
-      icon: Target,
-      features: ["AI-generated blog posts, social media content, and email campaigns",
+      icon: FileText,
+      features: [
+        "AI-generated blog posts, social media content, and email campaigns",
         "SEO optimization with real-time keyword analysis",
         "Brand voice consistency across all content",
         "A/B testing and performance analytics",
         "Multi-language content generation with cultural adaptation",
-        "Content calendar automation and scheduling"],
-,
+        "Content calendar automation and scheduling"
+      ],
       benefits: [
         "10x faster content creation",
         "40% improvement in engagement rates",
         "60% reduction in content production costs",
         "24/7 automated content optimization"
-      ]
-      useCases: ["Marketing agencies", "E-commerce brands", "SaaS companies", "Content creators"],"
+      ],
+      useCases: ["Marketing agencies", "E-commerce brands", "SaaS companies", "Content creators"],
       marketSize: "$8.2B content marketing market",
       link: "/contact",
     },

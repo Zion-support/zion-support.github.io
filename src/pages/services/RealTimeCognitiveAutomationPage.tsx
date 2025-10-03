@@ -183,22 +183,22 @@ const RealTimeCognitiveAutomationPage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className=py-20 bg-indigo-600 text-white">"
-          <div className=container mx-auto px-6 text-center">"
-            <h2 className=text-4xl font-bold mb-4">Ready to Automate Intelligently?</h2>"
-            <p className=text-xl mb-8 text-indigo-100 max-w-2xl mx-auto">"
-              Let's discuss how cognitive automation can transform your business processes and drive efficiency.';
+        <section className="py-20 bg-indigo-600 text-white">
+          <div className="container mx-auto px-6 text-center">
+            <h2 className="text-4xl font-bold mb-4">Ready to Automate Intelligently?</h2>
+            <p className="text-xl mb-8 text-indigo-100 max-w-2xl mx-auto">
+              Let's discuss how cognitive automation can transform your business processes and drive efficiency.
             </p>
-            <div className=flex flex-col sm: flex-row gap-4 justify-center">"
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 to="/contact" 
-                className=bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors
+                className="bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 Get Started
               </Link>
-              <Link "
+              <Link 
                 to="/case-studies" 
-                className=border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
               >
                 View Case Studies
               </Link>
