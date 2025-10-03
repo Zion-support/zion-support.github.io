@@ -1,9 +1,12 @@
-/**
- * Enhanced Error Boundary Component
- * Comprehensive error handling with performance monitoring and user feedback
- */
-
 import React, { Component, ReactNode, ErrorInfo } from 'react';
+import { AlertTriangle, RefreshCw, Bug } from 'lucide-react';
+
+// Mock analytics utility (replace with actual implementation)
+const analyticsUtils = {
+  trackEvent: (event: string, data: Record<string, unknown>) => {
+    console.log('Analytics Event:', event, data);
+  }
+};
 
 interface Props {
   children: ReactNode;
@@ -19,13 +22,10 @@ interface State {
   errorId: string;
 }
 
-// Mock analytics utility for demo purposes
-const analyticsUtils = {
-  trackEvent: (eventName: string, data: Record<string, unknown>) => {
-    console.log('Analytics Event:', eventName, data);
-  }
-};
-
+/**
+ * Enhanced Error Boundary Component
+ * Comprehensive error handling with performance monitoring and user feedback
+ */
 export class EnhancedErrorBoundary extends Component<Props, State> {
   private retryCount = 0;
   private maxRetries = 3;
@@ -53,24 +53,39 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     const { onError } = this.props;
+    const { errorId } = this.state;
 
     // Update state with error info
     this.setState({ errorInfo });
 
-    // Log error details (including errorId for debugging)
-    console.error('Error Boundary caught an error:', error, errorInfo, { errorId: this.state.errorId });
+    const errorDetails = {
+      errorId,
+      timestamp: new Date().toISOString(),
+      userAgent: navigator.userAgent,
+      url: window.location.href,
+      retryCount: this.retryCount
+    };
+
+    // Log error details for debugging
+    console.log('Error Details:', errorDetails);
+
+    // Send to analytics
+    analyticsUtils.trackEvent('error_boundary_caught', {
+      error_id: errorId,
+      error_message: error.message,
+      error_stack: error.stack?.substring(0, 500), // Truncate for analytics
+      component_stack: errorInfo.componentStack?.substring(0, 500) || '',
+      retry_count: this.retryCount
+    });
+
+    // Log security event if suspicious
+    // if (securityMonitoring.detectSuspiciousActivity(errorDetails)) {
+    //   securityMonitoring.logSecurityEvent('suspicious_error', errorDetails);
+    // }
 
     // Call custom error handler
     if (onError) {
       onError(error, errorInfo);
-    }
-
-    // Send to analytics (placeholder for analytics integration)
-    if (typeof window !== 'undefined' && (window as { gtag?: (...args: unknown[]) => void }).gtag) {
-      (window as { gtag: (...args: unknown[]) => void }).gtag('event', 'exception', {
-        description: error.toString(),
-        fatal: false
-      });
     }
   }
 
@@ -123,8 +138,8 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
   };
 
   render() {
-    const { hasError } = this.state;
-    const { children, fallback } = this.props;
+    const { hasError, error, errorId } = this.state;
+    const { children, fallback, showDetails } = this.props;
 
     if (hasError) {
       // Use custom fallback if provided
@@ -138,26 +153,49 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
           <div className="max-w-md w-full mx-4">
             <div className="bg-white rounded-2xl shadow-xl p-8 text-center">
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-red-100 mb-4">
-                <svg className="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.732-.833-2.5 0L4.268 16.5c-.77.833.192 2.5 1.732 2.5z" />
-                </svg>
+                <AlertTriangle className="w-8 h-8 text-red-600" />
               </div>
               <h1 className="text-2xl font-bold text-gray-900 mb-2">
-                Oops! Something went wrong
+                Something went wrong
               </h1>
               <p className="text-gray-600 mb-6">
                 We're sorry for the inconvenience. Please try refreshing the page.
               </p>
+              {showDetails && error && (
+                <details className="mb-6 text-left">
+                  <summary className="cursor-pointer text-sm text-gray-500 mb-2">Error Details</summary>
+                  <div className="bg-gray-100 p-3 rounded text-xs font-mono text-gray-700">
+                    <div className="mb-1"><strong>Error ID:</strong> {errorId}</div>
+                    <div className="mb-1"><strong>Message:</strong> {error.message}</div>
+                    {error.stack && (
+                      <div>
+                        <strong>Stack:</strong>
+                        <pre className="whitespace-pre-wrap mt-1">{error.stack}</pre>
+                      </div>
+                    )}
+                  </div>
+                </details>
+              )}
               <div className="space-y-3">
+                {this.retryCount < this.maxRetries && (
+                  <button
+                    onClick={this.handleRetry}
+                    className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
+                  >
+                    <RefreshCw className="w-4 h-4" />
+                    Try Again ({this.maxRetries - this.retryCount} attempts left)
+                  </button>
+                )}
                 <button
-                  onClick={this.handleRetry}
-                  className="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
+                  onClick={this.handleReportError}
+                  className="w-full border-2 border-gray-300 text-gray-700 hover:bg-gray-50 font-semibold py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
                 >
-                  Retry ({this.maxRetries - this.retryCount} attempts left)
+                  <Bug className="w-4 h-4" />
+                  Report Error
                 </button>
                 <button
                   onClick={() => window.location.reload()}
-                  className="w-full border-2 border-red-600 text-red-600 hover:bg-red-50 font-semibold py-3 px-6 rounded-lg transition-colors"
+                  className="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
                 >
                   Refresh Page
                 </button>

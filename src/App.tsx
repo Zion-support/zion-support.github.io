@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ErrorBoundary from './components/ErrorBoundary';
 import { PageLoader } from './components/LoadingSpinner';
 
-// Lazy load components
+// Lazy load pages for better performance
 const LazyHomePage = React.lazy(() => import('./pages/HomePage'));
 const LazyBlogPage = React.lazy(() => import('./pages/BlogPage'));
 const LazyCaseStudiesPage = React.lazy(() => import('./pages/CaseStudiesPage'));
