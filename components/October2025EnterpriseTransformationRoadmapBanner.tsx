@@ -86,10 +86,10 @@ const October2025EnterpriseTransformationRoadmapBanner: React.FC = () => {
             <h3 className="text-lg font-bold text-emerald-300 mb-3">What You'll Learn</h3>
             <div className="space-y-2">
               {[
-                "Strategic assessment frameworks",
-                "Cloud-native AI architecture",
-                "MLOps platform setup",
-                "Governance & compliance",
+                "Strategic assessment frameworks
+                "Cloud-native AI architecture
+                "MLOps platform setup
+                "Governance & compliance
                 "ROI measurement models"
               ].map((item, index) => (
                 <motion.div

@@ -7,68 +7,68 @@ const InteractiveContentShowcase2026: React.FC = () => {
   const contentItems = [
     {
       id: 1,
-      title: "Quantum Neural Superintelligence",
-      description: "Achieve 99.97% accuracy with quantum-enhanced neural networks",
+      title: "Quantum Neural Superintelligence
+      description: "Achieve 99.97% accuracy with quantum-enhanced neural networks
       metrics: { accuracy: "99.97%", value: "$2.1B", speed: "1000x" },
-      category: "Quantum AI",
+      category: "Quantum AI
       featured: true,
-      image: "🧠",
-      color: "purple",
+      image: "🧠
+      color: "purple
       link: "/blog/ai-2026-january-quantum-neural-superintelligence-breakthrough"
     },
     {
       id: 2,
-      title: "Synthetic Consciousness & Emotional AI",
-      description: "True AI consciousness with 98.4% emotional intelligence",
+      title: "Synthetic Consciousness & Emotional AI
+      description: "True AI consciousness with 98.4% emotional intelligence
       metrics: { consciousness: "99.1%", emotional: "98.4%", value: "$3.7B" },
-      category: "Consciousness AI",
+      category: "Consciousness AI
       featured: true,
-      image: "❤️",
-      color: "pink",
+      image: "❤️
+      color: "pink
       link: "/blog/ai-2026-february-synthetic-consciousness-emotional-ai-revolution"
     },
     {
       id: 3,
-      title: "Autonomous Business Intelligence",
-      description: "99.8% predictive accuracy with self-learning cognitive analytics",
+      title: "Autonomous Business Intelligence
+      description: "99.8% predictive accuracy with self-learning cognitive analytics
       metrics: { accuracy: "99.8%", value: "$4.2B", speed: "2.1s" },
-      category: "Business Intelligence",
+      category: "Business Intelligence
       featured: true,
-      image: "📊",
-      color: "emerald",
+      image: "📊
+      color: "emerald
       link: "/blog/ai-2026-march-autonomous-business-intelligence-cognitive-analytics-revolution"
     },
     {
       id: 4,
-      title: "Revolutionary Autonomous Enterprise",
-      description: "98.7% operational autonomy with $127M in proven savings",
+      title: "Revolutionary Autonomous Enterprise
+      description: "98.7% operational autonomy with $127M in proven savings
       metrics: { autonomy: "98.7%", savings: "$127M", roi: "270%" },
-      category: "Enterprise AI",
+      category: "Enterprise AI
       featured: true,
-      image: "🚀",
-      color: "blue",
+      image: "🚀
+      color: "blue
       link: "/blog/ai-2025-december-revolutionary-autonomous-enterprise-breakthrough"
     },
     {
       id: 5,
-      title: "Quantum Edge AI Revolution",
-      description: "Sub-0.5ms latency with 99.99% accuracy and $89M savings",
+      title: "Quantum Edge AI Revolution
+      description: "Sub-0.5ms latency with 99.99% accuracy and $89M savings
       metrics: { latency: "<0.5ms", accuracy: "99.99%", savings: "$89M" },
-      category: "Edge AI",
+      category: "Edge AI
       featured: true,
-      image: "⚡",
-      color: "cyan",
+      image: "⚡
+      color: "cyan
       link: "/blog/ai-2025-october-quantum-edge-ai-revolution"
     },
     {
       id: 6,
-      title: "Zero-Trust AI Security Framework",
-      description: "99.97% threat detection with <50ms response time",
+      title: "Zero-Trust AI Security Framework
+      description: "99.97% threat detection with <50ms response time
       metrics: { detection: "99.97%", response: "<50ms", prevented: "$180M" },
-      category: "AI Security",
+      category: "AI Security
       featured: true,
-      image: "🔒",
-      color: "indigo",
+      image: "🔒
+      color: "indigo
       link: "/blog/ai-2025-october-zero-trust-ai-security-framework"
     }
   ];

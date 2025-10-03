@@ -66,10 +66,10 @@ export default function October2025EdgeComputingMegaShowcase() {
             </p>
             <ul className="space-y-3 mb-6">
               {[
-                "Architecture patterns & design",
-                "Hardware selection & optimization",
-                "Security & compliance framework",
-                "Deployment & monitoring strategies",
+                "Architecture patterns & design
+                "Hardware selection & optimization
+                "Security & compliance framework
+                "Deployment & monitoring strategies
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-2 text-white">
                   <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
@@ -149,10 +149,10 @@ export default function October2025EdgeComputingMegaShowcase() {
             </p>
             <ul className="space-y-3 mb-6">
               {[
-                "Edge infrastructure assessment",
-                "Architecture & design services",
-                "Implementation & deployment",
-                "Ongoing optimization & support",
+                "Edge infrastructure assessment
+                "Architecture & design services
+                "Implementation & deployment
+                "Ongoing optimization & support
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-2 text-white">
                   <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />

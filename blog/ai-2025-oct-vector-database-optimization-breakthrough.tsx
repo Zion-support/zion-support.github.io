@@ -1,14 +1,14 @@
 import React from "react";
 
 export const metadata = {
-  title: "Vector Database Optimization: 100x Faster RAG Systems for Enterprise AI | October 2025",
-  description: "Master vector database optimization for RAG applications. Learn advanced indexing strategies, hybrid search techniques, and achieve sub-10ms query times at billion-vector scale with 70% cost reduction.",
-  date: "2025-10-01",
-  author: "Zion Tech Group",
-  category: "RAG Infrastructure",
+  title: "Vector Database Optimization: 100x Faster RAG Systems for Enterprise AI | October 2025
+  description: "Master vector database optimization for RAG applications. Learn advanced indexing strategies, hybrid search techniques, and achieve sub-10ms query times at billion-vector scale with 70% cost reduction.
+  date: "2025-10-01
+  author: "Zion Tech Group
+  category: "RAG Infrastructure
   tags: ["Vector Databases", "RAG", "Semantic Search", "AI Infrastructure", "Performance Optimization"],
   featured: true,
-  readTime: "17 min read",
+  readTime: "17 min read
 };
 
 const VectorDatabaseOptimizationBreakthrough: React.FC = () => {

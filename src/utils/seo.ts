@@ -4,111 +4,75 @@
  */
 
 export interface SEOData {
-  title: string;,,
-description: string;,
-keywords?: string[];
-canonical?: string;
-ogImage?: string;
-ogType?: string;
-twitterCard?: string;
-
+  title: string;
+  description: string;
+  keywords?: string[];
+  canonical?: string;
+  ogImage?: string;
+  ogType?: string;
+  twitterCard?: string;
 }
 
-export const generateMetaTags: (data: SEOData)  => {,,
+export const generateMetaTags = (data: SEOData) => {
   const {
     title,
-    description
-    keywords: [],,
-  canonical
-    ogImage: '/images/og-default.jpg',';,
-  ogType: 'website',';,
-  description
-    keywords: [],,
-  canonical
-    ogImage: '/images/og-default.jpg',',
-    ogType: 'website',',
-    twitterCard: 'summary_large_image',
-  }  = data;
+    description,
+    keywords = [],
+    canonical,
+    ogImage = '/images/og-default.jpg',
+    ogType = 'website',
+    twitterCard = 'summary_large_image'
+  } = data;
 
   return {
     title,
     description,
-    keywords: keywords.join(', '),',';,
+    keywords: keywords.join(', '),
     canonical,
-    'og: title': title,',';,
-    'og: description': description,',';,
-    'og: image': ogImage,',';,
-    'og: type': ogType,',';,
-    'og: url': canonical,',';,
-    'twitter: card': twitterCard,',';,
-    'twitter: title': title,',';,
-    'twitter: description': description,',';,
-    'twitter: image': ogImage',
+    'og:title': title,
+    'og:description': description,
+    'og:image': ogImage,
+    'og:type': ogType,
+    'og:url': canonical,
+    'twitter:card': twitterCard,
+    'twitter:title': title,
+    'twitter:description': description,
+    'twitter:image': ogImage,
   };
 };
 
-export const generateStructuredData: (data: {,,
-  name: string;,,
-  description: string;,
-url: string;,,
-  keywords: keywords.join(', '),',
-    canonical,
-    'og: title': title,',
-    'og: description': description,',
-    'og: image': ogImage,',
-    'og: type': ogType,',
-    'og: url': canonical,',
-    'twitter: card': twitterCard,',
-    'twitter: title': title,',
-    'twitter: description': description,',
-    'twitter: image': ogImage',
+export const generateStructuredData = (data: {
+  type: 'Organization' | 'WebSite' | 'Article' | 'Product';
+  name: string;
+  description?: string;
+  url?: string;
+  image?: string;
+  datePublished?: string;
+  dateModified?: string;
+  author?: {
+    name: string;
+    url?: string;
   };
-};
-
-export const generateStructuredData: (data: {,,
-  name: string;,,
-  description: string;,
-url: string;,,
-  logo?: string;
-sameAs?: string[];
 }) => {
-  return {
-    '@context': 'https: //schema.org',',';,
-    '@type': 'Organization','
-    '@context': 'https: //schema.org',',
-    '@type': 'Organization','
-    name: data.name,,,
-    description: data.description,,,
-    url: data.url,,,
-    logo: data.logo,,,
-    sameAs: data.sameAs,
+  const baseData = {
+    '@context': 'https://schema.org',
+    '@type': data.type,
+    name: data.name,
   };
+
+  if (data.description) baseData.description = data.description;
+  if (data.url) baseData.url = data.url;
+  if (data.image) baseData.image = data.image;
+
+  if (data.type === 'Article') {
+    if (data.datePublished) baseData.datePublished = data.datePublished;
+    if (data.dateModified) baseData.dateModified = data.dateModified;
+    if (data.author) baseData.author = data.author;
+  }
+
+  return baseData;
 };
 
-export const generateBreadcrumbStructuredData: (items: Array<{,,
-  name: string;,,
-  url: string;
-}>) => {
+export const generateSitemapEntry = (url: string, lastmod?: string, changefreq?: string, priority?: string) => {
   return {
-    '@context': 'https: //schema.org',',';,
-    '@type': 'BreadcrumbList','
-    itemListElement: items.map((item, index) => ({,,
-      '@type': 'ListItem','
-      position: index + 1,,
-      name: item.name,,
-      item: item.url,,
-export const generateBreadcrumbStructuredData: (items: Array<{,,
-  name: string;,,
-  url: string;
-}>) => {
-  return {
-    '@context': 'https: //schema.org',',
-    '@type': 'BreadcrumbList','
-    itemListElement: items.map((item, index) => ({,,
-      '@type': 'ListItem','
-      position: index + 1,,,
-      name: item.name,,,
-      item: item.url,
-    }))
-  };
 };

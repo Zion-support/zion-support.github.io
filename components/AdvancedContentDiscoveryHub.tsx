@@ -17,61 +17,61 @@ const AdvancedContentDiscoveryHub: React.FC = () => {
   const featuredContent = [
     {
       id: 1,
-      title: "Quantum AI Business Intelligence: $847B Breakthrough",
-      category: "quantum",
-      type: "blog",
-      description: "Discover how quantum-enhanced AI is revolutionizing business intelligence with 99.97% accuracy predictions.",
-      readTime: "12 min read",
+      title: "Quantum AI Business Intelligence: $847B Breakthrough
+      category: "quantum
+      type: "blog
+      description: "Discover how quantum-enhanced AI is revolutionizing business intelligence with 99.97% accuracy predictions.
+      readTime: "12 min read
       featured: true,
       url: "/blog/ai-2025-december-quantum-ai-business-intelligence-breakthrough"
     },
     {
       id: 2,
-      title: "Autonomous Enterprise Operations: $2.3T Revolution",
-      category: "autonomous",
-      type: "blog",
-      description: "Transform your business with 99.99% automation, self-healing systems, and continuous optimization.",
-      readTime: "15 min read",
+      title: "Autonomous Enterprise Operations: $2.3T Revolution
+      category: "autonomous
+      type: "blog
+      description: "Transform your business with 99.99% automation, self-healing systems, and continuous optimization.
+      readTime: "15 min read
       featured: true,
       url: "/blog/ai-2025-december-autonomous-enterprise-operations-revolution"
     },
     {
       id: 3,
-      title: "Generative AI Enterprise Transformation: 2026 Roadmap",
-      category: "generative",
-      type: "blog",
-      description: "Master enterprise generative AI implementation with comprehensive strategy and deployment guide.",
-      readTime: "18 min read",
+      title: "Generative AI Enterprise Transformation: 2026 Roadmap
+      category: "generative
+      type: "blog
+      description: "Master enterprise generative AI implementation with comprehensive strategy and deployment guide.
+      readTime: "18 min read
       featured: true,
       url: "/blog/ai-2025-december-generative-ai-enterprise-transformation-2026"
     },
     {
       id: 4,
-      title: "Global Finance: $500B Quantum AI Success",
-      category: "quantum",
-      type: "case-study",
-      description: "Fortune 50 financial services leader achieves 99.97% prediction accuracy and $500B value creation.",
-      readTime: "20 min read",
+      title: "Global Finance: $500B Quantum AI Success
+      category: "quantum
+      type: "case-study
+      description: "Fortune 50 financial services leader achieves 99.97% prediction accuracy and $500B value creation.
+      readTime: "20 min read
       featured: true,
       url: "/case-studies/ai-2025-december-global-finance-quantum-ai-transformation-500-billion-success"
     },
     {
       id: 5,
-      title: "Manufacturing: $340B Autonomous Operations",
-      category: "autonomous",
-      type: "case-study",
-      description: "Global manufacturer achieves 99.99% process automation and zero-downtime operations.",
-      readTime: "22 min read",
+      title: "Manufacturing: $340B Autonomous Operations
+      category: "autonomous
+      type: "case-study
+      description: "Global manufacturer achieves 99.99% process automation and zero-downtime operations.
+      readTime: "22 min read
       featured: true,
       url: "/case-studies/ai-2025-december-manufacturing-autonomous-operations-340-billion-success"
     },
     {
       id: 6,
-      title: "Quantum AI Business Intelligence Consulting",
-      category: "services",
-      type: "service",
-      description: "End-to-end quantum AI transformation with guaranteed 2,890% ROI and 99.97% accuracy.",
-      readTime: "Service",
+      title: "Quantum AI Business Intelligence Consulting
+      category: "services
+      type: "service
+      description: "End-to-end quantum AI transformation with guaranteed 2,890% ROI and 99.97% accuracy.
+      readTime: "Service
       featured: true,
       url: "/services/ai-2025-december-quantum-ai-business-intelligence-consulting"
     }

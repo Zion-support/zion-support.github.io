@@ -5,34 +5,34 @@ const September2025NewContentBanner = () => {
   const newContent = [
     {
       icon: Shield,
-      title: "Enterprise AI Security",
-      description: "Comprehensive guide to securing AI systems with zero-trust architecture",
-      link: "/blog/ai-2025-enterprise-security-best-practices",
-      tag: "NEW GUIDE",
+      title: "Enterprise AI Security
+      description: "Comprehensive guide to securing AI systems with zero-trust architecture
+      link: "/blog/ai-2025-enterprise-security-best-practices
+      tag: "NEW GUIDE
       color: "from-blue-600 to-cyan-600"
     },
     {
       icon: Brain,
-      title: "Prompt Engineering Mastery",
-      description: "Advanced techniques to maximize LLM performance in production",
-      link: "/blog/ai-2025-prompt-engineering-enterprise-guide",
-      tag: "HOT",
+      title: "Prompt Engineering Mastery
+      description: "Advanced techniques to maximize LLM performance in production
+      link: "/blog/ai-2025-prompt-engineering-enterprise-guide
+      tag: "HOT
       color: "from-purple-600 to-pink-600"
     },
     {
       icon: Activity,
-      title: "Healthcare AI Success",
-      description: "95% diagnostic accuracy & $180M savings case study",
-      link: "/case-studies/healthcare-ai-diagnostic-transformation-2025",
-      tag: "CASE STUDY",
+      title: "Healthcare AI Success
+      description: "95% diagnostic accuracy & $180M savings case study
+      link: "/case-studies/healthcare-ai-diagnostic-transformation-2025
+      tag: "CASE STUDY
       color: "from-green-600 to-emerald-600"
     },
     {
       icon: TrendingUp,
-      title: "MLOps Best Practices",
-      description: "Production-ready AI deployment with proven MLOps strategies",
-      link: "/blog/ai-2025-mlops-production-best-practices",
-      tag: "FEATURED",
+      title: "MLOps Best Practices
+      description: "Production-ready AI deployment with proven MLOps strategies
+      link: "/blog/ai-2025-mlops-production-best-practices
+      tag: "FEATURED
       color: "from-orange-600 to-red-600"
     }
   ];

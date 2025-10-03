@@ -136,10 +136,10 @@ export default function IntelligentDataFabricRevolution2025() {
                     <code>
                       {`// Intelligent data placement decision
 const placement = await orchestrator.optimizeDataPlacement({
-  dataAsset: "customer-analytics-q4-2025",
+  dataAsset: "customer-analytics-q4-2025
   accessPattern: { reads: 500000, writes: 50000 },
-  latencyReq: "< 50ms",
-  costConstraint: "minimize",
+  latencyReq: "< 50ms
+  costConstraint: "minimize
   compliance: ["GDPR", "CCPA"]
 });
 // Returns: Multi-region replication strategy with edge caching`}

@@ -1,41 +1,47 @@
-// @ts-nocheck
+import React from 'react';
+import { Helmet } from 'react-helmet';
+import { Link } from 'react-router-dom';
 
-export default function Page(): void {
+export default function Page() {
   return (
-    <main className: "min-h-screen bg-white text-gray-900">";,
-      <section className: "container mx-auto px-6 py-16">";,
-        <div className: "max-w-3xl">";,
-          <h1 className: "text-3xl md: text-4xl font-bold mb-4">",
-    <main className: "min-h-screen bg-white text-gray-900">",
-      <section className: "container mx-auto px-6 py-16">",
-        <div className: "max-w-3xl">",
-          <h1 className: "text-3xl md: text-4xl font-bold mb-4">",";,
-  Private Insights Blueprint — Zero‑PII Analytics at &lt;100ms
-          </h1>
-          <p className: "text-gray-600 mb-6">",";,
-  Build privacy‑preserving analytics with scoped IDs, on‑device aggregation, and differential privacy noise. This blueprint
-            outlines production patterns that deliver trustworthy insights without collecting personal data.
-          </p>
-          <div className: "prose prose-indigo">",
-            <h2 >Key Patterns</h2>
-            <ul >
-              <li >Scoped identifiers with short TTL cohorts</li>
-              <li >On‑device event aggregation and sketching</li>
-              <li >Signed configs and verifiable attestations</li>
-              <li >Differential privacy noise for safe sharing</li>
+    <div className="min-h-screen bg-gray-900 text-white">
+      <Helmet>
+        <title>Blog Post</title>
+        <meta name="description" content="Blog post content" />
+        <link rel="canonical" href="https://ziontechgroup.com/blog" />
+      </Helmet>
+      
+      <div className="container mx-auto px-6 py-12">
+        <article className="max-w-4xl mx-auto">
+          <header className="mb-8">
+            <h1 className="text-4xl font-bold text-center mb-4">Blog Post</h1>
+            <p className="text-xl text-gray-300 text-center">Blog post content</p>
+          </header>
+          
+          <div className="prose prose-lg max-w-none text-gray-300">
+            
+            
+            
+            <ul className="list-disc list-inside space-y-2 my-6">
+              <li>Scoped identifiers with short TTL cohorts</li>
+              <li>On-device event aggregation and sketching</li>
+              <li>Signed configs and verifiable attestations</li>
+              <li>Differential privacy noise for safe sharing</li>
+              <li>Instrument events locally with DP wrappers</li>
+              <li>Enable edge aggregation and tiered caches</li>
+              <li>Validate with signed canary experiments</li>
+              <li>Scale globally with predictable cost</li>
             </ul>
-            <h2 >Rollout Plan</h2>
-            <ol >
-              <li >Instrument events locally with DP wrappers</li>
-              <li >Enable edge aggregation and tiered caches</li>
-              <li >Validate with signed canary experiments</li>
-              <li >Scale globally with predictable cost</li>
-            </ol>
+            
+            
+            <div className="mt-8 pt-8 border-t border-gray-700">
+              <Link to="/blog" className="text-cyan-300 underline hover:text-cyan-200 transition-colors">
+                ← Back to Blog
+              </Link>
+            </div>
           </div>
-        </div>
-      </section>
-    </main>
+        </article>
+      </div>
+    </div>
   );
 }
-
-;

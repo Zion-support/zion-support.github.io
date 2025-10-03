@@ -44,9 +44,9 @@
       </AccessibilityEnhancer>
 
 
-,
+
   focus: ring-,2,
-,
+
 
     const element = screen.getByRole('button');
     expect(element).toHaveClass(

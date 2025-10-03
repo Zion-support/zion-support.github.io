@@ -2,34 +2,34 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Reliable GenAI Platform 2026: Architecture, Guardrails, and ROI',
+  title= 'Reliable GenAI Platform 2026: Architecture, Guardrails, and ROI',
   description:
     'Design a reliable, cost‑efficient GenAI platform with routing, memory, evals, and policy guardrails. A pragmatic 2026 blueprint for enterprises.',
 };
 
 export default function ReliableGenAIPlatform2026Page() {
   return (
-    <div className="min-h-screen bg-slate-950 text-white">
-      <main className="max-w-3xl mx-auto px-6 py-16">
-        <div className="mb-8">
-          <Link href="/blog" className="text-blue-400 hover:text-blue-300">← Back to Blog</Link>
+    <div className="min-h-screen bg-slate-950 text-white">"
+      <main className="max-w-3xl mx-auto px-6 py-16">"
+        <div className="mb-8">"
+          <Link href="/blog" className="text-blue-400 hover:text-blue-300">← Back to Blog</Link>"
         </div>
-        <header className="mb-6">
-          <div className="flex items-center gap-3 text-sm text-white/60 mb-3">
-            <span className="px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">Implementation Guide</span>
+        <header className="mb-6">"
+          <div className="flex items-center gap-3 text-sm text-white/60 mb-3">"
+            <span className="px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">Implementation Guide</span>"
             <span>January 2026</span>
             <span>18 min read</span>
           </div>
-          <h1 className="text-4xl font-extrabold leading-tight">
+          <h1 className="text-4xl font-extrabold leading-tight">"
             Reliable GenAI Platform 2026: Architecture, Guardrails, and ROI
           </h1>
-          <p className="text-white/70 mt-3">
+          <p className="text-white/70 mt-3">"
             A pragmatic blueprint to ship a reliable, governed, and cost‑efficient GenAI platform
             with policy guardrails, evaluations, and cost‑aware routing.
           </p>
         </header>
 
-        <article className="prose prose-invert prose-slate max-w-none">
+        <article className="prose prose-invert prose-slate max-w-none">"
           <h2>Why Reliability First</h2>
           <p>
             Production GenAI requires deterministic behavior under constraints. Reliability comes from
@@ -73,13 +73,13 @@ export default function ReliableGenAIPlatform2026Page() {
           </ul>
         </article>
 
-        <footer className="mt-12 pt-6 border-t border-white/10 text-white/70">
+        <footer className="mt-12 pt-6 border-t border-white/10 text-white/70">"
           <p>
             Continue exploring:
             {' '}
-            <Link href="/blog/ai-2027-cost-optimization-playbook" className="text-emerald-400 hover:text-emerald-300">Cost Optimization Playbook</Link>
+            <Link href="/blog/ai-2027-cost-optimization-playbook" className="text-emerald-400 hover:text-emerald-300">Cost Optimization Playbook</Link>"
             {' '}•{' '}
-            <Link href="/blog/agentic-workflow-orchestration-2026" className="text-fuchsia-300 hover:text-fuchsia-200">Agentic Workflow Orchestration</Link>
+            <Link href="/blog/agentic-workflow-orchestration-2026" className="text-fuchsia-300 hover:text-fuchsia-200">Agentic Workflow Orchestration</Link>"
           </p>
         </footer>
       </main>

@@ -42,4 +42,17 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   );
 };
 
-export default LoadingSpinner;
+export const PageLoader: React.FC = () => {
+  return (
+    <div className="flex items-center justify-center min-h-screen bg-slate-950">
+      <div className="text-center">
+        <LoadingSpinner size="lg" />
+        <p className="mt-4 text-gray-400">Loading...</p>
+      </div>
+    </div>
+  );
+};
+
+PageLoader.displayName = 'PageLoader';
+
+export default PageLoader;

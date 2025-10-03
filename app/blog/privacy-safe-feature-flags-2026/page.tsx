@@ -2,23 +2,23 @@
 import React from 'react';
 
 export const metadata = {
-  title: 'Privacy‑Safe Feature Flags 2026 | Zion Tech Group',
+  title= 'Privacy‑Safe Feature Flags 2026 | Zion Tech Group',
   description: 'Consent‑aware, identity‑scoped, and DP‑hardened flags for compliant experimentation and rollout.',
 };
 
 export default function PrivacySafeFeatureFlags2026() {
   return (
-    <main className="min-h-screen bg-slate-950 text-white">
-      <section className="py-16 bg-gradient-to-r from-blue-800 via-indigo-800 to-purple-800 border-b border-white/10">
-        <div className="max-w-4xl mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-extrabold mb-4">Privacy‑Safe Feature Flags 2026</h1>
-          <p className="text-gray-200 text-lg">Scoped IDs, on‑device aggregation, and differential privacy for safe flags and A/B tests.</p>
-          <div className="mt-4 text-sm text-gray-300">12 min • Oct 2025</div>
+    <main className="min-h-screen bg-slate-950 text-white">"
+      <section className="py-16 bg-gradient-to-r from-blue-800 via-indigo-800 to-purple-800 border-b border-white/10">"
+        <div className="max-w-4xl mx-auto px-4">"
+          <h1 className="text-4xl md:text-5xl font-extrabold mb-4">Privacy‑Safe Feature Flags 2026</h1>"
+          <p className="text-gray-200 text-lg">Scoped IDs, on‑device aggregation, and differential privacy for safe flags and A/B tests.</p>"
+          <div className="mt-4 text-sm text-gray-300">12 min • Oct 2025</div>"
         </div>
       </section>
 
-      <section className="py-12">
-        <div className="max-w-4xl mx-auto px-4 prose prose-invert">
+      <section className="py-12">"
+        <div className="max-w-4xl mx-auto px-4 prose prose-invert">"
           <h2>Why Privacy‑Safe Flags</h2>
           <p>
             Enterprises need experimentation and progressive delivery without collecting PII. This guide shows how to

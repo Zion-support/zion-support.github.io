@@ -2,23 +2,23 @@
 import React from 'react';
 
 export const metadata = {
-  title: 'AI Agent Reliability Playbook 2026 | Zion Tech Group',
+  title= 'AI Agent Reliability Playbook 2026 | Zion Tech Group',
   description: 'A practical guide to ship reliable agentic systems with budgets, guardrails, canaries, and instant rollback.',
 };
 
 export default function AIAgentReliabilityPlaybook2026() {
   return (
-    <main className="min-h-screen bg-slate-950 text-white">
-      <section className="py-16 bg-gradient-to-r from-emerald-800 via-teal-800 to-cyan-800 border-b border-white/10">
-        <div className="max-w-4xl mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-extrabold mb-4">AI Agent Reliability Playbook 2026</h1>
-          <p className="text-gray-200 text-lg">Budgets, policy gates, eval canaries, and rollback patterns for dependable autonomous systems.</p>
-          <div className="mt-4 text-sm text-gray-300">18 min • Oct 2025</div>
+    <main className="min-h-screen bg-slate-950 text-white">"
+      <section className="py-16 bg-gradient-to-r from-emerald-800 via-teal-800 to-cyan-800 border-b border-white/10">"
+        <div className="max-w-4xl mx-auto px-4">"
+          <h1 className="text-4xl md:text-5xl font-extrabold mb-4">AI Agent Reliability Playbook 2026</h1>"
+          <p className="text-gray-200 text-lg">Budgets, policy gates, eval canaries, and rollback patterns for dependable autonomous systems.</p>"
+          <div className="mt-4 text-sm text-gray-300">18 min • Oct 2025</div>"
         </div>
       </section>
 
-      <section className="py-12">
-        <div className="max-w-4xl mx-auto px-4 prose prose-invert">
+      <section className="py-12">"
+        <div className="max-w-4xl mx-auto px-4 prose prose-invert">"
           <h2>Overview</h2>
           <p>
             This playbook outlines architecture and operating practices to achieve high reliability in agentic

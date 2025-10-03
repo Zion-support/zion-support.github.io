@@ -1,13 +1,13 @@
 export const metadata = {
-  title: 'AI Operational Trust 2026 Q4: SLIs, Budgets, Rollback',
+  title= 'AI Operational Trust 2026 Q4: SLIs, Budgets, Rollback',
   description: 'Outcome‑linked SLIs, budgeted actions, and one‑click rollback for safe autonomy in enterprise AI operations.',
 };
 
 export default function Page() {
   return (
-    <article className="prose prose-invert max-w-3xl mx-auto py-10">
+    <article className="prose prose-invert max-w-3xl mx-auto py-10">"
       <h1>AI Operational Trust 2026 Q4: SLIs, Budgets, Rollback</h1>
-      <p className="text-sm opacity-70">Published: 2025-09-30 • Category: AI Operations • 7 min read</p>
+      <p className="text-sm opacity-70">Published: 2025-09-30 • Category: AI Operations • 7 min read</p>"
 
       <p>
         Establishing operational trust in autonomous and agentic systems requires measurable service level
@@ -33,7 +33,7 @@ export default function Page() {
         evaluations and live scorecards so teams can iterate weekly without regressions.
       </p>
 
-      <p className="mt-8">
+      <p className="mt-8">"
         Continue reading in our Content Hub or explore related articles on governance, observability, and cost
         optimization.
       </p>

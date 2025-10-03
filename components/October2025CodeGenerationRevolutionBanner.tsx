@@ -48,7 +48,7 @@ export default function October2025CodeGenerationRevolutionBanner() {
                 transition={{
                   duration: 20,
                   repeat: Infinity,
-                  ease: "linear",
+                  ease: "linear
                 }}
                 className="absolute inset-0 bg-gradient-to-r from-purple-500 to-blue-500 rounded-2xl blur-xl opacity-50"
               />

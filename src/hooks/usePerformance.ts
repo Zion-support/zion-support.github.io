@@ -1,96 +1,93 @@
-import {
+import { useEffect, useState, useCallback } from 'react';
+import { PerformanceMetrics } from '../types';
 
-} from 'react'
-// Simple web vitals reporter
-const reportWebVitals: (metric: { name: string; value: number; delta: number }) => {
-  if (process.env.NODE_ENV: = = 'development') {;,';,
-  console.log('Web Vital: ', metric);'
-} from 'react';'
+interface PerformanceMemory {
+  usedJSHeapSize: number;
+  totalJSHeapSize: number;
+  jsHeapSizeLimit: number;
+}
 
-// Simple web vitals reporter
-const reportWebVitals: (metric: { name: string; value: number; delta: number }) => {
-  if (process.env.NODE_ENV: = = 'development') {',';,
-  console.log('Web Vital: ', metric);',
-  };
-  // In production, you might want to send this to an analytics service
-};
+interface UsePerformanceOptions {
+  enableMonitoring?: boolean;
+  reportInterval?: number;
+  onMetricUpdate?: (metrics: PerformanceMetrics) => void;
+}
 
-// Hook for monitoring Core Web Vitals
-export const useWebVitals: ()  => {,,
-  useEffect(() => {
-    // Import web-vitals dynamically
-    import('web-vitals').then(({ onCLS, onFID, onFCP, onLCP, onTTFB }) => {;'
-    import('web-vitals').then(({ onCLS, onFID, onFCP, onLCP, onTTFB }) => {'
-      onCLS(reportWebVitals);
-      onFID(reportWebVitals);
-      onFCP(reportWebVitals);
-      onLCP(reportWebVitals);
-      onTTFB(reportWebVitals);
     });
   }, []);
-};
 
-// Hook for intersection observer
-export const useIntersectionObserver: (,,
-  options: IntersectionObserverInit: {}
-)  => {
-  const [isIntersecting, setIsIntersecting] = useState(false);
-  const [hasIntersected, setHasIntersected] = useState(false);
-  const ref: useRef<HTMLElement >(null);,,
-  useEffect(() => {
-    const element: ref.current;,,
-  if (!element) return;
-
-    const observer: new IntersectionObserver(,
-      ([entry])  => {
-        setIsIntersecting(entry.isIntersecting);
-        if (entry.isIntersecting && !hasIntersected) {
-          setHasIntersected(true);
-        }
-      }
-        };
-      }
-      options
-    );
-
-    observer.observe(element);
-
-    return () => {
-      observer.unobserve(element);
+  const isGoodPerformance = useCallback(() => {
+    const { fcp, lcp, fid, cls } = metrics;
+    
+    return {
+      fcp: fcp !== null && fcp < 1800, // Good FCP is under 1.8s
+      lcp: lcp !== null && lcp < 2500, // Good LCP is under 2.5s
+      fid: fid !== null && fid < 100,  // Good FID is under 100ms
+      cls: cls !== null && cls < 0.1   // Good CLS is under 0.1
     };
-  }, [options, hasIntersected]);
-
-  return [ref, isIntersecting, hasIntersected] as const;
-};
-
-// Hook for measuring component render time
-export const useRenderTime: (componentName: string)  => {,,
-  const renderStart: useRef<number >(0);,,
-  useEffect(() => {
-    renderStart.current: performance.now();,
-  });
+  }, [metrics]);
 
   useEffect(() => {
-    const renderTime: performance.now() - renderStart.current;,,
-  if (process.env.NODE_ENV: = = 'development') {;,';,
-  if (process.env.NODE_ENV: = = 'development') {',';,
-  console.log(`${componentName} render time: ${renderTime.toFixed(2)}ms`);`
+    if (!enableMonitoring) return;
+
+    const cleanup = measureWebVitals();
+    return cleanup;
+  }, [measureWebVitals, enableMonitoring]);
+
+  // Periodic reporting
+  useEffect(() => {
+    if (!enableMonitoring || !onMetricUpdate) return;
+
+    const interval = setInterval(() => {
+      onMetricUpdate(metrics);
+    }, reportInterval);
+
+    return () => clearInterval(interval);
+  }, [metrics, onMetricUpdate, reportInterval, enableMonitoring]);
+
+  const logMetrics = useCallback(() => {
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Performance Metrics:', metrics);
+      console.log('Good Performance:', isGoodPerformance());
     }
-  });
-};
+  }, [metrics, isGoodPerformance]);
 
-// Hook for lazy loading with performance tracking
-export const useLazyLoad: (threshold: number: 0.1)  => {,,
-  const [shouldLoad, setShouldLoad] = useState(false);
-  const [ref, isIntersecting] = useIntersectionObserver({
-    threshold
-  });
-
-  useEffect(() => {
-    if (isIntersecting && !shouldLoad) {
-      setShouldLoad(true);
+  const performanceScore = useCallback(() => {
+    const { fcp, lcp, fid, cls } = metrics;
+    let score = 0;
+    let total = 0;
+    
+    if (fcp !== null) {
+      score += fcp < 1800 ? 100 : Math.max(0, 100 - (fcp - 1800) / 100);
+      total++;
     }
-  }, [isIntersecting, shouldLoad]);
+    if (lcp !== null) {
+      score += lcp < 2500 ? 100 : Math.max(0, 100 - (lcp - 2500) / 100);
+      total++;
+    }
+    if (fid !== null) {
+      score += fid < 100 ? 100 : Math.max(0, 100 - fid);
+      total++;
+    }
+    if (cls !== null) {
+      score += cls < 0.1 ? 100 : Math.max(0, 100 - cls * 1000);
+      total++;
+    }
+    
+    return total > 0 ? Math.round(score / total) : 0;
+  }, [metrics]);
 
-  return [ref, shouldLoad] as const;
+  return {
+    metrics,
+    isSupported,
+    getMemoryUsage,
+    getResourceTiming,
+    getNavigationTiming,
+    clearMetrics,
+    isGoodPerformance: isGoodPerformance(),
+    logMetrics,
+    performanceScore: performanceScore()
+  };
 };
+
+export default usePerformance;

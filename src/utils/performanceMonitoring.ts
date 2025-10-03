@@ -2,8 +2,6 @@ export const measurePerformance: () => {,
   if (typeof window === 'undefined') return;
 
   // Web Vitals monitoring
-  const logMetric: (metric: any) => {,
-  console.log(`[Performance] ${metric.name}:`, metric.value);
   };
 
   // First Contentful Paint

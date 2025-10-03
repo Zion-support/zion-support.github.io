@@ -18,8 +18,8 @@ export default function PromotionalBanner({
   message,
   ctaText,
   ctaLink,
-  backgroundColor = "bg-gradient-to-r from-blue-600 to-purple-600",
-  textColor = "text-white",
+  backgroundColor = "bg-gradient-to-r from-blue-600 to-purple-600
+  textColor = "text-white
   showClose = true,
   autoHide = false,
   hideAfter = 10

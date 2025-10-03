@@ -153,7 +153,7 @@ class SemanticCache {
   private async getEmbedding(text: string): Promise<number[]> {
     // Use cheaper embedding model for cache lookup
     const response = await openai.embeddings.create({
-      model: "text-embedding-3-small",
+      model: "text-embedding-3-small
       input: text,
     });
     return response.data[0].embedding;
