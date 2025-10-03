@@ -65,7 +65,7 @@ export class PerformanceMonitor {
   private initializeMonitoring(): void {
     if (!this.config.enableMonitoring || typeof window === 'undefined') {
       return;
-    };
+    }
 
     // Monitor page load performance
     window.addEventListener('load', () => {
@@ -80,7 +80,7 @@ export class PerformanceMonitor {
 
     // Monitor resource loading
     this.observeResources();
-  };
+  }
 
   private measurePageLoad(): void {
     const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
@@ -122,13 +122,14 @@ export class PerformanceMonitor {
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         entries.forEach(entry => {
-          this.metrics.firstInputDelay = entry.processingStart - entry.startTime;
+          const fidEntry = entry as any;
+          this.metrics.firstInputDelay = fidEntry.processingStart - fidEntry.startTime;
         });
-      ');
+      });
       observer.observe({ entryTypes: ['first-input'] });
       this.observers.push(observer);
     }
-  '
+  }
 
   private observeCLS(): void {
     if ('PerformanceObserver' in window) {
@@ -141,11 +142,11 @@ export class PerformanceMonitor {
           }
         });
         this.metrics.cumulativeLayoutShift = clsValue;
-      ');
+      });
       observer.observe({ entryTypes: ['layout-shift'] });
       this.observers.push(observer);
     }
-  '
+  }
 
   private observeFCP(): void {
     if ('PerformanceObserver' in window) {
@@ -155,11 +156,11 @@ export class PerformanceMonitor {
         if (fcpEntry) {
           this.metrics.firstContentfulPaint = fcpEntry.startTime;
         }
-      ');
+      });
       observer.observe({ entryTypes: ['paint'] });
       this.observers.push(observer);
     }
-  '
+  }
 
   private observeResources(): void {
     if ('PerformanceObserver' in window) {
@@ -175,7 +176,7 @@ export class PerformanceMonitor {
             });
           }
         });
-      ');
+      });
       observer.observe({ entryTypes: ['resource'] });
       this.observers.push(observer);
     }
@@ -193,7 +194,7 @@ export class PerformanceMonitor {
       userAgent: navigator.userAgent,
       thresholds: this.config.thresholds,
       violations: this.checkThresholds()
-    ';
+    };
 
     // In development, log to console
     if (import.meta.env.DEV) {
@@ -215,27 +216,27 @@ export class PerformanceMonitor {
     const thresholds = this.config.thresholds;
 
     if (metrics.loadTime && metrics.loadTime > thresholds.loadTime) {
-      violations.push(`Load time ${metrics.loadTime}ms exceeds threshold ${thresholds.loadTime`ms`);
-    `
+      violations.push(`Load time ${metrics.loadTime}ms exceeds threshold ${thresholds.loadTime}ms`);
+    }
 
     if (metrics.firstContentfulPaint && metrics.firstContentfulPaint > thresholds.firstContentfulPaint) {
-      violations.push(`FCP ${metrics.firstContentfulPaint}ms exceeds threshold ${thresholds.firstContentfulPaint`ms`);
-    `
+      violations.push(`FCP ${metrics.firstContentfulPaint}ms exceeds threshold ${thresholds.firstContentfulPaint}ms`);
+    }
 
     if (metrics.largestContentfulPaint && metrics.largestContentfulPaint > thresholds.largestContentfulPaint) {
-      violations.push(`LCP ${metrics.largestContentfulPaint}ms exceeds threshold ${thresholds.largestContentfulPaint`ms`);
-    `
+      violations.push(`LCP ${metrics.largestContentfulPaint}ms exceeds threshold ${thresholds.largestContentfulPaint}ms`);
+    }
 
     if (metrics.firstInputDelay && metrics.firstInputDelay > thresholds.firstInputDelay) {
-      violations.push(`FID ${metrics.firstInputDelay}ms exceeds threshold ${thresholds.firstInputDelay`ms`);
-    `
+      violations.push(`FID ${metrics.firstInputDelay}ms exceeds threshold ${thresholds.firstInputDelay}ms`);
+    }
 
     if (metrics.cumulativeLayoutShift && metrics.cumulativeLayoutShift > thresholds.cumulativeLayoutShift) {
-      violations.push(`CLS ${metrics.cumulativeLayoutShift} exceeds threshold ${thresholds.cumulativeLayoutShift``);
+      violations.push(`CLS ${metrics.cumulativeLayoutShift} exceeds threshold ${thresholds.cumulativeLayoutShift}`);
     }
 
     return violations;
-  };
+  }
 
   private async sendToAnalytics(report: any): Promise<void> {
     try {
@@ -246,10 +247,10 @@ export class PerformanceMonitor {
         },
         body: JSON.stringify(report)
       });
-    ' catch (error) {
+    } catch (error) {
       console.error('Failed to send performance metrics:', error);
     }
-  '
+  }
 
   private storeLocally(report: any): void {
     try {
@@ -257,7 +258,7 @@ export class PerformanceMonitor {
       existingReports.unshift(report);
       existingReports.splice(50); // Keep only last 50 reports
       localStorage.setItem('performance-reports', JSON.stringify(existingReports));
-    ' catch (error) {
+    } catch (error) {
       console.error('Failed to store performance metrics locally:', error);
     }
   }
@@ -301,32 +302,23 @@ export class PerformanceMonitor {
  * Image optimization utilities
  */
 export class ImageOptimizer {
-  static async optimizeImage(
-    src: string,
-    options: {
-      width?: number;
-      height?: number;
-      quality?: number;
-      format?: 'webp' | 'avif' | 'jpeg' | 'png';
-    } = {};
-  ): Promise<string> {
-    const { width, height, quality = 80, format = 'webp' ' = options;
+  static async optimizeImage(src: string): Promise<string> {
 
     // For now, return the original src
     // In a real implementation, this would use a service like Cloudinary or ImageKit
     return src;
-  `
+  }
 
   static createResponsiveImage(src: string, alt: string, sizes: string[]): string {
     const baseSrc = src.replace(/\.[^/.]+$/, '');
     const extension = src.split('.').pop();
 
     const srcset = sizes
-      .map(size => `${baseSrc}-${size}w.${extension' ${size`w`)
+      .map(size => `${baseSrc}-${size}w.${extension} ${size}w`)
       .join(', ');
 
-    return `<img src="${src"" srcset="${srcset`" alt="${alt"" loading="lazy/>`;
-  '
+    return `<img src="${src}" srcset="${srcset}" alt="${alt}" loading="lazy" />`;
+  }
 
   static preloadCriticalImages(imageUrls: string[]): void {
     imageUrls.forEach(url => {
@@ -336,8 +328,8 @@ export class ImageOptimizer {
       link.href = url;
       document.head.appendChild(link);
     });
-  '
-`
+  }
+}
 
 /**
  * Bundle analysis utilities
@@ -349,22 +341,22 @@ export class BundleAnalyzer {
       
       // Analyze loaded scripts
       const scripts = document.querySelectorAll('script[src]');
-      console.log(`Scripts loaded: ${scripts.length``);
+      console.log(`Scripts loaded: ${scripts.length}`);
       
       // Analyze loaded stylesheets
       const styles = document.querySelectorAll('link[rel="stylesheet"]');
-      console.log(`Stylesheets loaded: ${styles.length``);
+      console.log(`Stylesheets loaded: ${styles.length}`);
       
       // Analyze resource timing
       const resources = performance.getEntriesByType('resource');
       const totalSize = resources.reduce((sum, resource) => {
         return sum + ((resource as any).transferSize || 0);
-      `, 0);
+      }, 0);
       
-      console.log(`Total resource size: ${(totalSize / 1024 / 1024).toFixed(2)` MB`);
-      console.log(`Total resources: ${resources.length``);
+      console.log(`Total resource size: ${(totalSize / 1024 / 1024).toFixed(2)} MB`);
+      console.log(`Total resources: ${resources.length}`);
     }
-  '
+  }
 
   static getLargestResources(limit: number = 10): any[] {
     const resources = performance.getEntriesByType('resource');
@@ -392,4 +384,4 @@ export default {
   ImageOptimizer,
   BundleAnalyzer,
   initializePerformanceMonitoring
-`;
+};
