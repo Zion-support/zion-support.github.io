@@ -9,9 +9,9 @@ export const asyncErrorHandler = (asyncFn: (...args: any[]) => Promise<any>) => 
       console.error('Async operation failed:', error);
       
       // Log to error tracking service
-      if (window.gtag) {
-        window.gtag('event', 'exception', {
-          description: error.toString(),
+      if ((window as any).gtag) {
+        (window as any).gtag('event', 'exception', {
+          description: (error as Error).toString(),
           fatal: false
         });
       }
@@ -33,7 +33,7 @@ export const withErrorHandling = (Component: React.ComponentType<any>) => {
     if (error) {
       return (
         <div className="error-state">
-          <p>Something went wrong: {error.message}</p>
+          <p>Something went wrong: {(error as Error).message}</p>
           <button onClick={() => setError(null)}>Try Again</button>
         </div>
       );

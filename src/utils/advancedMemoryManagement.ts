@@ -4,18 +4,18 @@ export const memoryManager = {
   createWeakCache: () => {
     const cache = new WeakMap();
     return {
-      get: (key) => cache.get(key),
-      set: (key, value) => cache.set(key, value),
-      has: (key) => cache.has(key)
+      get: (key: any) => cache.get(key),
+      set: (key: any, value: any) => cache.set(key, value),
+      has: (key: any) => cache.has(key)
     };
   },
   
   // Cleanup function registry
   createCleanupRegistry: () => {
-    const cleanupFunctions = new Set();
+    const cleanupFunctions = new Set<() => void>();
     
     return {
-      register: (fn) => cleanupFunctions.add(fn),
+      register: (fn: () => void) => cleanupFunctions.add(fn),
       cleanup: () => {
         cleanupFunctions.forEach(fn => {
           try { fn(); } catch (e) { console.error('Cleanup error:', e); }
@@ -26,9 +26,9 @@ export const memoryManager = {
   },
   
   // Debounced function with memory cleanup
-  createDebouncedFunction: (fn, delay) => {
-    let timeoutId;
-    return (...args) => {
+  createDebouncedFunction: (fn: (...args: any[]) => void, delay: number) => {
+    let timeoutId: NodeJS.Timeout;
+    return (...args: any[]) => {
       clearTimeout(timeoutId);
       timeoutId = setTimeout(() => fn(...args), delay);
     };

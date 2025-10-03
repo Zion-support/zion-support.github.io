@@ -246,9 +246,9 @@ export const coreWebVitals = {
     };
 
     // Import and track web vitals
-    import('web-vitals').then(({ onCLS, onFID, onFCP, onLCP, onTTFB }) => {
+    import('web-vitals').then(({ onCLS, onFCP, onLCP, onTTFB }) => {
       onCLS(trackMetric);
-      onFID(trackMetric);
+      // onFID(trackMetric); // onFID is deprecated in newer web-vitals versions
       onFCP(trackMetric);
       onLCP(trackMetric);
       onTTFB(trackMetric);
