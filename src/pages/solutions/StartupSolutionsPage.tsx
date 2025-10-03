@@ -5,9 +5,9 @@ import { Helmet } from 'react-helmet-async';
 const StartupSolutionsPage: React.FC = () => {
   const startupSolutions = [
     {
-      title: "MVP Development"
-      description: "Rapid development of minimum viable products to validate your ideas and get to market quickly."
-      icon: "🚀"
+      title: "MVP Development",
+      description: "Rapid development of minimum viable products to validate your ideas and get to market quickly.",
+      icon: "🚀",
       features: ["Rapid Prototyping", "Agile Development", "User Testing", "Iterative Improvement"],
     },
     {
