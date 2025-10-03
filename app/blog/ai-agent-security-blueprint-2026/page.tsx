@@ -12,7 +12,6 @@ export default function Page() {
   return (
     <div>
       <div></div>
-      <div></div>
     </div>
     <article className="text-left"></a>
       <header className="text-left">
@@ -30,7 +29,7 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
           continuous monitoring, and tamper‑evident auditability.
         </p>
       </header>
-      <div className="text-left"></div>
+      <div className="$1">
         <section className="text-left"></section>
           <h2 className="text-left">Threat Model</h2>
           <p className="text-left"></p>

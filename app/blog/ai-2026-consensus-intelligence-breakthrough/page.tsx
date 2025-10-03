@@ -20,11 +20,10 @@ export default function ConsensusIntelligencePage() {
   return (
     <div>
       <div></div>
-      <div></div>
     </div>
-    <div className="text-left"></div>
+    <div className="$1">
         {/* Header */}</div>
-        <div className="text-left"></div>
+        <div className="$1">
             <span className="text-left"></span>
               🚀 AI 2026 Breakthrough
             </span>
@@ -33,11 +32,11 @@ export default function ConsensusIntelligencePage() {
             Consensus Intelligence Breakthrough
           </h1>
           <p className="text-left"></p>
-    <div className="text-left"></div>
-      <div className="text-left"></div>
+    <div className="$1">
+      <div className="$1">
         {/* Header */}</div>
-        <div className="text-left"></div>
-          <div className="text-left"></div>
+        <div className="$1">
+          <div className="$1">
             <span className="text-left"></span>
               🚀 AI 2026 Breakthrough
             </span>
@@ -58,7 +57,7 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
           </div>
 
         {/* Key Metrics */}
-        <div className="text-left"></div>
+        <div className="$1">
             <div className="text-left">99.9%</div>
             <div className="text-left">Consensus Accuracy</div>
           </div>
@@ -79,7 +78,7 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
             The Consensus Intelligence Breakthrough represents a paradigm shift in artificial intelligence, enabling multiple AI agents to collaborate and reach unanimous decisions through advanced quantum-accelerated consensus protocols.
           </p>
           <h3 className="text-left">How It Works</h3>
-          <div className="text-left"></div>
+          <div className="$1">
               <h4 className="text-left">Multi-Agent Collaboration</h4>
               <p className="text-left"></p>
         <article className="text-left"></article>
@@ -89,8 +88,8 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
           </p>
 
           <h3 className="text-left">How It Works</h3>"
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="$1">
+            <div className="$1">
               <h4 className="text-left">Multi-Agent Collaboration</h4>"
               <p className="text-left"></p>
 origin/cursor/fix-errors-and-merge-to-main-cc0a
@@ -105,7 +104,7 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
             </div>
             <h3 className="text-left">Quantum Acceleration</h4>
               <p className="text-left"></p>
-            <div className="text-left"></div>
+            <div className="$1">
               <h4 className="text-left">Quantum Acceleration</h4>"
               <p className="text-left"></p>
 origin/cursor/fix-errors-and-merge-to-main-cc0a
@@ -126,7 +125,7 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
             Fortune 500 companies have already achieved unprecedented results with our Consensus Intelligence system, generating over $5.2 billion in measurable value.
           </p>
           <h3 className="text-left">Real-World Success Metrics</h4>
-            <div className="text-left"></div>
+            <div className="$1">
                 <div className="text-left">$5.2B</div>
                 <div className="text-left">Total Value Generated</div>
               </div>
@@ -135,8 +134,6 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
               </div>
               <div className="text-left">0.3s</div>
                 <div className="text-left">Consensus Time</div>
-              </div>
-          </div>
 
           <h3 className="text-left">Getting Started</h3>
           <p className="text-left"></p>
@@ -149,13 +146,13 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
             Ready to transform your enterprise with Consensus Intelligence? Our team of experts is standing by to help you implement this revolutionary technology and achieve unprecedented business results.
           </p>
 
-          <div className="text-left"></div>
+          <div className="$1">
             <h4 className="text-left">Free Consultation Available</h4>"
             <p className="text-left"></p>
 origin/cursor/fix-errors-and-merge-to-main-cc0a
               Schedule a free consultation with our AI experts to discover how Consensus Intelligence can transform your business operations and deliver measurable value.
             </p>
-            <div className="text-left"></div>
+            <div className="$1">
               <a 
                 href="/"
                 className="text-left"></a>
@@ -169,7 +166,7 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
             </div>
         </article>
   );
-}</div></div></div></div></div></div></div>
+}</div></div></div>
 </span>
 </span>
 </span>
