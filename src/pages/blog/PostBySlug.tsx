@@ -5,7 +5,6 @@ import Header from "../../components/Header";
 export default function PostBySlug(): React.JSX.Element {
   const { slug } = useParams();
 
-<<<<<<< HEAD
   // Mock data - in a real app, this would come from an API or CMS
   const latestArticles = [
     {
@@ -86,7 +85,6 @@ export default function PostBySlug(): React.JSX.Element {
     }
     
     return undefined;
-=======
   const article = React.useMemo(() => {
     if (!slug) return undefined;
     
@@ -112,12 +110,10 @@ export default function PostBySlug(): React.JSX.Element {
     };
     
     return mockArticle;
->>>>>>> cursor/fix-errors-and-merge-to-main-0b39
   }, [slug]);
 
   if (!article) {
     return (
-<<<<<<< HEAD
       <>
         <Header />
         <div className="min-h-screen bg-gray-50 flex items-center justify-center">
@@ -215,14 +211,12 @@ export default function PostBySlug(): React.JSX.Element {
                 </div>
               ))}
             </div>
-=======
       <div className="min-h-screen bg-gray-50">
         <Header />
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-gray-900 mb-4">Article Not Found</h1>
             <p className="text-xl text-gray-600">The article you're looking for doesn't exist.</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-0b39
           </div>
         </div>
       </div>
@@ -277,8 +271,5 @@ export default function PostBySlug(): React.JSX.Element {
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
 }"
->>>>>>> cursor/fix-errors-and-merge-to-main-0b39

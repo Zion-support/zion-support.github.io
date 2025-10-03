@@ -68,11 +68,8 @@ export const seoUtils = {
       "url": article.image || "https://zion.app/logo.png"
     }
   })
-<<<<<<< HEAD
 });
-=======
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-0b39
 
 // Sitemap generation utilities
 export const sitemapUtils = {
