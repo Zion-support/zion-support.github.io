@@ -122,7 +122,7 @@ export class PerformanceMonitor {
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         entries.forEach(entry => {
-          this.metrics.firstInputDelay = entry.processingStart - entry.startTime;
+          this.metrics.firstInputDelay = (entry as any).processingStart - entry.startTime;
         });
       });
       observer.observe({ entryTypes: ['first-input'] });
@@ -310,7 +310,7 @@ export class ImageOptimizer {
       format?: 'webp' | 'avif' | 'jpeg' | 'png';
     } = {}
   ): Promise<string> {
-    const { width, height, quality = 80, format = 'webp' } = options;
+    // const { quality = 80, format = 'webp' } = options;
 
     // For now, return the original src
     // In a real implementation, this would use a service like Cloudinary or ImageKit

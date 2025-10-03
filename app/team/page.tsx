@@ -1,18 +1,10 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
   ArrowRight, 
-  Star, 
   Users, 
-  Zap, 
   Shield, 
-  Globe, 
-  Database,
-  Lock,
-  TrendingUp,
   Award,
   Target,
-  Rocket,
   Linkedin,
   Twitter,
   Mail,
@@ -205,7 +197,7 @@ export default function TeamPage() {
             <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
               <div className="text-center">
                 <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-teal-500 rounded-full mx-auto mb-3 flex items-center justify-center">
-                  <Cpu className="w-8 h-8 text-white" />
+                  <Target className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-lg font-semibold mb-1">ML Engineering</h3>
                 <p className="text-sm text-gray-600">40+ Engineers</p>
