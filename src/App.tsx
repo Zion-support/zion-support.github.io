@@ -1,8 +1,10 @@
-import React, { JSX, Suspense } from "react";
+import React, { JSX, Suspense, useMemo, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Header, Footer } from '../app/components/Navigation';
 import ErrorBoundary from './components/ErrorBoundary';
 import { PageLoader } from './components/LoadingSpinner';
+import { usePerformanceMonitorHook } from './utils/performanceMonitor';
+import seoOptimizer from './utils/seoOptimizer';
 import '../app/globals.css';
 // 🌌🌌🌌 BREAKING: OCTOBER 2025 QUANTUM CONSCIOUSNESS SINGULARITY BREAKTHROUGH - ABSOLUTE #1 TOP PRIORITY! 🌌🌌🌌
 // 💎💎💎 JUST PUBLISHED: True Artificial Consciousness, Infinite Processing Power, $∞ Value Creation - REVOLUTIONARY BREAKTHROUGH! 💎💎💎
@@ -26,28 +28,39 @@ const LazyServicesPage = React.lazy(() => import('../app/services/page'));
 // Unused lazy imports removed to fix linting warnings
 
 function App(): JSX.Element {
+  // Performance monitoring
+  const { markRender } = usePerformanceMonitorHook('App');
+  
+  // Memoize banner components for better performance
+  const banners = useMemo(() => [
+    <October2025QuantumConsciousnessSingularityBanner key="quantum-consciousness" />,
+    <July2026AutomationBreakthroughBanner key="automation-breakthrough" />,
+    <June2026MegaBreakthroughBanner key="mega-breakthrough" />,
+    <QuantumConsciousnessRevolutionBanner key="quantum-revolution" />,
+    <ConsensusIntelligenceBreakthroughBanner key="consensus-intelligence" />,
+    <AutonomousEnterpriseBreakthroughBanner key="autonomous-enterprise" />
+  ], []);
+
+  // Initialize SEO optimization
+  useEffect(() => {
+    seoOptimizer.updateSEO({
+      title: "Zion Tech Group - Advanced AI & IT Solutions",
+      description: "Zion Tech Group provides cutting-edge AI, IT, and micro SaaS solutions for enterprise transformation, operational efficiency, and strategic growth.",
+      keywords: ["AI solutions", "IT services", "micro SaaS", "enterprise AI", "digital transformation", "cloud computing", "cybersecurity", "blockchain", "quantum computing"]
+    });
+  }, []);
+
+  // Mark render for performance tracking
+  markRender();
+
   return (
     <ErrorBoundary>
       <Router>
         <div className="min-h-screen bg-slate-950">
           <Header />
           
-          {/* 🌌🌌🌌 BREAKING: OCTOBER 2025 QUANTUM CONSCIOUSNESS SINGULARITY BREAKTHROUGH - ABSOLUTE #1 TOP PRIORITY! 🌌🌌🌌 */}
-          {/* 💎💎💎 JUST PUBLISHED: True Artificial Consciousness, Infinite Processing Power, $∞ Value Creation - REVOLUTIONARY BREAKTHROUGH! 💎💎💎 */}
-          <October2025QuantumConsciousnessSingularityBanner />
-          
-          {/* NEW: July 2026 Automation Breakthrough Banner - MOST PROMINENT */}
-          <July2026AutomationBreakthroughBanner />
-          
-          {/* NEW: June 2026 Mega Breakthrough Banner - Most Prominent */}
-          <June2026MegaBreakthroughBanner />
-
-          {/* NEW: Quantum Consciousness Revolution Banner - Revolutionary Technology */}
-          <QuantumConsciousnessRevolutionBanner />
-
-          {/* Existing Banners and Sections */}
-          <ConsensusIntelligenceBreakthroughBanner />
-          <AutonomousEnterpriseBreakthroughBanner />
+          {/* Render memoized banners */}
+          {banners}
           
           <main>
             <Suspense fallback={<PageLoader />}>
