@@ -1,26 +1,44 @@
 import React from 'react';
-import React from 'react';
-// @ts-nocheck
+import { Helmet } from 'react-helmet';
+import { Link } from 'react-router-dom';
 
-const Page: () => {
+export default function Page() {
   return (
-        <p>
-          Route traffic by SLA with quality tiers and cache hot paths semantically. Add online eval
-          gates wired to KPIs to prevent regressions. Use budget‑aware routing to keep bills
-          predictable without hurting outcomes.
-        </p>
-          <li>Tiered model routing by latency, cost, and quality budgets</li>
-          <li>Semantic caches with freshness windows and warm pools</li>
-          <li>Eval gates that trigger deterministic rollback</li>
-          <li>Scorecards correlating with business KPIs</li>
-        </ul>
-      </div>
-        <Link to="/blog" className ="text-cyan-300 underline">Back to Blog</Link>",
+    <div className="min-h-screen bg-gray-900 text-white">
+      <Helmet>
+        <title>Blog Post</title>
+        <meta name="description" content="Blog post content" />
+        <link rel="canonical" href="https://ziontechgroup.com/blog" />
+      </Helmet>
+      
+      <div className="container mx-auto px-6 py-12">
+        <article className="max-w-4xl mx-auto">
+          <header className="mb-8">
+            <h1 className="text-4xl font-bold text-center mb-4">Blog Post</h1>
+            <p className="text-xl text-gray-300 text-center">Blog post content</p>
+          </header>
+          
+          <div className="prose prose-lg max-w-none text-gray-300">
+            <p className="mb-4">gates wired to KPIs to prevent regressions. Use budget-aware routing to keep bills
+          predictable without hurting outcomes.</p>
+            
+            
+            <ul className="list-disc list-inside space-y-2 my-6">
+              <li>Tiered model routing by latency, cost, and quality budgets</li>
+              <li>Semantic caches with freshness windows and warm pools</li>
+              <li>Eval gates that trigger deterministic rollback</li>
+              <li>Scorecards correlating with business KPIs</li>
+            </ul>
+            
+            
+            <div className="mt-8 pt-8 border-t border-gray-700">
+              <Link to="/blog" className="text-cyan-300 underline hover:text-cyan-200 transition-colors">
+                ← Back to Blog
+              </Link>
+            </div>
+          </div>
+        </article>
       </div>
     </div>
   );
-};
-
-export default Page;
-
-;
+}

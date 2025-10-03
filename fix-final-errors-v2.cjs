@@ -60,7 +60,6 @@ function fixJsxFile(filePath) {
     content = content.replace(/<\/p>\s*<\/p>\s*<\/p>/g, '</p>');
     
     // Fix 8: Fix malformed meta tags
-    content = content.replace(/<meta name='description';,/'/g, '<meta name="description"');
     
     // Fix 9: Fix broken closing braces
     content = content.replace(/`}\`/g, '}');
