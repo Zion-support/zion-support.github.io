@@ -69,7 +69,7 @@ for branch in $CURSOR_BRANCHES; do
     fi
     
     # Limit to prevent infinite loops
-    if [ $COUNT -ge 60 ]; then
+    if [ $COUNT -ge 90 ]; then
         echo "🛑 Reached limit of 30 branches processed. Stopping."
         break
     fi
