@@ -100,7 +100,7 @@ export const extractKeywords = (content: string, maxKeywords: number = 20): stri
 export const optimizeDescription = (description: string, maxLength: number = 160): string => {
   if (description.length <= maxLength) {
     return description;
-  };
+  }
   
   const truncated = description.substring(0, maxLength);
   const lastSentence = truncated.lastIndexOf('.');
@@ -211,7 +211,7 @@ export const countSyllables = (word: string): number => {
       count++;
     }
     previousWasVowel = isVowel;
-  };
+  }
   
   // Handle silent 'e'
   if (word.endsWith('e') && count > 1) {
