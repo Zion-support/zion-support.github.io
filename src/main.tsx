@@ -6,6 +6,7 @@ async function reportWebVitals() {
     const { onCLS, onLCP, onFCP, onTTFB } = await import("web-vitals");
     const log = (metric: { name: string; value: number }) => {
       if (import.meta.env.PROD) {
+        // eslint-disable-next-line no-console
         console.log(`[WebVitals] ${metric.name}:`, Math.round(metric.value));
       }
     };
@@ -33,6 +34,7 @@ const registerServiceWorker = () => {
 const initializeApp = () => {
   const container = document.getElementById("root");
   if (!container) {
+    // eslint-disable-next-line no-console
     console.error("Root container not found");
     return;
   }
