@@ -35,16 +35,16 @@ interface PageLoaderProps {
 const PageLoader = memo<PageLoaderProps>(({ 
   text = 'Loading content...', 
   className = '' 
-`) => {
+}) => {
   return (
-    <div className={`flex flex-col items-center justify-center min-h-screen bg-slate-950 text-white ${className``} role="status" aria-label="Page loading">
+    <div className={`flex flex-col items-center justify-center min-h-screen bg-slate-950 text-white ${className}`} role="status" aria-label="Page loading">
       <div 
         className="w-16 h-16 border-8 border-blue-500 border-t-transparent rounded-full animate-spin mb-4"
         aria-hidden="true" />
       <p className="text-xl font-semibold">{text}</p>
     </div>
   );
-');
+});
 
 PageLoader.displayName = 'PageLoader';
 // Optimized skeleton loader for better perceived performance
