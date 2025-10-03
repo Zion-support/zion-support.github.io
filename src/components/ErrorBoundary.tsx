@@ -52,7 +52,7 @@ class ErrorBoundary extends Component<Props, State> {
         timestamp: new Date().toISOString(),
         userAgent: navigator.userAgent,
         url: window.location.href
-      ';
+      };
       
       // Store recent errors (keep only last 5)
       const existingErrors = JSON.parse(localStorage.getItem('app-errors') || '[]');
