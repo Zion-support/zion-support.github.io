@@ -596,41 +596,19 @@ const QuantumConsciousnessAIConsulting: React.FC = () => {
         </section>
 
         {/* Contact Info */}
-        <section className="py-16 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900"
-          <div className="container mx-auto px-6 text-center"
-            <h2 className="text-3xl font-bold text-white mb-8">Ready to Transform Your Enterprise?</h2>"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8",
-        <section className= "py-16 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
-          <div className= "container mx-auto px-6 text-center">
-            <h2 className= "text-3xl font-bold text-white mb-8">Ready to Transform Your Enterprise?</h2>"
-            <div className= "flex flex-col sm:flex-row gap-4 justify-center mb-8>
-              <a title: "Internal link", href="tel: 1-800-QUANTUM-AI" className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300",
+        <section className="py-16 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
+          <div className="container mx-auto px-6 text-center">
+            <h2 className="text-3xl font-bold text-white mb-8">Ready to Transform Your Enterprise?</h2>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+              <a title="Internal link" href="tel:1-800-QUANTUM-AI" className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300">
                 📞 1-800-QUANTUM-AI
               </a>
-              <a title: "Internal link", href="mailto: consciousness@ziontechgroup.com" className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300",
+              <a title="Internal link" href="mailto:consciousness@ziontechgroup.com" className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300">
                 ✉️ consciousness@ziontechgroup.com
               </a>
             </div>
-            <p className="text-gray-300 text-lg"
-        <section className="py-16 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900",
-          <div className="container mx-auto px-6 text-center",
-            <h2 className="text-3xl font-bold text-white mb-8">Ready to Transform Your Enterprise?</h2>",
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8",
-            <p className= "text-gray-300 text-lg">
-        <section className= "py-16 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900>
-          <div className= "container mx-auto px-6 text-center>
-            <h2 className= "text-3xl font-bold text-white mb-8">Ready to Transform Your Enterprise?</h2>",
-            <div className= "flex flex-col sm:flex-row gap-4 justify-center mb-8>
-              <a title: "Internal link", href="tel: 1-800-QUANTUM-AI" className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300",
-                📞 1-800-QUANTUM-AI
-              </a>
-              <a title: "Internal link", href="mailto: consciousness@ziontechgroup.com" className ="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300>
-                ✉️ consciousness@ziontechgroup.com
-              </a>
-            </div>
-            <p className="text-gray-300 text-lg",
-            <p className= "text-gray-300 text-lg">"
-  Limited Availability: Only 25 enterprise implementations available for 2027,
+            <p className="text-gray-300 text-lg">
+              Limited Availability: Only 25 enterprise implementations available for 2027.
             </p>
           </div>
         </section>
