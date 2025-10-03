@@ -1,4 +1,4 @@
-import React, { JSX, Suspense } from "react"
+import { JSX, Suspense } from "react"
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ErrorBoundary from './components/ErrorBoundary';
 import { PageLoader } from './components/LoadingSpinner';
