@@ -1,14 +1,23 @@
-
-export const seoConfig = {
-  defaultTitle: 'Zion AI - Advanced AI Solutions',
-  defaultDescription: 'Leading provider of AI solutions, automation, and digital transformation services.',
-  defaultKeywords: 'AI, artificial intelligence, automation, digital transformation',
-  openGraph: {
-    type: 'website',
-    siteName: 'Zion AI'
+module.exports = {
+  "metaTags": {
+    "viewport": "width=device-width, initial-scale=1",
+    "robots": "index, follow",
+    "canonical": true,
+    "ogTags": true,
+    "twitterCards": true
   },
-  twitter: {
-    card: 'summary_large_image',
-    site: '@ZionAI'
-  }
+  "structuredData": {
+    "organization": true,
+    "website": true,
+    "breadcrumbs": true,
+    "services": true,
+    "faq": true
+  },
+  "sitemap": {
+    "dynamic": true,
+    "priority": true,
+    "changefreq": true,
+    "lastmod": true
+  },
+  "timestamp": "2025-10-03T14:45:25.365Z"
 };

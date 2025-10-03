@@ -1,42 +1,41 @@
-interface SEOData {
+// SEO utilities
+export const generateMetaTags = (data: {
   title: string;
   description: string;
-  keywords: string[];
   canonical?: string;
   ogImage?: string;
-  ogType?: string;
-}
-
-export const seoUtils = {
-  generateMetaTags: (data: SEOData) => {
-    return {
-      title: data.title,
-      description: data.description,
-      keywords: data.keywords.join(', '),
-      'og:title': data.title,
-      'og:description': data.description,
-      'og:image': data.ogImage || '/og-image.jpg',
-      'og:type': data.ogType || 'website',
-      'twitter:card': 'summary_large_image',
-      'twitter:title': data.title,
-      'twitter:description': data.description,
-      'twitter:image': data.ogImage || '/og-image.jpg',
-      canonical: data.canonical
-    };
-  },
-
-  generateStructuredData: (type: string, data: any) => {
-    return {
-      '@context': 'https://schema.org',
-      '@type': type,
-      ...data
-    };
-  },
-
-  optimizeImageAlt: (filename: string, context: string) => {
-    const name = filename.replace(/\.[^/.]+$/, '');
-    return `${name} - ${context}`;
+  noindex?: boolean;
+}) => {
+  const tags = [
+    { name: 'title', content: data.title },
+    { name: 'description', content: data.description },
+    { name: 'robots', content: data.noindex ? 'noindex, nofollow' : 'index, follow' },
+    { property: 'og:title', content: data.title },
+    { property: 'og:description', content: data.description },
+    { property: 'og:type', content: 'website' },
+    { name: 'twitter:card', content: 'summary_large_image' },
+    { name: 'twitter:title', content: data.title },
+    { name: 'twitter:description', content: data.description }
+  ];
+  
+  if (data.canonical) {
+    tags.push({ rel: 'canonical', href: data.canonical });
   }
+  
+  if (data.ogImage) {
+    tags.push(
+      { property: 'og:image', content: data.ogImage },
+      { name: 'twitter:image', content: data.ogImage }
+    );
+  }
+  
+  return tags;
 };
 
-export default seoUtils;
+export const generateStructuredData = (type: string, data: any) => {
+  return {
+    '@context': 'https://schema.org',
+    '@type': type,
+    ...data
+  };
+};

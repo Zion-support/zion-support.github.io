@@ -1,36 +1,35 @@
-// Memory management utilities
+// Advanced memory management
 export const memoryManager = {
-  // WeakMap for caching without memory leaks
-  createWeakCache: () => {
-    const cache = new WeakMap();
-    return {
-      get: (key) => cache.get(key),
-      set: (key, value) => cache.set(key, value),
-      has: (key) => cache.has(key)
-    };
+  // Cleanup intervals
+  cleanupIntervals: new Set<NodeJS.Timeout>(),
+  
+  // Add interval for cleanup
+  addInterval: (interval: NodeJS.Timeout) => {
+    memoryManager.cleanupIntervals.add(interval);
   },
   
-  // Cleanup function registry
-  createCleanupRegistry: () => {
-    const cleanupFunctions = new Set();
-    
-    return {
-      register: (fn) => cleanupFunctions.add(fn),
-      cleanup: () => {
-        cleanupFunctions.forEach(fn => {
-          try { fn(); } catch (e) { console.error('Cleanup error:', e); }
-        });
-        cleanupFunctions.clear();
-      }
-    };
+  // Clear all intervals
+  clearAllIntervals: () => {
+    memoryManager.cleanupIntervals.forEach(interval => {
+      clearInterval(interval);
+    });
+    memoryManager.cleanupIntervals.clear();
   },
   
-  // Debounced function with memory cleanup
-  createDebouncedFunction: (fn, delay) => {
-    let timeoutId;
-    return (...args) => {
-      clearTimeout(timeoutId);
-      timeoutId = setTimeout(() => fn(...args), delay);
-    };
+  // Memory usage monitoring
+  getMemoryUsage: () => {
+    if (typeof window !== 'undefined' && 'memory' in performance) {
+      return (performance as any).memory;
+    }
+    return null;
+  },
+  
+  // Garbage collection hint
+  suggestGC: () => {
+    if (typeof window !== 'undefined' && 'gc' in window) {
+      (window as any).gc();
+    }
   }
 };
+
+export default memoryManager;
