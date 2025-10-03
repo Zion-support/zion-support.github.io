@@ -1,5 +1,15 @@
 import React, { useEffect, useState } from 'react';
 
+// Type definitions for performance entries
+interface PerformanceEventTiming extends PerformanceEntry {
+  processingStart: number;
+}
+
+interface LayoutShift extends PerformanceEntry {
+  value: number;
+  hadRecentInput: boolean;
+}
+
 interface PerformanceMetrics {
   lcp?: number;
   fid?: number;
@@ -23,13 +33,9 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
         if (entry.entryType === 'largest-contentful-paint') {
           setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
         } else if (entry.entryType === 'first-input') {
-          const firstInputEntry = entry as PerformanceEntry & { processingStart: number };
-          setMetrics(prev => ({ ...prev, fid: firstInputEntry.processingStart - entry.startTime }));
-        } else if (entry.entryType === 'layout-shift') {
-          const layoutShiftEntry = entry as PerformanceEntry & { hadRecentInput: boolean; value: number };
-          if (!layoutShiftEntry.hadRecentInput) {
-            setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + layoutShiftEntry.value }));
-          }
+          setMetrics(prev => ({ ...prev, fid: (entry as PerformanceEventTiming).processingStart - entry.startTime }));
+        } else if (entry.entryType === 'layout-shift' && !(entry as LayoutShift).hadRecentInput) {
+          setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + (entry as LayoutShift).value }));
         }
       });
     });
