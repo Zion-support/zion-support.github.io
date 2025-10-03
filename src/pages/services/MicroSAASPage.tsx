@@ -1,43 +1,43 @@
 import React from 'react';
-import { Link } from 'react-router-dom'';
+import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 
-const MicroSAASPage: React.FC  = () => {
+const MicroSAASPage: React.FC = () => {
   const microSAASServices = [
     {
-      title: "Custom SaaS Development","
-      description: "Build scalable software-as-a-service applications tailored to your specific business requirements.","
-      icon: "⚡","
+      title: "Custom SaaS Development",
+      description: "Build scalable software-as-a-service applications tailored to your specific business requirements.",
+      icon: "⚡",
       features: ["Custom SaaS Apps", "Multi-tenant Architecture", "API Development", "Scalable Infrastructure"]"
     },
     {
-      title: "SaaS Migration","
-      description: "Migrate your existing applications to a modern SaaS architecture for better scalability and performance.","
-      icon: "🔄","
+      title: "SaaS Migration",
+      description: "Migrate your existing applications to a modern SaaS architecture for better scalability and performance.",
+      icon: "🔄",
       features: ["Legacy System Migration", "Cloud Migration", "Data Migration", "Performance Optimization"]"
     },
     {
-      title: "SaaS Integration","
-      description: "Seamlessly integrate your SaaS applications with existing systems and third-party services.","
-      icon: "🔗","
+      title: "SaaS Integration",
+      description: "Seamlessly integrate your SaaS applications with existing systems and third-party services.",
+      icon: "🔗",
       features: ["API Integration", "Third-party Integrations", "System Integration", "Data Synchronization"]"
     },
     {
-      title: "SaaS Analytics","
-      description: "Implement comprehensive analytics and reporting capabilities to track usage and performance.","
-      icon: "📊","
+      title: "SaaS Analytics",
+      description: "Implement comprehensive analytics and reporting capabilities to track usage and performance.",
+      icon: "📊",
       features: ["Usage Analytics", "Performance Monitoring", "Custom Dashboards", "Business Intelligence"]"
     },
     {
-      title: "SaaS Security","
-      description: "Ensure your SaaS applications are secure with enterprise-grade security measures and compliance.","
-      icon: "🔒","
+      title: "SaaS Security",
+      description: "Ensure your SaaS applications are secure with enterprise-grade security measures and compliance.",
+      icon: "🔒",
       features: ["Security Audits", "Compliance Management", "Data Encryption", "Access Control"]"
     },
     {
-      title: "SaaS Support","
-      description: "Ongoing support and maintenance to ensure your SaaS applications run smoothly and efficiently.","
-      icon: "🛠️","
+      title: "SaaS Support",
+      description: "Ongoing support and maintenance to ensure your SaaS applications run smoothly and efficiently.",
+      icon: "🛠️",
       features: ["24/7 Support", "Performance Monitoring", "Bug Fixes", "Feature Updates"]"
     }
   ];

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom'';
+import { Link } from 'react-router-dom';
 import {
 
 } from 'lucide-react'
@@ -253,7 +253,7 @@ const ComprehensiveServices: React.FC = () => {
               {service.pricing}
             </span>
             <Link to: {service.link}
-              className="text-white hover:text-white/80 transition-colors","
+              className="text-white hover:text-white/80 transition-colors",
 =======
       <div className= "bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 overflow-hidden">
         <div className= {`bg-gradient-to-br ${service.color} p-6 text-white`}>`;`;
@@ -265,7 +265,7 @@ const ComprehensiveServices: React.FC = () => {
               {service.pricing}
             </span>
             <Link to: {service.link}
-              className= "text-white hover:text-white/80 transition-colors","
+              className= "text-white hover:text-white/80 transition-colors",
 >>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
             >
               Learn More →
@@ -326,24 +326,24 @@ const ComprehensiveServices: React.FC = () => {
             <p className="text-gray-600 mb-6">Contact us today for a free consultation and custom pricing.</p>";,"
             <div className="flex flex-col sm:flex-row gap-4 justify-center"
               <a href="tel:+13024640950" ,";,"
-  className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center","
+  className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center",
               >
                 Call +1 302 464 0950
               </a>
               <a href="mailto:kleber@ziontechgroup.com" ,";,"
-  className="border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors text-center","
+  className="border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors text-center",
 =======
           <div className= "bg-white rounded-lg shadow-lg p-6 max-w-2xl mx-auto">
             <h2 className= "text-2xl font-bold text-gray-900 mb-4">Ready to Get Started?</h2>";,"
             <p className= "text-gray-600 mb-6">Contact us today for a free consultation and custom pricing.</p>";,"
             <div className= "flex flex-col sm:flex-row gap-4 justify-center">
               <a href="tel:+13024640950" ,";,"
-  className= "bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center","
+  className= "bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center",
               >
                 Call +1 302 464 0950
               </a>
               <a href="mailto:kleber@ziontechgroup.com" ,";,"
-  className= "border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors text-center","
+  className= "border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors text-center",
 >>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
               >
                 Email Us
@@ -525,12 +525,12 @@ const ComprehensiveServices: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"
               <a href="tel:+13024640950" ,";,"
-  className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center","
+  className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center",
               >
                 Call +1 302 464 0950
               </a>
               <a href="mailto:kleber@ziontechgroup.com" ,";,"
-  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors text-center","
+  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors text-center",
 =======
         <section className= "text-center">
           <div className= "bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-8 text-white">
@@ -540,12 +540,12 @@ const ComprehensiveServices: React.FC = () => {
             </p>
             <div className= "flex flex-col sm:flex-row gap-4 justify-center">
               <a href="tel:+13024640950" ,";,"
-  className= "bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center","
+  className= "bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center",
               >
                 Call +1 302 464 0950
               </a>
               <a href="mailto:kleber@ziontechgroup.com" ,";,"
-  className= "border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors text-center","
+  className= "border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors text-center",
 >>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
               >
                 Email Us Today

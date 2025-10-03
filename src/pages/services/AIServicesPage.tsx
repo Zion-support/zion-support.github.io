@@ -1,43 +1,43 @@
 import React from 'react';
-import { Link } from 'react-router-dom'';
+import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 
-const AIServicesPage: React.FC  = () => {
+const AIServicesPage: React.FC = () => {
   const aiServices = [
     {
-      title: "Machine Learning Solutions","
-      description: "Custom ML models tailored to your business needs, from predictive analytics to recommendation systems.","
-      icon: "🧠","
+      title: "Machine Learning Solutions",
+      description: "Custom ML models tailored to your business needs, from predictive analytics to recommendation systems.",
+      icon: "🧠",
       features: ["Custom Model Development", "Predictive Analytics", "Recommendation Engines", "Model Optimization"]"
     },
     {
-      title: "Natural Language Processing","
-      description: "Advanced NLP solutions for text analysis, sentiment analysis, and automated content generation.","
-      icon: "💬","
+      title: "Natural Language Processing",
+      description: "Advanced NLP solutions for text analysis, sentiment analysis, and automated content generation.",
+      icon: "💬",
       features: ["Text Analysis", "Sentiment Analysis", "Content Generation", "Language Translation"]"
     },
     {
-      title: "Computer Vision","
-      description: "Image and video analysis solutions for object detection, facial recognition, and visual content understanding.","
-      icon: "👁️","
+      title: "Computer Vision",
+      description: "Image and video analysis solutions for object detection, facial recognition, and visual content understanding.",
+      icon: "👁️",
       features: ["Object Detection", "Facial Recognition", "Image Classification", "Video Analysis"]"
     },
     {
-      title: "AI Automation","
-      description: "Intelligent automation solutions that streamline processes and reduce manual work.","
-      icon: "🤖","
+      title: "AI Automation",
+      description: "Intelligent automation solutions that streamline processes and reduce manual work.",
+      icon: "🤖",
       features: ["Process Automation", "Workflow Optimization", "Intelligent Document Processing", "Smart Integrations"]"
     },
     {
-      title: "AI Consulting","
-      description: "Strategic AI consulting to help you identify opportunities and implement AI solutions effectively.","
-      icon: "💡","
+      title: "AI Consulting",
+      description: "Strategic AI consulting to help you identify opportunities and implement AI solutions effectively.",
+      icon: "💡",
       features: ["AI Strategy", "Technology Assessment", "Implementation Planning", "ROI Analysis"]"
     },
     {
-      title: "AI Training & Support","
-      description: "Comprehensive training programs and ongoing support to ensure successful AI adoption.","
-      icon: "🎓","
+      title: "AI Training & Support",
+      description: "Comprehensive training programs and ongoing support to ensure successful AI adoption.",
+      icon: "🎓",
       features: ["Team Training", "Best Practices", "Ongoing Support", "Knowledge Transfer"]"
     }
   ];

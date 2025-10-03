@@ -155,41 +155,41 @@ const SmartContractAudit: React.FC = () => {
     {
       step: "01",
       title: "Initial Assessment",
-      description: "We analyze your smart contract requirements and scope the audit project."
+      description: "We analyze your smart contract requirements and scope the audit project.",
     },
     {
       step: "02",
       title: "Code Analysis",
-      description: "Comprehensive static and dynamic analysis using industry-leading tools."
+      description: "Comprehensive static and dynamic analysis using industry-leading tools.",
     },
     {
       step: "03",
       title: "Manual Review",
-      description: "Expert security engineers conduct thorough manual code review."
+      description: "Expert security engineers conduct thorough manual code review.",
     },
     {
       step: "04",
       title: "Report Generation",
-      description: "Detailed security report with findings, recommendations, and remediation steps."
+      description: "Detailed security report with findings, recommendations, and remediation steps.",
     }
   ];
 
   const benefits = [
     {
       title: "Enhanced Security",
-      description: "Identify and fix vulnerabilities before deployment to prevent costly exploits."
+      description: "Identify and fix vulnerabilities before deployment to prevent costly exploits.",
     },
     {
       title: "Regulatory Compliance",
-      description: "Ensure your smart contracts meet all regulatory and industry standards."
+      description: "Ensure your smart contracts meet all regulatory and industry standards.",
     },
     {
       title: "Cost Optimization",
-      description: "Optimize gas usage and improve contract efficiency to reduce operational costs."
+      description: "Optimize gas usage and improve contract efficiency to reduce operational costs.",
     },
     {
       title: "Investor Confidence",
-      description: "Build trust with investors and users through professional security validation."
+      description: "Build trust with investors and users through professional security validation.",
     }
   ];
 

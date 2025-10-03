@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom'';
+import { Link } from 'react-router-dom';
 import { Brain, Zap, Shield, Cloud, Database, Users, BarChart3, Cog, Target, Rocket } from 'lucide-react'';
 import { Helmet } from 'react-helmet-async';
 ;
@@ -91,14 +91,14 @@ const AISolutions: React.FC = () => {
   Transform your business with cutting-edge artificial intelligence solutions designed for modern enterprises.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center"
-                <Link to: "/contact","
-  className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors","
+                <Link to: "/contact",
+  className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors",
                 >
                   Get Started
                   <Rocket className="ml-2 h-5 w-5" />"
                 </Link>
-                <Link to: "/demo","
-  className="inline-flex items-center px-8 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 transition-colors","
+                <Link to: "/demo",
+  className="inline-flex items-center px-8 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 transition-colors",
       <div className= "min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         {/* Hero Section */}
         <section className= "relative py-20 px-4 sm:px-6 lg:px-8">
@@ -111,14 +111,14 @@ const AISolutions: React.FC = () => {
   Transform your business with cutting-edge artificial intelligence solutions designed for modern enterprises.
               </p>
               <div className= "flex flex-col sm:flex-row gap-4 justify-center">
-                <Link to: "/contact","
-  className= "inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors","
+                <Link to: "/contact",
+  className= "inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors",
                 >
                   Get Started
                   <Rocket className= "ml-2 h-5 w-5" />"
                 </Link>
-                <Link to: "/demo","
-  className= "inline-flex items-center px-8 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 transition-colors","
+                <Link to: "/demo",
+  className= "inline-flex items-center px-8 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 transition-colors",
                 >
                   Request Demo
                 </Link>
@@ -364,14 +364,14 @@ const AISolutions: React.FC = () => {
               to automation, we provide the tools and expertise you need to succeed in the AI era.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"
-              <Link to: "/contact","
-  className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-600 bg-white hover:bg-gray-50 transition-colors","
+              <Link to: "/contact",
+  className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-600 bg-white hover:bg-gray-50 transition-colors",
               >
                 Contact Our AI Experts
                 <Brain className="ml-2 h-5 w-5" />"
               </Link>
-              <Link to: "/case-studies","
-  className="inline-flex items-center px-8 py-3 border border-white text-base font-medium rounded-md text-white hover:bg-white/10 transition-colors","
+              <Link to: "/case-studies",
+  className="inline-flex items-center px-8 py-3 border border-white text-base font-medium rounded-md text-white hover:bg-white/10 transition-colors",
     <div className= "min-h-screen bg-gray-50">
       {/* Hero Section */}
       <section className= "bg-gradient-to-br from-blue-600 via-purple-600 to-teal-600 text-white py-20">
@@ -385,14 +385,14 @@ const AISolutions: React.FC = () => {
               to automation, we provide the tools and expertise you need to succeed in the AI era.
             </p>
             <div className= "flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to: "/contact","
-  className= "inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-600 bg-white hover:bg-gray-50 transition-colors","
+              <Link to: "/contact",
+  className= "inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-600 bg-white hover:bg-gray-50 transition-colors",
               >
                 Contact Our AI Experts
                 <Brain className= "ml-2 h-5 w-5" />"
               </Link>
-              <Link to: "/case-studies","
-  className= "inline-flex items-center px-8 py-3 border border-white text-base font-medium rounded-md text-white hover:bg-white/10 transition-colors","
+              <Link to: "/case-studies",
+  className= "inline-flex items-center px-8 py-3 border border-white text-base font-medium rounded-md text-white hover:bg-white/10 transition-colors",
               >
                 View Success Stories
               </Link>
@@ -401,14 +401,14 @@ const AISolutions: React.FC = () => {
         </section>
       </div>
     </>
-                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors","
-                className= "bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors","
+                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors",
+                className= "bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors",
               >
                 Get Started
               </Link>
-              <Link to: "/demo","
-  className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors","
-  className= "border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors","
+              <Link to: "/demo",
+  className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors",
+  className= "border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors",
               >
                 Schedule Demo
               </Link>
@@ -468,7 +468,7 @@ const AISolutions: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-                  <Link to: "/contact","
+                  <Link to: "/contact",
   className= {`inline-flex items-center text-${solution.color}-600 hover:text-${solution.color}-700 font-semibold transition-colors`}`;`;
                   >
                     Learn More
@@ -602,8 +602,8 @@ const AISolutions: React.FC = () => {
   Let our AI experts help you identify opportunities and implement solutions that drive real results.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center"
-            <Link to: "/contact","
-  className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors","
+            <Link to: "/contact",
+  className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors",
       <section className= "py-20 bg-gradient-to-r from-blue-600 to-purple-600">
         <div className= "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className= "text-3xl md:text-4xl font-bold text-white mb-4">,"
@@ -613,14 +613,14 @@ const AISolutions: React.FC = () => {
   Let our AI experts help you identify opportunities and implement solutions that drive real results.
           </p>
           <div className= "flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to: "/contact","
-  className= "bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors","
+            <Link to: "/contact",
+  className= "bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors",
             >
               Start Your AI Journey
             </Link>
-            <Link to: "/case-studies","
-  className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors","
-  className= "border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors","
+            <Link to: "/case-studies",
+  className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors",
+  className= "border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors",
             >
               View Success Stories
             </Link>

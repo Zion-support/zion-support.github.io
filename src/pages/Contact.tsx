@@ -24,25 +24,25 @@ export default function Contact(): React.JSX.Element {
       icon: <Mail className="w-6 h-6" />,
       title: "Email Us",
       details: "hello@ziontechgroup.com",
-      description: "Send us an email anytime"
+      description: "Send us an email anytime",
     },
     {
       icon: <Phone className="w-6 h-6" />,
       title: "Call Us",
       details: "+1 (555) 123-4567",
-      description: "Mon-Fri from 9am to 6pm"
+      description: "Mon-Fri from 9am to 6pm",
     },
     {
       icon: <MapPin className="w-6 h-6" />,
       title: "Visit Us",
       details: "123 Tech Street, San Francisco, CA 94105",
-      description: "Come say hello at our office"
+      description: "Come say hello at our office",
     },
     {
       icon: <Clock className="w-6 h-6" />,
       title: "Response Time",
       details: "Within 24 hours",
-      description: "We respond to all inquiries quickly"
+      description: "We respond to all inquiries quickly",
     }
   ];
 

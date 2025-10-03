@@ -1,13 +1,13 @@
 import React from 'react';
-import { Link } from 'react-router-dom'';
+import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 
-const DocumentationPage: React.FC  = () => {
+const DocumentationPage: React.FC = () => {
   const documentationSections = [
     {
-      title: "Getting Started","
-      description: "Quick start guides and tutorials to help you get up and running with our solutions.","
-      icon: "🚀","
+      title: "Getting Started",
+      description: "Quick start guides and tutorials to help you get up and running with our solutions.",
+      icon: "🚀",
       links: [
         { title: "Quick Start Guide", href="/docs/quick-start" },"
         { title: "Installation Guide", href="/docs/installation" },"
@@ -16,9 +16,9 @@ const DocumentationPage: React.FC  = () => {
       ]
     },
     {
-      title: "API Documentation","
-      description: "Comprehensive API reference and integration guides for developers.","
-      icon: "🔌","
+      title: "API Documentation",
+      description: "Comprehensive API reference and integration guides for developers.",
+      icon: "🔌",
       links: [
         { title: "API Reference", href="/docs/api-reference" },"
         { title: "Authentication", href="/docs/authentication" },"
@@ -27,9 +27,9 @@ const DocumentationPage: React.FC  = () => {
       ]
     },
     {
-      title: "User Guides","
-      description: "Step-by-step guides for using our platform features and capabilities.","
-      icon: "📖","
+      title: "User Guides",
+      description: "Step-by-step guides for using our platform features and capabilities.",
+      icon: "📖",
       links: [
         { title: "Dashboard Guide", href="/docs/dashboard" },"
         { title: "Analytics Setup", href="/docs/analytics" },"
@@ -38,9 +38,9 @@ const DocumentationPage: React.FC  = () => {
       ]
     },
     {
-      title: "Developer Resources","
-      description: "Resources and tools for developers building with our platform.","
-      icon: "👨‍💻","
+      title: "Developer Resources",
+      description: "Resources and tools for developers building with our platform.",
+      icon: "👨‍💻",
       links: [
         { title: "Code Examples", href="/docs/examples" },"
         { title: "Best Practices", href="/docs/best-practices" },"
@@ -49,9 +49,9 @@ const DocumentationPage: React.FC  = () => {
       ]
     },
     {
-      title: "Security & Compliance","
-      description: "Security guidelines, compliance information, and best practices.","
-      icon: "🔒","
+      title: "Security & Compliance",
+      description: "Security guidelines, compliance information, and best practices.",
+      icon: "🔒",
       links: [
         { title: "Security Overview", href="/docs/security" },"
         { title: "Data Privacy", href="/docs/privacy" },"
@@ -60,9 +60,9 @@ const DocumentationPage: React.FC  = () => {
       ]
     },
     {
-      title: "Support & Community","
-      description: "Get help, connect with the community, and find additional resources.","
-      icon: "🤝","
+      title: "Support & Community",
+      description: "Get help, connect with the community, and find additional resources.",
+      icon: "🤝",
       links: [
         { title: "Support Center", href="/docs/support" },"
         { title: "Community Forum", href="/docs/community" },"

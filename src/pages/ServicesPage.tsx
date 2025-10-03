@@ -1,78 +1,78 @@
 import React from 'react';
-import { Link } from 'react-router-dom'';
+import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 ;
 const ServicesPage: React.FC = () => {
   const services: [,
     {
-      title: "AI & Machine Learning","
-      description: "Advanced artificial intelligence solutions including machine learning models, natural language processing, and predictive analytics.","
-      icon: "🤖","
-      features: ["Custom ML Models", "NLP Solutions", "Predictive Analytics", "Computer Vision"]"
-    },
-    {
-      title: "Micro SaaS Development","
-      description: "Scalable software-as-a-service solutions that deliver immediate value and grow with your business needs.","
-      icon: "⚡","
-      features: ["Custom SaaS Apps", "API Development", "Cloud Integration", "Scalable Architecture"]"
-    },
-    {
-      title: "IT Infrastructure","
-      description: "Complete IT infrastructure management, cloud solutions, and enterprise-grade security services.","
-      icon: "🛠️","
-      features: ["Cloud Migration", "DevOps Services", "Security Solutions", "Infrastructure Management"]"
-    },
-    {
-      title: "Data Analytics","
-      description: "Transform your data into actionable insights with our advanced analytics and business intelligence solutions.","
-      icon: "📊","
-      features: ["Business Intelligence", "Data Visualization", "Real-time Analytics", "Data Warehousing"]"
-    },
-    {
-      title: "Automation Solutions","
-      description: "Streamline your operations with intelligent automation solutions that reduce costs and improve efficiency.","
-      icon: "🔄","
-      features: ["Process Automation", "Workflow Optimization", "RPA Solutions", "Smart Integrations"]"
-    },
-    {
-      title: "Consulting Services","
-      description: "Expert technology consulting to help you make informed decisions and achieve your digital transformation goals.","
-      icon: "💡","
-      features: ["Technology Strategy", "Digital Transformation", "Architecture Planning", "Best Practices"]"
       title: "AI & Machine Learning",
       description: "Advanced artificial intelligence solutions including machine learning models, natural language processing, and predictive analytics.",
       icon: "🤖",
-      features: ["Custom ML Models", "NLP Solutions", "Predictive Analytics", "Computer Vision"]
+      features: ["Custom ML Models", "NLP Solutions", "Predictive Analytics", "Computer Vision"]"
     },
     {
       title: "Micro SaaS Development",
       description: "Scalable software-as-a-service solutions that deliver immediate value and grow with your business needs.",
       icon: "⚡",
-      features: ["Custom SaaS Apps", "API Development", "Cloud Integration", "Scalable Architecture"]
+      features: ["Custom SaaS Apps", "API Development", "Cloud Integration", "Scalable Architecture"]"
     },
     {
       title: "IT Infrastructure",
       description: "Complete IT infrastructure management, cloud solutions, and enterprise-grade security services.",
       icon: "🛠️",
-      features: ["Cloud Migration", "DevOps Services", "Security Solutions", "Infrastructure Management"]
+      features: ["Cloud Migration", "DevOps Services", "Security Solutions", "Infrastructure Management"]"
     },
     {
       title: "Data Analytics",
       description: "Transform your data into actionable insights with our advanced analytics and business intelligence solutions.",
       icon: "📊",
-      features: ["Business Intelligence", "Data Visualization", "Real-time Analytics", "Data Warehousing"]
+      features: ["Business Intelligence", "Data Visualization", "Real-time Analytics", "Data Warehousing"]"
     },
     {
       title: "Automation Solutions",
       description: "Streamline your operations with intelligent automation solutions that reduce costs and improve efficiency.",
       icon: "🔄",
-      features: ["Process Automation", "Workflow Optimization", "RPA Solutions", "Smart Integrations"]
+      features: ["Process Automation", "Workflow Optimization", "RPA Solutions", "Smart Integrations"]"
     },
     {
       title: "Consulting Services",
       description: "Expert technology consulting to help you make informed decisions and achieve your digital transformation goals.",
       icon: "💡",
-      features: ["Technology Strategy", "Digital Transformation", "Architecture Planning", "Best Practices"]
+      features: ["Technology Strategy", "Digital Transformation", "Architecture Planning", "Best Practices"]"
+      title: "AI & Machine Learning",
+      description: "Advanced artificial intelligence solutions including machine learning models, natural language processing, and predictive analytics.",
+      icon: "🤖",
+      features: ["Custom ML Models", "NLP Solutions", "Predictive Analytics", "Computer Vision"],
+    },
+    {
+      title: "Micro SaaS Development",
+      description: "Scalable software-as-a-service solutions that deliver immediate value and grow with your business needs.",
+      icon: "⚡",
+      features: ["Custom SaaS Apps", "API Development", "Cloud Integration", "Scalable Architecture"],
+    },
+    {
+      title: "IT Infrastructure",
+      description: "Complete IT infrastructure management, cloud solutions, and enterprise-grade security services.",
+      icon: "🛠️",
+      features: ["Cloud Migration", "DevOps Services", "Security Solutions", "Infrastructure Management"],
+    },
+    {
+      title: "Data Analytics",
+      description: "Transform your data into actionable insights with our advanced analytics and business intelligence solutions.",
+      icon: "📊",
+      features: ["Business Intelligence", "Data Visualization", "Real-time Analytics", "Data Warehousing"],
+    },
+    {
+      title: "Automation Solutions",
+      description: "Streamline your operations with intelligent automation solutions that reduce costs and improve efficiency.",
+      icon: "🔄",
+      features: ["Process Automation", "Workflow Optimization", "RPA Solutions", "Smart Integrations"],
+    },
+    {
+      title: "Consulting Services",
+      description: "Expert technology consulting to help you make informed decisions and achieve your digital transformation goals.",
+      icon: "💡",
+      features: ["Technology Strategy", "Digital Transformation", "Architecture Planning", "Best Practices"],
     }
   ];
 
@@ -132,8 +132,8 @@ const ServicesPage: React.FC = () => {
                   </ul>
                   
                   <Link to: "/contact" ,"
-  className="text-blue-600 font-semibold hover:text-blue-800 transition-colors","
-  className= "text-blue-600 font-semibold hover:text-blue-800 transition-colors","
+  className="text-blue-600 font-semibold hover:text-blue-800 transition-colors",
+  className= "text-blue-600 font-semibold hover:text-blue-800 transition-colors",
                   >
                     Learn More →
                   </Link>
@@ -152,7 +152,7 @@ const ServicesPage: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"
               <Link to: "/contact" ,"
-  className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors","
+  className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors",
         <section className= "py-20 bg-blue-600 text-white">
           <div className= "container mx-auto px-6 text-center">
             <h2 className= "text-4xl font-bold mb-4">Ready to Get Started?</h2>"
@@ -161,13 +161,13 @@ const ServicesPage: React.FC = () => {
             </p>
             <div className= "flex flex-col sm:flex-row gap-4 justify-center">
               <Link to: "/contact" ,"
-  className= "bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors","
+  className= "bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors",
               >
                 Contact Us
               </Link>
               <Link to: "/solutions" ,"
-  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors","
-  className= "border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors","
+  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors",
+  className= "border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors",
               >
                 View Solutions
               </Link>

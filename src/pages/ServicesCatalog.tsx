@@ -16,11 +16,11 @@ const rows: [,
 const ServicesCatalog: React.FC = () => {
   return (
     <>
-      <EnhancedSEOHead title: "Services Catalog - Zion Tech Group","
       <EnhancedSEOHead title: "Services Catalog - Zion Tech Group",
-  description: "Catalog of AI, automation, micro SaaS, and IT services with transparent pricing.","
+      <EnhancedSEOHead title: "Services Catalog - Zion Tech Group",
+  description: "Catalog of AI, automation, micro SaaS, and IT services with transparent pricing.",
         keywords: "services pricing, AI pricing, IT rates, micro SaaS pricing" ,"
-        canonical: "https://ziontechgroup.com/services/catalog","
+        canonical: "https://ziontechgroup.com/services/catalog",
       />
       <main className="py-12 sm:py-16"
         <div className="container mx-auto px-6"

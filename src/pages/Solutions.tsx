@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom'';
+import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle, Zap, Shield, Globe, Cpu, Database, Cloud } from 'lucide-react'';
 import { Helmet } from 'react-helmet-async';
 ;
@@ -67,14 +67,14 @@ const Solutions: React.FC = () => {
   Comprehensive technology solutions designed to transform your business operations and drive growth.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center"
-                <Link to: "/contact","
-  className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors","
+                <Link to: "/contact",
+  className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors",
                 >
                   Get Started
                   <ArrowRight className="ml-2 h-5 w-5" />"
                 </Link>
-                <Link to: "/services","
-  className="inline-flex items-center px-8 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 transition-colors","
+                <Link to: "/services",
+  className="inline-flex items-center px-8 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 transition-colors",
       <div className= "min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         {/* Hero Section */}
         <section className= "relative py-20 px-4 sm:px-6 lg:px-8">
@@ -87,14 +87,14 @@ const Solutions: React.FC = () => {
   Comprehensive technology solutions designed to transform your business operations and drive growth.
               </p>
               <div className= "flex flex-col sm:flex-row gap-4 justify-center">
-                <Link to: "/contact","
-  className= "inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors","
+                <Link to: "/contact",
+  className= "inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors",
                 >
                   Get Started
                   <ArrowRight className= "ml-2 h-5 w-5" />"
                 </Link>
-                <Link to: "/services","
-  className= "inline-flex items-center px-8 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 transition-colors","
+                <Link to: "/services",
+  className= "inline-flex items-center px-8 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 transition-colors",
                 >
                   View Services
                 </Link>
@@ -177,8 +177,8 @@ const Solutions: React.FC = () => {
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">,"
   Let our experts help you implement the right technology solutions for your business needs.
             </p>
-            <Link to: "/contact","
-  className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-600 bg-white hover:bg-gray-50 transition-colors","
+            <Link to: "/contact",
+  className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-600 bg-white hover:bg-gray-50 transition-colors",
             >
               Contact Us Today
               <ArrowRight className="ml-2 h-5 w-5" />"
@@ -190,8 +190,8 @@ const Solutions: React.FC = () => {
             <p className= "text-xl text-blue-100 mb-8 max-w-3xl mx-auto">,"
   Let our experts help you implement the right technology solutions for your business needs.
             </p>
-            <Link to: "/contact","
-  className= "inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-600 bg-white hover:bg-gray-50 transition-colors","
+            <Link to: "/contact",
+  className= "inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-600 bg-white hover:bg-gray-50 transition-colors",
             >
               Contact Us Today
               <ArrowRight className= "ml-2 h-5 w-5" />"
