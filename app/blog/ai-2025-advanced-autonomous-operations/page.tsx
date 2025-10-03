@@ -20,14 +20,14 @@ export default function AI2025AdvancedAutonomousOperations() {
       <div className="text-left">
         {/* Hero Section */}
         <div className="text-left">
-            <span className="text-left">
-              🚀 BREAKING: January 2025
-            </span>
-          </div>
-          <h1 className="text-left">
-            Advanced Autonomous Operations Revolution
-          </h1>
-          <p className="text-left">
+          <span className="text-left">
+            🚀 BREAKING: January 2025
+          </span>
+        </div>
+        <h1 className="text-left">
+          Advanced Autonomous Operations Revolution
+        </h1>
+        <p className="text-left">
             Fortune 500 Companies Achieve 99.9% Operational Autonomy with $2.7B Proven ROI
           </p>
 

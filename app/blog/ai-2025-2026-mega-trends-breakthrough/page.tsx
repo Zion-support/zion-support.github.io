@@ -19,9 +19,8 @@ export default function AIMegaTrends20252026() {
         <h1 className="text-left">AI 2025-2026 Mega Trends Breakthrough</h1>
         <p className="text-left">Revolutionary Enterprise Transformation Guide</p>
         <span className="text-left">BREAKTHROUGH</span>
-          <span className="text-left">2025-2026</span>
-          <span className="text-left">REVOLUTIONARY</span>
-        </div>
+        <span className="text-left">2025-2026</span>
+        <span className="text-left">REVOLUTIONARY</span>
       </div>
       <div className="text-left">
           <h2 className="text-left">🚀 Executive Summary</h2>
