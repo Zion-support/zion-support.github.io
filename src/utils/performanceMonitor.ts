@@ -19,7 +19,7 @@ class PerformanceMonitor {
     return { mountTime, renderCount };
   }
 
-  public stopMonitoring(componentName: string, mountTime: number, renderCount: number): void {
+  public stopMonitoring(_componentName: string, mountTime: number, renderCount: number): void {
     const unmountTime = Date.now();
     const totalTime = unmountTime - mountTime;
     const avgRenderTime = renderCount > 0 ? totalTime / renderCount : 0;

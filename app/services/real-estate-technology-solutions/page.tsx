@@ -1,11 +1,10 @@
 // import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
 import { 
   Home, MapPin, Users, BarChart3, Camera, 
   FileText, CheckCircle, Phone, 
   Mail, ExternalLink, 
-  Globe, Smartphone, Brain, Monitor, Shield, Search
+  Brain, Monitor, Shield, Search
 } from 'lucide-react';
 
 export const metadata = {
@@ -170,7 +169,12 @@ export default function RealEstateTechnologySolutions() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
-      {/* Head tags would be handled by a layout component */}
+      <Head>
+        <title>Real Estate Technology Solutions — Zion Tech Group</title>
+        <meta name="description" content="Comprehensive real estate micro SaaS solutions including property management, lead generation, CRM, and virtual tours." />
+        <meta name="keywords" content="real estate technology, property management, lead generation, real estate CRM, virtual tours, micro SaaS" />
+        <link rel="canonical" href={`${websiteHref}/services/real-estate-technology-solutions`} />
+      </Head>
 
       {/* Hero Section */}
       <section className="relative py-20 px-4">

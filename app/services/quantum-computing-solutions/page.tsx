@@ -1,10 +1,5 @@
 // import React from 'react';
-// Metadata interface for React Helmet
-interface Metadata {
-  title?: string;
-  description?: string;
-  keywords?: string;
-}
+import { Metadata } from 'next';
 import { Link } from 'react-router-dom';
 import { 
   Atom, 
@@ -34,14 +29,6 @@ import {
   Camera,
   Package,
   Truck,
-  Building,
-  Home,
-  Car,
-  Plane,
-  Ship,
-  Activity,
-  PieChart,
-  LineChart,
   Brain,
   Cloud
 } from 'lucide-react';

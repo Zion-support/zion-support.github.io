@@ -32,7 +32,7 @@ class EnhancedPerformanceMonitor {
   private metrics: PerformanceMetrics[] = [];
   private alerts: PerformanceAlert[] = [];
   private observers: PerformanceObserver[] = [];
-  private _isMonitoring = false;
+  // private isMonitoring = false;
 
   constructor() {
     this.initializeObservers();
@@ -122,12 +122,12 @@ class EnhancedPerformanceMonitor {
   }
 
   public startMonitoring(): void {
-    this._isMonitoring = true;
+    this.isMonitoring = true;
     console.log('Enhanced performance monitoring started');
   }
 
   public stopMonitoring(): void {
-    this._isMonitoring = false;
+    this.isMonitoring = false;
     this.observers.forEach(observer => observer.disconnect());
     this.observers = [];
     console.log('Enhanced performance monitoring stopped');
