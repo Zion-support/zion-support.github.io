@@ -126,8 +126,8 @@ export class EnhancedPerformanceMonitoring {
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         entries.forEach((entry) => {
-          if (entry.entryType === 'layout-shift' && !(entry as any).hadRecentInput) {
-            this.metrics.cumulativeLayoutShift += (entry as any).value;
+          if (entry.entryType === 'layout-shift' && !(entry as PerformanceEntry & { hadRecentInput?: boolean }).hadRecentInput) {
+            this.metrics.cumulativeLayoutShift += (entry as PerformanceEntry & { value: number }).value;
           }
         });
       });
@@ -151,7 +151,7 @@ export class EnhancedPerformanceMonitoring {
 
   private observeMemoryUsage(): void {
     if ('memory' in performance) {
-      const memory = (performance as any).memory;
+      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number } }).memory;
       this.metrics.memoryUsage = memory.usedJSHeapSize;
       this.metrics.jsHeapSize = memory.totalJSHeapSize;
     }

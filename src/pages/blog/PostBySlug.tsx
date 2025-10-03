@@ -1,20 +1,18 @@
 import React from 'react';
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: 'PostBySlug | Zion Tech Group',
-  description: 'Discover the latest AI breakthroughs and enterprise automation solutions from Zion Tech Group.',
-  keywords: 'AI, automation, enterprise, breakthrough, technology',
-  openGraph: {
-    title: 'PostBySlug',
-    description: 'Discover the latest AI breakthroughs and enterprise automation solutions.',
-    type: 'article',
-  },
-};
+import { Helmet } from 'react-helmet-async';
 
 export default function PostBySlug() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <>
+      <Helmet>
+        <title>PostBySlug | Zion Tech Group</title>
+        <meta name="description" content="Discover the latest AI breakthroughs and enterprise automation solutions from Zion Tech Group." />
+        <meta name="keywords" content="AI, automation, enterprise, breakthrough, technology" />
+        <meta property="og:title" content="PostBySlug" />
+        <meta property="og:description" content="Discover the latest AI breakthroughs and enterprise automation solutions." />
+        <meta property="og:type" content="article" />
+      </Helmet>
+      <div className="min-h-screen bg-gray-50">
       <div className="max-w-4xl mx-auto px-4 py-8">
         <div className="bg-white rounded-lg shadow-lg p-8">
           <div className="text-center mb-8">
@@ -35,5 +33,6 @@ export default function PostBySlug() {
         </div>
       </div>
     </div>
+    </>
   );
 }
