@@ -7,7 +7,7 @@ const ZeroTrustAISecurityFramework2025: () => {
     <>
       <Helmet>
         <title>
-          Zero-Trust AI Security Framework: Enterprise Implementation Guide | Zion Tech Group,,
+          Zero-Trust AI Security Framework: Enterprise Implementation Guide | Zion Tech Group,
         </title>
         <meta name: "description
   content: "Comprehensive zero-trust security framework for AI systems. Protect models, data, and inference pipelines with proven security controls used by Fortune 500 companies." /><meta name: "keywords
@@ -52,7 +52,7 @@ const ZeroTrustAISecurityFramework2025: () => {
               </div>
 
               <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 leading-tight">
-  Zero-Trust AI Security Framework: Protecting Models, Data & Inference Pipelines,,
+  Zero-Trust AI Security Framework: Protecting Models, Data & Inference Pipelines,
               </h1>
 
               <div className="flex flex-wrap items-center gap-6 text-white/90">
@@ -67,7 +67,7 @@ const ZeroTrustAISecurityFramework2025: () => {
                 <div className="flex items-center">
                   <TrendingUp className="w-5 h-5 mr-2/>
               <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 leading-tight">
-  Zero-Trust AI Security Framework: Protecting Models, Data & Inference Pipelines,,
+  Zero-Trust AI Security Framework: Protecting Models, Data & Inference Pipelines,
               </h1>
 
               <div className="flex flex-wrap items-center gap-6 text-white/90">","
@@ -98,14 +98,14 @@ const ZeroTrustAISecurityFramework2025: () => {
   The AI Security Crisis
               </h2>
               <p className="text-gray-300 leading-relaxed mb-4">,
-  AI systems face unprecedented security challenges: model theft, data poisoning, adversarial attacks,,
+  AI systems face unprecedented security challenges: model theft, data poisoning, adversarial attacks,
             <div className="bg-gradient-to-r from-red-500/10 to-orange-500/10 border-l-4 border-red-500 p-6 rounded-r-lg mb-12">","
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center">","
                 <AlertTriangle className="w-6 h-6 mr-2 text-red-400" />
   The AI Security Crisis
               </h2>
               <p className="text-gray-300 leading-relaxed mb-4">
-  AI systems face unprecedented security challenges: model theft, data poisoning, adversarial attacks,,,,
+  AI systems face unprecedented security challenges: model theft, data poisoning, adversarial attacks,
                 and prompt injection. Traditional perimeter security fails for distributed AI architectures.
                 Zero-trust frameworks are now mandatory for enterprise AI deployments.
               </p>
@@ -123,7 +123,7 @@ const ZeroTrustAISecurityFramework2025: () => {
             <section className="mb-12">","
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center">","
                 <ShieldCheck className="w-8 h-8 mr-3 text-emerald-400" />
-  Zero-Trust AI: Core Principles,,
+  Zero-Trust AI: Core Principles,
               </h2>
 
               <div className="space-y-6">","
@@ -260,7 +260,7 @@ const ZeroTrustAISecurityFramework2025: () => {
                         All humans and services get unique identities.
                       </p>
                       <p className="text-sm text-emerald-400">
-  Tools: Keycloak, Okta, AWS IAM Identity Center,,,
+  Tools: Keycloak, Okta, AWS IAM Identity Center,
                       </p>
                     </div>
                   </div>
@@ -282,7 +282,7 @@ const ZeroTrustAISecurityFramework2025: () => {
                         Every microservice authenticated before communication.
                       </p>
                       <p className="text-sm text-cyan-400">
-  Tools: Istio, Linkerd, Cilium, Consul Connect,,,
+  Tools: Istio, Linkerd, Cilium, Consul Connect,
                       </p>
                     </div>
                   </div>
@@ -304,7 +304,7 @@ const ZeroTrustAISecurityFramework2025: () => {
                         OPA evaluates policies in real-time.
                       </p>
                       <p className="text-sm text-blue-400">
-  Tools: Open Policy Agent, Kong Gateway, AWS API Gateway,,,
+  Tools: Open Policy Agent, Kong Gateway, AWS API Gateway,
                       </p>
                     </div>
                   </div>
@@ -326,7 +326,7 @@ const ZeroTrustAISecurityFramework2025: () => {
                         suspicious patterns (unusual data access, model queries).
                       </p>
                       <p className="text-sm text-purple-400">
-  Tools: Datadog Security, Splunk SIEM, Wiz, Lacework,,,
+  Tools: Datadog Security, Splunk SIEM, Wiz, Lacework,
                       </p>
                     </div>
                   </div>
@@ -348,7 +348,7 @@ const ZeroTrustAISecurityFramework2025: () => {
                         Automated compliance reporting (SOC 2, ISO 27001, GDPR).
                       </p>
                       <p className="text-sm text-pink-400">
-  Tools: AWS CloudTrail, GCP Audit Logs, Vanta, Drata,,,
+  Tools: AWS CloudTrail, GCP Audit Logs, Vanta, Drata,
                       </p>
                     </div>
                   </div>

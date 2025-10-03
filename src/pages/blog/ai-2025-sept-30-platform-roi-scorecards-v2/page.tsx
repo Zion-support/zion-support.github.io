@@ -26,7 +26,7 @@ export default function PlatformRoiScorecardsV2(): React.JSX.Element {
             establish baselines, set explicit objectives, and quantify ROI using leading and lagging indicators.
           </p>
           <p >
-            Highlights: path time-to-first-value, change failure rate, paved road adoption, reliability and cost,,,
+            Highlights: path time-to-first-value, change failure rate, paved road adoption, reliability and cost,
             scorecards, and an executive roll-up that ties platform investment to business outcomes.
           </p>
         </div>

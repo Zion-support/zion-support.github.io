@@ -7,7 +7,7 @@ const GlobalRetailAITransformation: () => {
   return (
     <>
       <Helmet >
-        <title >Global Retail AI Transformation: $489M Value Created in 18 Months | Zion Tech Group</title>,,
+        <title >Global Retail AI Transformation: $489M Value Created in 18 Months | Zion Tech Group</title>,
         <meta name: "description
   content: "Fortune 100 retailer achieves $489M value creation through comprehensive AI transformation. 94% inventory optimization, 78% customer satisfaction increase, 340% marketing ROI." /><meta name: "keywords
   content: "AI transformation case study, retail AI, inventory optimization, personalization, demand forecasting, customer analytics" /></Helmet>
@@ -423,61 +423,61 @@ const GlobalRetailAITransformation: () => {
                     <div className="space-y-3">
                       <div className="bg-white/5 rounded-lg p-3 border border-green-400/30">
                         <div className="flex justify-between items-center">
-                          <span >Inventory Optimization: </span>,,
+                          <span >Inventory Optimization: </span>,
                           <strong className="text-green-400">94%</strong>
                         </div>
                       </div>
                       <div className="bg-white/5 rounded-lg p-3 border border-blue-400/30">
                         <div className="flex justify-between items-center">
-                          <span >Forecast Accuracy: </span>,,
+                          <span >Forecast Accuracy: </span>,
                           <strong className="text-blue-400">96%</strong>
                         </div>
                       </div>
                       <div className="bg-white/5 rounded-lg p-3 border border-purple-400/30">
                         <div className="flex justify-between items-center">
-                          <span >Customer Satisfaction: </span>,,
+                          <span >Customer Satisfaction: </span>,
                           <strong className="text-purple-400">+78%</strong>
                         </div>
                       </div>
                       <div className="bg-white/5 rounded-lg p-3 border border-cyan-400/30">
                         <div className="flex justify-between items-center">
-                          <span >Marketing ROI: </span>,,
+                          <span >Marketing ROI: </span>,
                           <strong className="text-cyan-400">340%</strong>
                         </div>
                       </div>
                       <div className="bg-white/5 rounded-lg p-3 border border-orange-400/30">
                         <div className="flex justify-between items-center">
-                          <span >Conversion Rate: </span>,,
+                          <span >Conversion Rate: </span>,
                           <strong className="text-orange-400">+340%</strong>
                     <h3 className="text-2xl font-bold text-white mb-6">Operational Improvements</h3>","
                     <div className="space-y-3">","
                       <div className="bg-white/5 rounded-lg p-3 border border-green-400/30">","
                         <div className="flex justify-between items-center">","
-                          <span >Inventory Optimization: </span>,,
+                          <span >Inventory Optimization: </span>,
                           <strong className="text-green-400">94%</strong>","
                         </div>
                       </div>
                       <div className="bg-white/5 rounded-lg p-3 border border-blue-400/30">","
                         <div className="flex justify-between items-center">","
-                          <span >Forecast Accuracy: </span>,,
+                          <span >Forecast Accuracy: </span>,
                           <strong className="text-blue-400">96%</strong>","
                         </div>
                       </div>
                       <div className="bg-white/5 rounded-lg p-3 border border-purple-400/30">","
                         <div className="flex justify-between items-center">","
-                          <span >Customer Satisfaction: </span>,,
+                          <span >Customer Satisfaction: </span>,
                           <strong className="text-purple-400">+78%</strong>","
                         </div>
                       </div>
                       <div className="bg-white/5 rounded-lg p-3 border border-cyan-400/30">","
                         <div className="flex justify-between items-center">","
-                          <span >Marketing ROI: </span>,,
+                          <span >Marketing ROI: </span>,
                           <strong className="text-cyan-400">340%</strong>","
                         </div>
                       </div>
                       <div className="bg-white/5 rounded-lg p-3 border border-orange-400/30">","
                         <div className="flex justify-between items-center">","
-                          <span >Conversion Rate: </span>,,
+                          <span >Conversion Rate: </span>,
                           <strong className="text-orange-400">+340%</strong>","
                         </div>
                       </div>
@@ -490,7 +490,7 @@ const GlobalRetailAITransformation: () => {
                 <div className="mt-8 pt-8 border-t border-white/20 text-center">","
                   <div className="text-xl text-white mb-2">ROI: <strong className ="text-4xl text-green-400">823%</strong></div>","
                   <div className="text-sm text-zion-slate-light">
-  Investment: $59.5M • Value Created: $489M • Payback Period: 4.3 months,,,
+  Investment: $59.5M • Value Created: $489M • Payback Period: 4.3 months,
                   </div>
                 </div>
               </div>

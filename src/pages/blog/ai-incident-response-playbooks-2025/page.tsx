@@ -1,7 +1,7 @@
-import React from 'react'';
+import React from 'react';
 import React from 'react';'
 
-const AIIncidentResponsePlaybooks2025: React.FC: ()  => {,,,
+const AIIncidentResponsePlaybooks2025: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">","
       <div className="container mx-auto px-4 py-16 max-w-4xl">","
@@ -14,14 +14,14 @@ const AIIncidentResponsePlaybooks2025: React.FC: ()  => {,,,
             <span >7 min read</span>
           </div>
           <h1 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">
-  AI Incident Response Playbooks: Contain in &lt;60s with Confidence,,
+  AI Incident Response Playbooks: Contain in &lt;60s with Confidence,
           </h1>
           <p className="text-xl text-gray-600 leading-relaxed">
           <h1 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">
-  AI Incident Response Playbooks: Contain in &lt;60s with Confidence,,
+  AI Incident Response Playbooks: Contain in &lt;60s with Confidence,
           </h1>
           <p className="text-xl text-gray-600 leading-relaxed">
-  From detections to safe actions: policy‑tested playbooks and rollback‑ready automations. ,,,
+  From detections to safe actions: policy‑tested playbooks and rollback‑ready automations. ,
             Design incident playbooks with budgeted actions, approvals, and telemetry that close the loop fast.
           </p>
         </div>
@@ -42,26 +42,26 @@ const AIIncidentResponsePlaybooks2025: React.FC: ()  => {,,,
 
           <h3 >Example Playbook Skeleton</h3>
           <pre className="text-sm overflow-x-auto">
-{`playbook: name: contain-compromised-credential,,`;,`;
-  budget: low,,,
-  approvals: - security_oncall,,,
-  steps: - verify_signal: oidc-anomaly,,
-    - action: revoke_tokens scoped:user_id,,
-    - action: rotate_keys scoped:workload,,
-    - rollback: restore_tokens if:canary_fails,,,
-  telemetry: - emit: action.outcome,,
-    - emit: time_to_contain,,
+{`playbook: name: contain-compromised-credential,`;,`;
+  budget: low,
+  approvals: - security_oncall,
+  steps: - verify_signal: oidc-anomaly,
+    - action: revoke_tokens scoped:user_id,
+    - action: rotate_keys scoped:workload,
+    - rollback: restore_tokens if:canary_fails,
+  telemetry: - emit: action.outcome,
+    - emit: time_to_contain,
 `}`;`;
           <pre className="text-sm overflow-x-auto">","
 {`playbook: name: contain-compromised-credential,`,`;,`;
-  budget: low,,,
-  approvals: - security_oncall,,,
-  steps: - verify_signal: oidc-anomaly,,,
-    - action: revoke_tokens scoped:user_id,,
-    - action: rotate_keys scoped:workload,,
-    - rollback: restore_tokens if:canary_fails,,,
-  telemetry: - emit: action.outcome,,,
-    - emit: time_to_contain,,
+  budget: low,
+  approvals: - security_oncall,
+  steps: - verify_signal: oidc-anomaly,
+    - action: revoke_tokens scoped:user_id,
+    - action: rotate_keys scoped:workload,
+    - rollback: restore_tokens if:canary_fails,
+  telemetry: - emit: action.outcome,
+    - emit: time_to_contain,
 `}`
           </pre>
 

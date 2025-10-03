@@ -32,7 +32,7 @@ export default function AutonomousInfrastructureHealing2025(): void {
             
             <h1 className="text-5xl md: text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 text-transparent bg-clip-text leading-tight">","
             <h1 className="text-5xl md: text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 text-transparent bg-clip-text leading-tight">
-  Autonomous Infrastructure Self-Healing: The 2025 Reliability Revolution,,
+  Autonomous Infrastructure Self-Healing: The 2025 Reliability Revolution,
             </h1>
             
             <p className="text-xl text-gray-300 leading-relaxed">
@@ -49,11 +49,11 @@ export default function AutonomousInfrastructureHealing2025(): void {
               <ul className="space-y-4 text-lg">
                 <li className="flex items-start gap-3">
                   <Zap className="h-6 w-6 text-yellow-400 mt-1 flex-shrink-0/>
-                  <span ><strong >99.97% Uptime: </strong> Autonomous healing resolves 94% of incidents before user impact</span>,,
+                  <span ><strong >99.97% Uptime: </strong> Autonomous healing resolves 94% of incidents before user impact</span>,
                 </li>
                 <li className="flex items-start gap-3">
                   <Shield className="h-6 w-6 text-green-400 mt-1 flex-shrink-0/>
-                  <span ><strong >Sub-Second Response: </strong> AI detects and remediates issues in under 850ms average</span>,,
+                  <span ><strong >Sub-Second Response: </strong> AI detects and remediates issues in under 850ms average</span>,
                 </li>
                 <li className="flex items-start gap-3">
                   <TrendingUp className="h-6 w-6 text-blue-400 mt-1 flex-shrink-0/>
@@ -66,15 +66,15 @@ export default function AutonomousInfrastructureHealing2025(): void {
               <ul className="space-y-4 text-lg">","
                 <li className="flex items-start gap-3">","
                   <Zap className="h-6 w-6 text-yellow-400 mt-1 flex-shrink-0" />","
-                  <span ><strong >99.97% Uptime: </strong> Autonomous healing resolves 94% of incidents before user impact</span>,,
+                  <span ><strong >99.97% Uptime: </strong> Autonomous healing resolves 94% of incidents before user impact</span>,
                 </li>
                 <li className="flex items-start gap-3">","
                   <Shield className="h-6 w-6 text-green-400 mt-1 flex-shrink-0" />","
-                  <span ><strong >Sub-Second Response: </strong> AI detects and remediates issues in under 850ms average</span>,,
+                  <span ><strong >Sub-Second Response: </strong> AI detects and remediates issues in under 850ms average</span>,
                 </li>
                 <li className="flex items-start gap-3">","
                   <TrendingUp className="h-6 w-6 text-blue-400 mt-1 flex-shrink-0" />","
-                  <span ><strong >$67M+ Annual Savings: </strong> Reduce operational costs by 78% through automation</span>,,
+                  <span ><strong >$67M+ Annual Savings: </strong> Reduce operational costs by 78% through automation</span>,
                 </li>
               </ul>
             </div>
@@ -224,7 +224,7 @@ export default function AutonomousInfrastructureHealing2025(): void {
               </p>
               <p className="text-gray-300 mb-4 leading-relaxed">
               <p className="text-gray-300 mb-4 leading-relaxed">
-  The competitive advantage is clear: systems that heal themselves operate at dramatically higher reliability with,,,
+  The competitive advantage is clear: systems that heal themselves operate at dramatically higher reliability with,
   fraction of the operational cost. Early adopters report 85%+ improvement in developer satisfaction and 4.5x faster 
                 feature delivery velocity as teams reclaim time previously lost to incident response.
               </p>

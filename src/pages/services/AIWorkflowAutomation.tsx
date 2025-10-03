@@ -1,6 +1,6 @@
-import React from 'react'';
-import { Helmet } from 'react-helmet-async'';
-import { TrendingUp } from 'lucide-react'';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { TrendingUp } from 'lucide-react';
 import Header from '../../components/Header'';
 import Footer from '../../components/Footer'';
 import React from 'react';'
@@ -9,10 +9,10 @@ import { TrendingUp } from 'lucide-react';'
 import Header from '../../components/Header';'
 import Footer from '../../components/Footer';'
 
-const AIWorkflowAutomation: React.FC: ()  => {,,,
-  const features: [,,
+const AIWorkflowAutomation: React.FC = () => {
+  const features: [
     {
-      icon: Brain,,,,
+      icon: Brain,
       title: "Intelligent Process Discovery",
       description: "AI automatically maps your existing workflows and identifies optimization opportunities.",
       title: "Intelligent Process Discovery",","
@@ -20,7 +20,7 @@ const AIWorkflowAutomation: React.FC: ()  => {,,,
       benefit: "Reduce manual mapping time by 90%","
     },
     {
-      icon: Zap,,,,
+      icon: Zap,
       title: "Smart Automation Rules",
       description: "Machine learning algorithms create and optimize automation rules based on your data patterns.",
       title: "Smart Automation Rules",","
@@ -28,7 +28,7 @@ const AIWorkflowAutomation: React.FC: ()  => {,,,
       benefit: "Increase automation accuracy by 95%","
     },
     {
-      icon: BarChart3,,,,
+      icon: BarChart3,
       title: "Real-time Analytics",
       description: "Monitor workflow performance with advanced analytics and predictive insights.",
       title: "Real-time Analytics",","
@@ -36,7 +36,7 @@ const AIWorkflowAutomation: React.FC: ()  => {,,,
       benefit: "Improve decision-making speed by 80%","
     },
     {
-      icon: Shield,,,,
+      icon: Shield,
       title: "Enterprise Security",
       description: "Bank-grade security with end-to-end encryption and compliance certifications.",
       title: "Enterprise Security",","
@@ -44,7 +44,7 @@ const AIWorkflowAutomation: React.FC: ()  => {,,,
       benefit: "100% compliance with industry standards","
     },
     {
-      icon: Clock,,,,
+      icon: Clock,
       title: "24/7 Operations",
       description: "Automated workflows run continuously without human intervention.",
       title: "24/7 Operations",","
@@ -52,7 +52,7 @@ const AIWorkflowAutomation: React.FC: ()  => {,,,
       benefit: "Reduce operational costs by 75%","
     },
     {
-      icon: Users,,,,
+      icon: Users,
       title: "Collaborative Workflows",
       description: "Enable seamless collaboration across teams with intelligent task routing.",
       title: "Collaborative Workflows",","
@@ -61,13 +61,13 @@ const AIWorkflowAutomation: React.FC: ()  => {,,,
     }
   ];
 
-  const pricing: [,,
+  const pricing: [
     {
       name: "Starter
       price: "$2,500
       period: "/month
       description: "Perfect for small businesses getting started with automation
-      features: [,,,
+      features: [
         "Up to 10 automated workflows",";"
         "5 user accounts",";"
         "Basic analytics dashboard",";"
@@ -75,14 +75,14 @@ const AIWorkflowAutomation: React.FC: ()  => {,,,
         "Standard integrations (5)",";"
         "Monthly reporting"
       ]
-      popular: false,,
+      popular: false,
     },
     {
       name: "Professional
       price: "$7,500
       period: "/month
       description: "Ideal for growing businesses with complex workflows
-      features: [,,,
+      features: [
         "Unlimited automated workflows",";"
         "25 user accounts",";"
         "Advanced analytics & AI insights",";"
@@ -92,14 +92,14 @@ const AIWorkflowAutomation: React.FC: ()  => {,,,
         "Custom workflow templates",";"
         "API access"
       ]
-      popular: true,,
+      popular: true,
     },
     {
       name: "Enterprise
       price: "$25,000
       period: "/month
       description: "Complete solution for large organizations
-      features: [,,,
+      features: [
         "Unlimited everything",";"
         "Unlimited user accounts",";"
         "Enterprise-grade analytics",";"
@@ -110,12 +110,12 @@ const AIWorkflowAutomation: React.FC: ()  => {,,,
         "SLA guarantee",";"
         "On-premise deployment option"
       ]
-      popular: false,,,
+      popular: false,
       name: "Starter",","
       price: "$2,500",","
       period: "/month",","
       description: "Perfect for small businesses getting started with automation",","
-      features: [,,,
+      features: [
         "Up to 10 automated workflows","
         "5 user accounts","
         "Basic analytics dashboard","
@@ -123,14 +123,14 @@ const AIWorkflowAutomation: React.FC: ()  => {,,,
         "Standard integrations (5)","
         "Monthly reporting"
       ]
-      popular: false,,
+      popular: false,
     },
     {
       name: "Professional",","
       price: "$7,500",","
       period: "/month",","
       description: "Ideal for growing businesses with complex workflows",","
-      features: [,,,
+      features: [
         "Unlimited automated workflows","
         "25 user accounts","
         "Advanced analytics & AI insights","
@@ -140,14 +140,14 @@ const AIWorkflowAutomation: React.FC: ()  => {,,,
         "Custom workflow templates","
         "API access"
       ]
-      popular: true,,
+      popular: true,
     },
     {
       name: "Enterprise",","
       price: "$25,000",","
       period: "/month",","
       description: "Complete solution for large organizations",","
-      features: [,,,
+      features: [
         "Unlimited everything","
         "Unlimited user accounts","
         "Enterprise-grade analytics","
@@ -158,11 +158,11 @@ const AIWorkflowAutomation: React.FC: ()  => {,,,
         "SLA guarantee","
         "On-premise deployment option"
       ]
-      popular: false,,
+      popular: false,
     }
   ];
 
-  const testimonials: [,,
+  const testimonials: [
     {
       name: "Sarah Chen",
       role: "CTO, TechFlow Solutions",
@@ -170,7 +170,7 @@ const AIWorkflowAutomation: React.FC: ()  => {,,,
       name: "Sarah Chen",","
       role: "CTO, TechFlow Solutions",","
       content: "Zion's AI Workflow Automation reduced our processing time by 85% and eliminated manual errors completely. ROI achieved in just 3 months.",","
-      rating: 5,,,,
+      rating: 5,
       company: "TechFlow Solutions","
     },
     {
@@ -180,7 +180,7 @@ const AIWorkflowAutomation: React.FC: ()  => {,,,
       name: "Michael Rodriguez",","
       role: "Operations Director, Global Manufacturing Co.",","
       content: "The intelligent process discovery feature identified $2M in savings opportunities we never knew existed. Game-changing technology.",","
-      rating: 5,,,,
+      rating: 5,
       company: "Global Manufacturing Co.","
     },
     {
@@ -190,24 +190,24 @@ const AIWorkflowAutomation: React.FC: ()  => {,,,
       name: "Dr. Lisa Wang",","
       role: "VP Operations, HealthTech Innovations",","
       content: "Implementation was seamless and the results exceeded our expectations. Our team productivity increased by 70% within the first quarter.",","
-      rating: 5,,,,
+      rating: 5,
       company: "HealthTech Innovations","
     }
   ];
 
-  const caseStudies: [,,
+  const caseStudies: [
     {
       title: "Fortune 500 Manufacturing
       challenge: "Manual workflow processes causing delays and errors
       solution: "Implemented AI-driven automation for supply chain management
-      results: [,,,
+      results: [
         "85% reduction in processing time",";"
         "99.7% accuracy improvement",";"
         "$15M annual cost savings"
       title: "Fortune 500 Manufacturing",","
       challenge: "Manual workflow processes causing delays and errors",","
       solution: "Implemented AI-driven automation for supply chain management",","
-      results: [,,,
+      results: [
         "85% reduction in processing time","
         "99.7% accuracy improvement","
         "$15M annual cost savings","
@@ -218,14 +218,14 @@ const AIWorkflowAutomation: React.FC: ()  => {,,,
       title: "Global Financial Services
       challenge: "Complex compliance workflows requiring manual oversight
       solution: "Deployed intelligent automation with real-time monitoring
-      results: [,,,
+      results: [
         "90% faster compliance reporting",";"
         "100% audit compliance rate",";"
         "$8M operational savings"
       title: "Global Financial Services",","
       challenge: "Complex compliance workflows requiring manual oversight",","
       solution: "Deployed intelligent automation with real-time monitoring",","
-      results: [,,,
+      results: [
         "90% faster compliance reporting","
         "100% audit compliance rate","
         "$8M operational savings","
@@ -236,14 +236,14 @@ const AIWorkflowAutomation: React.FC: ()  => {,,,
       title: "Healthcare System
       challenge: "Patient data processing bottlenecks
       solution: "Automated patient intake and data processing workflows
-      results: [,,,
+      results: [
         "75% faster patient processing",";"
         "95% reduction in data entry errors",";"
         "40% improvement in patient satisfaction"
       title: "Healthcare System",","
       challenge: "Patient data processing bottlenecks",","
       solution: "Automated patient intake and data processing workflows",","
-      results: [,,,
+      results: [
         "75% faster patient processing","
         "95% reduction in data entry errors","
         "40% improvement in patient satisfaction","
@@ -379,7 +379,7 @@ const AIWorkflowAutomation: React.FC: ()  => {,,,
 
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">","
               {features.map((feature, index) => {
-                const Icon: feature.icon;,,,
+                const Icon: feature.icon;,
   return (
                   <div key: {index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">","
                     <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-lg mb-4">
@@ -391,7 +391,7 @@ const AIWorkflowAutomation: React.FC: ()  => {,,,
                       <CheckCircle className="w-4 h-4 mr-1/>
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">","
               {features.map((feature, index) => {
-                const Icon: feature.icon;,,,
+                const Icon: feature.icon;,
   return (
                   <div key: {index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">","
                     <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-lg mb-4">","
@@ -457,7 +457,7 @@ const AIWorkflowAutomation: React.FC: ()  => {,,,
                     ))}
                   </ul>
                   <a href="/contact
-  className: {,,
+  className: {,
 `w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${`
 plan.popular
 ? 'bg-blue-600 text-white hover:bg-blue-700',';,

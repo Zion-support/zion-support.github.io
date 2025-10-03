@@ -3,7 +3,7 @@ const QuantumAIHybrid2025: () => {
   return (
     <>
       <Helmet >
-        <title >Quantum-AI Hybrid Systems 2025: Practical Near-Term Implementation | Zion Tech Group</title>,,
+        <title >Quantum-AI Hybrid Systems 2025: Practical Near-Term Implementation | Zion Tech Group</title>,
         <meta name: "description" content ="Discover how quantum-AI hybrid systems are revolutionizing enterprise computing. Learn implementation strategies, real-world applications, and ROI optimization for 1000x processing speed gains." /><meta property: "og:title" content="Quantum-AI Hybrid Systems 2025: Practical Near-Term Implementation" />
         <meta property: "og:description" content ="Discover how quantum-AI hybrid systems are revolutionizing enterprise computing. Learn implementation strategies, real-world applications, and ROI optimization for 1000x processing speed gains." />
         <link rel: "canonical" href="https://ziontechgroup.com/blog/ai-2025-october-quantum-ai-hybrid-systems/>","

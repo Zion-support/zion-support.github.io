@@ -5,7 +5,7 @@ export default function ZeroPIIExperimentsV22025(): React.JSX.Element {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">","
       <Helmet >
-        <title >Edge 2025: Zero‑PII Experiments v2</title>,,
+        <title >Edge 2025: Zero‑PII Experiments v2</title>,
         <meta name: "description" content ="Scoped IDs, on‑device metrics, and DP noise enabling compliant A/B worldwide under 100ms." /><link rel: "canonical" href ="https://ziontechgroup.com/blog/edge-2025-sept-30-zero-pii-experiments-v2/>","
       </Helmet>
 

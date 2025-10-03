@@ -7,7 +7,7 @@ const AdaptiveLearningPlatforms: () => {
   return (
     <>
       <Helmet >
-        <title >AI-Powered Adaptive Learning Platforms 2025: Personalized Enterprise Training at Scale | Zion Tech Group</title>,,
+        <title >AI-Powered Adaptive Learning Platforms 2025: Personalized Enterprise Training at Scale | Zion Tech Group</title>,
         <meta name: "description
   content: "Revolutionary adaptive learning systems using AI to personalize enterprise training. Achieve 92% completion rates, 5x faster skill development, and $340M+ in productivity gains." /><meta name: "keywords
   content: "adaptive learning, AI training, enterprise learning, personalized education, skill development, LMS, learning analytics, GPT-4 education" /></Helmet>
@@ -337,23 +337,23 @@ const AdaptiveLearningPlatforms: () => {
                     <h3 className="text-xl font-bold text-white mb-4">Investment (1,000 learners)</h3>
                     <ul className="space-y-2 text-sm">
                       <li className="flex justify-between">
-                        <span >Platform licensing: </span>,,
+                        <span >Platform licensing: </span>,
                         <span className="text-white font-semibold">$240K/year</span>
                       </li>
                       <li className="flex justify-between">
-                        <span >Content migration: </span>,,
+                        <span >Content migration: </span>,
                         <span className="text-white font-semibold">$180K one-time</span>
                       </li>
                       <li className="flex justify-between">
-                        <span >Integration & training: </span>,,
+                        <span >Integration & training: </span>,
                         <span className="text-white font-semibold">$120K one-time</span>
                       </li>
                       <li className="flex justify-between">
-                        <span >Ongoing support: </span>,,
+                        <span >Ongoing support: </span>,
                         <span className="text-white font-semibold">$60K/year</span>
                       </li>
                       <li className="flex justify-between border-t border-white/20 pt-2 mt-2">
-                        <strong >First Year Total: </strong>,,
+                        <strong >First Year Total: </strong>,
                         <strong className="text-white">$600K</strong>
               <h2 className="text-3xl font-bold text-white mb-6">💰 Enterprise ROI Analysis</h2>","
               <div className="bg-gradient-to-r from-green-900/40 to-blue-900/40 rounded-xl p-8 border border-green-500/30">","
@@ -362,23 +362,23 @@ const AdaptiveLearningPlatforms: () => {
                     <h3 className="text-xl font-bold text-white mb-4">Investment (1,000 learners)</h3>","
                     <ul className="space-y-2 text-sm">","
                       <li className="flex justify-between">","
-                        <span >Platform licensing: </span>,,
+                        <span >Platform licensing: </span>,
                         <span className="text-white font-semibold">$240K/year</span>","
                       </li>
                       <li className="flex justify-between">","
-                        <span >Content migration: </span>,,
+                        <span >Content migration: </span>,
                         <span className="text-white font-semibold">$180K one-time</span>","
                       </li>
                       <li className="flex justify-between">","
-                        <span >Integration & training: </span>,,
+                        <span >Integration & training: </span>,
                         <span className="text-white font-semibold">$120K one-time</span>","
                       </li>
                       <li className="flex justify-between">","
-                        <span >Ongoing support: </span>,,
+                        <span >Ongoing support: </span>,
                         <span className="text-white font-semibold">$60K/year</span>","
                       </li>
                       <li className="flex justify-between border-t border-white/20 pt-2 mt-2">","
-                        <strong >First Year Total: </strong>,,
+                        <strong >First Year Total: </strong>,
                         <strong className="text-white">$600K</strong>","
                       </li>
                     </ul>
@@ -391,10 +391,10 @@ const AdaptiveLearningPlatforms: () => {
                         <span className="text-green-400 font-semibold">$2.1M</span>","
                       </li>
                       <li className="flex justify-between">
-                        <span >Faster time-to-productivity: </span>,,
+                        <span >Faster time-to-productivity: </span>,
                         <span className="text-green-400 font-semibold">$1.8M</span>
                       <li className="flex justify-between">","
-                        <span >Faster time-to-productivity: </span>,,
+                        <span >Faster time-to-productivity: </span>,
                         <span className="text-green-400 font-semibold">$1.8M</span>","
                       </li>
                       <li className="flex justify-between">","
@@ -406,10 +406,10 @@ const AdaptiveLearningPlatforms: () => {
                         <span className="text-green-400 font-semibold">$1.3M</span>","
                       </li>
                       <li className="flex justify-between border-t border-white/20 pt-2 mt-2">
-                        <strong >Total Value: </strong>,,
+                        <strong >Total Value: </strong>,
                         <strong className="text-green-400">$7.6M</strong>
                       <li className="flex justify-between border-t border-white/20 pt-2 mt-2">","
-                        <strong >Total Value: </strong>,,
+                        <strong >Total Value: </strong>,
                         <strong className="text-green-400">$7.6M</strong>","
                       </li>
                     </ul>

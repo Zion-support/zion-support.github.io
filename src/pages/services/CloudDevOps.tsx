@@ -1,6 +1,6 @@
-import React from 'react'';
-import { Helmet } from 'react-helmet-async'';
-import { Monitor } from 'lucide-react'';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Monitor } from 'lucide-react';
 import Header from '../../components/Header'';
 import Footer from '../../components/Footer'';
 import React from 'react';'
@@ -9,10 +9,10 @@ import { Monitor } from 'lucide-react';'
 import Header from '../../components/Header';'
 import Footer from '../../components/Footer';'
 
-const CloudDevOps: React.FC: ()  => {,,,
-  const features: [,,
+const CloudDevOps: React.FC = () => {
+  const features: [
     {
-      icon: Cloud,,,,
+      icon: Cloud,
       title: "Multi-Cloud Strategy",
       description: "Seamlessly deploy across AWS, Azure, GCP with intelligent workload optimization and cost management.",
       title: "Multi-Cloud Strategy",","
@@ -20,7 +20,7 @@ const CloudDevOps: React.FC: ()  => {,,,
       benefit: "40% cost reduction average","
     },
     {
-      icon: GitBranch,,,,
+      icon: GitBranch,
       title: "CI/CD Automation",
       description: "End-to-end automation from code commit to production deployment with advanced testing and rollback capabilities.",
       title: "CI/CD Automation",","
@@ -28,7 +28,7 @@ const CloudDevOps: React.FC: ()  => {,,,
       benefit: "90% faster deployments","
     },
     {
-      icon: Shield,,,,
+      icon: Shield,
       title: "DevSecOps Integration",
       description: "Security-first approach with automated vulnerability scanning, compliance checks, and threat detection.",
       title: "DevSecOps Integration",","
@@ -36,7 +36,7 @@ const CloudDevOps: React.FC: ()  => {,,,
       benefit: "99.9% security compliance","
     },
     {
-      icon: Monitor,,,,
+      icon: Monitor,
       title: "Infrastructure as Code",
       description: "Manage entire infrastructure through code with Terraform, Ansible, and custom automation tools.",
       title: "Infrastructure as Code",","
@@ -44,7 +44,7 @@ const CloudDevOps: React.FC: ()  => {,,,
       benefit: "Zero-downtime deployments","
     },
     {
-      icon: BarChart3,,,,
+      icon: BarChart3,
       title: "Advanced Monitoring",
       description: "Real-time monitoring, alerting, and performance optimization with AI-powered insights.",
       title: "Advanced Monitoring",","
@@ -52,7 +52,7 @@ const CloudDevOps: React.FC: ()  => {,,,
       benefit: "99.99% uptime SLA","
     },
     {
-      icon: Zap,,,,
+      icon: Zap,
       title: "Auto-Scaling",
       description: "Intelligent auto-scaling based on demand patterns with predictive capacity planning.",
       title: "Auto-Scaling",","
@@ -61,13 +61,13 @@ const CloudDevOps: React.FC: ()  => {,,,
     }
   ];
 
-  const pricing: [,,
+  const pricing: [
     {
       name: "Startup
       price: "$3,500
       period: "/month
       description: "Perfect for startups and small teams getting started with cloud infrastructure
-      features: [,,,
+      features: [
         "Single cloud provider setup",";"
         "Basic CI/CD pipeline",";"
         "Standard monitoring",";"
@@ -77,14 +77,14 @@ const CloudDevOps: React.FC: ()  => {,,,
         "Up to 5 environments",";"
         "Standard backup strategy"
       ]
-      popular: false,,
+      popular: false,
     },
     {
       name: "Growth
       price: "$8,500
       period: "/month
       description: "Ideal for growing companies with complex deployment needs
-      features: [,,,
+      features: [
         "Multi-cloud setup",";"
         "Advanced CI/CD with testing",";"
         "Comprehensive monitoring & alerting",";"
@@ -96,14 +96,14 @@ const CloudDevOps: React.FC: ()  => {,,,
         "Performance optimization",";"
         "Disaster recovery planning"
       ]
-      popular: true,,
+      popular: true,
     },
     {
       name: "Enterprise
       price: "$25,000
       period: "/month
       description: "Complete solution for large organizations with enterprise requirements
-      features: [,,,
+      features: [
         "Hybrid & multi-cloud architecture",";"
         "Enterprise-grade CI/CD",";"
         "Advanced monitoring with AI insights",";"
@@ -117,12 +117,12 @@ const CloudDevOps: React.FC: ()  => {,,,
         "SLA guarantee",";"
         "On-premise integration"
       ]
-      popular: false,,,
+      popular: false,
       name: "Startup",","
       price: "$3,500",","
       period: "/month",","
       description: "Perfect for startups and small teams getting started with cloud infrastructure",","
-      features: [,,,
+      features: [
         "Single cloud provider setup","
         "Basic CI/CD pipeline","
         "Standard monitoring","
@@ -132,14 +132,14 @@ const CloudDevOps: React.FC: ()  => {,,,
         "Up to 5 environments","
         "Standard backup strategy"
       ]
-      popular: false,,
+      popular: false,
     },
     {
       name: "Growth",","
       price: "$8,500",","
       period: "/month",","
       description: "Ideal for growing companies with complex deployment needs",","
-      features: [,,,
+      features: [
         "Multi-cloud setup","
         "Advanced CI/CD with testing","
         "Comprehensive monitoring & alerting","
@@ -151,14 +151,14 @@ const CloudDevOps: React.FC: ()  => {,,,
         "Performance optimization","
         "Disaster recovery planning"
       ]
-      popular: true,,
+      popular: true,
     },
     {
       name: "Enterprise",","
       price: "$25,000",","
       period: "/month",","
       description: "Complete solution for large organizations with enterprise requirements",","
-      features: [,,,
+      features: [
         "Hybrid & multi-cloud architecture","
         "Enterprise-grade CI/CD","
         "Advanced monitoring with AI insights","
@@ -172,11 +172,11 @@ const CloudDevOps: React.FC: ()  => {,,,
         "SLA guarantee","
         "On-premise integration"
       ]
-      popular: false,,
+      popular: false,
     }
   ];
 
-  const testimonials: [,,
+  const testimonials: [
     {
       name: "Alex Thompson",
       role: "CTO, FinTech Startup",
@@ -184,7 +184,7 @@ const CloudDevOps: React.FC: ()  => {,,,
       name: "Alex Thompson",","
       role: "CTO, FinTech Startup",","
       content: "Zion's DevOps team transformed our deployment process from weekly releases to multiple daily deployments. Our development velocity increased by 300%.",","
-      rating: 5,,,,
+      rating: 5,
       company: "FinTech Startup","
     },
     {
@@ -194,7 +194,7 @@ const CloudDevOps: React.FC: ()  => {,,,
       name: "Maria Rodriguez",","
       role: "VP Engineering, E-Commerce Platform",","
       content: "The multi-cloud strategy reduced our infrastructure costs by 45% while improving performance. The monitoring and alerting prevented 3 major outages.",","
-      rating: 5,,,,
+      rating: 5,
       company: "E-Commerce Platform","
     },
     {
@@ -204,55 +204,55 @@ const CloudDevOps: React.FC: ()  => {,,,
       name: "Dr. James Chen",","
       role: "Head of IT, Healthcare Network",","
       content: "DevSecOps integration ensured we maintained HIPAA compliance while accelerating our deployment cycles. Security incidents dropped to zero.",","
-      rating: 5,,,,
+      rating: 5,
       company: "Healthcare Network","
     }
   ];
 
-  const services: [,,
+  const services: [
     {
       title: "Cloud Migration",
-      icon: Cloud,,,,
+      icon: Cloud,
       description: "Seamless migration to cloud platforms with zero downtime and minimal disruption.",
       benefits: ["99.9% uptime during migration", "Automated data validation", "Rollback capabilities"]","
     },
     {
       title: "Container Orchestration",
-      icon: Server,,,,
+      icon: Server,
       description: "Kubernetes and Docker expertise for scalable, resilient containerized applications.",
       benefits: ["Auto-scaling capabilities", "Service mesh integration", "Advanced networking"]","
     },
     {
       title: "Infrastructure Automation",
-      icon: Zap,,,,
+      icon: Zap,
       description: "Complete infrastructure automation using Terraform, Ansible, and custom tools.",
       benefits: ["Infrastructure as Code", "Automated provisioning", "Environment consistency"]","
     },
     {
       title: "Security & Compliance",
-      icon: Shield,,,,
+      icon: Shield,
       description: "Comprehensive security implementation with automated compliance monitoring.",
       benefits: ["Automated security scanning", "Compliance reporting", "Threat detection"]
       title: "Cloud Migration",","
-      icon: Cloud,,,,
+      icon: Cloud,
       description: "Seamless migration to cloud platforms with zero downtime and minimal disruption.",","
       benefits: ["99.9% uptime during migration", "Automated data validation", "Rollback capabilities"]","
     },
     {
       title: "Container Orchestration",","
-      icon: Server,,,,
+      icon: Server,
       description: "Kubernetes and Docker expertise for scalable, resilient containerized applications.",","
       benefits: ["Auto-scaling capabilities", "Service mesh integration", "Advanced networking"]","
     },
     {
       title: "Infrastructure Automation",","
-      icon: Zap,,,,
+      icon: Zap,
       description: "Complete infrastructure automation using Terraform, Ansible, and custom tools.",","
       benefits: ["Infrastructure as Code", "Automated provisioning", "Environment consistency"]","
     },
     {
       title: "Security & Compliance",","
-      icon: Shield,,,,
+      icon: Shield,
       description: "Comprehensive security implementation with automated compliance monitoring.",","
       benefits: ["Automated security scanning", "Compliance reporting", "Threat detection"]","
     }
@@ -395,14 +395,14 @@ const CloudDevOps: React.FC: ()  => {,,,
 
             <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">","
               {services.map((service, index) => {
-                const Icon: service.icon;,,,
+                const Icon: service.icon;,
   return (
                   <div key: {index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">","
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-6">
                       <Icon className="w-8 h-8 text-green-600/>
             <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">","
               {services.map((service, index) => {
-                const Icon: service.icon;,,,
+                const Icon: service.icon;,
   return (
                   <div key: {index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">","
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-6">","
@@ -446,7 +446,7 @@ const CloudDevOps: React.FC: ()  => {,,,
 
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">","
               {features.map((feature, index) => {
-                const Icon: feature.icon;,,,
+                const Icon: feature.icon;,
   return (
                   <div key: {index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">","
                     <div className="inline-flex items-center justify-center w-12 h-12 bg-green-100 rounded-lg mb-4">
@@ -458,7 +458,7 @@ const CloudDevOps: React.FC: ()  => {,,,
                       <CheckCircle className="w-4 h-4 mr-1/>
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">","
               {features.map((feature, index) => {
-                const Icon: feature.icon;,,,
+                const Icon: feature.icon;,
   return (
                   <div key: {index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">","
                     <div className="inline-flex items-center justify-center w-12 h-12 bg-green-100 rounded-lg mb-4">","
@@ -524,7 +524,7 @@ const CloudDevOps: React.FC: ()  => {,,,
                     ))}
                   </ul>
                   <a href="/contact
-  className: {,,
+  className: {,
 `w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${`
 plan.popular
 ? 'bg-green-600 text-white hover:bg-green-700',';,

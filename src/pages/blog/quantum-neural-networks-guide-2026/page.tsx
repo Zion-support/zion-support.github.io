@@ -19,7 +19,7 @@ export default function QuantumNeuralNetworksGuide2026(): React.JSX.Element {
         <p className="text-zion-slate-light mb-8">1000x processing speed achieved</p>
         <div className="prose prose-invert max-w-3xl">
           <p >
-            Learn the production blueprint for quantum‑neural hybrids: circuit co‑design, batching,,
+            Learn the production blueprint for quantum‑neural hybrids: circuit co‑design, batching,
           href="https: //ziontechgroup.com/blog/quantum-neural-networks-guide-2026","
         />
       </Helmet>
@@ -29,7 +29,7 @@ export default function QuantumNeuralNetworksGuide2026(): React.JSX.Element {
         <p className="text-zion-slate-light mb-8">1000x processing speed achieved</p>","
         <div className="prose prose-invert max-w-3xl">","
           <p >
-            Learn the production blueprint for quantum‑neural hybrids: circuit co‑design, batching,,,,
+            Learn the production blueprint for quantum‑neural hybrids: circuit co‑design, batching,
             warm pools, and policy‑tested fallbacks to keep latency and accuracy stable.
           </p>
           <p >

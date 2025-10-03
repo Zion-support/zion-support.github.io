@@ -1,6 +1,6 @@
-import React from 'react'';
-import { Helmet } from 'react-helmet-async'';
-import { Globe } from 'lucide-react'';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Globe } from 'lucide-react';
 import Header from '../../components/Header'';
 import Footer from '../../components/Footer'';
 import React from 'react';'
@@ -9,10 +9,10 @@ import { Globe } from 'lucide-react';'
 import Header from '../../components/Header';'
 import Footer from '../../components/Footer';'
 
-const AIVirtualAssistant: React.FC: ()  => {,,,
-  const features: [,,
+const AIVirtualAssistant: React.FC = () => {
+  const features: [
     {
-      icon: Brain,,,,
+      icon: Brain,
       title: "Natural Language Processing",
       description: "Advanced NLP capabilities that understand context, sentiment, and intent with 95% accuracy.",
       title: "Natural Language Processing",","
@@ -20,7 +20,7 @@ const AIVirtualAssistant: React.FC: ()  => {,,,
       benefit: "95% conversation accuracy rate","
     },
     {
-      icon: MessageCircle,,,,
+      icon: MessageCircle,
       title: "Multi-Channel Support",
       description: "Deploy across web, mobile, social media, and voice channels with unified conversation history.",
       title: "Multi-Channel Support",","
@@ -28,7 +28,7 @@ const AIVirtualAssistant: React.FC: ()  => {,,,
       benefit: "Unified customer experience","
     },
     {
-      icon: Languages,,,,
+      icon: Languages,
       title: "120+ Language Support",
       description: "Real-time translation and multilingual support for global customer bases.",
       title: "120+ Language Support",","
@@ -36,7 +36,7 @@ const AIVirtualAssistant: React.FC: ()  => {,,,
       benefit: "Global reach capability","
     },
     {
-      icon: Shield,,,,
+      icon: Shield,
       title: "Enterprise Security",
       description: "Bank-grade security with end-to-end encryption, GDPR compliance, and data privacy protection.",
       title: "Enterprise Security",","
@@ -44,7 +44,7 @@ const AIVirtualAssistant: React.FC: ()  => {,,,
       benefit: "100% compliance guaranteed","
     },
     {
-      icon: Clock,,,,
+      icon: Clock,
       title: "24/7 Availability",
       description: "Never miss a customer inquiry with round-the-clock intelligent assistance.",
       title: "24/7 Availability",","
@@ -52,7 +52,7 @@ const AIVirtualAssistant: React.FC: ()  => {,,,
       benefit: "99.9% uptime SLA","
     },
     {
-      icon: Users,,,,
+      icon: Users,
       title: "Human Handoff",
       description: "Seamless escalation to human agents when complex issues require personal attention.",
       title: "Human Handoff",","
@@ -197,7 +197,7 @@ const AIVirtualAssistant: React.FC: ()  => {,,,
 
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">","
               {features.map((feature, index) => {
-                const Icon: feature.icon;,,,
+                const Icon: feature.icon;,
   return (
                   <div key: {index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">","
                     <div className="inline-flex items-center justify-center w-12 h-12 bg-purple-100 rounded-lg mb-4">
@@ -209,7 +209,7 @@ const AIVirtualAssistant: React.FC: ()  => {,,,
                       <CheckCircle className="w-4 h-4 mr-1/>
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">","
               {features.map((feature, index) => {
-                const Icon: feature.icon;,,,
+                const Icon: feature.icon;,
   return (
                   <div key: {index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">","
                     <div className="inline-flex items-center justify-center w-12 h-12 bg-purple-100 rounded-lg mb-4">","

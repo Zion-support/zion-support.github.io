@@ -1,8 +1,8 @@
-import React from 'react'';
-import { Helmet } from 'react-helmet-async'';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 ;
-const MicroSaaS: React.FC: ()  => {,,,
+const MicroSaaS: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
       <Helmet >

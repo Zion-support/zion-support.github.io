@@ -1,6 +1,6 @@
-import React from 'react'';
-import { Helmet } from 'react-helmet-async'';
-import { TrendingUp } from 'lucide-react'';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { TrendingUp } from 'lucide-react';
 import Header from '../../components/Header'';
 import Footer from '../../components/Footer'';
 import React from 'react';'
@@ -9,10 +9,10 @@ import { TrendingUp } from 'lucide-react';'
 import Header from '../../components/Header';'
 import Footer from '../../components/Footer';'
 
-const AIEmailMarketing: React.FC: ()  => {,,,
-  const features: [,,
+const AIEmailMarketing: React.FC = () => {
+  const features: [
     {
-      icon: Brain,,,,
+      icon: Brain,
       title: "AI Content Generation",
       description: "Automatically generate personalized email content based on customer behavior, preferences, and engagement history.",
       title: "AI Content Generation",","
@@ -20,7 +20,7 @@ const AIEmailMarketing: React.FC: ()  => {,,,
       benefit: "300% increase in open rates","
     },
     {
-      icon: Target,,,,
+      icon: Target,
       title: "Smart Segmentation",
       description: "AI-powered audience segmentation that identifies high-value customers and predicts optimal send times.",
       title: "Smart Segmentation",","
@@ -28,7 +28,7 @@ const AIEmailMarketing: React.FC: ()  => {,,,
       benefit: "85% improvement in click-through rates","
     },
     {
-      icon: BarChart3,,,,
+      icon: BarChart3,
       title: "Predictive Analytics",
       description: "Advanced analytics that predict campaign performance and optimize subject lines, content, and timing.",
       title: "Predictive Analytics",","
@@ -36,7 +36,7 @@ const AIEmailMarketing: React.FC: ()  => {,,,
       benefit: "250% ROI improvement","
     },
     {
-      icon: Zap,,,,
+      icon: Zap,
       title: "Automated Campaigns",
       description: "Intelligent automation that triggers personalized campaigns based on customer actions and lifecycle stages.",
       title: "Automated Campaigns",","
@@ -44,7 +44,7 @@ const AIEmailMarketing: React.FC: ()  => {,,,
       benefit: "70% reduction in manual work","
     },
     {
-      icon: Clock,,,,
+      icon: Clock,
       title: "Optimal Timing",
       description: "AI determines the best time to send emails to each individual recipient for maximum engagement.",
       title: "Optimal Timing",","
@@ -52,7 +52,7 @@ const AIEmailMarketing: React.FC: ()  => {,,,
       benefit: "45% increase in engagement","
     },
     {
-      icon: Shield,,,,
+      icon: Shield,
       title: "Deliverability Optimization",
       description: "Advanced algorithms ensure maximum inbox placement and compliance with email regulations.",
       title: "Deliverability Optimization",","
@@ -61,13 +61,13 @@ const AIEmailMarketing: React.FC: ()  => {,,,
     }
   ];
 
-  const pricing: [,,
+  const pricing: [
     {
       name: "Starter
       price: "$79
       period: "/month
       description: "Perfect for small businesses starting with AI-powered email marketing
-      features: [,,,
+      features: [
         "Up to 10,000 subscribers",";"
         "Basic AI content generation",";"
         "Simple automation",";"
@@ -77,14 +77,14 @@ const AIEmailMarketing: React.FC: ()  => {,,,
         "5 campaigns/month",";"
         "Basic segmentation"
       ]
-      popular: false,,
+      popular: false,
     },
     {
       name: "Professional
       price: "$199
       period: "/month
       description: "Ideal for growing businesses with advanced email marketing needs
-      features: [,,,
+      features: [
         "Up to 50,000 subscribers",";"
         "Advanced AI content generation",";"
         "Smart automation workflows",";"
@@ -96,14 +96,14 @@ const AIEmailMarketing: React.FC: ()  => {,,,
         "A/B testing",";"
         "API access"
       ]
-      popular: true,,
+      popular: true,
     },
     {
       name: "Enterprise
       price: "$599
       period: "/month
       description: "Complete solution for large organizations with enterprise requirements
-      features: [,,,
+      features: [
         "Unlimited subscribers",";"
         "Enterprise AI capabilities",";"
         "Complex automation workflows",";"
@@ -117,12 +117,12 @@ const AIEmailMarketing: React.FC: ()  => {,,,
         "SLA guarantee",";"
         "Training & consultation"
       ]
-      popular: false,,,
+      popular: false,
       name: "Starter",","
       price: "$79",","
       period: "/month",","
       description: "Perfect for small businesses starting with AI-powered email marketing",","
-      features: [,,,
+      features: [
         "Up to 10,000 subscribers","
         "Basic AI content generation","
         "Simple automation","
@@ -132,14 +132,14 @@ const AIEmailMarketing: React.FC: ()  => {,,,
         "5 campaigns/month","
         "Basic segmentation"
       ]
-      popular: false,,
+      popular: false,
     },
     {
       name: "Professional",","
       price: "$199",","
       period: "/month",","
       description: "Ideal for growing businesses with advanced email marketing needs",","
-      features: [,,,
+      features: [
         "Up to 50,000 subscribers","
         "Advanced AI content generation","
         "Smart automation workflows","
@@ -151,14 +151,14 @@ const AIEmailMarketing: React.FC: ()  => {,,,
         "A/B testing","
         "API access"
       ]
-      popular: true,,
+      popular: true,
     },
     {
       name: "Enterprise",","
       price: "$599",","
       period: "/month",","
       description: "Complete solution for large organizations with enterprise requirements",","
-      features: [,,,
+      features: [
         "Unlimited subscribers","
         "Enterprise AI capabilities","
         "Complex automation workflows","
@@ -172,11 +172,11 @@ const AIEmailMarketing: React.FC: ()  => {,,,
         "SLA guarantee","
         "Training & consultation"
       ]
-      popular: false,,
+      popular: false,
     }
   ];
 
-  const testimonials: [,,
+  const testimonials: [
     {
       name: "Jennifer Martinez",
       role: "Marketing Director, E-Commerce Platform",
@@ -184,7 +184,7 @@ const AIEmailMarketing: React.FC: ()  => {,,,
       name: "Jennifer Martinez",","
       role: "Marketing Director, E-Commerce Platform",","
       content: "AI email marketing increased our revenue by 180% in just 3 months. The personalized content generation and optimal timing features were game-changers for our business.",","
-      rating: 5,,,,
+      rating: 5,
       company: "E-Commerce Platform","
     },
     {
@@ -194,7 +194,7 @@ const AIEmailMarketing: React.FC: ()  => {,,,
       name: "David Chen",","
       role: "VP Marketing, SaaS Startup",","
       content: "The automated segmentation and predictive analytics helped us achieve a 15% conversion rate improvement. ROI increased by 250% within the first quarter.",","
-      rating: 5,,,,
+      rating: 5,
       company: "SaaS Startup","
     },
     {
@@ -204,61 +204,61 @@ const AIEmailMarketing: React.FC: ()  => {,,,
       name: "Sarah Johnson",","
       role: "Head of Growth, FinTech",","
       content: "Deliverability optimization and AI content generation reduced our unsubscribe rate by 60% while increasing engagement by 85%. The platform is incredibly intuitive.",","
-      rating: 5,,,,
+      rating: 5,
       company: "FinTech","
     }
   ];
 
-  const useCases: [,,
+  const useCases: [
     {
       title: "E-Commerce",
-      icon: Globe,,,,
+      icon: Globe,
       description: "Personalized product recommendations, abandoned cart recovery, and post-purchase follow-ups.",
       benefits: ["40% increase in sales", "60% cart recovery rate", "35% customer lifetime value"]","
     },
     {
       title: "SaaS & B2B",
-      icon: TrendingUp,,,,
+      icon: TrendingUp,
       description: "Lead nurturing, customer onboarding, feature announcements, and churn prevention campaigns.",
       benefits: ["50% faster onboarding", "30% reduction in churn", "45% increase in upgrades"]","
     },
     {
       title: "Healthcare",
-      icon: Users,,,,
+      icon: Users,
       description: "Patient engagement, appointment reminders, health tips, and medication compliance.",
       benefits: ["70% appointment compliance", "40% patient engagement", "25% readmission reduction"]","
     },
     {
       title: "Education",
-      icon: Brain,,,,
+      icon: Brain,
       description: "Student engagement, course updates, enrollment campaigns, and alumni communication.",
       benefits: ["55% enrollment increase", "60% course completion", "80% student satisfaction"]
       title: "E-Commerce",","
-      icon: Globe,,,,
+      icon: Globe,
       description: "Personalized product recommendations, abandoned cart recovery, and post-purchase follow-ups.",","
       benefits: ["40% increase in sales", "60% cart recovery rate", "35% customer lifetime value"]","
     },
     {
       title: "SaaS & B2B",","
-      icon: TrendingUp,,,,
+      icon: TrendingUp,
       description: "Lead nurturing, customer onboarding, feature announcements, and churn prevention campaigns.",","
       benefits: ["50% faster onboarding", "30% reduction in churn", "45% increase in upgrades"]","
     },
     {
       title: "Healthcare",","
-      icon: Users,,,,
+      icon: Users,
       description: "Patient engagement, appointment reminders, health tips, and medication compliance.",","
       benefits: ["70% appointment compliance", "40% patient engagement", "25% readmission reduction"]","
     },
     {
       title: "Education",","
-      icon: Brain,,,,
+      icon: Brain,
       description: "Student engagement, course updates, enrollment campaigns, and alumni communication.",","
       benefits: ["55% enrollment increase", "60% course completion", "80% student satisfaction"]","
     }
   ];
 
-  const capabilities: [,,
+  const capabilities: [
     {
       title: "Content Personalization",
       description: "AI generates unique email content for each recipient based on their behavior, preferences, and engagement history.","
@@ -443,14 +443,14 @@ const AIEmailMarketing: React.FC: ()  => {,,,
 
             <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">","
               {useCases.map((useCase, index) => {
-                const Icon: useCase.icon;,,,
+                const Icon: useCase.icon;,
   return (
                   <div key: {index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">","
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-emerald-100 rounded-full mb-6">
                       <Icon className="w-8 h-8 text-emerald-600/>
             <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">","
               {useCases.map((useCase, index) => {
-                const Icon: useCase.icon;,,,
+                const Icon: useCase.icon;,
   return (
                   <div key: {index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">","
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-emerald-100 rounded-full mb-6">","
@@ -522,7 +522,7 @@ const AIEmailMarketing: React.FC: ()  => {,,,
 
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">","
               {features.map((feature, index) => {
-                const Icon: feature.icon;,,,
+                const Icon: feature.icon;,
   return (
                   <div key: {index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">","
                     <div className="inline-flex items-center justify-center w-12 h-12 bg-emerald-100 rounded-lg mb-4">
@@ -534,7 +534,7 @@ const AIEmailMarketing: React.FC: ()  => {,,,
                       <CheckCircle className="w-4 h-4 mr-1/>
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">","
               {features.map((feature, index) => {
-                const Icon: feature.icon;,,,
+                const Icon: feature.icon;,
   return (
                   <div key: {index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">","
                     <div className="inline-flex items-center justify-center w-12 h-12 bg-emerald-100 rounded-lg mb-4">","
@@ -600,7 +600,7 @@ const AIEmailMarketing: React.FC: ()  => {,,,
                     ))}
                   </ul>
                   <a href="/contact
-  className: {,,
+  className: {,
 `w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${`
 plan.popular
 ? 'bg-emerald-600 text-white hover:bg-emerald-700',';,

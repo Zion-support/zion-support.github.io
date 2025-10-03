@@ -1,5 +1,5 @@
-import React from 'react'';
-import { Helmet } from 'react-helmet-async'';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { 
   Brain, 
   Code, 
@@ -270,7 +270,7 @@ import {
   BlueFootedBooby,
   PeruvianBooby,
   AbbottBooby
-} from 'lucide-react'';
+} from 'lucide-react';
 
 export default function NewServices2026() {
   const title = 'New Services 2026 — Zion Tech Group';';
@@ -280,15 +280,15 @@ export default function NewServices2026() {
     // AI-Powered Micro SaaS Solutions
     {
       category: 'AI-Powered Micro SaaS',';,
-      icon: Brain,,
+      icon: Brain,
       color: 'purple',';,
-      services: [,
+      services: [
         {
           name: 'AI-Powered Email Subject Line Optimizer Pro',';,
           description: 'Generate high-converting email subject lines using advanced AI analysis of industry performance data and A/B testing.',';,
           price: '$49 - $299/month',';,
           delivery: '1 week',';,
-          features: [,
+          features: [
             'AI-generated subject lines for 40+ industries',';
             'A/B testing with statistical significance analysis',';
             'Open rate prediction and optimization',';
@@ -298,7 +298,7 @@ export default function NewServices2026() {
             'Multi-language support for global campaigns',';
             'Real-time performance monitoring and alerts'
           ],
-          benefits: [,
+          benefits: [
             'Average 23% increase in email open rates',';
             '40% improvement in click-through rates',';
             '60% reduction in email marketing costs',';
@@ -313,7 +313,7 @@ export default function NewServices2026() {
           description: 'AI-powered meeting insights, productivity tracking, and automated follow-up generation for remote teams.',';,
           price: '$99 - $499/month',';,
           delivery: '2 weeks',';,
-          features: [,
+          features: [
             'Real-time meeting transcription and analysis',';
             'Action item extraction and automatic assignment',';
             'Meeting effectiveness scoring and optimization',';
@@ -323,7 +323,7 @@ export default function NewServices2026() {
             'Sentiment analysis and engagement tracking',';
             'Automated meeting summaries and distribution'
           ],
-          benefits: [,
+          benefits: [
             '35% reduction in meeting time waste',';
             '50% improvement in action item completion',';
             '25% increase in team productivity',';
@@ -338,7 +338,7 @@ export default function NewServices2026() {
           description: 'AI-driven appointment scheduling with patient preference learning, no-show prediction, and optimization.',';,
           price: '$199 - $999/month',';,
           delivery: '3 weeks',';,
-          features: [,
+          features: [
             'Smart scheduling with patient preferences and history',';
             'No-show prediction and prevention strategies',';
             'Wait time optimization and queue management',';
@@ -348,7 +348,7 @@ export default function NewServices2026() {
             'Multi-provider scheduling coordination',';
             'Real-time availability updates and notifications'
           ],
-          benefits: [,
+          benefits: [
             '28% reduction in no-show rates',';
             '15% increase in revenue through optimized scheduling',';
             '40% reduction in administrative overhead',';
@@ -363,7 +363,7 @@ export default function NewServices2026() {
           description: 'Automated content translation, cultural adaptation, and SEO optimization for global markets.',';,
           price: '$149 - $799/month',';,
           delivery: '2 weeks',';,
-          features: [,
+          features: [
             'Neural translation with cultural context understanding',';
             'SEO optimization for target markets and languages',';
             'Brand voice consistency across all languages',';
@@ -373,7 +373,7 @@ export default function NewServices2026() {
             'Multi-format support (web, mobile, documents)',';
             'Real-time translation updates and version control'
           ],
-          benefits: [,
+          benefits: [
             '40% faster time-to-market globally',';
             '60% reduction in translation costs',';
             '85% improvement in international SEO rankings',';
@@ -388,7 +388,7 @@ export default function NewServices2026() {
           description: 'AI-powered demand forecasting, stock optimization, and automated reordering for e-commerce businesses.',';,
           price: '$299 - $1,499/month',';,
           delivery: '3 weeks',';,
-          features: [,
+          features: [
             'Demand forecasting with 95% accuracy using machine learning',';
             'Automated reorder point calculations and alerts',';
             'Seasonal trend analysis and holiday optimization',';
@@ -398,7 +398,7 @@ export default function NewServices2026() {
             'Multi-location inventory management',';
             'Real-time stock alerts and low inventory warnings'
           ],
-          benefits: [,
+          benefits: [
             '25% reduction in stockouts',';
             '20% reduction in inventory carrying costs',';
             '35% improvement in cash flow',';
@@ -413,15 +413,15 @@ export default function NewServices2026() {
     // Advanced AI Services
     {
       category: 'Advanced AI Services',';,
-      icon: Cpu,,
+      icon: Cpu,
       color: 'blue',';,
-      services: [,
+      services: [
         {
           name: 'AI-Powered Compliance Monitor Pro',';,
           description: 'Automated compliance monitoring, risk assessment, and regulatory reporting for financial services.',';,
           price: '$999 - $4,999/month',';,
           delivery: '4 weeks',';,
-          features: [,
+          features: [
             'Real-time compliance monitoring across all regulations',';
             'Automated regulatory reporting and filing',';
             'Risk assessment and scoring with machine learning',';
@@ -431,7 +431,7 @@ export default function NewServices2026() {
             'Multi-jurisdiction compliance support',';
             'Automated remediation workflows'
           ],
-          benefits: [,
+          benefits: [
             '60% reduction in compliance costs',';
             '90% reduction in regulatory violations',';
             '50% faster audit preparation',';
@@ -446,7 +446,7 @@ export default function NewServices2026() {
           description: 'AI-driven lead qualification, scoring, and nurturing automation for B2B sales teams.',';,
           price: '$199 - $999/month',';,
           delivery: '2 weeks',';,
-          features: [,
+          features: [
             'Behavioral lead scoring with machine learning algorithms',';
             'Predictive lead qualification and prioritization',';
             'Automated nurturing campaigns and follow-ups',';
@@ -456,7 +456,7 @@ export default function NewServices2026() {
             'Multi-channel lead tracking and attribution',';
             'Real-time lead alerts and notifications'
           ],
-          benefits: [,
+          benefits: [
             '45% improvement in lead conversion rates',';
             '30% reduction in sales cycle length',';
             '50% increase in sales team productivity',';
@@ -471,7 +471,7 @@ export default function NewServices2026() {
           description: 'Advanced voice analysis for customer service optimization, sentiment detection, and compliance monitoring.',';,
           price: '$399 - $2,499/month',';,
           delivery: '3-4 weeks',';,
-          features: [,
+          features: [
             'Real-time voice sentiment analysis and emotion detection',';
             'Speaker identification and authentication',';
             'Call quality monitoring and optimization recommendations',';
@@ -481,7 +481,7 @@ export default function NewServices2026() {
             'Multi-language voice processing support',';
             'Compliance monitoring and automated reporting'
           ],
-          benefits: [,
+          benefits: [
             '50% improvement in customer service quality scores',';
             '35% reduction in customer complaints',';
             '25% increase in customer satisfaction',';
@@ -496,7 +496,7 @@ export default function NewServices2026() {
           description: 'IoT sensor data analysis for predictive equipment maintenance and failure prevention.',';,
           price: '$1,200 - $6,000/month',';,
           delivery: '4-8 weeks',';,
-          features: [,
+          features: [
             'Real-time sensor data processing and analysis',';
             'Machine learning failure prediction models',';
             'Automated maintenance scheduling and alerts',';
@@ -506,7 +506,7 @@ export default function NewServices2026() {
             'Multi-equipment monitoring and management',';
             'Predictive analytics dashboard and reporting'
           ],
-          benefits: [,
+          benefits: [
             '40% reduction in unplanned downtime',';
             '25% reduction in maintenance costs',';
             '30% improvement in equipment lifespan',';
@@ -521,7 +521,7 @@ export default function NewServices2026() {
           description: 'Automated content moderation with multi-modal AI for text, image, and video analysis.',';,
           price: '$299 - $1,999/month',';,
           delivery: '2-4 weeks',';,
-          features: [,
+          features: [
             'Multi-modal content analysis (text, image, video)',';
             'Real-time moderation with customizable policies',';
             'False positive reduction through ML feedback loops',';
@@ -531,7 +531,7 @@ export default function NewServices2026() {
             'Automated escalation and human review workflows',';
             'Compliance reporting and audit trails'
           ],
-          benefits: [,
+          benefits: [
             '70% reduction in moderation costs',';
             '90% improvement in content safety',';
             '60% faster content review processes',';
@@ -546,15 +546,15 @@ export default function NewServices2026() {
     // IT Infrastructure Services
     {
       category: 'IT Infrastructure Services',';,
-      icon: Server,,
+      icon: Server,
       color: 'green',';,
-      services: [,
+      services: [
         {
           name: 'Zero Trust Security Architecture',';,
           description: 'Comprehensive zero trust implementation with identity verification and micro-segmentation.',';,
           price: '$4,500 - $22,000/month',';,
           delivery: '6-12 weeks',';,
-          features: [,
+          features: [
             'Identity and access management (IAM) implementation',';
             'Network micro-segmentation and policy enforcement',';
             'Device trust and endpoint security management',';
@@ -564,7 +564,7 @@ export default function NewServices2026() {
             'Compliance reporting and audit support',';
             '24/7 security operations center (SOC) monitoring'
           ],
-          benefits: [,
+          benefits: [
             '99.9% reduction in security breaches',';
             '50% reduction in security management overhead',';
             '100% compliance with industry standards',';
@@ -579,7 +579,7 @@ export default function NewServices2026() {
           description: 'Complete cloud migration strategy with application modernization and optimization.',';,
           price: '$8,000 - $45,000/month',';,
           delivery: '8-16 weeks',';,
-          features: [,
+          features: [
             'Legacy application assessment and migration planning',';
             'Containerization and microservices architecture',';
             'Database migration and optimization',';
@@ -589,7 +589,7 @@ export default function NewServices2026() {
             'Security and compliance implementation',';
             'Training and ongoing support'
           ],
-          benefits: [,
+          benefits: [
             '40% reduction in infrastructure costs',';
             '60% improvement in application performance',';
             '99.9% uptime and reliability',';
@@ -604,7 +604,7 @@ export default function NewServices2026() {
           description: 'Secure CI/CD pipelines with automated security testing and compliance.',';,
           price: '$3,200 - $15,000/month',';,
           delivery: '4-8 weeks',';,
-          features: [,
+          features: [
             'Automated security scanning and vulnerability management',';
             'Infrastructure as Code (IaC) security validation',';
             'Secrets management and secure deployment',';
@@ -614,7 +614,7 @@ export default function NewServices2026() {
             'Performance testing and optimization',';
             'Training and best practices implementation'
           ],
-          benefits: [,
+          benefits: [
             '80% reduction in security vulnerabilities',';
             '70% faster deployment cycles',';
             '90% reduction in security incidents',';
@@ -629,7 +629,7 @@ export default function NewServices2026() {
           description: 'Comprehensive disaster recovery planning with automated failover and testing.',';,
           price: '$2,800 - $18,000/month',';,
           delivery: '6-10 weeks',';,
-          features: [,
+          features: [
             'Multi-region backup and replication strategies',';
             'Automated failover and recovery procedures',';
             'Business continuity planning and testing',';
@@ -639,7 +639,7 @@ export default function NewServices2026() {
             'Compliance and audit support',';
             'Regular testing and optimization'
           ],
-          benefits: [,
+          benefits: [
             '99.99% business continuity assurance',';
             '80% reduction in recovery time',';
             '50% reduction in disaster costs',';
@@ -654,7 +654,7 @@ export default function NewServices2026() {
           description: 'Enterprise API management with security, monitoring, and developer portal.',';,
           price: '$1,500 - $8,500/month',';,
           delivery: '3-6 weeks',';,
-          features: [,
+          features: [
             'API gateway configuration and management',';
             'Rate limiting, authentication, and authorization',';
             'API analytics and performance monitoring',';
@@ -664,7 +664,7 @@ export default function NewServices2026() {
             'Security policies and threat protection',';
             'Integration with CI/CD pipelines'
           ],
-          benefits: [,
+          benefits: [
             '60% improvement in API performance',';
             '50% reduction in API management overhead',';
             '90% improvement in developer productivity',';
@@ -679,15 +679,15 @@ export default function NewServices2026() {
     // Emerging Technology Services
     {
       category: 'Emerging Technology Services',';,
-      icon: Rocket,,
+      icon: Rocket,
       color: 'orange',';,
-      services: [,
+      services: [
         {
           name: 'AI-Powered Video Content Creator Pro',';,
           description: 'Automated video generation with AI avatars, voice synthesis, and multi-language support.',';,
           price: '$299 - $1,999/month',';,
           delivery: '3-4 weeks',';,
-          features: [,
+          features: [
             'AI avatar generation with custom branding',';
             'Natural voice synthesis in 50+ languages',';
             'Automated video editing and transitions',';
@@ -697,7 +697,7 @@ export default function NewServices2026() {
             'Multi-platform publishing and distribution',';
             'Performance analytics and optimization'
           ],
-          benefits: [,
+          benefits: [
             '70% reduction in video production costs',';
             '90% faster video creation and deployment',';
             '60% improvement in engagement rates',';
@@ -712,7 +712,7 @@ export default function NewServices2026() {
           description: 'Blockchain analytics and monitoring for DeFi protocols and smart contract interactions.',';,
           price: '$499 - $2,999/month',';,
           delivery: '3-5 weeks',';,
-          features: [,
+          features: [
             'Real-time smart contract monitoring and alerts',';
             'Transaction flow analysis and visualization',';
             'Risk assessment and vulnerability detection',';
@@ -722,7 +722,7 @@ export default function NewServices2026() {
             'Automated compliance monitoring',';
             'Integration with trading and portfolio management'
           ],
-          benefits: [,
+          benefits: [
             '80% reduction in smart contract risks',';
             '60% improvement in DeFi performance',';
             '90% faster risk assessment',';
@@ -737,7 +737,7 @@ export default function NewServices2026() {
           description: 'Smart energy management with predictive analytics and automated optimization.',';,
           price: '$499 - $3,999/month',';,
           delivery: '4-6 weeks',';,
-          features: [,
+          features: [
             'Real-time energy consumption monitoring',';
             'Predictive energy demand forecasting',';
             'Automated load balancing and optimization',';
@@ -747,7 +747,7 @@ export default function NewServices2026() {
             'Carbon footprint tracking and reporting',';
             'Automated energy trading and arbitrage'
           ],
-          benefits: [,
+          benefits: [
             '30% reduction in energy costs',';
             '25% improvement in energy efficiency',';
             '40% reduction in carbon footprint',';
@@ -762,7 +762,7 @@ export default function NewServices2026() {
           description: 'Intelligent legal document review with risk assessment and compliance checking.',';,
           price: '$799 - $4,999/month',';,
           delivery: '4-6 weeks',';,
-          features: [,
+          features: [
             'Automated contract analysis and risk assessment',';
             'Compliance checking and regulatory monitoring',';
             'Document comparison and version control',';
@@ -772,7 +772,7 @@ export default function NewServices2026() {
             'Multi-jurisdiction compliance support',';
             'Automated reporting and audit trails'
           ],
-          benefits: [,
+          benefits: [
             '75% reduction in document review time',';
             '90% improvement in risk detection accuracy',';
             '60% reduction in legal costs',';
@@ -787,7 +787,7 @@ export default function NewServices2026() {
           description: 'IoT-powered fleet tracking with predictive maintenance and route optimization.',';,
           price: '$299 - $1,999/month',';,
           delivery: '3-5 weeks',';,
-          features: [,
+          features: [
             'Real-time GPS tracking and route optimization',';
             'Predictive maintenance and vehicle health monitoring',';
             'Driver behavior analysis and safety scoring',';
@@ -797,7 +797,7 @@ export default function NewServices2026() {
             'Multi-vehicle fleet management',';
             'Automated alerts and notifications'
           ],
-          benefits: [,
+          benefits: [
             '25% reduction in fleet operating costs',';
             '30% improvement in fuel efficiency',';
             '40% reduction in maintenance costs',';

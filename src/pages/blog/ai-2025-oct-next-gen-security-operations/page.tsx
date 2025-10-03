@@ -31,7 +31,7 @@ export default function NextGenSecurityOperations2025(): void {
             </div>
             
             <h1 className="text-5xl md: text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 text-transparent bg-clip-text leading-tight">
-  Next-Gen AI Security Operations: The $2.3B Defense Shield,,
+  Next-Gen AI Security Operations: The $2.3B Defense Shield,
             </h1>
             
             <p className="text-xl text-gray-300 leading-relaxed">,
@@ -48,20 +48,20 @@ export default function NextGenSecurityOperations2025(): void {
               <ul className="space-y-4 text-lg">
                 <li className="flex items-start gap-3">
                   <Lock className="h-6 w-6 text-green-400 mt-1 flex-shrink-0/>
-                  <span ><strong >99.97% Threat Detection: </strong> AI identifies sophisticated attacks that evade traditional security tools</span>,,
+                  <span ><strong >99.97% Threat Detection: </strong> AI identifies sophisticated attacks that evade traditional security tools</span>,
                 </li>
                 <li className="flex items-start gap-3">
                   <Zap className="h-6 w-6 text-yellow-400 mt-1 flex-shrink-0/>
-                  <span ><strong >Sub-Second Response: </strong> Autonomous containment and remediation blocks threats instantly</span>,,
+                  <span ><strong >Sub-Second Response: </strong> Autonomous containment and remediation blocks threats instantly</span>,
                 </li>
                 <li className="flex items-start gap-3">
                   <DollarSign className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0/>
-                  <span ><strong >$2.3B+ Protected: </strong> Average value of assets secured and breaches prevented annually</span>,,
+                  <span ><strong >$2.3B+ Protected: </strong> Average value of assets secured and breaches prevented annually</span>,
                 </li>
                 <li className="flex items-start gap-3">
                   <AlertTriangle className="h-6 w-6 text-red-400 mt-1 flex-shrink-0/>
             <h1 className="text-5xl md: text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 text-transparent bg-clip-text leading-tight">
-  Next-Gen AI Security Operations: The $2.3B Defense Shield,,
+  Next-Gen AI Security Operations: The $2.3B Defense Shield,
             </h1>
             
             <p className="text-xl text-gray-300 leading-relaxed">
@@ -78,19 +78,19 @@ export default function NextGenSecurityOperations2025(): void {
               <ul className="space-y-4 text-lg">","
                 <li className="flex items-start gap-3">","
                   <Lock className="h-6 w-6 text-green-400 mt-1 flex-shrink-0" />","
-                  <span ><strong >99.97% Threat Detection: </strong> AI identifies sophisticated attacks that evade traditional security tools</span>,,
+                  <span ><strong >99.97% Threat Detection: </strong> AI identifies sophisticated attacks that evade traditional security tools</span>,
                 </li>
                 <li className="flex items-start gap-3">","
                   <Zap className="h-6 w-6 text-yellow-400 mt-1 flex-shrink-0" />","
-                  <span ><strong >Sub-Second Response: </strong> Autonomous containment and remediation blocks threats instantly</span>,,
+                  <span ><strong >Sub-Second Response: </strong> Autonomous containment and remediation blocks threats instantly</span>,
                 </li>
                 <li className="flex items-start gap-3">","
                   <DollarSign className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />","
-                  <span ><strong >$2.3B+ Protected: </strong> Average value of assets secured and breaches prevented annually</span>,,
+                  <span ><strong >$2.3B+ Protected: </strong> Average value of assets secured and breaches prevented annually</span>,
                 </li>
                 <li className="flex items-start gap-3">","
                   <AlertTriangle className="h-6 w-6 text-red-400 mt-1 flex-shrink-0" />","
-                  <span ><strong >95% Faster MTTR: </strong> Mean time to resolution reduced from hours to minutes</span>,,
+                  <span ><strong >95% Faster MTTR: </strong> Mean time to resolution reduced from hours to minutes</span>,
                 </li>
               </ul>
             </div>
@@ -255,7 +255,7 @@ export default function NextGenSecurityOperations2025(): void {
                 <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4">","
                   <li >Autonomous response activated for verified threat types</li>
                   <li >Continuous model tuning based on environment specifics</li>
-                  <li >Advanced capabilities enabled: threat hunting, predictive analytics</li>,,
+                  <li >Advanced capabilities enabled: threat hunting, predictive analytics</li>,
                   <li >Full SOC transformation and analyst skill development</li>
                 </ul>
               </div>
@@ -270,7 +270,7 @@ export default function NextGenSecurityOperations2025(): void {
               </p>
               <p className="text-gray-300 mb-4 leading-relaxed">
               <p className="text-gray-300 mb-4 leading-relaxed">
-  Leading enterprises have achieved security postures that were unimaginable just two years ago: near-perfect,,,
+  Leading enterprises have achieved security postures that were unimaginable just two years ago: near-perfect,
   threat detection, sub-second response times, and dramatically reduced costs. The question is not whether to 
                 adopt autonomous SecOps, but how quickly you can deploy it before the next breach.
               </p>

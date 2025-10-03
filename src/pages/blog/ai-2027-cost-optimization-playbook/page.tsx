@@ -4,7 +4,7 @@ export default function AICostOptimizationPlaybook2027(): React.JSX.Element {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">","
       <Helmet >
-        <title >AI 2027 Cost Optimization Playbook: Quality Tiers + Caches</title>,,
+        <title >AI 2027 Cost Optimization Playbook: Quality Tiers + Caches</title>,
         <meta name: "description" content ="Deterministic tiering, semantic caches, and policy tests to cut spend 40–70% while keeping UX stable." /><link rel: "canonical" href="https://ziontechgroup.com/blog/ai-2027-cost-optimization-playbook/>","
       </Helmet>
 

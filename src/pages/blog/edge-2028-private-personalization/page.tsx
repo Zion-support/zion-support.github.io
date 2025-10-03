@@ -4,7 +4,7 @@ export default function Edge2028PrivatePersonalization(): React.JSX.Element {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">","
       <Helmet >
-        <title >Edge 2028: Private Personalization at &lt;100ms</title>,,
+        <title >Edge 2028: Private Personalization at &lt;100ms</title>,
         <meta name: "description" content ="Scoped IDs, on‑device models, and DP noise enabling zero‑PII personalization worldwide under 100ms." /><link rel: "canonical" href="https://ziontechgroup.com/blog/edge-2028-private-personalization/>","
       </Helmet>
 

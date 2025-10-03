@@ -5,7 +5,7 @@ export default function AIAutonomousRoadmaps2027(): React.JSX.Element {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">","
       <Helmet >
-        <title >AI 2027: Autonomous Roadmaps that Prove ROI</title>,,
+        <title >AI 2027: Autonomous Roadmaps that Prove ROI</title>,
         <meta name: "description" content ="Outcome‑led bets, KPI scorecards, budgets, and rollback — a practical 2027 roadmap system." /><link rel: "canonical" href="https://ziontechgroup.com/blog/ai-2027-autonomous-roadmaps/>","
       </Helmet>
 

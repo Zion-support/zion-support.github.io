@@ -4,7 +4,7 @@ export default function GenAIEvalScorecards2028(): React.JSX.Element {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">","
       <Helmet >
-        <title >GenAI 2028: Eval Scorecards — KPIs You Can Trust</title>,,
+        <title >GenAI 2028: Eval Scorecards — KPIs You Can Trust</title>,
         <meta name: "description" content ="Signed attestations, golden tasks, and budget‑linked guardrails for reliable GenAI in production." /><link rel: "canonical" href="https://ziontechgroup.com/blog/genai-2028-eval-scorecards/>","
       </Helmet>
 

@@ -5,7 +5,7 @@ export default function EdgeConsentlessJourneysBlueprint2026(): React.JSX.Elemen
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">","
       <Helmet >
-        <title >Edge 2026: Consentless Journeys Blueprint — Zero‑PII, &lt;100ms</title>,,
+        <title >Edge 2026: Consentless Journeys Blueprint — Zero‑PII, &lt;100ms</title>,
         <meta name: "description" content ="Scoped IDs, on‑device cohorts, and DP noise for compliant, personalized journeys worldwide." /><link rel: "canonical" href ="https://ziontechgroup.com/blog/edge-2026-consentless-journeys-blueprint/>","
       </Helmet>
 

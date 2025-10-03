@@ -1,7 +1,7 @@
-import React from 'react'';
+import React from 'react';
 import { Link } from 'react-router-dom'';
-import { Helmet } from 'react-helmet-async'';
-import { Check, Star } from 'lucide-react'';
+import { Helmet } from 'react-helmet-async';
+import { Check, Star } from 'lucide-react';
 
 const PricingPage: React.FC  = () => {
   const pricingTiers = [
@@ -10,7 +10,7 @@ const PricingPage: React.FC  = () => {
       description: "Perfect for small businesses and startups","
       price: "$299","
       period: "/month","
-      features: [,
+      features: [
         "Basic AI Services","
         "Standard IT Support","
         "Email Support","
@@ -18,7 +18,7 @@ const PricingPage: React.FC  = () => {
         "Up to 5 users","
         "10GB Storage"
       ],
-      popular: false,,
+      popular: false,
       color: "blue
     },
     {
@@ -26,7 +26,7 @@ const PricingPage: React.FC  = () => {
       description: "Ideal for growing businesses","
       price: "$799","
       period: "/month","
-      features: [,
+      features: [
         "Advanced AI Solutions","
         "Comprehensive IT Services","
         "Priority Support","
@@ -36,7 +36,7 @@ const PricingPage: React.FC  = () => {
         "API Access","
         "Custom Integrations"
       ],
-      popular: true,,
+      popular: true,
       color: "purple
     },
     {
@@ -44,7 +44,7 @@ const PricingPage: React.FC  = () => {
       description: "For large organizations","
       price: "$2,499","
       period: "/month","
-      features: [,
+      features: [
         "Full AI Suite","
         "Complete IT Infrastructure","
         "24/7 Dedicated Support","
@@ -55,7 +55,7 @@ const PricingPage: React.FC  = () => {
         "Dedicated Account Manager","
         "SLA Guarantees"
       ],
-      popular: false,,
+      popular: false,
       color: "green
     }
   ];
@@ -63,7 +63,7 @@ const PricingPage: React.FC  = () => {
   const servicePricing = [
     {
       category: "AI Services","
-      services: [,
+      services: [
         { name: "AI Content Generation", price: "$2,500/month", description: "Automated content creation with 75% time reduction" },"
         { name: "Predictive Analytics", price: "$3,200/month", description: "Business intelligence with 25% improvement in decisions" },"
         { name: "Fraud Detection", price: "$2,800/month", description: "Real-time protection with 95% accuracy" },"
@@ -72,7 +72,7 @@ const PricingPage: React.FC  = () => {
     },
     {
       category: "Micro SaaS Solutions","
-      services: [,
+      services: [
         { name: "AI Lead Scoring API", price: "$299/month", description: "Intelligent lead scoring with 40% conversion increase" },"
         { name: "Smart Appointment Scheduler", price: "$199/month", description: "AI-driven scheduling with 80% conflict reduction" },"
         { name: "Contract Review Assistant", price: "$599/month", description: "Legal document analysis with 75% faster review" },"
@@ -81,7 +81,7 @@ const PricingPage: React.FC  = () => {
     },
     {
       category: "IT Services","
-      services: [,
+      services: [
         { name: "Cloud Migration", price: "$5,000/month", description: "Complete cloud transformation with 40% cost reduction" },"
         { name: "DevOps Automation", price: "$3,500/month", description: "CI/CD pipelines with 80% faster deployments" },"
         { name: "Cybersecurity", price: "$4,200/month", description: "24/7 threat monitoring with SOC 2 compliance" },"

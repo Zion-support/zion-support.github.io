@@ -1,4 +1,4 @@
-import React from 'react'';
+import React from 'react';
 import { Link } from "react-router-dom";"
 import { Helmet } from "react-helmet-async";"
 import { CheckCircle, Rocket, Shield, Sparkles, Zap, Users, Target, Award, ArrowRight } from "lucide-react";"
@@ -15,75 +15,75 @@ import NewServicesShowcase from "../components/NewServicesShowcase";"
 import LatestArticlesShowcase from "../components/LatestArticlesShowcase";"
 import SuccessStoriesShowcase from "../components/SuccessStoriesShowcase"
 ;
-const Home: ()  => {,,
+const Home: ()  => {,
   // Mock data for the homepage
-  const latestInsights: [,,
+  const latestInsights: [
     {
       id: '1',';,';,
-      title: 'AI Revolution 2026: The Next Frontier of Enterprise Intelligence',';,';,
+      title: 'AI Revolution 2026: The Next Frontier of Enterprise Intelligence',
       summary: 'Discover autonomous AI agents, neural interfaces, and predictive intelligence systems achieving 300% productivity gains.',';,';,
       category: 'AI Innovation',';,';,
       date: '2025-01-15',';,';,
-      readMinutes: 25,,,
-      featured: true,,
+      readMinutes: 25,
+      featured: true,
     },
     {
       id: '2',';,';,
-      title: 'Quantum AI Breakthrough: Solving Impossible Problems in Seconds',';,';,
+      title: 'Quantum AI Breakthrough: Solving Impossible Problems in Seconds',
       summary: 'Explore quantum-enhanced AI delivering 500x faster results and revolutionizing computational capabilities.',';,';,
       category: 'Quantum Computing',';,';,
       date: '2025-01-10',';,';,
-      readMinutes: 20,,,
-      featured: false,,
+      readMinutes: 20,
+      featured: false,
     },
     {
       id: '3',';,';,
-      title: 'Manufacturing AI Transformation: $50M Savings & 95% Efficiency',';,';,
+      title: 'Manufacturing AI Transformation: $50M Savings & 95% Efficiency',
       summary: 'See how a Fortune 500 manufacturer achieved $50M annual savings and 95% efficiency improvements.',';,';,
       category: 'Success Story',';,';,
       date: '2025-01-05',';,';,
-      readMinutes: 15,,,
-      featured: true,,
+      readMinutes: 15,
+      featured: true,
     }
   ];
 
 id: '2',';,';,
-title: 'Quantum AI Breakthrough: Solving Impossible Problems in Seconds',';,';,
+title: 'Quantum AI Breakthrough: Solving Impossible Problems in Seconds',
 summary: 'Explore quantum-enhanced AI delivering 500x faster results and revolutionizing computational capabilities.',';,';,
 category: 'Quantum Computing',';,';,
 date: '2025-01-10',';,';,
-readMinutes: 20,,,
+readMinutes: 20,
 featured: false
 },
     {
 id: '3',';,';,
-title: 'Manufacturing AI Transformation: $50M Savings & 95% Efficiency',';,';,
+title: 'Manufacturing AI Transformation: $50M Savings & 95% Efficiency',
 summary: 'See how a Fortune 500 manufacturer achieved $50M annual savings and 95% efficiency improvements.',';,';,
 category: 'Success Story',';,';,
 date: '2025-01-05',';,';,
-readMinutes: 15,,,
+readMinutes: 15,
 featured: true
 }
   ];
 
     {
       slug: 'ai-revolution-2026',';,';,
-      title: 'AI Revolution 2026: The Next Frontier of Enterprise Intelligence',';,';,
-      description: 'Discover autonomous AI agents, neural interfaces, and predictive intelligence systems achieving 300% productivity gains.',';,';,
+      title: 'AI Revolution 2026: The Next Frontier of Enterprise Intelligence',
+      description: 'Discover autonomous AI agents, neural interfaces, and predictive intelligence systems achieving 300% productivity gains.',
       category: 'AI Innovation',';,';,
       publishedAt: '2025-01-15',';,
     },
     {
 slug: 'quantum-ai-breakthrough',';,';,
-title: 'Quantum AI Breakthrough: Solving Impossible Problems in Seconds',';,';,
-description: 'Explore quantum-enhanced AI delivering 500x faster results and revolutionizing computational capabilities.',';,';,
+title: 'Quantum AI Breakthrough: Solving Impossible Problems in Seconds',
+description: 'Explore quantum-enhanced AI delivering 500x faster results and revolutionizing computational capabilities.',
 category: 'Quantum Computing',';,';,
 publishedAt: '2025-01-10'
 },
     {
 slug: 'manufacturing-success',';,';,
-title: 'Manufacturing AI Transformation: $50M Savings & 95% Efficiency',';,';,
-description: 'See how a Fortune 500 manufacturer achieved $50M annual savings and 95% efficiency improvements.',';,';,
+title: 'Manufacturing AI Transformation: $50M Savings & 95% Efficiency',
+description: 'See how a Fortune 500 manufacturer achieved $50M annual savings and 95% efficiency improvements.',
 category: 'Success Story',';,';,
 publishedAt: '2025-01-05'
 }
@@ -142,7 +142,7 @@ publishedAt: '2025-01-05'
 "areaServed": "US",";"
 "email": "kleber@ziontechgroup.com"
 }
-            "sameAs": [,";"
+            "sameAs": [";"
               "https: //linkedin.com/company/zion-tech-group
               "https: //twitter.com/ziontechgroup
               "https: //github.com/ZionClouds","
@@ -164,7 +164,7 @@ publishedAt: '2025-01-05'
             "hasOfferCatalog": {,";"
               "@type": "OfferCatalog",";"
               "name": "AI and IT Solutions",";"
-              "itemListElement": [,";"
+              "itemListElement": [";"
                 {
                   "@type": "Offer",";"
                   "itemOffered": {,";"
@@ -210,7 +210,7 @@ publishedAt: '2025-01-05'
             "hasOfferCatalog": {,";"
 "@type": "OfferCatalog",";"
 "name": "AI and IT Solutions",";"
-"itemListElement": [,";"
+"itemListElement": [";"
 {
 "@type": "Offer",";"
 "itemOffered": {,";"
@@ -730,10 +730,10 @@ publishedAt: '2025-01-05'
                 <Link key: {item.id} to: "/blog" className ="group">
                   <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-200 hover:border-blue-200">
                     <div className="flex items-center gap-2 mb-4">
-                      <span className: {`px-2 py-1 rounded-full text-xs font-semibold ${,,`;,`;
+                      <span className: {`px-2 py-1 rounded-full text-xs font-semibold ${,`;,`;
   item.featured ? 'bg-red-100 text-red-800' : 'bg-blue-100 text-blue-800'
                       }`}>`;`;
-                        {item.featured ? 'Featured' : item.category}';';
+                        {item.featured ? 'Featured' : item.category}
                       </span>
                       <span className="text-sm text-gray-500">{item.readMinutes} min read</span>";"
                     </div>
@@ -775,7 +775,7 @@ publishedAt: '2025-01-05'
               </div>
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Success Stories</h2>
               <p className="text-xl text-gray-600 max-w-2xl mx-auto">,
-  See how Fortune 500 companies are transforming their operations with our breakthrough AI solutions. New: Enterprise AI Platform Modernization, Multi-Modal AI, Edge AI Deployment & More.,,
+  See how Fortune 500 companies are transforming their operations with our breakthrough AI solutions. New: Enterprise AI Platform Modernization, Multi-Modal AI, Edge AI Deployment & More.,
               </p>
             </div>
             

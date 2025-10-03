@@ -1,8 +1,8 @@
-import React from 'react'';
+import React from 'react';
 import { Link } from 'react-router-dom'';
 import { Helmet } from 'react-helmet-async';
 ;
-const HomeLite: React.FC: ()  => {,,,
+const HomeLite: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
       <Helmet >

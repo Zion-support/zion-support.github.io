@@ -1,9 +1,9 @@
-import React from 'react'';
+import React from 'react';
 import { Link } from 'react-router-dom'';
 import { Helmet } from 'react-helmet-async';
 ;
-const ServicesPage: React.FC: ()  => {,,,
-  const services: [,,
+const ServicesPage: React.FC = () => {
+  const services: [
     {
       title: "AI & Machine Learning
       description: "Advanced artificial intelligence solutions including machine learning models, natural language processing, and predictive analytics.

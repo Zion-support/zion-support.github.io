@@ -5,7 +5,7 @@ export default function PrivateExperimentsV4(): React.JSX.Element {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">","
       <Helmet >
-        <title >Edge 2025: Private Experiments v4</title>,,
+        <title >Edge 2025: Private Experiments v4</title>,
         <meta name: "description" content ="Scoped IDs, on-device metrics, and DP noise for compliant A/B testing worldwide." /><link rel: "canonical" href ="https://ziontechgroup.com/blog/edge-2025-oct-02-private-experiments-v4/>","
       </Helmet>
 

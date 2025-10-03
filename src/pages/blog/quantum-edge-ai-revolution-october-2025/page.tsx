@@ -13,7 +13,7 @@ export default function QuantumEdgeAIRevolutionPage(): void {
           
           <h1 className="text-4xl md: text-5xl lg:text-6xl font-extrabold mb-6 bg-gradient-to-r from-cyan-300 via-blue-300 to-indigo-300 bg-clip-text text-transparent leading-tight">","
           <h1 className="text-4xl md: text-5xl lg:text-6xl font-extrabold mb-6 bg-gradient-to-r from-cyan-300 via-blue-300 to-indigo-300 bg-clip-text text-transparent leading-tight">
-  Quantum Edge AI Revolution: Real-Time Intelligence at the Speed of Light,,
+  Quantum Edge AI Revolution: Real-Time Intelligence at the Speed of Light,
           </h1>
           
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
@@ -54,7 +54,7 @@ export default function QuantumEdgeAIRevolutionPage(): void {
           <section className="mb-12">
             <h2 className="text-3xl font-bold text-white mb-6">The Quantum Edge AI Architecture</h2>
             <p className="text-gray-300 leading-relaxed mb-6">,
-  Our quantum edge AI platform combines three revolutionary technologies: </p>,,
+  Our quantum edge AI platform combines three revolutionary technologies: </p>,
             <div className="space-y-6">
               <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">
                 <h3 className="text-xl font-bold text-cyan-300 mb-3">⚛️ Quantum Acceleration Layer</h3>
@@ -62,7 +62,7 @@ export default function QuantumEdgeAIRevolutionPage(): void {
           <section className="mb-12">","
             <h2 className="text-3xl font-bold text-white mb-6">The Quantum Edge AI Architecture</h2>","
             <p className="text-gray-300 leading-relaxed mb-6">
-  Our quantum edge AI platform combines three revolutionary technologies: </p>,,
+  Our quantum edge AI platform combines three revolutionary technologies: </p>,
             <div className="space-y-6">","
               <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">","
                 <h3 className="text-xl font-bold text-cyan-300 mb-3">⚛️ Quantum Acceleration Layer</h3>","
@@ -90,7 +90,7 @@ export default function QuantumEdgeAIRevolutionPage(): void {
           <section className="mb-12 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-2xl p-8 border border-cyan-500/20">
             <h2 className="text-3xl font-bold text-white mb-6">Real-World Impact: Manufacturing Success Story</h2>","
             <p className="text-gray-300 leading-relaxed mb-6">,
-  A Fortune 500 manufacturing company deployed our quantum edge AI platform across 2,500 production facilities, achieving remarkable results: </p>,,
+  A Fortune 500 manufacturing company deployed our quantum edge AI platform across 2,500 production facilities, achieving remarkable results: </p>,
             <div className="grid md: grid-cols-3 gap-4 mb-6">","
               <div className="bg-white/10 rounded-xl p-6">
                 <div className="text-3xl font-bold text-cyan-300 mb-2">67%</div>
@@ -98,7 +98,7 @@ export default function QuantumEdgeAIRevolutionPage(): void {
           <section className="mb-12 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-2xl p-8 border border-cyan-500/20">","
             <h2 className="text-3xl font-bold text-white mb-6">Real-World Impact: Manufacturing Success Story</h2>","
             <p className="text-gray-300 leading-relaxed mb-6">
-  A Fortune 500 manufacturing company deployed our quantum edge AI platform across 2,500 production facilities, achieving remarkable results: </p>,,
+  A Fortune 500 manufacturing company deployed our quantum edge AI platform across 2,500 production facilities, achieving remarkable results: </p>,
             <div className="grid md: grid-cols-3 gap-4 mb-6">","
               <div className="bg-white/10 rounded-xl p-6">","
                 <div className="text-3xl font-bold text-cyan-300 mb-2">67%</div>","
@@ -121,7 +121,7 @@ export default function QuantumEdgeAIRevolutionPage(): void {
           <section className="mb-12">
             <h2 className="text-3xl font-bold text-white mb-6">Technical Implementation Guide</h2>
             <p className="text-gray-300 leading-relaxed mb-6">,
-  Deploying quantum edge AI in your enterprise involves five key phases: </p>,,
+  Deploying quantum edge AI in your enterprise involves five key phases: </p>,
             <div className="space-y-4">
               <div className="bg-white/5 rounded-xl p-6 border-l-4 border-cyan-500">
                 <h3 className="text-lg font-bold text-white mb-2">Phase 1: Architecture Assessment (2-3 weeks)</h3>","
@@ -149,7 +149,7 @@ export default function QuantumEdgeAIRevolutionPage(): void {
           <section className="mb-12">","
             <h2 className="text-3xl font-bold text-white mb-6">Technical Implementation Guide</h2>","
             <p className="text-gray-300 leading-relaxed mb-6">
-  Deploying quantum edge AI in your enterprise involves five key phases: </p>,,
+  Deploying quantum edge AI in your enterprise involves five key phases: </p>,
             <div className="space-y-4">","
               <div className="bg-white/5 rounded-xl p-6 border-l-4 border-cyan-500">","
                 <h3 className="text-lg font-bold text-white mb-2">Phase 1: Architecture Assessment (2-3 weeks)</h3>","
@@ -232,7 +232,7 @@ export default function QuantumEdgeAIRevolutionPage(): void {
           <section className="mb-12 bg-gradient-to-r from-blue-500/10 to-indigo-500/10 rounded-2xl p-8 border border-blue-500/20">
             <h2 className="text-3xl font-bold text-white mb-6">Industry Applications</h2>
             <p className="text-gray-300 leading-relaxed mb-6">,
-  Quantum edge AI is transforming operations across industries: </p>,,
+  Quantum edge AI is transforming operations across industries: </p>,
             <div className="space-y-4">
               <div className="bg-white/10 rounded-xl p-6">
                 <h3 className="text-xl font-bold text-cyan-300 mb-2">🏭 Manufacturing</h3>
@@ -240,7 +240,7 @@ export default function QuantumEdgeAIRevolutionPage(): void {
           <section className="mb-12 bg-gradient-to-r from-blue-500/10 to-indigo-500/10 rounded-2xl p-8 border border-blue-500/20">","
             <h2 className="text-3xl font-bold text-white mb-6">Industry Applications</h2>","
             <p className="text-gray-300 leading-relaxed mb-6">
-  Quantum edge AI is transforming operations across industries: </p>,,
+  Quantum edge AI is transforming operations across industries: </p>,
             <div className="space-y-4">","
               <div className="bg-white/10 rounded-xl p-6">","
                 <h3 className="text-xl font-bold text-cyan-300 mb-2">🏭 Manufacturing</h3>","
@@ -264,7 +264,7 @@ export default function QuantumEdgeAIRevolutionPage(): void {
           <section className="mb-12">
             <h2 className="text-3xl font-bold text-white mb-6">Getting Started</h2>
             <p className="text-gray-300 leading-relaxed mb-6">,
-  Ready to transform your enterprise with quantum edge AI? Our experts are ready to help you: </p>,,
+  Ready to transform your enterprise with quantum edge AI? Our experts are ready to help you: </p>,
             <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-cyan-500/20">
               <ul className="space-y-3 text-gray-300 mb-6">
                 <li className="flex items-start gap-3">
@@ -272,7 +272,7 @@ export default function QuantumEdgeAIRevolutionPage(): void {
           <section className="mb-12">","
             <h2 className="text-3xl font-bold text-white mb-6">Getting Started</h2>","
             <p className="text-gray-300 leading-relaxed mb-6">
-  Ready to transform your enterprise with quantum edge AI? Our experts are ready to help you: </p>,,
+  Ready to transform your enterprise with quantum edge AI? Our experts are ready to help you: </p>,
             <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-cyan-500/20">","
               <ul className="space-y-3 text-gray-300 mb-6">","
                 <li className="flex items-start gap-3">","

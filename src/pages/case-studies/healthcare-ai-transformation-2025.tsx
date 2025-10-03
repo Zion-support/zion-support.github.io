@@ -7,7 +7,7 @@ const HealthcareAITransformation: () => {
   return (
     <>
       <Helmet >
-        <title >Healthcare AI Transformation: $124M Saved, 3.8M Patients Served | Zion Tech Group</title>,,
+        <title >Healthcare AI Transformation: $124M Saved, 3.8M Patients Served | Zion Tech Group</title>,
         <meta name: "description
   content: "Major healthcare network achieves $124M cost savings and 87% faster patient processing through comprehensive AI transformation. 3.8M patients, 450 facilities, 96% satisfaction." /><meta name: "keywords
   content: "healthcare AI, medical AI transformation, patient care automation, healthcare cost reduction, clinical decision support" /></Helmet>
@@ -99,23 +99,23 @@ const HealthcareAITransformation: () => {
                     <ul className="space-y-2">
                       <li className="flex items-start gap-2">
                         <span className="text-red-400 mt-1">•</span>
-                        <span >Average wait times: 4.5 hours in ER</span>,,
+                        <span >Average wait times: 4.5 hours in ER</span>,
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="text-red-400 mt-1">•</span>
-                        <span >Claims processing: 28-day average turnaround</span>,,
+                        <span >Claims processing: 28-day average turnaround</span>,
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="text-red-400 mt-1">•</span>
-                        <span >Administrative costs: $287M annually (32%)</span>,,
+                        <span >Administrative costs: $287M annually (32%)</span>,
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="text-red-400 mt-1">•</span>
-                        <span >Readmission rate: 18.7% (above national avg)</span>,,
+                        <span >Readmission rate: 18.7% (above national avg)</span>,
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="text-red-400 mt-1">•</span>
-                        <span >Patient satisfaction: 67% (industry: 78%)</span>,,
+                        <span >Patient satisfaction: 67% (industry: 78%)</span>,
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="text-red-400 mt-1">•</span>
@@ -138,27 +138,27 @@ const HealthcareAITransformation: () => {
                     <ul className="space-y-2">","
                       <li className="flex items-start gap-2">","
                         <span className="text-red-400 mt-1">•</span>","
-                        <span >Average wait times: 4.5 hours in ER</span>,,
+                        <span >Average wait times: 4.5 hours in ER</span>,
                       </li>
                       <li className="flex items-start gap-2">","
                         <span className="text-red-400 mt-1">•</span>","
-                        <span >Claims processing: 28-day average turnaround</span>,,
+                        <span >Claims processing: 28-day average turnaround</span>,
                       </li>
                       <li className="flex items-start gap-2">","
                         <span className="text-red-400 mt-1">•</span>","
-                        <span >Administrative costs: $287M annually (32%)</span>,,
+                        <span >Administrative costs: $287M annually (32%)</span>,
                       </li>
                       <li className="flex items-start gap-2">","
                         <span className="text-red-400 mt-1">•</span>","
-                        <span >Readmission rate: 18.7% (above national avg)</span>,,
+                        <span >Readmission rate: 18.7% (above national avg)</span>,
                       </li>
                       <li className="flex items-start gap-2">","
                         <span className="text-red-400 mt-1">•</span>","
-                        <span >Patient satisfaction: 67% (industry: 78%)</span>,,
+                        <span >Patient satisfaction: 67% (industry: 78%)</span>,
                       </li>
                       <li className="flex items-start gap-2">","
                         <span className="text-red-400 mt-1">•</span>","
-                        <span >Staff burnout: 43% of nurses reporting severe stress</span>,,
+                        <span >Staff burnout: 43% of nurses reporting severe stress</span>,
                       </li>
                     </ul>
                   </div>
@@ -277,7 +277,7 @@ const HealthcareAITransformation: () => {
                   <ul className="space-y-2 text-sm">
                     <li className="flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-green-400/>
-                      <span >Claims processing: 28 days → 3.2 days</span>,,
+                      <span >Claims processing: 28 days → 3.2 days</span>,
                     </li>
                     <li className="flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-green-400/>
@@ -288,7 +288,7 @@ const HealthcareAITransformation: () => {
                   <ul className="space-y-2 text-sm">","
                     <li className="flex items-center gap-2">","
                       <CheckCircle className="w-4 h-4 text-green-400" />","
-                      <span >Claims processing: 28 days → 3.2 days</span>,,
+                      <span >Claims processing: 28 days → 3.2 days</span>,
                     </li>
                     <li className="flex items-center gap-2">","
                       <CheckCircle className="w-4 h-4 text-green-400" />","

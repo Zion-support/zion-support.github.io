@@ -37,7 +37,7 @@ const AutonomousBusinessOperations: () => {
             <div className="flex justify-center mb-8">","
               <div className="inline-flex items-center px-6 py-3 rounded-full bg-green-500/20 border-2 border-green-400/50 text-green-300 text-sm font-bold uppercase tracking-wider animate-pulse">","
                 <Rocket className="w-5 h-5 mr-2" />","
-                🔥 LIMITED OFFER: 50% OFF THROUGH DECEMBER 2025,,
+                🔥 LIMITED OFFER: 50% OFF THROUGH DECEMBER 2025,
               </div>
             </div>
 
@@ -716,7 +716,7 @@ const AutonomousBusinessOperations: () => {
         <section className="container mx-auto px-6 py-20 max-w-6xl">","
           <div className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-12 text-center">","
             <h2 className="text-4xl font-bold text-white mb-4">
-  See It In Action: $650M Success Story,,
+  See It In Action: $650M Success Story,
             </h2>
             <p className="text-xl text-green-100 mb-8 max-w-2xl mx-auto">
   Read how a Fortune 100 financial services company transformed their operations and created $650M in annual value in just 12 months.

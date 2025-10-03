@@ -32,7 +32,7 @@ export default function HyperPersonalizedCustomerExperience2025(): void {
             
             <h1 className="text-5xl md: text-6xl font-bold mb-6 bg-gradient-to-r from-pink-400 via-rose-400 to-purple-400 text-transparent bg-clip-text leading-tight">","
             <h1 className="text-5xl md: text-6xl font-bold mb-6 bg-gradient-to-r from-pink-400 via-rose-400 to-purple-400 text-transparent bg-clip-text leading-tight">
-  Hyper-Personalized AI Customer Experience: The $3.2B Revenue Engine,,
+  Hyper-Personalized AI Customer Experience: The $3.2B Revenue Engine,
             </h1>
             
             <p className="text-xl text-gray-300 leading-relaxed">
@@ -49,15 +49,15 @@ export default function HyperPersonalizedCustomerExperience2025(): void {
               <ul className="space-y-4 text-lg">
                 <li className="flex items-start gap-3">
                   <Sparkles className="h-6 w-6 text-yellow-400 mt-1 flex-shrink-0/>
-                  <span ><strong >97.8% Satisfaction: </strong> AI creates experiences so personalized they feel magical</span>,,
+                  <span ><strong >97.8% Satisfaction: </strong> AI creates experiences so personalized they feel magical</span>,
                 </li>
                 <li className="flex items-start gap-3">
                   <TrendingUp className="h-6 w-6 text-green-400 mt-1 flex-shrink-0/>
-                  <span ><strong >12.4x Engagement Lift: </strong> Customers interact 1,140% more with hyper-personalized experiences</span>,,
+                  <span ><strong >12.4x Engagement Lift: </strong> Customers interact 1,140% more with hyper-personalized experiences</span>,
                 </li>
                 <li className="flex items-start gap-3">
                   <DollarSign className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0/>
-                  <span ><strong >$3.2B+ Revenue Growth: </strong> Average annual revenue increase from personalization at scale</span>,,
+                  <span ><strong >$3.2B+ Revenue Growth: </strong> Average annual revenue increase from personalization at scale</span>,
                 </li>
                 <li className="flex items-start gap-3">
                   <Users className="h-6 w-6 text-blue-400 mt-1 flex-shrink-0/>
@@ -70,19 +70,19 @@ export default function HyperPersonalizedCustomerExperience2025(): void {
               <ul className="space-y-4 text-lg">","
                 <li className="flex items-start gap-3">","
                   <Sparkles className="h-6 w-6 text-yellow-400 mt-1 flex-shrink-0" />","
-                  <span ><strong >97.8% Satisfaction: </strong> AI creates experiences so personalized they feel magical</span>,,
+                  <span ><strong >97.8% Satisfaction: </strong> AI creates experiences so personalized they feel magical</span>,
                 </li>
                 <li className="flex items-start gap-3">","
                   <TrendingUp className="h-6 w-6 text-green-400 mt-1 flex-shrink-0" />","
-                  <span ><strong >12.4x Engagement Lift: </strong> Customers interact 1,140% more with hyper-personalized experiences</span>,,
+                  <span ><strong >12.4x Engagement Lift: </strong> Customers interact 1,140% more with hyper-personalized experiences</span>,
                 </li>
                 <li className="flex items-start gap-3">","
                   <DollarSign className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />","
-                  <span ><strong >$3.2B+ Revenue Growth: </strong> Average annual revenue increase from personalization at scale</span>,,
+                  <span ><strong >$3.2B+ Revenue Growth: </strong> Average annual revenue increase from personalization at scale</span>,
                 </li>
                 <li className="flex items-start gap-3">","
                   <Users className="h-6 w-6 text-blue-400 mt-1 flex-shrink-0" />","
-                  <span ><strong >89% Churn Reduction: </strong> Predictive intervention retains customers before they leave</span>,,
+                  <span ><strong >89% Churn Reduction: </strong> Predictive intervention retains customers before they leave</span>,
                 </li>
               </ul>
             </div>
@@ -99,7 +99,7 @@ export default function HyperPersonalizedCustomerExperience2025(): void {
                 one-size-fits-all experiences that feel robotic and irrelevant.
               </p>
               <p className="text-gray-300 mb-4 leading-relaxed">
-  The cost of poor customer experience is staggering: $1.6 trillion lost annually to customer churn. Traditional,,,
+  The cost of poor customer experience is staggering: $1.6 trillion lost annually to customer churn. Traditional,
   personalization—basic segmentation and rules—achieves only 31% relevance. True hyper-personalization powered 
                 by AI treats every customer as a segment of one, understanding context, preferences, sentiment, and intent in 
                 real-time to deliver experiences that delight.
@@ -250,7 +250,7 @@ export default function HyperPersonalizedCustomerExperience2025(): void {
                 <h3 className="text-2xl font-bold mb-4 text-rose-300">Phase 3: Scale (Months 5-12)</h3>","
                 <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4">","
                   <li >Roll out across all customer segments and channels</li>
-                  <li >Activate advanced capabilities: predictive churn, conversational AI</li>,,
+                  <li >Activate advanced capabilities: predictive churn, conversational AI</li>,
                   <li >Continuous optimization through automated experimentation</li>
                   <li >Team enablement and organizational transformation</li>
                 </ul>
@@ -265,12 +265,12 @@ export default function HyperPersonalizedCustomerExperience2025(): void {
                 generic experiences will lose customers to competitors who understand them better.
               </p>
               <p className="text-gray-300 mb-4 leading-relaxed">,
-  The competitive advantage is overwhelming: 12x higher engagement, 89% lower churn, and $3.2B+ in incremental,,
+  The competitive advantage is overwhelming: 12x higher engagement, 89% lower churn, and $3.2B+ in incremental,
                 revenue. With average ROI exceeding 7x within 18 months, the business case is irrefutable. The question is not 
                 whether to deploy AI-powered personalization, but how quickly you can implement it before competitors capture 
                 your customers' hearts.;';';
               <p className="text-gray-300 mb-4 leading-relaxed">
-  The competitive advantage is overwhelming: 12x higher engagement, 89% lower churn, and $3.2B+ in incremental,,
+  The competitive advantage is overwhelming: 12x higher engagement, 89% lower churn, and $3.2B+ in incremental,
                 revenue. With average ROI exceeding 7x within 18 months, the business case is irrefutable. The question is not 
                 whether to deploy AI-powered personalization, but how quickly you can implement it before competitors capture 
                 your customers' hearts.'

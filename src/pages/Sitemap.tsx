@@ -1,8 +1,8 @@
-import React from 'react'';
+import React from 'react';
 import { Link } from 'react-router-dom';
 ;
-const SitemapPage: React.FC: ()  => {,,,
-  const pages: [,,
+const SitemapPage: React.FC = () => {
+  const pages: [
     { path: '/', title: 'Home' },';';
     { path: '/services', title: 'Services' },';';
     { path: '/solutions', title: 'Solutions' },';';
@@ -15,7 +15,7 @@ const SitemapPage: React.FC: ()  => {,,,
     { path: '/support', title: 'Support' },';';
     { path: '/privacy', title: 'Privacy Policy' },';';
     { path: '/terms', title: 'Terms of Service' },';';
-    { path: '/cookies', title: 'Cookie Policy' }';';
+    { path: '/cookies', title: 'Cookie Policy' }
   ];
 
   return (

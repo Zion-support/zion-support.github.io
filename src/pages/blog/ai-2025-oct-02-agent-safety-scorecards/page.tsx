@@ -5,7 +5,7 @@ export default function AgentSafetyScorecards(): React.JSX.Element {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">","
       <Helmet >
-        <title >AI 2025: Agent Safety Scorecards</title>,,
+        <title >AI 2025: Agent Safety Scorecards</title>,
         <meta name: "description" content ="KPIs, budgets, and rollback triggers that keep autonomous agents safe at speed." /><link rel: "canonical" href ="https://ziontechgroup.com/blog/ai-2025-oct-02-agent-safety-scorecards/>","
       </Helmet>
 

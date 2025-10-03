@@ -1,8 +1,8 @@
-import React, { useState } from 'react'';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom'';
 import { Calendar, Clock, User, Mail, Phone, CheckCircle, Star, Play } from 'lucide-react';
 ;
-const Demo: React.FC: ()  => {,,,
+const Demo: React.FC = () => {
   const [formData, setFormData] = useState({
     firstName: '',';,';,
     lastName: '',';,';,
@@ -18,71 +18,71 @@ const Demo: React.FC: ()  => {,,,
     message: '',';,
   });
 
-  const handleInputChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>)  => {,,,
+  const handleInputChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>)  => {,
   setFormData({
       ...formData
       [e.target.name]: e.target.value
     });
   };
 
-  const handleSubmit: (e: React.FormEvent)  => {,,,
+  const handleSubmit: (e: React.FormEvent)  => {,
   e.preventDefault();
     console.log('Form submitted: ', formData);';,';,
   };
 
-  const demoFeatures: [,,
+  const demoFeatures: [
     {
-      title: 'AI-Powered Automation',';,';,
-      description: 'See how our AI can automate your repetitive tasks and workflows',';,';,
+      title: 'AI-Powered Automation',
+      description: 'See how our AI can automate your repetitive tasks and workflows',
       icon: '🤖',';,
     },
     {
-      title: 'Real-time Analytics',';,';,
-      description: 'Experience our advanced analytics and reporting capabilities',';,';,
+      title: 'Real-time Analytics',
+      description: 'Experience our advanced analytics and reporting capabilities',
       icon: '📊',';,
     },
     {
-      title: 'Custom Integrations',';,';,
-      description: 'Learn how we can integrate with your existing systems',';,';,
+      title: 'Custom Integrations',
+      description: 'Learn how we can integrate with your existing systems',
       icon: '🔗',';,
     },
     {
-      title: 'Security & Compliance',';,';,
-      description: 'Understand our enterprise-grade security and compliance features',';,';,
+      title: 'Security & Compliance',
+      description: 'Understand our enterprise-grade security and compliance features',
       icon: '🔒',';,
     }
   ];
 
-  const testimonials: [,,
+  const testimonials: [
     {
       name: 'Sarah Johnson',';,';,
       company: 'TechCorp',';,';,
       role: 'CTO',';,';,
       content: 'The demo showed us exactly how AI could transform our operations. The ROI was clear from day one.',';,';,
-      rating: 5,,
+      rating: 5,
     },
     {
       name: 'Michael Chen',';,';,
       company: 'FinanceFlow',';,';,
       role: 'VP of Operations',';,';,
       content: "Zion Tech Group's demo was eye-opening. We saw immediate value and signed up the same week.
-      rating: 5,,
+      rating: 5,
     },
     {
       name: 'Emily Rodriguez',';,';,
       company: 'HealthTech Solutions',';,';,
       role: 'CEO',';,';,
       content: 'The personalized demo addressed all our specific needs. Highly recommend scheduling one.',';,';,
-      rating: 5,,
+      rating: 5,
     }
   ];
 
-  const timeSlots: [,,
+  const timeSlots: [
     '9: 00 AM', '10:00 AM', '11:00 AM', '12:00 PM',';,';,
     '1: 00 PM', '2:00 PM', '3:00 PM', '4:00 PM',';,
   ];
 
-  const companySizes: [,,
+  const companySizes: [
     '1-10 employees',';';
     '11-50 employees',';';
     '51-200 employees',';';
@@ -90,7 +90,7 @@ const Demo: React.FC: ()  => {,,,
     '1000+ employees'
   ];
 
-  const useCases: [,,
+  const useCases: [
     'Process Automation',';';
     'Data Analytics',';';
     'Customer Service',';';
@@ -432,12 +432,12 @@ const Demo: React.FC: ()  => {,,,
 };
 
 export default Demo;
-import React, { useState } from 'react'';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom'';
-import { Calendar, Clock, User, Mail, Phone, CheckCircle, Star, Play } from 'lucide-react'';
+import { Calendar, Clock, User, Mail, Phone, CheckCircle, Star, Play } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 ;
-const Demo: React.FC: ()  => {,,,
+const Demo: React.FC = () => {
   const [formData, setFormData] = useState({
     firstName: '',';,';,
     lastName: '',';,';,
@@ -452,22 +452,22 @@ const Demo: React.FC: ()  => {,,,
 
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleInputChange: (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>)  => {,,,
+  const handleInputChange: (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>)  => {,
   const { name, value } = e.target;
-    setFormData(prev: > ({,,
+    setFormData(prev: > ({,
       ...prev
       [name]: value
     }));
   };
 
-  const handleSubmit: (e: React.FormEvent)  => {,,,
+  const handleSubmit: (e: React.FormEvent)  => {,
   e.preventDefault();
     // Handle form submission here
     console.log('Demo request submitted: ', formData);';,';,
     setIsSubmitted(true);
   };
 
-  const useCases: [,,
+  const useCases: [
     'AI Automation',';';
     'Cybersecurity Solutions',';';
     'Cloud Infrastructure',';';
@@ -477,7 +477,7 @@ const Demo: React.FC: ()  => {,,,
     'Other'
   ];
 
-  const timeSlots: [,,
+  const timeSlots: [
     '9: 00 AM - 10:00 AM',';,';,
     '10: 00 AM - 11:00 AM',';,';,
     '11: 00 AM - 12:00 PM',';,';,

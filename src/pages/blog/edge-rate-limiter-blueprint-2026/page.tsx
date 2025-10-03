@@ -4,7 +4,7 @@ export default function EdgeRateLimiterBlueprint2026(): React.JSX.Element {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">","
       <Helmet >
-        <title >Edge Rate Limiter 2026: Globally Consistent, Sub‑10ms Budgets</title>,,
+        <title >Edge Rate Limiter 2026: Globally Consistent, Sub‑10ms Budgets</title>,
         <meta name: "description" content ="Design a multi‑region, token‑bucket limiter with consistent hashing and KV to protect APIs and GenAI tools without hurting UX." /><link rel: "canonical" href ="https://ziontechgroup.com/blog/edge-rate-limiter-blueprint-2026/>","
       </Helmet>
 
@@ -26,7 +26,7 @@ export default function EdgeRateLimiterBlueprint2026(): React.JSX.Element {
             and fairness across regions for API and GenAI tool invocations.
           </p>
           <p >
-            Highlights: KV sharded buckets, leaky bucket smoothing, multi‑writer safeguards, deterministic,,,
+            Highlights: KV sharded buckets, leaky bucket smoothing, multi‑writer safeguards, deterministic,
             fallbacks, and observability hooks for real‑time budget tracking.
           </p>
         </div>

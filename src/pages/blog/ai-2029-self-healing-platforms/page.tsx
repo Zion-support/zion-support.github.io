@@ -4,7 +4,7 @@ export default function AI2029SelfHealingPlatforms(): React.JSX.Element {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">","
       <Helmet >
-        <title >AI 2029: Self‑Healing Platforms — Auto‑Contain in &lt;60s</title>,,
+        <title >AI 2029: Self‑Healing Platforms — Auto‑Contain in &lt;60s</title>,
         <meta name: "description" content ="Policy‑tested playbooks, budgeted actions, and live canaries that auto‑contain incidents in under a minute." /><link rel: "canonical" href="https://ziontechgroup.com/blog/ai-2029-self-healing-platforms/>","
       </Helmet>
 

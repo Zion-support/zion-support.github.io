@@ -1,6 +1,6 @@
-import React from 'react'';
-import { Helmet } from 'react-helmet-async'';
-import { Video } from 'lucide-react'';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Video } from 'lucide-react';
 import Header from '../../components/Header'';
 import Footer from '../../components/Footer'';
 import React from 'react';'
@@ -9,10 +9,10 @@ import { Video } from 'lucide-react';'
 import Header from '../../components/Header';'
 import Footer from '../../components/Footer';'
 
-const ConversationalAI: React.FC: ()  => {,,,
-  const features: [,,
+const ConversationalAI: React.FC = () => {
+  const features: [
     {
-      icon: Brain,,,,
+      icon: Brain,
       title: "Advanced NLP & NLU",
       description: "State-of-the-art natural language processing that understands context, intent, and sentiment with 96% accuracy.",
       title: "Advanced NLP & NLU",","
@@ -20,7 +20,7 @@ const ConversationalAI: React.FC: ()  => {,,,
       benefit: "96% conversation understanding","
     },
     {
-      icon: MessageCircle,,,,
+      icon: MessageCircle,
       title: "Multi-Modal Conversations",
       description: "Support for text, voice, and video conversations with seamless transitions between modalities.",
       title: "Multi-Modal Conversations",","
@@ -28,7 +28,7 @@ const ConversationalAI: React.FC: ()  => {,,,
       benefit: "Unified conversation experience","
     },
     {
-      icon: Languages,,,,
+      icon: Languages,
       title: "150+ Language Support",
       description: "Real-time translation and multilingual support with cultural context awareness.",
       title: "150+ Language Support",","
@@ -36,7 +36,7 @@ const ConversationalAI: React.FC: ()  => {,,,
       benefit: "Global reach capability","
     },
     {
-      icon: Zap,,,,
+      icon: Zap,
       title: "Real-Time Processing",
       description: "Sub-second response times with intelligent context retention across conversation threads.",
       title: "Real-Time Processing",","
@@ -44,7 +44,7 @@ const ConversationalAI: React.FC: ()  => {,,,
       benefit: "Instant response delivery","
     },
     {
-      icon: Shield,,,,
+      icon: Shield,
       title: "Enterprise Security",
       description: "End-to-end encryption, GDPR compliance, and advanced privacy protection for sensitive conversations.",
       title: "Enterprise Security",","
@@ -52,7 +52,7 @@ const ConversationalAI: React.FC: ()  => {,,,
       benefit: "100% privacy compliance","
     },
     {
-      icon: Users,,,,
+      icon: Users,
       title: "Human-AI Collaboration",
       description: "Seamless handoff between AI and human agents with full context preservation.",
       title: "Human-AI Collaboration",","
@@ -61,13 +61,13 @@ const ConversationalAI: React.FC: ()  => {,,,
     }
   ];
 
-  const pricing: [,,
+  const pricing: [
     {
       name: "Starter
       price: "$399
       period: "/month
       description: "Perfect for small businesses wanting to add conversational AI capabilities
-      features: [,,,
+      features: [
         "Up to 1,000 conversations/month",";"
         "Basic NLP capabilities",";"
         "Text & voice support",";"
@@ -77,14 +77,14 @@ const ConversationalAI: React.FC: ()  => {,,,
         "5 language support",";"
         "Basic customization"
       ]
-      popular: false,,
+      popular: false,
     },
     {
       name: "Professional
       price: "$1,299
       period: "/month
       description: "Ideal for growing companies with complex conversational needs
-      features: [,,,
+      features: [
         "Up to 10,000 conversations/month",";"
         "Advanced NLP & NLU",";"
         "Text, voice & video support",";"
@@ -97,14 +97,14 @@ const ConversationalAI: React.FC: ()  => {,,,
         "A/B testing",";"
         "Sentiment analysis"
       ]
-      popular: true,,
+      popular: true,
     },
     {
       name: "Enterprise
       price: "$4,999
       period: "/month
       description: "Complete solution for large organizations with enterprise requirements
-      features: [,,,
+      features: [
         "Unlimited conversations",";"
         "Enterprise NLP & NLU",";"
         "Full multi-modal support",";"
@@ -119,12 +119,12 @@ const ConversationalAI: React.FC: ()  => {,,,
         "On-premise deployment",";"
         "Training & consultation"
       ]
-      popular: false,,,
+      popular: false,
       name: "Starter",","
       price: "$399",","
       period: "/month",","
       description: "Perfect for small businesses wanting to add conversational AI capabilities",","
-      features: [,,,
+      features: [
         "Up to 1,000 conversations/month","
         "Basic NLP capabilities","
         "Text & voice support","
@@ -134,14 +134,14 @@ const ConversationalAI: React.FC: ()  => {,,,
         "5 language support","
         "Basic customization"
       ]
-      popular: false,,
+      popular: false,
     },
     {
       name: "Professional",","
       price: "$1,299",","
       period: "/month",","
       description: "Ideal for growing companies with complex conversational needs",","
-      features: [,,,
+      features: [
         "Up to 10,000 conversations/month","
         "Advanced NLP & NLU","
         "Text, voice & video support","
@@ -154,14 +154,14 @@ const ConversationalAI: React.FC: ()  => {,,,
         "A/B testing","
         "Sentiment analysis"
       ]
-      popular: true,,
+      popular: true,
     },
     {
       name: "Enterprise",","
       price: "$4,999",","
       period: "/month",","
       description: "Complete solution for large organizations with enterprise requirements",","
-      features: [,,,
+      features: [
         "Unlimited conversations","
         "Enterprise NLP & NLU","
         "Full multi-modal support","
@@ -176,11 +176,11 @@ const ConversationalAI: React.FC: ()  => {,,,
         "On-premise deployment","
         "Training & consultation"
       ]
-      popular: false,,
+      popular: false,
     }
   ];
 
-  const testimonials: [,,
+  const testimonials: [
     {
       name: "Amanda Foster",
       role: "VP Customer Experience, E-Commerce Giant",
@@ -188,7 +188,7 @@ const ConversationalAI: React.FC: ()  => {,,,
       name: "Amanda Foster",","
       role: "VP Customer Experience, E-Commerce Giant",","
       content: "Conversational AI reduced our customer service response time from 4 hours to 30 seconds. Customer satisfaction increased by 45% while reducing support costs by 60%.",","
-      rating: 5,,,,
+      rating: 5,
       company: "E-Commerce Giant","
     },
     {
@@ -198,7 +198,7 @@ const ConversationalAI: React.FC: ()  => {,,,
       name: "Dr. Robert Chen",","
       role: "Head of Digital Health, Medical Systems",","
       content: "The multi-modal conversation capabilities enabled us to provide personalized patient support 24/7. Patient engagement improved by 70% with better health outcomes.",","
-      rating: 5,,,,
+      rating: 5,
       company: "Medical Systems","
     },
     {
@@ -208,95 +208,95 @@ const ConversationalAI: React.FC: ()  => {,,,
       name: "Maria Rodriguez",","
       role: "CTO, Global Financial Services",","
       content: "Enterprise-grade security and 150+ language support made it perfect for our international operations. Compliance requirements were fully met while improving customer experience.",","
-      rating: 5,,,,
+      rating: 5,
       company: "Global Financial Services","
     }
   ];
 
-  const useCases: [,,
+  const useCases: [
     {
       title: "Customer Support",
-      icon: Users,,,,
+      icon: Users,
       description: "24/7 intelligent customer service with instant responses and seamless human handoff.",
       benefits: ["60% cost reduction", "45% faster resolution", "95% customer satisfaction"]","
     },
     {
       title: "Sales & Lead Generation",
-      icon: Zap,,,,
+      icon: Zap,
       description: "Intelligent sales conversations that qualify leads and nurture prospects automatically.",
       benefits: ["35% increase in conversions", "50% more qualified leads", "40% sales team efficiency"]","
     },
     {
       title: "Healthcare Support",
-      icon: MessageCircle,,,,
+      icon: MessageCircle,
       description: "Patient engagement, appointment scheduling, and health information delivery.",
       benefits: ["70% patient engagement", "30% appointment compliance", "25% readmission reduction"]","
     },
     {
       title: "Education & Training",
-      icon: Brain,,,,
+      icon: Brain,
       description: "Personalized learning assistants and interactive training experiences.",
       benefits: ["50% learning retention", "40% course completion", "60% student satisfaction"]
       title: "Customer Support",","
-      icon: Users,,,,
+      icon: Users,
       description: "24/7 intelligent customer service with instant responses and seamless human handoff.",","
       benefits: ["60% cost reduction", "45% faster resolution", "95% customer satisfaction"]","
     },
     {
       title: "Sales & Lead Generation",","
-      icon: Zap,,,,
+      icon: Zap,
       description: "Intelligent sales conversations that qualify leads and nurture prospects automatically.",","
       benefits: ["35% increase in conversions", "50% more qualified leads", "40% sales team efficiency"]","
     },
     {
       title: "Healthcare Support",","
-      icon: MessageCircle,,,,
+      icon: MessageCircle,
       description: "Patient engagement, appointment scheduling, and health information delivery.",","
       benefits: ["70% patient engagement", "30% appointment compliance", "25% readmission reduction"]","
     },
     {
       title: "Education & Training",","
-      icon: Brain,,,,
+      icon: Brain,
       description: "Personalized learning assistants and interactive training experiences.",","
       benefits: ["50% learning retention", "40% course completion", "60% student satisfaction"]","
     }
   ];
 
-  const integrations: [,,
+  const integrations: [
     {
       name: "CRM Systems",
       name: "CRM Systems",","
-      icon: Database,,,,
+      icon: Database,
       description: "Seamless integration with Salesforce, HubSpot, and custom CRM platforms.","
     },
     {
       name: "Communication Platforms",
       name: "Communication Platforms",","
-      icon: Globe,,,,
+      icon: Globe,
       description: "Native support for Slack, Teams, WhatsApp, and enterprise messaging systems.","
     },
     {
       name: "Voice & Video",
       name: "Voice & Video",","
-      icon: Mic,,,,
+      icon: Mic,
       description: "Integration with Twilio, Zoom, WebRTC, and custom voice/video solutions.","
     },
     {
       name: "Analytics Platforms",
       name: "Analytics Platforms",","
-      icon: Zap,,,,
+      icon: Zap,
       description: "Connect with Google Analytics, Mixpanel, and custom business intelligence tools.","
     },
     {
       name: "AI/ML Services",
       name: "AI/ML Services",","
-      icon: Brain,,,,
+      icon: Brain,
       description: "Integration with OpenAI, Azure AI, AWS AI services, and custom ML models.","
     },
     {
       name: "Enterprise Systems",
       name: "Enterprise Systems",","
-      icon: Shield,,,,
+      icon: Shield,
       description: "Connect with ERP, HR systems, and enterprise resource planning platforms.","
     }
   ];
@@ -438,14 +438,14 @@ const ConversationalAI: React.FC: ()  => {,,,
 
             <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">","
               {useCases.map((useCase, index) => {
-                const Icon: useCase.icon;,,,
+                const Icon: useCase.icon;,
   return (
                   <div key: {index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">","
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-violet-100 rounded-full mb-6">
                       <Icon className="w-8 h-8 text-violet-600/>
             <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">","
               {useCases.map((useCase, index) => {
-                const Icon: useCase.icon;,,,
+                const Icon: useCase.icon;,
   return (
                   <div key: {index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">","
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-violet-100 rounded-full mb-6">","
@@ -489,14 +489,14 @@ const ConversationalAI: React.FC: ()  => {,,,
 
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">","
               {integrations.map((integration, index) => {
-                const Icon: integration.icon;,,,
+                const Icon: integration.icon;,
   return (
                   <div key: {index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200">
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-violet-100 rounded-full mb-6">
                       <Icon className="w-8 h-8 text-violet-600/>
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">","
               {integrations.map((integration, index) => {
-                const Icon: integration.icon;,,,
+                const Icon: integration.icon;,
   return (
                   <div key: {index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200">","
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-violet-100 rounded-full mb-6">","
@@ -529,7 +529,7 @@ const ConversationalAI: React.FC: ()  => {,,,
 
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">","
               {features.map((feature, index) => {
-                const Icon: feature.icon;,,,
+                const Icon: feature.icon;,
   return (
                   <div key: {index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">","
                     <div className="inline-flex items-center justify-center w-12 h-12 bg-violet-100 rounded-lg mb-4">
@@ -541,7 +541,7 @@ const ConversationalAI: React.FC: ()  => {,,,
                       <CheckCircle className="w-4 h-4 mr-1/>
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">","
               {features.map((feature, index) => {
-                const Icon: feature.icon;,,,
+                const Icon: feature.icon;,
   return (
                   <div key: {index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">","
                     <div className="inline-flex items-center justify-center w-12 h-12 bg-violet-100 rounded-lg mb-4">","
@@ -607,7 +607,7 @@ const ConversationalAI: React.FC: ()  => {,,,
                     ))}
                   </ul>
                   <a href="/contact
-  className: {,,
+  className: {,
 `w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${`
 plan.popular
 ? 'bg-violet-600 text-white hover:bg-violet-700',';,

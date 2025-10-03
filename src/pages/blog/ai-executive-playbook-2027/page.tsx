@@ -4,7 +4,7 @@ export default function AIExecutivePlaybook2027(): React.JSX.Element {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">","
       <Helmet >
-        <title >AI Executive Playbook 2027: Fund, Govern, and Scale with KPIs</title>,,
+        <title >AI Executive Playbook 2027: Fund, Govern, and Scale with KPIs</title>,
         <meta name: "description" content ="Executive roadmap with KPI‑linked scorecards, budgeted actions, and governance that accelerates delivery." /><link rel: "canonical" href ="https://ziontechgroup.com/blog/ai-executive-playbook-2027/>","
       </Helmet>
 

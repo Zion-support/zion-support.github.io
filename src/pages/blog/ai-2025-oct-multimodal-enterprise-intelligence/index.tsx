@@ -7,7 +7,7 @@ const MultimodalEnterpriseIntelligence: () => {
   return (
     <>
       <Helmet >
-        <title >Multimodal Enterprise Intelligence 2025: Vision, Language & Audio AI Convergence | Zion Tech Group</title>,,
+        <title >Multimodal Enterprise Intelligence 2025: Vision, Language & Audio AI Convergence | Zion Tech Group</title>,
         <meta name: "description
   content: "Revolutionary multimodal AI systems combining vision, language, and audio processing for enterprise applications. Achieve 97% accuracy with unified intelligence platforms." /><meta name: "keywords
   content: "multimodal AI, enterprise intelligence, computer vision, NLP, audio AI, unified AI platform, GPT-4V, Claude Vision, DALL-E 3" /></Helmet>
@@ -256,19 +256,19 @@ const MultimodalEnterpriseIntelligence: () => {
                     <h3 className="text-xl font-bold text-white mb-4">Investment</h3>
                     <ul className="space-y-2 text-sm">
                       <li className="flex justify-between">
-                        <span >Platform licensing: </span>,,
+                        <span >Platform licensing: </span>,
                         <span className="text-white font-semibold">$180K/year</span>
                       </li>
                       <li className="flex justify-between">
-                        <span >Implementation: </span>,,
+                        <span >Implementation: </span>,
                         <span className="text-white font-semibold">$250K one-time</span>
                       </li>
                       <li className="flex justify-between">
-                        <span >Training & support: </span>,,
+                        <span >Training & support: </span>,
                         <span className="text-white font-semibold">$120K/year</span>
                       </li>
                       <li className="flex justify-between border-t border-white/20 pt-2 mt-2">
-                        <strong >First Year Total: </strong>,,
+                        <strong >First Year Total: </strong>,
                         <strong className="text-white">$550K</strong>
               <h2 className="text-3xl font-bold text-white mb-6">💰 Enterprise ROI: Multimodal AI</h2>","
               <div className="bg-gradient-to-r from-green-900/40 to-blue-900/40 rounded-xl p-8 border border-green-500/30">","
@@ -277,19 +277,19 @@ const MultimodalEnterpriseIntelligence: () => {
                     <h3 className="text-xl font-bold text-white mb-4">Investment</h3>","
                     <ul className="space-y-2 text-sm">","
                       <li className="flex justify-between">","
-                        <span >Platform licensing: </span>,,
+                        <span >Platform licensing: </span>,
                         <span className="text-white font-semibold">$180K/year</span>","
                       </li>
                       <li className="flex justify-between">","
-                        <span >Implementation: </span>,,
+                        <span >Implementation: </span>,
                         <span className="text-white font-semibold">$250K one-time</span>","
                       </li>
                       <li className="flex justify-between">","
-                        <span >Training & support: </span>,,
+                        <span >Training & support: </span>,
                         <span className="text-white font-semibold">$120K/year</span>","
                       </li>
                       <li className="flex justify-between border-t border-white/20 pt-2 mt-2">","
-                        <strong >First Year Total: </strong>,,
+                        <strong >First Year Total: </strong>,
                         <strong className="text-white">$550K</strong>","
                       </li>
                     </ul>
@@ -298,36 +298,36 @@ const MultimodalEnterpriseIntelligence: () => {
                     <h3 className="text-xl font-bold text-white mb-4">Returns (Year 1)</h3>
                     <ul className="space-y-2 text-sm">
                       <li className="flex justify-between">
-                        <span >Process automation savings: </span>,,
+                        <span >Process automation savings: </span>,
                         <span className="text-green-400 font-semibold">$1.8M</span>
                       </li>
                       <li className="flex justify-between">
-                        <span >Quality improvement value: </span>,,
+                        <span >Quality improvement value: </span>,
                         <span className="text-green-400 font-semibold">$920K</span>
                       </li>
                       <li className="flex justify-between">
-                        <span >Productivity gains: </span>,,
+                        <span >Productivity gains: </span>,
                         <span className="text-green-400 font-semibold">$1.2M</span>
                       </li>
                       <li className="flex justify-between border-t border-white/20 pt-2 mt-2">
-                        <strong >Total Value: </strong>,,
+                        <strong >Total Value: </strong>,
                         <strong className="text-green-400">$3.92M</strong>
                     <h3 className="text-xl font-bold text-white mb-4">Returns (Year 1)</h3>","
                     <ul className="space-y-2 text-sm">","
                       <li className="flex justify-between">","
-                        <span >Process automation savings: </span>,,
+                        <span >Process automation savings: </span>,
                         <span className="text-green-400 font-semibold">$1.8M</span>","
                       </li>
                       <li className="flex justify-between">","
-                        <span >Quality improvement value: </span>,,
+                        <span >Quality improvement value: </span>,
                         <span className="text-green-400 font-semibold">$920K</span>","
                       </li>
                       <li className="flex justify-between">","
-                        <span >Productivity gains: </span>,,
+                        <span >Productivity gains: </span>,
                         <span className="text-green-400 font-semibold">$1.2M</span>","
                       </li>
                       <li className="flex justify-between border-t border-white/20 pt-2 mt-2">","
-                        <strong >Total Value: </strong>,,
+                        <strong >Total Value: </strong>,
                         <strong className="text-green-400">$3.92M</strong>","
                       </li>
                     </ul>

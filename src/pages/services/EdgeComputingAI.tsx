@@ -1,6 +1,6 @@
-import React from 'react'';
-import { Helmet } from 'react-helmet-async'';
-import { Cloud } from 'lucide-react'';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Cloud } from 'lucide-react';
 import Header from '../../components/Header'';
 import Footer from '../../components/Footer'';
 import React from 'react';'
@@ -9,10 +9,10 @@ import { Cloud } from 'lucide-react';'
 import Header from '../../components/Header';'
 import Footer from '../../components/Footer';'
 
-const EdgeComputingAI: React.FC: ()  => {,,,
-  const features: [,,
+const EdgeComputingAI: React.FC = () => {
+  const features: [
     {
-      icon: Cpu,,,,
+      icon: Cpu,
       title: "Edge AI Processing",
       description: "Deploy AI models directly on edge devices for real-time inference without cloud dependency.",
       title: "Edge AI Processing",","
@@ -20,7 +20,7 @@ const EdgeComputingAI: React.FC: ()  => {,,,
       benefit: "Sub-10ms response times","
     },
     {
-      icon: Zap,,,,
+      icon: Zap,
       title: "Real-Time Analytics",
       description: "Process and analyze data at the edge for instant insights and immediate action triggers.",
       title: "Real-Time Analytics",","
@@ -28,7 +28,7 @@ const EdgeComputingAI: React.FC: ()  => {,,,
       benefit: "99.9% uptime with offline capability","
     },
     {
-      icon: Wifi,,,,
+      icon: Wifi,
       title: "Low-Latency Communication",
       description: "Optimized protocols for minimal latency between edge devices and central systems.",
       title: "Low-Latency Communication",","
@@ -36,7 +36,7 @@ const EdgeComputingAI: React.FC: ()  => {,,,
       benefit: "90% reduction in network latency","
     },
     {
-      icon: Shield,,,,
+      icon: Shield,
       title: "Enhanced Security",
       description: "Data processing at the edge reduces exposure and provides local security controls.",
       title: "Enhanced Security",","
@@ -44,7 +44,7 @@ const EdgeComputingAI: React.FC: ()  => {,,,
       benefit: "Zero data transmission vulnerabilities","
     },
     {
-      icon: Clock,,,,
+      icon: Clock,
       title: "Continuous Operation",
       description: "Edge devices operate independently, ensuring functionality even during network outages.",
       title: "Continuous Operation",","
@@ -52,7 +52,7 @@ const EdgeComputingAI: React.FC: ()  => {,,,
       benefit: "100% local processing capability","
     },
     {
-      icon: Users,,,,
+      icon: Users,
       title: "Scalable Deployment",
       description: "Easily scale from single devices to thousands of edge nodes across multiple locations.",
       title: "Scalable Deployment",","
@@ -61,13 +61,13 @@ const EdgeComputingAI: React.FC: ()  => {,,,
     }
   ];
 
-  const pricing: [,,
+  const pricing: [
     {
       name: "Edge Starter
       price: "$1,999
       period: "/month
       description: "Perfect for small-scale edge deployments and proof of concepts
-      features: [,,,
+      features: [
         "Up to 10 edge devices",";"
         "Basic AI model deployment",";"
         "Standard monitoring",";"
@@ -77,14 +77,14 @@ const EdgeComputingAI: React.FC: ()  => {,,,
         "Standard protocols",";"
         "Cloud backup integration"
       ]
-      popular: false,,
+      popular: false,
     },
     {
       name: "Edge Professional
       price: "$5,999
       period: "/month
       description: "Ideal for medium-scale deployments with advanced requirements
-      features: [,,,
+      features: [
         "Up to 100 edge devices",";"
         "Advanced AI model deployment",";"
         "Real-time monitoring & alerting",";"
@@ -96,14 +96,14 @@ const EdgeComputingAI: React.FC: ()  => {,,,
         "Custom model training",";"
         "API access"
       ]
-      popular: true,,
+      popular: true,
     },
     {
       name: "Edge Enterprise
       price: "$15,999
       period: "/month
       description: "Complete solution for large-scale enterprise edge deployments
-      features: [,,,
+      features: [
         "Unlimited edge devices",";"
         "Custom AI model development",";"
         "Enterprise monitoring suite",";"
@@ -117,12 +117,12 @@ const EdgeComputingAI: React.FC: ()  => {,,,
         "SLA guarantee",";"
         "Training & consultation"
       ]
-      popular: false,,,
+      popular: false,
       name: "Edge Starter",","
       price: "$1,999",","
       period: "/month",","
       description: "Perfect for small-scale edge deployments and proof of concepts",","
-      features: [,,,
+      features: [
         "Up to 10 edge devices","
         "Basic AI model deployment","
         "Standard monitoring","
@@ -132,14 +132,14 @@ const EdgeComputingAI: React.FC: ()  => {,,,
         "Standard protocols","
         "Cloud backup integration"
       ]
-      popular: false,,
+      popular: false,
     },
     {
       name: "Edge Professional",","
       price: "$5,999",","
       period: "/month",","
       description: "Ideal for medium-scale deployments with advanced requirements",","
-      features: [,,,
+      features: [
         "Up to 100 edge devices","
         "Advanced AI model deployment","
         "Real-time monitoring & alerting","
@@ -151,14 +151,14 @@ const EdgeComputingAI: React.FC: ()  => {,,,
         "Custom model training","
         "API access"
       ]
-      popular: true,,
+      popular: true,
     },
     {
       name: "Edge Enterprise",","
       price: "$15,999",","
       period: "/month",","
       description: "Complete solution for large-scale enterprise edge deployments",","
-      features: [,,,
+      features: [
         "Unlimited edge devices","
         "Custom AI model development","
         "Enterprise monitoring suite","
@@ -172,11 +172,11 @@ const EdgeComputingAI: React.FC: ()  => {,,,
         "SLA guarantee","
         "Training & consultation"
       ]
-      popular: false,,
+      popular: false,
     }
   ];
 
-  const testimonials: [,,
+  const testimonials: [
     {
       name: "Robert Kim",
       role: "CTO, Manufacturing Solutions",
@@ -184,7 +184,7 @@ const EdgeComputingAI: React.FC: ()  => {,,,
       name: "Robert Kim",","
       role: "CTO, Manufacturing Solutions",","
       content: "Edge AI processing reduced our production line response times from 500ms to 8ms. This enabled real-time quality control that increased our product quality by 40%.",","
-      rating: 5,,,,
+      rating: 5,
       company: "Manufacturing Solutions","
     },
     {
@@ -194,7 +194,7 @@ const EdgeComputingAI: React.FC: ()  => {,,,
       name: "Lisa Chen",","
       role: "VP Engineering, Smart City Initiative",","
       content: "The edge computing platform enabled us to process traffic data locally, reducing network costs by 60% while improving traffic management response times by 10x.",","
-      rating: 5,,,,
+      rating: 5,
       company: "Smart City Initiative","
     },
     {
@@ -204,61 +204,61 @@ const EdgeComputingAI: React.FC: ()  => {,,,
       name: "Dr. Michael Rodriguez",","
       role: "Head of Innovation, Healthcare Systems",","
       content: "Edge AI deployment in our medical devices enabled real-time patient monitoring with zero network dependency. Patient safety improved significantly with instant alerts.",","
-      rating: 5,,,,
+      rating: 5,
       company: "Healthcare Systems","
     }
   ];
 
-  const useCases: [,,
+  const useCases: [
     {
       title: "Industrial IoT",
-      icon: Monitor,,,,
+      icon: Monitor,
       description: "Real-time monitoring and control of industrial equipment with predictive maintenance capabilities.",
       benefits: ["50% reduction in downtime", "30% improvement in efficiency", "40% cost savings in maintenance"]","
     },
     {
       title: "Smart Cities",
-      icon: Globe,,,,
+      icon: Globe,
       description: "Intelligent traffic management, environmental monitoring, and public safety systems.",
       benefits: ["60% reduction in traffic congestion", "25% improvement in air quality", "35% faster emergency response"]","
     },
     {
       title: "Healthcare",
-      icon: Smartphone,,,,
+      icon: Smartphone,
       description: "Real-time patient monitoring, medical device control, and emergency response systems.",
       benefits: ["45% improvement in patient outcomes", "70% faster emergency detection", "50% reduction in hospital readmissions"]","
     },
     {
       title: "Retail & Commerce",
-      icon: Database,,,,
+      icon: Database,
       description: "Intelligent inventory management, customer behavior analysis, and automated checkout systems.",
       benefits: ["35% improvement in inventory accuracy", "25% increase in sales", "40% reduction in checkout time"]
       title: "Industrial IoT",","
-      icon: Monitor,,,,
+      icon: Monitor,
       description: "Real-time monitoring and control of industrial equipment with predictive maintenance capabilities.",","
       benefits: ["50% reduction in downtime", "30% improvement in efficiency", "40% cost savings in maintenance"]","
     },
     {
       title: "Smart Cities",","
-      icon: Globe,,,,
+      icon: Globe,
       description: "Intelligent traffic management, environmental monitoring, and public safety systems.",","
       benefits: ["60% reduction in traffic congestion", "25% improvement in air quality", "35% faster emergency response"]","
     },
     {
       title: "Healthcare",","
-      icon: Smartphone,,,,
+      icon: Smartphone,
       description: "Real-time patient monitoring, medical device control, and emergency response systems.",","
       benefits: ["45% improvement in patient outcomes", "70% faster emergency detection", "50% reduction in hospital readmissions"]","
     },
     {
       title: "Retail & Commerce",","
-      icon: Database,,,,
+      icon: Database,
       description: "Intelligent inventory management, customer behavior analysis, and automated checkout systems.",","
       benefits: ["35% improvement in inventory accuracy", "25% increase in sales", "40% reduction in checkout time"]","
     }
   ];
 
-  const technologies: [,,
+  const technologies: [
     {
       name: "TensorFlow Lite",
       description: "Optimized AI model deployment for edge devices with minimal resource requirements.","
@@ -443,14 +443,14 @@ const EdgeComputingAI: React.FC: ()  => {,,,
 
             <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">","
               {useCases.map((useCase, index) => {
-                const Icon: useCase.icon;,,,
+                const Icon: useCase.icon;,
   return (
                   <div key: {index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">","
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-teal-100 rounded-full mb-6">
                       <Icon className="w-8 h-8 text-teal-600/>
             <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">","
               {useCases.map((useCase, index) => {
-                const Icon: useCase.icon;,,,
+                const Icon: useCase.icon;,
   return (
                   <div key: {index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">","
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-teal-100 rounded-full mb-6">","
@@ -522,7 +522,7 @@ const EdgeComputingAI: React.FC: ()  => {,,,
 
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">","
               {features.map((feature, index) => {
-                const Icon: feature.icon;,,,
+                const Icon: feature.icon;,
   return (
                   <div key: {index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">","
                     <div className="inline-flex items-center justify-center w-12 h-12 bg-teal-100 rounded-lg mb-4">
@@ -534,7 +534,7 @@ const EdgeComputingAI: React.FC: ()  => {,,,
                       <CheckCircle className="w-4 h-4 mr-1/>
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">","
               {features.map((feature, index) => {
-                const Icon: feature.icon;,,,
+                const Icon: feature.icon;,
   return (
                   <div key: {index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">","
                     <div className="inline-flex items-center justify-center w-12 h-12 bg-teal-100 rounded-lg mb-4">","
@@ -600,7 +600,7 @@ const EdgeComputingAI: React.FC: ()  => {,,,
                     ))}
                   </ul>
                   <a href="/contact
-  className: {,,
+  className: {,
 `w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${`
 plan.popular
 ? 'bg-teal-600 text-white hover:bg-teal-700',';,
