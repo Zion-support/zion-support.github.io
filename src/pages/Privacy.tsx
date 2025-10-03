@@ -6,17 +6,28 @@ const Privacy: React.FC: ()  => {,,,
     <>
       <Helmet >
         <title >Privacy Policy - Zion Tech Group</title>
-        <meta name: "description" content ="Learn how Zion Tech Group collects, uses, and protects your personal information." />
+        <meta name: "description" content ="Learn how Zion Tech Group collects, uses, and protects your personal information." />";,"
       </Helmet>
       
-      <div className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">Privacy Policy - Zion Tech Group</h1>
-          <p className="text-xl text-gray-600 mb-8">,
+<<<<<<< HEAD
+      <div className="py-20 px-4"
+        <div className="max-w-4xl mx-auto text-center"
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">Privacy Policy - Zion Tech Group</h1>";,"
+          <p className="text-xl text-gray-600 mb-8">,";,"
   This page is currently under development. Please check back soon for updates.
           </p>
-          <div className="bg-white p-8 rounded-xl shadow-lg">
-            <p className="text-gray-600">,
+          <div className="bg-white p-8 rounded-xl shadow-lg"
+            <p className="text-gray-600">,";,"
+=======
+      <div className= "py-20 px-4">
+        <div className= "max-w-4xl mx-auto text-center">
+          <h1 className= "text-4xl font-bold text-gray-900 mb-6">Privacy Policy - Zion Tech Group</h1>";,"
+          <p className= "text-xl text-gray-600 mb-8">,";,"
+  This page is currently under development. Please check back soon for updates.
+          </p>
+          <div className= "bg-white p-8 rounded-xl shadow-lg">
+            <p className= "text-gray-600">,";,"
+>>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   We're working hard to bring you the best content and features. Thank you for your patience.';';
             </p>
           </div>
