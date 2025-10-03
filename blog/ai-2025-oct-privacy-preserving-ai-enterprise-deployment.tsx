@@ -15,8 +15,6 @@ export default function BlogPost() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <article className="text-left"></a>
       <h1>🔒 Privacy-Preserving AI: Enterprise Deployment Guide 2025</h1>
       

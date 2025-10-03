@@ -13,8 +13,6 @@ export default function ProductionAIGovernanceFramework2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>Production AI Governance Framework 2025: Enterprise-Ready Compliance & Trust | Zion Tech Group</title>

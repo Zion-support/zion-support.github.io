@@ -13,8 +13,6 @@ export default function FraudDetectionRealTimePreventionRevolution2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>Real-Time Fraud Detection AI Revolution 2025: $47B Savings with 99.94% Accuracy | Zion Tech Group</title>
@@ -206,7 +204,7 @@ class RealTimeFraudDetector:
         self.cache = Redis(host='redis', port=6379, decode_responses=True)
         
         # Performance metrics
-        self.metrics = {/* content */}
+        self.metrics = 
             'processed': 0,
             'fraud_detected': 0,
             'avg_latency_ms': []
@@ -220,7 +218,7 @@ class RealTimeFraudDetector:
         user_id = transaction['user_id']
         
         # Real-time aggregations from cache
-        features = {/* content */}
+        features = 
             # Velocity features (last hour)
             'txn_count_1h': int(self.cache.get(f'txn:{user_id}:1h') or 0),
             'txn_amount_1h': float(self.cache.get(f'amt:{user_id}:1h') or 0),
@@ -286,11 +284,11 @@ class RealTimeFraudDetector:
         
         is_fraud = fraud_score > threshold
         
-        return {/* content */}
+        return 
             'fraud_score': float(fraud_score),
             'is_fraud': bool(is_fraud),
             'confidence': float(abs(fraud_score - threshold)),
-            'model_scores': {/* content */}
+            'model_scores': 
                 'transaction': float(txn_score),
                 'sequence': float(sequence_score),
                 'graph': float(graph_score)
@@ -355,7 +353,7 @@ class RealTimeFraudDetector:
                 self.metrics['fraud_detected'] += 1
                 
                 # Immediate action - block transaction
-                self.producer.send('fraud_alerts', {/* content */}
+                self.producer.send('fraud_alerts', 
                     'transaction_id': transaction['id'],
                     'user_id': transaction['user_id'],
                     'fraud_score': result['fraud_score'],
@@ -365,7 +363,7 @@ class RealTimeFraudDetector:
                 })
             else:
                 # Approve transaction
-                self.producer.send('approved_transactions', {/* content */}
+                self.producer.send('approved_transactions', 
                     'transaction_id': transaction['id'],
                     'fraud_score': result['fraud_score'],
                     'latency_ms': latency_ms

@@ -18,8 +18,6 @@ export default function RLHFEnterpriseGuide() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <article className="text-left"></a>
       <h1>RLHF in Enterprise: Reinforcement Learning from Human Feedback Revolution 2025</h1>
       

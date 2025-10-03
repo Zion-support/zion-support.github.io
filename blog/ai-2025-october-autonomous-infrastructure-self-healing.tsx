@@ -1,6 +1,6 @@
 import React from "react";
 
-const AIAutonomousInfrastructureSelfHealing2025 = () => {/* content */}
+const AIAutonomousInfrastructureSelfHealing2025 = () => 
   return (
   <div></div>
     <article className="text-left"></a>

@@ -7,8 +7,6 @@ export default function GenerativeAIEnterprise2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>Generative AI in the Enterprise: Beyond ChatGPT | Zion Tech Group</title>

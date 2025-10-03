@@ -6,8 +6,6 @@ export default function MultimodalAISystems2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <main className="text-left">
       <h1>Multimodal AI Systems (2025): Beyond Text to Universal Intelligence</h1>
       

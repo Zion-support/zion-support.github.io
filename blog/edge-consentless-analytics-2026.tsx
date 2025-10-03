@@ -12,8 +12,6 @@ export default function BlogPost() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <article className="text-left"></a>
       <h1>Edge Analytics 2026: Consent-Safe Insights</h1>
       <p></p>

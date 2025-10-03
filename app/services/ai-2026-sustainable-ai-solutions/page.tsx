@@ -2,7 +2,7 @@ import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 
-export const metadata: Metadata = {/* content */}
+export const metadata: Metadata = 
   title: 'AI 2026 Sustainable AI Solutions - Zion Tech Group',
   description: 'Transform your business with revolutionary sustainable AI solutions achieving 99.9% energy efficiency and 85% carbon reduction while delivering superior performance.',
   keywords: 'sustainable AI solutions, green AI services, energy efficient AI, carbon neutral AI, environmental AI consulting',
@@ -14,8 +14,6 @@ export default function SustainableAISolutionsPage() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div className="text-left"></div>
       {/* Hero Section */}</div>
       <header className="text-left">

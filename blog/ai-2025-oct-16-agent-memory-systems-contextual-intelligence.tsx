@@ -13,8 +13,6 @@ export default function AIAgentMemorySystemsContextualIntelligence2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>AI Agent Memory Systems 2025: Build Contextual Intelligence with 95% Recall Accuracy | Zion Tech Group</title>
@@ -100,7 +98,7 @@ export default function AIAgentMemorySystemsContextualIntelligence2025() {
         self.max_tokens = 4000
     
     def add_interaction(self, user_msg, assistant_msg):
-        self.buffer.append({/* content */}
+        self.buffer.append(
             "timestamp": datetime.now(),
             "user": user_msg,
             "assistant": assistant_msg,
@@ -148,7 +146,7 @@ class LongTermMemory:
         self.collection.add(
             embeddings=[embedding.tolist()],
             documents=[interaction],
-            metadatas=[{/* content */}
+            metadatas=[
                 "user_id": user_id,
                 "timestamp": interaction["timestamp"].isoformat(),
                 "topic": metadata.get("topic"),
@@ -184,7 +182,7 @@ class LongTermMemory:
         self.redis = redis_client
         self.timeline_key = "timeline"
     def record_episode(self, user_id, event_type, data):
-        episode = {/* content */}
+        episode = 
             "timestamp": datetime.now().isoformat(),
             "event_type": event_type,
             "data": data,
@@ -288,7 +286,7 @@ class LongTermMemory:
         return prompt
     
     async def store_interaction(self, user_msg, assistant_msg):
-        interaction = {/* content */}
+        interaction = 
             "timestamp": datetime.now(),
             "user": user_msg,
             "assistant": assistant_msg
@@ -298,7 +296,7 @@ class LongTermMemory:
         self.short_term.add_interaction(user_msg, assistant_msg)
         
         # Persist to long-term vector store
-        metadata = {/* content */}
+        metadata = 
             "topic": classify_topic(user_msg),
             "sentiment": analyze_sentiment(user_msg)
         }
@@ -397,7 +395,7 @@ def prune_memory_store(vector_store, threshold=0.3):
         summary = await llm.generate(summary_prompt)
         
         # Store summary with references to original memories
-        consolidated_memory = {/* content */}
+        consolidated_memory = 
             "type": "consolidated
             "summary": summary,
             "original_ids": [m.id for m in cluster],

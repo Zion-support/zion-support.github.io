@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ContactPage: React.FC = () => {/* content */}
+const ContactPage: React.FC = () => 
   return (
   <div></div>
     <div className="min-h-screen bg-slate-50 py-16"></div>

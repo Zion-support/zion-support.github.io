@@ -15,8 +15,6 @@ export default function BlogPost() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <article className="text-left"></a>
       <h1>🔐 Quantum-Enhanced AI Security Systems 2025: Unbreakable Enterprise Protection</h1>
       

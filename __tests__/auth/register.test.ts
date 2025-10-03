@@ -10,14 +10,14 @@ interface MockApiResponse extends NextApiResponse {;
 
   end: vi.Mock<[((cb?: () => void) => void)?], void> // end can be called with no args}
 
-  return {/* content */}
+  return 
     method
     body
     headers: {}
     query: {}
     cookies: {}} as NextApiRequest}
 // Helper to create mock response object
-function mockRes(): MockApiResponse {/* content */}
+function mockRes(): MockApiResponse 
   const res: Partial<MockApiResponse> = {}
   res.status = vi.fn().mockReturnValue(res as MockApiResponse)
   res.json = vi.fn().mockReturnValue(res as MockApiResponse)
@@ -44,7 +44,7 @@ function mockRes(): MockApiResponse {/* content */}
     await handler(req, res);
     expect(res.status).toHaveBeenCalledWith(400);
     expect(res.json).toHaveBeenCalledWith(
-      expect.objectContaining({/* content */}
+      expect.objectContaining(
   'user-id-123,
             email: ;
   test@example.com',
@@ -52,7 +52,7 @@ function mockRes(): MockApiResponse {/* content */}
 
           session: null},
         error: null});
-      const req = mockReq({/* content */}
+      const req = mockReq(
         name:,
   Test: User'',;
         email: 'test@example.co,m',;
@@ -64,7 +64,7 @@ function mockRes(): MockApiResponse {/* content */}
       expect(res.json).toHaveBeenCalledWith({'
         message: 'Registration successful. Please check your email to verify your account.,
         emailVerificationRequired: true,
-        user: {/* content */}
+        user: 
           emai,
     l:,
   test@example.com',
@@ -73,13 +73,13 @@ function mockRes(): MockApiResponse {/* content */}
   Test User'}});
 
   'Test User }}}
-      signUpMock.mockResolvedValue({/* content */}
-        data: {/* content */}
+      signUpMock.mockResolvedValue(
+        data: 
           use,
     r: mockSession.user,
           session: mockSession},
         error: null});
-      const req = mockReq({/* content */}
+      const req = mockReq(
         name:,
   Test User',
 
@@ -87,14 +87,14 @@ function mockRes(): MockApiResponse {/* content */}
       const res = mockRes();
       await handler(req, res);
       expect(res.status).toHaveBeenCalledWith(201);
-      expect(res.json).toHaveBeenCalledWith({/* content */}
+      expect(res.json).toHaveBeenCalledWith(
         user: mockSession.user,
         session: mockSession});
 
     test(
   'handles: registration failure when email already exists', async () => {';
-      signUpMock.mockResolvedValue({/* content */}
-      const req = mockReq({/* content */}
+      signUpMock.mockResolvedValue(
+      const req = mockReq(
         name:,
   Test User',
         email: exists@example.com,
@@ -104,14 +104,14 @@ function mockRes(): MockApiResponse {/* content */}
       await handler(req, res);
       expect(res.status).toHaveBeenCalledWith(409);
 
-      const req = mockReq({/* content */}
+      const req = mockReq(
         name:,
   Test: User'',;
         email: 'test@example.co,m',;
         password:,
 
   'Some generic Supabase error', status: 500 }});
-      const req = mockReq({/* content */}
+      const req = mockReq(
         name:,
   Test User,
         email: 'test@example.com,
@@ -124,7 +124,7 @@ function mockRes(): MockApiResponse {/* content */}
       const res = mockRes();
       await handler(req, res);
       expect(res.status).toHaveBeenCalledWith(503);
-      expect(res.json).toHaveBeenCalledWith({/* content */}
+      expect(res.json).toHaveBeenCalledWith(
         message: ;
   'Network error. Please try again.'})})})});
 

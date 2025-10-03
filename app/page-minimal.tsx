@@ -12,8 +12,6 @@ export default function HomePage() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div className="text-left"></div>
       <header className="text-left">
         <div className="text-left"></div>

@@ -2,12 +2,10 @@ import { ArrowLeft, Atom, Brain, Cpu, Sparkles, TrendingUp, Zap } from "lucide-r
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 
-const QuantumEnhancedML2026 = () => {/* content */}
+const QuantumEnhancedML2026 = () => 
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
       <Helmet>
         <title>Quantum-Enhanced Machine Learning 2026 | Zion Tech Group</title>
         <meta name="description" content="Discover how quantum computing is accelerating ML training by 1000x and unlocking optimization problems previously impossible to solve." />

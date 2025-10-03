@@ -7,8 +7,6 @@ export default function EnterpriseAIRoadmap2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <main className="text-left">
       <article className="text-left"></a>
         <header className="text-left">

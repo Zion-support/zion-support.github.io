@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {/* content */}
+export const metadata: Metadata = 
   title: 'AI 2026 Hyperintelligence Breakthrough Services - Zion Tech Group',
   description: 'Transform your enterprise with revolutionary AI hyperintelligence breakthrough achieving 10,000x cognitive enhancement and autonomous operations.',
   keywords: ['AI hyperintelligence', 'enterprise AI transformation', 'autonomous systems', 'cognitive enhancement', 'AI services'],
@@ -13,8 +13,6 @@ export default function AI2026HyperintelligenceBreakthroughService() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div className="text-left"></div>
       <div className="text-left"></div>
         {/* Header */}</div>

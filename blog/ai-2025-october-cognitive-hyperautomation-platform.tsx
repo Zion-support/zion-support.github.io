@@ -8,8 +8,6 @@ export default function CognitiveHyperautomationPlatform() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Helmet>
         <title>Cognitive Hyperautomation Platform 2025 | Enterprise AI Revolution | Zion Tech Group</title>

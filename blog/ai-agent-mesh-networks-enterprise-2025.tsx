@@ -6,8 +6,6 @@ export default function AIAgentMeshNetworksEnterprise2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <div className="text-left"></div>
         <main className="text-left">
@@ -173,9 +171,9 @@ export default function AIAgentMeshNetworksEnterprise2025() {
                   </p>
                   <pre className="text-left"></p>
 {`// Agent Mesh Coordinator
-class AgentMeshCoordinator {/* content */}
-  async spawnAgent(capabilities, resources) {/* content */}
-    const agent = await this.agentFactory.create({/* content */}
+class AgentMeshCoordinator 
+  async spawnAgent(capabilities, resources) 
+    const agent = await this.agentFactory.create(
       capabilities,
       resources,
       meshId: this.meshId,
@@ -187,7 +185,7 @@ class AgentMeshCoordinator {/* content */}
     return agent;
   }
   
-  async coordinateTask(task) {/* content */}
+  async coordinateTask(task) 
     const coalition = await this.formCoalition(task);
     const result = await coalition.execute(task);
     await this.propagateLearning(result);
@@ -204,8 +202,8 @@ class AgentMeshCoordinator {/* content */}
                   </p>
                   <pre className="text-left"></p>
 {`// Inter-Agent Coordination
-class AgentNode {/* content */}
-  async negotiate(task, peers) {/* content */}
+class AgentNode 
+  async negotiate(task, peers) 
     const proposals = await Promise.all(
       peers.map(p => p.propose(task))
     );
@@ -214,8 +212,8 @@ class AgentNode {/* content */}
     return this.formCoalition(consensus);
   }
   
-  async propagateKnowledge(insight) {/* content */}
-    await this.mesh.broadcast({/* content */}
+  async propagateKnowledge(insight) 
+    await this.mesh.broadcast(
       type: 'KNOWLEDGE_UPDATE',
       insight,
       confidence: this.calculateConfidence(insight)

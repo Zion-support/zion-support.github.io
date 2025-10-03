@@ -15,8 +15,6 @@ export default function BlogPost() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <article className="text-left"></a>
       <h1>⚖️ Agentic Governance Frameworks 2025: Building Trust in Autonomous AI Systems</h1>
       

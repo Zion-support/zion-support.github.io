@@ -2,12 +2,10 @@ import { ArrowLeft, Shield, CheckCircle, FileText, AlertTriangle, Scale, Globe }
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 
-const AIRegulatoryFrameworks2026 = () => {/* content */}
+const AIRegulatoryFrameworks2026 = () => 
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
       <Helmet>
         <title>AI Regulatory Frameworks 2026 | Zion Tech Group</title>
         <meta name="description" content="Navigate the complex landscape of AI regulations globally. Comprehensive guide to EU AI Act, US frameworks, and enterprise compliance strategies." />

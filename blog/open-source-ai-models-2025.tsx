@@ -7,8 +7,6 @@ export default function OpenSourceAIModels2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>Open Source AI Models: Llama 3, Mistral & the Enterprise Revolution | Zion Tech Group</title>

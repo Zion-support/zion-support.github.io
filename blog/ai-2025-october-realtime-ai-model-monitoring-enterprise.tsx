@@ -6,8 +6,6 @@ export default function RealtimeAIModelMonitoringEnterprise() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <article className="text-left"></a>
       <header className="text-left">
         <h1 className="text-left">Real-Time AI Model Monitoring: Enterprise Observability Platform for 2025</h1>

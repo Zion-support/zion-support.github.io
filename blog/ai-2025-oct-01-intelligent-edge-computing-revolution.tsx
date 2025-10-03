@@ -15,8 +15,6 @@ export default function BlogPost() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <article className="text-left"></a>
       <h1>⚡ Intelligent Edge Computing Revolution (2025): Real-Time AI at Scale</h1>
 

@@ -2,12 +2,10 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { ArrowLeft, CheckCircle, Shield, Scale, FileText } from "lucide-react";
 
-const AIEthicsOperationalBlueprint2026 = () => {/* content */}
+const AIEthicsOperationalBlueprint2026 = () => 
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
       <Helmet>
         <title>AI Ethics Operational Blueprint 2026: Bias, Fairness, Auditability | Zion Tech Group</title>
         <meta

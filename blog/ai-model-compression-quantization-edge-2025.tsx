@@ -2,12 +2,10 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Zap, Cpu, TrendingDown, Cloud, Shield } from 'lucide-react';
 
-const AIModelCompressionQuantizationEdge2025 = () => {/* content */}
+const AIModelCompressionQuantizationEdge2025 = () => 
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
       <Helmet>
         <title>AI Model Compression & Quantization for Edge Deployment 2025 | Zion Tech Group</title>
         <meta

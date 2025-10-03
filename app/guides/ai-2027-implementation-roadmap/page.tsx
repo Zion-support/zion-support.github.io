@@ -20,8 +20,6 @@ export default function AI2027ImplementationRoadmap() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div className="text-left"></div>
       <div className="text-left"></div>
         <h1 className="text-left">

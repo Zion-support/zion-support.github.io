@@ -10,7 +10,7 @@ export const metadata = {
   tags: ['GenAI Cost', 'LLM Optimization', 'FinOps', 'AI Economics']
 };
 
-const GenerativeAICostBreakthrough2025 = () => {/* content */}
+const GenerativeAICostBreakthrough2025 = () => 
   return (
   <div></div>
     <article className="text-left"></a>

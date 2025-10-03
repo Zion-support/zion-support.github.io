@@ -7,8 +7,6 @@ export default function AIAgentOrchestration2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>AI Agent Orchestration: Building Intelligent Multi-Agent Systems in 2025 | Zion Tech Group</title>

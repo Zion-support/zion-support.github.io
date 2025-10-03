@@ -13,8 +13,6 @@ export default function QuantumReadyCloudInfrastructure2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>Quantum-Ready Cloud Infrastructure 2025: Future-Proof Your Enterprise | Zion Tech Group</title>

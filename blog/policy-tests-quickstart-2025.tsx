@@ -11,7 +11,7 @@ export const metadata = {
 	tags: ['Governance', 'CI/CD', 'Policy Tests']
 };
 
-const PolicyTestsQuickstart2025 = () => {/* content */}
+const PolicyTestsQuickstart2025 = () => 
 	return (
   <div></div>
 		<article className="text-left"></a>

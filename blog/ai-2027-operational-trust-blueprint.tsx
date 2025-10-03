@@ -1,11 +1,9 @@
 import React from 'react';
 
-export default function AI2027OperationalTrustBlueprint(): JSX.Element {/* content */}
+export default function AI2027OperationalTrustBlueprint(): JSX.Element 
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <article className="text-left"></a>
       <h1>AI 2027: Operational Trust Blueprint</h1>
       <p className="text-left">Wire SLIs to KPIs with budgeted actions, live canaries, and instant rollback for reliable autonomy.</p>

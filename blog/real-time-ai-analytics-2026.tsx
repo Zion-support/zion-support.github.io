@@ -13,8 +13,6 @@ export default function RealTimeAIAnalytics2026() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div className="text-left"></div>
       <article className="text-left"></a>
         {/* Header */}

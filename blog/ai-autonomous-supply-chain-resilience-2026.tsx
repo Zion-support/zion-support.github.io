@@ -3,12 +3,10 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, Calendar, Clock, Tag, TrendingUp, CheckCircle, Zap, Package, TruckIcon } from "lucide-react";
 import Header from "../src/components/Header";
 
-const AIAutonomousSupplyChainResilience2026 = () => {/* content */}
+const AIAutonomousSupplyChainResilience2026 = () => 
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
       <Helmet>
         <title>AI Autonomous Supply Chain Resilience 2026: 99.5% On-Time Delivery at 35% Lower Cost | Zion Tech Group</title>
         <meta

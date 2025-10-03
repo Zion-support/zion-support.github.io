@@ -1,4 +1,4 @@
-export interface ComprehensiveService {/* content */}
+export interface ComprehensiveService 
   id: string;
   name: string;
   tagline: string;
@@ -9,7 +9,7 @@ export interface ComprehensiveService {/* content */}
   category: string;
   subcategory: string;
   realImplementation: boolean;
-  contactInfo: {/* content */}
+  contactInfo: 
     mobile: string;
     email: string;
     address: string};
@@ -34,7 +34,7 @@ export interface ComprehensiveService {/* content */}
   rating: number;
   reviews: number}
 
-const contact = {/* content */}
+const contact = 
   mobile: "+1 302 464 0950",
   email: "kleber@ziontechgroup.com",
   address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -42,7 +42,7 @@ const contact = {/* content */}
 
 export const comprehensiveExpandedServices: ComprehensiveService[] = [
   // AI & Machine Learning Services
-  {/* content */}
+  
     id: 'ai-autonomous-customer-success',
     name: 'AI Autonomous Customer Success',
     tagline: 'Predictive customer health scoring with automated interventions',
@@ -80,7 +80,7 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     customers: 85,
     rating: 4.8,
     reviews: 47
-  }, {/* content */}
+  }, 
     id: 'ai-powered-sales-intelligence',
     name: 'AI Sales Intelligence Platform',
     tagline: 'Real-time sales coaching and opportunity scoring',
@@ -118,7 +118,7 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     customers: 62,
     rating: 4.6,
     reviews: 38
-  }, {/* content */}
+  }, 
     id: 'ai-content-personalization-engine',
     name: 'AI Content Personalization Engine',
     tagline: 'Dynamic content adaptation based on user behavior',
@@ -159,7 +159,7 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
   },
 
   // Cloud & Infrastructure Services
-  {/* content */}
+  
     id: 'autonomous-cloud-cost-optimization',
     name: 'Autonomous Cloud Cost Optimization',
     tagline: 'AI-driven cloud spending optimization and FinOps automation',
@@ -197,7 +197,7 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     customers: 128,
     rating: 4.9,
     reviews: 89
-  }, {/* content */}
+  }, 
     id: 'zero-trust-security-platform',
     name: 'Zero Trust Security Platform',
     tagline: 'Comprehensive zero-trust architecture implementation',
@@ -235,7 +235,7 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     customers: 156,
     rating: 4.8,
     reviews: 112
-  }, {/* content */}
+  }, 
     id: 'kubernetes-autonomous-operations',
     name: 'Kubernetes Autonomous Operations',
     tagline: 'Self-healing Kubernetes clusters with AI-driven optimization',
@@ -276,7 +276,7 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
   },
 
   // Data & Analytics Services
-  {/* content */}
+  
     id: 'real-time-data-pipeline-platform',
     name: 'Real-Time Data Pipeline Platform',
     tagline: 'Streaming data processing with real-time analytics',
@@ -314,7 +314,7 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     customers: 78,
     rating: 4.8,
     reviews: 56
-  }, {/* content */}
+  }, 
     id: 'ai-powered-business-intelligence',
     name: 'AI-Powered Business Intelligence',
     tagline: 'Intelligent insights and automated reporting',
@@ -355,7 +355,7 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
   },
 
   // Developer Tools & DevOps
-  {/* content */}
+  
     id: 'ai-code-review-assistant',
     name: 'AI Code Review Assistant',
     tagline: 'Automated code quality analysis and improvement suggestions',
@@ -393,7 +393,7 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     customers: 156,
     rating: 4.7,
     reviews: 98
-  }, {/* content */}
+  }, 
     id: 'autonomous-deployment-platform',
     name: 'Autonomous Deployment Platform',
     tagline: 'Self-managing CI/CD with intelligent rollback and monitoring',
@@ -434,7 +434,7 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
   },
 
   // Industry-Specific Solutions
-  {/* content */}
+  
     id: 'healthcare-ai-compliance-platform',
     name: 'Healthcare AI Compliance Platform',
     tagline: 'Automated HIPAA compliance and medical data security',
@@ -472,7 +472,7 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     customers: 45,
     rating: 4.9,
     reviews: 34
-  }, {/* content */}
+  }, 
     id: 'fintech-fraud-detection-ai',
     name: 'FinTech Fraud Detection AI',
     tagline: 'Real-time fraud detection for financial transactions',
@@ -513,7 +513,7 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
   },
 
   // Micro SaaS Services
-  {/* content */}
+  
     id: 'ai-email-automation-suite',
     name: 'AI Email Automation Suite',
     tagline: 'Intelligent email marketing with AI-powered personalization',
@@ -551,7 +551,7 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     customers: 234,
     rating: 4.8,
     reviews: 156
-  }, {/* content */}
+  }, 
     id: 'smart-inventory-management',
     name: 'Smart Inventory Management',
     tagline: 'AI-powered inventory optimization and demand forecasting',
@@ -589,7 +589,7 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     customers: 189,
     rating: 4.7,
     reviews: 134
-  }, {/* content */}
+  }, 
     id: 'ai-customer-support-chatbot',
     name: 'AI Customer Support Chatbot',
     tagline: 'Intelligent chatbot with natural language understanding',
@@ -627,7 +627,7 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     customers: 312,
     rating: 4.6,
     reviews: 198
-  }, {/* content */}
+  }, 
     id: 'automated-social-media-manager',
     name: 'Automated Social Media Manager',
     tagline: 'AI-powered social media scheduling and content optimization',
@@ -668,7 +668,7 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
   },
 
   // IT Services
-  {/* content */}
+  
     id: 'managed-it-support-services',
     name: 'Managed IT Support Services',
     tagline: '24/7 IT support and infrastructure management',
@@ -706,7 +706,7 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     customers: 145,
     rating: 4.8,
     reviews: 98
-  }, {/* content */}
+  }, 
     id: 'cybersecurity-assessment-platform',
     name: 'Cybersecurity Assessment Platform',
     tagline: 'Comprehensive security audits and compliance monitoring',
@@ -744,7 +744,7 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     customers: 98,
     rating: 4.7,
     reviews: 67
-  }, {/* content */}
+  }, 
     id: 'cloud-migration-consulting',
     name: 'Cloud Migration Consulting',
     tagline: 'Expert cloud migration and optimization services',
@@ -785,7 +785,7 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
   },
 
   // Advanced AI Services
-  {/* content */}
+  
     id: 'ai-document-processing-platform',
     name: 'AI Document Processing Platform',
     tagline: 'Intelligent document extraction and data processing',
@@ -823,7 +823,7 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     customers: 156,
     rating: 4.8,
     reviews: 89
-  }, {/* content */}
+  }, 
     id: 'ai-predictive-maintenance',
     name: 'AI Predictive Maintenance',
     tagline: 'Machine learning-powered equipment maintenance prediction',
@@ -864,7 +864,7 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
   },
 
   // Emerging Technology Services
-  {/* content */}
+  
     id: 'quantum-computing-simulation-platform',
     name: 'Quantum Computing Simulation Platform',
     tagline: 'Quantum algorithm testing and optimization platform',
@@ -902,7 +902,7 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     customers: 23,
     rating: 4.9,
     reviews: 18
-  }, {/* content */}
+  }, 
     id: 'blockchain-enterprise-platform',
     name: 'Blockchain Enterprise Platform',
     tagline: 'Enterprise-grade blockchain infrastructure and smart contracts',
@@ -944,49 +944,49 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
 ];
 
 export const serviceCategories = [
-  {/* content */}
+  
     name: 'Micro SaaS',
     description: 'Affordable, specialized software solutions for small businesses',
     services: comprehensiveExpandedServices.filter(s => s.category === 'Micro SaaS'),
     icon: '💼',
     color: 'from-blue-600 to-cyan-700'
-  }, {/* content */}
+  }, 
     name: 'AI & Machine Learning',
     description: 'Intelligent automation and decision-making systems',
     services: comprehensiveExpandedServices.filter(s => s.category === 'AI & Machine Learning'),
     icon: '🤖',
     color: 'from-purple-600 to-pink-700'
-  }, {/* content */}
+  }, 
     name: 'IT Services',
     description: 'Comprehensive IT support and infrastructure management',
     services: comprehensiveExpandedServices.filter(s => s.category === 'IT Services'),
     icon: '🛠️',
     color: 'from-indigo-600 to-blue-700'
-  }, {/* content */}
+  }, 
     name: 'Cloud & Infrastructure',
     description: 'Scalable cloud solutions and infrastructure management',
     services: comprehensiveExpandedServices.filter(s => s.category === 'Cloud & Infrastructure'),
     icon: '☁️',
     color: 'from-green-600 to-emerald-700'
-  }, {/* content */}
+  }, 
     name: 'Data & Analytics',
     description: 'Real-time data processing and business intelligence',
     services: comprehensiveExpandedServices.filter(s => s.category === 'Data & Analytics'),
     icon: '📊',
     color: 'from-teal-600 to-green-700'
-  }, {/* content */}
+  }, 
     name: 'Developer Tools & DevOps',
     description: 'Development automation and operational excellence',
     services: comprehensiveExpandedServices.filter(s => s.category === 'Developer Tools & DevOps'),
     icon: '⚙️',
     color: 'from-cyan-600 to-blue-700'
-  }, {/* content */}
+  }, 
     name: 'Industry Solutions',
     description: 'Specialized solutions for specific industries',
     services: comprehensiveExpandedServices.filter(s => s.category === 'Industry Solutions'),
     icon: '🏢',
     color: 'from-orange-600 to-red-700'
-  }, {/* content */}
+  }, 
     name: 'Emerging Technology',
     description: 'Cutting-edge technology solutions and platforms',
     services: comprehensiveExpandedServices.filter(s => s.category === 'Emerging Technology'),

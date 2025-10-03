@@ -1,6 +1,6 @@
 import React from "react";
 
-const AIMultimodalSupplyChainOptimization2025 = () => {/* content */}
+const AIMultimodalSupplyChainOptimization2025 = () => 
   return (
   <div></div>
     <article className="text-left"></a>

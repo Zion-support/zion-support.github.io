@@ -13,8 +13,6 @@ export default function AISovereignAgentsEnterprise2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>AI Sovereign Agents: Enterprise Autonomous Decision-Making Revolution 2025 | Zion Tech Group</title>

@@ -2,12 +2,10 @@ import { ArrowLeft, BookOpen, Calendar, Clock, Share2, Tag, TrendingUp } from "l
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-const AICompositeAgents2026 = () => {/* content */}
+const AICompositeAgents2026 = () => 
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
       <Helmet>
         <title>AI Composite Agents 2026: Multi-Model Intelligence Orchestration | Zion Tech Group</title>
         <meta

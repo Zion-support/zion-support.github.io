@@ -2,12 +2,10 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Cpu, Shield, Timer, CheckCircle } from "lucide-react";
 
-const EdgeRAGBlueprint2026 = () => {/* content */}
+const EdgeRAGBlueprint2026 = () => 
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
       <Helmet>
         <title>Edge RAG Blueprint 2026: Fresh, Private Answers in &lt;100ms | Zion Tech Group</title>
         <meta

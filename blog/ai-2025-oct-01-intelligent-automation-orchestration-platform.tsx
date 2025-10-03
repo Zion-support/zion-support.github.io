@@ -15,8 +15,6 @@ export default function BlogPost() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <article className="text-left"></a>
       <h1>🤖 Intelligent Automation Orchestration 2025: Enterprise Process Revolution</h1>
       

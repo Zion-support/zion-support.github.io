@@ -6,8 +6,6 @@ export default function AI2025OctoberVectorDatabaseOptimization() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <article className="text-left"></a>
       <div className="text-left"></div>
         {/* Hero Section */}
@@ -123,16 +121,16 @@ import { Pinecone } from '@pinecone-database/pinecone';
 import { Redis } from 'ioredis';
 import { createHash } from 'crypto';
 
-class OptimizedVectorDB {/* content */}
+class OptimizedVectorDB 
   private pinecone: Pinecone;
   private cache: Redis;
   private index: any;
 
-  constructor() {/* content */}
-    this.pinecone = new Pinecone({/* content */}
+  constructor() 
+    this.pinecone = new Pinecone(
       apiKey: process.env.PINECONE_API_KEY!,
     });
-    this.cache = new Redis({/* content */}
+    this.cache = new Redis(
       host: process.env.REDIS_HOST,
       enableReadyCheck: false,
       maxRetriesPerRequest: 3,
@@ -144,17 +142,17 @@ class OptimizedVectorDB {/* content */}
     embedding: number[],
     topK: number = 10,
     filter?: Record<string, any>
-  ): Promise<QueryResult[]> {/* content */}
+  ): Promise<QueryResult[]> 
     // Check cache first
     const cacheKey = this.getCacheKey(embedding, topK, filter);
     const cached = await this.cache.get(cacheKey);
     
-    if (cached) {/* content */}
+    if (cached) 
       return JSON.parse(cached);
     }
 
     // Query with optimized parameters
-    const results = await this.index.query({/* content */}
+    const results = await this.index.query(
       vector: embedding,
       topK,
       filter,
@@ -172,12 +170,12 @@ class OptimizedVectorDB {/* content */}
   async batchQuery(
     embeddings: number[][],
     topK: number = 10
-  ): Promise<QueryResult[][]> {/* content */}
+  ): Promise<QueryResult[][]> 
     // Batch processing for better throughput
     const batchSize = 100;
     const results = [];
 
-    for (let i = 0; i < embeddings.length; i += batchSize) {/* content */}
+    for (let i = 0; i < embeddings.length; i += batchSize) 
       const batch = embeddings.slice(i, i + batchSize);
       const batchPromises = batch.map(emb => this.query(emb, topK));
       const batchResults = await Promise.all(batchPromises);
@@ -190,13 +188,13 @@ class OptimizedVectorDB {/* content */}
   async upsert(
     vectors: Vector[],
     namespace?: string
-  ): Promise<void> {/* content */}
+  ): Promise<void> 
     // Chunk large upserts for reliability
     const chunkSize = 1000;
     
-    for (let i = 0; i < vectors.length; i += chunkSize) {/* content */}
+    for (let i = 0; i < vectors.length; i += chunkSize) 
       const chunk = vectors.slice(i, i + chunkSize);
-      await this.index.upsert({/* content */}
+      await this.index.upsert(
         vectors: chunk,
         namespace,
       });
@@ -210,24 +208,24 @@ class OptimizedVectorDB {/* content */}
     embedding: number[],
     topK: number,
     filter?: any
-  ): string {/* content */}
+  ): string 
     const hash = createHash('sha256');
     hash.update(JSON.stringify({ embedding, topK, filter }));
     return \`query:\${hash.digest('hex')}\`;
   }
 
-  private getOptimalNamespace(filter?: any): string {/* content */}
+  private getOptimalNamespace(filter?: any): string 
     // Route to appropriate namespace based on filter
-    if (filter?.category) {/* content */}
+    if (filter?.category) 
       return \`cat-\${filter.category}\`;
     }
     return 'default';
   }
 
-  private async invalidateCache(namespace?: string): Promise<void> {/* content */}
+  private async invalidateCache(namespace?: string): Promise<void> 
     const pattern = namespace ? \`query:*\${namespace}*\` : 'query:*';
     const keys = await this.cache.keys(pattern);
-    if (keys.length > 0) {/* content */}
+    if (keys.length > 0) 
       await this.cache.del(...keys);
     }
   }
@@ -243,11 +241,11 @@ class OptimizedVectorDB {/* content */}
 {`// Qdrant with optimized HNSW parameters
 import { QdrantClient } from '@qdrant/js-client-rest';
 
-class QdrantOptimizer {/* content */}
+class QdrantOptimizer 
   private client: QdrantClient;
 
-  constructor() {/* content */}
-    this.client = new QdrantClient({/* content */}
+  constructor() 
+    this.client = new QdrantClient(
       url: process.env.QDRANT_URL,
       apiKey: process.env.QDRANT_API_KEY,
     });
@@ -256,28 +254,28 @@ class QdrantOptimizer {/* content */}
   async createOptimizedCollection(
     name: string,
     dimension: number
-  ): Promise<void> {/* content */}
-    await this.client.createCollection(name, {/* content */}
-      vectors: {/* content */}
+  ): Promise<void> 
+    await this.client.createCollection(name, 
+      vectors: 
         size: dimension,
         distance: 'Cosine',
       },
       // HNSW index optimization
-      hnsw_config: {/* content */}
+      hnsw_config: 
         m: 16,                    // Number of bi-directional links
         ef_construct: 200,        // Size of dynamic candidate list
         full_scan_threshold: 10000, // Switch to exact search below this
       },
       // Quantization for memory efficiency
-      quantization_config: {/* content */}
-        scalar: {/* content */}
+      quantization_config: 
+        scalar: 
           type: 'int8',
           quantile: 0.99,
           always_ram: true,       // Keep quantized vectors in RAM
         },
       },
       // Optimizer configuration
-      optimizer_config: {/* content */}
+      optimizer_config: 
         deleted_threshold: 0.2,
         vacuum_min_vector_number: 1000,
         default_segment_number: 5,
@@ -294,13 +292,13 @@ class QdrantOptimizer {/* content */}
     vector: number[],
     limit: number = 10,
     filter?: any
-  ): Promise<SearchResult[]> {/* content */}
-    const result = await this.client.search(collectionName, {/* content */}
+  ): Promise<SearchResult[]> 
+    const result = await this.client.search(collectionName, 
       vector,
       limit,
       filter,
       // Dynamic ef tuning based on query type
-      params: {/* content */}
+      params: 
         hnsw_ef: this.calculateOptimalEf(limit),
         exact: false,         // Use approximate search
       },
@@ -311,7 +309,7 @@ class QdrantOptimizer {/* content */}
     return result;
   }
 
-  private calculateOptimalEf(limit: number): number {/* content */}
+  private calculateOptimalEf(limit: number): number 
     // ef should be between limit and 2*limit for best recall/speed tradeoff
     return Math.min(Math.max(limit * 1.5, 50), 200);
   }
@@ -320,13 +318,13 @@ class QdrantOptimizer {/* content */}
     collectionName: string,
     vectors: number[][],
     limit: number = 10
-  ): Promise<SearchResult[][]> {/* content */}
+  ): Promise<SearchResult[][]> 
     // Use batch API for better performance
-    const results = await this.client.searchBatch(collectionName, {/* content */}
-      searches: vectors.map(vector => ({/* content */}
+    const results = await this.client.searchBatch(collectionName, 
+      searches: vectors.map(vector => (
         vector,
         limit,
-        params: {/* content */}
+        params: 
           hnsw_ef: this.calculateOptimalEf(limit),
         },
       })),

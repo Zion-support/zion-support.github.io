@@ -8,7 +8,7 @@ import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export const metadata: Metadata = {/* content */}
+export const metadata: Metadata = 
 	title: 'Zion Tech Group - Leading AI and Technology Solutions',
 	description:
 		'Zion Tech Group is a leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions. Transform your business with cutting-edge technology.',
@@ -29,7 +29,7 @@ export const metadata: Metadata = {/* content */}
 		url: 'https://ziontechgroup.com',
 		siteName: 'Zion Tech Group',
 		images: [
-			{/* content */}
+			
 				url: '/og-image.jpg',
 				width: 1200,
 				height: 630,
@@ -39,7 +39,7 @@ export const metadata: Metadata = {/* content */}
 		locale: 'en_US',
 		type: 'website',
 	},
-	twitter: {/* content */}
+	twitter: 
 		card: 'summary_large_image',
 		title: 'Zion Tech Group - Leading AI and Technology Solutions',
 		description: 'Transform your business with cutting-edge AI and technology solutions.',
@@ -48,18 +48,16 @@ export const metadata: Metadata = {/* content */}
 	metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://ziontechgroup.com'),
 }
 
-export const viewport: Viewport = {/* content */}
+export const viewport: Viewport = 
 	width: 'device-width',
 	initialScale: 1,
 	themeColor: '#000000',
 }
 
-export default function RootLayout({ children }: { children: ReactNode }) {/* content */}
+export default function RootLayout() {
 	return (
     <div>
       <div></div>
-      <div></div>
-    </div>
 		<html lang='en' className='scroll-smooth'>
 			<body className={`${inter.className} bg-black text-white antialiased`}>
 				{/* Promo banner */}

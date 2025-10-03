@@ -3,12 +3,10 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, Calendar, Clock, Tag, TrendingUp, CheckCircle, Zap, Shield, Lock } from "lucide-react";
 import Header from "../src/components/Header";
 
-const AIZeroTrustSecurityArchitecture2026 = () => {/* content */}
+const AIZeroTrustSecurityArchitecture2026 = () => 
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
       <Helmet>
         <title>AI Zero Trust Security Architecture 2026: 99.97% Breach Prevention at Scale | Zion Tech Group</title>
         <meta

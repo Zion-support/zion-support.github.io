@@ -15,8 +15,6 @@ export default function BlogPost() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <article className="text-left"></a>
       <h1>🌱 Green AI & Sustainable Computing 2025: Carbon-Neutral AI Revolution</h1>
       

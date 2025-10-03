@@ -12,8 +12,6 @@ export default function BlogPost() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <article className="text-left"></a>
       <h1>AI Operational Trust Scorecards 2026</h1>
       <p></p>

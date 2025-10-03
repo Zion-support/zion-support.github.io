@@ -7,8 +7,6 @@ export default function AIGovernanceComplianceAutomation2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Helmet>
         <title>AI Governance & Compliance Automation: The 2025 Enterprise Framework | Zion Tech Group</title>

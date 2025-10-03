@@ -13,8 +13,6 @@ export default function FederatedLearningEnterprise2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>Federated Learning for Enterprise AI 2025: Privacy-Preserving ML at Scale | Zion Tech Group</title>

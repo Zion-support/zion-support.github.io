@@ -1,6 +1,6 @@
 import React from "react";
 
-const AIEnterpriseDigitalTwinsAgenticSystems2025 = () => {/* content */}
+const AIEnterpriseDigitalTwinsAgenticSystems2025 = () => 
   return (
   <div></div>
     <article className="text-left"></a>

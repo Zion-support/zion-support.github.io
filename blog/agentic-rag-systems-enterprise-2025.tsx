@@ -7,8 +7,6 @@ export default function AgenticRAGSystemsEnterprise2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>Agentic RAG Systems: Next-Generation Enterprise Knowledge AI | Zion Tech Group</title>

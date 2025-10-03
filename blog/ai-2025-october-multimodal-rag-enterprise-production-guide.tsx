@@ -6,8 +6,6 @@ export default function MultimodalRAGEnterpriseProductionGuide() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <article className="text-left"></a>
       <div className="text-left"></div>
         {/* Hero Section */}
@@ -81,7 +79,7 @@ const embeddings = await Promise.all([
 
 // Fusion and retrieval
 const fusedEmbedding = fusionLayer.combine(embeddings);
-const results = await vectorDB.search(fusedEmbedding, {/* content */}
+const results = await vectorDB.search(fusedEmbedding, 
   topK: 20,
   filters: { contentType: ['all'] },
   rerank: true

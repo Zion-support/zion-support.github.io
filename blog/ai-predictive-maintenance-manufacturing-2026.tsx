@@ -3,12 +3,10 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, Calendar, Clock, Tag, TrendingUp, CheckCircle, Zap, BarChart3, Shield } from "lucide-react";
 import Header from "../src/components/Header";
 
-const AIPredictiveMaintenanceManufacturing2026 = () => {/* content */}
+const AIPredictiveMaintenanceManufacturing2026 = () => 
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
       <Helmet>
         <title>AI Predictive Maintenance in Manufacturing 2026: Reducing Downtime by 80% | Zion Tech Group</title>
         <meta

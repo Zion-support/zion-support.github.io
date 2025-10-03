@@ -2,12 +2,10 @@ import { Helmet } from "react-helmet-async";
 import { ArrowLeft, CheckCircle, GitBranch, Rocket, Shield, TrendingUp, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
 
-const AIPoweredDevOpsOrchestration2025 = () => {/* content */}
+const AIPoweredDevOpsOrchestration2025 = () => 
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
       <Helmet>
         <title>AI-Powered DevOps: Autonomous CI/CD Orchestration | Zion Tech Group</title>
         <meta

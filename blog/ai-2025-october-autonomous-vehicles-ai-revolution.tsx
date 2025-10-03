@@ -18,8 +18,6 @@ export default function AutonomousVehiclesAIGuide() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <article className="text-left"></a>
       <h1>Autonomous Vehicles AI Revolution 2025: Enterprise Fleet Management & Self-Driving Technology</h1>
       

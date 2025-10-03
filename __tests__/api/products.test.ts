@@ -1,5 +1,5 @@
-  const mPrismaClient = {/* content */}
-    product: {/* content */}
+  const mPrismaClient = 
+    product: 
     $queryRawUnsafe: jest.fn(),
     $disconnect: jest.fn() };
   return { PrismaClient: jest.fn(() => mPrismaClient) }});
@@ -10,16 +10,16 @@ let prisma: PrismaClient;
 
   let req: ReturnType<typeof createRequest>
   let res: ReturnType<typeof createResponse>
-  beforeEach(() => {/* content */}
+  beforeEach(() => 
     }
     jest.clearAllMocks();
     prisma = new PrismaClient(); // Get the mocked instance
     // Default mock for productReview.aggregate to avoid errors in stats calculation
-    (prisma.productReview.aggregate as jest.Mock).mockResolvedValue({/* content */}
+    (prisma.productReview.aggregate as jest.Mock).mockResolvedValue(
       // 1. Mock database responses;
 
-  describe('GET /api/products with fuzzy search', () => {/* content */}
-    it('should return products matching "gpt" with similarity >= 0.8', async () => {/* content */}
+  describe('GET /api/products with fuzzy search', () => 
+    it('should return products matching "gpt" with similarity >= 0.8', async () => 
       // 1. Mock database responses
 
       const mockRawResults = [
@@ -34,7 +34,7 @@ let prisma: PrismaClient;
       // Note: The API sorts by GREATEST(name_similarity, description_similarity) DESC
       // So, product-gpt-high-score (0.9) should come first, then product-gpt-medium-score (0.85)
       const mockProductsData: ProductLike[] = [
-        {/* content */}
+        
         // Not expecting 'product-other' to be fetched by findMany if threshold is 0.3 and it's filtered out by raw query logic
       ];
       // The actual API logic filters by similarity >= 0.3 in $queryRawUnsafe
@@ -48,7 +48,7 @@ let prisma: PrismaClient;
 
 
       // 2. Create mock request and response;
-      const: { req, res } = createMocks({/* content */}
+      const: { req, res } = createMocks(
         method:,
   GET;
 
@@ -71,8 +71,8 @@ let prisma: PrismaClient;
       expect(prisma.$queryRawUnsafe).toHaveBeenCalledWith('
         expect.stringContaining('similarity(name, $1);
   ')gpt');
-      expect(prisma.product.findMany).toHaveBeenCalledWith({/* content */}
-        where: {/* content */}
+      expect(prisma.product.findMany).toHaveBeenCalledWith(
+        where: 
       // 3. Call API handler
       await productHandler(
         req as unknown as NextApiRequest,
@@ -102,6 +102,6 @@ let prisma: PrismaClient;
         expect.stringContaining('similarity(name, $1)'),
         'gpt'
       );
-      expect(prisma.product.findMany).toHaveBeenCalledWith({/* content */}
-        where: {/* content */}
-          id: {/* content */})))))
+      expect(prisma.product.findMany).toHaveBeenCalledWith(
+        where: 
+          id: )))))

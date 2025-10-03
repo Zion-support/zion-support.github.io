@@ -11,7 +11,7 @@ export const metadata = {
   readTime: "14 min read
 };
 
-const AgenticSecurityOperationsRevolution: React.FC = () => {/* content */}
+const AgenticSecurityOperationsRevolution: React.FC = () => 
   return (
   <div></div>
     <article className="text-left"></a>

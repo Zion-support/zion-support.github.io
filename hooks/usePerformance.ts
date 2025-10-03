@@ -1,20 +1,20 @@
 import { useEffect, useState, useCallback } from 'react';
 import { PerformanceMetrics } from '@/types';
 
-interface UsePerformanceOptions {/* content */}
+interface UsePerformanceOptions 
   enableMonitoring?: boolean;
   reportInterval?: number;
   onMetricUpdate?: (metrics: PerformanceMetrics) => void;
 }
 
-export const usePerformance = (options: UsePerformanceOptions = {}) => {/* content */}
-  const {/* content */}
+export const usePerformance = (options: UsePerformanceOptions = {}) => 
+  const 
     enableMonitoring = true,
     reportInterval = 5000,
     onMetricUpdate
   } = options;
 
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({/* content */}
+  const [metrics, setMetrics] = useState<PerformanceMetrics>(
     fcp: null,
     lcp: null,
     fid: null,
@@ -24,7 +24,7 @@ export const usePerformance = (options: UsePerformanceOptions = {}) => {/* conte
 
   const [isSupported, setIsSupported] = useState(false);
 
-  const measureWebVitals = useCallback(() => {/* content */}
+  const measureWebVitals = useCallback(() => 
     if (typeof window === 'undefined' || !enableMonitoring) return;
 
     setIsSupported('PerformanceObserver' in window);
@@ -32,11 +32,11 @@ export const usePerformance = (options: UsePerformanceOptions = {}) => {/* conte
     if (!('PerformanceObserver' in window)) return;
 
     // First Contentful Paint
-    const fcpObserver = new PerformanceObserver((list) => {/* content */}
+    const fcpObserver = new PerformanceObserver((list) => 
       const entries = list.getEntries();
       const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
-      if (fcpEntry) {/* content */}
-        setMetrics(prev => {/* content */}
+      if (fcpEntry) 
+        setMetrics(prev => 
           const newMetrics = { ...prev, fcp: fcpEntry.startTime };
           onMetricUpdate?.(newMetrics);
           return newMetrics;
@@ -46,10 +46,10 @@ export const usePerformance = (options: UsePerformanceOptions = {}) => {/* conte
     fcpObserver.observe({ entryTypes: ['paint'] });
 
     // Largest Contentful Paint
-    const lcpObserver = new PerformanceObserver((list) => {/* content */}
+    const lcpObserver = new PerformanceObserver((list) => 
       const entries = list.getEntries();
       const lastEntry = entries[entries.length - 1];
-      setMetrics(prev => {/* content */}
+      setMetrics(prev => 
         const newMetrics = { ...prev, lcp: lastEntry.startTime };
         onMetricUpdate?.(newMetrics);
         return newMetrics;
@@ -58,11 +58,11 @@ export const usePerformance = (options: UsePerformanceOptions = {}) => {/* conte
     lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
     // First Input Delay
-    const fidObserver = new PerformanceObserver((list) => {/* content */}
+    const fidObserver = new PerformanceObserver((list) => 
       const entries = list.getEntries();
-      entries.forEach((entry: any) => {/* content */}
-        setMetrics(prev => {/* content */}
-          const newMetrics = {/* content */}
+      entries.forEach((entry: any) => 
+        setMetrics(prev => 
+          const newMetrics = 
             ...prev, 
             fid: entry.processingStart - entry.startTime 
           };
@@ -75,12 +75,12 @@ export const usePerformance = (options: UsePerformanceOptions = {}) => {/* conte
 
     // Cumulative Layout Shift
     let clsValue = 0;
-    const clsObserver = new PerformanceObserver((list) => {/* content */}
+    const clsObserver = new PerformanceObserver((list) => 
       const entries = list.getEntries();
-      entries.forEach((entry: any) => {/* content */}
-        if (!entry.hadRecentInput) {/* content */}
+      entries.forEach((entry: any) => 
+        if (!entry.hadRecentInput) 
           clsValue += entry.value;
-          setMetrics(prev => {/* content */}
+          setMetrics(prev => 
             const newMetrics = { ...prev, cls: clsValue };
             onMetricUpdate?.(newMetrics);
             return newMetrics;
@@ -92,9 +92,9 @@ export const usePerformance = (options: UsePerformanceOptions = {}) => {/* conte
 
     // Time to First Byte
     const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-    if (navigationEntry) {/* content */}
-      setMetrics(prev => {/* content */}
-        const newMetrics = {/* content */}
+    if (navigationEntry) 
+      setMetrics(prev => 
+        const newMetrics = 
           ...prev, 
           ttfb: navigationEntry.responseStart - navigationEntry.requestStart 
         };
@@ -104,7 +104,7 @@ export const usePerformance = (options: UsePerformanceOptions = {}) => {/* conte
     }
 
     // Cleanup function
-    return () => {/* content */}
+    return () => 
       fcpObserver.disconnect();
       lcpObserver.disconnect();
       fidObserver.disconnect();
@@ -112,24 +112,24 @@ export const usePerformance = (options: UsePerformanceOptions = {}) => {/* conte
     };
   }, [enableMonitoring, onMetricUpdate]);
 
-  const getMemoryUsage = useCallback(() => {/* content */}
-    if (typeof window === 'undefined' || !('memory' in performance)) {/* content */}
+  const getMemoryUsage = useCallback(() => 
+    if (typeof window === 'undefined' || !('memory' in performance)) 
       return null;
     }
     
     const memory = (performance as any).memory;
-    return {/* content */}
+    return 
       used: Math.round(memory.usedJSHeapSize / 1048576), // MB
       total: Math.round(memory.totalJSHeapSize / 1048576), // MB
       limit: Math.round(memory.jsHeapSizeLimit / 1048576) // MB
     };
   }, []);
 
-  const getResourceTiming = useCallback(() => {/* content */}
+  const getResourceTiming = useCallback(() => 
     if (typeof window === 'undefined') return [];
 
     const resources = performance.getEntriesByType('resource');
-    return resources.map(resource => ({/* content */}
+    return resources.map(resource => (
       name: resource.name,
       duration: resource.duration,
       size: (resource as any).transferSize || 0,
@@ -137,13 +137,13 @@ export const usePerformance = (options: UsePerformanceOptions = {}) => {/* conte
     }));
   }, []);
 
-  const getNavigationTiming = useCallback(() => {/* content */}
+  const getNavigationTiming = useCallback(() => 
     if (typeof window === 'undefined') return null;
 
     const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     if (!navigation) return null;
 
-    return {/* content */}
+    return 
       domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
       loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
       totalTime: navigation.loadEventEnd - navigation.fetchStart,
@@ -155,8 +155,8 @@ export const usePerformance = (options: UsePerformanceOptions = {}) => {/* conte
     };
   }, []);
 
-  const clearMetrics = useCallback(() => {/* content */}
-    setMetrics({/* content */}
+  const clearMetrics = useCallback(() => 
+    setMetrics(
       fcp: null,
       lcp: null,
       fid: null,
@@ -165,10 +165,10 @@ export const usePerformance = (options: UsePerformanceOptions = {}) => {/* conte
     });
   }, []);
 
-  const isGoodPerformance = useCallback(() => {/* content */}
+  const isGoodPerformance = useCallback(() => 
     const { fcp, lcp, fid, cls } = metrics;
     
-    return {/* content */}
+    return 
       fcp: fcp !== null && fcp < 1800, // Good FCP is under 1.8s
       lcp: lcp !== null && lcp < 2500, // Good LCP is under 2.5s
       fid: fid !== null && fid < 100,  // Good FID is under 100ms
@@ -176,7 +176,7 @@ export const usePerformance = (options: UsePerformanceOptions = {}) => {/* conte
     };
   }, [metrics]);
 
-  useEffect(() => {/* content */}
+  useEffect(() => 
     if (!enableMonitoring) return;
 
     const cleanup = measureWebVitals();
@@ -184,17 +184,17 @@ export const usePerformance = (options: UsePerformanceOptions = {}) => {/* conte
   }, [measureWebVitals, enableMonitoring]);
 
   // Periodic reporting
-  useEffect(() => {/* content */}
+  useEffect(() => 
     if (!enableMonitoring || !onMetricUpdate) return;
 
-    const interval = setInterval(() => {/* content */}
+    const interval = setInterval(() => 
       onMetricUpdate(metrics);
     }, reportInterval);
 
     return () => clearInterval(interval);
   }, [metrics, onMetricUpdate, reportInterval, enableMonitoring]);
 
-  return {/* content */}
+  return 
     metrics,
     isSupported,
     getMemoryUsage,

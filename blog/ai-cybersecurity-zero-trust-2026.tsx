@@ -7,8 +7,6 @@ export default function AICybersecurityZeroTrust2026() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>AI-Powered Cybersecurity with Zero-Trust Architecture | Zion Tech Group</title>

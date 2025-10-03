@@ -3,9 +3,9 @@
 
 
 export const cuttingEdgeITServices2025 = [
-  {/* content */}
+  
 export const cuttingEdgeITServices2025 = [
-  {/* content */}
+  
     id: 'quantum-cloud-infrastructure-platform'
     name: 'Quantum Cloud Infrastructure Platform'
     description:
@@ -21,8 +21,8 @@ export const cuttingEdgeITServices2025 = [
       'Quantum-enhanced data processing'
       'Automated infrastructure management'
     ]
-    pricing: {/* content */}
-      starter: {/* content */}
+    pricing: 
+      starter: 
         price: 399
         period: 'month'
         features: [
@@ -31,7 +31,7 @@ export const cuttingEdgeITServices2025 = [
           'Email support'
         ]
       }
-      professional: {/* content */}
+      professional: 
         price: 999
         period: 'month'
         features: [
@@ -41,7 +41,7 @@ export const cuttingEdgeITServices2025 = [
           'Performance optimization'
         ]
       }
-      enterprise: {/* content */}
+      enterprise: 
         price: 2499
         period: 'month'
         features: [
@@ -61,7 +61,7 @@ export const cuttingEdgeITServices2025 = [
       'Scalability'
     ]
     website: 'https://ziontechgroup.com/quantum-cloud-infrastructure-platform'
-    contact: {/* content */}
+    contact: 
       phone: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
     }
@@ -87,7 +87,7 @@ export const cuttingEdgeITServices2025 = [
     ]
     compliance: ['SOC2', 'ISO 27001', 'FedRAMP', 'Quantum Security Standards']
   }
-  {/* content */}
+  
     id: 'edge-computing-orchestration-platform'
     name: 'Edge Computing Orchestration Platform'
     description:
@@ -104,8 +104,8 @@ export const cuttingEdgeITServices2025 = [
       'Edge-to-cloud synchronization'
       'Performance optimization algorithms'
     ]
-    pricing: {/* content */}
-      starter: {/* content */}
+    pricing: 
+      starter: 
         price: 299
         period: 'month'
         features: [
@@ -114,7 +114,7 @@ export const cuttingEdgeITServices2025 = [
           'Email support'
         ]
       }
-      professional: {/* content */}
+      professional: 
         price: 799
         period: 'month'
         features: [
@@ -124,7 +124,7 @@ export const cuttingEdgeITServices2025 = [
           'Performance optimization'
         ]
       }
-      enterprise: {/* content */}
+      enterprise: 
         price: 1999
         period: 'month'
         features: [
@@ -144,7 +144,7 @@ export const cuttingEdgeITServices2025 = [
       'Low Latency'
     ]
     website: 'https://ziontechgroup.com/edge-computing-orchestration-platform'
-    contact: {/* content */}
+    contact: 
       phone: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
     }
@@ -173,7 +173,7 @@ export const cuttingEdgeITServices2025 = [
       'Data Privacy Regulations'
     ]
   }
-  {/* content */}
+  
     id: 'zero-trust-security-platform'
     name: 'Zero Trust Security Platform'
     description:
@@ -190,8 +190,8 @@ export const cuttingEdgeITServices2025 = [
       'Automated security responses'
       'Comprehensive audit logging'
     ]
-    pricing: {/* content */}
-      starter: {/* content */}
+    pricing: 
+      starter: 
         price: 499
         period: 'month'
         features: [
@@ -200,7 +200,7 @@ export const cuttingEdgeITServices2025 = [
           'Email support'
         ]
       }
-      professional: {/* content */}
+      professional: 
         price: 1299
         period: 'month'
         features: [
@@ -210,7 +210,7 @@ export const cuttingEdgeITServices2025 = [
           'Custom policies'
         ]
       }
-      enterprise: {/* content */}
+      enterprise: 
         price: 2999
         period: 'month'
         features: [
@@ -230,7 +230,7 @@ export const cuttingEdgeITServices2025 = [
       'Threat Detection'
     ]
     website: 'https://ziontechgroup.com/zero-trust-security-platform'
-    contact: {/* content */}
+    contact: 
       phone: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
     }
@@ -256,7 +256,7 @@ export const cuttingEdgeITServices2025 = [
     ]
     compliance: ['SOC2', 'ISO 27001', 'FedRAMP', 'HIPAA', 'PCI DSS']
   }
-  {/* content */}
+  
     id: 'blockchain-enterprise-platform'
     name: 'Blockchain Enterprise Platform'
     description:
@@ -273,8 +273,8 @@ export const cuttingEdgeITServices2025 = [
       'Multi-party workflow automation'
       'Comprehensive reporting and analytics'
     ]
-    pricing: {/* content */}
-      starter: {/* content */}
+    pricing: 
+      starter: 
         price: 599
         period: 'month'
         features: [
@@ -283,7 +283,7 @@ export const cuttingEdgeITServices2025 = [
           'Email support'
         ]
       }
-      professional: {/* content */}
+      professional: 
         price: 1499
         period: 'month'
         features: [
@@ -293,7 +293,7 @@ export const cuttingEdgeITServices2025 = [
           'Performance optimization'
         ]
       }
-      enterprise: {/* content */}
+      enterprise: 
         price: 3499
         period: 'month'
         features: [
@@ -313,7 +313,7 @@ export const cuttingEdgeITServices2025 = [
       'Automation'
     ]
     website: 'https://ziontechgroup.com/blockchain-enterprise-platform'
-    contact: {/* content */}
+    contact: 
       phone: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
     }
@@ -342,7 +342,7 @@ export const cuttingEdgeITServices2025 = [
       'Data Privacy Laws'
     ]
   }
-  {/* content */}
+  
     id: 'ai-powered-devops-platform'
     name: 'AI-Powered DevOps Platform'
     description:
@@ -359,8 +359,8 @@ export const cuttingEdgeITServices2025 = [
       'Automated security scanning'
       'Comprehensive analytics and reporting'
     ]
-    pricing: {/* content */}
-      starter: {/* content */}
+    pricing: 
+      starter: 
         price: 399
         period: 'month'
         features: [
@@ -369,7 +369,7 @@ export const cuttingEdgeITServices2025 = [
           'Email support'
         ]
       }
-      professional: {/* content */}
+      professional: 
         price: 999
         period: 'month'
         features: [
@@ -379,7 +379,7 @@ export const cuttingEdgeITServices2025 = [
           'Performance optimization'
         ]
       }
-      enterprise: {/* content */}
+      enterprise: 
         price: 2499
         period: 'month'
         features: [
@@ -393,7 +393,7 @@ export const cuttingEdgeITServices2025 = [
     category: 'DevOps'
     tags: ['AI DevOps', 'Automation', 'CI/CD', 'Monitoring', 'Performance']
     website: 'https://ziontechgroup.com/ai-powered-devops-platform'
-    contact: {/* content */}
+    contact: 
       phone: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
     }
@@ -426,7 +426,7 @@ export const cuttingEdgeITServices2025 = [
     ]
   }
 export const cuttingEdgeITServices2025 = [
-  {/* content */}
+  
 ];      'Software development automationContinuous deployment pipelinesPerformance monitoring and optimizationIncident response automationQuality assurance automation'
     id: 'quantum-cloud-infrastructure-platform', name: 'Quantum Cloud Infrastructure Platform',
     description: 'Next-generation cloud infrastructure that leverages quantum computing principles for enhanced security, performance, and scalability across distributed systems.',

@@ -6,8 +6,6 @@ export default function AI2025OctoberProductionAIMonitoring() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <article className="text-left"></a>
       <div className="text-left"></div>
         {/* Hero Section */}
@@ -125,12 +123,12 @@ import Anthropic from '@anthropic-ai/sdk';
 
 const tracer = trace.getTracer('llm-service', '1.0.0');
 
-export class ObservableLLM {/* content */}
+export class ObservableLLM 
   private anthropic: Anthropic;
   private metrics: MetricsCollector;
 
-  constructor() {/* content */}
-    this.anthropic = new Anthropic({/* content */}
+  constructor() 
+    this.anthropic = new Anthropic(
       apiKey: process.env.ANTHROPIC_API_KEY,
     });
     this.metrics = new MetricsCollector();
@@ -139,15 +137,15 @@ export class ObservableLLM {/* content */}
   async generateWithObservability(
     prompt: string,
     metadata: RequestMetadata
-  ): Promise<LLMResponse> {/* content */}
+  ): Promise<LLMResponse> 
     const startTime = Date.now();
     
     return await tracer.startActiveSpan(
       'llm.generate',
-      async (span) => {/* content */}
-        try {/* content */}
+      async (span) => 
+        try 
           // Set span attributes
-          span.setAttributes({/* content */}
+          span.setAttributes(
             [SemanticAttributes.LLM_MODEL]: 'claude-3-5-sonnet-20241022',
             [SemanticAttributes.LLM_TEMPERATURE]: 0.7,
             'llm.user_id': metadata.userId,
@@ -156,10 +154,10 @@ export class ObservableLLM {/* content */}
           });
 
           // Generate response
-          const response = await this.anthropic.messages.create({/* content */}
+          const response = await this.anthropic.messages.create(
             model: 'claude-3-5-sonnet-20241022',
             max_tokens: 1024,
-            messages: [{/* content */}
+            messages: [
               role: 'user',
               content: prompt
             }],
@@ -169,7 +167,7 @@ export class ObservableLLM {/* content */}
           const outputText = response.content[0].text;
 
           // Capture metrics
-          await this.captureMetrics({/* content */}
+          await this.captureMetrics(
             duration,
             inputTokens: response.usage.input_tokens,
             outputTokens: response.usage.output_tokens,
@@ -187,7 +185,7 @@ export class ObservableLLM {/* content */}
           );
 
           // Update span with response data
-          span.setAttributes({/* content */}
+          span.setAttributes(
             'llm.output_tokens': response.usage.output_tokens,
             'llm.total_tokens': response.usage.input_tokens + response.usage.output_tokens,
             'llm.cost': this.calculateCost(response.usage),
@@ -197,34 +195,34 @@ export class ObservableLLM {/* content */}
 
           span.setStatus({ code: SpanStatusCode.OK });
 
-          return {/* content */}
+          return 
             text: outputText,
             usage: response.usage,
             qualityScore,
             duration,
           };
-        } catch (error) {/* content */}
-          span.setStatus({/* content */}
+        } catch (error) 
+          span.setStatus(
             code: SpanStatusCode.ERROR,
             message: error.message,
           });
           span.recordException(error);
 
           // Emit error metric
-          await this.metrics.incrementError({/* content */}
+          await this.metrics.incrementError(
             errorType: error.name,
             userId: metadata.userId,
           });
 
           throw error;
-        } finally {/* content */}
+        } finally 
           span.end();
         }
       }
     );
   }
 
-  private async captureMetrics(data: MetricsData): Promise<void> {/* content */}
+  private async captureMetrics(data: MetricsData): Promise<void> 
     await Promise.all([
       this.metrics.recordDuration('llm.duration', data.duration),
       this.metrics.recordTokens('llm.tokens.input', data.inputTokens),
@@ -238,7 +236,7 @@ export class ObservableLLM {/* content */}
     prompt: string,
     output: string,
     metadata: RequestMetadata
-  ): Promise<number> {/* content */}
+  ): Promise<number> 
     // Run quality checks in parallel
     const [
       hallucinationScore,
@@ -260,8 +258,8 @@ export class ObservableLLM {/* content */}
     );
 
     // Alert if quality drops below threshold
-    if (qualityScore < 0.7) {/* content */}
-      await this.alertLowQuality({/* content */}
+    if (qualityScore < 0.7) 
+      await this.alertLowQuality(
         prompt,
         output,
         qualityScore,
@@ -283,19 +281,19 @@ export class ObservableLLM {/* content */}
 {`// Monitor embedding drift and data distribution shifts
 import { KolmogorovSmirnovTest } from 'statistics';
 
-export class DriftMonitor {/* content */}
+export class DriftMonitor 
   private baselineDistribution: EmbeddingStats;
   private currentWindow: Embedding[] = [];
   private windowSize = 1000;
 
-  constructor(baseline: Embedding[]) {/* content */}
+  constructor(baseline: Embedding[]) 
     this.baselineDistribution = this.computeStats(baseline);
   }
 
-  async monitorEmbedding(embedding: number[]): Promise<DriftAlert | null> {/* content */}
+  async monitorEmbedding(embedding: number[]): Promise<DriftAlert | null> 
     this.currentWindow.push(embedding);
 
-    if (this.currentWindow.length >= this.windowSize) {/* content */}
+    if (this.currentWindow.length >= this.windowSize) 
       const currentStats = this.computeStats(this.currentWindow);
       const driftScore = this.calculateDrift(
         this.baselineDistribution,
@@ -303,8 +301,8 @@ export class DriftMonitor {/* content */}
       );
 
       // Check for significant drift
-      if (driftScore > 0.15) {/* content */}
-        return {/* content */}
+      if (driftScore > 0.15) 
+        return 
           severity: driftScore > 0.3 ? 'critical' : 'warning',
           driftScore,
           affectedDimensions: this.identifyDriftedDimensions(
@@ -326,7 +324,7 @@ export class DriftMonitor {/* content */}
   private calculateDrift(
     baseline: EmbeddingStats,
     current: EmbeddingStats
-  ): number {/* content */}
+  ): number 
     // Use multiple drift detection methods
     const ksScore = KolmogorovSmirnovTest(
       baseline.values,
@@ -344,18 +342,16 @@ export class DriftMonitor {/* content */}
     return (
     <div>
       <div></div>
-      <div></div>
-    </div>
       ksScore * 0.4 +
       cosineShift * 0.4 +
       varianceRatio * 0.2
     );
   }
 
-  private generateRecommendation(score: number): string {/* content */}
-    if (score > 0.3) {/* content */}
+  private generateRecommendation(score: number): string 
+    if (score > 0.3) 
       return 'Critical drift detected. Consider retraining embeddings or adjusting input preprocessing.';
-    } else if (score > 0.15) {/* content */}
+    } else if (score > 0.15) 
       return 'Moderate drift detected. Monitor closely and prepare for model update.';
     }
     return 'Normal variation within acceptable bounds.';

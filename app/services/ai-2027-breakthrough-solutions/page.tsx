@@ -11,7 +11,7 @@ export const metadata = {
     type: 'website',
     url: 'https://ziontechgroup.com/services/ai-2027-breakthrough-solutions',
     images: [
-      {/* content */}
+      
         url: '/og-ai-2027-solutions.jpg',
         width: 1200,
         height: 630,
@@ -27,8 +27,6 @@ export default function AI2027BreakthroughSolutions() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div className="text-left"></div>
       <div className="text-left"></div>
         <Link href="/services" className="text-left">

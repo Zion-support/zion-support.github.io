@@ -18,8 +18,6 @@ export default function AI2027QuantumEnterpriseSolutions() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div className="text-left"></div>
       <div className="text-left"></div>
         <Link href="/services" className="text-left">

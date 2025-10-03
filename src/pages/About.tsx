@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async'
 import { Target, Shield, TrendingUp, Globe } from 'lucide-react'
 
-const About: React.FC = () => {/* content */}
+const About: React.FC = () => {
   const stats = [
     { label: 'Years of Experience', value: '15+' },
     { label: 'Projects Delivered', value: '500+' },
@@ -11,22 +11,22 @@ const About: React.FC = () => {/* content */}
   ];
 
   const values = [
-    {/* content */}
+    
       icon: Target,
       title: 'Innovation First',
       description: 'We stay ahead of technology trends to deliver solutions that give you a competitive edge in the market.'
     },
-    {/* content */}
+    
       icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-grade security measures protect your data and ensure compliance with industry standards.'
     },
-    {/* content */}
+    
       icon: TrendingUp,
       title: 'Measurable Results',
       description: 'We deliver quantifiable outcomes with average 75% cost reduction and 10x efficiency gains.'
     },
-    {/* content */}
+    
       icon: Globe,
       title: 'Global Reach',
       description: 'Serving clients worldwide with 24/7 support and localized solutions for international markets.'
@@ -34,20 +34,20 @@ const About: React.FC = () => {/* content */}
   ];
 
   const team = [
-    {/* content */}
+    
       name: 'Kleber Santos',
       role: 'CEO & Founder',
       description: 'Technology visionary with 15+ years in AI and enterprise solutions.',
       email: 'kleber@ziontechgroup.com'
     },
-    {/* content */}
+    
       name: 'AI Engineering Team',
       role: 'Machine Learning Specialists',
       description: 'Expert team of AI engineers specializing in cutting-edge machine learning technologies.',
       email: 'ai-team@ziontechgroup.com'
     },
-    {/* content */}
-import {/* content */}
+    
+import 
   Target,
   Shield,
   TrendingUp,
@@ -59,24 +59,24 @@ import {/* content */}
   Mail
 } from 'lucide-react'
 
-const About: React.FC = () => {/* content */}
+const About: React.FC = () => {
   const stats = [
-    {/* content */}
+    
       icon: Users,
       value: '500+',
       label: 'Projects Completed'
     },
-    {/* content */}
+    
       icon: Globe,
       value: '50+',
       label: 'Countries Served'
     },
-    {/* content */}
+    
       icon: TrendingUp,
       value: '75%',
       label: 'Average Cost Reduction'
     },
-    {/* content */}
+    
       icon: Shield,
       value: '99.9%',
       label: 'Uptime Guarantee'
@@ -84,22 +84,22 @@ const About: React.FC = () => {/* content */}
   ];
 
   const values = [
-    {/* content */}
+    
       icon: Target,
       title: 'Innovation First',
       description: 'We stay ahead of technology trends to deliver solutions that give you a competitive edge in the market.'
     },
-    {/* content */}
+    
       icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-grade security measures protect your data and ensure compliance with industry standards.'
     },
-    {/* content */}
+    
       icon: TrendingUp,
       title: 'Measurable Results',
       description: 'We deliver quantifiable outcomes with average 75% cost reduction and 10x efficiency gains.'
     },
-    {/* content */}
+    
       icon: Globe,
       title: 'Global Reach',
       description: 'Serving clients worldwide with 24/7 support and localized solutions for international markets.'
@@ -107,19 +107,19 @@ const About: React.FC = () => {/* content */}
   ];
 
   const team = [
-    {/* content */}
+    
       name: 'Kleber Santos',
       role: 'CEO & Founder',
       description: 'Technology visionary with 15+ years in AI and enterprise solutions.',
       email: 'kleber@ziontechgroup.com'
     },
-    {/* content */}
+    
       name: 'AI Engineering Team',
       role: 'Machine Learning Specialists',
       description: 'Expert team of AI engineers specializing in cutting-edge machine learning technologies.',
       email: 'ai-team@ziontechgroup.com'
     },
-    {/* content */}
+    
       name: 'DevOps Specialists',
       role: 'Infrastructure Experts',
       description: 'Cloud and DevOps professionals ensuring scalable and secure infrastructure solutions.',
@@ -130,8 +130,6 @@ const About: React.FC = () => {/* content */}
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
       <Helmet>
         <title>About Us - Zion Tech Group | Leading AI & Technology Solutions</title>
         <meta name="description" content="Learn about Zion Tech Group's mission, team, and commitment to delivering cutting-edge AI and IT solutions that transform businesses worldwide." />
@@ -159,7 +157,7 @@ const About: React.FC = () => {/* content */}
                   <div className="text-gray-600">{stat.label}</div>
                 </div>
               ))}
-              {stats.map((stat, index) => {/* content */}
+              {stats.map((stat, index) => 
                 const Icon = stat.icon;
                 return (
   <div></div>
@@ -226,7 +224,7 @@ const About: React.FC = () => {/* content */}
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
-              {values.map((value, index) => {/* content */}
+              {values.map((value, index) => 
                 const Icon = value.icon;
                 return (
   <div></div>

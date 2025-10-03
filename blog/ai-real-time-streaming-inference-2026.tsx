@@ -1,6 +1,6 @@
 import React from 'react';
 
-const AIRealTimeStreamingInference2026 = () => {/* content */}
+const AIRealTimeStreamingInference2026 = () => 
   return (
   <div></div>
     <div className="text-left"></div>

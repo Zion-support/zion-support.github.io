@@ -4,27 +4,27 @@ import Head from 'next/head';
 export default function Contact() {
   return (
     <div>/* content */}
-  const [formData, setFormData] = useState({/* content */}
+  const [formData, setFormData] = useState(
     name: '',
     email: '',
     company: '',
     message: ''
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {/* content */}
-    setFormData({/* content */}
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => 
+    setFormData(
       ...formData,
       [e.target.name]: e.target.value
     });
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {/* content */}
+  const handleSubmit = async (e: React.FormEvent) => 
     e.preventDefault();
-    try {/* content */}
+    try 
       // Handle form submission here
       alert('Message sent successfully!');
       setFormData({ name: '', email: '', company: '', message: '' });
-    } catch (err) {/* content */}
+    } catch (err) 
       alert('Failed to send message. Please try again.');
     }
   };
@@ -32,8 +32,6 @@ export default function Contact() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>Contact Us - Zion Tech Group</title>

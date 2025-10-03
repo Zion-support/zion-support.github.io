@@ -13,8 +13,6 @@ export default function AutonomousITOperationsAIOps202025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>Autonomous IT Operations (AIOps 2.0) 2025: Self-Healing Infrastructure | Zion Tech Group</title>

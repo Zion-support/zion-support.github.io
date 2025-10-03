@@ -13,8 +13,6 @@ export default function EnterpriseAITalentDevelopment2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>Enterprise AI Talent Development Strategy 2025: Building High-Performance Teams | Zion Tech Group</title>

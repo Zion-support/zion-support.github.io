@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {/* content */}
+export const metadata: Metadata = 
   title: 'AI Autonomous Operations Services | Zion Tech Group',
   description: 'Transform your enterprise with fully autonomous AI operations. Achieve 95% automation rates and $2M+ annual savings with our cutting-edge solutions.',
   keywords: 'AI autonomous operations, enterprise automation, AI services, process automation, intelligent automation',
@@ -18,8 +18,6 @@ export default function AIAutonomousOperationsService() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div className="text-left"></div>
       {/* Hero Section */}</div>
       <section className="text-left"></section>

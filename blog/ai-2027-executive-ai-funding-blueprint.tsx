@@ -6,8 +6,6 @@ export default function ExecutiveAIFundingBlueprint2027() {
 	return (
     <div>
       <div></div>
-      <div></div>
-    </div>
 		<div className="text-left"></div>
 			<main className="text-left">
 				<h1 className="text-left">Executive AI Funding Blueprint 2027</h1>

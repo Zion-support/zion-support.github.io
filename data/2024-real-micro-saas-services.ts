@@ -1,5 +1,5 @@
 export const realMicroSaasServices2024 = [
-  {/* content */}
+  
     name: 'Real Micro-SaaS Platform 2024',
     path: '/services/real-micro-saas-platform-2024',
     description: 'Comprehensive micro-SaaS development and management platform',
@@ -11,13 +11,13 @@ export const realMicroSaasServices2024 = [
       'Multi-tenant support',
       'Advanced analytics'
     ],
-    pricing: {/* content */}
+    pricing: 
       starter: '$199/month',
       professional: '$399/month',
       enterprise: 'Custom'
     }
   },
-  {/* content */}
+  
     name: 'Real SaaS Analytics 2024',
     path: '/services/real-saas-analytics-2024',
     description: 'Comprehensive SaaS performance and user analytics',
@@ -29,7 +29,7 @@ export const realMicroSaasServices2024 = [
       'Revenue analytics',
       'Churn prediction'
     ],
-    pricing: {/* content */}
+    pricing: 
       starter: '$99/month',
       professional: '$199/month',
       enterprise: 'Custom'
@@ -44,7 +44,7 @@ export const realMicroSaasCategories2024 = [
   'Revenue Optimization'
 ];
 
-export const realMicroSaasStats2024 = {/* content */}
+export const realMicroSaasStats2024 = 
   totalServices: 2,
   categories: 4,
   averageRating: 4.7,

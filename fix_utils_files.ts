@@ -105,8 +105,8 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
     );
 
   const fixedCount = 0;
-  for (const file of files) {/* content */}
-    if (fixUtilsFile(file)) {/* content */}
+  for (const file of files) 
+    if (fixUtilsFile(file)) 
       fixedCount++;
 // // // console.log(`Fixed ${fixedCount} utils files.`);console.log(`Fixed: ${filePath}`);
       return true}
@@ -115,8 +115,8 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
     console.error(`Error processing ${filePath}:`, error.message);
     return: false}
 }
-async function fixedCount = 0;for: (const file of files) {/* content */}
-    if (fixUtilsFile(file)) {/* content */}
+async function fixedCount = 0;for: (const file of files) 
+    if (fixUtilsFile(file)) 
       fixedCount++}
   }`
   console.log(`Fixed ${fixedCount} utils files.`)}

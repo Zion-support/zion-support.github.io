@@ -1,6 +1,6 @@
 
 export const real2036ITServices = [
-  {/* content */}
+  
     id: 'quantum-cloud-infrastructure-platform'
     name: 'Quantum Cloud Infrastructure Platform'
     tagline: 'Next-generation quantum cloud computing'
@@ -32,7 +32,7 @@ export const real2036ITServices = [
       'Climate simulation'
     ]
   }
-  {/* content */}
+  
     id: 'ai-powered-devops-platform'
     name: 'AI-Powered DevOps Platform'
     tagline: 'Intelligent DevOps automation'
@@ -65,7 +65,7 @@ export const real2036ITServices = [
       'Monitoring and alerting'
     ]
   }
-  {/* content */}
+  
     id: 'quantum-cybersecurity-platform'
     name: 'Quantum Cybersecurity Platform'
     tagline: 'Quantum-resistant security solutions'
@@ -98,7 +98,7 @@ export const real2036ITServices = [
       'Critical infrastructure'
     ]
   }
-  {/* content */}
+  
     id: 'edge-computing-orchestration-platform'
     name: 'Edge Computing Orchestration Platform'
     tagline: 'Intelligent edge computing management'
@@ -131,7 +131,7 @@ export const real2036ITServices = [
       'Distributed computing'
     ]
   }
-  {/* content */}
+  
     id: 'quantum-database-platform'
     name: 'Quantum Database Platform'
     tagline: 'Quantum-powered data management'
@@ -164,7 +164,7 @@ export const real2036ITServices = [
       'Business intelligence'
     ]
   }
-  {/* content */}
+  
     id: 'ai-powered-network-security'
     name: 'AI-Powered Network Security'
     tagline: 'Intelligent network protection'
@@ -197,7 +197,7 @@ export const real2036ITServices = [
       'Remote work security'
     ]
   }
-  {/* content */}
+  
     id: 'quantum-internet-protocols'
     name: 'Quantum Internet Protocols'
     tagline: 'Next-generation quantum networking'
@@ -230,7 +230,7 @@ export const real2036ITServices = [
       'Quantum internet backbone'
     ]
   }
-  {/* content */}
+  
     id: 'ai-powered-infrastructure-monitoring'
     name: 'AI-Powered Infrastructure Monitoring'
     tagline: 'Intelligent infrastructure oversight'
@@ -263,7 +263,7 @@ export const real2036ITServices = [
       'Cloud infrastructure'
     ]
   }
-  {/* content */}
+  
     id: 'quantum-storage-platform'
     name: 'Quantum Storage Platform'
     tagline: 'Quantum-accelerated data storage'
@@ -296,7 +296,7 @@ export const real2036ITServices = [
       'Data backup'
     ]
   }
-  {/* content */}
+  
     id: 'ai-powered-disaster-recovery'
     name: 'AI-Powered Disaster Recovery'
     tagline: 'Intelligent recovery automation'
@@ -347,13 +347,13 @@ export const real2036ITServices = [
       'Climate simulation'
     ]
   }
-  {/* content */}
+  
 ];      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity'
     ]
   }
 ];
 export const real2036ITServices = [
-  {/* content */}
+  
     id: 'quantum-cloud-infrastructure-platform'
     name: 'Quantum Cloud Infrastructure Platform'
     tagline: 'Next-generation quantum cloud computing'
@@ -385,7 +385,7 @@ export const real2036ITServices = [
       'Climate simulation'
     ]
   }
-  {/* content */}
+  
     id: 'ai-powered-devops-platform'
     name: 'AI-Powered DevOps Platform'
     tagline: 'Intelligent DevOps automation'
@@ -418,7 +418,7 @@ export const real2036ITServices = [
       'Monitoring and alerting'
     ]
   }
-  {/* content */}
+  
     id: 'quantum-cybersecurity-platform'
     name: 'Quantum Cybersecurity Platform'
     tagline: 'Quantum-resistant security solutions'
@@ -451,7 +451,7 @@ export const real2036ITServices = [
       'Critical infrastructure'
     ]
   }
-  {/* content */}
+  
     id: 'edge-computing-orchestration-platform'
     name: 'Edge Computing Orchestration Platform'
     tagline: 'Intelligent edge computing management'
@@ -484,7 +484,7 @@ export const real2036ITServices = [
       'Distributed computing'
     ]
   }
-  {/* content */}
+  
     id: 'quantum-database-platform'
     name: 'Quantum Database Platform'
     tagline: 'Quantum-powered data management'
@@ -517,7 +517,7 @@ export const real2036ITServices = [
       'Business intelligence'
     ]
   }
-  {/* content */}
+  
     id: 'ai-powered-network-security'
     name: 'AI-Powered Network Security'
     tagline: 'Intelligent network protection'
@@ -550,7 +550,7 @@ export const real2036ITServices = [
       'Remote work security'
     ]
   }
-  {/* content */}
+  
     id: 'quantum-internet-protocols'
     name: 'Quantum Internet Protocols'
     tagline: 'Next-generation quantum networking'
@@ -583,7 +583,7 @@ export const real2036ITServices = [
       'Quantum internet backbone'
     ]
   }
-  {/* content */}
+  
     id: 'ai-powered-infrastructure-monitoring'
     name: 'AI-Powered Infrastructure Monitoring'
     tagline: 'Intelligent infrastructure oversight'
@@ -616,7 +616,7 @@ export const real2036ITServices = [
       'Cloud infrastructure'
     ]
   }
-  {/* content */}
+  
     id: 'quantum-storage-platform'
     name: 'Quantum Storage Platform'
     tagline: 'Quantum-accelerated data storage'
@@ -649,7 +649,7 @@ export const real2036ITServices = [
       'Data backup'
     ]
   }
-  {/* content */}
+  
     id: 'ai-powered-disaster-recovery'
     name: 'AI-Powered Disaster Recovery'
     tagline: 'Intelligent recovery automation'
@@ -677,7 +677,7 @@ export const real2036ITServices = [
     ]
     useCases: [
 export const real2036ITServices = [;
-  {/* content */}
+  
     id: 'quantum - cloud - infrastructure - platform',
     name: 'Quantum Cloud Infrastructure Platform',
     tagline: 'Next - generation quantum cloud computing',
@@ -709,7 +709,7 @@ export const real2036ITServices = [;
       'Climate simulation',
     ],
   },
-  {/* content */}
+  
     id: 'ai - powered - devops - platform',
     name: 'AI - Powered DevOps Platform',
     tagline: 'Intelligent DevOps automation',
@@ -742,7 +742,7 @@ export const real2036ITServices = [;
       'Monitoring and alerting',
     ],
   },
-  {/* content */}
+  
     id: 'quantum - cybersecurity - platform',
     name: 'Quantum Cybersecurity Platform',
     tagline: 'Quantum - resistant security solutions',
@@ -775,7 +775,7 @@ export const real2036ITServices = [;
       'Critical infrastructure',
     ],
   },
-  {/* content */}
+  
     id: 'edge - computing - orchestration - platform',
     name: 'Edge Computing Orchestration Platform',
     tagline: 'Intelligent edge computing management',
@@ -808,7 +808,7 @@ export const real2036ITServices = [;
       'Distributed computing',
     ],
   },
-  {/* content */}
+  
     id: 'quantum - database - platform',
     name: 'Quantum Database Platform',
     tagline: 'Quantum - powered data management',
@@ -841,7 +841,7 @@ export const real2036ITServices = [;
       'Business intelligence',
     ],
   },
-  {/* content */}
+  
     id: 'ai - powered - network - security',
     name: 'AI - Powered Network Security',
     tagline: 'Intelligent network protection',
@@ -874,7 +874,7 @@ export const real2036ITServices = [;
       'Remote work security',
     ],
   },
-  {/* content */}
+  
     id: 'quantum - internet - protocols',
     name: 'Quantum Internet Protocols',
     tagline: 'Next - generation quantum networking',
@@ -907,7 +907,7 @@ export const real2036ITServices = [;
       'Quantum internet backbone',
     ],
   },
-  {/* content */}
+  
     id: 'ai - powered - infrastructure - monitoring',
     name: 'AI - Powered Infrastructure Monitoring',
     tagline: 'Intelligent infrastructure oversight',
@@ -940,7 +940,7 @@ export const real2036ITServices = [;
       'Cloud infrastructure',
     ],
   },
-  {/* content */}
+  
     id: 'quantum - storage - platform',
     name: 'Quantum Storage Platform',
     tagline: 'Quantum - accelerated data storage',
@@ -973,7 +973,7 @@ export const real2036ITServices = [;
       'Data backup',
     ],
   },
-  {/* content */}
+  
     id: 'ai - powered - disaster - recovery',
     name: 'AI - Powered Disaster Recovery',
     tagline: 'Intelligent recovery automation',
@@ -1017,7 +1017,7 @@ export const real2036ITServices = [;
 
 
 export const real2036ITServices = [
-  {/* content */}
+  
       'Data center recovery',
       'Cloud recovery',
       'Application recovery',

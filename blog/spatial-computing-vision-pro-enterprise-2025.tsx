@@ -7,8 +7,6 @@ export default function SpatialComputingVisionProEnterprise2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>Spatial Computing Revolution: Vision Pro Transforms Enterprise Operations | Zion Tech Group</title>

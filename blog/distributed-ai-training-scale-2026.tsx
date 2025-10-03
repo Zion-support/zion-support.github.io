@@ -2,12 +2,10 @@ import { ArrowLeft, Cpu, Zap, CheckCircle, TrendingUp, Globe, Network, Server } 
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 
-const DistributedAITrainingScale2026 = () => {/* content */}
+const DistributedAITrainingScale2026 = () => 
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
       <Helmet>
         <title>Distributed AI Training at Scale 2026: 1000+ GPU Clusters | Zion Tech Group</title>
         <meta

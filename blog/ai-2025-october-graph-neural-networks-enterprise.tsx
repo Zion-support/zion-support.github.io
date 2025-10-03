@@ -6,8 +6,6 @@ export default function AI2025OctoberGraphNeuralNetworksEnterprise() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <article className="text-left"></a>
       <div className="text-left"></div>
         {/* Hero Section */}
@@ -83,32 +81,32 @@ export default function AI2025OctoberGraphNeuralNetworksEnterprise() {
           <h2 className="text-left">Advanced GNN Architectures</h2>
           <div className="text-left"></div>
             {[
-              {/* content */}
+              
                 title: "Graph Convolutional Networks (GCN)
                 desc: "Generalize convolutions to irregular graph structures for node classification
                 metrics: ["Node Classification", "Semi-Supervised", "Spectral Methods"]
               },
-              {/* content */}
+              
                 title: "Graph Attention Networks (GAT)
                 desc: "Learn importance weights for neighboring nodes dynamically
                 metrics: ["Attention Mechanism", "Dynamic Weighting", "Heterogeneous Graphs"]
               },
-              {/* content */}
+              
                 title: "GraphSAGE
                 desc: "Inductive learning framework for generating node embeddings at scale
                 metrics: ["Inductive Learning", "Billions of Nodes", "Real-Time Inference"]
               },
-              {/* content */}
+              
                 title: "Temporal Graph Networks
                 desc: "Model dynamic graphs that evolve over time with temporal dependencies
                 metrics: ["Time-Series Graphs", "Evolution Tracking", "Event Prediction"]
               },
-              {/* content */}
+              
                 title: "Heterogeneous GNNs
                 desc: "Handle multiple node types and edge types in complex knowledge graphs
                 metrics: ["Multi-Type Nodes", "Rich Semantics", "Enterprise Graphs"]
               },
-              {/* content */}
+              
                 title: "Graph Transformers
                 desc: "Combine transformer attention with graph structure for powerful reasoning
                 metrics: ["Global Context", "Long-Range Dependencies", "State-of-the-Art"]
@@ -134,32 +132,32 @@ export default function AI2025OctoberGraphNeuralNetworksEnterprise() {
           <h2 className="text-left">Enterprise Applications</h2>
           <div className="text-left"></div>
             {[
-              {/* content */}
+              
                 title: "Fraud Detection & Prevention
                 desc: "Detect complex fraud rings by analyzing transaction networks and identifying suspicious patterns across millions of entities
                 results: ["99.3% Detection Rate", "63% Fewer False Positives", "$4.2B Fraud Prevented"]
               },
-              {/* content */}
+              
                 title: "Recommendation Systems
                 desc: "Build next-generation recommenders that understand user-item interactions in rich social and content graphs
                 results: ["47% Higher Engagement", "38% More Revenue", "12x Better Personalization"]
               },
-              {/* content */}
+              
                 title: "Drug Discovery
                 desc: "Accelerate molecular property prediction and drug-target interaction modeling using molecular graphs
                 results: ["10x Faster Discovery", "92% Accuracy", "$800M Cost Savings"]
               },
-              {/* content */}
+              
                 title: "Supply Chain Optimization
                 desc: "Model entire supply networks to predict disruptions and optimize routing across global operations
                 results: ["34% Cost Reduction", "98% On-Time Delivery", "Real-Time Optimization"]
               },
-              {/* content */}
+              
                 title: "Knowledge Graph Reasoning
                 desc: "Answer complex queries over enterprise knowledge graphs with multi-hop reasoning and inference
                 results: ["23x Faster Queries", "96% Accuracy", "Automated Insights"]
               },
-              {/* content */}
+              
                 title: "Social Network Analysis
                 desc: "Understand community structures, influence propagation, and user behavior at massive scale
                 results: ["Billion-Scale Graphs", "Real-Time Analysis", "Predictive Modeling"]

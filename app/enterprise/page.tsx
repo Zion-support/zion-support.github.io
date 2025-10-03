@@ -13,8 +13,6 @@ export default function EnterprisePage() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div className="text-left"></div>
       {/* Hero Section */}</div>
       <header className="text-left">

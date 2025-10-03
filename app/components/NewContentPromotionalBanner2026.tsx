@@ -2,9 +2,9 @@ import React from 'react';
 import Link from 'next/link';
 import { Sparkles, TrendingUp, Rocket, Shield, Target, ArrowRight, Zap } from 'lucide-react';
 
-const NewContentPromotionalBanner2026: React.FC = () => {/* content */}
+const NewContentPromotionalBanner2026: React.FC = () => 
   const featuredContent = [
-    {/* content */}
+    
       id: 1,
       title: 'AI Autonomous Workflows 2026',
       slug: 'ai-autonomous-workflows-2026',
@@ -16,7 +16,7 @@ const NewContentPromotionalBanner2026: React.FC = () => {/* content */}
       badge: 'NEW',
       badgeColor: 'from-cyan-500 to-blue-600'
     },
-    {/* content */}
+    
       id: 2,
       title: 'Enterprise AI Transformation Roadmap 2026',
       slug: 'enterprise-ai-transformation-roadmap-2026',
@@ -28,7 +28,7 @@ const NewContentPromotionalBanner2026: React.FC = () => {/* content */}
       badge: 'STRATEGIC',
       badgeColor: 'from-purple-500 to-fuchsia-600'
     },
-    {/* content */}
+    
       id: 3,
       title: 'AI-Powered Security Operations Center 2026',
       slug: 'ai-security-operations-center-2026',

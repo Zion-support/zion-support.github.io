@@ -13,8 +13,6 @@ export default function RAG2ProductionScalePipelines2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>Retrieval-Augmented Generation 2.0: Production-Scale RAG Pipelines | Zion Tech Group</title>

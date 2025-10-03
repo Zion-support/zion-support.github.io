@@ -15,8 +15,6 @@ export default function BlogPost() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <article className="text-left"></a>
       <h1>🏢 Autonomous Data Center Optimization 2025: Self-Managing Infrastructure at Scale</h1>
       

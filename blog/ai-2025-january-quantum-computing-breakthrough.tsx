@@ -8,8 +8,6 @@ export default function AI2025JanuaryQuantumComputingBreakthrough() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <article className="text-left"></a>
       <div className="text-left"></div>
         <div className="text-left"></div>

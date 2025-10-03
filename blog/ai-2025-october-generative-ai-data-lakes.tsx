@@ -13,8 +13,6 @@ export default function GenerativeAIDataLakes2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>Generative AI for Enterprise Data Lakes 2025: Unlocking Petabyte-Scale Intelligence | Zion Tech Group</title>

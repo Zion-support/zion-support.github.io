@@ -8,8 +8,6 @@ export default function AIEnterpriseGovernanceComplianceAutomation2026() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Helmet>
         <title>Enterprise AI Governance & Compliance Automation 2026 — Navigate 247 Global Regulations with 99.8% Confidence | Zion Tech Group</title>

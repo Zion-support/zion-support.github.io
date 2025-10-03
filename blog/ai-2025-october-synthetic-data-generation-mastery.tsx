@@ -15,8 +15,6 @@ export default function BlogPost() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <article className="text-left"></a>
       <h1>🔮 Synthetic Data Generation Mastery 2025: Privacy-Preserving AI Training at Scale</h1>
       

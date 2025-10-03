@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {/* content */}
+export const metadata: Metadata = 
   title: 'AI Business Intelligence 2025: Advanced Analytics & Insights Platform',
   description: 'Transform your business with AI-powered business intelligence. Advanced analytics, predictive insights, and real-time dashboards for data-driven decision making.',
   keywords: 'AI business intelligence, business analytics, predictive analytics, data visualization, business insights, AI dashboards',
@@ -12,7 +12,7 @@ export const metadata: Metadata = {/* content */}
     type: 'website',
     url: 'https://ziontechgroup.com/services/ai-business-intelligence-2025',
     images: [
-      {/* content */}
+      
         url: '/og-images/ai-business-intelligence-2025.jpg',
         width: 1200,
         height: 630,
@@ -20,7 +20,7 @@ export const metadata: Metadata = {/* content */}
       },
     ],
   },
-  twitter: {/* content */}
+  twitter: 
     card: 'summary_large_image',
     title: 'AI Business Intelligence 2025: Advanced Analytics & Insights Platform',
     description: 'Transform your business with AI-powered business intelligence. Advanced analytics, predictive insights, and real-time dashboards.',
@@ -34,8 +34,6 @@ export default function AIBusinessIntelligence2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div className="text-left"></div>
       {/* Header */}</div>
       <div className="text-left"></div>

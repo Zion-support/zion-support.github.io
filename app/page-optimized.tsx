@@ -6,19 +6,19 @@ import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
 import { PerformanceMonitor } from './components/PerformanceMonitor';
 
 // Lazy load heavy components
-const UnifiedContentPromotion = dynamic(() => import('../components/UnifiedContentPromotion'), {/* content */}
+const UnifiedContentPromotion = dynamic(() => import('../components/UnifiedContentPromotion'), 
   loading: () => <div className="text-left"></div>"
 });
 
-const InteractiveAIROICalculator = dynamic(() => import('../components/InteractiveAIROICalculator'), {/* content */}
+const InteractiveAIROICalculator = dynamic(() => import('../components/InteractiveAIROICalculator'), 
   loading: () => <div className="text-left"></div>"
 });
 
-const ContentShowcase = dynamic(() => import('../components/ContentShowcase'), {/* content */}
+const ContentShowcase = dynamic(() => import('../components/ContentShowcase'), 
   loading: () => <div className="text-left"></div>"
 });
 
-const InteractiveContentShowcase2026 = dynamic(() => import('../components/InteractiveContentShowcase2026'), {/* content */}
+const InteractiveContentShowcase2026 = dynamic(() => import('../components/InteractiveContentShowcase2026'), 
   loading: () => <div className="text-left"></div>"
 });
 
@@ -32,7 +32,7 @@ export const metadata = {
     type: 'website',
     url: 'https://ziontechgroup.com',
     images: [
-      {/* content */}
+      
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
@@ -40,16 +40,16 @@ export const metadata = {
       },
     ],
   },
-  twitter: {/* content */}
+  twitter: 
     card: 'summary_large_image',
     title: 'Zion Tech Group — AI Enterprise Transformation & IT Services',
     description: 'Transform your enterprise with AI-powered solutions. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains.',
     images: ['/og-image.jpg'],
   },
-  robots: {/* content */}
+  robots: 
     index: true,
     follow: true,
-    googleBot: {/* content */}
+    googleBot: 
       index: true,
       follow: true,
       'max-video-preview': -1,
@@ -62,7 +62,7 @@ export const metadata = {
 export default function HomePage() {
   return (
     <div>/* content */}
-  const structuredData = {/* content */}
+  const structuredData = 
     "@context": "https://schema.org"
     "@type": "Organization"
     "name": "Zion Tech Group"
@@ -100,9 +100,6 @@ export default function HomePage() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
-    <div></div>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}

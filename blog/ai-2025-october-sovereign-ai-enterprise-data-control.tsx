@@ -13,8 +13,6 @@ export default function SovereignAIEnterpriseDataControl2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>Sovereign AI Systems for Enterprise Data Control 2025: Complete Autonomy & Privacy | Zion Tech Group</title>

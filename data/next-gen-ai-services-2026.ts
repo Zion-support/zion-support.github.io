@@ -1,6 +1,6 @@
 
 import { ServiceVariant } from '../types/service-variants';
-export interface NextGenAIService2026 {/* content */}
+export interface NextGenAIService2026 
   name: string;
   tagline: string;
   price: string;
@@ -69,7 +69,7 @@ export interface NextGenAIService2026 {/* content */}
   growthRate: string,
   variant: ServiceVariant,
 
-  contactInfo: {/* content */}
+  contactInfo: 
     mobile: string;
     email: string;
     address: string;
@@ -89,7 +89,7 @@ export interface NextGenAIService2026 {/* content */}
 
 
 
-  contactInfo: {/* content */}
+  contactInfo: 
     mobile: string,
     email: string,
     address: string,
@@ -116,7 +116,7 @@ export interface NextGenAIService2026 {/* content */}
 
 
 export const nextGenAIServices2026: NextGenAIService2026[] = [
-  {/* content */}
+  
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -127,13 +127,13 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
 },
 
 export const nextGenAIServices2026: NextGenAIService2026[] = [
-  {/* content */}
+  
     id: 'ai-emotional-intelligence-platform',
   website: 'https://ziontechgroup.com',
 }  website: 'https://ziontechgroup.com';
 },
 export const nextGenAIServices2026: NextGenAIService2026[] = [;
-  {/* content */}
+  
     id: 'ai - emotional - intelligence - platform',
     name: 'AI Emotional Intelligence Platform',
     tagline: 'Understand and respond to human emotions in real - time',
@@ -262,7 +262,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [;
     customers: 45,
     rating: 4.9,
     reviews: 89;
-  {/* content */}
+  
     id: 'ai - predictive - maintenance - platform',
     name: 'AI Predictive Maintenance Platform',
     tagline: 'Predict equipment failures before they happen',
@@ -356,7 +356,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [;
     customers: 78,
     rating: 4.7,
     reviews: 156;
-  {/* content */}
+  
     id: 'ai - content - personalization - engine',
     name: 'AI Content Personalization Engine',
     tagline: 'Deliver hyper - personalized content experiences',
@@ -497,7 +497,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [;
     customers: 92,
     rating: 4.6,
     reviews: 203;
-  {/* content */}
+  
     id: 'ai - voice - cloning - platform',
     name: 'AI Voice Cloning Platform',
     tagline: 'Create natural - sounding voice clones for content creation',
@@ -582,7 +582,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [;
     customers: 156,
     rating: 4.8,
     reviews: 312;
-  {/* content */}
+  
     id: 'ai - code - review - assistant',
     name: 'AI Code Review Assistant',
     tagline: 'Automate code reviews and improve code quality',
@@ -693,7 +693,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [;
 },
 
 export const nextGenAIServices2026: NextGenAIService2026[] = [
-  {/* content */}
+  
     id: 'ai-emotional-intelligence-platform',
     name: 'AI Emotional Intelligence Platform',
     tagline: 'Understand and respond to human emotions in real-time',
@@ -733,7 +733,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     rating: 4.9,
 
 
-  {/* content */}
+  
     id: 'ai-predictive-maintenance-platform',
     name: 'AI Predictive Maintenance Platform',
     tagline: 'Predict equipment failures before they happen',
@@ -773,7 +773,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     rating: 4.7,
 
 
-  {/* content */}
+  
     id: 'ai-content-personalization-engine',
     name: 'AI Content Personalization Engine',
     tagline: 'Deliver hyper-personalized content experiences',
@@ -813,7 +813,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     rating: 4.6,
 
 
-  {/* content */}
+  
     id: 'ai-voice-cloning-platform',
     name: 'AI Voice Cloning Platform',
     tagline: 'Create natural-sounding voice clones for content creation',
@@ -853,7 +853,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     rating: 4.8,
 
 
-  {/* content */}
+  
     id: 'ai-code-review-assistant',
     name: 'AI Code Review Assistant',
     tagline: 'Automate code reviews and improve code quality',

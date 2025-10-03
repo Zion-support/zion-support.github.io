@@ -1,6 +1,6 @@
 import React from 'react';
 
-const RealtimeGenAIStreaming2025: React.FC = () => {/* content */}
+const RealtimeGenAIStreaming2025: React.FC = () => 
   return (
   <div></div>
     <article className="text-left"></a>
@@ -52,17 +52,17 @@ const RealtimeGenAIStreaming2025: React.FC = () => {/* content */}
             <p className="text-left">Deploy lightweight edge functions to minimize initial latency:</p>
             <pre className="text-left"></p>
 {`// Edge function (Cloudflare Workers, Vercel Edge)
-export async function handleStream(request) {/* content */}
+export async function handleStream(request) 
   const stream = new TransformStream();
   const writer = stream.writable.getWriter();
   
   // Start LLM request immediately
-  callLLMAPI(request.prompt, {/* content */}
+  callLLMAPI(request.prompt, 
     onToken: (token) => writer.write(token),
     onComplete: () => writer.close()
   });
   
-  return new Response(stream.readable, {/* content */}
+  return new Response(stream.readable, 
     headers: { 'Content-Type': 'text/event-stream' }
   });
 }`}
@@ -89,14 +89,14 @@ export async function handleStream(request) {/* content */}
 {`let tokenCount = 0;
 let estimatedCost = 0;
 
-onToken((token) => {/* content */}
+onToken((token) => 
   tokenCount++;
   estimatedCost = tokenCount * COST_PER_TOKEN;
   
-  if (estimatedCost > USER_BUDGET) {/* content */}
+  if (estimatedCost > USER_BUDGET) 
     stopStream();
     logBudgetExceeded(userId, estimatedCost);
-  } else {/* content */}
+  } else 
     sendToClient(token);
   }
 });`}

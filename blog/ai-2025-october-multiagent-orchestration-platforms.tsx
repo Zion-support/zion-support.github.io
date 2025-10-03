@@ -1,6 +1,6 @@
 import React from 'react';
 
-const MultiAgentOrchestrationPlatforms2025 = () => {/* content */}
+const MultiAgentOrchestrationPlatforms2025 = () => 
   return (
   <div></div>
     <article className="text-left"></a>

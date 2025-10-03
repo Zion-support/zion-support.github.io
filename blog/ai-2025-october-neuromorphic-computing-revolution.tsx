@@ -15,8 +15,6 @@ export default function BlogPost() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <article className="text-left"></a>
       <h1>🧠 Neuromorphic Computing Revolution 2025: Brain-Inspired AI Processing at Scale</h1>
       

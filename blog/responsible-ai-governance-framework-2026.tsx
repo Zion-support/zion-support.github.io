@@ -2,12 +2,10 @@ import { CheckCircle, Shield, Scale, AlertTriangle } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-const ResponsibleAIGovernanceFramework2026 = () => {/* content */}
+const ResponsibleAIGovernanceFramework2026 = () => 
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
       <Helmet>
         <title>Responsible AI Governance Framework 2026: Build Trust & Compliance at Scale | Zion Tech Group</title>
         <meta name="description" content="Implement comprehensive AI governance framework ensuring fairness, transparency, accountability, and compliance. Master responsible AI development achieving trust while maintaining velocity." />

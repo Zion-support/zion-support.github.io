@@ -7,8 +7,6 @@ export default function IntelligentDataFabricArchitecture2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>Intelligent Data Fabric Architecture: Unifying Enterprise Data at Scale | Zion Tech Group</title>

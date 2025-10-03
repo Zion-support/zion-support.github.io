@@ -1,6 +1,6 @@
 import React from 'react';
 
-const RealTimeEmbeddingOptimization2025 = () => {/* content */}
+const RealTimeEmbeddingOptimization2025 = () => 
   return (
   <div></div>
     <article className="text-left"></a>

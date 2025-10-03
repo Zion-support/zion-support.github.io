@@ -2,9 +2,9 @@ import React from 'react';
 import Link from 'next/link';
 import { Sparkles, TrendingUp, ArrowRight, Zap, Rocket, Star } from 'lucide-react';
 
-const September30NewContent2025Banner: React.FC = () => {/* content */}
+const September30NewContent2025Banner: React.FC = () => 
   const newArticles = [
-    {/* content */}
+    
       id: 0,
       title: 'AI-Accelerated Customer Experience 2025',
       slug: 'ai-accelerated-customer-experience-2025',
@@ -15,7 +15,7 @@ const September30NewContent2025Banner: React.FC = () => {/* content */}
       icon: '✨',
       gradient: 'from-cyan-600 to-blue-700'
     },
-    {/* content */}
+    
       id: 1,
       title: 'AI-Powered Autonomous Operations 2025',
       slug: 'ai-autonomous-operations-2025',
@@ -26,7 +26,7 @@ const September30NewContent2025Banner: React.FC = () => {/* content */}
       icon: '🤖',
       gradient: 'from-cyan-500 to-blue-600'
     },
-    {/* content */}
+    
       id: 2,
       title: 'Generative AI for Enterprise Architecture 2025',
       slug: 'generative-ai-enterprise-architecture-2025',
@@ -37,7 +37,7 @@ const September30NewContent2025Banner: React.FC = () => {/* content */}
       icon: '🎨',
       gradient: 'from-purple-500 to-fuchsia-600'
     },
-    {/* content */}
+    
       id: 3,
       title: 'Multimodal AI Agents Enterprise 2025',
       slug: 'multimodal-ai-agents-enterprise-2025',
@@ -48,7 +48,7 @@ const September30NewContent2025Banner: React.FC = () => {/* content */}
       icon: '👁️',
       gradient: 'from-emerald-500 to-teal-600'
     },
-    {/* content */}
+    
       id: 4,
       title: 'Quantum-Enhanced Machine Learning 2025',
       slug: 'quantum-enhanced-machine-learning-2025',
@@ -59,7 +59,7 @@ const September30NewContent2025Banner: React.FC = () => {/* content */}
       icon: '⚛️',
       gradient: 'from-indigo-500 to-purple-600'
     },
-    {/* content */}
+    
       id: 5,
       title: 'AI-Powered Cloud FinOps 2025',
       slug: 'ai-powered-cloud-finops-2025',

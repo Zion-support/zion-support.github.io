@@ -10,7 +10,7 @@ export const metadata = {
   tags: ['AI Governance', 'AI Ethics', 'Regulatory Compliance', 'Risk Management']
 };
 
-const AIGovernanceFramework2025 = () => {/* content */}
+const AIGovernanceFramework2025 = () => 
   return (
   <div></div>
     <article className="text-left"></a>

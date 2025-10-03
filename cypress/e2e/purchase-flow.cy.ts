@@ -1,14 +1,14 @@
-describe('purchase flow', () => {/* content */}
-  it('completes checkout with Stripe test mode', () => {/* content */}
-    cy.intercept('POST', '/api/checkout_sessions', {/* content */}
+describe('purchase flow', () => 
+  it('completes checkout with Stripe test mode', () => 
+    cy.intercept('POST', '/api/checkout_sessions', 
       statusCode: 200,
       body: { sessionId: 'sess_test' },
     }).as('createSession');
 
-    cy.visit('/checkout', {/* content */}
-      onBeforeLoad(win) {/* content */}
-        win.Stripe = function () {/* content */}
-          return {/* content */}
+    cy.visit('/checkout', 
+      onBeforeLoad(win) 
+        win.Stripe = function () 
+          return 
             redirectToCheckout: cy.stub().as('redirect'),
           } as any;
         };

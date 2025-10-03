@@ -13,8 +13,6 @@ export default function MultiModalAIEnterpriseKnowledgeManagement2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>Multi-Modal AI for Enterprise Knowledge Management 2025: Unified Intelligence | Zion Tech Group</title>

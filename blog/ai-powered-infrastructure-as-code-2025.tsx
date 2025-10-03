@@ -1,12 +1,10 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const AIPoweredInfrastructureAsCode2025: React.FC = () => {/* content */}
+const AIPoweredInfrastructureAsCode2025: React.FC = () => 
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
       <Helmet>
         <title>AI-Powered Infrastructure as Code — Autonomous Cloud Management 2025 | Zion Tech Group</title>
         <meta name="description" content="Revolutionary guide to AI-powered IaC: Generate Terraform/CDK from natural language, auto-optimize costs 60%, self-heal infrastructure, and achieve 99.99% uptime with autonomous cloud management." />

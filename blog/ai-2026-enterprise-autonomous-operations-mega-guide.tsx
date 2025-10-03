@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {/* content */}
+export const metadata: Metadata = 
   title: 'AI 2026 Enterprise Autonomous Operations Mega Guide: Complete Implementation Blueprint',
   description: 'The definitive guide to implementing AI-powered autonomous operations in enterprise environments, featuring 98% automation rates and $3B+ value generation strategies.',
   keywords: 'enterprise AI, autonomous operations, automation guide, AI implementation, business transformation',
@@ -19,8 +19,6 @@ export default function AI2026EnterpriseAutonomousOperationsMegaGuide() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div className="text-left"></div>
       <div className="text-left"></div>
         {/* Hero Section */}

@@ -1,5 +1,5 @@
-describe('smoke', () => {/* content */}
-  it('runs', () => {/* content */}
+describe('smoke', () => 
+  it('runs', () => 
     expect(true).toBe(true);
   });
 });

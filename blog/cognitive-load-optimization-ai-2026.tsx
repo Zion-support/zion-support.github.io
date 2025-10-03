@@ -2,12 +2,10 @@ import { ArrowLeft, BookOpen, Calendar, Clock, Share2, Tag, TrendingUp } from "l
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-const CognitiveLoadOptimizationAI2026 = () => {/* content */}
+const CognitiveLoadOptimizationAI2026 = () => 
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
       <Helmet>
         <title>Cognitive Load Optimization AI 2026: Reducing Human Decision Fatigue | Zion Tech Group</title>
         <meta

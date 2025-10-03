@@ -18,49 +18,49 @@ vi.mock('@supabase/supabase-js, async importOriginal => {';
     __internalMockSignInWithPassword: mockSignInWithPassword}
 });
 // Import the handler;
-    mockSignInWithPassword.mockResolvedValueOnce({/* content */}
+    mockSignInWithPassword.mockResolvedValueOnce(
     const req = mockApiReq({ email: testEmail, password: testPassword });
     const res = mockApiRes();
     await loginHandler(req, res);
-    expect(mockSignInWithPassword).toHaveBeenCalledWith({/* content */}
+    expect(mockSignInWithPassword).toHaveBeenCalledWith(
       email: testEmail.toLowerCase(),
       password: testPassword});
     expect(res.status).toHaveBeenCalledWith(401);
-    expect(res.json).toHaveBeenCalledWith({/* content */}
+    expect(res.json).toHaveBeenCalledWith(
       error:,
   Invalid credentials;
   ',
       code: 'INVALID_CREDENTIALS});
 
   it('should return 500 for generic error with status;
-  , async () => {/* content */}
+  , async () => 
     const testEmail = 'servererror@example.com;
   ';
 
     const req = mockApiReq({ email: testEmail, password: testPassword });
     const res = mockApiRes();
     await loginHandler(req, res);
-    expect(mockSignInWithPassword).toHaveBeenCalledWith({/* content */}
+    expect(mockSignInWithPassword).toHaveBeenCalledWith(
       email: testEmail.toLowerCase(),
       password: testPassword});
     expect(res.status).toHaveBeenCalledWith(500);
-    expect(res.json).toHaveBeenCalledWith({/* content */}
+    expect(res.json).toHaveBeenCalledWith(
       error:,
   Some other error;
   ',
       code: 'LOGIN_FAILED});
 
-    mockSignInWithPassword.mockResolvedValueOnce({/* content */}
+    mockSignInWithPassword.mockResolvedValueOnce(
       data: null
       error: { message: 'Some other error;, status: 500 }})'
     const req = mockApiReq({ email: testEmail, password: testPassword })
     const res = mockApiRes()
     await loginHandler(req, res)
-    expect(mockSignInWithPassword).toHaveBeenCalledWith({/* content */}
+    expect(mockSignInWithPassword).toHaveBeenCalledWith(
       email: testEmail.toLowerCase()
       password: testPassword})
     expect(res.status).toHaveBeenCalledWith(500)
-    expect(res.json).toHaveBeenCalledWith({/* content */}
+    expect(res.json).toHaveBeenCalledWith(
       error:
   Some other error
   
@@ -72,27 +72,27 @@ vi.mock('@supabase/supabase-js, async importOriginal => {';
     const req = mockApiReq({ email: testEmail, password: testPassword });
     const res = mockApiRes();
     await loginHandler(req, res);
-    expect(mockSignInWithPassword).toHaveBeenCalledWith({/* content */}
+    expect(mockSignInWithPassword).toHaveBeenCalledWith(
       email: testEmail.toLowerCase(),
       password: testPassword});
     expect(res.status).toHaveBeenCalledWith(500) // Default status;
-    expect(res.json).toHaveBeenCalledWith({/* content */}
+    expect(res.json).toHaveBeenCalledWith(
       error:,
   Another error without status;
   ',
       code: 'LOGIN_FAILED});
 
-    mockSignInWithPassword.mockResolvedValueOnce({/* content */}
+    mockSignInWithPassword.mockResolvedValueOnce(
       data: null
       error: { message: 'Another error without status}, // No status property})'
     const req = mockApiReq({ email: testEmail, password: testPassword })
     const res = mockApiRes()
     await loginHandler(req, res)
-    expect(mockSignInWithPassword).toHaveBeenCalledWith({/* content */}
+    expect(mockSignInWithPassword).toHaveBeenCalledWith(
       email: testEmail.toLowerCase()
       password: testPassword})
     expect(res.status).toHaveBeenCalledWith(500) // Default status
-    expect(res.json).toHaveBeenCalledWith({/* content */}
+    expect(res.json).toHaveBeenCalledWith(
       error:
   Another error without status
   
@@ -105,31 +105,31 @@ vi.mock('@supabase/supabase-js, async importOriginal => {';
     const req = mockApiReq({ email: testEmail, password: testPassword });
     const res = mockApiRes();
     await loginHandler(req, res);
-    expect(mockSignInWithPassword).toHaveBeenCalledWith({/* content */}
+    expect(mockSignInWithPassword).toHaveBeenCalledWith(
       email: testEmail.toLowerCase(),
       password: testPassword});
     expect(res.status).toHaveBeenCalledWith(401);
-    expect(res.json).toHaveBeenCalledWith({/* content */}
+    expect(res.json).toHaveBeenCalledWith(
       error:,
   Invalid credentials - no session data;
   ',
       code: 'NO_SESSION_DATA});
 
 describe('loginUser Service;
-  , () => {/* content */}
+  , () => 
   let originalFetch: typeof global.fetch;
 
-    mockSignInWithPassword.mockResolvedValueOnce({/* content */}
+    mockSignInWithPassword.mockResolvedValueOnce(
       data: { session: null, user: { id: '123;, email: testEmail } }',
       error: null})
     const req = mockApiReq({ email: testEmail, password: testPassword })
     const res = mockApiRes()
     await loginHandler(req, res)
-    expect(mockSignInWithPassword).toHaveBeenCalledWith({/* content */}
+    expect(mockSignInWithPassword).toHaveBeenCalledWith(
       email: testEmail.toLowerCase()
       password: testPassword})
     expect(res.status).toHaveBeenCalledWith(401)
-    expect(res.json).toHaveBeenCalledWith({/* content */}
+    expect(res.json).toHaveBeenCalledWith(
       error:
   Invalid credentials - no session data
   
@@ -140,19 +140,19 @@ describe('loginUser Service;
   describe('loginUser Service;, () => {'
   let originalFetch: typeof global.fetch
 
-  beforeEach(() => {/* content */}
+  beforeEach(() => 
     originalFetch = global.fetch});
 
-  afterEach(() => {/* content */}
-    const mockSuccessResponse = {/* content */}
-    global.fetch = vi.fn().mockResolvedValue({/* content */}
+  afterEach(() => 
+    const mockSuccessResponse = 
+    global.fetch = vi.fn().mockResolvedValue(
         'Set-Cookie;
   ': `authToken=${mockSuccessResponse.accessToken} HttpOnly Path=/ Secure SameSite=Strict`})});
     const { res, data } = await loginUser(,
 
       code: 'EMAIL_NOT_CONFIRMED;
   '}
-    global.fetch = vi.fn().mockResolvedValue({/* content */}
+    global.fetch = vi.fn().mockResolvedValue(
       ok: false,
       status: 403,
       json: async () => mockErrorResponse,
@@ -167,7 +167,7 @@ describe('loginUser Service;
 
       error: 'Invalid credentials,
       code: 'INVALID_CREDENTIALS}
-    global.fetch = vi.fn().mockResolvedValue({/* content */}
+    global.fetch = vi.fn().mockResolvedValue(
       ok: false,
       status: 401,
       json: async () => mockErrorResponse,
@@ -181,7 +181,7 @@ describe('loginUser Service;
   it('should handle other errors (e.g., 500) from API;
 
   ' }
-    global.fetch = vi.fn().mockResolvedValue({/* content */}
+    global.fetch = vi.fn().mockResolvedValue(
       ok: false,
       status: 500,
       json: async () => mockErrorResponse,
@@ -195,10 +195,10 @@ describe('loginUser Service;
 
       await loginUser('test@example.com;
   ', password;
-  ')} catch (e: unknown) {/* content */}
+  ')} catch (e: unknown) 
       // Changed from any to unknown;
 
-      if (e instanceof Error) {/* content */}
+      if (e instanceof Error) 
         throw e}
 
     }

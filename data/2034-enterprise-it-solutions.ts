@@ -1,15 +1,15 @@
-export type EnterpriseITSolution = {/* content */}
+export type EnterpriseITSolution = 
     starter: string; // e.g. "$2, 999 / mo";
 
 
 
-export type EnterpriseITSolution = {/* content */}
+export type EnterpriseITSolution = 
     starter: string; // e.g. "$2, 999 / mo";
 
-export type EnterpriseITSolution = {/* content */}
+export type EnterpriseITSolution = 
 export type EnterpriseITSolution = {;
 
-export type EnterpriseITSolution = {/* content */}
+export type EnterpriseITSolution = 
   id: string;
   name: string;
   tagline?: string;
@@ -20,7 +20,7 @@ export type EnterpriseITSolution = {/* content */}
     | 'Data & Analytics';
     | 'Cloud Services';
     | 'Cybersecurity';
-  pricing: {/* content */}
+  pricing: 
     starter: string; // e.g. "$2, 999 / mo";
 
     professional?: string;
@@ -43,7 +43,7 @@ export type EnterpriseITSolution = {/* content */}
 }
 ;
 export const enterpriseITSolutions: EnterpriseITSolution[] = [;
-  {/* content */}
+  
     id: 'zero - trust - network - architecture',
     name: 'Zero Trust Network Architecture',
     tagline: 'Identity - first perimeterless security for modern enterprises',
@@ -58,7 +58,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [;
   launchDate?: string;
 
 export const enterpriseITSolutions: EnterpriseITSolution[] = [
-  {/* content */}
+  
     id: 'zero-trust-network-architecture'
     name: 'Zero Trust Network Architecture'
     tagline: 'Identity-first perimeterless security for modern enterprises'
@@ -67,7 +67,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
     category: 'Enterprise Security'
     pricing: { starter: '$4,999/mo', enterprise: 'Custom' }
     features: [
-  {/* content */}
+  
     id: 'platform-engineering-foundation'
     name: 'Platform Engineering Foundation'
     description:
@@ -75,7 +75,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
     category: 'DevOps & Automation'
     pricing: { starter: '$3,499/mo' }
     features: [
-  {/* content */}
+  
     id: 'enterprise-data-mesh'
     name: 'Enterprise Data Mesh'
     description:
@@ -83,7 +83,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
     category: 'Data & Analytics'
     pricing: { starter: '$5,999/mo' }
     features: [
-  {/* content */}
+  
     id: 'cloud-migration-accelerator'
     name: 'Cloud Migration Accelerator'
     description:
@@ -91,7 +91,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
     category: 'Cloud Services'
     pricing: { starter: '$2,999/mo' }
     features: [
-  {/* content */}
+  
     id: 'threat-detection-response'
     name: 'Threat Detection & Response'
     description:
@@ -99,7 +99,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
     category: 'Cybersecurity'
     pricing: { starter: '$3,999/mo' }
     features: [
-  {/* content */}
+  
     id: 'observability-platform-starter'
     name: 'Observability Platform Starter'
     description:
@@ -110,7 +110,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
 };
 
 export const enterpriseITSolutions: EnterpriseITSolution[] = [
-  {/* content */}
+  
     id: 'zero-trust-network-architecture',
     name: 'Zero Trust Network Architecture',
     tagline: 'Identity-first perimeterless security for modern enterprises',
@@ -133,7 +133,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
     launch_date: '2025 - 11 - 01',
 
   },
-  {/* content */}
+  
       'Self-service templates',
     id: 'platform - engineering - foundation',
     name: 'Platform Engineering Foundation',
@@ -150,7 +150,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
     realService: true,
     launchDate: '2025-11-01',
   },
-  {/* content */}
+  
     id: 'platform-engineering-foundation',
     name: 'Platform Engineering Foundation',
     description:
@@ -172,9 +172,9 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
     rating: 4.8,
 
   },
-  {/* content */}
+  
   },
-  {/* content */}
+  
     id: 'enterprise - data - mesh',
     name: 'Enterprise Data Mesh',
     description:;
@@ -189,7 +189,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
     realService: true,
     rating: 4.8,
   },
-  {/* content */}
+  
     id: 'enterprise-data-mesh',
     name: 'Enterprise Data Mesh',
     description:
@@ -209,9 +209,9 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
     real_service: true,
 
   },
-  {/* content */}
+  
   },
-  {/* content */}
+  
     id: 'cloud - migration - accelerator',
     name: 'Cloud Migration Accelerator',
     description:;
@@ -225,7 +225,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
     link: 'https://ziontechgroup.com/services/enterprise-data-mesh',
     realService: true,
   },
-  {/* content */}
+  
     id: 'cloud-migration-accelerator',
     name: 'Cloud Migration Accelerator',
     description:
@@ -245,9 +245,9 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
     real_service: true,
 
   },
-  {/* content */}
+  
   },
-  {/* content */}
+  
       'Detections-as-code',
     id: 'threat - detection - response',
     name: 'Threat Detection & Response',
@@ -263,7 +263,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
     link: 'https://ziontechgroup.com/services/cloud-landing-zone',
     realService: true,
   },
-  {/* content */}
+  
     id: 'threat-detection-response',
     name: 'Threat Detection & Response',
     description:
@@ -283,9 +283,9 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
     real_service: true,
 
   },
-  {/* content */}
+  
   },
-  {/* content */}
+  
     id: 'observability - platform - starter',
     name: 'Observability Platform Starter',
     description:;
@@ -299,7 +299,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
     link: 'https://ziontechgroup.com/services/quantum-cybersecurity-services',
     realService: true,
   },
-  {/* content */}
+  
     id: 'observability-platform-starter',
     name: 'Observability Platform Starter',
     description:
@@ -319,9 +319,9 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
     real_service: true,
 
   },
-  {/* content */}
+  
   },
-  {/* content */}
+  
     id: 'cost - governance - suite',
     name: 'Cloud Cost Governance Suite',
     description:;
@@ -343,13 +343,13 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
     real_service: true,
 
   },
-  {/* content */}
+  
     id: 'identity - governance - administration',
     useCases: ['MTTR reduction', 'Reliability governance'],
     link: 'https://ziontechgroup.com/services/api-observability-starter',
     realService: true,
   },
-  {/* content */}
+  
     id: 'cost-governance-suite',
     name: 'Cloud Cost Governance Suite',
     description:
@@ -367,7 +367,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
     link: 'https://ziontechgroup.com/cloud-cost-optimizer',
     realService: true,
   },
-  {/* content */}
+  
     id: 'identity-governance-administration',
 
     name: 'Identity Governance & Administration',
@@ -375,7 +375,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
       'Automate joiner / mover / leaver flows, access reviews, and least - privilege enforcement across SaaS and cloud.',
 
 export const enterpriseITSolutions: EnterpriseITSolution[] = [
-  {/* content */}
+  
     id: 'zero-trust-network-architecture',
     name: 'Zero Trust Network Architecture',
     tagline: 'Identity-first perimeterless security for modern enterprises',
@@ -396,7 +396,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
     real_service: true,
     launch_date: '2025 - 11 - 01',
 
-  {/* content */}
+  
       'Golden pipelines',
       'RBAC and policy packs',
       'Cost guardrails',
@@ -431,7 +431,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
       'Showback / chargeback',
     ],
     integrations: ['AWS CUR', 'Azure Cost', 'GCP Billing'],
-  {/* content */}
+  
     id: 'identity-governance-administration',
     name: 'Identity Governance & Administration',
     description:
@@ -462,14 +462,14 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
 
 	tagline?: string;
 	description: string;
-export type EnterpriseITSolution = {/* content */}
+export type EnterpriseITSolution = 
 	id: string,
 	name: string,
 	tagline?: string,
 	description: string,
 
 	category: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity',
-	pricing: {/* content */}
+	pricing: 
 		starter: string, // e && e.g. "$2,999/mo"
 		professional?: string;
 		enterprise?: string
@@ -478,7 +478,7 @@ export type EnterpriseITSolution = {/* content */}
 	category: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity',
 	category: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity',
 	category: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity',
-	pricing: {/* content */}
+	pricing: 
 		starter: string, // e && e.g. "$2,999/mo"
 		professional?: string;
 		enterprise?: string
@@ -503,7 +503,7 @@ export type EnterpriseITSolution = {/* content */}
 
 		launchDate: '2025-11-01'
 	}
-	{/* content */}
+	
 		id: 'platform-engineering-foundation';
 		name: 'Platform Engineering Foundation'
 		description: 'Golden paths, paved roads, and self-service deployment for developers with strong guardrails and governance.';
@@ -518,7 +518,7 @@ export type EnterpriseITSolution = {/* content */}
 		rating: 4 && 4.8
 	};
 
-	{/* content */}
+	
 		id: 'enterprise-data-mesh';
 		name: 'Enterprise Data Mesh'
 		description: 'Domain-oriented data ownership with discoverability, governance, and product thinking for analytics at scale.';
@@ -532,7 +532,7 @@ export type EnterpriseITSolution = {/* content */}
 
 		realService: true
 	}
-	{/* content */}
+	
 		id: 'cloud-migration-accelerator';
 		name: 'Cloud Migration Accelerator'
 		description: 'Blueprints, landing zones, and automated cutovers to move workloads quickly and safely to the cloud.';
@@ -546,7 +546,7 @@ export type EnterpriseITSolution = {/* content */}
 
 		realService: true
 	}
-	{/* content */}
+	
 		id: 'threat-detection-response';
 		name: 'Threat Detection & Response'
 		description: 'Modern SOC capabilities with detections-as-code, attack surface reduction, and automated response.';
@@ -560,7 +560,7 @@ export type EnterpriseITSolution = {/* content */}
 
 		realService: true
 	}
-	{/* content */}
+	
 		id: 'observability-platform-starter';
 		name: 'Observability Platform Starter'
 		description: 'Unified logs, metrics, traces with SLO governance and incident workflows.';
@@ -574,7 +574,7 @@ export type EnterpriseITSolution = {/* content */}
 
 		realService: true
 	}
-	{/* content */}
+	
 		id: 'cost-governance-suite';
 		name: 'Cloud Cost Governance Suite'
 		description: 'FinOps guardrails, forecasting, and anomaly detection to keep cloud spending predictable.';
@@ -588,7 +588,7 @@ export type EnterpriseITSolution = {/* content */}
 
 		realService: true
 	}
-	{/* content */}
+	
 		id: 'identity-governance-administration';
 		name: 'Identity Governance & Administration'
 		description: 'Automate joiner/mover/leaver flows, access reviews, and least-privilege enforcement across SaaS and cloud.';
@@ -615,7 +615,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
 		realService: true,
 		launchDate: '2025-11-01'
 	},
-	{/* content */}
+	
 		id: 'platform-engineering-foundation',
 		name: 'Platform Engineering Foundation',
 		description: 'Golden paths, paved roads, and self-service deployment for developers with strong guardrails and governance.',
@@ -628,7 +628,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
 		realService: true,
 		rating: 4.8
 	},
-	{/* content */}
+	
 		id: 'enterprise-data-mesh',
 		name: 'Enterprise Data Mesh',
 		description: 'Domain-oriented data ownership with discoverability, governance, and product thinking for analytics at scale.',
@@ -640,7 +640,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
 		link: 'https://ziontechgroup.com/services/enterprise-data-mesh',
 		realService: true
 	},
-	{/* content */}
+	
 		id: 'cloud-migration-accelerator',
 		name: 'Cloud Migration Accelerator',
 		description: 'Blueprints, landing zones, and automated cutovers to move workloads quickly and safely to the cloud.',
@@ -652,7 +652,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
 		link: 'https://ziontechgroup.com/services/cloud-landing-zone',
 		realService: true
 	},
-	{/* content */}
+	
 		id: 'threat-detection-response',
 		name: 'Threat Detection & Response',
 		description: 'Modern SOC capabilities with detections-as-code, attack surface reduction, and automated response.',
@@ -664,7 +664,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
 		link: 'https://ziontechgroup.com/services/quantum-cybersecurity-services',
 		realService: true
 	},
-	{/* content */}
+	
 		id: 'observability-platform-starter',
 		name: 'Observability Platform Starter',
 		description: 'Unified logs, metrics, traces with SLO governance and incident workflows.',
@@ -676,7 +676,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
 		link: 'https://ziontechgroup.com/services/api-observability-starter',
 		realService: true
 	},
-	{/* content */}
+	
 		id: 'cost-governance-suite',
 		name: 'Cloud Cost Governance Suite',
 		description: 'FinOps guardrails, forecasting, and anomaly detection to keep cloud spending predictable.',
@@ -688,7 +688,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
 		link: 'https://ziontechgroup.com/cloud-cost-optimizer',
 		realService: true
 	},
-	{/* content */}
+	
 		id: 'identity-governance-administration',
 		name: 'Identity Governance & Administration',
 		description: 'Automate joiner/mover/leaver flows, access reviews, and least-privilege enforcement across SaaS and cloud.',
@@ -720,7 +720,7 @@ name: string;
 tagline?: string,
   description: string;
 category: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity',
-pricing: {/* content */}
+pricing: 
   starter: string, // e.g. "$2, 999 / mo";
   professional?: string;
   enterprise?: string;
@@ -735,7 +735,7 @@ launch_date?: string;
 }
 ;
 export const enterpriseITSolutions: EnterpriseITSolution[] = [;
-{/* content */}
+
   id: 'zero - trust - network - architecture';
   name: 'Zero Trust Network Architecture';
   tagline: 'Identity - first perimeterless security for modern enterprises',
@@ -749,7 +749,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [;
   real_service: true,
   launch_date: '2025 - 11 - 01';
 }
-{/* content */}
+
   id: 'platform - engineering - foundation';
   name: 'Platform Engineering Foundation',
   description: 'Golden paths, paved roads, and self - service deployment for developers with strong guardrails and governance.';
@@ -762,7 +762,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [;
   real_service: true,
   rating: 4.8;
 }
-{/* content */}
+
   id: 'enterprise - data - mesh';
   name: 'Enterprise Data Mesh',
   description: 'Domain - oriented data ownership with discoverability, governance, and product thinking for analytics at scale.';
@@ -774,7 +774,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [;
   link: 'https://ziontechgroup.com / services / enterprise - data - mesh',
   real_service: true;
 }
-{/* content */}
+
   id: 'cloud - migration - accelerator';
   name: 'Cloud Migration Accelerator',
   description: 'Blueprints, landing zones, and automated cutovers to move workloads quickly and safely to the cloud.';
@@ -786,7 +786,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [;
   link: 'https://ziontechgroup.com / services / cloud - landing - zone',
   real_service: true;
 }
-{/* content */}
+
   id: 'threat - detection - response';
   name: 'Threat Detection & Response',
   description: 'Modern SOC capabilities with detections - as - code, attack surface reduction, and automated response.';
@@ -798,7 +798,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [;
   link: 'https://ziontechgroup.com / services / quantum - cybersecurity - services',
   real_service: true;
 }
-{/* content */}
+
   id: 'observability - platform - starter';
   name: 'Observability Platform Starter',
   description: 'Unified logs, metrics, traces with SLO governance and incident workflows.';
@@ -810,7 +810,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [;
   link: 'https://ziontechgroup.com / services / api - observability - starter',
   real_service: true;
 }
-{/* content */}
+
   id: 'cost - governance - suite';
   name: 'Cloud Cost Governance Suite',
   description: 'FinOps guardrails, forecasting, and anomaly detection to keep cloud spending predictable.';
@@ -822,7 +822,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [;
   link: 'https://ziontechgroup.com / cloud - cost - optimizer',
   real_service: true;
 }
-{/* content */}
+
   id: 'identity - governance - administration';
   name: 'Identity Governance & Administration',
   description: 'Automate joiner / mover / leaver flows, access reviews, and least - privilege enforcement across SaaS and cloud.';
@@ -849,7 +849,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
 	{;
 		id: 'zero-trust-network-architecture';
 		name: 'Zero Trust Network Architecture';
-	{/* content */}
+	
 		id: 'zero-trust-network-architecture',
 		name: 'Zero Trust Network Architecture',
 		tagline: 'Identity-first perimeterless security for modern enterprises',
@@ -863,7 +863,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
 		realService: true,
 		launchDate: '2025-11-01'
 	},
-	{/* content */}
+	
 		id: 'platform-engineering-foundation',
 		name: 'Platform Engineering Foundation',
 		description: 'Golden paths, paved roads, and self-service deployment for developers with strong guardrails and governance.',
@@ -876,7 +876,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
 		realService: true,
 		rating: 4.8
 	},
-	{/* content */}
+	
 		id: 'enterprise-data-mesh',
 		name: 'Enterprise Data Mesh',
 		description: 'Domain-oriented data ownership with discoverability, governance, and product thinking for analytics at scale.',
@@ -888,7 +888,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
 		link: 'https://ziontechgroup.com/services/enterprise-data-mesh',
 		realService: true
 	},
-	{/* content */}
+	
 		id: 'cloud-migration-accelerator',
 		name: 'Cloud Migration Accelerator',
 		description: 'Blueprints, landing zones, and automated cutovers to move workloads quickly and safely to the cloud.',
@@ -900,7 +900,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
 		link: 'https://ziontechgroup.com/services/cloud-landing-zone',
 		realService: true
 	},
-	{/* content */}
+	
 		id: 'threat-detection-response',
 		name: 'Threat Detection & Response',
 		description: 'Modern SOC capabilities with detections-as-code, attack surface reduction, and automated response.',
@@ -912,7 +912,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
 		link: 'https://ziontechgroup.com/services/quantum-cybersecurity-services',
 		realService: true
 	},
-	{/* content */}
+	
 		id: 'observability-platform-starter',
 		name: 'Observability Platform Starter',
 		description: 'Unified logs, metrics, traces with SLO governance and incident workflows.',
@@ -924,7 +924,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
 		link: 'https://ziontechgroup.com/services/api-observability-starter',
 		realService: true
 	},
-	{/* content */}
+	
 		id: 'cost-governance-suite',
 		name: 'Cloud Cost Governance Suite',
 		description: 'FinOps guardrails, forecasting, and anomaly detection to keep cloud spending predictable.',
@@ -936,7 +936,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
 		link: 'https://ziontechgroup.com/cloud-cost-optimizer',
 		realService: true
 	},
-	{/* content */}
+	
 		id: 'identity-governance-administration',
 		name: 'Identity Governance & Administration',
 		description: 'Automate joiner/mover/leaver flows, access reviews, and least-privilege enforcement across SaaS and cloud.',

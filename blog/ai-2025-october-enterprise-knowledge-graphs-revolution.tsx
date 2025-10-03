@@ -15,8 +15,6 @@ export default function BlogPost() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <article className="text-left"></a>
       <h1>🌐 Enterprise Knowledge Graphs 2025: Connected Intelligence at Scale</h1>
       
@@ -128,7 +126,7 @@ Monitoring: Prometheus + Grafana`}</code>
       <h3>Step 1: Define Graph Schema</h3>
       <pre className="text-left"></p>
         <code>{`# Define entity types and relationships
-GRAPH_SCHEMA = {/* content */}
+GRAPH_SCHEMA = 
     "entities": ["Customer", "Product", "Transaction", "Support_Case"],
     "relationships": [
         ("Customer", "PURCHASED", "Product"),

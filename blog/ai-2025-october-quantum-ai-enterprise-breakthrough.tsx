@@ -13,8 +13,6 @@ export default function QuantumAIEnterpriseBreakthrough2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>Quantum AI Enterprise Breakthrough 2025: Solving Previously Impossible Problems | Zion Tech Group</title>

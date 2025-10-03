@@ -15,8 +15,6 @@ export default function BlogPost() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <article className="text-left"></a>
       <h1>🔒 Real-Time Fraud Detection Revolution 2025: 99.97% Accuracy at Sub-Millisecond Speed</h1>
       
@@ -152,7 +150,7 @@ export default function BlogPost() {
       <h3>Phase 1: Integration (Week 1-2)</h3>
       <pre className="text-left"></p>
         <code>{`// Simple API integration
-const fraudCheck = await FraudDetector.analyze({/* content */}
+const fraudCheck = await FraudDetector.analyze(
   transactionId: "txn_123456
   amount: 1299.99,
   currency: "USD
@@ -162,13 +160,13 @@ const fraudCheck = await FraudDetector.analyze({/* content */}
   merchantId: "merchant_456"
 });
 
-if (fraudCheck.riskScore > 800) {/* content */}
+if (fraudCheck.riskScore > 800) 
   // Block transaction
   return blockTransaction(fraudCheck.reason);
-} else if (fraudCheck.riskScore > 500) {/* content */}
+} else if (fraudCheck.riskScore > 500) 
   // Challenge with 2FA
   return require2FA(fraudCheck.factors);
-} else {/* content */}
+} else 
   // Approve transaction
   return approveTransaction();
 }`}</code>

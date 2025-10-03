@@ -7,25 +7,25 @@ export default function NotFound() {
   return (
     <div>/* content */}
   const popularPages = [
-    {/* content */}
+    
       title: 'AI Services',
       description: 'Explore our comprehensive AI and IT solutions',
       href: '/services',
       icon: '🤖',
     },
-    {/* content */}
+    
       title: 'Blog & Insights',
       description: 'Read about latest AI trends and innovations',
       href: '/blog',
       icon: '📚',
     },
-    {/* content */}
+    
       title: 'Case Studies',
       description: 'See our success stories and client results',
       href: '/case-studies',
       icon: '📊',
     },
-    {/* content */}
+    
       title: 'Contact Us',
       description: 'Get in touch with our AI experts',
       href: '/contact',
@@ -36,8 +36,6 @@ export default function NotFound() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div className="text-left"></div>
       <div className="text-left"></div>
         {/* Error Code */}</div>
@@ -66,10 +64,10 @@ export default function NotFound() {
               type="text"
               placeholder="Search for AI services, articles, or case studies..."
               className="text-left"
-              onKeyPress={(e) = /> {/* content */}
-                if (e.key === 'Enter') {/* content */}
+              onKeyPress={(e) = /> 
+                if (e.key === 'Enter') 
                   const searchTerm = (e.target as HTMLInputElement).value;
-                  if (searchTerm) {/* content */}
+                  if (searchTerm) 
                     window.location.href = `/search?q=${encodeURIComponent(searchTerm)}`;
                   }
                 }

@@ -11,7 +11,7 @@ export const metadata = {
   readTime: "13 min read
 };
 
-const SyntheticDataGenerationEnterprise: React.FC = () => {/* content */}
+const SyntheticDataGenerationEnterprise: React.FC = () => 
   return (
   <div></div>
     <article className="text-left"></a>

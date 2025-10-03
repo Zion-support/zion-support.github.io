@@ -15,8 +15,6 @@ export default function BlogPost() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <article className="text-left"></a>
       <h1>⚡ Autonomous Edge Intelligence Revolution 2025: Distributed AI at the Edge</h1>
       

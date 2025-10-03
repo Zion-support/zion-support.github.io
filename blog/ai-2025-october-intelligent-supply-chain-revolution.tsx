@@ -15,8 +15,6 @@ export default function BlogPost() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <article className="text-left"></a>
       <h1>🚚 Intelligent Supply Chain Revolution 2025: Autonomous Logistics at Scale</h1>
       

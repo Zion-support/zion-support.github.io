@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CloudNativeAIPlatformsKubernetes2025 = () => {/* content */}
+const CloudNativeAIPlatformsKubernetes2025 = () => 
   return (
   <div></div>
     <article className="text-left"></a>

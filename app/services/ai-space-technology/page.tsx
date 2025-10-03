@@ -13,8 +13,6 @@ export default function AISpaceTechnologyServices() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div className="text-left"></div>
       <div className="text-left"></div>
         <div className="text-left"></div>

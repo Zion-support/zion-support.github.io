@@ -12,8 +12,6 @@ export default function AIPoweredDataAnalytics2026() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div className="text-left"></div>
       {/* Hero Section */}</div>
       <section className="text-left"></section>

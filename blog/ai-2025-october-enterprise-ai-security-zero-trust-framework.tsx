@@ -2,12 +2,10 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Lock, Shield, Eye, AlertTriangle, CheckCircle, Network } from "lucide-react";
 
-const EnterpriseAISecurityZeroTrustFramework = () => {/* content */}
+const EnterpriseAISecurityZeroTrustFramework = () => 
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
       <Helmet>
         <title>Enterprise AI Security: Zero Trust Framework 2025 | Zion Tech Group</title>
         <meta
@@ -113,13 +111,13 @@ const EnterpriseAISecurityZeroTrustFramework = () => {/* content */}
                   <div className="text-left"></div>
                     <pre className="text-left"></p>
 {`// Zero Trust AI Security Framework
-class AISecurityFramework {/* content */}
+class AISecurityFramework 
   identityProvider: IdentityProvider;
   accessControl: PolicyEngine;
   modelRegistry: SecureModelRegistry;
   auditLogger: AuditLog;
   
-  async authenticateRequest(request: AIRequest) {/* content */}
+  async authenticateRequest(request: AIRequest) 
     // 1. Identity verification
     const identity = await this.identityProvider.verify(
       request.credentials
@@ -136,7 +134,7 @@ class AISecurityFramework {/* content */}
     );
     
     // 4. Audit logging
-    await this.auditLogger.log({/* content */}
+    await this.auditLogger.log(
       identity,
       request,
       decision,
@@ -146,8 +144,8 @@ class AISecurityFramework {/* content */}
     return decision.permit ? identity : null;
   }
   
-  buildSecurityContext(request: AIRequest, identity: Identity) {/* content */}
-    return {/* content */}
+  buildSecurityContext(request: AIRequest, identity: Identity) 
+    return 
       location: request.sourceIP,
       device: request.deviceFingerprint,
       timeOfDay: new Date().getHours(),
@@ -180,16 +178,16 @@ class AISecurityFramework {/* content */}
                   <div className="text-left"></div>
                     <pre className="text-left"></p>
 {`// Secure model loading and execution
-class SecureModelLoader {/* content */}
+class SecureModelLoader 
   encryptionService: EncryptionService;
   accessControl: AccessControl;
   
   async loadModel(
     modelId: string,
     requester: Identity
-  ): Promise<SecureModel> {/* content */}
+  ): Promise<SecureModel> 
     // Verify access permissions
-    if (!await this.accessControl.canAccess(requester, modelId)) {/* content */}
+    if (!await this.accessControl.canAccess(requester, modelId)) 
       throw new UnauthorizedError('Model access denied');
     }
     
@@ -203,7 +201,7 @@ class SecureModelLoader {/* content */}
     );
     
     // Wrap in secure execution environment
-    return new SecureModelWrapper(model, {/* content */}
+    return new SecureModelWrapper(model, 
       watermarking: true,
       outputMonitoring: true,
       rateLimiting: true,
@@ -211,7 +209,7 @@ class SecureModelLoader {/* content */}
     });
   }
   
-  getDerivedKey(identity: Identity, modelId: string): CryptoKey {/* content */}
+  getDerivedKey(identity: Identity, modelId: string): CryptoKey 
     // Generate session-specific encryption key
     return this.encryptionService.deriveKey(
       identity.masterKey,
@@ -275,12 +273,12 @@ class SecureModelLoader {/* content */}
                   <div className="text-left"></div>
                     <pre className="text-left"></p>
 {`// AI threat detection system
-class AIThreatDetector {/* content */}
+class AIThreatDetector 
   anomalyDetector: AnomalyDetectionModel;
   attackPatterns: AttackPatternLibrary;
   responseEngine: AutomatedResponseEngine;
   
-  async monitorInference(request: InferenceRequest) {/* content */}
+  async monitorInference(request: InferenceRequest) 
     // Analyze input for adversarial patterns
     const inputAnalysis = await this.analyzeInput(request.input);
     
@@ -295,15 +293,15 @@ class AIThreatDetector {/* content */}
     const leakageRisk = this.detectDataLeakage(output);
     
     // Aggregate risk scores
-    const totalRisk = this.calculateRiskScore({/* content */}
+    const totalRisk = this.calculateRiskScore(
       input: inputAnalysis.risk,
       extraction: extractionRisk,
       leakage: leakageRisk
     });
     
     // Trigger automated response if needed
-    if (totalRisk > this.riskThreshold) {/* content */}
-      await this.responseEngine.respond({/* content */}
+    if (totalRisk > this.riskThreshold) 
+      await this.responseEngine.respond(
         threat: 'HIGH_RISK_INFERENCE',
         request,
         riskScore: totalRisk,
@@ -317,7 +315,7 @@ class AIThreatDetector {/* content */}
   detectExtractionAttempt(
     request: InferenceRequest,
     caller: Identity
-  ): number {/* content */}
+  ): number 
     const recentRequests = this.getRecentRequests(caller);
     
     // Check for suspicious patterns

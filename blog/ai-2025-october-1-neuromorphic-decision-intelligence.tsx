@@ -2,12 +2,10 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import BlogArticleLayout from '../components/BlogArticleLayout';
 
-const NeuromorphicDecisionIntelligenceArticle = () => {/* content */}
+const NeuromorphicDecisionIntelligenceArticle = () => 
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
       <Helmet>
         <title>Neuromorphic AI for Real-Time Decision Intelligence | Zion Tech Group</title>
         <meta name="description" content="Discover how brain-inspired neuromorphic computing enables real-time decision intelligence. Fortune 500 achieves sub-millisecond AI inference, 98% accuracy, and 1000x energy efficiency." />

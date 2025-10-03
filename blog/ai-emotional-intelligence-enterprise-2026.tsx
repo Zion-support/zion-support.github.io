@@ -3,12 +3,10 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, Calendar, Clock, Tag, TrendingUp, CheckCircle, Zap, Heart, Users } from "lucide-react";
 import Header from "../src/components/Header";
 
-const AIEmotionalIntelligenceEnterprise2026 = () => {/* content */}
+const AIEmotionalIntelligenceEnterprise2026 = () => 
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
       <Helmet>
         <title>AI Emotional Intelligence for Enterprise 2026: 350% Customer Satisfaction Boost | Zion Tech Group</title>
         <meta

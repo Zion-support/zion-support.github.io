@@ -7,8 +7,6 @@ export default function AIEnterpriseMultimodalIntelligence2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Helmet>
         <title>Enterprise Multimodal AI: Unified Vision-Language-Audio Intelligence | Zion Tech Group</title>

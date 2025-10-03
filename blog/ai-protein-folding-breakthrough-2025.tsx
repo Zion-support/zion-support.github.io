@@ -7,8 +7,6 @@ export default function AIProteinFoldingBreakthrough2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>AI Protein Folding Breakthrough 2025: Revolutionizing Drug Discovery | Zion Tech Group</title>

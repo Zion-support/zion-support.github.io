@@ -8,8 +8,6 @@ export default function AIPredictiveInfrastructureOrchestration2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Helmet>
         <title>AI Predictive Infrastructure Orchestration 2025 | Zion Tech Group</title>

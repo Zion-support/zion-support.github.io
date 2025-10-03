@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {/* content */}
+export const metadata: Metadata = 
   title: 'AI 2026: Quantum Consciousness Business Intelligence - Transcendent Decision Making',
   description: 'Revolutionary quantum consciousness AI achieving transcendent business intelligence with $12.7B value creation and infinite processing capabilities for enterprise transformation.',
   keywords: 'quantum consciousness AI, business intelligence, transcendent AI, quantum computing, enterprise AI',
@@ -19,8 +19,6 @@ export default function AI2026QuantumConsciousnessBusinessIntelligence() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div className="text-left"></div>
       <div className="text-left"></div>
         {/* Hero Section */}

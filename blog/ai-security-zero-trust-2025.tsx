@@ -7,8 +7,6 @@ export default function AISecurityZeroTrust2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>AI-Powered Zero Trust Security: The New Cybersecurity Paradigm | Zion Tech Group</title>

@@ -1,12 +1,10 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const CyberResilienceZeroDayDefense = () => {/* content */}
+const CyberResilienceZeroDayDefense = () => 
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
       <Helmet>
         <title>AI-Powered Cyber Resilience & Zero-Day Defense | Zion Tech Group</title>
         <meta name="description" content="Master AI-powered cyber resilience with autonomous zero-day defense. Achieve 99.7% threat detection, sub-second response, and $4.8B attack prevention through intelligent security systems." />

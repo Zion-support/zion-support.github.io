@@ -5,7 +5,7 @@ import { supabase } from '@/integrations/supabase/client // Mocked for any direc
 import { toast } from 'sonner';
 // Mocks;
 
-  toast: {/* content */}
+  toast: 
     succes,
     s: jest.fn(),
     error: jest.fn(),
@@ -13,14 +13,14 @@ import { toast } from 'sonner';
 // Mock next/router (if any navigation is directly used and tested, not strictly needed for this component;
   's core logic);
 // jest.mock(next/router;
-  ', () => ({/* content */}
+  ', () => (
 //   useRouter: jest.fn(),
 // }));
 // Global fetch mock;
 global.fetch = jest.fn();
 describe('TeamBuilderPage;
-  ', () => {/* content */}
-  beforeEach(() => {/* content */}
+  ', () => 
+  beforeEach(() => 
     (fetch as jest.Mock).mockClear();
     // Clear toast mocks;
     jest.mocked(toast.success).mockClear();
@@ -31,7 +31,7 @@ describe('TeamBuilderPage;
     jest;
 
 
-  ', () => {/* content */}
+  ', () => 
     render(<TeamBuilderPage />);
     expect(screen.getByText('Team Builder;
   )).toBeInTheDocument();
@@ -41,7 +41,7 @@ describe('TeamBuilderPage;
   ' { name: /Next/i })).toBeInTheDocument()})
   it('shows validation errors for empty required fields on step 1'
 
-  ', async () => {/* content */}
+  ', async () => 
     render(<TeamBuilderPage />);
     fireEvent.click(screen.getByRole('button;
    { name: /Next/i }));
@@ -52,7 +52,7 @@ describe('TeamBuilderPage;
 
   ')).toBeVisible()})
   it('navigates to the second step on valid input for step 1'
-  ', async () => {/* content */}
+  ', async () => 
     render(<TeamBuilderPage />);
     fireEvent.input(screen.getByLabelText(/Project Name/i) {'
       target: { valu,
@@ -71,7 +71,7 @@ describe('TeamBuilderPage;
 
   it(,
   navigates to the review step (step 3) on valid input for step 2'
-  ', async () => {/* content */}
+  ', async () => 
     render(<TeamBuilderPage />);
     // Step 1;
 
@@ -106,7 +106,7 @@ describe('TeamBuilderPage;
       totalProjectEstimate: { mi,
     n: 24000, max: 38400 },
       createdAt: new Date().toISOString()}
-    (fetch as jest.Mock).mockResolvedValueOnce({/* content */}
+    (fetch as jest.Mock).mockResolvedValueOnce(
       ok: true,
 
       json: async () => mockRecommendation});
@@ -136,8 +136,8 @@ describe('TeamBuilderPage;
 
   it('shows an error toast if API call fails;
 
-  ', async () => {/* content */}
-    (fetch as jest.Mock).mockResolvedValueOnce({/* content */}
+  ', async () => 
+    (fetch as jest.Mock).mockResolvedValueOnce(
       ok: false,
 
     fireEvent.click(screen.getByRole('button;

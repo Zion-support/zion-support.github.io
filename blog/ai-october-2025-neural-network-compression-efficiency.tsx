@@ -6,8 +6,6 @@ export default function AIOctober2025NeuralNetworkCompressionEfficiency() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <article className="text-left"></a>
       <div className="text-left"></div>
         {/* Hero Section */}

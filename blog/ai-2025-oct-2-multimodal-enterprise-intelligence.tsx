@@ -15,8 +15,6 @@ export default function BlogPost() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <article className="text-left"></a>
       <h1>🎨 Multimodal Enterprise Intelligence: Vision + Language + Action Models for 2025</h1>
       
@@ -325,22 +323,22 @@ ai = MultimodalAI(
   </div>
 )
 # Ask questions about images
-response = ai.process({/* content */}
+response = ai.process(
     'image': 'warehouse_inspection_2024_10_02.jpg',
     'question': 'What safety violations are visible in this image?'
 })
 
 print(response)
 # Output:
-# {/* content */}
+# 
 #   'violations': [
-#     {/* content */}
+#     
 #       'type': 'Missing hard hat',
 #       'location': 'Worker in aisle 3, coordinates (245, 180)',
 #       'severity': 'High',
 #       'confidence': 0.94
 #     },
-#     {/* content */}
+#     
 #       'type': 'Blocked fire exit',
 #       'location': 'South wall, pallet stack at (890, 420)',
 #       'severity': 'Critical',

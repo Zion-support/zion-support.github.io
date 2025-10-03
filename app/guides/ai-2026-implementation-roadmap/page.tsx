@@ -14,8 +14,6 @@ export default function AI2026ImplementationRoadmap() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div className="text-left"></div>
       {/* Header */}</div>
       <header className="text-left">

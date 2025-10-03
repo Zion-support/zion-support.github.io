@@ -11,7 +11,7 @@
   color: string;
 
   link: string;
-export interface Q3Service {/* content */}
+export interface Q3Service 
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -53,7 +53,7 @@ export interface Q3Service {/* content */}
   customers?: number;
   rating?: number;
 
-const contact = {/* content */}
+const contact = 
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -61,13 +61,13 @@ const contact = {/* content */}
 export const realServicesQ32025: Q3Service[] = [
   {  reviews?: number
 }
-const contact = {/* content */}
+const contact = 
   mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
 
-const contact = {/* content */}
+const contact = 
   mobile: '+1 302 464 0950',
 
   address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -89,10 +89,10 @@ const contact = {;
 };
 
 export const realServicesQ32025: Q3Service[] = [
-  {/* content */}
+  
 }
 export const realServicesQ32025: Q3Service[] = [
-  {/* content */}
+  
     id: 'subscription-analytics-revenue-optimization'
     name: 'Subscription Analytics & Revenue Optimization'
 }
@@ -100,12 +100,12 @@ export const realServicesQ32025: Q3Service[] = [
 export const realServicesQ32025: Q3Service[] = [
   {  reviews?: number
 }
-const contact = {/* content */}
+const contact = 
   mobile: '+1 302 464 0950'
 };
 
 export const realServicesQ32025: Q3Service[] = [
-  {/* content */}
+  
     tagline:
       'Churn insights, cohort analysis, and pricing experiments for SaaS growth'
     price: '$599'
@@ -205,7 +205,7 @@ export const realServicesQ32025: Q3Service[] = [
     // @ts - expect - error augment common shape for UI components that expect contact_info;
     contact_info: contact;
   }
-  {/* content */}
+  
     id: 'digital - product - commerce - stack';
     name: 'Digital Product Commerce Stack',
     tagline: 'End - to - end setup for selling downloads, licenses, and subscriptions';
@@ -235,7 +235,7 @@ export const realServicesQ32025: Q3Service[] = [
     // @ts - expect - error augment common shape for UI components that expect contact_info;
     contact_info: contact;
   }
-  {/* content */}
+  
     id: 'wordpress - internal - linking - automation';
 
     name: 'WordPress Internal Linking Automation';
@@ -278,7 +278,7 @@ export const realServicesQ32025: Q3Service[] = [
     // @ts - expect - error augment common shape for UI components that expect contact_info;
     contact_info: contact;
   }
-  {/* content */}
+  
     name: 'Ecommerce Reviews & UGC Activation';
     tagline: 'Deploy reviews and UGC workflows that increase trust and conversion';
     price: '$999';
@@ -342,7 +342,7 @@ export const realServicesQ32025: Q3Service[] = [
     // @ts-expect-error augment common shape for UI components that expect contactInfo
     contactInfo: contact
   }
-  {/* content */}
+  
     id: 'digital-product-commerce-stack'
     name: 'Digital Product Commerce Stack'
     tagline:
@@ -387,7 +387,7 @@ export const realServicesQ32025: Q3Service[] = [
     // @ts-expect-error augment common shape for UI components that expect contactInfo
     contactInfo: contact
   }
-  {/* content */}
+  
     id: 'wordpress-internal-linking-automation'
     name: 'WordPress Internal Linking Automation'
     tagline:
@@ -429,7 +429,7 @@ export const realServicesQ32025: Q3Service[] = [
     // @ts-expect-error augment common shape for UI components that expect contactInfo
     contactInfo: contact
   }
-  {/* content */}
+  
     id: 'reviews-ugc-activation'
     name: 'Ecommerce Reviews & UGC Activation'
     tagline:
@@ -496,7 +496,7 @@ export const realServicesQ32025: Q3Service[] = [
     reviews: 31,
     // @ts-expect-error augment common shape for UI components that expect contactInfo
   },
-  {/* content */}
+  
     id: 'digital-product-commerce-stack',
     name: 'Digital Product Commerce Stack',
     ],
@@ -513,7 +513,7 @@ export const realServicesQ32025: Q3Service[] = [
     reviews: 18,
     // @ts-expect-error augment common shape for UI components that expect contactInfo
   },
-  {/* content */}
+  
     id: 'wordpress-internal-linking-automation',
     name: 'WordPress Internal Linking Automation',
     ],
@@ -531,7 +531,7 @@ export const realServicesQ32025: Q3Service[] = [
     reviews: 22,
     // @ts-expect-error augment common shape for UI components that expect contactInfo
   },
-  {/* content */}
+  
     id: 'reviews-ugc-activation',
     name: 'Ecommerce Reviews & UGC Activation',
     ],
@@ -557,7 +557,7 @@ export const realServicesQ32025: Q3Service[] = [
 };
 
 export const realServicesQ32025: Q3Service[] = [
-  {/* content */}
+  
     id: 'subscription-analytics-revenue-optimization',
     name: 'Subscription Analytics & Revenue Optimization',
     tagline: 'Churn insights, cohort analysis, and pricing experiments for SaaS growth',
@@ -608,7 +608,7 @@ export const realServicesQ32025: Q3Service[] = [
     contactInfo: contact,
     contactInfo: contact
   },
-  {/* content */}
+  
     id: 'digital-product-commerce-stack',
     name: 'Digital Product Commerce Stack',
     tagline:
@@ -663,7 +663,7 @@ export const realServicesQ32025: Q3Service[] = [
     contactInfo: contact,
     contactInfo: contact
   },
-  {/* content */}
+  
     id: 'wordpress-internal-linking-automation',
     name: 'WordPress Internal Linking Automation',
     tagline:
@@ -722,7 +722,7 @@ export const realServicesQ32025: Q3Service[] = [
     contactInfo: contact,
     contactInfo: contact
   },
-  {/* content */}
+  
     id: 'reviews-ugc-activation',
     name: 'Ecommerce Reviews & UGC Activation',
     tagline:

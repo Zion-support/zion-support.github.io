@@ -3,12 +3,10 @@ import { Helmet } from 'react-helmet-async';
 import { Calendar, Clock, User, ArrowLeft, Share2, Bookmark, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-const RealtimeGenAIStreamingLatency2025: React.FC = () => {/* content */}
+const RealtimeGenAIStreamingLatency2025: React.FC = () => 
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
       <Helmet>
         <title>Real-Time GenAI Streaming: Sub-100ms Latency Patterns 2025 | Zion Tech Group</title>
         <meta 
@@ -127,8 +125,8 @@ const RealtimeGenAIStreamingLatency2025: React.FC = () => {/* content */}
               <div className="text-left"></div>
                 <pre className="text-left"></p>
 {`// Example: Streaming LLM response with SSE
-async function* streamLLM(prompt: string) {/* content */}
-  const response = await fetch('/api/generate', {/* content */}
+async function* streamLLM(prompt: string) 
+  const response = await fetch('/api/generate', 
     method: 'POST',
     body: JSON.stringify({ prompt }),
     headers: { 'Content-Type': 'application/json' }
@@ -137,7 +135,7 @@ async function* streamLLM(prompt: string) {/* content */}
   const reader = response.body!.getReader();
   const decoder = new TextDecoder();
 
-  while (true) {/* content */}
+  while (true) 
     const { done, value } = await reader.read();
     if (done) break;
     

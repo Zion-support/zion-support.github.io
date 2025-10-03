@@ -4,12 +4,10 @@ import { Link } from 'react-router-dom';
 import { ArrowLeft, Code, Zap, Target, TrendingUp, CheckCircle, AlertCircle } from 'lucide-react';
 import Header from '../src/components/Header';
 
-const AutonomousCodeGeneration = () => {/* content */}
+const AutonomousCodeGeneration = () => 
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
       <Helmet>
         <title>Autonomous Code Generation 2025 — AI Writes Production Code at 10x Developer Velocity</title>
         <meta 

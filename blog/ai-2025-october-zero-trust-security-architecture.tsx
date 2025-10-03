@@ -13,8 +13,6 @@ export default function AIZeroTrustSecurityArchitecture2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>AI-Driven Zero Trust Security Architecture 2025: Continuous Verification & Threat Intelligence | Zion Tech Group</title>

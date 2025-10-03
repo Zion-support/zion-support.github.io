@@ -6,8 +6,6 @@ export default function CognitiveDataFabricRevolution() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <article className="text-left"></a>
       <header className="text-left">
         <h1 className="text-left">Cognitive Data Fabric: Autonomous Enterprise Data Intelligence</h1>

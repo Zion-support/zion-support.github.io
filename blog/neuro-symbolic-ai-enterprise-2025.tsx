@@ -10,7 +10,7 @@ export const metadata = {
   tags: ['Neuro-Symbolic AI', 'Explainable AI', 'Enterprise AI', 'Hybrid Systems']
 };
 
-const NeuroSymbolicAIEnterprise2025 = () => {/* content */}
+const NeuroSymbolicAIEnterprise2025 = () => 
   return (
   <div></div>
     <article className="text-left"></a>

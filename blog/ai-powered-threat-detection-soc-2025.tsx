@@ -3,12 +3,10 @@ import { Helmet } from 'react-helmet-async';
 import { Calendar, Clock, User, ArrowLeft, Share2, Bookmark, Shield, AlertTriangle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-const AIPoweredThreatDetectionSOC2025: React.FC = () => {/* content */}
+const AIPoweredThreatDetectionSOC2025: React.FC = () => 
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
       <Helmet>
         <title>AI-Powered Threat Detection: Modern SOC Operations 2025 | Zion Tech Group</title>
         <meta 
@@ -253,27 +251,27 @@ const AIPoweredThreatDetectionSOC2025: React.FC = () => {/* content */}
                 </p>
                 <div className="text-left"></div>
                   {[
-                    {/* content */}
+                    
                       title: 'Data Collection',
                       content: 'Ingest logs from all sources: endpoints (EDR), network (firewall, IDS/IPS), cloud (CloudTrail, Azure logs), apps (auth logs, API logs). Store 90 days rolling window in data lake.',
                       metrics: 'Volume: 100TB+ per day for enterprise. Format: normalized JSON, indexed by timestamp.'
                     },
-                    {/* content */}
+                    
                       title: 'Feature Engineering',
                       content: 'Extract behavioral features: user login patterns, network traffic characteristics, process execution sequences, file access patterns. Create sliding time windows (5min, 1hr, 24hr).',
                       metrics: '500+ features per event. Automated pipeline refreshes features hourly.'
                     },
-                    {/* content */}
+                    
                       title: 'Model Training',
                       content: 'Train ensemble of models: anomaly detection (Isolation Forest), classification (XGBoost), deep learning (LSTM for sequences). Use labeled data from past incidents + threat intel.',
                       metrics: 'Retrain weekly on fresh data. 10K labeled samples minimum per model.'
                     },
-                    {/* content */}
+                    
                       title: 'Model Evaluation',
                       content: 'Test on held-out incidents. Metrics: Precision (90%+), Recall (95%+), F1 (92%+), False Positive Rate (&lt;5%). Validate against adversarial examples and red team exercises.',
                       metrics: 'Human-in-loop validation: SOC analysts review 5% of predictions.'
                     },
-                    {/* content */}
+                    
                       title: 'Deployment & Monitoring',
                       content: 'Deploy models to inference cluster (sub-100ms latency requirement). A/B test new models on 10% of traffic before full rollout. Monitor for model drift, adversarial attacks, concept drift.',
                       metrics: 'Canary period: 7 days. Rollback if false positive rate exceeds 7%.'

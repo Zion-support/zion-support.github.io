@@ -11,7 +11,7 @@ export const metadata = {
   readTime: "17 min read
 };
 
-const VectorDatabaseOptimizationBreakthrough: React.FC = () => {/* content */}
+const VectorDatabaseOptimizationBreakthrough: React.FC = () => 
   return (
   <div></div>
     <article className="text-left"></a>

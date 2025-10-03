@@ -1,11 +1,11 @@
 import '../src/index.css';
 import type { Preview } from '@storybook/react';
 
-const preview: Preview = {/* content */}
-  parameters: {/* content */}
+const preview: Preview = 
+  parameters: 
     actions: { argTypesRegex: '^on[A-Z].*' },
-    controls: {/* content */}
-      matchers: {/* content */}
+    controls: 
+      matchers: 
         color: /(background|color)$/i,
         date: /Date$/,
       },

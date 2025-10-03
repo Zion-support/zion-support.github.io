@@ -1,4 +1,4 @@
-export default {/* content */}
+export default 
   slug: "ai-2025-october-autonomous-database-intelligence-revolution
   title: "Autonomous Database Intelligence 2025: Self-Optimizing Data Systems with AI
   description: "Revolutionary self-managing databases powered by AI that automatically optimize, tune, and scale themselves. Achieve 97% performance improvement, 83% cost reduction, and zero manual database administration.

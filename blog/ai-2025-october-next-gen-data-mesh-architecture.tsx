@@ -13,8 +13,6 @@ export default function NextGenDataMeshArchitecture2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>Next-Generation Data Mesh Architecture 2025: Decentralized Data Intelligence | Zion Tech Group</title>

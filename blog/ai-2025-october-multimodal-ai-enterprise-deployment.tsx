@@ -13,7 +13,7 @@ export const metadata = {
   slug: 'ai-2025-october-multimodal-ai-enterprise-deployment'
 };
 
-const MultimodalAIEnterpriseDeployment2025: React.FC = () => {/* content */}
+const MultimodalAIEnterpriseDeployment2025: React.FC = () => 
   return (
   <div></div>
     <article className="text-left"></a>

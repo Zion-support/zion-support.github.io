@@ -2,12 +2,10 @@ import { ArrowLeft, BookOpen, Calendar, Clock, Share2, Tag, TrendingUp } from "l
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-const AIPoweredIncidentPrediction2026 = () => {/* content */}
+const AIPoweredIncidentPrediction2026 = () => 
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
       <Helmet>
         <title>AI-Powered Incident Prediction 2026: Preventing Outages Before They Happen | Zion Tech Group</title>
         <meta

@@ -10,7 +10,7 @@ export const metadata = {
   tags: ['RAG', 'Vector Search', 'Enterprise AI', 'LLM Applications', 'Knowledge Management']
 };
 
-const RetrievalAugmentedGenerationEnterprise2025 = () => {/* content */}
+const RetrievalAugmentedGenerationEnterprise2025 = () => 
   return (
   <div></div>
     <article className="text-left"></a>

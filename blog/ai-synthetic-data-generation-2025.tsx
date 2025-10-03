@@ -6,8 +6,6 @@ export default function AISyntheticDataGeneration2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <div className="text-left"></div>
         <main className="text-left">
@@ -174,23 +172,23 @@ export default function AISyntheticDataGeneration2025() {
                   </p>
                   <pre className="text-left"></p>
 {`// Synthetic Data Generator
-class SyntheticDataGenerator {/* content */}
-  constructor(config) {/* content */}
-    this.gan = new PrivacyPreservingGAN({/* content */}
+class SyntheticDataGenerator 
+  constructor(config) 
+    this.gan = new PrivacyPreservingGAN(
       architecture: 'CTGAN',
       privacyBudget: config.epsilon,
       noiseMultiplier: config.delta
     });
   }
   
-  async train(realData, config) {/* content */}
+  async train(realData, config) 
     // Apply differential privacy during training
     const dpData = await this.applyDifferentialPrivacy(
       realData, 
       config.privacyBudget
     );
     
-    await this.gan.train(dpData, {/* content */}
+    await this.gan.train(dpData, 
       epochs: config.epochs,
       batchSize: config.batchSize,
       gradientClipping: true
@@ -199,7 +197,7 @@ class SyntheticDataGenerator {/* content */}
     return this.validate(realData);
   }
   
-  async generate(count, conditions) {/* content */}
+  async generate(count, conditions) 
     return this.gan.generate(count, conditions);
   }
 }`}
@@ -213,9 +211,9 @@ class SyntheticDataGenerator {/* content */}
                   </p>
                   <pre className="text-left"></p>
 {`// Data Quality Validator
-class SyntheticDataValidator {/* content */}
-  async validate(realData, syntheticData) {/* content */}
-    const metrics = {/* content */}
+class SyntheticDataValidator 
+  async validate(realData, syntheticData) 
+    const metrics = 
       // Statistical similarity
       jsdivergence: await this.calculateJSDivergence(
         realData, syntheticData

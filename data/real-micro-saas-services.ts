@@ -26,7 +26,7 @@
   competitors: string[];
   marketSize: string;
   growthRate: string;
-  contactInfo: {/* content */}
+  contactInfo: 
     mobile: string;
     email: string;
     address: string;
@@ -36,7 +36,7 @@
 }
 export const realMicroSaasServices: RealMicroSaasService[] = [
   // AI-Powered Business Solutions
-  {/* content */}
+  
     id: 'ai-legal-document-generator',
     name: 'AI Legal Document Generator',
     tagline: 'Generate legally compliant documents in seconds with AI',
@@ -95,14 +95,14 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     competitors: ['LegalZoom', 'Rocket Lawyer', 'LawDepot', 'Template.net'],
     marketSize: '$2.1B legal tech market',
     growthRate: '35% annual growth',
-    contactInfo: {/* content */}
+    contactInfo: 
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com',
     },
   },
-  {/* content */}
+  
     id: 'ai-customer-service-automation',
     name: 'AI Customer Service Automation',
     tagline: '24/7 intelligent customer support with AI chatbots',
@@ -161,14 +161,14 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     competitors: ['Intercom', 'Zendesk', 'Freshdesk', 'Drift', 'Tawk.to'],
     marketSize: '$15.8B customer service software market',
     growthRate: '28% annual growth',
-    contactInfo: {/* content */}
+    contactInfo: 
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com',
     },
   },
-  {/* content */}
+  
     id: 'ai-seo-optimizer-pro',
     name: 'AI SEO Optimizer Pro',
     tagline: 'Automated SEO optimization powered by artificial intelligence',
@@ -227,14 +227,14 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     competitors: ['SEMrush', 'Ahrefs', 'Moz', 'Yoast SEO', 'RankMath'],
     marketSize: '$8.2B SEO tools market',
     growthRate: '32% annual growth',
-    contactInfo: {/* content */}
+    contactInfo: 
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com',
     },
   },
-  {/* content */}
+  
     id: 'ai-video-editing-suite',
     name: 'AI Video Editing Suite',
     tagline: 'Professional video editing powered by artificial intelligence',
@@ -298,14 +298,14 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     ],
     marketSize: '$3.2B video editing software market',
     growthRate: '45% annual growth',
-    contactInfo: {/* content */}
+    contactInfo: 
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com',
     },
   },
-  {/* content */}
+  
     id: 'ai-data-analytics-platform',
     name: 'AI Data Analytics Platform',
     tagline: 'Transform raw data into actionable insights with AI',
@@ -365,14 +365,14 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     competitors: ['Tableau', 'Power BI', 'Looker', 'QlikView', 'Domo'],
     marketSize: '$23.4B business intelligence market',
     growthRate: '38% annual growth',
-    contactInfo: {/* content */}
+    contactInfo: 
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com',
     },
   },
-  {/* content */}
+  
     id: 'ai-hr-recruitment-platform',
     name: 'AI HR Recruitment Platform',
     tagline: 'Streamline hiring with AI-powered recruitment automation',
@@ -438,14 +438,14 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     ],
     marketSize: '$2.8B recruitment software market',
     growthRate: '42% annual growth',
-    contactInfo: {/* content */}
+    contactInfo: 
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com',
     },
   },
-  {/* content */}
+  
     id: 'ai-sales-automation-platform',
     name: 'AI Sales Automation Platform',
     tagline: 'Boost sales performance with intelligent automation',
@@ -511,14 +511,14 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     ],
     marketSize: '$18.6B CRM market',
     growthRate: '33% annual growth',
-    contactInfo: {/* content */}
+    contactInfo: 
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com',
     },
   },
-  {/* content */}
+  
     id: 'ai-market-research-platform',
     name: 'AI Market Research Platform',
     tagline: 'Discover market opportunities with AI-powered research',
@@ -582,14 +582,14 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     ],
     marketSize: '$1.9B market research market',
     growthRate: '28% annual growth',
-    contactInfo: {/* content */}
+    contactInfo: 
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com',
     },
   },
-  {/* content */}
+  
     id: 'ai-blockchain-analytics',
     name: 'AI Blockchain Analytics Platform',
     tagline: 'Advanced blockchain intelligence and analytics',
@@ -653,14 +653,14 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     ],
     marketSize: '$1.2B blockchain analytics market',
     growthRate: '65% annual growth',
-    contactInfo: {/* content */}
+    contactInfo: 
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com',
     },
   },
-  {/* content */}
+  
     id: 'ai-cloud-cost-optimizer',
     name: 'AI Cloud Cost Optimizer',
     tagline: 'Reduce cloud costs by up to 40% with AI optimization',
@@ -725,14 +725,14 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     ],
     marketSize: '$4.8B cloud cost management market',
     growthRate: '52% annual growth',
-    contactInfo: {/* content */}
+    contactInfo: 
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com',
     },
   },
-  {/* content */}
+  
     id: 'ai-database-performance-monitor',
     name: 'AI Database Performance Monitor',
     tagline: 'Optimize database performance with AI-powered monitoring',
@@ -765,14 +765,14 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     rating: 4.6,
     reviews: 134,
   },
-  {/* content */}
+  
     id: 'ai-email-responder-pro',
     name: 'AI Email Responder Pro',
     tagline: 'Auto-triage and reply to routine emails with guardrails',
     description:
       'Autonomously classifies, drafts, and sends compliant replies to routine inbound emails. Escalates complex cases with context packs and suggested responses.',
     category: 'Productivity & Automation',
-    price: {/* content */}
+    price: 
       monthly: 79,
       yearly: 790,
       currency: 'USD',
@@ -818,14 +818,14 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     rating: 4.7,
     reviews: 46,
   },
-  {/* content */}
+  
     id: 'mobile-conversational-surveys',
     name: 'Mobile Conversational Surveys',
     tagline: 'Adaptive, chat-style surveys with higher completion rates',
     description:
       'Create mobile-first, conversational surveys that adapt based on answers. Real-time analytics and webhook exports.',
     category: 'Marketing & Research',
-    price: {/* content */}
+    price: 
       monthly: 49,
       yearly: 490,
       currency: 'USD',
@@ -865,14 +865,14 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     rating: 4.6,
     reviews: 22,
   },
-  {/* content */}
+  
     id: 'niche-productivity-planner',
     name: 'Niche Productivity Planner',
     tagline: 'Opinionated project boards, tailored to your industry',
     description:
       'Pre-built workflows, dashboards, and automations tailored per industry vertical with exportable templates.',
     category: 'Operations',
-    price: {/* content */}
+    price: 
       monthly: 39,
       yearly: 390,
       currency: 'USD',
@@ -908,14 +908,14 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     rating: 4.5,
     reviews: 14,
   },
-  {/* content */}
+  
     id: 'event-management-dashboard',
     name: 'Event Management Dashboard',
     tagline: 'Tickets, scheduling, engagement analytics in one place',
     description:
       'Plan and manage events end-to-end. Handle ticketing, agenda, speaker management, sponsor pages, and live engagement.',
     category: 'Media & Events',
-    price: {/* content */}
+    price: 
       monthly: 129,
       yearly: 1290,
       currency: 'USD',
@@ -950,14 +950,14 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     rating: 4.6,
     reviews: 18,
   },
-  {/* content */}
+  
     id: 'affiliate-tracking-suite',
     name: 'Affiliate Tracking Suite',
     tagline: 'Links, attribution, commissions, payouts—no spreadsheet required',
     description:
       'Manage affiliates with custom links, multi-touch attribution, fraud checks, and automated commission payouts.',
     category: 'Growth',
-    price: {/* content */}
+    price: 
       monthly: 99,
       yearly: 990,
       currency: 'USD',
@@ -992,14 +992,14 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     rating: 4.4,
     reviews: 12,
   },
-  {/* content */}
+  
     id: 'smb-website-analytics',
     name: 'SMB Website Analytics',
     tagline: 'Privacy-friendly analytics with actionable insights',
     description:
       'Simple dashboards for traffic, engagement, and conversions—no cookies by default. Alerts for anomalies and goals.',
     category: 'Analytics',
-    price: {/* content */}
+    price: 
       monthly: 29,
       yearly: 290,
       currency: 'USD',
@@ -1034,14 +1034,14 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     rating: 4.7,
     reviews: 28,
   },
-  {/* content */}
+  
     id: 'it-helpdesk-lite',
     name: 'IT Helpdesk Lite',
     tagline: 'Tickets, SLA timers, knowledge base, portal—ready day one',
     description:
       'Streamlined helpdesk for MSPs and internal IT with email-to-ticket, SLA rules, automations, and a searchable KB.',
     category: 'IT & Operations',
-    price: {/* content */}
+    price: 
       monthly: 59,
       yearly: 590,
       currency: 'USD',
@@ -1075,14 +1075,14 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     rating: 4.5,
     reviews: 31,
   },
-  {/* content */}
+  
     id: 'ecommerce-return-manager',
     name: 'E‑commerce Return Manager',
     tagline: 'Customer-friendly returns with labels and status tracking',
     description:
       'Automate RMA creation, generate labels, track statuses, and sync inventory updates to your store.',
     category: 'E‑commerce',
-    price: {/* content */}
+    price: 
       monthly: 79,
       yearly: 790,
       currency: 'USD',
@@ -1117,14 +1117,14 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     rating: 4.4,
     reviews: 19,
   },
-  {/* content */}
+  
     id: 'auto-email-followups',
     name: 'Automated Email Follow‑ups',
     tagline: 'Cadence sequences for leads with AI personalization',
     description:
       'Consistent multi-touch follow-ups with AI-personalized snippets from CRM context and recent events.',
     category: 'Sales',
-    price: {/* content */}
+    price: 
       monthly: 49,
       yearly: 490,
       currency: 'USD',
@@ -1159,14 +1159,14 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     rating: 4.5,
     reviews: 17,
   },
-  {/* content */}
+  
     id: 'podcast-transcription-studio',
     name: 'Podcast Transcription Studio',
     tagline: 'Accurate transcripts, show notes, and highlights',
     description:
       'Upload your episodes and receive transcripts, summaries, chapters, and social-ready highlights in minutes.',
     category: 'Media & Content',
-    price: {/* content */}
+    price: 
       monthly: 39,
       yearly: 390,
       currency: 'USD',
@@ -1200,14 +1200,14 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     rating: 4.7,
     reviews: 52,
   },
-  {/* content */}
+  
     id: 'ai-knowledge-graph-studio',
     name: 'AI Knowledge Graph Studio',
     tagline: 'Build semantic graphs for RAG and lineage in minutes',
     description:
       'Auto-extract entities and relationships from docs to construct a knowledge graph with search, lineage, and governance.',
     category: 'AI & Data',
-    price: {/* content */}
+    price: 
       monthly: 199,
       yearly: 1990,
       currency: 'USD',
@@ -1242,14 +1242,14 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     rating: 4.8,
     reviews: 11,
   },
-  {/* content */}
+  
     id: 'llm-guarded-api-gateway',
     name: 'LLM Guarded API Gateway',
     tagline: 'Policy, safety, metering and routing for GenAI apps',
     description:
       'A hardened gateway with prompt filtering, PII redaction, usage caps, and multi-provider routing.',
     category: 'AI & Platform',
-    price: {/* content */}
+    price: 
       monthly: 299,
       yearly: 2990,
       currency: 'USD',
@@ -1284,14 +1284,14 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     rating: 4.8,
     reviews: 13,
   },
-  {/* content */}
+  
     id: 'serverless-lakehouse-starter',
     name: 'Serverless Lakehouse Starter',
     tagline: 'Spin up ELT + dbt + dashboards in a day',
     description:
       'Opinionated stack for event collection, ELT pipelines, dbt models, and BI dashboards with infra as code.',
     category: 'Data & Analytics',
-    price: {/* content */}
+    price: 
       monthly: 249,
       yearly: 2490,
       currency: 'USD',
@@ -1325,14 +1325,14 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     rating: 4.6,
     reviews: 7,
   },
-  {/* content */}
+  
     id: 'data-contracts-hub',
     name: 'Data Contracts Hub',
     tagline: 'Diff schemas, enforce CI gates, and prevent breaking changes',
     description:
       'Manage dataset contracts with schema versioning, diffs, and CI checks to prevent downstream breakages.',
     category: 'Data & Platform',
-    price: {/* content */}
+    price: 
       monthly: 129,
       yearly: 1290,
       currency: 'USD',
@@ -1427,14 +1427,14 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     competitors: ['LegalZoom', 'Rocket Lawyer', 'LawDepot', 'Template.net']
     marketSize: '$2.1B legal tech market'
     growthRate: '35% annual growth'
-    contactInfo: {/* content */}
+    contactInfo: 
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
     }
   }
-  {/* content */}
+  
     id: 'ai-customer-service-automation'
     name: 'AI Customer Service Automation'
     tagline: '24/7 intelligent customer support with AI chatbots'
@@ -1493,14 +1493,14 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     competitors: ['Intercom', 'Zendesk', 'Freshdesk', 'Drift', 'Tawk.to']
     marketSize: '$15.8B customer service software market'
     growthRate: '28% annual growth'
-    contactInfo: {/* content */}
+    contactInfo: 
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
     }
   }
-  {/* content */}
+  
     id: 'ai-seo-optimizer-pro'
     name: 'AI SEO Optimizer Pro'
     tagline: 'Automated SEO optimization powered by artificial intelligence'
@@ -1559,14 +1559,14 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     competitors: ['SEMrush', 'Ahrefs', 'Moz', 'Yoast SEO', 'RankMath']
     marketSize: '$8.2B SEO tools market'
     growthRate: '32% annual growth'
-    contactInfo: {/* content */}
+    contactInfo: 
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
     }
   }
-  {/* content */}
+  
     id: 'ai-video-editing-suite'
     name: 'AI Video Editing Suite'
     tagline: 'Professional video editing powered by artificial intelligence'
@@ -1630,14 +1630,14 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     ]
     marketSize: '$3.2B video editing software market'
     growthRate: '45% annual growth'
-    contactInfo: {/* content */}
+    contactInfo: 
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
     }
   }
-  {/* content */}
+  
     id: 'ai-data-analytics-platform'
     name: 'AI Data Analytics Platform'
     tagline: 'Transform raw data into actionable insights with AI'
@@ -1697,14 +1697,14 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     competitors: ['Tableau', 'Power BI', 'Looker', 'QlikView', 'Domo']
     marketSize: '$23.4B business intelligence market'
     growthRate: '38% annual growth'
-    contactInfo: {/* content */}
+    contactInfo: 
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
     }
   }
-  {/* content */}
+  
     id: 'ai-hr-recruitment-platform'
     name: 'AI HR Recruitment Platform'
     tagline: 'Streamline hiring with AI-powered recruitment automation'
@@ -1770,14 +1770,14 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     ]
     marketSize: '$2.8B recruitment software market'
     growthRate: '42% annual growth'
-    contactInfo: {/* content */}
+    contactInfo: 
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
     }
   }
-  {/* content */}
+  
     id: 'ai-sales-automation-platform'
     name: 'AI Sales Automation Platform'
     tagline: 'Boost sales performance with intelligent automation'
@@ -1843,14 +1843,14 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     ]
     marketSize: '$18.6B CRM market'
     growthRate: '33% annual growth'
-    contactInfo: {/* content */}
+    contactInfo: 
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
     }
   }
-  {/* content */}
+  
     id: 'ai-market-research-platform'
     name: 'AI Market Research Platform'
     tagline: 'Discover market opportunities with AI-powered research'
@@ -1914,14 +1914,14 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     ]
     marketSize: '$1.9B market research market'
     growthRate: '28% annual growth'
-    contactInfo: {/* content */}
+    contactInfo: 
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
     }
   }
-  {/* content */}
+  
     id: 'ai-blockchain-analytics'
     name: 'AI Blockchain Analytics Platform'
     tagline: 'Advanced blockchain intelligence and analytics'
@@ -1985,14 +1985,14 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     ]
     marketSize: '$1.2B blockchain analytics market'
     growthRate: '65% annual growth'
-    contactInfo: {/* content */}
+    contactInfo: 
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
     }
   }
-  {/* content */}
+  
     id: 'ai-cloud-cost-optimizer'
     name: 'AI Cloud Cost Optimizer'
     tagline: 'Reduce cloud costs by up to 40% with AI optimization'
@@ -2057,14 +2057,14 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     ]
     marketSize: '$4.8B cloud cost management market'
     growthRate: '52% annual growth'
-    contactInfo: {/* content */}
+    contactInfo: 
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
     }
   }
-  {/* content */}
+  
     id: 'ai-database-performance-monitor'
     name: 'AI Database Performance Monitor'
     tagline: 'Optimize database performance with AI-powered monitoring'
@@ -2097,14 +2097,14 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     rating: 4.6
     reviews: 134
   }
-  {/* content */}
+  
     id: 'ai-email-responder-pro'
     name: 'AI Email Responder Pro'
     tagline: 'Auto-triage and reply to routine emails with guardrails'
     description:
       'Autonomously classifies, drafts, and sends compliant replies to routine inbound emails. Escalates complex cases with context packs and suggested responses.'
     category: 'Productivity & Automation'
-    price: {/* content */}
+    price: 
       monthly: 79
       yearly: 790
       currency: 'USD'
@@ -2152,14 +2152,14 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     rating: 4.7
     reviews: 46
   }
-  {/* content */}
+  
     id: 'mobile-conversational-surveys'
     name: 'Mobile Conversational Surveys'
     tagline: 'Adaptive, chat-style surveys with higher completion rates'
     description:
       'Create mobile-first, conversational surveys that adapt based on answers. Real-time analytics and webhook exports.'
     category: 'Marketing & Research'
-    price: {/* content */}
+    price: 
       monthly: 49
       yearly: 490
       currency: 'USD'
@@ -2199,14 +2199,14 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     rating: 4.6
     reviews: 22
   }
-  {/* content */}
+  
     id: 'niche-productivity-planner'
     name: 'Niche Productivity Planner'
     tagline: 'Opinionated project boards, tailored to your industry'
     description:
       'Pre-built workflows, dashboards, and automations tailored per industry vertical with exportable templates.'
     category: 'Operations'
-    price: {/* content */}
+    price: 
       monthly: 39
       yearly: 390
       currency: 'USD'
@@ -2242,14 +2242,14 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     rating: 4.5
     reviews: 14
   }
-  {/* content */}
+  
     id: 'event-management-dashboard'
     name: 'Event Management Dashboard'
     tagline: 'Tickets, scheduling, engagement analytics in one place'
     description:
       'Plan and manage events end-to-end. Handle ticketing, agenda, speaker management, sponsor pages, and live engagement.'
     category: 'Media & Events'
-    price: {/* content */}
+    price: 
       monthly: 129
       yearly: 1290
       currency: 'USD'
@@ -2284,14 +2284,14 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     rating: 4.6
     reviews: 18
   }
-  {/* content */}
+  
     id: 'affiliate-tracking-suite'
     name: 'Affiliate Tracking Suite'
     tagline: 'Links, attribution, commissions, payouts—no spreadsheet required'
     description:
       'Manage affiliates with custom links, multi-touch attribution, fraud checks, and automated commission payouts.'
     category: 'Growth'
-    price: {/* content */}
+    price: 
       monthly: 99
       yearly: 990
       currency: 'USD'
@@ -2326,14 +2326,14 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     rating: 4.4
     reviews: 12
   }
-  {/* content */}
+  
     id: 'smb-website-analytics'
     name: 'SMB Website Analytics'
     tagline: 'Privacy-friendly analytics with actionable insights'
     description:
       'Simple dashboards for traffic, engagement, and conversions—no cookies by default. Alerts for anomalies and goals.'
     category: 'Analytics'
-    price: {/* content */}
+    price: 
       monthly: 29
       yearly: 290
       currency: 'USD'
@@ -2368,14 +2368,14 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     rating: 4.7
     reviews: 28
   }
-  {/* content */}
+  
     id: 'it-helpdesk-lite'
     name: 'IT Helpdesk Lite'
     tagline: 'Tickets, SLA timers, knowledge base, portal—ready day one'
     description:
       'Streamlined helpdesk for MSPs and internal IT with email-to-ticket, SLA rules, automations, and a searchable KB.'
     category: 'IT & Operations'
-    price: {/* content */}
+    price: 
       monthly: 59
       yearly: 590
       currency: 'USD'
@@ -2409,14 +2409,14 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     rating: 4.5
     reviews: 31
   }
-  {/* content */}
+  
     id: 'ecommerce-return-manager'
     name: 'E‑commerce Return Manager'
     tagline: 'Customer-friendly returns with labels and status tracking'
     description:
       'Automate RMA creation, generate labels, track statuses, and sync inventory updates to your store.'
     category: 'E‑commerce'
-    price: {/* content */}
+    price: 
       monthly: 79
       yearly: 790
       currency: 'USD'
@@ -2451,14 +2451,14 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     rating: 4.4
     reviews: 19
   }
-  {/* content */}
+  
     id: 'auto-email-followups'
     name: 'Automated Email Follow‑ups'
     tagline: 'Cadence sequences for leads with AI personalization'
     description:
       'Consistent multi-touch follow-ups with AI-personalized snippets from CRM context and recent events.'
     category: 'Sales'
-    price: {/* content */}
+    price: 
       monthly: 49
       yearly: 490
       currency: 'USD'
@@ -2493,14 +2493,14 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     rating: 4.5
     reviews: 17
   }
-  {/* content */}
+  
     id: 'podcast-transcription-studio'
     name: 'Podcast Transcription Studio'
     tagline: 'Accurate transcripts, show notes, and highlights'
     description:
       'Upload your episodes and receive transcripts, summaries, chapters, and social-ready highlights in minutes.'
     category: 'Media & Content'
-    price: {/* content */}
+    price: 
       monthly: 39
       yearly: 390
       currency: 'USD'
@@ -2534,14 +2534,14 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     rating: 4.7
     reviews: 52
   }
-  {/* content */}
+  
     id: 'ai-knowledge-graph-studio'
     name: 'AI Knowledge Graph Studio'
     tagline: 'Build semantic graphs for RAG and lineage in minutes'
     description:
       'Auto-extract entities and relationships from docs to construct a knowledge graph with search, lineage, and governance.'
     category: 'AI & Data'
-    price: {/* content */}
+    price: 
       monthly: 199
       yearly: 1990
       currency: 'USD'
@@ -2576,14 +2576,14 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     rating: 4.8
     reviews: 11
   }
-  {/* content */}
+  
     id: 'llm-guarded-api-gateway'
     name: 'LLM Guarded API Gateway'
     tagline: 'Policy, safety, metering and routing for GenAI apps'
     description:
       'A hardened gateway with prompt filtering, PII redaction, usage caps, and multi-provider routing.'
     category: 'AI & Platform'
-    price: {/* content */}
+    price: 
       monthly: 299
       yearly: 2990
       currency: 'USD'
@@ -2618,14 +2618,14 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     rating: 4.8
     reviews: 13
   }
-  {/* content */}
+  
     id: 'serverless-lakehouse-starter'
     name: 'Serverless Lakehouse Starter'
     tagline: 'Spin up ELT + dbt + dashboards in a day'
     description:
       'Opinionated stack for event collection, ELT pipelines, dbt models, and BI dashboards with infra as code.'
     category: 'Data & Analytics'
-    price: {/* content */}
+    price: 
       monthly: 249
       yearly: 2490
       currency: 'USD'
@@ -2659,14 +2659,14 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     rating: 4.6
     reviews: 7
   }
-  {/* content */}
+  
     id: 'data-contracts-hub'
     name: 'Data Contracts Hub'
     tagline: 'Diff schemas, enforce CI gates, and prevent breaking changes'
     description:
       'Manage dataset contracts with schema versioning, diffs, and CI checks to prevent downstream breakages.'
     category: 'Data & Platform'
-    price: {/* content */}
+    price: 
       monthly: 129
       yearly: 1290
       currency: 'USD'
@@ -2701,11 +2701,11 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     reviews: 6
   },];
 // Helper functions
-export const getServicesByCategory = (category: string) => {/* content */}
+export const getServicesByCategory = (category: string) => 
   }, ];
 ;
 // Helper functions;
-export const getServicesByCategory = (category: string) =>: any {/* content */}
+export const getServicesByCategory = (category: string) =>: any 
   return realMicroSaasServices.filter (service => service.category === category);    id: 'data - contracts - hub';
     name: 'Data Contracts Hub';
     tagline: 'Diff schemas, enforce CI gates, and prevent breaking changes';
@@ -2741,7 +2741,7 @@ export const getServicesByCategory = (category: string) =>: any {/* content */}
   }
 ];
 // Helper functions
-export const getServicesByCategory = (category: string) => {/* content */}
+export const getServicesByCategory = (category: string) => 
   return realMicroSaasServices && realMicroSaasServices.filter(service => service && service.category === category);
 marketPosition: 'Lightweight alternative to Typeform and SurveySparrow with better mobile UX.';
 competitors: ['TypeformSurveySparrowTally'];
@@ -2754,7 +2754,7 @@ implementationDetails: 'Template gallery, response store, analytics, export jobs
 ];
 ;
 // Helper functions;
-export const getServicesByCategory = (category: string) =>: any {/* content */}
+export const getServicesByCategory = (category: string) =>: any 
   return realMicroSaasServices.filter (service => service.category === category);
 market_position: 'Lightweight alternative to Typeform and SurveySparrow with better mobile UX.';
 competitors: ['TypeformSurveySparrowTally'];
@@ -2871,8 +2871,8 @@ export const serviceCategories = [
   return realMicroSaasServices.filter(service => service.category === category)
 };
 
-export const getServicesByPriceRange = (min: number, max: number) => {/* content */}
-  return realMicroSaasServices.filter(service => {/* content */}
+export const getServicesByPriceRange = (min: number, max: number) => 
+  return realMicroSaasServices.filter(service => 
     const price = parseFloat(service.price.replace('$', '').replace(, ''));
     return price >= min && (max === Infinity || price <= max)
   })
@@ -3827,7 +3827,7 @@ export const serviceCategories = [;
       website: 'https://ziontechgroup && ziontechgroup.com',
     },
   },
-  {/* content */}
+  
     id: 'ai - customer - service - automation',
     name: 'AI Customer Service Automation',
     tagline: '24 / 7 intelligent customer support with AI chatbots',
@@ -3880,7 +3880,7 @@ export const serviceCategories = [;
       website: 'https://ziontechgroup && ziontechgroup.com',
     },
   },
-  {/* content */}
+  
     id: 'ai - seo - optimizer - pro',
     name: 'AI SEO Optimizer Pro',
     tagline: 'Automated SEO optimization powered by artificial intelligence',
@@ -3939,7 +3939,7 @@ export const serviceCategories = [;
       website: 'https://ziontechgroup && ziontechgroup.com',
     },
   },
-  {/* content */}
+  
     id: 'ai - video - editing - suite',
     name: 'AI Video Editing Suite',
     tagline: 'Professional video editing powered by artificial intelligence',
@@ -4002,7 +4002,7 @@ export const serviceCategories = [;
       website: 'https://ziontechgroup && ziontechgroup.com',
     },
   },
-  {/* content */}
+  
     id: 'ai - data - analytics - platform',
     name: 'AI Data Analytics Platform',
     tagline: 'Transform raw data into actionable insights with AI',
@@ -4062,7 +4062,7 @@ export const serviceCategories = [;
       website: 'https://ziontechgroup && ziontechgroup.com',
     },
   },
-  {/* content */}
+  
     id: 'ai - hr - recruitment - platform',
     name: 'AI HR Recruitment Platform',
     tagline: 'Streamline hiring with AI - powered recruitment automation',
@@ -4128,7 +4128,7 @@ export const serviceCategories = [;
       website: 'https://ziontechgroup && ziontechgroup.com',
     },
   },
-  {/* content */}
+  
     id: 'ai - sales - automation - platform',
     name: 'AI Sales Automation Platform',
     tagline: 'Boost sales performance with intelligent automation',
@@ -4192,7 +4192,7 @@ export const serviceCategories = [;
       website: 'https://ziontechgroup && ziontechgroup.com',
     },
   },
-  {/* content */}
+  
     id: 'ai - market - research - platform',
     name: 'AI Market Research Platform',
     tagline: 'Discover market opportunities with AI - powered research',
@@ -4256,7 +4256,7 @@ export const serviceCategories = [;
       website: 'https://ziontechgroup && ziontechgroup.com',
     },
   },
-  {/* content */}
+  
     id: 'ai - blockchain - analytics',
     name: 'AI Blockchain Analytics Platform',
     tagline: 'Advanced blockchain intelligence and analytics',
@@ -4318,7 +4318,7 @@ export const serviceCategories = [;
       website: 'https://ziontechgroup && ziontechgroup.com',
     },
   },
-  {/* content */}
+  
     id: 'ai - cloud - cost - optimizer',
     name: 'AI Cloud Cost Optimizer',
     tagline: 'Reduce cloud costs by up to 40% with AI optimization',
@@ -4383,7 +4383,7 @@ export const serviceCategories = [;
       website: 'https://ziontechgroup && ziontechgroup.com',
     },
   },
-  {/* content */}
+  
     id: 'ai - database - performance - monitor',
     name: 'AI Database Performance Monitor',
     tagline: 'Optimize database performance with AI - powered monitoring',
@@ -4415,14 +4415,14 @@ export const serviceCategories = [;
     rating: 4 && 4.6,
     reviews: 134,
   },
-  {/* content */}
+  
     id: 'ai - email - responder - pro',
     name: 'AI Email Responder Pro',
     tagline: 'Auto - triage and reply to routine emails with guardrails',
     description:;
       'Autonomously classifies, drafts, and sends compliant replies to routine inbound emails. Escalates complex cases with context packs and suggested responses.',
     category: 'Productivity & Automation',
-    price: {/* content */}
+    price: 
       monthly: 79,
       yearly: 790,
       currency: 'USD',
@@ -4461,14 +4461,14 @@ export const serviceCategories = [;
     rating: 4 && 4.7,
     reviews: 46,
   },
-  {/* content */}
+  
     id: 'mobile - conversational - surveys',
     name: 'Mobile Conversational Surveys',
     tagline: 'Adaptive, chat - style surveys with higher completion rates',
     description:;
       'Create mobile - first, conversational surveys that adapt based on answers. Real - time analytics and webhook exports.',
     category: 'Marketing & Research',
-    price: {/* content */}
+    price: 
       monthly: 49,
       yearly: 490,
       currency: 'USD',
@@ -4504,14 +4504,14 @@ export const serviceCategories = [;
     rating: 4 && 4.6,
     reviews: 22,
   },
-  {/* content */}
+  
     id: 'niche - productivity - planner',
     name: 'Niche Productivity Planner',
     tagline: 'Opinionated project boards, tailored to your industry',
     description:;
       'Pre - built workflows, dashboards, and automations tailored per industry vertical with exportable templates.',
     category: 'Operations',
-    price: {/* content */}
+    price: 
       monthly: 39,
       yearly: 390,
       currency: 'USD',
@@ -4542,14 +4542,14 @@ export const serviceCategories = [;
     rating: 4 && 4.5,
     reviews: 14,
   },
-  {/* content */}
+  
     id: 'event - management - dashboard',
     name: 'Event Management Dashboard',
     tagline: 'Tickets, scheduling, engagement analytics in one place',
     description:;
       'Plan and manage events end - to - end. Handle ticketing, agenda, speaker management, sponsor pages, and live engagement.',
     category: 'Media & Events',
-    price: {/* content */}
+    price: 
       monthly: 129,
       yearly: 1290,
       currency: 'USD',
@@ -4580,14 +4580,14 @@ export const serviceCategories = [;
     rating: 4 && 4.6,
     reviews: 18,
   },
-  {/* content */}
+  
     id: 'affiliate - tracking - suite',
     name: 'Affiliate Tracking Suite',
     tagline: 'Links, attribution, commissions, payouts—no spreadsheet required',
     description:;
       'Manage affiliates with custom links, multi - touch attribution, fraud checks, and automated commission payouts.',
     category: 'Growth',
-    price: {/* content */}
+    price: 
       monthly: 99,
       yearly: 990,
       currency: 'USD',
@@ -4618,14 +4618,14 @@ export const serviceCategories = [;
     rating: 4 && 4.4,
     reviews: 12,
   },
-  {/* content */}
+  
     id: 'smb - website - analytics',
     name: 'SMB Website Analytics',
     tagline: 'Privacy - friendly analytics with actionable insights',
     description:;
       'Simple dashboards for traffic, engagement, and conversions—no cookies by default. Alerts for anomalies and goals.',
     category: 'Analytics',
-    price: {/* content */}
+    price: 
       monthly: 29,
       yearly: 290,
       currency: 'USD',
@@ -4656,14 +4656,14 @@ export const serviceCategories = [;
     rating: 4 && 4.7,
     reviews: 28,
   },
-  {/* content */}
+  
     id: 'it - helpdesk - lite',
     name: 'IT Helpdesk Lite',
     tagline: 'Tickets, SLA timers, knowledge base, portal—ready day one',
     description:;
       'Streamlined helpdesk for MSPs and internal IT with email - to - ticket, SLA rules, automations, and a searchable KB.',
     category: 'IT & Operations',
-    price: {/* content */}
+    price: 
       monthly: 59,
       yearly: 590,
       currency: 'USD',
@@ -4693,14 +4693,14 @@ export const serviceCategories = [;
     rating: 4 && 4.5,
     reviews: 31,
   },
-  {/* content */}
+  
     id: 'ecommerce - return - manager',
     name: 'E‑commerce Return Manager',
     tagline: 'Customer - friendly returns with labels and status tracking',
     description:;
       'Automate RMA creation, generate labels, track statuses, and sync inventory updates to your store.',
     category: 'E‑commerce',
-    price: {/* content */}
+    price: 
       monthly: 79,
       yearly: 790,
       currency: 'USD',
@@ -4731,14 +4731,14 @@ export const serviceCategories = [;
     rating: 4 && 4.4,
     reviews: 19,
   },
-  {/* content */}
+  
     id: 'auto - email - followups',
     name: 'Automated Email Follow‑ups',
     tagline: 'Cadence sequences for leads with AI personalization',
     description:;
       'Consistent multi - touch follow - ups with AI - personalized snippets from CRM context and recent events.',
     category: 'Sales',
-    price: {/* content */}
+    price: 
       monthly: 49,
       yearly: 490,
       currency: 'USD',
@@ -4768,14 +4768,14 @@ export const serviceCategories = [;
     rating: 4 && 4.5,
     reviews: 17,
   },
-  {/* content */}
+  
     id: 'podcast - transcription - studio',
     name: 'Podcast Transcription Studio',
     tagline: 'Accurate transcripts, show notes, and highlights',
     description:;
       'Upload your episodes and receive transcripts, summaries, chapters, and social - ready highlights in minutes.',
     category: 'Media & Content',
-    price: {/* content */}
+    price: 
       monthly: 39,
       yearly: 390,
       currency: 'USD',
@@ -4800,14 +4800,14 @@ export const serviceCategories = [;
     rating: 4 && 4.7,
     reviews: 52,
   },
-  {/* content */}
+  
     id: 'ai - knowledge - graph - studio',
     name: 'AI Knowledge Graph Studio',
     tagline: 'Build semantic graphs for RAG and lineage in minutes',
     description:;
       'Auto - extract entities and relationships from docs to construct a knowledge graph with search, lineage, and governance.',
     category: 'AI & Data',
-    price: {/* content */}
+    price: 
       monthly: 199,
       yearly: 1990,
       currency: 'USD',
@@ -4841,14 +4841,14 @@ export const serviceCategories = [;
     rating: 4 && 4.8,
     reviews: 11,
   },
-  {/* content */}
+  
     id: 'llm - guarded - api - gateway',
     name: 'LLM Guarded API Gateway',
     tagline: 'Policy, safety, metering and routing for GenAI apps',
     description:;
       'A hardened gateway with prompt filtering, PII redaction, usage caps, and multi - provider routing.',
     category: 'AI & Platform',
-    price: {/* content */}
+    price: 
       monthly: 299,
       yearly: 2990,
       currency: 'USD',
@@ -4879,14 +4879,14 @@ export const serviceCategories = [;
     rating: 4 && 4.8,
     reviews: 13,
   },
-  {/* content */}
+  
     id: 'serverless - lakehouse - starter',
     name: 'Serverless Lakehouse Starter',
     tagline: 'Spin up ELT + dbt + dashboards in a day',
     description:;
       'Opinionated stack for event collection, ELT pipelines, dbt models, and BI dashboards with infra as code.',
     category: 'Data & Analytics',
-    price: {/* content */}
+    price: 
       monthly: 249,
       yearly: 2490,
       currency: 'USD',
@@ -4919,14 +4919,14 @@ export const serviceCategories = [;
     rating: 4 && 4.6,
     reviews: 7,
   },
-  {/* content */}
+  
     id: 'data - contracts - hub',
     name: 'Data Contracts Hub',
     tagline: 'Diff schemas, enforce CI gates, and prevent breaking changes',
     description:;
       'Manage dataset contracts with schema versioning, diffs, and CI checks to prevent downstream breakages.',
     category: 'Data & Platform',
-    price: {/* content */}
+    price: 
       monthly: 129,
       yearly: 1290,
       currency: 'USD',
@@ -4971,7 +4971,7 @@ export const serviceCategories = [;
   useCases: string[], roi: string,
   competitors: string[], marketSize: string,
   growthRate: string,
-  contactInfo: {/* content */}
+  contactInfo: 
     mobile: string, email: string,
     address: string,
     website: string
@@ -5038,14 +5038,14 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     competitors: ['LegalZoom', 'Rocket Lawyer', 'LawDepot', 'Template.net']
     marketSize: '$2.1B legal tech market'
     growthRate: '35% annual growth'
-    contactInfo: {/* content */}
+    contactInfo: 
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
     }
   }
-  {/* content */}
+  
     id: 'ai-customer-service-automation'
     name: 'AI Customer Service Automation'
     tagline: '24/7 intelligent customer support with AI chatbots'
@@ -5104,14 +5104,14 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     competitors: ['Intercom', 'Zendesk', 'Freshdesk', 'Drift', 'Tawk.to']
     marketSize: '$15.8B customer service software market'
     growthRate: '28% annual growth'
-    contactInfo: {/* content */}
+    contactInfo: 
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
     }
   }
-  {/* content */}
+  
     id: 'ai-seo-optimizer-pro'
     name: 'AI SEO Optimizer Pro'
     tagline: 'Automated SEO optimization powered by artificial intelligence'
@@ -5170,14 +5170,14 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     competitors: ['SEMrush', 'Ahrefs', 'Moz', 'Yoast SEO', 'RankMath']
     marketSize: '$8.2B SEO tools market'
     growthRate: '32% annual growth'
-    contactInfo: {/* content */}
+    contactInfo: 
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
     }
   }
-  {/* content */}
+  
     id: 'ai-video-editing-suite'
     name: 'AI Video Editing Suite'
     tagline: 'Professional video editing powered by artificial intelligence'
@@ -5241,14 +5241,14 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     ]
     marketSize: '$3.2B video editing software market'
     growthRate: '45% annual growth'
-    contactInfo: {/* content */}
+    contactInfo: 
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
     }
   }
-  {/* content */}
+  
     id: 'ai-data-analytics-platform'
     name: 'AI Data Analytics Platform'
     tagline: 'Transform raw data into actionable insights with AI'
@@ -5308,14 +5308,14 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     competitors: ['Tableau', 'Power BI', 'Looker', 'QlikView', 'Domo']
     marketSize: '$23.4B business intelligence market'
     growthRate: '38% annual growth'
-    contactInfo: {/* content */}
+    contactInfo: 
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
     }
   }
-  {/* content */}
+  
     id: 'ai-hr-recruitment-platform'
     name: 'AI HR Recruitment Platform'
     tagline: 'Streamline hiring with AI-powered recruitment automation'
@@ -5381,14 +5381,14 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     ]
     marketSize: '$2.8B recruitment software market'
     growthRate: '42% annual growth'
-    contactInfo: {/* content */}
+    contactInfo: 
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
     }
   }
-  {/* content */}
+  
     id: 'ai-sales-automation-platform'
     name: 'AI Sales Automation Platform'
     tagline: 'Boost sales performance with intelligent automation'
@@ -5454,14 +5454,14 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     ]
     marketSize: '$18.6B CRM market'
     growthRate: '33% annual growth'
-    contactInfo: {/* content */}
+    contactInfo: 
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
     }
   }
-  {/* content */}
+  
     id: 'ai-market-research-platform'
     name: 'AI Market Research Platform'
     tagline: 'Discover market opportunities with AI-powered research'
@@ -5525,14 +5525,14 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     ]
     marketSize: '$1.9B market research market'
     growthRate: '28% annual growth'
-    contactInfo: {/* content */}
+    contactInfo: 
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
     }
   }
-  {/* content */}
+  
     id: 'ai-blockchain-analytics'
     name: 'AI Blockchain Analytics Platform'
     tagline: 'Advanced blockchain intelligence and analytics'
@@ -5596,14 +5596,14 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     ]
     marketSize: '$1.2B blockchain analytics market'
     growthRate: '65% annual growth'
-    contactInfo: {/* content */}
+    contactInfo: 
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
     }
   }
-  {/* content */}
+  
     id: 'ai-cloud-cost-optimizer'
     name: 'AI Cloud Cost Optimizer'
     tagline: 'Reduce cloud costs by up to 40% with AI optimization'
@@ -5668,14 +5668,14 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     ]
     marketSize: '$4.8B cloud cost management market'
     growthRate: '52% annual growth'
-    contactInfo: {/* content */}
+    contactInfo: 
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
     }
   }
-  {/* content */}
+  
     id: 'ai-database-performance-monitor'
     name: 'AI Database Performance Monitor'
     tagline: 'Optimize database performance with AI-powered monitoring'
@@ -5708,14 +5708,14 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     rating: 4.6
     reviews: 134
   }
-  {/* content */}
+  
     id: 'ai-email-responder-pro'
     name: 'AI Email Responder Pro'
     tagline: 'Auto-triage and reply to routine emails with guardrails'
     description:
       'Autonomously classifies, drafts, and sends compliant replies to routine inbound emails. Escalates complex cases with context packs and suggested responses.'
     category: 'Productivity & Automation'
-    price: {/* content */}
+    price: 
       monthly: 79
       yearly: 790
       currency: 'USD'
@@ -5763,14 +5763,14 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     rating: 4.7
     reviews: 46
   }
-  {/* content */}
+  
     id: 'mobile-conversational-surveys'
     name: 'Mobile Conversational Surveys'
     tagline: 'Adaptive, chat-style surveys with higher completion rates'
     description:
       'Create mobile-first, conversational surveys that adapt based on answers. Real-time analytics and webhook exports.'
     category: 'Marketing & Research'
-    price: {/* content */}
+    price: 
       monthly: 49
       yearly: 490
       currency: 'USD'
@@ -5810,14 +5810,14 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     rating: 4.6
     reviews: 22
   }
-  {/* content */}
+  
     id: 'niche-productivity-planner'
     name: 'Niche Productivity Planner'
     tagline: 'Opinionated project boards, tailored to your industry'
     description:
       'Pre-built workflows, dashboards, and automations tailored per industry vertical with exportable templates.'
     category: 'Operations'
-    price: {/* content */}
+    price: 
       monthly: 39
       yearly: 390
       currency: 'USD'
@@ -5853,14 +5853,14 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     rating: 4.5
     reviews: 14
   }
-  {/* content */}
+  
     id: 'event-management-dashboard'
     name: 'Event Management Dashboard'
     tagline: 'Tickets, scheduling, engagement analytics in one place'
     description:
       'Plan and manage events end-to-end. Handle ticketing, agenda, speaker management, sponsor pages, and live engagement.'
     category: 'Media & Events'
-    price: {/* content */}
+    price: 
       monthly: 129
       yearly: 1290
       currency: 'USD'
@@ -5895,14 +5895,14 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     rating: 4.6
     reviews: 18
   }
-  {/* content */}
+  
     id: 'affiliate-tracking-suite'
     name: 'Affiliate Tracking Suite'
     tagline: 'Links, attribution, commissions, payouts—no spreadsheet required'
     description:
       'Manage affiliates with custom links, multi-touch attribution, fraud checks, and automated commission payouts.'
     category: 'Growth'
-    price: {/* content */}
+    price: 
       monthly: 99
       yearly: 990
       currency: 'USD'
@@ -5937,14 +5937,14 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     rating: 4.4
     reviews: 12
   }
-  {/* content */}
+  
     id: 'smb-website-analytics'
     name: 'SMB Website Analytics'
     tagline: 'Privacy-friendly analytics with actionable insights'
     description:
       'Simple dashboards for traffic, engagement, and conversions—no cookies by default. Alerts for anomalies and goals.'
     category: 'Analytics'
-    price: {/* content */}
+    price: 
       monthly: 29
       yearly: 290
       currency: 'USD'
@@ -5979,14 +5979,14 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     rating: 4.7
     reviews: 28
   }
-  {/* content */}
+  
     id: 'it-helpdesk-lite'
     name: 'IT Helpdesk Lite'
     tagline: 'Tickets, SLA timers, knowledge base, portal—ready day one'
     description:
       'Streamlined helpdesk for MSPs and internal IT with email-to-ticket, SLA rules, automations, and a searchable KB.'
     category: 'IT & Operations'
-    price: {/* content */}
+    price: 
       monthly: 59
       yearly: 590
       currency: 'USD'
@@ -6020,14 +6020,14 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     rating: 4.5
     reviews: 31
   }
-  {/* content */}
+  
     id: 'ecommerce-return-manager'
     name: 'E‑commerce Return Manager'
     tagline: 'Customer-friendly returns with labels and status tracking'
     description:
       'Automate RMA creation, generate labels, track statuses, and sync inventory updates to your store.'
     category: 'E‑commerce'
-    price: {/* content */}
+    price: 
       monthly: 79
       yearly: 790
       currency: 'USD'
@@ -6062,14 +6062,14 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     rating: 4.4
     reviews: 19
   }
-  {/* content */}
+  
     id: 'auto-email-followups'
     name: 'Automated Email Follow‑ups'
     tagline: 'Cadence sequences for leads with AI personalization'
     description:
       'Consistent multi-touch follow-ups with AI-personalized snippets from CRM context and recent events.'
     category: 'Sales'
-    price: {/* content */}
+    price: 
       monthly: 49
       yearly: 490
       currency: 'USD'
@@ -6104,14 +6104,14 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     rating: 4.5
     reviews: 17
   }
-  {/* content */}
+  
     id: 'podcast-transcription-studio'
     name: 'Podcast Transcription Studio'
     tagline: 'Accurate transcripts, show notes, and highlights'
     description:
       'Upload your episodes and receive transcripts, summaries, chapters, and social-ready highlights in minutes.'
     category: 'Media & Content'
-    price: {/* content */}
+    price: 
       monthly: 39
       yearly: 390
       currency: 'USD'
@@ -6145,14 +6145,14 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     rating: 4.7
     reviews: 52
   }
-  {/* content */}
+  
     id: 'ai-knowledge-graph-studio'
     name: 'AI Knowledge Graph Studio'
     tagline: 'Build semantic graphs for RAG and lineage in minutes'
     description:
       'Auto-extract entities and relationships from docs to construct a knowledge graph with search, lineage, and governance.'
     category: 'AI & Data'
-    price: {/* content */}
+    price: 
       monthly: 199
       yearly: 1990
       currency: 'USD'
@@ -6187,14 +6187,14 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     rating: 4.8
     reviews: 11
   }
-  {/* content */}
+  
     id: 'llm-guarded-api-gateway'
     name: 'LLM Guarded API Gateway'
     tagline: 'Policy, safety, metering and routing for GenAI apps'
     description:
       'A hardened gateway with prompt filtering, PII redaction, usage caps, and multi-provider routing.'
     category: 'AI & Platform'
-    price: {/* content */}
+    price: 
       monthly: 299
       yearly: 2990
       currency: 'USD'
@@ -6229,14 +6229,14 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     rating: 4.8
     reviews: 13
   }
-  {/* content */}
+  
     id: 'serverless-lakehouse-starter'
     name: 'Serverless Lakehouse Starter'
     tagline: 'Spin up ELT + dbt + dashboards in a day'
     description:
       'Opinionated stack for event collection, ELT pipelines, dbt models, and BI dashboards with infra as code.'
     category: 'Data & Analytics'
-    price: {/* content */}
+    price: 
       monthly: 249
       yearly: 2490
       currency: 'USD'
@@ -6270,14 +6270,14 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     rating: 4.6
     reviews: 7
   }
-  {/* content */}
+  
     id: 'data-contracts-hub'
     name: 'Data Contracts Hub'
     tagline: 'Diff schemas, enforce CI gates, and prevent breaking changes'
     description:
       'Manage dataset contracts with schema versioning, diffs, and CI checks to prevent downstream breakages.'
     category: 'Data & Platform'
-    price: {/* content */}
+    price: 
       monthly: 129
       yearly: 1290
       currency: 'USD'
@@ -6312,7 +6312,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     reviews: 6
   },];
 // Helper functions
-export const getServicesByCategory = (category: string) => {/* content */}
+export const getServicesByCategory = (category: string) => 
     roi: 'Reduce data breakage incidents by 50–70%.';
     use_cases: ['Warehouse governance_analytics contracts'];
     integrations: ['dbtGitHubBigQuery'];
@@ -6327,7 +6327,7 @@ export const getServicesByCategory = (category: string) => {/* content */}
   }
 ];
 // Helper functions
-export const getServicesByCategory = (category: string) => {/* content */}
+export const getServicesByCategory = (category: string) => 
   return realMicroSaasServices && realMicroSaasServices.filter(service => service && service.category === category);
 marketPosition: 'Lightweight alternative to Typeform and SurveySparrow with better mobile UX.';
 competitors: ['TypeformSurveySparrowTally'];
@@ -6340,7 +6340,7 @@ implementationDetails: 'Template gallery, response store, analytics, export jobs
 ];
 ;
 // Helper functions;
-export const getServicesByCategory = (category: string) =>: any {/* content */}
+export const getServicesByCategory = (category: string) =>: any 
   return realMicroSaasServices.filter (service => service.category === category);
 market_position: 'Lightweight alternative to Typeform and SurveySparrow with better mobile UX.';
 competitors: ['TypeformSurveySparrowTally'];

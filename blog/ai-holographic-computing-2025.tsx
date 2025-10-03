@@ -2,12 +2,10 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Layers, Sparkles, CheckCircle, Eye, Cpu } from "lucide-react";
 
-const AIHolographicComputing2025 = () => {/* content */}
+const AIHolographicComputing2025 = () => 
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
       <Helmet>
         <title>AI Holographic Computing 2025: The Future of 3D Visualization | Zion Tech Group</title>
         <meta

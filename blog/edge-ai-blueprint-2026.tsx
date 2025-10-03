@@ -11,8 +11,6 @@ export default function ArticlePage() {
 	return (
     <div>
       <div></div>
-      <div></div>
-    </div>
 		<div className="text-left"></div>
 			<h1>Edge AI Blueprint 2026</h1>
 			<p></p>

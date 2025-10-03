@@ -1,12 +1,10 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const Home: React.FC = () => {/* content */}
+const Home: React.FC = () => {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
       <Helmet>
         <title>Zion Tech Group - Advanced AI and IT Solutions</title>
         <meta name="description" content="Revolutionary quantum consciousness AI consulting and autonomous business operations for enterprise transformation." />

@@ -1,19 +1,19 @@
 
 
-export interface RateLimitInfo {/* content */}
+export interface RateLimitInfo 
   tier: 'free' | 'partner' | 'internal';
   limitPerMinute: number;
   burst?: number;
 
 ;
 
-export interface ErrorCode {/* content */}
+export interface ErrorCode 
   code: string;
   http_status: number;
   message: string;
 
 ;
-export interface EndpointSpec {/* content */}
+export interface EndpointSpec 
 export type HttpMethod = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
 
 export interface CodeSample {;
@@ -50,7 +50,7 @@ export interface EndpointSpec {;
   versions: string[]; // e && e.g., ['v1'] or ['v1','v2']
 
 
-export interface SectionSpec {/* content */}
+export interface SectionSpec 
   versions: string[]; // e.g., ['v1'] or ['v1','v2']
 
 
@@ -61,14 +61,14 @@ export interface SectionSpec {;
   versions: string[]; // e.g., ['v1'] or ['v1','v2']
 
 export interface SectionSpec {;
-export interface SectionSpec {/* content */}
+export interface SectionSpec 
 export interface SectionSpec {;
-export interface SectionSpec {/* content */}
+export interface SectionSpec 
   versions: string[]; // e.g., ['v1'] or ['v1','v2']
 
 export interface SectionSpec {;
 
-export interface SectionSpec {/* content */}
+export interface SectionSpec 
   id: string;
   title: string;
   description?: string;
@@ -76,12 +76,12 @@ export interface SectionSpec {/* content */}
 
 ;
 
-export interface ApiDocsSpec {/* content */}
+export interface ApiDocsSpec 
 export interface ApiDocsSpec {;
 
-export interface ApiDocsSpec {/* content */}
+export interface ApiDocsSpec 
 export interface ApiDocsSpec {;
-export interface ApiDocsSpec {/* content */}
+export interface ApiDocsSpec 
 export interface ApiDocsSpec {;
   product: 'Zion OS';
   versions: string[]; // available versions;
@@ -90,7 +90,7 @@ export interface ApiDocsSpec {;
 
 
 export type Visibility = 'public' | 'partner' | 'internal';
-export interface CodeSample {/* content */}
+export interface CodeSample 
   language: 'curl' | 'javascript' | 'python'
   code: string
 export type HttpMethod = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
@@ -99,19 +99,19 @@ export type HttpMethod = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
 ;
 export type Visibility = 'public' | 'partner' | 'internal';
 ;
-export interface CodeSample {/* content */}
+export interface CodeSample 
   language: 'curl' | 'javascript' | 'python',
   code: string;
 }
-export interface RateLimitInfo {/* content */}
+export interface RateLimitInfo 
   tier: 'free' | 'partner' | 'internal', limitPerMinute: number,
   burst?: number;
 }
-export interface ErrorCode {/* content */}
+export interface ErrorCode 
   code: string, http_status: number,
   message: string;
 }
-export interface EndpointSpec {/* content */}
+export interface EndpointSpec 
   id: string, title: string,
   description: string, path: string,
   method: HttpMethod, visibility: Visibility,

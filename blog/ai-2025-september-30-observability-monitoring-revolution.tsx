@@ -6,8 +6,6 @@ export default function AI2025September30ObservabilityMonitoringRevolution() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <article className="text-left"></a>
       <div className="text-left"></div>
         {/* Hero Section */}
@@ -183,7 +181,7 @@ export default function AI2025September30ObservabilityMonitoringRevolution() {
                 <pre className="text-left"></p>
 {`import { trace } from "@observability/llm";
 
-const completion = await trace.llm.call({/* content */}
+const completion = await trace.llm.call(
   model: "gpt-4
   prompt: userQuery,
   metadata: { userId, sessionId }
@@ -198,7 +196,7 @@ const completion = await trace.llm.call({/* content */}
                   toxicity, and validate outputs against custom business rules.
                 </p>
                 <pre className="text-left"></p>
-{`const evaluation = await evaluator.check({/* content */}
+{`const evaluation = await evaluator.check(
   output: completion.text,
   checks: [
     "hallucination

@@ -7,8 +7,6 @@ export default function AIEdgeIntelligence2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>AI Edge Intelligence 2025: Processing at the Speed of Thought | Zion Tech Group</title>

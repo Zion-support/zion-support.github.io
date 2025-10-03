@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {/* content */}
+export const metadata: Metadata = 
   title: 'AI Content Generator | Zion Tech Group - Automated Content Creation',
   description: 'AI-powered content generation for blogs, social media, and marketing. GPT-4 powered systems with SEO optimization and multi-language support.',
   keywords: 'AI content generator, automated content creation, GPT-4, blog writing, social media content, SEO content',
@@ -13,8 +13,6 @@ export default function AIContentGeneratorPage() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div className="text-left"></div>
       {/* Hero Section */}</div>
       <section className="text-left"></section>

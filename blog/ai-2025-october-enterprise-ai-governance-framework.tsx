@@ -13,7 +13,7 @@ export const metadata = {
   slug: 'ai-2025-october-enterprise-ai-governance-framework'
 };
 
-const EnterpriseAIGovernanceFramework2025: React.FC = () => {/* content */}
+const EnterpriseAIGovernanceFramework2025: React.FC = () => 
   return (
   <div></div>
     <article className="text-left"></a>

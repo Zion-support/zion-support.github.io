@@ -1,6 +1,6 @@
 import React from 'react';
 
-const AIAutonomousSupplyChain2025: React.FC = () => {/* content */}
+const AIAutonomousSupplyChain2025: React.FC = () => 
   return (
   <div></div>
     <article className="text-left"></a>
@@ -149,14 +149,14 @@ const AIAutonomousSupplyChain2025: React.FC = () => {/* content */}
 {`// Autonomous Supply Chain Platform Configuration
 import { SupplyChainOrchestrator, AIAgent } from '@zion/supply-chain-ai';
 
-const supplyChain = new SupplyChainOrchestrator({/* content */}
+const supplyChain = new SupplyChainOrchestrator(
   mode: 'fully-autonomous',
   decisionLatency: '&lt;5min',
   confidenceThreshold: 0.92
 });
 
 // Deploy specialized AI agents
-const demandAgent = new AIAgent({/* content */}
+const demandAgent = new AIAgent(
   type: 'demand-forecasting',
   model: 'transformer-ensemble',
   horizon: '90-days',
@@ -164,14 +164,14 @@ const demandAgent = new AIAgent({/* content */}
   accuracy: 0.92
 });
 
-const logisticsAgent = new AIAgent({/* content */}
+const logisticsAgent = new AIAgent(
   type: 'logistics-optimization',
   objectives: ['cost', 'speed', 'reliability'],
   constraints: ['capacity', 'regulations', 'sustainability'],
   optimization: 'multi-objective-genetic-algorithm'
 });
 
-const riskAgent = new AIAgent({/* content */}
+const riskAgent = new AIAgent(
   type: 'risk-monitoring',
   dataStreams: ['news', 'weather', 'port-data', 'financial', 'social'],
   predictionWindow: '45-days',
@@ -179,23 +179,23 @@ const riskAgent = new AIAgent({/* content */}
 });
 
 // Configure autonomous decision making
-supplyChain.configureAutonomy({/* content */}
+supplyChain.configureAutonomy(
   // Automatic execution without human approval for low-risk decisions
-  autoExecute: {/* content */}
+  autoExecute: 
     routineOrders: true,          // Standard replenishment
     tacticalRouting: true,         // Minor route optimizations
     inventoryRebalancing: true     // Stock transfers
   },
   
   // Human-in-the-loop for high-impact decisions
-  requireApproval: {/* content */}
+  requireApproval: 
     strategicSourcing: true,       // New supplier contracts
     majorRerouting: true,          // >$50K cost impact
     capacityExpansion: true        // Capital investments
   },
   
   // Continuous learning from outcomes
-  reinforcementLearning: {/* content */}
+  reinforcementLearning: 
     enabled: true,
     feedback: 'multi-objective',   // Cost, speed, quality, sustainability
     updateFrequency: 'daily'
@@ -203,7 +203,7 @@ supplyChain.configureAutonomy({/* content */}
 });
 
 // Connect to enterprise systems
-await supplyChain.integrateWith({/* content */}
+await supplyChain.integrateWith(
   erp: 'SAP-S4HANA',
   tms: 'Oracle-Transportation',
   wms: 'Manhattan-Associates',

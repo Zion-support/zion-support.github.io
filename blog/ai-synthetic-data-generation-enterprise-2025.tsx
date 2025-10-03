@@ -1,12 +1,10 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const AISyntheticDataGenerationEnterprise2025: React.FC = () => {/* content */}
+const AISyntheticDataGenerationEnterprise2025: React.FC = () => 
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
       <Helmet>
         <title>Enterprise Synthetic Data Generation — 10x Faster Model Training, 100% Privacy | Zion Tech Group</title>
         <meta name="description" content="Master enterprise synthetic data generation with AI. Achieve 10x faster model training, eliminate privacy concerns, and unlock unlimited datasets. Complete guide to production-ready synthetic data pipelines." />

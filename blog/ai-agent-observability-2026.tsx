@@ -7,8 +7,6 @@ export default function AIAgentObservability2026() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>AI Agent Observability 2026: Metrics, Traces, and Guardrails | Zion Tech Group</title>

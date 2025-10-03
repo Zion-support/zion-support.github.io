@@ -17,8 +17,6 @@ export default function AIIntelligentDataFabric2026() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <article className="text-left"></a>
       <header className="text-left">
         <div className="text-left"></div>

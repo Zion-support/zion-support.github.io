@@ -1,39 +1,39 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 
-const Services: React.FC = () => {/* content */}
+const Services: React.FC = () => {
   const services = [
-    {/* content */}
+    
       title: 'AI Autonomous Operations',
       description: 'Self-healing infrastructure and autonomous operations that reduce costs by 70% and achieve 99.9% uptime.',
       icon: '🤖',
       href: '/services/autonomous-operations'
     },
-    {/* content */}
+    
       title: 'Quantum Computing Solutions',
       description: 'Revolutionary quantum computing that delivers 2000x processing speed improvements for complex calculations.',
       icon: '⚡',
       href: '/services/quantum-computing'
     },
-    {/* content */}
+    
       title: 'Advanced Cybersecurity AI',
       description: 'Next-generation AI-powered cybersecurity solutions with 99.9% threat detection accuracy.',
       icon: '🛡️',
       href: '/services/cybersecurity'
     },
-    {/* content */}
+    
       title: 'Enterprise AI Consulting',
       description: 'Strategic AI implementation guidance that transforms business operations and drives exponential growth.',
       icon: '🎯',
       href: '/services/consulting'
     },
-    {/* content */}
+    
       title: 'Cloud Migration Services',
       description: 'Seamless cloud migration with zero downtime, ensuring business continuity and improved scalability.',
       icon: '☁️',
       href: '/services/cloud-migration'
     },
-    {/* content */}
+    
       title: 'Digital Transformation',
       description: 'Complete digital transformation solutions that modernize operations and enhance customer experiences.',
       icon: '🔄',

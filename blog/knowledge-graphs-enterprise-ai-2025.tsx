@@ -1,12 +1,10 @@
 import { Helmet } from 'react-helmet-async';
 import { Network, Brain, Zap, CheckCircle, Database, TrendingUp, Link, Search } from 'lucide-react';
 
-const KnowledgeGraphsEnterpriseAI2025 = () => {/* content */}
+const KnowledgeGraphsEnterpriseAI2025 = () => 
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
       <Helmet>
         <title>Knowledge Graphs for Enterprise AI: Semantic Intelligence at Scale 2025 | Zion Tech Group</title>
         <meta
@@ -208,7 +206,7 @@ class KnowledgeGraphBuilder:
                 session.run("""
                     MATCH (c:Customer {id: $customer_id})
                     MATCH (p:Product {id: $product_id})
-                    CREATE (c)-[:PURCHASED {/* content */}
+                    CREATE (c)-[:PURCHASED 
                         date: $date,
                         amount: $amount
                     }]->(p)

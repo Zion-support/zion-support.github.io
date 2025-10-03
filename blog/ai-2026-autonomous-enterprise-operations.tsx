@@ -7,8 +7,6 @@ export default function AIAutonomousEnterpriseOperations2026() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div className="text-left"></div>
       {/* Hero Section */}
       <header className="text-left">
@@ -72,19 +70,19 @@ export default function AIAutonomousEnterpriseOperations2026() {
 
           <div className="text-left"></div>
             {[
-              {/* content */}
+              
                 icon: <Bot className="text-left" />,
                 title: 'Self-Managing Processes',
                 description: 'AI systems that autonomously design, implement, and optimize business processes based on real-time performance data.',
                 impact: '98% automation rate'
               },
-              {/* content */}
+              
                 icon: <Target className="text-left" />,
                 title: 'Strategic Decision Making',
                 description: 'Autonomous AI that makes complex strategic decisions, balancing multiple objectives and constraints in real-time.',
                 impact: '95% decision accuracy'
               },
-              {/* content */}
+              
                 icon: <Zap className="text-left" />,
                 title: 'Continuous Optimization',
                 description: 'Systems that continuously learn, adapt, and optimize operations to achieve peak performance across all metrics.',

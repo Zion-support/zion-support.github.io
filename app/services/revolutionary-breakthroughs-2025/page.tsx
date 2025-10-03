@@ -5,8 +5,8 @@ import { revolutionaryBreakthroughs2025, breakthroughServices2025, latestCaseStu
 export default function RevolutionaryBreakthroughs2025() {
   return (
     <div>/* content */}
-  const getIconComponent = (icon: string) => {/* content */}
-    const iconMap: { [key: string]: React.ComponentType<any> } = {/* content */}
+  const getIconComponent = (icon: string) => 
+    const iconMap: { [key: string]: React.ComponentType<any> } = 
       '🧠': Brain,
       '⚛️': Atom,
       '🤖': Bot,
@@ -20,8 +20,6 @@ export default function RevolutionaryBreakthroughs2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div className="text-left"></div>
       {/* Hero Section */}
       <section className="text-left"></section>
@@ -96,13 +94,11 @@ export default function RevolutionaryBreakthroughs2025() {
           </div>
 
           <div className="text-left"></div>
-            {revolutionaryBreakthroughs2025.map((breakthrough, index) => {/* content */}
+            {revolutionaryBreakthroughs2025.map((breakthrough, index) => 
               const IconComponent = getIconComponent(breakthrough.icon);
               return (
     <div>
       <div></div>
-      <div></div>
-    </div>
                 <div
                   key={breakthrough.id}
                   className="text-left"></div>
@@ -184,13 +180,11 @@ export default function RevolutionaryBreakthroughs2025() {
           </div>
 
           <div className="text-left"></div>
-            {breakthroughServices2025.map((service, index) => {/* content */}
+            {breakthroughServices2025.map((service, index) => 
               const IconComponent = getIconComponent(service.icon);
               return (
     <div>
       <div></div>
-      <div></div>
-    </div>
                 <div
                   key={service.id}
                   className="text-left"></div>

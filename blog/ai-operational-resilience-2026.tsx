@@ -7,8 +7,6 @@ export default function AIOperationalResilience2026() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>AI Operational Resilience 2026: Designing for Failure and Recovery | Zion Tech Group</title>
@@ -61,8 +59,8 @@ export default function AIOperationalResilience2026() {
                   Write executable policies for safety, finance, and compliance. Run them pre-deploy and continuously in prod.
                 </p>
                 <div className="text-left"></div>
-                  <pre className="text-left">{`policy "pii_access" {/* content */}
-  when tool == "data.lookup" && contains(input.fields, "email") {/* content */}
+                  <pre className="text-left">{`policy "pii_access" 
+  when tool == "data.lookup" && contains(input.fields, "email") 
     require approval(level: "manager")
     mask output.fields: ["email", "ssn"]
   }

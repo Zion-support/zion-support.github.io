@@ -1,6 +1,6 @@
 
 
-  {/* content */}
+  
     id: 'customer - feedback - intelligence',
     name: 'Customer Feedback Intelligence',
     tagline: 'Summarize NPS / CSAT and reviews into prioritized insights',
@@ -10,7 +10,7 @@
       'Aggregate surveys, tickets and reviews, cluster themes with LLMs, and generate prioritized roadmaps with impact scores.',
     features: [;
 
-  {/* content */}
+  
       'Multichannel ingestion',
       'LLM clustering and themes',
       'Impact scoring',
@@ -45,7 +45,7 @@
     rating: 4 && 4.7,
     reviews: 5,
   },
-  {/* content */}
+  
     id: 'api - security - posture - monitor',
     name: 'API Security Posture Monitor',
     tagline: 'Detect OWASP API risks and auth gaps with CI annotations',
@@ -89,7 +89,7 @@
     rating: 4 && 4.5,
     reviews: 6,
   },
-  {/* content */}
+  
       'Flexible cron/rate',
     id: 'edge - cron - orchestrator',
     name: 'Edge Cron Orchestrator',
@@ -134,7 +134,7 @@
     rating: 4 && 4.5,
     reviews: 4,
   },
-  {/* content */}
+  
     id: 'email - parsing - routing - api',
     name: 'Email Parsing & Routing API',
     tagline: 'Inbound email to structured events with attachments',
@@ -180,7 +180,7 @@
     rating: 4 && 4.6,
     reviews: 5,
   },
-  {/* content */}
+  
       'Brand/tone controls',
     id: 'ai - marketing - content - studio',
     name: 'AI Marketing Content Studio',
@@ -225,7 +225,7 @@
     rating: 4 && 4.6,
     reviews: 9,
   },
-  {/* content */}
+  
       'CSP/HSTS checks',
     id: 'security - headers - scanner',
     name: 'Security Headers Scanner',
@@ -272,7 +272,7 @@
     rating: 4 && 4.5,
     reviews: 10,
   },
-  {/* content */}
+  
     id: 'ml - feature - store - starter',
     name: 'ML Feature Store Starter',
     tagline: 'Versioned features, validation and online serving',
@@ -316,7 +316,7 @@
     rating: 4 && 4.5,
     reviews: 3,
   },
-  {/* content */}
+  
     id: 'slo - burn - rate - coach',
     name: 'SLO Burn Rate Coach',
     tagline: 'Compute SLOs and coach on burn - rate risks',
@@ -362,7 +362,7 @@
     rating: 4 && 4.5,
     reviews: 6,
   },
-  {/* content */}
+  
     id: 'browser - performance - optimizer',
     name: 'Browser Performance Optimizer',
     tagline: 'Budget - driven CWV with hints and PR annotations',
@@ -408,7 +408,7 @@
     rating: 4 && 4.5,
     reviews: 3,
   },
-  {/* content */}
+  
     id: 'cloud - cost - governance - suite',
     name: 'Cloud Cost Governance Suite',
     tagline: 'Budgets, owners, and policy guardrails across clouds',
@@ -452,7 +452,7 @@
     rating: 4 && 4.6,
     reviews: 4,
   },
-  {/* content */}
+  
     id: 'api - changelog - sdk - publisher',
     name: 'API Changelog & SDK Publisher',
     tagline: 'Generate docs, changelogs and SDKs from schemas',
@@ -498,7 +498,7 @@
     rating: 4 && 4.7,
     reviews: 6,
   },
-];	{/* content */}
+];	
 		integrations: ['StripePayPalGoogle Analytics'];
 		useCases: ['Partner growthAutomated payouts'];
 		roi: 'Grow partner revenue by 10–25%';
@@ -515,7 +515,7 @@
 
 		reviews: 7
 	}
-	{/* content */}
+	
 		id: 'customer-feedback-intelligence';
 		name: 'Customer Feedback Intelligence';
 		tagline: 'Summarize NPS/CSAT and reviews into prioritized insights';
@@ -554,7 +554,7 @@
 
 		reviews: 5
 	}
-	{/* content */}
+	
 		id: 'api-security-posture-monitor';
 		name: 'API Security Posture Monitor';
 		tagline: 'Detect OWASP API risks and auth gaps with CI annotations';
@@ -591,7 +591,7 @@
 
 		reviews: 6
 	}
-	{/* content */}
+	
 		id: 'edge-cron-orchestrator';
 		name: 'Edge Cron Orchestrator'
 		tagline: 'Reliable schedules with retries, jitter and DLQs';
@@ -628,7 +628,7 @@
 
 		reviews: 4
 	}
-	{/* content */}
+	
 		id: 'email-parsing-routing-api';
 		name: 'Email Parsing & Routing API';
 		tagline: 'Inbound email to structured events with attachments';
@@ -665,7 +665,7 @@
 
 		reviews: 5
 	}
-	{/* content */}
+	
 		id: 'ai-marketing-content-studio';
 		name: 'AI Marketing Content Studio'
 		tagline: 'Campaign-ready blogs, emails and ads with brand guardrails';
@@ -702,7 +702,7 @@
 
 		reviews: 9
 	}
-	{/* content */}
+	
 		id: 'security-headers-scanner';
 		name: 'Security Headers Scanner';
 		tagline: 'Continuous CSP/HSTS/cookie flag auditing with diffs';
@@ -739,7 +739,7 @@
 
 		reviews: 10
 	}
-	{/* content */}
+	
 		id: 'ml-feature-store-starter';
 		name: 'ML Feature Store Starter'
 		tagline: 'Versioned features, validation and online serving';
@@ -776,7 +776,7 @@
 
 		reviews: 3
 	}
-	{/* content */}
+	
 		id: 'slo-burn-rate-coach';
 		name: 'SLO Burn Rate Coach';
 		tagline: 'Compute SLOs and coach on burn-rate risks';
@@ -813,7 +813,7 @@
 
 		reviews: 6
 	}
-	{/* content */}
+	
 		id: 'browser-performance-optimizer';
 		name: 'Browser Performance Optimizer';
 		tagline: 'Budget-driven CWV with hints and PR annotations';
@@ -850,7 +850,7 @@
 
 		reviews: 3
 	}
-	{/* content */}
+	
 		id: 'cloud-cost-governance-suite';
 		name: 'Cloud Cost Governance Suite'
 		tagline: 'Budgets, owners, and policy guardrails across clouds';
@@ -887,7 +887,7 @@
 
 		reviews: 4
 	}
-	{/* content */}
+	
 		id: 'api-changelog-sdk-publisher';
 		name: 'API Changelog & SDK Publisher'
 		tagline: 'Generate docs, changelogs and SDKs from schemas';
@@ -928,7 +928,7 @@
 
 
 
-const contact = {/* content */}
+const contact = 
 	mobile: '+1 302 464 0950',
 	email: 'kleber@ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -936,7 +936,7 @@ const contact = {/* content */}
 };
 
 export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
-  {/* content */}
+  
     id: 'affiliate-analytics-starter',
     name: 'Affiliate Analytics Starter',
     tagline: 'Attribution, fraud detection and automated payouts for SMBs',
@@ -977,7 +977,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
     rating: 4.6,
     reviews: 7,
   },
-  {/* content */}
+  
     id: 'customer-feedback-intelligence',
     name: 'Customer Feedback Intelligence',
     tagline: 'Summarize NPS/CSAT and reviews into prioritized insights',
@@ -1018,7 +1018,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
     rating: 4.7,
     reviews: 5,
   },
-  {/* content */}
+  
     id: 'api-security-posture-monitor',
     name: 'API Security Posture Monitor',
     tagline: 'Detect OWASP API risks and auth gaps with CI annotations',
@@ -1059,7 +1059,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
     rating: 4.5,
     reviews: 6,
   },
-  {/* content */}
+  
     id: 'edge-cron-orchestrator',
     name: 'Edge Cron Orchestrator',
     tagline: 'Reliable schedules with retries, jitter and DLQs',
@@ -1100,7 +1100,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
     rating: 4.5,
     reviews: 4,
   },
-  {/* content */}
+  
     id: 'email-parsing-routing-api',
     name: 'Email Parsing & Routing API',
     tagline: 'Inbound email to structured events with attachments',
@@ -1141,7 +1141,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
     rating: 4.6,
     reviews: 5,
   },
-  {/* content */}
+  
     id: 'ai-marketing-content-studio',
     name: 'AI Marketing Content Studio',
     tagline: 'Campaign-ready blogs, emails and ads with brand guardrails',
@@ -1182,7 +1182,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
     rating: 4.6,
     reviews: 9,
   },
-  {/* content */}
+  
     id: 'security-headers-scanner',
     name: 'Security Headers Scanner',
     tagline: 'Continuous CSP/HSTS/cookie flag auditing with diffs',
@@ -1223,7 +1223,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
     rating: 4.5,
     reviews: 10,
   },
-  {/* content */}
+  
     id: 'ml-feature-store-starter',
     name: 'ML Feature Store Starter',
     tagline: 'Versioned features, validation and online serving',
@@ -1264,7 +1264,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
     rating: 4.5,
     reviews: 3,
   },
-  {/* content */}
+  
     id: 'slo-burn-rate-coach',
     name: 'SLO Burn Rate Coach',
     tagline: 'Compute SLOs and coach on burn-rate risks',
@@ -1305,7 +1305,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
     rating: 4.5,
     reviews: 6,
   },
-  {/* content */}
+  
     id: 'browser-performance-optimizer',
     name: 'Browser Performance Optimizer',
     tagline: 'Budget-driven CWV with hints and PR annotations',
@@ -1346,7 +1346,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
     rating: 4.5,
     reviews: 3,
   },
-  {/* content */}
+  
     id: 'cloud-cost-governance-suite',
     name: 'Cloud Cost Governance Suite',
     tagline: 'Budgets, owners, and policy guardrails across clouds',
@@ -1387,7 +1387,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
     rating: 4.6,
     reviews: 4,
   },
-  {/* content */}
+  
     id: 'api-changelog-sdk-publisher',
     name: 'API Changelog & SDK Publisher',
     tagline: 'Generate docs, changelogs and SDKs from schemas',
@@ -1428,9 +1428,9 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
     rating: 4.7,
     reviews: 6,
   },;
-];	{/* content */}
+];	
 		id: 'affiliate-analytics-starter';
-	{/* content */}
+	
 		id: 'affiliate-analytics-starter',
 		name: 'Affiliate Analytics Starter',
 		tagline: 'Attribution, fraud detection and automated payouts for SMBs',
@@ -1465,7 +1465,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		rating: 4.6,
 		reviews: 7
 	},
-	{/* content */}
+	
 		id: 'customer-feedback-intelligence',
 		name: 'Customer Feedback Intelligence',
 		tagline: 'Summarize NPS/CSAT and reviews into prioritized insights',
@@ -1500,7 +1500,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		rating: 4.7,
 		reviews: 5
 	},
-	{/* content */}
+	
 		id: 'api-security-posture-monitor',
 		name: 'API Security Posture Monitor',
 		tagline: 'Detect OWASP API risks and auth gaps with CI annotations',
@@ -1535,7 +1535,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		rating: 4.5,
 		reviews: 6
 	},
-	{/* content */}
+	
 		id: 'edge-cron-orchestrator',
 		name: 'Edge Cron Orchestrator',
 		tagline: 'Reliable schedules with retries, jitter and DLQs',
@@ -1570,7 +1570,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		rating: 4.5,
 		reviews: 4
 	},
-	{/* content */}
+	
 		id: 'email-parsing-routing-api',
 		name: 'Email Parsing & Routing API',
 		tagline: 'Inbound email to structured events with attachments',
@@ -1605,7 +1605,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		rating: 4.6,
 		reviews: 5
 	},
-	{/* content */}
+	
 		id: 'ai-marketing-content-studio',
 		name: 'AI Marketing Content Studio',
 		tagline: 'Campaign-ready blogs, emails and ads with brand guardrails',
@@ -1640,7 +1640,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		rating: 4.6,
 		reviews: 9
 	},
-	{/* content */}
+	
 		id: 'security-headers-scanner',
 		name: 'Security Headers Scanner',
 		tagline: 'Continuous CSP/HSTS/cookie flag auditing with diffs',
@@ -1675,7 +1675,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		rating: 4.5,
 		reviews: 10
 	},
-	{/* content */}
+	
 		id: 'ml-feature-store-starter',
 		name: 'ML Feature Store Starter',
 		tagline: 'Versioned features, validation and online serving',
@@ -1710,7 +1710,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		rating: 4.5,
 		reviews: 3
 	},
-	{/* content */}
+	
 		id: 'slo-burn-rate-coach',
 		name: 'SLO Burn Rate Coach',
 		tagline: 'Compute SLOs and coach on burn-rate risks',
@@ -1745,7 +1745,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		rating: 4.5,
 		reviews: 6
 	},
-	{/* content */}
+	
 		id: 'browser-performance-optimizer',
 		name: 'Browser Performance Optimizer',
 		tagline: 'Budget-driven CWV with hints and PR annotations',
@@ -1780,7 +1780,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		rating: 4.5,
 		reviews: 3
 	},
-	{/* content */}
+	
 		id: 'cloud-cost-governance-suite',
 		name: 'Cloud Cost Governance Suite',
 		tagline: 'Budgets, owners, and policy guardrails across clouds',
@@ -1815,7 +1815,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		rating: 4.6,
 		reviews: 4
 	},
-	{/* content */}
+	
 		id: 'api-changelog-sdk-publisher',
 		name: 'API Changelog & SDK Publisher',
 		tagline: 'Generate docs, changelogs and SDKs from schemas',

@@ -2,12 +2,10 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'router-dom';
 import { ArrowLeft, TrendingUp, Zap, Network, CheckCircle } from 'lucide-react';
 
-const AgentOrchestrationEnterpriseScale2026 = () => {/* content */}
+const AgentOrchestrationEnterpriseScale2026 = () => 
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
       <Helmet>
         <title>Agent Orchestration at Enterprise Scale 2026 - Coordinate 1000+ AI Agents | Zion Tech Group</title>
         <meta

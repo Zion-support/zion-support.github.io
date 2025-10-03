@@ -18,8 +18,6 @@ export default function AI2027RevolutionaryBreakthroughSolutions() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div className="text-left"></div>
       {/* Hero Section */}</div>
       <div className="text-left"></div>

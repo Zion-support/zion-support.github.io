@@ -4,12 +4,10 @@ import { Link } from 'react-router-dom';
 import { ArrowLeft, Rocket, Zap, Target, TrendingUp, CheckCircle, AlertCircle } from 'lucide-react';
 import Header from '../src/components/Header';
 
-const AgenticDevOpsRevolution = () => {/* content */}
+const AgenticDevOpsRevolution = () => 
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
       <Helmet>
         <title>Agentic DevOps Revolution 2025 — Autonomous CI/CD Agents Reduce Deployment Time 90%</title>
         <meta 

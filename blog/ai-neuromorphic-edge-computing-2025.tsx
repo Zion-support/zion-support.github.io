@@ -13,8 +13,6 @@ export default function AINeuromorphicEdgeComputing2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>Neuromorphic Edge Computing: Brain-Inspired AI at 0.001W Power 2025 | Zion Tech Group</title>

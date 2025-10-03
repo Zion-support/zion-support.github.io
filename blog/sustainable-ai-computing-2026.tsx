@@ -2,12 +2,10 @@ import { ArrowLeft, Leaf, Battery, Wind, Droplet, TrendingDown, Zap } from "luci
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 
-const SustainableAIComputing2026 = () => {/* content */}
+const SustainableAIComputing2026 = () => 
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
       <Helmet>
         <title>Sustainable AI Computing 2026 | Zion Tech Group</title>
         <meta name="description" content="How green AI and sustainable computing practices are reducing AI's carbon footprint by 90% while maintaining performance. Complete guide to eco-friendly AI." />

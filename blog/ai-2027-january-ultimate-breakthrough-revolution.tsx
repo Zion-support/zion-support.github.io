@@ -2,7 +2,7 @@ import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 
-export const metadata: Metadata = {/* content */}
+export const metadata: Metadata = 
   title: 'AI 2027 January Ultimate Breakthrough Revolution - Zion Tech Group',
   description: 'Discover the revolutionary AI breakthrough of January 2027 featuring transcendent intelligence, universal consciousness, and $500B+ enterprise value generation through conscious computing.',
   keywords: 'AI 2027, January breakthrough, transcendent intelligence, universal consciousness, conscious computing, enterprise AI, $500B ROI',
@@ -14,8 +14,6 @@ export default function AI2027JanuaryUltimateBreakthroughRevolution() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div className="text-left"></div>
       {/* Hero Section */}
       <section className="text-left"></section>

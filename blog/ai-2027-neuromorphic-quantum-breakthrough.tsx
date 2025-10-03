@@ -7,8 +7,6 @@ export default function AINeuromorphicQuantumBreakthrough2027() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div className="text-left"></div>
       <article className="text-left"></a>
         <header className="text-left">

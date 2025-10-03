@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CloudFinOpsAICostOptimization2025: React.FC = () => {/* content */}
+const CloudFinOpsAICostOptimization2025: React.FC = () => 
   return (
   <div></div>
     <article className="text-left"></a>

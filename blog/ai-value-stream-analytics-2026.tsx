@@ -7,8 +7,6 @@ export default function AIValueStreamAnalytics2026() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>AI Value Stream Analytics 2026: Trace ROI from Token to Revenue | Zion Tech Group</title>

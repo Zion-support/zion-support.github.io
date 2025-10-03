@@ -15,8 +15,6 @@ export default function BlogPost() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <article className="text-left"></a>
       <h1>⚡ Neural Code Generation Platform 2025: AI-Powered Development at 10x Speed</h1>
       

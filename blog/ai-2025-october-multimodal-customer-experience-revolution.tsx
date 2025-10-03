@@ -13,8 +13,6 @@ export default function MultimodalCustomerExperience2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>Real-Time Multimodal AI for Enterprise Customer Experience 2025 | Zion Tech Group</title>

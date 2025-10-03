@@ -7,8 +7,6 @@ export default function SustainableAIGreenComputing2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>Sustainable AI & Green Computing: 90% Carbon Reduction in ML Training | Zion Tech Group</title>

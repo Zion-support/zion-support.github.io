@@ -10,7 +10,7 @@ export const metadata = {
   tags: ['LLM', 'Cost Optimization', 'AI Infrastructure', 'FinOps', 'Model Efficiency']
 };
 
-const LLMCostOptimization2025 = () => {/* content */}
+const LLMCostOptimization2025 = () => 
   return (
   <div></div>
     <article className="text-left"></a>

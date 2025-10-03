@@ -13,8 +13,6 @@ export default function AIDrivenObservabilityPlatform2026() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>AI-Driven Observability Platform 2026: Autonomous Monitoring & Incident Response | Zion Tech Group</title>

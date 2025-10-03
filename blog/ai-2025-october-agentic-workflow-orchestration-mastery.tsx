@@ -2,12 +2,10 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import BlogArticleLayout from '../components/BlogArticleLayout';
 
-const AgenticWorkflowOrchestrationMasteryArticle = () => {/* content */}
+const AgenticWorkflowOrchestrationMasteryArticle = () => 
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
       <Helmet>
         <title>Agentic Workflow Orchestration: Enterprise Automation Mastery 2025 | Zion Tech Group</title>
         <meta name="description" content="Master agentic workflow orchestration with AI agents. Fortune 500 companies achieve 89% automation, $4.7B savings, and 340% ROI with intelligent multi-agent coordination." />

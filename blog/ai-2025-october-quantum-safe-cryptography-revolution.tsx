@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import {/* content */}
+import 
   Shield,
   Lock,
   Zap,
@@ -12,12 +12,10 @@ import {/* content */}
   Network
 } from "lucide-react";
 
-const QuantumSafeCryptography = () => {/* content */}
+const QuantumSafeCryptography = () => 
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
       <Helmet>
         <title>Quantum-Safe Cryptography Revolution 2025 | Zion Tech Group</title>
         <meta

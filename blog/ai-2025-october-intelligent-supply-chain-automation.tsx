@@ -13,8 +13,6 @@ export default function IntelligentSupplyChainAutomation2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>Intelligent Supply Chain Automation 2025: AI-Powered Logistics Revolution | Zion Tech Group</title>

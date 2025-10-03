@@ -2,12 +2,10 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import BlogArticleLayout from '../components/BlogArticleLayout';
 
-const AgenticWorkflowAutomationPlatformArticle = () => {/* content */}
+const AgenticWorkflowAutomationPlatformArticle = () => 
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
       <Helmet>
         <title>Agentic Workflow Automation Platform: The Future of Enterprise Operations | Zion Tech Group</title>
         <meta name="description" content="Discover how Fortune 500 companies achieve 97% workflow automation with agentic platforms. $4.2B in efficiency gains, 89% cost reduction, and complete operational transformation." />

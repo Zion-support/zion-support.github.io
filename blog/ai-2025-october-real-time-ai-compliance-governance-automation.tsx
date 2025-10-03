@@ -13,8 +13,6 @@ export default function RealTimeAIComplianceGovernanceAutomation2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>Real-Time AI Compliance & Governance Automation 2025: 100% Regulatory Adherence | Zion Tech Group</title>

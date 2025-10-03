@@ -2,12 +2,10 @@ import { CheckCircle, Sparkles, Target, TrendingUp } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-const AIAgentEvaluations2026 = () => {/* content */}
+const AIAgentEvaluations2026 = () => 
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
       <Helmet>
         <title>AI Agent Evaluations 2026: Reliable Metrics & Safe Deployments | Zion Tech Group</title>
         <meta

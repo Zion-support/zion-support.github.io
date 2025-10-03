@@ -7,8 +7,6 @@ export default function AIPoweredDevSecOpsAutomation2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>AI-Powered DevSecOps: Automating Security in the Development Pipeline | Zion Tech Group</title>

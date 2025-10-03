@@ -22,8 +22,6 @@ export default function AI2026BreakthroughInnovationsImplementationPage() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div className="text-left"></div>
       {/* Hero Section */}</div>
       <div className="text-left"></div>

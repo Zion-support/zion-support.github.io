@@ -7,8 +7,6 @@ export default function AIPoweredDevOps2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>AI-Powered DevOps 2025: Transforming Development Pipelines | Zion Tech Group</title>

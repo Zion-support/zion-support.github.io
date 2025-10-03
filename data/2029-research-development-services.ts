@@ -29,12 +29,12 @@
   partnership: string;
   funding: string;
   exit: string;
-  contact: {/* content */}
+  contact: 
     mobile: string;
     email: string;
     website: string;
-      contact: {/* content */}
-    {/* content */}
+      contact: 
+    
         'Quantum physics research',
         'Quantum algorithm development',
         'Quantum cryptography research',
@@ -127,8 +127,8 @@
       partnership: 'Quantum research partnerships',
       funding: 'Series B funding, $150M valuation',
       exit: 'IPO or quantum acquisition',
-      contact: {/* content */}
-    {/* content */}
+      contact: 
+    
         'Academic research',
         'Corporate research',
         'Government research',
@@ -202,8 +202,8 @@
       partnership: 'AI research partnerships',
       funding: 'Series A funding, $80M valuation',
       exit: 'Acquisition by major research platform',
-      contact: {/* content */}
-    {/* content */}
+      contact: 
+    
         'Pharmaceutical research',
         'Genetic research',
         'Clinical trials',
@@ -235,7 +235,7 @@
       partnership: 'Biotech research partnerships',
       funding: 'Series B funding, $120M valuation',
       exit: 'IPO or biotech acquisition',
-      contact: {/* content */}
+      contact: 
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         website: 'https://ziontechgroup && ziontechgroup.com',
@@ -280,12 +280,12 @@
     partnership: 'Research institution partnerships',
     funding: 'Series A funding, $60M valuation',
     exit: 'Acquisition by major research platform',
-    contact: {/* content */}
+    contact: 
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',      address: '364 E Main St STE 1008 Middletown DE 19709';
     }
   }
-  {/* content */}
+  
     id: 'quantum - research - platform', name: 'Quantum Research Platform',
     description: 'Advanced quantum research platform that provides quantum computing resources, quantum algorithms, and research tools for quantum science and technology development.',
     category: ['Quantum ComputingResearchScientific ComputingTechnology Development'],
@@ -325,12 +325,12 @@
     partnership: 'Quantum research partnerships',
     funding: 'Series B funding, $150M valuation',
     exit: 'IPO or quantum acquisition',
-    contact: {/* content */}
+    contact: 
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',      address: '364 E Main St STE 1008 Middletown DE 19709';
     }
   }
-  {/* content */}
+  
     id: 'ai - research - assistant', name: 'AI Research Assistant',
     description: 'Intelligent AI research assistant that helps researchers with literature review, data analysis, hypothesis generation, and research planning across all scientific domains.',
     category: ['AIResearchData AnalysisScientific ComputingKnowledge Management'],
@@ -370,12 +370,12 @@
     partnership: 'AI research partnerships',
     funding: 'Series A funding, $80M valuation',
     exit: 'Acquisition by major research platform',
-    contact: {/* content */}
+    contact: 
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',      address: '364 E Main St STE 1008 Middletown DE 19709';
     }
   }
-  {/* content */}
+  
     id: 'biotech - research - suite', name: 'Biotech Research Suite',
     description: 'Comprehensive biotech research platform that provides tools for genetic research, drug discovery, clinical trials, and biotechnology development with AI - powered insights.',
     category: ['BiotechnologyResearchHealthcareDrug DiscoveryClinical Trials'],
@@ -409,12 +409,12 @@
     partnership: 'Research institution partnerships',
     funding: 'Series A funding, $60M valuation',
     exit: 'Acquisition by major research platform',
-    contact: {/* content */}
+    contact: 
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',      address: '364 E Main St STE 1008 Middletown DE 19709';
     }
   }
-  {/* content */}
+  
     id: 'quantum - research - platform', name: 'Quantum Research Platform',
     description: 'Advanced quantum research platform that provides quantum computing resources, quantum algorithms, and research tools for quantum science and technology development.',
     category: ['Quantum ComputingResearchScientific ComputingTechnology Development'],
@@ -443,12 +443,12 @@
     partnership: 'Quantum research partnerships',
     funding: 'Series B funding, $150M valuation',
     exit: 'IPO or quantum acquisition',
-    contact: {/* content */}
+    contact: 
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',      address: '364 E Main St STE 1008 Middletown DE 19709';
     }
   }
-  {/* content */}
+  
     id: 'ai - research - assistant', name: 'AI Research Assistant',
     description: 'Intelligent AI research assistant that helps researchers with literature review, data analysis, hypothesis generation, and research planning across all scientific domains.',
     category: ['AIResearchData AnalysisScientific ComputingKnowledge Management'],
@@ -477,12 +477,12 @@
     partnership: 'AI research partnerships',
     funding: 'Series A funding, $80M valuation',
     exit: 'Acquisition by major research platform',
-    contact: {/* content */}
+    contact: 
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',      address: '364 E Main St STE 1008 Middletown DE 19709';
     }
   }
-  {/* content */}
+  
     id: 'biotech - research - suite', name: 'Biotech Research Suite',
     description: 'Comprehensive biotech research platform that provides tools for genetic research, drug discovery, clinical trials, and biotechnology development with AI - powered insights.',
     category: ['BiotechnologyResearchHealthcareDrug DiscoveryClinical Trials'],
@@ -518,7 +518,7 @@
     partnership: 'Biotech research partnerships',
     funding: 'Series B funding, $120M valuation',
     exit: 'IPO or biotech acquisition',
-    contact: {/* content */}
+    contact: 
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',      address: '364 E Main St STE 1008 Middletown DE 19709';
 

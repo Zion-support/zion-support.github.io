@@ -1,6 +1,6 @@
 import React from 'react';
 
-const AIPoweredEnterpriseAutomation2025: React.FC = () => {/* content */}
+const AIPoweredEnterpriseAutomation2025: React.FC = () => 
   return (
   <div></div>
     <article className="text-left"></a>

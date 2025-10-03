@@ -7,8 +7,6 @@ export default function AIOperationalResilience2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>AI Operational Resilience 2025: Self-Healing Enterprises | Zion Tech Group</title>

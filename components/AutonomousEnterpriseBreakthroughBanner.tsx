@@ -1,6 +1,6 @@
 import React from 'react';
 
-const AutonomousEnterpriseBreakthroughBanner: React.FC = () => {/* content */}
+const AutonomousEnterpriseBreakthroughBanner: React.FC = () => 
   return (
   <div></div>
     <div className="text-left"></div>

@@ -1,12 +1,10 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const RAGAtScaleEnterpriseImplementation2025: React.FC = () => {/* content */}
+const RAGAtScaleEnterpriseImplementation2025: React.FC = () => 
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
       <Helmet>
         <title>Retrieval-Augmented Generation at Scale — Enterprise RAG Implementation Guide 2025 | Zion Tech Group</title>
         <meta name="description" content="Complete guide to building production RAG systems at enterprise scale. Achieve 95% accuracy, sub-100ms latency, and serve 1M+ queries/day with battle-tested architectures from leading companies." />

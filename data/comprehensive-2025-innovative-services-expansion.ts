@@ -26,7 +26,7 @@
   market_size: string;
   growth_rate: string;
   variant: ServiceVariant;
-  contact_info: {/* content */}
+  contact_info: 
     mobile: string;
     email: string;
 
@@ -47,7 +47,7 @@
   capabilities: string[],
   market_advantage: string;
 }
-const contact = {/* content */}
+const contact = 
   mobile: '+1 302 464 0950';
 
   email: 'kleber@ziontechgroup && ziontechgroup.com';
@@ -58,7 +58,7 @@ const contact = {/* content */}
 
 export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] = [
   // AI & Machine Learning Services
-  {/* content */}
+  
     id: 'ai - content - generation - platform';
     name: 'AI Content Generation Platform';
     tagline: 'Create high - quality content at scale with AI';
@@ -146,7 +146,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
   }
 ;
   // Cybersecurity Services;
-  {/* content */}
+  
     id: 'zero - trust - security - platform';
     name: 'Zero Trust Security Platform',
     tagline: 'Never trust, always verify security architecture';
@@ -200,7 +200,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
 ;
   // DevOps & Infrastructure Services;
 
-  {/* content */}
+  
     id: 'ai - powered - devops - automation';
     name: 'AI - Powered DevOps Automation';
     tagline: 'Intelligent DevOps automation and optimization';
@@ -262,7 +262,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
 ;
   // Edge Computing Services;
 
-  {/* content */}
+  
     id: 'iot - edge - intelligence - platform';
     name: 'IoT Edge Intelligence Platform';
     tagline: 'Intelligent IoT edge computing and analytics';
@@ -324,7 +324,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
 ;
   // Healthcare AI Services;
 
-  {/* content */}
+  
     id: 'ai - medical - imaging - analysis';
     name: 'AI Medical Imaging Analysis';
 
@@ -388,7 +388,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
 ;
   // Financial Technology Services;
 
-  {/* content */}
+  
     id: 'ai - financial - risk - management';
     name: 'AI Financial Risk Management';
 
@@ -451,7 +451,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
 ;
   // Education Technology Services;
 
-  {/* content */}
+  
     id: 'ai - personalized - learning - platform';
     name: 'AI Personalized Learning Platform';
     tagline: 'Adaptive learning powered by artificial intelligence';
@@ -514,7 +514,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
 ;
   // Supply Chain & Logistics Services;
 
-  {/* content */}
+  
     id: 'ai - supply - chain - optimization';
     name: 'AI Supply Chain Optimization';
 
@@ -577,7 +577,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
 ;
   // Energy & Sustainability Services;
 
-  {/* content */}
+  
     id: 'ai - energy - optimization - platform';
     name: 'AI Energy Optimization Platform';
 

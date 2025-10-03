@@ -1,5 +1,5 @@
 export const revolutionary2026MicroSaasServices = [
-  {/* content */}
+  
     name: 'Revolutionary 2026 Micro-SaaS Platform',
     path: '/services/revolutionary-2026-micro-saas-platform',
     description: 'Next-generation 2026 micro-SaaS development and deployment',
@@ -11,13 +11,13 @@ export const revolutionary2026MicroSaasServices = [
       'Scalable architecture',
       'Performance monitoring'
     ],
-    pricing: {/* content */}
+    pricing: 
       starter: '$299/month',
       professional: '$599/month',
       enterprise: 'Custom'
     }
   },
-  {/* content */}
+  
     name: 'Revolutionary 2026 SaaS Analytics',
     path: '/services/revolutionary-2026-saas-analytics',
     description: 'Intelligent 2026 SaaS performance and user analytics',
@@ -29,7 +29,7 @@ export const revolutionary2026MicroSaasServices = [
       'Real-time monitoring',
       'Advanced reporting'
     ],
-    pricing: {/* content */}
+    pricing: 
       starter: '$149/month',
       professional: '$299/month',
       enterprise: 'Custom'
@@ -44,7 +44,7 @@ export const revolutionary2026MicroSaasCategories = [
   'Revenue Optimization'
 ];
 
-export const revolutionary2026MicroSaasStats = {/* content */}
+export const revolutionary2026MicroSaasStats = 
   totalServices: 2,
   categories: 4,
   averageRating: 4.8,

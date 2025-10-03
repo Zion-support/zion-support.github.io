@@ -13,8 +13,6 @@ export default function GenerativeAISecurityBestPractices2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>Generative AI Security Best Practices 2025: Protecting Against Prompt Injection & Data Leaks | Zion Tech Group</title>

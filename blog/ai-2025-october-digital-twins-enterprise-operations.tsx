@@ -2,12 +2,10 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import BlogArticleLayout from '../components/BlogArticleLayout';
 
-const DigitalTwinsEnterpriseOperationsArticle = () => {/* content */}
+const DigitalTwinsEnterpriseOperationsArticle = () => 
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
       <Helmet>
         <title>AI-Powered Digital Twins for Enterprise Operations: Real-Time Simulation Revolution | Zion Tech Group</title>
         <meta name="description" content="Discover how Fortune 500 companies achieve $4.8B in optimization value with AI-powered digital twins. 98.7% prediction accuracy, 87% cost reduction, and complete operational transformation." />

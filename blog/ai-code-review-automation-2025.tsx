@@ -1,6 +1,6 @@
 import React from 'react';
 
-const AICodeReviewAutomation2025: React.FC = () => {/* content */}
+const AICodeReviewAutomation2025: React.FC = () => 
   return (
   <div></div>
     <article className="text-left"></a>
@@ -113,19 +113,19 @@ const AICodeReviewAutomation2025: React.FC = () => {/* content */}
           </p>
           <pre className="text-left"></p>
 {`// Pseudo-code routing logic
-function selectReviewTier(pr) {/* content */}
+function selectReviewTier(pr) 
   // Always run static analysis (cheap)
   runStaticAnalysis(pr);
   
   // Semantic analysis for code changes
-  if (pr.hasCodeChanges()) {/* content */}
+  if (pr.hasCodeChanges()) 
     runSemanticAnalysis(pr);
   }
   
   // Deep review for high-impact changes
   if (pr.touchesAuthCode() || 
       pr.linesChanged > 500 ||
-      pr.hasSchemaChanges()) {/* content */}
+      pr.hasSchemaChanges()) 
     runDeepReview(pr);
   }
   

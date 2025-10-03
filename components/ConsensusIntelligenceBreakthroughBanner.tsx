@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ConsensusIntelligenceBreakthroughBanner: React.FC = () => {/* content */}
+const ConsensusIntelligenceBreakthroughBanner: React.FC = () => 
   return (
   <div></div>
     <div className="text-left"></div>

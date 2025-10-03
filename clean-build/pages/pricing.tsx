@@ -6,7 +6,7 @@ export default function Pricing() {
   return (
     <div>/* content */}
   const plans = [
-    {/* content */}
+    
       name: 'Starter',
       price: '$2,999',
       period: 'per month',
@@ -24,7 +24,7 @@ export default function Pricing() {
       popular: false,
       cta: 'Get Started'
     },
-    {/* content */}
+    
       name: 'Professional',
       price: '$7,999',
       period: 'per month',
@@ -44,7 +44,7 @@ export default function Pricing() {
       popular: true,
       cta: 'Most Popular'
     },
-    {/* content */}
+    
       name: 'Enterprise',
       price: 'Custom',
       period: 'quote',
@@ -67,22 +67,22 @@ export default function Pricing() {
   ];
 
   const addOns = [
-    {/* content */}
+    
       name: 'Mobile App Development',
       price: '$5,000 - $15,000',
       description: 'Native iOS and Android applications with modern UI/UX design.'
     },
-    {/* content */}
+    
       name: 'AI Integration',
       price: '$3,000 - $10,000',
       description: 'Machine learning models, chatbots, and intelligent automation.'
     },
-    {/* content */}
+    
       name: 'Cloud Migration',
       price: '$2,000 - $8,000',
       description: 'Migrate your infrastructure to AWS, Azure, or Google Cloud.'
     },
-    {/* content */}
+    
       name: 'Security Audit',
       price: '$1,500 - $5,000',
       description: 'Comprehensive security assessment and vulnerability testing.'
@@ -92,8 +92,6 @@ export default function Pricing() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>Pricing - Zion Tech Group</title>
@@ -156,7 +154,7 @@ export default function Pricing() {
                   <div className="text-left"></div>
                     <Link 
                       href={plan.name === 'Enterprise' ? '/contact' : '/contact'} 
-                      className={`w-full block py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${/* content */}
+                      className={`w-full block py-3 px-6 rounded-lg font-semibold transition-all duration-300 $
                         plan.popular 
                           ? 'bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white' 
                           : 'bg-slate-700 hover:bg-slate-600 text-white'

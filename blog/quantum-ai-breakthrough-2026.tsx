@@ -6,8 +6,6 @@ export default function QuantumAIBreakthrough2026() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div className="text-left"></div>
       <div className="text-left"></div>
         <h1 className="text-left">AI 2026 Quantum Computing Breakthrough</h1>
@@ -39,8 +37,6 @@ export default function QuantumAIBreakthrough2026() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>Quantum AI Breakthrough 2026: The Next Frontier | Zion Tech Group</title>

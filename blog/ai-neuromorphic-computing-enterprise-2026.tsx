@@ -18,8 +18,6 @@ export default function NeuromorphicComputingEnterprise2026() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <article className="text-left"></a>
       {/* Hero Section */}
       <header className="text-left">

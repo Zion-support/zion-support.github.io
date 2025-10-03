@@ -6,8 +6,6 @@ export default function AIAgentOrchestrationPatterns2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <main className="text-left">
       <h1>AI Agent Orchestration Patterns (2025): Building Scalable Multi-Agent Systems</h1>
       

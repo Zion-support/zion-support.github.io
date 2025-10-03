@@ -2,12 +2,10 @@ import { ArrowLeft, Shield, CheckCircle, TrendingUp, AlertTriangle, FileCheck, S
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 
-const AIGovernanceAutomationEnterprise2026 = () => {/* content */}
+const AIGovernanceAutomationEnterprise2026 = () => 
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
       <Helmet>
         <title>AI Governance Automation 2026: Compliance at Scale | Zion Tech Group</title>
         <meta

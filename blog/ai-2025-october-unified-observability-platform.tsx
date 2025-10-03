@@ -13,8 +13,6 @@ export default function UnifiedObservabilityPlatform2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>Unified Observability Platform 2025: Single Pane of Glass for Enterprise Intelligence | Zion Tech Group</title>

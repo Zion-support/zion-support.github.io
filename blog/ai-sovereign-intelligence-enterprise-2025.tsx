@@ -13,8 +13,6 @@ export default function SovereignAIEnterprise2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>Sovereign AI Intelligence Systems 2025: Build Enterprise AI That Runs Anywhere | Zion Tech Group</title>

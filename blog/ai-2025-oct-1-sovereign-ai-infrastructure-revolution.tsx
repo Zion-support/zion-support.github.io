@@ -11,7 +11,7 @@ export const metadata = {
   readTime: "12 min read
 };
 
-const SovereignAIInfrastructureRevolution: React.FC = () => {/* content */}
+const SovereignAIInfrastructureRevolution: React.FC = () => 
   return (
   <div></div>
     <article className="text-left"></a>

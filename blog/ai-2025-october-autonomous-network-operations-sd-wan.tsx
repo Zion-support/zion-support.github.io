@@ -13,8 +13,6 @@ export default function AutonomousNetworkOperationsSDWAN2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>Autonomous Network Operations with AI-Driven SD-WAN 2025 | Zion Tech Group</title>

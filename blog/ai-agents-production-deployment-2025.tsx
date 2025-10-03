@@ -3,12 +3,10 @@ import { Helmet } from 'react-helmet-async';
 import { Calendar, Clock, User, Tag, ArrowLeft, Share2, Bookmark } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-const AIAgentsProductionDeployment2025: React.FC = () => {/* content */}
+const AIAgentsProductionDeployment2025: React.FC = () => 
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
       <Helmet>
         <title>AI Agents Production Deployment 2025: Ship Reliable Autonomous Systems | Zion Tech Group</title>
         <meta 

@@ -6,8 +6,6 @@ export default function ZeroTrustAIInfrastructure2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <main className="text-left">
       <h1>Zero Trust AI Infrastructure (2025): Secure-by-Design Architecture</h1>
       

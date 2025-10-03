@@ -15,8 +15,6 @@ export default function BlogPost() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <article className="text-left"></a>
       <h1>🛡️ AI-Powered Cybersecurity Mesh 2025: Autonomous Threat Defense at Scale</h1>
       

@@ -1,7 +1,7 @@
 import React from 'react';
 import { ArrowLeft, Calendar, Clock, User, Image, Mic, Video, TrendingUp } from 'lucide-react';
 
-const MultimodalLLMBreakthrough2025: React.FC = () => {/* content */}
+const MultimodalLLMBreakthrough2025: React.FC = () => 
   return (
   <div></div>
     <div className="text-left"></div>

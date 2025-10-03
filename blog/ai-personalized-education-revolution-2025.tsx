@@ -2,12 +2,10 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { ArrowLeft, GraduationCap, Sparkles, CheckCircle, Brain, TrendingUp } from "lucide-react";
 
-const AIPersonalizedEducationRevolution2025 = () => {/* content */}
+const AIPersonalizedEducationRevolution2025 = () => 
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
       <Helmet>
         <title>AI Personalized Education Revolution 2025: Every Student Gets a World-Class Tutor | Zion Tech Group</title>
         <meta

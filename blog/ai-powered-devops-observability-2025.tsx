@@ -1,7 +1,7 @@
 import React from 'react';
 import { ArrowLeft, Calendar, Clock, User, Share2, BookmarkPlus, TrendingUp } from 'lucide-react';
 
-const AIPoweredDevOpsObservability2025: React.FC = () => {/* content */}
+const AIPoweredDevOpsObservability2025: React.FC = () => 
   return (
   <div></div>
     <div className="text-left"></div>

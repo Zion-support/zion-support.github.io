@@ -6,8 +6,6 @@ export default function IntelligentDataPipelineOrchestration2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <main className="text-left">
       <h1 className="text-left">Intelligent Data Pipeline Orchestration 2025</h1>
       <p className="text-left">Self-optimizing data pipelines that automatically scale, recover from failures, and adapt to changing data patterns — processing 10PB+ daily with 99.99% reliability.</p>

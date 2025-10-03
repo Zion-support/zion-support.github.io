@@ -13,8 +13,6 @@ export default function IntelligentObservabilityPlatform2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>Intelligent Observability Platform 2025: AI-Powered System Intelligence | Zion Tech Group</title>
@@ -113,32 +111,32 @@ export default function IntelligentObservabilityPlatform2025() {
                   <h4 className="text-left">Implementation Example:</h4>
                   <pre className="text-left"></p>
 {`// Intelligent Observability Configuration
-const observabilityPlatform = {/* content */}
-  dataIngestion: {/* content */}
+const observabilityPlatform = 
+  dataIngestion: 
     metricsPerSecond: '10M+',
     sources: ['prometheus', 'datadog', 'cloudwatch', 'custom'],
     retention: '13_months',
     compression: 'adaptive'
   },
-  aiCapabilities: {/* content */}
-    anomalyDetection: {/* content */}
+  aiCapabilities: 
+    anomalyDetection: 
       algorithm: 'ensemble_ml',
       sensitivity: 'adaptive',
       falsePositiveRate: '&lt;0.01%',
       detectionLatency: '&lt;5_seconds'
     },
-    predictiveAnalysis: {/* content */}
+    predictiveAnalysis: 
       forecastWindow: '7_days',
       accuracy: '>95%',
       updateFrequency: 'real_time'
     },
-    rootCauseAnalysis: {/* content */}
+    rootCauseAnalysis: 
       correlationEngine: 'graph_neural_network',
       analysisTime: '&lt;30_seconds',
       accuracyRate: '94%'
     }
   },
-  alerting: {/* content */}
+  alerting: 
     intelligentGrouping: true,
     contextEnrichment: 'automatic',
     prioritization: 'ml_powered',

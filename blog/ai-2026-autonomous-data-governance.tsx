@@ -6,8 +6,6 @@ export default function AutonomousDataGovernance2026() {
 	return (
     <div>
       <div></div>
-      <div></div>
-    </div>
 		<div className="text-left"></div>
 			<main className="text-left">
 				<h1 className="text-left">Autonomous Data Governance 2026</h1>

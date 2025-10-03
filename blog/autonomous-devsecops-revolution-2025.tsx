@@ -13,8 +13,6 @@ export default function AutonomousDevSecOpsRevolution2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>Autonomous DevSecOps Revolution 2025: AI-Powered Security at Scale | Zion Tech Group</title>

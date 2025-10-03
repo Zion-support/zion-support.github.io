@@ -12,34 +12,34 @@ const POLYGONSCAN_API_KEY = process.env.POLYGONSCAN_API_KEY || '';
 
 const accounts = PRIVATE_KEY ? [PRIVATE_KEY] : [];
 
-const config: HardhatUserConfig = {/* content */}
-  solidity: {/* content */}
+const config: HardhatUserConfig = 
+  solidity: 
     version: '0.8.24',
-    settings: {/* content */}
+    settings: 
       optimizer: { enabled: true, runs: 200 },
     },
   },
-  networks: {/* content */}
-    polygon_amoy: {/* content */}
+  networks: 
+    polygon_amoy: 
       url: AMOY_RPC_URL,
       chainId: 80002,
       accounts,
       type: 'http',
     },
-    polygon_mumbai: {/* content */}
+    polygon_mumbai: 
       url: MUMBAI_RPC_URL,
       chainId: 80001,
       accounts,
       type: 'http',
     },
   },
-  // etherscan: {/* content */}
-  //   apiKey: {/* content */}
+  // etherscan: 
+  //   apiKey: 
   //     polygonAmoy: POLYGONSCAN_API_KEY,
   //     polygonMumbai: POLYGONSCAN_API_KEY,
   //   } as any,
   // },
-  paths: {/* content */}
+  paths: 
     sources: './contracts',
     tests: './test',
     cache: './cache',

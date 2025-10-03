@@ -7,8 +7,6 @@ export default function EdgeAIRevolution2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>Edge AI Revolution: Processing Intelligence at the Source in 2025 | Zion Tech Group</title>

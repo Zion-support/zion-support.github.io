@@ -18,8 +18,6 @@ export default function VisionLanguageModelsEnterprise2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <article className="text-left"></a>
       {/* Hero Section */}
       <header className="text-left">

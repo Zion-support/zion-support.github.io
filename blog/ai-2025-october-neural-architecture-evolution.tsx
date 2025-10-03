@@ -1,12 +1,10 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-export default function AINeural ArchitectureEvolution2025() {/* content */}
+export default function AINeural ArchitectureEvolution2025() 
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Helmet>
         <title>Neural Architecture Evolution: Revolutionary AI Design Patterns for 2025 | Zion Tech Group</title>

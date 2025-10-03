@@ -1,6 +1,6 @@
 // Mock test for signup auto login
-describe("Signup Auto Login", () => {/* content */}
-  it("should render without crashing", () => {/* content */}
+describe("Signup Auto Login", () => 
+  it("should render without crashing", () => 
     expect(true).toBe(true);
   });
 });

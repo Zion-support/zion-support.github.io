@@ -1,4 +1,4 @@
-export default {/* content */}
+export default 
   slug: "ai-2025-october-multi-cloud-ai-orchestration-revolution
   title: "Multi-Cloud AI Orchestration 2025: Seamless Intelligence Across AWS, Azure, GCP
   description: "Master multi-cloud AI orchestration achieving 99.98% uptime, 76% cost reduction, and seamless workload distribution across AWS, Azure, and GCP. Deploy AI anywhere without vendor lock-in.
@@ -131,7 +131,7 @@ from zion_multicloud import AIOrchestrator, OptimizationStrategy
 orchestrator = AIOrchestrator(
     clouds=['aws', 'azure', 'gcp'],
     strategy=OptimizationStrategy.COST_PERFORMANCE,
-    constraints={/* content */}
+    constraints=
         'latency_max': '50ms',
         'cost_daily_max': 50000,
         'compliance': ['SOC2', 'HIPAA', 'GDPR']
@@ -141,7 +141,7 @@ orchestrator = AIOrchestrator(
 # Deploy AI model across optimal clouds
 deployment = orchestrator.deploy_model(
     model='gpt-4-custom',
-    requirements={/* content */}
+    requirements=
         'gpu': 'A100-equivalent',
         'replicas': 100,
         'regions': ['us', 'eu', 'asia'],

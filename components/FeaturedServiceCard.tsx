@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-interface FeaturedServiceCardProps {/* content */}
+interface FeaturedServiceCardProps 
   title: string;
   description: string;
   price: string;
@@ -10,19 +10,17 @@ interface FeaturedServiceCardProps {/* content */}
   popular?: boolean;
 }
 
-export default function FeaturedServiceCard({/* content */}
+export default function FeaturedServiceCard(
   title,
   description,
   price,
   features,
   to,
   popular = false
-}: FeaturedServiceCardProps) {/* content */}
+}: FeaturedServiceCardProps) 
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div className={`bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border ${popular ? 'border-blue-300 ring-2 ring-blue-100' : 'border-gray-200'} hover:border-blue-300 relative`}></div>
       {popular && (</div>
         <div className="text-left"></div>
@@ -52,7 +50,7 @@ export default function FeaturedServiceCard({/* content */}
       
       <Link
         href={to}
-        className={`block w-full text-center py-3 px-4 rounded-lg font-semibold transition-colors ${/* content */}
+        className={`block w-full text-center py-3 px-4 rounded-lg font-semibold transition-colors $
           popular
             ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700'
             : 'bg-blue-600 text-white hover:bg-blue-700'

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const AI2026JanuaryAutonomousEnterpriseRevolutionNextGen = () => {/* content */}
+const AI2026JanuaryAutonomousEnterpriseRevolutionNextGen = () => 
   return (
   <div></div>
     <div className="text-left"></div>

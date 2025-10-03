@@ -15,8 +15,6 @@ export default function BlogPost() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <article className="text-left"></a>
       <h1>🔄 Continuous Learning Systems 2025: AI That Never Stops Improving</h1>
       

@@ -13,8 +13,6 @@ export default function IntelligentDataMeshArchitecture2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>Intelligent Data Mesh Architecture 2025: Decentralized Enterprise Data Intelligence | Zion Tech Group</title>

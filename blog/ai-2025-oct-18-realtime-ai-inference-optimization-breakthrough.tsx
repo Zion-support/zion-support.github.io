@@ -12,8 +12,6 @@ export default function RealtimeAIInferenceOptimization2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <div className="text-left"></div>
         <main className="text-left">

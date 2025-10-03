@@ -6,8 +6,6 @@ export default function AdvancedCybersecurityEvolutionBreakthrough() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <article className="text-left"></a>
       <header className="text-left">
         <div className="text-left"></div>

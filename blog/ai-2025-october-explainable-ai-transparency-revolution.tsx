@@ -13,8 +13,6 @@ export default function ExplainableAITransparencyRevolution2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>Explainable AI & Transparency Revolution 2025: Build Trust at Scale | Zion Tech Group</title>

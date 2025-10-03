@@ -1,11 +1,9 @@
 import React from 'react';
 
-export default function AIOperationalScorecardsV4_2026(): JSX.Element {/* content */}
+export default function AIOperationalScorecardsV4_2026(): JSX.Element 
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <article className="text-left"></a>
       <h1>AI Operational Scorecards v4 (2026)</h1>
       <p></p>

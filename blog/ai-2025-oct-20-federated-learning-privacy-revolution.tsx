@@ -13,8 +13,6 @@ export default function FederatedLearningPrivacyRevolution2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>Federated Learning Revolution 2025: Train AI Without Exposing Data | Zion Tech Group</title>

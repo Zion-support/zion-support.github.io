@@ -7,8 +7,6 @@ export default function QuantumMLAccelerationBreakthrough() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Helmet>
         <title>Quantum ML Acceleration Breakthrough | Zion Tech Group</title>

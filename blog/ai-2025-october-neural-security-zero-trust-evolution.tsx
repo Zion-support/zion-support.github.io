@@ -13,8 +13,6 @@ export default function NeuralSecurityZeroTrustEvolution2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>Neural Security & Zero Trust Evolution 2025: AI-Powered Cyber Defense | Zion Tech Group</title>

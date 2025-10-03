@@ -3,12 +3,10 @@ import { Helmet } from 'react-helmet-async';
 import { Calendar, Clock, User, ArrowLeft, Share2, Bookmark, TrendingUp, DollarSign } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-const MLOpsPlatformROIMeasurement2025: React.FC = () => {/* content */}
+const MLOpsPlatformROIMeasurement2025: React.FC = () => 
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
       <Helmet>
         <title>MLOps Platform ROI: Proving Value with Leading Indicators 2025 | Zion Tech Group</title>
         <meta 

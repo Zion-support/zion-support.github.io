@@ -2,12 +2,10 @@ import { Helmet } from "react-helmet-async";
 import { ArrowLeft, Palette, Sparkles, TrendingUp, CheckCircle, Wand2, Image } from "lucide-react";
 import { Link } from "react-router-dom";
 
-const AISyntheticCreativityEngine2026 = () => {/* content */}
+const AISyntheticCreativityEngine2026 = () => 
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
       <Helmet>
         <title>AI Synthetic Creativity Engine 2026: Autonomous Content Creation at Scale | Zion Tech Group</title>
         <meta

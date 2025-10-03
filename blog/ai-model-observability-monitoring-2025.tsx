@@ -1,12 +1,10 @@
 import { Helmet } from 'react-helmet-async';
 import { Activity, AlertTriangle, BarChart3, CheckCircle, Eye, LineChart, Shield, TrendingUp, Zap } from 'lucide-react';
 
-const AIModelObservabilityMonitoring2025 = () => {/* content */}
+const AIModelObservabilityMonitoring2025 = () => 
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
       <Helmet>
         <title>AI Model Observability & Monitoring 2025: Complete Production Guide | Zion Tech Group</title>
         <meta

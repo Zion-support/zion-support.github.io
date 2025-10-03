@@ -2,12 +2,10 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import BlogArticleLayout from '../components/BlogArticleLayout';
 
-const PredictiveMaintenanceAtScaleArticle = () => {/* content */}
+const PredictiveMaintenanceAtScaleArticle = () => 
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
       <Helmet>
         <title>Real-Time Predictive Maintenance at Scale: AI-Driven Asset Intelligence | Zion Tech Group</title>
         <meta name="description" content="Discover how enterprises achieve $3.7B savings with AI-powered predictive maintenance. 96.4% failure prediction accuracy, 91% downtime reduction, and 4,890% ROI at global scale." />

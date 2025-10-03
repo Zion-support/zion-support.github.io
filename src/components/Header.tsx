@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Header: React.FC = () => {/* content */}
+const Header: React.FC = () => {
   return (
   <div></div>
     <header className="bg-slate-900 border-b border-slate-800">

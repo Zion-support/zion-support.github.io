@@ -15,8 +15,6 @@ export default function BlogPost() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <article className="text-left"></a>
       <h1>💰 Intelligent AI Cost Governance: Autonomous FinOps Platform for 2025</h1>
       
@@ -301,14 +299,14 @@ npm install @ziontechgroup/cost-governance
 # Step 2: Instrument your AI services
 import { CostGovernance } from '@ziontechgroup/cost-governance';
 
-const costGov = new CostGovernance({/* content */}
+const costGov = new CostGovernance(
   apiKey: process.env.ZTG_COST_GOV_KEY,
   services: ['openai', 'anthropic', 'aws', 'azure'],
   realTimeMonitoring: true
 });
 
 # Step 3: Wrap your AI calls
-const response = await costGov.optimize({/* content */}
+const response = await costGov.optimize(
   provider: 'openai',
   model: 'gpt-4',
   prompt: userQuery,

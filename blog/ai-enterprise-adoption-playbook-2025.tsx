@@ -1,6 +1,6 @@
 import React from 'react';
 
-const AIEnterpriseAdoptionPlaybook2025 = () => {/* content */}
+const AIEnterpriseAdoptionPlaybook2025 = () => 
   return (
   <div></div>
     <div className="text-left"></div>

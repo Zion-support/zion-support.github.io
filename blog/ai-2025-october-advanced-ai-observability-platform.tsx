@@ -13,8 +13,6 @@ export default function AdvancedAIObservabilityPlatform2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>Advanced AI Observability Platform 2025: Complete System Intelligence | Zion Tech Group</title>

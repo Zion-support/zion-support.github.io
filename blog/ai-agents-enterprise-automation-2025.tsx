@@ -7,8 +7,6 @@ export default function AIAgentsEnterpriseAutomation2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>AI Agents for Enterprise Automation: 10x Productivity Gains in 2025 | Zion Tech Group</title>

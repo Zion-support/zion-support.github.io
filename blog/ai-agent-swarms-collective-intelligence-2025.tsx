@@ -7,8 +7,6 @@ export default function AIAgentSwarmsCollectiveIntelligence2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Helmet>
         <title>AI Agent Swarms: Collective Intelligence Revolutionizing Enterprise Operations | Zion Tech Group</title>

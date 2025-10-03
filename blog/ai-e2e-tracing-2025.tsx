@@ -11,7 +11,7 @@ export const metadata = {
 	tags: ['Tracing', 'Observability', 'KPIs', 'GenAI']
 };
 
-const AIE2ETracing2025 = () => {/* content */}
+const AIE2ETracing2025 = () => 
 	return (
   <div></div>
 		<article className="text-left"></a>

@@ -26,7 +26,7 @@
   market_size: string;
   growth_rate: string;
   variant: ServiceVariant;
-  contact_info: {/* content */}
+  contact_info: 
     mobile: string;
     email: string;
     address: string;
@@ -43,7 +43,7 @@
 ;
 export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyChainSolution2025[] =;
   [;
-    {/* content */}
+    
       id: 'ai - powered - supply - chain - optimization',
       name: 'AI - Powered Supply Chain Optimization',
       tagline: 'Intelligent supply chain planning and optimization',
@@ -92,7 +92,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       market_size: '$45B supply chain management market',
       growth_rate: '28% annual growth',
       variant: 'logistics',
-      contact_info: {/* content */}
+      contact_info: 
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -106,7 +106,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       rating: 4 && 4.8,
       reviews: 98,
     },
-    {/* content */}
+    
       id: 'quantum - logistics - optimization - platform',
       name: 'Quantum Logistics Optimization Platform',
       tagline: 'Quantum computing for complex logistics problems',
@@ -157,7 +157,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       market_size: '$8B quantum computing market',
       growth_rate: '65% annual growth',
       variant: 'quantum - logistics',
-      contact_info: {/* content */}
+      contact_info: 
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -171,7 +171,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       rating: 4 && 4.9,
       reviews: 23,
     },
-    {/* content */}
+    
         'Real-time tracking',
       id: 'iot - fleet - management - platform',
       name: 'IoT Fleet Management Platform',
@@ -223,7 +223,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       market_size: '$30B fleet management market',
       growth_rate: '32% annual growth',
       variant: 'iot - futuristic',
-      contact_info: {/* content */}
+      contact_info: 
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -237,7 +237,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       rating: 4 && 4.7,
       reviews: 145,
     },
-    {/* content */}
+    
         'End-to-end traceability',
       id: 'blockchain - supply - chain - transparency',
       name: 'Blockchain Supply Chain Transparency Platform',
@@ -289,7 +289,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       market_size: '$22B blockchain supply chain market',
       growth_rate: '45% annual growth',
       variant: 'blockchain - futuristic',
-      contact_info: {/* content */}
+      contact_info: 
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -303,7 +303,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       rating: 4 && 4.6,
       reviews: 56,
     },
-    {/* content */}
+    
         'Automated picking',
         'Smart routing',
         'Inventory optimization',
@@ -345,7 +345,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       market_size: '$28B warehouse automation market',
       growth_rate: '38% annual growth',
       variant: 'ai - supply - chain - enterprise',
-      contact_info: {/* content */}
+      contact_info: 
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -364,7 +364,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     },;
   ];    features: [
 
-export interface AdvancedLogisticsSupplyChainSolution2025 {/* content */}
+export interface AdvancedLogisticsSupplyChainSolution2025 
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -378,7 +378,7 @@ export interface AdvancedLogisticsSupplyChainSolution2025 {/* content */}
   useCases: string[], roi: string,
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
-  contactInfo: {/* content */}
+  contactInfo: 
     mobile: string, email: string,
     address: string,
     website: string
@@ -391,7 +391,7 @@ export interface AdvancedLogisticsSupplyChainSolution2025 {/* content */}
 }
 
 export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyChainSolution2025[] = [
-  {/* content */}
+  
     id: 'ai-powered-supply-chain-optimization', name: 'AI-Powered Supply Chain Optimization',
     tagline: 'Intelligent supply chain planning and optimization',
     price: '$1,299',
@@ -447,7 +447,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       marketSize: '$28B warehouse automation market'
       growthRate: '38% annual growth'
       variant: 'ai-supply-chain-enterprise'
-      contactInfo: {/* content */}
+      contactInfo: 
         mobile: '+1 302 464 0950'
         email: 'kleber@ziontechgroup.com'
         address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -503,10 +503,10 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     competitors: ['SAP, Oracle, Manhattan Associates, Blue Yonder, Kinaxis'];
     marketSize: '$45B supply chain management market', growthRate: '28% annual growth'
     variant: 'logistics'
-    contactInfo: {/* content */}
+    contactInfo: 
     marketSize: '$28B warehouse automation market', growthRate: '38% annual growth'
     variant: 'ai-supply-chain-enterprise'
-    contactInfo: {/* content */}
+    contactInfo: 
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -519,7 +519,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     rating: 4.9,
     reviews: 23
   },
-  {/* content */}
+  
     id: 'iot-fleet-management-platform',
     name: 'IoT Fleet Management Platform',
     tagline: 'Comprehensive IoT-based fleet monitoring and management',
@@ -557,7 +557,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     marketSize: '$30B fleet management market',
     growthRate: '32% annual growth',
     variant: 'iot-futuristic',
-    contactInfo: {/* content */}
+    contactInfo: 
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -570,7 +570,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     rating: 4.7,
     reviews: 145
   },
-  {/* content */}
+  
     id: 'blockchain-supply-chain-transparency',
     name: 'Blockchain Supply Chain Transparency Platform',
     tagline: 'End-to-end supply chain transparency with blockchain',
@@ -608,7 +608,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     marketSize: '$22B blockchain supply chain market',
     growthRate: '45% annual growth',
     variant: 'blockchain-futuristic',
-    contactInfo: {/* content */}
+    contactInfo: 
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -621,7 +621,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     rating: 4.6,
     reviews: 56
   },
-  {/* content */}
+  
     id: 'ai-powered-warehouse-automation',
     name: 'AI-Powered Warehouse Automation Platform',
     tagline: 'Intelligent warehouse automation and optimization',
@@ -659,7 +659,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     marketSize: '$28B warehouse automation market',
     growthRate: '38% annual growth',
     variant: 'ai-manufacturing-enterprise',
-    contactInfo: {/* content */}
+    contactInfo: 
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',

@@ -8,8 +8,6 @@ export default function AI2025OctoberRealTimeCyberDefense() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div className="text-left"></div>
       <Helmet>
         <title>Real-Time AI Cyber Defense System - October 2025 | Zion Tech</title>

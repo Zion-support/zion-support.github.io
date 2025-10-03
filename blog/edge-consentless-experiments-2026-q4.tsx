@@ -1,11 +1,9 @@
 import React from 'react';
 
-export default function EdgeConsentlessExperiments2026Q4(): JSX.Element {/* content */}
+export default function EdgeConsentlessExperiments2026Q4(): JSX.Element 
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <article className="text-left"></a>
       <h1>Edge Consentless Experiments 2026 Q4: <span className="text-left">&lt;100ms< A/B Without PII</h1>
       <p className="text-left">Scoped IDs, on-device metrics, and differential privacy for compliant global experiments.</p>

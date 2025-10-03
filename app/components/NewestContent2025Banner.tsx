@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 
-const NewestContent2025Banner = () => {/* content */}
+const NewestContent2025Banner = () => 
   return (
   <div></div>
     <section className="text-left"></section>
