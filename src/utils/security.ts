@@ -92,7 +92,7 @@ export function generateCSPHeader(csp: ContentSecurityPolicy): string {
   return Object.entries(csp)
     .map(([directive, value]) => {
       if (typeof value === 'boolean') {
-        return value ? directive : ';
+        return value ? directive : '';
       }
       return `${directive} ${value.join(' ')}`;
     })
@@ -175,7 +175,7 @@ export class CSRFProtection {
  * Security audit logging
  */
 export class SecurityLogger {
-  private static logLevel: 'info' | 'warn' | 'error' = 'warn;
+    private static logLevel: 'info' | 'warn' | 'error' = 'warn';
   static setLogLevel(level: 'info' | 'warn' | 'error'): void {
     this.logLevel = level;
   }
