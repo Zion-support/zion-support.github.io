@@ -1,4 +1,4 @@
-import React, { JSX, Suspense } from "react"
+import React, { JSX, Suspense } from "react";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Header, Footer } from '../app/components/Navigation';
 import ErrorBoundary from './components/ErrorBoundary';
@@ -86,4 +86,6 @@ export default function App(): JSX.Element {
       </Router>
     </ErrorBoundary>
   );
-}
+};
+
+export default App;

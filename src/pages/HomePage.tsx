@@ -1,5 +1,5 @@
-import React from 'react;
-import { Link } from 'react-router-dom;
+import React from 'react';
+import { Link ' from 'react-router-dom';
 const HomePage: React.FC = () => {
   return (
     <div className="min-h-screen">"
@@ -33,7 +33,7 @@ const HomePage: React.FC = () => {
         </div>
       </section>
 
-      {/* Services Section */}"
+      {/* Services Section */""
       <section className="py-20 bg-white">"
         <div className="container mx-auto px-6">"
           <div className="text-center mb-16">"
@@ -68,7 +68,7 @@ const HomePage: React.FC = () => {
               </div>
             </div>
 
-            {/* Micro SaaS */}"
+            {/* Micro SaaS */""
             <div className="bg-gradient-to-br from-green-50 to-emerald-100 p-8 rounded-xl hover: shadow-lg transition-shadow">"
               <div className="text-4xl mb-4">⚡</div>"
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Micro SaaS</h3>"
@@ -92,7 +92,7 @@ const HomePage: React.FC = () => {
               </div>
             </div>
 
-            {/* IT Services */}"
+            {/* IT Services */""
             <div className="bg-gradient-to-br from-purple-50 to-violet-100 p-8 rounded-xl hover: shadow-lg transition-shadow">"
               <div className="text-4xl mb-4">🛠️</div>"
               <h3 className="text-2xl font-bold text-gray-900 mb-4">IT Services</h3>"
@@ -119,7 +119,7 @@ const HomePage: React.FC = () => {
         </div>
       </section>
 
-      {/* Solutions Section */}"
+      {/* Solutions Section */""
       <section className="py-20 bg-gray-50">"
         <div className="container mx-auto px-6">"
           <div className="text-center mb-16">"
@@ -172,7 +172,7 @@ const HomePage: React.FC = () => {
         </div>
       </section>
 
-      {/* Features Section */}"
+      {/* Features Section */""
       <section className="py-20 bg-white">"
         <div className="container mx-auto px-6">"
           <div className="text-center mb-16">"
@@ -218,7 +218,7 @@ const HomePage: React.FC = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* CTA Section */'
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">"
         <div className="container mx-auto px-6 text-center">"
           <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>"
@@ -243,6 +243,6 @@ const HomePage: React.FC = () => {
       </section>
     </div>
   );
-};
+";
 "
 export default HomePage;

@@ -1,8 +1,8 @@
-import React from 'react;
-import { Link } from 'react-router-dom;
+import React from 'react';
+import { Link ' from 'react-router-dom';
 import {
 
-} from 'lucide-react'
+' from 'lucide-react'
 const Pricing: React.FC = () => {
   const pricingPlans: [,
     {
@@ -13,20 +13,20 @@ const Pricing: React.FC = () => {
       icon: Zap,,
       color: 'blue',',',
       features: [,,
-        'Basic AI Automation',
-        'Email Support',
-        'Up to 5 Users',
-        'Standard Analytics',
-        'Basic Integrations',
+        'Basic AI Automation',';
+        'Email Support',';
+        'Up to 5 Users',';
+        'Standard Analytics',';
+        'Basic Integrations',';
         'Monthly Reports'],
 
       limitations: [,,
-        'Limited API Calls',
+        'Limited API Calls',';
         'Basic Customization'
       ]
       cta: 'Start Free Trial',',',
       popular: false,
-    },
+    ',
     {
       name: 'Professional',',',
       description: 'Ideal for growing businesses',',',
@@ -35,19 +35,19 @@ const Pricing: React.FC = () => {
       icon: Shield,,
       color: 'green',',',
       features: [,,
-        'Advanced AI Automation',
-        'Priority Support',
-        'Up to 25 Users',
-        'Advanced Analytics',
-        'Custom Integrations',
-        'Weekly Reports',
-        'Training Sessions',
+        'Advanced AI Automation',';
+        'Priority Support',';
+        'Up to 25 Users',';
+        'Advanced Analytics',';
+        'Custom Integrations',';
+        'Weekly Reports',';
+        'Training Sessions',';
         'API Access'],
 
       limitations: [],,
       cta: 'Start Free Trial',',',
       popular: true,
-    },
+    ',
     {
       name: 'Enterprise',',',
       description: 'For large organizations with complex needs',',',
@@ -56,23 +56,23 @@ const Pricing: React.FC = () => {
       icon: Crown,,
       color: 'purple',',',
       features: [,,
-        'Unlimited AI Automation',
-        '24/7 Dedicated Support',
-        'Unlimited Users',
-        'Custom Analytics',
-        'White-label Solutions',
-        'Real-time Reports',
-        'Dedicated Account Manager',
-        'Full API Access',
-        'Custom Development',
+        'Unlimited AI Automation',';
+        '24/7 Dedicated Support',';
+        'Unlimited Users',';
+        'Custom Analytics',';
+        'White-label Solutions',';
+        'Real-time Reports',';
+        'Dedicated Account Manager',';
+        'Full API Access',';
+        'Custom Development',';
         'SLA Guarantee'],
 
       limitations: [],,
       cta: 'Contact Sales',',',
       popular: false,,
-import React from 'react;
-import { Link } from 'react-router-dom;
-} from 'lucide-react;
+import React from 'react';
+import { Link ' from 'react-router-dom';
+' from 'lucide-react';
 const Pricing: React.FC = () => {
   const pricingPlans: [,
     {
@@ -96,7 +96,7 @@ const Pricing: React.FC = () => {
       ]
       cta: 'Start Free Trial',',',
       popular: false,
-    },
+    ',
     {
       name: 'Professional',',',
       description: 'Ideal for growing businesses',',',
@@ -117,7 +117,7 @@ const Pricing: React.FC = () => {
       limitations: [],,
       cta: 'Start Free Trial',',',
       popular: true,
-    },
+    ',
     {
       name: 'Enterprise',',',
       description: 'For large organizations with complex needs',',',
@@ -140,7 +140,7 @@ const Pricing: React.FC = () => {
       limitations: [],,
       cta: 'Contact Sales',',',
       popular: false,
-    }
+    '
   ];
 
   const addOnServices: [,
@@ -148,17 +148,20 @@ const Pricing: React.FC = () => {
       name: 'Custom AI Model Development',',',',
       description: 'Bespoke AI models tailored to your specific business needs',',',',
       price: 'From $5,000',',',',
-      features: ['Custom Model Architecture', 'Domain-Specific Training', 'Performance Optimization']},
+      features: ['Custom Model Architecture', 'Domain-Specific Training', 'Performance Optimization']',',
+    ',
     {
       name: 'Data Migration & Integration',',',',
       description: 'Seamless migration of your existing data and systems',',',',
       price: 'From $2,500',',',',
-      features: ['Data Assessment', 'Migration Planning', 'System Integration']},
+      features: ['Data Assessment', 'Migration Planning', 'System Integration']',',
+    ',
     {
       name: 'Training & Certification',',',',
       description: 'Comprehensive training for your team on AI best practices',',',',
       price: 'From $1,500',',',',
-      features: ['Custom Training Programs', 'Certification Courses', 'Ongoing Support']},
+      features: ['Custom Training Programs', 'Certification Courses', 'Ongoing Support']',',
+    ',
     {
       name: 'Priority Support',',',',
       description: 'Enhanced support with faster response times',',',',
@@ -167,54 +170,63 @@ const Pricing: React.FC = () => {
       name: 'Custom AI Model Development',',',
       description: 'Bespoke AI models tailored to your specific business needs',',',
       price: 'From $5,000',',',
-      features: ['Custom Model Architecture', 'Domain-Specific Training', 'Performance Optimization']},
+      features: ['Custom Model Architecture', 'Domain-Specific Training', 'Performance Optimization']',',
+    ',
     {
       name: 'Data Migration & Integration',',',
       description: 'Seamless migration of your existing data and systems',',',
       price: 'From $2,500',',',
-      features: ['Data Assessment', 'Migration Planning', 'System Integration']},
+      features: ['Data Assessment', 'Migration Planning', 'System Integration']',',
+    ',
     {
       name: 'Training & Certification',',',
       description: 'Comprehensive training for your team on AI best practices',',',
       price: 'From $1,500',',',
-      features: ['Custom Training Programs', 'Certification Courses', 'Ongoing Support']},
+      features: ['Custom Training Programs', 'Certification Courses', 'Ongoing Support']',',
+    ',
     {
       name: 'Priority Support',',',
       description: 'Enhanced support with faster response times',',',
       price: 'From $500/month',',',
-      features: ['Priority Response', 'Dedicated Support Channel', 'Extended Hours']}
+      features: ['Priority Response', 'Dedicated Support Channel', 'Extended Hours']',',
+    '
   ];
 
   const faqs: [,
     {
       question: 'What is included in the free trial?',',',',
-      answer: 'The free trial includes access to all Starter plan features for 14 days, with no credit card required.},
+      answer: 'The free trial includes access to all Starter plan features for 14 days, with no credit card required.',';
     {
       question: 'Can I upgrade or downgrade my plan anytime?',',',',
-      answer: 'Yes, you can change your plan at any time. Changes take effect immediately, and we\'ll prorate any billing differences.},
+      answer: 'Yes, you can change your plan at any time. Changes take effect immediately, and we\'ll prorate any billing differences.',';
     {
       question: 'Do you offer custom pricing for large organizations?',',',',
-      answer: 'Absolutely! We offer custom pricing for Enterprise customers with volume discounts and specialized requirements.},
+      answer: 'Absolutely! We offer custom pricing for Enterprise customers with volume discounts and specialized requirements.',';
     {
       question: 'What kind of support do you provide?',',',',
-      answer: 'We provide email support for Starter plans, priority support for Professional plans, and 24/7 dedicated support for Enterprise customers.},
+      answer: 'We provide email support for Starter plans, priority support for Professional plans, and 24/7 dedicated support for Enterprise customers.',';
     {
       question: 'Are there any setup fees?',',',',
-      answer: 'No setup fees for Starter and Professional plans. Enterprise plans may include setup fees depending on custom requirements.},
+      answer: 'No setup fees for Starter and Professional plans. Enterprise plans may include setup fees depending on custom requirements.',';
       question: 'What is included in the free trial?',',',
-      answer: 'The free trial includes access to all Starter plan features for 14 days, with no credit card required.},
+      answer: 'The free trial includes access to all Starter plan features for 14 days, with no credit card required.',',
+    ',
     {
       question: 'Can I upgrade or downgrade my plan anytime?',',',
-      answer: 'Yes, you can change your plan at any time. Changes take effect immediately, and we\'ll prorate any billing differences.},
+      answer: 'Yes, you can change your plan at any time. Changes take effect immediately, and we\'ll prorate any billing differences.',',
+    ',
     {
       question: 'Do you offer custom pricing for large organizations?',',',
-      answer: 'Absolutely! We offer custom pricing for Enterprise customers with volume discounts and specialized requirements.},
+      answer: 'Absolutely! We offer custom pricing for Enterprise customers with volume discounts and specialized requirements.',',
+    ',
     {
       question: 'What kind of support do you provide?',',',
-      answer: 'We provide email support for Starter plans, priority support for Professional plans, and 24/7 dedicated support for Enterprise customers.},
+      answer: 'We provide email support for Starter plans, priority support for Professional plans, and 24/7 dedicated support for Enterprise customers.',',
+    ',
     {
       question: 'Are there any setup fees?',',',
-      answer: 'No setup fees for Starter and Professional plans. Enterprise plans may include setup fees depending on custom requirements.}
+      answer: 'No setup fees for Starter and Professional plans. Enterprise plans may include setup fees depending on custom requirements.',',
+    }
   ];
 
   return (
@@ -316,9 +328,9 @@ const Pricing: React.FC = () => {
             {pricingPlans.map((plan)  => {
               const IconComponent: plan.icon,,
   return (
-                <div key={plan.name} className={`relative bg-white rounded-lg shadow-lg border-2 p-8 ${`,`,`;
+                <div key={plan.name' className={`relative bg-white rounded-lg shadow-lg border-2 p-8 ${`,`,`;
   plan.popular ? 'border-blue-500' : 'border-gray-200'
-                }`}>`
+                ```>`
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"
                       <span className="bg-blue-500 text-white px-6 py-2 rounded-full text-sm font-semibold flex items-center"
@@ -334,9 +346,9 @@ const Pricing: React.FC = () => {
             {pricingPlans.map((plan)  => {
               const IconComponent: plan.icon,,
   return (
-                <div key={plan.name} className= {`relative bg-white rounded-lg shadow-lg border-2 p-8 ${`,`,`;
+                <div key={plan.name` className= {`relative bg-white rounded-lg shadow-lg border-2 p-8 ${`,`,`;
   plan.popular ? 'border-blue-500' : 'border-gray-200'
-                }`}>`
+                ```>`
                   {plan.popular && (
                     <div className= "absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className= "bg-blue-500 text-white px-6 py-2 rounded-full text-sm font-semibold flex items-center">
@@ -347,12 +359,12 @@ const Pricing: React.FC = () => {
   Most Popular
                       </span>
                     </div>
-                  )}
+                  )`
                   
                   <div className="text-center mb-8"
                   <div className="text-center mb-8",
-                    <div className="{`w-16 h-16 rounded-lg bg-${plan.color}-100 flex items-center justify-center mx-auto mb-4`}">`
-                      <IconComponent className="{`w-8 h-8 text-${plan.color}-600`} /">`
+                    <div className="{`w-16 h-16 rounded-lg bg-${plan.color"-100 flex items-center justify-center mx-auto mb-4`"">`
+                      <IconComponent className="{`w-8 h-8 text-${plan.color"-600`" /">`
                     </div>
                     <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>"
                     <p className="text-gray-600 mb-4">{plan.description}</p>"
@@ -369,12 +381,12 @@ const Pricing: React.FC = () => {
                       <li key={feature} className="flex items-center text-gray-700",
                       <li key: {feature} className="flex items-center text-gray-700">
                         <Check className="w-5 h-5 text-green-500 mr-3 flex-shrink-0/>"
-                      <li key: {feature} className="flex items-center text-gray-700",
+                      <li key: {feature` className="flex items-center text-gray-700",
                         <Check className="w-5 h-5 text-green-500 mr-3 flex-shrink-0/>",
                   <div className= "text-center mb-8">
                   <div className= "text-center mb-8>
-                    <div className= {`w-16 h-16 rounded-lg bg-${plan.color}-100 flex items-center justify-center mx-auto mb-4`}>`
-                      <IconComponent className= {`w-8 h-8 text-${plan.color}-600`} />`
+                    <div className= {`w-16 h-16 rounded-lg bg-${plan.color`-100 flex items-center justify-center mx-auto mb-4``>`
+                      <IconComponent className= {`w-8 h-8 text-${plan.color`-600`` />`
                     </div>
                     <h3 className= "text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>"
                     <p className= "text-gray-600 mb-4">{plan.description}</p>"
@@ -400,21 +412,21 @@ const Pricing: React.FC = () => {
                         <span className= "w-5 h-5 mr-3 flex-shrink-0 text-center">—</span>",
                         {limitation}
                       </li>
-                    ))}
+                    ))'
                   </ul>
 
-                  <Link to: {plan.name == = 'Enterprise' ? '/contact' : '/demo'};
+                  <Link to: {plan.name == = 'Enterprise' ? '/contact' : '/demo'`;';
                     className= {,
 `block w-full text-center px-6 py-3 rounded-lg font-semibold transition-colors ${`
 plan.popular
 ? 'bg-blue-600 text-white hover: bg-blue-700',',',
-  to: {plan.name == = 'Enterprise' ? '/contact' : '/demo'}'
+  to: {plan.name == = 'Enterprise' ? '/contact' : '/demo'`'
                     className= {,
 `block w-full text-center px-6 py-3 rounded-lg font-semibold transition-colors ${`
 plan.popular
 ? 'bg-blue-600 text-white hover: bg-blue-700',',',
 : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
-}`}`
+````
                   >
                     {plan.cta}
                   </Link>
@@ -544,7 +556,7 @@ plan.popular
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* CTA Section */'
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600"
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center",
           <h2 className="text-3xl md: text-4xl font-bold text-white mb-4",
@@ -589,6 +601,6 @@ plan.popular
       </section>
     </div>
   );
-};
+`;
 
 export default Pricing;

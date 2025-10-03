@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Calendar, Clock, User, Mail, Phone, CheckCircle, Star, Play } from 'lucide-react';
-const Demo: React.FC = () => {
+= () => {
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -15,6 +13,23 @@ const Demo: React.FC = () => {
     preferredTime: '',
     timeZone: '',
     message: ''
+import { Link ' from 'react-router-dom';
+import { Calendar, Clock, User, Mail, Phone, CheckCircle, Star, Play ' from 'lucide-react';
+;
+const Demo: React.FC = () => {
+  const [formData, setFormData] = useState({
+    firstName: '',',',
+    lastName: '',',',
+    email: '',',',
+    company: '',',',
+    phone: '',',',
+    jobTitle: '',',',
+    companySize: '',',',
+    useCase: '',',',
+    preferredDate: '',',',
+    preferredTime: '',',',
+    timeZone: '',',',
+    message: '',',
   });
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -22,30 +37,38 @@ const Demo: React.FC = () => {
       ...formData,
       [e.target.name]: e.target.value
     });
-  };
+  ';
 
-  const handleSubmit = (e: React.FormEvent) => {
+= (e: React.FormEvent) => {
     e.preventDefault();
     console.log('Form submitted: ', formData);
   };
+  const handleSubmit: (e: React.FormEvent)  => {,,
+  e.preventDefault();
+    console.log('Form submitted: ', formData);',',
+  ';
 
   const demoFeatures = [
     {
       title: 'AI-Powered Automation',',',
       description: 'See how our AI can automate your repetitive tasks and workflows',',',
-      icon: '🤖},
+      icon: '🤖',',
+    ',
     {
       title: 'Real-time Analytics',',',
       description: 'Experience our advanced analytics and reporting capabilities',',',
-      icon: '📊},
+      icon: '📊',',
+    ',
     {
       title: 'Custom Integrations',',',
       description: 'Learn how we can integrate with your existing systems',',',
-      icon: '🔗},
+      icon: '🔗',',
+    ',
     {
       title: 'Security & Compliance',',',
       description: 'Understand our enterprise-grade security and compliance features',',',
-      icon: '🔒}
+      icon: '🔒',',
+    '
   ];
 
   const testimonials: [,
@@ -55,42 +78,43 @@ const Demo: React.FC = () => {
       role: 'CTO',',',
       content: 'The demo showed us exactly how AI could transform our operations. The ROI was clear from day one.',',',
       rating: 5,
-    },
+    ',
     {
       name: 'Michael Chen',',',
       company: 'FinanceFlow',',',
       role: 'VP of Operations',',',
       content: "Zion Tech Group's demo was eye-opening. We saw immediate value and signed up the same week.",
       rating: 5,
-    },
+    ',
     {
       name: 'Emily Rodriguez',',',
       company: 'HealthTech Solutions',',',
       role: 'CEO',',',
       content: 'The personalized demo addressed all our specific needs. Highly recommend scheduling one.',',',
       rating: 5,
-    }
+    '
   ];
 
   const timeSlots: [,
     '9: 00 AM', '10:00 AM', '11:00 AM', '12:00 PM',',',
-    '1: 00 PM', '2:00 PM', '3:00 PM', '4:00 PM];
+    '1: 00 PM', '2:00 PM', '3:00 PM', '4:00 PM',',
+  ];
 
   const companySizes: [,
-    '1-10 employees',
-    '11-50 employees',
-    '51-200 employees',
-    '201-1000 employees',
+    '1-10 employees',';
+    '11-50 employees',';
+    '51-200 employees',';
+    '201-1000 employees',';
     '1000+ employees'
   ];
 
   const useCases: [,
-    'Process Automation',
-    'Data Analytics',
-    'Customer Service',
-    'Supply Chain Optimization',
-    'Predictive Maintenance',
-    'Document Processing',
+    'Process Automation',';
+    'Data Analytics',';
+    'Customer Service',';
+    'Supply Chain Optimization',';
+    'Predictive Maintenance',';
+    'Document Processing',';
     'Other'
   ];
 
@@ -148,19 +172,19 @@ const Demo: React.FC = () => {
         </div>
       </section>
 
-      {/* Demo Features */}
+      {/* Demo Features */'
       <section className="py-20 bg-white"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
           <div className="text-center mb-16"
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">,"
-  What You'll See in the Demo;
+  What You'll See in the Demo';
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">,"
       <section className= "py-20 bg-white">
         <div className= "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className= "text-center mb-16">
             <h2 className= "text-3xl md:text-4xl font-bold text-gray-900 mb-4">,"
-  What You'll See in the Demo;
+  What You'll See in the Demo';
             </h2>
             <p className= "text-xl text-gray-600 max-w-2xl mx-auto">,"
   Get a comprehensive overview of our AI solutions tailored to your business
@@ -185,7 +209,7 @@ const Demo: React.FC = () => {
         </div>
       </section>
 
-      {/* Demo Form */}
+      {/* Demo Form */'
       <section className="py-20 bg-gray-50"
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8"
           <div className="bg-white rounded-lg shadow-lg p-8"
@@ -202,7 +226,7 @@ const Demo: React.FC = () => {
   Book Your Demo
               </h2>
               <p className= "text-gray-600">,"
-  Fill out the form below and we'll contact you to schedule your personalized demo;
+  Fill out the form below and we'll contact you to schedule your personalized demo';
               </p>
             </div>
 
@@ -469,7 +493,7 @@ const Demo: React.FC = () => {
                 </button>
                 <p className="text-sm text-gray-500 mt-4"
                   value={formData.message}
-                  onChange={handleInputChange}
+                  onChange={handleInputChange'
                   placeholder="Tell us about your specific needs, challenges, or questions...",
                   className= "w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent",
                 />
@@ -482,7 +506,7 @@ const Demo: React.FC = () => {
                   Schedule My Demo
                 </button>
                 <p className= "text-sm text-gray-500 mt-4">
-                  * Required fields. We'll contact you within 24 hours to confirm your demo time.;
+                  * Required fields. We'll contact you within 24 hours to confirm your demo time.';
                 </p>
               </div>
             </form>
@@ -580,10 +604,10 @@ const Demo: React.FC = () => {
 };
 
 export default Demo;
-import React, { useState } from 'react;
-import { Link } from 'react-router-dom;
-import { Calendar, Clock, User, Mail, Phone, CheckCircle, Star, Play } from 'lucide-react;
-import { Helmet } from 'react-helmet-async;
+import React, { useState ' from 'react';
+import { Link ' from 'react-router-dom';
+import { Calendar, Clock, User, Mail, Phone, CheckCircle, Star, Play ' from 'lucide-react';
+import { Helmet ' from 'react-helmet-async';
 ;
 const Demo: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -595,7 +619,8 @@ const Demo: React.FC = () => {
     useCase: '',',',
     preferredTime: '',',',
     timeZone: '',',',
-    message: '});
+    message: '',',
+  });
 
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -604,22 +629,22 @@ const Demo: React.FC = () => {
     setFormData(prev: > ({ ...prev
       [name]: value
     }));
-  };
+  ';
 
   const handleSubmit: (e: React.FormEvent)  => {,
   e.preventDefault();
     // Handle form submission here
     console.log('Demo request submitted: ', formData);',',
     setIsSubmitted(true);
-  };
+  ';
 
   const useCases: [,
-    'AI Automation',
-    'Cybersecurity Solutions',
-    'Cloud Infrastructure',
-    'Data Analytics',
-    'DevOps Services',
-    'Digital Transformation',
+    'AI Automation',';
+    'Cybersecurity Solutions',';
+    'Cloud Infrastructure',';
+    'Data Analytics',';
+    'DevOps Services',';
+    'Digital Transformation',';
     'Other'
   ];
 
@@ -630,7 +655,8 @@ const Demo: React.FC = () => {
     '1: 00 PM - 2:00 PM',',',
     '2: 00 PM - 3:00 PM',',',
     '3: 00 PM - 4:00 PM',',',
-    '4: 00 PM - 5:00 PM];
+    '4: 00 PM - 5:00 PM',',
+  ];
 
   if (isSubmitted) {
     return (
@@ -744,7 +770,7 @@ const Demo: React.FC = () => {
           </div>
         </section>
 
-        {/* Demo Form */}
+        {/* Demo Form */'
         <section className="py-20 px-4 sm:px-6 lg:px-8"
           <div className="max-w-4xl mx-auto"
             <div className="bg-white rounded-lg shadow-lg p-8"
@@ -761,7 +787,7 @@ const Demo: React.FC = () => {
   Schedule Your Demo
                 </h2>
                 <p className= "text-gray-600">,"
-  Fill out the form below and we'll contact you to schedule your personalized demonstration.;
+  Fill out the form below and we'll contact you to schedule your personalized demonstration.';
                 </p>
               </div>
 
@@ -1058,6 +1084,6 @@ const Demo: React.FC = () => {
       </div>
     </>
   );
-};
+';
 
 export default Demo;

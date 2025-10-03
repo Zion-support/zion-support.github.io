@@ -38,7 +38,7 @@ const Fortune100AutonomousOperationsTransformation: () => {
   Back to Case Studies
           </Link>
 
-          {/* Header */}
+          {/* Header */"
           <div className="max-w-5xl mx-auto mb-16",
             <div className="flex items-center gap-4 mb-6 flex-wrap",
               <span className="px-4 py-2 bg-green-500/20 text-green-300 rounded-full text-sm font-semibold border border-green-500/30",

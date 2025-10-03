@@ -1,4 +1,4 @@
-import React from 'react;
+import React from 'react';
 ;
 const ImageCDNOptimizer: React.FC = () => {
   return (
@@ -116,7 +116,7 @@ const ImageCDNOptimizer: React.FC = () => {
       </div>
     </section>
   );
-};
+`;
 
 export default ImageCDNOptimizer;
 

@@ -1,5 +1,5 @@
-import React from 'react;
-import { Helmet } from 'react-helmet-async;
+import React from 'react';
+import { Helmet ' from 'react-helmet-async';
 ;
 const Team: React.FC = () => {
   return (
@@ -32,7 +32,7 @@ const Team: React.FC = () => {
       </div>
     </>
   );
-};
+';
 
 export default Team;
 ;

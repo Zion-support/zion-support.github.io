@@ -1,6 +1,6 @@
-import React from 'react;
-import { Link } from 'react-router-dom;
-import { Helmet } from 'react-helmet-async;
+import React from 'react';
+import { Link ' from 'react-router-dom';
+import { Helmet ' from 'react-helmet-async';
 const EnterpriseSolutionsPage: React.FC = () => {
   const enterpriseSolutions = [
     {
@@ -126,7 +126,7 @@ const EnterpriseSolutionsPage: React.FC = () => {
           </div>
         </section>
 
-        {/* CTA Section */}
+        {/* CTA Section */'
         <section className="py-20 bg-indigo-600 text-white">
           <div className="container mx-auto px-6 text-center">
             <h2 className="text-4xl font-bold mb-4">Ready to Transform Your Enterprise?</h2>
@@ -152,6 +152,6 @@ const EnterpriseSolutionsPage: React.FC = () => {
       </div>
     </>
   );
-};
+';
 
 export default EnterpriseSolutionsPage;

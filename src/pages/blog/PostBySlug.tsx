@@ -165,10 +165,11 @@ return (
               )}
               <span className= "flex items-center gap-1">
                 <Calendar className= "w-4 h-4/>"
-                {new Date(article.publishedAt).toLocaleDateString('en-US', { ;
+                {new Date(article.publishedAt).toLocaleDateString('en-US', { ';
                   year: 'numeric',',',
                   month: 'long',',',
-                  day: 'numeric' ,})}
+                  day: 'numeric' ,',
+                })};
               </span>
               {article.readTime && (
                 <span className="flex items-center gap-1"
@@ -184,7 +185,8 @@ return (
                 {new Date(article.publishedAt).toLocaleDateString('en-US', { '
                   year: 'numeric', ',',
                   month: 'long', ',',
-                  day: 'numeric})}
+                  day: 'numeric',',
+                })}
               </span>
               {article.readTime && (
                 <span className="flex items-center gap-1",

@@ -1,8 +1,8 @@
-import React from 'react;
-import { Helmet } from 'react-helmet-async;
-import { Globe, Shield, Search, AlertTriangle, CheckCircle, Clock, Users, ArrowRight } from 'lucide-react;
-import Header from '../../components/Header;
-import Footer from '../../components/Footer;
+import React from 'react';
+import { Helmet ' from 'react-helmet-async';
+import { Globe, Shield, Search, AlertTriangle, CheckCircle, Clock, Users, ArrowRight ' from 'lucide-react';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 const SmartContractAudit: React.FC = () => {
   const features = [
     {
@@ -360,7 +360,7 @@ const SmartContractAudit: React.FC = () => {
             
             <div className="grid md:grid-cols-3 gap-8">
               {pricing.map((plan, index) => (
-                <div key={index} className={`bg-white rounded-2xl shadow-lg p-8 ${plan.popular ? 'ring-2 ring-red-500 relative' : ''}`}>
+                <div key={index' className={`bg-white rounded-2xl shadow-lg p-8 ${plan.popular ? 'ring-2 ring-red-500 relative' : ''``}>
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-red-500 text-white px-4 py-1 rounded-full text-sm font-medium">
@@ -382,20 +382,20 @@ const SmartContractAudit: React.FC = () => {
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center">
                         <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0/>
-                        <span className="text-gray-700">{feature}</span>
+                        <span className="text-gray-700">{feature'</span>
                       </li>
-                    ))}
+                    ))`
                   </ul>
                   
                   <button className={`w-full py-3 px-6 rounded-lg font-medium transition-colors ${
                     plan.popular 
                       ? 'bg-red-600 text-white hover:bg-red-700' 
                       : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
-                  }`}>
+                  ``}>
                     Get Started
                   </button>
                 </div>
-              ))}
+              ))'
             </div>
             
             <div className="text-center mt-12">
@@ -411,7 +411,7 @@ const SmartContractAudit: React.FC = () => {
           </div>
         </section>
 
-        {/* CTA Section */}
+        {/* CTA Section */"
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
@@ -442,6 +442,6 @@ const SmartContractAudit: React.FC = () => {
       <Footer />
     </>
   );
-};
+`;
 
 export default SmartContractAudit;

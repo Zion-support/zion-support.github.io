@@ -1,7 +1,7 @@
-import React from 'react;
-import { Link } from 'react-router-dom;
-import { Helmet } from 'react-helmet-async;
-import { Check, Star } from 'lucide-react;
+import React from 'react';
+import { Link ' from 'react-router-dom';
+import { Helmet ' from 'react-helmet-async';
+import { Check, Star ' from 'lucide-react';
 const PricingPage: React.FC = () => {
   const pricingTiers = [
     {
@@ -112,11 +112,11 @@ const PricingPage: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8"
               {pricingTiers.map((tier, index) => (
                 <div 
-                  key={index} 
+                  key={index' 
                   className={`relative bg-white p-8 rounded-xl shadow-lg hover: shadow-xl transition-all duration-300 border-2 ${,`;
                     tier.popular 
                       ? 'border-purple-500 transform scale-105' 
-                      : 'border-gray-200 hover: border-gray-300}`}`;
+                      : 'border-gray-200 hover: border-gray-300````;
                 >
                   {tier.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"
@@ -140,9 +140,9 @@ const PricingPage: React.FC = () => {
                     {tier.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center"
                         <Check className="w-5 h-5 text-green-500 mr-3 flex-shrink-0/>"
-                        <span className="text-gray-700">{feature}</span>"
+                        <span className="text-gray-700">{feature'</span>"
                       </li>
-                    ))}
+                    ))`
                   </ul>
 
                   <Link 
@@ -150,7 +150,7 @@ const PricingPage: React.FC = () => {
                     className={`block w-full text-center py-3 rounded-lg font-semibold transition-all duration-300 ${`;
                       tier.popular
                         ? 'bg-gradient-to-r from-purple-600 to-violet-600 text-white hover: from-purple-700 hover:to-violet-700 shadow-lg',
-                        : 'bg-gray-900 text-white hover:bg-gray-800}`}`;
+                        : 'bg-gray-900 text-white hover:bg-gray-800````;
                   >
                     Get Started
                   </Link>
@@ -189,7 +189,7 @@ const PricingPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Enterprise Pricing */}
+        {/* Enterprise Pricing */'
         <section className="py-20 bg-gray-50"
           <div className="container mx-auto px-6"
             <div className="text-center mb-16"
@@ -261,7 +261,7 @@ const PricingPage: React.FC = () => {
           </div>
         </section>
 
-        {/* FAQ Section */}"
+        {/* FAQ Section */""
         <section className="py-20 bg-white"
           <div className="container mx-auto px-6"
             <div className="text-center mb-16"
@@ -289,7 +289,7 @@ const PricingPage: React.FC = () => {
           </div>
         </section>
 
-        {/* CTA Section */}
+        {/* CTA Section */`
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white"
           <div className="container mx-auto px-6 text-center"
             <h2 className="text-4xl font-bold mb-4">Ready to Get Started?</h2>"
@@ -315,6 +315,6 @@ const PricingPage: React.FC = () => {
       </div>
     </>
   );
-};
+";
 "
 export default PricingPage;
