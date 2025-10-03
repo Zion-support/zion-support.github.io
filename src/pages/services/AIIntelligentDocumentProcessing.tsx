@@ -543,7 +543,7 @@ const AIIntelligentDocumentProcessing: () => {
                 <ul className="space-y-3 text-sm text-zion-slate-light mb-8">
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0/>
-                    <span >Everything in Starter, plus: </span>,,
+                    <span >Everything in Starter, plus: </span>,
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0/>
@@ -562,7 +562,7 @@ const AIIntelligentDocumentProcessing: () => {
                 <ul className="space-y-3 text-sm text-zion-slate-light mb-8">","
                   <li className="flex items-start gap-2">","
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />","
-                    <span >Everything in Starter, plus: </span>,,
+                    <span >Everything in Starter, plus: </span>,
                   </li>
                   <li className="flex items-start gap-2">","
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />","
@@ -597,7 +597,7 @@ const AIIntelligentDocumentProcessing: () => {
                 <ul className="space-y-3 text-sm text-zion-slate-light mb-8">
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0/>
-                    <span >Everything in Professional, plus: </span>,,
+                    <span >Everything in Professional, plus: </span>,
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0/>
@@ -616,7 +616,7 @@ const AIIntelligentDocumentProcessing: () => {
                 <ul className="space-y-3 text-sm text-zion-slate-light mb-8">","
                   <li className="flex items-start gap-2">","
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />","
-                    <span >Everything in Professional, plus: </span>,,
+                    <span >Everything in Professional, plus: </span>,
                   </li>
                   <li className="flex items-start gap-2">","
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />","

@@ -13,7 +13,7 @@ export default function EnterpriseBlockchainIntegration2025Page(): void {
           
           <h1 className="text-4xl md: text-5xl lg:text-6xl font-extrabold mb-6 bg-gradient-to-r from-emerald-300 via-teal-300 to-cyan-300 bg-clip-text text-transparent leading-tight">","
           <h1 className="text-4xl md: text-5xl lg:text-6xl font-extrabold mb-6 bg-gradient-to-r from-emerald-300 via-teal-300 to-cyan-300 bg-clip-text text-transparent leading-tight">
-  Enterprise Blockchain Integration: Building Trust at Scale with 10,000+ TPS,,
+  Enterprise Blockchain Integration: Building Trust at Scale with 10,000+ TPS,
           </h1>
           
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
@@ -54,7 +54,7 @@ export default function EnterpriseBlockchainIntegration2025Page(): void {
           <section className="mb-12">
             <h2 className="text-3xl font-bold text-white mb-6">The Modern Enterprise Blockchain Stack</h2>
             <p className="text-gray-300 leading-relaxed mb-6">,
-  Our comprehensive blockchain platform provides everything needed for enterprise deployment: </p>,,
+  Our comprehensive blockchain platform provides everything needed for enterprise deployment: </p>,
             <div className="space-y-6">
               <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">
                 <h3 className="text-xl font-bold text-emerald-300 mb-3">⚡ High-Performance Blockchain Layer</h3>
@@ -62,7 +62,7 @@ export default function EnterpriseBlockchainIntegration2025Page(): void {
           <section className="mb-12">","
             <h2 className="text-3xl font-bold text-white mb-6">The Modern Enterprise Blockchain Stack</h2>","
             <p className="text-gray-300 leading-relaxed mb-6">
-  Our comprehensive blockchain platform provides everything needed for enterprise deployment: </p>,,
+  Our comprehensive blockchain platform provides everything needed for enterprise deployment: </p>,
             <div className="space-y-6">","
               <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">","
                 <h3 className="text-xl font-bold text-emerald-300 mb-3">⚡ High-Performance Blockchain Layer</h3>","
@@ -104,7 +104,7 @@ export default function EnterpriseBlockchainIntegration2025Page(): void {
           <section className="mb-12 bg-gradient-to-r from-emerald-500/10 to-teal-500/10 rounded-2xl p-8 border border-emerald-500/20">
             <h2 className="text-3xl font-bold text-white mb-6">Success Story: Global Supply Chain Transformation</h2>","
             <p className="text-gray-300 leading-relaxed mb-6">,
-  A multinational logistics company with operations in 150+ countries deployed our blockchain platform to track $50B in annual shipments: </p>,,
+  A multinational logistics company with operations in 150+ countries deployed our blockchain platform to track $50B in annual shipments: </p>,
             <div className="grid md: grid-cols-3 gap-4 mb-6">","
               <div className="bg-white/10 rounded-xl p-6">
                 <div className="text-3xl font-bold text-emerald-300 mb-2">92%</div>
@@ -112,7 +112,7 @@ export default function EnterpriseBlockchainIntegration2025Page(): void {
           <section className="mb-12 bg-gradient-to-r from-emerald-500/10 to-teal-500/10 rounded-2xl p-8 border border-emerald-500/20">","
             <h2 className="text-3xl font-bold text-white mb-6">Success Story: Global Supply Chain Transformation</h2>","
             <p className="text-gray-300 leading-relaxed mb-6">
-  A multinational logistics company with operations in 150+ countries deployed our blockchain platform to track $50B in annual shipments: </p>,,
+  A multinational logistics company with operations in 150+ countries deployed our blockchain platform to track $50B in annual shipments: </p>,
             <div className="grid md: grid-cols-3 gap-4 mb-6">","
               <div className="bg-white/10 rounded-xl p-6">","
                 <div className="text-3xl font-bold text-emerald-300 mb-2">92%</div>","

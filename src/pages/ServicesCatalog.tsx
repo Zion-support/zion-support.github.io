@@ -1,19 +1,19 @@
-import React from 'react'';
+import React from 'react';
 import EnhancedSEOHead from '../components/EnhancedSEOHead';
 ;
-const rows: [,,
-  { group: 'AI', name: 'RAG Chatbot for Documents', price: 'Setup $2k–$8k + $99–$499/mo', link: '/services/ai-virtual-assistant' }';';
-  { group: 'AI', name: 'Predictive Analytics', price: 'Project $3k–$12k', link: '/services/ai-data-analytics' }';';
-  { group: 'AI', name: 'Intelligent Document Processing (IDP)', price: 'Project $4k–$15k', link: '/services/ai-intelligent-document-processing' }';';
-  { group: 'Automation', name: 'Workflow Automation', price: 'Project $1.5k–$8k', link: '/services/ai-workflow-automation' }';';
-  { group: 'Automation', name: 'Appointment Scheduler (Healthcare)', price: '$99–$499/mo', link: '/services/smart-appointment-scheduler' }';';
-  { group: 'IT', name: 'Cloud Cost Optimization', price: 'Project $1.5k–$8k', link: '/services/cloud' }';';
-  { group: 'IT', name: 'Landing Zone + IaC', price: 'Project $5k–$20k', link: '/services/cloud' }';';
-  { group: 'Security', name: 'Security Assessment', price: 'Project $2k–$10k', link: '/services/security' }';';
-  { group: 'Security', name: 'SOC-lite (24/5)', price: '$999–$3,999/mo', link: '/services/security' }';';
+const rows: [
+  { group: 'AI', name: 'RAG Chatbot for Documents', price: 'Setup $2k–$8k + $99–$499/mo', link: '/services/ai-virtual-assistant' }
+  { group: 'AI', name: 'Predictive Analytics', price: 'Project $3k–$12k', link: '/services/ai-data-analytics' }
+  { group: 'AI', name: 'Intelligent Document Processing (IDP)', price: 'Project $4k–$15k', link: '/services/ai-intelligent-document-processing' }
+  { group: 'Automation', name: 'Workflow Automation', price: 'Project $1.5k–$8k', link: '/services/ai-workflow-automation' }
+  { group: 'Automation', name: 'Appointment Scheduler (Healthcare)', price: '$99–$499/mo', link: '/services/smart-appointment-scheduler' }
+  { group: 'IT', name: 'Cloud Cost Optimization', price: 'Project $1.5k–$8k', link: '/services/cloud' }
+  { group: 'IT', name: 'Landing Zone + IaC', price: 'Project $5k–$20k', link: '/services/cloud' }
+  { group: 'Security', name: 'Security Assessment', price: 'Project $2k–$10k', link: '/services/security' }
+  { group: 'Security', name: 'SOC-lite (24/5)', price: '$999–$3,999/mo', link: '/services/security' }
 ];
 
-const ServicesCatalog: React.FC: ()  => {,,,
+const ServicesCatalog: React.FC = () => {
   return (
     <>
       <EnhancedSEOHead title: "Services Catalog - Zion Tech Group

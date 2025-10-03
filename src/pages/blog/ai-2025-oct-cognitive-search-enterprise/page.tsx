@@ -32,7 +32,7 @@ export default function CognitiveSearchEnterprise2025(): void {
             
             <h1 className="text-5xl md: text-6xl font-bold mb-6 bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 text-transparent bg-clip-text leading-tight">","
             <h1 className="text-5xl md: text-6xl font-bold mb-6 bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 text-transparent bg-clip-text leading-tight">
-  Cognitive Enterprise Search: Unlocking Institutional Knowledge at Scale,,
+  Cognitive Enterprise Search: Unlocking Institutional Knowledge at Scale,
             </h1>
             
             <p className="text-xl text-gray-300 leading-relaxed">
@@ -49,11 +49,11 @@ export default function CognitiveSearchEnterprise2025(): void {
               <ul className="space-y-4 text-lg">
                 <li className="flex items-start gap-3">
                   <Search className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0/>
-                  <span ><strong >97% Answer Accuracy: </strong> AI understands context and delivers precise answers, not just documents</span>,,
+                  <span ><strong >97% Answer Accuracy: </strong> AI understands context and delivers precise answers, not just documents</span>,
                 </li>
                 <li className="flex items-start gap-3">
                   <Zap className="h-6 w-6 text-yellow-400 mt-1 flex-shrink-0/>
-                  <span ><strong >12x Faster Discovery: </strong> Find critical information in seconds instead of hours</span>,,
+                  <span ><strong >12x Faster Discovery: </strong> Find critical information in seconds instead of hours</span>,
                 </li>
                 <li className="flex items-start gap-3">
                   <TrendingUp className="h-6 w-6 text-green-400 mt-1 flex-shrink-0/>
@@ -66,15 +66,15 @@ export default function CognitiveSearchEnterprise2025(): void {
               <ul className="space-y-4 text-lg">","
                 <li className="flex items-start gap-3">","
                   <Search className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />","
-                  <span ><strong >97% Answer Accuracy: </strong> AI understands context and delivers precise answers, not just documents</span>,,
+                  <span ><strong >97% Answer Accuracy: </strong> AI understands context and delivers precise answers, not just documents</span>,
                 </li>
                 <li className="flex items-start gap-3">","
                   <Zap className="h-6 w-6 text-yellow-400 mt-1 flex-shrink-0" />","
-                  <span ><strong >12x Faster Discovery: </strong> Find critical information in seconds instead of hours</span>,,
+                  <span ><strong >12x Faster Discovery: </strong> Find critical information in seconds instead of hours</span>,
                 </li>
                 <li className="flex items-start gap-3">","
                   <TrendingUp className="h-6 w-6 text-green-400 mt-1 flex-shrink-0" />","
-                  <span ><strong >$124M+ Productivity: </strong> Employees save 8.5 hours weekly finding information</span>,,
+                  <span ><strong >$124M+ Productivity: </strong> Employees save 8.5 hours weekly finding information</span>,
                 </li>
               </ul>
             </div>

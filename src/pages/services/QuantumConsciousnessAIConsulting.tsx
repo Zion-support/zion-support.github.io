@@ -1,7 +1,7 @@
-import React from 'react'';
+import React from 'react';
 import React from 'react';'
 
-const QuantumConsciousnessAIConsulting: React.FC: ()  => {,,,
+const QuantumConsciousnessAIConsulting: React.FC = () => {
   return (
     <>
       <Helmet >
@@ -400,7 +400,7 @@ const QuantumConsciousnessAIConsulting: React.FC: ()  => {,,,
               </a>
             </div>
             <p className="text-gray-300 text-lg">
-  Limited Availability: Only 25 enterprise implementations available for 2027,,
+  Limited Availability: Only 25 enterprise implementations available for 2027,
             </p>
           </div>
         </section>

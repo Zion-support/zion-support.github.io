@@ -1,8 +1,8 @@
-import React from 'react'';
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 ;
-const MicroSaaS: React.FC: ()  => {,,,
-  const products: [,,
+const MicroSaaS: React.FC = () => {
+  const products: [
     {
       name: 'Email Deliverability Optimizer',';,';,
       price: '$149 - $799/mo',';,';,

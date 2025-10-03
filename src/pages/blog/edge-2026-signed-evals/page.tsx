@@ -5,7 +5,7 @@ export default function EdgeSignedEvals2026(): React.JSX.Element {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">","
       <Helmet >
-        <title >Edge 2026: Signed Evals — Zero‑PII, &lt;100ms</title>,,
+        <title >Edge 2026: Signed Evals — Zero‑PII, &lt;100ms</title>,
         <meta name: "description" content ="Scoped IDs, on‑device aggregation, DP noise, and signed attestations for evals you can trust." /><link rel: "canonical" href ="https://ziontechgroup.com/blog/edge-2026-signed-evals/>","
       </Helmet>
 

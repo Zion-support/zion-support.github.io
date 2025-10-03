@@ -1,6 +1,6 @@
-import React from 'react'';
-import { Helmet } from 'react-helmet-async'';
-import { Network } from 'lucide-react'';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Network } from 'lucide-react';
 import Header from '../../components/Header'';
 import Footer from '../../components/Footer'';
 import React from 'react';'
@@ -9,10 +9,10 @@ import { Network } from 'lucide-react';'
 import Header from '../../components/Header';'
 import Footer from '../../components/Footer';'
 
-const IoTEdgeComputing: React.FC: ()  => {,,,
-  const features: [,,
+const IoTEdgeComputing: React.FC = () => {
+  const features: [
     {
-      icon: Cpu,,,,
+      icon: Cpu,
       title: "Edge AI Processing",
       description: "Real-time AI inference at the edge with optimized models for low-latency decision making.",
       title: "Edge AI Processing",","
@@ -20,7 +20,7 @@ const IoTEdgeComputing: React.FC: ()  => {,,,
       benefit: "95% latency reduction","
     },
     {
-      icon: Network,,,,
+      icon: Network,
       title: "5G Integration",
       description: "Seamless 5G connectivity with edge computing for ultra-low latency applications.",
       title: "5G Integration",","
@@ -28,7 +28,7 @@ const IoTEdgeComputing: React.FC: ()  => {,,,
       benefit: "Sub-millisecond response times","
     },
     {
-      icon: Shield,,,,
+      icon: Shield,
       title: "Edge Security",
       description: "Advanced security protocols for edge devices with encrypted communication and threat detection.",
       title: "Edge Security",","
@@ -36,7 +36,7 @@ const IoTEdgeComputing: React.FC: ()  => {,,,
       benefit: "Zero-trust architecture","
     },
     {
-      icon: Database,,,,
+      icon: Database,
       title: "Data Synchronization",
       description: "Intelligent data synchronization between edge devices and cloud with conflict resolution.",
       title: "Data Synchronization",","
@@ -44,7 +44,7 @@ const IoTEdgeComputing: React.FC: ()  => {,,,
       benefit: "99.9% data consistency","
     },
     {
-      icon: Zap,,,,
+      icon: Zap,
       title: "Real-time Analytics",
       description: "Stream processing and analytics at the edge for immediate insights and actions.",
       title: "Real-time Analytics",","
@@ -52,7 +52,7 @@ const IoTEdgeComputing: React.FC: ()  => {,,,
       benefit: "Real-time decision making","
     },
     {
-      icon: Globe,,,,
+      icon: Globe,
       title: "Global Connectivity",
       description: "Worldwide IoT device management with regional compliance and data sovereignty.",
       title: "Global Connectivity",","
@@ -61,13 +61,13 @@ const IoTEdgeComputing: React.FC: ()  => {,,,
     }
   ];
 
-  const pricing: [,,
+  const pricing: [
     {
       name: "Development
       price: "$5,000
       period: "/month
       description: "Perfect for IoT projects in development and testing phases
-      features: [,,,
+      features: [
         "Up to 1,000 connected devices",";"
         "Basic edge computing capabilities",";"
         "Standard data analytics",";"
@@ -77,14 +77,14 @@ const IoTEdgeComputing: React.FC: ()  => {,,,
         "Cloud data storage (100GB)",";"
         "Standard integrations (10)"
       ]
-      popular: false,,
+      popular: false,
     },
     {
       name: "Production
       price: "$15,000
       period: "/month
       description: "Ideal for production IoT deployments with high device counts
-      features: [,,,
+      features: [
         "Up to 10,000 connected devices",";"
         "Advanced edge AI processing",";"
         "Real-time analytics & insights",";"
@@ -97,14 +97,14 @@ const IoTEdgeComputing: React.FC: ()  => {,,,
         "Edge-to-cloud synchronization",";"
         "5G connectivity support"
       ]
-      popular: true,,
+      popular: true,
     },
     {
       name: "Enterprise
       price: "$45,000
       period: "/month
       description: "Complete solution for large-scale enterprise IoT deployments
-      features: [,,,
+      features: [
         "Unlimited connected devices",";"
         "Premium edge AI with custom models",";"
         "Enterprise-grade analytics platform",";"
@@ -119,12 +119,12 @@ const IoTEdgeComputing: React.FC: ()  => {,,,
         "SLA guarantee",";"
         "On-premise edge infrastructure"
       ]
-      popular: false,,,
+      popular: false,
       name: "Development",","
       price: "$5,000",","
       period: "/month",","
       description: "Perfect for IoT projects in development and testing phases",","
-      features: [,,,
+      features: [
         "Up to 1,000 connected devices","
         "Basic edge computing capabilities","
         "Standard data analytics","
@@ -134,14 +134,14 @@ const IoTEdgeComputing: React.FC: ()  => {,,,
         "Cloud data storage (100GB)","
         "Standard integrations (10)"
       ]
-      popular: false,,
+      popular: false,
     },
     {
       name: "Production",","
       price: "$15,000",","
       period: "/month",","
       description: "Ideal for production IoT deployments with high device counts",","
-      features: [,,,
+      features: [
         "Up to 10,000 connected devices","
         "Advanced edge AI processing","
         "Real-time analytics & insights","
@@ -154,14 +154,14 @@ const IoTEdgeComputing: React.FC: ()  => {,,,
         "Edge-to-cloud synchronization","
         "5G connectivity support"
       ]
-      popular: true,,
+      popular: true,
     },
     {
       name: "Enterprise",","
       price: "$45,000",","
       period: "/month",","
       description: "Complete solution for large-scale enterprise IoT deployments",","
-      features: [,,,
+      features: [
         "Unlimited connected devices","
         "Premium edge AI with custom models","
         "Enterprise-grade analytics platform","
@@ -176,11 +176,11 @@ const IoTEdgeComputing: React.FC: ()  => {,,,
         "SLA guarantee","
         "On-premise edge infrastructure"
       ]
-      popular: false,,
+      popular: false,
     }
   ];
 
-  const testimonials: [,,
+  const testimonials: [
     {
       name: "Robert Kim",
       role: "CTO, Smart Manufacturing Corp",
@@ -188,7 +188,7 @@ const IoTEdgeComputing: React.FC: ()  => {,,,
       name: "Robert Kim",","
       role: "CTO, Smart Manufacturing Corp",","
       content: "Zion's IoT edge computing solution reduced our production line latency by 98%. Real-time quality control now catches defects instantly, saving us $2M annually.",","
-      rating: 5,,,,
+      rating: 5,
       company: "Smart Manufacturing Corp","
     },
     {
@@ -198,7 +198,7 @@ const IoTEdgeComputing: React.FC: ()  => {,,,
       name: "Sarah Williams",","
       role: "VP Technology, Smart City Initiative",","
       content: "The edge AI processing for traffic management reduced congestion by 35% and emergency response times by 50%. The system pays for itself every quarter.",","
-      rating: 5,,,,
+      rating: 5,
       company: "Smart City Initiative","
     },
     {
@@ -208,69 +208,69 @@ const IoTEdgeComputing: React.FC: ()  => {,,,
       name: "Dr. Michael Chen",","
       role: "Head of R&D, Healthcare IoT",","
       content: "Patient monitoring with edge computing ensures real-time alerts reach medical staff instantly. We've prevented 15 critical incidents this year alone.",","
-      rating: 5,,,,
+      rating: 5,
       company: "Healthcare IoT","
     }
   ];
 
-  const useCases: [,,
+  const useCases: [
     {
       title: "Smart Manufacturing",
-      icon: Cpu,,,,
+      icon: Cpu,
       description: "Real-time quality control, predictive maintenance, and automated optimization on production lines.",
       metrics: "98% defect detection accuracy",
       benefits: ["Predictive maintenance", "Quality control automation", "Energy optimization"]","
     },
     {
       title: "Smart Cities",
-      icon: Globe,,,,
+      icon: Globe,
       description: "Traffic management, environmental monitoring, and public safety systems with real-time response.",
       metrics: "35% traffic reduction",
       benefits: ["Traffic optimization", "Environmental monitoring", "Public safety alerts"]","
     },
     {
       title: "Healthcare IoT",
-      icon: Monitor,,,,
+      icon: Monitor,
       description: "Patient monitoring, medical device integration, and emergency response systems.",
       metrics: "50% faster emergency response",
       benefits: ["Real-time patient monitoring", "Medical device integration", "Emergency automation"]","
     },
     {
       title: "Retail Analytics",
-      icon: BarChart3,,,,
+      icon: BarChart3,
       description: "Customer behavior analysis, inventory management, and personalized experiences.",
       metrics: "60% inventory efficiency gain",
       benefits: ["Customer analytics", "Inventory optimization", "Personalized experiences"]
       title: "Smart Manufacturing",","
-      icon: Cpu,,,,
+      icon: Cpu,
       description: "Real-time quality control, predictive maintenance, and automated optimization on production lines.",","
       metrics: "98% defect detection accuracy",","
       benefits: ["Predictive maintenance", "Quality control automation", "Energy optimization"]","
     },
     {
       title: "Smart Cities",","
-      icon: Globe,,,,
+      icon: Globe,
       description: "Traffic management, environmental monitoring, and public safety systems with real-time response.",","
       metrics: "35% traffic reduction",","
       benefits: ["Traffic optimization", "Environmental monitoring", "Public safety alerts"]","
     },
     {
       title: "Healthcare IoT",","
-      icon: Monitor,,,,
+      icon: Monitor,
       description: "Patient monitoring, medical device integration, and emergency response systems.",","
       metrics: "50% faster emergency response",","
       benefits: ["Real-time patient monitoring", "Medical device integration", "Emergency automation"]","
     },
     {
       title: "Retail Analytics",","
-      icon: BarChart3,,,,
+      icon: BarChart3,
       description: "Customer behavior analysis, inventory management, and personalized experiences.",","
       metrics: "60% inventory efficiency gain",","
       benefits: ["Customer analytics", "Inventory optimization", "Personalized experiences"]","
     }
   ];
 
-  const industries: [,,
+  const industries: [
     { name: "Manufacturing", devices: "Industrial sensors, PLCs, robotics" }";"
     { name: "Healthcare", devices: "Patient monitors, medical devices, wearables" }";"
     { name: "Retail", devices: "POS systems, inventory sensors, customer analytics" }";"
@@ -422,14 +422,14 @@ const IoTEdgeComputing: React.FC: ()  => {,,,
 
             <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">","
               {useCases.map((useCase, index) => {
-                const Icon: useCase.icon;,,,
+                const Icon: useCase.icon;,
   return (
                   <div key: {index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">","
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-orange-100 rounded-full mb-6">
                       <Icon className="w-8 h-8 text-orange-600/>
             <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">","
               {useCases.map((useCase, index) => {
-                const Icon: useCase.icon;,,,
+                const Icon: useCase.icon;,
   return (
                   <div key: {index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">","
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-orange-100 rounded-full mb-6">","
@@ -474,7 +474,7 @@ const IoTEdgeComputing: React.FC: ()  => {,,,
 
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">","
               {features.map((feature, index) => {
-                const Icon: feature.icon;,,,
+                const Icon: feature.icon;,
   return (
                   <div key: {index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">","
                     <div className="inline-flex items-center justify-center w-12 h-12 bg-orange-100 rounded-lg mb-4">
@@ -486,7 +486,7 @@ const IoTEdgeComputing: React.FC: ()  => {,,,
                       <CheckCircle className="w-4 h-4 mr-1/>
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">","
               {features.map((feature, index) => {
-                const Icon: feature.icon;,,,
+                const Icon: feature.icon;,
   return (
                   <div key: {index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">","
                     <div className="inline-flex items-center justify-center w-12 h-12 bg-orange-100 rounded-lg mb-4">","
@@ -589,7 +589,7 @@ const IoTEdgeComputing: React.FC: ()  => {,,,
                     ))}
                   </ul>
                   <a href="/contact
-  className: {,,
+  className: {,
 `w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${`
 plan.popular
 ? 'bg-orange-600 text-white hover:bg-orange-700',';,

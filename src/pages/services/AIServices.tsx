@@ -1,8 +1,8 @@
-import React from 'react'';
-import { Helmet } from 'react-helmet-async'';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 ;
-const AIServices: React.FC: ()  => {,,,
+const AIServices: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
       <Helmet >
@@ -72,8 +72,8 @@ const AIServices: React.FC: ()  => {,,,
                 <li >• Retrieval-Augmented Generation with vector stores</li>
                 <li >• Document intake, OCR, entity extraction, validation</li>
                 <li >• Forecasting, churn/CLV models, lead scoring</li>
-                <li >• Vision: quality inspection, ID capture, redaction</li>,,
-                <li >• Observability: prompt evals, drift, PII filters</li>,,
+                <li >• Vision: quality inspection, ID capture, redaction</li>,
+                <li >• Observability: prompt evals, drift, PII filters</li>,
               </ul>
             </div>
             <div className="bg-gray-50 rounded-xl p-6">

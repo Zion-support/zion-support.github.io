@@ -1,18 +1,18 @@
-import React from 'react'';
+import React from 'react';
 import { Link } from 'react-router-dom'';
 import {
 
 } from 'lucide-react'
-const Pricing: React.FC: ()  => {,,,
-  const pricingPlans: [,,
+const Pricing: React.FC = () => {
+  const pricingPlans: [
     {
       name: 'Starter',';,';,
-      description: 'Perfect for small businesses and startups',';,';,
+      description: 'Perfect for small businesses and startups',
       price: '$99',';,';,
       period: 'month',';,';,
-      icon: Zap,,,
+      icon: Zap,
       color: 'blue',';,';,
-      features: [,,,
+      features: [
         'Basic AI Automation',';';
         'Email Support',';';
         'Up to 5 Users',';';
@@ -20,21 +20,21 @@ const Pricing: React.FC: ()  => {,,,
         'Basic Integrations',';';
         'Monthly Reports'
       ]
-      limitations: [,,,
+      limitations: [
         'Limited API Calls',';';
         'Basic Customization'
       ]
       cta: 'Start Free Trial',';,';,
-      popular: false,,
+      popular: false,
     },
     {
       name: 'Professional',';,';,
-      description: 'Ideal for growing businesses',';,';,
+      description: 'Ideal for growing businesses',
       price: '$299',';,';,
       period: 'month',';,';,
-      icon: Shield,,,
+      icon: Shield,
       color: 'green',';,';,
-      features: [,,,
+      features: [
         'Advanced AI Automation',';';
         'Priority Support',';';
         'Up to 25 Users',';';
@@ -44,18 +44,18 @@ const Pricing: React.FC: ()  => {,,,
         'Training Sessions',';';
         'API Access'
       ]
-      limitations: [],,,
+      limitations: [],
       cta: 'Start Free Trial',';,';,
-      popular: true,,
+      popular: true,
     },
     {
       name: 'Enterprise',';,';,
-      description: 'For large organizations with complex needs',';,';,
+      description: 'For large organizations with complex needs',
       price: 'Custom',';,';,
       period: 'contact us',';,';,
-      icon: Crown,,,
+      icon: Crown,
       color: 'purple',';,';,
-      features: [,,,
+      features: [
         'Unlimited AI Automation',';';
         '24/7 Dedicated Support',';';
         'Unlimited Users',';';
@@ -67,24 +67,24 @@ const Pricing: React.FC: ()  => {,,,
         'Custom Development',';';
         'SLA Guarantee'
       ]
-      limitations: [],,,
+      limitations: [],
       cta: 'Contact Sales',';,';,
-      popular: false,,,
+      popular: false,
 import React from 'react';'
 import { Link } from 'react-router-dom';'
 
 } from 'lucide-react';'
 
-const Pricing: React.FC: ()  => {,,,
-  const pricingPlans: [,,
+const Pricing: React.FC = () => {
+  const pricingPlans: [
     {
       name: 'Starter',',';,
       description: 'Perfect for small businesses and startups',',';,
       price: '$99',',';,
       period: 'month',',';,
-      icon: Zap,,,,
+      icon: Zap,
       color: 'blue',',';,
-      features: [,,,
+      features: [
         'Basic AI Automation','
         'Email Support','
         'Up to 5 Users','
@@ -92,21 +92,21 @@ const Pricing: React.FC: ()  => {,,,
         'Basic Integrations','
         'Monthly Reports'
       ]
-      limitations: [,,,
+      limitations: [
         'Limited API Calls','
         'Basic Customization'
       ]
       cta: 'Start Free Trial',',';,
-      popular: false,,
+      popular: false,
     },
     {
       name: 'Professional',',';,
       description: 'Ideal for growing businesses',',';,
       price: '$299',',';,
       period: 'month',',';,
-      icon: Shield,,,,
+      icon: Shield,
       color: 'green',',';,
-      features: [,,,
+      features: [
         'Advanced AI Automation','
         'Priority Support','
         'Up to 25 Users','
@@ -116,18 +116,18 @@ const Pricing: React.FC: ()  => {,,,
         'Training Sessions','
         'API Access'
       ]
-      limitations: [],,,,
+      limitations: [],
       cta: 'Start Free Trial',',';,
-      popular: true,,
+      popular: true,
     },
     {
       name: 'Enterprise',',';,
       description: 'For large organizations with complex needs',',';,
       price: 'Custom',',';,
       period: 'contact us',',';,
-      icon: Crown,,,,
+      icon: Crown,
       color: 'purple',',';,
-      features: [,,,
+      features: [
         'Unlimited AI Automation','
         '24/7 Dedicated Support','
         'Unlimited Users','
@@ -139,13 +139,13 @@ const Pricing: React.FC: ()  => {,,,
         'Custom Development','
         'SLA Guarantee'
       ]
-      limitations: [],,,,
+      limitations: [],
       cta: 'Contact Sales',',';,
-      popular: false,,
+      popular: false,
     }
   ];
 
-  const addOnServices: [,,
+  const addOnServices: [
     {
       name: 'Custom AI Model Development',',';,';,
       description: 'Bespoke AI models tailored to your specific business needs',',';,';,
@@ -194,7 +194,7 @@ const Pricing: React.FC: ()  => {,,,
     }
   ];
 
-  const faqs: [,,
+  const faqs: [
     {
       question: 'What is included in the free trial?',',';,';,
       answer: 'The free trial includes access to all Starter plan features for 14 days, with no credit card required.},';';
@@ -290,9 +290,9 @@ const Pricing: React.FC: ()  => {,,,
           <div className="grid grid-cols-1 md: grid-cols-3 gap-8">","
           <div className="grid grid-cols-1 md: grid-cols-3 gap-8">","
             {pricingPlans.map((plan)  => {
-              const IconComponent: plan.icon;,,,
+              const IconComponent: plan.icon;,
   return (
-                <div key: {plan.name} className: {`relative bg-white rounded-lg shadow-lg border-2 p-8 ${`,,`;,`;
+                <div key: {plan.name} className: {`relative bg-white rounded-lg shadow-lg border-2 p-8 ${`,`;,`;
   plan.popular ? 'border-blue-500' : 'border-gray-200'
                 }`}>`
                   {plan.popular && (
@@ -338,12 +338,12 @@ const Pricing: React.FC: ()  => {,,,
                   </ul>
 
                   <Link to: {plan.name == = 'Enterprise' ? '/contact' : '/demo'};';';
-                    className: {,,
+                    className: {,
 `block w-full text-center px-6 py-3 rounded-lg font-semibold transition-colors ${`
 plan.popular
 ? 'bg-blue-600 text-white hover:bg-blue-700',';,';,
   to: {plan.name == = 'Enterprise' ? '/contact' : '/demo'}'
-                    className: {,,
+                    className: {,
 `block w-full text-center px-6 py-3 rounded-lg font-semibold transition-colors ${`
 plan.popular
 ? 'bg-blue-600 text-white hover:bg-blue-700',',';,

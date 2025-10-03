@@ -1,22 +1,22 @@
 import { Zap } from "lucide-react";"
 import React, { useMemo, useState } from "react";"
 import BlogPromotionBanner from "../components/BlogPromotionBanner";"
-// const Footer: React.FC: ()  => null;,,
+// const Footer: React.FC: ()  => null;,
 // import Header from "../components/Header"
 
 interface BlogPost {
-  id: number;,,,
-title: string;,,
-excerpt: string;,,,
-content: string;,,
-author: string;,,,
-date: string;,,
-readTime: string;,,,
-category: string;,,
-tags: string[];,,,
-image: string;,,
-featured: boolean;,,,
-views: number;,,
+  id: number;,
+title: string;,
+excerpt: string;,
+content: string;,
+author: string;,
+date: string;,
+readTime: string;,
+category: string;,
+tags: string[];,
+image: string;,
+featured: boolean;,
+views: number;,
 
 }
 
@@ -24,7 +24,7 @@ export default function Blog(): React.JSX.Element {
   const [selectedCategory, setSelectedCategory] = useState("All");"
   const [searchTerm, setSearchTerm] = useState("");"
 
-  const categories: [,,
+  const categories: [
     "All",";"
     "AI Strategy",";"
     "Security",";"
@@ -49,9 +49,9 @@ export default function Blog(): React.JSX.Element {
     "Tutorials","
   ];
 
-  const staticPosts: BlogPost[]  = [,,,
+  const staticPosts: BlogPost[]  = [,
     {
-      id: 1,,,
+      id: 1,
       title: "How AI Workflow Automation Transformed a Fortune 500 Company
       excerpt: "Discover how our AI workflow automation solution reduced manual processes by 80% and increased operational efficiency by 300% for a leading financial services company.
       content: "Full case study content here...
@@ -61,11 +61,11 @@ export default function Blog(): React.JSX.Element {
       category: "Case Studies
       tags: ["AI", "Automation", "Case Study", "Financial Services"],
       image: "/api/placeholder/400/250
-      featured: true,,,
-      views: 1250,,
+      featured: true,
+      views: 1250,
     },
     {
-      id: 7,,,
+      id: 7,
       title: "Serverless AI Inference: The Cost Optimization Playbook
       excerpt: "Cut inference spend 40–70% with adaptive batching, warm pools, and tiered quality without hurting P95.
       content: "Full article content here...
@@ -75,11 +75,11 @@ export default function Blog(): React.JSX.Element {
       category: "AI Solutions
       tags: ["Serverless", "Inference", "Cost"],
       image: "/api/placeholder/400/250
-      featured: true,,,
-      views: 421,,
+      featured: true,
+      views: 421,
     },
     {
-      id: 8,,,
+      id: 8,
       title: "RAG Architectures That Actually Work in Production
       excerpt: "Proven patterns for chunking, freshness, hybrid search, and evals that keep quality high.
       content: "Full article content here...
@@ -89,11 +89,11 @@ export default function Blog(): React.JSX.Element {
       category: "AI Solutions
       tags: ["RAG", "Vector Search", "Evals"],
       image: "/api/placeholder/400/250
-      featured: true,,,
-      views: 368,,
+      featured: true,
+      views: 368,
     },
     {
-      id: 9,,,
+      id: 9,
       title: "Secure GenAI: Policy‑First Guardrails That Scale
       excerpt: "Prompt isolation, PII redaction, and network egress controls—ship safely without slowing teams.
       content: "Full article content here...
@@ -103,11 +103,11 @@ export default function Blog(): React.JSX.Element {
       category: "Technology
       tags: ["GenAI", "Security", "Compliance"],
       image: "/api/placeholder/400/250
-      featured: false,,,
-      views: 297,,
+      featured: false,
+      views: 297,
     },
     {
-      id: 2,,,
+      id: 2,
       title: "The Future of AI-Powered Customer Support: A Complete Guide
       excerpt: "Explore the latest trends in AI customer support and learn how virtual assistants are revolutionizing customer service across industries.
       content: "Full article content here...
@@ -117,11 +117,11 @@ export default function Blog(): React.JSX.Element {
       category: "AI Solutions
       tags: ["AI", "Customer Support", "Virtual Assistant", "Trends"],
       image: "/api/placeholder/400/250
-      featured: true,,,
-      views: 980,,
+      featured: true,
+      views: 980,
     },
     {
-      id: 3,,,
+      id: 3,
       title: "Building Scalable Cloud Infrastructure: Best Practices 2025
       excerpt: "Learn the essential strategies for building robust, scalable cloud infrastructure that can handle modern business demands.
       content: "Full article content here...
@@ -131,11 +131,11 @@ export default function Blog(): React.JSX.Element {
       category: "Technology
       tags: ["Cloud", "Infrastructure", "Scalability", "DevOps"],
       image: "/api/placeholder/400/250
-      featured: false,,,
-      views: 756,,
+      featured: false,
+      views: 756,
     },
     {
-      id: 4,,,
+      id: 4,
       title: "AI Data Analytics: Transforming Raw Data into Business Gold
       excerpt: "See how machine learning and predictive analytics are helping businesses make data-driven decisions that drive real results.
       content: "Full article content here...
@@ -145,11 +145,11 @@ export default function Blog(): React.JSX.Element {
       category: "AI Solutions
       tags: ["AI", "Data Analytics", "Machine Learning", "Business Intelligence"],
       image: "/api/placeholder/400/250
-      featured: false,,,
-      views: 892,,
+      featured: false,
+      views: 892,
     },
     {
-      id: 5,,,
+      id: 5,
       title: "Cybersecurity in the Age of AI: Protecting Your Digital Assets
       excerpt: "Understand the evolving threat landscape and learn how AI-powered security solutions can protect your business from modern cyber threats.
       content: "Full article content here...
@@ -159,11 +159,11 @@ export default function Blog(): React.JSX.Element {
       category: "Technology
       tags: ["Cybersecurity", "AI", "Security", "Threat Detection"],
       image: "/api/placeholder/400/250
-      featured: false,,,
-      views: 634,,
+      featured: false,
+      views: 634,
     },
     {
-      id: 6,,,
+      id: 6,
       title: "Healthcare Industry Transformation: AI-Powered Patient Care
       excerpt: "Explore how AI is revolutionizing healthcare delivery, from diagnostic assistance to personalized treatment plans.
       content: "Full article content here...
@@ -173,13 +173,13 @@ export default function Blog(): React.JSX.Element {
       category: "Industry Insights
       tags: ["AI", "Healthcare", "Patient Care", "Medical Technology"],
       image: "/api/placeholder/400/250
-      featured: false,,,
-      views: 445,,
+      featured: false,
+      views: 445,
     }
   ];
 
   // Map content entries into this page's structure;';
-      id: 1,,,
+      id: 1,
       title: "How AI Workflow Automation Transformed a Fortune 500 Company",
       excerpt: "Discover how our AI workflow automation solution reduced manual processes by 80% and increased operational efficiency by 300% for a leading financial services company.",
       content: "Full case study content here...",
@@ -189,10 +189,10 @@ export default function Blog(): React.JSX.Element {
       category: "Case Studies",
       tags: ["AI", "Automation", "Case Study", "Financial Services"],
       image: "/api/placeholder/400/250",
-      featured: true,,,
+      featured: true,
       views: 1250},
     {
-      id: 7,,,
+      id: 7,
       title: "Serverless AI Inference: The Cost Optimization Playbook",
       excerpt: "Cut inference spend 40–70% with adaptive batching, warm pools, and tiered quality without hurting P95.",
       content: "Full article content here...",
@@ -202,10 +202,10 @@ export default function Blog(): React.JSX.Element {
       category: "AI Solutions",
       tags: ["Serverless", "Inference", "Cost"],
       image: "/api/placeholder/400/250",
-      featured: true,,,
+      featured: true,
       views: 421},
     {
-      id: 8,,,
+      id: 8,
       title: "RAG Architectures That Actually Work in Production",
       excerpt: "Proven patterns for chunking, freshness, hybrid search, and evals that keep quality high.",
       content: "Full article content here...",
@@ -215,10 +215,10 @@ export default function Blog(): React.JSX.Element {
       category: "AI Solutions",
       tags: ["RAG", "Vector Search", "Evals"],
       image: "/api/placeholder/400/250",
-      featured: true,,,
+      featured: true,
       views: 368},
     {
-      id: 9,,,
+      id: 9,
       title: "Secure GenAI: Policy‑First Guardrails That Scale",
       excerpt: "Prompt isolation, PII redaction, and network egress controls—ship safely without slowing teams.",
       content: "Full article content here...",
@@ -228,10 +228,10 @@ export default function Blog(): React.JSX.Element {
       category: "Technology",
       tags: ["GenAI", "Security", "Compliance"],
       image: "/api/placeholder/400/250",
-      featured: false,,,
+      featured: false,
       views: 297},
     {
-      id: 2,,,
+      id: 2,
       title: "The Future of AI-Powered Customer Support: A Complete Guide",
       excerpt: "Explore the latest trends in AI customer support and learn how virtual assistants are revolutionizing customer service across industries.",
       content: "Full article content here...",
@@ -241,10 +241,10 @@ export default function Blog(): React.JSX.Element {
       category: "AI Solutions",
       tags: ["AI", "Customer Support", "Virtual Assistant", "Trends"],
       image: "/api/placeholder/400/250",
-      featured: true,,,
+      featured: true,
       views: 980},
     {
-      id: 3,,,
+      id: 3,
       title: "Building Scalable Cloud Infrastructure: Best Practices 2025",
       excerpt: "Learn the essential strategies for building robust, scalable cloud infrastructure that can handle modern business demands.",
       content: "Full article content here...",
@@ -254,10 +254,10 @@ export default function Blog(): React.JSX.Element {
       category: "Technology",
       tags: ["Cloud", "Infrastructure", "Scalability", "DevOps"],
       image: "/api/placeholder/400/250",
-      featured: false,,,
+      featured: false,
       views: 756},
     {
-      id: 4,,,
+      id: 4,
       title: "AI Data Analytics: Transforming Raw Data into Business Gold",
       excerpt: "See how machine learning and predictive analytics are helping businesses make data-driven decisions that drive real results.",
       content: "Full article content here...",
@@ -267,10 +267,10 @@ export default function Blog(): React.JSX.Element {
       category: "AI Solutions",
       tags: ["AI", "Data Analytics", "Machine Learning", "Business Intelligence"],
       image: "/api/placeholder/400/250",
-      featured: false,,,
+      featured: false,
       views: 892},
     {
-      id: 5,,,
+      id: 5,
       title: "Cybersecurity in the Age of AI: Protecting Your Digital Assets",
       excerpt: "Understand the evolving threat landscape and learn how AI-powered security solutions can protect your business from modern cyber threats.",
       content: "Full article content here...",
@@ -280,10 +280,10 @@ export default function Blog(): React.JSX.Element {
       category: "Technology",
       tags: ["Cybersecurity", "AI", "Security", "Threat Detection"],
       image: "/api/placeholder/400/250",
-      featured: false,,,
+      featured: false,
       views: 634},
     {
-      id: 6,,,
+      id: 6,
       title: "Healthcare Industry Transformation: AI-Powered Patient Care",
       excerpt: "Explore how AI is revolutionizing healthcare delivery, from diagnostic assistance to personalized treatment plans.",
       content: "Full article content here...",
@@ -293,42 +293,42 @@ export default function Blog(): React.JSX.Element {
       category: "Industry Insights",
       tags: ["AI", "Healthcare", "Patient Care", "Medical Technology"],
       image: "/api/placeholder/400/250",
-      featured: false,,,
+      featured: false,
       views: 445},
   ];
 
   // Map content entries into this page's structure'
-  const mappedFromContent: BlogPost[] = useMemo(()  => {,,,
+  const mappedFromContent: BlogPost[] = useMemo(()  => {,
   return latestArticles.map((a, index) => ({
-      id: index + 1000,,,,
-      title: a.title,,,,
-      excerpt: a.excerpt || a.description,,,,
-      content: a.description,,,,
-      author: a.author,,,,
-      date: a.date,,,,
-      readTime: a.readTime,,,,
-      category: a.category,,,,
-      tags: a.tags,,,,
+      id: index + 1000,
+      title: a.title,
+      excerpt: a.excerpt || a.description,
+      content: a.description,
+      author: a.author,
+      date: a.date,
+      readTime: a.readTime,
+      category: a.category,
+      tags: a.tags,
       image: a.image || "/api/placeholder/400/250",
       image: a.image || "/api/placeholder/400/250",","
-      featured: a.featured,,,,
-      views: a.trending ? 1000 : 250,,
+      featured: a.featured,
+      views: a.trending ? 1000 : 250,
     }));
   }, []);
 
-  const blogPosts: BlogPost[]  = [...mappedFromContent, ...staticPosts],,
-  const blogPosts: BlogPost[]  = [...mappedFromContent, ...staticPosts];,,
-  const filteredPosts: blogPosts.filter(post: > {,,,
+  const blogPosts: BlogPost[]  = [...mappedFromContent, ...staticPosts],
+  const blogPosts: BlogPost[]  = [...mappedFromContent, ...staticPosts];,
+  const filteredPosts: blogPosts.filter(post: > {,
   const matchesCategory: selectedCategory: == "All" || post.category == = selectedCategory;
-  const matchesSearch: post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||,,,
+  const matchesSearch: post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||,
   post.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         post.tags.some(tag: > tag.toLowerCase().includes(searchTerm.toLowerCase()));,,,
+                         post.tags.some(tag: > tag.toLowerCase().includes(searchTerm.toLowerCase()));,
   return matchesCategory && matchesSearch;
   });
 
-  const featuredPosts: blogPosts.filter(post: > post.featured);,,,
-  const regularPosts: filteredPosts.filter(post: > !post.featured);,,,
-  const getCategoryIcon: (category: string)  => {,,,
+  const featuredPosts: blogPosts.filter(post: > post.featured);,
+  const regularPosts: filteredPosts.filter(post: > !post.featured);,
+  const getCategoryIcon: (category: string)  => {,
   switch (category) {
 case "AI Solutions": return Zap;";"
 case "Case Studies": return BarChart3;";"
@@ -344,7 +344,7 @@ default: return Shield;
 };
   };
 
-  const getCategoryColor: (category: string)  => {,,,
+  const getCategoryColor: (category: string)  => {,
   switch (category) {
 case "AI Solutions": return "text-blue-400 bg-blue-500/10 border-blue-500/30"
 case "Case Studies": return "text-green-400 bg-green-500/10 border-green-500/30"
@@ -477,8 +477,8 @@ default: return "text-gray-400 bg-gray-500/10 border-gray-500/30";"
                 {categories.map((category) => (
                   <button key: {category}
                     onClick: {()  => setSelectedCategory(category)}
-                    className: {`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${`,,`;,`;
-  selectedCategory: == category,,
+                    className: {`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${`,`;,`;
+  selectedCategory: == category,
                         ? "bg-zion-cyan text-white"
                         : "bg-white/10 text-zion-slate-light hover:bg-white/20","
                     }`}`
@@ -500,8 +500,8 @@ selectedCategory: == "All" && searchTerm == = "" && (","
 <h2 className="text-2xl font-bold text-white mb-8">Featured Articles</h2>","
 <div className="grid md: grid-cols-2 gap-8">,","
 {featuredPosts.map((post) => {
-const CategoryIcon: getCategoryIcon(post.category);,,,
-  const categoryColor: getCategoryColor(post.category);,,,
+const CategoryIcon: getCategoryIcon(post.category);,
+  const categoryColor: getCategoryColor(post.category);,
   return (
 <article key: {post.id
 }
@@ -599,8 +599,8 @@ const CategoryIcon: getCategoryIcon(post.category);,,,
             </h2>
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">","
               {regularPosts.map((post)  => {
-                const CategoryIcon: getCategoryIcon(post.category);,,,
-  const categoryColor: getCategoryColor(post.category);,,,
+                const CategoryIcon: getCategoryIcon(post.category);,
+  const categoryColor: getCategoryColor(post.category);,
   return (
                   <article key: {post.id}
                     className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl group","
@@ -676,12 +676,12 @@ const CategoryIcon: getCategoryIcon(post.category);,,,
               })}
             </div>
 
-            {regularPosts.length: = = 0 && (,,
+            {regularPosts.length: = = 0 && (,
               <div className="text-center py-12">","
                 <div className="text-zion-slate-light mb-4">
   No articles found matching your criteria.
                 </div>
-                <button onClick: {()  => {,,,
+                <button onClick: {()  => {,
   setSelectedCategory("All");"
                     setSearchTerm("");"
                   }}

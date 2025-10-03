@@ -34,7 +34,7 @@ const Page: () => {
             <p className="text-zion-slate-light">
             <h2 className="text-2xl font-semibold">Blueprint</h2>","
             <p className="text-zion-slate-light">
-  Start with a budget per request type, attach a decision function that chooses: cache → economy → quality.,,,
+  Start with a budget per request type, attach a decision function that chooses: cache → economy → quality.,
               Record traces, costs, and quality metrics. Fail closed with rollbacks when scorecards dip below thresholds.
             </p>
 

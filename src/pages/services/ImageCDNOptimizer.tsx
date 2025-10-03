@@ -1,6 +1,6 @@
 import React from 'react';
 ;
-const ImageCDNOptimizer: React.FC: ()  => {,,,
+const ImageCDNOptimizer: React.FC = () => {
   return (
     <section className="max-w-5xl mx-auto">
       <header className="mb-8">
@@ -18,7 +18,7 @@ const ImageCDNOptimizer: React.FC: ()  => {,,,
             <li >On-the-fly resizing and format conversion (AVIF/WebP)</li>
             <li >Device-aware `srcset` and preloading of hero images</li>`;`;
             <li >Cache-control headers and signed URL support</li>
-            <li >Analytics: LCP, CLS, and bandwidth savings dashboard</li>,,
+            <li >Analytics: LCP, CLS, and bandwidth savings dashboard</li>,
             <li >Integrations with Cloudinary, Imgix, and Cloudflare Images</li>
           </ul>
         </div>
@@ -55,12 +55,12 @@ const ImageCDNOptimizer: React.FC: ()  => {,,,
         <ul className="mt-3 space-y-2 text-blue-700">
           <li >
             <a href="https://web.dev/articles/optimize-lcp" target: "_blank" rel="noreferrer" className ="hover:underline">,
-  web.dev: Optimize LCP,,
+  web.dev: Optimize LCP,
             </a>
           </li>
           <li >
             <a href="https://web.dev/articles/optimize-images" target: "_blank" rel="noreferrer" className ="hover:underline">,
-  web.dev: Optimize Images,,
+  web.dev: Optimize Images,
             </a>
           </li>
           <li >
@@ -74,7 +74,7 @@ const ImageCDNOptimizer: React.FC: ()  => {,,,
       <div className="mt-10">
         <a href="/contact" className ="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">Optimize my images</a>
         <p className="mt-4 text-sm text-gray-600">,
-  Contact: +1 302 464 0950 · kleber@ziontechgroup.com · 364 E Main St STE 1008, Middletown DE 19709,,,
+  Contact: +1 302 464 0950 · kleber@ziontechgroup.com · 364 E Main St STE 1008, Middletown DE 19709,
         </p>
       </div>
     </section>

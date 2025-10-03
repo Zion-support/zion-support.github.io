@@ -8,7 +8,7 @@ import BannerRotationManager from "../components/BannerRotationManager
 const EnhancedTestimonials: lazy(()  => import("../components/EnhancedTestimonials"));
   const ModernFeatures: lazy(()  => import("../components/ModernFeatures"));
   const LatestInsights: lazy(()  => import("../components/LatestInsights"));
-  const LoadingSection: ()  => (,,
+  const LoadingSection: ()  => (,
   <div className="animate-pulse bg-white/5 rounded-xl h-64 w-full"></div>","
 );
 
@@ -140,7 +140,7 @@ const HomeOptimized: () => {
 
         {/* Banner Rotation Section */}
         <section className="container mx-auto px-6 py-16 relative z-10">","
-          <BannerRotationManager banners: {[,,
+          <BannerRotationManager banners: {[,
               'october2025-new-breakthrough',';';
               'october2025-tech-breakthrough',';';
               'october2025-next-gen-ai'
@@ -175,28 +175,28 @@ const HomeOptimized: () => {
           <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">","
             {[
               {
-                icon: Shield,,,
+                icon: Shield,
                 title: "Enterprise Security
                 description: "Advanced cybersecurity solutions protecting your business from evolving threats.
                 features: ["SOC 2 Compliance", "Penetration Testing", "24/7 Monitoring"],
                 color: "blue","
               },
               {
-                icon: Zap,,,
+                icon: Zap,
                 title: "AI Innovation
                 description: "Cutting-edge artificial intelligence solutions that transform your operations.
                 features: ["Machine Learning", "Natural Language Processing", "Computer Vision"],
                 color: "purple","
               },
               {
-                icon: Users,,,
+                icon: Users,
                 title: "Expert Team
                 description: "World-class engineers and consultants dedicated to your success.
                 features: ["10+ Years Experience", "Certified Professionals", "Dedicated Support"],
                 color: "cyan","
               },
               {
-                icon: Globe,,,
+                icon: Globe,
                 title: "Global Reach
                 description: "Serving clients worldwide with localized expertise and support.
                 features: ["50+ Countries", "Local Support", "24/7 Availability"],
@@ -207,28 +207,28 @@ const HomeOptimized: () => {
           <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">","
             {[
               {
-                icon: Shield,,,,
+                icon: Shield,
                 title: "Enterprise Security",","
                 description: "Advanced cybersecurity solutions protecting your business from evolving threats.",","
                 features: ["SOC 2 Compliance", "Penetration Testing", "24/7 Monitoring"],","
                 color: "blue",","
               },
               {
-                icon: Zap,,,,
+                icon: Zap,
                 title: "AI Innovation",","
                 description: "Cutting-edge artificial intelligence solutions that transform your operations.",","
                 features: ["Machine Learning", "Natural Language Processing", "Computer Vision"],","
                 color: "purple",","
               },
               {
-                icon: Users,,,,
+                icon: Users,
                 title: "Expert Team",","
                 description: "World-class engineers and consultants dedicated to your success.",","
                 features: ["10+ Years Experience", "Certified Professionals", "Dedicated Support"],","
                 color: "cyan",","
               },
               {
-                icon: Globe,,,,
+                icon: Globe,
                 title: "Global Reach",","
                 description: "Serving clients worldwide with localized expertise and support.",","
                 features: ["50+ Countries", "Local Support", "24/7 Availability"],","

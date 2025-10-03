@@ -1,6 +1,6 @@
-import React from 'react'';
-import { Helmet } from 'react-helmet-async'';
-import { Zap } from 'lucide-react'';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Zap } from 'lucide-react';
 import Header from '../../components/Header'';
 import Footer from '../../components/Footer'';
 import React from 'react';'
@@ -9,10 +9,10 @@ import { Zap } from 'lucide-react';'
 import Header from '../../components/Header';'
 import Footer from '../../components/Footer';'
 
-const AIPredictiveAnalytics: React.FC: ()  => {,,,
-  const features: [,,
+const AIPredictiveAnalytics: React.FC = () => {
+  const features: [
     {
-      icon: Brain,,,,
+      icon: Brain,
       title: "Machine Learning Models",
       description: "Advanced ML algorithms that predict future trends, customer behavior, and business outcomes with 94% accuracy.",
       title: "Machine Learning Models",","
@@ -20,7 +20,7 @@ const AIPredictiveAnalytics: React.FC: ()  => {,,,
       benefit: "94% prediction accuracy rate","
     },
     {
-      icon: TrendingUp,,,,
+      icon: TrendingUp,
       title: "Real-Time Forecasting",
       description: "Live predictive analytics that update continuously as new data flows in, providing instant insights.",
       title: "Real-Time Forecasting",","
@@ -28,7 +28,7 @@ const AIPredictiveAnalytics: React.FC: ()  => {,,,
       benefit: "Real-time decision making","
     },
     {
-      icon: Target,,,,
+      icon: Target,
       title: "Customer Lifetime Value",
       description: "Predict customer behavior, churn risk, and lifetime value to optimize marketing spend and retention.",
       title: "Customer Lifetime Value",","
@@ -36,7 +36,7 @@ const AIPredictiveAnalytics: React.FC: ()  => {,,,
       benefit: "35% increase in customer retention","
     },
     {
-      icon: BarChart3,,,,
+      icon: BarChart3,
       title: "Revenue Forecasting",
       description: "Accurate revenue predictions based on historical data, market trends, and external factors.",
       title: "Revenue Forecasting",","
@@ -44,7 +44,7 @@ const AIPredictiveAnalytics: React.FC: ()  => {,,,
       benefit: "98% forecast accuracy","
     },
     {
-      icon: Shield,,,,
+      icon: Shield,
       title: "Risk Assessment",
       description: "Identify potential risks and opportunities before they impact your business operations.",
       title: "Risk Assessment",","
@@ -52,7 +52,7 @@ const AIPredictiveAnalytics: React.FC: ()  => {,,,
       benefit: "60% risk reduction","
     },
     {
-      icon: Clock,,,,
+      icon: Clock,
       title: "Automated Insights",
       description: "AI-generated insights and recommendations delivered directly to decision-makers.",
       title: "Automated Insights",","
@@ -61,13 +61,13 @@ const AIPredictiveAnalytics: React.FC: ()  => {,,,
     }
   ];
 
-  const pricing: [,,
+  const pricing: [
     {
       name: "Starter
       price: "$299
       period: "/month
       description: "Perfect for small businesses wanting to leverage predictive analytics
-      features: [,,,
+      features: [
         "Up to 10 predictive models",";"
         "5 data sources",";"
         "Basic dashboard",";"
@@ -77,14 +77,14 @@ const AIPredictiveAnalytics: React.FC: ()  => {,,,
         "Historical data analysis",";"
         "Basic forecasting"
       ]
-      popular: false,,
+      popular: false,
     },
     {
       name: "Professional
       price: "$899
       period: "/month
       description: "Ideal for growing companies with complex data needs
-      features: [,,,
+      features: [
         "Unlimited predictive models",";"
         "25 data sources",";"
         "Advanced dashboard & visualization",";"
@@ -96,14 +96,14 @@ const AIPredictiveAnalytics: React.FC: ()  => {,,,
         "Automated alerts",";"
         "A/B testing insights"
       ]
-      popular: true,,
+      popular: true,
     },
     {
       name: "Enterprise
       price: "$2,999
       period: "/month
       description: "Complete solution for large organizations with enterprise requirements
-      features: [,,,
+      features: [
         "Unlimited everything",";"
         "Unlimited data sources",";"
         "Enterprise dashboard",";"
@@ -117,12 +117,12 @@ const AIPredictiveAnalytics: React.FC: ()  => {,,,
         "Custom reporting",";"
         "Training & consultation"
       ]
-      popular: false,,,
+      popular: false,
       name: "Starter",","
       price: "$299",","
       period: "/month",","
       description: "Perfect for small businesses wanting to leverage predictive analytics",","
-      features: [,,,
+      features: [
         "Up to 10 predictive models","
         "5 data sources","
         "Basic dashboard","
@@ -132,14 +132,14 @@ const AIPredictiveAnalytics: React.FC: ()  => {,,,
         "Historical data analysis","
         "Basic forecasting"
       ]
-      popular: false,,
+      popular: false,
     },
     {
       name: "Professional",","
       price: "$899",","
       period: "/month",","
       description: "Ideal for growing companies with complex data needs",","
-      features: [,,,
+      features: [
         "Unlimited predictive models","
         "25 data sources","
         "Advanced dashboard & visualization","
@@ -151,14 +151,14 @@ const AIPredictiveAnalytics: React.FC: ()  => {,,,
         "Automated alerts","
         "A/B testing insights"
       ]
-      popular: true,,
+      popular: true,
     },
     {
       name: "Enterprise",","
       price: "$2,999",","
       period: "/month",","
       description: "Complete solution for large organizations with enterprise requirements",","
-      features: [,,,
+      features: [
         "Unlimited everything","
         "Unlimited data sources","
         "Enterprise dashboard","
@@ -172,11 +172,11 @@ const AIPredictiveAnalytics: React.FC: ()  => {,,,
         "Custom reporting","
         "Training & consultation"
       ]
-      popular: false,,
+      popular: false,
     }
   ];
 
-  const testimonials: [,,
+  const testimonials: [
     {
       name: "Jennifer Martinez",
       role: "VP Marketing, RetailTech Solutions",
@@ -184,7 +184,7 @@ const AIPredictiveAnalytics: React.FC: ()  => {,,,
       name: "Jennifer Martinez",","
       role: "VP Marketing, RetailTech Solutions",","
       content: "The predictive analytics platform helped us increase our customer retention by 40% and optimize our marketing spend by $2M annually. The ROI was evident within the first quarter.",","
-      rating: 5,,,,
+      rating: 5,
       company: "RetailTech Solutions","
     },
     {
@@ -194,7 +194,7 @@ const AIPredictiveAnalytics: React.FC: ()  => {,,,
       name: "David Kim",","
       role: "CFO, FinTech Innovations",","
       content: "Revenue forecasting accuracy improved from 78% to 98%. This gave us the confidence to make strategic investments and secure additional funding rounds.",","
-      rating: 5,,,,
+      rating: 5,
       company: "FinTech Innovations","
     },
     {
@@ -204,55 +204,55 @@ const AIPredictiveAnalytics: React.FC: ()  => {,,,
       name: "Dr. Sarah Thompson",","
       role: "Head of Analytics, Healthcare Network",","
       content: "The risk assessment models identified potential issues 3 months before they occurred, saving us $5M in potential losses and improving patient outcomes.",","
-      rating: 5,,,,
+      rating: 5,
       company: "Healthcare Network","
     }
   ];
 
-  const useCases: [,,
+  const useCases: [
     {
       title: "E-Commerce Optimization",
-      icon: Globe,,,,
+      icon: Globe,
       description: "Predict customer purchase behavior, optimize inventory, and personalize shopping experiences.",
       benefits: ["25% increase in conversion", "30% reduction in inventory costs", "40% improvement in customer satisfaction"]","
     },
     {
       title: "Financial Services",
-      icon: Database,,,,
+      icon: Database,
       description: "Credit risk assessment, fraud detection, and investment portfolio optimization.",
       benefits: ["60% reduction in bad debt", "95% fraud detection accuracy", "20% increase in portfolio returns"]","
     },
     {
       title: "Healthcare Analytics",
-      icon: Users,,,,
+      icon: Users,
       description: "Patient outcome prediction, resource allocation, and treatment optimization.",
       benefits: ["35% improvement in patient outcomes", "25% reduction in readmissions", "40% cost savings"]","
     },
     {
       title: "Supply Chain",
-      icon: Zap,,,,
+      icon: Zap,
       description: "Demand forecasting, supplier risk assessment, and logistics optimization.",
       benefits: ["45% reduction in stockouts", "30% improvement in delivery times", "25% cost reduction"]
       title: "E-Commerce Optimization",","
-      icon: Globe,,,,
+      icon: Globe,
       description: "Predict customer purchase behavior, optimize inventory, and personalize shopping experiences.",","
       benefits: ["25% increase in conversion", "30% reduction in inventory costs", "40% improvement in customer satisfaction"]","
     },
     {
       title: "Financial Services",","
-      icon: Database,,,,
+      icon: Database,
       description: "Credit risk assessment, fraud detection, and investment portfolio optimization.",","
       benefits: ["60% reduction in bad debt", "95% fraud detection accuracy", "20% increase in portfolio returns"]","
     },
     {
       title: "Healthcare Analytics",","
-      icon: Users,,,,
+      icon: Users,
       description: "Patient outcome prediction, resource allocation, and treatment optimization.",","
       benefits: ["35% improvement in patient outcomes", "25% reduction in readmissions", "40% cost savings"]","
     },
     {
       title: "Supply Chain",","
-      icon: Zap,,,,
+      icon: Zap,
       description: "Demand forecasting, supplier risk assessment, and logistics optimization.",","
       benefits: ["45% reduction in stockouts", "30% improvement in delivery times", "25% cost reduction"]","
     }
@@ -395,14 +395,14 @@ const AIPredictiveAnalytics: React.FC: ()  => {,,,
 
             <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">","
               {useCases.map((useCase, index) => {
-                const Icon: useCase.icon;,,,
+                const Icon: useCase.icon;,
   return (
                   <div key: {index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">","
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-indigo-100 rounded-full mb-6">
                       <Icon className="w-8 h-8 text-indigo-600/>
             <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">","
               {useCases.map((useCase, index) => {
-                const Icon: useCase.icon;,,,
+                const Icon: useCase.icon;,
   return (
                   <div key: {index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">","
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-indigo-100 rounded-full mb-6">","
@@ -446,7 +446,7 @@ const AIPredictiveAnalytics: React.FC: ()  => {,,,
 
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">","
               {features.map((feature, index) => {
-                const Icon: feature.icon;,,,
+                const Icon: feature.icon;,
   return (
                   <div key: {index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">","
                     <div className="inline-flex items-center justify-center w-12 h-12 bg-indigo-100 rounded-lg mb-4">
@@ -458,7 +458,7 @@ const AIPredictiveAnalytics: React.FC: ()  => {,,,
                       <CheckCircle className="w-4 h-4 mr-1/>
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">","
               {features.map((feature, index) => {
-                const Icon: feature.icon;,,,
+                const Icon: feature.icon;,
   return (
                   <div key: {index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">","
                     <div className="inline-flex items-center justify-center w-12 h-12 bg-indigo-100 rounded-lg mb-4">","
@@ -524,7 +524,7 @@ const AIPredictiveAnalytics: React.FC: ()  => {,,,
                     ))}
                   </ul>
                   <a href="/contact
-  className: {,,
+  className: {,
 `w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${`
 plan.popular
 ? 'bg-indigo-600 text-white hover:bg-indigo-700',';,

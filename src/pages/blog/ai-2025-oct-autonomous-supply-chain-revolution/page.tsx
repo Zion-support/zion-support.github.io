@@ -32,7 +32,7 @@ export default function AutonomousSupplyChainRevolution2025(): void {
             
             <h1 className="text-5xl md: text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-400 text-transparent bg-clip-text leading-tight">","
             <h1 className="text-5xl md: text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-400 text-transparent bg-clip-text leading-tight">
-  Autonomous AI Supply Chain: The $1.8B Efficiency Revolution,,
+  Autonomous AI Supply Chain: The $1.8B Efficiency Revolution,
             </h1>
             
             <p className="text-xl text-gray-300 leading-relaxed">
@@ -49,15 +49,15 @@ export default function AutonomousSupplyChainRevolution2025(): void {
               <ul className="space-y-4 text-lg">
                 <li className="flex items-start gap-3">
                   <TrendingUp className="h-6 w-6 text-green-400 mt-1 flex-shrink-0/>
-                  <span ><strong >99.2% Forecast Accuracy: </strong> AI predicts demand with unprecedented precision across SKUs and regions</span>,,
+                  <span ><strong >99.2% Forecast Accuracy: </strong> AI predicts demand with unprecedented precision across SKUs and regions</span>,
                 </li>
                 <li className="flex items-start gap-3">
                   <Zap className="h-6 w-6 text-yellow-400 mt-1 flex-shrink-0/>
-                  <span ><strong >78% Cost Reduction: </strong> Autonomous optimization eliminates waste and maximizes efficiency</span>,,
+                  <span ><strong >78% Cost Reduction: </strong> Autonomous optimization eliminates waste and maximizes efficiency</span>,
                 </li>
                 <li className="flex items-start gap-3">
                   <DollarSign className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0/>
-                  <span ><strong >$1.8B+ Total Value: </strong> Average annual savings and revenue gains for enterprise deployments</span>,,
+                  <span ><strong >$1.8B+ Total Value: </strong> Average annual savings and revenue gains for enterprise deployments</span>,
                 </li>
                 <li className="flex items-start gap-3">
                   <Globe className="h-6 w-6 text-blue-400 mt-1 flex-shrink-0/>
@@ -70,19 +70,19 @@ export default function AutonomousSupplyChainRevolution2025(): void {
               <ul className="space-y-4 text-lg">","
                 <li className="flex items-start gap-3">","
                   <TrendingUp className="h-6 w-6 text-green-400 mt-1 flex-shrink-0" />","
-                  <span ><strong >99.2% Forecast Accuracy: </strong> AI predicts demand with unprecedented precision across SKUs and regions</span>,,
+                  <span ><strong >99.2% Forecast Accuracy: </strong> AI predicts demand with unprecedented precision across SKUs and regions</span>,
                 </li>
                 <li className="flex items-start gap-3">","
                   <Zap className="h-6 w-6 text-yellow-400 mt-1 flex-shrink-0" />","
-                  <span ><strong >78% Cost Reduction: </strong> Autonomous optimization eliminates waste and maximizes efficiency</span>,,
+                  <span ><strong >78% Cost Reduction: </strong> Autonomous optimization eliminates waste and maximizes efficiency</span>,
                 </li>
                 <li className="flex items-start gap-3">","
                   <DollarSign className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />","
-                  <span ><strong >$1.8B+ Total Value: </strong> Average annual savings and revenue gains for enterprise deployments</span>,,
+                  <span ><strong >$1.8B+ Total Value: </strong> Average annual savings and revenue gains for enterprise deployments</span>,
                 </li>
                 <li className="flex items-start gap-3">","
                   <Globe className="h-6 w-6 text-blue-400 mt-1 flex-shrink-0" />","
-                  <span ><strong >$450M+ Disruption Prevention: </strong> Predictive risk management prevents costly supply chain failures</span>,,
+                  <span ><strong >$450M+ Disruption Prevention: </strong> Predictive risk management prevents costly supply chain failures</span>,
                 </li>
               </ul>
             </div>
@@ -242,7 +242,7 @@ export default function AutonomousSupplyChainRevolution2025(): void {
                 <h3 className="text-2xl font-bold mb-4 text-cyan-300">Phase 3: Scale (Months 7-12)</h3>","
                 <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4">","
                   <li >Roll out across all product categories and geographies</li>
-                  <li >Activate advanced capabilities: risk management, logistics optimization</li>,,
+                  <li >Activate advanced capabilities: risk management, logistics optimization</li>,
                   <li >Integrate autonomous decision-making into operational workflows</li>
                   <li >Establish continuous improvement and monitoring processes</li>
                 </ul>

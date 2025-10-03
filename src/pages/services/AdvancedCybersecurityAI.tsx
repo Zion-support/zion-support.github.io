@@ -350,7 +350,7 @@ const AdvancedCybersecurityAI: () => {
                   {
                     name: "Enterprise Security",
                     price: "$29,999",
-                    popular: true,,,,
+                    popular: true,
                     features: ["Up to 1,000 endpoints", "50 TB log storage/month", "Advanced threat detection", "24/7 support", "99.9% SLA"]","
                   },
                   {
@@ -371,7 +371,7 @@ const AdvancedCybersecurityAI: () => {
                   {
                     name: "Enterprise Security",","
                     price: "$29,999",","
-                    popular: true,,,,
+                    popular: true,
                     features: ["Up to 1,000 endpoints", "50 TB log storage/month", "Advanced threat detection", "24/7 support", "99.9% SLA"]","
                   },
                   {

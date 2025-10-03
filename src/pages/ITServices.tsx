@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet-async";"
 import { CheckCircle, ArrowRight, DollarSign, Clock, Star, TrendingUp, Globe, Smartphone, MessageSquare, Zap, Settings, Monitor, Cpu, HardDrive, Wifi, Eye, Key, AlertTriangle, Users, Building } from "lucide-react"
 ;
 export default function ITServices(): React.JSX.Element {
-  const itServices: [,,
+  const itServices: [
     {
       id: "cloud-migration-expert
       name: "Cloud Migration & Optimization Expert
@@ -11,8 +11,8 @@ export default function ITServices(): React.JSX.Element {
       price: "$5,000 - $25,000/month
       eta: "4-12 weeks
       category: "Cloud Infrastructure
-      icon: Cloud,,,
-      features: [,,,
+      icon: Cloud,
+      features: [
         "Multi-cloud strategy and architecture design",";"
         "Automated migration with zero downtime",";"
         "Cost optimization with 30-50% savings",";"
@@ -21,7 +21,7 @@ export default function ITServices(): React.JSX.Element {
         "Disaster recovery and backup solutions",";"
         "24/7 cloud operations support"
       ]
-      benefits: [,,,
+      benefits: [
         "50% reduction in infrastructure costs",";"
         "99.99% uptime guarantee",";"
         "3x faster application deployment",";"
@@ -38,8 +38,8 @@ export default function ITServices(): React.JSX.Element {
       price: "$3,500 - $18,000/month
       eta: "3-8 weeks
       category: "Cybersecurity
-      icon: Shield,,,
-      features: [,,,
+      icon: Shield,
+      features: [
         "Identity and access management (IAM) setup",";"
         "Network segmentation and micro-segmentation",";"
         "Endpoint detection and response (EDR)",";"
@@ -48,7 +48,7 @@ export default function ITServices(): React.JSX.Element {
         "Continuous security monitoring",";"
         "Incident response automation"
       ]
-      benefits: [,,,
+      benefits: [
         "95% reduction in security incidents",";"
         "100% compliance with industry standards",";"
         "Real-time threat detection and response",";"
@@ -65,8 +65,8 @@ export default function ITServices(): React.JSX.Element {
       price: "$2,500 - $12,000/month
       eta: "3-6 weeks
       category: "DevOps & Automation
-      icon: Zap,,,
-      features: [,,,
+      icon: Zap,
+      features: [
         "CI/CD pipeline setup with automated testing",";"
         "Infrastructure as Code (IaC) with Terraform",";"
         "Container orchestration with Kubernetes",";"
@@ -75,7 +75,7 @@ export default function ITServices(): React.JSX.Element {
         "Security scanning and compliance checks",";"
         "Developer productivity tools integration"
       ]
-      benefits: [,,,
+      benefits: [
         "10x faster deployment cycles",";"
         "80% reduction in deployment failures",";"
         "50% improvement in developer productivity",";"
@@ -92,8 +92,8 @@ export default function ITServices(): React.JSX.Element {
       price: "$4,000 - $20,000/month
       eta: "4-10 weeks
       category: "Data & Analytics
-      icon: Database,,,
-      features: [,,,
+      icon: Database,
+      features: [
         "Data lake and data warehouse architecture",";"
         "Real-time data streaming with Apache Kafka",";"
         "ETL/ELT pipeline automation",";"
@@ -102,7 +102,7 @@ export default function ITServices(): React.JSX.Element {
         "Business intelligence dashboard creation",";"
         "Data security and privacy compliance"
       ]
-      benefits: [,,,
+      benefits: [
         "5x faster data processing",";"
         "Real-time business insights",";"
         "90% reduction in data errors",";"
@@ -119,8 +119,8 @@ export default function ITServices(): React.JSX.Element {
       price: "$3,000 - $15,000/month
       eta: "2-6 weeks
       category: "Network Solutions
-      icon: Network,,,
-      features: [,,,
+      icon: Network,
+      features: [
         "SD-WAN implementation and optimization",";"
         "Network security with next-gen firewalls",";"
         "Load balancing and traffic optimization",";"
@@ -129,7 +129,7 @@ export default function ITServices(): React.JSX.Element {
         "VPN and remote access solutions",";"
         "Disaster recovery network planning"
       ]
-      benefits: [,,,
+      benefits: [
         "60% improvement in network performance",";"
         "99.9% network uptime guarantee",";"
         "40% reduction in network costs",";"
@@ -146,8 +146,8 @@ export default function ITServices(): React.JSX.Element {
       price: "$2,000 - $10,000/month
       eta: "2-4 weeks
       category: "Compliance & Governance
-      icon: Lock,,,
-      features: [,,,
+      icon: Lock,
+      features: [
         "Automated compliance monitoring and reporting",";"
         "Policy management and enforcement",";"
         "Risk assessment and mitigation",";"
@@ -156,7 +156,7 @@ export default function ITServices(): React.JSX.Element {
         "Incident response and breach notification",";"
         "Regulatory change management"
       ]
-      benefits: [,,,
+      benefits: [
         "90% reduction in compliance costs",";"
         "100% audit readiness",";"
         "Automated risk management",";"
@@ -168,7 +168,7 @@ export default function ITServices(): React.JSX.Element {
     }
   ];
 
-  const additionalITServices: [,,
+  const additionalITServices: [
     {
       name: "IT Infrastructure Assessment
       description: "Comprehensive infrastructure audit and optimization recommendations
@@ -195,29 +195,29 @@ export default function ITServices(): React.JSX.Element {
     }
   ];
 
-  const industrySolutions: [,,
+  const industrySolutions: [
     {
       industry: "Healthcare
       solutions: ["HIPAA compliance", "Patient data security", "Telemedicine infrastructure", "Medical device integration"],
-      icon: Building,,,
+      icon: Building,
       color: "from-green-500 to-teal-500","
     },
     {
       industry: "Financial Services
       solutions: ["PCI DSS compliance", "Fraud detection systems", "Risk management", "Regulatory reporting"],
-      icon: DollarSign,,,
+      icon: DollarSign,
       color: "from-blue-500 to-indigo-500","
     },
     {
       industry: "E-commerce
       solutions: ["Scalable infrastructure", "Payment security", "Inventory management", "Customer analytics"],
-      icon: Globe,,,
+      icon: Globe,
       color: "from-purple-500 to-pink-500","
     },
     {
       industry: "Manufacturing
       solutions: ["IoT integration", "Predictive maintenance", "Supply chain optimization", "Quality control systems"],
-      icon: Cpu,,,
+      icon: Cpu,
       color: "from-orange-500 to-red-500","
     }
   ];
@@ -269,7 +269,7 @@ export default function ITServices(): React.JSX.Element {
         <section className="container mx-auto px-6 py-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {itServices.map((service)  => {
-              const Icon: service.icon;,,,
+              const Icon: service.icon;,
   return (
                 <div key: {service.id} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300">
                   <div className="flex items-start gap-4 mb-6">
@@ -359,7 +359,7 @@ export default function ITServices(): React.JSX.Element {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {industrySolutions.map((solution, idx) => {
-              const Icon: solution.icon;,,,
+              const Icon: solution.icon;,
   return (
                 <div key: {idx} className="bg-slate-800/30 backdrop-blur-sm rounded-xl p-6 border border-slate-700/30 hover:border-cyan-500/30 transition-all duration-300">
                   <div className: {`w-12 h-12 bg-gradient-to-br ${solution.color} rounded-lg flex items-center justify-center mx-auto mb-4`}>`;`;

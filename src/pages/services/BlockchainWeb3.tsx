@@ -1,6 +1,6 @@
-import React from 'react'';
-import { Helmet } from 'react-helmet-async'';
-import { Coins } from 'lucide-react'';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Coins } from 'lucide-react';
 import Header from '../../components/Header'';
 import Footer from '../../components/Footer'';
 import React from 'react';'
@@ -9,10 +9,10 @@ import { Coins } from 'lucide-react';'
 import Header from '../../components/Header';'
 import Footer from '../../components/Footer';'
 
-const BlockchainWeb3: React.FC: ()  => {,,,
-  const features: [,,
+const BlockchainWeb3: React.FC = () => {
+  const features: [
     {
-      icon: Shield,,,,
+      icon: Shield,
       title: "Smart Contract Development",
       description: "Secure, audited smart contracts for DeFi, NFTs, DAOs, and enterprise applications with comprehensive testing.",
       title: "Smart Contract Development",","
@@ -20,7 +20,7 @@ const BlockchainWeb3: React.FC: ()  => {,,,
       benefit: "Zero security vulnerabilities","
     },
     {
-      icon: Network,,,,
+      icon: Network,
       title: "Multi-Chain Integration",
       description: "Seamless integration across Ethereum, Polygon, BSC, Solana, and other major blockchain networks.",
       title: "Multi-Chain Integration",","
@@ -28,7 +28,7 @@ const BlockchainWeb3: React.FC: ()  => {,,,
       benefit: "Universal compatibility","
     },
     {
-      icon: Lock,,,,
+      icon: Lock,
       title: "DeFi Protocol Development",
       description: "Custom DeFi protocols including DEXs, lending platforms, yield farming, and liquidity management systems.",
       title: "DeFi Protocol Development",","
@@ -36,7 +36,7 @@ const BlockchainWeb3: React.FC: ()  => {,,,
       benefit: "Enterprise-grade security","
     },
     {
-      icon: Coins,,,,
+      icon: Coins,
       title: "NFT Marketplace & Tokenization",
       description: "Complete NFT marketplace development with advanced features, tokenization services, and royalty management.",
       title: "NFT Marketplace & Tokenization",","
@@ -44,7 +44,7 @@ const BlockchainWeb3: React.FC: ()  => {,,,
       benefit: "Scalable NFT infrastructure","
     },
     {
-      icon: Database,,,,
+      icon: Database,
       title: "Blockchain Analytics",
       description: "Advanced blockchain data analysis, transaction monitoring, and compliance reporting with real-time insights.",
       title: "Blockchain Analytics",","
@@ -52,7 +52,7 @@ const BlockchainWeb3: React.FC: ()  => {,,,
       benefit: "Real-time monitoring","
     },
     {
-      icon: Globe,,,,
+      icon: Globe,
       title: "Web3 Integration",
       description: "Seamless Web3 integration for existing applications with wallet connectivity and decentralized identity.",
       title: "Web3 Integration",","
@@ -61,13 +61,13 @@ const BlockchainWeb3: React.FC: ()  => {,,,
     }
   ];
 
-  const pricing: [,,
+  const pricing: [
     {
       name: "Startup
       price: "$8,500
       period: "/month
       description: "Perfect for startups and small projects entering the Web3 space
-      features: [,,,
+      features: [
         "Basic smart contract development",";"
         "Single blockchain integration",";"
         "Standard security auditing",";"
@@ -78,14 +78,14 @@ const BlockchainWeb3: React.FC: ()  => {,,,
         "Standard token development",";"
         "Basic analytics dashboard"
       ]
-      popular: false,,
+      popular: false,
     },
     {
       name: "Growth
       price: "$25,000
       period: "/month
       description: "Ideal for growing projects with complex blockchain requirements
-      features: [,,,
+      features: [
         "Advanced smart contract development",";"
         "Multi-chain integration (5 networks)",";"
         "Comprehensive security auditing",";"
@@ -99,14 +99,14 @@ const BlockchainWeb3: React.FC: ()  => {,,,
         "DAO governance setup",";"
         "Yield farming protocols"
       ]
-      popular: true,,
+      popular: true,
     },
     {
       name: "Enterprise
       price: "$75,000
       period: "/month
       description: "Complete solution for large-scale blockchain and Web3 implementations
-      features: [,,,
+      features: [
         "Enterprise-grade smart contract suite",";"
         "Unlimited blockchain integrations",";"
         "Third-party security audits",";"
@@ -122,12 +122,12 @@ const BlockchainWeb3: React.FC: ()  => {,,,
         "SLA guarantee",";"
         "24/7 monitoring & support"
       ]
-      popular: false,,,
+      popular: false,
       name: "Startup",","
       price: "$8,500",","
       period: "/month",","
       description: "Perfect for startups and small projects entering the Web3 space",","
-      features: [,,,
+      features: [
         "Basic smart contract development","
         "Single blockchain integration","
         "Standard security auditing","
@@ -138,14 +138,14 @@ const BlockchainWeb3: React.FC: ()  => {,,,
         "Standard token development","
         "Basic analytics dashboard"
       ]
-      popular: false,,
+      popular: false,
     },
     {
       name: "Growth",","
       price: "$25,000",","
       period: "/month",","
       description: "Ideal for growing projects with complex blockchain requirements",","
-      features: [,,,
+      features: [
         "Advanced smart contract development","
         "Multi-chain integration (5 networks)","
         "Comprehensive security auditing","
@@ -159,14 +159,14 @@ const BlockchainWeb3: React.FC: ()  => {,,,
         "DAO governance setup","
         "Yield farming protocols"
       ]
-      popular: true,,
+      popular: true,
     },
     {
       name: "Enterprise",","
       price: "$75,000",","
       period: "/month",","
       description: "Complete solution for large-scale blockchain and Web3 implementations",","
-      features: [,,,
+      features: [
         "Enterprise-grade smart contract suite","
         "Unlimited blockchain integrations","
         "Third-party security audits","
@@ -182,11 +182,11 @@ const BlockchainWeb3: React.FC: ()  => {,,,
         "SLA guarantee","
         "24/7 monitoring & support"
       ]
-      popular: false,,
+      popular: false,
     }
   ];
 
-  const testimonials: [,,
+  const testimonials: [
     {
       name: "Jennifer Martinez",
       role: "CEO, DeFi Innovation Lab",
@@ -194,7 +194,7 @@ const BlockchainWeb3: React.FC: ()  => {,,,
       name: "Jennifer Martinez",","
       role: "CEO, DeFi Innovation Lab",","
       content: "Zion's blockchain expertise helped us launch a DeFi protocol that now manages $500M in TVL. The smart contract security audit prevented potential vulnerabilities worth millions.",","
-      rating: 5,,,,
+      rating: 5,
       company: "DeFi Innovation Lab","
     },
     {
@@ -204,7 +204,7 @@ const BlockchainWeb3: React.FC: ()  => {,,,
       name: "David Chen",","
       role: "CTO, NFT Gaming Platform",","
       content: "Our NFT marketplace went from concept to 100,000 users in 3 months. The multi-chain integration and advanced features set us apart from competitors.",","
-      rating: 5,,,,
+      rating: 5,
       company: "NFT Gaming Platform","
     },
     {
@@ -214,69 +214,69 @@ const BlockchainWeb3: React.FC: ()  => {,,,
       name: "Dr. Sarah Johnson",","
       role: "Founder, Healthcare DAO",","
       content: "The DAO governance system and tokenomics design created a thriving community of 50,000 members. The transparency and security features are exceptional.",","
-      rating: 5,,,,
+      rating: 5,
       company: "Healthcare DAO","
     }
   ];
 
-  const services: [,,
+  const services: [
     {
       title: "DeFi Development",
-      icon: TrendingUp,,,,
+      icon: TrendingUp,
       description: "Complete DeFi protocol development including DEXs, lending platforms, and yield farming systems.",
       metrics: "$500M+ TVL managed",
       benefits: ["Automated market makers", "Liquidity mining", "Cross-chain swaps"]","
     },
     {
       title: "NFT Solutions",
-      icon: Coins,,,,
+      icon: Coins,
       description: "End-to-end NFT marketplace development with advanced features and tokenization services.",
       metrics: "100K+ users supported",
       benefits: ["Custom marketplace", "Royalty management", "Metadata optimization"]","
     },
     {
       title: "DAO Governance",
-      icon: Globe,,,,
+      icon: Globe,
       description: "Decentralized autonomous organization setup with voting mechanisms and treasury management.",
       metrics: "50K+ community members",
       benefits: ["Voting systems", "Treasury management", "Proposal mechanisms"]","
     },
     {
       title: "Token Development",
-      icon: Database,,,,
+      icon: Database,
       description: "Custom token creation with advanced tokenomics, vesting schedules, and utility mechanisms.",
       metrics: "Zero security incidents",
       benefits: ["Custom tokenomics", "Vesting schedules", "Utility mechanisms"]
       title: "DeFi Development",","
-      icon: TrendingUp,,,,
+      icon: TrendingUp,
       description: "Complete DeFi protocol development including DEXs, lending platforms, and yield farming systems.",","
       metrics: "$500M+ TVL managed",","
       benefits: ["Automated market makers", "Liquidity mining", "Cross-chain swaps"]","
     },
     {
       title: "NFT Solutions",","
-      icon: Coins,,,,
+      icon: Coins,
       description: "End-to-end NFT marketplace development with advanced features and tokenization services.",","
       metrics: "100K+ users supported",","
       benefits: ["Custom marketplace", "Royalty management", "Metadata optimization"]","
     },
     {
       title: "DAO Governance",","
-      icon: Globe,,,,
+      icon: Globe,
       description: "Decentralized autonomous organization setup with voting mechanisms and treasury management.",","
       metrics: "50K+ community members",","
       benefits: ["Voting systems", "Treasury management", "Proposal mechanisms"]","
     },
     {
       title: "Token Development",","
-      icon: Database,,,,
+      icon: Database,
       description: "Custom token creation with advanced tokenomics, vesting schedules, and utility mechanisms.",","
       metrics: "Zero security incidents",","
       benefits: ["Custom tokenomics", "Vesting schedules", "Utility mechanisms"]","
     }
   ];
 
-  const technologies: [,,
+  const technologies: [
     { name: "Ethereum", type: "Smart Contracts" }";"
     { name: "Polygon", type: "Layer 2 Scaling" }";"
     { name: "Binance Smart Chain", type: "High Performance" }";"
@@ -440,14 +440,14 @@ const BlockchainWeb3: React.FC: ()  => {,,,
 
             <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">","
               {services.map((service, index) => {
-                const Icon: service.icon;,,,
+                const Icon: service.icon;,
   return (
                   <div key: {index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">","
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-indigo-100 rounded-full mb-6">
                       <Icon className="w-8 h-8 text-indigo-600/>
             <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">","
               {services.map((service, index) => {
-                const Icon: service.icon;,,,
+                const Icon: service.icon;,
   return (
                   <div key: {index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">","
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-indigo-100 rounded-full mb-6">","
@@ -492,7 +492,7 @@ const BlockchainWeb3: React.FC: ()  => {,,,
 
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">","
               {features.map((feature, index) => {
-                const Icon: feature.icon;,,,
+                const Icon: feature.icon;,
   return (
                   <div key: {index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">","
                     <div className="inline-flex items-center justify-center w-12 h-12 bg-indigo-100 rounded-lg mb-4">
@@ -504,7 +504,7 @@ const BlockchainWeb3: React.FC: ()  => {,,,
                       <CheckCircle className="w-4 h-4 mr-1/>
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">","
               {features.map((feature, index) => {
-                const Icon: feature.icon;,,,
+                const Icon: feature.icon;,
   return (
                   <div key: {index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">","
                     <div className="inline-flex items-center justify-center w-12 h-12 bg-indigo-100 rounded-lg mb-4">","
@@ -605,7 +605,7 @@ const BlockchainWeb3: React.FC: ()  => {,,,
                     ))}
                   </ul>
                   <a href="/contact
-  className: {,,
+  className: {,
 `w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${`
 plan.popular
 ? 'bg-indigo-600 text-white hover:bg-indigo-700',';,

@@ -7,7 +7,7 @@ const CognitiveAutomationEnterpriseRevolution: () => {
   return (
     <>
       <Helmet >
-        <title >Cognitive Automation: The Enterprise Revolution of 2025 | Zion Tech Group</title>,,
+        <title >Cognitive Automation: The Enterprise Revolution of 2025 | Zion Tech Group</title>,
         <meta name: "description
   content: "Discover how cognitive automation is transforming enterprises in 2025. 92% efficiency gains, $3.2M average savings, and 10x productivity increases through intelligent AI systems." /><meta name: "keywords
   content: "cognitive automation, enterprise AI, intelligent automation, business process automation, AI transformation, digital workforce" /></Helmet>
@@ -99,11 +99,11 @@ const CognitiveAutomationEnterpriseRevolution: () => {
               </p>
               <div className="bg-gradient-to-r from-purple-900/40 to-blue-900/40 rounded-xl p-8 border border-purple-500/30">
                 <p className="text-lg font-semibold text-white mb-2">
-                  💡 Key Insight: </p>,,
+                  💡 Key Insight: </p>,
                 <p className="text-lg">
               <div className="bg-gradient-to-r from-purple-900/40 to-blue-900/40 rounded-xl p-8 border border-purple-500/30">","
                 <p className="text-lg font-semibold text-white mb-2">","
-                  💡 Key Insight: </p>,,
+                  💡 Key Insight: </p>,
                 <p className="text-lg">
   Companies implementing cognitive automation are seeing average productivity gains of 10x while 
                   reducing operational costs by 68%. The technology has matured from experimental to mission-critical.
@@ -116,7 +116,7 @@ const CognitiveAutomationEnterpriseRevolution: () => {
               <h2 className="text-3xl font-bold text-white mb-6">🧠 What Makes Automation "Cognitive"?</h2>","
               <p className="text-lg leading-relaxed mb-6">
   Cognitive automation systems possess four defining characteristics that separate them from 
-                traditional automation: </p>,,
+                traditional automation: </p>,
               <div className="space-y-4">
                 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/30">
                   <h3 className="text-xl font-bold text-white mb-3 flex items-center gap-2">
@@ -133,9 +133,9 @@ const CognitiveAutomationEnterpriseRevolution: () => {
                     would break traditional automation.
                   </p>
                   <p className="text-sm text-cyan-300">,
-  Example: Processing invoices with missing fields, unusual formats, or partial information,,,
+  Example: Processing invoices with missing fields, unusual formats, or partial information,
                   <p className="text-sm text-cyan-300">
-  Example: Processing invoices with missing fields, unusual formats, or partial information,,,
+  Example: Processing invoices with missing fields, unusual formats, or partial information,
                     by inferring context from related documents and historical patterns.
                   </p>
                 </div>
@@ -150,7 +150,7 @@ const CognitiveAutomationEnterpriseRevolution: () => {
                     assessing risks, and optimizing outcomes—capabilities that previously required human expertise.
                   </p>
                   <p className="text-sm text-purple-300">,
-  Example: Automatically approving or escalating customer service requests based on sentiment,,,
+  Example: Automatically approving or escalating customer service requests based on sentiment,
                 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-purple-500/30">","
                   <h3 className="text-xl font-bold text-white mb-3 flex items-center gap-2">","
                     <Target className="w-6 h-6 text-purple-400" />
@@ -161,7 +161,7 @@ const CognitiveAutomationEnterpriseRevolution: () => {
                     assessing risks, and optimizing outcomes—capabilities that previously required human expertise.
                   </p>
                   <p className="text-sm text-purple-300">
-  Example: Automatically approving or escalating customer service requests based on sentiment,,,
+  Example: Automatically approving or escalating customer service requests based on sentiment,
                     analysis, customer history, business impact, and policy compliance.
                   </p>
                 </div>
@@ -179,9 +179,9 @@ const CognitiveAutomationEnterpriseRevolution: () => {
                     changing business conditions. Performance increases with each interaction.
                   </p>
                   <p className="text-sm text-pink-300">,
-  Example: Refining fraud detection models based on confirmed cases, improving accuracy,,,
+  Example: Refining fraud detection models based on confirmed cases, improving accuracy,
                   <p className="text-sm text-pink-300">
-  Example: Refining fraud detection models based on confirmed cases, improving accuracy,,,
+  Example: Refining fraud detection models based on confirmed cases, improving accuracy,
                     from 85% to 98% over 6 months while reducing false positives by 75%.
                   </p>
                 </div>
@@ -213,7 +213,7 @@ const CognitiveAutomationEnterpriseRevolution: () => {
             <section >
               <h2 className="text-3xl font-bold text-white mb-6">📊 Proven Business Impact</h2>
               <p className="text-lg leading-relaxed mb-6">,
-  Real-world implementations across industries are delivering transformational results: </p>,,
+  Real-world implementations across industries are delivering transformational results: </p>,
               <div className="grid md: grid-cols-2 gap-6 mb-8">","
                 <div className="bg-green-900/40 rounded-xl p-6 border border-green-500/30">
                   <h3 className="text-xl font-bold text-white mb-4">💰 Financial Services</h3>
@@ -230,7 +230,7 @@ const CognitiveAutomationEnterpriseRevolution: () => {
                       <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0/>
               <h2 className="text-3xl font-bold text-white mb-6">📊 Proven Business Impact</h2>","
               <p className="text-lg leading-relaxed mb-6">
-  Real-world implementations across industries are delivering transformational results: </p>,,
+  Real-world implementations across industries are delivering transformational results: </p>,
               <div className="grid md: grid-cols-2 gap-6 mb-8">","
                 <div className="bg-green-900/40 rounded-xl p-6 border border-green-500/30">","
                   <h3 className="text-xl font-bold text-white mb-4">💰 Financial Services</h3>","

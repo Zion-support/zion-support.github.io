@@ -1,7 +1,7 @@
-import React from 'react'';
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 ;
-const CaseStudiesPage: React.FC: ()  => {,,,
+const CaseStudiesPage: React.FC = () => {
   return (
     <>
       <Helmet >

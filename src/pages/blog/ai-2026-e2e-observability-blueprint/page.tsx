@@ -5,7 +5,7 @@ export default function AIE2EObservabilityBlueprint2026(): React.JSX.Element {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">","
       <Helmet >
-        <title >AI 2026: E2E Observability Blueprint — From Token to KPI</title>,,
+        <title >AI 2026: E2E Observability Blueprint — From Token to KPI</title>,
         <meta name: "description" content ="Trace prompts, tools, costs, and outcomes end‑to‑end with budgets, SLIs, and rollback hooks." /><link rel: "canonical" href="https://ziontechgroup.com/blog/ai-2026-e2e-observability-blueprint/>","
       </Helmet>
 

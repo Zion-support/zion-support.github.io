@@ -1,6 +1,6 @@
 import React from 'react';
 ;
-const SEOSplitTesting: React.FC: ()  => {,,,
+const SEOSplitTesting: React.FC = () => {
   return (
     <section className="max-w-5xl mx-auto">
       <header className="mb-8">
@@ -15,7 +15,7 @@ const SEOSplitTesting: React.FC: ()  => {,,,
         <div >
           <h2 className="text-xl font-semibold text-gray-900">Features</h2>
           <ul className="mt-4 space-y-2 list-disc list-inside text-gray-700">
-            <li >Cohort selection: blog, product, and docs collections</li>,,
+            <li >Cohort selection: blog, product, and docs collections</li>,
             <li >Automated test orchestration and rollback</li>
             <li >Bayesian and frequentist significance calculators</li>
             <li >GSC and GA4 connectors with weekly lift reports</li>
@@ -60,7 +60,7 @@ const SEOSplitTesting: React.FC: ()  => {,,,
           </li>
           <li >
             <a href="https://support.google.com/webmasters/answer/7519425" target: "_blank" rel="noreferrer" className ="hover:underline">,
-  Google: Search Console Performance report,,,
+  Google: Search Console Performance report,
             </a>
           </li>
         </ul>
@@ -69,7 +69,7 @@ const SEOSplitTesting: React.FC: ()  => {,,,
       <div className="mt-10">
         <a href="/contact" className ="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">Start a test</a>
         <p className="mt-4 text-sm text-gray-600">,
-  Contact: +1 302 464 0950 · kleber@ziontechgroup.com · 364 E Main St STE 1008, Middletown DE 19709,,,
+  Contact: +1 302 464 0950 · kleber@ziontechgroup.com · 364 E Main St STE 1008, Middletown DE 19709,
         </p>
       </div>
     </section>

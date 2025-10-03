@@ -352,7 +352,7 @@ const RealTimeCognitiveAutomation: () => {
                   {
                     name: "Professional",
                     price: "$19,999",
-                    popular: true,,,,
+                    popular: true,
                     features: ["250,000 transactions/month", "50 automated workflows", "Advanced integrations", "24/7 support", "99.9% SLA"]","
                   },
                   {
@@ -373,7 +373,7 @@ const RealTimeCognitiveAutomation: () => {
                   {
                     name: "Professional",","
                     price: "$19,999",","
-                    popular: true,,,,
+                    popular: true,
                     features: ["250,000 transactions/month", "50 automated workflows", "Advanced integrations", "24/7 support", "99.9% SLA"]","
                   },
                   {

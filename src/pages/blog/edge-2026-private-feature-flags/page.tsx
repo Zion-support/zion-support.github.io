@@ -4,7 +4,7 @@ export default function EdgePrivateFeatureFlags2026(): React.JSX.Element {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">","
       <Helmet >
-        <title >Edge 2026: Private Feature Flags at &lt;100ms</title>,,
+        <title >Edge 2026: Private Feature Flags at &lt;100ms</title>,
         <meta name: "description" content ="Signed configs, scoped IDs, and on‑device telemetry for zero‑PII rollouts worldwide under 100ms." /><link rel: "canonical" href="https://ziontechgroup.com/blog/edge-2026-private-feature-flags/>","
       </Helmet>
 

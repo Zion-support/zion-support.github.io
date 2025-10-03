@@ -1,5 +1,5 @@
-import React from 'react'';
-import { Helmet } from 'react-helmet-async'';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { 
   Brain, 
   Code, 
@@ -270,7 +270,7 @@ import {
   BlueFootedBooby,
   PeruvianBooby,
   AbbottBooby
-} from 'lucide-react'';
+} from 'lucide-react';
 
 export default function EnhancedServicesCatalog() {
   const title = 'Enhanced Services Catalog — Zion Tech Group';';
@@ -280,10 +280,10 @@ export default function EnhancedServicesCatalog() {
     {
       id: 'ai-micro-saas',';,
       title: 'AI-Powered Micro SaaS',';,
-      icon: Brain,,
+      icon: Brain,
       color: 'purple',';,
       description: 'Intelligent software solutions for specific business needs',';,
-      services: [,
+      services: [
         {
           name: 'AI Email Subject Line Optimizer',';,
           price: '$49 - $299/month',';,
@@ -334,10 +334,10 @@ export default function EnhancedServicesCatalog() {
     {
       id: 'advanced-ai',';,
       title: 'Advanced AI Services',';,
-      icon: Cpu,,
+      icon: Cpu,
       color: 'blue',';,
       description: 'Enterprise-grade AI solutions with machine learning capabilities',';,
-      services: [,
+      services: [
         {
           name: 'AI Compliance Monitor Pro',';,
           price: '$999 - $4,999/month',';,
@@ -388,10 +388,10 @@ export default function EnhancedServicesCatalog() {
     {
       id: 'it-infrastructure',';,
       title: 'IT Infrastructure Services',';,
-      icon: Server,,
+      icon: Server,
       color: 'green',';,
       description: 'Comprehensive IT solutions for modern businesses',';,
-      services: [,
+      services: [
         {
           name: 'Zero Trust Security Architecture',';,
           price: '$4,500 - $22,000/month',';,
@@ -442,10 +442,10 @@ export default function EnhancedServicesCatalog() {
     {
       id: 'emerging-tech',';,
       title: 'Emerging Technology Services',';,
-      icon: Rocket,,
+      icon: Rocket,
       color: 'orange',';,
       description: 'Cutting-edge solutions for the future of business',';,
-      services: [,
+      services: [
         {
           name: 'AI Video Content Creator Pro',';,
           price: '$299 - $1,999/month',';,
@@ -496,10 +496,10 @@ export default function EnhancedServicesCatalog() {
     {
       id: 'specialized-solutions',';,
       title: 'Specialized Solutions',';,
-      icon: Target,,
+      icon: Target,
       color: 'indigo',';,
       description: 'Industry-specific solutions for unique business needs',';,
-      services: [,
+      services: [
         {
           name: 'AI-Powered SEO Content Optimizer',';,
           price: '$99 - $599/month',';,

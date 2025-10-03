@@ -5,7 +5,7 @@ export default function PolicyTestsQuickstart2025(): React.JSX.Element {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">","
       <Helmet >
-        <title >GenAI 2025: Policy Tests Quickstart</title>,,
+        <title >GenAI 2025: Policy Tests Quickstart</title>,
         <meta name: "description" content="Lightweight CI policy tests wired to KPIs to ship faster without regressions." /><link rel="canonical" href="https://ziontechgroup.com/blog/genai-2025-sept-30-policy-tests-quickstart/>","
       </Helmet>
 

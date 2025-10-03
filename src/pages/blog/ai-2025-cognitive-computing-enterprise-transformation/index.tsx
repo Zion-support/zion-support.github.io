@@ -1,9 +1,9 @@
-import React from 'react'';
+import React from 'react';
 import Header from '../../../components/Header'';
 import React from 'react';'
 import Header from '../../../components/Header';'
 
-const CognitiveComputingTransformation: React.FC: ()  => {,,,
+const CognitiveComputingTransformation: React.FC = () => {
   return (
     <>
       <Helmet >
@@ -47,7 +47,7 @@ const CognitiveComputingTransformation: React.FC: ()  => {,,,
               </div>
               
               <h1 className="text-4xl sm: text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-  Cognitive Computing Enterprise Transformation: AI That Thinks Like Humans,,
+  Cognitive Computing Enterprise Transformation: AI That Thinks Like Humans,
               </h1>
               
               <p className="text-xl text-purple-100 leading-relaxed mb-8">,
@@ -81,7 +81,7 @@ const CognitiveComputingTransformation: React.FC: ()  => {,,,
               </div>
               
               <h1 className="text-4xl sm: text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-  Cognitive Computing Enterprise Transformation: AI That Thinks Like Humans,,
+  Cognitive Computing Enterprise Transformation: AI That Thinks Like Humans,
               </h1>
               
               <p className="text-xl text-purple-100 leading-relaxed mb-8">
@@ -137,7 +137,7 @@ const CognitiveComputingTransformation: React.FC: ()  => {,,,
   What is Cognitive Computing?
               </h2>
               <p className="text-purple-100 leading-relaxed mb-4">,
-  Cognitive computing represents a paradigm shift from rule-based systems to intelligent platforms that: </p>,,
+  Cognitive computing represents a paradigm shift from rule-based systems to intelligent platforms that: </p>,
               <ul className="space-y-3">
                 <li className="flex items-start gap-3 text-purple-100">
                   <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0/>
@@ -162,7 +162,7 @@ const CognitiveComputingTransformation: React.FC: ()  => {,,,
   What is Cognitive Computing?
               </h2>
               <p className="text-purple-100 leading-relaxed mb-4">
-  Cognitive computing represents a paradigm shift from rule-based systems to intelligent platforms that: </p>,,
+  Cognitive computing represents a paradigm shift from rule-based systems to intelligent platforms that: </p>,
               <ul className="space-y-3">","
                 <li className="flex items-start gap-3 text-purple-100">","
                   <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />","
@@ -197,13 +197,13 @@ const CognitiveComputingTransformation: React.FC: ()  => {,,,
                     {
                       title: "Natural Language Understanding
                       icon: "💬
-                      features: [,,,
+                      features: [
                         "Semantic comprehension of unstructured text",";"
                         "Intent recognition with 98.7% accuracy",";"
                         "Multi-language support for global operations"
                       title: "Natural Language Understanding",","
                       icon: "💬",","
-                      features: [,,,
+                      features: [
                         "Semantic comprehension of unstructured text","
                         "Intent recognition with 98.7% accuracy","
                         "Multi-language support for global operations","
@@ -213,13 +213,13 @@ const CognitiveComputingTransformation: React.FC: ()  => {,,,
                     {
                       title: "Knowledge Reasoning
                       icon: "🧠
-                      features: [,,,
+                      features: [
                         "Inference over complex knowledge graphs",";"
                         "Causal relationship understanding",";"
                         "Analogical reasoning for novel situations"
                       title: "Knowledge Reasoning",","
                       icon: "🧠",","
-                      features: [,,,
+                      features: [
                         "Inference over complex knowledge graphs","
                         "Causal relationship understanding","
                         "Analogical reasoning for novel situations","
@@ -229,13 +229,13 @@ const CognitiveComputingTransformation: React.FC: ()  => {,,,
                     {
                       title: "Continuous Learning
                       icon: "📈
-                      features: [,,,
+                      features: [
                         "Adaptive models that improve over time",";"
                         "Transfer learning across domains",";"
                         "Few-shot learning for new scenarios"
                       title: "Continuous Learning",","
                       icon: "📈",","
-                      features: [,,,
+                      features: [
                         "Adaptive models that improve over time","
                         "Transfer learning across domains","
                         "Few-shot learning for new scenarios","
@@ -245,13 +245,13 @@ const CognitiveComputingTransformation: React.FC: ()  => {,,,
                     {
                       title: "Explainable Intelligence
                       icon: "🔍
-                      features: [,,,
+                      features: [
                         "Transparent decision pathways",";"
                         "Confidence scoring for recommendations",";"
                         "Audit trails for compliance"
                       title: "Explainable Intelligence",","
                       icon: "🔍",","
-                      features: [,,,
+                      features: [
                         "Transparent decision pathways","
                         "Confidence scoring for recommendations","
                         "Audit trails for compliance","
@@ -293,7 +293,7 @@ const CognitiveComputingTransformation: React.FC: ()  => {,,,
                     {
                       title: "Intelligent Decision Support
                       industry: "Financial Services
-                      impact: {,,,
+                      impact: {,
                         accuracy: "98.5% accurate risk predictions
                         value: "$847M prevented losses
                         speed: "85% faster decision-making
@@ -303,7 +303,7 @@ const CognitiveComputingTransformation: React.FC: ()  => {,,,
                     {
                       title: "Customer Intelligence Platform
                       industry: "Retail
-                      impact: {,,,
+                      impact: {,
                         conversion: "12.8x increase in conversion rates
                         satisfaction: "97.8% customer satisfaction
                         revenue: "$3.4B incremental revenue
@@ -313,7 +313,7 @@ const CognitiveComputingTransformation: React.FC: ()  => {,,,
                     {
                       title: "Autonomous Operations Management
                       industry: "Manufacturing
-                      impact: {,,,
+                      impact: {,
                         prediction: "99.6% prediction accuracy
                         downtime: "87% reduction in downtime
                         savings: "$2.1B prevented losses
@@ -325,7 +325,7 @@ const CognitiveComputingTransformation: React.FC: ()  => {,,,
                       <div className="flex items-start justify-between mb-4">,
   title: "Intelligent Decision Support",","
                       industry: "Financial Services",","
-                      impact: {,,,
+                      impact: {,
                         accuracy: "98.5% accurate risk predictions",","
                         value: "$847M prevented losses",","
                         speed: "85% faster decision-making",","
@@ -335,7 +335,7 @@ const CognitiveComputingTransformation: React.FC: ()  => {,,,
                     {
                       title: "Customer Intelligence Platform",","
                       industry: "Retail",","
-                      impact: {,,,
+                      impact: {,
                         conversion: "12.8x increase in conversion rates",","
                         satisfaction: "97.8% customer satisfaction",","
                         revenue: "$3.4B incremental revenue",","
@@ -345,7 +345,7 @@ const CognitiveComputingTransformation: React.FC: ()  => {,,,
                     {
                       title: "Autonomous Operations Management",","
                       industry: "Manufacturing",","
-                      impact: {,,,
+                      impact: {,
                         prediction: "99.6% prediction accuracy",","
                         downtime: "87% reduction in downtime",","
                         savings: "$2.1B prevented losses",","
@@ -578,7 +578,7 @@ const CognitiveComputingTransformation: React.FC: ()  => {,,,
                   <span className="text-sm font-semibold text-purple-300">CASE STUDY</span>","
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2 group-hover: text-purple-300 transition-colors">
-  Fortune 20 Telecom: $4.7B Cognitive Transformation,,
+  Fortune 20 Telecom: $4.7B Cognitive Transformation,
                 </h3>
                 <p className="text-purple-100 text-sm">
   Real-world cognitive computing success with 98.7% satisfaction and 3,602% ROI.

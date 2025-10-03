@@ -4,7 +4,7 @@ const GlobalFinTechAITransformation: () => {
   return (
     <>
       <Helmet >
-        <title >Global FinTech AI Transformation: $127M Annual Value Creation | Zion Tech Group</title>,,
+        <title >Global FinTech AI Transformation: $127M Annual Value Creation | Zion Tech Group</title>,
         <meta name: "description
   content: "Fortune 500 digital banking platform achieves $127M annual value through AI transformation. 94.7% fraud detection, 15.2x ROI, 10x customer growth enabled." /><meta name: "keywords
   content: "fintech AI, digital banking, fraud detection, AI transformation case study, financial services AI" /></Helmet>
@@ -312,19 +312,19 @@ const GlobalFinTechAITransformation: () => {
                   </h3>
                   <ul className="space-y-3">
                     <li className="flex justify-between items-center">
-                      <span >Total Annual Value: </span>,,
+                      <span >Total Annual Value: </span>,
                       <span className="text-green-400 font-bold text-xl">$127M</span>
                     </li>
                     <li className="flex justify-between items-center">
-                      <span >Cost Savings: </span>,,
+                      <span >Cost Savings: </span>,
                       <span className="text-green-400 font-bold">$65M</span>
                     </li>
                     <li className="flex justify-between items-center">
-                      <span >Revenue Growth: </span>,,
+                      <span >Revenue Growth: </span>,
                       <span className="text-green-400 font-bold">$62M</span>
                     </li>
                     <li className="flex justify-between items-center">
-                      <span >Total Investment: </span>,,
+                      <span >Total Investment: </span>,
                       <span className="text-blue-400 font-bold">$42M</span>
                     </li>
                     <li className="flex justify-between items-center pt-3 border-t border-white/20">
@@ -342,19 +342,19 @@ const GlobalFinTechAITransformation: () => {
                   </h3>
                   <ul className="space-y-3">","
                     <li className="flex justify-between items-center">","
-                      <span >Total Annual Value: </span>,,
+                      <span >Total Annual Value: </span>,
                       <span className="text-green-400 font-bold text-xl">$127M</span>","
                     </li>
                     <li className="flex justify-between items-center">","
-                      <span >Cost Savings: </span>,,
+                      <span >Cost Savings: </span>,
                       <span className="text-green-400 font-bold">$65M</span>","
                     </li>
                     <li className="flex justify-between items-center">","
-                      <span >Revenue Growth: </span>,,
+                      <span >Revenue Growth: </span>,
                       <span className="text-green-400 font-bold">$62M</span>","
                     </li>
                     <li className="flex justify-between items-center">","
-                      <span >Total Investment: </span>,,
+                      <span >Total Investment: </span>,
                       <span className="text-blue-400 font-bold">$42M</span>","
                     </li>
                     <li className="flex justify-between items-center pt-3 border-t border-white/20">","
@@ -372,19 +372,19 @@ const GlobalFinTechAITransformation: () => {
                   <ul className="space-y-3">
                     <li className="flex items-start gap-2">
                       <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1/>
-                      <span ><strong >Fraud Detection: </strong> 94.7% accuracy, 92% loss reduction</span>,,
+                      <span ><strong >Fraud Detection: </strong> 94.7% accuracy, 92% loss reduction</span>,
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1/>
-                      <span ><strong >Credit Decisions: </strong> 2-minute approvals vs 72 hours</span>,,
+                      <span ><strong >Credit Decisions: </strong> 2-minute approvals vs 72 hours</span>,
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1/>
-                      <span ><strong >Automation: </strong> 92% rate, 450 FTE redeployed</span>,,
+                      <span ><strong >Automation: </strong> 92% rate, 450 FTE redeployed</span>,
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1/>
-                      <span ><strong >Customer Experience: </strong> 87 NPS, 8% churn</span>,,
+                      <span ><strong >Customer Experience: </strong> 87 NPS, 8% churn</span>,
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1/>
@@ -396,23 +396,23 @@ const GlobalFinTechAITransformation: () => {
                   <ul className="space-y-3">","
                     <li className="flex items-start gap-2">","
                       <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />","
-                      <span ><strong >Fraud Detection: </strong> 94.7% accuracy, 92% loss reduction</span>,,
+                      <span ><strong >Fraud Detection: </strong> 94.7% accuracy, 92% loss reduction</span>,
                     </li>
                     <li className="flex items-start gap-2">","
                       <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />","
-                      <span ><strong >Credit Decisions: </strong> 2-minute approvals vs 72 hours</span>,,
+                      <span ><strong >Credit Decisions: </strong> 2-minute approvals vs 72 hours</span>,
                     </li>
                     <li className="flex items-start gap-2">","
                       <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />","
-                      <span ><strong >Automation: </strong> 92% rate, 450 FTE redeployed</span>,,
+                      <span ><strong >Automation: </strong> 92% rate, 450 FTE redeployed</span>,
                     </li>
                     <li className="flex items-start gap-2">","
                       <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />","
-                      <span ><strong >Customer Experience: </strong> 87 NPS, 8% churn</span>,,
+                      <span ><strong >Customer Experience: </strong> 87 NPS, 8% churn</span>,
                     </li>
                     <li className="flex items-start gap-2">","
                       <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />","
-                      <span ><strong >Scalability: </strong> Ready for 10x customer growth</span>,,
+                      <span ><strong >Scalability: </strong> Ready for 10x customer growth</span>,
                     </li>
                   </ul>
                 </div>

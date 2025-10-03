@@ -29,7 +29,7 @@ export default function AutonomicDecisionEngines2025(): React.JSX.Element {
             covers deterministic tools, safety gates, and rollback triggers that contain incidents in under 60 seconds.
           </p>
           <p >
-            Key practices: intent prefetching, warm pools, policy‑tested routes, and observability from token to KPI.,,,
+            Key practices: intent prefetching, warm pools, policy‑tested routes, and observability from token to KPI.,
           </p>
         </div>
       </div>

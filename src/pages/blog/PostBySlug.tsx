@@ -4,46 +4,46 @@ import Header from "../../components/Header
 export default function PostBySlug(): React.JSX.Element {
   const { slug } = useParams();
 
-  const article: React.useMemo(()  => {,,,
+  const article: React.useMemo(()  => {,
   if (!slug) return undefined;
-    const fromLatest: latestArticles.find((a) => a.slug: = = slug);,,,
+    const fromLatest: latestArticles.find((a) => a.slug: = = slug);,
   if (fromLatest) {
       return {
-        slug: fromLatest.slug,,,
-        title: fromLatest.title,,,
-        description: fromLatest.description || fromLatest.excerpt,,,
-        category: fromLatest.category,,,
-        publishedAt: fromLatest.date,,,
-        readTime: fromLatest.readTime,,,
+        slug: fromLatest.slug,
+        title: fromLatest.title,
+        description: fromLatest.description || fromLatest.excerpt,
+        category: fromLatest.category,
+        publishedAt: fromLatest.date,
+        readTime: fromLatest.readTime,
         author: fromLatest.author};
     }
-    const fromBlogPosts: blogPosts.find((p) => p.slug: = = slug);,,,
+    const fromBlogPosts: blogPosts.find((p) => p.slug: = = slug);,
   if (fromBlogPosts) {
       return {
-        slug: fromBlogPosts.slug,,,
-        title: fromBlogPosts.title,,,
-        description: fromBlogPosts.description,,,
-        category: fromBlogPosts.category,,,
-        publishedAt: fromBlogPosts.date,,,
-        readTime: fromBlogPosts.readTime,,,
+        slug: fromBlogPosts.slug,
+        title: fromBlogPosts.title,
+        description: fromBlogPosts.description,
+        category: fromBlogPosts.category,
+        publishedAt: fromBlogPosts.date,
+        readTime: fromBlogPosts.readTime,
         author: fromBlogPosts.author};
     }
-    const fromPosts: staticPosts.find((p) => p.slug: = = slug);,,,
+    const fromPosts: staticPosts.find((p) => p.slug: = = slug);,
   if (fromPosts) {
       return {
-        slug: fromPosts.slug,,,
-        title: fromPosts.title,,,
-        description: fromPosts.description,,,
-        category: fromPosts.category,,,
-        publishedAt: fromPosts.publishedAt,,,
-        readTime: fromPosts.readTime,,,
+        slug: fromPosts.slug,
+        title: fromPosts.title,
+        description: fromPosts.description,
+        category: fromPosts.category,
+        publishedAt: fromPosts.publishedAt,
+        readTime: fromPosts.readTime,
         author: "Zion Tech Group Team
-        slug: fromPosts.slug,,,,
-        title: fromPosts.title,,,,
-        description: fromPosts.description,,,,
-        category: fromPosts.category,,,,
-        publishedAt: fromPosts.publishedAt,,,,
-        readTime: fromPosts.readTime,,,,
+        slug: fromPosts.slug,
+        title: fromPosts.title,
+        description: fromPosts.description,
+        category: fromPosts.category,
+        publishedAt: fromPosts.publishedAt,
+        readTime: fromPosts.readTime,
         author: "Zion Tech Group Team",","
       };
     }
@@ -156,7 +156,7 @@ return (
                 <p className="text-zion-slate-light text-sm mb-0">
               <div className="bg-zion-blue/20 border border-zion-blue/30 rounded-xl p-6 my-8">","
                 <p className="text-zion-slate-light text-sm mb-0">","
-                  💡 <strong >Coming Soon: </strong> Full article content will be available shortly. ,,,
+                  💡 <strong >Coming Soon: </strong> Full article content will be available shortly. ,
                   This preview shows the key insights and value proposition of this groundbreaking topic.
                 </p>
               </div>

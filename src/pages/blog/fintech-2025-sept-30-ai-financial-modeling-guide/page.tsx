@@ -25,7 +25,7 @@ export default function AIFinancialModelingGuide2025(): React.JSX.Element {
   AI Financial Modeling Guide — 95% Accuracy with Guardrails
         </h1>
         <p className="text-zion-slate-light mb-8">
-  Practical patterns to build trustworthy financial AI: budget‑aware models, backtests, and policy‑tested rollback.,,,
+  Practical patterns to build trustworthy financial AI: budget‑aware models, backtests, and policy‑tested rollback.,
         </p>
         <div className="prose prose-invert max-w-3xl">","
           <p >

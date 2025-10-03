@@ -1,7 +1,7 @@
-import React from 'react'';
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 ;
-const Terms: React.FC: ()  => {,,,
+const Terms: React.FC = () => {
   return (
     <>
       <Helmet >

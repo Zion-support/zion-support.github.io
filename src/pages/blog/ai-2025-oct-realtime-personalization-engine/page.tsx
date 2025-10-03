@@ -32,7 +32,7 @@ export default function RealtimePersonalizationEngine2025(): void {
             
             <h1 className="text-5xl md: text-6xl font-bold mb-6 bg-gradient-to-r from-rose-400 via-pink-400 to-purple-400 text-transparent bg-clip-text leading-tight">","
             <h1 className="text-5xl md: text-6xl font-bold mb-6 bg-gradient-to-r from-rose-400 via-pink-400 to-purple-400 text-transparent bg-clip-text leading-tight">
-  Real-Time AI Personalization: The Revenue Multiplication Engine,,
+  Real-Time AI Personalization: The Revenue Multiplication Engine,
             </h1>
             
             <p className="text-xl text-gray-300 leading-relaxed">
@@ -49,11 +49,11 @@ export default function RealtimePersonalizationEngine2025(): void {
               <ul className="space-y-4 text-lg">
                 <li className="flex items-start gap-3">
                   <Zap className="h-6 w-6 text-yellow-400 mt-1 flex-shrink-0/>
-                  <span ><strong >98.4% Relevance: </strong> AI predicts user intent and preferences with near-perfect accuracy</span>,,
+                  <span ><strong >98.4% Relevance: </strong> AI predicts user intent and preferences with near-perfect accuracy</span>,
                 </li>
                 <li className="flex items-start gap-3">
                   <Users className="h-6 w-6 text-blue-400 mt-1 flex-shrink-0/>
-                  <span ><strong >8.7x Conversion Lift: </strong> Personalized experiences drive dramatic engagement increases</span>,,
+                  <span ><strong >8.7x Conversion Lift: </strong> Personalized experiences drive dramatic engagement increases</span>,
                 </li>
                 <li className="flex items-start gap-3">
                   <DollarSign className="h-6 w-6 text-green-400 mt-1 flex-shrink-0/>
@@ -66,15 +66,15 @@ export default function RealtimePersonalizationEngine2025(): void {
               <ul className="space-y-4 text-lg">","
                 <li className="flex items-start gap-3">","
                   <Zap className="h-6 w-6 text-yellow-400 mt-1 flex-shrink-0" />","
-                  <span ><strong >98.4% Relevance: </strong> AI predicts user intent and preferences with near-perfect accuracy</span>,,
+                  <span ><strong >98.4% Relevance: </strong> AI predicts user intent and preferences with near-perfect accuracy</span>,
                 </li>
                 <li className="flex items-start gap-3">","
                   <Users className="h-6 w-6 text-blue-400 mt-1 flex-shrink-0" />","
-                  <span ><strong >8.7x Conversion Lift: </strong> Personalized experiences drive dramatic engagement increases</span>,,
+                  <span ><strong >8.7x Conversion Lift: </strong> Personalized experiences drive dramatic engagement increases</span>,
                 </li>
                 <li className="flex items-start gap-3">","
                   <DollarSign className="h-6 w-6 text-green-400 mt-1 flex-shrink-0" />","
-                  <span ><strong >$234M+ Revenue: </strong> Average incremental revenue for enterprise deployments</span>,,
+                  <span ><strong >$234M+ Revenue: </strong> Average incremental revenue for enterprise deployments</span>,
                 </li>
               </ul>
             </div>

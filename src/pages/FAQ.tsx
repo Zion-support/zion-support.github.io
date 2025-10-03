@@ -1,6 +1,6 @@
 import React from "react"
 ;
-const FAQ: React.FC: ()  => {,,,
+const FAQ: React.FC = () => {
   return (
         <section className="min-h-[40vh]">
             <h1 className="text-3xl font-bold mb-4">Frequently Asked Questions</h1>
