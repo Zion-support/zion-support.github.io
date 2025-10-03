@@ -85,7 +85,7 @@ export default function PostBySlug(): React.JSX.Element {
     }
     
     return undefined;
-  }, [slug]);
+  }, [slug, blogPosts, latestArticles, staticPosts]);
 
   if (!article) {
     return (
