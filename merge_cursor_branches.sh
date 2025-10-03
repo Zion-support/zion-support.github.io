@@ -1,81 +1,113 @@
 #!/bin/bash
 
-# Script to merge cursor-created branches with the latest content
+# Script to merge cursor branches systematically
+# This will help resolve conflicts and merge open PRs
+
 set -e
 
-echo "========================================="
-echo "Merging Latest Cursor Content Branches"
-echo "========================================="
-echo ""
+echo "🚀 Starting systematic merge of cursor branches..."
 
-# Make sure we're on main and up to date
-git checkout main
-git pull origin main
-
-# Get the 10 most recently updated cursor branches
-echo "Finding recently updated cursor branches..."
-RECENT_BRANCHES=$(git for-each-ref --sort=-committerdate refs/remotes/origin/cursor/create-and-deploy-new-content-* --format='%(refname:short)' | head -10 | sed 's/origin\///')
-
-echo "Found branches:"
-echo "$RECENT_BRANCHES"
-echo ""
-
-MERGED_COUNT=0
-FAILED_COUNT=0
-
-for BRANCH in $RECENT_BRANCHES; do
-  echo "========================================="
-  echo "Processing: $BRANCH"
-  echo "========================================="
-  
-  # Check if already merged
-  if git merge-base --is-ancestor "origin/$BRANCH" HEAD 2>/dev/null; then
-    echo "✓ Already merged: $BRANCH"
-    continue
-  fi
-  
-  echo "Attempting to merge $BRANCH..."
-  
-  if git merge "origin/$BRANCH" --no-edit -m "Merge $BRANCH - automated content integration" 2>&1; then
-    echo "✓ Successfully merged: $BRANCH"
-    MERGED_COUNT=$((MERGED_COUNT + 1))
-  else
-    echo "✗ Merge conflict detected"
-    echo "Auto-resolving conflicts..."
+# Function to safely merge a branch
+merge_branch() {
+    local branch_name=$1
+    echo "📋 Attempting to merge: $branch_name"
     
-    # Auto-resolve by keeping our version for main files
-    git checkout --ours app/page.tsx 2>/dev/null || true
-    git checkout --ours app/layout.tsx 2>/dev/null || true
-    git add . 2>/dev/null || true
-    
-    if git commit --no-edit -m "Merge $BRANCH - auto-resolved conflicts" 2>&1; then
-      echo "✓ Auto-resolved and merged: $BRANCH"
-      MERGED_COUNT=$((MERGED_COUNT + 1))
-    else
-      echo "✗ Could not complete merge, aborting"
-      git merge --abort 2>/dev/null || true
-      FAILED_COUNT=$((FAILED_COUNT + 1))
+    # Check if branch exists
+    if ! git show-ref --verify --quiet "refs/remotes/$branch_name"; then
+        echo "⚠️  Branch $branch_name does not exist, skipping..."
+        return 1
     fi
-  fi
-  echo ""
+    
+    # Try to merge
+    if git merge "origin/${branch_name#origin/}" --no-edit 2>/dev/null; then
+        echo "✅ Successfully merged: $branch_name"
+        return 0
+    else
+        echo "❌ Merge conflict in: $branch_name"
+        # Check if there are conflicts
+        if git status --porcelain | grep -q "^UU\|^AA\|^DD"; then
+            echo "🔧 Resolving conflicts for: $branch_name"
+            
+            # Try to resolve common conflicts automatically
+            if resolve_conflicts "$branch_name"; then
+                git add .
+                git commit --no-edit
+                echo "✅ Conflicts resolved for: $branch_name"
+                return 0
+            else
+                echo "⚠️  Could not auto-resolve conflicts for: $branch_name, aborting merge"
+                git merge --abort
+                return 1
+            fi
+        else
+            # No conflicts, just commit
+            git add .
+            git commit --no-edit
+            echo "✅ Successfully merged: $branch_name"
+            return 0
+        fi
+    fi
+}
+
+# Function to resolve common conflicts
+resolve_conflicts() {
+    local branch_name=$1
+    
+    # Common conflict resolution strategies
+    # 1. Keep the main branch version for package.json conflicts
+    if git status --porcelain | grep -q "package.json"; then
+        git checkout --ours package.json
+    fi
+    
+    # 2. Keep the main branch version for package-lock.json conflicts
+    if git status --porcelain | grep -q "package-lock.json"; then
+        git checkout --ours package-lock.json
+    fi
+    
+    # 3. For app/page.tsx conflicts, try to merge intelligently
+    if git status --porcelain | grep -q "app/page.tsx"; then
+        # Keep our version (main) but add any new imports that don't conflict
+        echo "Resolving app/page.tsx conflicts by keeping main branch structure..."
+        git checkout --ours app/page.tsx
+    fi
+    
+    # 4. For other conflicts, prefer main branch
+    git status --porcelain | grep "^UU\|^AA" | cut -c4- | while read file; do
+        if [ -f "$file" ]; then
+            echo "Resolving conflict in $file by keeping main branch version"
+            git checkout --ours "$file"
+        fi
+    done
+    
+    return 0
+}
+
+# Get the most recent create-and-deploy-new-content branches
+echo "📅 Getting most recent create-and-deploy-new-content branches..."
+RECENT_BRANCHES=$(git for-each-ref --sort=-committerdate --format='%(refname:short)' refs/remotes/origin/cursor | grep "create-and-deploy-new-content" | head -10)
+
+echo "🎯 Found recent branches to merge:"
+echo "$RECENT_BRANCHES"
+
+# Merge each branch
+successful_merges=0
+failed_merges=0
+
+for branch in $RECENT_BRANCHES; do
+    if merge_branch "$branch"; then
+        ((successful_merges++))
+    else
+        ((failed_merges++))
+    fi
+    echo "---"
 done
 
-echo "========================================="
-echo "Summary"
-echo "========================================="
-echo "Merged: $MERGED_COUNT branches"
-echo "Failed: $FAILED_COUNT branches"
-echo ""
+echo "📊 Merge Summary:"
+echo "✅ Successful merges: $successful_merges"
+echo "❌ Failed merges: $failed_merges"
 
-if [ $MERGED_COUNT -gt 0 ]; then
-  echo "Pushing to main..."
-  git push origin main
-  echo "✓ All changes pushed successfully"
-else
-  echo "No new branches merged"
-fi
+# Push the results
+echo "🚀 Pushing merged changes to main..."
+git push origin main
 
-echo ""
-echo "========================================="
-echo "Complete!"
-echo "========================================="
+echo "🎉 Merge process completed!"

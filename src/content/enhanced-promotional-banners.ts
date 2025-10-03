@@ -14,6 +14,198 @@ export interface EnhancedPromotionalBanner {
 
 export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
   {
+    id: 'oct-01-autonomous-business-ops-2025',
+    title: '🚀 JUST RELEASED: Autonomous Business Operations Platform — $650M Value Creation, 85% Cost Reduction in 90 Days!',
+    description: 'Revolutionary AI platform eliminating manual processes across 40+ workflows. Fortune 100 achieved $650M annual value, 99.7% accuracy, 10x faster operations. 50% OFF through December + FREE 30-day proof of concept!',
+    ctaText: 'Transform Your Business Now',
+    ctaLink: '/services/autonomous-business-operations',
+    variant: 'success',
+    icon: '🚀',
+    featured: true,
+    priority: 0,
+    startDate: '2025-10-01',
+  },
+  {
+    id: 'oct-01-autonomous-ops-blog-2025',
+    title: '📖 NEW GUIDE: The Complete Autonomous Business Operations Revolution — 22-Minute Deep Dive',
+    description: 'Learn how Fortune 500 companies are deploying self-managing AI systems. Complete implementation guide with architecture, ROI calculator, and production best practices.',
+    ctaText: 'Read the Complete Guide',
+    ctaLink: '/blog/ai-autonomous-business-operations-revolution-2025',
+    variant: 'info',
+    icon: '📖',
+    featured: true,
+    priority: 1,
+    startDate: '2025-10-01',
+  },
+  {
+    id: 'oct-01-650m-case-study-2025',
+    title: '💰 CASE STUDY: Fortune 100 Creates $650M Annual Value Through Autonomous Operations',
+    description: 'Incredible transformation story! 85% cost reduction, 10x faster processing, 99.7% accuracy, 40+ autonomous workflows deployed in 90 days. Complete technical details and lessons learned.',
+    ctaText: 'Read $650M Success Story',
+    ctaLink: '/case-studies/fortune-100-autonomous-operations-transformation-2025',
+    variant: 'success',
+    icon: '💰',
+    featured: true,
+    priority: 2,
+    startDate: '2025-10-01',
+  },
+  {
+    id: 'oct-01-agent-swarm-breakthrough-2025',
+    title: '🔥🤖 BREAKTHROUGH: Revolutionary Agent Swarm Platform — 100,000+ AI Agents Working in Perfect Harmony',
+    description: 'Just launched! Coordinate massive swarms of 100,000+ specialized AI agents achieving 99.999% reliability, sub-second response times, and 95% cost reduction. $890M healthcare success story + production-ready services now available.',
+    ctaText: 'Explore Agent Swarms',
+    ctaLink: '/services/ai-2025-october-agent-swarm-platform-services',
+    variant: 'success',
+    icon: '🤖',
+    featured: true,
+    priority: 3,
+    startDate: '2025-10-01',
+  },
+  {
+    id: 'oct-01-healthcare-890m-success-2025',
+    title: '💰 $890M Value Creation: Global Healthcare Network Transforms with 75,000 AI Agents',
+    description: 'Incredible results! 98.7% diagnostic accuracy, 89% faster diagnoses, 99.97% uptime, and $890M annual value. See how agent swarms revolutionized healthcare for 150M patients.',
+    ctaText: 'Read Success Story',
+    ctaLink: '/case-studies/ai-2025-oct-01-global-healthcare-agent-swarm-890m-success',
+    variant: 'success',
+    icon: '🏥',
+    featured: true,
+    priority: 1,
+    startDate: '2025-10-01',
+  },
+  {
+    id: 'oct-01-enterprise-platform-automation-2025',
+    title: '🚀 NEW TODAY: Enterprise AI Platform Revolution & Intelligent Automation Breakthrough',
+    description: 'Transform your enterprise! Build comprehensive AI platforms with 40-60% cost reduction and $500M value creation. Plus: End manual operations with intelligent automation achieving 300-500% ROI.',
+    ctaText: 'Discover the Revolution',
+    ctaLink: '/blog',
+    variant: 'success',
+    icon: '🚀',
+    featured: true,
+    priority: 2,
+    startDate: '2025-10-01',
+  },
+  {
+    id: 'enterprise-platform-implementation-service-2025',
+    title: '⚡ NEW SERVICE: Enterprise AI Platform Implementation - Production Ready in 90 Days',
+    description: 'Complete AI platform deployment with proven ROI. $50M+ annual value, 90% accuracy, 3-5x faster deployment. Transform your enterprise with our comprehensive implementation service.',
+    ctaText: 'Get Started Today',
+    ctaLink: '/services/enterprise-ai-platform-implementation-2025',
+    variant: 'warning',
+    icon: '⚡',
+    featured: true,
+    priority: 1,
+    startDate: '2025-10-01',
+  },
+  {
+    id: 'oct-01-500m-success-story-2025',
+    title: '💰 SUCCESS STORY: Fortune 100 Company Creates $500M Annual Value in 90 Days',
+    description: 'See how a global enterprise transformed operations with our AI platform. 10x faster deployment, 85% cost reduction, 40+ autonomous workflows. Read the complete case study.',
+    ctaText: 'Read Success Story',
+    ctaLink: '/case-studies/ai-2025-oct-global-enterprise-platform-transformation-500m-success',
+    variant: 'info',
+    icon: '💰',
+    featured: true,
+    priority: 2,
+    startDate: '2025-10-01',
+  },
+  {
+    id: 'oct-01-latest-breakthrough-2025-featured',
+    title: '🎯 JUST RELEASED: Edge AI Compression, Continuous Learning, Synthetic Data Generation',
+    description: 'Three groundbreaking articles just dropped! Deploy models 100x smaller, build self-improving AI systems with 47% accuracy gains, and generate unlimited training data. Transform your AI capabilities today.',
+    ctaText: 'Read the Latest Breakthroughs',
+    ctaLink: '/blog',
+    variant: 'success',
+    icon: '🎯',
+    featured: true,
+    priority: 3,
+    startDate: '2025-10-01',
+  },
+  {
+    id: 'ai-model-compression-edge-oct-2025',
+    title: '⚡ NEW: AI Model Compression — Deploy 100x Smaller Models with 95%+ Accuracy',
+    description: 'Master edge deployment with INT8/INT4 quantization, structured pruning, and knowledge distillation. Achieve sub-50ms inference on mobile and IoT devices with 92% memory reduction.',
+    ctaText: 'Learn Edge AI Deployment',
+    ctaLink: '/blog/ai-model-compression-quantization-edge-2025',
+    variant: 'success',
+    icon: '⚡',
+    featured: true,
+    priority: 1,
+    startDate: '2025-10-01',
+  },
+  {
+    id: 'continuous-learning-systems-oct-2025',
+    title: '🔄 NEW: Continuous Learning — 47% Accuracy Improvement with Self-Improving AI',
+    description: 'Build systems that adapt in real-time to concept drift. 99.8% uptime during live updates, 73% faster adaptation, and $5.8M annual value from continuous model improvement.',
+    ctaText: 'Build Self-Improving AI',
+    ctaLink: '/blog/continuous-learning-systems-online-updates-2025',
+    variant: 'info',
+    icon: '🔄',
+    featured: true,
+    priority: 2,
+    startDate: '2025-10-01',
+  },
+  {
+    id: 'synthetic-data-generation-oct-2025',
+    title: '🎨 NEW: Synthetic Data — Generate Unlimited Training Data with 98% Fidelity',
+    description: 'Overcome data scarcity and privacy constraints. Create 10,000x rare event augmentation, achieve 100% privacy compliance, and save $8.4M on data collection costs.',
+    ctaText: 'Master Synthetic Data',
+    ctaLink: '/blog/synthetic-data-generation-ai-training-2025',
+    variant: 'info',
+    icon: '🎨',
+    featured: true,
+    priority: 3,
+    startDate: '2025-10-01',
+  },
+  {
+    id: 'oct-01-latest-breakthrough-content-2025',
+    title: '🚀 NEW TODAY: Continuous Intelligence, GenAI Supply Chain Resilience, Autonomous Cloud Security',
+    description: 'Just released! Real-time AI decisioning at 100M+ events/sec, self-healing supply chains with 99.7% uptime, and autonomous threat neutralization in <5 seconds. Transform your operations now.',
+    ctaText: 'Read the Latest Articles',
+    ctaLink: '/blog',
+    variant: 'success',
+    icon: '🚀',
+    featured: true,
+    priority: 0,
+    startDate: '2025-10-01',
+  },
+  {
+    id: 'continuous-intelligence-oct-2025',
+    title: '⚡ NEW: Continuous Intelligence Platforms — 100M Events/Second with Sub-50ms Latency',
+    description: '$215M+ annual value from instant automated decisions. Real-time AI decisioning revolutionizing enterprise operations with 96% accuracy at unprecedented scale.',
+    ctaText: 'Discover Continuous Intelligence',
+    ctaLink: '/blog/continuous-intelligence-realtime-decisioning-2025',
+    variant: 'success',
+    icon: '⚡',
+    featured: true,
+    priority: 1,
+    startDate: '2025-10-01',
+  },
+  {
+    id: 'genai-supply-chain-oct-2025',
+    title: '🔄 NEW: GenAI Supply Chain Resilience — 99.7% Uptime During Any Disruption',
+    description: 'Self-healing supply chains that adapt in real-time. 78% faster recovery from disruptions and $180M+ savings through intelligent resilience and adaptive networks.',
+    ctaText: 'Build Resilient Supply Chains',
+    ctaLink: '/blog/genai-supply-chain-resilience-2025',
+    variant: 'info',
+    icon: '🔄',
+    featured: true,
+    priority: 2,
+    startDate: '2025-10-01',
+  },
+  {
+    id: 'autonomous-security-oct-2025',
+    title: '🛡️ NEW: Autonomous Cloud Security — 99.98% Threat Neutralization in <5 Seconds',
+    description: 'Self-defending infrastructure with AI-powered threat intelligence. 94% reduction in security workload through real-time autonomous defense without human intervention.',
+    ctaText: 'Explore Autonomous Security',
+    ctaLink: '/blog/autonomous-cloud-security-threat-intel-2025',
+    variant: 'warning',
+    icon: '🛡️',
+    featured: true,
+    priority: 3,
+    startDate: '2025-10-01',
+  },
+  {
     id: 'oct-01-breakthrough-new-content-2025',
     title: '🔥 JUST RELEASED: AI Security Zero Trust, Cloud-Native Kubernetes, Real-Time Streaming Analytics',
     description: 'Revolutionary new content! 99.97% threat detection with AI Zero Trust, 10x faster ML deployment with Kubernetes, and sub-100ms insights from billions of events. Transform your enterprise today.',
@@ -22,7 +214,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     variant: 'success',
     icon: '🔥',
     featured: true,
-    priority: 0,
+    priority: 4,
     startDate: '2025-10-01',
   },
   {
@@ -361,8 +553,169 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     featured: true,
     priority: 0,
     startDate: '2025-10-30'
+  },
+  {
+    id: 'oct-01-2025-mega-breakthrough-launch',
+    title: '🎉 MEGA LAUNCH: 6 Revolutionary AI Breakthroughs Released Today!',
+    description: 'Game-changing content just dropped! Autonomous DevOps, AI Incident Response in <60s, Enterprise LLM Fine-Tuning, Intelligent Cost Optimization, Zero-Latency Edge, and Human-Level Conversational AI. Transform your enterprise now!',
+    ctaText: 'Explore All Breakthroughs',
+    ctaLink: '/blog',
+    variant: 'success',
+    icon: '🎉',
+    featured: true,
+    priority: 0,
+    startDate: '2025-10-01'
+  },
+  {
+    id: 'autonomous-devops-oct-01-2025',
+    title: '⚡ NEW: Autonomous DevOps - 80% Faster Releases with Zero Downtime',
+    description: 'Revolutionary self-managing DevOps systems that optimize in real-time. Achieve 99.99% uptime and eliminate manual intervention with AI-driven automation.',
+    ctaText: 'Discover Autonomous DevOps',
+    ctaLink: '/blog/autonomous-devops-revolution-2025',
+    variant: 'success',
+    icon: '⚡',
+    featured: true,
+    priority: 1,
+    startDate: '2025-10-01'
+  },
+  {
+    id: 'ai-incident-response-oct-01-2025',
+    title: '🚨 NEW: AI Incident Response - Resolve Issues in Under 60 Seconds',
+    description: '95% faster MTTR, 99.8% incident prevention, and $25M+ annual savings. Autonomous detection, root cause analysis, and self-healing remediation.',
+    ctaText: 'Master Incident Response',
+    ctaLink: '/blog/ai-powered-incident-response-2025',
+    variant: 'warning',
+    icon: '🚨',
+    featured: true,
+    priority: 2,
+    startDate: '2025-10-01'
+  },
+  {
+    id: 'enterprise-llm-fine-tuning-oct-01-2025',
+    title: '🧠 NEW: Enterprise LLM Fine-Tuning - 10x Better Performance',
+    description: 'Build domain-specific LLMs that outperform GPT-4 for your use cases. 10x accuracy improvement, 70% cost reduction, full data sovereignty.',
+    ctaText: 'Start Fine-Tuning',
+    ctaLink: '/blog/enterprise-llm-fine-tuning-2025',
+    variant: 'info',
+    icon: '🧠',
+    featured: true,
+    priority: 3,
+    startDate: '2025-10-01'
+  },
+  {
+    id: 'intelligent-cost-optimization-oct-01-2025',
+    title: '💰 NEW: AI Cost Optimization - Save 40-65% on Cloud Spend',
+    description: 'Revolutionary AI platforms that continuously optimize cloud costs. Predict anomalies, auto-remediate waste. Save $50M+ annually with zero manual effort.',
+    ctaText: 'Optimize Your Costs',
+    ctaLink: '/blog/intelligent-cost-optimization-platforms-2025',
+    variant: 'success',
+    icon: '💰',
+    featured: true,
+    priority: 4,
+    startDate: '2025-10-01'
+  },
+  {
+    id: 'zero-latency-edge-oct-01-2025',
+    title: '⚡ NEW: Zero-Latency Edge Computing - Sub-Millisecond Global Processing',
+    description: 'Next-gen edge architecture delivering <1ms response times worldwide. Process billions of requests with 99.999% uptime and intelligent orchestration.',
+    ctaText: 'Achieve Zero Latency',
+    ctaLink: '/blog/zero-latency-edge-computing-2025',
+    variant: 'info',
+    icon: '⚡',
+    featured: true,
+    priority: 5,
+    startDate: '2025-10-01'
+  },
+  {
+    id: 'conversational-ai-oct-01-2025',
+    title: '💬 NEW: Conversational AI Platforms - Human-Level Interactions',
+    description: '98% intent accuracy with natural human-level interactions. Handle 10M+ conversations simultaneously with multi-language support and contextual memory.',
+    ctaText: 'Transform Customer Experience',
+    ctaLink: '/blog/conversational-ai-enterprise-platforms-2025',
+    variant: 'success',
+    icon: '💬',
+    featured: true,
+    priority: 6,
+    startDate: '2025-10-01'
+  }
+  ,
+  {
+    id: 'oct-03-continuous-intelligence-2025',
+    title: '⚡ NEW: Continuous Intelligence — 100M Events/sec under 50ms',
+    description: 'Turn streams into actions with sub‑50ms decisions, KPIs, and safe rollback.',
+    ctaText: 'Build Continuous Intelligence',
+    ctaLink: '/blog/ai-2025-oct-03-continuous-intelligence-platforms',
+    variant: 'success',
+    icon: '⚡',
+    featured: true,
+    priority: 0,
+    startDate: '2025-10-03'
+  },
+  {
+    id: 'oct-03-autonomous-cloud-security-2025',
+    title: '🛡️ NEW: Autonomous Cloud Security — Neutralize Threats in <5s',
+    description: 'Self‑defending infra with budgeted actions, canaries, and instant rollback.',
+    ctaText: 'Explore Autonomous Security',
+    ctaLink: '/blog/ai-2025-oct-03-autonomous-cloud-security',
+    variant: 'warning',
+    icon: '🛡️',
+    featured: true,
+    priority: 1,
+    startDate: '2025-10-03'
+  },
+  {
+    id: 'oct-03-quantum-supply-chain-2025',
+    title: '🧮 NEW: Quantum Supply Chain — Solve in Minutes, Not Days',
+    description: 'Hybrid quantum + ML optimization with 35% cost reduction and 94% SLA adherence.',
+    ctaText: 'Optimize Supply Chains',
+    ctaLink: '/blog/ai-2025-oct-03-quantum-supply-chain-optimization',
+    variant: 'info',
+    icon: '🧮',
+    featured: true,
+    priority: 2,
+    startDate: '2025-10-03'
   }
 ];
+
+// Oct 1, 2025 – Promote three new articles across the site
+enhancedPromotionalBanners.unshift(
+  {
+    id: 'ai-self-healing-infra-banner-2025',
+    title: '🔄 NEW: AI Self-Healing Infrastructure — 99.99% Uptime',
+    description: 'Autonomous infra detects and fixes issues in real time. 95% MTTR reduction with KPI‑linked canaries and instant rollback.',
+    ctaText: 'Explore Self-Healing AI',
+    ctaLink: '/blog/ai-self-healing-infrastructure-2025',
+    variant: 'success',
+    icon: '🔄',
+    featured: true,
+    priority: 0,
+    startDate: '2025-10-01'
+  },
+  {
+    id: 'genai-code-assistants-banner-2025',
+    title: '💻 NEW: Generative AI Code Assistants — 10x Productivity',
+    description: 'Copilot patterns with evaluator gates, safe refactors, and instant rollback. Ship 5x faster with fewer bugs.',
+    ctaText: 'Read the Engineering Guide',
+    ctaLink: '/blog/generative-ai-code-assistants-2025',
+    variant: 'info',
+    icon: '💻',
+    featured: true,
+    priority: 1,
+    startDate: '2025-10-01'
+  },
+  {
+    id: 'edge-privacy-analytics-banner-2025',
+    title: '🔐 NEW: Edge Privacy‑Preserving Analytics — Zero PII',
+    description: 'Scoped IDs, on‑device aggregation, and DP noise deliver insights in <100ms—fully compliant by design.',
+    ctaText: 'Learn Privacy‑First Analytics',
+    ctaLink: '/blog/edge-ai-privacy-preserving-analytics-2025',
+    variant: 'warning',
+    icon: '🔐',
+    featured: true,
+    priority: 2,
+    startDate: '2025-10-01'
+  }
+);
 
 // Sept 30, 2025 – Fresh homepage banner promoting the new content
 enhancedPromotionalBanners.push({
@@ -378,6 +731,33 @@ enhancedPromotionalBanners.push({
   startDate: '2025-09-30'
 });
 
+// Oct 1, 2025 – New homepage promos for the two brand-new posts
+enhancedPromotionalBanners.push({
+  id: 'oct-01-enterprise-platforms-2025',
+  title: '🏗️ NEW: Enterprise AI Platforms — SLAs, Guardrails, Proven ROI',
+  description: 'Golden paths, eval gates, and cost controls your teams adopt. Proven 30–70% savings.',
+  ctaText: 'Read Platform Blueprint',
+  ctaLink: '/blog/ai-2025-oct-enterprise-ai-platforms',
+  variant: 'success',
+  icon: '🏗️',
+  featured: true,
+  priority: 0,
+  startDate: '2025-10-01'
+});
+
+enhancedPromotionalBanners.push({
+  id: 'oct-01-intelligent-automation-2025',
+  title: '🤖 NEW: Intelligent Automation — From Tickets to Outcomes',
+  description: 'Approvals, budgets, eval‑gated actions, and instant rollback for safe autonomy.',
+  ctaText: 'Explore Automation Guide',
+  ctaLink: '/blog/ai-2025-oct-intelligent-automation-breakthrough',
+  variant: 'info',
+  icon: '🤖',
+  featured: true,
+  priority: 1,
+  startDate: '2025-10-01'
+});
+
 // Sept 30, 2025 – New homepage promo for latest content set
 enhancedPromotionalBanners.push({
   id: 'sept30-autonomous-euai-edge-2025',
@@ -390,6 +770,98 @@ enhancedPromotionalBanners.push({
   featured: true,
   priority: 0,
   startDate: '2025-09-30'
+});
+
+// October 1, 2025 – MEGA BREAKTHROUGH CONTENT DROP
+enhancedPromotionalBanners.push({
+  id: 'oct-01-2025-breakthrough-content-mega-launch',
+  title: '🎉 MEGA BREAKTHROUGH: 6 Revolutionary AI Solutions Just Released!',
+  description: 'Game-changing content drop! Digital Twins with 92% defect reduction, Hyper-Personalization achieving 8x conversions, Autonomous Networks with 99.999% uptime, Cognitive Process Mining saving 73%, Decision Intelligence 10x faster, and Intelligent Document AI. Transform your enterprise now!',
+  ctaText: 'Explore All Breakthroughs',
+  ctaLink: '/blog',
+  variant: 'success',
+  icon: '🎉',
+  featured: true,
+  priority: 0,
+  startDate: '2025-10-01'
+});
+
+enhancedPromotionalBanners.push({
+  id: 'digital-twin-manufacturing-oct-2025',
+  title: '🏭 NEW: AI-Powered Digital Twins - 92% Defect Reduction, $320M Savings',
+  description: 'Revolutionary digital twin systems transforming manufacturing with real-time simulation and predictive analytics. Achieve 87% faster time-to-market and unprecedented production optimization.',
+  ctaText: 'Discover Digital Twins',
+  ctaLink: '/blog/ai-powered-digital-twin-manufacturing-2025',
+  variant: 'success',
+  icon: '🏭',
+  featured: true,
+  priority: 1,
+  startDate: '2025-10-01'
+});
+
+enhancedPromotionalBanners.push({
+  id: 'hyper-personalization-oct-2025',
+  title: '🎯 NEW: Hyper-Personalization AI - 8x Conversion Rates, 94% Satisfaction',
+  description: 'Next-generation personalization engines delivering individualized experiences at microsecond scale. Drive $280M+ revenue lift through AI-powered customer engagement.',
+  ctaText: 'Master Personalization',
+  ctaLink: '/blog/hyper-personalization-real-time-ai-2025',
+  variant: 'info',
+  icon: '🎯',
+  featured: true,
+  priority: 2,
+  startDate: '2025-10-01'
+});
+
+enhancedPromotionalBanners.push({
+  id: 'autonomous-network-ops-oct-2025',
+  title: '🌐 NEW: Autonomous Network Operations - 99.999% Uptime Guaranteed',
+  description: 'Self-managing network systems that detect, diagnose, and resolve issues autonomously. Achieve 96% faster incident resolution and 82% cost reduction with zero human intervention.',
+  ctaText: 'Explore Autonomous Networks',
+  ctaLink: '/blog/autonomous-network-operations-2025',
+  variant: 'warning',
+  icon: '🌐',
+  featured: true,
+  priority: 3,
+  startDate: '2025-10-01'
+});
+
+enhancedPromotionalBanners.push({
+  id: 'cognitive-process-mining-oct-2025',
+  title: '🔍 NEW: Cognitive Process Mining - 73% Cost Savings, 6x Faster Execution',
+  description: 'AI-powered process discovery that automatically identifies bottlenecks and implements improvements. Achieve $195M+ annual savings through intelligent automation.',
+  ctaText: 'Optimize Your Processes',
+  ctaLink: '/blog/cognitive-process-mining-automation-2025',
+  variant: 'success',
+  icon: '🔍',
+  featured: true,
+  priority: 4,
+  startDate: '2025-10-01'
+});
+
+enhancedPromotionalBanners.push({
+  id: 'decision-intelligence-oct-2025',
+  title: '🧠 NEW: AI-Augmented Decision Intelligence - 10x Faster, 97% Accuracy',
+  description: 'Revolutionary platforms enabling executives to make complex decisions 10x faster with unprecedented accuracy. Create $450M+ value through intelligent decision support.',
+  ctaText: 'Transform Decision Making',
+  ctaLink: '/blog/ai-augmented-decision-intelligence-2025',
+  variant: 'info',
+  icon: '🧠',
+  featured: true,
+  priority: 5,
+  startDate: '2025-10-01'
+});
+
+enhancedPromotionalBanners.push({
+  id: 'intelligent-document-understanding-oct-2025',
+  title: '📄 NEW: Intelligent Document AI - Process 1M+ Documents Daily at 99.2% Accuracy',
+  description: 'Next-generation document understanding that comprehends context and automates workflows. Achieve 95% faster processing and $140M+ annual savings.',
+  ctaText: 'Revolutionize Document Processing',
+  ctaLink: '/blog/intelligent-document-understanding-2025',
+  variant: 'success',
+  icon: '📄',
+  featured: true,
+  priority: 6,
+  startDate: '2025-10-01'
 });
 
 export const getActiveEnhancedBanners = (): EnhancedPromotionalBanner[] => {

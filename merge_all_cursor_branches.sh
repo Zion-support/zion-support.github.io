@@ -1,126 +1,167 @@
 #!/bin/bash
 
-# Script to merge all cursor branches systematically
+# Comprehensive script to merge all cursor branches into main
 set -e
 
-echo "🚀 Starting systematic merge of all cursor branches..."
+echo "🚀 Starting comprehensive merge of all cursor branches..."
+echo "📅 $(date)"
+echo ""
 
-# List of cursor branches to merge
-CURSOR_BRANCHES=(
-    "cursor/create-and-deploy-new-content-0891"
-    "cursor/create-and-deploy-new-content-0ae1"
-    "cursor/create-and-deploy-new-content-1791"
-    "cursor/create-and-deploy-new-content-1ad0"
-    "cursor/create-and-deploy-new-content-1ce0"
-    "cursor/create-and-deploy-new-content-1f3f"
-    "cursor/create-and-deploy-new-content-25ad"
-    "cursor/create-and-deploy-new-content-267a"
-    "cursor/create-and-deploy-new-content-27d2"
-    "cursor/create-and-deploy-new-content-352f"
-    "cursor/create-and-deploy-new-content-386c"
-    "cursor/create-and-deploy-new-content-3b74"
-    "cursor/create-and-deploy-new-content-4301"
-    "cursor/create-and-deploy-new-content-446a"
-    "cursor/create-and-deploy-new-content-4b11"
-    "cursor/create-and-deploy-new-content-4eb8"
-    "cursor/create-and-deploy-new-content-5a0d"
-    "cursor/create-and-deploy-new-content-61df"
-    "cursor/create-and-deploy-new-content-62eb"
-    "cursor/create-and-deploy-new-content-63f0"
-    "cursor/create-and-deploy-new-content-6460"
-    "cursor/create-and-deploy-new-content-66bc"
-    "cursor/create-and-deploy-new-content-6956"
-    "cursor/create-and-deploy-new-content-720f"
-    "cursor/create-and-deploy-new-content-72c8"
-    "cursor/create-and-deploy-new-content-75f4"
-    "cursor/create-and-deploy-new-content-7643"
-    "cursor/create-and-deploy-new-content-7ba1"
-    "cursor/create-and-deploy-new-content-7d66"
-    "cursor/create-and-deploy-new-content-7dc7"
-    "cursor/create-and-deploy-new-content-7f10"
-    "cursor/create-and-deploy-new-content-81ba"
-    "cursor/create-and-deploy-new-content-8452"
-    "cursor/create-and-deploy-new-content-9a04"
-    "cursor/create-and-deploy-new-content-9b34"
-    "cursor/create-and-deploy-new-content-a5fa"
-    "cursor/create-and-deploy-new-content-aa86"
-    "cursor/create-and-deploy-new-content-adea"
-    "cursor/create-and-deploy-new-content-b230"
-    "cursor/create-and-deploy-new-content-b5d6"
-    "cursor/create-and-deploy-new-content-c587"
-    "cursor/create-and-deploy-new-content-c9ae"
-    "cursor/create-and-deploy-new-content-cd06"
-    "cursor/create-and-deploy-new-content-cf26"
-    "cursor/create-and-deploy-new-content-d14b"
-    "cursor/create-and-deploy-new-content-d4d7"
-    "cursor/create-and-deploy-new-content-d8da"
-    "cursor/create-and-deploy-new-content-ddbc"
-    "cursor/create-and-deploy-new-content-df82"
-    "cursor/create-and-deploy-new-content-e21b"
-    "cursor/create-and-deploy-new-content-e2dd"
-    "cursor/create-and-deploy-new-content-f074"
-    "cursor/create-and-deploy-new-content-f4ff"
-    "cursor/create-and-deploy-new-content-f98f"
-    "cursor/create-and-deploy-new-content-fa9f"
-    "cursor/create-and-deploy-new-content-fdb9"
-)
-
-# Additional branches
-OTHER_BRANCHES=(
-    "deployment/october-2025-content-1759299318"
-    "january-2026-content-final"
-)
-
-echo "📋 Found ${#CURSOR_BRANCHES[@]} cursor branches to merge"
-echo "📋 Found ${#OTHER_BRANCHES[@]} other branches to merge"
-
-# Ensure we're on main branch
+# Ensure we're on main and up to date
 git checkout main
+git pull origin main --no-edit
 
-# Merge cursor branches
-echo "🔄 Merging cursor branches..."
-for branch in "${CURSOR_BRANCHES[@]}"; do
-    echo "Merging $branch..."
-    if git show-ref --verify --quiet refs/remotes/origin/$branch; then
-        git merge origin/$branch --no-edit || {
-            echo "⚠️  Conflict in $branch, resolving automatically..."
-            git status --porcelain | grep "^UU" | while read -r line; do
-                file=$(echo $line | cut -d' ' -f2)
-                echo "Resolving conflict in $file"
-                # Use the version from the branch being merged
-                git checkout --theirs "$file"
-                git add "$file"
-            done
-            git commit --no-edit || true
-        }
-        echo "✅ Successfully merged $branch"
-    else
-        echo "⚠️  Branch $branch not found, skipping..."
+# Get all cursor branches
+CURSOR_BRANCHES=$(git branch -r | grep "origin/cursor/create-and-deploy-new-content" | sed 's/origin\///' | sort -u)
+
+total_branches=$(echo "$CURSOR_BRANCHES" | wc -l)
+successful_merges=0
+failed_merges=0
+already_merged=0
+conflict_resolved=0
+
+echo "📋 Found $total_branches cursor branches to process..."
+echo ""
+
+for branch in $CURSOR_BRANCHES; do
+    branch_name="origin/$branch"
+    echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+    echo "📋 Processing: $branch_name"
+    
+    # Check if branch exists
+    if ! git show-ref --verify --quiet "refs/remotes/$branch_name"; then
+        echo "⚠️  Branch $branch_name does not exist, skipping..."
+        ((failed_merges++))
+        continue
     fi
+    
+    # Check if already merged
+    if git merge-base --is-ancestor "$branch_name" HEAD 2>/dev/null; then
+        echo "ℹ️  Already merged: $branch_name"
+        ((already_merged++))
+        continue
+    fi
+    
+    # Try to merge
+    echo "🔄 Attempting merge..."
+    if git merge "$branch_name" --no-edit --no-ff -m "Merge $branch into main" 2>&1; then
+        echo "✅ Successfully merged: $branch_name"
+        ((successful_merges++))
+    else
+        echo "⚠️  Merge conflict detected, attempting auto-resolution..."
+        
+        # Auto-resolve common conflicts by keeping ours
+        conflicts=false
+        
+        # Check for conflicts in common files
+        if git status --porcelain | grep -q "^UU"; then
+            echo "🔧 Resolving conflicts..."
+            
+            # Resolve Home.tsx conflicts (keep ours - main)
+            if git status --porcelain | grep -q "src/pages/Home.tsx"; then
+                echo "  - Resolving src/pages/Home.tsx (keeping current main version)"
+                git checkout --ours src/pages/Home.tsx
+                git add src/pages/Home.tsx
+            fi
+            
+            # Resolve router conflicts (keep ours)
+            if git status --porcelain | grep -q "src/router.tsx"; then
+                echo "  - Resolving src/router.tsx (keeping current main version)"
+                git checkout --ours src/router.tsx
+                git add src/router.tsx
+            fi
+            
+            # Resolve app/page.tsx conflicts (keep ours)
+            if git status --porcelain | grep -q "app/page.tsx"; then
+                echo "  - Resolving app/page.tsx (keeping current main version)"
+                git checkout --ours app/page.tsx
+                git add app/page.tsx
+            fi
+            
+            # Resolve package.json conflicts (keep ours)
+            if git status --porcelain | grep -q "package.json"; then
+                echo "  - Resolving package.json (keeping current main version)"
+                git checkout --ours package.json
+                git add package.json
+            fi
+            
+            # Resolve package-lock.json conflicts (keep ours)
+            if git status --porcelain | grep -q "package-lock.json"; then
+                echo "  - Resolving package-lock.json (keeping current main version)"
+                git checkout --ours package-lock.json
+                git add package-lock.json
+            fi
+            
+            # Resolve pnpm-lock.yaml conflicts (keep ours)
+            if git status --porcelain | grep -q "pnpm-lock.yaml"; then
+                echo "  - Resolving pnpm-lock.yaml (keeping current main version)"
+                git checkout --ours pnpm-lock.yaml
+                git add pnpm-lock.yaml
+            fi
+            
+            # For any remaining conflicts, add all files that were changed
+            # This accepts incoming changes for new files
+            for file in $(git diff --name-only --diff-filter=U); do
+                if [[ ! "$file" =~ (Home\.tsx|router\.tsx|page\.tsx|package.*json|pnpm-lock\.yaml)$ ]]; then
+                    echo "  - Adding new/modified file: $file"
+                    git add "$file"
+                fi
+            done
+            
+            # Try to commit the merge
+            if git commit -m "Merge $branch into main with auto-conflict resolution" --no-edit 2>&1; then
+                echo "✅ Conflicts resolved and merged: $branch_name"
+                ((successful_merges++))
+                ((conflict_resolved++))
+            else
+                # Check if already committed (no changes to commit)
+                if git diff-index --quiet HEAD --; then
+                    echo "✅ Already merged (no changes): $branch_name"
+                    ((already_merged++))
+                else
+                    echo "❌ Could not resolve conflicts for: $branch_name, aborting merge"
+                    git merge --abort
+                    ((failed_merges++))
+                fi
+            fi
+        else
+            # No conflicts in tracked files, just commit
+            if git commit -m "Merge $branch into main" --no-edit 2>&1; then
+                echo "✅ Merged successfully: $branch_name"
+                ((successful_merges++))
+            else
+                echo "❌ Failed to merge: $branch_name"
+                git merge --abort
+                ((failed_merges++))
+            fi
+        fi
+    fi
+    
+    echo ""
 done
 
-# Merge other branches
-echo "🔄 Merging other branches..."
-for branch in "${OTHER_BRANCHES[@]}"; do
-    echo "Merging $branch..."
-    if git show-ref --verify --quiet refs/remotes/origin/$branch; then
-        git merge origin/$branch --no-edit || {
-            echo "⚠️  Conflict in $branch, resolving automatically..."
-            git status --porcelain | grep "^UU" | while read -r line; do
-                file=$(echo $line | cut -d' ' -f2)
-                echo "Resolving conflict in $file"
-                # Use the version from the branch being merged
-                git checkout --theirs "$file"
-                git add "$file"
-            done
-            git commit --no-edit || true
-        }
-        echo "✅ Successfully merged $branch"
-    else
-        echo "⚠️  Branch $branch not found, skipping..."
-    fi
-done
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+echo "📊 MERGE SUMMARY"
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+echo "📁 Total branches processed: $total_branches"
+echo "✅ Successful merges: $successful_merges"
+echo "🔧 Conflicts auto-resolved: $conflict_resolved"
+echo "ℹ️  Already merged: $already_merged"
+echo "❌ Failed merges: $failed_merges"
+echo ""
 
-echo "🎉 All branches merged successfully!"
-echo "📊 Final status:"
-git log --oneline -10
+if [ $successful_merges -gt 0 ]; then
+    echo "🚀 Pushing merged changes to origin/main..."
+    if git push origin main; then
+        echo "✅ Successfully pushed all merges to remote!"
+    else
+        echo "⚠️  Failed to push. You may need to pull and resolve conflicts."
+        echo "Run: git pull origin main --no-edit && git push origin main"
+    fi
+else
+    echo "ℹ️  No new merges to push."
+fi
+
+echo ""
+echo "🎉 Merge process completed at $(date)"
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"

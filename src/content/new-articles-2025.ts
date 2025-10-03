@@ -12,6 +12,39 @@ export interface NewArticle {
 
 export const newArticles2025: NewArticle[] = [
   {
+    id: "ai-2025-oct-03-reliable-agent-ops",
+    title: "🤖 Reliable Agent Ops: Budgets, Approvals, and Live Evals",
+    description: "Ship agentic systems with budgeted tools, PR policy tests, and instant rollback—safely and fast.",
+    category: "GenAI",
+    publishedDate: "2025-10-03",
+    featured: true,
+    link: "/blog/ai-2025-oct-03-reliable-agent-ops",
+    readTime: "9 min read",
+    tags: ["Agents", "Evals", "Guardrails", "Budgets"]
+  },
+  {
+    id: "ai-2025-oct-03-private-feature-flags",
+    title: "🚀 Private Feature Flags: <100ms Global Releases with Zero PII",
+    description: "Edge‑native feature flags with scoped IDs, geo budgets, and instant rollback—privacy without compromise.",
+    category: "Architecture",
+    publishedDate: "2025-10-03",
+    featured: true,
+    link: "/blog/ai-2025-oct-03-private-feature-flags",
+    readTime: "7 min read",
+    tags: ["Edge", "Feature Flags", "Privacy", "Delivery"]
+  },
+  {
+    id: "ai-2025-oct-03-synthetic-data-blueprint",
+    title: "🎭 Synthetic Data Blueprint: Accuracy Without PII Risk",
+    description: "Diffusion + GAN pipelines with 98%+ fidelity and governance patterns for regulated industries.",
+    category: "AI Training",
+    publishedDate: "2025-10-03",
+    featured: true,
+    link: "/blog/ai-2025-oct-03-synthetic-data-blueprint",
+    readTime: "12 min read",
+    tags: ["Synthetic Data", "Privacy", "Diffusion", "GANs"]
+  },
+  {
     id: "ai-2025-october-quantum-safe-cryptography-revolution",
     title: "🔐 Quantum-Safe Cryptography Revolution 2025",
     description: "Protect enterprise data against quantum threats with NIST-approved post-quantum cryptography. Complete migration roadmap, hybrid crypto strategies, and real-world implementation achieving 100% quantum resistance.",
@@ -21,6 +54,61 @@ export const newArticles2025: NewArticle[] = [
     link: "/blog/ai-2025-october-quantum-safe-cryptography-revolution",
     readTime: "18 min read",
     tags: ["Quantum-Safe Cryptography", "Post-Quantum Security", "Enterprise Protection", "NIST Standards"]
+  },
+  {
+    id: "ai-2025-oct-03-quantum-safe-enterprise-playbook",
+    title: "🔐 Quantum-Safe Enterprise Playbook (2025)",
+    description: "Adopt NIST PQC with hybrid cutovers, crypto agility, and zero downtime.",
+    category: "Security",
+    publishedDate: "2025-10-03",
+    featured: true,
+    link: "/blog/quantum-safe-cryptography-enterprise-migration-2025",
+    readTime: "9 min read",
+    tags: ["Post-Quantum", "PQC", "NIST", "Migration"]
+  },
+  {
+    id: "ai-2025-oct-03-neuromorphic-edge-intelligence",
+    title: "🧠 Neuromorphic Edge Intelligence: Sub‑10ms Decisions",
+    description: "Spiking neural networks on event hardware for 1000x energy efficiency.",
+    category: "Edge AI",
+    publishedDate: "2025-10-03",
+    featured: true,
+    link: "/blog/neuromorphic-edge-ai-event-driven-2025",
+    readTime: "8 min read",
+    tags: ["Neuromorphic", "SNN", "Edge", "Efficiency"]
+  },
+  {
+    id: "ai-2025-oct-03-synthetic-data-production",
+    title: "🎭 Synthetic Data in Production: Privacy‑Safe Accuracy",
+    description: "Generate, validate, and govern synthetic datasets that lift model accuracy.",
+    category: "Data Platforms",
+    publishedDate: "2025-10-03",
+    featured: true,
+    link: "/blog/synthetic-data-production-privacy-2025",
+    readTime: "10 min read",
+    tags: ["Synthetic Data", "Privacy", "MLOps", "Quality"]
+  },
+  {
+    id: "ai-2025-oct-03-neuromorphic-edge-ai-breakthrough",
+    title: "🧠 Neuromorphic Edge AI 2025: 1000x Efficiency for Real-Time Intelligence",
+    description: "Deploy brain-inspired AI at the edge with event-driven compute delivering sub-10ms decisions at 1000x energy efficiency.",
+    category: "Neuromorphic AI",
+    publishedDate: "2025-10-03",
+    featured: true,
+    link: "/blog/ai-2025-oct-03-neuromorphic-edge-ai-breakthrough",
+    readTime: "11 min read",
+    tags: ["Neuromorphic", "Edge AI", "SNN", "Energy Efficiency"]
+  },
+  {
+    id: "ai-2025-oct-03-synthetic-data-production-playbook",
+    title: "🎭 Synthetic Data in Production: Privacy-Safe Accuracy Gains in 2025",
+    description: "Blueprint to train high-accuracy models with zero PII risk using diffusion/GAN pipelines and evaluators.",
+    category: "Data Platforms",
+    publishedDate: "2025-10-03",
+    featured: true,
+    link: "/blog/ai-2025-oct-03-synthetic-data-production-playbook",
+    readTime: "9 min read",
+    tags: ["Synthetic Data", "Privacy", "Diffusion", "GANs", "Compliance"]
   },
   {
     id: "ai-2025-october-neuromorphic-computing-breakthrough",

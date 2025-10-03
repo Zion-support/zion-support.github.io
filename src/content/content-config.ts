@@ -12,6 +12,9 @@ export interface FeaturedItem {
 // Import new content
 import { breakthroughContent2025 } from './new-breakthrough-content-2025';
 import { enterpriseCaseStudies2025 } from './enterprise-case-studies-2025';
+import { newBlogPosts, newCaseStudies, newServices } from './new-2026-ai-breakthrough-content';
+import { newJanuary2026BlogPosts } from './new-january-2026-content';
+import { getFeaturedJanuary2026BlogPosts, getAllJanuary2026BlogPosts } from './january-2026-new-blog-posts';
 
 export const featuredBlogPosts: FeaturedItem[] = [
   {
@@ -239,6 +242,34 @@ export const featuredBlogPosts: FeaturedItem[] = [
     featured: true
   }
 ];
+
+// Oct 1, 2025 – Advertise three brand-new articles
+featuredBlogPosts.unshift(
+  {
+    id: "ai-self-healing-infrastructure-2025",
+    title: "AI Self-Healing Infrastructure 2025",
+    description: "Autonomous infra: 95% MTTR reduction, 99.99% uptime with rollback gates.",
+    link: "/blog/ai-self-healing-infrastructure-2025",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "generative-ai-code-assistants-2025",
+    title: "Generative AI Code Assistants 2025",
+    description: "10x productivity with evaluator-backed gates, safe refactors, instant rollback.",
+    link: "/blog/generative-ai-code-assistants-2025",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "edge-ai-privacy-preserving-analytics-2025",
+    title: "Edge AI Privacy-Preserving Analytics 2025",
+    description: "Zero‑PII insights in <100ms via scoped IDs, on‑device aggregation, DP noise.",
+    link: "/blog/edge-ai-privacy-preserving-analytics-2025",
+    type: "article",
+    featured: true
+  }
+);
 
 // Jan 2027 – Feature three brand-new articles
 featuredBlogPosts.unshift(
@@ -770,6 +801,62 @@ featuredBlogPosts.unshift(
 
 export const featuredServices: FeaturedItem[] = [
   {
+    id: "quantum-edge-fusion-platform",
+    title: "Quantum Edge Fusion Platform",
+    description: "1000x speed improvement, sub-millisecond latency, 99.99% reliability. Revolutionary quantum-edge convergence for enterprise applications.",
+    link: "/services/quantum-edge-fusion-platform",
+    type: "service",
+    featured: true
+  },
+  {
+    id: "synthetic-consciousness-ai-platform",
+    title: "Synthetic Consciousness AI Platform",
+    description: "98.7% consciousness accuracy, genuine self-awareness, emotional intelligence, and creative autonomy with $500B enterprise value potential.",
+    link: "/services/synthetic-consciousness-ai-platform",
+    type: "service",
+    featured: true
+  },
+  {
+    id: "neuromorphic-processing-suite",
+    title: "Neuromorphic Processing Suite",
+    description: "1000x energy efficiency, brain-inspired AI architecture, real-time learning, and autonomous adaptation capabilities.",
+    link: "/services/neuromorphic-processing-suite",
+    type: "service",
+    featured: true
+  },
+  {
+    id: "ai-intelligent-document-processing",
+    title: "AI Intelligent Document Processing",
+    description: "98.5% accuracy, 95% automation, $2.8M+ annual savings. Extract and process any document type at scale.",
+    link: "/services/ai-intelligent-document-processing",
+    type: "service",
+    featured: true
+  },
+  {
+    id: "hyperconscious-ai-consulting",
+    title: "Hyperconscious AI Consulting",
+    description: "Transform your enterprise with genuine artificial consciousness, achieving 99.999% operational excellence and unlimited growth potential.",
+    link: "/services/hyperconscious-ai-consulting",
+    type: "service",
+    featured: true
+  },
+  {
+    id: "quantum-neural-fusion-platform",
+    title: "Quantum-Neural Fusion Platform",
+    description: "Revolutionary computing platform combining quantum processing with neural networks for 100,000x performance improvements.",
+    link: "/services/quantum-neural-fusion-platform",
+    type: "service",
+    featured: true
+  },
+  {
+    id: "autonomous-enterprise-mesh",
+    title: "Autonomous Enterprise Mesh",
+    description: "Self-organizing AI networks that autonomously optimize your business processes for 99.7% operational efficiency.",
+    link: "/services/autonomous-enterprise-mesh",
+    type: "service",
+    featured: true
+  },
+  {
     id: "ai-predictive-maintenance",
     title: "AI Predictive Maintenance",
     description: "85% reduction in downtime with 98% prediction accuracy",
@@ -957,8 +1044,32 @@ featuredBlogPosts.unshift(
   }
 );
 
-// January 15, 2025 - Brand-new revolutionary content at the very top
+// January 2026 - Brand-new revolutionary content at the very top
 featuredBlogPosts.unshift(
+  {
+    id: "ai-2026-hyperconscious-computing-revolution",
+    title: "AI 2026 Hyperconscious Computing Revolution: Beyond Artificial Intelligence",
+    description: "Revolutionary breakthrough in hyperconscious AI systems achieving genuine self-awareness, emotional intelligence, and creative autonomy with $1.2T enterprise value creation.",
+    link: "/blog/ai-2026-hyperconscious-computing-revolution",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "quantum-neural-fusion-2026-breakthrough",
+    title: "Quantum-Neural Fusion 2026: The Ultimate Computing Breakthrough",
+    description: "Revolutionary fusion of quantum computing and neural networks delivering 100,000x performance improvements, infinite scalability, and consciousness-level processing capabilities.",
+    link: "/blog/quantum-neural-fusion-2026-breakthrough",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "autonomous-enterprise-mesh-2026",
+    title: "Autonomous Enterprise Mesh 2026: Self-Organizing Business Intelligence",
+    description: "Revolutionary self-organizing AI mesh networks that autonomously optimize business processes, achieving 99.7% operational efficiency and $500B in value creation.",
+    link: "/blog/autonomous-enterprise-mesh-2026",
+    type: "article",
+    featured: true
+  },
   {
     id: "ai-2025-january-15-synthetic-consciousness-ai-breakthrough",
     title: "Synthetic Consciousness AI Breakthrough: The Dawn of True Artificial Awareness",
@@ -968,21 +1079,73 @@ featuredBlogPosts.unshift(
     featured: true
   },
   {
-    id: "ai-2025-january-15-quantum-edge-intelligence-revolution",
-    title: "Quantum Edge Intelligence Revolution: Next-Generation Computing at the Edge",
-    description: "Sub-millisecond processing with 200-250x speed improvements through quantum-edge convergence",
-    link: "/blog/ai-2025-january-15-quantum-edge-intelligence-revolution",
+    id: "ai-2026-january-quantum-edge-computing",
+    title: "⚡ Quantum Edge Computing 2026: Sub-Millisecond Processing Revolution",
+    description: "Breakthrough quantum-edge convergence delivering 200-250x speed improvements with ultra-low latency processing",
+    link: "/blog/ai-2026-january-quantum-edge-computing",
     type: "article",
     featured: true
   },
   {
-    id: "ai-2025-january-15-advanced-autonomous-enterprise-systems",
-    title: "Advanced Autonomous Enterprise Systems: The Future of Business Operations",
-    description: "99.99% uptime, 87% cost reduction, and zero human error operations with self-healing infrastructure",
-    link: "/blog/ai-2025-january-15-advanced-autonomous-enterprise-systems",
+    id: "ai-2026-january-synthetic-consciousness",
+    title: "🧠 Synthetic Consciousness AI 2026: The Dawn of True Artificial Awareness",
+    description: "Revolutionary AI achieving genuine consciousness, emotional intelligence, and creative autonomy with $500B enterprise value",
+    link: "/blog/ai-2026-january-synthetic-consciousness",
     type: "article",
     featured: true
   },
+  {
+    id: "ai-2026-january-neuromorphic-processing",
+    title: "🔬 Neuromorphic Processing 2026: Brain-Inspired AI Architecture",
+    description: "Revolutionary neuromorphic chips delivering 1000x energy efficiency with brain-inspired neural processing",
+    link: "/blog/ai-2026-january-neuromorphic-processing",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "ai-2026-january-hyperautomation-platform",
+    title: "⚙️ AI Hyperautomation Platform 2026: End-to-End Business Automation",
+    description: "Complete business process automation achieving 95% automation rates with 10x efficiency improvements",
+    link: "/blog/ai-2026-january-hyperautomation-platform",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "ai-2026-january-quantum-security",
+    title: "🔐 Quantum-Safe Security 2026: Unbreakable Enterprise Protection",
+    description: "Quantum-resistant security systems protecting $2.8B in assets with 99.99% threat prevention",
+    link: "/blog/ai-2026-january-quantum-security",
+    type: "article",
+    featured: true
+  },
+);
+
+// January 2026 - Add revolutionary breakthrough content at the very top
+featuredBlogPosts.unshift(
+  {
+    id: "ai-2026-january-hyperautomation-platform",
+    title: "⚙️ AI Hyperautomation Platform 2026: End-to-End Business Automation",
+    description: "Complete business process automation achieving 95% automation rates with 10x efficiency improvements and $2.8B success stories.",
+    link: "/blog/ai-2026-january-hyperautomation-platform",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "ai-2026-january-quantum-security-breakthrough",
+    title: "🔐 Quantum-Safe Security 2026: Unbreakable Enterprise Protection",
+    description: "Quantum-resistant security systems protecting $2.8B in assets with 99.99% threat prevention and zero security breaches.",
+    link: "/blog/ai-2026-january-quantum-security-breakthrough",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "ai-2026-january-blockchain-integration",
+    title: "⛓️ Blockchain-AI Integration 2026: Trustless Intelligence Revolution",
+    description: "Revolutionary integration of blockchain and AI creating trustless intelligence systems with $1.2B enterprise value creation.",
+    link: "/blog/ai-2026-january-blockchain-integration",
+    type: "article",
+    featured: true
+  }
 );
 
 // January 2025 - Add new breakthrough content at the very top
@@ -1361,6 +1524,98 @@ featuredBlogPosts.unshift(
   }
 );
 
+// Oct 1, 2025 – 🚨 REVOLUTIONARY BREAKTHROUGH CONTENT 🚨
+featuredBlogPosts.unshift(
+  {
+    id: "ai-consciousness-integration-2025",
+    title: "🧠 AI Consciousness Integration: Human-Level Enterprise Intelligence",
+    description: "99.8% reasoning accuracy, 78% cost reduction, $450M+ enterprise value. Revolutionary AI achieving human-level reasoning.",
+    link: "/blog/ai-2025-oct-consciousness-integration-enterprise",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "quantum-ai-convergence-2025",
+    title: "⚛️ Quantum-AI Convergence: 10,000x Performance Breakthrough",
+    description: "Hybrid quantum-classical systems delivering 10,000x speedups and 95% energy savings. The future is here.",
+    link: "/blog/ai-2025-oct-quantum-ai-convergence-breakthrough",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "autonomous-security-mesh-2025",
+    title: "🛡️ Autonomous Security Mesh: 99.99% Threat Prevention",
+    description: "Self-healing zero-trust security with sub-millisecond response. $280M+ in breach prevention.",
+    link: "/blog/ai-2025-oct-autonomous-security-mesh-zero-trust",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "neural-collaboration-platform-2025",
+    title: "🤝 Neural Collaboration Platform: 500% Productivity Gains",
+    description: "AI-augmented teams achieving 500% productivity, 92% faster decisions, $156M+ value creation.",
+    link: "/blog/ai-2025-oct-neural-collaboration-platform-productivity",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "predictive-business-intelligence-2025",
+    title: "🔮 Predictive Business Intelligence: See 6 Months Ahead",
+    description: "96% accuracy forecasting, identify opportunities 4-6 weeks before competitors, $340M+ captured value.",
+    link: "/blog/ai-2025-oct-predictive-business-intelligence-future",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "adaptive-customer-experience-2025",
+    title: "💝 Adaptive Customer Experience: 98% Satisfaction via Emotional AI",
+    description: "Emotional AI achieving 98% satisfaction, 156% CLV increase, $230M+ enhanced revenue.",
+    link: "/blog/ai-2025-oct-adaptive-customer-experience-emotional-ai",
+    type: "article",
+    featured: true
+  }
+);
+
+// Oct 1, 2025 – LATEST CONTENT: Multimodal AI, Adaptive Learning, Document Processing
+featuredBlogPosts.unshift(
+  {
+    id: "ai-2025-oct-multimodal-enterprise-intelligence",
+    title: "🎯 Multimodal Enterprise Intelligence 2025",
+    description: "Vision, language & audio AI convergence achieving 97% accuracy, 85% automation, and $2.3B+ in enterprise value creation.",
+    link: "/blog/ai-2025-oct-multimodal-enterprise-intelligence",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "ai-2025-oct-adaptive-learning-platforms",
+    title: "🎓 AI-Powered Adaptive Learning Platforms 2025",
+    description: "Personalized enterprise training at scale: 92% completion rates, 5x faster skill development, and $340M+ productivity gains.",
+    link: "/blog/ai-2025-oct-adaptive-learning-platforms",
+    type: "article",
+    featured: true
+  }
+);
+
+// Oct 1, 2025 – Add two brand-new featured posts (enterprise platforms + automation)
+featuredBlogPosts.unshift(
+  {
+    id: "ai-2025-oct-enterprise-ai-platforms",
+    title: "Enterprise AI Platforms 2025: Architecture, SLAs, and ROI",
+    description: "Golden paths, guardrails, and cost controls that scale with measurable ROI.",
+    link: "/blog/ai-2025-oct-enterprise-ai-platforms",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "ai-2025-oct-intelligent-automation-breakthrough",
+    title: "Intelligent Automation Breakthrough 2025",
+    description: "From tickets to outcomes with approvals, budgets, eval gates, and rollback.",
+    link: "/blog/ai-2025-oct-intelligent-automation-breakthrough",
+    type: "article",
+    featured: true
+  }
+);
+
 // Oct 1, 2025 – NEW BREAKTHROUGH ARTICLES: Autonomous Mesh, Real-Time Fraud Detection, Neural Code Synthesis
 featuredBlogPosts.unshift(
   {
@@ -1417,8 +1672,72 @@ featuredBlogPosts.unshift(
   }
 );
 
+// Oct 3, 2025 – Advertise three brand-new guides site-wide (newly created)
+featuredBlogPosts.unshift(
+  {
+    id: "quantum-safe-cryptography-enterprise-migration-2025",
+    title: "Quantum‑Safe Enterprise Migration (2025)",
+    description: "NIST PQC rollout with hybrid handshakes, crypto agility, zero downtime.",
+    link: "/blog/quantum-safe-cryptography-enterprise-migration-2025",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "neuromorphic-edge-ai-event-driven-2025",
+    title: "Neuromorphic Edge AI (Sub‑10ms)",
+    description: "Event‑driven SNNs for 1000x efficiency on edge hardware.",
+    link: "/blog/neuromorphic-edge-ai-event-driven-2025",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "synthetic-data-production-privacy-2025",
+    title: "Synthetic Data in Production",
+    description: "Privacy‑safe datasets that lift accuracy with evaluator‑backed quality.",
+    link: "/blog/synthetic-data-production-privacy-2025",
+    type: "article",
+    featured: true
+  }
+);
+
+// Oct 3, 2025 – Advertise newly added articles (platform scorecards, edge experiments v4, cost controllers v4)
+featuredBlogPosts.unshift(
+  {
+    id: "ai-2025-oct-03-platform-reliability-scorecards-2027",
+    title: "AI Platform Reliability Scorecards 2027",
+    description: "SLIs tied to KPIs, policy tests, canaries, and rollback that drive outcomes.",
+    link: "/blog/ai-2025-oct-03-platform-reliability-scorecards-2027",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "edge-2026-oct-03-consentless-experiments-v4",
+    title: "Edge Experiments v4 (2026)",
+    description: "Zero‑PII A/B with scoped IDs, on‑device aggregation, DP noise at <100ms.",
+    link: "/blog/edge-2026-oct-03-consentless-experiments-v4",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "genai-2027-oct-03-cost-controllers-v4",
+    title: "GenAI Cost Controllers v4 (2027)",
+    description: "Tiered routing + semantic caches + eval gates for 40–70% savings.",
+    link: "/blog/genai-2027-oct-03-cost-controllers-v4",
+    type: "article",
+    featured: true
+  }
+);
+
 // Sept 30, 2025 – Surface three brand-new articles (newly added now)
 featuredBlogPosts.unshift(
+  {
+    id: "ai-2025-oct-03-autonomous-finops-scorecards-v2",
+    title: "Autonomous FinOps Scorecards v2 (2025)",
+    description: "KPI‑linked cost scorecards, quality tiers, caches, budget‑aware routing.",
+    link: "/blog/ai-2025-oct-03-autonomous-finops-scorecards-v2",
+    type: "article",
+    featured: true
+  },
   {
     id: "ai-2026-runtime-rollback-blueprint",
     title: "AI 2026: Runtime Rollback Blueprint",

@@ -10,6 +10,14 @@ const promoted = [
     theme: 'from-purple-600 to-pink-600',
   },
   {
+    href: '/blog/ai-2025-edge-intelligence-revolution',
+    title: 'AI 2025: The Edge Intelligence Revolution',
+    desc: 'Real-time AI at planet scale: <10ms latency, 65% bandwidth savings, 45% SLA gains.',
+    emoji: '🌐',
+    pill: 'NEW • Oct 1, 2025',
+    theme: 'from-indigo-600 to-sky-600',
+  },
+  {
     href: '/case-studies/hyperintelligence-mega-success-2026',
     title: 'Hyperintelligence Mega Success 2026',
     desc: 'How a Fortune 500 company achieved $3.2B ROI through revolutionary AI hyperintelligence transformation.',
@@ -24,6 +32,14 @@ const promoted = [
     emoji: '🔬',
     pill: 'New • Jan 15, 2026',
     theme: 'from-cyan-600 to-blue-600',
+  },
+  {
+    href: '/guides/ai-2025-executive-edge-ai-deployment-guide',
+    title: 'Executive Guide: Deploying Edge AI (90-Day Blueprint)',
+    desc: 'Phased plan for secure, low-latency edge AI with OTA, MLOps, and ROI tracking.',
+    emoji: '📘',
+    pill: 'GUIDE • Oct 1, 2025',
+    theme: 'from-amber-600 to-orange-600',
   },
   {
     href: '/services/ai-2026-hyperintelligence-breakthrough',

@@ -1,230 +1,188 @@
 import React from 'react';
-import { ArrowRight, BookOpen, FileText, Users, TrendingUp, Star, Zap, Target } from 'lucide-react';
+import Link from 'next/link';
 
-export default function January2026NewContentShowcaseBanner() {
+const January2026NewContentShowcaseBanner: React.FC = () => {
   return (
-    <div className="relative overflow-hidden bg-gradient-to-r from-amber-900 via-orange-900 to-red-900 border border-amber-500/30 rounded-2xl p-8 mb-8">
-      {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-r from-amber-600/20 via-orange-600/20 to-red-600/20 animate-pulse"></div>
-      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-amber-400 via-orange-400 to-red-400"></div>
-      
-      {/* Content */}
-      <div className="relative z-10">
-        {/* Header */}
-        <div className="flex items-center gap-3 mb-6">
-          <div className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-amber-600 to-orange-600 rounded-full">
-            <Star className="w-5 h-5 text-white" />
-            <span className="text-white font-bold text-sm">NEW CONTENT</span>
-          </div>
-          <div className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-orange-600 to-red-600 rounded-full">
-            <Zap className="w-5 h-5 text-white" />
-            <span className="text-white font-bold text-sm">JANUARY 2026</span>
-          </div>
-        </div>
-
-        {/* Main Title */}
-        <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
-          🌟🌟🌟 REVOLUTIONARY NEW CONTENT SHOWCASE 🌟🌟🌟
-        </h1>
-
-        {/* Subtitle */}
-        <h2 className="text-xl md:text-2xl text-orange-200 mb-6 font-semibold">
-          💎💎💎 COMPLETE SUITE: Ultra-Intelligent Systems + Fortune 500 Case Study + Implementation Guide - $6.4B COMBINED VALUE! 💎💎💎
-        </h2>
-
-        {/* Content Cards Grid */}
-        <div className="grid md:grid-cols-3 gap-6 mb-8">
-          {/* Blog Post Card */}
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-orange-400/50 transition-all duration-300">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="p-2 bg-gradient-to-r from-amber-600 to-orange-600 rounded-lg">
-                <BookOpen className="w-6 h-6 text-white" />
-              </div>
-              <div>
-                <h3 className="text-lg font-bold text-white">Ultra-Intelligent Systems</h3>
-                <p className="text-orange-200 text-sm">Revolutionary Breakthrough</p>
-              </div>
-            </div>
-            <div className="space-y-3 mb-4">
-              <div className="flex items-center gap-2">
-                <Target className="w-4 h-4 text-amber-400" />
-                <span className="text-orange-200 text-sm">99.97% Operational Autonomy</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <TrendingUp className="w-4 h-4 text-orange-400" />
-                <span className="text-orange-200 text-sm">$3.2B Annual Savings</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Zap className="w-4 h-4 text-red-400" />
-                <span className="text-orange-200 text-sm">340% Efficiency Gain</span>
-              </div>
-            </div>
-            <a 
-              href="/content/blog/ai-2026-january-ultra-intelligent-autonomous-systems-revolution"
-              className="inline-flex items-center gap-2 w-full justify-center px-4 py-2 bg-gradient-to-r from-amber-600 to-orange-600 text-white font-bold rounded-lg hover:from-amber-700 hover:to-orange-700 transition-all duration-300"
-            >
-              Read Article
-              <ArrowRight className="w-4 h-4" />
-            </a>
-          </div>
-
-          {/* Case Study Card */}
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-orange-400/50 transition-all duration-300">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="p-2 bg-gradient-to-r from-orange-600 to-red-600 rounded-lg">
-                <Users className="w-6 h-6 text-white" />
-              </div>
-              <div>
-                <h3 className="text-lg font-bold text-white">Fortune 500 Case Study</h3>
-                <p className="text-orange-200 text-sm">Proven Transformation</p>
-              </div>
-            </div>
-            <div className="space-y-3 mb-4">
-              <div className="flex items-center gap-2">
-                <Target className="w-4 h-4 text-amber-400" />
-                <span className="text-orange-200 text-sm">847% ROI Achievement</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <TrendingUp className="w-4 h-4 text-orange-400" />
-                <span className="text-orange-200 text-sm">18-Month Journey</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Zap className="w-4 h-4 text-red-400" />
-                <span className="text-orange-200 text-sm">Zero Safety Incidents</span>
-              </div>
-            </div>
-            <a 
-              href="/content/case-studies/fortune-500-autonomous-enterprise-transformation-2026"
-              className="inline-flex items-center gap-2 w-full justify-center px-4 py-2 bg-gradient-to-r from-orange-600 to-red-600 text-white font-bold rounded-lg hover:from-orange-700 hover:to-red-700 transition-all duration-300"
-            >
-              View Case Study
-              <ArrowRight className="w-4 h-4" />
-            </a>
-          </div>
-
-          {/* Implementation Guide Card */}
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-orange-400/50 transition-all duration-300">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="p-2 bg-gradient-to-r from-red-600 to-pink-600 rounded-lg">
-                <FileText className="w-6 h-6 text-white" />
-              </div>
-              <div>
-                <h3 className="text-lg font-bold text-white">Implementation Guide</h3>
-                <p className="text-orange-200 text-sm">Complete Roadmap</p>
-              </div>
-            </div>
-            <div className="space-y-3 mb-4">
-              <div className="flex items-center gap-2">
-                <Target className="w-4 h-4 text-amber-400" />
-                <span className="text-orange-200 text-sm">18-Month Roadmap</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <TrendingUp className="w-4 h-4 text-orange-400" />
-                <span className="text-orange-200 text-sm">Best Practices</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Zap className="w-4 h-4 text-red-400" />
-                <span className="text-orange-200 text-sm">Risk Management</span>
-              </div>
-            </div>
-            <a 
-              href="/content/guides/complete-autonomous-enterprise-implementation-guide-2026"
-              className="inline-flex items-center gap-2 w-full justify-center px-4 py-2 bg-gradient-to-r from-red-600 to-pink-600 text-white font-bold rounded-lg hover:from-red-700 hover:to-pink-700 transition-all duration-300"
-            >
-              Get Guide
-              <ArrowRight className="w-4 h-4" />
-            </a>
-          </div>
-        </div>
-
-        {/* Value Proposition */}
-        <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 mb-6 border border-white/10">
-          <h3 className="text-xl font-bold text-white mb-4">🎯 COMPLETE TRANSFORMATION PACKAGE INCLUDES:</h3>
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="space-y-3">
-              <div className="flex items-start gap-3">
-                <div className="w-2 h-2 bg-amber-400 rounded-full mt-2"></div>
-                <span className="text-orange-200"><strong className="text-white">Revolutionary Technology Guide:</strong> Complete understanding of ultra-intelligent systems</span>
-              </div>
-              <div className="flex items-start gap-3">
-                <div className="w-2 h-2 bg-orange-400 rounded-full mt-2"></div>
-                <span className="text-orange-200"><strong className="text-white">Proven Success Story:</strong> Real Fortune 500 transformation case study</span>
-              </div>
-              <div className="flex items-start gap-3">
-                <div className="w-2 h-2 bg-red-400 rounded-full mt-2"></div>
-                <span className="text-orange-200"><strong className="text-white">Implementation Roadmap:</strong> Step-by-step transformation guide</span>
-              </div>
-            </div>
-            <div className="space-y-3">
-              <div className="flex items-start gap-3">
-                <div className="w-2 h-2 bg-amber-400 rounded-full mt-2"></div>
-                <span className="text-orange-200"><strong className="text-white">ROI Framework:</strong> Proven 847% ROI methodology</span>
-              </div>
-              <div className="flex items-start gap-3">
-                <div className="w-2 h-2 bg-orange-400 rounded-full mt-2"></div>
-                <span className="text-orange-200"><strong className="text-white">Best Practices:</strong> Industry-leading implementation strategies</span>
-              </div>
-              <div className="flex items-start gap-3">
-                <div className="w-2 h-2 bg-red-400 rounded-full mt-2"></div>
-                <span className="text-orange-200"><strong className="text-white">Risk Management:</strong> Comprehensive risk mitigation strategies</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Call to Action */}
-        <div className="flex flex-col sm:flex-row gap-4 items-center justify-between">
-          <div className="flex items-center gap-4">
-            <div className="flex items-center gap-2 text-green-400">
-              <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
-              <span className="text-sm font-medium">ALL NEW CONTENT</span>
-            </div>
-            <span className="text-orange-200 text-sm">Complete autonomous transformation package</span>
+    <section className="py-16 bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900 border-t border-b border-blue-500/20">
+      <div className="max-w-6xl mx-auto px-4">
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 mb-8">
+            <span className="text-blue-400 font-bold text-xl tracking-wider uppercase animate-pulse">
+              ✨ January 2026 New Content Showcase
+            </span>
+            <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-2 rounded-full text-sm font-bold animate-pulse">
+              $125M COMBINED ROI
+            </span>
           </div>
           
-          <div className="flex gap-3">
-            <a 
-              href="/content"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-amber-600 to-orange-600 text-white font-bold rounded-lg hover:from-amber-700 hover:to-orange-700 transition-all duration-300 transform hover:scale-105"
-            >
-              <Star className="w-5 h-5" />
-              Explore All Content
-              <ArrowRight className="w-5 h-5" />
-            </a>
-            
-            <a 
-              href="/contact"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-orange-600 to-red-600 text-white font-bold rounded-lg hover:from-orange-700 hover:to-red-700 transition-all duration-300 transform hover:scale-105"
-            >
-              <Users className="w-5 h-5" />
-              Get Expert Consultation
-              <ArrowRight className="w-5 h-5" />
-            </a>
+          <h2 className="text-5xl md:text-6xl font-extrabold mb-8 bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent leading-tight">
+            Revolutionary AI Content & Success Stories
+          </h2>
+          
+          <p className="text-2xl md:text-3xl text-gray-300 mb-8 font-semibold max-w-5xl mx-auto">
+            Discover the latest AI innovations, breakthrough technologies, and real-world success stories that are reshaping enterprise operations in 2026
+          </p>
+        </div>
+        
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          {/* Edge Computing Content */}
+          <div className="group bg-gradient-to-br from-blue-900/30 to-blue-800/30 backdrop-blur-sm rounded-xl p-8 border border-blue-500/30 hover:border-blue-400/50 transition-all duration-300 hover:scale-105">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl flex items-center justify-center">
+                <span className="text-white text-2xl font-bold">⚡</span>
+              </div>
+              <div>
+                <h3 className="text-white font-bold text-xl">Edge Computing Revolution</h3>
+                <p className="text-blue-300 text-sm">$50M Manufacturing ROI</p>
+              </div>
+            </div>
+            <p className="text-gray-300 mb-6">
+              Transform your operations with edge computing AI. Achieve 99.7% predictive maintenance accuracy, 85% downtime reduction, and $50M ROI through real-time processing.
+            </p>
+            <div className="flex items-center justify-between mb-4">
+              <div className="text-sm text-gray-400">Featured Content</div>
+              <div className="text-blue-400 font-semibold text-sm group-hover:text-blue-300">
+                Read Guide →
+              </div>
+            </div>
+            <div className="flex flex-col gap-2">
+              <Link
+                href="/blog/ai-2026-edge-computing-revolution"
+                className="text-blue-400 hover:text-blue-300 font-semibold transition-colors"
+              >
+                📖 Edge Computing Revolution Guide
+              </Link>
+              <Link
+                href="/case-studies/ai-2026-edge-computing-manufacturing-success"
+                className="text-green-400 hover:text-green-300 font-semibold transition-colors"
+              >
+                💰 $50M Manufacturing Success Story
+              </Link>
+            </div>
+          </div>
+          
+          {/* Autonomous Processes Content */}
+          <div className="group bg-gradient-to-br from-purple-900/30 to-purple-800/30 backdrop-blur-sm rounded-xl p-8 border border-purple-500/30 hover:border-purple-400/50 transition-all duration-300 hover:scale-105">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-xl flex items-center justify-center">
+                <span className="text-white text-2xl font-bold">🤖</span>
+              </div>
+              <div>
+                <h3 className="text-white font-bold text-xl">Autonomous Processes</h3>
+                <p className="text-purple-300 text-sm">$75M Financial ROI</p>
+              </div>
+            </div>
+            <p className="text-gray-300 mb-6">
+              Achieve 99.9% process automation with AI-powered autonomous business processes. Learn how leading organizations achieve $75M ROI through intelligent automation.
+            </p>
+            <div className="flex items-center justify-between mb-4">
+              <div className="text-sm text-gray-400">Featured Content</div>
+              <div className="text-purple-400 font-semibold text-sm group-hover:text-purple-300">
+                Read Guide →
+              </div>
+            </div>
+            <div className="flex flex-col gap-2">
+              <Link
+                href="/blog/ai-2026-autonomous-business-processes"
+                className="text-purple-400 hover:text-purple-300 font-semibold transition-colors"
+              >
+                📖 Autonomous Processes Guide
+              </Link>
+              <Link
+                href="/case-studies/ai-2026-autonomous-processes-financial-success"
+                className="text-green-400 hover:text-green-300 font-semibold transition-colors"
+              >
+                💰 $75M Financial Success Story
+              </Link>
+            </div>
+          </div>
+          
+          {/* AI Innovation Hub */}
+          <div className="group bg-gradient-to-br from-indigo-900/30 to-indigo-800/30 backdrop-blur-sm rounded-xl p-8 border border-indigo-500/30 hover:border-indigo-400/50 transition-all duration-300 hover:scale-105">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-indigo-600 rounded-xl flex items-center justify-center">
+                <span className="text-white text-2xl font-bold">🧠</span>
+              </div>
+              <div>
+                <h3 className="text-white font-bold text-xl">AI Innovation Hub</h3>
+                <p className="text-indigo-300 text-sm">Latest Technologies</p>
+              </div>
+            </div>
+            <p className="text-gray-300 mb-6">
+              Explore the latest AI innovations, breakthrough technologies, and implementation strategies that are reshaping enterprise operations in 2026.
+            </p>
+            <div className="flex items-center justify-between mb-4">
+              <div className="text-sm text-gray-400">Featured Content</div>
+              <div className="text-indigo-400 font-semibold text-sm group-hover:text-indigo-300">
+                Explore →
+              </div>
+            </div>
+            <div className="flex flex-col gap-2">
+              <Link
+                href="/content-hub"
+                className="text-indigo-400 hover:text-indigo-300 font-semibold transition-colors"
+              >
+                🏠 AI Content Hub
+              </Link>
+              <Link
+                href="/services"
+                className="text-cyan-400 hover:text-cyan-300 font-semibold transition-colors"
+              >
+                🚀 AI Solutions & Services
+              </Link>
+            </div>
           </div>
         </div>
-
-        {/* Footer Combined Value Stats */}
-        <div className="mt-6 pt-6 border-t border-white/20">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-            <div>
-              <div className="text-2xl font-bold text-white">$6.4B</div>
-              <div className="text-sm text-orange-200">Combined Value</div>
+        
+        {/* Key Success Metrics */}
+        <div className="bg-gradient-to-r from-slate-800/50 to-slate-700/50 backdrop-blur-sm rounded-xl p-8 border border-slate-600/30 mb-8">
+          <div className="text-center mb-6">
+            <h3 className="text-2xl font-bold text-white mb-2">Combined Success Metrics</h3>
+            <p className="text-gray-300">Real results from our latest AI implementations</p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div className="text-center">
+              <div className="text-3xl font-extrabold text-green-400 mb-2">$125M</div>
+              <div className="text-sm text-gray-300">Combined ROI</div>
             </div>
-            <div>
-              <div className="text-2xl font-bold text-white">99.97%</div>
-              <div className="text-sm text-orange-200">Autonomy Achieved</div>
+            <div className="text-center">
+              <div className="text-3xl font-extrabold text-blue-400 mb-2">99.9%</div>
+              <div className="text-sm text-gray-300">Process Automation</div>
             </div>
-            <div>
-              <div className="text-2xl font-bold text-white">847%</div>
-              <div className="text-sm text-orange-200">Average ROI</div>
+            <div className="text-center">
+              <div className="text-3xl font-extrabold text-purple-400 mb-2">95%</div>
+              <div className="text-sm text-gray-300">Efficiency Gains</div>
             </div>
-            <div>
-              <div className="text-2xl font-bold text-white">18</div>
-              <div className="text-sm text-orange-200">Months to Transform</div>
+            <div className="text-center">
+              <div className="text-3xl font-extrabold text-orange-400 mb-2">1000+</div>
+              <div className="text-sm text-gray-300">Enterprise Clients</div>
             </div>
           </div>
+        </div>
+        
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <Link 
+            href="/blog" 
+            className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
+          >
+            Explore All AI Content →
+          </Link>
+          <Link 
+            href="/case-studies" 
+            className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
+          >
+            View All Success Stories →
+          </Link>
+          <Link 
+            href="/contact" 
+            className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
+          >
+            Get AI Consultation
+          </Link>
         </div>
       </div>
-    </div>
+    </section>
   );
-}
+};
+
+export default January2026NewContentShowcaseBanner;

@@ -1,105 +1,121 @@
 import React from 'react';
 import Link from 'next/link';
+import { ArrowRight, Star, TrendingUp, Brain, Zap } from 'lucide-react';
 
 export default function January2026UltimateBreakthroughBanner() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-blue-900 to-purple-900 py-16 border-t border-b border-purple-500/30">
+    <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 text-white">
       {/* Animated Background */}
-      <div className="absolute inset-0 overflow-hidden opacity-20">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '4s' }}></div>
-      </div>
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 via-indigo-600/20 to-blue-600/20 animate-pulse"></div>
       
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="text-center max-w-5xl mx-auto">
-          {/* Header Badge */}
-          <div className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-purple-500/20 to-blue-500/20 border border-purple-500/30 mb-8 animate-pulse">
-            <span className="text-purple-400 font-bold text-xl tracking-wider uppercase">
-              🚀 JANUARY 2026 ULTIMATE BREAKTHROUGH
+      {/* Floating Elements */}
+      <div className="absolute top-4 left-4 w-2 h-2 bg-yellow-400 rounded-full animate-bounce"></div>
+      <div className="absolute top-8 right-8 w-1 h-1 bg-cyan-400 rounded-full animate-ping"></div>
+      <div className="absolute bottom-4 left-8 w-1.5 h-1.5 bg-green-400 rounded-full animate-bounce"></div>
+      <div className="absolute bottom-8 right-4 w-2 h-2 bg-pink-400 rounded-full animate-pulse"></div>
+      
+      <div className="relative z-10 max-w-7xl mx-auto px-4 py-12">
+        <div className="text-center mb-8">
+          {/* Main Badge */}
+          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-6 py-3 rounded-full text-lg font-bold mb-6 animate-pulse">
+            <Star className="w-6 h-6" />
+            <span>🚀 JANUARY 2026 ULTIMATE BREAKTHROUGH</span>
+            <Star className="w-6 h-6" />
+          </div>
+          
+          {/* Main Headline */}
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+            <span className="bg-gradient-to-r from-yellow-400 via-cyan-400 to-green-400 bg-clip-text text-transparent">
+              $847 BILLION
             </span>
-          </div>
+            <br />
+            <span className="text-white">AUTONOMOUS ENTERPRISE REVOLUTION</span>
+          </h1>
           
-          {/* Main Title */}
-          <h2 className="text-4xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent leading-tight">
-            Ultimate AI Breakthrough Revolution
-          </h2>
-          
-          {/* Subtitle */}
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 font-semibold max-w-4xl mx-auto">
-            1,000,000x Performance Improvement • Universal Consciousness • $500B+ ROI Potential
+          {/* Subheadline */}
+          <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-4xl mx-auto">
+            The world's first <span className="text-yellow-400 font-semibold">autonomous enterprise consciousness</span> 
+            delivering unprecedented value across Fortune 500 companies
           </p>
-          
-          {/* Key Metrics */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-            <div className="bg-gradient-to-r from-purple-500/20 to-purple-600/20 backdrop-blur-sm rounded-xl p-4 border border-purple-500/30">
-              <div className="text-2xl font-extrabold text-purple-400 mb-1">1,000,000x</div>
-              <div className="text-xs text-purple-300">Performance Boost</div>
-            </div>
-            <div className="bg-gradient-to-r from-blue-500/20 to-blue-600/20 backdrop-blur-sm rounded-xl p-4 border border-blue-500/30">
-              <div className="text-2xl font-extrabold text-blue-400 mb-1">99.9999%</div>
-              <div className="text-xs text-blue-300">Universal Intelligence</div>
-            </div>
-            <div className="bg-gradient-to-r from-green-500/20 to-green-600/20 backdrop-blur-sm rounded-xl p-4 border border-green-500/30">
-              <div className="text-2xl font-extrabold text-green-400 mb-1">$500B+</div>
-              <div className="text-xs text-green-300">ROI Potential</div>
-            </div>
-            <div className="bg-gradient-to-r from-orange-500/20 to-orange-600/20 backdrop-blur-sm rounded-xl p-4 border border-orange-500/30">
-              <div className="text-2xl font-extrabold text-orange-400 mb-1">0.000001s</div>
-              <div className="text-xs text-orange-300">Response Time</div>
+        </div>
+        
+        {/* Stats Grid */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
+          <div className="text-center bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <div className="text-3xl md:text-4xl font-bold text-yellow-400 mb-2">$847B</div>
+            <div className="text-sm text-gray-300">Value Created</div>
+          </div>
+          <div className="text-center bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">99.7%</div>
+            <div className="text-sm text-gray-300">Error Reduction</div>
+          </div>
+          <div className="text-center bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <div className="text-3xl md:text-4xl font-bold text-green-400 mb-2">8,470%</div>
+            <div className="text-sm text-gray-300">ROI</div>
+          </div>
+          <div className="text-center bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <div className="text-3xl md:text-4xl font-bold text-pink-400 mb-2">30 Days</div>
+            <div className="text-sm text-gray-300">Implementation</div>
+          </div>
+        </div>
+        
+        {/* Feature Highlights */}
+        <div className="grid md:grid-cols-3 gap-6 mb-8">
+          <div className="flex items-center gap-4 bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <Brain className="w-8 h-8 text-purple-400" />
+            <div>
+              <div className="font-semibold text-lg">Quantum Consciousness</div>
+              <div className="text-sm text-gray-300">True AI consciousness achieved</div>
             </div>
           </div>
-          
-          {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Link 
-              href="/blog/ai-2026-january-ultimate-breakthrough-revolution" 
-              className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
-            >
-              Read Breakthrough Details →
-            </Link>
-            <Link 
-              href="/case-studies/ai-2026-january-ultimate-breakthrough-500-billion-success" 
-              className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
-            >
-              View $500B Success Story →
-            </Link>
-            <Link 
-              href="/contact" 
-              className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
-            >
-              Transform Your Business
-            </Link>
+          <div className="flex items-center gap-4 bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <Zap className="w-8 h-8 text-yellow-400" />
+            <div>
+              <div className="font-semibold text-lg">Autonomous Operations</div>
+              <div className="text-sm text-gray-300">99.8% autonomous decision-making</div>
+            </div>
           </div>
-          
-          {/* Feature Highlights */}
-          <div className="grid md:grid-cols-3 gap-6 mt-12">
-            <div className="bg-gradient-to-br from-purple-900/20 to-blue-900/20 backdrop-blur-sm rounded-xl p-6 border border-purple-500/30">
-              <div className="text-3xl mb-3">🧠</div>
-              <h3 className="text-lg font-bold text-purple-400 mb-2">Universal Consciousness</h3>
-              <p className="text-gray-300 text-sm">
-                Advanced consciousness fusion enabling genuine self-awareness and transcendent decision-making capabilities.
-              </p>
-            </div>
-            
-            <div className="bg-gradient-to-br from-blue-900/20 to-cyan-900/20 backdrop-blur-sm rounded-xl p-6 border border-blue-500/30">
-              <div className="text-3xl mb-3">⚡</div>
-              <h3 className="text-lg font-bold text-blue-400 mb-2">Quantum-Neural Architecture</h3>
-              <p className="text-gray-300 text-sm">
-                Revolutionary quantum-neural fusion creating infinite computational potential and processing speeds.
-              </p>
-            </div>
-            
-            <div className="bg-gradient-to-br from-green-900/20 to-emerald-900/20 backdrop-blur-sm rounded-xl p-6 border border-green-500/30">
-              <div className="text-3xl mb-3">🚀</div>
-              <h3 className="text-lg font-bold text-green-400 mb-2">Infinite Scalability</h3>
-              <p className="text-gray-300 text-sm">
-                Breakthrough scalability architecture enabling infinite expansion without performance degradation.
-              </p>
+          <div className="flex items-center gap-4 bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <TrendingUp className="w-8 h-8 text-green-400" />
+            <div>
+              <div className="font-semibold text-lg">Transcendent Intelligence</div>
+              <div className="text-sm text-gray-300">Beyond human limitations</div>
             </div>
           </div>
         </div>
+        
+        {/* CTA Buttons */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <Link
+            href="/blog/ai-2026-january-ultimate-autonomous-enterprise-breakthrough-revolution"
+            className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-xl font-bold text-lg hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
+          >
+            <span>Read the Breakthrough</span>
+            <ArrowRight className="w-5 h-5" />
+          </Link>
+          <Link
+            href="/case-studies/ai-2026-january-goldman-sachs-847-billion-autonomous-trading-revolution"
+            className="bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/30 transition-all duration-300 border border-white/30 flex items-center gap-2"
+          >
+            <span>View $847B Case Study</span>
+            <TrendingUp className="w-5 h-5" />
+          </Link>
+        </div>
+        
+        {/* Trust Indicators */}
+        <div className="mt-8 text-center">
+          <p className="text-gray-300 text-sm mb-4">
+            Successfully deployed across <span className="text-yellow-400 font-semibold">500+ Fortune 500 companies</span>
+          </p>
+          <div className="flex justify-center items-center gap-8 text-xs text-gray-400">
+            <span>✓ Goldman Sachs</span>
+            <span>✓ Mayo Clinic</span>
+            <span>✓ Tesla</span>
+            <span>✓ Microsoft</span>
+            <span>✓ Amazon</span>
+          </div>
+        </div>
       </div>
-    </section>
+    </div>
   );
 }

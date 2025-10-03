@@ -1,348 +1,333 @@
 /**
  * Performance Optimizer Utility
- * Provides comprehensive performance monitoring and optimization for the application
+ * Comprehensive performance monitoring and optimization tools
  */
 
-interface PerformanceMetrics {
-  fcp: number; // First Contentful Paint
-  lcp: number; // Largest Contentful Paint
-  fid: number; // First Input Delay
-  cls: number; // Cumulative Layout Shift
-  ttfb: number; // Time to First Byte
+/**
+ * Web Vitals metrics tracking
+ */
+export interface WebVitalsMetrics {
+  FCP?: number; // First Contentful Paint
+  LCP?: number; // Largest Contentful Paint
+  FID?: number; // First Input Delay
+  CLS?: number; // Cumulative Layout Shift
+  TTFB?: number; // Time to First Byte
+  INP?: number; // Interaction to Next Paint
 }
 
-interface ResourceTiming {
-  name: string;
-  duration: number;
-  size: number;
-  type: string;
-}
+/**
+ * Resource hints for performance
+ */
+export const prefetchResources = (urls: string[]): void => {
+  if (typeof document === 'undefined') return;
 
-class PerformanceOptimizer {
-  private metrics: Partial<PerformanceMetrics> = {};
-  private resourceTimings: ResourceTiming[] = [];
-  private observerInitialized = false;
+  urls.forEach(url => {
+    const link = document.createElement('link');
+    link.rel = 'prefetch';
+    link.href = url;
+    document.head.appendChild(link);
+  });
+};
 
-  constructor() {
-    if (typeof window !== 'undefined') {
-      this.initializeObservers();
-    }
-  }
+/**
+ * Preconnect to external domains
+ */
+export const preconnectDomains = (domains: string[]): void => {
+  if (typeof document === 'undefined') return;
 
-  /**
-   * Initialize performance observers for Core Web Vitals
-   */
-  private initializeObservers(): void {
-    if (this.observerInitialized) return;
+  domains.forEach(domain => {
+    const link = document.createElement('link');
+    link.rel = 'preconnect';
+    link.href = domain;
+    link.crossOrigin = 'anonymous';
+    document.head.appendChild(link);
+  });
+};
 
-    // Observe Largest Contentful Paint (LCP)
-    if ('PerformanceObserver' in window) {
-      try {
-        const lcpObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          const lastEntry = entries[entries.length - 1] as any;
-          this.metrics.lcp = lastEntry.renderTime || lastEntry.loadTime;
-        });
-        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+/**
+ * Lazy load images with Intersection Observer
+ */
+export const lazyLoadImages = (): void => {
+  if (typeof window === 'undefined') return;
+  if (!('IntersectionObserver' in window)) return;
 
-        // Observe First Input Delay (FID)
-        const fidObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          entries.forEach((entry: any) => {
-            this.metrics.fid = entry.processingStart - entry.startTime;
-          });
-        });
-        fidObserver.observe({ entryTypes: ['first-input'] });
-
-        // Observe Cumulative Layout Shift (CLS)
-        let clsValue = 0;
-        const clsObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          entries.forEach((entry: any) => {
-            if (!entry.hadRecentInput) {
-              clsValue += entry.value;
-              this.metrics.cls = clsValue;
-            }
-          });
-        });
-        clsObserver.observe({ entryTypes: ['layout-shift'] });
-
-        this.observerInitialized = true;
-      } catch (error) {
-        console.warn('Performance Observer initialization failed:', error);
-      }
-    }
-
-    // Capture initial page load metrics
-    this.capturePageLoadMetrics();
-  }
-
-  /**
-   * Capture page load performance metrics
-   */
-  private capturePageLoadMetrics(): void {
-    if (typeof window === 'undefined' || !window.performance) return;
-
-    window.addEventListener('load', () => {
-      setTimeout(() => {
-        const navTiming = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        
-        if (navTiming) {
-          this.metrics.ttfb = navTiming.responseStart - navTiming.requestStart;
-          this.metrics.fcp = navTiming.domContentLoadedEventEnd - navTiming.fetchStart;
-        }
-
-        // Capture resource timings
-        this.captureResourceTimings();
-      }, 0);
-    });
-  }
-
-  /**
-   * Capture resource loading timings
-   */
-  private captureResourceTimings(): void {
-    if (typeof window === 'undefined' || !window.performance) return;
-
-    const resources = performance.getEntriesByType('resource') as PerformanceResourceTiming[];
-    
-    this.resourceTimings = resources.map(resource => ({
-      name: resource.name,
-      duration: resource.duration,
-      size: (resource as any).transferSize || 0,
-      type: this.getResourceType(resource.name)
-    }));
-  }
-
-  /**
-   * Get resource type from URL
-   */
-  private getResourceType(url: string): string {
-    if (url.match(/\.(js|jsx|ts|tsx)$/)) return 'script';
-    if (url.match(/\.(css)$/)) return 'stylesheet';
-    if (url.match(/\.(jpg|jpeg|png|gif|svg|webp)$/)) return 'image';
-    if (url.match(/\.(woff|woff2|ttf|eot)$/)) return 'font';
-    return 'other';
-  }
-
-  /**
-   * Get current performance metrics
-   */
-  public getMetrics(): Partial<PerformanceMetrics> {
-    return { ...this.metrics };
-  }
-
-  /**
-   * Get resource timings
-   */
-  public getResourceTimings(): ResourceTiming[] {
-    return [...this.resourceTimings];
-  }
-
-  /**
-   * Get performance score (0-100)
-   */
-  public getPerformanceScore(): number {
-    const { lcp = 0, fid = 0, cls = 0 } = this.metrics;
-    
-    // Score calculation based on Core Web Vitals thresholds
-    let score = 100;
-    
-    // LCP: Good < 2.5s, Needs Improvement < 4s, Poor >= 4s
-    if (lcp > 4000) score -= 40;
-    else if (lcp > 2500) score -= 20;
-    
-    // FID: Good < 100ms, Needs Improvement < 300ms, Poor >= 300ms
-    if (fid > 300) score -= 30;
-    else if (fid > 100) score -= 15;
-    
-    // CLS: Good < 0.1, Needs Improvement < 0.25, Poor >= 0.25
-    if (cls > 0.25) score -= 30;
-    else if (cls > 0.1) score -= 15;
-    
-    return Math.max(0, score);
-  }
-
-  /**
-   * Get optimization recommendations
-   */
-  public getRecommendations(): string[] {
-    const recommendations: string[] = [];
-    const { lcp = 0, fid = 0, cls = 0 } = this.metrics;
-
-    if (lcp > 2500) {
-      recommendations.push('Optimize Largest Contentful Paint: Consider lazy-loading images and reducing server response time');
-    }
-
-    if (fid > 100) {
-      recommendations.push('Reduce First Input Delay: Break up long JavaScript tasks and optimize event handlers');
-    }
-
-    if (cls > 0.1) {
-      recommendations.push('Improve Cumulative Layout Shift: Add size attributes to images and avoid inserting content above existing content');
-    }
-
-    // Check for large resources
-    const largeResources = this.resourceTimings.filter(r => r.size > 500000); // > 500KB
-    if (largeResources.length > 0) {
-      recommendations.push(`Optimize large resources: ${largeResources.length} resources exceed 500KB`);
-    }
-
-    // Check for slow resources
-    const slowResources = this.resourceTimings.filter(r => r.duration > 1000); // > 1s
-    if (slowResources.length > 0) {
-      recommendations.push(`Optimize slow resources: ${slowResources.length} resources take longer than 1s to load`);
-    }
-
-    return recommendations;
-  }
-
-  /**
-   * Log performance report to console
-   */
-  public logReport(): void {
-    if (typeof window === 'undefined') return;
-
-    console.group('🚀 Performance Report');
-    console.log('Metrics:', this.getMetrics());
-    console.log('Performance Score:', this.getPerformanceScore() + '/100');
-    console.log('Recommendations:', this.getRecommendations());
-    console.groupEnd();
-  }
-
-  /**
-   * Send performance metrics to analytics endpoint
-   */
-  public async sendToAnalytics(endpoint: string): Promise<void> {
-    if (typeof window === 'undefined') return;
-
-    try {
-      const data = {
-        metrics: this.getMetrics(),
-        score: this.getPerformanceScore(),
-        url: window.location.href,
-        timestamp: new Date().toISOString(),
-        userAgent: navigator.userAgent
-      };
-
-      await fetch(endpoint, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data)
-      });
-    } catch (error) {
-      console.error('Failed to send performance metrics:', error);
-    }
-  }
-
-  /**
-   * Prefetch critical resources
-   */
-  public prefetchResources(urls: string[]): void {
-    if (typeof document === 'undefined') return;
-
-    urls.forEach(url => {
-      const link = document.createElement('link');
-      link.rel = 'prefetch';
-      link.href = url;
-      document.head.appendChild(link);
-    });
-  }
-
-  /**
-   * Preload critical resources
-   */
-  public preloadResources(resources: Array<{ url: string; as: string }>): void {
-    if (typeof document === 'undefined') return;
-
-    resources.forEach(({ url, as }) => {
-      const link = document.createElement('link');
-      link.rel = 'preload';
-      link.href = url;
-      link.as = as;
-      document.head.appendChild(link);
-    });
-  }
-
-  /**
-   * Optimize images with lazy loading
-   */
-  public optimizeImages(): void {
-    if (typeof document === 'undefined') return;
-
-    const images = document.querySelectorAll('img[data-src]');
-    
-    if ('IntersectionObserver' in window) {
-      const imageObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const img = entry.target as HTMLImageElement;
-            const src = img.getAttribute('data-src');
-            if (src) {
-              img.src = src;
-              img.removeAttribute('data-src');
-              imageObserver.unobserve(img);
-            }
-          }
-        });
-      });
-
-      images.forEach(img => imageObserver.observe(img));
-    } else {
-      // Fallback for browsers without IntersectionObserver
-      images.forEach(img => {
-        const src = img.getAttribute('data-src');
+  const imageObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const img = entry.target as HTMLImageElement;
+        const src = img.dataset.src;
         if (src) {
-          (img as HTMLImageElement).src = src;
+          img.src = src;
           img.removeAttribute('data-src');
+          imageObserver.unobserve(img);
         }
-      });
-    }
-  }
-
-  /**
-   * Debounce function for performance optimization
-   */
-  public debounce<T extends (...args: any[]) => any>(
-    func: T,
-    wait: number
-  ): (...args: Parameters<T>) => void {
-    let timeout: NodeJS.Timeout;
-    
-    return function executedFunction(...args: Parameters<T>) {
-      const later = () => {
-        clearTimeout(timeout);
-        func(...args);
-      };
-      
-      clearTimeout(timeout);
-      timeout = setTimeout(later, wait);
-    };
-  }
-
-  /**
-   * Throttle function for performance optimization
-   */
-  public throttle<T extends (...args: any[]) => any>(
-    func: T,
-    limit: number
-  ): (...args: Parameters<T>) => void {
-    let inThrottle: boolean;
-    
-    return function executedFunction(...args: Parameters<T>) {
-      if (!inThrottle) {
-        func(...args);
-        inThrottle = true;
-        setTimeout(() => (inThrottle = false), limit);
       }
+    });
+  }, {
+    rootMargin: '50px 0px',
+    threshold: 0.01
+  });
+
+  document.querySelectorAll('img[data-src]').forEach(img => {
+    imageObserver.observe(img);
+  });
+};
+
+/**
+ * Debounce function for performance optimization
+ */
+export function debounce<T extends (...args: any[]) => any>(
+  func: T,
+  wait: number
+): (...args: Parameters<T>) => void {
+  let timeout: NodeJS.Timeout | null = null;
+
+  return function executedFunction(...args: Parameters<T>) {
+    const later = () => {
+      timeout = null;
+      func(...args);
     };
-  }
+
+    if (timeout) clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
 }
 
-// Export singleton instance
-export const performanceOptimizer = new PerformanceOptimizer();
+/**
+ * Throttle function for performance optimization
+ */
+export function throttle<T extends (...args: any[]) => any>(
+  func: T,
+  limit: number
+): (...args: Parameters<T>) => void {
+  let inThrottle: boolean;
 
-// Export class for custom instances
-export default PerformanceOptimizer;
+  return function executedFunction(...args: Parameters<T>) {
+    if (!inThrottle) {
+      func(...args);
+      inThrottle = true;
+      setTimeout(() => (inThrottle = false), limit);
+    }
+  };
+}
+
+/**
+ * Measure page load performance
+ */
+export const measurePageLoad = (): WebVitalsMetrics | null => {
+  if (typeof window === 'undefined' || !window.performance) return null;
+
+  const perfData = window.performance.timing;
+  const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+
+  return {
+    FCP: navigation?.responseStart - navigation?.fetchStart,
+    TTFB: perfData.responseStart - perfData.navigationStart,
+  };
+};
+
+/**
+ * Report Web Vitals to analytics
+ */
+export const reportWebVitals = (metrics: WebVitalsMetrics): void => {
+  console.log('Web Vitals:', metrics);
+  
+  // Send to analytics service
+  if (typeof window !== 'undefined' && (window as any).gtag) {
+    Object.entries(metrics).forEach(([key, value]) => {
+      if (value !== undefined) {
+        (window as any).gtag('event', key, {
+          value: Math.round(value),
+          event_category: 'Web Vitals',
+          non_interaction: true,
+        });
+      }
+    });
+  }
+};
+
+/**
+ * Optimize images by detecting slow connections
+ */
+export const shouldUseWebP = (): boolean => {
+  if (typeof window === 'undefined') return false;
+
+  const canvas = document.createElement('canvas');
+  canvas.width = canvas.height = 1;
+  
+  return canvas.toDataURL('image/webp').indexOf('data:image/webp') === 0;
+};
+
+/**
+ * Get connection quality
+ */
+export const getConnectionQuality = (): 'slow' | 'medium' | 'fast' => {
+  if (typeof navigator === 'undefined') return 'medium';
+
+  const connection = (navigator as any).connection || (navigator as any).mozConnection || (navigator as any).webkitConnection;
+  
+  if (!connection) return 'medium';
+
+  const effectiveType = connection.effectiveType;
+  
+  if (effectiveType === 'slow-2g' || effectiveType === '2g') return 'slow';
+  if (effectiveType === '3g') return 'medium';
+  return 'fast';
+};
+
+/**
+ * Adaptive loading based on network conditions
+ */
+export const shouldLoadHeavyAssets = (): boolean => {
+  const quality = getConnectionQuality();
+  const saveData = typeof navigator !== 'undefined' && (navigator as any).connection?.saveData;
+  
+  return quality === 'fast' && !saveData;
+};
+
+/**
+ * Request Idle Callback wrapper with fallback
+ */
+export const requestIdleCallback = (callback: IdleRequestCallback): number => {
+  if (typeof window === 'undefined') return 0;
+
+  if ('requestIdleCallback' in window) {
+    return window.requestIdleCallback(callback);
+  }
+
+  // Fallback for browsers that don't support requestIdleCallback
+  return window.setTimeout(() => {
+    const start = Date.now();
+    callback({
+      didTimeout: false,
+      timeRemaining: () => Math.max(0, 50 - (Date.now() - start))
+    });
+  }, 1) as unknown as number;
+};
+
+/**
+ * Cancel Idle Callback wrapper with fallback
+ */
+export const cancelIdleCallback = (id: number): void => {
+  if (typeof window === 'undefined') return;
+
+  if ('cancelIdleCallback' in window) {
+    window.cancelIdleCallback(id);
+  } else {
+    window.clearTimeout(id);
+  }
+};
+
+/**
+ * Optimize bundle loading with route-based code splitting
+ */
+export const preloadRoute = (route: string): void => {
+  if (typeof document === 'undefined') return;
+
+  const link = document.createElement('link');
+  link.rel = 'prefetch';
+  link.as = 'script';
+  link.href = route;
+  document.head.appendChild(link);
+};
+
+/**
+ * Monitor long tasks (> 50ms) for performance debugging
+ */
+export const monitorLongTasks = (callback: (entries: PerformanceEntryList) => void): PerformanceObserver | null => {
+  if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return null;
+
+  try {
+    const observer = new PerformanceObserver((list) => {
+      callback(list.getEntries());
+    });
+
+    observer.observe({ entryTypes: ['longtask'] });
+    return observer;
+  } catch (e) {
+    console.warn('Long task monitoring not supported:', e);
+    return null;
+  }
+};
+
+/**
+ * Cache-first strategy for static assets
+ */
+export const cacheStaticAssets = async (urls: string[]): Promise<void> => {
+  if (typeof caches === 'undefined') return;
+
+  const cache = await caches.open('static-assets-v1');
+  await cache.addAll(urls);
+};
+
+/**
+ * Clear old caches
+ */
+export const clearOldCaches = async (currentVersion: string): Promise<void> => {
+  if (typeof caches === 'undefined') return;
+
+  const cacheNames = await caches.keys();
+  await Promise.all(
+    cacheNames
+      .filter(name => name !== currentVersion)
+      .map(name => caches.delete(name))
+  );
+};
+
+/**
+ * Performance budget checker
+ */
+export interface PerformanceBudget {
+  maxBundleSize: number; // in KB
+  maxImageSize: number; // in KB
+  maxFirstLoad: number; // in ms
+  maxInteractive: number; // in ms
+}
+
+export const checkPerformanceBudget = (budget: PerformanceBudget): {
+  passed: boolean;
+  violations: string[];
+} => {
+  const violations: string[] = [];
+
+  if (typeof window === 'undefined' || !window.performance) {
+    return { passed: true, violations };
+  }
+
+  const timing = window.performance.timing;
+  const loadTime = timing.loadEventEnd - timing.navigationStart;
+  const interactiveTime = timing.domInteractive - timing.navigationStart;
+
+  if (loadTime > budget.maxFirstLoad) {
+    violations.push(`First load time (${loadTime}ms) exceeds budget (${budget.maxFirstLoad}ms)`);
+  }
+
+  if (interactiveTime > budget.maxInteractive) {
+    violations.push(`Time to interactive (${interactiveTime}ms) exceeds budget (${budget.maxInteractive}ms)`);
+  }
+
+  return {
+    passed: violations.length === 0,
+    violations
+  };
+};
+
+export default {
+  prefetchResources,
+  preconnectDomains,
+  lazyLoadImages,
+  debounce,
+  throttle,
+  measurePageLoad,
+  reportWebVitals,
+  shouldUseWebP,
+  getConnectionQuality,
+  shouldLoadHeavyAssets,
+  requestIdleCallback,
+  cancelIdleCallback,
+  preloadRoute,
+  monitorLongTasks,
+  cacheStaticAssets,
+  clearOldCaches,
+  checkPerformanceBudget
+};
