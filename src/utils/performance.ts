@@ -28,10 +28,31 @@ class PerformanceMonitor {
 
   private initializeWebVitals() {
     // Core Web Vitals
-    }
+    onCLS((metric) => {
+      this.metrics.cls = metric.value;
+    });
+
+    onFCP((metric) => {
+      this.metrics.fcp = metric.value;
+    });
+
+    onLCP((metric) => {
+      this.metrics.lcp = metric.value;
+    });
+
+    onTTFB((metric) => {
+      this.metrics.ttfb = metric.value;
+    });
+  }
+
+  private initializePerformanceObserver() {
+    if (typeof window === 'undefined') return;
 
     // Long Task Observer
-          }
+    try {
+      const longTaskObserver = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          console.log('Long task detected:', entry.duration);
         }
       });
       longTaskObserver.observe({ entryTypes: ['longtask'] });
@@ -40,14 +61,17 @@ class PerformanceMonitor {
       console.warn('Long Task Observer not supported:', error);
     }
 
+    // Layout Shift Observer
+    try {
+      const layoutShiftObserver = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          console.log('Layout shift detected:', entry.value);
         }
       });
       layoutShiftObserver.observe({ entryTypes: ['layout-shift'] });
       this.observers.push(layoutShiftObserver);
     } catch (error) {
       console.warn('Layout Shift Observer not supported:', error);
-    }
-
     }
   }
 

@@ -66,7 +66,12 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
   return (
     <div className="performance-monitor">
       <div className="monitor-content">
-        {/* Performance monitoring content */}
+        <h3>Performance Metrics</h3>
+        <div>LCP: {metrics.lcp?.toFixed(2)}ms</div>
+        <div>FID: {metrics.fid?.toFixed(2)}ms</div>
+        <div>CLS: {metrics.cls?.toFixed(4)}</div>
+        <div>FCP: {metrics.fcp?.toFixed(2)}ms</div>
+        <div>TTFB: {metrics.ttfb?.toFixed(2)}ms</div>
       </div>
     </div>
   );

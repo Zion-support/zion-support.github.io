@@ -1,16 +1,17 @@
-export const measurePerformance: () => {,
-  if (typeof window === 'undefined') return;
+const logMetric = (metric: { name: string; value: number }) => {
+  console.log(`Performance metric: ${metric.name} = ${metric.value}ms`);
+};
 
-  // Web Vitals monitoring
-  };
+export const measurePerformance = (): void => {
+  if (typeof window === 'undefined') return;
 
   // First Contentful Paint
   if ('PerformanceObserver' in window) {
     try {
-      const observer: new PerformanceObserver((list) => {,
-  for (const entry of list.getEntries()) {
-          if (entry.entryType: == 'paint') {,
-  logMetric({
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'paint') {
+            logMetric({
               name: entry.name,
               value: entry.startTime,
             });
@@ -27,9 +28,9 @@ export const measurePerformance: () => {,
   if (window.performance && window.performance.timing) {
     window.addEventListener('load', () => {
       setTimeout(() => {
-        const timing: window.performance.timing;,
-  const pageLoadTime: timing.loadEventEnd - timing.navigationStart;,
-  logMetric({
+        const timing = window.performance.timing;
+        const pageLoadTime = timing.loadEventEnd - timing.navigationStart;
+        logMetric({
           name: 'Page Load Time',
           value: pageLoadTime,
         });
