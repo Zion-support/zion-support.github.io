@@ -36,14 +36,14 @@ export default function SustainableAISuccessPage() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">"
               <a 
-                href="/blog/ai-2026-sustainable-ai-revolution-breakthrough" "
-                className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1""
+                href="/[^"]*"
+                className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
               >
                 Read Breakthrough Details
               </a>
               <a 
-                href="/services/ai-2026-sustainable-ai-solutions" "
-                className="bg-gradient-to-r from-emerald-500 to-cyan-600 hover:from-emerald-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50 transform hover:-translate-y-1""
+                href="/[^"]*"
+                className="bg-gradient-to-r from-emerald-500 to-cyan-600 hover:from-emerald-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50 transform hover:-translate-y-1"
               >
                 Get Sustainable AI Solutions →
               </a>
@@ -301,7 +301,7 @@ export default function SustainableAISuccessPage() {
               <h3 className="text-xl font-bold text-white mb-4">Client Testimonial</h3>"
               <blockquote className="text-gray-300 italic mb-4">"
                 "Zion Tech Group's Sustainable AI Revolution transformed our operations beyond our wildest expectations. "
-                We achieved $2.5B ROI while becoming a global leader in sustainable AI implementation.""
+                We achieved $2.5B ROI while becoming a global leader in sustainable AI implementation."
               </blockquote>
               <div className="text-sm text-gray-400">"
                 — Chief Technology Officer<br />
@@ -335,8 +335,8 @@ export default function SustainableAISuccessPage() {
                 Transform your business with our revolutionary sustainable AI solutions.
               </p>
               <a 
-                href="/contact" "
-                className="inline-block bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-green-500/50""
+                href="/[^"]*"
+                className="inline-block bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-green-500/50"
               >
                 Start Your Transformation
               </a>

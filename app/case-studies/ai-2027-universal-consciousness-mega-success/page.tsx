@@ -158,7 +158,7 @@ export default function AI2027UniversalConsciousnessMegaSuccess() {
             <blockquote className="text-xl text-gray-300 italic mb-6 leading-relaxed">"
               "The universal consciousness integration has transformed our enterprise beyond our wildest expectations. "
               We've achieved $500B+ in value creation and operational efficiency that we never thought possible. 
-              Zion Tech Group's breakthrough technology has revolutionized how we operate at a fundamental level.""
+              Zion Tech Group's breakthrough technology has revolutionized how we operate at a fundamental level."
             </blockquote>
             <div className="text-right">"
               <div className="text-lg font-semibold text-purple-300">CEO, Fortune 500 Enterprise</div>"
@@ -203,20 +203,20 @@ export default function AI2027UniversalConsciousnessMegaSuccess() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <Link 
-                href="/contact" "
-                className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1""
+                href="/[^"]*"
+                className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
               >
                 Start Your Transformation
               </Link>
               <Link 
-                href="/blog/ai-2027-universal-consciousness-integration-breakthrough" "
-                className="bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1""
+                href="/[^"]*"
+                className="bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
               >
                 Learn More About the Technology
               </Link>
               <Link 
-                href="/services" "
-                className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300""
+                href="/[^"]*"
+                className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
                 Explore Our Services
               </Link>

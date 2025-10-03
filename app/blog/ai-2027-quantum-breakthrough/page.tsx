@@ -202,14 +202,14 @@ export default function AI2027QuantumBreakthrough() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">"
               <Link
-                href="/contact""
-                className="bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors text-center""
+                href="/contact"
+                className="bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors text-center"
               >
                 Get Quantum Assessment
               </Link>
               <Link
-                href="/case-studies""
-                className="border-2 border-indigo-600 text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-indigo-600 hover:text-white transition-colors text-center""
+                href="/case-studies"
+                className="border-2 border-indigo-600 text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-indigo-600 hover:text-white transition-colors text-center"
               >
                 View Success Stories
               </Link>

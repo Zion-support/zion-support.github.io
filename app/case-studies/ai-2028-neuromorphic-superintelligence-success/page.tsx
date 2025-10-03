@@ -192,8 +192,8 @@ export default function AI2028NeuromorphicSuperintelligenceSuccess() {
             Discover how neuromorphic superintelligence can revolutionize your enterprise operations and create unprecedented value.
           </p>
           <Link 
-            href="/contact" "
-            className="inline-block bg-white text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors""
+            href="/[^"]*"
+            className="inline-block bg-white text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
           >
             Start Your Transformation Journey
           </Link>
@@ -203,15 +203,15 @@ export default function AI2028NeuromorphicSuperintelligenceSuccess() {
           <h4 className="text-xl font-bold text-gray-900 mb-4">Related Success Stories</h4>"
           <div className="grid md:grid-cols-2 gap-4">"
             <Link 
-              href="/case-studies/ai-2028-mega-transformation-success" "
-              className="block p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors""
+              href="/[^"]*"
+              className="block p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors"
             >
               <h5 className="font-semibold text-blue-600 mb-2">AI 2028 Mega Transformation</h5>"
               <p className="text-sm text-gray-600">$100B+ value creation success story</p>"
             </Link>
             <Link 
-              href="/blog/ai-2028-neuromorphic-superintelligence" "
-              className="block p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors""
+              href="/[^"]*"
+              className="block p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors"
             >
               <h5 className="font-semibold text-blue-600 mb-2">Neuromorphic Technology</h5>"
               <p className="text-sm text-gray-600">Learn about the breakthrough technology</p>"

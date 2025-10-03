@@ -36,14 +36,14 @@ export default function February2026TranscendentAutomation300BSuccess() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">"
               <Link 
-                href="/contact" "
-                className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1""
+                href="/[^"]*"
+                className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1"
               >
                 Replicate This Success
               </Link>
               <Link 
-                href="/blog/ai-2026-february-transcendent-automation-revolution" "
-                className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1""
+                href="/[^"]*"
+                className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
               >
                 Read Transcendent Details →
               </Link>
@@ -182,7 +182,7 @@ export default function February2026TranscendentAutomation300BSuccess() {
                 The $300B ROI achievement exceeded all expectations, and the 100,000x performance improvement with infinite 
                 scalability has positioned us as the undisputed leader in our industry. The transcendent automation 
                 capabilities have created systems that not only scale infinitely but maintain perfect performance at any scale. 
-                This is truly the future of enterprise operations.""
+                This is truly the future of enterprise operations."
               </blockquote>
               <div className="mt-4 text-indigo-400 font-semibold">"
                 — Chief Technology Officer, Fortune 100 Technology Enterprise
@@ -191,8 +191,8 @@ export default function February2026TranscendentAutomation300BSuccess() {
 
             <div className="text-center">"
               <Link
-                href="/contact""
-                className="inline-block bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-indigo-400 hover:to-purple-500 transition-all shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1""
+                href="/contact"
+                className="inline-block bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-indigo-400 hover:to-purple-500 transition-all shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1"
               >
                 Achieve Similar Results for Your Organization
               </Link>

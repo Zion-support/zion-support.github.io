@@ -244,14 +244,14 @@ export default function QuantumAIHybridSystems2027() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">"
               <a 
-                href="/contact" "
-                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors""
+                href="/[^"]*"
+                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 Schedule Quantum Consultation
               </a>
               <a 
-                href="/services" "
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors""
+                href="/[^"]*"
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
               >
                 Explore Quantum-AI Solutions
               </a>

@@ -306,14 +306,14 @@ export default function AIMetaverseEnterpriseTransformation2026() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4">"
             <Link
-              href="/contact""
-              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center""
+              href="/contact"
+              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
             >
               Schedule Consultation
             </Link>
             <Link
-              href="/services/ai-metaverse-enterprise""
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors text-center""
+              href="/services/ai-metaverse-enterprise"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors text-center"
             >
               Learn More
             </Link>

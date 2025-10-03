@@ -69,7 +69,7 @@ export default function AITrends2026() {
             </p>
             <div className="bg-blue-50 border-l-4 border-blue-400 p-4 mb-6">"
               <p className="text-blue-800 font-semibold">"
-                "Quantum AI is no longer a research project—it's delivering real business value. Companies using quantum-enhanced optimization are seeing 40-60% improvements in operational efficiency.""
+                "Quantum AI is no longer a research project—it's delivering real business value. Companies using quantum-enhanced optimization are seeing 40-60% improvements in operational efficiency."
               </p>
               <p className="text-blue-600 text-sm mt-2">— Dr. Sarah Chen, CTO at Quantum Dynamics</p>"
             </div>

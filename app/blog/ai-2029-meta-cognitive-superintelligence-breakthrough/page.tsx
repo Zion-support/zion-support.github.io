@@ -155,14 +155,14 @@ export default function AIMetaCognitiveSuperintelligence2029() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4">"
             <a 
-              href="/contact" "
-              className="bg-white text-purple-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors text-center""
+              href="/[^"]*"
+              className="bg-white text-purple-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors text-center"
             >
               Contact Zion Tech Group
             </a>
             <a 
-              href="/services/ai-2029-meta-cognitive-superintelligence" "
-              className="bg-yellow-400 text-black px-8 py-3 rounded-lg font-bold hover:bg-yellow-300 transition-colors text-center""
+              href="/[^"]*"
+              className="bg-yellow-400 text-black px-8 py-3 rounded-lg font-bold hover:bg-yellow-300 transition-colors text-center"
             >
               Learn More About Services
             </a>

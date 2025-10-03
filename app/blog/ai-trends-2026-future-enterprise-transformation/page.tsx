@@ -371,14 +371,14 @@ export default function AITrends2026FutureEnterpriseTransformation() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4">"
             <a 
-              href="/contact" "
-              className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1""
+              href="/[^"]*"
+              className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
             >
               Start Your AI Transformation
             </a>
             <a 
-              href="/blog/ai-2026-may-revolutionary-breakthrough" "
-              className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300""
+              href="/[^"]*"
+              className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               Learn About Our Breakthrough
             </a>

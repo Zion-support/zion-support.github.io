@@ -179,22 +179,22 @@ const TransformationStack = {
   dataLayer: {
     warehouses: "Snowflake + Databricks"
     streaming: "Apache Kafka + Apache Pulsar"
-    storage: "AWS S3 + Azure Data Lake""
+    storage: "AWS S3 + Azure Data Lake"
   },
   aiPlatform: {
     mlOps: "MLflow + Kubeflow + Weights & Biases"
     models: "TensorFlow + PyTorch + Hugging Face"
-    deployment: "Kubernetes + Docker + Istio""
+    deployment: "Kubernetes + Docker + Istio"
   },
   automation: {
     orchestration: "Apache Airflow + Prefect"
     monitoring: "Prometheus + Grafana + ELK Stack"
-    governance: "Apache Atlas + Custom AI Governance""
+    governance: "Apache Atlas + Custom AI Governance"
   },
   infrastructure: {
     cloud: "Multi-cloud (AWS + Azure + GCP)"
     compute: "Kubernetes + Serverless Functions"
-    networking: "Istio Service Mesh + CDN""
+    networking: "Istio Service Mesh + CDN"
   }
 };`}
 						</pre>
@@ -283,14 +283,14 @@ const TransformationStack = {
 						</p>
 						<div className="flex flex-col sm:flex-row gap-4 justify-center">"
 							<a 
-								href="/contact" "
-								className="bg-white text-green-600 font-bold py-3 px-8 rounded-xl hover:bg-gray-100 transition-colors""
+								href="/[^"]*"
+								className="bg-white text-green-600 font-bold py-3 px-8 rounded-xl hover:bg-gray-100 transition-colors"
 							>
 								Get Transformation Assessment
 							</a>
 							<a 
-								href="/services" "
-								className="border-2 border-white text-white font-bold py-3 px-8 rounded-xl hover:bg-white hover:text-green-600 transition-colors""
+								href="/[^"]*"
+								className="border-2 border-white text-white font-bold py-3 px-8 rounded-xl hover:bg-white hover:text-green-600 transition-colors"
 							>
 								Explore AI Services
 							</a>

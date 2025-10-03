@@ -179,8 +179,8 @@ export default function AI2027RevolutionaryBreakthroughSolutions() {
               </li>
             </ul>
             <Link 
-              href="/contact" "
-              className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center block""
+              href="/[^"]*"
+              className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center block"
             >
               Get Started
             </Link>
@@ -220,8 +220,8 @@ export default function AI2027RevolutionaryBreakthroughSolutions() {
               </li>
             </ul>
             <Link 
-              href="/contact" "
-              className="w-full bg-purple-600 text-white py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors text-center block""
+              href="/[^"]*"
+              className="w-full bg-purple-600 text-white py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors text-center block"
             >
               Transform Now
             </Link>
@@ -256,8 +256,8 @@ export default function AI2027RevolutionaryBreakthroughSolutions() {
               </li>
             </ul>
             <Link 
-              href="/contact" "
-              className="w-full bg-yellow-600 text-white py-3 rounded-lg font-semibold hover:bg-yellow-700 transition-colors text-center block""
+              href="/[^"]*"
+              className="w-full bg-yellow-600 text-white py-3 rounded-lg font-semibold hover:bg-yellow-700 transition-colors text-center block"
             >
               Lead the Revolution
             </Link>
@@ -382,14 +382,14 @@ export default function AI2027RevolutionaryBreakthroughSolutions() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">"
             <Link 
-              href="/contact" "
-              className="bg-red-600 text-white px-12 py-4 rounded-lg font-bold text-lg hover:bg-red-700 transition-colors""
+              href="/[^"]*"
+              className="bg-red-600 text-white px-12 py-4 rounded-lg font-bold text-lg hover:bg-red-700 transition-colors"
             >
               Secure Your Position
             </Link>
             <Link 
-              href="/case-studies/ai-2027-revolutionary-breakthrough-success" "
-              className="border-2 border-red-600 text-red-600 px-12 py-4 rounded-lg font-bold text-lg hover:bg-red-600 hover:text-white transition-colors""
+              href="/[^"]*"
+              className="border-2 border-red-600 text-red-600 px-12 py-4 rounded-lg font-bold text-lg hover:bg-red-600 hover:text-white transition-colors"
             >
               View Success Stories
             </Link>

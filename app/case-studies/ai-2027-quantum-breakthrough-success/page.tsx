@@ -428,7 +428,7 @@ export default function AI2027QuantumBreakthroughSuccess() {
                     "The quantum AI implementation has been nothing short of revolutionary for our organization. "
                     The $1.2B ROI and 1000x performance improvements have fundamentally transformed how we operate, 
                     enabling us to deliver unprecedented value to our customers while achieving operational excellence 
-                    that was previously impossible. This is truly the future of enterprise computing.""
+                    that was previously impossible. This is truly the future of enterprise computing."
                   </blockquote>
                   <div className="flex items-center justify-center gap-4">"
                     <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center">"
@@ -454,14 +454,14 @@ export default function AI2027QuantumBreakthroughSuccess() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">"
                 <Link 
-                  href="/contact" "
-                  className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1""
+                  href="/[^"]*"
+                  className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
                 >
                   Start Your Quantum AI Journey
                 </Link>
                 <Link 
-                  href="/blog/ai-2027-quantum-revolution" "
-                  className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300""
+                  href="/[^"]*"
+                  className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
                 >
                   Read Implementation Guide
                 </Link>

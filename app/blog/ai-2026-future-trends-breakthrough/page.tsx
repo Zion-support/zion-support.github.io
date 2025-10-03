@@ -195,20 +195,20 @@ export default function AI2026FutureTrendsBreakthrough() {
           
           <div className="flex flex-wrap gap-4">"
             <Link 
-              href="/services/ai-autonomous-operations-2026" "
-              className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-200""
+              href="/[^"]*"
+              className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-200"
             >
               Explore AI Services
             </Link>
             <Link 
-              href="/case-studies" "
-              className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-200""
+              href="/[^"]*"
+              className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-200"
             >
               View Success Stories
             </Link>
             <Link 
-              href="/contact" "
-              className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-orange-700 hover:to-red-700 transition-all duration-200""
+              href="/[^"]*"
+              className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-orange-700 hover:to-red-700 transition-all duration-200"
             >
               Start Your Transformation
             </Link>

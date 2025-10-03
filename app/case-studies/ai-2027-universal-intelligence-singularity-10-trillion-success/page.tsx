@@ -35,14 +35,14 @@ export default function AI2027UniversalIntelligenceSingularity10TrillionSuccess(
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">"
               <a 
-                href="/contact" "
-                className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1""
+                href="/[^"]*"
+                className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
               >
                 Replicate This Success
               </a>
               <a 
-                href="/blog/ai-2027-universal-intelligence-singularity-achievement" "
-                className="bg-gradient-to-r from-indigo-500 to-cyan-600 hover:from-indigo-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1""
+                href="/[^"]*"
+                className="bg-gradient-to-r from-indigo-500 to-cyan-600 hover:from-indigo-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1"
               >
                 Learn About the Technology →
               </a>
@@ -247,7 +247,7 @@ export default function AI2027UniversalIntelligenceSingularity10TrillionSuccess(
               <blockquote className="text-xl text-gray-300 italic mb-6">"
                 "The universal intelligence singularity AI systems from Zion Tech Group have achieved what we thought was impossible: "
                 universal intelligence singularity with infinite value generation. The $10 trillion ROI is just the beginning - 
-                the universal intelligence capabilities and transcendent processing have transformed us into a truly universal enterprise.""
+                the universal intelligence capabilities and transcendent processing have transformed us into a truly universal enterprise."
               </blockquote>
               <div className="text-blue-300 font-semibold">"
                 — Global CEO, Fortune 100 Conglomerate
@@ -272,14 +272,14 @@ export default function AI2027UniversalIntelligenceSingularity10TrillionSuccess(
               </p>
               <div className="flex flex-col sm:flex-row gap-4">"
                 <a 
-                  href="/contact" "
-                  className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1""
+                  href="/[^"]*"
+                  className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
                 >
                   Start Your Transformation
                 </a>
                 <a 
-                  href="/blog/ai-2027-universal-intelligence-singularity-achievement""
-                  className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300""
+                  href="/blog/ai-2027-universal-intelligence-singularity-achievement"
+                  className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
                 >
                   Learn About the Technology
                 </a>

@@ -42,14 +42,14 @@ export default function AI2026UltimateAutonomousRevolution100BillionSuccess() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">"
               <a 
-                href="/contact" "
-                className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1""
+                href="/[^"]*"
+                className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
               >
                 Replicate This Success
               </a>
               <a 
-                href="/blog/ai-2026-ultimate-autonomous-revolution" "
-                className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1""
+                href="/[^"]*"
+                className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
               >
                 Read Technical Details →
               </a>
@@ -305,14 +305,14 @@ export default function AI2026UltimateAutonomousRevolution100BillionSuccess() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">"
                 <a 
-                  href="/contact" "
-                  className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1 text-center""
+                  href="/[^"]*"
+                  className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1 text-center"
                 >
                   Start Your Transformation
                 </a>
                 <a 
-                  href="/blog/ai-2026-ultimate-autonomous-revolution" "
-                  className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 text-center""
+                  href="/[^"]*"
+                  className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 text-center"
                 >
                   Read Technical Details
                 </a>

@@ -30,15 +30,15 @@ export default function SyntheticConsciousnessSuccessCaseStudy() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <Link 
-                href="/blog/ai-2026-synthetic-consciousness-breakthrough""
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105""
+                href="/blog/ai-2026-synthetic-consciousness-breakthrough"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
               >
                 Read Technical Details
                 <ArrowRight className="w-5 h-5" />"
               </Link>
               <Link 
-                href="/services/ai-consulting""
-                className="inline-flex items-center gap-2 border border-green-500 text-green-300 px-8 py-4 rounded-lg font-semibold hover:bg-green-500/10 transition-all duration-300""
+                href="/services/ai-consulting"
+                className="inline-flex items-center gap-2 border border-green-500 text-green-300 px-8 py-4 rounded-lg font-semibold hover:bg-green-500/10 transition-all duration-300"
               >
                 Start Your Transformation
                 <TrendingUp className="w-5 h-5" />"
@@ -301,7 +301,7 @@ export default function SyntheticConsciousnessSuccessCaseStudy() {
             <div className="text-6xl text-purple-400 mb-6">"</div>"
             <blockquote className="text-2xl text-white mb-8 leading-relaxed">"
               "Zion Tech Group's synthetic consciousness AI didn't just optimize our operations—it transformed our entire approach to business. "
-              The $10B ROI speaks for itself, but the true value is in having AI systems that truly understand and adapt to our complex needs.""
+              The $10B ROI speaks for itself, but the true value is in having AI systems that truly understand and adapt to our complex needs."
             </blockquote>
             <div className="flex items-center justify-center gap-4">"
               <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center">"
@@ -328,15 +328,15 @@ export default function SyntheticConsciousnessSuccessCaseStudy() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">"
             <Link 
-              href="/contact""
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105""
+              href="/contact"
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
             >
               Start Your Transformation
               <ArrowRight className="w-5 h-5" />"
             </Link>
             <Link 
-              href="/services/ai-development""
-              className="inline-flex items-center gap-2 border border-green-500 text-green-300 px-8 py-4 rounded-lg font-semibold hover:bg-green-500/10 transition-all duration-300""
+              href="/services/ai-development"
+              className="inline-flex items-center gap-2 border border-green-500 text-green-300 px-8 py-4 rounded-lg font-semibold hover:bg-green-500/10 transition-all duration-300"
             >
               Explore AI Solutions
               <TrendingUp className="w-5 h-5" />"

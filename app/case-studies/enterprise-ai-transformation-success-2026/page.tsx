@@ -333,14 +333,14 @@ export default function EnterpriseAITransformationCaseStudy() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">"
               <Link 
-                href="/contact" "
-                className="bg-white text-green-600 px-8 py-3 rounded-lg font-bold hover:bg-green-50 transition-colors""
+                href="/[^"]*"
+                className="bg-white text-green-600 px-8 py-3 rounded-lg font-bold hover:bg-green-50 transition-colors"
               >
                 Start Your Transformation
               </Link>
               <Link 
-                href="/services" "
-                className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-green-600 transition-colors""
+                href="/[^"]*"
+                className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-green-600 transition-colors"
               >
                 Explore Our Services
               </Link>

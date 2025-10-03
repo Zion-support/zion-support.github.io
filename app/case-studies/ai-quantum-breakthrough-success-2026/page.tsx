@@ -273,7 +273,7 @@ export default function AIQuantumBreakthroughSuccess2026() {
           <blockquote className="text-lg text-blue-900 italic mb-4">"
             "Zion Tech Group's quantum AI systems have transformed our operations beyond recognition. The $500M ROI "
             achieved in just 18 months exceeded our wildest expectations. We've gone from making decisions in days 
-            to real-time optimization across our entire global supply chain.""
+            to real-time optimization across our entire global supply chain."
           </blockquote>
           <div className="text-blue-800">"
             <p className="font-semibold">Sarah Chen</p>"
@@ -297,8 +297,8 @@ export default function AIQuantumBreakthroughSuccess2026() {
             can help you achieve similar breakthrough results.
           </p>
           <Link 
-            href="/services/ai-quantum-computing-solutions" "
-            className="bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors""
+            href="/[^"]*"
+            className="bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
           >
             Explore Quantum AI Services
           </Link>

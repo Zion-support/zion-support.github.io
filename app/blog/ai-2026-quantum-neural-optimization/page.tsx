@@ -295,14 +295,14 @@ export default function AI2026QuantumNeuralOptimizationPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">"
             <a 
-              href="/contact" "
-              className="bg-gradient-to-r from-purple-500 to-cyan-600 hover:from-purple-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50""
+              href="/[^"]*"
+              className="bg-gradient-to-r from-purple-500 to-cyan-600 hover:from-purple-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50"
             >
               Schedule Quantum AI Consultation
             </a>
             <a 
-              href="/services" "
-              className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300""
+              href="/[^"]*"
+              className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               Explore Quantum AI Services
             </a>

@@ -51,14 +51,14 @@ export default function NeuralSynapticFusionSuccessCaseStudy() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">"
               <a 
-                href="/blog/ai-2026-neural-synaptic-fusion-breakthrough" "
-                className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1""
+                href="/[^"]*"
+                className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
               >
                 Read Technical Breakthrough
               </a>
               <a 
-                href="/services/neural-synaptic-fusion-ai" "
-                className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50 transform hover:-translate-y-1""
+                href="/[^"]*"
+                className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50 transform hover:-translate-y-1"
               >
                 Implement Solution
               </a>
@@ -303,7 +303,7 @@ export default function NeuralSynapticFusionSuccessCaseStudy() {
               <div className="bg-white/10 rounded-xl p-6">"
                 <p className="text-gray-300 italic mb-4">"
                   "The Neural Synaptic Fusion implementation has revolutionized our decision-making capabilities. "
-                  We've achieved 99.97% cognitive accuracy and created $47B in additional value in just 6 months.""
+                  We've achieved 99.97% cognitive accuracy and created $47B in additional value in just 6 months."
                 </p>
                 <div className="text-white font-bold">Sarah Chen</div>"
                 <div className="text-gray-400 text-sm">CEO, Global Financial Services Corp</div>"
@@ -311,7 +311,7 @@ export default function NeuralSynapticFusionSuccessCaseStudy() {
               <div className="bg-white/10 rounded-xl p-6">"
                 <p className="text-gray-300 italic mb-4">"
                   "This breakthrough represents the future of enterprise AI. The synthetic consciousness capabilities "
-                  have transformed our operations with unprecedented efficiency and accuracy.""
+                  have transformed our operations with unprecedented efficiency and accuracy."
                 </p>
                 <div className="text-white font-bold">Marcus Rodriguez</div>"
                 <div className="text-gray-400 text-sm">CTO, Healthcare Innovation Group</div>"
@@ -358,20 +358,20 @@ export default function NeuralSynapticFusionSuccessCaseStudy() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <a 
-                href="/contact" "
-                className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1""
+                href="/[^"]*"
+                className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
               >
                 Get Free Consultation
               </a>
               <a 
-                href="/blog/ai-2026-neural-synaptic-fusion-breakthrough" "
-                className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50 transform hover:-translate-y-1""
+                href="/[^"]*"
+                className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50 transform hover:-translate-y-1"
               >
                 Read Technical Details
               </a>
               <a 
-                href="/services/neural-synaptic-fusion-ai" "
-                className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300""
+                href="/[^"]*"
+                className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
                 View Services
               </a>

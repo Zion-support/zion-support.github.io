@@ -36,14 +36,14 @@ export default function January2026UltimateBreakthroughRevolution() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">"
               <Link 
-                href="/contact" "
-                className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1""
+                href="/[^"]*"
+                className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
               >
                 Transform Your Business Today
               </Link>
               <Link 
-                href="/case-studies/ai-2026-january-ultimate-breakthrough-500-billion-success" "
-                className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1""
+                href="/[^"]*"
+                className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
               >
                 View $500B Success Story →
               </Link>
@@ -161,8 +161,8 @@ export default function January2026UltimateBreakthroughRevolution() {
 
             <div className="text-center">"
               <Link
-                href="/contact""
-                className="inline-block bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-purple-400 hover:to-blue-500 transition-all shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1""
+                href="/contact"
+                className="inline-block bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-purple-400 hover:to-blue-500 transition-all shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
               >
                 Transform Your Enterprise Today
               </Link>

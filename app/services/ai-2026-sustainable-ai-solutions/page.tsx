@@ -36,14 +36,14 @@ export default function SustainableAISolutionsPage() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">"
               <a 
-                href="/contact" "
-                className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1""
+                href="/[^"]*"
+                className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
               >
                 Get Sustainable AI Solutions
               </a>
               <a 
-                href="/case-studies/ai-2026-sustainable-ai-revolution-2-5-billion-success" "
-                className="bg-gradient-to-r from-emerald-500 to-cyan-600 hover:from-emerald-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50 transform hover:-translate-y-1""
+                href="/[^"]*"
+                className="bg-gradient-to-r from-emerald-500 to-cyan-600 hover:from-emerald-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50 transform hover:-translate-y-1"
               >
                 View $2.5B Success Story →
               </a>
@@ -114,8 +114,8 @@ export default function SustainableAISolutionsPage() {
               </ul>
               <div className="text-2xl font-bold text-green-400 mb-2">Starting at $50K/month</div>"
               <a 
-                href="/contact" "
-                className="inline-block w-full bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 text-center""
+                href="/[^"]*"
+                className="inline-block w-full bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 text-center"
               >
                 Get Started
               </a>
@@ -148,8 +148,8 @@ export default function SustainableAISolutionsPage() {
               </ul>
               <div className="text-2xl font-bold text-emerald-400 mb-2">Starting at $75K/month</div>"
               <a 
-                href="/contact" "
-                className="inline-block w-full bg-gradient-to-r from-emerald-500 to-cyan-600 hover:from-emerald-400 hover:to-cyan-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 text-center""
+                href="/[^"]*"
+                className="inline-block w-full bg-gradient-to-r from-emerald-500 to-cyan-600 hover:from-emerald-400 hover:to-cyan-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 text-center"
               >
                 Get Started
               </a>
@@ -182,8 +182,8 @@ export default function SustainableAISolutionsPage() {
               </ul>
               <div className="text-2xl font-bold text-cyan-400 mb-2">Starting at $100K/month</div>"
               <a 
-                href="/contact" "
-                className="inline-block w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 text-center""
+                href="/[^"]*"
+                className="inline-block w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 text-center"
               >
                 Get Started
               </a>
@@ -216,8 +216,8 @@ export default function SustainableAISolutionsPage() {
               </ul>
               <div className="text-2xl font-bold text-blue-400 mb-2">Starting at $125K/month</div>"
               <a 
-                href="/contact" "
-                className="inline-block w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 text-center""
+                href="/[^"]*"
+                className="inline-block w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 text-center"
               >
                 Get Started
               </a>
@@ -250,8 +250,8 @@ export default function SustainableAISolutionsPage() {
               </ul>
               <div className="text-2xl font-bold text-purple-400 mb-2">Starting at $40K/month</div>"
               <a 
-                href="/contact" "
-                className="inline-block w-full bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 text-center""
+                href="/[^"]*"
+                className="inline-block w-full bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 text-center"
               >
                 Get Started
               </a>
@@ -284,8 +284,8 @@ export default function SustainableAISolutionsPage() {
               </ul>
               <div className="text-2xl font-bold text-pink-400 mb-2">Custom Pricing</div>"
               <a 
-                href="/contact" "
-                className="inline-block w-full bg-gradient-to-r from-pink-500 to-red-600 hover:from-pink-400 hover:to-red-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 text-center""
+                href="/[^"]*"
+                className="inline-block w-full bg-gradient-to-r from-pink-500 to-red-600 hover:from-pink-400 hover:to-red-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 text-center"
               >
                 Get Started
               </a>
@@ -399,14 +399,14 @@ export default function SustainableAISolutionsPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <a 
-                href="/contact" "
-                className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1""
+                href="/[^"]*"
+                className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
               >
                 Get Sustainable AI Solutions
               </a>
               <a 
-                href="/case-studies/ai-2026-sustainable-ai-revolution-2-5-billion-success" "
-                className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300""
+                href="/[^"]*"
+                className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
                 View Success Stories
               </a>

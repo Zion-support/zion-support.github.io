@@ -248,7 +248,7 @@ export default function AI2026BreakthroughInnovationsImplementationPage() {
               <h4 className="font-semibold text-gray-900 mb-2">Fortune 100 Technology Leader</h4>"
               <p className="text-gray-700 text-sm mb-2">"
                 "Achieved $500 billion in value through quantum-neural consciousness implementation. "
-                The 99.999% self-awareness levels revolutionized our entire operation.""
+                The 99.999% self-awareness levels revolutionized our entire operation."
               </p>
               <div className="text-green-600 font-semibold text-sm">$500B Value Generated</div>"
             </div>
@@ -256,7 +256,7 @@ export default function AI2026BreakthroughInnovationsImplementationPage() {
               <h4 className="font-semibold text-gray-900 mb-2">Fortune 50 Financial Services</h4>"
               <p className="text-gray-700 text-sm mb-2">"
                 "Autonomous enterprise systems achieved 99.9% automation, generating $750 billion "
-                through hyper-intelligent analytics and real-time decision-making.""
+                through hyper-intelligent analytics and real-time decision-making."
               </p>
               <div className="text-green-600 font-semibold text-sm">$750B Value Generated</div>"
             </div>
@@ -272,22 +272,22 @@ export default function AI2026BreakthroughInnovationsImplementationPage() {
         </p>
         <div className="flex flex-wrap gap-4 justify-center">"
           <Link 
-            href="/contact" "
-            className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-green-600 hover:to-emerald-600 transition-all flex items-center gap-2""
+            href="/[^"]*"
+            className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-green-600 hover:to-emerald-600 transition-all flex items-center gap-2"
           >
             Start Implementation
             <ArrowRight className="w-5 h-5" />"
           </Link>
           <Link 
-            href="/case-studies/ai-2026-breakthrough-innovations-2-8-trillion-success" "
-            className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all flex items-center gap-2""
+            href="/[^"]*"
+            className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all flex items-center gap-2"
           >
             View Success Stories
             <ArrowRight className="w-5 h-5" />"
           </Link>
           <Link 
-            href="/blog/ai-2026-breakthrough-innovations-mega-success" "
-            className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-indigo-600 transition-all flex items-center gap-2""
+            href="/[^"]*"
+            className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-indigo-600 transition-all flex items-center gap-2"
           >
             Read Full Analysis
             <ArrowRight className="w-5 h-5" />"

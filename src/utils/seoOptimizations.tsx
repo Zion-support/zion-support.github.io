@@ -224,7 +224,7 @@ export const analyticsUtils = {
     if (typeof window !== 'undefined' && (window as any).gtag) {
       (window as any).gtag('event', 'conversion', {
         send_to: conversionId,
-        value=value
+        value: value
       });
     }
   }
@@ -239,7 +239,7 @@ export const coreWebVitals = {
     const trackMetric = (metric: any) => {
       analyticsUtils.trackEvent('core_web_vitals', {
         metric_name: metric.name,
-        metric_value=Math.round(metric.value),
+        metric_value: Math.round(metric.value),
         metric_id: metric.id,
         metric_delta: metric.delta
       });
@@ -285,27 +285,27 @@ export const SEOComponent = ({
   return (
     <Helmet>
       <title>{fullTitle}</title>
-      <meta name="description" content={description} />"
-      <meta name="keywords" content={keywords} />"
-      <link rel="canonical" href={fullUrl} />"
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords} />
+      <link rel="canonical" href={fullUrl} />
       
       {/* Open Graph */}
-      <meta property="og:type" content={type} />"
-      <meta property="og:title" content={fullTitle} />"
-      <meta property="og:description" content={description} />"
-      <meta property="og:url" content={fullUrl} />"
-      <meta property="og:image" content={fullImage} />"
-      <meta property="og:site_name" content={siteName} />"
+      <meta property="og:type" content={type} />
+      <meta property="og:title" content={fullTitle} />
+      <meta property="og:description" content={description} />
+      <meta property="og:url" content={fullUrl} />
+      <meta property="og:image" content={fullImage} />
+      <meta property="og:site_name" content={siteName} />
       
       {/* Twitter Card */}
-      <meta name="twitter:card" content="summary_large_image" />"
-      <meta name="twitter:title" content={fullTitle} />"
-      <meta name="twitter:description" content={description} />"
-      <meta name="twitter:image" content={fullImage} />"
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={fullTitle} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={fullImage} />
       
       {/* Structured Data */}
       {structuredData && (
-        <script type="application/ld+json">"
+        <script type="application/ld+json">
           {JSON.stringify(structuredData)}
         </script>
       )}

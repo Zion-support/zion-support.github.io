@@ -370,14 +370,14 @@ export default function AIPoweredDataAnalytics2026() {
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center">"
             <a
-              href="tel:+13024640950""
-              className="bg-white text-blue-600 px-10 py-5 rounded-xl font-bold text-xl hover:bg-gray-100 transition-all hover:scale-105 shadow-2xl""
+              href="tel:+13024640950"
+              className="bg-white text-blue-600 px-10 py-5 rounded-xl font-bold text-xl hover:bg-gray-100 transition-all hover:scale-105 shadow-2xl"
             >
               📞 Call +1 302 464 0950
             </a>
             <a
-              href="mailto:kleber@ziontechgroup.com""
-              className="border-3 border-white text-white px-10 py-5 rounded-xl font-bold text-xl hover:bg-white hover:text-blue-600 transition-all hover:scale-105""
+              href="mailto:kleber@ziontechgroup.com"
+              className="border-3 border-white text-white px-10 py-5 rounded-xl font-bold text-xl hover:bg-white hover:text-blue-600 transition-all hover:scale-105"
             >
               📧 Schedule Consultation
             </a>

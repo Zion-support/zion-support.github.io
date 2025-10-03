@@ -109,14 +109,14 @@ export default function AI2026AprilMegaBreakthroughSolutions() {
             
             <div className="flex flex-col sm:flex-row gap-4">"
               <Link 
-                href="/contact" "
-                className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1 text-center""
+                href="/[^"]*"
+                className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1 text-center"
               >
                 Get Started Today
               </Link>
               <Link 
-                href="/case-studies/ai-2026-april-mega-breakthrough-15-billion-success" "
-                className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 text-center""
+                href="/[^"]*"
+                className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 text-center"
               >
                 View Success Stories
               </Link>
@@ -161,8 +161,8 @@ export default function AI2026AprilMegaBreakthroughSolutions() {
             </div>
             
             <Link 
-              href="/contact" "
-              className="w-full bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center block""
+              href="/[^"]*"
+              className="w-full bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center block"
             >
               Start Transformation
             </Link>
@@ -213,8 +213,8 @@ export default function AI2026AprilMegaBreakthroughSolutions() {
               </ul>
               
               <Link 
-                href="/contact" "
-                className="w-full bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-400 hover:to-indigo-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center block""
+                href="/[^"]*"
+                className="w-full bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-400 hover:to-indigo-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center block"
               >
                 Choose Enterprise
               </Link>
@@ -263,8 +263,8 @@ export default function AI2026AprilMegaBreakthroughSolutions() {
               </ul>
               
               <Link 
-                href="/contact" "
-                className="w-full bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center block""
+                href="/[^"]*"
+                className="w-full bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center block"
               >
                 Choose Advanced
               </Link>
@@ -307,8 +307,8 @@ export default function AI2026AprilMegaBreakthroughSolutions() {
               </ul>
               
               <Link 
-                href="/contact" "
-                className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center block""
+                href="/[^"]*"
+                className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center block"
               >
                 Choose Ultimate
               </Link>
@@ -375,14 +375,14 @@ export default function AI2026AprilMegaBreakthroughSolutions() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">"
             <Link 
-              href="/contact" "
-              className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1""
+              href="/[^"]*"
+              className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
             >
               Start Your Transformation
             </Link>
             <Link 
-              href="/case-studies/ai-2026-april-mega-breakthrough-15-billion-success" "
-              className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300""
+              href="/[^"]*"
+              className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               View Success Stories
             </Link>

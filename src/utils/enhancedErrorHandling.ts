@@ -29,7 +29,7 @@ export interface ErrorReport {
 class EnhancedErrorHandler {
   private errors: ErrorInfo[] = [];
   private maxErrors = 100;
-  // private _isInitialized = false;
+  private isInitialized = false;
 
   constructor() {
     this.initialize();
@@ -47,7 +47,7 @@ class EnhancedErrorHandler {
         userAgent: navigator.userAgent,
         url: window.location.href,
         severity: this.determineSeverity(event.error),
-        category: 'javascript'
+        category: 'javascript',
       });
     });
 
@@ -60,17 +60,16 @@ class EnhancedErrorHandler {
         userAgent: navigator.userAgent,
         url: window.location.href,
         severity: this.determineSeverity(event.reason),
-        category: 'promise'
+        category: 'promise',
       });
     });
 
-    // this._isInitialized = true;
+    this.isInitialized = true;
   }
 
-  private determineSeverity(error: Error | unknown): 'low' | 'medium' | 'high' | 'critical' {
+  private determineSeverity(error: any): 'low' | 'medium' | 'high' | 'critical' {
     if (!error) return 'low';
-
-    const message = error instanceof Error ? error.message?.toLowerCase() || '' : '';
+    const message = error.message?.toLowerCase() || '';
     
     // Critical errors
     if (message.includes('chunk') || message.includes('loading') || message.includes('network')) {
@@ -91,6 +90,7 @@ class EnhancedErrorHandler {
   }
 
   private handleError(errorInfo: ErrorInfo): void {
+    // Add to errors array
     this.errors.push(errorInfo);
     
     // Keep only the most recent errors
@@ -98,75 +98,53 @@ class EnhancedErrorHandler {
       this.errors = this.errors.slice(-this.maxErrors);
     }
 
-    // Log critical errors immediately
-    if (errorInfo.severity === 'critical') {
-      console.error('Critical Error:', errorInfo);
+    // Log to console in development
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Error captured:', errorInfo);
     }
 
-    // Send to analytics or error reporting service
-    this.reportError(errorInfo);
+    // Send to external service in production
+    if (process.env.NODE_ENV === 'production') {
+      this.reportError(errorInfo);
+    }
   }
 
-  private reportError(errorInfo: ErrorInfo): void {
-    // In a real application, you would send this to an error reporting service
-    console.log('Error reported:', errorInfo);
-  }
-
-  public logError(
-    error: Error | string,
-    componentStack?: string,
-    errorBoundary?: string,
-    additionalInfo?: Partial<ErrorInfo>
-  ): void {
-    const errorInfo: ErrorInfo = {
-      message: typeof error === 'string' ? error : error.message,
-      stack: typeof error === 'object' ? error.stack : undefined,
-      componentStack,
-      errorBoundary,
-      timestamp: Date.now(),
-      userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown',
-      url: typeof window !== 'undefined' ? window.location.href : 'unknown',
-      severity: 'medium',
-      category: 'react',
-      ...additionalInfo
-    };
-
-    this.handleError(errorInfo);
-  }
-
-  public getErrors(): ErrorInfo[] {
-    return [...this.errors];
+  private async reportError(errorInfo: ErrorInfo): Promise<void> {
+    try {
+      // Here you would typically send to your error reporting service
+      // For now, we'll just log it
+      console.log('Reporting error:', errorInfo);
+    } catch (error) {
+      console.error('Failed to report error:', error);
+    }
   }
 
   public getErrorReport(): ErrorReport {
     const criticalErrors = this.errors.filter(e => e.severity === 'critical').length;
-    const lastError = this.errors.length > 0 ? this.errors[this.errors.length - 1] : undefined;
-    
+    const errorRate = this.errors.length / 1000; // errors per 1000 page views
+
     return {
       errors: [...this.errors],
       totalErrors: this.errors.length,
       criticalErrors,
-      lastError,
-      errorRate: this.calculateErrorRate(),
-      timestamp: Date.now()
+      lastError: this.errors[this.errors.length - 1],
+      errorRate,
+      timestamp: Date.now(),
     };
-  }
-
-  private calculateErrorRate(): number {
-    // Calculate error rate over the last hour
-    const oneHourAgo = Date.now() - (60 * 60 * 1000);
-    const recentErrors = this.errors.filter(e => e.timestamp > oneHourAgo);
-    return recentErrors.length / 60; // errors per minute
   }
 
   public clearErrors(): void {
     this.errors = [];
   }
 
-  public exportErrors(): string {
-    return JSON.stringify(this.getErrorReport(), null, 2);
+  public isHealthy(): boolean {
+    const criticalErrors = this.errors.filter(e => e.severity === 'critical').length;
+    return criticalErrors === 0;
   }
 }
 
 // Export singleton instance
-export const enhancedErrorHandler = new EnhancedErrorHandler();
+export const errorHandler = new EnhancedErrorHandler();
+
+// Export the class for testing
+export { EnhancedErrorHandler };

@@ -36,14 +36,14 @@ export default function January2026UltimateBreakthrough500BSuccess() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">"
               <Link 
-                href="/contact" "
-                className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1""
+                href="/[^"]*"
+                className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
               >
                 Replicate This Success
               </Link>
               <Link 
-                href="/blog/ai-2026-january-ultimate-breakthrough-revolution" "
-                className="bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-400 hover:to-green-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50 transform hover:-translate-y-1""
+                href="/[^"]*"
+                className="bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-400 hover:to-green-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50 transform hover:-translate-y-1"
               >
                 Read Breakthrough Details →
               </Link>
@@ -182,7 +182,7 @@ export default function January2026UltimateBreakthrough500BSuccess() {
                 The $500B ROI achievement exceeded all expectations, and the 1,000,000x performance improvement has 
                 positioned us as the undisputed leader in our industry. The universal consciousness integration 
                 has created AI systems that not only understand our business but anticipate our needs. This is 
-                truly the future of enterprise operations.""
+                truly the future of enterprise operations."
               </blockquote>
               <div className="mt-4 text-green-400 font-semibold">"
                 — Chief Technology Officer, Fortune 100 Global Conglomerate
@@ -191,8 +191,8 @@ export default function January2026UltimateBreakthrough500BSuccess() {
 
             <div className="text-center">"
               <Link
-                href="/contact""
-                className="inline-block bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-green-400 hover:to-emerald-500 transition-all shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1""
+                href="/contact"
+                className="inline-block bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-green-400 hover:to-emerald-500 transition-all shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
               >
                 Achieve Similar Results for Your Organization
               </Link>

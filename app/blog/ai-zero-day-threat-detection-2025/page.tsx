@@ -130,7 +130,7 @@ export default function AIZeroDayThreatDetection() {
           <p className="text-gray-700 italic text-lg">"
             "Our AI-powered security system detected and neutralized a sophisticated zero-day attack targeting our "
             financial infrastructure within 3 milliseconds. Traditional systems would have taken days to identify 
-            this threat. The AI saved us from a potential $50 million loss.""
+            this threat. The AI saved us from a potential $50 million loss."
           </p>
           <cite className="text-red-600 font-semibold mt-2 block">"
             — Michael Rodriguez, CISO, Global Financial Services
@@ -290,14 +290,14 @@ export default function AIZeroDayThreatDetection() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">"
             <Link
-              href="/services/ai-cybersecurity""
-              className="bg-white text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors""
+              href="/services/ai-cybersecurity"
+              className="bg-white text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Explore Security Solutions
             </Link>
             <a
-              href="tel:+13024640950""
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-colors""
+              href="tel:+13024640950"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-colors"
             >
               Call +1 302 464 0950
             </a>

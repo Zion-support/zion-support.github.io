@@ -1,17 +1,17 @@
-import React from "react""
-import { Helmet } from "react-helmet-async""
+import React from "react"
+import { Helmet } from "react-helmet-async"
 export default function QuantumNeuralNetworksGuide2026(): JSX.Element {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">"
       <Helmet>
         <title>Quantum‑Neural Networks Guide 2026 — 1000x processing speed</title>
         <meta 
-          name="description""
-          content="Enterprise guide to quantum‑neural networks: hybrid circuits, warm pools, and reliability guardrails for predictable speedups.""
+          name="description"
+          content="Enterprise guide to quantum‑neural networks: hybrid circuits, warm pools, and reliability guardrails for predictable speedups."
         />
         <link 
-          rel="canonical""
-          href="https://ziontechgroup.com/blog/quantum-neural-networks-guide-2026""
+          rel="canonical"
+          href="https://ziontechgroup.com/blog/quantum-neural-networks-guide-2026"
         />
       </Helmet>
 

@@ -299,7 +299,7 @@ export default function AI2027MegaTransformationSuccess() {
               <blockquote className="text-xl text-gray-300 italic mb-6 leading-relaxed">"
                 "Zion Tech Group's AI 2027 transformation has revolutionized our entire operation. The $500M annual "
                 value creation exceeded our wildest expectations. Their breakthrough technologies have positioned us 
-                as the industry leader and created sustainable competitive advantages that will last for decades.""
+                as the industry leader and created sustainable competitive advantages that will last for decades."
               </blockquote>
               <div className="flex items-center gap-4">"
                 <div className="w-16 h-16 bg-gradient-to-r from-orange-400 to-red-400 rounded-full flex items-center justify-center">"
@@ -361,14 +361,14 @@ export default function AI2027MegaTransformationSuccess() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <a 
-                href="/contact" "
-                className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-400 hover:to-blue-500 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50""
+                href="/[^"]*"
+                className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-400 hover:to-blue-500 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50"
               >
                 Start Your Transformation
               </a>
               <a 
-                href="/services" "
-                className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-3 px-8 rounded-xl transition-all duration-300""
+                href="/[^"]*"
+                className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-3 px-8 rounded-xl transition-all duration-300"
               >
                 Explore Our Services
               </a>

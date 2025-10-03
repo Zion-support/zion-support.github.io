@@ -142,14 +142,14 @@ export default function AdvancedAIRevolution2025() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">"
                   <a 
-                    href="/contact" "
-                    className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1""
+                    href="/[^"]*"
+                    className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
                   >
                     Start Your Transformation →
                   </a>
                   <a 
-                    href="/case-studies/fortune-500-ai-2025-january-advanced-ai-revolution-2-8-billion-success" "
-                    className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-3 px-8 rounded-xl transition-all duration-300""
+                    href="/[^"]*"
+                    className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-3 px-8 rounded-xl transition-all duration-300"
                   >
                     View Success Story
                   </a>
