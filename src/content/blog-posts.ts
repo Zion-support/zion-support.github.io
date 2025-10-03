@@ -14,6 +14,45 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "governed-agentic-automation-2025-10-03",
+    title: "Governed Agentic Automation: Safe Tools, Fast Outcomes",
+    description: "Design agent toolchains with budgets, approvals, and rollback to move 10x faster without incidents.",
+    content: `# Governed Agentic Automation\n\nShip agent automations that your SRE and compliance teams endorse: signed tools with scopes and quotas, action budgets and approvals, live traces with KPI-linked SLIs, and rollback hooks. Policy templates and dashboards included.`,
+    author: "Zion Tech Group AI Operations",
+    date: "2025-10-03",
+    category: "AI Operations",
+    tags: ["Agents", "Governance", "Guardrails", "Rollback"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/governed-agentic-automation.jpg"
+  },
+  {
+    slug: "enterprise-rag-blueprint-v3-2025-10-03",
+    title: "Enterprise RAG Blueprint v3: 45% Quality ↑, 62% Cost ↓",
+    description: "Retrieval budgets, freshness windows, and cache tiers that raise answer quality while cutting spend.",
+    content: `# Enterprise RAG Blueprint v3\n\nA pragmatic RAG playbook: strict source governance, retrieval budgets and freshness windows, and tiered caches across features/chunks/answers. Eval-gated rollouts with kill switches. Includes reference architectures and KPI scorecards.`,
+    author: "Zion Tech Group Knowledge Systems",
+    date: "2025-10-03",
+    category: "RAG Engineering",
+    tags: ["RAG", "Retrieval", "Caching", "Quality", "Cost"],
+    featured: true,
+    readTime: "9 min read",
+    image: "/images/enterprise-rag-blueprint-v3.jpg"
+  },
+  {
+    slug: "genai-cost-optimization-v6-2025-10-03",
+    title: "GenAI Cost Optimization v6: Quality Tiers, Coalesce, Distill",
+    description: "Cut inference spend 60–85% with tiered routing, request coalescing, and selective distillation.",
+    content: `# GenAI Cost Optimization v6\n\nControl GenAI costs without UX regressions: quality-tier routers, request coalescing, semantic caches, and selective distillation for hot paths. Includes rollout rituals, SLO templates, and dashboards used by platform teams.`,
+    author: "Zion Tech Group Platform Team",
+    date: "2025-10-03",
+    category: "GenAI Engineering",
+    tags: ["Cost", "Caching", "Distillation", "Routing", "SLO"],
+    featured: true,
+    readTime: "9 min read",
+    image: "/images/genai-cost-optimization-v6.jpg"
+  },
+  {
     slug: "ai-2025-oct-02-private-experiments-blueprint",
     title: "Private Experiments Blueprint: Zero‑PII Testing at the Edge",
     description: "Run compliant edge A/B with signed configs, scoped IDs, and DP noise—sub‑100ms globally.",
@@ -125,7 +164,7 @@ Keep experience KPIs stable while reducing spend.
 - Request coalescing; negative/feature/result caches
 - Distillation for hot paths; safe fallbacks
 
-## What You’ll Get
+## What You'll Get
 - 30–70% cost down with steady p95 and task success.
     `,
     author: "Zion Tech Group Platform Team",

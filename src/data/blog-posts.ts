@@ -14,6 +14,51 @@ export interface BlogPost {
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+    id: '99',
+    title: 'Governed Agentic Automation: Safe Tools, Fast Outcomes',
+    slug: 'governed-agentic-automation-2025-10-03',
+    excerpt:
+      'Design agent toolchains with budgets, approvals, and rollback to move 10x faster without incidents.',
+    content:
+      'Ship agent automations your SRE and compliance teams endorse: signed tools with scopes and quotas, action budgets and approvals, live traces with KPI‑linked SLIs, and rollback hooks. Policy templates and dashboards included.',
+    featuredImage: '/images/blog/governed-agentic-automation.jpg',
+    category: 'AI',
+    tags: ['Agents', 'Governance', 'Guardrails', 'Rollback'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-10-03',
+    readTime: 8,
+  },
+  {
+    id: '98',
+    title: 'Enterprise RAG Blueprint v3: 45% Quality ↑, 62% Cost ↓',
+    slug: 'enterprise-rag-blueprint-v3-2025-10-03',
+    excerpt:
+      'Retrieval budgets, freshness windows, and cache tiers that raise answer quality while cutting spend.',
+    content:
+      'A pragmatic RAG playbook: strict source governance, retrieval budgets and freshness windows, and tiered caches across features/chunks/answers. Eval‑gated rollouts with kill switches. Includes reference architectures and KPI scorecards.',
+    featuredImage: '/images/blog/enterprise-rag-blueprint-v3.jpg',
+    category: 'RAG',
+    tags: ['RAG', 'Retrieval', 'Caching', 'Quality', 'Cost'],
+    author: 'Zion Tech Group Knowledge Systems',
+    publishedAt: '2025-10-03',
+    readTime: 9,
+  },
+  {
+    id: '97',
+    title: 'Cloud Cost Optimization v6: Quality Tiers, Coalesce, Distill',
+    slug: 'genai-cost-optimization-v6-2025-10-03',
+    excerpt:
+      'Cut inference spend 60–85% with tiered routing, request coalescing, and selective distillation.',
+    content:
+      'Control GenAI costs without UX regressions: quality‑tier routers, request coalescing, semantic caches, and selective distillation for hot paths. Includes rollout rituals, SLO templates, and dashboards used by platform teams.',
+    featuredImage: '/images/blog/genai-cost-optimization-v6.jpg',
+    category: 'Cloud',
+    tags: ['FinOps', 'LLM', 'Caching', 'Optimization'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-10-03',
+    readTime: 9,
+  },
+  {
     id: '1',
     title: 'Welcome to Our Blog',
     slug: 'welcome-to-our-blog',
