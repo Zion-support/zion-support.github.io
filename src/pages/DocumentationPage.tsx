@@ -1,6 +1,6 @@
-import React from 'react'';
+import React from 'react';
 import { Link } from 'react-router-dom'';
-import { Helmet } from 'react-helmet-async'';
+import { Helmet } from 'react-helmet-async';
 
 const DocumentationPage: React.FC  = () => {
   const documentationSections = [
@@ -8,7 +8,7 @@ const DocumentationPage: React.FC  = () => {
       title: "Getting Started","
       description: "Quick start guides and tutorials to help you get up and running with our solutions.","
       icon: "🚀","
-      links: [,
+      links: [
         { title: "Quick Start Guide", href="/docs/quick-start" },"
         { title: "Installation Guide", href="/docs/installation" },"
         { title: "First Steps Tutorial", href="/docs/first-steps" },"
@@ -19,7 +19,7 @@ const DocumentationPage: React.FC  = () => {
       title: "API Documentation","
       description: "Comprehensive API reference and integration guides for developers.","
       icon: "🔌","
-      links: [,
+      links: [
         { title: "API Reference", href="/docs/api-reference" },"
         { title: "Authentication", href="/docs/authentication" },"
         { title: "Rate Limits", href="/docs/rate-limits" },"
@@ -30,7 +30,7 @@ const DocumentationPage: React.FC  = () => {
       title: "User Guides","
       description: "Step-by-step guides for using our platform features and capabilities.","
       icon: "📖","
-      links: [,
+      links: [
         { title: "Dashboard Guide", href="/docs/dashboard" },"
         { title: "Analytics Setup", href="/docs/analytics" },"
         { title: "Automation Workflows", href="/docs/workflows" },"
@@ -41,7 +41,7 @@ const DocumentationPage: React.FC  = () => {
       title: "Developer Resources","
       description: "Resources and tools for developers building with our platform.","
       icon: "👨‍💻","
-      links: [,
+      links: [
         { title: "Code Examples", href="/docs/examples" },"
         { title: "Best Practices", href="/docs/best-practices" },"
         { title: "Testing Guide", href="/docs/testing" },"
@@ -52,7 +52,7 @@ const DocumentationPage: React.FC  = () => {
       title: "Security & Compliance","
       description: "Security guidelines, compliance information, and best practices.","
       icon: "🔒","
-      links: [,
+      links: [
         { title: "Security Overview", href="/docs/security" },"
         { title: "Data Privacy", href="/docs/privacy" },"
         { title: "Compliance Guide", href="/docs/compliance" },"
@@ -63,7 +63,7 @@ const DocumentationPage: React.FC  = () => {
       title: "Support & Community","
       description: "Get help, connect with the community, and find additional resources.","
       icon: "🤝","
-      links: [,
+      links: [
         { title: "Support Center", href="/docs/support" },"
         { title: "Community Forum", href="/docs/community" },"
         { title: "FAQ", href="/docs/faq" },"
@@ -99,7 +99,7 @@ const DocumentationPage: React.FC  = () => {
                   type="text"
                   placeholder="Search documentation..."
                   className="w-full px-4 py-3 pl-12 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent
-                />
+                />"
                 <div className="absolute left-4 top-3.5 text-gray-400">"
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">"
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />"
@@ -137,7 +137,7 @@ const DocumentationPage: React.FC  = () => {
           </div>
         </section>
 
-        {/* Popular Topics */}
+        {/* Popular Topics */}"
         <section className="py-20 bg-white">"
           <div className="container mx-auto px-6">"
             <div className="text-center mb-16">"
@@ -213,7 +213,7 @@ const DocumentationPage: React.FC  = () => {
                   Start Chat →
                 </Link>
               </div>
-              
+              "
               <div className="bg-white p-8 rounded-xl shadow-sm text-center">"
                 <div className="text-4xl mb-4">📧</div>"
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Email Support</h3>"
@@ -225,7 +225,7 @@ const DocumentationPage: React.FC  = () => {
                   Send Email →
                 </Link>
               </div>
-              
+              "
               <div className="bg-white p-8 rounded-xl shadow-sm text-center">"
                 <div className="text-4xl mb-4">📞</div>"
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Phone Support</h3>"
@@ -241,7 +241,7 @@ const DocumentationPage: React.FC  = () => {
           </div>
         </section>
 
-        {/* CTA Section */}
+        {/* CTA Section */}"
         <section className="py-20 bg-gray-800 text-white">"
           <div className="container mx-auto px-6 text-center">"
             <h2 className="text-4xl font-bold mb-4">Ready to Get Started?</h2>"
@@ -255,7 +255,7 @@ const DocumentationPage: React.FC  = () => {
               >
                 Explore Services
               </Link>
-              <Link 
+              <Link "
                 to="/contact" 
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-800 transition-colors
               >
@@ -268,5 +268,5 @@ const DocumentationPage: React.FC  = () => {
     </>
   );
 };
-
+"
 export default DocumentationPage;

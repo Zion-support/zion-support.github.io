@@ -1,30 +1,51 @@
-import React from "react
+import React from "react";
 
 export default function AgenticWorkflowOrchestration2026(): React.JSX.Element {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">","
+=======
+    <div className= "min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">","
+>>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
       <Helmet >
         <title >Agentic Workflow Orchestration 2026 — Budgets, Canaries, Rollback</title>
-        <meta name: "description
-  content: "Design agentic workflows with budgeted actions, KPI-linked canaries, and instant rollback for safe velocity." /><link rel: "canonical
+        <meta name: "description",";,"
+  content: "Design agentic workflows with budgeted actions, KPI-linked canaries, and instant rollback for safe velocity." /><link rel: "canonical",";,"
   href="https://ziontechgroup.com/blog/agentic-workflow-orchestration-2026","
         />
       </Helmet>
 
-      <div className="container mx-auto px-6 py-16">
-        <h1 className="text-4xl md: text-5xl font-bold mb-4">
+<<<<<<< HEAD
+      <div className="container mx-auto px-6 py-16"
+        <h1 className="text-4xl md: text-5xl font-bold mb-4">",";,"
   href="https: //ziontechgroup.com/blog/agentic-workflow-orchestration-2026","
         />
       </Helmet>
 
       <div className="container mx-auto px-6 py-16">","
-        <h1 className="text-4xl md: text-5xl font-bold mb-4">
+        <h1 className="text-4xl md: text-5xl font-bold mb-4">",";,"
   Agentic Workflow Orchestration 2026
         </h1>
-        <p className="text-zion-slate-light mb-8">
+        <p className="text-zion-slate-light mb-8">",";,"
   Budgeted Actions • KPI Canaries • Instant Rollback
         </p>
         <div className="prose prose-invert max-w-3xl">","
+=======
+      <div className= "container mx-auto px-6 py-16">
+        <h1 className= "text-4xl md: text-5xl font-bold mb-4">"
+  href="https: //ziontechgroup.com/blog/agentic-workflow-orchestration-2026","
+        />
+      </Helmet>
+
+      <div className= "container mx-auto px-6 py-16">","
+        <h1 className= "text-4xl md: text-5xl font-bold mb-4">"
+  Agentic Workflow Orchestration 2026
+        </h1>
+        <p className= "text-zion-slate-light mb-8">"
+  Budgeted Actions • KPI Canaries • Instant Rollback
+        </p>
+        <div className= "prose prose-invert max-w-3xl">","
+>>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
           <p >
             Orchestrate agentic workflows using guardrails that balance speed and safety.
             Use budgets to limit risky actions, canary new behaviors, and roll back instantly

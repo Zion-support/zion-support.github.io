@@ -1,5 +1,5 @@
-import React from 'react'';
-import { Helmet } from 'react-helmet-async'';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { 
   Brain, 
   Code, 
@@ -296,8 +296,8 @@ export default function NewServices2026() {
             'Performance analytics and recommendations',';
             'Compliance with CAN-SPAM and GDPR regulations',';
             'Multi-language support for global campaigns',';
-            'Real-time performance monitoring and alerts'
-          ],
+            'Real-time performance monitoring and alerts'],
+,
           benefits: [,
             'Average 23% increase in email open rates',';
             '40% improvement in click-through rates',';
@@ -321,8 +321,8 @@ export default function NewServices2026() {
             'Integration with Zoom, Teams, Google Meet, Webex',';
             'Team productivity dashboards and reporting',';
             'Sentiment analysis and engagement tracking',';
-            'Automated meeting summaries and distribution'
-          ],
+            'Automated meeting summaries and distribution'],
+,
           benefits: [,
             '35% reduction in meeting time waste',';
             '50% improvement in action item completion',';
@@ -346,8 +346,8 @@ export default function NewServices2026() {
             'Revenue optimization through intelligent scheduling',';
             'Integration with major EHR systems (Epic, Cerner, Allscripts)',';
             'Multi-provider scheduling coordination',';
-            'Real-time availability updates and notifications'
-          ],
+            'Real-time availability updates and notifications'],
+,
           benefits: [,
             '28% reduction in no-show rates',';
             '15% increase in revenue through optimized scheduling',';
@@ -371,8 +371,8 @@ export default function NewServices2026() {
             'Performance tracking by market and language',';
             'Integration with CMS platforms (WordPress, Drupal, Contentful)',';
             'Multi-format support (web, mobile, documents)',';
-            'Real-time translation updates and version control'
-          ],
+            'Real-time translation updates and version control'],
+,
           benefits: [,
             '40% faster time-to-market globally',';
             '60% reduction in translation costs',';
@@ -396,8 +396,8 @@ export default function NewServices2026() {
             'Integration with major e-commerce platforms (Shopify, WooCommerce, Magento)',';
             'Cost optimization recommendations and supplier negotiation',';
             'Multi-location inventory management',';
-            'Real-time stock alerts and low inventory warnings'
-          ],
+            'Real-time stock alerts and low inventory warnings'],
+,
           benefits: [,
             '25% reduction in stockouts',';
             '20% reduction in inventory carrying costs',';
@@ -429,8 +429,8 @@ export default function NewServices2026() {
             'Integration with core banking systems and ERPs',';
             'Regulatory change notifications and updates',';
             'Multi-jurisdiction compliance support',';
-            'Automated remediation workflows'
-          ],
+            'Automated remediation workflows'],
+,
           benefits: [,
             '60% reduction in compliance costs',';
             '90% reduction in regulatory violations',';
@@ -454,8 +454,8 @@ export default function NewServices2026() {
             'Sales team performance analytics and coaching',';
             'Custom scoring model training and optimization',';
             'Multi-channel lead tracking and attribution',';
-            'Real-time lead alerts and notifications'
-          ],
+            'Real-time lead alerts and notifications'],
+,
           benefits: [,
             '45% improvement in lead conversion rates',';
             '30% reduction in sales cycle length',';
@@ -479,8 +479,8 @@ export default function NewServices2026() {
             'Customer emotion detection and escalation triggers',';
             'Integration with call center and CRM systems',';
             'Multi-language voice processing support',';
-            'Compliance monitoring and automated reporting'
-          ],
+            'Compliance monitoring and automated reporting'],
+,
           benefits: [,
             '50% improvement in customer service quality scores',';
             '35% reduction in customer complaints',';
@@ -504,8 +504,8 @@ export default function NewServices2026() {
             'Cost optimization through proactive maintenance',';
             'Integration with CMMS and ERP systems',';
             'Multi-equipment monitoring and management',';
-            'Predictive analytics dashboard and reporting'
-          ],
+            'Predictive analytics dashboard and reporting'],
+,
           benefits: [,
             '40% reduction in unplanned downtime',';
             '25% reduction in maintenance costs',';
@@ -529,8 +529,8 @@ export default function NewServices2026() {
             'Integration with social media and content platforms',';
             'Custom model training for specific use cases',';
             'Automated escalation and human review workflows',';
-            'Compliance reporting and audit trails'
-          ],
+            'Compliance reporting and audit trails'],
+,
           benefits: [,
             '70% reduction in moderation costs',';
             '90% improvement in content safety',';
@@ -562,8 +562,8 @@ export default function NewServices2026() {
             'Multi-factor authentication and single sign-on',';
             'API security and data protection',';
             'Compliance reporting and audit support',';
-            '24/7 security operations center (SOC) monitoring'
-          ],
+            '24/7 security operations center (SOC) monitoring'],
+,
           benefits: [,
             '99.9% reduction in security breaches',';
             '50% reduction in security management overhead',';
@@ -587,8 +587,8 @@ export default function NewServices2026() {
             'Multi-cloud strategy implementation',';
             'Disaster recovery and backup solutions',';
             'Security and compliance implementation',';
-            'Training and ongoing support'
-          ],
+            'Training and ongoing support'],
+,
           benefits: [,
             '40% reduction in infrastructure costs',';
             '60% improvement in application performance',';
@@ -612,8 +612,8 @@ export default function NewServices2026() {
             'Container security and image scanning',';
             'API security testing and monitoring',';
             'Performance testing and optimization',';
-            'Training and best practices implementation'
-          ],
+            'Training and best practices implementation'],
+,
           benefits: [,
             '80% reduction in security vulnerabilities',';
             '70% faster deployment cycles',';
@@ -637,8 +637,8 @@ export default function NewServices2026() {
             'Data backup and recovery automation',';
             'Network redundancy and load balancing',';
             'Compliance and audit support',';
-            'Regular testing and optimization'
-          ],
+            'Regular testing and optimization'],
+,
           benefits: [,
             '99.99% business continuity assurance',';
             '80% reduction in recovery time',';
@@ -662,8 +662,8 @@ export default function NewServices2026() {
             'Microservices orchestration and management',';
             'API versioning and lifecycle management',';
             'Security policies and threat protection',';
-            'Integration with CI/CD pipelines'
-          ],
+            'Integration with CI/CD pipelines'],
+,
           benefits: [,
             '60% improvement in API performance',';
             '50% reduction in API management overhead',';
@@ -695,8 +695,8 @@ export default function NewServices2026() {
             'Template library with industry-specific designs',';
             'Real-time collaboration and approval workflows',';
             'Multi-platform publishing and distribution',';
-            'Performance analytics and optimization'
-          ],
+            'Performance analytics and optimization'],
+,
           benefits: [,
             '70% reduction in video production costs',';
             '90% faster video creation and deployment',';
@@ -720,8 +720,8 @@ export default function NewServices2026() {
             'Custom dashboard and reporting tools',';
             'Multi-blockchain support (Ethereum, Polygon, BSC)',';
             'Automated compliance monitoring',';
-            'Integration with trading and portfolio management'
-          ],
+            'Integration with trading and portfolio management'],
+,
           benefits: [,
             '80% reduction in smart contract risks',';
             '60% improvement in DeFi performance',';
@@ -745,8 +745,8 @@ export default function NewServices2026() {
             'Cost optimization through smart scheduling',';
             'Integration with smart grid and IoT devices',';
             'Carbon footprint tracking and reporting',';
-            'Automated energy trading and arbitrage'
-          ],
+            'Automated energy trading and arbitrage'],
+,
           benefits: [,
             '30% reduction in energy costs',';
             '25% improvement in energy efficiency',';
@@ -770,8 +770,8 @@ export default function NewServices2026() {
             'Custom clause generation and templates',';
             'Integration with legal practice management systems',';
             'Multi-jurisdiction compliance support',';
-            'Automated reporting and audit trails'
-          ],
+            'Automated reporting and audit trails'],
+,
           benefits: [,
             '75% reduction in document review time',';
             '90% improvement in risk detection accuracy',';
@@ -795,8 +795,8 @@ export default function NewServices2026() {
             'Compliance monitoring and reporting',';
             'Integration with dispatch and logistics systems',';
             'Multi-vehicle fleet management',';
-            'Automated alerts and notifications'
-          ],
+            'Automated alerts and notifications'],
+,
           benefits: [,
             '25% reduction in fleet operating costs',';
             '30% improvement in fuel efficiency',';
@@ -941,7 +941,7 @@ export default function NewServices2026() {
                             href="/contact"
                             className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover: from-cyan-600 hover:to-blue-600 transition-all duration-300 w-full justify-center
                           >
-                            Get Started
+                            Get Started"
                             <ArrowRight className="w-4 h-4" />"
                           </a>
                         </div>
@@ -993,14 +993,14 @@ export default function NewServices2026() {
                 <a 
                   href={`tel:${contactInfo.phone}`} `;
                   className="inline-flex items-center gap-2 bg-white text-slate-900 px-6 py-3 rounded-lg font-semibold hover:bg-slate-100 transition-colors
-                >
+                >"
                   <Smartphone className="w-4 h-4" />"
                   {contactInfo.phone}
                 </a>
                 <a 
                   href={`mailto:${contactInfo.email}`} `;
                   className="inline-flex items-center gap-2 bg-slate-700 text-white px-6 py-3 rounded-lg font-semibold hover:bg-slate-600 transition-colors
-                >
+                >"
                   <MessageSquare className="w-4 h-4" />"
                   {contactInfo.email}
                 </a>
