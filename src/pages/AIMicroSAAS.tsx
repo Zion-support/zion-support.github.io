@@ -1,5 +1,10 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
+import { FileText, Rocket, CheckCircle, ArrowRight, Database } from "lucide-react";
+
+const AIMicroSAAS: React.FC = () => {
+  const services = [
+    {
       id: "ai-content-optimizer",
       name: "AI Content Optimizer Pro",
       blurb: "AI-powered content creation and optimization platform for marketing teams",
@@ -12,8 +17,7 @@ import { Helmet } from "react-helmet-async";
         "SEO optimization with real-time keyword analysis",
         "Brand voice consistency across all content",
         "A/B testing and performance analytics",
-    },
-    {
+      ]
     },
     {
       id: "automated-workflow-engine",
@@ -52,7 +56,25 @@ import { Helmet } from "react-helmet-async";
           </div>
         </section>
 
+        {/* Services Grid */}
+        <section className="py-20">
+          <div className="container mx-auto px-6">
+            <div className="grid md:grid-cols-2 gap-8">
+              {services.map((service) => (
+                <div key={service.id} className="bg-white rounded-xl shadow-lg p-8 border border-gray-100 hover:shadow-xl transition-shadow">
+                  <div className="flex items-center mb-4">
+                    <service.icon className="w-8 h-8 text-blue-600 mr-3" />
+                    <div>
+                      <h3 className="text-xl font-bold text-gray-900">{service.name}</h3>
+                      <span className="text-sm text-blue-600 font-medium">{service.category}</span>
                     </div>
+                  </div>
+                  
+                  <p className="text-gray-600 mb-4">{service.blurb}</p>
+                  
+                  <div className="flex justify-between items-center mb-6">
+                    <span className="text-2xl font-bold text-gray-900">{service.price}</span>
+                    <span className="text-sm text-gray-500">ETA: {service.eta}</span>
                   </div>
                   
                   <ul className="space-y-2 mb-6">
@@ -138,4 +160,6 @@ import { Helmet } from "react-helmet-async";
       </div>
     </>
   );
-}
+};
+
+export default AIMicroSAAS;
