@@ -1,12 +1,9 @@
-import React, { Component, ReactNode, ErrorInfo } from 'react';
-import { AlertTriangle, RefreshCw, Bug } from 'lucide-react';
+/**
+ * Enhanced Error Boundary Component
+ * Comprehensive error handling with performance monitoring and user feedback
+ */
 
-// Mock analytics utility (replace with actual implementation)
-const analyticsUtils = {
-  trackEvent: (event: string, data: Record<string, unknown>) => {
-    console.log('Analytics Event:', event, data);
-  }
-};
+import React, { Component, ReactNode, ErrorInfo } from 'react';
 
 interface Props {
   children: ReactNode;
@@ -22,11 +19,14 @@ interface State {
   errorId: string;
 }
 
-/**
- * Enhanced Error Boundary Component
- * Comprehensive error handling with performance monitoring and user feedback
- */
-export class EnhancedErrorBoundary extends Component<Props, State> {
+// Analytics utilities (mock implementation)
+const analyticsUtils = {
+  trackEvent: (event: string, data: Record<string, unknown>) => {
+    console.log('Analytics Event:', event, data);
+  }
+};
+
+class EnhancedErrorBoundary extends Component<Props, State> {
   private retryCount = 0;
   private maxRetries = 3;
 
@@ -58,16 +58,16 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
     // Update state with error info
     this.setState({ errorInfo });
 
-    const errorDetails = {
+    // Create error details object for potential future use
+    const _errorDetails = {
       errorId,
       timestamp: new Date().toISOString(),
       userAgent: navigator.userAgent,
       url: window.location.href,
       retryCount: this.retryCount
     };
+    console.log('Error details:', _errorDetails);
 
-    // Log error details for debugging
-    console.log('Error Details:', errorDetails);
 
     // Send to analytics
     analyticsUtils.trackEvent('error_boundary_caught', {
@@ -138,8 +138,8 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
   };
 
   render() {
-    const { hasError, error, errorId } = this.state;
-    const { children, fallback, showDetails } = this.props;
+    const { hasError } = this.state;
+    const { children, fallback } = this.props;
 
     if (hasError) {
       // Use custom fallback if provided
@@ -153,51 +153,29 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
           <div className="max-w-md w-full mx-4">
             <div className="bg-white rounded-2xl shadow-xl p-8 text-center">
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-red-100 mb-4">
-                <AlertTriangle className="w-8 h-8 text-red-600" />
+                <svg className="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
+                </svg>
               </div>
               <h1 className="text-2xl font-bold text-gray-900 mb-2">
-                Something went wrong
+                Oops! Something went wrong
               </h1>
               <p className="text-gray-600 mb-6">
                 We're sorry for the inconvenience. Please try refreshing the page.
               </p>
-              {showDetails && error && (
-                <details className="mb-6 text-left">
-                  <summary className="cursor-pointer text-sm text-gray-500 mb-2">Error Details</summary>
-                  <div className="bg-gray-100 p-3 rounded text-xs font-mono text-gray-700">
-                    <div className="mb-1"><strong>Error ID:</strong> {errorId}</div>
-                    <div className="mb-1"><strong>Message:</strong> {error.message}</div>
-                    {error.stack && (
-                      <div>
-                        <strong>Stack:</strong>
-                        <pre className="whitespace-pre-wrap mt-1">{error.stack}</pre>
-                      </div>
-                    )}
-                  </div>
-                </details>
-              )}
               <div className="space-y-3">
-                {this.retryCount < this.maxRetries && (
-                  <button
-                    onClick={this.handleRetry}
-                    className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
-                  >
-                    <RefreshCw className="w-4 h-4" />
-                    Try Again ({this.maxRetries - this.retryCount} attempts left)
-                  </button>
-                )}
                 <button
-                  onClick={this.handleReportError}
-                  className="w-full border-2 border-gray-300 text-gray-700 hover:bg-gray-50 font-semibold py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
+                  onClick={this.handleRetry}
+                  className="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
+                  disabled={this.retryCount >= this.maxRetries}
                 >
-                  <Bug className="w-4 h-4" />
-                  Report Error
+                  {this.retryCount >= this.maxRetries ? 'Max Retries Reached' : 'Retry'}
                 </button>
                 <button
-                  onClick={() => window.location.reload()}
-                  className="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
+                  onClick={this.handleReportError}
+                  className="w-full border-2 border-red-600 text-red-600 hover:bg-red-50 font-semibold py-3 px-6 rounded-lg transition-colors"
                 >
-                  Refresh Page
+                  Report Error
                 </button>
               </div>
             </div>

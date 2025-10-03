@@ -27,18 +27,21 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
     // Only run in development
     if (process.env.NODE_ENV !== 'development') return;
 
+    // Performance Observer setup
     const observer = new PerformanceObserver((list) => {
-      for (const entry of list.getEntries()) {
+      list.getEntries().forEach((entry) => {
         if (entry.entryType === 'largest-contentful-paint') {
           setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
         } else if (entry.entryType === 'first-input') {
-          setMetrics(prev => ({ ...prev, fid: (entry as PerformanceEventTiming).processingStart - entry.startTime }));
+          const fidEntry = entry as PerformanceEventTiming;
+          setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - fidEntry.startTime }));
         } else if (entry.entryType === 'layout-shift') {
-          if (!(entry as LayoutShift).hadRecentInput) {
-            setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + (entry as LayoutShift).value }));
+          const clsEntry = entry as LayoutShift;
+          if (!clsEntry.hadRecentInput) {
+            setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + clsEntry.value }));
           }
         }
-      }
+      });
     });
 
     observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
@@ -61,15 +64,15 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed top-4 right-4 bg-black/80 text-white p-4 rounded-lg font-mono text-sm z-50">
-      <h3 className="font-bold mb-2">Performance Metrics</h3>
+    <div className="fixed top-4 right-4 bg-black/80 text-white p-4 rounded-lg font-mono text-xs z-50">
+      <div className="mb-2 font-bold">Performance Monitor</div>
       <div className="space-y-1">
-        {Object.entries(metrics).map(([key, value]) => (
-          <div key={key} className="flex justify-between">
-            <span className="text-gray-300">{key.toUpperCase()}:</span>
-            <span>{value?.toFixed(2)}ms</span>
-          </div>
-        ))}
+        {metrics.lcp && <div>LCP: {metrics.lcp.toFixed(2)}ms</div>}
+        {metrics.fid && <div>FID: {metrics.fid.toFixed(2)}ms</div>}
+        {metrics.cls && <div>CLS: {metrics.cls.toFixed(3)}</div>}
+        {metrics.fcp && <div>FCP: {metrics.fcp.toFixed(2)}ms</div>}
+        {metrics.ttfb && <div>TTFB: {metrics.ttfb.toFixed(2)}ms</div>}
+        {metrics.inp && <div>INP: {metrics.inp.toFixed(2)}ms</div>}
       </div>
     </div>
   );
