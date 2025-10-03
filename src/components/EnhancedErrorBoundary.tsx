@@ -32,7 +32,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       errorId: ''
     };
   }
-
   static getDerivedStateFromError(error: Error): Partial<State> {
     // Generate unique error ID
     const errorId = `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
