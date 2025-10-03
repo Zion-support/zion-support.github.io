@@ -6,16 +6,16 @@
  * Wait for a condition to be true
  */
 export const waitFor = async (
-  condition: () => boolean | Promise<boolean>,
+  condition: () => boolean,
   timeout = 5000,
 ): Promise<void> => {
   const start = Date.now();
-  while (Date.now() - start < timeout) {
-    const result = await condition();
-    if (result) return;
+  while (!condition() && Date.now() - start < timeout) {
     await new Promise(resolve => setTimeout(resolve, 100));
   }
-  throw new Error(`Timeout waiting for condition after ${timeout}ms`);
+  if (!condition()) {
+    throw new Error(`Timeout waiting for condition after ${timeout}ms`);
+  }
 };
 
 /**
@@ -56,90 +56,40 @@ export const simulateClick = (element: Element): void => {
  */
 export const simulateInput = (element: HTMLInputElement, value: string): void => {
   element.value = value;
-  const event = new Event('input', {
-    bubbles: true,
-    cancelable: true,
-  });
+  const event = new Event('input', { bubbles: true });
   element.dispatchEvent(event);
 };
 
 /**
- * Simulate keyboard event
- */
-export const simulateKeyEvent = (
-  element: Element,
-  eventType: 'keydown' | 'keyup' | 'keypress',
-  key: string,
-  options: KeyboardEventInit = {}
-): void => {
-  const event = new KeyboardEvent(eventType, {
-    key,
-    bubbles: true,
-    cancelable: true,
-    ...options,
-  });
-  element.dispatchEvent(event);
-};
-
-/**
- * Mock fetch for testing API calls
+ * Mock fetch response
  */
 export const mockFetch = (response: any, status = 200): void => {
-  global.fetch = jest.fn().mockImplementation(() =>
-    Promise.resolve({
-      ok: status >= 200 && status < 300,
-      status,
-      json: () => Promise.resolve(response),
-      text: () => Promise.resolve(typeof response === 'string' ? response : JSON.stringify(response)),
-    })
-  );
+  global.fetch = jest.fn().mockResolvedValue({
+    ok: status >= 200 && status < 300,
+    status,
+    json: () => Promise.resolve(response),
+    text: () => Promise.resolve(JSON.stringify(response)),
+  });
 };
 
 /**
  * Mock localStorage
  */
 export const mockLocalStorage = (): void => {
-  const store: Record<string, string> = {};
+  const store: { [key: string]: string } = {};
   
   Object.defineProperty(window, 'localStorage', {
     value: {
-      getItem: jest.fn((key: string) => store[key] || null),
-      setItem: jest.fn((key: string, value: string) => {
+      getItem: (key: string) => store[key] || null,
+      setItem: (key: string, value: string) => {
         store[key] = value;
-      }),
-      removeItem: jest.fn((key: string) => {
+      },
+      removeItem: (key: string) => {
         delete store[key];
-      }),
-      clear: jest.fn(() => {
+      },
+      clear: () => {
         Object.keys(store).forEach(key => delete store[key]);
-      }),
-      length: 0,
-      key: jest.fn((index: number) => Object.keys(store)[index] || null),
-    },
-    writable: true,
-  });
-};
-
-/**
- * Mock sessionStorage
- */
-export const mockSessionStorage = (): void => {
-  const store: Record<string, string> = {};
-  
-  Object.defineProperty(window, 'sessionStorage', {
-    value: {
-      getItem: jest.fn((key: string) => store[key] || null),
-      setItem: jest.fn((key: string, value: string) => {
-        store[key] = value;
-      }),
-      removeItem: jest.fn((key: string) => {
-        delete store[key];
-      }),
-      clear: jest.fn(() => {
-        Object.keys(store).forEach(key => delete store[key]);
-      }),
-      length: 0,
-      key: jest.fn((index: number) => Object.keys(store)[index] || null),
+      },
     },
     writable: true,
   });
@@ -150,22 +100,49 @@ export const mockSessionStorage = (): void => {
  */
 export const mockLocation = (url: string): void => {
   delete (window as any).location;
-  const mockLocation = Object.assign(new URL(url), {
-    assign: jest.fn(),
-    replace: jest.fn(),
-    reload: jest.fn(),
-    ancestorOrigins: [] as any,
-  });
-  window.location = mockLocation as any;
+  window.location = new URL(url) as any;
 };
 
 /**
- * Mock window.matchMedia
+ * Create mock element
  */
-export const mockMatchMedia = (matches: boolean = false): void => {
+export const createMockElement = (tagName: string, attributes: Record<string, string> = {}): HTMLElement => {
+  const element = document.createElement(tagName);
+  Object.entries(attributes).forEach(([key, value]) => {
+    element.setAttribute(key, value);
+  });
+  return element;
+};
+
+/**
+ * Mock IntersectionObserver
+ */
+export const mockIntersectionObserver = (): void => {
+  global.IntersectionObserver = jest.fn().mockImplementation(() => ({
+    observe: jest.fn(),
+    unobserve: jest.fn(),
+    disconnect: jest.fn(),
+  }));
+};
+
+/**
+ * Mock ResizeObserver
+ */
+export const mockResizeObserver = (): void => {
+  global.ResizeObserver = jest.fn().mockImplementation(() => ({
+    observe: jest.fn(),
+    unobserve: jest.fn(),
+    disconnect: jest.fn(),
+  }));
+};
+
+/**
+ * Mock matchMedia
+ */
+export const mockMatchMedia = (matches: boolean): void => {
   Object.defineProperty(window, 'matchMedia', {
     writable: true,
-    value: jest.fn().mockImplementation((query) => ({
+    value: jest.fn().mockImplementation(query => ({
       matches,
       media: query,
       onchange: null,
@@ -179,131 +156,136 @@ export const mockMatchMedia = (matches: boolean = false): void => {
 };
 
 /**
- * Mock IntersectionObserver
+ * Wait for async component to render
  */
-export const mockIntersectionObserver = (): void => {
-  const mockIntersectionObserver = jest.fn();
-  mockIntersectionObserver.mockReturnValue({
-    observe: () => null,
-    unobserve: () => null,
-    disconnect: () => null,
-  });
-  window.IntersectionObserver = mockIntersectionObserver as any;
-};
-
-/**
- * Mock ResizeObserver
- */
-export const mockResizeObserver = (): void => {
-  const mockResizeObserver = jest.fn();
-  mockResizeObserver.mockReturnValue({
-    observe: () => null,
-    unobserve: () => null,
-    disconnect: () => null,
-  });
-  window.ResizeObserver = mockResizeObserver as any;
-};
-
-/**
- * Create mock data
- */
-export const createMockData = <T>(template: Partial<T>, count: number = 1): T[] => {
-  return Array.from({ length: count }, (_, index) => ({
-    id: index + 1,
-    ...template,
-  } as T));
-};
-
-/**
- * Mock console methods
- */
-export const mockConsole = (): void => {
-  jest.spyOn(console, 'log').mockImplementation(() => {});
-  jest.spyOn(console, 'warn').mockImplementation(() => {});
-  jest.spyOn(console, 'error').mockImplementation(() => {});
-  jest.spyOn(console, 'info').mockImplementation(() => {});
-};
-
-/**
- * Restore console methods
- */
-export const restoreConsole = (): void => {
-  jest.restoreAllMocks();
-};
-
-/**
- * Wait for async operations to complete
- */
-export const flushPromises = (): Promise<void> => {
-  return new Promise((resolve) => setImmediate(resolve));
-};
-
-/**
- * Mock window.requestAnimationFrame
- */
-export const mockRequestAnimationFrame = (): void => {
-  let animationFrameId = 0;
-  Object.defineProperty(window, 'requestAnimationFrame', {
-    writable: true,
-    value: jest.fn((callback: FrameRequestCallback) => {
-      animationFrameId++;
-      setTimeout(() => callback(animationFrameId), 16);
-      return animationFrameId;
-    }),
-  });
-  
-  Object.defineProperty(window, 'cancelAnimationFrame', {
-    writable: true,
-    value: jest.fn(),
-  });
-};
-
-/**
- * Mock window.setTimeout and setInterval
- */
-export const mockTimers = (): void => {
-  jest.useFakeTimers();
-};
-
-/**
- * Advance timers by specific time
- */
-export const advanceTimersByTime = (msToRun: number): void => {
-  jest.advanceTimersByTime(msToRun);
-};
-
-/**
- * Wait for all async operations to complete
- */
-export const waitForAsyncOperations = async (timeout = 5000): Promise<void> => {
+export const waitForAsyncComponent = async (
+  component: React.ComponentType<any>,
+  props: any = {},
+  timeout = 5000,
+): Promise<void> => {
   await waitFor(() => {
-    // Check if there are any pending promises
-    return true;
+    try {
+      const element = document.querySelector(`[data-testid="${component.name}"]`);
+      return !!element;
+    } catch {
+      return false;
+    }
   }, timeout);
 };
 
 /**
- * Mock fetch with delay
+ * Mock console methods for testing
  */
-export const mockFetchWithDelay = (response: any, delay: number, status = 200): void => {
-  global.fetch = jest.fn().mockImplementation(() =>
-    new Promise((resolve) => {
-      setTimeout(() => {
-        resolve({
-          ok: status >= 200 && status < 300,
-          status,
-          json: () => Promise.resolve(response),
-          text: () => Promise.resolve(typeof response === 'string' ? response : JSON.stringify(response)),
-        } as Response);
-      }, delay);
-    })
-  );
+export const mockConsole = (): void => {
+  const originalConsole = { ...console };
+  
+  beforeEach(() => {
+    console.log = jest.fn();
+    console.error = jest.fn();
+    console.warn = jest.fn();
+    console.info = jest.fn();
+  });
+  
+  afterEach(() => {
+    Object.assign(console, originalConsole);
+  });
 };
 
 /**
- * Wait for fetch calls to complete
+ * Create mock router
  */
-export const waitForFetchCalls = async (timeout = 5000): Promise<void> => {
+export const createMockRouter = (pathname = '/', search = ''): any => ({
+  pathname,
+  search,
+  hash: '',
+  query: {},
+  push: jest.fn(),
+  replace: jest.fn(),
+  back: jest.fn(),
+  forward: jest.fn(),
+  reload: jest.fn(),
+  prefetch: jest.fn(),
+});
+
+/**
+ * Mock Next.js router
+ */
+export const mockNextRouter = (pathname = '/', query = {}): void => {
+  const mockRouter = createMockRouter(pathname);
+  mockRouter.query = query;
+  
+  jest.mock('next/router', () => ({
+    useRouter: () => mockRouter,
+    withRouter: (Component: any) => Component,
+  }));
+};
+
+/**
+ * Create test environment setup
+ */
+export const setupTestEnvironment = (): void => {
+  mockLocalStorage();
+  mockIntersectionObserver();
+  mockResizeObserver();
+  mockMatchMedia(true);
+  mockConsole();
+};
+
+/**
+ * Clean up test environment
+ */
+export const cleanupTestEnvironment = (): void => {
+  // Clean up any global mocks
+  if (global.fetch) {
+    delete global.fetch;
+  }
+  
+  // Clear localStorage
+  if (window.localStorage) {
+    window.localStorage.clear();
+  }
+  
+  // Reset window.location
+  if (window.location) {
+    window.location = new URL('http://localhost:3000') as any;
+  }
+};
+
+/**
+ * Create mock API response
+ */
+export const createMockApiResponse = <T>(data: T, status = 200): Response => ({
+  ok: status >= 200 && status < 300,
+  status,
+  statusText: status === 200 ? 'OK' : 'Error',
+  headers: new Headers(),
+  body: null,
+  bodyUsed: false,
+  arrayBuffer: () => Promise.resolve(new ArrayBuffer(0)),
+  blob: () => Promise.resolve(new Blob()),
+  formData: () => Promise.resolve(new FormData()),
+  json: () => Promise.resolve(data),
+  text: () => Promise.resolve(JSON.stringify(data)),
+  clone: () => createMockApiResponse(data, status),
+});
+
+/**
+ * Mock fetch with different responses
+ */
+export const mockFetchResponses = (responses: Array<{ url: string; response: any; status?: number }>): void => {
+  global.fetch = jest.fn().mockImplementation((url: string) => {
+    const match = responses.find(r => url.includes(r.url));
+    if (match) {
+      return Promise.resolve(createMockApiResponse(match.response, match.status));
+    }
+    return Promise.resolve(createMockApiResponse({}, 404));
+  });
+};
+
+/**
+ * Wait for network requests to complete
+ */
+export const waitForNetworkRequests = async (timeout = 5000): Promise<void> => {
   await waitFor(() => {
     // Check if there are any pending fetch requests
     return !(global.fetch as any)?.mock?.calls?.some((call: any) => !call[1]?.resolved);
@@ -357,6 +339,34 @@ export const createMockEvent = (type: string, options: any = {}): Event => {
     ...options,
   });
   return event;
+};
+
+/**
+ * Mock setTimeout and setInterval
+ */
+export const mockTimers = (): void => {
+  jest.useFakeTimers();
+};
+
+/**
+ * Restore real timers
+ */
+export const restoreTimers = (): void => {
+  jest.useRealTimers();
+};
+
+/**
+ * Advance timers by specified time
+ */
+export const advanceTimers = (ms: number): void => {
+  jest.advanceTimersByTime(ms);
+};
+
+/**
+ * Run all pending timers
+ */
+export const runAllTimers = (): void => {
+  jest.runAllTimers();
 };
 
 /**

@@ -1,4 +1,4 @@
-// import React from 'react';
+import React from 'react';
 
 export default function EdgeConsentlessExperiments2026Q4(): JSX.Element {
   return (

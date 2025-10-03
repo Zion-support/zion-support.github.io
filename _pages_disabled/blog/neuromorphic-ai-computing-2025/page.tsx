@@ -1,5 +1,5 @@
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'Neuromorphic AI Computing 2025: 1000x Energy Efficiency | Zion Tech Group',

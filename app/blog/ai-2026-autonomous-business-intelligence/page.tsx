@@ -1,5 +1,5 @@
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'AI 2026 Autonomous Business Intelligence: 300% ROI Revolution | Zion Tech Group',
@@ -212,7 +212,8 @@ export default function AIAutonomousBusinessIntelligence2026() {
             Transform your business with autonomous intelligence and achieve 300% ROI improvements through self-evolving AI systems.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Link to="/services/autonomous-business-intelligence"
+            <Link
+              href="/services/autonomous-business-intelligence"
               className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
             >
               Explore Autonomous Solutions

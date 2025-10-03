@@ -1,4 +1,4 @@
-// import React from 'react';
+import React from 'react';
 
 export const metadata = {
   title: 'Spatial Computing & AI Enterprise Revolution 2025 — Immersive Intelligence at Scale',

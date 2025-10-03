@@ -1,4 +1,4 @@
-// import React from 'react';
+import React from 'react';
 
 export const metadata = {
   title: 'Neuro-Symbolic AI for Enterprise: The Best of Both Worlds in 2025',

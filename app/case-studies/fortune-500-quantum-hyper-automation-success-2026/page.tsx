@@ -1,5 +1,5 @@
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import Link from 'next/link';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -388,7 +388,8 @@ export default function Fortune500QuantumHyperAutomationSuccess2026() {
             already achieving unprecedented ROI and operational excellence.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/services"
+            <Link
+              href="/services"
               className="bg-white text-emerald-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors shadow-lg"
             >
               Explore Quantum Automation Services

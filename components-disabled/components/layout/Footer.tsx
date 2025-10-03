@@ -30,8 +30,7 @@ return (;
 
                   San Francisco, CA 94105
                 </span>
-import { Phone } from 'lucide-react';
-'
+import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone } from 'lucide-react';'
 
 }
 return (;

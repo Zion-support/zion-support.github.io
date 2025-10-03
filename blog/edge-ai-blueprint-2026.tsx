@@ -1,4 +1,4 @@
-// import React from 'react';
+import React from 'react';
 
 export const metadata = {
 	title: 'Edge AI Blueprint 2026',

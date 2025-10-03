@@ -1,84 +1,135 @@
-
-// Ultimate Performance Optimization
-export const ultimatePerformanceConfig = {
-  // Advanced caching strategies
-  caching: {
-    static: {
-      strategy: 'cacheFirst',
-      maxAge: 31536000, // 1 year
-      headers: {
-        'Cache-Control': 'public, max-age=31536000, immutable'
+module.exports = {
+  "nextjsOptimizations": {
+    "experimental": {
+      "optimizeCss": true,
+      "optimizePackageImports": [
+        "@mui/material",
+        "@mui/icons-material"
+      ],
+      "turbo": {
+        "rules": {
+          "*.svg": {
+            "loaders": [
+              "@svgr/webpack"
+            ],
+            "as": "*.js"
+          }
+        }
       }
     },
-    dynamic: {
-      strategy: 'networkFirst',
-      maxAge: 86400, // 1 day
-      headers: {
-        'Cache-Control': 'public, max-age=86400'
+    "compiler": {
+      "removeConsole": false,
+      "styledComponents": true
+    },
+    "images": {
+      "formats": [
+        "image/webp",
+        "image/avif"
+      ],
+      "deviceSizes": [
+        640,
+        750,
+        828,
+        1080,
+        1200,
+        1920,
+        2048,
+        3840
+      ],
+      "imageSizes": [
+        16,
+        32,
+        48,
+        64,
+        96,
+        128,
+        256,
+        384
+      ],
+      "minimumCacheTTL": 31536000,
+      "dangerouslyAllowSVG": true,
+      "contentSecurityPolicy": "default-src 'self'; script-src 'none'; sandbox;"
+    }
+  },
+  "advancedCaching": {
+    "staticAssets": {
+      "maxAge": 31536000,
+      "immutable": true
+    },
+    "apiResponses": {
+      "maxAge": 300,
+      "staleWhileRevalidate": 86400
+    },
+    "dynamicContent": {
+      "maxAge": 3600,
+      "staleWhileRevalidate": 86400
+    },
+    "serviceWorker": {
+      "cacheFirst": [
+        "/static/",
+        "/images/",
+        "/fonts/"
+      ],
+      "networkFirst": [
+        "/api/",
+        "/_next/static/"
+      ],
+      "staleWhileRevalidate": [
+        "/"
+      ]
+    }
+  },
+  "bundleOptimization": {
+    "codeSplitting": {
+      "chunks": "all",
+      "maxInitialRequests": 30,
+      "maxAsyncRequests": 30,
+      "cacheGroups": {
+        "vendor": {
+          "test": {},
+          "name": "vendors",
+          "chunks": "all",
+          "priority": 10
+        },
+        "common": {
+          "name": "common",
+          "minChunks": 2,
+          "chunks": "all",
+          "enforce": true,
+          "priority": 5
+        },
+        "styles": {
+          "name": "styles",
+          "test": {},
+          "chunks": "all",
+          "enforce": true
+        }
       }
     },
-    api: {
-      strategy: 'staleWhileRevalidate',
-      maxAge: 300, // 5 minutes
-      headers: {
-        'Cache-Control': 'public, max-age=300'
-      }
+    "treeShaking": {
+      "usedExports": true,
+      "sideEffects": false,
+      "moduleConcatenation": true
+    },
+    "compression": {
+      "gzip": true,
+      "brotli": true,
+      "threshold": 1024,
+      "minRatio": 0.8
     }
   },
-
-  // Resource optimization
-  resources: {
-    images: {
-      formats: ['webp', 'avif', 'jpg', 'png'],
-      quality: 85,
-      lazy: true,
-      preload: true
+  "memoryOptimization": {
+    "lazyLoading": {
+      "images": true,
+      "components": true,
+      "routes": true,
+      "intersectionObserver": true
     },
-    fonts: {
-      preload: true,
-      display: 'swap',
-      subset: true
-    },
-    scripts: {
-      defer: true,
-      async: true,
-      minify: true,
-      compress: true
+    "memoryManagement": {
+      "cleanupIntervals": true,
+      "weakReferences": true,
+      "garbageCollection": true
     }
   },
-
-  // Advanced code splitting
-  codeSplitting: {
-    chunks: {
-      vendor: ['react', 'react-dom', 'react-router-dom'],
-      ui: ['@headlessui/react', '@heroicons/react'],
-      utils: ['lodash', 'date-fns', 'clsx'],
-      charts: ['recharts', 'd3'],
-      forms: ['react-hook-form', 'yup'],
-      analytics: ['@google-analytics/gtag']
-    },
-    routes: {
-      home: ['/'],
-      services: ['/services', '/services/*'],
-      blog: ['/blog', '/blog/*'],
-      about: ['/about', '/contact', '/careers']
-    }
-  },
-
-  // Performance monitoring
-  monitoring: {
-    webVitals: {
-      lcp: { threshold: 2500, weight: 0.25 },
-      fid: { threshold: 100, weight: 0.25 },
-      cls: { threshold: 0.1, weight: 0.25 },
-      fcp: { threshold: 1800, weight: 0.125 },
-      ttfb: { threshold: 600, weight: 0.125 }
-    },
-    customMetrics: {
-      pageLoad: { threshold: 3000 },
-      timeToInteractive: { threshold: 5000 },
-      bundleSize: { threshold: 250000 },
-      memoryUsage: { threshold: 50000000 }
-    }
-  }
+  "timestamp": "2025-10-03T15:09:34.116Z"
 };

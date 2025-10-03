@@ -1,4 +1,4 @@
-// import React from 'react';
+import React from 'react';
 
 export const metadata = {
   title: 'Neural Code Synthesis Revolution 2025 — 98.5% Production-Ready Code in Seconds',

@@ -1,5 +1,5 @@
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'Responsible AI Implementation Guide 2025: Ethics, Governance & Compliance | Zion Tech Group',

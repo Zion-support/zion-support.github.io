@@ -1,4 +1,4 @@
-// import React from 'react';
+import React from 'react';
 
 export const metadata = {
   title: 'Quantum Machine Learning Enterprise Breakthrough 2025: Practical Implementation Guide',

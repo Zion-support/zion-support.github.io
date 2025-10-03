@@ -1,4 +1,4 @@
-// import React from 'react';
+import React from 'react';
 
 export const metadata = {
   title: 'Autonomous Supply Chain Intelligence 2025 — Multi-Agent Coordination Revolution',

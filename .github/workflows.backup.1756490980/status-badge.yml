@@ -1,0 +1,20 @@
+name: Status Badge (DISABLED - Migrated to PM2)
+
+on:
+  # This workflow is disabled and migrated to PM2 automation
+  # The original workflow was handling status badge generation
+  # Now handled by PM2 process: status-monitor
+  workflow_dispatch: # Only manual triggers allowed
+  # All automatic triggers removed
+
+jobs:
+  disabled:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Workflow Disabled
+        run: |
+          echo "This workflow has been disabled and migrated to PM2 automation."
+          echo "Status badge generation is now handled by:"
+          echo "- status-monitor PM2 process (every 30 minutes)"
+          echo "PM2 ecosystem.config.cjs contains the full automation configuration."
+          exit 0

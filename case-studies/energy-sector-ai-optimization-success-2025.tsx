@@ -1,4 +1,4 @@
-// import React from 'react';
+import React from 'react';
 
 export const metadata = {
   title: 'Energy Sector AI Optimization: $180M Savings & 88% Efficiency Gains',

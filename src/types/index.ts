@@ -1,37 +1,38 @@
-
-// TypeScript type definitions
 export interface PerformanceMetrics {
-  loadTime: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  cumulativeLayoutShift: number;
+  fcp: number | null; // First Contentful Paint
+  lcp: number | null; // Largest Contentful Paint
+  fid: number | null; // First Input Delay
+  cls: number | null; // Cumulative Layout Shift
+  ttfb: number | null; // Time to First Byte
 }
 
-export interface SEOData {
-  title: string;
-  description: string;
-  keywords: string;
-  image?: string;
-  url?: string;
+export interface MemoryUsage {
+  used: number; // MB
+  total: number; // MB
+  limit: number; // MB
 }
 
-export interface SecurityConfig {
-  csp: Record<string, string[]>;
-  rateLimit: {
-    limit: number;
-    windowMs: number;
-  };
+export interface ResourceTiming {
+  name: string;
+  duration: number;
+  size: number;
+  type: string;
 }
 
-export interface AccessibilityConfig {
-  ariaLabels: boolean;
-  focusManagement: boolean;
-  colorContrast: boolean;
+export interface NavigationTiming {
+  domContentLoaded: number;
+  loadComplete: number;
+  totalTime: number;
+  dns: number;
+  tcp: number;
+  request: number;
+  response: number;
+  domProcessing: number;
 }
 
-export interface AppConfig {
-  performance: PerformanceMetrics;
-  seo: SEOData;
-  security: SecurityConfig;
-  accessibility: AccessibilityConfig;
+export interface PerformanceStatus {
+  fcp: boolean;
+  lcp: boolean;
+  fid: boolean;
+  cls: boolean;
 }

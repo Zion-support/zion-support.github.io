@@ -1,102 +1,58 @@
-
-// Ultimate Security Configuration
-export const ultimateSecurityConfig = {
-  // Content Security Policy (Ultimate)
-  csp: {
-    'default-src': ["'self'"],
-    'script-src': [
-      "'self'",
-      "'unsafe-inline'",
-      'https://www.googletagmanager.com',
-      'https://www.google-analytics.com',
-      'https://fonts.googleapis.com',
-      'https://cdn.jsdelivr.net'
-    ],
-    'style-src': [
-      "'self'",
-      "'unsafe-inline'",
-      'https://fonts.googleapis.com',
-      'https://cdn.jsdelivr.net'
-    ],
-    'font-src': [
-      "'self'",
-      'https://fonts.gstatic.com',
-      'https://cdn.jsdelivr.net'
-    ],
-    'img-src': [
-      "'self'",
-      'data:',
-      'https:',
-      'blob:',
-      'https://images.unsplash.com'
-    ],
-    'media-src': [
-      "'self'",
-      'https:',
-      'blob:'
-    ],
-    'connect-src': [
-      "'self'",
-      'https://api.ziontechgroup.com',
-      'https://www.google-analytics.com',
-      'https://vitals.vercel-insights.com'
-    ],
-    'frame-src': [
-      "'none'"
-    ],
-    'object-src': [
-      "'none'"
-    ],
-    'base-uri': [
-      "'self'"
-    ],
-    'form-action': [
-      "'self'"
-    ],
-    'worker-src': [
-      "'self'",
-      'blob:'
-    ]
+module.exports = {
+  "securityHeaders": {
+    "Content-Security-Policy": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https: blob:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https: wss:; media-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'",
+    "X-Frame-Options": "DENY",
+    "X-Content-Type-Options": "nosniff",
+    "X-XSS-Protection": "1; mode=block",
+    "Referrer-Policy": "strict-origin-when-cross-origin",
+    "Permissions-Policy": "camera=(), microphone=(), geolocation=(), payment=(), usb=()",
+    "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload"
   },
-
-  // Security headers (Ultimate)
-  headers: {
-    'X-Frame-Options': 'DENY',
-    'X-Content-Type-Options': 'nosniff',
-    'X-XSS-Protection': '1; mode=block',
-    'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload',
-    'Referrer-Policy': 'strict-origin-when-cross-origin',
-    'Permissions-Policy': 'geolocation=(), microphone=(), camera=(), payment=()',
-    'Cross-Origin-Embedder-Policy': 'require-corp',
-    'Cross-Origin-Opener-Policy': 'same-origin',
-    'Cross-Origin-Resource-Policy': 'same-origin'
-  },
-
-  // Advanced input validation
-  validation: {
-    sanitizeHtml: true,
-    validateEmail: true,
-    validatePhone: true,
-    validateUrl: true,
-    maxLength: 5000,
-    allowedTags: ['p', 'br', 'strong', 'em', 'ul', 'ol', 'li'],
-    allowedAttributes: {
-      'a': ['href', 'title'],
-      'img': ['src', 'alt', 'width', 'height']
+  "inputValidation": {
+    "html": {
+      "allowedTags": [
+        "p",
+        "br",
+        "strong",
+        "em",
+        "u",
+        "h1",
+        "h2",
+        "h3",
+        "h4",
+        "h5",
+        "h6"
+      ],
+      "allowedAttributes": {}
+    },
+    "sql": {
+      "parameterized": true,
+      "escapeSpecialChars": true
+    },
+    "xss": {
+      "escapeHtml": true,
+      "sanitizeAttributes": true,
+      "removeScriptTags": true
+    },
+    "csrf": {
+      "tokenValidation": true,
+      "sameSite": "strict",
+      "secure": true
     }
   },
-
-  // Rate limiting
-  rateLimit: {
-    requests: 100,
-    window: 60000, // 1 minute
-    skipSuccessfulRequests: true
+  "rateLimiting": {
+    "api": {
+      "windowMs": 900000,
+      "max": 100
+    },
+    "auth": {
+      "windowMs": 900000,
+      "max": 5
+    },
+    "upload": {
+      "windowMs": 3600000,
+      "max": 10
+    }
   },
-
-  // Encryption
-  encryption: {
-    algorithm: 'AES-256-GCM',
-    keyRotation: 86400000, // 24 hours
-    saltRounds: 12
-  }
+  "timestamp": "2025-10-03T15:09:34.117Z"
 };

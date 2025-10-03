@@ -1,4 +1,4 @@
-import { ArrowLeft, BookOpen, Calendar, Clock, Share2, TrendingUp } from 'lucide-react';
+import { ArrowLeft, BookOpen, Calendar, Clock, Share2, Tag, TrendingUp } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 

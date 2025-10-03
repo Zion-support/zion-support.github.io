@@ -1,5 +1,5 @@
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import Link from 'next/link';
 
 export const metadata = {
 	title: 'AI Enterprise Transformation 2027: Pragmatic Roadmap to Value',
@@ -65,10 +65,10 @@ export default function Page() {
 					<h3 className="text-xl font-semibold mb-2">Next up</h3>
 					<ul className="list-disc pl-6 text-blue-700">
 						<li>
-							<Link to="/content-hub">Explore the Content Hub</Link>
+							<Link href="/content-hub">Explore the Content Hub</Link>
 						</li>
 						<li>
-							<Link to="/blog/ai-roadmaps-2026">AI Roadmaps 2026</Link>
+							<Link href="/blog/ai-roadmaps-2026">AI Roadmaps 2026</Link>
 						</li>
 					</ul>
 				</div>

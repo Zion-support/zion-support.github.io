@@ -1,8 +1,8 @@
 
 
 
-// import React from 'react';'
+import React from 'react';'
 import SEO from '../components/SEO';'
-import { Link } from 'react-router-dom';'
+import Link from 'next/link';'
 
 

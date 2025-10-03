@@ -1,5 +1,5 @@
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'The Agentic AI Revolution 2027: Beyond Automation to Autonomous Decision-Making',

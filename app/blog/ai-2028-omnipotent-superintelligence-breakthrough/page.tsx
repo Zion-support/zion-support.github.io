@@ -1,6 +1,6 @@
-// import React from 'react';
+import React from 'react';
 import { Metadata } from 'next';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'AI 2028 Omnipotent Superintelligence Breakthrough - Zion Tech Group',
@@ -379,12 +379,14 @@ export default function AI2028OmnipotentSuperintelligenceBreakthrough() {
             Our universal AI systems are ready to transform every aspect of your enterprise operations.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Link to="/contact" 
+            <Link 
+              href="/contact" 
               className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-6 py-3 rounded-lg font-semibold text-center hover:from-indigo-600 hover:to-purple-600 transition-all"
             >
               Schedule Universal Consultation
             </Link>
-            <Link to="/case-studies/ai-2028-omnipotent-superintelligence-3-2-trillion-success" 
+            <Link 
+              href="/case-studies/ai-2028-omnipotent-superintelligence-3-2-trillion-success" 
               className="bg-white border border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-semibold text-center hover:bg-gray-50 transition-all"
             >
               View Universal Success Story

@@ -1,4 +1,4 @@
-// import React from 'react';
+import React from 'react';
 
 export const metadata = {
   title: 'Distributed Inference Optimization 2025 — Serving AI at Internet Scale',
