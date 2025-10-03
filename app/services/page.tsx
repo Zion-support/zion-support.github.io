@@ -371,16 +371,10 @@ export default function ServicesPage() {
           <h1 className="text-5xl md:text-6xl font-bold mb-6">"
             AI & IT Services
           </h1>
-<<<<<<< HEAD
           <p className="text-2xl text-blue-100 mb-8 max-w-3xl mx-auto">
             Transform your business with 27+ cutting-edge AI solutions, micro SaaS development, 
             and enterprise IT services that drive growth and innovation. From AI content generation 
             to autonomous business operations, we deliver comprehensive technology solutions.
-=======
-          <p className="text-2xl text-blue-100 mb-8 max-w-3xl mx-auto">"
-            Transform your business with cutting-edge AI solutions, micro SaaS development, 
-            and enterprise IT services that drive growth and innovation.
->>>>>>> bdfa1535a14068de0cb6beed6098c7a151ac7730
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">"
             <a
@@ -701,7 +695,6 @@ export default function ServicesPage() {
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">"
             Let's discuss how our AI and technology solutions can accelerate your growth and drive innovation
           </p>
-<<<<<<< HEAD
           
           {/* Contact Information */}
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 mb-8 max-w-2xl mx-auto">
@@ -734,9 +727,6 @@ export default function ServicesPage() {
             </div>
           </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-=======
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">"
->>>>>>> bdfa1535a14068de0cb6beed6098c7a151ac7730
             <a
               href="tel:+13024640950""
               className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors shadow-lg hover:shadow-xl""
