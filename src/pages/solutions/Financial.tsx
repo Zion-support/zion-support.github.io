@@ -9,4 +9,4 @@ const Financial: React.FC = () => {
   );
 };
 
-export default Financial;
+export default Component;

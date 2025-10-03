@@ -822,36 +822,36 @@ export default function NewServices2026() {
     <>
       <Helmet>
         <title>{title}</title>
-        <meta name="description" content="{description} /">"
-        <meta name="keywords" content="micro SaaS, AI services, IT solutions, automation, cloud services, enterprise software, 2026" />"
-        <link rel="canonical" href="https: //ziontechgroup.com/new-services-2026" />"
+        <meta name="description" content="{description} /">
+        <meta name="keywords" content="micro SaaS, AI services, IT solutions, automation, cloud services, enterprise software, 2026" />
+        <link rel="canonical" href="https: //ziontechgroup.com/new-services-2026" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">"
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
         {/* Hero Section */}
-        <section className="container mx-auto px-6 py-16">"
-          <div className="text-center mb-16">"
-            <div className="flex items-center justify-center mb-4">"
-              <Rocket className="h-8 w-8 text-cyan-400 mr-3" />"
-              <span className="text-lg font-semibold text-cyan-400">New Services 2026</span>"
+        <section className="container mx-auto px-6 py-16">
+          <div className="text-center mb-16">
+            <div className="flex items-center justify-center mb-4">
+              <Rocket className="h-8 w-8 text-cyan-400 mr-3" />
+              <span className="text-lg font-semibold text-cyan-400">New Services 2026</h3>
             </div>
-            <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">"
+            <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
               Revolutionary Services for 2026
             </h1>
-            <p className="text-xl text-blue-100 mb-8 max-w-4xl mx-auto">"
+            <p className="text-xl text-blue-100 mb-8 max-w-4xl mx-auto">
               {description} Our latest innovations deliver measurable ROI with proven results across industries.
             </p>
-            <div className="flex items-center justify-center gap-6 text-sm text-blue-200">"
-              <div className="flex items-center">"
-                <CheckCircle className="h-4 w-4 text-green-400 mr-2" />"
+            <div className="flex items-center justify-center gap-6 text-sm text-blue-200">
+              <div className="flex items-center">
+                <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
                 <span>Proven ROI</span>
               </div>
-              <div className="flex items-center">"
-                <CheckCircle className="h-4 w-4 text-green-400 mr-2" />"
+              <div className="flex items-center">
+                <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
                 <span>Fast Delivery</span>
               </div>
-              <div className="flex items-center">"
-                <CheckCircle className="h-4 w-4 text-green-400 mr-2" />"
+              <div className="flex items-center">
+                <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
                 <span>24/7 Support</span>
               </div>
             </div>
@@ -859,46 +859,46 @@ export default function NewServices2026() {
         </section>
 
         {/* Services Grid */}
-        <section className="container mx-auto px-6 py-12">"
-          <div className="space-y-16">"
+        <section className="container mx-auto px-6 py-12">
+          <div className="space-y-16">
             {newServices.map((category, categoryIndex) => {
               const Icon = category.icon;
               return (
-                <div key={categoryIndex} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50">"
-                  <div className="flex items-center gap-4 mb-8">"
+                <div key={categoryIndex} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50">
+                  <div className="flex items-center gap-4 mb-8">
                     <div className="{`w-16 h-16 bg-gradient-to-br from-${category.color}-500 to-${category.color}-600 rounded-xl flex items-center justify-center`}">`;
-                      <Icon className="w-8 h-8 text-white" />"
+                      <Icon className="w-8 h-8 text-white" />
                     </div>
                     <div>
-                      <h2 className="text-3xl font-bold text-white mb-2">{category.category}</h2>"
-                      <p className="text-slate-300">Cutting-edge solutions with proven ROI and fast implementation</p>"
+                      <h2 className="text-3xl font-bold text-white mb-2">{category.category}</h3>
+                      <p className="text-slate-300">Cutting-edge solutions with proven ROI and fast implementation</h3>
                     </div>
                   </div>
                   
-                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">"
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                     {category.services.map((service, serviceIndex) => (
-                      <div key={serviceIndex} className="group bg-slate-700/30 backdrop-blur-sm rounded-xl p-6 border border-slate-600/50 hover: border-cyan-500/50 transition-all duration-300">"
-                        <div className="flex items-start justify-between mb-4">"
-                          <div className="flex-1">"
-                            <h3 className="text-xl font-semibold text-white mb-2 group-hover: text-cyan-400 transition-colors">"
+                      <div key={serviceIndex} className="group bg-slate-700/30 backdrop-blur-sm rounded-xl p-6 border border-slate-600/50 hover: border-cyan-500/50 transition-all duration-300">
+                        <div className="flex items-start justify-between mb-4">
+                          <div className="flex-1">
+                            <h3 className="text-xl font-semibold text-white mb-2 group-hover: text-cyan-400 transition-colors">
                               {service.name}
                             </h3>
-                            <p className="text-slate-300 text-sm mb-4">{service.description}</p>"
+                            <p className="text-slate-300 text-sm mb-4">{service.description}</h3>
                           </div>
                         </div>
 
-                        <div className="space-y-4 mb-6">"
+                        <div className="space-y-4 mb-6">
                           <div>
-                            <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features: </h4>"
-                            <ul className="space-y-1">"
+                            <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features: </h3>
+                            <ul className="space-y-1">
                               {service.features.slice(0, 4).map((feature, idx) => (
-                                <li key={idx} className="flex items-center text-sm text-slate-300">"
-                                  <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />"
+                                <li key={idx} className="flex items-center text-sm text-slate-300">
+                                  <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                                   <span>{feature}</span>
                                 </li>
                               ))}
                               {service.features.length > 4 && (
-                                <li className="text-xs text-slate-400 ml-5">"
+                                <li className="text-xs text-slate-400 ml-5">
                                   +{service.features.length - 4} more features
                                 </li>
                               )}
@@ -906,11 +906,11 @@ export default function NewServices2026() {
                           </div>
 
                           <div>
-                            <h4 className="text-sm font-semibold text-fuchsia-400 mb-2">Proven Benefits: </h4>"
-                            <ul className="space-y-1">"
+                            <h4 className="text-sm font-semibold text-fuchsia-400 mb-2">Proven Benefits: </h3>
+                            <ul className="space-y-1">
                               {service.benefits.map((benefit, idx) => (
-                                <li key={idx} className="flex items-center text-sm text-slate-300">"
-                                  <TrendingUp className="w-3 h-3 text-fuchsia-400 mr-2 flex-shrink-0" />"
+                                <li key={idx} className="flex items-center text-sm text-slate-300">
+                                  <TrendingUp className="w-3 h-3 text-fuchsia-400 mr-2 flex-shrink-0" />
                                   <span>{benefit}</span>
                                 </li>
                               ))}
@@ -918,31 +918,31 @@ export default function NewServices2026() {
                           </div>
                         </div>
 
-                        <div className="flex items-center justify-between mb-4">"
-                          <div className="text-left">"
-                            <div className="text-lg font-semibold text-cyan-400">{service.price}</div>"
-                            <div className="text-sm text-slate-400">{service.delivery} delivery</div>"
+                        <div className="flex items-center justify-between mb-4">
+                          <div className="text-left">
+                            <div className="text-lg font-semibold text-cyan-400">{service.price}</h3>
+                            <div className="text-sm text-slate-400">{service.delivery} delivery</h3>
                           </div>
-                          <div className="text-right">"
-                            <div className="text-sm text-green-400 font-semibold">{service.roi}</div>"
-                            <div className="text-xs text-slate-400">{service.marketSize}</div>"
+                          <div className="text-right">
+                            <div className="text-sm text-green-400 font-semibold">{service.roi}</h3>
+                            <div className="text-xs text-slate-400">{service.marketSize}</h3>
                           </div>
                         </div>
 
-                        <div className="pt-4 border-t border-slate-600/50">"
-                          <div className="flex flex-wrap gap-2 mb-4">"
+                        <div className="pt-4 border-t border-slate-600/50">
+                          <div className="flex flex-wrap gap-2 mb-4">
                             {service.useCases.map((useCase, idx) => (
-                              <span key={idx} className="text-xs bg-slate-600/50 text-slate-300 px-2 py-1 rounded">"
+                              <span key={idx} className="text-xs bg-slate-600/50 text-slate-300 px-2 py-1 rounded">
                                 {useCase}
                               </span>
                             ))}
                           </div>
                           <a 
-                            href="/contact"
+                            href="/contact
                             className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover: from-cyan-600 hover:to-blue-600 transition-all duration-300 w-full justify-center
                           >
-                            Get Started"
-                            <ArrowRight className="w-4 h-4" />"
+                            Get Started
+                            <ArrowRight className="w-4 h-4" />
                           </a>
                         </div>
                       </div>
@@ -955,61 +955,61 @@ export default function NewServices2026() {
         </section>
 
         {/* Contact Section */}
-        <section className="container mx-auto px-6 py-16">"
-          <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-2xl p-8 border border-cyan-500/20">"
-            <div className="text-center mb-8">"
-              <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Business?</h2>"
-              <p className="text-blue-100 max-w-2xl mx-auto">"
+        <section className="container mx-auto px-6 py-16">
+          <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-2xl p-8 border border-cyan-500/20">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Business?</h3>
+              <p className="text-blue-100 max-w-2xl mx-auto">
                 Get a custom proposal for your specific needs. Most engagements start with a 30-60 minute consultation and a detailed proposal within 48 hours.
               </p>
             </div>
             
-            <div className="grid md:grid-cols-3 gap-6 text-center mb-8">"
+            <div className="grid md:grid-cols-3 gap-6 text-center mb-8">
               <div>
-                <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">"
-                  <Clock className="w-6 h-6 text-cyan-400" />"
+                <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <Clock className="w-6 h-6 text-cyan-400" />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Fast Implementation</h3>"
-                <p className="text-sm text-slate-300">Deploy solutions in 1-8 weeks with our proven methodology</p>"
+                <h3 className="text-lg font-semibold text-white mb-2">Fast Implementation</h3>
+                <p className="text-sm text-slate-300">Deploy solutions in 1-8 weeks with our proven methodology</h3>
               </div>
               <div>
-                <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">"
-                  <DollarSign className="w-6 h-6 text-blue-400" />"
+                <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <DollarSign className="w-6 h-6 text-blue-400" />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Proven ROI</h3>"
-                <p className="text-sm text-slate-300">Average 400-1000% ROI within first year of implementation</p>"
+                <h3 className="text-lg font-semibold text-white mb-2">Proven ROI</h3>
+                <p className="text-sm text-slate-300">Average 400-1000% ROI within first year of implementation</h3>
               </div>
               <div>
-                <div className="w-12 h-12 bg-fuchsia-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">"
-                  <Star className="w-6 h-6 text-fuchsia-400" />"
+                <div className="w-12 h-12 bg-fuchsia-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <Star className="w-6 h-6 text-fuchsia-400" />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Expert Support</h3>"
-                <p className="text-sm text-slate-300">24/7 support from AI specialists and technical experts</p>"
+                <h3 className="text-lg font-semibold text-white mb-2">Expert Support</h3>
+                <p className="text-sm text-slate-300">24/7 support from AI specialists and technical experts</h3>
               </div>
             </div>
 
-            <div className="text-center">"
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">"
+            <div className="text-center">
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
                 <a 
                   href={`tel:${contactInfo.phone}`} `;
                   className="inline-flex items-center gap-2 bg-white text-slate-900 px-6 py-3 rounded-lg font-semibold hover:bg-slate-100 transition-colors
-                >"
-                  <Smartphone className="w-4 h-4" />"
+                >
+                  <Smartphone className="w-4 h-4" />
                   {contactInfo.phone}
                 </a>
                 <a 
                   href={`mailto:${contactInfo.email}`} `;
                   className="inline-flex items-center gap-2 bg-slate-700 text-white px-6 py-3 rounded-lg font-semibold hover:bg-slate-600 transition-colors
-                >"
-                  <MessageSquare className="w-4 h-4" />"
+                >
+                  <MessageSquare className="w-4 h-4" />
                   {contactInfo.email}
                 </a>
               </div>
-              <p className="text-sm text-slate-400">"
+              <p className="text-sm text-slate-400">
                 {contactInfo.address}
               </p>
-              <p className="text-sm text-slate-400 mt-2">"
-                Visit our website: <a href={contactInfo.website} className="text-cyan-400 hover:underline">{contactInfo.website}</a>"
+              <p className="text-sm text-slate-400 mt-2">
+                Visit our website: <a href={contactInfo.website} className="text-cyan-400 hover:underline">{contactInfo.website}</h3>
               </p>
             </div>
           </div>

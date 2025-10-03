@@ -84,7 +84,7 @@ const RealTimeCognitiveAutomationPage: React.FC = () => {
                   
                   <Link 
                     to="/contact" 
-                    className="text-indigo-600 font-semibold hover:text-indigo-800 transition-colors"
+                    className="text-indigo-600 font-semibold hover:text-indigo-800 transition-colors
                   >
                     Learn More →
                   </Link>
@@ -147,32 +147,32 @@ const RealTimeCognitiveAutomationPage: React.FC = () => {
                 {
                   title: "Financial Services",
                   description: "Automated fraud detection, risk assessment, and compliance monitoring with real-time decision making.",
-                  icon: "💰"
+                  icon: "💰
                 },
                 {
                   title: "Healthcare",
                   description: "Patient data processing, treatment recommendations, and administrative workflow automation.",
-                  icon: "🏥"
+                  icon: "🏥
                 },
                 {
                   title: "Manufacturing",
                   description: "Predictive maintenance, quality control, and supply chain optimization with intelligent automation.",
-                  icon: "🏭"
+                  icon: "🏭
                 },
                 {
                   title: "Retail",
                   description: "Inventory management, customer service automation, and personalized recommendation engines.",
-                  icon: "🛍️"
+                  icon: "🛍️
                 },
                 {
                   title: "Legal Services",
                   description: "Document review, contract analysis, and legal research automation with cognitive insights.",
-                  icon: "⚖️"
+                  icon: "⚖️
                 },
                 {
                   title: "HR & Recruitment",
                   description: "Resume screening, candidate matching, and employee onboarding process automation.",
-                  icon: "👥"
+                  icon: "👥
                 }
               ].map((useCase, index) => (
                 <div key={index} className="bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow">
@@ -195,13 +195,13 @@ const RealTimeCognitiveAutomationPage: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 to="/contact" 
-                className="bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                className="bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors
               >
                 Get Started
               </Link>
               <Link 
                 to="/case-studies" 
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors
               >
                 View Case Studies
               </Link>
@@ -215,4 +215,4 @@ const RealTimeCognitiveAutomationPage: React.FC = () => {
   );
 };
 
-export default RealTimeCognitiveAutomationPage;
+export default Component;

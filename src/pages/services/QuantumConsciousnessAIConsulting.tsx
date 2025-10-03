@@ -27,13 +27,13 @@ const QuantumConsciousnessAIConsulting: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="/contact" 
-                className="bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
+                className="bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors
               >
                 Schedule Consultation
               </a>
               <a 
                 href="/case-studies" 
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-900 transition-colors"
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-900 transition-colors
               >
                 View Case Studies
               </a>
@@ -56,32 +56,32 @@ const QuantumConsciousnessAIConsulting: React.FC = () => {
                 {
                   title: "Quantum Neural Networks",
                   description: "Advanced neural architectures that leverage quantum superposition for exponential processing power.",
-                  icon: "🧠"
+                  icon: "🧠
                 },
                 {
                   title: "Consciousness Simulation",
                   description: "AI systems that simulate human consciousness patterns for unprecedented decision-making capabilities.",
-                  icon: "🌟"
+                  icon: "🌟
                 },
                 {
                   title: "Quantum Entanglement AI",
                   description: "Distributed AI systems connected through quantum entanglement for instant global synchronization.",
-                  icon: "🔗"
+                  icon: "🔗
                 },
                 {
                   title: "Temporal AI Processing",
                   description: "AI that processes information across multiple timelines simultaneously for predictive accuracy.",
-                  icon: "⏰"
+                  icon: "⏰
                 },
                 {
                   title: "Quantum Optimization",
                   description: "Optimization algorithms that explore infinite solution spaces in parallel quantum states.",
-                  icon: "⚡"
+                  icon: "⚡
                 },
                 {
                   title: "Consciousness Integration",
                   description: "Seamless integration of human consciousness patterns with quantum AI systems.",
-                  icon: "🔮"
+                  icon: "🔮
                 }
               ].map((feature, index) => (
                 <div key={index} className="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-shadow">
@@ -184,7 +184,7 @@ const QuantumConsciousnessAIConsulting: React.FC = () => {
                 
                 <button 
                   type="submit" 
-                  className="w-full bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50"
+                  className="w-full bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50
                 >
                   Schedule Free Consultation
                 </button>
@@ -200,13 +200,13 @@ const QuantumConsciousnessAIConsulting: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <a 
                 href="tel:1-800-QUANTUM-AI" 
-                className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
+                className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300
               >
                 📞 1-800-QUANTUM-AI
               </a>
               <a 
                 href="mailto:consciousness@ziontechgroup.com" 
-                className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
+                className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300
               >
                 ✉️ consciousness@ziontechgroup.com
               </a>
@@ -223,4 +223,4 @@ const QuantumConsciousnessAIConsulting: React.FC = () => {
   );
 };
 
-export default QuantumConsciousnessAIConsulting;
+export default Component;

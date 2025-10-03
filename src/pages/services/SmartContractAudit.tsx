@@ -59,7 +59,7 @@ const SmartContractAudit: React.FC = () => {
 
   const pricing = [
     {
-      name: "Basic Audit",
+      name="Basic Audit",
       price: "$2,500",
       period: "one-time",
       description: "Perfect for simple smart contracts and token contracts",
@@ -71,12 +71,12 @@ const SmartContractAudit: React.FC = () => {
         "Email support",
         "1 revision included",
         "Standard compliance check",
-        "Up to 500 lines of code"
+        "Up to 500 lines of code
       ],
       popular: false,
     },
     {
-      name: "Professional Audit",
+      name="Professional Audit",
       price: "$7,500",
       period: "one-time",
       description: "Comprehensive audit for complex smart contracts and DeFi protocols",
@@ -90,12 +90,12 @@ const SmartContractAudit: React.FC = () => {
         "Advanced compliance check",
         "Up to 2,000 lines of code",
         "Integration testing",
-        "Documentation review"
+        "Documentation review
       ],
       popular: true,
     },
     {
-      name: "Enterprise Audit",
+      name="Enterprise Audit",
       price: "$15,000",
       period: "one-time",
       description: "Full-scale audit for enterprise-grade blockchain applications",
@@ -110,7 +110,7 @@ const SmartContractAudit: React.FC = () => {
         "Unlimited lines of code",
         "Performance optimization",
         "Security training",
-        "Ongoing monitoring"
+        "Ongoing monitoring
       ],
       popular: false,
     }
@@ -331,4 +331,4 @@ const SmartContractAudit: React.FC = () => {
   );
 };
 
-export default SmartContractAudit;
+export default Component;

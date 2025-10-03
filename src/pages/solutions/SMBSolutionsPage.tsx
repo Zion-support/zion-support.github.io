@@ -80,7 +80,7 @@ const SMBSolutionsPage: React.FC = () => {
                   
                   <Link 
                     to="/contact" 
-                    className="text-green-600 font-semibold hover:text-green-800 transition-colors"
+                    className="text-green-600 font-semibold hover:text-green-800 transition-colors
                   >
                     Learn More →
                   </Link>
@@ -237,14 +237,14 @@ const SMBSolutionsPage: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                to="/contact"
-                className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                to="/contact
+                className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors
               >
                 Get Started Today
               </Link>
               <Link
-                to="/pricing"
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
+                to="/pricing
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors
               >
                 View Pricing
               </Link>
@@ -256,4 +256,4 @@ const SMBSolutionsPage: React.FC = () => {
   );
 };
 
-export default SMBSolutionsPage;
+export default Component;

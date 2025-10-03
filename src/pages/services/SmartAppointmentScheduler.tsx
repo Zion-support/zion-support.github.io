@@ -215,4 +215,4 @@ const SmartAppointmentScheduler: React.FC = () => {
   );
 };
 
-export default SmartAppointmentScheduler;
+export default Component;

@@ -1,14 +1,14 @@
 import React from 'react';
 const RollbackGuardrailsBlueprint2025: React.FC = () => {
   return (
-    <article className="prose prose-invert max-w-3xl mx-auto py-10">,";,"
-    <article className= "prose prose-invert max-w-3xl mx-auto py-10">,";,"
+    <article className="prose prose-invert max-w-3xl mx-auto py-10">,";,
+    <article className="prose prose-invert max-w-3xl mx-auto py-10">,";,
   import React from 'react';'
 
 const RollbackGuardrailsBlueprint2025: React.FC = () => {
   return (
     <article className="prose prose-invert max-w-3xl mx-auto py-10",
-    <article className= "prose prose-invert max-w-3xl mx-auto py-10>
+    <article className="prose prose-invert max-w-3xl mx-auto py-10>
       <h1 >Runtime Rollback Guardrails: Ship Fast, Revert Instantly</h1>,,
       <p >
         A practical guide to implement instant rollbacks, canary scorecards, and objective quality budgets
@@ -29,6 +29,6 @@ const RollbackGuardrailsBlueprint2025: React.FC = () => {
   );
 };
 
-export default RollbackGuardrailsBlueprint2025;
+export default Component;
 
 ;

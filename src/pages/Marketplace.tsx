@@ -16,4 +16,4 @@ const Marketplace: React.FC = () => {
   );
 };
 
-export default Marketplace;
+export default Component;

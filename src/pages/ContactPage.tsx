@@ -69,14 +69,14 @@ const ContactPage: React.FC = () => {
                       Full Name *
                     </label>
                     <input
-                      type="text"
-                      id="name"
-                      name="name"
+                      type="text
+                      id="name
+                      name="name
                       required
                       value={formData.name}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
-                      placeholder="Your full name"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200
+                      placeholder="Your full name
                     />
                   </div>
                   <div>
@@ -84,14 +84,14 @@ const ContactPage: React.FC = () => {
                       Email Address *
                     </label>
                     <input
-                      type="email"
-                      id="email"
-                      name="email"
+                      type="email
+                      id="email
+                      name="email
                       required
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
-                      placeholder="your@email.com"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200
+                      placeholder="your@email.com
                     />
                   </div>
                 </div>
@@ -102,13 +102,13 @@ const ContactPage: React.FC = () => {
                       Company
                     </label>
                     <input
-                      type="text"
-                      id="company"
-                      name="company"
+                      type="text
+                      id="company
+                      name="company
                       value={formData.company}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
-                      placeholder="Your company name"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200
+                      placeholder="Your company name
                     />
                   </div>
                   <div>
@@ -116,13 +116,13 @@ const ContactPage: React.FC = () => {
                       Phone Number
                     </label>
                     <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
+                      type="tel
+                      id="phone
+                      name="phone
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
-                      placeholder="+1 (555) 123-4567"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200
+                      placeholder="+1 (555) 123-4567
                     />
                   </div>
                 </div>
@@ -132,11 +132,11 @@ const ContactPage: React.FC = () => {
                     Service Interest
                   </label>
                   <select
-                    id="service"
-                    name="service"
+                    id="service
+                    name="service
                     value={formData.service}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200
                   >
                     <option value="">Select a service</option>
                     <option value="ai-services">AI Services</option>
@@ -154,20 +154,20 @@ const ContactPage: React.FC = () => {
                     Message *
                   </label>
                   <textarea
-                    id="message"
-                    name="message"
+                    id="message
+                    name="message
                     required
                     rows={6}
                     value={formData.message}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
-                    placeholder="Tell us about your project and how we can help..."
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200
+                    placeholder="Tell us about your project and how we can help...
                   />
                 </div>
 
                 <button
-                  type="submit"
-                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center"
+                  type="submit
+                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center
                 >
                   <Send className="h-5 w-5 mr-2" />
                   Send Message
@@ -257,4 +257,4 @@ const ContactPage: React.FC = () => {
   );
 };
 
-export default ContactPage;
+export default Component;

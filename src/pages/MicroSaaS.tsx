@@ -54,5 +54,5 @@ const MicroSaaS: React.FC = () => {
   );
 };
 
-export default MicroSaaS;
+export default Component;
 ;
